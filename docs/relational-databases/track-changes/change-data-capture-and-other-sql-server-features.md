@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011734"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661450"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011734"
   
 -   [事务复制](#TransReplication)  
   
--   [还原或附加启用了变更数据捕获的数据库](#RestoreOrAttach)  
+-   [还原或附加启用了变更数据捕获的数据库](#RestoreOrAttach)
+
+-   [包含的数据库](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> 更改跟踪  
  可以对同一数据库启用变更数据捕获和 [更改跟踪](../../relational-databases/track-changes/about-change-tracking-sql-server.md) 。 没有特殊的注意事项。 有关详细信息，请参阅[处理更改跟踪 (SQL Server)](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)。  
   
 ##  <a name="DatabaseMirroring"></a> 数据库镜像  
@@ -79,6 +81,9 @@ ms.locfileid: "33011734"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) 从还原或附加的数据库中删除变更数据捕获。  
+  
+##  <a name="Contained"></a> 包含的数据库  
+ [包含的数据库](../../relational-databases/databases/contained-databases.md)中不支持变更数据捕获。
   
 ## <a name="change-data-capture-and-always-on"></a>变更数据捕获和 Always On  
  使用 Always On 时，应在次要副本上更改枚举以减少主要副本的磁盘负荷。  

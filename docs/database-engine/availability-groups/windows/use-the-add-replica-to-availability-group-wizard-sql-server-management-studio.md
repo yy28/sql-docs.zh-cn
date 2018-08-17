@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771113"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609676"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用“将副本添加到可用性组向导”(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771113"
     |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。<br /><br /> <br /><br /> 注意：如果任何服务器实例基于非域用户帐户运行，则你需要首先对你的服务器实例进行手动更改，然后才能在向导中继续执行。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  
     |**备份首选项**|使用此选项卡可以整体为可用性组指定您的备份首选项；如果您想要修改当前设置，还可为各个可用性副本指定备份优先级。|  
   
-6.  如果所选的副本包含具有数据库主密钥的数据库，请在  “输入密码”页中输入数据库主密钥的密码。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 输入密码后，请单击 “刷新”。 如果你正确输入了密码，“状态”列指示“输入的密码” 。  
+6.  如果所选的副本包含具有数据库主密钥的数据库，请在“密码”列中输入数据库主密钥的密码。  “状态”列指示具有数据库主密钥的数据库  “所需的密码”。 在“密码”列中输入正确的密码之前，“下一步”将显示为灰色。 输入密码后，请单击 “刷新”。 如果正确输入密码，则“状态”列会指示“密码已输入”，然后便可进行“下一步”操作。  
   
 7.  在 **“选择初始数据同步”** 页上，选择如何创建新的辅助数据库并将其联接到可用性组。 选择下列选项之一：  
   

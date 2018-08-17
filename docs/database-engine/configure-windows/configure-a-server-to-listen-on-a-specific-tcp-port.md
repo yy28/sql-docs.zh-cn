@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865362"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609666"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>配置服务器以侦听特定 TCP 端口
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,17 @@ ms.locfileid: "32865362"
     > [!NOTE]  
     >  如果无法打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，请参阅 [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md)。  
   
-2.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上的各个 IP 地址。 （你可能会同时看到 IPv4 和 IPv6 地址。）右键单击每个地址，再单击“属性”，标识要配置的 IP 地址。  
+2.  在“TCP/IP 属性”对话框的“IP 地址”选项卡上，将显示若干个 IP 地址，格式为：**IP1**、**IP2**...，一直到 **IPAll**。 这些 IP 地址中有一个是环回适配器的 IP 地址 (127.0.0.1)。 其他 IP 地址是计算机上的各个 IP 地址。 （可能会同时看到 IP 版本 4 和 IP 版本 6 地址。）右键单击每个地址，再单击“属性”，标识要配置的 IP 地址。  
   
 3.  如果 **“TCP 动态端口”** 对话框中包含 **0**，则表示 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听动态端口，请删除 0。  
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在“IPn 属性”区域框的“TCP 端口”框中，键入希望此 IP 地址侦听的端口号，然后单击“确定”。  
+4.  在“IPn 属性”区域框的“TCP 端口”框中，键入希望此 IP 地址侦听的端口号，然后单击“确定”。 通过逗号分隔，可指定多个端口。
+
+    > [!NOTE] 
+    > 如果“协议”选项卡上的“全部侦听”设置为“是”，则仅使用 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”值，并将完全忽略各 *IP***n 部分。 如果“全部侦听”设置为“否”，将忽略 IPAll 部分下面的“TCP 端口”和“TCP 动态端口”设置，而改用各 *IP***n 部分的“TCP 端口”、“TCP 动态端口”和“已启用”设置。
+    > 每个 *IP***n 部分的“已启用”设置的默认值为“否”，这样会使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 忽略此 IP 地址，即使它已定义端口。  
   
 5.  在控制台窗格中，单击“SQL Server 服务”。  
   

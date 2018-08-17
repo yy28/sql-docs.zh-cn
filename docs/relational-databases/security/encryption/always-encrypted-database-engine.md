@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558877"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662479"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ ms.locfileid: "39558877"
 
 有关如何使用具有特定的客户端驱动程序的“始终加密”功能开发应用程序的详细信息，请参阅 [《Always Encrypted (client development)》](../../../relational-databases/security/encryption/always-encrypted-client-development.md)（始终加密（客户端开发））。
 
+## <a name="remarks"></a>Remarks
+
+解密通过客户端发生。 这意味着使用“Always Encrypted”时，仅在服务器端发生的某些操作将不起作用。 
+
+以下更新示例尝试将数据从加密列移动到未加密列，而不将结果集返回客户端： 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+如果 SSN 是使用 Always Encryption 加密的列，则上述更新语句将失败，并显示类似于以下内容的错误：
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+若要成功更新列，请执行以下操作：
+
+1. 使用 SELECT 从 SSN 列中选择数据，并将其作为结果集存储在应用程序中。 这样可让应用程序（客户端驱动程序）解密列。
+2. 使用 INSERT 将结果集中的数据插入 SQL Server。 
+
+ >[!IMPORTANT]
+ > 在此方案中，数据在发送回服务器时不会加密，因为目标列是不接受加密数据的常规 varchar。 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>选择确定性加密或随机加密  
  数据库引擎始终不会对加密列中存储的纯文本数据进行操作，但仍支持对已加密数据的某些查询，具体取决于列的加密类型。 始终加密支持两种类型的加密：随机加密和确定性加密。  

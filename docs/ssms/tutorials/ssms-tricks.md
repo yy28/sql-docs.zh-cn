@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228453"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020671"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
 本教程将提供一些使用 SQL Server Management Studio (SSMS) 的其他技巧。 本文介绍如何： 
@@ -189,7 +189,7 @@ ms.locfileid: "39228453"
     ![通过查询查找错误日志](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>如果无法连接到 SQL Server，请查找错误日志位置
-你的 SQL Server 错误日志的路径可能有所不同，具体取决于你的配置设置。 可以在 SQL Server 配置管理器内的启动参数中找到错误日志位置的路径。 请按照以下步骤来找到标识你的 SQL Server 错误日志位置的相关启动参数。 你的路径可能与以下指示的路径有所不同。 
+你的 SQL Server 错误日志的路径可能有所不同，具体取决于你的配置设置。 可以在 SQL Server 配置管理器内的启动参数中找到错误日志位置的路径。 请按照以下步骤来找到标识 SQL Server 错误日志位置的相关启动参数。 你的路径可能与以下指示的路径有所不同。 
 
 1. 打开“SQL Server 配置管理器”。 
 2. 展开“服务”。
@@ -210,7 +210,7 @@ ms.locfileid: "39228453"
 在连接到 SQL Server 之前和之后，有几个选项可用于查找 SQL Server 的名称。  
 
 ### <a name="before-you-connect-to-sql-server"></a>连接到 SQL Server 之前
-1. 按照步骤查找[磁盘上的 SQL Server 错误日志](#finding-your-error-log-if-you-cannot-connect-to-sql)。 
+1. 按照步骤查找[磁盘上的 SQL Server 错误日志](#finding-your-error-log-if-you-cannot-connect-to-sql)。 你的路径可能与下图中的路径有所不同。
 2. 在记事本中打开 errorlog.log 文件。  
 3. 搜索文本“服务器名称是”。
     

@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401489"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020641"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  
@@ -98,7 +98,7 @@ ms.locfileid: "35401489"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中设置或更改包的保护级别  
   
-1.  在主题 **设置包的保护级别** 中查看 [ProtectionLevel](#set_protection)属性的可用值，然后确定您的包的对应值。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，打开包含该包的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401489"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示符下设置或更改包的保护级别  
   
-1.  在[设置包的保护级别](#set_protection)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
+1.  在[保护级别](#protection-levels)一节中查看 ProtectionLevel 属性的可用值，然后确定包的对应值。  
   
 2.  在主题 **dtutil Utility** 中查看 [Encrypt](../../integration-services/dtutil-utility.md)选项的映射，然后确定要用作所选 **ProtectionLevel** 属性的值的相应整数。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "35401489"
   
  若要了解包安全性的要求和选项，参阅[安全性概述 (Integration Services)](../../integration-services/security/security-overview-integration-services.md) 可能有所帮助。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Package protection level**  
  从列表中选择保护级别。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "35401489"
 ## <a name="password_dialog"></a>“包密码”对话框
   可以使用 **“包密码”** 对话框为使用密码加密的包提供包密码。 如果包使用 **“使用密码加密敏感数据”** 或 **“使用密码加密所有数据”** 保护级别，则必须提供密码。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **密码**  
  输入密码。  
   

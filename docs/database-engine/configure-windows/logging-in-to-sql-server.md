@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324431"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008899"
 ---
 # <a name="logging-in-to-sql-server"></a>登录到 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324431"
 >  如果安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时选择了区分大小写的排序规则，则您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名也将区分大小写。  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>指定 SQL Server 名称的格式  
- 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的名称。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是默认实例（未命名实例），则指定安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称或该计算机的 IP 地址。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是命名实例（如 SQLEXPRESS），则指定安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称或该计算机的 IP 地址，并添加斜杠和实例名称。  
+ 连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，必须指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是默认实例（未命名实例），则指定安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称或该计算机的 IP 地址。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例是命名实例（如 SQLEXPRESS），则指定安装了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机的名称或该计算机的 IP 地址，并添加斜杠和实例名称。  
   
  以下示例连接到名为 APPHOST 的计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 指定命名实例时，这些示例使用实例名称 SQLEXPRESS。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324431"
   
 |实例类型|服务器名称条目|  
 |----------------------|-------------------------------|  
-|连接到使用默认协议的默认实例。 （这是推荐的默认实例条目。)|APPHOST|  
-|连接到使用默认协议的命名实例。 （这是推荐的命名实例条目。)|APPHOST\SQLEXPRESS|  
+|连接到使用默认协议的默认实例。|APPHOST|  
+|连接到使用默认协议的命名实例。 |APPHOST\SQLEXPRESS|  
 |连接到同一计算机上的默认实例，该计算机使用期间来指示该实例在本地计算机上运行。|实例时都提供 SQL Server 登录名。|  
 |连接到同一计算机上的命名实例，该计算机使用期间来指示该实例在本地计算机上运行。|.\SQLEXPRESS|  
 |连接到同一计算机上的默认实例，该计算机使用 localhost 指示该实例在本地计算机上运行。|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324431"
 |连接到强制共享内存连接的同一计算机上的命名实例。|lpc:APPHOST\SQLEXPRESS|  
 |连接到使用 IP 地址侦听 TCP 地址 192.168.17.28 的默认实例。|192.168.17.28|  
 |连接到使用 IP 地址侦听 TCP 地址 192.168.17.28 的命名实例。|192.168.17.28\SQLEXPRESS|  
-|通过指定正在使用的端口（此情况下为 2828）连接到未在侦听默认 TCP 端口的默认实例。 （如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听默认端口 (1433)，则不需要这样做。）|APPHOST,2828|  
-|连接到指定 TCP 端口（此情况下为 2828）上的命名实例。 （如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务未在主机上运行，则通常需要这样做。）|APPHOST,2828|  
+|通过指定正在使用的端口（此情况下为 2828）连接到未在侦听默认 TCP 端口的默认实例。 （如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在侦听默认端口 (1433)，则不需要指定端口号。）|APPHOST,2828|  
+|连接到指定 TCP 端口（此情况下为 2828）上的命名实例。 （如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务未在主机上运行，则通常需要指定端口号。）|APPHOST,2828|  
 |通过同时指定正在使用的 IP 地址和 TCP 端口（在此情况下为 2828）连接到未在侦听默认 TCP 端口的默认实例。|192.168.17.28,2828|  
 |通过同时指定正在使用的 IP 地址和 TCP 端口（在此情况下为 2828）连接到命名实例。|192.168.17.28\SQLEXPRESS,2828|  
 |使用名称连接到强制 TCP 连接的默认实例。|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [使用 sqlcmd 实用工具](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [创建登录名](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [创建登录名](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

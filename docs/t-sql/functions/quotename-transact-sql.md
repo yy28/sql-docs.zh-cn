@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451581"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609716"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Unicode 字符数据构成的字符串。 character_string 是 sysname，且最多具有 128 个字符。 超过 128 个字符的输入将返回 NULL。  
   
  'quote_character'  
- 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([]) 或者英文双引号 (")。 如果未指定 quote_character，则使用方括号。  
+ 用作分隔符的单字符字符串。 可以是单引号 (')、左方括号或右方括号 ([])、双引号 (")、左圆括号或右圆括号 (())、大于或小于符号 (><)、左大括号或右大括号 ({}) 或反引号 (\`)。 如果提供了不可接受的字符，则返回 NULL。 如果未指定 quote_character，则使用方括号。  
   
 ## <a name="return-types"></a>返回类型  
  **nvarchar(258)**  

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -28,32 +28,58 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 11a17e013933456a092f1ef3f9da9a3695271963
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452651"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008969"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
-修改数据库。 
+修改数据库的某些配置选项。 
 
-单击以下选项卡之一，了解所使用的特定 SQL 版本的语法、参数、注解、权限和示例。
+本文提供所选任何 SQL 产品的语法、参数、注解、权限和示例。
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
-  
+## <a name="click-a-product"></a>单击一个产品！
+
+在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />逻辑服务器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />托管实例</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
+
 ## <a name="overview"></a>概述
 
 在 SQL Server 中，此语句修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
    
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多个主题。  
+由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。  
 
 ALTER DATABASE  
-当前主题介绍的是用于更改数据库的名称和排序规则的语法和相关信息。  
+本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。  
   
 [ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。  
@@ -259,17 +285,40 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [系统数据库](../../relational-databases/databases/system-databases.md)  
-  
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 逻辑服务器](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />逻辑服务器*</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />托管实例</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
 
 ## <a name="overview"></a>概述
 
 在 Azure SQL 数据库中，使用此语句修改逻辑服务器上的数据库。 使用此语句更改数据库的名称、更改数据库的版本和服务目标、将数据库加入到弹性池或将其从弹性池中删除、设置数据库选项、添加或删除数据库作为异地复制关系中的辅助，以及设置数据库兼容级别。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多个主题。  
+由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。  
 
 ALTER DATABASE  
-当前主题介绍的是用于更改数据库的名称和排序规则的语法和相关信息。  
+本文介绍的是用于更改数据库的名称和排序规则的语法和相关信息。  
   
 [ALTER DATABASE SET 选项](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 介绍了使用 ALTER DATABASE 的 SET 选项来更改数据库属性的语法和相关信息。  
@@ -363,7 +412,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION = ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-更改数据库的服务层。 已删除对“premiumrs”的支持。 如有问题，请使用此电子邮件别名：premium-rs@microsoft.com。
+更改数据库的服务层。 
 
 以下示例将版本更改为 `premium`：
   
@@ -431,7 +480,7 @@ MODIFY (MAXSIZE = [100 MB | 500 MB | 1 | 1024…4096] GB)
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |最大数据大小 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 有关基于 vCore 的模型的资源限制的其他详细信息，请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
+如果使用 vCore 模型时未设置 `MAXSIZE` 值，则默认为 32 GB。 针对基于 vCore 的模型，有关其资源限制的其他详细信息，请参阅[基于 vCore 的资源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
   
 以下规则适用于 MAXSIZE 和 EDITION 参数：  
   
@@ -601,16 +650,39 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系统数据库](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 托管实例](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />逻辑服务器</a></th>
+>   <th><strong><em>* SQL DB<br />托管实例</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 ## <a name="overview"></a>概述
 
 在 Azure SQL 数据库托管实例中，使用此语句来设置数据库选项。
 
-由于 ALTER DATABASE 语法的篇幅较长，因此分为多个主题。  
+由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。  
 
 ALTER DATABASE  
-当前主题提供有关设置文件和文件组选项、设置数据库选项和设置数据库兼容级别的语法和相关信息。  
+本文提供有关设置文件和文件组选项、设置数据库选项和设置数据库兼容级别的语法和相关信息。  
   
 [ALTER DATABASE 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)：介绍了用于从数据库中添加和删除文件和文件组以及更改文件和文件组的属性的语法和相关信息。  
   
@@ -652,6 +724,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
 ```
   
 ## <a name="arguments"></a>参数  
@@ -686,13 +759,17 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 > [!IMPORTANT]  
 >  数据库的所有者不能更改数据库，除非他们是 `dbmanager` 角色的成员。  
   
-## <a name="examples"></a>示例  
-  
-### <a name="a-what-examples-here"></a>A. 此处有哪些示例？
+## <a name="examples"></a>示例
+以下示例显示如何设置自动优化以及如何在托管实例中添加文件。
 
 ```sql
+ALTER DATABASE WideWorldImporters
+    SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+    ADD FILE (NAME = 'data_17')
 ```
-  
+
 ## <a name="see-also"></a>另请参阅
   
 [CREATE DATABASE - Azure SQL 数据库](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -709,7 +786,30 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [系统数据库](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL 数据仓库](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />逻辑服务器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />托管实例</a></th>
+>   <th><strong><em>* SQL 数据<br />仓库*</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
 
 ## <a name="overview"></a>概述
 
@@ -813,14 +913,36 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>另请参阅  
 [CREATE DATABASE（Azure SQL 数据仓库）](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[参考主题的 SQL 数据仓库列表](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[参考文章的 SQL 数据仓库列表](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 并行数据仓库](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />逻辑服务器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />托管实例</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
 
 ## <a name="overview"></a>概述
 
-修改并行数据仓库中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。 本主题还介绍与并行数据仓库中设置数据库选项相关的语法。
+修改并行数据仓库中复制表、分布式表和事务日志的最大数据库大小选项。 使用此语句可在数据库大小增长或收缩时管理数据库的磁盘空间分配。 本文还介绍与并行数据仓库中设置数据库选项相关的语法。
 
 ## <a name="syntax"></a>语法  
   
@@ -868,13 +990,13 @@ SET AUTO_CREATE_STATISTICS { ON | OFF } 在自动创建统计信息选项 AUTO_C
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。 
 
-有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)
+有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 在自动更新统计信息选项 AUTO_UPDATE_STATISTICS 为 ON 时，查询优化器将确定统计信息何时可能过期，然后在查询使用这些统计信息时更新它们。 统计信息将在插入、更新、删除或合并操作更改表或索引视图中的数据分布后过期。 查询优化器通过计算自最后统计信息更新后数据修改的次数并且将这一修改次数与某一阈值进行比较，确定统计信息何时可能过期。 该阈值基于表中或索引视图中的行数。
 
 升级到 AU7 后创建的新数据库的默认值为 ON。 升级前创建的数据库的默认值为 OFF。 
 
-有关统计信息的详细信息，请参阅[统计信息](/sql/relational-databases/statistics/statistics)。
+有关统计信息的详细信息，请参阅[统计信息](../../relational-databases/statistics/statistics.md)。
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 异步统计信息更新选项 AUTO_UPDATE_STATISTICS_ASYNC 将确定查询优化器是使用同步统计信息更新还是异步统计信息更新。 AUTO_UPDATE_STATISTICS_ASYNC 选项适用于为索引创建的统计信息对象、查询谓词中的单列以及使用 CREATE STATISTICS 语句创建的统计信息。
@@ -1012,5 +1134,5 @@ ALTER DATABASE CustomerSales
 ## <a name="see-also"></a>另请参阅  
  [CREATE DATABASE（并行数据仓库）](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end

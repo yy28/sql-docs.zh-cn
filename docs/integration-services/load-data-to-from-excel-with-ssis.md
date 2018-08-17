@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137926"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609807"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -30,7 +30,7 @@ ms.locfileid: "37137926"
 
 2.  所需[文件](#files-you-need)。
 
-3.  从 Excel 加载数据或向 Excel 加载数据时必须提供的连接信息以及必须配置的设置。
+3.  通过 SSIS 从 Excel 加载数据或向 Excel 加载数据时必须提供的连接信息以及必须配置的设置。
     -   [指定 Excel](#specify-excel) 作为数据源。
     -   提供 [Excel 文件和路径](#excel-file)。
     -   选择 [Excel 版本](#excel-version)。
@@ -44,15 +44,15 @@ ms.locfileid: "37137926"
 
 ## <a name="tools"></a> 可以使用的工具
 
-可以使用以下工具之一从 Excel 导入数据或将数据导出到 Excel：
+可使用以下某一工具通过 SSIS 从 Excel 导入数据或将数据导出到 Excel：
 
--   **SQL Server Integration Services (SSIS)**。 使用 Excel 连接管理器创建使用 Excel 源或 Excel 目标的 SSIS 包。 （本文不介绍如何设计 SSIS 包。）
+-   **SQL Server Integration Services (SSIS)**。 使用 Excel 连接管理器创建使用 Excel 源或 Excel 目标的 SSIS 包。 （本文不介绍如何创建 SSIS 包。）
 
 -   内置于 SSIS 的“SQL Server 导入和导出向导”。 有关详细信息，请参阅[使用 SQL Server 导入和导出向导导入和导出数据](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)和[连接到 Excel 数据源（SQL Server 导入和导出向导）](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="files-you-need"></a>获取连接到 Excel 所需的文件
 
-如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
+如果没有安装 Excel 的连接组件，首先需要下载这些组件，然后才能通过 SSIS 从 Excel 导出数据或将数据导入 Excel。 默认情况下，没有安装 Excel 的连接组件。
 
 在此处下载用于 Excel 的最新版连接组件：[Microsoft Access 数据库引擎 2016 可再发行组件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版组件可以打开 Excel 早期版本创建的文件。
 
