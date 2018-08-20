@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fdd0df25763bec9f5bd2be7d1a36d260f6728605
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 135c0a8d7ec53f5fbb06e6e72777a64005c3a156
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557817"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175093"
 ---
 # <a name="system-databases"></a>系统数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "39557817"
 ## <a name="related-tasks"></a>Related Tasks  
  [备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [在对象资源管理器中隐藏系统对象](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
+ [在对象资源管理器中隐藏系统对象](../../ssms/object/hide-system-objects-in-object-explorer.md)  
   
 ## <a name="related-content"></a>相关内容  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

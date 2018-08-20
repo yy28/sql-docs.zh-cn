@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407949"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175091"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -130,7 +130,7 @@ ms.locfileid: "35407949"
   
         1.  指定要在其中创建视图的数据库架构（“架构”字段）。  
   
-        2.  指定在通过网络发送数据之前是否应当将其加密（“加密”字段）。 有关此设置和 TrustServerCertificate 设置的更多详细信息，请参阅 [Using Encryption Without Validation](http://msdn.microsoft.com/library/ms131691.aspx) （在不验证的情况下使用加密）主题。  
+        2.  指定在通过网络发送数据之前是否应当将其加密（“加密”字段）。 有关此设置和 TrustServerCertificate 设置的更多详细信息，请参阅 [Using Encryption Without Validation](../../relational-databases/native-client/features/using-encryption-without-validation.md) （在不验证的情况下使用加密）主题。  
   
         3.  指定在启用加密设置时是否可以使用自签名服务器证书（**TrustServerCertificate** 字段）。  
   
@@ -213,7 +213,7 @@ GO
   
  在运行时执行该视图时，视图中定义的链接服务器查询将启动查询中指定的 SSIS 包，并接收表格结果集形式的包输出。  
   
-1.  在创建视图之前，请在新查询窗口中键入并运行以下查询。 OPENQUERY 是 SQL Server 支持的行集函数。 它使用与链接服务器关联的 OLE DB 提供程序在指定的链接服务器上执行指定的传递查询。 OPENQUERY 可以在查询的 FROM 子句中引用，就好象它是一个表名。 有关详细信息，请参阅 [MSDN 库上的 OPENQUERY 文档](http://msdn.microsoft.com/library/ms188427.aspx) 。  
+1.  在创建视图之前，请在新查询窗口中键入并运行以下查询。 OPENQUERY 是 SQL Server 支持的行集函数。 它使用与链接服务器关联的 OLE DB 提供程序在指定的链接服务器上执行指定的传递查询。 OPENQUERY 可以在查询的 FROM 子句中引用，就好象它是一个表名。 有关详细信息，请参阅 [MSDN 库上的 OPENQUERY 文档](../../t-sql/functions/openquery-transact-sql.md) 。  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
