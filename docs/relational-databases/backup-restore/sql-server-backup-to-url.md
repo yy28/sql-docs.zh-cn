@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50a8d11c653e7b31dd27a8705d925f60d795a7a0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984089"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175170"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "38984089"
   
  有关如何创建共享访问签名的示例，请参阅本主题后面的 [创建共享访问签名](../../relational-databases/backup-restore/sql-server-backup-to-url.md#SAS) 示例；有关如何创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的示例，请参阅本主题后面的 [创建凭据](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 示例。  
   
- 有关凭据的一般信息，请参阅 [凭据](http://msdn.microsoft.com/library/ms161950.aspx)  
+ 有关凭据的一般信息，请参阅 [凭据](../security/authentication-access/credentials-database-engine.md)  
   
- 有关使用凭据的其他示例的信息，请参阅 [创建 SQL Server 代理的代理](http://msdn.microsoft.com/library/ms175834.aspx)。  
+ 有关使用凭据的其他示例的信息，请参阅 [创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 ###  <a name="limitations"></a> 限制  
   
