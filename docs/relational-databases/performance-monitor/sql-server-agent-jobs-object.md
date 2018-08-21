@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950492"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175084"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理中的 Jobs 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950492"
   
  下表介绍了 **SQLAgent:Jobs** 计数器。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |**Active Jobs**|该计数器报告当前运行的作业数。|  
 |**Failed jobs**|该计数器报告失败退出的作业数。|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950492"
   
  对象中的每个计数器均包含以下实例：  
   
-|实例|Description|  
+|实例|描述|  
 |--------------|-----------------|  
 |**_Total**|所有作业的信息。|  
 |**警报**|由警报启动的作业的信息。|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950492"
 |**计划**|由计划启动的作业的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [使用性能对象](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [执行作业](../../ssms/agent/implement-jobs.md)   
+ [使用性能对象](../../ssms/agent/use-performance-objects.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

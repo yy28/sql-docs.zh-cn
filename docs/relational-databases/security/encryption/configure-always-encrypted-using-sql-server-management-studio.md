@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543067"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175079"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 配置 Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>在数据库或 DACPAC 使用始终加密时执行 DAC 升级操作
 
-具有包含加密列的架构的 DACPAC 文件和数据库支持[DAC 操作](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 。 执行 DAC 升级操作时有一些特殊的注意事项 — 请参阅 [升级数据层应用程序](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 了解如何在各种工具（包括 SSMS）中执行 DAC 升级操作。 
+具有包含加密列的架构的 DACPAC 文件和数据库支持[DAC 操作](../../data-tier-applications/data-tier-applications.md) 。 执行 DAC 升级操作时有一些特殊的注意事项 — 请参阅 [升级数据层应用程序](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 了解如何在各种工具（包括 SSMS）中执行 DAC 升级操作。 
 
 当使用 DACPAC 升级数据库，并且 DACPAC 或目标数据库有加密列时，如果满足以下所有条件，升级操作将触发数据加密操作：
 - 数据库包含一个具有数据的列。
@@ -418,7 +418,7 @@ SQL Server Management Studio 将发出 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>使用 BACPAC 迁移包含加密列的数据库
 
-导出数据库时，系统将检索加密列中存储的所有数据并将其放入生成的 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 中（以加密形式）。 生成的 BACPAC 还包含始终加密密钥的元数据。
+导出数据库时，系统将检索加密列中存储的所有数据并将其放入生成的 [BACPAC](../../data-tier-applications/data-tier-applications.md) 中（以加密形式）。 生成的 BACPAC 还包含始终加密密钥的元数据。
 
 将 BACPAC 导入数据库时，BACPAC 中的加密数据将加载到数据库中，并将重新创建始终加密密钥元数据。
 

@@ -23,16 +23,16 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1872cef23e9680cbec037b1d2170e8e3b02c8564
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: e143abb330c114a9d03e0cd7c8a40a7f422e6134
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909857"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175096"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
- > 有关与 SQL Server 早期版本相关的内容，请参阅 [SQL Server Integration Services](https://msdn.microsoft.com/library/ms141026(SQL.120).aspx)。
+ > 有关与 SQL Server 早期版本相关的内容，请参阅 [SQL Server Integration Services](sql-server-integration-services.md)。
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是用于生成企业级数据集成和数据转换解决方案的平台。 使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可解决复杂的业务问题，具体表现为：复制或下载文件，加载数据仓库，清除和挖掘数据以及管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象和数据。
 

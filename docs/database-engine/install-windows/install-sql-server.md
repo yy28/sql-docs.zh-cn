@@ -16,19 +16,20 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 6ea964d0048b410dd5f555759c4a73f547837be9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 747584b0e23f3c187a5da48012ff4d1a4d60d625
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771085"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175087"
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](install-sql-server.md)。
 
  从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 仅可用作 64 位应用程序。 以下是有关如何获取 SQL Server 以及如何安装 SQL Server 的重要详细信息。
 

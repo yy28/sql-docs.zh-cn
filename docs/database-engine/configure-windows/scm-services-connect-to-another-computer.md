@@ -16,12 +16,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32debd89a83202b887d70dec074a6a1be3ede7c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6491083a5b4e550537e9f7cb0884708b8ef13e2f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32866782"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175105"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,6 +78,6 @@ ms.locfileid: "32866782"
 >  当使用远程计算机中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器时，计算机名称不是显而易见的，因此可能会错误地停止或配置不正确的计算机。 在 **“服务”** 选项卡上，选中 **“主机名”** 复选框以在修改服务前确认计算机名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [在 SQL Server 工具中将 WMI 配置为显示服务器状态](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
+ [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

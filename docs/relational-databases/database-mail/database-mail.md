@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931012"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175092"
 ---
 # <a name="database-mail"></a>数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931012"
   
  您可以配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，使其在出现下列情况时向预定义的操作员发送电子邮件：  
   
--   警报触发时。 可以配置警报，以针对所发生的特定事件发送电子邮件通知。 例如，可以配置警报，将可能需要立即采取行动的特定数据库事件或操作系统情况通知操作员。 有关配置警报的详细信息，请参阅 [警报](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)。  
+-   警报触发时。 可以配置警报，以针对所发生的特定事件发送电子邮件通知。 例如，可以配置警报，将可能需要立即采取行动的特定数据库事件或操作系统情况通知操作员。 有关配置警报的详细信息，请参阅 [警报](../../ssms/agent/alerts.md)。  
   
 -   计划任务成功完成或未完成（例如，数据库备份或复制事件）。 例如，如果在月底的处理过程中出现错误，就可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理邮件通知操作员。  
   
