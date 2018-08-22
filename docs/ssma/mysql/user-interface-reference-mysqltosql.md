@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983309"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396229"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>用户界面参考 (MySQLToSQL)
 本部分包括帮助主题的 SQL Server Migration Assistant (SSMA) for MySQL。  
@@ -39,7 +39,7 @@ ms.locfileid: "38983309"
 |[连接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|使用**连接到 SQL Azure**对话框以连接到你想要迁移的 SQL Azure 实例。|  
 |[转换设置 (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|使用**设置**选项卡以设置节点级别设置。|  
 |[数据迁移报表&#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|显示的结果将数据从 MySQL 迁移到 SQL Server 或 SQL Azure。|  
-|[数据迁移设置](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|使用**扩展数据迁移设置**选项卡可编写自定义查询的数据迁移。|  
+|[数据迁移设置](data-migration-settings-mysqltosql.md)|使用**扩展数据迁移设置**选项卡可编写自定义查询的数据迁移。|  
 |[编辑类型映射&#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用**编辑类型映射**对话框创建或修改的源和目标数据库和数据库对象之间的数据类型映射。|  
 |[全局设置&#40;编辑器&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|使用的编辑器页面**全局设置**对话框可配置代码编辑器选项。|  
 |[全局设置&#40;对话框&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|使用的对话框页面**全局设置**对话框可以配置默认对话框和警告设置。|  

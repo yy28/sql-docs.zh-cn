@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: ac69b80773b1554c6f0b920aaff146871beb40ab
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086409"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394845"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -63,7 +63,7 @@ ms.locfileid: "39086409"
 1. 如果你有旧版**mssql 工具**安装，请删除任何较旧的 unixODBC 包。
 
    ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
+   sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
 1. 运行以下命令以安装**mssql 工具**使用 unixODBC 开发人员包。

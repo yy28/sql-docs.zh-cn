@@ -16,15 +16,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 78ba615946600d082fd2533ecf81f7b2ba295196
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2228a08c2985f4e683ff860cd77e68159a0ecd0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980360"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394590"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL)
-将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，必须连接到你想要迁移的 DB2 数据库。 连接时，SSMA 中获取所有的 DB2 架构有关的元数据，然后在 DB2 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
+将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到你想要迁移的 DB2 数据库。 连接时，SSMA 中获取所有的 DB2 架构有关的元数据，然后在 DB2 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
   
 与数据库的连接保持活动状态，直到关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。  
   
@@ -38,7 +38,7 @@ DB2 数据库的元数据不会自动更新。 相反，如果你想要更新 DB
 -   数据迁移的数据访问要求 DATAACCESS  
   
 ## <a name="establishing-a-connection-to-db2"></a>建立连接到 DB2  
-当连接到数据库时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 它将转换到的对象时，使用此元数据的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法，并当它会将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以浏览此 DB2 元数据资源管理器窗格中的元数据，并查看单独的数据库对象的属性。  
+当连接到数据库时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 它将转换到的对象时，使用此元数据的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法，并当它会将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以浏览此 DB2 元数据资源管理器窗格中的元数据，并查看单独的数据库对象的属性。  
   
 > [!IMPORTANT]  
 > 尝试连接之前，请确保数据库服务器正在运行，并且可以接受连接。  
@@ -84,7 +84,7 @@ DB2 数据库的元数据不会自动更新。 相反，如果你想要更新 DB
     有关详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-db2"></a>重新连接到 DB2  
-与数据库服务器的连接将保持活动状态，直到您关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。 您可以脱机处理直到您要更新元数据，加载到数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，和迁移数据。  
+与数据库服务器的连接将保持活动状态，直到您关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。 您可以脱机处理直到您要更新元数据，加载到数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和迁移数据。  
   
 ## <a name="refreshing-db2-metadata"></a>正在刷新 DB2 元数据  
 DB2 数据库的元数据不会自动刷新。 DB2 的元数据资源管理器中的元数据是元数据，当您首次连接或上次您手动刷新元数据的快照。 您可以手动更新所有架构、 单一架构或单独的数据库对象的元数据。  
@@ -109,7 +109,7 @@ DB2 数据库的元数据不会自动刷新。 DB2 的元数据资源管理器�
   
     若要查看的颜色代码定义，请单击**图例**按钮。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>下一步  
   

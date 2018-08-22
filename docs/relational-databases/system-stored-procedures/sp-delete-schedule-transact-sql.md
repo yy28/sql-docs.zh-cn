@@ -1,5 +1,5 @@
 ---
-title: sp_delete_schedule (Transact SQL) |Microsoft 文档
+title: sp_delete_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255941"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394015"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,26 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  要删除的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
   
-> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
+> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
- [  **@schedule_name=** ] *****schedule_name*****  
+ [  **@schedule_name=** ] **'***schedule_name*****  
  要删除的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
-> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
+> **注意：** 任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
  [ **@force_delete** = ] *force_delete*  
- 指定当计划附加到作业时此过程是否会失败。 *Force_delete*位，默认值为**0**。 当*force_delete*是**0**，如果计划附加到一个作业，存储的过程将失败。 当*force_delete*是**1**，无论是否计划附加到一个作业删除该计划。  
+ 指定当计划附加到作业时此过程是否会失败。 *Force_delete*为 bit，默认值为**0**。 当*force_delete*是**0**，如果该计划附加到作业存储的过程将失败。 当*force_delete*是**1**，而不考虑是否将计划附加到作业中删除该计划。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，指定的值**1**为*force_delete*。 删除计划不会停止当前正在运行的作业。  
+## <a name="remarks"></a>Remarks  
+ 默认情况下，如果将计划附加到作业，则无法删除计划。 若要删除附加到作业的计划，指定的值**1**有关*force_delete*。 删除计划不会停止当前正在运行的作业。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -76,11 +76,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，计划不能删除如果分离会将其保留没有作业，除非调用方是计划所有者。  
+ 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，不能删除计划如果分离后导致无作业，除非调用方是计划所有者。  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**角色可以删除由另一个用户拥有的作业计划。  
+ 只有的成员**sysadmin**角色可以删除其他用户拥有的作业计划。  
   
 ## <a name="examples"></a>示例  
   
@@ -109,8 +109,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+## <a name="see-also"></a>请参阅  
+ [执行作业](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

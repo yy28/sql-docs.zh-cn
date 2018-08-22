@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277593"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395059"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
-  `EntityType` 元素是一种复杂类型，表示数据模型中的高级实体（如客户或订单）的结构。 `bi:EntityType`元素扩展的定义[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)中使用[实体数据框架](http://msdn.microsoft.com/library/bb399567.aspx)。  
+  `EntityType` 元素是一种复杂类型，表示数据模型中的高级实体（如客户或订单）的结构。 `bi:EntityType`元素扩展的定义[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)中使用[实体数据框架](/dotnet/framework/data/adonet/ef/overview)。  
   
  必须为数据模型中包括的每个实体指定 EntityType 元素。 EntityType 的子元素描述表中的列和度量值。 表之间的关系包含在 `EntityContainer` 中。  
   
@@ -32,14 +32,14 @@ ms.locfileid: "37277593"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|目录|“否”|一个包含列中可能的数据类型的字符串。 此值从数据模型中 DimensionAttributeTypeEnumType 的值派生。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值为“ExtendedType”，则 Contents 的值从 DimensionAttribute 的 ExtendedType 元素派生。 客户端不需要对这些值进行回应。|  
-|DefaultDetails|“否”|表示表中一组列的属性引用的列表。<br /><br /> 请参阅[DefaultDetails 元素&#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)。|  
-|DefaultImage|“否”|对包含用来说明该实体的图像的列的引用。<br /><br /> 在多维模型中，此元素对应于维度属性上的一个二进制属性。 如果此属性存在，则此元素必须只包含一个 MemberRef 元素。<br /><br /> 请参阅[MemberRef 元素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)。|  
-|DefaultMeasure|“否”|对实体中某个度量值的引用，当对该实体进行计算时，此度量值应用作默认值。 如果未指定，则默认值为 SUM。<br /><br /> 请参阅[MemberRef 元素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)。|  
-|DisplayKey|“否”|对列或对角色方的引用列表，这构成了一个强标识符，此标识符可唯一标识实体实例。<br /><br /> 请参阅[DisplayKey 元素&#40;CSDLBI&#41;](displaykey-element-csdlbi.md)。|  
-|层次结构|“否”|模型中层次结构的列表。<br /><br /> 请参阅[层次结构元素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)。|  
-|ReferenceName|是|可用于在数据分析表达式 (DAX) 查询中引用此实体的标识符。<br /><br /> 如果此属性不存在，则使用此实体的完全限定字段名称。|  
-|SortMembers|“否”|要排序的属性列表。 SortDirection 属性指示是升序还是降序。|  
+|目录|否|一个包含列中可能的数据类型的字符串。 此值从数据模型中 DimensionAttributeTypeEnumType 的值派生。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值为“ExtendedType”，则 Contents 的值从 DimensionAttribute 的 ExtendedType 元素派生。 客户端不需要对这些值进行回应。|  
+|DefaultDetails|否|表示表中一组列的属性引用的列表。<br /><br /> 请参阅[DefaultDetails 元素&#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md)。|  
+|DefaultImage|否|对包含用来说明该实体的图像的列的引用。<br /><br /> 在多维模型中，此元素对应于维度属性上的一个二进制属性。 如果此属性存在，则此元素必须只包含一个 MemberRef 元素。<br /><br /> 请参阅[MemberRef 元素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)。|  
+|DefaultMeasure|否|对实体中某个度量值的引用，当对该实体进行计算时，此度量值应用作默认值。 如果未指定，则默认值为 SUM。<br /><br /> 请参阅[MemberRef 元素&#40;CSDLBI&#41;](memberref-element-csdlbi.md)。|  
+|DisplayKey|否|对列或对角色方的引用列表，这构成了一个强标识符，此标识符可唯一标识实体实例。<br /><br /> 请参阅[DisplayKey 元素&#40;CSDLBI&#41;](displaykey-element-csdlbi.md)。|  
+|层次结构|否|模型中层次结构的列表。<br /><br /> 请参阅[层次结构元素&#40;CSDLBI&#41;](hierarchy-element-csdlbi.md)。|  
+|ReferenceName|用户帐户控制|可用于在数据分析表达式 (DAX) 查询中引用此实体的标识符。<br /><br /> 如果此属性不存在，则使用此实体的完全限定字段名称。|  
+|SortMembers|否|要排序的属性列表。 SortDirection 属性指示是升序还是降序。|  
   
 ## <a name="contents-element"></a>Contents 元素  
  `Contents` 元素是用于描述实体中数据类型的简单类型。  

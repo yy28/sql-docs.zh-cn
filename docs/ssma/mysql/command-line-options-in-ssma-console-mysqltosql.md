@@ -26,14 +26,14 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 83e8fddb94f2c2cdc51131417b589d7c8691a88d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985589"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395243"
 ---
-# <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台 (MySQLToSQL) 中的命令行选项
+# <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA 控制台中的命令行选项 (MySQLToSQL)
 Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 控制台中的命令行选项  
@@ -136,7 +136,7 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
 ### <a name="secure-password-option-psecurepassword"></a>安全的密码选项:-p/securepassword  
 此选项指示服务器连接的加密的密码。 它不同于所有其它选项： 选项不执行任何脚本或有助于与迁移相关的所有活动中，但可帮助管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-mysqltosql.md)部分。  
   
 支持下面的子选项`–p/securepassword`:  
   

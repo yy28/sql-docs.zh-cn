@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (Transact SQL) |Microsoft 文档
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394220"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,24 @@ sp_help_proxy
   
 ## <a name="arguments"></a>参数  
  [ **@proxy_id** = ] *id*  
- 要列出信息的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可指定。  
+ 要列出信息的代理的代理标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
  [ **@proxy_name** = ] **'***proxy_name***'**  
- 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可指定。  
+ 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
  [ **@subsystem_name** =] '*subsystem_name*  
  要列出代理的子系统名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 当*subsystem_name*指定，则*名称*还必须指定。  
   
  下表列出了每个子系统的值。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 脚本|  
 |CmdExec|操作系统 (CmdExec)|  
 |快照|复制快照代理|  
 |LogReader|复制日志读取器代理|  
 |Distribution|复制分发代理|  
-|合并|复制合并代理|  
+|合并|Replication Merge Agent|  
 |QueueReader|复制队列读取器代理|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查询|  
@@ -86,24 +86,24 @@ sp_help_proxy
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**名称**|**sysname**|代理服务器的名称。|  
 |**credential_identity**|**sysname**|与代理关联的凭据的 Microsoft Windows 域名和用户名。|  
-|**enabled**|**tinyint**|是否启用了此代理。 { **0** = 不启用， **1** = 启用}|  
-|**说明**|**nvarchar(1024)**|对此代理的说明。|  
+|**enabled**|**tinyint**|是否启用了此代理。 { **0** = 未启用， **1** = 启用}|  
+|**description**|**nvarchar(1024)**|对此代理的说明。|  
 |**user_sid**|**varbinary(85)**|此代理的 Windows 用户的 Windows 安全 ID。|  
 |**credential_id**|**int**|与此代理关联的凭据的标识符。|  
 |**credential_identity_exists**|**int**|是否存在 credential_identity。 { 0 = 不存在，1 = 存在 }|  
   
-## <a name="remarks"></a>注释  
- 当未提供参数时， **sp_help_proxy**列出实例中的所有代理的信息。  
+## <a name="remarks"></a>Remarks  
+ 如果不提供任何参数， **sp_help_proxy**列出实例中的所有代理的信息。  
   
- 若要确定的登录名的代理可用于给定子系统，指定*名称*和*subsystem_name*。 这些自变量提供时， **sp_help_proxy**列出该登录名指定可以访问并且可能使用来指定子系统的代理。  
+ 若要确定登录名的代理可用于给定子系统，请指定*名称*并*subsystem_name*。 提供这些参数时， **sp_help_proxy**列出了指定的登录名可以访问，可用于指定子系统的代理。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 **msdb** 数据库中的 **SQLAgentOperatorRole** 固定数据库角色的权限。  
   
- 有关详细信息**SQLAgentOperatorRole**，请参阅[SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关详细信息**SQLAgentOperatorRole**，请参阅[SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 > [!NOTE]  
->  **Credential_identity**和**user_sid**列仅返回结果集时的成员**sysadmin**执行此存储的过程。  
+>  **Credential_identity**并**user_sid**中仅返回列时的结果集的成员**sysadmin**执行此存储的过程。  
   
 ## <a name="examples"></a>示例  
   
@@ -130,9 +130,9 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

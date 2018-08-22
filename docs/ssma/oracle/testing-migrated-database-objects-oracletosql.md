@@ -1,5 +1,5 @@
 ---
-title: 测试迁移的数据库对象 (OracleToSQL) |Microsoft 文档
+title: 测试迁移的数据库对象 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +13,17 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 3b908317227b497911084e4c5de1c27ccb8361d1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 037a58fc3fc9402c7148ec49d3a27ea0c0ace309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778013"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396439"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>测试迁移的数据库对象 (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Oracle 测试人员 （SSMA 测试人员） 的迁移助手将自动测试数据库对象转换和所做的 SSMA 数据迁移。 已完成所有 SSMA 迁移步骤后，使用 SSMA 测试人员来验证已转换的对象相同的方式工作，所有数据已正确都传输。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle 测试人员 （SSMA 测试程序） 的迁移助手自动测试的数据库对象转换和数据迁移所做的 SSMA。 在完成所有的 SSMA 迁移步骤后，使用 SSMA 测试人员验证已转换的对象相同的方式工作，所有数据已正确都传输。  
   
-你可以使用 SSMA Tester 测试下列对象类型：  
+使用 SSMA 测试人员，你可以测试以下对象类型：  
   
 -   表  
   
@@ -33,38 +33,38 @@ ms.locfileid: "34778013"
   
 -   视图。  
   
--   独立语句。  
+-   独立的语句。  
   
-SSMA 测试人员执行测试 Oracle 和中的对应项为所选对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 之后，它的结果进行比较根据以下条件：  
+SSMA 测试人员执行选定的测试上 Oracle 和中的其匹配对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 之后，它将进行比较的结果根据以下条件：  
   
--   是表数据中的更改相同？  
+-   位于所做的更改表的数据完全相同？  
   
--   有关过程和函数的输出参数的值是否相同？  
+-   过程和函数的输出参数的值是否相同？  
   
 -   函数将返回相同的结果？  
   
--   是否在结果集相同？  
+-   是否在结果集完全相同？  
   
 > [!NOTE]  
-> 注意 ！ 永远不会在生产系统上使用 SSMA 测试人员。 在测试人员执行过程中修改的源架构和数据。 同时，原始状态完成还原可能无法为某些类型的测试代码。  
+> 注意 ！ 永远不会在生产系统上使用 SSMA 测试人员。 在测试人员执行期间修改的源架构和数据。 同时，原始状态的完整还原可能对于某些类型的测试的代码不可能。  
   
 ## <a name="prerequisites"></a>必要條件  
-如果你想要使用 SSMA 测试人员，安装与 SSMA Oracle 扩展包**安装测试人员数据库**选项处于打开状态。  
+如果你想要使用 SSMA 测试人员，安装 SSMA Oracle 扩展包**安装的测试人员数据库**选项已打开。  
   
-要使生成的表数据的比较，设置**生成 ROWID 列**选项设为**是**架构转换开始之前。 SSMA 将执行期间向所有表中添加 ROWID 列**转换架构**命令。  
+若要启用的生成的表数据比较，请设置**生成的行 ID 列**选项设为**是**架构转换开始之前。 SSMA 将执行期间向所有表中添加行 ID 列**转换架构**命令。  
   
 此外，验证以下各项：  
   
--   在计算机上安装 oracle 客户端工具其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]运行。  
+-   在计算机上安装 oracle 客户端工具其中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]运行。  
   
--   在上启用公共语言运行时 (CLR) 集成了[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库引擎。  
+-   已在上启用公共语言运行时 (CLR) 集成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库引擎。  
   
-请注意 SSMA 测试人员的当前版本不支持在相同的源或目标服务器上由不同用户的并行执行。  
+请注意 SSMA 测试人员的当前版本不支持在相同的源或目标服务器上并行执行通过不同的用户。  
   
 ## <a name="getting-started"></a>入门  
 [创建测试用例&#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[在 SQL Server 上安装 SSMA 组件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
+[SQL Server 上安装 SSMA 组件&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [项目设置&#40;转换&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   

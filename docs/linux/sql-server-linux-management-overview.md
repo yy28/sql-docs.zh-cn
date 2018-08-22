@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102415"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395849"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
@@ -31,7 +31,7 @@ ms.locfileid: "39102415"
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-几乎所有在客户端工具中可以完成的工作，都可以使用 Transact - SQL 语句来完成。 SQL Server 提供了[动态管理视图 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的查询的状态和配置 SQL Server。 此外，还有[Transact-SQL 命令](https://msdn.microsoft.com/library/bb510741.aspx)数据库管理任务。 可以在支持连接到 SQL Server 和运行 TRANSACT-SQL 查询，例如任何客户端工具中运行这些命令[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
+几乎所有在客户端工具中可以完成的工作，都可以使用 Transact - SQL 语句来完成。 SQL Server 提供了[动态管理视图 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的查询的状态和配置 SQL Server。 此外，还有[Transact-SQL 命令](../t-sql/language-reference.md)数据库管理任务。 可以在支持连接到 SQL Server 和运行 TRANSACT-SQL 查询，例如任何客户端工具中运行这些命令[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
 ## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio （预览版）
 

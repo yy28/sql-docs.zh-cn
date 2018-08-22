@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171158"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394838"
 ---
 # <a name="getting-sql-server-assistance"></a>获取 SQL Server 帮助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 有以下三个关于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要信息来源：  
@@ -68,7 +68,7 @@ ms.locfileid: "37171158"
   
  可通过下列方式访问联机丛书：  
   
--   在 Internet 上的 MSDN Library 和 TechNet Library 中发布 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书的副本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的这些副本中的主题包括社区评论，如其他客户的附加信息和代码示例。 您可以查看在 MSDN Library 副本[SQL Server 2014 联机丛书](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)。  
+-   在 Internet 上的 MSDN Library 和 TechNet Library 中发布 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 联机丛书的副本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书的这些副本中的主题包括社区评论，如其他客户的附加信息和代码示例。 您可以查看在 MSDN Library 副本[SQL Server 2014 联机丛书](../2014-toc/index.md)。  
   
 -   可以使用帮助库管理器在本地计算机上安装 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。 有关详细信息，请参阅[添加或删除 SQL Server 产品文档](../2014-toc/books-online-for-sql-server-2014.md)。  
   

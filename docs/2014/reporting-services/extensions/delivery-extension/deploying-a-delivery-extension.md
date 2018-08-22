@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194873"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396030"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
   传递扩展插件以 XML 配置文件的形式提供其配置信息。 该 XML 文件符合为传递扩展插件定义的 XML 架构。 传递扩展插件提供用于设置和修改配置文件的基础结构。  
@@ -91,7 +91,7 @@ ms.locfileid: "37194873"
     </CodeGroup>  
     ```  
   
-     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../secure-development/secure-development-reporting-services.md)  
+     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>将扩展插件部署到报表管理器  
  如果您的传递扩展插件实现 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 接口，则该传递扩展插件可用于报表管理器订阅页。 为了使该订阅用户界面可用，需要将扩展插件部署到报表管理器。  
@@ -138,7 +138,7 @@ ms.locfileid: "37194873"
     </CodeGroup>  
     ```  
   
-     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../secure-development/secure-development-reporting-services.md)  
+     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>验证部署  
  您可以使用 Web 服务 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法，验证是否已向报表服务器成功地部署了传递扩展插件。 还可以打开报表管理器，并验证您的扩展插件是否包括在用于订阅的可用传递扩展插件列表中。 有关报表管理器和订阅的详细信息，请参阅[订阅和传递&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)。  

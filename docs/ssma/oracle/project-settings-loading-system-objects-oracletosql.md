@@ -1,5 +1,5 @@
 ---
-title: 项目设置 （加载系统对象） (OracleToSQL) |Microsoft 文档
+title: 项目设置 （加载系统对象） (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,24 +13,24 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2417a74ff590c0eacae367bc1f048ed912b82988
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: af52d18e2978f8645bce689481f68121a164c160
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777793"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394829"
 ---
-# <a name="project-settingsloading-system-objects-oracletosql"></a>项目设置 （加载系统对象） (OracleToSQL)
-加载系统对象页**项目设置**对话框中，可以指定哪些 Oracle 系统对象 SSMA 将转换并向其中加载[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+# <a name="project-settingsloading-system-objects-oracletosql"></a>项目设置（加载系统对象）(OracleToSQL)
+正在加载系统对象页**项目设置**对话框可以指定 SSMA 将转换并将加载到的 Oracle 系统对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-加载系统对象窗格位于**项目设置**和**默认项目设置**对话框：  
+加载系统对象窗格中现已推出**项目设置**并**默认项目设置**对话框：  
   
--   若要对指定的所有的 SSMA 项目设置**工具**菜单上，选择**默认项目设置**，选择为其设置所需查看或更改，不再是迁移项目类型**迁移目标版本**下拉单击**常规**中左窗格中，然后单击底部**加载系统对象**。  
+-   若要指定所有的 SSMA 项目的设置**工具**菜单中，选择**默认项目设置**，选择迁移项目类型设置为其所需查看或更改从**迁移目标版本**下拉列表单击**常规**底部的左窗格中，然后单击**加载系统对象**。  
   
--   若要对指定为当前项目中，设置**工具**菜单上，选择**项目设置**，单击**常规**中左窗格中，然后单击底部**加载系统对象**。  
+-   若要在指定的当前项目中，设置**工具**菜单中，选择**项目设置**，单击**常规**底部的左窗格中，然后单击**加载系统对象**。  
   
 ## <a name="default-settings"></a>默认设置  
-转换系统对象占用系统资源，需要时间。 为了提高性能，SSMA 选择仅使用频率最高的系统对象，如下面的列表中所示：  
+将转换的系统对象会占用系统资源，需要一些时间。 若要提高性能，SSMA 仅选择的使用频率最高的系统对象，如下面的列表中所示：  
   
 -   SYS.DBMS_OUTPUT  
   
@@ -48,5 +48,5 @@ ms.locfileid: "34777793"
   
 -   SYS.DBMS_SESSION  
   
-如果 Oracle 对象引用其他系统对象，则应选择这些对象。 如果不选择引用的 Oracle 数据库对象的系统对象，SSMA 将报告转换错误。 如果你收到引起缺少系统对象的转换错误，请在此对话框中选择所缺少的对象。 然后，可以重复根据需要转换。  
+如果 Oracle 对象引用其他系统对象，则应选择这些对象。 如果不选择引用的 Oracle 数据库对象的系统对象，SSMA 将报告转换错误。 如果你收到转换错误引起的缺少的系统对象，在此对话框中选择所缺少的对象。 然后可以重复根据需要转换。  
   

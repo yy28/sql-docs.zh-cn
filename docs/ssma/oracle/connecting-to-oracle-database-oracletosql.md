@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4779f29c90256809c6dfc364365571e28aea7af6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c127ef44f10723a74b2f03fed46ea42b9bbdfff5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980469"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395636"
 ---
-# <a name="connecting-to-oracle-database-oracletosql"></a>连接到 Oracle 数据库 (OracleToSQL)
-将 Oracle 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，必须连接到你想要迁移的 Oracle 数据库。 连接时，SSMA 中获取有关所有 Oracle 架构的元数据，然后在 Oracle 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
+# <a name="connecting-to-oracle-database-oracletosql"></a>连接到 Oracle Database (OracleToSQL)
+将 Oracle 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到你想要迁移的 Oracle 数据库。 连接时，SSMA 中获取有关所有 Oracle 架构的元数据，然后在 Oracle 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
   
 与数据库的连接保持活动状态，直到关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "38980469"
 -   选择任何字典  
   
 ## <a name="establishing-a-connection-to-oracle"></a>建立与 Oracle 的连接  
-当连接到数据库时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 它将转换到的对象时，使用此元数据的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]语法，并当它会将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以浏览 Oracle 元数据资源管理器窗格中的此元数据，并查看单独的数据库对象的属性。  
+当连接到数据库时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 它将转换到的对象时，使用此元数据的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法，并当它会将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以浏览 Oracle 元数据资源管理器窗格中的此元数据，并查看单独的数据库对象的属性。  
   
 > [!IMPORTANT]  
 > 尝试连接之前，请确保数据库服务器正在运行，并且可以接受连接。  
@@ -97,7 +97,7 @@ ms.locfileid: "38980469"
     有关详细信息，请参阅[连接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。  
   
 ## <a name="reconnecting-to-oracle"></a>重新连接到 Oracle  
-与数据库服务器的连接将保持活动状态，直到您关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。 您可以脱机处理直到您要更新元数据，加载到数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，和迁移数据。  
+与数据库服务器的连接将保持活动状态，直到您关闭该项目。 重新打开该项目，必须重新连接如果想要的活动连接到数据库。 您可以脱机处理直到您要更新元数据，加载到数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，和迁移数据。  
   
 ## <a name="refreshing-oracle-metadata"></a>正在刷新 Oracle 元数据  
 Oracle 数据库的元数据不会自动刷新。 Oracle 的元数据资源管理器中的元数据是元数据，当您首次连接或上次您手动刷新元数据的快照。 您可以手动更新所有架构、 单一架构或单独的数据库对象的元数据。  
@@ -122,11 +122,11 @@ Oracle 数据库的元数据不会自动刷新。 Oracle 的元数据资源管�
   
     若要查看的颜色代码定义，请单击**图例**按钮。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>下一步  
   
--   迁移过程的下一步是为[连接到的 SQL Server 实例](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f)。  
+-   迁移过程的下一步是为[连接到的 SQL Server 实例](connecting-to-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

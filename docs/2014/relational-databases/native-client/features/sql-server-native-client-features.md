@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce15c9964eb7f0fe8dfc8338aba2499043ff7e77
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411306"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396461"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
   除公开 Windows（以前为 Microsoft）数据访问组件 (WDAC) 的功能以外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 还实现诸多其他功能以公开 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
@@ -74,7 +74,7 @@ ms.locfileid: "37411306"
  [FILESTREAM 支持](filestream-support.md)  
  讨论[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 对 FILESTREAM 增强功能支持。  
   
- [服务主体名称&#40;SPN&#41;中的客户端连接的支持](service-principal-name-spn-support-in-client-connections.md)  
+ [客户端连接中的服务主体名称 (SPN) 支持](service-principal-name-spn-support-in-client-connections.md)  
  讨论如何扩展对服务主体名称 (SPN) 的支持，以便能够跨所有协议进行相互身份验证。  
   
  [SQL Server Native Client 中的稀疏列支持](sparse-columns-support-in-sql-server-native-client.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "37411306"
  讨论 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中引入的行为更改。 如果出现以下情况，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 将不会向缓冲区添加高代理项码位：在绑定列结果或输出参数时提供了一个固定长度缓冲区；写入到缓冲区中终止符之前的 `wchar` 字符是代理项对的高代理项码位；并且下一个 `wchar` 字符是一个低代理项码位。  
   
  [对高可用性、灾难恢复的 SQL Server Native Client 支持](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 讨论如何配置你的应用程序以充分利用高可用性、 灾难恢复中添加功能[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+ 讨论如何配置应用程序以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中添加的高可用性和灾难恢复功能。  
   
  [访问扩展事件日志中的诊断信息](accessing-diagnostic-information-in-the-extended-events-log.md)  
  讨论对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和跟踪数据的增强功能，它们使您可以访问环形缓冲区和 XEvents 日志中的诊断信息。  

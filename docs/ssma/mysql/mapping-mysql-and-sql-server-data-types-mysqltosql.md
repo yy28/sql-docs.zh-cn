@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4690c8db938d53dd290ce642a7fa4ae3884b2a29
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a66311fcb2a02e5366fad180a648bcdce117dec8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982559"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396476"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>映射 MySQL 和 SQL Server 数据类型 (MySQLToSQL)
-MySQL 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库类型。 转换到 MySQL 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象，您必须指定如何将数据类型从 mysql 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  
+MySQL 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库类型。 转换到 MySQL 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象，您必须指定如何将数据类型从 mysql 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置&#40;类型映射&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)。  
@@ -86,7 +86,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
     2.  单击 **“删除”**。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是为[创建评估报告](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec)或[到 SQL Server 或 SQL Azure 语法转换 MySQL 数据库对象](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7)。 如果创建报表时，会自动在评估期间转换 MySQL 对象。  
+迁移过程中的下一步是为[创建评估报告](assessing-mysql-databases-for-conversion-mysqltosql.md)或[到 SQL Server 或 SQL Azure 语法转换 MySQL 数据库对象](converting-mysql-databases-mysqltosql.md)。 如果创建报表时，会自动在评估期间转换 MySQL 对象。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移 MySQL 数据库移到 SQL Server-Azure SQL 数据库&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

@@ -23,15 +23,15 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf73284de3f23aa861c446e4a2ed67278f4a5ce5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 21cbf6f3a5dac0b77669b940bf27be26198a4456
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979699"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396067"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>设置转换和迁移选项 (AccessToSQL)
-对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项用于指定如何转换对象、 如何迁移数据和源数据类型如何映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，验证配置选项是否适用于该项目。  
+对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项用于指定如何转换对象、 如何迁移数据和源数据类型如何映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，验证配置选项是否适用于该项目。  
   
 ## <a name="configuration-options-and-modes"></a>配置选项和模式  
 SSMA 中有四个组配置设置和配置这些设置的四种模式： 默认、 Optimistic、 Full 和自定义。 建议大多数用户使用的默认模式。 使用乐观模式进行简单转换。 如果你想要查看所有消息，请使用完整模式。 在自定义模式下，您可以设置选项。  
@@ -85,12 +85,12 @@ SSMA 中有四个组配置设置和配置这些设置的四种模式： 默认�
 ## <a name="next-steps"></a>后续步骤  
 迁移的下一步取决于您的项目需求：  
   
--   若要自定义源和目标数据类型的映射，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+-   若要自定义源和目标数据类型的映射，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)  
   
--   若要自定义源和目标数据库的映射，请参阅[映射源和目标数据库](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+-   若要自定义源和目标数据库的映射，请参阅[映射源和目标数据库](mapping-source-and-target-databases-accesstosql.md)  
   
--   否则，将转换到访问数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象定义。 有关详细信息，请参阅[转换访问数据库对象](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   否则，将转换到访问数据库对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象定义。 有关详细信息，请参阅[转换访问数据库对象](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -18,14 +18,14 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5606acac52bae2a97d0be1f6844970e81c051376
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2323c7c53571285d0e34365783b8b8d501de10c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982240"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395451"
 ---
-# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台 (OracleToSQL) 中的命令行选项
+# <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 控制台中的命令行选项 (OracleToSQL)
 Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 控制台中的命令行选项  
@@ -128,7 +128,7 @@ Microsoft 为您提供组强大的命令行选项来执行和控制 SSMA 活动�
 ### <a name="secure-password-option-psecurepassword"></a>安全的密码选项:-p/securepassword  
 此选项指示服务器连接的加密的密码。 它不同于所有其它选项： 选项不执行任何脚本或有助于与迁移相关的所有活动中，但可帮助管理迁移项目中使用的服务器连接的密码加密。  
   
-不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c)部分。  
+不能输入任何其他选项或密码作为命令行参数。 否则，它会导致错误。 有关详细信息，请参阅[管理密码](managing-passwords-oracletosql.md)部分。  
   
 支持下面的子选项`–p/securepassword`:  
   

@@ -5,7 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425706"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395058"
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425706"
   
  在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的数据库镜像是一种提高数据库可用性和改善数据冗余性的解决方案。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 本机客户端提供隐式支持数据库镜像，因此开发人员不需要编写任何代码或配置数据库后采取的任何其他操作。  
   
- 实现基于每个数据库的数据库镜像，保留一份[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在备用服务器上的生产数据库。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备用服务器支持快速故障转移且不会丢失已提交事务，温备用服务器支持强制服务（可能丢失数据）。  
+ 数据库镜像是按数据库实现的，它在备用服务器上保留一份 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 产品数据库的副本。 该服务器根据数据库镜像会话的配置和状态，充当热备用或温备用服务器。 热备用服务器支持快速故障转移且不会丢失已提交事务，温备用服务器支持强制服务（可能丢失数据）。  
   
- 产品数据库称为*主体数据库*，而备用副本称为*镜像数据库*。 主体数据库和镜像数据库必须驻留在单独的实例上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]（服务器实例），它们应如有可能位于不同的计算机。  
+ 产品数据库称为“主体数据库”，备份副本称为“镜像数据库”。 主体数据库和镜像数据库必须位于单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例（服务器实例）中，并且应位于单独的计算机中（如果可能）。  
   
- 生产服务器实例称为*主体服务器*，与调用的备用服务器实例进行通信*镜像服务器*。 主体和镜像服务器充当在数据库镜像伙伴*会话*。 如果主体服务器出现故障，镜像服务器可以将其数据库转为主体数据库通过名为的进程*故障转移*。 例如，Partner_A 和 Partner_B 是两个伙伴服务器，主体数据库最初位于作为主体服务器的 Partner_A 中，镜像数据库位于作为镜像服务器的 Partner_B 中。 如果 Partner_A 脱机，Partner_B 上的数据库可以进行故障转移，成为当前的主体数据库。 当 Partner_A 重新加入镜像会话时，该服务器变为镜像服务器，并且其数据库变为镜像数据库。  
+ 生产服务器实例称为“主体服务器”，而备用服务器实例称为“镜像服务器”，两个实例相互通信。 主体服务器和镜像服务器在数据库镜像会话中充当伙伴。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库。 例如，Partner_A 和 Partner_B 是两个伙伴服务器，主体数据库最初位于作为主体服务器的 Partner_A 中，镜像数据库位于作为镜像服务器的 Partner_B 中。 如果 Partner_A 脱机，Partner_B 上的数据库可以进行故障转移，成为当前的主体数据库。 当 Partner_A 重新加入镜像会话时，该服务器变为镜像服务器，并且其数据库变为镜像数据库。  
   
  {0}备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。{0} 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   

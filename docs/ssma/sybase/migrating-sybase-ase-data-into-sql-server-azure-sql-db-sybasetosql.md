@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982329"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395664"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 数据迁移到 SQL Server-Azure SQL DB (SybaseToSQL)
-已成功加载到 Sybase Adaptive Server Enterprise (ASE) 数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中，您可以将数据从迁移到 ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
+已成功加载到 Sybase Adaptive Server Enterprise (ASE) 数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，您可以将数据从迁移到 ASE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
   
 > [!IMPORTANT]  
 > 如果正在使用的引擎是服务器端数据迁移引擎，则在迁移数据之前必须安装 SSMA Sybase ASE 的扩展包，和运行 SSMA 的计算机上的 Sybase ASE 提供程序。 此外必须运行 SQL Server 代理服务。 有关如何安装扩展包的详细信息，请参阅[SQL Server (SybaseToSQL) 上安装 SSMA 组件](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
-在迁移之前，数据读入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，查看中的项目迁移选项**项目设置**对话框。  
+在迁移之前，数据读入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，查看中的项目迁移选项**项目设置**对话框。  
   
 -   通过使用此对话框可以设置选项，如迁移批大小、 表锁定、 约束检查，null 值处理和标识值处理。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移） (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)。  
   
-    有关详细信息**扩展数据迁移设置**，请参阅[数据迁移设置](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    有关详细信息**扩展数据迁移设置**，请参阅[数据迁移设置](data-migration-settings-sybasetosql.md)  
   
 -   **迁移引擎**中**项目设置**对话框，允许用户执行迁移过程使用两种类型的数据迁移引擎报道。:  
   

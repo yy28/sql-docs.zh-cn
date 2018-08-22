@@ -18,19 +18,19 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979479"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395453"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>查找数据库向导 （选择位置） (AccessToSQL)
 在查找数据库向导的选择位置页上，查找访问数据库的输入的搜索参数。  
   
-若要打开查找数据库向导中，在**文件**菜单上，单击**查找数据库**。 有关如何使用此对话框的详细信息，请参阅[添加和删除访问数据库文件](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+若要打开查找数据库向导中，在**文件**菜单上，单击**查找数据库**。 有关如何使用此对话框的详细信息，请参阅[添加和删除访问数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **“浏览”**  
 单击此项可浏览的计算机或网络。 选择文件夹或位置搜索，然后单击**确定**。 单击**添加**若要将此位置添加到列表。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "38979479"
 输入的 Windows 用户全名的所有者。 这可能会将转为*域*\\*用户*。  
   
 ## <a name="see-also"></a>请参阅  
-[添加和删除访问数据库文件](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[添加和删除访问数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
 [用户界面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

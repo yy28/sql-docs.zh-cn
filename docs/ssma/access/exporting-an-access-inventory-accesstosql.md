@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980669"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396037"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>导出 Access 清单 (AccessToSQL)
-如果有多个访问数据库，并且您不确定要迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，可以将导出的项目中的所有访问数据库的清单。 然后，您可以查看和查询清单的元数据来确定哪些数据库和要迁移这些数据库中的对象。 此清单，它允许您快速查找常见问题的答案的问题，如下所示：  
+如果有多个访问数据库，并且您不确定要迁移到哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以将导出的项目中的所有访问数据库的清单。 然后，您可以查看和查询清单的元数据来确定哪些数据库和要迁移这些数据库中的对象。 此清单，它允许您快速查找常见问题的答案的问题，如下所示：  
   
 -   最大数据库有哪些？  
   
@@ -48,15 +48,15 @@ ms.locfileid: "38980669"
 在本主题末尾提供了用于回答这些问题的查询示例。  
   
 ## <a name="exported-metadata"></a>导出的元数据  
-SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 报表、 窗体、 宏和模块的元数据。 有关每个项的类别的元数据导出到一个单独的表中。 有关这些表的架构，请参阅[Access 清单架构](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524)。  
+SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 报表、 窗体、 宏和模块的元数据。 有关每个项的类别的元数据导出到一个单独的表中。 有关这些表的架构，请参阅[Access 清单架构](access-inventory-schemas-accesstosql.md)。  
   
 ## <a name="exporting-inventory-data"></a>导出清单数据  
-若要导出 Access 清单，您必须首次打开或创建 SSMA 项目，，然后添加你想要分析的 Access 数据库。 将数据库添加到 SSMA 项目后，将这些数据库有关的元数据导出到指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库和架构。 如有必要，SSMA 创建表以存储的元数据。 SSMA 然后将添加到 Access 数据库有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
+若要导出 Access 清单，您必须首次打开或创建 SSMA 项目，，然后添加你想要分析的 Access 数据库。 将数据库添加到 SSMA 项目后，将这些数据库有关的元数据导出到指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库和架构。 如有必要，SSMA 创建表以存储的元数据。 SSMA 然后将添加到 Access 数据库有关的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
   
 > [!NOTE]  
-> Access 数据库可以拆分为多个文件： 包含表和包含查询、 窗体、 报表、 宏、 模块和快捷方式的前端数据库的后端数据库。 如果你想要拆分数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，将前端数据库添加到 SSMA。  
+> Access 数据库可以拆分为多个文件： 包含表和包含查询、 窗体、 报表、 宏、 模块和快捷方式的前端数据库的后端数据库。 如果你想要拆分数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，将前端数据库添加到 SSMA。  
   
-下面的说明介绍如何创建项目、 将数据库添加到项目、 连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然后导出清单数据。  
+下面的说明介绍如何创建项目、 将数据库添加到项目、 连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后导出清单数据。  
   
 **若要创建项目**  
   
@@ -72,7 +72,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
 5.  在中**迁移到**组合框中，选择你想要迁移，然后依次的目标版本**确定**。  
   
-有关创建项目的详细信息，请参阅[创建和管理项目](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)。  
+有关创建项目的详细信息，请参阅[创建和管理项目](creating-and-managing-projects-accesstosql.md)。  
   
 **若要查找和添加数据库**  
   
@@ -101,13 +101,13 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
 8.  在验证页上，单击**完成**。  
   
-有关将数据库添加到项目的详细信息，请参阅[添加和删除访问数据库文件](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+有关将数据库添加到项目的详细信息，请参阅[添加和删除访问数据库文件](adding-and-removing-access-database-files-accesstosql.md)。  
   
 **若要连接到 SQL Server**  
   
 1.  上**文件**菜单中，选择**连接到 SQL Server**。  
   
-2.  在连接对话框中，输入或选择的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+2.  在连接对话框中，输入或选择的实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     -   如果要连接到本地计算机上的默认实例，则可以输入**localhost**或句点 (**。**)。  
   
@@ -117,11 +117,11 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
   
 3.  在中**数据库**框中，输入导出的元数据的目标数据库的名称。  
   
-4.  如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]配置为接受非默认端口上的连接，请输入用于的端口号[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中的连接**服务器端口**框。 对于默认实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，默认端口号为 1433年。 对于命名实例，SSMA 尝试获取端口号从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]浏览器服务。  
+4.  如果你的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配置为接受非默认端口上的连接，请输入用于的端口号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的连接**服务器端口**框。 对于默认实例的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，默认端口号为 1433年。 对于命名实例，SSMA 尝试获取端口号从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]浏览器服务。  
   
-5.  在中**身份验证**下拉列表菜单中，选择要使用的连接身份验证类型。 若要使用当前 Windows 帐户，请选择**Windows 身份验证**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登录名，选择**SQL Server 身份验证**，然后提供用户名和密码。  
+5.  在中**身份验证**下拉列表菜单中，选择要使用的连接身份验证类型。 若要使用当前 Windows 帐户，请选择**Windows 身份验证**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名，选择**SQL Server 身份验证**，然后提供用户名和密码。  
   
-有关连接到详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，请参阅[连接到 SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)。  
+有关连接到详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[连接到 SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)。  
   
 **若要导出清单信息**  
   
@@ -138,11 +138,11 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
 导出元数据，每次 SSMA 将数据追加到清单。 在清单中的现有数据未更新或删除。  
   
 ## <a name="querying-the-exported-metadata"></a>查询导出的元数据  
-导出有关访问数据库的元数据后，可以查询的元数据。 以下说明介绍如何使用中的查询编辑器窗口[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]运行查询。  
+导出有关访问数据库的元数据后，可以查询的元数据。 以下说明介绍如何使用中的查询编辑器窗口[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]运行查询。  
   
 **若要查询的元数据**  
   
-1.  从**启动**菜单，依次指向**所有程序**，指向**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年**或设置为**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**或设置为**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年**，然后单击**SQL Server Management Studio**。  
+1.  从**启动**菜单，依次指向**所有程序**，指向**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年**或设置为**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**或设置为**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年**，然后单击**SQL Server Management Studio**。  
   
 2.  在中**连接到服务器**对话框中，验证设置，然后依次**Connect**。  
   
@@ -153,7 +153,7 @@ SSMA 导出有关访问数据库、 表、 列、 索引、 外键、 查询、 
 5.  按 F5 键以运行查询。  
   
 ## <a name="query-examples"></a>查询示例  
-在运行任何以下查询之前，应运行 USE *database_name*查询，以确保针对包含导出的元数据的数据库运行查询。 例如，如果元数据导出为一个名为 MyAccessMetadata 数据库后，您将添加以下的开始处[!INCLUDE[tsql](../../includes/tsql_md.md)]代码：  
+在运行任何以下查询之前，应运行 USE *database_name*查询，以确保针对包含导出的元数据的数据库运行查询。 例如，如果元数据导出为一个名为 MyAccessMetadata 数据库后，您将添加以下的开始处[!INCLUDE[tsql](../../includes/tsql-md.md)]代码：  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>哪些数据库包含私人信息？  
-您的 Access 数据库可能包含敏感或私人信息。 你可能想要移动到这些数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]以利用其安全功能。 如果知道包含敏感数据的列具有特定名称，或包含特定字符，可以使用查询来查找包含该信息的所有列。 例如，可以找到所有列包含字符串"薪水"。  然后，查询返回数据库名称、 表名和列名。  
+您的 Access 数据库可能包含敏感或私人信息。 你可能想要移动到这些数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以利用其安全功能。 如果知道包含敏感数据的列具有特定名称，或包含特定字符，可以使用查询来查找包含该信息的所有列。 例如，可以找到所有列包含字符串"薪水"。  然后，查询返回数据库名称、 表名和列名。  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 如果不知道的列名称，可以编写查询以返回所有列。 若要执行此操作，删除从之前的查询的 WHERE 子句。  
   
 ## <a name="see-also"></a>请参阅  
-[为迁移准备 Access 数据库](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[为迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)  
   

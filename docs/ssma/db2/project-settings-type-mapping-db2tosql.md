@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509216"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394823"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>项目设置 （类型映射） (DB2ToSQL)
-类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
+类型映射页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 数据类型设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   
 类型映射页现已推出**项目设置**并**默认项目设置**对话框。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "39509216"
 映射的 DB2 数据类型。  
   
 **目标类型**  
-目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]指定 DB2 数据类型的数据类型。  
+目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定 DB2 数据类型的数据类型。  
   
 请参阅下节，了解 DB2 类型映射的默认值 SSMA 中的表。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "39509216"
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>默认自变量类型和返回值类型映射  
 下表包含有关参数和返回值的默认数据类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
+|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ ms.locfileid: "39509216"
 ### <a name="default-column-type-mapping"></a>默认列类型映射  
 下表包含列的默认类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
+|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ ms.locfileid: "39509216"
 ### <a name="default-local-variable-type-mapping"></a>默认本地变量的类型映射  
 下表包含本地变量的默认类型映射。  
   
-|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型|  
+|DB2 数据类型|默认[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  

@@ -1,5 +1,5 @@
 ---
-title: 创建服务器连接文件 (SybaseToSQL) |Microsoft 文档
+title: 创建服务器连接文件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779293"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394194"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>创建服务器连接文件 (SybaseToSQL)
-脚本文件的服务器部分中，也可在单独的服务器连接文件，可以指定服务器信息。 服务器连接文件的命令行参数， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
+脚本文件的服务器部分中或在单独的服务器连接文件中，可以指定服务器信息。 服务器连接文件的命令行参数是， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
   
 **示例：**  
   
@@ -109,11 +109,11 @@ ms.locfileid: "34779293"
 ```  
   
 ## <a name="server-connection-file-validation"></a>服务器连接文件验证  
-用户可以轻松地验证他/她服务器连接文件的架构定义文件和**S2SSConsoleScriptServersSchema.xsd**架构文件夹中可用。  
+用户可以轻松地验证他/她服务器连接文件和架构定义文件**S2SSConsoleScriptServersSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[执行 SSMA 控制台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+在操作控制台中的下一步是[执行 SSMA 控制台&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[执行 SSMA 控制台](executing-the-ssma-console-sybasetosql.md)  
   

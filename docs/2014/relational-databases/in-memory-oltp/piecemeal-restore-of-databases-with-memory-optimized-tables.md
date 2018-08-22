@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
@@ -14,12 +13,12 @@ caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b54e8b05ae9658019c1ac10bc48f8510f22119c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e5bb2800d49e047a67634076a44d99f416dc451
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307537"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395668"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>使用内存优化表的数据库的段落还原
   使用内存优化表的数据库支持段落还原，但有一个限制（参见下文）。 有关段落备份和还原的详细信息，请参阅 [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) 和[段落还原 (SQL Server)](../backup-restore/piecemeal-restores-sql-server.md)。  

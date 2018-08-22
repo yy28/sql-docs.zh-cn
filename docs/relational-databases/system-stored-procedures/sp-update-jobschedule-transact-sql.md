@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobschedule (Transact SQL) |Microsoft 文档
+title: sp_update_jobschedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253031"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394592"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   更改指定作业的计划设置。  
   
- **sp_update_jobschedule**为了向后兼容性。  
+ **sp_update_jobschedule**提供只是为了向后兼容。  
   
 > [!IMPORTANT]  
->  有关 Microsoft SQL server 的早期版本中使用的语法的详细信息，请参阅 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
+>  有关 Microsoft SQL Server 的早期版本中使用的语法的详细信息，请参阅 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
   
-## <a name="remarks"></a>注释  
- 作业计划现在可以独立于作业进行管理。 若要更新计划，使用**sp_update_schedule**。  
+## <a name="remarks"></a>Remarks  
+ 作业计划现在可以独立于作业进行管理。 若要更新计划，请使用**sp_update_schedule**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -51,12 +51,12 @@ ms.locfileid: "33253031"
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**可以使用此存储的过程以更新其他用户所拥有的作业计划。  
+ 只有的成员**sysadmin**可以使用此存储的过程更新其他用户所拥有的作业计划。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_update_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+ [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

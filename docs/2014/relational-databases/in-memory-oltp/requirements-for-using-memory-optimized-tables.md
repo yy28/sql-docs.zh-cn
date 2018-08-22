@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190387"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394842"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>使用内存优化表的要求
   除了[的硬件和软件要求安装 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)，以下是使用内存中 OLTP 的要求：  
@@ -42,7 +41,7 @@ ms.locfileid: "37190387"
   
 -   若要安装内存中 OLTP，请选择**数据库引擎服务**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
-     若要安装报表生成 ([确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (管理内存中 OLTP 通过[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对象资源管理器)，选择**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
+     若要安装报表生成 ([确定表或存储过程应移植到内存中 OLTP 是否](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 和[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](管理内存中 OLTP 通过[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对象资源管理器)，选择**管理工具-基本**或**管理工具-高级**当你安装[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>有关使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]的重要说明  
   
@@ -56,7 +55,7 @@ ms.locfileid: "37190387"
   
 -   如果在有并发插入或更新工作负荷会影响要删除行范围时尝试删除大量行，删除可能失败。 解决方法是先停止插入或更新工作负荷，然后再删除。 或者，也可以将事务配置为较小的事务，这样会减小被并发工作负荷中断的可能性。 所有编写内存优化表上的操作，使用重试逻辑 ([内存优化表上的事务的重试逻辑准则](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md))。  
   
--   如果创建一个或多个包含内存优化表的数据库，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用即时文件初始化（授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME 用户权限）。 如果没有即时文件初始化，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关即时文件初始化的详细信息，请参阅 [数据库文件初始化](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx)。 有关如何启用即时文件初始化的信息，请参阅 [启用即时文件初始化的方法和原因](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)。  
+-   如果创建一个或多个包含内存优化表的数据库，应对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例启用即时文件初始化（授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务启动帐户 SE_MANAGE_VOLUME_NAME 用户权限）。 如果没有即时文件初始化，内存优化存储文件（数据和差异文件）将在创建时初始化，这会对工作负荷性能产生负面影响。 有关即时文件初始化的详细信息，请参阅 [数据库文件初始化](../databases/database-instant-file-initialization.md)。 有关如何启用即时文件初始化的信息，请参阅 [启用即时文件初始化的方法和原因](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)。  
   
 ## <a name="did-this-article-help-you-were-listening"></a>本文是否对你有帮助？ 我们洗耳恭听  
  你正在查找哪些信息，是否已经找到？ 我们不断听取你的反馈来改进内容。 请提交到备注[ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)。  

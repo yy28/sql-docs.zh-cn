@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554247"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396435"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_优化\_建议 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554247"
 | **valid\_since** | **datetime2** | 此建议生成的第一次。 |
 | **最后一个\_刷新** | **datetime2** | 此建议生成的最后一次。 |
 | State | **nvarchar(4000)** | JSON 文档，用于描述该建议的状态。 可以使用下列域：<br />-   `currentValue` -建议的当前状态。<br />-   `reason` – 介绍建议处于当前状态的常量。|
-| **is\_executable\_action** | **bit** | 1 = 可以对通过数据库中执行建议[!INCLUDE[tsql_md](../../includes/tsql_md.md)]脚本。<br />0 = 不能对数据库执行该建议 (例如： 信息唯一或已还原建议) |
+| **is\_executable\_action** | **bit** | 1 = 可以对通过数据库中执行建议[!INCLUDE[tsql_md](../../includes/tsql-md.md)]脚本。<br />0 = 不能对数据库执行该建议 (例如： 信息唯一或已还原建议) |
 | **是\_revertable\_操作** | **bit** | 1 = 可以自动监视和恢复数据库引擎的建议。<br />0 = 不能自动监视并还原建议。 大多数&quot;可执行文件&quot;操作将为&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 应用建议的日期。 |
 | **execute\_action\_duration** | **time** | 执行操作的持续时间。 |
@@ -59,7 +59,7 @@ ms.locfileid: "39554247"
 | **还原\_操作\_启动\_通过** | **nvarchar(4000)** | `User` = 用户手动取消强制推荐的计划。 <br /> `System` = 系统自动还原建议。 |
 | **还原\_操作\_启动\_时间** | **datetime2** | 已还原建议的日期。 |
 | **score** | **int** | 估计此建议在 0-100 的值/影响规模 （越大越好） |
-| **详细信息** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 可以使用下列域：<br /><br />`planForceDetails`<br />-    `queryId` -查询\_回归的查询的 id。<br />-    `regressedPlanId` -plan_id 回归计划。<br />-   `regressedPlanExecutionCount` 的检测到执行的查询回归计划回归分析之前的数。<br />-    `regressedPlanAbortedCount` -回归计划执行期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` 的检测到回归分析之前使用回归查询平均 CPU 时间。<br />-    `regressedPlanCpuTimeStddev` 的检测到的回归的查询回归分析之前使用的 CPU 时间标准偏差。<br />-    `recommendedPlanId` -应强制计划的 plan_id。<br />-   `recommendedPlanExecutionCount`-的查询的回归分析检测到之前应强制计划执行数。<br />-    `recommendedPlanAbortedCount` -应强制计划执行期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` 的由与应强制 （计算之前检测到回归） 的计划执行的查询平均 CPU 时间。<br />-    `recommendedPlanCpuTimeStddev` 检测到的回归的查询回归分析之前使用的 CPU 时间的标准偏差。<br /><br />`implementationDetails`<br />-  `method` 的应可用于更正回归方法。 值始终是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 应执行强制实施该建议的计划的脚本。 |
+| **详细信息** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 可以使用下列域：<br /><br />`planForceDetails`<br />-    `queryId` -查询\_回归的查询的 id。<br />-    `regressedPlanId` -plan_id 回归计划。<br />-   `regressedPlanExecutionCount` 的检测到执行的查询回归计划回归分析之前的数。<br />-    `regressedPlanAbortedCount` -回归计划执行期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` 的检测到回归分析之前使用回归查询平均 CPU 时间。<br />-    `regressedPlanCpuTimeStddev` 的检测到的回归的查询回归分析之前使用的 CPU 时间标准偏差。<br />-    `recommendedPlanId` -应强制计划的 plan_id。<br />-   `recommendedPlanExecutionCount`-的查询的回归分析检测到之前应强制计划执行数。<br />-    `recommendedPlanAbortedCount` -应强制计划执行期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` 的由与应强制 （计算之前检测到回归） 的计划执行的查询平均 CPU 时间。<br />-    `recommendedPlanCpuTimeStddev` 检测到的回归的查询回归分析之前使用的 CPU 时间的标准偏差。<br /><br />`implementationDetails`<br />-  `method` 的应可用于更正回归方法。 值始终是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 应执行强制实施该建议的计划的脚本。 |
   
 ## <a name="remarks"></a>Remarks  
  返回的信息`sys.dm_db_tuning_recommendations`时更新数据库引擎标识潜在查询性能回归，因而不会持久保留。 建议将一直保留，直到仅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新启动。 如果要在服务器回收后保留，数据库管理员应定期制作备份副本的优化建议。 

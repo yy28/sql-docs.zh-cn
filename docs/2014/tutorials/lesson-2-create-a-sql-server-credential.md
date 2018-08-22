@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163800"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394405"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
   **凭据：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]备份和还原进程使用凭据向 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户详细信息**访问密钥**，请参阅[存储帐户访问密钥](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
- 有关凭据的一般信息，请参阅 [凭据](http://msdn.microsoft.com/library/ms161950.aspx)。  
+ 有关凭据的常规信息，请参阅[凭据](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
- 有关使用凭据的其他示例的信息，请参阅 [创建 SQL 代理的代理](http://msdn.microsoft.com/library/ms175834.aspx)。  
+ 有关使用凭据的位置，其他示例的信息，请参阅[创建 SQL Server 代理的代理](../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 > [!IMPORTANT]  
 >  创建 SQL Server 凭据，如下所述的要求是特定于 SQL Server 的备份过程 ([SQL Server 备份到 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)，并[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 在访问 Azure 存储来读写备份时，SQL Server 使用存储账户名称和访问密钥信息。  有关创建凭据的 Azure 存储中存储数据库文件的详细信息，请参阅[第 3 课： 创建 SQL Server 凭据](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

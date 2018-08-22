@@ -19,12 +19,12 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3c3afeaadab1fd80c18a1dd428a93f7a2a66c28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f00fb1249254cf0adbcba84babe94e967b281b9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204867"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394393"
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>为传递扩展插件实现 IDeliveryExtension 接口
   传递扩展插件类用于根据报表通知的内容将通知传递给用户。 传递扩展插件类还提供了基础结构，用于验证传递到传递扩展插件的用户设置。 此外，传递扩展插件类应包含特定的属性，客户端可以使用这些属性获得有关扩展插件的名称、扩展插件支持的设置以及可用于传递扩展插件的呈现格式的信息。  
@@ -32,7 +32,7 @@ ms.locfileid: "37204867"
  ![IDeliveryExtension 接口进程](../../media/bk-ext-02.gif "IDeliveryExtension 接口进程")  
 IDeliveryExtension 接口允许对用户数据进行验证，以及使客户端能够了解所需的传递设置  
   
- 若要创建传递扩展插件类，应实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 和 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 借助于 IDeliveryExtension 接口，传递扩展插件可以使用 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法传递报表通知，并使用 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> 方法验证传入的扩展插件设置。 借助于 IExtension 接口，传递扩展插件可以实现本地化的扩展插件名称并处理存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置文件中的扩展插件特定的配置信息。 通过实现 IExtension，传递扩展插件可以包含 <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> 属性。 强烈建议 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 传递扩展插件支持 LocalizedName 属性，以便用户在用户界面（如报表管理器）中对于该扩展插件看到熟悉的名称。  
+ 若要创建传递扩展插件类，应实现 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 和 <xref:Microsoft.ReportingServices.Interfaces.IExtension>。 借助于 IDeliveryExtension 接口，传递扩展插件可以使用 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 方法传递报表通知，并使用 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> 方法验证传入的扩展插件设置。 借助于 IExtension 接口，传递扩展插件可以实现本地化的扩展插件名称并处理存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 配置文件中的扩展插件特定的配置信息。 通过实现 IExtension，传递扩展插件可以包含 <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> 属性。 强烈建议 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 传递扩展插件支持 LocalizedName 属性，以便用户在用户界面（如报表管理器）中对于该扩展插件看到熟悉的名称。  
   
  传递扩展插件还必须实现 IDeliveryExtension 接口的 ExtensionSettings 属性。 报表服务器使用由 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings%2A> 属性返回的值以评估传递扩展插件所要求的设置。 与传递扩展插件交互的客户端使用报表服务器 Web 服务的 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法为传递扩展插件返回设置列表。  
   

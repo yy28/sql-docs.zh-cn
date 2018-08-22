@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985209"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395673"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>将 MySQL 数据迁移到 SQL Server-Azure SQL DB (MySQLToSQL)
-已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你可以将数据从迁移到 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+已成功同步与已转换的对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，你可以将数据从迁移到 MySQL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 > [!IMPORTANT]  
-> 如果正在使用的引擎是服务器端数据迁移引擎，然后，在迁移之前，数据，必须安装 SSMA for MySQL 的扩展包，并正在运行的 SSMA 的计算机上的 MySQL 提供程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]也必须运行代理服务。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 如果正在使用的引擎是服务器端数据迁移引擎，然后，在迁移之前，数据，必须安装 SSMA for MySQL 的扩展包，并正在运行的 SSMA 的计算机上的 MySQL 提供程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必须运行代理服务。 有关如何安装扩展包的详细信息，请参阅[SQL Server （mysql 迁移到 SQL） 上安装 SSMA 组件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
-在迁移之前，数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，查看中的项目迁移选项**项目设置**对话框。  
+在迁移之前，数据到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，查看中的项目迁移选项**项目设置**对话框。  
   
 -   通过使用此对话框可以设置选项，如迁移批大小、 表锁定、 约束检查，null 值处理和标识值处理。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移）](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
   
-    有关详细信息**扩展数据迁移设置**，请参阅[数据迁移设置](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    有关详细信息**扩展数据迁移设置**，请参阅[数据迁移设置](data-migration-settings-mysqltosql.md)  
   
 -   **迁移引擎**中**项目设置**对话框，允许用户执行迁移过程使用两种类型的数据迁移引擎：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38985209"
 > **客户端数据迁移**选项仅适用于 SQL Azure。  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>将数据迁移到 SQL Server 或 SQL Azure  
-迁移数据是大容量加载操作以便将数据行移到的 MySQL 表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 表在事务中的。 加载到的行数[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]在每个事务在项目设置中配置。  
+迁移数据是大容量加载操作以便将数据行移到的 MySQL 表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表在事务中的。 加载到的行数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在每个事务在项目设置中配置。  
   
 若要查看迁移的消息，请确保输出窗格可见。 否则为从**视图**菜单中，选择**输出**。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38985209"
   
         1.  SQL Server 实例上安装 SSMA for MySQL 的扩展包。  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理服务正在运行的 SQL Server 实例上  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务正在运行的 SQL Server 实例上  
   
     -   用于执行**服务器端数据迁移**，选择**服务器端数据迁移引擎**选项**项目设置**对话框。  
   

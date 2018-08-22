@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216587"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395415"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>运行升级顾问（用户界面）
   在升级计划期间，可运行升级顾问来分析本地或远程组件。 升级顾问为分析的每个组件和实例生成一个报表。  
   
 > [!IMPORTANT]  
->  升级顾问不分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的远程实例。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 实例，升级顾问必须安装在安装 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的计算机上。  
+>  升级顾问不分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的远程实例。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs.md)] 实例，升级顾问必须安装在安装 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的计算机上。  
 >   
 >  若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services，您必须具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]安装和[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]安装在同一台计算机上。  
   

@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290953"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396472"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
   使用 **“备份数据库”** 对话框中的 **“常规”** 页可以查看或修改数据库备份操作的设置。  
@@ -37,13 +37,13 @@ ms.locfileid: "37290953"
 -   [创建差异数据库备份 (SQL Server)](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅 [联机丛书中的](http://msdn.microsoft.com/library/ms187658.aspx) 数据库维护计划 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
+    >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅 [联机丛书中的](../maintenance-plans/maintenance-plans.md) 数据库维护计划 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
  **创建部分备份**  
   
 -   对于部分备份，必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) 语句和 PARTIAL 选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="source"></a>数据源  
  可通过 **“源”** 面板中的选项标识数据库并指定备份操作的备份类型和组件。  

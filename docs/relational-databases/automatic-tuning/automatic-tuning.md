@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556467"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395208"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39556467"
 
 ## <a name="why-automatic-tuning"></a>为什么自动优化？
 
-经典数据库管理的主要任务之一监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查询时，应添加以提高性能，并且很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
+经典数据库管理的主要任务之一监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询时，应添加以提高性能，并且很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
 
 ### <a name="how-does-automatic-tuning-works"></a>原理自动优化工作原理是什么？
 
@@ -58,7 +58,7 @@ ms.locfileid: "39556467"
 
 ### <a name="what-is-sql-plan-choice-regression"></a>SQL 计划选择回归是什么？
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可以使用不同的 SQL 计划其执行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查询。 查询计划取决于统计信息、 索引和其他因素。 应该用于执行某些的最优计划[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查询可能会随着时间的推移发生更改。 在某些情况下，新的计划不能比以前更好，新的计划可能会导致性能回归。
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可以使用不同的 SQL 计划其执行[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询。 查询计划取决于统计信息、 索引和其他因素。 应该用于执行某些的最优计划[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询可能会随着时间的推移发生更改。 在某些情况下，新的计划不能比以前更好，新的计划可能会导致性能回归。
 
  ![SQL 计划选择回归](media/plan-choice-regression.png "SQL 计划选择回归") 
 
@@ -94,7 +94,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的视图和监视性能和查询存储中解决问题所需的过程。
 
-在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，可以找到计划选择回归使用查询存储系统视图。 在中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，则[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并显示潜在的计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题、 问题和详细信息，例如确定查询回归计划的 ID，用作比较基准进行比较，计划的 ID 的重要性和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]语句可以执行以修复出现问题。
+在[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，可以找到计划选择回归使用查询存储系统视图。 在中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，则[!INCLUDE[ssde_md](../../includes/ssde_md.md)]检测并显示潜在的计划选择回归并建议应在应用的操作[sys.dm_db_tuning_recommendations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)视图。 该视图显示有关问题、 问题和详细信息，例如确定查询回归计划的 ID，用作比较基准进行比较，计划的 ID 的重要性和[!INCLUDE[tsql_md](../../includes/tsql-md.md)]语句可以执行以修复出现问题。
 
 | type | description | DATETIME | score | 详细信息 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 为什么要包含的信息的说明[!INCLUDE[ssde_md](../../includes/ssde_md.md)]认为此计划更改是一个潜在的性能回归。
  - 检测到潜在回归时的日期时间。
  - 此建议的分数。 
- - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql_md.md)]脚本可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
+ - 有关检测到的计划回归计划修复该问题，应强制计划的 ID 的 ID 的 ID 等问题的详细信息[!INCLUDE[tsql_md](../../includes/tsql-md.md)]脚本可能会应用若要修复的问题，等等。详细信息存储在[JSON 格式](../../relational-databases/json/index.md)。
 
 使用以下查询以获取修复的问题和其他信息的估计脚本获得：
 

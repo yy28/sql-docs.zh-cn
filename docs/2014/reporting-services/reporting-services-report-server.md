@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189834"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394186"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  
@@ -91,21 +91,21 @@ ms.locfileid: "37189834"
   
 |功能或组件|本机模式|SharePoint 模式|  
 |--------------------------|-----------------|---------------------|  
-|**URL 寻址**|是|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](url-access-parameter-reference.md)。|  
-|**自定义安全扩展插件**|是|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不能部署或报表服务器上使用自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
-|**配置管理器**|是|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
-|**报表管理器**|是|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)。|  
-|**链接报表**|是|否。|  
-|**我的报表**|是|“否”|  
-|**我的订阅** 和批处理方法。|是|“否”|  
-|**数据警报**|“否”|是|  
-|**Power View**|“否”|是<br /><br /> 要求在客户端浏览器中具有 Silverlight。 浏览器要求的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
-|**.RDL 报表**|是|是<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
-|**.RDLX 报表**|“否”|是<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
-|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|“否”|是|  
-|**用于面向 internet 的部署的 AAM 区域**|“否”|是|  
-|**SharePoint 备份和恢复**|“否”|是|  
-|**UL 日志支持**|“否”|是|  
+|**URL 寻址**|用户帐户控制|在 SharePoint 集成模式下，URL 寻址方式有所不同。 使用 SharePoint URL 引用报表、报表模型、共享数据源和资源。 不使用报表服务器的文件夹层次结构。 如果您的自定义应用程序依赖于本机模式的报表服务器上支持的 URL 访问，则将报表服务器配置为 SharePoint 集成模式时，该功能将不再有效。<br /><br /> 有关 URL 访问的详细信息，请参阅 [URL 访问参数引用](url-access-parameter-reference.md)。|  
+|**自定义安全扩展插件**|用户帐户控制|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不能部署或报表服务器上使用自定义安全扩展插件。 报表服务器包括一个特殊用途的安全扩展插件，只要将报表服务器配置为以 SharePoint 集成模式运行，便会使用此插件。 该安全扩展插件是一个内部组件，并且是执行集成操作所必需的组件。|  
+|**配置管理器**|用户帐户控制|**\*\* 重要提示 \*\*** 配置管理器不能用于管理 SharePoint 模式报表服务器。 而是使用 SharePoint 管理中心。|  
+|**报表管理器**|用户帐户控制|配置管理器不能用于管理 SharePoint 模式。 请使用 SharePoint 应用程序页。 有关详细信息，请参阅 [Reporting Services SharePoint 服务和服务应用程序](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)。|  
+|**链接报表**|用户帐户控制|否。|  
+|**我的报表**|用户帐户控制|否|  
+|**我的订阅** 和批处理方法。|用户帐户控制|否|  
+|**数据警报**|否|用户帐户控制|  
+|**Power View**|否|用户帐户控制<br /><br /> 要求在客户端浏览器中具有 Silverlight。 浏览器要求的详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**.RDL 报表**|用户帐户控制|用户帐户控制<br /><br /> .RDL 报表可以在本机模式或 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
+|**.RDLX 报表**|否|用户帐户控制<br /><br /> Power View .RDLX 报表只能在 SharePoint 模式下的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上运行。|  
+|**用于 SharePoint 列表扩展的 SharePoint 用户标记凭据**|否|用户帐户控制|  
+|**用于面向 internet 的部署的 AAM 区域**|否|用户帐户控制|  
+|**SharePoint 备份和恢复**|否|用户帐户控制|  
+|**UL 日志支持**|否|用户帐户控制|  
   
 ##  <a name="bkmk_nativemode"></a> 本机模式  
  在本机模式中，报表服务器是独立的应用程序服务器，提供查看、管理、处理和传递报表及报表模型的所有功能。 这是报表服务器实例的默认模式。 可以安装在系统安装期间配置的本机模式的报表服务器，也可以在系统安装完成后配置报表服务器进行本机模式操作。  
@@ -119,7 +119,7 @@ ms.locfileid: "37189834"
  第三方开发人员可以创建其他扩展插件，以替代或扩展报表服务器的处理能力。 若要了解有关应用程序开发人员可以使用的编程接口的详细信息，请参阅 [技术参考](../../2014/reporting-services/technical-reference-ssrs.md)。  
   
 ###  <a name="bkmk_nativewithwebparts"></a> 带有 SharePoint Web 部件的本机模式  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了两种 Web 部件，可以在 [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 或更高版本、[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 或更高版本的实例中安装和注册这两种部件。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的实例上安装并注册的两个 Web 部件[!INCLUDE[winSPServ](../includes/winspserv-md.md)]2.0 或更高版本，或 SharePoint Portal Server 2003 或更高版本。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中引入的。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 模式  
  在 SharePoint 模式下，报表服务器必须在 SharePoint 服务器场中运行。 报表服务器处理、 呈现和管理功能都是运行的 SharePoint 应用程序服务器[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 共享服务和一个或多个[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序。 SharePoint 站点提供对报表服务器内容和操作的前端访问。  

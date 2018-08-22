@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
@@ -14,12 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1f0c92e879c7992e21a6c424bc723c76ae0f18d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209077"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395452"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>内存优化表简介
   内存优化表是使用 [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) 创建的表。  
@@ -58,9 +57,9 @@ ms.locfileid: "37209077"
   
 |功能|使用本机编译的存储过程访问|解释型 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 访问|CLR 访问|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|内存优化表|是|是|否 <sup>1</sup>|  
-|[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|是|是|“否”|  
-|[本机编译的存储过程](http://msdn.microsoft.com/library/dn133184.aspx)|无法使用 EXECUTE 语句从本机编译的存储过程执行任意存储过程。|是|否 <sup>1</sup>|  
+|内存优化表|用户帐户控制|用户帐户控制|否 <sup>1</sup>|  
+|[内存优化表变量](../../database-engine/memory-optimized-table-variables.md)|用户帐户控制|是|否|  
+|[本机编译的存储过程](http://msdn.microsoft.com/library/dn133184.aspx)|无法使用 EXECUTE 语句从本机编译的存储过程执行任意存储过程。|用户帐户控制|否 <sup>1</sup>|  
   
  <sup>1</sup>无法从上下文连接访问内存优化表或本机编译存储的过程 (从连接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]执行 CLR 模块时)。 但是，可以创建和打开能够访问内存优化的表和本机编译的存储过程的其他连接。 有关详细信息，请参阅[常规 vs。上下文连接](../clr-integration/data-access/context-connections-vs-regular-connections.md)。  
   

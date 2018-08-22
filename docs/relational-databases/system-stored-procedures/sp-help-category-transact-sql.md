@@ -1,5 +1,5 @@
 ---
-title: sp_help_category (Transact SQL) |Microsoft 文档
+title: sp_help_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254879"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395068"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class=**] *****类*****  
+ [  **@class=**] **'***类*****  
  请求其信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**JOB**|提供有关作业类别的信息。|  
-|**警报**|提供有关警报类别的信息。|  
+|**发出警报**|提供有关警报类别的信息。|  
 |**运算符**|提供有关操作员类别的信息。|  
   
  [ **@type=** ] **'***type***'**  
- 请求其信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以为这些值之一。  
+ 请求其信息的类别的类型。 *类型*是**varchar(12)**，默认值为 NULL，并且可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**LOCAL**|本地作业类别。|  
-|**多的服务器**|多服务器作业类别。|  
-|**NONE**|以外的其他类类别**作业**。|  
+|**多-服务器**|多服务器作业类别。|  
+|**NONE**|以外的其他类的类别**作业**。|  
   
  [ **@name=** ] **'***name***'**  
  请求其信息的类别的名称。 *名称*是**sysname**，默认值为 NULL。  
   
  [ **@suffix=** ] *suffix*  
- 指定是否**category_type**结果集中的列是 ID 或名称。 *后缀*是**位**，默认值为**0**。 **1**显示**category_type**名称和**0**显示为一个 id。  
+ 指定是否**category_type**结果集中的列是 ID 还是名称。 *后缀*是**位**，默认值为**0**。 **1**显示了**category_type**作为名称，并**0**显示为一个 id。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|类别 ID|  
-|**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = none|  
+|**category_type**|**tinyint**|类别的类型：<br /><br /> **1** = 本地<br /><br /> **2** = 多服务器<br /><br /> **3** = 无|  
 |**名称**|**sysname**|类别名称|  
   
  当**@suffix**是**1**， **sp_help_category**返回以下结果集：  
@@ -91,12 +91,12 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|类别的类型。 之一**本地**，**多服务器**，或**NONE**|  
 |**名称**|**sysname**|类别名称|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_help_category**必须从运行**msdb**数据库。  
   
  如果未指定参数，则结果集将提供有关所有作业类别的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>示例  
   
@@ -134,10 +134,10 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_update_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

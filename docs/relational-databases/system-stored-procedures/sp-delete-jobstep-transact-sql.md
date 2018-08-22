@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (Transact SQL) |Microsoft 文档
+title: sp_delete_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248132"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394401"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@job_name=** ] **'***job_name***'**  
  从中删除步骤的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
-> **注意：** 任一*job_id*或*job_name*必须指定; 不能同时指定。  
+> **注意：** 任一*job_id*或*job_name*必须指定; 不能同时指定两者。  
   
  [ **@step_id=** ] *step_id*  
  要删除的步骤的标识号。 *step_id*是**int**，无默认值。  
@@ -61,18 +61,18 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  删除作业步骤将自动更新引用此步骤的其他作业步骤。  
   
- 有关与特定作业相关联的步骤的详细信息，请运行**sp_help_jobstep**。  
+ 有关与特定作业关联的步骤的详细信息，请运行**sp_help_jobstep**。  
   
-> **注意：** 调用**sp_delete_jobstep**与*step_id*值为零删除作业的所有作业步骤。  
+> **注意：** 调用**sp_delete_jobstep**与*step_id*值为零则删除所有作业步骤的作业。  
   
  Microsoft SQL Server Management Studio 提供易于使用的图形方法来管理作业，建议使用该方法创建和管理作业基础结构。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有的成员**sysadmin**可以删除由另一个用户拥有的作业步骤。  
+ 只有的成员**sysadmin**可以删除其他用户拥有的作业步骤。  
   
 ## <a name="examples"></a>示例  
  以下是从作业 `1` 中删除作业步骤 `Weekly Sales Data Backup` 的示例。  
@@ -98,11 +98,11 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [查看或修改的作业](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_add_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [查看或修改作业](../../ssms/agent/view-or-modify-jobs.md)   
+ [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

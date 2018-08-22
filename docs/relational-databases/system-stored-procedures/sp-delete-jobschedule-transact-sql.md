@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobschedule (Transact SQL) |Microsoft 文档
+title: sp_delete_jobschedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,27 +22,27 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7909cb6689db9610cd9a9a24482f7ce21d98f060
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 456295211427b07e0f6bbda7069e3d645b31286a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245377"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394403"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除作业计划。  
   
- **sp_delete_jobschedule**为了向后兼容性。  
+ **sp_delete_jobschedule**提供只是为了向后兼容。  
   
   
-## <a name="remarks"></a>注释  
- 作业计划现在可以独立于作业进行管理。 若要从作业中删除计划，使用**sp_detach_schedule 将**。 若要删除计划，使用**sp_delete_schedule**。  
+## <a name="remarks"></a>Remarks  
+ 作业计划现在可以独立于作业进行管理。 若要从作业中删除计划，请使用**sp_detach_schedule**。 若要删除计划，请使用**sp_delete_schedule**。  
   
-> **注意：****sp_delete_jobschedule**不支持附加到多个作业的计划。 如果现有脚本调用**sp_delete_jobschedule**若要删除附加到多个作业的计划，过程会返回错误。  
+> **注意：****sp_delete_jobschedule**不支持附加到多个作业的计划。   如果现有脚本调用**sp_delete_jobschedule**若要删除附加到多个作业的计划，该过程将返回错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -51,17 +51,17 @@ ms.locfileid: "33245377"
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 成员**sysadmin**角色可以删除任何作业计划。 不是成员的用户的**sysadmin**角色只能删除他们拥有的作业计划。  
+ 成员**sysadmin**角色可以删除任何作业计划。 用户不是成员的**sysadmin**角色只能删除他们所拥有的作业计划。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule 将&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [查看或修改的作业](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_help_jobschedule & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
- [sp_update_jobschedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [查看或修改作业](../../ssms/agent/view-or-modify-jobs.md)   
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_help_jobschedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
+ [sp_update_jobschedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

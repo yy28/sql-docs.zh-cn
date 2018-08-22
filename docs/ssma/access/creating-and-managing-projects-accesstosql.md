@@ -24,15 +24,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b8b8be30f9a8619ef3e2887c37387e1f4ef68e6d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 860f8e569cd87aaf034718456c8157cf91f57941
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985639"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395637"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>创建和管理项目 (AccessToSQL)
-将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个包含有关你想要迁移到 Access 数据库的元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]连接信息和项目设置。  
+将 Access 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须首先创建 SSMA 项目。 项目是一个包含有关你想要迁移到 Access 数据库的元数据文件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，有关的目标实例的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 迁移的对象和数据，将接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接信息和项目设置。  
   
 ## <a name="reviewing-default-project-settings"></a>查看默认项目设置  
 SSMA 包含多个选项用于将转换和同步数据库对象，并将数据转换。 这些选项的默认设置是适用于多个用户。 但是，在创建新的 SSMA 项目之前，您应查看的选项和，如果需要，更改将用于所有新项目的默认设置。  
@@ -62,7 +62,7 @@ SSMA 包含多个选项用于将转换和同步数据库对象，并将数据转
 **请注意**仅当选择迁移到 SQL Azure 在创建项目时，可以使用 SQL Azure 设置。  
   
 ## <a name="creating-new-projects"></a>创建新项目  
-SSMA 启动而不加载默认项目。 若要将数据从到 Access 数据库迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须创建一个项目。  
+SSMA 启动而不加载默认项目。 若要将数据从到 Access 数据库迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须创建一个项目。  
   
 **若要创建新项目**  
   
@@ -76,12 +76,12 @@ SSMA 启动而不加载默认项目。 若要将数据从到 Access 数据库迁
   
 4.  在迁移到下拉菜单中，选择一个 SQL Server 2005 / SQL Server 2008 / SQL Server 2012 / SQL Server 2014 / SQL Server 2016 / Azure SQL 数据库，然后单击**确定**。  
   
-SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多个 Access 数据库](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多个 Access 数据库](adding-and-removing-access-database-files-accesstosql.md)。  
   
 ## <a name="customizing-project-settings"></a>自定义项目设置  
-除了定义默认项目设置，将应用到所有新的 SSMA 项目，你还可以定义每个项目的设置。 有关详细信息，请参阅[设置转换和迁移选项](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)。  
+除了定义默认项目设置，将应用到所有新的 SSMA 项目，你还可以定义每个项目的设置。 有关详细信息，请参阅[设置转换和迁移选项](setting-conversion-and-migration-options-accesstosql.md)。  
   
-自定义源和目标数据库之间的数据类型映射时，可以定义项目、 数据库或对象级别上的映射。 有关类型映射的详细信息，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+自定义源和目标数据库之间的数据类型映射时，可以定义项目、 数据库或对象级别上的映射。 有关类型映射的详细信息，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
   
 ## <a name="saving-projects"></a>正在保存项目  
 当您保存项目时，SSMA 仍然存在，项目设置，和 （可选） 数据库元数据，对项目文件。  
@@ -101,7 +101,7 @@ SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多�
         SSMA 会分析访问架构，并将元数据保存到项目文件。  
   
 ## <a name="opening-projects"></a>打开项目  
-当您打开一个项目时，它从断开连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 这允许您脱机工作。 若要更新的元数据加载到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 若要将数据迁移，必须重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+当您打开一个项目时，它从断开连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 这允许您脱机工作。 若要更新的元数据加载到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 若要将数据迁移，必须重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 **若要打开的项目**  
   
@@ -111,14 +111,14 @@ SSMA 会创建项目文件。 现在可以执行的下一步[添加一个或多�
   
     -   上**文件**菜单中，选择**打开项目**，找到.a2ssproj 项目文件中，选择的文件，然后单击**打开**。  
   
-2.  若要重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然后在**文件**菜单中，选择**重新连接到 SQL Server**。  
+2.  若要重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后在**文件**菜单中，选择**重新连接到 SQL Server**。  
   
 3.  若要重新连接到 SQL Azure 上**文件**菜单中，选择**重新连接到 SQL Azure。**  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[添加一个或多个 Access 数据库](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+迁移过程中的下一步是[添加一个或多个 Access 数据库](adding-and-removing-access-database-files-accesstosql.md)。  
   
 ## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[添加和删除访问数据库文件](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[添加和删除访问数据库文件](adding-and-removing-access-database-files-accesstosql.md)  
   

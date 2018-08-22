@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299967"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396468"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
   本主题介绍如何创建映射到中的登录名的数据库用户[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅[创建一个登录名](create-a-login.md)。  
@@ -111,7 +111,7 @@ ms.locfileid: "37299967"
      查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
      **省略号 (…)**  
-     单击“值”后面的省略号“(…)”按钮可打开“已扩展属性的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](http://msdn.microsoft.com/library/ms189353.aspx)。  
+     单击“值”后面的省略号“(…)”按钮可打开“已扩展属性的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](../../databases/value-for-extended-property-dialog-box.md)。  
   
      **删除**  
      删除所选扩展属性。  

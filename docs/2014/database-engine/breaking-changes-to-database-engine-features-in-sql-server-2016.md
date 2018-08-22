@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254749"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396466"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的重大更改
   本主题介绍了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "37254749"
 |sp_setapprole 和 sp_unsetapprole|`OUTPUT` 的 cookie `sp_setapprole` 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是当前实现将返回`varbinary(50)`。 应用程序应继续保留 `varbinary(8000)`，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行。 有关详细信息，请参阅 [sp_setapprole (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。|  
 |EXECUTE AS|EXECUTE AS 的 cookie OUTPUT 参数当前记载为 `varbinary(8000)`，这是正确的最大长度。 但是当前实现将返回`varbinary(100)`。 应用程序应继续保留 `varbinary(8000)`，以便当 cookie 在将来的版本中返回大小增量时，应用程序可继续正确运行。 有关详细信息，请参阅 [EXECUTE AS (Transact SQL)](/sql/t-sql/statements/execute-as-transact-sql)。|  
 |sys.fn_get_audit_file 函数|两个其他列 (**user_defined_event_id**并**user_defined_information**) 已添加以支持用户定义的审核事件。 不按名称选择列的应用程序可能会返回比预期更多的列。 请按名称选择列，或调整应用程序以接受这些额外的列。|  
-|WITHIN 保留关键字|WITHIN 现在是保留关键字。 引用名为“within”的对象或列将失败。 重命名对象或列，或通过使用括号或引号来分隔名称。  例如， `SELECT * FROM [within]`。|  
+|WITHIN 保留关键字|WITHIN 现在是保留关键字。 引用名为“within”的对象或列将失败。 重命名对象或列，或通过使用括号或引号来分隔名称。  例如 `SELECT * FROM [within]` 。|  
 |对类型为 `time` 或 `datetime2` 的计算列的 CAST 和 CONVERT 操作|在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，对 `time` 或 `datetime2` 数据类型的 CAST 和 CONVERT 操作的默认样式为 121，当在计算列表达式中使用这些类型时除外。 对于计算列，默认样式为 0。 当创建用于涉及自动参数化的查询中或约束定义中的计算列时，此行为会影响计算列。<br /><br /> 兼容性级别为 110 时，对 `time` 和 `datetime2` 数据类型的 CAST 和 CONVERT 操作的默认样式始终为 121。 如果您的查询依赖旧行为，请使用低于 110 的兼容性级别或在受影响的查询中显式指定 0 样式。<br /><br /> 将数据库升级到兼容性级别 110 将不更改已存储到磁盘的用户数据。 您必须相应手动更正此数据。 例如，如果您使用了 SELECT INTO 来从包含上述计算列表达式的源创建表，将存储数据（使用样式 0）而非存储计算列定义本身。 您需要手动更新此数据，以匹配样式 121。|  
 |ALTER TABLE|ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 在编译时出现错误 117 失败，指定表名现在使用以下格式：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。 要解决此问题，请不要使用 4 部分的前缀。|  
 |浏览元数据|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 查询视图时，现在会返回视图的元数据而非基础对象的元数据。 此行为现在匹配浏览元数据的其他方法。|  
@@ -161,7 +161,7 @@ ms.locfileid: "37254749"
 -   比较运算符和**按排序**子句。 比较运算符包括 +、 \<，>， \<=、 > =、 `eq`， `lt`， `gt`， `le`，和`ge`。  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>对系统过程的分布式查询调用  
- 在从一个 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 服务器对另一个服务器进行调用时，通过 `OPENQUERY` 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如， `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`。  
+ 在从一个 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 服务器对另一个服务器进行调用时，通过 `OPENQUERY` 对某些系统过程进行的分布式查询调用将失败。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 无法发现某个过程的元数据时将出现此情况。 例如 `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')` 。  
   
 #### <a name="isolation-level-and-spresetconnection"></a>隔离级别和 sp_reset_connection  
  连接用隔离级别由客户端驱动程序按照如下方法处理：  
@@ -266,7 +266,7 @@ ms.locfileid: "37254749"
 ||为短名称签发一个证书。<br /><br /> -此选项适用于所有应用程序。|  
   
 ##  <a name="Yukon"></a> SQL Server 2005 中的重大更改  
- 有关在中引入了重大更改的列表[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，请参阅[中 SQL Server 2005 数据库引擎功能的重大更改](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx)。  
+ 有关在中引入了重大更改的列表[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，请参阅[中 SQL Server 2005 数据库引擎功能的重大更改](breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL Server 2014 中弃用的数据库引擎功能](deprecated-database-engine-features-in-sql-server-2016.md)   

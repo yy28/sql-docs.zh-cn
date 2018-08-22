@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082429"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395421"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教程： 了解在 SQL Server 中使用 R 的数据库内分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ ms.locfileid: "39082429"
 
 但是，在创建该解决方案后，可以在熟悉的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程将其轻松部署到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-- [第 1 课： 下载示例数据和脚本](../tutorials/sqldev-download-the-sample-data.md)
+- [第 1 课： 设置 NYC 出租车演示数据](../tutorials/sqldev-download-the-sample-data.md)
 
-- [第 2 课： 设置教程环境](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [第 2 课： 浏览和可视化通过存储过程中调用 R 函数的数据形状和分发](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [第 3 课： 浏览和可视化通过存储过程中调用 R 函数的数据形状和分发](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [第 4 课： 创建数据功能在 T-SQL 函数中使用 R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [第 3 课： 创建数据功能在 T-SQL 函数中使用 R](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [第 5 课： 训练和保存使用函数和存储的过程的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [第 4 课： 训练和保存使用函数和存储的过程的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 6 课： 中的操作化的存储过程包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
+- [第 5 课： 在存储过程中的操作化的包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
   将模型保存到数据库后，使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型用于预测。
 
 ## <a name="prerequisites"></a>必要條件

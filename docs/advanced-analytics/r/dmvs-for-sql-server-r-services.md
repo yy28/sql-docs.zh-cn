@@ -1,5 +1,5 @@
 ---
-title: SQL Server 的数据管理视图 (Dmv) 机器学习服务 |Microsoft 文档
+title: 数据管理视图 (Dmv) 适用于 SQL Server 机器学习服务 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,22 +7,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e2180794ca96fc6387105745e346802725afe1dd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 8d7d20d396ca5b853d959c84a371fe808415c5fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203139"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395638"
 ---
-# <a name="dmvs-for-sql-server-machine-learning-services"></a>对 SQL Server 机器学习服务的 Dmv
+# <a name="dmvs-for-sql-server-machine-learning-services"></a>适用于 SQL Server 机器学习服务的 Dmv
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文列出的系统目录视图和 dmv，用来与 SQL Server 中的机器学习相关。
+该文章列出了系统目录视图和 dmv，用来与 SQL Server 中机器学习相关。
 
 有关扩展事件的信息，请参阅[扩展事件的机器学习](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)。
 
 > [!TIP]
-> 使用内置报告监视器机器学习会话和包使用率。 有关详细信息，请参阅[监视在 Management Studio 中使用自定义报表的机器学习](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
+> 使用内置报表监视机器学习会话和包使用率。 有关详细信息，请参阅[监视机器学习在 Management Studio 中使用自定义报表](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 ## <a name="system-configuration-and-system-resources"></a>系统配置和系统资源
 
@@ -44,12 +44,12 @@ ms.locfileid: "31203139"
 
   此 DMV 针对每个实例的外部脚本报告以下计数器：
 
-  + **总执行**： 通过本地或远程调用启动的外部进程数
-  + **并行执行**： 脚本包含次数_@parallel_规范，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划
-  + **流式处理执行**： 的流式处理功能已调用的次数
-  + **SQL CC 执行**： 数外部脚本的运行其中调用远程实例化和 SQL Server 已用作计算上下文
+  + **执行总数**： 通过本地或远程调用启动的外部进程数
+  + **并行执行数**： 包含脚本的次数_@parallel_规范，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]能够生成并使用并行查询计划
+  + **流式执行数**： 的流式处理功能调用的次数
+  + **SQL CC 执行**： 数外部脚本的运行的远程实例化调用和 SQL Server 用作计算上下文
   + **隐含身份验证登录次数**：使用隐含身份验证进行 ODBC 环回调用（即，[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 代表发送脚本请求的用户执行调用）的次数
-  + **总执行时间 （毫秒）**： 调用和完成的调用之间经过的时间
+  + **总执行时间 （毫秒）**： 调用和完成调用之间经过的时间
   + **执行错误数**：脚本报告错误的次数。 此计数不包括 R 错误。
 
 
@@ -59,16 +59,16 @@ ms.locfileid: "31203139"
 
   结果当前未执行任何脚本，此 DMV 不会返回任何结果；因此，它最适合用于监视长时间运行的脚本。 返回值如下：
 
-  + **external_script_request_id**： 的 GUID，还可用于存储脚本和中间结果的工作目录的临时名称
-  + **语言**: 值，如`R`表示外部脚本的语言
-  + **degree_of_parallelism**： 使用了一个整数，表示并行数的进程
-  + **external_user_name**: 快速启动板辅助帐户，如**SQLRUser01**
+  + **external_script_request_id**： 一个 GUID，也用作用于存储脚本和中间结果的工作目录的临时名称
+  + **语言**: 值，如`R`表示的外部脚本语言
+  + **degree_of_parallelism**： 一个整数，指示并行进程数，已使用
+  + **external_user_name**: Launchpad 辅助角色帐户，如**SQLRUser01**
 
 + [sys.dm_external_script_execution_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 
-  此 DMV 提供内部监视工具 （遥测） 来跟踪多少外部脚本调用都是在实例上。 遥测服务启动时[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]不，增加每次调用特定的机器学习函数了一个基于磁盘的计数器。
+  此 DMV 用于内部监视 （遥测） 来跟踪实例上执行的多少次外部脚本调用。 遥测服务启动时[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]每次调用特定的机器学习函数时会递增基于磁盘的计数器。
 
-  此计数器在每次调用特定的跟踪函数时递增。 例如，如果调用且并行运行了 `rxLinMod` ，该计数器会增大 1。
+  此计数器在每次调用特定的跟踪函数递增。 例如，如果调用且并行运行了 `rxLinMod` ，该计数器会增大 1。
   
   通常情况下，只要生成性能计数器的进程处于活动状态，它们便有效。 因此，对 DMV 的查询不能显示已停止运行的服务的详细数据。 例如，如果 Launchpad 创建了多个并行 R 作业，而这些作业的执行速度很快，然后被 Windows 作业对象清理，那么，DMV 可能不会显示任何数据。
  
@@ -78,7 +78,7 @@ ms.locfileid: "31203139"
 
 ## <a name="resource-governor-views"></a>资源调控器视图
 
-支持资源调控器的版本，在创建 R 或 Python 工作负荷的外部资源池可以 en 有效地跟踪和管理资源。
+支持资源调控器的版本，创建适用于 R 或 Python 工作负荷的外部资源池可以是 en 有效的方法来跟踪和管理资源。
 
 + [sys.resource_governor_resource_pools](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)
 
@@ -95,7 +95,7 @@ ms.locfileid: "31203139"
 
   > [!NOTE]
   > 
-  > 在 Standard Edition 中，外部脚本的所有作业在相同的外部默认资源池内都执行。
+  > 在标准版中，所有外部脚本作业在同一个外部默认资源池内执行。
 
 + [sys.resource_governor_workload_groups](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)
 
@@ -115,19 +115,19 @@ ms.locfileid: "31203139"
 
 > [!NOTE] 
 > 
-> 尽管只能在 Enterprise 和 Developer 版本中配置和自定义资源池，但在所有版本中都可以使用默认池和 DMV。 因此，可以在标准版中使用这些 Dmv 来确定资源上限为你外部脚本的作业。
+> 尽管只能在 Enterprise 和 Developer 版本中配置和自定义资源池，但在所有版本中都可以使用默认池和 DMV。 因此，可以在 Standard Edition 中使用这些 Dmv 来确定外部脚本作业的资源上限。
 
 有关监视 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 实例的一般信息，请参阅 [Catalog Views](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)（目录视图）和 [Resource Governor Related Dynamic Management Views](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)（与资源调控器相关的动态管理视图）。
 
 ## <a name="monitoring-script-execution"></a>监视脚本执行
 
-在中运行的 R 和 Python 脚本[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]通过启动[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]接口。 但是，Launchpad 的资源不会单独受到调控和监视，因为我们认为它是 Microsoft 提供的、用于适当管理资源的安全服务。
+在中运行的 R 和 Python 脚本[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]由启动[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]接口。 但是，Launchpad 的资源不会单独受到调控和监视，因为我们认为它是 Microsoft 提供的、用于适当管理资源的安全服务。
 
-在快速启动板服务下运行的单个脚本使用管理[Windows 作业对象](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)。 使用作业对象可将进程组作为一个单元进行管理。 每个作业对象都是分层的，可控制与其关联的所有进程的属性。 针对某个作业对象执行的操作会影响与该作业对象关联的所有进程。
+使用管理 Launchpad 服务下运行的单个脚本[Windows 作业对象](/windows/desktop/ProcThread/job-objects)。 使用作业对象可将进程组作为一个单元进行管理。 每个作业对象都是分层的，可控制与其关联的所有进程的属性。 针对某个作业对象执行的操作会影响与该作业对象关联的所有进程。
 
 因此，如果需要终止与某个对象关联的一个作业，请注意所有相关的进程也会终止。 如果运行一个已分配到 Windows 作业对象的 R 脚本，并且该脚本运行一个必须终止的相关 ODBC 作业，则父 R 脚本进程也会终止。
 
-如果启动使用并行处理的外部脚本时，单个 Windows 作业对象将管理所有并行子进程。
+如果您启动使用并行处理的外部脚本时，单个 Windows 作业对象将管理所有并行子进程。
 
 若要确定进程是否在作业中运行，请使用 `IsProcessInJob` 函数。
 

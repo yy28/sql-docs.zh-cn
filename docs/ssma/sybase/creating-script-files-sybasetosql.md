@@ -21,12 +21,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979889"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394846"
 ---
 # <a name="creating-script-files-sybasetosql"></a>创建脚本文件 (SybaseToSQL)
 第一步是启动 SSMA 控制台应用程序创建脚本文件之前，如果需要创建变量值文件和服务器连接文件。  
@@ -357,7 +357,7 @@ ms.locfileid: "38979889"
   
 例如，典型的数据迁移的 Sybase 数据库中的特定表如下所示的层次结构： 数据库-&gt;架构-&gt;表。  
   
-当成功执行脚本文件中的所有命令时，SSMA 控制台应用程序退出，并将该控件返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[变量值文件](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc)或变量值的脚本文件中的单独部分中。  
+当成功执行脚本文件中的所有命令时，SSMA 控制台应用程序退出，并将该控件返回给用户。 脚本文件的内容可能会更多或更少静态变量的信息包含在[变量值文件](creating-variable-value-files-sybasetosql.md)或变量值的脚本文件中的单独部分中。  
   
 **示例：**  
   

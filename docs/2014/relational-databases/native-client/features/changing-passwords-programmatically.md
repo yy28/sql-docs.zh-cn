@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,18 +24,18 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a89101132ebbad9edfcf8bd2c6190e8f86caf32
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4de5badcb2b8c67d23b00fcb645c44fa8e1b1681
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408446"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396064"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支持处理密码过期，以编程方式通过两[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，并通过更改**SQL Server 登录名**对话框。  
   
 > [!NOTE]  
->  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保存其凭据，您还应该加密这些使用[Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)。 有关使用密码的详细信息，请参阅[强密码](../../security/strong-passwords.md)。  
+>  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](http://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登录错误代码  
  当由于身份验证问题而导致无法连接时，以下 SQL Server 错误代码之一可供应用程序使用，以帮助诊断和恢复。  
@@ -58,12 +58,12 @@ ms.locfileid: "37408446"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 用户界面密码过期  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持通过对所做更改的密码过期**SQL Server 登录名**对话框。 如果将 DBPROP_INIT_PROMPT 的值设置为 DBPROMPT_NOPROMPT，则在密码已过期的情况下初始连接尝试将失败。  
   
- 如果 DBPROP_INIT_PROMPT 已设置为任何其他值，用户将看到**SQL Server 登录名**对话框中的，无论密码已过期。 用户可以单击**选项**按钮，并检查**更改密码**更改密码。  
+ 如果 DBPROP_INIT_PROMPT 已设置为任何其他值，则无论密码是否已过期，用户都会看到“SQL Server 登录”对话框。 用户可单击“选项”按钮，再选中“更改密码”进行更改。  
   
- 如果用户单击确定且密码已过期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]会提示用户输入并确认新密码使用**更改 SQL Server 密码**对话框。  
+ 如果用户单击“确定”且密码已过期，则 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会提示用户使用“更改 SQL Server 密码”对话框输入并确认新密码。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行为和锁定的帐户  
- 连接尝试可能会由于帐户被锁定而失败。 如果发生这种情况的显示以下**SQL Server 登录名**对话框中，向用户显示服务器错误消息，并且连接尝试将中止。 它也可能出现在显示**更改 SQL Server 密码**对话框，如果用户输入旧密码值不正确。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
+ 连接尝试可能会由于帐户被锁定而失败。 如果在显示“SQL Server 登录”对话框后发生此情况，则向用户显示服务器错误消息，且连接尝试中止。 如果在显示“更改 SQL Server 密码”对话框后用户输入错误的旧密码值，也会出现这种情况。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 连接池、密码过期和锁定的帐户  
  当连接在连接池中仍处于活动状态时，帐户可能被锁定或其密码可能已过期。 服务器会在以下两种情况下检查密码是否已过期以及帐户是否已锁定。 第一种情况是首次创建连接时。 第二种情况是从相应池中获取相应连接以重置连接时。  
@@ -85,7 +85,7 @@ ms.locfileid: "37408446"
   
  请注意，只要设置“旧密码”属性，访问接口就会假定正在尝试更改密码，除非还指定了 Windows 身份验证，这种情况下 Windows 身份验证始终优先。  
   
- 如果使用 Windows 身份验证，则指定旧密码会导致 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 具体取决于是否旧密码指定为必需或可选分别和 DBPROPSTATUS_ 的状态值中返回 CONFLICTINGBADVALUE *dwStatus*。 这检测到时**idbinitialize:: Initialize**调用。  
+ 如果使用 Windows 身份验证，则指定旧密码会产生 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED（具体取决于是将旧密码指定为 REQUIRED 还是 OPTIONAL），并且在 dwStatus 中返回 DBPROPSTATUS_CONFLICTINGBADVALUE 的状态值。 在调用 IDBInitialize::Initialize 时进行检测。  
   
  如果更改密码的尝试意外失败，则服务器将返回错误代码 18468。 将从连接尝试返回标准的 OLEDB 错误。  
   
@@ -99,12 +99,12 @@ ms.locfileid: "37408446"
   
  如果[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)称为和的值**DriverCompletion**设置为 SQL_DRIVER_NOPROMPT，则初始连接尝试失败则密码已过期。 后续调用返回 SQLSTATE 值 28000 和本机错误代码值 18487 **SQLError**或**SQLGetDiagRec**。  
   
- 如果**DriverCompletion**已设置为任何其他值，则用户将看到**SQL Server 登录名**对话框中的，无论密码已过期。 用户可以单击**选项**按钮，并检查**更改密码**更改密码。  
+ 如果**DriverCompletion**已设置为任何其他值，则用户将看到**SQL Server 登录名**对话框中的，无论密码已过期。 用户可单击“选项”按钮，再选中“更改密码”进行更改。  
   
  如果用户单击确定且密码已过期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]提示输入并确认新密码使用**更改 SQL Server 密码**对话框。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC 提示行为和锁定的帐户  
- 连接尝试可能会由于帐户被锁定而失败。 如果发生这种情况的显示以下**SQL Server 登录名**对话框中，向用户显示服务器错误消息，并且连接尝试将中止。 它也可能出现在显示**更改 SQL Server 密码**对话框，如果用户输入旧密码值不正确。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
+ 连接尝试可能会由于帐户被锁定而失败。 如果在显示“SQL Server 登录”对话框后发生此情况，则向用户显示服务器错误消息，且连接尝试中止。 如果在显示“更改 SQL Server 密码”对话框后用户输入错误的旧密码值，也会出现这种情况。 在这种情况下，将显示相同的错误消息，并且连接尝试将中止。  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC 连接池、密码过期和锁定的帐户  
  当连接在连接池中仍处于活动状态时，帐户可能被锁定或其密码可能已过期。 服务器会在以下两种情况下检查密码是否已过期以及帐户是否已锁定。 第一种情况是首次创建连接时。 第二种情况是从相应池中获取相应连接以重置连接时。  

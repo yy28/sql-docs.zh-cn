@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2b2ca3145c4152db92be0e55a4484c09727eaadb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983925"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396474"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
 若要将 Access 数据库迁移到 SQL Azure，必须连接到 SQL Azure 的目标实例。 连接时，SSMA 获取有关 SQL Azure 实例中的所有数据库的元数据，并在 SQL Azure 元数据资源管理器中显示数据库元数据。 SSMA 存储有关的实例的 SQL Azure 连接到，但不存储密码的信息。  
@@ -42,14 +42,14 @@ ms.locfileid: "38983925"
 ## <a name="required-sql-azure-permissions"></a>SQL Azure 所需的权限  
 用于连接到 SQL Azure 的帐户需要不同的权限，具体取决于该帐户执行的操作：  
   
--   要转换的对象访问[!INCLUDE[tsql](../../includes/tsql_md.md)]语法中，更新元数据从 SQL Azure，或者将保存到转换后的语法编写的脚本，该帐户必须有权登录到 SQL Azure 的实例。  
+-   要转换的对象访问[!INCLUDE[tsql](../../includes/tsql-md.md)]语法中，更新元数据从 SQL Azure，或者将保存到转换后的语法编写的脚本，该帐户必须有权登录到 SQL Azure 的实例。  
   
 -   若要将数据库对象加载到 SQL Azure，最小权限要求是中的成员身份**db_owner**目标数据库中的数据库角色。  
   
 ## <a name="establishing-a-sql-azure-connection"></a>建立 SQL Azure 连接  
 将访问数据库对象转换为 SQL Azure 语法之前，必须建立到想要迁移的 Access 数据库的 SQL Azure 实例的连接。  
   
-在定义的连接属性时，还可以指定对象和数据将迁移的数据库。 连接到 SQL Azure 后，可以自定义此映射架构级别的访问权限的文件。 有关详细信息，请参阅[映射到 SQL Server 架构的 Access 数据库](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+在定义的连接属性时，还可以指定对象和数据将迁移的数据库。 连接到 SQL Azure 后，可以自定义此映射架构级别的访问权限的文件。 有关详细信息，请参阅[映射到 SQL Server 架构的 Access 数据库](mapping-source-and-target-databases-accesstosql.md)  
   
 > [!IMPORTANT]  
 > 尝试连接到 SQL Azure 之前，请确保 SQL Azure 的实例正在运行，并且可以接受连接。  
@@ -105,14 +105,14 @@ ms.locfileid: "38983925"
 ## <a name="next-step"></a>下一步  
 迁移的下一步取决于您的项目需求：  
   
--   若要自定义 Access 架构和 SQL Azure 数据库和架构之间的映射，请参阅[映射到 SQL Server 架构的 Access 数据库](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)。  
+-   若要自定义 Access 架构和 SQL Azure 数据库和架构之间的映射，请参阅[映射到 SQL Server 架构的 Access 数据库](mapping-source-and-target-databases-accesstosql.md)。  
   
--   若要自定义项目的配置选项，请参阅[设置项目选项](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)。  
+-   若要自定义项目的配置选项，请参阅[设置项目选项](setting-conversion-and-migration-options-accesstosql.md)。  
   
--   若要自定义源和目标数据类型的映射，请参阅[映射源和目标数据类型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+-   若要自定义源和目标数据类型的映射，请参阅[映射源和目标数据类型](mapping-source-and-target-data-types-accesstosql.md)。  
   
--   如果不需要执行任何这些任务，可以将访问数据库对象定义转换到 SQL Azure 对象定义。 有关详细信息，请参阅[转换 Access 数据库](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   如果不需要执行任何这些任务，可以将访问数据库对象定义转换到 SQL Azure 对象定义。 有关详细信息，请参阅[转换 Access 数据库](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
