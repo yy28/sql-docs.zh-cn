@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022684"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175077"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -70,7 +70,7 @@ ms.locfileid: "33022684"
    
 ## <a name="shared-dataset">创建共享数据集</a>  
   
-使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](https://msdn.microsoft.com/library/ff519551.aspx)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
+使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
 1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   

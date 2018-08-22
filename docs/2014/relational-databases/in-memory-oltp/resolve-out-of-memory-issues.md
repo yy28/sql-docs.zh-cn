@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253979"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394221"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -80,7 +79,7 @@ ms.locfileid: "37253979"
 ###  <a name="bkmk_openDAC"></a> 打开 DAC（专用管理员连接）  
  Microsoft SQL Server 提供了专用管理员连接 (DAC)。 即使服务器对其他客户端连接停止响应，管理员也可以使用 DAC 访问正在运行的 SQL Server 数据库引擎实例来排除服务器上的故障。 DAC 可通过 `sqlcmd` 实用工具和 SQL Server Management Studio (SSMS) 获得。  
   
- 有关如何使用 `sqlcmd` 和 DAC 的指南，请参阅 [使用专用管理员连接](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css)。 有关通过 SSMS 使用 DAC 的指南，请参阅 [如何：将 SQL Server Management Studio 与专用管理员连接配合使用](http://msdn.microsoft.com/library/ms178068.aspx)。  
+ 有关如何使用 `sqlcmd` 和 DAC 的指南，请参阅 [使用专用管理员连接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 有关通过 SSMS 使用 DAC 的指南，请参阅 [如何：将 SQL Server Management Studio 与专用管理员连接配合使用](http://msdn.microsoft.com/library/ms178068.aspx)。  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> 采取纠正措施  
  要处理 OOM 情况，需要通过减少使用量释放现有内存，或者为内存中表提供更多可用内存。  
@@ -139,7 +138,7 @@ GO
 > 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 ##  <a name="bkmk_PageAllocFailure"></a> 在提供足够内存时，解决由于内存不足导致的页分配失败问题  
- 如果你收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”。 请参阅http://go.microsoft.com/fwlink/?LinkId=330673有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
+ 如果你收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”。 请参阅 http://go.microsoft.com/fwlink/?LinkId=330673 有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   
