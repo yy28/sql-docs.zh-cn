@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
@@ -14,12 +13,12 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d46187b7f92fb9bb02bb693b51bd13bcd12da1f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205377"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393130"
 ---
 # <a name="supported-sql-server-features"></a>支持的 SQL Server 功能
   本主题讨论内存优化表支持或不支持的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
@@ -43,7 +42,7 @@ ms.locfileid: "37205377"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server 管理对象支持](sql-server-management-objects-support-for-in-memory-oltp.md)。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的用户。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的用户。 有关详细信息，请参阅[对内存中 OLTP 的 SQL Server Management Studio 支持](sql-server-management-studio-support-for-in-memory-oltp.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell。 有关详细信息，请参阅 [SQL Server PowerShell 概述](http://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx)。  
   
@@ -111,8 +110,8 @@ ms.locfileid: "37205377"
   
 |“数据库”|Allowed|Description|  
 |---------------|-------------|-----------------|  
-|用户数据库、模型和 msdb|“否”|不支持跨数据库查询和事务。<br /><br /> 访问内存优化表和本机编译存储过程的查询和事务无法访问其他数据库，但系统数据库 master（只读访问）和 tempdb 除外。|  
-|资源数据库和 tempdb|是|除了单用户数据库外，仅使用资源数据库和 tempdb 的跨数据库事务亦不受限制。|  
+|用户数据库、模型和 msdb|否|不支持跨数据库查询和事务。<br /><br /> 访问内存优化表和本机编译存储过程的查询和事务无法访问其他数据库，但系统数据库 master（只读访问）和 tempdb 除外。|  
+|资源数据库和 tempdb|用户帐户控制|除了单用户数据库外，仅使用资源数据库和 tempdb 的跨数据库事务亦不受限制。|  
 |master|只读|如果针对内存中 OLTP 和 master 数据库的跨数据库事务包含针对 master 数据库的任意写入操作，则其将无法提交。 允许仅从 master 读取和仅使用一个用户数据库的跨数据库事务。|  
   
 ## <a name="see-also"></a>请参阅  

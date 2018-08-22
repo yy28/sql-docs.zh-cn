@@ -1,6 +1,6 @@
 ---
-title: 安装 SQL Server 机器学习组件没有 internet 访问权限 |Microsoft Docs
-description: 脱机或已断开连接机器学习 R 和 Pytyon 设置独立的 SQL Server 实例上。
+title: 安装 SQL Server 机器学习而无需 internet 访问的 R 和 Python 组件 |Microsoft Docs
+description: 脱机或已断开连接机器学习 R 和 Python 安装程序独立 SQL Server 实例上。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546257"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437647"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python 功能
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 默认情况下，连接到 Microsoft 下载站点以获取所需的安装程序和更新的组件的机器学习 SQL Server 上。 如果防火墙限制阻止访问这些站点安装程序，可以使用与 internet 连接的设备下载文件，请将文件传输到脱机的服务器，然后然后运行安装程序。

@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156258"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393389"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看或更改数据库的恢复模式。 “恢复模式”是一种数据库属性，它控制如何记录事务，事务日志是否需要（以及允许）进行备份，以及可以使用哪些类型的还原操作。 有三种恢复模式：简单恢复模式、完整恢复模式和大容量日志恢复模式。 通常，数据库使用完整恢复模式或简单恢复模式。 数据库可以随时切换为其他恢复模式。 **model** 数据库将设置新数据库的默认恢复模式。  
@@ -161,7 +161,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [数据库维护计划](http://msdn.microsoft.com/library/ms187658.aspx) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
+-   [数据库维护计划](../maintenance-plans/maintenance-plans.md) （ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 联机丛书中）  
   
 ## <a name="see-also"></a>请参阅  
  [恢复模式 (SQL Server)](recovery-models-sql-server.md)   

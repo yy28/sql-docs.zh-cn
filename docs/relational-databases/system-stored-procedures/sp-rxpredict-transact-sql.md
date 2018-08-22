@@ -1,7 +1,7 @@
 ---
 title: sp_rxPredict |Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -17,26 +17,26 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sp_rxPredict procedure
-author: jeannt
-ms.author: jeannt
-manager: craigg
-ms.openlocfilehash: ede8232f36f42cc2b9758bdee8f50457ebd58dfe
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlun
+ms.openlocfilehash: 8f46403afef0e2f6cf967561a8fd24ec6409fe93
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036045"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40434857"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-生成基于存储模型的预测的值。
+生成基于机器学习模型存储在 SQL Server 数据库中的二进制格式中的给定输入的预测的值。
 
-提供了在机器学习模型中近实时地评分。 `sp_rxPredict` 为提供包装的存储的过程`rxPredict`函数，在[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)并[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)。 它在 C + 编写，并且专门针对计分操作进行了优化。 它支持这两个 R 或 Python 机器学习模型。
+提供了 R 和 Python 机器学习模型中近实时地评分。 `sp_rxPredict` 为提供包装的存储的过程`rxPredict`中的 R 函数[RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)并[MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)，和[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 函数中[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)并[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 它在 C + 编写，并且专门针对计分操作进行了优化。
 
-**本主题适用于**:  
+**本文适用于**:  
 - SQL Server 2017  
-- 升级到 Microsoft R Server 的 SQL Server 2016 R Services  
+- 使用 SQL Server 2016 R Services[升级 R 组件](https://docs.microsoft.com/sql/advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server)
 
 ## <a name="syntax"></a>语法
 
@@ -69,11 +69,10 @@ sp_rxPredict  ( @model, @input )
 用户需求`EXECUTE`针对数据库的权限。
 
 ### <a name="supported-platforms"></a>支持的平台
-
-需要以下版本之一：  
-- SQL Server 2017 机器学习服务 （包括 Microsoft R Server 9.1.0）  
-- Microsoft 机器学习服务器  
-- SQL Server R Services 2016，与 Microsoft R server 9.1.0 的 R Services 实例的升级或更高版本  
+ 
+- SQL Server 2017 机器学习服务 （包括 R Server 9.2）  
+- SQL Server 2017 机器学习服务器 （独立版） 
+- SQL Server R Services 2016，进行到 R Server 9.1.0 的 R Services 实例的升级或更高版本  
 
 ### <a name="supported-algorithms"></a>支持的算法
 
@@ -101,5 +100,5 @@ EXEC sp_rxPredict @model = @model,
 
 `sp_rxPredict` 仅支持以下.NET 列类型： 双精度型、 float、 short、 ushort、 long、 ulong 和字符串。 您可能需要筛选出输入数据中不支持的类型，然后再使用它进行实时评分。 
 
-  有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](https://msdn.microsoft.com/library/bb386947.aspx)或[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
+  有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[映射 CLR 参数数据](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。
 

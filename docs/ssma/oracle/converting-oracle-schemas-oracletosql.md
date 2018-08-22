@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982439"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392951"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>转换 Oracle 架构 (OracleToSQL)
-已连接到 Oracle 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并将项目设置和数据映射选项，可以将转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库对象。  
+已连接到 Oracle 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到的 Oracle 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  
   
 ## <a name="the-conversion-process"></a>转换过程  
-将转换数据库对象从 Oracle 获取的对象定义、 将其转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，再然后将此信息加载到 SSMA 元数据。 它不到的实例加载信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您然后可以通过查看对象和其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。  
+将转换数据库对象从 Oracle 获取的对象定义、 将其转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，再然后将此信息加载到 SSMA 元数据。 它不到的实例加载信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您然后可以通过查看对象和其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。  
   
 在转换期间 SSMA 打印消息输出到输出窗格和错误消息为错误列表窗格。 使用的输出和错误的信息来确定是否必须修改您的 Oracle 数据库或转换过程来获取所需的转换结果。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "38982439"
 在将对象转换之前, 查看中的项目转换选项**项目设置**对话框。 通过使用此对话框中，可以设置 SSMA 将函数和全局变量的转换。 有关详细信息，请参阅[项目设置&#40;转换&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)。  
   
 ## <a name="conversion-results"></a>转换结果  
-下表显示了哪些 Oracle 对象会转换与生成的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象：  
+下表显示了哪些 Oracle 对象会转换与生成的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象：  
   
 |||  
 |-|-|  
 |Oracle 对象|生成 SQL Server 对象|  
-|函数|如果该函数可直接转换为[!INCLUDE[tsql](../../includes/tsql_md.md)]，SSMA 创建一个函数。<br /><br />在某些情况下，该函数必须转换为存储过程。 在这种情况下，SSMA 创建存储的过程和调用存储的过程的函数。|  
-|过程|如果该过程可以直接转换为[!INCLUDE[tsql](../../includes/tsql_md.md)]，SSMA 创建的存储的过程。<br /><br />在某些情况下必须自治事务中调用存储的过程。 SSMA 在这种情况下，创建两个存储的过程： 一个实现过程，以及用来调用实现的另一个存储过程。|  
+|函数|如果该函数可直接转换为[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 创建一个函数。<br /><br />在某些情况下，该函数必须转换为存储过程。 在这种情况下，SSMA 创建存储的过程和调用存储的过程的函数。|  
+|过程|如果该过程可以直接转换为[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 创建的存储的过程。<br /><br />在某些情况下必须自治事务中调用存储的过程。 SSMA 在这种情况下，创建两个存储的过程： 一个实现过程，以及用来调用实现的另一个存储过程。|  
 |包|SSMA 创建一组存储的过程和统一的类似对象名称的函数。|  
 |序列|SSMA 创建序列对象 （SQL Server 2012 或 SQL Server 2014），或模拟 Oracle 序列。|  
 |具有依赖对象，如索引和触发器的表|SSMA 创建包含依赖对象的表。|  
@@ -114,10 +114,10 @@ ms.locfileid: "38982439"
   
 -   可以修改要删除或修改有问题的代码的 Oracle 数据库中的对象。 若要将更新的代码加载到 SSMA，必须更新元数据。 有关详细信息，请参阅[连接到 Oracle 数据库&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。  
   
--   您可以从迁移中排除对象。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器和 Oracle 元数据资源管理器中，加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和将数据从 Oracle 迁移。  
+-   您可以从迁移中排除对象。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器和 Oracle 元数据资源管理器中，加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和将数据从 Oracle 迁移。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[加载到 SQL Server 的已转换的对象](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a)。  
+迁移过程中的下一步是[加载到 SQL Server 的已转换的对象](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

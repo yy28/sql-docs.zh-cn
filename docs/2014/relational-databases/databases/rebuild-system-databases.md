@@ -19,12 +19,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219427"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392691"
 ---
 # <a name="rebuild-system-databases"></a>重新生成系统数据库
   必须重新生成系统数据库才能修复 [master](master-database.md)、 [mode](model-database.md)l、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系统数据库中的损坏问题或者修改默认的服务器级排序规则。 本主题提供如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重新生成系统数据库的分步说明。  
@@ -156,7 +156,7 @@ ms.locfileid: "37219427"
 > [!WARNING]  
 >  重新生成`msdb`数据库使用**instmsdb**脚本将消除存储中的所有信息`msdb`例如作业、 警报、 运算符、 维护计划、 备份历史记录、 基于策略的管理设置数据库邮件、 性能数据仓库，等等。  
   
-1.  停止与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]连接的所有服务，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、 [!INCLUDE[ssRS](../../includes/ssrs-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]以及将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用作数据存储区的所有应用程序。  
+1.  停止与 [!INCLUDE[ssDE](../../includes/ssde-md.md)]连接的所有服务，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、 [!INCLUDE[ssRS](../../includes/ssrs.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]以及将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用作数据存储区的所有应用程序。  
   
 2.  使用以下命令从命令行启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ： `NET START MSSQLSERVER /T3608`  
   

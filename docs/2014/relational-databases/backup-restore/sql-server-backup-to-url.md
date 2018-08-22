@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264873"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393374"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
   本主题介绍使用 Windows Azure Blob 存储服务作为备份目标所需的概念、要求和组件。 备份和还原功能与使用磁盘或磁带时相同，或类似但区别不大。 区别均为显著的例外，并且本主题中包括少量代码示例。  
@@ -86,9 +86,9 @@ ms.locfileid: "37264873"
   
  有关如何创建的分步说明[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]凭据，请参阅[创建凭据](#credential)本主题后面的示例。  
   
- 有关凭据的一般信息，请参阅 [凭据](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
+ 有关凭据的一般信息，请参阅 [凭据](../security/authentication-access/credentials-database-engine.md)  
   
- 有关使用凭据的其他示例的信息，请参阅 [创建 SQL 代理的代理](http://msdn.microsoft.com/library/ms175834.aspx)。  
+ 有关使用凭据的位置，其他示例的信息，请参阅[创建 SQL Server 代理的代理](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 ###  <a name="limitations"></a> 限制  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264873"
 ###  <a name="credential"></a> 创建凭据  
  下面的示例创建存储 Windows Azure 存储身份验证信息的凭据。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264873"
 ###  <a name="complete"></a> 完整数据库备份  
  下面的示例将 AdventureWorks2012 数据库备份到 Windows Azure Blob 存储服务。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264873"
 ###  <a name="databaselog"></a> 备份数据库和日志  
  下面的示例备份 AdventureWorks2012 示例数据库，默认情况下，该数据库使用简单恢复模式。 若要支持日志备份，请将 AdventureWorks2012 数据库改为使用完整恢复模式。 然后，该示例对 Windows Azure Blob 创建完整数据库备份，并在一段更新活动过后备份日志。 此示例将创建具有日期时间戳的备份文件名。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264873"
 ###  <a name="filebackup"></a> 创建主文件组的完整文件备份  
  下面的示例创建主文件组的完整文件备份。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264873"
 ###  <a name="differential"></a> 创建主文件组的差异文件备份  
  下面的示例创建主文件组的差异文件备份。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264873"
 ###  <a name="restoredbwithmove"></a> 还原数据库并移动文件  
  要还原完整数据库备份并将还原的数据库移到 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目录，请使用以下步骤。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264873"
 ###  <a name="PITR"></a> 使用 STOPAT 还原到时间点  
  下面的示例将数据库状态还原到某个时间点并显示一个还原操作。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

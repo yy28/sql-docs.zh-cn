@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64fddcbfeee147b9588ade7ec20999ebe853edcf
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+ms.openlocfilehash: 5b098d59bfbc30d5273e46ccef24b62fcb82dbf8
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923619"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40393352"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks 安装和配置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,8 @@ AdventureWorks 下载链接和安装说明。
 ## <a name="creation-scripts"></a>创建脚本
 以下脚本可用于创建整个 AdventureWorks 数据库中的，而不考虑版本。 
 
-- [AdventureWorks OLTP 脚本 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-oltp-install-script.zip)
-- [AdventureWorks DW 脚本 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-data-warehouse-install-script.zip)
+- [AdventureWorks OLTP 脚本 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [AdventureWorks DW 脚本 Zip](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
 ## <a name="install-to-sql-server"></a>到 SQL Server 安装
 

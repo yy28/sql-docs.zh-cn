@@ -16,18 +16,18 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3af1de2e98b4baf4800603a8eb177b80fdb1da6f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26b95bc37f1ba7726c607e6275889ecd6a3fecd9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985499"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392913"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 数据库迁移到 SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 迁移助手 (SSMA) for DB2 是一个全面的环境，可帮助你快速迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 通过使用 SSMA for DB2，可以查看数据库对象和数据、 评估要迁移的数据库，迁移到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 请注意，不能将 SYS 和系统 DB2 架构迁移。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移助手 (SSMA) for DB2 是一个全面的环境，可帮助你快速迁移到 DB2 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 通过使用 SSMA for DB2，可以查看数据库对象和数据、 评估要迁移的数据库，迁移到的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，然后将数据迁移到和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 请注意，不能将 SYS 和系统 DB2 架构迁移。  
   
 ## <a name="recommended-migration-process"></a>建议的迁移过程  
-为了成功将对象和数据迁移到 DB2 数据库从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，使用以下过程：  
+为了成功将对象和数据迁移到 DB2 数据库从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，使用以下过程：  
   
 1.  [新的 SSMA 项目](http://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "38985499"
   
     可以通过以下方式之一执行此操作：  
   
-    -   保存脚本，然后在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+    -   保存脚本，然后在运行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     -   同步数据库对象。  
   

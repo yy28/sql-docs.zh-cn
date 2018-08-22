@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3e5e71bf32b031552db2a888d17fa222c9f53f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312747"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392490"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>任务 10：添加模糊分组转换以确定重复项
-  在本任务中，您向数据流添加模糊分组转换。 模糊分组转换可有助于标识源数据中的重复项。 请参阅[模糊分组转换](http://msdn.microsoft.com/library/ms141764.aspx)的更多详细信息。  
+  在本任务中，您向数据流添加模糊分组转换。 模糊分组转换可有助于标识源数据中的重复项。 请参阅[模糊分组转换](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)的更多详细信息。  
   
 1.  拖放**模糊分组**转换中**其他转换**上**SSIS 工具箱**到**数据流**选项卡上的**合并正确和已更正的记录**。  
   

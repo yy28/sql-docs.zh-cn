@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979320"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396265"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>映射 Oracle 和 SQL Server 数据类型 (OracleToSQL)
-Oracle 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 转换到的 Oracle 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，您必须指定如何将数据类型从 oracle 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
+Oracle 数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到的 Oracle 数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从 oracle 迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如以下各节中所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[项目设置&#40;类型映射&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
@@ -62,11 +62,11 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
+    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框。  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  若要修改的数据类型映射，请执行以下操作：  
   
@@ -78,9 +78,9 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
+    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   
-        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框中，然后 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框中，然后 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  若要删除自定义数据类型映射，请执行以下操作：  
   
@@ -91,7 +91,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
         不能删除继承的映射。 但是，由特定对象或对象类别的自定义映射中重写继承的映射。  
   
 ## <a name="next-steps"></a>后续步骤  
-迁移过程中的下一步是为[创建评估报告](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357)或[将 Oracle 数据库对象转换为 SQL Server 语法](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272)。 如果您创建评估报告，Oracle 对象会自动转换在评估期间。  
+迁移过程中的下一步是为[创建评估报告](assessing-oracle-schemas-for-conversion-oracletosql.md)或[将 Oracle 数据库对象转换为 SQL Server 语法](converting-oracle-schemas-oracletosql.md)。 如果您创建评估报告，Oracle 对象会自动转换在评估期间。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移的 Oracle 数据库移到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

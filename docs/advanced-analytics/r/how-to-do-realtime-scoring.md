@@ -2,31 +2,29 @@
 title: 如何执行实时评分或在 SQL Server 机器学习中的本机计分 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085849"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40392058"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机计分
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>如何执行实时评分或在 SQL Server 中的本机计分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供有关如何执行实时评分，以及 SQL Server 2017 和 SQL Server 2016 中的本机计分功能说明和示例代码。 实时评分和本机计分的目标是提高小批量评分操作的性能。
+本文演示如何在 SQL Server 中的两种方法，用于预测结果： 在近实时使用预先训练的模型编写的。实时评分和本机计分都旨在使你可以使用机器学习模型，而无需安装。在兼容的格式-保存到 SQL Server 数据库-提供预先训练的模型可以使用标准数据访问技术来快速生成预测得分的新输入。
 
-实时评分和本机计分都旨在使你可以使用机器学习模型，而无需安装。需要做的只是获取预先训练的模型的兼容的格式，并将其保存在 SQL Server 数据库中。
-
-## <a name="choosing-a-scoring-method"></a>选择评分方法
+## <a name="choose-a-scoring-method"></a>选择评分方法
 
 快速的批处理预测支持以下选项：
 
-+ **本机计分**: SQL Server 2017 中的 T-SQL 的预测函数
-+ **实时评分**： 使用 sp\_rxPredict SQL Server 2016 或 SQL Server 2017 中的存储过程。
++ **本机计分**： 在 SQL Server 2017 Windows、 SQL Server 2017 Linux 和 Azure SQL 数据库 T-SQL 的预测函数。
++ **实时评分**： 使用 sp\_rxPredict 存储过程在 SQL Server 2016 或 SQL Server 2017 (仅 Windows) 中。
 
 > [!NOTE]
 > 在 SQL Server 2017 中建议使用 PREDICT 函数。
@@ -168,7 +166,7 @@ go
 > [!NOTE]
 > 因为返回的列和值**PREDICT**因模型类型而异，则必须使用定义返回的数据的架构**WITH**子句。
 
-## <a name="realtime-scoring-with-sprxpredict"></a>实时评分与 sp_rxPredict
+## <a name="real-time-scoring-with-sprxpredict"></a>使用 sp_rxPredict 实时评分
 
 本部分介绍设置所需的步骤**实时**预测，并提供如何从 T-SQL 调用函数的示例。
 
@@ -197,7 +195,7 @@ go
 
     + 受信任的程序集
     + 存储的过程 `sp_rxPredict`
-    + 新的数据库角色， `rxpredict_users`。 数据库管理员可以使用此角色来向使用实时评分功能的用户授予权限。
+    + 新的数据库角色， `rxpredict_users`。 数据库管理员可以使用此角色向使用实时评分功能的用户授予权限。
 
 4. 添加需要运行的任何用户`sp_rxPredict`到新的角色。
 
@@ -236,15 +234,17 @@ EXEC sp_rxPredict
 > 
 > 因此，您可能需要筛选出输入数据中不支持的类型，然后再使用它进行实时评分。
 > 
-> 有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](https://msdn.microsoft.com/library/bb386947.aspx)或[映射 CLR 参数数据](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
+> 有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[映射 CLR 参数数据](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
 
-## <a name="disable-realtime-scoring"></a>禁用实时评分
+## <a name="disable-real-time-scoring"></a>禁用实时评分
 
 若要禁用实时评分的功能，打开提升的命令提示符，并运行以下命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>实时评分在 Microsoft R Server 或 Machine Learning Server
+## <a name="real-time-scoring-in-other-microsoft-product"></a>在其他 Microsoft 产品中的实时评分
 
-机器学习服务器支持分布式的实时从发布为 web 服务的模型评分。 有关详细信息，请参阅以下文章：
+如果使用独立服务器或 Microsoft 机器学习服务器而不 SQL Server 数据库内分析，则必须除了存储的过程和 T-SQL 的函数，用于生成预测的其他选项。
+
+独立服务器和机器学习服务器支持的概念*web 服务*代码部署。 你可以将捆绑 R 或 Python 预先训练模型作为 web 服务，在评估新的数据输入的运行时调用。 有关详细信息，请参阅以下文章：
 
 + [机器学习服务器中的 web 服务有哪些？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [操作化是什么？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

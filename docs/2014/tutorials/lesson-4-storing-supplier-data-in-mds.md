@@ -16,12 +16,12 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 778e28463c8fcb6b46a59e5929801dd56c819186
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392503"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 课：在 MDS 中存储供应商数据
   Master Data Services (MDS) 是用于主数据管理的 SQL Server 解决方案。 主数据管理 (MDM) 描述组织为发现和定义数据的非事务性列表而付出的努力。  
@@ -30,9 +30,9 @@ ms.locfileid: "37180944"
   
  模型可以包含一个或多个实体。 每个实体具有属性（列）和成员（行）。 每行都包含主数据。 在本课中，您将创建一个 Suppliers 模型，其中具有两个实体，名称分别为 Supplier 和 State。 Supplier 实体将具有以下属性：Code、Name、Contact First Name、Contact Last Name、Contact Email Address、Address Line、City、State、Zip 和 Country。 请参阅[属性 (Master Data Services)](http://msdn.microsoft.com/library/ee633745.aspx)的详细信息有关的详细信息属性一般情况下。 Code 和 Name 属性分别对应于 Excel 文件 (Cleansed and Matched Suppliers) 中的 SupplierID 和 Supplier Name 列。  
   
- 基于域的属性是指其值由另一个实体的成员填充的属性。 基于域的属性可防止用户输入无效的属性值。 只能从由另一个实体填充的下拉列表中选择属性值。 在本教程中，Supplier 实体的 State 属性是一个基于域的属性，其值来自 State 实体。 您只可将 Supplier 实体的 State 属性的值更改为 State 实体中的一个值。 请参阅[基于域的属性](http://msdn.microsoft.com/library/ff487058.aspx)的更多详细信息。  
+ 基于域的属性是指其值由另一个实体的成员填充的属性。 基于域的属性可防止用户输入无效的属性值。 只能从由另一个实体填充的下拉列表中选择属性值。 在本教程中，Supplier 实体的 State 属性是一个基于域的属性，其值来自 State 实体。 您只可将 Supplier 实体的 State 属性的值更改为 State 实体中的一个值。 请参阅[基于域的属性](../master-data-services/domain-based-attributes-master-data-services.md)的更多详细信息。  
   
- MDS 中的派生层次结构派生自模型中基于域的属性关系。 在本教程中，您将在 Supplier 实体和 State 实体之间创建一个派生层次结构。 在创建派生层次结构后，您将在主数据管理器的浏览器中看到州的列表。 当您单击列表中的某个州时，您将在右窗格中看到该州的供应商。 随后，您将基于此关系创建派生层次结构。 请参阅[派生层次结构](http://msdn.microsoft.com/library/ee633747.aspx)的更多详细信息。  
+ MDS 中的派生层次结构派生自模型中基于域的属性关系。 在本教程中，您将在 Supplier 实体和 State 实体之间创建一个派生层次结构。 在创建派生层次结构后，您将在主数据管理器的浏览器中看到州的列表。 当您单击列表中的某个州时，您将在右窗格中看到该州的供应商。 随后，您将基于此关系创建派生层次结构。 请参阅[派生层次结构](../master-data-services/derived-hierarchies-master-data-services.md)的更多详细信息。  
   
  您在 DQS 中构建了一个知识库，并使用此知识库来清理和匹配供应商数据，然后将结果存储在 Cleansed and Matched Supplier Data.xls 文件中。 在本课中，您要将清理和匹配的数据上载到 MDS 中。 DQS 只包含有关数据（元数据）的知识，而 MDS 存储数据本身（主数据集）。 例如：DQS 可能具有有关多个供应商的知识，但 MDS 只维护公司所使用的供应商。  
   

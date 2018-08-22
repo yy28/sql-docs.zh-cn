@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979599"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393395"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型 (AccessToSQL)
-访问数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库类型。 转换到访问数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，您必须指定如何将数据类型从访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  
+访问数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到访问数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  
   
 ## <a name="default-mappings"></a>默认映射  
 SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[（类型映射） 的项目设置](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
@@ -70,7 +70,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
+    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框中，然后依次**确定**。  
   
@@ -84,7 +84,7 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
   
         这允许您自定义的相同的数据类型的更小且更大值的数据映射。  
   
-    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型。  
+    4.  下**目标类型**，选择目标[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型。  
   
         某些类型需要目标数据类型长度。 如果需要，输入中的新数据长度**替换为**框中，然后依次**确定**。  
   
@@ -95,8 +95,8 @@ SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，�
     2.  单击 **“删除”**。  
   
 ## <a name="next-steps"></a>后续步骤  
-迁移过程中的下一步是[将访问数据库对象转换为 SQL Server 对象](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+迁移过程中的下一步是[将访问数据库对象转换为 SQL Server 对象](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

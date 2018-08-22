@@ -14,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353089"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396266"
 ---
-# <a name="assemblies---implementing"></a>程序集-实现
+# <a name="assemblies---implementing"></a>程序集 - 实现
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题提供有关以下方面的信息以帮助您在数据库中实现和使用程序集：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37353089"
   
  **若要使用 SQL Server Management Studio 删除程序集**  
   
--   [删除对象](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [删除对象](../../ssms/object/delete-objects.md)  
   
  默认情况下，不执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建的所有程序集。 可以使用**clr 已启用**的选项**sp_configure**系统存储过程来禁用或启用的中上传的所有程序集执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 禁用程序集执行防止公共语言运行时 (CLR) 函数、存储过程、触发器、聚合和用户定义类型执行并使当前正在执行的那些停止执行。 禁用程序集执行并不禁用创建、更改或删除程序集的功能。 有关详细信息，请参阅[clr enabled 服务器配置选项](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   

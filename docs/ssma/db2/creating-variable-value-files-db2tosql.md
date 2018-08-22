@@ -1,5 +1,5 @@
 ---
-title: 创建变量值文件 (DB2ToSQL) |Microsoft 文档
+title: 创建变量值文件 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 87cd293fcfa801499c7ef3cad583b05ff2ecf2a1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 73afb63d53be87baaaf1e969ae06c803100aa4f7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774583"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392056"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>创建变量值文件 (DB2ToSQL)
-变量的值文件是 XML 文件包含频繁更改从一台服务器迁移到另一个类似的源或目标服务器名称的命令的参数值。 多个变量的文件，用于存储每个源服务器的值时将发生大量的数据库迁移，将创建并中的主脚本文件引用 **– v**切换在命令行。 这有助于在维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
+变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
   
 > [!NOTE]  
-> 1.  变量名是前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
-> 2.  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是变量。  
-> 3.  出于可维护性目的，可以在声明变量`‘variable-group’`的用户的逻辑分隔的元素定义的变量。  此元素的使用情况不是必需的。  
+> 1.  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
+> 2.  转义符**$** 是**$$**。 如果参数的变量或静态值的值将包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
+> 3.  出于可维护性目的，可以在声明变量`‘variable-group’`元素的逻辑分隔的用户定义的变量。  此元素的使用情况不是必需的。  
   
 **示例：**  
   
@@ -91,8 +91,8 @@ ms.locfileid: "34774583"
 ```  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[服务器连接文件创建&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
+在操作控制台中的下一步是[创建服务器连接文件&#40;DB2ToSQL&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[创建服务器连接文件](http://msdn.microsoft.com/en-us/002f129e-0868-48ad-a4b4-c68b5007e12e)  
+[创建服务器连接文件](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

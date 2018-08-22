@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobhistory (Transact SQL) |Microsoft 文档
+title: sp_help_jobhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b903b6e0494e94da555750cb94a3c4cd0c0c41c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261816"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395254"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,24 +74,24 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  执行作业时由 SQL Server 返回的错误消息的严重级别。 *sql_severity*是**int**，默认值为 NULL。  
   
  [ **@start_run_date=** ] *start_run_date*  
- 开始作业的日期。 *start_run_date*是**int**，默认值为 NULL。 *start_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 是四个字符年，MM 是两个字符的月的名称，而 DD 是两个字符星期几名称。  
+ 开始作业的日期。 *start_run_date*是**int**，默认值为 NULL。 *start_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四个字符的年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
   
  [ **@end_run_date=** ] *end_run_date*  
- 完成作业的日期。 *end_run_date*是**int**，默认值为 NULL。 *end_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 是四位数年份，MM 是两个字符的月的名称，而 DD 是两个字符星期几名称。  
+ 完成作业的日期。 *end_run_date*是**int**，默认值为 NULL。 *end_run_date*必须在窗体中输入的 YYYYMMDD，其中 YYYY 表示四位数年份，MM 表示两个字符的月份，DD 表示两个字符的日期名称。  
   
  [ **@start_run_time=** ] *start_run_time*  
- 开始作业的时间。 *start_run_time*是**int**，默认值为 NULL。 *start_run_time*必须在窗体中输入的 HHMMSS，其中 HH 为一天中的两个字符小时，MM 为两个字符每分钟一天，和 SS 是一天中的两个字符第二个。  
+ 开始作业的时间。 *start_run_time*是**int**，默认值为 NULL。 *start_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
  [ **@end_run_time=** ] *end_run_time*  
- 作业完成执行的时间。 *end_run_time*是**int**，默认值为 NULL。 *end_run_time*必须在窗体中输入的 HHMMSS，其中 HH 为一天中的两个字符小时，MM 为两个字符每分钟一天，和 SS 是一天中的两个字符第二个。  
+ 作业完成执行的时间。 *end_run_time*是**int**，默认值为 NULL。 *end_run_time*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
  [  **@minimum_run_duration=** ] *minimum_run_duration*  
- 完成作业所用的最短时间。 *minimum_run_duration*是**int**，默认值为 NULL。 *minimum_run_duration*必须在窗体中输入的 HHMMSS，其中 HH 为一天中的两个字符小时，MM 为两个字符每分钟一天，和 SS 是一天中的两个字符第二个。  
+ 完成作业所用的最短时间。 *minimum_run_duration*是**int**，默认值为 NULL。 *minimum_run_duration*必须在窗体中输入 hhmmss 格式，其中 HH 表示两个字符的当天小时，MM 表示两个字符的分钟，SS 表示两个字符的秒的日期。  
   
  [  **@run_status=** ] *run_status*  
- 作业的执行状态。 *run_status*是**int**，默认值为 NULL，并且可以为这些值之一。  
+ 作业执行状态。 *run_status*是**int**，默认值为 NULL，并且可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|失败|  
 |**1**|已成功|  
@@ -104,26 +104,26 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  作业应该重试运行的最少次数。 *minimum_retries*是**int**，默认值为 NULL。  
   
  [  **@oldest_first=** ] *oldest_first*  
- 表示是否从最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，其中首先显示的最新作业。 **1**首先显示最早的作业。  
+ 表示是否从最早的作业开始显示输出。 *oldest_first*是**int**，默认值为**0**，表示首先显示最新的作业。 **1**首先显示最早的作业。  
   
  [ **@server=** ] **'***server***'**  
- 执行作业的服务器名称。 *服务器*是**nvarchar (30)**，默认值为 NULL。  
+ 执行作业的服务器名称。 *服务器*是**nvarchar(30)**，默认值为 NULL。  
   
- [  **@mode=** ] *****模式*****  
- 为 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的摘要。 *模式*是**varchar(7)**，默认值为**摘要**。  
+ [  **@mode=** ] **'***模式*****  
+ 是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)**，默认值为**摘要**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 实际的列列表取决于值*模式*。 最全面的列如下所示和时返回*模式*已满。  
+ 实际列的列表取决于的值*模式下*。 最全面的列如下所示，情况时将返回*模式下*为 FULL。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|历史记录条目标识号。|  
 |**job_id**|**uniqueidentifier**|作业标识号。|  
 |**job_name**|**sysname**|作业名称。|  
-|**step_id**|**int**|单步标识号 (将**0**作业历史记录)。|  
+|**step_id**|**int**|步骤标识号 (将**0**作业历史记录)。|  
 |**step_name**|**sysname**|步骤名称（对于作业历史记录将为 NULL）。|  
 |**sql_message_id**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最近的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误号。|  
 |**sql_severity**|**int**|对于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步骤，为运行命令时遇到的最高级别的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 错误严重性。|  
@@ -138,10 +138,10 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|步骤的重试次数（对于作业历史记录始终为 0）。|  
 |服务器|**nvarchar(30)**|执行步骤或作业的服务器。 始终 (**本地**)。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobhistory**返回具有指定的计划作业的历史记录的报表。 如果没有指定参数，则该报表包含所有预定作业的历史记录。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -150,9 +150,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 成员**SQLAgentUserRole**数据库角色仅查看他们所拥有的作业的历史记录。  
+ 成员**SQLAgentUserRole**数据库角色只能查看他们所拥有的作业的历史记录。  
   
 ## <a name="examples"></a>示例  
   
@@ -183,7 +183,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

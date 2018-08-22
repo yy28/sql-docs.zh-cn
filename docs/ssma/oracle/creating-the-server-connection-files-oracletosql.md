@@ -1,5 +1,5 @@
 ---
-title: 创建服务器连接文件 (OracleToSQL) |Microsoft 文档
+title: 创建服务器连接文件 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776953"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395253"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>创建服务器连接文件 (OracleToSQL)
-脚本文件的服务器部分中，也可在单独的服务器连接文件，可以指定服务器信息。 服务器连接文件的命令行参数， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
+脚本文件的服务器部分中或在单独的服务器连接文件中，可以指定服务器信息。 服务器连接文件的命令行参数是， `-c <serverconnectionfile>`。 如果脚本文件和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
   
 **示例： 1**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "34776953"
 ```  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[执行 SSMA 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+在操作控制台中的下一步是[执行 SSMA 控制台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[执行 SSMA 控制台](executing-the-ssma-console-oracletosql.md)  
   

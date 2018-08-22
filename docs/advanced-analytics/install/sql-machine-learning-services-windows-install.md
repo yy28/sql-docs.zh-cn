@@ -1,23 +1,23 @@
 ---
-title: 安装 SQL Server 2017 机器学习在 Windows 上的服务 （数据库） |Microsoft Docs
+title: 安装 SQL Server 机器学习在 Windows 上的服务 （数据库） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2c699a76d0a24bade258109fcee40e9e1f39a7d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093321"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437687"
 ---
-# <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>安装 SQL Server 2017 机器学习在 Windows 上的服务 （数据库） 
+# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务 （数据库） 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 的机器学习服务组件将添加数据库中的预测分析、 统计分析、 可视化和机器学习算法。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
+从 SQL Server 2017 开始，SQL Server 机器学习服务，SQL Server 2016 中引入的 R Services 功能的后续版本中提供的数据库内分析 R 和 Python 支持。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
 
 此文章介绍了如何通过运行安装机器学习组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导和以下屏幕上的提示。
 
@@ -98,13 +98,7 @@ SQL Server 的机器学习服务组件将添加数据库中的预测分析、 �
 
     记下的路径下的文件夹位置`..\Setup Bootstrap\Log`存储配置文件。 安装程序完成后，你可以查看摘要文件中已安装的组件。
 
-## <a name="restart-the-service"></a>重新启动服务。
-
-安装完成后下, 一步，启用脚本执行在继续之前重新启动数据库引擎。
-
-此外会自动重新启动 ervice 重启相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
-
-可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
+7. 安装完成时，如果要求您重新启动计算机后请立即登录。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
 ## <a name="bkmk_enableFeature"></a>启用外部脚本执行
 
@@ -132,9 +126,13 @@ SQL Server 的机器学习服务组件将添加数据库中的预测分析、 �
     
     如果启用了 R 语言的功能，不会运行重新配置适用于 Python 的第二次。 底层扩展性平台支持这两种语言。
 
-4. 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例重启 SQL Server 服务。 此外会自动重新启动 SQL Server 服务重新启动相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
+## <a name="restart-the-service"></a>重新启动服务。
 
-    可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
+安装完成后下, 一步，启用脚本执行在继续之前重新启动数据库引擎。
+
+重新启动该服务还会自动重新启动相关[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服务。
+
+可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>验证安装
 
@@ -148,7 +146,7 @@ SQL Server 的机器学习服务组件将添加数据库中的预测分析、 �
 
     **run_value** 现在应已设置为 1。
     
-2. 打开**Services**面板或 SQL Server 配置管理器，并验证是否**SQL Server Launchpad 服务**正在运行。 应具有一项服务的每个数据库引擎实例具有 R 或 Python 安装。 如果未运行，重新启动服务。 有关详细信息，请参阅[组件来支持 Python 集成](../python/new-components-in-sql-server-to-support-python-integration.md)。 
+2. 打开**Services**面板或 SQL Server 配置管理器，并验证是否**SQL Server Launchpad 服务**正在运行。 应具有一项服务的每个数据库引擎实例具有 R 或 Python 安装。 有关详细信息，请参阅[组件来支持 Python 集成](../python/new-components-in-sql-server-to-support-python-integration.md)。 
    
 3. 如果 Launchpad 正在运行，您应能够运行简单的 R 和 Python 脚本，以验证外部脚本的运行时可以与 SQL Server 进行通信。
 
@@ -298,7 +296,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="install-additional-r-packages"></a>安装其他 R 包
 
-为 SQL Server 创建 R 解决方案可以调用基本 R 函数，从装有 SQL Server 和第三方开放源代码 R SQL Server 安装的版本兼容的 R 包 properietary packes 函数。
+为 SQL Server 创建 R 解决方案可以调用基本 R 函数，函数从 SQL Server 一起安装的专属包和第三方 R 包与 SQL Server 安装的开放源代码 R 版本兼容。
 
 要通过 SQL Server 使用的包必须安装在实例使用的默认库中。 如果必须单独安装 R 的计算机上，或包安装到用户库，你将无法使用 T-SQL 中的这些包。
 

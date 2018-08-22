@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768653"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175089"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本可用性组（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768653"
 ## <a name="configuration"></a>配置  
  可以在任意两个 SQL Server 2016 Standard Edition 服务器上创建 AlwaysOn 基本可用性组。 当创建基本可用性组时，必须在创建期间指定两个副本。  
   
- 若要创建基本可用性组，请使用 **CREATE AVAILABILITY GROUP** transact-SQL 命令并指定“WITH BASIC”选项（默认值为“ADVANCED”）。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。 目前对于在 SQL Server Management Studio 中创建基本可用性组不提供 UI 支持。  
+ 若要创建基本可用性组，请使用 **CREATE AVAILABILITY GROUP** transact-SQL 命令并指定“WITH BASIC”选项（默认值为“ADVANCED”）。 从版本 17.8 开始，还可以使用 SQL Server Management Studio 中的 UI 创建基本可用性组。 有关详细信息，请参阅 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)。 
   
 > [!NOTE]  
 >  在指定“WITH BASIC”  时，基本可用性组的限制适用于 **CREATE AVAILABILITY GROUP** 命令。 例如，如果你尝试创建一个允许读取访问权限的基本可用性组，将收到错误。 其他限制同样适用。 有关详细信息，请参阅本主题的“限制”部分。  

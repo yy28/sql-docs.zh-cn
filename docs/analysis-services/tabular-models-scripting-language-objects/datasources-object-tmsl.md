@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981329"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392050"
 ---
-# <a name="datasources-object-tmsl"></a>数据源对象 (TMSL)
+# <a name="datasources-object-tmsl"></a>DataSources 对象 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   定义到模型期间导入到模型中，或在 DirectQuery 模式下通过传递查询中添加数据，或者使用的数据源的连接。  在 DirectQuery 模式下的模型只能有一个**数据源**对象。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "38981329"
  DataSource 的类型。 目前，唯一有效的值是提供程序 (1)-常规连接字符串。  
   
  connectionString  
- 连接字符串的最小日志指定的服务器和数据库，但还可以包括支持外部 RDBMS 中，如数据提供程序或用户帐户的其他属性。 此值是必需的。 请参阅[SqlConnectionStringBuilder 类](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx)有关 SQL Server 的详细信息的数据库连接字符串属性。  
+ 连接字符串的最小日志指定的服务器和数据库，但还可以包括支持外部 RDBMS 中，如数据提供程序或用户帐户的其他属性。 此值是必需的。 请参阅[SqlConnectionStringBuilder 类](/dotnet/framework/data/adonet/connection-string-syntax)有关 SQL Server 的详细信息的数据库连接字符串属性。  
   
  impersonationMode  
  指定 Analysis Services 是否应模拟请求查询的用户标识。 此属性是一个数字值，指定要用于模拟的凭据。 枚举值如下：  

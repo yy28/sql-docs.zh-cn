@@ -35,24 +35,24 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b624a8375f0726dc73b8b71af7a75d0756e52e60
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983359"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394633"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
-若要访问将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，必须将一个或多个 Access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果是从早期版本的访问权限的数据库，必须将数据库转换到较新版本。 通过打开和保存数据库 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  
+若要访问将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须将一个或多个 Access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果是从早期版本的访问权限的数据库，必须将数据库转换到较新版本。 通过打开和保存数据库 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>添加 Access 数据库文件时，会发生什么情况？  
-当将 Access 数据库添加到 SSMA 项目时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 此元数据描述的数据库和它的对象。 SSMA 将转换到的对象时使用的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 语法时，它将迁移到的数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以浏览访问元数据资源管理器中的此元数据，并查看单独的数据库对象的属性。  
+当将 Access 数据库添加到 SSMA 项目时，SSMA 读取数据库元数据，然后将此元数据添加到项目文件。 此元数据描述的数据库和它的对象。 SSMA 将转换到的对象时使用的元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 语法时，它将迁移到的数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以浏览访问元数据资源管理器中的此元数据，并查看单独的数据库对象的属性。  
   
 > [!NOTE]  
-> Access 数据库可以拆分为多个文件： 包含表，一个后端数据库和包含查询、 窗体、 报表、 宏、 模块和快捷方式的前端数据库。 如果你想要拆分数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，将前端数据库添加到 SSMA。  
+> Access 数据库可以拆分为多个文件： 包含表，一个后端数据库和包含查询、 窗体、 报表、 宏、 模块和快捷方式的前端数据库。 如果你想要拆分数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，将前端数据库添加到 SSMA。  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>权限所需的 SSMA  
-若要迁移到 Access 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure、 用户组和管理员用户必须具有管理权限。 有关如何迁移具有工作组保护的数据库的信息，请参阅[为迁移准备 Access 数据库](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+若要迁移到 Access 数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 用户组和管理员用户必须具有管理权限。 有关如何迁移具有工作组保护的数据库的信息，请参阅[迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)。  
   
 ## <a name="selecting-databases-to-add"></a>选择要添加的数据库  
 如果你想要将一个或多个数据库添加到一个 SSMA 项目，并且这些文件并全部放在一个已知位置，可以通过使用以下过程来添加文件。  
@@ -138,6 +138,6 @@ ms.locfileid: "38983359"
 迁移过程中的下一步是[连接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
 ## <a name="see-also"></a>请参阅  
-[Access 数据库迁移到 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[创建和管理项目](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[创建和管理项目](creating-and-managing-projects-accesstosql.md)  
   

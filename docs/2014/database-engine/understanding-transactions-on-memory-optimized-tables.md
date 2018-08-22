@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b6becc192fcb8257f2f4dc88965c95222d2d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 931eaa8ad51c277657c3a9f86402d4759ad0d671
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249287"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393385"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解内存优化表的事务
   事务使用一种乐观多版本并发控制形式来访问内存优化表。 这意味着存在不同版本的数据。 每个事务都对自己的事务一致数据库版本进行操作（独立于其他并发运行的事务）。 此外，事务还在与其他并发事务不冲突的乐观假设下运行。 这样就无需使用锁，但需要系统检测冲突并终止冲突事务中的一个事务。 仅对于写/写事务和读/写事务会发生冲突。 如果存在写/写冲突，则终止一个写入事务。  

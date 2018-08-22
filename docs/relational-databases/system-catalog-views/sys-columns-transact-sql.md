@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5672a062fdab79cf7a903e5dfac2d1f369bd70de
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 88b5f3c402861bb06c854cf31bc411c1e12da079
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550347"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393353"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "39550347"
 |encryption_algorithm_name|**sysname**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密算法的名称。<br /><br /> 支持仅 AEAD_AES_256_CBC_HMAC_SHA_512。|  
 |column_encryption_key_id|**int**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的 ID。|  
 |column_encryption_key_database_name|**sysname**|适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 如果不同于列的数据库列加密密钥所在的数据库的名称。 如果与列相同的数据库中存在该密钥为 NULL。|  
-|is_hidden|**bit**|适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否隐藏列：<br /><br /> 0 = 常规、 非隐藏、 可见列<br /><br /> 1 = 隐藏的列|  
-|is_masked|**bit**|适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否通过动态数据掩码来屏蔽列：<br /><br /> 0 = 不屏蔽的正则列<br /><br /> 1 = 列被屏蔽|  
+|is_hidden|**bit**|适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否隐藏列：<br /><br /> 0 = 常规、 非隐藏、 可见列<br /><br /> 1 = 隐藏的列|  
+|is_masked|**bit**|适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指示是否通过动态数据掩码来屏蔽列：<br /><br /> 0 = 不屏蔽的正则列<br /><br /> 1 = 列被屏蔽|  
 
 
  

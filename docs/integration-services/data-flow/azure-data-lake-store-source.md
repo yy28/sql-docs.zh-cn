@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store 源 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409299"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175083"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 源
   “Azure Data Lake Store 源”  组件允许 SSIS 包读取 Azure Data Lake Store 中的数据。 支持的文件格式：文本和 Avro。
@@ -44,3 +44,7 @@ ms.locfileid: "35409299"
         如果文件格式是文本，则必须指定“列分隔符字符”  值。 此外，如果文件中的第一行包含列名称，请选择“在第一个数据行中显示列名称”  。  
   
 3.  指定连接信息后，切换到“列”  页，将源列映射到 SSIS 数据流的目标列。   
+
+## <a name="text-qualifier"></a>文本限定符
+
+Azure Data Lake Store 源不支持文本限定符。 如果必须指定文本限定符以正确处理文件，请考虑将文件下载到本地计算机并使用平面文件源处理文件。 平面文件源支持指定文本限定符。 有关详细信息，请参阅[平面文件源](flat-file-source.md)。

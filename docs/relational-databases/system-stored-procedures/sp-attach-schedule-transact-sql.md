@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (TRANSACT-SQL) |Microsoft 文档
+title: sp_attach_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238350"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392698"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_attach_schedule
  向其中添加计划的作业的标识号。 *job_id*是**uniqueidentifier**，默认值为 NULL。  
   
  [ **@job_name =** ] **'***job_name***'**  
- 要向其添加计划作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
+ 向其中添加计划的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必须指定，但不能同时指定。  
+>  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
  [ **@schedule_id =** ] *schedule_id*  
  为作业设置的计划的标识号。 *schedule_id*是**int**，默认值为 NULL。  
@@ -63,16 +63,16 @@ sp_attach_schedule
  为作业设置的计划的名称。 *schedule_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*schedule_id*或*schedule_name*必须指定，但不能同时指定。  
+>  任一*schedule_id*或*schedule_name*必须指定，但不能同时指定两者。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  计划和作业的所有者必须相同。  
   
  可以为多个作业设置一个计划。 可以根据多个计划运行作业。  
   
  必须从运行此存储的过程**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -81,9 +81,9 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，计划不能删除如果分离会将其保留没有作业，除非调用方是计划所有者。  
+ 请注意，作业所有者可以将作业附加到计划以及从计划中分离作业，而不必要求也是计划所有者。 但是，不能删除计划如果分离后导致无作业，除非调用方是计划所有者。  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将检查用户是否同时拥有作业和计划。  
   
@@ -115,9 +115,9 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule 将&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980639"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392288"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>开始使用 SSMA for Sybase 控制台 (SybaseToSQL)
 本部分介绍启动并开始使用 SSMA for Sybase 控制台应用程序的过程。 此处还列出了所使用的约定在典型的 SSMA 控制台输出窗口中。  
@@ -52,9 +52,9 @@ ms.locfileid: "38980639"
   
 其他功能：  
   
-1.  [指定一个密码](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)和导出/导入它到窗口的其他计算机。  
+1.  [指定一个密码](managing-passwords-sybasetosql.md)和导出/导入它到窗口的其他计算机。  
   
-2.  [生成报告](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e)若要查看详细的 xml 输出为评估/转换和数据迁移的报告。 此外可以生成刷新和同步命令的详细的错误报告。  
+2.  [生成报告](generating-reports-sybasetosql.md)若要查看详细的 xml 输出为评估/转换和数据迁移的报告。 此外可以生成刷新和同步命令的详细的错误报告。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 控制台输出约定  
 执行 SSMA 脚本命令和选项，在控制台程序为用户在控制台上显示的结果和消息 （信息、 错误等） 或者，如有必要，将重定向到的 xml 输出文件。 每种类型的输出中的消息是由唯一的颜色表示。 例如，白色颜色中的文本消息表示文件的脚本命令;以绿色表示一个表示提示用户输入，依此类推。  

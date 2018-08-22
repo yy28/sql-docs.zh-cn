@@ -1,5 +1,5 @@
 ---
-title: 加载转换到 SQL Server (MySQLToSQL) 数据库对象 |Microsoft 文档
+title: 转换数据库对象加载到 SQL Server (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,100 +16,100 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1ee7299f1e10ec6fa0382bf5d2dda9cd17d66417
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0021a9005e169faab32765cbcde4a4e7a693ef53
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776443"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392014"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>加载转换到 SQL Server (MySQLToSQL) 数据库对象
-转换到的 MySQL 数据库后[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，你可以将生成数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以让 SSMA 创建对象，或可以编写对象脚本时，还可以自行运行脚本。 此外，SSMA 使你可以更新目标元数据的实际内容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 数据库。  
+# <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>将转换数据库对象加载到 SQL Server (MySQLToSQL)
+转换为的 MySQL 数据库后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同步和脚本之间进行选择  
-如果你想要将已转换的数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或者无需修改的 SQL Azure，您可以使用 SSMA 直接创建或重新创建数据库对象。 方法是快速而简单，但不允许的 Transact SQL 代码的定义的自定义项[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 对象。  
+如果你想要将已转换的数据库对象加载到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也无需修改的 SQL Azure，可以让 SSMA 直接创建或重新创建数据库对象。 方法的过程快速而简单，但不允许对自定义的 TRANSACT-SQL 代码定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象。  
   
-如果你想要修改用于创建对象，Transact SQL 或所需对象创建的更好地控制，请使用 SSMA 创建脚本。 你可以然后修改这些脚本，每个对象单独创建，甚至使用 SQL Server 代理来计划创建这些对象。  
+如果你想要修改用于创建对象，Transact SQL 或如果想要更好地控制对象的创建，使用 SSMA 创建脚本。 可以然后修改这些脚本，每个对象分别创建，并甚至使用 SQL Server 代理来计划创建这些对象。  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 具有 SQL Server 对象进行同步  
-若要使用 SSMA 创建 SQL Server 或 SQL Azure 数据库对象，你可以选择中的对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 元数据资源管理器，然后将同步的对象与[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，如下面的过程中所示。 默认情况下，如果对象已经存在于[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，如果 SSMA 元数据具有某些本地更改或更新了这些非常对象的定义，则 SSMA 将 alter 中的对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 你可以通过编辑更改默认行为**项目设置**。  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 来与 SQL Server 中同步对象  
+若要使用 SSMA 创建 SQL Server 或 SQL Azure 数据库对象，您选择的对象中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器，然后再同步的对象与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，如下面的过程中所示。 默认情况下，如果对象已经存在于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，并且如果 SSMA 元数据具有某些本地更改或对这些非常对象的定义更新 SSMA 会更改中的对象定义[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以通过编辑更改默认行为**项目设置**。  
   
 > [!NOTE]  
-> 你可以选择现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或多个未转换从 MySQL 数据库的 SQL Azure 数据库对象。 但是，不会重新创建或更改的 SSMA 这些对象。  
+> 可以选择现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或未转换从 MySQL 数据库的 SQL Azure 数据库对象。 但是，不会重新创建或更改 SSMA 这些对象。  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>若要使用 SQL Server 或 SQL Azure 同步对象  
   
-1.  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 元数据资源管理器，展开顶部[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 节点，然后展开**数据库**。  
+1.  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 元数据资源管理器中，展开顶部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 节点，然后展开**数据库**。  
   
 2.  选择要处理的对象：  
   
     -   若要同步整个数据库，选择数据库名称旁边的复选框。  
   
-    -   若要同步或忽略单个对象的类别，选择或清除的对象或文件夹旁边的复选框。  
+    -   以同步或省略了单个对象的类别，选择或清除的对象或文件夹旁边的复选框。  
   
-3.  选择要在 SQL Server 或 SQL Azure 元数据资源管理器中处理的对象后，右键单击**数据库**，然后单击**与数据库的同步**。  
+3.  选择要在 SQL Server 或 SQL Azure 元数据资源管理器中处理的对象后，右键单击**数据库**，然后单击**与数据库同步**。  
   
-    你还可以通过右键单击对象或其父文件夹，然后单击同步单个对象的类别**与数据库的同步**。  
+    你还可以通过右键单击该对象或其父文件夹，然后单击同步单个对象的类别**与数据库同步**。  
   
-    之后，将显示 SSMA**与数据库的同步**对话框中，可以看到两个项的组的位置。 在左侧，SSMA 显示在树中表示的所选的数据库对象。 在右侧，你可以看到表示 SSMA 元数据中的相同对象树。 你可以通过单击左或向右展开树 + 按钮。 同步方向放置在两个树之间的操作列所示。  
+    之后，将显示 SSMA**与数据库同步**对话框中，可以看到两组项的位置。 在左侧，SSMA 显示所选的数据库对象树中表示。 在右侧窗格中，您可以看到表示 SSMA 元数据中的相同对象的树。 您可以通过单击左侧或右侧展开树 + 按钮。 在操作列中放置两个树之间显示的同步方向。  
   
-    一个操作符号可以处于以下三种状态：  
+    一个操作号可以是以下三种状态：  
   
-    -   向的左键意味着元数据的内容将保存在数据库 （默认值）。  
+    -   向左的箭头表示元数据的内容将保存在数据库 （默认值）。  
   
-    -   右箭头意味着数据库内容将覆盖 SSMA 元数据。  
+    -   向右箭头意味着数据库内容将覆盖 SSMA 元数据。  
   
-    -   交叉登录意味着将执行任何操作。  
+    -   跨登录意味着将执行任何操作。  
   
-    -   单击以更改状态的操作符号。 当你单击时，将执行实际同步**确定**按钮**与数据库的同步**对话框。  
+    -   单击操作的符号以更改状态。 当您单击时将执行实际同步**确定**的按钮**与数据库同步**对话框。  
   
 ## <a name="scripting-objects"></a>编写对象脚本  
-若要保存[!INCLUDE[tsql](../../includes/tsql_md.md)]定义的转换后的数据库对象，或更改的对象定义和自己运行脚本，你可以保存转换后的数据库对象定义到[!INCLUDE[tsql](../../includes/tsql_md.md)]脚本。  
+若要保存[!INCLUDE[tsql](../../includes/tsql-md.md)]定义的转换后的数据库对象，或更改的对象定义并自己运行脚本，您可以保存转换后的数据库对象定义为[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本。  
   
 **若要将对象另存为脚本**  
   
-1.  选择要将保存到脚本的对象后，右键单击**数据库**，然后单击**将另存为脚本**。  
+1.  选择要将保存到脚本的对象后，右键单击**数据库**，然后单击**另存为脚本**。  
   
-    你还可以通过右键单击对象或其父文件夹，然后单击脚本单个对象的类别**将另存为脚本**。  
+    您还可以通过右键单击该对象或其父文件夹，然后单击脚本单个对象的类别**另存为脚本**。  
   
-2.  在**另存为**对话框框中，找到你想要保存该脚本中，输入中的文件名称的文件夹**文件名**框中，然后[!INCLUDE[clickOK](../../includes/clickok_md.md)]SSMA 将追加.sql 文件扩展名。  
+2.  在中**另存为**对话框框中，找到你想要保存该脚本文件中输入名称的文件夹**文件名**框中，然后[!INCLUDE[clickOK](../../includes/clickok-md.md)]SSMA 将追加.sql 文件扩展名。  
   
 ### <a name="modifying-scripts"></a>修改脚本  
-SQL Server 或 SQL Azure 对象定义保存为脚本后，你可以使用 SQL Server Management Studio 修改脚本。  
+SQL Server 或 SQL Azure 对象定义保存为脚本后，可以使用 SQL Server Management Studio 修改脚本。  
   
 **若要修改的脚本**  
   
-1.  在 Management Studio**文件**菜单上，指向**打开**，然后单击**文件**。  
+1.  在 Management Studio**文件**菜单，依次指向**打开**，然后单击**文件**。  
   
-2.  在打开的对话框中，找到并选择你的脚本文件，然后单击**确定**。  
+2.  在打开的对话框中，找到并选择脚本文件，并单击**确定**。  
   
-3.  通过使用查询编辑器中编辑的脚本文件。关于查询编辑器的详细信息，请参阅"编辑器方便命令和功能"SQL Server 联机丛书中。  
+3.  通过使用查询编辑器中编辑脚本文件。有关查询编辑器的详细信息，请参阅"编辑器方便命令和功能"SQL Server 联机丛书中。  
   
-4.  若要保存该脚本中，在文件菜单上，选择**保存**。  
+4.  若要保存该脚本，在文件菜单上，选择**保存**。  
   
-### <a name="running-scripts"></a>运行脚本  
+### <a name="running-scripts"></a>正在运行的脚本  
 可以在 SQL Server Management Studio 中运行的脚本或单个语句。  
   
 **若要运行脚本**  
   
-1.  在 SQL Server Management Studio**文件**菜单上，指向**打开**，然后单击**文件**。  
+1.  在 SQL Server Management Studio**文件**菜单，依次指向**打开**，然后单击**文件**。  
   
-2.  在打开的对话框中，找到并选择你的脚本文件，然后单击**确定**。  
+2.  在打开的对话框中，找到并选择脚本文件，并单击**确定**。  
   
-3.  若要运行的完整脚本，按**F5**密钥。  
+3.  若要运行完整的脚本，请按**F5**密钥。  
   
-4.  若要运行一组语句，在查询编辑器窗口中，选择语句，，然后按**F5**密钥。  
+4.  若要运行一组语句，在查询编辑器窗口中，选择语句，然后按**F5**密钥。  
   
-5.  有关如何使用查询编辑器来运行脚本的详细信息，请参阅"SQL Server Management Studio TRANSACT-SQL 查询"SQL Server 联机丛书中。  
+5.  有关如何使用查询编辑器中运行脚本的详细信息，请参阅"SQL Server Management Studio-查询"SQL Server 联机丛书中。  
   
-6.  你可以还使用运行脚本从命令行**sqlcmd**实用工具和从 SQL Server 代理。 有关详细信息**sqlcmd**，请参阅 SQL Server 联机丛书中的"sqlcmd 实用工具"。 有关 SQL Server 代理的详细信息，请参阅"自动化管理任务 （SQL Server 代理）"SQL Server 联机丛书中。  
+6.  你可以也运行脚本从命令行使用**sqlcmd**实用程序，并从 SQL Server 代理。 有关详细信息**sqlcmd**，请参阅 SQL Server 联机丛书中的"sqlcmd 实用程序"。 有关 SQL Server 代理的详细信息，请参阅"自动执行管理任务 （SQL Server 代理）"SQL Server 联机丛书中。  
   
 ## <a name="securing-objects-in-sql-server"></a>保护 SQL Server 中的对象  
-转换后的数据库对象加载到 SQL Server 后，您可以授予和拒绝对这些对象的权限。 它是一个好办法执行此操作在迁移之前到 SQL Server 的数据。 有关如何帮助保护 SQL Server 中的对象的信息，请参阅"安全注意事项的数据库和数据库应用程序"SQL Server 联机丛书中。  
+你已加载到 SQL Server 的已转换的数据库对象后，您可以授予和拒绝对这些对象的权限。 它是一个好办法迁移之前执行此操作与 SQL Server 的数据。 有关如何帮助保护 SQL Server 中的对象的信息，请参阅"安全注意事项的数据库和数据库应用程序"SQL Server 联机丛书中。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程的下一步是[将 MySQL 数据迁移到 SQL Server 的 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+迁移过程中的下一步是[将 MySQL 数据迁移到 SQL Server-Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[迁移的 MySQL 数据库移到 SQL Server 的 Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[迁移 MySQL 数据库移到 SQL Server-Azure SQL 数据库&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (Transact SQL) |Microsoft 文档
+title: sp_help_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258791"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392501"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_help_operator
   
 ## <a name="arguments"></a>参数  
  [ **@operator_name=** ] **'***operator_name***'**  
- 运算符名称中。 *operator_name*是**sysname**。 如果*operator_name*是未指定，返回有关所有运算符的信息。  
+ 运算符名称。 *operator_name*是**sysname**。 如果*operator_name*是未指定，则返回有关所有运算符的信息。  
   
  [ **@operator_id=** ] *operator_id*  
  为其请求信息的操作员的标识号。 *operator_id*是**int**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*operator_id*或*operator_name*必须指定，但不能同时指定。  
+>  任一*operator_id*或*operator_name*必须指定，但不能同时指定两者。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -78,16 +78,16 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|某一时间段的结束时间，在星期六的该时间段内操作员可以接收到寻呼通知。|  
 |**sunday_pager_start_time**|**int**|某一时间段的起始时间，在星期日的该时间段内操作员可以接收到寻呼通知。|  
 |**sunday_pager_end_time**|**int**|某一时间段的结束时间，在星期日的该时间段内操作员可以接收到寻呼通知。|  
-|**pager_days**|**tinyint**|一个位屏蔽 (**1** = 星期日， **64** = 星期六)，该值指示当运算符位于可用于接收寻呼通知的天的一周中。|  
+|**pager_days**|**tinyint**|一个位掩码 (**1** = 星期日， **64** = 星期六) 的指示操作员可以接收寻呼通知的天的周。|  
 |**netsend_address**|**nvarchar(100)**|接收网络弹出通知的操作员地址。|  
 |**last_netsend_date**|**int**|上一次用网络弹出消息通知操作员的日期。|  
 |**last_netsend_time**|**int**|上一次用网络弹出消息通知操作员的时间。|  
 |**category_name**|**sysname**|该操作员所属的操作员分类的名称。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_help_operator**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>示例  
  以下示例报告有关操作员 `François Ajenstat` 的信息。  
@@ -111,9 +111,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

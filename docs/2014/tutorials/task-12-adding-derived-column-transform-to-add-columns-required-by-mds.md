@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392286"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>任务 12：添加派生列转换以添加 MDS 所需的列
-  在本任务中，您将向数据流添加派生列转换。 添加两个派生的列**ImportType**并**BatchTag**到记录传递给此转换。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 请参阅[叶成员临时表](http://msdn.microsoft.com/library/ee633854.aspx)的更多详细信息。  
+  在本任务中，您将向数据流添加派生列转换。 添加两个派生的列**ImportType**并**BatchTag**到记录传递给此转换。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)的更多详细信息。  
   
 1.  拖放**派生列转换**从**常见**主题中**SSIS 工具箱**到**数据流**选项卡。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165708"
   
      ![SSIS 变量窗口](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 变量窗口")  
   
-7.  类型**ImportType**有关**名称**并**2**有关**值**。 您将该值指定为 2，因为您想要向 MDS 中的实体添加新成员。 有关此参数的详细信息，请参阅[叶成员临时表](http://msdn.microsoft.com/library/ee633854.aspx)。  
+7.  类型**ImportType**有关**名称**并**2**有关**值**。 您将该值指定为 2，因为您想要向 MDS 中的实体添加新成员。 有关此参数的详细信息，请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
   
 8.  单击**添加变量**再次工具栏按钮。  
   

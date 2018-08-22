@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263383"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392274"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>在内存优化表上使用索引的指导原则
   索引用于高效访问 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表中的数据。 指定正确索引可以显著提高查询性能。 例如，请考虑以下查询：  
@@ -73,11 +72,11 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
 |运算|内存优化、非聚集哈希索引|内存优化的非聚集索引|基于磁盘的索引|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
-|索引扫描，检索所有表行。|是|是|是|  
-|采用相等谓词 (=) 的索引查找。|是<br /><br /> （需要完整的键。）|是 <sup>1</sup>|是|  
-|不等谓词的索引查找 (>，<， \<=、 > =、 BETWEEN)。|否（索引扫描中的结果）|是 <sup>1</sup>|是|  
-|按与索引定义匹配的排序顺序检索行。|“否”|是|是|  
-|按与索引定义相反的排序顺序检索行。|“否”|否|是|  
+|索引扫描，检索所有表行。|用户帐户控制|是|用户帐户控制|  
+|采用相等谓词 (=) 的索引查找。|用户帐户控制<br /><br /> （需要完整的键。）|是 <sup>1</sup>|用户帐户控制|  
+|不等谓词的索引查找 (>，<， \<=、 > =、 BETWEEN)。|否（索引扫描中的结果）|是 <sup>1</sup>|用户帐户控制|  
+|按与索引定义匹配的排序顺序检索行。|否|是|用户帐户控制|  
+|按与索引定义相反的排序顺序检索行。|否|否|用户帐户控制|  
   
  在表格中，“是”意味着索引能充分地服务需求，而“否”则意味着索引不能用来成功地满足需求。  
   
@@ -177,7 +176,7 @@ go
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [为 XML](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
+ [内存优化表的索引](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [确定哈希索引的正确存储桶计数](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)   
  [哈希索引](hash-indexes.md)  
   

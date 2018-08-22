@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bb0c1c7b0ff489e5addff5bb84649984b97f527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416256"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392248"
 ---
 # <a name="metadata-discovery"></a>元数据发现
   中的元数据发现改进[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端应用程序以确保从执行的查询返回的列或参数元数据是否与相同或兼容的元数据设置你前面指定的格式执行查询。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
@@ -62,7 +62,7 @@ ms.locfileid: "37416256"
   
 -   Icommandwithparameters:: Getparameterinfo (请参阅[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)有关详细信息)  
   
- 指定使用 IBCPSession::BCPSetBulkMode 的元数据格式时，还将看到性能的改进  
+ 使用 IBCPSession::BCPSetBulkMode 指定元数据格式时，也会看到性能改进  
   
  由于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中新增了两个存储过程，[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 中的元数据发现功能才得以改进：  
   

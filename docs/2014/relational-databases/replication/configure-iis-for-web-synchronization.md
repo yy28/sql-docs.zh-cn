@@ -18,12 +18,12 @@ caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307587"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393354"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
@@ -34,7 +34,7 @@ ms.locfileid: "37307587"
   
 -   RMO： [如何配置订阅以使用 Web 同步（RMO 编程）](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 5.0 版、IIS 6.0 版和 [!INCLUDE[iisver](../../includes/iisver-md.md)] 。 [!INCLUDE[iisver](../../includes/iisver-md.md)]中不支持配置 Web 同步向导。  
+ Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 版本 5.0、 IIS 6.0 版和 IIS 版本 7.0。 IIS 版本 7.0 不支持配置 Web 同步向导。  
   
 > [!IMPORTANT]  
 >  请确保您的应用程序仅使用 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 或更高版本，并且 IIS 服务器上没有安装 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的较早版本。 较早版本的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 可能导致错误。 这些错误包括以下内容：“Web 同步期间出现的消息的格式无效。 请确保在 Web 服务器上正确配置了复制组件”。  

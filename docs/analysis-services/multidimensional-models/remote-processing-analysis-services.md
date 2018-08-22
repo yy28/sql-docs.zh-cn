@@ -1,5 +1,5 @@
 ---
-title: 远程处理 (Analysis Services) |Microsoft 文档
+title: 远程处理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,29 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022304"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394626"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
   
-## <a name="prerequisites"></a>先决条件  
+## <a name="prerequisites"></a>必要條件  
   
 -   如果在每台计算机上运行的 SQL Server 版本不同，则客户端库必须与处理模型的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例版本一致。
   
 -   在远程服务器上，必须启用 **“允许远程连接到此计算机”** ，然后必须列出发出处理请求的帐户作为允许的用户。  
   
--   必须配置 Windows 防火墙规则以允许进入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站连接。 确认可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接到远程 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例。 请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+-   必须配置 Windows 防火墙规则以允许进入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的入站连接。 确认可使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接到远程 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]实例。 请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 -   先解决任何现有的本地处理错误，然后再尝试进行远程处理。 确认在处理请求位于本地时，可成功地从外部关系数据源检索数据。 有关指定用于检索数据的凭据的说明，请参阅[设置模拟选项（SSAS-多维）](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>按需远程处理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接受来自用户或应用程序具有的帐户的处理请求[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]管理员权限。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受从具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理员权限的用户或应用程序帐户发出的处理请求。 如果您是管理员，请确认您可连接到远程实例并可通过远程连接手动处理数据库。  
   
 1.  在将用于安排处理的计算机上，启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 并连接到远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022304"
   
  使用以下链接设置权限：  
   
--   [配置 SQL Server 代理](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md)  
   
--   如果不可能授予[SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) 权限，则 **SQL Server Agent Components** 建议另外的固定服务器角色。  
+-   如果不可能授予[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) 权限，则 **SQL Server Agent Components** 建议另外的固定服务器角色。  
   
  在配置帐户权限后，请继续进行以下这些步骤。  
   
@@ -90,11 +90,11 @@ ms.locfileid: "34022304"
   
 2.  最后一步，修改该作业，使其按您定义的计划运行，并添加管理作业所需的任何警报或通知。 可能还要细化处理脚本，或在作业中创建多个步骤以独立处理各个对象。  
   
-## <a name="see-also"></a>另请参阅  
- [SQL Server 代理组件](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
- [计划 SSAS Administrative Tasks with SQL Server 代理](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批处理 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+## <a name="see-also"></a>请参阅  
+ [SQL Server 代理组件](../../ssms/agent/sql-server-agent.md)   
+ [使用 SQL Server 代理来计划 SSAS 管理任务](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [批处理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [处理对象 & #40;XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [处理对象&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282183"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40393983"
 ---
 # <a name="cube-space"></a>多维数据集空间
   “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  请注意 0 用于表示列轴的名称，它是列轴“axis(0)”的简称。  
   
- 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 前面的查询还可以使用 [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) 函数新的 * 变量来编写。  
+ 前面的查询仅为查询中每个属性层次结构的共存成员返回单元。 此外可以使用新编写前面的查询 * 的变体[ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx)函数。  
   
 ```  
 SELECT   

@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189654"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392253"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>综合使用 SSIS、MDS 和 DQS 来执行企业信息管理 [教程]
   在企业中管理信息通常涉及集成来自企业和企业之外的信息、清理数据、对数据进行匹配以便删除重复项、标准化数据、丰富数据、使数据符合法律和遵从性要求，以及将数据存储于具有所有必需的安全设置的集中位置。  
@@ -38,7 +38,7 @@ ms.locfileid: "37189654"
   
  通过 SQL Server Data Quality Services (DQS)，您可以清理、匹配、标准化和丰富数据，以便您可以提供可信的信息来用于商业智能、数据仓库和事务处理工作负荷。 请参阅[Data Quality Services 简介](http://msdn.microsoft.com/library/ff877917.aspx)针对 DQS 以及 DQS 如何满足需求的业务需要的主题。  
   
- SQL Server Master Data Services (MDS) 提供一个集中的数据中心，确保信息的完整性和数据的一致性在不同应用程序中是不变的。 请参阅[Master Data Services 概述](http://msdn.microsoft.com/library/ff487003.aspx)MDS 的重要功能的简短说明的主题。  
+ SQL Server Master Data Services (MDS) 提供一个集中的数据中心，确保信息的完整性和数据的一致性在不同应用程序中是不变的。 请参阅[Master Data Services 概述](../master-data-services/master-data-services-overview-mds.md)MDS 的重要功能的简短说明的主题。  
   
  请参阅[清理和匹配主数据使用 EIM 技术](http://msdn.microsoft.com/library/hh403491.aspx)上实现 EIM 解决方案结合使用这些 Microsoft EIM 技术和监视的全面的指导的白皮书[企业信息管理 (EIM): 一起将 SSIS、 DQS 和 MDS](http://go.microsoft.com/fwlink/?LinkId=258672) EIM 方案的很酷的演示视频。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189654"
   
     4.  SQL Server Data Tools  
   
-         请参阅[SQL Server 2012 安装指南](http://msdn.microsoft.com/library/bb500469.aspx)有关安装此产品的详细信息。  
+         请参阅[SQL Server 2012 安装指南](../database-engine/install-windows/installation-for-sql-server.md)有关安装此产品的详细信息。  
   
 2.  [将 MDS 使用 Master Data Services 配置管理器配置](http://msdn.microsoft.com/library/ee633884.aspx)  
   

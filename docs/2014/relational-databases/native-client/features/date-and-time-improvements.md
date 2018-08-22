@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
@@ -13,19 +13,19 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a6b3b37f1265601ab63f1db370a3aa95a3420d2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 350ad710f2ff9e00d82be7fe565521becf522eb8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428846"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393157"
 ---
 # <a name="date-and-time-improvements"></a>日期和时间改进
   本主题介绍 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 对于 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中已添加的日期和时间数据类型的支持。  
   
  有关日期/时间改进的详细信息，请参阅[日期和时间改进&#40;OLE DB&#41; ](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)并[日期和时间改进&#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
   
- 有关演示此功能的示例应用程序的信息，请参阅[SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
+ 有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="usage"></a>用法  
  以下各节介绍使用新的日期和时间类型的各种方法。  
@@ -36,7 +36,7 @@ ms.locfileid: "37428846"
 ### <a name="use-time-as-a-distinct-data-type"></a>将时间用作非重复数据类型  
  OLE DB 已具有一种只包含时间的数据类型 DBTYPE_DBTIME，它的精度为 1 秒。 在 ODBC 中，等效类型为 SQL_TYPE_TIME（对于 ODBC 2.0 应用程序为 SQL_TIME）。  
   
- 新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时间数据类型具有小数秒精确到 100 纳秒。 这要求中的新类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端： DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 已编写的所用时间不带秒的小数部分的现有应用程序可以使用 time(0) 列。 现有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 类型及其对应的结构应正常工作，除非应用程序依赖于元数据中返回的类型。  
+ 新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时间数据类型具有秒的小数形式，其准确度可达 100 纳秒。 这要求中的新类型[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端： DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。 已编写的所用时间不带秒的小数部分的现有应用程序可以使用 time(0) 列。 现有的 OLE DB DBTYPE_TIME 和 ODBC SQL_TYPE_TIME 类型及其对应的结构应正常工作，除非应用程序依赖于元数据中返回的类型。  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>将具有扩展的秒的小数部分精度的时间用作非重复数据类型  
  某些应用程序（如过程控制和生产应用程序）要求能够处理精度高达 100 纳秒的时间数据。 可满足这一用途的新类型为 DBTYPE_DBTIME2 (OLE DB) 和 SQL_SS_TIME2 (ODBC)。  

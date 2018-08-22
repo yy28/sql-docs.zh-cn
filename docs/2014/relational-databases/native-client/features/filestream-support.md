@@ -5,7 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b499fee530484c14297d04cc6ffe8db38983e214
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 743ffc19d94f81b3e44b02911e4086e99774eaee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424326"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393127"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
   FILESTREAM 允许通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或通过直接访问 Windows 文件系统来存储和访问大型二进制值。 大型二进制值是大于 2 GB 的值。 有关增强的 FILESTREAM 支持的详细信息，请参阅[FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "37424326"
 -   [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>查询 FILESTREAM 列  
- OLE DB 中的架构行集不会报告某个列是否为 FILESTREAM 列。 ITableDefinition OLE DB 中的不能用于创建 FILESTREAM 列。  
+ OLE DB 中的架构行集不会报告某个列是否为 FILESTREAM 列。 OLE DB 中的 ITableDefinition 不能用于创建 FILESTREAM 列。  
   
  如 SQLColumns 在 ODBC 目录函数不会报告列是否是 FILESTREAM 列。  
   
@@ -59,7 +59,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
- 如果您的客户端在编译时使用的版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带的本机客户端[!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]，`varbinary(max)`行为将与兼容[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 更大的结果值为 2 GB，将发生截断，将返回"字符串数据右截断"警告。  
+ 如果您的客户端在编译时使用的版本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]附带的本机客户端[!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]，`varbinary(max)`行为将与兼容[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。  
   
  如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   

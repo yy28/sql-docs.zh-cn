@@ -1,5 +1,5 @@
 ---
-title: sp_help_schedule (Transact SQL) |Microsoft 文档
+title: sp_help_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a77859fd5c113d9b40832c81472e62aaef05fcda
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261736"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392057"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_help_schedule
   
 ## <a name="arguments"></a>参数  
  [ **@schedule_id =** ] *id*  
- 要列出的计划的标识符。 *schedule_name*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可指定。  
+ 要列出的计划的标识符。 *schedule_name*是**int**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
  [ **@schedule_name =** ] **'***schedule_name***'**  
- 到列表计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可指定。  
+ 列出的计划的名称。 *schedule_name*是**sysname**，无默认值。 任一*schedule_id*或*schedule_name*可能指定。  
   
  [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- 指定是否仅显示作业附加到的计划。 *attached_schedules_only*是**位**，默认值为**0**。 当*attached_schedules_only*是**0**，显示所有计划。 当*attached_schedules_only*是**1**，结果集包含附加到作业的计划。  
+ 指定是否仅显示作业附加到的计划。 *attached_schedules_only*是**位**，默认值为**0**。 当*attached_schedules_only*是**0**，将显示所有计划。 当*attached_schedules_only*是**1**，结果集包含附加到作业的计划。  
   
  [ **@include_description** =] *include_description*  
- 指定是否在结果集中包含说明。 *include_description*是**位**，默认值为**0**。 当*include_description*是**0**、 *schedule_description*结果集的列都包含一个占位符。 当*include_description*是**1**，在结果集中包括的计划的说明。  
+ 指定是否在结果集中包含说明。 *include_description*是**位**，默认值为**0**。 当*include_description*是**0**，则*schedule_description*列的结果集包含一个占位符。 当*include_description*是**1**，计划的说明包括在结果集中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -72,10 +72,10 @@ sp_help_schedule
 |**schedule_uid**|**uniqueidentifier**|计划的标识符。|  
 |**schedule_name**|**sysname**|计划名称。|  
 |**enabled**|**int**|是否启用了计划 (**1**) 或未启用 (**0**)。|  
-|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32**相对于 = 每月、 **freq_interval**<br /><br /> **64** = SQLServerAgent 服务启动时运行。|  
-|**freq_interval**|**int**|执行作业的天数。 值的值取决于**freq_type**。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_type**|**int**|指示何时执行作业的值。<br /><br /> **1** = 一次<br /><br /> **4** = 每日<br /><br /> **8** = 每周<br /><br /> **16** = 每月<br /><br /> **32** = 每月，相对于**freq_interval**<br /><br /> **64** = 当 SQLServerAgent 服务启动时运行。|  
+|**freq_interval**|**int**|执行作业的天数。 值对的值取决于**freq_type**。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_subday_type**|**int**|单位**freq_subday_interval**。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
-|**freq_subday_interval**|**int**|数**freq_subday_type**期间发生的作业的每个执行之间。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
+|**freq_subday_interval**|**int**|数**freq_subday_type**周期每次执行作业之间。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_relative_interval**|**int**|计划作业的匹配项**freq_interval**中每个月。 有关详细信息，请参阅[sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)。|  
 |**freq_recurrence_factor**|**int**|作业的已计划执行日期之间的间隔月数。|  
 |**active_start_date**|**int**|激活计划的日期。|  
@@ -84,12 +84,12 @@ sp_help_schedule
 |**active_end_time**|**int**|计划结束的时间。|  
 |**date_created**|**datetime**|创建计划的日期。|  
 |**schedule_description**|**nvarchar(4000)**|对计划的英语说明（如果需要的话）。|  
-|**job_count**|**int**|返回多少作业引用此计划。|  
+|**job_count**|**int**|返回多少个作业引用此计划。|  
   
-## <a name="remarks"></a>注释  
- 当未提供参数时， **sp_help_schedule**列出实例中的所有计划的信息。  
+## <a name="remarks"></a>Remarks  
+ 如果不提供任何参数， **sp_help_schedule**列出实例中的所有计划的信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才可以执行此存储过程。 其他用户必须被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **数据库中下列** 代理固定数据库角色的权限之一：  
   
 -   **SQLAgentUserRole**  
@@ -98,7 +98,7 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 有关这些角色的权限的详细信息，请参阅 [SQL Server 代理固定数据库角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  成员**SQLAgentUserRole**只能查看他们所拥有的计划。  
   
@@ -127,10 +127,10 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule 将&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

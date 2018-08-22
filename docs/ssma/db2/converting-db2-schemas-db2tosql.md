@@ -16,18 +16,18 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6c63b66a52f0fbc6a676a2143299b7ee5b13208
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980699"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392017"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>转换 DB2 架构 (DB2ToSQL)
-已连接到 DB2 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并将项目设置和数据映射选项，可以将转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库对象。  
+已连接到 DB2 后，连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并将项目设置和数据映射选项，可以将转换到 DB2 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象。  
   
 ## <a name="the-conversion-process"></a>转换过程  
-将转换数据库对象从 DB2 所需的对象定义、 将其转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象，再然后将此信息加载到 SSMA 元数据。 它不到的实例加载信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您然后可以通过查看对象和其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器。  
+将转换数据库对象从 DB2 所需的对象定义、 将其转换为类似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，再然后将此信息加载到 SSMA 元数据。 它不到的实例加载信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您然后可以通过查看对象和其属性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器。  
   
 在转换期间 SSMA 打印消息输出到输出窗格和错误消息为错误列表窗格。 使用的输出和错误的信息来确定是否必须修改您的 DB2 数据库或转换过程来获取所需的转换结果。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "38980699"
 在将对象转换之前, 查看中的项目转换选项**项目设置**对话框。 通过使用此对话框中，可以设置 SSMA 将函数和全局变量的转换。 有关详细信息，请参阅[项目设置&#40;转换&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)。  
   
 ## <a name="conversion-results"></a>转换结果  
-下表显示哪些 DB2 对象会转换与生成的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]对象：  
+下表显示哪些 DB2 对象会转换与生成的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象：  
   
 |DB2 对象|生成 SQL Server 对象|  
 |-----------|----------------------------|  
 |数据类型|**SSMA 映射除下面所列的下列每种类型：**<br /><br />CLOB： 与此类型的工作某些本机函数都不支持 (例如 CLOB_EMPTY())<br /><br />BLOB： 与此类型的工作某些本机函数都不支持 (例如 BLOB_EMPTY())<br /><br />DBLOB： 与此类型的工作某些本机函数都不支持 (例如 DBLOB_EMPTY())|  
 |用户定义类型|**SSMA 映射以下用户：**<br /><br />不同的类型<br /><br />结构化的类型<br /><br />SQL PL 数据类型 – 请注意： 不支持弱游标类型。|  
 |特殊寄存器|**SSMA 仅会在下面列出的寄存器：**<br /><br />当前时间戳<br /><br />当前日期<br /><br />当前时间<br /><br />当前时区<br /><br />当前用户<br /><br />SESSION_USER 和用户<br /><br />SYSTEM_USER<br /><br />当前 CLIENT_APPLNAME<br /><br />当前 CLIENT_WRKSTNNAME<br /><br />当前锁定超时<br /><br />当前架构<br /><br />当前服务器<br /><br />当前的隔离<br /><br />其他特殊的注册未映射到 SQL server 语义。|  
-|CREATE TABLE|**SSMA 映射创建表，但存在以下例外：**<br /><br />多维聚类分析 (MDC) 表<br /><br />范围聚集表 (RCT)<br /><br />已分区的表<br /><br />已分离的表<br /><br />DATA CAPTURE 子句<br /><br />IMPLICITLY 隐藏选项<br /><br />易失性选项|  
+|CREATE TABLE|**SSMA 映射创建表，但存在以下例外：**<br /><br />多维聚类分析 (MDC) 表<br /><br />范围聚集表 (RCT)<br /><br />分区表<br /><br />已分离的表<br /><br />DATA CAPTURE 子句<br /><br />IMPLICITLY 隐藏选项<br /><br />易失性选项|  
 |CREATE VIEW|SSMA 映射使用使用本地检查选项创建视图，但其他选项未映射到 SQL server 语义|  
 |CREATE INDEX|**SSMA 映射创建索引，但存在以下例外：**<br /><br />XML 索引<br /><br />无需重叠 BUSINESS_TIME 选项<br /><br />已分区的子句<br /><br />仅规范选项<br /><br />使用扩展选项<br /><br />MINPCTUSED 选项<br /><br />页拆分选项|  
 |触发器|**SSMA 会在以下触发器语义：**<br /><br />后/每行触发器<br /><br />每个语句后 /FOR 触发<br /><br />之前 / 对于每行，而不是 / 每行触发器|  
@@ -150,7 +150,7 @@ DB2 的某些对象可能不会转换。 您可以查看摘要转换报告来确
   
 -   可以修改要删除或修改有问题的代码的 DB2 数据库中的对象。 若要将更新的代码加载到 SSMA，必须更新元数据。 有关详细信息，请参阅[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。  
   
--   您可以从迁移中排除对象。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]元数据资源管理器和 DB2 的元数据资源管理器中，加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和将数据从 DB2 迁移。  
+-   您可以从迁移中排除对象。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元数据资源管理器和 DB2 的元数据资源管理器中，加载到对象之前清除项旁边的复选框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和将数据从 DB2 迁移。  
   
 ## <a name="next-step"></a>下一步  
 迁移过程中的下一步是[加载到 SQL Server 的已转换的对象](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  

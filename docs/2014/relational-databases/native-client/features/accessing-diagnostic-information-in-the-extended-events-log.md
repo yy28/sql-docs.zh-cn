@@ -1,11 +1,11 @@
 ---
-title: 访问扩展的事件日志中的诊断信息 |Microsoft Docs
+title: 访问扩展事件日志中的诊断信息 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -13,17 +13,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: beb758f6edb2e34dad108f89c7cd226c66353436
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420906"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394029"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
   从开始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 和数据访问跟踪 ([数据访问跟踪](http://go.microsoft.com/fwlink/?LinkId=125805)) 已更新，以使其更轻松地从连接环中获得有关连接失败的诊断信息从扩展的事件日志缓冲区和应用程序性能信息。  
   
- 有关读取扩展的事件日志的信息，请参阅[查看事件会话数据](../../../database-engine/view-event-session-data.md)。  
+ 有关读取扩展事件日志的信息，请参阅[查看事件会话数据](../../../database-engine/view-event-session-data.md)。  
   
 > [!NOTE]  
 >  该功能只用于故障排除和诊断目的，可能不适合审核或安全目的。  

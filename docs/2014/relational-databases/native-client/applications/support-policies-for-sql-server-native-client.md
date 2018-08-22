@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
@@ -13,12 +13,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14b75dc088ea1542038151377d6c8339b72870e9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1c5ec3b51089eb2982fbc5c330104822229510fc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426286"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392702"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client 的支持策略
   本主题讨论如何将各种数据访问组件与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 一起使用。  
@@ -29,7 +29,7 @@ ms.locfileid: "37426286"
 ## <a name="supported-operating-system-versions"></a>支持的操作系统版本  
  下表列出了支持 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的操作系统。  
   
-|SQL Server Native Client 版本|支持的操作系统|  
+|SQL Server Native Client 版本|受支持的操作系统|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 或更高版本<br />Microsoft Windows Server 2003 或更高版本<br />Microsoft Windows XP Service Pack 1 或更高版本<br />Microsoft Windows Vista (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 或更高版本)<br />Microsoft Windows Server 2008 (需要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 或更高版本)|  
 |SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2，或更高版本<br />Microsoft Windows XP Service Pack 2 或更高版本<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008|  

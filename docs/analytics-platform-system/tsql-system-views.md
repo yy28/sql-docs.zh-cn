@@ -1,6 +1,6 @@
 ---
-title: 系统视图的分析平台系统并行数据仓库 |Microsoft 文档
-description: 系统视图的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+title: 系统视图的分析平台系统并行数据仓库 |Microsoft Docs
+description: 系统视图的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539607"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392917"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平台系统并行数据仓库的系统视图
-系统视图的分析平台系统 (AP) SQL Server 并行数据仓库 (PDW)。
+系统视图的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>并行数据仓库目录视图
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -58,7 +58,7 @@ ms.locfileid: "31539607"
 * [sys.dm_pdw_waits](http://msdn.microsoft.com/library/mt203909.aspx)
 
 ## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>适用于并行数据仓库的 SQL Server Dmv
-以下 Dmv 适用于并行数据仓库，但必须通过连接到执行**master**数据库。
+以下 Dmv 适用于并行数据仓库，但必须通过连接到执行**主**数据库。
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -131,16 +131,16 @@ ms.locfileid: "31539607"
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
 
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 中提供的 Dmv 并行数据仓库
-并行数据仓库公开许多 SQL Server 动态管理视图 (Dmv)。 这些视图，在并行数据仓库中查询时正在报告分布区上运行的 SQL Server 数据库的状态。
+并行数据仓库公开许多 SQL Server 动态管理视图 (Dmv)。 这些视图，在并行数据仓库中，查询时它们将报告分布区上运行的 SQL Server 数据库的状态。
 
-其中每个 DMV 具有名为 pdw_node_id 的特定列。 这是计算节点的标识符。 
+每个这些 DMV 有一个名为 pdw_node_id 的特定列。 这是计算节点的标识符。 
 
 > [!NOTE]
-> 若要使用这些视图，请在名称中，插入 pdw_nodes_ 下表中所示。
+> 若要使用这些视图，请在名称插入 pdw_nodes_ 下, 表中所示。
 > 
 > 
 
-| 并行数据仓库中的 DMV 名称 | 将链接到 SQL Server T-SQL 主题 |
+| 并行数据仓库中的 DMV 名称 | 链接到 SQL Server T-SQL 主题 |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](http://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](http://msdn.microsoft.com/library/ms188755.aspx) |
@@ -201,7 +201,7 @@ ms.locfileid: "31539607"
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](http://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](http://msdn.microsoft.com/library/ms188778.aspx) |
 
-## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 2016 PolyBase Dmv 可用并行数据仓库中
+## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>提供的 SQL Server 2016 PolyBase Dmv 并行数据仓库中
 * [sys.dm_exec_compute_node_errors](http://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](http://msdn.microsoft.com/library/mt146382.aspx)
 * [sys.dm_exec_compute_nodes](../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
@@ -214,18 +214,18 @@ ms.locfileid: "31539607"
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
 ## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA 视图
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>后续步骤
-有关更多参考信息，请参阅[T-SQL 语言元素](tsql-language-elements.md)和[T-SQL 语句](tsql-statements.md)。
+有关更多参考信息，请参阅[T-SQL 语言元素](tsql-language-elements.md)并[T-SQL 语句](tsql-statements.md)。
 
 <!--Image references-->
 

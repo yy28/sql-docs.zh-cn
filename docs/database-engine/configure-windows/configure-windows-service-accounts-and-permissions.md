@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7750a2cf088e25cb0a6ac689e99d2ea1398b5954
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981349"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175090"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>配置 Windows 服务帐户和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [配置 Windows 服务帐户和权限](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [配置 Windows 服务帐户和权限](configure-windows-service-accounts-and-permissions.md)。
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每个服务表示一个进程或一组进程，用于通过 Windows 管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作的身份验证。 本主题介绍此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本中服务的默认配置，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中以及安装之后设置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的配置选项。 本主题将帮助高级用户了解服务帐户的详细信息。  
@@ -137,7 +137,7 @@ ms.locfileid: "38981349"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 控制器|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 客户端|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)*|  
 |FD 启动器（全文搜索）|[LOCAL SERVICE](#Local_Service)|[虚拟帐户](#VA_Desc)|  
@@ -158,7 +158,7 @@ ms.locfileid: "38981349"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理|无。 提供 [域用户](#Domain_User) 帐户。|提供 [域用户](#Domain_User) 帐户。|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|无。 提供 [域用户](#Domain_User) 帐户。|提供 [域用户](#Domain_User) 帐户。|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虚拟帐户](#VA_Desc)|  
 |FD 启动器（全文搜索）|[LOCAL SERVICE](#Local_Service)|[虚拟帐户](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 编写器|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
@@ -183,7 +183,7 @@ ms.locfileid: "38981349"
   
 -  <a name="GMSA"></a>**组托管服务帐户**  
   
-     组托管服务帐户是针对多个服务器的 MSA。 Windows 为在一组服务器上运行的服务管理服务帐户。 Active Directory 自动更新组托管服务帐户密码，而不重启服务。 你可以配置 SQL Server 服务以使用组托管服务帐户主体。 从 SQL Server 2014 开始，SQL Server 针对独立实例、故障转移群集实例和可用性组，在 Windows Server 2012 R2 和更高版本上支持组托管服务帐户。  
+     组托管服务帐户是针对多个服务器的 MSA。 Windows 为在一组服务器上运行的服务管理服务帐户。 Active Directory 自动更新组托管服务帐户密码，而不重启服务。 你可以配置 SQL Server 服务以使用组托管服务帐户主体。 从 SQL Server 2014 开始，SQL Server 支持适用于独立实例的组管理服务帐户，而 SQL Server 2016 及更高版本还支持适用于故障转移群集实例和可用性组的组管理服务帐户。  
   
     若要使用 SQL Server 2014 或更高版本的组托管服务帐户，操作系统必须是 Windows Server 2012 R2 或更高版本。 装有 Windows Server 2012 R2 的服务器需要应用 [KB 2998082](http://support.microsoft.com/kb/2998082) ，以便服务可以在密码更改后立即登录而不中断。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "38981349"
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    虚拟帐户（从 Windows Server 2008 R2 和 Windows 7 开始）是“托管的本地帐户”  ，此类帐户提供以下功能，可简化服务管理。 虚拟帐户是自动管理的，并且虚拟帐户可以访问域环境中的网络。 如果在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间对服务帐户使用默认值，则会使用将实例名用作服务名称的虚拟帐户，格式为 NT SERVICE\\\<SERVICENAME>*****。 以虚拟帐户身份运行的服务通过使用计算机帐户的凭据（格式为 *<domain_name>*__\\__*<computer_name>*__$__）访问网络资源。  当指定一个虚拟帐户以启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，应将密码留空。 如果虚拟帐户无法注册服务主体名称 (SPN)，则手动注册该 SPN。 有关手动注册 SPN 的详细信息，请参阅 [手动注册 SPN](https://msdn.microsoft.com/library/ms191153.aspx)。  
+    虚拟帐户（从 Windows Server 2008 R2 和 Windows 7 开始）是“托管的本地帐户”  ，此类帐户提供以下功能，可简化服务管理。 虚拟帐户是自动管理的，并且虚拟帐户可以访问域环境中的网络。 如果在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 期间对服务帐户使用默认值，则会使用将实例名用作服务名称的虚拟帐户，格式为 NT SERVICE\\\<SERVICENAME>*****。 以虚拟帐户身份运行的服务通过使用计算机帐户的凭据（格式为 *<domain_name>*__\\__*<computer_name>*__$__）访问网络资源。  当指定一个虚拟帐户以启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，应将密码留空。 如果虚拟帐户无法注册服务主体名称 (SPN)，则手动注册该 SPN。 有关手动注册 SPN 的详细信息，请参阅 [手动注册 SPN](register-a-service-principal-name-for-kerberos-connections.md)。  
   
     > [!NOTE]  
     >  虚拟帐户不能用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，因为虚拟帐户在群集的每个节点不会有相同 SID。  
@@ -297,7 +297,7 @@ ms.locfileid: "38981349"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT SERVICE\MSSQLSERVER**。 命名实例： **NT SERVICE\MSSQL$** InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> 启动 SQL 编写器的权限<br /><br /> 读取事件日志服务的权限<br /><br /> 读取远程过程调用服务的权限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理：**\*<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT Service\SQLSERVERAGENT**。 命名实例：NT Service\SQLAGENT$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **替换进程级别标记** (SeAssignPrimaryTokenPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例：SQLServerMSASUser$ComputerName$MSSQLSERVER****。 命名实例：SQLServerMSASUser$ComputerName$InstanceName**。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 实例：SQLServerMSASUser$ComputerName$PowerPivot**。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 仅适用于表格：<br /><br /> **增加进程工作集** (SeIncreaseWorkingSetPrivilege)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaSizePrivilege)<br /><br /> **锁定内存中的页** (SeLockMemoryPrivilege) - 仅当完全关闭分页时才需要。<br /><br /> 仅适用于故障转移群集安装：<br /><br /> **提高计划优先级** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：**NT SERVICE\ReportServer**。 命名实例：NT SERVICE\\ReportServer$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例：**NT SERVICE\ReportServer**。 命名实例：NT SERVICE\\ReportServer$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例和命名实例： **NT SERVICE\MsDtsServer130**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> 应用程序事件日志的写入权限。<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)<br /><br /> **身份验证后模拟客户端** (SeImpersonatePrivilege)|  
 |**全文搜索：**<br /><br /> （所有权限都将授予 Per-service SID。 默认实例： **NT Service\MSSQLFDLauncher**。 命名实例：NT Service\ MSSQLFDLauncher$InstanceName。）|**以服务身份登录** (SeServiceLogonRight)<br /><br /> **调整进程的内存配额** (SeIncreaseQuotaPrivilege)<br /><br /> **跳过遍历检查** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> （所有权限都授予本地 Windows 组。 默认实例或命名实例：SQLServer2005SQLBrowserUser$ComputerName。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 没有针对命名实例的单独进程。）|**以服务身份登录** (SeServiceLogonRight)|  

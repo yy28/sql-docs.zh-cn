@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92231cca501a2b1d79a3c4a2cdbf15f1310af904
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8b89902c1949252c18d08c441e1e7ce1ba5a4e31
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422987"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392731"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>客户端连接中的服务主体名称 (SPN) (ODBC)
   本主题介绍支持客户端应用程序中的服务主体名称 (SPN) 的 ODBC 属性和函数。 在客户端应用程序中的 Spn 的详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../features/service-principal-name-spn-support-in-client-connections.md)并[获取 Kerberos 相互身份验证](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md)。  
