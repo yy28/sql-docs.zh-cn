@@ -1,3 +1,4 @@
+items:
 - name: 概述
   href: sql-server-encryption.md
 - name: 加密层次结构
@@ -7,78 +8,84 @@
 - name: 透明数据加密 (TDE)
   href: transparent-data-encryption.md
   items:
-    - name: 将受 TDE 保护的数据库移到其他 SQL Server
-      href: move-a-tde-protected-database-to-another-sql-server.md
-    - name: 使用 EKM 在 SQL Server 上启用 TDE
-      href: enable-tde-on-sql-server-using-ekm.md
+  - name: 将受 TDE 保护的数据库移到其他 SQL Server
+    href: move-a-tde-protected-database-to-another-sql-server.md
+  - name: 使用 EKM 在 SQL Server 上启用 TDE
+    href: enable-tde-on-sql-server-using-ekm.md
 - name: Azure SQL 的 TDE
-  href: transparent-data-encryption-azure-sql.md
+  href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
   items:
-    - name: “创建自己的密钥”的 TDE
-      href: transparent-data-encryption-byok-azure-sql.md
-    - name: 使用 BYOK 配置 TDE
-      href: transparent-data-encryption-byok-azure-sql-configure.md
-    - name: 轮替 TDE BYOK 密钥
-      href: transparent-data-encryption-byok-azure-sql-key-rotation.md
-    - name: 删除 TDE 保护程序
-      href: transparent-data-encryption-byok-azure-sql-remove-tde-protector.md
+  - name: “创建自己的密钥”的 TDE
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: 使用 BYOK 配置 TDE
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: 轮替 TDE BYOK 密钥
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation?toc=/docs/relational-databases/security/encryption/toc.json
+  - name: 删除 TDE 保护程序
+    href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector?toc=/docs/relational-databases/security/encryption/toc.json
 - name: SQL Server 和数据库加密密钥
   href: sql-server-and-database-encryption-keys-database-engine.md
   items:
-    - name: 服务主密钥
-      href: service-master-key.md
-    - name: 可扩展的密钥管理 (EKM)
-      href: extensible-key-management-ekm.md
-    - name: 使用 Azure Key Vault 的可扩展密钥管理
-      href: extensible-key-management-using-azure-key-vault-sql-server.md
-      items:
-        - name: 使用 Azure 密钥保管库的可扩展密钥管理的设置步骤
-          href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
-        - name: 使用具有 SQL 加密功能的 SQL Server 连接器
-          href: use-sql-server-connector-with-sql-encryption-features.md
-        - name: SQL Server 连接器维护与故障排除
-          href: sql-server-connector-maintenance-troubleshooting.md
-    - name: 备份服务主密钥
-      href: back-up-the-service-master-key.md
-    - name: 还原服务主密钥
-      href: restore-the-service-master-key.md
-    - name: 创建数据库主密钥
-      href: create-a-database-master-key.md
-    - name: 备份数据库主密钥
-      href: back-up-a-database-master-key.md
-    - name: 还原数据库主密钥
-      href: restore-a-database-master-key.md
-    - name: 在两个服务器上创建相同的对称密钥
-      href: create-identical-symmetric-keys-on-two-servers.md
-    - name: 加密数据列
-      href: encrypt-a-column-of-data.md
+  - name: 服务主密钥
+    href: service-master-key.md
+  - name: 可扩展的密钥管理 (EKM)
+    href: extensible-key-management-ekm.md
+  - name: 使用 Azure Key Vault 的可扩展密钥管理
+    href: extensible-key-management-using-azure-key-vault-sql-server.md
+    items:
+    - name: 使用 Azure 密钥保管库的可扩展密钥管理的设置步骤
+      href: setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+    - name: 使用具有 SQL 加密功能的 SQL Server 连接器
+      href: use-sql-server-connector-with-sql-encryption-features.md
+    - name: SQL Server 连接器维护与故障排除
+      href: sql-server-connector-maintenance-troubleshooting.md
+  - name: 备份服务主密钥
+    href: back-up-the-service-master-key.md
+  - name: 还原服务主密钥
+    href: restore-the-service-master-key.md
+  - name: 创建数据库主密钥
+    href: create-a-database-master-key.md
+  - name: 备份数据库主密钥
+    href: back-up-a-database-master-key.md
+  - name: 还原数据库主密钥
+    href: restore-a-database-master-key.md
+  - name: 在两个服务器上创建相同的对称密钥
+    href: create-identical-symmetric-keys-on-two-servers.md
+  - name: 加密数据列
+    href: encrypt-a-column-of-data.md
 - name: 始终加密
   href: always-encrypted-database-engine.md
   items:
-    - name: 始终加密向导
-      href: always-encrypted-wizard.md
-    - name: Always Encrypted 密钥管理概述
-      href: overview-of-key-management-for-always-encrypted.md
-      items:
-        - name: 创建并存储列主密钥 (Always Encrypted)
-          href: create-and-store-column-master-keys-always-encrypted.md
-    - name: 使用 SQL Server Management Studio 配置 Always Encrypted
-      href: configure-always-encrypted-using-sql-server-management-studio.md
-    - name: 使用 PowerShell 配置 Always Encrypted
-      href: configure-always-encrypted-using-powershell.md
-      items:
-        - name: 使用 PowerShell 配置 Always Encrypted 密钥
-          href: configure-always-encrypted-keys-using-powershell.md
-        - name: 使用 PowerShell 轮换 Always Encrypted 密钥
-          href: rotate-always-encrypted-keys-using-powershell.md
-        - name: 使用 PowerShell 配置列加密
-          href: configure-column-encryption-using-powershell.md
-    - name: 始终加密（客户端开发）
-      href: always-encrypted-client-development.md
-      items:
-        - name: 通过 SQL Server 的 .NET Framework 数据提供程序使用“始终加密”功能开发应用程序
-          href: develop-using-always-encrypted-with-net-framework-data-provider.md
-    - name: 始终加密的加密
-      href: always-encrypted-cryptography.md
-    - name: 迁移通过“始终加密”保护的敏感数据
-      href: migrate-sensitive-data-protected-by-always-encrypted.md
+  - name: 始终加密向导
+    href: always-encrypted-wizard.md
+  - name: Always Encrypted 密钥管理概述
+    href: overview-of-key-management-for-always-encrypted.md
+    items:
+    - name: 创建并存储列主密钥 (Always Encrypted)
+      href: create-and-store-column-master-keys-always-encrypted.md
+  - name: 使用 SQL Server Management Studio 配置 Always Encrypted
+    href: configure-always-encrypted-using-sql-server-management-studio.md
+  - name: 使用 PowerShell 配置 Always Encrypted
+    href: configure-always-encrypted-using-powershell.md
+    items:
+    - name: 使用 PowerShell 配置 Always Encrypted 密钥
+      href: configure-always-encrypted-keys-using-powershell.md
+    - name: 使用 PowerShell 轮换 Always Encrypted 密钥
+      href: rotate-always-encrypted-keys-using-powershell.md
+    - name: 使用 PowerShell 配置列加密
+      href: configure-column-encryption-using-powershell.md
+  - name: 始终加密（客户端开发）
+    href: always-encrypted-client-development.md
+    items:
+    - name: 通过 SQL Server 的 .NET Framework 数据提供程序使用“始终加密”功能开发应用程序
+      href: develop-using-always-encrypted-with-net-framework-data-provider.md
+  - name: 始终加密的加密
+    href: always-encrypted-cryptography.md
+  - name: 迁移通过“始终加密”保护的敏感数据
+    href: migrate-sensitive-data-protected-by-always-encrypted.md
+ms.openlocfilehash: 4d6219ec9932717897d1ddd559e73e96c8a45c16
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40427328"
