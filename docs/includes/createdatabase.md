@@ -4,4 +4,4 @@
  [使用 Azure 门户在几分钟内创建 SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [CodePlex 上的 Microsoft SQL Server 数据库产品示例](http://msftdbprodsamples.codeplex.com/)
+ [GitHub 上的 Microsoft SQL Server 示例](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
