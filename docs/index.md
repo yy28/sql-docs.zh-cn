@@ -8,12 +8,12 @@ ms.author: craigg
 ms.topic: hub-page
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: d959a393062c0806e3e4a5c9444d2d7d723b5d04
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 8b5da9ceb421d6802e0d0f75bc684bfbffb76893
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36244779"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40430137"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -38,12 +38,11 @@ ms.locfileid: "36244779"
                                                 <h3 class="bgdAccent1" style="padding:20px;">“数据库”</h3>
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Azure SQL 数据库</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL 数据仓库</a></li>                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
                                                     <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
                                                     <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">先前版本 (2005 - 2012)</a></li>
-                                                    <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL 数据库</a></li>
-                                                    <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL 数据仓库</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">早期 SQL Server 版本 (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/sql/analytics-platform-system/index">分析平台系统 - 并行数据仓库</a><li>
                                                 </ul>
                                                 <h4>在 Windows 或 Linux 上运行</h4>
@@ -113,10 +112,8 @@ ms.locfileid: "36244779"
                                                     <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services（2016、2017）</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
                                                     <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li> 
-                                                    <li><a class="barLink" href="/azure/stream-analytics/">Azure 流分析</a></li>
-                                                    <li><a class="barLink" href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure 机器学习</a></li> 
+                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure 机器学习</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server 机器学习服务</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">机器学习服务器（独立）</a></li>
                                                 </ul>
