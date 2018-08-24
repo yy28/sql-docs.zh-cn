@@ -187,10 +187,10 @@ EXIT:
   
  连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口会话对象的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以生成的应用程序的持续创建和释放会话对象很大的开销。 开销可以最小化通过管理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口会话对象有效。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序应用程序可以使[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]连接处于活动状态，保持上至少一个接口的对象的引用的会话对象。  
   
- 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 当需要会话对象时，池维护代码传递有效**IDBCreateCommand**需要会话的应用程序方法的接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
+ 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 当需要会话对象时，池维护代码传递有效 **IDBCreateCommand** 需要会话的应用程序方法的接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中， **IDBCreateCommand**使用接口，因为**ICommand**接口实现**GetDBSession**方法中，在命令中的唯一方法或允许对象确定在其创建的会话的行集作用域。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中， **IDBCreateCommand** 使用接口，因为 **ICommand** 接口实现 **GetDBSession** 方法中，在命令中的唯一方法或允许对象确定在其创建的会话的行集作用域。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>请参阅  
  [数据源对象&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
