@@ -41,7 +41,7 @@ ms.locfileid: "38984739"
   
     [限制和局限](#Restrictions)  
   
-    [安全性](#Security) 
+    [安全性](#Security)  
   
 -   [使用 SQL Server Management Studio 为 SQL Server 代理设置服务启动帐户](#SSMSProcedure)  
   
