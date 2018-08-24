@@ -1,3 +1,4 @@
+items:
 - name: 概述
   href: tables.md
 - name: 创建表（数据库引擎）
@@ -11,10 +12,10 @@
 - name: 查看表定义
   href: view-the-table-definition.md
   items:
-    - name: Table Properties - SSMS
-      href: table-properties-ssms.md
-    - name: 列属性（“常规”页）
-      href: column-properties-general-page.md
+  - name: Table Properties - SSMS
+    href: table-properties-ssms.md
+  - name: 列属性（“常规”页）
+    href: column-properties-general-page.md
 - name: 查看表的依赖关系
   href: view-the-dependencies-of-a-table.md
 - name: 向表中添加列（数据库引擎）
@@ -42,110 +43,96 @@
 - name: 主键和外键约束
   href: primary-and-foreign-key-constraints.md
   items:
-    - name: 创建主键
-      href: create-primary-keys.md
-    - name: 修改主键
-      href: modify-primary-keys.md
-    - name: 删除主键
-      href: delete-primary-keys.md
-    - name: 创建外键关系
-      href: create-foreign-key-relationships.md
-    - name: 修改外键关系
-      href: modify-foreign-key-relationships.md
-    - name: 删除外键关系
-      href: delete-foreign-key-relationships.md
-    - name: 查看外键属性
-      href: view-foreign-key-properties.md
-    - name: 对复制禁用外键约束
-      href: disable-foreign-key-constraints-for-replication.md
-    - name: 使用 INSERT 和 UPDATE 语句禁用外键约束
-      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+  - name: 创建主键
+    href: create-primary-keys.md
+  - name: 修改主键
+    href: modify-primary-keys.md
+  - name: 删除主键
+    href: delete-primary-keys.md
+  - name: 创建外键关系
+    href: create-foreign-key-relationships.md
+  - name: 修改外键关系
+    href: modify-foreign-key-relationships.md
+  - name: 删除外键关系
+    href: delete-foreign-key-relationships.md
+  - name: 查看外键属性
+    href: view-foreign-key-properties.md
+  - name: 对复制禁用外键约束
+    href: disable-foreign-key-constraints-for-replication.md
+  - name: 使用 INSERT 和 UPDATE 语句禁用外键约束
+    href: disable-foreign-key-constraints-with-insert-and-update-statements.md
 - name: 唯一约束和 CHECK 约束
   href: unique-constraints-and-check-constraints.md
   items:
-    - name: 创建唯一约束
-      href: create-unique-constraints.md
-    - name: 修改唯一约束
-      href: modify-unique-constraints.md
-    - name: 删除唯一约束
-      href: delete-unique-constraints.md
-    - name: 创建 CHECK 约束
-      href: create-check-constraints.md
-    - name: 修改 CHECK 约束
-      href: modify-check-constraints.md
-    - name: 删除 CHECK 约束
-      href: delete-check-constraints.md
-    - name: 对复制禁用 CHECK 约束
-      href: disable-check-constraints-for-replication.md
-    - name: 对 INSERT 和 UPDATE 语句禁用 CHECK 约束
-      href: disable-check-constraints-with-insert-and-update-statements.md
+  - name: 创建唯一约束
+    href: create-unique-constraints.md
+  - name: 修改唯一约束
+    href: modify-unique-constraints.md
+  - name: 删除唯一约束
+    href: delete-unique-constraints.md
+  - name: 创建 CHECK 约束
+    href: create-check-constraints.md
+  - name: 修改 CHECK 约束
+    href: modify-check-constraints.md
+  - name: 删除 CHECK 约束
+    href: delete-check-constraints.md
+  - name: 对复制禁用 CHECK 约束
+    href: disable-check-constraints-for-replication.md
+  - name: 对 INSERT 和 UPDATE 语句禁用 CHECK 约束
+    href: disable-check-constraints-with-insert-and-update-statements.md
 - name: 表列属性 (SQL Server Management Studio)
   href: table-column-properties-sql-server-management-studio.md
 - name: 临时表
   href: temporal-tables.md
   items:
-    - name: 系统版本控制临时表入门
-      href: getting-started-with-system-versioned-temporal-tables.md
-      items:
-        - name: 创建由系统控制版本的临时表
-          href: creating-a-system-versioned-temporal-table.md
-        - name: 在系统版本控制的临时表中修改数据
-          href: modifying-data-in-a-system-versioned-temporal-table.md
-        - name: 在系统版本控制临时表中查询数据
-          href: querying-data-in-a-system-versioned-temporal-table.md
-        - name: 更改系统版本控制的临时表架构
-          href: changing-the-schema-of-a-system-versioned-temporal-table.md
-        - name: 停止对系统版本的临时表的系统版本控制
-          href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
-    - name: 临时表使用方案
-      href: temporal-table-usage-scenarios.md
-    - name: 临时表系统一致性检查
-      href: temporal-table-system-consistency-checks.md
-    - name: 临时表分区
-      href: partitioning-with-temporal-tables.md
-    - name: 临时表注意事项和限制
-      href: temporal-table-considerations-and-limitations.md
-    - name: 临时表安全性
-      href: temporal-table-security.md
-    - name: 管理版本由系统控制的临时表中历史数据的保留期
-      href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
-    - name: 系统版本控制临时表与内存优化表
-      href: system-versioned-temporal-tables-with-memory-optimized-tables.md
-      items:
-        - name: 创建系统版本控制的内存优化临时表
-          href: creating-a-memory-optimized-system-versioned-temporal-table.md
-        - name: 使用带有系统版本的内存优化临时表
-          href: working-with-memory-optimized-system-versioned-temporal-tables.md
-        - name: 监视系统版本控制型内存优化临时表
-          href: monitoring-memory-optimized-system-versioned-temporal-tables.md
-        - name: 内存优化系统版本控制临时表的性能注意事项
-          href: memory-optimized-system-versioned-temporal-tables-performance.md
-    - name: 临时表元数据视图和函数
-      href: temporal-table-metadata-views-and-functions.md
+  - name: 系统版本控制临时表入门
+    href: getting-started-with-system-versioned-temporal-tables.md
+    items:
+    - name: 创建由系统控制版本的临时表
+      href: creating-a-system-versioned-temporal-table.md
+    - name: 在系统版本控制的临时表中修改数据
+      href: modifying-data-in-a-system-versioned-temporal-table.md
+    - name: 在系统版本控制临时表中查询数据
+      href: querying-data-in-a-system-versioned-temporal-table.md
+    - name: 更改系统版本控制的临时表架构
+      href: changing-the-schema-of-a-system-versioned-temporal-table.md
+    - name: 停止对系统版本的临时表的系统版本控制
+      href: stopping-system-versioning-on-a-system-versioned-temporal-table.md
+  - name: 临时表使用方案
+    href: temporal-table-usage-scenarios.md
+  - name: 临时表系统一致性检查
+    href: temporal-table-system-consistency-checks.md
+  - name: 临时表分区
+    href: partitioning-with-temporal-tables.md
+  - name: 临时表注意事项和限制
+    href: temporal-table-considerations-and-limitations.md
+  - name: 临时表安全性
+    href: temporal-table-security.md
+  - name: 管理版本由系统控制的临时表中历史数据的保留期
+    href: manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
+  - name: 系统版本控制临时表与内存优化表
+    href: system-versioned-temporal-tables-with-memory-optimized-tables.md
+    items:
+    - name: 创建系统版本控制的内存优化临时表
+      href: creating-a-memory-optimized-system-versioned-temporal-table.md
+    - name: 使用带有系统版本的内存优化临时表
+      href: working-with-memory-optimized-system-versioned-temporal-tables.md
+    - name: 监视系统版本控制型内存优化临时表
+      href: monitoring-memory-optimized-system-versioned-temporal-tables.md
+    - name: 内存优化系统版本控制临时表的性能注意事项
+      href: memory-optimized-system-versioned-temporal-tables-performance.md
+  - name: 临时表元数据视图和函数
+    href: temporal-table-metadata-views-and-functions.md
 - name: 教程：使用 hierarchyid 数据类型
   href: tutorial-using-the-hierarchyid-data-type.md
   items:
-    - name: 第 1 课：将表转换为层次结构
-      href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
-      items:
-        - name: 第 1-1 课 - 检查 Employee 表的当前结构
-          href: lesson-1-1-examining-the-current-structure-of-the-employee-table.md
-        - name: 第 1-2 课 - 使用现有层次结构数据填充表
-          href: lesson-1-2-populating-a-table-with-existing-hierarchical-data.md
-        - name: 第 1-3 课 - 优化 NewOrg 表
-          href: lesson-1-3-optimizing-the-neworg-table.md
-        - name: 第 1-4 课 - 摘要 - 将表转换为层次结构
-          href: lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md
-    - name: 第 2 课：创建和管理层次结构表中的数据
-      href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-      items:
-        - name: 第 2-1 课 - 使用 hierarchyid 数据类型创建表
-          href: lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md
-        - name: 第 2-2 课 - 使用分层方法填充层次结构表
-          href: lesson-2-2-populating-a-hierarchical-table-using-hierarchical-methods.md
-        - name: 第 2-3 课 - 使用层次结构方法查询层次结构表
-          href: lesson-2-3-querying-a-hierarchical-table-using-hierarchy-methods.md
-        - name: 第 2-4 课 - 使用分层方法对层次结构表中的数据重新排序
-          href: lesson-2-4-reordering-data-in-a-hierarchical-table-using-hierarchical-methods.md
-        - name: 第 2-5 课 - 摘要 - 管理层次结构表中的数据
-          href: lesson-2-5-summary-managing-data-in-a-hierarchical-table.md
+  - name: 第 1 课：将表转换为层次结构
+    href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
+  - name: 第 2 课：创建和管理层次结构表中的数据
+    href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
+ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42782048"
