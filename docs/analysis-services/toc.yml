@@ -1,274 +1,279 @@
+items:
 - name: 关于 SQL Server Analysis Services
   href: analysis-services.md
 - name: 概述
   items:
-    - name: SQL Server Analysis Services 2016 中的新增功能
-      href: what-s-new-in-analysis-services.md
-    - name: SQL Server Analysis Services 2017 中的新增功能
-      href: what-s-new-in-sql-server-analysis-services-2017.md
-    - name: 新项目和已更新的项目
-      href: new-updated-analysis-services.md
-    - name: 工具和应用程序
-      href: tools-and-applications-used-in-analysis-services.md
-    - name: 客户端库（数据提供程序）
-      href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
-    - name: 比较表格和多维解决方案
-      href: comparing-tabular-and-multidimensional-solutions-ssas.md
-    - name: SQL Server 各个版本支持的 Analysis Services 功能
-      href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
-    - name: 向后兼容性 (SQL Server 2016 Analysis Services)
-      href: analysis-services-backward-compatibility.md
-    - name: 向后兼容性 (SQL Server 2017 Analysis Services)
-      href: analysis-services-backward-compatibility-sql2017.md
-    - name: 全球化和翻译
-      href: globalization-scenarios-for-analysis-services.md
-      items:
-        - name: 语言和排序规则
-          href: languages-and-collations-analysis-services.md
-        - name: 翻译
-          href: translation-support-in-analysis-services.md
-        - name: 货币换算
-          href: currency-conversions-analysis-services.md
-        - name: 提示和最佳实践
-          href: globalization-tips-and-best-practices-analysis-services.md
+  - name: SQL Server Analysis Services 2016 中的新增功能
+    href: what-s-new-in-analysis-services.md
+  - name: SQL Server Analysis Services 2017 中的新增功能
+    href: what-s-new-in-sql-server-analysis-services-2017.md
+  - name: 工具和应用程序
+    href: tools-and-applications-used-in-analysis-services.md
+  - name: 客户端库（数据提供程序）
+    href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+  - name: 比较表格和多维解决方案
+    href: comparing-tabular-and-multidimensional-solutions-ssas.md
+  - name: SQL Server 各个版本支持的 Analysis Services 功能
+    href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
+  - name: 向后兼容性 (SQL Server 2016 Analysis Services)
+    href: analysis-services-backward-compatibility.md
+  - name: 向后兼容性 (SQL Server 2017 Analysis Services)
+    href: analysis-services-backward-compatibility-sql2017.md
+  - name: 全球化和翻译
+    href: globalization-scenarios-for-analysis-services.md
+    items:
+    - name: 语言和排序规则
+      href: languages-and-collations-analysis-services.md
+    - name: 翻译
+      href: translation-support-in-analysis-services.md
+    - name: 货币换算
+      href: currency-conversions-analysis-services.md
+    - name: 提示和最佳实践
+      href: globalization-tips-and-best-practices-analysis-services.md
 - name: 教程
   href: analysis-services-tutorials-ssas.md
   items:
-    - name: 表格建模（1400 兼容级别）
-      href: tutorial-tabular-1400/as-adventure-works-tutorial.md
+  - name: 表格建模（1400 兼容级别）
+    href: tutorial-tabular-1400/as-adventure-works-tutorial.md
+    items:
+    - name: 1- 创建表格模型项目
+      href: tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+    - name: 2 - 获取数据
+      href: tutorial-tabular-1400/as-lesson-2-get-data.md
+    - name: 3 - 标记为日期表
+      href: tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+    - name: 4 - 创建关系
+      href: tutorial-tabular-1400/as-lesson-4-create-relationships.md
+    - name: 5 - 创建计算列
+      href: tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+    - name: 6 - 创建度量值
+      href: tutorial-tabular-1400/as-lesson-6-create-measures.md
+    - name: 7 - 创建关键绩效指标
+      href: tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+    - name: 8 - 创建透视
+      href: tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+    - name: 9 - 创建层次结构
+      href: tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+    - name: 10 - 创建分区
+      href: tutorial-tabular-1400/as-lesson-10-create-partitions.md
+    - name: 11 - 创建角色
+      href: tutorial-tabular-1400/as-lesson-11-create-roles.md
+    - name: 12 - 在 Excel 中分析
+      href: tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+    - name: 13 - 部署
+      href: tutorial-tabular-1400/as-lesson-13-deploy.md
+    - name: 补充课程 - 详细信息行
+      href: tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+    - name: 补充课程 - 动态安全性
+      href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+    - name: 补充课程 - 不规则层次结构
+      href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+  - name: 表格建模（1200 兼容级别）
+    href: tabular-modeling-adventure-works-tutorial.md
+    items:
+    - name: 第 1 课：创建新的表格模型项目
+      href: lesson-1-create-a-new-tabular-model-project.md
+    - name: 第 2 课：添加数据
+      href: lesson-2-add-data.md
+    - name: 第 3 课：标记为日期表
+      href: lesson-3-mark-as-date-table.md
+    - name: 第 4 课：创建关系
+      href: lesson-4-create-relationships.md
+    - name: 第 5 课：创建计算列
+      href: lesson-5-create-calculated-columns.md
+    - name: 第 6 课：创建度量值
+      href: lesson-6-create-measures.md
+    - name: 第 7 课：创建关键绩效指标
+      href: lesson-7-create-key-performance-indicators.md
+    - name: 第 8 课：创建透视
+      href: lesson-8-create-perspectives.md
+    - name: 第 9 课：创建层次结构
+      href: lesson-9-create-hierarchies.md
+    - name: 第 10 课：创建分区
+      href: lesson-10-create-partitions.md
+    - name: 第 11 课：创建角色
+      href: lesson-11-create-roles.md
+    - name: 第 12 课：在 Excel 中分析
+      href: lesson-12-analyze-in-excel.md
+    - name: 第 13 课：部署
+      href: lesson-13-deploy.md
+    - name: 补充课程 - 通过使用行筛选器实现动态安全性
+      href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+    - name: 补充课程 - 为 Power View 报表配置报表属性
+      href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+  - name: 多维建模
+    href: multidimensional-modeling-adventure-works-tutorial.md
+    items:
+    - name: 教程方案
+      href: analysis-services-tutorial-scenario.md
+    - name: 安装 Analysis Services 多维建模教程的示例数据和项目
+      href: install-sample-data-and-projects.md
+    - name: 第 1 课：在 Analysis Services 项目中定义数据源视图
+      href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
       items:
-        - name: 1- 创建表格模型项目
-          href: tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
-        - name: 2 - 获取数据
-          href: tutorial-tabular-1400/as-lesson-2-get-data.md
-        - name: 3 - 标记为日期表
-          href: tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
-        - name: 4 - 创建关系
-          href: tutorial-tabular-1400/as-lesson-4-create-relationships.md
-        - name: 5 - 创建计算列
-          href: tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
-        - name: 6 - 创建度量值
-          href: tutorial-tabular-1400/as-lesson-6-create-measures.md
-        - name: 7 - 创建关键绩效指标
-          href: tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
-        - name: 8 - 创建透视
-          href: tutorial-tabular-1400/as-lesson-8-create-perspectives.md
-        - name: 9 - 创建层次结构
-          href: tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
-        - name: 10 - 创建分区
-          href: tutorial-tabular-1400/as-lesson-10-create-partitions.md
-        - name: 11 - 创建角色
-          href: tutorial-tabular-1400/as-lesson-11-create-roles.md
-        - name: 12 - 在 Excel 中分析
-          href: tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
-        - name: 13 - 部署
-          href: tutorial-tabular-1400/as-lesson-13-deploy.md
-        - name: 补充课程 - 详细信息行
-          href: tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
-        - name: 补充课程 - 动态安全性
-          href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
-        - name: 补充课程 - 不规则层次结构
-          href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
-    - name: 表格建模（1200 兼容级别）
-      href: tabular-modeling-adventure-works-tutorial.md
+      - name: 第 1-1 课 - 创建 Analysis Services 项目
+        href: lesson-1-1-creating-an-analysis-services-project.md
+      - name: 第 1-2 课 - 定义数据源
+        href: lesson-1-2-defining-a-data-source.md
+      - name: 第 1-3 课 - 定义数据源视图
+        href: lesson-1-3-defining-a-data-source-view.md
+      - name: 第 1-4 课 - 修改默认表名
+        href: lesson-1-4-modifying-default-table-names.md
+    - name: 第 2 课：定义和部署多维数据集
+      href: lesson-2-defining-and-deploying-a-cube.md
       items:
-        - name: 第 1 课：创建新的表格模型项目
-          href: lesson-1-create-a-new-tabular-model-project.md
-        - name: 第 2 课：添加数据
-          href: lesson-2-add-data.md
-        - name: 第 3 课：标记为日期表
-          href: lesson-3-mark-as-date-table.md
-        - name: 第 4 课：创建关系
-          href: lesson-4-create-relationships.md
-        - name: 第 5 课：创建计算列
-          href: lesson-5-create-calculated-columns.md
-        - name: 第 6 课：创建度量值
-          href: lesson-6-create-measures.md
-        - name: 第 7 课：创建关键绩效指标
-          href: lesson-7-create-key-performance-indicators.md
-        - name: 第 8 课：创建透视
-          href: lesson-8-create-perspectives.md
-        - name: 第 9 课：创建层次结构
-          href: lesson-9-create-hierarchies.md
-        - name: 第 10 课：创建分区
-          href: lesson-10-create-partitions.md
-        - name: 第 11 课：创建角色
-          href: lesson-11-create-roles.md
-        - name: 第 12 课：在 Excel 中分析
-          href: lesson-12-analyze-in-excel.md
-        - name: 第 13 课：部署
-          href: lesson-13-deploy.md
-        - name: 补充课程 - 通过使用行筛选器实现动态安全性
-          href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
-        - name: 补充课程 - 为 Power View 报表配置报表属性
-          href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
-    - name: 多维建模
-      href: multidimensional-modeling-adventure-works-tutorial.md
+      - name: 第 2-1 课 - 定义维度
+        href: lesson-2-1-defining-a-dimension.md
+      - name: 第 2-2 课 - 定义多维数据集
+        href: lesson-2-2-defining-a-cube.md
+      - name: 第 2-3 课 - 向维度添加属性
+        href: lesson-2-3-adding-attributes-to-dimensions.md
+      - name: 第 2-4 课 - 检查多维数据集和维度属性
+        href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+      - name: 第 2-5 课 - 部署 Analysis Services 项目
+        href: lesson-2-5-deploying-an-analysis-services-project.md
+      - name: 第 2-6 课 - 浏览多维数据集
+        href: lesson-2-6-browsing-the-cube.md
+    - name: 第 3 课：修改度量值、属性和层次结构
+      href: lesson-3-modifying-measures-attributes-and-hierarchies.md
       items:
-        - name: 教程方案
-          href: analysis-services-tutorial-scenario.md
-        - name: 安装 Analysis Services 多维建模教程的示例数据和项目
-          href: install-sample-data-and-projects.md
-        - name: 第 1 课：在 Analysis Services 项目中定义数据源视图
-          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
-          items:
-            - name: 第 1-1 课 - 创建 Analysis Services 项目
-              href: lesson-1-1-creating-an-analysis-services-project.md
-            - name: 第 1-2 课 - 定义数据源
-              href: lesson-1-2-defining-a-data-source.md
-            - name: 第 1-3 课 - 定义数据源视图
-              href: lesson-1-3-defining-a-data-source-view.md
-            - name: 第 1-4 课 - 修改默认表名
-              href: lesson-1-4-modifying-default-table-names.md
-        - name: 第 2 课：定义和部署多维数据集
-          href: lesson-2-defining-and-deploying-a-cube.md
-          items:
-            - name: 第 2-1 课 - 定义维度
-              href: lesson-2-1-defining-a-dimension.md
-            - name: 第 2-2 课 - 定义多维数据集
-              href: lesson-2-2-defining-a-cube.md
-            - name: 第 2-3 课 - 向维度添加属性
-              href: lesson-2-3-adding-attributes-to-dimensions.md
-            - name: 第 2-4 课 - 检查多维数据集和维度属性
-              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
-            - name: 第 2-5 课 - 部署 Analysis Services 项目
-              href: lesson-2-5-deploying-an-analysis-services-project.md
-            - name: 第 2-6 课 - 浏览多维数据集
-              href: lesson-2-6-browsing-the-cube.md
-        - name: 第 3 课：修改度量值、属性和层次结构
-          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
-          items:
-            - name: 第 3-1 课 - 修改度量值
-              href: lesson-3-1-modifying-measures.md
-            - name: 第 3-2 课 - 修改“客户”维度
-              href: lesson-3-2-modifying-the-customer-dimension.md
-            - name: 第 3-3 课 - 修改“产品”维度
-              href: lesson-3-3-modifying-the-product-dimension.md
-            - name: 第 3-4 课 - 修改“日期”维度
-              href: lesson-3-4-modifying-the-date-dimension.md
-            - name: 第 3-5 课 - 浏览已部署的多维数据集
-              href: lesson-3-5-browsing-the-deployed-cube.md
-        - name: 第 4 课：定义高级属性和维度属性
-          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
-          items:
-            - name: 第 4-1 课 - 使用 Analysis Services 教程项目的修改版本
-              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
-            - name: 第 4-2 课 - 定义父子层次结构中的父特性属性
-              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
-            - name: 第 4-3 课 - 自动将属性成员分组
-              href: lesson-4-3-automatically-grouping-attribute-members.md
-            - name: 第 4-4 课 - 隐藏和禁用属性层次结构
-              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
-            - name: 第 4-5 课 - 根据辅助属性对属性成员进行排序
-              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
-            - name: 第 4-6 课 - 指定用户定义层次结构中属性之间的属性关系
-              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
-            - name: 第 4-7 课 - 定义未知成员和 Null 处理属性
-              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
-        - name: 第 5 课：定义维度和度量值组之间的关系
-          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
-          items:
-            - name: 第 5-1 课 - 定义引用关系
-              href: lesson-5-1-defining-a-referenced-relationship.md
-            - name: 第 5-2 课 - 定义事实关系
-              href: lesson-5-2-defining-a-fact-relationship.md
-            - name: 第 5-3 课 - 定义多对多关系
-              href: lesson-5-3-defining-a-many-to-many-relationship.md
-            - name: 第 5-4 课 - 定义度量值组中的维度粒度
-              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
-        - name: 第 6 课：定义计算
-          href: lesson-6-defining-calculations.md
-          items:
-            - name: 第 6-1 课 - 定义计算成员
-              href: lesson-6-1-defining-calculated-members.md
-            - name: 第 6-2 课 - 定义命名集
-              href: lesson-6-2-defining-named-sets.md
-        - name: 第 7 课：定义关键绩效指标 (KPI)
-          href: lesson-7-defining-key-performance-indicators-kpis.md
-          items:
-            - name: 第 7-1 课 - 定义和浏览 KPI
-              href: lesson-7-1-defining-and-browsing-kpis.md
-        - name: 第 8 课：定义操作
-          href: lesson-8-defining-actions.md
-          items:
-            - name: 第 8-1 课 - 定义和使用钻取操作
-              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
-        - name: 第 9 课：定义透视和翻译
-          href: lesson-9-defining-perspectives-and-translations.md
-          items:
-            - name: 第 9-1 课 - 定义和浏览透视
-              href: lesson-9-1-defining-and-browsing-perspectives.md
-            - name: 第 9-2 课 - 定义和浏览翻译
-              href: lesson-9-2-defining-and-browsing-translations.md
-        - name: 第 10 课：定义管理角色
-          href: lesson-10-defining-administrative-roles.md
-          items:
-            - name: 第 10 课 - 授予处理数据库权限
-              href: lesson-10-granting-process-database-permissions.md
-    - name: 数据挖掘
-      href: data-mining-tutorials-analysis-services.md
+      - name: 第 3-1 课 - 修改度量值
+        href: lesson-3-1-modifying-measures.md
+      - name: 第 3-2 课 - 修改“客户”维度
+        href: lesson-3-2-modifying-the-customer-dimension.md
+      - name: 第 3-3 课 - 修改“产品”维度
+        href: lesson-3-3-modifying-the-product-dimension.md
+      - name: 第 3-4 课 - 修改“日期”维度
+        href: lesson-3-4-modifying-the-date-dimension.md
+      - name: 第 3-5 课 - 浏览已部署的多维数据集
+        href: lesson-3-5-browsing-the-deployed-cube.md
+    - name: 第 4 课：定义高级属性和维度属性
+      href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+      items:
+      - name: 第 4-1 课 - 使用 Analysis Services 教程项目的修改版本
+        href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+      - name: 第 4-2 课 - 定义父子层次结构中的父特性属性
+        href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+      - name: 第 4-3 课 - 自动将属性成员分组
+        href: lesson-4-3-automatically-grouping-attribute-members.md
+      - name: 第 4-4 课 - 隐藏和禁用属性层次结构
+        href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+      - name: 第 4-5 课 - 根据辅助属性对属性成员进行排序
+        href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+      - name: 第 4-6 课 - 指定用户定义层次结构中属性之间的属性关系
+        href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+      - name: 第 4-7 课 - 定义未知成员和 Null 处理属性
+        href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+    - name: 第 5 课：定义维度和度量值组之间的关系
+      href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+      items:
+      - name: 第 5-1 课 - 定义引用关系
+        href: lesson-5-1-defining-a-referenced-relationship.md
+      - name: 第 5-2 课 - 定义事实关系
+        href: lesson-5-2-defining-a-fact-relationship.md
+      - name: 第 5-3 课 - 定义多对多关系
+        href: lesson-5-3-defining-a-many-to-many-relationship.md
+      - name: 第 5-4 课 - 定义度量值组中的维度粒度
+        href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+    - name: 第 6 课：定义计算
+      href: lesson-6-defining-calculations.md
+      items:
+      - name: 第 6-1 课 - 定义计算成员
+        href: lesson-6-1-defining-calculated-members.md
+      - name: 第 6-2 课 - 定义命名集
+        href: lesson-6-2-defining-named-sets.md
+    - name: 第 7 课：定义关键绩效指标 (KPI)
+      href: lesson-7-defining-key-performance-indicators-kpis.md
+      items:
+      - name: 第 7-1 课 - 定义和浏览 KPI
+        href: lesson-7-1-defining-and-browsing-kpis.md
+    - name: 第 8 课：定义操作
+      href: lesson-8-defining-actions.md
+      items:
+      - name: 第 8-1 课 - 定义和使用钻取操作
+        href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+    - name: 第 9 课：定义透视和翻译
+      href: lesson-9-defining-perspectives-and-translations.md
+      items:
+      - name: 第 9-1 课 - 定义和浏览透视
+        href: lesson-9-1-defining-and-browsing-perspectives.md
+      - name: 第 9-2 课 - 定义和浏览翻译
+        href: lesson-9-2-defining-and-browsing-translations.md
+    - name: 第 10 课：定义管理角色
+      href: lesson-10-defining-administrative-roles.md
+      items:
+      - name: 第 10 课 - 授予处理数据库权限
+        href: lesson-10-granting-process-database-permissions.md
+  - name: 数据挖掘
+    href: data-mining-tutorials-analysis-services.md
 - name: 操作说明
   items:
-    - name: 表格模型
-      href: ../analysis-services/tabular-models/tabular-models-ssas.md
-    - name: 多维模型
-      href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
-    - name: 数据挖掘
-      href: ../analysis-services/data-mining/data-mining-ssas.md
-    - name: Power Pivot for SharePoint
-      href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
-    - name: 管理服务器
-      href: ../analysis-services/instances/analysis-services-instance-management.md
-    - name: 跟踪事件
-      href: ../analysis-services/trace-events/analysis-services-trace-events.md
+  - name: 表格模型
+    href: ../analysis-services/tabular-models/tabular-models-ssas.md
+  - name: 多维模型
+    href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
+  - name: 数据挖掘
+    href: ../analysis-services/data-mining/data-mining-ssas.md
+  - name: Power Pivot for SharePoint
+    href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+  - name: 管理服务器
+    href: ../analysis-services/instances/analysis-services-instance-management.md
+  - name: 跟踪事件
+    href: ../analysis-services/trace-events/analysis-services-trace-events.md
 - name: 开发人员
   items:
-    - name: 表格模型编程兼容级别 1200 及更高
-      href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-      items:
-        - name: 表格模型脚本语言 (TMSL)
-          href: tabular-model-scripting-language-tmsl-reference.md
-        - name: 表格模型脚本语言 (TMSL) 命令
-          href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
-        - name: 表格模型脚本语言 (TMSL) 对象
-          href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
-    - name: 表格模型编程兼容级别 1050 和 1103
-      href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-    - name: Analysis Services 脚本语言 (ASSL) +
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: 分析管理对象 (AMO)+
-      href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
-    - name: ADOMD.NET +
-      href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
-    - name: OLAP 逻辑 +
-      href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-    - name: OLAP 物理 +
-      href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-    - name: 扩展 OLAP +
-      href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-    - name: 架构行集
-      href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
-    - name: Analysis Services 脚本语言 (ASSL for XMLA)
-      href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+  - name: 表格模型编程兼容级别 1200 及更高
+    href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+    items:
+    - name: 表格模型脚本语言 (TMSL)
+      href: tabular-model-scripting-language-tmsl-reference.md
+    - name: 表格模型脚本语言 (TMSL) 命令
+      href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+    - name: 表格模型脚本语言 (TMSL) 对象
+      href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+  - name: 表格模型编程兼容级别 1050 和 1103
+    href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+  - name: Analysis Services 脚本语言 (ASSL) +
+    href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+  - name: 分析管理对象 (AMO)+
+    href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+  - name: ADOMD.NET +
+    href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+  - name: OLAP 逻辑 +
+    href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+  - name: OLAP 物理 +
+    href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+  - name: 扩展 OLAP +
+    href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+  - name: 架构行集
+    href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+  - name: Analysis Services 脚本语言 (ASSL for XMLA)
+    href: scripting/analysis-services-scripting-language-assl-for-xmla.md
 - name: 示例
   items:
-    - name: Analysis Services 示例
-      href: analysis-services-samples.md
+  - name: Analysis Services 示例
+    href: analysis-services-samples.md
 - name: 参考
   items:
-    - name: 针对 Analysis Services 的 PowerShell 参考
-      href: ../analysis-services/powershell/analysis-services-powershell-reference.md
-    - name: 针对 PowerPivot for SharePoint 的 PowerShell 参考
-      href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: MSDN 上的数据分析表达式 (DAX)
-      href: 'https://msdn.microsoft.com/library/gg413422.aspx'
-    - name: 数据挖掘扩展插件 (DMX)
-      href: ../dmx/data-mining-extensions-dmx-reference.md
-    - name: 多维表达式 (MDX)
-      href: ../mdx/analysis-services-language-reference.md
-    - name: Power Query M
-      href: 'https://msdn.microsoft.com/library/mt211003.aspx'
-    - name: 服务器属性
-      href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
-    - name: XML for Analysis (XMLA)
-      href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
+  - name: 针对 Analysis Services 的 PowerShell 参考
+    href: ../analysis-services/powershell/analysis-services-powershell-reference.md
+  - name: 针对 PowerPivot for SharePoint 的 PowerShell 参考
+    href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
+  - name: MSDN 上的数据分析表达式 (DAX)
+    href: https://msdn.microsoft.com/library/gg413422.aspx
+  - name: 数据挖掘扩展插件 (DMX)
+    href: ../dmx/data-mining-extensions-dmx-reference.md
+  - name: 多维表达式 (MDX)
+    href: ../mdx/analysis-services-language-reference.md
+  - name: Power Query M
+    href: https://msdn.microsoft.com/library/mt211003.aspx
+  - name: 服务器属性
+    href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+  - name: XML for Analysis (XMLA)
+    href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md
+ms.openlocfilehash: 52e7b7a3fbf8958687305751b93ab04939dcc4a1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899297"

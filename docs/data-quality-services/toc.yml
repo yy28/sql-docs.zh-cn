@@ -1,145 +1,150 @@
+items:
 - name: 概述
   href: data-quality-services.md
-- name: 新项目和已更新的项目
-  href: new-updated-data-quality-services.md
 - name: 概念和功能
   items:
-    - name: Data Quality Services 简介
-      href: introduction-to-data-quality-services.md
-    - name: Data Quality Services 概念
-      href: data-quality-services-concepts.md
-    - name: Data Quality Services 功能和任务
-      href: data-quality-services-features-and-tasks.md
+  - name: Data Quality Services 简介
+    href: introduction-to-data-quality-services.md
+  - name: Data Quality Services 概念
+    href: data-quality-services-concepts.md
+  - name: Data Quality Services 功能和任务
+    href: data-quality-services-features-and-tasks.md
 - name: Install
   href: ../data-quality-services/install-windows/install-data-quality-services.md
 - name: 数据质量客户端应用程序
   href: data-quality-client-application.md
   items:
-    - name: 运行数据质量客户端应用程序
-      href: run-the-data-quality-client-application.md
-    - name: 数据质量客户端主屏幕
-      href: data-quality-client-home-screen.md
+  - name: 运行数据质量客户端应用程序
+    href: run-the-data-quality-client-application.md
+  - name: 数据质量客户端主屏幕
+    href: data-quality-client-home-screen.md
 - name: DQS 知识库和域
   href: dqs-knowledge-bases-and-domains.md
   items:
-    - name: 生成知识库
-      href: building-a-knowledge-base.md
-      items:
-        - name: 创建知识库
-          href: create-a-knowledge-base.md
-        - name: 打开知识库
-          href: open-a-knowledge-base.md
-        - name: 管理知识库
-          href: manage-a-knowledge-base.md
-        - name: 将知识添加到知识库
-          href: adding-knowledge-to-a-knowledge-base.md
-        - name: 执行知识发现
-          href: perform-knowledge-discovery.md
-    - name: 导入和导出知识
-      href: importing-and-exporting-knowledge.md
-      items:
-        - name: 将域导出到 .dqs 文件
-          href: export-a-domain-to-a-dqs-file.md
-        - name: 从 .dqs 文件导入域
-          href: import-a-domain-from-a-dqs-file.md
-        - name: 将知识库导出到 .dqs 文件
-          href: export-a-knowledge-base-to-a-dqs-file.md
-        - name: 从 .dqs 文件导入知识库
-          href: import-a-knowledge-base-from-a-dqs-file.md
-        - name: 将值从 Excel 文件导入到域
-          href: import-values-from-an-excel-file-into-a-domain.md
-        - name: 在知识发现中从 Excel 文件中导入域
-          href: import-domains-from-an-excel-file-in-knowledge-discovery.md
-        - name: 将清理项目值导入到域中
-          href: import-cleansing-project-values-into-a-domain.md
-    - name: 管理域
-      href: managing-a-domain.md
-      items:
-        - name: 创建域
-          href: create-a-domain.md
-        - name: 域管理：域列表
-          href: domain-management-domain-list.md
-        - name: 设置域属性
-          href: set-domain-properties.md
-        - name: 创建链接域
-          href: create-a-linked-domain.md
-        - name: 更改域值
-          href: change-domain-values.md
-        - name: 创建域规则
-          href: create-a-domain-rule.md
-        - name: 创建基于字词的关系
-          href: create-term-based-relations.md
-        - name: 使用 DQS 拼写检查器
-          href: use-the-dqs-speller.md
-        - name: DQS 域支持的 SQL Server 和 SSIS 数据类型
-          href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
-    - name: 管理复合域
-      href: managing-a-composite-domain.md
-      items:
-        - name: 创建复合域
-          href: create-a-composite-domain.md
-        - name: 创建跨域规则
-          href: create-a-cross-domain-rule.md
-        - name: 在复合域中使用值关系
-          href: use-value-relations-in-a-composite-domain.md
-    - name: 使用 DQS 默认知识库
-      href: using-the-dqs-default-knowledge-base.md
+  - name: 生成知识库
+    href: building-a-knowledge-base.md
+    items:
+    - name: 创建知识库
+      href: create-a-knowledge-base.md
+    - name: 打开知识库
+      href: open-a-knowledge-base.md
+    - name: 管理知识库
+      href: manage-a-knowledge-base.md
+    - name: 将知识添加到知识库
+      href: adding-knowledge-to-a-knowledge-base.md
+    - name: 执行知识发现
+      href: perform-knowledge-discovery.md
+  - name: 导入和导出知识
+    href: importing-and-exporting-knowledge.md
+    items:
+    - name: 将域导出到 .dqs 文件
+      href: export-a-domain-to-a-dqs-file.md
+    - name: 从 .dqs 文件导入域
+      href: import-a-domain-from-a-dqs-file.md
+    - name: 将知识库导出到 .dqs 文件
+      href: export-a-knowledge-base-to-a-dqs-file.md
+    - name: 从 .dqs 文件导入知识库
+      href: import-a-knowledge-base-from-a-dqs-file.md
+    - name: 将值从 Excel 文件导入到域
+      href: import-values-from-an-excel-file-into-a-domain.md
+    - name: 在知识发现中从 Excel 文件中导入域
+      href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+    - name: 将清理项目值导入到域中
+      href: import-cleansing-project-values-into-a-domain.md
+  - name: 管理域
+    href: managing-a-domain.md
+    items:
+    - name: 创建域
+      href: create-a-domain.md
+    - name: 域管理：域列表
+      href: domain-management-domain-list.md
+    - name: 设置域属性
+      href: set-domain-properties.md
+    - name: 创建链接域
+      href: create-a-linked-domain.md
+    - name: 更改域值
+      href: change-domain-values.md
+    - name: 创建域规则
+      href: create-a-domain-rule.md
+    - name: 创建基于字词的关系
+      href: create-term-based-relations.md
+    - name: 使用 DQS 拼写检查器
+      href: use-the-dqs-speller.md
+    - name: DQS 域支持的 SQL Server 和 SSIS 数据类型
+      href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+  - name: 管理复合域
+    href: managing-a-composite-domain.md
+    items:
+    - name: 创建复合域
+      href: create-a-composite-domain.md
+    - name: 创建跨域规则
+      href: create-a-cross-domain-rule.md
+    - name: 在复合域中使用值关系
+      href: use-value-relations-in-a-composite-domain.md
+  - name: 使用 DQS 默认知识库
+    href: using-the-dqs-default-knowledge-base.md
 - name: 数据质量项目
   href: data-quality-projects-dqs.md
   items:
-    - name: 创建数据质量项目
-      href: create-a-data-quality-project.md
-    - name: 打开、解锁、重命名和删除数据质量项目
-      href: open-unlock-rename-and-delete-a-data-quality-project.md
-    - name: 在数据质量客户端中打开 Integration Services 项目
-      href: open-integration-services-projects-in-data-quality-client.md
+  - name: 创建数据质量项目
+    href: create-a-data-quality-project.md
+  - name: 打开、解锁、重命名和删除数据质量项目
+    href: open-unlock-rename-and-delete-a-data-quality-project.md
+  - name: 在数据质量客户端中打开 Integration Services 项目
+    href: open-integration-services-projects-in-data-quality-client.md
 - name: Data Cleansing
   href: data-cleansing.md
   items:
-    - name: 使用 DQS（内部）知识清理数据
-      href: cleanse-data-using-dqs-internal-knowledge.md
-    - name: 清理复合域中的数据
-      href: cleanse-data-in-a-composite-domain.md
+  - name: 使用 DQS（内部）知识清理数据
+    href: cleanse-data-using-dqs-internal-knowledge.md
+  - name: 清理复合域中的数据
+    href: cleanse-data-in-a-composite-domain.md
 - name: 数据匹配
   href: data-matching.md
   items:
-    - name: 创建匹配策略
-      href: create-a-matching-policy.md
-    - name: 运行匹配项目
-      href: run-a-matching-project.md
+  - name: 创建匹配策略
+    href: create-a-matching-policy.md
+  - name: 运行匹配项目
+    href: run-a-matching-project.md
 - name: DQS 中的 Reference Data Services
   href: reference-data-services-in-dqs.md
   items:
-    - name: 将 DQS 配置为使用引用数据
-      href: configure-dqs-to-use-reference-data.md
-    - name: 将域或复合域附加到引用数据
-      href: attach-domain-or-composite-domain-to-reference-data.md
-    - name: 使用引用数据（外部）知识清理数据
-      href: cleanse-data-using-reference-data-external-knowledge.md
+  - name: 将 DQS 配置为使用引用数据
+    href: configure-dqs-to-use-reference-data.md
+  - name: 将域或复合域附加到引用数据
+    href: attach-domain-or-composite-domain-to-reference-data.md
+  - name: 使用引用数据（外部）知识清理数据
+    href: cleanse-data-using-reference-data-external-knowledge.md
 - name: DQS 中的数据事件探查和通知
   href: data-profiling-and-notifications-in-dqs.md
 - name: dqs 管理
   href: dqs-administration.md
   items:
-    - name: 监视 DQS 活动
-      href: monitor-dqs-activities.md
-    - name: 配置清理和匹配活动的阈值
-      href: configure-threshold-values-for-cleansing-and-matching.md
-    - name: 在 DQS 中启用或禁用事件探查通知
-      href: enable-or-disable-profiling-notifications-in-dqs.md
-    - name: 管理 DQS 日志文件
-      href: manage-dqs-log-files.md
-      items:
-        - name: 为 DQS 日志文件配置严重级别
-          href: configure-severity-levels-for-dqs-log-files.md
-        - name: Configure Advanced Settings for DQS Log Files
-          href: configure-advanced-settings-for-dqs-log-files.md
-    - name: Manage DQS Databases
-      href: manage-dqs-databases.md
-      items:
-        - name: 备份和还原 DQS 数据库
-          href: backing-up-and-restoring-dqs-databases.md
-        - name: 分离数据库和附加 DQS 数据库
-          href: detaching-and-attaching-dqs-databases.md
+  - name: 监视 DQS 活动
+    href: monitor-dqs-activities.md
+  - name: 配置清理和匹配活动的阈值
+    href: configure-threshold-values-for-cleansing-and-matching.md
+  - name: 在 DQS 中启用或禁用事件探查通知
+    href: enable-or-disable-profiling-notifications-in-dqs.md
+  - name: 管理 DQS 日志文件
+    href: manage-dqs-log-files.md
+    items:
+    - name: 为 DQS 日志文件配置严重级别
+      href: configure-severity-levels-for-dqs-log-files.md
+    - name: Configure Advanced Settings for DQS Log Files
+      href: configure-advanced-settings-for-dqs-log-files.md
+  - name: Manage DQS Databases
+    href: manage-dqs-databases.md
+    items:
+    - name: 备份和还原 DQS 数据库
+      href: backing-up-and-restoring-dqs-databases.md
+    - name: 分离数据库和附加 DQS 数据库
+      href: detaching-and-attaching-dqs-databases.md
 - name: DQS 安全性
   href: dqs-security.md
+ms.openlocfilehash: 535f033948c7f49f2c3df8beb059290437b5e249
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899717"

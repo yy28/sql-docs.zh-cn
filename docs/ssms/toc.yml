@@ -1,16 +1,15 @@
+items:
 - name: 什么是 SSMS？
   href: sql-server-management-studio-ssms.md
 - name: 下载 SSMS
   href: download-sql-server-management-studio-ssms.md
   items:
-    - name: SSMS 更改日志和以前的版本
-      href: sql-server-management-studio-changelog-ssms.md
-    - name: 发行说明
-      href: 'download-sql-server-management-studio-ssms.md#release-notes'
-    - name: 安装非英语版 SSMS
-      href: install-other-languages.md
-    - name: 新项目和已更新的项目
-      href: new-updated-ssms.md
+  - name: SSMS 更改日志和以前的版本
+    href: sql-server-management-studio-changelog-ssms.md
+  - name: 发行说明
+    href: download-sql-server-management-studio-ssms.md#release-notes
+  - name: 安装非英语版 SSMS
+    href: install-other-languages.md
 - name: 安装 SQL Server PowerShell 模块
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: SQL Server 代理 +
@@ -81,3 +80,9 @@
   href: sql-server-management-studio-keyboard-shortcuts.md
 - name: 匿名使用情况数据
   href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899686"

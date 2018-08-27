@@ -97,7 +97,7 @@ ms.locfileid: "37277073"
 -   从压缩备份中还原时，您可能看到以下错误：  
   
     -   **发生 SqlException 3284。严重性：16 状态：5**  
-        **在设备上的消息文件标记https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
+        **在设备上的消息文件标记 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未对齐。使用用于创建备份集的相同块大小重新发布 Restore 语句: '65536' 看起来像一个可能值。**  
   
          要修复此错误，请重新发布指定了 `BACKUP` 的 `BLOCKSIZE = 65536` 语句。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "37277073"
   
      备份数据库异常终止。  
   
--   Backupiorequest:: Reportioerror 备份设备上写入失败http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
+-   Backupiorequest:: Reportioerror 备份设备上写入失败 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 。 操作系统错误，“备份到 URL”收到来自远程端点的异常。 异常消息: 无法从传输连接中读取数据: 连接已关闭。  
   
  如果使用跟踪标志 3051 打开详细日志记录，您还可能在日志中看到以下消息：  
   

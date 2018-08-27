@@ -59,7 +59,7 @@ ms.locfileid: "37270233"
  指定报表服务器为包含报表服务器虚拟目录名称的 URL 监视 HTTP 请求的端口。  
   
  **SSL 证书**  
- 将证书绑定到指定的 IP 地址。 必须在计算机上安装和配置此证书。 Reporting Services 不提供管理证书的功能。 证书必须颁发给解析为 IP 地址的主机名或计算机名。 例如，若要使用的证书已颁发给http://salesreports，您指定的 IP 地址必须解析到名为"salesreports"的服务器。  
+ 将证书绑定到指定的 IP 地址。 必须在计算机上安装和配置此证书。 Reporting Services 不提供管理证书的功能。 证书必须颁发给解析为 IP 地址的主机名或计算机名。 例如，若要使用的证书已颁发给 http://salesreports ，您指定的 IP 地址必须解析到名为"salesreports"的服务器。  
   
  如果使用的证书，则必须修改`UrlRoot`在 RSReportServer.config 中的配置设置文件，以便指定要为其注册证书的计算机的完全限定的名称。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   

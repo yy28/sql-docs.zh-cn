@@ -51,7 +51,7 @@ ms.locfileid: "39564511"
 </xsd:schema>  
 ```  
   
- **\<Xsd: schema >** 元素派生自的 XML 架构命名空间规范http://www.w3.org/2001/XMLSchema。  
+ **\<Xsd: schema >** 元素派生自的 XML 架构命名空间规范 http://www.w3.org/2001/XMLSchema 。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 架构的批注  
  您可以对 XSD 架构使用批注来描述数据库映射、查询数据库并返回 XML 文档形式的结果。 使用批注可将 XSD 架构映射到数据库表和列。 可以对 XSD 架构创建的 XML 视图指定 XPath 查询来查询数据库并获取 XML 形式的结果。  

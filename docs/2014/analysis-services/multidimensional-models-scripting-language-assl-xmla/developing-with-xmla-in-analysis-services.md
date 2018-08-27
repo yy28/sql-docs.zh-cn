@@ -65,7 +65,7 @@ ms.locfileid: "37265653"
 ## <a name="namespace-and-schema"></a>命名空间和架构  
   
 ### <a name="namespace"></a>命名空间  
- 此规范中定义的架构使用 XML 命名空间http://schemas.microsoft.com/AnalysisServices/2003/Engine和标准的缩写"DDL"  
+ 此规范中定义的架构使用 XML 命名空间 http://schemas.microsoft.com/AnalysisServices/2003/Engine 和标准的缩写"DDL"  
   
 ### <a name="schema"></a>架构  
  用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象定义语言的 XML 架构定义语言 (XSD) 架构的定义基于本节中架构元素和层次结构的定义。  
