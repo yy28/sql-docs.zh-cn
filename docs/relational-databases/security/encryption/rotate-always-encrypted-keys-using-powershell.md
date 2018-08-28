@@ -14,13 +14,13 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bf032b05c962c1dc9788e890c59491ef81ea16da
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 330ba9c9f8703a31b2686327e6ed1b36d80be331
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538297"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43100080"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>使用 PowerShell 轮换 Always Encrypted 密钥
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "39538297"
 
 | 任务 | 项目 | 访问纯文本密钥/密钥存储| 访问数据库
 |:---|:---|:---|:---
-|步骤 1. 在密钥存储中创建新的列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持此步骤。 若要从命令行完成此任务，需要使用特定于你的密钥存储的工具。 | 创建并存储列主密钥 (Always Encrypted)| 用户帐户控制 | 否
+|步骤 1. 在密钥存储中创建新的列主密钥。<br><br>**注意：** SqlServer PowerShell 模块不支持此步骤。 若要从命令行完成此任务，需要使用特定于你的密钥存储的工具。 | [创建并存储列主密钥 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| 用户帐户控制 | 否
 |步骤 2. 启动 PowerShell 环境并导入 SqlServer 模块 | [导入 SqlServer 模块](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 否 | 否
 |步骤 3. 连接到服务器和数据库。 | [连接到数据库](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 否 | 用户帐户控制
 |步骤 4. 创建包含新的列主密钥的位置信息的 SqlColumnMasterKeySettings 对象。 SqlColumnMasterKeySettings 是存在于内存中的对象（在 PowerShell 中）。 若要创建该对象，需要使用特定于你的密钥存储的 cmdlet。 |[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)<br> | 否 | 否

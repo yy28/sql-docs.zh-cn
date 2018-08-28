@@ -17,18 +17,18 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 430377402c841f890dab08c63f1a32e99664cfd5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 31bf15921dfdae21e6bc5a3180018ad45fe8c563
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39552177"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097546"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>描述的聚集索引和非聚集索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[描述的聚集索引和非聚集索引](https://msdn.microsoft.com/library/ms190457(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[描述的聚集索引和非聚集索引](clustered-and-nonclustered-indexes-described.md)。
 
   索引是与表或视图关联的磁盘上结构，可以加快从表或视图中检索行的速度。 索引包含由表或视图中的一列或多列生成的键。 这些键存储在一个结构（B 树）中，使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以快速有效地查找与键值关联的行。  
   

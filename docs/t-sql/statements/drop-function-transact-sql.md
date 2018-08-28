@@ -25,16 +25,16 @@ caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1654d9d81598edb09c3fafe09b808ecbabe8c812
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a38d368b5bde18c438fd4100b3e6d56218def228
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063824"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   从当前数据库中删除一个或多个用户定义函数。 用户定义函数使用 [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 创建，使用 [ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) 修改。  
   
@@ -61,7 +61,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
 ## <a name="arguments"></a>参数  
  *IF EXISTS*    
- 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds_md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion_md.md)] 2016 开始可用。
+ 只有在函数已存在时才对其进行有条件地删除。 在 [!INCLUDE[sssds_md](../../includes/sssds-md.md)] 中以及从 [!INCLUDE[ssnoversion_md](../../includes/ssnoversion-md.md)] 2016 开始可用。
   
  *schema_name*  
  用户定义函数所属的架构的名称。  

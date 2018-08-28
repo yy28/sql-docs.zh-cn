@@ -62,13 +62,13 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452741"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083931"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ ADD
 > 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定系统用于记录有效记录时间段的列的名称。 可以指定现有列或创建新列作为 ADD PERIOD FOR SYSTEM_TIME 参数的一部分。 该列的数据类型必须为 datetime2，并且必须定义为 NOT NULL。 如果将时间段列定义为 NULL，将引发错误。 可以为 system_start_time 和 system_end_time 列定义[column_constraint (Transact-SQL)](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) 和/或[指定列的默认值](../../relational-databases/tables/specify-default-values-for-columns.md)。 请参阅下方[系统版本控制](#system_versioning)示例中的示例 A，该示例演示如何将默认值用于 system_end_time 列。  
   
  将此参数与 SET SYSTEM_VERSIONING 参数结合使用可对现有表启用系统版本控制。 有关详细信息，请参阅[时态表](../../relational-databases/tables/temporal-tables.md)和 [Azure SQL 数据库中的时态表入门](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
   
- 自 [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 起，用户将能够使用 HIDDEN 标志标记一个或两个时间段列，以隐式隐藏这些列，这样 SELECT \* FROM\<table> 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。  
+ 自 [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 起，用户将能够使用 HIDDEN 标志标记一个或两个时间段列，以隐式隐藏这些列，这样 SELECT \* FROM\<table> 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。  
   
 DROP  
 指定删除一个或多个列定义、计算列定义或者表约束，或删除系统将用于系统版本控制的列的规范。  

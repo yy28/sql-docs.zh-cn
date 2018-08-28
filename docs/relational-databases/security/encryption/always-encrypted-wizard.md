@@ -18,13 +18,13 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549693"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094636"
 ---
 # <a name="always-encrypted-wizard"></a>始终加密向导
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39549693"
  
  - 选择将存储列主密匙的位置。  
  
-   - **将主密匙存储在 Windows 证书中** 有关详细信息，请参阅 [使用证书商店](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **将主密匙存储在 Windows 证书中** 有关详细信息，请参阅 [使用证书商店](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **将主密钥存储在 AKV 中** 有关详细信息，请参阅 [Azure 密钥保管库入门](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  

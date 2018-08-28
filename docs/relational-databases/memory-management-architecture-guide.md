@@ -19,13 +19,13 @@ caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008889"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073056"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008889"
 ## <a name="windows-virtual-memory-manager"></a>Windows 虚拟内存管理器  
 提交的地址空间区域由 Windows 虚拟内存管理器 (VMM) 映射到可用的物理内存。  
   
-有关不同操作系统所支持的物理内存量的详细信息，请参阅介绍 [Windows 版本的内存限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)的 Windows 文档。  
+有关不同操作系统所支持的物理内存量的详细信息，请参阅介绍 [Windows 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases)的 Windows 文档。  
   
 虚拟内存系统允许虚拟内存超过物理内存，这样虚拟内存与物理内存的比率可以大于 1:1。 因此，大型程序在计算机上运行时可以具有多种物理内存配置。 但是，使用比所有进程的平均组合工作集大得多的虚拟内存可能会导致性能降低。 
 

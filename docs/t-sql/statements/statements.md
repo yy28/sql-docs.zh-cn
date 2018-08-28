@@ -16,13 +16,13 @@ caps.latest.revision: 7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 538542a1745eaeafe9f33c0509047fb22a05978d
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: ecd72419630de8754a46f29150be1ead79a2140f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405506"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062589"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e7c60cdc292523207809404f5721d643cf6c7e89
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405394"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073738"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

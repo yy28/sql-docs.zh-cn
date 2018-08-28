@@ -16,18 +16,18 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e6fab6666fd5f0d28462d4f8ff90fbb80fbce23b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 3e2e15595c348aa3c57f0d9ae8b8a82c9ac9d8d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539108"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43085009"
 ---
 # <a name="create-primary-keys"></a>创建主键
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Primary Keys](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx)（创建主键）。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Primary Keys](create-primary-keys.md)（创建主键）。
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定义主键。 创建主键会自动创建相应的唯一群集索引、聚集索引或非聚集索引（如果这样指定）。  
   

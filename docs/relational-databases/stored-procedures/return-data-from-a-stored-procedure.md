@@ -15,17 +15,17 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c3ab951e8364e8d6ca7c920493c6dee026f2d011
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 32fe5caa0bb31a31b9a4a137047c346f66935f74
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083870"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[从存储过程中返回数据](https://msdn.microsoft.com/library/ms188655(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[从存储过程中返回数据](return-data-from-a-stored-procedure.md)。
 
   可通过三种方法将数据从过程返回到调用程序：结果集、输出参数和返回代码。 本主题提供了有关这三种方法的信息。  
   

@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558267"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098553"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Management Studio 支持
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558267"
   
 2.  若要替换模板参数，请单击 **“指定模板参数的值”** （在 **“查询”** 菜单上）。  
   
-     有关如何使用模板的更多信息，请参阅 [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)。  
+     有关如何使用模板的更多信息，请参阅 [Template Explorer](../../ssms/template/template-explorer.md)。  
   
 3.  在“对象资源管理器”中，表先按基于磁盘的表，然后按内存优化表的顺序排序。 使用 **“对象资源管理器详细信息”** 可以查看按名称排序的所有表。  
   

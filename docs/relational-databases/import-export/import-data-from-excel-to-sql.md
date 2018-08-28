@@ -14,13 +14,13 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b7418258c6b79e5cbc9f8af254fb849e06140b33
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561107"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083330"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39561107"
 
 -   可通过使用以下任一工具直接从 Excel 导入数据到 SQL：
     -   [SQL Server 导入和导出向导](#wiz)
-    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [SQL Server Integration Services (SSIS)](#ssis)
     -   [OPENROWSET](#openrowset) 函数
 -   可分两步导入数据，将数据从 Excel 导出为文本，然后使用以下任一工具导入文本文件：
     -   [导入平面文件向导](#import-wiz)

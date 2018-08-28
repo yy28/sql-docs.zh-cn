@@ -32,13 +32,13 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3a9720e0b2db4ef1dbbdf2738e019d4107e00ee2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2eae51e85474763dc20282c800e855172beae5ea
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405172"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073990"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

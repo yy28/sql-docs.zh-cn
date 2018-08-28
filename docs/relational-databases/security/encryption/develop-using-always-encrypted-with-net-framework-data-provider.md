@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094116"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 此示例向 Patients 表插入一行。 请注意以下事项：
 - 对于示例代码中的加密，没有什么特定的注意事项。 用于 SQL Server 的 .NET Framework 数据提供程序会自动检测并加密面向加密列的 *paramSSN* 和 *paramBirthdate* 参数。 这使得加密操作对应用程序而言是透明的。 
 - 插入到数据库列（包括加密列）中的值将作为 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 对象传递。 在将值发送到非加密列时， **SqlParameter** 是可选的（虽然强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，它是必需的。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询将失败，因为用于 SQL Server 的 .NET Framework 数据提供程序无法确定目标加密列中的值，所以它不会对这些值加密。 因此，服务器会因为与加密列不兼容而拒绝它们。
-- 面向 SSN 列的参数的数据类型将设置为映射到 char/varchar SQL Server 数据类型的 ANSI（非 Unicode）字符串。 如果该参数的类型设置为映射到 nchar/nvarchar 的 Unicode 字符串（字符串），查询将失败，因为始终加密不支持从加密的 nchar/nvarchar 值转换为加密的 char/varchar 值。 有关数据类型映射的信息，请参阅 [SQL Server 数据类型映射](https://msdn.microsoft.com/library/cc716729.aspx) 。
+- 面向 SSN 列的参数的数据类型将设置为映射到 char/varchar SQL Server 数据类型的 ANSI（非 Unicode）字符串。 如果该参数的类型设置为映射到 nchar/nvarchar 的 Unicode 字符串（字符串），查询将失败，因为始终加密不支持从加密的 nchar/nvarchar 值转换为加密的 char/varchar 值。 有关数据类型映射的信息，请参阅 [SQL Server 数据类型映射](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 。
 - 插入到 BirthDate 列中的参数的数据类型将使用 [SqlParameter.SqlDbType 属性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)显式设置为目标 SQL Server 数据类型，而不依赖于使用 [SqlParameter.DbType 属性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)时应用的从 .NET 类型到 SQL Server 数据类型的隐式映射。 默认情况下， [DateTime 结构](https://msdn.microsoft.com/library/system.datetime.aspx) 将映射到 datetime SQL Server 数据类型。 由于 BirthDate 列的数据类型是日期，而始终加密不支持将加密的日期时间值转换为加密的日期值，因此，使用默认映射将导致错误。 
 
 ```

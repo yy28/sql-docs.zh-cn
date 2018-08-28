@@ -14,13 +14,13 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 628d33d835012cb7264dbd63ddf536874223fb31
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546637"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066198"
 ---
 # <a name="always-encrypted-cryptography"></a>始终加密的加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546637"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>密钥、密钥存储和密钥加密算法  
  始终加密使用两种类型的密钥：列主密钥和列加密密钥。  
   
- 列主密钥 (CMK) 是密钥加密密钥（即用来加密其他密钥的密钥），它会始终处于客户端的控制之下并存储在外部密钥存储区中。 启用了始终加密的客户端驱动程序通过 CMK 存储提供程序与密钥存储进行交互，提供程序可以是驱动程序库（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system 提供程序）或客户端应用程序（自定义提供程序）的一部分。 客户端驱动程序库目前包括 [Windows 证书存储](https://msdn.microsoft.com/library/windows/desktop/aa388160)的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 密钥存储提供程序和硬件安全模块 (HSM)。  （有关提供程序的当前列表信息，请参阅 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)。）应用程序开发人员可以为任意存储提供自定义提供程序。  
+ 列主密钥 (CMK) 是密钥加密密钥（即用来加密其他密钥的密钥），它会始终处于客户端的控制之下并存储在外部密钥存储区中。 启用了始终加密的客户端驱动程序通过 CMK 存储提供程序与密钥存储进行交互，提供程序可以是驱动程序库（ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system 提供程序）或客户端应用程序（自定义提供程序）的一部分。 客户端驱动程序库目前包括 [Windows 证书存储](/windows/desktop/SecCrypto/using-certificate-stores)的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 密钥存储提供程序和硬件安全模块 (HSM)。  （有关提供程序的当前列表信息，请参阅 [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)。）应用程序开发人员可以为任意存储提供自定义提供程序。  
   
  列加密密钥 (CEK) 是受 CMK 保护的内容加密密钥（即用来保护数据的密钥）。  
   
