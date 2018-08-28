@@ -17,20 +17,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041874"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776185"
 ---
 # <a name="select-objects-object-explorer"></a>选择对象（对象资源管理器）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **选择这些对象类型**  
-显示类型列表，将选择属于所列类型的对象。 这些类型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 级别和数据库级别的主体和安全对象。 此框使用从“选择对象类型”对话框（可使用“对象类型”按钮进行访问）中选择的选项进行填充。  
+显示类型列表，将选择属于所列类型的对象。 这些类型包括 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别和数据库级别的主体和安全对象。 此框使用从“选择对象类型”对话框（可使用“对象类型”按钮进行访问）中选择的选项进行填充。  
   
 **输入要选择的对象名称**  
 输入要选择的对象名称列表，用分号分隔。 要选择的对象必须属于在“选择这些对象类型”框中列出的类型。 可从单击“浏览”按钮所访问的列表中选择对象。  

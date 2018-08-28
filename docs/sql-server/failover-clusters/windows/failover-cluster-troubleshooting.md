@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997319"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776192"
 ---
 # <a name="failover-cluster-troubleshooting"></a>故障转移群集疑难解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "37997319"
   
      使用此方法从操作系统故障中恢复可能要花些时间。 如果很容易从操作系统故障中恢复，请不要使用此方法。  
   
-     有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)和[如何：从故障转移群集失败中恢复（案例 2）](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx)。  
+     有关详细信息，请参阅[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)和[如何：从故障转移群集失败中恢复（案例 2）](recover-from-failover-cluster-instance-failure.md)。  
   
 ## <a name="resolving-common-problems"></a>解决常见问题  
  以下列表介绍了常见的使用问题并说明如何解决这些问题。  

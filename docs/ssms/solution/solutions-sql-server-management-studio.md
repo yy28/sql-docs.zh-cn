@@ -21,19 +21,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9741b7db06a3be3adb6eb86f044fd7403fe1c2c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a69fb847726732f3b1321593655f29c3bb2f6d1
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043464"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775796"
 ---
 # <a name="solutions-sql-server-management-studio"></a>解决方案 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 解决方案是一个或多个相关项目的集合。 项目是开发人员用来组织相关文件（例如常用管理脚本集）的容器。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 解决方案是一个或多个相关项目的集合。 项目是开发人员用来组织相关文件（例如常用管理脚本集）的容器。  
   
 ## <a name="solution-overview"></a>解决方案概述  
-可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 作为 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的脚本开发平台。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 代码编辑器可为关系数据库和多维数据库开发脚本和查询，以及一起收集项目中的相关脚本和查询。  
+可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 作为 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的脚本开发平台。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 代码编辑器可为关系数据库和多维数据库开发脚本和查询，以及一起收集项目中的相关脚本和查询。  
   
 项目可以包含：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33043464"
   
 -   查询和脚本使用的连接信息和文件。  
   
-可以将一个或多个相关项目合并到一个解决方案中。 通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中的“解决方案资源管理器”窗格，可以管理解决方案和项目。  
+可以将一个或多个相关项目合并到一个解决方案中。 通过使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的“解决方案资源管理器”窗格，可以管理解决方案和项目。  
   
 可以将解决方案和项目集成到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual SourceSafe (VSS) 数据库或其他第三方源代码管理提供程序中，以进行开发更改跟踪和生命周期管理。  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1894d3542613398d50ba0fb998439ce9b57b1af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c1d2c0f80d80a48005821038b2cb90367fef6cdd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36806972"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776323"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "36806972"
  若要对注册到中央管理服务器的所有服务器执行查询，请展开此中央管理服务器，右键单击服务器组，指向并单击“连接”，然后单击“新建查询”。 在新的查询编辑器窗口中执行查询时，将使用存储的连接信息以及用户的 Windows 身份验证上下文对服务器组中的所有服务器执行查询。  
   
 ## <a name="see-also"></a>另请参阅  
- [在对象资源管理器中隐藏系统对象](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)   
+ [在对象资源管理器中隐藏系统对象](../object/hide-system-objects-in-object-explorer.md)   
  [导出已注册服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [导入已注册的服务器信息 (SQL Server Management Studio)](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
   

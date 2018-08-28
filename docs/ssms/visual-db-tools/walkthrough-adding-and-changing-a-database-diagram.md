@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054964"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775703"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33054964"
 ## <a name="prerequisites"></a>必备条件  
 为了完成本演练，您需要：  
   
--   能够访问带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 示例数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
+-   能够访问带有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 示例数据库的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 -   一个具有数据库所有者 **dbo** 特权的帐户  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33054964"
   
 1.  在“视图”菜单上单击“对象资源管理器”。  
   
-2.  打开“数据库”节点，再打开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] 节点。  
+2.  打开“数据库”节点，再打开 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 节点。  
   
 3.  右键单击“数据库关系图”节点并选择“新建数据库关系图”。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "33054964"
 [设置数据库关系图设计器 (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [向关系图中添加表 (Visual Database Tools)](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [在关系图中创建表间的关系 (Visual Database Tools)](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[创建 XML 索引](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[创建 XML 索引](../../relational-databases/xml/create-xml-indexes.md)  
 [将数据库关系图复制到剪贴板 (Visual Database Tools)](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [使用关系图布局 (Visual Database Tools)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

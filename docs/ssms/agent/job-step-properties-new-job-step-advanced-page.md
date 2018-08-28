@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987829"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775810"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>作业步骤属性 - 新建作业步骤（“高级”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "37987829"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性。  
+使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性。  
   
 ## <a name="options"></a>选项  
 **成功时要执行的操作**  
-设置作业步骤成功时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理应执行的操作。  
+设置作业步骤成功时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理应执行的操作。  
   
 **重试次数**  
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理对失败的作业步骤的重试次数。  
+设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理对失败的作业步骤的重试次数。  
   
 **重试间隔（分钟）**  
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在重试操作之间等待的时间。  
+设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在重试操作之间等待的时间。  
   
 **失败时要执行的操作**  
-设置作业步骤失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理应执行的操作。  
+设置作业步骤失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理应执行的操作。  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Transact-SQL 作业步骤的选项  
 **输出文件**  
@@ -54,7 +54,7 @@ ms.locfileid: "37987829"
 浏览至用于作业步骤输出的文件。  
   
 **“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 将输出追加到文件的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的文件内容。  
@@ -82,7 +82,7 @@ ms.locfileid: "37987829"
 浏览至用于作业步骤输出的文件。  
   
 **“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 每次运行时将作业步骤输出追加到之前的文件内容后面。  
@@ -107,7 +107,7 @@ ms.locfileid: "37987829"
 浏览至用于作业步骤输出的文件。  
   
 **“视图”**  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 每次运行时将作业步骤输出追加到之前的文件内容后面。  
@@ -139,7 +139,7 @@ ms.locfileid: "37987829"
 浏览至用于作业步骤输出的文件。  
   
 **视图**  
-[!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]禁止通过此按钮查看输出文件。 相反，请使用记事本查看作业步骤输出文件。  
   
 **将输出追加到现有文件**  
 将输出追加到文件的现有内容后面。 否则，每次作业步骤运行时都将覆盖以前的文件内容。  

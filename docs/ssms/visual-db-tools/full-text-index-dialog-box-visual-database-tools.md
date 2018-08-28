@@ -17,22 +17,22 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddafa3150bff469209eff2f8166da0b831787506
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 52ba9962b6192ce6ba6a403d35e3ff9559786c1f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984259"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775699"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以创建全文索引，用于对数据库表中基于文本的列进行全文搜索。 全文索引依赖于常规索引，因此必须先创建常规索引。 常规索引只能对单个非空的列创建，而且最好选择值较小的列而不是选择值较大的列。  
   
 > [!NOTE]  
-> 若要创建全文索引，必须先使用外部工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或企业管理器）为数据库创建一个全文本目录。  
+> 若要创建全文索引，必须先使用外部工具（如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或企业管理器）为数据库创建一个全文本目录。  
   
 > [!NOTE]  
-> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的每个版本中都不提供全文检索功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
+> [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中都不提供全文检索功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)。  
   
 ## <a name="options"></a>选项  
 **选定的全文索引**  
@@ -54,7 +54,7 @@ ms.locfileid: "38984259"
 显示用于存储此全文索引的全文本目录的名称。 若要将索引存储在其他目录中，请单击当前目录名称，再从下拉列表中选择其他目录。  
   
 > [!NOTE]  
-> 必须先在外部工具（例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或企业管理器）中创建目录。  
+> 必须先在外部工具（例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或企业管理器）中创建目录。  
   
 **标识类别**  
 展开此项可显示此索引的名称字段。  

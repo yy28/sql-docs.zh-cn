@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21c40862e43cd7f5c4e883c6482d83faa4175ede
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ace865623d23cc7081ac162b33821ee7757a47df
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030865"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775370"
 ---
 # <a name="monitor-and-respond-to-events"></a>监视事件和响应事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,26 +40,26 @@ ms.locfileid: "38030865"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理可监视并自动响应*事件*，例如来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的消息、特定性能条件以及 Windows Management Instrumentation (WMI) 事件。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可监视并自动响应*事件*，例如来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的消息、特定性能条件以及 Windows Management Instrumentation (WMI) 事件。  
   
 ## <a name="in-this-section"></a>本节内容  
 [警报](../../ssms/agent/alerts.md)  
 介绍了命名警报以及选择警报响应的事件或性能条件。  
   
 [创建用户定义事件](../../ssms/agent/create-a-user-defined-event.md)  
-介绍了如何创建由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]预定义的事件以外的事件。  
+介绍了如何创建由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]预定义的事件以外的事件。  
   
 [运算符](../../ssms/agent/operators.md)  
-介绍了为管理员创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理可用于在作业失败或成功时用来发送通知的别名。  
+介绍了为管理员创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可用于在作业失败或成功时用来发送通知的别名。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>关于监视事件和响应事件  
-对事件的自动响应称为“警报”。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+对事件的自动响应称为“警报”。 您可以针对一个或多个事件定义警报，指定希望 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何响应发生的这些事件。 警报可以通过通知管理员和/或运行某项作业来响应事件。 警报还可以将事件转发到其他计算机上的 Microsoft Windows 应用程序日志。 例如，您可以指定在发生严重性为 19 的事件时立即通知操作员。 通过定义警报，数据库管理员可以更有效地监视和管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理只响应定义了警报的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理用来监视事件的方法取决于事件的类型。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只响应定义了警报的事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用来监视事件的方法取决于事件的类型。  
   
-当为一个性能计数器定义了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将直接监视该性能计数器。 对于 WMI 事件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理为 WMI 事件注册一个事件查询。  
+当为一个性能计数器定义了一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将直接监视该性能计数器。 对于 WMI 事件， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理为 WMI 事件注册一个事件查询。  
   
-为了响应来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的消息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理会监视 Windows 应用程序日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理只能响应此日志中出现的消息。 默认情况下，SQL Server 将下列消息记录在 Windows 应用程序日志中：  
+为了响应来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的消息， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会监视 Windows 应用程序日志。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理只能响应此日志中出现的消息。 默认情况下，SQL Server 将下列消息记录在 Windows 应用程序日志中：  
   
 -   严重性为 19 或更高的 sysmessages 错误。  
   
@@ -74,10 +74,10 @@ ms.locfileid: "38030865"
     > [!NOTE]  
     > 记录应用程序事件会占用日志空间，并导致 Windows 应用程序日志超出其最大大小。 请确保 Windows 应用程序日志最大大小足够大，以免丢失 SQL Server 事件信息。  
   
-当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 记录消息时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服务将该消息与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理员定义的警报进行比较。  
+当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 记录消息时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务将该消息与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员定义的警报进行比较。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 服务通过执行事件警报中指定的任务来响应事件，而不管事件的源是什么。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服务通过执行事件警报中指定的任务来响应事件，而不管事件的源是什么。  
   
 ## <a name="see-also"></a>另请参阅  
-[sp_altermessage](http://msdn.microsoft.com/en-us/1b28f280-8ef9-48e9-bd99-ec14d79abaca)  
+[sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

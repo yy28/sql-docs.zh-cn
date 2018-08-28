@@ -19,24 +19,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9f7b9bd64829a337fc64639d0f65709df54336a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71651e644d3547345a3e3c9b89637d3273e1f72e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044614"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775355"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)]创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]创建的自定义报表。  
+在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
   
 ## <a name="implementation"></a>实现  
-自定义报表是使用报表定义语言 (RDL) 创建的，并存储为报表定义 (.rdl) 文件。 RDL 包含 XML 格式的报表的数据检索和布局信息。 RDL 是一个开放式架构。 开发人员可以使用其他属性和元素来扩展 RDL。 报表可以执行位于报表内部的任何有效的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句。  
+自定义报表是使用报表定义语言 (RDL) 创建的，并存储为报表定义 (.rdl) 文件。 RDL 包含 XML 格式的报表的数据检索和布局信息。 RDL 是一个开放式架构。 开发人员可以使用其他属性和元素来扩展 RDL。 报表可以执行位于报表内部的任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
-如果将对象资源管理器连接至服务器，并且自定义报表引用了当前所选对象资源管理器节点的报表参数，则该自定义报表可在此节点的上下文中执行。 这样，报表可以使用当前上下文（如当前数据库）或统一的上下文（如在自定义报表包含的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句中指定一个专门数据库）。  
+如果将对象资源管理器连接至服务器，并且自定义报表引用了当前所选对象资源管理器节点的报表参数，则该自定义报表可在此节点的上下文中执行。 这样，报表可以使用当前上下文（如当前数据库）或统一的上下文（如在自定义报表包含的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中指定一个专门数据库）。  
   
 ## <a name="running-a-custom-report"></a>运行自定义报表  
-可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中通过以下方式运行自定义报表：  
+可以在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中通过以下方式运行自定义报表：  
   
 -   在对象资源管理器中，右键单击一个节点，指向“报表”，再左键单击“自定义报表”。 在“打开文件”对话框中，找到包含 .rdl 文件的文件夹，然后打开相应的报表文件。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33044614"
 ## <a name="limitations"></a>限制  
 在使用自定义报表时，请注意以下限制：  
   
--   若要防止意外执行恶意代码，即使配置了文件系统以将 .rdl 文件与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 相关联，也不能将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]配置为自动运行报表。 不能在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中以编程方式执行报表，也不能通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]从命令行中运行报表。  
+-   若要防止意外执行恶意代码，即使配置了文件系统以将 .rdl 文件与 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 相关联，也不能将 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]配置为自动运行报表。 不能在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中以编程方式执行报表，也不能通过 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]从命令行中运行报表。  
   
 -   可以在没有生成预期值的上下文中运行自定义报表。 例如，可以在复制未涉及的数据库的上下文中运行有关复制的报表，也可以作为无权访问生成准确报表所需信息的用户运行报表。 自定义报表的创建者负责验证报表结构及其上下文。  
   
@@ -66,15 +66,15 @@ ms.locfileid: "33044614"
 ## <a name="managing-custom-reports"></a>管理自定义报表  
 如果用户具有很多自定义报表，建议他们使用具有相应 NTFS 文件系统权限的文件系统文件夹来组织这些报表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 自定义报表是使用当前用户的权限运行的。 若要防止恶意用户更改报表运行的查询，应将包含报表文件的文件系统文件夹的权限设置为“限制访问”。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 服务所使用的用户和帐户都要求对包含报表文件的文件系统文件夹具有读取权限。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所使用的用户和帐户都要求对包含报表文件的文件系统文件夹具有读取权限。  
   
 可以在报表中嵌入任何有效的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 命令，但不会执行该命令。  
   
 > [!CAUTION]  
-> 可以在报表中嵌入任何有效的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句，并可从报表执行此语句。 如果使用具有较高特权的用户帐户运行报表，则可以不受约束地执行所有这些嵌入的指令。  
+> 可以在报表中嵌入任何有效的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，并可从报表执行此语句。 如果使用具有较高特权的用户帐户运行报表，则可以不受约束地执行所有这些嵌入的指令。  
   
 
   

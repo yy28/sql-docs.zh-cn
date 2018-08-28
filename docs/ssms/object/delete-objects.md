@@ -19,12 +19,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: debf80be51388ab413d2ca7c08f189e03b9154e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 535dde08108a8917591f2b81c22996fbcfe12339
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042670"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776560"
 ---
 # <a name="delete-objects"></a>删除对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33042670"
 显示要删除的对象的名称、类型、所有者和状态，以及在执行过程中的所有错误消息。  
   
 > [!NOTE]  
-> 对数据库运行“删除”与在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 中发出 DROP DATABASE 等效。  
+> 对数据库运行“删除”与在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中发出 DROP DATABASE 等效。  
   
 **显示依赖关系**  
 单击此项可显示依赖于当前所选对象的对象，以及当前对象所依赖的对象（向上和向下依赖关系）。 “显示依赖关系”对话框中显示的信息是只读的。  

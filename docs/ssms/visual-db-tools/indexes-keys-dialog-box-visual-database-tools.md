@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984989"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776194"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>“索引 - 键”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  
   
 > [!NOTE]  
-> 如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
+> 如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
 ## <a name="options"></a>选项  
 **选定的主/唯一键或索引**  
@@ -67,7 +67,7 @@ ms.locfileid: "38984989"
 展开此项可显示有关“创建为聚集的”的信息。  
   
 **创建为聚集的**  
-指定创建聚集键或聚集索引。 对于每个表只能创建一个聚集索引。 表中数据按聚集索引的顺序进行存储。 有关详细信息，请参阅 [创建聚集索引](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [创建非聚集索引](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)。  
+指定创建聚集键或聚集索引。 对于每个表只能创建一个聚集索引。 表中数据按聚集索引的顺序进行存储。 有关详细信息，请参阅 [创建聚集索引](../../relational-databases/indexes/create-clustered-indexes.md) 和 [创建非聚集索引](../../relational-databases/indexes/create-nonclustered-indexes.md)。  
   
 **数据空间规范**  
 展开此项可显示有关“(数据空间类型)”、“文件组或分区方案名称”和“分区列列表”的信息。  
@@ -97,9 +97,9 @@ ms.locfileid: "38984989"
 **忽略重复的键**  
 指定在大容量插入操作过程中插入具有与现有键值相同的键值的行时的行为。 如果选择：  
   
--   **是** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将发出警告，忽略有问题的传入行，并尝试插入剩余行。  
+-   **是** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出警告，忽略有问题的传入行，并尝试插入剩余行。  
   
--   **否** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 将发出错误信息并回滚整个大容量插入操作。  
+-   **否** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将发出错误信息并回滚整个大容量插入操作。  
   
 **包含列**  
 显示一个用逗号分隔的列表，其中列出用于组成索引键的所有列的名称。 只能为非聚集索引指定子键列。 此属性对 XML 索引是隐藏的。  

@@ -21,12 +21,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54714f5d4c1cd0db5c9117e3812107caf039676e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dfa43eb6ced096a5ae4facd215cf06a87a97976f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997659"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776570"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>设置数据库关系图设计器 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "37997659"
 3.  如果希望设置数据库关系图，请在出现提示时选择“是”。  
   
     > [!NOTE]  
-    > 这将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库上创建数据库关系图表、系统存储过程和一个系统函数。  
+    > 这将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库上创建数据库关系图表、系统存储过程和一个系统函数。  
   
-4.  Visual Studio 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]实例上创建以下对象：  
+4.  Visual Studio 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例上创建以下对象：  
   
     1.  sysdiagrams 表  
   

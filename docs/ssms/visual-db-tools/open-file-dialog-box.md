@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20f698a0f85f54a31b18f74ad364de1fc1dfb187
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 839d26440ad4f6d00c4992feb76211daba49617f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997919"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776558"
 ---
 # <a name="open-file-dialog-box"></a>“打开文件”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37997919"
 若要访问此对话框，请在“文件”菜单中，选择“打开”，然后选择“文件”。 从诸如“外部工具”对话框等其他元素中打开文件时，也将显示此对话框。 在“文件”菜单中，选择“打开”，然后选择“项目/解决方案”以打开类似的“打开项目”对话框。  
   
 > [!NOTE]  
-> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
+> 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件之前，请确定其代码的可信度。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中打开项目或组件的操作可能会在本地计算机上的可信进程中执行其代码。  
   
 ## <a name="option"></a>选项  
 **查找范围**  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ffd23e554ce16f10afdca59224cafee4c86f800
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9c8497b6056aa19b0c413cad29fd090012fdf616
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064604"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775482"
 ---
 # <a name="implement-jobs"></a>执行作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "38064604"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
+您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业来自动执行日常管理任务并反复运行它们，从而提高管理效率。  
   
-作业是一系列由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理按顺序执行的指定操作。 作业可以执行一系列活动，包括运行 [!INCLUDE[tsql](../../includes/tsql_md.md)] 脚本、命令行应用程序、Microsoft ActiveX 脚本、Integration Services 包、Analysis Services 命令和查询或复制任务。 作业可以运行重复任务或那些可计划的任务，它们可以通过生成警报来自动通知用户作业状态，从而极大地简化了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 管理。  
+作业是一系列由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理按顺序执行的指定操作。 作业可以执行一系列活动，包括运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本、命令行应用程序、Microsoft ActiveX 脚本、Integration Services 包、Analysis Services 命令和查询或复制任务。 作业可以运行重复任务或那些可计划的任务，它们可以通过生成警报来自动通知用户作业状态，从而极大地简化了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理。  
   
 可以手动运行作业，也可以将作业配置为根据计划或响应警报来运行。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "38064604"
 |说明可以创建的各种作业步骤以及如何管理它们。|[管理作业步骤](../../ssms/agent/manage-job-steps.md)|  
 |说明如何定义作业的开始运行时间和运行频率。|[创建计划并将计划附加到作业](../../ssms/agent/create-and-attach-schedules-to-jobs.md)|  
 |介绍手动运行作业（不根据计划）。|[运行作业](../../ssms/agent/run-jobs.md)|  
-|说明如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理配置为响应作业。 例如，可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理配置为作业完成时通知管理员。|[指定作业响应](../../ssms/agent/specify-job-responses.md)|  
+|说明如何将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为响应作业。 例如，可以将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理配置为作业完成时通知管理员。|[指定作业响应](../../ssms/agent/specify-job-responses.md)|  
 |包含有关如何查看现有作业、作业执行后的历史记录以及如何修改现有作业的信息。|[查看或修改作业](../../ssms/agent/view-or-modify-jobs.md)|  
 |包含有关如何删除作业的信息。|[删除作业](../../ssms/agent/delete-jobs.md)|  
   

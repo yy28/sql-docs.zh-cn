@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984009"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775702"
 ---
 # <a name="object-explorer-details-pane"></a>对象资源管理器详细信息窗格
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  
+对象资源管理器详细信息是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的一个组件，它提供服务器中所有对象的表格视图，并显示一个用于管理这些对象的用户界面。 对象资源管理器的功能根据服务器的类型稍有不同，但一般都包括用于数据库的开发功能和用于所有服务器类型的管理功能。  
   
-默认情况下，“对象资源管理器详细信息”窗格在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 是可见的。 如果看不到对象资源管理器，请在“视图”菜单上单击“对象资源管理器详细信息”或按 **F7**。  
+默认情况下，“对象资源管理器详细信息”窗格在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 是可见的。 如果看不到对象资源管理器，请在“视图”菜单上单击“对象资源管理器详细信息”或按 **F7**。  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 显示的数据采用启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 时有效的 Microsoft Windows 的“区域和语言选项”的格式。 重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 可以反映更新的设置。  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示的数据采用启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时有效的 Microsoft Windows 的“区域和语言选项”的格式。 重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以反映更新的设置。  
   
 ## <a name="object-explorer-details"></a>对象资源管理器详细信息  
-对象资源管理器详细信息可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的文件夹和对象中导航。 在 32 位操作系统上, 对象资源管理器只能显示 64,000 个对象。 必须选择某个图标才能访问其他对象。  
+对象资源管理器详细信息可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的文件夹和对象中导航。 在 32 位操作系统上, 对象资源管理器只能显示 64,000 个对象。 必须选择某个图标才能访问其他对象。  
   
 对象资源管理器详细信息包括一个工具栏，其中包含下表中所述的图标。 只有适当的时候这些图标才可用。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "38984009"
 |**搜索**|提供一个区域，用于输入某些数据库对象的搜索词。|  
   
 ### <a name="column-header-selections"></a>列标题选择  
-对象资源管理器详细信息具有可选择的列。 您可以右键单击任何列标题并选中希望显示的项。 您的选择将保留在您导航的不同对象上。 当您退出并重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]时，会保留每个用户的选择。  
+对象资源管理器详细信息具有可选择的列。 您可以右键单击任何列标题并选中希望显示的项。 您的选择将保留在您导航的不同对象上。 当您退出并重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]时，会保留每个用户的选择。  
   
 > [!CAUTION]  
 > 显示某些对象类型（如数据库）的所有列可能导致大型对象集的显示呈现略微减慢。  
   
 ### <a name="sorting"></a>排序  
-单击列标题一次，可按该列进行排序。 再次单击同一个列标题，可按该列进行反向排序。 对于对象和文件夹范围内的每个用户将保留排序选择，重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 时也会保留。  
+单击列标题一次，可按该列进行排序。 再次单击同一个列标题，可按该列进行反向排序。 对于对象和文件夹范围内的每个用户将保留排序选择，重新启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 时也会保留。  
   
 ### <a name="filtering"></a>筛选  
 可以使用对象资源管理器详细信息工具栏上的“筛选器”图标，筛选对象资源管理器详细信息中显示的某些对象列表。 在可以进行筛选时，将启用该图标。  
@@ -93,7 +93,7 @@ ms.locfileid: "38984009"
 ## <a name="sql-server-object-search"></a>SQL Server 对象搜索  
 通配符  
   
--   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅 [如何使用通配符搜索](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40)。  
+-   支持标准通配符字符。 例如，搜索 **dm_os%counters** 会返回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 有关详细信息，请参阅 [如何使用通配符搜索](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
 搜索范围  
   

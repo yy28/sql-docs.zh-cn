@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053594"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776319"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "33053594"
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **标识类别**  
 展开此项可显示“名称”属性。  
   
 **名称**  
-显示当前查询的名称。 无法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中更改。  
+显示当前查询的名称。 无法在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中更改。  
   
 **Database Name**  
 显示所选表的数据源的名称。  
@@ -60,7 +60,7 @@ ms.locfileid: "33053594"
 指定查询将在结果集中筛选出重复值。 当只使用表中的部分列并且这些列可能包含重复值时，或者当联接两个或更多表的过程会在结果集中产生重复行时，此选项非常有用。 选择该选项等效于向 SQL 窗格内的语句中插入 DISTINCT 一词。  
   
 **GROUP BY 扩展**  
-指定对于基于聚合查询的查询，附加选项可用。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。）  
+指定对于基于聚合查询的查询，附加选项可用。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
   
 **输出所有列**  
 指定当前查询中所有表的全部列都将包含在结果集中。 选择此选项等效于在 SQL 语句的 SELECT 关键字后指定星号 (*) 代替单个列名。  
@@ -69,7 +69,7 @@ ms.locfileid: "33053594"
 显示查询参数。 若要编辑这些参数，请单击相应属性，再单击该属性右侧的省略号 **(…)** 。 （仅适用于一般性的 OLE DB。）  
   
 **SQL 注释**  
-显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本的数据库。）  
+显示 SQL 语句的说明。 若要查看或编辑完整的说明，请单击相应的说明，再单击属性右侧的省略号 **(…)** 。 您的注释可以包含查询使用者和使用时间等信息。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本的数据库。）  
   
 **Top 规范类别**  
 展开此项可显示“Top”、“百分比”、“表达式”和“With Ties”属性的属性。  
@@ -77,16 +77,16 @@ ms.locfileid: "33053594"
 **(最前面)**  
 指定查询将包括 TOP 子句，该子句只返回结果集中的前 n  行或前百分之 n 行。 默认情况下，查询将在结果集中返回前 10 行。  
   
-使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或更高版本。）  
+使用此框可更改返回的行数或指定不同的百分比值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或更高版本。）  
   
 **表达式**  
-指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将返回的行数或行数百分比。 如果将“百分比”设置为“是”，此数字表示查询将返回的行数百分比；如果将“百分比”设置为“否”，则此数字表示要返回的行数。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
 **百分比**  
-指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定查询将只返回结果集中的前百分之 n 的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
 **With Ties**  
-指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 或更高版本。）  
+指定视图将包括 WITH TIES 子句。 如果视图包含 ORDER BY 子句和基于百分比的 TOP 子句，WITH TIES 将非常有用。 如果设置了该选项，并且百分比截止位置在一组行的中间，且这些行在 ORDER BY 子句中具有相同的值，则视图将会扩展，以包含所有这样的行。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 或更高版本。）  
   
 ## <a name="see-also"></a>另请参阅  
 [使用参数进行查询 (Visual Database Tools)](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

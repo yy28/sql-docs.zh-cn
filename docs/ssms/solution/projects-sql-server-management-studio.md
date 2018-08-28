@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045024"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775362"
 ---
 # <a name="projects-sql-server-management-studio"></a>项目 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-一个 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 项目是一些在逻辑上相关并可保存在一起用于数据库管理和开发的脚本和文件的集合。  
+一个 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 项目是一些在逻辑上相关并可保存在一起用于数据库管理和开发的脚本和文件的集合。  
   
 ## <a name="script-project-overview"></a>脚本项目概述  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]的解决方案资源管理器组件中。 脚本项目可以不包含项目文件，也可以包含多个项目文件。 可以将项目添加到解决方案中，或者将多个项目组合在一个解决方案中。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目显示在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的解决方案资源管理器组件中。 脚本项目可以不包含项目文件，也可以包含多个项目文件。 可以将项目添加到解决方案中，或者将多个项目组合在一个解决方案中。  
   
 项目可以包括以下项：  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33045024"
 项目还可以集成到源代码管理系统中。  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>从脚本项目连接到 SQL Server 实例  
-脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”对话框提示你输入密码。  
+脚本项目可能包含与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的连接。 通过单击连接，可以连接到项目中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这将打开一个 SQL 脚本窗口，该窗口将连接到在所选连接中定义的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 如果通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的连接打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 MDX 脚本，则在打开编辑器并且加载脚本之后，系统将使用“连接到 SQL Server”对话框提示你输入密码。  
   
 相应窗口关闭后，连接也将随之关闭。  
   
-若要修改有关连接的信息，请使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]中的属性窗口。  
+若要修改有关连接的信息，请使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中的属性窗口。  
   
 ## <a name="project-tasks"></a>项目任务  
   

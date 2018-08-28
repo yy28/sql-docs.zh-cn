@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772233"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776575"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>重命名 SQL Server 故障转移群集实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772233"
   
 -   在重命名计算机/群集网络名称后修复主服务器 (MSX) 和目标服务器 (TSX) 实例名称。 有关详细信息，请参阅以下主题：  
   
-    -   [使多台目标服务器脱离主服务器](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [将多台目标服务器从主服务器脱离](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [创建多服务器环境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [创建多服务器环境](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   重新配置日志传送以便更新的服务器名称用于备份和还原日志。 有关详细信息，请参阅以下主题：  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772233"
   
     -   [删除日志传送 (SQL Server)](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   更新依赖于服务器的名称的 Jobsteps。 有关详细信息，请参阅 [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)。  
+-   更新依赖于服务器的名称的 Jobsteps。 有关详细信息，请参阅 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [重命名承载 SQL Server 独立实例的计算机](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

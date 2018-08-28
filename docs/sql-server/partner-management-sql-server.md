@@ -1,24 +1,20 @@
 ---
 title: 管理 SQL Server 合作伙伴 | Microsoft Docs
 description: 提供监视 SQL Server 解决方案的第三方合作伙伴列表。
-services: sql-server
-documentationcenter: NA
-ms.suite: sql
-ms.devlang: NA
 ms.topic: conceptual
-ms.tgt_pltfrm: NA
 ms.custom: ''
-ms.date: 17/09/2017
+ms.date: 09/17/2017
 ms.prod: sql
+ms.technology: ''
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 5c654f04c97049020dbb603d47095de16cc30fed
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 14234d252b789532045135cf66a8c8b797d10f40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084229"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029186"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理合作伙伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,8 +1,8 @@
 ---
 title: 配置 SQL Server 以向 Microsoft 发送反馈 | Microsoft Docs
 description: ''
-author: annashres
-ms.author: anshrest
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 755a2351aae2917fb7ef745fa1f14342492ee892
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995418"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017775"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ SSMS 不会收集其自身的故障转储。 与 SSMS 相关的任何故障转�
     [在组织中配置 Windows 遥测](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 和 Windows 7
 
-    [WER 设置](https://msdn.microsoft.com/en-us/library/windows/desktop/bb513638(v=vs.85).aspx)
+    [WER 设置](/windows/desktop/wer/wer-settings)
  
 ## <a name="feedback-for-analysis-services"></a>对于 Analysis Services 的反馈
 

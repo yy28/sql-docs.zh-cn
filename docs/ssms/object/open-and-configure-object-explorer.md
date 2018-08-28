@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041794"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775805"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  
+使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  
   
 ## <a name="viewing-object-explorer"></a>查看对象资源管理器  
-默认情况下，[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”菜单上单击“对象资源管理器”。  
+默认情况下，[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中对象资源管理器是可见的。 如果看不到对象资源管理器，请在“视图”菜单上单击“对象资源管理器”。  
   
 ## <a name="configuring-object-explorer-options"></a>配置对象资源管理器选项  
 若要配置对象资源管理器设置，请在“工具”菜单中单击“选项”，然后单击“SQL Server 对象资源管理器”。  

@@ -13,12 +13,12 @@ caps.latest.revision: 40
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d03b293418329fe6eeeba532778acca45ec9c860
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063625"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776321"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "38063625"
      
 -   如果教程使用 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 数据库之一，则应从 CodePlex 下载并使用最新版本。 有关详细信息，请参阅[适用于 SQL Server 2016 CTP3 的 AdventureWorks 数据库和脚本](https://www.microsoft.com/download/details.aspx?id=49502)。    
 -   下载与 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 教程结合使用的 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 工作簿和 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 报表，转至 [SQL Server 2012 的 Power View 示例](http://go.microsoft.com/fwlink/?LinkId=220734)。  
-- 签出 [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 存储库中提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 示例。 
+- 签出 [sql-server-samples](../sample/world-wide-importers/wide-world-importers-documentation.md) GitHub 存储库中提供的新 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 示例。 
 
  
 ## <a name="current-tutorials"></a>当前教程  

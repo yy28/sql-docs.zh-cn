@@ -19,20 +19,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7e8ba6dcb66fbf962e70cc5175b07095ffa2f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c24de46da06f069ce147907a18db1c7640713f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043154"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775698"
 ---
 # <a name="options-environment---general-page"></a>选项（“环境”-“常规”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  
+使用“选项”对话框可以配置 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 启动操作、常规窗口管理选项和其他常规设置。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，再单击“常规”。  
   
 ## <a name="uielement-list"></a>UIElement 列表  
 **启动时**  
-选择 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 在启动时执行的操作。 相应的选项包括：  
+选择 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在启动时执行的操作。 相应的选项包括：  
   
 -   “打开对象资源管理器”，如果选择此选项，将在启动时提示输入连接信息，然后打开对象资源管理器。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33043154"
   
 -   “打开对象资源管理器和新查询”，如果选择此选项，将在启动时提示输入连接信息，然后利用该连接打开对象资源管理器和 SQL 查询编辑器。  
   
--   “打开空环境”，如果选择此选项，将在启动时打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]，但不打开 SQL 查询编辑器窗口，并且不会将对象资源管理器连接到服务器。  
+-   “打开空环境”，如果选择此选项，将在启动时打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，但不打开 SQL 查询编辑器窗口，并且不会将对象资源管理器连接到服务器。  
   
 **在对象资源管理器中隐藏系统对象**  
-如果选中此复选框，将从对象资源管理器内的树视图中删除系统数据库、系统表、系统视图和系统存储过程。 系统函数和系统数据类型将不隐藏。 此选项仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的实例，并且不会影响对象资源管理器中已连接的服务器。  
+如果选中此复选框，将从对象资源管理器内的树视图中删除系统数据库、系统表、系统视图和系统存储过程。 系统函数和系统数据类型将不隐藏。 此选项仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，并且不会影响对象资源管理器中已连接的服务器。  
   
 ## <a name="environment-layout"></a>环境布局  
-您必须关闭并重新打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] ，才能在选项卡式文档和多文档界面 (MDI) 环境模式之间切换。  
+您必须关闭并重新打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，才能在选项卡式文档和多文档界面 (MDI) 环境模式之间切换。  
   
 **选项卡式文档**  
 如果选择此选项，文档窗口将在编辑器内以选项卡形式显示在一起。 在多个打开的文档之间进行组织和切换时，选项卡式文档窗口非常有用。  

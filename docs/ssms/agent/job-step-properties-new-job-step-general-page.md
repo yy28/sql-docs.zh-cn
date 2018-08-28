@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030995"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775815"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>作业步骤属性 - 新建作业步骤（“常规”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38030995"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤的属性或定义新的作业步骤。  
+使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
-若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
+若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
   
 ## <a name="options"></a>选项  
 **步骤名称**  
@@ -70,7 +70,7 @@ ms.locfileid: "38030995"
 ## <a name="options-for-activex-script-job-steps"></a>ActiveX 脚本作业步骤的选项  
   
 > [!IMPORTANT]  
-> 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中，将从 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
+> 在未来版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，将从 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理中删除 ActiveX 脚本编写子系统。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。  
   
 **VBScript**  
 将 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic 脚本版本指定为作业步骤的语言。  
@@ -213,7 +213,7 @@ ms.locfileid: "38030995"
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Integration Services 包执行作业步骤的选项  
   
 ### <a name="general-tab"></a>“常规”选项卡  
-指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 包的位置以及使用的身份验证方法。 选择此选项卡后，可以使用以下选项。  
+指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) 包的位置以及使用的身份验证方法。 选择此选项卡后，可以使用以下选项。  
   
 **包源**  
 指定 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的存储位置。 选择以下之一：  
@@ -228,19 +228,19 @@ ms.locfileid: "38030995"
 键入存储 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包的服务器名。 仅当为“包源”指定了 **SQL Server** 或“SSIS 包存储区”时，此选项才可用。  
   
 **Use Windows Authentication**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 身份验证登录到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 。  
   
 **Use SQL Server Authentication**  
-使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”和“密码”。  
+使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果选择了此身份验证方法，请输入相应的“用户名”和“密码”。  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供身份验证是为了向后兼容。 为了增强安全性，请使用 Windows 身份验证（如果可能的话）。  
   
 **“包”**  
 键入包的位置。  
   
 > [!IMPORTANT]  
-> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”选项卡，在“包密码”对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业将失败。  
+> 对于受密码保护的 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包，请单击“配置”选项卡，在“包密码”对话框中输入密码。 否则，执行受密码保护包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业将失败。  
   
 ### <a name="configurations-tab"></a>“配置”选项卡  
 为 [!INCLUDE[ssIS](../../includes/ssis_md.md)] 包指定配置选项。 选择此选项卡后，以下选项可用：  
@@ -379,6 +379,6 @@ ms.locfileid: "38030995"
   
 ## <a name="see-also"></a>另请参阅  
 [管理作业步骤](../../ssms/agent/manage-job-steps.md)  
-[包的 SQL Server 代理作业](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[管理复制代理](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[包的 SQL Server 代理作业](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[管理复制代理](../../relational-databases/replication/agents/replication-agent-administration.md)  
   
