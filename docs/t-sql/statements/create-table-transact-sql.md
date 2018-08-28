@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216928"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40412555"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  [ FILESTREAM_ON { filestream_filegroup_name | partition_scheme_name | "NULL" } ]  
    
-**适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]。
+**适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
  在创建聚集索引时，指定表的 FILESTREAM 数据的位置。 FILESTREAM_ON 子句用于将 FILESTREAM 数据移动到不同的 FILESTREAM 文件组或分区方案。  
   
@@ -606,7 +606,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  FILESTREAM  
    
-**适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]。
+**适用于**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
  仅对 varbinary(max) 列有效。 请为 varbinary(max) BLOB 数据指定 FILESTREAM 存储。  
   

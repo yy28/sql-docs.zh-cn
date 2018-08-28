@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145468"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415787"
 ---
 # <a name="data-collector-security"></a>数据收集器的安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   数据收集器使用由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理实现的基于角色的安全模式。 在此模式下，数据库管理员能够在只拥有执行相应任务所需的权限的安全上下文中运行各种数据收集器任务。 执行涉及内部表的操作时也采用这种方法，内部表只能通过存储过程或视图进行访问。 不会向内部表授予任何权限。 但是，还要对使用存储过程或视图访问表的用户进行权限检查。  
   
 > [!IMPORTANT]  
->  此安全模式的另一个关键点是同心权限。 在同心权限下，特权较高的角色继承特权较低的角色对对象（包括警报、运算符、作业、计划和代理）的权限。 有关详细信息，请参阅 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+>  此安全模式的另一个关键点是同心权限。 在同心权限下，特权较高的角色继承特权较低的角色对对象（包括警报、运算符、作业、计划和代理）的权限。 有关详细信息，请参阅 [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  以下各部分对数据收集安全性作了一般性介绍，还介绍了为使用户能够配置和使用数据收集器并执行与管理数据仓库关联的任务而必须授予他们的角色。  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145468"
  **mdw_reader** 角色的成员对管理数据仓库拥有读取访问权限。 由于此角色的用途在于通过提供对历史数据的访问来支持故障排除，因此该角色的成员无法查看管理数据仓库架构的其他元素。  
   
 ## <a name="see-also"></a>另请参阅  
- [实现 SQL Server 代理安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

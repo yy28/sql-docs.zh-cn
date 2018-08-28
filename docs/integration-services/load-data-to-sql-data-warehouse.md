@@ -14,18 +14,18 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020651"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409992"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据仓库中
 
 创建 SQL Server Integration Services (SSIS) 包，以将数据加载到 [Azure SQL 数据仓库](/azure/sql-data-warehouse/index)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
-本文演示如何完成以下操作。
+本文演示如何完成以下操作：
 
 * 在 Visual Studio 中创建新的 Integration Services 项目。
 * 设计可将数据从源加载到目标中的 SSIS 包。
@@ -33,7 +33,7 @@ ms.locfileid: "40020651"
 
 ## <a name="basic-concepts"></a>基本概念
 
-包是 SSIS 中的基本工作单位。 相关包在项目中进行分组。 可使用 SQL Server Data Tools 在 Visual Studio 中创建项目并设计包。 设计过程是一个可视化过程，通过该过程，可将工具箱中的组件拖放到设计图面、连接这些组件并设置其属性。 完成后可以运行包，并可选择将其部署到 SQL Server，以实现全面管理、监视和安全性。
+包是 SSIS 中的基本工作单位。 相关包在项目中进行分组。 可使用 SQL Server Data Tools 在 Visual Studio 中创建项目并设计包。 设计过程是一个可视化过程，通过该过程，可将工具箱中的组件拖放到设计图面、连接这些组件并设置其属性。 完成后可以运行包，并可选择将其部署到 SQL Server 或 SQL 数据库，从而实现全面管理、监视和安全性。
 
 本文不对 SSIS 做详细介绍。 若要了解详细信息，请参阅以下文章：
 
@@ -196,7 +196,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 8. 在“ADO.NET 目标编辑器”中，选择“映射”选项卡以查看源中的列如何映射到目标中的列。
    
     ![][13]
-9. 单击“确定”完成配置数据源。
+9. 单击“确定”完成配置目标。
 
 ## <a name="run-the-package-to-load-the-data"></a>运行包以加载数据
 单击工具栏上的“开始”按钮，或在“调试”菜单上选择其中一个“运行”选项，以运行包。

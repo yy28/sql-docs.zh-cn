@@ -21,18 +21,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5065bda0d38d08c71ca85288c407ecac36271963
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509076"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410951"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]是在 [!INCLUDE[sssql11](../../../includes/sssql11_md.md)] 中引入的高可用性和灾难恢复解决方案，它要求 Windows Server 故障转移群集 (WSFC)。 此外，尽管 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，但您可以使用故障转移群集实例 (FCI) 来为可用性组承载可用性副本。 因此，了解每种群集技术所扮演的角色以及设计您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 环境所需的注意事项十分重要。  
+   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]是在 [!INCLUDE[sssql11](../../../includes/sssql11-md.md)] 中引入的高可用性和灾难恢复解决方案，它要求 Windows Server 故障转移群集 (WSFC)。 此外，尽管 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，但您可以使用故障转移群集实例 (FCI) 来为可用性组承载可用性副本。 因此，了解每种群集技术所扮演的角色以及设计您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 环境所需的注意事项十分重要。  
   
 > [!NOTE]  
 >  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 概念的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  

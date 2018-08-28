@@ -24,12 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: bc398c3ab6675234fd48987e2f3fd45cb1a1a4c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329351"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410444"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性。  
@@ -37,7 +37,7 @@ ms.locfileid: "35329351"
 ## <a name="selecting-the-type-of-component-to-create"></a>选择要创建的组件的类型  
  向 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“数据流”窗格添加脚本组件时，将显示“选择脚本组件类型”对话框。 可将组件预配置为源、转换或目标。 进行此初始选择后，可以继续在“脚本转换编辑器”中配置组件。  
   
- 若要设置脚本组件的默认脚本语言，请使用“选项”对话框“常规”页的“脚本语言”选项。 有关详细信息，请参阅 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+ 若要设置脚本组件的默认脚本语言，请使用“选项”对话框“常规”页的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ## <a name="understanding-the-two-design-time-modes"></a>了解两种设计时模式  
  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。  

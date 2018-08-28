@@ -17,19 +17,19 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6c44f7148949290560d66a5a06dd70db13054f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95033e6bf87c78808bcfd1d9ce5b892604418ec7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863283"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410968"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   **blocked process threshold** 选项用于指定阈值（以秒为单位），超过该阈值将生成阻塞的进程报告。 该阈值可介于 0 到 86,400 之间。 默认情况下，不生成阻塞的进程报告。 对于系统任务或正在等待未生成可检测死锁的资源的任务，不生成该事件。  
   
- 可以定义一个生成该事件时执行的 [警报](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef) 。 例如，可以选择通知管理员采取相应的操作来处理阻塞情况。  
+ 可以定义一个生成该事件时执行的 [警报](../../ssms/agent/alerts.md) 。 例如，可以选择通知管理员采取相应的操作来处理阻塞情况。  
   
  阻塞的进程阈值使用死锁监视器后台线程监视等待时间大于（或数倍于）配置的阈值的任务列表。 每个报告间隔中，为每个阻塞的任务生成一次事件。  
   

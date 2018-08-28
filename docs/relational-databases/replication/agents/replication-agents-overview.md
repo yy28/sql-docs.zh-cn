@@ -29,19 +29,19 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32fbe22707d4704b29195fd88098b94a4ee2d968
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54b456761b7a2055f7eb52e95abf7e6dacba182f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350339"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412707"
 ---
 # <a name="replication-agents-overview"></a>复制代理概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   复制使用许多称为“代理”的独立程序执行与跟踪更改和分发数据关联的任务。 默认情况下，复制代理作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理安排的作业运行，必须运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，这些作业才能运行。 复制代理还可以从命令行以及由使用复制管理对象 (RMO) 的应用程序运行。 可以从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 复制监视器和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]对复制代理进行管理。  
   
 ## <a name="sql-server-agent"></a>SQL Server 代理  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理保存并安排复制中使用的代理，并提供运行复制代理的简便方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理还控制和监视复制之外的操作。 有关详细信息，请参阅 [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理保存并安排复制中使用的代理，并提供运行复制代理的简便方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理还控制和监视复制之外的操作。 有关详细信息，请参阅 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)。  
   
 > [!IMPORTANT]  
 >  默认情况下，安装完 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务处于禁用状态，除非在安装过程中明确选择自动启动该服务。 有关启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理服务的详细信息，请参阅 [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)对复制代理进行管理。  

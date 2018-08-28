@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018062"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40412690"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
 
@@ -61,7 +61,7 @@ Reporting Services Web 门户是一种基于 Web 的体验，支持查看报表�
 
 Web 门户仅适用于在本机模式下运行的报表服务器。 配置为 SharePoint 集成模式的报表服务器不支持报表管理器。
 
-仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)] 版本中才提供某些 Web 门户功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的 Reporting Services 功能 ](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+仅在特定的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中才提供某些 Web 门户功能。 有关详细信息，请参阅 [SQL Server 2016 各个版本支持的 Reporting Services 功能 ](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 如果是全新安装，则只有本地管理员有足够的权限来处理内容和设置。 若要对其他用户授予权限，本地管理员必须创建角色分配，以便提供对报表服务器的访问权限。 用户随后可以访问的应用程序页和任务将取决于该用户的角色分配。 有关详细信息，请参阅[授予用户报表服务器的访问权限](security/grant-user-access-to-a-report-server-report-manager.md)
 

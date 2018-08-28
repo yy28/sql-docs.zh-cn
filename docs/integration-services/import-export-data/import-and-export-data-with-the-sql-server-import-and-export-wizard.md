@@ -27,16 +27,16 @@ caps.latest.revision: 160
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c97ea19edfb53ddbf09316fa61f0ad6f97743cf6
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4284526fac130ede0cf85ef0c02ca9d0487b2554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402139"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412705"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>使用 SQL Server 导入和导出向导导入和导出数据
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[运行 SQL Server 导入和导出向导](https://msdn.microsoft.com/library/ms140052(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[运行 SQL Server 导入和导出向导](start-the-sql-server-import-and-export-wizard.md)。
 
  利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导，可轻松将数据从源复制到目标。 本概述介绍向导可用作源和目标的数据源，以及运行向导所需的权限。
 

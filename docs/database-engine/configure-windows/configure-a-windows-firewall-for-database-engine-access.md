@@ -18,16 +18,16 @@ caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1fa88b008e2c2115318c2c31c62b9fab94571273
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 32e7e4a33a31eaa5ad66bc33e369980425cd73e3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983839"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410970"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>为数据库引擎访问配置 Windows 防火墙
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[为数据库引擎访问配置 Windows 防火墙](https://msdn.microsoft.com/library/ms175043(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[为数据库引擎访问配置 Windows 防火墙](configure-a-windows-firewall-for-database-engine-access.md)。
 
 
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中为数据库引擎访问配置 Windows 防火墙。 防火墙系统有助于阻止对计算机资源进行未经授权的访问。 若要通过防火墙访问 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例，必须在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机上配置防火墙以允许访问。  

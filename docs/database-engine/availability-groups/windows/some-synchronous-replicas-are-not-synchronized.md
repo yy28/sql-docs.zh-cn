@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f618cba40081adfe9b38d8a8f89043a627cf5a40
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: be4b3f5d1be443d83cda98e063a0fd1adcb61926
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769803"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411764"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>一些同步副本不同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34769803"
 >  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [某些同步副本未同步](http://go.microsoft.com/fwlink/p/?LinkId=220853) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
- 在该可用性组中，至少一个同步副本当前未同步。 副本同步状态可以是 SYNCHONIZING 或 SYNCHRONIZING。  
+ 在该可用性组中，至少一个同步副本当前未同步。 副本同步状态可以是 SYNCHRONIZING 或 NOT SYNCHRONIZING。  
   
 ## <a name="possible-solution"></a>可能的解决方法  
  使用可用性副本策略状态可以找到具有错误同步状态的可用性副本，然后解决该可用性副本上的问题。  

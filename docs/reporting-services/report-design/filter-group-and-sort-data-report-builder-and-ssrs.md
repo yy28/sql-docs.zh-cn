@@ -1,7 +1,7 @@
 ---
 title: 对数据进行筛选、分组和排序（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -24,12 +24,12 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c2173ba773d10cb443c3c8b973cd64cd453ce567
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11081d98ab0f182e81a499b9222c15f3cf979141
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027364"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411766"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  
@@ -119,7 +119,7 @@ ms.locfileid: "33027364"
 ### <a name="sorting-data-in-a-dataset-query"></a>在数据集查询中对数据进行排序  
  在数据集查询中包括排序顺序可在为报表检索数据之前对数据进行预排序。 通过在查询中对数据进行排序，排序工作将由数据源而非报表处理器完成。  
   
- 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源类型，您可以向数据集查询添加 ORDER BY 子句。 例如，以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对表 SalesOrders 中的 Sales 和 Region 列按 Sales 进行降序排序： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。 有关详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335)中的“用 ORDER BY 对行进行排序”。  
+ 对于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源类型，您可以向数据集查询添加 ORDER BY 子句。 例如，以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对表 SalesOrders 中的 Sales 和 Region 列按 Sales 进行降序排序： `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。  
   
 > [!NOTE]  
 >  并非所有数据源都支持在查询中指定排序顺序的功能。  

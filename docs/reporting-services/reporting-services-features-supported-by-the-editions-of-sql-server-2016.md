@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983119"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410294"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 各个版本支持的 Reporting Services 功能
 
@@ -96,13 +96,13 @@ ms.locfileid: "38983119"
   
 |工具名称|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|开发人员|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] （.rdl 和 .rds）|用户帐户控制|是|||||用户帐户控制|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] （.rsmobile）|用户帐户控制||||||用户帐户控制|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] （.rdl 和 .rds）|用户帐户控制|是|||||用户帐户控制|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] （.rsmobile）|用户帐户控制||||||用户帐户控制|  
 |用于移动设备的 Power BI 应用（iOS、Windows 10、Android）(.rsmobile)|用户帐户控制||||||用户帐户控制|  
   
 > [!NOTE]  
 > 1.  上表标识了启用这些客户端工具所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本；但是，这些工具可以访问在任何版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上托管的数据。  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 是创建移动报表的单一点。 连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器来访问数据源并创建报表。 然后将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器以供组织中其他人访问（在服务器上或在移动设备上）。 你还可以单独与本地数据源使用 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] 是创建移动报表的单一点。 连接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器来访问数据源并创建报表。 然后将其发布到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务器以供组织中其他人访问（在服务器上或在移动设备上）。 你还可以单独与本地数据源使用 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]  
 > 3.  无论使用本地的  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 和/或云中的 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 作为报表传递解决方案，都只需要一个移动应用便可访问移动设备上的仪表板和移动报表。 可从 Windows、iOS 或 Android 应用商店下载 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 应用。  
 
 ## <a name="next-steps"></a>后续步骤

@@ -25,16 +25,16 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 621a49f9cc30b254390c50c00d3879912900fc58
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058957"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   为数据库角色添加或删除成员，或更改用户定义的数据库角色的名称。  
   
@@ -124,7 +124,7 @@ WITH NAME = new_name
 ### <a name="a-change-the-name-of-a-database-role"></a>A. 更改数据库角色的名称  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2008 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 以下示例将角色 `buyers` 的名称更改为 `purchasing`。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 以下示例将角色 `buyers` 的名称更改为 `purchasing`。   本示例可以在 [AdventureWorks](http://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. 添加或删除角色成员  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 2012 版开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- 此示例创建一个名为 `Sales` 的数据库角色。 示例向成员身份添加一个名为 Barry 的数据库用户，然后演示如何删除成员 Barry。 [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ 此示例创建一个名为 `Sales` 的数据库角色。 示例向成员身份添加一个名为 Barry 的数据库用户，然后演示如何删除成员 Barry。   本示例可以在 [AdventureWorks](http://msftdbprodsamples.codeplex.com/) 示例数据库中执行。
   
 ```sql  
 CREATE ROLE Sales;  

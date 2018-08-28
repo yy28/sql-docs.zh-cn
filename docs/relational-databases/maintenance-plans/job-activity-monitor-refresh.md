@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 652fa02e7410d9d62f8b4787c87bb02bc0e88816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52160a10a8b404588103f36c90a103f9067530ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942242"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410969"
 ---
 # <a name="job-activity-monitor-refresh"></a>作业活动监视器刷新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32942242"
   
  若要打开此对话框，请在作业活动监视器的 **“状态”** 部分中单击 **“查看刷新设置”** 。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **自动刷新间隔**  
  选中此选项将启动活动监视器信息的自动刷新功能。 默认情况下，此功能为关闭状态。  
   
@@ -39,6 +39,6 @@ ms.locfileid: "32942242"
  自动刷新的间隔秒数。 默认值为 60 秒。 当设置为 5 秒或小于 5 秒时，则每隔 5 秒刷新一次。  
   
 ## <a name="see-also"></a>另请参阅  
- [监视作业活动](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [监视作业活动](../../ssms/agent/monitor-job-activity.md)  
   
   

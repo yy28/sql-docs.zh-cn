@@ -17,16 +17,15 @@ helpviewer_keywords:
 - attackable surface area [SQL Server]
 - installing SQL Server, security
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
-caps.latest.revision: 79
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c53853cc6a87e9dcef674245581446a4cf54f540
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0a945e13450ed81bff0b5fc710942e04b86c7297
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108109"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032578"
 ---
 # <a name="surface-area-configuration"></a>外围应用配置器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "39108109"
   
  也可以使用 **sp_configure** 存储过程来设置 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 选项。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。  
   
- 若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs-md.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递”  属性和“Web 服务和 HTTP 访问”  属性，请编辑 **RSReportServer.config** 配置文件。  
+ 若要更改 **的** EnableIntegrated Security [!INCLUDE[ssRS](../../includes/ssrs.md)]属性，请使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的属性设置。 若要更改“预定事件和报表传递”  属性和“Web 服务和 HTTP 访问”  属性，请编辑 **RSReportServer.config** 配置文件。  
   
 ## <a name="command-prompt-options"></a>命令提示符选项  
  使用 **Invoke-PolicyEvaluation**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell cmdlet 可以调用外围应用配置器策略。 有关详细信息，请参阅 [使用数据库引擎 cmdlets](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)。  

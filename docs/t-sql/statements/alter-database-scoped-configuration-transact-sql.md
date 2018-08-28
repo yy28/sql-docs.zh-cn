@@ -25,12 +25,12 @@ caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 811376d76608af8d75ab68649f0eea61bfb8a5c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041935"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410967"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -242,7 +242,7 @@ ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库�
   
 **DacFx**  
   
- 由于 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL 数据库和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的导出无法导入到下级服务器。  
+ 由于 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL 数据库和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 的导出无法导入到下级服务器。  
 
 **ELEVATE_ONLINE** 
 

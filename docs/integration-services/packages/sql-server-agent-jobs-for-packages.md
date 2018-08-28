@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405149"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410965"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -121,7 +121,7 @@ ms.locfileid: "35405149"
   
 6.  选择 **“Integration Services 包”** 作为作业步骤类型。  
   
-7.  在 **“运行身份”** 列表中，选择 **“SQL Server 代理服务帐户”** 或选择该作业步骤要使用的凭据所属的代理帐户。 有关创建代理帐户的信息，请参阅 [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)。  
+7.  在 **“运行身份”** 列表中，选择 **“SQL Server 代理服务帐户”** 或选择该作业步骤要使用的凭据所属的代理帐户。 有关创建代理帐户的信息，请参阅 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
      用代理帐户来代替 **“SQL Server 代理服务帐户”** 可以解决在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行包时可能出现的常见问题。 有关这些问题的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](http://support.microsoft.com/kb/918760)。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "35405149"
   
      **包源**：SSIS 目录  
   
-    |选项卡|“常规”|  
+    |选项卡|选项|  
     |---------|-------------|  
     |**“包”**|**Server**<br /><br /> 键入或选择承载 SSISDB 目录的数据库服务器实例的名称。<br /><br /> 如果 **“SSIS 目录”** 为包源，则可以仅使用 Microsoft Windows 用户帐户登录该服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证不可用。|  
     ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”** 节点下的文件夹中选择包。|  
@@ -162,7 +162,7 @@ ms.locfileid: "35405149"
   
      可以为存储在 SQL Server、SSIS 包存储区或文件系统中的包设置的许多选项都对应于 **dtexec** 命令提示实用工具的命令行选项。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](../../integration-services/packages/dtexec-utility.md)。  
   
-    |选项卡|“常规”|  
+    |选项卡|选项|  
     |---------|-------------|  
     |**“包”**<br /><br /> 这些是存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区中的包的选项卡选项。|**Server**<br /><br /> 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务键入或选择数据库服务器实例的名称。|  
     ||**Use Windows Authentication**<br /><br /> 选择此选项可以使用 Microsoft Windows 用户帐户登录该服务器。|  
@@ -188,7 +188,7 @@ ms.locfileid: "35405149"
     >   
     >  没有在 **“配置”** 选项卡上的列表框中选择包含变量的服务器环境。  
   
-10. 若要为作业步骤创建计划，请单击 **“选择页”** 窗格中的 **“计划”** 。 有关如何配置计划的信息，请参阅 [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)。  
+10. 若要为作业步骤创建计划，请单击 **“选择页”** 窗格中的 **“计划”** 。 有关如何配置计划的信息，请参阅 [Schedule a Job](../../ssms/agent/schedule-a-job.md)。  
   
     > [!TIP]  
     >  为计划命名时，请考虑使用唯一的描述性名称，以便与其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理计划区分。  

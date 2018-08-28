@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206007"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410440"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>选择数据库引擎升级方法
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206007"
  迁移用户数据库之后，可使用多种方法中的一种将新用户指向到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如重命名服务器、使用 DNS 条目、修改连接字符串）。  与就地升级相比，新的安装方法可以降低风险和停机时间，并可有助于同时完成操作系统的升级和升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#RollingUpgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](http://msdn.microsoft.com/library/ms190941.aspx) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](http://msdn.microsoft.com/library/hh510260.aspx) 作为永久的 HA 解决方案。  
+>  如果已有到位的高可用性 (HA) 解决方案或其他的多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例环境，请转到 [滚动升级](#RollingUpgrade)。 如果没有到位的高可用性解决方案，则可以考虑临时配置 [数据库镜像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 以进一步最小化停机时间从而简化此升级，或者利用这个机会配置 [AlwaysOn 可用性组](http://msdn.microsoft.com/library/hh510260.aspx) 作为永久的 HA 解决方案。  
   
  例如，可以使用这种方法来升级：  
   

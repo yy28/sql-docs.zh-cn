@@ -1,7 +1,7 @@
 ---
 title: 对数据区域中的数据排序（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 642d8f6d08c21daa478bbc159b2fe71461ba0391
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df797c994e76d7dd816cd041d3b59cb9d14af052
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026994"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40415806"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>对数据区域中的数据排序（报表生成器和 SSRS）
   若要更改报表首次运行时数据区域中数据的排序顺序，必须为数据区域或组设置排序表达式。 默认情况下，组的排序表达式自动设置为与组表达式相同的值。  
@@ -131,7 +131,6 @@ ms.locfileid: "33026994"
  有关如何在仪表中对数据进行分组的详细信息，请参阅[仪表（报表生成器和 SSRS）](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [用于对话框、窗格和向导的报表生成器帮助](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [设置图表上轴标签的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [对多个形状图指定一致的颜色（报表生成器和 SSRS）](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  
