@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 61c92e767ae38797eb75cd9d72342507323e1e8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535188"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405634"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "39535188"
      查看或指定对象的扩展属性。 每个扩展属性都由与该对象关联的元数据的名称/值对组成。  
   
      **省略号 (…)**  
-     单击“值”后面的省略号“(…)”按钮可打开“已扩展属性的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](http://msdn.microsoft.com/library/ms189353.aspx)。  
+     单击“值”后面的省略号“(…)”按钮可打开“已扩展属性的值”对话框。 在这一较大的范围中键入或查看扩展属性的值。 有关详细信息，请参阅 [“扩展属性的值”对话框](../../databases/value-for-extended-property-dialog-box.md)。  
   
      **删除**  
      删除所选扩展属性。  

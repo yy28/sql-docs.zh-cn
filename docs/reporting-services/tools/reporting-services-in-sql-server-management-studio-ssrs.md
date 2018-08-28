@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031464"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405631"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio 中的 Reporting Services (SSRS)
   报表服务器管理员可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 执行以下操作：  
   
 -   启用功能、设置服务器默认设置和管理正在运行的作业。  
   
--   查看和创建自定义报表。 在对象资源管理器中，很多节点都显示一组随 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]一起安装的标准报表。 您必须具有管理员权限。 自定义报表的架构必须匹配已安装报表的架构。 有关详细信息，请参阅 [Management Studio 中的自定义报表](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979)和[查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
+-   查看和创建自定义报表。 在对象资源管理器中，很多节点都显示一组随 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]一起安装的标准报表。 您必须具有管理员权限。 自定义报表的架构必须匹配已安装报表的架构。 有关详细信息，请参阅 [Management Studio 中的自定义报表](../../ssms/object/custom-reports-in-management-studio.md)和[查找报表定义架构版本 (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)。  
   
  报告作者可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 执行以下操作：  
   

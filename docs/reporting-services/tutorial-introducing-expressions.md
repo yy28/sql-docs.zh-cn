@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77179704548ef164d61dae18bb311704247768c
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036954"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405154"
 ---
 # <a name="tutorial-introducing-expressions"></a>教程：表达式简介
-该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
+该 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程介绍了如何使用包含常用函数和运算符的表达式创建功能强大且灵活的 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表。 
 
 将编写表达式，这些表达式用于连接名称值、在单独的数据集中查找值和基于字段值显示不同的颜色等。  
   

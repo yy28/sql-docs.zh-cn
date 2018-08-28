@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036394"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405265"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>教程：向报表添加迷你图（报表生成器）
 
-在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]的本教程中，使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中的迷你图创建基本表。   
+在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]的本教程中，使用 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中的迷你图创建基本表。   
   
 迷你图和数据条是较小的简单图表，可以在很小的空间中传递很多信息，常常出现在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 报表的表格和矩阵中。 下图所示报表和你要创建的报表类似。  
   

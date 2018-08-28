@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0480ac34db87ee4dca4675998946c60e28667586
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: f8ff9ce3660da3c2586eee9c7f71d905a4730457
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559237"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405171"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[执行存储过程](https://msdn.microsoft.com/library/ms189915(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[执行存储过程](execute-a-stored-procedure.md)。
 
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行存储过程。  
   

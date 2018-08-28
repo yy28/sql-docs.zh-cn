@@ -24,15 +24,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3dfb6829e2da4e4200ce754529af9b88a69b5e49
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b3653cfdfc50a4e11b46f1b9f611d94d18aaa353
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455581"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405509"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 了解可在 SQL 数据库中使用的内置函数类别。 可以使用内置函数，或创建自己的用户定义函数。
   

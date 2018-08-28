@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769913"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405625"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769913"
   
 -   **SharePoint 模式：** 对于已发布到 SharePoint 服务器的报表，使用文档库内的 SharePoint 配置页。  
   
--   **报表设计：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep或ts. 有关详细信息，请参阅本主题中的“报表设计”部分。  
+-   **报表设计：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] when you are creating new rep或ts. 有关详细信息，请参阅本主题中的“报表设计”部分。  
   
  **其他资源：**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769913"
  将只读辅助副本作为 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源时，确保数据更新滞后时间满足报表用户的要求很重要。  
   
 ##  <a name="bkmk_reportdesign"></a> 报表设计和可用性组  
- 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 中设计报表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中创建报表项目时，用户可以配置报表数据源连接字符串以包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]提供的新连接属性。 对连接属性的支持取决于用户在何处预览报表。  
+ 在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 中设计报表或在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]中创建报表项目时，用户可以配置报表数据源连接字符串以包含 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]提供的新连接属性。 对连接属性的支持取决于用户在何处预览报表。  
   
--   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
+-   **本地预览：** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 使用 .Net framework 4.0，并支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串属性。  
   
--   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)]中使用预览后，您看到与以下内容相似的错误，指出您正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
+-   **远程或服务器模式预览：** 如果在将报表发布到报表服务器或在 [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)]中使用预览后，您看到与以下内容相似的错误，指出您正在预览报表服务器上的报表而该报表服务器上未安装针对 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的 .Net Framework 3.5 SP1 修补程序。  
   
 > **错误消息：** “关键字不受支持的 "applicationintent"”  
   

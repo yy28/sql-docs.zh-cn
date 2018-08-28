@@ -18,12 +18,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d74d77229e88e04c2d661da827b4d6183ab2d2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 070b34a724914147f87f48df00a1e5778695e3a5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952524"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405635"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>配置警报以通知策略管理员策略失败情况
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "32952524"
   
  若要设置警报以响应基于策略的管理错误消息，请参阅以下主题：  
   
--   [创建操作员](http://msdn.microsoft.com/library/1359d790-5905-4927-a208-e7155e7768a2)  
+-   [创建操作员](../../ssms/agent/create-an-operator.md)  
   
--   [使用错误号创建警报](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [使用错误号创建警报](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [向操作员分配警报](http://msdn.microsoft.com/library/aa818155-6fa2-4565-a09f-5c7e31c89754)  
+-   [向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  在按需评估策略时，将会在用户的安全上下文中执行这些策略。 若要写入错误日志，用户必须具有 ALTER TRACE 权限或者是 sysadmin 固定服务器角色的成员。 具有更低权限的用户评估的策略不会写入事件日志，并且不会触发警报。  
   
  自动执行模式是以 sysadmin 角色成员的身份执行的。 这样，策略便可以写入错误日志并引发警报。  

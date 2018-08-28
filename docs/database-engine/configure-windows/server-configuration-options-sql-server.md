@@ -33,12 +33,12 @@ caps.latest.revision: 128
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8af2acc0708f595a77b2ca4859df4aaaa3f5d7f5
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: af328924116f1409fa6507c30353c74dca93504f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854299"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405393"
 ---
 # <a name="server-configuration-options-sql-server"></a>服务器配置选项 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "37854299"
     |[affinity64 mask](../../database-engine/configure-windows/affinity64-mask-server-configuration-option.md) （A，RR），仅适用于 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
     |[代理 XP](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) (A)|0|@shouldalert|0<br /><br /> （当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理启动时，更改为 1。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理设置为在安装过程中自动启动，则默认值为 0。）|  
     |[允许更新](../../database-engine/configure-windows/allow-updates-server-configuration-option.md) （已过时。 请勿使用。 将在重新配置期间导致错误。）|0|@shouldalert|0|  
-    |[自动 soft-NUMA 已禁用](http://msdn.microsoft.com/library/ms345357.aspx)|0|@shouldalert|0|  
+    |[自动 soft-NUMA 已禁用](soft-numa-sql-server.md)|0|@shouldalert|0|  
     |[备份校验和默认值](../../database-engine/configure-windows/backup-checksum-default.md)|0|@shouldalert|0|  
     |[backup compression default](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|@shouldalert|0| 
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  

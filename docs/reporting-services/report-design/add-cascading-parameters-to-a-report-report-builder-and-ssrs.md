@@ -1,7 +1,7 @@
 ---
 title: 向报表添加级联参数（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77c4ede074611b60c33777d64b8ff5308fc343f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 980f17539e4230d5064ad9cc6d7cfc387b7dad84
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021554"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405518"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
   级联参数提供了一种管理大量报表数据的方法。 您可以定义一组相关参数，使一个参数的值列表取决于其他参数选取的值。 例如，第一个参数是独立的，并且可能提供产品类别列表。 当用户选中某个类别后，第二个参数则取决于第一个参数的值。 第二个参数的值根据所选类别中的子类别列表进行更新。 用户查看报表时，类别和子类别参数的值用于筛选报表数据。  
@@ -48,7 +48,7 @@ ms.locfileid: "33021554"
   
     1.  数据源字段列表。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句中，SELECT 语句指定给定表或视图中数据库列名的列表。  
   
-    2.  每个级联参数的一个查询参数。 查询参数通过指定查询中要包含或排除的特定值来限制从数据源中检索的数据。 通常，查询参数出现在查询的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，查询参数出现在 WHERE 子句中。 有关详细信息，请参阅位于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [上的](http://go.microsoft.com/fwlink/?linkid=120955)文档中的“使用 WHERE 和 HAVING 筛选行”。  
+    2.  每个级联参数的一个查询参数。 查询参数通过指定查询中要包含或排除的特定值来限制从数据源中检索的数据。 通常，查询参数出现在查询的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句中，查询参数出现在 WHERE 子句中。  
   
 6.  单击 **“运行”** (**“!”**)。 在包括查询参数并运行查询之后，将自动创建对应于查询参数的报表参数。  
   

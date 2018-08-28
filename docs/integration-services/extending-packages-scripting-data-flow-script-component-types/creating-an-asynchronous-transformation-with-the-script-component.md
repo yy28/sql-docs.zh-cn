@@ -23,12 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16b02c1a56bc91064d88a0d0e7c72ce0fc4662d4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: fa9658e7c918eb7e648f294a89dd7bdcc823e303
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401609"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405638"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用脚本组件创建异步转换
   在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的数据流中使用转换组件可以在数据从源传递到目标时修改和分析该数据。 具有同步输出的转换在每个输入行传递给该组件时对该行进行处理。 具有异步输出的转换可能要等收到所有输入行之后才完成其处理，也可能在收到所有输入行之前输出某些行。 本主题讨论异步转换。 如果你的处理需要同步转换，请参阅[使用脚本组件创建同步转换](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)。 有关同步组件和异步组件之间的差异的详细信息，请参阅[了解同步和异步转换](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "35401609"
  若要选择脚本组件使用的脚本语言，请在“脚本转换编辑器”对话框的“脚本”页设置 **ScriptLanguage** 属性。  
   
 > [!NOTE]  
->  若要设置脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+>  若要设置脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“脚本语言”选项。 有关详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
  数据流转换组件有一个输入并支持一个或多个输出。 在编写自定义脚本之前，必须在元数据设计模式下完成的一个步骤是使用“脚本转换编辑器”配置组件的输入和输出。  
   

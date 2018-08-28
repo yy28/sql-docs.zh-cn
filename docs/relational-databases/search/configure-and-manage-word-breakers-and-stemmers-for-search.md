@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c8b06eb2cfa065bcd578a58b15c6f18a5ad5fe16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 74aa0130158b7062ad6df04d2fc15e7449060f91
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39545357"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405514"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 如需其他选项和详细信息，请参阅 [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)。
 
 ##  <a name="tshoot"></a> 排查断字超时错误  
- 在多种情况下会发生断字超时错误。 若要了解这些情况以及如何在每种情况下进行响应，请参阅 [MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx)。
+ 在多种情况下会发生断字超时错误。 若要了解这些情况以及如何在每种情况下进行响应，请参阅 [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md)。
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>有关 MSSQLSERVER_30053 错误的信息
   

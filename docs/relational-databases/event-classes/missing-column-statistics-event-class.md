@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 5ec5d952b66880877782dd749cd2c2f670b0bb28
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: bb747b4f6027bc9ffbaab8e8cd01ac17e70992e3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558437"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405632"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "39558437"
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
- [监视事件和响应事件](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)  
+ [监视事件和响应事件](../../ssms/agent/monitor-and-respond-to-events.md)  
   
   

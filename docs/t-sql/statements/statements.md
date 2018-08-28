@@ -17,15 +17,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d16ea90f6455c429e5e1efc646630eb6acf4d022
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 538542a1745eaeafe9f33c0509047fb22a05978d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456971"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405506"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL 语句
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 本参考主题总结了用于 Transact-SQL (T-SQL) 的语句的类别。 左侧导航栏中列出了所有语句。
 

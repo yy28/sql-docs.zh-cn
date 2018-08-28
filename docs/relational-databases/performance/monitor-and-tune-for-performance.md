@@ -33,12 +33,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 61dcf1b12a4bcf782f00a2a40f3d9336e67db7d3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3a9720e0b2db4ef1dbbdf2738e019d4107e00ee2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538837"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405172"
 ---
 # <a name="monitor-and-tune-for-performance"></a>监视和优化性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "39538837"
 |[Query Store 最佳实践](../../relational-databases/performance/best-practice-with-the-query-store.md)|有关使用查询存储的建议。|  
   
 ## <a name="see-also"></a>另请参阅  
- [企业范围的自动化管理](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
+ [企业范围的自动化管理](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server 事件探查器](../../tools/sql-server-profiler/sql-server-profiler.md)  

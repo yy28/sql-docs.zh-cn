@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951812"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405515"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 代理中的 JobSteps 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951812"
   
  下表列出了 **SQLAgent:JobSteps** 计数器。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |**Active steps**|此计数器报告当前运行的作业步骤数。|  
 |**Queued steps**|此计数器报告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理准备运行但尚未开始运行的作业步骤数。|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951812"
   
  对象中的每个计数器均包含以下实例：  
   
-|实例|Description|  
+|实例|描述|  
 |--------------|-----------------|  
 |**_Total**|有关所有作业步骤的信息。|  
 |**ActiveScripting**|有关使用 **ActiveScripting** 子系统的作业步骤的信息。|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951812"
 |**TSQL**|有关执行 [!INCLUDE[tsql](../../includes/tsql-md.md)]的作业步骤的信息。|  
   
 ## <a name="see-also"></a>另请参阅  
- [管理作业步骤](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [使用性能对象](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [管理作业步骤](../../ssms/agent/manage-job-steps.md)   
+ [使用性能对象](../../ssms/agent/use-performance-objects.md)   
  [监视资源使用情况（系统监视器）](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

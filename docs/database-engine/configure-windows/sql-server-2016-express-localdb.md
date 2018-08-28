@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984499"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405755"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)。
 
-Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 功能。 它在具有高级服务的 SQL Server 2016 Express 上可用。  
+Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 功能。 它在具有高级服务的 SQL Server 2016 Express 上可用。  
 
  **LocalDB** 安装将复制启动 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所需的最少的文件集。 安装 LocalDB 后，你可以使用特定连接字符串来启动连接。 连接时，将自动创建并启动所需的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基础结构，从而使应用程序无需执行复杂的配置任务即可使用数据库。 开发人员工具可以向开发人员提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，使其不必管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的完整服务器实例即可撰写和测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代码。 
  

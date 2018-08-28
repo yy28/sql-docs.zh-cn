@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: e7c60cdc292523207809404f5721d643cf6c7e89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549827"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405394"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>创建并存储列主密钥 (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 若要使 HSM 可用于指定计算机上的应用程序，必须在该计算机上安装并配置实现 CNG 的密钥存储提供者 (KSP)。 始终加密客户端驱动程序（驱动程序内的列主密钥存储提供者）使用 KSP 加密和解密使用存储在密钥存储中的列主密钥保护的列加密密钥。
 
-Windows 包括 Microsoft 软件密钥存储提供者 – 可用于测试的基于软件的 KSP。 请参阅 [《CNG Key Storage Providers》](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)（CNG 密钥存储提供者）。
+Windows 包括 Microsoft 软件密钥存储提供者 – 可用于测试的基于软件的 KSP。 请参阅 [《CNG Key Storage Providers》](/windows/desktop/SecCertEnroll/cng-key-storage-providers)（CNG 密钥存储提供者）。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>使用 CNG/KSP 在密钥存储中创建列主密钥
 

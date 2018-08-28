@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993949"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405378"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993949"
   
  **使用 SQL Server Management Studio 创建 WMI 警报**  
   
--   [创建 WMI 事件警报](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [创建 WMI 事件警报](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>镜像数据库事件通知工作原理  
  因为镜像数据库可以进行故障转移，所以涉及镜像数据库的事件通知的跨数据库传递是按照定义以远程方式进行的。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 以*镜像路由*的形式为镜像数据库提供特殊支持。 镜像路由有两个地址：一个针对主体服务器实例，另一个针对镜像服务器实例。  
@@ -214,11 +214,11 @@ ms.locfileid: "37993949"
   
 -   作业使用的登录名  
   
-     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅 [配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)。  
+     若要创建或执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业，首先必须将作业所需的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名添加到目标服务器实例。 有关详细信息，请参阅 [配置帐户以创建和管理 SQL Server 代理作业](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务启动帐户  
   
-     服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 代理服务的上下文会影响作业及其运行环境的设置。 帐户必须有权访问作业所需的资源（如网络共享）。 有关如何选择和修改服务启动帐户的信息，请参阅 [选择 SQL Server 代理服务帐户](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7)。  
+     服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 代理服务的上下文会影响作业及其运行环境的设置。 帐户必须有权访问作业所需的资源（如网络共享）。 有关如何选择和修改服务启动帐户的信息，请参阅 [选择 SQL Server 代理服务帐户](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。  
   
      为了正常操作，必须对服务启动帐户进行配置，使其具有正确的域、文件系统和注册表权限。 此外，作业可能还需要必须针对服务帐户配置的共享网络资源。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993949"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户定义指定作业步骤的安全上下文。 对于要在目标服务器实例上运行的作业，必须在此实例上手动重新创建此作业所需的所有代理。 有关详细信息，请参阅 [创建 SQL Server 代理程序代理](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) 和 [对使用代理的多服务器作业进行故障排除](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280)。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户定义指定作业步骤的安全上下文。 对于要在目标服务器实例上运行的作业，必须在此实例上手动重新创建此作业所需的所有代理。 有关详细信息，请参阅 [创建 SQL Server 代理程序代理](../../ssms/agent/create-a-sql-server-agent-proxy.md) 和 [对使用代理的多服务器作业进行故障排除](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)。  
   
  有关详细信息，请参阅：  
   
--   [执行作业](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [执行作业](../../ssms/agent/implement-jobs.md)  
   
 -   [角色切换后登录名和作业的管理 (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)（为镜像数据库）  
   
 -   [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)（安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
   
--   [配置 SQL Server 代理](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) （安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
+-   [配置 SQL Server 代理](../../ssms/agent/configure-sql-server-agent.md) （安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例时）  
   
--   [实现 SQL Server 代理安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [实现 SQL Server 代理安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **查看现有作业及其属性**  
   
--   [监视作业活动](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [监视作业活动](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [查看作业步骤信息](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [查看作业步骤信息](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **创建作业**  
   
--   [创建作业](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [创建作业](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [创建作业](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>使用脚本重新创建作业的最佳实践  
  建议您首先编写简单作业的脚本，接下来在其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务上重新创建此作业，然后运行此作业以查看它是否按预期方式工作。 这样便可确定不兼容性并尝试进行解决。 如果已编写脚本的作业在新环境中未按预期方式工作，则建议您创建可在此环境中正常工作的等价作业。  

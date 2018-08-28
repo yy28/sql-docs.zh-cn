@@ -21,12 +21,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23f57dcabfa354d68aef8aafa7a27a1ae1960bd6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9b03dd4e3e18a9e67bcdf07c867d0ddb93c19a73
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452161"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405510"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -34,7 +34,7 @@ ms.locfileid: "39452161"
 
 将 R 包从指定的字节流或文件路径上传到数据库。
 
-数据库管理员上传任何新的外部语言运行时（R、Python、Java 等）以及 [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)] 支持的操作系统平台所需的项目时，此语句可作为通用机制发挥作用。 
+数据库管理员上传任何新的外部语言运行时（R、Python、Java 等）以及 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 支持的操作系统平台所需的项目时，此语句可作为通用机制发挥作用。 
 
 当前仅支持 R 包和 Windows 平台。 计划在之后发布的版本中提供对 Python 和 Linux 的支持。
 

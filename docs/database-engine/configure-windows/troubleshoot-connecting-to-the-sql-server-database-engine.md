@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870802"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405759"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>排查连接到 SQL Server 数据库引擎时发生的问题
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "32870802"
 ## <a name="testing-a-local-connection"></a>测试本地连接
 
 在从另一台计算机排查连接问题之前，首先测试你是否能够从运行 SQL Server 的计算机上安装的客户端应用程序进行连接。 （这将避免发生防火墙问题）。此过程使用 SQL Server Management Studio。 如果未安装 Management Studio，请参阅[下载 SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)。 （如果无法安装 Management Studio，则可以使用随数据库引擎一起安装的 `sqlcmd.exe` 实用工具来测试连接。 有关 `sqlcmd.exe`的信息，请参阅 [sqlcmd 实用工具](../../tools/sqlcmd-utility.md)。）
-1.  使用有权访问 SQL Server 的登录名登录到安装了 SQL Server 的计算机。 （在安装期间，SQL Server 要求将至少一个登录名指定为 SQL Server 管理员。 如果不知道管理员，请参阅[在系统管理员被锁定时连接到 SQL Server](http://msdn.microsoft.com/library/dd207004.aspx)。
+1.  使用有权访问 SQL Server 的登录名登录到安装了 SQL Server 的计算机。 （在安装期间，SQL Server 要求将至少一个登录名指定为 SQL Server 管理员。 如果不知道管理员，请参阅[在系统管理员被锁定时连接到 SQL Server](connect-to-sql-server-when-system-administrators-are-locked-out.md)。
 2.   在“开始”页上键入 **SQL Server Management Studio**，或在旧版 Windows 的“开始”菜单上，指向“所有程序”，指向“Microsoft SQL Server”，然后单击“SQL Server Management Studio”。
 3.  在“连接到服务器”对话框的“服务器类型”框中，选择“数据库引擎”。 在“身份验证”框中，选择“Windows 身份验证”。 在“服务器名称”框中，键入以下项之一：
 
@@ -107,7 +107,7 @@ ms.locfileid: "32870802"
 如果此时收到一个错误，则必须先解决它，然后才能继续操作。 有许多可能属于问题的情况。 你的登录名可能未获权进行连接。 你的默认数据库可能已丢失。
 
 >    [!NOTE] 
->    某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 如果收到错误 18456“用户登录失败”，联机丛书主题 [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) 包含有关错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx) 中提供了非常详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
+>    某些传递到客户端的错误消息故意不提供足够的信息来排查问题。 这是一项安全功能，目的是避免为攻击者提供有关 SQL Server 的信息。 若要查看有关错误的完整信息，请查找 SQL Server 错误日志。 那里提供了详细信息。 如果收到错误 18456“用户登录失败”，联机丛书主题 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 包含有关错误代码的其他信息。 Aaron Bertrand 的博客[故障排除错误 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx) 中提供了非常详细的错误代码列表。 你可以在对象资源管理器的“管理”部分中使用 SSMS（如果可以连接）查看错误日志。 否则，可以使用 Windows 记事本程序查看错误日志。 默认位置因版本而异，且可以在安装过程中更改。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 的默认位置是 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`。  
 
 4.   如果可以使用共享内存进行连接，请使用 TCP 测试连接。 你可以通过在名称前指定 **tcp:** 来强制建立 TCP 连接。 例如：
 
@@ -123,7 +123,7 @@ ms.locfileid: "32870802"
 ## <a name="opening-a-port-in-the-firewall"></a>在防火墙中打开端口
 
 从多年前的 Windows XP Service Pack 2 开始，便已打开 Windows 防火墙，用于阻止来自另一台计算机的连接。 若要从另一台计算机使用 TCP/IP 进行连接，则必须在 SQL Server 计算机上，将防火墙配置为允许连接到数据库引擎所使用的 TCP 端口。 如前所述，默认实例通常侦听 TCP 端口 1433。 如果具有命名实例，或者更改了默认值，则 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] TCP 端口可能侦听其他端口。 请参阅开头部分有关收集信息以确定端口的内容。  
-如果要连接到命名实例或 TCP 端口 1433 以外的端口，则还必须为 SQL Server Browser 服务打开 UDP 端口 1434。 有关在 Windows 防火墙中打开端口的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](https://msdn.microsoft.com/library/ms175043)。
+如果要连接到命名实例或 TCP 端口 1433 以外的端口，则还必须为 SQL Server Browser 服务打开 UDP 端口 1434。 有关在 Windows 防火墙中打开端口的分步说明，请参阅 [为数据库引擎访问配置 Windows 防火墙](configure-a-windows-firewall-for-database-engine-access.md)。
 
 ## <a name="testing-the-connection"></a>测试连接
 

@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8269b227a144f8e600ca885adaf5b80f2a521e19
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055832"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405153"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>解决 Reporting Services 报表设计问题
 在报表创作应用程序的设计视图中创建报表布局时，可能发生报表设计问题。 使用本主题可以帮助解决这些问题。   
@@ -66,5 +66,5 @@ PageNumber 和 TotalPages 仅在页眉和页脚中有效。
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
