@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042594"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774754"
 ---
 # <a name="options-environment---help---online-page"></a>选项（“环境”-“帮助”-“联机”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“选项”对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，选择“帮助”，再单击“联机”。 如果列表中没有显示“联机”页，请在“选项”对话框中选中“显示所有设置”复选框。  
+使用“选项”对话框，可以指定用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 搜索的帮助源，包括 F1 帮助。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，选择“帮助”，再单击“联机”。 如果列表中没有显示“联机”页，请在“选项”对话框中选中“显示所有设置”复选框。  
   
 **当载入帮助内容时**  
 设置在 F1 帮助中使用帮助源的顺序，并指定使用哪些帮助源。  

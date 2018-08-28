@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b88a2d50bd748da3e56d43367706715fa4739f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f136453aadd5562a5d6263752af7413abed86c1c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043864"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774162"
 ---
 # <a name="handle-multiple-job-steps"></a>处理多个作业步骤
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,25 +39,25 @@ ms.locfileid: "33043864"
   
 ![SQL Server 代理作业步骤控制流](../../ssms/agent/media/dbflow01.gif "SQL Server 代理作业步骤控制流")  
   
-第一步是备份数据库。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将把失败报告给定义为接收通知的操作员。 如果备份数据库步骤成功，则作业将继续进行下一步，即“清理”客户端数据。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理将向前跳至还原数据库。 如果“清理”客户端数据成功，则作业将继续进行下一步，即更新统计信息，如此继续，直至最后报告成功或报告失败。  
+第一步是备份数据库。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把失败报告给定义为接收通知的操作员。 如果备份数据库步骤成功，则作业将继续进行下一步，即“清理”客户端数据。 如果这一步失败， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将向前跳至还原数据库。 如果“清理”客户端数据成功，则作业将继续进行下一步，即更新统计信息，如此继续，直至最后报告成功或报告失败。  
   
 为每个作业步骤的成功和失败都定义一个流控制操作。 必须指定作业步骤成功执行的操作和作业步骤失败时执行的操作。 还可以定义对失败的作业步骤进行重试的次数以及重试时间间隔。  
   
 > [!NOTE]  
-> 当使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理图形用户界面 (GUI) 并从多步骤作业中删除一个或多个步骤时，GUI 将删除所有作业步骤，然后使用正确的成功时或失败时引用重新添加剩余的步骤。 例如，假设您有一个包含五个步骤的作业，第一步配置为在顺利完成时即跳到第 4 步。 如果删除第 3 步，则 GUI 将删除此作业的所有步骤，然后使用正确的引用添加剩余的四个步骤（1、2、4 和 5）。 在此示例中，第 1 步中的引用将重新配置为在第 1 步顺利完成时即跳到第 3 步。  
+> 当使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理图形用户界面 (GUI) 并从多步骤作业中删除一个或多个步骤时，GUI 将删除所有作业步骤，然后使用正确的成功时或失败时引用重新添加剩余的步骤。 例如，假设您有一个包含五个步骤的作业，第一步配置为在顺利完成时即跳到第 4 步。 如果删除第 3 步，则 GUI 将删除此作业的所有步骤，然后使用正确的引用添加剩余的四个步骤（1、2、4 和 5）。 在此示例中，第 1 步中的引用将重新配置为在第 1 步顺利完成时即跳到第 3 步。  
   
-作业步骤必须自包含。 也就是说，作业不能在作业步骤之间传递布尔值、数据或数值。 但可以使用永久表或全局临时表在 [!INCLUDE[tsql](../../includes/tsql_md.md)] 作业步骤之间传递值。 可以使用文件在运行可执行程序的作业步骤之间传递值。 例如，一个作业步骤运行的可执行程序向一个文件写入数据，后续作业步骤运行的可执行程序读取该文件。  
+作业步骤必须自包含。 也就是说，作业不能在作业步骤之间传递布尔值、数据或数值。 但可以使用永久表或全局临时表在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤之间传递值。 可以使用文件在运行可执行程序的作业步骤之间传递值。 例如，一个作业步骤运行的可执行程序向一个文件写入数据，后续作业步骤运行的可执行程序读取该文件。  
   
 > [!NOTE]  
-> 如果创建循环作业步骤（作业步骤 1 后面跟着作业步骤 2，然后作业步骤 2 又返回到作业步骤 1），则在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]创建作业时会出现警告消息。  
+> 如果创建循环作业步骤（作业步骤 1 后面跟着作业步骤 2，然后作业步骤 2 又返回到作业步骤 1），则在使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]创建作业时会出现警告消息。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在作业历史记录中记录作业和作业步骤信息。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在作业历史记录中记录作业和作业步骤信息。  
   
 ## <a name="see-also"></a>另请参阅  
-[sp_add_job](http://msdn.microsoft.com/en-us/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  
-[sysjobhistory](http://msdn.microsoft.com/en-us/1b1fcdbb-2af2-45e6-bf3f-e8279432ce13)  
+[sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
+[sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](http://msdn.microsoft.com/en-us/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  
-[sysjobsteps](http://msdn.microsoft.com/en-us/978b8205-535b-461c-91f3-af9b08eca467)  
+[sysjobsteps](../../relational-databases/system-tables/dbo-sysjobsteps-transact-sql.md)  
 [执行作业](../../ssms/agent/implement-jobs.md)  
 [管理作业步骤](../../ssms/agent/manage-job-steps.md)  
   

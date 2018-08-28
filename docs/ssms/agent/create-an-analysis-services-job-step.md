@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d661cde875e4bbec00f503c86d623279fa97622d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980129"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774868"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38980129"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中创建和定义通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 SQL Server 管理对象执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]Analysis Services 命令和查询的 [!INCLUDE[tsql](../../includes/tsql_md.md)] 代理作业步骤。  
+本主题说明如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中创建和定义通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 SQL Server 管理对象执行 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Analysis Services 命令和查询的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代理作业步骤。  
   
 -   **开始之前：**  
   
@@ -51,17 +51,17 @@ ms.locfileid: "38980129"
   
 ### <a name="Restrictions"></a>限制和局限  
   
--   如果作业步骤使用 Analysis Services 命令，则命令语句必须是 XML for Analysis Services **Execute** 方法。 该语句可以不包含完整的简单对象访问协议 (SOAP) 信封和 XML for Analysis **Discover** 方法。 虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业步骤却不支持。 有关 XML for Analysis Services 的详细信息，请参阅 [XML for Analysis 概述 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
+-   如果作业步骤使用 Analysis Services 命令，则命令语句必须是 XML for Analysis Services **Execute** 方法。 该语句可以不包含完整的简单对象访问协议 (SOAP) 信封和 XML for Analysis **Discover** 方法。 虽然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 支持完整的 SOAP 信封和 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤却不支持。 有关 XML for Analysis Services 的详细信息，请参阅 [XML for Analysis 概述 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
   
 -   如果作业步骤使用 Analysis Services 查询，则查询语句必须是多维表达式 (MDX) 查询。 有关 MDX 的详细信息，请参阅 [MDX 语句基础知识 (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
   
--   若要运行使用 Analysis Services 子系统的作业步骤，用户必须是 **sysadmin** 固定服务器角色的成员或有权访问为使用该子系统而定义的有效代理帐户。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务帐户或代理必须是 Analysis Services 管理员或有效的 Windows 域帐户。  
+-   若要运行使用 Analysis Services 子系统的作业步骤，用户必须是 **sysadmin** 固定服务器角色的成员或有权访问为使用该子系统而定义的有效代理帐户。 此外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户或代理必须是 Analysis Services 管理员或有效的 Windows 域帐户。  
   
--   只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到文件中。 如果运行作业步骤的用户是 **msdb** 数据库中 **SQLAgentUserRole** 数据库角色的成员，则输出只能写入表中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理会将作业步骤输出写入 **msdb** 数据库中的 **sysjobstepslog** 表。  
+-   只有 **sysadmin** 固定服务器角色的成员才可以将作业步骤输出写入到文件中。 如果运行作业步骤的用户是 **msdb** 数据库中 **SQLAgentUserRole** 数据库角色的成员，则输出只能写入表中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会将作业步骤输出写入 **msdb** 数据库中的 **sysjobstepslog** 表。  
   
 -   有关详细信息，请参阅 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "38980129"
   
 8.  在 **“命令”** 框中，键入要执行的语句，或者单击 **“打开”** 选择一个语句。  
   
-9. 单击 **“高级”** 页可定义此作业步骤的选项，例如在作业步骤成功或失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理所应执行的操作、作业步骤的尝试次数以及用于写入作业步骤输出的位置。  
+9. 单击 **“高级”** 页可定义此作业步骤的选项，例如在作业步骤成功或失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所应执行的操作、作业步骤的尝试次数以及用于写入作业步骤输出的位置。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>创建 Analysis Services 查询作业步骤  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38980129"
   
 8.  在 **“命令”** 框中，键入要执行的语句，或者单击 **“打开”** 选择一个语句。  
   
-9. 单击 **“高级”** 页可定义此作业步骤的选项，例如在作业步骤成功或失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理所应执行的操作、作业步骤的尝试次数以及用于写入作业步骤输出的位置。  
+9. 单击 **“高级”** 页可定义此作业步骤的选项，例如在作业步骤成功或失败时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理所应执行的操作、作业步骤的尝试次数以及用于写入作业步骤输出的位置。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

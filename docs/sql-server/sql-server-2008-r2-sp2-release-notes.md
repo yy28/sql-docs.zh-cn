@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926248"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774774"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "36926248"
 ## <a name="20-before-you-install"></a>2.0 安装前  
 有关如何安装 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 更新的信息，请参阅 [SQL Server 2008 R2 服务文档](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx)(#sql-server-2008-r2-服务文档)。  
   
-有关如何安装和开始使用 SQL Server 2008 R2 的一般信息，请参阅 SQL Server 2008 R2 自述文件。 安装介质中提供了自述文档。 您还可以在 [SQL Server 联机丛书](http://msdn.microsoft.com/library/ms130214.aspx) 中以及 [SQL Server 论坛](http://social.msdn.microsoft.com/Forums/category/sqlserver/)上找到更多的信息。  
+有关如何安装和开始使用 SQL Server 2008 R2 的一般信息，请参阅 SQL Server 2008 R2 自述文件。 安装介质中提供了自述文档。 您还可以在 [SQL Server 联机丛书](sql-server-technical-documentation.md) 中以及 [SQL Server 论坛](http://social.msdn.microsoft.com/Forums/category/sqlserver/)上找到更多的信息。  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 正确选择要下载及安装的文件  
 请使用下表来确定要下载和安装的文件。 安装 Service Pack 之前请验证您的系统是符合要求的。 表中链接的下载页上提供了系统要求。  

@@ -24,23 +24,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6fadfa9b084a16f6464bbebf6d6a8e32b7cbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a5f04afddbc388dba0e4efde00f4cd1096ce1bc0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015966"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774635"
 ---
 # <a name="template-explorer"></a>Template Explorer
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会将模板的副本置于 C:\Users AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 下的用户文件夹中。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会将模板的副本置于 C:\Users AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 下的用户文件夹中。  
   
 您可以在模板资源管理器中浏览可用模板，然后打开该模板以便将代码纳入代码编辑器窗口中。 也可以创建自定义模板。  
   
 ## <a name="benefits-of-templates"></a>模板的优点  
 模板适用于解决方案、项目和各种类型的代码编辑器。 模板可用于创建对象，如数据库、表、视图、索引、存储过程、触发器、统计信息和函数。 此外，通过创建用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]的扩展属性、链接服务器、登录名、角色、用户和模板，有些模板还可以帮助您管理服务器。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”对话框可以将值插入到脚本中。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供的模板脚本包含了可以帮助您自定义代码的参数。 打开模板后，使用“替换模板参数”对话框可以将值插入到脚本中。  
   
 为频繁执行的任务创建自定义模板。 将自定义脚本组织到现有文件夹中，或创建一个新的文件夹结构。  
   

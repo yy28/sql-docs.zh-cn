@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26112fd5fa3052e6aa5f873a436aafce7430d498
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76ca616057ba53fa60fb9d53bd7ff79ff2598864
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047304"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774380"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>“CHECK 约束表达式”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ NOT (payment_method = 'credit card') OR
   
 SQL 语法由下列参数组成：  
   
-|参数|Description|  
+|参数|描述|  
 |-------------|---------------|  
 |常量|一个如数值数据或字符数据之类的文本值。 字符数据必须用单引号 (') 括起来。|  
 |column_name|指定列。|  
@@ -71,6 +71,6 @@ SQL 语法由下列参数组成：
 |NOT|对任何布尔表达式（可包含如 LIKE、NULL、BETWEEN、IN 和 EXISTS 之类的关键字）求反。<br /><br />当在一个语句中使用多个逻辑运算符时，首先处理 NOT。 可以使用括号更改执行顺序。|  
   
 ## <a name="see-also"></a>另请参阅  
-[唯一约束和 CHECK 约束](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[创建唯一约束](http://msdn.microsoft.com/en-us/a86f9d6f-f242-43be-b65d-b3435b71b62a)  
+[唯一约束和 CHECK 约束](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
+[创建唯一约束](../../relational-databases/tables/create-unique-constraints.md)  
   

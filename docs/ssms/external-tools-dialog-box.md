@@ -19,16 +19,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83752eac337db70ea2aa382cc426c7eb1859d096
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979861"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774276"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
+使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
 ## <a name="options"></a>选项  
 **菜单内容**  
@@ -56,7 +56,7 @@ ms.locfileid: "38979861"
 指定在菜单上选择某个工具时传递到该工具的变量。 参数可以指定启动工具或命令时传递给工具或命令的值。 例如，参数值可以指定文件名或目录。 使用箭头按钮可以从预定义的参数列表中进行选择。 您可以添加多个参数。 有关预定义参数及其定义的完整列表，请参阅 [外部工具的参数](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 还可以输入自定义参数（例如，命令行开关），这取决于所使用的命令或工具。  
   
 **使用输出窗口**  
-打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)。  
+打开 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 输出窗口显示正在运行命令的输出。 并非所有工具都以在输出窗口中显示的格式显示输出。 有关详细信息，请参阅 [输出窗口](../relational-databases/scripting/transact-sql-debugger-output-window.md)。  
   
 **将输出按 Unicode 处理**  
 将输出解析为 Unicode。  
@@ -76,7 +76,7 @@ ms.locfileid: "38979861"
 |Box|ReplTest1|  
 |-------|---------|  
 |**标题**|DAC|  
-|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath_md.md)]Tools\Binn\SQLCMD.exe|  
+|**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**参数**|-A|  
   
 ## <a name="see-also"></a>另请参阅  

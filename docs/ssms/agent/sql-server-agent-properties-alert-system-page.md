@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 493e81d1d245920b391374ef146d6b4dfb0586a9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a9a27740fe2aaa85a4341baf44dcb8b8e99e1fd2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035939"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774395"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 代理属性（“警报系统”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "38035939"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看和修改由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报所发送的消息的设置。  
+使用此页可以查看和修改由 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报所发送的消息的设置。  
   
 ## <a name="options"></a>选项  
 **邮件会话**  
-此部分中的选项用于配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理邮件。  
+此部分中的选项用于配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理邮件。  
   
 **启用邮件配置文件**  
-启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理邮件。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理邮件。  
+启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理邮件。 默认情况下，不启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理邮件。  
   
 **邮件系统**  
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理要使用的邮件系统。 数据库邮件  
+设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的邮件系统。 数据库邮件  
   
 > [!NOTE]  
-> 更改电子邮件系统后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务才能使更改生效。  
+> 更改电子邮件系统后，必须重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务才能使更改生效。  
   
 **邮件配置文件**  
-设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理要使用的配置文件。 也可以选择“\<新建数据库邮件配置文件...>”创建新的配置文件。  
+设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理要使用的配置文件。 也可以选择“\<新建数据库邮件配置文件...>”创建新的配置文件。  
   
 **寻呼电子邮件**  
 使用此部分中的选项，可以配置发送给寻呼地址的电子邮件，以便与您的寻呼系统协同工作。  
@@ -104,18 +104,18 @@ ms.locfileid: "38035939"
 设置用于通知防故障操作员的方式。  
   
 **标记替换**  
-使用此选项，可以启用作业步骤标记，这些标记能够用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报运行的作业。 有关作业步骤标记的详细信息，请参阅 [在作业步骤中使用标记](../../ssms/agent/use-tokens-in-job-steps.md)。  
+使用此选项，可以启用作业步骤标记，这些标记能够用于由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报运行的作业。 有关作业步骤标记的详细信息，请参阅 [在作业步骤中使用标记](../../ssms/agent/use-tokens-in-job-steps.md)。  
   
 > [!IMPORTANT]  
-> 任何对 Windows 事件日志具有写权限的 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理标记已被禁用。 这些标记包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
+> 任何对 Windows 事件日志具有写权限的 Windows 用户都可以访问由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报激活的作业步骤。 为了防范此安全隐患，默认情况下，可以在由警报激活的作业中使用的特定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理标记已被禁用。 这些标记包括： **$(A-DBN)**、 **$(A-SVR)**、 **$(A-ERR)**、 **$(A-SEV)** 和 **$(A-MSG)**。  
 >   
-> 如果需要使用这些标记，请在启用它们之前，确保只有可信 Windows 安全组（例如 Administrators 组）的成员具有对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 所在计算机的事件日志的写权限。  
+> 如果需要使用这些标记，请在启用它们之前，确保只有可信 Windows 安全组（例如 Administrators 组）的成员具有对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在计算机的事件日志的写权限。  
   
 **为警报的所有作业响应替换标记**  
-选中此复选框可以为由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 警报激活的作业启用标记替换。  
+选中此复选框可以为由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 警报激活的作业启用标记替换。  
   
 ## <a name="see-also"></a>另请参阅  
 [运算符](../../ssms/agent/operators.md)  
-[配置 SQL Server 代理邮件以使用数据库邮件](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
-[数据库邮件](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[配置 SQL Server 代理邮件以使用数据库邮件](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)  
+[数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   

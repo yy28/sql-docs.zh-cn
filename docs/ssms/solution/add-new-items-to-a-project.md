@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01a3d385d52f90eb48cf9c4ca6f9b19c9639e596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d5c47238cd5e12cd2260eec1d83f09f726ebd1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045404"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774657"
 ---
 # <a name="add-new-items-to-a-project"></a>向项目添加新项
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-向项目中添加新项，以扩展应用程序功能。 新项可以是查询或连接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些项可以添加到项目中，这取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。  
+向项目中添加新项，以扩展应用程序功能。 新项可以是查询或连接。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些项可以添加到项目中，这取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。  
   
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 不允许在项目中创建文件夹。 若要组织您的工作，请在解决方案中创建多个项目。  
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允许在项目中创建文件夹。 若要组织您的工作，请在解决方案中创建多个项目。  
   
 ### <a name="to-add-a-new-query-to-an-existing-project"></a>在现有项目中添加新查询  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33045404"
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  
-[将文件扩展名与代码编辑器关联](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[将文件扩展名与代码编辑器关联](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
 [向项目中添加现有项](../../ssms/solution/add-existing-items-to-a-project.md)  
 [移除或删除项或项目](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   

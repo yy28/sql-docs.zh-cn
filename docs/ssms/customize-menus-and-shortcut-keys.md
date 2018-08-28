@@ -25,12 +25,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4152bca5efcafb59de4f08c299b4ff3c9a66b9d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6bcca6b82d28f350571105826131c0fd99152a12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045864"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774022"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>自定义菜单和快捷键
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -164,7 +164,7 @@ ms.locfileid: "33045864"
 6.  在“自定义”对话框中，单击“关闭”。  
   
 > [!NOTE]  
-> 某些命令仅在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 显示相关内容时才可用。 如果菜单上的所有命令均不可用，则该菜单项将不可用。  
+> 某些命令仅在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 显示相关内容时才可用。 如果菜单上的所有命令均不可用，则该菜单项将不可用。  
   
 ## <a name="see-also"></a>另请参阅  
 [SQL Server Management Studio 中的功能](../ssms/features-in-sql-server-management-studio.md)  

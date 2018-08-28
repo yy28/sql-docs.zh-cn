@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980429"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774517"
 ---
 # <a name="operators"></a>运算符
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980429"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的功能。  
+操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  
   
 ## <a name="operator-attributes-and-concepts"></a>运算符属性和概念  
 操作员的主要属性如下：  
@@ -52,13 +52,13 @@ ms.locfileid: "38980429"
 -   联系人信息  
   
 ### <a name="naming-an-operator"></a>命名操作员  
-每个操作员都必须有一个名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例中，操作员名称必须是唯一的，并且长度不得超过 **128** 个字符。  
+每个操作员都必须有一个名称。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中，操作员名称必须是唯一的，并且长度不得超过 **128** 个字符。  
   
 ### <a name="contact-information"></a>联系人信息  
 操作员的联系信息决定了通知该操作员的方式。 可以通过电子邮件、寻呼程序或 **net send** ：  
   
 > [!IMPORTANT]  
-> 在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
+> 在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
 -   **电子邮件通知**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "38980429"
   
         此软件为寻呼服务提供商专有。 此软件充当电子邮件客户程序，定期处理收件箱中的邮件，把电子邮件的全部或部分地址信息解释为寻呼号，或将电子邮件名称与转换表中的寻呼号相匹配。  
   
-        如果所有操作员共享一个寻呼服务提供商的服务，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 指定寻呼到电子邮件系统需要的任何特殊电子邮件格式。 特殊格式可以是前缀或后缀，可以包含在电子邮件的下列行中：  
+        如果所有操作员共享一个寻呼服务提供商的服务，则可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定寻呼到电子邮件系统需要的任何特殊电子邮件格式。 特殊格式可以是前缀或后缀，可以包含在电子邮件的下列行中：  
   
         **主题：**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38980429"
     此方式通过 **net send** 命令向操作员发送消息。 对于 **net send**，需要指定网络消息的收件人（计算机或用户）。  
   
     > [!NOTE]  
-    > **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的计算机和操作员使用的计算机上运行。  
+    > **net send** 命令使用 Microsoft Windows Messenger。 若要成功发送警报，此服务必须同时在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机和操作员使用的计算机上运行。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警报和防故障操作员  
 可以选择在发生警报时要通知的操作员。 例如，可以通过计划警报来指定操作员轮流接收通知， 如果星期一、星期三和星期五出现警报，则通知操作员 A；如果星期二、星期四和星期六出现警报，则通知操作员 B；  
@@ -109,7 +109,7 @@ ms.locfileid: "38980429"
   
     无法到达主要操作员的原因包括寻呼地址错误和操作员不在岗位。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理无法访问 **msdb** 数据库中的系统表。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理无法访问 **msdb** 数据库中的系统表。  
   
     **sysnotifications** 系统表可指定负责警报的操作员。  
   
@@ -133,5 +133,5 @@ ms.locfileid: "38980429"
 |与分配警报相关的任务|[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[定义对警报的响应 (SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[向操作员分配警报](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[数据库邮件](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   

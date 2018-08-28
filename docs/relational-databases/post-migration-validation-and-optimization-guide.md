@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 041b08244a94ebb9a8ae8f377591e35ba5046819
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297363"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405151"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>迁移后验证和优化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "36297363"
 5.  使用 `DISABLE_PARAMETER_SNIFFING` 提示重写查询。 完全禁用参数截取与使用本地变量方法的效果相同（除非使用 `OPTION(RECOMPILE)`、`WITH RECOMPILE` 或 `OPTIMIZE FOR <value>`）。
 
 > [!TIP] 
-> 利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 计划分析功能快速识别这是否是一个问题。 请访问[此处](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)了解更多可用信息。
+> 利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 计划分析功能快速识别这是否是一个问题。 请访问[此处](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/)了解更多可用信息。
 
 ## <a name="MissingIndexes"></a>缺失索引
 

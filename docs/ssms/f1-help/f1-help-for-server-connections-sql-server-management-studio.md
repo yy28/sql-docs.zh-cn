@@ -21,16 +21,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4eac1ca30c2b83ca3086d602b58985c0436ff5eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a84882745a60e3a13c95072f1792e468d04a37cd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042624"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774498"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>服务器连接的 F1 帮助 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“连接到服务器”对话框页的 F1 帮助。  
+本节介绍了 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“连接到服务器”对话框页的 F1 帮助。  
   
 [查找服务器（本地服务器）](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

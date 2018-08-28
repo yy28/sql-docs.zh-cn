@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979849"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774260"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>选项对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中“工具”菜单上“选项”调用的对话框的 F1 帮助。  
+本节包含可通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中“工具”菜单上“选项”调用的对话框的 F1 帮助。  
   
 [选项（“设计器”-“Analysis Services 设计器”-“常规”）](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

@@ -17,18 +17,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7fae20ced8820f16353c8e8cc4633dda078b3a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9510075daf0ab89b2369f250071c136fde2703e9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045844"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774650"
 ---
 # <a name="object-dependencies"></a>对象依赖关系
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 一些数据库对象与其他数据库对象存在依赖关系。 例如，视图和存储过程依赖于包含视图或过程返回的数据的表是否存在。 当前对象的“对象依赖关系（‘常规’页）”列出了该对象正常运行所需的数据库对象和依赖于所选对象的对象。 在其定义中引用了另一个对象并且该定义存储在系统目录中的对象称为“引用实体”。 被另一对象引用的对象称为“被引用实体”。  
   
-当前对象的“对象依赖关系（‘高级’页）”列出了依赖于该对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库对象和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] 对象。 这些对象可存储于不同的服务器上。  
+当前对象的“对象依赖关系（‘高级’页）”列出了依赖于该对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库对象和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 对象。 这些对象可存储于不同的服务器上。  
   
 使用此对话框可在更改或删除所选对象之前了解其依赖关系。  
   
@@ -70,5 +70,5 @@ ms.locfileid: "33045844"
   
 -   不可用或未解析的实体  
   
-    指示无法确定依赖关系的类型。 只有所选对象位于早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]实例上时才会出现这种情况。  
+    指示无法确定依赖关系的类型。 只有所选对象位于早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]实例上时才会出现这种情况。  
   

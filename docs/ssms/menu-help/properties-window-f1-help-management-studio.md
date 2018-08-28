@@ -28,12 +28,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c7320b1f4d91d94b4e53da3640458030057a45f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 399b756b0530079c6f38732da4ebf1ef94755e73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044584"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774045"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33044584"
   
 “属性”窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **对象名称**  
 列出当前选择的对象。 只有处于活动状态的编辑器或设计器中的对象是可见的。  
   
@@ -58,5 +58,5 @@ ms.locfileid: "33044584"
 说明窗格显示在“属性”窗口的底部，用于显示属性类型和属性的简短说明。 可以使用快捷菜单上的“说明”命令打开或关闭属性的说明。  
   
 ## <a name="see-also"></a>另请参阅  
-[SQL Server Management Studio 中的“属性”窗口](http://msdn.microsoft.com/en-us/903d4aca-f57c-43d9-a893-702eceaa7004)  
+[SQL Server Management Studio 中的“属性”窗口](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

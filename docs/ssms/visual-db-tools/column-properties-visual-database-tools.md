@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981799"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774636"
 ---
 # <a name="column-properties-visual-database-tools"></a>列属性 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
+有两种列属性集：可在表设计器的“列属性”选项卡中看到的完整集（仅适用于 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库）以及可使用服务器资源管理器在“属性”窗口中看到的子集。  
   
 > [!NOTE]  
 > 本主题中的属性按类别排序，而不是按字母顺序排序。  
@@ -42,7 +42,7 @@ ms.locfileid: "38981799"
 在服务器资源管理器中选择列后，“属性”窗口中将显示以下属性：  
   
 > [!NOTE]  
-> 使用服务器资源管理器访问的这些属性是只读的。 若要编辑 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库的列属性，请在表设计器中选择相应的列。 本主题稍后部分中将介绍那些属性。  
+> 使用服务器资源管理器访问的这些属性是只读的。 若要编辑 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的列属性，请在表设计器中选择相应的列。 本主题稍后部分中将介绍那些属性。  
   
 **标识类别**  
 展开此项可显示“名称”和“数据库”属性。  
@@ -60,13 +60,13 @@ ms.locfileid: "38981799"
 显示所选列的数据类型。 有关详细信息，请参阅 [数据类型 (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4)。  
   
 **标识增量**  
-显示标识列各后续行的“标识种子”将增加的增量。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。）  
+显示标识列各后续行的“标识种子”将增加的增量。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
   
 **标识种子**  
-显示分配给表中标识列的第一行的种子值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。）  
+显示分配给表中标识列的第一行的种子值。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
   
 **是标识**  
-显示所选列是否为表的标识列。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。）  
+显示所选列是否为表的标识列。 （仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。）  
   
 **长度**  
 显示基于字符的数据类型所允许的字符数。  
@@ -84,7 +84,7 @@ ms.locfileid: "38981799"
 若要访问这些属性，请在服务器资源管理器中右键单击列所属的表，选择“打开表定义”，然后在表设计器的表网格中选择行。  
   
 > [!NOTE]  
-> 这些属性仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+> 这些属性仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 **常规类别**  
 展开此项可显示“名称”、“允许空值”、“数据类型”、“默认值或绑定”、“长度”、“精度”和“小数位数”。  
@@ -185,11 +185,11 @@ ms.locfileid: "38981799"
 显示是否在其他位置复制此列。  
   
 **是 RowGuid**  
-指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 是否将该列用作 ROWGUID。 只有对于数据类型为 **uniqueidentifier** 的列，才能将此值设置为“是”。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
+指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否将该列用作 ROWGUID。 只有对于数据类型为 **uniqueidentifier** 的列，才能将此值设置为“是”。 若要编辑此属性，请单击该属性的值，展开下拉列表，然后选择其他值。  
   
 **Size**  
 显示该列的数据类型所允许的大小（字节）。 例如，某个 **nchar** 数据类型的长度为 10（字符数），但在 Unicode 字符集中，该数据类型的大小为 20。  
   
 > [!NOTE]  
-> **varchar(max)** 数据类型的长度对于每一行都会有所不同。 sp_help 返回 (-1) 作为 **varchar(max)** 列的长度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 显示 -1 作为列大小。  
+> **varchar(max)** 数据类型的长度对于每一行都会有所不同。 sp_help 返回 (-1) 作为 **varchar(max)** 列的长度。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 显示 -1 作为列大小。  
   

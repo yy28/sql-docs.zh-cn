@@ -18,16 +18,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e29b71abbcba7e5b37ff1547321b6bd6d27d339c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c103c7149b26a1d87be4436a91ba4ae211440aff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047164"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42773928"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 文档。  
+使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文档。  
   
 在以下情况下将显示此对话框：  
   
@@ -35,9 +35,9 @@ ms.locfileid: "33047164"
   
 -   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 **(…)**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **SQL 排序规则**  
-在下拉列表中由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定义的排序规则顺序之间进行选择。  
+在下拉列表中由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义的排序规则顺序之间进行选择。  
   
 **Windows 排序规则**  
 在下拉列表中由 Windows 定义的排序规则顺序之间进行选择。  

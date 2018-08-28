@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0099048b3de1461971e115ea3cfff0d1ff9d95e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cc4329825ce9374cb7dae6bdd8b8823a913b2f4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999659"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774141"
 ---
 # <a name="page-setup-dialog-box"></a>“页面设置”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "37999659"
 从列表中选择大小。  
   
 **数据源**  
-指定要使用的纸张。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 列出了可用于所选打印机的纸张来源。  
+指定要使用的纸张。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 列出了可用于所选打印机的纸张来源。  
   
 ## <a name="orientation"></a>Orientation  
 **纵向**  

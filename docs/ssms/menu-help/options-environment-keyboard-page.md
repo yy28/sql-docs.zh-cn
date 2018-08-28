@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982489"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774164"
 ---
 # <a name="options-environment---keyboard-page"></a>选项（“环境”-“键盘”页）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
+使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  
   
-“键盘方案”下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”对话框时，单击“确定”。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]中。  
+“键盘方案”下拉列表提供了可用快捷键的集合。 若要加载特定的方案，请从列表中选择该方案。 在准备离开“选项”对话框时，单击“确定”。 选定的方案将被加载到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中。  
   
 **Standard**  
-“标准”方案是 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的默认设置，与 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 快捷键非常相似。  
+“标准”方案是 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的默认设置，与 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio 快捷键非常相似。  
   
 使用“查询快捷方式”网格可以将存储过程与键盘快捷方式相关联。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "38982489"
 **存储过程**  
 在按键盘快捷键时执行的存储过程。  
   
-有关每个方案中键盘快捷键的列表，请参阅 [SQL Server Management Studio 键盘快捷键](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8)。  
+有关每个方案中键盘快捷键的列表，请参阅 [SQL Server Management Studio 键盘快捷键](../sql-server-management-studio-keyboard-shortcuts.md)。  
   

@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4a2823e644e002dbb326ea98531d449377accac
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 29d06a93a797ca312ce4a6e60fabb9a221be4dc7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083809"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774163"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>如何使用 CLR 数据库对象
-除了 Transact\-SQL 编程语言之外，还可以使用 .NET Framework 语言创建用于检索和更新数据的数据库对象。 使用托管代码编写的数据库对象被称为“SQL Server 公共语言运行时 (CLR) 数据库对象”。 有关使用在 SQL Server 中承载的 CLR 数据库对象的优点以及如何在 Transact\-SQL 和 CLR 之间进行选择的说明，请参阅 [CLR 集成的优点](http://msdn.microsoft.com/en-us/library/ms131045.aspx)和[使用托管代码创建数据库对象的优点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)。  
+除了 Transact\-SQL 编程语言之外，还可以使用 .NET Framework 语言创建用于检索和更新数据的数据库对象。 使用托管代码编写的数据库对象被称为“SQL Server 公共语言运行时 (CLR) 数据库对象”。 有关使用在 SQL Server 中承载的 CLR 数据库对象的优点以及如何在 Transact\-SQL 和 CLR 之间进行选择的说明，请参阅 [CLR 集成的优点](../relational-databases/clr-integration/clr-integration-overview.md)和[使用托管代码创建数据库对象的优点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)。  
   
 若要使用 SQL Server Data Tools 创建 CLR 数据库对象，应创建一个数据库项目，然后向其中添加一个 CLR 数据库对象。 与 Visual Studio 以前的版本不同的是，您无需创建不同的 CLR 项目然后从数据库项目添加对它的引用。 当您生成并发布数据库项目时，将会同时在该项目中自动发布 CLR 对象。 在发布这些 CLR 对象之后，可以像其他数据库对象一样调用和执行它们。  
   
@@ -86,7 +86,7 @@ CLR 属性页和 CLR 生成属性页包含很多关于在项目中使用 CLR 数
   
 1.  在 SQL Server 对象资源管理器中，导航到要部署项目的本地数据库。  
   
-2.  默认情况下，在 SQL Server 中会关闭 CLR 集成。 若要使用 CLR 数据库对象，必须启用 CLR 集成。 为此，请使用 sp_configure 存储过程的“clr enabled”选项。 有关详细信息，请参阅[“CLR 已启用”选项主题](http://msdn.microsoft.com/en-us/library/ms131048.aspx)。  
+2.  默认情况下，在 SQL Server 中会关闭 CLR 集成。 若要使用 CLR 数据库对象，必须启用 CLR 集成。 为此，请使用 sp_configure 存储过程的“clr enabled”选项。 有关详细信息，请参阅[“CLR 已启用”选项主题](../relational-databases/clr-integration/clr-integration-enabling.md)。  
   
     右键单击该数据库并选择“新建查询”。 在查询窗格中，粘贴以下代码并按“执行查询”按钮。  
   
@@ -105,7 +105,7 @@ CLR 属性页和 CLR 生成属性页包含很多关于在项目中使用 CLR 数
 5.  将你的输入更改为 425 312 1222 并按 Tab 键离开该字段。 请注意，这次将接受该输入。  
   
 ## <a name="see-also"></a>另请参阅  
-[CLR 集成的优点](http://msdn.microsoft.com/en-us/library/ms131045.aspx)  
+[CLR 集成的优点](../relational-databases/clr-integration/clr-integration-overview.md)  
 [使用托管代码创建数据库对象的优点](http://msdn.microsoft.com/en-us/library/k2e1fb36.aspx)  
 [使用公共语言运行时 (CLR) 集成生成数据库对象](http://msdn.microsoft.com/en-us/library/ms131046.aspx)  
   

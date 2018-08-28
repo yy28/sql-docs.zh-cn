@@ -16,12 +16,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e43296dc139f2e8b53454f088fc341ab40656f5f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036015"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774399"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
@@ -105,7 +105,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 |Xquery 语言参考 (SQL Server) | Xquery 语言参考 (SQL Server)|
 
 > [!NOTE]
-> 如果帮助查看器在添加内容时冻结（挂起），请将 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 文件中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行更改为将来的某个日期。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](https://msdn.microsoft.com/en-us/library/dd831853.aspx)。
+> 如果帮助查看器在添加内容时冻结（挂起），请将 %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings 或 HlpViewer_VisualStudiox_en-US.settings 文件中的 Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" 行更改为将来的某个日期。 有关此问题的详细信息，请参阅 [《Visual Studio 帮助查看器冻结》](/visualstudio/welcome-to-visual-studio)。
 
 **使用帮助查看器 v2.x 查看 SSMS 中的脱机帮助内容**
 
