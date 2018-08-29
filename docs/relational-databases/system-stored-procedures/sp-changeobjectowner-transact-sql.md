@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_changeobjectowner
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
-caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: db97bba80119f8d460b221bcbfdb4932e1eee692
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e3150cce9a4ddb4fce2dd1e7bfc6196858f63ec6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005719"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032420"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
  若要更改安全对象的所有者，请使用 ALTER AUTHORIZATION. 若要更改架构，请使用 ALTER SCHEMA。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**db_owner**固定数据库角色或成员身份，在这种**db_ddladmin**固定的数据库角色并**db_securityadmin**固定数据库角色此外，还可以控制对象的权限。  
   
 ## <a name="examples"></a>示例  

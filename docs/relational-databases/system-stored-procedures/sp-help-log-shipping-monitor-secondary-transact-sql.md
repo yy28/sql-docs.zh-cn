@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_monitor_secondary (Transact SQL) |Microsoft 文档
+title: sp_help_log_shipping_monitor_secondary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6e667981bd9fb3ba0f67e260da05a7b92d324d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 598f988483e3bef6ffe784f7be18145ebf1a89e5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247356"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028001"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_help_log_shipping_monitor_secondary
  [ **@secondary_server =** ] '*secondary_server*'  
  辅助服务器的名称。 *secondary_server*是**sysname**，无默认值。  
   
- [  **@secondary_database =** ]*secondary_database*  
+ [  **@secondary_database =** ] '*secondary_database*  
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -58,7 +57,7 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>结果集  
   
-|列|Description|  
+|“列”|Description|  
 |------------|-----------------|  
 |**secondary_server**|辅助实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。|  
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
@@ -76,14 +75,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|上次对辅助数据库执行还原操作的时间和日期，以通用协调时间表示。|  
 |**history_retention_period**|日志传送历史记录在删除前保留在给定辅助数据库中的时间（分钟）。|  
   
-## <a name="remarks"></a>注释  
- **sp_help_log_shipping_monitor_secondary**必须从运行**master**监视服务器上的数据库。  
+## <a name="remarks"></a>Remarks  
+ **sp_help_log_shipping_monitor_secondary**必须从运行**主**在监视服务器上的数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="see-also"></a>另请参阅  
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

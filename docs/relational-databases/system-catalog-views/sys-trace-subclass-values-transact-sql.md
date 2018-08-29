@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_subclass_values catalog view
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 070327b43854e9b78f927e68ebfb1f20d607f5d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 883a6f21668553271de54e8d4f1b04f3fe30274f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969630"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024910"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +42,12 @@ ms.locfileid: "37969630"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**int**|跟踪事件的 ID。 此参数也是在**sys.trace_events**目录视图。|  
-|**trace_column_id**|**int**|用于枚举的跟踪列的 ID。 此参数也是在**sys.trace_columns**目录视图。|  
+|**trace_event_id**|**smallint**|跟踪事件的 ID。 此参数也是在**sys.trace_events**目录视图。|  
+|**trace_column_id**|**smallint**|用于枚举的跟踪列的 ID。 此参数也是在**sys.trace_columns**目录视图。|  
 |**subclass_name**|**nvarchar(128)**|列值的含义。|  
-|**subclass_value**|**int**|列值。|  
+|**subclass_value**|**smallint**|列值。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

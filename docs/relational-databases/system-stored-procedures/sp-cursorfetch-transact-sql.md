@@ -1,5 +1,5 @@
 ---
-title: sp_cursorfetch (Transact SQL) |Microsoft 文档
+title: sp_cursorfetch (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240237"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034650"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  从数据库中提取由一行或多行组成的缓冲区。 在此缓冲区中的行组被称为游标的*提取缓冲区*。 通过指定 ID 调用 sp_cursorfetch = 7 表格格式数据流 (TDS) 数据包中的。  
+  从数据库中提取由一行或多行组成的缓冲区。 此缓冲区中的行组称为游标*提取缓冲区*。 通过指定 ID 来调用 sp_cursorfetch = 7 在表格格式数据流 (TDS) 包中的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,45 +46,45 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是*处理*生成值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，且返回 sp_cursoropen。 *光标*是必需的参数来调用**int**输入值。 有关详细信息，请参阅本主题后面的备注一节。  
+ 是*处理*生成的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并由 sp_cursoropen 返回。 *游标*是一个必需的参数，为调用**int**输入值。 有关详细信息，请参阅本主题后面备注部分。  
   
  *fetchtype*  
- 指定要提取的游标缓冲区。 *fetchtype*是需要一个以下整数输入值的可选参数。  
+ 指定要提取的游标缓冲区。 *fetchtype*是一个可选参数，需要以下整数输入值之一。  
   
-|“值”|名称|Description|  
+|ReplTest1|“属性”|Description|  
 |-----------|----------|-----------------|  
-|0x0001|FIRST|提取的第一个缓冲区*nrows*行。 如果*nrows*等于 0 游标位于结果集之前，会返回任何行。|  
+|0x0001|FIRST|提取的第一个缓冲区*nrows*行。 如果*nrows*等于 0，游标位于结果集前面且不返回任何行。|  
 |0x0002|NEXT|提取的下一个缓冲区*nrows*行。|  
-|0x0004|PREV|提取的上一个缓冲区*nrows*行。<br /><br /> 注意： 对于 FORWARD_ONLY 游标使用上一步返回一条错误消息，因为 FORWARD_ONLY 仅支持一个方向滚动。|  
-|0x0008|LAST|提取的最后一个缓冲区*nrows*行。 如果*nrows*等于 0，则游标位于结果集，并会返回任何行之后。<br /><br /> 注意： 对于 FORWARD_ONLY 游标使用上一次返回一条错误消息，因为 FORWARD_ONLY 仅支持一个方向滚动。|  
-|0x10|ABSOLUTE|提取的缓冲区*nrows*开头的行*rownum*行。<br /><br /> 注意： 使用绝对动态游标或 FORWARD_ONLY 光标返回一条错误消息，因为 FORWARD_ONLY 仅支持一个方向滚动。|  
-|0x20|RELATIVE|提取的缓冲区*nrows*开头为指定的行的行*rownum*当前块中的第一行中的行的值。 在这种情况下*rownum*可以是负数。<br /><br /> 注意： 对于 FORWARD_ONLY 游标使用相对返回一条错误消息，因为 FORWARD_ONLY 仅支持一个方向滚动。|  
+|0x0004|PREV|提取的上一缓冲区*nrows*行。<br /><br /> 请注意： 将 PREV 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x0008|LAST|最后一个缓冲区中提取*nrows*行。 如果*nrows*等于 0，则游标位于结果集并不返回行之后。<br /><br /> 请注意： 将 LAST 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x10|ABSOLUTE|提取的缓冲区*nrows*开头的行*rownum*行。<br /><br /> 请注意： 将 ABSOLUTE 用于 DYNAMIC 游标或 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
+|0x20|RELATIVE|提取的缓冲区*nrows*行的行的指定作为起始*rownum*从当前块中的第一行的行的值。 在这种情况下*rownum*可以是负数。<br /><br /> 请注意： 将 RELATIVE 用于 FORWARD_ONLY 游标返回一条错误消息，因为 FORWARD_ONLY 仅支持单向滚动。|  
 |0x80|REFRESH|重新填充基础表中的缓冲区。|  
-|0x100|INFO|检索有关游标的信息。 通过使用返回此信息*rownum*和*nrows*参数。 因此，指定信息时， *rownum*和*nrows*成为输出参数。|  
+|0x100|INFO|检索有关游标的信息。 使用返回此信息*rownum*并*nrows*参数。 因此，指定信息时， *rownum*并*nrows*成为输出参数。|  
 |0x200|PREV_NOADJUST|用法类似于 PREV。 但是，如果过早遇到结果集顶部，结果可能有所不同。|  
-|0x400|SKIP_UPDT_CNCY|必须用于的另一个*fetchtype*值，但信息除外。|  
+|0x400|SKIP_UPDT_CNCY|必须使用与其他*fetchtype*值，INFO 除外。|  
   
 > [!NOTE]  
 >  不支持值 0x40。  
   
- 有关详细信息，请参阅本主题后面的备注一节。  
+ 有关详细信息，请参阅本主题后面备注部分。  
   
  *rownum*  
- 是一个可选参数，用于指定绝对超链接和信息的行位置*fetchtype*通过使用为输入和 / 或输出中，仅整数值的值。 *rownum*用作的行偏移量*fetchtype*位值相对。 *rownum*对于所有其他值，将忽略。 有关详细信息，请参阅本主题后面的备注一节。  
+ 是一个可选参数，用于指定行位置为 ABSOLUTE 和 INFO *fetchtype*通过只将整数值用于输入或输出，或两者的值。 *rownum*用作的行偏移*fetchtype*位值 RELATIVE。 *rownum*忽略所有其他值。 有关详细信息，请参阅本主题后面备注部分。  
   
  *nrows*  
- 一个可选参数，用于指定要提取的行数。 如果*nrows*未指定，则默认值为 20 行。 若要设置而无需返回数据的位置，请指定值为 0。 当*nrows*应用于*fetchtype*信息查询，它查询中返回的行总数。  
+ 一个可选参数，用于指定要提取的行数。 如果*nrows*未指定，默认值为 20 行。 若要将位置设置而不返回数据，指定的值为 0。 当*nrows*应用于*fetchtype* INFO 查询时，它在该查询中返回的总行数。  
   
 > [!NOTE]  
->  *nrows*刷新忽略*fetchtype*位值。  
+>  *nrows*忽略 refresh *fetchtype*位值。  
 >   
->  有关详细信息，请参阅本主题后面的备注一节。  
+>  有关详细信息，请参阅本主题后面备注部分。  
   
 ## <a name="return-code-values"></a>返回代码值  
  当指定位值 INFO 时，以下各表显示可能返回的值。  
   
 > [!NOTE]  
->  ： 如果会不返回任何行，缓冲区内容保持不变。  
+>  ： 如果不返回任何行，则缓冲区内容保持不变。  
   
 |*\<rownum >*|设置为|  
 |------------------|------------|  
@@ -92,22 +92,22 @@ sp_cursorfetch cursor
 |如果定位在结果集前面|0|  
 |如果定位在结果集后面|-1|  
 |对于 KEYSET 游标和 STATIC 游标|结果集中当前位置的绝对行号|  
-|对于 DYNAMIC 游标|1|  
-|对于 ABSOLUTE|-1 返回集中的最后一行。<br /><br /> -2 返回集中的倒数第二行，依此类推。<br /><br /> 注意： 如果在这种情况下提取请求多个行，将返回结果集的最后两行。|  
+|对于 DYNAMIC 游标|@shouldalert|  
+|对于 ABSOLUTE|-1 返回集中的最后一行。<br /><br /> -2 返回集中的倒数第二行，依此类推。<br /><br /> 注意： 如果多个行请求提取这种情况下，则返回结果集的最后两行。|  
   
 |*\<nrows >*|设置为|  
 |-----------------|------------|  
 |如果未打开|0|  
-|对于 KEYSET 游标和 STATIC 游标|通常为当前键集大小。<br /><br /> **– m**如果光标位于中使用的异步创建*m*找到到目前为止的行。|  
+|对于 KEYSET 游标和 STATIC 游标|通常为当前键集大小。<br /><br /> **– m**如果光标位于异步创建的*m*到此点找不到行。|  
 |对于 DYNAMIC 游标|-1|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="cursor-parameter"></a>cursor 参数  
  在执行任何提取操作之前，游标的默认位置位于结果集第一行的前面。  
   
 ## <a name="fetchtype-parameter"></a>fetchtype 参数  
- 除 SKIP_UPD_CNCY， *fetchtype*是互相排斥的值。  
+ 除了 skip_upd_cncy 以外， *fetchtype*是互斥的值。  
   
  如果指定 SKIP_UPDT_CNCY，则在提取或刷新行时，时间戳列的值不会写入到键集表中。 如果正在更新键集行，则时间戳列的值保持为先前的值。 如果正在插入键集行，则时间戳列的值不确定。  
   
@@ -118,27 +118,27 @@ sp_cursorfetch cursor
  如果由于所请求的游标位置超出结果集而导致提取操作失败，则应将游标位置设置为恰好在最后一行的后面。 如果由于所请求的游标位置位于结果集的前面而导致提取操作失败，则应将游标位置设置在第一行的前面。  
   
 ## <a name="rownum-parameter"></a>rownum 参数  
- 当你使用*rownum*，从指定的行填充缓冲区。  
+ 当你使用*rownum*，从指定的行开始填充缓冲区。  
   
- *Fetchtype*绝对指的位置的值*rownum*在整个结果内设置。 具有 ABSOLUTE 的负数指定该操作从结果集的末尾开始对行进行计数。  
+ *Fetchtype*值 ABSOLUTE 表示的位置*rownum*在整个结果集。 具有 ABSOLUTE 的负数指定该操作从结果集的末尾开始对行进行计数。  
   
- *Fetchtype*相对指的位置的值*rownum*相对于当前缓冲区开头光标的位置。 具有 RELATIVE 的负数指定该游标从当前游标位置向后计数。  
+ *Fetchtype*值 RELATIVE 表示的位置*rownum*相对于当前缓冲区开头的游标的位置。 具有 RELATIVE 的负数指定该游标从当前游标位置向后计数。  
   
 ## <a name="nrows-parameter"></a>nrows 参数  
- *Fetchtype*值刷新和信息忽略此参数。  
+ *Fetchtype*值 REFRESH 和 INFO 忽略此参数。  
   
- 当指定*fetchtype*第一个具有的值*nrow*值为 0，将光标定位在提取缓冲区中具有任何行的结果集的前面。  
+ 当指定*fetchtype*第一个具有的值*nrow*值为 0，将光标定位在提取缓冲区中不包含行的结果集之前。  
   
- 当指定*fetchtype*具有的最后一个值*nrow*值为 0，光标位于当前提取缓冲区中具有任何行的结果集的后面。  
+ 当指定*fetchtype*的最后一个具有值*nrow*值为 0，光标位于当前提取缓冲区中不包含行的结果集之后。  
   
- 有关*fetchtype*值的下一步、 上一步、 绝对、 相对和 PREV_NOADJUST， *nrow*为 0 的值无效。  
+ 有关*fetchtype*的下一步、 PREV、 ABSOLUTE、 RELATIVE 和 PREV_NOADJUST，值*nrow*为 0 的值无效。  
   
 ## <a name="rpc-considerations"></a>RPC 注意事项  
  RPC 返回状态指示键集大小参数是否为最终的（也即，键集表或临时表是否异步填充）。  
   
  RPC 状态参数设置为下表中显示的值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|过程已成功执行。|  
 |0x0001|过程失败。|  
@@ -147,7 +147,7 @@ sp_cursorfetch cursor
   
  这些行将作为典型的结果集返回，也即：列格式 (0x2a)、行 (0xd1)，后跟完成 (0xfd)。 元数据标记使用与为 sp_cursoropen 指定的相同格式发送，也即：对于 SQL Server 7.0 用户为 0x81、0xa5 和 0xa4 等。 行状态指示器在具有列名称 rowstat 和数据类型 INT4 的每一行的末尾作为隐藏列发送（类似于 BROWSE 模式）。 此 rowstat 列具有下表中显示的值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -172,13 +172,13 @@ row 5 contents
 row 6 contents  
 ```  
   
- 接下来，sp_cursorfetch PREV 具有*nrows*值为 5 将以逻辑方式放置光标两行结果集的第一行之前。 在此类情况下，游标将调整为从第一行开始，并返回请求的行数。 这通常意味着它将返回位于 PRIOR 提取缓冲区中的行。  
+ 接下来，，具有的 sp_cursorfetch PREV *nrows*值 5 将逻辑上将游标定位两行的结果集的第一行之前。 在此类情况下，游标将调整为从第一行开始，并返回请求的行数。 这通常意味着它将返回位于 PRIOR 提取缓冲区中的行。  
   
 > [!NOTE]  
 >  这是 RPC 状态参数设置为 2 时的确切情况。  
   
 ### <a name="b-using-prevnoadjust-to-return-fewer-rows-than-prev"></a>B. 使用 PREV_NOADJUST 返回少于 PREV 的行  
- PREV_NOADJUST 从不包括任何位于它返回的行块中当前游标位置或在其之后的行。 在上一步后当前的位置返回行的位置的情况下，PREV_NOADJUST 返回更少的行不是请求中*nrows*。 给定的当前定位在示例中更早版本，应用上一步时，sp_cursorfetch (h2，4，1，5) 提取以下行：  
+ PREV_NOADJUST 从不包括任何位于它返回的行块中当前游标位置或在其之后的行。 在其中 PREV 返回当前位置之后的行的情况下，PREV_NOADJUST 返回更少的行不是在请求*nrows*。 提供了当前位置中的示例更早版本，当应用 PREV 时，sp_cursorfetch (h2，4，1，5) 提取以下各行：  
   
 ```  
 row1 contents   
@@ -188,7 +188,7 @@ row4 contents
 row5 contents  
 ```  
   
- 但是，PREV_NOADJUST 将应用，sp_cursorfetch (h2，512、 6、 5) 提取只有的以下行：  
+ 但是，当应用 PREV_NOADJUST 时，sp_cursorfetch (h2，512，6，5) 仅提取以下各行：  
   
 ```  
 row1 contents   
@@ -196,8 +196,8 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

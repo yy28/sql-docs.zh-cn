@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_enable_db (TRANSACT-SQL) |Microsoft 文档
+title: sys.sp_cdc_enable_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255766"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030281"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sys.sp_cdc_enable_db
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- 无法在启用变更数据捕获[系统数据库](../../relational-databases/databases/system-databases.md)或分发数据库。  
+## <a name="remarks"></a>Remarks  
+ 无法上启用变更数据捕获[系统数据库](../../relational-databases/databases/system-databases.md)或分发数据库。  
   
  sys.sp_cdc_enable_db 将创建以全数据库为作用域的变更数据捕获对象，包括元数据表和 DDL 触发器。 它还会创建 cdc 架构和 cdc 数据库用户并设置中的数据库条目的 is_cdc_enabled 列[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图为 1。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 sysadmin 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -74,7 +73,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.sp_cdc_disable_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sys.sp_cdc_disable_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

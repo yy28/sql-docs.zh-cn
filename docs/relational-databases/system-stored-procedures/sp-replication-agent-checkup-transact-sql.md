@@ -1,5 +1,5 @@
 ---
-title: sp_replication_agent_checkup (Transact SQL) |Microsoft 文档
+title: sp_replication_agent_checkup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fcb953c182dd6f4e9726a45a6fbf10efd8584cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 927bd9990148112c05874f6589a7c0a33ac21f43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995624"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028212"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@heartbeat_interval** =] *****heartbeat_interval*****  
- 是最大的代理可以转而不记录任何进度消息的分钟数。 *heartbeat_interval*是**int**，默认值为 10 分钟。  
+ [ **@heartbeat_interval** =] **'***heartbeat_interval*****  
+ 是的最大代理可以运行而无需记录进度消息的分钟数。 *heartbeat_interval*是**int**，默认值为 10 分钟。  
   
 ## <a name="return-code-values"></a>返回代码值  
- **sp_replication_agent_checkup**对于为可疑检测到每个代理引发错误 14151。 它还记录关于这些代理的失败历史记录消息。  
+ **sp_replication_agent_checkup**为检测为可疑到每个代理引发 14151 号错误。 它还记录关于这些代理的失败历史记录消息。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_replication_agent_checkup**快照复制、 事务复制和合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_replication_agent_checkup**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

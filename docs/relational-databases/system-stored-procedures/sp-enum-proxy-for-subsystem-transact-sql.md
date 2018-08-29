@@ -1,5 +1,5 @@
 ---
-title: sp_enum_proxy_for_subsystem (Transact SQL) |Microsoft 文档
+title: sp_enum_proxy_for_subsystem (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b524d44236cb9c5a070b460a3f3a0d0736b16aca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030853"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +47,16 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="arguments"></a>参数  
  [ **@proxy_id** = ] *proxy_id*  
- 要列出信息的代理的标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可指定。  
+ 要列出信息的代理的标识号。 *Proxy_id*是**int**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
  [ **@proxy_name** = ] **'***proxy_name***'**  
- 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可指定。  
+ 要列出信息的代理的名称。 *Proxy_name*是**sysname**，默认值为 NULL。 任一*id*或*proxy_name*可能指定。  
   
  [ **@subsystem_id** = ] *subsystem_id*  
- 要列出信息的子系统的标识号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可指定。  
+ 要列出信息的子系统的标识号。 *Subsystem_id*是**int**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
   
  [ **@subsystem_name** = ] **'***subsystem_name***'**  
- 要列出信息的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可指定。  
+ 要列出信息的子系统的名称。 *Subsystem_name*是**sysname**，默认值为 NULL。 任一*subsystem_id*或*subsystem_name*可能指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -72,17 +70,17 @@ sp_enum_proxy_for_subsystem
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
   
-## <a name="remarks"></a>注释  
- 当未提供参数时， **sp_enum_proxy_for_subsystem**列出每个子系统的实例中的所有代理有关的信息。  
+## <a name="remarks"></a>Remarks  
+ 如果不提供任何参数， **sp_enum_proxy_for_subsystem**列出为每个子系统的实例中的所有代理有关的信息。  
   
- 如果代理 id 或代理服务器名称，则**sp_enum_proxy_for_subsystem**该代理的列表子系统访问权限。 如果子系统 id 或子系统名称，则**sp_enum_proxy_for_subsystem**列出有权访问该子系统的代理。  
+ 如果提供代理 id 或代理名称， **sp_enum_proxy_for_subsystem**列表子系统的代理服务器具有访问权限。 如果提供子系统 id 或子系统名称， **sp_enum_proxy_for_subsystem**列出有权访问该子系统的代理。  
   
  当同时提供代理信息和子系统信息时，如果指定的代理有权访问指定的子系统，则结果集将返回一行。  
   
  此存储的过程位于**msdb**。  
   
-## <a name="permissions"></a>权限  
- 此过程默认值的成员的执行权限**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
   
@@ -110,7 +108,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_grant_proxy_to_subsystem &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sp_grant_proxy_to_subsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

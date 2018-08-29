@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscriptionerrors (Transact SQL) |Microsoft 文档
+title: sp_helpsubscriptionerrors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d02a5a5323956bb5835d41ff3c9df6fcccf630d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 870e8197a8182ab813ea8b165b46b4888f96726e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996854"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031960"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] *****发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] *****publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication=** ] *****发布*****  
+ [  **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] *****订阅服务器*****  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ [  **@subscriber=** ] **'***订阅服务器*****  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] *****subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
 ## <a name="result-set"></a>结果集  
@@ -69,7 +69,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|错误 ID。|  
-|**time**|**datetime**|发生错误时。|  
+|**time**|**datetime**|发生了错误的时间。|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|错误源类型 ID。|  
 |**source_name**|**nvarchar(100)**|错误源的名称。|  
@@ -82,14 +82,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpsubscriptionerrors**与快照和事务复制一起使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_helpsubscriptionerrors**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

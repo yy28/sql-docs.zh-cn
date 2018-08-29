@@ -1,5 +1,5 @@
 ---
-title: sysmail_update_profile_sp (Transact SQL) |Microsoft 文档
+title: sysmail_update_profile_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259647"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030639"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,24 +45,24 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>参数  
  [ **@profile_id** =] *profile_id*  
- 要更新的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
+ 要更新的配置文件 ID。 *profile_id*是**int**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
  [ **@profile_name** = ] **'***profile_name***'**  
- 要更新的配置文件名称或配置文件的新的名称。 *profile_name*是**sysname**，默认值为 NULL。 至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
+ 要更新的配置文件名称或配置文件的新的名称。 *profile_name*是**sysname**，默认值为 NULL。 在至少一个*profile_id*或*profile_name*必须指定。 如果同时指定二者，则过程将更改配置文件的名称。  
   
  [ **@description** = ] **'***description***'**  
- 对配置文件的新的说明。 *说明*是**nvarchar(256)**，默认值为 NULL。  
+ 对配置文件的新的说明。 *描述*是**nvarchar(256)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果同时指定了配置文件 ID 和配置文件名称，则该过程会将配置文件名称更改为所提供的名称，并更新配置文件的说明。 当只提供其中的一个参数时，该过程会更新配置文件的说明。  
   
- 存储的过程**sysmail_update_profile_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
+ 存储的过程**sysmail_update_profile_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>权限  
- 执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
  **A.更改配置文件的说明**  
@@ -87,7 +86,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   

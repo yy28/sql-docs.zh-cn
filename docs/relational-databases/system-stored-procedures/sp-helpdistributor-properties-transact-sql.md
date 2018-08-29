@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (Transact SQL) |Microsoft 文档
+title: sp_helpdistributor_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f839d230097300eb08c0042854ed00f3b4dd951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e9d7ab6a6ddb7bd2be819c4a688dce87a1f5945
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994464"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032376"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributor_properties**用于所有类型的复制。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色，成员的**db_owner**或**replmonitor**上的分发数据库和中的用户的固定的数据库角色使用此分发服务器的发布的发布访问列表 (PAL) 可以执行**sp_helpdistributor_properties**。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色的成员**db_owner**或**replmonitor**固定的数据库角色上的分发数据库中的用户使用此分发服务器的发布的发布访问列表 (PAL) 可以执行**sp_helpdistributor_properties**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_changedistributor_property &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

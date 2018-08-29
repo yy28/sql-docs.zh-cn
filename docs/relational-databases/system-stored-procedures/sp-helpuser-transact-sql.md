@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (Transact SQL) |Microsoft 文档
+title: sp_helpuser (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 343439dd04f9f74c0a5444afef25921072d9d14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2f69c77b548de159a6b6c40ceddccb169e477ede
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028940"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +47,24 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name_in_db =** ] *****security_account*****  
- 当前数据库中数据库用户或数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定， **sp_helpuser**返回有关所有数据库主体的信息。  
+ [  **@name_in_db =** ] **'***security_account*****  
+ 当前数据库中数据库用户或数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定，则**sp_helpuser**返回有关所有数据库主体的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 下表显示的结果集时都不用户帐户也不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为指定 Windows 用户或*security_account*。  
+ 下表显示了结果集当没有用户帐户也不是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为指定 Windows 用户或*security_account*。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|当前数据库中的用户。|  
-|**RoleName**|**sysname**|向其角色**用户名**所属。|  
-|**LoginName**|**sysname**|登录名的**用户名**。|  
+|**RoleName**|**sysname**|角色所属**用户名**所属。|  
+|**LoginName**|**sysname**|登录名**用户名**。|  
 |**DefDBName**|**sysname**|默认数据库**用户名**。|  
 |**DefSchemaName**|**sysname**|数据库用户的默认架构。|  
-|**UserID**|**int**|ID**用户名**当前数据库中。|  
-|**SID**|**int**|用户的安全标识号 (SID)。|  
+|**UserID**|**smallint**|ID**用户名**当前数据库中。|  
+|SID|**smallint**|用户的安全标识号 (SID)。|  
   
  下表显示未指定用户帐户，并且当前数据库中存在别名时的结果集。  
   
@@ -73,19 +73,19 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**LoginName**|**sysname**|当前数据库中已经化名为用户名的登录名。|  
 |**UserNameAliasedTo**|**sysname**|当前数据库中登录名要化名为的用户名。|  
   
- 下表显示的结果集时为指定角色*security_account*。  
+ 下表显示了结果集时为指定角色*security_account*。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**role_name**|**sysname**|当前数据库中角色的名称。|  
-|**Role_id**|**int**|当前数据库中角色的角色 ID。|  
+|**Role_name**|**sysname**|当前数据库中角色的名称。|  
+|**Role_id**|**smallint**|当前数据库中角色的角色 ID。|  
 |**Users_in_role**|**sysname**|当前数据库中角色的成员。|  
-|**用户 id**|**int**|角色的成员的用户 ID。|  
+|**用户 Id**|**smallint**|角色的成员的用户 ID。|  
   
-## <a name="remarks"></a>注释  
- 若要查看数据库角色的成员资格有关的信息，请使用[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有关服务器角色成员的信息，请使用[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，而若要查看有关服务器级别主体的信息，请使用[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+## <a name="remarks"></a>Remarks  
+ 若要查看数据库角色的成员身份的信息，请使用[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)。 若要查看有关服务器角色成员的信息，请使用[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)，若要查看有关服务器级别主体的信息，请使用[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
  返回的信息取决于对元数据的访问权限的限制。 主体对其不具有权限的实体将不会显示。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
@@ -113,7 +113,7 @@ EXEC sp_helpuser 'dbo';
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)   

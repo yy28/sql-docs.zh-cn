@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 2 课： 获取数据 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007198"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062208"
 ---
 # <a name="get-data"></a>获取数据
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007198"
 
 在本课程中，您使用**获取数据**要连接到 AdventureWorksDW 示例数据库，选择数据，预览并筛选器，并将导入到模型工作区。  
   
-通过使用获取数据，您可以从各种源导入数据。 此外可以使用 Power Query M 公式表达式查询数据或[本机 SQL 查询表达式](../tabular-models/ssas-import-query.md)。
+实质上，获取数据是 Power Query，提供用于连接到和重塑数据建模和分析大量的工具。 若要了解详细信息，请参阅[Power Query 文档](https://docs.microsoft.com/power-query/)。 
 
 > [!NOTE]
 > 任务和图像在本教程演示如何连接到的本地服务器上的 AdventureWorksDW2014 数据库。 在某些情况下，Azure SQL 数据仓库上的 AdventureWorksDW 数据库可能会显示不同的对象;但是，它们是完全相同。

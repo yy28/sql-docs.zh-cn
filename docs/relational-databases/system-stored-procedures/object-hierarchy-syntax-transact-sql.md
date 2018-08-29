@@ -1,5 +1,5 @@
 ---
-title: 对象层次结构语法 (Transact SQL) |Microsoft 文档
+title: 对象层次结构语法 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238048"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032535"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>对象层次结构语法 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  *Propertyname* sp_OASetProperty sp_OAGetProperty 以及参数和*methodname* sp_OAMethod 参数支持类似于的对象层次结构语法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. 当使用该特殊语法时，这些参数具有以下通用格式。  
+  *Propertyname* sp_OAGetProperty 和 sp_OASetProperty 的参数和*methodname* sp_OAMethod 参数支持类似于的对象层次结构语法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. 当使用该特殊语法时，这些参数具有以下通用格式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,7 +39,7 @@ ms.locfileid: "33238048"
   
 ## <a name="arguments"></a>参数  
  *TraversedObject*  
- 是下的层次结构中的 OLE 对象*objecttoken*在存储过程中指定。 使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法指定一系列集合、对象属性和返回对象的方法。 该系列中的每个对象说明符必须用句号 (.) 分隔。  
+ 在层次结构中的 OLE 对象*objecttoken*在存储过程中指定。 使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 语法指定一系列集合、对象属性和返回对象的方法。 该系列中的每个对象说明符必须用句号 (.) 分隔。  
   
  系列中的项可以是集合名。 使用下面的语法指定集合：  
   
@@ -61,19 +60,19 @@ ms.locfileid: "33238048"
   
  要求使用双引号 (")。 指定了所有位置参数后，才能指定命名参数。  
   
-## <a name="remarks"></a>注释  
- 如果*TraversedObject*未指定， *PropertyOrMethod*是必需的。  
+## <a name="remarks"></a>Remarks  
+ 如果*TraversedObject*未指定，则*PropertyOrMethod*是必需的。  
   
- 如果*PropertyOrMethod*未指定， *TraversedObject*从 OLE 自动化存储过程返回作为对象令牌输出参数。 如果*PropertyOrMethod*指定的属性或方法的*TraversedObject*调用时，和属性值或方法返回值作为输出参数返回从 OLE 自动化存储的过程。  
+ 如果*PropertyOrMethod*未指定，则*TraversedObject*从 OLE 自动化存储过程返回作为对象令牌输出参数。 如果*PropertyOrMethod*指定的属性或方法*TraversedObject*调用时，并且属性值或方法返回值返回为输出参数从 OLE 自动化存储的过程。  
   
- 如果任一项中*TraversedObject*列表不会返回 OLE 对象，将引发错误。  
+ 如果项目中的任何*TraversedObject*列表未返回 OLE 对象，将引发错误。  
   
  有关 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE 对象语法的详细信息，请参阅 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 文档。  
   
  有关 HRESULT 返回代码的详细信息，请参阅[sp_OACreate &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  
- 以下是使用 SQL-DMO SQLServer 对象的对象层次结构语法的示例。  
+ 以下是使用 SQL-DMO SQLServer 对象的对象层次结构语法示例。  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  
@@ -93,8 +92,8 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
+## <a name="see-also"></a>请参阅  
+ [OLE 自动化示例脚本](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
  [OLE 自动存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   
   

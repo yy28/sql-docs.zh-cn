@@ -1,5 +1,5 @@
 ---
-title: sys.bandwidth_usage （Azure SQL 数据库） |Microsoft 文档
+title: sys.bandwidth_usage （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e34541614f20c4fedd8a691fc3c1c13d1929fb3c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1accec58750bfd4a3806308252113a6c2aecc2ac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054425"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031110"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "38054425"
 |**time_period**|峰值或非高峰期，使用情况发生的时间段。 The Peak time is based on the region in which the server was created. 例如，如果在“US_Northwest”地区创建了服务器，则高峰期时间定义为 PST 时间上午 10:00 点 到下午 6:00 太平洋标准时间。|  
 |**数量**|占用的带宽量 (KB)。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图选项仅适用于**主**与服务器级别主体登录名的数据库。  
   
 ## <a name="remarks"></a>Remarks  

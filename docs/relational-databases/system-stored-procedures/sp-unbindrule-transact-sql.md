@@ -1,5 +1,5 @@
 ---
-title: sp_unbindrule (Transact SQL) |Microsoft 文档
+title: sp_unbindrule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257433"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028920"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33257433"
   在当前数据库中取消列或别名数据类型的规则绑定。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 我们建议你通过中的默认关键字创建默认定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句相反。  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 我们建议使用中的 DEFAULT 关键字创建 default 定义[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)或[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)语句相反。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_unbindrule [ @objname = ] 'object_name'
  要取消规则绑定的表和列或别名数据类型的名称。 *object_name*是**nvarchar(776)**，无默认值。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试先将两部分标识符解析为列名，再解析为别名数据类型。 在取消别名数据类型的规则绑定时，也同时取消数据类型相同并具有相同规则的任何列的绑定。 属于该数据类型并且规则直接绑定的列将不受影响。  
   
 > [!NOTE]  
->  *object_name*可以包含括号 **[]** 作为分隔标识符字符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
+>  *object_name*可以包含方括号 **[]** 作为分隔标识符。 有关详细信息，请参阅 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)。  
   
  [ **@futureonly=** ] **'***futureonly_flag***'**  
  仅在取消别名数据类型的规则绑定时使用。 *futureonly_flag*是**varchar(15)**，默认值为 NULL。 当*futureonly_flag*是**futureonly**，该数据类型的现有列不会丢失指定的规则。  
@@ -60,14 +60,14 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  若要显示某条规则的文本，请以该规则的名称作为参数来执行 sp_helptext。  
   
- 未绑定规则时，从删除绑定有关的信息**sys.columns**表如果规则已绑定到列，并从**sys.types**表如果规则绑定到别名数据类型。  
+ 未绑定规则时，绑定有关的信息已从**sys.columns**如果规则绑定到列，并从**sys.types**如果规则绑定到别名数据类型。  
   
- 当取消别名数据类型的规则绑定时，任何具有该别名数据类型的列也同时取消该规则绑定。 该规则可能仍然会绑定到 ALTER TABLE 语句的 ALTER COLUMN 子句之后已更改其数据类型的列，具体而言，则必须取消这些列中的规则绑定使用**sp_unbindrule**并指定列名称。  
+ 当取消别名数据类型的规则绑定时，任何具有该别名数据类型的列也同时取消该规则绑定。 此外，仍可能将规则绑定到更高版本由 ALTER TABLE 语句的 ALTER COLUMN 子句更改其数据类型的列，特别是必须取消这些列的规则绑定通过使用**sp_unbindrule**并指定列名称。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要取消表列的规则绑定，需要对表具有 ALTER 权限。 若要取消别名数据类型的规则绑定，需要对该类型具有 CONTROL 权限或对该类型所属的架构具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +94,7 @@ EXEC sp_unbindrule 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 使用分隔的标识符  
- 下面的示例演示使用中的分隔的标识符*object_name*参数。  
+ 下面的示例演示中使用分隔的标识符*object_name*参数。  
   
 ```  
 CREATE TABLE [t.4] (c1 int); -- Notice the period as part of the table   
@@ -109,7 +109,7 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   

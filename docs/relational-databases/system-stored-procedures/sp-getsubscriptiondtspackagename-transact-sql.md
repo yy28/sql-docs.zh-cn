@@ -1,5 +1,5 @@
 ---
-title: sp_getsubscriptiondtspackagename (Transact SQL) |Microsoft 文档
+title: sp_getsubscriptiondtspackagename (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 755cd58c1e67ad0136e030cc63ae5d03437b76da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d3dd962761890021c5e5af2375489b8ef2d4d7b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994264"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031380"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] *****发布*****  
- 发布的名称。 *****发布***** 是**sysname**，无默认值。  
+ [ **@publication**=] **'***发布*****  
+ 发布的名称。 **'***出版物***'** 是**sysname**，无默认值。  
   
- [  **@subscriber=**] *****订阅服务器*****  
- 订阅服务器的名称。 *订阅服务器*为 sysname，默认值为 NULL。  
+ [  **@subscriber=**] **'***订阅服务器*****  
+ 订阅服务器的名称。 *订阅服务器*数据类型为 sysname，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -61,10 +61,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|DTS 包的名称。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_getsubscriptiondtspackagename**快照复制和事务复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_getsubscriptiondtspackagename**。  
   
   

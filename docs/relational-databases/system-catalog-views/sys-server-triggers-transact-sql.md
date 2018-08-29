@@ -1,5 +1,5 @@
 ---
-title: sys.server_triggers (TRANSACT-SQL) |Microsoft 文档
+title: sys.server_triggers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84d1c1928b842696f4de0b854016456c106ced69
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: caed89727f8fe6670db1b2531c0c2641ed92b38b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222148"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024586"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 在 CLR 触发器的情况下，该程序集必须加载到**master**数据库。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
+  包含 object_type 为 TR 或 TA 的所有服务器级别 DDL 触发器的集合。 如果是 CLR 触发器的程序集必须加载到**主**数据库。 所有服务器级别 DDL 触发器名称存在于单个全局范围内。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,10 +50,10 @@ ms.locfileid: "33222148"
 |**is_ms_shipped**|**bit**|由内部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件代表用户创建的触发器。|  
 |**is_disabled**|**bit**|1 = 触发器被禁用。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

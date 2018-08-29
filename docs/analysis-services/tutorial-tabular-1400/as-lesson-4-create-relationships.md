@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程第 4 课： 创建关系 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 564126e1de4a8019778e33718b48462f633ae232
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1768bd38be49515012139f8cd93c749ac7e3c48c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981059"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063728"
 ---
 # <a name="create-relationships"></a>创建关系
 
@@ -59,11 +59,11 @@ ms.locfileid: "37981059"
   
     |在职|表|相关查找表|  
     |----------|---------|------------------------|  
-    |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |是|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |用户帐户控制|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |用户帐户控制|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |用户帐户控制|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     如果缺少任意关系，请验证您的模型包括以下各表： DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同时间之间的任何关系相同的数据源连接中的表导入这些表将不会创建，并且必须手动创建。 如果没有关系出现，则表示在数据源没有任何关系。 您可以手动创建这些数据模型中。
 

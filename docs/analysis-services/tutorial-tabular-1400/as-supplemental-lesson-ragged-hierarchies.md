@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 教程补充课程： 不规则层次结构 |Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bc5a2164576e2e6142d8835dad6f6c114b7a9c5b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1aa9b8b0e456bb4f4aeff0a2a8e03d4938a46399
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042301"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074827"
 ---
-# <a name="supplemental-lesson---ragged-hierarchies"></a>补充课程-不规则层次结构
+# <a name="supplemental-lesson---ragged-hierarchies"></a>补充课程 - 不规则层次结构
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -47,11 +47,11 @@ ms.locfileid: "38042301"
 
     | 表 1           | “列”       | 筛选器方向   | 表 2     | “列”      | 在职 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | ，则“默认”            | DimDate     | date        | 是    |
-    | FactResellerSales | DueDate      | ，则“默认”            | DimDate     | date        | “否”     |
-    | FactResellerSales | ShipDateKey  | ，则“默认”            | DimDate     | date        | “否”     |
-    | FactResellerSales | ProductKey   | ，则“默认”            | DimProduct  | ProductKey  | 是    |
-    | FactResellerSales | EmployeeKey  | 对两个表 | DimEmployee | EmployeeKey | 是    |
+    | FactResellerSales | OrderDateKey | ，则“默认”            | DimDate     | date        | 用户帐户控制    |
+    | FactResellerSales | DueDate      | ，则“默认”            | DimDate     | date        | 否     |
+    | FactResellerSales | ShipDateKey  | ，则“默认”            | DimDate     | date        | 否     |
+    | FactResellerSales | ProductKey   | ，则“默认”            | DimProduct  | ProductKey  | 用户帐户控制    |
+    | FactResellerSales | EmployeeKey  | 对两个表 | DimEmployee | EmployeeKey | 用户帐户控制    |
 
 5. 在中**DimEmployee**表中，创建以下[计算列](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 

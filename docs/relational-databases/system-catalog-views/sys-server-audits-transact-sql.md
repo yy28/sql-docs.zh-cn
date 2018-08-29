@@ -1,5 +1,5 @@
 ---
-title: sys.server_audits (TRANSACT-SQL) |Microsoft 文档
+title: sys.server_audits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_audits catalog view
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f71da894aa31fa192c5abc6f64683fa1c2036f99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f6dd82c3232e941d4db08f9e5079d9e821e84804
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221918"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024529"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33221918"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|审核的 ID。|  
 |**名称**|**sysname**|审核的名称。|  
-|**audit_guid**|**uniqueidentifier**|有关用于与成员服务器枚举审核审核的 GUID&#124;期间服务器启动和数据库的数据库审核规范附加操作。|  
+|**audit_guid**|**uniqueidentifier**|用于枚举与成员服务器审核的审核 GUID&#124;数据库审核规范在服务器启动和数据库附加操作。|  
 |**create_date**|**datetime**|创建审核的 UTC 日期。|  
 |**modify_date**|**datetime**|上次修改审核的 UTC 日期。|  
 |**principal_id**|**int**|审核，如注册到服务器的所有者的 ID。|  
@@ -49,15 +49,15 @@ ms.locfileid: "33221918"
 |**on_failure**|**tinyint**|失败时要写入的操作项：<br /><br /> 0 – 继续<br /><br /> 1 – 关闭服务器实例<br /><br /> 2 – 失败操作|  
 |**on_failure_desc**|**nvarchar(60)**|失败时要写入的操作项：<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 – 禁用<br /><br /> 1 - 启用|  
-|**queue_delay**|**int**|写入磁盘前等待的最长时间（以毫秒为单位）。 如果为 0，审核将保证执行写入操作，事件才能继续。|  
-|**谓词**|**nvarchar(3000)**|应用于事件谓词表达式。|  
+|**queue_delay**|**int**|写入磁盘前等待的最长时间（以毫秒为单位）。 如果为 0，则审核将确保写入的事件才能继续。|  
+|**谓词**|**nvarchar(3000)**|应用于事件的谓词表达式。|  
   
-## <a name="permissions"></a>权限  
- 具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，必须没有拒绝主体**VIEW ANY DEFINITION**权限。  
+## <a name="permissions"></a>Permissions  
+ 具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

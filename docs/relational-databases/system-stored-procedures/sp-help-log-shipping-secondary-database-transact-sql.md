@@ -1,5 +1,5 @@
 ---
-title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft 文档
+title: sp_help_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259597"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033623"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@secondary_database =** ]*secondary_database*  
+ [  **@secondary_database =** ] '*secondary_database*  
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
  [ **@secondary_id =** ] '*secondary_id*'  
- 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**和不能为 NULL。  
+ 日志传送配置中辅助服务器的 ID。 *secondary_id*是**uniqueidentifier**且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -74,7 +73,7 @@ sp_help_log_shipping_secondary_database
 |**secondary_database**|日志传送配置中辅助数据库的名称。|  
 |**restore_delay**|辅助服务器在还原给定备份文件之前等待的时间（分钟）。 默认为 0 分钟。|  
 |**restore_all**|如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，在原还了一个文件之后它将停止。|  
-|**restore_mode**|辅助数据库的还原模式。<br /><br /> 0 = with NORECOVERY 还原日志。<br /><br /> 1 = 使用 STANDBY 还原日志。|  
+|**restore_mode**|辅助数据库的还原模式。<br /><br /> 0 = 使用 NORECOVERY 还原日志。<br /><br /> 1 = 使用 STANDBY 还原日志。|  
 |**disconnect_users**|如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。|  
 |**block_size**|用作备份设备的块大小（字节）。|  
 |**buffer_count**|备份或还原操作使用的缓冲区总数。|  
@@ -91,17 +90,17 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|日志传送历史记录在删除前保留在给定辅助数据库中的时间（分钟）。|  
 |**last_restored_latency**|在主数据库上创建日志备份的时间与在辅助数据库上还原日志备份的时间间隔（分钟）。<br /><br /> 初始值为 NULL。|  
   
-## <a name="remarks"></a>注释  
- 如果包含*secondary_database*参数，如果包含，结果集将包含有关该辅助数据库; 信息*secondary_id*结果集将包含参数，与该辅助 id。 关联的所有辅助数据库的相关信息  
+## <a name="remarks"></a>Remarks  
+ 如果包括*secondary_database*参数，如果包含，则结果集将包含有关该辅助数据库; 信息*secondary_id*结果集将包含参数，有关具有该辅助 ID 相关联的所有辅助数据库的信息  
   
- **sp_help_log_shipping_secondary_database**必须从运行**master**辅助服务器上的数据库。  
+ **sp_help_log_shipping_secondary_database**必须从运行**主**辅助服务器上的数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_help_log_shipping_secondary_primary &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_help_log_shipping_secondary_primary &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

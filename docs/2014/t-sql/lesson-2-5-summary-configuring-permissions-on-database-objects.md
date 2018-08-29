@@ -5,23 +5,21 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - configuring permissions on databases
 ms.assetid: d0ecf297-27af-43a4-918c-31c354b3a96e
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 88e9bd9a806237cd80fbcf6f5481252c8761b076
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e534a8f50f41480146825941e577292c3d1e2a4b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308767"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029068"
 ---
 # <a name="summary-configuring-permissions-on-database-objects"></a>摘要：配置数据库对象的权限
   登录名为用户提供了连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的权限。 用户是可以访问特定数据库的登录名。 使用 GRANT 语句可授予用户读取数据以及访问和更改数据的权限。  

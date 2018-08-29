@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (Transact SQL) |Microsoft 文档
+title: sp_refreshsubscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb85456e42a3dfbef482e4260095f5496885328d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7029d3013ce3a9dd0bfe173261f7dbd4eef3fad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995384"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027961"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  对于所有现有的订阅服务器，将对请求订阅中的新项目的订阅添加到发布中。 在发布服务器的发布数据库上执行此存储的过程。  
+  对于所有现有的订阅服务器，将对请求订阅中的新项目的订阅添加到发布中。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,18 +52,18 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_refreshsubscriptions**快照、 事务和合并复制中使用。  
   
- **sp_refreshsubscriptions**由调用**sp_addarticle**立即更新的发布。  
+ **sp_refreshsubscriptions**由调用**sp_addarticle**对于立即更新发布。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_refreshsubscriptions**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_addarticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

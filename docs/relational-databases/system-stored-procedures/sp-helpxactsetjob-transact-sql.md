@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (Transact SQL) |Microsoft 文档
+title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef643efb849a0f178ac98bf439360fca87d21983
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58ebd1b5592a7a4b17f665555689b32e8456d714
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997204"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027513"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publisher** =] *****发布服务器*****  
+ [**@publisher** =] **'***发布服务器*****  
  作业所属的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
@@ -56,8 +56,8 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|作业运行的最后日期。|  
 |**thisdate**|**varchar(22)**|更改的时间。|  
 |**nextdate**|**varchar(22)**|作业将要运行的下一个日期。|  
-|**已中断**|**varchar(1)**|指示作业是否中断的标志。|  
-|**间隔**|**varchar(200)**|作业的间隔。|  
+|**中断**|**varchar(1)**|指示作业是否中断的标志。|  
+|**时间间隔**|**varchar(200)**|作业的间隔。|  
 |**失败**|**int**|作业失败的次数。|  
 |**xactsetjobwhat**|**varchar(200)**|作业执行的过程的名称。|  
 |**xactsetjob**|**varchar(1)**|作业的状态，可以是以下状态之一：<br /><br /> **1** -启用作业。<br /><br /> **0** -已禁用的作业。|  
@@ -69,15 +69,15 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_helpxactsetjob**快照复制和 Oracle 发布服务器的事务复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpxactsetjob**用于快照复制和事务复制，Oracle 发布服务器。  
   
- **sp_helpxactsetjob**始终返回 Xactset 作业 (HREPL_XactSetJob) 发布服务器上的当前设置。 如果 Xactset 作业当前在作业队列中，它还会从 USER_JOB 数据字典视图（创建在 Oracle 发布服务器的管理员帐户下）返回作业的属性。  
+ **sp_helpxactsetjob**始终返回发布服务器上 Xactset 作业 (HREPL_XactSetJob) 的当前设置。 如果 Xactset 作业当前在作业队列中，它还会从 USER_JOB 数据字典视图（创建在 Oracle 发布服务器的管理员帐户下）返回作业的属性。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有一个的成员**sysadmin**固定的服务器角色可以执行**sp_helpxactsetjob**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [为 Oracle 发布服务器配置事务集作业（复制 Transact-SQL 编程）](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [sp_publisherproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   

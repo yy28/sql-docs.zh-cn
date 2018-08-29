@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policies (TRANSACT-SQL) |Microsoft 文档
+title: syspolicy_policies (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policies view
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
-caps.latest.revision: 25
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c05a24d94ba5b65eff8c3aec2791c9993b99589
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5eb4c6d9586b2e7b6e946b461e9d6c200042223c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221498"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031248"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "33221498"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|策略标识符。|  
-|name|**sysname**|此原則的名稱。|  
+|NAME|**sysname**|策略的名称。|  
 |condition_id|**int**|此策略强制设定或测试的条件的 ID。|  
 |root_condition_id|**int**|仅限内部使用。|  
 |date_created|**datetime**|策略的创建日期和时间。|  
@@ -54,13 +53,13 @@ ms.locfileid: "33221498"
 |modified_by|**sysname**|最近修改策略的登录名。 如果从未进行修改，则为 NULL。|  
 |date_modified|**datetime**|策略的创建日期和时间。 如果从未进行修改，则为 NULL。|  
   
-## <a name="remarks"></a>注释  
- 在解决基于策略的管理时，查询[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)视图以确定是否启用了策略。 此视图还会显示创建或上次更改策略的用户。  
+## <a name="remarks"></a>Remarks  
+ 当你进行故障排除基于策略的管理时，查询[syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)视图以确定是否启用策略。 此视图还会显示创建或上次更改策略的用户。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

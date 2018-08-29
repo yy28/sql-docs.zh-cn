@@ -22,17 +22,16 @@ helpviewer_keywords:
 - database_usage
 - sys.database_usage
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: affdc08bb7ae507ca30edfa986cd68a81ba564f2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1816ab7f6e4ad35453c61fed8670c27b1f0ac833
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038815"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027382"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "38038815"
 |sku|数据库服务层的类型： **Web**，**业务**，**基本**，**标准**，**高级**|  
 |quantity|指定当天存在的 SKU 类型的数据库的最大数量。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  对此视图的只读访问可供有权连接到的所有用户**主**数据库。  
   
 ## <a name="remarks"></a>Remarks  

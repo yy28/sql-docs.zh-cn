@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_add_policy_category (Transact SQL) |Microsoft 文档
+title: sp_syspolicy_add_policy_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 134777b90dcb5213d1f8a747de4bd34151afcca2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 20bf30b2f0ad96ce46f6990d3d4efeab1a1fe398
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254722"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033311"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +46,25 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
   
 ## <a name="arguments"></a>参数  
  [ **@name=** ] **'***name***'**  
- 为策略类别的名称。 *名称*是**sysname**，和是必需的。 *名称*不能为 NULL 或空字符串。  
+ 是的策略类别的名称。 *名称*是**sysname**，和是必需的。 *名称*不能为 NULL 或空字符串。  
   
  [ **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- 确定是否为策略类别而托管数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为 1 （已启用）。  
+ 确定是否为策略类别而托管数据库订阅。 *mandate_database_subscriptions*是**位**值，默认值为 1 （启用）。  
   
  [ **@policy_category_id=** ] *policy_category_id*  
- 为策略类别的标识符。 *policy_category_id*是**int**，并返回作为输出。  
+ 为策略类别的标识符。 *policy_category_id*是**int**，并作为 OUTPUT 返回。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_add_policy_category。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于凭据此可能提升，应仅向与控制的配置的受信任的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建一个策略类别，在其中对该类别的订阅不托管。 这意味着可以对单独的数据库进行配置，以便在类别中选择加入或不加入策略。  
@@ -81,9 +80,9 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_add_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

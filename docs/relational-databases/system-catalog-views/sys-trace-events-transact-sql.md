@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_events catalog view
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
-caps.latest.revision: 24
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d564d08dce5dbc89c0071625aefc2cfef80ec36
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 72ef4773d669017da99ca5c7531f768d7bef2bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969619"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032620"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ ms.locfileid: "37969619"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_event_id**|**int**|事件的唯一 ID。 此列也是在**sys.trace_event_bindings**并**sys.trace_subclass_values**目录视图。|  
-|**category_id**|**int**|事件的类别 ID。 此列也是在**sys.trace_categories**目录视图。|  
+|**trace_event_id**|**smallint**|事件的唯一 ID。 此列也是在**sys.trace_event_bindings**并**sys.trace_subclass_values**目录视图。|  
+|**category_id**|**smallint**|事件的类别 ID。 此列也是在**sys.trace_categories**目录视图。|  
 |**名称**|**nvarchar(128)**|此事件的唯一名称。 此参数未本地化。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>另请参阅  

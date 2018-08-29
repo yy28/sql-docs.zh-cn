@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_category_subscriptions (Transact SQL) |Microsoft 文档
+title: syspolicy_policy_category_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_group_subscriptions view
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
-caps.latest.revision: 16
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3092a2977a35d7ab42cfaafe07611ddd51b9bc5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0d08a739b2fe0d56a263cf2cd77890232592148
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221638"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026344"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理订阅在表中各占一行。 每个行所说明的目标和策略类别对。 下表介绍了 syspolicy_policy_group_subscriptions 视图中的列。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中每个基于策略的管理订阅在表中各占一行。 每行描述目标和策略的类别对。 下表介绍了 syspolicy_policy_group_subscriptions 视图中的列。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -41,13 +40,13 @@ ms.locfileid: "33221638"
 |target_object|**sysname**|目标对象的名称。|  
 |policy_category_id|**int**|应用于目标的策略类别的 ID。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此视图显示订阅了策略类别的目标。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

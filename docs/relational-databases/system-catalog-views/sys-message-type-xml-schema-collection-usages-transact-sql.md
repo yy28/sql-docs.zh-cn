@@ -1,5 +1,5 @@
 ---
-title: sys.message_type_xml_schema_collection_usages (Transact SQL) |Microsoft 文档
+title: sys.message_type_xml_schema_collection_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.message_type_xml_schema_collection_usages catalog view
 ms.assetid: 544f61a1-c7b7-44b4-bf8d-980ba87d0665
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ee4a4dab2f6d4d6d4ac226c4baa6db317a56249
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 316dca3d6ce8419a41b3beb9b87a53438d279d8a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178743"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029444"
 ---
 # <a name="sysmessagetypexmlschemacollectionusages-transact-sql"></a>sys.message_type_xml_schema_collection_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33178743"
 |**message_type_id**|**int**|服务消息类型的 ID。 不可为 NULL。|  
 |**xml_collection_id**|**int**|包含验证 XML 架构命名空间的集合的 ID。 不可为 NULL。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

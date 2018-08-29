@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (Transact SQL) |Microsoft 文档
+title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ec0e31b852a1aea3cfd964a47660fd4953c196d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7aa57cc268f5bc70bc0c2ebf03e0f05a4d8950d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994414"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028998"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tablename =**] *****tablename*****  
+ [  **@tablename =**] **'***tablename*****  
  是表的名称。 *tablename*是**sysname**，无默认值。 该表必须是排队订阅的一部分。  
   
- [  **@owner =**] *****所有者*****  
+ [  **@owner =**] **'***所有者*****  
  是订阅所有者。 *所有者*是**sysname**，默认值为 NULL。  
   
- [  **@tranid =** ] *****transaction_id*****  
+ [  **@tranid =** ] **'***transaction_id*****  
  允许按事务 ID 筛选输出。 *transaction_id*是**nvarchar(70)**，默认值为 NULL。 如果已指定，则显示与排队命令关联的事务 ID。 如果为 NULL，则显示队列中的所有命令。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -65,19 +65,19 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**操作**|**nvarchar(10)**|同步发生时采取的操作类型。<br /><br /> INS= 插入 <br /><br /> DEL = 删除<br /><br /> UPD = 更新|  
-|**Tranid**|**nvarchar(70)**|执行命令的事务 ID。|  
+|**tranid**|**nvarchar(70)**|执行命令的事务 ID。|  
 |**表 column1...n**||指定的表中每个列的值*tablename*。|  
 |**msrepl_tran_version**|**uniqueidentifier**|该列用于跟踪对已复制数据的更改以及在发布服务器上执行冲突检测。 该列自动添加到表中。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_getqueuedrows**在参与排队更新订阅服务器上使用。  
   
- **sp_getqueuedrows**查找对某一订阅给定表行数据库参与了排队更新，但当前不已解决的队列读取器代理。  
+ **sp_getqueuedrows**查找订阅上的给定表行数据库参与排队更新，但当前没有已解决的队列读取器代理。  
   
-## <a name="permissions"></a>权限  
- **sp_getqueuedrows**需要上指定的表中的选择权限*tablename*。  
+## <a name="permissions"></a>Permissions  
+ **sp_getqueuedrows**需要具有 SELECT 权限中指定的表*tablename*。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [排队更新冲突的检测和解决](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelppublicationthresholds (Transact SQL) |Microsoft 文档
+title: sp_replmonitorhelppublicationthresholds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelppublicationthresholds
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c77f8e36cc33dfee704ef8f5b945a58c7011a23b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d87de8d4ab74bc5c9d776b9d08e9e0680e2530cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999564"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032235"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher**=] *****发布服务器*****  
+ [ **@publisher**=] **'***发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db**=] *****publisher_db*****  
+ [ **@publisher_db**=] **'***publisher_db*****  
  已发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication**=] *****发布*****  
+ [ **@publication**=] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [ **@publication_type**=] *publication_type*  
- 发布的类型。 *publication_type*是**int**，并且可以为这些值之一。  
+ 发布的类型。 *publication_type*是**int**，可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|事务发布。|  
 |**1**|快照发布。|  
@@ -72,22 +72,22 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|复制性能度量指标的 ID，可为下列值之一。<br /><br /> **1expiration** -对事务发布的订阅的即将到期的监视器。<br /><br /> **2latency** -对事务发布的订阅的性能监视器。<br /><br /> **4mergeexpiration** -监视器即将过期的订阅合并发布。<br /><br /> **5mergeslowrunduration** -监视通过低带宽 （拨号） 连接的合并同步持续时间。<br /><br /> **6mergefastrunduration** -监视通过高带宽 (LAN) 连接的合并同步持续时间。<br /><br /> **7mergefastrunspeed** -监视通过高带宽 (LAN) 连接的合并同步的同步速率。<br /><br /> **8mergeslowrunspeed** -监视通过低带宽 （拨号） 连接的合并同步的同步速率。|  
+|**metric_id**|**int**|复制性能度量指标的 ID，可为下列值之一。<br /><br /> **1expiration** -监视对事务发布的订阅是否即将过期。<br /><br /> **2latency** -监视对事务发布的订阅的性能。<br /><br /> **4mergeexpiration** -合并发布的订阅是否即将过期的监视器。<br /><br /> **5mergeslowrunduration** -监视通过低带宽 （拨号） 连接的合并同步的持续时间。<br /><br /> **6mergefastrunduration** -监视通过高带宽 (LAN) 连接的合并同步的持续时间。<br /><br /> **7mergefastrunspeed** -监视通过高带宽 (LAN) 连接的合并同步的同步速率。<br /><br /> **8mergeslowrunspeed** -监视通过低带宽 （拨号） 连接的合并同步的同步速率。|  
 |**title**|**sysname**|复制性能度量指标的名称。|  
-|**值**|**int**|性能度量指标的阈值。|  
-|**shouldalert**|**bit**|是时该度量值超出定义的阈值为此发布中; 如果应生成警报值为**1**指示应会引发警报。|  
-|**isenabled**|**bit**|如果为此发布中; 此复制性能度量值启用监视值为**1**指示是否启用了监视。|  
+|**value**|**int**|性能度量指标的阈值。|  
+|**shouldalert**|**bit**|当指标超过为此发布; 定义的阈值时应生成警报值为**1**指示应引发警报。|  
+|**isenabled**|**bit**|如果为此发布; 此复制性能跃点启用了监视值为**1**指示启用监视。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorhelppublicationthresholds**用于所有类型的复制。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**db_owner**或**replmonitor**在分发数据库上的固定的数据库角色可以执行**sp_replmonitorhelppublicationthresholds**。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**db_owner**或**replmonitor**固定的数据库角色的分发数据库才能执行**sp_replmonitorhelppublicationthresholds**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

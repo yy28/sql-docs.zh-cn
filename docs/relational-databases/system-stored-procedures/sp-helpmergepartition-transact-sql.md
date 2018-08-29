@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepartition (Transact SQL) |Microsoft 文档
+title: sp_helpmergepartition (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21f209b61786b07bac4a9941073d3e75b282b846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ef6a1192ac2216ff335a98709520f10610cb373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996074"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027925"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *****发布*****  
+ [  **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@suser_sname=** ] *****suser_sname*****  
+ [  **@suser_sname=** ] **'***suser_sname*****  
  用于定义分区的 SUSER_SNAME 值。 *suser_sname*是**sysname**，默认值为 NULL。 提供此参数是为了将结果集限制在仅将 SUSER_SNAME 解析为提供的值的分区中。  
   
 > [!NOTE]  
 >  当*suser_sname*提供，则*host_name*必须为 NULL  
   
- [  **@host_name=** ] *****host_name*****  
+ [  **@host_name=** ] **'***host_name*****  
  用于定义分区的 HOST_NAME 值。 *host_name*是**sysname**，默认值为 NULL。 提供此参数是为了将结果集限制在仅将 HOST_NAME 解析为提供的值的分区中。  
   
 > [!NOTE]  
@@ -67,8 +67,8 @@ sp_helpmergepartition [ @publication= ] 'publication'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**分区**|**int**|标识订阅服务器分区。|  
-|**host_name**|**sysname**|创建订阅分区来进行筛选的值时所用值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数。|  
-|**suser_sname**|**sysname**|创建订阅分区来进行筛选的值时所用值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数。|  
+|**host_name**|**sysname**|创建订阅的分区筛选的值时使用值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)订阅服务器上的函数。|  
+|**suser_sname**|**sysname**|创建订阅的分区筛选的值时使用值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)订阅服务器上的函数。|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|订阅服务器分区的已筛选数据快照的位置。|  
 |**date_refreshed**|**datetime**|最近运行快照作业为分区生成已筛选数据快照的日期。|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|标识为分区创建已筛选数据快照的作业。|  
@@ -76,14 +76,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergepartition**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergepartition**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_addmergepartition &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_addmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

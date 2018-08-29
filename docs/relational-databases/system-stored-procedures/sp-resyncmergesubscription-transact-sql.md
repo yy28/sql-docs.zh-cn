@@ -1,5 +1,5 @@
 ---
-title: sp_resyncmergesubscription (Transact SQL) |Microsoft 文档
+title: sp_resyncmergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 35f5311da7b2d878a738695ee62a65c947f98693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000774"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033388"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,35 +61,35 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [ **@subscriber** = ] **'***subscriber***'**  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器上运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器上运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  
  是订阅数据库的名称。 *subscription_db*是**sysname**，默认值为 NULL。 如果存储过程在订阅服务器的订阅数据库中运行，则 NULL 值有效。 如果在发布服务器上运行该存储过程，则必须指定订阅服务器。  
   
  [ **@resync_type** = ] *resync_type*  
- 定义重新同步的开始时间。 *resync_type*是**int**，和可以是以下值之一。  
+ 定义重新同步的开始时间。 *resync_type*是**int**，可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|同步从初始快照后开始。 这是占用资源最多的选项，因为自初始快照后的所有更改都重新应用于订阅服务器。|  
 |**1**|同步从上次成功验证后开始。 自上次成功验证后发生的所有新的或未完成的生成都重新应用于订阅服务器。|  
-|**2**|同步将开始从中给定的日期*resync_date_str*。 该日期后发生的所有新的或未完成的生成都重新应用于订阅服务器。|  
+|**2**|从中给定的日期开始同步*resync_date_str*。 该日期后发生的所有新的或未完成的生成都重新应用于订阅服务器。|  
   
  [ **@resync_date_str=**] *resync_date_string*  
- 定义重新同步的开始日期。 *resync_date_string*是**nvarchar (30)**，默认值为 NULL。 使用此参数时*resync_type*是值**2**。 给定的日期转换为它的等效项**datetime**值。  
+ 定义重新同步的开始日期。 *resync_date_string*是**nvarchar(30)**，默认值为 NULL。 使用此参数时*resync_type*的值为**2**。 给定的日期转换为其等效**datetime**值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_resyncmergesubscription**合并复制中使用。  
   
- 值为**0**为*resync_type*参数，可自初始快照后，重新应用所有更改，可能会占用大量资源，但可能大量小于完整进行重新初始化。 例如，如果初始快照在一个月前传递，则该值将使得重新应用上个月的数据。 如果初始快照包含 1 GB 的数据，但是在上个月开始的更改量包含 2 MB 的已更改数据，则重新应用数据与重新应用全部 1 GB 快照相比更有效。  
+ 值为**0**有关*resync_type*参数，它将所有更改重新都应用自初始快照后，可能会占用大量资源，但也许非常少比完全重新初始化。 例如，如果初始快照在一个月前传递，则该值将使得重新应用上个月的数据。 如果初始快照包含 1 GB 的数据，但是在上个月开始的更改量包含 2 MB 的已更改数据，则重新应用数据与重新应用全部 1 GB 快照相比更有效。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_resyncmergesubscription**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

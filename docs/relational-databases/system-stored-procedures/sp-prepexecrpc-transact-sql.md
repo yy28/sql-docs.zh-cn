@@ -1,5 +1,5 @@
 ---
-title: sp_prepexecrpc (Transact SQL) |Microsoft 文档
+title: sp_prepexecrpc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 536932ef57cc8bb042979dd2332552f34713743d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab11cbca7177408ed94e79967ab55bad9fbc50b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250263"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027951"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +46,15 @@ sp_prepexecrpc handle OUTPUT, RPCCall
   
 ## <a name="arguments"></a>参数  
  *句柄*  
- 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的已准备的句柄标识符。 *处理*为所需的参数且具有**int**返回值。  
+ 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成的已准备的句柄标识符。 *处理*为必需的参数且具有**int**返回值。  
   
  *RPCCall*  
- 使用 ODBC 规范语法定义存储过程调用。 *RPCCall*是必需的参数来调用**ntext**字符串输入值。  
+ 使用 ODBC 规范语法定义存储过程调用。 *RPCCall*是一个必需的参数，为调用**ntext**字符串输入值。  
   
  *bound_param*  
- 指示可选使用其他参数。 *bound_param*调用的任何数据类型指定在使用的附加参数的输入值。  
+ 指示可选使用其他参数。 *bound_param*需要输入任何数据类型来指定中使用的其他参数的值。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

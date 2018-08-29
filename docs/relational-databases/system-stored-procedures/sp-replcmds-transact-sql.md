@@ -1,5 +1,5 @@
 ---
-title: sp_replcmds (Transact SQL) |Microsoft 文档
+title: sp_replcmds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001424"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033552"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回标记为要复制的事务的命令。 在发布服务器的发布数据库上执行此存储的过程。  
+  返回标记为要复制的事务的命令。 在发布服务器上对发布数据库执行此存储的过程。  
   
 > [!IMPORTANT]  
->  **Sp_replcmds**应运行过程只是为了解决复制的问题。  
+>  **Sp_replcmds**应运行过程只是为了解决复制问题。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>参数  
  [  **@maxtrans=**] *maxtrans*  
- 若要返回其信息的事务数。 *maxtrans*是**int**，默认值为**1**，它指定等待分发的下一个事务。  
+ 是要返回其信息的事务数。 *maxtrans*是**int**，默认值为**1**，它指定下一个等待分发的事务。  
   
 ## <a name="result-sets"></a>结果集  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**文章 id**|**int**|文章的 ID。|  
+|**文章 id**|**int**|项目的 ID。|  
 |**partial_command**|**bit**|指示这是否为部分命令。|  
 |**command**|**varbinary(1024)**|命令值。|  
 |**xactid**|**binary(10)**|事务 id。|  
@@ -70,28 +70,28 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|发起事务的数据库的版本。|  
 |**originator_lsn**|**varbinary(16)**|标识初始发布中命令的日志序列号 (LSN)。|  
   
-## <a name="remarks"></a>注释  
- **sp_replcmds**日志读取器进程在事务复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_replcmds**由日志读取器进程在事务复制中。  
   
- 复制会将运行的第一个客户端**sp_replcmds**作为日志读取器给定数据库内。  
+ 复制将在运行第一个客户端**sp_replcmds**日志读取器为给定数据库内。  
   
  此过程可以为所有者限定的表或未限定的表名（默认值）生成命令。 通过添加限定的表名，可将数据从特定用户在一个数据库中拥有的表复制到此用户在另一个数据库中拥有的表中。  
   
 > [!NOTE]  
 >  由于源数据库内的表名是由所有者名称限定的，所以目标数据库内的表所有者必须具有相同的所有者名称。  
   
- 尝试运行的客户端**sp_replcmds**同一数据库中收到错误 18752 直至第一个客户端断开连接为止。 第一个客户端断开连接后，可以运行另一个客户端**sp_replcmds**，并成为新的日志读取器。  
+ 尝试运行的客户端**sp_replcmds**同一数据库中收到 18752 号错误，直到第一个客户端断开连接。 第一个客户端断开连接后，可以运行另一个客户端**sp_replcmds**，并成为新的日志读取器。  
   
- 警告消息号 18759 添加到同时[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志中如果**sp_replcmds**无法复制的文本命令，因为文本指针不是在同一个事务中检索。  
+ 警告消息添加 18759 号既[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]错误日志和[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志，如果**sp_replcmds**无法复制文本命令，因为不是文本指针检索对同一事务中。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_replcmds**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [错误消息](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

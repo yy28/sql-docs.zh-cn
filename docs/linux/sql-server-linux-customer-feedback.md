@@ -1,8 +1,8 @@
 ---
-title: 在 Linux 上的 SQL Server 的客户反馈 |Microsoft 文档
-description: 描述如何收集和 Linux 上配置 SQL Server 客户反馈。
-author: annashres
-ms.author: anshrest
+title: Linux 上的 SQL Server 客户反馈 |Microsoft Docs
+description: 介绍如何收集和配置 Linux 上 SQL Server 客户反馈。
+author: rothja
+ms.author: jroth
 manager: craigg
 ms.date: 06/22/2018
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 69a1e82544ad1566cdf9ec1937d88a8cc2a61975
-ms.sourcegitcommit: 23e71a8afba194e0893f31532db0aaa29288acb2
+ms.openlocfilehash: 4bbe6fc1aa961c3a1e0e699b1d3a8df87233e874
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2018
-ms.locfileid: "36329502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43072176"
 ---
-# <a name="customer-feedback-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的客户反馈
+# <a name="customer-feedback-for-sql-server-on-linux"></a>Linux 上的 SQL Server 客户反馈
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 默认情况下，Microsoft SQL Server 收集有关其客户如何使用应用程序的信息。 具体来说，SQL Server 收集有关安装体验、使用情况和性能的信息。 此信息有助于 Microsoft 改进产品以更好地满足客户需求。 例如，Microsoft 收集有关客户遇到的错误代码类型信息，这样我们就可以修复相关 bug，改进关于如何使用 SQL Server 的文档，并确定是否应将功能添加到产品中以更好地为客户服务。
 
-本文档提供有关收集哪些类型的信息以及如何在发送，它收集的 linux 操作系统上配置 Microsoft SQL Server 的详细信息向 Microsoft 的信息。 SQL Server 2017 包括说明我们执行操作并不会从用户收集哪些信息的隐私声明。 有关详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+本文档提供了有关收集哪些类型的信息以及有关如何发送，收集在 Linux 上配置 Microsoft SQL Server 详细信息到 Microsoft 的信息。 SQL Server 2017 包含隐私声明，其中介绍了我们执行操作并不会从用户收集哪些信息。 有关详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
 
 具体而言，Microsoft 不会通过这种机制发送以下任何类型的信息：
 
@@ -31,21 +31,21 @@ ms.locfileid: "36329502"
 - 任何登录凭据或其他身份验证信息
 - 个人身份信息 (PII)
 
-SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关信息，方便我们快速查找并修复客户遇到的任何安装问题。 可以配置 SQL Server 2017 不为 （针对每个服务器实例进行） 的信息发送给 Microsoft 通过**mssql conf**。 mssql conf 是将与 SQL Server 2017 为 Red Hat Enterprise Linux、 SUSE Linux 企业服务器和 Ubuntu 安装的配置脚本。
+SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关信息，方便我们快速查找并修复客户遇到的任何安装问题。 可以配置 SQL Server 2017 不将发送到 Microsoft 通过 （根据每个服务器实例） 的信息**mssql conf**。 mssql conf 是 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 安装了 SQL Server 2017 的配置脚本。
 
 > [!NOTE]
 > 只能在付费版本的 SQL Server 中禁用向 Microsoft 发送信息的功能。
 
 ## <a name="disable-customer-feedback"></a>禁用客户反馈
 
-此选项允许你根据 SQL Server 向 Microsoft 发送反馈，或未更改。 默认情况下，此值设置为 true。 若要更改的值，请运行以下命令：
+此选项可以根据 SQL Server 将反馈发送给 Microsoft 或不更改。 默认情况下，此值设置为 true。 若要更改的值，运行以下命令：
 
 > [!IMPORTANT]
-> 你可以关闭客户反馈免费版本的 SQL Server、 快速和开发人员。
+> 您可以将关闭客户反馈免费版本的 SQL Server、 Express 和开发人员。
 
 ### <a name="on-red-hat-suse-and-ubuntu"></a>在 Red Hat、 SUSE 和 Ubuntu
 
-1. Mssql conf 脚本作为根与运行**设置**命令**telemetry.customerfeedback**。 下面的示例通过指定关闭客户反馈**false**。
+1. 作为与根运行 mssql-conf 脚本**设置**命令，以进行**telemetry.customerfeedback**。 下面的示例通过指定关闭客户反馈**false**。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -57,10 +57,10 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上禁用客户反馈，你必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
+### <a name="on-docker"></a>Docker 上
+若要在 docker 上禁用客户反馈，您必须具有 Docker[持久保存数据](sql-server-linux-configure-docker.md)。 
 
-1. 添加`mssql.conf`文件替换为行`[telemetry]`和`customerfeedback = false`主机目录中：
+1. 添加`mssql.conf`行的文件`[telemetry]`和`customerfeedback = false`主机目录中：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -78,15 +78,15 @@ SQL Server 2017 始终收集和发送从安装过程开始的安装体验相关�
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
    ```
    
-## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>有关 Linux 用法反馈集合上的 SQL Server 的本地审核
+## <a name="local-audit-for-sql-server-on-linux-usage-feedback-collection"></a>SQL Server on Linux 使用反馈收集的本地审核
 
-Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 Microsoft 发送有关你的计算机或设备 （"标准计算机信息"） 的信息。 SQL Server 使用情况反馈集合的本地审核组件可以写入到指定的文件夹，表示将发送给 Microsoft 的数据 （日志） 服务收集的数据。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。
+Microsoft SQL Server 2017 包含了一些支持 Internet 的功能，可收集并向 Microsoft 发送有关你的计算机或设备 （"标准计算机信息"） 的信息。 SQL Server 使用反馈收集的本地审核组件可以写入到指定的文件夹，它表示将发送给 Microsoft 的数据 （日志） 本服务收集的数据。 本地审核的用途是使客户可以出于合规性、监管或隐私验证原因而查看 Microsoft 使用此功能收集的所有数据。
 
-在 Linux 上的 SQL Server，本地审核可以在 SQL Server 数据库引擎的实例级别上是可配置。 其他 SQL Server 组件和 SQL Server 工具没有使用情况反馈收集本地审核功能。
+在 Linux 上的 SQL Server，本地审核可以在实例级别针对 SQL Server 数据库引擎是可配置。 其他 SQL Server 组件和 SQL Server Tools 没有使用反馈收集的本地审核功能。
 
 ### <a name="enable-local-audit"></a>启用本地审核
 
-此选项允许本地审核，并且允许你设置在其中创建本地审核日志的目录。
+此选项后，本地审核并将目录设置在其中创建本地审核日志。
 
 1. 创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/tmp/审核**目录：
 
@@ -94,14 +94,14 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
    sudo mkdir /tmp/audit
    ```
 
-1. 更改所有者和到的目录组**mssql**用户：
+1. 更改所有者和组的目录**mssql**用户：
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. Mssql conf 脚本作为根与运行**设置**命令**telemetry.userrequestedlocalauditdirectory**:
+1. 作为与根运行 mssql-conf 脚本**设置**命令，以进行**telemetry.userrequestedlocalauditdirectory**:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -113,17 +113,17 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>在 Docker 上
-若要在 docker 上启用本地审核，您必须 Docker[保存数据](sql-server-linux-configure-docker.md)。 
+### <a name="on-docker"></a>Docker 上
+若要在 docker 上启用本地审核，必须具有 Docker[持久保存数据](sql-server-linux-configure-docker.md)。 
 
-1. 新的本地审核日志的目标目录将容器中。 在您的计算机上的主机目录中创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/审核**目录：
+1. 在容器中将新的本地审核日志的目标目录。 在你的计算机上的主机目录中创建新的本地审核日志的目标目录。 下面的示例创建一个新 **/审核**目录：
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
    
-1. 添加`mssql.conf`文件替换为行`[telemetry]`和`userrequestedlocalauditdirectory = <host directory>/audit`主机目录中：
+1. 添加`mssql.conf`行的文件`[telemetry]`和`userrequestedlocalauditdirectory = <host directory>/audit`主机目录中：
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -143,4 +143,4 @@ Microsoft SQL Server 2017 包含 Internet 启用的功能，可以收集并向 M
    
 ## <a name="next-steps"></a>后续步骤
 
-在 Linux 上 SQL Server 的详细信息，请参阅[概述的 SQL Server on Linux](sql-server-linux-overview.md)。
+Linux 上 SQL Server 的详细信息，请参阅[概述的 SQL Server Linux 上](sql-server-linux-overview.md)。

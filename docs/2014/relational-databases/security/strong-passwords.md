@@ -17,16 +17,15 @@ helpviewer_keywords:
 - characters [SQL Server], password policies
 - strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083009"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025924"
 ---
 # <a name="strong-passwords"></a>强密码
   在服务器安全部署中，密码可能是最薄弱的一个环节。 请务必在选择密码时保持高度谨慎。 强密码有以下特征：  
@@ -53,9 +52,9 @@ ms.locfileid: "39083009"
   
 -   含有空格或以空格开头。  
   
--   以 $ 开头或\@字符。  
+-   以 $ 或 \@ 字符开头。  
   
- 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@的用户。 这些字符用于初始化连接或分隔连接值。  
+ 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@ 的用户。 这些字符用于初始化连接或分隔连接值。  
   
 ## <a name="related-content"></a>相关内容  
  [密码策略](password-policy.md)  

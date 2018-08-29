@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges (Transact SQL) |Microsoft 文档
+title: sp_showpendingchanges (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000734"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030698"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,17 +51,17 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @destination_server **=** ] *****destination_server*****  
+ [ @destination_server **=** ] **'***destination_server*****  
  应用复制更改的服务器的名称。 *destination_server*是**sysname**，默认值为 NULL。  
   
- [ @publication **=** ] *****发布*****  
- 发布的名称。 *发布*是**sysname**，默认值为 NULL。 当*发布*指定，结果则仅限于指定的发布。  
+ [ @publication **=** ] **'***发布*****  
+ 发布的名称。 *发布*是**sysname**，默认值为 NULL。 当*发布*指定，则结果将限定为指定的发布。  
   
- [ @article **=** ] *****文章*****  
- 项目的名称。 *文章*是**sysname**，默认值为 NULL。 当*文章*指定，结果则仅限于指定的文章。  
+ [ @article **=** ] **'***文章*****  
+ 项目的名称。 *文章*是**sysname**，默认值为 NULL。 当*一文*指定，则结果将限定为指定的项目。  
   
  [ @show_rows **=** ] *show_rows*  
- 指定结果集是否包含更具体的信息有关挂起的更改，默认值为**0**。 如果值为**1**指定，结果集包含的列 is_delete 和 rowguid。  
+ 指定是否在结果集中挂起的更改，默认值为有关包含更多具体信息**0**。 如果值为**1**指定，则结果集包含 is_delete 和 rowguid 列。  
   
 ## <a name="result-set"></a>结果集  
   
@@ -70,29 +70,29 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|接收更改复制的服务器的名称。|  
 |pub_name|**sysname**|发布的名称。|  
 |destination_db_name|**sysname**|接收更改复制的数据库的名称。|  
-|is_dest_subscriber|**bit**|指示要将更改复制到订阅服务器。 值为**1**指示将更改复制到订阅服务器。 **0**意味着更改将被复制到发布服务器。|  
+|is_dest_subscriber|**bit**|指示要将更改复制到订阅服务器。 值为**1**指示到订阅服务器复制内容所做的更改。 **0**意味着更改复制到发布服务器。|  
 |article_name|**sysname**|产生更改的表的项目名称。|  
 |pending_deletes|**int**|等待复制的删除数。|  
 |pending_ins_and_upd|**int**|等待复制的插入数和更新数。|  
-|is_delete|**bit**|指示挂起更改是否为删除操作。 值为**1**指示更改是删除。 需要的值**1**为@show_rows。|  
-|rowguid|**uniqueidentifier**|标识已更改的行的 GUID。 需要的值**1**为@show_rows。|  
+|is_delete|**bit**|指示挂起更改是否为删除操作。 值为**1**指示更改为删除。 要求值为**1**为@show_rows。|  
+|rowguid|**uniqueidentifier**|标识已更改的行的 GUID。 要求值为**1**为@show_rows。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  sp_showpendingchanges 用于合并复制。  
   
  sp_showpendingchanges 在排除合并复制故障时使用。  
   
  sp_showpendingchanges 的结果不包括第 0 代中的行。  
   
- 当为指定的项目*文章*不属于为指定的发布*发布，* 对 pending_deletes 和 pending_ins_and_upd 返回的计数为 0。  
+ 为指定的项目*一文*不属于指定为发布*发布，* 为 pending_deletes 和 pending_ins_and_upd 返回计数 0。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有 sysadmin 固定服务器角色的成员或 db_owner 固定数据库角色的成员才能执行 sp_showpendingchanges。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_server_diagnostics (TRANSACT-SQL) |Microsoft 文档
+title: sp_server_diagnostics (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263296"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028166"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@repeat_interval** =] *****repeat_interval_in_seconds*****  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds*****  
  指示存储过程重复运行以发送运行状况信息的时间间隔。  
   
- *repeat_interval_in_seconds*是**int**与默认值 0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
+ *repeat_interval_in_seconds*是**int**默认值为 0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  
   
  如果不指定此参数或者指定值为 0，存储过程将一次性返回数据，然后退出。  
   
@@ -62,35 +62,35 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>结果集  
 **sp_server_diagnostics**返回以下信息  
   
-|列|数据类型|Description|  
+|“列”|数据类型|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
-|**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例组件或 Always On 可用性组级别：<br /><br /> instance<br /><br /> Alwayson: AvailabilityGroup|  
+|**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级别组件或 Always On 可用性组：<br /><br /> instance<br /><br /> Alwayson： 可用性组|  
 |**组件**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
-|**状态**|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0： 未知<br /><br /> 1： 干净<br /><br /> 2： 警告<br /><br /> 3： 错误|  
+|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
+|**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0： 未知<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
 |**data**|**varchar (max)**|指定特定于组件的数据。|  
   
  下面是对五个组件的说明：  
   
--   **系统**： 收集数据从 system 透视自旋锁、 严重处理条件、 无法完成任务、 页面错误、 和 CPU 使用率。 此信息会产生总体运行状态建议。  
+-   **系统**： 从系统角度收集有关自旋锁、 严重的处理情况、 非生成任务、 页面错误和 CPU 使用情况数据。 此信息会产生总体运行状态建议。  
   
--   **资源**： 从资源透视中收集数据，在物理和虚拟内存，缓冲池页、 缓存和其他内存对象。 此信息会提供总体运行状态建议。  
+-   **资源**： 从资源的角度收集有关物理和虚拟内存、 缓存池、 页面、 缓存和其他内存对象数据。 此信息会提供总体运行状态建议。  
   
--   **query_processing**： 从工作线程，任务，查询处理的角度收集数据等待类型、 CPU 密集型会话和阻塞的任务。 此信息会提供总体运行状态建议。  
+-   **query_processing**： 从工作线程、 任务，在查询处理的角度收集数据，请等待类型、 CPU 密集型会话和正在阻塞的任务。 此信息会提供总体运行状态建议。  
   
--   **io_subsystem**： 在 IO 上收集数据。 除了诊断数据外，此组件还可生成仅适用于 IO 子系统的干净运行状况或警告运行状态。  
+-   **io_subsystem**： 针对 IO 中收集数据。 除了诊断数据外，此组件还可生成仅适用于 IO 子系统的干净运行状况或警告运行状态。  
   
--   **事件**： 收集数据并通过存储过程的图面上的错误和事件记录的服务器，包括有关环形缓冲区异常的详细信息的感兴趣的环有关内存 broker，了内存，计划程序监视器的缓冲事件缓冲池、 自旋锁、 安全性和连接。 事件将始终显示 0 作为状态。  
+-   **事件**： 收集数据并通过存储过程的图面上的错误和记录的服务器，包括有关环形缓冲区异常的详细信息感兴趣的事件的环形缓冲区事件有关内存 broker，内存不足，请计划程序监视器缓冲池、 spinlock、 安全性和连接。 事件将始终显示 0 作为状态。  
   
--   **\<可用性组的名称 >**： 收集数据的指定的可用性组 (如果 component_type ="始终上： AvailabilityGroup")。  
+-   **\<可用性组的名称 >**： 收集指定的可用性组的数据 (如果 component_type ="始终在： AvailabilityGroup")。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
   
 下表将组件映射到其关联的运行状态。  
   
-|Components|干净 (1)|警告 (2)|错误 (3)|未知 (0)|  
+|组件|干净 (1)|警告 (2)|错误 (3)|未知 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |system|x|x|x||  
 |resource|x|x|x||  
@@ -101,9 +101,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 每行中的 (x) 表示组件处于有效运行状态。 例如，io_subsystem 将显示为干净或警告。 它将不显示错误状态。  
  
 > [!NOTE]
-> 在以高优先级 preemptive 线程上执行时 sp_server_diagnostics 内部过程的执行。
+> Sp_server_diagnostics 内部过程的执行是在以高优先级抢先的线程上实现的。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -246,7 +246,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [故障转移群集实例的故障转移策略](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

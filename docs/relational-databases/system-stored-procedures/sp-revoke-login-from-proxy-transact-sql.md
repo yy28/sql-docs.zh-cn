@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (Transact SQL) |Microsoft 文档
+title: sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_revoke_login_from_proxy
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6275facb81f14269eca19979c115c5ea80844563
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 66a96c8c55bf344c7750e4706ad8c89593a29fde
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253546"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027850"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_revoke_login_from_proxy
   
 ## <a name="arguments"></a>参数  
  [ **@name=** ] **'***name***'**  
- 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名、 服务器角色或**msdb**数据库角色，若要删除的访问权限。 *名称*是**nvarchar(256)** 无默认值。  
+ 名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名、 服务器角色或**msdb**要删除的访问权限的数据库角色。 *名称*是**nvarchar(256)** ，无默认值。  
   
  [ **@proxy_id=** ] *id*  
- 要删除其访问权的代理的 ID。 任一*id*或*proxy_name*必须指定，但不能同时指定。 *Id*是**int**，默认值为 NULL。  
+ 要删除其访问权的代理的 ID。 任一*id*或*proxy_name*必须指定，但不能同时指定两者。 *Id*是**int**，默认值为 NULL。  
   
  [ **@proxy_name=** ] **'***proxy_name***'**  
- 要删除其访问权的代理的名称。 任一*id*或*proxy_name*必须指定，但不能同时指定。 *Proxy_name*是**sysname**，默认值为 NULL。  
+ 要删除其访问权的代理的名称。 任一*id*或*proxy_name*必须指定，但不能同时指定两者。 *Proxy_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  引用此代理的登录名所拥有的作业将无法运行。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行此存储过程，用户必须为 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -78,9 +77,9 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 代理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+ [sp_help_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

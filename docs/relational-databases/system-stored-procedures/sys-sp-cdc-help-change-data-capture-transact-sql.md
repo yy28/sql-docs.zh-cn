@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_change_data_capture (Transact SQL) |Microsoft 文档
+title: sys.sp_cdc_help_change_data_capture (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263213"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027243"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,11 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|用于唯一标识源表中的行的索引列的列表。|  
 |captured_column_list|**nvarchar(max)**|已捕获的源列的列表。|  
   
-## <a name="remarks"></a>注释  
- 当同时*source_schema*和*source_name*默认为 NULL，或显式设置为 NULL，此存储的过程返回有关该数据库的所有调用方已选择的捕获实例访问。 当*source_schema*和*source_name*是否非 NULL，返回特定的命名启用表上的唯一信息。  
+## <a name="remarks"></a>Remarks  
+ 当同时*source_schema*并*source_name*默认为 NULL，或显式设置为 NULL，此存储的过程返回所有数据库的信息捕获实例的调用方已选择访问权限。 当*source_schema*并*source_name*是非 null 时，返回特定的命名启用表的唯一信息。  
   
-## <a name="permissions"></a>权限  
- 当*source_schema*和*source_name*均为 NULL，调用方的授权决定哪些启用的表是否包括在结果集。 调用方必须对捕获实例的所有捕获列拥有 SELECT 权限，还要有任何所定义的门户角色中的成员身份，才能获得要包括的表信息。 db_owner 数据库角色的成员可以查看有关所有定义的捕获实例的信息。 在请求特定的启用表的信息时，相同的 SELECT 和成员身份条件将应用于命名表。  
+## <a name="permissions"></a>Permissions  
+ 当*source_schema*并*source_name*为 NULL 时，调用方的授权将确定哪些启用的表包括在结果集中。 调用方必须对捕获实例的所有捕获列拥有 SELECT 权限，还要有任何所定义的门户角色中的成员身份，才能获得要包括的表信息。 db_owner 数据库角色的成员可以查看有关所有定义的捕获实例的信息。 在请求特定的启用表的信息时，相同的 SELECT 和成员身份条件将应用于命名表。  
   
 ## <a name="examples"></a>示例  
   

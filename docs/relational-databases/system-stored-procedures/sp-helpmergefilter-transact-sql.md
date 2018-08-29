@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (Transact SQL) |Microsoft 文档
+title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996034"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030813"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *****文章*****  
- 项目的名称。 *文章*是**sysname**，默认值为**%**，其返回的所有项目的名称。  
+ [  **@article=**] **'***文章*****  
+ 项目的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
   
- [  **@filtername=**] *****filtername*****  
- 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为**%**，这将返回有关上项目或发布定义的所有筛选器信息。  
+ [  **@filtername=**] **'***filtername*****  
+ 要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为**%**，表示返回有关项目或发布上定义的所有筛选器的信息。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -66,8 +66,8 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**join_filterclause**|**nvarchar(2000)**|用于限定联接的筛选子句。|  
 |**join_unique_key**|**int**|表示是否在唯一键上联接。|  
 |**基表所有者**|**sysname**|基表所有者的名称。|  
-|**基表名称**|**sysname**|基表的名称。|  
-|**联接表所有者**|**sysname**|与基表联接的表所有者的名称。|  
+|**基本表的名称**|**sysname**|基表的名称。|  
+|**联接表的所有者**|**sysname**|与基表联接的表所有者的名称。|  
 |**联接表名称**|**sysname**|与基表联接的表名。|  
 |**项目名称**|**sysname**|与基表联接的表项目名。|  
 |**filter_type**|**tinyint**|合并筛选器的类型，可以为下面的一种：<br /><br /> **1** = 联接筛选器<br /><br /> **2** = 逻辑记录关系<br /><br /> **3** = both|  
@@ -75,13 +75,13 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergefilter**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergefilter**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

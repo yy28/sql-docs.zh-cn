@@ -1,5 +1,5 @@
 ---
-title: sp_add_alert (TRANSACT-SQL) |Microsoft 文档
+title: sp_add_alert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 40
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd9e96ece5a5b8a3dc39c6246e0f2201bbffab1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e727c63007942f2dd6d110860deb182b04ab1db1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240637"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034077"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,19 +61,19 @@ sp_add_alert [ @name = ] 'name'
  警报的名称。 该名称显示在为响应警报而发送的电子邮件或寻呼消息中。 它必须是唯一的并且可以包含百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
   
  [ **@message_id =** ] *message_id*  
- 定义警报消息错误号。 (它通常对应于中的错误号**sysmessages**表。)*message_id*是**int**，默认值为**0**。 如果*严重性*用于定义该警报， *message_id*必须**0**或 NULL。  
+ 定义警报消息错误号。 (它通常与中的错误号相对应**sysmessages**表。)*message_id*是**int**，默认值为**0**。 如果*严重性*用来定义警报， *message_id*必须是**0**或为 NULL。  
   
 > [!NOTE]  
->  仅**sysmessages**写入 Microsoft Windows 应用程序日志的错误可能会导致发送警报。  
+>  仅**sysmessages**错误写入 Microsoft Windows 应用程序日志可能会导致发送警报。  
   
  [  **@severity =** ]*严重性*  
- 严重性级别 (从**1**通过**25**)，它定义警报。 任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息存储在**sysmessages**发送到的表[!INCLUDE[msCoName](../../includes/msconame-md.md)]指示严重级别的 Windows 应用程序日志会导致发送警报。 *严重性*是**int**，默认值为 0。 如果*message_id*用于定义该警报，*严重性*必须**0**。  
+ 严重级别 (从**1**通过**25**)，它定义警报。 任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息存储在**sysmessages**发送到的表[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用指示的严重级别的 Windows 应用程序日志会导致发送警报。 *严重性*是**int**，默认值为 0。 如果*message_id*用来定义警报，*严重性*必须是**0**。  
   
  [  **@enabled =** ]*启用*  
- 指示警报的当前状态。 *启用*是**tinyint**，默认值为 1 （已启用）。 如果**0**，警报未启用，并且不会触发。  
+ 指示警报的当前状态。 *已启用*是**tinyint**，默认值为 1 （启用）。 如果**0**，警报未启用，并且不会激发。  
   
  [ **@delay_between_responses =** ] *delay_between_responses*  
- 警报响应之间的等待间隔（以秒为单位）。 *delay_between_responses*是**int**，默认值为**0**，这意味着没有无需任何等待两个响应 （警报的每个实例生成一个响应）。 响应可以为下面的一种或两种形式：  
+ 警报响应之间的等待间隔（以秒为单位）。 *delay_between_responses*是**int**，默认值为**0**，这意味着的响应 （警报的每个匹配项都生成响应） 之间不等待。 响应可以为下面的一种或两种形式：  
   
 -   通过电子邮件或寻呼发送的一个或多个通知。  
   
@@ -83,23 +82,23 @@ sp_add_alert [ @name = ] 'name'
  例如，当警报在短时间内重复产生时，通过设置该值就有可能避免发送重复的电子邮件。  
   
  [ **@notification_message =** ] **'***notification_message***'**  
- 是一种可选的其他消息，向操作员发送的电子邮件，一部分**网络发送**，或寻呼机通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。 指定*notification_message*对于添加特殊的说明，如更正过程非常有用。  
+ 发送给操作员的电子邮件的一部分的可选附加消息**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。 指定*notification_message*对于添加特殊说明如补救过程很有用。  
   
  [ **@include_event_description_in =** ] *include_event_description_in*  
- 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误说明是否应包含在通知消息中。 *include_event_description_in*是**tinyint**，默认值为**5** (电子邮件和**网络发送**)，并可以将一个或多个值结合**或**逻辑运算符。  
+ 表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误说明是否应包含在通知消息中。 *include_event_description_in*是**tinyint**，默认值为**5** (电子邮件和**网络发送**)，并可以具有一个或多个值与组合**或**逻辑运算符。  
   
 > [!IMPORTANT]  
 >  在 **的未来版本中，将从** 代理中删除寻呼程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选项。 请避免在新的开发工作中使用这些功能，并考虑修改当前使用这些功能的应用程序。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|InclusionThresholdSetting|  
+|**0**|None|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
 |**4**|**net send**|  
   
  [ **@database_name =** ] **'***database***'**  
- 只有其中出现错误时才能触发警报的数据库。 如果*数据库*未提供，无论该错误发生在触发警报。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
+ 只有其中出现错误时才能触发警报的数据库。 如果*数据库*未提供，而不考虑发生错误的位置触发警报。 *数据库*是**sysname**。 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
   
  [ **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误说明必须与之类似的字符序列。 可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 表达式模式匹配字符。 *event_description_keyword_pattern*是**nvarchar(100)**，默认值为 NULL。 此参数可用于筛选对象名称 (例如， **%customer_table%**)。  
@@ -111,19 +110,19 @@ sp_add_alert [ @name = ] 'name'
  为响应该警报而执行的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必须指定，但不能同时指定。  
+>  任一*job_id*或*job_name*必须指定，但不能同时指定两者。  
   
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中实现。 *raise_snmp_trap*是**tinyint**，默认值为 0。  
   
- [  **@performance_condition =** ] *****performance_condition*****  
- 是以格式表示的值*itemcomparatorvalue*。 *performance_condition*是**nvarchar(512)** 默认值为 NULL，并且这些元素组成。  
+ [  **@performance_condition =** ] **'***performance_condition*****  
+ 格式表示的值*itemcomparatorvalue*。 *performance_condition*是**nvarchar(512)** 默认值为 NULL，并包含这些元素。  
   
 |格式元素|Description|  
 |--------------------|-----------------|  
 |*项*|性能对象、性能计数器或计数器的命名实例|  
 |*Comparator*|下列运算符之一：>、< 或 =|  
-|*Value*|计数器的数值|  
+|*ReplTest1*|计数器的数值|  
   
  [ **@category_name =** ] **'***category***'**  
  警报类别的名称。 *类别*是**sysname**，默认值为 NULL。  
@@ -138,20 +137,20 @@ sp_add_alert [ @name = ] 'name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_add_alert**必须从运行**msdb**数据库。  
   
  在下列情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应用程序产生的错误/消息将发送到 Windows 应用程序日志，并因此引发警报：  
   
--   19 或更高严重性**sys.messages**错误  
+-   严重级别为 19 或更高版本**sys.messages**错误  
   
 -   任何使用 WITH LOG 语法调用的 RAISERROR 语句  
   
 -   任何**sys.messages**错误修改或创建使用**sp_altermessage**  
   
--   使用记入日志的任何事件**xp_logevent**  
+-   记录使用的任何事件**xp_logevent**  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一种易用的图形方式来管理整个警报系统，这也是配置警报基础结构的推荐方式。  
   
@@ -165,7 +164,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   用 **xp_logevent** 生成的事件在 master 数据库中发生。 因此，除非警报的 **xp_logevent** 为 **@database_name** 或 NULL，否则 **@database_name** 不触发警报。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，只有 **sysadmin** 固定服务器角色的成员才能执行 **sp_add_alert**。  
   
 ## <a name="examples"></a>示例  
@@ -187,12 +186,12 @@ EXEC dbo.sp_add_alert
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.SCHEMATA view
 - SCHEMATA view
 ms.assetid: 69617642-0f54-4b25-b62f-5f39c8909601
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2c8892f5fb2a584368567793f5bc52b23b810b52
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 06b4cb93e86a872d1b8d3c0542097dd091d0c0cd
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558287"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43070816"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "39558287"
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|当前数据库的名称|  
 |**SCHEMA_NAME**|**nvarchar(** 128 **)**|返回架构名称。|  
-|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|架构所有者名称。<br /><br /> **\*\* 重要\* \* **请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|架构所有者名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠的方式是查询 sys.objects 目录视图。|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|始终返回 NULL。|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|始终返回 NULL。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|返回默认字符集的名称。|  

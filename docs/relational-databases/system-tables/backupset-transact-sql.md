@@ -24,13 +24,13 @@ caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: c167edb697ec4a2691ddccb88358729fdba61cae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 929126a397db75729002566a25a1d2d9907d50c6
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073671"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "39562251"
 |**compressed_backup_size**|**Numeric(20,0)**|磁盘上存储的备份的总字节数。<br /><br /> 若要计算压缩率，请使用**backup_size**并**backup_size**。<br /><br /> 期间**msdb**升级，此值设置为 NULL。 表示未压缩的备份。|  
 |**key_algorithm**|**nvarchar(32)**|用于加密备份的加密算法。 NO_Encryption 值指示备份未加密。|  
 |**encryptor_thumbprint**|**varbinary(20)**|可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 在备份未加密的情况下，此值为 NULL。|  
-|**encryptor_type**|**nvarchar(32)**|使用的加密程序的类型：证书或非对称密钥。 实例时都提供 SQL Server 登录名。 在备份未加密的情况下，此值为 NULL。|  
+|**encryptor_type**|**nvarchar(32)**|使用的加密程序的类型：证书或非对称密钥。 . 在备份未加密的情况下，此值为 NULL。|  
   
 ## <a name="remarks"></a>Remarks  
  RESTORE VERIFYONLY FROM*备份设备*WITH LOADHISTORY 使用填充的列**backupmediaset**介质集标头中的相应值的表。  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d12665106633cbbdf46284089ef5f7eb79d7ccbf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 731004301f0419d3ce4229e2e901bf9b3bd0507e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049305"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026096"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,10 +81,10 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|表示每个单元的唯一 ID，从 1 开始计数。|  
-|**具有用于承载 TSQLEditor 组件和来自 TSQL 查询执行相关的输出选项卡式界面的 UI 容器。**|**geometry**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  
+|**单元格**|**geometry**|是表示每个单元的矩形多边形。 该单元形状与用于空间索引的单元形状相同。|  
 |**row_count**|**bigint**|指示接触或包含单元的空间对象数 。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。  
   
 ## <a name="remarks"></a>Remarks  

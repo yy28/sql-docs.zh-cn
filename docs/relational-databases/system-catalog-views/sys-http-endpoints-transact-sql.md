@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (Transact SQL) |Microsoft 文档
+title: sys.http_endpoints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.http_endpoints catalog view
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0bd82aa39d7639c52c7c18c35091adc18b4b485
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f27d3aa958625974fa6b11313cecb831f2308b1c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180773"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028595"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33180773"
 |**is_clear_port_enabled**|**bit**|1 = 使用 PORT = CLEAR 选项启用清除端口。|  
 |**clear_port**|**int**|在 CLEAR PORT = 选项中指定的端口号。<br /><br /> NULL = 未指定。|  
 |**is_ssl_port_enabled**|**bit**|1 = 使用 PORT = SSL 选项启用 SSL 端口。|  
-|**默认端口**|**int**|在 SSL PORT = 选项中指定的端口号值。<br /><br /> NULL = 未指定。|  
+|**ssl_port**|**int**|在 SSL PORT = 选项中指定的端口号值。<br /><br /> NULL = 未指定。|  
 |**is_anonymous_enabled**|**bit**|1 = 使用 AUTHENTICATION = ANONYMOUS 选项启用匿名访问。|  
 |**is_basic_auth_enabled**|**bit**|1 = 使用 AUTHENTICATION = BASIC 选项启用基本身份验证。|  
 |**is_digest_auth_enabled**|**bit**|1 = 使用 AUTHENTICATION = DIGEST 选项启用摘要式身份验证。|  
@@ -55,10 +55,10 @@ ms.locfileid: "33180773"
 |**default_logon_domain**|**nvarchar(128)**|启用 BASIC 身份验证时的默认登录域。 DEFAULT LOGON DOMAIN 选项的值。<br /><br /> 如果未指定该选项值或 BASIC 身份验证未启用，则为 NULL。|  
 |**is_compression_enabled**|**bit**|1 = 设置了 COMPRESSION = ENABLED 选项。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [终结点目录视图&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
   

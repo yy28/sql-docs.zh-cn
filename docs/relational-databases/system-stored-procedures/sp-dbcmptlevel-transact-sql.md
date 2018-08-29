@@ -1,5 +1,5 @@
 ---
-title: sp_dbcmptlevel (Transact SQL) |Microsoft 文档
+title: sp_dbcmptlevel (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 caps.latest.revision: 110
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 416842d369700f0ac7e0ecd18f84fc0b546a49f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: acd4d6a2d87d97bd31b35779a9bc605dde41db04
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236846"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031940"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,17 +68,17 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果未指定参数，或如果*名称*未指定参数， **sp_dbcmptlevel**返回错误。  
+ 如果未不指定任何参数，或如果*名称*未指定参数， **sp_dbcmptlevel**返回错误。  
   
- 如果*名称*指定了不含*版本*、[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一条消息，显示指定的数据库的当前兼容级别。  
+ 如果*名称*指定不带*版本*，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]返回一条消息，显示指定的数据库的当前兼容性级别。  
   
-## <a name="remarks"></a>注释  
- 有关兼容性级别的说明，请参阅[ALTER DATABASE 兼容级别&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
+## <a name="remarks"></a>Remarks  
+ 有关兼容级别的说明，请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。  
   
-## <a name="permissions"></a>权限  
- 仅数据库所有者、 的成员**sysadmin**固定服务器角色和**db_owner**固定的数据库角色 （如果要更改当前数据库） 可以执行此过程。  
+## <a name="permissions"></a>Permissions  
+ 数据库所有者、 的成员**sysadmin**固定服务器角色，并**db_owner**固定的数据库角色 （如果要更改当前数据库） 可以执行此过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [保留关键字 (Transact-SQL)](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   

@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edcf376f9127ec1d9b874c24e0a11f67f7e334ff
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537217"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074144"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39537217"
 |**xscale**|**tinyint**|服务器使用的内部小数位数。 不在查询中使用。|  
 |**tdefault**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
 |**域**|**int**|特定存储过程的 ID，此存储过程包含对该数据类型的完整性检查功能。|  
-|**uid**|**smallint**|所有者类型的架构 ID。<br /><br /> 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。<br /><br /> **\*\* 重要\* \* **如果您使用任何以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 语句，则必须使用[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图，而不是**sys.systypes**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|**uid**|**smallint**|所有者类型的架构 ID。<br /><br /> 对于从旧版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级的数据库，架构 ID 等于所有者的用户 ID。<br /><br /> **\*\* 重要\* \*** 如果您使用任何以下[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DDL 语句，则必须使用[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录视图，而不是**sys.systypes**。<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |**保留**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|如果基于字符， **collationid**是当前数据库中; 的排序规则的 id，否则，则为 NULL。|  
 |**usertype**|**smallint**|用户类型 ID。 如果数据类型的数字超过 32,767，则溢出或返回 NULL。|  

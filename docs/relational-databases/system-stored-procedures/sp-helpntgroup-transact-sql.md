@@ -1,5 +1,5 @@
 ---
-title: sp_helpntgroup (Transact SQL) |Microsoft 文档
+title: sp_helpntgroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247808"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032589"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>参数  
  [ **@ntname =** ] **'***name***'**  
- 是 Windows 组的名称。 *名称*是**sysname**，默认值为 NULL。 *名称*必须是有效的 Windows 组有权访问当前的数据库。 如果*名称*未指定，则有权访问当前数据库的所有 Windows 组是否都包含在输出中。  
+ 是 Windows 组的名称。 *名称*是**sysname**，默认值为 NULL。 *名称*必须有权访问当前数据库的有效 Windows 组。 如果*名称*未指定，则有权访问当前数据库的所有 Windows 组是否都包含在输出中。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,14 +55,14 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Windows 组的名称。|  
-|**NTGroupId**|**int**|组标识符 (ID)。|  
-|**SID**|**varbinary(85)**|安全标识符 (SID) 的**NTGroupName**。|  
+|**NTGroupId**|**smallint**|组标识符 (ID)。|  
+|SID|**varbinary(85)**|安全标识符 (SID) 的**NTGroupName**。|  
 |**HasDbAccess**|**int**|1 = Windows 组有权访问数据库。|  
   
-## <a name="remarks"></a>注释  
- 若要查看的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色在当前数据库中，使用**sp_helprole**。  
+## <a name="remarks"></a>Remarks  
+ 若要查看一系列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]角色在当前数据库中，使用**sp_helprole**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -72,10 +72,10 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 EXEC sp_helpntgroup;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_helprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_scriptpublicationcustomprocs (Transact SQL) |Microsoft 文档
+title: sp_scriptpublicationcustomprocs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e3cad96acad0e5e08d92a70cd795a6022be26f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15c841becf856af68e37273349cdb7b3fe578fdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997394"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026856"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  在启用了自动生成自定义过程架构选项的发布中，为所有表项目编写自定义 INSERT、UPDATE 和 DELETE 过程的脚本。 **sp_scriptpublicationcustomprocs**很适合用于设置为其手动应用快照的订阅。  
+  在启用了自动生成自定义过程架构选项的发布中，为所有表项目编写自定义 INSERT、UPDATE 和 DELETE 过程的脚本。 **sp_scriptpublicationcustomprocs**设置为其手动应用快照的订阅特别有用。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,19 +45,19 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] *****publication_name*****  
- 发布的名称。 *publication_name*是**sysname**无默认值。  
+ [ **@publication**=] **'***publication_name*****  
+ 发布的名称。 *publication_name*是**sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 返回一个结果集包含单个**nvarchar （4000)** 列。 该结果集构成创建自定义存储过程所需的完整 CREATE PROCEDURE 语句。  
+ 返回一个结果集包含单个**nvarchar(4000)** 列。 该结果集构成创建自定义存储过程所需的完整 CREATE PROCEDURE 语句。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  如果未启用自动生成自定义过程 (0x2) 架构选项，则不会为项目编写自定义过程的脚本。  
   
- 通过使用以下过程**sp_scriptpublicationcustomprocs**创建订阅服务器的过程，不应直接执行：  
+ 通过使用下列过程**sp_scriptpublicationcustomprocs**创建订阅服务器的过程，并且不应直接执行：  
   
  **sp_script_reconciliation_delproc**  
   
@@ -83,10 +83,10 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
  **sp_scriptxupdproc**  
   
-## <a name="permissions"></a>权限  
- 执行权限授予**公共**; 若要限制对的成员访问此存储过程内执行过程的安全检查**sysadmin**固定的服务器角色和**db_所有者**当前数据库中的固定的数据库角色。  
+## <a name="permissions"></a>Permissions  
+ 执行权限授予**公共**; 若要限制对成员的访问此存储过程内执行过程安全性检查**sysadmin**固定的服务器角色和**db_所有者**当前数据库中的固定的数据库角色。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

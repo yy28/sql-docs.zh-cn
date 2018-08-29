@@ -1,5 +1,5 @@
 ---
-title: sp_helpfilegroup (Transact SQL) |Microsoft 文档
+title: sp_helpfilegroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61e297999776254e85372c4b6ce25927396fdff6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 085425bd8d50c31fb894268ebce416c23c285b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260783"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028015"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="arguments"></a>参数  
  [ **@filegroupname =** ] **'***name***'**  
- 当前数据库中任意文件组的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*未指定，列出了当前数据库中的所有文件组，并显示仅在结果集部分中设置所示的第一个结果。  
+ 当前数据库中任意文件组的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*未指定，则列出当前数据库中的所有文件组，并只为第一个结果集显示在结果集部分中显示。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,21 +55,21 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|文件组的名称。|  
-|**groupid**|**int**|数字文件组标识符。|  
+|**groupid**|**smallint**|数字文件组标识符。|  
 |**filecount**|**int**|文件组中的文件数目。|  
   
- 如果*名称*是指定，则返回个文件组中每个文件都占一行。  
+ 如果*名称*是指定，则返回一个行文件组中每个文件。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|文件组中文件的逻辑名称。|  
-|**fileid**|**int**|数字文件标识符。|  
+|**fileid**|**smallint**|数字文件标识符。|  
 |**filename**|**nchar(260)**|文件的物理名称，包括目录路径。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件的最大大小。<br /><br /> 这是文件可增长到的最大大小。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新的空间时给文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +94,7 @@ EXEC sp_helpfilegroup 'PRIMARY';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

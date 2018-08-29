@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact SQL) |Microsoft 文档
+title: sp_removedbreplication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998001"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026573"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
  数据库的名称。 *dbname* 的数据类型为 **sysname**，默认值为 NULL。 此参数值为 NULL 时，将使用当前数据库。  
   
  [ **@type** =]*类型*  
- 要为其删除数据库对象的复制的类型。 *类型*是**nvarchar(5)** 和可以是以下值之一。  
+ 要为其删除数据库对象的复制的类型。 *类型*是**nvarchar(5)** 可以是下列值之一。  
   
 |||  
 |-|-|  
@@ -64,17 +64,17 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_removedbreplication**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_removedbreplication**用于所有类型的复制。  
   
- **sp_removedbreplication**当还原复制的数据库具有无需还原任何复制对象时非常有用。  
+ **sp_removedbreplication**还原复制的数据库，无需还原没有复制对象时非常有用。  
   
- **sp_removedbreplication**不能对数据库标记为只读。  
+ **sp_removedbreplication**不能使用针对数据库被标记为只读的。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_removedbreplication**。  
   
 ## <a name="example"></a>示例  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [禁用发布和分发](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

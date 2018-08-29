@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_replication (Transact SQL) |Microsoft 文档
+title: sp_vupgrade_replication (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f95cf47caaa3c5fd6c361647389031f97b98185
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002664"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031100"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +49,27 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@login=**] *****登录*****  
- 在分发数据库中创建新的系统对象时使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果不需要此参数*security_mode*设置为**1**，即 Windows 身份验证。  
+ [  **@login=**] **'***登录*****  
+ 在分发数据库中创建新的系统对象时使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
 > [!NOTE]  
 >  在升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本后将忽略此参数。  
   
- [  **@password=**] *****密码*****  
- 是分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，即 Windows 身份验证。  
+ [  **@password=**] **'***密码*****  
+ 是分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
 > [!NOTE]  
 >  在升级到 SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本后将忽略此参数。  
   
- [  **@ver_old=**] *****old_version*****  
+ [  **@ver_old=**] **'***old_version*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  不推荐使用此存储过程，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除它。  
   
- [  **@force_remove=**] *****force_removal*****  
+ [  **@force_remove=**] **'***force_removal*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@security_mode=**] *****security_mode*****  
+ [  **@security_mode=**] **'***security_mode*****  
  在分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*是**位**默认值为**0**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用身份验证。 如果**1**，将使用 Windows 身份验证。  
   
 > [!NOTE]  
@@ -78,13 +78,13 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_vupgrade_replication**升级所有类型的复制时使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_vupgrade_replication**用于升级所有类型的复制。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_vupgrade_replication**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [验证已复制的数据](../../relational-databases/replication/validate-replicated-data.md)  
   

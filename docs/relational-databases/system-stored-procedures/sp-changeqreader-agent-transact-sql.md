@@ -1,5 +1,5 @@
 ---
-title: sp_changeqreader_agent (Transact SQL) |Microsoft 文档
+title: sp_changeqreader_agent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 033d33a282c7359895aba95c0e8f9d4d03e02c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b799ed8fab4a782a89f15dab779020d63a28f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988172"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034592"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,29 +47,29 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_login**=] *****job_login*****  
+ [ **@job_login**=] **'***job_login*****  
  用于运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
   
- [ **@job_password**=] *****job_password*****  
+ [ **@job_password**=] **'***job_password*****  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，默认值为 NULL。  
   
  [  **@frompublisher=** ] *frompublisher*  
- 指定是否在发布服务器上执行该过程。 *frompublisher*位，默认值为**0**。 值为**1**意味着正在从发布服务器的发布数据库上执行该过程。  
+ 指定是否在发布服务器上执行该过程。 *frompublisher*为 bit，默认值为**0**。 值为**1**意味着正在从发布服务器上，对发布数据库执行该过程。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_changeqreader_agent**事务复制中使用。  
   
  **sp_changeqreader_agent**用于更改运行队列读取器代理的 Windows 帐户。 可以更改现有 Windows 登录名的密码，或提供新的 Windows 登录名和密码。  
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changeqreader_agent**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [sp_addqreader_agent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)  
   

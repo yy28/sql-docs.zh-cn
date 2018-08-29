@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergearticle (Transact SQL) |Microsoft 文档
+title: sp_dropmergearticle (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991276"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028966"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除合并发布中的项目。 在发布服务器的发布数据库上执行此存储的过程。  
+  删除合并发布中的项目。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,8 +52,8 @@ sp_dropmergearticle [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  要从中删除项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *****文章*****  
- 要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*文章*是**所有**，发布仍必须单独从删除文章。  
+ [  **@article=**] **'***文章*****  
+ 要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*一文*是**所有**，发布仍必须分开删除文章。  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
  指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**位**，默认值为**0**。  
@@ -64,16 +64,16 @@ sp_dropmergearticle [ @publication= ] 'publication'
  [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
  启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
- **0**指定合并项目的更改不会导致快照无效。  
+ **0**指定对合并项目的更改不会导致快照无效。  
   
- **1**意味着更改为合并项目可能会导致快照无效，并且如果这是这种情况，值为**1**给予发生新的快照的权限。  
+ **1**表示对合并项目的更改可能导致快照无效，如果是这种情况的值**1**提供了新快照的权限。  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
  确认删除项目是否要求重新初始化现有订阅。 *force_reinit_subscription*是**位**，默认值为**0**。  
   
- **0**指定删除项目不会导致要重新初始化的订阅。  
+ **0**指定删除项目不会导致重新初始化订阅。  
   
- **1**意味着文章导致现有订阅重新初始化订阅，该删除和重新初始化订阅发生的提供权限。  
+ **1**意味着的删除文章导致现有订阅重新初始化，并使订阅重新初始化发生的权限。  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  仅限内部使用。  
@@ -81,12 +81,12 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_dropmergearticle**合并复制中使用。 有关删除的项目的详细信息，请参阅[添加项目和从现有发布删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
+## <a name="remarks"></a>Remarks  
+ **sp_dropmergearticle**合并复制中使用。 有关删除项目的详细信息，请参阅[添加项目和从现有发布删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)。  
   
- 执行**sp_dropmergearticle**以从发布删除项目不会删除该对象从发布数据库或从订阅数据库的相应对象。 如果需要，可以使用 `DROP <object>` 手动删除这些对象。  
+ 执行**sp_dropmergearticle**从发布中删除项目不会删除该对象从发布数据库或订阅数据库中的相应对象。 如果需要，可以使用 `DROP <object>` 手动删除这些对象。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergearticle**。  
   
 ## <a name="example"></a>示例  
@@ -167,10 +167,10 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除项目](../../relational-databases/replication/publish/delete-an-article.md)   
  [向现有发布添加项目和从中删除项目](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
- [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

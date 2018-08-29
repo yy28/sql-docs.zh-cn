@@ -1,5 +1,5 @@
 ---
-title: sp_markpendingschemachange (Transact SQL) |Microsoft 文档
+title: sp_markpendingschemachange (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3bfd0bb51e6d269b84fdb57a5a64139ce23cedc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 08d059d2a2a01ba7f0c4fe86fee0673adb0041ef
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994814"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032340"
 ---
 # <a name="spmarkpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  用于合并发布的可支持性，它通过让管理员跳过所选的挂起架构更改，不复制这些更改。 在发布服务器的发布数据库上执行此存储的过程。  
+  用于合并发布的可支持性，它通过让管理员跳过所选的挂起架构更改，不复制这些更改。 在发布服务器上对发布数据库执行此存储的过程。  
   
 > [!CAUTION]  
 >  此存储过程可以导致架构更改不被复制。 只有在尝试了其他方法（例如，重新初始化）之后，或者这些方法的性能开销太大，才用此过程来解决问题。  
@@ -48,27 +48,27 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=** ] *****发布*****  
+ [**@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@schemaversion=** ] *schemaversion*  
- 标识挂起的架构更改。 *schemaversion*是**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)以列出了对该发布的挂起的架构更改。  
+ 标识挂起的架构更改。 *schemaversion*是**int**，默认值为**0**。 使用[sp_enumeratependingschemachanges &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)若要列出该发布的挂起的架构更改。  
   
- [  **@status=** ] *****状态*****  
- 是否将跳过挂起的架构更改。 *状态*是**nvarchar(10)** 默认值为**active**。 如果值*状态*是**跳过**，则将不会复制所选的架构更改。  
+ [  **@status=** ] **'***状态*****  
+ 是否将跳过挂起的架构更改。 *状态*是**nvarchar(10)** 默认值为**active**。 如果的值*状态*是**跳过**，则将不会复制所选的架构更改。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_markpendingschemachange**与合并复制一起使用。  
   
- **sp_markpendingschemachange**是存储的过程适用于合并复制可支持性，并仅当其他纠正措施，例如重新初始化，无法纠正这种情况或过于昂贵中时，才应使用性能的条款。  
+ **sp_markpendingschemachange**是存储的过程可支持性的合并复制，仅当其他纠正操作，例如，重新初始化，无法更正这种情况，或在开销太大时，才应使用性能的条款。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_markpendingschemachange**。  
   
-## <a name="see-also"></a>另请参阅  
- [sysmergeschemachange &#40;Transact SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

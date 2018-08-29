@@ -1,5 +1,5 @@
 ---
-title: sp_dropsubscriber (Transact SQL) |Microsoft 文档
+title: sp_dropsubscriber (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 - sp_dropsubscriber
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04d250c7ce79e2a121c2e0a249d5d28cfb81fba1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8ce4f2cdfebd22d081136b3633ef03472934f3f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993484"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034023"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  从注册的服务器中删除订阅服务器名称。 在发布服务器的发布数据库上执行此存储的过程。  
+  从注册的服务器中删除订阅服务器名称。 在发布服务器上对发布数据库执行此存储的过程。  
   
 > [!IMPORTANT]  
->  已不推荐使用此存储过程。 你不再需要显式注册订阅服务器在发布服务器。  
+>  已不推荐使用此存储过程。 不再需要显式注册发布服务器上的订阅服务器。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=** ] *****订阅服务器*****  
- 要删除的订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ [  **@subscriber=** ] **'***订阅服务器*****  
+ 要删除的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@reserved=** ] *****保留*****  
+ [  **@reserved=** ] **'***保留*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
@@ -62,21 +62,21 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_dropsubscriber**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_dropsubscriber**用于所有类型的复制。  
   
- 此存储的过程中删除服务器**子**选项并删除系统管理员的远程登录映射**repl_subscriber**。  
+ 此存储的过程删除服务器**sub**选项，并删除到系统管理员的远程登录映射**repl_subscriber**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dropsubscriber**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除推送订阅](../../relational-databases/replication/delete-a-push-subscription.md)   
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addsubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpserver & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

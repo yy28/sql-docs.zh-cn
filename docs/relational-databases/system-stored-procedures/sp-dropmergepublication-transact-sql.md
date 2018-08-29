@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepublication (Transact SQL) |Microsoft 文档
+title: sp_dropmergepublication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_dropmergepublication
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a360ce767a80dd9f77f35a22d92b65d3a52777c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8876bc0e1007d942bde42a9a5a2472b58f6fa1f5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990562"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030785"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 在发布服务器的发布数据库上执行此存储的过程。  
+  删除合并发布及其关联的快照代理。 删除合并发布之前必须删除全部的订阅。 发布中的项目将自动删除。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>参数  
  [ **@publication=**] **'***publication***'**  
- 是要删除的名称。 *发布*是**sysname**，无默认值。 如果**所有**，所有现有合并发布删除以及与之关联的快照代理作业。 如果指定一个特定的值*发布*，仅该发布和其关联的快照代理作业被删除。  
+ 是要删除的名称。 *发布*是**sysname**，无默认值。 如果**所有**，以及与之关联的快照代理作业会删除所有现有合并发布。 如果指定的特定值*发布*，仅该发布和其关联的快照代理作业将被删除。  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
  用于删除发布但不清除分发服务器上的任务。 *ignore_distributor*是**位**，默认值为**0**。 重新安装分发服务器时也将使用此参数。  
@@ -63,22 +63,22 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergepublication**合并复制中使用。  
   
- **sp_dropmergepublication**以递归方式将放置与发布相关联的所有项目，然后将都放置发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)和[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
+ **sp_dropmergepublication**以递归方式删除与发布相关联的所有项目，然后都删除发布本身。 如果发布包含一个或更多对它的订阅，则不能删除。 有关如何删除订阅的信息，请参阅[Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)并[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)。  
   
- 执行**sp_dropmergepublication**中删除发布不会删除已发布的对象从发布数据库或订阅数据库中的相应对象。 使用下拉\<对象 > 若要手动删除这些对象，如有必要。  
+ 执行**sp_dropmergepublication**将删除发布不会删除已发布的对象从发布数据库或订阅数据库中的相应对象。 使用 DROP\<对象 > 手动删除这些对象，如有必要。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergepublication**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除发布](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
