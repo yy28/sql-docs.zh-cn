@@ -20,12 +20,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 24dd0f5497d89f49234dc53e0ad71a7cf2e9ab47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d206256152536c562128072ceaf47b88fb78b0de
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021484"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406598"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的 XML 查询语法 (SSRS)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可以为 XML 数据源创建数据集。 定义数据源后，可以为数据集创建查询。 根据数据源所指向的 XML 数据类型，可以通过包括 XML **Query** 或元素路径来创建数据集查询。 XML 查询以 \<Query> 标记开头，并且包括因数据源而异的命名空间和 XML 元素。 元素路径与命名空间无关，它使用与 XPath 类似的语法指定要使用的来自基础 XML 数据的节点和节点属性。 有关元素路径的详细信息，请参阅[用于 XML 报表数据的元素路径语法 (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)。  
@@ -54,7 +54,7 @@ ms.locfileid: "33021484"
   
 -   对于 URL 请求，查询参数以标准 URL 参数的形式包含在查询中。  
   
--   对于 Web 服务请求，需要将查询参数传递给 Web 服务方法。 若要定义查询参数，请使用 **“数据集属性”** 对话框的 **“参数”** 页。 有关详细信息，请参阅 [“数据集属性”对话框 - 参数](../../reporting-services/report-data/dataset-properties-dialog-box-parameters.md)。  
+-   对于 Web 服务请求，需要将查询参数传递给 Web 服务方法。 若要定义查询参数，请使用 **“数据集属性”** 对话框的 **“参数”** 页。 
   
 ### <a name="example"></a>示例  
  下表中的示例说明如何从报表服务器 Web 服务、XML 文档和嵌入的 XML 数据中检索数据。  

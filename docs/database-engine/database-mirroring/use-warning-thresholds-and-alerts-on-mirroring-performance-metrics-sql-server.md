@@ -21,12 +21,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31aa4d36f1b978cb50e99b9350e3d04b1c1564d4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 157842419692f2fbb70f7fc3d28c4cf920e8f228
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312446"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406690"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>使用镜像性能度量的警告阈值和警报 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,9 +118,9 @@ ms.locfileid: "35312446"
 ##  <a name="RelatedTasks"></a> 相关任务  
  **使用 SQL Server Management Studio 创建警报**  
   
--   [使用错误号创建警报](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
+-   [使用错误号创建警报](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [创建 WMI 事件警报](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [创建 WMI 事件警报](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **监视数据库镜像**  
   

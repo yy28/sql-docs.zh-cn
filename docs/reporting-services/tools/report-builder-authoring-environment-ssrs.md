@@ -15,15 +15,15 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 343372d210fa960ca85ca672e96b0e1aaedf6277
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ea2db3668b6be4f71aa5e7d8f325f3032e203e50
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550068"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406587"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>报表生成器创作环境 (SSRS)
-  报表生成器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
+  报表生成器 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的创作环境，用于创建 Visual Studio 之外的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表。 设计报表时，您可以指定在何处获取数据、获取哪些数据以及如何显示数据。 当您运行报表时，报表处理器将获取您已经指定的所有信息，检索数据，并将数据与报表布局进行组合以生成报表。 你可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
   
  从 Microsoft 下载中心[Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 。  
   

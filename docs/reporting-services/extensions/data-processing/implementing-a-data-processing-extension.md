@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015634"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406149"
 ---
 # <a name="implementing-a-data-processing-extension"></a>实现数据处理扩展插件
   借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
@@ -59,9 +59,6 @@ ms.locfileid: "33015634"
   
  [调试数据处理扩展插件代码](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  介绍如何调试数据处理扩展插件中的代码。  
-  
- [删除数据处理扩展插件](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- 介绍如何从报表服务器或报表设计器中删除数据处理扩展插件。  
   
  有关完全实现的数据处理扩展插件的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   

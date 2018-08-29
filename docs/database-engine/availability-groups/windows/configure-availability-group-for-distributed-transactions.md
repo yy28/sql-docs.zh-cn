@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769023"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40409350"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "34769023"
 
 在分布式事务中，客户端应用程序和 Microsoft 分布式事务处理协调器（MS DTC 或 DTC）共同配合来确保多个数据源之间的事务一致性。 DTC 是在基于 Windows Server 的受支持操作系统上提供的服务。 DTC 充当分布式事务的“事务处理协调器”。 SQL Server 实例通常充当“资源管理器”。 当数据库位于可用性组中时，每个数据库需为其自身的资源管理器。 
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
+[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能阻止可用性组中数据库的分布式事务 - 即使不为分布式事务配置可用性组也是如此。 但是，如果不为分布式事务配置可用性组，在某些情况下故障转移可能不会成功。 具体而言，新主要副本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例可能无法从 DTC 获取事务结果。 若要启用 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例，以在故障转移后从 DTC 获取未决事务的结果，请为分布式事务配置可用性组。 
 
 ## <a name="prerequisites"></a>必备条件
 
 将可用性组配置为支持分布式事务前，必须满足以下先决条件：
 
-* 参与分布式事务的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的所有实例必须为 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本。
+* 参与分布式事务的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的所有实例必须为 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更高版本。
 
 * 可用性组必须在 Windows Server 2016 或 Windows Server 2012 R2 上运行。 对于 Windows Server 2012 R2，必须安装 KB3090973 中的更新，网址：[https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973)。  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分布式事务 - 技术概念
 
-分布式事务可跨两个或多个数据库。 作为事务管理器，DTC 可协调 SQL Server 实例之间和其他数据源之间的事务。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 数据库引擎的每个实例都可以充当资源管理器。 如果使用 `DTC_SUPPORT = PER_DB` 配置可用性组，数据库也可以充当资源管理器。 有关详细信息，请参阅 MS DTC 文档。
+分布式事务可跨两个或多个数据库。 作为事务管理器，DTC 可协调 SQL Server 实例之间和其他数据源之间的事务。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 数据库引擎的每个实例都可以充当资源管理器。 如果使用 `DTC_SUPPORT = PER_DB` 配置可用性组，数据库也可以充当资源管理器。 有关详细信息，请参阅 MS DTC 文档。
 
 在数据库引擎的单个实例中具有两个或多个数据库的事务实际上是分布式事务。 该实例对分布式事务进行内部管理；对于用户而言，其操作就像本地事务一样。 当数据库位于使用 `DTC_SUPPORT = PER_DB` 配置的可用性组中（甚至是在 SQL Server 的单个实例内）时，[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 会将所有跨数据库的事务提升到 DTC。 
 
@@ -123,16 +123,16 @@ ALTER AVAILABILITY GROUP MyaAG
 
 参与分布式事务的每个实体都可称为资源管理器。 资源管理器的示例包括：
 
-* 一个 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例。 
+* 一个 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例。 
 * 已为分布式事务配置的可用性组中的数据库。
 * DTC 服务 - 也可以充当事务管理器。
 * 其他数据源。 
 
-若要参与分布式事务，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的实例需要向 DTC 登记。 通常情况下，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的实例在本地服务器上向 DTC 登记。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的每个实例都会创建一个具有唯一资源管理器标识符 (RMID) 的资源管理器并将其注册到 DTC。 在默认配置中，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例上的所有数据库都使用相同的 RMID。 
+若要参与分布式事务，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的实例需要向 DTC 登记。 通常情况下，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的实例在本地服务器上向 DTC 登记。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的每个实例都会创建一个具有唯一资源管理器标识符 (RMID) 的资源管理器并将其注册到 DTC。 在默认配置中，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例上的所有数据库都使用相同的 RMID。 
 
-当数据库位于可用性组中时，数据库的读写副本或主要副本可能移动到 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的另一个实例上。 若要在此移动过程中支持分布式事务，每个数据库都应充当单独的资源管理器，并且必须具有唯一的 RMID。 当可用性组具有 `DTC_SUPPORT = PER_DB` 时，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 将为每个数据库创建资源管理器，并且使用唯一的 RMID 将它们向 DTC 注册。 在此配置中，数据库充当于 DTC 事务的资源管理器。
+当数据库位于可用性组中时，数据库的读写副本或主要副本可能移动到 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的另一个实例上。 若要在此移动过程中支持分布式事务，每个数据库都应充当单独的资源管理器，并且必须具有唯一的 RMID。 当可用性组具有 `DTC_SUPPORT = PER_DB` 时，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 将为每个数据库创建资源管理器，并且使用唯一的 RMID 将它们向 DTC 注册。 在此配置中，数据库充当于 DTC 事务的资源管理器。
 
-有关 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 中的分布式事务的详细信息，请参阅[分布式事务](#distTran)
+有关 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 中的分布式事务的详细信息，请参阅[分布式事务](#distTran)
 
 ## <a name="manage-unresolved-transactions"></a>管理未解决的事务
 
@@ -142,9 +142,9 @@ ALTER AVAILABILITY GROUP MyaAG
 * 在可用性组中添加或删除数据库。 
 * 删除可用性组。
 
-在上述情况下，如果主要副本故障转移到 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的新实例，该实例将尝试联系 DTC 以确定事务结果。 DTC 无法返回结果，因为数据库用于获取恢复期间未决事务的结果的 RMID 之前未进行登记。 因此，数据库将进入 SUSPECT 状态。
+在上述情况下，如果主要副本故障转移到 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的新实例，该实例将尝试联系 DTC 以确定事务结果。 DTC 无法返回结果，因为数据库用于获取恢复期间未决事务的结果的 RMID 之前未进行登记。 因此，数据库将进入 SUSPECT 状态。
 
-新 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 错误日志中的一个条目将如下例所示：
+新 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 错误日志中的一个条目将如下例所示：
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-前面的示例说明，DTC 无法通过故障转移后创建的事务中的新主要副本重新登记数据库。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 实例不能确定分布式事务的结果，因此它将数据库标记为可疑。 事务将被标记为工作单位 (UOW)，并由 GUID 引用。 为了恢复数据库，请手动提交事务或回滚事务。 
+前面的示例说明，DTC 无法通过故障转移后创建的事务中的新主要副本重新登记数据库。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 实例不能确定分布式事务的结果，因此它将数据库标记为可疑。 事务将被标记为工作单位 (UOW)，并由 GUID 引用。 为了恢复数据库，请手动提交事务或回滚事务。 
 
 >[!WARNING]
 >手动提交或回滚事务时，应用程序可能受到影响。 请验证提交或回滚操作是否符合应用程序要求。 

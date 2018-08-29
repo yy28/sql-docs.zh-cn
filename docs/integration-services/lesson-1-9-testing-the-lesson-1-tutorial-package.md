@@ -15,12 +15,12 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb35c5b16afac1383947c51d9f58675bd35582f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 842f9b1b2572183bc222749e7d0e850d5cb76ae9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411709"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406591"
 ---
 # <a name="lesson-1-9---testing-the-lesson-1-tutorial-package"></a>第 1-9 课 - 测试第 1 课教程包
 在本课中，已经完成了下列任务：  
@@ -56,7 +56,7 @@ ms.locfileid: "35411709"
 [第 2 课：使用 SSIS 添加循环](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[项目和包的执行](https://msdn.microsoft.com/library/ms141708(v=sql.110).aspx) 
+[项目和包的执行](packages/run-integration-services-ssis-packages.md) 
   
   
   

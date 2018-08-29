@@ -12,13 +12,14 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48ae5549290ab4c8701da6bd75641dfabfc02872
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a8b7e7fdc732376e58d9b7923f2889a0ebc055e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771073"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405878"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>使用配置文件安装 SQL Server
 
@@ -26,7 +27,7 @@ ms.locfileid: "34771073"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序提供了基于系统默认值和运行时输入生成配置文件的功能。 可以使用配置文件在整个企业中部署具有相同配置的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 通过创建一个启动 Setup.exe 的批处理文件，还可以使企业范围内的手动安装得以标准化。 
  
-本文专门针对 SQL Server 2016 和 SQL Server 2017 进行了更新。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](http://msdn.microsoft.com/library/dd239405(v=sql.120).aspx)。
+本文专门针对 SQL Server 2016 和 SQL Server 2017 进行了更新。 有关 SQL Server 较早版本的信息，请参阅[使用配置文件安装 SQL Server 2014](install-sql-server-2016-using-a-configuration-file.md)。
  
 安装程序仅支持通过命令提示符使用配置文件。 下面列出了在使用配置文件时参数的处理顺序：  
   

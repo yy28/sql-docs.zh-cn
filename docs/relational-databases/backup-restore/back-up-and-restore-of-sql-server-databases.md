@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324481"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405764"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -189,9 +189,9 @@ GO
 ## <a name="more-about-backup-tasks"></a>有关备份任务的详细信息  
 -   [创建维护计划](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
--   [创建作业](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [安排作业计划](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)  
+-   [安排作业计划](../../ssms/agent/schedule-a-job.md)  
   
 ## <a name="working-with-backup-devices-and-backup-media"></a>使用备份设备和备份媒体  
 -   [为磁盘文件定义逻辑备份设备 (SQL Server)](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  

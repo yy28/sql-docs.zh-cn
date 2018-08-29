@@ -12,13 +12,14 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7535f5b73859b59848e08bce9c74b0670bc3a867
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770913"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406141"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -44,26 +45,26 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
 |功能|是否支持|其他信息|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是||  
-|全文搜索|是||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制||  
+|全文搜索|用户帐户控制||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|是||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|“否”||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|“否”||  
-|客户端工具连接|是||  
-|Integration Services 服务器|是||  
-|客户端工具向后兼容性|“否”||  
-|客户端工具 SDK|“否”||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|“否”||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否||  
+|客户端工具连接|用户帐户控制||  
+|Integration Services 服务器|用户帐户控制||  
+|客户端工具向后兼容性|否||  
+|客户端工具 SDK|否||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|否||  
 |管理工具 - 基本|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |管理工具 - 完整|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
-|Distributed Replay 控制器|“否”||  
+|Distributed Replay 控制器|否||  
 |Distributed Replay 客户端|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
-|SQL 客户端连接 SDK|是||  
-|Microsoft Sync Framework|是|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|“否”||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|“否”||  
+|SQL 客户端连接 SDK|用户帐户控制||  
+|Microsoft Sync Framework|用户帐户控制|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
 ## <a name="supported-scenarios"></a>支持的方案  
  下表显示在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时支持的方案矩阵。  

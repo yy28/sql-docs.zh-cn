@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332701"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406138"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>第 1 课：使用 SSIS 创建项目和基本包
 
- > 如需与以前版本的 SQL Server 相关的内容，请参阅[第 1 课：创建项目和基本包](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx)。
+ > 如需与以前版本的 SQL Server 相关的内容，请参阅[第 1 课：创建项目和基本包](lesson-1-create-a-project-and-basic-package-with-ssis.md)。
 
 在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
   
@@ -61,10 +61,10 @@ ms.locfileid: "35332701"
   
 |列名|数据类型|查找表|查找列|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|InclusionThresholdSetting|InclusionThresholdSetting|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>将源数据映射为与目标兼容  
 对源数据和目标数据的分析指出需要查找 **CurrencyKey** 和 **DateKey** 值。 将执行这些查找的转换通过使用 **DimCurrency** 和 **DimDate** 维度表中的备用键来获取 **CurrencyKey** 和 **DateKey** 值。  
@@ -91,9 +91,9 @@ ms.locfileid: "35332701"
   
 -   [步骤 6：添加并配置查找转换](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [步骤 7：添加和配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [步骤 7：添加并配置 OLE DB 目标](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [步骤 8：使 Lesson 1 包更易理解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [步骤 8：使第 1 课包更易理解](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
 -   [步骤 9：测试 Lesson 1 教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   

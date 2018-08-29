@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782588"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405877"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ property
 |**IsCursorType**|过程参数类型为 CURSOR。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsDeterministic**|列是确定性列。 此属性只适用于计算列和视图列。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。 非计算列或视图列。|  
 |**IsFulltextIndexed**|列已注册为全文检索。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
-|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden|**适用范围**： [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：未隐藏<br /><br /> 1：已隐藏|  
+|**IsHidden**|系统生成的列值。 对应于 sys.columns.is_hidden|**适用范围**： [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 0：未隐藏<br /><br /> 1：已隐藏|  
 |IsIdentity|列使用 IDENTITY 属性。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |IsIdNotForRepl|列检查 IDENTITY_INSERT 设置。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  
 |**IsIndexable**|可以对列进行索引。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：输入无效。|  

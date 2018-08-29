@@ -20,15 +20,15 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05b2a471086e49bf6bf4acb73543144af79f76fb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016414"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406021"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>准备实现数据处理扩展插件
-  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  
+  在实现 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件之前，应定义要实现的接口。 你可能要提供整个接口组的特定于扩展插件的实现，或者只是要针对某一子集（例如 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 和 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 接口）提供实现，客户端在其中主要与作为 DataReader 对象的结果集交互，并且使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件作为结果集和数据源之间的桥梁。  
   
  然后，您可以通过以下两种方式之一实现数据处理扩展插件：  
   
@@ -71,12 +71,12 @@ ms.locfileid: "33016414"
 ## <a name="available-extension-interfaces"></a>可用的扩展插件接口  
  下表介绍可用接口以及实现是必需的还是可选的。  
   
-|接口|Description|实现|  
+|接口|描述|实现|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|表示与某一数据源的唯一会话。 在客户端/服务器数据库系统的情况下，该会话可等效于到服务器的一个网络连接。|Required|  
-|IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  
+|IDbConnectionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件针对安全性和身份验证实现的附加连接属性。|可选|  
 |IDbTransaction|表示本地事务。|Required|  
-|IDbTransactionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理扩展插件实现的附加事务属性。|可选|  
+|IDbTransactionExtension|表示可由 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理扩展插件实现的附加事务属性。|可选|  
 |IDbCommand|表示在连接到数据源时使用的查询或命令。|Required|  
 |IDbCommandAnalysis|表示用于分析某一查询并返回在该查询中使用的参数名称列表的附加命令信息。|可选|  
 |IDataParameter|表示传递到命令或查询的参数或名称/值对。|Required|  

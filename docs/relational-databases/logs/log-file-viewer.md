@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44f5ed33bef9ff57e6bc0c4262a950069ec5b480
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e67df0aaf68041d0eb8bb5a12e1054e432a48557
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942142"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406597"
 ---
 # <a name="log-file-viewer"></a>日志文件查看器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,6 +58,6 @@ ms.locfileid: "32942142"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [SQL Server 代理错误日志](http://msdn.microsoft.com/library/0b2d6e6e-cd2d-4b8b-9fa2-2bbd2fc0da41)  
+ [SQL Server 代理错误日志](../../ssms/agent/sql-server-agent-error-log.md)  
   
   
