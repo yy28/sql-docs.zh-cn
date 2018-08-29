@@ -15,12 +15,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4e350a885524670905e5aa67d146b1531c32dae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: bc599762d69e06886e95a85c3e58dbf3923e2ddf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926198"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775015"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](http://msdn.microsoft.com/library/ms143702(SQL.110).aspx)。  
+**解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重命名网络名称后，SQL Server 2008、2008 R2 Analysis Services 故障转移群集升级到 SQL Server 2012 可能失败  
 **问题：** 在使用 Windows 群集管理器工具更改 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 故障转移群集实例的网络名称后，升级操作可能会失败。  
@@ -225,7 +225,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 8.  “ **修复进度** ”页显示修复操作的状态。 “ **完成** ”页指示修复操作已完成。  
   
-有关如何修复 SQL Server 实例的详细信息，请参阅 [修复失败的 SQL Server 2012 安装](http://msdn.microsoft.com/library/cc646006(SQL.110).aspx)(#修复失败的-sql-server-2012-安装)。  
+有关如何修复 SQL Server 实例的详细信息，请参阅 [修复失败的 SQL Server 2012 安装](../database-engine/install-windows/repair-a-failed-sql-server-installation.md)(#修复失败的-sql-server-2012-安装)。  
   
 ### <a name="111-an-instance-of-sql-server-2012-might-fail-after-an-os-upgrade"></a>1.11 SQL Server 2012 实例在操作系统升级后可能失败  
 **问题：** 如果将操作系统从 Windows Vista 升级到 Windows 7 SP1，则 SQL Server 2012 实例可能失败，并具有以下错误。  
@@ -237,7 +237,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 Server SQL 版本升级要求重新启动  
 **问题**：对 SQL Server 2012 实例进行版本升级时，某些与新版本相关的功能可能不能立即激活。  
   
-**解决方法**：在对 SQL Server 2012 实例进行版本升级后重新启动计算机。 有关 SQL Server 2012 中支持的升级的详细信息，请参阅 [支持的版本和版本升级](http://msdn.microsoft.com/library/ms143393.aspx)(#支持的版本和版本升级)。  
+**解决方法**：在对 SQL Server 2012 实例进行版本升级后重新启动计算机。 有关 SQL Server 2012 中支持的升级的详细信息，请参阅 [支持的版本和版本升级](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)(#支持的版本和版本升级)。  
   
 ### <a name="113-database-with-read-only-filegroup-or-files-cannot-be-upgraded"></a>1.13 不能升级具有只读文件组或文件的数据库  
 **问题**：如果数据库或其文件/文件组被设置为只读，则不能通过附加数据库或从备份还原数据库来升级数据库。  返回错误 3415。  执行 SQL Server 实例的就地升级时也存在该问题。 即，您尝试通过安装 SQL Server 2012 来替换现有 SQL Server 实例且一个或多个现有数据库被设置为只读。  
@@ -247,7 +247,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 如果使用同一 IP 地址，则重新安装 SQL Server 故障转移群集实例失败  
 **问题：** 如果在安装 SQL Server 故障转移群集实例期间指定不正确的 IP 地址，安装将失败。 卸载失败的实例后，如果尝试使用同一实例名称和正确的 IP 地址重新安装 SQL Server 故障转移群集实例，安装将失败。 安装失败是由于上次安装留下的重复资源组造成的。  
   
-**解决方法：** 要解决此问题，请在重新安装时使用不同的实例名称，或在重新安装前手动删除该资源组。 有关详细信息，请参阅 [在 SQL Server 故障转移群集中添加或删除节点](http://msdn.microsoft.com/library/ms191545)。  
+**解决方法：** 要解决此问题，请在重新安装时使用不同的实例名称，或在重新安装前手动删除该资源组。 有关详细信息，请参阅 [在 SQL Server 故障转移群集中添加或删除节点](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -503,11 +503,11 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 |驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网端点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|是|是|是|是|是|  
-|SQL Native Client 11.0 OLEDB|“否”|是|是|否|“否”|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|是|是|是|是|用户帐户控制|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|是|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
+|SQL Native Client 11.0 ODBC|用户帐户控制|是|是|是|用户帐户控制|  
+|SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序**\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
+|Microsoft JDBC driver 4.0 for SQL Server|用户帐户控制|是|是|是|用户帐户控制|  
   
 \&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   

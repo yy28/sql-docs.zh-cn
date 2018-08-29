@@ -22,12 +22,12 @@ caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2e508497f7429f596285717978cc6c2953c9c320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4388f157aba6ae590f2bc56109b18696e98ea49
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015924"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406181"
 ---
 # <a name="implementing-a-delivery-extension"></a>实现传递扩展插件
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使得用户能够创建和发布报表，一旦创建和发布，就可以将报表传递到不同位置。 此外，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括多个传递扩展插件和一个传递 API，它们使得开发人员能够创建其他传递扩展插件，以便在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中进一步扩展传递的功能。  
@@ -53,17 +53,11 @@ ms.locfileid: "33015924"
  [将 Setting 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md)  
  介绍 Setting 类的属性以及如何在传递扩展插件实现中使用该类。  
   
- [将 IDeliveryReportServerInformation 接口用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
- 介绍 IDeliveryReportServerInformation 接口的属性以及如何在传递扩展插件实现中使用该接口。  
-  
  [将 Report 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)  
  介绍 Report 类的属性以及如何在传递扩展插件实现中使用该类。  
   
  [将 RenderedOutputFile 类用于传递扩展插件](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  介绍 RenderedOutputFile 类的属性以及如何在传递扩展插件实现中使用该类。  
-  
- [为传递扩展插件实现 ISubscriptionBaseUIUserControl 接口](../../../reporting-services/extensions/delivery-extension/implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
- 介绍传递扩展插件用户控件的属性以及如何实现您自己的用于订阅的用户界面。  
   
  [部署传递扩展插件](../../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)  
  介绍如何部署传递扩展插件。  

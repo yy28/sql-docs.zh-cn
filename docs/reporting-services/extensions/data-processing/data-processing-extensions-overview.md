@@ -19,26 +19,26 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 06f2f1115fe1e4f7aaeafe69ab73a6734fe8d6fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9baa94d3f791ba8c058efe6074d561f121428fd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017804"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406473"
 ---
 # <a name="data-processing-extensions-overview"></a>数据处理扩展插件概述
   借助于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的数据处理扩展插件，您可以连接到数据源并检索数据。 它们还可以充当数据源和数据集之间的桥梁。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是模仿 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 数据提供程序接口的子集创建的。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 随附的数据处理扩展插件。  
   
-|数据处理扩展插件|Description|  
+|数据处理扩展插件|描述|  
 |-------------------------------|-----------------|  
 |用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据处理扩展插件|使用用于 SQL Server 的 .NET Framework 数据提供程序可以连接到 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 和从其检索数据。|  
 |用于 OLE DB 的数据处理扩展插件|使用用于 OLE DB 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以查询具有 OLE DB 访问接口的任何数据源。|  
 |用于 Oracle 的数据处理扩展插件|使用用于 Oracle 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以通过 Oracle 客户端连接软件访问 Oracle 数据源。|  
 |用于 ODBC 的数据处理扩展插件|使用用于 ODBC 的 .NET Framework 数据提供程序。 使用此扩展插件，报表服务器可以访问存在有关 ODBC 驱动程序的任何数据库中的数据。|  
   
- 可以使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 数据处理 API 向您的报表服务器添加自定义数据处理。  
+ 可以使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 数据处理 API 向您的报表服务器添加自定义数据处理。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 具有对 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的数据访问接口的固有支持。 如果您已实现了完整的数据访问接口，则无需实现 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件。 不过，您应该考虑扩展数据访问接口，以便包括特定于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的功能，这包括安全连接凭据和服务器端聚合。  

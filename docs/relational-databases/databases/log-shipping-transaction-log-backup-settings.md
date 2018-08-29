@@ -18,12 +18,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 574677284e2614f665fb1cf663d78b898dcdafe2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ceeadd0f4608d241b9609bf050bc97de264e98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932982"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406492"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>日志传送事务日志备份设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32932982"
   
  有关日志传送概念的说明，请参阅 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **备份文件夹的网络路径**  
  在此框中键入备份文件夹的网络共享位置。 用于保存事务日志备份的本地文件夹必须处于共享状态，以便日志传送复制作业可以将这些文件复制到辅助服务器。 必须向代理帐户授予此网络共享的读取权限，复制作业将在辅助服务器实例上的该帐户下运行。 默认情况下，这是辅助服务器实例的 SQLServerAgent 服务帐户，但是管理员可以为该作业选择另一个代理帐户。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "32932982"
 |**不压缩备份**|单击此选项可创建未压缩的备份，而不考虑服务器级别默认值。|  
   
 ## <a name="see-also"></a>另请参阅  
- [配置帐户以创建和管理 SQL Server 代理作业](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
+ [配置帐户以创建和管理 SQL Server 代理作业](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

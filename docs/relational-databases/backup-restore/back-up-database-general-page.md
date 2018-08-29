@@ -16,12 +16,12 @@ caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1715f116d875a0037a926ab36900e52701b7bf98
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15828ee511caeb99e7fc6123edff84df3e9fca8c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405893"
 ---
 # <a name="back-up-database-general-page"></a>备份数据库（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "32921472"
 -   [创建差异数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅 [联机丛书中的](http://msdn.microsoft.com/library/ms187658.aspx) 数据库维护计划 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
+    >  可以定义用于创建数据库备份的数据库维护计划。 有关详细信息，请参阅 [联机丛书中的](../maintenance-plans/maintenance-plans.md) 数据库维护计划 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
  **创建部分备份**  
   
 -   对于部分备份，必须使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 语句和 PARTIAL 选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="source"></a>数据源  
  可通过 **“源”** 面板中的选项标识数据库并指定备份操作的备份类型和组件。  

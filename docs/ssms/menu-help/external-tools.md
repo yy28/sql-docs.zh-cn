@@ -19,18 +19,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abb8d0838d7945324d9fcd7cc6b03069cef5a5c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cef05798c4df7415da957b0307c4d9e7b1c8086
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043454"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776302"
 ---
 # <a name="external-tools"></a>外部工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用此对话框可以将外部工具（如 SQL Server 配置管理器或记事本）添加到“工具”菜单。 通过添加外部工具，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中工作的同时，便捷地启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，可以在“输出”窗口中显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
+使用此对话框可以将外部工具（如 SQL Server 配置管理器或记事本）添加到“工具”菜单。 通过添加外部工具，您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中工作的同时，便捷地启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，可以在“输出”窗口中显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **菜单内容**  
 列出当前添加到“工具”菜单上的菜单项标题。 使用“上移”和“下移”箭头可以更改菜单项的显示顺序。 使用“删除”按钮可以从菜单中删除菜单项。  
   
@@ -83,5 +83,5 @@ ms.locfileid: "33043454"
 4.  在“参数”框中，键入 .msc 文件的路径，如 **"C:\WINNT\system32\SQLServerManager.msc"**  
   
 > [!NOTE]  
-> 查看“开始”菜单上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 快捷方式的属性，即可确认相应文件在计算机上的位置。  
+> 查看“开始”菜单上 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 快捷方式的属性，即可确认相应文件在计算机上的位置。  
   

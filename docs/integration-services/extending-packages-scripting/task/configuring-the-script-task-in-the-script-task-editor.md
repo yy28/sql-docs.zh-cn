@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 261a947ae98051c1eb83b556fa952df98590aa19
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c1bc21e3fce77b02f6e628c1c14eac336dff4925
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406999"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406694"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在脚本任务编辑器中配置脚本任务
   在脚本任务中编写自定义代码之前，请在“脚本任务编辑器”的三个页面中配置它的主要属性。 使用“属性”窗口可以配置非脚本任务特有的其他任务属性。  
@@ -44,7 +44,7 @@ ms.locfileid: "35406999"
 ### <a name="scriptlanguage-property"></a>ScriptLanguage 属性  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 支持 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编程语言。 在脚本任务中创建脚本后，不能更改“ScriptLanguage”属性的值。  
   
- 若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性。 有关详细信息，请参阅 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+ 若要设置脚本任务和脚本组件的默认脚本语言，请使用“选项”对话框的“常规”页上的“ScriptLanguage”属性。 有关详细信息，请参阅 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="entrypoint-property"></a>EntryPoint 属性  
  EntryPoint 属性对 VSTA 项目中的 ScriptMain 类指定一种方法，[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 运行时会将该方法作为脚本任务代码的入口点来调用。 ScriptMain 类是脚本模板生成的默认类。  

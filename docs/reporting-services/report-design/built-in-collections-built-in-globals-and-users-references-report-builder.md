@@ -1,7 +1,7 @@
 ---
 title: 内置的全局和用户引用（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022064"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406041"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>内置集合 - 内置的全局和用户引用（报表生成器）
   内置字段集合包含 **Globals** 和 **User** 集合，表示处理报表时由 Reporting Services 提供的全局值。 **Globals** 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 **User** 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
@@ -49,7 +49,7 @@ ms.locfileid: "33022064"
 ### <a name="renderformat"></a>RenderFormat  
  下表介绍 **RenderFormat**的成员。  
   
-|成员|类型|Description|  
+|成员|类型|描述|  
 |------------|----------|-----------------|  
 |“属性”|**String**|呈现器的名称注册在 RSReportServer 配置文件中。<br /><br /> 在报表处理/呈现周期的特定环节可用。|  
 |IsInteractive|**Boolean**|当前呈现请求是否使用交互式呈现格式。|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022064"
 |----------------|--------------|---------------------|  
 |**语言**|**字符串**|运行报表的用户的语言。 例如， `en-US`。|  
 |**UserID**|**String**|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
-  
- 有关在报表中支持多种语言的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [中的](http://go.microsoft.com/fwlink/?LinkId=120955)文档中的“多语言或全局部署的解决方案设计注意事项”。  
-  
+ 
 ### <a name="using-locale-settings"></a>使用区域设置  
  可以使用表达式通过 **User.Language** 值来引用客户端计算机上的区域设置，从而确定如何向用户显示报表。 例如，可创建基于区域值而使用不同查询表达式的报表。 查询可以根据返回的语言发生相应更改，从不同的列中检索本地化信息。 您还可以根据此变量在报表或报表项的语言设置中使用表达式。  
   

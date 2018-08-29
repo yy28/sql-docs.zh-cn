@@ -25,12 +25,12 @@ caps.latest.revision: 72
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4ec5d963309568078b0fa942c8285f7189e7e7eb
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 676a3f07347ed69d68661c2406f26c0c00c901fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358359"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405761"
 ---
 # <a name="replication-agent-security-model"></a>复制代理安全性模式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "37358359"
   
  和所有可执行文件一样，复制代理在 Windows 帐户的上下文中运行。 它们使用此帐户来建立 Windows 集成安全性连接。 代理在哪个帐户之下运行取决于代理的启动方式：  
   
--   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理时，默认设置为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)。  
+-   从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业启动代理时，默认设置为：使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理作业来启动复制代理时，代理将在配置复制时所指定的帐户的上下文中运行。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理和复制的详细信息，请参阅本主题后面的“SQL Server 代理下的代理安全性”部分。 有关运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理的帐户所需权限的信息，请参阅[配置 SQL Server 代理](../../../ssms/agent/configure-sql-server-agent.md)。  
   
 -   从 MS-DOS 命令行中直接启动或通过脚本启动代理时：代理在通过命令行运行代理的用户帐户的上下文中运行。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "37358359"
 > [!NOTE]  
 >  某些 Windows 操作系统中的用户帐户控制 (UAC) 可防止对快照共享的管理访问。 因此，必须对快照代理、分发代理和合并代理使用的 Windows 帐户显式授予快照共享权限。 即使 Windows 帐户是管理员组的成员，也必须执行此操作。 有关详细信息，请参阅[保护快照文件夹](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)。  
   
-|代理|权限|  
+|代理|Permissions|  
 |-----------|-----------------|  
 |快照代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须：<br /><br /> -至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> -对快照共享具有读取、写入和修改权限。<br /><br /> <br /><br /> 注意：用于 *连接* 到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。|  
 |日志读取器代理|与分发服务器建立连接时，将使用运行代理的 Windows 帐户。 此帐户必须至少是分发数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 用于连接到发布服务器的帐户必须至少是发布数据库中的 **db_owner** 固定数据库角色的成员。<br /><br /> 选择 **sync_type** 选项 *replication support only*、 *initialize with backup*或 *initialize from lsn*时，日志读取器代理必须在执行 **sp_addsubscription**后运行，以便将设置脚本写入分发数据库。 日志读取器代理必须在作为 **sysadmin** 固定服务器角色成员的帐户下运行。 将 **sync_type** 选项设置为 *Automatic*时，不需要执行任何特殊日志读取器代理操作。|  

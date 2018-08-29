@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5b688934e40c8d5d61d46ac500bd9e8c8632afb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce19c16b17c03e6ccb7d0460109f9e345d90789d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048925"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775933"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>“查询参数”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可为查询中定义的参数输入值。 在执行包含需要最终用户在运行时输入的参数的查询时，将显示此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **名称**  
 列出为正在执行的查询定义的参数。 如果该查询包含命名参数，则这些名称将显示在该列表中。 如果该查询包含未命名参数，则会为该查询中的每个参数列出系统定义的参数名称。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "33048925"
 为“名称”下列出的每个参数输入值。 最近所用的值将显示为默认的参数值。  
   
 ## <a name="example"></a>示例  
-SQL 窗格中的以下查询在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] 数据库中执行时将打开“查询参数”对话框。  
+SQL 窗格中的以下查询在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中执行时将打开“查询参数”对话框。  
   
 ```  
 SELECT   FirstName, LastName  

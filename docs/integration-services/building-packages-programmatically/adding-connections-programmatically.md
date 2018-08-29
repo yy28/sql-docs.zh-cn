@@ -30,12 +30,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c3c4db4d43b01ac14fdbaf8d02aa9248fe82a58
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 5beafb85b5f1c6afd37306985d2cab3b98df7c25
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312786"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43103977"
 ---
 # <a name="adding-connections-programmatically"></a>以编程方式添加连接
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类表示与外部数据源的物理连接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类可将连接的实现细节与运行时隔离。 这可使运行时以一致且可预测的方式与每个连接管理器进行交互。 连接管理器包含一组所有连接通用的常用属性，如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 但是，通常配置连接管理器只需 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 属性。 在其他编程范例中，连接类会提供一些方法（如 Open 或 Connect ）以物理方式建立与数据源的连接，而不同的是，运行时引擎会在包运行时管理包的所有连接。  
@@ -208,7 +208,7 @@ End Class
   
  `Connection description: OLE DB connection to the AdventureWorks database.`  
   
- `Connection description: OLE DB connection to the AdventureWorks database.`  
+ `Connection description: Flat File connection.`  
   
  `Number of connections in package: 2`  
   

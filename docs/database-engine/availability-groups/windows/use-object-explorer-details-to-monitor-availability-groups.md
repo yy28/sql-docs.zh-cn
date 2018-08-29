@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770183"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406140"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用“对象资源管理器详细信息”来监视可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题说明如何通过使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的“对象资源管理器详细信息”窗格来监视和管理现有的 Always On 可用性组、可用性副本和可用性数据库。  
   
 > [!NOTE]  
->  有关使用“对象资源管理器详细信息”窗格的信息，请参阅 [对象资源管理器详细信息窗格](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)。  
+>  有关使用“对象资源管理器详细信息”窗格的信息，请参阅[对象资源管理器详细信息窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
 -   **准备工作：**  [先决条件](#Prerequisites)  
   

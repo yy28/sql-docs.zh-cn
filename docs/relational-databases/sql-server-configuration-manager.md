@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b16ce62f2a955e8b8f3cede71722c746dc0601fa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983059"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406691"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 配置管理器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 配置管理器](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅 [SQL Server 配置管理器](sql-server-configuration-manager.md)。
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种工具，用于管理与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]相关联的服务、配置 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用的网络协议以及从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 客户端计算机管理网络连接配置。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器是一种可以通过“开始”菜单访问的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台管理单元，也可以将其添加到任何其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台的显示界面中。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理控制台 (mmc.exe) 使用 SQLServerManager\<version>.msc 文件（例如 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 的 SQLServerManager13.msc）打开配置管理器。 以下是在 C 盘安装 Windows 的情况下最新的四个版本的路径。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "38983059"
 > -   **Windows 8**：  
 >          若要打开 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager\<version>.msc（例如 SQLServerManager13.msc），然后按“Enter”。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅 [在 SQL Server 工具中将 WMI 配置为显示服务器状态](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器和 SQL Server Management Studio 使用 Window Management Instrumentation (WMI) 来查看和更改某些服务器设置。 WMI 提供了一种统一的方式，用于与管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具所请求注册表操作的 API 调用进行连接，并可对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器管理单元组件选定的 SQL 服务提供增强的控制和操作。 有关配置与 WMI 相关的权限的信息，请参阅 [在 SQL Server 工具中将 WMI 配置为显示服务器状态](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)。  
   
  若要使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置管理器在另一台计算机上启动、停止、暂停、恢复或配置服务，请参阅[连接到另一台计算机（SQL Server 配置管理器）](../database-engine/configure-windows/scm-services-connect-to-another-computer.md)。  
   

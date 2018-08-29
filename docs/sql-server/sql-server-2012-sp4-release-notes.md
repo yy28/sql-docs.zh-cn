@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023325"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776325"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "38023325"
 - 替换 DBCC INPUTBUFFER 的新 DMF - 已引入将 session_id 作为参数的新动态管理函数 sys.dm_input_buffer，用于替换 DBCC INPUTBUFFER
 - 针对可用性组的读取路由问题的 Xevent 增强功能 - 当前，如果存在路由列表，但路由列表中的任何服务器都不可用于连接，则只会激发 read_only_rout_fail XEvent。 这一改进包括用于帮助进行故障排除的其他信息，还会在用于激发 XEvent 的码位中展开。 
 - 通过可用性组故障转移，改进了 Service Broker 的处理 - 当前，如果在可用性组故障转移上启用了 Service Broker，则 AG 故障转移期间，主要副本发起的所有 Service Broker 连接均保持打开状态。 AG 故障转移期间，这一改进会关闭所有此类打开的连接。
-- **自动 Soft-NUMA 分区** – 在服务级别启动了跟踪标志 8079 后，会借助 SQL 2014 SP2 引入自动 [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) 技术。 如果在启动期间启用了跟踪标志 8079，SQL Server 2014 SP2 会询问硬件布局，并在报告每个 NUMA 节点 8 个或多个 CPU 的系统上自动配置 Soft NUMA。 自动 Soft NUMA 行为是超线程（HT/逻辑处理器）感知。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。 建议首先测试自动 Soft NUMA 的工作负荷性能，然后再在生产中启用该技术。
+- **自动 Soft-NUMA 分区** – 在服务级别启动了跟踪标志 8079 后，会借助 SQL 2014 SP2 引入自动 [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) 技术。 如果在启动期间启用了跟踪标志 8079，SQL Server 2014 SP2 会询问硬件布局，并在报告每个 NUMA 节点 8 个或多个 CPU 的系统上自动配置 Soft NUMA。 自动 Soft NUMA 行为是超线程（HT/逻辑处理器）感知。 通过提高侦听器数、缩放和网络与加密功能，其他节点的分区和创建会缩放后台处理。 建议首先测试自动 Soft NUMA 的工作负荷性能，然后再在生产中启用该技术。
 
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 发行说明
 
@@ -133,7 +133,7 @@ ms.locfileid: "38023325"
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>如果使用同一 IP 地址，则重新安装 SQL Server 故障转移群集实例失败  
 **问题：** 如果在安装 SQL Server 故障转移群集实例期间指定不正确的 IP 地址，安装将失败。 卸载失败的实例后，如果尝试使用同一实例名称和正确的 IP 地址重新安装 SQL Server 故障转移群集实例，安装将失败。 安装失败是由于上次安装留下的重复资源组造成的。  
   
-**解决方法：** 要解决此问题，请在重新安装时使用不同的实例名称，或在重新安装前手动删除该资源组。 有关详细信息，请参阅 [在 SQL Server 故障转移群集中添加或删除节点](http://msdn.microsoft.com/library/ms191545)。 
+**解决方法：** 要解决此问题，请在重新安装时使用不同的实例名称，或在重新安装前手动删除该资源组。 有关详细信息，请参阅 [在 SQL Server 故障转移群集中添加或删除节点](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 和 PowerPivot  
   

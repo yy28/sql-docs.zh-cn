@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002931"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406674"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的树状图和旭日图
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 树状�
   
   
 ##  <a name="bkmk_sample_data"></a> 示例 AdventureWorks 数据  
- 本部分包括一个示例查询和在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中创建数据源和数据集的基本步骤。 如果报表已包含数据源和数据集，可以跳过本部分。  
+ 本部分包括一个示例查询和在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中创建数据源和数据集的基本步骤。 如果报表已包含数据源和数据集，可以跳过本部分。  
   
  查询将返回 AdventureWorks 销售订单详细信息数据与销售区域、产品类别、产品子类别和销售原因数据。  
   

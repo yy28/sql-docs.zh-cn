@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99ada408d4f2a783d2a545d00f780763b7a27796
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c348f71719a25ae4b4ea6c180fb7dfe8a08157f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016364"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406589"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署传递扩展插件
   传递扩展插件以 XML 配置文件的形式提供其配置信息。 该 XML 文件符合为传递扩展插件定义的 XML 架构。 传递扩展插件提供用于设置和修改配置文件的基础结构。  
@@ -40,7 +40,7 @@ ms.locfileid: "33016364"
   
  下表介绍传递扩展插件的 Extension 元素的属性。  
   
-|Attribute|Description|  
+|Attribute|描述|  
 |---------------|-----------------|  
 |**名称**|扩展插件的唯一名称（例如，“Report Server E-Mail”用于电子邮件传递扩展插件，“Report Server FileShare”用于文件共享传递扩展插件）。 **Name** 属性的最大长度是 255 个字符。 该名称在配置文件的 **Extension** 元素内的所有条目中必须唯一。 如果存在重复的名称，则报表服务器返回错误。|  
 |**类型**|以逗号分隔的列表，其中包含完全限定的命名空间以及程序集的名称。|  
@@ -93,7 +93,7 @@ ms.locfileid: "33016364"
     </CodeGroup>  
     ```  
   
-     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+     URL 成员身份仅是您可能为传递扩展插件选择的多个成员身份条件之一。 有关 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 中的代码访问安全性的详细信息，请参阅[安全开发 (Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
    
 ## <a name="verifying-the-deployment"></a>验证部署  
  您可以使用 Web 服务 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法，验证是否已向报表服务器成功地部署了传递扩展插件。 还可以打开 Web 门户，并验证扩展插件是否包括在用于订阅的可用传递扩展插件列表中。 有关 Web 门户和订阅的详细信息，请参阅[订阅和传递 (Reporting Services)](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  

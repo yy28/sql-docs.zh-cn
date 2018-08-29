@@ -17,15 +17,15 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08fd8749f2d5756192aa2e05a5b01a3a0ff7dce
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985129"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406675"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
-在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
+在本 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，将了解可用于在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表中针对地理背景显示数据的地图功能。 
   
 地图以空间数据为基础，这些数据通常包含点、线条和多边形。 例如，多边形可以表示国家/地区轮廓，线条可以表示道路，而点则可以表示市县所在位置。 各种类型的空间数据作为一组地图元素显示在单独的地图层上。  
   

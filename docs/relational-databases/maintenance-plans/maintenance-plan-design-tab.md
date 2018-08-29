@@ -20,18 +20,18 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f069527720dd29cf9491f9a42b6b0acfab66f28
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945712"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406137"
 ---
 # <a name="maintenance-plan-design-tab"></a>维护计划（“设计”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **维护计划（“设计”选项卡）** 可以指定维护计划及其子计划的属性。 将任务从工具箱拖到计划设计器中。 右键单击任务组以创建分支执行路径。 维护计划将另存为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，它们由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业执行。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **添加子计划**  
  添加可以配置的子计划。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "32945712"
  显示“报告和记录”对话框，用于管理关于维护计划活动的报告，并配置是在本地服务器还是在远程服务器上进行日志记录。  
   
  **服务器**  
- 显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅 [创建多服务器环境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)。  
+ 显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅 [创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)。  
   
  **名称**  
  显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  

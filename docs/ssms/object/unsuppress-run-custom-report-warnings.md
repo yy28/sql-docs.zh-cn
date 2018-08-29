@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5952681cf102d162c7e4b2d930509ab580667ee8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e6482635aacc3c7b6091672263c858dfd952c1a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043934"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775353"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>启用运行自定义报表警告
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中取消显示这些对话框。  
+对于自定义报表，有两个警告对话框。 本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中取消显示这些对话框。  
   
 默认情况下，在运行自定义报表之前会显示“运行自定义报表”对话框。 如果选中“请不要再显示此警告”复选框，将不再显示此对话框。 此外，在默认情况下，如果打开一个自定义报表然后单击链接打开另外一个自定义报表，则也将显示此“运行自定义报表”对话框。 此对话框显示钻取自定义报表文件的填写路径。 如果选中“请不要再显示此警告”复选框，将不再显示此对话框。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33043934"
   
 3.  将 **<SuppressWarning>true\<\/SuppressWarning> 更改为 <SuppressWarning>false\<\/SuppressWarning>**。  
   
-4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
+4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>启用钻取自定义报表警告对话框  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33043934"
   
 3.  将 **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> 更改为 <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**。  
   
-4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
+4.  重新启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="see-also"></a>另请参阅  
 [Management Studio 中的自定义报告](../../ssms/object/custom-reports-in-management-studio.md)  
