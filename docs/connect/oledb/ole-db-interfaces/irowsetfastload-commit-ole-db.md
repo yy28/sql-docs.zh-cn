@@ -18,14 +18,14 @@ apitype: COM
 helpviewer_keywords:
 - Commit method
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3e6b27907770d54ef8ac0ef0e664c1b310c85bfb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 8932aa7856921ffe432a534825efe49c0cd8852b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109709"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024719"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ HRESULT Commit(
  发生了特定于访问接口的错误。 从访问接口检索特定错误文本的错误信息。  
   
  E_UNEXPECTED  
- 对以前被 IRowsetFastLoad::Commit 方法作废的大容量复制行集调用了该方法。  
+ 对以前被 **IRowsetFastLoad::Commit** 方法作废的大容量复制行集调用了该方法。  
   
 ## <a name="remarks"></a>Remarks  
  SQL Server 大容量复制行集的 OLE DB 驱动程序的行为与延迟更新模式行集。 当用户通过行集插入行数据时，对插入行的处理方式与在支持 IRowsetUpdate 的行集上挂起插入相同。  

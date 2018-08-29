@@ -17,17 +17,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f5a22a5f4eb06e983f2bc4d81eeb786f32b78751
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982182"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787806"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Linux 和 macOS 上的 ODBC 驱动程序的数据访问跟踪
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-UnixODBC 驱动程序管理器在 macOS 和 Linux 上的支持跟踪 ODBC API 调用入口和退出的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。
+UnixODBC 驱动程序管理器在 macOS 和 Linux 上的支持跟踪 ODBC API 调用入口和退出的 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
 
 若要跟踪应用程序的 ODBC 行为，请编辑`odbcinst.ini`文件的`[ODBC]`部分设置的值`Trace=Yes`和`TraceFile`为的文件将包含在跟踪输出; 该文件夹的路径为例：
 

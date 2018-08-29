@@ -14,12 +14,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c24424c7c7f4183293871a39bb8eb04d72dacd05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 58980081aafd10046b9268a6d23d62b7c1990c00
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982559"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784160"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateCharacterStream(int columnIndex,
   
  此方法将来自 Reader 对象的 Unicode 字符传递给所选文本和二进制列。 这包括所有文本列与 binary、varbinary、varbinary(max)、image 和 xml 列，但不包括 udt 列。  
   
- 使用此方法对于**图像**，**文本**，并**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型可能会影响性能。  
+ 使用此方法对于**图像**，**文本**，并**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型可能会影响性能。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

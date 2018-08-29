@@ -1,5 +1,5 @@
 ---
-title: sp_restoremergeidentityrange (Transact SQL) |Microsoft 文档
+title: sp_restoremergeidentityrange (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8be3de617713868a755dbab55e4ac4674dfd07a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55fa550c0dab2d0e03681e0dfa75bc91e676f5d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997674"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038312"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  此存储过程用于更新标识范围分配。 该存储过程可确保从备份还原发布服务器后，自动标识范围管理运行正常。 在发布服务器的发布数据库上执行此存储的过程。  
+  此存储过程用于更新标识范围分配。 该存储过程可确保从备份还原发布服务器后，自动标识范围管理运行正常。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,22 +49,22 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
  [ **@publication** = ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**所有**。 如果指定了此参数，则只还原该发布的标识范围。  
   
- [ **@article** =] *****文章*****  
+ [ **@article** =] **'***文章*****  
  项目的名称。 *文章*是**sysname**，默认值为**所有**。 如果指定了此参数，则只还原该项目的标识范围。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_restoremergeidentityrange**与合并复制一起使用。  
   
- **sp_restoremergeidentityrange**从分发服务器获取最大标识范围分配信息并更新中的值**max_used**列[MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)的文章，其中使用自动标识范围管理。  
+ **sp_restoremergeidentityrange**获取最大标识范围分配信息从分发服务器并更新中的值**max_used**的列[MSmerge_identity_range_allocations &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md)使用自动标识范围管理的项目。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_restoremergeidentityrange**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_addmergearticle &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [复制标识列](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f4a91678f90164a85907a21f50d74b50561ceaff
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662209"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785894"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔离级别
 
@@ -65,7 +65,7 @@ ms.locfileid: "39662209"
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的新的快照隔离级别，可以使用 `SQLServerConnection` 常量之一：  
+若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新的快照隔离级别，可以使用 `SQLServerConnection` 常量之一：  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -77,7 +77,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 隔离级别的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 联机丛书中的“[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的隔离级别”。  
+有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 隔离级别的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“[!INCLUDE[ssDE](../../includes/ssde_md.md)] 中的隔离级别”。  
 
 ## <a name="see-also"></a>另请参阅
 

@@ -14,18 +14,18 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0ae22a9fac4333271d564fb242803e4cc8eb0b4
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2fd75507ca7c1615b0282a9f56a1e8f4b33bc22b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785577"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用带有返回状态的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程是一个返回状态或结果参数的存储过程。 这通常用于指示存储过程执行成功还是失败。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
+可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程是一个返回状态或结果参数的存储过程。 这通常用于指示存储过程执行成功还是失败。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
 使用 JDBC 驱动程序调用这种存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 返回状态参数的 `call` 转义序列的语法如下所示：
 

@@ -1,5 +1,5 @@
 ---
-title: sp_monitor (TRANSACT-SQL) |Microsoft 文档
+title: sp_monitor (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 277062160e01f0111eeade2dc4a05b3c6a3ab59d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f7e84891d55949751645e3b3d35d8b13fc3a742
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259627"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024052"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  显示有关的统计信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+  有关显示统计信息[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ sp_monitor
   
 |列名|Description|  
 |-----------------|-----------------|  
-|**last_run**|时间**sp_monitor**上次运行。|  
+|**last_run**|时间**sp_monitor**上次运行的时间。|  
 |**current_run**|时间**sp_monitor**正在运行。|  
 |**seconds**|以来经过的秒数**sp_monitor**已运行。|  
 |**cpu_busy**|服务器计算机的 CPU 处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作所用的秒数。|  
@@ -64,12 +64,12 @@ sp_monitor
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在读取和写入时遇到的错误数。|  
 |**连接**|登录或尝试登录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的次数。|  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行**sp_monitor**显示这些函数返回的当前值并显示自上次运行该过程的时间后中已更改量。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过一系列函数跟踪其完成的工作量。 执行**sp_monitor**显示这些函数返回的当前值，并显示自上次运行了此过程中已更改多少。  
   
- 为每个列统计信息打印窗体中*数*(*数*)-*数*%或*数*(*数*). 第一个*数*指的秒数 (为**cpu_busy**， **io_busy**，和**空闲**) 或 （对于其他总数变量） 因为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已重新启动。 *数*在括号中引用的秒数或自从上次总数**sp_monitor**已运行。 百分比是时间的百分比**sp_monitor**上次运行。 例如，如果此报表显示**cpu_busy**作为 4250 （215)-68 %cpu 已忙 4250 后的秒数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]向上 215 秒自上一次启动**sp_monitor**上次运行，并且有 68%的总时间**sp_monitor**上次运行。  
+ 对于每个列，统计信息打印窗体中*数量*(*数量*)-*数*%或*数*(*数*). 第一个*数量*指的秒数 (对于**cpu_busy**， **io_busy**，和**空闲**) 或总数目 （对于其他变量） 由于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已重新启动。 *数量*在括号中引用的秒数或总数目自从上次**sp_monitor**已运行。 百分比是以来的时间百分比**sp_monitor**上次运行的时间。 例如，如果此报表显示**cpu_busy**为 4250 （215)-68 %cpu 一直以来的繁忙 4250 秒[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上次启动以来 215 秒**sp_monitor**是最后一个运行，并有 68%的总时间以来**sp_monitor**上次运行的时间。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -102,7 +102,7 @@ EXEC sp_monitor
 |**total_read**|**total_write**|**total_errors**|**连接**|  
 |141(0)|54920(127)|0(0)|4(0)|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -19,13 +19,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a5e973b710da9dd9619b59749dc1caf65209ed89
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 0262d5552aab5b37ac27ea3d0c9b7e337ee35e37
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39561857"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43059490"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39561857"
   
  XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组**\<客户 >** 节点，XPath 可以选择所有**\<顺序 >** 节点**日期**属性值 **"7/14/1999"**。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
- 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
+ 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
  以下是 W3C XPath 实现与 SQLXML 4.0 实现之间的主要差异。  
   

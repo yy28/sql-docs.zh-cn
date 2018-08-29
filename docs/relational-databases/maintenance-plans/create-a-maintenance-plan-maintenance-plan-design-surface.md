@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948392"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409473"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948392"
      显示“报告和记录”  对话框。 下面提供了有关此对话框的详细信息。  
   
      **服务器**  
-     显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅[创建多服务器环境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)和[维护计划（服务器）](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)。  
+     显示“服务器”  对话框，用于选择要运行子计划中的任务的服务器。 此选项仅在多服务器环境中的主服务器上启用。 有关详细信息，请参阅[创建多服务器环境](../../ssms/agent/create-a-multiserver-environment.md)和[维护计划（服务器）](../../relational-databases/maintenance-plans/maintenance-plan-servers.md)。  
   
      **名称**  
      显示维护计划的名称。 对于新建的维护计划，该名称是在打开维护计划设计器之前在一个对话框中指定的。 若要重命名维护计划，请在对象资源管理器中右键单击该计划，再单击“重命名” 。  
@@ -151,7 +151,7 @@ ms.locfileid: "32948392"
   
     2.  选择想要显示在 **“工具箱”** 中的工具，然后单击 **“确定”**。  
   
-     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅 [“启动维护计划向导”](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)下的 **使用维护计划向导**。  
+     向 **“工具箱”** 中添加维护计划任务也会使这些任务可用于 **“维护计划向导”** 中。 有关上述各个任务的详细信息，请参阅“启动维护计划向导”下的 [使用维护计划向导](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)。  
   
 8.  定义各任务之间的工作流：  
   

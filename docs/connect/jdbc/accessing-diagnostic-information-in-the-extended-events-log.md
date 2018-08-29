@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278708"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42785568"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。 跟踪标志与对应的 JDBC 对象记录程序一起使用，以决定是否在 JDBC 驱动程序中跟踪和发送 ActivityId。 除了更新 Logging.Properties 文件以外，还需要在 FINER 或更高级别启用 com.microsoft.sqlserver.jdbc 记录程序。 如果想为特定类发出的请求将 ActivityId 发送到服务器，则需要在 FINER 或 FINEST 级别启用对应的类记录程序。 例如，如果类是 SQLServerStatement，则启用 com.microsoft.sqlserver.jdbc.SQLServerStatement 记录程序。  
   
- 以下示例使用 [!INCLUDE[tsql](../../includes/tsql_md.md)] 来启动将存储于环形缓冲区中并记录从 RPC 上的客户端发送的活动 ID 和批处理操作的扩展事件会话：  
+ 以下示例使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来启动将存储于环形缓冲区中并记录从 RPC 上的客户端发送的活动 ID 和批处理操作的扩展事件会话：  
   
 ```sql
 create event session MySession on server  

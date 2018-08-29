@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662119"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786777"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>使用带有更新计数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-为了使用存储过程修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 通过使用 SQLServerCallableStatement 类，可以调用修改数据库中数据的存储过程，然后返回受影响的行数计数（也称为更新计数）。
+为了使用存储过程修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类。 通过使用 SQLServerCallableStatement 类，可以调用修改数据库中数据的存储过程，然后返回受影响的行数计数（也称为更新计数）。
 
 使用 SQLServerCallableStatement 类构建对存储过程的调用之后，可以使用 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 或 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 方法中的任意一个来调用此存储过程。 executeUpdate 方法将返回一个 int 值，该值包含受此存储过程影响的行数，但 execute 方法不返回此值。 如果使用 execute 方法，并且希望获得受影响的行数计数，则可以在运行存储过程后调用 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 方法。
 

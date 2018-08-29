@@ -1,5 +1,5 @@
 ---
-title: sys.parameter_type_usages (TRANSACT-SQL) |Microsoft 文档
+title: sys.parameter_type_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.parameter_type_usages catalog view
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b07b0b29c2aa8fe9a2709e7368776024ce8f698
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 116bec6c18c6b1fe882937913acac09d56550844
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33179643"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036979"
 ---
 # <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "33179643"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此参数所属的对象 ID。|  
+|**object_id**|**int**|此参数所属的对象的 ID。|  
 |**parameter_id**|**int**|参数的 ID。 在对象中是唯一的。|  
-|**user_type_id**|**int**|用户定义类型的 ID。<br /><br /> 若要返回的类型名称，将联接到[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录在此列的视图。|  
+|**user_type_id**|**int**|用户定义类型的 ID。<br /><br /> 若要返回的类型名称，将联接到[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)目录对此列的视图。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

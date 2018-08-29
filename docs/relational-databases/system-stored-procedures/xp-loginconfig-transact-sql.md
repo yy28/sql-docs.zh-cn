@@ -1,5 +1,5 @@
 ---
-title: xp_loginconfig (TRANSACT-SQL) |Microsoft 文档
+title: xp_loginconfig (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_loginconfig
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
-author: CarlRabeler
-ms.author: carlrab
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 563893d516e5b6349008dd0a0641c38beacbc849
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: c5b6f111c91ea6b97563720f44e3cf1eaa0d8b5d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102895"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038599"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: bcb5b6636fcabab8d6cb5eb3709f632f9968c3a7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279258"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42787331"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39279258"
 |TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 还跟踪与 SQL Server 建立安全套接字层 (SSL) 连接的相关消息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
 |TDS.Writer|该类别跟踪对 TDS 信道的写入。 请注意，只跟踪写入的长度，不跟踪内容。 该类别还跟踪将关注信号发送给服务器以取消语句的执行时出现的问题。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.Reader|该类别跟踪 FINEST 级别 TDS 信道的某些读取操作。 在 FINEST 级别，跟踪可能非常详细。 在 WARNING 和 SEVERE 级别，该类别跟踪在驱动程序关闭连接之前，驱动程序何时从 SQL Server 收到无效的 TDS 协议。<br /><br /> 该类别只有通过将日志记录级别设置为 FINER 和 FINEST 才能启用。|  
-|TDS.Command|该类别跟踪低级状态转换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql_md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
+|TDS.Command|该类别跟踪低级状态转换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.TOKEN|该类别仅记录 TDS 包内的标记，不如 TDS.DATA 类别详细。 它只有通过将日志记录级别设置为 FINEST 才能启用。<br /><br /> 在 FINEST 级别，当 TDS 标记在响应中进行处理时，此类别对其进行跟踪。 在 SEVERE 级别，该类别跟踪何时遇到无效的 TDS 标记。|  
 |SQLServerDatabaseMetaData|在 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerResultSetMetaData|在 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  

@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (TRANSACT-SQL) |Microsoft 文档
+title: sp_procoption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_procoption
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d78b81013f7101cce34dcdc4713a800ce36e8930
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3c4c9907c52ad99e1a397b4ad08f9897b6a0c4d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254341"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018207"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@ProcName =** ] *****过程*****  
- 是为其设置选项的名称。 *过程*是**nvarchar(776)**，无默认值。  
+ [  **@ProcName =** ] **'***过程*****  
+ 是要为其设置选项的名称。 *过程*是**nvarchar(776)**，无默认值。  
   
- [  **@OptionName =** ] *****选项*****  
- 要设置的选项的名称。 唯一值*选项*是**启动**。  
+ [  **@OptionName =** ] **'***选项*****  
+ 要设置的选项的名称。 唯一的值为*选项*是**启动**。  
   
- [  **@OptionValue =** ] *****值*****  
- 是，是否需要在设置选项 (**true**或**上**) 或禁用 (**false**或**关闭**)。 *值*是**varchar(12)**，无默认值。  
+ [  **@OptionValue =** ] **'***值*****  
+ 是否要选项设置为 on (**，则返回 true**或**上**) 或禁用 (**false**或者**关闭**)。 *值*是**varchar(12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或错误号（失败）  
   
-## <a name="remarks"></a>注释  
- 启动过程必须在**master**数据库中，并且不能包含输入或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
+## <a name="remarks"></a>Remarks  
+ 启动过程中必须是**主**数据库，并且不能包含输入或输出参数。 所有数据库恢复后将开始执行存储过程，并在开始时记录“恢复已完成”消息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -80,7 +80,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [执行存储过程](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

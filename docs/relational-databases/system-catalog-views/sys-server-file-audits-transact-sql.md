@@ -1,5 +1,5 @@
 ---
-title: sys.server_file_audits (TRANSACT-SQL) |Microsoft 文档
+title: sys.server_file_audits (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,28 +21,28 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222098"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035927"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  包含有关中的文件审核类型的扩展的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核服务器实例上。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  包含有关中的文件审核类型的扩展的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]审核在服务器实例上。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|审核的 ID。|  
-|name|**sysname**|审核的名称。|  
+|NAME|**sysname**|审核的名称。|  
 |audit_guid|**uniqueidentifier**|审核的 GUID。|  
 |create_date|**datetime**|创建文件审核的 UTC 日期。|  
-|modify_date|**datatime**|上次修改文件审核的 UTC 日期。|  
+|modify_date|**日期时间**|上次修改文件审核的 UTC 日期。|  
 |principal_id|**int**|在服务器上注册的审核的所有者的 ID。|  
 |type|**char(2)**|审核类型：<br /><br /> 0 = NT 安全事件日志<br /><br /> 1 = NT 应用程序事件日志<br /><br /> 2 = 文件系统中的文件|  
 |type_desc|**nvarchar(60)**|审核类型说明。|  
@@ -58,12 +58,12 @@ ms.locfileid: "33222098"
 |log_file_path|nvarchar(260)|审核所在的路径。 对于文件审核为文件路径，对于应用程序日志审核为应用程序日志路径。|  
 |log_file_name|nvarchar(260)|CREATE AUDIT DDL 中提供的日志文件的基名称。 创建日志文件名时向 base_log_name 文件中添加一个递增数字作为后缀。|  
   
-## <a name="permissions"></a>权限  
- 具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，必须没有拒绝主体**VIEW ANY DEFINITION**权限。  
+## <a name="permissions"></a>Permissions  
+ 具有主体**ALTER ANY SERVER AUDIT**或**VIEW ANY DEFINITION**权限有权访问此目录视图。 此外，不得被拒绝主体**VIEW ANY DEFINITION**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

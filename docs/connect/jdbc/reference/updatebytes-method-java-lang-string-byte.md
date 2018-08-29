@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b22554aaa99ec57736e10a858e7d7505fce89c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a1ee6e6f6d8a81b7e5af1dd9c44c39d076d9ec69
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038055"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785915"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ public void updateBytes(java.lang.String columnName,
 ## <a name="remarks"></a>Remarks  
  此 updateBytes 方法由 java.sql.ResultSet 接口中的 updateBytes 方法指定。  
   
- 在之前的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 版本中，可使用 SQLServerResultSet.updateBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型日期、时间、datetime2 或 datetimeoffset 的值相互转换。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
+ 在之前的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 版本中，可使用 SQLServerResultSet.updateBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型日期、时间、datetime2 或 datetimeoffset 的值相互转换。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
   
 ## <a name="see-also"></a>另请参阅  
  [updateBytes 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   

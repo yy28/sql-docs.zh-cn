@@ -1,5 +1,5 @@
 ---
-title: sp_helpfile (Transact SQL) |Microsoft 文档
+title: sp_helpfile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4de2e386d30c718177482cd50d38f169922f5d8a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 74acb22b50ce918f070c817cb8954b46e47bb876
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245118"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023835"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="arguments"></a>参数  
  [ **@filename =** ] **'***name***'**  
- 当前数据库中任意文件的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*是未指定，则返回当前数据库中的所有文件的属性。  
+ 当前数据库中任意文件的逻辑名称。 *名称*是**sysname**，默认值为 NULL。 如果*名称*是未指定，将返回当前数据库中的所有文件的属性。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -55,15 +55,15 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**名称**|**sysname**|逻辑文件名称。|  
-|**fileid**|**int**|文件的数字标识符。 如果不返回*名称*指定 *。*|  
+|**fileid**|**smallint**|文件的数字标识符。 如果不返回*名称*指定 *。*|  
 |**filename**|**nchar(260)**|物理文件名。|  
-|**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是一个日志文件。 它决不是文件组的一部分。|  
+|**filegroup**|**sysname**|文件所属的文件组。<br /><br /> NULL = 文件是日志文件。 它决不是文件组的一部分。|  
 |size|**nvarchar(15)**|文件大小 (KB)。|  
 |**最大大小**|**nvarchar(15)**|文件大小可达到的最大值。 此字段中的 UNLIMITED 值表示文件可以一直增长到磁盘变满为止。|  
 |**增长**|**nvarchar(15)**|文件的增量。 表示每次需要新空间时为文件增加的空间大小。<br /><br /> 0 = 文件的大小是固定的，不会增长。|  
-|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**和日志文件的值是 **'仅 log'**。|  
+|**使用情况**|**varchar(9)**|对于数据文件的值是**仅限数据**并为日志文件的值是**仅记录**。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -76,7 +76,7 @@ EXEC sp_helpfile;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

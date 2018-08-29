@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_database (Transact SQL) |Microsoft 文档
+title: sp_add_log_shipping_secondary_database (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_database
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70abdc5cb67beeb779af3722d3b5e7f91b923e21
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 56090e1f012bb0e9d490997c9b3dcc7e497641c9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035539"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,46 +61,46 @@ sp_add_log_shipping_secondary_database
  辅助数据库的名称。 *secondary_database*是**sysname**，无默认值。  
   
  [ **@primary_server** =] '*primary_server*  
- 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**和不能为 NULL。  
+ 主实例的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]日志传送配置中。 *primary_server*是**sysname**且不能为 NULL。  
   
  [ **@primary_database** =] '*primary_database*  
  主服务器上的数据库的名称。 *primary_database*是**sysname**，无默认值。  
   
  [ **@restore_delay** = ] '*restore_delay*'  
- 辅助服务器在还原给定备份文件之前等待的时间（分钟）。 *restore_delay*是**int**和不能为 NULL。 默认值为 0。  
+ 辅助服务器在还原给定备份文件之前等待的时间（分钟）。 *restore_delay*是**int**且不能为 NULL。 默认值为 0。  
   
  [ **@restore_all** =] '*restore_all*  
- 如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，辅助服务器将在还原一个文件后停止。 *restore_all*是**位**和不能为 NULL。  
+ 如果设置为 1，则在运行还原作业时，辅助服务器将还原所有可用的事务日志备份。 否则，辅助服务器将在还原一个文件后停止。 *restore_all*是**位**且不能为 NULL。  
   
  [ **@restore_mode** =] '*restore_mode*  
  辅助数据库的还原模式。  
   
- 0 = with NORECOVERY 还原日志。  
+ 0 = 使用 NORECOVERY 还原日志。  
   
- 1 = 与待机还原日志。  
+ 1 = 使用 STANDBY 还原日志。  
   
- *还原*是**位**和不能为 NULL。  
+ *还原*是**位**且不能为 NULL。  
   
  [ **@disconnect_users** =] '*disconnect_users*  
- 如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。 *断开连接*users 是**位**和不能为 NULL。  
+ 如果设置为 1，则在执行还原操作时，会断开用户与辅助数据库的连接。 默认值 = 0。 *断开*用户是**位**且不能为 NULL。  
   
  [ **@block_size** =] '*block_size*  
- 用作备份设备的块大小（字节）。 *block_size*是**int**默认值为-1。  
+ 用作备份设备的块大小（字节）。 *block_size*是**int**与默认值为-1。  
   
  [ **@buffer_count** =] '*buffer_count*  
- 备份或还原操作使用的缓冲区总数。 *buffer_count*是**int**默认值为-1。  
+ 备份或还原操作使用的缓冲区总数。 *buffer_count*是**int**与默认值为-1。  
   
  [ **@max_transfer_size** =] '*max_transfer_size*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。 *max_transfersize*是**int**而且可以为 NULL。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向备份设备发出的最大输入或输出请求的大小（字节）。 *max_transfersize*是**int** ，可以为 NULL。  
   
  [ **@restore_threshold** =] '*restore_threshold*  
- 两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 *restore_threshold*是**int**和不能为 NULL。  
+ 两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 *restore_threshold*是**int**且不能为 NULL。  
   
  [ **@threshold_alert** =] '*threshold_alert*  
- 是在超出备份阈值时发出警报。 *threshold_alert*是**int**，默认值为 14,420。  
+ 是要超过备份阈值时引发的警报。 *threshold_alert*是**int**，默认值为 14,420。  
   
  [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*  
- 指定是否发生警报时*backup_threshold*超出。 默认值一 (1) 表示要引发警告。 *threshold_alert_enabled*是**位**。  
+ 指定是否引发警报时*backup_threshold*超出。 默认值一 (1) 表示要引发警告。 *threshold_alert_enabled*是**位**。  
   
  [ **@history_retention_period** =] '*history_retention_period*  
  历史记录的保留时间（分钟）。 *history_retention_period*是**int**，默认值为 NULL。 如果不指定值，则使用值 14420。  
@@ -110,24 +109,24 @@ sp_add_log_shipping_secondary_database
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- **sp_add_log_shipping_secondary_database**必须从运行**master**辅助服务器上的数据库。 此存储过程执行以下操作：  
+## <a name="remarks"></a>Remarks  
+ **sp_add_log_shipping_secondary_database**必须从运行**主**辅助服务器上的数据库。 此存储过程执行以下操作：  
   
-1.  **sp_add_log_shipping_secondary_primary**应在此存储过程以初始化主日志传送辅助服务器上的数据库信息之前调用。  
+1.  **sp_add_log_shipping_secondary_primary**主日志传送辅助服务器上的数据库信息进行初始化，该存储过程之前，应调用。  
   
-2.  添加一个条目中的辅助数据库**log_shipping_secondary_databases**使用提供的参数。  
+2.  添加辅助数据库中的条目**log_shipping_secondary_databases**使用所提供的参数。  
   
-3.  将添加在本地监视记录**log_shipping_monitor_secondary**辅助服务器上使用提供自变量。  
+3.  添加本地监视记录在**log_shipping_monitor_secondary**辅助服务器上使用提供的参数。  
   
-4.  如果不同于辅助服务器监视服务器，将添加中的监视器记录**log_shipping_monitor_secondary**监视器使用 server 提供自变量。  
+4.  如果监视服务器不同于辅助服务器时，监视器中添加记录**log_shipping_monitor_secondary**监视器服务器使用提供的参数。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_add_log_shipping_secondary_database**存储过程来将数据库添加**LogShipAdventureWorks**为日志传送配置中的辅助数据库与主数据库[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]驻留在主服务器 TRIBECA 上。  
+ 此示例演示如何使用**sp_add_log_shipping_secondary_database**存储过程来将数据库添加**LogShipAdventureWorks**日志传送配置中的辅助数据库与主数据库[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]位于主服务器 tribeca 中时。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -143,8 +142,8 @@ EXEC master.dbo.sp_add_log_shipping_secondary_database
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

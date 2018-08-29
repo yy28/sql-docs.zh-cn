@@ -16,16 +16,15 @@ helpviewer_keywords:
 - database security [SQL Server]
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
-caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7135846a7d442f9f43bfac505ed35a903c6b874a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4836c7e6c6ce0199b280a3f2d4534f506591aad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283093"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020344"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 数据库引擎和 Azure SQL Database 的安全中心
   本页提供的链接可帮助你找到有关 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]和 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]中的安全性和保护的必要信息。  

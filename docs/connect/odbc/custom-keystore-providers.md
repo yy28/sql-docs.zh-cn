@@ -14,12 +14,12 @@ caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 613f8809003ba8f4501ea95371dedd44cff18a8d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047512"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785080"
 ---
 # <a name="custom-keystore-providers"></a>自定义密钥存储提供程序
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
 |`ecek`|[输入]指向要解密的 ECEK 指针。|
 |`ecekLen`|[输入]ECEK 的长度。|
-|`cekOut`|[输出]提供程序应为已解密的 ECEK 分配内存和指针指向的 cekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * cekOut 到 null 指针。|
+|`cekOut`|[输出]提供程序应为已解密的 ECEK 分配内存和指针指向的 cekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * cekOut 到 null 指针。|
 |`cekLen`|[输出]提供程序应写入到由 cekLen 指向的地址已写入到已解密 ECEK 的长度 * * cekOut。|
 |`Return Value`|返回非零值，指示已成功，或零表示失败。|
 
@@ -164,7 +164,7 @@ int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyP
 |`alg`|[输入]值[算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)给定 ECEK 的元数据特性。 以 null 终止宽-字符 * 字符串。 这是为了识别用于加密给定的 ECEK 的加密算法。|
 |`cek`|[输入]指向要加密的 CEK。|
 |`cekLen`|[输入]CEK 的长度。|
-|`ecekOut`|[输出]提供程序应为加密的 CEK 分配内存和指针指向的 ecekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * ecekOut 到 null 指针。|
+|`ecekOut`|[输出]提供程序应为加密的 CEK 分配内存和指针指向的 ecekOut 写入其地址。 它必须是可释放的内存使用此块[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) 或释放 (Linux/Mac) 函数。 如果没有内存分配因出错而或以其他方式，应设置提供程序 * ecekOut 到 null 指针。|
 |`ecekLen`|[输出]提供程序应写入到由 ecekLen 指向的地址已写入到加密的 CEK 的长度 * * ecekOut。|
 |`Return Value`|返回非零值，指示已成功，或零表示失败。|
 
@@ -190,7 +190,7 @@ void (*Free)();
 |参数|描述|
 |:--|:--|
 |`ctx`|[输入]要在报告错误的上下文。|
-|`msg`|[输入]报告错误消息。 以 null 结尾的宽字符字符串。 若要允许参数化的信息必须存在，此字符串可包含的窗体接受的格式插入设置序列[FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)函数。 可通过此参数指定扩展的功能，如下所述。|
+|`msg`|[输入]报告错误消息。 以 null 结尾的宽字符字符串。 若要允许参数化的信息必须存在，此字符串可包含的窗体接受的格式插入设置序列[FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage)函数。 可通过此参数指定扩展的功能，如下所述。|
 |...|[输入]中容纳不下的格式说明符消息，根据需要的其他可变参数参数。|
 
 若要报告时出现错误，提供程序调用 onError，提供的上下文参数传递到提供程序函数按该驱动程序和可选的其他参数的错误消息要在其中设置格式。 提供程序可能会调用此函数多次发布连续在一个提供程序函数调用中的多条错误消息。 例如：

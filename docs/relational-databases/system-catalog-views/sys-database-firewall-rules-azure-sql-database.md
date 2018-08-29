@@ -1,5 +1,5 @@
 ---
-title: sys.database_firewall_rules （Azure SQL 数据库） |Microsoft 文档
+title: sys.database_firewall_rules （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -22,17 +22,16 @@ helpviewer_keywords:
 - database_firewall_rules
 - sys.database_firewall_rules
 ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
-caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea5b9d5cb50740e349aa6d3cf58bd20f620a8ab6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 068f01bc17a9f907aafaac6d39370be2a0480f57
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038325"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038128"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "38038325"
 ## <a name="remarks"></a>Remarks  
  若要删除数据库防火墙规则，请使用[sp_delete_database_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)。 若要设置的所有防火墙规则[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，请参阅[sp_set_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)。 若要返回有关现有数据库的信息的防火墙规则，请查询[sys.database_firewall_rules （Azure SQL 数据库）](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图现已推出**主**数据库和每个用户数据库中。 为具有连接到数据库的权限的所有用户提供对此视图的只读访问权限。  
   
 ## <a name="see-also"></a>请参阅  

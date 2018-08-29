@@ -1,5 +1,5 @@
 ---
-title: 终结点目录视图 (Transact SQL) |Microsoft 文档
+title: 终结点目录视图 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b644285d73113c385738655e0b6607e065360de
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2bb594ecec2940ec8c42841fc7b76632c497fa36
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177620"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037858"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>端点目录视图 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "33177620"
 |[sys.endpoint_webmethods](../../relational-databases/system-catalog-views/sys-endpoint-webmethods-transact-sql.md)|[sys.tcp_endpoints](../../relational-databases/system-catalog-views/sys-tcp-endpoints-transact-sql.md)|  
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

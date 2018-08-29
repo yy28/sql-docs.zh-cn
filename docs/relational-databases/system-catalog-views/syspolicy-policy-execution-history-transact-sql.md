@@ -1,5 +1,5 @@
 ---
-title: syspolicy_policy_execution_history (Transact SQL) |Microsoft 文档
+title: syspolicy_policy_execution_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history view
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5d21894663f8ad36a44e825a1b0e8ced4966ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db5a20395ec6e0e41d70d6b2dbb04dee991a0c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220318"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021391"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ ms.locfileid: "33220318"
 |exception_message|**nvarchar(max)**|发生的异常所生成的消息。|  
 |exception|**nvarchar(max)**|发生的异常的说明。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  [Syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)视图包含有关策略和测试的条件表达式的目标的相关详细信息。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 msdb 数据库中 PolicyAdministratorRole 角色的成员身份。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [基于策略的管理视图 (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

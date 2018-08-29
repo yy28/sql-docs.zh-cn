@@ -14,22 +14,22 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d58e4913be6db14bec53f5e8bbf63055b2a1344
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 61926079d3a9494831e0a182b4217ecb5b8b92b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662349"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784348"
 ---
 # <a name="using-basic-data-types"></a>使用基本数据类型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本数据类型将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型转换为 Java 编程语言能够理解的格式，反之亦然。 JDBC driver 提供对 JDBC 4.0 API，其中包括支持**SQLXML**数据类型和 National (Unicode) 数据类型，如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，并**NCLOB**。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本数据类型将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型转换为 Java 编程语言能够理解的格式，反之亦然。 JDBC driver 提供对 JDBC 4.0 API，其中包括支持**SQLXML**数据类型和 National (Unicode) 数据类型，如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，并**NCLOB**。  
   
 ## <a name="data-type-mappings"></a>数据类型映射
 
-下表列出了基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC 和 Java 编程语言数据类型之间的默认映射：  
+下表列出了基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC 和 Java 编程语言数据类型之间的默认映射：  
   
 | SQL Server 类型   | JDBC 类型 (java.sql.Types)                        | Java 语言类型          |
 | ------------------ | -------------------------------------------------- | ---------------------------- |
@@ -70,7 +70,7 @@ ms.locfileid: "39662349"
 | geometry           | VARBINARY                                          | byte[]                       |
 | 地理          | VARBINARY                                          | byte[]                       |
   
-(1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false。  
+(1) 若要将 java.sql.Time 与时间 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型一起使用，必须将 sendTimeAsDatetime 连接属性设置为 false。  
   
 （2） 您可以以编程方式访问的值**datetimeoffset**与[DateTimeOffset 类](../../connect/jdbc/reference/datetimeoffset-class.md)。  
   

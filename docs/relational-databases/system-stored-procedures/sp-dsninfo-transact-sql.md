@@ -1,5 +1,5 @@
 ---
-title: sp_dsninfo (TRANSACT-SQL) |Microsoft 文档
+title: sp_dsninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a9c04611a342f81b6aa0a0b403eb6ff4ce8a643
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63e4783420f9298e2e820341993774b81bbab7e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992574"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017490"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,29 +49,29 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dsn =**] *****dsn*****  
+ [  **@dsn =**] **'***dsn*****  
  ODBC DSN 或 OLE DB 链接服务器的名称。 *dsn*是**varchar （128)**，无默认值。  
   
- [  **@infotype =**] *****info_type*****  
- 是要返回类型。 如果*info_type*未指定或如果指定 NULL，则返回所有信息类型。 *info_type*是**varchar （128)**，默认值为 NULL，并且可以为这些值之一。  
+ [  **@infotype =**] **'***info_type*****  
+ 是要返回类型。 如果*info_type*未指定或指定为 NULL，则返回所有信息类型。 *info_type*是**varchar （128)**，默认值为 NULL，并且可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**DBMS_NAME**|指定数据源供应商名称。|  
 |**DBMS_VERSION**|指定数据源版本。|  
 |**DATABASE_NAME**|指定数据库名。|  
 |**SQL_SUBSCRIBER**|指定数据源可以是订阅服务器。|  
   
- [  **@login =**] *****登录*****  
+ [  **@login =**] **'***登录*****  
  数据源的登录名。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *登录名*是**varchar （128)**，默认值为 NULL。  
   
- [  **@password =**] *****密码*****  
+ [  **@password =**] **'***密码*****  
  登录名的密码。 如果数据源包括登录名，则指定 NULL 或忽略该参数。 *密码*是**varchar （128)**，默认值为 NULL。  
   
  [  **@dso_type=**] *dso_type*  
- 为数据源类型。 *dso_type*是**int**，并且可以为这些值之一。  
+ 是数据源类型。 *dso_type*是**int**，可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1** （默认值）|ODBC 数据源|  
 |**3**|OLE DB 数据源|  
@@ -84,18 +84,18 @@ sp_dsninfo [ @dsn =] 'dsn'
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**信息类型**|**nvarchar(64)**|信息类型，如 DBMS_NAME、DBMS_VERSION、DATABASE_NAME 和 SQL_SUBSCRIBER。|  
-|**Value**|**nvarchar(512)**|关联的信息类型的值。|  
+|**ReplTest1**|**nvarchar(512)**|关联的信息类型的值。|  
   
-## <a name="remarks"></a>注释  
- **sp_dsninfo**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_dsninfo**用于所有类型的复制。  
   
- **sp_dsninfo**检索显示是否可以执行复制或查询中使用数据库的 ODBC 或 OLE DB 数据源信息。  
+ **sp_dsninfo**检索 ODBC 或 OLE DB 数据源信息用于显示是否可以使用复制或查询的数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_dsninfo**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_enumdsn &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_enumdsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

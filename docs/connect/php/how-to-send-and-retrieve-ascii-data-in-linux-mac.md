@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.openlocfilehash: 32599ca0facc7a35877f6d59573b27209ce68d31
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0cf0256c337d8851f6223ea895eb7e6d90e30665
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786611"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>如何：在 Linux 和 macOS 中发送和检索 ASCII 数据 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "37979819"
 ## <a name="example"></a>示例  
 以下示例演示如何发送和检索 ASCII 数据通过之前建立的连接指定特定的区域设置使用 SQL Server PHP 驱动程序。 从 macOS 中的相同区域设置可能会以不同方式命名各种 Linux 平台中的区域设置。 例如，美国 ISO-8859-1 (Latin 1) 区域设置是`en_US.ISO-8859-1`macOS 中的名称不在 Linux 中`en_US.ISO8859-1`。
   
-这些示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]的服务器上安装。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
+这些示例假定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的服务器上安装。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  

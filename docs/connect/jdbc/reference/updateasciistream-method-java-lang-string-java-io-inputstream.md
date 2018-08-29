@@ -1,5 +1,5 @@
 ---
-title: updateAsciiStream 方法 (java.io.InputStream) |Microsoft 文档
+title: updateAsciiStream 方法 (java.io.InputStream) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 074b8ddbc5a4973e309b9be96f65518afade2837
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fbc4cb8b8affaaaf146c9dfcfe5ad833d3d1f9b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850312"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786423"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>updateAsciiStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,24 +37,24 @@ public void updateAsciiStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- A**字符串**包含列标签。  
+ 一个包含列标签的字符串。  
   
  *x*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定此 updateAsciiStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateAsciiStream 方法由 java.sql.ResultSet 接口中的 updateAsciiStream 方法指定。  
   
- 此方法将从 InputStream 对象 ASCII 字符 （字节） 传递到转换的字符列，其中的 ASCII 范围 [0x00 – 0x7F] Unicode，和 874、 932、 936、 949、 950，和通过 1258年代码页 1250年。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
+ 此方法将来自 InputStream 对象的 ASCII 字符（字节）传递给可转换的字符列，即 Unicode 的 ASCII 范围 [0x00 – 0x7F] 以及 874、932、936、949、950 和 1250 到 1258 代码页。 此方法执行到目标排序规则页的转换。 尝试更新不可转换的目标列将引发异常。 对于二进制列，会传递原始字节。  
   
- 使用此方法对于**映像**，**文本**，和**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型可能会影响性能。  
+ 使用此方法对于**图像**，**文本**，并**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]数据类型可能会影响性能。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateAsciiStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
+ [updateAsciiStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

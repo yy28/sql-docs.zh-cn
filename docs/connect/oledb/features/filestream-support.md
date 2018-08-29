@@ -15,14 +15,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], OLE DB Driver for SQL Server
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b8c2b2c79ab9564fab1160a0434d7146a311a0f8
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 6dde88550692c8290148387ad8f3048d70e3eaec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029120"
 ---
 # <a name="filestream-support"></a>FILESTREAM 支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>下级兼容性  
-如果您的客户端在编译时使用 SQL Server 的 OLE DB 驱动程序和应用程序连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然后**varbinary （max)** 行为将与该行为兼容通过引入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的本机客户端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
+如果您的客户端在编译时使用 SQL Server 的 OLE DB 驱动程序和应用程序连接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]通过[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)])，然后**varbinary （max)** 行为将与该行为兼容通过引入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的本机客户端[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 就是说，返回数据的最大大小将限制为不超过 2 GB。 对于超过 2 GB 的结果值，将发生截断，并将返回“字符串数据，右截断”警告。 
   
 如果将数据类型兼容性设置为 80，则客户端行为将与下级客户端行为一致。  
   

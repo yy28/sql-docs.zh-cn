@@ -14,18 +14,18 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4a21ae103b226fb74ffa384b1d0696162d72931
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d9b5da0ee2138296a4b0c7bf12e6e33a06d029cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453971"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785256"
 ---
 # <a name="data-source-sample"></a>数据源示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何使用数据源对象连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库。 还说明了如何使用存储过程从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中检索数据。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何使用数据源对象连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 还说明了如何使用存储过程从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索数据。
 
 此示例的代码文件名为“ConnectDataSource.java”，位于以下位置：
 

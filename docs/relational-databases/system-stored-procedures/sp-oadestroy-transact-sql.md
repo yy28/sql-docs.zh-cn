@@ -1,5 +1,5 @@
 ---
-title: sp_OADestroy (TRANSACT-SQL) |Microsoft 文档
+title: sp_OADestroy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 745b9f47c6fded870a6a4453e868cebdc88eb2b3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 758f9be98c13f599fabcea77d1007c73a688d5e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251217"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037374"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,21 +45,21 @@ sp_OADestroy objecttoken
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- 通过使用先前创建的 OLE 对象的对象标记**sp_OACreate**。  
+ 通过使用先前创建的 OLE 对象的对象令牌**sp_OACreate**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败），是由 OLE 自动化对象返回的 HRESULT 整数值。  
   
  有关 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
-## <a name="remarks"></a>注释  
- 如果**sp_OADestroy**不调用时，创建 OLE 对象将自动销毁批处理的末尾。  
+## <a name="remarks"></a>Remarks  
+ 如果**sp_OADestroy**不调用时，所创建的 OLE 对象时会自动破坏批的末尾。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例销毁以前创建**SQLServer**对象。  
+ 下面的示例将破坏先前创建**SQLServer**对象。  
   
 ```  
 EXEC @hr = sp_OADestroy @object;  
@@ -70,7 +70,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE 自动化存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

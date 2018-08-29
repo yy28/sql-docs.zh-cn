@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946901"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784861"
 ---
 # <a name="list-of-bugs-fixed"></a>修复的缺陷列表
 
-此页包含在每个版本中，从开始修复的 bug 的列表[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+此页包含在每个版本中，从开始修复的 bug 的列表[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 修复了 Azure Active Directory 身份验证有关的错误消息
 - 修复了编码检测时以不同方式设置区域设置环境变量
@@ -40,7 +40,7 @@ ms.locfileid: "37946901"
 - 修复时在 Windows 上使用 ADAL 身份验证缓存问题
 - 修复了已锁定的问题和 Windows 上的覆盖跟踪日志
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]的 ODBC 驱动程序 17.1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 修复 1 秒的延迟时调用启用了 MARS SQLFreeHandle 和连接属性"Encrypt = yes"
 - 修复错误 22003 崩溃的 SQLGetData 时传入缓冲区的大小较小，则正在检索的数据 (Windows)
@@ -50,7 +50,7 @@ ms.locfileid: "37946901"
 - 对 MacOS 的安装程序修复了警告
 - 修复了不正确状态发送到 SQL Server 会话恢复尝试期间连接复原和连接池都启用时，从而导致会话由服务器删除
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>中的 bug 修复[!INCLUDE[msCoName](../../includes/msconame_md.md)]ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - 修复了 bug 在大容量插入时使用 Kerberos 身份验证，可能会失败，"拒绝访问"错误
 - 已删除的版本低于 2.3.1 中存在的 unixODBC bug 的解决方法 （驱动程序增加了一倍的传递给 unixODBC 某些缓冲区的大小）

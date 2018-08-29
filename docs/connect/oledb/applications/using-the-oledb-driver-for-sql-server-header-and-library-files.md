@@ -22,14 +22,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, library files
 - MSOLEDBSQL, library files
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 847d25310542a6eb10f929a04ee4e5e066bbb38e
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: bb2d14d1426e339773c4ed6494d95dea527eec29
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108699"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030593"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>使用适用于 SQL Server 的 OLE DB 驱动程序头文件和库文件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ include "msoledbsql.h";
   
 ## <a name="component-names-and-properties-by-version"></a>基于版本的组件名称和属性  
 
-|属性|适用于 SQL Server 的 OLE DB 驱动程序|MDAC|  
+|“属性”|适用于 SQL Server 的 OLE DB 驱动程序|MDAC|  
 |--------|----------------------------|----|   
 |OLE DB PROGID|MSOLEDBSQL|SQLOLEDB|  
 |OLE DB 头文件名|msoledbsql.h|Sqloledb.h|  

@@ -14,14 +14,14 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 458ed965485663183124143a49160ef496e21378
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 51993f2d607eadda48b97e92b377bd763ee0e9f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107144"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026826"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,14 +52,14 @@ ms.locfileid: "39107144"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的数据类型映射  
  需要 UDT 列时，在 ITableDefinition::CreateTable 所用的 DBCOLUMNDESC 结构中使用下列信息：  
   
-|OLE DB 数据类型 (*wType*)|*pwszTypeName*|SQL Server 数据类型|*rgPropertySets*|  
+|OLE DB 数据类型 (*wType*)|*pwszTypeName*|SQL Server 数据类型|rgPropertySets|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|忽略|UDT|必须包括 DBPROPSET_SQLSERVERCOLUMN 属性集。|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  通过 prgParamInfo 在 DBPARAMINFO 结构中返回的信息如下所示：  
   
-|参数类型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|参数类型|wType|ulParamSize|bPrecision|bScale|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|"DBTYPE_UDT"|*n*|未定义|未定义|清除|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|"DBTYPE_UDT"|~ 0|未定义|未定义|集|  
@@ -67,7 +67,7 @@ ms.locfileid: "39107144"
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  在 DBPARAMBINDINFO 结构中提供的信息必须符合以下规定：  
   
-|参数类型|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
+|参数类型|*pwszDataSourceType*|ulParamSize|bPrecision|bScale|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|已忽略|已忽略|如果将使用 DBTYPE_IUNKNOWN 传递参数，则必须进行设置。|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~ 0|已忽略|已忽略|已忽略|  
@@ -95,7 +95,7 @@ ms.locfileid: "39107144"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  在 DBCOLUMNINFO 结构中返回的信息如下所示：  
   
-|参数类型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
+|参数类型|wType|ulColumnSize|bPrecision|bScale|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
 |DBTYPE_UDT<br /><br /> （长度小于或等于 8,000 个字节）|DBTYPE_UDT|*n*|~ 0|~ 0|Clear|  
 |DBTYPE_UDT<br /><br /> （长度大于 8000 个字节）|DBTYPE_UDT|~ 0|~ 0|~ 0|将|  

@@ -1,5 +1,5 @@
 ---
-title: sp_scriptsubconflicttable (Transact SQL) |Microsoft 文档
+title: sp_scriptsubconflicttable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_scriptsubconflicttable
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86a5b01b46aee8a08c0e490b0d59e3887211d51e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f9eddd0192cff32db884f153a00b0f5526d16028
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997654"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020846"
 ---
 # <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为给定排队订阅项目生成用于在订阅服务器上创建冲突表的脚本。 生成的脚本在订阅服务器的订阅数据库上执行。 在发布服务器的发布数据库上执行此存储的过程。  
+  为给定排队订阅项目生成用于在订阅服务器上创建冲突表的脚本。 生成的脚本在订阅服务器的订阅数据库上执行。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
  [ **@publication=**] **'***publication***'**  
  包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] *****文章*****  
+ [  **@article=**] **'***文章*****  
  订阅项目名。 *文章*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -60,13 +60,13 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|为排队订阅项目返回用于在订阅服务器上创建冲突表的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 该脚本在订阅服务器的订阅数据库上执行。|  
   
-## <a name="remarks"></a>注释  
- **sp_scriptsubconflicttable**用于有订阅，手动应用初始快照的订阅服务器。 冲突表为订阅服务器上的可选表。  
+## <a name="remarks"></a>Remarks  
+ **sp_scriptsubconflicttable**有订阅，手动应用初始快照的订阅者的使用。 冲突表为订阅服务器上的可选表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_scriptsubconflicttable**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [排队更新冲突的检测和解决](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

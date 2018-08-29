@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergearticleconflicts (Transact SQL) |Microsoft 文档
+title: sp_helpmergearticleconflicts (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995164"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037300"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>参数  
  [ **@publication=**] **'***publication***'**  
- 是合并发布的名称。*发布*是**sysname**，默认值为**%**，它返回具有冲突的数据库中的所有项目。  
+ 是合并发布的名称。*出版物*是**sysname**，默认值为**%**，这会返回数据库中有冲突的所有项目。  
   
  [ **@publisher=**] **'***publisher***'**  
  是发布服务器的名称。*发布服务器*是**sysname**，默认值为 NULL。  
@@ -67,18 +67,18 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 |**guidcolname**|**sysname**|源对象的 RowGuidCol 名称。|  
 |**centralized_conflicts**|**int**|冲突记录是否存储在给定发布服务器上。|  
   
- 如果项目有仅删除冲突和否**conflict_table**行，行的名称**conflict_table**在结果集为 NULL。  
+ 如果将项目的唯一删除冲突而没有**conflict_table**行的名称**conflict_table**结果集为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticleconflicts**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色和**db_owner**固定的数据库角色可以执行**sp_helpmergearticleconflicts**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (Transact SQL) |Microsoft 文档
+title: sp_removedistpublisherdbreplication (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedistpublisherdbreplication
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02194543d95dc03491d4b882555e48698c100ba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a99244a59c0022ed92797fc8c5e10bd3bf3dae63
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996054"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022565"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] *****发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器*****  
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] *****publisher_db*****  
- 发布数据库的名称。 *publisher_db*是**sysname**无默认值。  
+ [  **@publisher_db=** ] **'***publisher_db*****  
+ 发布数据库的名称。 *publisher_db*是**sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_removedistpublisherdbreplication**由事务复制和快照复制。  
   
- **sp_removedistpublisherdbreplication**已发布的数据库必须重新创建不还删除分发数据库时使用。 将删除下列元数据：  
+ **sp_removedistpublisherdbreplication**但不删除分发数据库，必须重新创建已发布的数据库时使用。 将删除下列元数据：  
   
 -   所有的发布元数据。  
   
@@ -68,10 +68,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
   
 -   属于发布的所有复制代理作业的元数据。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色在分发服务器或成员的**db_owner**分发数据库中的固定的数据库角色可以执行**sp_removedistpublisherdbreplication**。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色的成员的分发服务器**db_owner**分发数据库中的固定的数据库角色可以执行**sp_removedistpublisherdbreplication**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

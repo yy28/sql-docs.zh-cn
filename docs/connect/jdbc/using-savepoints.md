@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661859"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785433"
 ---
 # <a name="using-savepoints"></a>使用保存点
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-保存点提供了回滚部分事务的机制。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中，可以使用 SAVE TRANSACTION savepoint_name 语句创建保存点。 然后，运行 ROLLBACK TRANSACTION savepoint_name 语句回滚到保存点，而不是回滚到事务的开始。
+保存点提供了回滚部分事务的机制。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，可以使用 SAVE TRANSACTION savepoint_name 语句创建保存点。 然后，运行 ROLLBACK TRANSACTION savepoint_name 语句回滚到保存点，而不是回滚到事务的开始。
 
 保存点在不可能发生错误的情况下很有用。 在不频繁发生错误的情况下使用保存点回滚部分事务，其效果好于在执行更新前测试各事务以查看更新是否有效。 更新和回滚都是耗费大量资源的操作，因此，仅当遇到错误的可能性很低，且预先检查更新有效性的成本相对较高时，保存点才会有效。
 

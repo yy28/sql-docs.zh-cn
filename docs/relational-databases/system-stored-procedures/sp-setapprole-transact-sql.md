@@ -1,5 +1,5 @@
 ---
-title: sp_setapprole (TRANSACT-SQL) |Microsoft 文档
+title: sp_setapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setapprole
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
-caps.latest.revision: 42
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac733afa3f8afef74a9d6affb16e0f9dbcd5b4a9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259054"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038710"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,47 +48,47 @@ sp_setapprole [ @rolename = ] 'role',
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] *****角色*****  
+ [  **@rolename =** ] **'***角色*****  
  当前数据库中定义的应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@password =** ] **{加密 N***密码***}**  
- 激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*可以通过使用 ODBC 进行模糊处理**加密**函数。 当你使用**加密**函数，密码必须通过将转换为 Unicode 字符串**N**第一个引号前。  
+ [  **@password =** ] **{加密 N'***密码***}**  
+ 激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*可以使用 ODBC 进行模糊处理**加密**函数。 当你使用**加密**函数，密码必须通过将转换为 Unicode 字符串**N**之前在第一个引号。  
   
- 正在使用连接不支持加密选项**SqlClient**。  
+ 正在使用的连接不支持加密选项**SqlClient**。  
   
 > [!IMPORTANT]  
 >  ODBC**加密**函数不提供加密。 您不应当依赖该函数来保护通过网络传输的密码。 如果通过网络传输该信息，则使用 SSL 或者 IPSec。  
   
- **@encrypt = 'none'**  
+ **@encrypt = none**  
  指定不使用任何模糊代码。 密码以明文形式传递到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 这是默认设置。  
   
  **@encrypt= odbc**  
- 指定 ODBC 将模糊密码处理通过使用 ODBC**加密**发送到的密码前的函数[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 这只能在使用 ODBC 客户端或 OLE DB Provider for SQL Server 时指定。  
+ 指定 ODBC 将模糊密码处理使用 ODBC**加密**发送到密码之前的函数[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 这只能在使用 ODBC 客户端或 OLE DB Provider for SQL Server 时指定。  
   
  [  **@fCreateCookie =** ] **true** | **false**  
  指定是否创建 cookie。 **true**隐式转换为 1。 **false**隐式转换为 0。  
   
  [  **@cookie =** ]  **@cookie输出**  
- 指定包含 cookie 的输出参数。 仅当生成该 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
+ 指定包含 cookie 的输出参数。 仅当生成 cookie 的值**@fCreateCookie**是**true**。 **varbinary(8000)**  
   
 > [!NOTE]  
->  **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary （8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增加的未来版本中。  
+>  **sp_setapprole** 的 cookie **OUTPUT** 参数现记载为 **varbinary(8000)** ，这是正确的最大长度。 但是，目前执行返回 **varbinary(50)**。 应用程序应继续保留**varbinary(8000)** ，以便应用程序将继续正常运行，如果 cookie 返回大小增量时在将来的版本。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0 （成功） 和 1 （失败）  
   
-## <a name="remarks"></a>注释  
- 在应用程序后角色激活通过**sp_setapprole**，直到用户从服务器断开连接或执行的角色将保持活动**sp_unsetapprole**。 **sp_setapprole**可以仅通过直接执行[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 **sp_setapprole**无法在其他存储过程中或在用户定义的事务中执行。  
+## <a name="remarks"></a>Remarks  
+ 应用程序激活角色之后通过使用**sp_setapprole**，该角色保持活动状态，直到用户与服务器断开连接或执行**sp_unsetapprole**。 **sp_setapprole**可以执行只能由直接[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 **sp_setapprole**不能在另一个存储过程或用户定义的事务内执行。  
   
  应用程序角色的概述，请参阅[应用程序角色](../../relational-databases/security/authentication-access/application-roles.md)。  
   
 > [!IMPORTANT]  
 >  为了在通过网络传输应用程序角色密码时对其进行保护，在启用应用程序角色时应始终使用加密连接。  
 >   
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC**加密**选项不受**SqlClient**。 如果必须存储凭据，请使用加密 API 函数对这些凭据进行加密。 参数*密码*存储为单向哈希。 若要保留与早期版本的兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不强制密码复杂性策略**sp_addapprole**。 若要强制实施密码复杂性策略，请使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC**加密**选项不受**SqlClient**。 如果必须存储凭据，请使用加密 API 函数对这些凭据进行加密。 将参数*密码*作为单向哈希存储。 若要保持与早期版本的兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，不强制密码复杂性策略**sp_addapprole**。 若要强制实施密码复杂性策略，请使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
- 要求的成员身份**公共**和角色的密码的知识。  
+## <a name="permissions"></a>Permissions  
+ 要求的成员身份**公共**和知识的角色的密码。  
   
 ## <a name="examples"></a>示例  
   
@@ -120,11 +119,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_unsetapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
+ [sp_unsetapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unsetapprole-transact-sql.md)  
   
   

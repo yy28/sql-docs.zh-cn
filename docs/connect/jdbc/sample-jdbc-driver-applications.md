@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bea9da66105735a69b8d4d0eb53abeeacd233584
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9f27838db078539fd82421e23392de79db6166b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454501"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786089"
 ---
 # <a name="sample-jdbc-driver-applications"></a>示例 JDBC 驱动程序应用程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了 JDBC Driver 的各项功能。 此外，还展示了在结合使用 JDBC Driver 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库时可以遵循的最佳编程做法。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了 JDBC 驱动程序的各项功能。 此外，还展示了在结合使用 JDBC 驱动程序和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库时可以遵循的最佳编程做法。  
   
 所有示例应用程序都包含在 *.java 代码文件中，它们可以在您的本地计算机上编译和运行，并且位于以下位置中的不同子文件夹下：  
 
@@ -39,11 +39,11 @@ ms.locfileid: "39454501"
   
 | 主题                                                                                                        | 描述                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [连接和检索数据](../../connect/jdbc/connecting-and-retrieving-data.md)                       | 这些示例应用程序展示了如何连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库。 此外，还展示了各种用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库检索数据的方法。 |
-| [使用数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 这些示例应用程序展示了如何使用 JDBC Driver 数据类型方法来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据。                                                                                           |
-| [使用结果集](../../connect/jdbc/working-with-result-sets.md)                                   | 这些示例应用程序展示了如何使用结果集来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库中的数据。                                                                                                         |
-| [处理大型数据](../../connect/jdbc/working-with-large-data.md)                                     | 这些示例应用程序展示了如何使用自适应缓冲，以便从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库检索大值数据，同时还免去了服务器游标开销。                                                      |
-| [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md) | 此示例应用程序演示了如何检索的数据发现和分类的信息包含在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]从 ResultSet 对象使用 JDBC 驱动程序的数据库。                                      |
+| [连接和检索数据](../../connect/jdbc/connecting-and-retrieving-data.md)                       | 这些示例应用程序展示了如何连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。 此外，还展示了各种用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索数据的方法。 |
+| [使用数据类型 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 这些示例应用程序展示了如何使用 JDBC 驱动程序数据类型方法来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                           |
+| [使用结果集](../../connect/jdbc/working-with-result-sets.md)                                   | 这些示例应用程序展示了如何使用结果集来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的数据。                                                                                                         |
+| [处理大型数据](../../connect/jdbc/working-with-large-data.md)                                     | 这些示例应用程序展示了如何使用自适应缓冲从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索大值数据，同时免去服务器游标开销。                                                      |
+| [SQL 数据发现和分类](../../connect/jdbc/data-discovery-classification-sample.md) | 此示例应用程序演示了如何检索的数据发现和分类的信息包含在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从 ResultSet 对象使用 JDBC 驱动程序的数据库。                                      |
   
 ## <a name="see-also"></a>另请参阅
 

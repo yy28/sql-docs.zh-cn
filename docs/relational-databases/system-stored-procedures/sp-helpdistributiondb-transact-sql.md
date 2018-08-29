@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact SQL) |Microsoft 文档
+title: sp_helpdistributiondb (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02065dbaa89a16c0d00ce8737bb79f29c5256495
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df4a44be4ef3271e6af8e7148bfee50f40c71617
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996924"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018293"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] *****database_name*****  
- 是为其返回属性的数据库的名称。 *database_name*是**sysname**，默认值为**%** 关联与分发服务器，并且在其上的所有数据库用户具有的权限。  
+ [  **@database=**] **'***database_name*****  
+ 是为其返回属性的数据库的名称。 *database_name*是**sysname**，默认值为**%** 对于与分发服务器，并且在其上关联的所有数据库用户拥有的权限。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -69,17 +69,17 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_helpdistributiondb**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpdistributiondb**用于所有类型的复制。  
   
-## <a name="permissions"></a>权限  
- 成员**db_owner**固定的数据库角色或**replmonitor**分发数据库中的角色和使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**返回与文件相关的信息。 成员**公共**角色可以执行**sp_helpdistributiondb**可返回的它们有权访问的分发数据库文件相关的信息。  
+## <a name="permissions"></a>Permissions  
+ 成员**db_owner**固定的数据库角色或**replmonitor**分发数据库中的角色和使用分发数据库的发布的发布访问列表中的用户可以执行**sp_helpdistributiondb**以返回与文件相关的信息。 成员**公共**角色可以执行**sp_helpdistributiondb**返回非文件相关的有权访问的分发数据库的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看和修改分发服务器和发布服务器属性](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

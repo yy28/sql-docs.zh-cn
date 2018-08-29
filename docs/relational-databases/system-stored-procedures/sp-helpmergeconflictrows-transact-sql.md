@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergeconflictrows (Transact SQL) |Microsoft 文档
+title: sp_helpmergeconflictrows (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60759dfe84d22e919cf14d6fb33454b2d11bae49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60908f84ed6465028ca92a46b97bb6fce4541ac1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998944"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038759"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>参数  
  [ **@publication=**] **'***publication***'**  
- 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表具有冲突行**WA**和**CA**发布，发布名称传入**CA**检索冲突属于**CA**发布。  
+ 发布的名称。 *发布*是**sysname**，默认值为**%**。 如果指定了发布，将返回由该发布限定的所有冲突。 例如，如果**MSmerge_conflict_Customers**表包含有关冲突行**WA**并**CA**发布，传入发布名称**CA**检索属于冲突**CA**发布。  
   
- [  **@conflict_table=**] *****conflict_table*****  
- 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本，命名冲突表使用的格式名与 **MSmerge_conflict_* 发布 *_* 文章 * * *，与为每个发布的一个表文章。  
+ [  **@conflict_table=**] **'***conflict_table*****  
+ 冲突表的名称。 *conflict_table*是**sysname**，无默认值。 在中[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]和更高版本中，冲突表的命名格式名称与 **MSmerge_conflict_* 发布 *_* 文章 * * *，使用一个表为每个已发布一文。  
   
  [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
@@ -62,15 +62,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  是发布服务器数据库的名称。*publisher_db*是**sysname**，默认值为 NULL。  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- 指示结果集是否包含有关逻辑记录冲突的信息。 *logical_record_conflicts*是**int**，默认值为 0。 **1**意味着返回逻辑记录冲突信息。  
+ 指示结果集是否包含有关逻辑记录冲突的信息。 *logical_record_conflicts*是**int**，默认值为 0。 **1**表示返回逻辑记录冲突信息。  
   
 ## <a name="result-sets"></a>结果集  
- **sp_helpmergeconflictrows**返回的结果集的基表结构和这些额外的列组成。  
+ **sp_helpmergeconflictrows**返回的结果集由基表结构和这些额外的列组成。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|冲突的起源。|  
-|**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突： 在行级检测到冲突。<br /><br /> **2** = 列更新冲突： 列级检测到冲突。<br /><br /> **3** = 更新删除 Wins 冲突： 删除在冲突中获胜。<br /><br /> **4** = 更新 Wins 删除冲突： 在此表中记录失去冲突已删除的 rowguid。<br /><br /> **5** = 上载插入失败： 无法在发布服务器上应用从订阅服务器插入。<br /><br /> **6** = 下载插入失败： 无法在订阅服务器上应用从发布服务器插入。<br /><br /> **7** = 上载删除失败： 无法将订阅服务器上的删除上载到发布服务器。<br /><br /> **8** = 下载删除失败： 无法下载到订阅服务器在发布服务器上删除。<br /><br /> **9** = 上载更新失败： 无法在发布服务器上应用在订阅服务器上更新。<br /><br /> **10** = 下载更新失败： 在发布服务器上更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新 Wins Delete： 在此表中记录失去冲突的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新： 与更新到逻辑记录的插入冲突。<br /><br /> **14** = 逻辑记录删除 Wins 更新冲突： 在此表中记录了失去冲突的更新的逻辑记录。|  
+|**conflict_type**|**int**|表示冲突类型的代码：<br /><br /> **1** = 更新冲突： 在行级别检测到冲突。<br /><br /> **2** = 列更新冲突： 在列级检测到冲突。<br /><br /> **3** = 更新删除入选冲突： 删除在冲突中获胜。<br /><br /> **4** = 更新入选删除冲突： 冲突中落选的已删除的 rowguid 将记录在此表。<br /><br /> **5** = 上载插入失败： 无法在发布服务器上应用来自订阅服务器上的插入。<br /><br /> **6** = 下载插入失败： 无法在订阅服务器上应用来自发布服务器的插入。<br /><br /> **7** = 上载删除失败： 无法上载到发布服务器在订阅服务器上删除。<br /><br /> **8** = 下载删除失败： 无法为发布服务器上的删除下载到订阅服务器。<br /><br /> **9** = 上载更新失败： 无法在发布服务器上应用在订阅服务器的更新。<br /><br /> **10** = 下载更新失败： 在发布服务器的更新无法应用于订阅服务器。<br /><br /> **12** = 逻辑记录更新入选删除： 在此表中记录冲突中落选的已删除逻辑记录。<br /><br /> **13** = 逻辑记录冲突插入更新： 指向逻辑记录的插入与更新冲突。<br /><br /> **14** = 逻辑记录删除入选更新冲突： 该表中记录的已更新的逻辑记录冲突中落选。|  
 |**reason_code**|**int**|与上下文相关的错误代码。|  
 |**reason_text**|**varchar(720)**|与上下文相关的错误说明。|  
 |**pubid**|**uniqueidentifier**|发布标识符。|  
@@ -79,13 +79,13 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergeconflictrows**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定服务器角色、 **db_owner**固定数据库角色和**replmonitor**分发数据库中的角色可以执行**sp_helpmergeconflictrows**。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定服务器角色**db_owner**固定数据库角色，并且**replmonitor**分发数据库中的角色才能执行**sp_helpmergeconflictrows**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看合并发布的冲突信息&#40;复制 TRANSACT-SQL 编程&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

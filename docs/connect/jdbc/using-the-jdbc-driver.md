@@ -14,18 +14,18 @@ caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f62bc7457eaa02eedf9d15a377d70515229384ef
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661789"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785576"
 ---
 # <a name="using-the-jdbc-driver"></a>使用 JDBC 驱动程序
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-本部分提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
+本部分提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库建立简单连接的快速入门指导。 在连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之前，必须首先在本地计算机或服务器上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，并且必须在本地计算机上安装 JDBC 驱动程序。  
   
 ## <a name="choosing-the-right-jar-file"></a>选择正确的 JAR 文件
 

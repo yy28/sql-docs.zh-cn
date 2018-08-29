@@ -1,5 +1,5 @@
 ---
-title: sp_defaultlanguage (TRANSACT-SQL) |Microsoft 文档
+title: sp_defaultlanguage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a920323efff6126a2afb5c2c88dde4fe69501103
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049495"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036079"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
  有关在服务器上安装的语言的信息会显示在**sys.syslanguages**目录视图。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 ALTER ANY LOGIN 权限。  
   
 ## <a name="examples"></a>示例  

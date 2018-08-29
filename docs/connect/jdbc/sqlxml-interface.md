@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 406c1c25c346680caba70c467e20e99df9977f13
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454191"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787140"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 接口
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-JDBC 驱动程序提供对 JDBC 4.0 API 的支持，后者引入了 java.sql.SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**数据类型。  
+JDBC 驱动程序提供对 JDBC 4.0 API 的支持，后者引入了 java.sql.SQLXML 接口。 SQLXML 接口定义与 XML 数据交互以及操作 XML 数据的方法。 **SQLXML**数据类型映射到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml**数据类型。  
   
 SQLXML 接口提供了用于访问形式的 XML 值的方法**字符串**即**读取器**或**编写器**，或作为**Stream**。 XML 值还可以通过 Source 来访问，或者设置为 Result，两者与 XML 分析器 API（如文档对象模型 (DOM)、Simple API for XML (SAX) 和 Streaming API for XML (StAX)）以及 XSLT 转换和 XPath 一起使用。  
   

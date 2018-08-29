@@ -13,16 +13,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2955570ee99eaa05d9a689ccbe62973af3208d80
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fbf04bbd9b60a99a2e972db139daaf8bb4361389
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054444"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037450"
 ---
 # <a name="spdeletebackup-transact-sql"></a>sp_delete_backup (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_delete_backup
  *[ @db_name =] 数据库名称*  
  包含要删除的快照的数据库的名称。 数据库名称时提供，系统会验证是否备份 URL 提供是指定的数据库的备份 URL，并使用[sp_delete_backup_file_snapshot &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)删除每个快照。 如果未不提供任何数据库名称，则不执行此数据库检查。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 ALTER ANY DATABASE 权限或对指定的数据库的 ALTER 权限。  
   
 ## <a name="see-also"></a>请参阅  

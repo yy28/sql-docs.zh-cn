@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d75a0c4285bddc8d3c237be35a51f1904de6d60
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: eb0af342ac2ccbe916fba9edb497e8197b2fe7f5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367689"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785275"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>支持高可用性、灾难恢复
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题讨论了对高可用性、灾难恢复的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持（3.0 版中的新增功能）- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  在 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中添加了 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 支持。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 联机丛书。  
+本主题讨论了对高可用性、灾难恢复的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 支持（3.0 版中的新增功能）- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。  在 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 中添加了 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书。  
   
 在 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 3.0 版中，可在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听程序。 如果将 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "39367689"
 > 增大连接超时值和实现连接重试逻辑将增加应用程序连接到可用性组的概率。 此外，由于可用性组进行故障转移而可能使连接失败，您应实现连接重试逻辑，重试失败的连接，直至重新连接。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>使用 MultiSubnetFailover 进行连接  
-MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例上的数据库。 为连接指定 MultiSubnetFailover=true 后，客户端将在比操作系统的默认 TCP 重传间隔更短的时间内重试 TCP 连接尝试。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
+MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组或故障转移群集实例中，并且 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将尝试通过连接到所有 IP 地址来连接到主 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的数据库。 为连接指定 MultiSubnetFailover=true 后，客户端将在比操作系统的默认 TCP 重传间隔更短的时间内重试 TCP 连接尝试。 这样，就可以在对 AlwaysOn 可用性组或 AlwaysOn 故障转移群集实例执行故障转移之后更快地进行重新连接，这一点同时适用于单子网和多子网可用性组和故障转移群集实例。  
   
 在连接到 SQL Server 2012 可用性组侦听程序或 SQL Server 2012 故障转移群集实例时，应始终指定 MultiSubnetFailover=True。 MultiSubnetFailover 可加快 SQL Server 2012 中所有可用性组和故障转移群集实例的故障转移速度，并且显著缩短单子网和多子网 AlwaysOn 拓扑的故障转移时间。 在多子网故障转移过程中，客户端将尝试并行进行连接。 子网故障转移期间，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 将积极地重试 TCP 连接。  
   
@@ -48,9 +48,9 @@ MultiSubnetFailover 连接属性指示应用程序正部署在某一可用性组
   
 -   若要连接到某一可用性组，请在您的连接字符串中将该可用性组的可用性组侦听器指定为服务器。  
   
--   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例将导致连接失败。  
+-   连接到配置有超过 64 个 IP 地址的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例将导致连接失败。  
   
--   基于以下身份验证类型，使用 **MultiSubnetFailover** 连接属性的应用程序的行为不受影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
+-   基于以下身份验证类型，使用 **MultiSubnetFailover** 连接属性的应用程序的行为不受影响：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证、Kerberos 身份验证或 Windows 身份验证。  
   
 -   增加 loginTimeout 的值，以延长故障转移时间并减少应用程序连接重试次数。  
   
@@ -96,7 +96,7 @@ try {
 ```
 
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>升级以便使用来自数据库镜像的多子网群集  
-如果连接字符串中已存在 **MultiSubnetFailover** 和 **Failover_Partner** 连接关键字，将出现连接错误。 如果使用 **MultiSubnetFailover** 且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误。  
+如果连接字符串中已存在 **MultiSubnetFailover** 和 **Failover_Partner** 连接关键字，将出现连接错误。 如果使用 **MultiSubnetFailover** 且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 返回一个故障转移伙伴响应指示它是数据库镜像对的一部分，也将出现错误。  
   
 如果将当前使用数据库镜像的 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 应用程序升级到多子网方案，则应删除 Failover_Partner 连接属性并使用设置为“是”的 MultiSubnetFailover 替换它，并且还应使用可用性组侦听程序替换连接字符串中的服务器名称。 如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=true，驱动程序将生成一个错误。 但是，如果连接字符串使用 Failover_Partner 和 MultiSubnetFailover=false（或 ApplicationIntent=ReadWrite），则该应用程序将使用数据库镜像。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergesubscription (Transact SQL) |Microsoft 文档
+title: sp_validatemergesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2533df98905501a9253769200a56fb66a27a56d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d124c472a02f0a30cf73bb9597ebf934304e4a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999424"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023276"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  执行对指定订阅的验证。 在发布服务器的发布数据库上执行此存储的过程。  
+  执行对指定订阅的验证。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] *****发布*****  
+ [**@publication=**] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] *****订阅服务器*****  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ [  **@subscriber=** ] **'***订阅服务器*****  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] *****subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
  [  **@level=** ]*级别*  
@@ -69,13 +69,13 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergesubscription**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_validatemergesubscription**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [验证复制的数据](../../relational-databases/replication/validate-replicated-data.md)   
  [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: sp_MSchange_merge_agent_properties (Transact SQL) |Microsoft 文档
+title: sp_MSchange_merge_agent_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a56df34ca780de662d11d826af1b3b88e847e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 375d4799f4345fa354c6d6731ec3b98ca3db571f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000064"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019965"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,29 +52,29 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] *****publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db*****  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] *****订阅服务器*****  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ [  **@subscriber=** ] **'***订阅服务器*****  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] *****subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
- [  **@property =** ] *****属性*****  
+ [  **@property =** ] **'***属性*****  
  要更改的发布属性。 *属性*是**sysname**，无默认值。  
   
- [  **@value =** ] *****值*****  
+ [  **@value =** ] **'***值*****  
  新属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
   
  下表说明了可以更改的合并代理作业属性及对这些属性值的限制。  
   
-|属性|“值”|Description|  
+|“属性”|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**说明**||对订阅的简短说明。|  
+|**description**||对订阅的简短说明。|  
 |**merge_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理作业的 Windows 帐户的密码。|  
 |**publisher_login**||在连接到发布服务器以同步订阅时要使用的登录名。|  
@@ -92,16 +92,16 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_MSchange_merge_agent_properties**合并复制中使用。  
   
- 发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，则应使用[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)若要更改同步运行于分发服务器的推送订阅的合并代理作业的属性。  
+ 发布服务器实例上的运行时[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或更高版本，应使用[sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)更改运行于分发服务器的推送订阅进行同步的合并代理作业的属性。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**分发服务器上的固定的服务器角色可以执行**sp_MSchange_merge_agent_properties**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_addmergepushsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_addmergepushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

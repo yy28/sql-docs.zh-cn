@@ -1,5 +1,5 @@
 ---
-title: sp_add_category (Transact SQL) |Microsoft 文档
+title: sp_add_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238907"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021921"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +46,23 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =** ] *****类*****  
- 要添加的类别的类。 *类*是**varchar(8)** 默认值为作业，并且可以为这些值之一。  
+ [  **@class =** ] **'***类*****  
+ 要添加的类别的类。 *类*是**varchar(8)** 的作业，默认值可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |JOB|添加作业类别。|  
 |ALERT|添加警报类别。|  
 |OPERATOR|添加操作员类别。|  
   
  [ **@type =** ] **'***type***'**  
- 要添加的类别的类型。 *类型*是**varchar(12)**，默认值为**本地**，并且可以为这些值之一。  
+ 要添加的类别的类型。 *类型*是**varchar(12)**，默认值为**本地**，可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |LOCAL|本地作业类别。|  
 |多服务器|多服务器作业类别。|  
-|无|作业以外的类的类别 **。**|  
+|无|非 JOB 类类别 **。**|  
   
  [ **@name =** ] **'***name***'**  
  要添加的类别的名称。 该名称在指定类中必须是唯一的。 *名称*是**sysname**，无默认值。  
@@ -72,12 +71,12 @@ sp_add_category
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_add_category**必须从运行**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_category**。  
   
 ## <a name="examples"></a>示例  
@@ -94,11 +93,11 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_delete_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs & #40;Transact SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [dbo.sysjobs &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

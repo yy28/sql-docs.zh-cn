@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: af7c20d6540cb5db098bc8f08c33930355253be2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453981"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786055"
 ---
 # <a name="modifying-result-set-data-sample"></a>结果集数据修改示例
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库检索一组可更新的数据。 然后，它使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的方法在数据集中插入、修改并最终删除一行数据。
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库检索一组可更新的数据。 然后，它使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的方法在数据集中插入、修改并最终删除一行数据。
 
 此示例的代码文件名为“UpdateResultSet.java”，位于以下位置：
 

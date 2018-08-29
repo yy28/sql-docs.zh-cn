@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15ac2b868066efcf978fc92d17b381e08ce2932d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 091c7a2e7df6a073f7404af9b512a9b6404e6324
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454921"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785733"
 ---
 # <a name="securing-jdbc-driver-applications"></a>保护 JDBC Driver 应用程序
 
@@ -36,7 +36,7 @@ ms.locfileid: "39454921"
 | [保护连接字符串](../../connect/jdbc/securing-connection-strings.md) | 描述有助于保护可用来连接到数据源的信息的各种技术。                                                                                    |
 | [验证用户输入](../../connect/jdbc/validating-user-input.md)             | 描述验证用户输入的技术。                                                                                                                          |
 | [应用程序安全性](../../connect/jdbc/application-security.md)               | 描述如何使用 Java 策略权限来帮助保护 JDBC Driver 应用程序。                                                                                |
-| [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全套接字层 (SSL) 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库之间建立安全通信通道。 |
+| [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)               | 描述如何使用安全套接字层 (SSL) 与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库之间建立安全通信通道。 |
 | [FIPS 模式](../../connect/jdbc/fips-mode.md)                                     | 介绍如何使用 JDBC 驱动程序以 FIPS 兼容模式。                                                                                                              |
   
 ## <a name="see-also"></a>另请参阅  

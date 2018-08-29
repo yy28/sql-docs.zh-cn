@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9957a3273f2e33fea59560c4af30ec0315eea92
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 000d33df0320333e688051f1888659d152f62dde
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458021"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785065"
 ---
 # <a name="setting-the-data-source-properties"></a>设置数据源属性
 
@@ -29,7 +29,7 @@ ms.locfileid: "39458021"
 
 通过使用 Java EE 产品（例如应用程序服务器和 servlet/JSP 引擎），通常可配置数据库访问的数据源。 配置允许通过“属性=值”对来输入属性时，可以指定[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)主题中列出的任何属性。
 
-有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据源的详细信息，请参阅 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类。 有关如何使用 SQLServerDataSource 类来连接到的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。
+有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的详细信息，请参阅 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 类。 有关如何使用 SQLServerDataSource 类来连接到的示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，请参阅[数据源示例](../../connect/jdbc/data-source-sample.md)。
 
 ## <a name="see-also"></a>另请参阅
 

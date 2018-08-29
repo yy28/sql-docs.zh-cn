@@ -16,13 +16,14 @@ ms.assetid: 941369bd-cd4d-4a64-8e42-724d9a866eb7
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 08a334b236fb50bb3d1cc959282e6377135b8657
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5216bee5176c9345da64b019bb29637246bda68c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988259"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785278"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>客户端协议 - Shared Memory 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

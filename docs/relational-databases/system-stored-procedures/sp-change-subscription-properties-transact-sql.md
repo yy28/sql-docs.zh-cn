@@ -1,5 +1,5 @@
 ---
-title: sp_change_subscription_properties (Transact SQL) |Microsoft 文档
+title: sp_change_subscription_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c049bd3ede58a884028cf3f1415660ebf2365f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352a97795452a73837fb6111dd62c915844cd373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992464"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036679"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,16 +58,16 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@property=**] *****属性*****  
+ [  **@property=**] **'***属性*****  
  是要更改的属性。 *属性*是**sysname**。  
   
- [  **@value=**] *****值*****  
- 是属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
+ [  **@value=**] **'***值*****  
+ 是该属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
   
  [  **@publication_type =** ] *publication_type*  
- 指定发布的复制类型。 *publication_type*是**int**，并且可以为这些值之一。  
+ 指定发布的复制类型。 *publication_type*是**int**，可以是下列值之一。  
   
-|“值”|发布类型|  
+|ReplTest1|发布类型|  
 |-----------|----------------------|  
 |**0**|事务性|  
 |**1**|快照|  
@@ -77,7 +76,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  下表说明项目的属性和这些属性的值。  
   
-|属性|“值”|Description|  
+|“属性”|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||指定快照的备用文件夹的位置。 如果设置为 NULL，则将从发布服务器指定的默认位置提取快照文件。|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
@@ -87,8 +86,8 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_security_mode**|**1**|连接分发服务器时，使用 Windows 身份验证。|  
 ||**0**|连接分发服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**dts_package_name**||指定 SQL Server 2000 Data Transformation Services (DTS) 包的名称。 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**dts_package_password**||指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，它指定密码属性是保持不变。<br /><br /> 注意： DTS 包必须具有的密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
-|**dts_package_location**||DTS 包的存储位置的位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**dts_package_password**||指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。<br /><br /> 注意： DTS 包必须具有密码。<br /><br /> 仅当发布为事务发布或快照发布时才能指定该值。|  
+|**dts_package_location**||存储 DTS 包的位置。 仅当发布为事务发布或快照发布时才能指定该值。|  
 |**dynamic_snapshot_location**||指定保存快照文件的文件夹的路径。 仅当发布为合并发布时才能指定该值。|  
 |**ftp_address**||仅为保持向后兼容。|  
 |**ftp_login**||仅为保持向后兼容。|  
@@ -97,15 +96,15 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**主机名**||连接到发布服务器时使用的主机名称。|  
 |**internet_login**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理所使用的登录名。|  
 |**internet_password**||在使用基本身份验证连接到承载 Web 同步的 Web 服务器时，合并代理使用的密码。|  
-|**internet_security_mode**|**1**|使用 Windows 集成身份验证进行 Web 同步。 建议您将基本身份验证与 Web 同步结合使用。 有关详细信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。|  
-||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意： Web 同步需要 SSL 连接到 Web 服务器。|  
+|**internet_security_mode**|**1**|使用 Windows 集成身份验证进行 Web 同步。 建议您将基本身份验证与 Web 同步结合使用。 有关详细信息，请参阅 [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)。|  
+||**0**|使用基本身份验证进行 Web 同步。<br /><br /> 注意： Web 同步要求 SSL 连接到 Web 服务器。|  
 |**internet_timeout**||Web 同步请求过期之前的时间长度（秒）。|  
-|**internet_url**||表示 Web 同步复制侦听器的位置的 URL。|  
+|**执行**||表示 Web 同步的复制侦听器的位置的 URL。|  
 |**merge_job_login**||用来运行代理的 Windows 帐户的登录名。|  
 |**merge_job_password**||用来运行代理的 Windows 帐户的密码。|  
-|**publisher_login**||发布服务器登录名。 更改*publisher_login*仅支持合并发布的订阅。|  
-|**publisher_password**||发布服务器密码。 更改*publisher_password*仅支持合并发布的订阅。|  
-|**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 更改*publisher_security_mode*仅支持合并发布的订阅。|  
+|**publisher_login**||发布服务器登录名。 更改*publisher_login*仅支持对于合并发布的订阅。|  
+|**publisher_password**||发布服务器密码。 更改*publisher_password*仅支持对于合并发布的订阅。|  
+|**publisher_security_mode**|**1**|连接发布服务器时，使用 Windows 身份验证。 更改*publisher_security_mode*仅支持对于合并发布的订阅。|  
 ||**0**|连接发布服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**use_ftp**|**true**|使用 FTP 代替常规协议来检索快照。|  
 ||**false**|使用常规协议来检索快照。|  
@@ -116,22 +115,22 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_change_subscription_properties**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_change_subscription_properties**用于所有类型的复制。  
   
- **sp_change_subscription_properties**适用于请求订阅。  
+ **sp_change_subscription_properties**用于请求订阅。  
   
- 对于 Oracle 发布者的值*publisher_db* Oracle 只允许每个服务器实例的一个数据库，因此可以忽略。  
+ 对于 Oracle 发布服务器，值*publisher_db*被忽略，因为 Oracle 只允许一个数据库服务器的每个实例。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_change_subscription_properties**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看和修改请求订阅属性](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

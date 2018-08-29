@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_help_jobs (Transact SQL) |Microsoft 文档
+title: sys.sp_cdc_help_jobs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_help_jobs
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f193f632ca8095e42bb73eb76f8b283382a5069
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 100dc01e91f0864043e1dd37ba33275ea7d2e1dd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257601"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037619"
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ sys.sp_cdc_help_jobs
 |**job_id**|**uniqueidentifier**|作业 ID。|  
 |**job_type**|**nvarchar(20)**|作业类型。|  
 |**maxtrans**|**int**|在每个扫描循环中要处理的最大事务数。<br /><br /> **maxtrans**仅对捕获作业有效。|  
-|**maxscans**|**int**|最大扫描循环执行以便从日志提取所有行数。<br /><br /> **maxscans**仅对捕获作业有效。|  
+|**maxscans**|**int**|最大扫描循环要执行，以从日志提取所有行数。<br /><br /> **maxscans**仅对捕获作业有效。|  
 |**连续**|**bit**|指示捕获作业是连续运行 (1) 还是以一次性模式运行 (0) 的标志。 有关详细信息，请参阅[sys.sp_cdc_add_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)。<br /><br /> **连续**仅对捕获作业有效。|  
 |**pollinginterval**|**bigint**|日志扫描循环之间间隔的秒数。<br /><br /> **pollinginterval**仅对捕获作业有效。|  
-|**保持期**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留**仅对清理作业有效。|  
+|**保留期**|**bigint**|更改行要在更改表中保留的分钟数。<br /><br /> **保留期**仅对清除作业有效。|  
 |**threshold**|**bigint**|清除时可以使用一条语句删除的删除条目的最大数量。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**db_owner**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -74,8 +73,8 @@ EXEC sys.sp_cdc_help_jobs;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [dbo.cdc_jobs &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_add_job & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

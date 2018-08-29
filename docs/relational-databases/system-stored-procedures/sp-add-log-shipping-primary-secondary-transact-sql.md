@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_primary_secondary (Transact SQL) |Microsoft 文档
+title: sp_add_log_shipping_primary_secondary (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_secondary
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2ddbd6c115bcb620b3aaadd22d2293c681dc0c3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33240697"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022621"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,16 +59,16 @@ sp_add_log_shipping_primary_secondary
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_add_log_shipping_primary_secondary**必须从运行**master**主服务器上的数据库。  
+ **sp_add_log_shipping_primary_secondary**必须从运行**主**主服务器上的数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
- 此示例演示如何使用**sp_add_log_shipping_primary_secondary**添加辅助数据库的条目**LogShipAdventureWorks**到辅助服务器 FLATIRON。  
+ 此示例演示如何使用**sp_add_log_shipping_primary_secondary**若要为辅助数据库添加一个条目**LogShipAdventureWorks**到辅助服务器 FLATIRON。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_primary_secondary   

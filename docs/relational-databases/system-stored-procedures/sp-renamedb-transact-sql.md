@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_renamedb
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e1763b46d3d98616685878b27f60d76b398ab49
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 80f97ecdc435bd55bf176f59c8aecd1bba2439d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984184"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038850"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或非零数字（失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**sysadmin**或**dbcreator**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

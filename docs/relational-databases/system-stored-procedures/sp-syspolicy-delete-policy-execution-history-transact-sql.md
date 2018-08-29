@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_delete_policy_execution_history (Transact SQL) |Microsoft 文档
+title: sp_syspolicy_delete_policy_execution_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_delete_policy_execution_history
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d4e7f496124727389993c1e249b80aeaa7414b5f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b87056b364b5861c771496622176024a8748008c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262730"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019233"
 ---
 # <a name="spsyspolicydeletepolicyexecutionhistory-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +47,16 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
  [  **@policy_id=** ] *policy_id*  
  您要删除其执行历史记录的策略的标识符。 *policy_id*是**int**，和是必需的。 可以为 NULL。  
   
- [  **@oldest_date=** ] *****oldest_date*****  
+ [  **@oldest_date=** ] **'***oldest_date*****  
  要保留其策略执行历史记录的最早的日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*是**datetime**，和是必需的。 可以为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  您必须在 msdb 系统数据库的上下文中运行 sp_syspolicy_delete_policy_execution_history。  
   
- 若要获取的值*policy_id*，并且若要查看执行历史记录日期，你可以使用以下查询：  
+ 若要获取的值*policy_id*，若要查看执行历史记录日期，您可以使用以下查询：  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -68,19 +67,19 @@ ON a.policy_id = b.policy_id
   
  如果您为一个或两个值指定 NULL，则下面的行为适用：  
   
--   若要删除所有策略执行历史记录，则指定两个 NULL *policy_id*和*oldest_date*。  
+-   若要删除所有策略执行历史记录，请指定两个 NULL *policy_id*和有关*oldest_date*。  
   
--   若要删除的特定策略的所有策略执行历史记录，指定的策略标识符*policy_id*，并指定 NULL 作为*oldest_date*。  
+-   若要删除特定策略的所有策略执行历史记录，请指定的策略标识符*policy_id*，并指定 NULL 作为*oldest_date*。  
   
--   若要在特定日期之前删除的所有策略的策略执行历史记录，则指定 NULL 为*policy_id*，并指定的日期*oldest_date*。  
+-   若要在特定日期之前，删除所有策略的策略执行历史记录指定为 NULL *policy_id*，并指定的日期*oldest_date*。  
   
- 若要将策略执行历史记录存档，您可以在对象资源管理器中打开策略历史记录日志，然后将执行历史记录导出到某一文件中。 若要访问的策略历史记录日志，展开**管理**，右键单击**策略管理**，然后单击**查看历史记录**。  
+ 若要将策略执行历史记录存档，您可以在对象资源管理器中打开策略历史记录日志，然后将执行历史记录导出到某一文件中。 若要访问的策略历史记录日志，请展开**管理**，右键单击**策略管理**，然后单击**查看历史记录**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 PolicyAdministratorRole 固定数据库角色的成员身份。  
   
 > [!IMPORTANT]  
->  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于凭据此可能提升，应仅向与控制的配置的受信任的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+>  可能的凭据提升：具有 PolicyAdministratorRole 角色的用户可以创建服务器触发器并计划策略执行，这可能会影响[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例的正常运行。 例如，PolicyAdministratorRole 角色中的用户可以创建一个策略，它可能会禁止在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中创建大多数对象。 由于此可能的凭据提升，应仅向可信任其控制的配置的用户授予 PolicyAdministratorRole 角色[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
 ## <a name="examples"></a>示例  
  下面的示例为 ID 为 7 的策略删除特定日期前的策略执行历史记录。  
@@ -92,9 +91,9 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [基于策略的管理存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [sp_syspolicy_set_config_history_retention &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

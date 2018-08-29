@@ -14,18 +14,18 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f3198c1d8308ea2142683562a4c0d15a173504
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: b1662275280f97dcba0c02a21747738e1984b34f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661759"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786052"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>使用带有输入参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-可以调用包含一个或多个 IN 参数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程，这些参数可用于向存储过程传递数据。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类，调用此类存储过程并处理其返回的数据。
+可以调用包含一个或多个 IN 参数的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程，这些参数可用于向存储过程传递数据。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
 使用 JDBC 驱动程序调用带 IN 参数的存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 IN 参数的 `call` 转义序列的语法如下所示：
 

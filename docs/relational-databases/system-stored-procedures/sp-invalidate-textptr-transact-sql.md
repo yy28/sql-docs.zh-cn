@@ -1,5 +1,5 @@
 ---
-title: sp_invalidate_textptr (Transact SQL) |Microsoft 文档
+title: sp_invalidate_textptr (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d9f490e3ce135e0baf503dc044be702770fe44f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a3822cc5d7ec4d346c70d717c58d4f0dc391f177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251516"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019702"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使事务中指定的行内文本指针或所有行内文本指针失效。 **sp_invalidate_textptr**可仅在行内文本指针。 这些指针是从表具有**一行中的文本**选项处于启用状态。  
+  使事务中指定的行内文本指针或所有行内文本指针失效。 **sp_invalidate_textptr**可以只在使用行内文本指针。 这些指针是从表中包含的**行中的文本**选项处于启用状态。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,23 +45,23 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
 ## <a name="arguments"></a>参数  
  [  **@TextPtrValue=** ] *textptr_value*  
- 要失效的行内文本指针。 *textptr_value*是**varbinary (** 16 **)**，默认值为 NULL。 如果为 NULL， **sp_invalidate_textptr**失效在事务中的所有行内文本指针。  
+ 要失效的行内文本指针。 *textptr_value*是**varbinary (** 16 **)**，默认值为 NULL。 如果为 NULL， **sp_invalidate_textptr**使事务中的所有行内文本指针都失效。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许每个数据库中的每个事务最多拥有 1,024 个活动的有效行内文本指针；而跨多个数据库的事务可在每个数据库中拥有 1,024 个行内文本指针。 **sp_invalidate_textptr**可用来使无效行内文本指针，并因此，可用空间的其他行内文本指针。  
+## <a name="remarks"></a>Remarks  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许每个数据库中的每个事务最多拥有 1,024 个活动的有效行内文本指针；而跨多个数据库的事务可在每个数据库中拥有 1,024 个行内文本指针。 **sp_invalidate_textptr**可用于使行内文本指针无效，因此，释放空间供其他行内文本指针。  
   
  有关 text in row 选项的详细信息，请参阅[sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库引擎存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_tableoption & #40;Transact SQL & #41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [TEXTVALID (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textvalid-transact-sql.md)  
   

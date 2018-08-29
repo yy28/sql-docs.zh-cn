@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467775"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785427"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-这[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]示例应用程序演示了如何使用结果集的 getter 方法来检索[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL 数据发现和分类表中的信息保存此类信息。
+这[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]示例应用程序演示了如何使用结果集的 getter 方法来检索[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL 数据发现和分类表中的信息保存此类信息。
   
 此示例的代码文件为 DataDiscoveryAndClassification.java，并且它可以在以下位置中找到：  
 

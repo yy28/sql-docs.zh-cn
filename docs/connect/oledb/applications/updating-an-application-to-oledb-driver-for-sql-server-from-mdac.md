@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], vs. MDAC
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 173b49bb4c63c124579153585f07993c9a5ba691
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 3bd02de46fa7f8d0d140743b63811dfa3dff6688
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106773"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022506"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>将应用程序从 MDAC 更新到适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662169"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786421"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>使用带有输出参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程是返回一个或多个 OUT 参数的存储过程，存储过程使用这些参数将数据返回到调用它的应用程序。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
+可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程是返回一个或多个 OUT 参数的存储过程，存储过程使用这些参数将数据返回到调用它的应用程序。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类，调用此类存储过程并处理其返回的数据。
 
 使用 JDBC 驱动程序调用此类存储过程时，必须结合 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类的 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法使用 `call` SQL 转义序列。 带有 OUT 参数的 `call` 转义序列的语法如下所示：
 
@@ -36,12 +36,12 @@ ms.locfileid: "39662169"
 
 构造时`call`转义序列，使用指定 OUT 参数？ 来指定 IN 参数。 此字符充当要从该存储过程返回的参数值的占位符。 要为 OUT 参数指定值，必须在运行存储过程前使用 SQLServerCallableStatement 类的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法指定各参数的数据类型。
 
-使用 registerOutParameter 方法为 OUT 参数指定的值必须是 java.sql.Types 所包含的 JDBC 数据类型之一，而它又被映射成本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型之一。 有关 JDBC 详细信息和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据类型，请参阅[了解 JDBC 驱动程序的数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
+使用 registerOutParameter 方法为 OUT 参数指定的值必须是 java.sql.Types 所包含的 JDBC 数据类型之一，而它又被映射成本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一。 有关 JDBC 详细信息和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，请参阅[了解 JDBC 驱动程序的数据类型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。
 
 对于 OUT 参数向 registerOutParameter 方法传递一个值时，不仅必须指定要用于此参数的数据类型，而且必须在存储过程中指定此参数的序号位置或此参数的名称。 例如，如果存储过程包含单个 OUT 参数，则其序数值为 1；如果存储过程包含两个参数，则第一个序数值为 1，第二个序数值为 2。
 
 > [!NOTE]  
-> JDBC 驱动程序不支持将 CURSOR、SQLVARIANT、TABLE 和 TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型用作 OUT 参数。
+> JDBC 驱动程序不支持将 CURSOR、SQLVARIANT、TABLE 和 TIMESTAMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型用作 OUT 参数。
 
 作为示例，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建以下存储过程：
 

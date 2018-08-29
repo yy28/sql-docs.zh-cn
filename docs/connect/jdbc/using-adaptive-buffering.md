@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661769"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784685"
 ---
 # <a name="using-adaptive-buffering"></a>使用自适应缓冲
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-自适应缓冲的作用是在无需服务器游标开销的情况下检索任何类型的大值数据。 应用程序可以在受驱动程序支持的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 版本中使用自适应缓冲功能。
+自适应缓冲的作用是在无需服务器游标开销的情况下检索任何类型的大值数据。 应用程序可以在受驱动程序支持的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用自适应缓冲功能。
 
-通常，当 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行查询时，驱动程序会将服务器中的所有结果检索到应用程序内存中。 尽管这种方法可以最大程度地减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 上的资源占用，但它可能会在 JDBC 应用程序中针对生成非常大的结果的查询引发 OutOfMemoryError。
+通常，当 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 执行查询时，驱动程序会将服务器中的所有结果检索到应用程序内存中。 尽管这种方法可以最大程度地减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的资源占用，但它可能会在 JDBC 应用程序中针对生成非常大的结果的查询引发 OutOfMemoryError。
 
-为了使应用程序可以处理非常大的结果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了自适应缓冲。 借助于自适应缓冲，驱动程序可以在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。 以下是可以使用自适应缓冲的一些示例：
+为了使应用程序可以处理非常大的结果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供了自适应缓冲。 借助于自适应缓冲，驱动程序可以在应用程序需要时从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索语句执行结果，而不是一次性检索全部结果。 一旦应用程序不再访问结果，驱动程序还会立即丢弃它们。 以下是可以使用自适应缓冲的一些示例：
 
 - 查询生成非常大的结果集：应用程序可能执行一个 SELECT 语句，此语句生成的行数超过了应用程序可在内存中存储的行数。 在先前的版本中，应用程序必须使用服务器游标才能避免 OutOfMemoryError。 借助于自适应缓冲，可以对任意大的结果集执行只进只读传递，而不需要服务器游标。
 
-- 查询生成非常大的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 列或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) OUT 参数值：应用程序可能检索单个值（列或 OUT 参数），而该值太大，无法全部放入应用程序内存中。 自适应缓冲允许客户端应用程序使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索此类值作为流。 当应用程序从流中读取数据时，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中检索值。
+- 查询生成非常大的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 列或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) OUT 参数值：应用程序可能检索单个值（列或 OUT 参数），而该值太大，无法全部放入应用程序内存中。 自适应缓冲允许客户端应用程序使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法检索此类值作为流。 当应用程序从流中读取数据时，将从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中检索值。
 
 > [!NOTE]  
 > 使用自适应缓冲时，JDBC Driver 只会缓冲它必须缓冲的那些数据。 该驱动程序未提供任何公共方法来控制或限制缓冲区的大小。
@@ -56,7 +56,7 @@ ms.locfileid: "39661769"
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>使用自适应缓冲检索大型数据
 
-当使用 get\<Type>Stream 方法一次性读取较大值，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 按返回的顺序访问 ResultSet 列和 CallableStatement OUT 参数时，自适应缓冲在处理结果时可以最大程度地减少使用的应用程序内存。 使用自适应缓冲时：
+当使用 get\<Type>Stream 方法一次性读取较大值，并且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 按返回的顺序访问 ResultSet 列和 CallableStatement OUT 参数时，自适应缓冲在处理结果时可以最大程度地减少使用的应用程序内存。 使用自适应缓冲时：
 
 - 在 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 类中定义的 get\<Type>Stream 方法默认情况下返回只读取一次的流，尽管可以重置流（如果应用程序已进行标记）。 如果应用程序要对流执行 `reset`，它必须先对该流调用 `mark` 方法。
 
@@ -83,7 +83,7 @@ ms.locfileid: "39661769"
 
 - 某些情况下使用**selectMethod = cursor**而不是**responseBuffering = adaptive**可能更有利，例如：
 
-  - 如果应用程序处理只进、 只读结果集速度慢，例如，使用某些用户输入后, 再读取每一行**selectMethod = cursor**而不是**responseBuffering = adaptive**可能帮助减少使用的资源[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。
+  - 如果应用程序处理只进、 只读结果集速度慢，例如，使用某些用户输入后, 再读取每一行**selectMethod = cursor**而不是**responseBuffering = adaptive**可能帮助减少使用的资源[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
   - 如果应用程序在同一连接上同时处理两个或更多的只进只读结果集，则处理这些结果集时，使用 selectMethod=cursor（而不是 responseBuffering=adaptive）可能有助于减少驱动程序需要的内存。
 

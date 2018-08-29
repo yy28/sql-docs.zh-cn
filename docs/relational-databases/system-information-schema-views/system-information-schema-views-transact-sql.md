@@ -1,5 +1,5 @@
 ---
-title: 系统信息架构视图 (Transact SQL) |Microsoft 文档
+title: 系统信息架构视图 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 - views [SQL Server], information schema
 - system views [SQL Server], information schema
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2a3c0ef6d8a3c4c774b441e807c4ca513b214f26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 155073a76c84f7f90af44386f63a2b90a2144bb8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240187"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022592"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>系统信息架构视图 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "33240187"
   
 |SQL Server 名称|对应的 SQL 标准等价名称|  
 |---------------------|-----------------------------------------------|  
-|数据库|目录|  
+|“数据库”|目录|  
 |架构|架构|  
-|对象|对象|  
+|Object|Object|  
 |用户定义数据类型|域|  
   
  上述名称映射约定适用于以下与 ISO 兼容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视图。  
@@ -72,7 +71,7 @@ WHERE TABLE_NAME = N'Product';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

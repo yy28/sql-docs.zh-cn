@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft 文档
+title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258609"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023737"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>参数  
  *objecttoken*  
- OLE 对象通过以前创建的对象标记**sp_OACreate**。  
+ 以前创建的 OLE 对象的对象令牌**sp_OACreate**。  
   
  propertyname  
  要设置新值的 OLE 对象的属性名。  
@@ -53,8 +53,8 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *newvalue*  
  属性的新值，并且必须是适当数据类型的值。  
   
- *索引*  
- 索引参数。 如果指定，*索引*必须是适当的数据类型的值。  
+ *index*  
+ 索引参数。 如果指定，*索引*必须是相应的数据类型的值。  
   
  有些属性包含参数。 这些属性称为索引化属性，相应的参数被称为索引参数。 一个属性可有多个索引参数。  
   
@@ -66,11 +66,11 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
  有关 HRESULT 返回代码的详细信息，请参阅[OLE 自动化返回代码和错误信息](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
- 下面的示例设置`HostName`属性 (以前创建的**SQLServer**对象) 为新值。  
+ 下面的示例设置`HostName`属性 (先前创建的**SQLServer**对象) 为新值。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -81,7 +81,7 @@ BEGIN
 END'  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [OLE 自动化存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 自动化脚本示例](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

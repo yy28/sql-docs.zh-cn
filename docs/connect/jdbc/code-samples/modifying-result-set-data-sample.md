@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0be9716b5b1f48d4d38a374069ba66b5f5d8b37c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454341"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783997"
 ---
 # <a name="modifying-result-set-data-sample"></a>结果集数据修改示例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库检索一组可更新的数据。 然后，它使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的方法在数据集中插入、修改并最终删除一行数据。
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序展示了如何从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库检索一组可更新的数据。 然后，它使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的方法在数据集中插入、修改并最终删除一行数据。
 
 此示例的代码文件名为“UpdateResultSet.java”，位于以下位置：
 

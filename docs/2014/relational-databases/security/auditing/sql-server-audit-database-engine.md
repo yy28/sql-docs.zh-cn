@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d684a808a2bb6c8c9aa23c6dce969acb933c44db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8debb182069b7294f1fb8027c072a3fb720b62c8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238777"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022065"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server 审核（数据库引擎）
   “审核”[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 实例或单独的数据库涉及到 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中发生的跟踪和记录事件。 通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核，您可以创建服务器审核，其中可以包含针对服务器级别事件的服务器审核规范和针对数据库级别事件的数据库审核规范。 经过审核的事件可以写入事件日志或审核文件。  
@@ -167,7 +166,7 @@ ms.locfileid: "37238777"
 |[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|包含服务器实例上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的服务器审核规范详细信息（操作）的相关信息。|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|包含有关服务器实例上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 审核中的文件审核类型的存储扩展信息。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一个功能和命令都有其独特的权限需求。  
   
  若要创建、更改或删除服务器审核或服务器审核规范，服务器主体要求具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。 若要创建、更改或删除数据库审核规范，数据库主体必须具有 ALTER ANY DATABASE AUDIT 权限或针对该数据库的 ALTER 或 CONTROL 权限。 此外，主题还必须具有连接到数据库的权限或者具有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  

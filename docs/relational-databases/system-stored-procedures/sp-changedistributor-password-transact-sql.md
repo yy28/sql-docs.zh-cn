@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_password (Transact SQL) |Microsoft 文档
+title: sp_changedistributor_password (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 75b32e5782001a4babdad370bd02e559dbc72022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbdfc415fcc6e141dfc6adb035b6fa1bfd496d0a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987714"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037000"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,25 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@password=**] *****密码*****  
- 是的新密码。 *密码*是**sysname**，无默认值。 如果分发服务器是本地计算机，密码**distributor_admin**更改系统登录名。  
+ [  **@password=**] **'***密码*****  
+ 是的新密码。 *密码*是**sysname**，无默认值。 如果分发服务器是本地的密码**distributor_admin**更改系统登录名。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- **sp_changedistributor_password**在所有类型的复制中使用。  
+## <a name="remarks"></a>Remarks  
+ **sp_changedistributor_password**用于所有类型的复制。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_changedistributor_password**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [查看和修改复制安全设置](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [保护分发服务器](../../relational-databases/replication/security/secure-the-distributor.md)   
- [sp_adddistributor &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [复制存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergealternatepublisher (Transact SQL) |Microsoft 文档
+title: sp_helpmergealternatepublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergealternatepublisher
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f51c69c6034963dff80377570120dcd65027b762
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8cba4d17060e32ef24b8e5b07e689992982ca94
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995324"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035250"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
  是发布数据库的名称。*publisher_db*是**sysname**，无默认值。  
   
  [ **@publication=**] **'***publication***'**  
- 为发布的名称。*发布*是**sysname**，无默认值。  
+ 是发布的名称。*出版物*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  
   
@@ -62,21 +62,21 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|发布数据库的名称。|  
 |**alternate_publication**|**sysname**|发布的名称。|  
 |**alternate_distributor**|**sysname**|分发服务器的名称。|  
-|**单元**|**nvarchar(255)**|对备用发布服务器的说明。|  
-|**enabled**|**bit**|指定服务器是否为备用发布服务器。 **1**指定为备用发布服务器是否启用了发布服务器。 **0**指定未启用。|  
+|**friendly_name**|**nvarchar(255)**|对备用发布服务器的说明。|  
+|**enabled**|**bit**|指定服务器是否为备用发布服务器。 **1**指定为备用发布服务器启用发布服务器。 **0**指定不启用。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergealternatepublisher**合并复制中使用。  
   
  在每个合并会话过程中，系统向发布服务器和订阅服务器查询它们各自的备用发布服务器列表。 合并进程将添加或删除备用发布服务器列表项，从而使订阅服务器和发布服务器中的备用发布服务器列表相匹配。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有发布的发布访问列表的成员可以执行**sp_helpmergealternatepublisher**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

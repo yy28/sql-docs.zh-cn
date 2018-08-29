@@ -14,25 +14,25 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: f5878e83f9b23f273da46f356b05f8ce6563712e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662379"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787333"
 ---
 # <a name="working-with-a-connection"></a>使用连接
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-以下各部分提供了使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库的不同方法的示例。
+以下各部分提供了使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 类来连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的不同方法的示例。
 
 > [!NOTE]  
-> 如果在使用 JDBC 驱动程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 时遇到问题，请参阅[连接疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)获取有关解决方法的建议。
+> 如果在使用 JDBC 驱动程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时遇到问题，请参阅[连接疑难解答](../../connect/jdbc/troubleshooting-connectivity.md)获取有关解决方法的建议。
 
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>使用 DriverManager 类创建连接
 
-创建到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库的连接的最简便方法是加载 JDBC 驱动程序，然后调用 DriverManager 类的 getConnection 方法，如下所示：
+创建到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接的最简便方法是加载 JDBC 驱动程序，然后调用 DriverManager 类的 getConnection 方法，如下所示：
 
 ```java
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  

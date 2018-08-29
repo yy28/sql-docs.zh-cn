@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 (java.lang.String) |Microsoft 文档
+title: getTimestamp 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5aa22363251036aeb10f738a369be61a40f6f34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29fa80a283ed556166ca240a4cf7ebb983456b7c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839604"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785429"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +49,10 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定此 getTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTimestamp 方法由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime 和 smalldatetime 列返回值。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

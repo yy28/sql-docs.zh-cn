@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96a2d930ae6c85e4da6d516d6c30d6c54a7fd3ac
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 764241bcd61b407b46e87c796c8a02997d9ff9ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066697"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023854"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addtype [ @typename = ] type,
 |**float**|**image**|**int**|  
 |**money**|**nchar(n)**|**ntext**|  
 |**numeric**|**nvarchar(n)**|**real**|  
-|**smalldatetime**|**int**|**smallmoney**|  
+|**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
@@ -74,7 +73,7 @@ sp_addtype [ @typename = ] type,
  *P*  
  非负整数，指示可保留的最大十进制位数，包括小数点前面和后面的数字。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
- *s*  
+ *S*  
  非负整数，指示小数点后面的小数数字可保留的最大十进制位数，它必须小于或等于精度值。 有关详细信息，请参阅 [decimal 和 numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)。  
   
  [  **@nulltype =** ] **'***null_type*****  
@@ -87,7 +86,7 @@ sp_addtype [ @typename = ] type,
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  别名数据类型名称在数据库中必须是唯一的，但是名称不同的别名数据类型可以有相同的定义。  
@@ -101,7 +100,7 @@ sp_addtype [ @typename = ] type,
   
  不能使用定义别名数据类型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**时间戳**，**表**， **xml**， **varchar （max)**， **nvarchar （max)** 或**varbinary （max)** 数据类型。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**db_owner**或**db_ddladmin**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  

@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergealternatepublisher (Transact SQL) |Microsoft 文档
+title: sp_dropmergealternatepublisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergealternatepublisher
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46c3e124cee4c4d8ff9190c063433ca97f19aa72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c259f83b37577425764d2d0ea2325c5cc275dec2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991794"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036850"
 ---
 # <a name="spdropmergealternatepublisher-transact-sql"></a>sp_dropmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +51,28 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
  [ **@publisher_db=**] **'***publisher_db***'**  
  当前发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication =**] *****发布*****  
+ [  **@publication =**] **'***发布*****  
  当前发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@alternate_publisher=**] *****alternate_publisher*****  
+ [  **@alternate_publisher=**] **'***alternate_publisher*****  
  要作为备用同步伙伴删除的备用发布服务器的名称。 *alternate_publisher*是**sysname**，无默认值。  
   
- [  **@alternate_publisher_db=**] *****alternate_publisher_db*****  
+ [  **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
  要作为备用同步伙伴发布数据库删除的发布数据库的名称。 *alternate_publisher_db*是**sysname**，无默认值。  
   
- [  **@alternate_publication=**] *****alternate_publication*****  
+ [  **@alternate_publication=**] **'***alternate_publication*****  
  将作为备用同步伙伴发布删除的发布的名称。 *alternate_publication*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_dropmergealternatepublisher**合并复制中使用。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_dropmergelternatepublisher**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_addmergealternatepublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergealternatepublisher-transact-sql.md)  
   
   

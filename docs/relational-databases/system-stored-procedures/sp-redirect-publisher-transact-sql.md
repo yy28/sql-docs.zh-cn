@@ -1,5 +1,5 @@
 ---
-title: sp_redirect_publisher (Transact SQL) |Microsoft 文档
+title: sp_redirect_publisher (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999904"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022227"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,33 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] *****original_publisher*****  
+ [ **@original_publisher** =] **'***original_publisher*****  
  最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
  要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@redirected_publisher** =] *****redirected_publisher*****  
+ [ **@redirected_publisher** =] **'***redirected_publisher*****  
  与将成为新发布服务器的可用性组相关联的可用性组侦听器名称。 *redirected_publisher*是**sysname**，无默认值。 将可用性组侦听器配置到非默认端口时，请随侦听器名称一并指定端口号，如 `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- **sp_redirect_publisher**用于允许复制发布服务器重定向到当前主副本的 Always On 可用性组通过将与可用性组的侦听器关联的发布服务器/数据库对。 执行**sp_redirect_publisher**已为包含已发布的数据库的可用性组配置了可用性组侦听器后。  
+## <a name="remarks"></a>Remarks  
+ **sp_redirect_publisher**用于允许复制发布服务器重定向到当前主副本的 Always On 可用性组通过将发布服务器/数据库对与某一可用性组的侦听器相关联。 执行**sp_redirect_publisher** AG 侦听器配置包含已发布的数据库的可用性组后。  
   
- 如果从可用性组主副本上删除原始发布服务器上的发布数据库，则执行**sp_redirect_publisher**而无需指定的值*@redirected_publisher*若要删除的发布服务器/数据库对的重定向的参数。 有关重定向发布服务器的详细信息时，请参阅[维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
+ 如果在原始发布服务器的发布数据库已从可用性组主副本上，执行**sp_redirect_publisher**无需指定值*@redirected_publisher*若要删除发布服务器/数据库对的重定向的参数。 有关重定向发布服务器的详细信息，请参阅[维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  
   
-## <a name="permissions"></a>权限  
- 调用方必须要么是的成员**sysadmin**固定服务器角色、 **db_owner**固定的数据库角色的分发数据库中或定义发布一个发布访问列表的成员与发布服务器数据库。  
+## <a name="permissions"></a>Permissions  
+ 调用方必须是的成员**sysadmin**固定服务器角色**db_owner**分发数据库或已定义发布的发布访问列表的成员的固定的数据库角色与发布服务器数据库相关联。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_get_redirected_publisher &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

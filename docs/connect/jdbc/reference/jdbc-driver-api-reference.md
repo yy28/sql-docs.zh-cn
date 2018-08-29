@@ -14,18 +14,18 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1a6949c49dc019e1dc7b9d875fb3ee7f38363a46
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174904"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785267"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 驱动程序 API 参考
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供可在 Java 编程代码内使用的 API，并与 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库交互。
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供可在 Java 编程代码内使用的 API，并与 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库交互。
 
 
 
@@ -78,8 +78,8 @@ JDBC 版本 6.0 和某些更高版本中，文档也是此处。 但对于任何
 |接口名称|描述|  
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement 接口](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|允许你指定要与输入和输出参数一起使用的要调用的存储过程名称。|  
-|[ISQLServerConnection 接口](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|表示连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的 JDBC 连接。|  
-|[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|表示特定于使用 [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的属性列表。|  
+|[ISQLServerConnection 接口](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|表示连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的 JDBC 连接。|  
+|[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|表示特定于使用 [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的属性列表。|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|表示 JDBC 预定义语句功能的基本实现。|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|表示 JDBC 结果集。|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|表示 JDBC 语句功能的基本实现。|
@@ -98,9 +98,9 @@ JDBC 版本 6.0 和某些更高版本中，文档也是此处。 但对于任何
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|实现 ISQLServerConnection。|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|表示用于连接池管理器的物理数据库连接。|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|表示数据库的元数据。|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|表示特定于使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的属性的列表。|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|表示特定于使用 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的属性的列表。|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|表示将来自 Java 命名和目录接口 (JNDI) 的数据源具体化的对象工厂。|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|表示 JDBC 驱动程序。 此类包括连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库的方法以及取得 JDBC 驱动程序相关信息的方法。|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|表示 JDBC 驱动程序。 此类包括连接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库的方法以及取得 JDBC 驱动程序相关信息的方法。|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|表示 SQL 语句运行不成功或不完整。|  
 |[SQLServerNClob 类](../../../connect/jdbc/reference/sqlservernclob-class.md)|使用区域字符集表示字符型二进制大型对象。|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|表示用于预定义语句参数的元数据。|  

@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661629"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785423"
 ---
 # <a name="using-auto-generated-keys"></a>使用自动生成的键
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661629"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持可选的 JDBC 3.0 API 以检索自动生成的行标识符。 这项功能的主要意义在于，为更新数据库表的应用程序提供获得 IDENTITY 值的方法，从而无需执行查询以及对服务器进行再次往返通信。
 
-由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 不支持标识符的伪列，因此必须使用自动生成键功能的更新，必须对包含 IDENTITY 列的表进行操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 仅允许每个表包含一个 IDENTITY 列。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 方法返回的结果集仅包含一列，并且返回的列名为 GENERATED_KEYS。 如果对不包含 IDENTITY 列的表请求生成的键，则 JDBC 驱动程序将返回空结果集。
+由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持标识符的伪列，因此必须使用自动生成键功能的更新，必须对包含 IDENTITY 列的表进行操作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仅允许每个表包含一个 IDENTITY 列。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) 方法返回的结果集仅包含一列，并且返回的列名为 GENERATED_KEYS。 如果对不包含 IDENTITY 列的表请求生成的键，则 JDBC 驱动程序将返回空结果集。
 
 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库中创建下表：
 

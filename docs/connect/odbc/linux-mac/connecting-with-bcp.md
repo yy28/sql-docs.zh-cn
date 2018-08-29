@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041398"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786084"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
+[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
   
 - 字段终止符是制表符 ("\t")。  
   
@@ -82,7 +82,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定在操作过程中空列应该保留 null 值，而不是所插入列的任何默认值。  
   
 - -l  
-指定登录超时。 –l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
+指定登录超时。 –l 选项指定在尝试连接到服务器时登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的超时时间（以秒为单位）。 默认登录超时值为 15 秒。 登录超时必须是介于 0 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内，则 `bcp` 将生成错误消息。 值为 0 指定无限超时。
   
 - -L *last_row*  
 指定要从表中导出或从数据文件中导入的最后一行的编号。  
@@ -97,25 +97,25 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定登录 ID 的密码。  
   
 - -S  
-在 `bcp` 实用工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 实例之间的连接中，执行 SET QUOTED_IDENTIFIERS ON 语句。  
+在 `bcp` 实用工具和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例之间的连接中，执行 SET QUOTED_IDENTIFIERS ON 语句。  
   
 - -r *row_terminator*  
 指定行终止符。  
   
 - -r  
-指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中。  
+指定使用客户端计算机区域设置中定义的区域格式，将货币、日期和时间数据大容量复制到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 - -S *server*  
-指定的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]实例进行连接，或如果-D 是使用，DSN。  
+指定的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例进行连接，或如果-D 是使用，DSN。  
   
 - -t *field_terminator*  
 指定字段终止符。  
   
 - -T  
-指定 `bcp` 实用工具通过信任连接（集成安全性）连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+指定 `bcp` 实用工具通过信任连接（集成安全性）连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 - -U *login_id*  
-指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的登录 ID。  
+指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登录 ID。  
   
 - -V  
 报告 `bcp` 实用工具的版本号和版权。  
@@ -144,7 +144,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
 - -V (80 | 90 | 100)  
-使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的数据类型。  
+使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据类型。  
   
 - -X  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  

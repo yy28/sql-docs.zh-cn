@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278818"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787170"
 ---
 # <a name="building-the-connection-url"></a>创建连接 URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278818"
 > [!NOTE]  
 >  尽管前面的示例在连接字符串中使用了用户名和密码，但您应使用集成安全性，因为这样做更安全。 有关详细信息，请参阅本主题后面部分的[通过集成身份验证进行连接](#Connectingintegrated)一节。  
   
- 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库：  
+ 以下连接字符串演示了如何使用集成身份验证和 Kerberos，从一个在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持的任何操作系统上运行的应用程序连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库：  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>指定的多个 SQL Server 实例  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许在每台服务器上安装多个数据库实例。 每个实例都由一个专用名称所标识。 若要连接到指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，可以使用指定实例的端口号（首选），也可将实例名指定为 JDBC URL 属性或 datasource 属性。 如果未指定实例名属性或端口号属性，则会创建与默认实例的连接。 请参阅以下示例：  
   
  若要使用端口号，请执行下列操作：  
   

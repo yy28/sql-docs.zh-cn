@@ -1,5 +1,5 @@
 ---
-title: sys.extended_procedures (Transact SQL) |Microsoft 文档
+title: sys.extended_procedures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,31 +21,31 @@ helpviewer_keywords:
 - sys.extended_procedures catalog view
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be24a61208f854976b45a7ba927e83a4c87fecb5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a753cdd737512d8a450e1a7156c477e19b5e45fd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177993"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021264"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  个扩展存储的过程，并且每个对象中占一行**sys.objects.type** = X。由于扩展存储的过程安装到**master**数据库，它们才可以看到从该数据库上下文。 从选择**sys.extended_procedures**在任何其他数据库上下文中的视图将返回空结果集。  
+  与扩展存储的过程，每个对象存在对应的一行**sys.objects.type** = X。因为扩展存储的过程安装**主**数据库，它们只会出现该数据库上下文中。 从选择**sys.extended_procedures**在任何其他数据库上下文中的视图将返回空结果集。  
 
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**\<列继承自 sys.objects >**||该视图继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**\<从 sys.objects 继承的列 >**||此视图所继承的列的列表，请参阅[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**dll_name**|nvarchar(260)|此扩展存储过程的 DLL 的名称，包括路径。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_cursorclose (Transact SQL) |Microsoft 文档
+title: sp_cursorclose (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237123"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022003"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  关闭和取消分配游标，以及释放所有关联的资源;也就是说，它会删除临时表使用的支持的密钥集或静态**光标**。 通过指定 ID 调用 sp_cursorclose = 9 表格格式数据流 (TDS) 数据包中的。  
+  关闭和取消游标分配，以及释放所有关联的资源;即，它删除用于支持 KEYSET 或 STATIC 的临时表**游标**。 通过指定 ID 来调用 sp_cursorclose = 9 在表格格式数据流 (TDS) 包中的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,20 +45,20 @@ sp_cursorclose cursor
   
 ## <a name="arguments"></a>参数  
  *cursor*  
- 是光标*处理*生成值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 sp_cursoropen 过程返回的。 *光标*是必需的参数来调用**int**输入值。  
+ 是游标*处理*生成的值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并由 sp_cursoropen 过程返回。 *游标*是一个必需的参数，为调用**int**输入值。  
   
 > [!NOTE]  
 >  输入值 -1 将应用于当前连接上的所有游标。  
   
-## <a name="remarks"></a>注释  
- *光标*将返回错误消息，如果游标已关闭后运行该过程，或指定无效句柄。  
+## <a name="remarks"></a>Remarks  
+ *游标*将返回错误消息，如果关闭游标之后运行了该过程或指定无效的句柄。  
   
  RPC 状态指示总体成功或失败。  
   
  DONE 行计数始终为 0。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_cursoropen &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -21,16 +21,15 @@ helpviewer_keywords:
 - Create login [SQL Server]
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc696a697c251bb8b800f22d948f1141a92ecae6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020509"
 ---
 # <a name="create-a-login"></a>创建一个登录名
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建登录名。 登录名是连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例的个人或进程的标识。  
@@ -61,7 +60,7 @@ ms.locfileid: "37274663"
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要拥有服务器上的 `ALTER ANY LOGIN` 或 `ALTER LOGIN` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  

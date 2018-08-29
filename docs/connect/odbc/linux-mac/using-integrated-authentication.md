@@ -16,19 +16,19 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6e45f2253abd85387ce43b4888e934e6f2dbfde
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c37c170360e966e730b120601efd6867f2bb2659
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984399"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785591"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 支持使用 Kerberos 集成身份验证的连接。 它支持 MIT Kerberos 密钥发行中心 (KDC)，并且可以与通用安全服务应用程序编程接口 (GSSAPI) 和 Kerberos v5 库一起使用。
+macOS 和 Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持使用 Kerberos 集成身份验证的连接。 它支持 MIT Kerberos 密钥发行中心 (KDC)，并且可以与通用安全服务应用程序编程接口 (GSSAPI) 和 Kerberos v5 库一起使用。
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]  
+## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>使用集成身份验证从 ODBC 应用程序连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 可以启用 Kerberos 集成身份验证，方法是在 SQLDriverConnect 或 SQLConnect 的连接字符串中指定 Trusted_Connection=yes。 例如：  
 
@@ -40,13 +40,13 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 `-E`的选项`sqlcmd`并`-T`的选项`bcp`还可用于指定集成身份验证; 请参阅[使用连接**sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用连接**bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)有关详细信息。
 
-确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
+确保要连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的客户端主体已使用 Kerberos KDC 进行身份验证。
   
 **ServerSPN** 和 **FailoverPartnerSPN** 不受支持。  
   
 ## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>运行部署的 Linux 或 macOS ODBC 驱动程序应用程序设计，为服务
 
-系统管理员可以将应用程序部署为作为服务运行，以便使用 Kerberos 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+系统管理员可以将应用程序部署为作为服务运行，以便使用 Kerberos 身份验证连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 首先需要在客户端上配置 Kerberos，然后确保应用程序可以使用默认主体的 Kerberos 凭据。
 
@@ -64,11 +64,11 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 ## <a name="tracking-access-to-a-database"></a>跟踪对数据库的访问
 
-当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 时，数据库管理员可以创建数据库访问的审核线索。  
+当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，数据库管理员可以创建数据库访问的审核线索。  
   
-登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
+登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
   
-若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql_md.md)] EXECUTE AS。  
+若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS。  
   
 若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
 
@@ -76,7 +76,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理用户身份
 
-应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx)有关详细信息。
+应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用链接服务器和分布式查询
 
@@ -84,21 +84,21 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 -   用户登录到客户端计算机，并对应用程序服务器进行身份验证。  
   
--   应用程序服务器先以其他数据库身份进行验证，然后再连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+-   应用程序服务器先以其他数据库身份进行验证，然后再连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 先以数据库用户身份进行验证，然后再连接到另一个数据库 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)])。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 先以数据库用户身份进行验证，然后再连接到另一个数据库 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])。  
   
 配置集成身份验证后，凭据将传递给链接服务器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>集成身份验证和 sqlcmd
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行的帐户`sqlcmd`与默认 Kerberos 客户端主体相关联。
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `sqlcmd` 的 `-E` 选项。 确保运行的帐户`sqlcmd`与默认 Kerberos 客户端主体相关联。
 
 ## <a name="integrated-authentication-and-bcp"></a>集成身份验证和 bcp
-若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行的帐户`bcp`与默认 Kerberos 客户端主体相关联。 
+若要使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，请使用 `bcp` 的 `-T` 选项。 确保运行的帐户`bcp`与默认 Kerberos 客户端主体相关联。 
   
 它是使用错误`-T`与`-U`或`-P`选项。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 注册的 SPN 的受支持语法
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 注册的 SPN 的受支持语法
 
 以下是 SPN 在连接字符串或连接属性中使用的语法：  
 
@@ -123,7 +123,7 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-如果在 Linux 或 macOS 计算机配置为使用 Windows DHCP 服务器提供的 DNS 服务器使用动态主机配置协议 (DHCP) 来使用，则可以使用**dns_lookup_kdc = true**。 现在，可以使用 Kerberos 通过发出命令登录到你的域`kinit alias@YYYY.CORP.CONTOSO.COM`。 参数传递给`kinit`区分大小写并[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]配置为在域中的计算机必须具有该用户`alias@YYYY.CORP.CONTOSO.COM`添加为登录名。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）。  
+如果在 Linux 或 macOS 计算机配置为使用 Windows DHCP 服务器提供的 DNS 服务器使用动态主机配置协议 (DHCP) 来使用，则可以使用**dns_lookup_kdc = true**。 现在，可以使用 Kerberos 通过发出命令登录到你的域`kinit alias@YYYY.CORP.CONTOSO.COM`。 参数传递给`kinit`区分大小写并[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]配置为在域中的计算机必须具有该用户`alias@YYYY.CORP.CONTOSO.COM`添加为登录名。 现在，可以使用信任连接（连接字符串中的 Trusted_Connection=YES、bcp -T 或 sqlcmd -E）。  
   
 必须关闭 Linux 或 macOS 计算机上的时间和 Kerberos 密钥分发中心 (KDC) 的时间。 确保系统时间已正确设置，例如通过使用网络时间协议 (NTP)。  
 

@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662399"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787808"
 ---
 # <a name="using-multiple-result-sets"></a>使用多个结果集
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-使用返回多个结果集的内联 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程时，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法，以检索返回的每个数据集。 此外，当运行返回多个结果集的语句时，可以使用 SQLServerStatement 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因为它将返回一个布尔值，该值指示返回的值是结果集还是更新计数。
+使用返回多个结果集的内联 SQL 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程时，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类的 [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) 方法，以检索返回的每个数据集。 此外，当运行返回多个结果集的语句时，可以使用 SQLServerStatement 类的 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法，因为它将返回一个布尔值，该值指示返回的值是结果集还是更新计数。
 
 如果 execute 方法返回 true，则运行的语句已返回了一个或多个结果集。 通过调用 getResultSet 方法可以访问第一个结果集。 若要确定是否提供了多个结果集，可以调用 [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) 方法，如果提供了多个结果集，则该方法返回布尔值 true。 如果有多个结果集可用，则可以再次调用 getResultSet 方法进行访问，继续使用这个过程直到所有的结果集都得到处理。 如果 getMoreResults 方法返回**false**，有没有更多结果集要处理。
 

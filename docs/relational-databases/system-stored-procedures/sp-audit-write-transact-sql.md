@@ -1,5 +1,5 @@
 ---
-title: sp_audit_write (TRANSACT-SQL) |Microsoft 文档
+title: sp_audit_write (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239297"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037889"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  将添加到一个用户定义的审核事件**USER_DEFINED_AUDIT_GROUP**。 如果**USER_DEFINED_AUDIT_GROUP**未启用， **sp_audit_write**将被忽略。  
+  添加到用户定义的审核事件**USER_DEFINED_AUDIT_GROUP**。 如果**USER_DEFINED_AUDIT_GROUP**未启用，则**sp_audit_write**将被忽略。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,23 +47,23 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
 ## <a name="arguments"></a>参数  
  **@user_defined_event_id**  
- 用户定义的参数，并记录在**user_defined_event_id**审核日志的列。 *@user_defined_event_id* 是类型**smallint**。  
+ 参数由用户定义并且记录在**user_defined_event_id**审核日志的列。 *@user_defined_event_id* 是类型**smallint**。  
   
  **@succeeded**  
  用户为指示事件是否成功而传递的参数。 它将出现在审核日志的成功列中。 *@succeeded* 是**位**。  
   
  **@user_defined_information**  
- 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 *@user_defined_information* 是**nvarchar （4000)**。  
+ 由用户定义的文本，并且该文本将记录在审核日志的新的 user_defined_event_id 列中。 *@user_defined_information* 是**nvarchar(4000)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
  失败是由不正确的输入参数或者未能写入目标审核日志导致的。  
   
-## <a name="remarks"></a>注释  
- 当**USER_DEFINED_AUDIT_GROUP**被添加到服务器审核规范或数据库审核规范中，通过触发的事件**sp_audit_write**将包括在审核日志。  
+## <a name="remarks"></a>Remarks  
+ 当**USER_DEFINED_AUDIT_GROUP**添加到服务器审核规范或数据库审核规范，触发的事件**sp_audit_write**将包含在审核日志。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**公共**数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -86,7 +85,7 @@ EXEC sp_audit_write 27, 0;
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

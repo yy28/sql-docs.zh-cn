@@ -1,5 +1,5 @@
 ---
-title: sp_delete_log_shipping_alert_job (Transact SQL) |Microsoft 文档
+title: sp_delete_log_shipping_alert_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_alert_job
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b2a41f6d453fd1d029426afb5753f558a73ba08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1979d0e4493d76d628d4a65974bb5a13760a5229
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245823"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021871"
 ---
 # <a name="spdeletelogshippingalertjob-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_delete_log_shipping_alert_job
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>注释  
- **sp_delete_log_shipping_alert_job**必须从运行**master**监视服务器上的数据库。  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_log_shipping_alert_job**必须从运行**主**在监视服务器上的数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -68,8 +67,8 @@ GO
 EXEC sp_delete_log_shipping_alert_job;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

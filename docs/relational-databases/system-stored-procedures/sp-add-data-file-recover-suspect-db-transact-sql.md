@@ -1,5 +1,5 @@
 ---
-title: sp_add_data_file_recover_suspect_db (Transact SQL) |Microsoft 文档
+title: sp_add_data_file_recover_suspect_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_data_file_recover_suspect_db
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13c08441680744d38f870fc5b6ebd5d7a1e20c91
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d6d2facde85a46db3c54d3d94e7502e6341ae57a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239157"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021696"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  数据库的名称。 *数据库*是**sysname**，无默认值。  
   
  [ **@filegroup=** ] **'***filegroup_name* **'**  
- 要向其中添加文件的文件组。 *filegroup_name*是**nvarchar(260)**，默认值为 NULL，该值指示主文件。  
+ 要向其中添加文件的文件组。 *filegroup_name*是**nvarchar(260)**，默认值为 NULL，指示主文件。  
   
  [ **@name=** ] **'***logical_file_name* **'**  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中引用文件时使用的名称。 名称在服务器中必须是唯一的。 *logical_file_name*是**nvarchar(260)**，无默认值。  
@@ -63,25 +62,25 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  由操作系统使用的文件的路径和文件名。 该文件必须驻留在[!INCLUDE[ssDE](../../includes/ssde-md.md)]实例中。 *os_file_name*是**nvarchar(260)**，无默认值。  
   
  [ **@size=** ] **'***size* **'**  
- 文件的初始大小。 *大小*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果*大小*未指定，则默认值为 1 MB。  
+ 文件的初始大小。 *大小*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。 最小值为 512 KB。 如果*大小*未指定，默认值为 1 MB。  
   
  [ **@maxsize=** ] **'***max_size* **'**  
  文件可增至的最大文件大小。 *max_size*是**nvarchar(20)**，默认值为 NULL。 指定一个整数，不包含小数位。 可以使用 MB 和 KB 后缀指定兆字节或千字节。 默认值为 MB。  
   
- 如果*max_size*未指定，则文件将增长直到磁盘已满。 当磁盘将满时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志会向管理员发出警告。  
+ 如果*max_size*未指定，则文件将增长到磁盘变满为止。 当磁盘将满时，[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 应用程序日志会向管理员发出警告。  
   
  [ **@filegrowth=** ] **'***growth_increment* **'**  
  每次需要新空间时添加到文件中的空间量。 *growth_increment*是**nvarchar(20)**，默认值为 NULL。 0 值表示不增长。 指定一个整数，不包含小数位。 该值可按 MB、KB 或百分比 (%) 形式指定。 如果指定百分比 (%)，则增量大小为发生增长时文件大小的指定百分比。 如果未在数量后面指定 MB、KB 或 %，则默认值为 MB。  
   
- 如果*growth_increment*空，默认值为 10%，并且最小值为 64 KB。 指定的大小舍入为最接近的 64 KB 的倍数。  
+ 如果*growth_increment*为 NULL，默认值是 10%的最小值为 64 KB。 指定的大小舍入为最接近的 64 KB 的倍数。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  执行权限默认授予的成员**sysadmin**固定的服务器角色。 这些权限是不可传递的。  
   
 ## <a name="examples"></a>示例  
@@ -94,7 +93,7 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
     'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\db1_file2.mdf', '1MB';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

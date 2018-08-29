@@ -1,5 +1,5 @@
 ---
-title: sp_droppullsubscription (Transact SQL) |Microsoft 文档
+title: sp_droppullsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989673"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021110"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] *****发布服务器*****  
- 远程服务器名。 *发布服务器*是**sysname**，无默认值。 如果**所有**，订阅根本删除发布服务器。  
+ [  **@publisher=** ] **'***发布服务器*****  
+ 远程服务器名。 *发布服务器*是**sysname**，无默认值。 如果**所有**，删除的订阅是在所有服务器的发布服务器。  
   
- [  **@publisher_db=** ] *****publisher_db*****  
- 发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**意味着所有发布服务器数据库。  
+ [  **@publisher_db=** ] **'***publisher_db*****  
+ 发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**表示所有发布服务器数据库。  
   
- [  **@publication=** ] *****发布*****  
- 是该发布的名称。 *发布*是**sysname**，无默认值。 如果**所有**，对所有发布删除订阅。  
+ [  **@publication=** ] **'***发布*****  
+ 为发布名称。 *发布*是**sysname**，无默认值。 如果**所有**，针对所有发布删除的订阅。  
   
  [  **@reserved=** ]*保留*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -63,22 +63,22 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_droppullsubscription**快照复制和事务复制中使用。  
   
- **sp_droppullsubscription**删除中的相应行[MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表和订阅服务器上相应的分发服务器代理。 如果任何行都不会不保留在[MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)，它会删除表。  
+ **sp_droppullsubscription**删除中的相应行[MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)表和订阅服务器上相应的分发服务器代理。 如果没有行也会保留在[MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)，则将删除该表。  
   
 ## <a name="example"></a>示例  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色或创建请求订阅的用户可以执行**sp_droppullsubscription**。 **Db_owner**固定的数据库角色是否只能执行**sp_droppullsubscription**如果创建请求订阅的用户属于此角色。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色或创建请求订阅的用户才能执行**sp_droppullsubscription**。 **Db_owner**固定的数据库角色才可以执行**sp_droppullsubscription**如果创建请求订阅的用户属于此角色。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [删除请求订阅](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

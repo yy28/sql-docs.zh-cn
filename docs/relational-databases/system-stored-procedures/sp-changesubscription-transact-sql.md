@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscription (Transact SQL) |Microsoft 文档
+title: sp_changesubscription (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47ce4c99261b7b7fd5ee7b3af4636d5ced5cf4f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a34ed640dc9efac57d948475071690ed266d2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991824"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023328"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  对于排队更新事务复制所涉及的快照或者事务推送订阅，或所涉及的请求订阅，更改其属性。 若要更改的所有其他类型的请求订阅属性，使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**在发布服务器的发布数据库上执行。  
+  对于排队更新事务复制所涉及的快照或者事务推送订阅，或所涉及的请求订阅，更改其属性。 若要更改的所有其他类型的请求订阅属性，请使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。 **sp_changesubscription**在发布服务器上对发布数据库执行。  
   
 > [!IMPORTANT]  
 >  使用远程分发服务器配置发布服务器时，为所有参数提供的值（包括 *job_login* 和 *job_password*）都会以纯文本方式发送到该分发服务器。 在执行此存储过程之前，应该对发布服务器及其远程分发服务器之间的连接进行加密。 有关详细信息，请参阅[启用数据库引擎的加密连接（SQL Server 配置管理器）](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
@@ -56,25 +56,25 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] *****发布*****  
+ [ **@publication**=] **'***发布*****  
  要更改的发布的名称。 *发布*是**sysname**，无默认值  
   
- [ **@article** =] *****文章*****  
+ [ **@article** =] **'***文章*****  
  要更改的项目的名称。 *文章*是**sysname**，无默认值。  
   
  [ **@subscriber** = ] **'***subscriber***'**  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [ **@destination_db** =] *****destination_db*****  
+ [ **@destination_db** =] **'***destination_db*****  
  是订阅数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
- [  **@property=**] *****属性*****  
- 要更改的给定订阅的属性。 *属性*是**nvarchar (30)**，并且可以为表中的值之一。  
+ [  **@property=**] **'***属性*****  
+ 要更改的给定订阅的属性。 *属性*是**nvarchar(30)**，可以是表中的值之一。  
   
- [  **@value=**] *****值*****  
- 是指定的新值*属性*。 *值*是**nvarchar （4000)**，并且可以为表中的值之一。  
+ [  **@value=**] **'***值*****  
+ 为指定的新值*属性*。 *值*是**nvarchar(4000)**，可以是表中的值之一。  
   
-|属性|“值”|Description|  
+|“属性”|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||用来运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户的登录名。|  
 |**distrib_job_password**||用来运行代理的 Windows 帐户的密码。|  
@@ -87,32 +87,32 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|连接订阅服务器时，使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。|  
 |**subscriber_provider**||唯一编程标识符 (PROGID)，用于注册非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据源的 OLE DB 访问接口。 *此属性才是有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器。*|  
 |**subscriber_providerstring**||OLE DB 访问接口特定的连接字符串，用于标识数据源。 *此属性才是有效的非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *订阅服务器。*|  
-|**订阅流**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 值范围**1**到**64**支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 此属性必须为**0**为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，Oracle 发布服务器或对等订阅。|  
+|**订阅流**||每个分发代理所允许的向订阅服务器并行应用批量更改的连接数。 值范围**1**到**64**支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 此属性必须是**0**为非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器，Oracle 发布服务器或对等订阅。|  
 |**subscriber_type**|**1**|ODBC 数据源服务器|  
 ||**3**|OLE DB 访问接口|  
-|**memory_optimized**|**bit**|指示订阅支持内存优化表。 *memory_optimized*是**位**、 1 等于 true （的订阅支持内存优化表）。|  
+|**memory_optimized**|**bit**|指示订阅支持内存优化表。 *memory_optimized*是**位**，1 为 true （订阅支持内存优化表）。|  
   
- [  **@publisher =** ] *****发布服务器*****  
+ [  **@publisher =** ] **'***发布服务器*****  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  *发布服务器*不应为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
+>  *发布服务器*不能为指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_changesubscription**快照和事务复制中使用。  
   
- **sp_changesubscription**仅可用于修改推送订阅的属性或请求订阅所涉及的排队更新事务复制。 若要更改的所有其他类型的请求订阅属性，使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。  
+ **sp_changesubscription**可仅用于修改推送订阅的属性或请求订阅参与排队更新事务复制。 若要更改的所有其他类型的请求订阅属性，请使用[sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)。  
   
  更改代理登录名或密码之后，必须先停止并重新启动代理，然后更改才能生效。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_changesubscription**。  
   
-## <a name="see-also"></a>另请参阅  
- [sp_addsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

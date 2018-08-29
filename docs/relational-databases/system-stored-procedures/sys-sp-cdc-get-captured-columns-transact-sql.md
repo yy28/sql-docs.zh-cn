@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_captured_columns (Transact SQL) |Microsoft 文档
+title: sys.sp_cdc_get_captured_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550578"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024142"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="arguments"></a>参数  
  [ @capture_instance =] '*capture_instance*  
- 与源表关联的捕获实例的名称。 *capture_instance*是**sysname**和不能为 NULL。  
+ 与源表关联的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
- 若要报告的表的捕获实例，运行[sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程。  
+ 若要报告表的捕获实例，请运行[sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)存储过程。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -70,16 +69,16 @@ sys.sp_cdc_get_captured_columns
 |data_type|**sysname**|列数据类型。|  
 |character_maximum_length|**int**|如果为基于字符的列，则为该列的最大字符长度；否则为 NULL。|  
 |numeric_precision|**tinyint**|如果为基于数值的列，则为该列的精度；否则为 NULL。|  
-|numeric_precision_radix|**int**|如果为基于数值的列，则为该列的精度基数；否则为 NULL。|  
+|numeric_precision_radix|**smallint**|如果为基于数值的列，则为该列的精度基数；否则为 NULL。|  
 |numeric_scale|**int**|如果为基于数值的列，则为该列的小数位数；否则为 NULL。|  
-|datetime_precision|**int**|如果为基于日期时间的列，则为该列的精度；否则为 NULL。|  
+|datetime_precision|**smallint**|如果为基于日期时间的列，则为该列的精度；否则为 NULL。|  
   
-## <a name="remarks"></a>注释  
- 使用 sys.sp_cdc_get_captured_columns 获取通过查询捕获实例查询函数返回的捕获列的列信息[cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)或[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。 在捕获实例的生命周期内，列名、ID 和位置保持不变。 当所跟踪表中的基础源列的数据类型发生更改时，只有列数据类型会更改。 添加或删除从源表的列上现有的捕获实例中的捕获列没有任何影响。  
+## <a name="remarks"></a>Remarks  
+ 使用 sys.sp_cdc_get_captured_columns 可获取有关通过查询捕获实例查询函数返回的捕获列的列信息[cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)或[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)。 在捕获实例的生命周期内，列名、ID 和位置保持不变。 当所跟踪表中的基础源列的数据类型发生更改时，只有列数据类型会更改。 添加或删除从源表的列对捕获列的现有捕获实例没有任何影响。  
   
- 使用[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)以获取有关数据定义的信息应用于源表的语言 (DDL) 语句。 任何修改所跟踪源列的结构的 DDL 更改都会在结果集中返回。  
+ 使用[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)来获取信息数据定义语言 (DDL) 语句应用于的源表。 任何修改所跟踪源列的结构的 DDL 更改都会在结果集中返回。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 db_owner 固定数据库角色中的成员资格。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 当调用方没有查看源数据的权限时，函数将返回错误 22981（对象不存在或访问被拒绝。）。  
   
 ## <a name="examples"></a>示例  
@@ -93,7 +92,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

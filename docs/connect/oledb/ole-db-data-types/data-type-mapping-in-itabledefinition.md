@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CreateTable function
 - OLE DB, data types
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc27dcc7b59cb7b5d1d63d48e29d7411f9e318b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 6e209ec9c5000e0cec0be47335561d020f1dcbe3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107279"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022723"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition 中的数据类型映射
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "39107279"
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
-|DBTYPE_I2|**int**||  
+|DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
 |DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|适用于 SQL Server 的 OLE DB 驱动程序检查 DBCOLUMDESC 的 bPrecision 和 bScale 成员以确定 numeric 列的精度和小数位数。|  

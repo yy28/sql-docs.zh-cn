@@ -21,17 +21,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_firewall_rule procedure
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0178f70f2ea71af12f53109b4dbde0240977c9d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 225d5d7571e213308de337240ec8a0897f074a6a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049485"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037481"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
  [ **@name =**] **'***名称*****  
  将删除的数据库级防火墙设置的名称。 *名称*是**nvarchar （128)** ，无默认值。 Unicode 标识符`N`是可选的[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。 
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有服务器级别主体登录名创建的预配过程或管理员可以删除数据库级防火墙规则时分配的 Azure Active Directory 主体。  
   
 ## <a name="example"></a>示例  

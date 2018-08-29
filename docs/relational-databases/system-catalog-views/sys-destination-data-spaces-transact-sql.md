@@ -1,5 +1,5 @@
 ---
-title: sys.destination_data_spaces (Transact SQL) |Microsoft 文档
+title: sys.destination_data_spaces (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.destination_data_spaces catalog view
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: acc10d0843e1cc24dcd1080fa71b273e39348428
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4b761959398e566a639c16a26e62136ae4f8ff2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178863"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037215"
 ---
 # <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "33178863"
 |**destination_id**|**int**|分区架构内唯一的目标映射的 ID（从 1 开始的序号）。|  
 |**data_space_id**|**int**|此架构的目标的数据映射到的数据空间的 ID。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

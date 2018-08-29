@@ -14,12 +14,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a8c38f11fe4860437dda427ba3e2046b9b4867
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 62be6ad99231fb6fde258e145fb6c29e86759309
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456231"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784516"
 ---
 # <a name="caching-result-set-data-sample"></a>结果集数据缓存示例
 
@@ -30,7 +30,7 @@ ms.locfileid: "39456231"
 > [!NOTE]  
 > 限制客户端中缓存的行数与限制结果集中包含的总行数不同。 要控制结果集中包含的总行数，请使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 对象的 [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) 方法，该对象具有继承对象 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 对象。
 
-要对客户端中缓存的行数进行限制，首先必须在创建 Statement 对象时使用服务器端游标，并且在创建 Statement 对象时专门声明要使用的游标类型。 例如，JDBC 驱动程序提供了 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标类型，该类型是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据库的快速只进、只读的服务器端游标。
+要对客户端中缓存的行数进行限制，首先必须在创建 Statement 对象时使用服务器端游标，并且在创建 Statement 对象时专门声明要使用的游标类型。 例如，JDBC 驱动程序提供了 TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 游标类型，该类型是用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的快速只进、只读的服务器端游标。
 
 > [!NOTE]  
 > 如果不使用 SQL Server 的特定游标类型，也可以使用 selectMethod 连接字符串属性，并将其值设置为“cursor”。 有关 JDBC 驱动程序支持的游标类型的详细信息，请参阅[了解游标类型](../../connect/jdbc/understanding-cursor-types.md)。

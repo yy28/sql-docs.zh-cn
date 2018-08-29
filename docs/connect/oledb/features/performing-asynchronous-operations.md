@@ -21,14 +21,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, asynchronous operations
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: a6413c21dd80c96c57a0c4f7e5e60cb12683adc2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108039"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025158"
 ---
 # <a name="performing-asynchronous-operations"></a>执行异步操作
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "39108039"
 ## <a name="opening-and-closing-a-database-connection"></a>打开和关闭数据库连接  
  使用 适用于 SQL Server 的 OLE DB 驱动程序时，按设计以异步方式初始化数据源对象的应用程序可在调用 IDBInitialize::Initialize 之前，设置 DBPROP_INIT_ASYNCH 属性中的 DBPROPVAL_ASYNCH_INITIALIZE 位。 设置此数据时，提供程序立即通过对 Initialize 的调用返回值。如果操作立即完成，则返回 S_OK；如果初始化以异步方式继续进行，则返回 DB_S_ASYNCHRONOUS。 应用程序可查询数据源对象的 IDBAsynchStatus 或 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 接口，然后调用 IDBAsynchStatus::GetStatus 或 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)，从而获得初始化的状态。  
   
- 此外，SSPROP_ISSAsynchStatus 属性已添加到 DBPROPSET_SQLSERVERROWSET 属性集。 支持 ISSAsynchStatus 接口的提供程序必须使用值 VARIANT_TRUE 实现此属性。  
+ 此外，SSPROP_ISSAsynchStatus 属性已添加到 DBPROPSET_SQLSERVERROWSET 属性集。 支持 **ISSAsynchStatus** 接口的提供程序必须使用值 VARIANT_TRUE 实现此属性。  
   
  可调用 IDBAsynchStatus::Abort 或 [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 来取消 Initialize 异步调用。 使用者必须显式请求异步数据源初始化。 否则，必须等到数据源对象完全初始化之后，IDBInitialize::Initialize 才返回值。  
   

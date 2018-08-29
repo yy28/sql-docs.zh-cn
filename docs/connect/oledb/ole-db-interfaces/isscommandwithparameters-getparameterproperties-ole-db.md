@@ -18,14 +18,14 @@ apitype: COM
 helpviewer_keywords:
 - GetParameterProperties method
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3bc5932fc68b627f6bc204deec971402046baca9
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 3e62730885a9421082aae1d14b357b672415555a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108089"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037290"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ HRESULT GetParameterProperties(
  一个指向内存的指针，该内存包含 prgParamProperties 中返回的 SSPARAMPROPS 结构数量。  
   
  prgParamProperties[out]  
- 一个指向内存的指针，在该内存中返回 SSPARAMPROPS 结构的数组。 提供程序为结构分配内存并返回此内存的地址；当使用者不再需要这些结构时，可以使用 IMalloc::Free 释放该内存。 在为 prgParamProperties 调用 IMalloc::Free 之前，使用者还必须为每个 DBPROP 结构的 vValue 属性调用 VariantClear，以防止当变量包含引用类型（如 BSTR）时发生内存泄漏。 如果 pcParams 在输出时为零或者发生了 DB_E_ERRORSOCCURRED 之外的错误，则提供程序不分配任何内存，且确保 prgParamProperties 在输出时是一个空指针。  
+ 指向内存中将返回 SSPARAMPROPS 结构数组的位置的指针。 提供程序为结构分配内存并返回此内存的地址；当使用者不再需要这些结构时，可以使用 IMalloc::Free 释放该内存。 在为 prgParamProperties 调用 IMalloc::Free 之前，使用者还必须为每个 DBPROP 结构的 vValue 属性调用 VariantClear，以防止当变量包含引用类型（如 BSTR）时发生内存泄漏。 如果 pcParams 在输出时为零或者发生了 DB_E_ERRORSOCCURRED 之外的错误，则提供程序不分配任何内存，且确保 prgParamProperties 在输出时是一个空指针。  
   
 ## <a name="return-code-values"></a>返回代码值  
  GetParameterProperties 方法返回与核心 OLE DB ICommandProperties::GetProperties 方法相同的错误代码，只是不引发 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED。  
@@ -70,9 +70,9 @@ HRESULT GetParameterProperties(
   
 |成员|描述|  
 |------------|-----------------|  
-|*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|rgPropertySets 中 DBPROPSET 结构的数量。|  
-|*rgPropertySets*|一个指向内存的指针，在该内存中返回 DBPROPSET 结构的数组。|  
+|iOrdinal|所传递参数的序号。|  
+|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>另请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  

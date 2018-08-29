@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786414"
 ---
 # <a name="wrappers-and-interfaces"></a>包装和接口
 
@@ -61,7 +61,7 @@ Java.sql.Wrapper 接口定义两个方法： **isWrapperFor**并**unwrap**。 is
 
 ## <a name="interfaces"></a>界面
 
-从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 开始，接口可用于应用程序服务器，以便从关联的类访问驱动程序特定的方法。 应用程序服务器通过创建代理对类进行包装，并且从接口公开 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的函数。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持具有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，因此应用程序服务器可以创建类的代理。
+从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始，接口可用于应用程序服务器，以便从关联的类访问驱动程序特定的方法。 应用程序服务器通过创建代理对类进行包装，并且从接口公开 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的函数。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持具有 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 特定的方法和常量的接口，因此应用程序服务器可以创建类的代理。
 
 这些接口派生自标准 Java 接口，这样，取消对接口的包装后访问驱动程序特定的功能或一般 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 功能时，就可以使用相同的对象。
 

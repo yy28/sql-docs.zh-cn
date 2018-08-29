@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c9a88c1be15e0e2d3b862e6bf10de3c59efffd79
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 24a91e845d26b4e01b8e90c60e78c9402e1ef73a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106853"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036317"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>适用于 SQL Server 的 OLE DB 驱动程序功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39106853"
  [访问扩展事件日志中的诊断信息](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  讨论针对适用于 SQL Server 的 OLE DB 驱动程序和数据跟踪功能的增强，数据跟踪可让你访问环形缓冲区和 XEvents 日志中的诊断信息。  
   
- [SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
+ [适用于 SQL Server 的 OLE DB 驱动程序对 LocalDB 的支持](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  讨论 OLE DB 驱动程序的 SQL Server 对 LocalDB 功能的支持。  
   
 ## <a name="see-also"></a>另请参阅  

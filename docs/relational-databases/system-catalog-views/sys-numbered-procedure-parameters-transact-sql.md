@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedure_parameters (Transact SQL) |Microsoft 文档
+title: sys.numbered_procedure_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ helpviewer_keywords:
 - sys.numbered_procedure_parameters catalog view
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c64c6eadb57cf8e1c2d431a7d8af5164f704e21b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0594feab6b69a9917b084cfa20c71af9885a880a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021894"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  带编号过程的每个参数都在表中对应一行。 当您创建带编号的存储过程时，基过程的编号为 1。 所有后续过程的编号依次为 2、3 等。 **sys.numbered_procedure_parameters**包含编号为 2 的所有后续的过程的参数定义和更高版本。 该视图不显示基存储过程（编号 = 1）的参数。 基存储过程类似于无编号的存储过程。 因此，在中表示其参数[sys.parameters (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)。  
+  带编号过程的每个参数都在表中对应一行。 当您创建带编号的存储过程时，基过程的编号为 1。 所有后续过程的编号依次为 2、3 等。 **sys.numbered_procedure_parameters**包含所有后续过程，编号为 2 的参数定义及更高版本。 该视图不显示基存储过程（编号 = 1）的参数。 基存储过程类似于无编号的存储过程。 因此，在表示其参数[sys.parameters (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)。  
   
 > [!IMPORTANT]  
 >  不推荐使用带编号的过程。 建议您不要使用带编号过程。 当编译使用此目录视图的查询时，将会激发 DEPRECATION_ANNOUNCEMENT 事件。  
@@ -44,25 +44,25 @@ ms.locfileid: "33181143"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|此参数所属的对象 ID。|  
-|**procedure_number**|**int**|对象中这种过程的数目（2 或更多）。|  
+|**object_id**|**int**|此参数所属的对象的 ID。|  
+|**procedure_number**|**smallint**|对象中这种过程的数目（2 或更多）。|  
 |**名称**|**sysname**|参数的名称。 在中是唯一**procedure_number**。|  
 |**parameter_id**|**int**|参数的 ID。 在中是唯一**procedure_number**。|  
 |**system_type_id**|**tinyint**|参数的系统类型的 ID。|  
 |**user_type_id**|**int**|为用户的参数定义的类型的 ID。|  
-|**max_length**|**int**|参数的最大长度（字节）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
+|**max_length**|**smallint**|参数的最大长度（字节）。<br /><br /> -1 = 列数据类型为 varchar(max)、nvarchar(max) 或 varbinary(max)。|  
 |**精度**|**tinyint**|如果参数是基于数值的，则表示参数的精度；否则为 0。|  
-|**小数位数**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
+|**scale**|**tinyint**|如果参数是基于数值的，则表示参数的小数位数；否则为 0。|  
 |**is_output**|**bit**|1 = 输出或返回参数；否则为 0|  
-|**is_cursor_ref**|**bit**|1 = 参数是一个光标引用参数。|  
+|**is_cursor_ref**|**bit**|1 = 参数为游标引用参数。|  
   
 > [!NOTE]  
 >  带编号的过程不支持 XML 和 CLR 参数。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

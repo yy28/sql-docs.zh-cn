@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_columns catalog view
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aae158d1daebfc5fbf51d18eeaccf8536d26e89e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 995abd6f70c5c29d37b9cff0e0f01f3e9a068818
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993869"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017645"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "37993869"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**trace_column_id**|**int**|该列的唯一 ID。|  
+|**trace_column_id**|**smallint**|该列的唯一 ID。|  
 |**名称**|**nvarchar(128)**|该列的唯一名称。 此参数未本地化。|  
 |**type_name**|**nvarchar(128)**|该列的数据类型名称。|  
 |**max_size**|**int**|该列数据的最大大小，以字节表示。|  
@@ -51,7 +50,7 @@ ms.locfileid: "37993869"
 |**is_repeatable**|**bit**|指示是否可以在“重复列”数据中引用该列。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeated_base**|**bit**|指示在引用重复数据时是否将该列作为唯一键使用。<br /><br /> 0 = false<br /><br /> 1 = true|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

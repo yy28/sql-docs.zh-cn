@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorsubscriptionpendingcmds (Transact SQL) |Microsoft 文档
+title: sp_replmonitorsubscriptionpendingcmds (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorsubscriptionpendingcmds
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c94d01031094e03ddde2fc9bcdf234729ecd11c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7be00206267ea37c74c3b1055598ac9a2770a622
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001039"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038530"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +60,15 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [ **@subscriber** = ] **'***subscriber***'**  
- 订阅服务器的名称。 *订阅服务器*是**sysname**，无默认值。  
+ 订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
  [ **@subscriber_db** = ] **'***subscriber_db***'**  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
  [ **@subscription_type** =] *subscription_type*  
- 订阅的类型。 *publication_type*是**int**，无默认值并且可为这些值之一。  
+ 订阅的类型。 *publication_type*是**int**，无默认值可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|推送订阅|  
 |**1**|请求订阅|  
@@ -83,13 +83,13 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_replmonitorsubscriptionpendingcmds**与事务复制一起使用。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色在分发服务器或成员的**db_owner**分发数据库中的固定的数据库角色可以执行**sp_replmonitorsubscriptionpendingcmds**。 使用分发数据库的发布可以执行的发布访问的成员列出**sp_replmonitorsubscriptionpendingcmds**返回挂起命令为该发布。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色的成员的分发服务器**db_owner**分发数据库中的固定的数据库角色可以执行**sp_replmonitorsubscriptionpendingcmds**。 发布访问列表的成员才能执行使用分发数据库的发布**sp_replmonitorsubscriptionpendingcmds**返回该发布的挂起命令。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [以编程方式监视复制](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

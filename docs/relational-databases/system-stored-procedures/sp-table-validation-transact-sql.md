@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d82517f09ad18c7cc0b2e8d49acfdae6ab200ee9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: adec12d90732b37a6613d31b819fa6e907649948
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037015"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038149"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ sp_table_validation [ @table = ] 'table'
   
  浮点值很可能产生校验和差异，如果字符模式**bcp**时使用的这是这种情况，如果发布拥有非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]订阅服务器。 这是由于在进行字符模式转换时，精度上存在不可避免的微小差异。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行**sp_table_validation**，必须在正在验证的表拥有 SELECT 权限。  
   
 ## <a name="see-also"></a>请参阅  

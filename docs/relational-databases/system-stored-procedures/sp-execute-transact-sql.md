@@ -19,16 +19,16 @@ helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8219fc5ca0f809d6a8154a0e3e3e4ce50b1c90af
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39540817"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43057690"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ sp_execute handle OUTPUT
  指示使用其他参数。 *bound_param*是所需的任何数据类型，以便表示过程的附加参数输入值调用的参数。  
   
 > [!NOTE]  
->  *bound_param*必须匹配 sp_prepare 所做的声明*params*值，并且可以采用该窗体* @name = value*或者*值*。  
+>  *bound_param*必须匹配 sp_prepare 所做的声明*params*值，并且可以采用该窗体 *@name = value*或者*值*。  
   
 ## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

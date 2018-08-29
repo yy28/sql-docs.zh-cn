@@ -1,5 +1,5 @@
 ---
-title: sp_enumeratependingschemachanges (Transact SQL) |Microsoft 文档
+title: sp_enumeratependingschemachanges (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_enumeratependingschemachanges
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74841a258582acce3d9d5a30aa19cd9f000bdb8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f99b1ae2545c347414f50efde62f97d344d5696c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990802"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021807"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回所有的挂起架构更改的列表。 此存储的过程可以用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)，这使管理员能够跳过挂起的架构更改所选，以便它们不会复制。 在发布服务器的发布数据库上执行此存储的过程。  
+  返回所有的挂起架构更改的列表。 此存储的过程可以用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)，这使管理员能够跳过选定的挂起架构更改，以便它们不会复制。 在发布服务器上对发布数据库执行此存储的过程。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] *****发布*****  
+ [  **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@starting_schemaversion=** ] *starting_schemaversion*  
@@ -56,7 +56,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**sysname**|架构更改应用到项目的名称或**发布级**进行架构更改应用于整个发布。|  
+|**article_name**|**sysname**|架构更改应用到的项目的名称或**发布范围**的架构更改，将应用于整个发布。|  
 |**schemaversion**|**int**|挂起的架构更改的编号。|  
 |**schematype**|**sysname**|表示架构更改类型的文本值。|  
 |**schematext**|**nvarchar(max)**|说明架构更改的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。|  
@@ -66,16 +66,16 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  **sp_enumeratependingschemachanges**合并复制中使用。  
   
- **sp_enumeratependingschemachanges**、 用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、 适用于合并复制可支持性和应仅当其他纠正措施，如重新初始化，无法纠正这种情况。  
+ **sp_enumeratependingschemachanges**，用于[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、 适用于合并复制的可支持性，应使用仅当其他纠正操作，如要重新初始化，无法更正这种情况。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色可以执行**sp_enumeratependingschemachanges**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [复制存储过程 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;Transact SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

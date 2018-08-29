@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (Transact SQL) |Microsoft 文档
+title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252626"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036355"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>参数  
  [ @capture_instance =] '*capture_instance*  
- 与源表关联的捕获实例的名称。 *capture_instance*是**sysname**和不能为 NULL。  
+ 与源表关联的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -66,10 +65,10 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|与 DDL 更改关联的日志序列号 (LSN)。|  
 |ddl_time|**datetime**|与 DDL 更改关联的时间。|  
   
-## <a name="remarks"></a>注释  
- 在中维护更改源表的列结构，如添加或删除列，或更改某个现有列的数据类型的 DDL 修改到源表[cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)表。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
+## <a name="remarks"></a>Remarks  
+ 对源表的 DDL 修改的更改源表的列结构，例如添加或删除列，或更改某个现有列的数据类型都保留在[cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md)表。 您可使用此存储过程报告以上更改。 当捕获进程读取日志中的 DDL 事务时，将向 cdc.ddl_history 中添加项。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求拥有 db_owner 固定数据库角色的成员身份以返回针对数据库中所有捕获实例的行。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -89,7 +88,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

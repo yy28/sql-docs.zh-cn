@@ -18,14 +18,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - cursors [OLE DB]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: de602cbb2452c0d9d4201de89d7573a23c2704bc
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 0d967a5e39a62ff799e5842d7cb185cd1ca0036c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39107183"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020960"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行集和 SQL Server 游标
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "39107183"
   
  若要使用某一类型的游标模型，请找到对应于该游标模型的列，并查找在此列中值为“T”的所有行集属性。 将这些行集属性设置为 VARIANT_TRUE 即可使用特定游标模型。 可以将值为“-”的行集属性设置为 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|行集属性/游标模型|默认<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
+|行集属性/游标模型|，则“默认”<br /><br /> result<br /><br /> 集<br /><br /> (RO)|Fast<br /><br /> 只<br /><br /> 进<br /><br /> (RO)|静态<br /><br /> (RO)|Keyset<br /><br /> 驱动 <br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
