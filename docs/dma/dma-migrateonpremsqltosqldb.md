@@ -2,7 +2,7 @@
 title: 在本地 SQL Server 迁移到 Azure SQL 数据库使用数据迁移助手 |Microsoft Docs
 description: 了解如何使用数据迁移助手将本地 SQL Server 迁移到 Azure SQL 数据库
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 5de33f3a78a68f0afac0ead0d42b244cc78a85ad
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: faf8e0c056ba6f12e84d2b8fab69971061ba4037
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935834"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152808"
 ---
 # <a name="migrate-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>将本地 SQL Server 迁移到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 

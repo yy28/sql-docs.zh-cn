@@ -1,8 +1,8 @@
 ---
-title: 导入和合并数据迁移助手评估报表 (SQL Server) |Microsoft Docs
-description: 了解如何评估报告从数据迁移助手导入到 SQL Server 数据库，以及如何合并多个报表
+title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
+description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 04/16/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,130 +16,230 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: be9fc224093f0d5ae14372d4674a52589a2d4801
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781768"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152628"
 ---
-# <a name="import-and-consolidate-data-migration-assistant-assessment-reports"></a>导入和合并数据迁移助手评估报表
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
-可以使用命令行来执行迁移评估在无人参与模式下，从开始数据迁移助手 2.1 版。 此功能可帮助你大规模运行评估。 在 JSON 或 CSV 文件格式的评估结果。
+以下分步说明可帮助您可以使用数据迁移助手的本地 SQL Server 或 SQL Server Azure Vm 上的运行升级或迁移到 Azure SQL 数据库执行成功缩放的评估。
 
-可以评估多个数据库中的单个实例化的数据迁移助手的命令行实用程序，并将所有评估结果都导出到一个 JSON 文件。 或者，可以在时评估一个数据库和更高版本将这些多个 JSON 文件中的结果合并到 SQL 数据库。
+## <a name="prerequisites"></a>必要條件
 
-有关如何从命令行运行数据迁移助手的信息，请参阅[运行数据迁移助手从命令行](../dma/dma-commandline.md)。 
+- 指定工具的计算机将会启动 DMA 在网络上。 请确保此计算机已连接到 SQL Server 目标。
+- 下载并安装：
+    - [数据迁移助手](https://www.microsoft.com/download/details.aspx?id=53595)v3.6 或更高版本。
+    - [PowerShell](http://aka.ms/wmf5download) 5.0 版或更高版本。
+    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更高版本。
+    - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更高版本。
+    - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+- 下载并提取：
+    - [DMA 报表 Power BI 模板](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
+    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)。
 
-## <a name="import-assessment-results-into-a-sql-server-database"></a>导入到 SQL Server 数据库的评估结果
+## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
+保存到 PowerShell 模块目录的 PowerShell 模块，可调用而无需使用之前显式加载的模块。
 
-使用此 PowerShell 脚本[Github 存储库](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant)的评估结果从 JSON 文件导入到 SQL Server 数据库。
+若要加载模块，请执行以下步骤：
+1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
+2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
+
+      ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
+
+    每个文件夹包含关联的 psm1 文件中，在下图中所示：
+
+   ![PowerShell 模块 psm1 文件](../dma/media//dma-consolidatereports/dma-powershell-modules-psm1-files.png)
+
+   > [!NOTE]
+   > 文件夹和它包含 psm1 文件必须具有相同的名称。
+
+   > [!IMPORTANT]
+   > 您可能需要解除锁定 PowerShell 文件后将其保存到 WindowsPowerShell 目录以确保能够正确加载的模块。 若要解除锁定 PowerShell 文件，右键单击文件，选择**属性**，选择**解除阻止**文本框中，并选择**确定**。
+
+   ![psm1 文件属性](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
+
+    新的 PowerShell 会话启动时 PowerShell 现在应会自动加载这些模块。
+
+## <a name="create-an-inventory-of-sql-servers"></a>创建 SQL 服务器的清单
+然后再运行 PowerShell 脚本，以评估 SQL Server，构建所需的 SQL 服务器，你想要评估的清单。
+
+此清单，可以采用两种形式之一：
+- Excel CSV 文件
+- SQL Server 表
+
+### <a name="if-using-a-csv-file"></a>如果使用的 CSV 文件
+在使用 csv 文件导入数据，请确保有只有两个列的数据 –**实例名称**并**数据库名称**，和列不包含标头行。
+ 
+ ![csv 文件内容](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
+
+### <a name="if-using-sql-server-table"></a>如果使用的 SQL Server 表
+创建一个数据库，称为**EstateInventory**和名为表**DatabaseInventory**。 包含此清单数据的表可以具有任意数量的列，只要存在以下四列：
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+
+![SQL Server 表的内容](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+
+如果此数据库不在工具计算机上，确保工具计算机具有到此 SQL Server 实例的网络连接。
+
+通过 CSV 文件中使用 SQL Server 表的好处是，可以使用评估标记列以控制实例 / 数据库，获取选择进行评估，因此可以轻松地单独的较小的区块的评估。  然后可以跨多个评估 （请参阅本文后面运行评估部分），（请参阅部分在这篇文章中更高版本运行评估），这是更容易维护多个 CSV 文件。
+
+请记住，具体取决于许多对象和其复杂性，评估可能需要特别长的时间 （小时数 +），因此它是比较明智的做法来分隔成可管理块的评估。
+
+## <a name="running-a-scaled-assessment"></a>运行缩放的评估
+加载到模块目录的 PowerShell 模块并创建后清单，您需要通过打开 PowerShell 并运行 dmaDataCollector 函数进行缩放的评估。
+ 
+  ![dmaDataCollector 函数列表](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
+
+介绍了下表与 dmaDataCollector 函数相关联的参数。
+
+|参数  |Description
+|---------|---------|
+|**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。 |
+|**服务器名称** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
+|**DatabaseName** | 托管库存表的数据库。 |
+|**AssessmentName** | DMA 评估的名称。 |
+|**TargetPlatform** | 你想要执行评估目标类型。  可能的值为**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，并**SQLServerWindows2017**。 |
+|**AuthenticationMethod** | 连接到你想要评估的 SQL Server 目标的身份验证方法。 可能的值为**SQLAuth**并**WindowsAuth**。 |
+|**OutputLocation** | 评估在其中存储 JSON 输出文件目录。 具体取决于所评估的数据库数目和数据库内的对象数，评估可能需要极长的时间。 所有评估都完成后，将写入文件。 |
+
+如果出现意外的错误，将终止此过程获取启动命令窗口。  查看错误日志以确定失败的原因。
+ 
+  ![错误日志位置](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
+
+## <a name="consuming-the-assessment-json-file"></a>使用评估 JSON 文件
+
+现在，你的评估完成后，已准备好将数据导入 SQL Server，以进行分析。 若要使用评估 JSON 文件，打开 PowerShell 并运行 dmaProcessor 函数。
+ 
+  ![dmaProcessor 函数列表](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
+
+介绍了下表与 dmaProcessor 函数相关联的参数。
+
+|参数  |Description
+|---------|---------|
+|**processTo**  | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
+|**服务器名称** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
+|**CreateDMAReporting** | 要创建用于处理 JSON 文件的临时数据库。  如果已指定的数据库存在，此参数设置为其中一个，则对象不获取创建。  此参数可用于重新创建已删除的单个对象。 |
+|**CreateDataWarehouse** | 创建将由 Power BI 报表数据仓库。 |
+|**DatabaseName** | DMAReporting 数据库的名称。 |
+|**warehouseName** | 数据仓库数据库的名称。 |
+|**jsonDirectory** | 包含 JSON 评估文件的目录。  如果在目录中有多个 JSON 文件，它们是逐个处理。 |
+
+DmaProcessor 函数应该只需要几秒钟来处理单个文件。
+
+## <a name="loading-the-data-warehouse"></a>加载数据仓库
+DmaProcessor 已完成处理评估文件后，数据将加载到 DMAReporting 数据库报告表中。 此时，您需要加载数据仓库。
+
+1. 使用 LoadWarehouse 脚本来填充维度中的任何缺失值。
+
+    该脚本将 DMAReporting 数据库中获取报告表中的数据，并将其加载到数据仓库。  如果在此加载过程中不存在任何错误，它们可能是维度表中缺失的条目的结果。
+
+2. 加载数据仓库。
+ 
+      ![加载的 LoadWarehouse 内容](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+## <a name="set-your-database-owners"></a>设置数据库所有者
+尽管这不是必需的若要从报告，获取最大的价值建议中设置数据库所有者**dimDBOwner**维度，并更新**DBOwnerKey**中**FactAssessment**表。  按此过程将允许进行切片和筛选基于特定的数据库所有者在 Power BI 报表。
+
+LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数据库所有者。
+
+  ![LoadWarehouse 设置所有者](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+
+## <a name="dma-reports"></a>DMA 报表
+
+1. 在 Power BI Desktop 中打开 DMA 报表 Power BI 模板。
+2. 输入服务器详细信息指向你**DMAWarehouse**数据库，并选择**负载**。
+
+    > [!IMPORTANT]
+    > 不要按 Enter 以接受的值。
+
+      ![加载 DMA 报表 Power BI 模板](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   已刷新报表中的数据后**DMAWarehouse**数据库中，系统会显示类似于以下的报告。
+
+   ![DMAWarehouse 报表视图](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+
+   > [!TIP]
+   > 如果没有看到你所期待的数据，请尝试更改活动书签。  有关详细信息，请参阅功能部分。
+
+## <a name="working-with-dma-reports"></a>使用 DMA 报表
+若要处理的 DMA 报表，请使用切片器要作为筛选依据：
+- 实例名
+- 数据库名称
+- 团队名称
+
+书签还可用于报表之间切换上下文：
+- 云评估
+- 在本地评估
+
+  ![DMA 报表书签](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
 
 > [!NOTE]
-> PowerShell v5 或更高版本是必需的。
+> 如果您仅执行 Azure SQL 数据库评估，然后填充只有云报表。 相反，如果您仅执行内部评估，只有在本地报表进行填充。 但是，如果执行 Azure 和本地评估，然后加载到仓库的这两种评估您可以切换云报表和通过按住 CTRL 单击本地报表关联的图标。
 
-在执行脚本时，需要提供以下信息： 
+## <a name="reports-visuals"></a>报表视觉对象
+以下各节中显示的 Power BI 报表中显示的详细信息。
 
-- **serverName**： 你想要导入评估 SQL Server 实例名称会从 JSON 文件。
+### <a name="readiness-"></a>准备情况 %
 
-- **databaseName**： 结果会导入到的数据库名称。
+  ![DMA 准备情况百分比](../dma/media//dma-consolidatereports/dma-readiness-percentage.png)
 
-- **jsonDirectory**： 评估结果保存到，在一个或多个 JSON 文件中的文件夹。
+根据选定内容上下文更新此视觉对象时 (所有内容，实例，数据库 [序列图的])。
 
-- **processTo**: SQLServer
+### <a name="readiness-count"></a>准备情况计数
 
-在"执行函数"部分中，添加上述值，如下所示。
+  ![DMA 准备情况计数](../dma/media//dma-consolidatereports/dma-readiness-count.png)
 
-```
-dmaProcessor -serverName localhost \`\
--databaseName DMAReporting \`\
--jsonDirectory "C:\\temp\\DMACmd\\output\\" \`\
--processTo SQLServer
-```
+此视觉对象显示的数据库的已准备好迁移不是尚未准备好迁移的数据库的计数的计数。
 
-如果对象已不存在，PowerShell 脚本在指定后，SQL 实例中创建以下对象：
+### <a name="readiness-bucket"></a>准备情况存储桶
 
-- **数据库**– PowerShell 参数中提供的名称
+  ![DMA 准备情况存储桶](../dma/media//dma-consolidatereports/dma-readiness-bucket.png)
 
-  - 主存储库
+此视觉对象显示数据库的以下就绪情况存储桶的细分：
+- 100%就绪
+- 75 99%就绪
+- 50-75%就绪
+- 未就绪
 
-- **表**– 报告
+### <a name="issues-word-cloud"></a>问题 Word 云
+ 
+  ![DMA 问题 WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
-  - 用于报告的数据
+此视觉对象中选定内容上下文显示当前内发生的问题 (所有内容，实例，数据库 [序列图的])。 越大单词出现在屏幕上，更高版本的该类别中的问题数。 鼠标指针悬停在某个词显示该类别中出现的问题数。
 
-- **表**-BreakingChangeWeighting
+### <a name="database-readiness"></a>数据库准备情况
 
-  - 所有的重大更改的引用表。 此处可以定义自己的权重的值来影响更准确的百分比（%）排名。
+  ![DMA 数据库准备情况报告](../dma/media//dma-consolidatereports/dma-database-readiness-report.png)
 
-- **视图**– UpgradeSuccessRanking\_OnPrem
+本部分是报表，其中显示了实例数据库的准备情况的主要部分。 此报表具有向下钻取层次的结构：
+- InstanceDatabase
+- ChangeCategory
+- Title
+- ObjectType
+- ImpactedObjectName
 
-  - 视图显示每个要在已迁移的本地数据库的成功因素。
+ ![DMA 数据库准备情况报表向下钻取](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown.png)
 
-- **视图**– UpgradeSuccessRanking\_Azure
+此报表还可以作为创建修正计划报表的筛选器点。
 
-  - 视图显示每个要在已迁移的本地数据库的成功因素。
+若要深化到修正计划报表，右键单击数据点在此图中，指向**钻取**，然后选择**修正计划**。
 
-- **存储过程**– JSONResults\_插入
+此任务来筛选当前层次结构级别取决于在其中选择钻取选项的点到修正计划报表。
 
-  - 用于从 JSON 文件的数据导入到 SQL Server。
+  ![DMA 数据库准备情况报表向下钻取筛选](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown-filtered.png)
 
-- **存储过程**– AzureFeatureParityResults\_插入
+  ![DMA 修正计划报表](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
-  - 用于 Azure 的功能奇偶校验结果从 JSON 文件导入 SQL Server。
+您还可以使用修正计划报表上其自己构建自定义修正计划通过使用中的筛选器**可视化效果筛选器**边栏选项卡。
+ 
+  ![DMA 修正计划的报表筛选器选项](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
-- **表类型**– JSONResults
-
-  - 用于保存在本地评估的 JSON 结果并将传递给 JSONResults\_Insert 存储的过程
-
-- **表类型**– AzureFeatureParityResults
-
-  - 用于保存 azure 评估的奇偶校验结果的 Azure 功能，并将传递给 AzureFeatureParityResults\_Insert 存储的过程
-
-PowerShell 脚本将创建**处理**目录内包含所要处理的 JSON 文件的目录提供。
-
-在脚本完成后，将结果导入到表中，报告。
-
-### <a name="viewing-the-results-in-sql-server"></a>SQL Server 中查看结果
-
-加载数据后，连接到 SQL Server 实例。 屏幕应显示在下图中所示：
-
-![SQL Server 数据库中合并的报告](../dma/media/DMAReportingDatabase.png)
-
-Dbo。报告表包含以其原始格式的 JSON 文件的内容。
-
-## <a name="on-premises-upgrade-success-ranking"></a>在本地升级成功排名
-
-若要查看的数据库和百分比 （%） 成功排名列表，请选择 dbo。UpgradeSuccessRanking_OnPrem 视图：
-
-![UpgradeSuccessRaning_OnPrem 视图中的数据](../dma/media/UpgradeSuccessRankingView.png)
-
-这里您可以看到对于给定的数据库不同的兼容级别的升级的成功几率为何。 因此，例如，HR 数据库已评估对兼容级别 100、 110、 120 和 130。 此评估可以帮助您直观地查看从数据库当前在当前版本迁移到更高版本的 SQL Server 中涉及的工作量。
-
-通常您关心的指标是多少的重大更改适用于给定的数据库。 在上述示例中，可以看到的 HR 数据库都有兼容性级别 100、 110、 120 和 130 的 50%升级成功因素。
-
-此指标可以通过更改 dbo 中的权重值受影响。BreakingChangeWeighting 表。
-
-在以下示例中，修复 HR 数据库中的语法问题所涉及的工作被视为高因此值为 3 分配给**工作量**。 由于它不会花费长时间才能解决语法问题，因此值为 1 分配给**FixTime**。 由于会有一定的费用涉及中进行更改，因此值 2 分配给**成本**。 使用此值更改为 2 的混合的 Changerank。
-
-> [!NOTE]
-> 评分是范围为 1-5。  1 为低，而 5 高。 此外，ChangeRank 是计算所得的列。
-
-![工作量、 FixTime 和成本值语法问题](../dma/media/SyntaxIssueEffort.png)
-
-现在，在此示例查询 dbo 时。UpgradeSuccessRanking_OnPrem 视图中，已删除的重大更改的 HR 数据库的升级成功因素。
-
-![HR 数据库升级的成功因素](../dma/media/UpgradeSuccessFactor_HR.png)
-
-## <a name="azure-upgrade-success-ranking"></a>Azure 升级成功排名
-
-若要查看的数据库迁移到 Azure SQL DB 和百分比成功排名列表，请选择 dbo。UpgradeSuccessRanking_Azure 视图。
-
-![UpgradeSuccessRanking_Azure 视图中的数据](../dma/media/UpgradeSuccessRankingView_Azure.png)
-
-此处你感兴趣的 MigrationBlocker 值。 100.00 意味着将数据库移动到 Azure SQL 数据库 v12 的 100%成功排名。
-
-此视图的不同之处是，目前不重写更改迁移阻止程序规则的权重。
-
-此数据使用 Power BI 报告的信息，请参阅[报告合并评估使用 PowerBI](../dma/dma-powerbiassesreport.md)。
+### <a name="script-disclaimer"></a>脚本免责声明
+*在本文中提供的示例脚本不受任何 Microsoft 标准支持计划或服务。仅按原样提供的所有脚本，而无需任何种类的担保。Microsoft 进一步拒绝所有默示的保证，包括但不限于，任何默示保证的适销性或适用于某种特定用途。与你保持因使用或执行示例脚本和文档的全部风险。在任何 Microsoft、 其作者或创建、 生产或交付的脚本中其他涉及的任何人都应承担任何责任 （包括但不限于，损失业务利润损失、 业务中断、 丢失业务信息或其他 pecuniary 丢失） 因使用或不能使用的示例脚本或文档，即使 Microsoft 已被告知此类损害的可能性。查找之前在其他站点/存储库/博客上重新发布这些脚本的权限。*

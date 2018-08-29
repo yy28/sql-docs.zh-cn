@@ -2,7 +2,7 @@
 title: 数据迁移助手 (SQL Server) 的最佳做法 |Microsoft Docs
 description: 了解有关使用数据迁移助手将 SQL Server 数据库迁移最佳实践
 ms.custom: ''
-ms.date: 06/02/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3026aeb51a5e2cad5f582667c63f72d8893ba322
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 949576715472f5ad5ff99425635c9ad1d29a9823
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789948"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152768"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>运行数据迁移助手的最佳做法
 本文提供有关安装、 评估和迁移的一些最佳实践信息。
