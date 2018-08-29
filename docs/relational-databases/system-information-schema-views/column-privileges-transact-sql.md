@@ -18,17 +18,16 @@ helpviewer_keywords:
 - COLUMN_PRIVILEGES view
 - INFORMATION_SCHEMA.COLUMN_PRIVILEGES view
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdcae5e35710bee65ebcd8c8b712ffecd692828c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d0dded3497f4852d31d3ddf324006a2b942e0806
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562451"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105664"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "39562451"
 |**授权者**|**nvarchar(** 128 **)**|授权者。|  
 |**被授权者**|**nvarchar(** 128 **)**|被授权者。|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|表限定符。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \* **请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含该表的架构的名称。<br /><br /> **\*\* 重要\* \*** 请勿使用 INFORMATION_SCHEMA 视图来确定对象的架构。 查找对象架构的唯一可靠方法是查询 sys.objects 目录视图。|  
 |**TABLE_NAME**|**sysname**|表名。|  
 |**COLUMN_NAME**|**sysname**|列名称。|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特权的类型。|  

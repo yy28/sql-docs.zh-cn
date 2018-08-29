@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661659"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784875"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>了解 JDBC 驱动程序数据类型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 作为数据库的 Java 应用程序中使用 JDBC 的基本数据类型和高级数据类型。  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为数据库的 Java 应用程序中使用 JDBC 的基本数据类型和高级数据类型。  
   
-JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 数据类型与 Java 语言类型和对象之间的转换。 JDBC 类型的模型建立在 SQL-92 和 SQL-99 类型的基础之上。 JDBC 驱动程序符合 JDBC 规范，且设计为在可预测性与灵活性之间提供适当的平衡。  
+JDBC 类型系统负责调解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型与 Java 语言类型和对象之间的转换。 JDBC 类型的模型建立在 SQL-92 和 SQL-99 类型的基础之上。 JDBC 驱动程序符合 JDBC 规范，且设计为在可预测性与灵活性之间提供适当的平衡。  
   
 这部分的各个主题介绍如何使用基本数据类型和高级数据类型，以及如何可以将数据类型转换为其他数据类型。  
   

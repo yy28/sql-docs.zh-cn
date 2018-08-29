@@ -14,18 +14,18 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6bd763d709238c6bd25fbe7a90acb7b617004925
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 01ec347bd34786fe3dc9f8533972c212847b1faa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661829"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784865"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用不带参数的存储过程
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-在可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 存储过程中，最简单的类型是不包含任何参数并且返回单个结果集的存储过程。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类来调用此类存储过程并处理其返回的数据。
+在可以调用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程中，最简单的类型是不包含任何参数并且返回单个结果集的存储过程。 可以使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供的 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 类来调用此类存储过程并处理其返回的数据。
 
 使用 JDBC 驱动程序调用不带参数的存储过程时，必须使用 `call` SQL 转义序列。 不带参数的 `call` 转义序列的语法如下所示：
 

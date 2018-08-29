@@ -14,20 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0261dc230cd255057a893ba41306bb9e836f85fd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453072"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784873"
 ---
 # <a name="retrieving-result-set-data-sample"></a>结果集数据检索示例
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据库中检索一组数据，然后将这些数据显示出来。
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 示例应用程序说明了如何从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库中检索一组数据，然后将这些数据显示出来。
 
-此示例的代码文件名为“RetrieveResultSet.java”，位于以下位置：
+此示例的代码文件名为 RetrieveResultSet.java，位于以下位置：
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\resultsets  

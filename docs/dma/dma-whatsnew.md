@@ -1,7 +1,7 @@
 ---
 title: 什么是数据迁移助手 (SQL Server) 中的新增功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,17 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982149"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118325"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>什么是数据迁移助手中的新增功能
-本主题列出了每个版本中添加的数据迁移助手 (DMA)。
+# <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
+本文列出了每个版本中添加的数据迁移助手 (DMA)。
+
+## <a name="dma-v40"></a>DMA v4.0
+DMA v4.0 版本引入了 Azure SQL 数据库 SKU 的建议功能，它使用户能够确定建议基于从托管数据库的计算机收集性能计数器的 Azure SQL 数据库 SKU 的最小。 此功能提供了与定价层、 计算级别和最大数据大小，以及每月预计的成本相关的建议。 它还提供预配所有数据库到 Azure 中大容量的能力。
+
+> [!NOTE]
+> 此功能当前处于只能通过命令行接口 (CLI)。 此功能通过 DMA 用户界面的支持计划交付今年晚些时候。
+
+更多详细信息，请参阅文章[标识适当 Azure SQL 数据库的 SKU 的本地数据库](dma-sku-recommend-sql-db.md)。
 
 ## <a name="dma-v36"></a>DMA v3.6
 DMA v3.6 版本引入了"自动修复"受影响的最常见的迁移阻止程序的架构对象。
@@ -43,7 +51,7 @@ DMA 使用 Microsoft 程序合成 (PROSE) 技术来建议代码修复。 详细�
 DMA v3.5 版本还包括以下新增功能：
 - 迁移到 Azure SQL 数据库 （基准检验测试表明过程将四次更快于使用早期版本的 DMA） 显著的性能改进。
 - 内存占用量进一步优化以提高迁移工作流的稳定性。
-- 架构和数据迁移期间跳过评估，（如果已执行评估并解决任何重大架构对象，再迁移） 的功能。
+- 架构和数据迁移期间跳过评估，（如果你已执行评估并解决任何重大架构对象，再迁移） 的功能。
 - 若要使用时无效的网络共享路径提供对于备份文件，当执行升级的旧版本的 SQL Server 的本地到更高版本或 Azure Vm 上的 SQL Server 时遇到的故障的工具解决问题的修补程序。
 
 ## <a name="dma-v34"></a>DMA v3.4
@@ -64,7 +72,7 @@ Linux 和 Windows 使用不同的路径格式。 因此，迁移到 SQL Server 2
 > 使用 samba 共享或 mnt 命令的详细信息已超出本文的讨论范围。
 
 ### <a name="migrating-windows-logins"></a>迁移 Windows 登录名
-虽然在 Linux 上的 SQL Server 2017 正式支持的 Active Directory (AD) 的登录名迁移，但它需要额外的配置才能正常工作。 请参阅主题[使用 Linux 上的 SQL Server 的 Active Directory 身份验证](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)有关 Active Directory 上设置登录名在 Linux 上的 SQL Server 2017 的详细信息。 在执行所需的配置，安装程序完成后可以将 Active Directory 登录名迁移像往常一样。 标准 SQL 身份验证的工作与不能有任何其他设置。
+虽然在 Linux 上的 SQL Server 2017 正式支持的 Active Directory (AD) 的登录名迁移，但它需要额外的配置才能正常工作。 请参阅文章[使用 Linux 上的 SQL Server 的 Active Directory 身份验证](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication)有关 Active Directory 上设置登录名在 Linux 上的 SQL Server 2017 的详细信息。 在执行所需的配置，安装程序完成后可以将 Active Directory 登录名迁移像往常一样。 标准 SQL 身份验证的工作与不能有任何其他设置。
 
 ## <a name="dma-v32"></a>DMA 3.2 版
 DMA 3.2 版版本还包括以下新增功能：
@@ -86,20 +94,20 @@ DMA 的 3.0 版版本扩展了 Azure SQL 数据库评估提供全面的建议，
 
 ## <a name="dma-v21"></a>DMA 2.1 版
 DMA v2.1 版本还包括以下新增功能：
-- 命令行支持在无人参与模式下，这有助于大规模运行评估运行评估。 更多详细信息，请参阅主题[运行数据迁移助手从命令行](dma-commandline.md)。
+- 命令行支持在无人参与模式下，这有助于大规模运行评估运行评估。 更多详细信息，请参阅文章[运行数据迁移助手从命令行](dma-commandline.md)。
 - 当用户启动和关闭 DMA 的性能改进。
-- 配置 SQL 连接超时值的功能。更多详细信息，请参阅主题[配置设置的数据迁移助手](dma-configurationsettings.md)。
+- 配置 SQL 连接超时值的功能。更多详细信息，请参阅文章[配置设置的数据迁移助手](dma-configurationsettings.md)。
 
 ## <a name="dma-v20"></a>DMA v2.0
 DMA 的 2.0 版包括改进了的延伸数据库功能建议，以提供最大限度地节省的存储空间的正确按优先顺序排列的表。
 
 ## <a name="dma-v10"></a>DMA v1.0
 DMA 的 1.0 版版本是初始版本，它提供了：
-- 发现的问题可能会影响升级到 SQL Server 的本地版本。 任何发现被描述为兼容性问题，并分为以下几个方面：
+- 发现的问题可能会影响升级到 SQL Server 的本地版本。 任何发现被描述为兼容性问题，并在分为以下几个方面：
     - 重大更改
     - 行为更改
     - 已弃用的功能
-- 发现的数据库可以受益于升级到目标 SQL Server 平台中的新功能。 任何发现结果被称为功能的建议，并分为以下几个方面：
+- 发现的数据库可以受益于升级到目标 SQL Server 平台中的新功能。 任何发现结果被称为功能的建议，并在分为以下几个方面：
     - “性能”
     - Security
     - 存储器

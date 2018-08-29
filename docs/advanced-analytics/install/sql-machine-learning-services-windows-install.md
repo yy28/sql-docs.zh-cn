@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437687"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118575"
 ---
-# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务 （数据库） 
+# <a name="install-sql-server-machine-learning-services"></a>安装 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 从 SQL Server 2017 开始，SQL Server 机器学习服务，SQL Server 2016 中引入的 R Services 功能的后续版本中提供的数据库内分析 R 和 Python 支持。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
@@ -100,7 +100,7 @@ ms.locfileid: "40437687"
 
 7. 安装完成时，如果要求您重新启动计算机后请立即登录。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
-## <a name="bkmk_enableFeature"></a>启用外部脚本执行
+## <a name="bkmk_enableFeature"></a>启用脚本执行
 
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 

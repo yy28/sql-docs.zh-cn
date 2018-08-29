@@ -7,14 +7,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 75e962b9be2acb1d44451081f0aef2bccd5a09fc
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 4f5c39c62b63aa3d2bf8daf83b9212423cf258a1
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437616"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118505"
 ---
-# <a name="install-sql-server-2016-r-services-in-database"></a>安装 SQL Server 2016 R Services (In-Database) 
+# <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 此文章介绍了如何安装和配置**SQL Server 2016 R Services （数据库内）**。 如果您有 SQL Server 2016，安装此功能以启用 SQL Server 中 R 代码的执行。
@@ -85,7 +85,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 7. 安装完成时，如果要求您重新启动计算机后请立即登录。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
 
-##  <a name="bkmk_enableFeature"></a>启用外部脚本执行
+##  <a name="bkmk_enableFeature"></a>启用脚本执行
 
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 

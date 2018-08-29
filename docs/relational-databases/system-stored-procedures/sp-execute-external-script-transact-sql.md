@@ -21,17 +21,19 @@ helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
+ms.openlocfilehash: 5e866f5a9856fe1308bc5233432e053b18d207f7
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086169"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118315"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   执行作为外部位置处的参数提供的脚本。 必须支持并已注册的语言 （R 或 Python） 编写脚本。 若要执行**sp_execute_external_script**，必须先通过使用该语句中，启用外部脚本`sp_configure 'external scripts enabled', 1;`。  
