@@ -1,6 +1,6 @@
 ---
 title: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
-description: Microsoft OLE DB Driver for SQL Server
+description: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - MSOLEDBSQL
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6fd7f5262359597694717927c0a87f4861cc6b4f
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 3e1764fdd2a96fcf1d0da218ef86b2e4cb62fd8c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108049"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025908"
 ---
-# <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
+# <a name="microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
@@ -68,13 +68,13 @@ OLE DB 已[取消弃用](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/1
 > 若要在现有应用程序中使用 SQL Server，新 Microsoft OLE DB 驱动程序，您应计划将连接字符串从 SQLOLEDB 或 SQLNCLI，转换为 MSOLEDBSQL。
   
 ## <a name="in-this-section"></a>本节内容  
-[何时使用 SQL Server 的 OLE DB 驱动程序](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
+[何时使用适用于 SQL Server 的 OLE DB 驱动程序](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  讨论适用于 SQL Server 的 OLE DB 驱动程序与 Microsoft 数据访问技术的适应度如何，探讨它与 Windows DAC 和 ADO.NET 相比较如何，同时提供建议，帮助用户决定要采用哪种数据访问技术。  
   
  [适用于 SQL Server 的 OLE DB 驱动程序功能](../oledb/features/oledb-driver-for-sql-server-features.md )  
  介绍 SQL Server 的 OLE DB 驱动程序所支持的功能。  
   
- [使用 SQL Server 的 OLE DB 驱动程序构建应用程序](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  简要介绍适用于 SQL Server 的 OLE DB 驱动程序，包括它与 Windows DAC 的差异、其使用的组件，以及如何将其与 ADO 结合。  
   
  本部分还讨论了 SQL Server 安装和部署，包括如何重新发布的 SQL Server 库，OLE DB 驱动程序的 OLE DB 驱动程序。  

@@ -19,12 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac43acc93f9a08439b5acfe42612a1a38feafe0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8509cdaa97609249babaa45af4a0533dc3c9d443
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830712"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787807"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>getByte 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +49,10 @@ public byte getByte(java.lang.String columnName)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 getByte 方法指定此 getByte 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getByte 方法由 java.sql.CallableStatement 接口中的 getByte 方法指定。  
   
- 只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  
+ 只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getByte 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

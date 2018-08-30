@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60adf00e05d190f72229b252a3877b417be7f260
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c5b69cb8fac0d91728e9cef945e83159e3151bc5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109429"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024415"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本指南介绍了执行之间的日期/时间转换[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本） 和 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序。  
+  说明在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）与使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
  下表说明了返回到客户端的类型与绑定中的类型之间的转换。 对于输出参数，如果在调用 icommandwithparameters:: Setparameterinfo 和中指定的类型*pwszDataSourceType*不的匹配将由服务器执行在服务器上，隐式转换的实际类型并返回到客户端的类型将匹配 icommandwithparameters:: Setparameterinfo 通过指定的类型。 如果服务器的转换规则与本文中介绍的规则不同，则可能会导致意外的转换结果。 例如，在必须提供默认日期时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 1900-1-1，而不是 1899-12-30。  

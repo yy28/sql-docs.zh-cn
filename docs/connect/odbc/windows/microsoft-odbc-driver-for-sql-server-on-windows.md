@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047435"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783844"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server（Windows 平台）
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Microsoft ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]是独立的 ODBC 驱动程序可实现 Microsoft 的标准 ODBC 接口应用程序编程接口 (API) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。
+Microsoft ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]是独立的 ODBC 驱动程序可实现 Microsoft 的标准 ODBC 接口应用程序编程接口 (API) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
 
 Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以升级当前使用较旧的 ODBC 驱动程序的较旧应用程序。 ODBC Driver for SQL Server 支持与 Azure SQL 数据库、Azure SQL 数据仓库、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 SQL Server 2005 的连接。  
 
@@ -38,7 +38,7 @@ Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>识别驱动程序的连接池</li><li>连接复原</li><li>异步执行（轮询方法）</li></ul> |    
 
 ## <a name="documentation"></a>文档  
-用于 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的此文档包括：  
+用于 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的此文档包括：  
   
 -   [发行说明](../../../connect/odbc/windows/release-notes.md)  
 -   [Windows 上的 Microsoft ODBC Driver for SQL Server 的功能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

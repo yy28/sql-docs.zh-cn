@@ -1,5 +1,5 @@
 ---
-title: 步骤 3： 连接到 SQL 使用 Ruby 的概念证明 |Microsoft 文档
+title: 步骤 3：使用 Java 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f490f0145eb4be0349cef4defdcc8b5fbce265ad
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b79d404bfc2dc19dc2028f5001a92ec5b9293b55
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310076"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42785588"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步骤 3： 连接到 SQL 使用 Ruby 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>步骤 3：使用 Ruby 连接到 SQL 的概念证明
 
-此示例中，应考虑仅概念证明。  示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
+此示例中，应考虑仅概念证明。  示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。  
   
 ## <a name="step-1--connect"></a>步骤 1： 连接  
   
@@ -38,11 +38,11 @@ ms.locfileid: "35310076"
   
 ## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
-复制并将以下代码粘贴到空文件中。 Test.rb。 然后，执行它通过从命令提示符下输入以下命令：  
+复制并粘贴到空文件中的以下代码。 Test.rb。 然后通过在命令提示符下输入以下命令来执行它：  
   
     ruby test.rb  
   
-在代码示例中， [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds)函数用于检索针对 SQL 数据库设置从查询结果。 此函数接受查询并返回一个结果集。 使用循环访问结果集[result.each do | 行 |](https://github.com/rails-sqlserver/tiny_tds)。  
+在代码示例中， [TinyTds::Result](https://github.com/rails-sqlserver/tiny_tds)函数用于检索针对 SQL 数据库的查询集的结果。 此函数可接受任何查询并返回结果集。 使用循环访问结果集[result.each do | 行 |](https://github.com/rails-sqlserver/tiny_tds)。  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -58,11 +58,11 @@ ms.locfileid: "35310076"
   
 ## <a name="step-3--insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中，你将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句安全地，传递参数，保护你的应用程序从该[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此示例中您将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
-若要配合使用 TinyTDS 和 Azure，建议你运行多个`SET`语句来更改当前会话处理特定信息的方式。 建议`SET`中的代码示例提供了语句。 例如，`SET ANSI_NULL_DFLT_ON`将允许创建新列来允许 null 值，即使未显式指定列的为 null 性状态。  
+若要使用 TinyTDS 和 Azure，建议运行多个`SET`语句以更改当前会话处理特定信息的方式。 建议`SET`语句代码示例中所提供。 例如，`SET ANSI_NULL_DFLT_ON`将允许创建新列来允许 null 值，即使未显式指定列的为空性状态。  
   
-为了符合 Microsoft SQL Server [datetime](http://msdn.microsoft.com/library/ms187819.aspx)格式，请使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函数转换成对应的日期时间格式。  
+若要符合 Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md)格式，请使用[strftime](http://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime)函数转换成相应的日期时间格式。  
   
 ``` ruby
     require 'tiny_tds'  

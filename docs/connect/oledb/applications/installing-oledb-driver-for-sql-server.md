@@ -1,5 +1,5 @@
 ---
-title: 安装用于 SQL Server 的 OLE DB 驱动程序 |Microsoft Docs
+title: 适用于 SQL Server 的 Microsoft OLE DB 驱动程序 | Microsoft Docs
 description: 安装和卸载 SQL Server 的 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/12/2018
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], installing OLE DB Driver for SQL Server
 - removing OLE DB Driver for SQL Server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7e435aef0d4499f62ea8b6255ce25440436c3cbc
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 10bf2ce673543cbad21bccdac35ac863647e910a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106213"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019146"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>安装适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

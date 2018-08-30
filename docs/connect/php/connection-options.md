@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367639"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783991"
 ---
 # <a name="connection-options"></a>连接选项
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "39367639"
 |keyStoreSecret|String|查找 Azure 密钥保管库的访问的帐户的凭据密码。 <br /><br />如果 KeyStoreAuthentication **KeyVaultPassword**，它必须是 Azure Active Directory 密码。 <br /><br />如果 KeyStoreAuthentication **KeyVaultClientSecret**，这必须是应用程序客户端密码。|未设置。|
 |LoginTimeout|整数（SQLSRV 驱动程序）<br /><br />字符串（PDO_SQLSRV 驱动程序）|指定在连接尝试失败前等待的秒数。|无超时。|  
 |MultipleActiveResultSets|1 或 **true** ，表示使用多个活动的结果集。<br /><br />0 或 **false** ，表示禁用多个活动的结果集。|禁用或显式启用对多个活动的结果集 (MARS) 的支持。<br /><br />有关详细信息，请参阅[如何：禁用多个活动结果集 (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。|true (1)|  
-|MultiSubnetFailover|String|在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=yes。 multiSubnetFailover=yes 将配置 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 以便更快地检测和连接到（当前）活动服务器。 可能的值为 Yes 和 No。<br /><br />有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|否|  
+|MultiSubnetFailover|String|在连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 multiSubnetFailover=yes。 multiSubnetFailover=yes 将配置 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 以便更快地检测和连接到（当前）活动服务器。 可能的值为 Yes 和 No。<br /><br />有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|否|  
 |PWD<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|String|指定与使用 SQL Server 身份验证进行连接时使用的用户 ID 关联的密码<sup>4</sup>。|未设置任何值。|  
 |QuotedId|1 或 true，表示使用 SQL-92 规则。<br /><br />0 或 **false** ，表示使用旧规则。|指定对带引号的标识符是使用 SQL-92 规则（1 或 true）还是使用旧的 Transact-SQL 规则（0 或 false）。|true (1)|  
 |ReturnDatesAsStrings<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|1 或 **true** ，表示以字符串的形式返回日期和时间类型。<br /><br />0 或 **false** ，表示以 PHP **DateTime** 的形式返回日期和时间类型。|以字符串或 PHP 类型的形式检索日期和时间类型（datetime、date、time、datetime2 和 datetimeoffset）。 当使用 PDO_SQLSRV 驱动程序时，日期将以字符串的形式返回。 PDO_SQLSRV 驱动程序不包含 datetime 类型。<br /><br />有关详细信息，请参阅 [如何：使用 SQLSRV 驱动程序以字符串的形式检索日期和时间类型](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)。|**false**|  
 |可滚动|String|“缓冲”表示你希望使用客户端（缓冲）游标，这将允许你将整个结果集缓存到内存。 有关详细信息，请参阅[游标类型（SQLSRV 驱动程序）](../../connect/php/cursor-types-sqlsrv-driver.md)。|只进游标|  
-|“服务器”<br /><br />（在 SQLSRV 驱动程序中不受支持）|String|要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。<br /><br />你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|Server 是必需的关键字（尽管它不必是连接字符串中的第一个关键字）。 如果服务器名称未传递给该关键字，将尝试连接到本地实例。<br /><br />传递给 Server 的值可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的名称，也可以是该实例的 IP 地址。 你可以选择指定一个端口号（例如 `sqlsrv:server=(local),1033`）。<br /><br />从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 3.0 开始，你还可以指定带有 `server=(localdb)\instancename`的 LocalDB 实例。 有关详细信息，请参阅[对 LocalDB 的支持](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
+|“服务器”<br /><br />（在 SQLSRV 驱动程序中不受支持）|String|要连接到的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。<br /><br />你还可以指定要连接到 AlwaysOn 可用性组的虚拟网络名称。 有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|Server 是必需的关键字（尽管它不必是连接字符串中的第一个关键字）。 如果服务器名称未传递给该关键字，将尝试连接到本地实例。<br /><br />传递给 Server 的值可以是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称，也可以是该实例的 IP 地址。 你可以选择指定一个端口号（例如 `sqlsrv:server=(local),1033`）。<br /><br />从 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的版本 3.0 开始，你还可以指定带有 `server=(localdb)\instancename`的 LocalDB 实例。 有关详细信息，请参阅[对 LocalDB 的支持](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。|  
 |TraceFile|String|指定用于跟踪数据的文件的路径。|未设置任何值。|  
 |TraceOn|1 或 **true** ，表示启用跟踪。<br /><br />0 或 **false** ，表示禁用跟踪。|指定对正在建立的连接是启用（1 或 true）还是禁用（0 或 false）ODBC 跟踪。|false (0)|  
 |TransactionIsolation|SQLSRV 驱动程序使用以下值：<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 驱动程序使用以下值：<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|指定事务隔离级别。<br /><br />有关事务隔离的详细信息，请参阅 SQL Server 文档中的 [设置事务隔离级别](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。|SQLSRV_TXN_READ_COMMITTED<br /><br />或多个<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
@@ -67,7 +67,7 @@ ms.locfileid: "39367639"
 
 3. 因为加密数据需要计算开销，所以启用 *Encryption* 可能会影响某些应用程序的性能。  
 
-4. 要连接到的 *UID* 身份验证进行连接时，必须同时设置 *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 属性。  
+4. 要连接到的 *UID* 身份验证进行连接时，必须同时设置 *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性。  
 
 许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅 [将连接字符串关键字用于 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 

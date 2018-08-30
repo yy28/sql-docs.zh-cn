@@ -1,5 +1,5 @@
 ---
-title: 系统要求 （适用于 SQL Server ODBC 驱动程序） |Microsoft Docs
+title: 适用于 SQL Server 的 OLE DB 驱动程序的系统要求 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/14/2018
 ms.prod: sql
@@ -18,17 +18,17 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bab69d8a2ebf405e99cc9cff7e4cdadb94d79f98
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fcac85e31f20d84377a2788e373892e05e8fddfa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047480"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783994"
 ---
 # <a name="system-requirements"></a>系统要求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本主题列出了使用 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的要求。
+本主题列出了使用 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的要求。
 
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>Microsoft ODBC Driver 13、13.1 和 17 for SQL Server
@@ -52,7 +52,7 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
 |Ubuntu Linux 16.10|13、13.1|
 |Ubuntu Linux 17.10|17|
 
-安装包[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13、 13.1 和 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 和 macOS 上解决驱动程序的依赖项时自动启动中所述使用您的发布的程序包管理系统的安装[安装驱动程序](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
+安装包[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver 13、 13.1 和 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 和 macOS 上解决驱动程序的依赖项时自动启动中所述使用您的发布的程序包管理系统的安装[安装驱动程序](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)。
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   

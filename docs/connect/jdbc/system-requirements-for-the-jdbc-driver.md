@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662279"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783992"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驱动程序的系统要求
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 访问 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 或 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中的数据，计算机上必须安装有下列组件：
+  若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] 或 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 中的数据，计算机上必须安装有下列组件：
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]（[下载](download-microsoft-jdbc-driver-for-sql-server.md)）
 - Java 运行时环境
@@ -44,7 +44,7 @@ ms.locfileid: "39662279"
   
 **Microsoft JDBC Driver 7.0 for SQL Server：**  
 
-  JDBC 驱动程序 7.0 在每个安装包中包含两个 JAR 类库： **mssql jdbc 7.0.0.jre8.jar**，并**mssql jdbc 7.0.0.jre10.jar**。
+  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar。
 
   JDBC Driver 7.0 旨在用于所有主要 Sun 等效 Java 虚拟机并受其支持，但仅在 Sun JRE 8.0 和 10.0 上经过测试。
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662279"
   
 **Microsoft JDBC Driver 6.4 for SQL Server：**  
 
-  JDBC Driver 6.4 中每个安装包包括三个 JAR 类库： **mssql jdbc 6.4.0.jre7.jar**， **mssql jdbc 6.4.0.jre8.jar**，和**mssql jdbc 6.4.0.jre9.jar**.
+  JDBC Driver 6.2 在每个安装包中包含两个 JAR 类库：mssql-jdbc-6.2.2.jre7.jar 和 mssql-jdbc-6.2.2.jre8.jar。
 
   JDBC Driver 6.4 旨在与所有主要的 Sun 等效 Java 虚拟机兼容并受其支持，但仅在 Sun JRE 7.0、8.0 和 9.0 上进行测试。
   
@@ -149,9 +149,9 @@ JDBC Driver 6.4 还在 Maven 中央存储库上可用，并且在可以通过在
  JDBC 驱动程序可在任何支持使用 Java 虚拟机 (JVM) 的操作系统上工作。 但是，只有 Sun Solaris、SUSE Linux 以及 Windows 操作系统经过了官方测试。  
   
 ## <a name="supported-languages"></a>支持的语言  
- JDBC 驱动程序支持所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 列排序规则。 有关 JDBC 驱动程序支持的排序规则的详细信息，请参阅[JDBC 驱动程序的国际化功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)。  
+ JDBC 驱动程序支持所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列排序规则。 有关 JDBC 驱动程序支持的排序规则的详细信息，请参阅[JDBC 驱动程序的国际化功能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)。  
   
- 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 联机丛书中的“使用排序规则”。  
+ 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的“使用排序规则”。  
   
 ## <a name="see-also"></a>另请参阅  
  [JDBC 驱动程序的概述](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

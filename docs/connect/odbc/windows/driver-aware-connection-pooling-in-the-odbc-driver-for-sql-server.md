@@ -14,20 +14,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060005"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784164"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 支持[识别驱动程序的连接池](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中识别驱动程序的连接池的增强功能：  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
   
 -   无论连接属性如何，使用 `SQLDriverConnect` 的连接都会从使用 `SQLConnect` 的连接转到单独的池。
-- 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 身份验证和识别驱动程序的连接池时，该驱动程序不会使用当前线程的 Windows 用户安全上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 当使用 Windows 身份验证和识别驱动程序的连接池时，该驱动程序将使用当前 Windows 用户的安全上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。
+- 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和识别驱动程序的连接池时，该驱动程序不会使用当前线程的 Windows 用户安全上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 当使用 Windows 身份验证和识别驱动程序的连接池时，该驱动程序将使用当前 Windows 用户的安全上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。
 - 使用 Azure Active Directory 和识别驱动程序的连接池时，该驱动程序还使用身份验证值来确定在连接池中的成员身份。
   
 -   识别驱动程序的连接池将阻止该池返回错误的连接。  

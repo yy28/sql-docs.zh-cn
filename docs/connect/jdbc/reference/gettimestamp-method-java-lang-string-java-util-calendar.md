@@ -1,5 +1,5 @@
 ---
-title: getTimestamp 方法 （java.lang.String，java.util.Calendar） |Microsoft 文档
+title: getTimestamp 方法 (java.lang.String, java.util.Calendar)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d9ddd1eb04d53db86d882c4b09659ff9cb8ae27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cff62d2115540d3e7644cdca65dd912fc7621234
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838812"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787805"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  作为 Java 编程语言中，由参数名称，使用日历对象中的 java.sql.Timestamp 对象中检索指定参数的值。  
+  根据给定的参数名称，使用  对象检索指定参数的值作为 Java 编程语言中的 java.sql.Timestamp 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +46,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  *cal*  
   
- 日历对象中。  
+ 一个日历对象。  
   
 ## <a name="return-value"></a>返回值  
  一个时间戳的对象。  
@@ -54,10 +54,10 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定此 getTimestamp 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTimestamp 方法由 java.sql.CallableStatement 接口中的 getTimestamp 方法指定。  
   
- 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] datetime 和 smalldatetime 列返回值。  
+ 此方法只从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 和 smalldatetime 列返回值。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTimestamp 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   

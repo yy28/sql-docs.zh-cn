@@ -1,5 +1,5 @@
 ---
-title: getByte 方法 (int) (SQLServerResultSet) |Microsoft 文档
+title: getByte 方法 (int) (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 680ec767951137aa18d686939bc3941d9549006e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 984c18407995e577bcafac596e8a7ef94ec7eb1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831092"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787789"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +49,10 @@ public byte getByte(int columnIndex)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 getByte 方法指定此 getByte 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getByte 方法由 java.sql.CallableStatement 接口中的 getByte 方法指定。  
   
- 只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  
+ 只有可以安全返回 byte 值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 tinyint 和 bit）才支持此方法。 任何其他数据类型将会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [getByte 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   

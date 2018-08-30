@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054715"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786618"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此版本驱动程序中的已知问题
 
@@ -30,7 +30,7 @@ ms.locfileid: "38054715"
 
 其他问题将在 [Microsoft ODBC 驱动程序团队博客](http://blogs.msdn.com/b/sqlnativeclient/)上发布。  
 
-- Windows、Linux 和 macOS 可以采用不同方式转换来自专用区 (PUA) 或最终用户定义的字符 (EUDC) 的字符。 在服务器上执行的 [!INCLUDE[tsql](../../../includes/tsql_md.md)] 内的转换将使用 Windows 转换库。 驱动程序中的转换使用的 Windows、 Linux 或 macOS 转换库。 在执行这些转换时，每个库可能会产生不同的结果。 有关详细信息，请参阅 [最终用户定义的字符和专用区字符](http://msdn.microsoft.com/library/dd317802.aspx)。
+- Windows、Linux 和 macOS 可以采用不同方式转换来自专用区 (PUA) 或最终用户定义的字符 (EUDC) 的字符。 在服务器上执行的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内的转换将使用 Windows 转换库。 驱动程序中的转换使用的 Windows、 Linux 或 macOS 转换库。 在执行这些转换时，每个库可能会产生不同的结果。 有关详细信息，请参阅 [最终用户定义的字符和专用区字符](/windows/desktop/Intl/end-user-defined-characters)。
 
 - 如果客户端编码为 utf-8，驱动程序管理器不始终正确转换从 utf-8 到 utf-16。 目前，当字符串中的一个或多个字符不是有效的 utf-8 字符时，会发生数据损坏。 ASCII 字符已正确映射。 当调用 SQLCHAR 版本的 ODBC API（例如 SQLDriverConnectA）时，驱动程序管理器尝试此转换。 当调用 SQLWCHAR 版本的 ODBC API（例如，SQLDriverConnectW）时，驱动程序管理器不会尝试此转换。  
 

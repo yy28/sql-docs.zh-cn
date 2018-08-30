@@ -14,21 +14,21 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4b68de60f6d1ffa345018478b5abc70ecf2839b
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: b2339270e54cd05209e4843c66e3339b9aae270f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109819"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028026"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>在客户端和服务器之间执行的转换
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本指南介绍了执行之间的日期/时间转换为 SQL Server 通过 OLE DB 驱动程序编写的客户端应用程序和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）。  
+  说明在使用适用于 SQL Server 的 OLE DB 驱动程序编写的客户端应用程序与 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更高版本）之间执行的日期/时间转换。  
   
 ## <a name="conversions"></a>转换  
  本文介绍在客户端上执行的转换。 如果客户端指定的参数的秒的小数部分精度不同于服务器上定义的精度，那么，客户端转换将在该服务器允许成功执行该操作时导致失败。 特别是，客户端将将秒的小数部分的任何截断视为错误，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 将时间值舍入为最接近的整数秒数。  

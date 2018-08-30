@@ -16,17 +16,17 @@ caps.latest.revision: 69
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6d26bdd9d3d91ca138e6ae4413acd122eb4676b3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ab32d1ac12bbe6f81241590a1e61b9579772cb7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946941"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784165"
 ---
-# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>在 Linux 和 macOS 上安装 Microsoft ODBC Driver for SQL Server
+# <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>安装 Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-本文介绍如何安装[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]有关 Linux 和 macOS，以及适用于 SQL Server 的可选命令行工具 (`bcp`和`sqlcmd`) 和 unixODBC 开发标头。
+本文介绍如何安装[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC 驱动程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]有关 Linux 和 macOS，以及适用于 SQL Server 的可选命令行工具 (`bcp`和`sqlcmd`) 和 unixODBC 开发标头。
 
 ## <a name="microsoft-odbc-driver-17-for-sql-server"></a>Microsoft ODBC Driver 17 for SQL Server 
 
@@ -439,7 +439,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
   
 若要验证 Linux 上的 Microsoft ODBC 驱动程序是否已成功注册，请执行以下命令：```odbcinst -q -d -n "ODBC Driver 11 for SQL Server"```。  
   
-[对 Linux 上的 ODBC 驱动程序使用现有 MSDN C++ ODBC 示例](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 会使用 Linux 上的 ODBC 驱动程序显示一个连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的代码示例。  
+[对 Linux 上的 ODBC 驱动程序使用现有 MSDN C++ ODBC 示例](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 会使用 Linux 上的 ODBC 驱动程序显示一个连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的代码示例。  
   
 **卸载**  
   
@@ -454,7 +454,7 @@ ldd /opt/microsoft/msodbcsql/lib64/libmsodbcsql-*
 4.  `odbcinst -u -d -n "ODBC Driver 11 for SQL Server"`
   
 ## <a name="troubleshooting-connection-problems"></a>解决连接问题  
-如果使用 ODBC 驱动程序无法连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] ，请使用以下信息确定问题原因。  
+如果使用 ODBC 驱动程序无法连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ，请使用以下信息确定问题原因。  
   
 最常见的连接问题是安装两个 UnixODBC 驱动程序管理器的副本。 搜索 /usr 以查找 libodbc\*.so\*。 如果看到多个版本的文件，则（可能）安装了多个驱动程序管理器。 你的应用程序可能会使用错误的版本。
   
@@ -510,7 +510,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
 
 |组件|描述|  
 |---------------|-----------------|  
-|libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|共享的对象 (`so`) 动态库文件，其中包含的所有驱动程序的功能。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
+|libmsodbcsql 17。X.so.X.X 或 libmsodbcsql 13。X.so.X.X|包含该驱动程序所有功能的动态库 (`so`) 文件。 此文件安装在`/opt/microsoft/msodbcsql17/lib64/`Driver 17 并在`/opt/microsoft/msodbcsql/lib64/`为 Driver 13。|  
 |`msodbcsqlr17.rll` 或 `msodbcsqlr13.rll`|驱动程序库的附带资源文件。 此文件安装在 `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|头文件，它包含使用驱动程序所需的所有新定义。<br /><br /> **注意：**  你无法在同一个程序中引用 msodbcsql.h 和 odbcss.h。<br /><br /> msodbcsql.h 安装在`/opt/microsoft/msodbcsql17/include/`Driver 17 并在`/opt/microsoft/msodbcsql/include/`为 Driver 13。 |
 |LICENSE.txt|包含最终用户许可协议的条款的文本文件。 此文件放在`/usr/share/doc/msodbcsql17/`Driver 17 并在`/usr/share/doc/msodbcsql/`为 Driver 13。|

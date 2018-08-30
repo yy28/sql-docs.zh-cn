@@ -1,5 +1,5 @@
 ---
-title: updateBinaryStream 方法 （int、 java.io.InputStream，int） |Microsoft 文档
+title: updateBinaryStream 方法 (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad1c7458e575feff290d0439c9a47c1b64dabd2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d970ee4ac6fae226cbdaacd0eecf8c15593eb49a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785583"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-int"></a>updateBinaryStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,26 +47,26 @@ public void updateBinaryStream(int columnIndex,
   
  *x*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
  *length*  
   
- **Int** ，该值指示流的长度。  
+ 指示流长度的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateBinaryStream 方法指定此 updateBinaryStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateBinaryStream 方法由 java.sql.ResultSet 接口中的 updateBinaryStream 方法指定。  
   
- 此方法将从 InputStream 对象选择传递字节[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]如二进制、 varbinary、 varbinary （max）、 图像、 xml 和 udt 的二进制列。 此方法不支持更新字符列。 若要更新使用 InputStream 字符列，请使用[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)方法。  
+ 此方法将来自 InputStream 对象的字节传递给所选的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 二进制列，例如 binary、varbinary、varbinary(max)、image、xml 和 udt。 此方法不支持更新字符列。 若要使用 InputStream 更新字符列，请使用 [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) 方法。  
   
- 如果不同于在指定流的长度时*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[updateBinaryStream 方法&#40;int、 java.io.InputStream&#41; ](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [updateAsciiStream 方法 (int, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateBinaryStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
+ [updateBinaryStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

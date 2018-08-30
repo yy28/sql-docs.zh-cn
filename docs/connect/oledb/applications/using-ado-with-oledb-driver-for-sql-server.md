@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ADO [OLE DB Driver for SQL Server]
 - MSOLEDBSQL, ADO
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e1fdea857c21b66fd4e72f541f9a6a653aeb44c6
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 08872859a41b77dfe0ed972a4e43b689adfc83f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108079"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026053"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -171,4 +171,4 @@ Set con = Nothing
  在以前的 OLE DB 访问接口版本中，该代码会导致在第二次执行时创建隐式的连接，因为每个单独的连接只能打开一个活动的结果集。 由于该隐式连接未加入 OLE DB 连接池，因此这会导致额外的开销。 借助适用于 SQL Server 的 OLE DB 驱动程序提供的 MARS 功能，可在一个连接上获取多个活动结果。  
 
 ## <a name="see-also"></a>另请参阅  
- [使用 OLE DB Driver for SQL Server 构建应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [使用适用于 SQL Server 的 OLE DB 驱动程序生成应用程序](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

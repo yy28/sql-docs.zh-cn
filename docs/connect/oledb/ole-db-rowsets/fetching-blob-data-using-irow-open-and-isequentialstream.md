@@ -1,5 +1,5 @@
 ---
-title: 使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
+title: 使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 数据 | Microsoft Docs
 description: 使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 8e38c8886a491eca788d17b39602e7f5d7d0b1ee
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109769"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031424"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  IRow::Open** 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型。  
+  IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型。  
   
  以下函数使用 IRow::Open **和 ISequentialStream** 提取大型数据。  
   

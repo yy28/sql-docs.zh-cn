@@ -12,21 +12,21 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d2f4cd73d4d20d4b54573b300c5006bebd5fb6eb
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1cfbd5bce17c658a7dff33bc7a590a22d525c193
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108999"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018186"
 ---
 # <a name="sparse-columns-support-ole-db"></a>稀疏列支持 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本主题提供有关 OLE DB 驱动程序对稀疏列的 SQL Server 支持的信息。 有关稀疏列的详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 中的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 有关示例，请参阅[显示列和目录元数据对稀疏列&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
+  本主题提供有关 OLE DB 驱动程序对稀疏列的 SQL Server 支持的信息。 有关稀疏列的详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 中的稀疏列支持](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 [显示稀疏列的列和目录元数据 (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB 语句元数据  
  从 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 开始，可以使用新的 DBCOLUMNFLAGS 标记值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。 应当为是 column_set 值的列设置该值。 可以通过检索 DBCOLUMNFLAGS 标记*dwFlags* icolumnsinfo:: Getcolumnsinfo 和 icolumnsrowset:: Getcolumnsrowset 返回的行集的 DBCOLUMN_FLAGS 列的参数。  

@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833375"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776581"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 的最大容量规范](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 的最大容量规范](maximum-capacity-specifications-for-sql-server.md)。
 
   以下各表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。 若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36833375"
 |每个数据库的日志文件数||@shouldalert|  
 |每台计算机的卷数||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](https://msdn.microsoft.com/library/ee210548.aspx)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
+ * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具支持的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 托管实例的最大数目将会依服务器的硬件配置而定。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序 (DAC) 中测试的各种对象的最大大小和最大数量。  
