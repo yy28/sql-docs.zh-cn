@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.soap_endpoints catalog view
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f3af00bccbef87dd6390c5421b8d625e4b6ed42
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6a867b5d2caf4c21c6b99215b5e7e546d210aabc
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981596"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022286"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "37981596"
 |**login_type**|**nvarchar(60)**|此端点允许的身份验证类型。<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**int**|允许的最大 SOAP 标头大小。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  
