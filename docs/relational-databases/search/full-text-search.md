@@ -164,7 +164,7 @@ ms.locfileid: "43085434"
   
 |DocumentID|Title|  
 |----------------|-----------|  
-|@shouldalert|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -178,20 +178,20 @@ ms.locfileid: "43085434"
   
 |关键字|ColId|DocId|出现次数|  
 |-------------|-----------|-----------|----------------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|维护|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Front|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Bracket|@shouldalert|3|3|  
-|Assembly|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
-|安装|@shouldalert|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|维护|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
+|安装|1|3|4|  
   
  **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
   
@@ -214,8 +214,8 @@ ms.locfileid: "43085434"
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  从 Fragment 2 可以看到，全文查询需要在内部查询每个碎片，并放弃更旧的条目。 因此，全文索引中太多的全文索引碎片会导致查询性能大幅下降。 若要减少碎片数，请使用 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 REORGANIZE 选项来重新组织全文目录。 此语句将执行一次 *主合并*，主合并将碎片合并成一个更大的碎片，并从全文索引中删除所有过时的条目。  
   
@@ -223,18 +223,18 @@ ms.locfileid: "43085434"
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|维护|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Assembly|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|维护|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
 
 ### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>全文索引和普通 SQL Server 索引之间的区别：  
   
