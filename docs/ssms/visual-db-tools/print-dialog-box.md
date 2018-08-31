@@ -17,12 +17,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8da38abc3b4725530abaf812381d0197812fe6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e74ee9c4579071b14072dcccbab493126d69a0cb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049534"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776060"
 ---
 # <a name="print-dialog-box"></a>“打印”对话框
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33049534"
   
 ## <a name="printer"></a>打印机  
 **名称**  
-指定打印机。 从列表中选择打印机。 您选择的打印机将成为默认打印机，直至您关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 或选择另一不同的打印机。 在列表下方字段中显示的信息适用于所选打印机。  
+指定打印机。 从列表中选择打印机。 您选择的打印机将成为默认打印机，直至您关闭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或选择另一不同的打印机。 在列表下方字段中显示的信息适用于所选打印机。  
   
 **“状态”**  
 描述所选打印机的状态，例如：忙或准备就绪。  

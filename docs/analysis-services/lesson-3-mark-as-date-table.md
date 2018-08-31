@@ -1,6 +1,6 @@
 ---
-title: 第 4 课： 标记为日期表 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 3 课： 标记为日期表 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 77f29250621485f5606a0bf33615e8d15eb7d80b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7cb63b6cb67303dd763263b7d9dbeea30cfc4e3b
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057805"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42791978"
 ---
-# <a name="lesson-3-mark-as-date-table"></a>第 3 课： 标记为日期表
+# <a name="lesson-3-mark-as-date-table"></a>第 3 课：标记为日期表
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在“第 2 课：添加数据”中，您导入了名为 DimDate 的维度表。 虽然在模型中此表名为 DimDate，它可能也被称为*日期表*，它包含日期和时间数据。  

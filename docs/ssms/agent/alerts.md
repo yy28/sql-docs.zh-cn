@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc18be0111569885414ab861a8b7f978e1bd128c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 27ac7d69367739e074a7d5c94ced4cdd9325097d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985679"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776061"
 ---
 # <a name="alerts"></a>Alerts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38985679"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
+事件由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成并被输入到 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 应用程序日志中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理读取应用程序日志，并将写入的事件与定义的警报比较。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理找到匹配项时，它将发出自动响应事件的警报。 除了监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理还监视性能条件和 Windows Management Instrumentation (WMI) 事件。  
   
 若要定义警报，需要指定：  
   
@@ -49,17 +49,17 @@ ms.locfileid: "38985679"
   
 -   触发警报的事件或性能条件。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理响应事件或性能条件所执行的操作。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理响应事件或性能条件所执行的操作。  
   
 ## <a name="naming-an-alert"></a>命名警报  
-每个警报都必须有一个名称。 警报名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例内必须唯一，并且不能超过 **128** 个字符。  
+每个警报都必须有一个名称。 警报名称在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内必须唯一，并且不能超过 **128** 个字符。  
   
 ## <a name="selecting-an-event-type"></a>选择事件类型  
 一个警报响应一种特定的事件。 警报响应下列事件类型：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 性能条件  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 性能条件  
   
 -   WMI 事件  
   
@@ -70,22 +70,22 @@ ms.locfileid: "38985679"
   
 -   **错误号**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在发生特定错误时发出警报。 例如，可以指定错误号 2571 来响应未经授权就尝试调用数据库控制台命令 (DBCC) 的操作。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在发生特定错误时发出警报。 例如，可以指定错误号 2571 来响应未经授权就尝试调用数据库控制台命令 (DBCC) 的操作。  
   
 -   **严重级别**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在发生特定级别的严重错误时发出警报。 例如，可以指定严重级别 15 来响应 Transact-SQL 语句中的语法错误。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在发生特定级别的严重错误时发出警报。 例如，可以指定严重级别 15 来响应 Transact-SQL 语句中的语法错误。  
   
 -   **“数据库”**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理仅在特定数据库中发生事件时才发出警报。 此选项是对错误号或严重级别的补充。 例如，如果实例中包含一个用于生产的数据库和一个用于报告的数据库，可以定义仅响应生产数据库中的语法错误的警报。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理仅在特定数据库中发生事件时才发出警报。 此选项是对错误号或严重级别的补充。 例如，如果实例中包含一个用于生产的数据库和一个用于报告的数据库，可以定义仅响应生产数据库中的语法错误的警报。  
   
 -   **事件文本**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理在指定事件的事件消息中包含特定文本字符串时发出警报。 例如，可以定义警报来响应包含特定表名或特定约束的消息。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定事件的事件消息中包含特定文本字符串时发出警报。 例如，可以定义警报来响应包含特定表名或特定约束的消息。  
   
 ## <a name="selecting-a-performance-condition"></a>选择性能条件  
-可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列项：  
+可以指定警报来响应特定的性能条件。 在这种情况下，需要指定要监视的性能计数器、警报的阈值以及警报发生时计数器必须执行的操作。 若要设置性能条件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列项：  
   
 -   **对象**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "38985679"
   
 -   **实例**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例定义了要监视的属性的特定实例（如果存在）。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例定义了要监视的属性的特定实例（如果存在）。  
   
 -   **计数器** 和 **值**  
   
@@ -109,15 +109,15 @@ ms.locfileid: "38985679"
     > 性能数据被周期性地采样，这会在达到阈值与发出性能警报之间造成短暂的延迟（几秒钟）。  
   
 ## <a name="selecting-a-wmi-event"></a>选择 WMI 事件  
-可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列内容：  
+可以指定发出警报来响应特定的 WMI 事件。 若要选择 WMI 事件，必须在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的“新建警报”或“警报属性”对话框中的“常规”页上定义下列内容：  
   
 -   **Namespace**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作为 WMI 客户端在 WMI 命名空间（使用该命名空间查询事件）进行注册。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作为 WMI 客户端在 WMI 命名空间（使用该命名空间查询事件）进行注册。  
   
 -   **Query**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理使用所提供的 Windows Management Instrumentation 查询语言 (WQL) 语句来标识特定事件。  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理使用所提供的 Windows Management Instrumentation 查询语言 (WQL) 语句来标识特定事件。  
   
 下列链接指向常见的任务：  
   

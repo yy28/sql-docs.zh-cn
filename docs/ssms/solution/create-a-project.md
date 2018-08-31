@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064645"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776172"
 ---
 # <a name="create-a-project"></a>创建项目
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38064645"
     在“模板”框中，选择一个模板。 在“模板”框下会显示所选项目模板的简短说明。  
   
     **名称**  
-    输入要创建的脚本项目的名称。 同时将会在“位置”字段中显示的位置创建一个与项目同名的文件夹。 对于某些项目，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 将创建源文件和其他支持文件，并将其添加到新项目文件夹中。  
+    输入要创建的脚本项目的名称。 同时将会在“位置”字段中显示的位置创建一个与项目同名的文件夹。 对于某些项目，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将创建源文件和其他支持文件，并将其添加到新项目文件夹中。  
   
     > [!NOTE]  
     > 对于某些项目类型，由于指定位置即设置了名称，所以“名称”文本框不可用。 例如，Web 应用程序和 Web 服务位于 Web 服务器上，因此它们的名称都取自其所在服务器上指定的虚拟目录。  
@@ -100,7 +100,7 @@ ms.locfileid: "38064645"
   
 4.  单击“确定” 。  
   
-您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置是 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\。  
+您可以设置脚本项目的名称，但文件夹名称则由 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 确定，并且不能更改。 可以使用“添加新项目”对话框，为一组公共文件夹配置驱动器和路径说明。 右键单击“解决方案资源管理器”中的解决方案图标，再单击“添加”。 脚本项目文件夹的默认位置是 C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\。  
   
 ## <a name="see-also"></a>另请参阅  
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)  

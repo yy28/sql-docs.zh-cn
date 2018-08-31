@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987819"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775941"
 ---
 # <a name="job-properties---new-job-steps-page"></a>作业属性 - 新建作业（“步骤”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987819"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-使用此页可以查看和组织 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理作业的作业步骤。  
+使用此页可以查看和组织 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的作业步骤。  
   
 ## <a name="options"></a>选项  
 **作业步骤列表**  
@@ -41,7 +41,7 @@ ms.locfileid: "37987819"
 在列表中将作业上移或下移一个步骤。  
   
 **开始步骤**  
-选择在作业开始时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理开始的步骤。  
+选择在作业开始时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理开始的步骤。  
   
 **新建**  
 在所选作业步骤下创建新的作业步骤。  

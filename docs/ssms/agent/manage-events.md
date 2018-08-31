@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981899"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776062"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "38981899"
 > [!IMPORTANT]  
 > [Azure SQL 数据库托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)目前支持大多数但并非所有 SQL Server 代理功能。 有关详细信息，请参阅 [Azure SQL 数据库托管实例与 SQL Server 之间的 T-SQL 差异](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)。
 
-可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例。 这称为“事件转发”。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  
+可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这称为“事件转发”。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  
   
 如果一台服务器收到另外一组服务器的事件，则接收事件的服务器称为“警报管理服务器”。 在多服务器环境下，可以将主服务器指定为警报管理服务器。  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>使用警报管理服务器的优点  
 设置警报管理服务器的优势包括：  
   
--   **集中性**。 可以从单台服务器对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 实例的事件进行集中控制，并获得这些事件的合并视图。  
+-   **集中性**。 可以从单台服务器对多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的事件进行集中控制，并获得这些事件的合并视图。  
   
 -   **可伸缩性** 许多物理服务器可以作为一台逻辑服务器来管理。 可以根据需要在这个物理服务器组中添加或删除服务器。  
   
@@ -68,15 +68,15 @@ ms.locfileid: "38981899"
   
 -   针对配置多台服务器共享同一台警报管理服务器时涉及的网络通信流量进行仔细计划。 如果发生阻塞，应减少特定警报管理服务器管理的服务器的数目。  
   
-    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 中注册的服务器组成一个列表，作为候选的警报转发服务器。  
+    在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中注册的服务器组成一个列表，作为候选的警报转发服务器。  
   
--   对于要求有服务器特定的响应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 本地实例，定义相应警报，而不是将警报转发给警报管理服务器。  
+-   对于要求有服务器特定的响应的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本地实例，定义相应警报，而不是将警报转发给警报管理服务器。  
   
     警报管理服务器将所有向其转发事件消息的服务器当作一个逻辑整体看待。 例如，警报管理服务器响应发自服务器 A 的 605 事件的方式和发自服务器 B 的 605 事件相同。  
   
--   配置了警报系统后，定期检查 Microsoft Windows 应用程序日志中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理事件。  
+-   配置了警报系统后，定期检查 Microsoft Windows 应用程序日志中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理事件。  
   
-    警报引擎遇到的失败情况都使用源名称“SQL Server 代理”写入本地 Windows 应用程序日志中。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 代理无法按照定义发出电子邮件通知，则应用程序日志会记录一个事件。  
+    警报引擎遇到的失败情况都使用源名称“SQL Server 代理”写入本地 Windows 应用程序日志中。 例如，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理无法按照定义发出电子邮件通知，则应用程序日志会记录一个事件。  
   
 如果一个本地定义的警报处于禁用状态时，发生了本来会触发该警报的事件，则该事件被转发给警报管理服务器（如果它满足警报转发条件）。 这种转发允许本地站点的用户按照需要禁用和启用本地替代警报（即同时也在警报管理服务器上定义的本地定义的警报）。 您也可以要求总是转发事件，即使它们也是由本地警报处理。  
   
