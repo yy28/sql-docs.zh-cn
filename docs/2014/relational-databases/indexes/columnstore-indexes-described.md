@@ -19,15 +19,15 @@ caps.latest.revision: 50
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9cd8b98b2e62dbc11d62e07b9b0d7e2ac3e05c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dd4fdcc7031f56850cded09b098356d2fbad195
+ms.sourcegitcommit: 4a9c89d72d91158832e89d96eb88cda616d36452
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211317"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42802527"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*内存中列存储索引*存储和管理通过使用基于列的数据存储和基于列的查询处理的数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *内存中列存储索引*存储和管理通过使用基于列的数据存储和基于列的查询处理的数据。 列存储索引适合于主要执行大容量加载和只读查询的数据仓库工作负荷。 与传统面向行的存储方式相比，使用列存储索引存档可最多提高 **10 倍查询性能** ，与使用非压缩数据大小相比，可提供多达 **7 倍数据压缩率** 。  
   
 > [!NOTE]  
 >  我们将聚集列存储索引视为存储大型数据仓库事实表的标准，希望它可在大多数数据仓库方案中使用。 由于聚集列存储索引是可更新的，因此工作负荷可执行大量插入、更新和删除操作。  

@@ -1,6 +1,6 @@
 ---
-title: 第 8 课： 创建关键绩效指标 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 7 课： 创建关键绩效指标 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033405"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790098"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>第 7 课： 创建关键绩效指标
+# <a name="lesson-7-create-key-performance-indicators"></a>第 7 课：创建关键绩效指标
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将创建关键绩效指标 (KPI)。 KPI 用于根据“目标”值度量由“基础”度量值定义的值（也可以是由度量值或绝对值定义的值）的性能。 在报表客户端应用程序中，KPI 可以向业务专业人士提供一种快速简便的方法，使他们了解业务绩效的摘要或确定趋势。 若要了解详细信息，请参阅[Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)。  

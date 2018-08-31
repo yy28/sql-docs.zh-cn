@@ -1,24 +1,24 @@
 ---
-title: 下载 NYC 出租车演示数据和脚本适用于嵌入 R （SQL Server 机器学习） |Microsoft Docs
-description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server 教程演示如何在 SQL Server 存储过程和 T-SQL 函数中嵌入 R 中使用数据。
+title: 下载 NYC 出租车演示数据和脚本适用于嵌入的 R 和 Python （SQL Server 机器学习） |Microsoft Docs
+description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server 教程演示如何嵌入 R 中使用数据和 Python 在 SQL Server 存储过程和 T-SQL 的函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395066"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703600"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>NYC 出租车演示数据加载为 SQL Server 教程
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>适用于 SQL Server 的 NYC 出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文为教程，介绍如何使用 SQL Server 中的数据库内分析 R 准备您的系统。
+本文为教程，介绍如何使用 SQL Server 中的数据库内分析 R 和 Python 准备您的系统。
 
 在此练习中，将下载示例数据，用于准备环境的 PowerShell 脚本和[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本在多个教程中使用的文件。 完成后， **NYCTaxi_Sample**有可用的本地实例，提供演示数据获得第一手学习数据库。 
 
@@ -30,9 +30,9 @@ ms.locfileid: "40395066"
 
 1.  打开 Windows PowerShell 命令控制台。
   
-    如果创建目标目录或将文件写入指定目标需要管理权限，请使用“以管理员身份运行”选项。
+    使用**以管理员身份运行**选项来创建目标目录或文件写入指定的目标。
   
-2.  运行以下 PowerShell 命令，将参数 DestDir 的值更改为任何本地目录。  此处使用的默认值是“TempRSQL”。
+2.  运行以下 PowerShell 命令，将参数 DestDir 的值更改为任何本地目录。 此处使用的默认值是“TempRSQL”。
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ ms.locfileid: "40395066"
     如果 DestDir 中指定的文件夹不存在，则可以通过 PowerShell 脚本创建。
   
     > [!TIP]
-    > 如果遇到错误，可以通过使用 Bypass 参数并将更改范围限制在当前会话，暂时将执行 PowerShell 脚本的策略设置为“不受限制”（仅用于本次演练）。
+    > 如果遇到错误，可以暂时将设置为 PowerShell 脚本执行策略**不受限制**仅用于本次演练通过使用 Bypass 参数并将当前会话更改范围。
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ ms.locfileid: "40395066"
   
     根据 Internet 连接，下载可能需要一段时间。
   
-3.  所有文件下载完成之后，PowerShell 脚本将打开 DestDir 指定的文件夹。 在 PowerShell 命令提示符中，运行以下命令并查看已下载的文件。
+3.  已下载的所有文件，PowerShell 脚本将打开到*DestDir*文件夹。 在 PowerShell 命令提示符中，运行以下命令并查看已下载的文件。
   
     ```
     ls
@@ -93,7 +93,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 - 服务器实例[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]已安装。 在默认实例，这可以很简单，只需为计算机名称。
 
-- 数据库名称。 对于本教程中，脚本假定`TaxiNYC_Sample`。
+- 数据库名称。 对于本教程中，脚本假定`NYCTaxi_Sample`。
 
 - 用户名和用户密码。 输入这些值的 SQL Server 数据库登录名。 或者，如果您修改了脚本，以接受受信任的 Windows 标识，则按 Enter 将这些值保留为空。 在连接上使用 Windows 标识。
 

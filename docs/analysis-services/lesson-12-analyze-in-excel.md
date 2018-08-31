@@ -1,6 +1,6 @@
 ---
-title: 第 13 课： 在 Excel 中分析 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 12 课： 在 Excel 中分析 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a59a91b86da12dc9df4b9d3ce2b65ef456439627
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971669"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795646"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>第 12 课： 在 Excel 中分析
+# <a name="lesson-12-analyze-in-excel"></a>第 12 课：在 Excel 中分析
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 在本课中，您将使用分析在 Excel 功能在 SSDT 中打开 Microsoft Excel、 自动创建的数据源连接到模型工作区，并自动将数据透视表添加到工作表。 “在 Excel 中分析”功能旨在提供一种快速简便的方法，供您在部署模型之前测试模型设计的效用。 在本课中，您将不执行任何数据分析。 本课程的目的是让模型作者熟悉可用于测试模型设计的工具。 与使用 Analyze in Excel 功能，这意味着模型作者，最终用户将使用客户端报告应用程序，如 Excel 或 Power BI 连接到并浏览部署的模型数据。  

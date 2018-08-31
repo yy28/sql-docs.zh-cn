@@ -1,1 +1,1 @@
-**适用于：**![yes](media/yes.png)SQL Server Analysis Services![yes](media/yes.png)Azure Analysis Services
+**适用于：** ![是](media/yes.png)SQL Server Analysis Services![是](media/yes.png)Azure Analysis Services

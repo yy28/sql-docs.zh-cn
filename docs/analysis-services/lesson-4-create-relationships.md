@@ -1,6 +1,6 @@
 ---
-title: 第 5 课： 创建关系 |Microsoft Docs
-ms.date: 05/08/2018
+title: 第 4 课： 创建关系 |Microsoft Docs
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36993a468a6997ff8de40da542deac00b25b18b4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bbddc0966729b93b2e9ac202966dff645c28c32c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034765"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42792027"
 ---
 # <a name="lesson-4-create-relationships"></a>第 4 课： 创建关系
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在本课程中将验证导入数据时自动创建的关系和不同的表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
+在本课中，将验证导入数据时自动创建的关系并在不同表之间添加新关系。 关系是在两个表之间建立的连接，用于确立这些表中的数据应该如何相关。 例如，DimProduct 表和 DimProductSubcategory 表基于每个产品属于某个子类别的事实具有某种关系。 若要了解详细信息，请参阅[关系](../analysis-services/tabular-models/relationships-ssas-tabular.md)。
   
 学完本课的估计时间： **10 分钟**  
   
@@ -37,24 +37,24 @@ ms.locfileid: "38034765"
     
     ![作为-表格-lesson4-关系图](../analysis-services/media/as-tabular-lesson4-diagram.png)
   
-    使用模型设计器右下角的 minimap 控件可调整此视图，以包括尽可能多的表。 还可以单击表并将其拖到不同位置，使表之间更接近，或将它们排成特定的顺序。 移动表不会影响表之间已存在的关系。 若要查看特定表中的所有列，请单击并拖动表边缘以展开或使其变小。  
+    使用模型设计器右下角的 minimap 控件可调整此视图，以包括尽可能多的表。 您还可以单击，并将表拖到不同的位置，使表更靠近在一起，或按特定顺序排列。 移动表不会影响表之间已存在的关系。 若要查看特定表中的所有列，单击，并拖动表边缘以展开或使其变小。  
   
 2.  单击之间的实线**DimCustomer**表和**DimGeography**表。 这两个表之间的实线表明此关系处于活动状态，也即，当计算 DAX 公式时，默认情况下将使用此关系。  
   
-    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 这表明关系中使用的是这些列。 关系的属性现在也显示在“属性”窗口中。  
+    请注意**GeographyKey**中的列**DimCustomer**表和**GeographyKey**中的列**DimGeography**现在表同时每个出现在一个框。 此演示它们在关系中使用的列。 关系的属性现在也显示在“属性”窗口中。  
   
     > [!TIP]  
-    > 除了使用模型设计器关系图视图中，还可以使用管理关系对话框以显示表格格式中的所有表之间的关系。 右键单击**关系**在表格模型资源管理器，然后单击**管理关系**。 管理关系对话框中显示了导入数据时自动创建的关系。  
+    > 除了使用模型设计器关系图视图中，还可以使用管理关系对话框以显示表格格式中的所有表之间的关系。 右键单击**关系**在表格模型资源管理器，然后单击**管理关系**。 管理关系对话框中显示导入数据时自动创建的关系。  
   
 3.  使用模型设计器关系图视图或管理关系对话框中的，若要验证时创建以下关系表的每个已导入从 AdventureWorksDW 数据库：  
   
     |在职|表|相关查找表|  
     |----------|---------|------------------------|  
-    |是|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |是|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
-    |是|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |是|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
-    |是|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
+    |用户帐户控制|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |用户帐户控制|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |用户帐户控制|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
+    |用户帐户控制|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |用户帐户控制|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     如果缺少任何上表中的关系，请验证您的模型包括以下各表： DimCustomer、 DimDate、 DimGeography、 DimProduct、 DimProductCategory、 DimProductSubcategory 和 FactInternetSales。 如果在不同的时间从相同的数据源连接导入了表，则在这些表之间不会创建任何关系，而必须手动创建。  
 
@@ -73,7 +73,7 @@ ms.locfileid: "38034765"
   
 #### <a name="to-add-new-relationships-between-tables"></a>在表之间添加新关系  
   
-1.  在模型设计器中**FactInternetSales**表中，单击并按住**OrderDate**列中，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
+1.  在模型设计器中，在**FactInternetSales**表，单击并按住**OrderDate**列中，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
 
     显示一条实线，说明已创建活动之间的关系**OrderDate**中的列**Internet Sales**表和**日期**中列**日期**表。 
   
@@ -82,11 +82,11 @@ ms.locfileid: "38034765"
     > [!NOTE]  
     > 创建关系时，会自动选择主表与相关的查找表之间的基数和筛选器方向。  
   
-2.  在中**FactInternetSales**表中，单击并按住**DueDate**列，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
+2.  在中**FactInternetSales**表，单击并按住**DueDate**列，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
   
     此时会显示虚线，其中显示已创建非活动的关系之间**DueDate**中的列**FactInternetSales**表和**日期**中的列**DimDate**表。 表之间可以具有多个关系，但一次只有一个关系可以处于活动状态。  
   
-3.  最后，创建一个关系;在中**FactInternetSales**表中，单击并按住**ShipDate**列，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
+3.  最后，创建一个关系;在中**FactInternetSales**表，单击并按住**ShipDate**列，然后光标拖到**日期**中的列**DimDate**表，然后松开。  
     
      ![作为-表格-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
