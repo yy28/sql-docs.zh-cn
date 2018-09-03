@@ -1,1 +1,1 @@
-本主题适用于：![yes](media/yes.png)SQL Server（仅从 2016 开始的 Windows）![no](media/no.png)Azure SQL 数据库![no](media/no.png)Azure SQL 数据仓库![no](media/no.png)并行数据仓库
+适用于：![是](media/yes.png)SQL Server（仅从 2016 开始的 Windows）![否](media/no.png)Azure SQL 数据库![否](media/no.png)Azure SQL 数据仓库![否](media/no.png)并行数据仓库

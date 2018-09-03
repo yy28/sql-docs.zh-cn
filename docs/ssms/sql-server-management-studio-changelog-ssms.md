@@ -15,12 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957720"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899497"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -594,7 +594,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 修复了尝试打印查询结果（打印成文本）时的问题。  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
 - 修复了在 SQL Azure 数据库上脚本化删除这些对象时 SSMS 未正确删除表和其他对象的问题。
 - 修复了以下问题：SSMS 偶尔拒绝启动，出现错误“找不到一个或多个组件。 请重新安装应用程序”
-- 修复了 SSMS UI 中的 SPID 可能会过时和不同步的问题。https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- 修复了 SSMS UI 中的 SPID 可能会过时和不同步的问题。 https://connect.microsoft.com/SQLServer/feedback/details/1898875
 - 修复了 SSMS（无提示）安装中 /passive 参数被视为 /quiet 的问题。
 - 修复了 SSMS 偶尔在启动时引发“未将对象引用设置为对象的实例”错误的问题。 http://connect.microsoft.com/SQLServer/feedback/details/3134698
 - 修复了“数据压缩向导”上导致 SSMS 在图形表上按“计算”会崩溃的问题

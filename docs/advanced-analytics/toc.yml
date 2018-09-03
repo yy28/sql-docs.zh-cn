@@ -1,62 +1,31 @@
 items:
-- name: 概述
+- name: SQL Server 机器学习
   items:
-  - name: 什么是 SQL Server 机器学习服务？
+  - name: 机器学习服务（R、Python）
     href: what-is-sql-server-machine-learning.md
-    items:
-    - name: 数据库内分析
-      href: r/sql-server-r-services.md
-    - name: 独立服务器
-      href: r/r-server-standalone.md
+  - name: R Services
+    href: r/sql-server-r-services.md
+  - name: 独立服务器
+    href: r/r-server-standalone.md
   - name: 新增功能
     href: what-s-new-in-sql-server-machine-learning-services.md
-  - name: 各版本功能
-    href: r/differences-in-r-features-between-editions-of-sql-server.md
-- name: 体系结构
-  href: architecture-overview-machine-learning.md
-  items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R 互操作性
-      href: r/r-interoperability-in-sql-server.md
-    - name: 支持 R 集成的组件
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R 的安全性
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: 机器学习服务中的 Python
-      href: python/sql-server-python-services.md
-    - name: Python 互操作性
-      href: python/python-interoperability.md
-    - name: Python 支持组件
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python 安全性
-      href: python/security-overview-sql-server-python-services.md
 - name: Install
   items:
-  - name: SQL Server 2017
-    items:
-    - name: 数据库内分析
-      href: install/sql-machine-learning-services-windows-install.md
-    - name: 独立服务器
-      href: install/sql-machine-learning-standalone-windows-install.md
-  - name: SQL Server 2016
-    items:
-    - name: R Services（数据库内）
-      href: install/sql-r-services-windows-install.md
-    - name: R Server (Standalone)
-      href: install/sql-r-standalone-windows-install.md
+  - name: 机器学习服务（R、Python）
+    href: install/sql-machine-learning-services-windows-install.md
+  - name: R Services
+    href: install/sql-r-services-windows-install.md
+  - name: 独立服务器（R、Python）
+    href: install/sql-machine-learning-standalone-windows-install.md
   - name: 预定型模型
     href: install/sql-pretrained-models-install.md
   - name: 命令提示符设置
     href: install/sql-ml-component-commandline-install.md
   - name: 脱机设置（无 Internet）
     href: install/sql-ml-component-install-without-internet-access.md
-  - name: CAB 下载（脱机安装程序）
-    href: install/sql-ml-cab-downloads.md
+    items:
+    - name: CAB 下载（脱机安装程序）
+      href: install/sql-ml-cab-downloads.md
   - name: 升级 R 和 Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: 设置 R 工具
@@ -177,6 +146,29 @@ items:
   href: https://github.com/Microsoft/sql-server-samples
 - name: 解决方案
   href: tutorials/data-science-scenarios-and-solution-templates.md
+- name: 概念
+  href: architecture-overview-machine-learning.md
+  items:
+  - name: R
+    href: r/architecture-overview-sql-server-r.md
+    items:
+    - name: R 互操作性
+      href: r/r-interoperability-in-sql-server.md
+    - name: 支持 R 集成的组件
+      href: r/new-components-in-sql-server-to-support-r.md
+    - name: R 的安全性
+      href: r/security-overview-sql-server-r.md
+  - name: Python
+    href: python/architecture-overview-sql-server-python.md
+    items:
+    - name: 机器学习服务中的 Python
+      href: python/sql-server-python-services.md
+    - name: Python 互操作性
+      href: python/python-interoperability.md
+    - name: Python 支持组件
+      href: python/new-components-in-sql-server-to-support-python-integration.md
+    - name: Python 安全性
+      href: python/security-overview-sql-server-python-services.md
 - name: 操作指南
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -322,9 +314,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 85ed543ae5239ab46c388de63714756b15a58190
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427398"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118074"

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 文档 | Microsoft Docs
-ms.date: 05/03/2018
+ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,12 +23,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e481ca33bd3d3eae0c4aec4ea1cc3af1aac4276a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37986381"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42774259"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 文档
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +51,7 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |[SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)     | [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)        |
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 
-![info_tip](../sql-server/media/info-tip.png) SQL Server 2014 内容很快会合并到 .docs 站点中。  现在，请参阅：
-- [SQL Server 2014 联机丛书](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
-- [SQL Server 2014 中的新增功能](https://msdn.microsoft.com/library/bb500435(v=sql.120).aspx)
-- [SQL Server 2014 Release Notes](../sql-server/sql-server-2014-release-notes.md)
-- [先前版本](https://docs.microsoft.com/previous-versions/sql/)
+![info_tip](../sql-server/media/info-tip.png)  [此处](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014)提供 SQL Server 2014 文档。
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -70,8 +66,8 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |[SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)     | [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md)        |
 ::: moniker-end
 
-::: moniker range="= sql-server-2016"
-**试用 SQL Server！**
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+**试用 SQL Server 2016！**
 - [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server for Windows](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![从评估中心下载](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [下载 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 - [![从评估中心下载](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [下载 SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
@@ -99,9 +95,10 @@ SQL Server 是 Microsoft 数据平台的核心部分。 SQL Server 在操作数�
 |![复制服务](../sql-server/media/replication-services.png "复制服务")|**[复制](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 复制是一组技术，用于在数据库间复制和分发数据和数据库对象，然后在数据库间进行同步操作，使其保持一致。 使用复制时，可以通过局域网和广域网、拨号连接、无线连接和 Internet，将数据分发到不同位置以及分发给远程用户或移动用户。|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) 为你提供知识驱动型数据清理解决方案。 DQS 使您可以生成知识库，然后使用此知识库，同时采用计算机辅助方法和交互方法，执行数据更正和消除重复的数据。 您可以使用基于云的引用数据服务，并可以生成一个数据管理解决方案将 DQS 与 SQL Server Integration Services 和 Master Data Services 相集成。|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 是用于主数据管理的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 解决方案。 基于 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 生成的解决方案可帮助确保报表和分析均基于适当的信息。 使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，您可以为主数据创建中央存储库，并随着主数据随时间变化而维护一个可审核的安全对象记录。|
+| &nbsp; | &nbsp; |
 
-::: moniker range="= sql-server-2016"
-## <a name="migrate-and-move-data"></a>迁移和移动数据
+::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
+## <a name="migrate-and-move-data-in-version-2016"></a>在版本 2016 中迁移和移动数据
 
 - [使用 SQL Server 导入和导出向导导入和导出数据](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
 - [将 SQL Server 数据库迁移至 Azure SQL 数据库](https://docs.microsoft.com/azure/sql-database/sql-database-migrate-your-sql-server-database)

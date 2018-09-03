@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087189"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775017"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 使用数据库项目设置可控制数据库、调试和生成配置的各个方面。 这些设置分为以下几类。  
@@ -108,7 +108,7 @@ ms.locfileid: "39087189"
 扩展的 Transact-SQL 验证是数据库项目系统内的一项功能，开发人员利用它可以在构建时将其数据库项目提交到 Transact-SQL 编译器服务，以针对 SQL Server 引擎的解析器和解释器验证其代码。  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL 编译器服务  
-Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎的组件。 此服务可验证 DDL 语句的语法和语义，保真度与 Microsoft SQL Server 2012 数据库引擎相同。 从内在本质看，这意味着编译器服务不支持 Microsoft SQL Server 2012 中不推荐使用的语法或功能。 有关不推荐使用的功能的详细信息，请参见 [SQL Server 2012 中废止的数据库引擎功能](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx)。  
+Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎的组件。 此服务可验证 DDL 语句的语法和语义，保真度与 Microsoft SQL Server 2012 数据库引擎相同。 从内在本质看，这意味着编译器服务不支持 Microsoft SQL Server 2012 中不推荐使用的语法或功能。 要详细了解已弃用的功能，请参见 [SQL Server 2012 中中止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。  
   
 为了进行数据库项目验证，编译器服务会创建一个部分包含的数据库，并会针对该数据库模拟执行 DDL 语句。 有关详细信息，请参阅 [部分包含的数据库](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx)。  
   

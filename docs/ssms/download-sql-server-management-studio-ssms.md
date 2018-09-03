@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 36acedbe323b1b28c4b8db11d3241e77b8a8f322
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452521"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899757"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下载 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]

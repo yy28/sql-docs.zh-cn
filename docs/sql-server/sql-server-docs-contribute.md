@@ -1,6 +1,6 @@
 ---
 title: 如何参与编辑 SQL Server 文档 | Microsoft Docs
-ms.date: 04/12/2018
+ms.date: 08/13/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 57b35b9edbfb257d327f310d526729b7a60215e2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926528"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774509"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -33,36 +33,14 @@ ms.locfileid: "36926528"
 
 ## <a id="githubui"></a>在浏览器中编辑
 
-以下步骤提供了在浏览器中对 SQL Server 内容进行简单编辑的概述。 [次要更改或间歇更改的 GitHub 参与工作流](https://docs.microsoft.com/contribute/light-workflow)一文记录了完整过程。
+可以在浏览器中对 SQL Server 内容进行简单编辑，然后将其提交到 Microsoft。 [Microsoft Docs 参与者指南概述](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)一文中记录了完整过程。 下面的视频演示了在浏览器中提交更改的完整过程：
 
-1. 包括本文在内的每篇文章右侧均有一个“编辑”按钮。 查找要更改的文章，然后单击“编辑”按钮开始编辑。
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE23pxh]
 
-   ![SQL 文章的“编辑”按钮](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
-
-   docs.microsoft.com 上的所有内容托管在各个 GitHub 存储库中。 单击编辑按钮时，将转到 sql-docs 存储库中的文章。 或者，若要编辑 Azure 文档中的 SQL 文章，则将转到 azure-docs 存储库。 
-
-1. 接着，单击 GitHub 中文章右上角的铅笔图标。
-
-   ![编辑按钮](./media/sql-server-docs-contribute/edit-button.png)
-
-   > [!NOTE]
-   > 必须登录到 GitHub 才能编辑文章。 如果没有 GitHub 帐户，请参阅 [GitHub 帐户设置](https://docs.microsoft.com/contribute/get-started-setup-github)。 创建新帐户后，还必须通过 GitHub 验证电子邮件地址，然后才能开始编辑。
-
-1. 在浏览器中编辑文章。 所有文章都是以 Markdown 编写的。 如需 Markdown 相关帮助，可以查看 [Markdown 基本信息](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)。 还可以通过观察发布的文章如何呈现现有 Markdown 进行了解。
-
-1. 向下滚动到编辑窗口底部，输入更改的标题，然后单击“建议文件更改”按钮。
-
-   ![建议拉取请求](./media/sql-server-docs-contribute/propose-file-change.png)
-
-1. 在下一页上，单击“创建拉取请求”。
-
-   ![创建拉取请求](./media/sql-server-docs-contribute/create-pull-request.png)
-
-1. 输入拉取请求的标题和说明。 然后再次单击“创建拉取请求”。
-
-   ![创建拉取请求](./media/sql-server-docs-contribute/create-pull-request2.png)
-
-此时，系统应指导你在拉取请求的注释中完成此过程的剩余部分。 [参与者指南](https://docs.microsoft.com/contribute/light-workflow)中提供了完整过程和其他详细信息。
+> [!TIP]
+> 请注意，“编辑”按钮的位置与视频中显示的位置略有不同，但过程相同。
+>
+> ![编辑按钮](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
 
 ## <a id="tools"></a>使用工具在本地编辑
 
@@ -73,7 +51,7 @@ ms.locfileid: "36926528"
 - [创建 GitHub 帐户](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [安装内容创作工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [设置本地 Git 存储库](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具参与编辑](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
+- [使用工具参与编辑](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
 如果提交包含对文档的重大更改的拉取请求，则将在 GitHub 中收到一条注释，要求提交联机“贡献许可协议 (CLA)”。 必须先完成联机窗体，然后系统才会接受你的拉取请求。
 
@@ -115,10 +93,11 @@ ms.locfileid: "36926528"
 
 若要查找文章的正确适用范围包含，请使用以下提示：
 
+- 有关常用 include 的列表，请参阅 [SQL Server 版本和 applies-to include文件](applies-to-includes.md)。
 - 查看包含相同功能或相关任务的其他文章。 如果编辑此文章，则可针对适用范围包含链接复制 Markdown（可取消编辑而不提交编辑）。
 - 针对包含文本“适用范围”的文件搜索 [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) 目录。 可使用 github 中的“查找”按钮快速筛选。 单击文件，查看其呈现方式。
 - 注意命名约定。 如果名称中包含 x，它们通常是占位符，表示缺少对服务的支持。 例如，appliesto-xx-xxxx-asdw-xxx-md.md 表示仅支持 Azure SQL 数据仓库，因为仅拼写出了 asdw，而其他字段具有 x。
-- 某些包含指定了版本号，如 tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md。 仅当知道通过特定版本的 SQL Server 引入了此功能时才使用这些包含。 
+- 某些包含指定了版本号，如 tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md。 仅当知道通过特定版本的 SQL Server 引入了此功能时才使用这些包含。
 
 ## <a name="contributor-resources"></a>参与者资源
 
