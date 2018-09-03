@@ -1,29 +1,23 @@
 ---
 title: 安装 Reporting Services 2016 本机模式报表服务器 | Microsoft Docs
-ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 68
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 1e41f40025a7ccf883f2643baf538f4f045f5b65
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f230933a55f5339c16afc707eecfb838449541a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002922"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272680"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -86,9 +80,7 @@ ms.locfileid: "38002922"
  > [!IMPORTANT]
  > 尽管可以在具有只读域控制器 (RODC) 的环境中安装 Reporting Services，但 Reporting Services 需要有权访问读写域控制器才能正常工作。 如果 Reporting Services 只有权访问 RODC，当你在尝试管理此服务时则可能会遇到错误。
   
-##  
-  <a name="bkmk_defaultURLreservations">
-  </a> 默认 URL 预留  
+##  <a name="bkmk_defaultURLreservations"></a> 默认 URL 预留  
  URL 预留由前缀、主机名、端口和虚拟目录组成：  
   
 |组成部分|描述|  

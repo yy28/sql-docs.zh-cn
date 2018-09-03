@@ -1,26 +1,20 @@
 ---
 title: 管理报表部件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024514"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273719"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   报表部件可在分页报表中由多个用户重用，并且可以在多个报表中重用。 用户可以搜索服务器上的报表部件并将其添加到报表中。  用户还可以接收服务器上的报表部件更新通知，以及重新发布报表部件的新版本。 这些报表创作操作可能受 Reporting Services 安全权限的影响和控制。  本主题介绍报表部件在位于服务器上后的属性和行为。  
@@ -54,15 +48,15 @@ ms.locfileid: "33024514"
   
  (*) 表明它是在此版本中新推出的。  
   
-|“属性”|Description|报表部件<br /><br /> 库搜索条件|  
+|“属性”|描述|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|“属性”|这是用户可在报表部件库中搜索的条件之一。|是|  
-|Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
-|CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|是|  
-|CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|是|  
-|ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|是|  
-|ModifiedDate|在服务器上最后修改报表部件的日期。<br /><br /> 此字段用作确定何时存在对报表部件的服务器端更新的逻辑的一部分。 有关详细信息，请参阅本表后面对 ComponentID 的说明。|是|  
-|SubType (*)|SubType 是指示要搜索的报表部件类型的字符串，如“Tablix”或“Chart”。|是|  
+|“属性”|这是用户可在报表部件库中搜索的条件之一。|用户帐户控制|  
+|描述|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|用户帐户控制|  
+|CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|用户帐户控制|  
+|CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|用户帐户控制|  
+|ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|用户帐户控制|  
+|ModifiedDate|在服务器上最后修改报表部件的日期。<br /><br /> 此字段用作确定何时存在对报表部件的服务器端更新的逻辑的一部分。 有关详细信息，请参阅本表后面对 ComponentID 的说明。|用户帐户控制|  
+|SubType (*)|SubType 是指示要搜索的报表部件类型的字符串，如“Tablix”或“Chart”。|用户帐户控制|  
 |ComponentID (*)|ComponentID 是报表部件的唯一标识符。 这是添加到目录中的新字段，并且在服务器端以及报表创作应用程序（例如报表生成器）中均可见。<br /><br /> 客户端应用程序在检查服务器上是否存在报表部件的更新时使用此字段。 客户端应用程序搜索服务器上在当前客户端报表中的 ComponentID。 当存在匹配的 ComponentID 时，然后将 ModifiedDate 与该报表项的客户端 SyncDate 进行比较。|否|  
   
 ## <a name="controlling-access-to-report-parts"></a>控制对报表部件的访问  

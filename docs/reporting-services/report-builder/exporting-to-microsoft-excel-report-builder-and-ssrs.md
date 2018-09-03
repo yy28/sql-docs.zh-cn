@@ -1,26 +1,20 @@
 ---
 title: 导出到 Microsoft Excel（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022384"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275652"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表呈现为 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 格式 (.xlsx)。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -178,7 +172,7 @@ ms.locfileid: "33022384"
 |每个工作表的最大列数|256|16,384|  
 |每个工作表的最大行数|65,536|1,048,576|  
 |工作表中允许的颜色数|56（调色板）<br /><br /> 如果报表中使用的颜色超过 56 种，呈现扩展插件就会将所需颜色与自定义调色板中已有的 56 种颜色之一匹配。|大约 1600 万种（24 位颜色）|  
-|ZIP 压缩文件|InclusionThresholdSetting|ZIP 压缩|  
+|ZIP 压缩文件|None|ZIP 压缩|  
 |默认字体系列|Arial|Calibri|  
 |默认字号|10 磅|11 磅|  
 |默认行高|12.75 磅|15 磅|  
@@ -215,7 +209,7 @@ ms.locfileid: "33022384"
 |-------------------------------|-----------------|  
 |创建时间|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
 |作者|Report.Author|  
-|Description|Report.Description|  
+|描述|Report.Description|  
 |LastSaved|报表执行的日期和时间，格式为 ISO 日期/时间值。|  
   
 ##  <a name="PageHeadersFooters"></a> 页眉和页脚  

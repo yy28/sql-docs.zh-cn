@@ -1,33 +1,27 @@
 ---
 title: 呈现扩展插件的设备信息设置 (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ea4aec909a5d65582ae59b507c3948e4484b3e49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00b14f80b7e6cc316fb5857b44140bd30cc92765
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015974"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268147"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>呈现扩展插件的设备信息设置 (Reporting Services)
   在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 每个呈现扩展插件接受一组特定设置。  
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[ATOM 设备信息设置](../reporting-services/atom-device-information-settings.md)|介绍与 Atom 兼容的呈现输出相关的设备信息设置。|  
 |[CSV 设备信息设置](../reporting-services/csv-device-information-settings.md)|介绍与 CSV 呈现输出相关的设备信息设置。|  

@@ -1,14 +1,10 @@
 ---
 title: 报表模型查询设计器用户界面 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10015"
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 19e623c9f36d9128c0143695b9d3d1aa427bf1e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dae0c4af2629bfe29766f2d55b7e635c6cf3f3fe
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021284"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276236"
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  
@@ -57,7 +51,7 @@ ms.locfileid: "33021284"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  设计查询时也可以使用工具栏按钮。 下表列出了工具栏中的按钮及其用途。  
   
-|按钮|Description|  
+|按钮|描述|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 报表服务器模型数据源的查询为 XML 格式的语义模型查询语言 (SMQL) 规范。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -85,7 +79,7 @@ ms.locfileid: "33021284"
 ### <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  设计查询时也可以使用工具栏按钮。 下表列出了工具栏中的按钮及其用途。  
   
-|按钮|Description|  
+|按钮|描述|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。|  
 |**导入**|从现有报表导入查询。|  

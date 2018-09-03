@@ -1,14 +1,10 @@
 ---
 title: InstanceName 属性 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - InstanceName Property
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 5e8aa5fb-2d4a-45ac-bbd8-47ed3c667cbb
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9a167e26241f45bc5470c9db7a9c1431b66d9f68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2929e64e89d1734d1a8e991f51d292c7a4ac388
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030164"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271738"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 属性 - InstanceName
   指定特定计算机上报表服务器实例的名称。 只读。  

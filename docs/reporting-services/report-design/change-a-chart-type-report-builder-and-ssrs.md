@@ -1,26 +1,20 @@
 ---
 title: 更改图表类型（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: a8328bc042b7f16e4ea37f4c7f13b49c7b329958
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13dfb729b0e0acc4ff7469d45e7d2f734b919f1b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33019344"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279719"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>更改图表类型（报表生成器和 SSRS）
 首次将图表插入 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中时，将显示“选择图表类型”对话框。 如果取消此对话框，则默认情况下会添加柱形图图表类型。  

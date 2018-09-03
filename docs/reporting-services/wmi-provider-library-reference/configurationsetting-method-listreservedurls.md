@@ -1,28 +1,22 @@
 ---
 title: ListReservedURLs 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: f461e0984f3536e9efc6660fc17e68daeb913753
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ffd7b11f95b8c6b9d6bf3a293426ac2b0e50395
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030464"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272024"
 ---
 # <a name="configurationsetting-method---listreservedurls"></a>ConfigurationSetting 方法 - ListReservedURLs
   列出为报表服务器上所有应用程序保留的 URL。  
@@ -43,16 +37,16 @@ public void ListReservedUrls(out string[] Application, out string[] UrlString,
   
 ## <a name="parameters"></a>Parameters  
  *Application[]*  
- [out] 具有 URL 保留项的应用程序。  
+ [out] 具有 URL 预留的应用程序。  
   
  *UrlString[]*  
  [out] 已保留的 URL。  
   
  *Account[]*  
- [out] 与 URL 保留项的帐户关联的帐户名。  
+ [out] 与 URL 预留的帐户关联的帐户名。  
   
  *AccountSID[]*  
- [out] 与 URL 保留项的帐户关联的帐户 SID。  
+ [out] 与 URL 预留的帐户关联的帐户 SID。  
   
  *长度*  
  [out] 该方法返回的数组长度。  

@@ -1,26 +1,20 @@
 ---
 title: 导出到 Microsoft Word（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 73c41c24d4572c6bc91ec0a8728be590344787df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7caedeed8680e6a4f3ef57c70bdac340cba2082e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022314"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270869"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -58,7 +52,7 @@ ms.locfileid: "33022314"
 ##  <a name="DocumentProperties"></a> 文档属性  
  Word 呈现器会将以下元数据写入 DOCX 文件。  
   
-|报表元素属性|Description|  
+|报表元素属性|描述|  
 |-------------------------------|-----------------|  
 |Report Title (report title)|标题|  
 |Report.Author|作者|  

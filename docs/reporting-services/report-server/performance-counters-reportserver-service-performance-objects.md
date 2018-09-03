@@ -1,28 +1,22 @@
 ---
 title: 性能计数器 - ReportServer 服务，性能对象 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22afdbbbd970f7362644b69a55b2e63e7dd59c34
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027714"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266817"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>性能计数器 - ReportServer 服务，性能对象
   该主题描述了作为 **部署的一部分的** ReportServer:Service **和** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 性能对象的性能计数器。  
@@ -55,7 +49,7 @@ ms.locfileid: "33027714"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |**活动连接**|在服务器上当前活动的连接数。|  
 |**接收的字节总数**|服务器接收的字节数。 该计数器计数报表管理器和报表服务器接收的原始字节总数。|  
@@ -88,7 +82,7 @@ ms.locfileid: "33027714"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |**内存压力状态**||  
 |**内存收缩量**||  

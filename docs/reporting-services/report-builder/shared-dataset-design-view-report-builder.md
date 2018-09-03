@@ -1,26 +1,20 @@
 ---
 title: 共享数据集设计视图（报表生成器）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 7348789d794cb10892ed4a6c7f22c68b1bfb75cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fa8b79e7ec59efb3bfeb20cbb32e408630e0a3
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021364"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280198"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共享数据集设计视图（报表生成器）
   在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 共享数据集发布在报表服务器上，可由多个报表使用。 你可以创建数据集，以便与他人共享。 在共享数据集设计窗口中，你可以选择共享数据源，指定共享数据集的属性，在查询设计器中创建查询。  
@@ -82,7 +76,7 @@ ms.locfileid: "33021364"
   
  当报表作者将此共享数据集添加到报表中时，系统将在报表服务器上添加一个指向该数据集定义的指针。 在报表中，数据集字段集合显示在“报表数据”窗格中。 查询文本不可用。  
   
- 用于运行查询的凭据与用于从报表服务器预览报表或运行报表的凭据是分开的。 有关详细信息，请参阅 [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。  
+ 用于运行查询的凭据与用于从报表服务器预览报表或运行报表的凭据是分开的。 有关详细信息，请参阅[为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 ### <a name="running-a-report-with-parameters"></a>使用参数运行报表  
  如果查询包括查询变量，则系统将自动为您创建数据集参数。 随后，在您生成了数据集查询后，系统将自动创建设置为数据集参数的报表参数。  

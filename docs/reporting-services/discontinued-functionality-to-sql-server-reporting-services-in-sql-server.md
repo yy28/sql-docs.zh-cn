@@ -3,29 +3,23 @@ title: SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功�
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - discontinued functionality [Reporting Services]
 - Reporting Services, backward compatibility
 - Rsactivate.exe
 - unsupported features [Reporting Services]
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: fd12c073f9a9ba91a7e62d0b78dc19325a55521d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9907a391da798468aa4afe32d32fadb38d893c3b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968639"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265908"
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能
 
@@ -47,6 +41,6 @@ ms.locfileid: "37968639"
 
 [Reporting Services 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
 [SQL Server 2016 的 SQL Server Reporting Services 中的行为更改](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+[SQL Server 2016 中已弃用的 SQL Server Reporting Services 功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)

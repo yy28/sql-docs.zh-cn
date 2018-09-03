@@ -1,29 +1,23 @@
 ---
 title: 关于 URL 预留和注册（SSRS 配置管理器）| Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3bbfb174e1226cc9a514e3293ef313fa942d8b6d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0f8cf0171429b6577e9a43781ebaed41236be7c0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35321996"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275983"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -51,13 +45,10 @@ ms.locfileid: "35321996"
 > [!NOTE]  
 >  本主题不讨论对存储在报表服务器上的特定报表的 URL 访问。 有关通过 URL 对这些项进行访问的详细信息，请参阅 [联机丛书中的](../../reporting-services/access-report-server-items-using-url-access.md) 使用 URL 访问报表服务器项 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
-##  
-  <a name="URLreservation">
-  </a> URL 预留和注册  
+##  <a name="URLreservation"></a> URL 预留和注册  
  URL 预留定义了可用于访问 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在 HTTP.SYS 中为报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留一个或多个 URL，然后在服务启动时注册它们。 通过向 URL 追加参数，可以通过 Web 服务打开报表。 预留和注册由 HTTP.SYS 实现。 有关详细信息，请参阅 MSDN 上的 [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653)（命名空间预留、注册和路由）。  
   
- 
-  *URL 预留*是指创建指向 Web 应用程序的 URL 端点并将其存储在 HTTP.SYS 中的过程。 HTTP.SYS 是计算机上定义的所有 URL 预留的公共存储库，它定义了一组保证 URL 预留唯一的公共规则。  
+ *URL 预留*是指创建指向 Web 应用程序的 URL 端点并将其存储在 HTTP.SYS 中的过程。 HTTP.SYS 是计算机上定义的所有 URL 预留的公共存储库，它定义了一组保证 URL 预留唯一的公共规则。  
   
   URL 注册在服务启动时进行。 此时会创建请求队列，并且 HTTP.SYS 开始将请求路由到该队列。 必须先注册 URL 端点，然后再将定向至该端点的请求添加到该队列。 当报表服务器服务启动时，它将注册已为所有启用的应用程序保留的所有 URL。 也就是说，必须启用 Web 服务，才能进行注册。 如果在外围应用配置中，对于基于策略的管理的 Reporting Services 方面将 **WebServiceAndHTTPAccessEnabled** 属性设置为 **False** ，则 Web 服务的 URL 在该服务启动时将不会注册。  
   
@@ -100,8 +91,7 @@ ms.locfileid: "35321996"
 |SQL Server Express|Web 门户|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL 的身份验证和服务标识  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留指定了报表服务器服务的服务帐户。 运行服务的帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。 报表服务器实例的服务标识存储在 RSReportServer.config 文件中。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留指定了报表服务器服务的服务帐户。 运行服务的帐户用于为运行在同一实例上的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序创建的所有 URL。 报表服务器实例的服务标识存储在 RSReportServer.config 文件中。  
   
  服务帐户没有默认值。 但是，在安装过程中需要指定服务帐户，即使以“仅文件”模式安装服务器，也会在 RSReportServer.config 中的 **URLReservation** 中指定服务帐户。 服务帐户的有效值包括域用户帐户、 **LocalSystem**或 **NetworkService**。  
   
@@ -116,7 +106,6 @@ ms.locfileid: "35321996"
   
 ## <a name="see-also"></a>另请参阅  
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- 
-  [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL 预留语法（SSRS 配置管理器）](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

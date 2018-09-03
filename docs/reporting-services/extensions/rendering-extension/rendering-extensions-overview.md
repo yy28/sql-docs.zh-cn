@@ -1,14 +1,10 @@
 ---
 title: 呈现扩展插件概述 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e8ba9ec6f9e6e629a7f6019c362824363e546583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c7a7f9791681621d5e1f6666cd8457a5a6441d0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016404"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270678"
 ---
 # <a name="rendering-extensions-overview"></a>呈现扩展插件概述
   呈现扩展插件是将报表数据和布局信息转换为设备特定格式的报表服务器的组件或模块。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括七种呈现扩展插件：HTML、Excel、Word、CSV 或 Text、XML、Image 和 PDF。 您可以创建其他呈现扩展插件以便以其他格式生成报表。  
@@ -35,7 +29,7 @@ ms.locfileid: "33016404"
   
  下表介绍随 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的呈现扩展插件。  
   
-|Extension Name|Description|  
+|Extension Name|描述|  
 |--------------------|-----------------|  
 |**XML**|以 XML 格式呈现报表。 报表在浏览器中打开。 应用于此 XML 输出的其他转换可能是一种经济有效的方法，使您免于开发自己的呈现扩展插件。|  
 |**CSV**|以逗号分隔的格式呈现报表。 报表在与 CSV 文件格式关联的查看工具中打开。|  

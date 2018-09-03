@@ -1,26 +1,20 @@
 ---
 title: SQL Server 移动报表：端到端演练 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c1482fba1bedaafdb1130be5f90998a9b452b608
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175077"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272439"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -83,7 +77,7 @@ ms.locfileid: "40175077"
    
 4. 在“名称”字段中，输入保存数据源的服务器名称，格式如下：   
    
-   名称：http://*localhost*/ReportServer  
+   名称： http://*localhost*/ReportServer  
    项的类型：Data Sources (*.rsds)  
    
 5. 单击“打开” ，并导航到在该服务器上创建的数据源。  

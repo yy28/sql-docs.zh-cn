@@ -1,26 +1,20 @@
 ---
 title: VarP 函数（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 35b626acc65af4288784a3550968588da33cfa5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45727892da638d46b9a241cc3a6b0ee4885f826f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024424"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278189"
 ---
 # <a name="report-builder-functions---varp-function"></a>报表生成器函数 - VarP 函数
   返回在给定作用域上下文中计算的、由表达式指定的所有非 Null 数值的总体方差。  

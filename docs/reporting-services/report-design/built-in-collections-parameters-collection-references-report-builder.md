@@ -1,26 +1,20 @@
 ---
 title: 参数集合引用（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 6f4f702b15f214c43a5d866f27eba0519932d6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70f4c9c14b2c79a6b97370ebf71298540399a93e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021794"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280277"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>内置集合 - 参数集合引用（报表生成器）
   报表参数是可以在表达式中引用的内置集合之一。 通过在表达式中包含参数，您可以基于用户的选择来自定义报表的数据和外观。 表达式可用于提供 (Fx) 或 \<Expression> 选项的任何报表项属性或文本框属性。 表达式还可用于以其他方式控制报表的内容和外观。 有关详细信息，请参阅[表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)。  
@@ -35,7 +29,7 @@ ms.locfileid: "33021794"
 ##  <a name="Single"></a> 在表达式中使用单值参数  
  下表显示了在表达式中包含对任何数据类型单值参数的引用时所用的语法示例。  
   
-|示例|Description|  
+|示例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<ParameterName> `.IsMultiValue`|返回 **False**。<br /><br /> 检查参数是否是多值。 如果是 **True**，则该参数是多值并且是一个对象集合。 如果是 **False**，则该参数是单值并且是单个对象。|  
 |`=Parameters!` \<ParameterName> `.Count`|返回整数值 1。 对于单值参数，该计数始终为 1。|  
@@ -49,7 +43,7 @@ ms.locfileid: "33021794"
 ##  <a name="Multi"></a> 在表达式中使用多值参数  
  下表显示了在表达式中包含对任何数据类型多值参数的引用时所用的语法示例。  
   
-|示例|Description|  
+|示例|描述|  
 |-------------|-----------------|  
 |`=Parameters!` \<MultivalueParameterName> `.IsMultiValue`|返回 **True** 或 **False**。<br /><br /> 检查参数是否是多值。 如果是 **True**，则该参数是多值并且是一个对象集合。 如果是 **False**，则该参数是单值并且是单个对象。|  
 |`=Parameters!` \<MultivalueParameterName> `.Count`|返回整数值。<br /><br /> 表示值的数量。 对于单值参数，该计数始终为 1。 对于多值参数，该计数为 0 或更多。|  

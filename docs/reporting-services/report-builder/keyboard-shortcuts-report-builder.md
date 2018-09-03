@@ -1,29 +1,23 @@
 ---
 title: 键盘快捷方式（报表生成器）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4e2fa3d574930cbf03ee9fbf1664431668b808c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020624"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43264536"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   在报表生成器中创建和编辑分页的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  
@@ -37,7 +31,7 @@ ms.locfileid: "33020624"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>报表生成器中的键盘快捷键  
   
-|Description|键组合|  
+|描述|键组合|  
 |-----------------|---------------------|  
 |打开报表生成器菜单。|Alt+F|  
 |创建报表。|Ctrl+N|  

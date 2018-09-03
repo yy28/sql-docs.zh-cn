@@ -1,29 +1,23 @@
 ---
 title: 设置图表上数据点的格式（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028144"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269667"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -63,19 +57,19 @@ ms.locfileid: "33028144"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>为数据点标签、工具提示和图例文本添加关键字  
  可以使用区分大小写的特定于图表的关键字来表示图表中的存在项。 这些关键字仅适用于工具提示、自定义图例文本和数据点标签属性。 在多数情况中，图表关键字具有等效的简单表达式，但关键字更快且更容易键入。 下面列出了图表关键字。  
   
-|图表关键字|Description|适用的图表类型|等效的简单表达式的示例|  
+|图表关键字|描述|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|InclusionThresholdSetting|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|InclusionThresholdSetting|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|InclusionThresholdSetting|  
-|#SERIESNAME|序列名称。|All|InclusionThresholdSetting|  
-|#LABEL|数据点标签。|All|InclusionThresholdSetting|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|None|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|None|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|None|  
+|#SERIESNAME|序列名称。|All|None|  
+|#LABEL|数据点标签。|All|None|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|All|InclusionThresholdSetting|  
+|#INDEX|数据点索引。|All|None|  
 |#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|对应于图例项文本的文本。|All|InclusionThresholdSetting|  
+|#LEGENDTEXT|对应于图例项文本的文本。|All|None|  
 |#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  

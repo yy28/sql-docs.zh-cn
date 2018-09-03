@@ -1,27 +1,21 @@
 ---
 title: URL 预留语法（SSRS 配置管理器）| Microsoft Docs
-ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 39057237b4b62248cb3af260d0b4bb2cee1dff15
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 2aba888fd9dee3c96cf87310e1987edd851884c5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322706"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270439"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 预留语法（SSRS 配置管理器）
   本主题介绍报表服务器 Web 服务和报表管理器的 URL 字符串的各部分。 该内部存储的 URL 字符串的结构不同于在浏览器窗口的地址栏中键入的 URL 的结构。 URL 预留字符串会在你配置 URL 时显示在 Reporting Services 配置工具的“结果”窗口中，也会出现在 RSReportServer.config 文件中。 如果要解决 URL 预留中存在的问题，或者要查询 HTTP.SYS 以查看服务器上定义的内部 URL 预留，则了解该 URL 字符串的定义方式会很有用。  

@@ -1,28 +1,22 @@
 ---
 title: 导出报表（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022404"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268126"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022404"
 ##  <a name="ExportFormats"></a> 查看报表时可以导出的格式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了用于以不同格式呈现报表的呈现扩展插件。 应针对你所选的文件格式优化报表设计。  下表列出了你可以从用户界面导出的格式。  此外，还列出了你可以结合 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅或在从 URL 访问导出报表时使用的其他格式。  请参阅本主题中的 [导出报表的其他方式](#OtherWaysExportingReports)部分。  
   
-|“格式”|呈现扩展插件类型|Description|  
+|“格式”|呈现扩展插件类型|描述|  
 |------------|------------------------------|-----------------|  
 |Acrobat (PDF) 文件|硬分页|PDF 呈现扩展插件可将报表呈现为特定格式的文件，以便在 Adobe Acrobat 和其他支持 PDF 1.3 的第三方 PDF 查看器中打开。 尽管 PDF 1.3 与 Adobe Acrobat 4.0 及更高版本兼容，但 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持 Adobe Acrobat 6 或更高版本。 呈现扩展插件不需要使用 Adobe 软件呈现报表。 不过，该插件需要使用 PDF 查看器（例如 Adobe Acrobat）才可查看或打印 PDF 格式的报表。<br /><br /> 有关详细信息，请参阅[导出到 PDF 文件](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md)。|  
 |Atom|data|Atom 呈现扩展插件将从报表生成与 Atom 兼容的数据馈送。 数据馈送是可读的，并可以与可使用与 Atom 兼容的数据馈送的应用程序（如 Power Pivot、Power BI）进行交换。<br /><br /> 输出为一个 Atom 服务文档，该文档列出报表中可用的数据馈送。 为报表中的每个数据区域至少创建一个数据馈送。 根据数据区域的类型以及数据区域显示的数据，可以生成多个数据馈送。<br /><br /> 有关详细信息，请参阅[基于报表生成数据馈送](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)。|  

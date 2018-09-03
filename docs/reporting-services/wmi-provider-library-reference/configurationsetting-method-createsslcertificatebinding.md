@@ -1,28 +1,22 @@
 ---
 title: CreateSSLCertificateBinding 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 57d80de74d82f5cb9d270dcd6d435de8bd100e08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000e3b96b8eacc0111c00e27b66d6a12c33aa52f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031104"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278059"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting 方法 - CreateSSLCertificateBinding
   创建 SSL 证书绑定。  
@@ -70,7 +64,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Remarks  
  此方法将向 rsreportserver.config 中为该应用程序添加一个绑定。 如果某个绑定在 HTTP.SYS 中不存在，则会在其中创建它。  
   
- 在创建绑定之前，该方法调用会检查指定应用程序的 Url 保留项，以确定 SSL 证书绑定是否有效。  
+ 在创建绑定之前，该方法调用会检查指定应用程序的 Url 预留，以确定 SSL 证书绑定是否有效。  
   
  如果验证到存在以下情况，则会导致错误：  
   
@@ -80,9 +74,9 @@ public void CreateSSLCertificateBinding(string application,
   
 3.  指定的 IPAddress 为 DHCP IPAddress（定期更改）– 请改用通配符 IP 地址 (0.0.0.0)。  
   
-4.  指定的 IPAddress 与某个 URL 保留项的 IP 地址不匹配，并且没有通配符或主机名 URL 保留项。  
+4.  指定的 IPAddress 与某个 URL 预留的 IP 地址不匹配，并且没有通配符或主机名 URL 预留。  
   
-5.  指定某个主机名的 URL 保留项已存在，但是该主机名与证书主机名不匹配。  
+5.  指定某个主机名的 URL 预留已存在，但是该主机名与证书主机名不匹配。  
   
 ## <a name="requirements"></a>要求  
  **命名空间:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
