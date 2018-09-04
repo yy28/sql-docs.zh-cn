@@ -18,13 +18,13 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a6ccc7e2964568b71c25d92bea6658c0d8abf590
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b67b64f3166febe9327b770cb67a6c2f979967f1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549387"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067848"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>配置 IntelliSense (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "39549387"
 >  某些更改不会在当前编辑器会话中生效。  必须打开一个新的 Transact-SQL 编辑器会话，才能查看更改。
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>默认关闭语句结束选项  
+
+> [!NOTE]
+> SQL 数据仓库不支持 IntelliSense。
+>
+>
   
 1.  在“工具”  菜单上，单击“选项” 。  
   

@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008799"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024460"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 本教程使用一个应用场景说明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安全性概念，其中包括所有权链和用户上下文切换。  
   
 > [!NOTE]  
-> 若要运行本教程中的代码，您必须已配置混合模式安全性并且已安装 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
+> 若要在本教程中运行代码，必须已配置混合模式安全性并且已安装 AdventureWorks2017 数据库。 有关混合模式安全性的详细信息，请参阅 [选择身份验证模式](../relational-databases/security/choose-an-authentication-mode.md)。  
   
 ## <a name="scenario"></a>应用场景  
-在此应用场景中，两个用户需要帐户访问存储在 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中的采购订单数据。 要求如下：  
+在此应用场景中，两个用户需要帐户才能访问存储在 AdventureWorks2017 数据库中的采购订单数据。 要求如下：  
   
 -   第一个帐户 (TestManagerUser) 必须能够查看每个采购订单中的所有详细信息。  
-  
 -   第二个帐户 (TestEmployeeUser) 必须能够根据采购订单号，查看已收到部分货物的项的采购订单号、订单日期、发货日期、产品 ID 号以及每个采购订单中已定购和已收到的项。  
-  
--   所有其他帐户必须保留当前的权限。  
-  
+-   所有其他帐户必须保留当前的权限。   
 若要满足本应用场景的要求，此示例分为四个部分来说明所有权链和上下文切换的概念：  
   
-1.  配置环境。  
-  
-2.  创建存储过程以按采购订单访问数据。  
-  
+1.  配置环境。   
+2.  创建存储过程以按采购订单访问数据。   
 3.  通过存储过程访问数据。  
-  
 4.  重置环境。  
   
-本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。  
+本示例中的每个代码块都将逐一加以说明。 若要复制完整的示例，请参阅本教程结尾部分的 [完整示例](#CompleteExample) 。
+
+## <a name="prerequisites"></a>必备条件
+若要完成本教程，需要 SQL Server Management Studio、针对运行 SQL Server 的服务器的访问权限以及 AdventureWorks 数据库。
+
+- 安装 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
+- 安装 [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- 下载 [AdventureWorks2017 示例数据库](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)。
+
+有关在 SQL Server Management Studio 中还原数据库的说明，请参阅[还原数据库](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。   
   
 ## <a name="1-configure-the-environment"></a>1.配置环境  
-使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2012` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
+使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 及以下代码打开 `AdventureWorks2017` 数据库，然后使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 语句检查 dbo 用户是否显示为上下文。  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 有关 CURRENT_USER 语句的详细信息，请参阅 [CURRENT_USER (Transact-SQL)](../t-sql/functions/current-user-transact-sql.md)。  
   
-使用此代码以使 dbo 用户在服务器及 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 数据库中创建两个用户。  
+使用此代码使 dbo 用户在服务器及 AdventureWorks2017 数据库中创建两个用户。  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+返回的错误：
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 因为在最后一部分中创建的存储过程引用的对象由 `TestManagerUser` 凭借 `Purchasing` 架构所有权而拥有，因此 `TestEmployeeUser` 可以通过此存储过程访问基表。 以下代码仍使用 `TestEmployeeUser` 上下文将采购订单 952 作为参数传递。  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

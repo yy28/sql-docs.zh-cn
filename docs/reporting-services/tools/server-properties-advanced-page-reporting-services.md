@@ -1,28 +1,26 @@
 ---
 title: 服务器属性（“高级”页）- Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 05/24/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: conceptual
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.advanced.f1
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.component: tools
+ms.suite: reporting-services
+ms.topic: conceptual
+ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
+caps.latest.revision: 18
+ms.custom: ''
+ms.reviewer: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.date: 08/16/2018
+ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999449"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405633"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -49,11 +47,12 @@ ms.locfileid: "37999449"
 **ExecutionLogDaysKept**  
 在执行日志中保留报表执行信息的天数。 此属性的有效值包括 **-1** 到 **2**、**147**、**483**、**647**。 如果值为“-1”，则不会从执行日志表中删除条目。 默认值是 **60**秒。  
 
-> [!NOTE] 
+> [!NOTE]
 > 将值设置为“0”会从执行日志中删除所有条目。 值为“-1”将保留执行日志的条目，不会删除它们。
 
-**SessionTimeout**  
-会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  
+**RDLXReportTimetout** 在报表服务器命名空间中托管的所有报表的 RDLX 报表（SharePoint Server 中的 Power View 报表）处理超时值（以秒为单位）。 该值可在报表级别进行重写。 如果设置了此属性，则超过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则处理期间命名空间中的报表不会超时。 默认值是 **1800**秒。
+
+**SessionTimeout** 会话保持活动状态的时间长度（以秒为单位）。 默认值是 **600**秒。  
 
 **SharePointIntegratedMode**  
 此只读属性指示服务器模式。 如果此值为 False，则报表服务器在本机模式下运行。  
@@ -61,8 +60,7 @@ ms.locfileid: "37999449"
 **SiteName**  
 在 Web 门户的页面标题中显示的报表服务器站点的名称。 默认值是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]秒。 此属性可以是空字符串。 最大长度为 8,000 个字符。  
 
-**StoredParametersLifetime**  
-指定所存储的参数能够保存的最大天数。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值为 **180** 天。  
+**StoredParametersLifetime** 指定所存储的参数能够保存的最大天数。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值为 **180** 天。  
 
 **StoredParametersThreshold**  
 指定报表服务器可以存储的参数值的最大数目。 有效值为 **-1**、 **+1** 到 **2,147,483,647**。 默认值是 **1500**秒。  
@@ -72,6 +70,8 @@ ms.locfileid: "37999449"
 
 **ExternalImagesTimeout**  
 确定在连接超时之前，必须对外部映像文件检索的时间长度。默认值为 **600** 秒。  
+
+**SnapshotCompression** 此时刻报表服务器的快照。
 
 **SnapshotCompression**  
 定义如何压缩快照。 默认值是 **SQL**秒。 有效值如下：
@@ -97,7 +97,7 @@ ms.locfileid: "37999449"
 |**False**|未启用 Windows 集成安全性。 将不运行配置为使用 Windows 集成安全性的报表数据源。|
 
 **EnableLoadReportDefinition**  
-选中此选项可以指定用户是否可以从报表生成器报表中执行特别报告执行。 设置此选项即可确定报表服务器的 **EnableLoadReportDefinition** 属性值。  
+选中此选项可以指定用户是否可以从报表生成器报表中执行计划外报告执行。 设置此选项即可确定报表服务器的 **EnableLoadReportDefinition** 属性值。  
 
 如果清除此选项，则该属性设置为 False。 报表服务器将不会为使用报表模型作为数据源的报表生成“点击链接型报表”。 将阻止对 LoadReportDefinition 方法的任何调用。  
 
@@ -105,27 +105,6 @@ ms.locfileid: "37999449"
 
 **EnableRemoteErrors**  
 包括外部错误信息（例如，有关报表数据源的错误信息），其中包含针对从远程计算机请求报表的用户返回的错误消息。 有效值为 **true** 和 **false**。 默认值是 **false**秒。 有关详细信息，请参阅[启用远程错误 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)。  
-
-**EnableReportDesignClientDownload**  
-指定是否可以从报表服务器下载报表生成器安装包。 如果清除此设置，则指向报表生成器的 URL 将不起作用。 
-
-**EditSessionCacheLimit**  
-指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
-
-**EditSessionTimeout**  
-指定报表编辑会话超时之前的秒数。默认值为 7200 秒（两小时）。  
-
-**EnableCustomVisuals*****（仅适用于 Power BI 报表服务器）***  
-如果 PowerBI ReportServer 启用 PowerBI 自定义视觉对象的显示。 值为 True 和 False。  默认值为 True。  
-
-**EnablePowerBIReportExportData*****（仅适用于 Power BI 报表服务器）***  
-如果 PowerBI ReportServer 启用 PowerBI 视觉对象数据的导出。 值为 True 和 False。  默认值为 True。  
-
-**ScheduleRefreshTimeoutMinutes*****（仅适用于 Power BI 报表服务器）***  
-针对嵌入了 AS 模型的 PowerBI 报表的计划刷新的数据刷新超时时间（以分钟为单位）。 默认值为 120 分钟。
-
-**EnableTestConnectionDetailedErrors**  
-指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值为 **true**。 如果此选项设置为 **false**，则只发送一般错误消息。
 
 **AccessControlAllowCredentials**  
 指示当“凭据”标记设置为 true 时，是否可以公开对客户端请求的响应。 默认值是 **false**秒。
@@ -139,6 +118,45 @@ ms.locfileid: "37999449"
 **AccessControlExposeHeaders** 服务器将向客户端公开的以逗号分隔的标头列表。 默认值为空。
 
 **AccessControlMaxAge** 指定预备请求结果可缓存的秒数。 默认值为 600（10 分钟）。
+
+**EditSessionCacheLimit**  
+指定可在一个报表编辑会话中处于活动状态的数据缓存条目数。 默认数量为 5。  
+
+**EditSessionTimeout**  
+指定报表编辑会话超时之前的秒数。默认值为 7200 秒（两小时）。  
+
+**EnableCustomVisuals**（仅适用于 Power BI 报表服务器） 启用 Power BI 自定义视觉对象的显示。 值为 True/False。 默认值为 True。  
+
+**ExecutionLogLevel** 设置执行日志级别。 默认为正常。
+
+**InterProcessTimeoutMinutes** 设置进程超时（以分钟为单位）。 默认值为 30。
+
+**MaxFileSizeMb** 设置报表的最大文件大小（以 MB 为单位）。 默认值为 1000 *。最大值为 2000*。
+
+**ModelCleanupCycleminutes** 设置模型清理周期（以分钟为单位）。 默认为 15.
+
+**OfficeAccessTokenExpirationSeconds**（仅适用于 Power BI 报表服务器） 设置希望 Office 访问令牌到期的时间（以秒为单位）。 默认值为 60。
+
+**OfficeOnlineDiscoveryURL**（仅适用于 Power BI 报表服务器） 设置用于查看 Excel 工作簿的 Office Online Server 实例地址。
+
+**RequireIntune** 将此设置为需要 Intune 才能通过 Power BI 移动应用访问组织的报表。 默认值为 False。
+
+**ScheduleRefreshTimeoutMinutes**（仅适用于 Power BI 报表服务器） 设置希望计划刷新超时的等待时间。 默认值为 120。
+
+**ShowDownloadMenu** 设置此项以启用客户端工具下载菜单。 默认值为 true。
+
+**TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60。
+
+**TrustedFileFormat** 设置所有可保存的外部文件格式。 默认值为 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png。
+
+**EnablePowerBIReportExportData*****（仅适用于 Power BI 报表服务器）***  
+启用从 Power BI 视觉对象导出 Power BI 报表服务器数据。 值为 True 和 False。  默认值为 True。  
+
+**ScheduleRefreshTimeoutMinutes*****（仅适用于 Power BI 报表服务器）***  
+针对嵌入了 AS 模型的 Power BI 报表的计划刷新的数据刷新超时时间（以分钟为单位）。 默认值为 120 分钟。
+
+**EnableTestConnectionDetailedErrors**  
+指示当用户使用报表服务器测试数据源连接时，是否向客户端计算机发送详细的错误消息。 默认值为 **true**。 如果此选项设置为 **false**，则只发送一般错误消息。
 
 ## <a name="see-also"></a>另请参阅
 

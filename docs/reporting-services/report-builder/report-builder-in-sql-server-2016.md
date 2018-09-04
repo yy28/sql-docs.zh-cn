@@ -20,15 +20,15 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b0e65fda3c8aab492d45546428db43b8af7fc1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022924"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406588"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 中的报表生成器
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 你可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中预览报表，并且将报表发布到本机模式或 SharePoint 集成模式（其他用户可运行此报表）的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。  
+  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 你可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表，并且将报表发布到本机模式或 SharePoint 集成模式（其他用户可运行此报表）的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。  
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33022924"
   
 -   **可基于各种数据源生成报表。** 使用具有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]托管数据提供程序、OLE DB 提供程序或 ODBC 数据源的任何数据源类型的数据生成报表。 可以创建使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、Oracle、Hyperion 及其他数据库中的关系数据和多维数据的报表。 您可以使用 XML 数据处理扩展插件从任何 XML 数据源检索数据。 可以使用表值函数来设计自定义数据源。  
   
--   **修改现有报表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，你可以自定义和更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中创建的报表。  
+-   **修改现有报表。** 使用 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，你可以自定义和更新在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]报表设计器中创建的报表。  
   
 -   **修改数据** ，通过筛选数据及将数据分组和排序或通过添加公式或表达式来修改数据。  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33022924"
   [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)
 
   [SQL Server 2016 的 Reporting Services 和报表生成器中的新增功能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-  介绍此版本的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]的新增功能。   
+  介绍此版本的 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的新增功能。   
   [教程：脱机创建快速图表报表](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
- 介绍 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
+ 介绍 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 以及可用来帮助创建报表的向导。 教程提供了一组供您使用的数据，因此不需要连接到数据源即可开始工作。  
   
  [规划报表（报表生成器）](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  提供在开始生成报表之前应当考虑哪些情况的信息。  
   
  [报表创作概念（报表生成器和 SSRS）](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
- 定义在整个 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 文档中使用的重要概念。  
+ 定义在整个 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 文档中使用的重要概念。  
   
  [报表设计视图（报表生成器）](../../reporting-services/report-builder/report-design-view-report-builder.md)  
  介绍报表设计视图的不同窗格和区域。  
@@ -96,6 +96,6 @@ ms.locfileid: "33022924"
  介绍共享数据集设计视图的不同窗格和区域。  
   
  [键盘快捷键（报表生成器）](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
- 概述可用于在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中导航和设计报表的快捷键。  
+ 概述可用于在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中导航和设计报表的快捷键。  
   
 

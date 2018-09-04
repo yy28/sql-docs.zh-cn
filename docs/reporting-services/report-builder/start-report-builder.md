@@ -20,28 +20,28 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fd9da00fc99cc47c260c43faa9599b6d2e1d6d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50d270dd6594287229bae2e573bf0fed481e2b88
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020004"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405875"
 ---
 # <a name="start-report-builder"></a>启动报表生成器
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是独立的报表创作环境。 使用它，可以创建分页报表并将其发布到在本机或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是独立的报表创作环境。 使用它，可以创建分页报表并将其发布到在本机或 SharePoint 集成模式下安装的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。  
   
- 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 门户或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中以 SharePoint 集成模式首次启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，系统会提示你从 Microsoft 下载中心下载。 
+ 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中以 SharePoint 集成模式首次启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，系统会提示从 Microsoft 下载中心下载。 
  
 ![report-builder-get-report-builder](../../reporting-services/report-builder/media/report-builder-get-report-builder.png) 
  
  你或管理员还可以 [从 Microsoft 下载中心将报表生成器安装到你的计算机上](http://go.microsoft.com/fwlink/?LinkID=219138)。 有关详细信息，请参阅 [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md) 中的“使用系统管理器服务器安装报表生成器”。
  
- 安装 SQL Server Reporting Services 时未安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]；需单独下载并安装它。  
+ 安装 SQL Server Reporting Services 时未安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]；需单独下载并安装它。  
   
- 从 Web 门户或 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 时，如果打开了较早版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ，请与你的管理员联系，管理员可以更新 Web 门户或 SharePoint 站点上的版本。  
+ 从 Web 门户或 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 时，如果打开了较早版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ，请与你的管理员联系，管理员可以更新 Web 门户或 SharePoint 站点上的版本。  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] Web 门户启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-from-the-includessrsnoversionincludesssrsnoversion-mdmd-web-portal"></a>从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 1.  在 Web 浏览器的地址栏中，键入报表服务器的 URL。 默认情况下，该 URL 为 http://\<*servername*>/reports。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "33020004"
   
      第一次，将提示你 [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)。 
   
-     之后将打开 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] ，然后就可以从报表服务器中创建分页报表或打开报表。  
+     之后将打开 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，然后就可以从报表服务器中创建分页报表或打开报表。  
   
-## <a name="to-start-includessrbnoversionincludesssrbnoversion-mdmd-in-sharepoint-integrated-mode"></a>在 SharePoint 集成模式下启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
+## <a name="to-start-includessrbnoversionincludesssrbnoversionmd-in-sharepoint-integrated-mode"></a>在 SharePoint 集成模式下启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  导航到包含所需库的 SharePoint 站点。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33020004"
   
 4.  在 **“新建文档”** 菜单上，单击 **“报表生成器报表”**。  
   
-     第一次时，此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 向导。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 。  
+     第一次时，此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 向导。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md) 。  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 将打开，随后你可以在报表服务器中创建分页报表或打开报表。  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 将打开，随后可在报表服务器中创建分页报表或打开报表。  
   
      **注意** 如果  “新建文档”菜单未列出 “报表生成器报表”、 “报表生成器模型”或 “报表数据源”，则需要将其内容类型添加到 SharePoint 库中。 有关详细信息，请参阅 [向 SharePoint 库添加 Reporting Services 内容类型](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
 

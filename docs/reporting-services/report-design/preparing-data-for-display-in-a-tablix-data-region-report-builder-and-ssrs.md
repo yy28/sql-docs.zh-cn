@@ -1,7 +1,7 @@
 ---
 title: 准备要在 Tablix 数据区域中显示的数据（报表生成器和 SSRS）| Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0106cac1213e9037008bc9c89b0ef501457c6446
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023964"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409475"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>准备要在 Tablix 数据区域中显示的数据（报表生成器和 SSRS）
   Tablix 数据区域显示来自数据集的数据。 您可以查看从数据集中检索的所有数据，也可以创建筛选器以便仅查看数据子集。 还可以添加条件表达式，以便填充 Null 值或修改对数据集的查询，使其包括定义现有列的排序顺序的列。  
@@ -37,7 +37,7 @@ ms.locfileid: "33023964"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- 有关在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据源检索数据之前在数据中消除 Null 值的详细信息，请参阅位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 联机丛书 [上的](http://go.microsoft.com/fwlink/?linkid=120955)文档中的“Null 值”和“Null 值和联接”。  
+ 有关在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 数据源检索数据之前在数据中消除 Null 值的详细信息，请参阅 [NULL 和 UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)。  
   
 ## <a name="handling-null-field-names"></a>处理 Null 字段名称  
  只要查询结果集中存在 Null 字段自身，就可以在表达式中测试 Null 值。 使用自定义代码，可以测试在运行时从数据源返回的集合字段中是否存在字段自身。 有关详细信息，请参阅[数据集字段集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)。  

@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066665"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432508"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Reporting Services 报表的数据检索问题疑难解答
 报表处理的第一步是通过运行数据集查询检索每个数据集的报表数据。 本地预览报表时，数据源连接和凭据必须使用足够的权限才能检索计算机上的数据。 在报表服务器上运行报表时，数据源连接和凭据必须使用足够的权限才能检索报表服务器上的数据。 使用本主题可帮助解决有关报表数据检索的问题。   
@@ -47,7 +47,7 @@ ms.locfileid: "38066665"
 确认密码不包含特殊字符。 如果不能更改密码，则可以请数据库管理员将相应的凭据作为系统 ODBC 数据源名称 (DSN) 的一部分存储在本地和服务器中。 有关详细信息，请参阅 MSDN 上的 .NET Framework SDK 文档中的“OdbcConnection.ConnectionString”。   
   
 > [!NOTE]  
->建议您不要在连接字符串中添加登录信息（如密码）。 报表设计器在 [“数据源属性”](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 或 [“共享数据源属性”](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) 对话框上提供 **“凭据”** 页，你可在其中输入凭据。 这些凭据安全地存储在报表创作计算机上。  
+>建议您不要在连接字符串中添加登录信息（如密码）。 报表设计器在“数据源属性”或“共享数据源属性”对话框上提供“凭据”页，可在其中输入凭据。 这些凭据安全地存储在报表创作计算机上。  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>在查询设计器中运行查询时为什么看不到数据？  
 创建数据集时，数据集字段集合将显示在“报表数据”窗格中。 有时候，数据集字段集合不按预期的方式显示。   
@@ -71,7 +71,7 @@ ms.locfileid: "38066665"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted（客户端开发）| Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547147"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076464"
 ---
 # <a name="always-encrypted-client-development"></a>始终加密（客户端开发）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,11 @@ ms.locfileid: "39547147"
 
 - [对用于 SQL Server 的 .NET Framework 数据提供程序使用 Always Encrypted](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [对 JDBC 驱动程序使用始终加密](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [对 Windows ODBC 驱动程序使用始终加密](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [对 ODBC 驱动程序使用 Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [对 PHP 驱动程序使用 Always Encrypted](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> [.NET CORE](https://docs.microsoft.com/dotnet/core/) 目前不支持 Always Encrypted。
 
 ## <a name="see-also"></a>另请参阅
 

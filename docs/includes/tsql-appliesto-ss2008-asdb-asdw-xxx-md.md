@@ -1,2 +1,2 @@
-<Token>**本主题适用于：**![是](media/yes.png)SQL Server（从 2008 开始）![是](media/yes.png)Azure SQL 数据库![是](media/yes.png)Azure SQL 数据仓库![否](media/no.png)并行数据仓库</Token>
+<Token>**适用对象：**![yes](media/yes.png)SQL Server（从 2008 开始）![yes](media/yes.png)Azure SQL 数据库![yes](media/yes.png)Azure SQL 数据仓库![no](media/no.png)并行数据仓库</Token>
 

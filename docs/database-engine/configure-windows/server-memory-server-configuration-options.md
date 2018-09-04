@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870232"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405765"
 ---
 # <a name="server-memory-server-configuration-options"></a>“服务器内存”服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ ms.locfileid: "32870232"
 设置此选项可实现根据其他内存分配器的请求扩大或缩小内存，不影响[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][动态内存管理](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)。 使用“锁定内存页”用户权限时，建议按[如上所述](#max_server_memory)，为 max server memory 设置一个上限。
 
 > [!IMPORTANT]
-> 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志中将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` 自 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，Standard Edition 使用锁定页不再需要[跟踪标志 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
+> 应仅在必要时设置此选项，即有迹象表明正在换出 sqlservr 进程时。在这种情况下，错误日志将报告错误 17890，类似于以下示例：`A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，Standard Edition 不需要[跟踪标志 845 ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)来使用“锁定页”。 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>启用“锁定内存页”  
 启用“锁定内存页”选项：  
@@ -122,7 +123,7 @@ ms.locfileid: "32870232"
  您可以在不重新启动实例的情况下更改这些设置，以便可以轻松地进行尝试以找到适合使用模式的最佳设置。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>为 SQL Server 提供最大内存量  
-在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016)。
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本中，内存最大可配置为进程虚拟地址空间限制。 有关详细信息，请参阅 [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)。
   
 ## <a name="examples"></a>示例  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux 上 SQL Server 2017 的各版本和支持的功能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Windows 和 Windows Server 版本的内存限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Windows 和 Windows Server 版本的内存限制](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

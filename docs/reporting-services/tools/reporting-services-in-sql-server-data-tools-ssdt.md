@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037194"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409354"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037194"
   
 -   控制 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的窗口和模式：  
   
-    |Description|键组合|  
+    |描述|键组合|  
     |-----------------|---------------------|  
     |生成选定的项目|Ctrl+Shift+B|  
     |显示“属性”窗口|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037194"
   
 -   控制报表设计图面上的项：  
   
-    |Description|键组合|  
+    |描述|键组合|  
     |-----------------|---------------------|  
     |将焦点从一个报表项移到下一个报表项|Tab|  
     |移动选定的报表项|箭头键|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037194"
 ## <a name="next-steps"></a>后续步骤
 
 [下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[解决方案资源管理器](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[解决方案资源管理器](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 报表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [报表定义语言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

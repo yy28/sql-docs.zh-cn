@@ -1,6 +1,6 @@
 ---
-title: 使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据库中 | Microsoft Docs
-description: 介绍如何创建 SQL Server Integration Services (SSIS) 包，将数据从各种数据源移到 Azure SQL 数据库。
+title: 使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中 | Microsoft Docs
+description: 介绍如何创建 SQL Server Integration Services (SSIS) 包，将数据从各种数据源移到 SQL Server 或 Azure SQL 数据库。
 documentationcenter: NA
 ms.prod: sql
 ms.prod_service: integration-services
@@ -10,26 +10,27 @@ ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 08/14/2018
+ms.date: 08/20/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: ed87e5a83e992ba5de6289d72465d92c94126748
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ab5ce3238285cbe687b2608edb5236d460baa197
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175017"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409360"
 ---
-# <a name="load-data-into-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 Azure SQL 数据库中
+# <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 将数据加载到 SQL Server 或 Azure SQL 数据库中
 
-创建 SQL Server Integration Services (SSIS) 包，将数据加载到 [Azure SQL 数据库](/azure/sql-database/)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
+创建 SQL Server Integration Services (SSIS) 包，将数据加载到 SQL Server 或 [Azure SQL 数据库](/azure/sql-database/)中。 可以选择在数据通过 SSIS 数据流时对其进行重构、转换和清理。
 
 本文演示如何完成以下操作：
 
 * 在 Visual Studio 中创建新的 Integration Services 项目。
 * 设计可将数据从源加载到目标中的 SSIS 包。
 * 运行 SSIS 包以加载数据。
+
 
 ## <a name="basic-concepts"></a>基本概念
 
@@ -57,9 +58,13 @@ ms.locfileid: "40175017"
 1. **SQL Server Integration Services (SSIS)**。 SSIS 是 SQL Server 的一个组件，需要 SQL Server 的许可版、开发人员版或评估版。 要获取 SQL Server 评估版，请参阅[评估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
 2. Visual Studio（可选）。 要获取免费的 Visual Studio Community Edition，请参阅 [Visual Studio Community][Visual Studio Community]。 如果不想安装 Visual Studio，可以只安装 SQL Server Data Tools (SSDT)。 SSDT 安装的 Visual Studio 版本功能有限。
 3. **适用于 Visual Studio 的 SQL Server Data Tools (SSDT)**。 要获取适用于 Visual Studio 的 SQL Server Data Tools，请参阅[下载 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
-4. **Azure SQL 数据库数据库和权限**。 本教程将连接到 SQL 数据库实例并向其中加载数据。 必须具有连接、创建表和加载数据的权限。
-5. **示例数据**。 本教程使用 AdventureWorks 示例数据库中存储在 SQL Server 中的示例数据，作为要加载到 SQL 数据库中的源数据。 要获取 AdventureWorks 示例数据库，请参阅 [AdventureWorks 示例数据库][AdventureWorks 2014 Sample Databases]。
-6. **防火墙规则**。 必须先使用本地计算机的 IP 地址在 SQL 数据库上创建防火墙规则，才可将数据上传到 SQL 数据库。
+4. 本教程将连接到 SQL Server 或 SQL 数据库实例并向其中加载数据。 必须具有在以下目标之一上连接、创建表和加载数据的权限：
+   - Azure SQL 数据库。 有关详细信息，请参阅 [Azure SQL 数据库](/azure/sql-database/)。  
+      或多个
+   - SQL Server 实例。 SQL Server 可在本地或 Azure 虚拟机上运行。 若要下载 SQL Server 的免费评估版或开发人员版，请参阅 [SQL Server 下载](https://www.microsoft.com/sql-server/sql-server-downloads)。
+
+5. **示例数据**。 本教程使用 AdventureWorks 示例数据库中存储在 SQL Server 中的示例数据，作为源数据。 要获取 AdventureWorks 示例数据库，请参阅 [AdventureWorks 示例数据库][AdventureWorks 2014 Sample Databases]。
+6. 要将数据加载到 SQL 数据库中，请参阅**防火墙规则**。 必须先使用本地计算机的 IP 地址在 SQL 数据库上创建防火墙规则，才可将数据上传到 SQL 数据库。
 
 ## <a name="create-a-new-integration-services-project"></a>创建新的 Integration Services 项目
 1. 启动 Visual Studio。
@@ -81,7 +86,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
     ![][02]
 2. 双击“数据流任务”以便切换到“数据流”选项卡。
 3. 从工具箱中的其他源列表中，将 ADO.NET 源拖到设计图面。 如果源适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL Server 源”。
-4. 从“工具箱”的“其他目标”列表中，将 ADO.NET 目标拖动到 ADO.NET 源下的设计图面。 如果目标适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL DW 目标”。
+4. 从“工具箱”的“其他目标”列表中，将 ADO.NET 目标拖动到 ADO.NET 源下的设计图面。 如果目标适配器仍处于选中状态，请在“属性”窗格中将其名称更改为“SQL 目标”。
    
     ![][09]
 
@@ -128,16 +133,16 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 1. 双击目标适配器，打开“ADO.NET 目标编辑器”。
    
     ![][11]
-2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于 Azure SQL 数据库数据库的连接设置，本教程将向该数据库加载数据。
+2. 在“ADO.NET 目标编辑器”的“连接管理器”选项卡上，单击“连接管理器”列表旁边的“新建”按钮，打开“配置 ADO.NET 连接管理器”对话框，并创建适用于数据库的连接设置，本教程将向该数据库加载数据。
 3. 在“配置 ADO.NET 连接管理器”对话框中，单击“新建”按钮，打开“连接管理器”对话框并创建新的数据连接。
 4. 在“连接管理器”对话框中，执行以下操作。
    1. 对于“提供程序”，请选择 SqlClient 数据提供程序。
-   2. 针对“服务器名称”，请输入 SQL 数据库名称。
+   2. 对于“服务器名称”，输入 SQL Server 或 SQL 数据库服务器的名称。
    3. 在“登录服务器”部分中，选择“使用 SQL Server 身份验证”或输入身份验证信息。
-   4. 在“连接到数据库”部分中，选择现有 SQL 数据库数据库。
-   5. 单击 **“测试连接”**。
-   6. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框。
-   7. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框。
+   4. 在“连接到数据库”部分中，选择现有数据库。
+    A. 单击 **“测试连接”**。
+    B. 在报告连接测试结果的对话框中，单击“确定”返回“连接管理器”对话框。
+    c. 在“连接管理器”对话框中，单击“确定”返回“配置 ADO.NET 连接管理器”对话框。
 5. 在“配置 ADO.NET 连接管理器”对话框中，单击“确定”返回“ADO.NET 目标编辑器”。
 6. 在“ADO.NET 目标编辑器”中，单击“使用表格或视图”列表旁边的“新建”，打开“创建表格”对话框，创建包含与源表匹配的列列表的新目标表。
    
@@ -167,7 +172,7 @@ Visual Studio 随即打开，并创建新的 Integration Services (SSIS) 项目�
 
 ![][15]
 
-恭喜！ 已成功使用 SQL Server Integration Services 将数据加载到 Azure SQL 数据库。
+恭喜！ 已成功使用 SQL Server Integration Services 将数据加载到 SQL Server 或 Azure SQL 数据库。
 
 ## <a name="next-steps"></a>后续步骤
 

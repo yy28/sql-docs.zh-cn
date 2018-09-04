@@ -1,14 +1,10 @@
 ---
 title: 任务和权限 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], tasks
@@ -19,16 +15,14 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: c5fbec485953e91080607623d07ea8bfaa2751e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d678ada03e625086f54365718b68a0bf63103957
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029034"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279413"
 ---
 # <a name="tasks-and-permissions"></a>任务和权限
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，“任务”  是指用户或管理员可以执行的操作。 任务是预定义的。 您不能创建自定义任务，也不能以编程方式或通过工具修改所提供的任务。 总共有二十五个任务。 这些任务组成了基于角色的安全性中可用的完整操作集。 部分任务示例包括：“查看报表”、“管理报表”和“管理报表服务器属性”。  
@@ -43,7 +37,7 @@ ms.locfileid: "33029034"
 ## <a name="system-and-item-level-tasks"></a>系统级任务和项级任务  
  任务分为两类：系统级任务和项级任务。 一个角色只能包含单个类别中的任务。 下表对每一类别的任务进行了说明。  
   
-|类别|Description|  
+|类别|描述|  
 |--------------|-----------------|  
 |[项级任务](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)|对报表服务器管理的项（例如文件夹、报表、报表模型和资源）执行的操作。<br /><br /> 项级任务的作用域为报表服务器文件夹命名空间。 通过报表服务器上的文件夹或通过 URL 访问的项都受到包含项级任务的角色分配的保护。|  
 |[系统级任务](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|在系统级执行的操作，例如，管理可用于多个项的作业或共享计划。 系统级任务的作用域扩展到报表服务器文件夹命名空间之外。|  

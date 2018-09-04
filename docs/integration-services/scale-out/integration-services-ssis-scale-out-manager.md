@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331251"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082464"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
 
@@ -38,13 +38,13 @@ Scale Out Manager 是一种管理工具，可用于在单一应用中管理完�
 > [!NOTE]
 > 建议以管理员身份运行 SSMS，因为某些 Scale Out 管理操作（例如添加 Scale Out Worker）需要管理权限。
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2.通过运行 ISManager.exe 打开 Scale Out Manager
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2.通过运行 ManagementTool.exe 打开 Scale Out Manager
 
-在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management` 下找到 `ISManager.exe`。 右键单击“ISManager.exe”并选择“以管理员身份运行”。 
+在 `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` 下找到 `ManagementTool.exe`。 右键单击“ManagementTool.exe”并选择“以管理员身份运行”。 
 
 打开 Scale Out Manager 后，输入 Scale Out Master 的 SQL Server 实例名称并与其建立连接，以便管理 Scale Out 环境。
 
-![门户连接](media/portal-connect.PNG)
+![门户连接](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Scale Out Manager 中支持的任务
 在 Scale Out Manager 中，可执行以下操作：
@@ -52,42 +52,42 @@ Scale Out Manager 是一种管理工具，可用于在单一应用中管理完�
 ### <a name="enable-scale-out"></a>启用 Scale Out
 连接到 SQL Server 后，如果未启用 Scale Out，可以选择“启用”来启用它。
 
-![在门户中启用 Scale Out](media/portal-enable-scale-out.PNG) 
+![在门户中启用 Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>查看 Scale Out Master 状态
 Scale Out Master 的状态显示在“仪表板”页上。
 
-![门户仪表板](media/portal-dashboard.PNG)
+![门户仪表板](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>查看 Scale Out Worker 状态
 Scale Out Master 的状态显示在“Worker 管理器”页上。 可选择每个辅助角色来查看单个状态。
 
-![门户中的 Worker 管理器](media/portal-worker-manager.PNG)
+![门户中的 Worker 管理器](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>添加 Scale Out Worker
 要添加 Scale Out Worker，请选择 Scale Out Worker 列表底部的“+”。 
 
 输入要添加的 Scale Out Worker 的计算机名，然后单击“验证”。 Scale Out Manager 会检查当前用户是否有权访问 Scale Out Master 和 Scale Out Worker 计算机上的证书存储
 
-![连接 Worker](media/connect-worker.PNG)
+![连接 Worker](media/connect-worker-new.PNG)
 
 如果验证成功，Scale Out Manager 会尝试读取辅助角色服务器配置文件并获取辅助角色的证书指纹。 有关详细信息，请参阅 [Scale Out Worker](integration-services-ssis-scale-out-worker.md)。 如果 Scale Out Manager 无法读取辅助角色服务配置文件，可通过两种替代方式提供辅助角色证书。 
 
-1.  可直接输入辅助角色证书的指纹。
+- 可直接输入辅助角色证书的指纹。
 
-    ![辅助角色证书 1](media/portal-cert1.PNG)
+    ![辅助角色证书 1](media/portal-cert1-new.PNG)
 
-2.  也可提供证书文件。 
+- 也可提供证书文件。
 
-    ![辅助角色证书 2](media/portal-cert2.PNG)
+    ![辅助角色证书 2](media/portal-cert2-new.PNG)
 
 收集信息后，Scale Out Manager 会描述要执行的操作。 通常，这些操作包括安装证书、更新辅助角色服务配置文件和重启辅助角色服务。
 
-![门户中的添加确认 1](media/portal-add-confirm1.PNG)
+![门户中的添加确认 1](media/portal-add-confirm1-new.PNG)
 
-如果无法访问辅助角色证书，必须手动更新并重启辅助角色服务。
+如果无法访问辅助角色设置，必须手动更新并重启辅助角色服务。
 
-![门户中的添加确认 2](media/portal-add-confirm2.PNG)
+![门户中的添加确认 2](media/portal-add-confirm2-new.PNG)
 
 选择“确认”复选框，然后选择“确定”开始添加 Scale Out Worker。
 
@@ -100,7 +100,7 @@ Scale Out Master 的状态显示在“Worker 管理器”页上。 可选择每�
 ## <a name="edit-a-scale-out-worker-description"></a>编辑 Scale Out Worker 描述
 要编辑 Scale Out Worker 的描述，请选择 Scale Out Worker 并选择“编辑”。 完成编辑描述后，请选择“保存”。
 
-![在门户中保存 Worker](media/portal-save-worker.PNG)
+![在门户中保存 Worker](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>后续步骤
 有关详细信息，请参阅下文：

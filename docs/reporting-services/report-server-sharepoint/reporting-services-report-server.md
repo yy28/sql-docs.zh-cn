@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053345"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405508"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
 
@@ -85,7 +85,7 @@ Reporting Services 报表服务器在以下两种部署模式之一下运行：�
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>带有 SharePoint Web 部件的本机模式
 
- Reporting Services 提供了两种 Web 部件，可以在 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 或更高版本、或 [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 或更高版本的实例中安装和注册这两种部件。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 Reporting Services 中引入的。  
+ Reporting Services 提供了两种 Web 部件，可以在 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 或更高版本、或 SharePoint Portal Server 2003 或更高版本的实例中安装和注册这两种部件。 在 SharePoint 站点上，可以使用这些 Web 部件查找和查看在本机模式下运行的报表服务器上存储和处理的报表。 这些 Web 部件是在较早版本的 Reporting Services 中引入的。  
   
 ## <a name="sharepoint-mode"></a>SharePoint 模式
 

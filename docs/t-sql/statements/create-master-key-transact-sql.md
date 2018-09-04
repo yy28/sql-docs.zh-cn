@@ -27,13 +27,13 @@ caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3f74e50441a1015eb6ae5709f38da6315dd6284c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 98bea9d55f324cb65fdf71d25cbf5586c307bea0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457181"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43111649"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 
 对于 SQL Server 和并行数据仓库，通常用服务主密钥和至少一个密码保护主密钥。 如果以物理方式（日志传送、还原备份等）将数据库移动到另一个服务器，数据库将包含主密钥的两份副本，一份由原始服务器服务主密钥进行加密（除非已使用 ALTER MASTER KEY DDL 显式删除此加密），一份由在 CREATE MASTER KEY 或后续 ALTER MASTER KEY DDL 操作过程中指定的每个密码进行加密。 移动数据库后，若要恢复主密钥以及所有数据（使用主密钥加密为密钥层次结构中的根），用户需要通过用于保护主密钥的其中一个密码，使用 OPEN MASTER KEY 语句在新服务器上还原主密钥的备份，或在新服务器上还原原始服务主密钥的备份。 
 
-对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，当数据库从一个服务器移动到另一个服务器时，密码保护不能视为防止数据丢失的安全机制，因为主密钥的服务主密钥保护由 Microsoft Azure 平台进行管理。 因此，主密钥密码在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中是可选的。
+对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]，当数据库从一个服务器移动到另一个服务器时，密码保护不能视为防止数据丢失的安全机制，因为主密钥的服务主密钥保护由 Microsoft Azure 平台进行管理。 因此，主密钥密码在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 中是可选的。
   
 > [!IMPORTANT]  
 >  你应该使用 [BACKUP MASTER KEY](../../t-sql/statements/backup-master-key-transact-sql.md) 备份主密钥，并将备份存储于另外一个安全的位置中。  

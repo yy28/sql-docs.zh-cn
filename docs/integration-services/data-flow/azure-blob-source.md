@@ -1,7 +1,7 @@
 ---
 title: Azure blob 源 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964349"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405895"
 ---
 # <a name="azure-blob-source"></a>Azure blob 源
   借助“Azure blob 源”  组件，SSIS 包可以读取 Azure blob 中的数据。 支持的文件格式：CSV 和 AVRO。
@@ -39,7 +39,9 @@ ms.locfileid: "36964349"
   
 4.  对于“Blob 文件格式”字段，请选择要使用的 blob 格式，“Text”或“Avro”。  
   
-5.  如果文件格式是 Text，则必须指定“列分隔符字符”值。 此外，如果文件中的第一行包含列名称，请选择“在第一个数据行中显示列名称”  。
+5.  如果文件格式是 Text，则必须指定“列分隔符字符”值。 （不支持多字符分隔符。）
+
+    此外，如果文件中的第一行包含列名称，请选择“在第一个数据行中显示列名称”  。
 
 6.  如果为压缩文件，请选择“解压缩文件”。
 

@@ -17,15 +17,15 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0eead8d73153621430037141e0a509adac4cd1fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1f8ba05e8969d2758e33c64ff43cb006a2b6a03
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028474"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410436"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留项，以支持通过加密通道建立报表服务器连接。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
   
 > [!TIP]  
 >  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如[如何在 SharePoint 2010 web 应用程序上启用 SSL (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
@@ -37,7 +37,7 @@ ms.locfileid: "33028474"
   
  出于测试目的，可以在本地生成证书。 如果将 **MakeCert** 实用工具和示例命令用作模板，请确保在运行该命令之前将服务器名称指定为主机并删除所有换行符。 如果在 DOS 窗口中运行命令，则可能需要增加窗口的缓冲区大小以容纳整条命令。  
   
- 如果您正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 控制台应用程序获取您的计算机上安装的证书。 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) （使用 SSL 加密机密数据）。  
+ 如果正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 IIS 管理器控制台应用程序获取计算机上安装的证书。 IIS 管理器包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) （使用 SSL 加密机密数据）。  
   
 ## <a name="interoperability-issues-with-iis"></a>与 IIS 的互操作性问题  
  在同一计算机上同时存在 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将严重影响与报表服务器的 SSL 连接：  
@@ -46,9 +46,9 @@ ms.locfileid: "33028474"
   
 -   卸载 IIS 可能会暂时中断对绑定 SSL 的报表服务器 URL 的服务。 因此，强烈建议您在卸载 IIS 后重新启动计算机。  
   
-     必须重新启动计算机才能从缓存中清除所有 SSL 会话。 某些操作系统可缓存 SSL 会话长达 10 小时，这将使 https:// URL 继续有效，即使从 HTTP.SYS 中的 URL 保留项删除 SSL 绑定后也是如此。 重新启动计算机会关闭使用通道的所有已打开的连接。  
+     必须重新启动计算机才能从缓存中清除所有 SSL 会话。 某些操作系统可缓存 SSL 会话长达 10 小时，这将使 https:// URL 继续有效，即使从 HTTP.SYS 中的 URL 预留删除 SSL 绑定后也是如此。 重新启动计算机会关闭使用通道的所有已打开的连接。  
   
-## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>将 SSL 绑定到 Reporting Services URL 保留项  
+## <a name="bind-ssl-to-a-reporting-services-url-reservation"></a>将 SSL 绑定到 Reporting Services URL 预留  
  下列步骤不包括有关请求、生成、下载或安装证书的说明。 证书必须已安装并可供使用。 指定的证书属性、从中获取证书的证书颁发机构以及用于请求和安装证书的工具和实用工具都由您决定。  
   
  可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具绑定证书。 如果在本地计算机存储区正确安装了证书，则 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具将检测到该证书并将它显示在 **“Web 服务 URL”** 页和 **“报表管理器 URL”** 页上的 **“SSL 证书”** 列表中。  
@@ -69,7 +69,7 @@ ms.locfileid: "33028474"
   
  报表服务器数据库配置是测试 URL 所必需的。 如果您尚未创建报表服务器数据库，请在测试 URL 之前先创建该数据库。  
   
- 报表管理器和报表服务器 Web 服务的 URL 保留项都是单独配置的。 如果还要将报表管理器配置为通过 SSL 加密的通道进行访问，请继续执行以下步骤：  
+ 报表管理器和报表服务器 Web 服务的 URL 预留都是单独配置的。 如果还要将报表管理器配置为通过 SSL 加密的通道进行访问，请继续执行以下步骤：  
   
 1.  单击 **“报表管理器 URL”**。  
   

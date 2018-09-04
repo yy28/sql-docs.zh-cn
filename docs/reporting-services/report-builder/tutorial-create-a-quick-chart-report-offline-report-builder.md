@@ -19,23 +19,23 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7ff4d216b7122e3500a99871834029d92d9aa072
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fb6a3891e7adb4c0159f2b98e78336c51196dac
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022414"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411744"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
 
-  在本教程中，你可以使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
+  在本教程中，可使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
   
 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图类似的饼图：  
   
  ![报表生成器快速饼图](../../reporting-services/report-builder/media/report-builder-quick-pie-chart.png "Report Builder quick pie chart")  
   
 ## <a name="prerequisites"></a>必备条件  
- 无论你是使用 XML 数据还是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，都需要有权访问报表生成器。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
+ 无论你是使用 XML 数据还是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询，都需要有权访问报表生成器。 你可以从本机模式或 SharePoint 集成模式中的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 报表服务器上启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，也可以从 Microsoft 下载中心下载 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 。 有关详细信息，请参阅 [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)。  
   
 ##  <a name="TwoWays"></a> 用于完成本教程的两种方法  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33022414"
 ### <a name="using-a-includetsqlincludestsql-mdmd-query-that-contains-data-for-this-tutorial"></a>使用包含此教程数据的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询  
  可以复制本主题中包含数据的查询，并将其粘贴到向导中。 你需要 SQL Server 实例的名称以及足以对任何数据库进行只读访问的凭据。 本教程中的数据集查询使用文本数据，但查询必须由 SQL Server 实例来处理才能返回报表数据集所需的元数据。  
   
- 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的优势在于，其他所有 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 教程均使用相同的方法，这样，在你学习其他教程时，你已经提前知道了该做什么。  
+ 使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询的优势在于，其他所有 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 教程均使用相同的方法，这样，在你学习其他教程时，你已经提前知道了该做什么。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询要求满足一些其他前提条件。 有关详细信息，请参阅[教程先决条件&#40;报表生成器&#41;](../../reporting-services/prerequisites-for-tutorials-report-builder.md)。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33022414"
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步是什么？  
- 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]，需要具有通过“连接字符串”（它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
+ 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，需要具有通过“连接字符串”（它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
   
  若要完成其他教程，你需要 SQL Server 实例的名称以及足以对任何数据库进行只读访问的凭据。 系统管理员也可以为您设置该权限。  
   

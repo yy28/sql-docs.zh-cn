@@ -1,30 +1,24 @@
 ---
 title: 预定义角色 | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028554"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282429"
 ---
 # <a name="role-definitions---predefined-roles"></a>角色定义 - 预定义角色
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中安装了预定义角色，您可以使用它们授予对报表服务器操作的访问权限。 每个预定义角色都描述了一个相关任务的集合。 可以向预定义角色分配组帐户和用户帐户，以提供对报表服务器操作的立即访问。  
@@ -44,7 +38,7 @@ ms.locfileid: "33028554"
   
  下表对预定义角色、作用域以及如何使用进行了说明。  
   
-|预定义角色|范围|Description|  
+|预定义角色|范围|描述|  
 |---------------------|-----------|-----------------|  
 |[“内容管理员”角色](#bkmk_content)|项|包含所有项级任务。 分配了此角色的用户具有管理报表服务器内容的完全权限，这些权限包括向其他用户授予权限以及定义用于存储报表和其他项的文件夹结构。|  
 |[“发布者”角色](#bkmk_publisher)|项|分配了此角色的用户可以向报表服务器添加项，包括能够创建和管理包含这些项的文件夹。|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028554"
 ### <a name="content-manager-tasks"></a>内容管理员任务  
  下表列出了“内容管理员”角色中包含的任务：   
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |使用报表|读取报表定义。|  
 |创建链接报表|创建基于非链接报表的链接报表。|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028554"
 ### <a name="publisher-tasks"></a>发布者任务  
  下表列出了“发布者”角色包含的任务。   
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |创建链接报表|创建链接报表，并将其发布到报表服务器文件夹中。|  
 |管理数据源|创建和删除共享数据源项，以及查看和修改数据源的属性及内容。|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028554"
 ### <a name="browser-tasks"></a>浏览者任务  
  下表对“浏览者”角色定义中所包含的任务进行了说明。   
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |查看报表|运行报表和查看报表属性。|  
 |查看资源|查看资源和资源属性。|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028554"
 ### <a name="report-builder-tasks"></a>报表生成者任务  
  下表对“报表生成者”角色定义中所包含的任务进行了说明。   
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |使用报表|读取报表定义。|  
 |查看报表|运行报表和查看报表属性。|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028554"
 ### <a name="my-reports-tasks"></a>“我的报表”任务  
  下表列出了“我的报表”  角色中包括的任务：  
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |创建链接报表|创建基于用户的“我的报表”文件夹中所存储报表的链接报表。|  
 |管理文件夹|创建、查看和删除文件夹，以及查看和修改文件夹属性。|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028554"
 ### <a name="system-administrator-tasks"></a>系统管理员任务  
  下表列出了“系统管理员”角色中包含的任务。   
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |执行报表定义|开始执行报表定义，而不将定义发布到报表服务器。|  
 |管理作业|查看和取消正在运行的作业。 有关详细信息，请参阅 [管理运行中的进程](../../reporting-services/subscriptions/manage-a-running-process.md)。|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028554"
   
 ### <a name="system-user-tasks"></a>系统用户任务  
   
-|任务|Description|  
+|任务|描述|  
 |----------|-----------------|  
 |执行报表定义|运行报表但不将其发布到报表服务器。|  
 |查看报表服务器属性|查看应用于报表服务器的属性，如应用程序名称，是否启用“我的报表”功能以及报表历史记录默认值。<br /><br /> 如果从“系统用户”角色中删除此任务，将无法访问“站点设置”页。  而且，在每页的顶部也不显示应用程序标题。 默认情况下，报表管理器的标题是“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]”。|  

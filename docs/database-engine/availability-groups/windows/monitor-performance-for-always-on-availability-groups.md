@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e576153f1e9f0fc43360bc3ce25af284c402b14e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870052"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40409478"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "32870052"
   
 -   [有用的扩展事件](#BKMK_XEVENTS)  
   
-##  <a name="BKMK_DATA_SYNC_PROCESS"></a>数据同步过程  
+##  <a name="data-synchronization-process"></a>数据同步过程  
  若要估计完全同步的时间并识别瓶颈，需要了解同步过程。 性能瓶颈可能出现在过程中的任何位置，查找瓶颈有助于更深入发掘潜在的问题。 下图和下表说明了数据同步过程：  
   
  ![可用性组数据同步](media/always-onag-datasynchronization.gif "可用性组数据同步")  
@@ -55,7 +55,7 @@ ms.locfileid: "32870052"
 |5|强化|在次要副本上刷新日志以进行强化。 日志刷新后，会将确认发送回主要副本。<br /><br /> 强化日志后，即可避免数据丢失。|性能计数器 [SQL Server:Database > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 等待类型 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|重做|重做次要副本上的刷新页面。 页面在等待重做时会保留在重做队列中。|[SQL Server:Database Replica > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 等待类型 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
-##  <a name="BKMK_FLOW_CONTROL_GATES"></a>流控制门  
+##  <a name="flow-control-gates"></a>流控制门  
  可用性组在主要副本上设计有流控制门，可避免所有可用性副本上的资源（例如网络和内存资源）过度消耗。 这些流控制门不会影响可用性副本同步运行状况的状态，但它们会影响可用性数据库（包括 RPO）的整体性能。  
   
  在主要副本上捕获日志后，它们会受制于两个级别的流控制，如下表所示。  
@@ -72,7 +72,7 @@ ms.locfileid: "32870052"
   
  两个有用的性能计数器，即 [SQL Server:Availability Replica > Flow control/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Flow Control Time (ms/sec)](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，会在最后一秒钟内显示激活流控制的次数以及等待流控制所花费的时间。 流控制的等待时间越长，转换的 RPO 越高。 有关导致流控制等待时间较长这一类型问题的详细信息，请参阅[故障排除：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)。  
   
-##  <a name="BKMK_RTO"></a>估计故障转移时间 (RTO)  
+##  <a name="estimating-failover-time-rto"></a>估计故障转移时间 (RTO)  
  SLA 中的 RTO 取决于 Always On 实现在任何给定时间的故障转移时间，可使用以下公式表示：  
   
  ![可用性组 RTO 计算](media/always-on-rto.gif "可用性组 RTO 计算")  
@@ -90,7 +90,7 @@ ms.locfileid: "32870052"
   
  故障转移系统开销时间（即 Toverhead）包括对 WSFC 群集进行故障转移和将数据库联机所用的时间。 此时间通常较短且比较固定。  
   
-##  <a name="BKMK_RPO"></a>估计可能的数据丢失 (RPO)  
+## <a name="estimating-potential-data-loss-rpo"></a>估计可能的数据丢失 (RPO)  
  SLA 中的 RPO 取决于 Always On 实现在任何给定时间可能的数据丢失。 此可能的数据丢失可以使用以下公式进行表示：  
   
  ![可用性组 RPO 计算](media/always-on-rpo.gif "可用性组 RPO 计算")  
@@ -103,8 +103,234 @@ ms.locfileid: "32870052"
  日志发送队列表示可能因灾难性故障而丢失的所有数据。 初看上去，使用日志生成速率而不是日志发送速率很奇怪（请参阅 [log_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)）。 但请记住，使用日志发送速率仅提供同步时间，而 RPO 基于其生成速度（而不是同步速度）来衡量数据丢失。  
   
  估计 Tdata_loss 更为简单的方法是使用 [last_commit_time](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。 主要副本上的 DMV 会为所有副本报告此值。 可以计算主要副本的值与次要副本的值之间的差值，从而估计次要副本上的日志追赶主要副本的速度。 如前面所述，此计算并不会根据生成日志的速度告知可能的数据丢失，但应为一个近似值。  
+
+## <a name="estimate-rto--rpo-with-the-ssms-dashboard"></a>使用 SSMS 仪表板估计 RTO 和 RPO
+在 Always On 可用性组中，计算并显示次要副本上托管的数据库的 RTO 和 RPO。 在主要副本的仪表板上，RTO 和 RPO 按次要副本分组。 
+
+若要在仪表板中查看 RTO 和 RPO，请执行以下操作：
+1. 在 SQL Server Management Studio 中，展开 “Always On 高可用性”节点，右键单击可用性组的名称，然后选择“显示仪表板”。 
+1. 从“分组依据”选项卡下，选择“添加/删除列”。选中“估计恢复时间(秒)”[RTO] 和“估计的数据丢失(时间)”[RPO]。 
+
+   ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
+
+### <a name="calculation-of-secondary-database-rto"></a>辅助数据库 RTO 计算 
+恢复时间计算用于确定在发生故障转移后恢复辅助数据库所需的时间。  故障转移时间通常较短且比较固定。 检测时间取决于群集级别设置，而不是各个可用性副本。 
+
+
+对于辅助数据库 (DB_sec)，其 RTO 的计算和显示基于其 redo_queue_size 和 redo_rate：
+
+![RTO 计算](media/calculate-rto.png)
+
+除极端情况外，辅助数据库 RTO 的计算公式是：
+
+![RTO 计算公式](media/formula-calc-second-dba-rto.png)
+
+
+
+### <a name="calculation-of-secondary-database-rpo"></a>辅助数据库 RPO 计算
+
+对于辅助数据库 (DB_sec)，其 RPO 的计算和显示基于其 is_failover_ready、last_commit_time 及其相关主数据库 (DB_pri) 的 last_commit_time。 当 secondary database.is_failover_ready = 1 时，daa 会同步，故障转移时无数据丢失。 但是，如果此值为 0，则主数据库上的 last_commit_time 与辅助数据库上的 last_commit_time 之间存在差异。 
+
+对于主数据库，last_commit_time 是上一个事务的提交时间。 对于辅助数据库，last_commit_time 是主数据库上事务（已在辅助数据库上成功强化）的上次提交时间。 主数据库和辅助数据库的此数字应相同。 这两个值之间的差值是未在辅助数据库上强化的挂起事务的持续时间，并将在发生故障转移时丢失。 
+
+![RPO 计算](media/calculate-rpo.png)
+
+### <a name="performance-counters-used-in-rtorpo-formulas"></a>RTO/RPO 公式中使用的性能计数器
+
+- redo_queue_size (KB) [用于 RTO 中]：重做队列大小是 RTO last_received_lsn 和 last_redone_lsn 之间的事务日志大小。 last_received_lsn 是标识一个点的日志块 ID，在该点之前，所有日志块都已由承载此辅助数据库的次要副本接收。 Last_redone_lsn 是在辅助数据库上重做的上一个日志记录的日志序列号。 基于这两个值，可找到起始日志块 (last_received_lsn) 和结束日志块 (last_redone_lsn) 的 ID。 然后，这两个日志块之间的空间可以表示尚未重做的事务日志块数。 以千字节 (KB) 为单位。
+-  redo_rate（KB / 秒）[用于 RTO 中]：一个累积值，表示运行时间内在辅助数据库上已重做的事务日志数 (KB)（以千字节(KB) /秒为单位）。 
+- last_commit_time（日期）[用于 RPO 中]：对于主数据库，last_commit_time 是上一个事务的提交时间。 对于辅助数据库，last_commit_time 是主数据库上事务（已在辅助数据库上成功强化）的上次提交时间。 由于辅助设备上的此值应与主设备上的相同值同步，因此这两个值之间的任何差异都是数据丢失 (RPO) 的估计值。  
+ 
+## <a name="estimate-rto-and-rpo-using-dmvs"></a>使用 DMV 估计 RTO 和 RPO
+
+可查询 DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 和 [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 来估计数据库的 RPO 和 RTO。 以下查询创建完成这两项任务的存储过程。 
+
+  >[!NOTE]
+  > 确保创建并运行存储过程以首先估计 RTO，因为运行存储过程来估计 RPO 需要前者生成的值。 
+
+### <a name="create-a-stored-procedure-to-estimate-rto"></a>创建存储过程以估计 RTO 
+
+1. 在目标次要副本上，创建存储过程 proc_calculate_RTO。 如果此存储过程已存在，请先将其删除，然后重新创建它。 
+
+ ```sql
+    if object_id(N'proc_calculate_RTO', 'p') is not null
+        drop procedure proc_calculate_RTO
+    go
+    
+    raiserror('creating procedure proc_calculate_RTO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RTO
+    --
+    -- description: Calculate RTO of a secondary database.
+    -- 
+    -- parameters:  @secondary_database_name nvarchar(max): name of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RTO
+    (
+    @secondary_database_name nvarchar(max)
+    )
+    as
+    begin
+      declare @db sysname
+      declare @is_primary_replica bit 
+      declare @is_failover_ready bit 
+      declare @redo_queue_size bigint 
+      declare @redo_rate bigint
+      declare @replica_id uniqueidentifier
+      declare @group_database_id uniqueidentifier
+      declare @group_id uniqueidentifier
+      declare @RTO float 
+
+      select 
+      @is_primary_replica = dbr.is_primary_replica, 
+      @is_failover_ready = dbcs.is_failover_ready, 
+      @redo_queue_size = dbr.redo_queue_size, 
+      @redo_rate = dbr.redo_rate, 
+      @replica_id = dbr.replica_id,
+      @group_database_id = dbr.group_database_id,
+      @group_id = dbr.group_id 
+      from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs    on dbr.replica_id = dbcs.replica_id and 
+      dbr.group_database_id = dbcs.group_database_id  where dbcs.database_name = @secondary_database_name
+
+      if  @is_primary_replica is null or @is_failover_ready is null or @redo_queue_size is null or @replica_id is null or @group_database_id is null or @group_id is null
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else if @is_primary_replica = 1
+      begin
+        print 'You are visiting wrong replica';
+        return
+      end
+
+      if @redo_queue_size = 0 
+        set @RTO = 0 
+      else if @redo_rate is null or @redo_rate = 0 
+      begin
+        print 'RTO of Database '+ @secondary_database_name +' is not available'
+        return
+      end
+      else 
+        set @RTO = CAST(@redo_queue_size AS float) / @redo_rate
+    
+      print 'RTO of Database '+ @secondary_database_name +' is ' + convert(varchar, ceiling(@RTO))
+      print 'group_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_id)
+      print 'replica_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @replica_id)
+      print 'group_database_id of Database '+ @secondary_database_name +' is ' + convert(nvarchar(50), @group_database_id)
+    end
+ ```
+
+2. 使用目标辅助数据库名称执行 proc_calculate_RTO：
+  ```sql
+   exec proc_calculate_RTO @secondary_database_name = N'DB_sec'
+  ```
+3. 输出显示目标次要副本数据库的 RTO 值。 保存 group_id、replica_id 和 group_database_id，用于与 RPO 估计存储过程配合使用。 
+   
+   示例输出：
+<br>数据库 DB_sec' 的 RTO 为 0
+<br>数据库 DB4 的 group_id 为 F176DD65-C3EE-4240-BA23-EA615F965C9B
+<br>数据库 DB4 的 replica_id 为 405554F6-3FDC-4593-A650-2067F5FABFFD
+<br>数据库 DB4 的 group_database_id 为 39F7942F-7B5E-42C5-977D-02E7FFA6C392
+
+### <a name="create-a-stored-procedure-to-estimate-rpo"></a>创建存储过程以估计 RPO 
+1. 在主要副本上，创建存储过程 proc_calculate_RPO。 如果已存在，请先将其删除，然后重新创建它。 
+
+ ```sql
+    if object_id(N'proc_calculate_RPO', 'p') is not null
+                    drop procedure proc_calculate_RPO
+    go
+    
+    raiserror('creating procedure proc_calculate_RPO', 0,1) with nowait
+    go
+    --
+    -- name: proc_calculate_RPO
+    --
+    -- description: Calculate RPO of a secondary database.
+    -- 
+    -- parameters:  @group_id uniqueidentifier: group_id of the secondary database.
+    --              @replica_id uniqueidentifier: replica_id of the secondary database.
+    --              @group_database_id uniqueidentifier: group_database_id of the secondary database.
+    --
+    -- security: this is a public interface object.
+    --
+    create procedure proc_calculate_RPO
+    (
+     @group_id uniqueidentifier,
+     @replica_id uniqueidentifier,
+     @group_database_id uniqueidentifier
+    )
+    as
+    begin
+          declare @db_name sysname
+          declare @is_primary_replica bit
+          declare @is_failover_ready bit
+          declare @is_local bit
+          declare @last_commit_time_sec datetime 
+          declare @last_commit_time_pri datetime      
+          declare @RPO nvarchar(max) 
+
+          -- secondary database's last_commit_time 
+          select 
+          @db_name = dbcs.database_name,
+          @is_failover_ready = dbcs.is_failover_ready, 
+          @last_commit_time_sec = dbr.last_commit_time 
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.replica_id = @replica_id and dbr.group_database_id = @group_database_id
+
+          -- correlated primary database's last_commit_time 
+          select
+          @last_commit_time_pri = dbr.last_commit_time,
+          @is_local = dbr.is_local
+          from sys.dm_hadr_database_replica_states dbr join sys.dm_hadr_database_replica_cluster_states dbcs on dbr.replica_id = dbcs.replica_id and 
+          dbr.group_database_id = dbcs.group_database_id  where dbr.group_id = @group_id and dbr.is_primary_replica = 1 and dbr.group_database_id = @group_database_id
+
+          if @is_local is null or @is_failover_ready is null
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+
+          if @is_local = 0
+          begin
+            print 'You are visiting wrong replica'
+            return
+          end  
+
+          if @is_failover_ready = 1
+            set @RPO = '00:00:00'
+          else if @last_commit_time_sec is null or  @last_commit_time_pri is null 
+          begin
+            print 'RPO of database '+ @db_name +' is not available'
+            return
+          end
+          else
+          begin
+            if DATEDIFF(ss, @last_commit_time_sec, @last_commit_time_pri) < 0
+            begin
+                print 'RPO of database '+ @db_name +' is not available'
+                return
+            end
+            else
+                set @RPO =  CONVERT(varchar, DATEADD(ms, datediff(ss ,@last_commit_time_sec, @last_commit_time_pri) * 1000, 0), 114)
+          end
+          print 'RPO of database '+ @db_name +' is ' + @RPO
+      end
+ ```
+
+2. 使用目标辅助数据库的 group_id、replica_id 和 group_database_id 执行 proc_calculate_RPO。 
+
+ ```sql
+   exec proc_calculate_RPO @group_id= 'F176DD65-C3EE-4240-BA23-EA615F965C9B',
+        @replica_id =  '405554F6-3FDC-4593-A650-2067F5FABFFD',
+        @group_database_id  = '39F7942F-7B5E-42C5-977D-02E7FFA6C392'
+ ```
+3. 输出显示目标次要副本数据库的 RPO 值。 
+
   
-##  <a name="BKMK_Monitoring_for_RTO_and_RPO"></a>监视 RTO 和 RPO  
+##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
  本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第二部分：扩展运行状况模型）中给出的 GUI 教程。  
   
  [估计故障转移时间 (RTO)](#BKMK_RTO) 和[估计可能的数据丢失 (RPO)](#BKMK_RPO) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
@@ -232,7 +458,7 @@ ms.locfileid: "32870052"
 ##  <a name="BKMK_SCENARIOS"></a>性能故障排除方案  
  下表列出了常见的与性能相关的故障排除方案。  
   
-|应用场景|Description|  
+|应用场景|描述|  
 |--------------|-----------------|  
 |[疑难解答：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
 |[疑难解答：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  

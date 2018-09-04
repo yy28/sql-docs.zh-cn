@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75567e7c1dfd0ca78adaf283d09c7c6a0019c706
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022484"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410447"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -129,7 +129,7 @@ ms.locfileid: "33022484"
   
  嵌入数据源和共享数据源的区别在于创建、存储和管理它们的方式不同。 下表总结了嵌入数据源和共享数据源之间的差异：  
   
-|Description|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
+|描述|嵌入<br /><br /> 数据源|共享<br /><br /> 数据源|  
 |-----------------|------------------------------|----------------------------|  
 |数据连接嵌入在报表定义中。|![可用](../../reporting-services/report-data/media/greencheck.gif "Available")||  
 |指向报表服务器上的数据连接的指针嵌入在报表定义中。||![可用](../../reporting-services/report-data/media/greencheck.gif "Available")|  
@@ -181,7 +181,7 @@ ms.locfileid: "33022484"
  不能对数据集中的数据进行分组。 若要聚合数据集中的数据，您可以编辑查询命令以便在为报表检索数据前计算聚合。 这些聚合值称为“服务器聚合” 。 在表达式中，若要将这些值标识为预先计算的聚合，请使用聚合函数。 有关详细信息，请参阅 [Aggregate 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)。  
   
 ##  <a name="Parameters"></a> 使用参数和数据集  
- 对于包含查询变量的嵌入数据集查询，可以自动创建查询参数和相应的报表参数。 在报表运行时，报表参数的值将链接到数据集查询参数。 这样，在外部数据源上运行的查询命令将包括为报表参数指定的值。 通过报表参数，用户可以选择他们要在报表中看到的数据。 可以在[“数据集属性”对话框 ->“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)页中查看查询参数和报表参数的链接方式。  
+ 对于包含查询变量的嵌入数据集查询，可以自动创建查询参数和相应的报表参数。 在报表运行时，报表参数的值将链接到数据集查询参数。 这样，在外部数据源上运行的查询命令将包括为报表参数指定的值。 通过报表参数，用户可以选择他们要在报表中看到的数据。 可在“数据集属性”对话框 ->“参数”页中查看查询参数和报表参数的链接方式。  
   
  对于共享数据集，查询参数是可以在独立于报表的报表服务器上管理的共享数据集定义的一部分。 下表描述对查询参数值的支持：  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33022484"
   
 -   不能包括对表示报表参数的内置 Parameters 集合的引用。  
   
- 若要为共享数据集配置查询参数值，请在数据集设计模式中，浏览到并打开报表服务器中的共享数据集，并且设置[“数据集属性”对话框 ->“参数”（报表生成器）](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)页上的选项。 有关详细信息，请参阅 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
+ 若要为共享数据集配置查询参数值，请在数据集设计模式中，浏览到并打开报表服务器中的共享数据集，并且设置“数据集属性”对话框 ->“参数”页上的选项。 有关详细信息，请参阅 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
   
  对于某些多维数据源，例如 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，可以利用图形查询设计器来指定查询筛选器和选择要用于创建相应查询参数的选项。 在您选择该参数选项时，数据扩展插件将自动创建一个单独的报表数据集，以便为该参数的下拉列表提供可用值。 默认情况下，这些隐藏的数据集不显示在“报表数据”窗格中。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "33022484"
  在报表处理期间，当运行对数据集的查询时，结果集可能不包含任何行。 在呈现的报表中，链接到空数据集的数据区域将显示为空数据区域。 可以指定要在呈现的报表中代替空数据区域的显示文本。 还可以为子报表指定消息，以便如果在运行时对所有数据集的查询没有产生任何数据，则显示该消息。 有关详细信息，请参阅[为数据区域设置“无数据”消息（报表生成器和 SSRS）](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
 ##  <a name="Options"></a> 设置数据集选项  
- 对于支持国际数据的数据源，可能需要调整那些影响排序顺序、国际字符属性以及是否区分大小写的数据集属性。 这些属性包括大小写、假名类型、宽度、重音和排序规则。 有关详细信息，请参阅 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?linkid=98335)中的“数据库和数据库引擎应用程序的国际化注意事项”和“使用排序规则”。 有关如何设置这些属性的详细信息，请参阅[“数据集属性”对话框 ->“选项”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)。  
+ 对于支持国际数据的数据源，可能需要调整那些影响排序顺序、国际字符属性以及是否区分大小写的数据集属性。 这些属性包括大小写、假名类型、宽度、重音和排序规则。 有关如何设置这些属性的详细信息，请参阅[“数据集属性”对话框 ->“选项”（报表生成器）](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

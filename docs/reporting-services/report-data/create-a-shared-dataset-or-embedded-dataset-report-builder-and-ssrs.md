@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022674"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432580"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>创建共享数据集或嵌入数据集（报表生成器和 SSRS）
 可在单个 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表中使用嵌入的数据集。 报表服务器上的共享数据集可由多个报表使用，移动和分页皆可。 若要创建数据集，需要具有嵌入或共享的数据源。  
   
- 使用“报表生成器”执行以下任务：  
+## <a name="report-builder-tasks"></a>报表生成器任务
+
+使用“报表生成器”执行以下任务：  
   
 1.  在数据集设计视图下创建共享数据集。 共享数据集必须使用已发布的共享数据源。  
   
@@ -33,7 +35,9 @@ ms.locfileid: "33022674"
   
 3.   将数据集直接保存到报表服务器或 SharePoint 站点。  
   
- 使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“报表设计器”执行以下任务：  
+## <a name="report-designer-tasks"></a>报表设计器任务
+
+使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“报表设计器”执行以下任务：  
   
 1.  在解决方案资源管理器中创建共享数据集。 共享数据集必须使用来自解决方案资源管理器的“共享数据源”文件夹中的数据源。  
   
@@ -46,7 +50,7 @@ ms.locfileid: "33022674"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>打开报表生成器和创建共享数据集  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>在报表生成器中创建共享数据集
   
 1.  打开报表生成器。 **“新建报表或数据集”** 窗格将打开，如下图所示：  
   

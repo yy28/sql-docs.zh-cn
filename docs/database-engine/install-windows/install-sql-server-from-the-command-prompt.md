@@ -85,13 +85,14 @@ helpviewer_keywords:
 ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a12eab1a7ea003c1837c68f53eae33989ed884ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 509fd76b510df010e4dc3c7f8364dc2424e223d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225147"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412704"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -886,7 +887,7 @@ LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任�
 |/FEATURES=SQLEngine, PolyBase|安装 PolyBase 引擎。|  
   
 ##  <a name="RoleParameters"></a> 角色参数  
- 安装角色或 /Role 参数用于安装预配置的所选功能。 [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] 角色在现有 SharePoint 场或未配置的新场中安装 [!INCLUDE[ssAS_md](../../includes/ssas-md.md)] 实例。 对于每种方案，分别提供了两个安装角色来支持它们。 一次只能选择一个安全角色来进行安装。 如果您选择了安装角色，安装程序将安装属于此角色的功能和组件。 您不能改变为该角色指定的功能和组件。 有关如何使用功能角色参数的详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
+ 安装角色或 /Role 参数用于安装预配置的所选功能。 SSAS 角色在现有 SharePoint 场或未配置的新场中安装 SSAS 实例。 对于每种方案，分别提供了两个安装角色来支持它们。 一次只能选择一个安全角色来进行安装。 如果您选择了安装角色，安装程序将安装属于此角色的功能和组件。 您不能改变为该角色指定的功能和组件。 有关如何使用功能角色参数的详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
   
  AllFeatures_WithDefaults 角色是各版本 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的默认行为，可减少向用户提供的对话框数量。 当安装的 SQL Server 版本不是 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]时，可以从命令行指定此角色。 
   

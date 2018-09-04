@@ -1,7 +1,7 @@
 ---
 title: 为报表数据源指定凭据和连接信息 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -33,12 +33,12 @@ caps.latest.revision: 61
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 30e9d5668ada3bbe6d231147b9930f6d079c6f29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: e0a75286b8a4e3529202c5ef700d4157b85f2a8a
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550728"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42440062"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -51,7 +51,7 @@ ms.locfileid: "34550728"
 ## <a name="when-credentials-are-used-in-report-builder"></a>在报表生成器中使用凭据时  
  在报表生成器中，在连接到报表服务器或完成数据相关的任务时（例如，创建嵌入数据源，运行数据集查询或预览报表）通常会使用凭据。 凭据不保存在报表中。 将在报表服务器或本地客户端对凭据进行单独管理。 下表介绍了可能需要提供的凭据类型、凭据的存储位置以及使用方法：  
   
--   在 [Reporting Services 登录对话框（报表生成器）](../../reporting-services/report-builder/reporting-services-login-dialog-box-report-builder.md)中输入的报表服务器凭据。  
+-   在“Reporting Services 登录”对话框中输入的报表服务器凭据。  
   
      当您首次保存到、发布到或浏览到报表服务器或 SharePoint 站点时，可能需要输入凭据。 在报表生成器会话结束之前，将始终使用所输入的凭据。 如果选择保存凭据，则这些凭据将安全地与您的用户设置一起存储在您的计算机上。 在后续的报表生成器会话中，将使用保存的凭据连接到同一报表服务器或 SharePoint 站点。 报表服务器管理员或 SharePoint 管理员指定要使用哪一种类型的凭据。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34550728"
   
      报表服务器使用这些凭据与外部数据源建立数据连接。 对于某些类型的数据源，可以将凭据安全地存储在报表服务器上。 利用这些凭据，其他用户无需提供凭据即可运行报表进行基础数据连接。  
   
--   运行数据集查询，刷新数据集字段或预览报表时，在[输入数据源凭据对话框（报表生成器）](../../reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md)中输入的数据源凭据。  
+-   运行数据集查询、刷新数据集字段或预览报表时，在“输入数据源凭据”对话框中输入的数据源凭据。  
   
      使用这些凭据，报表生成器可以与外部数据源建立数据连接，或对配置为提示需要提供凭据的报表进行预览。 在此对话框中输入的凭据不会存储在报表服务器中，且不能由其他用户使用。 在报表编辑会话期间，报表生成器会对这些凭据进行缓存，以便您无需在每次运行查询或预览报表时输入凭据。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "34550728"
 |集成安全性|模拟当前用户|对于所有数据源类型，均使用当前的用户帐户进行连接。|  
 |Windows 凭据|模拟指定的用户|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模拟用户帐户进行连接。|  
 |数据库凭据|模拟无人参与的执行帐户或服务帐户。<br /><br /> （Reporting Services 会在使用服务标识发送连接请求时删除管理员权限）。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 将用户名和密码追加到连接字符串中。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 如果使用的是 TCP/IP 协议，则连接会成功；否则，连接将失败。<br /><br /> 对于 XML：<br /><br /> 如果使用数据库凭据，则报表服务器上的连接将失败。|  
-|InclusionThresholdSetting|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
+|None|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]：<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
   
 ## <a name="setting-credentials-programmatically"></a>通过编程方式设置凭据  
  您可以通过编写代码来设置凭据，以控制对报表和报表服务器的访问。 有关详细信息，请参阅 [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md)。  

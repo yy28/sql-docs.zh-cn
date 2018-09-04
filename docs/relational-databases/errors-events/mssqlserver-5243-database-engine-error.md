@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a58546faa866cb4508ce6481cf04bdf02a3618
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7bd57d6e3d853ca38731f54c3de949618155105b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321118"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412551"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,21 @@ ms.locfileid: "34321118"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 检测到内存的存储引擎结构中存在结构性不一致。  
   
 ## <a name="user-action"></a>用户操作  
-[!INCLUDE[dbccBoilerPlate](../../includes/dbccboilerplate-md.md)]  
+查找硬件故障 运行硬件诊断并更正任何问题。 也可以通过检查 Windows 系统和应用程序日志以及 SQL Server 错误日志以查看是否存在由硬件故障导致的错误发生。 修复日志中包含的所有与硬件相关的问题。
+
+如果持续遇到数据损坏问题，请尝试分别换下不同的硬件组件以确定问题所在。 检查以确保系统未在磁盘控制器上启用写入缓存。 如果怀疑写入缓存是问题起因，请与硬件供应商联系。
+
+最后，您可能会发现，切换到全新的硬件系统是解决问题的极佳途径。 此切换操作可能包括重新格式化磁盘驱动器和重新安装操作系统。
+
+从备份还原 - 如果出现的问题与硬件无关，并且有已知的干净备份可用，请从备份还原数据库。
+
+运行 DBCC CHECKDB - 如果没有干净的备份可用，请运行没有 REPAIR 子句的 DBCC CHECKDB 以确定损坏范围。 建议使用 DBCC CHECKDB 的 REPAIR 子句。 接下来，请运行带适当 REPAIR 子句的 DBCC CHECKDB 修复损坏的数据。
+
+> **不支持警报标记!!!!**
+> **不支持 tr 标记!!!!**
+> **不支持 tr 标记!!!!**
+
+如果运行具有 REPAIR 子句的 DBCC CHECKDB 无法解决存在的问题，请与主要支持提供商联系。
   
 ## <a name="see-also"></a>另请参阅  
 [DBCC CHECKDB (Transact-SQL)](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

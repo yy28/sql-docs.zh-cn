@@ -1,7 +1,7 @@
 ---
 title: 数据连接、数据源和连接字符串 - 报表生成器 - SSRS | Microsoft Docs
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/21/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d97b92107887fe0348213947fc683bf9e86013d
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969408"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42441566"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
@@ -26,11 +26,23 @@ ms.locfileid: "37969408"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已分页的报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
+  若要在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 和  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 已分页的报表中包含数据，必须首先创建“数据源”  和“数据集” 。 本主题解释数据源的类型、如何创建数据源以及与数据源凭据相关的重要信息。 数据源包含数据源类型、连接信息以及要使用的凭据的类型。 有两种类型的数据源：嵌入数据源和共享数据源。 嵌入数据源在报表中定义并只由该报表使用。 共享数据源独立于报表定义并可由多个报表使用。 有关详细信息，请参阅[嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
 
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
+## <a name="data-in-includessrbnoversionincludesssrbnoversionmd"></a>数据位于 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
+ ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
+1.  **“报表数据”窗格中的数据源** 在创建嵌入数据源或添加共享数据源后，会在“报表数据”窗格中显示一个数据源。  
+  
+2.  **“连接”对话框** 使用“连接”对话框可以生成连接字符串或粘贴连接字符串。  
+  
+3.  **数据连接信息** 将连接字符串传递给数据扩展插件。  
+  
+4.  **凭据** 凭据与连接字符串是分开管理的。  
+  
+5.  **数据扩展插件/数据访问接口** 对数据的连接可通过多个数据访问层。  
+  
+6.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表、Web 服务或报表模型的数据。  
+
 ##  <a name="bkmk_data_sources"></a> 嵌入数据源和共享数据源  
  如果您的数据源使用频率较高，就可以采用共享数据源。 建议尽量使用共享数据源。 使用共享数据源可便于对报表和报表访问进行管理，并有助于提高报表和报表所访问数据源的访问安全性。 如果需要共享数据源，可以请求系统管理员为您创建一个。  
   
@@ -44,7 +56,7 @@ ms.locfileid: "37969408"
   
      开发人员可以使用 <xref:Microsoft.ReportingServices.DataProcessing> API 创建数据处理扩展插件以支持其他类型的数据源。  
   
--   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中，浏览到某一报表服务器或 SharePoint 站点并选择共享数据源，或者在报表中创建嵌入数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中创建共享数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]中使用自定义数据扩展插件。  
+-   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中，浏览到某一报表服务器或 SharePoint 站点并选择共享数据源，或者在报表中创建嵌入数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中创建共享数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中使用自定义数据扩展插件。  
   
  下表总结了嵌入数据源和共享数据源之间的差异。  
   
@@ -86,21 +98,6 @@ ms.locfileid: "37969408"
 -   用于 Power View 的 Microsoft BI 语义模型：在配置用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的 SharePoint 站点上，此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的数据源和版本的完整列表，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
-  
-## <a name="data-in-includessrbnoversionincludesssrbnoversion-mdmd"></a>数据位于 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
- ![rs_DataSourcesStory](../../reporting-services/report-data/media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
-  
-1.  **“报表数据”窗格中的数据源** 在创建嵌入数据源或添加共享数据源后，会在“报表数据”窗格中显示一个数据源。  
-  
-2.  **“连接”对话框** 使用“连接”对话框可以生成连接字符串或粘贴连接字符串。  
-  
-3.  **数据连接信息** 将连接字符串传递给数据扩展插件。  
-  
-4.  **凭据** 凭据与连接字符串是分开管理的。  
-  
-5.  **数据扩展插件/数据访问接口** 对数据的连接可通过多个数据访问层。  
-  
-6.  **外部数据源** 检索来自关系数据库、多维数据库、SharePoint 列表、Web 服务或报表模型的数据。  
   
 ##  <a name="bkmk_connection_examples"></a> 常用连接字符串示例  
  连接字符串是数据访问接口的连接属性的文本表示形式。 下表列出了各种数据连接类型的连接字符串示例。  

@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456191"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405155"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -56,7 +56,33 @@ ms.locfileid: "39456191"
 
 有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
+## <a name="click-a-product"></a>单击一个产品！
+
+在下一行中，单击你感兴趣的产品名称。 单击时此网页上的此位置会显示适合你单击的任何产品的不同内容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>概述
 
@@ -858,7 +884,30 @@ GO
  [数据库](../../relational-databases/databases/databases.md)   
  [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
 
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 逻辑服务器](#tab/sqldbls)
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><strong><em>* SQL 数据库<br />逻辑服务器*</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
 
 ## <a name="overview"></a>概述
 
@@ -1169,7 +1218,30 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 - [ALTER DATABASE（Azure SQL 数据库）](alter-database-transact-sql.md?&tabs=sqldbls) 
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 托管实例](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
+>   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 ## <a name="overview"></a>概述
 
@@ -1230,7 +1302,30 @@ CREATE DATABASE TestDB1;
 
 请参阅 [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi) 
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL 数据仓库](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
+>   <th><strong><em>* SQL 数据<br />仓库*</em></strong></th>
+>   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
 
 ## <a name="overview"></a>概述
 
@@ -1331,7 +1426,30 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-azure-sql-data-warehouse.md) 
 [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md) 
   
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 并行数据仓库](#tab/sqlpdw)
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="create-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
+>   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
+>   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
 
 ## <a name="overview"></a>概述
 
@@ -1458,4 +1576,4 @@ CREATE DATABASE mytest
  [ALTER DATABASE（并行数据仓库）](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE (Transact SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
   
-  
+::: moniker-end
