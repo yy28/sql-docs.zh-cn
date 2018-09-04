@@ -1,26 +1,20 @@
 ---
 title: 聚合函数参考（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028334"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275586"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>报表生成器函数 - 聚合函数参考
   若要在报表中包含聚合值，您可以在表达式中使用内置聚合函数。 数值字段的默认聚合函数是 SUM。 您可以编辑表达式，并使用其他内置聚合函数或指定不同的作用域。 作用域标识要用于计算的一组数据。  
@@ -78,19 +72,19 @@ ms.locfileid: "33028334"
   
 |报表中的位置|字段|Parameters|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> 数据集|变量|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|页眉<br /><br /> 页脚|是|是|最多一个<br /><br /> 注释 1|是|是|是|是|  
-|正文|是<br /><br /> 注释 2|是|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|“否”|是|是|是|  
-|报表参数|“否”|仅限列表中前面的参数<br /><br /> 注释 4|“否”|否|否|否|“否”|  
-|字段|是|是|否|否|否|否|“否”|  
-|查询参数|“否”|是|否|否|否|否|“否”|  
-|组表达式|是|是|否|否|是|否|“否”|  
-|排序表达式|是|是|否|否|是|是<br /><br /> 注释 5|“否”|  
-|筛选表达式|是|是|否|否|是|是<br /><br /> 注释 6|“否”|  
-|代码|“否”|是<br /><br /> 注释 7|“否”|否|否|否|“否”|  
-|报表语言|“否”|是|否|否|否|否|“否”|  
-|变量|是|是|否|否|是|当前作用域或包含作用域|“否”|  
-|聚合|是|是|仅在页眉/页脚中|仅在报表项聚合中|是|否|“否”|  
-|Lookup 函数|是|是|是|否|是|否|“否”|  
+|页眉<br /><br /> 页脚|用户帐户控制|用户帐户控制|最多一个<br /><br /> 注释 1|用户帐户控制|是|是|用户帐户控制|  
+|正文|用户帐户控制<br /><br /> 注释 2|用户帐户控制|仅限当前作用域或包含作用域中的项<br /><br /> 注释 3|否|是|是|用户帐户控制|  
+|报表参数|否|仅限列表中前面的参数<br /><br /> 注释 4|否|否|否|否|否|  
+|字段|用户帐户控制|是|否|否|否|否|否|  
+|查询参数|否|是|否|否|否|否|否|  
+|组表达式|用户帐户控制|是|否|否|是|否|否|  
+|排序表达式|用户帐户控制|是|否|否|是|用户帐户控制<br /><br /> 注释 5|否|  
+|筛选表达式|用户帐户控制|是|否|否|是|用户帐户控制<br /><br /> 注释 6|否|  
+|代码|否|用户帐户控制<br /><br /> 注释 7|否|否|否|否|否|  
+|报表语言|否|是|否|否|否|否|否|  
+|变量|用户帐户控制|是|否|否|用户帐户控制|当前作用域或包含作用域|否|  
+|聚合|用户帐户控制|用户帐户控制|仅在页眉/页脚中|仅在报表项聚合中|用户帐户控制|否|否|  
+|Lookup 函数|用户帐户控制|是|是|否|是|否|否|  
   
 -   **注释 1。** ReportItems 必须存在于呈现的报表页中，否则其值为 Null。 如果报表项的可见性取决于计算结果为 False 的表达式，则该页不存在此报表项。  
   
@@ -115,13 +109,13 @@ ms.locfileid: "33028334"
   
 |Context|RunningValue|RowNumber|第一个<br /><br /> 上一次|Previous|Sum 和其他预排序函数|ReportItem 聚合|Lookup 函数|Aggregate 函数|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|运行值|“否”|否|否|否|是|否|是|“否”|  
-|第一个<br /><br /> 上一次|“否”|否|否|否|是|否|否|“否”|  
-|Previous|是|是|是|否|是|否|是|“否”|  
-|Sum 和其他预排序函数|“否”|否|否|否|是|否|是|“否”|  
-|ReportItem 聚合|“否”|否|否|否|否|否|否|“否”|  
-|Lookup 函数|是|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|是<br /><br /> 注释 1|“否”|“否”|  
-|Aggregate 函数|“否”|否|否|否|否|否|否|“否”|  
+|运行值|否|否|否|否|是|否|是|否|  
+|第一个<br /><br /> 上一次|否|否|否|否|是|否|否|否|  
+|Previous|用户帐户控制|是|是|否|是|否|是|否|  
+|Sum 和其他预排序函数|否|否|否|否|是|否|是|否|  
+|ReportItem 聚合|否|否|否|否|否|否|否|否|  
+|Lookup 函数|用户帐户控制|用户帐户控制<br /><br /> 注释 1|用户帐户控制<br /><br /> 注释 1|用户帐户控制<br /><br /> 注释 1|用户帐户控制<br /><br /> 注释 1|用户帐户控制<br /><br /> 注释 1|否|否|  
+|Aggregate 函数|否|否|否|否|否|否|否|否|  
   
 -   **注释 1。** 如果 Lookup 函数未包含在聚合中，则聚合函数仅适用于 Lookup 函数的 *Source* 表达式中。 聚合函数不适用于 Lookup 函数的 *Destination* 表达式或 *Result* 表达式中。  
   
@@ -180,7 +174,7 @@ ms.locfileid: "33028334"
 ##  <a name="TestingforScope"></a> 测试作用域  
  下列内置函数测试报表项的当前上下文，以确定该报表项是否为特定作用域的成员。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|指示项的当前实例是否在指定的作用域内。|  
   
@@ -189,7 +183,7 @@ ms.locfileid: "33028334"
 ##  <a name="RetrievingRecursiveLevel"></a> 检索递归级别  
  下列内置函数检索处理递归层次结构时的当前级别。 此函数的结果与文本框中的 **Padding** 属性配合使用可以控制递归组可视层次结构的缩进级别。 有关详细信息，请参阅[创建递归层次结构组（报表生成器和 SSRS）](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)。  
   
-|函数|Description|  
+|函数|描述|  
 |--------------|-----------------|  
 |[级别](../../reporting-services/report-design/report-builder-functions-level-function.md)|返回在递归层次结构中的当前深度级别。|  
   

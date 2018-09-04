@@ -1,14 +1,10 @@
 ---
 title: 报表服务器项属性 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027004"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267633"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 属性 - 报表服务器项属性
   项属性是特定于报表服务器数据库中的项的属性。 此类属性包括报表、链接报表、文件夹、资源、模型和数据源。  
@@ -37,7 +31,7 @@ ms.locfileid: "33027004"
 ## <a name="item-properties"></a>项属性  
  以下属性应用于报表服务器数据库中的所有项。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |CreatedBy|最初将项添加到报表服务器数据库的用户的名称。|  
 |**CreationDate**|将项添加到报表服务器数据库的日期和时间。|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027004"
 ## <a name="folder-properties"></a>文件夹属性  
  除了前面列出的项属性外，以下属性应用于报表服务器数据库中的文件夹。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |Reserved|<xref:ReportService2010.ReportingService2010.GetProperties%2A> 方法为报表服务器保留的文件夹返回的值。 保留文件夹包括 Users、My Reports 和 /。 保留文件夹不能修改或删除。|  
   
 ## <a name="report-properties"></a>报表属性  
  除了前面列出的项属性外，以下属性应用于报表服务器数据库中的报表。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |**语言**|在报表中使用的语言。 该值是在 Internet 工程任务组 (IETF) RFC1766 规范中定义的语言代码。 第一部分由两个字符构成，指定基本语言。 第二部分由连字符分隔，指定语言的变化形式或变体。 如果未在与报表定义中的 **Body** 元素相关联的 **Style** 元素中指定某一值，则默认值是该报表服务器的语言。|  
 |ReportProcessingTimeout|以秒为单位的单独报表的超时值。 如果设置了该值，则经过指定时间后报表服务器会尝试停止处理报表。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 -1，则报表在处理期间不会超时。 如果值为 null，则系统属性 ReportProcessingTimeout 的值用于报表处理超时。默认值为 null。 有关详细信息，请参阅[报表服务器系统属性](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)。|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027004"
 ## <a name="resource-properties"></a>资源属性  
  除了前面列出的项属性外，以下属性应用于报表服务器数据库中的资源。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |MimeType|报表服务器数据库中资源的 MIME 类型。|  
   

@@ -1,14 +1,10 @@
 ---
 title: 在自定义应用程序中使用 RSClientPrint 控件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 67ee94b303f8d75e3249b1f20b2ed891c632dc92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef2cedf56fd314244a598ddc77df391f44237ca
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027864"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272976"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自定义应用程序中使用 RSClientPrint 控件
   对于在 HTML 查看器中查看的报表，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控件 RSPrintClient 为其提供了客户端打印功能。 通过该控件提供的“打印”对话框，用户可以启动打印作业、预览报表、指定要打印的页面以及更改边距。 在客户端打印操作过程中，报表服务器通过图像 (EMF) 呈现扩展插件呈现报表，使用操作系统的打印功能创建打印作业并将作业发送到打印机。  
@@ -72,7 +66,7 @@ ms.locfileid: "33027864"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 属性  
   
-|“属性”|类型|RW|，则“默认”|Description|  
+|“属性”|类型|RW|，则“默认”|描述|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|双精度|RW|报表设置|获取或设置左边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
 |MarginRight|双精度|RW|报表设置|获取或设置右边距。 如果开发人员没有设置或报表中未指定，则默认值为 12.2 毫米。|  
@@ -109,7 +103,7 @@ ms.locfileid: "33027864"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient 对 Print 方法的支持  
  RSClientPrint 对象支持用于启动“打印”对话框的 Print 方法。 Print 方法具有以下参数。  
   
-|参数|I/O|类型|Description|  
+|参数|I/O|类型|描述|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|In|String|指定报表服务器虚拟目录（例如，`https://adventure-works/reportserver`）。|  
 |ReportPathParameters|In|String|指定报表在报表服务器文件夹命名空间中的全名，包括参数。 对报表的检索是通过 URL 访问进行的。 例如：“/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234”。|  

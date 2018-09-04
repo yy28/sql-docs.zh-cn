@@ -1,14 +1,10 @@
 ---
 title: 使用 Reporting Services 安全策略文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -21,16 +17,14 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e606f248ba8343ab5bddae2b0968b80d0d7e4cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016734"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278508"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三个安全对象组件相对应：报表服务器和 Windows 服务、报表管理器 Web 应用程序以及报表设计器预览窗口。  
@@ -43,7 +37,7 @@ ms.locfileid: "33016734"
 ## <a name="policy-files-in-reporting-services"></a>Reporting Services 中的策略文件  
  下表列出了 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的策略配置文件、文件位置（假定默认安装）及其各自的功能。  
   
-|File name|位置（默认安装）|Description|  
+|File name|位置（默认安装）|描述|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|报表服务器策略配置文件。 在将报表部署到报表服务器之后，这些安全策略主要影响报表表达式和自定义程序集。 此策略文件还影响部署到报表服务器的自定义数据、传递、呈现和安全扩展插件。|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|报表管理器策略配置文件。 这些安全策略影响扩展报表管理器的所有程序集，例如用于自定义传递的订阅用户界面扩展插件。|  

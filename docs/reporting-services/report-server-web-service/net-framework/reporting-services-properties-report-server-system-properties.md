@@ -1,14 +1,10 @@
 ---
 title: 报表服务器系统属性 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,23 +12,21 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: a5c76d55357aeda9c66b2de668eb80426dd8fa22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4d49b97eba1684e7b3ad50209cf2fee2fbfb64f
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028624"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274843"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Reporting Services 属性 - 报表服务器系统属性
   已保留以下系统属性名称。 您不能创建具有相同名称的用户定义属性。 您可以使用 Web 服务方法读取或修改其中的许多属性。  
   
 ## <a name="properties"></a>属性  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |--------------|-----------------|  
 |SiteName|在用户界面上显示的报表服务器站点的名称。 默认值为“Microsoft Report Server”。 此属性可以是空字符串。 最大长度为 8,000 个字符。|  
 |SystemSnapshotLimit|为报表存储的快照的最大数目。 有效值为 **-1** 到 **2**,**147**,**483**,**647**。 如果值为 **-1**，则无快照限制。|  

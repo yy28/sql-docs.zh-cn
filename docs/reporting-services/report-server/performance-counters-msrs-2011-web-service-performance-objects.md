@@ -1,14 +1,10 @@
 ---
 title: MSRS 2011 Web Service 性能对象的性能计数器 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8851d1c5deac3b759452ec23115cb70dd3cf31f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5faebaba96b5162e0c4127f6898256455e7bc561
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028164"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278498"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>MSRS 2011 Web Service 性能对象的性能计数器
   本主题介绍 **MSRS 2011 Web Service** 和 **MSRS 2011 Windows Service** 性能对象的性能计数器。 这些对象是 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 本机模式部署的组成部分。  
@@ -52,7 +46,7 @@ ms.locfileid: "33028164"
   
  下表列出了 **MSRS 2011 Web Service** 性能对象中包含的计数器。  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |**活动会话**|活动会话的数目。 此计数器提供报表执行生成的所有浏览器会话的累积数，而不管这些会话是否仍处于活动状态。<br /><br /> 删除会话记录后，此计数器的计数即会相应减少。 默认情况下，如果会话在 10 分钟之内无任何活动，就会被删除。|  
 |**每秒缓存命中数**|每秒请求缓存报表的次数。 这些请求是对重新呈现的报表的请求，而不是对直接从缓存处理的报表的请求。 （请参阅本主题后面的 **总缓存命中数** 。）|  
@@ -82,7 +76,7 @@ ms.locfileid: "33028164"
   
  下表列出了 **MSRS 2011 Windows Service** 性能对象中包含的计数器。  
   
-|计数器|Description|  
+|计数器|描述|  
 |-------------|-----------------|  
 |**活动会话**|存储在报表服务器数据库中的活动会话数。 此计数器提供报表订阅生成的所有可用浏览器会话的累积数，而不管这些会话是否仍处于活动状态。|  
 |**每秒缓存刷新数**|每秒刷新的缓存数。|  

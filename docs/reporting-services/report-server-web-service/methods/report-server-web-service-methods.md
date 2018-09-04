@@ -1,14 +1,10 @@
 ---
 title: 报表服务器 Web 服务方法 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +16,14 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6f0730ea9ab0ea2a79e6716922739203568977d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96f6e5773d5b85f3af5a9217c56eefc424112ea5
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026644"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267498"
 ---
 # <a name="report-server-web-service-methods"></a>报表服务器 Web 服务方法
   根据不同的组件功能，报表服务器 Web 服务方法包含不同的类别。 这些方法通过作为 <xref:ReportService2010.ReportingService2010> 和 <xref:ReportExecution2005.ReportExecutionService> 类的成员公开的若干 Web 服务端点（三个用于报表管理，一个用于报表执行）提供。 这些类可使用代理类工具（如 wsdl.exe）生成，[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 中包含此工具。 有关使用报表服务器 Web 服务和 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的详细信息，请参阅[使用 Web 服务和 .NET Framework 生成应用程序](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
@@ -37,7 +31,7 @@ ms.locfileid: "33026644"
 ## <a name="endpoints-and-methods"></a>端点和方法  
  下表列出了报表服务器 Web 服务的端点以及 <xref:ReportService2010.ReportingService2010> 端点提供的方法的类别。 有关其他终结点中可用方法的信息，请参阅[技术参考 (SSRS)](../../../reporting-services/technical-reference-ssrs.md)。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[报表服务器 Web 服务终结点](../../../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md)|介绍如何管理和执行报表服务器 Web 服务的端点。|  
 |[报表服务器命名空间管理方法](../../../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md)|介绍可用来管理报表服务器数据库的方法。 特别值得一提的是，您可以管理文件夹和资源，并设置项属性。|  

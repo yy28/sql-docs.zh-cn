@@ -3,27 +3,21 @@ title: HTML 查看器和报表工具栏 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f53e3459a1a52884995575dd0e19c6b237875a76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017894"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269474"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 查看器和报表工具栏
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了一个 HTML 查看器，该查看器可用来按需显示从报表服务器请求的报表。 HTML 查看器提供了一个用于以 HTML 格式查看报表的框架。 该查看器包含报表工具栏、参数区域、凭据区域和文档结构图。 HTML 查看器中的报表工具栏包含可用于处理报表的功能（包括导出选项，以便您可以使用 HTML 之外的格式查看报表）。 只有在打开配置为使用参数和文档结构图控件的报表时，才会显示参数区域和文档结构图。  
@@ -59,7 +53,7 @@ ms.locfileid: "33017894"
   
  采用默认选项安装的报表服务器中包含以下导出格式。 可供您使用的导出格式的列表可能会与下面的列表有些出入。  
   
-|导出格式|Description|  
+|导出格式|描述|  
 |-------------------|-----------------|  
 |XML|以 XML 语法格式查看报表。 以 XML 格式查看的报表将在一个新浏览器窗口中打开。|  
 |CSV|以逗号分隔格式查看报表。 报表将在与 CSV 文件类型相关联的应用程序中打开。|  

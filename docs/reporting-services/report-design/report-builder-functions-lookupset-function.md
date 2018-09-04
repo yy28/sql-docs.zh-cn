@@ -1,26 +1,20 @@
 ---
 title: LookupSet 函数（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: c15c9dc2c895d3388e644ba285cf71703b00bc6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b3c038e759f540a83d81c60c140904197a5a05
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028744"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271632"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>报表生成器函数 - LookupSet 函数
   从包含名称/值对的数据集返回指定名称的一组匹配值。  

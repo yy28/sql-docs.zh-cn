@@ -1,14 +1,10 @@
 ---
 title: 设置图表上轴标签的格式（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027974"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273364"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
@@ -63,7 +57,7 @@ ms.locfileid: "33027974"
   
  轴刻度是由用于定义要沿该轴显示的数据范围的最小值和最大值限定的。 图表将根据结果集中的值计算每个轴上的最小值和最大值。 在值轴上，该刻度始终由值字段中的最小数和最大数确定。 在类别轴上，最小值类型和最大值类型根据类别字段的类型而定。 数据集中的任何字段都可分为三种类别字段类型之一。 下表说明了这三种类型的类别字段。  
   
-|类别字段类型|Description|示例|  
+|类别字段类型|描述|示例|  
 |-------------------------|-----------------|-------------|  
 |数字|按数值顺序沿 x 轴绘制类别。|按雇员标识号排列的销售报表沿 x 轴显示雇员标识号。|  
 |日期/时间|按时间顺序沿 x 轴绘制类别。|月销售报表沿 x 轴显示已格式化的日期。|  

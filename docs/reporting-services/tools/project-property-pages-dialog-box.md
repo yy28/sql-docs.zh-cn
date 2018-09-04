@@ -1,30 +1,24 @@
 ---
 title: “项目属性页”对话框 | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.rpt.rptdesigner.projectpropertypages.general.f1
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: cdec8567dc15962e26b238b90a2b3365f657ac28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64b9ef5f94d23929d4cdfe415533dbb8aec3bdcf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032476"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273587"
 ---
 # <a name="project-property-pages-dialog-box"></a>“项目属性页”对话框
 
@@ -34,7 +28,7 @@ ms.locfileid: "33032476"
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Configuration**  
  选择要编辑的配置。 最初，可使用以下配置： **Debug**、 **DebugLocal**和 **Release**。 首先显示活动配置，例如 **Active(Debug)**。  
   

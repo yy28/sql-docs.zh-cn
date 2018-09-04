@@ -1,26 +1,20 @@
 ---
 title: 用于报表服务器上的项的 URL 示例 - SharePoint 模式 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 42638cca55a7d567ebe3ec3bfad37880cca6aebe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ed59907caecb5921f7dc72cba16f009269c02b6
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036984"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273448"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>用于报表服务器上的项的 URL 示例 - SharePoint 模式
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -36,7 +30,7 @@ ms.locfileid: "33036984"
   
  以下 Web 层次结构元素可用于访问和保护报表服务器内容。 其他对象（如列表和页）不用于访问报表服务器内容，因此未在下表中进行说明。  
   
-|Object|Description|  
+|Object|描述|  
 |------------|-----------------|  
 |SharePoint Web 应用程序|SharePoint Web 应用程序可以作为独立的服务器安装，也可以在包含许多虚拟服务器的场中安装。 Web 应用程序具有 URL（例如，`http:*//servername*`）并且可以包含多个站点。|  
 |站点|站点为 Web 应用程序的父站点或子站点。|  

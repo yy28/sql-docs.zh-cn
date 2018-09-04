@@ -3,13 +3,9 @@ title: SQL Server 2016 中 SQL Server Reporting Services 的行为更改 | Micro
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - rows [Reporting Services], heights
@@ -24,16 +20,14 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-caps.latest.revision: 69
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 01ea6c0eea113f3c80796a6f54a7aa88bbfbe10f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 41c2d68480448da2feef73e8f569aeb4ea9229a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968729"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271507"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016 中 SQL Server Reporting Services 的行为更改
 
@@ -48,7 +42,7 @@ ms.locfileid: "37968729"
 ## <a name="next-steps"></a>后续步骤
 
 [Reporting Services 中的新增功能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
-[SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+[SQL Server 2016 中已弃用的 SQL Server Reporting Services 功能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 [SQL Server 2016 的 SQL Server Reporting Services 中停止使用的功能](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [SQL Server 2016 的 SQL Server Reporting Services 中的重大更改](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 

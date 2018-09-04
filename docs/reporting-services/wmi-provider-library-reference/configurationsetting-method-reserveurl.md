@@ -1,31 +1,25 @@
 ---
 title: ReserveURL 方法 (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 73d4e96fc840b703521844e1f575164a2be7807e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9229eb61170d54da3959f8da831a4db840af21b8
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030684"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269489"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting 方法 - ReserveURL
-  为给定的应用程序添加一个 URL 保留项。  
+  为给定的应用程序添加一个 URL 预留。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,7 +39,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  为其保留相应 URL 的应用程序的名称。  
   
  *URLString*  
- 保留的 URL。  
+ 预留的 URL。  
   
  *lcid*  
  用于返回的错误消息的区域设置。  
@@ -62,7 +56,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="remarks"></a>Remarks  
  *UrlString* 不包括虚拟路径名称。 可以使用 [SetVirtualDirectory](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md) 方法实现该目的。  
   
- 针对当前 Windows 服务帐户创建 URL 保留项。 更改 Windows 服务帐户需要手动更新所有的 URL 保留项。  
+ 针对当前 Windows 服务帐户创建 URL 预留。 更改 Windows 服务帐户需要手动更新所有的 URL 预留。  
   
  此方法将导致所有应用程序域进行硬回收。 此操作完成后，应用程序域将重新启动。  
   

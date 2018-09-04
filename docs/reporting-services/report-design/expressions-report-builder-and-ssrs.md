@@ -1,26 +1,20 @@
 ---
 title: 表达式（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2e0630d23d308c061f5d3adf69e17473b5cfbf2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024344"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273130"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 
@@ -86,7 +80,7 @@ ms.locfileid: "33024344"
   
  下表列出了可以包含在表达式中的引用类型：  
   
-|References|Description|示例|  
+|References|描述|示例|  
 |----------------|-----------------|-------------|  
 |[常量](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)|介绍能以交互方式访问需要常量值的属性（例如字体颜色）的常量。|`="Blue"`|  
 |[运算符](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|描述可用于合并表达式中的引用的运算符。 例如， **&** 运算符用于串联字符串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  

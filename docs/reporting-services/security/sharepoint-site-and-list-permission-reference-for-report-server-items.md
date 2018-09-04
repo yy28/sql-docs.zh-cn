@@ -1,14 +1,10 @@
 ---
 title: 报表服务器项的 SharePoint 站点和列表权限参考 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 79bfc468d44f86fad3aca24637ab66b25700cb39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c89daa9b9ede26b005480abdcfc2dfc2a675d065
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032914"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278699"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>报表服务器项的 SharePoint 站点和列表权限参考
   本主题提供了 SharePoint 中的权限参考，对于在 SharePoint 集成模式下运行的报表服务器，可使用这些权限来授予对报表服务器操作的访问权限。 如果要创建自定义权限级别，本主题可帮助您选择要使用何种权限。  
@@ -49,7 +43,7 @@ ms.locfileid: "33032914"
 ## <a name="list-permissions"></a>列表权限  
  对包含报表服务器项的库设置的权限将确定用户如何访问这些项。  
   
-|权限|Description|F|C|V|报表服务器操作|  
+|权限|描述|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理列表|创建和删除列表，添加或删除列表中的栏，添加或删除列表的公共视图。|X|||在从创作工具执行发布操作期间，在 SharePoint 库中创建文件夹。 管理报表历史记录也需要此权限。|  
 |添加项|向列表中添加项目，向文档库中添加文档，添加 Web 讨论评论。|X|X||将报表、报表模型、共享数据源和资源（外部图像文件）添加到 SharePoint 库中。 创建共享数据源。 从共享数据源生成报表模型。 启动报表生成器并创建新报表，或将模型加载到报表生成器中。|  
@@ -66,7 +60,7 @@ ms.locfileid: "33032914"
 ## <a name="site-permissions"></a>网站权限  
  网站权限决定对与存储在特定库中的项不直接相关的报表服务器操作的访问。 例如，此类操作包括创建和管理共享计划（可由多个库中的项使用）以及配置报表查看器 Web 部件（可在整个网站内使用）。  
   
-|权限|Description|F|C|V|报表服务器操作|  
+|权限|描述|F|C|V|报表服务器操作|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |管理权限|创建和更改网站上的权限级别，并为用户和组分配权限。|X|||可以更改针对所有报表服务器项和操作的权限。 可以设置模型项安全性。|  
 |管理网站|执行网站的所有管理任务并管理内容。|X|||创建、更改和删除共享计划。|  

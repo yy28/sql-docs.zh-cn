@@ -1,26 +1,20 @@
 ---
 title: 选择用于分析和报告的 Microsoft 商业智能 (BI) 工具 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: b0268948fe26b5f1f008cd2a3fbc2c5e83bc6c03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a2d2b1a8956f4ccdacb26ff735eb2e5dcf2a702
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016074"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278644"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>选择用于分析和报告的 Microsoft 商业智能 (BI) 工具
 选择正确的商业智能工具可能令人难以应付。 了解不同 Microsoft 产品，找到最适合你需求的一个产品。

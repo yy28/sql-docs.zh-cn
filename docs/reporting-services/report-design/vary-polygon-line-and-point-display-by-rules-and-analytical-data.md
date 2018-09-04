@@ -1,14 +1,10 @@
 ---
 title: 按规则和分析数据更改多边形、线条和点的显示方式 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,16 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027454"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278836"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>按规则和分析数据更改多边形、线条和点的显示方式
   通过设置层的选项、设置层上地图元素的规则或覆盖层上特定嵌入地图元素的选项来控制地图层上多边形、线条和点的显示选项。  
@@ -126,7 +120,7 @@ ms.locfileid: "33027454"
   
  下表显示您可以使用的不同格式的示例：  
   
-|关键字和格式|Description|图例中的显示文本示例|  
+|关键字和格式|描述|图例中的显示文本示例|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|显示不带小数、带货币符号的总计值|$400|  
 |`#FROMVALUE {C2}`|显示带 2 位小数、带货币符号的总计值。|$400.55|  
