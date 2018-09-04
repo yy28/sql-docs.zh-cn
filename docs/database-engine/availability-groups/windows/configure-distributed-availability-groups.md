@@ -13,12 +13,12 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd177d3094f50cd226ed5613ded8fc0d76e6891
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f71ca47b4927e2ea7c6e73d216c062c253387baa
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769063"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348198"
 ---
 # <a name="configure-distributed-availability-group"></a>配置分布式可用性组  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ GO
 ## <a name="create-first-availability-group"></a>创建第一个可用性组
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>在第一个群集上创建主要可用性组  
-在第一个 WSFC 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。      
+在第一个 WSFC 上创建可用性组。   在此示例中，将用于数据库 `ag1` 的可用性组命令为 `db1`。 主可用性组的主要副本在分布式可用性组中称为全局主要副本。 Server1 是此示例中的全局主要副本。        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -114,7 +114,7 @@ GO
   
 
 ## <a name="create-second-availability-group"></a>创建第二个可用性组  
- 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  
+ 然后，在第二个 WSFC 上创建次要可用性组 `ag2`。 在这种情况下，不会指定数据库，因为它会自动从主要可用性组进行种子设定。  辅助可用性组的主要副本在分布式可用性组中称为转发器。 在此示例中，server3 是转发器。 
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag2]   
@@ -217,33 +217,37 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 此时仅支持手动故障转移。 以下 Transact-SQL 语句将故障转移名为 `distributedag` 的分布式可用性组：  
 
 
-1. 将两个可用性组的可用性模式均设置为同步提交。 
+1. 通过在全局主要副本和转发器上同时运行以下代码，将分布式可用性组设置为同步提交。   
     
       ```sql  
-      ALTER AVAILABILITY GROUP [distributedag] 
-      MODIFY 
-      AVAILABILITY GROUP ON
-      'ag1' WITH 
-         ( 
-          LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',  
-          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-          FAILOVER_MODE = MANUAL, 
-          SEEDING_MODE = MANUAL 
-          ), 
-      'ag2' WITH  
+      -- sets the distributed availability group to synchronous commit 
+       ALTER AVAILABILITY GROUP [distributedag] 
+       MODIFY 
+       AVAILABILITY GROUP ON
+       'ag1' WITH 
         ( 
-        LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022', 
-        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT, 
-        FAILOVER_MODE = MANUAL, 
-        SEEDING_MODE = MANUAL 
-        );  
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        ), 
+        'ag2' WITH  
+        ( 
+        AVAILABILITY_MODE = SYNCHRONOUS_COMMIT 
+        );
        
+       -- verifies the commit state of the distributed availability group
+       select ag.name, ag.is_distributed, ar.replica_server_name, ar.availability_mode_desc, ars.connected_state_desc, ars.role_desc, 
+       ars.operational_state_desc, ars.synchronization_health_desc from sys.availability_groups ag  
+       join sys.availability_replicas ar on ag.group_id=ar.group_id
+       left join sys.dm_hadr_availability_replica_states ars
+       on ars.replica_id=ar.replica_id
+       where ag.is_distributed=1
+       GO
+
       ```  
    >[!NOTE]
    >与常规可用性组类似，分布式可用性组中的两个可用性组副本的同步状态取决于这两个副本的可用性模式。 例如，为进行同步提交，当前主要可用性组和辅助可用性组必须都配置为 synchronous_commit 可用性模式。  
 
 
-1. 等分布式可用性组的状态变为 `SYNCHRONIZED`。 在托管主要可用性组的主要副本的 SQL Server 上运行以下查询。 
+1. 等分布式可用性组的状态变为 `SYNCHRONIZED`。 对全局主要副本（主要可用性组的主要副本）运行以下查询。 
     
       ```sql  
       SELECT ag.name
@@ -259,7 +263,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     在可用性组 **synchronization_state_desc** 变为 `SYNCHRONIZED`后继续。 如果 **synchronization_state_desc** 不为 `SYNCHRONIZED`，请每隔五秒运行一次命令，直到变为该状态为止。 在 **synchronization_state_desc** = `SYNCHRONIZED`之前，不要继续操作。 
 
-1. 在托管主要可用性组的主要副本的 SQL Server 上，将分布式可用性组角色设置为 `SECONDARY`。 
+1. 在全局主要副本上，将分布式可用性组角色设置为 `SECONDARY`。 
 
     ```sql
     ALTER AVAILABILITY GROUP distributedag SET (ROLE = SECONDARY); 

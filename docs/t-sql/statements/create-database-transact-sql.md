@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405155"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43321247"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -63,24 +63,10 @@ ms.locfileid: "40405155"
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |**_\* SQL Server \*_** | [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current) | [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL 并行<br />数据仓库](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
-&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 

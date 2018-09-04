@@ -1,25 +1,19 @@
 ---
 title: 安装报表生成器 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/22/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eceeb7d18c8bccb9b489492fa9bbe09c7aa17a5
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 625d11710b22d08d2a0e726d7f84d547097058b1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405376"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272269"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  

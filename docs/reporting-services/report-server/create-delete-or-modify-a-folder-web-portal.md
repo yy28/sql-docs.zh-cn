@@ -1,26 +1,20 @@
 ---
 title: 创建、删除或修改文件夹（Web 门户）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dff7a3a711b0462e7c47869a390f8b171370877c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082449"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270663"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>创建、删除或修改文件夹（Web 门户）
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
@@ -33,7 +27,7 @@ ms.locfileid: "39082449"
   
      可以看到“在其中创建一个新文件夹”对话框。  
   
-3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : \@ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
+3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
   
 4.  选择“创建”。  
   

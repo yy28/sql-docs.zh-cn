@@ -1,31 +1,25 @@
 ---
 title: SQL Server 2016 中的报表生成器 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 482fc7069a480d41122535e139be2726df75f972
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 91b33f6aabc245bd79ff48b1202f20d71ae9293d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406588"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269643"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 中的报表生成器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一种用于创建分页报表的工具，主要面向更愿意在独立环境中工作而不是使用 Visual Studio 中的报表设计器的业务用户。  当你设计分页报表时，需要创建一个报表定义，用于指定在何处获取数据、获取哪些数据以及如何显示数据。 当你运行报表时，报表处理器将使用你指定的报表定义检索数据，并将数据与报表布局相结合生成报表。 你可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中预览报表，并且将报表发布到本机模式或 SharePoint 集成模式（其他用户可运行此报表）的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。  

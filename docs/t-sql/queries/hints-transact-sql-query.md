@@ -1,7 +1,7 @@
 ---
 title: 查询提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 534251e03b3f2a76994a3138475dc0de35388fd4
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331593"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240285"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ms.locfileid: "39331593"
  防止查询使用非聚集内存优化列存储索引。 如果查询包含避免使用 columnstore 索引的查询提示以及有关使用 columnstore 索引的索引提示，则这些提示将发生冲突，查询将返回错误。  
   
  MAX_GRANT_PERCENT = percent  
- 内存授予大小所占的最大百分比。 查询保证不会超过此限制。 如果 Resource Governor 设置低于此限制，则实际限制可能更低。 有效值介于 0.0 和 100.0 之间。  
+ 内存授予大小所占的最大百分比。 查询保证不会超过此限制。 如果 Resource Governor 设置低于此提示指定的值，则实际限制可能更低。 有效值介于 0.0 和 100.0 之间。  
   
 **适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
@@ -255,7 +255,7 @@ ms.locfileid: "39331593"
  如果不能使用这样的计划，查询优化器将返回错误而不是延迟对查询执行的错误检测。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，则返回执行错误。  
  
 <a name="use_hint"></a> USE HINT ( 'hint_name' )****    
- 适用范围：适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
+ 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  按照单引号内的提示名称的指定，向查询处理器提供一个或多个其他提示。   
 
@@ -285,11 +285,17 @@ ms.locfileid: "39331593"
  禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+ 在查询级别强制执行查询优化器行为，就像使用数据库兼容性级别 n 来编译该查询（其中 n 是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n 支持的值。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。   
  
-> [!TIP]
-> 提示名称不区分大小写。
+    > [!NOTE]
+    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不会重写默认或旧版基数估计设置（如果它是通过数据库范围的配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的）。   
+    > 此提示仅影响查询优化器的行为。 它不会影响可能依赖于[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他功能（例如，某些数据库功能的可用性）。   
   
   可以使用动态管理视图 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 查询所有受支持的 USE HINT 名称的列表。    
+
+> [!TIP]
+> 提示名称不区分大小写。   
   
 > [!IMPORTANT] 
 > 某些 USE HINT 提示可能与在全局或会话级别启用的跟踪标志或与数据库作用域配置设置存在冲突。 在这种情况下，查询级别提示 (USE HINT) 将始终优先。 如果 USE HINT 与另一个查询提示或在查询级别启用（例如由 QUERYTRACEON 启用）的跟踪标志存在冲突，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在尝试执行查询时生成错误。 

@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e483a76ece4c87492e1cdd9aa23fbaba6648632
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: de33de3178535a54919cc1ad6da3b4b22c25956a
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068297"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381205"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>列存储索引 - 设计指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,6 @@ ms.locfileid: "43068297"
   
 *   不再需要单独的数据仓库。 在传统上，公司会在行存储表中运行事务，然后将数据载入单独的数据仓库以运行分析。 对于许多工作负载，可以通过在事务表中创建非聚集列存储索引，来消除加载过程和单独的数据仓库。
 
-  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供多种策略来保持这种方案的高性能。 试用该方案的过程非常简单，因为无需更改 OLTP 应用程序即可启用非聚集列存储索引。 
 
 若要添加更多的处理资源，可以针对可读的辅助副本运行分析。 使用可读的辅助副本可将事务工作负荷与分析工作负荷的处理分隔开来。 
@@ -178,7 +177,7 @@ ms.locfileid: "43068297"
 |将表创建为列存储。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以将表创建为聚集列存储索引。 不需要先创建行存储表，然后将其转换为列存储。|  
 |创建具有列存储索引的内存表。|[CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)|从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，你可以创建具有列存储索引的内存优化表。 也可以在创建表后使用 ALTER TABLE ADD INDEX 语法添加列存储索引。|  
 |将行存储表转换为列存储。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|将现有堆集或二进制树转换为列存储。 示例演示了如何在执行此转换时处理现有的索引以及索引的名称。|  
-|将列存储表转换为行存储。|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; 或 DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|通常这不需要这样做，但有时需要执行此转换。 示例演示如何将列存储转换为堆或聚集索引。|  
+|将列存储表转换为行存储。|[创建群集索引 &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md#d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index) 或[将列存储表转换回行存储堆](../../t-sql/statements/create-columnstore-index-transact-sql.md#e-convert-a-columnstore-table-back-to-a-rowstore-heap) |通常不需要这样转换，但有时需要。 示例演示如何将列存储转换为堆或聚集索引。|   
 |在行存储表中创建列存储索引。|[CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md)|一个行存储表可以有一个列存储索引。  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]开始，列存储索引可以包含筛选条件。 示例演示了基本语法。|  
 |为操作分析创建高性能索引。|[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|介绍如何创建互补性列存储索引和 B 树索引，以便 OLTP 查询使用 B 树索引，分析查询使用列存储索引。|  
 |为数据仓库创建高性能列存储索引。|[列存储索引 - 数据仓库](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|介绍如何使用列存储表上的 B 树索引来创建高性能数据仓库查询。|  

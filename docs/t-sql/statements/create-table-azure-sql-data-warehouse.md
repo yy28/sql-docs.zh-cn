@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 701de1160cad251691253b32b828c6ad91c945db
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058745"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348317"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="ColumnOptions"></a> 列选项
 
  `COLLATE` Windows_collation_name  
- 指定表达式的排序规则。 此排序规则必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则之一。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则列表，请参阅[Windows 排序规则名称 (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/)。  
+ 指定表达式的排序规则。 此排序规则必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则之一。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持的 Windows 排序规则列表，请参阅 [Windows 排序规则名称 (Transact-SQL)](windows-collation-name-transact-sql.md)/)。  
   
  `NULL` | `NOT NULL`  
  指定列中是否允许使用 `NULL` 值。 默认值为 `NULL`。  
@@ -180,7 +180,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 |n 值|精度|小数位数|  
 |--:|--:|-:|  
 |`0`|19|0|  
-|`1`|21|@shouldalert|  
+|`1`|21|1|  
 |`2`|22|2|  
 |`3`|23|3|  
 |`4`|24|4|  
@@ -247,7 +247,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 | `bigint`|8|  
 | `int` |4|  
 | `smallint` |2|  
-| `tinyint` |@shouldalert|  
+| `tinyint` |1|  
   
  `bit`  
  可以取值为 `1`、`0` 或 `NULL 的 integer 数据类型。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 可优化 bit 列的存储。 如果表中的 bit 列为 8 列或更少，这些列作为 1 个字节存储。 如果 bit 列为 9 到 16 列，这些列作为 2 个字节存储，以此类推。  
