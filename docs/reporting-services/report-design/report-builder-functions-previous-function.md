@@ -1,26 +1,20 @@
 ---
 title: Previous 函数（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f5ce25413eb30996ed6003f33801800a9a132fea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01b2a6dc4b0d396fe6985ab0c4cefd689171fb2a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025514"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280853"
 ---
 # <a name="report-builder-functions---previous-function"></a>报表生成器函数 - Previous 函数
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
@@ -65,7 +59,7 @@ Previous(expression, scope)
   
 ## <a name="examples"></a>示例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下面的代码示例置于数据区域的默认数据行时，提供上一行中 `LineTotal` 字段的值。  
   
 ### <a name="code"></a>代码  
@@ -74,7 +68,7 @@ Previous(expression, scope)
 =Previous(Fields!LineTotal.Value)  
 ```  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  下面的示例显示一个表达式，该表达式计算某月特定天的销售额和上一年该月该天的销售额的总和。 该表达式将添加至属于子组 `GroupbyDay`的行的某个单元格中。 它的父组是 `GroupbyMonth`，该父组的父组是 `GroupbyYear`。 该表达式显示 GroupbyDay（默认作用域）和 `GroupbyYear` （父组 `GroupbyMonth`的父组）的结果。  
   
  例如，对于具有名为 `Year`的父组的数据区域，其子组名为 `Month`，子组的子组名为 `Day` （3 个嵌套级别）。 与组 `=Previous(Sum(Fields!Sales.Value,"Day"),"Year")` 关联的行中的表达式 `Day` 返回上一年同一月同一天的销售额值。  

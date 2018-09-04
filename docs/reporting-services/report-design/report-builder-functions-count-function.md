@@ -1,26 +1,20 @@
 ---
 title: Count 函数（报表生成器和 SSRS）| Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2016b2aef554c2efa6c97b8541607bacd77e23fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d56bc57e8a4f675430c4abe6ef099a0ec204d0dc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025144"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279475"
 ---
 # <a name="report-builder-functions---count-function"></a>报表生成器函数 - Count 函数
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -67,7 +61,7 @@ Count(expression, scope, recursive)
   
  示例  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  下面的代码示例显示一个表达式，该表达式为默认作用域和父组作用域计算 `Size` 的非 Null 值数。 该表达式将添加至属于子组 `GroupbySubcategory`的行的某个单元格中。 父组是 `GroupbyCategory`。 该表达式显示 `GroupbySubcategory` （默认作用域）和 `GroupbyCategory` （父组作用域）的结果。  
   
 > [!NOTE]  

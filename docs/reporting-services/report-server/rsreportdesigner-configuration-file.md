@@ -1,29 +1,23 @@
 ---
 title: RSReportDesigner 配置文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45a1ca0907f5572f8409503fcb7227bcc8a08a62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026774"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280994"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在 **Data** 元素中。 呈现扩展插件信息存储在 **Render** 元素中。 **Designer** 元素可枚举报表设计器中所用的查询生成器。  
@@ -59,7 +53,7 @@ ms.locfileid: "33026774"
   
 ## <a name="configuration-settings"></a>配置设置  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|指定 Web 服务连接的安全级别。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [Using Secure Web Service Methods](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)。|  
 |**InstanceName**|预览服务器的标识符。 不要修改此值。|  

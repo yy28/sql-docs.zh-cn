@@ -1,13 +1,9 @@
 ---
 title: 设置部署属性 (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: reporting-services
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
@@ -15,17 +11,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.date: 03/07/2017
-ms.openlocfilehash: b63061c1be758c166523f02600de6a16cfd18cf9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: fc6a97151ef86ce6961c03bae1e5bc595ab3e5d9
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175103"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280496"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
 
@@ -71,7 +65,7 @@ ms.locfileid: "40175103"
   
 10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http:*//server/reportserver* 或 https:*//server/reportserver*）。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。  
   
-     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
+     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、 http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
   
 ### <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   

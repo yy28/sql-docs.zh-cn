@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145598"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348172"
 ---
 # <a name="data-collection"></a>“数据收集”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145598"
   
 ## <a name="things-you-can-do"></a>你可以执行的事项  
   
-|Description|主题|  
+|描述|主题|  
 |----------------------|-----------|  
 |管理数据收集的各个方面，例如启用或禁用数据收集、更改收集组配置或查看管理数据仓库中的数据。|[管理数据收集](../../relational-databases/data-collection/manage-data-collection.md)|  
 |使用这些报表获取信息以监视系统功能和解决系统性能问题。|[系统数据收集组报表](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |使用管理数据仓库来收集自身为数据收集目标的服务器的数据。|[管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|可以利用 SQL Server Profiler 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用通用 SQL 跟踪收集器类型的收集组| [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|可以利用 SQL Server Profiler 的服务器端跟踪功能导出跟踪定义，可使用跟踪定义创建一个使用通用 SQL 跟踪收集器类型的收集组| [使用 SQL Server Profiler 创建 SQL 跟踪收集组 (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

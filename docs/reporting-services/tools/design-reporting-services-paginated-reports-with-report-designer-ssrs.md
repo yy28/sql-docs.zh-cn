@@ -1,28 +1,22 @@
 ---
 title: 使用报表设计器设计报表 (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 77
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 09311458bc7815a7a63d58ad19c8d8b0a3845da4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1607193731e20f4111d38da44ee21375dfff09e0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037034"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282789"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>使用报表设计器设计 Reporting Services 分页报表 (SSRS)
 
@@ -175,10 +169,10 @@ ms.locfileid: "33037034"
   
  下表列出了错误级别。  
   
-|错误级别|Description|  
+|错误级别|描述|  
 |-----------------|-----------------|  
 |0|最严重且无法避免的生成错误，将阻止预览和部署报表。|  
-|@shouldalert|严重的生成错误，会彻底更改报表布局。|  
+|1|严重的生成错误，会彻底更改报表布局。|  
 |2|不太严重的生成错误，会明显更改报表布局。|  
 |3|很小的生成问题，以轻微的方式更改报表布局，您可能注意不到所发生的更改。|  
 |4|仅用于发布警告。|  

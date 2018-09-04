@@ -19,17 +19,17 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bb9b031042c9653c62f46b901359a79be587975
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 44efdde3da4f8a74305798b4cbee4aa682034392
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43100057"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348098"
 ---
 # <a name="transparent-data-encryption-tde"></a>透明数据加密 (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[透明数据加密 (TDE)](https://msdn.microsoft.com/library/bb934049(SQL.120).aspx)。
+ > 有关与以前版本的 SQL Server 相关的内容，请参阅[透明数据加密 (TDE)](transparent-data-encryption-tde.md)。
 
   透明数据加密 (TDE) 加密 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 和 [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)] 数据文件，称为加密空闲数据。 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，如果遇到物理介质（如驱动器或备份磁带）被盗的情况，恶意破坏方只需还原或附加数据库即可浏览数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
   

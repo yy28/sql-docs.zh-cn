@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405764"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348147"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 数据库的备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "40405764"
 -   对资源的约束，例如：硬件、人员、备份介质的存储空间以及所存储介质的物理安全性等。  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>恢复模式对备份和还原的影响  
- 备份和还原操作发生在恢复模式的上下文中。 恢复模式是一种数据库属性，用于控制事务日志的管理方式。 此外，数据库的恢复模式还决定数据库支持的备份类型和还原方案。 通常，数据库使用简单恢复模式或完整恢复模式。 可以在执行大容量操作之前切换到大容量日志恢复模式，以补充完整恢复模式。 有关这些恢复模式以及它们是如何影响事务日志管理方式的说明，请参阅 [事务日志 (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)。  
+ 备份和还原操作发生在恢复模式的上下文中。 恢复模式是一种数据库属性，用于控制事务日志的管理方式。 此外，数据库的恢复模式还决定数据库支持的备份类型和还原方案。 通常，数据库使用简单恢复模式或完整恢复模式。 可以在执行大容量操作之前切换到大容量日志恢复模式，以补充完整恢复模式。 有关这些恢复模式以及它们是如何影响事务日志管理方式的说明，请参阅 [事务日志 (SQL Server)](../logs/the-transaction-log-sql-server.md)。  
   
  数据库的最佳恢复模式取决于您的业务要求。 若要免去事务日志管理工作并简化备份和还原，请使用简单恢复模式。 若要在管理开销一定的情况下使工作丢失的可能性降到最低，请使用完整恢复模式。 有关恢复模式对备份和还原存在哪些影响的信息，请参阅 [备份概述 (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)。  
   

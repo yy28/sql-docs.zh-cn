@@ -1,30 +1,24 @@
 ---
 title: ReportingServicesService 配置文件 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [Reporting Services]
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 071650750724cf8a58c4ac6377f9e2b1f635fe12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd16e3838519e9de7e10878837d5023c1f10842d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026734"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281004"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 配置文件
  ||  
@@ -80,7 +74,7 @@ ReportingServicesService.exe.config 文件包含配置跟踪的设置信息。
 ## <a name="configuration-settings"></a>配置设置  
  下表提供了有关具体设置的信息， 将按设置在配置文件中的显示顺序依次列出：  
   
-|设置|Description|  
+|设置|描述|  
 |-------------|-----------------|  
 |**RStrace**|指定用于错误和跟踪的命名空间。|  
 |**DefaultTraceSwitch**|指定向 ReportServerService 跟踪日志报告的信息的级别。 每个级别都包含所有更低级别（用更小的数字表示）报告的信息。 建议您不要禁用跟踪。 有效值包括：<br /><br /> 0= 禁用跟踪<br /><br /> 1= 异常和重新启动<br /><br /> 2= 异常、重新启动、警告<br /><br /> 3= 异常、重新启动、警告、状态消息（默认值）<br /><br /> 4= 详细模式|  
