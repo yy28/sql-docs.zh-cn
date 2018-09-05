@@ -19,12 +19,12 @@ caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206537"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348358"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
   产品范围的帐户设置在 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)中有文档介绍，该主题提供有关所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务（包括 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]）的全面服务帐户信息。 请参阅该主题以了解有关有效帐户类型、安装分配的 Windows 特权、文件系统权限、注册表权限等方面的信息。  
@@ -60,7 +60,7 @@ ms.locfileid: "37206537"
  组的唯一成员是 Per-service SID。 它右侧是登录帐户。 登录帐户名是 cosmetic，要向 Per-service SID 提供上下文。 如果随后更改登录帐户，然后返回此页面，则会注意到，安全组和 Per-service SID 不会更改，但是登录帐户标签会有所不同。  
   
 ##  <a name="bkmk_winpriv"></a> 分配给 Analysis Services 服务帐户的 Windows 特权  
- Analysis Services 需要操作系统的的权限，来启动服务和请求系统资源。 请求因服务器模式以及实例是否群集而异。 如果你不熟悉 Windows 权限，请参阅 [特权](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [特权常量 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) 了解详细信息。  
+ Analysis Services 需要操作系统的的权限，来启动服务和请求系统资源。 请求因服务器模式以及实例是否群集而异。 如果你不熟悉 Windows 权限，请参阅 [特权](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) 和 [特权常量 (Windows)](/windows/desktop/SecAuthZ/privilege-constants) 了解详细信息。  
   
  Analysis Services 的所有实例都请求 **作为服务登录** (SeServiceLogonRight) 特权。 SQL Server 安装程序在安装期间给你在指定的服务账户上分配特权。 对于在多维和数据挖掘模式中运行的服务器，这是 Analysis Services 服务帐户为独立服务器安装要求的唯一 Windows 特权，也是安装程序为 Analysis Services 配置的唯一特权。 对于群集和表格实例，必须手动添加附加 Windows 特权。  
   
@@ -156,8 +156,8 @@ ms.locfileid: "37206537"
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server 服务帐户和每个服务 SID （博客）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server 使用服务 SID 来提供服务隔离 （知识库文章）](http://support.microsoft.com/kb/2620201)   
- [访问令牌 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [安全标识符 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [访问令牌 (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [安全标识符 (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [访问令牌 (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [访问控制列表 (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

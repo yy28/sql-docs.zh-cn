@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087109"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381165"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上的 SQL Server 的 active Directory 身份验证
 
@@ -52,7 +52,6 @@ AD 身份验证通过具有以下优点[!INCLUDE[ssNoVersion](../includes/ssnove
 ## <a name="known-issues"></a>已知问题
 
 - 在此期间，数据库镜像终结点支持的唯一身份验证方法是证书。 将在将来的版本中启用 WINDOWS 身份验证方法。
-- 不支持 Vintela 和第三方 AD 工具等 Centrify，Powerbroker。
 
 ## <a name="next-steps"></a>后续步骤
 

@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 34be09f068196ce51f44c47a02e36a9149ff17bf
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118295"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240025"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （独立版） 和 SQL Server 中的机器学习服务器 （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server 2016 仅为 R。 SQL Server 2017 支持 R 和 Python。 下表介绍�
 | Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。 在 \Program files\Microsoft SQL 查找 revoscalepy 数据 Server\140\PYTHON_SERVER\lib\site packages\revoscalepy\data\sample 数据。 |
 | R 和 Python 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 预先训练的模型支持的和可用的独立服务器上，但您不能通过 SQL Server 安装程序安装它们。 有关详细信息，请参阅[安装预先训练的机器学习模型，在 SQL Server 上](../install/sql-pretrained-models-install.md)。 |
 
-## <a name="use-cases"></a>用例
+## <a name="using-a-standalone-server"></a>使用独立服务器
 
 R 和 Python 开发人员通常选择要移动的开源 R 和 Python 的内存和处理约束超过的独立服务器。 在独立服务器上执行的 R 和 Python 库可以加载和处理大量数据的多个核心上并聚合到单个合并输出结果。 规模和实用程序设计为高性能函数： 交付预测分析、 统计建模、 数据可视化功能以及先进的机器学习算法中的商业服务器产品设计和支持Microsoft。
 

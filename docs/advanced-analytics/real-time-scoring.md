@@ -1,6 +1,6 @@
 ---
 title: 在 SQL Server 机器学习中的实时评分 |Microsoft Docs
-description: 生成使用 sp_rxPredict，计分 dta 输入对 SQL Server 上以 R 编写的预先训练模型的预测。
+description: 生成使用 sp_rxPredict，评分对 SQL Server 上以 R 编写的预先训练模型的数据输入的预测。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
@@ -8,20 +8,17 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d5a3d0318f925918ef98ae18744e4287d6b81108
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40396268"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348297"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server 机器学习中 sp_rxPredict 实时评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此文章介绍了如何评分在近乎实时的适用于 SQL Server 关系数据，使用机器学习模型写入在 R 中 
-
-> [!Note]
-> 本机计分是非常快评分使用本机 T-SQL 的预测函数的特殊实现实时评分。 有关详细信息和可用性，请参阅[本机计分](sql-native-scoring.md)。
+实时评分使用的 CLR 扩展功能在 SQL Server 中的高性能预测或预测的工作负荷中的评分。 实时评分是语言无关，因为执行没有依赖 R 或 Python 运行时间。 假设从 Microsoft 函数创建、 训练，并为 SQL Server 中的二进制格式序列化的模型，您可以使用实时评分来生成预测的结果上没有 R 或 Python 外接程序功能的 SQL Server 实例上的新数据输入安装。
 
 ## <a name="how-real-time-scoring-works"></a>如何实时评分的工作原理
 
@@ -36,41 +33,58 @@ ms.locfileid: "40396268"
 3. 提供新的输入的数据、 表格或单个行，作为模型的输入。
 4. 若要生成评分，调用 sp_rxPredict 存储过程。
 
-## <a name="get-started"></a>入门
-
-有关代码示例和说明，请参阅[如何执行本机计分或实时评分](r/how-to-do-realtime-scoring.md)。
-
-有关如何使用 rxPredict 进行评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
-
 > [!TIP]
-> 如果你正在以独占方式在 R 代码中，您还可以使用[rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict)以快速获得评分的函数。
+> 在操作中的实时评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
-## <a name="requirements"></a>要求
+## <a name="prerequisites"></a>必要條件
 
-在这些平台上支持实时评分：
++ [启用 SQL Server CLR 集成](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 
-+ SQL Server 2017 机器学习服务
-+ SQL Server R Services 2016，与升级到 9.1.0 或更高版本的 R 组件
++ [启用实时评分](#bkmk_enableRtScoring)。
 
-SQL Server 上必须启用预先要将基于 CLR 的库添加到 SQL Server 的实时评分的功能。
++ 必须事先使用某个受支持训练模型**rx**算法。 对于 R，实时与评分`sp_rxPredict`适用于[RevoScaleR 和 MicrosoftML 支持的算法](#bkmk_rt_supported_algos)。 对于 Python，请参阅[revoscalepy 和 microsoftml 支持的算法](#bkmk_py_supported_algos)
 
-有关在基于 Microsoft R Server 分布式环境中的实时评分的信息，请参阅[publishService](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)函数中提供[mrsDeploy 包](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)，它也支持发布模型进行实时评分为新的 R Server 上运行的 web 服务。
++ 模型使用进行序列化[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)对于 R，并[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)适用于 Python。 这些序列化函数已经过优化，以支持快速评分。
 
-### <a name="restrictions"></a>限制
+> [!Note]
+> 针对快速预测对小型数据集，范围从少量的行到成千上万行的当前优化实时评分。 在大型数据集，使用[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能更快。
 
-+ 必须事先使用某个受支持训练模型**rx**算法。 有关详细信息，请参阅[支持的算法](#bkmk_rt_supported_algos)。 使用实时评分`sp_rxPredict`支持的 RevoScaleR 和 MicrosoftML 算法。
+<a name="bkmk_py_supported_algos"></a>
 
-+ 必须使用新的序列化函数保存模型： [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)对于 R，并[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)适用于 Python。 这些序列化函数已经过优化，以支持快速评分。
+## <a name="supported-algorithms"></a>支持的算法
 
-+ 实时评分不会使用解释器;因此，可能需要解释器的任何功能不支持在评分步骤。  这些情况可能包括：
+### <a name="python-algorithms-using-real-time-scoring"></a>Python 算法使用实时评分
 
-  + 使用情况建模`rxGlm`或`rxNaiveBayes`目前不支持的算法
++ revoscalepy 模型
 
-  + 使用 R 转换函数或包含一个转换，如公式的 RevoScaleR 模型<code>A ~ log(B)</code>中实时评分不支持。 若要使用此类型的模型，我们建议你在执行转换以输入数据，然后再将数据传递到实时评分。
+  + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod) \*
+  + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) \*
+  + [rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) \*
+  + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) \*
+  + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) \*
+  
+  模型标记为\*还支持使用预测函数的本机计分。
 
-+ 针对快速预测对小型数据集，范围从少量的行到成千上万行的当前优化实时评分。 在大型数据集，使用[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能更快。
++ microsoftml 模型
 
-### <a name="a-namebkmkrtsupportedalgosalgorithms-that-support-real-time-scoring"></a><a name="bkmk_rt_supported_algos">支持实时评分的算法
+  + [rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
+  + [rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)
+  + [rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression)
+  + [rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm)
+  + [rx_neural_net](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
+  + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
+
++ 转换提供的 microsoftml
+
+  + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
+
+
+<a name="bkmk_rt_supported_algos"></a>
+
+### <a name="r-algorithms-using-real-time-scoring"></a>R 算法使用实时评分
 
 + RevoScaleR 模型
 
@@ -101,14 +115,91 @@ SQL Server 上必须启用预先要将基于 CLR 的库添加到 SQL Server 的�
 
 ### <a name="unsupported-model-types"></a>不受支持的模型类型
 
-非显式列出的那些在上一节中的 R 转换不支持实时评分。 
+实时评分不会使用解释器;因此，可能需要解释器的任何功能不支持在评分步骤。  这些情况可能包括：
 
-对于开发人员已习惯使用 RevoScaleR 和其他特定于 Microsoft R 的库，不支持的函数包括`rxGlm`或`rxNaiveBayes`RevoScaleR，PMML 模型中的算法和其他使用 CRAN 的其他 R 库创建的模型或其他存储库。
+  + 使用情况建模`rxGlm`或`rxNaiveBayes`算法不受支持。
 
-### <a name="known-issues"></a>已知问题
+  + 模型使用转换函数或公式包含一个转换，例如<code>A ~ log(B)</code>中实时评分不支持。 若要使用此类型的模型，我们建议将数据传递给实时评分之前，对输入数据执行转换。
 
-+ `sp_rxPredict` 作为模型传递 NULL 值时返回不准确的消息:"System.Data.SqlTypes.SqlNullValueException:Data 中 Null"。
+
+## <a name="example-sprxpredict"></a>示例： sp_rxPredict
+
+本部分介绍设置所需的步骤**实时**预测，并提供如何从 T-SQL 调用函数的 R 中的示例。
+
+<a name ="bkmk_enableRtScoring"></a> 
+
+### <a name="step-1-enable-the-real-time-scoring-procedure"></a>步骤 1. 启用实时评分过程
+
+必须启用此功能为你想要使用进行评分的每个数据库。 服务器管理员应运行的命令行实用工具，RegisterRExt.exe，包含在 RevoScaleR 包。
+
+> [!NOTE]
+> 为了使实时评分工作，SQL CLR 功能需要启用实例; 中此外，数据库需要标记为可信。 当您运行该脚本时，为你执行这些操作。 但是，执行此操作之前考虑的其他安全隐患 ！
+
+1. 打开提升的命令提示符，并导航到 RegisterRExt.exe 所在的文件夹。 可以在默认安装中使用以下路径：
+    
+    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
+
+2. 运行以下命令，替换为你的实例和你想要启用的扩展存储的过程的目标数据库名称：
+
+    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
+
+    例如，若要将扩展存储的过程添加到默认实例上的 CLRPredict 数据库，请键入：
+
+    `RegisterRExt.exe /installRts /database:CLRPRedict`
+
+    如果数据库是默认实例上可选实例名。 如果使用的命名的实例，必须指定实例名称。
+
+3. RegisterRExt.exe 创建以下对象：
+
+    + 受信任的程序集
+    + 存储的过程 `sp_rxPredict`
+    + 新的数据库角色， `rxpredict_users`。 数据库管理员可以使用此角色向使用实时评分功能的用户授予权限。
+
+4. 添加需要运行的任何用户`sp_rxPredict`到新的角色。
+
+> [!NOTE]
+> 
+> 在 SQL Server 2017 中，其他安全措施到位以防止使用 CLR 集成的问题。 这些度量值有附加限制在使用此存储的过程。 
+
+### <a name="step-2-prepare-and-save-the-model"></a>步骤 2. 准备并保存模型
+
+Sp 所需的二进制格式\_rxPredict 是使用 PREDICT 函数所需的格式相同。 因此，在 R 代码中，包括对[rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)，并确保指定`realtimeScoringOnly = TRUE`，如下例所示：
+
+```R
+model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
+```
+
+### <a name="step-3-call-sprxpredict"></a>步骤 3. 调用 sp_rxPredict
+
+Sp 调用\_rxPredict 作为您像对任何其他存储过程。 在当前版本中，存储的过程将只有两个参数： _\@模型_中的二进制格式，模型和 _\@inputData_要计分中，使用的数据定义为有效的 SQL 查询。
+
+由于二进制格式是相同的由 PREDICT 函数，可以使用从前面的示例模型和数据的表。
+
+```SQL
+DECLARE @irismodel varbinary(max)
+SELECT @irismodel = [native_model_object] from [ml_models]
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
+
+EXEC sp_rxPredict
+@model = @irismodel,
+@inputData = N'SELECT * FROM iris_rx_data'
+```
+
+> [!NOTE]
+> 
+> Sp 调用\_rxPredict 失败如果评分的输入的数据不包括与该模型的要求匹配的列。 目前，支持仅以下.NET 数据类型： 双精度型、 float、 short、 ushort、 long、 ulong 和字符串。
+> 
+> 因此，您可能需要筛选出输入数据中不支持的类型，然后再使用它进行实时评分。
+> 
+> 有关相应 SQL 类型的信息，请参阅[SQL-CLR 类型映射](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或[映射 CLR 参数数据](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
+
+## <a name="disable-real-time-scoring"></a>禁用实时评分
+
+若要禁用实时评分的功能，打开提升的命令提示符，并运行以下命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>后续步骤
 
-[如何执行实时评分](r/how-to-do-realtime-scoring.md)
+有关如何使用 rxPredict 进行评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)。
+
+有关更多背景信息评分在 SQL Server 中，请参阅[如何在 SQL Server 机器学习中生成预测](r/how-to-do-realtime-scoring.md)。

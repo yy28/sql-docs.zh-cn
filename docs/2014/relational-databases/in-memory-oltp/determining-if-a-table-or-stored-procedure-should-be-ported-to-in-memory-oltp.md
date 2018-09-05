@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394839"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348427"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>确定表或存储过程是否应移植到内存中 OLTP
   通过 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的事务性能收集器，可帮助您评估内存中 OLTP 是否将改进您的数据库应用程序的性能。 事务性能分析报告还指示在应用程序中启用内存中 OLTP 所必须完成的工作量。 在你标识了要移植到内存中 OLTP 的基于磁盘的表之后，可以使用 [内存优化顾问](memory-optimization-advisor.md)帮助你迁移表。 同样， [Native Compilation Advisor](native-compilation-advisor.md) 帮助您将存储过程移植到本机编译的存储过程。  
@@ -38,7 +38,7 @@ ms.locfileid: "40394839"
   
  事务性能收集器和事务性能分析报告可帮助您完成下列任务：  
   
--   分析工作负荷以确定内存中 OLTP 能否提升性能。 事务性能收集器收集并评估工作负荷的性能特征。 实例时都提供 SQL Server 登录名。 之后，事务性能分析报告会建议可从转换到内存中 OLTP 获益最多的表和存储过程。  
+-   分析工作负荷以确定内存中 OLTP 能否提升性能。 事务性能收集器收集并评估工作负荷的性能特征。 . 之后，事务性能分析报告会建议可从转换到内存中 OLTP 获益最多的表和存储过程。  
   
 -   帮助您规划和执行到内存中 OLTP 的迁移。 从基于磁盘的表到内存优化表的迁移路径可能比较费时。 内存优化顾问可帮助您找到表中的不兼容之处（必须在将表迁移到内存中 OLTP 之前予以解决）。 此外，内存优化顾问还可帮助您了解将表迁移到内存优化表会对应用程序产生何种影响。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "40394839"
   
  可以在 SQL Server 2012 或更高版本上配置数据收集器[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- 需要使用用于数据收集器的正确凭据建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，以便将数据上载到其他实例（非待探查事务所在实例）上的管理数据仓库数据库。 若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，必须首先使用启用域的登录建立凭据。 该启用域的登录必须是管理数据仓库数据库的 `mdw_admin` 组的成员。 请参阅[如何： 创建凭据 (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx)有关如何创建凭据的信息。  
+ 需要使用用于数据收集器的正确凭据建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，以便将数据上载到其他实例（非待探查事务所在实例）上的管理数据仓库数据库。 若要启用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理，必须首先使用启用域的登录建立凭据。 该启用域的登录必须是管理数据仓库数据库的 `mdw_admin` 组的成员。 请参阅[如何： 创建凭据 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md)有关如何创建凭据的信息。  
   
  若要配置数据收集以便上载到不同实例上的管理数据仓库数据库，请执行以下步骤：  
   

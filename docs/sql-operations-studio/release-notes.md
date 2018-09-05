@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio （预览版） 发行说明 |Microsoft Docs
 description: Microsoft SQL Operations Studio （预览版） 发行说明
 ms.custom: tools|sos
-ms.date: 07/19/2018
+ms.date: 08/30/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,71 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5c331fc8b9e95940e0aaca29efbada78083340f
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: 8d38e568aba12f8124035505b8ce1565f0c9b2cd
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188953"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348417"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio （预览版） 发行说明
 
-**[下载年 7 月公共预览版](download.md)**
+**[下载年 8 月公共预览版](download.md)**
+
+
+## <a name="august-2018-august-public-preview"></a>2018 年 8 月 （年 8 月公共预览版）
+
+发布日期： 2018 年 8 月 30 日  
+版本： 0.32.8
+
+*0.32.8 包含几个回归 0.32.7 中找到的修补程序 ([# 1971年](https://github.com/Microsoft/sqlopsstudio/issues/1971)， [# 2372年](https://github.com/Microsoft/sqlopsstudio/issues/2372)*)
+
+*年 8 月公共预览版*重点介绍上的 bug 修复、 产品稳定化和填充现有方案中的缺口。  
+
+- 宣布推出 SQL Server 导入扩展
+- SQL Server Profiler 会话管理
+- SQL Server Profiler 会话模板支持
+- SQL Server 代理的改进
+- 新的社区扩展： 第一个响应程序工具包
+- 生命周期质量改进： 连接字符串
+
+### <a name="bug-fixes"></a>Bug 修复
+
+- 分析 SQL 查询编辑器窗口中的，方法是使用`Parse Syntax`命令。
+- 修复[发出 #143](https://github.com/Microsoft/sqlopsstudio/issues/143)： 双击不选择变量名称。
+- 修复[问题 #387](https://github.com/Microsoft/sqlopsstudio/issues/387): SQL 选项卡 DB 图标为红色。
+- 修复[发出 #825](https://github.com/Microsoft/sqlopsstudio/issues/825)： 请求： 自动连接到后脚本作为当前服务器... 
+- 修复[发出 # 1278年](https://github.com/Microsoft/sqlopsstudio/issues/1278): sqlops.desktop [桌面项目]-冗余值名称和注释。
+- 修复[发出 # 1285年](https://github.com/Microsoft/sqlopsstudio/issues/1285)： 更新会导致应用程序图标，以在 Windows 下无法删除/替换。
+- 修复[发出 # 1317年](https://github.com/Microsoft/sqlopsstudio/issues/1317)： 修复小数分隔符。
+- 修复[发出 # 1474年](https://github.com/Microsoft/sqlopsstudio/issues/1474): 取消更改连接断开当前连接的连接。
+- 修复[发出 # 1497年](https://github.com/Microsoft/sqlopsstudio/issues/1497)： 为图表视图底部的选项都被截断。
+- 修复[发出 # 1524年](https://github.com/Microsoft/sqlopsstudio/issues/1524): Shell/仪表板： Main viewlet 均图标是可拖动和应用程序可能会崩溃。
+- 修复[发出 # 1578年](https://github.com/Microsoft/sqlopsstudio/issues/1578)： 不能通过单击名称的展开/折叠远程文件浏览器文件夹。
+- 修复[发出 # 1620年](https://github.com/Microsoft/sqlopsstudio/issues/1620)： 功能建议： 获取现有连接的连接字符串。
+- 修复[发出 # 1624年](https://github.com/Microsoft/sqlopsstudio/issues/1624): SelectBox 不会更改颜色时禁用。
+- 修复[发出 # 1728年](https://github.com/Microsoft/sqlopsstudio/issues/1728)： 另存为 JSON/EXCEL/CSV 不工作。
+- 修复[发出 # 1744年](https://github.com/Microsoft/sqlopsstudio/issues/1744)： 选项卡之间切换时，结果窗格中将失去其滚动位置。
+- 修复[发出 # 1748年](https://github.com/Microsoft/sqlopsstudio/issues/1748)： 保存 Excel 文件，第二个 （和后续） 时间时的错误消息。
+- 修复[发出 # 1782年](https://github.com/Microsoft/sqlopsstudio/issues/1782)： 编辑数据： 单元格不会恢复为原始值上点击 Esc 键。
+- 修复[发出 # 1836年](https://github.com/Microsoft/sqlopsstudio/issues/1836)： 不与 SQL Operations Studio 相关联的.sql 文件。
+- 修复[发出 # 人工 1850年](https://github.com/Microsoft/sqlopsstudio/issues/1850)： 键入 N ' 自动填充为 N '。
+- 修复[发出 # 1985年](https://github.com/Microsoft/sqlopsstudio/issues/1985)： 从查询结果网格复制情况 1 列处于关闭状态。
+- 修复[发出 # 1998年](htpts://github.com/Microsoft/sqlopsstudio/pull/1998)： 有关对话框添加 VS Code 版本。
+- 修复[发出 # 2042年](https://github.com/Microsoft/sqlopsstudio/pull/2042)： 代理： 已启用的按钮以从 sql 文件导入查询。
+- 修复[发出 # 2091年](https://github.com/Microsoft/sqlopsstudio/issues/2091)： 无法使用快捷方式 Ctrl + C 将复制从结果窗格。
+- 修复[发出 # 2099年](https://github.com/Microsoft/sqlopsstudio/pull/2099)： 添加更多 saveAsCsv 选项。
+- 修复[发出 # 2107年](https://github.com/Microsoft/sqlopsstudio/issues/2107)： 仪表板和 Profiler 文档的更新文档图标。
+- 修复[发出 # 2129年](https://github.com/Microsoft/sqlopsstudio/pull/2129)： 保存编辑数据时切换选项卡的滚动位置。
+- 修复[发出 # 2152年](https://github.com/Microsoft/sqlopsstudio/issues/2152)： 结果网格行指示器以零开始。
+
+## <a name="known-issues"></a>已知问题
+
+- [问题 # 2371年](https://github.com/Microsoft/sqlopsstudio/issues/2371)另存为 Excel 仅保存的数据的第一行
+- [问题 # 2150年](https://github.com/Microsoft/sqlopsstudio/issues/2150)： 无法连接到容器中的 SQL 的 Ubuntu 16.04 上
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
+
 
 ## <a name="july-2018-july-public-preview"></a>2018 年 7 月 （7 月公共预览版）
 
@@ -61,10 +116,6 @@ ms.locfileid: "39188953"
  - 修复[发出 1817年](https://github.com/Microsoft/sqlopsstudio/issues/1817)： 错误 de Ortografia
  - 修复[发出 1830年](https://github.com/Microsoft/sqlopsstudio/issues/1830): ButtonComponent 中设置 iconPath component() 调用后不会更改图标
  - 修复[发出 1843年](https://github.com/Microsoft/sqlopsstudio/issues/1843)： 更好的表的组织
-
-
-有关详细信息，请参阅[更改日志](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
-
 
 
 ## <a name="june-2018-june-public-preview"></a>2018 年 6 月 （年 6 月公共预览版）

@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152828"
+ms.locfileid: "43240145"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -34,11 +34,14 @@ ms.locfileid: "43152828"
 > [!NOTE] 
 > 此功能目前仅通过命令行接口 (CLI)。 将在即将发布的版本中添加支持此功能通过 DMA 用户界面。
 
+> [!IMPORTANT]
+> SKU 建议为 Azure SQL 数据库是当前可用于迁移 SQL Server 2016 或更高版本。
+
 以下说明可帮助您确定 Azure SQL 数据库 SKU 的建议和使用数据迁移助手预配到 Azure，关联的数据库。
 
 ## <a name="prerequisites"></a>必要條件
 
-下载数据库迁移助手 v4.0 或更高版本，然后将其安装。 如果已有该工具安装，请关闭并重新打开它，并将提示你升级该工具。
+下载数据库迁移助手 v4.0 或更高版本，然后将其安装。 如果已有该工具安装，请关闭并重新打开它，并将提示您升级该工具。
 
 ## <a name="collect-performance-counters"></a>收集性能计数器
 
@@ -58,7 +61,7 @@ ms.locfileid: "43152828"
     - **OutputFilePath**： 输出文件路径，以保存所收集的计数器。
     - **CollectionTimeInSeconds**： 在此期间你想要收集性能计数器数据的时间量。
       捕获性能计数器至少 40 分钟，以便获取有意义的建议。 捕获，期越长越准确建议将。
-    - **DbConnectionString**： 指向从中收集性能计数器数据的计算机上托管的 master 数据库的连接字符串。
+    - **DbConnectionString**： 指向要从中收集性能计数器数据的计算机上托管的主数据库的连接字符串。
      
     下面是示例调用：
 
@@ -144,7 +147,7 @@ TSV 输出文件将包含下图中显示的列：
 - **ExclusionReasons** -此值为空白，如果一个层建议。 建议不要在每个层，我们提供为何没有选择的原因。
 - **AppliedRules** -已应用的规则的简短表示法。
 
-请注意，推荐的值所需的查询使用成功率类似于你的本地数据库运行在 Azure 中的最小 SKU。 例如，如果建议的最小 SKU 适用于标准层 S4 然后选择 S3 或下面将会导致查询超时或无法执行。
+建议的值为所需的查询使用成功率类似于你的本地数据库运行在 Azure 中的最小 SKU。 例如，如果建议的最小 SKU 适用于标准层 S4 然后选择 S3 或下面将会导致查询超时或无法执行。
 
 HTML 文件包含此信息以图形格式。 HTML 文件可用于输入 Azure 订阅信息、 选取定价层、 数据库、 计算级别和最大数据大小和生成一个脚本来预配数据库。 可以使用 PowerShell 执行此脚本。
 

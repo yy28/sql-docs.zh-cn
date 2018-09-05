@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4d4e178247f80cc9b953f093a401b25dfd13e73e
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152698"
+ms.locfileid: "43240205"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
@@ -125,6 +125,9 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>使用 CLI 的 azure SQL 数据库 SKU 建议
+
+> [!IMPORTANT]
+> SKU 建议为 Azure SQL 数据库是当前可用于迁移 SQL Server 2016 或更高版本。
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

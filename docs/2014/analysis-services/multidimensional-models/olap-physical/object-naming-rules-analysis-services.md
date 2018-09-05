@@ -17,12 +17,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28929d0d09e9cf0d05631ed3b95da30b95dc4ab
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202077"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348388"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
   本主题介绍对象命名约定，以及不能在任何对象名称、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的代码或脚本中使用的保留字和字符。  
@@ -73,11 +73,11 @@ ms.locfileid: "37202077"
   
 |Object|无效字符|  
 |------------|------------------------|  
-|`Server`|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 请参阅[命名约定 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx)有关详细信息。|  
+|`Server`|在对服务器对象进行命名时，请遵循 Windows 服务器命名约定。 请参阅[命名约定 (Windows)](/windows/desktop/DNS/naming-conventions)有关详细信息。|  
 |`DataSource`|: / \ * &#124; ? "（) [] {} <>|  
-|`Level` 或 `Attribute`|实例时都提供 SQL Server 登录名。 , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` 或 `Hierarchy`|实例时都提供 SQL Server 登录名。 , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
-|所有其他对象|实例时都提供 SQL Server 登录名。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`Level` 或 `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
+|`Dimension` 或 `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
+|所有其他对象|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
  **异常： 当允许保留字符的**  
   
@@ -85,10 +85,10 @@ ms.locfileid: "37202077"
   
 |服务器模式和数据库兼容级别|是否允许保留字符？|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP（所有版本）|“否”|  
-|表格 - 1050|“否”|  
-|表格 - 1100|“否”|  
-|表格 – 1130 和更高版本|是|  
+|MOLAP（所有版本）|否|  
+|表格 - 1050|否|  
+|表格 - 1100|否|  
+|表格 – 1130 和更高版本|用户帐户控制|  
   
  数据库的默认值可为 ModelType。 默认值与多维等效，因此不支持在列名中使用保留字符。  
   

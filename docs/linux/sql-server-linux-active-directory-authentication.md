@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 2804197643c96e21bd0f412cf757ba0b4e2bdfbc
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400700"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381255"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教程： 使用 Linux 上的 SQL Server 使用 Active Directory 进行身份验证
 
@@ -34,6 +34,10 @@ ms.locfileid: "39400700"
 > * 配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]服务 keytab
 > * 在 TRANSACT-SQL 中创建基于 AD 的登录名
 > * 连接到[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用 AD 身份验证
+
+> [!NOTE]
+>
+> 如果你想要配置[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Linux 上使用第三方 AD 提供程序，请参阅[Linux 上的 SQL Server 中使用第三方 Active Directory 提供程序](./sql-server-linux-active-directory-third-party-providers.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -93,7 +97,7 @@ ms.locfileid: "39400700"
 
       现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：  
 
-      ```Code
+      ```/etc/resolv.conf
       nameserver **<AD domain controller IP address>**
       ```
 
@@ -115,7 +119,28 @@ ms.locfileid: "39400700"
 
      现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：  
 
-     ```Code
+     ```/etc/resolv.conf
+     nameserver **<AD domain controller IP address>**
+     ```
+
+   - **SLES**:
+
+     编辑`/etc/sysconfig/network/config`文件，以便你的 AD 域控制器 IP 将用于 DNS 查询和你的 AD 域是域搜索列表中：
+
+     ```/etc/sysconfig/network/config
+     <...>
+     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
+     ```
+
+     编辑此文件之后，重启网络服务：
+
+     ```bash
+     sudo systemctl restart network
+     ```
+
+     现在检查你`/etc/resolv.conf`文件均包含一行如下例所示：
+
+     ```/etc/resolv.conf
      nameserver **<AD domain controller IP address>**
      ```
 
@@ -307,19 +332,27 @@ ms.locfileid: "39400700"
    请确保已安装[mssql 工具](sql-server-linux-setup-tools.md)包，然后使用连接`sqlcmd`无需指定任何凭据：
 
    ```bash
-   sqlcmd -S mssql.contoso.com
+   sqlcmd -S mssql-host.contoso.com
    ```
 
 * 已加入域的 Windows 客户端上的 SSMS
 
-   登录到已加入域的 Windows 客户端使用你的域凭据。 请确保[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]安装，则连接到你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过指定实例**Windows 身份验证**中**连接到服务器**对话框。
+   登录到已加入域的 Windows 客户端使用你的域凭据。 请确保[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]安装，则连接到你[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]通过指定的实例 (例如"mssql-host.contoso.com") **Windows 身份验证**中**连接到服务器**对话框。
 
 * 使用其他客户端驱动程序的 AD 身份验证
 
   * JDBC:[使用 Kerberos 集成身份验证连接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[使用集成身份验证](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[连接字符串语法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
- 
+
+## <a name="performance-improvements"></a>性能改进
+如果注意到 AD 帐户查找需要花费一段时间，并且已选中您 AD 配置为有效，且在步骤[使用 Active Directory 身份验证通过第三方 AD 提供程序的 Linux 上的 SQL Server](sql-server-linux-active-directory-third-party-providers.md)，可以添加到行下面`/var/opt/mssql/mssql.conf`跳过 SSSD 调用并直接使用 LDAP 调用。
+
+```/var/opt/mssql/mssql.conf
+[network]
+disablesssd = true
+```
+
 ## <a name="next-steps"></a>后续步骤
 
 在本教程中，我们介绍了如何设置与 Linux 上的 SQL Server 的 Active Directory 身份验证。 你将了解到：

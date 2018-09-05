@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106257"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694690"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106257"
 |**default_language_name**|**sysname**|该主体的默认语言。|  
 |**credential_id**|**int**|与该主体关联的凭据的 ID。 如果没有与该主体关联的凭据，则 credential_id 将为 NULL。|  
 |**owning_principal_id**|**int**|**Principal_id**的服务器角色的所有者。 如果主体不是服务器角色，则为 NULL。|  
-|**is_fixed_role**|**bit**|如果主体是固定服务器角色之一，则返回 1。 有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
+|**is_fixed_role**|**bit**|如果主体是具有固定权限的内置服务器角色之一，则返回 1。 有关详细信息，请参阅 [服务器级别角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
   
 ## <a name="permissions"></a>Permissions  
  任何登录都可以查看自己的登录名称、系统登录和固定的数据库角色。 要查看其他登录，需要获取 ALTER ANY LOGIN 或有关登录的权限。 要查看用户定义的服务器角色，需要获取 ALTER ANY SERVER ROLE 或相关的角色成员身份。  
@@ -61,7 +61,7 @@ ms.locfileid: "43106257"
  以下查询将列出明确对服务器主体授予或拒绝的权限。  
   
 > [!IMPORTANT]  
->  固定服务器角色的权限不会出现在 sys.server_permissions 中。 因此，服务器主体可能具有此处未列出的其他权限。  
+>  （而不是公共） 的固定的服务器角色的权限不会出现在 sys.server_permissions 中。 因此，服务器主体可能具有此处未列出的其他权限。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

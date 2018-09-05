@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fa0197d15869197bf61021d077a57dac399b1e58
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 6f29867351f0fa19817c7f39cbcca5da96a7e862
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118345"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240185"
 ---
 # <a name="machine-learning-services-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,11 +41,13 @@ SQL Server 2017 支持 R 和 Python。 下表介绍的组件。
 | Python 示例和脚本 | 如使用 R、 Python 包含内置的数据集和脚本。  |
 | R 和 Python 中预先训练的模型 | 预先训练的模型创建的特定用例和在 Microsoft 数据科学工程团队维护的。 可以使用预先训练的模型作为-是正负情绪评分中的文本，或在映像中，使用你提供的新数据输入检测功能。 模型在机器学习服务中运行，但不能通过 SQL Server 安装程序安装。 有关详细信息，请参阅[安装预先定型的机器学习模型的 SQL Server](install/sql-pretrained-models-install.md)。 |
 
-## <a name="using-in-database-analytics"></a>使用数据库内分析
+## <a name="using-sql-mls"></a>使用 SQL MLS
 
-开发人员和分析师通常具有在本地 SQL Server 实例上运行的代码。 数据库内分析的最常见方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，传递 R 或 Python 脚本作为输入参数。
+开发人员和分析师通常具有在本地 SQL Server 实例上运行的代码。 通过添加机器学习服务并启用外部脚本执行，便能够在 SQL 服务器模式中运行 R 和 Python 代码： 包装存储过程中的脚本、 存储模型中的 SQL Server 表，或结合使用 T-SQL 和 R 或 Python 函数在查询中。
 
-经典的客户端-服务器交互是另一个模式。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
+数据库内分析的最常见方法是使用[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)，传递 R 或 Python 脚本作为输入参数。
+
+经典的客户端-服务器交互是另一种方法。 从任何客户端工作站上具有一个 IDE，可以安装[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)或[Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)，然后编写将推送执行的代码 (称为*远程计算上下文*) 对数据和到远程 SQL Server 的操作。 
 
 最后，如果使用的[独立服务器](r/r-server-standalone.md)和 Developer edition 中，你可以构建解决方案，客户端工作站上使用相同的库和解释器，并随后部署生产代码中的对 SQL Server 机器学习服务 （数据库内）。 
 

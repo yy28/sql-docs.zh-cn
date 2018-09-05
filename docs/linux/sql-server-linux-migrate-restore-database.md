@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086699"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240063"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>使用备份和还原将 SQL Server 数据库从 Windows 迁移到 Linux
 
@@ -164,6 +164,44 @@ SQL Server 的备份和还原功能是从 Windows 上的 SQL Server 数据库迁
    ```
 
    应收到已成功还原数据库的消息。
+
+   `RESTORE DATABASE` 可能会返回错误，如下例所示：
+
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   
+   在这种情况下，数据库包含辅助文件。 如果这些文件中未指定`MOVE`子句`RESTORE DATABASE`，还原过程将尝试在与原始服务器相同的路径中创建它们。 
+
+   可以列出备份中包含的所有文件：
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   应会看到类似于下面 （列出的两个第一列） 的列表：
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   可以使用此列表来创建`MOVE`子句为其他文件。 在此示例中，`RESTORE DATABASE`是：
+
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
 
 1. 通过列出所有服务器上的数据库来验证还原操作。 应列出已还原的数据库。
 
