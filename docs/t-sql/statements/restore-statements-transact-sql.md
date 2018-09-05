@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40411767"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348368"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
-通过此命令，可从 Azure Blob 存储帐户的完整数据库备份还原整个数据库（完整还原）。
+运行此命令，可通过 Azure Blob 存储帐户从完整数据库备份（完整还原）还原整个数据库。
 
 有关其他受支持的 RESTORE 命令，请参阅：
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -773,6 +773,8 @@ FROM URL
  
 ## <a name="general-remarks"></a>一般备注
 
+前提条件是，必须通过将共享访问签名设为机密，创建名称与 blob 存储帐户 URL 一致的凭据。 RESTORE 命令将使用 blob 存储 URL 查找凭据，以找到读取备份设备所需的信息。
+
 RESTORE 操作是异步的，即使客户端连接中断，还原也会继续运行。 如果连接断开，可检查 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 视图，查看还原操作的状态（以及查看 CREATE 和 DROP 数据库）。 
 
 已设置/覆盖以下数据库选项，这些选项稍后无法进行更改：
@@ -799,27 +801,30 @@ RESTORE 操作是异步的，即使客户端连接中断，还原也会继续运
 若要还原已加密的数据库，您必须有权访问用于对数据库进行加密的证书或非对称密钥。 如果没有证书或非对称密钥，数据库将无法还原。 因此，只要需要该备份，就必须保留用于对数据库加密密钥进行加密的证书。 有关详细信息，请参阅 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)。  
     
 ## <a name="permissions"></a>Permissions  
-如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。  
-  
+用户必须拥有 CREATE DATABASE 权限，才能运行 RESTORE。  
+```
+CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
+GRANT CREATE ANY DATABASE TO [mylogin];
+```  
 RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
 ##  <a name="examples"></a> 示例  
 以下示例从 URL 还原仅复制的数据库备份，包括创建凭据。  
   
-###  <a name="restore-mi-database"></a> A. 从三个备份设备还原数据库。   
+###  <a name="restore-mi-database"></a> A. 从四个备份设备还原数据库。   
 ```sql
 
 -- Create credential
-CREATE CREDENTIAL [https://mibackups.blob.core.windows.net/wide-world-importers]
+CREATE CREDENTIAL [https://mybackups.blob.core.windows.net/wide-world-importers]
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
        SECRET = 'sv=2017-11-09&ss=bq&srt=sco&sp=rl&se=2022-06-19T22:41:07Z&st=2018-06-01T14:41:07Z&spr=https&sig=s7wddcf0w%3D';
 GO
--- Simple example 
+-- Restore database
 RESTORE DATABASE WideWorldImportersStandard
-FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
-URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
+FROM URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/00-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
+URL = N'https://mybackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
 ```
 如果数据库已存在，则显示以下错误：
 ```
@@ -827,8 +832,27 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 ###  <a name="restore-mi-database-variables"></a> B. 通过变量还原指定数据库。  
--- 变量示例：DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
+
+```
+DECLARE @db_name sysname = 'WideWorldImportersStandard';
+DECLARE @url nvarchar(400) = N'https://mybackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
+
+RESTORE DATABASE @db_name 
+FROM URL = @url
 ```  
+
+### <a name="restore-mi-database-progress"></a> C. 跟踪还原语句的执行进度。 
+
+```
+SELECT  query = a.text, start_time, percent_complete,
+        eta = dateadd(second,estimated_completion_time/1000, getdate()) 
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a 
+WHERE r.command = 'RESTORE DATABASE'
+```
+
+> [!Note]
+> 此视图可能会显示两个还原请求。 一个是客户端发送的原始 RESTORE 语句，另一个是在客户端连接失败时仍执行的后台 RESTORE 语句。
 
 ::: moniker-end
 ::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
@@ -842,23 +866,23 @@ Database 'WideWorldImportersStandard' already exists. Choose a different databas
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
+>   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# SQL Parallel Data Warehouse
+# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
 
 
-Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
+将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE（并行数据仓库）](../../t-sql/statements/backup-transact-sql.md)命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。  
   
 > [!NOTE]  
->  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
-For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+>  还原 master 包括还原设备登录信息。 若要还原 master，请使用 **Configuration Manager** 工具中的[还原 master 数据库 (Transact-SQL)](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) 页面。 有权访问控制节点的管理员可以执行此操作。  
+有关[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]数据库备份的详细信息，请参阅[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]中的“备份和还原”。  
   
-## Syntax  
+## <a name="syntax"></a>语法  
   
 ```sql  
   

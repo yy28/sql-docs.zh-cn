@@ -2,25 +2,18 @@
 title: 服务器属性（“高级”页）- Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405633"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266265"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>服务器属性（“高级”页）- Reporting Services
 
@@ -93,8 +86,8 @@ ms.locfileid: "40405633"
 
 |值|描述|
 |---------|---------|
-|**True**|启用 Windows 集成安全性。|
-|**False**|未启用 Windows 集成安全性。 将不运行配置为使用 Windows 集成安全性的报表数据源。|
+|**True**|已启用 Windows 集成安全性。|
+|**False**|未启用 Windows 集成安全性。 配置为使用 Windows 集成安全性的报表数据源不会运行。|
 
 **EnableLoadReportDefinition**  
 选中此选项可以指定用户是否可以从报表生成器报表中执行计划外报告执行。 设置此选项即可确定报表服务器的 **EnableLoadReportDefinition** 属性值。  
@@ -139,15 +132,15 @@ ms.locfileid: "40405633"
 
 **OfficeOnlineDiscoveryURL**（仅适用于 Power BI 报表服务器） 设置用于查看 Excel 工作簿的 Office Online Server 实例地址。
 
-**RequireIntune** 将此设置为需要 Intune 才能通过 Power BI 移动应用访问组织的报表。 默认值为 False。
+**RequireIntune**：需要 Intune 才能通过 Power BI 移动应用访问组织的报表。 默认值为 False。
 
-**ScheduleRefreshTimeoutMinutes**（仅适用于 Power BI 报表服务器） 设置希望计划刷新超时的等待时间。 默认值为 120。
+**ScheduleRefreshTimeoutMinutes**（仅限 Power BI 报表服务器）：设置所需的计划刷新超时时间。默认值为 120。
 
-**ShowDownloadMenu** 设置此项以启用客户端工具下载菜单。 默认值为 true。
+**ShowDownloadMenu**：启用客户端工具下载菜单。 默认值为 true。
 
 **TimeInitialDelaySeconds** 设置希望初始时间延迟的时长（以秒为单位）。 默认值为 60。
 
-**TrustedFileFormat** 设置所有可保存的外部文件格式。 默认值为 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web、png。
+**TrustedFileFormat**：设置在浏览器中的 Reporting Services 门户网站下打开的所有外部文件格式。 对于未列出的外部文件格式，浏览器会提示下载选项。 默认值为 jpg、jpeg、jpe、wav、bmp、pdf、img、gif、json、mp4、web 和 png。
 
 **EnablePowerBIReportExportData*****（仅适用于 Power BI 报表服务器）***  
 启用从 Power BI 视觉对象导出 Power BI 报表服务器数据。 值为 True 和 False。  默认值为 True。  

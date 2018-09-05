@@ -1,14 +1,10 @@
 ---
 title: 自定义的数据和显示的地图或地图层 （报表生成器和 SSRS） |Microsoft 文档
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10521"
@@ -24,16 +20,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2965210603f3727edd2563d5f0b9301e31efee0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5c3384670c4f04dd47ec58b6d9713711e3bf875
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022284"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278608"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自定义地图或地图层的数据和显示（报表生成器和 SSRS）
   在使用向导向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中添加地图或地图层之后，可能希望更改地图在报表中的显示方式。 可以考虑以下构思来进行改进：  
@@ -93,7 +87,7 @@ ms.locfileid: "33022284"
   
 -   分辨率和简化。 对于线条和多边形，在绘制时间与轮廓详细程度之间选择平衡。  
   
- 若要更改这些选项，请右键单击地图视区，然后使用[“地图视区属性”对话框 -&gt;“常规”](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。  
+ 若要更改这些选项，请右键单击地图视区，然后使用[地图视区属性”对话框 -&gt;“常规”](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52)页和相关页。   
   
 ##  <a name="Legends"></a> 更改图例的选项  
  图例可帮助用户解释地图上的数据。  
