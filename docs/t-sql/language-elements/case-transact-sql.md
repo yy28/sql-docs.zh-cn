@@ -24,13 +24,13 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e65dd6ddbb2b71c92e7e3dd967a4cf50af2d687
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 58c276a0e70857b09c30bc405a0437cb2fbba61f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43087796"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ END
   
  CASE 表达式不能用于控制 Transact-SQL 语句、语句块、用户定义函数以及存储过程的执行流。 如需控制流方法的列表，请参阅[控制流语言 (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)。  
   
- CASE 语句按顺序评估其条件并在满足第一个条件时停止。 在某些情况下，将会先计算表达式，然后 CASE 语句会将表达式的结果作为其输入接收。 在计算这些表达式时可能会出现错误。 首先计算在 CASE 语句的 WHEN 参数中出现的聚合表达式，然后将结果提供给 CASE 语句。 例如，下面的查询将在生成 MAX 聚合的值时生成被零除错误。 在计算 CASE 表达式之前会出现这种情况。  
+ CASE 表达式按顺序评估其条件并在满足第一个条件时停止。 在某些情况下，将会先计算表达式，然后 CASE 表达式会将表达式的结果作为其输入接收。 在计算这些表达式时可能会出现错误。 首先计算在 CASE 表达式的 WHEN 参数中出现的聚合表达式，然后将结果提供给 CASE 表达式。 例如，下面的查询将在生成 MAX 聚合的值时生成被零除错误。 在计算 CASE 表达式之前会出现这种情况。  
   
 ```sql  
 WITH Data (value) AS   

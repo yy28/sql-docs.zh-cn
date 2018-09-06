@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184680"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780758"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ ms.locfileid: "40184680"
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|基本 R 集成|用户帐户控制|是|是|是|否|   
-|高级 R 集成|用户帐户控制|否|否|否|否| 
+|基本 R 集成 <sup>1</sup>|用户帐户控制|是|是|是|否|   
+|高级 R 集成 <sup>2</sup>|用户帐户控制|否|否|否|否| 
 |基本 Python 集成|用户帐户控制|是|是|是|否|
 |高级 Python 集成|用户帐户控制|否|否|否|否| 
 |机器学习服务器（独立）|用户帐户控制|否|否|否|否|   
-|Polybase 计算节点|用户帐户控制|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup>|是 <sup>1</sup> | 
+|Polybase 计算节点|用户帐户控制|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
 |Polybase 头节点|用户帐户控制|否|否|否|否| 
 |JSON|用户帐户控制|是|是|是|用户帐户控制|   
 |查询存储|用户帐户控制|是|是|是|用户帐户控制|   
@@ -322,7 +322,12 @@ ms.locfileid: "40184680"
 |图形|用户帐户控制|是|是|是|用户帐户控制|  
 
 
-<sup>1</sup> 具有多个计算节点的 Scale out 需要一个头节点。
+<sup>1</sup> 基本集成仅限于 2 个核心和内存中数据集。 
+
+<sup>2</sup> 高级集成可以使用所有用于并行处理任意大小（受硬件限制）数据集的可用核心。 
+
+<sup>3</sup> 具有多个计算节点的横向扩展需要一个头节点。
+
 
 ## <a name="IS"></a> Integration Services
 

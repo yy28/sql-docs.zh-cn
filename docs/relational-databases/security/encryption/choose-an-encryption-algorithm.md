@@ -1,7 +1,7 @@
 ---
 title: 选择加密算法 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549597"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096555"
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549597"
   
 -   长密钥通常会比短密钥生成更强的加密。  
   
--   非对称加密比使用相同密钥长度的对称加密更弱，但速度相对较慢。  
+-   非对称加密比对称加密速度慢。  
   
 -   使用长密钥的块密码比流密码更强。  
   
 -   复杂的长密码比短密码更强。  
+
+-   如果密钥仅存储在本地，通常推荐使用对称加密，如果需要通过无线共享密钥，则推荐使用非对称加密。
   
 -   如果您正在加密大量数据，应使用对称密钥来加密数据，并使用非对称密钥来加密该对称密钥。  
   

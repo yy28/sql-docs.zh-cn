@@ -18,19 +18,22 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d45174da7a0d8792229051a9f6cdb486b64e8343
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 074a799f9027fee4297332f47dbdbd064ab7593d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309816"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790928"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本主题介绍如何将数据质量知识库中的域/复合域附加到 Microsoft Azure 市场中的引用数据服务，以便针对高质量引用数据生成知识。 每个引用数据服务包含一个架构（数据列）。 在将域或复合域附加到引用数据服务后，必须将此附加域或所附加的复合域内的各个域映射到引用数据服务架构中的相应列。 通过将复合域附加到引用数据服务，您可以只将一个域附加到引用数据服务，然后将复合域内的各域映射到引用数据服务架构中的相应列。  
-  
+
+> [!IMPORTANT]
+> 本文提及以前可从 Azure DataMarket 获取的第三方参考数据服务。 DataMarket 和数据服务（包括 Melissa 地址数据）在 2016 年 12 月 31 日之后已不再使用。 因此，无法继续使用 DataMarket 中的指定服务运行本文中的示例。 但仍可使用第三方参考数据提供商提供的在线参考数据服务。
+
 > [!WARNING]  
 >  当将域映射到引用数据服务架构中的列时，附加到引用数据服务的复合域会出现在域下拉列表中。 不要将复合域映射到引用数据服务中的列；只需将复合域内的各个域映射到引用数据服务架构中的相应列。 否则，将导致错误。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "35309816"
   
 ###  <a name="Security"></a> 安全性  
   
-#### <a name="permissions"></a>权限  
+#### <a name="permissions"></a>Permissions  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 角色才能将域映射到引用数据。  
   
 ##  <a name="Map"></a> 将域从 Melissa Data 映射到引用数据  

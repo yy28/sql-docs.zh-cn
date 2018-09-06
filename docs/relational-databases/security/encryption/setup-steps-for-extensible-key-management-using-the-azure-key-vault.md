@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702978"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925987"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>使用 Azure Key Vault 的 SQL Server TDE 可扩展密钥管理 - 安装步骤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ SQL Server 版本  |可再发行组件安装链接
     在本例中，让我们使用在第 I 部分中创建的 Azure Active Directory 服务主体来授权 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。  
   
     > [!IMPORTANT]  
-    >  Azure Active Directory 服务主体必须至少具有密钥保管库的 `get`、 `list`、 `wrapKey`和 `unwrapKey` 权限。  
+    >  Azure Active Directory 服务主体必须至少具有密钥保管库的 `get`、 `wrapKey` 和 `unwrapKey` 权限。  
   
      如下所示，对 **参数使用第 I 部分的** 客户端 ID `ServicePrincipalName` 。 如果 `Set-AzureRmKeyVaultAccessPolicy` 成功运行，则以无提示方式运行，并且无任何输出。  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      调用 `Get-AzureRmKeyVault` cmdlet 以确认权限。 在“访问策略”下方的语句输出中，你应看到作为有权访问此密钥保管库的另一个租户列出的 AAD 应用程序名称。  

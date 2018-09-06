@@ -15,19 +15,22 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1aa5dfe6a501548a3a7e0914eacda93169a89c6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 75cf72c26c7a9baf1e4361b053325d655797c238
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35310016"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42788848"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
-  
+
+> [!IMPORTANT]
+> 本文提及以前可从 Azure DataMarket 获取的第三方参考数据服务。 DataMarket 和数据服务（包括 Melissa 地址数据）在 2016 年 12 月 31 日之后已不再使用。 因此，无法继续使用 DataMarket 中的指定服务运行本文中的示例。 但仍可使用第三方参考数据提供商提供的在线参考数据服务。
+ 
  在您使用 DQS 中的引用数据服务功能清理数据时，该 DQS 清理过程将映射的域值以批处理请求的形式发送到引用数据服务提供程序中。 引用数据服务将会响应以下信息：  
   
 -   建议的更正  
