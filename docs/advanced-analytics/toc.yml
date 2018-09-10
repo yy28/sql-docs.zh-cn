@@ -19,19 +19,21 @@ items:
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: 预定型模型
     href: install/sql-pretrained-models-install.md
-  - name: 命令提示符设置
-    href: install/sql-ml-component-commandline-install.md
   - name: 脱机设置（无 Internet）
     href: install/sql-ml-component-install-without-internet-access.md
     items:
     - name: CAB 下载（脱机安装程序）
       href: install/sql-ml-cab-downloads.md
+  - name: 命令提示符设置
+    href: install/sql-ml-component-commandline-install.md
   - name: 升级 R 和 Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: 设置 R 工具
     href: r/set-up-a-data-science-client.md
   - name: 设置 Python 工具
     href: python/setup-python-client-tools-sql.md
+  - name: 设置虚拟服务器
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: 快速入门
   items:
   - name: R
@@ -147,28 +149,13 @@ items:
 - name: 解决方案
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: 概念
-  href: architecture-overview-machine-learning.md
   items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: R 互操作性
-      href: r/r-interoperability-in-sql-server.md
-    - name: 支持 R 集成的组件
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: R 的安全性
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: 机器学习服务中的 Python
-      href: python/sql-server-python-services.md
-    - name: Python 互操作性
-      href: python/python-interoperability.md
-    - name: Python 支持组件
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Python 安全性
-      href: python/security-overview-sql-server-python-services.md
+  - name: 可扩展性框架
+    href: concepts/extensibility-framework.md
+  - name: R 扩展
+    href: concepts/extension-r.md
+  - name: Python 扩展
+    href: concepts/extension-python.md
 - name: 操作指南
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -236,18 +223,26 @@ items:
       href: r/performance-case-study-r-services.md
     - name: 使用 R 代码分析函数
       href: r/using-r-code-profiling-functions.md
+  - name: Security
+    items:
+    - name: SQL Server 中 R 运行时的安全注意事项
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: R 的安全性
+      href: r/security-overview-sql-server-r.md
+    - name: Python 安全性
+      href: python/security-overview-sql-server-python-services.md
+    - name: SQL Server Launchpad 服务帐户
+      href: general/sql-server-launchpad-service-account.md
+    - name: 修改 SQLRUserGroup
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: 将 SQLRUserGroup 添加为数据库用户
+      href: r/add-sqlrusergroup-to-database.md
   - name: 管理
     items:
     - name: 配置和管理 R
       href: r/configuration-sql-server-r-services.md
     - name: 机器学习服务的高级配置选项
       href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: SQL Server 中 R 运行时的安全注意事项
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: 修改 SQL Server 机器学习服务的用户帐户池
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-    - name: 将 SQLRUserGroup 添加为数据库用户
-      href: r/add-sqlrusergroup-to-database.md
     - name: 通过 Web 服务部署和使用模型
       href: operationalization-with-mrsdeploy.md
     - name: 管理和监控解决方案
@@ -287,8 +282,6 @@ items:
     href: known-issues-for-sql-server-machine-learning-services.md
   - name: 发行说明
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-  - name: 设置虚拟机
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: 故障排除
     href: machine-learning-troubleshooting-faq.md
     items:
@@ -314,9 +307,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118074"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888863"
