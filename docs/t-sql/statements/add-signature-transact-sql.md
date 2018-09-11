@@ -1,13 +1,8 @@
 ---
 title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 227a0215b4d5438ce10229e0a3e8398312f7ca1c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788438"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812283"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +99,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 然而，通过使用用于对 ProcSelectT1ForAlice 进行签名的相同证书来副署 procSelectT1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在整个调用链中保留此签名，并允许访问 T1。 如果 Alice 试图直接调用 procSelectT1，她将无法访问 T1，因为副署不授予任何权限。 下面的示例 C 显示了此示例的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对对象拥有 ALTER 权限，并且对证书或非对称密钥拥有 CONTROL 权限。 如果关联的私钥受密码保护，则用户还必须具有相应的密码。  
   
 ## <a name="examples"></a>示例  

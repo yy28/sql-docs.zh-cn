@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cae70ca1a3d78583b49a79b212f233c073ae835f
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 473f5ae3e6d193f926d4995b3fd3ec47263e3e9d
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459401"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171668"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 语句 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   返回包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中特定备份设备上所有备份集的所有备份标头信息的结果集。 
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)] 
-  
+ 
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  
   

@@ -27,19 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a38b641435f24ec07157b650877a5ac107948f75
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42441430"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171719"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 语句 - VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   验证备份但不还原备份，检查备份集是否完整以及整个备份是否可读。 但是，RESTORE VERIFYONLY 不尝试验证备份卷中的数据结构。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，RESTORE VERIFYONLY 得到了增强以对数据进行附加检查，从而提高检测到错误的可能性。 其目标是尽可能接近实际的还原操作。 有关详细信息，请参阅“备注”部分。  
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  如果备份有效，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 会返回一条成功消息。  
   

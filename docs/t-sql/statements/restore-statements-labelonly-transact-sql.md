@@ -25,18 +25,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d3271bf9ba8309db89bda6e2a4c789f1e6b666db
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: a522623a06dc2166701dc8f9d67aab41f1bbd2c6
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39460141"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171579"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE 语句 - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
   返回一个结果集，它包含给定备份设备识别的备份介质的相关信息。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  

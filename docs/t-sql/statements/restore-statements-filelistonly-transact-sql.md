@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 825d55cd035f2e1dce9ab0d5b7b18cefa53256fe
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9199dc846777670598d7d7af767cc01c9d2bf978
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453641"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171551"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 语句 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
 
   返回由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的备份集内包含的数据库和日志文件列表组成的结果集。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  有关参数的说明，请参阅 [RESTORE 参数 (Transact-SQL)](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。  

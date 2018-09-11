@@ -1,7 +1,7 @@
 ---
 title: 仅复制备份 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,18 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 356c23e5b1acb2070c35140177e1ab024fc22879
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4084ab99a800de338f5433b65915e3f831ad9679
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39534657"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171642"
 ---
 # <a name="copy-only-backups-sql-server"></a>仅复制备份 (SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   *仅复制备份*是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独立于常规备份序列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的备份。 通常，进行备份会更改数据库并影响其后备份的还原方式。 但是，有时在不影响数据库总体备份和还原过程的情况下，为特殊目的而进行备份还是有用的。 仅复制备份就是用于此目的。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  仅复制备份的类型如下所示：  
   

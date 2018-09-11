@@ -7,9 +7,7 @@ ms.prod_service: database-engine
 ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
@@ -25,12 +23,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d87f60bc73ff969aa2f3f6ef42264ea8cb93b23c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47b1098c4799c0649f52f5470dddc4d654e7bbcf
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32930843"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809173"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.locfileid: "32930843"
 ###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-#### <a name="permissions"></a>权限  
+#### <a name="permissions"></a>Permissions  
  此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
  此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  

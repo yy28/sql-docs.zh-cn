@@ -24,19 +24,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2dd85881f4b1f324b261c6a265ded096eb28f84b
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 74ab40d229f097b14e237cf84fa9e29edbb4a4b5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454321"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171789"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在其下运行的注册表项的名称。 若当前实例为默认实例，则 @@SERVICENAME 返回 MSSQLSERVER；若当前实例是命名实例，则该函数返回该实例名。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

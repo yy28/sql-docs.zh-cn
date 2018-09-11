@@ -3,13 +3,9 @@ title: 数据层应用程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: data-tier-applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9273ba91e4662c6175a1d2922b7cab3e6d739f01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d66981713b0ba67c87a33530436c8159f8a6a33a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931122"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813333"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +112,7 @@ ms.locfileid: "32931122"
   
  数据库管理工具 SQL Server Management Studio、Azure 门户和 DACFx API 支持这两种功能。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须是 **dbmanager** 角色的成员或分配了 **CREATE DATABASE** 权限才能创建数据库，包括通过部署 DAC 包来创建数据库。 用户必须是 **dbmanager** 角色的成员或分配了 **DROP DATABASE** 权限才能删除数据库。  
   
 ## <a name="data-tier-application-tasks"></a>数据层应用程序任务  

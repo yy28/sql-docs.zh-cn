@@ -26,20 +26,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 46930e648b72b03453a05f1a55da92a8325f9bda
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456991"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171709"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>用于还原、恢复和管理备份的 RESTORE 语句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
 
   本节说明用于备份的 RESTORE 语句。 除了用于还原和恢复备份的主要语句 RESTORE {DATABASE | LOG} 以外，还可以使用多个辅助 RESTORE 语句来管理备份和计划还原序列。 辅助 RESTORE 命令包括：RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!IMPORTANT]  
 >  在以前的 SQL Server 版本中，任何用户都能够使用 RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY Transact-SQL 语句来获取有关备份集和备份设备的信息。 由于它们会泄露有关备份文件内容的信息，因此，在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更高版本中，这些语句需要 CREATE DATABASE 权限。 与以前的版本相比，这项新要求为您的备份文件提高了安全性，并更周全地保护了您的备份信息。 有关此权限的信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   

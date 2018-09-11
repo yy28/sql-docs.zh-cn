@@ -1,7 +1,7 @@
 ---
 title: 排序规则 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,20 +23,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b8bb7f145d3b868ef1c5ea9ae06740615b1b69b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3ac18bc48edc732bf393ae0a353113bf54e12760
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094933"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171619"
 ---
 # <a name="collations"></a>排序规则
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   一个子句，可应用于数据库定义或列定义以定义排序规则，或应用于字符串表达式以应用排序规则转换。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-  
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
