@@ -1,5 +1,5 @@
 ---
-title: getProcedureColumns 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getProcedureColumns 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d323f4ba70e439eb5ec6ee1ec6178c8d8ec69dc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cae6530dc0b37b57d986ab160ce9be0bf4d5a33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843272"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786808"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,67 +44,67 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 #### <a name="parameters"></a>Parameters  
  *sCatalog*  
   
- A**字符串**，其中包含目录名称。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *sSchema*  
   
- A**字符串**，其中包含的架构名称模式。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *proc*  
   
- A**字符串**包含过程名称模式。  
+ 一个包含过程名称模式的字符串。  
   
- *列*  
+ *col*  
   
- A**字符串**，其中包含的列名称模式。 对此参数提供 Null 值将为每一列返回一行。  
+ 一个包含列名称模式的字符串。 对此参数提供 Null 值将为每一列返回一行。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getProcedureColumns 方法指定此 getProcedureColumns 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getProcedureColumns 方法由 java.sql.DatabaseMetaData 接口中的 getProcedureColumns 方法指定。  
   
- GetProcedureColumns 方法所返回的结果集将包含以下信息：  
+ GetProcedureColumns 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**字符串**|指定的存储过程所在数据库的名称。|  
-|PROCEDURE_SCHEM|**字符串**|存储过程的架构。|  
-|PROCEDURE_NAME|**字符串**|存储过程的名称。|  
-|COLUMN_NAME|**字符串**|列的名称。|  
-|COLUMN_TYPE|**short**|列的类型。 它可以是以下值之一：<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
-|DATA_TYPE|**int**|来自 java.sql.Types 的 SQL 数据类型。|  
-|TYPE_NAME|**字符串**|数据类型的名称。|  
+|PROCEDURE_CAT|**String**|指定的存储过程所在数据库的名称。|  
+|PROCEDURE_SCHEM|**String**|存储过程的架构。|  
+|PROCEDURE_NAME|**String**|存储过程的名称。|  
+|COLUMN_NAME|**String**|列的名称。|  
+|COLUMN_TYPE|**short**|列的类型。 可以为下列值之一：<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
+|DATA_TYPE|**smallint**|来自 java.sql.Types 的 SQL 数据类型。|  
+|TYPE_NAME|**String**|数据类型的名称。|  
 |PRECISION|**int**|有效数字总个数。|  
 |LENGTH|**int**|以字节为单位的数据的长度。|  
-|SCALE|**short**|小数点右侧的数字个数。|  
-|RADIX|**short**|数值类型的基础。|  
-|NULLABLE|**short**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
-|REMARKS|**字符串**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。|  
-|COLUMN_DEF|**字符串**|列的默认值。|  
-|SQL_DATA_TYPE|**int**|此列等同于**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。|  
-|SQL_DATETIME_SUB|**int**|**Datetime** ISO**间隔**如果子代码的值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。|  
+|SCALE|**short**|小数点右边的数字位数。|  
+|RADIX|**short**|数值类型的基数。|  
+|NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
+|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|COLUMN_DEF|**String**|列的默认值。|  
+|SQL_DATA_TYPE|**smallint**|此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。|  
+|SQL_DATETIME_SUB|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。|  
 |CHAR_OCTET_LENGTH|**int**|列中的最大字节数。|  
 |ORDINAL_POSITION|**int**|列在表中的索引。|  
-|IS_NULLABLE|**字符串**|指示列是否允许 Null 值。|  
-|SS_TYPE_CATALOG_NAME|**字符串**|包含用户定义类型 (UDT) 的目录名称。|  
-|SS_TYPE_SCHEMA_NAME|**字符串**|包含用户定义类型 (UDT) 的架构名称。|  
-|SS_UDT_CATALOG_NAME|**字符串**|采用完全限定名称的用户定义类型 (UDT)。|  
-|SS_UDT_SCHEMA_NAME|**字符串**|在其中定义 XML 架构集合名称的目录的名称。 如果找不到的目录名称，此变量包含一个空字符串。|  
-|SS_UDT_ASSEMBLY_TYPE_NAME|**字符串**|在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则为空字符串。|  
-|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**字符串**|XML 架构集合的名称。 如果找不到名称，则为空字符串。|  
-|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**字符串**|包含用户定义类型 (UDT) 的目录名称。|  
-|SS_XML_SCHEMACOLLECTION_NAME|**字符串**|包含用户定义类型 (UDT) 的架构名称。|  
-|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用的数据类型扩展存储的过程。<br /><br /> <br /><br /> **注意：** 有关通过返回的数据类型的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，请参阅"数据类型 (TRANSACT-SQL)"[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。|  
+|IS_NULLABLE|**String**|指示列是否允许 Null 值。|  
+|SS_TYPE_CATALOG_NAME|**String**|包含用户定义类型 (UDT) 的目录名称。|  
+|SS_TYPE_SCHEMA_NAME|**String**|包含用户定义类型 (UDT) 的架构名称。|  
+|SS_UDT_CATALOG_NAME|**String**|采用完全限定名称的用户定义类型 (UDT)。|  
+|SS_UDT_SCHEMA_NAME|**String**|在其中定义 XML 架构集合名称的目录的名称。 如果找不到目录名称，此变量则会包含一个空字符串。|  
+|SS_UDT_ASSEMBLY_TYPE_NAME|**String**|在其中定义 XML 架构集合名称的架构的名称。 如果找不到架构名称，则为空字符串。|  
+|SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML 架构集合的名称。 如果找不到名称，则为空字符串。|  
+|SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|包含用户定义类型 (UDT) 的目录名称。|  
+|SS_XML_SCHEMACOLLECTION_NAME|**String**|包含用户定义类型 (UDT) 的架构名称。|  
+|SS_DATA_TYPE|**tinyint**|扩展存储过程使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型。<br /><br /> <br /><br /> **注意：** 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 返回的数据类型的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“数据类型 (Transact-SQL)”。|  
   
 > [!NOTE]  
->  有关 getProcedureColumns 方法返回的数据的详细信息，请参阅"sp_sproc_columns (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getProcedureColumns 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_sproc_columns (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getProcedureColumns 方法来返回有关中的 uspGetBillOfMaterials 存储过程的信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getProcedureColumns 方法返回有关 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 uspGetBillOfMaterials 存储过程的信息。  
   
 ```  
 public static void executeGetProcedureColumns(Connection con) {  

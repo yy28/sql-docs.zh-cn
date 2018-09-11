@@ -1,5 +1,5 @@
 ---
-title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getIndexInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836863"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784864"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索的索引和给定的表的统计信息的说明。  
+  检索给定表的索引和统计信息的说明。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,56 +45,56 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>Parameters  
  *cat*  
   
- A**字符串**，其中包含目录名称。  
+ 一个包含目录名称的字符串。  
   
  *schema*  
   
- A**字符串**包含架构的名称。  
+ 一个包含架构名称的字符串。  
   
  *table*  
   
- A**字符串**包含表的名称。  
+ 一个包含表名称的字符串。  
   
- *唯一*  
+ *UNIQUE*  
   
- **true**如果只返回唯一值的索引。 **false**如果返回的所有索引。  
+ **true**是否仅返回唯一值的索引。 **false**如果返回的所有索引。  
   
- *近似*  
+ *approximate*  
   
- **true**如果结果反映近似或过期值。 **false**如果结果的准确性。  
+ **true**如果结果反映近似值或过期值。 **false**如果结果的准确性。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getIndexInfo 方法指定此 getIndexInfo 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getIndexInfo 方法由 java.sql.DatabaseMetaData 接口中的 getIndexInfo 方法指定。  
   
- GetIndexInfo 方法所返回的结果集将包含以下信息：  
+ 由 getIndexInfo 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字符串**|在其中指定的表所在的数据库名称。|  
-|TABLE_SCHEM|**字符串**|表的架构。|  
-|TABLE_NAME|**字符串**|表的名称。|  
+|TABLE_CAT|**String**|指定的表所在的数据库的名称。|  
+|TABLE_SCHEM|**String**|表的架构。|  
+|TABLE_NAME|**String**|表的名称。|  
 |NON_UNIQUE|**boolean**|指示索引值是否可以不唯一。|  
-|INDEX_QUALIFIER|**字符串**|索引所有者的名称。 当 TYPE 为 tableIndexStatistic 时，该名称为 Null。|  
-|INDEX_NAME|**字符串**|索引的名称。|  
-|TYPE|**short**|索引的类型。 它可以是以下值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
+|INDEX_QUALIFIER|**String**|索引所有者的名称。 当 TYPE 为 tableIndexStatistic 时，该名称为 Null。|  
+|INDEX_NAME|**String**|索引的名称。|  
+|TYPE|**short**|索引的类型。 可以为下列值之一：<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|列在索引中的序号位置。 索引中的第一列为 1。|  
-|COLUMN_NAME|**字符串**|列的名称。|  
-|ASC_OR_DESC|**字符串**|索引排序规则中所用的顺序。 它可以是以下值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回"A"。  |  
+|COLUMN_NAME|**String**|列的名称。|  
+|ASC_OR_DESC|**String**|索引排序规则中所用的顺序。 可以为下列值之一：<br /><br /> A（升序）<br /><br /> D（降序）<br /><br /> NULL（不适用）<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回“A”。|  
 |CARDINALITY|**int**|表中的行数或索引中的唯一值个数。|  
 |PAGES|**int**|用于存储索引或表的页数。|  
-|FILTER_CONDITION|**字符串**|筛选条件。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]始终返回 null。  |  
+|FILTER_CONDITION|**String**|筛选条件。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 始终会返回 null。|  
   
 > [!NOTE]  
->  有关 getIndexInfo 方法返回的数据的详细信息，请参阅"sp_indexes (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getIndexInfo 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_indexes (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getIndexInfo 方法返回的索引和统计信息中的 Person.Contact 表有关的信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getIndexInfo 方法返回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 Person.Contact 表的索引信息和统计信息。  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  

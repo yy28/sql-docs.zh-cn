@@ -1,5 +1,5 @@
 ---
-title: getExportedKeys 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getExportedKeys 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52e96e79dd6e7e9b51824608e161be5648796d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 28d1c4ef8b1c5ae0422fd140cd16a318843f6a22
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836212"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783985"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,49 +43,49 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>Parameters  
  *cat*  
   
- A**字符串**，其中包含目录名称。  
+ 一个包含目录名称的字符串。  
   
  *schema*  
   
- A**字符串**包含架构的名称。  
+ 一个包含架构名称的字符串。  
   
  *table*  
   
- A**字符串**包含表的名称。  
+ 一个包含表名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getExportedKeys 方法指定此 getExportedKeys 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getExportedKeys 方法由 java.sql.DatabaseMetaData 接口中的 getExportedKeys 方法指定。  
   
- GetExportedKeys 方法所返回的结果集将包含以下信息：  
+ 由 getExportedKeys 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|PKTABLE_CAT|**字符串**|包含主键表的目录名称。|  
-|PKTABLE_SCHEM|**字符串**|主键表的架构名称。|  
-|PKTABLE_NAME|**字符串**|主键表的名称。|  
-|PKCOLUMN_NAME|**字符串**|主键的列名称。|  
-|FKTABLE_CAT|**字符串**|包含外键表的目录名称。|  
-|FKTABLE_SCHEM|**字符串**|外键表的架构名称。|  
-|FKTABLE_NAME|**字符串**|外键表的名称。|  
-|FKCOLUMN_NAME|**字符串**|外键的列名称。|  
+|PKTABLE_CAT|**String**|包含主键表的目录名称。|  
+|PKTABLE_SCHEM|**String**|主键表的架构名称。|  
+|PKTABLE_NAME|**String**|主键表的名称。|  
+|PKCOLUMN_NAME|**String**|主键的列名称。|  
+|FKTABLE_CAT|**String**|包含外键表的目录名称。|  
+|FKTABLE_SCHEM|**String**|外键表的架构名称。|  
+|FKTABLE_NAME|**String**|外键表的名称。|  
+|FKCOLUMN_NAME|**String**|外键的列名称。|  
 |KEY_SEQ|**short**|多列主键中列的序列号。|  
-|UPDATE_RULE|**short**|SQL 操作为更新时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|DELETE_RULE|**short**|SQL 操作为删除时对外键应用的操作。 它可以是以下值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
-|FK_NAME|**字符串**|外键的名称。|  
-|PK_NAME|**字符串**|主键的名称。|  
-|DEFERRABILITY|**short**|指示对外键约束的计算是否可以延迟到提交时。 它可以是以下值之一：<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
+|UPDATE_RULE|**short**|SQL 操作为更新时对外键应用的操作。 可以为下列值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|DELETE_RULE|**short**|SQL 操作为删除时对外键应用的操作。 可以为下列值之一：<br /><br /> importedKeyNoAction (3)<br /><br /> importedKeyCascade (0)<br /><br /> importedKeySetNull (2)<br /><br /> importedKeySetDefault (4)<br /><br /> importedKeyRestrict (1)|  
+|FK_NAME|**String**|外键的名称。|  
+|PK_NAME|**String**|主键的名称。|  
+|DEFERRABILITY|**short**|指示对外键约束的计算是否可以延迟到提交时。 可以为下列值之一：<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  有关 getExportedKeys 方法返回的数据的详细信息，请参阅"sp_fkeys (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getExportedKeys 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_fkeys (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getExportedKeys 方法以返回有关所有外键引用中的 Person.Contact 表的主键信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getExportedKeys 方法返回有关引用 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中 Person.Contact 表的主键的所有外键的信息。  
   
 ```  
 public static void executeGetExportedKeys(Connection con) {  

@@ -1,5 +1,5 @@
 ---
-title: getPacketSize 方法 (SQLServerDataSource) |Microsoft 文档
+title: getPacketSize 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4350bb6f3d6213548b298b45052ca009e8f99cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7067b0a96fdde31afdd8d4a4f67c757346385b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785890"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>getPacketSize 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回用于与进行通信的当前网络数据包大小[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，以字节为单位指定。  
+  返回用于与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通信的当前网络数据包大小，以字节为单位指定。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +39,10 @@ public int getPacketSize()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **Int**值，该值包含当前的网络数据包大小。  
+ 一个 int 值，此值包含当前的网络数据包大小。  
   
-## <a name="remarks"></a>注释  
- 如果未设置数据包大小属性，getPacketSize 方法将返回默认值为 8000。  
+## <a name="remarks"></a>Remarks  
+ 如果未设置 packetSize 属性，getPacketSize 方法则将返回默认值 8000。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

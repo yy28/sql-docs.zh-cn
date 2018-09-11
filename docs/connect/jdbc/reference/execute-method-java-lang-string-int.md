@@ -1,5 +1,5 @@
 ---
-title: 执行方法 (java.lang.String、 int[]) |Microsoft 文档
+title: execute 方法 (java.lang.String，int[]) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afe080df57157ae62e604ff8057027a45df39fc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 84d3b4d916b91c95efaff5ad9e995e6bad40a9ad
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833322"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786603"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute 方法 (java.lang.String, int[])
 
-  运行给定的 SQL 语句可以返回多个结果，以及信号[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion-md.md)]指示给定的数组中的自动生成密钥应该进行检索。
+  运行可返回多项结果的给定的 SQL 语句，并向 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 发出信号以指明给定数组中指定的自动生成的键应对检索可用。
 
 ## <a name="syntax"></a>语法
 
@@ -41,20 +41,20 @@ public final boolean execute(
 #### <a name="parameters"></a>Parameters
 *sql*
 
-A**字符串**包含 SQL 语句。
+一个**字符串**，其中包含 SQL 语句。
 
 *columnIndexes*
 
-数组**int**s，该值指示应将提供的自动生成的键的列索引。
+一组 int 数组，指示应该可用的自动生成的键的列索引。
 
 ## <a name="return-value"></a>返回值
-**true**如果第一个结果是一个结果集。 否则为 **false**。
+如果第一个结果为一个结果集，则为“true”。 否则为 **false**。
   
 ## <a name="exceptions"></a>异常
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>注释
-由 java.sql.Statement 接口中的 execute 方法指定此 execute 方法。
+## <a name="remarks"></a>Remarks
+此执行方法是由 java.sql.Statement 接口中的执行方法指定的。
 
 ## <a name="see-also"></a>另请参阅
 

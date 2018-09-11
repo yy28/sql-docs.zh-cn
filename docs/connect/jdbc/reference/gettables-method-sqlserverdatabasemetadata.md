@@ -1,5 +1,5 @@
 ---
-title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getTables 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64b6559137dca42bf2602b19aaa92c754dc255be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bbe1c39895febd9d853afee54c034d6eb77c3b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840802"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786419"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,49 +44,49 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- A**字符串**，其中包含目录名称。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *schema*  
   
- A**字符串**，其中包含的架构名称模式。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
   
- *表名*  
+ *tableName*  
   
- A**字符串**，其中包含的表名称模式。  
+ 一个包含表名称模式的字符串。  
   
- *类型*  
+ *types*  
   
  含有要包含的表类型的字符串数组。 Null 指示应包含所有表类型。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getTables 方法指定此 getTables 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTables 方法由 java.sql.DatabaseMetaData 接口中的 getTables 方法指定。  
   
- GetTables 方法所返回的结果集将包含以下信息：  
+ 由 getTables 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字符串**|在其中指定的表所在的数据库名称。|  
-|TABLE_SCHEM|**字符串**|表架构名称。|  
-|TABLE_NAME|**字符串**|表名称。|  
-|TABLE_TYPE|**字符串**|表类型。|  
-|REMARKS|**字符串**|表的说明。<br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。  |  
-|TYPE_CAT|**字符串**|JDBC 驱动程序不支持此类型。|  
-|TYPE_SCHEM|**字符串**|JDBC 驱动程序不支持此类型。|  
-|TYPE_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  
-|SELF_REFERENCING_COL_NAME|**字符串**|JDBC 驱动程序不支持此类型。|  
-|REF_GENERATION|**字符串**|JDBC 驱动程序不支持此类型。|  
+|TABLE_CAT|**String**|指定的表所在的数据库的名称。|  
+|TABLE_SCHEM|**String**|表架构名称。|  
+|TABLE_NAME|**String**|表名称。|  
+|TABLE_TYPE|**String**|表类型。|  
+|REMARKS|**String**|表的说明。<br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|TYPE_CAT|**String**|JDBC 驱动程序不支持此类型。|  
+|TYPE_SCHEM|**String**|JDBC 驱动程序不支持此类型。|  
+|TYPE_NAME|**String**|JDBC 驱动程序不支持此类型。|  
+|SELF_REFERENCING_COL_NAME|**String**|JDBC 驱动程序不支持此类型。|  
+|REF_GENERATION|**String**|JDBC 驱动程序不支持此类型。|  
   
 > [!NOTE]  
->  有关 getTables 方法返回的数据的详细信息，请参阅"sp_tables (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getTables 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_tables (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getTables 方法返回的 Person.Contact 表中的表描述信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getTables 方法返回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 Person.Contact 表的表说明信息。  
   
 ```  
 public static void executeGetTables(Connection con) {  

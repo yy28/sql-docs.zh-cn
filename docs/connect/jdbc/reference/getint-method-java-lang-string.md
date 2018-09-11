@@ -1,5 +1,5 @@
 ---
-title: getInt 方法 (java.lang.String) |Microsoft 文档
+title: getInt 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9320aff9e7d33baf84cad734b82ad3b91262977e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5e474b25171827e0bf3857b8bd2132af14793cd7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835362"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785922"
 ---
 # <a name="getint-method-javalangstring"></a>getInt 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**int** java 编程语言提供的参数名称。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的一个 int。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,13 +49,13 @@ public int getInt(java.lang.String sCol)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getInt 方法指定此 getInt 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getInt 方法是由 java.sql.CallableStatement 接口中的 getInt 方法指定的。  
   
- 仅在支持此方法[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全地返回如 int、 smallint、 tinyint 和位的整数值的数据类型。 在任何其他数据类型上使用此方法会引发异常。  
+ 只有可以安全返回整数值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 int、smallint、tinyint 和 bit）才支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [getInt 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)   
+ [getInt 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

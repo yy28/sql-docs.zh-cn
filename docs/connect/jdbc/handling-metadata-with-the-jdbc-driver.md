@@ -1,5 +1,5 @@
 ---
-title: 处理元数据与 JDBC 驱动程序 |Microsoft 文档
+title: 处理 JDBC 驱动程序的元数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,34 +14,34 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6fbf435775709ec9890b1c26832b1730f8c6d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 57e5ac25c8196b15bd204e993090efd69f2cb55c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829412"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786788"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>使用 JDBC 驱动程序处理元数据
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]可以用于处理元数据中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]各种不同的方式的数据库。 JDBC 驱动程序可用于获取数据库、结果集或参数的元数据。  
+  可以通过多种方式使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的元数据。 JDBC 驱动程序可用于获取数据库、结果集或参数的元数据。  
   
- JDBC 驱动程序提供三个类，用于检索元数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库：  
+ JDBC 驱动程序提供了三个从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中检索元数据的类：  
   
--   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)，用于返回有关当前连接的数据库的信息。  
+-   [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)，用于返回有关当前已连接的数据库的信息。  
   
 -   [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)，用于返回有关结果集的信息。  
   
--   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md)，用于返回已准备和可调用语句的参数信息。  
+-   [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md)，用于返回有关预定义且可调用语句的参数的信息。  
   
- 此部分中的主题介绍如何使用三个元数据类中每个要使用元数据中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]数据库。  
+ 本部分中的主题介绍了如何使用这三个元数据类来处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中的元数据。  
   
 > [!NOTE]  
 >  就应用程序性能而言，本部分所讨论的元数据方法通常需要消耗大量资源，因此使用时应谨慎。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[使用数据库元数据](../../connect/jdbc/using-database-metadata.md)|说明如何检索有关当前已连接数据库的元数据信息。|  
 |[使用结果集元数据](../../connect/jdbc/using-result-set-metadata.md)|说明如何检索有关当前结果集的元数据信息。|  

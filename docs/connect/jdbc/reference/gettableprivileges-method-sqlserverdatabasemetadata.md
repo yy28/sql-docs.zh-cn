@@ -1,5 +1,5 @@
 ---
-title: getTablePrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getTablePrivileges 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a7bcc60d73aba7e0939d70224a765168738b64
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 43b6de38738f8bea736d3c156dadb2a288fcbc65
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840320"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786450"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,42 +43,42 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- A**字符串**，其中包含目录名称。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *schema*  
   
- A**字符串**，其中包含的架构名称模式。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *table*  
   
- A**字符串**，其中包含的表名称模式。  
+ 一个包含表名称模式的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getTablePrivileges 方法指定此 getTablePrivileges 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTablePrivileges 方法由 java.sql.DatabaseMetaData 接口中的 getTablePrivileges 方法指定。  
   
- GetTablePrivileges 方法所返回的结果集将包含以下信息：  
+ 由 getTablePrivileges 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_CAT|**字符串**|目录名称。|  
-|TABLE_SCHEM|**字符串**|表架构名称。|  
-|TABLE_NAME|**字符串**|表名称。|  
-|GRANTOR|**字符串**|授予访问权限的对象。|  
-|GRANTEE|**字符串**|获得访问权限的对象。|  
-|PRIVILEGE|**字符串**|授予的访问权限的类型。|  
-|IS_GRANTABLE|**字符串**|指示是否允许被授权者向其他用户授予权限。|  
+|TABLE_CAT|**String**|目录名称。|  
+|TABLE_SCHEM|**String**|表架构名称。|  
+|TABLE_NAME|**String**|表名称。|  
+|GRANTOR|**String**|授予访问权限的对象。|  
+|GRANTEE|**String**|获得访问权限的对象。|  
+|PRIVILEGE|**String**|授予的访问权限的类型。|  
+|IS_GRANTABLE|**String**|指示是否允许被授权者向其他用户授予权限。|  
   
 > [!NOTE]  
->  有关 getTablePrivileges 方法返回的数据的详细信息，请参阅"sp_table_privileges (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getTablePrivileges 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_table_privileges (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getTablePrivileges 方法返回的 Person.Contact 表中的访问权限[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getTablePrivileges 方法返回针对 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中 Person.Contact 表的访问权限。  
   
 ```  
 public static void executeGetTablePrivileges(Connection con) {  

@@ -1,5 +1,5 @@
 ---
-title: getURL 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getURL 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a247a542516c9579a31be0e8a0ad8e3401f36e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fd0cfcf85edcab84d6488dd733f72fdbebfe8b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840512"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786787"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,21 +39,21 @@ public java.lang.String getURL()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A**字符串**包含的 URL。  
+ 一个包含 URL 的字符串。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getURL 方法指定此 getURL 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getURL 方法是由 java.sql.DatabaseMetaData 接口中的 getURL 方法指定的。  
   
- 使用时[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库，此方法返回**字符串**值，该值包含以下信息：  
+ 将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库一起使用时，此方法会返回包含以下信息的字符串值：  
   
 -   "jdbc:sqlserver://" 的 URL 值  
   
 -   可选的连接属性，如**serverName**， **instanceName**，和**端口号**  
   
--   其他连接属性设置按用户和所有连接具有非空或非 null 的驱动程序的属性默认值除外**用户名**，**密码**，和**integratedSecurity**.  
+-   由用户设置的其他连接属性和设为非空或非 Null 的驱动程序默认值的所有连接属性，userName、password 和 integratedSecurity 除外。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

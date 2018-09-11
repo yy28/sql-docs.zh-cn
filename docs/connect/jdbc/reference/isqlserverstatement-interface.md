@@ -1,5 +1,5 @@
 ---
-title: ISQLServerStatement 接口 |Microsoft 文档
+title: ISQLServerStatement 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c292f5540706e924ecf56b5e34174d041af1b21e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36fc0247fa436d7be7e06e6ff5d00406ff389aa8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839422"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787803"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement 接口
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示 JDBC 语句功能的基本实现。 此接口已添加到中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0。  
+  表示 JDBC 语句功能的基本实现。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此接口。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32839422"
 public interface ISQLServerStatement  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此接口由实现[SQLServerStatement 类](../../../connect/jdbc/reference/sqlserverstatement-class.md)。  
   
- 此接口公开以下[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]的特定方法：  
+ 此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   
 |方法|有关详细信息，请参阅|  
 |------------|-------------------------------|  

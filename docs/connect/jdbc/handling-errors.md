@@ -1,5 +1,5 @@
 ---
-title: 处理错误 |Microsoft 文档
+title: 错误处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac872fa0c59b285de97494874099e6235a8332d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eee315022a94795dd27ae8ae7fee6cc784912bec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827482"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785888"
 ---
 # <a name="handling-errors"></a>处理错误
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  使用时[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，所有数据库错误条件将都返回到 Java 应用程序作为使用异常[SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md)类。 以下 SQLServerException 类的方法继承自 java.sql.SQLException 和 java.lang.Throwable;它们可以用于返回有关的特定信息和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]已发生错误：  
+  使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 时，所有数据库错误条件都通过使用 [SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) 类作为异常返回到 Java 应用程序。 SQLServerException 类的以下方法继承自 java.sql.SQLException 和 java.lang.Throwable；并且可用于返回有关出现的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的特定信息：  
   
--   getSQLState 返回的标准 X / Open 或异常 SQL99 状态代码。  
+-   getSQLState 返回异常的标准 X/Open 或 SQL99 状态代码。  
   
--   getErrorCode 返回特定数据库错误号。  
+-   getErrorCod 返回特定的数据库错误号。  
   
 -   getMessage 返回异常的完整文本。 错误消息文本对问题加以说明，并且经常包括可提供信息的占位符，如对象名称，在显示时，这些占位符会插入到错误消息中。  
   
--   如果没有更多异常对象以返回，getNextException 返回的下一步 SQLServerException 对象或为 null。  
+-   getNextException 返回的下一步 SQLServerException 对象或为 null，如果没有更多可以返回的异常对象。  
   
- 在下面的示例中，与的开放连接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]示例数据库中传递给函数和格式不正确的 SQL 语句构造没有 FROM 子句。 然后运行该语句并处理 SQL 异常。  
+ 在下面的示例中，将向函数中传递 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 示例数据库的一个打开连接，并构造一条没有 FROM 子句、格式错误的 SQL 语句。 然后运行该语句并处理 SQL 异常。  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   

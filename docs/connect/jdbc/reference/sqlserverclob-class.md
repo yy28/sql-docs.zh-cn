@@ -1,5 +1,5 @@
 ---
-title: SQLServerClob 类 |Microsoft 文档
+title: SQLServerClob 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 514368a42c47213db586b49fb521ca9a4b19a273
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d4ae3c44fadc45cf577bc3da4801580ed480f27
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845952"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785582"
 ---
 # <a name="sqlserverclob-class"></a>SQLServerClob 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "32845952"
   
  **扩展：** java.lang.Object  
   
- **实现：** java.sql.Clob、 java.io.Serializable  
+ **实现：** java.sql.Clob、java.io.Serializable  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,8 +39,8 @@ ms.locfileid: "32845952"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>注释  
- CLOB 存储在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]为 TEXT 或 NTEXT 数据类型。  
+## <a name="remarks"></a>Remarks  
+ CLOB 作为 TEXT 或 NTEXT 数据类型存储在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerClob 成员](../../../connect/jdbc/reference/sqlserverclob-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement 接口 |Microsoft 文档
+title: ISQLServerPreparedStatement 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ec1e10bc98fe8e1f61c15d97777e1c85a27031e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5710c5345508f3172814d8960cfce18bb11ba5ec
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839042"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785892"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 接口
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示 JDBC 预定义语句功能的基本实现。 此接口已添加到中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0。  
+  表示 JDBC 预定义语句功能的基本实现。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此接口。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   
- **扩展：** java.sql.PreparedStatement， [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
+ **扩展：** java.sql.PreparedStatement、[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32839042"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此接口由实现[SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。  
   
- 此接口公开以下[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]的特定方法：  
+ 此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   
 |方法|有关详细信息，请参阅|  
 |------------|-------------------------------|  

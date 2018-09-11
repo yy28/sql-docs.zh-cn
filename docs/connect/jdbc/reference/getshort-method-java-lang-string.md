@@ -1,5 +1,5 @@
 ---
-title: getShort 方法 (java.lang.String) |Microsoft 文档
+title: getShort 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d411f573d679c5f6c6040c1b3445f60d3b678b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b30aeef0fe8bfa8f32d535eeb1030dff0fda1ae0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838182"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785893"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**短**java 编程语言提供的参数名称。  
+  在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,18 +44,18 @@ public short getShort(java.lang.String sCol)
  包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A**短**值。  
+ 一个**短**值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getShort 方法指定此 getShort 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getShort 方法是由 java.sql.CallableStatement 接口中的 getShort 方法指定的。  
   
- 此方法仅支持在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]可以安全地返回如 smallint、 tinyint 和位的整数值的数据类型。 在任何其他数据类型上使用此方法会引发异常。  
+ 只有可以安全返回整数值的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型（例如 smallint、tinyint 和 bit）才支持此方法。 在任何其他数据类型上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [getShort 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
+ [getShort 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

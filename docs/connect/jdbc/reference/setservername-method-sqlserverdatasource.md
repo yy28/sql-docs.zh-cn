@@ -1,5 +1,5 @@
 ---
-title: setServerName 方法 (SQLServerDataSource) |Microsoft 文档
+title: setServerName 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8843d601229fc8db7e374857857841eb5e3fc52a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 888def6d56546428b2f642f227bbf2765cc001f4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844802"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787142"
 ---
 # <a name="setservername-method-sqlserverdatasource"></a>setServerName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  设置运行的计算机的名称[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+  设置正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的计算机的名称。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ public void setServerName(java.lang.String serverName)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *ServerName*  
+ *serverName*  
   
- A**字符串**包含服务器名称。  
+ 一个包含服务器名称的字符串。  
   
-## <a name="remarks"></a>注释  
- 服务器名称是正在运行的目标计算机的主机名[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 如果未设置 serverName 属性， [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)返回默认值为 null。  
+## <a name="remarks"></a>Remarks  
+ 服务器名称为正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的目标计算机的主机名。 如果未设置 serverName 属性，[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) 则将返回默认值 Null。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

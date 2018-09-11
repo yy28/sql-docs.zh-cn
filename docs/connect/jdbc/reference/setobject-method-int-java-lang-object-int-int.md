@@ -1,5 +1,5 @@
 ---
-title: setObject 方法 （int、 java.lang.Object、 int、 int） |Microsoft 文档
+title: setObject 方法 (int, java.lang.Object, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61e81b3eebdae47b2fd60d279a8ca1614d8e5267
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 922c6f315c560ac4b26a8140f47e79aaebae5b45
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844852"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783838"
 ---
 # <a name="setobject-method-int-javalangobject-int-int"></a>setObject 方法 (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  通过使用给定的对象、 目标类型和缩放设置指定的参数的值。  
+  使用给定的对象、目标类型和小数位数设置指定参数的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,32 +44,32 @@ public final void setObject(int n,
 #### <a name="parameters"></a>Parameters  
  *n*  
   
- **Int** ，该值指示参数号。  
+ 指示参数编号的 int。  
   
- *obj*  
+ obj  
   
  一个对象。  
   
  *targetSqlType*  
   
- **Int** java.sql.Types 中定义指示目标类型。  
+ 一个 int 值，此值指示 java.sql.Types 中定义的目标类型。  
   
- *小数位数*  
+ *scale*  
   
  指示小数点右边的位数的 int。 对于除 NUMERIC 和 DECIMAL 外的其他所有类型，忽略此参数。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.PreparedStatement 接口中的 setObject 方法指定此 setObject 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setObject 方法由 java.sql.PreparedStatement 接口中的 setObject 方法指定。  
   
- 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0，此方法的行为来修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 中，此方法的行为由修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
  有关详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [setObject 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
+ [setObject 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

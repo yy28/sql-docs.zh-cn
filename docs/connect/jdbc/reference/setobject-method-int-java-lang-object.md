@@ -1,5 +1,5 @@
 ---
-title: setObject 方法 （int、 java.lang.Object） |Microsoft 文档
+title: setObject 方法 （int，java.lang.Object） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0103dfd14dd8a51263945d0048a7b6c7cb550157
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cac0013c8867bce46dc9fd8ebbae9d0b0c487259
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844962"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785428"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject 方法 (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,38 +40,38 @@ public final void setObject(int index,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
- **Int** ，该值指示参数号。  
+ 指示参数编号的 int。  
   
- *obj*  
+ obj  
   
  一个对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.PreparedStatement 接口中的 setObject 方法指定此 setObject 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setObject 方法由 java.sql.PreparedStatement 接口中的 setObject 方法指定。  
   
- 调用此 setObject 方法之前，应用程序可能通过使用以下方法之一设置指定的参数：  
+ 在调用此 setObject 方法前，应用程序可能会使用以下方法之一设置指定的参数：  
   
--   集\<类型 > SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的方法  
+-   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 set\<类型> 方法  
   
--   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 setNull 方法  
+-   SQLServerPreparedStatement 类或 SQLServerCallableStatement 类的 setNull 方法。  
   
 -   [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) SQLServerCallableStatement 类的方法  
   
- 在这种情况下，将自动设置参数的类型。 如果应用程序将调用具有 obj 值 NULL 此 setObject 方法，该驱动程序假定参数的类型是一个设置的以前调用的方法。  
+ 在这种情况下，将自动设置参数的类型。 如果应用程序使用 obj 值 NULL 调用此 setObject 方法，驱动程序则会假定参数的类型为以前调用的方法所设置的一个参数类型。  
   
- 如果 obj 值为 NULL，并且可以确定该参数无类型信息，此 setObject 方法将发送到数据库之前将指定的参数转换为字符上。  
+ 如果 obj 值为 NULL 且无法确定该参数的类型信息，此 setObject 方法则会将指定的参数转换为 CHAR 后再将其发送到数据库。  
   
- 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0，此方法的行为来修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 开头[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 中，此方法的行为由修改**sendTimeAsDatetime**连接属性 ([设置连接属性](../../../connect/jdbc/setting-the-connection-properties.md)) 和[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
  有关详细信息，请参阅[如何配置 java.sql.Time 值发送到服务器](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [setObject 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
+ [setObject 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement 类](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

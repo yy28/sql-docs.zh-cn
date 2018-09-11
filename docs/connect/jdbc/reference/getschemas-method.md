@@ -1,5 +1,5 @@
 ---
-title: getSchemas 方法 （) |Microsoft 文档
+title: getSchemas 方法 （) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04066c42fabfd81d5579e4900bd6072c7f767747
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839412"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786773"
 ---
 # <a name="getschemas-method-"></a>getSchemas 方法 ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,28 +39,28 @@ public java.sql.ResultSet getSchemas()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetSchemas 方法 java.sql.DatabaseMetaData 界面中指定此 getSchemas 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getSchemas 方法由 java.sql.DatabaseMetaData 接口中的 getSchemas 方法指定。  
   
- GetSchemas 方法所返回的结果集包含以下信息：  
+ 由 getSchemas 方法返回的结果集包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**字符串**|架构的名称。|  
-|TABLE_CATALOG|**字符串**|架构的目录名称。|  
+|TABLE_SCHEM|**String**|架构的名称。|  
+|TABLE_CATALOG|**String**|架构的目录名称。|  
   
  结果先按 TABLE_CATALOG 再按 TABLE_SCHEM 排序。 各行均以 TABLE_SCHEM 作为第一列并以 TABLE_CATALOG 作为第二列。  
   
 > [!NOTE]  
->  GetSchemas 方法返回的数据有关的详细信息，请参阅"sys.schemas (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getSchemas 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sys.schemas (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getSchemas 方法以返回有关目录，并在其关联的架构名称信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]时连接参数指定要使用的数据库。  
+ 以下示例演示了当连接参数指定了要使用的数据库时，如何使用 getSchemas 方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中有关目录的信息及其关联的架构名称。  
   
 ```  
 public static void executeGetSchemas(Connection con) {  

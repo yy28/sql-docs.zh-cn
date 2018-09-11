@@ -1,5 +1,5 @@
 ---
-title: getDate 方法 (java.lang.String) 列 |Microsoft 文档
+title: getDate 方法 (java.lang.String) 列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0f2a8524366b84fb127444e6389e7db9b0560ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d8700eea4ae7516fdedc0357a055c812d5d987d2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834762"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784521"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 方法 (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此当前行中的指定的列名称的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)作为 Java 编程语言中的 java.sql.Date 对象的对象。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称的值作为 Java 编程语言中的 java.sql.Date 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,10 +49,10 @@ public java.sql.Date getDate(java.lang.String columnName)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetDate 方法 java.sql.ResultSet 界面中指定此 getDate 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getDate 方法由 java.sql.ResultSet 接口中的 getDate 方法指定。  
   
- 此方法返回的有效日期部分的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 数据类型，其设置为 00:00 （午夜） 的 Java 时间基线的时间部分。  
+ 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 数据类型的有效日期部分，时间部分设置为 Java 时间基线 00:00（午夜）。  
   
 ## <a name="see-also"></a>另请参阅  
  [getDate 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset (SQLServerResultSet) |Microsoft 文档
+title: updateDateTimeOffset (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a917c1886d000d59b18f68c36ee726644091fb19
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d5d079c8b96b467bb7a8646d60380f8574fe4d47
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849792"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784687"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此方法已添加到中[!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0。  
+  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此方法。  
   
  更新到指定的列的值[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
-|[updateDateTimeOffset （int、 microsoft.sql.DateTimeOffset）](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|更新到指定的列的值[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)给定从零开始的列序号的值。|  
-|[updateDateTimeOffset （string，microsoft.sql.DateTimeOffset）](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|更新到指定的列的值[DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)给定列名称的值。|  
+|[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|根据给定的基于零的列序号，将指定的列值更新为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
+|[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|根据给定的列名称，将指定的列值更新为 [DateTimeOffset 类](../../../connect/jdbc/reference/datetimeoffset-class.md)值。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

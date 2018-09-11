@@ -1,5 +1,5 @@
 ---
-title: getApplicationName 方法 (SQLServerDataSource) |Microsoft 文档
+title: getApplicationName 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0239d7d251b4104000646a8f98a3cae0be656853
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 79aa683f829e28144580585ab9afc0f517b2ec61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829458"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784680"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,10 +39,10 @@ public java.lang.String getApplicationName()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A**字符串**包含应用程序的名称，或"[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]"如果未不设置任何值。  
+ 一个字符串，此字符串包含应用程序名称，或者“[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]”（如果未设置值）。  
   
-## <a name="remarks"></a>注释  
- 应用程序名称用于标识特定的应用程序在各种[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]事件探查和日志记录工具。 如果未设置的应用程序名称，则 getApplicationName 方法返回的非本地化的字符串"[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]"。  
+## <a name="remarks"></a>Remarks  
+ 此应用程序名称用于在各种 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分析和日志记录工具中标识特定的应用程序。 如果未设置应用程序名称，getApplicationName 方法则将返回未本地化的字符串“[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]”。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource 类 |Microsoft 文档
+title: SQLServerXADataSource 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69edd13e84599e4e3e11ba56a3a1c34ee1d36ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d53011410bec69b795a5f50464ce0bb4a5eac425
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850522"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785579"
 ---
 # <a name="sqlserverxadatasource-class"></a>SQLServerXADataSource 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  表示一个工厂[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)内部使用的对象。  
+  表示在内部使用的 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 的对象工厂。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   
- **扩展：** [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
+ **扩展：**[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
  **实现：** javax.sql.XADataSource  
   
@@ -39,14 +39,14 @@ ms.locfileid: "32850522"
 public class SQLServerXADataSource  
 ```  
   
-## <a name="remarks"></a>注释  
- 通常，实现 SQLServerXADataSource 接口的对象已注册到使用 Java 命名和目录接口 (JNDI) 的命名服务。  
+## <a name="remarks"></a>Remarks  
+ 实现 SQLServerXADataSource 接口的对象通常是在使用 Java 命名和目录接口 (JNDI) 的命名服务中注册的。  
   
- SQLServerXADataSource 类提供了在分布式 (XA) 事务中使用的数据库连接。 SQLServerXADataSource 类还支持连接池的物理连接。 由实现 SQLServerXADataSource 和 SQLServerXAConnection 接口，在包 javax.sql 中定义， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+ SQLServerXADataSource 类提供可在分布式 (XA) 事务中使用的数据库连接。 SQLServerXADataSource 类还支持物理连接的连接池。 SQLServerXADataSource 和 SQLServerXAConnection 接口，在包 javax.sql 中定义，由实现[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
- SQLServerXAConnection 对象是可以参与分布式事务已入池的连接。 更确切地说，SQLServerXAConnection 通过添加方法来扩展 SQLServerPooledConnection 接口[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)。 此方法产生[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)事务管理器可以用于协调分布式事务中的其他参与者具有此连接上完成的工作的对象。 由于它们扩展 SQLServerPooledConnection 接口，SQLServerXAConnection 对象支持 SQLServerPooledConnection 对象的所有的方法。 它们是可重用的基础数据源物理连接，并且可生成可传递回 JDBC 应用程序的逻辑连接句柄。  
+ SQLServerXAConnection 对象是可参与分布式事务的池连接。 SQLServerXAConnection 更准确地说，通过添加方法来扩展 SQLServerPooledConnection 接口[getXAResource](../../../connect/jdbc/reference/getxaresource-method-sqlserverxaconnection.md)。 此方法生成 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象，事务管理器可使用此对象在此连接上所执行的操作与分布式事务中的其他参与者之间进行协调。 由于它们扩展 SQLServerPooledConnection 接口，SQLServerXAConnection 对象支持 SQLServerPooledConnection 对象的所有方法。 它们是可重用的基础数据源物理连接，并且可生成可传递回 JDBC 应用程序的逻辑连接句柄。  
   
- SQLServerXAConnection 对象生成的 SQLServerXADataSource 对象。 SQLServerConnectionPoolDataSource 对象和 SQLServerXADataSource 对象是类似，因为它们并同时实现以下数据源层对 JDBC 应用程序可见。 此体系结构允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]支持分布式的事务中对应用程序是透明的方式。 SQLServerXADataSource 可以配置为与集成[!INCLUDE[msCoName](../../../includes/msconame_md.md)]分布式事务处理协调器 (DTC) 以提供 true，分布式事务处理。  
+ SQLServerXADataSource 对象生成 SQLServerXAConnection 的对象。 SQLServerConnectionPoolDataSource 对象和 SQLServerXADataSource 对象很相似，因为它们并同时实现对 JDBC 应用程序可见的数据源层之下。 此体系结构使 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 能够以对应用程序透明的方式支持分布式事务。 SQLServerXADataSource 可以配置为与 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] 分布式事务处理协调器 (DTC) 集成，以提供真正的分布式事务处理。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXADataSource 成员](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 (int) |Microsoft 文档
+title: getObject 方法 (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 047cef57a08c8337a7d6229d04c3580d7df300a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1820a697301b9b909895faae4598d877a76ff75
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836662"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785584"
 ---
 # <a name="getobject-method-int"></a>getObject 方法 (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,35 +39,35 @@ public java.lang.Object getObject(int index)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *索引*  
+ 索引  
   
  指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- **对象**值。  
+ Object 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetObject 方法 java.sql.CallableStatement 界面中指定此 getObject 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getObject 方法是由 java.sql.CallableStatement 接口中的 getObject 方法指定的。  
   
  此方法将返回给定列的值作为一个 Java 对象。 根据 JDBC 规范中指定的内置类型映射，Java 对象的类型将为对应于此列 SQL 类型的默认 Java 对象类型。 如果此值为 SQL NULL，则驱动程序会返回 Java null。  
   
- 也可使用此方法来读取数据库特定的抽象数据类型。 在 JDBC 2.0 中，已扩展 getObject 方法的行为来具体化的 SQL 用户定义类型的数据。 一列包含结构化或非重复值，此方法的行为时，就像它是调用`getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`。  
+ 也可使用此方法来读取数据库特定的抽象数据类型。 在 JDBC 2.0 中，getObject 方法的行为已扩展为具体化 SQL 用户定义类型的数据。 当列包含结构化或非重复值时，此方法的行为则类似于对 `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())` 进行调用。  
   
- 从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0:  
+ 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始：  
   
--   类型的值**日期**将返回为 java.sql.Date 对象。  
+-   date 类型的值将作为 java.sql.Date 对象返回。  
   
--   类型的值**时间**将返回为 java.sql.Time 对象。  
+-   time 类型的值将作为 java.sql.Time 对象返回。  
   
--   类型的值**datetime2**将返回为 java.sql.Timestamp 对象。  
+-   datetime2 类型的值将作为 java.sql.Timestamp 对象返回。  
   
--   类型的值**datetimeoffset**将返回为 microsoft.sql.DateTimeOffset 对象。  
+-   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回。  
   
 ## <a name="see-also"></a>另请参阅  
- [getObject 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [getObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

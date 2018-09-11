@@ -1,5 +1,5 @@
 ---
-title: setBytes 方法 (SQLServerCallableStatement) |Microsoft 文档
+title: setBytes 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5990743ccdf751bbfab7afe80aa4927846c0380d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1e947e81dcec4cc1db52e6ad3265d90b00ab4f87
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842042"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785418"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>setBytes 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的参数设置为给定数组的**字节**值。  
+  将指定参数设置为给定的字节值数组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,17 +44,17 @@ public void setBytes(java.lang.String sCol,
   
  包含参数名称的字符串。  
   
- *B*  
+ *b*  
   
- 数组**字节**值。  
+ 一个数组**字节**值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 在以前版本的驱动程序，你可以使用 SQLServerCallableStatement.setBytes 之间字节数组转换值和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据类型**日期**，**时间**， **datetime2**，或**datetimeoffset**。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
+## <a name="remarks"></a>Remarks  
+ 在之前的驱动程序版本中，可以使用 SQLServerCallableStatement.setBytes 将字节数组和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型 date、time、datetime2 或 datetimeoffset 的值相互转换。 现在对于这些数据类型使用此方法将导致异常，指出不支持该转换。  
   
- 由 java.sql.CallableStatement 接口中的 setBytes 方法指定此 setBytes 方法。  
+ 此 setBytes 方法是由 java.sql.CallableStatement 接口中的 setBytes 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

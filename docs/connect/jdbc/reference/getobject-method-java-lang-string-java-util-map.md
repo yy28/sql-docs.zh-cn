@@ -1,5 +1,5 @@
 ---
-title: getObject 方法 （java.lang.String，java.util.Map） |Microsoft 文档
+title: getObject 方法 (java.lang.String, java.util.Map) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,19 +19,20 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ef8e694e3d03f314f6985276218ee15dcf88e9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2fe43f00b69dad088c07e53cffe5799229a58695
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786805"
 ---
 # <a name="getobject-method-javalangstring-javautilmap"></a>getObject 方法 (java.lang.String, java.util.Map)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  作为给定参数名称，使用给定的映射对象的 Java 编程语言中的对象中检索指定参数的值。  
+  通过使用给定的 Map 对象，在给定参数名称的情况下检索指定参数的值作为 Java 编程语言中的对象。  
   
 > [!NOTE]  
->  此方法当前不支持通过[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 如果使用此方法，则将始终返回默认映射。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 目前不支持此方法。 如果使用此方法，则将始终返回默认映射。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,35 +47,35 @@ public java.lang.Object getObject(java.lang.String sCol,
   
  包含参数名称的字符串。  
   
- *M*  
+ *m*  
   
- Map 对象中。  
+ Map 对象。  
   
 ## <a name="return-value"></a>返回值  
- **对象**值。  
+ Object 值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetObject 方法 java.sql.CallableStatement 界面中指定此 getObject 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getObject 方法是由 java.sql.CallableStatement 接口中的 getObject 方法指定的。  
   
  此方法将返回给定列的值作为一个 Java 对象。 根据 JDBC 规范中指定的内置类型映射，Java 对象的类型将为对应于此列 SQL 类型的默认 Java 对象类型。 如果此值为 SQL NULL，则驱动程序会返回 Java null。  
   
- 也可使用此方法来读取数据库特定的抽象数据类型。 在 JDBC 2.0 API 中，getObject 方法的行为扩展来具体化的 SQL 用户定义类型的数据。 一列包含结构化或非重复值，此方法的行为时，就像它是调用`getObject(columnIndex, this.getStatement().getConnection().getTypeMap())`。  
+ 也可使用此方法来读取数据库特定的抽象数据类型。 在 JDBC 2.0 API 中，getObject 方法的行为已扩展为具体化 SQL 用户定义类型的数据。 当列包含结构化或非重复值时，此方法的行为则类似于对 `getObject(columnIndex, this.getStatement().getConnection().getTypeMap())` 进行调用。  
   
- 从[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0:  
+ 从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 开始：  
   
--   类型的值**日期**将返回为 java.sql.Date 对象。  
+-   date 类型的值将作为 java.sql.Date 对象返回。  
   
--   类型的值**时间**将返回为 java.sql.Time 对象。  
+-   time 类型的值将作为 java.sql.Time 对象返回。  
   
--   类型的值**datetime2**将返回为 java.sql.Timestamp 对象。  
+-   datetime2 类型的值将作为 java.sql.Timestamp 对象返回。  
   
--   类型的值**datetimeoffset**将返回为 microsoft.sql.DateTimeOffset 对象。  
+-   datetimeoffset 类型的值将作为 microsoft.sql.DateTimeOffset 对象返回。  
   
 ## <a name="see-also"></a>另请参阅  
- [getObject 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
+ [getObject 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

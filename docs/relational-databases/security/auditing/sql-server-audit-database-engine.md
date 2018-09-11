@@ -113,7 +113,7 @@ ms.locfileid: "43022846"
   
 4.  通过使用 Windows“事件查看器” 、“日志文件查看器” 或 fn_get_audit_file 函数来读取审核事件。  
   
- 有关详细信息，请参阅 [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
+ 有关详细信息，请参阅 [创建服务器审核和服务器审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 和 [创建服务器审核和数据库审核规范](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)。  
   
 ## <a name="considerations"></a>注意事项  
  如果在启动审核期间出现问题，则服务器将不会启动。 在这种情况下，可以在命令行中使用 **–f** 选项来启动服务器。  

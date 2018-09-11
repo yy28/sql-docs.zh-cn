@@ -1,5 +1,5 @@
 ---
-title: getCatalogSeparator 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getCatalogSeparator 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e03c787a5153420b4ba1171f6d0f1bc2f95137cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1a8587c005186cb9806e35eec66d0ed571f372c1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831902"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784869"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索**字符串**此数据库使用作为目录和表名称之间的分隔符。  
+  检索此数据库用作目录和表名之间的分隔符的字符串。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,15 +39,15 @@ public java.lang.String getCatalogSeparator()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A**字符串**，其中包含的目录分隔符。  
+ 一个包含目录分隔符的字符串。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getCatalogSeparator 方法指定此 getCatalogSeparator 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getCatalogSeparator 方法由 java.sql.DatabaseMetaData 接口中的 getCatalogSeparator 方法指定。  
   
- 使用时[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]与[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]数据库，此方法返回一个句点 ("。") 为目录分隔符。  
+ 将 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据库时，此方法返回句点（“.”）作为目录分隔符。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

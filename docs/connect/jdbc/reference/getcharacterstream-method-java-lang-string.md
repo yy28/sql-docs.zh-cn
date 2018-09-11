@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream 方法 (java.lang.String) |Microsoft 文档
+title: getCharacterStream 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52cdfa3a4fdc594d03692e6cd8befa4bbc95a40a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f8d1df393d88348a8645a78ecd11a170c8d9d746
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831852"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786774"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此当前行中的指定的列名称的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)作为 java.io.Reader 对象的对象。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列名称的值作为 java.io.Reader 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,13 +49,13 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 getCharacterStream 方法指定此 getCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getCharacterStream 方法由 java.sql.ResultSet 接口中的 getCharacterStream 方法指定。  
   
- 此方法将只读[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]如 nchar、 nvarchar、 nvarchar (max) 和 ntext 的 Unicode 字符数据类型。 任何其他数据类型（包括 ASCII 字符类型）会引发异常。 若要读取的 ASCII 数据类型，使用[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)方法。  
+ 此方法将只读取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Unicode 字符数据类型，例如 nchar、nvarchar、nvarchar(max) 和 ntext。 任何其他数据类型（包括 ASCII 字符类型）会引发异常。 若要读取 ASCII 数据类型，请使用 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 方法。  
   
 ## <a name="see-also"></a>另请参阅  
- [getCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
+ [getCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

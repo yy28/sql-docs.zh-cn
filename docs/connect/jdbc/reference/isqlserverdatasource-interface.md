@@ -1,5 +1,5 @@
 ---
-title: ISQLServerDataSource 接口 |Microsoft 文档
+title: ISQLServerDataSource 接口 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 498554dc92e9ec8e52a36227412b9e74f28c40ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843132"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784870"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource 接口
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  一个工厂，用于创建与此对象表示的数据源的连接。 此接口已添加到中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]JDBC Driver 3.0。  
+  一个工厂，用于创建与此对象表示的数据源的连接。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 中新增了此接口。  
   
  **包：** com.microsoft.sqlserver.jdbc  
   
@@ -37,10 +37,10 @@ ms.locfileid: "32843132"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  此接口由实现[SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)。  
   
- 此接口公开以下[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]的特定方法：  
+ 此接口公开以下 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 特定的方法：  
   
 |方法|有关详细信息，请参阅|  
 |------------|-------------------------------|  

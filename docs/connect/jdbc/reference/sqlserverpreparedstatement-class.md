@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement 类 |Microsoft 文档
+title: SQLServerPreparedStatement 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c7b37e26faedf7cb064880d68e17f4688bfbe73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0f0189a7a3a12f41c6e07414a1f548eab15404ed
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847022"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783841"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "32847022"
   
  **扩展：** SQLServerStatement  
   
- **实现：** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
+ **实现：**[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ ms.locfileid: "32847022"
 public class SQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>注释  
- SQLServerPreparedStatement 提供用来提供参数为任何本机 Java 类型和许多的 Java 对象类型的方法。 SQLServerPreparedStatement 准备语句通过使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **sp_prepare**存储的过程，然后重新使用为每个后续的情况下运行的语句，通常使用不同处理的返回的语句用户提供的参数。  
+## <a name="remarks"></a>Remarks  
+ SQLServerPreparedStatement 可提供使你能够提供作为任意本机 Java 类型和许多 Java 对象类型的参数的方法。 SQLServerPreparedStatement 通过使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sp_prepare 存储过程来定义某个语句，然后通常使用用户提供的不同参数对每个后续运行的语句重用返回的语句句柄。  
   
- SQLServerPreparedStatement 批处理支持，在其上一组已准备的语句运行单个数据库中往返，以提高运行时性能。  
+ SQLServerPreparedStatement 支持通过批处理（即在单个数据库往返通信中运行一组预定义语句）来改善运行时性能。  
   
- 此类支持到 SQLServerPreparedStatement 类、 ISQLServerPreparedStatement 接口、 java.sql.PreparedStatement 接口的类和接口解包适用于支持 SQLServerStatement 解包。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持取消对 SQLServerPreparedStatement 类、 ISQLServerPreparedStatement 接口、 java.sql.PreparedStatement 接口的类和接口支持的 SQLServerStatement 解包。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

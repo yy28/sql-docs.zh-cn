@@ -16,19 +16,19 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c330fd329f28fa7d89b62b9af6bb8d4bb67c2bc4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015801"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784867"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。
+[sqlcmd](http://go.microsoft.com/fwlink/?LinkID=154481) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。
   
-下面的命令演示如何使用 Windows 身份验证 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]身份验证，分别：
+下面的命令演示如何使用 Windows 身份验证 (Kerberos) 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]身份验证，分别：
   
 ```  
 sqlcmd –E –Sxxx.xxx.xxx.xxx  
@@ -73,12 +73,12 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 > [!NOTE]  
 > **-K** 在适用于 SUSE Linux 的 CTP 中不受支持。 但是，可以在传递给 `sqlcmd` 的 DSN 文件中指定 ApplicationIntent=ReadOnly 关键字。 有关详细信息，请参阅本主题末尾的“`sqlcmd` 和 `bcp` 中的 DSN 支持”。  
   
-- -l*超时*指定之前等待的秒数`sqlcmd`尝试连接到服务器时，登录超时时间。
+- -l *timeout* 指定在尝试连接到服务器时 `sqlcmd` 登录超时时间（以秒为单位）。
 
 - -m error_level 控制将哪些错误消息发送到 stdout。  
   
 - **-M * * * multisubnet_failover*  
-在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
+在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
 > **-M** 在适用于 SUSE Linux 的 CTP 中不受支持。 但是，可以在传递给 `sqlcmd` 的 DSN 文件中指定 MultiSubnetFailover=Yes 关键字。 有关详细信息，请参阅本主题末尾的“`sqlcmd` 和 `bcp` 中的 DSN 支持”。  
@@ -102,7 +102,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 - -s *column_separator_char*指定列分隔符字符。  
 
 - -S [protocol:] server[*,***port]  
-指定的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]若要连接的对象，或如果-D 是使用，DSN。 在 Linux 和 macOS 上的 ODBC 驱动程序需要-s。 请注意， **tcp**是唯一有效的协议。  
+指定的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]若要连接的对象，或如果-D 是使用，DSN。 在 Linux 和 macOS 上的 ODBC 驱动程序需要-s。 请注意， **tcp**是唯一有效的协议。  
   
 - -t query_timeout 指定命令（或 SQL 语句）超时之前的秒数。  
   
@@ -162,7 +162,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 ## <a name="unavailable-options"></a>不可用选项
 在当前版本中，以下选项不可用：  
 
-- -A 使用专用管理员连接 (DAC) 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 有关如何建立专用管理员连接 (DAC) 的信息，请参阅[编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
+- -A 使用专用管理员连接 (DAC) 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 有关如何建立专用管理员连接 (DAC) 的信息，请参阅[编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)。  
   
 - -f code_page 指定输入和输出代码页。  
   

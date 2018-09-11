@@ -1,5 +1,5 @@
 ---
-title: getTime 方法 (int) (SQLServerResultSet) |Microsoft 文档
+title: getTime 方法 (int) (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d86e6ad808d69b64e5dd9abed03cf5513cf5c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9c8ee07ffe5d88d7c959d40b51d4a4c9f1864793
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838432"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786950"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime 方法 (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此当前行中指定的列索引的值[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)作为 Java 编程语言中的 java.sql.Time 对象的对象。  
+  检索此 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的当前行中指定列索引的值作为 Java 编程语言中的 java.sql.Time 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,15 +44,15 @@ public java.sql.Time getTime(int columnIndex)
  指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- 一个时间对象。  
+ 一个对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetTime 方法 java.sql.ResultSet 界面中指定此 getTime 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTime 方法由 java.sql.ResultSet 接口中的 getTime 方法指定。  
   
- 此方法返回的有效时间部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]datetime 或 smalldatetime 数据类型，与设置为 1970年/01/01 Java 基线日期的日期部分。  
+ 此方法返回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime 或 smalldatetime 数据类型的有效时间部分，日期部分设置为 Java 基线日期 1970/01/01。  
   
 ## <a name="see-also"></a>另请参阅  
  [getTime 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   

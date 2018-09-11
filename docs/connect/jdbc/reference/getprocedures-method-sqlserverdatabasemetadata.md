@@ -1,5 +1,5 @@
 ---
-title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getProcedures 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df6101068f9d64ac243666d28c231c88a7926001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9841158629f4103540374c324e56fc54fd3f9446
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839252"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785067"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,43 +43,43 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>Parameters  
  *sCatalog*  
   
- A**字符串**，其中包含目录名称。 对此参数提供 Null 值指示无需使用目录名称。  
+ 一个包含目录名称的字符串。 对此参数提供 Null 值指示无需使用目录名称。  
   
  *sSchema*  
   
- A**字符串**，其中包含的架构名称模式。 对此参数提供 Null 值指示无需使用架构名称。  
+ 一个包含架构名称模式的字符串。 对此参数提供 Null 值指示无需使用架构名称。  
   
  *proc*  
   
- A**字符串**包含过程名称模式。  
+ 一个包含过程名称模式的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getProcedures 方法指定此 getProcedures 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getProcedures 方法由 java.sql.DatabaseMetaData 接口中的 getProcedures 方法指定。  
   
- GetProcedures 方法所返回的结果集将包含以下信息：  
+ 由 getProcedures 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|PROCEDURE_CAT|**字符串**|指定的存储过程所在数据库的名称。|  
-|PROCEDURE_SCHEM|**字符串**|存储过程的架构。|  
-|PROCEDURE_NAME|**字符串**|存储过程的名称。|  
+|PROCEDURE_CAT|**String**|指定的存储过程所在数据库的名称。|  
+|PROCEDURE_SCHEM|**String**|存储过程的架构。|  
+|PROCEDURE_NAME|**String**|存储过程的名称。|  
 |NUM_INPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_OUTPUT_PARAMS|**int**|保留以供将来使用，当前返回 -1 值。|  
 |NUM_RESULT_SETS|**int**|保留以供将来使用，当前返回 -1 值。|  
-|REMARKS|**字符串**|过程列的说明。<br /><br /> <br /><br /> **注意：** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]不返回此列的值。  |  
-|PROCEDURE_TYPE|**int**|存储过程的类型。 它可以是以下值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
+|REMARKS|**String**|过程列的说明。<br /><br /> <br /><br /> **注意：**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会为此列返回值。|  
+|PROCEDURE_TYPE|**smallint**|存储过程的类型。 可以为下列值之一：<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   
 > [!NOTE]  
->  有关 getProcedures 方法返回的数据的详细信息，请参阅"sp_stored_procedures (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getProcedures 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_stored_procedures (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getProcedures 方法来返回有关中的 uspGetBillOfMaterials 存储过程的信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getProcedures 方法返回有关 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 uspGetBillOfMaterials 存储过程的信息。  
   
 ```  
 public static void executeGetProcedures(Connection con) {  

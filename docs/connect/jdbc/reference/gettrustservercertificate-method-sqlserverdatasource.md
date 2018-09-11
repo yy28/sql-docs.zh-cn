@@ -1,5 +1,5 @@
 ---
-title: getTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft 文档
+title: getTrustServerCertificate 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0d22963fc8e916bb554ba5bb385efe1abfcd84c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 08540cf4f154af29902f7d855af740ee930f2505
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838722"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785068"
 ---
 # <a name="gettrustservercertificate-method-sqlserverdatasource"></a>getTrustServerCertificate 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回**布尔**值，该值指示是否启用了 trustServerCertificate 属性。  
+  返回一个布尔值，此值指示是否启用了 trustServerCertificate 属性。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +39,12 @@ public boolean getTrustServerCertificate()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果启用 trustServerCertificate。 否则为 **false**。  
+ 如果已启用 trustServerCertificate，则为“true”。 否则为 **false**。  
   
-## <a name="remarks"></a>注释  
- 如果 trustServerCertificate 属性设置为**true**、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]安全套接字层 (SSL) 证书是自动受信任的当使用 SSL 加密的通信层。 换而言之，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]将不会验证[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]SSL 证书。 默认值是 **false**秒。  
+## <a name="remarks"></a>Remarks  
+ 如果将 trustServerCertificate 属性设置为“true”，则当使用 SSL 对通信层加密时将自动信任 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安全套接字层 (SSL) 证书。 换言之，[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将不会验证 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SSL 证书。 默认值是 **false**秒。  
   
- 如果 trustServerCertificate 属性设置为**false**、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]将验证服务器 SSL 证书。  
+ 如果将 trustServerCertificate 属性设置为“false”，则 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 将验证服务器 SSL 证书。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

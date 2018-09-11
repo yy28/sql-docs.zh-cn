@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getTypeInfo 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d81b932d536240b01c79e8e4a8e8589efae4d603
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a1917982457f00ff4e383d8ba8d317de4352cb61
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843252"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787344"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,44 +39,44 @@ public java.sql.ResultSet getTypeInfo()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getTypeInfo 方法指定此 getTypeInfo 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTypeInfo 方法由 java.sql.DatabaseMetaData 接口中的 getTypeInfo 方法指定。  
   
- GetTypeInfo 方法所返回的结果集将包含以下信息：  
+ 由 getTypeInfo 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TYPE_NAME|**字符串**|数据类型的名称。|  
+|TYPE_NAME|**String**|数据类型的名称。|  
 |DATA_TYPE|**short**|来自 java.sql.Types 的 SQL 数据类型。|  
 |PRECISION|**int**|有效数字总个数。|  
-|LITERAL_PREFIX|**字符串**|字符或字符常量前使用。|  
-|LITERAL_SUFFIX|**字符串**|用于终止常量的一个或多个字符。|  
-|CREATE_PARAMS|**字符串**|此数据类型的创建参数说明。|  
-|NULLABLE|**short**|指示列能否包含 Null 值。 它可以是以下值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
-|CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 "**true**"如果类型是区分大小写; 否则为"**false**"。|  
-|SEARCHABLE|**short**|指示是否可在 SQL WHERE 子句中使用此列。 它可以是以下值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
-|UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 "**true**"如果类型是无符号; 否则为"**false**"。|  
-|FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 "**true**"数据类型是否为 money 类型; 否则为"**false**"。|  
-|AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 "**true**"如果递增; 否则为可以自动类型"**false**"。|  
-|LOCAL_TYPE_NAME|**字符串**|数据类型的本地化名称。|  
+|LITERAL_PREFIX|**String**|常量之前使用的一个或多个字符。|  
+|LITERAL_SUFFIX|**String**|用于终止常量的一个或多个字符。|  
+|CREATE_PARAMS|**String**|此数据类型的创建参数说明。|  
+|NULLABLE|**short**|指示列能否包含 Null 值。 可以为下列值之一：<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|CASE_SENSITIVE|**boolean**|指示数据类型是否区分大小写。 如果类型区分大小写，则为“true”；否则为“false”。|  
+|SEARCHABLE|**short**|指示是否可在 SQL WHERE 子句中使用此列。 可以为下列值之一：<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|UNSIGNED_ATTRIBUTE|**boolean**|指示数据类型的符号。 如果类型未签名，则为“true”；否则为“false”。|  
+|FIXED_PREC_SCALE|**boolean**|指示数据类型可以为 money 值。 如果数据类型为 money 类型，则为“true”；否则为“false”。|  
+|AUTO_INCREMENT|**boolean**|指示数据类型可以自动递增。 如果类型可以自动递增，则为“true”；否则为“false”。|  
+|LOCAL_TYPE_NAME|**String**|数据类型的本地化名称。|  
 |MINIMUM_SCALE|**short**|小数点右边的最大位数。|  
 |MAXIMUM_SCALE|**short**|小数点右边的最小位数。|  
 |SQL_DATA_TYPE|**int**|JDBC 驱动程序不支持此类型。|  
 |SQL_DATETIME_SUB|**int**|JDBC 驱动程序不支持此类型。|  
 |NUM_PREC_RADIX|**int**|计算某列最大容纳数时所采用的位数或数字个数。|  
-|INTERVAL_PRECISION|**int**|间隔起始精度的值。|  
-|USERTYPE|**int**|**Usertype**值从**systypes**表。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 联机丛书。|  
+|INTERVAL_PRECISION|**smallint**|间隔起始精度的值。|  
+|USERTYPE|**smallint**|来自 systypes 表的 usertype 值。 有关详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书。|  
   
 > [!NOTE]  
->  有关 getTypeInfo 方法返回的数据的详细信息，请参阅"sp_datatype_info (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getTypeInfo 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_datatype_info (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getTypeInfo 方法以返回有关中使用的数据类型信息[!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)]（或更高版本） 数据库。  
+ 以下示例演示了如何使用 getTypeInfo 方法返回有关 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]（或更高版本）数据库中使用的数据类型的信息。  
   
 ```  
 public static void executeGetTypeInfo(Connection con) {  

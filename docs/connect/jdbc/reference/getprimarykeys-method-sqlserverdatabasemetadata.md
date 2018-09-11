@@ -1,5 +1,5 @@
 ---
-title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getPrimaryKeys 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786054"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,41 +43,41 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 #### <a name="parameters"></a>Parameters  
  *cat*  
   
- A**字符串**，其中包含目录名称。  
+ 一个包含目录名称的字符串。  
   
  *schema*  
   
- A**字符串**包含架构的名称。  
+ 一个包含架构名称的字符串。  
   
  *table*  
   
- A**字符串**包含表的名称。  
+ 一个包含表名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getPrimaryKeys 方法指定此 getPrimaryKeys 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getPrimaryKeys 方法由 java.sql.DatabaseMetaData 接口中的 getPrimaryKeys 方法指定。  
   
- GetPrimaryKeys 方法所返回的结果集将包含以下信息：  
+ 由 getPrimaryKeys 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_CAT|字符串|在其中指定的表所在的数据库名称。|  
-|TABLE_SCHEM|字符串|表的架构。|  
-|TABLE_NAME|字符串|表的名称。|  
-|COLUMN_NAME|字符串|列的名称。|  
+|TABLE_CAT|String|指定的表所在的数据库的名称。|  
+|TABLE_SCHEM|String|表的架构。|  
+|TABLE_NAME|String|表的名称。|  
+|COLUMN_NAME|String|列的名称。|  
 |KEY_SEQ|short|多列主键中列的序列号。|  
-|PK_NAME|字符串|主键的名称。|  
+|PK_NAME|String|主键的名称。|  
   
 > [!NOTE]  
->  有关 getPrimaryKeys 方法返回的数据的详细信息，请参阅"sp_pkeys (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getPrimaryKeys 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_pkeys (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getPrimaryKeys 方法返回的 Person.Contact 表中的主键信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 以下示例演示了如何使用 getPrimaryKeys 方法返回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 Person.Contact 表的主键的信息。  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  

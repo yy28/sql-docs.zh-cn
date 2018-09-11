@@ -1,5 +1,5 @@
 ---
-title: getTableTypes 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getTableTypes 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb52a365bedc945395400daa11ab6ca6f724726
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 50e141aeada1c64a2d91bdaf7c72a4c0190a9265
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839262"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784681"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>getTableTypes 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,25 +39,25 @@ public java.sql.ResultSet getTableTypes()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getTableTypes 方法指定此 getTableTypes 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getTableTypes 方法由 java.sql.DatabaseMetaData 接口中的 getTableTypes 方法指定。  
   
- GetTableTypes 方法所返回的结果集将包含以下信息：  
+ 由 getTableTypes 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|“属性”|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_TYPE|**字符串**|表类型。|  
+|TABLE_TYPE|**String**|表类型。|  
   
 > [!NOTE]  
->  有关 getTableTypes 方法返回的数据的详细信息，请参阅"sp_tables (TRANSACT-SQL)"中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]联机丛书。  
+>  有关 getTableTypes 方法返回的数据的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 联机丛书中的“sp_tables (Transact-SQL)”。  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getTableTypes 方法来返回中的表类型信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库，假设在连接字符串中指定的数据库。  
+ 以下示例演示了已在连接字符串中指定了数据库的情况下如何使用 getTableTypes 方法返回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的表类型信息。  
   
 ```  
 public static void executeGetTableTypes(Connection con) {  
