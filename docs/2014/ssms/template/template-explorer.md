@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ffcff965e3a8ab7896f7bd0dcce8faa1bbc9774
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241797"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817503"
 ---
 # <a name="template-explorer"></a>Template Explorer
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了多种模板。 模板即包含 SQL 脚本的样板文件，可用于在数据库中创建对象。 首次打开模板资源管理器时，会将模板的副本置于 C:\Users 中 AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates 下的用户文件夹中。  

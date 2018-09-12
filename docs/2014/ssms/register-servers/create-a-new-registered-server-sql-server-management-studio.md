@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba895e7c6bd490278147fb6656b8c5856c02f57c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d8d70b56c5820563e8a9d875be99d9dbb5fe0af
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815063"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>创建新的已注册的服务器 (SQL Server Management Studio)
   本主题介绍如何通过在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的已注册服务器组件中注册服务器，以保存经常访问的服务器的连接信息。 您可以在连接之前注册服务器，也可以在从对象资源管理器中进行连接时注册服务器。 对象资源管理器中有注册本地计算机上的服务器实例的专用菜单选项。  

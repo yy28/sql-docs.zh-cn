@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35f2a9ee4494805d9c451a0f03357acd3cc47dc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f7427138f4a4672e562867c94363e04ba4ce0f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317997"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888653"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>示例：指定带有 ELEMENTS 指令的 XSINIL
   以下查询将指定 `ELEMENTS` 指令以根据查询结果生成以元素为中心的 XML。  

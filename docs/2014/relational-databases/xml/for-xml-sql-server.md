@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d95baeee7248aecda4c0bcbc374f378359bb722e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1985fdf525157864276b8f00b800507f771fc0c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179544"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888633"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
   SELECT 查询将结果作为行集返回。 （可选操作）您可以通过在 SQL 查询中指定 FOR XML 子句，从而将该查询的正式结果作为 XML 来检索。 FOR XML 子句可以用在顶级查询和子查询中。 顶级 FOR XML 子句只能用在 SELECT 语句中。 而在子查询中，FOR XML 可以用在 INSERT、UPDATE 和 DELETE 语句中。 它还可以用在赋值语句中。  
