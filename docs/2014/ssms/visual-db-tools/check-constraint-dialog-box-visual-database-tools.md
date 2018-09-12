@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4908c1ea2bb110c176e07e5fe8a0ffc8a0ad496
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c48d77af1234990f72e6d3778977e9a5055d4231
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202247"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809373"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
   如果在表设计器中右键单击表定义网格，再单击“CHECK 约束”，则会显示此对话框。 此对话框包含附加到数据库中表的非唯一约束的一组属性。 应用于唯一约束的属性则包含在“索引/键”对话框中。  
@@ -29,7 +28,7 @@ ms.locfileid: "37202247"
 > [!NOTE]  
 >  如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选定的 CHECK 约束**  
  列出可用的 CHECK 约束。 若要查看约束的属性，请在列表中将其选定。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: af846a1348d67acbb1b1d5776a357baaf99bf07e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a43e1efc508195b837879305080c7eb6636a2141
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176494"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811623"
 ---
 # <a name="browse-for-servers-network-servers"></a>查找服务器（网络服务器）
   如果要连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件但不知道 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的确切名称，请在“服务器名称”框中单击“浏览更多”，以打开“查找服务器”对话框。  
@@ -36,7 +35,7 @@ ms.locfileid: "37176494"
   
  若要连接到列表中未列出的实例，请键入该实例的完整连接字符串，其中包括 TCP/IP 端口号或 Named Pipes 管道名称。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **在网络中选择要连接的 SQL Server 实例**  
  单击树中显示的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，指定要连接的服务器。 单击带有 **+** 或 **–** 符号的节点可以显示或隐藏部分树视图。  
   

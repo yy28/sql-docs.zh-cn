@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3752d1012122e7fa2adb6b5470dcefd558449e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f61636f76642d495c6b9d1321008a5c56361febd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312757"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810653"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>“保存”对话框 (Visual Database Tools)
   当您在表设计器中保存工作并且您的工作会影响其他表时，将显示此对话框。 使用此对话框可以确认将要保存的表。  
@@ -30,7 +29,7 @@ ms.locfileid: "37312757"
 > [!NOTE]  
 >  在保存表之前，您在表设计器中对表做出的更改并不会提交到数据库。 表一旦保存就无法撤消更改。 若要放弃未保存的更改，请关闭所有打开的表而不进行保存。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表受到影响时警告**  
  指定下次保存所选的表时是否显示此对话框。 默认情况下，此框处于选中状态。 如果清除此选项，可以在“选项”对话框中重新选择该选项。  
   

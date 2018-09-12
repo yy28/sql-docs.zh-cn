@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ecd078c838e846993277614f016597ff6b74ffc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5ed5474a36e8d400ba97e0057a2eb1276738ec2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325727"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809873"
 ---
 # <a name="monitor-cpu-usage"></a>监视 CPU 使用率
   定期监视 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例以确定 CPU 使用率是否在正常范围内。 持续的高 CPU 使用率可能表明需要升级 CPU 或需要增加多个处理器。 或者，高 CPU 使用率也可能表明应用程序的调整或设计不良。 优化应用程序可以降低 CPU 的使用率。  

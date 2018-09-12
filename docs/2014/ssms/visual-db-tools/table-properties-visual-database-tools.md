@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 060a7edb73315f1d4f1d12ed98f9982a85f1a638
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 417327fc8c6b85d1e791b3d67d5ccd8922c1fe64
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330887"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810523"
 ---
 # <a name="table-properties-visual-database-tools"></a>表属性 (Visual Database Tools)
   如果您在表设计器中右键单击，再选择“属性”，则会在“属性”窗口中显示这些属性。 除非另行说明，否则在选定表后可以在“属性”窗口中编辑这些属性。  

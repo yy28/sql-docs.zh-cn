@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,20 +16,20 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 845ac7c15cdda81ac77853c7642f002e679c22cd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168260"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812803"
 ---
-# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>索引和键对话框 (Visual Database Tools)
+# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>“索引和键”对话框 (Visual Database Tools)
   使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  
   
 > [!NOTE]  
 >  如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选定的主/唯一键或索引**  
  列出现有的主键/唯一键和索引。 选择其中任意一项可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   

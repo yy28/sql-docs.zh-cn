@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccb9c98771128e7793eac25e11e3de851fa6dce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a481a3ea989ec31ea6d3e207633f102e81514940
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315072"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809773"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>“全文索引”对话框 (Visual Database Tools)
   使用此对话框可以创建全文索引，用于对数据库表中基于文本的列进行全文搜索。 全文索引依赖于常规索引，因此必须先创建常规索引。 常规索引只能对单个非空的列创建，而且最好选择值较小的列而不是选择值较大的列。  
@@ -32,7 +31,7 @@ ms.locfileid: "37315072"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中都不提供全文检索功能。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选定的全文索引**  
  列出现有的全文索引。 选择一个索引即可在右侧的网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何全文本关系。  
   

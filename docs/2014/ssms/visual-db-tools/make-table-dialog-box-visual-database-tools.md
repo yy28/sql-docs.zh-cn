@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,17 +16,17 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 732151bbd730275e5cc65ab6f15691603483c2d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7af982e36fd2385e577a68722d176787456637dd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189634"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811113"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>“生成表”对话框 (Visual Database Tools)
   使用此对话框可以命名通过复制行而创建的表。 当您将查询类型更改为“生成表”查询时，将显示此对话框。 若要更改查询类型，请在“查询设计器”菜单中指向“更改类型”，再单击“生成表”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表名**  
  键入要创建的表的名称。 查询和视图设计器不检查该名称是否已在使用，也不检查您是否有权创建表。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23347ea7c91134d80eefdb00c5226e579162fff2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac6ad68038ad8a95cd79abe5fa73031f64b5d61d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806923"
 ---
 # <a name="options-environment-keyboard-page"></a>选项 （环境-键盘页）
   使用该“选项”对话框，可以自定义 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的键盘方案。 使用此选项可以选择键盘方案。 若要访问此页，请单击“工具”菜单上的“选项”，选择“环境”文件夹，再单击“键盘”。  

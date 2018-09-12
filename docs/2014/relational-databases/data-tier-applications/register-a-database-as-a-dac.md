@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76cea4cf690481d4253b582f681b29b577d71877
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a63d4596b89a927d0b6f3fe47387ad9652f48985
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197197"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811553"
 ---
 # <a name="register-a-database-as-a-dac"></a>将数据库注册为 DAC
   可以使用两种**注册数据层应用程序向导**或 Windows PowerShell 脚本可以生成描述现有数据库中的对象的数据层应用程序 (DAC) 定义并注册中的DAC定义`msdb`系统数据库 (**主**中[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
@@ -113,7 +110,7 @@ ms.locfileid: "37197197"
   
   “取消”- 终止向导而不注册 DAC。  
   
-### <a name="summary"></a>“摘要”  
+### <a name="summary"></a>总结  
  **将使用以下设置注册 DAC。** - 显示将包含在 DAC 中的属性和对象的报表。  
   
   “保存报表”- 选择此按钮可以将验证报表的副本保存到某一 HTML 文件。 默认文件夹是你 Windows 帐户的 Documents 文件夹中的 **SQL Server Management Studio\DAC Packages** 文件夹。  

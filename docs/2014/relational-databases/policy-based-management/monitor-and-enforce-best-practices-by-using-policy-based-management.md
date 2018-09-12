@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0bc95e67c4fc29beb61dc518d2f33b203dcae3fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61bb69d47ce608762adbfd211470868ccae4a121
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810783"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
   基于策略的管理允许您监视的最佳实践[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供一组可以作为最佳实践策略导入的策略文件，然后针对包含实例、实例对象、数据库或数据库对象的目标集评估策略。 您可以手动评估策略，将策略设置为根据计划评估目标集，或者将策略设置为根据事件评估目标集。 有关基于策略的管理的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  

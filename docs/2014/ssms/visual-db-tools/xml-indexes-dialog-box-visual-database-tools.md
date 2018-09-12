@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c03be9c524a2e542dfa4e144a659aee2342719b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c828e45805e9e4aa5a37c98fada5c7ba5d168925
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172178"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806973"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>“XML 索引”对话框 (Visual Database Tools)
   使用“XML 索引”对话框可为 XML 数据类型的列创建索引，这些列不能使用“索引/键”对话框创建索引。 每个 XML 列都可以有多个 XML 索引，但最先创建的索引（主索引）将成为其他索引（二级索引）的基础。 删除主 XML 索引后，二级索引也会随之删除。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选定的 XML 索引**  
  列出现有的 XML 索引。 选择一个索引即可在右侧网格中显示其属性。 如果该列表为空，则表示尚未为该表定义任何 XML 索引。  
   

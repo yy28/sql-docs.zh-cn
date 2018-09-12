@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d82cf9589289c9646950174081a19f3449accb46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff54aa41c5b466cb8bb9226b3ba0d961b96e9f24
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210477"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811823"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>为 SQL Server 代理服务选择帐户
   服务启动帐户可以定义运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 代理的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 帐户及其网络权限。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在指定的用户帐户下运行。 可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务选择一个帐户，可选帐户如下：  

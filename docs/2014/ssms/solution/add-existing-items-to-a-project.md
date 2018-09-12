@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abfaa7ecc5f8535fb36c856a3a4295a0fdc7a545
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7a6bb9c0ee86b1693a60a69354f5e8dec343447
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325507"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810713"
 ---
 # <a name="add-existing-items-to-a-project"></a>向项目中添加现有项
   向项目中添加新项，以扩展应用程序功能。 现有项可以是查询，也可以是杂项文件。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 有两个项目类型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目和 Analysis Services 脚本项目。 至于哪些查询文件可以添加到项目中，则取决于项目类型。 例如，可以将 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（扩展名为 .sql 的文件）添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脚本项目，但是不能将其添加到 Analysis Services 脚本项目。 若要将其他文件扩展名与项目类型相关联，请参阅[将文件扩展名与代码编辑器](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)。  

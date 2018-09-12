@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68ff006d930b23549642afdfb5230728e36d642b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b940ced1cb071b688867fc9ef41ca5fcd73e5e9
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813174"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>“添加表”对话框（查询和视图设计器）(Visual Database Tools)
   使用此对话框可以向查询或视图中添加表、视图、用户定义函数或同义词。  
@@ -30,7 +29,7 @@ ms.locfileid: "37153698"
 > [!NOTE]  
 >  如果表是为复制发布的，则必须使用 Transact-SQL 语句 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 或 SQL Server 管理对象 (SMO) 对架构进行更改。 使用表设计器或数据库关系图设计器更改架构后，会尝试删除并重新创建表。 由于您不能删除已发布的对象，因此架构更改将失败。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表**  
  列出可以向“关系图”窗格中添加的表。 若要添加某个表，请选择该表，再单击“添加”。 若要同时添加多个表，请选中这些表，再单击“添加”。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2b874ae3c21ec5779c37a37e638ba7dbff4beec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65bd646c92893b1766d4ee9b5e748b7f2f1149c5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189673"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808323"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 生成数据库项目
   数据库脚本项目是与数据库或数据库的某一部分关联的一组经过整理的脚本、连接信息和模板。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 用于在脚本项目上下文中管理和设计 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 包含设计器、编辑器、指南和向导，可帮助用户开发、部署和维护数据库。  

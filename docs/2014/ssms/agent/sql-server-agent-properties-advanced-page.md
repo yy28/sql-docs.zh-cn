@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3825ba87f9012a7dcc33fb8585a2d2c4f83e9d6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3e23c45859bb02baeec873f99392b318247bd69
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328837"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807243"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 代理属性（“高级”页）
   使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务的高级属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL Server 事件转发**  
  此类别中的选项可用来激活和配置事件转发功能。  
   

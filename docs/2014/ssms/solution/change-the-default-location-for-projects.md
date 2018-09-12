@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2edaedea87ff9c808ad09c7602ef3bd89029cfc2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bad8ea26cfbeebe9795c1161cca23d1ea792a054
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295837"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812463"
 ---
 # <a name="change-the-default-location-for-projects"></a>更改项目的默认位置
   文件和项目的默认位置为“我的文档”文件夹中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目文件夹。  

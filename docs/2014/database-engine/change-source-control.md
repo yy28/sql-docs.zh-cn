@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676d87266ecb64d52a97ed1ee27c01a4cffa1fb1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312297"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812093"
 ---
 # <a name="change-source-control"></a>更改源代码管理
   创建和管理特定的连接和绑定（用于将本地保存的解决方案或项目链接到源代码管理数据库文件夹）。  
@@ -34,7 +33,7 @@ ms.locfileid: "37312297"
 > [!NOTE]  
 >  也可以右键单击解决方案资源管理器中的项来访问此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **将绑定**  
  使所选项与指定的源代码管理服务器位置相关联。 例如，您可以使用此按钮绑定到上一次已知的源代码管理服务器文件夹和数据库。 如果找不到最近使用的服务器文件夹或数据库，则将提示您指定另一个。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc038e491f895ad3ee017ff9e06835ad25c48912
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9af6a500b29477cec6308c3bc7515df60c842ae
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208417"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808773"
 ---
 # <a name="manage-files-with-encoding"></a>管理使用编码的文件
   为便于以特定语言显示代码以及在特定平台中显示代码，可以将特定的字符编码与文件关联。  

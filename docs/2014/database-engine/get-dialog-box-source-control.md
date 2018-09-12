@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c61a83ed2352067a3d1ae3a23b22bf11be3d3546
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193947"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810373"
 ---
 # <a name="get-dialog-box-source-control"></a>“获取”对话框（源代码管理）
   将所选项的只读副本从源代码管理数据库提取到您的工作文件夹或者指定的其他文件夹。  
@@ -34,7 +33,7 @@ ms.locfileid: "37193947"
 > [!NOTE]  
 >  也可以右键单击解决方案资源管理器中的项来访问此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **操作**  
  指定对要提取的项执行的操作。  
   

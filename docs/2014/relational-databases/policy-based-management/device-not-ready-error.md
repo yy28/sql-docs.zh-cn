@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aedbf40ab545b79261fffe116d08d29a61bd4e70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38222658d4502b18c47458c9cff44bf229dfc315
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256266"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813363"
 ---
 # <a name="device-not-ready-error"></a>设备未就绪错误
   此规则检查系统事件日志中是否存在 EventId 15。 此错误可能是由 SCSI 主机适配器配置问题或相关问题引起的。  

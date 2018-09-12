@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -21,19 +20,19 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7861729d8990c0309a926a30209096f8777119e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50a593c625fe50e5d7a1dfbebc40222ac13433c2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191317"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808273"
 ---
 # <a name="connect-to-server-database-engine"></a>连接到服务器（数据库引擎）
   连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 时，可使用此对话框查看或指定选项。 大多数情况下，可以通过在“服务器名称”框中输入数据库服务器的计算机名称并单击“连接”来进行连接。 如果要连接到 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，请使用后面跟有 **\sqlexpress** 的计算机名称。  
   
  许多因素都会对您能否连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产生影响。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器类型**  
  从对象资源管理器注册服务器时，请选择要连接到的服务器的类型： [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择“ [!INCLUDE[ssDE](../../includes/ssde-md.md)]”、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、 [!INCLUDE[ssEW](../../includes/ssew-md.md)]或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 。  
   

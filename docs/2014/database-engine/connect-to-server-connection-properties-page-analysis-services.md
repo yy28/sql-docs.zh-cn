@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49f6c58a56f1ea702da8ece6d21462ee192e969a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225857"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811313"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>连接到服务器（“连接属性”页）(Analysis Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssAS](../includes/ssas-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssAS](../includes/ssas-md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **连接到数据库**  
  从列表中选择要连接到的数据库。 如果选择**\<默认值 >**，您将连接到服务器的默认数据库。 如果选择**\<浏览服务器 >**，可以浏览你想要连接到数据库的服务器。  
   

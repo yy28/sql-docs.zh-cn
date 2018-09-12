@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e93eecef54eb5910287a2693311539f5c2fb898e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd119bcc519665cb603155c4598f16d95d367156
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202407"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812713"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>映射多对多关系 (Visual Database Tools)
   使用多对多关系，您可以将一个表中的每一行与另一个表中的多行相关，反之亦然。 例如，可以在 `authors` 表与 `titles` 表之间创建多对多关系，以将每位作者与其所有书籍相匹配并将每本书与其所有作者相匹配。 从上述任何一个表创建一对多关系都会错误地表示每本书只能有一位作者或者每位作者只能编写一本书。  

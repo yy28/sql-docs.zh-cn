@@ -19,10 +19,10 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: fd265f1cf67d421ca7a21987b2d48c3f929f5873
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
+ms.lasthandoff: 09/07/2018
 ms.locfileid: "43152618"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表

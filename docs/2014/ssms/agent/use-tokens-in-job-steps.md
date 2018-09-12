@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23214b2ce0fccf5b96934cab3b4561d224ff677
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246167"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810553"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通过代理，你可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作业步骤脚本中使用标记。 如果在编写作业步骤时使用标记，则可以为您提供编写软件程序时使用变量所提供的灵活性。 在作业步骤脚本中插入令牌之后， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理便会在运行时 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系统执行作业步骤之前替换此不标记。  

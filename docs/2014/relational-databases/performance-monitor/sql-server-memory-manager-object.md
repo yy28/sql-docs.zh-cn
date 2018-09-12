@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbc61bde81da8f32f71a70764870648589d89a4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc237a59ba7988575935e524e1d9d1121ac12722
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188344"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807773"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server Memory Manager 对象
   Microsoft **中的** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供了监视总体的服务器内存使用情况的计数器。 监视总体的服务器内存使用情况，以估计用户活动和资源使用，有助于查明性能瓶颈。 监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例使用的内存有助于确定：  

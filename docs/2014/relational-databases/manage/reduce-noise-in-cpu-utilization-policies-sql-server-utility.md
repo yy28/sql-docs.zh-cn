@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9eb5dc31c0eb7534788b8b7e50831d0f7fa2a777
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a757b6042aed067536cbd47e16dc5d759f9ae59f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193094"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808313"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>减少 CPU 使用策略中的干扰（SQL Server 实用工具）
   使用以下策略可以减少 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具资源使用策略中报告的干扰和意外的策略违反情况。  

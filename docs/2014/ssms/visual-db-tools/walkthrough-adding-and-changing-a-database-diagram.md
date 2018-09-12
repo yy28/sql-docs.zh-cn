@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30616dd6f9ee51b929a98740a3d4c4ed320d7bb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244017"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808003"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>演练：添加和更改数据库关系图
   本演练说明了如何创建和修改数据库关系图以及如何通过数据库关系图组件更改数据库。 您将看到如何向关系图添加表、如何创建表之间的关系、如何对列创建约束和索引以及如何更改每个表的信息级别。  

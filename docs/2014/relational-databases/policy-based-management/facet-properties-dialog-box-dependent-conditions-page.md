@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a3021f29ae5d6d730a20ebb5b79f54f7e7d87d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876dca18a03a5b9440630c5cc0c7443fdd6d8eb2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807514"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>“方面属性”对话框，“依赖条件”页
   此对话框用于显示当前引用此基于策略的管理方面的条件的列表。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  列出每个引用当前方面的条件的名称。  
   

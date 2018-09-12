@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bacbb1b5b4ef708055affe400b12ac9604dbabc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96a513d1ff221b550c53ce31442ae91a9cf5c8dd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249517"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808043"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>选项 （设计器维护计划页）
   使用“选项”对话框可以确定在将新形状添加到设计图面时设计器的默认行为。 在“工具”菜单上，单击“选项”，展开“设计器”，再选择“维护计划”。  

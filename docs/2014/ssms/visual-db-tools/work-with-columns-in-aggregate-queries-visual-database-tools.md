@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4efcce69f6a270064e79e415c76e56ac350e607f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19aca7390b0e7b56b9fecf568bb17820777dc680
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291797"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807493"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>在聚合查询中使用列 (Visual Database Tools)
   创建聚合查询时， [查询和视图设计器](visual-database-tools.md) 将进行某些假设以便可以构造有效的查询。 例如，如果创建聚合查询并将某个数据列标记为输出，则查询和视图设计器将自动将该列包含在 GROUP BY 子句中，以避免无意中试图在汇总中显示个别行的内容。  

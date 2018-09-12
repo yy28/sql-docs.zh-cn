@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,17 +17,17 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d06db2501afc3c01506f9d5ab1d8fe64842dbf03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8f8ae62f66101d91198f777622aba402d9a2192
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152828"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810383"
 ---
 # <a name="pick-schedule-for-job"></a>为作业选取计划
   使用此对话框可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选取现有的计划。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用计划**  
  列出此作业的可用计划。 因为作业和计划必须具有相同的所有者，所以，此列表只包括该作业的所有者所拥有的计划。  
   

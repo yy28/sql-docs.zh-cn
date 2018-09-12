@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef60a02b437ed6a66a5db0db4e07938d2a70c4e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d914f36b216bfd49d45e22a259af8df4c781e1b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323707"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809483"
 ---
 # <a name="specify-job-responses"></a>指定作业响应
   作业响应指定完成作业后 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务将执行的操作。 作业响应可确保数据库管理员知道作业完成的时间和作业运行频率。 典型的作业响应包括：  
@@ -47,7 +46,7 @@ ms.locfileid: "37323707"
 |-|-|  
 |**Description**|**主题**|  
 |描述如何向操作员通知作业状态。|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|介绍如何将作业状态写入 Windows 应用程序日志。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|介绍如何将作业状态写入 Windows 应用程序日志。|[将作业状态写入 Windows 应用程序日志](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>请参阅  
  [监视事件和响应事件](monitor-and-respond-to-events.md)  

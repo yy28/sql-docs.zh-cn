@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 065f8d2d32d8ad16fe955ba8e36c7e65926bec95
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165288"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808283"
 ---
 # <a name="edit-checked-in-files"></a>编辑签入文件
   通常，必须先将源代码管理的文件签出，才能对其进行编辑。 但是，可以配置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，以便修改尚未签出的文件。执行此操作时，更改将暂存在内存中，直到保存文件为止。 然后会提示您从源代码管理中签出文件。  

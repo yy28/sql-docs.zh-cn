@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,17 +16,17 @@ caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e7ea7d5bafa4e08aa98f9eb8ebfca3dd4811987
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809624"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>连接到服务器（“连接属性”页）(Integration Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **端口号**  
  输入 [!INCLUDE[ssIS](../includes/ssis-md.md)]使用的端口号。  
   

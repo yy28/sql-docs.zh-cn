@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e61147031a3b17fcf98f32064cc3f53e2c6d8ac
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244987"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808403"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>对 SQL Server 对象和版本的 DAC 支持
   数据层应用程序 (DAC) 支持最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对象。  
@@ -46,7 +45,7 @@ ms.locfileid: "37244987"
 |FUNCTION：多语句表值|FUNCTION：标量|  
 |INDEX：聚集|INDEX：非聚集|  
 |INDEX：特殊|INDEX：唯一|  
-|LOGIN|权限|  
+|LOGIN|Permissions|  
 |角色成员资格|SCHEMA|  
 |统计信息|STORED PROCEDURE：Transact-SQL|  
 |同义词|TABLE：检查约束|  

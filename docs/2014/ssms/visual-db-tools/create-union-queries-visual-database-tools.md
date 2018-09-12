@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3469f186285d5885e1353b5c8a1f8cffe444e3cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 559da2f60b0764c6dad07d33e16362eb80daa49c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263923"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806793"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
   使用 UNION 关键字，可以在一个结果表中包含两个 SELECT 语句的结果。 任一 SELECT 语句返回的所有行都可合并到 UNION 表达式的结果中。 有关示例，请参阅[SELECT 示例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)。  

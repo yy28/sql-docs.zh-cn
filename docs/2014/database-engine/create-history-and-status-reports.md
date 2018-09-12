@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8374df1a73b68636ea22586dc44eea42ed8d89c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314327"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807214"
 ---
 # <a name="create-history-and-status-reports"></a>创建历史记录和状态报表
   可以在当前加载的解决方案中创建一个关于文件的历史记录或当前状态的报表。 您还可以预览报表，然后将报表发送到打印机、文件或剪贴板。 这些报表并非由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 生成， 而是由 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 生成。  

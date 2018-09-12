@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cacfeef1468a0aec47ecd8e0b27a432bb689d1ef
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188944"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812983"
 ---
 # <a name="change-source-control-connections"></a>更改源代码管理连接
   第一次从源代码管理中添加或打开解决方案时，源代码管理提供程序会在本地解决方案目录的根文件夹与对应的服务器文件夹之间创建一个关联。  

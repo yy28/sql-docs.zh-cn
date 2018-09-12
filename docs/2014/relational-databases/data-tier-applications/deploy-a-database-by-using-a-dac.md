@@ -3,10 +3,7 @@ title: 使用 DAC 部署数据库 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - deploy database wizard
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec4cff220e8e3e08c71eb5a43986817c3c434332
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a26f457642321144427e57bb00a343a44b16ba70
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199557"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811663"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>使用 DAC 部署数据库
   使用“将数据库部署到 SQL Azure”  向导在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例与 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 服务器之间，或在两台 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]服务器之间部署数据库。  
@@ -57,7 +53,7 @@ ms.locfileid: "37199557"
 ###  <a name="Security"></a> 安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC BACPAC 文件中且没有密码。 在导入此 BACPAC 时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-#### <a name="permissions"></a>权限  
+#### <a name="permissions"></a>Permissions  
  此向导需要对源数据库具有 DAC 导出权限。 登录名至少要求 ALTER ANY LOGIN 和数据库作用域 VIEW DEFINITION 权限，以及对 **sys.sql_expression_dependencies**具有 SELECT 权限。 导出 DAC 可由 securityadmin 固定服务器角色的成员（也是从其导出 DAC 的数据库中 database_owner 固定数据库角色的成员）完成。 sysadmin 固定服务器角色的成员或名为 **sa** 的内置 SQL Server 系统管理员帐户也可以导出 DAC。  
   
  此向导需要对目标实例或服务器的 DAC 导入权限。 登录名必须是 **sysadmin** 或 **serveradmin** 固定服务器角色的成员，或者是 **dbcreator** 固定服务器角色的成员并且具有 ALTER ANY LOGIN 权限。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  

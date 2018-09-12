@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 356121b8980d41a3abf3124d5249164d6d23b4e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2d8dfdf76931179dd89266a1debf0c5a6541525
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247733"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813223"
 ---
 # <a name="query-properties-visual-database-tools"></a>查询属性 (Visual Database Tools)
   当您在查询和视图设计器中打开查询时，将在“属性”窗口中显示以下属性。 除非另行说明，否则这些属性都可以在“属性”窗口中编辑。  
@@ -30,7 +29,7 @@ ms.locfileid: "37247733"
 > [!NOTE]  
 >  本主题中的属性按类别排序，而不是按字母顺序排序。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **标识类别**  
  展开此项可显示“名称”属性。  
   

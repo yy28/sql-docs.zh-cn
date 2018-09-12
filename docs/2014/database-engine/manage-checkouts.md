@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320707"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813041"
 ---
 # <a name="manage-checkouts"></a>管理签出
   在将文件添加到源代码管理后，您必须签出该文件才能对其进行修改。 将文件签出源代码管理时，源代码管理提供程序会在本地磁盘中创建最新版本的副本并删除该文件的只读属性。 在某些情况下，您可能需要在不签出文件的情况下编辑该文件。 有关编辑文件，而无需签出文件的详细信息，请参阅[编辑 Checked-In 文件](../../2014/database-engine/edit-checked-in-files.md)。  

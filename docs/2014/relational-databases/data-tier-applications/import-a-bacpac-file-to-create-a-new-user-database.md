@@ -4,10 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.importdac.progress.f1
@@ -26,16 +23,15 @@ helpviewer_keywords:
 - Migrate database
 - DAC
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 17545a7c79026b546ce31b3dcefbcf946c452ef1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5e644e2e255e23cc00d71f4434a4d0f9b861985
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266823"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810273"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
   导入数据层应用程序 (DAC) 文件（.bacpac 文件），以在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的新实例上创建一个带数据的原始数据库的副本，或者对 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 创建一个此数据库的副本。 可以将导出-导入操作结合起来在各实例之间迁移 DAC 或数据库，或者创建一个逻辑备份，例如创建部署在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的数据库的本地副本。  
@@ -63,10 +59,10 @@ ms.locfileid: "37266823"
 ## <a name="prerequisites"></a>必要條件  
  建议您不要从未知或不可信的源导入 DAC 导出文件。 此类文件可能包含恶意代码，这些代码可能会执行非预期的 Transact-SQL 代码，或者通过修改架构导致错误。 在使用来自未知或不可信源的导出文件之前，请解压缩该 DAC 并检查代码，例如存储过程或者其他用户定义的代码。 有关如何执行这些检查的详细信息，请参阅 [Validate a DAC Package](validate-a-dac-package.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  为了提高安全性，SQL Server 身份验证登录名存储在 DAC 导出文件中且没有密码。 在导入该文件时，登录名将作为含有生成的密码的已禁用登录名创建。 若要启用这些登录名，请使用具有 ALTER ANY LOGIN 权限的登录名登录，并且使用 ALTER LOGIN 来启用该登录名并且分配可以传达给用户的新密码。 对于 Windows 身份验证登录名则无需执行此操作，因为其密码不是由 SQL Server 管理的。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  DAC 只能由 **sysadmin** 或 **serveradmin** 固定服务器角色的成员导入，或者由具有 **dbcreator** 固定服务器角色且具有 ALTER ANY LOGIN 权限的登录名导入。 名为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **的内置** 系统管理员帐户也可以导入 DAC。 将具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 loginmanager 或 serveradmin 角色的成员身份。 将不具有登录名的 DAC 导入到 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 要求 dbmanager 或 serveradmin 角色的成员身份。  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>使用“导入数据层应用程序向导”  

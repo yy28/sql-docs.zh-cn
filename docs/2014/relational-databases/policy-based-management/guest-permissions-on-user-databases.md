@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 51f08e85c6ebd06c7cfcfb1922312accd8203246
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8416b7500ca68fe1a42ba2a8f2f3e57d81ec8ebc
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810013"
 ---
 # <a name="guest-permissions-on-user-databases"></a>对用户数据库的 Guest 权限
   此规则确定 guest 用户是否有权访问数据库。 此规则仅适用于用户数据库。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b0976f5c637c5fbecc064bb6cd57235e94602d71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7a125ae3057d3398f51034f9307d7dd62bcabec
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223318"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808533"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server User Settable 对象
   通过 Microsoft **中的** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象可以创建自定义计数器实例。 自定义计数器实例用于监视服务器上现有计数器没有监视到的方面，例如您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库唯一具有的组件（例如，记录的客户定单数或产品目录）。  
@@ -70,7 +69,7 @@ GO
 > [!IMPORTANT]  
 >  应使用户计数器存储过程中定义的查询尽可能简单。 执行排序或哈希操作等会占用大量内存的查询，或执行大量 I/O 操作的查询，开销会很大，并且会影响性能。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **sp_user_counter** 可供所有用户使用，但仅限于针对查询计数器。  
   
 ## <a name="see-also"></a>请参阅  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac1923bdfc931dc13cf730c296d29497fc4c5bfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55da4ceb0007e297d6849344183ccb721e8582f3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185684"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813053"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>“列列表”对话框 (Visual Database Tools)
   编写查询时，查看所选表值对象中的可用列的列表会非常有用。  
@@ -30,7 +29,7 @@ ms.locfileid: "37185684"
   
  此对话框提供了所选表值对象中的列的列表和一些基本属性，如数据类型以及这些列是否允许空值。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  显示所选表值对象中的列的名称。  
   

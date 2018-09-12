@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c399a372bc12ba845bd86b20286d7c9fc9739c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78b42cdab893f98596f45c7e82145eab789640a4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316437"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809303"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
   管理数据仓库是一种关系数据库，其中包含从身为数据收集目标的服务器收集来的数据。 此数据用于生成系统数据收集组的报表，而且还可用于创建自定义报表。  

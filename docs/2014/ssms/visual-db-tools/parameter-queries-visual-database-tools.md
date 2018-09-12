@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc09916ca71dabcdf9e50ddb109c9b60ac0401b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e8e1f6503ba431314f7addd0b33d2c607a32fb9c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303497"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812293"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>参数查询 (Visual Database Tools)
   在某些情况下，您需要创建可以使用多次但每次使用不同值的查询。 例如，可能经常运行一个查询以查找某位作者编写的所有 `title_ids` 。 可以为每次请求运行相同的查询，只是每次使用的作者 ID 或姓名不同。  

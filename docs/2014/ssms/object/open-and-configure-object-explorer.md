@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
@@ -14,12 +13,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9005404601b3600da088678741434bd192d0579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a78051e28365c638595332845e767849cc1305c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237997"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809603"
 ---
 # <a name="open-and-configure-object-explorer"></a>打开和配置对象资源管理器
   使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“视图”菜单打开对象资源管理器。 使用“工具”菜单上的“选项”配置对象资源管理器选项。  

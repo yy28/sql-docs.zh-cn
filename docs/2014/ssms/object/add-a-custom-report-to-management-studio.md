@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1496e3abd0be957bdf0b0d2883dacec480fcec12
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 00fd7a19efcd0b6f78716026a01113c51aa7d04c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40396222"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807543"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>向 Management Studio 添加自定义报表
   本主题介绍如何创建简单的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表并将其保存为 .rdl 文件，然后将该 rdl 文件作为自定义报表添加到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中。 [!INCLUDE[ssRS](../../includes/ssrs.md)] 可以创建各式各样的复杂报表。 若要根据本主题创建报表，计算机上必须安装有 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 。 不必在 [!INCLUDE[ssRS](../../includes/ssrs.md)] 上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，即可使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]运行自定义报表。  

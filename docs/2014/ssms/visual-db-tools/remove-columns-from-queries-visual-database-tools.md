@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6605dfb451a4c062bb75900a9d096e3cb2eea08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f24e3205852d4b10ca0cac83efb4b6a8ad190811
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178998"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806893"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>从查询中删除列 (Visual Database Tools)
   如果不希望再在查询中使用某列，则可以可移除该列。 如果执行此操作，“查询和视图设计器”将从选择列表、排序规范、搜索条件、“SQL”窗格以及所有分组规范中删除对该列的引用。  

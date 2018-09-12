@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cecfa64f8aa6656cf055a9e488cfe30d68d5160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 149b7f15a59dd6f3532353e757faac69fc25befd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183594"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811893"
 ---
 # <a name="create-a-multiserver-environment"></a>创建多服务器环境
   多服务器管理需要设置一个主服务器 (MSX) 以及一个或多个目标服务器 (TSX)。 首先在主服务器上定义将在所有目标服务器上处理的作业，然后将这些作业下载到目标服务器。  
@@ -41,13 +40,13 @@ ms.locfileid: "37183594"
   
 ||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 或更高版本**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|是|是|否|否|否|否|“否”|  
-|**MSX = 8.0 &LT; SP3**|是|是|否|否|否|否|“否”|  
-|**MSX = 8.0 SP3 或更高版本**|“否”|否|是|是|是|是|是|  
-|**MSX = 9.0**|“否”|否|否|是|是|是|是|  
-|**MSX = 10.0**|“否”|否|否|否|是|是|是|  
-|**MSX = 10.5**|“否”|否|否|否|否|是|是|  
-|**MSX = 11.0**|“否”|否|否|否|否|否|是|  
+|**MSX = 7.0**|用户帐户控制|是|否|否|否|否|否|  
+|**MSX = 8.0 &LT; SP3**|用户帐户控制|是|否|否|否|否|否|  
+|**MSX = 8.0 SP3 或更高版本**|否|否|是|是|是|是|用户帐户控制|  
+|**MSX = 9.0**|否|否|否|是|是|是|用户帐户控制|  
+|**MSX = 10.0**|否|否|否|否|是|是|用户帐户控制|  
+|**MSX = 10.5**|否|否|否|否|否|是|用户帐户控制|  
+|**MSX = 11.0**|否|否|否|否|否|否|用户帐户控制|  
   
  创建多服务器环境时，考虑下列问题：  
   

@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - wizard [DAC], unpack
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - How to [DAC], unpack
 - unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e30acea98225b1baaa48e367f06071584d8b9599
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d256a069213df774519a357d29ab1be8fe5417d8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184634"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809663"
 ---
 # <a name="unpack-a-dac-package"></a>解压缩 DAC 包
   使用“解压缩数据层应用程序”对话框可以从数据层应用程序 (DAC) 包解压缩脚本和文件。 这些脚本和文件放置在一个文件夹中，您可以在使用该 DAC 包将 DAC 部署到生产系统中之前查看该文件夹。 一个 DAC 的内容也可与解压缩到其他文件夹中的其他包的内容进行比较。  

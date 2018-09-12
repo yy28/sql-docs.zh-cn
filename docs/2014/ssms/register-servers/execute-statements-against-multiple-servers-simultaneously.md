@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9880f71d735cfa0c750d56e3dbf6530f0ec1617
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74570b10cabbb8b1d12b97c4cae16aedf259d132
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194827"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811573"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，通过以下方法同时查询多个服务器：创建一个本地服务器组，或者创建一个中央管理服务器以及一个或多个服务器组，在这些组中创建一个或多个已注册的服务器，然后查询整个组。 可以将查询返回的结果合并到单个结果窗格中，也可以在单独结果窗格中返回这些结果。 结果集可能包含额外的列，即每个服务器上的查询所使用的服务器名和登录名。 只能使用 Windows 身份验证来注册中央管理服务器和从属服务器。 可以使用 Windows 身份验证或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证来注册本地服务器组中的服务器。  

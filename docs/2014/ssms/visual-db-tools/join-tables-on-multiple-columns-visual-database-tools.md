@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0b8807ad4a8b2cbcadc0ecaa30db2db105ed482
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca98d6c541aff433f5a90cd0c730e5cdc0af3e0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812263"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>在多个列上联接表 (Visual Database Tools)
   您可以使用多个列来联接表。 即可以创建这样的一个查询，仅当来自两个表中的行都满足多个条件时才与该查询匹配。 如果数据库包含的关系将一个表中的多个外键列与另一个表中的多列主键匹配，则可使用此关系创建多列联接。 有关详细信息，请参阅[自动联接表 (Visual Database Tools)](visual-database-tools.md)。  

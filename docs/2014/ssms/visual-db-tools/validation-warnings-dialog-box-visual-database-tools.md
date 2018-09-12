@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 202881aef2ae0fc8aa5daa4f01d625a9e2a26860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 983e275b60ea4def84b5e1d8248228af7cabf5c2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214307"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810763"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>“验证警告”对话框 (Visual Database Tools)
   如果尝试保存的修改具有潜在的破坏性副作用，或者数据库提交操作很可能会失败，则会显示此对话框。 此对话框可指示这些副作用可能会是什么或提交操作可能失败的原因。 使用此对话框可以选择继续修改还是取消操作。  
@@ -46,7 +45,7 @@ ms.locfileid: "37214307"
   
 -   所做的修改将导致对一个表中的列的 ANSI_NULLS 或 ANSI_PADDING 选项进行重要设置，或同时对这两个选项进行设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **是**  
  继续操作以生成更改脚本或将修改传输到数据库。 提交操作在以下情况仍然会失败：您没有修改数据库的权限；所做的修改会导致索引大于 900 字节；或者修改会导致生成格式不正确的计算列、默认约束或 CHECK 约束。  
   

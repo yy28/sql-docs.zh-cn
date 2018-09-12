@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0f632aef15291b24057d3a97d68b0517cf128dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1ce834d6437afd0f7a06e0a4af82faf9e697806
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269863"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812883"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>打开数据库关系图设计器 (Visual Database Tools)
   数据库关系图设计器是一种可视化工具，可用于对所连接的数据库进行设计和可视化处理。 设计数据库时，您可以使用数据库设计器创建、编辑或删除表、列、键、索引、关系和约束。 为使数据库可视化，您可创建一个或多个关系图，以显示数据库中的部分或全部表、列、键和关系。  

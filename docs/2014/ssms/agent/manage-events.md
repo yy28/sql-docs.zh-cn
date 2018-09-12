@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a8a6e25a518e62c8498fb00fcd45b0217e60d71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 459d771b9f8b79a5194c754a81ab132b18559bf5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286613"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807533"
 ---
 # <a name="manage-events"></a>管理事件
   可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这称为“事件转发”。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  

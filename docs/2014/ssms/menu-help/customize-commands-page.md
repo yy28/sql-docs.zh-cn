@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0564474b427324ad32a737fc83e63a207f579ee6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a6da50e082247e611952539b1ac9c1c65ed124c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268223"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809133"
 ---
 # <a name="customize-commands-page"></a>自定义（“命令”页）
   使用此对话框，您可以在工具栏和菜单上添加和删除命令，以及更改用于工具栏按钮或菜单命令的图像。 可以通过在“工具”菜单上单击“自定义”，再单击“命令”，来访问“命令”页。  

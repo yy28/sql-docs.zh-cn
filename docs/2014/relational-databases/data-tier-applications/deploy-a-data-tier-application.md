@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
-ms.tgt_pltfrm: ''
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - How to [DAC], deploy
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f869a6a88fb13669d6f3196a040272470fecbc8d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154528"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813503"
 ---
 # <a name="deploy-a-data-tier-application"></a>部署数据层应用程序
   您可使用向导或 PowerShell 脚本将数据层应用程序 (DAC) 从 DAC 包部署到[!INCLUDE[ssDE](../../includes/ssde-md.md)]或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 的现有实例。 该部署过程通过在 **msdb** 系统数据库（在**中为** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)]）中存储 DAC 定义来注册一个 DAC 实例，创建一个数据库，然后使用在该 DAC 中定义的所有数据库对象来填充该数据库。  

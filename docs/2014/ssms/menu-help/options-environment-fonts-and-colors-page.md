@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a88ae6c8205ea8267ca044f6dc978a725931f59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e16da651d51054293303f38598a1168eb1474226
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200777"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808453"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>选项 (环境： 字体和颜色页面)
+# <a name="options-environment-fonts-and-colors-page"></a>选项（“环境”:“字体和颜色”页）
   使用“选项”对话框可以为 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的各种用户界面元素建立自定义的字体和配色方案。 在“工具”菜单上，单击“选项”，展开“环境”文件夹，然后选择“字体和颜色”。  
   
  在更改配色方案的会话期间，更改不会生效。 您可以通过打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的另一个实例，并将其设置为您的更改要应用的环境，来评估颜色更改效果。  

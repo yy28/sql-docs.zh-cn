@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +15,19 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa2ee7a5a54c02618230a91b67e0d4c1db8a294e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db65dfaec0688ab7eec9a7597bcf94b2cbcfc131
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224737"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811103"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>作业步骤属性： 新建作业步骤 （常规页）
+# <a name="job-step-properties-new-job-step-general-page"></a>作业步骤属性：新建作业步骤（“常规”页）
   使用此页可以查看和更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤的属性或定义新的作业步骤。  
   
  若要导航到此页，请在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器中展开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理，右键单击“作业”，单击“新建作业”，选择“步骤”页，再单击“新建”。 也可以通过以下方法导航到此页：在对象资源管理器中右键单击某项作业，单击“属性”，选择“步骤”页，再依次单击“新建”、“插入”或“编辑”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **步骤名称**  
  设置作业步骤的名称。  
   

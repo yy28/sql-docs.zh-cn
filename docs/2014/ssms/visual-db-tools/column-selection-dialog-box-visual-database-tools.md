@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,19 +16,19 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95d3afa041d5418c5ad9b4da5ea7e4cbb4fe4dc2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d925d1ded18b507148004fb6d47708fb4a28061d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226607"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808763"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>“列选择”对话框 (Visual Database Tools)
   使用此对话框可以在数据库关系图中更改表的“自定义”视图。 “自定义”视图仅显示由用户标识的列属性。  
   
  右键单击一个表并从快捷菜单中选择“修改自定义视图”后，将显示此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用列**  
  列出所选数据库表中的全部现有列。 在此列出的列取决于数据库表的属性和数据库的类型。 突出显示所需的列，再使用箭头按钮，可以将这些列移入“选定的列”框。  
   

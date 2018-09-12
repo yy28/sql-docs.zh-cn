@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 855b5427c168edbea0588d014144516233d3f494
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34270c46b2a0739b71a0f95f42efe9edd9f33e5c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261983"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813423"
 ---
 # <a name="alert-properties-history-page"></a>警报属性（“历史记录”页）
   使用此页可以查看和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报的历史记录。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **上次警报的日期**  
  显示指定事件上次发生的日期，或者如果自从创建警报后从未发生该事件则显示“(从未发生)”。  
   

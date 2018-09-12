@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1e9573aec69dbb5846b3373d9b6f32c91f08309a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b64a97b0719f6040e1d14e4ad398bc29855eaaf
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212947"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808103"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>“创建新条件”或“打开条件”对话框，“常规”页
   此对话框用于创建或更改基于策略的管理条件。 条件是一个布尔表达式，用于针对方面指定基于策略的管理目标的一组允许状态。 可在“表达式”/“字段”框中选择的属性取决于所使用的方面。 有关条件与方面和策略如何关联的详细信息，请参阅[使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  对于新条件，请键入新条件的名称。 对于现有条件，将显示其名称。  
   

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,17 +17,17 @@ caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f5478cb168d6c30dccdb33c1f40edb2605a13b3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d6035f7f05a8687290cfb388cbf47dbc5222376
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171388"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809253"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>连接到服务器（“登录”页）(Reporting Services)
   连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，使用此选项卡可查看或指定以下选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器类型**  
  从对象资源管理器进行服务器注册时，请选择要连接到何种类型的服务器： [!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。 对话框的其余部分只显示适用于所选服务器类型的选项。 从“已注册的服务器”注册某服务器时，“服务器类型”框是只读的，并且与“已注册的服务器”组件中显示的服务器类型匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，从“已注册的服务器”工具栏中选择[!INCLUDE[ssDE](../includes/ssde-md.md)]、Analysis Services、Reporting Services 或 Integration Services。  
   
