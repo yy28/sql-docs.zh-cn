@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a41c723b75d2170c0e991536bda48157c9915425
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebfe172528ef3881f3c62371350c3f2c7214ab81
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228847"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889863"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML 是一个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 关键字，对内存中的 XML 文档提供与表或视图相似的行集。 OPENXML 允许像访问关系行集一样访问 XML 数据。 它通过提供以内部形式表示的 XML 文档的行集视图来实现这一点。 行集中的记录可以存储在数据库表中。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e1af418d7b8c21b640d738659cc3c4603b43ad29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a00e6dfd96851984018d00d017257939cb69586
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286793"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888723"
 ---
 # <a name="use-the-binary-base64-option"></a>使用 BINARY BASE64 选项
   如果查询中指定了 BINARY BASE64 选项，则以 base64 编码格式返回二进制数据。 默认情况下，如果未指定 BINARY BASE64 选项，则 AUTO 模式支持二进制数据的 URL 编码。 也就是说，不返回二进制数据，而返回执行查询的数据库的虚拟根目录的相对 URL 的引用。 通过使用 SQLXML ISAPI dbobject 查询，可在后续操作中利用此引用访问实际二进制数据。 查询必须提供足够的信息（如主键列），才能标识图像。  

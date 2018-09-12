@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5414451-4d8e-464b-bd9e-f2b70c6899b3
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5654908f9decdf0ead70a2b4182fe43129511a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a86b73658d1019969819eeb1d7ba4115b783096
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262063"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820683"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>更改 SQL Server 代理主作业计划的详细信息
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改作业定义计划的详细信息。  

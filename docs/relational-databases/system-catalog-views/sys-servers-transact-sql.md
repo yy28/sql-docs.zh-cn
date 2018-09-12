@@ -1,7 +1,7 @@
 ---
 title: sys.servers (TRANSACT-SQL) |Microsoft 文档
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038810"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171749"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   包含链接服务器或远程服务器注册，每行和本地服务器具有一个行**server_id** = 0。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|链接服务器的本地 ID。|  
-|**名称**|**sysname**|当**server_id** = 0，这是服务器名称。<br /><br /> 当**server_id** > 0，这是链接服务器的本地名称。|  
-|**product**|**sysname**|链接服务器的产品名。 “SQL Server”表示这是另一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。|  
+|**名称**|**sysname**|当**server_id** = 0 时，返回的值是服务器名称。<br /><br /> 当**server_id** > 0，返回的值是链接服务器的本地名称。|  
+|**product**|**sysname**|链接服务器的产品名。 "SQL Server"的值指示的另一个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**provider**|**sysname**|用于连接到链接服务器的 OLE DB 访问接口名称。|  
 |**data_source**|**nvarchar(4000)**|OLE DB 数据源连接属性。|  
 |**location**|**nvarchar(4000)**|OLE DB 位置连接属性。 如果没有，则为 NULL。|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038810"
   
  不需要权限以查看本地服务器 (**server_id** = 0)。  
   
- 创建链接服务器或远程服务器，当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建默认登录名映射到**公共**服务器角色。 也就是说在默认情况下，所有登录名都可以查看所有链接服务器和远程服务器。 若要将可见性限制为这些服务器，删除默认登录映射通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并指定为 NULL 来*locallogin*参数。  
+ 创建链接服务器或远程服务器，当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建默认登录名映射到**公共**服务器角色。 默认登录映射意味着所有登录名可以查看所有链接服务器和远程服务器。 若要将可见性限制为这些服务器，删除默认登录映射通过执行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)并指定为 NULL 来*locallogin*参数。  
   
- 如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。 删除默认登录映射之后，查看所有的链接服务器和远程服务器需要以下权限：  
+ 如果删除了默认登录映射，则只有已作为链接登录名或远程登录名显式添加的用户才能查看其拥有登录名的链接服务器或远程服务器。  是默认登录映射后查看所有链接服务器和远程服务器需要以下权限：  
   
--   ALTER ANY LINKED SERVER 或 ALTER ANY LOGIN ON SERVER  
-  
--   中的成员身份**setupadmin**或**sysadmin**固定服务器角色的成员  
+- `ALTER ANY LINKED SERVER` 或 `ALTER ANY LOGIN ON SERVER`  
+- 中的成员身份**setupadmin**或**sysadmin**固定服务器角色的成员  
   
 ## <a name="see-also"></a>请参阅  
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

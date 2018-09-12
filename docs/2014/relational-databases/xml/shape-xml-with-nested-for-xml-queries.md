@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c970d2472b304e3dbc2591019f7d70a9405cfd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f758f4fd51b3d9b6a5d8af9dd92ac816f2939f5d
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234787"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888543"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>使用嵌套的 FOR XML 查询形成 XML
   下面的示例查询 `Production.Product` 表以检索特定产品的 `ListPrice` 值和 `StandardCost` 值。 为使查询具有趣味性，这两个价格都在 <`Price`> 元素中返回，每个 <`Price`> 元素都有 `PriceType` 属性。  

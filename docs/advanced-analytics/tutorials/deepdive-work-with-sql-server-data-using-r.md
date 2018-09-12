@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a59d467417c3471fa643acf9fc65ab45d5dc7a45
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084179"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375670"
 ---
 # <a name="lesson-1-create-a-database-and-permissions"></a>第 1 课： 创建一个数据库和权限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -103,7 +103,7 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     其中一个特定的用户名称相关联的架构时，该用户是_架构所有者_。 创建对象时，将始终在自己的架构中创建，除非明确要求在另一个架构中创建对象。
   
-    例如，如果使用名称创建一个表`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< 数据库名称 >.db_datareader。TestData。
+    例如，如果使用名称创建一个表**TestData**，且默认架构**db_datareader**，使用以下名称创建表`<database_name>.db_datareader.TestData`。
   
     出于此原因，数据库可以包含多个具有相同名称的表，前提是这些表属于不同的架构。
    

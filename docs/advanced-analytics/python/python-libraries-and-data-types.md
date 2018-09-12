@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b977d079589dbb4c54d5c31fec644d9f984dd61
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 384c8c94bdef65e41af999848c9bac63fc0c8d40
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40434847"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888363"
 ---
 # <a name="python-libraries-and-data-types"></a>Python 库和数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,16 +29,14 @@ RevoScaleR 功能的子集 (rxLinMod，rxLogit，rxPredict，rxDTrees，rxBTrees
 
 有关详细信息，请参阅[什么是 revoscalepy？](what-is-revoscalepy.md)。
 
+Python 支持有限的数量的相比于 SQL Server 数据类型。 因此，只要使用从 SQL Server 在 Python 脚本中的数据，数据可能会隐式转换为兼容的数据类型。 但是，通常不能自动执行确切的转换，并且返回错误。
+
 ## <a name="python-and-sql-data-types"></a>Python 和 SQL 数据类型
-
-Python 支持有限的数量的相比于 SQL Server 数据类型。
-
-因此，每当使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Python 脚本中，数据可能会隐式转换为兼容的数据类型。 但是，通常不能自动执行确切的转换，并且返回错误。
 
 此表列出了所提供的隐式转换。 不支持其他数据类型。
 
 |SQLtype|Python 类型|
-|-|-|
+|-------|-----------|
 |**bigint**|`numeric`|
 |**binary**|`raw`|
 |**bit**|`bool`|

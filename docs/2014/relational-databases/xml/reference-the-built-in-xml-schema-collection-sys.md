@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e75d8335ebf5313b1f0df67144aaef6216eb445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd9933572173f45130d84d479a41cb65f9c48df6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160148"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889384"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>引用内置 XML 架构集合 (sys)
   创建的每个数据库在 **sys** 关系架构中都有一个预定义的 **sys** XML 架构集合。 数据库将保留这些预定义架构，这些架构可以从任何其他用户创建的 XML 架构集合进行访问。 这些预定义架构中使用的前缀在 XQuery 中是有意义的。 只有 **xml** 是保留前缀。  

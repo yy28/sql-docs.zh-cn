@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ee22addfb4d7a4b8162a1cd57ca51120c8acc47
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309387"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889433"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>创建 XML 数据类型的变量和列
   `xml` 数据类型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的内置数据类型，并有些类似于其他内置类型（如 `int` 和 `varchar`）。 您可以使用其他内置类型`xml`数据类型作为列类型时创建的表作为变量的类型、 参数类型、 函数返回类型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  

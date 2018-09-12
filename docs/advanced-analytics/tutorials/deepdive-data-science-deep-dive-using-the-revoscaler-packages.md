@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ac7345e2e4f71db13801e2813ea77aa88f5cdc69
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084670"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343082"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程： 使用 RevoScaleR R 函数与 SQL Server 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,9 +72,9 @@ RevoScaleR 是用于数据科学和机器学习工作负荷提供分布式和并
 
 ## <a name="r-development-tools"></a>R 开发工具
 
-R 开发人员通常使用 Ide，用于编写和调试 R 代码。 以下是一些建议：
+R 开发人员通常使用 Ide，用于编写和调试 R 代码。 一些建议如下：
 
-- **针对 Visual Studio 的 R 工具**(RTVS) 是一种免费插件，它提供 Intellisense、 调试、 并对 Microsoft。 您可以将其用于 R Server 和 SQL Server 机器学习服务的支持。 若要下载，请参阅 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)。
+- **针对 Visual Studio 的 R 工具**(RTVS) 是一种免费插件，提供 Intellisense、 调试、 和支持 Microsoft。您可以将其用于 R Server 和 SQL Server 机器学习服务。 若要下载，请参阅 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)。
 
 - **RStudio** 是广受欢迎的 R 开发环境之一。 有关详细信息，请参阅[ https://www.rstudio.com/products/RStudio/ ](https://www.rstudio.com/products/RStudio/)。
 

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f711ca92f6dc3ff6e5171ae2e2da19641d1ef72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b163bb2dd79651d85926ec6eb9d0229e9355d10
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186640"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820693"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server，可用性副本
   在 **中，** SQLServer:Availability Replica [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]性能对象包含的性能计数器报告有关 AlwaysOn 可用性组中可用性副本的信息。 所有可用性副本性能计数器都适用于主副本和辅助副本，并且具有反映本地副本的发送/接收计数器。 大多数情况下，主副本发送大部分数据，而辅助副本将接收这些数据。 但是，辅助副本会将 ACK 和其他一些后台流量发送到主副本。 请注意，在某个给定可用性副本上，某些计数器将显示零值，具体取决于该本地副本的当前角色，即是主副本还是辅助副本。  

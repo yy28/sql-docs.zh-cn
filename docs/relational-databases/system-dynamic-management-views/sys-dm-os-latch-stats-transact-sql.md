@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_latch_stats (Transact SQL) |Microsoft 文档
+title: sys.dm_os_latch_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467903"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375680"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,22 @@ ms.locfileid: "34467903"
   返回有关按类组织的所有闩锁等待的信息。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_latch_stats**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_latch_stats**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|闩锁类的名称。|  
 |waiting_requests_count|**bigint**|此类中的闩锁等待的个数。 此计数器在闩锁等待启动时递增。|  
-|wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 此列更新期间闩锁等待和闩锁等待末尾每隔五分钟。|  
+|wait_time_ms|**bigint**|此类中闩锁的总计等待时间（毫秒）。<br /><br /> **注意：** 更新此列在闩锁等待和闩锁等待结束每隔五分钟。|  
 |max_wait_time_ms|**bigint**|内存对象已等待此闩锁的最大时间。 如果此值异常高，则可能指示有内部死锁。|  
-|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>Remarks  
  通过检查不同闩锁类的相对等待数和等待时间，sys.dm_os_latch_stats 可以用来标识闩锁争用源。 在某些情况中，可能能够解决或减少闩锁争用。 但是，在某些情况下可能需要与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 客户支持服务部门联系。  
   
  按如下所示使用 `DBCC SQLPERF`，可以重置 sys.dm_os_latch_stats 的内容：  
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|用于同步用 DBCC 执行的差异备份操作。|  
 |BACKUP_OPERATION|用于备份操作（例如，数据库、日志或文件备份）中的内部数据结构同步。|  
 |BACKUP_FILE_HANDLE|用于同步在还原操作期间的文件打开操作。|  
-|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys.dm_os_wait_stats 差别之间页闩锁等待，而引起 I/O 操作和读取和写入的页上的操作。|  
+|BUFFER|用于同步对数据库页的短期访问。 读取或修改任何数据库页之前，必须使用缓冲区闩锁。 缓冲区闩锁争用可以指示出现了几个问题，包括热页和缓慢 I/O。<br /><br /> 此闩锁类覆盖所有可能的页闩锁使用。 sys.dm_os_wait_stats 可区分对页闩锁等待的引起 I/O 操作和读取和写入在页上的操作。|  
 |BUFFER_POOL_GROW|用于在缓冲区池增长操作期间的内部缓冲区管理器同步。|  
 |DATABASE_CHECKPOINT|用于序列化数据库中的检查点。|  
 |CLR_PROCEDURE_HASHTABLE|仅限内部使用。|  
@@ -126,7 +126,7 @@ GO
 |FCB|用于同步对文件控制块的访问。|  
 |FCB_REPLICA|仅限内部使用。|  
 |FGCB_ALLOC|用于同步对文件组中循环法分配信息的访问。|  
-|FGCB_ADD_REMOVE|用于同步对文件组的 ADD 和 DROP 文件操作的访问。|  
+|FGCB_ADD_REMOVE|用于同步对文件组以进行添加、 删除、 扩大和收缩文件操作。|  
 |FILEGROUP_MANAGER|仅限内部使用。|  
 |FILE_MANAGER|仅限内部使用。|  
 |FILESTREAM_FCB|仅限内部使用。|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|仅限内部使用。|  
 |SERVICE_BROKER_HOST_NAME|仅限内部使用。|  
 |SERVICE_BROKER_READ_CACHE|仅限内部使用。|  
-|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步服务员队列的实例级别映射。 每个数据库 ID、 数据库版本和队列 ID 元组，一个队列存在。 多个连接时会出现此类的闩锁争用： 在 WAITFOR(RECEIVE) 等待状态;调用 WAITFOR(RECEIVE);超出的 WAITFOR 超时;接收消息;提交或回滚事务，其中包含 WAITFOR(RECEIVE);你可以减少争用，从而降低中 WAITFOR(RECEIVE) 等待状态的线程数。 |  
+|SERVICE_BROKER_WAITFOR_MANAGER| 用于同步等待应用程序队列的实例级别映射。 每个数据库 ID、 数据库版本和队列 ID 元组不存在一个队列。 在许多建立连接时，则会发生此类的闩锁争用： 在 WAITFOR(RECEIVE) 等待状态;调用 WAITFOR(RECEIVE);WAITFOR 超时;接收一条消息;提交或回滚事务，其中包含 WAITFOR(RECEIVE);可以通过减少 WAITFOR(RECEIVE) 等待状态中的线程数来减少争用。 |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|仅限内部使用。|  
 |SERVICE_BROKER_TRANSPORT|仅限内部使用。|  
@@ -198,11 +198,11 @@ GO
 |VERSIONING_STATE_CHANGE|仅限内部使用。|  
 |KTM_VIRTUAL_CLOCK|仅限内部使用。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

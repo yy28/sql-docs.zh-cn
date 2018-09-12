@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21f11e1d27ce94c62e2d3115134bf714c918a5d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b4db58d74b640d6b75eca3239ebca2e0fa0f4d1
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175159"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889743"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 元素
   W3C XSD **redefine** 元素为重新定义架构组件提供了支持。 但是，对此指令可能会严重影响性能，同时还要求的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新进行验证的所有实例`xml`重新定义的架构与相关联的数据类型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含 **\<xsd:redefine>** 元素的 XML 架构。  

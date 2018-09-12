@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 48bb2922f8f86712a838de95b31a3be2b08c3150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3184ace8d42ecd98f3d762afb8c8ac5e65a6e4ec
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282893"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890083"
 ---
 # <a name="example-specifying-the-id-and-idrefs-directives"></a>示例：指定 ID 和 IDREFS 指令
   可以将元素属性指定为`ID`类型的属性，并`IDREFS`然后可以使用属性来引用它。 这将启用文档内链接，与关系数据库中主键和外键关系类似。  

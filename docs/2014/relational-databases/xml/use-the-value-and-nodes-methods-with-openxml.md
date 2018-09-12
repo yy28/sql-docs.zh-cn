@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d55a482435673d69b82cca0f95f4a31656a21a96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322bd5111aac211f400e5f917c9486e0a2c84b4c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888743"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>将 value() 和 nodes() 方法用于 OPENXML
   可以使用多个**value （)** 上的方法`xml`中的数据类型**选择**子句生成的行集提取值。 **nodes()** 方法为可用于其他查询的每个所选节点生成一个内部引用。 生成行集时，如果行集有多个列且用于生成行集的路径表达式比较复杂，结合使用 **nodes()** 和 **value()** 方法可能会更有效。  

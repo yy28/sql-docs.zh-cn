@@ -1,7 +1,7 @@
 ---
 title: 复制快照代理 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190167"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311687"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
@@ -62,7 +62,8 @@ ms.locfileid: "37190167"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -112,7 +113,7 @@ ms.locfileid: "37190167"
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时所用的登录名。  
   
  **-DistributorPassword** *distributor_password*  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时使用的密码。 实例时都提供 SQL Server 登录名。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到分发服务器时使用的密码。 .  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
  指定分发服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证模式（默认设置），值 **1** 指示 Windows 身份验证模式。  
@@ -194,6 +195,14 @@ ms.locfileid: "37190167"
 |**0**|仅输出错误消息。|  
 |**1** （默认值）|输出所有进度报告消息（默认值）。|  
 |**2**|输出所有错误消息和进度报告消息，这对于调试很有用。|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ 可选参数，指定是否将预提取并缓存的表对象。  默认行为是要预提取使用 SMO 组件上的内部计算基于某些表属性。  此参数可以是有帮助的方案，SMO 预提取操作会花费相当长时间运行。 如果不使用此参数，此决定是在运行时根据作为项目添加到发布的表的百分比。  
+  
+|OutputVerboseLevel 值|Description|  
+|------------------------------|-----------------|  
+|**0**|禁用对 SMO 组件的预提取方法调用。|  
+|**1**|快照代理将调用预提取的方法来缓存使用 SMO 某些表属性|  
   
  **-PacketSize** *packet_size*  
  快照代理连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用的数据包大小（以字节为单位）。 默认值为 8192 字节。  
@@ -223,7 +232,7 @@ ms.locfileid: "37190167"
  使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时所用的登录名。  
   
  **-PublisherPassword**  *publisher_password*  
- 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 实例时都提供 SQL Server 登录名。  
+ 使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器时使用的密码。 .  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
  指定发布服务器的安全模式。 值 **0** 指示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证（默认值），值 **1** 指示 Windows 身份验证模式。  

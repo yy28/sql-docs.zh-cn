@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +15,19 @@ caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e006cbe7729d35a34bf8f652c7560a66a39e0ad8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e542f2498ef035cb35f4a12f4dfe3a845bcd8cae
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184794"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820803"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>新建或编辑服务器注册（“常规”选项卡）（Analysis Services – 多维数据）
   在注册 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例时，使用此选项卡可以指定选项。  
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击 **Analysis Services**，右键单击任意已注册的服务器组（例如 **Analysis Services**），指向“新建”，再单击“服务器注册”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器类型**  
  从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   

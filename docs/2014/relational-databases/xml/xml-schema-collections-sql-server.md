@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7be770bfbcde0f21197d3edfbe3a5c69bebec816
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221087"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889913"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 架构集合 (SQL Server)
   主题中所述[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)，SQL Server 提供的 XML 数据进行本机存储`xml`数据类型。 您可以选择将与变量或列的关联的 XSD 架构`xml`通过 XML 架构集合的类型。 XML 架构集合存储导入的 XML 架构，然后用于执行以下操作：  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,15 +20,15 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57c7271167585be8cc3bd2f863c99f5e03e3d25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b17c072e70806bc2e6dd05193efa8dfba1b7015
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297677"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820493"
 ---
 # <a name="solution-explorer"></a>解决方案资源管理器
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的“解决方案资源管理器”窗格提供了用于管理项（如数据库脚本、查询、数据连接和文件）的容器（称为项目）。 一个或多个彼此相关联的项目可以组合在一个容器中（称为解决方案）。  
   
  “解决方案”包含一个或多个项目，以及定义整个解决方案所需的文件和元数据。 “项目”是一组文件和相关的元数据（如连接信息）。 解决方案和项目所包含的“项”表示创建数据库解决方案所需的脚本、查询、连接信息和文件。  
   

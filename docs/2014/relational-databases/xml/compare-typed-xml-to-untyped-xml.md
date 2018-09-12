@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -29,12 +28,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0da42dce1cef6d625a8e650a72c481b9458e35df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcffb5fa9a023f893446479769c75089ca13fe06
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305087"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890263"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>类型化的 XML 与非类型化的 XML 的比较
   您可以创建 `xml` 类型的变量、参数和列。 （可选） 可以与变量、 参数或列关联的 XML 架构集合`xml`类型。 在这种情况下，`xml`数据类型实例称为*键入*。 否则，XML 实例称作“非类型化” 的实例。  

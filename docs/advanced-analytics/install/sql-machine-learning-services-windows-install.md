@@ -1,29 +1,30 @@
 ---
 title: 安装 SQL Server 机器学习在 Windows 上的服务 （数据库） |Microsoft Docs
+description: 当您在 Windows 上安装 SQL Server 2017 机器学习服务，SQL Server 或 SQL Server 上的 Python 中的 R 才可用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 09/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b5b37ef8d9fd3fba6b9e87839f32112724db9abe
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118575"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311647"
 ---
 # <a name="install-sql-server-machine-learning-services"></a>安装 SQL Server 机器学习服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-从 SQL Server 2017 开始，SQL Server 机器学习服务，SQL Server 2016 中引入的 R Services 功能的后续版本中提供的数据库内分析 R 和 Python 支持。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
+从 SQL Server 2017 中，R 和 Python 支持的数据库内分析提供在 SQL Server 机器学习服务的后继[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引入。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
 
 此文章介绍了如何通过运行安装机器学习组件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装向导和以下屏幕上的提示。
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ 如果你想要使用 R、 Python 或这两种语言支持安装机器学习服务，则需要 SQL Server 2017 安装程序。 如果改为您具有 SQL Server 2016 安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)获取 R 语言支持。
++ 需要使用 R 和 Python 机器学习服务的 SQL Server 2017 安装程序。 如果改为具有 SQL Server 2016 安装媒体，请参阅[安装 SQL Server 2016 R Services](sql-r-services-windows-install.md)获取 R 语言支持。
 
 + 数据库引擎实例是必需的。 您不能安装 R 或 Python 功能，尽管将它们添加到现有实例的以增量方式。
 
@@ -146,7 +147,7 @@ ms.locfileid: "43118575"
 
     **run_value** 现在应已设置为 1。
     
-2. 打开**Services**面板或 SQL Server 配置管理器，并验证是否**SQL Server Launchpad 服务**正在运行。 应具有一项服务的每个数据库引擎实例具有 R 或 Python 安装。 有关详细信息，请参阅[组件来支持 Python 集成](../python/new-components-in-sql-server-to-support-python-integration.md)。 
+2. 打开**Services**面板或 SQL Server 配置管理器，并验证是否**SQL Server Launchpad 服务**正在运行。 应具有一项服务的每个数据库引擎实例具有 R 或 Python 安装。 有关服务的详细信息，请参阅[可扩展性框架](../concepts/extensibility-framework.md)。 
    
 3. 如果 Launchpad 正在运行，您应能够运行简单的 R 和 Python 脚本，以验证外部脚本的运行时可以与 SQL Server 进行通信。
 
@@ -182,7 +183,7 @@ ms.locfileid: "43118575"
 
     | Hello |
     |----|
-    | @shouldalert|
+    | 1|
 
 
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: 步骤 1 中下载示例数据 |Microsoft 文档
+title: 步骤 1 下载示例数据 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,27 +7,27 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 07a9b5219649b370b0a5df1e53cf75765f18ec7f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249730"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888315"
 ---
 # <a name="step-1-download-the-sample-data"></a>步骤 1： 下载示例数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+本文是教程的一部分[SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-在 Github 上共享的数据和用于本教程的脚本。 在此步骤中，你可以使用 PowerShell 脚本以将数据和脚本文件下载到你选择的本地目录。
+在 Github 上共享的数据和本教程中的脚本。 在此步骤中，您可以使用 PowerShell 脚本以将数据和脚本文件下载到您选择的本地目录。
 
 ## <a name="run-the-script"></a>运行脚本
 
 1. 打开 Windows PowerShell 命令控制台。
 
-    使用选项，**以管理员身份运行**，如果创建目标目录，或将文件写入到指定的目标需要管理权限。
+    使用选项，**以管理员身份运行**，如果要创建目标目录，或将文件写入到指定的目标需要管理权限。
 
-2. 运行以下 PowerShell 命令，将参数 DestDir 的值更改为任何本地目录。  我们已在此处使用的默认值是`C:\temp\pysql`。
+2. 运行以下 PowerShell 命令，将参数 DestDir 的值更改为任何本地目录。  我们在此处使用的默认值是`C:\temp\pysql`。
 
     ```ps
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/PythonSQL/Download_Scripts_SQL_Walkthrough.ps1'
@@ -39,19 +39,19 @@ ms.locfileid: "35249730"
     
     如果 DestDir 中指定的文件夹不存在，则可以通过 PowerShell 脚本创建。
     
-    如果遇到错误，暂时将设置到的 PowerShell 脚本执行的策略**不受限制**本演练中，通过使用**绕过**自变量和范围对当前会话的更改。 运行此命令不会导致配置更改。
+    如果遇到错误，暂时将执行 PowerShell 脚本的策略设置**不受限制**用于本演练中，通过使用**绕过**自变量和范围对当前会话的更改。 运行此命令不会导致配置更改。
     
     ```ps
     Set-ExecutionPolicy Bypass -Scope Process
     ```
 
-3. 具体取决于你的 internet 连接，下载可能需要一些时间。 
+3. 根据您的 internet 连接，下载可能需要一段时间。 
 
 ## <a name="view-results"></a>查看结果
 
 所有文件下载完成之后，PowerShell 脚本将打开 DestDir 指定的文件夹。 
 
-+ 在 PowerShell 命令提示符，运行以下命令，以列出已下载的文件。
++ 在 PowerShell 命令提示符处，运行以下命令以列出已下载的文件。
 
     ```ps
     ls
@@ -65,10 +65,10 @@ ms.locfileid: "35249730"
 
 ## <a name="previous-step"></a>上一步
 
-[数据库中 Python 分析 SQL 开发人员](sqldev-in-database-python-for-sql-developers.md)
+[中的数据库 Python 分析 SQL 开发人员](sqldev-in-database-python-for-sql-developers.md)
 
 ## <a name="see-also"></a>请参阅
 
-[机器学习服务与 Python](../python/sql-server-python-services.md)
+[SQL Server 中的 Python 扩展](../concepts/extension-python.md)
 
 

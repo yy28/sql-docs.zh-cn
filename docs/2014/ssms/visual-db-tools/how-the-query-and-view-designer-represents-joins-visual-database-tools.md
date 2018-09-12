@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,15 +17,15 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1ee25f33d06c1d0df0be8ae31b4d3f265cd07db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7eaee902e0bd199d969f60544e7d5bd86fdb1c3a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299427"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820543"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>查询和视图设计器如何表示联接 (Visual Database Tools)
-  如果对表进行了联接， [查询和视图设计器](visual-database-tools.md) 将在“关系图” [](diagram-pane-visual-database-tools.md) 窗格中以图形方式表示联接，并在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
+  如果对表进行了联接，[查询和视图设计器](visual-database-tools.md)将在[“关系图”](diagram-pane-visual-database-tools.md)窗格中以图形方式表示联接，并在 [SQL 窗格](sql-pane-visual-database-tools.md)中使用 SQL 语法表示联接。  
   
 ## <a name="diagram-pane"></a>“关系图”窗格  
  在“关系图”窗格中，查询和视图设计器在联接所涉及的数据列之间显示一条联接线。 查询和视图设计器为每个联接条件显示一条联接线。 例如，下图阐释两个联接的表之间的联接线：  

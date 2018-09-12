@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d0248cb60068c86c641046b4d80deda1b78f95da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e60417af6f28c1f9f782e3d000deddd5e00abe2
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889013"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>使用嵌套 AUTO 模式查询生成同级
   以下示例显示了如何使用嵌套 AUTO 模式查询来生成同级。 生成此类 XML 的其他方式只有这一种，即使用 EXPLICIT 模式。 但是，这样做可能会很麻烦。  

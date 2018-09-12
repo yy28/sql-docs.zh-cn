@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,19 +26,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0d1e5df1490533bd797b7142e9903ce00bf33be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c9304d32ba3288d712d6869303af212ce506193
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306937"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820843"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>“属性”窗口的 F1 帮助 (Management Studio)
   使用“属性”窗口可以查看所选元素的属性。 使用“属性”窗口还可以查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  
   
  “属性”窗口可根据特定属性的需要显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **对象名称**  
  列出当前选择的对象。 只有处于活动状态的编辑器或设计器中的对象是可见的。  
   

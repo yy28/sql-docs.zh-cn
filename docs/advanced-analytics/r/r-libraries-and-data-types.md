@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 机器学习中的 R 数据类型 |Microsoft 文档
+title: 使用 SQL Server 机器学习中的 R 数据类型 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,41 +7,41 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bcabb40cffb00e4f3ed1f5b7bb1df72f20f3f121
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586039"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890063"
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 库和 R 数据类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题介绍 R 库，包括和中的以下产品支持的数据类型：
+本文介绍了包含 R 库和在以下产品中支持的数据类型：
 
-+ SQL Server 2016 R Services （数据库）
-+ SQL Server 机器学习服务 （数据库）
++ SQL Server 2016 R Services （数据库内）
++ SQL Server 机器学习服务 （数据库内）
 
-本主题还列出了不支持的数据类型和列表的数据类型转换可能会执行隐式当 R 和 SQL Server 之间传递的数据。
+此文章还列出了不支持的数据类型和列表的数据类型在 R 和 SQL Server 之间传递数据时可能会隐式执行的转换。
 
 ## <a name="r-libraries"></a>R 库
 
-这两种产品，R Services 和使用 R 的机器学习服务与特定版本的 Microsoft R Open 对齐。 最新的版本中，SQL Server 自 2017 年 1 机器学习服务，例如，基于 Microsoft R Open 3.3.3。
+这两个产品，R Services 和使用 R、 机器学习服务符合特定版本的 Microsoft R Open。 最新的版本中，SQL Server 2017 机器学习服务，例如，基于 Microsoft R Open 3.3.3。
 
-若要查看与 SQL Server 的特定实例关联的 R 版本，请打开 RGui。
+若要查看与 SQL Server 的特定实例相关联的 R 版本，请打开 RGui。
 
-1. 对于默认实例中，该路径将为，如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
-2. 被显示一条消息，其中列出了 R 分发和 Microsoft R Open 的版本号。
+1. 对于默认实例中，路径为，如下所示： `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+2. 被显示一条消息，其中列出了 R 发行版和 Microsoft R Open 的版本号。
 
-若要查找包含特定版本的 Microsoft R Server 中的 R 版本，请参阅[R Server 的新增功能](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)。
+若要查找的特定版本的 Microsoft R Server 中包含的 R 版本，请参阅[R Server-What's New](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages)。
 
-请注意，SQL Server 中的包管理系统意味着，多个版本的 R 程序包可以安装在同一计算机上具有多个用户共享同一个包，或使用不同版本的同一个包。 有关详细信息，请参阅[SQL Server 中的 R 包管理](../r/install-additional-r-packages-on-sql-server.md)。
+请注意，SQL Server 中的程序包管理系统意味着，多个版本的 R 包可安装在同一计算机上具有多个用户共享同一个包，或使用同一个包的不同版本。 有关详细信息，请参阅[SQL Server 中的 R 包管理](../r/install-additional-r-packages-on-sql-server.md)。
 
 ## <a name="r-and-sql-data-types"></a>R 和 SQL 数据类型
 
-而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持几种几十个数据类型，R 具有有限的数量的标量数据类型 (数字的整数，复杂、 逻辑字符日期/时间和原始)。 因此，无论何时使用中的数据时，才[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 R 脚本中，数据可能会隐式转换为兼容的数据类型。 但是，通常不能自动执行完全转换，并返回一个错误，例如"未处理的 SQL 数据类型"。
+而[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持几十种数据类型，R 拥有有限的数量的标量数据类型 (数字、 整数、 复杂、 逻辑、 字符、 日期/时间和原始)。 因此，每当使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 R 脚本中，数据可能会隐式转换为兼容的数据类型。 但是，通常不能自动执行确切的转换，并且返回错误，如"未经处理的 SQL 数据类型"。
 
-本部分列出的隐式转换，提供，并列出不支持的数据类型。 用于映射 R 和 SQL Server 之间的数据类型提供了一些指导。
+本部分列出了提供，并且列出了不受支持的数据类型的隐式转换。 R 和 SQL Server 之间的数据类型映射提供了一些指导。
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R 与 SQL Server 之间的隐式数据类型转换
 
@@ -62,7 +62,7 @@ ms.locfileid: "34586039"
 |**numeric(p,s)**|`numeric`|**float**||
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|表示为 GMT|
-|**int**|`integer`|**int**||
+|**smallint**|`integer`|**int**||
 |**smallmoney**|`numeric`|**float**||
 |**tinyint**|`integer`|**int**||
 |**uniqueidentifier**|`character`|**varchar(max)**||
@@ -75,7 +75,7 @@ ms.locfileid: "34586039"
 
 在 [SQL Server 类型系统](../../t-sql/data-types/data-types-transact-sql.md)支持的数据类型类别中，如果将以下类型传递给 R 代码，则有可能会造成问题：
 
-+ 中列出的数据类型**其他**SQL 类型系统主题的部分：**光标**，**时间戳**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**表**
++ 中列出的数据类型**其他**部分中的 SQL 类型系统的项目：**光标**，**时间戳**， **hierarchyid**， **uniqueidentifier**， **sql_variant**， **xml**，**表**
 + 所有空间类型
 + **image**
 
@@ -102,7 +102,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 
 一般情况下，每当你对特定的数据类型或数据结构在 R 中如何使用有疑问时，请使用  `str()` 函数获取 R 对象的内部结构和类型。 函数的结果将打印到 R 控制台，并且也在 **中的“消息”**[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]选项卡中的查询结果中可用。 
 
-从数据库检索要在 R 代码中使用的数据时，始终应该消除无法在 R 中使用的列以及不可用于分析的列，例如 GUID（唯一标识符）、时间戳和用于审核的其他列，或者 ETL 进程创建的沿袭信息。 
+从 R 代码中使用的数据库中检索数据，你始终应该消除无法在 R 中，使用的列，以及不用于分析，例如 GUID （唯一标识符）、 时间戳和用于审核，其他列或沿袭的列所创建的 ETL 过程的信息。 
 
 请注意，包含不必要的列可以会极大降低 R 代码的性能，尤其是将高基数列用作因子时。 因此，我们建议使用 SQL Server 系统存储过程和信息视图来提前获取给定表的数据类型，并消除或转换不兼容的列。 有关详细信息，请参阅 [Information Schema Views in Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)（Transact-SQL 中的信息架构视图）
 
@@ -118,7 +118,7 @@ Microsoft SQL Server 2016 和 Microsoft Azure SQL 数据库对数据类型转换
 
 以下示例演示在 SQL Server 与 R.之间往返访问时如何转换数据。
 
-查询获取的值从一系列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，并使用存储的过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)输出中使用 R 运行时的值。
+该查询获取的值从一系列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表，并使用存储的过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)输出使用 R 运行时的值。
 
 ```SQL
 CREATE TABLE MyTable (    
@@ -148,8 +148,8 @@ outputDataSet <- inputDataSet'
 ||||||
 |-|-|-|-|-|
 ||C1|C2|C3|C4|
-|@shouldalert|@shouldalert|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|@shouldalert|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
+|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 注意使用 R 中的 `str` 函数可获取输出数据的架构。 此函数返回以下信息：
 
@@ -190,4 +190,3 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>请参阅
 
-[Python 库和数据类型](../python/python-libraries-and-data-types.md)

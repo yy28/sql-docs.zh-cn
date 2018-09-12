@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f575b1a21efa30d2317cff644b65c73150c4ac1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc4890077c25e98ebff0832423f6d1f0aaabdc46
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170178"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889213"
 ---
 # <a name="create-views-over-xml-columns"></a>对 XML 列创建视图
   可以使用`xml`类型列创建视图。 以下示例在其中创建一个视图中的值`xml`类型列使用检索`value()`方法的`xml`数据类型。  

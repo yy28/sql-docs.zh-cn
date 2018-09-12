@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8974a7a44f7f88dedd81e734af5a8b1f86530a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ed5e1d620a5a56848a57f67b92345fc535db3cf
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186484"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888493"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>将 AUTO 模式与 FOR XML 一起使用
   如 [FOR XML (SQL Server)](for-xml-sql-server.md)中所述，AUTO 模式将查询结果以嵌套 XML 元素的方式返回。 这不能较好地控制从查询结果生成的 XML 的形式。 如果要生成简单的层次结构，AUTO 模式查询很有用。 但是， [将 EXPLICIT 模式与 FOR XML 一起使用](use-explicit-mode-with-for-xml.md) 和 [将 PATH 模式与 FOR XML 一起使用](use-path-mode-with-for-xml.md) 在确定从查询结果生成的 XML 的形式方面可提供更好的控制和更大的灵活性。  

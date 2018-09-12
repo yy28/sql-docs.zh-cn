@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afd288c2d0dcd6285a69ed74653a7f14519d354d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc4a61e60e171c18812361f2b7f99cbed758f7f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216977"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888393"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 查询与嵌套 FOR XML 查询的比较
   本主题将单个 FOR XML 查询与嵌套 FOR XML 查询进行了比较。 使用嵌套 FOR XML 查询的好处之一就是可以为查询结果指定一个以属性为中心和以元素为中心的 XML 的组合。 此示例演示了这种好处。  

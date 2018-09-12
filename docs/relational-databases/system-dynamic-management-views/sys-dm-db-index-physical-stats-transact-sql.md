@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085550"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375700"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|压缩页的数目。<br /><br /> 对于堆，新分配的页未进行 PAGE 压缩。 堆在以下两种特殊情况下进行 PAGE 压缩：大量导入数据时和重新生成堆时。 导致页分配的典型 DML 操作不会进行 PAGE 压缩。 当 compressed_page_count 值增长到超过您所需的阈值时，将重新生成堆。<br /><br /> 对于具有聚集索引的表，compressed_page_count 值表示 PAGE 压缩的效率。|  
 |hobt_id|BIGINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 则为 NULL|  
 |column_store_delete_buffer_state|TINYINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
-|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> NOT_APPLICABLE – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
+|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 无效 – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
   
 ## <a name="remarks"></a>Remarks  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  

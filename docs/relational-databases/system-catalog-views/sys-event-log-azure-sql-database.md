@@ -6,9 +6,7 @@ ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
-ms.technology: system-objects
+ms.component: ''
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5e6433496d1807317cfa2591dc453d6115f2a7cc
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030137"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089959"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -69,7 +67,7 @@ ms.locfileid: "43030137"
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**连接**|**connection_successful**|0|**connection_successful**|0|已成功连接到数据库。|  
 |**连接**|**connection_failed**|0|**invalid_login_name**|2|登录名在此版本的 SQL Server 中无效。|  
-|**连接**|**connection_failed**|@shouldalert|**windows_auth_not_supported**|2|在此版本的 SQL Server 中不支持 Windows 登录名。|  
+|**连接**|**connection_failed**|1|**windows_auth_not_supported**|2|在此版本的 SQL Server 中不支持 Windows 登录名。|  
 |**连接**|**connection_failed**|2|**attach_db_not_supported**|2|用户已请求附加不受支持的数据库文件。|  
 |**连接**|**connection_failed**|3|**change_password_not_supported**|2|用户已请求更改不受支持的用户登录密码。|  
 |**连接**|**connection_failed**|4|**login_failed_for_user**|2|用户登录失败。|  
@@ -79,7 +77,7 @@ ms.locfileid: "43030137"
 |**连接**|**connection_failed**|8|**client_close**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 在建立连接时，客户端可能已超时。 尝试增加连接超时值。|  
 |**连接**|**connection_failed**|9|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
-|**连接**|**connection_terminated**|@shouldalert|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
+|**连接**|**connection_terminated**|1|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
 |**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
 |**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  

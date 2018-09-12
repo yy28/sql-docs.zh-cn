@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc039c5e5c8c7aafbb1fb3b0405ad50413b24ca4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48b8df37c64ea017445f1e44cd6e03603708fa86
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258453"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820753"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server General Statistics 对象
   **中的** SQLServer:General Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器，用于监视服务器范围内的常规活动，例如，当前的连接数和每秒与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的计算机连接和断开的用户数。 这在大型联机事务处理 (OLTP) 类型系统（这种系统中有很多客户端与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例连接和断开连接）上工作时会非常有用。  

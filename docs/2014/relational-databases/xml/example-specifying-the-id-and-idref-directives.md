@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34cabf718a824ea26c25fa54e5bb7c9206af9720
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319753"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888733"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>示例：指定 ID 和 IDREF 指令
   此示例与 [指定 ELEMENTXSINIL 指令](example-specifying-the-elementxsinil-directive.md) 示例几乎相同。 唯一的差别在于查询指定的是 **ID** 和 **IDREF** 指令。 这些指令覆盖 <`OrderHeader`> 和 <`OrderDetail`> 元素中 **SalesPersonID** 属性的类型。 这会形成文档内链接。 您需要使用架构才能查看被覆盖的类型。 因此，该查询在 FOR XML 子句中指定 **XMLDATA** 选项来检索架构。  

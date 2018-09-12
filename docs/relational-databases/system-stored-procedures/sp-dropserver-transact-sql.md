@@ -1,7 +1,7 @@
 ---
 title: sp_dropserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,36 +23,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: faf0d79f399a714e4402d59c662df12021eb34f2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1aa8b62529bee6c5035161a9d7964c5f2f8ec5c7
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031900"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171699"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   从本地 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的已知远程服务器和链接服务器的列表中删除服务器。  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>语法  
   
-```  
-  
+```sql  
 sp_dropserver [ @server = ] 'server'   
      [ , [ @droplogins = ] { 'droplogins' | NULL} ]  
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@server =** ] **'***server***'**  
+ 服务器  
  要删除的服务器。 *server* 的数据类型为 **sysname**，无默认值。 *服务器*必须存在。  
   
- [  **@droplogins =** ] **droplogins** |为 NULL  
- 指示相关服务器远程和链接服务器登录名*服务器*如果还必须删除**droplogins**指定。 **@droplogins** 是**char （10)**，默认值为 NULL。  
+ *droplogins*  
+ 指示相关服务器远程和链接服务器登录名*服务器*如果还必须删除**droplogins**指定。 **`@droplogins`** 是**char （10)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  

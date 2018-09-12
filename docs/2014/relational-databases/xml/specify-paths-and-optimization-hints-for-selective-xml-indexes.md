@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
@@ -14,12 +13,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42fbf8de0e7d0240ff9ad7faca43f215c0a695a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0305c5229d5e690b163cfec12e87aa1d412af4f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202857"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889843"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
   本主题介绍如何在创建或更改选择性 XML 索引时，如何指定要建立索引的节点路径以及用于索引的优化提示。  
@@ -362,20 +361,20 @@ WHERE T.xmldata.exist('
   
 |优化提示|更高效的存储|改进的性能|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|是|“否”|  
-|**SINGLETON**|“否”|是|  
-|**DATA TYPE**|是|是|  
-|**MAXLENGTH**|是|是|  
+|**node()**|用户帐户控制|否|  
+|**SINGLETON**|否|用户帐户控制|  
+|**DATA TYPE**|用户帐户控制|用户帐户控制|  
+|**MAXLENGTH**|用户帐户控制|用户帐户控制|  
   
 ### <a name="optimization-hints-and-data-types"></a>优化提示和数据类型  
  您可以将节点作为 XQuery 数据类型或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型建立索引。 下表显示了每种数据类型支持的优化提示。  
   
 |优化提示|XQuery 数据类型|SQL 数据类型|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|是|“否”|  
-|**SINGLETON**|是|是|  
-|**DATA TYPE**|是|“否”|  
-|**MAXLENGTH**|是|“否”|  
+|**node()**|用户帐户控制|否|  
+|**SINGLETON**|用户帐户控制|用户帐户控制|  
+|**DATA TYPE**|用户帐户控制|否|  
+|**MAXLENGTH**|用户帐户控制|否|  
   
 ### <a name="node-optimization-hint"></a>node() 优化提示  
  适用于：XQuery 数据类型  

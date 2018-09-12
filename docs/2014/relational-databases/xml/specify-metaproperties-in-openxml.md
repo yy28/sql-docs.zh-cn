@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 55dad5adeafa9689f8d3a0910f1b345ee575ffbe
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084029"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889923"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定元属性
   XML 文档中的元属性特性用于描述 XML 项（例如元素节点、属性节点或其他任何 DOM 节点）的属性。 这些特性并不实际存在于 XML 文档文本中。 但是，OPENXML 将为所有 XML 项提供这些元属性。 通过这些元属性可以提取 XML 节点的信息（例如本地定位和命名空间信息）。 这些信息将提供比文字表现形式更加详细的信息。  
@@ -47,17 +46,17 @@ ms.locfileid: "39084029"
 |**\@mp:localname**|存储节点名的本地部分。 与前缀及命名空间 URI 一起用于命名元素节点或属性节点。|  
 |**\@mp:namespaceuri**|提供当前元素的命名空间 URI。 如果此特性的值为 NULL，则表明不存在命名空间。|  
 |**\@mp:prefix**|存储当前元素名的命名空间前缀。<br /><br /> 如果不存在前缀 (NULL) 且给定了 URI，则表明指定的命名空间为默认命名空间。 如果没有给定 URI，则表明没有附加命名空间。|  
-|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> **\@mp:prev**包含具有相同父元素的上一个同级的 XML ID。 如果某个元素位于同级列表的开头 **\@mp:prev**为 NULL。|  
+|**\@mp:prev**|存储相对于节点的前一个同级元素。 此特性将提供有关元素在文档中的排序顺序的信息。<br /><br /> \@mp:prev 包含父元素相同的上一个同级元素的 XML ID。 如果元素是同级列表的首个元素，\@mp:prev 为空。|  
 |**\@mp:xmltext**|用于处理目的。 它是元素及其属性以及 OPENXML 溢出处理中所使用的子元素的文本序列化。|  
   
  下表显示了使您得以检索关于层次结构的信息的其他父属性。  
   
 |父元属性特性|Description|  
 |-----------------------------------|-----------------|  
-|**\@mp:parentid**|对应于 **.../\@mp:id**|  
-|**\@mp:parentlocalname**|对应于 **.../\@mp:localname**|  
-|**\@mp:parentnamespacerui**|对应于 **.../\@mp:namespaceuri**|  
-|**\@mp:parentprefix**|对应于 **.../\@mp:prefix**|  
+|**\@mp:parentid**|对应于 ../\@mp:id|  
+|**\@mp:parentlocalname**|对应于 ../\@mp:localname|  
+|**\@mp:parentnamespacerui**|对应于 ../\@mp:namespaceuri|  
+|**\@mp:parentprefix**|对应于 ../\@mp:prefix|  
   
 ## <a name="examples"></a>示例  
  下列示例说明了如何使用 OPENXML 来创建不同的行集视图。  
@@ -67,11 +66,11 @@ ms.locfileid: "39084029"
   
  OPENXML 语句说明了以下信息：  
   
--   **Id**列映射到 **\@mp:id**元属性特性，表明该列包含由系统生成的唯一 XML ID，该元素。  
+-   id 列映射到 \@mp:id 元属性，并指明列中包含元素的系统生成唯一 XML ID。  
   
--   **父**列映射到 **\@mp:parentid** ，表明该列包含的元素的父 XML ID。  
+-   parent 列映射到 \@mp:parentid，并指明列中包含元素的父元素的 XML ID。  
   
--   **ParentLocalName**列映射到 **\@mp:parentlocalname** ，表明该列包含父的本地名称。  
+-   parentLocalName 列映射到 \@mp:parentlocalname，并指明列中包含父元素的本地名称。  
   
  然后，SELECT 语句将返回由 OPENXML 生成的行集：  
   
@@ -164,13 +163,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. 指定 xmltext 元属性来检索列中未使用的数据  
  此示例使用 OPENXML 创建该示例 XML 文档的行集视图。 本例显示了如何通过将 **xmltext** 元属性特性映射到 OPENXML 中的行集列来检索未用完的 XML 数据。  
   
- **注释**列映射到被标识为溢出列 **\@mp:xmltext**元属性。 *flags* 参数将设置为 **9** （XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
+ 通过将 comment 列映射到 \@mp:xmltext 元属性，把它标识为溢出列。 *flags* 参数将设置为 **9** （XML_ATTRIBUTE 和 XML_NOCOPY）。 这指明了 **attribute-centric** 映射，并指明只有未用完的数据才应当被复制到溢出列中。  
   
  然后，SELECT 语句返回由 OPENXML 生成的行集。  
   
- 在此示例中，  **\@mp:parentlocalname**元属性设置为列**ParentLocalName**，OPENXML 所生成的行集中。 因此，此列包含父元素的本地名。  
+ 此示例为 OPENXML 所生成行集中的 ParentLocalName 列设置了 \@mp:parentlocalname 元属性。 因此，此列包含父元素的本地名。  
   
- 在行集中另外还指定了两列， **parent** 和 **comment**。 **父**列映射到 **\@mp:parentid** ，表明该列包含父元素的元素的 XML ID。 Comment 列标识为溢出列映射到 **\@mp:xmltext**元属性。  
+ 在行集中另外还指定了两列， **parent** 和 **comment**。 parent 列映射到 \@mp:parentid，并指明列中包含元素的父元素的 XML ID。 通过将 comment 列映射到 \@mp:xmltext 元属性，把它标识为溢出列。  
   
 ```  
 DECLARE @idoc int  
