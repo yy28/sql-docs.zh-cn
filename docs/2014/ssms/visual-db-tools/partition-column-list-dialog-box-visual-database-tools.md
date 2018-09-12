@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7625135e097627776eae7fc63222c578f9b535d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce0f53334ebca555d57284e0b6cad4065b1084
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817113"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>“分区列列表”对话框 (Visual Database Tools)
   如果表具有关联的分区方案，则可以使用此对话框选择将分区函数应用于哪一列或哪些列。 要切换到的列的数据类型必须与分区函数中定义的列的数据类型相同，该函数才会有效。  

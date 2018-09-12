@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094fd9d740501fafee8c75eff162a132c01e08ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 453a95005018f2c5f62d8591fbd8f29a04ffa57c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819903"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>选项 （SQL Server 对象资源管理器-脚本页）
   使用此页可设置脚本选项，以应用于**对象资源管理器**中对象上下文菜单上的以下命令：  
@@ -38,7 +37,7 @@ ms.locfileid: "37170218"
 ## <a name="remarks"></a>Remarks  
  **编辑**并**修改**命令可能会产生不同的结果**脚本\<对象 > 作为**命令用于同一选项设置。 “编辑”和“修改”命令用于在查询编辑器会话期间修改当前数据库中的对象。 **脚本\<对象 > 作为**命令用于生成一个脚本，以便它可用于更高版本创建的对象。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  通过从每个选项右侧列表中的可用设置中进行选择，可以指定脚本选项。  
   
 ### <a name="general-scripting-options"></a>常规脚本选项  

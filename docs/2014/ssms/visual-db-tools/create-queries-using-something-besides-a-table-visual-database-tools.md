@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eea7b83bcad091b395b82aa39c47a2ab2f9685d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2efdf3c32b1ed8f46bef8b2a7d471761318539a6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303187"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815203"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用表以外的对象创建查询 (Visual Database Tools)
   每次编写检索查询时，必须明确说明所需的列和行以及查询处理器应从何处查找原始数据。 一般情况下，此类原始数据由一个表或几个联接在一起的表组成。 不过，原始数据也可以来自表以外的源。 事实上，它可以来自视图、查询、同义词或可返回表的用户定义函数。  

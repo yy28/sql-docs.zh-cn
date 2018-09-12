@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08c664c7e8f2c345331b90d5b4ad502638a0c5be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9b953b0d6efcd99204fc812dc1d612dfd2d7dc3b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263753"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814693"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio 中的自定义报表
   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，很多对象资源管理器节点都显示一组由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 创建的标准报表。 这些报表汇总了通常请求的服务器信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 开始，管理员可以从 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中运行使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]创建的自定义报表。  
@@ -64,7 +63,7 @@ ms.locfileid: "37263753"
 ## <a name="managing-custom-reports"></a>管理自定义报表  
  如果用户具有很多自定义报表，建议他们使用具有相应 NTFS 文件系统权限的文件系统文件夹来组织这些报表。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  自定义报表是使用当前用户的权限运行的。 若要防止恶意用户更改报表运行的查询，应将包含报表文件的文件系统文件夹的权限设置为“限制访问”。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务所使用的用户和帐户都要求对包含报表文件的文件系统文件夹具有读取权限。  

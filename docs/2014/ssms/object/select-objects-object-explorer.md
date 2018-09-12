@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e887cccec4a7f03626639624c2c109280a31614
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265673"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818133"
 ---
 # <a name="select-objects-object-explorer"></a>选择对象（对象资源管理器）
   使用“选择对象”对话框可以向另一个对话框的列表中添加对象。 对话框的标题以及对话框中可用的选项取决于该对话框的打开方式。 只显示可用的选项，例如，当您为新对象选择所有者时，只有登录名选项可用。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择这些对象类型**  
  显示类型列表，将选择属于所列类型的对象。 这些类型包括 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 级别和数据库级别的主体和安全对象。 此框使用从“选择对象类型”对话框（可使用“对象类型”按钮进行访问）中选择的选项进行填充。  
   

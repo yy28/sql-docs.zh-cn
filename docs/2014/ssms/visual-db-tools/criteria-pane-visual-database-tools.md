@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 021dd0e24fbdbefdceba2920786fc62f451cb677
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177104"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818553"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>“条件”窗格 (Visual Database Tools)
   “条件”窗格用于指定查询选项（例如要显示哪些数据列、如何对结果进行排序以及选择哪些行等），您可以通过将选择输入到一个类似电子表格的网格中来进行指定。 在“条件”窗格中，可以指定：  
@@ -57,7 +56,7 @@ ms.locfileid: "37177104"
   
  如果“条件”窗格不可见，则右键单击设计器，指向“窗格”，再单击“条件”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |**列**|**查询类型**|**Description**|  
 |----------------|--------------------|---------------------|  

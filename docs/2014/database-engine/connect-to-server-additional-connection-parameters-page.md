@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 670d2e23467d80ee1a183ad3f5c5aae46ce64067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 238a558f7b11c122012c2bfbe9538fa803fa8444
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283933"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816253"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>连接到服务器（“其他连接参数”页）
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的“连接到”对话框将最常用的连接字符串值作为选项提供。 使用“其他连接参数”页可以将更多连接参数添加到连接字符串。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68124364dfe73693758dfe9a83df14d267324a90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3e75b93be21e650ca4e22445d77ae87437d6cc3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181264"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819283"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 中的工具窗口
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 为所有开发和管理阶段提供了很多功能强大的工具窗口。 某些工具可用于任何 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件，而其他一些工具则只能用于某些组件。 下表标识了可以用于所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]组件的工具。  

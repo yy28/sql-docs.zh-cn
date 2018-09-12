@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0164c0a426f0d317107178a5f7c2e7eb9e41c5b8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326897"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814413"
 ---
 # <a name="save-as"></a>另存为
   使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框中，单击**保存** *\<文件 >* **作为**上**文件**菜单 (其中 *\<文件 >* 是当前项的名称)，或按 ALT + F，一个在代码编辑器中。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,17 +17,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60e6ba4d3c9997eaa9052b5d88bf1e2ed625f548
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 928f7490202eafeb7b57b747cf6bb4a2142bce5f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226637"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817753"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具对话框
   使用“外部工具”对话框可以将外部工具（如 SQLCMD 或记事本）添加到“工具”菜单中。 通过添加外部工具，在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 环境中工作时可以轻松启动其他应用程序。 启动此工具时，可以指定参数及工作目录。 此外，“输出”窗口中可以显示某些工具的输出。 通过“工具”菜单可以打开“外部工具”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **菜单内容**  
  列出当前添加到“工具”菜单上的菜单项标题。 使用“上移”和“下移”箭头可以更改菜单项的显示顺序。 使用“删除”按钮可以从菜单中删除菜单项。  
   

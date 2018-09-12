@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 958f892df463533138b722e16a61eeccd0e06b19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63105d57b0c63f5877fd5af6b93f86b4f3b3121e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244033"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816063"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>“检测到数据库更改”对话框 (Visual Database Tools)
   如果尝试保存数据库关系图或选定的表，但某些将受保存操作影响的数据库对象对于数据库已经过期，则会显示此对话框。 如果接受对话框中显示的更改，则将更新数据库以匹配关系图并改写其他用户所做的更改。  
@@ -31,7 +30,7 @@ ms.locfileid: "37244033"
 > [!NOTE]  
 >  虽然您无法撤消对表或数据库关系图所做的更改，但在保存表或关系图之前，这些更改并不会保存到数据库中。 通过选择“否”并关闭所有打开的关系图而不进行保存，即可放弃所有未保存的更改。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **检测到差异时警告**  
  指定在您下次尝试保存数据库关系图或所选表时是否显示此对话框。 选中此项表示在您每次保存对于数据库已过期的关系图或表时，该对话框都仍会显示。 未选中此项表示该对话框不再显示。 默认情况下，此框处于选中状态。 如果取消选中此选项，可以在“选项”对话框中重新选中它。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ce0eaf8e2e0ab319ea040a2c04789fcbc521f68
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29683280c60090a29d50c0cc94f0514dc31a4d23
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268113"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819963"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>清除查询结果 (Visual Database Tools)
   在“查询和视图设计器”中运行查询后，可以清除“结果”窗格。 此过程适用于通过使用对象资源管理器中的“打开视图”或“打开表”选项创建的查询。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，在查询编辑器中运行查询后，除非关闭查询编辑器窗口或运行其他查询，否则不能清除“结果”窗格。  

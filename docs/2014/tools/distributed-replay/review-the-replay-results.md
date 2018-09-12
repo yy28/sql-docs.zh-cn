@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
@@ -14,12 +13,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03149886d49a86656aca73f80685e711c3ca9b77
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d68dd4dfb9ac566d43bfa78f51809a53e12be34
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308957"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815244"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式重播功能完成一个分布式重播之后，可以在每个客户端上的结果跟踪文件中捕获和保存每个客户端的重播活动。 为了捕获此活动，使用“重播”选项运行管理工具时，必须使用 **-o** 参数。 有关“重播”选项的详细信息，请参阅[“重播”选项（Distributed Replay 管理工具）](replay-option-distributed-replay-administration-tool.md)。  
@@ -62,7 +61,7 @@ ms.locfileid: "37308957"
   
 |数据列名称|数据类型|Description|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|`nvarchar`|事件类的名称。|@shouldalert|  
+|EventClass|`nvarchar`|事件类的名称。|1|  
 |EventSequence|`bigint`|对于提供程序错误、内部错误和警告，这是对应于错误或警告的捕获事件序列。<br /><br /> 对于所有其他事件类，这是原始跟踪数据中的事件序列。|2|  
 |ReplaySequence|`bigint`|对于提供程序错误、内部错误和警告，这是对应于错误或警告的重播事件序列。<br /><br /> 对于所有其他事件类，这是在重播期间分配的事件的序列。|3|  
 |TextData|`ntext`|TextData 的内容取决于 EventClass。<br /><br /> 对于审核登录和 ExistingConnection，这是用于连接的设置选项。<br /><br /> 对于 SQL:BatchStarting，这是批处理请求的正文。<br /><br /> 对于 RPC:Starting，这是调用的存储过程。<br /><br /> 对于重播设置事件，此列包含在重播配置文件中定义的设置。<br /><br /> 对于重播统计信息事件，这包含以下信息：<br />重播目标 SQL Server<br />可重播事件的总数<br />提供程序错误的数量<br />内部错误的数量<br />内部警告<br />总错误数<br />整体通过率<br />重播时间 (HH:MM:SS:MMM)<br /><br /> 对于重播结果集事件，这将显示返回结果列标题的列表。<br /><br /> 对于重播结果行事件，这将显示该行所有列的返回值。<br /><br /> 对于重播内部警告和重播提供程序错误，此列包含提供程序警告或错误。|4|  

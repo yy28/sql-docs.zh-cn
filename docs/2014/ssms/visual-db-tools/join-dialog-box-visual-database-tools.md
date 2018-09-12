@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84e6be3acae31d5e50dd0361de710439019cfd2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238167"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814073"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>“联接”对话框 (Visual Database Tools)
   使用此对话框可以指定用于对表进行联接的选项。 若要访问此对话框，请在“设计”窗格中选择联接线。 然后，在“属性”窗口中单击“联接条件和类型”，再单击属性右侧显示的省略号 **(…)**。  
@@ -31,7 +30,7 @@ ms.locfileid: "37238167"
   
  有关联接表的详细信息，请参阅[使用联接进行查询 (Visual Database Tools)](visual-database-tools.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |**术语**|**定义**|  
 |--------------|--------------------|  

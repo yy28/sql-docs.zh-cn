@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,17 +17,17 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b254e3d03945f3a7c3641c036a54df18ba13f7bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272093"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815213"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
   通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择要打开的程序**  
  列出 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 中可供所选文件类型使用的编辑器。 从所显示的列表中选择要用来打开文档的编辑器，或者单击“添加”在该列表中包括新编辑器。  
   

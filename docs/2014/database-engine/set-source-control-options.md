@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ed15c8ca6fb8e93695b7465460c34d730453d01
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 936b3b47050985d6d8507205a88c85a49cbbdd90
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300777"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817233"
 ---
 # <a name="set-source-control-options"></a>设置源代码管理选项
   在利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中内置的源代码管理功能之前，应针对您工作中所处的各种环境对源代码管理选项进行配置。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9441559299d288c83770d5e9dddddacf90abebec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae558dfd1f87deef2dd42af040bd804457e3b85e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221627"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813953"
 ---
 # <a name="system-data-collection-set-reports"></a>系统数据收集组报表
   数据收集器提供了每个系统数据收集组的历史记录报表。 下面的每个报表都使用管理数据仓库中存储的数据：  

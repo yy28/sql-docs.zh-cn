@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0e6ef62d46d8e597ad57450b7d121027c69adcb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152498"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816693"
 ---
 # <a name="data-tier-applications"></a>数据层应用程序
   数据层应用程序 (DAC) 是一个逻辑数据库管理实体，用于定义与用户数据库关联的所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象，如表、视图和实例对象（包括登录名）。 DAC 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库部署的一个自包含单元，它使数据层开发人员和数据库管理员能够将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象打包到一个名为“DAC 包”（也称作 DACPAC）的可移植项目中。  
@@ -114,7 +112,7 @@ ms.locfileid: "37152498"
   
  数据库管理工具 Server Management Studio、Management Portal for SQL Azure 和 DACFx API 支持这两种功能。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  您必须是属于`dbmanager`角色或分配`CREATE DATABASE`创建数据库，包括通过部署 DAC 包创建数据库的权限。 您必须是属于`dbmanager`角色，或分配了`DROP DATABASE`权限才能删除数据库。  
   
 ## <a name="data-tier-application-tasks"></a>数据层应用程序任务  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 967467dbda025160a7ceccad5fbc2f3b7935469e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d2fb449a9f3fd677a9a42511f7cb82da9ee55d7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175250"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818533"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在同一查询中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
   在某些情况下，在对整个组应用条件（使用 HAVING 子句）之前，可能希望排除组中的单个行（使用 WHERE 子句）。  

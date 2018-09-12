@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 817d965a1f3ec36088dcecc80e5018be8aa6368a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253919"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818303"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、 代理和 DBM Transport 对象
+# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、Broker 和 DBM 传输对象
   **Broker / DBM Transport** 性能对象包含报告 Service Broker 和数据库镜像的网络信息的性能计数器。 下表列出了此对象包含的计数器。  
   
 |SQL Server Broker/DBM Transport 计数器|Description|  

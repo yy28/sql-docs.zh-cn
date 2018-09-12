@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a65a894ae850d45a5887e08f51e50539ce818226
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a96b1e1bd047f2a09a8969b1f57ef73520c11489
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177634"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817003"
 ---
 # <a name="detect-failed-input-output-request"></a>检测失败的输入的输出请求
   此规则检查系统事件日志中是否存在 EventId 50。 此错误是由失败的 I/O 请求引起的。  

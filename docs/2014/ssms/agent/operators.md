@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d64bf91d18b5bbd1538a3f65d8ca50f74b8019
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59ca38030ffa52b8a110941f7881fff470cc3f77
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282343"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818093"
 ---
 # <a name="operators"></a>运算符
   操作员是在完成作业或出现警报时可以接收电子通知的人员或组的别名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务支持通过操作员通知管理员的功能。 运算员可以通知和监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的功能。  

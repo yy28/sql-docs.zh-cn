@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 911f9eaa294b88ce9c773493f3eed9824a12ae7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bab11af27318818367a0622eda866d8ed5bed19
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321677"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819393"
 ---
 # <a name="results-pane-visual-database-tools"></a>“结果”窗格 (Visual Database Tools)
   “结果”窗格显示最近执行的 SELECT 查询的结果。 （其他类型查询的结果会在消息框中显示。）若要打开“结果”窗格，请打开或创建一个查询或视图，或者返回某个表的数据。 如果默认情况下不显示“结果”窗格，请在 **“查询设计器”** 菜单中，指向 **“窗格”**，再单击 **“结果”**。  

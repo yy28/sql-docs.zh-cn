@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,17 +18,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58b44f220715654a3a9d37271aeb7ff017355ffa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5bf14ed290a64f4f0730a78656843e6c802a6ed
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286563"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819814"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>选择工具箱项（“维护任务”页）
   “自定义工具箱”对话框的此选项卡可显示已经在你的计算机上注册的所有维护任务组件的列表，可以通过此选项卡更改工具箱中所显示的组件。 可以从“工具”菜单中打开“自定义工具箱”对话框。 若要对组件列表排序，请选择相应的列标题。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “维护任务”选项卡包括以下信息列。  
   
  **名称**  
@@ -43,7 +42,7 @@ ms.locfileid: "37286563"
   
  单击某个名称，在“语言”和“版本”框中显示相应组件的属性，同时显示相应的图标。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **语言**  
  组件的语言。  
   

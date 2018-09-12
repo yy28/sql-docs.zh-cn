@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a324f7e0bd9ca0d71b727dd109f8d7dd0a8aec7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55254915b6fad1a7b1c2701ab860f90807a110d0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240277"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817153"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>选项 （设计人员表和数据库设计器页）
   使用此页可确定设计器的默认行为。 若要访问这些设置，请在“工具”菜单上，单击“选项”，展开“设计器”文件夹，再单击“表设计器”。  

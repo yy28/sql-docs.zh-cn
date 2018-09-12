@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3243b5fbf5fda0afea9fdbfa3fc26fbfbeee1bae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55dcd47ae1fa14b1d23cccf41f6aed1beae061c2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210377"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817093"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>关系图窗格 (Visual Database Tools)
   “关系图”窗格以图形形式显示了您通过数据连接选择的表或表值对象。 同时也会显示它们之间的联接关系。  
@@ -39,7 +38,7 @@ ms.locfileid: "37210377"
   
  每个表或表值对象在“关系图”窗格中均作为单独的窗口出现。 每个矩形的标题栏中的图标表示该矩形所代表的对象类型，如下表所示：  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表**  
  列出可以添加到“关系图”窗格中的表。 若要添加某个表，请选择该表，再单击“添加”。 若要同时添加多个表，请选中这些表，再单击“添加”。  
   

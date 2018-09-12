@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +15,19 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 207a5df2cc4641819eb2b06ddb0fe1aec6d4d984
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236047"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815623"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
   使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框为这些列创建索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  
   
  有关创建空间索引时的限制信息，请参阅 [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **所选空间索引**  
  列出现有空间索引。 选择要显示其属性的索引。 如果该列表为空，则表示尚未为该表定义空间索引。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "37236047"
  **允许页锁定**  
  指定对此索引是否允许页级锁定。 允许或禁用页级锁定会影响数据库性能。  
   
- **重新计算****统计信息  **  
+ **重新计算****统计信息**   
  指定在创建索引后是否计算新的统计数据。 重新计算统计数据会降低索引的生成速度，但通常会提高查询性能。  
   
  **允许行锁定**  

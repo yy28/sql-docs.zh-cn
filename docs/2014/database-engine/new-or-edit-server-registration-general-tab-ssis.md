@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +15,19 @@ caps.latest.revision: 34
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3619e2ef17720dd15e0f6aeccef2ec484331a966
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15e697225ba6155712cb7f5e48901ca98b37e041
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306168"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815973"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>新建或编辑服务器注册（“常规”选项卡）(SSIS)
   使用此选项卡可以指定注册 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 时的选项。  
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击“Integration Services”，右键单击任意已注册的服务器组，指向“新建”，然后单击“服务器注册”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器类型**  
  在“已注册的服务器”中注册服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** **、** SQL Server Compact Edition  或 **Integration Services** 。  
   

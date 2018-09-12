@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ef278557bd1c06802e1889bdd068dcac98b4bea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6b326cf19dde95a0b942a85c1d25bd6ac4a9456
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152438"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816973"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
   一个企业可以具有多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具，并且每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具可以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多个实例和多个数据层应用程序。 每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具都具有一个且仅有一个实用工具控制点 (UCP)。 必须为每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具分别创建一个新的 UCP。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个托管实例以及每个数据层应用程序都是一个且只能是一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具的成员，并且由单个 UCP 管理。  

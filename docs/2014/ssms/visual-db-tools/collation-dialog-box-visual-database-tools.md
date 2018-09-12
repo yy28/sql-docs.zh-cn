@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59fdbf7a2847b4a033a2f6a22bb056393e24b272
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db1b76788ea1dbd931eb021f9f3da270d57abfdf
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218847"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819293"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
   使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文档。  
@@ -33,7 +32,7 @@ ms.locfileid: "37218847"
   
 -   在“列属性”选项卡的“排序规则”字段中单击，再单击该字段右侧的省略号按钮 **(…)**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL 排序规则**  
  在下拉列表中由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定义的排序规则顺序之间进行选择。  
   

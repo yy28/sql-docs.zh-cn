@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 738bae73382d71a3cd0458a35002068c56817d70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d14ab9b473531de9b5692e96e613667b2bdf1a3
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198597"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816543"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>连接到服务器（“连接属性”页）（数据库引擎）
   使用此选项卡可在连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 实例或在“已注册的服务器”中注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时查看或指定选项。 只有在连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例时，此对话框中才显示“连接”和“选项”。 注册 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 时，此对话框中仅显示“测试”和“保存”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **连接到数据库**  
  从列表中选择要连接到的数据库。 如果选择**\<默认值 >**，您将连接到服务器的默认数据库。 如果选择**\<浏览服务器 >**，可以浏览要连接到数据库的服务器。  
   

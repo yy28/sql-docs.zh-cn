@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21004c5afbd0dc9e3eae2c70f2a45858a4a3d295
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87c6b1c72273a9ca0185de4274cfbbcbd31982df
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232917"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815663"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>“索引列”对话框 (Visual Database Tools)
   使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”对话框中，单击“常规”部分中的“列”行的省略号按钮。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **列名**  
  选择参与此索引的列。 选择 **\<None >** 若要从索引中删除列...  
   

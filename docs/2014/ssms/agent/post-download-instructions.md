@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe9badde8462288cd9e1cbdae6b6430a5a2f1210
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a4ec7ee28be7b3c3815daffd75d2a6d5168ea81
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259973"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817783"
 ---
 # <a name="post-download-instructions"></a>发布下载指令
   使用此页可以指定目标服务器的下载指令。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **指令类型**  
  指定要发布的下载指令的类型。  
   

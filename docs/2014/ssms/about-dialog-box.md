@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,17 +16,17 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7dbf08b5fdb44c2dc8b843c09b52e3e986093c02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2476fc9b16380da551f4e9752a74c8de22d1fb10
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315187"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818173"
 ---
 # <a name="about-dialog-box"></a>“关于”对话框
   “关于”对话框提供了产品信息，并可通过该对话框访问有关运行该产品的计算机信息。 在评估版本中，[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 项将列出安装过期前所剩余的天数。 此对话框在“帮助”菜单中。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **组件名称**  
  列出已安装的每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 项的名称。  
   

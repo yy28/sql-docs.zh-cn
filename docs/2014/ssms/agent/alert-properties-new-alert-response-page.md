@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,17 +15,17 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 326576fc2b8a294a5fa8ebd236810d31b0f114f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fe8274392d3b2b52e0a37c5a9ed3647508ea8e6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274003"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815193"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警报属性-新建警报 （响应页）
   使用此页可以指定要运行的某项作业，并可获取为响应 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报而接收相关通知的操作员列表。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **执行作业**  
  启用“作业列表”、“新建作业”和“查看作业”选项。  
   

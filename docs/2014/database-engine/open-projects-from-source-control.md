@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 204b3a4419ffe486907e8a60bcf7fd229c78192e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc741ae71ffec313b44ead1c2f634631fb99405a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277253"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818903"
 ---
 # <a name="open-projects-from-source-control"></a>从源代码管理打开项目
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 直接从源代码管理打开项目。 执行此操作时，[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 将检索项目的最新版本，并将其复制到本地磁盘中。 此外，[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 环境还可以为项目自动创建一个解决方案。  
