@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085069"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564123"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>如何：编写在单个事务范围内运行的 SQL Server 单元测试
 您可以修改单元测试以便在单个事务的范围内运行。 如果您采用此方法，则可以在测试结束后回滚测试所执行的所有更改。 下面的过程介绍了如何执行以下操作：  
@@ -60,7 +60,7 @@ ms.locfileid: "39085069"
     有关 ROLLBACK TRANSACTION 如何与存储过程和触发器一起使用的详细信息，请参见 Microsoft 网站上的网页：[ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927)。  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>为单个测试方法创建事务  
-在本示例中，当使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 类型时，你将使用环境事务。 默认情况下，Execution 和 Privileged 连接将不使用环境事务，因为这些连接是在执行方法之前创建的。 SqlConnection 具有一个将活动连接与事务关联的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法。 创建某个环境事务时，该事务会将自身注册为当前事务，并且你可以通过 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 属性访问它。 在此示例中，当释放环境事务时将会回滚该事务。 如果想要提交在运行单元测试时所做的任何更改，则必须调用 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
+在本示例中，当使用 [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope) 类型时，你将使用环境事务。 默认情况下，Execution 和 Privileged 连接将不使用环境事务，因为这些连接是在执行方法之前创建的。 SqlConnection 具有一个将活动连接与事务关联的 [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction) 方法。 创建某个环境事务时，该事务会将自身注册为当前事务，并且你可以通过 [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) 属性访问它。 在此示例中，当释放环境事务时将会回滚该事务。 如果想要提交在运行单元测试时所做的任何更改，则必须调用 [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete) 方法。  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>为单个测试方法创建事务  
   

@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1dcc845c366b912f762e9bbf805c54c5de920fca
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085829"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563898"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>演练：使用自定义测试条件来验证存储过程的结果
 在本功能扩展演练中，将创建一个测试条件，并且将通过创建 SQL Server 单元测试来验证其功能。 此过程包括为该测试条件创建一个类库项目，并且对该项目进行签名和安装它。 如果已有要更新的测试条件，请参阅[如何：将 Visual Studio 2010 自定义测试条件从早期版本升级到 SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)。  
@@ -98,7 +98,7 @@ ms.locfileid: "39085829"
     所需引用将显示在“解决方案资源管理器”中该项目的“引用”节点下。  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>创建 ResultSetColumnCountCondition 类  
-现在，将 Class1 重命名为 ResultSetColumnCountCondition 并从 [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 派生它。 ResultSetColumnCountCondition 类是一个简单的测试条件，该条件验证在结果集中返回的列数。 您可以使用此条件确保某一存储过程的协定是正确的。  
+现在，将 Class1 重命名为 ResultSetColumnCountCondition 并从 [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 派生它。 ResultSetColumnCountCondition 类是一个简单的测试条件，该条件验证在结果集中返回的列数。 您可以使用此条件确保某一存储过程的协定是正确的。  
   
 1.  在“解决方案资源管理器”中，右键单击 Class1.cs，单击“重命名”，然后键入 ResultSetColumnCountCondition.cs。  
   
@@ -118,13 +118,13 @@ ms.locfileid: "39085829"
         public class ResultSetColumnCountCondition  
     ```  
   
-4.  从 [testcondition](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 派生该类：  
+4.  从 [testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 派生该类：  
   
     ```  
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/en-us/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息，请参阅 [如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)。  
+5.  添加 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx)。 有关 UnitTesting.Conditions.ExportTestConditionAttribute 的详细信息，请参阅 [如何：为 SQL Server 单元测试设计器创建测试条件](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)。  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  

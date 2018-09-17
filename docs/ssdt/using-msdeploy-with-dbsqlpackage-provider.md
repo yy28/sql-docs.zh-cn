@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc94964bdb6c0f18eb6fc935e12efef3ff0cece2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6670a8710700a168ac134e18e74e781c897c7621
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085759"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564134"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>将 MSDeploy 用于 dbSqlPackage 提供程序
 DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure 数据库交互。 DbSqlPackage 支持以下操作：  
@@ -32,7 +32,7 @@ DbSqlPackage 是一个 MSDeploy 提供程序，可使你与 SQL Server/SQL Azure
   
 -   脚本：创建等效于由发布操作执行的脚本的 Transact\-SQL 脚本。  
   
-有关 DACFx 的详细信息，请参阅 [http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx) 或 [SqlPackage.exe](../tools/sqlpackage.md)（DACFx 命令行工具）上的 DACFx 托管 API 文档。  
+有关 DACFx 的详细信息，请参阅 [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) 或 [SqlPackage.exe](../tools/sqlpackage.md)（DACFx 命令行工具）上的 DACFx 托管 API 文档。  
   
 > [!IMPORTANT]  
 > dbSqlPackage 提供程序功能将从 Visual Studio 的下一个主要版本中删除。 有关如何使用 Web Deploy 进行数据库发布的信息，请参阅[用于增量数据库发布的 dbDacFx 提供程序](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing)。  

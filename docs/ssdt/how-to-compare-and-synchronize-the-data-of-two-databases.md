@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae6d78109eb4a6898efc9bc3e972c9f65503cf63
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 197e6130a33df4413d9c936fca9291c02557acb7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088519"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563866"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>如何：比较和同步两个数据库的数据
 您可以将两个数据库中包含的数据进行比较。 比较的数据库分别称作“源”和“目标”。  
@@ -86,7 +86,7 @@ ms.locfileid: "39088519"
   
     将占位符（sServerName、sDatabaseName、sUserName、sPassword、sDisplayName、tServerName、tDatabaseName、tUserName、tPassword 和 tDisplayName）替换为源和目标数据库的值。  
   
-    如果未指定源和目标，则将显示“新建数据比较”对话框。 有关 Sql.NewDataComparison 命令的参数的详细信息，请参阅 [Visual Studio Team System 的数据库功能的自动化命令参考](https://msdn.microsoft.com/en-us/library/dd470565.aspx)。  
+    如果未指定源和目标，则将显示“新建数据比较”对话框。 有关 Sql.NewDataComparison 命令的参数的详细信息，请参阅 [Visual Studio Team System 的数据库功能的自动化命令参考](https://msdn.microsoft.com/library/dd470565.aspx)。  
   
     将指定的源数据库和目标数据库中的数据进行比较。 结果将显示在“数据比较”会话中。 有关如何查看结果或同步数据的详细信息，请参阅[查看数据差异](#ViewDifferences)和[同步数据库数据](#Synchronize)。  
   

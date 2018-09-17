@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085939"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564013"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”菜单导航到“选项”对话框。  
@@ -57,7 +57,7 @@ ms.locfileid: "39085939"
 |**SET NOEXEC**|为 ON 时，告知 Microsoft® SQL Server™ 编译每批 Transact-SQL 语句但是不执行它们。 为 OFF 时，告知 Microsoft® SQL Server™ 在编译后执行所有批。有关详细信息，请参阅 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)。|  
 |**SET PARSEONLY**|检查每个 Transact-SQL 语句的语法并返回任何错误消息，但不编译或执行语句。 有关更多信息，请参见 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)。|  
 |**SET CONCAT_NULL_YIELDS_NULL**|控制是将串联结果视为 null 值还是空字符串值。有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)。|  
-|**SET ARITHABORT**|在查询执行过程中发生溢出或被零除错误时终止查询。 有关详细信息，请参阅 [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx)。|  
+|**SET ARITHABORT**|在查询执行过程中发生溢出或被零除错误时终止查询。 有关详细信息，请参阅 [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)。|  
 |**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不执行 Transact-SQL 语句， 而是由 SQL Server 返回有关如何执行语句的详细信息。 有关详细信息，请参阅 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)。|  
 |**SET STATISTICS TIME**|显示分析、编译和执行各语句所需的毫秒数。|  
 |**SET STATISTICS IO**|使 Microsoft® SQL Server™ 显示有关由 Transact-SQL 语句生成的磁盘活动量的信息。|  
