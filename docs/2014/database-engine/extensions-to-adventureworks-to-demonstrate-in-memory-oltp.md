@@ -36,7 +36,7 @@ ms.locfileid: "40393132"
   
 -   安装示例和运行演示工作负荷的[先决条件](#Prerequisites)   
   
--   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
+-   [基于AdventureWorks安装In-Memory OLTP示例](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的说明  
   
 -   [示例表和过程的说明](#Descriptionofthesampletablesandprocedures) – 包括通过 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 示例添加到 AdventureWorks 的表和过程的说明，以及将一些原始 AdventureWorks 表迁移到内存优化表的注意事项  
   
