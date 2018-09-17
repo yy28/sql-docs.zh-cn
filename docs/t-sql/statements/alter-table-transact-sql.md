@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -63,19 +63,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083931"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171869"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   通过更改、添加或删除列和约束，重新分配和重新生成分区，或者启用或禁用约束和触发器，可以修改表的定义。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -244,7 +242,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -688,7 +686,7 @@ COLUMN column_name
   
  max_degree_of_parallelism 可以是下列值之一：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -785,7 +783,7 @@ COLUMN column_name
  在版本 V12 成为只读格式之前，为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 和 SQL 数据库生成的非聚集列存储索引。 必须将非聚集列存储索引重新生成为当前格式（可更新），才能执行任何 PARTITION 操作。  
   
  SET ( FILESTREAM_ON = { partition_scheme_name | filestream_filegroup_name |         "default" | "NULL" })  
- 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 Azure SQL 数据库不支持 `FILESTREAM`。  
   
  指定 FILESTREAM 数据的存储位置。  
   
@@ -892,7 +890,7 @@ TABLE
  启用或禁用针对 FileTable 的系统定义约束。 仅可与 FileTable 一起使用。  
   
  SET ( FILETABLE_DIRECTORY = directory_name )  
- **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ **适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  Azure SQL 数据库不支持 `FILETABLE`。  
   
  指定与 Windows 兼容的 FileTable 目录名称。 此名称应在数据库的所有 FileTable 目录名称中唯一。 无论 SQL 排序规则如何设置，唯一性比较都不区分大小写。 仅可与 FileTable 一起使用。  
 ```    
@@ -1891,7 +1889,7 @@ WITH
   
 |分区|是否有数据？|边界范围|  
 |---------------|---------------|--------------------|  
-|@shouldalert|用户帐户控制|OrderDate < '2004-01-01'|  
+|1|用户帐户控制|OrderDate < '2004-01-01'|  
 |2|用户帐户控制|'2004-01-01' <= OrderDate < '2005-01-01'|  
 |3|用户帐户控制|'2005-01-01' <= OrderDate< '2006-01-01'|  
 |4|用户帐户控制|'2006-01-01'<= OrderDate < '2007-01-01'|  

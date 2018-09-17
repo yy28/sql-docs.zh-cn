@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410459"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811083"
 ---
 # <a name="create-an-entity-master-data-services"></a>创建实体 (Master Data Services)
 
@@ -57,7 +57,9 @@ ms.locfileid: "35410459"
      如果不填写此字段，则会使用实体名称。  
   
     > [!TIP]  
-    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。  
+    >  使用模型名称作为临时表名称的一部分，例如 Modelname_Entityname。 这便于在数据库中查找表。 有关临时表的详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)。
+    > [!TIP]  
+    >  若要使用临时表的默认命名，但另一模型中有同名实体，MDS 会自动将标识符（例如 _1、_2）追加到临时表名称中。
   
 7.  对于“事务日志类型”字段，请在下拉列表中选择事务日志类型。  
   

@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087483"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171632"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志�
 ## <a name="row-mode-memory-grant-feedback"></a>行模式内存授予反馈
 **适用于**：SQL 数据库（作为公共预览版功能提供）
 
+> [!NOTE]
+> 行模式内存授予反馈是一项公共预览版功能。  
+
 通过调整批处理模式和行模式运算符的内存授予大小，行模式内存授予反馈扩展了批处理模式内存授予反馈功能。  
 
 若要在 Azure SQL 数据库中启用行模式内存授予反馈的公共预览版，请为执行查询时连接到的数据库启用数据库兼容性级别 150。
@@ -129,7 +132,8 @@ LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节
 | Yes: Adjusting | 内存授予反馈已应用，并且可能会针对下一次执行进行进一步调整。 |
 | Yes: Stable | 内存授予反馈已应用，并且授予内存现在处于稳定状态。也就是说，为上一次执行最后授予的内存是为当前执行授予的内存。 |
 
-SQL Server Management Studio 图形查询执行计划暂未显示内存授予反馈计划属性，但出于早期测试目的，可以使用 SET STATISTICS XML ON 或 query_post_execution_showplan XEvent 查看这些属性。  
+> [!NOTE]
+> 公共预览版行模式内存授予反馈计划特性在 SQL Server Management Studio 版本 17.9 及更高版本中的图形查询执行计划内可见。 
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。

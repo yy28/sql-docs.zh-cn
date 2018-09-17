@@ -1,7 +1,7 @@
 ---
 title: 复制、更改跟踪和更改数据捕获 - 可用性组 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769373"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311667"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>复制、更改跟踪和更改数据捕获 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34769373"
 ###  <a name="Changes"></a>为支持可用性组对复制代理进行的常规更改  
  修改了三个复制代理来支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]。 日志读取器代理、快照代理和合并代理经过了修改，现在可以查询重定向发布服务器的分发数据库，并且可以使用返回的可用性组侦听器名称来连接数据库发布服务器（如果已声明重定向的发布服务器）。  
   
- 默认情况下，当代理查询分发服务器以确定是否已重定向原始发布服务器时，则在将重定向的主机返回到代理之前，将会验证当前目标或重定向的适用性。 建议执行此操作。 但是，如果代理启动过于频繁，则与验证存储过程相关的开销可能会过于昂贵。 已向日志读取器代理、快照代理和合并代理添加了新的命令行开关 *BypassPublisherValidation*。 使用此开关时，重定向的发布服务器将会立即返回到代理，并绕过验证存储过程的执行。  
+ 默认情况下，当代理查询分发服务器以确定是否已重定向原始发布服务器时，则在将重定向的主机返回到代理之前，将会验证当前目标或重定向的适用性。 建议执行此操作。 不过，如果代理启动非常频繁，与验证存储过程相关的开销可能会过于昂贵。 日志读取器代理、快照代理和合并代理中已新增命令行开关 *BypassPublisherValidation*。 使用此开关时，重定向的发布服务器将会立即返回到代理，并绕过验证存储过程的执行。  
   
  代理历史记录日志中会记录从验证存储过程中返回的故障。 严重性大于或等于 16 的错误将会导致代理终止。 这些代理中已经内置了一些重试功能，以便在其故障转移到新的主副本时处理预计会出现的与已发布的数据库断开连接的情况。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "34769373"
   
 -   **跟踪标志 1448**  
   
-     跟踪标志 1448 支持复制日志读取器前移，即便在异步辅助副本未确认接受更改的情况下，也是如此。 甚至在此跟踪标志启用的情况下，日志读取器也始终等待同步辅助副本。 日志读取器将不会超过同步辅助副本的最小确认。 此跟踪标志应用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例，而不仅仅应用于可用性组、可用性数据库或日志读取器实例。 此跟踪标志会立即生效，无需重新启动。 它可提前激活或在异步辅助副本失败时激活。  
+     跟踪标志 1448 支持复制日志读取器前移，即便在异步辅助副本未确认接受更改的情况下，也是如此。 甚至在此跟踪标志已启用的情况下，日志读取器也始终等待同步次要副本。 日志读取器将不会超过同步辅助副本的最小确认。 此跟踪标志应用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的实例，而不仅仅应用于可用性组、可用性数据库或日志读取器实例。 此跟踪标志会立即生效，无需重新启动。 它可提前激活或在异步辅助副本失败时激活。  
   
 ###  <a name="StoredProcs"></a>支持可用性组的存储过程  
   
@@ -143,9 +143,9 @@ ms.locfileid: "34769373"
   
 -   **将查询负载重定向到可读辅助副本**  
   
-     在许多情况下，客户端应用程序将始终希望能够连接到当前主副本（这并非利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的唯一方法）。 如果将可用性组配置为支持可读的辅助副本，则还可从辅助节点中收集更改数据。  
+     虽然在许多情况下，客户端应用程序始终希望能够连接到当前主要副本，但这并非利用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的唯一方法。 如果将可用性组配置为支持可读的辅助副本，则还可从辅助节点中收集更改数据。  
   
-     在配置可用性组之后，可使用与 SECONDARY_ROLE 关联的 ALLOW_CONNECTIONS 属性来指定受支持的辅助访问的类型。 如果配置为 ALL，则将允许所有指向辅助副本的连接，但是，只有那些要求只读访问的连接才会成功。 如果配置为 READ_ONLY，则在连接到辅助数据库时必须指定只读意向才能使连接成功。 有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
+     在配置可用性组之后，可使用与 SECONDARY_ROLE 关联的 ALLOW_CONNECTIONS 属性来指定受支持的辅助访问的类型。 如果配置为 ALL，便会允许与辅助副本建立任何连接，前提是连接要求只读访问权限。 如果配置为 READ_ONLY，则在连接到辅助数据库时必须指定只读意向才能使连接成功。 有关详细信息，请参阅[配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)。  
   
      以下查询可用来确定是否需要只读意向才能连接到可读辅助副本。  
   
@@ -211,12 +211,10 @@ ms.locfileid: "34769373"
 |||||  
 |-|-|-|-|  
 ||**发布服务器**|**Distributor***\*|**订阅服务器**|  
-|**事务性**|是<br /><br /> 注意：不包括对双向和相互事务复制的支持。|“否”|是|  
-|**P2P**|“否”|否|“否”|  
-|**合并**|是|“否”|是*|  
-|**快照**|是|“否”|是*|  
-  
- *故障转移到副本数据库是一个手动过程。 不提供自动故障转移。  
+|**事务性**|用户帐户控制<br /><br /> 注意：不包括对双向和相互事务复制的支持。|用户帐户控制|用户帐户控制| 
+|**P2P**|否|否|否|  
+|**合并**|用户帐户控制|否|否|  
+|**快照**|用户帐户控制|否|用户帐户控制|
   
  **不支持将分发服务器数据库用于数据库镜像。  
   

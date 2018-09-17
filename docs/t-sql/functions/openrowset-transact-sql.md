@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -29,12 +29,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 72b83f3f127aa4d63e9e39b2c828ad604a0b483d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454171"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171819"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "39454171"
   包含访问 OLE DB 数据源中的远程数据所需的所有连接信息。 当访问链接服务器中的表时，这种方法是一种替代方法，并且是一种使用 OLE DB 连接并访问远程数据的一次性的临时方法。 对于较频繁引用 OLE DB 数据源的情况，请改为使用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。 `OPENROWSET` 函数可以在查询的 FROM 子句中引用，就好象它是一个表名。 依据 OLE DB 提供程序的功能，还可以将 `OPENROWSET` 函数引用为 `INSERT`、`UPDATE` 或 `DELETE` 语句的目标表。 尽管查询可能返回多个结果集，但 `OPENROWSET` 只返回第一个结果集。  
   
  `OPENROWSET` 还通过内置的 BULK 提供程序支持大容量操作，正是有了该提供程序，才能从文件读取数据并将数据作为行集返回。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -110,6 +108,9 @@ OPENROWSET
   
  BULK  
  使用 OPENROWSET 的 BULK 行集访问接口读取文件中的数据。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，OPENROWSET 无需将数据文件中的数据加载到目标表，便可读取这些数据。 这样便可在单个 SELECT 语句中使用 OPENROWSET。  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
  BULK 选项的参数可对何时开始和结束数据读取、如何处理错误以及如何解释数据提供有效控制。 例如，可以指定以类型为 varbinary、varchar 或 nvarchar 的单行单列行集的形式读取数据文件。 默认行为详见随后的参数说明。  
   
@@ -123,7 +124,10 @@ OPENROWSET
  '*data_file*'  
  数据文件的完整路径，该文件的数据将被复制到目标表中。   
  **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 起，data_file 可位于 Azure blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+自 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 起，data_file 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
  \<bulk_options>  
  指定 BULK 选项的一个或多个参数。  
@@ -149,7 +153,7 @@ OPENROWSET
   
  错误文件在开始执行命令时创建。 如果该文件已存在，将引发一个错误。 此外，还创建了一个扩展名为 .ERROR.txt 的控制文件。 此文件引用错误文件中的每一行并提供错误诊断。 纠正错误后即可加载数据。  
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起，`error_file_path` 可位于 Azure blob 存储中。 
+从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 开始，`error_file_path` 可位于 Azure Blob 存储中。 
 
 'errorfile_data_source_name'   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。
@@ -219,7 +223,7 @@ FORMAT **=** 'CSV'
  有关格式化文件的信息，请参阅[使用格式化文件批量导入数据 (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
 
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 起，format_file_path 可位于 Azure blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
+从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，format_file_path 可位于 Azure Blob 存储中。 例如，请参阅[批量访问 Azure Blob 存储中数据的示例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。
 
 FIELDQUOTE **=** 'field_quote'   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
@@ -307,6 +311,8 @@ SELECT CustomerID, CompanyName
       'admin';'',Customers);  
 GO  
 ```  
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
 ### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. 使用 OPENROWSET 和 INNER JOIN 中的另一个表  
  以下示例从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` 数据库的本地实例中的 `Customers` 表以及存储在同一计算机上的 Access `Northwind` 数据库中的 `Orders` 表中选择所有数据。  
@@ -325,6 +331,10 @@ FROM Northwind.dbo.Customers AS c
    ON c.CustomerID = o.CustomerID ;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
   
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. 使用 OPENROWSET 将文件数据大容量插入 varbinary(max) 列中  
  以下示例创建一个用于演示的小型表，并将名为 `Text1.txt` 的文件（位于 `C:` 根目录）中的文件数据插入 `varbinary(max)` 列中。  
@@ -342,7 +352,11 @@ INSERT INTO myTable(FileName, FileType, Document)
       * FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_BLOB) AS Document;  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
+
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. 将 OPENROWSET BULK 访问接口用于格式化文件以检索文本文件中的行  
  以下示例使用格式化文件检索用制表符分隔的文本文件 `values.txt` 中的行，该文件包含下列数据：  
   
@@ -367,7 +381,11 @@ GO
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
+
 ### <a name="f-specifying-a-format-file-and-code-page"></a>F. 指定格式文件和代码页  
  下例演示如何同时使用格式化文件和代码页选项。  
   
@@ -386,6 +404,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMAT='CSV') AS cars;  
 ```
 
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
+
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. 访问没有格式文件的 CSV 文件的数据
 
 ```sql
@@ -393,6 +415,10 @@ SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
 ```
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
 
 ### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. 访问 Azure Blob 存储上存储的文件的数据   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   

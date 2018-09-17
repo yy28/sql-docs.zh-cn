@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899497"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889793"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供有关 SSMS 的当前和以前版本的更新、改进和 bug 修复的详细信息。 下载[下方的 SSMS 早期版本](#previous-ssms-releases)。
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+生成号：14.0.17285.0<br>
+发布日期：2018 年 9 月 4 日
+
+### <a name="whats-new"></a>新增功能
+
+**常规 SSMS**
+
+
+显示计划：
+
+- “图形显示计划”功能现在对特定计划激活后显示新行模式内存授予反馈特性：MemoryGrantInfo 查询计划 XML 元素中新增了 IsMemoryGrantFeedbackAdjusted 和 LastRequestedMemory。 若要详细了解行模式内存授予反馈，请参阅 [SQL 数据库中的自适应查询处理](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing)。
+
+Azure SQL： 
+
+- 现已开始支持在创建 Azure DB 时使用 vCore SKU。 有关详细信息，请参阅[基于 vCore 的购买模型](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model)。
+ 
+
+### <a name="bug-fixes"></a>Bug 修复
+
+**常规 SSMS**
+    
+复制监视器：
+
+- 修复了以下问题：复制监视器 (SqlMonitor.exe) 无法启动（UserVoice 项： https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+导入平面文件向导： 
+
+- 修复了“平面文件向导”对话框的帮助页链接 
+- 修复了向导不允许更改现有目标表的问题：这样，用户无需退出向导，即可重试删除失败的表，然后重新在向导中输入信息（UserVoice 项： https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186)。 
+
+导入/导出数据层应用程序：
+
+- 修复了 DacFx 中的以下问题：处理已定义分区但未编制索引的表时，无法导入 .bacpac，错误消息为“错误 SQL72014: .Net SqlClient 数据提供程序: Msg 9108，级别 16，状态 10，行 1。不支持递增这种类型的统计信息 ”。 
+
+Intellisense：
+
+- 修复了以下问题：结合使用 AAD 和 MFA 时，无法正常使用 IntelliSense 填写。 
+
+对象资源管理器： 
+
+- 修复了以下问题：“筛选器对话框”显示在随机监视器上，而不是显示在运行 SSMS 的监视器上（多监视器系统）。
+
+Azure SQL： 
+
+- 修复了以下问题：如果在“可用数据库”中枚举数据库，在连接到特定数据库时，在下拉列表中看不到“master”。 
+- 修复了以下问题：无法尝试生成脚本（“数据”或“架构和数据”），进而无法通过结合使用 AAD 和 MFA 连接到 SQL Azure DB。 
+- 修复了视图设计器（视图）中的以下问题：连接到 SQL Azure DB 时，无法在 UI 中选择“添加表”。 
+- 修复了以下问题：在 MFA 令牌续订期间，SSMS 查询编辑器静默关闭，并重新打开连接。 这有助于避免对用户造成未知的负面影响（如关闭事务且永不再次重新打开）。 此变更向属性窗口添加令牌到期时间。 
+- 修复了以下问题：SSMS 不对结合使用 AAD 和 MFA 登录的已导入 MSA 帐户强制提示输入密码。 
+
+活动监视器： 
+
+- 修复了以下问题：使用 SQL 身份验证时，在活动监视器中启动的“实时查询统计信息”挂起。 
+
+Microsoft Azure 集成： 
+
+- 修复了以下问题：SSMS 仅显示前 50 个订阅（“Always Encrypted”对话框、“从 URL 备份/还原”对话框等）。 
+- 修复了以下问题：当用户尝试（在“从 URL 备份/还原”对话框中）登录不含任何存储帐户的 Microsoft Azure 帐户时，SSMS 抛出异常（“索引超出范围”）。 
+
+对象脚本： 
+
+- SSMS 现在可避免在编写脚本“删除和创建”时生成动态 T-SQL。
+- 编写数据库对象的脚本时，SSMS 现在不生成脚本来设置数据库范围内配置（如果设置为默认值的话）。
+
+帮助：
+
+- 修复了以下长期未得到解决的问题：“如何使用帮助”未采用联机/脱机模式。
+- 当用户单击“帮助 | 社区项目和示例”时，SSMS 现在会打开默认浏览器，它指向 Git 页，其中不显示由于使用旧浏览器而发出的错误/警告。
+
+### <a name="known-issues"></a>已知问题
+
+- 此版本暂无已知问题。
+
+
+
+## <a name="previous-ssms-releases"></a>SSMS 的早期版本
+
+通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![下载](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 在 17.8 中发现了与配置 SQL 数据库相关的错误，因此 SSMS 17.8.1 取代了 17.8。
-
 
 生成号：14.0.17277.0<br>
 发布日期：2018 年 6 月 26 日
+
+[中文（中国）](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [中文（台湾）](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [英语（美国）](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [德语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>新增功能
@@ -93,10 +174,6 @@ Always Encrypted：
 - 可能会观察到 XEvents 查看器中的一些延迟。 这是 [.Net Framework 中的已知问题](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 请考虑升级到 NetFx 4.7.2。
 
 
-
-## <a name="previous-ssms-releases"></a>SSMS 的早期版本
-
-通过单击以下部分中的标题链接，下载 SSMS 的早期版本。
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![下载](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

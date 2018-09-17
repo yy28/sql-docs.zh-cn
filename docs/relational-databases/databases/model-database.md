@@ -20,12 +20,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03aada845eaf77e83833f3cc3252bca4a2d49e42
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 84b01fb62721b624ffde822f041dd160671d0840
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406040"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343102"
 ---
 # <a name="model-database"></a>model 数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "40406040"
 |主数据|modeldev|model.mdf|以 64 MB 的速度自动增长到磁盘充满为止。|  
 |日志|modellog|modellog.ldf|以 64 MB 的速度自动增长到最大 2 TB。|  
   
- 对于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]之前的版本，请参阅 [模型数据库](model-database.md)以了解默认的文件增长值。  
+ 对于低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本，请参阅[模型数据库](../../2014/relational-databases/databases/model-database.md)，以了解默认文件增加值。  
   
  若要移动 **model** 数据库或日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
   

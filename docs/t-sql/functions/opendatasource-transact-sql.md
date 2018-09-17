@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457961"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171555"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   在四部分对象名称中提供连接信息，而不使用链接服务器名称。  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -64,7 +62,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |数据源|DBPROP_INIT_DATASOURCE|要连接的数据源的名称。 不同的提供程序用不同的方法对此进行解释。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口，这指示服务器的名称。 对于 Jet OLE DB 访问接口来说，这指示 .mdb 文件或 .xls 文件的完整路径。|  
 |位置|DBPROP_INIT_LOCATION|要连接的数据库的位置。|  
 |扩展属性|DBPROP_INIT_PROVIDERSTRING|提供程序特定的连接字符串。|  
-|连接超时|DBPROP_INIT_TIMEOUT|达到该超时值后，连接尝试将失败。|  
+|连接超时|DBPROP_INIT_TIMEOUT|达到此超时值后，连接尝试就会失败。|  
 |用户 ID|DBPROP_AUTH_USERID|用于该连接的用户 ID。|  
 |Password|DBPROP_AUTH_PASSWORD|用于该连接的密码。|  
 |目录|DBPROP_INIT_CATALOG|连接到数据源时的初始或默认的目录名称。|  
@@ -75,12 +73,12 @@ OPENDATASOURCE ( provider_name, init_string )
   
  OPENDATASOURCE 函数可以在能够使用链接服务器名的相同 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法位置中使用。 因此，可以将 OPENDATASOURCE 用作四部分名称的第一部分，该部分名称引用 SELECT、INSERT、UPDATE 或 DELETE 语句中的表或视图的名称；或者引用 EXECUTE 语句中的远程存储过程。 当执行远程存储过程时，OPENDATASOURCE 应该引用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的另一个实例。 OPENDATASOURCE 不接受参数变量。  
   
- 与 OPENROWSET 函数类似，OPENDATASOURCE 应该只引用那些不经常访问的 OLE DB 数据源。 对于访问次数较频繁的任何数据源，请为它们定义链接服务器。 无论 OPENDATASOURCE 还是 OPENROWSET 都不能提供链接服务器定义的全部功能，例如，安全管理以及查询目录信息的功能。 每次调用 OPENDATASOURCE 时，都必须提供所有的连接信息（包括密码）。  
+ 与 OPENROWSET 函数类似，OPENDATASOURCE 应该只引用那些不经常访问的 OLE DB 数据源。 对于访问次数较频繁的任何数据源，请为它们定义链接服务器。 无论 OPENDATASOURCE，还是 OPENROWSET，都不能提供链接服务器定义的全部功能，如安全管理以及目录信息查询功能。 每次调用 OPENDATASOURCE 时，都必须提供所有的连接信息（包括密码）。  
   
 > [!IMPORTANT]  
 >  Windows 身份验证比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证要安全得多。 应尽量使用 Windows 身份验证。 OPENDATASOURCE 不应该用于连接字符串中的显式密码。  
   
- 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 在 [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 主题中列出了很多常见提供程序的详细信息。  
+ 每个提供程序的连接要求与创建链接服务器时的参数要求相似。 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 一文中列出了很多常见提供程序的详细信息。  
   
  FROM 子句中对 OPENDATASOURCE、OPENQUERY 或 OPENROWSET 的任何调用与对用作更新目标的这些函数的任何调用都是分开独立计算的，即使为两个调用提供的参数相同也是如此。 具体而言，应用到上述任一调用的结果的筛选器或联接条件不会影响其他调用的结果。  
   

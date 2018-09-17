@@ -1,7 +1,7 @@
 ---
 title: SQL Server 中扩展事件的目标 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533817"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171779"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server 中扩展事件的目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ SQL Server 扩展事件可以和 Windows 事件跟踪 (ETW) 相互操作来监�
 此 ETW 目标 *以同步方式* 处理其接收的数据，而大多数目标 *以异步方式*进行处理。
 
 > [!NOTE]
-> Azure SQL 数据库不支持 ETW 目标。 Azure SQL 数据库托管实例也不支持。
+> Azure SQL 数据库不支持 `etw_classic_sync_target target`。
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL 数据库支持“event_file”目标，但对于输出，只能通过在 Azure 存储中使用 blob。 SQL 数据库不能将事件输出存储在本地硬盘上的文件中。
+> Azure SQL 数据库仅支持在 Azure Blob 存储中存储 `xel` 文件。 
 >
 > 有关特定于 SQL 数据库和 SQL 数据库托管实例的“event_file”代码示例，请参阅 [SQL 数据库中扩展事件的事件文件目标代码](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file)。
 

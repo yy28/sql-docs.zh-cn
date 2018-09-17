@@ -1,7 +1,7 @@
 ---
 title: ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2017
+ms.date: 09/07/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,15 +27,15 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 10e01507c7c33f272872ecf5022ad287ccaeafa6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 32f8f0b6aaaa44dc42a52babae398845779961d3
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942923"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171799"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   通过修改程序集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目录属性更改程序集。 ALTER ASSEMBLY 将程序集刷新为保存其实现的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本，并添加或删除与之关联的文件。 可以使用 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) 创建程序集。  
 
@@ -79,6 +79,9 @@ ALTER ASSEMBLY assembly_name
  将程序集更新到保存其实现的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 模块的最新副本。 仅当没有与指定程序集关联的文件时才能使用此选项。  
   
  \<client_assembly_specifier> 指定刷新的程序集所在的网络位置或本地位置。 网络位置包括计算机名称、共享名称和该共享中的路径。 manifest_file_name 指定包含程序集清单的文件的名称。  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持引用文件。
   
  \<assembly_bits> 是该程序集的二进制值。  
   
@@ -118,13 +121,13 @@ ALTER ASSEMBLY assembly_name
  从数据库中删除与程序集关联的文件名，或与该程序集关联的所有文件。 如果与下面的 ADD FILE 一起使用，则 DROP FILE 首先执行。 这样可以用相同的文件名替换文件。  
   
 > [!NOTE]  
->  此选项在包含数据库中不可用。  
+>  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
  [ ADD FILE FROM { client_file_specifier [ AS file_name] | file_bitsAS file_name}  
  将与程序集关联的文件（如源代码、调试文件或其他相关信息）上传到服务器中并使其在 sys.assembly_files 目录视图中可见。 client_file_specifier 指定上传文件的源位置。 可以改用 file_bits 来指定构成该文件的二进制值的列表。 file_name 指定将文件存储到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中时所采用的名称。 如果指定 file_bits，则必须指定 file_name，如果指定 client_file_specifier，则可以选择指定 file_name。 如果未指定 file_name，则 client_file_specifier 的 file_name 部分可用作 file_name。  
   
 > [!NOTE]  
->  此选项在包含数据库中不可用。  
+>  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
 ## <a name="remarks"></a>Remarks  
  ALTER ASSEMBLY 不中断当前正在运行的会话，这些会话正在运行所修改的程序集中的代码。 当前会话通过使用程序集的未更改位完成执行。  
@@ -168,7 +171,7 @@ ALTER ASSEMBLY assembly_name
   
  如果执行了没有 UNCHECKED 数据子句的 ALTER ASSEMBLY，则执行检查以验证新数据集版本是否影响表中的现有数据。 根据需要检查的数据量，这可能影响性能。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对程序集具有 ALTER 权限。 其他要求如下：  
   
 -   若要更改其现有权限集为 EXTERNAL_ACCESS 的程序集，则需要对服务器的 EXTERNAL ACCESS ASSEMBLY 权限。  
@@ -205,6 +208,10 @@ ALTER ASSEMBLY assembly_name
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持引用文件。
+
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. 添加一个文件以与程序集关联  
  以下示例上载源代码文件 `Class1.cs`，使之与程序集 `MyClass` 关联。 该示例假设已在数据库中创建了程序集 `MyClass`。  
   
@@ -212,7 +219,10 @@ ALTER ASSEMBLY assembly_name
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持引用文件。
+
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. 更改程序集的权限  
  以下示例将程序集 `ComplexNumber` 的权限集由 SAFE 更改为 `EXTERNAL ACCESS`。  
   

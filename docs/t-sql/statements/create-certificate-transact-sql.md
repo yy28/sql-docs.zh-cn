@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/19/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,19 +31,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f656953d814d53bf234ca890d56bf0ae0fa8eecb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d0714bfff3de11ad36373f3ef710368169966e6
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091689"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171539"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库添加证书。  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  此功能与使用数据层应用程序框架 (DACFx) 的数据库导出不兼容。 必须在导出之前删除所有证书。  
   
@@ -127,6 +125,9 @@ CREATE CERTIFICATE certificate_name
   
  [ EXECUTABLE ] FILE ='path_to_file'  
  指定包含证书的 DER 编码文件的完整路径（包括文件名）。 如果使用 EXECUTABLE 选项，则文件为已使用证书签名的 DLL。 path_to_file 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持通过文件或使用私钥文件创建证书。
   
  WITH PRIVATE KEY  
  指定将证书的私钥加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 该子句只有在通过文件创建证书时才有效。 若要加载程序集的私钥，请使用 [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md)。  
@@ -134,8 +135,8 @@ CREATE CERTIFICATE certificate_name
  FILE ='path_to_private_key'  
  指定私钥的完整路径（包括文件名）。 path_to_private_key 可以是本地路径，也可以是网络位置的 UNC 路径。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问该文件。 该帐户必须具有所需的文件系统权限。  
   
-> [!NOTE]  
->  此选项在包含数据库中不可用。  
+> [!IMPORTANT]  
+>  这种方法不适用于包含的数据库或 Azure SQL 数据库。  
   
  asn_encoded_certificate  
  指定为二进制常量的 ASN 编码证书位。  
@@ -211,7 +212,10 @@ CREATE CERTIFICATE Shipping11
     DECRYPTION BY PASSWORD = 'sldkflk34et6gs%53#v00');  
 GO   
 ```  
-  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持通过文件创建证书。
+   
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 通过已签名的可执行文件创建证书  
   
 ```  
@@ -230,7 +234,9 @@ GO
 CREATE CERTIFICATE Shipping19 FROM ASSEMBLY Shipping19;  
 GO  
 ```  
-  
+> [!IMPORTANT]
+> Azure SQL 数据库不支持通过文件创建证书。
+   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 创建自我签名的证书  
  下面的示例在不指定加密密码的情况下创建名为 `Shipping04` 的证书。 此示例可与 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 一起使用。
   
@@ -239,7 +245,6 @@ CREATE CERTIFICATE Shipping04
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
 ```  
-  
   
 ## <a name="see-also"></a>另请参阅  
  [ALTER CERTIFICATE (Transact-SQL)](../../t-sql/statements/alter-certificate-transact-sql.md)   

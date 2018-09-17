@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782668"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171689"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中以用户指定的格式将数据文件导入到数据库表或视图中  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ BULK INSERT
  *data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名*。 例如， `\\SystemX\DiskZ\Sales\update.txt`。   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
 
 **'** *data_source_name* **'**   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
@@ -293,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>用于大容量导出或导入 SQLXML 文档的数据类型  
  若要大容量导出或导入 SQLXML 数据，请在格式化文件中使用下列数据类型之一：  
   
@@ -338,7 +344,7 @@ GO
   
  有关详细信息和使用 BULK INSERT 的安全注意事项，请参阅[使用 BULK INSERT 或 OPENROWSET (BULK...) 导入批量数据 (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要 INSERT 和 ADMINISTER BULK OPERATIONS 权限。 在 Azure SQL 数据库中，需要 INSERT 和 ADMINISTER DATABASE BULK OPERATIONS 权限。 另外，如果存在下列一种或多种情况，则还需要 ALTER TABLE 权限：  
   
 -   存在约束但未指定 CHECK_CONSTRAINTS 选项。  
@@ -367,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. 使用 FIRE_TRIGGER 参数  
  下面的示例指定 `FIRE_TRIGGERS` 参数。  
@@ -381,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. 使用换行符作为行终止符  
  下面的示例将导入使用换行符作为行终止符的文件（如 UNIX 输出）：  
@@ -395,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  由于 Microsoft Windows 处理文本文件的方式，（**\n** 自动替换为 **\r\n**）。  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
   
 ### <a name="d-specifying-a-code-page"></a>D. 指定代码页  
  以下示例显示如何指定代码页。  
@@ -408,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 从 CSV 文件导入数据   
 以下示例显示如何指定 CSV 文件。   
 ```
@@ -415,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. 从 Azure Blob 存储中的文件导入数据   
 以下示例显示如何从 Azure Blob 存储位置（已配置为外部数据源）中的 CSV 文件加载数据。 这要求提供使用共享访问签名的数据库作用域凭据。    
@@ -425,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持从 Windows 文件读取内容。
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 从 Azure Blob 存储中的文件导入数据并指定错误文件   
 以下示例显示如何从 Azure Blob 存储位置（已配置为外部数据源且指定错误文件）中的 CSV 文件加载数据。 这要求提供使用共享访问签名的数据库作用域凭据。 请注意，如果在 Azure SQL 数据库上运行，则 ERRORFILE 选项应带有 ERRORFILE_DATA_SOURCE，否则导入可能会失败，出现权限错误。 ERRORFILE 中指定的文件不应存在于容器中。

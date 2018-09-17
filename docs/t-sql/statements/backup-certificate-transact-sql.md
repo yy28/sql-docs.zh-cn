@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -32,19 +32,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e324d8823176e8153a6536be7dcd0a1ca8baae77
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43105730"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171589"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
 
   将证书导出到文件中。  
   
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -74,28 +74,32 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
 ## <a name="arguments"></a>参数  
  path_to_file  
- 指定要保存证书的文件的完整路径（包括文件名）。 此路径可能是本地路径，也可能是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
+ 指定要保存证书的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
   
  path_to_private_key_file  
- 指定要保存私钥的文件的完整路径（包括文件名）。 此路径可能是本地路径，也可能是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
+ 指定要保存私钥的文件的完整路径（包括文件名）。 此路径可以是本地路径，也可以是网络位置的 UNC 路径。 默认路径为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA 文件夹的路径。  
+
+> [!IMPORTANT]
+> Azure SQL 数据库不支持将证书备份到文件。
+
   
  encryption_password  
  用于在将密钥写入备份文件之前对私钥进行加密的密码。 该密码需要进行复杂性检查。  
   
  decryption_password  
- 用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密的，则无需执行此操作。 
+ 用于在备份密钥之前对私钥进行解密的密码。 如果证书是用主密钥加密，便无需使用此参数。 
   
 ## <a name="remarks"></a>Remarks  
  如果在数据库中使用密码对私钥进行加密，则必须指定解密密码。  
   
- 将私钥备份到文件时，需要进行加密。 用于保护备份证书的密码与用于对证书的私钥进行加密的密码不是同一密码。  
+ 将私钥备份到文件时，需要进行加密。 用于保护证书的密码和用于加密证书私钥的密码不是同一个密码。  
   
  若要还原备份的证书，请使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 语句。
  
- 执行备份后，这些文件成为 SQL Server 实例服务帐户的 ACL。 如果需要将证书还原到在不同帐户下运行的服务器，必须将文件权限调整为文件可供新帐户读取。 
+ 在你执行备份后，这些文件就会通过 ACL 备份到 SQL Server 实例的服务帐户。 如果需要将证书还原到在不同帐户下运行的服务器，必须将文件权限调整为文件可供新帐户读取。 
   
 ## <a name="permissions"></a>Permissions  
- 要求对证书具有 CONTROL 权限，并且了解用于对私钥进行加密的密码的相关信息。 如果只备份证书的公共部分，则要求对证书具有某种权限，并且不拒绝调用方对证书的 VIEW 权限。  
+ 要求对证书具有 CONTROL 权限，并且了解用于对私钥进行加密的密码的相关信息。 如果你只备份证书的公共部分，此命令必须拥有对证书的某种权限，并且调用方对证书的 VIEW 权限尚未遭拒绝。  
   
 ## <a name="examples"></a>示例  
   
