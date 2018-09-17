@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 088c7b60bff2c050cec0b486fd4c91f3b9df1213
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39536157"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564113"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "39536157"
 |**3226**|默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地创建日志备份，这些成功消息会迅速累积，从而产生一个巨大的错误日志，使查找其他消息变得非常困难。<br /><br />使用这一跟踪标志，可以取消这些日志条目。 如果您频繁地运行日志备份，并且没有任何脚本依赖于这些条目，则这种做法非常有用。<br /><br />**作用域**：仅全局|   
 |**3427**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 或 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 中，如果多个将数据插入临时表的连续事务占用的 CPU 比在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中时更多，则启用修复来解决问题。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/3216543)<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 及更高内部版本。 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU4 开始，此跟踪标志不再有效。<br /><br />**作用域**：仅全局|  
 |**3459**|禁用并行重做。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/3200975)和 [Microsoft 支持文章](http://support.microsoft.com/help/4101554)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]。<br /><br />**作用域**：仅全局| 
-|**3468**|禁用 TempDB 上的[间接检查点](https://docs.microsoft.com/en-us/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 及更高内部版本。<br /><br />**作用域**：仅全局|  
+|**3468**|禁用 TempDB 上的[间接检查点](https://docs.microsoft.com/sql/relational-databases/logs/database-checkpoints-sql-server?view=sql-server-2017#IndirectChkpt)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 及更高内部版本。<br /><br />**作用域**：仅全局|  
 |**3608**|禁止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 自动启动和恢复除 **master** 数据库之外的任何数据库。 如果已启动要求使用 **tempdb** 的活动，则会恢复 **model**，并创建 **tempdb**。 在访问数据库时将启动并恢复其他数据库。 可能无法运行某些功能，如快照隔离和读提交快照。 用于[移动系统数据库](../../relational-databases/databases/move-system-databases.md)和[移动用户数据库](../../relational-databases/databases/move-user-databases.md).<br /><br />**注意：** 请不要在正常操作中使用。<br /><br />**作用域**：仅全局|   
 |**3625**|通过使用“\*\*\*\*\*\*”屏蔽某些错误消息的参数，限制返回给不是 sysadmin 固定服务器角色成员的用户的信息量。 这可以帮助阻止披露敏感信息。<br /><br />**作用域**：仅全局|  
 |**4136**|除非使用 OPTION(RECOMPILE)、WITH RECOMPILE 或 OPTIMIZE FOR \<value>，否则禁用参数探查。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/980653)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 PARAMETER_SNIFFING 选项。<br /><br />若要在查询级别完成此操作，请添加 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，在查询级别完成此操作的另一种方法是添加 USE HINT 'DISABLE_PARAMETER_SNIFFING' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局或会话|  

@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c070d081e622982bbead15826914b01a89179e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2c3ae93bc044f75f502a357df50495f5041b165e
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991890"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563698"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>教程：将 SQL Server 备份和还原到 Azure Blob 存储服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37991890"
 [第 2 课：创建 SQL Server 凭据](http://msdn.microsoft.com/library/64f8805c-1ddc-4c96-a47c-22917d12e1ab)  
 在本课中，你将创建凭据，以存储用于访问 Azure 存储帐户的安全信息。  
   
-[第 3 课：将完整数据库备份写入到 Azure Blob 存储服务](https://technet.microsoft.com/en-us/library/jj720552\(v=sql.110\).aspx)  
+[第 3 课：将完整数据库备份写入到 Azure Blob 存储服务](https://technet.microsoft.com/library/jj720552\(v=sql.110\).aspx)  
 在本课中，你将发出一条 T-SQL 语句，用于将 AdventureWorks2012 数据库的备份写入到 Azure Blob 存储服务。  
   
 [第 4 课：从完整数据库备份执行还原](http://msdn.microsoft.com/library/580f76e6-9802-4abc-9043-db6de592c733)  

@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084650"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499323"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084650"
   
  如果 SORT_IN_TEMPDB 设置为 OFF，目标文件组中的可用磁盘空间必须大约等于最终索引的大小。 在第一阶段，排序运行指令将生成并要求可用空间量大约等于最终索引的大小。 在第二阶段，处理每个排序运行指令区后将其释放。 这意味着释放排序运行指令区的速度与获取区以容纳最终索引页的速度大概相同，因此，总空间要求不会明显超过最终索引的大小。 这样的一个副作用是如果可用空间量非常接近最终索引的大小，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通常会在释放排序运行指令区后立即重新使用它们。 因为排序运行指令区的释放方式有些随机，所以在这种情形中将降低索引区的连续性。 SORT_IN_TEMPDB 设置为 OFF 时，如果目标文件组中有足够的可用空间，则可以从邻接的池而不是从刚刚释放的排序段区中分配索引区，这将提高索引区的连续性。  
   
- 创建非聚集索引时，必须有足够的可用空间：  
+创建非聚集索引时，必须有足够的可用空间：  
   
 -   如果 SORT_IN_TEMPDB 设置为 ON，则 **tempdb** 中必须有足够的可用空间来存储排序运行指令，且目标文件组中必须有足够的可用空间来存储最终索引结构。 排序运行指令包含索引的叶行。  
   
 -   如果 SORT_IN_TEMPDB 设置为 OFF，则目标文件组中必须有足够的可用空间来存储最终索引结构。 如果具有更多的可用空间，则可以提高索引区的连续性。  
   
- 对没有非聚集索引的表创建聚集索引时，必须有足够的可用空间：  
+对没有非聚集索引的表创建聚集索引时，必须有足够的可用空间：  
   
 -   如果 SORT_IN_TEMPDB 设置为 ON，则 **tempdb** 中必须有足够的可用空间来存储排序运行指令。 其中包括表的数据行。 目标文件组中必须有足够的可用空间来存储最终索引结构。 包括表的数据行和索引 B 树。 您可能需要根据不同的因素调整估计值，如键的大小很大或填充因子的值很低。  
   
 -   如果 SORT_IN_TEMPDB 设置为 OFF，目标文件组中必须有足够的可用空间来存储最终表。 包括索引结构。 如果具有更多的可用空间，则可以提高表和索引区的连续性。  
   
- 对具有非聚集索引的表创建聚集索引时，必须有足够的可用空间：  
+对具有非聚集索引的表创建聚集索引时，必须有足够的可用空间：  
   
 -   如果 SORT_IN_TEMPDB 设置为 ON，则 **tempdb** 中必须有足够的可用空间来存储最大索引（通常是聚集索引）的排序运行指令的集合，且目标文件组中必须有足够的可用空间来存储所有索引的最终结构。 包括包含表的数据行的聚集索引。  
   

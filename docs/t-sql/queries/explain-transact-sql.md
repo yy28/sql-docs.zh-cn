@@ -13,12 +13,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a7b8a9ee85c7f3d04bc45c21d2605c839bdff01a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9962b3a24c8a19ff253d22c28779259bcb1f292a
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783578"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564063"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ EXPLAIN SQL_statement
  SQL_statement  
  EXPLAIN 将在其上运行的 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 语句。 SQL_statement 可以是以下任一命令：SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 SHOWPLAN 权限和执行 SQL_statement 的权限。 请参阅[权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)。  
   
 ## <a name="return-value"></a>返回值  
@@ -69,7 +69,7 @@ EXPLAIN SQL_statement
 |\<sql>|回显 SQL_statement。|  
 |\<params>|这次不使用此标记。|  
 |\<dsql_operations>|总结和包含了查询步骤，以及查询的成本信息。 还包含所有 `<dsql_operation>` 块。 此标记包含整个查询的计数信息：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> total_cost 是要运行的查询的总预计时间（以毫秒为单位）。<br /><br /> total_number_operations 是查询的操作总数量。 并行和在多个节点上运行的操作将计为单个操作。|  
-|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type 是[查询数据 (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中说明的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
+|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type 是[查询数据 (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中说明的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
   
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  

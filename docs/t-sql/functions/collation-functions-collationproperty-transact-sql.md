@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 070e3ee283862b79833981f1eb4e9933c83c0707
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d466d64a2b5fe7425a86732970a6f7cf18e69bbe
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063967"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563565"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>排序规则函数 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ property
   
 |属性名称|描述|  
 |---|---|
-|**CodePage**|排序规则的非 Unicode 代码页。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx)（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx)（附录 H 代码页）以转换这些值并查看它们的字符映射。|  
-|**LCID**|排序规则的 Windows LCID。 请参阅 [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx)（LCID 结构）以转换这些值（首先需要转换为 varbinary）。|  
+|**CodePage**|排序规则的非 Unicode 代码页。 请参阅 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/library/cc194886.aspx)（附录 G DBCS/Unicode 映射表）和 [Appendix H Code Pages](https://msdn.microsoft.com/library/cc195051.aspx)（附录 H 代码页）以转换这些值并查看它们的字符映射。|  
+|**LCID**|排序规则的 Windows LCID。 请参阅 [LCID Structure](https://msdn.microsoft.com/library/cc233968.aspx)（LCID 结构）以转换这些值（首先需要转换为 varbinary）。|  
 |**ComparisonStyle**|排序规则的 Windows 比较样式。 对于所有的二进制排序规则（(\_BIN) 和 (\_BIN2)），以及需区分所有属性的大小写时，将返回 0。 位掩码值：<br /><br /> 忽略大小写：1<br /><br /> 忽略重音：2<br /><br /> 忽略假名：65536<br /><br /> 忽略宽度：131072<br /><br /> 注意：尽管会影响比较行为，但此值中不会显示区分变体选择符 (\_VSS) 选项。|  
 |**版本(Version)**|从排序规则 ID 版本字段派生的排序规则的版本。 返回一个介于 0 到 3 之间的整数值。<br /><br /> 名称中含有“140”的排序规则返回 3。<br /><br /> 名称中含有“100”的排序规则返回 2。<br /><br /> 名称中含有“90”的排序规则返回 1。<br /><br /> 所有其他排序规则均返回 0。|  
   

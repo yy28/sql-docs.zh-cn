@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087559"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564203"
 ---
 # <a name="query-processing-architecture-guide"></a>查询处理体系结构指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * 使用具有快速处理器的服务器以及尽可能多的处理器核，以充分利用并行查询处理能力。
 * 确保服务器具有足够的 I/O 控制器带宽。 
 * 对每个大型已分区表创建聚集索引，以充分利用 B 树扫描优化。
-* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](http://msdn.microsoft.com/en-us/library/dd425070.aspx)中的最佳做法建议操作。
+* 向已分区的表中大容量加载数据时，请遵照白皮书 [The Data Loading Performance Guide（数据加载性能指南）](http://msdn.microsoft.com/library/dd425070.aspx)中的最佳做法建议操作。
 
 ### <a name="example"></a>示例
 
