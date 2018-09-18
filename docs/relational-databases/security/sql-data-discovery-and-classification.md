@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084630"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563833"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 数据发现和分类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "39084630"
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-可以使用扩展属性目录视图 [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 访问元数据。
+可以使用扩展属性目录视图 [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) 访问元数据。
 
 以下代码示例返回具有相应分类的所有已分类列：
 
@@ -150,8 +150,8 @@ FROM
 
 请考虑通过应用列级别安全性机制来保护敏感列：
 
-* 用于模糊化使用中的敏感列的[动态数据掩码](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking)。
-* 用于静态加密敏感列的 [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine)。
+* 用于模糊化使用中的敏感列的[动态数据掩码](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking)。
+* 用于静态加密敏感列的 [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine)。
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
