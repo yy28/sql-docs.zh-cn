@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343082"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563869"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>教程： 使用 RevoScaleR R 函数与 SQL Server 数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ RevoScaleR 是用于数据科学和机器学习工作负荷提供分布式和并
   
     若要本地和远程计算上下文之间来回切换，您需要两个系统。 本地通常是具有足够的电源可用于数据科学工作负荷的开发工作站。 远程在这种情况下是 SQL Server 2017 或 SQL Server 2016 与启用了 R 功能。 
     
-    切换计算上下文的前提是在本地和远程系统上具有相同版本 RevoScaleR。 在本地工作站上，你可以获取的 RevoScaleR 包和相关的提供程序安装或使用以下任何一个：[在 Azure 上的数据科学 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)， [（免费） 的 Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client)，或[Microsoft Machine Learning Server （独立版）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)。 对于独立服务器选项，请安装免费的开发人员版本，使用 Linux 或 Windows 安装程序。 此外可以使用 SQL Server 安装程序安装在独立服务器。
+    切换计算上下文的前提是在本地和远程系统上具有相同版本 RevoScaleR。 在本地工作站上，你可以获取的 RevoScaleR 包和相关的提供程序安装或使用以下任何一个：[在 Azure 上的数据科学 VM](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview)， [（免费） 的 Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)，或[Microsoft Machine Learning Server （独立版）](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install)。 对于独立服务器选项，请安装免费的开发人员版本，使用 Linux 或 Windows 安装程序。 此外可以使用 SQL Server 安装程序安装在独立服务器。
       
 -   **其他 R 包**
   

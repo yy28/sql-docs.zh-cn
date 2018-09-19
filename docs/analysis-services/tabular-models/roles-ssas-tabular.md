@@ -1,6 +1,6 @@
 ---
 title: 角色 |Microsoft 文档
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981529"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975686"
 ---
 # <a name="roles"></a>角色
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   在表格模型中，角色定义模型的成员权限。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。 
   
  对于 SQL Server Analysis Services，角色包含用户的成员，按 Windows 用户名或按 Windows 组和权限 （读取、 过程、 管理员）。 对于 Azure Analysis Services，用户必须位于你的 Azure Active Directory 和用户名，并指定组必须是组织的电子邮件地址或 UPN。 
-  
+
+> [!IMPORTANT]  
+>  当使用 SSDT 创建角色并添加组织用户到表格模型项目将部署到 Azure Analysis Services，使用[集成工作区](workspace-database-ssas-tabular.md)。
+
 > [!IMPORTANT]  
 >  对于用户通过使用报表客户端应用程序连接到已部署的模型，您必须创建至少一个角色至少读取到的这些用户是成员的权限。  
   
@@ -47,9 +50,9 @@ ms.locfileid: "38981529"
   
  每个角色都可以定义下列权限之一：  
   
-|权限|Description|使用 DAX 进行行筛选|  
+|Permissions|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
-|InclusionThresholdSetting|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
+|None|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
 |读取和处理|允许成员查询数据（基于行级别筛选器）并通过运行包含处理命令的脚本或包来运行处理操作，但无法对数据库进行任何更改。 无法在 SSMS 中查看模型数据库。|应用行筛选器。 仅能查询在行筛选器 DAX 公式中指定的数据。|  
 |处理|成员可以通过运行包含处理命令的脚本或包来运行处理操作。 不能修改模型数据库架构。 无法查询数据。 无法查询在 SSMS 中的模型数据库。|不应用行筛选器。 此角色中没有可查询的数据|  
@@ -105,7 +108,7 @@ ms.locfileid: "38981529"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|@shouldalert|企业|  
+|1|企业|  
 |2|一般行政和管理|  
 |3|库存管理|  
 |4|生产|  

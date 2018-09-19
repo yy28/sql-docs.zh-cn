@@ -18,12 +18,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 263e2edb61529a197815f95cc595dcb9b5949877
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c25a8486ebdaf81b868b6fedcc25c39e225048c3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032112"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563543"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "38032112"
   
 |列名|数据类型|Description|范围|  
 |-----------------|---------------|-----------------|-----------|  
-|\<继承列 >||此视图所继承的列的列表，请参阅[sys.objects](http://msdn.microsoft.com/en-us/c36fa71e-549a-4533-a6cd-1314d26f533f)。||  
+|\<继承列 >||此视图所继承的列的列表，请参阅[sys.objects](http://msdn.microsoft.com/c36fa71e-549a-4533-a6cd-1314d26f533f)。||  
 |lob_data_space_id|**int**||始终为 0。|  
 |filestream_data_space_id|**int**|数据空间 ID 为 FILESTREAM 文件组或 [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|使用此表的最大列 ID。||  
 |lock_on_bulk_load|**bit**|大容量加载期间将锁定表。|TBD|  
-|uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。|@shouldalert|  
+|uses_ansi_nulls|**bit**|在创建表时，将 SET ANSI_NULLS 数据库选项设置为 ON。|1|  
 |is_replicated|**bit**|1 = 使用复制发布表。|0;不支持复制。|  
 |has_replication_filter|**bit**|1 = 表具有复制筛选器。|0|  
 |is_merge_published|**bit**|1 = 使用合并复制发布表。|0;不支持。|  

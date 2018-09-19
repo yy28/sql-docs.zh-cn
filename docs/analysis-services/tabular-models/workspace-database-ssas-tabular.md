@@ -1,6 +1,6 @@
 ---
-title: SQL Server Data Tools 中的工作区数据库 |Microsoft 文档
-ms.date: 05/07/2018
+title: SQL Server Data Tools 中的工作区数据库 |Microsoft Docs
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,26 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 817c3b821fef5fe1c8dcfb539e93b9bf275ee5d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ebea50408a46ea2ac79030228ee06f149cece4c
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045171"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975716"
 ---
-# <a name="workspace-database"></a>工作区数据库 
+# <a name="workspace-database"></a>工作区数据库
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   当您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中创建新的表格模型项目时，将创建在模型创作期间使用的表格模型工作区数据库。
   
 ## <a name="specifying-a-workspace-instance"></a>指定工作区实例  
+
   在 SSDT 中创建新的表格模型项目时，可以指定一个 Analysis Services 实例，以便在创作项目时使用。 从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 2016 年 9 月版 (14.0.60918.0) 开始，将引入用于在创建新的表格模型项目时指定工作区实例的两种模式。 
 
-**集成工作区** - 利用 SSDT 自身内部的 Analysis Services 实例。
+**集成工作区**-推荐。 利用 SSDT 自身内部的 Analysis Services 实例。 创建一个项目将部署到 Azure Analysis Services 时，请使用此设置。
 
-**工作区服务器** - 在显式 Analysis Services 实例中创建工作区数据库，通常在 SSDT 所在的同一台计算机或同一网络中的另一台计算机上。
+**工作区服务器** - 在显式 Analysis Services 实例中创建工作区数据库，通常在 SSDT 所在的同一台计算机或同一网络中的另一台计算机上。 虽然您可以指定 Azure Analysis Services 服务器，不建议。 
   
 ### <a name="integrated-workspace"></a>集成工作区
-通过集成工作区，使用 SSDT 自身的隐式 Analysis Services 实例在内存中创建工作数据库。 集成工作区模式显著降低了在 SSDT 中创作表格项目的复杂性，因为无需单独显式安装 SQL Server Analysis Services。
+
+通过集成工作区，使用 SSDT 自身的隐式 Analysis Services 实例在内存中创建工作数据库。 集成工作区模式显著降低了创作表格项目在 SSDT 中的，因为不需要单独的显式 Analysis Services 服务器的复杂性。
 
 通过使用集成工作区模式，SSDT 表格在后台动态启动其自身的内部 SSAS 实例，并加载数据库。 可以在模型设计器中添加并查看表、列和数据。 如果添加其他表、列和关系等，则你是在修改工作区数据库。 集成工作区模式不会更改 SSDT 表格与工作区服务器和数据库配合工作的方式。 更改的是 SSDT 表格托管工作区数据库的位置。
 
@@ -36,12 +39,14 @@ ms.locfileid: "34045171"
 
 ![SSAS 集成工作区模式](../../analysis-services/tabular-models/media/ssas-integrated-workspace-mode.png)
 
-通过使用 model.bim 的“工作区数据库”和“工作区服务器”属性，可以在 SSDT 表格托管数据库的位置发现临时数据库的名称和内部 SSAS 实例的 TCP 端口。 只要 SSDT 表格加载了数据库，你就可以使用 SSMS 连接到工作区数据库。 “工作区保持期”设置指定 SSDT 表格将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 这可确保与始终将模型保留在内存中相比，消耗较少的内存。 如果想要控制这些设置，将“集成工作区模式”属性设置为 False，然后提供显式工作区服务器。 如果导入模型的数据超出了 SSDT 工作站的内存容量，则显式工作区服务器也很合理。
+通过使用 model.bim 的“工作区数据库”和“工作区服务器”属性，可以在 SSDT 表格托管数据库的位置发现临时数据库的名称和内部 SSAS 实例的 TCP 端口。 只要 SSDT 表格加载了数据库，你就可以使用 SSMS 连接到工作区数据库。 “工作区保持期”设置指定 SSDT 表格将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 这可确保与始终将模型保留在内存中相比，消耗较少的内存。 如果想要控制这些设置，将“集成工作区模式”属性设置为 False，然后提供显式工作区服务器。 显式工作区服务器还使来讲，如果您要导入到模型中的数据超出了 SSDT 工作站的内存容量。
 
 > [!NOTE]  
->  使用集成的工作区模式时，本地的 Analysis Services 实例将为 64 位，SSDT Visual Studio 的 32 位环境中运行时。 如果正连接到特殊数据源，请确保工作站上同时安装了相应数据提供程序的 32 位和 64 位版本。 64 位 Analysis Services 实例需要 64 位提供程序和 32 位版本，才能使用 SSDT 中的表导入向导。
+>  使用集成工作区模式时，本地 Analysis Services 实例是 64 位，而 SSDT 的 Visual Studio 的 32 位环境中运行。 如果正连接到特殊数据源，请确保工作站上同时安装了相应数据提供程序的 32 位和 64 位版本。 64 位提供程序是必需的 64 位 Analysis Services 实例和 32 位版本是必需的 SSDT 中的表导入向导。
 
-###  <a name="bkmk_overview"></a> 工作区服务器  
+###  <a name="bkmk_overview"></a> 工作区服务器
+
+
  当您在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中使用某个表格模型项目模板创建新的 Business Intelligence 项目时，在“工作区服务器”属性中所指定的 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]实例上创建工作区数据库。 每个表格模型项目将有自己的工作区数据库。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查看 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的工作区数据库。 工作区数据库名称包含项目名称，后跟下划线和用户名、然后是下划线和 GUID。  
   
  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开表格模型项目时，工作区数据库驻留在内存中。 关闭项目时，工作区数据库可能保存在内存中、存储到磁盘并从内存中删除（默认值）或从内存中删除且不存储到磁盘，这由“工作区保持期”属性决定。 有关“工作区保持期”属性的详细信息，请参阅本主题后面的 [工作区数据库属性](#bkmk_ws_prop) 。  
@@ -76,10 +81,10 @@ ms.locfileid: "34045171"
 > [!NOTE]  
 >  创建新模型项目时，“集成工作区模式”、“工作区服务器”、“工作区保持期”和“数据备份”属性将应用默认设置。 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改新模型项目的默认设置。 可以在 **“属性”** 窗口中为每个模型项目设置这些属性以及其他属性。 更改默认设置不会应用到已创建的模型项目。 有关详细信息，请参阅[配置默认数据建模和部署属性](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)。  
   
-|属性|默认设置|Description|  
+|“属性”|默认设置|Description|  
 |--------------|---------------------|-----------------|  
 |**集成工作区模式**|True、False|如果创建项目时，为工作区数据库选择集成工作区模式，此属性将为 True。 如果创建项目时，选择“工作区服务器”模式，此属性将为 False。 | 
-|**工作区数据库**|名称|工作区数据库的名称。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
+|**工作区数据库**|“属性”|工作区数据库的名称。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
 |**工作区保持期**|从内存中卸载|指定在关闭某一模型项目后将如何保留工作区数据库。 工作区数据库将包含模型元数据和导入的数据。 在某些情况下，工作区数据库可能会非常大并且占用大量内存。 默认情况下，关闭 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中的模型项目时，将从内存中卸载工作区数据库。 在更改此设置时，一定要考虑您的可用内存资源以及计划处理该模型项目的频繁程度。 此属性设置具有以下选项：<br /><br /> **保留在内存中** - 指定在关闭模型项目后将工作区数据库保留在内存中。 此选项将会占用较多内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用较少的资源并且工作区数据库将更快加载。<br /><br /> **从内存中卸载** - 指定将工作区数据库保留在磁盘上，但在关闭模型项目后将不再保留在内存中。 此选项将会占用较少内存；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，必须重新附加工作区数据库；这样会占用更多资源，并且与工作区数据库保留在内存中相比，模型项目的加载速度将更慢。 在内存中资源受到限制或在处理远程工作区数据库时，将使用此选项。<br /><br /> **删除工作区** - 指定从内存中删除工作区数据库，在关闭模型项目后不将工作区数据库保留在磁盘上。 此选项将会占用较少内存和存储空间；但在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中打开某一模型项目时，将会占用附加的资源，并且与工作区数据库保留在内存中或磁盘上相比，模型项目的加载速度将更慢。 只有在偶尔处理模型项目时，才使用此选项。<br /><br /> 可以在“数据建模”页上（位于“工具\选项”对话框的“分析服务器”设置中）更改此属性的默认设置。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
 |**工作区服务器**|localhost|此属性指定在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中创作模型项目时将用于承载工作区数据库的默认服务器。 在本地计算机上运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的所有可用实例都将包括在列表框中。<br /><br /> 若要指定其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器（在表格模式下运行），请键入服务器名称。 登录的用户必须是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器上的管理员。<br /><br /> 注意：建议你将本地 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器指定为工作区服务器。 对于远程服务器上的工作区数据库，不支持从 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 进行导入，数据不能在本地备份，并且在查询过程中用户界面可能会遇到滞后的情况。<br /><br /> 可以在“数据建模”页上（位于“工具\选项”对话框的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 设置中）更改此属性的默认设置。 当“集成工作区模式”为“True”时，无法编辑此属性。|  
   

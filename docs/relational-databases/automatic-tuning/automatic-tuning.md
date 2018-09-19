@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068744"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533999"
 ---
 # <a name="automatic-tuning"></a>自动优化
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "43068744"
 
 ## <a name="why-automatic-tuning"></a>为什么自动优化？
 
-经典数据库管理的主要任务之一监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询时，应添加以提高性能，并且很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
+三个经典数据库管理的主要任务监视工作负荷，识别关键[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查询时，添加了以提高性能，并标识应为很少使用的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供的查询和索引需要监视的详细的见解。 但是，持续监视数据库是一个艰巨且乏味的任务，尤其是在处理多个数据库。 管理大量的数据库可能无法高效地完成。 而不是手动监视和优化你的数据库，可以考虑委派某些监视和优化操作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自动优化功能。
 
-### <a name="how-does-automatic-tuning-works"></a>原理自动优化工作原理是什么？
+### <a name="how-does-automatic-tuning-work"></a>自动优化工作原理？
 
-自动优化是一种持续监视和分析过程的不断学习有关工作负荷的特征并识别潜在的问题和改进。
+自动优化是一种持续监视和不断学习的特征的工作负荷的分析过程和识别潜在的问题和改进。
 
 ![自动优化过程](./media/tuning-process.png)
 

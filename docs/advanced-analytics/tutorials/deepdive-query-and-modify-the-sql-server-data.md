@@ -1,5 +1,5 @@
 ---
-title: 查询和修改 SQL Server 数据 （SQL 和 R 深入） |Microsoft 文档
+title: 查询和修改 SQL Server 数据 （SQL 和 R 的深入探讨） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,29 +7,29 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202219"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975646"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查询和修改 SQL Server 数据 （SQL 和 R 深入）
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>查询和修改 SQL Server 数据 （SQL 和 R 的深入探讨）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是有关如何使用数据科学深入了解教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+本文是有关如何使用数据科学的深入教程的一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
 数据现已加载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，可以使用创建的数据源作为 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]中 R 函数的参数，来获取有关变量的基本信息，以及生成摘要和直方图。
 
-在此步骤中，重新使用的数据源进行一些快速分析和然后增强数据。
+在此步骤中，重新使用一些快速分析并增强数据的数据源。
 
 ## <a name="query-the-data"></a>查询数据
 
 首先，获取列及其数据类型的列表。
 
-1.  使用函数[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)并指定你想要分析的数据源。
+1.  使用函数[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) ，指定你想要分析的数据源。
 
-    具体取决于你的 RevoScaleR 版本，还可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
+    根据你的 RevoScaleR 的版本，还可以使用[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)。 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -58,9 +58,9 @@ ms.locfileid: "31202219"
 
 ## <a name="modify-metadata"></a>修改元数据
 
-所有变量都作为整数存储，但某些变量表示分类数据（在 R 中称为因子变量）。例如，“state”列包含用作 50 个州以及哥伦比亚特区的标识符的数字。  为了更加轻松地理解数据，可将数字替换为州名的缩写列表。
+所有变量都作为整数都存储，但某些变量表示分类数据，调用*因子变量*中。例如，列*状态*包含用作 50 个州以及哥伦比亚特区的标识符的数字。  为了更加轻松地理解数据，可将数字替换为州名的缩写列表。
 
-在此步骤中，可以创建一个包含缩写的字符串向量，然后将这些分类值映射到原始的整数标识符。 然后，您使用中的新变量*colInfo*自变量，以指定此列会当作一个因素。 无论何时分析数据，或将其移动，使用缩写和列会被视为一个因素。
+在此步骤中，将创建一个包含缩写的字符串向量，然后将这些分类值映射到原始整数标识符。 然后，使用中的新变量*colInfo*参数，以指定此列将作为因子处理。 每次分析的数据或将其移动，使用缩写和作为因子处理列。
 
 将列作为用作因子前将其映射到缩写也可真正提高性能。 有关详细信息，请参阅[R 和数据优化](..\r\r-and-data-optimization-r-services.md)。
 
@@ -120,11 +120,11 @@ ms.locfileid: "31202219"
     
     *Var 1: custID, Type: integer*
     
-    *Var 2： 性别 2 因素级别： 男性女性*
+    *Var 2： 性别 2 的因素级别： 男性女性*
     
-    *Var 3： 状态 51 因素级别： AK AL AR AZ CA...VT WA WI WV WY*
+    *Var 3： 状态 51 身份 levels: AK AL AR AZ CA...VT WA WI WV WY*
     
-    *Var 4： 持卡人 2 因素级别： 主体辅助数据库*
+    *Var 4： 持卡人 2 的因素级别： 主体的辅助数据库*
     
     *Var 5: balance, Type: integer*
     

@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795656"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563743"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有包。 在标准 SQL Server 服务，会根据 SQL Server 发布周期，与向现有包的当前版本的 bug 修复更新 R 和 Python 包。 
 
-大部分数据科学家习惯于使用较新的包可用。 有关 SQL Server 2017 机器学习服务 （数据库内） 和 SQL Server 2016 R Services （数据库内），可以通过更改获取较新版本的 R 和 Python*绑定*从 SQL Server 服务到[Microsoft机器学习服务器](https://docs.microsoft.com/en-us/machine-learning-server/index)并[新式生命周期支持策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+大部分数据科学家习惯于使用较新的包可用。 有关 SQL Server 2017 机器学习服务 （数据库内） 和 SQL Server 2016 R Services （数据库内），可以通过更改获取较新版本的 R 和 Python*绑定*从 SQL Server 服务到[Microsoft机器学习服务器](https://docs.microsoft.com/machine-learning-server/index)并[新式生命周期支持策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
 
 绑定不会更改您的安装的基础知识： R 和 Python 集成仍然是数据库引擎实例的一部分许可不变的 （无额外成本与绑定相关联），并且数据库仍保留 SQL Server 支持策略引擎。 但重新绑定会更改如何维护 R 和 Python 包。 本文的其余部分介绍的绑定机制及其使用方式的每个版本的 SQL Server。
 

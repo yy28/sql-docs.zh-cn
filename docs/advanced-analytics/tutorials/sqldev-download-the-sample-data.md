@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703600"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724331"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>适用于 SQL Server 的 NYC 出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 |**对象名称**|**对象类型**|**Description**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | “数据库” |创建由创建-db-tb-上传-data.sql 脚本。 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表： 包含主 NYC 出租车数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 NYC 出租车数据集 1%样本插入此表。<br /><br />dbo.nyc_taxi_models 表： 用于保存已训练的高级的分析模型。|
+|**NYCTaxi_Sample** | “数据库” |创建由创建-db-tb-上传-data.sql 脚本。 创建一个数据库和两个表：<br /><br />dbo.nyctaxi_sample 表： 包含主 NYC 出租车数据集。 将在表中添加一个聚集列存储索引，改善存储和查询性能。 NYC 出租车数据集 1%样本插入此表。<br /><br />dbo.nyc_taxi_models 表： 用于保存已训练的高级的分析模型。|
 |**fnCalculateDistance** |标量值函数 (scalar-valued function) | 创建由 fnCalculateDistance.sql 脚本。 计算上车和下车位置之间的直接距离。 在使用此函数[创建数据功能](sqldev-create-data-features-using-t-sql.md)，[训练和保存模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)并[操作 R 模型](sqldev-operationalize-the-model.md)。|
 |**fnEngineerFeatures** |表值函数 (table-valued function) | 创建由 fnEngineerFeatures.sql 脚本。 创建新的数据功能，用于为模型定型。 在使用此函数[创建数据功能](sqldev-create-data-features-using-t-sql.md)并[实施 R 模型](sqldev-operationalize-the-model.md)。|
 |**PlotHistogram** |存储过程 | 创建由 PlotHistogram.sql 脚本。 调用 R 函数绘制变量的直方图，然后返回将绘图作为二进制对象。 在使用此存储的过程[浏览和可视化数据](sqldev-explore-and-visualize-the-data.md)。|

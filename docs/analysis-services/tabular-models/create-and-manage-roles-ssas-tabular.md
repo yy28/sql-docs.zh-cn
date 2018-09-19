@@ -1,6 +1,6 @@
 ---
-title: 创建和管理角色 |Microsoft 文档
-ms.date: 05/07/2018
+title: 创建和管理角色 |Microsoft Docs
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045611"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975666"
 ---
 # <a name="create-and-manage-roles"></a>创建和管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  在表格模型中，角色定义模型的成员权限。 可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“角色管理器”对话框为模型项目定义角色。 在部署模型时，数据库管理员可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]管理角色。  
+  在表格模型中，角色定义模型的成员权限。 可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的“角色管理器”对话框为模型项目定义角色。 
+
+> [!IMPORTANT]
+> 如果你正在部署到 Azure Analysis Services 项目，使用**集成工作区**作为工作区数据库。 若要了解详细信息，请参阅[工作区数据库](workspace-database-ssas-tabular.md)。
   
- 这篇文章中的任务说明如何创建和管理通过使用中的角色管理器对话框的模型创作过程中的角色[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 有关管理已部署的模型数据库中角色的信息，请参阅[表格模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
+ 在本文中的任务说明如何创建和使用中的角色管理器对话框在模型创作期间管理角色[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 在已部署的模型数据库中管理角色的信息，请参阅[表格模型角色](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)。  
   
 ## <a name="tasks"></a>“任务”  
  若要创建、编辑、复制和删除角色，可使用 **“角色管理器”** 对话框。 若要查看 **“角色管理器”** 对话框，请在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，单击 **“模型”** 菜单，然后单击 **“角色管理器”**。  
@@ -41,7 +44,7 @@ ms.locfileid: "34045611"
   
     |权限|Description|  
     |----------------|-----------------|  
-    |**InclusionThresholdSetting**|成员无法对模型架构进行任何修改，也无法查询数据。|  
+    |**无**|成员无法对模型架构进行任何修改，也无法查询数据。|  
     |**读取**|允许成员查询数据（基于行筛选器），但不能对模型架构进行任何更改。|  
     |**读取和处理**|允许成员查询数据（基于行级别筛选器）并运行“处理”和“全部处理”操作，但无法对模型架构进行任何更改。|  
     |**处理**|成员可以运行“处理”和“全部处理”操作。 不能修改模型架构且不能查询数据。|  
@@ -54,7 +57,7 @@ ms.locfileid: "34045611"
 7.  若要向角色添加成员，请单击 **“成员”** 选项卡，然后单击 **“添加”**。  
   
     > [!NOTE]  
-    >  也可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色成员添加到已部署的模型中。 有关详细信息，请参阅[使用 SSMS 管理角色](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)。  
+    >  也可以通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色成员添加到已部署的模型中。 有关详细信息，请参阅[通过使用 SSMS 管理角色](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)。  
   
 8.  在 **“选择用户或组”** 对话框中，将 Windows 用户或 Windows 组对象作为成员输入。  
   
