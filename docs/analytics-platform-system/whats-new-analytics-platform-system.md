@@ -9,20 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400640"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289308"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>APS CU7.1
+发布日期-2018 年 7 月
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不会消耗并发槽位 （行为更改）
+APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 以前，这些命令将占用[并发槽](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)减少的用户负载/查询无法执行。 `DBCC`命令现在运行在不使用用户并发槽提高总体查询执行性能的本地队列中。
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>某些元数据的调用替换为目录对象
+使用目录对象的元数据调用，而不是使用 SMO 有 APS 中显示性能改进。 从 CU7.1 开始，某些元数据调用现在目录对象默认情况下使用。 可以通过关闭此行为[功能开关](appliance-feature-switch.md)如果使用元数据查询的客户遇到任何问题。
+
+### <a name="bug-fixes"></a>Bug 修复
+我们已升级到 SQL Server 2016 SP2 CU2 APS CU7.1 使用。 升级解决了如下所述的一些问题。
+
+| Title | Description |
+|:---|:---|
+| **潜在的元组搬运者进程死锁** |升级分布式事务和元组发动机后台线程中修复，长期的合作可能导致死锁。 在安装后 CU7.1，TF634 用于停止为 SQL Server 启动参数或全局跟踪标志的元组发动机的客户可以放心删除它。 | 
+| **某些 lag/lead 查询失败** |将错误的嵌套的 lag/lead 函数使用 CCI 表的某些查询现已修复此升级。 | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS AU7
-APS 2016 后，才可以升级到 AU7。 以下是 APS AU7 中的新增功能：
+发布日期-2018 年 5 月
+
+APS 2016 后，才可以升级到 AU7。 APS AU7 中的新增功能如下：
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自动创建和自动更新统计信息
 APS AU7 创建，并默认情况下将自动更新统计信息。 若要更新统计信息设置，管理员可以使用中的新功能切换菜单项[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能开关](appliance-feature-switch.md)控制不符、 自动更新和异步更新统计信息的行为。 此外可以更新使用的统计信息设置[ALTER DATABASE （并行数据仓库）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)语句。
@@ -42,7 +63,7 @@ Microsoft 建议所有客户，若要安装更新 BIOS。 Microsoft 已在各种
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 本部分针对 APS 2016 AU6 所述的新功能。
 
