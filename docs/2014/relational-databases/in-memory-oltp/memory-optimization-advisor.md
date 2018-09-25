@@ -24,7 +24,7 @@ ms.lasthandoff: 08/16/2018
 ms.locfileid: "40395665"
 ---
 # <a name="memory-optimization-advisor"></a>内存优化顾问
-  事务性能报告工具（请参阅 [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）在移植到使用内存中 OLTP 时通知您的数据库中的哪些表会给您带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用内存优化顾问帮助您将基于磁盘的数据库表迁移到内存中 OLTP。  
+  事务性能报告工具（请参阅 [确定表或存储过程是否应移植到内存中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)）在移植到使用内存中 OLTP 时通知您的数据库中的哪些表会给您带来好处。 找到要移植以使用内存中 OLTP 的表之后，可使用内存优化顾问帮助您将基于磁盘的数据库表迁移到内存中 OLTP。  
   
  开始时，连接至包含基于磁盘的数据库表的实例。 你可以连接到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 但是，如果您想要使用该顾问执行迁移操作，则必须连接到启用了内存中 OLTP 功能的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 实例。 有关内存中 OLTP 要求的详细信息，请参阅 [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md)。  
   
