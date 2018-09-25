@@ -3,7 +3,7 @@ title: SQL Server 连接器维护与故障排除 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 88bcc9874dbbef707ac727111515a298033168b2
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695828"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013692"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 连接器维护与故障排除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ SQL Server 连接器需要哪些终结点的访问权限？ 该连接器与两�
 错误代码  |符号  |描述    
 ---------|---------|---------  
 0 | scp_err_Success | 操作已成功执行。    
-@shouldalert | scp_err_Failure | 操作失败。    
+1 | scp_err_Failure | 操作失败。    
 2 | scp_err_InsufficientBuffer | 该错误通知引擎为缓冲区分配更多内存。    
 3 | scp_err_NotSupported | 此操作不受支持。 例如，EKM 提供程序不支持指定的密钥类型或算法。    
 4 | scp_err_NotFound | EKM 提供程序找不到指定的密钥或算法。    

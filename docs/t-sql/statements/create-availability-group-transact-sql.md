@@ -28,12 +28,12 @@ caps.latest.revision: 196
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5276c3016382fbca1521f3417ad9095d92dea1e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7e0fc36645020d8dd349ad4239f4ed811eca4bfe
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981259"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713839"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,76 +50,71 @@ ms.locfileid: "37981259"
 ```SQL  
   
 CREATE AVAILABILITY GROUP group_name  
-  { <availability_group_spec> | <distributed_availability_group_spec> }  
+   WITH (<with_option_spec> [ ,...n ] )  
+   FOR [ DATABASE database_name [ ,...n ] ]  
+   REPLICA ON <add_replica_spec> [ ,...n ]  
+   AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
+   [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
 [ ; ]  
-
-<availability_group_spec>::=  
-  [ WITH (<with_option_spec> [ ,...n ] ) ]  
-  FOR [ DATABASE database_name [ ,...n ] ]  
-  REPLICA ON <add_replica_spec> [ ,...n ]  
-  [ LISTENER ‘dns_name’ ( <listener_option> ) ]  
-
-  <with_option_spec>::=   
-      AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
-    | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
-    | HEALTH_CHECK_TIMEOUT = milliseconds  
-    | DB_FAILOVER  = { ON | OFF }   
-    | DTC_SUPPORT  = { PER_DB | NONE }  
-    | BASIC  
-    | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
-    | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
-    
-  <add_replica_spec>::=  
-    <server_instance> WITH  
-      (  
-        ENDPOINT_URL = 'TCP://system-address:port',  
-        AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
-        FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
-        [ , <add_replica_option> [ ,...n ] ]  
-      )   
-    
-    <add_replica_option>::=  
-        SEEDING_MODE = { AUTOMATIC | MANUAL }  
-      | BACKUP_PRIORITY = n  
-      | SECONDARY_ROLE ( {   
-              [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
-          [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
-      } )  
-      | PRIMARY_ROLE ( {   
-              [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
-          [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
-      } )  
-      | SESSION_TIMEOUT = integer  
-
-  <listener_option> ::=  
-    {  
-        WITH DHCP [ ON ( <network_subnet_option> ) ]  
-      | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
-    }  
-    
-    <network_subnet_option> ::=  
-      ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
-    
-    <ip_address_option> ::=  
-      {   
-          ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
-        | ‘ipv6_address’  
-      }  
-
-<distributed_availability_group_spec>::=  
-  WITH (DISTRIBUTED)  
-  AVAILABILITY GROUP ON <add_availability_group_spec> [ ,...2 ]  
-
-  <add_availability_group_spec>::=  
-  <ag_name> WITH  
+  
+<with_option_spec>::=   
+    AUTOMATED_BACKUP_PREFERENCE = { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+  | FAILURE_CONDITION_LEVEL  = { 1 | 2 | 3 | 4 | 5 }   
+  | HEALTH_CHECK_TIMEOUT = milliseconds  
+  | DB_FAILOVER  = { ON | OFF }   
+  | DTC_SUPPORT  = { PER_DB | NONE }  
+  | BASIC  
+  | DISTRIBUTED
+  | REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = { integer }
+  | CLUSTER_TYPE = { WSFC | EXTERNAL | NONE } 
+  
+<add_replica_spec>::=  
+  <server_instance> WITH  
     (  
-      LISTENER_URL = 'TCP://system-address:port',  
-      AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
-      FAILOVER_MODE = MANUAL,  
-      SEEDING_MODE = { AUTOMATIC | MANUAL }  
+       ENDPOINT_URL = 'TCP://system-address:port',  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
+       FAILOVER_MODE = { AUTOMATIC | MANUAL | EXTERNAL }  
+       [ , <add_replica_option> [ ,...n ] ]  
+    )   
+  
+  <add_replica_option>::=  
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
+     | BACKUP_PRIORITY = n  
+     | SECONDARY_ROLE ( {   
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
+     | PRIMARY_ROLE ( {   
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer  
+  
+<add_availability_group_spec>::=  
+ <ag_name> WITH  
+    (  
+       LISTENER_URL = 'TCP://system-address:port',  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       FAILOVER_MODE = MANUAL,  
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
   
-
+<listener_option> ::=  
+   {  
+      WITH DHCP [ ON ( <network_subnet_option> ) ]  
+    | WITH IP ( { ( <ip_address_option> ) } [ , ...n ] ) [ , PORT = listener_port ]  
+   }  
+  
+  <network_subnet_option> ::=  
+     ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’    
+  
+  <ip_address_option> ::=  
+     {   
+        ‘four_part_ipv4_address’, ‘four_part_ipv4_mask’  
+      | ‘ipv6_address’  
+     }  
+  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -159,7 +154,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |级别|失败条件|  
 |-----------|-----------------------|  
-|@shouldalert|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> -由于没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租用时间到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> -可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
@@ -190,7 +185,7 @@ CREATE AVAILABILITY GROUP group_name
  用于创建基本可用性组。 基本可用性组限于一个数据库和两个副本：主要副本和次要副本。 此选项替换 SQL Server Standard Edition 上弃用的数据库镜像功能。 有关详细信息，请参阅[基本可用性组（Always On 可用性组）](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始支持基本可用性组。  
 
  DISTRIBUTED  
- 用于创建分布式可用性组。 DISTRIBUTED 选项不能与其他任何选项或子句组合。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，支持分布式可用性组。 
+ 用于创建分布式可用性组。 此选项与 AVAILABILITY GROUP ON 参数一起使用，可连接不同 Windows Server 故障转移群集中的两个可用性组。  有关详细信息，请参阅[分布式可用性组&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，支持分布式可用性组。 
 
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  在 SQL Server 2017 中引入。 用于设置需要在主要副本提交事务之前提交的最小数量的同步次要副本。 保证 SQL Server 事务等待至事务日志在最小数量的次要副本上更新为止。 默认值为 0，可提供与 SQL Server 2016 相同的行为。 最小值为 0。 最大值为副本数量减 1。 此选项与同步提交模式中的副本相关。 当副本处于同步提交模式时，对主要副本的写入操作会等待至将次要同步副本上的写入提交到副本数据库事务日志为止。 如果托管次要同步副本的 SQL Server 停止响应，则托管主要副本的 SQL Server 将此次要副本标记为 NOT SYNCHRONIZED（未同步）并继续执行操作。 当无响应的数据库恢复联机状态时，它处于“未同步”状态，副本标记为不正常，直到主要副本可再次对其执行同步。 此设置可确保主要副本等待至最少数量的副本已提交每个事务。 如果最少数量的副本不可用，则主要副本上的提交会失败。 对于群集类型 `EXTERNAL`，可用性组添加到群集资源时，设置会更改。 请参阅[可用性组配置的高可用性和数据保护](../../linux/sql-server-linux-availability-group-ha.md)。
@@ -374,7 +369,7 @@ CREATE AVAILABILITY GROUP group_name
  有关会话超时期限的详细信息，请参阅 [Always On 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
  AVAILABILITY GROUP ON  
- 指定构成分布式可用性组的两个可用性组。 每个可用性组是其 Windows Server 故障转移群集 (WSFC) 的一部分。 创建分布式可用性组后，当前 SQL Server 实例上的可用性组成为主要可用性组，远程可用性组成为次要可用性组。  
+ 指定构成分布式可用性组的两个可用性组。 每个可用性组是其 Windows Server 故障转移群集 (WSFC) 的一部分。 创建分布式可用性组后，当前 SQL Server 实例上的可用性组成为主要可用性组。 第二个可用性组成为次要可用性组。  
   
  需要将次要可用性组联接到分布式可用性组。 有关详细信息，请参阅 [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)中的 PowerShell 将次要副本添加到现有的 AlwaysOn 可用性组。  
   

@@ -26,12 +26,12 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ecced10240ac5cc0f14ca64a2f2e2582edb1c01e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38043284"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713869"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ALTER AVAILABILITY GROUP group_name
    | GRANT CREATE ANY DATABASE  
    | DENY CREATE ANY DATABASE  
    | FAILOVER  
-   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
+   | FORCE_FAILOVER_ALLOW_DATA_LOSS   
    | ADD LISTENER ‘dns_name’ ( <add_listener_option> )  
    | MODIFY LISTENER ‘dns_name’ ( <modify_listener_option> )  
    | RESTART LISTENER ‘dns_name’  
@@ -87,17 +87,18 @@ ALTER AVAILABILITY GROUP group_name
     )   
   
   <add_replica_option>::=  
-       SEEDING_MODE = { AUTOMATIC | MANUAL }   
+       SEEDING_MODE = { AUTOMATIC | MANUAL }  
      | BACKUP_PRIORITY = n  
      | SECONDARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL }   
-        | READ_ONLY_ROUTING_URL = 'TCP://system-address:port'   
-          } )  
+            [ ALLOW_CONNECTIONS = { NO | READ_ONLY | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_URL = 'TCP://system-address:port' ]  
+     } )  
      | PRIMARY_ROLE ( {   
-          ALLOW_CONNECTIONS = { READ_WRITE | ALL }   
-        | READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE }   
-          } )  
-     | SESSION_TIMEOUT = seconds  
+            [ ALLOW_CONNECTIONS = { READ_WRITE | ALL } ]   
+        [,] [ READ_ONLY_ROUTING_LIST = { ( ‘<server_instance>’ [ ,...n ] ) | NONE } ]  
+        [,] [ READ_WRITE_ROUTING_URL = { ( ‘<server_instance>’ ) ] 
+     } )  
+     | SESSION_TIMEOUT = integer
   
 <modify_replica_spec>::=  
   <server_instance> WITH  
@@ -130,7 +131,7 @@ ALTER AVAILABILITY GROUP group_name
 <modify_availability_group_spec>::=  
  <ag_name> WITH  
     (  
-       LISTENER_URL = 'TCP://system-address:port'  
+       LISTENER = 'TCP://system-address:port'  
        | AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
        | SEEDING_MODE = { AUTOMATIC | MANUAL }  
     )  
@@ -199,7 +200,7 @@ ALTER AVAILABILITY GROUP group_name
   
 |级别|失败条件|  
 |-----------|-----------------------|  
-|@shouldalert|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
+|1|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务停止。<br /><br /> 因为没有从服务器实例接收到 ACK，连接到 WSFC 群集的可用性组的租期到期。 有关详细信息，请参阅 [工作原理：SQL Server AlwaysOn 租约超时](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)。|  
 |2|指定在发生以下任何情况时应启动自动故障转移：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例未连接到群集，并且超出了可用性组的用户指定的 HEALTH_CHECK_TIMEOUT 阈值。<br /><br /> 可用性副本处于失败状态。|  
 |3|指定在发生了严重的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如孤立的自旋锁、严重的写访问冲突或过多的转储）时应启动自动故障转移。<br /><br /> 这是默认行为。|  
 |4|指定在发生了中等程度的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部错误（例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部资源池中出现持久的内存不足情况）时应启动自动故障转移。|  
@@ -474,15 +475,15 @@ ALTER AVAILABILITY GROUP group_name
 >  NetBIOS 只识别 dns_name 中的前 15 个字符。 如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](http://technet.microsoft.com/library/cc731265\(WS.10\).aspx)。  
   
  JOIN AVAILABILITY GROUP ON  
- 联接到分布式可用性组。 创建分布式可用性组时，在群集上创建的可用性组为主要可用性组。 执行 JOIN 时，本地服务器实例的可用性组是辅助可用性组。  
+ 联接到分布式可用性组。 创建分布式可用性组时，在群集上创建的可用性组为主要可用性组。 联接分布式可用性组的可用性组为次要可用性组。  
   
  \<ag_name>  
  指定构成一半分布式可用性组的可用性组名称。  
   
- LISTENER_URL ='TCP://system-address:port'****  
+ LISTENER ='TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL 路径。  
   
- 必须有 LISTENER_URL 子句。  
+ 必须有 LISTENER 子句。  
   
  'TCP://system-address:port'****  
  指定与可用性组关联的侦听器的 URL。 URL 参数如下所示：  
@@ -491,7 +492,7 @@ ALTER AVAILABILITY GROUP group_name
  一个字符串，例如系统名称、完全限定的域名或 IP 地址，它们明确标识了侦听器。  
   
  *port*  
- 是与可用性组的镜像终结点关联的端口号。 请注意，这不是侦听器上配置的客户端连接端口。  
+ 是与可用性组的镜像终结点关联的端口号。 请注意，这不是侦听器的端口。  
   
  AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT }  
  指定在主要副本可以在给定主数据库上提交事务前，是否必须等待次要可用性组确认日志记录硬编码（写入）到磁盘。  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0ea16b21dcdbf6abe6d92877b241006f5fd629f6
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096555"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493768"
 ---
 # <a name="choose-an-encryption-algorithm"></a>选择加密算法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "43096555"
 -   长密钥通常会比短密钥生成更强的加密。  
   
 -   非对称加密比对称加密速度慢。  
-  
--   使用长密钥的块密码比流密码更强。  
   
 -   复杂的长密码比短密码更强。  
 
