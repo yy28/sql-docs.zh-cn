@@ -12,18 +12,18 @@ ms.custom: sql-linux
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 317c2ea2064f7ffc286671a8fff7eef2f8149ee7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c50b0ad1798f161d945a54e0e9a080a04a6eca05
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084913"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712969"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>如何为 Linux 上的 SQL Server 开发应用程序
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-您可以创建应用程序连接到并使用从各种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的 SQL Server 2017。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
+可以创建连接到并使用从各种编程语言，如 C#、 Java、 Node.js、 PHP、 Python、 Ruby 和 c + + 的 Linux 上的 SQL Server 的应用程序。 还可使用流行的 Web 框架和对象关系映射 (ORM) 框架。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
@@ -39,7 +39,7 @@ ms.locfileid: "39084913"
 - 尝试代码示例。
 
 > [!TIP]
-> 如果你想要开发适用于 SQL Server 2017 的 Docker，看一看**macOS**教程。
+> 如果你想要开发适用于 Docker 上的 SQL Server，看一看**macOS**教程。
 
 ## <a name="create-new-applications"></a>创建新的应用程序
 
@@ -47,11 +47,11 @@ ms.locfileid: "39084913"
 
 ## <a name="use-existing-applications"></a>使用现有应用程序
 
-如果有现有的数据库应用程序，您可以只需更改到目标 SQL Server 2017 Linux 上的其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)Linux 上的 SQL Server 2017 中。
+如果有现有的数据库应用程序，您可以到目标 Linux 上的 SQL Server 只需更改其连接字符串。 请务必阅读有关[已知问题](sql-server-linux-release-notes.md)Linux 上的 SQL Server 中。
 
 ## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>通过 Linux 上的 SQL Server 使用 Windows 上的现有 SQL 工具
 
-当前在如 SSMS、 SSDT 和 PowerShell，Windows 运行的工具也适用于 Linux 上的 SQL Server 2017。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
+当前在如 SSMS、 SSDT 和 PowerShell，Windows 运行的工具也适用于 Linux 上的 SQL Server。 尽管它们不可在本机 Linux 上运行，但你仍然可以管理 Linux 上的远程 SQL Server 实例。 
 
 有关详细信息，请参阅下列主题：
 

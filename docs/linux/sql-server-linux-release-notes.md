@@ -12,18 +12,21 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 291e38a59212a179683ec0c3eb8ff661a5243fcc
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381175"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049707"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的发行说明
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 以下发行说明适用于 Linux 上运行的 SQL Server 2017。 本文将划分成的部分，了解每个版本。 GA 版具有详细可支持性和已知问题列表。 每个累积更新 (CU) 或常规分发版本 (GDR) 有描述 CU 更改以及链接到包下载的 Linux 支持文章的链接。
+
+> [!TIP]
+> 这些发行说明是专门的 SQL Server 2017 版本。 有关新的 SQL Server 2019 预览版本的详细信息，请参阅[发行说明以在 Linux 上的 SQL Server 2019 预览](sql-server-linux-release-notes-2019.md?view=sql-server-ver15)。
 
 ## <a name="supported-platforms"></a>支持的平台
 
@@ -47,6 +50,7 @@ ms.locfileid: "43381175"
 
 | 发行版本               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
+| [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
@@ -64,7 +68,7 @@ ms.locfileid: "43381175"
 
 ## <a id="cuinstall"></a> 如何安装更新
 
-如果已配置的 CU 的存储库 (**mssql server 2017**)，然后执行全新安装时，您将看到最新的 SQL Server 的 CU 包。 CU 的存储库是在 Linux 上的 SQL Server 的所有包安装项目的默认值。 如果已配置的 GDR 存储库 (**mssql server 2017 gdr**)，才会出现关键安全更新发布后提供 ga 版。 如果需要使用 Docker 容器 CU 或 GDR 更新，请参阅官方的映像[Docker 引擎的 Linux 上的 Microsoft SQL Server](http://hub.docker.com/r/microsoft/mssql-server-linux/)。 有关存储库配置的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+如果已配置的 CU 的存储库 (**mssql server 2017**)，然后执行全新安装时，您将看到最新的 SQL Server 的 CU 包。 CU 的存储库是在 Linux 上的 SQL Server 的所有包安装项目的默认值。 如果已配置的 GDR 存储库 (**mssql server 2017 gdr**)，才会出现关键安全更新发布后提供 ga 版。 如果需要使用 Docker 容器 CU 或 GDR 更新，请参阅官方的映像[Docker 引擎的 Linux 上的 Microsoft SQL Server](https://hub.docker.com/r/microsoft/mssql-server)。 有关存储库配置的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
 
 如果要更新现有的 SQL Server 包，运行每个包，以获取最新 CU 的相应更新命令。 有关特定更新的每个包的说明，请参阅以下安装指南：
 
@@ -72,6 +76,20 @@ ms.locfileid: "43381175"
 - [安装全文搜索包](sql-server-linux-setup-full-text-search.md)
 - [安装 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU11"></a> CU11 (2018 年 9 月)
+
+这是 SQL Server 2017 累积更新 11 (CU11) 版本。 对于此版本的 SQL Server 引擎版本是 14.0.3038.14。 有关修补程序和此版本中的改进的信息，请参阅[ https://support.microsoft.com/en-us/help/4462262 ](https://support.microsoft.com/en-us/help/4462262)。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动或脱机包安装，您可以下载与下表中的信息的 RPM 和 Debian 包：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 14.0.3038.14-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm)</br>[SSIS 包](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 包 | 14.0.3038.14-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 包 | 14.0.3038.14-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU10"></a> CU10 (2018 年 8 月)
 

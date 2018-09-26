@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724331"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712750"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>适用于 SQL Server 的 NYC 出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 |**PredictTip**  |存储过程 |创建由 PredictTip.sql 脚本。 调用训练的模型以使用该模型创建预测。 该存储过程接受查询作为其输入参数，并返回包含输入行分数的数值的列。 在使用此存储的过程[使 R 模型可操作化](sqldev-operationalize-the-model.md)。|
 |**PredictTipSingleMode**  |存储过程| 创建由 PredictTipSingleMode.sql 脚本。 调用训练的模型以使用该模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。 在使用此存储的过程[使 R 模型可操作化](sqldev-operationalize-the-model.md)。|
 |**TrainTipPredictionModel**  |存储过程|创建由 TrainTipPredictionModel.sql 脚本。 通过调用 R 包定型逻辑回归模型。 该模型预测附属列的值，并使用随机选择的 70% 的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。 在使用此存储的过程[训练和保存模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)。|
+
+## <a name="query-data-for-verification"></a>验证查询数据
+
+作为验证步骤，运行查询以确认数据已上传。
+
+1. 在对象资源管理器，在数据库中，展开**NYCTaxi_Sample**数据库，然后打开表文件夹。
+
+2. 右键单击**dbo.nyctaxi_sample** ，然后选择**选择前 1000年行**返回一些数据。
 
 ## <a name="next-steps"></a>后续步骤
 

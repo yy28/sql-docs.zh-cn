@@ -1,6 +1,6 @@
 ---
-title: 使用动态管理视图 (Dmv) 监视 Analysis Services |Microsoft 文档
-ms.date: 05/02/2018
+title: Analysis Services 中使用动态管理视图 (Dmv) |Microsoft Docs
+ms.date: 09/25/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,45 +9,32 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 412923d24b4d48a0ebdfa11bcf60dc19d5b85368
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017064"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178323"
 ---
-# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用动态管理视图 (DMV) 监视 Analysis Services
+# <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV) 
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Analysis Services 动态管理视图 (DMV) 是公开与本地服务器操作和服务器运行状况有关信息的查询结构。 该查询结构是返回与 Analysis Services 实例有关的元数据和监视信息的架构行集的接口。  
+
+Analysis Services 动态管理视图 (DMV) 是查询，返回有关模型对象、 服务器操作和服务器运行状况的信息。 基于 SQL 的查询是接口*架构行集*。 架构行集是预设包含有关 Analysis Services 对象和服务器状态，包括数据库架构、 活动会话、 连接、 命令和在服务器执行的作业信息的表。
+
+DMV 查询可用来代替运行 XML/A 发现命令。 对于大多数管理员，编写 DMV 查询是更简单的因为语法基于 SQL。 此外，更轻松地读取和复制以表格格式返回的结果。 
   
- 对于大多数 DMV 查询，你会使用 **SELECT** 语句以及具有 XML/A 架构行集的 **$System** 架构。  
+大多数 DMV 查询使用**选择**语句和 **$System**架构具有 XML/A 架构行集，例如：  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
 ```  
   
- DMV 查询将返回查询运行时所处的服务器状态的有关信息。 若要实时监视操作，应改用跟踪。 有关详细信息，请参阅 [Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
+ DMV 查询返回有关服务器和对象状态信息时运行查询。 若要监视中实时的使用应改用跟踪的操作。 若要详细了解实时监视使用跟踪信息，请参阅[使用 SQL Server Profiler 监视 Analysis services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
-##  <a name="bkmk_ben"></a> 使用 DMV 查询的优点  
- DMV 查询返回与无法通过其他方式得到的操作和资源使用有关的信息。  
-  
- DMV 查询可用来代替运行 XML/A 发现命令。 对于大多数管理员，编写 DMV 查询很简单，因为查询语法基于 SQL。 此外，结果集以易于读取和复制的表格格式返回。  
-  
-##  <a name="bkmk_ex"></a> 示例和应用场景  
- DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 本节提供了最常使用 DMV 查询的应用场景示例。 您也可以查看 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409) ，了解使用 DMV 查询监视服务器实例的其他内情。  
-  
- `Select * from $System.discover_object_activity` /** 此查询报告自上次启动该服务后的对象活动。 有关基于此 DMV 的查询的示例，请参阅 [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)。  
-  
- `Select * from $System.discover_object_memory_usage` /** 此查询按对象报告内存使用情况。  
-  
- `Select * from $System.discover_sessions` /** 此查询报告活动会话，包括会话用户和持续时间。  
-  
- `Select * from $System.discover_locks` /** 此查询返回在特定时间点使用的锁的快照。  
-  
-##  <a name="bkmk_syn"></a> 查询语法  
- 用于 DMV 的查询引擎是数据挖掘分析器。 DMV 查询语法基于 [SELECT (DMX)](../../dmx/select-dmx.md) 语句。  
-  
- 尽管 DMV 查询语法基于 SQL SELECT 语句，但它并不支持 SELECT 语句的完整语法。 尤其是不支持 JOIN、GROUP BY、LIKE、CAST 和 CONVERT。  
+## <a name="query-syntax"></a>查询语法
+
+用于 DMV 的查询引擎是数据挖掘分析器。 DMV 查询语法基于在选择&#40;DMX&#41;语句。 尽管 DMV 查询语法基于 SQL SELECT 语句，但它并不支持 SELECT 语句的完整语法。 尤其是不支持 JOIN、GROUP BY、LIKE、CAST 和 CONVERT。  
   
 ```  
 SELECT [DISTINCT] [TOP <n>] <select list>  
@@ -56,102 +43,171 @@ FROM $System.<schemaRowset>
 [ORDER BY <expression>[DESC|ASC]]  
 ```  
   
- 以下针对 DISCOVER_CALC_DEPENDENCY 的示例阐释了如何使用 WHERE 子句来向查询提供参数：  
+以下针对 DISCOVER_CALC_DEPENDENCY 的示例阐释了如何使用 WHERE 子句来向查询提供参数：  
   
 ```  
 SELECT * FROM $System.DISCOVER_CALC_DEPENDENCY  
 WHERE OBJECT_TYPE = 'ACTIVE_RELATIONSHIP'  
 ```  
   
- 此外，对于具有限制的架构行集，该查询必须包含 SYSTEMRESTRICTSCHEMA 函数。 下面的示例返回与在表格模式服务器上运行的表格模型有关的 CSDL 元数据。 请注意 CATALOG_NAME 区分大小写：  
+对于具有限制的架构行集，该查询必须包含 SYSTEMRESTRICTSCHEMA 函数。 下面的示例返回大约 1103年兼容级别表格模型的 CSDL 元数据。 请注意 CATALOG_NAME 区分大小写：  
   
 ```  
 Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAME] = 'Adventure Works DW')  
 ```  
+
+## <a name="examples-and-scenarios"></a>示例和方案
+
+DMV 查询可帮助您回答与活动会话和连接有关的问题，以及在特定时间点哪些对象最占用 CPU 或内存。 例如：
   
-##  <a name="bkmk_tools"></a> 工具和权限  
- 您必须对 Analysis Services 实例具有系统管理员权限，才能查询 DMV。  
+ `Select * from $System.discover_object_activity`  
+此查询报告自上次启动该服务后的对象活动。 
   
- 您可以使用支持 MDX 或 DMX 查询的任何客户端应用程序，包括 SQL Server Management Studio、Reporting Services 报表和 PerformancePoint 面板。  
+ `Select * from $System.discover_object_memory_usage`  
+此查询按对象报告内存使用情况。  
   
- 若要从 Management Studio 运行 DMV 查询，请连接到您要查询的实例，然后单击 **“新建查询”**。 您可以从 MDX 或 DMX 查询窗口运行查询。  
+ `Select * from $System.discover_sessions`  
+此查询报告活动会话，包括会话用户和持续时间。  
   
-##  <a name="bkmk_ref"></a> DMV 参考  
- 并不是所有的架构行集都具有 DMV 接口。 若要返回可使用 DMV 查询的所有架构行集的列表，请运行以下查询。  
+ `Select * from $System.discover_locks`   
+此查询将返回时间的特定点处使用的锁的快照。  
+
+
+## <a name="tools-and-permissions"></a>工具和权限
+
+可以使用支持 MDX 或 DMX 查询的任何客户端应用程序。 在大多数情况下，最好使用 SQL Server Management Studio。 您必须具有服务器管理员权限才能查询 DMV 的实例上。  
   
+ **若要从 SQL Server Management Studio 运行 DMV 查询**
+
+1. 连接到服务器和您想要查询的模型对象。 
+2. 右键单击服务器或数据库对象 >**新查询** > **MDX**。
+3. 键入查询，然后依次**Execute**，或按 F5。
+  
+## <a name="schema-rowsets"></a>架构行集
+
+并不是所有的架构行集都具有 DMV 接口。 若要返回可使用 DMV 查询的所有架构行集的列表，请运行以下查询。  
+ 
 ```  
 SELECT * FROM $System.DBSchema_Tables   
 WHERE TABLE_TYPE = 'SCHEMA'   
 ORDER BY TABLE_NAME ASC  
 ```  
   
-> [!NOTE]  
->  如果 DMV 不可用为给定行集，服务器将返回以下错误:" \<schemarowset > 请求类型无法识别服务器"。 所有其他错误均与语法问题有关。  
-  
+如果 DMV 不可用于给定行集，则服务器返回错误：`The <schemarowset> request type was not recognized by the server.`所有其他错误表示与语法问题。  
+
+架构行集是在两个 SQL Server Analysis Services 协议中所述：   
+
+[[MS-SSAS-T]: SQL Server Analysis Services 表格协议](https://msdn.microsoft.com/library/mt719260)-介绍针对 1200年及更高版本的兼容性级别的表格模型架构行集。
+
+[[MS-SSAS]: SQL Server Analysis Services 协议](https://msdn.microsoft.com/library/ee320606)-介绍用于多维模型和表格模型 1100年和 1103年兼容级别的架构行集。
+
+### <a name="rowsets-described-in-the-ms-ssas-t-sql-server-analysis-services-tabular-protocol"></a>[MS-SSAS-T] 中所述的行集： SQL Server Analysis Services 表格协议
+
+|行集  |Description  |
+|---------|---------|
+|[TMSCHEMA_ANNOTATIONS](https://msdn.microsoft.com/library/mt704370)|提供有关批注对象模型中的信息。|
+|[TMSCHEMA_ATTRIBUTE_HIERARCHIES](https://msdn.microsoft.com/library/mt704362)     |   为列提供有关 AttributeHierarchy 对象的信息。      |
+|[TMSCHEMA_COLUMNS](https://msdn.microsoft.com/library/mt704373)    |  提供有关每个表中的列对象的信息。       |
+|[TMSCHEMA_COLUMN_PERMISSIONS](https://msdn.microsoft.com/library/mt842440)|提供有关在每个表权限的 ColumnPermission 对象的信息。|
+|[TMSCHEMA_CULTURES](https://msdn.microsoft.com/library/mt719125)|提供有关在模型中的区域性对象的信息。|
+|[TMSCHEMA_DATA_SOURCES](https://msdn.microsoft.com/library/mt719191)   |   提供有关在模型中的数据源对象的信息。      |
+|[TMSCHEMA_DETAIL_ROWS_DEFINITIONS](https://msdn.microsoft.com/library/mt825017)|提供有关在模型中的 DetailRowsDefinition 对象的信息。|
+|[TMSCHEMA_EXPRESSIONS](https://msdn.microsoft.com/library/mt825015)|提供有关表达式对象模型中的信息。|
+|[TMSCHEMA_EXTENDED_PROPERTIES](https://msdn.microsoft.com/library/mt842451)|提供有关在模型中的 ExtendedProperty 对象的信息。|
+|[TMSCHEMA_HIERARCHIES](https://msdn.microsoft.com/library/mt719136)    |    提供有关每个表中的层次结构对象的信息。     |
+|[TMSCHEMA_KPIS](https://msdn.microsoft.com/library/mt719002)     |    提供有关在模型中的 KPI 对象的信息。     |
+|[TMSCHEMA_LEVELS](https://msdn.microsoft.com/library/mt719038)     |   提供有关每个层次结构中级别对象的信息。      |
+|[TMSCHEMA_LINGUISTIC_METADATA](https://msdn.microsoft.com/library/mt719169)|提供有关同义词的对象模型中的特定区域性的信息|
+|[TMSCHEMA_MEASURES](https://msdn.microsoft.com/library/mt719218)     |    提供有关每个表中的度量值对象的信息。     |
+|[TMSCHEMA_MODEL](https://msdn.microsoft.com/library/mt719042)    |  在数据库中指定的模型对象。       |
+|[TMSCHEMA_OBJECT_TRANSLATIONS](https://msdn.microsoft.com/library/mt719119)|区域性提供有关不同对象的翻译的信息。|
+|[TMSCHEMA_PARTITIONS](https://msdn.microsoft.com/library/mt704375)     |     提供有关每个表中的分区对象的信息。    |
+|[TMSCHEMA_PERSPECTIVE_COLUMNS](https://msdn.microsoft.com/library/mt719164)     |   提供有关每个 PerspectiveTable 对象中的 PerspectiveColumn 对象的信息。      |
+|[TMSCHEMA_PERSPECTIVE_HIERARCHIES](https://msdn.microsoft.com/library/mt719104)     |  提供有关每个 PerspectiveTable 对象中的 PerspectiveHierarchy 对象的信息。       |
+|[TMSCHEMA_PERSPECTIVE_MEASURES](https://msdn.microsoft.com/library/mt719135)     |    提供有关每个 PerspectiveTable 对象中的 PerspectiveMeasure 对象的信息。     |
+|[TMSCHEMA_PERSPECTIVE_TABLES](https://msdn.microsoft.com/library/mt719272)     |    提供有关在透视表对象的信息。     |
+|[TMSCHEMA_PERSPECTIVES](https://msdn.microsoft.com/library/mt704340)     |     提供有关在模型中的透视对象的信息。    |
+|[TMSCHEMA_RELATIONSHIPS](https://msdn.microsoft.com/library/mt704355)     |    提供有关在模型中的关系对象的信息。     |
+|[TMSCHEMA_ROLE_MEMBERSHIPS](https://msdn.microsoft.com/library/mt704584)     |  提供有关每个角色中的 RoleMembership 对象信息。      |
+|[TMSCHEMA_ROLES](https://msdn.microsoft.com/library/mt719267)    |   提供有关在模型中的角色对象的信息。      |
+|[TMSCHEMA_TABLE_PERMISSIONS](https://msdn.microsoft.com/library/mt704347)    |    提供有关每个角色中的 TablePermission 对象的信息。     |
+|[TMSCHEMA_TABLES](https://msdn.microsoft.com/library/mt719250)     |   提供有关在模型中的表对象的信息。      |
+|[TMSCHEMA_VARIATIONS](https://msdn.microsoft.com/library/mt825008)|提供有关每个列中的变体对象的信息。|
+
+### <a name="rowsets-described-in-the-ms-ssas-sql-server-analysis-services-protocol"></a>在 [MS-SSAS] 中所述的行集： SQL Server Analysis Services 协议
+
 |行集|Description|  
 |------------|-----------------|  
-|[DBSCHEMA_CATALOGS 行集](../../analysis-services/schema-rowsets/ole-db/dbschema-catalogs-rowset.md)|返回当前连接上 Analysis Services 数据库的列表。|  
-|[DBSCHEMA_COLUMNS 行集](../../analysis-services/schema-rowsets/ole-db/dbschema-columns-rowset.md)|返回当前数据库中所有列的列表。 您可以使用此列表来构造 DMV 查询。|  
-|[DBSCHEMA_PROVIDER_TYPES 行集](../../analysis-services/schema-rowsets/ole-db/dbschema-provider-types-rowset.md)|返回与 OLE DB 数据访问接口支持的基础数据类型有关的属性。|  
-|[DBSCHEMA_TABLES 行集](../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md)|返回当前数据库中所有表的列表。 您可以使用此列表来构造 DMV 查询。|  
-|[DISCOVER_CALC_DEPENDENCY 行集](../../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)|返回在某一模型中使用的与其他列和表有依赖关系的列和表的列表。|  
-|[DISCOVER_COMMAND_OBJECTS 行集](../../analysis-services/schema-rowsets/xml/discover-command-objects-rowset.md)|提供与引用的命令使用的对象有关的资源使用情况和活动信息。|  
-|[DISCOVER_COMMANDS 行集](../../analysis-services/schema-rowsets/xml/discover-commands-rowset.md)|提供有关当前正在执行的命令的资源使用情况和活动信息。|  
-|[DISCOVER_CONNECTIONS 行集](../../analysis-services/schema-rowsets/xml/discover-connections-rowset.md)|提供与 Analysis Services 的打开的连接有关的资源使用情况和活动信息。|  
-|[DISCOVER_CSDL_METADATA 行集](../../analysis-services/schema-rowsets/xml/discover-csdl-metadata-rowset.md)|返回有关表格模型的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
-|[DISCOVER_DB_CONNECTIONS 行集](../../analysis-services/schema-rowsets/xml/discover-db-connections-rowset.md)|提供与从 Analysis Services 到外部数据源（例如在处理或导入过程中）打开的连接有关的资源使用情况和活动信息。|  
-|[DISCOVER_DIMENSION_STAT 行集](../../analysis-services/schema-rowsets/xml/discover-dimension-stat-rowset.md)|根据模型类型，返回维度中的属性或表中的列。|  
-|[DISCOVER_ENUMERATORS 行集](../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md)|返回与支持特定数据源的枚举器有关的元数据。|  
-|[DISCOVER_INSTANCES 行集](../../analysis-services/schema-rowsets/ole-db-olap/discover-instances-rowset.md)|返回有关指定的实例的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
-|[DISCOVER_JOBS 行集](../../analysis-services/schema-rowsets/xml/discover-jobs-rowset.md)|返回有关当前作业的信息。|  
-|[DISCOVER_KEYWORDS 行集 & #40;XMLA & #41;](../../analysis-services/schema-rowsets/xml/discover-keywords-rowset-xmla.md)|返回保留关键字的列表。|  
-|[DISCOVER_LITERALS 行集](../../analysis-services/schema-rowsets/xml/discover-literals-rowset.md)|返回 XMLA 支持的文字的列表，包括数据类型和值。|  
-|[DISCOVER_LOCKS 行集](../../analysis-services/schema-rowsets/xml/discover-locks-rowset.md)|返回在特定时间点使用的锁的快照。|  
-|[DISCOVER_MEMORYGRANT 行集](../../analysis-services/schema-rowsets/xml/discover-memorygrant-rowset.md)|返回 Analysis Services 在启动时分配的内存的有关信息。|  
-|[DISCOVER_MEMORYUSAGE 行集](../../analysis-services/schema-rowsets/xml/discover-memoryusage-rowset.md)|显示特定对象的内存使用情况。|  
-|[DISCOVER_OBJECT_ACTIVITY 行集](../../analysis-services/schema-rowsets/xml/discover-object-activity-rowset.md)|报告自上次启动该服务后的对象活动。|  
-|[DISCOVER_OBJECT_MEMORY_USAGE 行集](../../analysis-services/schema-rowsets/xml/discover-object-memory-usage-rowset.md)|按对象报告内存使用情况。|  
-|[DISCOVER_PARTITION_DIMENSION_STAT 行集](../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|提供有关维度中的属性的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
-|[DISCOVER_PARTITION_STAT 行集](../../analysis-services/schema-rowsets/xml/discover-partition-stat-rowset.md)|提供有关维度、表或度量值组中的分区的信息。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
-|[DISCOVER_PERFORMANCE_COUNTERS 行集](../../analysis-services/schema-rowsets/xml/discover-performance-counters-rowset.md)|列出性能计数器中使用的列。<br /><br /> 要求添加 SYSTEMRESTRICTSCHEMA 和附加的参数。|  
-|[DISCOVER_PROPERTIES 行集](../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)|返回 XMLA 支持的针对指定数据源的属性的有关信息。|  
-|[DISCOVER_SCHEMA_ROWSETS 行集](../../analysis-services/schema-rowsets/xml/discover-schema-rowsets-rowset.md)|返回 XMLA 支持的针对所有枚举值的名称、限制、说明和其他信息。|  
-|[DISCOVER_SESSIONS 行集](../../analysis-services/schema-rowsets/xml/discover-sessions-rowset.md)|报告活动会话，包括会话用户和持续时间。|  
-|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 行集](../../analysis-services/schema-rowsets/xml/discover-storage-table-column-segments-rowset.md)|在列级和段级提供有关在表格或 SharePoint 模式下运行的 Analysis Services 数据库使用的存储表的信息。|  
-|[DISCOVER_STORAGE_TABLE_COLUMNS 行集](../../analysis-services/schema-rowsets/xml/discover-storage-table-columns-rowset.md)|允许客户端确定在表格或 SharePoint 模式下运行的 Analysis Services 数据库使用的存储表的列分配。|  
-|[DISCOVER_STORAGE_TABLES 行集](../../analysis-services/schema-rowsets/xml/discover-storage-tables-rowset.md)|返回用于在表格模型数据库中存储模型的表的有关信息。|  
-|[DISCOVER_TRACE_COLUMNS 行集](../../analysis-services/schema-rowsets/xml/discover-trace-columns-rowset.md)|返回可用于跟踪的列的 XML 说明。|  
-|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO 行集](../../analysis-services/schema-rowsets/xml/discover-trace-definition-providerinfo-rowset.md)|返回访问接口的名称和版本信息。|  
-|[DISCOVER_TRACE_EVENT_CATEGORIES 行集](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|返回可用类别的列表。|  
-|[DISCOVER_TRACES 行集](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|返回正在当前连接上主动运行的跟踪的列表。|  
-|[DISCOVER_TRANSACTIONS 行集](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|返回正在当前连接上主动运行的事务的列表。|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION 行集](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|返回正在当前连接上主动运行的 xevent 跟踪的列表。|  
-|[DMSCHEMA_MINING_COLUMNS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|列出在当前连接上可用的所有挖掘模型的单独列。|  
-|[DMSCHEMA_MINING_FUNCTIONS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|返回服务器上的数据挖掘算法支持的函数的列表。|  
-|[DMSCHEMA_MINING_MODEL_CONTENT 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|返回由描述当前模型的列组成的行集。|  
-|[DMSCHEMA_MINING_MODEL_CONTENT_PMML 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset.md)|以 PMML 格式返回由描述当前模型的列组成的行集。|  
-|[DMSCHEMA_MINING_MODEL_XML 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-xml-rowset.md)|以 PMML 格式返回由描述当前模型的列组成的行集。|  
-|[DMSCHEMA_MINING_MODELS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-models-rowset.md)|返回当前数据库中挖掘模型的列表。|  
-|[DMSCHEMA_MINING_SERVICE_PARAMETERS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-service-parameters-rowset.md)|返回服务器上算法参数的列表。|  
-|[DMSCHEMA_MINING_SERVICES 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)|提供可用于服务器的数据挖掘算法的列表。|  
-|[DMSCHEMA_MINING_STRUCTURE_COLUMNS 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structure-columns-rowset.md)|返回在当前连接中提供的所有挖掘模型的所有列的列表。|  
-|[DMSCHEMA_MINING_STRUCTURES 行集](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-structures-rowset.md)|列出当前连接中可用的挖掘结构。|  
-|[MDSCHEMA_CUBES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-cubes-rowset.md)|返回有关在当前数据库中定义的多维数据集的信息。|  
-|[MDSCHEMA_DIMENSIONS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-dimensions-rowset.md)|返回有关在当前数据库中定义的维度的信息。|  
-|[MDSCHEMA_FUNCTIONS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-functions-rowset.md)|返回可用于已连接到数据库的客户端应用程序的列表。|  
-|[MDSCHEMA_HIERARCHIES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)|返回有关在当前数据库中定义的层次结构的信息。|  
-|[MDSCHEMA_INPUT_DATASOURCES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset.md)|返回有关在当前数据库中定义的数据源对象的信息。|  
-|[MDSCHEMA_KPIS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-kpis-rowset.md)|返回有关在当前数据库中定义的 KPI 的信息。|  
-|[MDSCHEMA_LEVELS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-levels-rowset.md)|返回有关在当前数据库中定义的层次结构内的级别的信息。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)|列出度量值组的维度。|  
-|[MDSCHEMA_MEASUREGROUPS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset.md)|返回当前连接中度量值组的列表。|  
-|[MDSCHEMA_MEASURES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-measures-rowset.md)|返回当前连接中度量值的列表。|  
-|[MDSCHEMA_MEMBERS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)|返回在当前连接中按数据库、多维数据集和维度列出的所有成员的列表。|  
-|[MDSCHEMA_PROPERTIES 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|返回每个属性的完全限定名，以及属性类型、数据类型和其他元数据。|  
-|[MDSCHEMA_SETS 行集](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|返回当前连接中定义的集合的列表。|  
-  
-## <a name="see-also"></a>另请参阅   
- [新的 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [新的 SYSTEMRESTRICTEDSCHEMA 函数，适用于受限行集和 DMV](http://go.microsoft.com/fwlink/?LinkId=231885)  
-  
-  
+|[DBSCHEMA_CATALOGS](https://msdn.microsoft.com/library/ee302115)|描述在服务器进行访问的目录。|  
+|[DBSCHEMA_COLUMNS](https://msdn.microsoft.com/library/ee301789)|返回每个度量值、 每个多维数据集维度属性和每个架构行集列，显示为列的行。|  
+|[DBSCHEMA_PROVIDER_TYPES](https://msdn.microsoft.com/library/ee301696)|标识服务器支持的 （基本） 数据类型。|  
+|[DBSCHEMA_TABLES](https://msdn.microsoft.com/library/ee320843)|返回维度、 度量值组或公开为表的架构行集。|  
+|[DISCOVER_CALC_DEPENDENCY](https://msdn.microsoft.com/library/hh770226)| 返回有关表格数据库中或针对表格数据库执行的 DAX 查询中指定的对象的计算依赖项信息。 |  
+|[DISCOVER_COMMAND_OBJECTS](https://msdn.microsoft.com/library/ee320662)|提供引用的命令使用的对象的资源使用情况和活动信息。|  
+|[DISCOVER_COMMANDS](https://msdn.microsoft.com/library/ee320715)|在服务器上提供有关当前正在执行或最后一个执行的命令打开的连接中的资源使用情况和活动信息。|  
+|[DISCOVER_CONNECTIONS](https://msdn.microsoft.com/library/ee301889)|提供服务器上当前打开的连接的资源使用情况和活动信息。|  
+|[DISCOVER_CSDL_METADATA](https://msdn.microsoft.com/library/gg587670)|返回有关内存中数据库的数据库元数据信息。|  
+|[不应向客户端](https://msdn.microsoft.com/library/ee320285)|返回服务器可用的数据源的列表。|
+|[DISCOVER_DB_CONNECTIONS](https://msdn.microsoft.com/library/ee320467)|提供当前打开的服务器到数据库连接的资源使用情况和活动信息。|  
+|[DISCOVER_DIMENSION_STAT](https://msdn.microsoft.com/library/ee320284)|返回指定维度的统计信息。|  
+|[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|返回枚举器的名称、数据类型和枚举值的列表，这些枚举器受特定数据源的 XMLA 访问接口支持。|  
+|[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|介绍服务器上的实例。|  
+|[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|提供有关在服务器上执行的活动作业的信息。 作业是命令的一部分，代表命令执行特定任务。|  
+|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|返回有关 XMLA 服务器保留的关键字的信息。|  
+|[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|返回有关服务器支持的文本信息。|  
+|[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|返回有关备份文件的内容的信息。 |
+|[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|提供有关服务器上的当前持续锁定的信息。|  
+|[DISCOVER_MASTER_KEY](https://msdn.microsoft.com/library/ee301825)|返回服务器的主加密密钥。|
+|[DISCOVER_MEMORYGRANT](https://msdn.microsoft.com/library/ee320945)|返回由当前正在服务器上运行的作业占用的内部内存配额授予的列表。|  
+|[DISCOVER_MEMORYUSAGE](https://msdn.microsoft.com/library/ee320910)|返回由服务器分配的各种对象的 DISCOVER_MEMORYUSAGE 统计信息。|  
+|[DISCOVER_OBJECT_ACTIVITY](https://msdn.microsoft.com/library/ee320661)|提供在启动服务后每个对象的资源使用情况。|  
+|[DISCOVER_OBJECT_MEMORY_USAGE](https://msdn.microsoft.com/library/ee320910)|返回由服务器分配的各种对象的 DISCOVER_MEMORYUSAGE 统计信息。|  
+|[DISCOVER_PARTITION_DIMENSION_STAT](https://msdn.microsoft.com/library/ee320268)|返回与分区关联的维度的统计信息。|  
+|[DISCOVER_PARTITION_STAT](https://msdn.microsoft.com/library/ee320483)|返回特定分区中的聚合的统计信息。|  
+|[DISCOVER_PERFORMANCE_COUNTERS](https://msdn.microsoft.com/library/ee320809)|返回一个或多个指定的性能计数器的值。 |  
+|[DISCOVER_PROPERTIES](https://msdn.microsoft.com/library/ee320589)|返回信息和指定的数据源服务器支持的属性的值的列表。|  
+|[DISCOVER_RING_BUFFERS](https://msdn.microsoft.com/library/mt719204)|在服务器上返回有关当前的 XEvent 环形缓冲区信息。|
+|[DISCOVER_SCHEMA_ROWSETS](https://msdn.microsoft.com/library/ee320478)|返回名称、 限制、 说明和发现的所有请求的其他信息。|  
+|[DISCOVER_SESSIONS](https://msdn.microsoft.com/library/ee301962)|提供在服务器上当前打开的会话的资源使用情况和活动信息。|  
+|[DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS](https://msdn.microsoft.com/library/ee320710)|返回有关用于存储内存中表的数据的列段的信息。|  
+|[DISCOVER_STORAGE_TABLE_COLUMNS](https://msdn.microsoft.com/library/ee302101)|包含有关用于表示内存中表的列的列信息。|  
+|[DISCOVER_STORAGE_TABLES](https://msdn.microsoft.com/library/ee302014)|服务器返回有关可用的内存中表的统计信息。|  
+|[DISCOVER_TRACE_COLUMNS]()||  
+|[DISCOVER_TRACE_DEFINITION_PROVIDERINFO](https://msdn.microsoft.com/library/ee301342)|包含 DISCOVER_TRACE_COLUMNS 架构行集。|  
+|[DISCOVER_TRACE_EVENT_CATEGORIES](https://msdn.microsoft.com/library/ee320442)|包含 DISCOVER_TRACE_EVENT_CATEGORIES 架构行集。|  
+|[DISCOVER_TRACES](https://msdn.microsoft.com/library/ee301643)|包含 DISCOVER_TRACES 架构行集。|  
+|[DISCOVER_TRANSACTIONS](https://msdn.microsoft.com/library/ee301363)|返回系统上当前挂起的一组事务。|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION](https://msdn.microsoft.com/library/mt704568)|提供有关在服务器当前处于活动状态的 XEvent 跟踪信息。|  
+|[DISCOVER_XEVENT_PACKAGES](https://msdn.microsoft.com/library/mt704569)|在服务器上提供有关所述的 XEvent 包信息。|
+|[DISCOVER_XEVENT_OBJECTS](https://msdn.microsoft.com/library/mt704543)|提供在服务器上所述的 XEvent 对象有关的信息。|
+|[DISCOVER_XEVENT_OBJECT_COLUMNS](https://msdn.microsoft.com/library/mt719352)|在服务器上提供描述的 XEvent 对象的架构的信息。|
+|[DISCOVER_XEVENT_SESSIONS](https://msdn.microsoft.com/library/mt704397)|在服务器上提供有关当前的 XEvent 会话的信息。|
+|[DISCOVER_XEVENT_SESSION_TARGETS](https://msdn.microsoft.com/library/mt704564)|在服务器上提供有关当前的 XEvent 会话目标的信息。|
+|[DISCOVER_XML_METADATA](https://msdn.microsoft.com/library/ee301560)|返回包含一行和一个列的行集。 |
+|[DMSCHEMA_MINING_COLUMNS](https://msdn.microsoft.com/library/ee301664)|描述在服务器上的所有部署的所述的数据挖掘模型的各个列。|  
+|[DMSCHEMA_MINING_FUNCTIONS](https://msdn.microsoft.com/library/ee320415)|介绍运行 Analysis Services 服务器上可用的数据挖掘算法支持的数据挖掘函数。|  
+|[DMSCHEMA_MINING_MODEL_CONTENT](https://msdn.microsoft.com/library/ee302124)|使客户端应用程序浏览定型的数据挖掘模型的内容。|  
+|[DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://msdn.microsoft.com/library/ee320692)|返回挖掘模型的 XML 结构。 XML 字符串的格式遵循 PMML 2.1 标准。|  
+|[DMSCHEMA_MINING_MODEL_XML](https://msdn.microsoft.com/library/ee301916)|返回挖掘模型的 XML 结构。 XML 字符串的格式遵循 PMML 2.1 标准。|  
+|[DMSCHEMA_MINING_MODELS](https://msdn.microsoft.com/library/ee320603)|枚举在服务器上部署的数据挖掘模型。|  
+|[DMSCHEMA_MINING_SERVICE_PARAMETERS](https://msdn.microsoft.com/library/ee320378)|提供一个参数列表，这些参数可用于配置安装在服务器上的每个数据挖掘算法的行为。|  
+|[DMSCHEMA_MINING_SERVICES](https://msdn.microsoft.com/library/ee320487)|提供有关每个服务器支持的数据挖掘算法的信息。|  
+|[DMSCHEMA_MINING_STRUCTURE_COLUMNS](https://msdn.microsoft.com/library/ee320277)|描述在服务器上部署的所有挖掘结构的各个列。|  
+|[DMSCHEMA_MINING_STRUCTURES](https://msdn.microsoft.com/library/ee320704)|枚举有关当前目录中的挖掘结构的信息。|  
+|[MDSCHEMA_ACTIONS](https://msdn.microsoft.com/library/ee320890)|介绍可供客户端应用程序的操作。|
+|[MDSCHEMA_CUBES](https://msdn.microsoft.com/library/ee301304)|介绍数据库中的多维数据集的结构。 透视也会返回在此架构中。|
+|[MDSCHEMA_DIMENSIONS](https://msdn.microsoft.com/library/ee301366)|描述在数据库中的维度。|  
+|[MDSCHEMA_FUNCTIONS](https://msdn.microsoft.com/library/mt719467)|返回有关当前可用于在 DAX 和 MDX 语言中使用的函数的信息。|
+|[MDSCHEMA_HIERARCHIES](https://msdn.microsoft.com/library/ee320250)|介绍特定维度中的每个层次结构。|  
+|[MDSCHEMA_INPUT_DATASOURCES](https://msdn.microsoft.com/library/ee301386)|介绍在数据库中所述的数据源对象。|  
+|[MDSCHEMA_KPIS](https://msdn.microsoft.com/library/ee320406)|介绍在数据库中的 Kpi。|  
+|[MDSCHEMA_LEVELS](https://msdn.microsoft.com/library/ee320746)|介绍特定层次结构中的每个级别。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://msdn.microsoft.com/library/ee320977)|枚举度量值组的维度。|  
+|[MDSCHEMA_MEASUREGROUPS](https://msdn.microsoft.com/library/ee320601)|介绍数据库中的度量值组。|  
+|[MDSCHEMA_MEASURES](https://msdn.microsoft.com/library/ee301871)|介绍了每个度量值。|  
+|[MDSCHEMA_MEMBERS](https://msdn.microsoft.com/library/ee320960)|介绍数据库中的成员。|  
+|[MDSCHEMA_PROPERTIES](https://msdn.microsoft.com/library/ee320393)|描述的成员的属性和单元属性。|  
+|[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|介绍在数据库中，包括会话作用域的集目前所述的所有组。|  
+
+> [!NOTE]
+> 中所述的架构行集不具有存储 Dmv 协议。

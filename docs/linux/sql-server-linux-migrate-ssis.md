@@ -12,12 +12,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d01a53524bf03e0ea8318c41b05b9cc59499de33
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086839"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713219"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>提取、 转换和加载使用 SSIS 在 Linux 上的数据
 
@@ -85,7 +85,7 @@ ms.locfileid: "39086839"
 ## <a name="schedule-packages"></a>计划包
 可以使用 Linux 系统，如计划工具`cron`来安排包。 不能在 Linux 上使用 SQL 代理计划包执行在此版本中。 有关详细信息，请参阅[计划 SSIS 包在 Linux 上的使用 cron](sql-server-linux-schedule-ssis-packages.md)。
 
-## <a name="limitations-and-known-issues"></a>限制和已知的问题
+## <a name="limitations-and-known-issues"></a>限制和已知问题
 
 有关限制和已知的问题的 Linux 上的 SSIS 的详细信息，请参阅[限制和已知的问题为 Linux 上的 SSIS](sql-server-linux-ssis-known-issues.md)。
 
@@ -93,8 +93,8 @@ ms.locfileid: "39086839"
 
 有关在 Linux 上的 SSIS 的详细信息，请参阅以下博客文章：
 
--   [Linux 上的 SSIS 是 SQL Server 2017 CTP2.1 中可用](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [在 Linux （SQL Server 2017 CTP 2.1 刷新） 上的 SSIS 支持 ODBC](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [Linux 上的 SSIS 是 SQL Server CTP2.1 中可用](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [在 Linux （SQL Server CTP 2.1 刷新） 上的 SSIS 支持 ODBC](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
 ## <a name="more-info-about-ssis"></a>有关 SSIS 的详细信息
 

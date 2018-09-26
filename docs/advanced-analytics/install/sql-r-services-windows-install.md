@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4df8391974214452c6b8b3226c3c9a845e4b556b
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311677"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713299"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -93,7 +93,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
     > [!TIP]
     > 可以下载并安装适当版本，在此页中：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
-    > 您还可以试用的预览版本[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，它支持管理任务和针对 SQL Server 的查询。
+    > 您还可以试用的预览版本[Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
 2. 连接到安装机器学习服务的实例中，单击**新查询**打开查询窗口中，并运行以下命令：
 

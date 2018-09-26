@@ -1,6 +1,6 @@
 ---
 title: 在 Linux 上配置 SQL Server 设置 |Microsoft 文档
-description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL Server 2017 设置。
+description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL Server 设置。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,16 +12,19 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 2982ae05fd54a09b6ae5640c969bcb77d73c4a4c
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 57ef9a199979c2538f536d3c9a2bf8aa7e0b37fa
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086259"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713529"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 **mssql conf**是 Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu 安装了 SQL Server 2017 的配置脚本。 可以使用此实用工具设置以下参数：
 
@@ -30,7 +33,7 @@ ms.locfileid: "39086259"
 | [代理](#agent) | 启用 SQL Server 代理 |
 | [排序规则](#collation) | 在 Linux 上为 SQL Server 设置新的排序规则。 |
 | [客户反馈](#customerfeedback) | 选择 SQL Server 将反馈发送给 Microsoft。 |
-| [数据库邮件配置文件](#dbmail) | 设置在 Linux 上的 SQL Server 的默认数据库邮件配置文件 |
+| [数据库邮件配置文件](#dbmail) | 设置 SQL Server 的 Linux 上的默认数据库邮件配置文件。 |
 | [默认数据目录](#datadir) | 更改默认目录的新 SQL Server 数据库数据文件 (.mdf)。 |
 | [默认日志目录](#datadir) | 更改新的 SQL Server 数据库日志 (.ldf) 文件的默认目录。 |
 | [默认 master 数据库文件目录](#masterdatabasedir) | 更改现有的 SQL 安装上的 master 数据库文件的默认目录。|
@@ -47,6 +50,38 @@ ms.locfileid: "39086259"
 | [TLS](#tls) | 配置传输级安全。 |
 | [跟踪标志](#traceflags) | 设置服务要使用的跟踪标志。 |
 
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+**mssql conf**一起安装的配置脚本[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]Red Hat Enterprise Linux、 SUSE Linux Enterprise Server 和 Ubuntu。 可以使用此实用工具设置以下参数：
+
+|||
+|---|---|
+| [代理](#agent) | 启用 SQL Server 代理 |
+| [排序规则](#collation) | 在 Linux 上为 SQL Server 设置新的排序规则。 |
+| [客户反馈](#customerfeedback) | 选择 SQL Server 将反馈发送给 Microsoft。 |
+| [数据库邮件配置文件](#dbmail) | 设置 SQL Server 的 Linux 上的默认数据库邮件配置文件。 |
+| [默认数据目录](#datadir) | 更改默认目录的新 SQL Server 数据库数据文件 (.mdf)。 |
+| [默认日志目录](#datadir) | 更改新的 SQL Server 数据库日志 (.ldf) 文件的默认目录。 |
+| [默认 master 数据库文件目录](#masterdatabasedir) | 更改现有的 SQL 安装上的 master 数据库文件的默认目录。|
+| [默认 master 数据库文件名称](#masterdatabasename) | 更改 master 数据库文件的名称。 |
+| [默认转储目录](#dumpdir) | 更改新的内存转储和其他故障排除的文件的默认目录。 |
+| [默认错误日志目录](#errorlogdir) | 更改 SQL Server 错误日志、 默认 Profiler 跟踪、 系统运行状况会话 XE 和 Hekaton 会话 XE 的新文件的默认目录。 |
+| [默认备份目录](#backupdir) | 更改新的备份文件的默认目录。 |
+| [转储类型](#coredump) | 选择要收集的转储内存转储文件的类型。 |
+| [高可用性](#hadr) | 启用可用性组。 |
+| [本地审核目录](#localaudit) | 设置要添加本地审核文件的目录。 |
+| [区域设置](#lcid) | 设置 SQL Server 使用的区域设置。 |
+| [内存限制](#memorylimit) | 设置 SQL Server 的内存限制。 |
+| [Microsoft 分布式事务处理协调器](#msdtc) | 配置和故障排除 Linux 上的 MSDTC。 |
+| [MLServices Eula](#mlservices-eula) | R 和 Python Eula 接受 mlservices 包。 适用于仅 SQL Server 2019。|
+| [TCP 端口](#tcpport) | 更改 SQL Server 侦听的连接的端口。 |
+| [TLS](#tls) | 配置传输级安全。 |
+| [跟踪标志](#traceflags) | 设置服务要使用的跟踪标志。 |
+
+::: moniker-end
+
 > [!TIP]
 > 此外可以使用环境变量配置其中的某些设置。 有关详细信息，请参阅[使用环境变量配置 SQL Server 设置](sql-server-linux-configure-environment-variables.md)。
 
@@ -56,7 +91,7 @@ ms.locfileid: "39086259"
 
 * 为共享的磁盘群集方案中，不要尝试重新启动**mssql server**服务以应用更改。 SQL Server 正在运行的应用程序。 相反，使资源离线，然后回到联机状态。
 
-* 运行 mssql-conf 通过这些示例指定完整路径： **/opt/mssql/bin/mssql-conf**。 如果您选择改为导航到该路径，在当前目录的上下文中运行 mssql-conf: **。 / mssql conf**。
+* 这些示例通过指定完整路径运行 mssql-conf: **/opt/mssql/bin/mssql-conf**。 如果您选择改为导航到该路径，在当前目录的上下文中运行 mssql-conf: **。 / mssql conf**。
 
 ## <a id="agent"></a> 启用 SQL Server 代理
 
@@ -70,7 +105,7 @@ ms.locfileid: "39086259"
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-1. 重新启动 SQL Server 服务：
+2. 重新启动 SQL Server 服务：
 
    ```bash
    sudo systemctl restart mssql-server
@@ -92,7 +127,7 @@ ms.locfileid: "39086259"
 
 1. Mssql-conf 实用工具将尝试将更改为指定的排序规则值并重新启动服务。 如果有任何错误，它将回滚排序规则到以前的值。
 
-1. 将还原用户数据库备份。
+1. 还原用户数据库备份。
 
 有关支持的排序规则的列表，运行[sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)函数： `SELECT Name from sys.fn_helpcollations()`。
 
@@ -379,10 +414,11 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-有关如何将此项用于可用性组的信息，请参阅以下两个主题。
+有关如何使用此方法与可用性组的信息，请参阅以下两个主题。
 
 - [配置 Always On 可用性组为 Linux 上的 SQL Server](sql-server-linux-availability-group-configure-ha.md)
 - [Linux 上的 SQL Server 配置读取缩放可用性组](sql-server-linux-availability-group-configure-rs.md)
+
 
 ## <a id="localaudit"></a> 设置本地审核目录
 
@@ -447,6 +483,81 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="msdtc"></a> 配置 MSDTC
+
+**Network.rpcport**并**distributedtransaction.servertcpport**设置用于配置 Microsoft 分布式事务处理协调器 (MSDTC)。 若要更改这些设置，请运行以下命令：
+
+1. 作为与根运行 mssql-conf 脚本**设置**"network.rpcport"命令：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
+   ```
+
+2. 然后将"distributedtransaction.servertcpport"设置：
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
+   ```
+
+除了设置这些值，还必须配置路由并更新防火墙以允许端口 135。 有关如何执行此操作的详细信息，请参阅[如何在 Linux 上配置 MSDTC](sql-server-linux-configure-msdtc.md)。
+
+有几个可用于监视和故障排除 MSDTC 的 mssql conf 其他设置。 下表简要介绍这些设置。 有关其用法的详细信息，请参阅 Windows 支持文章中的详细信息[如何对 MS DTC 中启用诊断跟踪](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
+
+| mssql-conf 设置 | Description |
+|---|---|
+| distributedtransaction.allowonlysecurerpccalls | 配置安全的唯一 rpc 调用的分布式事务 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 为分布式配置安全的唯一 rpc 调用 |事务
+| distributedtransaction.maxlogsize | 以 mb 为单位，DTC 事务日志文件大小。 默认值为 64 MB |
+| distributedtransaction.memorybuffersize | 循环缓冲区跟踪存储大小。 此大小是以 mb 为单位，默认值为 10 MB |
+| distributedtransaction.servertcpport | MSDTC rpc 服务器端口 |
+| distributedtransaction.trace_cm | 连接管理器中的跟踪 |
+| distributedtransaction.trace_contact | 跟踪的联系人的池和联系人 |
+| distributedtransaction.trace_gateway | 跟踪网关源 |
+| distributedtransaction.trace_log | 日志跟踪 |
+| distributedtransaction.trace_misc | 不能归入其他类别分类的跟踪 |
+| distributedtransaction.trace_proxy | MSDTC 代理中生成的跟踪 |
+| distributedtransaction.trace_svc | 跟踪服务和.exe 文件启动 |
+| distributedtransaction.trace_trace | 跟踪基础结构本身 |
+| distributedtransaction.trace_util | 从多个位置调用的跟踪实用程序例程 |
+| distributedtransaction.trace_xa | XA 事务管理器 (XATM) 跟踪源 |
+| distributedtransaction.tracefilepath | 文件应存储在跟踪中的文件夹 |
+| distributedtransaction.turnoffrpcsecurity | 启用或禁用 RPC 安全性为分布式事务 |
+
+::: moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="mlservices-eula"></a> 接受 MLServices Eula
+
+添加[机器学习 R 或 Python 程序包](sql-server-linux-setup-machine-learning.md)到数据库引擎需要接受的 R 和 Python 开源分发版的许可条款。 下表枚举了所有可用的命令或 mlservices Eula 与相关的选项。 相同的最终用户许可协议参数用于 R 和 Python，具体取决于您的安装。
+
+```bash
+# For all packages: database engine and mlservices
+# Setup prompts for mlservices EULAs, which you need to accept
+sudo /opt/mssql/bin/mssql-conf setup
+
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
+
+# Alternative valid syntax
+# Add R or Python to an existing installation
+sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+
+# Rescind EULA acceptance
+sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
+```
+
+您还可以直接添加的 EULA 接受[mssql.conf 文件](#mssql-conf-format):
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+```
+
+:::moniker-end
+
 ## <a id="tcpport"></a> 更改 TCP 端口
 
 **Network.tcpport**设置 SQL Server 侦听的连接的 TCP 端口的更改。 默认情况下，此端口设置为 1433。 若要更改端口，请运行以下命令：
@@ -457,13 +568,13 @@ sudo systemctl restart mssql-server
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-1. 重新启动 SQL Server 服务：
+2. 重新启动 SQL Server 服务：
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. 时现在连接到 SQL Server，必须在主机名或 IP 地址之后使用逗号 （，） 指定自定义端口。 例如，要使用 SQLCMD 进行连接，则需使用以下命令：
+3. 时现在连接到 SQL Server，必须在主机名或 IP 地址之后使用逗号 （，） 指定自定义端口。 例如，要使用 SQLCMD 进行连接，则需使用以下命令：
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -538,9 +649,13 @@ sudo cat /var/opt/mssql/mssql.conf
 
 请注意，未在此文件中显示的所有设置均使用其默认值。 下一节提供了一个示例**mssql.conf**文件。
 
-## <a name="mssqlconf-format"></a>mssql.conf format
+
+## <a id="mssql-conf-format"></a> mssql.conf 格式
 
 以下 **/var/opt/mssql/mssql.conf**文件提供每个设置的示例。 可以使用此格式才能手动更改**mssql.conf**文件根据需要。 如果手动更改该文件，必须重新启动 SQL Server 之前应用所做的更改。 若要使用**mssql.conf**文件使用 Docker，你必须具有 Docker[持久保存数据](sql-server-linux-configure-docker.md)。 首先添加整个**mssql.conf**文件到你的主机目录，然后运行该容器。 没有出现在这种[客户反馈](sql-server-linux-customer-feedback.md)。
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ```ini
 [EULA]
@@ -589,6 +704,65 @@ traceflag0 = 1204
 traceflag1 = 2345
 traceflag = 3456
 ```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+```ini
+[EULA]
+accepteula = Y
+accepteulaml = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[distributedtransaction]
+servertcpport = 51999
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+rpcport = 13500
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
+
+::: moniker-end
 
 ## <a name="next-steps"></a>后续步骤
 

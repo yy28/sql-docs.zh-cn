@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a2cb44cf4f6a3b6c689ea66a4d353d97ce8c8af2
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396038"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713139"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安装 SQL Server 全文搜索
 
@@ -88,7 +88,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>支持的语言
 
-全文搜索使用[断字符](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的各个单词。 可以通过查询获取已注册的断字符的列表**sys.fulltext_languages**目录视图。 与 SQL Server 2017 一起安装了以下语言版本的断字符：
+全文搜索使用[断字符](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)来确定如何标识基于语言的各个单词。 可以通过查询获取已注册的断字符的列表**sys.fulltext_languages**目录视图。 与 SQL Server 一起安装了以下语言版本的断字符：
 
 | “报表” | 语言 ID |
 |---|---|
@@ -150,7 +150,7 @@ sudo zypper update mssql-server-fts
 
 全文搜索还适用于二进制文件中存储的文本。 但在这种情况下，需要安装一个筛选器来处理文件。 有关筛选器的详细信息，请参阅[配置和管理搜索筛选器](../relational-databases/search/configure-and-manage-filters-for-search.md)。
 
-您可以看到已安装的筛选器的列表，通过调用**sp_help_fulltext_system_components 'filter'**。 为 SQL Server 2017 中，将安装以下筛选器：
+您可以看到已安装的筛选器的列表，通过调用**sp_help_fulltext_system_components 'filter'**。 对于 SQL Server，将安装以下筛选器：
 
 | 组件名称 | 类 ID | 版本 |
 |---|---|---|

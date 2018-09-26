@@ -24,12 +24,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a867b5d2caf4c21c6b99215b5e7e546d210aabc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 741c454f78a116f9080e471bcaa49554fd2caf97
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022286"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361951"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "43022286"
 |**is_sql_language_enabled**|**bit**|1 = 指定了 BATCHES = ENABLED 选项，表示端点上允许使用即席 SQL 批。|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|实现此方法的存储过程的三部分名称。<br /><br /> 方法名称要求使用严格的三部分语法。 不允许使用一部分、两部分或四部分名称。|  
 |**default_database**|**sysname**|在 DATABASE = 选项中给定的默认数据库名称。<br /><br /> NULL = 指定了 DEFAULT。|  
-|**default_namespace**|**nvarchar(384)**|指定命名空间中的默认命名空间 = 选项，或http://tempuri.org如果实际上指定了默认值。|  
+|**default_namespace**|**nvarchar(384)**|指定命名空间中的默认命名空间 = 选项，或`http://tempuri.org`如果实际上指定了默认值。|  
 |**default_result_schema**|**tinyint**|SCHEMA = 选项的默认值。<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|对 SCHEMA = 选项的默认值的说明。<br /><br /> 无<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = 指定了 CHARACTER_SET = SQL 选项。<br /><br /> 1 = 指定了 CHARACTER_SET = XML 选项。|  

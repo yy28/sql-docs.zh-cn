@@ -2,7 +2,7 @@
 title: 什么是适用于 DB2 的 SSMA 中的新增功能 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,23 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af4167d1d101fe0647a2fade000e174aeb5efa6b
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 81a343c0ac4f37f02b0c461209a023f908ab608b
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395420"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361991"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>什么是适用于 DB2 的 SSMA 中的新增功能 (DB2ToSQL)
 本文列出了每个版本中的 DB2 更改 SSMA。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for DB2 的 v7.10 版本包含以下更改：
+- 可提供额外的安全和隐私保护功能以满足全局要求中的更改的目标的修补。
+- BEGIN END 块转换为修补程序。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for DB2 的 v7.9 版本包含以下更改：
@@ -53,7 +61,7 @@ SSMA for DB2 的 v7.7 版本包含以下更改：
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-SSMA for DB2 的 v7.6 版本已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持处于公共预览状态，并不用于生产的迁移。
+SSMA for DB2 的 v7.6 版本已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 支持 Windows 和 Linux 上的 SQL Server 2017 处于公共预览状态，不应该用于生产迁移。
 
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 的安装先决条件，并已停止使用该工具的 32 位版本。
@@ -84,7 +92,7 @@ SSMA for DB2 的 v7.3 版本包含以下更改：
   - 可供执行的自定义转换 SSMA 的库。
     - 现在可以构造自定义语法转换和转换之前未处理的 SSMA 能处理的代码。
       - 在此博客文章提供了有关如何构造自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 用于转换的示例项目可以下载这[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 ## <a name="ssma-v72"></a>SSMA 7.2 版
 SSMA for DB2 的 7.2 版版本包含以下更改：

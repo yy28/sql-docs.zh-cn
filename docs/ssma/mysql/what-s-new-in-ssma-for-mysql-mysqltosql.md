@@ -2,7 +2,7 @@
 title: 什么是 SSMA for MySQL (MySQLToSql) 中的新增功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,23 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ad86fed5cfa7eab443ce214cb7cc0965fd7062b8
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: aef37e4e123676d7340a6300bfb90098e8cccb55
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395419"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362011"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 中的新增功能 (MySQLToSql)
 本文列出了每个版本中的 MySQL 更改 SSMA。 
+
+## <a name="ssma-v710"></a>SSMA v7.10
+SSMA for MySQL 的 v7.10 版本包含以下更改：
+- 可提供额外的安全和隐私保护功能以满足全局要求中的更改的目标的修补。
+- 函数名称和参数列表之间的空格转换为修补程序。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SSMA for MySQL 的 v7.9 版本包含以下更改：
@@ -85,7 +93,7 @@ SSMA for MySQL 的 v7.3 版本包含以下更改：
   - 可供执行的自定义转换 SSMA 的库。
     - 现在可以构造自定义语法转换和转换之前未处理的 SSMA 能处理的代码。
       - 在此博客文章提供了有关如何构造自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 用于转换的示例项目可以下载这[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 ## <a name="ssma-v72"></a>SSMA 7.2 版
 SSMA for MySQL 的 7.2 版版本包含以下更改：

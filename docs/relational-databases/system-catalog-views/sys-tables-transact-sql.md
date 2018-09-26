@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 330c8be09065d6c08ba0cc8468b8a5c687fdca6b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 960ffccc2945531aa525c9a1d1db45cc47951190
+ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096811"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47178313"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "43096811"
 |history_retention_period|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示与 history_retention_period_unit 指定单位的时态历史记录保持期的持续时间的数值。 |  
 |history_retention_period_unit|**int**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>表示类型的时态历史记录保持期单位数值。 <br /><br />-1： 无限 <br /><br />3： 天 <br /><br />4： 一周 <br /><br />5： 月 <br /><br />6： 年 |  
 |history_retention_period_unit_desc|**nvarchar(10)**|**适用于**： [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>时态历史记录保持期单位类型的文本说明。 <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
-  
+|is_node|**bit**|适用范围：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 这是一个图形节点表。 <br /><br />0 = 这不是图形节点表。 |  
+|is_edge|**bit**|适用范围：[!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] 和 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]。 <br/><br/>1 = 这是一个图形边缘表。 <br /><br />0 = 这不是图形边缘表。 |  
+
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

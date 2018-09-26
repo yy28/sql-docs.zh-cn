@@ -1,7 +1,7 @@
 ---
 title: 什么是适用于 SAP ASE (SybaseToSQL) 的 SSMA 中的新增功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -16,15 +16,21 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d178cde4f921580c6c9953701d9e2101853400a2
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395033"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362031"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>什么是适用于 SAP ASE (SybaseToSQL) 的 SSMA 中的新增功能
 本文列出了每个版本中的 SAP ASE (以前称为 SSMA for Sybase) 更改的 SSMA。 
+
+## <a name="ssma-v710"></a>SSMA v7.10
+有关 SAP ASE 的 SSMA v7.10 发布已得到增强目标修补，可提供额外的安全和隐私保护功能以满足全局要求中的更改。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 SAP ASE 的 SSMA v7.9 发行版包含以下更改：
@@ -54,7 +60,7 @@ SAP ASE 的 SSMA v7.7 发行版包含以下更改：
 
 ## <a name="ssma-v76"></a>SSMA v7.6
 SAP ASE 的 SSMA v7.6 发行版包含以下更改：
-- 适用于 SAP ASE 的 SSMA 已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持处于公共预览状态，并不用于生产的迁移。
+- 适用于 SAP ASE 的 SSMA 已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 支持 Windows 和 Linux 上的 SQL Server 2017 处于公共预览状态，不应该用于生产迁移。
 - 已更新适用于 SAP ASE 的 SSMA Sybase 函数的转换提供支持。
 
 > [!IMPORTANT]
@@ -87,7 +93,7 @@ SSMA for Sybase 的 v7.3 版本包含以下更改：
   - 可供执行的自定义转换 SSMA 的库。
     - 现在可以构造自定义语法转换和转换之前未处理的 SSMA 能处理的代码。
       - 在此博客文章提供了有关如何构造自定义转换器说明[扩展 SQL Server Migration Assistant 的转换功能](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)。
-      - 用于转换的示例项目可以下载这[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
+      - 下载此转换的示例项目[博客文章](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)。
 
 ## <a name="ssma-v72"></a>SSMA 7.2 版
 SSMA for Sybase 的 7.2 版版本包含以下更改：
@@ -206,7 +212,7 @@ SSMA for Sybase 的 2007 年 5 月版本包含以下更改：
 -   添加了的对 SQL Server 中的用户输入注释格式 SQL 模式。  
 -   添加了对象转换中的改进。  
   
-对于此版本未更新的帮助文件。 有关详细信息，请参阅本文后面的文档说明部分。  
+对于此版本不被更新的帮助文件。 有关详细信息，请参阅本文后面的文档说明部分。  
   
 ## <a name="november-2006"></a>2006 年 11 月  
 SSMA for Sybase 的 2006 年 11 月版本包含以下更改：  

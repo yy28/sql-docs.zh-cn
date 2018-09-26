@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: f0c6e0e8b6999ce2ebcce009a4ac1c298ededdff
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40009029"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712119"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>加密连接到 Linux 上的 SQL Server
 
@@ -34,9 +34,13 @@ ms.locfileid: "40009029"
 - 通过使用 AT_KEYEXCHANGE KeySpec 选项，必须创建该证书。 通常情况下，证书的密钥用法属性 (KEY_USAGE) 还包括密钥加密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
 - 证书的 Subject 属性必须指明公用名 (CN) 为主机名或服务器计算机的完全限定的域名 (FQDN) 是相同。 注意： 支持通配符证书。
 
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>（可选） 用于配置 OpenSSL 库
+可创建中的符号链接`/opt/mssql/lib/`引用其中的目录`libcrypto.so`和`libssl.so`库应该用于加密。 这是你想要强制使用 OpenSSL 而不使用默认系统提供的特定版本的 SQL Server 的情况下很有用。 如果这些符号链接不存在，SQL Server 将加载在系统上的默认配置 OpenSSL 库。
+
+这些符号链接应命名为`libcrypto.so`并`libssl.so`并放置在`/opt/mssql/lib/`目录。
+
 ## <a name="overview"></a>概述
 TLS 用于加密从客户端应用程序的连接[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 正确配置时，TLS 提供隐私和数据完整性的客户端和服务器之间的通信。  TLS 连接可以是启动的客户端或服务器启动。 
-
 
 ## <a name="client-initiated-encryption"></a>客户端启动的加密 
 - **生成证书**（/CN 应在 SQL Server 完全限定的域名与主机名匹配）

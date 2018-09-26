@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 09/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 05c3df493c809132d6fbfad1d96cc84d4d873dd3
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 7cb08a66d0cc81268517b1ddf742bcdf0451d11b
+ms.sourcegitcommit: 9fe8964647a0d413304acfd2d3c0d87a79d70862
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152628"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493758"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -88,7 +88,7 @@ ms.locfileid: "43152628"
 
 如果此数据库不在工具计算机上，确保工具计算机具有到此 SQL Server 实例的网络连接。
 
-通过 CSV 文件中使用 SQL Server 表的好处是，可以使用评估标记列以控制实例 / 数据库，获取选择进行评估，因此可以轻松地单独的较小的区块的评估。  然后可以跨多个评估 （请参阅本文后面运行评估部分），（请参阅部分在这篇文章中更高版本运行评估），这是更容易维护多个 CSV 文件。
+通过 CSV 文件中使用 SQL Server 表的好处是，可以使用评估标记列以控制实例 / 数据库，获取选择进行评估，因此可以轻松地单独的较小的区块的评估。  然后可以跨多个评估 （请参阅部分在这篇文章中更高版本运行评估），这是更容易维护多个 CSV 文件。
 
 请记住，具体取决于许多对象和其复杂性，评估可能需要特别长的时间 （小时数 +），因此它是比较明智的做法来分隔成可管理块的评估。
 
@@ -102,7 +102,7 @@ ms.locfileid: "43152628"
 |参数  |Description
 |---------|---------|
 |**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。 |
-|**服务器名称** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
+|**serverName** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
 |**DatabaseName** | 托管库存表的数据库。 |
 |**AssessmentName** | DMA 评估的名称。 |
 |**TargetPlatform** | 你想要执行评估目标类型。  可能的值为**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，并**SQLServerWindows2017**。 |
@@ -124,7 +124,7 @@ ms.locfileid: "43152628"
 |参数  |Description
 |---------|---------|
 |**processTo**  | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
-|**服务器名称** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
+|**serverName** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
 |**CreateDMAReporting** | 要创建用于处理 JSON 文件的临时数据库。  如果已指定的数据库存在，此参数设置为其中一个，则对象不获取创建。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建将由 Power BI 报表数据仓库。 |
 |**DatabaseName** | DMAReporting 数据库的名称。 |

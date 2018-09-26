@@ -12,18 +12,20 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: c4390990701f95dddf19ca53354ffcb5af241d30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6ccb65aad24ca84f95bb1022c7f074450823e2e9
+ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083529"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47049437"
 ---
-# <a name="whats-new-for-sql-server-2017-on-linux"></a>Linux 版 SQL Server 2017 的新增功能
+# <a name="whats-new-for-sql-server-on-linux"></a>什么是 Linux 上的 SQL Server 的新增功能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 本文介绍了在 Linux 上运行的 SQL Server 2017 的主要功能和可用的服务。
+
+SQL Server 2019 预览版已发布。 本文不涉及 SQL Server 2019 预览版本。 若要了解有关 SQL Server 2019 预览，请参阅[什么是适用于 Linux 的 SQL Server 2019 preview 中的新增](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
 
 > [!NOTE]
 > 除了本文中的这些功能外, 在 GA 发布之后, 还会定期发布累积更新。 这些累积更新提供许多改进和修复。 有关最新 CU 版本的信息，请参阅[ http://aka.ms/sql2017cu ](http://aka.ms/sql2017cu)。 有关包下载和已知的问题，请参阅[发行说明](sql-server-linux-release-notes.md)。

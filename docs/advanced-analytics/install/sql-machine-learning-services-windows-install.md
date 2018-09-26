@@ -3,19 +3,19 @@ title: 安装 SQL Server 机器学习在 Windows 上的服务 （数据库） |M
 description: 当您在 Windows 上安装 SQL Server 2017 机器学习服务，SQL Server 或 SQL Server 上的 Python 中的 R 才可用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311647"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713029"
 ---
-# <a name="install-sql-server-machine-learning-services"></a>安装 SQL Server 机器学习服务
+# <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 从 SQL Server 2017 中，R 和 Python 支持的数据库内分析提供在 SQL Server 机器学习服务的后继[SQL Server R Services](../r/sql-server-r-services.md) SQL Server 2016 中引入。 函数库可在 R 和 Python 中，并作为外部脚本的数据库引擎实例上运行。 
@@ -24,12 +24,12 @@ ms.locfileid: "44311647"
 
 ## <a name="bkmk_prereqs"> </a> 预安装清单
 
-+ 需要使用 R 和 Python 机器学习服务的 SQL Server 2017 安装程序。 如果改为具有 SQL Server 2016 安装媒体，请参阅[安装 SQL Server 2016 R Services](sql-r-services-windows-install.md)获取 R 语言支持。
++ 如果你想要使用 R、 Python 或 Java 语言支持安装机器学习服务，则需要 SQL Server 2017 （或更高版本） 安装程序。 如果改为您具有 SQL Server 2016 安装介质，则可以安装[SQL Server 2016 R Services （数据库内）](sql-r-services-windows-install.md)获取 R 语言支持。
 
 + 数据库引擎实例是必需的。 您不能安装 R 或 Python 功能，尽管将它们添加到现有实例的以增量方式。
 
-+ 不要在故障转移群集上安装机器学习服务。 用于隔离 R 和 Python 进程的安全机制不兼容与 Windows Server 故障转移群集环境。
-
+- 安装机器学习服务是*不支持*中 SQL Server 2017 故障转移群集上。 但是，它*支持*与 SQL Server 2019。 
+ 
 + 不要在域控制器上安装机器学习服务。 安装程序的机器学习服务部分将会失败。
 
 + 不安装**共享功能** > **Machine Learning Server （独立版）** 同一台计算机上运行的数据库实例。 独立服务器将争夺相同的资源，从而破坏这两个安装的性能。
@@ -108,7 +108,7 @@ ms.locfileid: "44311647"
     > [!TIP]
     > 可以下载并安装适当版本，在此页中：[下载 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
     > 
-    > 您还可以试用的预览版本[SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is)，它支持管理任务和针对 SQL Server 的查询。
+    > 您还可以试用的预览版本[Azure Data Studio](../../azure-data-studio/what-is.md)，它支持管理任务和针对 SQL Server 的查询。
   
 2. 连接到安装机器学习服务的实例中，单击**新查询**打开查询窗口中，并运行以下命令：
 
@@ -193,34 +193,31 @@ ms.locfileid: "44311647"
 
 ## <a name="additional-configuration"></a>其他配置
 
-如果外部脚本执行验证步骤是否成功，你可以从 SQL Server Management Studio、 Visual Studio Code 中或可以向服务器发送 T-SQL 语句的任何其他客户端运行 Python 命令。
+如果外部脚本执行验证步骤是否成功，你可以从 SQL Server Management Studio、 Visual Studio Code 中或可以向服务器发送 T-SQL 语句的任何其他客户端运行 R 或 Python 命令。
 
 如果你在运行命令时收到错误，，查看此部分中的其他配置步骤。 您可能需要对服务或数据库进行相应的其他配置。
 
-需要进行其他更改的常见方案包括：
+在实例级别，可能包括其他配置：
 
 * [配置 Windows 防火墙以允许入站连接](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+在数据库中，则可能需要以下配置更新：
+
 * [将内置权限扩展到远程用户](#bkmk_configureAccounts)
 * [授予运行外部脚本的权限](#permissions-external-script)
 * [授予对单个数据库访问权限](#permissions-db)
 
 > [!NOTE]
-> 并非所有列出的更改是必需的并无可能要求。 要求取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 其他故障排除提示可在此处找到：[升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> 是否需要其他配置取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 
 
-###  <a name="bkmk_configureAccounts"></a> 启用为 Launchpad 帐户组的隐式身份验证
+###  <a name="bkmk_configureAccounts"></a> 启用 SQL 受限制的用户组 (SQLRUserGroup) 帐户组的隐式身份验证
 
-在安装期间，已创建一些新的 Windows 用户帐户，用于运行 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务的安全令牌下的任务。 当用户从外部客户端，发送的 Python 或 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户。 然后它将其映射到调用用户的标识，并运行代表用户的脚本。
+如果需要从远程数据科学客户端，运行脚本和使用 Windows 身份验证，则需要其他配置才能提供辅助角色帐户运行 R 和 Python 进程中登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。 此行为称为*隐式身份验证*，并由数据库引擎，以支持在 SQL Server 2016 和 SQL Server 2017 中的外部脚本的安全执行实现。
 
-这称为*隐式身份验证*，和是数据库引擎的服务。 此服务在 SQL Server 2016 和 SQL Server 2017 支持的外部脚本的安全执行。
-
-可以在 Windows 用户组“SQLRUserGroup” 中查看这些账户。 默认情况下，会创建 20 个辅助角色帐户，这通常是足以用于运行外部脚本作业。
-
-> [!IMPORTANT]
-> 名为辅助角色组**SQLRUserGroup**无论是否安装 R 或 Python。 没有一个组中的，每个实例。
-
-如果您需要从远程数据科学客户端，运行脚本并使用 Windows 身份验证，有一些其他注意事项。 必须授予这些辅助角色帐户登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
+> [!NOTE]
+> 如果您使用**SQL 登录名**对于在 SQL Server 计算上下文中运行脚本，不需要此额外步骤。
 
 1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，展开**安全**。 然后右键单击**登录名**，然后选择**新的登录名**。
 2. 在中**登录名-新建**对话框中，选择**搜索**。
@@ -230,8 +227,13 @@ ms.locfileid: "44311647"
 6. 默认情况下，组分配给**公共**角色，以及是否有权连接到数据库引擎。
 7. 选择“确定”。
 
-> [!NOTE]
-> 如果您使用**SQL 登录名**对于在 SQL Server 计算上下文中运行脚本，不需要此额外步骤。
+在 SQL Server 2017 及更早版本，大量的本地 Windows 用户帐户已创建用于运行任务的安全令牌下[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。 可以在 Windows 用户组“SQLRUserGroup” 中查看这些账户。 默认情况下，会创建 20 个辅助角色帐户，这通常是足以用于运行外部脚本作业。 
+
+按如下所示使用这些帐户。 当用户从外部客户端，发送的 Python 或 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户，将其映射到调用用户的标识并运行代表用户的脚本。 如果对脚本，从而在执行 SQL Server 外部的必须从 SQL Server 中检索数据或资源，返回到 SQL Server 的连接需要的日志中。 创建数据库登录名**SQLRUserGroup**也为了能成功连接。
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+在 SQL Server 2019 中辅助角色帐户替换为 AppContainers，与 SQL Server Launchpad 服务下正在执行的进程。 尽管不能再使用辅助角色帐户，但仍将要求你将添加一个数据库登录名**SQLRUsergroup**如果隐式需要身份验证。 就像辅助角色帐户没有登录名的权限，快速启动板服务标识执行不是任何一个。 创建一个登录名**SQLRUserGroup**，其中包含在此版本中，快速启动板服务允许隐式身份验证工作。
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> 向用户授予权限来运行外部脚本
 

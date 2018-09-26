@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a89ce0acb22bf60dd05372a9cc7f7d28bb7fa3b1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086269"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712389"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集实例-Linux 上的 SQL Server
 
@@ -72,7 +72,7 @@ Pacemaker 群集只能有最多 16 个节点时涉及到 Corosync，因此单个
 在配置中跨多个位置，在一个数据中心存储的内容必须与同步其他。 发生故障转移时，FCI 将能够进入联机状态并存储看到的相同。 实现此目的需要一些外部方法存储复制是否完成通过基础的存储硬件或某些基于软件的实用程序。 
 
 >[!NOTE]
->对于 SQL Server 2017，必须使用 XFS 或 EXT4 格式化使用磁盘直接向此类的服务器提供的基于 Linux 的部署。 目前不支持其他文件系统。 此处将会反映任何更改。
+>对于 SQL Server，必须使用 XFS 或 EXT4 格式化使用磁盘直接向此类的服务器提供的基于 Linux 的部署。 目前不支持其他文件系统。 此处将会反映任何更改。
 
 提供共享的存储的过程是相同的受支持的不同方法：
 

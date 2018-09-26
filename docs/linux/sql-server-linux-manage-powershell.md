@@ -12,26 +12,26 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: e198ae15b5f618b25f7d4391a0a09be33621c2da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b9b8429bfdc1738955aba739520ac07e2d39efa7
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085729"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712079"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>使用 Windows 上的 PowerShell 管理 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍了[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)并指导你完成几个示例如何将它与 SQL Server 2017 Linux 上使用。 Windows 上目前支持适用于 SQL Server 的 PowerShell，因此当 Windows 计算机连接到 Linux 上的远程 SQL Server 实例时，可以使用 PowerShell。
+本文介绍了[SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)并指导你完成几个示例如何将用于在 Linux 上的 SQL Server。 Windows 上目前支持适用于 SQL Server 的 PowerShell，因此当 Windows 计算机连接到 Linux 上的远程 SQL Server 实例时，可以使用 PowerShell。
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>在 Windows 上安装最新版本的 SQL PowerShell
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)在 Windows 上是附带[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 使用 SQL Server 时，应始终使用最新版本的 SSMS 和 SQL PowerShell。 最新版本的 SSMS 不断更新和优化，从而目前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。
+[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx)在 Windows 上是附带[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)。 使用 SQL Server 时，应始终使用最新版本的 SSMS 和 SQL PowerShell。 最新版本的 SSMS 不断更新并进行优化，目前适用于 Linux 上的 SQL Server。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。
 
 ## <a name="before-you-begin"></a>开始之前
 
-读取[已知问题](sql-server-linux-release-notes.md)Linux 上的 SQL server 2017。
+读取[已知问题](sql-server-linux-release-notes.md)Linux 上的 SQL Server。
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>启动 PowerShell 并导入*sqlserver*模块
 
@@ -66,15 +66,15 @@ Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>连接到 SQL Server 并获取服务器信息
 
-使用 Windows 上的 PowerShell 连接到 Linux 上的 SQL Server 2017 实例，并显示几个服务器属性。
+让我们使用 PowerShell 在 Windows 上连接到 Linux 上的 SQL Server 实例，并显示几个服务器属性。
 
 复制并粘贴以下命令在 PowerShell 提示符下。 运行这些命令时，PowerShell 将：
-- 显示*Windows PowerShell 凭据请求*对话框，提示您输入的凭据 (*SQL 用户名*并*SQL 密码*) 连接到 SQL Server 2017Linux 上的实例
+- 显示*Windows PowerShell 凭据请求*对话框，提示您输入的凭据 (*SQL 用户名*并*SQL 密码*) 连接到 SQL ServerLinux 上的实例
 - 加载 SQL Server 管理对象 (SMO) 程序集
 - 创建的实例[Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx)对象
 - 连接到**Server**并显示几个属性
 
-请记得替换**\<your_server_instance\>** 与 IP 地址或 Linux 上的 SQL Server 2017 实例的主机名。
+请记得替换**\<your_server_instance\>** 与 IP 地址或 Linux 上的 SQL Server 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -107,14 +107,14 @@ HostDistribution : Ubuntu
 
 ## <a name="examine-sql-server-error-logs"></a>检查 SQL Server 错误日志
 
-使用 Windows 上的 PowerShell 检查连接到 Linux 上 SQL Server 2017 实例的错误日志。 我们还将使用**Out-gridview** cmdlet 来显示信息的错误日志中的网格视图显示。
+让我们使用以检查错误日志的 Windows 上的 PowerShell 在 Linux 上的 SQL Server 实例上的连接。 我们还将使用**Out-gridview** cmdlet 来显示信息的错误日志中的网格视图显示。
 
 复制并粘贴以下命令在 PowerShell 提示符下。 它们可能会运行几分钟。 这些命令执行以下操作：
-- 显示*Windows PowerShell 凭据请求*对话框，提示您输入的凭据 (*SQL 用户名*并*SQL 密码*) 连接到 SQL Server 2017Linux 上的实例
-- 使用**Get-sqlerrorlog** cmdlet 来连接到 Linux 上的 SQL Server 2017 实例，并检索错误日志以来**昨天**
+- 显示*Windows PowerShell 凭据请求*对话框，提示您输入的凭据 (*SQL 用户名*并*SQL 密码*) 连接到 SQL ServerLinux 上的实例
+- 使用**Get-sqlerrorlog** cmdlet 来连接到 Linux 上的 SQL Server 实例并检索错误日志以来**昨天**
 - 通过管道传递到输出**Out-gridview** cmdlet
 
-请记得替换**\<your_server_instance\>** 与 IP 地址或 Linux 上的 SQL Server 2017 实例的主机名。
+请记得替换**\<your_server_instance\>** 与 IP 地址或 Linux 上的 SQL Server 实例的主机名。
 
 ```powershell
 # Prompt for credentials to login into SQL Server

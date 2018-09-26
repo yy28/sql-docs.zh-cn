@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 576526801188bc9459ec9e26470e5d17dd775f74
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: dce0928c0675172c503e6783aa25d6cbcaec9b5f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348297"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713510"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>使用 SQL Server 机器学习中 sp_rxPredict 实时评分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-实时评分使用的 CLR 扩展功能在 SQL Server 中的高性能预测或预测的工作负荷中的评分。 实时评分是语言无关，因为执行没有依赖 R 或 Python 运行时间。 假设从 Microsoft 函数创建、 训练，并为 SQL Server 中的二进制格式序列化的模型，您可以使用实时评分来生成预测的结果上没有 R 或 Python 外接程序功能的 SQL Server 实例上的新数据输入安装。
+实时评分用途[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)系统存储过程和 CLR 扩展功能在 SQL Server 的高性能预测或预测的工作负荷中的评分。 实时评分是语言无关，并执行 R 或 Python 运行时间上没有依赖项。 假设创建和使用 Microsoft 函数训练，然后到 SQL Server 中的二进制格式序列化的模型，您可以使用实时评分来生成预测的结果上没有 R 或 Python 外接程序的 SQL Server 实例上的新数据输入安装。
 
 ## <a name="how-real-time-scoring-works"></a>如何实时评分的工作原理
 
-实时评分对 RevoScaleR 或 MicrosoftML 函数如基于特定模型类型支持在 SQL Server 2016 和 SQL Server 2017 [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)或[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 它使用本机 c + + 库来生成评分，根据用户输入提供给机器学习模型存储在特殊的二进制格式。
+实时评分上支持在 SQL Server 2016 和 SQL Server 2017[支持的模型类型](#bkmk_py_supported_algos)线性和逻辑回归、 决策树中建模的。 它使用本机 c + + 库来生成评分，根据用户输入提供给机器学习模型存储在特殊的二进制格式。
 
 可用于训练的模型评分而无需调用外部语言运行时，由于减少了多个进程的开销。 这用于生产评分方案支持更快的预测性能。 因为数据不会离开 SQL Server，则可以生成结果，并将其插入到新表中不使用任何 R 和 SQL 之间的数据转换。
 
@@ -30,8 +30,8 @@ ms.locfileid: "43348297"
 
 1. 必须在每个数据库的基础上启用执行评分存储的过程。
 2. 加载预先训练的模型以二进制格式。
-3. 提供新的输入的数据、 表格或单个行，作为模型的输入。
-4. 若要生成评分，调用 sp_rxPredict 存储过程。
+3. 提供新的输入的数据进行评分，表格或单个行，作为模型的输入。
+4. 若要生成评分，调用[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)存储过程。
 
 > [!TIP]
 > 在操作中的实时评分的示例，请参阅[端到端贷款冲销预测构建使用 Azure HDInsight Spark 群集和 SQL Server 2016 R 服务](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
@@ -45,6 +45,8 @@ ms.locfileid: "43348297"
 + 必须事先使用某个受支持训练模型**rx**算法。 对于 R，实时与评分`sp_rxPredict`适用于[RevoScaleR 和 MicrosoftML 支持的算法](#bkmk_rt_supported_algos)。 对于 Python，请参阅[revoscalepy 和 microsoftml 支持的算法](#bkmk_py_supported_algos)
 
 + 模型使用进行序列化[rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)对于 R，并[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)适用于 Python。 这些序列化函数已经过优化，以支持快速评分。
+
++ 将模型保存到你想要调用它的数据库引擎实例。 此实例不需要具有 R 或 Python 运行时扩展。
 
 > [!Note]
 > 针对快速预测对小型数据集，范围从少量的行到成千上万行的当前优化实时评分。 在大型数据集，使用[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)可能更快。

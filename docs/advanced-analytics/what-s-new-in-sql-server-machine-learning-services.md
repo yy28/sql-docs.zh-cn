@@ -3,23 +3,37 @@ title: 什么&#39;s SQL Server 机器学习服务中的新增功能 |Microsoft D
 description: 新的 SQL Server 2016 R Services、 R Server、 SQL Server 2017 机器学习服务的每个版本的功能公告。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/28/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888853"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712565"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>什么是 SQL Server 机器学习服务中的新增功能 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-机器学习功能添加到 SQL Server 每个版本中我们继续展开、 扩展和同时更深入的数据平台和数据科学，分析之间的集成和监督式的学习您想要实现对你的数据。 
+机器学习功能将添加到 SQL Server 中每个版本，随着我们继续展开、 扩展和强化数据平台、 高级的分析和数据科学之间的集成。 
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="new-in-sql-server-2019-preview"></a>SQL Server 2019 预览版中的新增功能
+
+此版本添加了 SQL Server 中 R 和 Python 机器学习操作的请求频率最高的功能。 有关此版本中功能的所有详细信息，请参阅[What's New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)并[Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)。
+
+| 发行版本 | 功能更新 |
+|---------|----------------|
+| CTP 2.0 | R 和 Python 机器学习和新的 Java 扩展的 Linux 平台支持。 有关如何入门的帮助，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。 |
+| CTP 2.0 | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)包括使你能够轻松地从已分区数据中生成多个模型的两个新参数。 在本教程中，了解详细信息[在 R 中创建基于分区的模型](tutorials/r-tutorial-create-models-per-partition.md)。 |
+| CTP 2.0 | 故障转移群集支持现在支持 Windows 和 Linux，假定所有节点上启动 SQL Server Launchpad 服务。 有关详细信息，请参阅[SQL Server 故障转移群集安装](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)。 |
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017 中的新增功能
 
 此版本添加了[的 Python 支持和行业领先的机器学习算法](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)。 重命名以反映新的作用域，SQL Server 2017 标记引入[SQL Server 机器学习服务 （数据库内）](what-is-sql-server-machine-learning.md)，具有语言支持的 Python 和。 
@@ -66,7 +80,7 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 ### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>作为共享功能在 SQL Server 安装程序的独立服务器
 
 此版本还添加了[SQL Server 机器学习服务器 （独立版）](r/r-server-standalone.md)，支持 R 和 Python 中的统计和预测分析的完全独立的数据科学服务器。 作为使用 R Services，此服务器是 SQL Server 2016 R Server （独立版） 的下一版本。 与独立服务器、 分发和缩放 SQL Server 上的 R 或 Python 解决方案没有依赖项。
-
+::: moniker-end
 
 ## <a name="new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 
@@ -83,15 +97,15 @@ Python 是一种语言，提供了极大的灵活性和各种机器学习任务�
 
 ## <a name="linux-support-roadmap"></a>Linux 支持路线图
 
-机器学习中使用 R 或 Python 中的数据库当前不支持在 Linux 上的 SQL Server 中。 查看我们的更高版本中的通知。
+安装机器学习使用数据库引擎实例的包时，SQL Server 2019 CTP 2.0 添加 R、 Python 和 Java 的 Linux 支持。 有关详细信息，请参阅[安装 SQL Server 机器学习服务在 Linux 上](../linux/sql-server-linux-setup-machine-learning.md)。
 
-但是，在 Linux 上可以执行[本机计分](sql-native-scoring.md)使用 T-SQL 的预测函数。 本机计分，可以从预先训练的模型非常快，评分而无需调用或甚至要求 R 运行时。 这意味着可以使用在 Linux 上的 SQL Server 来生成预测非常快，若要为客户端应用程序服务。
+在 Linux 上，SQL Server 2017 没有 R 或 Python 集成，但可以使用[本机计分](sql-native-scoring.md)Linux 上因为该功能是可通过 T-SQL [PREDICT]()，在 Linux 上运行。 本机计分，从预先训练的模型，评分而无需调用或甚至要求 R 运行时的高性能。
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="azure-sql-database-roadmap"></a>Azure SQL 数据库路线图
 
-Azure SQL 数据库中的 R 的有限支持： 仅在美国中西部，在高级层创建的服务中可用。 扩展服务范围，其中包括 Python 支持，很可能在将来的版本中遵循。 但是，这一次出现是没有预计的发行日期。  
+目前尚不支持机器学习服务 （R 和 Python） Azure SQL 数据库中。 支持已列入计划，但这次无预计的发行日期。  
 
 ## <a name="next-steps"></a>后续步骤
 

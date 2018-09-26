@@ -2,7 +2,7 @@
 title: 什么是 SSMA for Oracle (OracleToSQL) 中的新增功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/14/2018
+ms.date: 09/22/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -13,15 +13,23 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e5a819910b898c4527b5cad24edb62aa9142395e
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 78f1615e375dfeafbcf25a8b0466ed92fbcc16ea
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392915"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362041"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>什么是 SSMA for Oracle (OracleToSQL) 中的新增功能
 本文列出了每个版本中的 Oracle 更改 SSMA。  
+
+## <a name="ssma-v710"></a>SSMA v7.10
+适用于 Oracle 的 SSMA v7.10 版本包含以下更改：
+- 可提供额外的安全和隐私保护功能以满足全局要求中的更改的目标的修补。
+- 转换改进，与分层查询相关。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 适用于 Oracle 的 SSMA v7.9 版本包含以下更改：
@@ -50,14 +58,14 @@ ms.locfileid: "40392915"
 适用于 Oracle 的 SSMA v7.7 版本包含以下更改：
 - 适用于 Oracle 的 SSMA 已得到增强改进质量和转换的度量值的目标修补。
 - 基于普遍的需求，返回是适用于 Oracle 的 SSMA 的 32 位版本。 与以前的实现 （之前 v7.4) 相比，有两个安装程序软件包，但不能并行安装。 因此，必须选择最适合您的版本根据连接组件。 最好始终使用 64 位版本中，在可能的情况。
-- SQL Server 2017 支持现已正式与 Oracle 的扩展包，也支持在 Linux 上 （新的远程安装选项）。 请注意，扩展包功能是在 Linux 上，安装时如不支持的测试人员和服务器端数据迁移功能 
+- SQL Server 2017 支持现已正式与 Oracle 的扩展包，也支持在 Linux 上 （新的远程安装选项）。 请注意，扩展包功能是在 Linux 上，安装时如不支持测试人员和服务器端数据迁移功能。
 - 适用于 Oracle 的 SSMA 允许您将迁移作为常规表的具体化视图 (通过在设置可配置**项目设置** -> **同步** ->  **具体化视图发现后备表**)。
 
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 是安装必备组件。
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-适用于 Oracle 的 SSMA v7.6 版本已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 对 Windows 和 Linux 上的 SQL Server 2017 的支持处于公共预览状态，并不用于生产的迁移。
+适用于 Oracle 的 SSMA v7.6 版本已得到增强，提高质量和转换的度量值的目标修补和支持 SQL Server 2017 （公共预览版）。 支持 Windows 和 Linux 上的 SQL Server 2017 处于公共预览状态，不应该用于生产迁移。
 
 > [!IMPORTANT]
 > 使用 SSMA v7.4 和更高版本，.Net 4.5.2 的安装先决条件，并已停止使用该工具的 32 位版本。
@@ -128,7 +136,7 @@ ms.locfileid: "40392915"
 - 添加了对 SQL Server 2016 的支持。
 - 添加的转换 Oracle 闪回存档表为 SQL Server 的临时表。
 
-    **请注意**-SSMA 不会复制从 Oracle 闪回数据存档表的历史记录数据。 因此，必须在迁移过程中手动复制历史记录数据。 此外，虽然 SSMA 不在 SQL Server 元数据资源管理器中显示历史记录表，因为它被视为系统表，您可以在 SQL Server Management Studio 中查看历史记录表。
+    **请注意**-SSMA 不会将历史记录数据复制从 Oracle 闪回数据存档表。 因此，必须在迁移过程中手动复制历史记录数据。 此外，虽然 SSMA 不会在 SQL Server 元数据资源管理器中显示历史记录表，因为它被视为系统表，您可以在 SQL Server Management Studio 中查看历史记录表。
     SQL Server 2016 不支持多个 Oracle 闪回功能，包括：
     - Oracle 闪回事务查询
     - DBMS_FLASHBACK 包

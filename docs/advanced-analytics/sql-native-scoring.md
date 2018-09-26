@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2f55962069c67fe7907968e024cdacb920b02d4e
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 372c81310fea86094543319f21e409142810de97
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348608"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713149"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>使用预测 T-SQL 函数的本机计分
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-本机计分利用的本机 c + + 扩展功能在 SQL Server 2017 来生成预测值或*分数*附近真实时间中的新数据输入。 此方法提供的预测和预测工作负荷，速度最快的处理速度，但附带了平台和库要求： 仅从 RevoScaleR 和 revoscalepy 函数具有 c + + 实现。
+本机计分用途[预测 T-SQL 函数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)和本机 c + + 扩展功能，SQL Server 2017 中的以生成预测值或*分数*附近真实时间中的新数据输入。 此方法提供预测和预测工作负荷的最快可以处理速度，但附带了平台和库要求： 仅从 RevoScaleR 和 revoscalepy 函数具有 c + + 实现。
 
-本机计分要求你具有已训练的模型。 在 SQL Server 2017 Windows 或 Linux，或在 Azure SQL 数据库中，可以在 TRANSACT-SQL 中使用 PREDICT 函数，来调用本机计分。 PREDICT 函数使用预先训练的模型，并通过您提供的数据输入生成分数。
+本机计分要求你具有已训练的模型。 在 SQL Server 2017 Windows 或 Linux，或在 Azure SQL 数据库中，您可以调用 PREDICT 函数中 TRANSACT-SQL 来调用本机针对作为输入参数提供的新数据评分。 PREDICT 函数返回所提供的数据输入评分。
 
 ## <a name="how-native-scoring-works"></a>本机评分的工作原理
 

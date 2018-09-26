@@ -1,6 +1,6 @@
 ---
-title: Linux 上的 SQL Server 配置存储库 |Microsoft Docs
-description: 检查并配置 SQL Server 2017 Linux 上的源代码存储库。 源存储库会影响应用在安装和升级过程的 SQL Server 的版本。
+title: 为 SQL Server 2017 和 2019年配置 Linux 存储库 |Microsoft Docs
+description: 检查并配置适用于 SQL Server 2019 和 Linux 上的 SQL Server 2017 源代码存储库。 源存储库会影响应用在安装和升级过程的 SQL Server 的版本。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,21 +11,21 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 361f66fff8fecfd748b1bd573367509e93cc7b87
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5aee3ea6a744c15afce8055d153959b8db9ac66d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086979"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713209"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置安装和升级 Linux 上的 SQL Server 存储库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何在 Linux 上配置 SQL Server 2017 安装和升级的正确存储库。
+本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。
 
-> [!IMPORTANT]
-> 如果您以前安装的 CTP 或 SQL Server 2017 的 RC 版本，你必须使用本文中的步骤注册正式版 (GA) 存储库和升级或重新安装。 SQL Server 2017 的预览版本不受支持，并将过期。
+> [!TIP]
+> SQL Server 2019 CTP 2.0 现已推出 ！ 若要试用，使用本文配置的新**mssql server 预览版**存储库。 然后使用中的说明进行安装[安装指南](sql-server-linux-setup.md)。
 
 ## <a id="repositories"></a>存储库
 
@@ -33,7 +33,8 @@ ms.locfileid: "39086979"
 
 | 存储库 | “属性” | Description |
 |---|---|---|
-| **预览** | **mssql-server** | 预览存储库的 SQL Server ctp 版本和 RC 版本。 SQL Server 2017 不支持此存储库。 |
+| **预览版 (2017)** | **mssql-server** | SQL Server 2017 ctp 版本和 RC 的存储库 （停用）。 |
+| **预览版 (2019)** | **mssql server 预览版** | SQL Server 2019 ctp 版本和 RC 存储库。 |
 | **CU** | **mssql-server-2017** | SQL Server 2017 累积更新 (CU) 存储库。 |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR 仅关键更新的存储库。 |
 
@@ -92,10 +93,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ### <a name="configure-new-repository-rhel"></a>配置新的存储库 (RHEL)
 配置新的存储库，用于 SQL Server 安装和升级。 使用以下命令之一配置所选存储库。
 
-| 存储库 | Command |
-|---|---|
-| **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+| 存储库 | 版本 | Command |
+|---|---|---|
+| **预览版 (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
 ## <a id="sles"></a> 配置 SLES 存储库
 使用以下步骤在 SLES 上配置存储库。
@@ -116,17 +118,19 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | 存储库 | 若要删除的命令 |
 |---|---|
-| **预览** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **预览版 (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **预览版 (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
 | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
 ### <a name="configure-new-repository-sles"></a>配置新的存储库 (SLES)
 配置新的存储库，用于 SQL Server 安装和升级。 使用以下命令之一配置所选存储库。
 
-| 存储库 | Command |
-|---|---|
-| **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+| 存储库 | 版本 | Command |
+|---|---|---|
+| **预览版 (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
 ## <a id="ubuntu"></a> 配置 Ubuntu 存储库
 使用以下步骤在 Ubuntu 上配置存储库。
@@ -147,7 +151,8 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 | 存储库 | 若要删除的命令 |
 |---|---|
-| **预览** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+| **预览版 (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+| **预览版 (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -162,10 +167,11 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 
 2. 使用以下命令之一配置所选存储库。
 
-   | 存储库 | Command |
-   |---|---|
-   | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
-   | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+   | 存储库 | 版本 | Command |
+   |---|---|---|
+   | **预览版 (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
 3. 运行**apt get 更新**。
 

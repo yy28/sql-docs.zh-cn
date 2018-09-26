@@ -1,6 +1,6 @@
 ---
 title: Linux 上的 SQL Server 的性能最佳做法 |Microsoft 文档
-description: 本文提供在 Linux 上运行 SQL Server 2017 的性能最佳实践和准则。
+description: 本文提供在 Linux 上运行 SQL Server 性能最佳实践和准则。
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f27cda67baa5d4101f94a8351bacd1ef3ecbff05
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 42e3c137a4284a3d190051251b875926a4ff532d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101135"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713669"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>性能最佳实践和 Linux 上的 SQL Server 配置准则
 

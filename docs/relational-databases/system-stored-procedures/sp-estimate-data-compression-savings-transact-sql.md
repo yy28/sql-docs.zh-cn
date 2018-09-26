@@ -23,17 +23,17 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 70efe047d1fae61f9755c2dbeecf9627de5b5a79
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027536"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713949"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、聚集索引、非聚集索引、索引视图以及表和索引分区。 可使用行压缩或页压缩来压缩这些对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
+  返回所请求对象的当前大小并估算对象在所请求的压缩状态下的大小。 可对所有表或部分表评估压缩。 这包括堆、 聚集索引、 非聚集的索引、 列存储索引、 索引视图，以及表和索引分区。 可以使用行、 页、 列存储或列存储存档压缩来压缩对象。 如果表、索引或分区已经过压缩，则可使用该过程来估计在重新压缩的情况下该表、索引或分区的大小。  
   
 > [!NOTE]  
 >  压缩并**sp_estimate_data_compression_savings**中的每个版本均不提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -76,7 +76,7 @@ sp_estimate_data_compression_savings
  若要指定分区，您可以指定[$partition](../../t-sql/functions/partition-transact-sql.md)函数。 若要返回所属对象的所有分区的信息，请指定 NULL。  
   
  [ @data_compression=] '*data_compression*  
- 要评估的压缩的类型。 *data_compression*可以是下列值之一： NONE、 ROW 或 PAGE。  
+ 要评估的压缩的类型。 *data_compression*可以是下列值之一： NONE、 行、 页、 列存储中或 COLUMNSTORE_ARCHIVE。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
@@ -95,8 +95,8 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|使用当前压缩设置时的示例大小。 这包括任何碎片。|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|使用请求的压缩设置及现有填充因子（如果适用）创建的且没有碎片的样本的大小。|  
   
-## <a name="remarks"></a>Remarks  
- 可使用 sp_estimate_data_compression_savings 估算对表或分区启用行压缩或页压缩时可能带来的节省量。 例如，如果行的平均大小可以减少 40%，则可能可以将对象大小减少 40%。 您可能无法节省空间，因为这取决于填充因子和行大小。 例如，如果某行长度为 8000 字节并且您将该行的大小减少 40%，则数据页上仍只能容纳一行。 因此不会节省空间。  
+## <a name="remarks"></a>备注  
+ 使用 use sp_estimate_data_compression_savings 估算对表或分区的行、 页、 列存储或列存储存档压缩启用时可能发生的节省。 例如，如果行的平均大小可以减少 40%，则可能可以将对象大小减少 40%。 您可能无法节省空间，因为这取决于填充因子和行大小。 例如，如果某行长度为 8000 字节并且您将该行的大小减少 40%，则数据页上仍只能容纳一行。 因此不会节省空间。  
   
  如果运行 sp_estimate_data_compression_savings 的结果指示表的大小将增长，则表示表中的许多行使用的几乎是数据类型的完全精度，因而为满足压缩格式的需要而增加的少量开销大于该压缩所带来的节省量。 在这种极个别的情况下，请不要启用压缩。  
   
@@ -112,7 +112,31 @@ sp_estimate_data_compression_savings
  要求对该表具有 SELECT 权限。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 该过程不适用于列存储表，因此不接受数据压缩参数 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  
+ 在 SQL Server 2019 之前此过程不适用于列存储索引，并因此不接受数据压缩参数 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE。  从 SQL Server 2019 开始，列存储索引可以使用作为进行估计时，源对象和作为请求的压缩类型。
+
+## <a name="considerations-for-columnstore-indexes"></a>列存储索引时的注意事项
+ 从 SQL Server 2019 sp_estimate_compression_savings 支持评估列存储和列存储存档压缩。 与不同的是 page 和 row 压缩将列存储压缩应用于对象需要创建新的列存储索引。 因此，使用此过程的 COLUMNSTORE 和 COLUMNSTORE_ARCHIVE 选项时，提供给该过程的源对象的类型确定用于压缩的大小估计值的列存储索引的类型。 下表说明了该引用用于估计压缩的存储为每个源对象的对象类型@data_compression参数设置为 COLUMNSTORE 或 COLUMNSTORE_ARCHIVE。
+
+ |源对象|引用对象|
+ |-----------------|---------------|
+ |堆|聚集列存储索引|
+ |聚集索引|聚集列存储索引|
+ |非聚集索引|非聚集列存储索引 （包括在键列和提供的非聚集索引，任何包含的列和分区列的表中，如果有）|
+ |非聚集列存储索引|非聚集列存储索引 （包括与提供的非聚集列存储索引相同的列）|
+ |聚集列存储索引|聚集列存储索引|
+
+> [!NOTE]  
+> 如果源对象中的任何列具有不支持列存储索引，sp_estimate_compression_ 中的数据类型的估计行存储源对象 （聚集的索引、 非聚集索引或堆） 中的列存储压缩时节省将失败并出现错误。
+
+ 同样，当@data_compression参数设置为 NONE、 ROW 或 PAGE 和源对象是一个列存储索引下, 表概述了使用的引用对象。
+
+ |源对象|引用对象|
+ |-----------------|---------------|
+ |聚集列存储索引|堆|
+ |非聚集列存储索引|非聚集索引 （如果有，作为包含列作为键列数和分区列的表，包含非聚集列存储索引中的列包括）|
+
+> [!NOTE]  
+> 在行存储压缩 （NONE、 ROW 或 PAGE） 估计从列存储的源对象时，请确保源索引不会因为这是在行存储 （非聚集） 索引中支持的限制包含 32 个以上的列。
   
 ## <a name="examples"></a>示例  
  下面的示例估计 `Production.WorkOrderRouting` 表在使用 `ROW` 压缩进行压缩后的大小。  

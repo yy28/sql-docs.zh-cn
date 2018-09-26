@@ -1,7 +1,7 @@
 ---
 title: sys.column_master_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079720"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713539"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079720"
 |**modify_date**|**datetime**|列主密钥的上次修改日期。|  
 |key_store_provider_name|**sysname**|包含 CMK 列主密钥存储提供程序的名称。 允许的值包括：<br /><br /> MSSQL_CERTIFICATE_STORE – 如果列主密钥存储为证书存储区。<br /><br /> 用户定义的值，如果列主密钥存储的自定义类型。|  
 |**在 key_path**|**nvarchar(4000)**|键的列主密钥存储特定于的路径。 路径的格式取决于列主密钥存储类型。 例如：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 对于自定义列主密钥存储，开发人员负责定义哪些项的路径为自定义列主密钥存储。|  
+|**allow_enclave_computations**|**bit**|指示列主密钥是否已启用 enclave 的 （如果使用此主密钥加密的列加密密钥可用于在服务器端安全 enclaves 计算）。 有关详细信息，请参阅[Always Encrypted 与安全 enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。|  
+|signature|**varbinary(max)**|数字签名的**key_path**并**allow_enclave_computations**，生成使用列主密钥，引用**key_path**。|
+
+
   
 ## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN MASTER KEY**权限。  

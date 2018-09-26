@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: fab956d80dcc7694d3823a030c08507283494d8e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e91385974730facf657d28febe94c4320cf3799
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085809"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713259"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>在 Linux 上创建和运行 SQL Server 代理作业
 
@@ -38,7 +38,7 @@ Linux 上的 SQL Server 代理的已知问题，请参阅[发行说明](sql-serv
 完成本教程需要满足以下先决条件：
 
 * Linux 计算机满足以下先决条件：
-  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)，或[Ubuntu](quickstart-install-connect-ubuntu.md)) 使用命令行工具。
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)， [SLES](quickstart-install-connect-suse.md)，或[Ubuntu](quickstart-install-connect-ubuntu.md)) 使用命令行工具。
 
 以下系统必备组件是可选的：
 
@@ -47,7 +47,7 @@ Linux 上的 SQL Server 代理的已知问题，请参阅[发行说明](sql-serv
 
 ## <a name="enable-sql-server-agent"></a>启用 SQL Server 代理
 
-若要在 Linux 上使用 SQL Server 代理，必须首先已安装的 SQL Server 2017 的计算机上启用 SQL Server 代理。
+若要在 Linux 上使用 SQL Server 代理，必须首先已安装 SQL Server 的计算机上启用 SQL Server 代理。
 
 1. 若要启用 SQL Server 代理，请执行以下步骤。
   ```bash

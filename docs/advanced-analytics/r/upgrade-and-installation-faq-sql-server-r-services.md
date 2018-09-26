@@ -1,18 +1,19 @@
 ---
 title: SQL Server 机器学习的升级和安装常见问题解答 |Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 695fd6a801b8b8846d297aa0695aa4ebc04e71e5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396032"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712299"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 机器学习或 R Server 的升级和安装常见问题解答
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.locfileid: "40396032"
 本主题提供有关安装机器学习中 SQL Server 功能的一些常见问题的解答。 它还介绍了有关升级的常见问题。
 
 + 某些问题只是出现升级预发行版中。 因此，我们建议您确定你的版本和版本首次在阅读这些说明之前。 若要获取版本信息，请运行`@@VERSION`在从 SQL Server Management Studio 查询中。
-+ 升级到最新版本或服务版本越早越好，若要解决最新版本中已修复任何问题。
++ 升级到最新版本或 service 版本尽可能快地解决最新版本中已修复任何问题。
 
 **适用于：** SQL Server 2016 R Services、 SQL Server 2017 机器学习服务 （数据库内）
 
@@ -29,6 +30,10 @@ ms.locfileid: "40396032"
 具体取决于要安装的 SQL Server 的版本，以下限制的一些可能适用：
 
 - 在早期版本的 SQL Server 2016 R Services，包含的工作目录的驱动器上需要 8dot3 表示法。 如果安装的预发行版本，则升级到 SQL Server 2016 Service Pack 1 应修复此问题。 此要求不适用于版本后 SP1。
+
+- 目前，无法安装[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]故障转移群集上。 不过，SQL Server 2019 预览确实提供故障转移支持，如果想要评估测试环境中的此 capablity。 有关详细信息，请参阅[What's New](../what-s-new-in-sql-server-machine-learning-services.md)。
+
+- Azure VM 上可能需要一些额外的配置。 例如，您可能需要创建防火墙例外，以支持远程访问。
 
 - 不支持通过并行安装的 R，另一个版本或 Revolution Analytics 中的其他版本。
 

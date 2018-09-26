@@ -12,18 +12,18 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: d537c4ef2bb84833b4676acebdaf0906ee7a85c9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c87533096357117fda518794d961dfacca2ce481
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395849"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712909"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-有几种方法来管理 Linux 上的 SQL Server 2017。 以下部分提供了不同的管理工具和方法，并指向更多资源的快速概述。
+有几种方法来管理 Linux 上的 SQL Server。 以下部分提供了不同的管理工具和方法，并指向更多资源的快速概述。
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
@@ -33,9 +33,9 @@ ms.locfileid: "40395849"
 
 几乎所有在客户端工具中可以完成的工作，都可以使用 Transact - SQL 语句来完成。 SQL Server 提供了[动态管理视图 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的查询的状态和配置 SQL Server。 此外，还有[Transact-SQL 命令](../t-sql/language-reference.md)数据库管理任务。 可以在支持连接到 SQL Server 和运行 TRANSACT-SQL 查询，例如任何客户端工具中运行这些命令[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
-## <a name="sql-server-operations-studio-preview"></a>SQL Server Operations Studio （预览版）
+## <a name="azure-data-studio-preview"></a>Azure Data Studio （预览版）
 
-新的 Microsoft SQL Operations Studio (preview) 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[Microsoft SQL Operations Studio （预览版）](../sql-operations-studio/what-is.md)。
+新的 Azure Data Studio （预览版） 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[Azure Data Studio （预览版）](../azure-data-studio/what-is.md)。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上的 SQL Server Management Studio
 

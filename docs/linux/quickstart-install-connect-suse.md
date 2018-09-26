@@ -1,6 +1,6 @@
 ---
-title: 开始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft Docs
-description: 本快速入门介绍如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 然后创建和查询使用 sqlcmd 数据库。
+title: 开始使用 SUSE Linux Enterprise Server 上的 SQL Server |Microsoft Docs
+description: 本快速入门介绍如何在 SUSE Linux Enterprise Server 上安装 SQL Server 2017 或 SQL Server 2019 然后创建和查询使用 sqlcmd 数据库。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -12,80 +12,97 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 7534ea052c5c277edb195c2a6a2a12ead1661e33
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: dc3fe626b316598c4724874f8991ae305845ada1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102585"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712339"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>快速入门： 安装 SQL Server 和 SUSE Linux Enterprise Server 上创建数据库
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在本快速入门，首先安装 SQL Server 2017 在 SUSE Linux Enterprise Server (SLES) v12 SP2 上。 然后使用 **sqlcmd** 连接，以创建第一个数据库并运行查询。
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+在此快速入门中，您安装 SQL Server 2017 或 SQL Server 2019 CTP 2.0 在 SUSE Linux Enterprise Server (SLES) v12 SP2 上。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+在本快速入门，在 SUSE Linux Enterprise Server (SLES) v12 SP2 上安装 SQL Server 2019 CTP 2.0。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+
+::: moniker-end
 
 > [!TIP]
-> 本教程需要用户输入和 internet 连接。 如果您有兴趣[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装过程，请参阅[Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
+> 本教程需要用户输入和 Internet 连接。 如果您对[无人参与](sql-server-linux-setup.md#unattended)或[脱机](sql-server-linux-setup.md#offline)安装感兴趣，请参阅 [Linux 上的 SQL Server 的安装指南](sql-server-linux-setup.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
 您必须具有的 SLES v12 SP2 计算机**至少 2 GB**的内存。 必须在文件系统**XFS**或**EXT4**。 其他文件系统，如**BTRFS**，均不受支持。
 
-若要在自己的计算机上安装 SUSE Linux Enterprise Server，请转到[ https://www.suse.com/products/server ](https://www.suse.com/products/server)。 此外可以在 Azure 中创建 SLES 虚拟机。 请参阅[创建和使用 Azure CLI 管理 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并使用`--image SLES`对的调用中`az vm create`。
+若要在自己的计算机上安装 SUSE Linux Enterprise Server，请转到[ https://www.suse.com/products/server ](https://www.suse.com/products/server)。 此外可以在 Azure 中创建 SLES 虚拟机。 请参阅[使用 Azure CLI 创建和管理 Linux VM](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)，并在对 `az vm create` 的调用中使用 `--image SLES`。
+
+如果以前已安装的 CTP 或 SQL Server 2017 的 RC 版本，必须执行以下步骤之前先删除旧存储库。 有关详细信息，请参阅[配置 Linux 存储库以用于 SQL Server 2017 和 2019年](sql-server-linux-change-repo.md)。
 
 > [!NOTE]
 > 在此期间，[适用于 Linux 的 Windows 子系统](https://msdn.microsoft.com/commandline/wsl/about)作为安装目标不支持 Windows 10。
 
 其他系统要求，请参阅[Linux 上的 SQL Server 的系统要求](sql-server-linux-setup.md#system)。
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 ## <a id="install"></a>安装 SQL Server
 
 若要在 SLES 上配置 SQL Server，若要安装的终端中运行以下命令**mssql server**包：
 
-> [!IMPORTANT]
-> 如果以前已安装的 CTP 或 SQL Server 2017 的 RC 版本，必须先注册 GA 存储库之一之前删除旧的存储库。 有关详细信息，请参阅[存储库从预览存储库更改为 GA 存储库](sql-server-linux-change-repo.md)。
-
-1. 下载 Microsoft SQL Server SLES 存储库配置文件：
+1. 下载 Microsoft SQL Server 2017 SLES 存储库配置文件：
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo
    ```
 
-   > [!NOTE]
-   > 这是累积更新 (CU) 存储库。 有关存储库的选项和它们之间的差异的详细信息，请参阅[Linux 上的 SQL Server 配置存储库](sql-server-linux-change-repo.md)。
+   > [!TIP]
+   > 如果你想要试用 SQL Server 2019，则必须改为注册**预览版 (2019)** 存储库。 对于 SQL Server 2019 安装中使用以下命令：
+   >
+   > ```bash
+   > sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   > ```
 
-1. 刷新您的存储库。
+2. 刷新您的存储库。
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
    ```
    
-1. 运行以下命令，安装 SQL Server：
+3. 运行以下命令，安装 SQL Server：
 
    ```bash
    sudo zypper install -y mssql-server
    ```
 
-1. 软件包安装完成后，运行**mssql conf 安装**命令并按照操作提示设置 SA 密码，并选择你的版本。
+4. 程序包安装完成后，请运行 **mssql-conf setup** 命令并按提示设置 SA 密码，然后选择版本。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 如果在本教程中尝试 SQL Server 2017，自由地获得许可的以下版本： Evaluation、 Developer 和 Express。
+   > 自由授权以下 SQL Server 2017 版本： Evaluation、 Developer 和 Express。
 
    > [!NOTE]
    > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
 
-1. 配置完成后，请验证服务是否正在运行：
+5. 配置完成后，请验证服务是否正在运行：
 
    ```bash
    systemctl status mssql-server
    ```
 
-1. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。 如果您正在使用 SuSE 防火墙，你需要编辑 **/etc/sysconfig/SuSEfirewall2**配置文件。 修改**FW_SERVICES_EXT_TCP**条目以包括 SQL Server 端口号。
+6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。 如果您正在使用 SuSE 防火墙，你需要编辑 **/etc/sysconfig/SuSEfirewall2**配置文件。 修改**FW_SERVICES_EXT_TCP**条目以包括 SQL Server 端口号。
 
    ```
    FW_SERVICES_EXT_TCP="1433"
@@ -93,9 +110,61 @@ ms.locfileid: "39102585"
 
 在此情况下，SQL Server SLES 计算机上运行并已准备好使用 ！
 
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+## <a id="install"></a>安装 SQL Server
+
+若要在 SLES 上配置 SQL Server，若要安装的终端中运行以下命令**mssql server**包：
+
+1. 下载 Microsoft SQL Server 2019 预览 SLES 存储库配置文件：
+
+   ```bash
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo
+   ```
+
+2. 刷新您的存储库。
+
+   ```bash
+   sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+3. 运行以下命令，安装 SQL Server：
+
+   ```bash
+   sudo zypper install -y mssql-server
+   ```
+
+4. 程序包安装完成后，请运行 **mssql-conf setup** 命令并按提示设置 SA 密码，然后选择版本。
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
+
+   > [!NOTE]
+   > 请确保为 SA 帐户指定强密码（最少 8 个字符，包括大写和小写字母、十进制数字和/或非字母数字符号）。
+
+5. 配置完成后，请验证服务是否正在运行：
+
+   ```bash
+   systemctl status mssql-server
+   ```
+
+6. 如果你打算远程连接，你可能还需要打开防火墙上的 SQL Server TCP 端口 （默认值为 1433）。 如果您正在使用 SuSE 防火墙，你需要编辑 **/etc/sysconfig/SuSEfirewall2**配置文件。 修改**FW_SERVICES_EXT_TCP**条目以包括 SQL Server 端口号。
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
+
+在此情况下，SQL Server 2019 CTP 2.0 SLES 计算机上运行并已准备好使用 ！
+
+::: moniker-end
+
+
 ## <a id="tools"></a>安装 SQL Server 命令行工具
 
-若要创建数据库时，需要使用一种工具，可以在 SQL Server 上运行的 Transact SQL 语句进行连接。 以下是 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
+若要创建数据库，需要使用一个能够在 SQL Server 上运行 Transact-SQL 语句的工具进行连接。 以下步骤安装 SQL Server 命令行工具： [sqlcmd](../tools/sqlcmd-utility.md)和[bcp](../tools/bcp-utility.md)。
 
 1. 将 Microsoft SQL Server 存储库添加到 Zypper。
 
@@ -110,7 +179,7 @@ ms.locfileid: "39102585"
    sudo zypper install -y mssql-tools unixODBC-devel
    ```
 
-1. 为方便起见，添加`/opt/mssql-tools/bin/`到你的**PATH**境变量。 这使您无需指定完整路径运行工具。 在登录会话和交互式/非登录会话中运行以下命令以修改**PATH**：
+1. 为方便起见，请将 `/opt/mssql-tools/bin/` 添加到 **PATH** 环境变量。 这样就可以在运行工具时不指定完整路径。 请运行以下命令，以便修改登录会话和交互/非登录会话的 **PATH**：
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

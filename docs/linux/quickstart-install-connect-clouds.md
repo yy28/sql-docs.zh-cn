@@ -1,6 +1,6 @@
 ---
-title: 开始使用云中的 SQL Server 2017 |Microsoft Docs
-description: 本快速入门介绍如何在 Linux 中所选云上运行 SQL Server 2017。
+title: 在云中的 SQL Server 入门 |Microsoft Docs
+description: 本快速入门介绍如何在 Linux 中所选云上运行 SQL Server。
 author: annashres
 ms.author: annashres
 manager: craigg
@@ -11,18 +11,18 @@ ms.component: ''
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f63fc385171469ad13d21fd844bb130ac0e6e7cd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 638df74c4288f8f1b67232ff99cfd90393a52380
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084189"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713169"
 ---
-# <a name="quickstart-run-the-sql-server-2017-in-the-cloud"></a>快速入门： 在云中运行 SQL Server 2017
+# <a name="quickstart-run-the-sql-server-in-the-cloud"></a>快速入门： 在云中运行 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-在此快速入门中，您将 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或所选的云环境中的 Ubuntu 上安装 SQL Server 2017。 转到[预配 Linux SQL Server 虚拟机在 Azure 门户中](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中的 Linux 上运行 SQL Server。
+在此快速入门中，将 Red Hat Enterprise Linux (RHEL)、 SUSE Linux Enterprise Server (SLES) 或所选的云环境中的 Ubuntu 上安装 SQL Server。 转到[预配 Linux SQL Server 虚拟机在 Azure 门户中](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)在 Azure 中的 Linux 上运行 SQL Server。
 
     > [!NOTE]
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)

@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: b0a16d3818195da0a98557025d0fe96c3d5333ee
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 5016bbd8d461ce4b165b645f79c0b6c6865bcb8b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086769"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713569"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio 来管理 Linux 上的 SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "39086769"
 本文介绍了[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)并指导你完成几个常见任务。 SSMS 是一个 Windows 应用程序，因此请在 Windows 计算机可连接到 Linux 上的远程 SQL Server 实例时使用 SSMS。
 
 > [!TIP]
-> 如果您没有 Windows 计算机上运行 SSMS，请考虑新[SQL Server Operations Studio](../sql-operations-studio/index.md)。 它用于管理 SQL Server 提供一种图形工具，并在 Linux 和 Windows 上运行。
+> 如果您没有 Windows 计算机上运行 SSMS，请考虑新[Azure Data Studio](../azure-data-studio/index.md)。 它用于管理 SQL Server 提供一种图形工具，并在 Linux 和 Windows 上运行。
 
 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)是 Microsoft 免费提供为开发和管理需求的 SQL 工具套件的一部分。 SSMS 是一个集成的环境，若要访问、 配置、 管理、 管理和开发 SQL Server 的所有组件。 它可以连接到任何平台上运行这两个在本地，在 Docker 容器中和云中的 SQL Server。 它还连接到 Azure SQL 数据库和 Azure SQL 数据仓库。 SSMS 将大量图形工具与丰富的脚本编辑器相结合，各种技术水平的开发人员和管理员都能访问 SQL Server。
 
@@ -44,7 +44,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>安装最新版本的 SQL Server Management Studio (SSMS)
 
-使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新和优化，从而目前适用于 SQL Server 2017 on Linux。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。
+使用 SQL Server 时，应始终使用最新版本的 SQL Server Management Studio (SSMS)。 最新版本的 SSMS 不断更新并进行优化，目前适用于 Linux 上的 SQL Server。 若要下载并安装最新版本，请参阅[下载 SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为保持使用最新版本，有可供下载的新版本时，最新版本的 SSMS 会发出提示。
 
 > [!NOTE]
 > 使用 SSMS 管理 Linux 之前, 查看[已知问题](sql-server-linux-release-notes.md)Linux 上的 ssms。
@@ -63,7 +63,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
    |-----|-----|
    | **服务器类型** | 默认为数据库引擎；请勿更改此值。 |
    | **服务器名称** | 输入目标 Linux SQL Server 计算机的名称或它的 IP 地址。 |
-   | **身份验证** | 对于 linux 版 SQL Server 2017，请使用**SQL Server 身份验证**。 |
+   | **身份验证** | 对于 Linux 上的 SQL Server，使用**SQL Server 身份验证**。 |
    | **登录** | 输入数据库服务器上具有访问权限的用户的名称 (例如，默认值**SA**安装过程中创建的帐户)。 |
    | **密码** | 指定的用户输入的密码 (对于**SA**帐户，则此安装过程中创建)。 |
 
@@ -101,11 +101,11 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 ## <a name="create-and-manage-databases"></a>创建和管理数据库
 
-在连接到*主*数据库，您可以在服务器上创建数据库以及修改或删除现有数据库。 以下步骤介绍如何通过 Management Studio 完成几项常见的数据库管理任务。 若要执行这些任务，请确保您连接到*主*时设置 SQL Server 2017 Linux 上创建的服务器级别主体登录名的数据库。
+在连接到*主*数据库，您可以在服务器上创建数据库以及修改或删除现有数据库。 以下步骤介绍如何通过 Management Studio 完成几项常见的数据库管理任务。 若要执行这些任务，请确保您连接到*主*您设置在 Linux 上的 SQL Server 时创建的服务器级别主体登录名的数据库。
 
 ### <a name="create-a-new-database"></a>新建数据库
 
-1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器
+1. 启动 SSMS 并连接到 Linux 上的 SQL Server 中的服务器
 
 2. 在对象资源管理器，右键单击*数据库*文件夹，，然后单击 * 新建数据库..."
 
@@ -115,7 +115,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 ### <a name="drop-a-database"></a>删除数据库
 
-1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器
+1. 启动 SSMS 并连接到 Linux 上的 SQL Server 中的服务器
 
 2. 在对象资源管理器，展开*数据库*文件夹，以查看在服务器上的所有数据库的列表。
 
@@ -129,7 +129,7 @@ SSMS 提供适用于 SQL Server 的大量开发和管理功能，包括执行以
 
 [活动监视器](../relational-databases/performance-monitor/activity-monitor.md)工具内置到 SQL Server Management Studio (SSMS)，并显示有关 SQL Server 进程以及这些进程如何影响 SQL Server 的当前实例的信息。
 
-1. 启动 SSMS 并连接到 Linux 上的 SQL Server 2017 中的服务器
+1. 启动 SSMS 并连接到 Linux 上的 SQL Server 中的服务器
 
 1. 在对象资源管理器中右键单击*服务器*节点，并单击*活动监视器*
 

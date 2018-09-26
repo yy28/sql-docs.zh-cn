@@ -1,5 +1,5 @@
 ---
-title: sys.sysprocesses (Transact SQL) |Microsoft 文档
+title: sys.sysprocesses (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,12 +25,12 @@ caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3a27e699312793e734d9a94680677eb509a2bd5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233750"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712309"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +42,23 @@ ms.locfileid: "33233750"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|spid|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话 ID。|  
-|kpid|**int**|Windows 线程 ID。|  
-|blocked|**int**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
+|spid|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会话 ID。|  
+|kpid|**smallint**|Windows 线程 ID。|  
+|blocked|**smallint**|正在阻塞请求的会话的 ID。 如果此列为 NULL，则表示请求未被阻塞，或锁定会话的会话信息不可用（或无法进行标识）。<br /><br /> -2 = 阻塞资源由孤立的分布式事务拥有。<br /><br /> -3 = 阻塞资源由延迟的恢复事务拥有。<br /><br /> -4 = 由于内部闩锁状态转换而无法确定阻塞闩锁所有者的会话 ID。|  
 |waittype|**binary(2)**|保留。|  
 |waittime|**bigint**|当前等待时间（毫秒）。<br /><br /> 0 = 进程不等待。|  
 |lastwaittype|**nchar(32)**|指示上次或当前等待类型名称的字符串。|  
 |waitresource|**nchar(256)**|锁资源的文本化表示法。|  
-|dbid|**int**|当前正由进程使用的数据库 ID。|  
-|uid|**int**|执行命令的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
+|dbid|**smallint**|当前正由进程使用的数据库 ID。|  
+|uid|**smallint**|执行命令的用户 ID。 如果用户数和角色数超过 32,767，则发生溢出或返回 NULL。|  
 |cpu|**int**|进程的累计 CPU 时间。 无论 SET STATISTICS TIME 选项是 ON 还是 OFF，都为所有进程更新该项。|  
 |physical_io|**bigint**|进程的累计磁盘读取和写入。|  
 |memusage|**int**|当前为此进程分配的过程缓存中的页数。 一个负数，表示进程正在释放由另一个进程分配的内存。|  
 |login_time|**datetime**|客户端进程登录到服务器的时间。|  
 |last_batch|**datetime**|客户端进程上次执行远程存储过程调用或 EXECUTE 语句的时间。|  
-|ecid|**int**|用于唯一标识代表单个进程进行操作的子线程的执行上下文 ID。|  
-|open_tran|**int**|进程的打开事务数。|  
-|status|**nchar(30)**|进程 ID 状态。 可能的值有：<br /><br /> **休眠** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]正在重置会话。<br /><br /> **运行**= 会话运行一个或多个批处理。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动结果集 & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **后台**= 会话在运行后台任务，如死锁检测。<br /><br /> **回滚**= 会话过程中具有事务回滚。<br /><br /> **挂起**= 会话正在等待工作线程变得可用。<br /><br /> **可运行**= 会话中的任务正在等待获取时间量程时是可运行的计划程序队列中。<br /><br /> **spinloop** = 会话中的任务正在等待旋转锁变为可用。<br /><br /> **挂起**= 会话正在等待某个事件，例如 I/O，才能完成。|  
+|ecid|**smallint**|用于唯一标识代表单个进程进行操作的子线程的执行上下文 ID。|  
+|open_tran|**smallint**|进程的打开事务数。|  
+|status|**nchar(30)**|进程 ID 状态。 可能的值有：<br /><br /> **休眠** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重置会话。<br /><br /> **运行**= 会话正在运行一个或多个批。 多个活动的结果集 (MARS) 启用后，会话可以运行多个批。 有关详细信息，请参阅[使用多个活动的结果集 (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。<br /><br /> **背景**= 会话正在运行一个后台任务，例如死锁检测。<br /><br /> **回滚**= 会话具有正在处理的事务回滚。<br /><br /> **挂起**= 会话正在等待工作线程变为可用。<br /><br /> **可运行**= 会话中的任务等待获取时间量程时位于计划程序可运行队列。<br /><br /> **spinloop** = 会话中的任务正在等待调节锁变为可用。<br /><br /> **挂起**= 会话正在等待事件，如 I/O 完成。|  
 |sid|**binary(86)**|用户的全局唯一标识符 (GUID)。|  
 |hostname|**nchar(128)**|工作站的名称。|  
 |program_name|**nchar(128)**|应用程序的名称。|  
@@ -70,17 +70,18 @@ ms.locfileid: "33233750"
 |net_library|**nchar(12)**|用于存储客户端网络库的列。 每个客户端进程都在网络连接上进入。 网络连接有一个与这些进程关联的网络库，该网络库使得这些进程可以建立连接。|  
 |loginame|**nchar(128)**|登录名。|  
 |context_info|**binary(128)**|使用 SET CONTEXT_INFO 语句存储在批中的数据。|  
-|sql_handle|**binary(20)**|表示当前正在执行的批或对象。<br /><br /> **请注意**此值派生自对象的批处理或内存地址。 通过使用基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 哈希的算法无法计算此值。|  
+|sql_handle|**binary(20)**|表示当前正在执行的批或对象。<br /><br /> **请注意**此值派生自的对象的批或内存地址。 通过使用基于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 哈希的算法无法计算此值。|  
 |stmt_start|**int**|为指定 sql_handle 运行当前 SQL 语句的起始偏移量。|  
 |stmt_end|**int**|所指定 sql_handle 的当前 SQL 语句的结束偏移量。<br /><br /> -1 指出当前语句为指定的 sql_handle 运行到 fn_get_sql 函数返回结果的结尾。|  
-|request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|  
+|request_id|**int**|请求 ID。 用于标识在特定会话中运行的请求。|
+|page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8 字节十六进制表示形式的页面资源如果`waitresource`列包含一个页面。 |  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  如果用户对服务器具有 VIEW SERVER STATE 权限，则该用户可查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中所有正在执行的会话；否则，该用户只能查看当前会话。  
   
-## <a name="see-also"></a>另请参阅  
- [执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [与执行相关的动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图 (Transact SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

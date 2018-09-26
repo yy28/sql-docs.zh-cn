@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edb89a58c6ca1b845d1705bd3a7d92138fe2bfd6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 47c8bac2f70ccae8a265590577cfed4fdd9242d6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098001"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712649"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,8 @@ ms.locfileid: "43098001"
 |parallel_worker_count |**int** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 如果这是并行查询的保留并行工作线程数。  |  
 |external_script_request_id |**uniqueidentifier** |**适用范围**： [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与当前请求关联的外部脚本请求 ID。 |  
 |is_resumable |**bit** |**适用范围**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示请求是否可恢复索引操作。 |  
-  
+|page_resource |**binary(8)** |适用于：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 字节十六进制表示形式的页面资源如果`wait_resource`列包含一个页面。 |
+
 ## <a name="permissions"></a>Permissions  
  如果用户具有`VIEW SERVER STATE`服务器上的权限，用户会执行的所有会话的实例上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 否则为用户会看到仅为当前会话。 `VIEW SERVER STATE` 不能在授予[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]因此`sys.dm_exec_requests`始终被限制为当前连接。 
   
