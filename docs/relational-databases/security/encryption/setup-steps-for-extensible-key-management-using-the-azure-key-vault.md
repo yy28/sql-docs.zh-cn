@@ -316,7 +316,7 @@ SQL Server 版本  |可再发行组件安装链接
   
     -   编辑 `IDENTITY` 参数 (`ContosoDevKeyVault`) 以指向 Azure 密钥保管库。
         - 如果使用“全局 Azure”，请将 `IDENTITY` 参数替换为第 II 部分中的 Azure Key Vault 的名称。
-        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://”。   
+        - 如果使用 **Azure 私有云** （例如， Azure 政府、Azure 中国或 Azure 德国），请将 `IDENTITY` 参数替换为第 II 部分的步骤 3 中返回的保管库 URI。 保管库 URI 中不能包含 “https://” 。   
     -   将 `SECRET` 参数的第一部分替换为第 I 部分中的 Azure Active Directory **客户端 ID** 。在此示例中， **客户端 ID** 为 `EF5C8E094D2A4A769998D93440D8115D`。  
   
         > [!IMPORTANT]  
