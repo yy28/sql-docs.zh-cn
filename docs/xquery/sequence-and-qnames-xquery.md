@@ -154,7 +154,7 @@ WHERE ProductModelID=7;
  创建每个数据库有**sys** XML 架构集合。 它包含着这些架构，以便可以从任何用户创建的 XML 架构集合中访问这些架构。  
   
 > [!NOTE]  
->  此实现不支持`local`前缀中的 XQuery 规范中所述http://www.w3.org/2004/07/xquery-local-functions。  
+>  此实现不支持`local`前缀中的 XQuery 规范中所述 http://www.w3.org/2004/07/xquery-local-functions 。  
   
 ## <a name="see-also"></a>请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)  
