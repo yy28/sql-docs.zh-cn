@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4aa10fd70f4202f659eaa41f58b40612b70d6987
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 829d8af7da228ab9fbd778fb59c68074cfaa502d
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999409"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47442751"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>保存数据库关系图 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37999409"
   
 ### <a name="to-save-the-database-diagram"></a>保存数据库关系图  
   
-1.  从“文件”菜单中，选择“保存 \<tablename>”****。  
+1.  从“文件”菜单中，选择“保存 \<tablename>”。  
   
 2.  如果这是一个以前从未保存过的新关系图，则将显示“另存为”对话框。 键入关系图的名称。  
   

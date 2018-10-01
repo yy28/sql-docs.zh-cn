@@ -56,7 +56,7 @@ FILE_IDEX ( file_name )
 出现错误时，返回 NULL  
   
 ## <a name="remarks"></a>Remarks  
-file_name 对应于 sys.master_files[](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 sys.database_files[](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name 列中所显示的逻辑文件名。  
+file_name 对应于 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 或 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 目录视图中的 name 列中所显示的逻辑文件名。  
   
 在 SELECT 列表、WHERE 子句或支持使用表达式的任何位置使用 `FILE_IDEX`。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
   

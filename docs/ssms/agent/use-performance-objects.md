@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 01be4cebd589f5d30c4036a0a66f9fa29a4b48c7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0838b0d6620e5cfeaf528755ca5abe7d21f694df
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776579"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47440241"
 ---
 # <a name="use-performance-objects"></a>使用性能对象
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "42776579"
   
 |实例类型|对象名称|  
 |-----------------|---------------|  
-|，则“默认”|SQLAgent:object:counter*|  
-|已命名|**SQLAgent$**<br /> *instance_name* :object:counter*|  
+|，则“默认”|**SQLAgent：** 对象：计数器|  
+|已命名|**SQLAgent$**<br /> **&#42;instance_name&#42; ：** 对象：计数器|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的下列性能对象。  
   
