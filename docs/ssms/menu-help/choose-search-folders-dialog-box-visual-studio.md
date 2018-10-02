@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-menu
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20843ef85241c596c756d7bc0ad45776168d7105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e8d7fac329ef0c12566c2479459749dd74a5934
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835655"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "33045464"
   
 向“选择的文件夹”列表中添加文件夹，在“文件夹集”字段中为此文件夹集键入名称，再单击“应用”保存此文件夹集。 然后，在“在文件中查找”和“在文件中替换”的“查找范围”下拉列表中，可以通过名称来选择此自定义搜索范围。 若要从“查找范围”列表中删除自定义文件夹集，请在“文件夹集”字段中选择其名称，再单击“删除”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 以下控件可用于帮助您组合、保存和修改自己命名的搜索文件夹集。  
   
 **文件夹集**  

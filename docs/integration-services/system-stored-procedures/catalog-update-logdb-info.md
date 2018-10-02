@@ -5,21 +5,18 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: be9feb6fc6e1b027b739fdb3afc4cbf3c37ff2d9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2df4819b14c1dec7aa1203d0a4c3416b59f292e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830755"
 ---
 # <a name="catalogupdatelogdbinfo-ssisdb-database"></a>catalog.update_logdb_info（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ catalog.update_logdb_info [@server_name = ] server_name, [@connection_string = ]
 ## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
    
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
  

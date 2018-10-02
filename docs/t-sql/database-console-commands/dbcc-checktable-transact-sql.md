@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831935"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -184,10 +181,10 @@ DBCC CHECKTABLE 使用内部数据库快照提供其执行这些检查必需的�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 错误消息    
 DBCC CHECKTABLE 命令完成后，将向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志中写入一条消息。 如果 DBCC 命令成功执行，则消息指示成功完成以及命令运行的时间。 如果 DBCC 命令在完成检查之前由于错误而停止，则消息将指示命令已终止，并指示状态值和命令运行的时间。 下表列出并说明了此消息中可包含的状态值。
     
-|State|Description|    
+|State|描述|    
 |-----------|-----------------|    
 |0|出现错误号 8930。 这指示导致 DBCC 命令终止的元数据损坏。|    
-|@shouldalert|出现错误号 8967。 存在一个内部 DBCC 错误。|    
+|1|出现错误号 8967。 存在一个内部 DBCC 错误。|    
 |2|在紧急模式数据库修复过程中出错。|    
 |3|这指示导致 DBCC 命令终止的元数据损坏。|    
 |4|检测到断定或访问违规。|    
@@ -220,7 +217,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
 用户必须是表所有者，或者是 sysadmin 固定服务器角色、db_owner 固定数据库角色或 db_ddladmin 固定数据库角色的成员。    
     
 ## <a name="examples"></a>示例    

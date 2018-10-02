@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841001"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性组故障排除和监视指南
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 
@@ -30,7 +27,7 @@ ms.locfileid: "32861692"
 ##  <a name="BKMK_SCENARIOS"></a>故障排除方案  
  下表包含指向可用性组常见故障排除方案的链接。 它们按方案类型（如配置、客户端连接、故障转移和性能）分类。  
   
-|应用场景|方案类型|Description|  
+|应用场景|方案类型|描述|  
 |--------------|-------------------|-----------------|  
 |[Always On 可用性组配置故障排除 (SQL Server)](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|配置|提供相关信息，帮助解决在为可用性组配置服务器实例时遇到的典型问题。 典型配置问题包括可用性组被禁用、帐户配置不当、数据库镜像终结点不存在、终结点无法访问（SQL Server 错误 1418）、网络访问不存在，以及联接数据库命令失败（SQL Server 错误 35250）。|  
 |[添加文件操作失败的故障排除（Always On 可用性组）](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|配置|添加文件操作导致辅助数据库挂起并处于“未同步”状态。|  
@@ -44,7 +41,7 @@ ms.locfileid: "32861692"
 ##  <a name="BKMK_TOOLS"></a>有用的故障排除工具  
  当配置或运行可用性组时，不同的工具可帮助诊断不同类型的问题。 下表提供的链接指向有关工具的有用信息。  
   
-|工具|Description|  
+|工具|描述|  
 |----------|-----------------|  
 |[使用 AlwaysOn 面板 (SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)|在用户友好界面中针对可用性组运行状况报告一目了然的视图。|  
 |[Always On 策略](always-on-policies.md)|由 Always On 仪表板使用。|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861692"
   
  下表指出了可帮助监视可用性组解决方案运行状况的主题。  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)|介绍可用性组的数据同步流程，流控制门以及监视可用性组时的有用指标，并演示如何收集 RTO 和 RPO 指标。|  
 |[监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)|提供用于监视可用性组的工具的相关信息。|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d00ed434b9a89151cf1bc26df12bb51eda15d79
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b6d6a152ad6251b35fa5b6dac9b2654e08f1ed30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802325"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "43082269"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**varbinary**|基于即席查询文本或 SQL 对象的数据库和对象 ID 的 64 位哈希运算。 可以将该值传递到 sys.dm_exec_sql_text 以检索关联的 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|导致语句级重新编译的 Transact-SQL 语句文本。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|导致语句级重新编译的 Transact-SQL 语句文本。|1|用户帐户控制|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

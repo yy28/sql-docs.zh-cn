@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40405378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840985"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>使数据库在其他服务器上可用时管理元数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.locfileid: "40405378"
   
  若要对服务器实例上的数据库主密钥启用自动解密，请使用服务主密钥对此密钥的副本进行加密。 此加密副本存储在此数据库以及 **master**中。 通常，每当主密钥更改时，便会在不进行提示的情况下更新存储在 **master** 中的副本。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最初尝试使用实例的服务主密钥解密数据库主密钥。 如果解密失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在凭据存储区中搜索与需要其主密钥的数据库具有相同系列 GUID 的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。 必须使用 OPEN MASTER KEY 语句和密码打开未使用服务主密钥进行加密的主密钥。  
   
- 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD ='password'****。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
+ 对加密数据库执行复制、还原或附加到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例等操作时，由服务主密钥加密的数据库主密钥的副本不存储在目标服务器实例上的 **master** 中。 在目标服务器实例上，必须打开数据库的主密钥。 若要打开主密钥，请执行以下语句：OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**。 建议您通过执行下面的语句对数据库主密钥启用自动解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 此 ALTER MASTER KEY 语句使用数据库主密钥（使用服务主密钥加密）的副本来设置服务器实例。 有关详细信息，请参阅 [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) 和 [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md)。  
   
  有关如何启用镜像数据库主秘钥自动加密的详细信息，请参阅[设置加密的镜像数据库](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)。  
   

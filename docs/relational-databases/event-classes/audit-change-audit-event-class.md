@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Change Audit event class
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b14e5e1657499129a9974358d5b157c041be6a7a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ef6bc831c5b132c3001e17651442a9f9b23e89fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750965"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43097314"
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**成功**|**int**|1 = 成功。 0 = 失败。 例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|用户帐户控制|  
-|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  

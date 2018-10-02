@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.connectionmanager.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 695e91fbc8ee3a99b4c203e208400069fb07dead
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820335"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 连接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包使用连接来执行不同的任务以及实现 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  
@@ -168,7 +165,7 @@ ms.locfileid: "35333541"
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 源编辑器”|“常规”|  
+    |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -181,7 +178,7 @@ ms.locfileid: "35333541"
     |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器用户界面参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
@@ -204,7 +201,7 @@ ms.locfileid: "35333541"
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 源编辑器”|“常规”|  
+    |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -217,7 +214,7 @@ ms.locfileid: "35333541"
     |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器用户界面参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
@@ -236,7 +233,7 @@ ms.locfileid: "35333541"
   
  若要了解有关连接管理器的详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **连接管理器类型**  
  选择一个连接类型，再单击“添加”，或双击一个连接类型，使用与各连接类型相应的编辑器来指定连接属性。  
   
@@ -313,7 +310,7 @@ ms.locfileid: "35333541"
   
 4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
-    |“连接管理器”|“常规”|  
+    |“连接管理器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](../../integration-services/connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](../../integration-services/connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -326,7 +323,7 @@ ms.locfileid: "35333541"
     |[FTP 连接管理器](../../integration-services/connection-manager/ftp-connection-manager.md)|[FTP 连接管理器编辑器](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[HTTP 连接管理器](../../integration-services/connection-manager/http-connection-manager.md)|[HTTP 连接管理器编辑器（“服务器”页）](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [HTTP 连接管理器编辑器（“代理”页）](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
     |[MSMQ 连接管理器](../../integration-services/connection-manager/msmq-connection-manager.md)|[MSMQ 连接管理器编辑器](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
-    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器用户界面参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
+    |[ODBC 连接管理器](../../integration-services/connection-manager/odbc-connection-manager.md)|[ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[OLE DB 连接管理器](../../integration-services/connection-manager/ole-db-connection-manager.md)|[配置 OLE DB 连接管理器](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[SMO 连接管理器](../../integration-services/connection-manager/smo-connection-manager.md)|[SMO 连接管理器编辑器](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
     |[SMTP 连接管理器](../../integration-services/connection-manager/smtp-connection-manager.md)|[SMTP 连接管理器编辑器](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  

@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,12 +22,12 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7799560165c6619403d5507b5003002ebf2d47f9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: f277acbaa9713e5fcb0906551ba902fba05a390b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788605"
 ---
 # <a name="selecting-input-columns-programmatically"></a>以编程方式选择输入列
   以编程方式连接组件后，可从上游组件选择将要转换或传递到下游组件的列。 如果不为组件选择输入列，则组件将不会接收任何来自数据流任务的行。  

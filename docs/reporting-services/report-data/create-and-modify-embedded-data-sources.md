@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 945905455ef78ea9163b01a3263c9da9cd8d7db2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 668818a529a721a500f03b5d388f6e56648f4d38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742861"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>创建和修改嵌入的数据源
   嵌入数据源在报表定义中定义并只由该报表使用。  

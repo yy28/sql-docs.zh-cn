@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a90789da720dc0f8a660076e775aad8d97c03de
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 337f2d0c9dc4a063b6219125e8f6e0ffa188eb61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33047434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845806"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>“列选择”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +27,7 @@ ms.locfileid: "33047434"
   
 右键单击一个表并从快捷菜单中选择“修改自定义视图”后，将显示此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **可用列**  
 列出所选数据库表中的全部现有列。 在此列出的列取决于数据库表的属性和数据库的类型。 突出显示所需的列，再使用箭头按钮，可以将这些列移入“选定的列”框。  
   

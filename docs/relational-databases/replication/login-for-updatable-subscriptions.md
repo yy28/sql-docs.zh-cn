@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11456589f86b8a5c249599e07c99b08f8f5bc90e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: f186e6236930b6bfdc4d5a9a461695e328212879
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761947"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ ms.locfileid: "37358789"
   
  可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) 指定；将参数 **@security_mode** 的值指定为 **1**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  
  复制使用在 **“登录名”** 和 **“密码”** 字段中指定的凭据创建链接服务器。  
   

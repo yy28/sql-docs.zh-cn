@@ -5,21 +5,18 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43268b60d23a32c688363790a732a3ebff66cf8a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7d44c57600719b35340295723f0ab25b4e1ae56f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808665"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,8 +76,8 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |ReplTest1|描述|  
 |-----------|-----------------|  
-|0|InclusionThresholdSetting<br /><br /> 关闭日志记录。 仅记录包执行状态。|  
-|@shouldalert|“基本”<br /><br /> 除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
+|0|None<br /><br /> 关闭日志记录。 仅记录包执行状态。|  
+|1|“基本”<br /><br /> 除了自定义事件和诊断事件之外，记录其余所有事件。 这是默认值。|  
 |2|“性能”<br /><br /> 仅记录性能统计信息、OnError 和 OnWarning 事件。|  
 |3|“详细”<br /><br /> 记录所有事件，包括自定义事件和诊断事件。 <br />自定义事件包括 Integration Services 任务记录的那些事件。 有关详细信息，请参阅[日志记录的自定义消息](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages)|  
 |4|运行时沿袭<br /><br /> 收集跟踪数据流中的沿袭所需的数据。|  
@@ -93,7 +90,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_ERROR|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  若要指定 Integration Services 服务器在包执行期间出现事件时生成转储文件，请为未运行的执行实例设置以下参数值：  
   
@@ -102,7 +99,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*execution_id*|执行实例的唯一标识符|  
 |*object_type*|50|  
 |*parameter_name*|‘DUMP_ON_EVENT|  
-|*parameter_value*|@shouldalert|  
+|*parameter_value*|1|  
   
  若要指定在包执行期间导致 Integration Services 服务器生成转储文件的事件，请为未运行的执行实例设置以下参数值： 使用分号分隔多个事件代码。  
   
@@ -137,16 +134,16 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

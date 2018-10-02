@@ -5,21 +5,18 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68cb3af1c84db478c066593b59195b4020ea566b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819785"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +37,10 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @project_name = ] project_name  
- 项目的名称。 project_name 为 nvarchar(128)。  
+ 项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ @validate_type = ] validate_type  
  指示要执行的验证类型。 使用字符 `F` 执行完全验证。 validate_type 为 char(1)。  
@@ -66,14 +63,14 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>结果集  
  验证步骤的输出结果作为结果集的不同部分返回。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表提供了一些可能引发错误或警告的情况：  

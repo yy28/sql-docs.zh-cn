@@ -6,9 +6,7 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - clr strict security
@@ -19,26 +17,25 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-caps.latest.revision: 0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3889d749e7b50300a42a165c46a029daee5feb56
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4816aade2a0b1ce76b56fcda6be9e7afff05114
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32871062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787408"
 ---
 # <a name="clr-strict-security"></a>CLR 严格安全性   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中 `SAFE`、`EXTERNAL ACCESS`、`UNSAFE` 权限的解释。   
 
-|ReplTest1 |Description | 
+|ReplTest1 |描述 | 
 |----- |----- | 
 |0 |已禁用 - 为后向兼容而提供。 不建议使用 `Disabled` 值。 | 
-|@shouldalert |已启用 - 导致 [!INCLUDE[ssde-md](../../includes/ssde-md.md)] 忽略程序集上的 `PERMISSION_SET` 信息，并始终将其解释为 `UNSAFE`。  `Enabled` 是 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 的默认值。 | 
+|1 |已启用 - 导致 [!INCLUDE[ssde-md](../../includes/ssde-md.md)] 忽略程序集上的 `PERMISSION_SET` 信息，并始终将其解释为 `UNSAFE`。  `Enabled` 是 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 的默认值。 | 
 
 >  [!WARNING]
 >  CLR 在 .NET Framework 中使用代码访问安全性 (CAS)（不可再作为安全边界）。 使用 `PERMISSION_SET = SAFE` 创建的 CLR 程序集可以访问外部系统资源、调用非托管代码以及获取 sysadmin 特权。 从 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 开始，引入了名为 `clr strict security` 的 `sp_configure` 选项，以增强 CLR 程序集的安全性。 默认启用 `clr strict security`，并将 `SAFE` 和 `EXTERNAL_ACCESS` 程序集与标记为 `UNSAFE` 的程序集同等对待。 可禁用 `clr strict security` 选项以实现后向兼容性，但不建议这样做。 Microsoft 建议所有程序集都通过证书或非对称密钥进行签名，且该证书或非对称密钥具有已在主数据库中获得 `UNSAFE ASSEMBLY` 权限的相应登录名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员还可以将程序集添加到数据库引擎应信任的程序集列表。 有关详细信息，请参阅 [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)。
@@ -52,7 +49,7 @@ ms.locfileid: "32871062"
 >  [!IMPORTANT]  
 >  启用严格安全性后，未签名的任何程序集都将加载失败。 必须更改或删除并重新创建每个程序集，以便使用具有相应登录名（该登录名对应于服务器上的 `UNSAFE ASSEMBLY` 权限）的证书或非对称密钥对程序集进行签名。
 
-## <a name="permissions"></a>权限 
+## <a name="permissions"></a>Permissions 
 
 ### <a name="to-change-this-option"></a>更改此选项  
 要求具有 `CONTROL SERVER` 权限，或者具有 `sysadmin` 固定服务器角色的成员身份。

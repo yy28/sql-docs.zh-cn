@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be935bee839dc7213f66c118f139813dd82d3739
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0ef3eaafc0d9eb5953db7d26c594020466c1e488
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745985"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43083400"
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|用户帐户控制|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|**TextData**|**ntext**|检测到的损坏说明。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|检测到的损坏说明。|1|用户帐户控制|  
 |**Transaction ID**|**bigint**|系统为事务分配的 ID。|4|否|  
   
  此事件的 **TextData** 列包含一条描述消息问题的消息。  

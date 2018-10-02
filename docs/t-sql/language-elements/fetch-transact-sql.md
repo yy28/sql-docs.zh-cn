@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7401d566d5580895452dd4771782217ca9406dfa
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: f284273004cd01c927473b9114ed06742f3fe794
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240729"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804615"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +97,7 @@ FETCH
   
  @@FETCH_STATUS 函数报告上一个 FETCH 语句的状态。 相同的信息记录在由 sp_describe_cursor 返回的游标中的 fetch_status 列中。 这些状态信息应该用于在对由 FETCH 语句返回的数据进行任何操作之前，以确定这些数据的有效性。 有关详细信息，请参阅 [@@FETCH_STATUS (Transact-SQL)](../../t-sql/functions/fetch-status-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  FETCH 权限默认授予任何有效的用户。  
   
 ## <a name="examples"></a>示例  

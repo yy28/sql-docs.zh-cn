@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 061967b6c95d73f926be510fc1747c678b0abf66
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780345"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>如何使用查询创建新的数据库对象
 如果更喜欢使用脚本来创建或编辑视图、存储过程、函数、触发器或用户定义的类型，则可以使用 Transact\-SQL 编辑器。 Transact\-SQL 编辑器提供 IntelliSense 和其他语言支持。 有关详细信息，请参阅[使用 Transact-SQL 编辑器编辑和执行脚本](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)。  

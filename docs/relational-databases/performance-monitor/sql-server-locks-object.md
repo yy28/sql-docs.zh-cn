@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Locks object
 - SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d1a54777ee9330873dedf7073803b4a3a3c3db0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86d72f79d19dfb45f4ee005762d3d8de520aa981
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951292"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747005"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server Locks 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951292"
   
  下表介绍了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 计数器。  
   
-|SQL Server Locks 计数器|Description|  
+|SQL Server Locks 计数器|描述|  
 |-------------------------------|-----------------|  
 |**Average Wait Time (ms)**|每个导致等待的锁请求的平均等待时间（毫秒）。|  
 |**Average Wait Time Base**|仅限内部使用。|
@@ -45,7 +41,7 @@ ms.locfileid: "32951292"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以锁定下列这些资源。  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |**_Total**|所有锁的信息。|  
 |**分配单元**|分配单元的锁。|  

@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 528569dce74c3439d60404e87580e657ef3fdb81
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d87d7a3975cff4f2ac7b9afd65cc4250325feef2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850525"
 ---
 # <a name="user-role-properties-management-studio"></a>用户角色属性 (Management Studio)
   使用此页，可以查看项级角色定义中所包含的任务， 还可以更改任务列表或修改角色说明。  

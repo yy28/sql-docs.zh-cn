@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7924a1e375c1ec5f2f3bf0262e284ca782b8e891
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: dec67a77c86dd44e82ef48b60be89adecdba7a51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069847"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857365"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,13 +48,13 @@ ms.locfileid: "43069847"
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|事件（如果有）的开始时间。|14|用户帐户控制|  
 |**State**|**int**|指示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 源代码中生成该事件的位置。 可能生成此事件的每个位置都有不同的状态代码。 Microsoft 支持工程师可使用此状态代码查找生成该事件的位置。|30|否|  
-|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|如果发生错误，将显示一条用来说明失败原因的消息。 可以是以下值之一：<br /><br /> <br /><br /> **Cert not found**。 针对对话协议安全指定的用户没有证书。<br /><br /> **Not in valid time period**。 针对对话协议安全指定的用户有一份证书，但该证书已过期。<br /><br /> **Cert too large for memory allocation**。 针对对话协议安全指定的用户有一份证书，但该证书过大。 Service Broker 支持的最大证书大小为 32,768 字节。<br /><br /> **Private key not found**。 针对对话协议安全指定的用户有一份证书，但没有与该证书相关联的私钥。<br /><br /> **The cert's private key size is incompatible with the crypto provider**。 无法成功处理证书的私钥大小。 私钥大小必须是 64 字节的倍数。<br /><br /> **The cert's public key size is incompatible with the crypto provider**。 无法成功处理证书的公钥大小。 公钥大小必须是 64 字节的倍数。<br /><br /> **The cert's private key size is incompatible with the encrypted key exchange key**。 密钥交换密钥中指定的密钥大小与证书的私钥大小不匹配。 这通常表示远程计算机上的证书与数据库中的证书不匹配。<br /><br /> **The cert's public key size is incompatible with the security header's signature**。 无法通过证书的公钥来验证安全标头的签名。 这通常表示远程计算机上的证书与数据库中的证书不匹配。|1|用户帐户控制|  
   
  下表列出了此事件类的子类值。  
   
 |ID|子类|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|No Security Header|安全会话期间，Service Broker 接收到不包含会话密钥的消息。 建立了安全会话后，对话协议要求会话中的所有消息都包含会话密钥。|  
+|1|No Security Header|安全会话期间，Service Broker 接收到不包含会话密钥的消息。 建立了安全会话后，对话协议要求会话中的所有消息都包含会话密钥。|  
 |2|No Certificate|Service Broker 无法为会话中的某一名参与者找到可用的证书。 为了保证会话安全，数据库必须同时包含会话发送方和接收方的证书。|  
 |3|Invalid Signature|Broker 无法使用发送方证书中的公钥来验证发送方所提供的消息签名。 这可能表示消息已损坏、消息被篡改、远程服务和本地服务没有配置相同的用户证书的或者证书已过期。|  
 |4|Run As Target Failure|目标用户不具有对目标队列的接收权限。 为了防止未经授权的用户接收消息，如果目标用户无法接收消息队列，则无论初始用户是否有权将消息排队，Service Broker 都不会将消息排队。|  
