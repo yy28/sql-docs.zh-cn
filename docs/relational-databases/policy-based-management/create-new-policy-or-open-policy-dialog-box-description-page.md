@@ -4,30 +4,26 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b49ddb5ee929e96aff6a457a05a421c88d1e0f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f242aa19d2c5b41aae7353a35a7c67ae6785e30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804715"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>“创建新策略”或“打开策略”对话框，“说明”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此对话框用于为基于策略的管理策略添加说明和补充信息。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **类别**  
  用于在创建新策略时选择策略类别。  
   

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Wait Statistics object
 - SQLServer:Wait Statistics
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6366376f25df6f8407f3ff5a81f585b785fbe759
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c394d7eb40f3b5d9904941b6938b84821dcea7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761915"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server Wait Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951072"
   
  下表列出了 Wait Statistics 对象包含的计数器。  
   
-|SQL Server Wait Statistics 计数器|Description|  
+|SQL Server Wait Statistics 计数器|描述|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|等待锁的进程的统计信息。|  
 |**Log buffer waits**|等待日志缓冲区可用的进程的统计信息。|  
@@ -49,7 +45,7 @@ ms.locfileid: "32951072"
   
  对象中的每个计数器均包含以下实例：  
   
-|项|Description|  
+|项|描述|  
 |----------|-----------------|  
 |**平均等待时间(ms)**|所选类型等待的平均等待时间。|  
 |**每秒的累积等待时间(ms)**|所选类型等待的每秒累积等待时间。|  

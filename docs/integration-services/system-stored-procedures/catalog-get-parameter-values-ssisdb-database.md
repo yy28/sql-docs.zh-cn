@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ea0a911e5c583580cbc41fc2cc1f51071f6d57b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f0307086f5dc8faa33801843cc20c2c375dc75c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765965"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +35,10 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @project_name = ] project_name  
- 参数所在的项目的名称。 project_name 为 nvarchar(128)。  
+ 参数所在的项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ @package_name = ] package_name  
  包的名称。 指定包名称，以便从特定包中检索所有项目参数和参数。 使用 NULL 可以从所有包中检索所有项目参数和参数。 package_name 为 nvarchar(260)。  
@@ -57,7 +54,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
-|object_type|**int**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
+|object_type|**smallint**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
 |parameter_data_type|**nvarchar(128)**|参数的数据类型。|  
 |parameter_name|**sysname**|参数名。|  
 |parameter_value|**sql_variant**|参数的值。|  
@@ -68,14 +65,14 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 > [!NOTE]  
 >  以纯文本形式显示文本值。 将显示 NULL 来替代敏感值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

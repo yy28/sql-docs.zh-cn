@@ -3,16 +3,15 @@ title: 创建报表服务器数据库（SSRS 配置管理器）| Microsoft Docs
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56e28b53911bb2364f3bceb5c09f5bb8009efd3e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4c2a0a6391e1eeecf6f5831072528840c3257d1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269549"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768235"
 ---
 # <a name="create-a-report-server-database"></a>创建报表服务器数据库
 

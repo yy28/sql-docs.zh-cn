@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10c4c8373dd34e07651f83bd13434a1043ab31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d16a701ee01d754c07577d44c4471477c297ba3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043194"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729085"
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +29,9 @@ ms.locfileid: "33043194"
   
 根据属性需求的不同，“属性”窗口将显示不同类型的编辑字段。 显示为灰色的属性为只读属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
-|元素|Description|  
+|元素|描述|  
 |-----------|---------------|  
 |**对象名称**|列出当前选择的对象。 只有处于活动状态的编辑器或设计器中的对象是可见的。|  
 |**按分类顺序**|按类别列出所选对象的所有属性和属性值。 可以将类别折叠起来以减少可见属性的数量。 折叠或展开类别时，在类别名称的左侧将显示一个加号 (+) 或减号 (-)。 类别按字母顺序列出。|  

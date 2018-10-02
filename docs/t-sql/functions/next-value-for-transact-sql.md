@@ -5,9 +5,7 @@ ms.date: 07/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - NEXT_VALUE_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3def41b90c074f8af6b8efd057c89ba41c20c5f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c2ad33a42cc05644fa2ce56836361fe8fee56324
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789088"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800319"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -155,7 +152,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求对序列对象或序列的架构具有 **UPDATE** 权限。 有关授予权限的示例，请参阅本主题后面的示例 F。  
   
 ### <a name="ownership-chaining"></a>所有权链接  

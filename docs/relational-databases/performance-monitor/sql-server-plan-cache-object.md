@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e46cebc6bfb2443f78d15a54b3ec59da5169d59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bddbfdd03a8209a80b78ad8a1faac9dcda983592
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773235"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32951062"
   
  下表介绍了 **SQLServer:Plan Cache**计数器。  
   
-|SQL Server Plan Cache 计数器|Description|  
+|SQL Server Plan Cache 计数器|描述|  
 |------------------------------------|-----------------|  
 |**Cache Hit Ratio**|高速缓存命中次数和查找次数的比率。|  
 |**Cache Hit Ratio Base**|仅限内部使用。| 
@@ -42,7 +38,7 @@ ms.locfileid: "32951062"
   
  对象中的每个计数器均包含以下实例：  
   
-|Plan Cache 实例|Description|  
+|Plan Cache 实例|描述|  
 |-------------------------|-----------------|  
 |**_Total**|所有类型的缓存实例的信息。|  
 |**Sql 计划**|由一个临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询（包括自动参数化查询）生成的查询计划，或使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_prepare **或** sp_cursorprepare **预备的**语句生成的查询计划。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将临时的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的计划存入缓存，以便将来需要执行相同的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时再次使用。 用户参数化的查询（即使未显式准备）也作为准备好的 SQL 计划监视。|  

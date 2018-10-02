@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31326b03aa3f1321dcfc890020053b83e09e28a4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 06fa7266cf88cacae049df1c9bf98a2979e3fa0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766485"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +40,10 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 包含包的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含包的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @project_name = ] project_name  
- 包含此包的项目的名称。 project_name 为 nvarchar(128)。  
+ 包含此包的项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ @package_name = ] package_name  
  包的名称。 package_name 为 nvarchar(260)。  
@@ -74,9 +71,9 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   针对项目的 READ 权限，如果适用，则包含针对引用环境的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

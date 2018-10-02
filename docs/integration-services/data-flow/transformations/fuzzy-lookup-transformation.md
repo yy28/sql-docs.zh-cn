@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7408e6160a6d82779ceb7c470e773db4a128ffa8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782225"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查找转换
   模糊查找转换执行数据清理任务，例如标准化数据、更正数据以及提供丢失的值。  
@@ -149,7 +146,7 @@ ms.locfileid: "35406059"
 > [!NOTE]  
 >  模糊查找转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊查找转换编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 此外，大于 100 的 **MaxOutputMatchesPerInput** 值只能在 **“高级编辑器”** 中指定。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊查找转换”部分。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“无缓存”**  
  从列表中选择现有的 OLE DB 连接管理器，或通过单击“新建”创建一个新连接。  
   
@@ -185,7 +182,7 @@ ms.locfileid: "35406059"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>模糊查找转换编辑器（“列”选项卡）
   可以使用 **“模糊查找转换编辑器”** 对话框的 **“列”** 选项卡，为输入和输出列设置属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  拖动输入列以将其连接到可用查找列。 这些列必须具有所支持的相互匹配的数据类型。 选择一个映射行，再右键单击可在 [创建关系](../../../integration-services/data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
   
@@ -207,7 +204,7 @@ ms.locfileid: "35406059"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>模糊查找转换编辑器（“高级”选项卡）
   可以使用 **“模糊查找转换编辑器”** 对话框的 **“高级”** 选项卡设置模糊查找的参数。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **每次查找输出的最大匹配数**  
  指定为每个输入行返回的最大匹配转换数。 默认值为 **1**。  
   

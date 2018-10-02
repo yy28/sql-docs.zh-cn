@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
 - Report Server Web service, SOAP
@@ -17,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306d2c06-a25a-40f8-8a35-13dd32e8841e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 538e54c8f3c9504c9adeed0d4104b54cb606abd0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d5d224d568a5f062a02a412b1e6792566d166f3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792290"
 ---
 # <a name="using-reporting-services-soap-headers"></a>使用 Reporting Services SOAP 标头
   使用 SOAP 与 Web 服务方法的通信遵循标准的格式。 此格式中的部分内容为在 XML 文档中编码的数据。 XML 文档由根 Envelope 元素组成，而根 Envelope 元素又由必需的 Body 元素和可选的 Header 元素组成。 Body 元素包含特定于相应消息的数据。 可选的 Header 元素包含与特定消息并不直接相关的其他信息。 Header 元素的每一子元素都称为 SOAP 标头。  

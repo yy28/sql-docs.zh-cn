@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e18110351bf1994af911d09cac16e373f522532
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 296857fefd5588418fa6a2b91b81e062b4d1c9f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776575"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>搜索报表和其他项（报表生成器和 SSRS）
   您可以使用报表管理器在报表服务器中按名称或说明搜索特定的项。 可以搜索发布的报表、报表模型、文件夹、共享数据源和资源。 无法搜索计划、所有者、角色分配、订阅或者报表历史记录中的特定快照。 搜索是在存储项的报表服务器数据库上执行的。  

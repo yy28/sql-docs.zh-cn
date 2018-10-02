@@ -5,9 +5,7 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WORKLOAD GROUP
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE WORKLOAD GROUP statement
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 586d6666f10571caaa0c9c94096d48e463206127
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f2e423b4b6ed686f00c566a1462435f501f094bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779425"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ CREATE WORKLOAD GROUP group_name
   
  对非对齐的已分区表创建索引所占用的内存与涉及的分区数成正比。 如果所需的内存总量超过资源调控器工作负荷组设置为每个查询设定的限制 (REQUEST_MAX_MEMORY_GRANT_PERCENT)，则可能无法执行这种索引创建。 由于“default”工作负荷组允许查询超过每个查询的限制，并在开始时使用所需的最低内存，因此，如果“default”资源池配置了足够多的内存总量以运行此类查询，则用户或许能够在“default”工作负荷组中执行相同的索引创建。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

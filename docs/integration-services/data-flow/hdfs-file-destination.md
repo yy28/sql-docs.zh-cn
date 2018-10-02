@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 88b6bc5bafcc2fe3da77b55ac98d19ab7ec747e2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: addb3312def505802aab695301f7cca170eab3d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410699"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799665"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 文件目标
   “HDFS 文件目标”组件允许 SSIS 包将数据写入 HDFS 文件。 支持的文件格式：文本、Avro 和 ORC。  
@@ -30,7 +27,7 @@ ms.locfileid: "35410699"
   
  ![HDFS 文件目标编辑器](../../integration-services/data-flow/media/hdfs-file-dest.png "HDFS File Destination Editor")  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  在“Hadoop 文件目标编辑器”  对话框的“常规”  选项卡上配置以下选项。  
   
 |字段|描述|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Server Scope GDR event class
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33f19723d96b6c5cd9feb4dfca1dd4a8cc613ef4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a5f21b80cf27759ab3cef7dbf5c8dc84813e42ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802495"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "43065370"
 |**成功**|**int**|1 = 成功。 0 = 失败。 例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|用户帐户控制|  
 |**TargetLoginName**|**nvarchar**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的名称。|42|用户帐户控制|  
 |**TargetLoginSid**|**image**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的安全标识号 (SID)。|43|用户帐户控制|  
-|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

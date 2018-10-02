@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlservermonitor.main.f1
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2f140b823aa8e8d06a096162f291a9080a344eee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 58db5b7c1317f2bddffc1375bdfac6c5246e4ace
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767355"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server 监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "32864102"
 > [!NOTE]  
 >  有关这些监视器的详细信息，请参阅 [监视复制](../../relational-databases/replication/monitor/monitoring-replication-overview.md) 和 [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
   
 -   复制监视器  
   

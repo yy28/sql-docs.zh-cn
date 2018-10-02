@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaa4be65ce76caaf8a772ff15805a1b8976068fc
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 59ac1e0a2cf1dc26aaf2d7121930c7bb4548a0ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796588"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 项目
 本快速入门演示了如何使用 PowerShell 脚本连接到数据库服务器，并将 SSIS 项目部署到 SSIS 目录。

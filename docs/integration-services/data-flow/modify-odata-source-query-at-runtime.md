@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfabab76c036bc74e2085475d0c77e1500dac3f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 13ca379e808a970142bd568fe158bafdfaa5d0d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778569"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>在运行时提供 OData 源查询
  可以通过向数据流任务的“[OData 源].[查询]”属性添加表达式，在运行时修改 OData 源查询。  

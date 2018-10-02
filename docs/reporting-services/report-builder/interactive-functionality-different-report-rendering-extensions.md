@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 837086489e52f4f34513aecd68403ce1c78047f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c9e980b05432f9e7fdd54bbd45165d62bff88c4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789075"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>交互功能 - 不同报表呈现扩展插件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了在运行时与分页报表进行交互的功能。 并非所有的报表呈现格式都支持整套交互功能。 使用下表了解每项交互功能在处理特定格式时的工作原理。  

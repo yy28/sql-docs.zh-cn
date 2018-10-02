@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75b17cc357f3affc8fac293c771fbc63940d4fb4
-ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
+ms.openlocfilehash: f9da27595423d85ddb2769ea66b6ac4b4e26cb05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "40409478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802285"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +45,7 @@ ms.locfileid: "40409478"
 |||||  
 |-|-|-|-|  
 |**序列**|**步骤说明**|**注释**|**有用的指标**|  
-|@shouldalert|日志生成|日志数据已刷新到磁盘。 必须将此日志复制到次要副本。 日志记录会进入发送队列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|1|日志生成|日志数据已刷新到磁盘。 必须将此日志复制到次要副本。 日志记录会进入发送队列。|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|捕获|捕获每个数据库的日志，并将其发送到相应的伙伴队列（每个数据库/副本对一个）。 只要已连接可用性副本且数据移动未因任何原因暂停，此捕获进程便会持续运行，并且数据库/副本对显示为“正在同步”或“已同步”。 如果捕获进程不能以足够快的速度扫描消息并将其排入队列，则会构建日志发送队列。|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)，这是为该可用性副本排队的所有数据库消息总和的聚合。<br /><br /> 主要副本上的 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) 和 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)（KB/秒）。|  
 |3|Send|每个数据库副本队列中的消息均取消排队，并跨网络发送到相应的次要副本。|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 和 [SQL Server:Availability Replica > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md)（毫秒）|  
 |4|接收和缓存|每个辅助副本都会接收并缓存消息。|性能计数器 [SQL Server:Availability Replica > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  

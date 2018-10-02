@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0d8fdee121bbeea704d53068b6829548ffe7b07b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800735"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -2271,7 +2268,7 @@ ms.locfileid: "39087859"
   
 |十六进制代码|十进制代码|符号名称|描述|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
+|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系统找不到指定的文件。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|正在启动 Microsoft SSIS 服务。<br /><br /> 服务器版本 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 服务已启动。<br /><br /> 服务器版本 %1|  

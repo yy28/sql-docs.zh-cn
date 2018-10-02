@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -18,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764835"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "34772763"
   
  有关详细信息，请参阅 [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  仅限故障转移群集实例 - 指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集网络名称。 此名称可用来在网络上标识故障转移群集实例。  
   
  默认实例或命名实例 - 当您决定是安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的默认实例还是命名实例时，请考虑以下信息：  
@@ -117,7 +115,7 @@ ms.locfileid: "34772763"
   
  如果您正在安装 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，确保将管理权限授予负责在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 场中部署 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 服务器的 SharePoint 场管理员或服务管理员。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器模式** - 服务器模式指定可部署到服务器的 Analysis Services 数据库的类型。 服务器模式在安装过程中确定，之后不能修改。 各模式是互斥的，也就是说，您需要两个 Analysis Services 实例，它们配置为不同的模式，以便同时支持典型 OLAP 和表格模型解决方案。  
   
  **指定管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个服务器管理员。 您指定的用户或组将成为所安装的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器管理员角色的成员。 这些都必须是与安装该软件的计算机处于同一域中的 Windows 域用户帐户。  
@@ -281,7 +279,7 @@ ms.locfileid: "34772763"
 ### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>有关运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的注意事项  
  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将 **BUILTIN\Administrators** 组设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的登录名，本地 Administrators 组的成员可以使用其管理员凭据登录。 使用提升的权限并不是最好的做法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，未将 **BUILTIN\Administrators** 组设置为登录名。 因此，您应为每个管理用户创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新实例的过程中将该登录名添加到 sysadmin 固定服务器角色中。 对于用来运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的 Windows 帐户，您也应该执行这些操作。 这些作业包括复制代理作业。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **安全模式** - 选择“Windows 身份验证”或“混合模式身份验证”用于安装。  
   
  **Windows 主体设置** - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本中，Windows Builtin\Administrator 本地组放入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 服务器角色中，有效授予了 Windows 管理员对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的访问权限。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的 sysadmin 服务器角色中未设置 Builtin\Administrator 组， 而是改为由您在安装过程中为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。  

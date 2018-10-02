@@ -5,9 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a0796d43bd0f17a65a0144591c7e2f27c0b22e8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: e8e1f69d90c73aa7b8b6a6dbfba9f8f7092d2215
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806185"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日期和时间数据类型及函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +48,12 @@ ms.locfileid: "37784168"
   
 |数据类型|“格式”|范围|精确度|存储大小（字节）|用户定义的秒的小数部分精度|时区偏移量|  
 |---|---|---|---|---|---|---|
-|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 到 23:59:59.9999999|100 纳秒|3 到 5|是|“否”|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 到 31.12.99|1 天|3|“否”|“否”|  
-|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 到 2079-06-06|1 分钟|4|“否”|“否”|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 到 9999-12-31|0.00333 秒|8|“否”|“否”|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999|100 纳秒|6 到 8|是|“否”|  
-|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999（以 UTC 时间表示）|100 纳秒|8 到 10|是|是|  
+|[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 到 23:59:59.9999999|100 纳秒|3 到 5|用户帐户控制|否|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|YYYY-MM-DD|0001-01-01 到 31.12.99|1 天|3|否|否|  
+|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 到 2079-06-06|1 分钟|4|否|否|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 到 9999-12-31|0.00333 秒|8|否|否|  
+|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999|100 纳秒|6 到 8|用户帐户控制|否|  
+|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|0001-01-01 00:00:00.0000000 到 9999-12-31 23:59:59.9999999（以 UTC 时间表示）|100 纳秒|8 到 10|用户帐户控制|用户帐户控制|  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../includes/tsql-md.md)] [rowversion](../../t-sql/data-types/rowversion-transact-sql.md) 数据类型不是日期或时间数据类型。 timestamp 是 rowversion 的已弃用同义词。  
