@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076869a12f0c634bf73152a3685f82f52b1bdc2b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710135"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
   Union All 转换将多个输入组合到一个输出中。 例如，可将来自五个不同平面文件源的输出输入到 Union All 转换并将其组合到一个输出中。  
@@ -55,7 +52,7 @@ ms.locfileid: "35408209"
 ## <a name="union-all-transformation-editor"></a>Union All 转换编辑器
   可以使用 **“Union All 转换编辑器”** 对话框，将多个输入行集合并到单个输出行集中。 通过在数据流中包含 Union All 转换，可以从多个数据流合并数据、通过嵌套 Union All 转换来创建复杂数据集、以及在更正数据中的错误之后重新合并行。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输出列的名称**  
  为每一列键入一个别名。 默认值为第一个（引用）输入中输入列的名称；不过，您也可以任选一个唯一的描述性名称。  
   

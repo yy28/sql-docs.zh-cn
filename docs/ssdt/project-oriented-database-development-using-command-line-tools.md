@@ -6,20 +6,17 @@ ms.date: 04/26/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a26def9-8fbd-43e4-9e57-414840b73ed8
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 157aa8f1aca7fac32f7c7606c4681b2e27db1d37
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02f1851a2be9e6cd716c3d9b151378a8d84a2a32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615935"
 ---
 # <a name="project-oriented-database-development-using-command-line-tools"></a>使用命令行工具开发面向项目的数据库
 SQL Server Data Tools 经证明是支持多种面向项目的数据库开发方案的命令行工具。  

@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7063c3b5aabc396fc35f05b5a1d271d0a12d7204
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750351"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
@@ -43,7 +40,7 @@ ms.locfileid: "35404369"
   
 -   [“配置”对话框](../integration-services/service/configure-dialog-box.md)  
   
--   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+-   [“执行包”对话框](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
 ### <a name="parameter-values"></a>参数值  
  可以为参数最多赋予三个不同类型的值。 当启动包执行时，将单个值用于参数，然后将参数解析为最终的文字值。  
@@ -167,7 +164,7 @@ ms.locfileid: "35404369"
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 “参数化”对话框可使将新的或现有的参数与任务属性相关联。 可通过以下方式打开该对话框：在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中右键单击一个任务或“控制流”选项卡，然后单击“参数化”。 以下列表介绍了此对话框中的 UI 元素。 有关参数的详细信息，请参阅 [Integration Services (SSIS) 参数](https://msdn.microsoft.com/library/hh213214.aspx)。
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **属性**  
  选择要与参数相关联的任务属性。 此列表包含可参数化的所有属性。  
   

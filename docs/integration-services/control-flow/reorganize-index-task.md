@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.reorganizeindextask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Reorganize Index task [Integration Services]
 - indexes [Integration Services]
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 588f2e53d3fc4c938e02bc13445775d7648ba43e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ac2dd35dc20b09895be8bfecf408456bed06ba09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671233"
 ---
 # <a name="reorganize-index-task"></a>“重新组织索引”任务
   “重新组织索引”任务重新组织 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库表和视图中的索引。 有关管理索引的详细信息，请参阅 [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  

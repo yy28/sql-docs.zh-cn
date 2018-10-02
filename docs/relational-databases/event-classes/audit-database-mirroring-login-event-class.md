@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48caa4b54fbf2a7045533bfdc793a1ef1aec9a2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 66da3f496c244a63055020d02a41560279712099
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679855"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.locfileid: "43082757"
   
 |ID|子类|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|Login Success|Login Success 事件报告相邻的数据库镜像登录进程已成功完成。|  
+|1|Login Success|Login Success 事件报告相邻的数据库镜像登录进程已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件报告数据库镜像登录收到一条格式正确但对登录进程的当前状态无效的消息。 消息可能已丢失，或未按顺序发送。|  
 |3|Message Format Error|Message Format Error 事件报告数据库镜像登录收到一条与所需格式不匹配的消息。 消息可能已损坏，或者其他程序（而非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ）正在向数据库镜像使用的端口发送消息。|  
 |4|Negotiate Failure|Negotiate Failure 事件报告本地数据库镜像端点和远程数据库镜像端点互相支持身份验证的排他级别。|  

@@ -5,34 +5,31 @@ ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e2096e46239358436f5d439eca0104575155fbf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b47bc92f48b4e5360b1b5a93ca094483df32cc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832226"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   可以使用 clr enabled 选项指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是否可以运行用户程序集。 clr enabled 选项提供下列值： 
   
-|ReplTest1|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |0|不允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上执行程序集。|  
-|@shouldalert|允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上执行程序集。|  
+|1|允许在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上执行程序集。|  
   
 仅 WOW64。 重启 WOW64 服务器使设置更改生效。 其他服务器类型不需要重启。  
 

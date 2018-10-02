@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dae8d80182c1a38c7124d16f1b0eefeec10e1e0b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f24af29ad0c0378f9977bf73a6555135f2c1df8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753805"
 ---
 # <a name="unpivot-transformation"></a>逆透视转换
   逆透视转换将来自单个记录中多个列的值扩展为单个列中具有同样值的多个记录，使得非规范的数据集成为较规范的版本。 例如，每个客户在列出客户名的数据集中各占一行，在该行的各列中显示购买的产品和数量。 逆透视转换将数据集规范之后，客户购买的每种产品在该数据集中各占一行。  
@@ -63,7 +60,7 @@ ms.locfileid: "35410689"
 > [!NOTE]  
 >  本主题围绕 [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 中所述的“逆透视”应用场景，举例说明各选项的使用方法。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  使用复选框指定要透视到行中的列。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event classes [SQL Server], CLR event category
 - SQL Server event classes, CLR event category
 - CLR event category [SQL Server]
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 533ed6c436de4090a4a627be279ce91d207069a8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1ff98dd89bd634e715075ac122d34bd5c0ba9c6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648025"
 ---
 # <a name="clr-event-category"></a>CLR 事件类别
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "43078510"
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**成功**|**int**|指示程序集加载是成功 (1) 还是失败 (0)。|23|用户帐户控制|  
-|**TextData**|**ntext**|如果加载成功，将显示“程序集加载成功”；否则，将显示“程序集加载失败”。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|如果加载成功，将显示“程序集加载成功”；否则，将显示“程序集加载失败”。|1|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  
  [扩展事件](../../relational-databases/extended-events/extended-events.md)   

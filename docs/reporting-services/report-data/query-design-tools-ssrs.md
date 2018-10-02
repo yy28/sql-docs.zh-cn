@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
@@ -19,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fe31040558863332a4037fbb7c9d164b64273ae
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ae728cc402a036f59b43157e31a1a4536d14c8df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844115"
 ---
 # <a name="query-design-tools-ssrs"></a>查询设计工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了各种查询设计工具，您可以使用这些工具在报表设计器中创建数据集查询。 某些查询设计器还提供了其他模式，方便你选择是在可视模式下工作，还是直接在查询语言中工作。 本主题将介绍每种工具及其支持的数据源类型。 本主题将介绍下列工具：  

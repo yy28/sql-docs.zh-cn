@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_TRACESTATUS_TSQL
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-caps.latest.revision: 36
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c4bcd9cb45503a872a752f950b96d2a363f88db0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a5f7d153bc518abde56995ea802f20f46531930
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847541"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 下表对结果集中的信息进行了说明。
   
-|列名|Description|  
+|列名|描述|  
 |---|---|
 |**TraceFlag**|跟踪标志的名称|  
 |**“状态”**|表示跟踪标志是设置为 ON 还是 OFF，是全局启用的还是针对会话启用的。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
@@ -77,7 +74,7 @@ DBCC TRACESTATUS 将针对跟踪标志号和状态各返回一列。 这表示�
 ## <a name="remarks"></a>Remarks  
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，有两种跟踪标志：会话和全局。 会话跟踪标志对某个连接是有效的，只对该连接可见。 全局跟踪标志在服务器级别上进行设置，对服务器上的每一个连接都可见。
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要求 **公共** 角色具有成员身份。
   
 ## <a name="examples"></a>示例  

@@ -5,21 +5,18 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fe47762ce9aac0d8a077bf7843a62a9aaf6ca61
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9bbb8092756cd12599c17d8dd7abeaba774689f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761895"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>连接到 Oracle 数据源（SQL Server 导入和导出向导）
 本主题介绍如何从 SQL Server 导入和导出向导的“选择数据源”或“选择目标”页连接到 Oracle 数据源。 有多种数据提供程序可用来连接 Oracle。

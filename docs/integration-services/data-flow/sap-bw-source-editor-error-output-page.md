@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 895449ec61e2136b03e40864fa4bdb29a498abd1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 26239ef4b8194fbcf6d423376d282bf981409882
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742255"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 源编辑器（“错误输出”页）
   可以使用 **“SAP BW 源编辑器”** 的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
@@ -42,7 +39,7 @@ ms.locfileid: "35406039"
   
 3.  在 **“SAP BW 源编辑器”** 中单击 **“错误输出”** ，以打开编辑器的 **“错误输出”** 页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 > [!NOTE]  
 >  如果您不知道配置源所需的所有值，可能需要询问您的 SAP 管理员。  

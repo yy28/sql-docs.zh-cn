@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Crawl Started event class
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 061ed4e7065d1356bda1ca8a61e08f704f0a88db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d21a8127b9c44785832cec673514347109ab3e3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775535"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43095722"
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|**TextData**|**ntext**|全文爬网类型。 该值可以是“完整”、“增量”、“手动”或“自动”。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|全文爬网类型。 该值可以是“完整”、“增量”、“手动”或“自动”。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b0101c490f589e359b821edc2878a72969996d96
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c4078dd31ec70008803149835276d22835f26424
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753995"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>为捕获更改选择 Oracle 表
   使用此对话框可选择在 CDC 实例中包含的表。 所选表将添加到新建实例向导的 **“选择表和列”** 页的列表中。 可以在此对话框中执行以下操作。  

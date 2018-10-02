@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER PARTITION SCHEME
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - adding filegroups
 - NEXT USED filegroups
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: bfebc833f49199fcc29d10866fa2fe9194e7bae0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b184b04c2f1535aed86d0eb2dc1fd33a840f0e0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611517"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -67,7 +64,7 @@ NEXT USED [ filegroup_name ] [ ; ]
 ## <a name="remarks"></a>Remarks  
  受 ALTER PARTITION SCHEME 影响的所有文件组都必须处于联机状态。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  以下权限可用于执行 ALTER PARTITION SCHEME：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  

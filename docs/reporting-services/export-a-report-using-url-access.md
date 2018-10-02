@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 318b597573630ac6caf78bdebaacc00a4147f2ce
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a77bc4e35d1aaefe3c1d55fd4be8086a71d5dabb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644115"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 访问导出报表
   可以选择使用 *rs:Format* URL 参数指定呈现报表的格式。  HTML4.0 和 HTM5 格式（呈现扩展插件）将呈现在浏览器中，对于其他格式，浏览器将会提示将报告输出保存到本地文件。  

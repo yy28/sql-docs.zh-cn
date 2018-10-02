@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: sql-trace
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e2adc911f7eab0fa07e4d227354c0e25e9664bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8060036a5d62f84634123a67320bfda0e6ffe1ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603275"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>使用 Transact-SQL 存储过程创建和运行跟踪
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "32968882"
   
 ## <a name="in-this-section"></a>本节内容  
   
-|主题|Description|  
+|主题|描述|  
 |-----------|-----------------|  
 |[优化 SQL 跟踪](../../relational-databases/sql-trace/optimize-sql-trace.md)|说明如何降低跟踪对系统性能的影响。|  
 |[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)|介绍使用筛选器进行跟踪。|  

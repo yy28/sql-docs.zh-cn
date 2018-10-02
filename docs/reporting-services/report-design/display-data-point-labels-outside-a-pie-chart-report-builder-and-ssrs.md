@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9a222f6443f4ca1fe52251a367a67f9b5dab02b5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9a398224ce57aa31e11e2956a7caf40ee73499a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631075"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>在饼图外显示数据点标签（报表生成器和 SSRS）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，饼图标签经过了优化，可以仅在几个数据切片中显示标签。 如果饼图包含的切片过多，标签可能会重叠。 一种解决方案是在饼图外显示标签，这样可能会为较长的数据标签留出更多的空间。 如果发现标签仍然重叠，可以启用三维来为这些标签留出更多的空间。 这将减小饼图的直径，在饼图周围留出更多的空间。  

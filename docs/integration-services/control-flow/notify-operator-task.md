@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.notifyoperatortask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - notifications [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5847d578c38c482a152f13a0ff41ad7907e65a8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 077e950192728b3d66e5ea596b46a0af3b037953
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691792"
 ---
 # <a name="notify-operator-task"></a>“通知操作员”任务
   “通知操作员”任务将通知消息发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员是可以接收电子通知的人或组的别名。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作员的详细信息，请参阅 [操作员](../../ssms/agent/operators.md)。  

@@ -4,21 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-report-items
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e42f36a6fbd827a6785e7266f9e74e2bb5b838df
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644855"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>创建自定义报表项设计时组件
   自定义报表项设计时组件是一种可在 Visual Studio 报表设计器环境中使用的控件。 自定义报表项设计时组件可提供能接受拖放操作的激活的设计图面，可与 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 属性浏览器集成，且可提供自定义属性编辑器。  

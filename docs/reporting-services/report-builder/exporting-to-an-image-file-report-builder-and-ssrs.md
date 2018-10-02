@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d815aa9e20f16ff9ee8a0198a9d6c076097a741
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c46de7c1515d605dbe88d939ab9de2b161d7689
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747265"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>导出到图像文件（报表生成器和 SSRS）
   图像呈现扩展插件可以将分页报表呈现为位图或图元文件。 默认情况下，图像呈现扩展插件将生成报表的 TIFF 文件，您可以按多页形式查看此类文件。 客户端收到图像时，可以在图像查看器中显示图像，并可以打印图像。 本主题提供了特定于图像呈现器的信息并说明了呈现规则的例外情况。  

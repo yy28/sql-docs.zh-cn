@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.pubproperties.articles.f1
 ms.assetid: bdeea318-a153-44b8-9e51-9155f3bad18b
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96ea49e892df4a3d2b1cb94c719a1d52974f89db
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 86f7e2620fdf9c78f21b5f83333cd3fdb8e9d844
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749055"
 ---
 # <a name="publication-properties-articles"></a>发布属性，项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.locfileid: "37357349"
 ## <a name="column-filters"></a>列筛选器  
  通过展开 **“要发布的对象”** 窗格中的表，然后只选择需要的列，可以对此页上的列进行筛选（可以在此向导的 **“筛选表行”** 页上筛选行）。 由于包括安全（防止复制敏感数据）和性能（例如，避免复制较大的二进制大型对象 (BLOB) 列）在内的很多原因，筛选列非常有用。 有关列筛选（包括无法筛选的列类型的列表）的详细信息，请参阅[筛选已发布数据](../../relational-databases/replication/publish/filter-published-data.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  使用 **“要发布的对象”** 窗格，可以：  
   
 -   查看所有可用于复制的对象。  

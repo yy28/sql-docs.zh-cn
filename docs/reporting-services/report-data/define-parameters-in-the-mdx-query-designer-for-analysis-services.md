@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 759f6118736192db17042704157b21cbf7eda5ad
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3fdf267ff11964314ad222e41872304aa70386da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850378"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>在 Analysis Services 的 MDX 查询设计器中定义参数
   若要参数化 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  

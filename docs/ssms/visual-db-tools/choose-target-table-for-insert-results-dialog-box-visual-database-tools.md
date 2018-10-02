@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d343fe87cf186d644158d1e5a3d21474bd45666
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0d3847dd6f7ce9f5592bdf4c072f0cb2f72e3bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756215"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>“选择插入结果的目标表”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此对话框可以指定作为“插入结果”查询结果的数据行要添加到其中的表。 当您启动“插入结果”查询时，将显示此对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **选择一个目标**  
 从列表中选择结果行要添加到其中的表的名称。 只能为“插入结果”查询指定一个表。  
   

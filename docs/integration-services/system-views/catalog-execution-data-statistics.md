@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45085c7ed2a5a2915e6ac7c6a96c952910698dac
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f413b5d7d5cb3480adfa8ee37b8fd4af520d6a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721345"
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +45,14 @@ ms.locfileid: "35329001"
   
 -   要查看给定包执行的这些数据，请将日志记录级别设置为“详细”。 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对执行实例的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

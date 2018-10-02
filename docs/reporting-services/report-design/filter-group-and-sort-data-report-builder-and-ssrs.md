@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.categorygroupproperties.general.f1
@@ -18,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9192032176d81542d26df9465f80c323cd852b0
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fe646114217d00fbdf18b6eb304c8826b8b949d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725965"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>对数据进行筛选、分组和排序（报表生成器和 SSRS）
   在报表中，可以使用表达式来帮助对报表数据进行控制、组织和排序。 默认情况下，当您创建数据集和设计报表布局时，报表项的属性会基于数据集字段、参数以及显示在“报表数据”窗格中的其他项自动设置为表达式。 您还可向表或矩阵单元添加交互式排序按钮，以便用户能够通过交互方式，更改组或组内的行的行排序顺序。  

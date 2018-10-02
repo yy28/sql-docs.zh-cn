@@ -4,17 +4,16 @@ ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e7d54f051d6be70f4434c3503f2ee072040b2b1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2eae41ae3230206800bd9ebf7ad3055e96d411e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845465"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定轴间隔（报表生成器和 SSRS）
 了解如何设置 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的轴间隔，以更改图表中类别 (x) 轴上的标签数目和刻度线数目。

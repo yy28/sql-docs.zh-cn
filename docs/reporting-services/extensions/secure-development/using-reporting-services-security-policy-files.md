@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -19,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0746a087870157e0336f20c5114387e02d48de48
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c37cc18d9a15a0f19a30697306ef3165ee9f846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735585"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>使用 Reporting Services 安全策略文件
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 将组件安全策略信息存储在三个配置文件中，而这三个配置文件会在安装过程中复制到文件系统。 这些配置文件可以包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中代码程序集的内部使用安全策略和用户定义安全策略的组合。 三个配置文件与 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的三个安全对象组件相对应：报表服务器和 Windows 服务、报表管理器 Web 应用程序以及报表设计器预览窗口。  

@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6460f20104e73a3a941a5fdda0145a5bd2124f1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e825066ecab87f9a338ac7243298d37e9188f852
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608627"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>列值分布配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“列值分布配置文件请求”** 设置选项。 列值分布配置文件将报告选定列中的所有非重复值以及表中每个值表示的行的百分比。 该配置文件还可以报告其表示内容超过表中指定的行百分比的值。 此配置文件可帮助您识别数据中的问题，例如，列中非重复值的数目不正确。 例如，对表示美国州的列进行事件探查，发现有 50 多个非重复值。  
@@ -93,7 +90,7 @@ ms.locfileid: "35405619"
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **ValueDistributionOption**  
  指定是否计算所有列值的分布。 此选项的默认值为 **FrequentValues**。  
   

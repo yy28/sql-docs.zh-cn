@@ -5,9 +5,7 @@ ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exceldest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d61ae17221838c6188d670e9afc42cc1f7e9516
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f0818056ed0d8390021189d59fda95a3b7daf27f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852525"
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -116,7 +113,7 @@ ms.locfileid: "35333821"
 ## <a name="excel-destination-editor-mappings-page"></a>Excel 目标编辑器（“映射”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -132,7 +129,7 @@ ms.locfileid: "35333821"
 ## <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“高级”** 页指定错误处理选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入或输出**  
  查看数据源的名称。  
   

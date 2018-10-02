@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_SERVICE_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - CREATE SERVICE statement
 - contracts [Service Broker], service creation
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1230507e5c304ca111c50dc4dcfc591814be1ed3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 1a4d4cbb310251bfe6abed7a44dfb5c8514c369c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739035"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +73,7 @@ CREATE SERVICE service_name
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 从远程服务接受新会话时，目标服务的名称决定了 Broker 在会话中放入消息的队列。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，db_ddladmin 或 db_owner 固定数据库角色和 sysadmin 固定服务器角色的成员拥有创建服务的权限。 执行 CREATE SERVICE 语句的用户必须对队列和指定的所有约定具有 REFERENCES 权限。  
   
  默认情况下，服务所有者、db_ddladmin 或 db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有服务的 REFERENCES 权限。 默认情况下，服务所有者、db_owner 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员拥有服务的 SEND 权限。  

@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], commands
 - Command class
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465ef8d1-c503-407c-8afd-58d620e344ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9725d53b3c6a261ad6a00edde1f6dc42ced8e1db
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6f3d9089ae5a15b8e63b236f0026a3085d744c43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720995"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Command 类
   Command 对象表述请求并将其传递到数据源上。 命令文本可以采用多种不同的语法形式，包括文本和 XML。 如果返回结果，则 Command 对象将结果作为 DataReader 对象返回。  

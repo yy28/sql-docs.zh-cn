@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e45942b35aca955316e1fa243c69ec90a64ecf2e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 24815102b3839da21534373d2176259b3b42b73c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328371"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710675"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>使用脚本任务查询 Active Directory
   企业数据处理应用程序（如 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包）通常需要根据 Active Directory 中存储的雇员的级别、职务或其他特征来以不同方式处理数据。 Active Directory 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 目录服务，它不仅提供集中存储有关用户的元数据，还可以提供集中存储有关其他组织资产（如计算机和打印机）的元数据。 Microsoft .NET Framework 中的 System.DirectoryServices 命名空间提供使用 Active Directory 的类，以帮助根据 Active Directory 中存储的信息来定向数据处理工作流。  

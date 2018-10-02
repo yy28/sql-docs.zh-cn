@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data processing extensions
 - Connection class
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ec4c88470ee2b63e5b11f93fadb8f4e01412e64
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e0a9e5a7385239a68e23426e026ae477b7dccb0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700697"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>为数据处理扩展插件实现 Connection 类
   Connection 对象表示数据库连接或类似的资源，它是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件的用户的起点。 它表示与数据库服务器的连接，尽管可以将任何具有类似行为的实体公开为 Connection。  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 372c423131dc4e35d3fd5efcc39b881518c19e2f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264778"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699495"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色分配 - 修改或删除
   角色分配将组或用户帐户映射到包含可执行任务的预定义的角色定义。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的操作类型。 若要创建、修改或删除角色分配，请使用报表管理器。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  

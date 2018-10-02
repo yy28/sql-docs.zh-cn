@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - properties [Reporting Services], about properties
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5970c78650137871a62bf95d82223f604421cb70
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e2b7495edef06da522112932c75d5f35684313f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742615"
 ---
 # <a name="reporting-services-properties"></a>Reporting Services 属性
   报表服务器定义对于报表服务器而言为全局的一组系统属性，并定义与报表服务器数据库中存储的单独项关联的一组项属性。 不能删除由报表服务器定义的属性，在某些情况下，它们是只读的。 应用程序可以通过将其他用户定义属性添加到系统以及添加项属性来扩展系统属性和项属性。  

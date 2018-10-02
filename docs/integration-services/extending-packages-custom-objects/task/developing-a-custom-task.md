@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a45e0f439c27b5f822df7d017444947761380275
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d2c4f5455a1a305805a7d2322906c569b400b062
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603675"
 ---
 # <a name="developing-a-custom-task"></a>开发自定义任务
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]使用任务执行工作单元，从而支持数据的提取、转换和加载。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含多种任务，这些任务可执行从执行 SQL 语句到从 FTP 站点下载文件的大部分常用操作。 如果包含的任务和支持的操作不能完全满足您的要求，您可以创建自定义任务。  

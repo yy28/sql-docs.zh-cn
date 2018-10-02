@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.filtersettings.f1
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ced3fd26c7391eb481366200385235ab5d699c80
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a0f38fd7a404e991cd6c87fd303cb03658f8b235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734637"
 ---
 # <a name="filter-settings"></a>筛选器设置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以使用 **“筛选设置”** 对话框为复制监视器中的网格定义筛选器。 例如，若要只显示 **“所有订阅”** 选项卡上处于活动状态的订阅，请从 **“列名”** 列选择 **“状态”** ，从 **“运算符”** 列选择 **“等于”** 并从 **“值1”** 列选择 **“活动”** 。 在您基于一个或多个列定义筛选器之后，将应用筛选器以便网格中只显示与筛选器条件匹配的子集行。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“状态”**  
  选择要对其进行筛选的列的名称。 您可以使筛选器基于一个或多个列。  
   

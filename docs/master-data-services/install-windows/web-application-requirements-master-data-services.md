@@ -5,24 +5,21 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5db1d056725fee435c3e56c7715e7f1ac02695c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851065"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
 
@@ -77,7 +74,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>帐户和权限  
   
-|类型|Description|  
+|类型|描述|  
 |----------|-----------------|  
 |Windows 帐户|您必须使用有权配置 Windows 角色、角色服务和功能以及有权在本地计算机上的 IIS 中创建和管理应用程序池、网站和 Web 应用程序的 Windows 帐户登录到 Web 服务器计算机。|  
 |服务帐户|当您在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中创建 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]Web 应用程序时，必须为应用程序运行所在的应用程序池指定标识。 此帐户可不同于在创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库时指定的服务帐户。<br /><br /> 此标识必须是域用户帐户，并且添加到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中的 mds_exec 数据库角色以便用于数据库访问。 有关详细信息，请参阅 [数据库登录、用户和角色](../../master-data-services/database-logins-users-and-roles-master-data-services.md)。 此帐户还添加到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Windows 组 **MDS_ServiceAccounts**，该组有权访问文件系统中的临时编译目录 **MDSTempDir**。 有关详细信息，请参阅[文件夹和文件权限 (Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  

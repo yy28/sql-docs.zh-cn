@@ -5,22 +5,19 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: dbf3db6560e4a32969abd5162479cb41ca6c40e9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 826f1df93be48bfa5a7adf92f06811fa327cedf3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651297"
 ---
 # <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +48,9 @@ Scale Out Worker 的辅助角色代理 ID。 workeragent_id 为 uniqueIdentifier
   
 -   针对执行实例的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
  
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

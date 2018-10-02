@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - management methods [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f02769cedf13a9aafb3450eb95826f15d1717c39
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b09f9e6d9700a56eaa36ddd40ad038fd291c6058
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848125"
 ---
 # <a name="report-server-namespace-management-methods"></a>报表服务器命名空间管理方法
   报表服务器管理 Web 服务包含可用于管理报表服务器数据库中的报表、文件夹和资源的方法。  

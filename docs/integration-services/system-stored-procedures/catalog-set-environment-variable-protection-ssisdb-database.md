@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e0be27300c0e30b1a7d278eeb3b619717476c36
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: adcca6f3a7597a5784dd037070e4514bd0e8e93d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669145"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 包含环境的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @environment_name = ] environment_name  
  环境的名称。 environment_name 为 nvarchar(128)。  
@@ -52,16 +49,16 @@ catalog.set_environment_variable_protection [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对环境的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
