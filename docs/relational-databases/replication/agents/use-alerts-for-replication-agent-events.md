@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b171629208ace8f3a6684abf02ccd3ef2451b61c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 048465a20f3a665d3199a6382695f14b28d8902d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850293"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +37,15 @@ ms.locfileid: "37357189"
   
 |消息 ID|预定义的警报|激发警报的条件|在 msdb..sysreplicationalerts 中输入其他信息|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**复制: 代理成功**|代理成功关闭。|是|  
-|14151|**复制: 代理失败**|代理关闭时出现错误。|是|  
-|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|是|  
-|14157|**复制：已删除过期的订阅**|已删除过期的订阅。|“否”|  
-|20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|“否”|  
-|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|是|  
-|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|是|  
+|14150|**复制: 代理成功**|代理成功关闭。|用户帐户控制|  
+|14151|**复制: 代理失败**|代理关闭时出现错误。|用户帐户控制|  
+|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|用户帐户控制|  
+|14157|**复制：已删除过期的订阅**|已删除过期的订阅。|否|  
+|20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|否|  
+|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|用户帐户控制|  
+|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|用户帐户控制|  
 |20578|**复制：代理自定义关闭**|||  
-|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
+|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|用户帐户控制|  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)。 您也可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 警报基础结构为其他复制事件定义警报。 有关详细信息，请参阅[创建用户定义事件](http://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879)。  
   

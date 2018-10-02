@@ -5,23 +5,20 @@ ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 084994046941d960c8f18720e92f735cff92155c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 84238231c3a36e4c29e8fead452feb201ab0f36e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851035"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +81,7 @@ ms.locfileid: "36875065"
 |-|-|-|-|-|  
 |RAID 级别|写性能|读性能|容错|Remarks|  
 |RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
-|RAID 0|很好|很好|InclusionThresholdSetting||  
+|RAID 0|很好|很好|None||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
   
   

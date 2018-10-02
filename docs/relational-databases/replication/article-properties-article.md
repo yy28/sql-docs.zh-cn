@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fa58456bf72ab50dec1ff67a40c10be19b0ad45
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857112"
 ---
 # <a name="article-properties---ltarticlegt"></a>项目属性 - &lt;项目&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +41,7 @@ ms.locfileid: "37354259"
   
 ## <a name="options-for-all-publications"></a>用于所有发布的选项  
  **复制表分区方案** / **复制索引分区方案**  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了表分区和索引分区功能，这些功能与通过行筛选器和列筛选器提供的分区复制功能无关。 **“复制表分区方案”** 选项和 **“复制索引分区方案”** 选项指定了是否应将分区方案复制到订阅服务器。 有关分区的详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 引入了表分区和索引分区功能，这些功能与通过行筛选器和列筛选器提供的分区复制功能无关。 **“复制表分区方案”** 选项和 **“复制索引分区方案”** 选项指定了是否应将分区方案复制到订阅服务器。 有关分区的详细信息，请参阅 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)。  
   
  **转换数据类型**  
  确定在订阅服务器上创建对象时是否从用户定义数据类型转换为基本数据类型。 用户定义数据类型包括 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中引入的用户定义的 CLR 类型。 如果将这些数据类型复制到 **早期版本，请指定值为** True [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]；这样可确保在订阅服务器上正确处理这些数据类型。  
