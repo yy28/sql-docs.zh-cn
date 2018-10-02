@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.profiles.perfprofiles.f1
 helpviewer_keywords:
 - Agent Profiles dialog box
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 098f602ff48c89a89676216354d7c32c37ca247c
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 3738ada96f1b3a01bb7a95219f3a69b5c7da0d5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352239"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724075"
 ---
 # <a name="agent-profiles"></a>代理配置文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以使用 **“代理配置文件”** 对话框管理代理配置文件。 代理配置文件为每个代理提供了一种便于管理运行时参数的方法。 每个代理均有一个默认配置文件，某些代理还有附加的预定义配置文件。 例如，合并代理有一个为低带宽连接设计的“慢速链接”配置文件。 预定义配置文件对于大多数应用程序已经足够，不过，您仍然可以创建用户定义的配置文件，以便自定义代理行为。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择页**  
  在左窗格中选择一个代理，此代理的配置文件将显示在右窗格中。  
   

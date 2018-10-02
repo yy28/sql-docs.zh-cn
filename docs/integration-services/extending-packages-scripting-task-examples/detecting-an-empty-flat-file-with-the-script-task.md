@@ -4,30 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - flat files
 - Script task [Integration Services], empty flat files
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2553da2693a51dcec0874a7ba35f919afc1b44a3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: aa0d3b3709d5861a0bbf9c3dfc95feb2ce8bd99e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729905"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>使用脚本任务检测空平面文件
   平面文件源在尝试处理平面文件之前不确定该平面文件是否包含数据行。 您可能希望跳过不含任何数据行的文件，从而提高包的效率，尤其是循环访问大量平面文件的包。 脚本任务可以在包开始处理数据流之前查找空平面文件。  

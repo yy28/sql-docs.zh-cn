@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cbac839b4148557e6c8c9a6f22fc1414f01f23d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612605"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函数 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -86,9 +83,9 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   针对执行实例的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下表说明了导致函数失败的情况。  

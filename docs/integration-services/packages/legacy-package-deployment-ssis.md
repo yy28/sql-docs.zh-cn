@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.packageconfigurationorganizer.f1
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1e9296e97e882aa752287197469cf479c7cf29fd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718265"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -264,7 +261,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  在运行时，包配置将更新包对象的属性值。 加载包时，配置中的值将替换开发包时所设置的值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支持不同的配置类型。 例如，您可以使用包含多个配置的 XML 文件或包含单个配置的环境变量。 有关详细信息，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **启用包配置**  
  选择此选项可对包使用配置。  
   
@@ -305,7 +302,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>“欢迎使用包配置向导”页  
  使用 **“SSIS 配置向导”** 可以创建在运行时更新包及其对象的属性的配置。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **不再显示此页**  
  下次打开向导时跳过欢迎页。  
   
@@ -404,7 +401,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>“选择要导出的对象”页  
  使用 **“选择目标属性”** 或“选择要导出的属性”页可以指定配置包含的对象属性。 只有在选择 XML 配置类型时，才能选择多个属性。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **对象**  
  展开包层次结构并选择要导出的属性。  
   
@@ -417,7 +414,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>“完成向导”页  
  使用 **“完成向导”** 页可以提供配置的名称以及查看此向导用于创建配置的设置。 在向导完成之后，将显示 **“包配置组织程序”** ，其中列出了包的所有配置。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **配置名称**  
  键入配置的名称。  
   
@@ -586,7 +583,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>“配置包”页  
  可以使用 **“配置包”** 页编辑包配置。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **配置文件**  
  通过从列表中选择文件，可以编辑配置文件的内容。  
   
@@ -622,7 +619,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>“部署 SSIS 包”页  
  可以使用 **“部署 SSIS 包”** 页指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包及其依赖关系的安装位置。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **部署到文件系统**  
  将包及其依赖关系部署到文件系统内指定的文件夹中。  
   
@@ -647,7 +644,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
  可以使用 **“选择安装文件夹”** 页，指定在文件系统中安装包及其依赖关系的文件夹。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **文件夹**  
  指定包及其依赖关系要复制到的路径和文件夹。  
   
@@ -663,7 +660,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>“指定目标 SQL Server”页  
  可以使用 **“指定目标 SQL Server”** 页，指定将包部署到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的选项。  
   
-#### <a name="options"></a>“常规”  
+#### <a name="options"></a>选项  
  **服务器名称**  
  指定要部署包的服务器的名称。  
   

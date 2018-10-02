@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7fc5893c782794a69a1bcd5ac41bfb3dae693337
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665ffbd6b0a36bc38a0e7f88b7fbff035a5f2b0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989439"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800975"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>疑难解答：查找 SQL Server 事务复制错误 
 如果对事务复制的工作机制没有基本的了解，那么排查复制错误可能会遭遇挫败。 创建发布的第一步是使用快照代理创建快照并将其保存到快照文件夹。 接下来，分发代理将该快照应用于订阅服务器。 

@@ -4,19 +4,18 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81c037101caec5bd9d1087ee4910bb5bedb47f0c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843935"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>配置分页报表的数据源属性
   在运行分页报表时，报表服务器检索属性信息以确定连接到数据源的方法。 数据源类型、连接字符串和凭据信息在已发布报表的“数据源”属性页中指定。 可以设置这些属性以使数据源连接信息与创建报表时指定的原始值不同。  

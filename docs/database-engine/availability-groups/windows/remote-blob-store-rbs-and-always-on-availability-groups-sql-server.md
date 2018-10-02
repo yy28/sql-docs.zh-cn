@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 224514fa515592e3865536510aab1b94bda94345
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f6e6aa738e8b62a7f3408c1660a8e3382774f3eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767865"
 ---
 # <a name="remote-blob-store-rbs-and-always-on-availability-groups-sql-server"></a>远程 Blob 存储区 (RBS) 和 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +26,10 @@ ms.locfileid: "34768413"
   
 |BLOB 存储位置|可用性组是否能够保护此 BLOB 数据？|  
 |-------------------------|-----------------------------------------------------|  
-|包含 RBS 元数据的同一数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|是|  
-|同一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的另一个数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|是<br /><br /> 建议您将此数据库放置在包含 RBS 元数据的数据库所在的同一可用性组中。|  
-|不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的另一个数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|是<br /><br /> 此数据库必须位于单独的可用性组中。|  
-|第三方 BLOB 存储|“否”<br /><br /> 若要保护此 BLOB 数据，请使用 BLOB 存储提供程序的高可用性机制。|  
+|包含 RBS 元数据的同一数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|用户帐户控制|  
+|同一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的另一个数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|用户帐户控制<br /><br /> 建议您将此数据库放置在包含 RBS 元数据的数据库所在的同一可用性组中。|  
+|不同 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例中的另一个数据库（使用 RBS 远程 FILESTREAM 提供程序存储）|用户帐户控制<br /><br /> 此数据库必须位于单独的可用性组中。|  
+|第三方 BLOB 存储|否<br /><br /> 若要保护此 BLOB 数据，请使用 BLOB 存储提供程序的高可用性机制。|  
   
 ##  <a name="Limitations"></a> 限制  
   

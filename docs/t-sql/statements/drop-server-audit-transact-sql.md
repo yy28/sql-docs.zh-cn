@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP SERVER AUDIT
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - DROP SERVER AUDIT statement
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
-caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c67b2ec27cc362c3a41dd3e54ca627dad467da92
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 47d025cac6364bab049afac7a0253a6c82a09611
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711465"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ DROP SERVER AUDIT audit_name
   
  DROP SERVER AUDIT 不删除关联的服务器或数据库审核规范。 这些规范必须手动删除，或者保留为孤立状态，稍后再映射到新服务器审核。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要创建、更改或删除服务器审核主体，需要拥有 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  

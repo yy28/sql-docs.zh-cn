@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18f1c740590fc7d965cd1a95b352e27a08a27182
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d5221b1474d6880cd7fdac56f5ae13a5f50514c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827165"
 ---
 # <a name="term-lookup-transformation"></a>字词查找转换
   字词查找转换将从转换输入列的文本中提取的字词与引用表中的字词进行匹配， 然后计算出查找表中的字词在输入数据集中出现的次数，并将计数与引用表中的此字词一并写入转换输出的列中。 此转换对于创建基于输入文本并带有词频统计信息的自定义词列表很有用。  
@@ -110,7 +107,7 @@ ms.locfileid: "35411989"
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>字词查找转换编辑器（“字词查找”选项卡）
   可以使用 **“字词查找转换编辑器”** 对话框的 **“字词查找”** 选项卡，将输入列映射到引用表中的查找列，以及为每个输出列提供别名。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  使用复选框选择要传递给未更改输出的输入列。 将输入列拖动到 **“可用引用列”** 列表可以将其映射到引用表中的查找列。 输入列和查找列必须具有支持的匹配数据类型（DT_NTEXT 或 DT_WSTR）。 选择一个映射行，再右键单击可在 [创建关系](../../../integration-services/data-flow/transformations/create-relationships.md) 对话框中编辑该映射。  
   
@@ -129,7 +126,7 @@ ms.locfileid: "35411989"
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
   可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“无缓存”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   
@@ -145,7 +142,7 @@ ms.locfileid: "35411989"
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>字词查找转换编辑器（“高级”选项卡）
   可以使用“字词查找转换编辑器”对话框的“高级”选项卡指定查找是否区分大小写。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **使用区分大小写的字词查找**  
  指示查找是否区分大小写。 默认值为 **False**。  
   

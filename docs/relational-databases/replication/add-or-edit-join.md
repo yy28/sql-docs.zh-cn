@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc90397111e2a124744a677920c02c2ec64cbf0b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356099"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794569"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "37356099"
 > [!IMPORTANT]  
 >  联接筛选器可关联的表数量不受限制，但有大量表的筛选器会影响合并处理过程中的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须跨订阅服务器分区的表之间使用联接筛选器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  此对话框涉及三个步骤，用以在两个表之间创建联接筛选器。 创建一个以上的联接筛选器需要多次调用此对话框。  
   
 1.  **验证筛选的表并选择联接的表**  

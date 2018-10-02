@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90efc26ea3833722e730bb3d3f36bb1d55350d37
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843910"
 ---
 # <a name="report-datasets-ssrs"></a>报表数据集 (SSRS)
   若要向报表中添加数据，您需要创建数据集。 每个数据集都表示通过对数据源运行查询命令而获得的结果集。 结果集中的列是字段集合。 结果集中的行是数据。 数据集不包含实际数据。 数据集而是包含从数据源检索一组特定的数据所需的信息。  

@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afa3e22e4d5cfd4f0dc29ce1f143064663657152
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: c5af3b74dd06eb8d5b5f8081d4a8fea7b02fe0b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793655"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>发布信息，代理（快照发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **“代理”** 选项卡显示所选发布的快照代理的摘要信息。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  有关快照代理的详细信息及相关任务，请右键单击该代理的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  

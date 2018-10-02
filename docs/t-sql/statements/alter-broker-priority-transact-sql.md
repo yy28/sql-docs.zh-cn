@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_BROKER_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER BROKER PRIORITY statement
 - ssbdiagnose
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 94c51bf3aa4bbfb895614377d8fef4db4d0d336e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689765"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +113,7 @@ FOR CONVERSATION
   
  有关详细信息，请参阅 [CREATE BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/create-broker-priority-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  创建会话优先级的权限默认授予 db_ddladmin 或 db_owner 固定数据库角色以及 sysadmin 固定服务器角色的成员。 需要对数据库拥有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

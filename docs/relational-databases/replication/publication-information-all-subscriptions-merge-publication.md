@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publicationinfo.allsubscriptions.merge.f1
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 066fd1d4b4793a9ed183c868f05ed2b22d891c08
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d8b64219089caf290046b5f499b235defea19c39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736455"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>发布信息，所有订阅（合并发布）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **“所有订阅”** 选项卡显示所选合并发布的所有订阅的相关信息。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  有关订阅的详细信息及相关任务，请右键单击相应订阅所在的行，再单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  

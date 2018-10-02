@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Begin Tran Starting event class'
 ms.assetid: 34a35b0e-7bd1-480d-8cc8-00614adae84e
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 751f790b6cd1999e5a0e373b7d151539844ceeaf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a54b50078edc7b15e13e2567cd7231ed8ea9b8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734988"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "43072359"
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

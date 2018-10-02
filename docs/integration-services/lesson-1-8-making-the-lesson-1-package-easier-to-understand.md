@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f35bc0041d986cc7347c4ee12299d2470a4b1aa
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806045"
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>第 1-8 课 - 使第 1 课包更易于理解
 因为您已完成了 Lesson 1 包的配置，所以整理包布局是很必要的。 如果控制流和数据流布局中的形状大小不一，或者如果形状未对齐或未进行分组，则可能很难理解包功能。  
@@ -56,7 +52,7 @@ ms.locfileid: "35330741"
     如果未将文本添加到批注框，则当您在批注框外部单击时，该文本便会消失。  
   
 ## <a name="next-steps"></a>Next Steps  
-[步骤 9：测试 Lesson 1 教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+[步骤 9：测试第 1 课教程包](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
   

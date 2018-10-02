@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL:BatchStarting event class
 ms.assetid: b99c2b73-5f77-45c1-a0f4-cfef7921dc84
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5145e4467a1568c85755464a5503f3407e3f8e4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: af2d41ee37b2ffe2c3b6c273f159e6fc4618bd31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766652"
 ---
 # <a name="sqlbatchstarting-event-class"></a>SQL:BatchStarting 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.locfileid: "43084060"
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|**datetime**|事件开始的时间（如果可用）。|14|用户帐户控制|  
-|TextData|**ntext**|Transact-SQL 批处理的文本。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|Transact-SQL 批处理的文本。|1|用户帐户控制|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

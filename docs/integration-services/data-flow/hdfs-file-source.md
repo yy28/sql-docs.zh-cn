@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a91a00dad5cb2299aaa11e14d0e952c1b363ec3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9cb4cf4a297a362ada965c3135f7e03fc8304ac2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35399869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720515"
 ---
 # <a name="hdfs-file-source"></a>HDFS 文件源
   “HDFS 文件源”组件允许 SSIS 包从 HDFS 文件中读取数据。 支持的文件格式有文本和 Avro。 （不支持 ORC 源。）  
@@ -30,7 +27,7 @@ ms.locfileid: "35399869"
   
  ![HDFS 文件源编辑器](../../integration-services/data-flow/media/hdfs-file-source.png "HDFS File Source Editor")  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  在“Hadoop 文件源编辑器”  对话框的“常规”  选项卡上配置以下选项。  
   
 |字段|描述|  

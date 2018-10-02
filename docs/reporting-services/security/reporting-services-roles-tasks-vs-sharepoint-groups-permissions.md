@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d48222374e966110d6079bb2e48d66302b669f4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 75a595c5286de0dd050887ae28b95db5b724accc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778345"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 角色任务与SharePoint 组权限对比
   本主题将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式下基于角色和任务的授权功能与 SharePoint 产品中的安全功能进行比较。 本主题将比较角色、任务、SharePoint 组、权限级别和权限的术语及特征。  

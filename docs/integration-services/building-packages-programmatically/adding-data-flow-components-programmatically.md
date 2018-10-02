@@ -6,11 +6,7 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -19,16 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 420fd9d6204eb8bcbedaee7e7ef272d0ee88067a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 852f6e8580b59df5203ce7115c080254b78a7156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35313086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734655"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>以编程方式添加数据流组件
   若要生成数据流，则可以先添加组件。 然后配置这些组件并将它们连接在一起，以便在运行时建立数据流。 本节将介绍如何向数据流任务添加组件、如何创建组件的设计时实例以及配置该组件。 有关如何连接组件的详细信息，请参阅[以编程方式连接数据流组件](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)。  

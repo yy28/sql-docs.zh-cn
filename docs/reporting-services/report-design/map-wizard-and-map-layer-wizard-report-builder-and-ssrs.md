@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: reference
 f1_keywords:
 - sql13.rtp.rptdesigner.mapandlayerwizard.f1
@@ -13,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f31ec6e30bc1161fb325df8d6d27338546d15fc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645165"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  

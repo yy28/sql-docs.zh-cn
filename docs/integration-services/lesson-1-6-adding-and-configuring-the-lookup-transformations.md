@@ -5,23 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
-ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
+ms.openlocfilehash: 8356a7ff8ee0cdb0e55bcd313a01a8ce1fe045ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36297403"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765565"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>第 1-6 课 - 添加和配置查找转换
 在配置用于从源文件中提取数据的平面文件源后，下一个任务是定义获取 **CurrencyKey** 和 **DateKey**值所需的查找转换。 查找转换通过将指定输入列中的数据联接到引用数据集中的列来执行查找。 引用数据集可以是现有的表或视图，也可以是新表或 SQL 语句的结果。 在本教程中，查找转换使用 OLE DB 连接管理器连接到包含引用数据集的源数据的数据库。  

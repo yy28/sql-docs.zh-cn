@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.indexproperties.filter.f1
@@ -18,17 +16,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 99d72a5466996d39cf69da8b153dba0ef050b499
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846361"
 ---
 # <a name="index-properties-f1-help"></a>“索引属性”对话框的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ ms.locfileid: "43084417"
 ### <a name="bounding-box"></a>边界框  
  “边界框”  为几何平面的顶级网格的周界。 边界框参数仅存在于几何图形网格分割中。 如果 **“分割方案”** 为 **“地理网格”**，这些参数将不可用。  
   
- 面板将显示边界框的（X-min、Y-min）和（X-max、Y-max）坐标********。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
+ 面板将显示边界框的 **（**_X-min_**、**_Y-min_**）** 和 **（**_X-max_**、**_Y-max_**）** 坐标。 没有任何默认坐标值。 因此，在对 **geometry** 类型列创建新的空间索引时，必须指定坐标值。  
   
  **X-min**  
  边界框左下角的 X 坐标。  

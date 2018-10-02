@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: beb8865f15150d45fa23cfc6e97aab315ab3df04
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1bf8670aea01d074856188d1d0ab9836e83e3421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268476"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729005"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>呈现行为（报表生成器和 SSRS）
   根据选择的呈现器，呈现报表时，将针对表体及其内容应用特定的规则。 报表项在页面上的呈现方式由以下因素综合确定：  

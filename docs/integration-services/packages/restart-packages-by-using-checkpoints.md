@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checkpoints [Integration Services]
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2694e985acff1f3d520647f1db171c3b61471b2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1f3cf329f879398344ec67090c31ff1d07a1a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703195"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>通过使用检查点重新启动包
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 可以从失败点重新启动失败的包，而不是重新运行整个包。 如果包配置为使用检查点，则关于包执行的信息会写入检查点文件中。 当重新运行失败的包时，可以使用检查点文件从失败点重新启动该包。 如果包成功运行，则会删除该检查点文件，然后在下次运行包时会重新创建相应的检查点文件。  

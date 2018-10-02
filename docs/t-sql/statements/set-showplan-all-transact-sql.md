@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_ALL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd6611e13e45c1e3fa969111c68d3bd74d63249
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8ef59fc6349a588bbb58515614d6d977253d213a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733976"
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  *开销单位是基于内部时间度量，而不是时钟时间。 它们用于确定某个计划与其他相计划相比的相对开销。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要使用 SET SHOWPLAN_ALL，必须对执行 SET SHOWPLAN_ALL 的语句具有足够的执行权限，还必须对所有包含被引用对象的所有数据库具有 SHOWPLAN 权限。  
   
  对于 SELECT、INSERT、UPDATE、DELETE、EXEC stored_procedure 和 EXEC user_defined_function 语句，若要生成显示计划，用户必须：  

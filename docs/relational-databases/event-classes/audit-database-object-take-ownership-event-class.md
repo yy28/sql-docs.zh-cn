@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Database Object Take Ownership event class
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00b84746c933712029f9316e439529f3dcdd94f8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c9f2cbe96239d577fb6cd8bc703b603489de02ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703355"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "43062686"
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**成功**|**int**|1 = 成功。 0 = 失败。 例如，值为 1 时表示权限检查成功；值为 0 时表示权限检查失败。|23|用户帐户控制|  
 |**TargetUserName**|**nvarchar**|如果是针对某个数据库用户的操作（例如授予用户权限），则为该用户的名称。|39|用户帐户控制|  
-|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|依赖于跟踪中捕获的事件类的文本值。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

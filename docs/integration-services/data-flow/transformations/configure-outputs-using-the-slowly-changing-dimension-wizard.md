@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 394edd627a8cb3c62134cf4bec97adc0fe5ecbf5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 529553265adc0045fa9a52a9303d1c3b24998065
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752205"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>使用渐变维度向导配置输出
   渐变维度向导所起作用相当于渐变维度转换的编辑器。 为渐变维度数据生成和配置数据流可能是一项复杂的任务。 渐变维度向导提供了为渐变维度转换输出生成数据流的最简便方法，指导您逐步完成映射列、选择业务键列、设置列更改属性以及配置对推断维度成员的支持。  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfersqlserverobjectstask.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a1f021c19e306bc0b8549e9e4e5fa025dc1c63c4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 7175ed9eed05295ec193dcc5f1cbaef287d27f77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826645"
 ---
 # <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务
   传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库中一种或多种类型的对象。 例如，该任务可以复制表和存储过程。 可以复制的对象的类型会因用作源的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本而异。 例如，只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库包括架构和用户定义聚合。  
@@ -130,7 +127,7 @@ ms.locfileid: "35405309"
 > [!NOTE]  
 >  创建传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务的用户必须具有对源服务器对象的足够权限以选择对象进行复制，还必须具有访问这些对象将传输到的目标服务器数据库的权限。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象任务键入唯一的名称。 此名称用作任务图标中的标签。  
   

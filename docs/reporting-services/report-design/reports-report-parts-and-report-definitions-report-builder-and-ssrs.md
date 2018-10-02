@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a931367813e3fb474bba65648d5d93fbc02af10a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 40055e2138c419eed82f4d4dabd1bfa37b3c6644
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704195"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>报表、报表部件和报表定义（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用各种术语来描述不同状态的分页报表，包括初始定义、发布的报表以及显示给用户查看的报表。  

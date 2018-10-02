@@ -4,17 +4,16 @@ ms.date: 12/17/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c1a71522-394b-46a7-b9ec-f964bdd81d82
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eeaa107f3d9510edcd7ffbb54e301ab12265d8ea
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2739af78765645db8f24c211e8c9110085995e74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744765"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>启用报表服务器以允许进行 Power BI 移动访问
 可以通过 Power BI 移动应用来使用移动报表。 要将 Power BI 移动应用连接到 Reporting Services，需要进行一些配置。  

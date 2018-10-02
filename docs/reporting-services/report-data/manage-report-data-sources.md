@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84743e8ca158ed17435c3c6da4c844972320bdf1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3e82acf2dba0fac879868951ce992193c3a1f645
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661255"
 ---
 # <a name="manage-report-data-sources"></a>管理报表数据源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，报表、报表模型以及数据驱动订阅都从外部数据源检索数据。 若要连接到外部数据源，报表服务器可以使用报表、模型或订阅中定义的或从中引用的数据源连接信息。 数据源连接属性始终在创建报表或模型时通过该报表或模型进行定义，但是可以在将报表或模型发布到报表服务器后对这些属性进行单独管理。  

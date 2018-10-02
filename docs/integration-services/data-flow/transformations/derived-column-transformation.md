@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.derivedcolumntrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa667694b45c4a784c74ad3ca7b0e5689f491138
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5b1c27ff60b3e1c4dc99478d2df0377ae05a77f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713555"
 ---
 # <a name="derived-column-transformation"></a>派生列转换
   派生列转换通过对转换输入列应用表达式来创建新列值。 表达式可以包含来自转换输入的变量、函数、运算符和列的任意组合。 结果可作为新列添加，也可作为替换值插入到现有列。 派生列转换可定义多个派生列，任何变量或输入列都可以出现在多个表达式中。  
@@ -80,7 +77,7 @@ ms.locfileid: "35333291"
 ## <a name="derived-column-transformation-editor"></a>派生列转换编辑器
   可以使用 **“派生列转换编辑器”** 对话框，创建填充新列或替换列的表达式。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **变量和列**  
  通过将变量或输入列从可用变量和列的列表中拖到下面窗格中的现有表行，或者拖到列表底部的新行中，生成使用变量或输入列的表达式。  
   

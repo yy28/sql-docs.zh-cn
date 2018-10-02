@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9cdc6e030136e770d79b5730d34b9154ac795668
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 73d33f2ca15bda09b29cda5fe9e6c350f05dc10c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274519"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699555"
 ---
 # <a name="cache-a-shared-dataset"></a>如何缓存一个共享数据集
   提高性能的一种方法是配置共享数据集的缓存属性。 缓存共享数据集后，会在指定的一段时间内保存查询结果。 第一个向使用该共享数据集的报表发出请求的用户必须等到查询结果和所有处理全部完成后才能查看报表。 以后在缓存期间请求该报表的用户将会体验到性能改进，因为查询和处理已经完成。 还可以指定运行查询的缓存刷新计划，并在指定的缓存过期时间之前一直缓存查询结果。  

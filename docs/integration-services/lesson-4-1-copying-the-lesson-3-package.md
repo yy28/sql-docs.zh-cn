@@ -5,23 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cf58153bff50754c04447073af2aa54ac2bd46
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 601682511038665e3ea692c43eb45552ceccb69e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702505"
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>第 4-1 课 - 复制第 3 课包
 在本任务中，将为第 3 课中创建的 Lesson 3.dtsx 包创建一个副本。 或者，如果未完成第 3 课，则可以向项目添加本教程中附带的已完成的第 3 课包，然后再对其进行复制以供使用。 将使用这一新副本来完成第 4 课剩余部分。  

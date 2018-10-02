@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10404"
@@ -18,12 +17,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91ff438183c197511ee33ee0f0baa779feb2b768
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a68f9d4f0eea662b143b6a37dd5d2e5d5faeb846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673165"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>内置集合 - 报表和组变量引用（报表生成器）
   在报表的表达式中需要多次使用某个复杂计算时，您可能需要创建一个变量。 您可以创建一个报表变量或组变量。 变量名称在报表中必须是唯一的。  

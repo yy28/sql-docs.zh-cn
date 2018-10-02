@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4409c736d53617d87c6d2a36f1f50b4eab4ee2b3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: eb300ad961ded0b49ae8a9d36d3ccaeacf635e5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733745"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +33,9 @@ ms.locfileid: "35403879"
 |project_lsn|**bigint**|要对照其进行验证的项目版本。|  
 |use32bitruntime|**bit**|指示是否应使用 32 位运行时在 64 位操作系统上运行包。 如果值为 `1`则使用 32 位运行时进行执行。 如果值为 `0`，则使用 64 位运行库来运行执行过程。|  
 |reference_id|**bigint**|项目用来引用环境的项目环境引用的唯一 ID。|  
-|operation_type|**int**|操作的类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
+|operation_type|**smallint**|操作的类型。 在此视图中显示的操作包括项目验证 (`300`) 和包验证 (`301`)。|  
 |object_name|**nvarhcar(260)**|对象的名称。|  
-|object_type|**int**|对象的类型。 该对象可能是一个项目 (`20`) 或包 (`30`)。|  
+|object_type|**smallint**|对象的类型。 该对象可能是一个项目 (`20`) 或包 (`30`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
 |start_time|**datetimeoffset(7)**|开始操作的时间。|  
 |end_time|**datetimeoffsset(7)**|操作结束的时间。|  
@@ -55,14 +52,14 @@ ms.locfileid: "35403879"
 ## <a name="remarks"></a>Remarks  
  此视图对于 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目录中的每个验证显示一行。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对相应操作的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

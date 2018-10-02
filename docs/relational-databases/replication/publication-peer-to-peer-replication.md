@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.p2pwizard.publication.f1
 ms.assetid: 92794414-6e54-437a-88b6-3bf02d3802f6
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 963cb5a142e3413f3ed71c61e42185d50f2754c1
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8835ff0bb35cb514ba506506b232174565ff3791
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358419"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707145"
 ---
 # <a name="publication-peer-to-peer-replication"></a>发布（对等复制）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **“发布”** 页显示为对等复制启用的事务发布。 可以在 **“发布属性”** 对话框的 **“订阅选项”** 页上启用发布。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **发布服务器**  
  显示连接的服务器。 若要连接到不同的服务器，请选择 **“查找 SQL Server 发布服务器”**。  
   

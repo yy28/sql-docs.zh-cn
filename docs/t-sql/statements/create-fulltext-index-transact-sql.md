@@ -5,9 +5,7 @@ ms.date: 04/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXT_INDEX_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 110
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c92d948cac44c58dfc6558fec62db5e19a3562a0
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670258"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -176,7 +173,7 @@ CREATE FULLTEXT INDEX ON table_name
   
  有关填充全文检索的详细信息，请参阅[填充全文检索](../../relational-databases/search/populate-full-text-indexes.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须对全文目录拥有 REFERENCES 权限，对表或索引视图拥有 ALTER 权限，或者必须是 sysadmin 固定服务器角色、db_owner 或 db_ddladmin 固定数据库角色的成员。  
   
  如果指定了 SET STOPLIST，则用户必须具有指定非索引字表的 REFERENCES 权限。 此 STOPLIST 的所有者可授予此权限。  

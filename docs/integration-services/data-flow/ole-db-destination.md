@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.oledbdest.f1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91ef4d0595ea468f9b6fdd2bfb43bbd9dacad6ed
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 52db780f2e19862110b274b97c2ce616b1503301
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636876"
 ---
 # <a name="ole-db-destination"></a>OLE DB 目标
   OLE DB 目标用数据库表或视图或者用 SQL 命令，将数据加载到各种符合 OLE DB 的数据库中。 例如，OLE DB 源可以将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中。  
@@ -260,7 +257,7 @@ ms.locfileid: "35406909"
 ## <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 目标编辑器（“映射”页）
   可以使用 **“OLE DB 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -276,7 +273,7 @@ ms.locfileid: "35406909"
 ## <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目标编辑器（“错误输出”页）
   可以使用 **“OLE DB 目标编辑器”** 对话框的 **“错误输出”** 页指定错误处理选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看输入的名称。  
   

@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -18,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6aeff0f3d7f49a8f74da7fa5303b337cc34b5efc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eaa7c799c6897403b085eb55acf7de3e4247aa77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844638"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](http://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c)。 有关使用特定数据源类型的详细信息，请参阅 [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)。  

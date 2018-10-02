@@ -4,17 +4,16 @@ ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08682ef7985727e17aca84ee4013d2b0b90761ad
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cef9239250bccd043d530917a284913db3e0d6e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273140"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795175"
 ---
 # <a name="previewing-reports-in-report-builder"></a>在报表生成器中预览报表
   当创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，经常预览报表以验证报表显示你所需的内容会非常有用。 若要预览报表，请单击 **“运行”**。 报表将在预览模式下呈现。  

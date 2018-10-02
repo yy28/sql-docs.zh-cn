@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -17,22 +14,21 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ae8d57240ccfa454fbcc0265054c1b7c5ef1b40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea8483650d0426867ad9c50c329f5e749ee1ee9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834365"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server Database Mirroring 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SQLServer:Database Mirroring** 性能对象包含报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像的性能计数器。 下表列出了此对象包含的计数器。  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |**Bytes Received/sec**|每秒收到的字节数。|  
 |**Bytes Sent/sec**|每秒发送的字节数。|  

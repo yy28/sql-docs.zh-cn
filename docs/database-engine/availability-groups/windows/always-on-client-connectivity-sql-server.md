@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5aa7de0039c5f0b438256a8ba727070964791ff2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ee9f18e30c19ed1318f28bb4ae97bf137ec679c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753865"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 客户端连接 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +41,12 @@ ms.locfileid: "34768583"
   
 |驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网端点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|是|是|是|是|是|  
-|SQL Native Client 11.0 OLEDB|“否”|是|是|否|“否”|  
-|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序）*|是|是|是|是|是|  
-|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序）**|是|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是| 
-|适用于 SQL Server 的 Microsoft OLE DB 驱动程序|是|是|是|是|是| 
+|SQL Native Client 11.0 ODBC|用户帐户控制|是|是|是|用户帐户控制|  
+|SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
+|ADO.NET（结合使用 .NET Framework 4.0 和连接性修补程序）*|用户帐户控制|是|是|是|用户帐户控制|  
+|ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序）**|用户帐户控制|是|是|是|用户帐户控制|  
+|Microsoft JDBC driver 4.0 for SQL Server|用户帐户控制|是|是|是|用户帐户控制| 
+|适用于 SQL Server 的 Microsoft OLE DB 驱动程序|用户帐户控制|是|是|是|用户帐户控制| 
   
  * 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
   

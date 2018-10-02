@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - remote data source [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e82addcaf8c168b244866f9d0710827636480c62
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f3c0a1a5c729f01a10362dd8205e715d9d3059c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265969"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682955"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>启用远程错误 (Reporting Services)
   可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上的服务器属性设置为返回远程服务器上所发生的错误情形的其他信息。 如果错误消息中包含文本“有关此错误的详细信息，请导航到本地服务器上的报表服务器或启用远程错误”，则可以将 **EnableRemoteErrors** 属性设置为访问可帮助您解决问题的其他信息。 有关详细信息，请参阅 [联机丛书中的](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 报表服务器系统属性 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

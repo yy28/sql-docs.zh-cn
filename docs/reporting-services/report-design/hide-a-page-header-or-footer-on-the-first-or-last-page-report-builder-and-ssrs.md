@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12d12b93a842ac601e17e263436d7192e521b548
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6291fa6f851116ed5c0010211ce7278e4cafee3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281189"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678575"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隐藏第一页或最后一页的页眉或页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 添加页眉或页脚后，可以在报表的第一页和最后一页选择性地将其隐藏。  

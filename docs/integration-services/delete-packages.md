@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ac860efc7778dbf5b0aba717d48ea47e053f940
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2bff9b44a6070cb0d0d0bf948fe6ecbc98b8cf0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720535"
 ---
 # <a name="delete-packages"></a>删除包
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，可以删除已保存到文件系统的包。 如果删除某个包，则该包将被永久删除并且无法还原到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目。  

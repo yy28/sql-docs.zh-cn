@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.adonetdest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c79ed326ac9553dfa756ab639b8689c2067c548c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 493e6c7a6cb2f3de0d6e637ece3add31085a8bdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742355"
 ---
 # <a name="ado-net-destination"></a>ADO NET 目标
   ADO NET 目标可将数据加载到各种使用数据库表或视图的兼容 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]的数据库中。 你可以选择将这些数据加载到现有表或视图中，或者先创建一个新表，然后将这些数据加载到新表中。  
@@ -123,7 +120,7 @@ ms.locfileid: "35332391"
   
 3.  在 **“ADO NET 目标编辑器”** 中，单击 **“映射”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -147,7 +144,7 @@ ms.locfileid: "35332391"
   
 3.  在 **“ADO NET 目标编辑器”** 中，单击 **“错误输出”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入或输出**  
  查看输入的名称。  
   

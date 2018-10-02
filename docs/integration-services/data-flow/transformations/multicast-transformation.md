@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30ae02d749f4a1d0587f8ab1692467bf24e21786
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 795eacbaacc5fca1cc3d51908a365986019543c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664965"
 ---
 # <a name="multicast-transformation"></a>多播转换
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)。  
@@ -49,7 +46,7 @@ ms.locfileid: "35331301"
 ## <a name="multicast-transformation-editor"></a>多播转换编辑器
   可以使用 **“多播转换编辑器”** 对话框查看和设置每个转换输出的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输出**  
  在左侧选择输出可以在右侧的表中查看其属性。  
   

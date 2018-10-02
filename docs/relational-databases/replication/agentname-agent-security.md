@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a66173782ef133b5636b53d545dca698468b9f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8e1ae73378fd509f2ce10efdb5141356473e7b71
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648675"
 ---
 # <a name="ltagentnamegt-agent-security"></a>&lt;代理名称&gt; 代理安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用“\<代理名称> 代理安全性”页，你可以指定用来运行分发代理（对于事务复制和快照复制）或合并代理（对于合并复制）的帐户，并与复制拓扑中的计算机建立连接。 有关代理要求的权限及复制安全的最佳实践的信息，请参阅[复制代理安全模型](../../relational-databases/replication/security/replication-agent-security-model.md)和[复制安全性最佳做法](../../relational-databases/replication/security/replication-security-best-practices.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  单击每个订阅服务器的行中的属性按钮 (**...**)，可以访问 **“分发代理安全性”** 或 **“合并代理安全性”** 对话框。 对于代理使用的帐户，有关其所需权限的详细信息，请在启动的对话框中单击 **“帮助”** 。  
   
  在一个对话框中输入设置后，将在网格中显示订阅服务器的连接信息。  

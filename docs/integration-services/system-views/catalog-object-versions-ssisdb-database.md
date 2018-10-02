@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 987ff23954d61c2d47b2c906825dba80ccc4e541
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 158c55b3b05920a5fddbf0afb429e12b49f52682
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784815"
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "35400459"
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|对象版本的唯一标识符 (ID)。 此数字不保证是按顺序排列的。|  
 |object_id|**bigint**|对象的唯一 ID。|  
-|object_type|**int**|对象的类型。 将针对项目显示值 `20`。|  
+|object_type|**smallint**|对象的类型。 将针对项目显示值 `20`。|  
 |object_name|**sysname(nvarchar(128))**|对象的名称。|  
 |description|**nvarchar(1024)**|项目的说明。|  
 |created_by|**nvarchar(128)**|向目录添加对象的用户名。|  
@@ -41,12 +38,12 @@ ms.locfileid: "35400459"
 ## <a name="remarks"></a>Remarks  
  此视图对于目录中的每个对象版本显示一行。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要查看此视图中的行，您必须具有以下权限之一：  
   
 -   针对对象的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
 -   sysadmin 服务器角色中的成员资格。  
   
