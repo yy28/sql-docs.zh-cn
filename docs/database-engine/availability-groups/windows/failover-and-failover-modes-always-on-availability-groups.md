@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f36ed49c90f9d5e4a3753a7cc72b144e510bac3b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a51069c347ac22d2dbb45f854e182995507bbf7f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769653"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783565"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,9 +81,9 @@ ms.locfileid: "34769653"
   
 ||异步提交模式|同步提交模式（手动故障转移模式）|同步提交模式（自动故障转移模式）|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自动故障转移 (automatic failover)|“否”|否|是|  
-|计划的手动故障转移|“否”|是|是|  
-|强制故障转移|是|是|是**\***|  
+|自动故障转移 (automatic failover)|否|否|用户帐户控制|  
+|计划的手动故障转移|否|是|用户帐户控制|  
+|强制故障转移|用户帐户控制|用户帐户控制|是**\***|  
   
  **\*** 如果对已同步的辅助副本发出强制故障转移命令，辅助副本的行为与手动故障转移时的行为相同。  
   
@@ -261,9 +258,9 @@ ms.locfileid: "34769653"
   
 |辅助副本的可用性模式|数据库是否同步？|是否可能发生数据丢失？|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|同步提交|是|“否”|  
-|同步提交|“否”|是|  
-|异步提交|“否”|是|  
+|同步提交|用户帐户控制|否|  
+|同步提交|否|用户帐户控制|  
+|异步提交|否|用户帐户控制|  
   
  辅助数据库仅跟踪两个恢复分叉，因此，如果您执行多个强制故障转移，则确实已与先前的强制故障转移启动数据同步的任何辅助数据库都可能无法恢复运行。 如果发生这种情况，则需要从可用性组中删除无法恢复的所有辅助数据库，还原到正确的时间点，然后重新加入可用性组。 还原不能跨多个恢复分叉执行，因此请确保在执行多个强制故障转移后执行日志备份。  
   

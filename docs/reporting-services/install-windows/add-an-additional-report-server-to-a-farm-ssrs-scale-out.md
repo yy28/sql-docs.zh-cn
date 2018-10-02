@@ -3,17 +3,16 @@ title: 向场中添加另一个报表服务器（SSRS 横向扩展）| Microsoft
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec301df6aeef1977bc635a6920c1eeb1ef92f2b5
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0b5e42465bd2a0c4661709dd1a17a2b7de8c6b3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277448"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830835"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>向场中添加另一个报表服务器（SSRS 扩展）
 

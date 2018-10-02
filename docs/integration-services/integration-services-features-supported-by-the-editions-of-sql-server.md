@@ -5,21 +5,18 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c7865910ffb00b654c8be47f87bef752df1368a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 35c0b050c760540988ff366f91a7884b7b5fd56b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819775"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各个版本支持的 Integration Services 功能
  本主题提供有关不同版本的 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]所支持的 SQL Server Integration Services (SSIS) 功能的详细信息。  
@@ -41,9 +38,9 @@ ms.locfileid: "35411399"
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out 主要角色|是|||||
-|Scale Out 辅助角色|是|是 <sup>1</sup>|TBD|TBD|TBD|
-|支持 OData 组件 <sup>2</sup> 中的 Microsoft Dynamics AX 和 Microsoft Dynamics CRM|是|是||||
+|Scale Out 主要角色|用户帐户控制|||||
+|Scale Out 辅助角色|用户帐户控制|是 <sup>1</sup>|TBD|TBD|TBD|
+|支持 OData 组件 <sup>2</sup> 中的 Microsoft Dynamics AX 和 Microsoft Dynamics CRM|用户帐户控制|用户帐户控制||||
 
 <sup>1</sup> 如果在 Scale Out 中运行的包需要仅限企业版的功能，则 Scale Out Worker 必须也在 SQL Server 企业版实例上运行。
 
@@ -53,37 +50,37 @@ ms.locfileid: "35411399"
 
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 导入和导出向导|是|是|是|是|是|  
+|SQL Server 导入和导出向导|用户帐户控制|是|是|是|用户帐户控制|  
 
 ## <a name="IS"></a> Integration Services  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|内置数据源连接器|是|是|||| 
-|内置任务和转换|是|是||||  
-|ODBC 源和目标 |是|是|||| 
-|Azure 数据源连接器和任务|是|是||||  
-|Hadoop/HDFS 连接器和任务|是|是||||  
-|基本数据探查工具|是|是|||| 
+|内置数据源连接器|用户帐户控制|用户帐户控制|||| 
+|内置任务和转换|用户帐户控制|用户帐户控制||||  
+|ODBC 源和目标 |用户帐户控制|用户帐户控制|||| 
+|Azure 数据源连接器和任务|用户帐户控制|用户帐户控制||||  
+|Hadoop/HDFS 连接器和任务|用户帐户控制|用户帐户控制||||  
+|基本数据探查工具|用户帐户控制|用户帐户控制|||| 
 
 ## <a name="ISAA"></a>Integration Services - 高级源和目标  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity 提供的高性能 Oracle 源和目标|是|||||  
-|Attunity 提供的高性能 Teradata 源和目标|是|||||  
-|SAP BW 源和目标|是|||||  
-|数据挖掘模型定型目标|是|||||  
-|维度处理目标|是|||||  
-|分区处理目标|是|||||  
+|Attunity 提供的高性能 Oracle 源和目标|用户帐户控制|||||  
+|Attunity 提供的高性能 Teradata 源和目标|用户帐户控制|||||  
+|SAP BW 源和目标|用户帐户控制|||||  
+|数据挖掘模型定型目标|用户帐户控制|||||  
+|维度处理目标|用户帐户控制|||||  
+|分区处理目标|用户帐户控制|||||  
   
 ## <a name="ISAT"></a>Integration Services - 高级任务和转换  
   
 |功能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity <sup>1</sup> 提供的变更数据捕获组件|是|||||  
-|数据挖掘查询转换|是|||||  
-|模糊分组和模糊查找转换|是|||||  
-|术语提取和术语查找转换|是|||||  
+|Attunity <sup>1</sup> 提供的变更数据捕获组件|用户帐户控制|||||  
+|数据挖掘查询转换|用户帐户控制|||||  
+|模糊分组和模糊查找转换|用户帐户控制|||||  
+|术语提取和术语查找转换|用户帐户控制|||||  
 
 <sup>1</sup> 由 Attunity 提供的变更数据捕获组件需要企业版。 不过变更数据捕获服务和变更数据捕获设计器不需要企业版。 可以在未安装 SSIS 的计算机上使用设计器和服务。

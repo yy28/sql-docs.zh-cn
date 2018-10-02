@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd4a93c7c64df8e77710581d0b6463bd1ca683ca
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1f468509d077ea3b03c31485c26d945d18e9b537
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821779"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "43067310"
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|事件开始的时间（如果可用）。|14|用户帐户控制|  
-|**TextData**|**ntext**|在 DTC 中唯一标识此事务的 UOW 的文本表示形式。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|在 DTC 中唯一标识此事务的 UOW 的文本表示形式。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0772e8230673a23412d880aef729d0a278c448bb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822215"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
@@ -107,7 +104,7 @@ ms.locfileid: "35401619"
 > [!NOTE]  
 >  连接指定的服务器必须正在运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 模糊分组转换会在 tempdb 中创建临时数据对象，这些对象的大小可能与为此转换输入的所有内容完全一致。 在执行转换时，该转换将对这些临时对象发出服务器查询。 这会影响服务器的总体性能。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“无缓存”**  
  使用列表框选择现有的 OLE DB 连接管理器，或使用“新建”按钮创建新的连接。  
   
@@ -117,7 +114,7 @@ ms.locfileid: "35401619"
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊分组转换编辑器（“列”选项卡）
   可以使用 **“模糊分组转换编辑器”** 对话框的 **“列”** 选项卡，指定用于对带有重复值的行进行分组的列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  从此列表中选择用于对带有重复值的行进行分组的输入列。  
   
@@ -164,7 +161,7 @@ ms.locfileid: "35401619"
 > [!NOTE]  
 >  模糊分组转换的 **Exhaustive** 和 **MaxMemoryUsage** 属性未在 **“模糊分组转换编辑器”** 中提供，但可以使用 **“高级编辑器”** 进行设置。 有关这些属性的详细信息，请参阅 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)的“模糊分组转换”部分。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入键列名**  
  指定包含每个输入行的唯一表示符的输出列名称。 **_key_in** 列包含的值可唯一标识每个行。  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.httpconnection.server.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 594cd95d41140f647a163f62c7e3a371e5fb25ec
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 84303bf8084f745a052e4057351fa29a231d6dc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824696"
 ---
 # <a name="http-connection-manager"></a>HTTP 连接管理器
   利用 HTTP 连接，包可以使用 HTTP 访问 Web 服务器以发送或接收文件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 Web 服务任务使用此连接管理器。  
@@ -63,7 +60,7 @@ ms.locfileid: "35329801"
   
  若要了解有关 HTTP 连接管理器的详细信息，请参阅 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)。 若要了解有关 HTTP 连接管理器的常见使用方案的详细信息，请参阅 [Web Service Task](../../integration-services/control-flow/web-service-task.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器 URL**  
  键入服务器的 URL。  
   
@@ -101,7 +98,7 @@ ms.locfileid: "35329801"
   
  若要了解有关 HTTP 连接管理器的详细信息，请参阅 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)。 若要了解有关 HTTP 连接管理器的常见使用方案的详细信息，请参阅 [Web Service Task](../../integration-services/control-flow/web-service-task.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **使用代理**  
  指定是否希望通过代理服务器连接 HTTP 连接管理器。  
   

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7c026c5ddd7e7e9e82269bfa28f04d5b538afc21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832625"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>键盘快捷键（报表生成器）
   在报表生成器中创建和编辑分页的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表时，可以使用 Windows 环境提供的用于导航的所有快捷键。 您可以从多个标准键盘映射方案中选择。  

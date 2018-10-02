@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingmodeltrainingdest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b70c19790ca3f9a09b2e18217f48190889c74624
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3c2a2ec4b26bdc216dc96080171ecd0cff0816e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821945"
 ---
 # <a name="data-mining-model-training-destination"></a>数据挖掘模型定型目标
   数据挖掘模型定型目标将该目标接收到的数据通过数据挖掘模型算法传递，从而为数据挖掘模型定型。 如果模型是在同一数据结构上生成的，则一个目标可为多个数据挖掘模型定型。 有关详细信息，请参阅 [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) 和 [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md)。  
@@ -56,7 +53,7 @@ ms.locfileid: "35333131"
 ## <a name="data-mining-model-training-editor-connection-tab"></a>数据挖掘模型定型编辑器（“连接”选项卡）
   可以使用 **“数据挖掘模型定型编辑器”** 对话框的 **“连接”** 页选择要定型的挖掘模型。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
  从现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接。  
   
@@ -75,7 +72,7 @@ ms.locfileid: "35333131"
 ## <a name="data-mining-model-training-editor-columns-tab"></a>数据挖掘模型定型编辑器（“列”选项卡）
   可以使用 **“数据挖掘模型定型编辑器”** 对话框的 **“列”** 页，将输入列映射到挖掘结构中的列。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 拖动输入列可将其映射到挖掘结构列。  
   

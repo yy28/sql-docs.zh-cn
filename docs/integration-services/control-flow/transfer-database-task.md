@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transferdatabasetask.f1
@@ -18,16 +16,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21fc39c5ed71826f12d6034d0507d03e61a82ecd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e23db45cfe4dd389593ae71726af000b1404390a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830535"
 ---
 # <a name="transfer-database-task"></a>传输数据库任务
   传输数据库任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的两个实例之间传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 与只通过复制方式传输 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象的其他任务相比，传输数据库任务既可以复制也可以移动数据库。 此任务还可以用来复制同一个服务器上的数据库。  
@@ -93,7 +90,7 @@ ms.locfileid: "35403629"
 ## <a name="transfer-database-task-editor-general-page"></a>传输数据库任务编辑器（“常规”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“常规”** 页，可以对传输数据库任务进行命名和说明。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。   
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为传输数据库任务键入唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -106,7 +103,7 @@ ms.locfileid: "35403629"
 ## <a name="transfer-database-task-editor-databases-page"></a>传输数据库任务编辑器（“数据库”页）
   使用 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页可为传输数据库任务涉及的源数据库和目标数据库指定属性。 传输数据库任务将在两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例之间复制或移动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。 此任务还可以用来复制同一个服务器上的数据库。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **SourceConnection**  
  从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   
@@ -174,7 +171,7 @@ ms.locfileid: "35403629"
   
  若要使用源服务器上数据库文件的名称和位置填充此对话框，请首先在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中指定 **SourceConnection** 和 **SourceDatabaseName** 。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **源文件**  
  源服务器上要传输的数据库文件的名称。 **“源文件”** 是只读的。  
   
@@ -193,7 +190,7 @@ ms.locfileid: "35403629"
   
  若要使用源服务器上数据库文件的名称和位置自动填充此对话框，请首先在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中指定 **SourceConnection** 、 **SourceDatabaseName** 和 **SourceDatabaseFiles** 。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **目标文件**  
  目标服务器上作为传输目标的数据库文件的名称。  
   

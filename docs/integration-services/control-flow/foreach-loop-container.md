@@ -5,9 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aebf427b093a860122ace5c21f1a887dac331525
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 71f8cb6faeb5010cc39a05e2611753a04de812e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822425"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  
@@ -183,7 +180,7 @@ ms.locfileid: "35331451"
   
  若要了解有关 Foreach 循环容器以及如何对其进行配置的信息，请参阅 [Foreach 循环容器](../../integration-services/control-flow/foreach-loop-container.md) 和 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为 Foreach 循环容器提供唯一的名称。 此名称在任务图标和日志中用作标签。  
   
@@ -497,7 +494,7 @@ ms.locfileid: "35331451"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 教程“创建简单 ETL 包教程”包括一节介绍如何添加和配置 Foreach 循环的课程。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **变量**  
  选择现有变量，或单击 **“新建变量...”** 创建新变量。  
   
@@ -518,7 +515,7 @@ ms.locfileid: "35331451"
 ## <a name="schema-restrictions-dialog-box-adonet"></a>“架构限制”对话框 (ADO.NET)
 可以使用 **“架构限制”** 对话框设置要应用于 Foreach ADO.NET 架构行集枚举器的架构限制。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **限制**  
  选择要应用于该架构的约束。  
   
@@ -533,7 +530,7 @@ ms.locfileid: "35331451"
 ## <a name="for-each-item-columns-dialog-box"></a>“For Each Item 列”对话框
 可以使用 **“For Each Item 列”** 对话框定义 Foreach Item 枚举器枚举的项中的列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **列**  
  列出各列。  
   
@@ -549,7 +546,7 @@ ms.locfileid: "35331451"
  ## <a name="select-smo-enumeration-dialog-box"></a>“选择 SMO 枚举”对话框
 可以使用“选择 SMO 枚举”对话框，指定要在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上枚举的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) 并选择枚举类型。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **枚举**  
  展开服务器，再选择 SMO 对象。  
   

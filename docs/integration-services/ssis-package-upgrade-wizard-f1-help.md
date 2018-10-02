@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.is.upgradewizard.ssisupgradewizard.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829485"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 包升级向导的 F1 帮助
   使用 SSIS 包升级向导可将由较早版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 创建的包升级到当前版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的包格式。  
@@ -38,7 +35,7 @@ ms.locfileid: "35329181"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS 升级向导
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **不再显示此页。**  
  下次打开向导时跳过“欢迎”页。  
  
@@ -145,7 +142,7 @@ ms.locfileid: "35329181"
   
 -   [使用 SSIS 包升级向导升级 Integration Services 包](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **更新连接字符串以使用新的提供程序名称**  
  更新连接字符串以使用当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的下列提供程序的名称：  
   
@@ -194,7 +191,7 @@ ms.locfileid: "35329181"
 ## <a name="select-packages-page"></a>“选择包”页
   可以使用 **“选择包”** 页选择要升级的包。 此页列出了在向导的 **“选择源位置”** 页上指定的位置中存储的包。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **现有包名称**  
  选择一个或多个要升级的包。  
   
@@ -213,14 +210,14 @@ ms.locfileid: "35329181"
 ## <a name="complete-the-wizard-page"></a>“完成向导”页
   可以使用 **“完成该向导”** 页查看并确认所选的包升级选项。 这是向导的最后一页，您可以返回并更改向导此会话的选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **选项摘要**  
  查看您在向导中选择的升级选项。 若要更改任意选项，请单击 **“上一步”** 返回到向导前面的页
  
 ## <a name="upgrading-the-packages-page"></a>“正在升级包”页
   可以使用 **“升级包”** 页查看包升级的进度以及中断升级过程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包升级向导会逐一升级所选包。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **消息窗格**  
  在升级过程中显示进度消息和摘要信息。  
   

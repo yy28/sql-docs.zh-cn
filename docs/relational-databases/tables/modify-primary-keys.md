@@ -5,25 +5,22 @@ ms.date: 07/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b6fa0a121df5743c20acae8ad1d564e1473e8e7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6ee5dd7e4bf1b4f4f6b05ab6ae54c04e5baf0ab1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829995"
 ---
 # <a name="modify-primary-keys"></a>修改主键
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ms.locfileid: "43067966"
     |定义填充因子|展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。 有关填充因子及其用途的详细信息，请参阅 [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)。|  
     |更改列顺序|选择“列”，再单击属性右侧的省略号 (…)。 在  **“索引列”** 对话框中，将这些列从主键中删除。 然后，按所需顺序重新添加这些列。 若要将某列从键中移除，只需将其列名从 **“列”** 名称列表名称中移除即可。|  
   
-4.  在“文件”菜单上，单击“保存table name”。  
+4.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **修改主键**  

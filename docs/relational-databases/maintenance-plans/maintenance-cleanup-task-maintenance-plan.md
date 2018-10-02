@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: maintenance-plans
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.maint.cleanup.f1
 helpviewer_keywords:
 - Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 689b00b0da037fd5b72d5b8785c337781cc3e0b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d9398bfda4df50706d1767ce6e5114acbe34a63
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815975"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>“清除维护”任务（维护计划）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "32942972"
 > [!NOTE]  
 >  “清除维护”任务不会自动删除指定目录的子文件夹中的文件。 此功能减少了使用清除维护任务删除文件的恶意攻击的可能性。 如果要删除一级子文件夹中的文件，必须选择“包括一级子文件夹”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **连接**  
  显示当前的连接。  
   

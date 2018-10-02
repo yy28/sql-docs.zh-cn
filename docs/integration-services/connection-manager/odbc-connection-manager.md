@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.odbcconnection.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5738bb81defed287c9394b708487fac6a43e5ecd
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 84910634eb684335f42ed8c3c8c36d0b317f4e53
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829405"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 连接管理器
   ODBC 连接管理器使得包能够使用开放式数据库连接规范 (ODBC) 连接到多种数据库管理系统。  
@@ -48,7 +45,7 @@ ms.locfileid: "35333381"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击以下主题之一：  
   
--   [ODBC 连接管理器用户界面参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
+-   [ODBC 连接管理器 UI 参考](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)  
   
  有关以编程方式配置连接管理器的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 和 [以编程方式添加连接](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)项目。  
   
@@ -57,7 +54,7 @@ ms.locfileid: "35333381"
   
  若要了解有关 ODBC 连接管理器的详细信息，请参阅 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **数据连接**  
  从列表中选择现有的 ODBC 连接管理器。  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40405504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827345"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ ms.locfileid: "40405504"
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
 |**成功**|**int**|0 = 错误。<br /><br /> 1 = 成功。<br /><br /> 2 = 因服务器中止而跳过 (MSDE)。|23|用户帐户控制|  
-|**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1: 列出更新/创建的统计信息<br /><br /> 2、3 或 4：NULL；用已更新的统计信息的索引/统计信息 ID 填充 **IndexID** 列。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|此列的内容取决于统计信息是同步更新的 (**EventSubClass** 1) 还是异步更新的（**EventSubClass** 2、3 或 4）：<br /><br /> 1: 列出更新/创建的统计信息<br /><br /> 2、3 或 4：NULL；用已更新的统计信息的索引/统计信息 ID 填充 **IndexID** 列。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |**类型**|**int**|作业类型。|57|用户帐户控制|  
   
