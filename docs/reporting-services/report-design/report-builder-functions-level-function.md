@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee908199262066372b6bb00e41ebe9e341209592
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9dfd17acaa01bd415c5fde547bb714f62936d09e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833875"
 ---
 # <a name="report-builder-functions---level-function"></a>报表生成器函数 - Level 函数
   返回在递归层次结构中的当前深度级别。  
