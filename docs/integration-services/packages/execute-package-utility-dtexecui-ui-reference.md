@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.dtexecui.setvalues.f1
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 825edb0d4002dec483756551e1c2b175acef7efe
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401449"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669425"
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -127,7 +124,7 @@ ms.locfileid: "35401449"
 ## <a name="configurations-page"></a>配置页  
  可以使用 **“执行包实用工具”** 对话框的 **“配置”** 页，选择在运行时加载的配置文件并指定它们的加载顺序。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **配置文件**  
  列出包使用的配置。 每个配置文件都会向命令提示符中添加 **/CONFIGFILE filename** 选项。  
   
@@ -152,7 +149,7 @@ ms.locfileid: "35401449"
 ## <a name="command-files-page"></a>“命令文件”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令文件”** 页选择在运行时加载的命令文件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Command files**  
  列出包使用的命令文件。 一个包可以使用多个文件来设置命令行选项。  
   
@@ -174,7 +171,7 @@ ms.locfileid: "35401449"
 ## <a name="connection-managers-page"></a>“连接管理器”页  
  可以使用 **“执行包实用工具”** 对话框的 **“连接管理器”** 页，编辑包使用的连接管理器的连接字符串。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **连接管理器**  
  选中其复选框后，“连接字符串”列即会变为可编辑状态。  
   
@@ -193,7 +190,7 @@ ms.locfileid: "35401449"
 ## <a name="execution-options-page"></a>“执行选项”页  
  可以使用“执行包实用工具”对话框的“执行选项”页指定包的运行时选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **发生验证警告时包失败**  
  指示如果发生验证警告包是否失败。  
   
@@ -227,7 +224,7 @@ ms.locfileid: "35401449"
 ## <a name="reporting-page"></a>“报告”页  
  可以使用 **“执行包实用工具”** 对话框的 **“报告”** 页指定与包有关的事件和信息，以便在包运行时记录到控制台。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **控制台事件**  
  指示要报告的事件和消息类型。  
   
@@ -288,7 +285,7 @@ ms.locfileid: "35401449"
 ## <a name="logging-page"></a>“日志记录”页  
  可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 */LOGGER***classid 选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **日志提供程序**  
  从该列表中选择日志提供程序。  
   
@@ -307,7 +304,7 @@ ms.locfileid: "35401449"
 ## <a name="set-values-page"></a>“设置值”页  
  可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 */SET***propertypath;value 选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **属性路径**  
  键入属性的路径。 在路径语法中，反斜杠 (\\) 用于指示其后面为容器项，句点 (.) 用于指示其后面为属性项，而括号用于指示集合成员。 成员可以通过其索引或其名称进行标识。 例如，包变量的属性路径可以是 \Package.Variables[MyVariable].Value。  
   
@@ -326,7 +323,7 @@ ms.locfileid: "35401449"
 ## <a name="verification-page"></a>“验证”页  
  可以使用 **“执行包”** 对话框的 **“验证”** 页设置对包进行验证的条件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **仅执行已签名的包**  
  选择此项将仅执行已签名的包。  
   
@@ -357,7 +354,7 @@ ms.locfileid: "35401449"
 ## <a name="command-line-page"></a>“命令行”页  
  可以使用 **“执行包实用工具”** 对话框的 **“命令行”** 节点，编辑由不同对话框创建的选项生成的命令行。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **还原原始选项**  
  单击此项可将命令行还原为其原始状态。 如果你使用“手动编辑命令行”选项进行了修改，然后要还原原始命令行选项，则可以使用此选项。  
   

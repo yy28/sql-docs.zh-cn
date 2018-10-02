@@ -1,13 +1,11 @@
-﻿---
+---
 title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASYMMETRIC_KEY_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - asymmetric keys [SQL Server]
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 53609e5c73daad45497c046b54ff800fefe00da7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d318349e792cb7579efcc2062ca8eb1b5521db48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600716"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -121,7 +118,7 @@ ENCRYPTION BY \<key_name_in_provider> 指定密钥的加密方式。 可以为�
   
  私钥的长度可以为 512、1024 或 2048 位。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对数据库拥有 CREATE ASYMMETRIC KEY 权限。 如果指定了 AUTHORIZATION 子句，则需要对数据库主体具有 IMPERSONATE 权限，或者对应用程序角色具有 ALTER 权限。 只有 Windows 登录名、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和应用程序角色能拥有非对称密钥。 其他组和角色不能拥有非对称密钥。  
   
 ## <a name="examples"></a>示例  

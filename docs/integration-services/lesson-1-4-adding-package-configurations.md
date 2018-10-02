@@ -5,23 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508e456bf09a38a3cf45a971bef917ccc1d486a2
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605685"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>第 1-4 课 — 添加包配置
 在此任务中，将配置添加到每个包。 在运行时，配置更新包属性和包对象的值。  

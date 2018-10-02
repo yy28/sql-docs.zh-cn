@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32a3d6216f05f8cb02d50a932a5c14f0fc91e442
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 963e5ab6343b7baaef1b2c02b00dc48f7c12347e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657545"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "32952822"
   
  下面列出了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** 计数器。  
   
-|SQL Server SQL Statistics 计数器|Description|  
+|SQL Server SQL Statistics 计数器|描述|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|每秒的自动参数化尝试数。 其总数应为失败的、安全的和不安全的自动参数化尝试之和。 当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例尝试通过将某些文字替换为参数来参数化 [!INCLUDE[tsql](../../includes/tsql-md.md)] 请求时，就会进行自动参数化，这样可以对多个相似的请求再次使用保存在缓存中的执行计划。 请注意，在更新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，自动参数化也称为简单参数化。 此计数器不包括强制参数化。|  
 |**Batch Requests/sec**|每秒收到的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令批数。 这一统计信息受所有约束（如 I/O、用户数、高速缓存大小、请求的复杂程度等）影响。 批处理请求数值高意味着吞吐量很好。|  

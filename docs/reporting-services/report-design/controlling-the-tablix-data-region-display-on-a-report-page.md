@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a68ee56f7e581a38a075dc4264befbeafe25fa09
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7733d3d68e0c4888d865f34ecae243e803636526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281047"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612825"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制 Tablix 数据区域在报表页上的显示
 了解可以在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表为表、矩阵或列表数据区域设置以更改其在查看报表时的显示方式的属性。  

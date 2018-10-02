@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135f1778e8b2fd29b1e026d662d57795a763a269
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: be26ab7526d4ff270efc1ed11e592ad8552b0b22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634765"
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>第 5-2 课 - 启用和配置包配置
 在此任务中，您将项目转换为包部署模型并使用包配置向导配置包。 将使用此向导生成 XML 配置文件，该文件包含 Foreach 循环容器的 **Directory** 属性的配置设置。 Directory 属性的值由新的包级别变量在运行时提供，您可以更新该变量。 另外，将填充要在测试期间使用的新的示例数据文件夹。  

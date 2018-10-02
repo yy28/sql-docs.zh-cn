@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SPATIAL INDEX
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - CREATE SPATIAL INDEX statement
 - CREATE INDEX statement
 ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3ff094713faa5a399030b5470aa5af7df60371b7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d5b34fc92c70e01941bbdea6ef110a8af4a11e26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620025"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -488,7 +485,7 @@ MAXDOP =max_degree_of_parallelism
   
  max_degree_of_parallelism 可以是：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -553,7 +550,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
 ## <a name="additional-remarks-about-creating-indexes"></a>有关创建索引的其他备注  
  有关创建索引的详细信息，请参阅 [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md) 中的“备注”部分。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须对相应表或视图拥有 ALTER 权限，或者是 sysadmin 固定服务器角色、db_ddladmin 固定数据库角色或 db_owner 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

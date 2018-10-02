@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 799f2b0df6a33d70006baf4b1389584cd7acf801
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87fcb3590b628af4400edf3c3f6541f0f11a9b92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598595"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 中不推荐使用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +141,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |表压缩|vardecimal 存储格式的使用。|不推荐使用 Vardecimal 存储格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供的数据压缩功能可以压缩十进制值和其他数据类型的值。 建议您使用数据压缩，而不使用 vardecimal 存储格式。|vardecimal 存储格式|200|  
 |表压缩|sp_db_vardecimal_storage_format 过程的使用。|不推荐使用 Vardecimal 存储格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供的数据压缩功能可以压缩十进制值和其他数据类型的值。 建议您使用数据压缩，而不使用 vardecimal 存储格式。|sp_db_vardecimal_storage_format|201|  
 |表压缩|sp_estimated_rowsize_reduction_for_vardecimal 过程的使用。|请改用数据压缩和 sp_estimate_data_compression_savings 过程。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|表提示|在 UPDATE 或 DELETE 语句的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|请从 FROM 子句中删除 NOLOCK 或 READUNCOMMITTED 表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|@shouldalert|  
+|表提示|在 UPDATE 或 DELETE 语句的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|请从 FROM 子句中删除 NOLOCK 或 READUNCOMMITTED 表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|1|  
 |表提示|不借助 WITH 关键字指定表提示。|使用 WITH。|不带 WITH 的表提示|8|  
 |表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointers|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

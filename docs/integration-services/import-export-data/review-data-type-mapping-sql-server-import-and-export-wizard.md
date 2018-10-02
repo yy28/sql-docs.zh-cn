@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b49a83a389c0d9fec7a843e005946faccbef5a86
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5ef44f25a923471eadbc14abcfb6586606638dd3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637915"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>查看数据类型映射（SQL Server 导入和导出向导）
 如果在“列映射”  对话框的“映射”  列表中指定了一个可能无法成功的数据类型映射， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导将显示“查看数据类型映射”  页。 在此页上，可查看为了使源数据与目标兼容向导必须执行的数据类型转换的相关详细信息。 此信息包括视觉提示，用于区分应成功的数据类型转换与可能导致错误或截断的转换。 对于每个转换，你都可以决定是否接受向导建议的转换，也可以指定如何处理可能发生的错误。   

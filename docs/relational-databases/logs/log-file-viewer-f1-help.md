@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.configurelogs.errorlog.f1
 helpviewer_keywords:
 - Log File Viewer
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a76b3fcf34f246e56e45e6f058fc78a23274d05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595079"
 ---
 # <a name="log-file-viewer-f1-help"></a>日志文件查看器 F1 帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "32942652"
   
  可以在“工具/选项”对话框的“SQL Server 对象资源管理器/命令”页上配置为审核日志显示的行数。 有关为审核日志显示的列的说明，请参阅 [sys.fn_get_audit_file (Transact-SQL)](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **加载日志**  
  打开一个对话框，您可以在其中指定要加载的日志文件。  
   
@@ -77,7 +74,7 @@ ms.locfileid: "32942652"
  **日志源**  
  显示在其中捕获事件的源日志的说明。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机实例的日志文件，你需要有 securityadmin 固定服务器角色的成员身份。  
   
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脱机实例的日志文件，不仅必须具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取权限，还必须具有存储日志文件的文件夹的读取权限。 有关详细信息，请参阅 [查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)主题的“安全性”部分。  

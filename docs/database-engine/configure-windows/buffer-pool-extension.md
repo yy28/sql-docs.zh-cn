@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5aa357b9e5afaf48a99b30fd7215cf4b1dbb7b03
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658195"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +89,7 @@ ms.locfileid: "32869432"
   
  提供了以下 Xevent：  
   
-|XEvent|Description|Parameters|  
+|XEvent|描述|Parameters|  
 |------------|-----------------|----------------|  
 |sqlserver.buffer_pool_extension_pages_written|在将页或页组从缓冲池逐出并写入缓冲池扩展文件时激发。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  
 |sqlserver.buffer_pool_extension_pages_read|在将页从缓冲池扩展文件读取到缓冲池时激发。|*number_page*<br /><br /> *first_page_id*<br /><br /> *first_page_offset*<br /><br /> *initiator_numa_node_id*|  

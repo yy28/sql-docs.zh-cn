@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04e4d1cff15371962a5208457081549c28ab2277
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: ac157acea3b64b81bef5eb505b4c9b0d3525ba11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36904020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674937"
 ---
 # <a name="registered-servers-f1-help"></a>“已注册的服务器”组件的 F1 帮助
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "36904020"
   
  若要访问此页，请在已注册的服务器中，在“已注册的服务器”工具栏上单击“Reporting Services”，右键单击任意已注册的服务器组（如“Reporting Services”），指向“新建”，再单击“服务器注册”。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器类型**  
  从已注册的服务器中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
@@ -85,7 +82,7 @@ ms.locfileid: "36904020"
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击 **Analysis Services**，右键单击任意已注册的服务器组（例如 **Analysis Services**），指向“新建”，再单击“服务器注册”。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器类型**  
  从“已注册的服务器”中注册某服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，请在开始注册新服务器之前，在 **“已注册的服务器”** 工具栏上单击所需的服务器。  
   
@@ -119,7 +116,7 @@ ms.locfileid: "36904020"
   
  若要访问此页，请在“已注册的服务器”中，在“已注册的服务器”工具栏上单击“Integration Services”，右键单击任意已注册的服务器组，指向“新建”，然后单击“服务器注册”。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器类型**  
  在“已注册的服务器”中注册服务器时，“服务器类型”框是只读的，它与“已注册的服务器”窗格中显示的服务器类型相匹配。 若要注册其他类型的服务器，在开始注册新服务器之前，请在 **“已注册的服务器”** 工具栏上依次单击 **“数据库引擎”**、 **“分析服务器”**、 **Reporting Services** **、** SQL Server Compact Edition  或 **Integration Services** 。  
   

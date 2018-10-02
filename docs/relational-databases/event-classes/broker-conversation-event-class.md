@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c1d8073a83618bf644253efac8fd897ef1814ac5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 39e0ca2394c76d955fa480d17ed5369217ac8f69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636206"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "43101474"
 |**Severity**|**int**|在此事件报告错误时表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的严重级别。|29|否|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为客户端所关联的进程分配的服务器进程 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|该事件的启动时间（如果可用）。|14|用户帐户控制|  
-|**TextData**|**ntext**|会话的当前状态。 可以是下列值之一：|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|会话的当前状态。 可以是下列值之一：|1|用户帐户控制|  
 |||**SO**。 已开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已处理了此会话的 BEGIN CONVERSATION，但尚未发送消息。|||  
 |||**SI**。 已开始入站。 另一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例开始了与当前实例的新会话，但当前实例尚未完成第一条消息的接收工作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不按照顺序接收消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会在此状态下创建会话。 但是，如果为会话接收的第一个传输包含了完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能会在 CO 状态下创建会话。|||  
 |||**CO**。 正在进行会话。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。|||  
@@ -65,7 +62,7 @@ ms.locfileid: "43101474"
   
 |ID|子类|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **SEND Message** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行不包含 WITH ERROR 子句的 END CONVERSATION 语句时 **END CONVERSATION WITH ERROR** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成 **Broker Initiated Error** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，当 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 无法成功为对话发送消息时，将为该对话创建错误消息并生成此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不生成此事件。|  

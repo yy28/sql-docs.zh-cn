@@ -5,23 +5,20 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d76cedf7479e222ba01fef70c81c72486202fc1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 39044dfd57f4ae6a05a85e7cf21d4e7def5fb1c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311686"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659515"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "35311686"
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|最早的未发送事务|32044|  
 |**如果镜像提交开销超过了阈值则发出警告**|镜像提交开销|32045|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要拥有完全访问权限，需要具有 **sysadmin** 固定服务器角色的成员身份。 只有 **sysadmin** 的成员才可以配置和查看关键绩效指标的警告阈值。  
   
  如果是 **dbm_monitor** 角色中的成员，则只能查看“警告”页上最新的状态行。  

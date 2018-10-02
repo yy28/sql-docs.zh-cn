@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 769e8f9277b88dba35e2a62bdd0c702fbfce1a82
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a9e698b750e37e595592299e9b7e41a60e868d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059238"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640285"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +44,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄，可使用该句柄通过 sys.dm_exec_sql_text 动态管理视图来获取批查询 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|批处理的 SQL 文本。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|批处理的 SQL 文本。|1|用户帐户控制|  
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
@@ -65,7 +62,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程的 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|NULL|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|NULL|1|用户帐户控制|  
 |PlanHandle|**图像**|存储过程的编译计划的计划句柄。 可使用该句柄通过 sys.dm_exec_query_plan 动态管理视图来获取 XML 计划。|65|用户帐户控制|  
 |ObjectType|**int**|表示事件中涉及的对象类型的值。<br /><br /> 8272 = 存储过程|28|用户帐户控制|  
 |BigintData2|**bigint**|在编译过程中使用的总内存 (KB)。|53|用户帐户控制|  
@@ -89,7 +86,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄。 可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取批查询 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|NULL|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|NULL|1|用户帐户控制|  
 |PlanHandle|**图像**|批处理的编译计划的计划句柄。 可使用该句柄通过 dm_exec_query_plan 动态管理视图来获取批查询 XML 计划。|65|用户帐户控制|  
 |BigintData2|**bigint**|在编译过程中使用的总内存 (KB)。|53|用户帐户控制|  
 |CPU|**int**|编译过程中所用的总 CPU 时间（毫秒）。|18|用户帐户控制|  
@@ -112,7 +109,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取存储过程或批查询 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|QueryExecutionStats|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|QueryExecutionStats|1|用户帐户控制|  
 |PlanHandle|**图像**|存储过程或批处理的编译计划的计划句柄。 可使用该句柄通过 dm_exec_query_plan 动态管理视图来获取 XML 计划。|65|用户帐户控制|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
   
@@ -132,7 +129,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取所执行的存储过程 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|ProcedureExecutionStats|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|ProcedureExecutionStats|1|用户帐户控制|  
 |PlanHandle|**图像**|存储过程的编译计划的计划句柄。 可使用该句柄通过 dm_exec_query_plan 动态管理视图来获取 XML 计划。|65|用户帐户控制|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
   
@@ -152,7 +149,7 @@ ms.locfileid: "43059238"
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |SqlHandle|**图像**|SQL 句柄，可使用该句柄通过 dm_exec_sql_text 动态管理视图来获取触发器的 SQL 文本。|63|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|TriggerExecutionStats|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|TriggerExecutionStats|1|用户帐户控制|  
 |PlanHandle|**图像**|触发器的编译计划的计划句柄。 可使用该句柄通过 dm_exec_query_plan 动态管理视图来获取 XML 计划。|65|用户帐户控制|  
 |GroupID|**int**|在其中激发 SQL 跟踪事件的工作负荷组的 ID。|66|用户帐户控制|  
   

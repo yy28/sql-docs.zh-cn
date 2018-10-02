@@ -5,25 +5,20 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0569586ce25071c5910253ace654d3190f7f716c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d318c3a7c9e5ab4a5d434a6b4e50477c88d6e2bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650985"
 ---
 # <a name="persisting-custom-objects"></a>使自定义对象持久化
   只要所创建的自定义对象的属性仅使用简单数据类型（如整数和字符串），就不需要为其实现自定义持久性。 持久性的默认实现可保存对象的元数据及其所有属性的值。  

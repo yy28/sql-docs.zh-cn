@@ -5,9 +5,7 @@ ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca1571e89f1273e40f59fa8e680b8a0123efec19
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 3a7c93c43a35f528030035e300624bacb4e72431
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690215"
 ---
 # <a name="excel-source"></a>Excel 源
   Excel 源从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿的工作表或范围中提取数据。  
@@ -120,7 +117,7 @@ ms.locfileid: "35333061"
 ## <a name="excel-source-editor-columns-page"></a>Excel 源编辑器（“列”页）
   可以使用“Excel 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -133,7 +130,7 @@ ms.locfileid: "35333061"
 ## <a name="excel-source-editor-error-output-page"></a>Excel 源编辑器（“错误输出”页）
   可以使用 **“Excel 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入或输出**  
  查看数据源的名称。  
   

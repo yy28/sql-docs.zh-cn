@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/04/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - transactional replication, identity range management
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
-caps.latest.revision: 51
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb973d0108c6b17e9fe0a853a7ef5ab861924896
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 091ca8ad9fa80876936dcfdc2c7ed0ca687c6aea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37359209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688935"
 ---
 # <a name="replicate-identity-columns"></a>复制标识列
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ ms.locfileid: "37359209"
 |数据类型|范围|  
 |---------------|-----------|  
 |**tinyint**|不支持自动管理|  
-|**int**|-2^15 (-32,768) 到 2^15-1 (32,767)|  
+|**smallint**|-2^15 (-32,768) 到 2^15-1 (32,767)|  
 |**int**|-2^31 (-2,147,483,648) 到 2^31-1 (2,147,483,647)|  
 |**bigint**|-2^63 (-9,223,372,036,854,775,808) 到 2^63-1 (9,223,372,036,854,775,807)|  
 |**decimal** 和 **numeric**|-10^38+1 到 10^38-1|  

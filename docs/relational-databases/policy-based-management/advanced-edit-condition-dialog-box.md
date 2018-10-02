@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598885"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>“高级编辑”（条件）对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   “高级编辑”对话框用于为基于策略的管理条件创建复杂表达式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **单元值**  
  在创建用于单元值的函数或表达式时，显示相应的函数或表达式。 单击 **“确定”** 以后，在 **“常规”** 页的 **“创建新条件”** 对话框或 **“打开条件”** 对话框中，单元值就会出现在条件表达式框的 **“字段”** 单元或 **“值”** 单元。  
   
@@ -68,7 +64,7 @@ ms.locfileid: "32956632"
   
 > **重要说明！** 可用于创建基于策略的管理条件的函数并不总是使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法。 请务必遵从示例语法。 例如，如果使用 **DateAdd** 函数或 **DatePart** 函数，则必须用单引号将 *datepart* 参数括起来。  
   
-|函数|签名|Description|参数|返回值|示例|  
+|函数|签名|描述|参数|返回值|示例|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric expression1, Numeric expression2)|两个数相加。|expression1 和 expression2 – 数值类别中的任意数据类型（**bit** 数据类型除外）的任意有效表达式。 可以为常量、属性或返回数值类型的函数。|返回优先级高的参数的数据类型。|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs expression)|根据值列表创建数组。 可与聚合函数（如 Sum() 和 Count()）配合使用。|expression - 将要转换为数组的表达式。|数组|`Array(2,3,4,5,6)`|  
@@ -86,7 +82,7 @@ ms.locfileid: "32956632"
 |**ExecuteSQL()**|Variant ExecuteSQL (String returnType, String sqlQuery)|对目标服务器执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询。<br /><br /> 有关 ExecuteSql() 的详细信息，请参阅 [ExecuteSql() 函数](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx)。|returnType - 指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句返回的数据类型。 *returnType* 的有效文字如下： **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> sqlQuery - 包含要执行的查询的字符串。||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> 针对 SQL Server 的目标实例运行一个标量值 TRANSACT-SQL 查询。 在 `SELECT` 语句中只能指定一列；第一列之外的其他列将被忽略。 生成的查询应只返回一行；第一行以外的其他行将被忽略。 如果查询返回空集，则围绕 `ExecuteSQL` 构建的条件表达式的计算结果将为 false。 `ExecuteSql` 支持 **按需** 和 **按计划** 计算模式。<br /><br /> -`@@ObjectName`设置用户帐户 ：<br />                      对应于 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)中的名称字段。 该变量将替换为当前对象的名称。<br /><br /> -`@@SchemaName`：对应于 [sys。schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)。 该变量将替换为当前对象的架构名称（如果适用）。<br /><br /> 注意：若要在 ExecuteSQL 语句中包含单引号，请再使用一个单引号将其转义。 例如，若要加入对用户 O'Brian 的引用，请键入 O''Brian。|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string returnType , string namespace, string wql)|对提供的命名空间执行 WQL 脚本。 Select 语句只能包含一个返回列。 如果提供多个列，则会引发错误。|returnType - 指定 WQL 返回的数据的返回类型。 有效文字为 **Numeric**、 **String**、 **Bool**、 **DateTime**、 **Array**和 **Guid**。<br /><br /> namespace - 要对其执行脚本的 WMI 命名空间。<br /><br /> wql - 包含要执行的 WQL 的字符串。||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|返回布尔值 FALSE。|无|返回布尔值 FALSE。|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|返回系统日期。|InclusionThresholdSetting|返回 DateTime 类型的系统日期。|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|返回系统日期。|None|返回 DateTime 类型的系统日期。|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String guidString)|根据字符串返回 GUID。|guidString - 要创建的 GUID 的字符串表示形式。|返回根据字符串创建的 GUID。|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant check_expression, Variant replacement_value)|如果 check_expression 的值不为 NULL，则返回该值；否则返回 replacement_value。 如果类型不同，则将 replacement_value 隐式转换为 check_expression 类型。|check_expression - 将检查其是否为 NULL 的表达式。 check_expression 可以是基于策略的管理支持的任意类型：Numeric、String、Bool、DateTime、Array 和 Guid。<br /><br /> replacement_value - check_expression 为 NULL 时要返回的表达式。 replacement_value 必须是可隐式转换为 check_expression 类型的类型。|如果 check_expression 不为 NULL，则返回类型为 check_expression 的类型，否则将返回 replacement_value 的类型。||  
 |**Len()**|Numeric Len (string_expression)|返回给定字符串表达式的字符数（不包括尾随空格）。|string_expression – 要计算的字符串表达式。|返回整数数据类型类别的值。|`Len('Hello')` 返回 `5` 。|  

@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8de728484d1c0e00eb4ad1bc4dd7ad4137b618c8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1cd45e4350bb09c215fb6f6104effbf5f3326973
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655337"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +31,8 @@ ms.locfileid: "35401949"
 |operation_message_id|**bigint**|消息的唯一标识符 (ID)。|  
 |operation_id|**bigint**|操作的唯一 ID。|  
 |message_time|**datetimeoffset(7)**|创建消息时的时间。|  
-|message_type|**int**|所显示的消息的类型。|  
-|message_source_type|**int**|消息源类型的 ID。|  
+|message_type|**smallint**|所显示的消息的类型。|  
+|message_source_type|**smallint**|消息源类型的 ID。|  
 |message|**nvarchar(max)**|消息的文本。|  
 |extended_info_id|**bigint**|与在 [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) 视图中找到的操作消息相关的附加信息的 ID。|  
   
@@ -75,14 +72,14 @@ ms.locfileid: "35401949"
 |50|控制流容器|  
 |60|数据流任务|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

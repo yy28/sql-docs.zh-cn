@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ceb12a0fe5ec8cb18c2f0b817f2aa771886d076
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a4a5775f2cc9ad61a74943b91cfe6621301addd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620967"
 ---
 # <a name="report-builder-functions---var-function"></a>报表生成器函数 - Var 函数
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的方差。  

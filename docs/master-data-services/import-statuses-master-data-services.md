@@ -5,22 +5,19 @@ ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c3905312358c36688e4c20a5a78d6c5504c745aa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d7f7245b330e502394190db0cd227956cb005311
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686334"
 ---
 # <a name="import-statuses-master-data-services"></a>导入状态 (Master Data Services)
 
@@ -30,7 +27,7 @@ ms.locfileid: "35404119"
   
 |“登录属性”|描述|Status_ID|  
 |------------|-----------------|----------------|  
-|排队待运行|批处理尚未开始处理。|@shouldalert|  
+|排队待运行|批处理尚未开始处理。|1|  
 |正在运行|批处理正在处理。|2|  
 |已完成|批处理已完成处理。|3|  
 |排队待清除|批处理已处理完毕，将被清除。|4|  

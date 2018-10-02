@@ -5,25 +5,22 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42f181035f2fffff06540d060ed4a179ab88f806
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 8ebd4835fe24846df21b887841813f7cac596f7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598158"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
 
@@ -50,7 +47,7 @@ ms.locfileid: "35329101"
 ##  <a name="Staging"></a> 临时处理数据  
  在下表中，每个安全对象都将“name”作为名称的一部分。 这指示在创建实体时指定的临时表的名称。 有关详细信息，请参阅[概述：导入表中数据 (Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |创建、更新和删除叶成员及其属性。|stg.name_Leaf|必需：INSERT<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从叶临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Leaf|在运行 CREATE 语句前执行|  
@@ -64,7 +61,7 @@ ms.locfileid: "35329101"
   
 ##  <a name="rules"></a> 根据业务规则对数据进行验证  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|---------------|-----------------|  
 |根据业务规则验证数据版本|mdm.udpValidateModel|在运行 CREATE 语句前执行|  
   
@@ -72,7 +69,7 @@ ms.locfileid: "35329101"
   
 ##  <a name="Versions"></a> 删除版本  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |确定要删除的版本的 ID|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |删除模型的版本|mdm.udpVersionDelete|在运行 CREATE 语句前执行|  
@@ -81,7 +78,7 @@ ms.locfileid: "35329101"
   
 ##  <a name="Hierarchy"></a> 立即应用层次结构成员权限  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |立即应用成员权限|mdm.udpSecurityMemberProcessRebuildModel|在运行 CREATE 语句前执行|  
   

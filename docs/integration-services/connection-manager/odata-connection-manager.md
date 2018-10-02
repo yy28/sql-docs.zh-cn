@@ -4,25 +4,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-caps.latest.revision: 9
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a6a3fbd4cc0f1865559f4f4b64987aa906b2839
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 4ec5760d6f62c045b1985aad534c7447f75f59c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667275"
 ---
 # <a name="odata-connection-manager"></a>OData 连接管理器
  使用 OData 连接管理器连接到 OData 数据源。 OData 源组件使用 OData 连接管理器连接到 OData 数据源，并使用来自服务的数据。 有关详细信息，请参阅 [OData Source](../../integration-services/data-flow/odata-source.md)。  
@@ -72,7 +69,7 @@ ms.locfileid: "35333501"
 ## <a name="odata-connection-manager-editor"></a>“OData 连接管理器编辑器”
   使用“OData 连接管理器编辑器”对话框可以添加与 OData 数据源的连接或者编辑现有连接。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **连接管理器名称**  
  连接管理器的名称。  
   

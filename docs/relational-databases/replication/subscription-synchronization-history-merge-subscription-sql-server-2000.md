@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.subscription.downlevelsynchhistory.f1
 ms.assetid: 0a0deab2-1c08-4371-9681-d9403e0236cc
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5e44fdfbb5a3f292270c69f0843e8be5eeaec18
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: acf0a3810fd53b695a9ea7f44c6766601d32733a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603505"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>订阅 - 同步历史记录（合并订阅，SQL Server 2000）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **“同步历史记录”** 选项卡显示有关合并代理的详细信息，包括状态、历史记录、信息性消息和所有错误消息。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  从“视图”  菜单中选择要查看的合并代理会话，然后在标记为“合并代理的会话” 的网格中选择特定会话。 有关此会话的详细信息显示在标记为 **“所选会话中的操作”** 的网格中。 如果所选会话由于出错而结束，则还将显示一个标记为 **“所选会话的错误详细信息或消息”** 的文本区域。  
   
  **“视图”**  
