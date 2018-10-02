@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
@@ -14,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709045"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +96,7 @@ ms.locfileid: "34772563"
 |Level|条件|描述|  
 |-----------|---------------|-----------------|  
 |0|无自动故障转移或重新启动|表示对于任何故障条件将不自动触发故障转移或重新启动。 此级别仅适用于系统维护目的。|  
-|@shouldalert|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
+|1|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
 |2|服务器不响应时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。|  
 |3*|出现严重服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。|  
 |4|出现中等服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“资源错误”。|  

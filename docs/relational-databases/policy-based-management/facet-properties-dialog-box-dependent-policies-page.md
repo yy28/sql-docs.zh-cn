@@ -4,32 +4,28 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.facet.dependentpolicies.f1
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6de2b94ea21e20361c6baeaeeeac72d6fab21828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5980fff06b2e0be395edad8fbebd3985784f1fd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47637595"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>“方面属性”对话框，“依赖策略”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此对话框用于显示当前引用此基于策略的管理方面的策略的列表。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  列出每个引用当前方面的策略的名称。  
   

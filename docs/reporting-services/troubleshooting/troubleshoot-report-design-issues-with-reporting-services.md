@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69faba99ae28fd4b774f3751c2355c0addb0e9b2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 52fec67c4e07012896e7191803d90020d3988b7a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698495"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>解决 Reporting Services 报表设计问题
 在报表创作应用程序的设计视图中创建报表布局时，可能发生报表设计问题。 使用本主题可以帮助解决这些问题。   

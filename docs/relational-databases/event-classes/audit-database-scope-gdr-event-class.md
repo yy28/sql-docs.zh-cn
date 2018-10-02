@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Database Scope GDR event class
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82fce65b30faf8136e97fb29c0bba2b78cd30f94
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 353613d9c280eb99c2a21358fa690ecf44c63af5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068718"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698195"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ ms.locfileid: "43068718"
 |**TargetLoginName**|**nvarchar**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的名称。|42|用户帐户控制|  
 |**TargetLoginSid**|**image**|如果是针对登录的操作（例如，添加新的登录），则为所针对登录的安全标识号 (SID)。|43|用户帐户控制|  
 |**TargetUserName**|**nvarchar**|如果是针对某个数据库用户的操作（例如授予用户权限），则为该用户的名称。|39|用户帐户控制|  
-|**TextData**|**ntext**|Grant/Revoke/Deny 语句的 SQL 文本。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|Grant/Revoke/Deny 语句的 SQL 文本。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |**XactSequence**|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

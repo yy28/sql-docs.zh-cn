@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80453ceb280e7f4a1d01f51f0bc62a54fb7355eb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a7a62c9e9188fbd67c34d5ecaf1a5da77d9faecc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266949"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638225"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>添加分页符（报表生成器和 SSRS）
   您可以向数据区域内的矩形、数据区域或组添加分页符，以控制每个页面中的信息量。 添加分页符能够提高已发布报表的性能，因为在您查看报表时，系统只需处理每个页面中的项。 如果整个报表位于一个页面中，则您只能在所有项都得到处理后才能查看报表。  

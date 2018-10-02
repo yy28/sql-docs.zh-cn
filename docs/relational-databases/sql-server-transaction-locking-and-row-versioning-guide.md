@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, transaction locking and row versioning
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - lock compatibility matrix, [SQL Server]
 - lock granularity and hierarchies, [SQL Server]
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
-caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08b93402a40fc935269953e23825acaa56aa4213
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068728"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710705"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1062,8 +1058,7 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中基于行版本控制的隔离级别  
- 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供现有事务隔离级别（已提交读）的实现，该实现使用行版本控制提供语句级快照。 
-  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 还提供一个事务隔离级别（快照），该级别也使用行版本控制提供事务级快照。  
+ 从 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 开始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供现有事务隔离级别（已提交读）的实现，该实现使用行版本控制提供语句级快照。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 还提供一个事务隔离级别（快照），该级别也使用行版本控制提供事务级快照。  
   
  行版本控制是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的一般框架，它在修改或删除行时调用写入时复制机制。 这要求在运行事务时，行的旧版本必须可供需要早先事务一致状态的事务使用。 行版本控制可用于执行以下操作：  
   

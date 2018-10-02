@@ -4,10 +4,7 @@ ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - deleting rendering extensions
 - removing rendering extensions
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2abfebfb-065f-45cc-a904-c914394cf900
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b676cc7342c83d37aba91e6cc834801fa73d2c37
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bd360d5a4929ab41c7b77e60b59b394f127f6f13
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273981"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723875"
 ---
 # <a name="removing-a-rendering-extension"></a>删除呈现扩展插件
   要删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 呈现扩展插件，只需从 rsreportserver.config file, located in %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<Instance Name>\Reporting Services\ReportServer 文件夹中删除呈现扩展插件的 Extension 元素即可。 如果为报表设计器以及报表服务器生成条目，则还需从 [RSReportDesigner 配置文件](../../../reporting-services/report-server/rsreportdesigner-configuration-file.md)中删除 Extension 元素。 在删除配置信息之后，该呈现扩展插件对于该组件将不再可用。  

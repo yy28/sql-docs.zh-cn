@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.design.table.columnspecification.index.dialog
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 199f12a6318b9a283a62176289a2c6501444255e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652866"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>如何使用表设计器管理表和关系
 在为 Transact\-SQL 数据库创建和编辑表结构（包括特定于表的编程对象）时，表设计器提供与 SQL Server 编辑器相同的视觉体验。  当为连接的数据库或项目创建新表时，或者当你在 SQL Server 对象资源管理器或解决方案资源管理器中双击以便编辑某一表时，表设计器将启动。  

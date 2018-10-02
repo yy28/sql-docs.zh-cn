@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7e734e0492d677b166b862836f3c3785d8d74c3
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bd42fe5402c9da251464cfedf670478c4b0d6358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730245"
 ---
 # <a name="term-extraction-transformation"></a>字词提取转换
   字词提取转换从转换输入列的文本中提取字词，然后将这些字词写入转换输出列。 该转换仅处理英文文本，并使用它自身的英语字典和有关英语的语言信息。  
@@ -189,7 +186,7 @@ ms.locfileid: "35401569"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>字词提取转换编辑器（“字词提取”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“字词提取”** 选项卡，指定包含要提取的文本的文本列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  通过使用复选框，选择要用于字词提取的单个文本列。  
   
@@ -205,7 +202,7 @@ ms.locfileid: "35401569"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>字词提取转换编辑器（“排除”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“排除”** 选项卡，建立与排除表的连接并指定包含排除字词的列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **使用排除字词**  
  指示在字词提取过程中是否通过指定包含排除字词的列来排除特定的字词。 如果选择要排除字词，则必须指定以下源属性：  
   
@@ -227,7 +224,7 @@ ms.locfileid: "35401569"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>字词提取转换编辑器（“高级”选项卡）
   可以使用 **“字词提取转换编辑器”** 对话框的 **“高级”** 选项卡，指定频率、长度等提取属性以及指定是提取字词还是提取短语。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名词**  
  指定转换仅提取各个名词。  
   

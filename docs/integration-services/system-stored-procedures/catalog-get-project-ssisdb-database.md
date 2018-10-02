@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 76668374ff89a6f38ebdbea9aec339653f1c1dca
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 281e3d3a5c85e2c89991487c5c4988d0e1077ba6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635095"
 ---
 # <a name="cataloggetproject-ssisdb-database"></a>catalog.get_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +42,14 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
 ## <a name="result-sets"></a>结果集  
  该项目的二进制流作为 varbinary(MAX) 返回。 如果找不到文件夹或项目，则不返回任何结果。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 权限  
   
 -   ssis_admin 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能导致 get_project 存储过程引发错误的情况：  

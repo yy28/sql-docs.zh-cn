@@ -5,9 +5,7 @@ ms.date: 05/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DISABLE_TSQL
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - triggers [SQL Server], disabling
 - disabling triggers
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
-caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 844d13eb236d34de1c808f2f396d3dcf18c8b3fc
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737745"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +77,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  使用 **ALTER TRIGGER** 语句更改触发器将启用此触发器。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要禁用 DML 触发器，用户必须至少对为其创建触发器的表或视图具有 ALTER 权限。  
   
  若要禁用具有服务器范围 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户必须对服务器拥有 CONTROL SERVER 权限。 若要禁用数据库范围 (ON DATABASE) 中的 DDL 触发器，用户必须至少对当前数据库具有 ALTER ANY DATABASE DDL TRIGGER 权限。  

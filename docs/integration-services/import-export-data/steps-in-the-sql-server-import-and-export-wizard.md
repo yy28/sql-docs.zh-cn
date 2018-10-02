@@ -5,21 +5,18 @@ ms.date: 02/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10497442b6047c96d73d10ca3815ba0b62c788cf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 73b43cd2f14f8c7afd531a295d9eaf118d5e91d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408059"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694155"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server 导入和导出向导中的步骤
 本主题介绍使用 SQL Server 导入和导出向导导入和导出数据的一系列步骤。 它还包含一些指向文档各个页面的链接，该文档介绍了向导中显示的每个页面或对话框。

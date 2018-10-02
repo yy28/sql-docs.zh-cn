@@ -5,9 +5,7 @@ ms.date: 10/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying constraints
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - constraints [SQL Server], modifying
 - constraints [SQL Server], unique
 ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77ee0d93640041f75dd615128406025a47d98368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 241596df017e06519c2a2cc1993a7fb025addc97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734615"
 ---
 # <a name="modify-unique-constraints"></a>修改唯一约束
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ ms.locfileid: "43085330"
     |设置聚集选项|在“表设计器”下的网格中，选择“创建为群集索引”，再从下拉列表中选择“是”创建群集索引，或选择“否”创建非群集索引。 对于每个表，只允许存在一个聚集索引。 如果此表中已经存在聚集索引，则您必须首先对原始索引清除此设置。|  
     |定义填充因子|在 **“表设计器”** 下的网格中，展开 **“填充规范”** 类别，然后在 **“填充因子”** 框中键入一个 0 到 100 之间的整数。|  
   
-5.  在“文件”菜单上，单击“保存table name”。  
+5.  在“文件”菜单上，单击“保存”以保存表名。  
   
 ##  <a name="TsqlProcedure"></a> **修改唯一约束**  
   

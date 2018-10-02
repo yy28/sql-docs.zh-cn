@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7b26d09b73a24b38788d910792b40edc677e925
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f693b2a897d0c1baa203f7892bccb140bef4ac3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631542"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>为 Oracle CDC 视图脚本准备 SQL Server
   此对话框显示用于创建 MSXDBCDC 数据库的“准备 SQL”脚本。 此数据库必须位于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上，以便它可以用于针对 SQL Server 的 Oracle CDC。  

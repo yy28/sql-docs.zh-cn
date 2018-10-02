@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcsource.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 796c0f5e2d0cb2d689921d75b9e2005a49a35106
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694506"
 ---
 # <a name="odbc-source"></a>ODBC 源
   ODBC 源通过使用数据库表、视图或 SQL 语句，从支持 ODBC 的数据库中提取数据。  
@@ -99,7 +96,7 @@ ms.locfileid: "35332571"
   
 -   在“数据流”选项卡上，双击 ODBC 源。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击 **“新建”** 创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
@@ -135,7 +132,7 @@ ms.locfileid: "35332571"
   
 3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="available-external-columns"></a>可用外部列  
  数据源中的可用外部列的列表。 无法使用此表添加或删除列。 从源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  
@@ -160,7 +157,7 @@ ms.locfileid: "35332571"
   
 -   在 **“ODBC 源编辑器”** 中，单击 **“错误输出”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  

@@ -4,23 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 18340956a0378a20a4ff5f9c92a47a477d5b3683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caa27c607c82da066e350113d8c29e412c2ce39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731355"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>为选择性 XML 索引指定路径和优化提示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -362,20 +358,20 @@ WHERE T.xmldata.exist('
   
 |优化提示|更高效的存储|改进的性能|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|是|“否”|  
-|**SINGLETON**|“否”|是|  
-|**DATA TYPE**|是|是|  
-|**MAXLENGTH**|是|是|  
+|**node()**|用户帐户控制|否|  
+|**SINGLETON**|否|用户帐户控制|  
+|**DATA TYPE**|用户帐户控制|用户帐户控制|  
+|**MAXLENGTH**|用户帐户控制|用户帐户控制|  
   
 ### <a name="optimization-hints-and-data-types"></a>优化提示和数据类型  
  您可以将节点作为 XQuery 数据类型或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型建立索引。 下表显示了每种数据类型支持的优化提示。  
   
 |优化提示|XQuery 数据类型|SQL 数据类型|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|是|“否”|  
-|**SINGLETON**|是|是|  
-|**DATA TYPE**|是|“否”|  
-|**MAXLENGTH**|是|“否”|  
+|**node()**|用户帐户控制|否|  
+|**SINGLETON**|用户帐户控制|用户帐户控制|  
+|**DATA TYPE**|用户帐户控制|否|  
+|**MAXLENGTH**|用户帐户控制|否|  
   
 ### <a name="node-optimization-hint"></a>node() 优化提示  
  适用于：XQuery 数据类型  

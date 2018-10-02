@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85fcf4c5f16093b51da9ec8cab3cf3da7b16bdc2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769963"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730866"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性组数据库级别运行状况检测故障转移选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +98,7 @@ dmv 输出示例：
 
 NAME  |  db_failover
 ---------|---------
-| Contoso-ag |  @shouldalert  |
+| Contoso-ag |  1  |
 
 ### <a name="errorlog"></a>ErrorLog
 当可用性组由于执行数据库级别运行状况检测发生故障转移后，SQL Server 错误日志（或 sp_readerrorlog 中的文本）将显示错误消息 41653。
@@ -179,7 +174,7 @@ GO
 |availability_replica_name |    SQLSERVER-1
 |database_name |    AutoHa-Sample2
 |database_replica_id | 39971379-8161-4607-82E7-098590E5AE00
-|failover_ready_replicas |  @shouldalert
+|failover_ready_replicas |  1
 |fault_type |   2
 |is_critical    | True
 
