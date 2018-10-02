@@ -5,28 +5,25 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2438aaceb3880068440f44d0bc670a161a6dbeca
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811665"
 ---
 # <a name="data-mining-query"></a>数据挖掘查询
   设计窗格包含数据挖掘预测查询生成器，可用于生成数据挖掘预测查询。 您可以基于输入表设计预测查询，也可以设计单独预测查询。 切换到结果视图可运行查询并查看结果。 查询视图将显示由预测查询生成器创建的数据挖掘扩展插件 (DMX) 查询。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “切换视图”按钮  
  单击图标可以在设计窗格和查询窗格之间切换。 默认情况下，设计窗格处于打开状态。  
   

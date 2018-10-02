@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.reinit.all.f1
 helpviewer_keywords:
 - Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dde4e44d17b6120e1dc9fdd53942d9e6e6ba7cf
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d5e57eff6a607939d1ca7b5e7e40e18d56ae1d0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355649"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809815"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>重新初始化订阅 - 所有订阅
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 **“重新初始化订阅”** 对话框，可以将发布的所有订阅都标记为需要重新初始化。 重新初始化涉及向每个订阅服务器应用快照；对于事务发布的订阅，这是由分发代理执行的，而对于合并发布的订阅，这是由合并代理执行的。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用当前快照**  
  选择此选项可以在下一次为订阅运行分发代理或合并代理时将当前快照应用于每个订阅服务器。 如果无法获得有效快照，将无法选定此选项。  
   

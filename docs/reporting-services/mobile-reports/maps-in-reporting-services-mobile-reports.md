@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b50dcdf664c0c6f16849252db1962ca034aec37f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282459"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810986"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 地图是实现地理数据可视化效果的好办法。 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 提供三种不同类型的地图可视化，并且内置了各个洲和不同国家/地区的地图。 你也可以 [上载和使用自定义地图](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)。   
