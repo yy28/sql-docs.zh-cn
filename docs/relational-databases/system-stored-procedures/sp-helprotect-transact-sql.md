@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprotect
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 716398a738b6ac9de991917ec056ed432c9a59a9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ec91d276308b38a16763dc824989d28fd66fd837
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595647"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +77,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**操作**|**nvarchar(60)**|权限名称。 依赖于对象类型的有效的权限语句。|  
 |**列**|**sysname**|权限的类型：<br /><br /> All = 权限适用于对象所有的当前列。<br /><br /> New = 权限适用于任何以后可以在对象上进行更改（使用 ALTER 语句）的新列。<br /><br /> All+New = All 和 New 的组合。<br /><br /> 如果权限类型不适用于列，则返回一个期间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  以下过程中的所有参数都是可选的。 如果不使用参数执行 `sp_helprotect`，则显示当前数据库中所有已经授予或拒绝的权限。  
   
  如果指定了一部分参数而不是指定全部参数，则使用命名参数来标识特定的参数，或者使用 `NULL` 作为占位符。 例如，若要报告授权者数据库所有者 (`dbo`) 的所有权限，请执行：  

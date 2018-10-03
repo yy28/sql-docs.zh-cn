@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - functions [Integration Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b67a495d92d0bfc59288533d5f7c21e0f86d645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4e721c7dfddb953dd82952aa51c20550e5e60eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061247"
 ---
 # <a name="functions-ssis-expression"></a>函数（SSIS 表达式）
   表达式语言包含一组用于表达式的函数。 表达式可以使用单个函数。但是，通常一个表达式可以通过运算符将多个函数组合起来，从而使用多个函数。  
@@ -51,7 +48,7 @@ ms.locfileid: "37171028"
 |[LN &#40;SSIS 表达式&#41;](ln-ssis-expression.md)|返回数值表达式的自然对数。|  
 |[日志&#40;SSIS 表达式&#41;](log-ssis-expression.md)|返回数值表达式以 10 为底的对数。|  
 |[POWER &#40;SSIS 表达式&#41;](power-ssis-expression.md)|返回对数值表达式进行幂运算的结果。|  
-|[ROUND &#40;SSIS 表达式&#41;](round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 实例时都提供 SQL Server 登录名。|  
+|[ROUND &#40;SSIS 表达式&#41;](round-ssis-expression.md)|返回舍入到指定长度或精度的数值表达式。 .|  
 |[登录&#40;SSIS 表达式&#41;](sign-ssis-expression.md)|返回数值表达式的正号 (+)、负号 (-) 或零 (0)。|  
 |[正方形&#40;SSIS 表达式&#41;](square-ssis-expression.md)|返回数值表达式的平方。|  
 |[SQRT &#40;SSIS 表达式&#41;](sqrt-ssis-expression.md)|返回数值表达式的平方根。|  

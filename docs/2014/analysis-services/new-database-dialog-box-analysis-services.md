@@ -4,35 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
 ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df7d3eb279fdde62e97204b17e81420382ca62fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191271"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165707"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>“新建数据库”对话框 (Analysis Services)
   可以使用 **中的** “新建数据库” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框创建新的空 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。 通过在对象资源管理器中右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹，并选择“新建数据库”，可以显示“新建数据库”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  
 |**数据库名称**|键入新 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的名称。|  
 |**使用特定用户名和密码**|选择此选项可以使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用指定用户帐户的安全凭据。 指定凭据将用于执行处理、ROLAP 查询、外部绑定、本地多维数据集、挖掘模型、远程分区、链接对象以及从目标到源的同步。 但是，对于 DMX OPENQUERY 语句，将使用当前用户的凭据。|  
-|**用户名**|键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库将使用的用户帐户的域和名称。 使用以下格式：<br /><br /> *\<域名 >* ** \\ ** *\<用户帐户名 >*<br /><br /> 注意：仅当已选择“使用特定用户名和密码”时，才会启用此选项。 |  
+|**用户名**|键入所选 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库将使用的用户帐户的域和名称。 使用以下格式：<br /><br /> *\<域名 >* **\\** *\<用户帐户名 >*<br /><br /> 注意：仅当已选择“使用特定用户名和密码”时，才会启用此选项。 |  
 |**密码**|键入在 **“用户名”** 中指定的用户帐户的密码。|  
 |**使用服务帐户**|选择此选项可以使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用与管理数据库的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 服务关联的安全凭据。 服务帐户凭据将用于处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步。 对于 DMX OPENQUERY 语句、本地多维数据集和挖掘模型，将使用当前用户的凭据。 外部绑定不支持此选项。|  
 |**使用当前用户的凭据**|选择此选项将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库使用当前用户的安全凭据来处理外部绑定、DMX OPENQUERY 语句、本地多维数据集和挖掘模型。 处理、ROLAP 查询、远程分区、链接对象以及从目标到源的同步不支持此选项。|  

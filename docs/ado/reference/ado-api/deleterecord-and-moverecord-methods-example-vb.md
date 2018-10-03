@@ -1,13 +1,11 @@
 ---
-title: DeleteRecord 和移动记录方法示例 (VB) |Microsoft 文档
+title: DeleteRecord 和 MoveRecord 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bc593b8184d73085e01d637863075a960e34ae8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 78dba1568180e7e49ebe1c5cc7e6ee2ed61f9497
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811887"
 ---
-# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 和移动记录方法示例 (VB)
-此示例演示如何复制、 移动、 编辑和删除发布到 Web 文件夹的文本文件的内容。 其他属性和使用的方法包括[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)， [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)，[源](../../../ado/reference/ado-api/source-property-ado-record.md)，和[刷新](../../../ado/reference/ado-api/flush-method-ado.md)。  
+# <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 和 MoveRecord 方法示例 (VB)
+此示例演示如何复制、 移动、 编辑和删除文本文件发布到 Web 文件夹的内容。 其他属性和方法使用包括[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)， [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)，[源](../../../ado/reference/ado-api/source-property-ado-record.md)，以及[刷新](../../../ado/reference/ado-api/flush-method-ado.md)。  
   
 ```  
 'BeginDeleteRecordVB  
@@ -156,6 +153,6 @@ End Sub
  [DeleteRecord 方法 (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush 方法 (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren 方法 (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
- [移动记录方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
+ [MoveRecord 方法 (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [ParentURL 属性 (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
  [Source 属性（ADO 记录）](../../../ado/reference/ado-api/source-property-ado-record.md)

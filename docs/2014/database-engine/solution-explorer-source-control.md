@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual SourceSafe
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - file source control services [SQL Server]
 - VSS [Visual SourceSafe]
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41ced86e6aa0ab2674a89333a472fb476c369563
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154977"
 ---
 # <a name="solution-explorer-source-control"></a>解决方案资源管理器源代码管理
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 解决方案资源管理器可以集成到一个单独的源代码控制系统。 将解决方案或项目集成到源代码管理系统中后，即可控制针对项目中的脚本和查询的文件访问和版本控制。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8a4c42548e00ec27831639c7d7a147be3fcca1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082677"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>第 1 课：创建自行车购买者挖掘结构
   在本课中，将创建一个挖掘结构，可以使用该结构预测 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的潜在客户是否会购买自行车。 如果您不熟悉挖掘结构和数据挖掘中的其角色，请参阅[挖掘结构&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 733c082ead217c7d3052faaef0342819e9c8fa20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a13f04338eb780a8d5efa839a5570ea0c5737752
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155967"
 ---
 # <a name="query-designers-report-builder"></a>查询设计器（报表生成器）
   报表生成器提供了有助于生成报表查询的图形查询设计器和基于文本的查询设计器。 每种类型的数据源都有关联的查询设计器。 某些数据源支持以交互方式生成查询的图形设计器。 其他数据源使用基于文本的查询设计器。 SQL Server 数据源同时支持图形查询设计器和基于文本的查询设计器。  

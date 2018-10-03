@@ -1,13 +1,11 @@
 ---
-title: 函数一致性 |Microsoft 文档
+title: 函数一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], function
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 182b53071f5d7d4c3486a84f789954e12772e0bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740075"
 ---
 # <a name="function-conformance"></a>函数一致性
-下表指示这是定义完善的每个 ODBC 函数，一致性级别。  
+下表指示这是定义完善的一致性级别的每个 ODBC 函数。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
@@ -92,6 +89,6 @@ ms.locfileid: "32914252"
 |**SQLTablePrivileges**|级别 2|  
 |**SQLTables**|核心|  
   
- [此函数 1] 重要的功能功能仅在更高版本的一致性级别均可用。  
+ [1] 重要的功能，此函数仅在更高的符合性级别均可用。  
   
  [2] 将某些属性设置为非默认值取决于一致性级别。 有关详细信息，请参阅下一部分中，[属性一致性](../../../odbc/reference/develop-app/attribute-conformance.md)。

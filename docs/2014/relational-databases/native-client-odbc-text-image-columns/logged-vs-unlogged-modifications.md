@@ -1,12 +1,10 @@
 ---
-title: 记录的 vs。无日志记录的修改 |Microsoft Docs
+title: 有日志记录的修改与无日志记录的修改 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - text columns [ODBC]
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34064aaa2e96a7d610f8709c1f5750bddd62b766
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420280"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143903"
 ---
-# <a name="logged-vs-unlogged-modifications"></a>记录的 vs。无日志记录的修改
+# <a name="logged-vs-unlogged-modifications"></a>有日志记录的修改与无日志记录的修改
   应用程序可以请求的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序不记录**文本**， **ntext**，并且**映像**的修改。 但应慎用此选项。 它应仅用于下列情况其中**文本**， **ntext**，或**图像**数据并不重要，并且数据所有者愿意放弃恢复数据的能力更高的性能。  
   
  日志记录**文本**， **ntext**，并**图像**通过调用[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)与*特性*参数设置为 SQL_SOPT_SS_ TEXTPTR_LOGGING 以及*ValuePtr*设置为 SQL_TL_ON 或 SQL_TL_OFF。  

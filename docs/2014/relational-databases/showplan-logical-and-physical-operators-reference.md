@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.showplan.nestedloops.f1
@@ -135,16 +133,15 @@ helpviewer_keywords:
 - ActualRebinds attribute
 - execution plans [SQL Server], reading output
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
-caps.latest.revision: 51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 99d305034989f0fdd2f9ca65dae9cef7d0881c2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97130c8e9a0a32a3719ed745565fce4a511d0dd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161337"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Showplan 逻辑运算符和物理运算符参考
   运算符说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何执行查询或数据操作语言 (DML) 语句。 查询优化器使用运算符生成查询计划，以创建在查询中指定的结果或执行在 DML 语句中指定的操作。 查询计划是由物理运算符组成的一个树。 您可以使用 SET SHOWPLAN 语句、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的图形执行计划选项或 SQL Server Profiler Showplan 事件类来查看查询计划。  
@@ -185,18 +182,18 @@ ms.locfileid: "37160628"
   
 |图形执行计划图标|Showplan 运算符|Description|  
 |-----------------------------------|-----------------------|-----------------|  
-|InclusionThresholdSetting|`Aggregate`|`Aggregate` 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 `Aggregate`运算符可以是一个逻辑运算符或一个物理运算符。|  
+|None|`Aggregate`|`Aggregate` 运算符计算包含 MIN、MAX、SUM、COUNT 或 AVG 的表达式。 `Aggregate`运算符可以是一个逻辑运算符或一个物理运算符。|  
 |![Arithmetic Expression 运算符图标](../../2014/database-engine/media/arithmetic-expression-32x-2.gif "Arithmetic Expression 运算符图标")|`Arithmetic Expression`|`Arithmetic Expression` 运算符根据行中的现有值计算新值。 `Arithmetic Expression` 中不使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
 |![Assert 运算符图标](../../2014/database-engine/media/assert-32x.gif "Assert 运算符图标")|`Assert`|`Assert`运算符用于验证条件。 例如，验证引用完整性或确保标量子查询返回一行。 为每个输入行`Assert`运算符计算表达式的结果`Argument`列的执行计划。 如果此表达式的值为 NULL，则通过 `Assert` 运算符传递该行，并且查询执行将继续。 如果此表达式的值非 Null，则将产生相应的错误。 `Assert`运算符是一个物理运算符。|  
 |![Assign 语言元素图标](../../2014/database-engine/media/assign-32.gif "Assign 语言元素图标")|`Assign`|`Assign`运算符将表达式或常量的值分配给一个变量。 `Assign` 是一个语言元素。|  
-|InclusionThresholdSetting|`Asnyc Concat`|`Asnyc Concat`运算符仅用于远程查询 （分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 `Asnyc Concat` 问题`open()`同时调用到所有子级，然后将位图应用于每个子级。 对于为 1，每个位`Async Concat`到按需的父节点发送输出行。|  
+|None|`Asnyc Concat`|`Asnyc Concat`运算符仅用于远程查询 （分布式查询）。 它有 *n* 个子节点和一个父节点。 通常，某些子节点是参与分布式查询的远程计算机。 `Asnyc Concat` 问题`open()`同时调用到所有子级，然后将位图应用于每个子级。 对于为 1，每个位`Async Concat`到按需的父节点发送输出行。|  
 |![Bitmap 运算符图标](../../2014/database-engine/media/bitmap-32x.gif "Bitmap 运算符图标")|`Bitmap`|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用`Bitmap`运算符来实现并行查询计划中的位图筛选。 位图筛选可提高查询执行速度，通过消除不能将另一个运算符的行传递给如之前生成任何联接记录的键值的行`Parallelism`运算符。 位图筛选器使用运算符树某部分的表中一组值的简洁表示形式来筛选位于该树另一部分的第二张表中的行。 通过在查询中预先删除不必要的行，后续运算符将处理较少的行，从而提高查询的整体性能。 优化器将确定位图的选择性何时可满足使用条件以及在哪些运算符上应用筛选器。 `Bitmap` 是一个物理运算符。|  
 |![Bitmap 运算符图标](../../2014/database-engine/media/bitmap-32x.gif "Bitmap 运算符图标")|`Bitmap Create`|`Bitmap Create` 运算符出现在创建位图的显示计划输出中。 `Bitmap Create` 是一个逻辑运算符。|  
 |![Bookmark Lookup 运算符图标](../../2014/database-engine/media/bookmark-lookup-32x.gif "Bookmark Lookup 运算符图标")|`Bookmark Lookup`|`Bookmark Lookup`运算符使用书签 （行 ID 或聚集键） 来查找表或聚集的索引中的相应行。 `Argument`列包含书签标签，用于查找表或聚集的索引中的行。 `Argument`列还包含在其中查找行的聚集的索引的表的名称。 如果中出现 WITH PREFETCH 子句`Argument`列中，查询处理器已决定是将表或聚集的索引内查找书签时使用异步预 （读） 最佳选择。<br /><br /> `Bookmark Lookup` 中不使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 而由 `Clustered Index Seek` 和 `RID Lookup` 提供书签查找功能。 `Key Lookup` 运算符也提供此功能。|  
-|InclusionThresholdSetting|`Branch Repartition`|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 `Parallelism` 迭代器称为 `Branch Repartition`。 两个这样的区域边界上的 `Parallelism` 迭代器称为 `Segment Repartition`。 `Branch Repartition` 和 `Segment Repartition` 是逻辑运算符。|  
-|InclusionThresholdSetting|`Broadcast`|`Broadcast` 有一个子节点和*n*父节点。 `Broadcast` 根据使用者的请求将其输入行发送给多个使用者。 每个使用者都将获得所有行。 例如，如果所有使用者都是哈希联接的生成端，则将生成 *n* 份哈希表。|  
+|None|`Branch Repartition`|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 `Parallelism` 迭代器称为 `Branch Repartition`。 两个这样的区域边界上的 `Parallelism` 迭代器称为 `Segment Repartition`。 `Branch Repartition` 和 `Segment Repartition` 是逻辑运算符。|  
+|None|`Broadcast`|`Broadcast` 有一个子节点和*n*父节点。 `Broadcast` 根据使用者的请求将其输入行发送给多个使用者。 每个使用者都将获得所有行。 例如，如果所有使用者都是哈希联接的生成端，则将生成 *n* 份哈希表。|  
 |![Build Hash 运算符图标](../../2014/database-engine/media/build-hash.gif "Build Hash 运算符图标")|`Build Hash`|指示为 xVelocity 内存优化的列存储索引生成批处理哈希表。|  
-|InclusionThresholdSetting|`Cache`|`Cache` 是一个专用的版**Spool**运算符。 它仅存储一行数据。 `Cache` 是一个逻辑运算符。 `Cache` 中不使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
+|None|`Cache`|`Cache` 是一个专用的版**Spool**运算符。 它仅存储一行数据。 `Cache` 是一个逻辑运算符。 `Cache` 中不使用[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|  
 |![Clustered Index Delete 运算符图标](../../2014/database-engine/media/clustered-index-delete-32x.gif "Clustered Index Delete 运算符图标")|`Clustered Index Delete`|`Clustered Index Delete` 运算符从查询执行计划的 Argument 列指定的聚集索引中删除行。 如果 WHERE:() 存在谓词在 Argument 列中，则那些满足该谓词将被删除的行。`Clustered Index Delete` 是一个物理运算符。|  
 |![Clustered Index Insert 运算符图标](../../2014/database-engine/media/clustered-index-insert-32x.gif "Clustered Index Insert 运算符图标")|`Clustered Index Insert`|`Clustered Index Insert` Showplan 运算符可将其输入行插入到 Argument 列所指定的聚集索引中。 Argument 列还包含一个 SET:() 谓词，用于指示为每一列设置的值。 如果`Clustered Index Insert`的插入值没有子项，插入的行则来自`Insert`运算符本身。`Clustered Index Insert` 是一个物理运算符。|  
 |![Clustered Index Merge 运算符图标](../../2014/database-engine/media/clustered-index-merge-32x.gif "Clustered Index Merge 运算符图标")|**Clustered Index Merge**|**Clustered Index Merge** 运算符可将合并数据流应用于聚集索引。 运算符删除、 更新或插入行中指定的聚集索引`Argument`运算符列。 执行的实际操作取决于的运行时值**操作**列中指定`Argument`运算符列。 **Clustered Index Merge** 是一个物理运算符。|  
@@ -209,25 +206,25 @@ ms.locfileid: "37160628"
 |![Concatenation 运算符图标](../../2014/database-engine/media/concatenation-32x.gif "Concatenation 运算符图标")|**Concatenation**|**Concatenation** 运算符扫描多个输入，并返回每个扫描的行。 **Concatenation** 通常用于实现 [!INCLUDE[tsql](../includes/tsql-md.md)] UNION ALL 结构。 **Concatenation** 物理运算符有两个或多个输入，有一个输出。 Concatenation 将行从第一个输入流复制到输出流，然后对其他输入流重复进行此操作。 **Concatenation** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Constant Scan 运算符图标](../../2014/database-engine/media/constant-scan-32x.gif "Constant Scan 运算符图标")|`Constant Scan`|`Constant Scan`运算符将一个或多个常量行引入到查询。 一个`Compute Scalar`之后经常使用运算符`Constant Scan`将列添加到生成的行`Constant Scan`运算符。|  
 |![Convert（数据库引擎）语言元素图标](../../2014/database-engine/media/convert-32x.gif "Convert（数据库引擎）语言元素图标")|`Convert`|`Convert` 运算符将标量数据类型转换为另一种类型。 `Convert` 是一个语言元素。|  
-|InclusionThresholdSetting|`Cross Join`|`Cross Join` 运算符将第一个（顶端）输入中的每一行与第二个（底端）输入中的每一行联接在一起。 `Cross Join` 是一个逻辑运算符。|  
+|None|`Cross Join`|`Cross Join` 运算符将第一个（顶端）输入中的每一行与第二个（底端）输入中的每一行联接在一起。 `Cross Join` 是一个逻辑运算符。|  
 |![Cursor 通用游标运算符图标](../../2014/database-engine/media/cursor-catch-all.gif "Cursor 通用游标运算符图标")|`catchall`|生成图形显示计划的逻辑找不到迭代器的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言元素）。|  
-|InclusionThresholdSetting|**游标**|**Cursor** 逻辑运算符和物理运算符用于描述涉及游标操作的查询或更新的执行方式。 其中物理运算符描述用于处理游标（如使用键集驱动游标）的物理实现算法。 游标执行过程的每一步都涉及物理运算符。 而逻辑运算符描述游标的属性，如游标是只读。<br /><br /> 逻辑运算符包括 Asynchronous、Optimistic、Primary、Read Only、Scroll Locks、Secondary 和 Synchronous。<br /><br /> 物理运算符包括 Dynamic、Fetch Query、Keyset、Population Query、Refresh Query 和 Snapshot。|  
+|None|**游标**|**Cursor** 逻辑运算符和物理运算符用于描述涉及游标操作的查询或更新的执行方式。 其中物理运算符描述用于处理游标（如使用键集驱动游标）的物理实现算法。 游标执行过程的每一步都涉及物理运算符。 而逻辑运算符描述游标的属性，如游标是只读。<br /><br /> 逻辑运算符包括 Asynchronous、Optimistic、Primary、Read Only、Scroll Locks、Secondary 和 Synchronous。<br /><br /> 物理运算符包括 Dynamic、Fetch Query、Keyset、Population Query、Refresh Query 和 Snapshot。|  
 |![Declare 语言元素图标](../../2014/database-engine/media/declare-32x.gif "Declare 语言元素图标")|`Declare`|`Declare`运算符用于分配查询计划中的本地变量。 `Declare` 是一个语言元素。|  
 |![Delete（数据库引擎）运算符图标](../../2014/database-engine/media/delete-32x.gif "Delete（数据库引擎）运算符图标")|`Delete`|`Delete`运算符用于从满足中的可选谓词对象行删除`Argument`列。|  
 |![Delete Scan 运算符图标](../../2014/database-engine/media/delete-scan-32x.gif "Delete Scan 运算符图标")|`Deleted Scan`|`Deleted Scan` 运算符在触发器中扫描删除的表。|  
-|InclusionThresholdSetting|`Distinct`|`Distinct` 运算符可以从行集或值集中删除重复项。 `Distinct` 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Distinct Sort`|`Distinct Sort`逻辑运算符扫描输入，删除重复项并按的 DISTINCT ORDER BY:() 谓词中指定的列进行排序`Argument`列。 `Distinct Sort` 是一个逻辑运算符。|  
+|None|`Distinct`|`Distinct` 运算符可以从行集或值集中删除重复项。 `Distinct` 是一个逻辑运算符。|  
+|None|`Distinct Sort`|`Distinct Sort`逻辑运算符扫描输入，删除重复项并按的 DISTINCT ORDER BY:() 谓词中指定的列进行排序`Argument`列。 `Distinct Sort` 是一个逻辑运算符。|  
 |![Distribute Streams 并行度运算符图标](../../2014/database-engine/media/parallelism-distribute-stream.gif "Distribute Streams 并行度运算符图标")|**Distribute Streams**|**Distribute Streams** 运算符仅用于并行查询计划。 **Distribute Streams** 运算符接收记录的单个输入流，并生成多个输出流。 记录的内容和格式不会改变。 输入流中的每个记录都将在某个输出流中显示。 此运算符在输出流中自动保留输入记录的相对顺序。 通常情况下，使用哈希操作确定特定输入记录所属的输出流。<br /><br /> 如果将输出分区，则`Argument`列会包含 PARTITION COLUMNS:() 谓词和分区依据列。 **Distribute Streams** 是一个逻辑运算符。|  
 |![Dynamic 游标运算符图标](../../2014/database-engine/media/dynamic-32x.gif "Dynamic 游标运算符图标")|`Dynamic`|`Dynamic`运算符使用可以查看其他人所做的所有更改的游标。|  
 |![Spool 运算符图标](../../2014/database-engine/media/spool-32x.gif "Spool 运算符图标")|**Eager Spool**|**Eager Spool**运算符获取整个输入，在存储中的隐藏临时对象中存储的每一行`tempdb`数据库。 如果重绕该运算符 (例如，通过`Nested Loops`运算符)，但需要没有任何重新绑定，而不用重新扫描输入使用假脱机的数据。 如果需要重新绑定，则将放弃假脱机数据，并通过重新扫描（重新绑定的）输入重新生成假脱机对象。 **Eager Spool** 运算符按“急切”方式生成自己的假脱机文件：当假脱机的父运算符请求第一行时，假脱机运算符将获取所有来自其输入运算符的行并将其存储在假脱机中。 **Eager Spool** 是一个逻辑运算符。|  
 |![Fetch Query 游标运算符图标](../../2014/database-engine/media/fetch-query-32x.gif "Fetch Query 游标运算符图标")|`Fetch Query`|`Fetch Query`运算符将检索行时对游标发出提取命令。|  
 |![Filter（数据库引擎）运算符图标](../../2014/database-engine/media/filter-32x.gif "Filter（数据库引擎）运算符图标")|**Filter**|**筛选器**运算符扫描输入，并返回满足要求的显示中的筛选器表达式 （谓词） 的行`Argument`列。|  
-|InclusionThresholdSetting|`Flow Distinct`|`Flow Distinct`逻辑运算符扫描输入，删除重复项。 而`Distinct`运算符生成任何输出前使用所有的输入**FlowDistinct**运算符返回每一行，因为它从输入获得 （除非该行是一个重复，这种情况下它将被丢弃）。|  
-|InclusionThresholdSetting|`Full Outer Join`|`Full Outer Join`逻辑运算符将返回每个行满足联接谓词，从第一个 （顶端） 输入与每一行与第二个 （底端） 输入相联接。 它还可以从下列输入返回行：<br /><br /> - 在第二个输入中没有匹配项的第一个输入。<br /><br /> - 在第一个输入中没有匹配项的第二个输入。<br /><br /> <br /><br /> 不包含匹配值的输入将作为空值返回。 `Full Outer Join` 是一个逻辑运算符。|  
+|None|`Flow Distinct`|`Flow Distinct`逻辑运算符扫描输入，删除重复项。 而`Distinct`运算符生成任何输出前使用所有的输入**FlowDistinct**运算符返回每一行，因为它从输入获得 （除非该行是一个重复，这种情况下它将被丢弃）。|  
+|None|`Full Outer Join`|`Full Outer Join`逻辑运算符将返回每个行满足联接谓词，从第一个 （顶端） 输入与每一行与第二个 （底端） 输入相联接。 它还可以从下列输入返回行：<br /><br /> - 在第二个输入中没有匹配项的第一个输入。<br /><br /> - 在第一个输入中没有匹配项的第二个输入。<br /><br /> <br /><br /> 不包含匹配值的输入将作为空值返回。 `Full Outer Join` 是一个逻辑运算符。|  
 |![Gather Streams 并行度运算符图标](../../2014/database-engine/media/parallelism-32x.gif "Gather Streams 并行度运算符图标")|**Gather Streams**|**Gather Streams** 运算符仅用在并行查询计划中。 **Gather Streams** 运算符处理几个输入流并通过组合这几个输入流生成单个记录输出流。 记录的内容和格式不会改变。 如果此运算符保留顺序，则所有的输入流都必须有序。 如果输出已经排序，`Argument`列包含一个 ORDER BY:() 谓词和正在排序的列的名称。 **Gather Streams** 是一个逻辑运算符。|  
 |![Hash Match 运算符图标](../../2014/database-engine/media/hash-match-32x.gif "Hash Match 运算符图标")|`Hash Match`|`Hash Match` 运算符通过计算其生成输入中每行的哈希值生成哈希表。 HASH:() 谓词以及用于创建哈希值的列的列表将出现在`Argument`列。 然后，该谓词为每个探测行（如果适用）计算哈希值（使用相同的哈希函数）并在哈希表内查找匹配项。 如果存在残留谓词 (由剩余:() 中标识`Argument`列)，行才能被视为匹配项必须还满足该谓词。 行为取决于所执行的逻辑操作：<br /><br /> 对于联接，使用第一个（顶端）输入生成哈希表，使用第二个（底端）输入探测哈希表。 按联接类型规定的模式输出匹配项（或不匹配项）。 如果多个联接使用相同的联接列，这些操作将分组为一个哈希组。<br /><br /> 对于非重复或聚合运算符，使用输入生成哈希表（删除重复项并计算聚合表达式）。 生成哈希表时，扫描该表并输出所有项。<br /><br /> 对于 union 运算符，使用第一个输入生成哈希表（删除重复项）。 使用第二个输入（它必须没有重复项）探测哈希表，返回所有没有匹配项的行，然后扫描该哈希表并返回所有项。<br /><br /> <br /><br /> `Hash Match` 是一个物理运算符。|  
 |![If 语言元素图标](../../2014/database-engine/media/if-32x.gif "If 语言元素图标")|`If`|`If`运算符执行基于表达式的有条件处理。 `If` 是一个语言元素。|  
-|InclusionThresholdSetting|`Inner Join`|`Inner Join`逻辑运算符返回满足联接第一个 （顶端） 输入与第二个 （底端） 输入的每一行。|  
+|None|`Inner Join`|`Inner Join`逻辑运算符返回满足联接第一个 （顶端） 输入与第二个 （底端） 输入的每一行。|  
 |![Insert（数据库引擎）运算符图标](../../2014/database-engine/media/insert-32x.gif "Insert（数据库引擎）运算符图标")|`Insert`|`Insert`逻辑运算符将每行从其输入中指定的对象`Argument`列。 物理运算符为`Table Insert`， `Index Insert`，或`Clustered Index Insert`运算符。|  
 |![Inserted Scan 运算符图标](../../2014/database-engine/media/inserted-scan-32x.gif "Inserted Scan 运算符图标")|**Inserted Scan**|**Inserted Scan** 运算符扫描 **插入的** 表。 **Inserted Scan** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Intrinsic 语言元素图标](../../2014/database-engine/media/intrinsic-32x.gif "Intrinsic 语言元素图标")|`Intrinsic`|`Intrinsic`运算符调用内部[!INCLUDE[tsql](../includes/tsql-md.md)]函数。 `Intrinsic` 是一个语言元素。|  
@@ -236,9 +233,9 @@ ms.locfileid: "37160628"
 |![Keyset 游标运算符图标](../../2014/database-engine/media/keyset-32x.gif "Keyset 游标运算符图标")|`Keyset`|`Keyset` 运算符使用的游标可用于查看其他用户所做的更新，而不能查看其他用户所做的插入。|  
 |![Language 元素通用图标](../../2014/database-engine/media/language-construct-catch-all.gif "Language 元素通用图标")|`Language Element`|生成图形显示计划的逻辑找不到 `Language Element` 的合适图标时，将显示通用图标。 通用图标不一定指示存在错误。 有三种通用图标：蓝色（用于迭代器）、橙色（用于游标）和绿色（用于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语言构造）。|  
 |![Spool 运算符图标](../../2014/database-engine/media/spool-32x.gif "Spool 运算符图标")|**Lazy Spool**|**Lazy Spool**逻辑运算符将从其输入每个行存储在存储中的隐藏临时对象`tempdb`数据库。 如果重绕该运算符 (例如，通过`Nested Loops`运算符)，但需要没有任何重新绑定，而不用重新扫描输入使用假脱机的数据。 如果需要重新绑定，则将放弃假脱机数据，并通过重新扫描（重新绑定的）输入重新生成假脱机对象。 **Lazy Spool** 运算符以“迟缓”方式生成其假脱机文件，即每当假脱机父运算符请求一行时，假脱机运算符便从其输入运算符获取一行，然后将该行存储在假脱机中，而不是一次处理所有行。 Lazy Spool 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Left Anti Semi Join`|当第二个（底端）输入中没有匹配行时，`Left Anti Semi Join` 运算符返回第一个（顶端）输入中的每一行。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Anti Semi Join` 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Left Outer Join`|`Left Outer Join` 运算符返回满足第一个（顶端）输入与第二个（底端）输入联接的每一行。 它还返回任何在第二个输入中没有匹配行的第一个输入中的行。 第二个输入中的非匹配行作为空值返回。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Outer Join` 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Left Semi Join`|`Left Semi Join`运算符返回的每一行中的第一个 （顶端） 输入在第二个 （底端） 输入中没有匹配行时。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Semi Join` 是一个逻辑运算符。|  
+|None|`Left Anti Semi Join`|当第二个（底端）输入中没有匹配行时，`Left Anti Semi Join` 运算符返回第一个（顶端）输入中的每一行。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Anti Semi Join` 是一个逻辑运算符。|  
+|None|`Left Outer Join`|`Left Outer Join` 运算符返回满足第一个（顶端）输入与第二个（底端）输入联接的每一行。 它还返回任何在第二个输入中没有匹配行的第一个输入中的行。 第二个输入中的非匹配行作为空值返回。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Outer Join` 是一个逻辑运算符。|  
+|None|`Left Semi Join`|`Left Semi Join`运算符返回的每一行中的第一个 （顶端） 输入在第二个 （底端） 输入中没有匹配行时。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Left Semi Join` 是一个逻辑运算符。|  
 |![Log Row Scan 运算符图标](../../2014/database-engine/media/log-row-scan-32x.gif "Log Row Scan 运算符图标")|`Log Row Scan`|`Log Row Scan`运算符用于扫描事务日志。 `Log Row Scan` 是一个逻辑和物理运算符。|  
 |![Merge Interval 运算符图标](../../2014/database-engine/media/merge-interval-32x.gif "Merge Interval 运算符图标")|`Merge Interval`|`Merge Interval`运算符可合并多个 （可能重叠的） 间隔以得出最小的不重叠间隔，然后用于查找索引项。 此运算符通常出现上述一个或多个`Compute Scalar`运算符`Constant Scan`运算符构造 （表示为一行中的列） 的时间间隔，此运算符所合并。 `Merge Interval` 是一个逻辑和物理运算符。|  
 |![Merge Join 运算符图标](../../2014/database-engine/media/merge-join-32x.gif "Merge Join 运算符图标")|**合并联接**|**Merge Join** 运算符执行内部联接、左外部联接、左半部联接、左反半部联接、右外部联接、右半部联接、右反半部联接和联合逻辑运算。<br /><br /> 在中`Argument`列中， **Merge Join**运算符:() 谓词合并，如果该操作执行一个对多联接，则包含多对多:() MERGE 谓词; 如果该操作执行的多对多联接。 `Argument`列还包含用于执行该操作的列以逗号分隔列表。 **Merge Join** 运算符要求在各自的列上对两个输入进行排序，这可以通过在查询计划中插入显式排序操作来实现。 如果不需要显式排序（例如，如果数据库内有合适的 B 树索引或可以对多个操作（如合并联接和对汇总分组）使用排序顺序），则合并联接尤其有效。 **Merge Join** 是一个物理运算符。|  
@@ -250,9 +247,9 @@ ms.locfileid: "37160628"
 |![Nonclustered Index Spool 运算符图标](../../2014/database-engine/media/index-spool-32x.gif "Nonclustered Index Spool 运算符图标")|**Index Spool**|**Index Spool**物理运算符包含 SEEK:() 谓词中`Argument`列。 **Index Spool**运算符扫描其输入的行，将每个行的副本放置在隐藏的假脱机文件 (存储在`tempdb`数据库且只查询的生存期)，并生成非聚集索引的行。 这样可以使用索引的查找功能来仅输出那些满足 SEEK:() 谓词的行。 如果重绕该运算符 (例如，通过`Nested Loops`运算符)，但需要没有任何重新绑定，而不用重新扫描输入使用假脱机的数据。|  
 |![Nonclustered Index Update 运算符图标](../../2014/database-engine/media/nonclust-index-update-32x.gif "Nonclustered Index Update 运算符图标")|`Nonclustered Index Update`|`Nonclustered Index Update`物理运算符用于更新行中指定的非聚集索引中的输入`Argument`列。 如果存在 SET:() 谓词，则将每个更新的列设置为该值。 `Nonclustered Index Update` 是一个物理运算符。|  
 |![Online Index Insert 运算符图标](../../2014/database-engine/media/online-index-32x.gif "Online Index Insert 运算符图标")|**Online Index Insert**|**Online Index Insert** 物理运算符指示索引创建、更改或删除操作是在线执行的。 也就是说，基础表数据在索引操作期间仍然对用户可用。|  
-|InclusionThresholdSetting|`Parallelism`|`Parallelism`运算符执行分发流、 收集流和对流重新分区逻辑操作。 `Argument`列可以包含一个 PARTITION COLUMNS:() 谓词和逗号分隔的分区列列表。 `Argument`列还包含一个 ORDER BY:() 谓词，列出要在分区过程中保留的排序顺序的列。 `Parallelism` 是一个物理运算符。<br /><br /> 请注意： 如果查询已编译为并行查询，但在运行时它作为串行查询运行，显示计划输出生成通过 SET STATISTICS XML 或使用**包括实际执行计划**选项中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将不包含`RunTimeInformation`元素`Parallelism`运算符。 SET STATISTICS PROFILE 输出中的实际行计数和实际执行数将显示为零`Parallelism`运算符。 任何一种情况发生时，它表示`Parallelism`运算符仅用在查询编译期间，未在运行时查询计划。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
+|None|`Parallelism`|`Parallelism`运算符执行分发流、 收集流和对流重新分区逻辑操作。 `Argument`列可以包含一个 PARTITION COLUMNS:() 谓词和逗号分隔的分区列列表。 `Argument`列还包含一个 ORDER BY:() 谓词，列出要在分区过程中保留的排序顺序的列。 `Parallelism` 是一个物理运算符。<br /><br /> 请注意： 如果查询已编译为并行查询，但在运行时它作为串行查询运行，显示计划输出生成通过 SET STATISTICS XML 或使用**包括实际执行计划**选项中[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]将不包含`RunTimeInformation`元素`Parallelism`运算符。 SET STATISTICS PROFILE 输出中的实际行计数和实际执行数将显示为零`Parallelism`运算符。 任何一种情况发生时，它表示`Parallelism`运算符仅用在查询编译期间，未在运行时查询计划。 请注意，如果服务器上的并发负荷很高，则并行查询计划有时会以串行方式运行。|  
 |![Parameter Table Scan 运算符图标](../../2014/database-engine/media/parameter-table-scan-32x.gif "Parameter Table Scan 运算符图标")|`Parameter Table Scan`|`Parameter Table Scan`运算符扫描用作当前查询中参数的表。 该运算符一般用于存储过程内的 INSERT 查询。 `Parameter Table Scan` 是一个逻辑和物理运算符。|  
-|InclusionThresholdSetting|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 `Hash Match` 是实现分区聚合的唯一一个物理运算符 （迭代器）。 **Partial Aggregate** 是一个逻辑运算符。|  
+|None|**Partial Aggregate**|**Partial Aggregate** 用于并行计划中。 它将聚合功能应用到尽可能多的输入行中，以便不必执行向磁盘写入数据的操作（称为“溢出”）。 `Hash Match` 是实现分区聚合的唯一一个物理运算符 （迭代器）。 **Partial Aggregate** 是一个逻辑运算符。|  
 |![Population Query 游标运算符图标](../../2014/database-engine/media/poulation-query-32x.gif "Population Query 游标运算符图标")|`Population Query`|`Population Query` 运算符在打开游标时填充游标的工作表。|  
 |![Refresh Query 游标运算符图标](../../2014/database-engine/media/refresh-query-32x.gif "Refresh Query 游标运算符图标")|`Refresh Query`|`Refresh Query` 运算符为提取缓冲区中的行提取当前数据。|  
 |![Remote Delete 运算符图标](../../2014/database-engine/media/remote-delete-32x.gif "Remote Delete 运算符图标")|`Remote Delete`|`Remote Delete`运算符从远程对象中删除输入的行。 `Remote Delete` 是一个逻辑和物理运算符。|  
@@ -265,12 +262,12 @@ ms.locfileid: "37160628"
 |![Repartition Streams 并行度运算符图标](../../2014/database-engine/media/parallelism-repartition-stream.gif "Repartition Streams 并行度运算符图标")|**Repartition Streams**|**Repartition Streams** 运算符使用多个流并生成多个记录流。 记录的内容和格式不会改变。 如果查询优化器使用位图筛选器，则输出流中行的数量将减少。 输入流中的每个记录都放入一个输出流中。 如果该运算符保留次序，则必须对所有输入流排序并将它们合并到几个有序的输出流中。 如果将输出分区，`Argument`列会包含 PARTITION COLUMNS:() 谓词和分区依据列。如果输出已经排序，`Argument`列包含一个 ORDER BY:() 谓词和排序的列。 **Repartition Streams** 是一个逻辑运算符。 该运算符只用于并行查询计划中。|  
 |![Result 语言元素图标](../../2014/database-engine/media/result-32x.gif "Result 语言元素图标")|`Result`|`Result`运算符是查询计划结束时返回的数据。 它通常是显示计划的根元素。 `Result` 是一个语言元素。|  
 |![RID Lookup 运算符图标](../../2014/database-engine/media/rid-nonclust-locate-32x.gif "RID Lookup 运算符图标")|`RID Lookup`|`RID Lookup` 使用提供的行标识符 (RID) 在堆上进行的书签查找。 `Argument`列包含书签标签，用于查找表，并在其中查找行的表的名称中的行。 `RID Lookup` 通常带有 NESTED LOOP JOIN。 `RID Lookup` 是一个物理运算符。 有关书签查找的详细信息，请参阅 MSDN SQL Server 博客中的[Bookmark Lookup](http://go.microsoft.com/fwlink/?LinkId=132568)（书签查找）。|  
-|InclusionThresholdSetting|`Right Anti Semi Join`|`Right Anti Semi Join`运算符输出第二个 （底端） 输入中的每一行中第一个 （顶端） 输入的匹配行不存在时。 匹配的行定义为满足在谓词的行`Argument`列 （如果不存在谓词，每个行都是匹配的行）。 `Right Anti Semi Join` 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Right Outer Join`|`Right Outer Join`运算符返回满足联接第二个 （底端） 输入与第一个 （顶端） 输入每个匹配行的每一行。 此外，它还返回第二个输入中在第一个输入中没有匹配行的任何行，即与 NULL 联接。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Right Outer Join` 是一个逻辑运算符。|  
-|InclusionThresholdSetting|`Right Semi Join`|第一个（顶端）输入有匹配行时，`Right Semi Join` 运算符返回第二个（底端）输入中的每一行。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Right Semi Join` 是一个逻辑运算符。|  
+|None|`Right Anti Semi Join`|`Right Anti Semi Join`运算符输出第二个 （底端） 输入中的每一行中第一个 （顶端） 输入的匹配行不存在时。 匹配的行定义为满足在谓词的行`Argument`列 （如果不存在谓词，每个行都是匹配的行）。 `Right Anti Semi Join` 是一个逻辑运算符。|  
+|None|`Right Outer Join`|`Right Outer Join`运算符返回满足联接第二个 （底端） 输入与第一个 （顶端） 输入每个匹配行的每一行。 此外，它还返回第二个输入中在第一个输入中没有匹配行的任何行，即与 NULL 联接。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Right Outer Join` 是一个逻辑运算符。|  
+|None|`Right Semi Join`|第一个（顶端）输入有匹配行时，`Right Semi Join` 运算符返回第二个（底端）输入中的每一行。 如果没有联接谓词中存在`Argument`列中，每个行是匹配的行。 `Right Semi Join` 是一个逻辑运算符。|  
 |![Row Count Spool 运算符图标](../../2014/database-engine/media/remote-count-spool-32x.gif "Row Count Spool 运算符图标")|**Row Count Spool**|**Row Count Spool** 运算符扫描输入，计算现有的行数并返回相同数目的不包含任何数据的行。 必须检查现有行数（而非行中包含的数据）时，使用此运算符。 例如，如果`Nested Loops`运算符执行左的半联接操作且联接谓词应用于内部输入，可能会在内部输入的顶部放置行计数假脱机`Nested Loops`运算符。 然后`Nested Loops`运算符就可以确定行的数目是行计数假脱机输出 （因为不需要内侧的实际数据） 以确定是否返回外部行。 **Row Count Spool** 是一个物理运算符。|  
 |![Segment 运算符图标](../../2014/database-engine/media/segment-32x.gif "Segment 运算符图标")|**段**|**Segment** 既是一个物理运算符，也是一个逻辑运算符。 它基于一个或多个列的值将输入集划分成多个段。 这些列显示为 **Segment** 运算符中的参数。 然后此运算符每次输出一个段。|  
-|InclusionThresholdSetting|`Segment Repartition`|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 `Parallelism` 迭代器称为 `Branch Repartition`。 两个这样的区域边界上的 `Parallelism` 迭代器称为 `Segment Repartition`。 `Branch Repartition` 和 `Segment Repartition` 是逻辑运算符。|  
+|None|`Segment Repartition`|在并行查询计划中，有时存在迭代器的概念性区域。 此类区域中的所有迭代器都可通过并行线程执行。 这些区域本身必须串行执行。 单个区域内的某些 `Parallelism` 迭代器称为 `Branch Repartition`。 两个这样的区域边界上的 `Parallelism` 迭代器称为 `Segment Repartition`。 `Branch Repartition` 和 `Segment Repartition` 是逻辑运算符。|  
 |![Sequence 运算符图标](../../2014/database-engine/media/sequence-32x.gif "Sequence 运算符图标")|`Sequence`|`Sequence`运算符驱动大范围的更新计划。 就其功能而言，该运算符按顺序（从上到下）执行每个输入。 每个输入通常是不同对象的更新。 该运算符只返回其上一个（底端）输入中的行。 `Sequence` 是一个逻辑和物理运算符。|  
 |![Sequence Project 运算符图标](../../2014/database-engine/media/sequence-project-32x.gif "Sequence Project 运算符图标")|`Sequence Project`|`Sequence Project`运算符将添加列以便计算有序集。 它基于一个或多个列的值将输入集划分成多个段。 然后此运算符每次输出一个段。 这些列在 `Sequence Project` 运算符中作为参数显示。 `Sequence Project` 是一个逻辑和物理运算符。|  
 |![Snapshot 游标运算符图标](../../2014/database-engine/media/snapshot-32x.gif "Snapshot 游标运算符图标")|**快照**|**Snapshot** 运算符创建一个看不到其他人所做更改的游标。|  
@@ -278,7 +275,7 @@ ms.locfileid: "37160628"
 |![Split 运算符图标](../../2014/database-engine/media/split-32x.gif "Split 运算符图标")|`Split`|`Split`运算符用于优化更新处理。 它将每个更新操作拆分成删除和插入操作。 `Split` 是一个逻辑和物理运算符。|  
 |![Spool 运算符图标](../../2014/database-engine/media/spool-32x.gif "Spool 运算符图标")|**Spool**|**Spool**运算符将保存到中间查询结果`tempdb`数据库。|  
 |![Stream Aggregate 运算符图标](../../2014/database-engine/media/stream-aggregate-32x.gif "Stream Aggregate 运算符图标")|`Stream Aggregate`|`Stream Aggregate`运算符按一个或多个列对行分组，然后计算由查询返回的一个或多个聚合表达式。 此运算符的输出可供查询中的后续运算符引用和/或返回到客户端。 `Stream Aggregate` 运算符要求输入在组中按列进行排序。 如果由于前面的 `Sort` 运算符或已排序的索引查找或扫描导致数据尚未排序，则优化器将在此运算符前面使用一个 `Sort` 运算符。 在 SHOWPLAN_ALL 语句或中的图形执行计划[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，GROUP BY 谓词中的列会列在`Argument`列中，而聚合表达式则列中**定义的值**列。 `Stream Aggregate` 是一个物理运算符。|  
-|![Switch 运算符图标](../../2014/database-engine/media/switch-32x.gif "Switch 运算符图标")|**开关**|**Switch** 是一种特殊类型的串联迭代器，它具有 *n* 个输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值（在 0 到 *n*-1 之间）， **Switch** 将适当的输入流复制到输出流中。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
+|![Switch 运算符图标](../../2014/database-engine/media/switch-32x.gif "Switch 运算符图标")|**Switch**|**Switch** 是一种特殊类型的串联迭代器，它具有 *n* 个输入。 有一个表达式与每个 **Switch** 运算符关联。 根据表达式的返回值（在 0 到 *n*-1 之间）， **Switch** 将适当的输入流复制到输出流中。 **Switch** 的一种用途是与某些运算符（如 **TOP** 运算符）一起实现涉及快进游标的查询计划。 **Switch** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Table Delete 运算符图标](../../2014/database-engine/media/table-delete-32x.gif "Table Delete 运算符图标")|`Table Delete`|`Table Delete`物理运算符用于从指定的表中删除行`Argument`列的查询执行计划。|  
 |![Table Insert 运算符图标](../../2014/database-engine/media/table-insert-32x.gif "Table Insert 运算符图标")|`Table Insert`|`Table Insert`运算符将行插入到表中指定其输入`Argument`列的查询执行计划。 `Argument`列还包含一个 SET:() 谓词，用于指示为每个列设置的值。 如果`Table Insert`的插入值没有子项，然后插入的行则来自 Insert 运算符本身。 `Table Insert` 是一个物理运算符。|  
 |![Table Merge 运算符](../../2014/database-engine/media/table-merge-32x.gif "Table Merge 运算符")|**Table Merge**|**Table Merge** 运算符可将合并数据流应用到堆。 删除、 更新或插入行中指定的表中的运算符`Argument`运算符列。 执行的实际操作取决于的运行时值**操作**列中指定`Argument`运算符列。 **Table Merge** 是一个物理运算符。|  
@@ -287,9 +284,9 @@ ms.locfileid: "37160628"
 |![Table Update 运算符图标](../../2014/database-engine/media/table-update-32x.gif "Table Update 运算符图标")|`Table Update`|`Table Update`物理运算符用于更新中指定的表中的输入的行`Argument`列的查询执行计划。 SET:() 谓词确定每个更新列的值。 可以在 SET 子句中、此运算符内的其他位置以及此查询内的其他位置引用这些值。|  
 |![Table-valued Function 运算符图标](../../2014/database-engine/media/table-valued-function-32x.gif "Table-valued Function 运算符图标")|**Table-valued Function**|**Table-valued Function** 运算符计算表值函数（ [!INCLUDE[tsql](../includes/tsql-md.md)] 或 CLR）并将结果行存储在 [tempdb](../relational-databases/databases/tempdb-database.md) 数据库中。 当父迭代器请求这些行中，**表值函数**返回的行从`tempdb`。<br /><br /> 调用表值函数的查询生成具有 **Table-valued Function** 迭代器的查询计划。 可以使用不同的参数值计算**Table-valued Function** ：<br /><br /> **Table-valued Function XML Reader** 输入 XML BLOB 作为参数，并生成一个按 XML 文档顺序表示 XML 节点的行集。 其他输入参数可能会将返回的 XML 节点限于 XML 文档的子集。<br /><br /> **Table Valued Function XML Reader with XPath filter** 是一种特殊类型的 **XML Reader Table-valued Function** ，它将输出限于满足 XPath 表达式的 XML 节点。<br /><br /> <br /><br /> **Table-valued Function** 既是一个逻辑运算符，也是一个物理运算符。|  
 |![Top 运算符图标](../../2014/database-engine/media/top-32x.gif "Top 运算符图标")|**Top**|**Top** 运算符扫描输入，但仅基于排序顺序返回最前面的指定行数或行百分比。 `Argument`列可以包含要检查重复值的列的列表。 在更新计划中， **Top** 运算符用于强制实施行计数限制。 **Top** 既是一个逻辑运算符，也是一个物理运算符。 **Top** 既是一个逻辑运算符，也是一个物理运算符。|  
-|InclusionThresholdSetting|**Top N Sort**|**Top N Sort**类似于`Sort`迭代器，仅第一个除*N*需要行，而不是整个结果集。 如果 *N*的值较小， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询执行引擎将尝试在内存中执行整个排序操作。 如果 *N*的值较大，查询执行引擎将使用更通用的排序方法（该方法不采用 *N* 作为参数）重新排序。|  
+|None|**Top N Sort**|**Top N Sort**类似于`Sort`迭代器，仅第一个除*N*需要行，而不是整个结果集。 如果 *N*的值较小， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询执行引擎将尝试在内存中执行整个排序操作。 如果 *N*的值较大，查询执行引擎将使用更通用的排序方法（该方法不采用 *N* 作为参数）重新排序。|  
 |![扩展运算符 (UDX) 图标](../../2014/database-engine/media/udx-32x.gif "扩展运算符 (UDX) 图标")|`UDX`|扩展运算符 (UDX) 可以实现 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的一种 XQuery 或 XPath 操作。 所有 UDX 运算符既是逻辑运算符，又是物理运算符。<br /><br /> 扩展的运算符 (UDX)`FOR XML`用于序列化将其输入为单个输出行中的单个 BLOB 列中的 XML 表示形式的关系行集。 它是区分顺序的 XML 聚合运算符。<br /><br /> 扩展运算符 (UDX) `XML SERIALIZER` 是区分顺序的一种 XML 聚合运算符。 它以 XML 文档顺序输入表示 XML 节点或 XQuery 标量的行，并在单个输出行、单个 XML 列中生成序列化的 XML BLOB。<br /><br /> 扩展运算符 (UDX) `XML FRAGMENT SERIALIZER` 是一种特殊类型的 `XML SERIALIZER`，用于处理表示在 XQuery 插入数据修改扩展中插入的 XML 片断的输入行。<br /><br /> 扩展运算符 (UDX) `XQUERY STRING` 计算表示 XML 节点的输入行的 XQuery 字符串值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含输入字符串值的 XQuery 标量。<br /><br /> 扩展运算符 (UDX) `XQUERY LIST DECOMPOSER` 是一个 XQuery 列表分解运算符。 对于表示 XML 节点的每个输入行，它至少生成表示 XQuery 标量的一个行，如果输入的是 XSD 列表类型的行，则每个行都包含一个列表元素值。<br /><br /> 扩展运算符 (UDX) `XQUERY DATA` 在表示 XML 节点的输入行上计算 XQuery fn:data() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:data()** 结果的 XQuery 标量。<br /><br /> 扩展运算符 `XQUERY CONTAINS` 在表示 XML 节点的输入行上计算 XQuery fn:contains() 函数的值。 它是一个区分顺序的字符串聚合运算符。 它输出一行多列，表示包含 **fn:contains()** 结果的 XQuery 标量。<br /><br /> 扩展的运算符`UPDATE XML NODE`更新 XML 节点中 XQuery 替换数据修改扩展中的**modify （)** XML 类型的方法。|  
-|InclusionThresholdSetting|**Union**|**Union** 运算符扫描多个输入，输出扫描的每一行并删除重复项。 **Union** 是一个逻辑运算符。|  
+|None|**Union**|**Union** 运算符扫描多个输入，输出扫描的每一行并删除重复项。 **Union** 是一个逻辑运算符。|  
 |![Update（数据库引擎）运算符图标](../../2014/database-engine/media/update-32x.gif "Update（数据库引擎）运算符图标")|`Update`|`Update`运算符用于更新每个行中指定的对象中的输入`Argument`列的查询执行计划。 `Update` 是一个逻辑运算符。 物理运算符为 `Table Update`、`Index Update` 或 `Clustered Index Update`。|  
 |![While 语言元素图标](../../2014/database-engine/media/while-32x.gif "While 语言元素图标")|`While`|`While`运算符实现[!INCLUDE[tsql](../includes/tsql-md.md)]while 循环。 `While` 是一个语言元素|  
 |![Table Spool 运算符图标](../../2014/database-engine/media/table-spool-32x.gif "Table Spool 运算符图标")|`Window Spool`|`Window Spool` 运算符将每个行扩展为表示与行关联的窗口的行集。 在查询中，OVER 子句定义查询结果集内的窗口和窗口函数，然后计算窗口中的每个行的值。 `Window Spool` 是一个逻辑和物理运算符。|  

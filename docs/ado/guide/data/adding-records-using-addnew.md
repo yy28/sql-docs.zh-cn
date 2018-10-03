@@ -1,42 +1,39 @@
 ---
-title: 添加记录使用 AddNew |Microsoft 文档
+title: 使用 AddNew 添加记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819517"
 ---
 # <a name="adding-records-using-addnew-method"></a>添加记录使用 AddNew 方法
-这是基本语法的**AddNew**方法：
+这是基本的语法**AddNew**方法：
 
  *记录集*。AddNew *FieldList*，*值*
 
- *FieldList*和*值*参数是可选的。 *FieldList*是单个名称或名称的数组或新记录中的字段的序号位置。
+ *FieldList*并*值*参数是可选的。 *FieldList*为单个名称或名称的数组或新记录中字段的序号位置。
 
- *值*参数是单个值或数组的新记录中的字段的值。
+ *值*参数为单个值或数组的新记录中字段的值。
 
- 通常情况下，当你想要添加的单个记录，你将调用**AddNew**不带任何参数的方法。 具体而言，将调用**AddNew**; 设置**值**每个字段中的新记录;，然后调用**更新**或**UpdateBatch**，或两者。 可以确保你**记录集**支持通过添加新记录**支持**具有属性**adAddNew**枚举的常数。
+ 通常情况下，当你想要添加一条记录，您将调用**AddNew**不带任何参数的方法。 具体而言，将调用**AddNew**; set**值**每个字段中的新记录;，然后调用**更新**或者**UpdateBatch**，或两者。 可确保你**记录集**支持通过添加新记录**支持**具有属性**adAddNew**枚举的常数。
 
- 下面的代码使用此方法的示例中添加新发货方**记录集**。 SQL Server 会自动提供 ShipperID 字段值。 因此，代码不会尝试提供新的记录的字段值。
+ 以下代码使用此技术的示例添加新的发货方**记录集**。 SQL Server 会自动提供 ShipperID 字段值。 因此，代码不会尝试提供新的记录的字段值。
 
 ```
 'BeginAddNew1.1
@@ -51,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Remarks
- 因为此代码使用断开连接**记录集**与客户端游标在批处理模式下，你必须重新连接**记录集**到具有新的数据源**连接**对象，然后你可以调用**UpdateBatch**方法发布到数据库的更改。 轻松地完成此操作通过使用新函数**GetNewConnection**。
+## <a name="remarks"></a>备注
+ 因为此代码使用已断开连接**记录集**利用在批处理模式下客户端游标，必须重新连接**记录集**到具有一个新的数据源**连接**对象，然后可以调用才能**UpdateBatch**方法来更改发布到数据库。 这轻松地通过使用新的函数**GetNewConnection**。

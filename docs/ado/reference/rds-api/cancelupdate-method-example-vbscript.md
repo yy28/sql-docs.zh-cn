@@ -1,35 +1,32 @@
 ---
-title: 正在执行方法示例 (VBScript) |Microsoft 文档
+title: CancelUpdate 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803005"
 ---
-# <a name="cancelupdate-method-example-vbscript"></a>正在执行方法示例 (VBScript)
+# <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o > 标记中普通的 HTML 文档，并将其命名**CancelUpdateVBS.asp**。 ASP 脚本将标识您的 internet 服务器。 你将需要编辑服务器，以反映你自己的设置的名称。 为 SQL Server 安装的名称从 MyServer 中只需更改连接字符串中的值。  
+ 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**CancelUpdateVBS.asp**。 ASP 脚本将识别您的 internet 服务器。 你将需要编辑的服务器，以反映你自己的设置名称。 只需将连接字符串中的值从 MyServer 更改为 SQL Server 安装的名称。  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

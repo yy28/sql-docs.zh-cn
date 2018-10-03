@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft 文档
+title: fn_syscollector_get_execution_details (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4336b2bd20dbfb49996f6eb4edd5826533215b89
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230084"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845156"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +60,11 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|用于标识返回值的字节数组。|  
 |message|**nvarchar**|事件以及与事件关联的信息的说明。|  
   
-## <a name="permissions"></a>权限  
- 需要选择权限**dc_operator**。  
+## <a name="permissions"></a>Permissions  
+ 要求具有 SELECT 权限的**dc_operator**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启用包日志记录在 SQL Server 数据工具](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

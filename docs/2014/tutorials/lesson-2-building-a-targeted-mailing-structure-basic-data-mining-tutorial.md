@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d0d6ceb-49b5-47c7-9ee6-464da43cc1f6
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6338ea7376e769a307d2a0101ee99dd0f32cfc53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dc87445828f446f9ba2cf066248d57eef260ce7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086459"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>第 2 课：生成 Targeted Mailing 结构（数据挖掘基础教程）
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 市场部希望通过向目标特定客户发送邮件的方式来提高销售量。 公司的数据库包含一个现有客户列表和一个潜在的新客户列表。 通过调查以前的客户的属性，该公司希望发现随后可应用于潜在客户的模式。 例如，他们可能使用过去的趋势来预测哪些潜在客户最有可能购买自行车从[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]，或创建客户细分为将来的市场营销活动。  

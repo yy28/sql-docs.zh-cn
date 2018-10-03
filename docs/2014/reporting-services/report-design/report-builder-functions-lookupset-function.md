@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d84ee2971ca430d87220d07ec461180f5c31f759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166397"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称的一组匹配值。  
@@ -36,13 +33,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如， `=Fields!ID.Value`。  
+ (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如 `=Fields!ID.Value` 。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!CustomerID.Value`。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如 `=Fields!CustomerID.Value` 。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!PhoneNumber.Value`。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如 `=Fields!PhoneNumber.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“ContactInformation”。  
@@ -50,7 +47,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>返回  
  返回`VariantArray`，或`Nothing`如果没有匹配项。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用`LookupSet`从名称/值对的指定数据集中检索一组值的 1 对多关系。 例如，对于在表中的客户标识符，可以使用`LookupSet`该客户的未绑定到数据区域的数据集检索所有相关的电话号码。  
   
  `LookupSet` 执行以下操作：  

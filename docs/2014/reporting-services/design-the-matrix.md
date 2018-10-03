@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-caps.latest.revision: 22
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f68a47d9b905861b5a2068db3a8a93b1e1d5be2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43d8c841799f740d602d7c2fc48ab229ec30d0fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166707"
 ---
 # <a name="design-the-matrix"></a>设计矩阵
   使用报表向导的此页可为报表选择字段。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用字段**  
  选择在页面中矩阵上方以行组、列组或详细信息形式显示的字段。 若要将某个字段从 **“字段”** 移动到 **“页面”**、 **“列”**、 **“行”** 或 **“详细信息”**，请选择该字段，再单击 **“页面”**、 **“列”**、 **“行”** 或 **“详细信息”** 按钮。 或者，也可以将该字段拖至相应的框。  
   

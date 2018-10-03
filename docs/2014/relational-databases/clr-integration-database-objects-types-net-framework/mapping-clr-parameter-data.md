@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 69
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8ba043e2c19a1fd835f04c5426c0518dec2831b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148117"
 ---
 # <a name="mapping-clr-parameter-data"></a>映射 CLR 参数数据
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型，公共语言运行时 (CLR) 为中的等效项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空间，并在其本机 CLR 等效[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -45,41 +42,41 @@ ms.locfileid: "37354519"
 |`bigint`|`SqlInt64`|**Int64，可以为 Null\<Int64 >**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**布尔值、 可以为 Null\<布尔 >**|  
-|`char`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`cursor`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`char`|None|None|  
+|`cursor`|None|None|  
 |`date`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
 |`datetime`|`SqlDateTime`|**日期时间，可以为 Null\<日期时间 >**|  
-|`datetime2`|InclusionThresholdSetting|**日期时间，可以为 Null\<日期时间 >**|  
+|`datetime2`|None|**日期时间，可以为 Null\<日期时间 >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset，可以为 Null\<DateTimeOffset >**|  
 |`decimal`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
 |`float`|`SqlDouble`|**双精度，可以为 Null\<双精度 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|InclusionThresholdSetting|  
-|`image`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 将 Microsoft.SqlServer.Types.dll 中定义，这与 SQL Server 安装，可以从下载[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能包](http://go.microsoft.com/fwlink/?LinkId=131220)。|None|  
+|`image`|None|None|  
 |`int`|`SqlInt32`|**Int32 类型，可以为 Null\<Int32 >**|  
 |`money`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Decimal、 可以为 Null\<十进制 >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 更适用于数据传输和访问，而 `SQLString` 更适用于执行字符串运算。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、 字符串、 Char []，可以为 Null\<char >**|  
 |`real`|`SqlSingle`（`SqlSingle` 的范围，但大于 `real`）|**单一的可以为 Null\<单一 >**|  
-|`rowversion`|InclusionThresholdSetting|`Byte[]`|  
+|`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16，可以为 Null\<Int16 >**|  
 |`smallmoney`|`SqlMoney`|**Decimal、 可以为 Null\<十进制 >**|  
-|`sql_variant`|InclusionThresholdSetting|`Object`|  
-|`table`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`text`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`time`|InclusionThresholdSetting|**TimeSpan，可以为 Null\<TimeSpan >**|  
-|`timestamp`|InclusionThresholdSetting|InclusionThresholdSetting|  
+|`sql_variant`|None|`Object`|  
+|`table`|None|None|  
+|`text`|None|None|  
+|`time`|None|**TimeSpan，可以为 Null\<TimeSpan >**|  
+|`timestamp`|None|None|  
 |`tinyint`|`SqlByte`|**字节，可以为 Null\<字节 >**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid，可以为 Null\<Guid >**|  
-|`User-defined type(UDT)`|InclusionThresholdSetting|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
+|`User-defined type(UDT)`|None|绑定到相同程序集或依赖程序集中的用户定义类型的相同类。|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**字节、 Byte []，可以为 Null\<字节 >**|  
-|`varchar`|InclusionThresholdSetting|InclusionThresholdSetting|  
-|`xml`|`SqlXml`|InclusionThresholdSetting|  
+|`varchar`|None|None|  
+|`xml`|`SqlXml`|None|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>使用 Out 参数的自动数据类型转换  
  通过以 `out` 修饰符 (Microsoft Visual C#) 或 `<Out()> ByRef` (Microsoft Visual Basic) 来标记输入参数，CLR 方法可以将信息返回到发起调用的代码或程序。如果输入参数是 `System.Data.SqlTypes` 命名空间中的 CLR 数据类型，并且发起调用的程序指定其等效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型作为输入参数，则会在 CLR 方法返回数据类型时自动发生类型转换。  

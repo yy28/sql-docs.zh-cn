@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:ceiling function
 - ceiling function [XQuery]
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1399fd20bf4d7af3fed85730fc397e1400347ad2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae81ae295664f4e1ef1a7ef60c01a4f866d2c496
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751225"
 ---
-# <a name="numeric-values-functions---ceiling"></a>数值函数-ceiling 
+# <a name="numeric-values-functions---ceiling"></a>数值函数 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回不带小数部分并且不小于其参数值的最小数字。 如果参数是一个空序列，则返回空序列。  
@@ -46,7 +40,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果类型 *$arg*是三个基本数字类型之一**xs: float**， **xs: double**，或**xs: decimal**，返回类型是与相同 *$arg*类型。  
   
  如果类型 *$arg*是从其中一个数值类型派生的类型的返回类型为基的数值类型。  

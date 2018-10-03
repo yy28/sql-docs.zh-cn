@@ -1,27 +1,24 @@
 ---
-title: 记录集对象属性、 方法和事件 |Microsoft 文档
+title: 记录集对象属性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691315"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>记录集对象属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -33,7 +30,7 @@ ms.locfileid: "35281176"
   
  [ActiveConnection 属性](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [BOF，EOF 属性](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [BOF、 EOF 属性](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
  [书签属性](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
@@ -41,7 +38,7 @@ ms.locfileid: "35281176"
   
  [CursorLocation 属性](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
   
- [游标类型属性](../../../ado/reference/ado-api/cursortype-property-ado.md)  
+ [CursorType 属性](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
  [DataMember 属性](../../../ado/reference/ado-api/datamember-property.md)  
   
@@ -59,7 +56,7 @@ ms.locfileid: "35281176"
   
  [MarshalOptions 属性](../../../ado/reference/ado-api/marshaloptions-property-ado.md)  
   
- [最大记录属性](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
+ [MaxRecords 属性](../../../ado/reference/ado-api/maxrecords-property-ado.md)  
   
  [PageCount 属性](../../../ado/reference/ado-api/pagecount-property-ado.md)  
   
@@ -84,9 +81,9 @@ ms.locfileid: "35281176"
   
  [Cancel 方法](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
- [执行方法](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+ [CancelBatch 方法](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
   
- [正在执行方法](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate 方法](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
  [Clone 方法](../../../ado/reference/ado-api/clone-method-ado.md)  
   
@@ -106,7 +103,7 @@ ms.locfileid: "35281176"
   
  [MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)  
   
- [方法签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
+ [NextRecordset 方法](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
  [Open 方法（ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3e4c198-ab35-4548-9471-1b4e6b6e5dfd
-caps.latest.revision: 43
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9e5decf2f1d6c702b3bc3483ffb89bff9a2cd9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c93def5590b634d2fb3f8374b5fb875fd2d740eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108297"
 ---
 # <a name="lesson-3-accessing-the-web-service"></a>第 3 课：访问 Web 服务
   将报表服务器 Web 服务的引用添加到项目中后，下一步是创建 Web 服务代理类的实例。 然后，您可以通过调用代理类中的方法来访问 Web 服务的方法。 当你的应用程序调用这些方法时，代理类生成的代码[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]处理你的应用程序和 Web 服务之间的通信。  

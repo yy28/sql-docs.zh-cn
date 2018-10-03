@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Size Property (ClientNetLibInfo Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: acc960b04e3deb5299a1ac43000809ab6c42b7a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a343a87403120b0cb4e06c9b8efb1c510135da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157637"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 属性（ClientNetLibInfo 类）
   获取客户端网络库文件的大小 (KB)。  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定客户端网络库文件的大小的 uint32 值 (KB)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  

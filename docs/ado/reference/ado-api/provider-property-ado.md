@@ -1,13 +1,11 @@
 ---
-title: 提供程序属性 (ADO) |Microsoft 文档
+title: 提供程序属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,33 +17,32 @@ f1_keywords:
 helpviewer_keywords:
 - Provider property [ADO]
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3491d76d0ba032cc9a8887f146bf9605aaf98772
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 22ee1b88ee6065a49c53ae7024c93e869099ca3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755285"
 ---
-# <a name="provider-property-ado"></a>提供程序属性 (ADO)
-指示提供程序名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+# <a name="provider-property-ado"></a>Provider 属性 (ADO)
+指示提供程序的名称[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值，该值指示提供程序名称。  
   
-## <a name="remarks"></a>Remarks  
- 使用**提供程序**属性来设置或返回提供程序的连接的名称。 此属性还可以设置的内容[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性或*ConnectionString*参数[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法; 但是，指定提供程序在多个位置时调用**打开**方法都有不可预知的结果。 如果不指定任何提供程序，则该属性将默认为 MSDASQL ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md))。  
+## <a name="remarks"></a>备注  
+ 使用**提供程序**属性来设置或返回的连接提供程序的名称。 此属性还可以设置的内容[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性或*ConnectionString*自变量[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法; 但是，指定提供程序在多个位置而调用**打开**方法可以具有不可预知的结果。 如果不指定任何提供程序，该属性将默认为 MSDASQL ([Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md))。  
   
- **提供程序**属性为读/写，当连接已关闭，并且只读打开时。 该设置将不会生效之前你任一打开**连接**对象或访问[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合**连接**对象。 如果设置不是有效的就会出错。  
+ **提供程序**时该连接已关闭，只读方式打开时，属性为读/写。 该设置才会生效之前，或者打开**连接**对象或访问[属性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合**连接**对象。 如果该设置不是有效的就会出错。  
   
 ## <a name="applies-to"></a>适用范围  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [提供程序和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [提供程序和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
+ [Provider 和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [Provider 和 DefaultDatabase 属性示例 (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
+ [用于 ODBC 的 Microsoft OLE DB 提供程序](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

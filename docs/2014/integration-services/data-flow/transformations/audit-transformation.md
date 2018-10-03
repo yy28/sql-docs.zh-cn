@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cbe349fb83fea587874271c340853f8f38d2197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b6609cda18e6fc0f2942bb37e6939af6123b213
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176124"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156897"
 ---
 # <a name="audit-transformation"></a>审核转换
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
@@ -35,7 +32,7 @@ ms.locfileid: "37176124"
 |系统变量|索引|Description|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|标识包的执行实例的 GUID。|  
-|`PackageID`|@shouldalert|包的唯一标识符。|  
+|`PackageID`|1|包的唯一标识符。|  
 |`PackageName`|2|包名称。|  
 |`VersionID`|3|包的版本。|  
 |`ExecutionStartTime`|4|包开始运行的时间。|  

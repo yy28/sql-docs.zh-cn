@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Keys Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Keys element
 ms.assetid: 67291791-0032-412a-9a4f-74f68533e83d
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6875795b79daa2be3942f0e9e71ab6c4d2e6c960
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48065d8c40c6cba3b60d405be77d0e1877e11910
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148707"
 ---
 # <a name="keys-element-xmla"></a>Keys 元素 (XMLA)
   包含一系列[键](key-element-xmla.md)用来标识由父级表示的属性成员的成员键的元素[属性](attribute-element-xmla.md)元素。  
@@ -54,8 +51,8 @@ ms.locfileid: "37310377"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37310377"
 |父元素|[Attribute](attribute-element-xmla.md)|  
 |子元素|[Key](key-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [Drop 元素&#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   

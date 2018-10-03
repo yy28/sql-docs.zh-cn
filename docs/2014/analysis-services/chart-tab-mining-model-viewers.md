@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd1c2cf7ecc6a4cc734197a55365fb4a661b1b36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145995"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>“图表”选项卡（挖掘模型查看器）
   可以使用 **“图表”** 窗格，显示定型时序模型时使用的历史数据以及预测值。 图表的垂直轴表示序列的值；水平轴表示时间。 点线表示对未来的预测。  
   
  **有关详细信息：**[Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   
@@ -47,7 +44,7 @@ ms.locfileid: "37169798"
  **缩放关系图以适应窗口**  
  缩小图表以在屏幕中容纳整个图表。  
   
- **Abs**  
+ **abs**  
  在两个图表视图之间切换：在默认视图中，将相对于总体分布为数字绘制图形（以百分比形式表示）。 如果您单击 **“Abs”**，则会将数字作为绝对值绘制图形。  
   
  **将图表复制到剪贴板**  

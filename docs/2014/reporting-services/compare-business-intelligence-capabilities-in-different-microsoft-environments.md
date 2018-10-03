@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
-caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfe97b4cab555b5da6224edef97c73958bb362b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188084"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144368"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比较不同 Microsoft 环境中的商业智能功能
   Microsoft[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商业智能可部署在多个不同环境中包括[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]与 SharePoint Server、 SharePoint Online 和 Power BI for Office 365。 本主题将比较在各个环境中受支持的组件和功能。  
@@ -30,18 +27,18 @@ ms.locfileid: "37188084"
   
 ||SQL Server 2014 和 SharePoint Server 2013|SharePoint Online 计划 2|Power BI for Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|BI 网站|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 库|“否”|Power BI 网站|  
-|数据管理以及查询共享和管理|“否”|“否”|是 **<sup>1</sup>**|  
-|与 Master Data Services (MDS) 和 Data Quality Services (DQS) 的集成|是|否|“否”|  
-|计划数据刷新|是，但不支持包含 Power Query 数据的工作薄|“否”|是|  
-|自然语言查询 (Q&A)|“否”|“否”|是 **<sup>2</sup>**|  
-|预测性的预测|“否”|“否”|是 **<sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 集成|是|否|“否”|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 集成（多维式和表格式）|是|否|“否”|  
-|将交互式 Power View 仪表板导出至 PowerPoint 演示文稿|是|否|“否”|  
-|浏览器内的仪表板创作|是|否|“否”|  
-|使用情况监视|是|否|是|  
-|利用基于行的安全性[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多维数据集|是|否|“否”|  
+|BI 网站|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 库|否|Power BI 网站|  
+|数据管理以及查询共享和管理|否|否|是 **<sup>1</sup>**|  
+|与 Master Data Services (MDS) 和 Data Quality Services (DQS) 的集成|用户帐户控制|否|否|  
+|计划数据刷新|是，但不支持包含 Power Query 数据的工作薄|否|用户帐户控制|  
+|自然语言查询 (Q&A)|否|否|是 **<sup>2</sup>**|  
+|预测性的预测|否|否|是 **<sup>3</sup>**|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 集成|用户帐户控制|否|否|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 集成（多维式和表格式）|用户帐户控制|否|否|  
+|将交互式 Power View 仪表板导出至 PowerPoint 演示文稿|用户帐户控制|否|否|  
+|浏览器内的仪表板创作|用户帐户控制|否|否|  
+|使用情况监视|用户帐户控制|否|用户帐户控制|  
+|利用基于行的安全性[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多维数据集|用户帐户控制|否|否|  
   
  **<sup>1</sup>**[了解数据管理中数据专员的角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)并[视频： Power BI 信息管理和数据管理](https://www.youtube.com/watch?v=8dHOj68ts7c)。    
   
@@ -54,9 +51,9 @@ ms.locfileid: "37188084"
 ||SQL Server 2014 和 SharePoint Server 2013|SharePoint Online 计划 2|Power BI for Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |在浏览器中查看 Microsoft Excel 工作簿|是，前提是工作薄大小小于 2 GB|是，前提是工作簿大小小于 10 MB|是，前提是工作簿大小小于 250 GB|  
-|HTML5 中的浏览器内数据浏览|“否”|否|是|  
-|可远程访问报表和仪表板的移动 BI 应用|“否”|“否”|是 **<sup>1</sup>**|  
-|包含的 Excel 工作簿[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]作为数据源 **<sup>2</sup>**|是|否|“否”|  
+|HTML5 中的浏览器内数据浏览|否|否|用户帐户控制|  
+|可远程访问报表和仪表板的移动 BI 应用|否|否|是 **<sup>1</sup>**|  
+|包含的 Excel 工作簿[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]作为数据源 **<sup>2</sup>**|用户帐户控制|否|否|  
 |可以使用不同浏览器和版本中的功能|是的针对非 Power View 可视化效果 **<sup>3</sup>**|是的因为工作薄文件大小小于 10 MB  **<sup>3</sup>**|是 **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。    

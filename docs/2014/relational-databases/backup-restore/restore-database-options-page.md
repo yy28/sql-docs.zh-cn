@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b8112b59c5be2e6c5ed04662d7a66170c73125e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149357"
 ---
 # <a name="restore-database-options-page"></a>还原数据库（“选项”页）
   使用 **“还原数据库”** 对话框的 **“选项”** 页可修改还原操作的行为和结果。  
@@ -34,7 +31,7 @@ ms.locfileid: "37289063"
 > [!NOTE]  
 >  使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]指定还原任务时，您可以为此还原操作生成一个包含 RESTORE 语句的对应的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 若要生成该脚本，请单击 **“脚本”** ，然后为脚本选择一个目标。 有关 RESTORE 语法的信息，请参阅 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="restore-options"></a>还原选项  
  若要修改还原操作行为的各个方面，请使用使用 **“还原选项”** 面板中的选项。  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8eae5e75ec1573faf906b359c7a3314fb513887c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159337"
 ---
 # <a name="design-the-query"></a>设计查询
   使用报表向导的此页来创建查询，可以手动键入查询，使用查询生成器来交互生成查询，或从另一个表中导入查询。  
   
  您在“选择数据源”页（报表向导中的上一页）中选择的数据源类型决定了您可以在此页中输入的查询。 例如，如果数据源类型为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，则可以输入 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或存储过程名称。 如果数据源类型为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，将禁用“查询”窗格，无法直接输入查询。 可以使用“查询生成器”来指定查询。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **查询字符串**  
  键入用于检索要在报表中使用的数据的查询。  
   

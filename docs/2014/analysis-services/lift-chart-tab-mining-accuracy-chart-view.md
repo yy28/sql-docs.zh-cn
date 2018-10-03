@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09b0acd6bb7a4d079476b866a56f47029192db47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168127"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>“提升图”选项卡（“挖掘准确性图表”视图）
   可以使用 **“提升图”** 窗格，查看比较所选挖掘结构中的所有选定挖掘模型的图表。  
@@ -34,7 +31,7 @@ ms.locfileid: "37224647"
   
  有关度量挖掘模型准确性的方法的常规信息，请参阅[提升图（Analysis Services - 数据挖掘）](data-mining/lift-chart-analysis-services-data-mining.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **图表类型**  
  设置要在查看器中显示的图表的类型。 您可以选择 **“提升图”** 或 **“利润图”**。  
   

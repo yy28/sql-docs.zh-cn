@@ -1,40 +1,37 @@
 ---
-title: 命令流 |Microsoft 文档
+title: 命令流 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f37202ccd4586d3a485f18d070c0af0434a303
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35269966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798559"
 ---
 # <a name="command-streams"></a>命令流
-ADO 已始终支持指定的字符串格式的命令输入**CommandText**属性。 作为替代方法，用 ADO 2.7 或更高版本，你还可以使用信息的流用于命令输入通过分配到流**CommandStream**属性。 你可以分配 ADO**流**对象或任何支持 COM 的对象**IStream**接口。  
+ADO 始终支持命令输入中指定的字符串格式**CommandText**属性。 或者，使用 ADO 2.7 或更高版本，还可以使用信息的流的命令输入通过将分配到的流**CommandStream**属性。 可以将分配一个 ADO **Stream**对象或任何支持 COM 的对象**IStream**接口。  
   
- 命令流的内容只需从传递 ADO 至你提供程序，因此你的提供程序必须支持由使用此功能的流的命令输入。 例如，SQL Server 支持的 XML 模板或为 TRANSACT-SQL 的 OpenXML 扩展的形式进行查询。  
+ 命令流的内容是只需从传递 ADO 到您的提供商，因此您的提供程序必须支持流即可使用此功能的命令输入。 例如，SQL Server 中的 XML 模板或 TRANSACT-SQL 扩展 OpenXML 窗体支持查询。  
   
- 因为提供程序，则必须解释流的详细信息，你必须通过设置中指定的命令方言**方言**属性。 值**方言**是包含 GUID，它由你提供程序定义的字符串。 有关有效值的有关信息**方言**支持你的提供程序，请参阅提供程序文档。  
+ 由于必须由访问接口解释的流的详细信息，因此必须通过设置指定将命令方言**方言**属性。 值**方言**是包含一个 GUID，由您的提供程序定义的字符串。 有关有效值的信息**方言**支持您的提供程序，请参阅提供程序文档。  
   
 ## <a name="xml-template-query-example"></a>XML 模板查询示例  
- 下面的示例将写入在 VBScript 中 Northwind 数据库。  
+ 下面的示例是用 VBScript 到 Northwind 数据库。  
   
- 首先，初始化并打开**流**将用于包含查询流对象：  
+ 首先，初始化并打开**Stream**对象将用来包含查询流：  
   
 ```  
 Dim adoStreamQuery  
@@ -42,9 +39,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- 查询流的内容将是 XML 模板查询。  
+ 流内容的查询将 XML 模板查询。  
   
- 模板查询需要对由 sql 识别的 XML 命名空间的引用： 前缀\<sql:query > 标记。 SQL SELECT 语句是包括在作为 XML 模板的内容，并分配给字符串变量，如下所示：  
+ 该模板查询需要对 sql 标识的 XML 命名空间的引用： 前缀\<sql:query > 标记。 SQL SELECT 语句是 XML 模板的内容包括，分配给字符串变量，如下所示：  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -59,7 +56,7 @@ adoStreamQuery.WriteText sQuery, adWriteChar
 adoStreamQuery.Position = 0  
 ```  
   
- 分配到 adoStreamQuery **CommandStream** ADO 属性**命令**对象：  
+ 将分配到 adoStreamQuery **CommandStream**属性的 ADO**命令**对象：  
   
 ```  
 Dim adoCmd  
@@ -67,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- 指定的命令语言**方言**，指示 SQL Server OLE DB 提供程序应如何解释命令流。 特定于提供程序 GUID 指定的方言：  
+ 指定的命令语言**方言**，指示 SQL Server OLE DB 提供程序应如何解释命令流。 特定于提供程序的 GUID 指定方言：  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

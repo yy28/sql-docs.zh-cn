@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7810c99c06ed78131a70135f48056c1eeb8b2a6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00f54c136441050a5e6e460e7578789f41a569d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162707"
 ---
 # <a name="quickwatch-dialog-box"></a>“快速监视”对话框
   使用“快速监视”对话框可以在调试 **代码时快速查看一个** 表达式（例如变量或参数）的数据类型和值。 [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 若要监视多个表达式，也可以将这些表达式添加到 **“监视”** 窗口。  
@@ -57,7 +54,7 @@ ms.locfileid: "37156018"
   
 -   右键单击表达式，然后选择“编辑值”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **表达式列表**  
  显示当前选定的表达式。 该下拉列表包含一组表达式，您可以从中选择要显示的表达式。 该列表中的表达式是在当前从 **“调用堆栈”** 窗口中选择的堆栈帧的范围内可用的表达式。 若要显示另一个表达式，可以输入该表达式或从列表中选择它。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调试器支持的表达式有：变量、参数和名称以 @@ 开头的系统函数。  
   

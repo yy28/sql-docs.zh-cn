@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_resource_pool_affinity_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dm_resource_governor_resource_pool_affinity
 - sys.dm_resource_governor_resource_pool_affinity
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b9142b5219a8f404ee81ebfb51460d451ff2096a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 547a1dd14eab2a5627dbd8e3b8b6e09a4c5143b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023670"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815315"
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +37,10 @@ ms.locfileid: "38023670"
 |Colmn 名称|数据类型|Description|  
 |----------------|---------------|-----------------|  
 |Pool_id|**int**|资源池的 ID。 不可为 null。|  
-|Processor_group|**int**|Windows 逻辑处理器组的 ID。 不可为 null。|  
+|Processor_group|**smallint**|Windows 逻辑处理器组的 ID。 不可为 null。|  
 |Scheduler_mask|**bigint**|表示与此池相关联的计划程序的二进制掩码。 不可为 null。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 AUTO 的关联创建的池将不会在此视图中出现，因为它们没有关联。 有关详细信息，请参阅[创建资源池&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-resource-pool-transact-sql.md)和[ALTER RESOURCE POOL &#40;-&#41; ](../../t-sql/statements/alter-resource-pool-transact-sql.md)语句。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171147"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>元数据（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器中，可以使用 **“浏览器”** 选项卡上的 **“元数据”** 窗格浏览多维数据集的结构，以查看相关度量值，以及查看和创建维度。 您可以深化到层次结构中，查看可用度量值和 KPI 的列表，并复制对象的完全限定名称。  
   
  还可以将 **“元数据”** 窗格中的对象和层次结构拖至查询生成区域，以创建新查询或导出数据以便在 Excel 中浏览。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **元数据**  
  显示当前视图中可用的元数据。 可以更改该视图（即当前选定的透视或多维数据集），只需单击多维数据集图标，然后使用“选择多维数据集”对话框选择新的多维数据集或透视。 还可以单击 **“度量值组”**，然后从下拉列表中选择新的度量值组，以便筛选在 **“元数据”** 窗格中可用的对象。  
   

@@ -1,13 +1,11 @@
 ---
-title: AbsolutePage 属性 (ADO) |Microsoft 文档
+title: AbsolutePage 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,42 +13,41 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePage property [ADO]
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bd0696e18e7719038a1b87448477b1b7f4d5bdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: efdbd68bf464fea3a0d59396380b082eb66375b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824144"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 属性 (ADO)
-指示当前记录驻留在哪一页上。  
+指示当前记录驻留在哪一页。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 对于 32 位代码中，设置或返回**长**介于 1 和中的页面数量值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象 ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md))，或返回类型之一[PositionEnum](../../../ado/reference/ado-api/positionenum.md)值。  
+ 对于 32 位代码，设置或返回**长**介于 1 和中的页数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象 ([PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md))，或返回的一个[PositionEnum](../../../ado/reference/ado-api/positionenum.md)值。  
   
- 对于 64 位代码，使用提供的存储的 64 位值的数据类型。 例如，你可以使用**长**或另一个值，可以如 DBORDINAL 的 64 位长度。 不要使用**PositionEnum**值，因为它们被限制为 32 位长度。  
+ 对于 64 位代码，使用提供的 64 位值存储的数据类型。 例如，可以使用任一**长**或另一个值，该值可如 DBORDINAL 64 位长度。 不要使用**PositionEnum**值，因为它们被限制为 32 位长度。  
   
-## <a name="remarks"></a>Remarks  
- 可以使用此属性来标识当前记录所在的页号。 它使用[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性上逻辑划分的总的行集计数**记录集**对象插入一系列页面，其中每个具有相等的记录数**PageSize**（除外的最后一页，因此可能具有较少的记录）。 提供程序必须支持相应的功能，此属性才可用。  
+## <a name="remarks"></a>备注  
+ 此属性可以用于确定当前记录所在的页号。 它使用[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性将从逻辑上划分的总的行集计数**记录集**对象的一系列页面，其中每个记录等于数**PageSize**（除最后一页，其中可能有较少的记录）。 提供程序必须支持相应的功能，此属性才可用。  
   
--   获取或设置时**AbsolutePage**属性、 ADO 使用[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性和[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)在一起，如下所示的属性：  
+-   获取或设置时**AbsolutePage**属性，将使用 ADO [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性并[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)属性一起，如下所示：  
   
--   若要获取**AbsolutePage**，第一次检索 ADO **AbsolutePosition**，，然后将它**PageSize**。  
+-   若要获取**AbsolutePage**，ADO 首先检索**AbsolutePosition**，然后，它通过将**PageSize**。  
   
--   若要设置**AbsolutePage**，ADO 移动**AbsolutePosition** ，如下所示： 它乘以**PageSize**通过新**AbsolutePage**值，然后将 1 添加的值。 因此，当前置于**记录集**成功设置后**AbsolutePage**是该页面中的第一个记录。  
+-   若要设置**AbsolutePage**，ADO 移动**AbsolutePosition** ，如下所示： 将其乘以**PageSize**通过新**AbsolutePage**值，然后将 1 添加到值。 因此，当前放置**记录集**已成功设置后**AbsolutePage**是该页面中的第一个记录。  
   
- 如**AbsolutePosition**属性， **AbsolutePage**是基于 1 的并且等于 1 时的当前记录是中的第一个记录**记录集**。 设置此属性将移到特定页的第一个记录。 获取从页总数**PageCount**属性。  
+ 像**AbsolutePosition**属性， **AbsolutePage**是基于 1 的和等于 1 时的当前记录中的第一个记录**记录集**。 设置此属性将移动到特定页面的第一个记录。 获取从总页数**PageCount**属性。  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [AbsolutePage、 PageCount，以及 PageSize 属性示例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage、 PageCount 和 PageSize 属性示例 （VC + +）](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+ [AbsolutePage、 PageCount、 和 PageSize 属性示例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [AbsolutePage、 PageCount、 和 PageSize 属性示例 （VC + +）](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize 属性 (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)

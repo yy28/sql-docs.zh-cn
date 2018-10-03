@@ -1,14 +1,11 @@
 ---
-title: syscollector_execution_log (TRANSACT-SQL) |Microsoft 文档
+title: syscollector_execution_log (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25ceaeee0a5fd46c6e30446f0bc4a5c23a7795f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773487"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +37,21 @@ ms.locfileid: "33221298"
 |parent_log_id|**bigint**|标识父包或父收集组。 不可为 null。 各个 ID 以父子关系链接在一起，这样，您便可以确定哪个包是由哪个收集组启动的。 此视图将日志项按其父子链接进行分组并缩进包的名称，因而调用链清晰可见。|  
 |collection_set_id|**int**|标识此日志项表示的收集组或包。 不可为 null。|  
 |collection_item_id|**int**|标识收集项。 可以为 Null。|  
-|start_time|**datetime**|收集组或包启动的时间。 不可为 null。|  
+|start_time|**datetime**|收集组或包开始的时间。 不可为 null。|  
 |last_iteration_time|**datetime**|对于连续运行的包而言，是包上次捕获快照的时间。 可以为 Null。|  
 |finish_time|**datetime**|已完成的包和收集组完成运行的时间。 可以为 Null。|  
-|runtime_execution_mode|**int**|指示收集组活动是收集数据还是上载数据。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 收集<br /><br /> 1 = 上载|  
-|status|**int**|指示收集组或包的当前状态。 不可为 null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 完成<br /><br /> 2 = 失败|  
+|runtime_execution_mode|**smallint**|指示收集组活动是收集数据还是上载数据。 可以为 Null。<br /><br /> 值为：<br /><br /> 0 = 收集<br /><br /> 1 = 上载|  
+|status|**smallint**|指示收集组或包的当前状态。 不可为 null。<br /><br /> 值为：<br /><br /> 0 = 正在运行<br /><br /> 1 = 已完成<br /><br /> 2 = 失败|  
 |运算符后的表达式|**nvarchar(128)**|标识启动了收集组或包的用户。 不可为 null。|  
 |package_id|**uniqueidentifier**|标识生成此日志的收集组或包。 可以为 Null。|  
 |package_name|**nvarchar(4000)**|生成此日志的包的名称。 可以为 Null。|  
 |package_execution_id|**uniqueidentifier**|提供指向 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 日志表的链接。 可以为 Null。|  
 |failure_message|**nvarchar(2048)**|收集组或包失败时该组件的最新错误消息。 可以为 Null。 若要获取更详细的错误信息，请使用[fn_syscollector_get_execution_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md)函数。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要拥有 dc_operator 的 SELECT 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  

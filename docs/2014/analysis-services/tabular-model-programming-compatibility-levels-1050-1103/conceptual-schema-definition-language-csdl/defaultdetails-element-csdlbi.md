@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 708e829f1af3ebc9d727e3abfd6643913cd460f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa1fcc05363cf356d5895c0d5e6f62c037f45fb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120857"
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
   DefaultDetails 元素表示一系列属性参考，这些属性参考一起定义表中各列的“默认字段集”。 每个属性只能引用一个度量值或一列。  
@@ -30,7 +27,7 @@ ms.locfileid: "37330227"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|DefaultDetailsPosition|“否”|指示在集合中存在与位置的正整数。|  
+|DefaultDetailsPosition|否|指示在集合中存在与位置的正整数。|  
   
 ## <a name="example"></a>示例  
  **表格**  

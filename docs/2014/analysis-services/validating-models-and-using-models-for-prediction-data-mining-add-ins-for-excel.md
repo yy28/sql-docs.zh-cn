@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - validation [data mining]
 - mining models, testing
 ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf4beef0255948a416b5a8e8867a3608d7db151
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148847"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>验证模型和使用模型进行预测（Excel 数据挖掘外接程序）
   测试和验证模型是数据挖掘过程中很重要的一步。 将挖掘模型部署到生产环境中之前，必须了解挖掘模型对于实际数据的执行情况。  

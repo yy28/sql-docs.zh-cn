@@ -1,13 +1,11 @@
 ---
-title: GetString 方法 (ADO) |Microsoft 文档
+title: GetString 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - GetString method [ADO]
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 824ad1a3223538e724e4430186dcf176e86617a2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708055"
 ---
 # <a name="getstring-method-ado"></a>GetString 方法 (ADO)
 返回[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
@@ -38,28 +35,28 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**记录集**作为字符串值**Variant** (BSTR)。  
+ 返回**记录集**作为字符串值**变体**(BSTR)。  
   
 #### <a name="parameters"></a>Parameters  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，该值指定如何**记录集**应转换为字符串。 *RowDelimiter*， *ColumnDelimiter*，和*NullExpr*参数仅用于*StringFormat*的**adClipString**。  
+ 一个[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)值，该值指定如何**记录集**应转换为字符串。 *RowDelimiter*， *ColumnDelimiter*，并*NullExpr*参数只能与一起使用*StringFormat*的**adClipString**。  
   
  *NumRows*  
- 可选。 要转换中的行数**记录集**。 如果*NumRows*未指定，或如果它大于中的行总数**记录集**，然后中的所有行**记录集**转换。  
+ 可选。 要在转换的行数**记录集**。 如果*NumRows*未指定，或如果它大于中的行的总数**记录集**，然后中的所有行**记录集**转换。  
   
- *columnDelimiter*  
- 可选。 使用列，如果指定，否则 TAB 字符之间的分隔符。  
+ *ColumnDelimiter*  
+ 可选。 如果指定，否则 TAB 字符的列之间所用的分隔符。  
   
  *RowDelimiter*  
- 可选。 使用行，如果指定，否则回车字符之间的分隔符。  
+ 可选。 如果指定，否则回车字符的行之间所用的分隔符。  
   
  *NullExpr*  
- 可选。 如果指定，否则为空字符串来代替 null 值，用的表达式。  
+ 可选。 一个表达式，用于代替空值，如果指定，否则为空字符串。  
   
-## <a name="remarks"></a>Remarks  
- 行数据，但没有架构数据将保存到字符串中。 因此，**记录集**无法使用此字符串重新打开。  
+## <a name="remarks"></a>备注  
+ 行数据，但无架构数据，将保存到字符串。 因此，**记录集**不能使用此字符串重新打开。  
   
- 此方法相当于 RDO **GetClipString**方法。  
+ 此方法等效于 RDO **GetClipString**方法。  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

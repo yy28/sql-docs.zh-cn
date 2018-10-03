@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFlag Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cd3c42721c2b70be044039e19001cd8ce7fb21b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149257"
 ---
 # <a name="displayflag-element-assl"></a>DisplayFlag 元素 (ASSL)
   包含一个只读提示，指示用户界面组件是否应显示关联[ServerProperty](../objects/serverproperty-element-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37261453"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Boolean|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37261453"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ServerProperty](../objects/serverproperty-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`DisplayFlag`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>请参阅  

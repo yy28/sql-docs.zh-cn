@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bd9afb97eae82bdb3bfe63859e9081dca5586b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167739"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint 模式下的 Analysis Services 服务器的硬件和软件要求 (SQL Server 2014)
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支持 SharePoint 2010 和 SharePoint 2013。 尽管 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 可以在 SharePoint 服务器上安装，但是它在 SharePoint 场外部运行。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 在 SharePoint 2010 场中的应用程序服务器上运行，并且使用 SharePoint 功能和基础结构来支持服务器操作。 要安装用于任一版本的 SharePoint 的 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]，请使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导。 安装后完成以下操作：  
@@ -50,8 +47,7 @@ ms.locfileid: "37232667"
   
  [安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)  
   
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 最好运行在提供更高 RAM 阈值和更强处理能力的新一代商业服务器上。 使用大量 RAM 在内存中存储 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 该 RAM 支持根据结构变化进行调整的能力。 额外的处理器支持对原始未聚合的数据进行长时间运行的扫描。 数据假定其结构处于动态环境中，以便响应通过 Excel 客户端或前端接口启动的用户驱动的数据分析。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 最好运行在提供更高 RAM 阈值和更强处理能力的新一代商业服务器上。 使用大量 RAM 在内存中存储 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。 该 RAM 支持根据结构变化进行调整的能力。 额外的处理器支持对原始未聚合的数据进行长时间运行的扫描。 数据假定其结构处于动态环境中，以便响应通过 Excel 客户端或前端接口启动的用户驱动的数据分析。  
   
 > [!TIP]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 使用 L2 和 L3 缓存。 若要改进性能，请考虑使用包含更大的 L2 和 L3 缓存的处理器。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70fb66a1b61dbbdec0fd8443ac150b32c3770818
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145519"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
   应用程序用户通常需要某个表的基于时间的数据子集。 例如，销售人员可能需要上周的订单数据，事件计划人员可能需要下周的事件数据。 在许多情况下，应用程序使用包含 `GETDATE()` 函数的查询来实现此功能。 请考虑以下行筛选器语句：  
@@ -63,7 +60,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|招待会|112|2006-10-04|@shouldalert|  
+|1|招待会|112|2006-10-04|1|  
 |2|宴会|112|2006-10-10|0|  
 |3|聚会|112|2006-10-11|0|  
 |4|婚礼|112|2006-10-12|0|  
@@ -87,10 +84,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|招待会|112|2006-10-04|0|  
-|2|宴会|112|2006-10-10|@shouldalert|  
-|3|聚会|112|2006-10-11|@shouldalert|  
-|4|婚礼|112|2006-10-12|@shouldalert|  
+|1|招待会|112|2006-10-04|0|  
+|2|宴会|112|2006-10-10|1|  
+|3|聚会|112|2006-10-11|1|  
+|4|婚礼|112|2006-10-12|1|  
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   

@@ -1,46 +1,40 @@
 ---
-title: 创建测试用例 (SybaseToSQL) |Microsoft 文档
+title: 创建测试用例 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester component,Test Case Wizard
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 54eda3b9434d52e221c7223e87c1305adc3d125c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 95a6724ab836fb3dddb54fadc82821ad68f29e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778413"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746355"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>创建测试用例 (SybaseToSQL)
-使用测试用例向导来创建测试。 此向导允许您通过选择测试和验证对象和指定的测试参数创建测试用例。  
+使用测试用例向导来创建测试。 此向导允许您通过选择测试并验证对象和指定的测试参数创建测试用例。  
   
 ## <a name="starting-the-test-case-wizard"></a>启动测试用例向导  
-若要启动的测试用例向导，单击**新测试用例...** 从**测试人员**菜单。  
+若要启动测试用例向导单击**新建测试用例...** 从**测试人员**菜单。  
   
-启动时，此向导会查找数据库 ssmatester2005db 或 ssmatester2008db （具体取决于项目类型中） 源 Sybase 服务器上。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 ssmatester2005db 或 ssmatester2008db，它会显示一个对话框窗口，建议创建的测试人员扩展数据库。 （这种情况下通常发生在 SSMA 测试人员的首次运行过程。）  
+在启动时，向导将查找数据库 ssmatester2005db 或 ssmatester2008db （具体取决于项目类型） 源 Sybase 服务器上。 它是用于存储辅助对象的测试人员扩展架构。 如果测试用例向导找不到 ssmatester2005db 或 ssmatester2008db，会显示一个对话框窗口提供了创建测试人员扩展数据库。 （这种情况下通常发生在首次运行 SSMA 测试人员的过程。）  
   
-如果你收到对话框窗口中，单击**是**在源服务器上创建 Sybase 测试人员数据库。 然后将出现一个新的对话框窗口，您应在其中添加在其找到新的测试人员数据库上的一个或多个设备。 单击**添加**来添加设备。 在**测试人员数据库的分配空间**对话框中选择该设备，并指定测试人员数据库使用的大小。 此外，你可以设置数据库日志的单独设备。 请注意，你必须具有 Sybase 特权，无法创建数据库。  
+如果收到对话框窗口中，单击**是**源服务器上创建 Sybase 测试人员数据库。 然后将出现一个新的对话框窗口，您应在其中添加在其中查找新的测试人员数据库上的一个或多个设备。 单击**添加**添加设备。 在中**测试人员数据库的分配空间**对话框中选择该设备，并指定使用由测试人员数据库的大小。 此外，可以设置适用于数据库日志的单独设备。 请注意，必须具有 Sybase 的特权来创建数据库。  
   
 ## <a name="overview-of-creating-test-cases-using-the-wizard"></a>创建测试用例使用向导概述  
-创建测试用例的过程包括五个步骤：  
+创建测试用例的过程包括以下五个步骤：  
   
 1.  [初始化测试用例&#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md)。  
   
-2.  [选择并配置的对象添加到测试&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)。  
+2.  [选择并配置测试的对象&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)。  
   
 3.  [选择并配置受影响的对象&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)。  
   

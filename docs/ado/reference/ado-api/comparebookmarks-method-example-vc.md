@@ -1,32 +1,29 @@
 ---
-title: CompareBookmarks 方法示例 （VC + +） |Microsoft 文档
+title: CompareBookmarks 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639275"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法示例 （VC + +）
-此示例演示[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非特定的书签是以某种方式特殊，很少需要的相对值的书签。  
+# <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 方法示例 (VC++)
+此示例演示[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)方法。 除非某个特定的书签以某种方式是特殊很少需要书签的相关值。  
   
  将指定的随机行[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)派生自***作者***作为搜索的目标表。 然后显示每个行相对于该目标的位置。  
   

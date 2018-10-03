@@ -1,14 +1,11 @@
 ---
-title: sp_update_notification (Transact SQL) |Microsoft 文档
+title: sp_update_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260200"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817537"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +44,16 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@alert_name =**] *****警报*****  
+ [  **@alert_name =**] **'***警报*****  
  与该通知关联的警报的名称。 *警报*是**sysname**，无默认值。  
   
  [ **@operator_name =**]  **'***operator***'**  
  警报发生时要通知的操作员。 *运算符*是**sysname**，无默认值。  
   
  [  **@notification_method =**]*通知*  
- 通知操作员的方法。 *通知*是**tinyint**，无默认值，并且可将一个或多个这些值。  
+ 通知操作员的方法。 *通知*是**tinyint**，无默认值，并且可以是一个或多个值。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
@@ -67,12 +63,12 @@ sp_update_notification
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  **sp_update_notification**必须从运行**msdb**数据库。  
   
- 你可以更新通知操作员用户没有使用指定的必需的地址信息的*notification_method*。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
+ 您可以更新通知操作员不具有使用指定的必需的地址信息*notification_method*。 如果发送电子邮件或寻呼通知时出现故障，则该故障将记录到 Microsoft SQL Server 代理程序错误日志中。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -89,10 +85,10 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user instances
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d87a85927751b12e3f86d5ce2bc908da9d063b21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676bc7adc3debb0beaee10d09d6fbe8018d42c2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158947"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 是的执行模式[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]面向程序开发人员。 `LocalDB` 安装将复制启动所需的文件的最小集[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。 一次`LocalDB`是安装了，开发人员通过使用特殊的连接字符串中启动的连接。 在连接时，所需[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基础结构会自动创建并启动，使应用程序以使用无需复杂或耗时的配置任务的数据库。 开发人员工具可以向开发人员提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，使其不必管理 [!INCLUDE[tsql](../../includes/tsql-md.md)] 的完整服务器实例即可撰写和测试 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代码。 实例[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`由使用`SqlLocalDB.exe`实用程序。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 应使用来代替[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]用户实例功能已弃用。  
@@ -95,7 +92,7 @@ REM Gather information about the instance of LocalDB
 |版本|\<当前版本>|  
 |共享名称|""|  
 |“所有者”|"\<你的 Windows 用户>"|  
-|自动创建|“否”|  
+|自动创建|否|  
 |State|运行|  
 |上次启动时间|\<日期和时间>|  
 |实例管道名称|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
@@ -109,7 +106,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>故障排除  
  有关故障排除信息`LocalDB`，请参阅[故障排除 SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  实例[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]`LocalDB`是其使用的用户创建的实例。 在计算机上的任何用户可以使用创建数据库的实例`LocalDB`、 其用户配置文件下存储文件并运行其凭据进程。 默认情况下，访问到的实例`LocalDB`仅限于其所有者。 中包含的数据`LocalDB`受到对数据库文件的文件系统访问。 如果用户数据库文件存储于某一共享位置，可以使用的实例打开具有到该位置的文件系统访问权限的任何人都数据库`LocalDB`他们拥有。 如果数据库文件处于某一受保护的位置，例如用户数据文件夹，则只有该用户以及有权访问该文件夹的任何管理员才能打开该数据库。 `LocalDB`文件只能打开的一个实例`LocalDB`一次。  
   
 > [!NOTE]  

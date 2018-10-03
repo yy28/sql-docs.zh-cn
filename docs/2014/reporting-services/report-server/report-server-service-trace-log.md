@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d0fd7269ca32442cc53ad86d124db2eb8c1ff5d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2621f9a8e69cc27d5012e0c6a6f90946bec07dc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161927"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细的信息，包括操作执行的报表服务器 Web 服务、 报表管理器和后台处理。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息可能非常有用。  
@@ -56,7 +53,7 @@ ms.locfileid: "37270273"
 ##  <a name="bkmk_trace_configuration_settings"></a> 跟踪配置设置  
  在配置文件 **ReportingServicesrService.exe.config**中管理跟踪日志行为。可在以下文件夹路径中找到该配置文件：  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`的用户。  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`。  
   
  下面的示例演示 `RStrace` 设置的 XML 结构。 值为`DefaultTraceSwitch`确定添加到日志的信息种类。 除`Components`属性的值`RStrace`是相同的各个配置文件。  
   

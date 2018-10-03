@@ -1,13 +1,11 @@
 ---
-title: 添加记录 |Microsoft 文档
+title: 添加记录 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850385"
 ---
 # <a name="adding-records-to-a-recordset"></a>将记录添加到记录集
-使用**AddNew**方法创建并初始化新记录中的现有**记录集**。 你可以使用**支持**方法替换**CursorOptionEnum**值**adAddNew**以验证是否可以将记录添加到当前**记录集**对象。
+使用**AddNew**方法创建并初始化新的记录中的现有**记录集**。 可以使用**支持**方法替换**CursorOptionEnum**的值**adAddNew**以验证是否可以将记录添加到当前**记录集**对象。
 
- 调用后**AddNew**方法，新的记录将成为当前记录和调用方法后仍当前**更新**方法。 如果**记录集**对象不支持书签，你可能无法访问新的记录，一旦您移动到另一条记录。 因此，具体取决于游标类型，你可能需要调用**Requery**方法，以便可以访问新的记录。
+ 调用后**AddNew**方法，新的记录将成为当前记录，并保持最新调用后**更新**方法。 如果**记录集**对象不支持书签，您可能不能访问新记录后，移动到另一条记录。 因此，具体取决于游标类型，您可能需要调用**再次查询**方法，以便可以访问新的记录。
 
- 如果调用**AddNew** ADO 时编辑当前记录或添加新记录时，调用**更新**方法来保存任何更改，然后创建新的记录。
+ 如果您调用**AddNew** ADO 编辑当前记录或添加新记录时，调用**更新**方法以保存任何更改，然后创建新记录。
 
  本部分包含以下主题。
 

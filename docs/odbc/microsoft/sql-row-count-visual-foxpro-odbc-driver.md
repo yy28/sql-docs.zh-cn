@@ -1,31 +1,28 @@
 ---
-title: SQL 行计数 （Visual FoxPro ODBC 驱动程序） |Microsoft 文档
+title: SQL 行计数 （Visual FoxPro ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL row count [ODBC]
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91cf4cc25ee394d02ccf899022613f6d4786c2e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 240cc9b8e6ee5439a92db807a6334622760c63f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834797"
 ---
-# <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 行计数 （Visual FoxPro ODBC 驱动程序）
+# <a name="sql-row-count-visual-foxpro-odbc-driver"></a>SQL 行计数（Visual FoxPro ODBC 驱动程序）
 > [!NOTE]  
->  本主题包含 Visual FoxPro ODBC 驱动程序相关的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题包含 Visual FoxPro ODBC 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  支持： 完整  
   
