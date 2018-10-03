@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
@@ -15,23 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 038c4b3f03b2dca9b0c6fd9676d21f7c16747a47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a43cbed2f9cef449bee1b0a971f5edd7f1044f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084897"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>“包和项目保护级别”对话框
   可以使用 **“包保护级别”** 对话框更新包的保护级别。 保护级别决定保护包时所使用的方法、密码或用户密钥以及作用域。 可以保护所有数据，也可以只保护敏感数据。  
   
  若要了解有关包的安全性的要求和选项，请参阅[对包中敏感数据的访问控制](security/access-control-for-sensitive-data-in-packages.md)和[安全性概述 (Integration Services)](security/security-overview-integration-services.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Package protection level**  
  从列表中选择保护级别。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a29e28782207d5da0e3166669c6c38a7119f597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b458e0707f36bde18f6128ae302c7e5826fb5680
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078587"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
   指定数据库引擎优化顾问在优化工作负荷时连接到的第一个数据库。  
@@ -50,9 +47,9 @@ ms.locfileid: "37161588"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素&#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**子元素**|InclusionThresholdSetting|  
+|**子元素**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用`DatabaseToConnect`以指定希望数据库引擎优化顾问在启动优化会话时连接到的第一个数据库的名称。 此元素只能指定一个数据库。 如果指定了多个数据库名称，数据库引擎优化顾问将返回错误。  
   
 ## <a name="example"></a>示例  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EndSession Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EndSession element
 ms.assetid: e64f1da4-5c83-40a2-b15e-837f5451bafa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32c76318f05dbb628dd23de825203429ee0a22f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806b1dea9aeb9a4598b9516f8e7a953962307e65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096897"
 ---
 # <a name="endsession-element-xmla"></a>EndSession 元素 (XMLA)
   使用 SOAP 请求消息中的 SOAP 标头结束现有会话的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -61,16 +58,16 @@ ms.locfileid: "37148118"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
-|子元素|InclusionThresholdSetting|  
+|父元素|None|  
+|子元素|None|  
   
 ## <a name="attributes"></a>属性  
   
@@ -78,7 +75,7 @@ ms.locfileid: "37148118"
 |---------------|-----------------|  
 |SessionId|标识要结束的会话的必需的 `String` 属性。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 使用全局唯一标识符 (GUID) 识别会话。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `EndSession` 标头元素是发送到 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例上的现有显式启动的会话的 SOAP 请求的一部分。 如果已发送 `EndSession` 标头元素，但是该元素包含一个不再有效的会话标识符，将返回一个指示不能找到该会话的 SOAP 错误。  
   
 ## <a name="see-also"></a>请参阅  

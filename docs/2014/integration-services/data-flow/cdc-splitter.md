@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 72dc97b5018e48b12fa460e508d3f9b84e222a39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03f677f8214fb086f3feb6077608fed83d7089d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148428"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086248"
 ---
 # <a name="cdc-splitter"></a>CDC 拆分器
   CDC 拆分器将更改行的单个流从 CDC 源数据流拆分到多个不同的数据流中以便用于插入、更新和删除操作。 基于必需的列 `__$operation` 及其在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中的标准值来拆分数据流。  
   
 |操作的值|“输出”|Description|  
 |------------------------|------------|-----------------|  
-|@shouldalert|DELETE|删除的行|  
+|1|DELETE|删除的行|  
 |2|Insert|插入的行（使用“净值且具有合并”CDC 模式时不可用）|  
 |3|Update|更新前的行（仅在使用“全部且具有旧值”CDC 模式时可用）|  
 |4|Update|更新后的行（与更新前相同）|  

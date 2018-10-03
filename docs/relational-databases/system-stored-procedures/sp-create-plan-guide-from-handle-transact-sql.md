@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734066"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  指定 NULL 或未指定语句偏移量时，将使用指定计划句柄的查询计划为批处理中的每个语句创建一个计划指南。 生成的计划指南等同于使用 USE PLAN 查询提示来强制使用特定计划的计划指南。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  无法创建适用于所有语句类型的计划指南。 如果不能为批处理中的某个语句创建计划指南，则存储过程将忽略此语句并继续执行批处理中的下一个语句。 如果在同一批处理中多次出现同一语句，将启用最后一处语句的计划并禁用此语句以前的计划。 如果批处理中没有语句可用于计划指南，将产生错误 10532 并且语句将失败。 建议您始终从 sys.dm_exec_query_stats 动态管理视图获得计划句柄，以帮助避免出现此错误。  
   
 > [!IMPORTANT]  

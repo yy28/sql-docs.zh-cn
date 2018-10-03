@@ -1,15 +1,12 @@
 ---
-title: LocalDBCreateInstance 函数 |Microsoft 文档
+title: LocalDBCreateInstance 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBCreateInstance
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad7fb0b3df6cbaef9f5bd236347a9aa129d317d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717dc71d20951d5bed3868b74dcbefad11ee874d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669675"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,14 +99,14 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  如果 LocalDB 实例完全正常运行，指定的名称已存在并且其版本等于或高于所请求的版本，则结果为 S_OK。  
   
- 在情况下，当现有实例变为已损坏，因为在后续调用**LocalDBCreateInstance** API 方法将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
+ 在现有实例变得对已损坏，因为在后续调用时的情况下**LocalDBCreateInstance** API 方法将失败。 必须手动修复损坏的实例或显式删除它们，然后才能再次使用。  
   
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_setcolfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87ded93fbd666155c36c0bb88a0be80c99c59ff8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118367"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**函数取代[bcp_colfmt](bcp-colfmt.md)。 在指定列排序规则， **bcp_setcolfmt**必须使用函数。 [bcp_setbulkmode](bcp-setbulkmode.md)可用于指定多个列格式。  
@@ -86,7 +83,7 @@ cbValue
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数取代**bcp_colfmt**函数。 所有功能**bcp_colfmt**中提供**bcp_setcolfmt**函数。 此外，还提供对列排序规则的支持。 建议按照下面给出的顺序设置以下列格式属性：  
   
  BCP_FMT_SERVER_COL  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - browse models
 - mining models, viewing
 ms.assetid: a8cca1d7-602a-449a-875c-99da564965bc
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5204d7f7084d6efd457a7928132048a8c1597eec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a58acd7eab11302e1963f5b456cefd81a57e2f4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129277"
 ---
 # <a name="browsing-models-in-excel-sql-server-data-mining-add-ins"></a>在 Excel 中浏览模型（SQL Server 数据挖掘外接程序）
   ![浏览数据挖掘功能区中的模型按钮](media/dmc-browse.gif "数据挖掘功能区中的浏览模型按钮")  

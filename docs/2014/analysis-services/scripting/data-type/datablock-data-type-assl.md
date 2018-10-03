@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataBlock Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 706b934c51d280ec588bedf3752d61a4cc46697d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082587"
 ---
 # <a name="datablock-data-type-assl"></a>DataBlock 数据类型 (ASSL)
   定义一个基元数据类型，表示用于存储的二进制内容的数据块的集合[ClrAssemblyFile](clrassemblyfile-data-type-assl.md)元素。  
@@ -48,14 +45,14 @@ ms.locfileid: "37211957"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|InclusionThresholdSetting|  
-|派生数据类型|InclusionThresholdSetting|  
+|基本数据类型|None|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[块](../collections/blocks-element-assl.md)|  
 |派生元素|[数据](../objects/data-element-assl.md)的元素[ClrAssemblyFile](clrassemblyfile-data-type-assl.md)类型 ([文件](../collections/files-element-assl.md)系列[ClrAssembly](assembly-data-type-assl.md)类型)|  
   

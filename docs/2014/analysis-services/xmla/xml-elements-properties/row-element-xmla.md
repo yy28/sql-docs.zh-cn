@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - row Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45bda6938dd98dae305c7143af39fd7d4bfd4142
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096869"
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
   包含的数据的单个行[根](root-element-xmla.md)元素，其中包含返回的表格数据[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
@@ -52,8 +49,8 @@ ms.locfileid: "37223987"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +60,7 @@ ms.locfileid: "37223987"
 |父元素|[根](root-element-xmla.md)(使用[行集](../xml-data-types/rowset-data-type-xmla.md)数据类型)|  
 |子元素|一个或多个列元素。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  包含表格格式数据的 `root` 元素所返回的每一行都有一个相应的 `row` 元素。 `root` 元素中的每列都由单个 XML 元素表示。 `row` 元素的列值为 XML 元素包含的数据，该列的名称与 XML 元素的名称对应。  
   
  有两种方法可表示行中的列的空值：  

@@ -1,85 +1,79 @@
 ---
-title: SQL 模式 (MySQLToSQL) |Microsoft 文档
+title: SQL 模式 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: af1e93d5626a6f0453dd3c7b97ac34093c82850a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 46d91efa1451749d8d1cce2b1a8cf361cc30986a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776583"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737305"
 ---
 # <a name="sql-modes-mysqltosql"></a>SQL 模式 (MySQLToSQL)
-SSMA for MySQL 可以在不同的 SQL 模式下运行和可以适用于这些模式以不同的方式不同的客户端。  
+SSMA for MySQL 可以运行在不同的 SQL 模式，并可以应用这些模式以不同的方式为不同的客户端。  
   
-模式定义应该支持 MySQL，SQL 语法和类型的数据验证检查它应执行。 这使得更轻松地在不同环境中使用 MySQL 并与 SQL Server 一起使用 MySQL。  
+模式定义应支持 MySQL、 SQL 语法和类型的数据验证检查应执行。 这使得更易于在不同的环境中使用 MySQL 和 SQL Server 使用 MySQL。  
   
 ## <a name="sql-modes-grid"></a>SQL 模式网格：  
   
--   在根级别的 SQL 模式网格包含以下列： **SQL 模式名称**，**加载 SQL 模式**，和**有效 SQL 模式**。  
+-   根级别上的 SQL 模式网格包含以下列： **SQL 模式名称**，**加载 SQL 模式**，并**有效 SQL 模式**。  
   
--   在数据库类别、 数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件对象级别的 SQL 模式网格包含以下列： **SQL 模式名称**，**继承 SQL 模式**，和**有效 SQL 模式**。  
+-   在数据库类别、 数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件对象级别的 SQL 模式网格包含以下列： **SQL 模式名称**， **继承 SQL 模式**，并**有效 SQL 模式**。  
   
--   在存储过程、 存储函数和触发器级别的 SQL 模式网格包含以下列： **SQL 模式名称**，**原始 SQL 模式**，和**有效 SQL 模式**。  
+-   在存储过程、 存储函数和触发器的级别的 SQL 模式网格包含以下列： **SQL 模式名称**，**原始 SQL 模式**，并**有效 SQL 模式**。  
   
 > [!NOTE]  
-> 组模式将显示在设置为粗体，列在 SQL 模式 Name。  
+> 组模式中将显示列下，粗体 SQL 模式 Name。  
   
 ## <a name="loaded-sql-modes"></a>加载的 SQL 模式  
-这些是 SQL 模式，但在会话或根级别设置。 无法编辑或修改一次加载到目标数据库 SQL 模式。  
+这些是在会话或根级别上设置 SQL 模式。 无法编辑或修改一次加载到目标数据库在 SQL 模式。  
   
 ## <a name="inherited-sql-modes"></a>继承的 SQL 模式  
-这些是 SQL 模式，但从相应的父节点继承。  
+这些是 SQL 模式的继承自相应的父节点。  
   
-除函数类别、 过程类别、 事件类别和触发器中，这些 SQL 模式可以在所有级别 （数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件的对象） 都存在。  
+除函数类别、 过程类别、 事件类别和触发器中，SQL，这些模式可以在所有级别 （数据库、 表类别、 语句类别、 视图类别、 表、 视图、 函数、 过程、 UDF 和事件对象） 上才存在。  
   
 > [!NOTE]  
-> 通过选择**从父级继承**复选框，继承 SQL 模式可以从父节点继承。 默认情况下，此复选框处于选定状态。  
+> 通过选择**从父级继承**复选框，继承 SQL 模式可以继承自父节点。 默认情况下，此复选框处于选定状态。  
   
 ## <a name="original-sql-modes"></a>原始 SQL 模式  
 这些是仅函数、 过程和触发器的级别上存在 SQL 模式。  
   
 > [!NOTE]  
-> 通过选择**使用原始**检查框中，最初在相应的函数中使用 SQL 模式或可以使用过程或触发器。 默认情况下，此复选框处于选定状态。  
+> 通过选择**使用原始**复选框中，相应的函数中最初使用 SQL 模式或可以使用过程或触发器。 默认情况下，此复选框处于选定状态。  
   
 ## <a name="effective-sql-modes"></a>有效的 SQL 模式  
-按以下方式，可以在各种级别定义有效的 SQL 模式：  
+可以在不同级别定义有效的 SQL 模式，如下所示：  
   
 -   **在会话级别：**  
   
     1.  所有加载 SQL 模式可以调用，"有效 SQL 模式"。  
   
-    2.  在此级别的有效 SQL 模式可以直接或显式修改。  
+    2.  在此级别，有效的 SQL 模式可以直接和显式修改。  
   
-    3.  显式设置的有效 SQL 模式将不反映作为加载 SQL 模式，并且最后应用于对象。  
+    3.  显式设置的有效 SQL 模式不反映为加载 SQL 模式以及最后应用于对象。  
   
--   **在函数或过程或触发器级别：**  
+-   **在函数或过程或触发器的级别：**  
   
     1.  所有原始 SQL 模式可以调用，"有效 SQL 模式"。  
   
-    2.  在此级别，有效的 SQL 模式可以显式修改时，才**使用原始**复选框处于未选中状态。  
+    2.  在此级别，有效的 SQL 模式可以进行显式修改时，才**使用原始**复选框处于未选中状态。  
   
-    3.  显式设置的有效 SQL 模式将不反映与原始 SQL 模式，并且最后应用于对象。  
+    3.  显式设置的有效 SQL 模式不反映作为原始 SQL 模式，并且最后应用于对象。  
   
 -   **在函数或过程或触发器级别以外的节点：**  
   
     1.  所有继承 SQL 模式可以调用，"有效 SQL 模式"。  
   
-    2.  在此级别，有效的 SQL 模式可以显式修改时，才**从父级继承**复选框处于未选中状态。  
+    2.  在此级别，有效的 SQL 模式可以进行显式修改时，才**从父级继承**复选框处于未选中状态。  
   
-    3.  显式设置的有效 SQL 模式将不反映与继承 SQL 模式，并且最后应用于对象。  
+    3.  显式设置的有效 SQL 模式不反映为继承 SQL 模式以及最后应用于对象。  
   

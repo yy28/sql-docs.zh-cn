@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - database-engine
@@ -12,7 +11,6 @@ ms.technology:
 - master-data-services
 - replication
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - new features [SQL Server]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - sql server 2014 sp1
 - sql server 2014 sp2
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 70
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 5845455529c1b7d2cec25e7407ac8425a0a0e4a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4323b2099836d1c381babbf60c376adb178ef7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117950"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>什么&#39;SQL Server 2014 中的 s
   本主题总结了中的新增功能的详细的链接[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，并总结了服务包 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
@@ -88,7 +85,7 @@ ms.locfileid: "37150148"
 -   **用于检索新的 DMF 输入 SQL Server 中的缓冲区：** 检索输入的缓冲区的会话/请求 (sys.dm_exec_input_buffer) 现已推出新的 DMF。 它在功能上等同于 DBCC INPUTBUFFER。 [请参阅博客获取详细信息的](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)。
 -   **在留住和会被高估内存授予的缓解措施：** 添加为资源调控器中通过 MIN_GRANT_PERCENT 和 MAX_GRANT_PERCENT 的新的查询提示。 这可以通过防止内存争用内存授予上限运行查询时利用这些提示。 有关详细信息，请参阅[知识库文章 KB310740](https://support.microsoft.com/en-us/kb/3107401)
 -   **更好的内存授予/使用诊断：** 新扩展的事件已添加到列表的 SQL Server (query_memory_grant_usage) 中的跟踪功能来跟踪请求和授予的内存授予。 这提供更好地跟踪和分析功能以进行故障排除与内存授予的查询执行问题。 有关详细信息，请参阅[知识库文章 KB3107173](https://support.microsoft.com/en-us/kb/3107173)。
--   **Tempdb 溢出的查询执行诊断：**-哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、 使用的内存和受影响的行。 我们还引入了新的 hash_spill_details 扩展的事件。 现在，你可以跟踪更详尽的信息的哈希和排序警告 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 此改进现在还通过 XML 查询计划为 SpillToTempDbType 复杂类型的新属性的形式公开 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 设置统计信息现在显示了对工作表的统计信息进行排序。 实例时都提供 SQL Server 登录名。
+-   **Tempdb 溢出的查询执行诊断：**-哈希警告和排序警告现在具有其他列来跟踪物理 I/O 统计信息、 使用的内存和受影响的行。 我们还引入了新的 hash_spill_details 扩展的事件。 现在，你可以跟踪更详尽的信息的哈希和排序警告 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 此改进现在还通过 XML 查询计划为 SpillToTempDbType 复杂类型的新属性的形式公开 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 设置统计信息现在显示了对工作表的统计信息进行排序。 .
 -   **改进了查询执行计划涉及残留谓词下推的诊断：** 读取的实际行现在将报告在查询执行计划，以帮助改进查询性能故障排除。 这应抵消单独捕获 SET STATISTICS IO 的需求。 现在可以看到查询计划中残留谓词下推到相关的信息。 有关详细信息，请参阅[知识库文章 KB3107397](https://support.microsoft.com/en-us/kb/3107397)。
 
 

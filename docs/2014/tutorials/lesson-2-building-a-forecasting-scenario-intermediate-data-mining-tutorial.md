@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time series [Analysis Services]
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 9a988156-c900-4c22-97fa-f6b0c1aea9e2
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5db75cbdabd62b569c782bd48755ce817819a475
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e4843931587d9c627b229bc221a784237cc5d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122597"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>第 2 课：生成预测方案（数据挖掘中级教程）
   作为 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 的销售分析人员，您需要对下一年产品的销售量做出预测。 特别是已要求您比较不同区域和产品线的预测值。 此外，您还需要确定不同产品的销售量在一年中的不同时间是否有变化。  

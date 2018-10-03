@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - statements [ODBC], constructing
 - ODBC applications, statements
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d3f6bee83b24bd95e95aa1862a179152db0b39
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fa955f31d26c87b39585ddead6bc5899a9e00679
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134777"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>构造 SQL 语句 (ODBC)
   ODBC 应用程序基本上通过执行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来执行所有的数据库访问。 这些语句的形式取决于应用程序的要求。 SQL 语句可以采用下列方式构造：  

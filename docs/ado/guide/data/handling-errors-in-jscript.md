@@ -1,13 +1,11 @@
 ---
-title: 在 JScript 中处理错误 |Microsoft 文档
+title: 在 JScript 中的错误处理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838855"
 ---
-# <a name="handling-errors-in-jscript"></a>在 JScript 中处理错误
-你的 Microsoft® JScript® 代码必须检查**计数**属性**连接**对象的**错误**集合。 如果值大于 0，循环访问集合，并打印值，就像在任何其他语言。  
+# <a name="handling-errors-in-jscript"></a>处理 JScript 中的错误
+你的 Microsoft® JScript® 代码必须检查**计数**的属性**连接**对象的**错误**集合。 如果值大于 0，循环访问集合，然后打印值，就像在任何其他语言中。  
   
 ```  
 <!-- BeginErrorExampleJS -->  

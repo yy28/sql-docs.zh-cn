@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_session_events (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_xe_session_events (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_session_events
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_session_events dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f26973eb275e818690c1e61b7e27c3681f7b64c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ada8092471c107766881d1cd8b8700b612207ee2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665506"
 ---
 # <a name="sysdmxesessionevents-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "34466853"
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
 |event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  
@@ -52,7 +49,7 @@ ms.locfileid: "34466853"
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|多对一|  
 |sys.dm_xe_session_events.event_package_guid，sys.dm_xe_session_events.event_name|sys.dm_xe_objects.name、sys.dm_xe_objects.package_guid|多对一|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

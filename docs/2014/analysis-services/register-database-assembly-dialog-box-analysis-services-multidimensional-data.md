@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
 ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf8c949083c15216f0655c7753f426de77f289e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3cfc2e55baf9306c34b0e7a88a32ff57d19272e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075027"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>“注册数据库程序集”对话框（Analysis Services - 多维数据）
   使用 **中的** “注册服务器程序集” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，可以设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中程序集引用的属性。 右键单击“对象资源管理器”中的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或数据库的程序集文件夹，并选择“新建程序集”，可以显示“注册服务器程序集”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

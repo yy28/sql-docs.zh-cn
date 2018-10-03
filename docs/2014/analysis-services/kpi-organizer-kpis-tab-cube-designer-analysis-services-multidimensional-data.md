@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpiorganizerpane.f1
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c82287e5fd5265e5cd112a1cb08c52f60c40bc07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136789"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 组织程序（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器的“KPI”选项卡中的“KPI 组织程序”窗格，访问和重新排列指定的多维数据集中包含的关键绩效指标 (KPI)。  
@@ -29,7 +26,7 @@ ms.locfileid: "37176974"
 > [!NOTE]  
 >  在窗体视图中不显示此窗格。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **列表**  
  显示 KPI 的名称。  
   

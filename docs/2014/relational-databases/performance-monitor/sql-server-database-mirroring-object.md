@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d2ae6130ff9f56bebddb4c8e9f52423115b7e86
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084357"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server Database Mirroring 对象
   **SQLServer:Database Mirroring** 性能对象包含报告有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库镜像的性能计数器。 下表列出了此对象包含的计数器。  
@@ -55,7 +52,7 @@ ms.locfileid: "43817433"
 > [!NOTE]  
 >  根据每个伙伴当前执行的角色不同，某些计时器显示零值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用性能计数器可以监视数据库镜像性能。 例如，可以检查 **Transaction Delay** 计数器以确定数据库镜像是否影响主体服务器的性能，可以检查 **Redo Queue** 和 **Log Send Queue** 计数器以确定镜像数据库与主体数据库之间保持同步的情况。 还可以检查 **Log Bytes Sent/sec** 计数器以监视每秒发送的日志量。  
   
 ## <a name="see-also"></a>请参阅  

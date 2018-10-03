@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ParentObject Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04feffe81c9f42344748713161a81310ddf65e11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089117"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 元素 (XMLA)
   包含要在其中创建定义的父对象的父对象的标识符[创建](../xml-elements-commands/create-element-xmla.md)元素。  
@@ -54,8 +51,8 @@ ms.locfileid: "37259163"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37259163"
 |父元素|[创建](../xml-elements-commands/create-element-xmla.md)|  
 |子元素|必需的 Analysis Services 脚本语言 (ASSL) 元素。 通过列出对象及其祖先（不包含 `Server` 对象）的 ID 元素指定这些必需元素。例如，以下 `ParentObject` 元素标识分区：<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  标识符的显示顺序并不重要。  
   
 ## <a name="example"></a>示例  

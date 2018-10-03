@@ -1,35 +1,32 @@
 ---
-title: Microsoft Visual c + + 中的 ADOX 代码示例 |Microsoft 文档
+title: Microsoft Visual c + + 中的 ADOX 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5be9e4e686ad1203675ea42d3bcf8291a863ae48
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709265"
 ---
-# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual c + + 中的 ADOX 代码示例
-这些主题提供有助于您了解如何使用 ADOX 的示例代码。 所有的代码示例是使用 Microsoft Visual c + + 编写的。  
+# <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++ 中的 ADOX 代码示例
+这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual c + + 编写的所有代码示例。  
   
 > [!NOTE]
->  将粘贴整个代码示例中的，从开头到末尾，到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，则可能无法正确运行。  
+>  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
   
 ## <a name="methods"></a>方法  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284876"
   
 -   [索引 Append 方法示例 (VC++)](../../../ado/reference/adox-api/indexes-append-method-example-vc.md)  
   
--   [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
 ## <a name="properties"></a>属性  
   
@@ -59,7 +56,7 @@ ms.locfileid: "35284876"
   
 -   [Command 和 CommandText 属性示例 (VC++)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vc.md)  
   
--   [命令属性，参数集合示例 （VC + +）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
+-   [Command 属性，参数集合示例 （VC + +）](../../../ado/reference/adox-api/parameters-collection-command-property-example-vc.md)  
   
 -   [DateCreated 和 DateModified 属性示例 (VC++)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vc.md)  
   
@@ -69,9 +66,9 @@ ms.locfileid: "35284876"
   
 -   [IndexNulls 属性示例 (VC++)](../../../ado/reference/adox-api/indexnulls-property-example-vc.md)  
   
--   [密钥类型、 RelatedColumn、 RelatedTable、 UpdateRule 属性、 键追加方法示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
+-   [密钥类型、 RelatedColumn、 RelatedTable、 UpdateRule 属性、 键 Append 方法示例 （VC + +）](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md)  
   
--   [Name 属性、 列和表追加方法示例 （VC + +）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Name 属性、 列和表 Append 方法示例 （VC + +）](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [NumericScale 和 Precision 属性示例 (VC++)](../../../ado/reference/adox-api/numericscale-and-precision-properties-of-the-column-object-example-vc.md)  
   
@@ -79,7 +76,7 @@ ms.locfileid: "35284876"
   
 -   [PrimaryKey 和 Unique 属性示例 (VC++)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md)  
   
--   [表类型属性，连接关闭方法的示例 （VC + +）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
+-   [表类型属性中，连接关闭方法示例 （VC + +）](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   
 ## <a name="collections"></a>集合  
   

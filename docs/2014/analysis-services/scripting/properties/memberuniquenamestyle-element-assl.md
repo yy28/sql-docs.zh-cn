@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MemberUniqueNameStyle Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MemberUniqueNameStyle element
 ms.assetid: f0771c81-0127-4203-9501-ae4f864730fa
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2448f2f45f76610e9d7298c855086cc74ab0611e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 204f29e7bfb90894fded974b78cfd136aa39eaeb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133457"
 ---
 # <a name="memberuniquenamestyle-element-assl"></a>MemberUniqueNameStyle 元素 (ASSL)
   确定如何唯一名称为层次结构中包含的成员生成[CubeDimension](../data-type/dimension-data-type-assl.md)元素。  
@@ -57,9 +54,9 @@ ms.locfileid: "37226357"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimension](../data-type/dimension-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
@@ -67,7 +64,7 @@ ms.locfileid: "37226357"
 |*本机*|该实例自动确定成员的唯一名称。|  
 |*NamePath*|该实例将生成由每个级别和成员标题组成的复合名称。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`MemberUniqueNameStyle`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>请参阅  

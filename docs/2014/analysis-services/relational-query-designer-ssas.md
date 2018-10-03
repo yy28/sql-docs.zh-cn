@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 386ac327689aa74028d28dc688dee28257568cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e0c556930dc843f9a512f09f26ae9187dcd0c84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132507"
 ---
 # <a name="relational-query-designer-ssas"></a>关系查询设计器 (SSAS)
   关系查询设计器可帮助你创建一个查询，以便指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 关系数据库以及 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]中检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。  使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -54,7 +51,7 @@ ms.locfileid: "37259653"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |[数据库视图](#DatabaseView)|显示按数据库架构组织的表、视图、存储过程和表值函数的层次结构视图。|  
 |[所选字段](#SelectedFields)|在“数据库视图”窗格中显示选定项中的数据库字段名称列表。 这些字段将成为数据集的字段集合。|  
@@ -179,7 +176,7 @@ ms.locfileid: "37259653"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  图形查询设计器工具栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  
@@ -202,7 +199,7 @@ ms.locfileid: "37259653"
 ### <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。|  
@@ -216,7 +213,7 @@ ms.locfileid: "37259653"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |查询|显示 SQL 查询文本。 使用此窗格可以编写或编辑 SQL 查询。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
@@ -239,7 +236,7 @@ SELECT Name FROM ContactType
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |查询|显示存储过程的名称和所有输入参数。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  

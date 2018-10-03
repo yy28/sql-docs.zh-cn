@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106727"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 错误和消息引用
   下表按编号的升序列出了每个类别中的预定义 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 错误、警告和信息性消息及其数值代码和符号名称。 其中每个错误都定义为 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类中的一个字段。  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085719"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|此缓冲区已被孤立。 缓冲区管理器已关闭，但还有一个未完成的缓冲区，而且不会对该缓冲区执行清除操作。 这可能会引起内存泄漏和其他问题。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|尝试查找名为“%1”的输入列失败，错误代码为 0x%2!8.8X!。 在输入列集合中找不到指定的输入列。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|尝试查找沿袭 ID 为 %1!d! 的输入列失败， 错误代码为 0x%2!8.8X!。 在输入列集合中找不到此输入列。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|表达式包含无法识别的标记“%1”。 如果“%1”是变量，则应将其表示为“\@%1”。 此指定标记无效。 如果令牌要用作变量名称，它应带有前缀\@符号。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|表达式包含无法识别的标记“%1”。 如果“%1”是变量，则应将其表示为“\@%1”。 此指定标记无效。 如果此标记应用作变量名，它的前缀应为 \@ 符号。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|表达式包含无法识别的标记“#%1!d!”。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|在 Variables 集合中找不到变量“%1”。 此变量可能不在正确的作用域内。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|尝试分析表达式“%1”失败。 此表达式可能包含无效标记、不完整标记或无效元素， 可能格式不正确，也可能缺少某个必需元素的一部分(例如圆括号不成对)。|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085719"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|组件“%1”无法缓存运行时对象引用跟踪器集合，返回的错误代码是 0x%2!8.8X!。|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|有多个名为“%1”的输入列。 必须以 [组件名称].[%2] 形式唯一指定所需的输入列或按沿袭 ID 引用所需的输入列。 当前在多个组件上存在指定的输入列。|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|查找名为“[%1].[%2]”的输入列失败，错误代码为 0x%3!8.8X!。 在输入列集合中找不到此输入列。|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|有多个名为“%1”的变量。 所需的变量必须唯一指定为\@[命名 2]。 多个命名空间中存在该变量。|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|有多个名为“%1”的变量。 必须将所需变量唯一指定为 \@[Namespace::%2]。 多个命名空间中存在该变量。|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|数据流引擎计划程序无法缩减管道的执行计划。 请将 OptimizedMode 属性设置为 False。|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|函数 SQRT 无法对负值进行运算，但传递给 SQRT 函数的却是负值。|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|函数 LN 无法对零或负值进行运算，但传递给 LN 函数的却是零或负值。|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085719"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|此表达式包含意外的等号(=)。 通常在需要两个等号(==)时发生此错误。|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|指定的输入列名称不明确。  必须以 [组件名称].[列名] 形式限定列或使用沿袭 ID 引用列。 当多个组件中存在输入列时将发生此错误，此时，必须加上组件名称或使用沿袭 ID 以示区别。|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|表达式中存在占位符函数参数或操作数。 应使用实参或操作数进行替换。|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定的变量名称不明确。 所需的变量必须是限定为\@[Namespace::Variable]。 当多个命名空间中存在该变量时将发生此错误。|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定的变量名称不明确。 必须将所需变量限定为 \@[Namespace::Variable]。 当多个命名空间中存在该变量时将发生此错误。|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|对于二元运算的操作数，只有输入列和转换运算才支持数据类型 DT_STR。 如果 DT_STR 操作数不是输入列或转换结果，则不能用于二元运算。 若要执行此运算，需要使用转换运算符显式转换该操作数。|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|对于条件运算符的操作数，只有输入列和转换运算才支持数据类型 DT_STR。 如果 DT_STR 操作数不是输入列或转换结果，则不能用于条件运算。 若要执行此运算，需要使用转换运算符显式转换该操作数。|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|出现计数参数对函数 FINDSTRING 无效。 此参数必须大于零。|  
@@ -2271,7 +2268,7 @@ ms.locfileid: "39085719"
   
 |十六进制代码|十进制代码|符号名称|Description|  
 |----------------------|------------------|-------------------|-----------------|  
-|0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
+|0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|函数不正确。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系统找不到指定的文件。|  
 |0x100|256|DTS_MSG_SERVER_STARTING|正在启动 Microsoft SSIS 服务。<br /><br /> 服务器版本 %1|  
 |0x101|257|DTS_MSG_SERVER_STARTED|Microsoft SSIS 服务已启动。<br /><br /> 服务器版本 %1|  

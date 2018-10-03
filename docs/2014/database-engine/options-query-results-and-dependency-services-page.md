@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-caps.latest.revision: 6
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecc1b6d238189ca0b9c33dd97d136d3283f1ae6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118617"
 ---
-# <a name="options-query-results-and-dependency-services-page"></a>选项 （查询结果和依赖关系服务页）
+# <a name="options-query-results-and-dependency-services-page"></a>选项（“查询结果”和“依赖关系服务”页）
   使用此页可为依赖关系服务指定要连接的服务器。 通过依赖关系服务，您可以提取与在不同服务器上存储的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象之间的依赖关系有关的信息。 通过查看对象依赖关系**对象依赖关系**对话框中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。  
   
  **您希望做什么？**  
@@ -40,7 +37,7 @@ ms.locfileid: "37192097"
   
 ##  <a name="options"></a> 配置选项  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **依赖关系服务服务器**  
  指定安装依赖关系服务的服务器。  
   

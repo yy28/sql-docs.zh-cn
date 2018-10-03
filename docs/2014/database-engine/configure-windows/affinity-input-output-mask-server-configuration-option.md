@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101547"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity I/O mask 服务器配置选项
   为了执行多任务， [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 和 Windows Server 2003 有时会在不同的处理器之间移动进程线程。 虽然从操作系统方面而言，此活动是高效的，但是在高系统负荷的情况下，该活动会降低 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的性能，因为每个处理器缓存都会不断地重新加载数据。 如果将各个处理器分配给特定线程，则通过消除处理器的重新加载需要，可以提高在这些条件下的性能；线程与处理器之间的这种关联称为“处理器关联”。  

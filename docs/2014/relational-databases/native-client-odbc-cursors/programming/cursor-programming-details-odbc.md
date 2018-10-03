@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC cursors, programming
 - cursors [ODBC], programming
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aebd98e1fce75fd2e1b0d55f00205c176ee380a8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098117"
 ---
 # <a name="cursor-programming-details-odbc"></a>游标编程详细信息 (ODBC)
   选择正确的游标类型可提高应用程序的性能。 在某些条件下，当请求的游标类型不支持执行的 SQL 语句时，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以隐式转换游标类型。  

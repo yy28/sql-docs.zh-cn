@@ -1,14 +1,11 @@
 ---
-title: sys.conversation_endpoints (TRANSACT-SQL) |Microsoft 文档
+title: sys.conversation_endpoints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conversation_endpoints_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d6c99e2fa7c25011befd0cbdb5aca4bbe45d09f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 493fd7d0ce579073228c467226cef7ea86b2dc26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832125"
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +41,8 @@ ms.locfileid: "33181903"
 |conversation_group_id|**uniqueidentifier**|此会话所属的会话组的标识符。 不可为 NULL。|  
 |service_id|**int**|会话的这一端的服务的标识符。 不可为 NULL。|  
 |lifetime|**datetime**|此会话的过期日期/时间。 不可为 NULL。|  
-|state|**char(2)**|会话的当前状态。 不可为 NULL。 可为下列值之一：<br /><br /> 因此已开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理此会话的 BEGIN CONVERSATION，但尚未收到任何消息。<br /><br /> 已开始入站 SI。 另一个实例已开始与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新会话，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一条消息。 如果第一条消息含有碎片或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到消息的顺序不对，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在此状态下创建会话。 但是，如果会话接收的第一次传输包含完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在 CO（正在转换）状态下创建会话。<br /><br /> CO 进行会话。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。<br /><br /> DI Disconnected 入站。 会话的远程端已发出 END CONVERSATION。 会话将保持此状态，直到会话的本地端发出 END CONVERSATION。 应用程序仍可能会收到会话消息。 由于会话的远程端已经结束了会话，因此应用程序无法通过此会话发送消息。 当应用程序发出 END CONVERSATION 时，会话将转为 CD（关闭）状态。<br /><br /> 执行出站的已断开连接。 会话的本地端已发出 END CONVERSATION。 会话将保持此状态，直到会话的远程端确认 END CONVERSATION。 应用程序将无法发送或接收会话消息。 当会话的远程端确认 END CONVERSATION 之后，会话将转为 CD（关闭）状态。<br /><br /> ER 错误。 此端点发生错误。 此错误消息放入应用程序队列中。 如果应用程序队列为空，则表示应用程序已使用此错误消息。<br /><br /> 关闭的 CD。 会话端点不再使用。|  
-|state_desc|**nvarchar(60)**|终结点会话状态的说明。 此列可以为 NULL。 可为下列值之一：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **进行会话**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **关闭**<br /><br /> **ERROR**|  
+|state|**char(2)**|会话的当前状态。 不可为 NULL。 可为下列值之一：<br /><br /> 因此已开始出站。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理此会话的 BEGIN CONVERSATION，但尚未发送消息。<br /><br /> SI 已开始入站。 另一个实例已开始与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新会话，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尚未完全收到第一条消息。 如果第一条消息含有碎片或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到消息的顺序不对，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在此状态下创建会话。 但是，如果会话接收的第一次传输包含完整的第一条消息，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在 CO（正在转换）状态下创建会话。<br /><br /> 活跃的 CO。 会话已建立，会话的双方都可以发送消息。 典型服务的大部分通信都在会话处于此状态时发生。<br /><br /> DI 已断开入站。 会话的远程端已发出 END CONVERSATION。 会话将保持此状态，直到会话的本地端发出 END CONVERSATION。 应用程序仍可能会收到该会话的消息。 由于会话的远程端已经结束了会话，因此应用程序无法通过此会话发送消息。 当应用程序发出 END CONVERSATION 时，会话将转为 CD（关闭）状态。<br /><br /> DO 已断开出站。 会话的本地端已发出 END CONVERSATION。 会话将保持此状态，直到会话的远程端确认 END CONVERSATION。 应用程序将无法发送或接收会话消息。 当会话的远程端确认 END CONVERSATION 之后，会话将转为 CD（关闭）状态。<br /><br /> ER 时出错。 此端点发生错误。 此错误消息放入应用程序队列中。 如果应用程序队列为空，则表示应用程序已使用此错误消息。<br /><br /> 关闭的 CD。 会话端点不再使用。|  
+|state_desc|**nvarchar(60)**|终结点会话状态的说明。 此列可以为 NULL。 可为下列值之一：<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **对话**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **关闭**<br /><br /> **ERROR**|  
 |far_service|**nvarchar(256)**|会话的远程端上的服务的名称。 不可为 NULL。|  
 |far_broker_instance|**nvarchar(128)**|会话的远程端的 Broker 实例。 可以为 NULL。|  
 |principal_id|**int**|对话的本地端所使用的证书所属的主体的标识符。 不可为 NULL。|  
@@ -67,7 +63,7 @@ ms.locfileid: "33181903"
 |is_system|**bit**|如果这是系统对话，则为 1。 不可为 NULL。|  
 |priority|**tinyint**|分配给此会话端点的会话优先级。 不可为 NULL。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

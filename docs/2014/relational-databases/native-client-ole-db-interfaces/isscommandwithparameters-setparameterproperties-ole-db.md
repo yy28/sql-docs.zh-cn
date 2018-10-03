@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafc28244a94a3738b91c454f75bc8bb26d0b391
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096977"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
   按照序号基于每个参数设置参数属性，或者通过指定 SSPARAMPROPS 结构数组来设置大容量参数属性。  
@@ -40,7 +37,7 @@ SSPARAMPROPS rgParamProperties[]);
   
 ## <a name="arguments"></a>参数  
  *cParams*[in]  
- 结构中的数量 SSPARAMPROPS *rgParamProperties*数组。 如果此数字为零，`ISSCommandWithParameters::SetParameterProperties`将删除已为命令中的任何参数指定的所有属性。  
+ rgParamProperties 数组中 SSPARAMPROPS 结构的数量。 如果此数字为零，`ISSCommandWithParameters::SetParameterProperties`将删除已为命令中的任何参数指定的所有属性。  
   
  *rgParamProperties*[in]  
  要设置的 SSPARAMPROPS 结构数组。  
@@ -48,7 +45,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>返回代码值  
  `ISSCommandWithParameters::SetParameterProperties`方法将返回相同的错误代码与核心 OLE DB **icommandproperties:: Setproperties**方法。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用此方法设置参数属性上允许，每个参数的序号，或使用单个`ISSCommandWithParameters::SetParameterProperties`从属性数组生成 SSPARAMPROPS 之后调用。  
   
  **SetParameterInfo**调用之前，必须调用方法`ISSCommandWithParameters::SetParameterProperties`方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  
@@ -77,9 +74,9 @@ SSPARAMPROPS rgParamProperties[]);
   
 |成员|Description|  
 |------------|-----------------|  
-|*iOrdinal*|所传递参数的序号。|  
-|*cPropertySets*|结构中的数量 DBPROPSET *rgPropertySets*。|  
-|*rgPropertySets*|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
+|iOrdinal|所传递参数的序号。|  
+|cPropertySets|rgPropertySets 中 DBPROPSET 结构的数量。|  
+|rgPropertySets|指向内存中将返回 DBPROPSET 结构数组的位置的指针。|  
   
 ## <a name="see-also"></a>请参阅  
  [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  

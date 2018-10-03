@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9741f5e3234462e0793effd3ba5242f0ff272b3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109917"
 ---
 # <a name="subscriptions-page-report-manager"></a>“订阅”页（报表管理器）
   使用“订阅”页可以列出当前报表或共享数据源的所有订阅。 如果有足够的权限（指“管理所有订阅”任务），则可以查看所有用户的订阅。 否则，此页仅显示您所拥有的订阅。  
@@ -47,7 +44,7 @@ ms.locfileid: "37181574"
   
 4.  选择 **“订阅”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **删除**  
  单击此选项可删除订阅。 删除订阅之前，必须选中要删除的每个订阅旁边的复选框。  
   

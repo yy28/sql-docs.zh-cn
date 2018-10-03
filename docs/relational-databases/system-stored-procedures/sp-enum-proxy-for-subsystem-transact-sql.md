@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: cc983f79dfa1eafd0f0175448467c3a8d9a69aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030853"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736857"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_id**|**int**|代理服务器标识号。|  
 |**proxy_name**|**sysname**|代理服务器的名称。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果不提供任何参数， **sp_enum_proxy_for_subsystem**列出为每个子系统的实例中的所有代理有关的信息。  
   
  如果提供代理 id 或代理名称， **sp_enum_proxy_for_subsystem**列表子系统的代理服务器具有访问权限。 如果提供子系统 id 或子系统名称， **sp_enum_proxy_for_subsystem**列出有权访问该子系统的代理。  

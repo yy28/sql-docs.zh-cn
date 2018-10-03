@@ -1,33 +1,27 @@
 ---
-title: 执行 SSMA 控制台 (AccessToSQL) |Microsoft 文档
+title: 执行 SSMA 控制台 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
-caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 402416503f927f74dcb711ac3bffb3c901f10e79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737815"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>执行 SSMA 控制台 (AccessToSQL)
-Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的部分详细介绍相同。  
+Microsoft 为您提供了一系列可靠的脚本文件命令和命令行选项来执行和控制 SSMA 活动。 接下来的几节详细介绍相同。  
   
 ## <a name="project--script-file-commands"></a>项目脚本文件命令  
-创建项目，打开、 保存和退出项目项目命令句柄。  
+创建项目、 打开、 保存和退出项目项目命令句柄。  
   
 **Command**  
   
@@ -39,9 +33,9 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 -   `project-name` 指示项目的名称。 {string}  
   
--   `overwrite-if-exists`可选特性指示是否应覆盖现有项目。 {布尔值}  
+-   `overwrite-if-exists`可选属性指示是否应覆盖现有项目。 {布尔值}  
   
--   `project-type` 是一个可选属性。  对于项目类型有以下选项：  
+-   `project-type` 为可选属性。  项目类型有以下选项：  
   
     -   sql-server-2005  
   
@@ -72,9 +66,9 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 />  
 ```  
-覆盖-如果-存在的属性是**false**默认情况下。  
+覆盖如果-共存的属性是**false**默认情况下。  
   
-属性项目类型是**sql server 2008**默认情况下。  
+项目类型属性是**sql server 2008**默认情况下。  
   
 **Command**  
   
@@ -82,9 +76,9 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 **脚本**  
   
--   `project-folder` 指示获取创建的项目的文件夹。 如果指定的文件夹不存在，则该命令将失败。  {string}  
+-   `project-folder` 指示获取创建的项目的文件夹。 如果指定的文件夹不存在，则命令将失败。  {string}  
   
--   `project-name` 指示项目的名称。 如果指定的项目不存在，则该命令将失败。  {string}  
+-   `project-name` 指示项目的名称。 如果指定的项目不存在，则命令将失败。  {string}  
   
 **语法示例：**  
   
@@ -128,11 +122,11 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
 如果修改的属性是可选的**忽略**默认情况下。  
   
 ## <a name="database-connection-script-file-commands"></a>数据库连接脚本文件命令  
-数据库连接命令帮助连接到数据库。  
+数据库连接命令可帮助连接到数据库。  
   
-**浏览**控制台中不支持的 UI 的功能。  
+**浏览**在控制台中不支持 UI 的功能。  
   
-**Windows 身份验证**和**端口**连接到 SQL Azure 时，参数不适用。  
+**Windows 身份验证**并**端口**连接到 SQL Azure 时，参数不适用。  
   
 创建脚本文件的详细信息，请参阅[创建脚本文件&#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)。  
   
@@ -140,13 +134,13 @@ Microsoft 为你提供了一组可靠的脚本文件命令和命令行选项来�
   
 connect-source-database  
   
--   执行与源数据库的连接并加载的高级别的元数据的源数据库但不是所有元数据。  
+-   执行与源数据库的连接并加载的源数据库但不是所有元数据的高级别元数据。  
   
--   如果无法建立到源的连接，会生成错误并且控制台应用程序会进一步停止执行  
+-   如果无法建立到源的连接，会生成错误并停止进一步执行控制台应用程序。  
   
 **脚本**  
   
-从定义的服务器部分中的每个连接的服务器连接文件或脚本文件的名称特性中检索服务器定义。  
+从服务器部分中的服务器连接文件或脚本文件的每个连接而定义的 name 属性中检索服务器定义。  
   
 **语法示例：**  
   
@@ -155,7 +149,7 @@ connect-source-database
 ```  
 **Command**  
   
-负载 access 数据库： 用于加载 access 数据库文件  
+负载 access 数据库： 用于加载访问数据库文件  
   
 **脚本**  
   
@@ -183,7 +177,7 @@ force-load-source/target-database
   
 -   用于处理脱机迁移项目。  
   
--   如果无法建立到源/目标连接，会生成错误和控制台应用程序将停止进一步执行  
+-   如果无法建立与源/目标的连接，会生成错误并停止进一步执行控制台应用程序。  
   
 **脚本**  
   
@@ -211,9 +205,9 @@ force-load-source/target-database
   
 reconnect-source-database  
   
--   重新连接到源数据库，但不会加载与连接源数据库命令的任何元数据。  
+-   重新连接到源数据库，但不会加载与连接源数据库命令不同的任何元数据。  
   
--   如果无法建立 (re) 与源的连接，会生成错误和控制台应用程序将停止进一步执行。  
+-   如果无法建立 （重新） 与源的连接，会生成错误和控制台应用程序停止进一步执行。  
   
 **脚本**  
   
@@ -226,13 +220,13 @@ reconnect-source-database
   
 连接目标数据库  
   
--   连接到目标 SQL Server 或 SQL Azure 数据库并完全加载的目标数据库的高级别元数据，但不是元数据。  
+-   连接到目标 SQL Server 或 SQL Azure 数据库并完全加载目标数据库的高级别的元数据，但不是元数据。  
   
--   如果无法建立到目标连接，会生成错误和控制台应用程序将停止进一步执行。  
+-   如果无法建立到目标连接，会生成错误和控制台应用程序停止进一步执行。  
   
 **脚本**  
   
-从定义的服务器部分中的每个连接的服务器连接文件或脚本文件的名称特性中检索服务器定义  
+从服务器部分中的服务器连接文件或脚本文件的每个连接而定义的 name 属性检索服务器定义  
   
 **语法示例：**  
   
@@ -243,9 +237,9 @@ reconnect-source-database
   
 reconnect-target-database  
   
--   重新连接到目标数据库，但不会加载任何元数据，与不同的是连接目标数据库命令。  
+-   重新连接到目标数据库，但不会加载任何元数据，与连接目标数据库命令不同。  
   
--   如果无法建立 (re) 连接到目标，生成错误和控制台应用程序将停止进一步执行。  
+-   如果无法建立 （重新） 连接到目标，生成错误和控制台应用程序停止进一步执行。  
   
 **脚本**  
   
@@ -256,39 +250,39 @@ reconnect-target-database
 ```  
   
 ## <a name="report-script-file-commands"></a>报表脚本文件命令  
-报表命令生成有关各种 SSMA 控制台活动的性能报告。  
+报表命令生成各种 SSMA 控制台活动的性能上的报表。  
   
 **Command**  
   
 generate-assessment-report  
   
--   生成对源数据库的评估报表。  
+-   生成对源数据库的评估报告。  
   
--   如果执行此命令，将生成错误并控制台应用程序退出，则不会执行源数据库连接。  
+-   如果执行此命令之前不执行源数据库连接，则会生成错误和控制台应用程序退出。  
   
--   命令在执行期间，连接到源数据库服务器失败也会导致终止控制台应用程序。  
+-   命令执行期间，连接到源数据库服务器失败也会终止的控制台应用程序。  
   
 **脚本**  
   
--   `assessment-report-folder:` 指定评估报表可以存储在其中的文件夹。（可选属性）  
+-   `assessment-report-folder:` 指定评估报告可以在其中存储的文件夹。（可选属性）  
   
--   `object-name:` 指定被认为是评估报表生成 （它可以具有 indivdual 对象名称或组对象名称） 的对象。  
+-   `object-name:` 指定的生成评估报告 （可能包含单个对象名或组对象名称） 时要考虑的对象。  
   
--   `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+-   `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
--   `assessment-report-overwrite:` 指定是否要覆盖评估报表文件夹，如果它已存在。  
+-   `assessment-report-overwrite:` 指定是否覆盖评估报表文件夹已存在。  
   
     **默认值：** false。 （可选属性）  
   
 -   `write-summary-report-to:` 指定将生成报表的路径。  
   
-    如果只提到的文件夹路径，然后按名称文件**AssessmentReport&lt;n&gt;。XML**创建。 （可选属性）  
+    如果只提到的文件夹路径，然后将文件按名称**AssessmentReport&lt;n&gt;。XML**创建。 （可选属性）  
   
     报表创建具有两个其他子类别：  
   
-    -   `report-errors` （="true/false"，使用默认为"false"（可选属性））  
+    -   `report-errors` （="true/false"，默认值为"false"（可选属性））  
   
-    -   `verbose` （="true/false"，使用默认为"false"（可选属性））  
+    -   `verbose` （="true/false"，默认值为"false"（可选属性））  
   
 **语法示例：**  
   
@@ -329,9 +323,9 @@ generate-assessment-report
 ```  
   
 ## <a name="migration-script-file-commands"></a>迁移脚本文件命令  
-迁移命令将目标数据库架构转换为源架构，并将数据迁移到目标服务器。  
+迁移命令将目标数据库架构转换为源架构和数据迁移到目标服务器。  
   
-迁移命令设置了默认控制台输出，则与不进行详细的错误报告的完整输出报告： 源对象树的根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
   
 **Command**  
   
@@ -339,29 +333,29 @@ convert-schema
   
 -   执行架构转换从源到目标架构。  
   
--   如果源或目标数据库连接不执行在执行此命令之前或在命令执行过程中与源或目标数据库服务器的连接失败，则会生成错误并控制台应用程序退出。  
+-   如果执行此命令之前不执行源或目标数据库连接或连接到源或目标数据库服务器失败命令执行时，会生成错误和控制台应用程序退出。  
   
 **脚本**  
   
--   `conversion-report-folder:` 指定可以在其中存储评估报表文件夹。（可选属性）  
+-   `conversion-report-folder:` 指定评估报告存储的文件夹。（可选属性）  
   
--   `object-name:` 指定进行转换 （它可以具有 indivdual 对象名称或组对象名称） 的架构被视为源对象。  
+-   `object-name:` 指定源对象视为用于转换的架构 （可能包含单个对象名或组对象名称）。  
   
--   `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+-   `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
--   `conversion-report-overwrite:` 指定是否要覆盖评估报表文件夹，如果它已存在。  
+-   `conversion-report-overwrite:` 指定是否覆盖评估报表文件夹已存在。  
   
     **默认值：** false。 （可选属性）  
   
 -   `write-summary-report-to:` 指定将生成报表的路径。  
   
-    如果只提到的文件夹路径，然后按名称文件**SchemaConversionReport&lt;n&gt;。XML**创建。 （可选属性）  
+    如果只提到的文件夹路径，然后将文件按名称**SchemaConversionReport&lt;n&gt;。XML**创建。 （可选属性）  
   
     报表创建具有两个其他子类别：  
   
-    -   `report-errors` （="true/false"，使用默认为"false"（可选属性））  
+    -   `report-errors` （="true/false"，默认值为"false"（可选属性））  
   
-    -   `verbose` （="true/false"，使用默认为"false"（可选属性））  
+    -   `verbose` （="true/false"，默认值为"false"（可选属性））  
   
 **语法示例：**  
   
@@ -406,19 +400,19 @@ convert-schema
   
 **脚本**  
   
--   `object-name:` 指定被视为用于迁移的源对象数据 （它可以具有 indivdual 对象名称或组对象名称）。  
+-   `object-name:` 指定被视为用于迁移的源对象 （可能包含单个对象名或组对象名称） 的数据。  
   
--   `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+-   `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
 -   `write-summary-report-to:` 指定将生成报表的路径。  
   
-    如果只提到的文件夹路径，然后按名称文件**DataMigrationReport&lt;n&gt;。XML**创建。 （可选属性）  
+    如果只提到的文件夹路径，然后将文件按名称**DataMigrationReport&lt;n&gt;。XML**创建。 （可选属性）  
   
     报表创建具有两个其他子类别：  
   
-    -   `report-errors` （="true/false"，使用默认为"false"（可选属性））  
+    -   `report-errors` （="true/false"，默认值为"false"（可选属性））  
   
-    -   `verbose` （="true/false"，使用默认为"false"（可选属性））  
+    -   `verbose` （="true/false"，默认值为"false"（可选属性））  
   
 **语法示例：**  
   
@@ -458,7 +452,7 @@ convert-schema
 ```  
 **Command**  
   
-链接表： 此命令链接到的目标表的源表 （访问）。  
+链接表： 此命令将源 （访问） 表链接到目标表。  
   
 **脚本**  
   
@@ -484,7 +478,7 @@ convert-schema
 ```  
 **Command**  
   
-取消链接表： 此命令将取消目标表中的源表 （访问） 的链接。  
+取消链接表： 此命令将取消链接的目标表中的源表 （访问）。  
   
 **脚本**  
   
@@ -510,17 +504,17 @@ convert-schema
 ```  
   
 ## <a name="migration-preparation-script-file-commands"></a>迁移准备脚本文件命令  
-迁移准备命令会启动源和目标数据库之间的架构映射。  
+迁移准备命令开始架构源和目标数据库之间的映射。  
   
 **Command**  
   
-映射架构： 架构映射到目标架构的源数据库。  
+映射架构： 架构映射的源数据库到目标架构。  
   
 **脚本**  
   
 -   `source-schema` 指定我们想要迁移的源架构。  
   
--   `sql-server-schema` 指定希望它要迁移的目标架构。  
+-   `sql-server-schema` 指定我们想要的位置要迁移的目标架构。  
   
 **语法示例：**  
   
@@ -531,9 +525,9 @@ convert-schema
 ```  
   
 ## <a name="manageability-commands"></a>可管理性命令  
-可管理性命令帮助将目标数据库对象与源数据库同步。  
+可管理性命令可帮助将与源数据库同步目标数据库对象。  
   
-迁移命令设置了默认控制台输出，则与不进行详细的错误报告的完整输出报告： 源对象树的根节点处仅摘要。  
+设置的迁移命令的默认控制台输出是与不进行详细的错误报告 Full 输出报告： 源对象树中根节点处仅摘要。  
   
 **Command**  
   
@@ -541,25 +535,25 @@ convert-schema
   
 1.  将目标对象与目标数据库同步。  
   
-2.  如果针对源数据库执行此命令，则被遇到错误。  
+2.  如果对源数据库执行此命令时，遇到错误。  
   
-3.  如果在执行此命令之前不执行目标数据库连接或连接到的目标数据库服务器在命令执行期间失败，则生成错误并控制台应用程序退出。  
+3.  如果执行此命令之前不执行目标数据库连接或连接到目标数据库服务器失败命令执行时，会生成错误和控制台应用程序退出。  
   
 **脚本**  
   
-1.  `object-name:` 指定与目标数据库 （它可以具有 indivdual 对象名称或组对象名称） 进行同步视为目标对象。  
+1.  `object-name:` 指定目标对象被视为与目标数据库 （可能包含单个对象名或组对象名称） 进行同步。  
   
-2.  `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+2.  `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
 3.  `on-error:` 指定是否为警告或错误指定同步错误。 错误上的可用选项包括：  
   
-    -   为警告报告总数  
+    -   作为警告报告总数  
   
-    -   报表-每个-作为-警告  
+    -   报表的每个-作为-警告  
   
-    -   失败脚本  
+    -   脚本失败  
   
-4.  `report-errors-to:` 为同步操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定了错误报告位置**TargetSynchronizationReport.XML**创建。  
+4.  `report-errors-to:` 为同步操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**TargetSynchronizationReport.XML**创建。  
   
 **语法示例：**  
   
@@ -602,29 +596,29 @@ convert-schema
 ```  
 **Command**  
   
-从数据库中刷新  
+从数据库刷新  
   
 -   刷新数据库中的源对象。  
   
--   如果针对目标数据库执行此命令，则会生成错误。  
+-   如果对目标数据库执行此命令，则会生成错误。  
   
 **脚本**  
   
 作为命令行参数需要一个或多个元数据库节点。  
   
-1.  `object-name:` 指定视为刷新从 （它可以具有 indivdual 对象名称或组对象名称） 的源数据库的源对象。  
+1.  `object-name:` 指定用于刷新 （可能包含单个对象名或组对象名称） 的源数据库中被视为源对象。  
   
-2.  `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+2.  `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
 3.  `on-error:` 指定是否为警告或错误指定刷新错误。 错误上的可用选项包括：  
   
-    -   为警告报告总数  
+    -   作为警告报告总数  
   
-    -   报表-每个-作为-警告  
+    -   报表的每个-作为-警告  
   
-    -   失败脚本  
+    -   脚本失败  
   
-4.  `report-errors-to:` 刷新操作 （可选） 如果只提供了文件夹路径，然后将文件按名称指定的错误报告的位置**SourceDBRefreshReport.XML**创建。  
+4.  `report-errors-to:` 刷新操作 （以属性为可选） 如果仅指定文件夹路径，然后将文件按名称指定的错误报告位置**SourceDBRefreshReport.XML**创建。  
   
 **语法示例：**  
   
@@ -662,28 +656,28 @@ convert-schema
 </refresh-from-database>  
 ```  
   
-## <a name="script-generation-script-file-commands"></a>脚本生成脚本文件命令  
-命令帮助脚本生成将控制台输出保存在脚本文件。  
+## <a name="script-generation-script-file-commands"></a>脚本生成的脚本文件命令  
+脚本生成命令可帮助在脚本文件中保存的控制台输出。  
   
 **Command**  
   
 save-as-script  
   
-用于将对象的脚本保存到文件时提到元数据库 = 目标，这是同步命令，其中在我们获取脚本脚本并在目标数据库上执行相同的替代方法。  
+用于将对象的脚本保存到文件时提到元数据库 = 目标，这是在其中中我们获取脚本并执行相同目标数据库上的同步命令的替代方法。  
   
 **脚本**  
   
 作为命令行参数需要一个或多个元数据库节点。  
   
--   `object-name:` 指定其脚本将保存的对象。 （可以单独的对象名称或组对象名称）  
+-   `object-name:` 指定的脚本将保存的对象。 （它可以具有单独的对象名称或组对象名称）  
   
--   `object-type:` 指定的类型 （如果指定对象类别，则对象类型将为"类别"） 中的对象名称属性指定的对象。  
+-   `object-type:` 指定的类型 （如果指定了对象类别，则对象类型将为"类别"） 的对象名称属性中指定的对象。  
   
--   `metabase:` 指定它是否是源或目标元数据库。  
+-   `metabase:` 指定是否在源或目标元数据库。  
   
--   `destination:` 指定的路径或其中脚本已保存，如果文件没有给定的名称然后文件名格式 （object_name 属性值）.out 中的文件夹  
+-   `destination:` 指定的路径或其中脚本已保存，如果文件名称中未给然后文件名称格式 （object_name 属性值）.out 的文件夹  
   
--   `overwrite:` 如果为 true 然后它将覆盖如果存在相同的文件名。 它可具有的值 (true/false)。  
+-   `overwrite:` 如果为 true 则它将覆盖存在相同的文件名。 它可以具有值 (true/false)。  
   
 **语法示例：**  
   
@@ -721,13 +715,13 @@ save-as-script
 ## <a name="next-step"></a>下一步  
 有关命令行选项的信息，请参阅[SSMA 控制台中的命令行选项&#40;AccessToSQL&#41; ](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md) 。  
   
-示例控制台脚本文件的信息，请参阅[SSMA 控制台使用示例控制台脚本文件执行&#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)  
+有关示例控制台脚本文件的信息，请参阅[使用示例控制台脚本文件执行 SSMA 控制台&#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)  
   
-下一步取决于您的项目要求：  
+下一步取决于你的项目要求：  
   
--   用于指定的密码或导出 / 导入密码，请参阅[管理密码&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
+-   用于指定密码或导出 / 导入密码，请参阅[管理密码&#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)。  
   
--   有关生成报表，请参阅[生成报表&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
+-   用于生成报告，请参阅[生成报表&#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)。  
   
 -   有关故障排除控制台中的问题，请参阅[故障排除&#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)。  
   

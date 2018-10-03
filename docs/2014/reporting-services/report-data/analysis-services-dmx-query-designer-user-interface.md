@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - DMX [Analysis Services], user interface
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d8b4d662cb54e827f8810695c4945f2eee25d327
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9da8e25466da90ad4d76ae787695eec66b2f4f8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136653"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源生成数据挖掘表达式 (DMX) 查询和多维表达式 (MDX) 查询。 该主题介绍了 DMX 查询设计器。 有关 MDX 查询设计器的详细信息，请参阅[Analysis Services MDX 查询设计器用户界面](analysis-services-mdx-query-designer-user-interface.md)。  
@@ -36,7 +33,7 @@ ms.locfileid: "37286703"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>图形 DMX 查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 DMX 查询的按钮。 下表介绍了这些按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|对此数据源类型禁用。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -55,7 +52,7 @@ ms.locfileid: "37286703"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“查询设计器”窗格|使用 **“挖掘模型”** 和 **“选择输入表”** 对话框创建 DMX 查询。|  
 |“网格”窗格|使用“源”下拉列表为网格中的每行选择一个函数或表达式，并选择要用于 DMX 查询的字段、组以及条件或参数。 若要查看根据您的选择生成的 DMX 查询文本，请单击工具栏中的 **“设计模式”** 按钮。|  
@@ -71,7 +68,7 @@ ms.locfileid: "37286703"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“查询设计器”窗格|使用 **“挖掘模型”** 和 **“选择输入表”** 对话框创建 DMX 查询。|  
 |“查询”窗格|直接在窗格中查看或编辑 DMX 查询文本。 如果重新回到 **“设计”** 模式，对 DMX 查询文本所做的更改将不再存在。|  

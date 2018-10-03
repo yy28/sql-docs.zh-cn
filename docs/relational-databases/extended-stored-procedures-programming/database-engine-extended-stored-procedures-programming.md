@@ -1,14 +1,11 @@
 ---
-title: 编程扩展存储的过程 |Microsoft 文档
+title: 编写扩展存储的过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - gateway applications [SQL Server]
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - Open Data Services [SQL Server]
 - ODS [SQL Server]
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c80abd97dc5a371f6df37c3df1a474998b080493
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688565"
 ---
-# <a name="database-engine-extended-stored-procedures---programming"></a>数据库引擎扩展存储的过程的编程
+# <a name="database-engine-extended-stored-procedures---programming"></a>数据库引擎扩展存储过程 - 编程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -43,7 +39,7 @@ ms.locfileid: "32935432"
 ## <a name="extended-stored-procedures-vs-clr-integration"></a>扩展存储过程与CLR 集成的对比  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，当数据库应用程序开发人员要编写那些很难表达或不可能用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编写的服务器端逻辑时，扩展存储过程 (XP) 为其提供了唯一的机制。 CLR 集成为编写这样的存储过程提供了更可靠的替代选择。 此外，通过使用 CLR 集成，过去经常以存储过程的形式编写的逻辑现在通常可以更好地表达为表值函数，这样就可以将 SELECT 语句嵌入 FROM 子句中从而使用该 SELECT 语句对该函数所构造的结果进行查询。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [公共语言运行时&#40;CLR&#41;集成概述](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)   
  [CLR 表值函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)  
   

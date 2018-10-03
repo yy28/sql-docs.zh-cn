@@ -1,14 +1,11 @@
 ---
-title: sp_helpdevice (TRANSACT-SQL) |Microsoft 文档
+title: sp_helpdevice (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdevice
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdevice
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 041cd12fe621a8f74b60b81d7a8964752caa4fde
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596795"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +57,15 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**physical_name**|nvarchar(260)|物理文件名。|  
 |**description**|**nvarchar(255)**|设备的说明。|  
 |**status**|**int**|对应于状态说明中的数字**说明**列。|  
-|**cntrltype**|**int**|设备的控制器类型：<br /><br /> 2 = 磁盘设备<br /><br /> 5 = 磁带设备|  
+|**cntrltype**|**smallint**|设备的控制器类型：<br /><br /> 2 = 磁盘设备<br /><br /> 5 = 磁带设备|  
 |size|**int**|设备大小（以 2 KB 页为单位）。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果*名称*指定，则**sp_helpdevice**显示有关指定的转储设备的信息。 如果*名称*未指定，则**sp_helpdevice**显示有关中的所有转储设备的信息**sys.backup_devices**目录视图。  
   
  转储设备通过使用添加到系统**sp_addumpdevice**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  

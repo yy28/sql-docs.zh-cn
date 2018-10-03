@@ -1,13 +1,11 @@
 ---
-title: 有关记录集持久性的详细信息 |Microsoft 文档
+title: 有关记录集暂留的详细信息 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846855"
 ---
-# <a name="more-about-recordset-persistence"></a>有关记录集持久性的详细信息
-ADO 记录集对象支持存储内容**记录集**通过使用文件中的对象及其[保存](../../../ado/reference/ado-api/save-method.md)方法。 永久存储的文件可能存在位于本地驱动器中，服务器，或在网站上的 URL 为站点。 更高版本，可以还原该文件使用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**对象或[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+# <a name="more-about-recordset-persistence"></a>更多有关记录集暂留的信息
+ADO 记录集对象支持存储的内容**记录集**通过使用文件中的对象及其[保存](../../../ado/reference/ado-api/save-method.md)方法。 永久存储的文件可能位于本地驱动器中，服务器或 Web 上的 URL 作为站点。 更高版本，可以使用还原文件[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**记录集**对象或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
- 此外， [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法将**记录集**到窗体中的列和行分隔与你指定的字符的对象。  
+ 此外， [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法将**记录集**向窗体中的列和行分隔与你指定的字符的对象。  
   
- 若要保留**记录集**，首先将其转换为可以存储在文件中的窗体。 **记录集**对象可以存储在专用的高级数据表图 (ADTG) 格式或打开的可扩展标记语言 (XML) 格式。 在下一部分中演示了 ADTG 示例。 有关 XML 持久性的详细信息，请参阅[保留的记录，采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
+ 若要持久保存**记录集**，首先将其转换为可以存储在文件中的窗体。 **记录集**对象可以存储在专用的高级数据 TableGram (ADTG) 格式或开放的可扩展标记语言 (XML) 格式。 下一节中显示了 ADTG 示例。 有关 XML 暂留的详细信息，请参阅[以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
   
- 保存到持久化文件中的任何挂起的更改。 这样，您可以发出查询返回**记录集**对象、 编辑**记录集**、 将它和挂起的更改保存、 更高版本还原**记录集**，，然后更新数据源与保存挂起的更改。  
+ 将任何挂起的更改保存在持久化文件。 执行此操作，可发出一个查询，返回**记录集**对象、 编辑**记录集**，将保存它，并挂起的更改，更高版本将还原**记录集**，，然后更新数据源使用已保存挂起的更改。  
   
- 有关永久存储信息**流**对象，请参阅[流和持久性](../../../ado/guide/data/streams-and-persistence.md)。  
+ 有关持久地存储信息**Stream**对象，请参阅[流和暂留](../../../ado/guide/data/streams-and-persistence.md)。  
   
- 有关的示例**记录集**持久性，请参阅 XML 记录集持久化方案。  
+ 有关的示例**记录集**暂留，请参阅 XML 记录集暂留方案。  
   
 ## <a name="example"></a>示例  
   
@@ -55,7 +52,7 @@ Dim rs as New ADODB.Recordset
 rs.Open "c:\yourFile.adtg", "Provider=MSPersist",,,adCmdFile  
 ```  
   
- （可选） 如果**记录集**未没有活动连接，你可以接受所有默认值，下面的代码：  
+ （可选） 如果**记录集**does 不具有的活动连接，您可以接受所有默认设置，以下代码：  
   
 ```  
 Dim rs as New ADODB.Recordset  
@@ -71,8 +68,8 @@ conn.Open "Provider=MSPersist"
 Set rs = conn.execute("c:\yourFile.adtg")  
 ```  
   
-### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>使用 rds.打开持久化的文件DataControl:  
- 在这种情况下，**服务器**未设置属性。  
+### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>使用 rds。 打开持久化的文件数据控件：  
+ 在这种情况下， **Server**未设置属性。  
   
 ```  
 Dim dc as New RDS.DataControl  

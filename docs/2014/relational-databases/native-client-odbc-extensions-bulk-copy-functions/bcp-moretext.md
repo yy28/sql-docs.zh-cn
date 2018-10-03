@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_moretext
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30ddae53cc452796de0617bb5718d04156dcda41
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137497"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   将部分较长的可变长度数据类型值发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -61,7 +58,7 @@ pData
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以结合使用此函数[bcp_bind](bcp-bind.md)并[bcp_sendrow](bcp-sendrow.md)长时间，复制到 SQL Server 中的较小的区块数的长度可变的数据值。 **bcp_moretext**可用于具有以下 SQL Server 数据类型的列： `text`， `ntext`， `image`， `varchar(max)`， `nvarchar(max)`， `varbinary(max)`，用户定义类型 (UDT) 和 XML。 **bcp_moretext**不支持数据转换，则提供的数据必须与目标列的数据类型匹配。  
   
  如果**bcp_bind**调用的非 null *pData*的数据类型的支持的参数**bcp_moretext**，`bcp_sendrow`发送整个数据值，而不考虑长度。 如果为，但是， **bcp_bind**具有 NULL *pData*支持的数据类型的参数**bcp_moretext**可用于从成功返回后立即复制数据`bcp_sendrow` ，该值指示已处理的数据存在任何绑定的列。  

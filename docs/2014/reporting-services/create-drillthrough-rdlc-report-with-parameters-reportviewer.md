@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394225"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106877"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>使用 ReportViewer 创建带有参数的钻取 (RDLC) 报表（SSRS 教程）
-  [钻取](http://technet.microsoft.com/library/ff519554.aspx)报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将引导您完成创建带有参数和一个查询，钻取报表中的下一课[本地模式报告](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)。  
+  [钻取](http://technet.microsoft.com/library/ff519554.aspx)报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)中使用参数和查询创建钻取报表的课程。  
   
 ## <a name="requirements"></a>要求  
  若要使用本演练中，您必须有权**AdventureWorks2008**示例数据库。 在本演练中使用的查询也适用于**AdventureWorks2012**数据库。 有关如何获取详细信息**AdventureWorks2008**示例数据库，请参阅[演练： 安装 AdventureWorks 数据库](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)for Microsoft Visual Studio 2010。  

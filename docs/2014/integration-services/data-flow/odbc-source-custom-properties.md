@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 876ace661fe3eeacc5f78f4d3ca0e0ac2165b4d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31fc6b9f6ab3669d177200187761b0b2d3c84ff2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116967"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   下表介绍 ODBC 源的自定义属性。 所有属性都可以从 SSIS 属性表达式设置。  

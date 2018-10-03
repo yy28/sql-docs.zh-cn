@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.credentials
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1931d0cb4a11f0fd1a7ddfb1a83a2bcebb0b94d9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ab6e80c80e2fab306b1b890f62546de07d6be108
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802615"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +43,7 @@ ms.locfileid: "43070190"
 |target_type|**nvarchar(100)**|凭据类型。 对于传统凭据，返回 NULL；对于映射到加密提供程序的凭据，返回 CRYPTOGRAPHIC PROVIDER。 有关外部密钥管理提供程序的详细信息，请参阅[可扩展密钥管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
 |target_id|**int**|该凭据映射到的对象的 ID。 对于传统凭据，返回 0；对于映射到加密提供程序的凭据，返回非 0 值。 有关外部密钥管理提供程序的详细信息，请参阅[可扩展密钥管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 有关数据库级别的凭据，请参阅[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)。
   
 ## <a name="permissions"></a>Permissions  

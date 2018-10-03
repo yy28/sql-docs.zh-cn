@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3e7b477c8f972f277db921c7adb6f9511efb065c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59be912e2be44fca6e3fd49472f0884f9dfd0782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275203"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126577"
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
   EntityContainer 元素是一种复杂类型，它基于 CSDL 类型 EntityContainer，用于定义单个数据模型中的实体集合。 在商业智能应用程序中，EntityContainer 表示的数据模型可能包含多个其列按关系相互关联的表以及计算、度量值和 KPI。 它在概念上类似于数据库或数据源。  
@@ -34,13 +31,13 @@ ms.locfileid: "37275203"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|“属性”|是|数据模型的名称。|  
-|Caption|“否”|数据库或数据模型的说明。|  
-|Culture|是|一个字符串，该字符串包含请求的 LCID。|  
-|CompareOptions|是|模型的特定于语言的排序和字符串比较选项。|  
-|DirectQueryMode|“否”|指示当模型正在使用 DirectQuery 模式时的查询模式的枚举。|  
-|EntitySet 元素|是|[EntitySet 元素&#40;CSDLBI&#41;](entityset-element-csdlbi.md)|  
-|AssociationSet 元素|“否”|[AssociationSet 元素&#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
+|“属性”|用户帐户控制|数据模型的名称。|  
+|Caption|否|数据库或数据模型的说明。|  
+|Culture|用户帐户控制|一个字符串，该字符串包含请求的 LCID。|  
+|CompareOptions|用户帐户控制|模型的特定于语言的排序和字符串比较选项。|  
+|DirectQueryMode|否|指示当模型正在使用 DirectQuery 模式时的查询模式的枚举。|  
+|EntitySet 元素|用户帐户控制|[EntitySet 元素&#40;CSDLBI&#41;](entityset-element-csdlbi.md)|  
+|AssociationSet 元素|否|[AssociationSet 元素&#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 元素  
  CompareOptions 属性定义应用于数据模型的排序规则属性。 CompareOptions 定义的属性派生自在模型设计时在 Analysis Services 数据库中设置的排序顺序、区分假名和区分大小写的设置。 下表描述了作为 CompareOptions 属性的一部分包含的值。  

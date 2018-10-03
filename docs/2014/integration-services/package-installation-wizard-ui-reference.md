@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 637ed65f38b53cf39630d4fb3ba04ab9f7a2158d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129627"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>包安装向导 UI 参考
   可以使用 **“包安装向导”** 部署 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目（包括包、所包含的杂项文件以及所有包的依赖关系）。  
@@ -56,7 +53,7 @@ ms.locfileid: "37316807"
 ## <a name="configure-packages-page"></a>“配置包”页  
  可以使用 **“配置包”** 页编辑包配置。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **配置文件**  
  通过从列表中选择文件，可以编辑配置文件的内容。  
   
@@ -92,7 +89,7 @@ ms.locfileid: "37316807"
 ## <a name="deploy-ssis-packages-page"></a>“部署 SSIS 包”页  
  可以使用 **“部署 SSIS 包”** 页指定 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其依赖关系的安装位置。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **部署到文件系统**  
  将包及其依赖关系部署到文件系统内指定的文件夹中。  
   
@@ -117,7 +114,7 @@ ms.locfileid: "37316807"
 ## <a name="select-installation-folder-page"></a>“选择安装文件夹”页  
  可以使用 **“选择安装文件夹”** 页，指定在文件系统中安装包及其依赖关系的文件夹。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **文件夹**  
  指定包及其依赖关系要复制到的路径和文件夹。  
   
@@ -133,7 +130,7 @@ ms.locfileid: "37316807"
 ## <a name="specify-target-sql-server-page"></a>“指定目标 SQL Server”页  
  可以使用 **“指定目标 SQL Server”** 页，指定将包部署到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的选项。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务器名称**  
  指定要部署包的服务器的名称。  
   

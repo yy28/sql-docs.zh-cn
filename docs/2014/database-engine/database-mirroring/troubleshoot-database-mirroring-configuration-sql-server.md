@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3281a4112f585936f10b5c626a4b22f5fd359092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293157"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085507"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>数据库镜像配置故障排除 (SQL Server)
   本主题提供有关信息以帮助您解决设置数据库镜像会话时遇到的问题。  
@@ -31,7 +28,7 @@ ms.locfileid: "37293157"
 > [!NOTE]  
 >  请确保满足所有 [数据库镜像的先决条件](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)。  
   
-|问题|“摘要”|  
+|问题|总结|  
 |-----------|-------------|  
 |错误消息 1418|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 消息指示无法到达服务器网络地址或该地址不存在，同时建议您确认网络地址名称并重新发出命令。 有关详细信息，请参阅 [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) 主题。|  
 |[帐户](#Accounts)|介绍了正确配置运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所用的帐户的相关要求。|  

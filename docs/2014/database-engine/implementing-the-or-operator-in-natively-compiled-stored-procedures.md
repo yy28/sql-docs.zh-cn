@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9470064571a8e9ab7d63c7d07456552b8cfb4d88
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9a7125a7b90a8b47c3c9a71a05dd724b452170a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110417"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在本机编译存储过程中实现 OR 运算符
   本机编译存储过程内的查询谓词中不支持 OR 运算符。 本机编译存储过程中的查询谓词也不支持 NOT 运算符，因而无法通过单独使用等同的逻辑运算符来模拟 OR 运算符的效果。 但是，借助内存优化表变量，也许能够模拟 OR 运算符的效果。  

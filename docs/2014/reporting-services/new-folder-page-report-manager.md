@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083399"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053587"
 ---
 # <a name="new-folder-page-report-manager"></a>“新建文件夹”页（报表管理器）
   使用“新建文件夹”页可以在报表服务器文件夹层次结构中创建新文件夹。 您创建的文件夹是存储在报表服务器数据库中的虚拟文件夹。 未在计算机的文件系统中创建该文件夹。  

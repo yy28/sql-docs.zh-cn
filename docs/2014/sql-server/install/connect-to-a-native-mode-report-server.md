@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
 helpviewer_keywords:
 - report servers [Reporting Services], configuring
 ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27b2d2d93d83057fd2de408b4a0cb61dd1cd0771
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb8a192a2d33e2068be75f0acd19fb76166f0705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078427"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>连接到本机模式的报表服务器
   使用此对话框连接到本地或远程[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器实例。 不能使用此工具连接到早期版本的[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]报表服务器。 一次仅能连接到一个实例。  
@@ -42,7 +39,7 @@ ms.locfileid: "37321777"
   
  若要打开此对话框中，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 启动此工具后，该对话框会立即显示出来。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器名称**  
  在其上输入的计算机的网络名称[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装。 只键入计算机名称；不包括前缀或斜杠。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087487"
 ---
 # <a name="clustering-model-query-examples"></a>聚类分析模型查询示例
   依据数据挖掘模型创建查询时，可以检索有关模型的元数据，或者创建内容查询以提供有关分析时发现的模式的详细信息。 或者，可以创建预测查询，以使用模型中的模式来对新数据进行预测。 每一类查询都提供不同的信息。 例如，内容查询可能提供有关发现的分类的更多详细信息，而预测查询可能指出新数据点最有可能属于哪个分类。  
@@ -167,13 +164,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|@shouldalert|0.109354156|  
+|001|1|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Missing|0|  
 |002|0|0.576980023|  
-|002|@shouldalert|0.406623939|  
+|002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -279,13 +276,13 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|表达式|  
 |----------------|----------------|  
-|@shouldalert|0.592924735740338|  
+|1|0.592924735740338|  
   
  用法设置为 `PredictOnly` 且模型重新处理时的结果示例：  
   
 |Bike Buyer|表达式|  
 |----------------|----------------|  
-|@shouldalert|0.55843544003102|  
+|1|0.55843544003102|  
   
  在本示例中，模型中的区别不是很明显。 但是，有时可能必须检测出值的实际分布与模型所预测的情况之间的区别。 在这种情况下 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函数很有用，因为它可指出事例适用于模型的可能性。  
   
@@ -360,7 +357,7 @@ NATURAL PREDICTION JOIN
 |分类 7|0.979081275926724|0.0209187240732763|  
 |分类 1|0.999169044818624|0.000830955181376364|  
 |分类 9|0.999831227795894|0.000168772204105754|  
-|分类 8|@shouldalert|0|  
+|分类 8|1|0|  
   
  默认情况下，结果按概率进行排序。 结果指出，尽管分类 2 的概率非常低，分类 2 仍然最适合于新数据点。  
   

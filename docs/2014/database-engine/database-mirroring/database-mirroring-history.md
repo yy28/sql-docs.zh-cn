@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ddadfe9f4b2a940ff9ab674c96f9c041debf15a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086187"
 ---
 # <a name="database-mirroring-history"></a>数据库镜像历史记录
   使用该对话框可以查看位于指定服务器实例中的镜像数据库的镜像状态历史记录。  
@@ -29,7 +26,7 @@ ms.locfileid: "37243257"
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器实例**  
  从中报告历史记录的服务器实例的名称。  
   

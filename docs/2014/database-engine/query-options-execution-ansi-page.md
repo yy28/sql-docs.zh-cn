@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088607"
 ---
 # <a name="query-options-execution-ansi-page"></a>“查询选项”中的“执行”（ANSI 页）
   使用此页可指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 ISO (ANSI) 标准中指定的全部或部分设置运行查询。  
@@ -57,7 +54,7 @@ ms.locfileid: "37252649"
  **SET ANSI_NULLS**  
  指定在与 Null 值一起使用等于 (`=`) 和不等于 (`<>`) 比较运算符时采用符合 ISO 标准的行为。 当选中 **SET ANSI_NULLS** 时，所有与 Null 值进行比较求得的值均为 UNKNOWN，这是符合 ISO 标准的行为。 如果未选中 **SET ANSI_NULLS** ，则在数据值为 NULL 时，所有数据与空值的比较求得的值为 TRUE。 默认情况下选择此选项。  
   
- **重置为默认值**  
+ 重置为默认值  
  将此页上的所有值重置为原始默认值。  
   
   

@@ -1,31 +1,28 @@
 ---
-title: 返回一个记录集的 JScript 代码示例 |Microsoft 文档
+title: 若要返回记录集的 JScript 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Recordset [ADO]
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59cfb19d1d3ee3e8b603cbb897a8e55c2b74128
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2dc86d8f454b67c00073508a4ed6d7e8fc0d033e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707175"
 ---
-# <a name="jscript-code-example-to-return-a-recordset"></a>返回一个记录集的 JScript 代码示例
+# <a name="jscript-code-example-to-return-a-recordset"></a>用于返回记录集的 JScript 代码示例
 ## <a name="jscript-code-rsjs"></a>JScript 代码 (rs.js)  
   
 ```  
@@ -85,7 +82,7 @@ function alert(str)
   
 #### <a name="try-it"></a>试试看 ！  
   
-1.  将上面的代码保存到文本文件中。 将文件保存为 rs.js。  
+1.  将上面的代码保存到文本文件。 将文件另存 rs.js。  
   
 2.  打开命令提示符并键入 cd 转到 JScript 文件 (rs.js) 保存的目录。  
   

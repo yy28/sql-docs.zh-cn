@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS [Reporting Services]
 ms.assetid: e794185a-0a77-480a-9aea-d09f8760a6b8
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 689ca199202b594376a4d0785992123f6016e384
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae12d01dccc3999c90ceffb409767b67e992f660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083887"
 ---
 # <a name="iis-backward-compatibility-components-were-not-detected-upgrade-advisor"></a>未检测到 IIS 向后兼容组件（升级顾问）
   升级顾问未检测到用于为安装程序提供所需信息以创建新 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 的 IIS 组件和设置。  

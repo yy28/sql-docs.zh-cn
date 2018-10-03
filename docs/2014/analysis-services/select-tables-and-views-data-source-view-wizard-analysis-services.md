@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0ec6553114e5a6a5a0700a852c56d4be51eba39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104007"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>选择表和视图（数据源视图向导）(Analysis Services)
   可以使用 **“选择表和视图”** 页，从要包含在数据源视图中的数据源选择表或视图。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用对象**  
  在数据源架构中列出表和视图。 如果列出多个架构，则每个对象都以架构名称为前缀。 如果只列出一个架构，那么对象名称就不是以架构名称为前缀。  
   

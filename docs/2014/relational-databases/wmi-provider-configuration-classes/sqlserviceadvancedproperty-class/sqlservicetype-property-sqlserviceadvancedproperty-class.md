@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SqlServiceType Property (SqlServiceAdvancedProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SqlServiceType property
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: affa3f0f79e0bba84e3400f019ad91b74faae8aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f589441f316a4768e8728069ebf41248836540e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121467"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>SqlServiceType 方法（SqlServiceAdvancedProperty 类）
   获取与高级属性关联的托管服务的类型。  
@@ -51,7 +48,7 @@ NumValue
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务类型的 uint32 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回值可以是下列值之一：  
   
 |类型|定义|  

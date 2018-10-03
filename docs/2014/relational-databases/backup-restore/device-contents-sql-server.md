@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.bnrdevicecontents.f1
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4d128ae77c4a8a80817bc3e19a715f4c31992d55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186580"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101687"
 ---
 # <a name="device-contents-sql-server"></a>设备内容 (SQL Server)
   使用此对话框可以查看备份信息。 此信息描述设备、介质、介质集以及备份集。  
@@ -31,7 +28,7 @@ ms.locfileid: "37186580"
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **介质**  
  存储备份信息的磁盘或磁带集。  
   
@@ -56,7 +53,7 @@ ms.locfileid: "37186580"
  **备份集**  
  显示介质上包含的备份集的有关信息。 备份集是成功备份操作的结果，其内容分布于相应的一组备份设备上的介质中。  
   
-|标题|值|  
+|Header|值|  
 |------------|------------|  
 |**名称**|备份集的名称。|  
 |**类型**|执行的备份类型：完整备份、差异备份或事务日志备份。|  

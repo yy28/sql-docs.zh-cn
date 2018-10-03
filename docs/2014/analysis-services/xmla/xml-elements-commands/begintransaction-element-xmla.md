@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - BeginTransaction Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - BeginTransaction command
 ms.assetid: fca122fc-b57c-4ba6-849b-ca8c93cf64e9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1685c1c61c248cf37672cab17ccf3144e7d5e7ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e8b1954836a7c5b079d629602d03ba4b45d8620
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083463"
 ---
 # <a name="begintransaction-element-xmla"></a>BeginTransaction 元素 (XMLA)
   实例的当前会话上开始一个事务[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -50,8 +47,8 @@ ms.locfileid: "37253039"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37253039"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `BeginTransaction` 命令在当前会话上开始一个活动事务。 如果存在活动事务，则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例会递增当前会话的事务引用计数。 如果不存在活动事务，该实例将开始新的事务，并将当前会话的引用计数设置为 1。 如果使用 `BeginTransaction` 命令显式指定一个活动事务，则会在显式指定的事务内执行所有后续命令。  
   
  如果当前会话结束，并且事务的引用计数大于零，则回滚所有的活动事务。  

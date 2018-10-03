@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b868179079f74799e949e98346b17817a370a15
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 71cd369568d8fc66764345038568818a551f9fb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414776"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093837"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持两种用于使用者指定表值参数行的数据模型： 推送模型和请求模型。 一个示例，演示请求模型可用，请参阅[SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持两种用于使用者指定表值参数行的数据模型： 推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
   
 > [!NOTE]  
 >  表值参数列要么必须在所有行中具有非默认值，要么必须在所有行中具有默认值。 不能在某些行中具有默认值，而在其他行中不具有默认值。 因此，在表值参数绑定中，表值参数行集列数据仅允许状态值 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 将导致失败，而绑定的状态值将设置为 DBSTATUS_E_BADSTATUS。  
   
 ## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>推送模型（在内存中加载所有表值参数数据）  
- 推送模型是类似于使用参数集 （即，icommand:: Execute 中的 DBPARAMS 参数）。 如果使用表值参数行集对象时不进行 IRowset 接口的自定义实现，则只能使用推送模型。 当表值参数行集中的行数较少且预计不会给应用程序带来过量内存压力时，建议使用推送模型。 这比请求模型更简单，因为它向使用者应用程序要求的功能不会超过典型 OLE DB 应用程序中当前常用的功能。  
+ 推送模型类似于使用参数集（也即，ICommand::Execute 中的 DBPARAMS 参数）。 仅当在未对 IRowset 接口执行自定义实现的情况下使用表值参数行集对象时，才使用推送模型。 当表值参数行集中的行数较少且预计不会给应用程序带来过量内存压力时，建议使用推送模型。 这比请求模型更简单，因为它向使用者应用程序要求的功能不会超过典型 OLE DB 应用程序中当前常用的功能。  
   
  使用者应在执行命令之前向访问接口提供所有表值参数数据。 为提供数据，使用者为每个表值参数填充一个表值参数行集对象。 表值参数行集对象显示行集 Insert、Set 和 Delete 操作，使用者将使用这些操作来操作表值参数数据。 访问接口在执行时将从该表值参数行集对象中提取数据。  
   
@@ -64,16 +61,16 @@ ms.locfileid: "37414776"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将一次从使用者行集对象中读取一行或多行，以便在表值参数中支持流行为。 例如，用户可能在磁盘上（而非内存中）具有表值参数行集数据，当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口要求时，可能实现从磁盘读取数据的功能。  
   
- 使用者将对其数据格式传送[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider iaccessor:: Createaccessor 使用表值参数行集对象。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混淆，应该有表值参数行集列和绑定之间的一一对应关系。 与同一列的重复绑定将导致错误。 此外，每个访问器都必须具有*iOrdinal* DBBindings 的序列中的成员。 为每个行，访问器的数字将有任意多个调用 irowset:: Getdata 和调用的顺序将基于的顺序上*iOrdinal*从低到高值的值。  
+ 使用者将对其数据格式传送[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB Provider iaccessor:: Createaccessor 使用表值参数行集对象。 当从使用者缓冲区读取数据时，访问接口将验证所有可写入和非默认列是否至少可用于一个取值函数句柄，并使用相应的句柄来读取列数据。 为了避免混乱，在表值参数行集列与绑定之间应具有一对一的对应关系。 与同一列的重复绑定将导致错误。 此外，每个访问器都必须具有*iOrdinal* DBBindings 的序列中的成员。 对于 IRowset::GetData 的调用数将与每行的取值函数数量相同，调用的顺序将基于 iOrdinal 值的顺序（从低值到高值）。  
   
- 访问接口应实现由表值参数行集对象显示的大多数接口。 使用者将实现具有最少的接口 (IRowset) 的行集对象。 由于盲聚合 (blind aggregation)，因此，表值参数行集对象将实现剩下的所必需的行集对象接口。  
+ 访问接口应实现由表值参数行集对象显示的大多数接口。 使用者将使用最少的接口实现行集对象 (IRowset)。 由于盲聚合 (blind aggregation)，因此，表值参数行集对象将实现剩下的所必需的行集对象接口。  
   
  对于任何其他行集对象（如对于任何 OLE DB 访问接口获得的行集对象），使用者提供的行集必须按照 OLE DB 规范要求实现所有必需的行集对象接口。  
   
  在执行时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口将回调行集对象以提取行并读取列数据。  
   
 ## <a name="see-also"></a>请参阅  
- [表值参数&#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
- [使用表值参数&#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [表值参数 (OLE DB)](table-valued-parameters-ole-db.md)   
+ [使用表值参数 (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

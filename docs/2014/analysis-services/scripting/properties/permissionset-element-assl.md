@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PermissionSet Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PermissionSet element
 ms.assetid: da5a9175-48e4-4b5e-a780-3e0077939974
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 471ef43aea9fadcca7ab8a4a36870a3bdddee22f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 590dbc9ae62340fd3d4cf08d06f8a593bcf520f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049299"
 ---
 # <a name="permissionset-element-assl"></a>PermissionSet 元素 (ASSL)
   标识与关联的权限集[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 程序集。  
@@ -59,9 +56,9 @@ ms.locfileid: "37263463"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ClrAssembly](../data-type/assembly-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  

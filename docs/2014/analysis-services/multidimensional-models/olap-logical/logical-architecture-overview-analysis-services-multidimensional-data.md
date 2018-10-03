@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525e3d131e5bb2e53d35faa73f1c4c579c59cbd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091447"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
   Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**指代作为 PowerPivot for SharePoint，用于加载和查询工作簿中的 Excel 或 PowerPivot 数据模型已安装的 Analysis Services 实例。  
@@ -115,12 +112,12 @@ ms.locfileid: "37284113"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|包|上一次|  
-|3516987|@shouldalert|6|@shouldalert|15|99/01/10|  
-|3554790|@shouldalert|6|@shouldalert|40|99/01/19|  
-|3572673|@shouldalert|6|@shouldalert|34|99/01/27|  
-|3600974|@shouldalert|6|@shouldalert|45|99/02/02|  
-|3645541|@shouldalert|6|@shouldalert|20|99/02/09|  
-|3674906|@shouldalert|6|@shouldalert|36|99/02/17|  
+|3516987|1|6|1|15|99/01/10|  
+|3554790|1|6|1|40|99/01/19|  
+|3572673|1|6|1|34|99/01/27|  
+|3600974|1|6|1|45|99/02/02|  
+|3645541|1|6|1|20|99/02/09|  
+|3674906|1|6|1|36|99/02/17|  
   
  在上表中，每个行都有相同的值**RouteKey**， **SourceKey**，并**TimeKey** ，该值指示这些行参与到同一多维数据集单元格的列。  
   

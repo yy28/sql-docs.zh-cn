@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,16 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098437"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>页眉和页脚（报表生成器和 SSRS）
   报表可以包含页眉和页脚，它们分别位于每一页的顶部和底部。 页眉和页脚可以包含静态文本、图像、线条、矩形、边框、背景色、背景图像和表达式。 表达式包含只具有一个数据集的报表的数据集字段引用，以及作为作用域包括的数据集的聚合函数调用。  
@@ -61,9 +58,9 @@ ms.locfileid: "37328886"
   
 |提供支持的表达式|ReportItems 聚合|数据集聚合（作用域必须是数据集名称）|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|表体中的文本框|是|“否”|  
-|&PageNumber|是|“否”|  
-|&TotalPages|是|“否”|  
+|表体中的文本框|用户帐户控制|否|  
+|&PageNumber|用户帐户控制|否|  
+|&TotalPages|用户帐户控制|否|  
 |聚合函数|是。 例如，<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|是。 例如，<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |页面上各个项的字段集合|间接支持。 例如，<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|是。 例如，<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |数据绑定图像|间接支持。 例如： `=ReportItems!TXT_Photo.Value`|是。 例如，<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

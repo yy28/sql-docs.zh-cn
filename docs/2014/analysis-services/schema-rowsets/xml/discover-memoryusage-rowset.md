@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b620e82d60741758890d37e3434ce5b611515f99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131467"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 行集
   返回由服务器分配的各种对象的 DISCOVER_MEMORYUSAGE 统计信息。  
@@ -39,15 +36,15 @@ ms.locfileid: "37304577"
 |-----------------|--------------------|-----------------|-----------------|  
 |`MemoryID`|`DBTYPE_UI8`||标识内存的数字。|  
 |`MemoryName`|`DBTYPE_WSTR`||拥有内存的对象的名称。|  
-|`SPID`|`DBTYPE_UI4`|是|分配内存的会话。 零指示内存未与特定会话关联。|  
+|`SPID`|`DBTYPE_UI4`|用户帐户控制|分配内存的会话。 零指示内存未与特定会话关联。|  
 |`CreationTime`|`DBTYPE_DBTIMESTAMP`||输入“创建对象的时间”或“分配内存的时间”。|  
-|`BaseObjectType`|`DBTYPE_UI4`|是|这是描述对象类型的数字。 带相同的 BaseObjectType 的对象具有同一类型。|  
-|`MemoryUsed`|`DBTYPE_UI8`|是|这是对象的当前大小，它可能小于分配给对象以供其使用的内存。|  
+|`BaseObjectType`|`DBTYPE_UI4`|用户帐户控制|这是描述对象类型的数字。 带相同的 BaseObjectType 的对象具有同一类型。|  
+|`MemoryUsed`|`DBTYPE_UI8`|用户帐户控制|这是对象的当前大小，它可能小于分配给对象以供其使用的内存。|  
 |`MemoryAllocated`|`DBTYPE_UI8`||分配给对象以供其使用的内存量，它可能大于对象实际使用的内存量。|  
 |`MemoryAllocBase`|`DBTYPE_UI8`||最初分配给对象的字节数（不包括针对对象内容的额外分配）。|  
 |`MemoryAllocFromAlloc`|`DBTYPE_UI8`||为此对象的内容分配的内存。|  
 |`ElementCount`|`DBTYPE_UI4`||对于容器对象，这是该对象包含的对象的数目。|  
-|`Shrinkable`|`DBTYPE_BOOL`|是|一个布尔值，指示内存是否可收缩（可能因内存压力被逐出）。 如果为 true，则表示内存可收缩；如果为 false，则表示内存不可收缩。|  
+|`Shrinkable`|`DBTYPE_BOOL`|用户帐户控制|一个布尔值，指示内存是否可收缩（可能因内存压力被逐出）。 如果为 true，则表示内存可收缩；如果为 false，则表示内存不可收缩。|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||用于标识此对象的完整路径的字符串。|  
 |`ObjectID`|`DBTYPE_WSTR`||标识对象的字符串。 此对象的完整路径表示为字符串: (ObjectParentPath + '。 + ObjectId)。|  
   

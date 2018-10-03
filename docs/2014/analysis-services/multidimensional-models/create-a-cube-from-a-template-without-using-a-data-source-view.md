@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19006a02476591ef4f5e01d4a58f0f2e2894b0b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104887"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>从模板创建多维数据集而无需使用数据源视图
   在多维数据集向导的第一页上选择 **“不使用数据源生成多维数据集”** ，可以在不使用数据源视图的情况下创建多维数据集。 以后可以使用架构生成向导，根据多维数据集的结构以及可能有的其他 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象来生成数据源视图的关系架构。 有关生成架构的详细信息，请参阅[架构生成向导 (Analysis Services)](schema-generation-wizard-analysis-services.md)。  
   
 ## <a name="selecting-the-build-method"></a>选择生成方法  
- 在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 实例时都提供 SQL Server 登录名。 如果您不选择使用模板，则必须手动设置选项。  
+ 在多维数据集向导的 **“选择生成方法”** 页上，单击 **“不使用数据源生成多维数据集”**。 若要使用现有多维数据集模板生成多维数据集，请选中 **“使用多维数据集模板”** 复选框。 . 如果您不选择使用模板，则必须手动设置选项。  
   
  多维数据集模板包含预定义的度量值、度量值组、维度、层次结构和属性。 如果选择了某个模板，向导将基于模板中的对象定义来设置后续页面中的选项。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 预装了多个用于标准多维数据集的模板。 服务器管理员还可以添加专门为您的组织数据设计的多维数据集或维度模板。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Groups Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Groups element
 ms.assetid: 62196435-83a8-4a0a-8be1-7dfc986dc6c5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c79062d6ef250c6c5d90d5a4ed147a309556d03a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abad99209bff641ccd1bbd3b52c29f70eab82b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167538"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090837"
 ---
 # <a name="groups-element-assl"></a>Groups 元素 (ASSL)
   包含绑定到某个属性的成员组的集合。  
@@ -52,8 +49,8 @@ ms.locfileid: "37167538"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +60,7 @@ ms.locfileid: "37167538"
 |父元素|[绑定](../data-type/binding-data-type-assl.md)类型的[UserDefinedGroupBinding](../data-type/userdefinedgroupbinding-data-type-assl.md)|  
 |子元素|[分组](../objects/group-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.GroupCollection>。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5ae3390405bc7a722934f3b3fb3652825b2ea03
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125447"
 ---
 # <a name="file-element-xmla"></a>File 元素 (XMLA)
   标识的文件将由父[备份](../xml-elements-commands/backup-element-xmla.md)或[还原](../xml-elements-commands/restore-element-xmla.md)命令，或通过父[位置](location-element-xmla.md)元素。  
@@ -53,7 +50,7 @@ ms.locfileid: "37319217"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37319217"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[备份](../xml-elements-commands/backup-element-xmla.md)，[位置](location-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `File` 元素包含一个 UNC 文件名，父元素确定 `File` 元素的用途。  
   
  对于 `Backup` 命令，`File` 元素确定 `Backup` 命令创建的备份文件的名称。 如果路径未指定文件名称的一部分，在指定的路径`BackupDir`的实例的配置属性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用。 如果指定的文件存在，除非将父 `AllowOverwrite` 命令的 `Backup` 元素设置为 `True`，否则将发生错误。  

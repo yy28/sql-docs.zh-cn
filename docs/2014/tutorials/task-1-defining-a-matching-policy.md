@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58507594fa2872bc5433b63e0f932d2914291a31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a94030fdf0f4ef42e0253022913f06f109e4dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107437"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>任务 1：定义匹配策略
   在本任务中，您将创建含有一个规则的匹配策略。 该规则具有一个先决条件：**供应商 ID**，这意味着在使用在规则中的其他域之前 Supplier Id 必须匹配。 该规则使用其他两个域： **Supplier Name**与**相似性**值设置为**70%** 并**联系人电子邮件**与**相似性**值设置为**30%**。  

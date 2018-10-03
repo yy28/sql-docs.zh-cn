@@ -5,26 +5,21 @@ ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f7002c353a3f47293c7c07567bbae606219c8228
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d65fc1f1ac1620e97e60fe2a6558c23abefde0ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856305"
 ---
-# <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions （Azure SQL 数据库）
+# <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   列出了在当前数据库中存在的所有事件会话定义[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -50,7 +45,7 @@ ms.locfileid: "37989299"
 |track_causality|**bit**|启用或禁用因果关系跟踪。 如果设置为 1 (ON)，跟踪会被启用且不同服务器连接上的相关事件可以建立关联。 默认设置为 0 (OFF)。 不可为 null。|  
 |startup_state|**bit**|值可以确定服务器启动时是否自动启动会话。 默认值为 0。 不可为 null。 是的一个：<br /><br /> 0 (OFF)。 服务器启动时不启动会话。<br /><br /> 1 (ON)。 服务器启动时启动事件会话。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ab52ca0feffd37cb87bef058a4a4da66be3708e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: de2c1a2b101775a3a7e97ecd4d89e32aefc4d3c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648388"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>表值参数的 ODBC SQL 类型
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +27,7 @@ ms.locfileid: "43073645"
 
   对表值参数的支持是通过新的 ODBC SQL 类型 SQL_SS_TABLE 提供的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不能将 SQL_SS_TABLE 转换为任何其他 ODBC 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。  
   
  如果 SQL_SS_TABLE 用作中的 C 数据类型*ValueType* SQLBindParameter 或尝试的参数进行为 SQL_SS_TABLE 应用程序参数描述符 (APD) 记录中的 SQL_DESC_TYPE 设置，则返回 SQL_ERROR 并诊断记录生成具有 SQLSTATE = HY003，"应用程序缓冲区类型无效"。  

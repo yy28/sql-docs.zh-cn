@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dm.savedataminingqueryresult.f1
 helpviewer_keywords:
 - Save Data Mining Query Result dialog box
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ab445225182566db8e4733904a3e66340549a70
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4736083dedc6899a55e49926d1010ef39fc4444
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090269"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>“保存数据挖掘查询结果”对话框（“挖掘模型预测”视图）
   使用 **“保存数据挖掘查询结果”** 对话框，可将数据挖掘查询的结果保存到新表中。  
   
  该新表将在数据源定义的数据库中创建。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **数据源**  
  从当前项目中选择数据源。 如果不存在正确的数据源，请单击 **“新建”** 以创建一个新的数据源。  
   

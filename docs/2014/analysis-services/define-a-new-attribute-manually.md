@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Analysis Services], creating
 - manual attribute creation [SQL Server]
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09c67e1ae406994e1cd8b02d759d5a14492a5b38
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa8ea915e250afbaa0075ee51e09fc5ab0f5a53e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127977"
 ---
 # <a name="define-a-new-attribute-manually"></a>手动定义新属性
   此过程介绍如何使用在维度中创建一个新属性**属性**窗格在维度设计器中的。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b211984732a3ed571e29e4c7117fe0aab21bd033
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428876"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120269"
 ---
 # <a name="getting-large-data"></a>获取大型数据
   一般情况下，使用者应将创建的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 访问接口存储对象处理数据未通过引用其他代码**ISequentialStream**接口指针。  
@@ -36,7 +33,7 @@ ms.locfileid: "37428876"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 属性 （在行集属性组） 设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，使用者应提取单个行中调用数据的**GetNextRows**方法由于不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，使用者可以提取中的数据的多个行**GetNextRows**。  
+ 如果 DBPROP_ACCESSORDER 属性 （在行集属性组） 设置为值 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，使用者应提取单个行中调用数据的**GetNextRows**方法由于不缓冲 BLOB 数据。 如果 DBPROP_ACCESSORDER 的值设置为 DBPROPVAL_AO_RANDOM，则使用者可以在 GetNextRows 中提取多行数据。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序不会检索大型数据从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]请求之前要执行此操作由使用者。 使用者应在一个取值函数中绑定所有短 (Short) 数据，然后根据需要使用一个或多个临时取值函数检索大型数据值。  
   
@@ -149,7 +146,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Blob 和 OLE 对象](blobs-and-ole-objects.md)   
+ [BLOB 和 OLE 对象](blobs-and-ole-objects.md)   
  [使用大值类型](../native-client/features/using-large-value-types.md)  
   
   

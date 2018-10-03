@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8884b6af873bb2b3fcc4c54ba4f6abce90035e72
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136067"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>内存优化表的统计信息
   查询优化器使用有关列的统计信息来创建可提高查询性能的查询计划。 从数据库中的表收集统计信息并将它保存在数据库元数据中。  
@@ -61,7 +58,7 @@ ms.locfileid: "40395833"
   
  如果数据频繁更改，应频繁更新统计信息。 例如，在批处理更新后更新表统计信息。 更新统计信息后，请删除并重新创建本机编译的存储过程，以便它们可以从更新的统计信息中受益。  
   
- 实例时都提供 SQL Server 登录名。  
+ .  
   
  不要在峰值工作负荷期间更新统计信息。  
   

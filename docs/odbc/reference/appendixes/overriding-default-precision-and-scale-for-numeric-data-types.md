@@ -1,13 +1,11 @@
 ---
-title: 对于数字数据类型中重写默认精度和小数位数 |Microsoft 文档
+title: 重写的数值数据类型默认精度和小数位数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - numeric data type [ODBC], precision and scale
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - numeric data type [ODBC]
 - numeric literals [ODBC]
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfe7bcedb96f5a7ff311d90b5dcdc28fc77b79f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772065"
 ---
-# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>对于数字数据类型中重写默认精度和小数位数
-当在 ARD SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用**SQLBindCol**或**SQLSetDescField**、 ARD 中的 SQL_DESC_SCALE 字段设置为 0 和 SQL_DESC_PRECISION 字段设置为驱动程序定义的默认精度。 这也是如此 APD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用时**SQLBindParameter**或**SQLSetDescField**。 这适用于输入、 输入/输出或输出参数。  
+# <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>重写数字数据类型的默认精度和小数位数
+如果 ARD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用**SQLBindCol**或**SQLSetDescField**中 ARD, SQL_DESC_SCALE 字段设置为 0 并且 SQL_DESC_PRECISION 字段设置为驱动程序定义的默认精度。 这也是如此 APD 中的 SQL_DESC_TYPE 字段设置为 SQL_C_NUMERIC，通过调用时**SQLBindParameter**或**SQLSetDescField**。 这适用于输入、 输入/输出或输出参数。  
   
- 如果任何一种所述的默认设置以前不为应用程序可接受，应用程序应通过调用设置 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 字段**SQLSetDescField**或**SQLSetDescRec**.  
+ 如果所述的默认值的任何一个以前不接受的应用程序，该应用程序应通过调用设置 SQL_DESC_SCALE 或 SQL_DESC_PRECISION 字段**SQLSetDescField**或**SQLSetDescRec**.  
   
- 如果应用程序调用**SQLGetData**为了在 SQL_C_NUMERIC 结构返回的数据，使用了默认 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段。 如果默认值不是可接受的应用程序必须调用**SQLSetDescRec**或**SQLSetDescField**以设置字段，然后调用**SQLGetData**与*TargetType*的 SQL_ARD_TYPE 描述符字段中使用的值。  
+ 如果应用程序调用**SQLGetData**为了将数据返回到 SQL_C_NUMERIC 结构，使用了默认 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段。 如果不接受默认设置的应用程序必须调用**SQLSetDescRec**或**SQLSetDescField**若要设置的字段，然后调用**SQLGetData**与*TargetType*的 SQL_ARD_TYPE 若要使用中的描述符字段的值。  
   
- 当**SQLPutData**是调用的调用使用 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 记录的字段的描述符对应于数据在执行参数或列中，这是对调用的 APD 字段**SQLExecute**或**SQLExecDirect**，或调用的 ARD 字段**SQLBulkOperations**或**SQLSetPos**。
+ 当**SQLPutData**是调用，调用使用对应于执行时数据参数或列，描述符记录的 SQL_DESC_SCALE 和 SQL_DESC_PRECISION 字段是对的调用 APD 字段**SQLExecute**或**SQLExecDirect**，或对的调用 ARD 字段**SQLBulkOperations**或**SQLSetPos**。

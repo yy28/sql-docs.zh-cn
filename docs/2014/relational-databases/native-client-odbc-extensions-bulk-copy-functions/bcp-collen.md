@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_collen
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1d12a0dd303405fd32eec5091d1d7d50e2d7d1f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137967"
 ---
 # <a name="bcpcollen"></a>bcp_collen
   为目标为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的当前大容量复制设置程序变量中的数据长度。  
@@ -61,7 +58,7 @@ idxServerCol
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Bcp_collen**函数，可向复制数据时更改特定列的程序变量中的数据长度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与[bcp_sendrow](bcp-sendrow.md)。  
   
  最初，确定数据长度时[bcp_bind](bcp-bind.md)调用。 如果调用之间更改的数据长度**bcp_sendrow**且没有长度前缀或终止符正在使用时，可以调用**bcp_collen**重置该长度。 下次调用**bcp_sendrow**使用通过调用设置的长度**bcp_collen**。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4bbe031bd7cc918f39d1c3c965cdb9e82ab612a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d665b824e48e5400ab341909180302c0101fc357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095247"
 ---
 # <a name="report-sections-dialog-box"></a>“报表区域”对话框
   当您打开报表时，报表设计器验证报表包含一个报表定义语言 (RDL) **\<部分 >** 元素。 不支持打开具有多个 \<Section> 元素的报表。  

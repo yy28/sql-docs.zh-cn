@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,21 +31,20 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093627"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>“操作属性”对话框（报表生成器和 SSRS）
   使用 **“操作”** 对话框可以为支持链接的图表、仪表和地图元素启用超链接选项。 定义一项操作，以便用户单击报表并链接到 URL、同一报表服务器或与报表服务器集成的 SharePoint 站点上的其他报表，或链接到同一报表中的其他位置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **启用为操作**  
  选择一个选项，指示在用户单击该项时将执行的操作。  
   
@@ -62,7 +59,7 @@ ms.locfileid: "37323757"
   
  对于发布到配置为本机模式的报表服务器的报表，请使用不带文件扩展名的完整路径或相对路径。 如果该报表与当前报表位于同一文件夹中，则只需使用该报表的名称即可。 如果报表位于同一报表服务器上的其他文件夹中，则使用相对路径或完整路径。 相对路径从当前文件夹开始并且在文件夹层次结构中上移，例如 ../Folder2/Report1。 完整路径从 /（即主文件夹）开始。 例如，/Reports/Report1。  
   
- 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用带有文件扩展名 (.rdl) 的完全限定 URL。 例如，http://*\<SharePointservername > /\<站点 >*/Documents/Report1.rdl。 不支持相对路径。  
+ 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用带有文件扩展名 (.rdl) 的完全限定 URL。 例如， http://*\<SharePointservername > /\<站点 >*/Documents/Report1.rdl。 不支持相对路径。  
   
  有关详细信息，请参阅 msdn.microsoft.com 上[报表生成器文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[指定外部项的路径（报表生成器和 SSRS）](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)。  
   
@@ -102,7 +99,7 @@ ms.locfileid: "37323757"
  选择此选项可以定义指向网页的链接。 键入或选择网页的 URL 或计算结果为网页的 URL 的表达式。 单击“表达式”(fx) 按钮，更改表达式。 此表达式可以有一个包含 URL 的字段。 选择 **“转到 URL”** 时，页面上将显示以下其他选项。  
   
  **选择 URL**  
- 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如，http://*\<服务器名 >*/images/image1.jpg。 对于发布到 SharePoint 集成模式下配置的报表服务器的项，请使用完全限定的 URL (例如 http://*\<SharePointservername > /\<站点 >*  /记录/映像 /image1.jpg)。  
+ 键入或输入相应项的 URL。 对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， http://*\<服务器名 >*/images/image1.jpg。 对于发布到 SharePoint 集成模式下配置的报表服务器的项，请使用完全限定的 URL (例如 http://*\<SharePointservername > /\<站点 >*  /记录/映像 /image1.jpg)。  
   
 ## <a name="see-also"></a>请参阅  
  [图表（报表生成器和 SSRS）](report-design/charts-report-builder-and-ssrs.md)   

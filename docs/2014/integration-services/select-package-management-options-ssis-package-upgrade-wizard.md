@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-caps.latest.revision: 34
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03cb491f73934d3df3d462ecb1274889b122822f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06cdfdf884dbe4cf63feb441ef5f7665868fc41b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138817"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>选择包管理选项（SSIS 包升级向导）
   使用 **“选择包管理选项”** 页指定用于对包进行升级的选项。  
@@ -30,7 +27,7 @@ ms.locfileid: "37296747"
   
 -   [使用 SSIS 包升级向导升级 Integration Services 包](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **更新连接字符串以使用新的提供程序名称**  
  更新连接字符串以使用当前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]的下列提供程序的名称：  
   

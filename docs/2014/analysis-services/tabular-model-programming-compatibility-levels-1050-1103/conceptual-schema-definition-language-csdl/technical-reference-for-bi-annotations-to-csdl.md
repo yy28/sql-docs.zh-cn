@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 63b3e069-6ba5-474e-b769-47b7cc87b7dd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78300a412d7db986edd76172c7cf49e6c86aaec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e0a166f1c81b9e010d7e9cfd7a0547c3a4b9c72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192374"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094187"
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>用于商业智能的 CSDL 注释技术参考
   本部分列出了 CSDL 中用于表示 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 表格模型的元素、特性和属性。 某些元素是新增的：其他属性已添加批注或扩展，以支持商业智能建模。  

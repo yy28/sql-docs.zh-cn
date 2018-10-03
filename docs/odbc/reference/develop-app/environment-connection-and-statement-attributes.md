@@ -1,39 +1,36 @@
 ---
-title: 环境、 连接和语句属性 |Microsoft 文档
+title: 环境、 连接和语句属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - environment attributes [ODBC]
 - connection attributes [ODBC]
 - statement attributes [ODBC]
 ms.assetid: 9e15b276-3b7a-428a-b72f-a3ddfe1ba1ce
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b8e3ee068d160269336de15ce1ddef3e7c78d58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e77be71458eb10e97a82c925d34141a7bcaf1dc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685926"
 ---
-# <a name="environment-connection-and-statement-attributes"></a>环境、 连接和语句属性
-ODBC 定义大量的与环境、 连接或语句相关联的属性。  
+# <a name="environment-connection-and-statement-attributes"></a>环境、连接和语句属性
+ODBC 定义的与环境、 连接或语句相关联的属性。  
   
- 环境属性会影响整个环境，例如是否启用连接池。 环境属性设置与**SQLSetEnvAttr**和与检索到**SQLGetEnvAttr**。  
+ 环境属性会影响整个环境中的，例如，是否启用连接池。 环境属性设置与**SQLSetEnvAttr**和与检索到**SQLGetEnvAttr**。  
   
- 连接属性会影响每个连接单独，例如如何驱动程序时尝试连接到数据源在超时前应等待的长时间。连接属性设置与**SQLSetConnectAttr**和与检索到**SQLGetConnectAttr**。 有关连接属性的详细信息，请参阅[连接属性](../../../odbc/reference/develop-app/connection-attributes.md)。  
+ 连接属性会影响每个连接单独，如驱动程序尝试连接到数据源在超时前应等待长时间。使用设置连接属性**SQLSetConnectAttr**和与检索到**SQLGetConnectAttr**。 有关连接属性的详细信息，请参阅[连接属性](../../../odbc/reference/develop-app/connection-attributes.md)。  
   
- 语句特性影响每个语句单独，如是否应以异步方式执行某个语句。 与设置语句属性**SQLSetStmtAttr**和与检索到**SQLGetStmtAttr**。 几个语句属性是只读属性，且无法进行设置。 例如，用于检索中光标的当前行数的 SQL_ATTR_ROW_NUMBER 语句属性是只读的。 有关语句特性的详细信息，请参阅[语句特性](../../../odbc/reference/develop-app/statement-attributes.md)。  
+ 语句属性影响每个语句分别，如是否应以异步方式执行一个语句。 使用设置语句属性**SQLSetStmtAttr**和与检索到**SQLGetStmtAttr**。 几个语句属性是只读属性，不能进行设置。 例如，用于检索游标中的当前行数的 SQL_ATTR_ROW_NUMBER 语句属性是只读的。 有关语句属性的详细信息，请参阅[语句属性](../../../odbc/reference/develop-app/statement-attributes.md)。  
   
- 除了属性定义的 ODBC 驱动程序可以定义其自己的连接和语句属性。 驱动程序定义的特性必须注册与打开组，以确保两个的驱动程序供应商现在将相同的整数值分配给不同的、 专用属性。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
+ 除了由 ODBC 定义的特性，驱动程序可以定义其自己的连接和语句属性。 打开组，以确保两个驱动程序供应商现在将相同的整数值分配给不同的专有特性必须注册驱动程序定义的特性。 有关详细信息，请参阅[特定于驱动程序的数据类型、 描述符类型、 信息类型、 诊断类型和属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)。  
   
- 属性的完整列表，请参阅[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，和[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 这些设置会影响该 ODBC 函数的说明中也描述了大多数属性。
+ 有关属性的完整列表，请参阅[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)， [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)，并[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)。 它们会影响的 ODBC 函数的说明中也描述了大多数属性。

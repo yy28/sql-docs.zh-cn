@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.filtertablerows.f1
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1c5fa2f1dab88852bb5d6039b0017370c9a46966
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae3a31913ad603bb7acbb801a2c923105ddbc915
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057177"
 ---
 # <a name="filter-table-rows"></a>筛选表行
   在 **“筛选表行”** 页中，您可以执行以下操作：  
@@ -48,7 +45,7 @@ ms.locfileid: "37302197"
   
  筛选器不能包含复制所用的 `rowguidcol` 来标识行。 默认情况下，这是您设置合并复制时添加的列，命名为 **rowguid**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **筛选的表**  
  此窗格使用您向发布中的表项目添加的筛选器进行填充。 带行筛选器的表在窗格中显示为顶级节点。 对于合并发布，筛选操作通过联接筛选器扩展到的表显示为子节点。  
   

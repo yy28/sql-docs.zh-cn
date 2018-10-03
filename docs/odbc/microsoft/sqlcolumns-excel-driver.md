@@ -1,35 +1,32 @@
 ---
-title: SQLColumns （Excel 驱动程序） |Microsoft 文档
+title: SQLColumns （Excel 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLColumns function [ODBC], Excel Driver
 - Excel driver [ODBC], SQLColumns
 ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4baff6c97d989e411247c8fcad71760123b124ac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6b4775b62a4e411f38084113c1313688b5388c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620175"
 ---
-# <a name="sqlcolumns-excel-driver"></a>SQLColumns （Excel 驱动程序）
+# <a name="sqlcolumns-excel-driver"></a>SQLColumns（Excel 驱动程序）
 > [!NOTE]  
->  本主题提供 Excel 驱动程序相关的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供了特定于 Excel 驱动程序的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|列|注释|  
+|“列”|注释|  
 |------------|--------------|  
 |TABLE_QUALIFIER|返回到目录的路径。|  
-|TABLE_OWNER|因为不支持所有者名称，将在此列中返回 NULL。|  
-|NULLABLE|SQL_NO_NULLS 针对参与的列返回中的主键或唯一索引。|
+|TABLE_OWNER|在本专栏中则返回 NULL，因为不支持所有者名称。|  
+|NULLABLE|SQL_NO_NULLS 主键或唯一索引中的参与的列返回。|

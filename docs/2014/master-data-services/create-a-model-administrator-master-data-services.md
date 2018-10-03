@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-caps.latest.revision: 4
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 400be71a74676d0d95ddcd56d1927aed3e7711f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4032a624d49cbf7c70d710b6b4df7373353f1d2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195017"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099157"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>创建模型管理员 (Master Data Services)
   在中[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]，当你想要拥有的组或用户时创建模型管理员**更新**到一个或多个模型中的所有对象的权限。  
@@ -58,7 +55,7 @@ ms.locfileid: "37195017"
   
 10. 单击 **“保存”**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不要分配对模型对象或层次结构成员的任何其他权限。 如果这样做，用户不再是管理员，无法查看模型中的任何功能区域以外**资源管理器**。  
   
  没有一种情况例外： 如果用户具有**更新**权限分配给一个层次结构**根**上**层次结构成员**选项卡上，用户仍被视为一个模型管理员。  

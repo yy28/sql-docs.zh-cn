@@ -1,36 +1,33 @@
 ---
-title: 标头文件 |Microsoft 文档
+title: 标头文件 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - header files [ODBC]
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d31cdda9e97ba72374c60c551f37ecfeccd71c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656735"
 ---
-# <a name="header-files"></a>标头文件
-Sql.h 标头文件包含函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含为函数和中的级别 1 和级别 2 API 一致性级别的功能的原型。 Sqltypes.h 标头文件包含类型定义和 SQL 数据类型的指示符。  
+# <a name="header-files"></a>头文件
+Sql.h 标头文件包含的函数和核心 ODBC 接口一致性级别中的功能的原型。 Sqlext.h 标头文件包含的函数和级别 1 和级别 2 API 一致性级别中的功能的原型。 Sqltypes.h 头文件包含类型定义和 SQL 数据类型的指示符。  
   
  所有包含的标头文件 **#define**，ODBCVER，应用程序或驱动程序可设置为针对不同版本的 ODBC 进行编译。  
   
- 若要使用的 ISO CLI 和打开组 CLI 对齐，标头文件包含对的调用中使用的信息类型的别名**SQLGetInfo**。 下表中，在"ODBC name"的列指示中的信息类型的 ODBC 名称[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。 列"标头文件中的别名"指示 ISO CLI 和打开组 CLI 中使用的名称。 这些清单名称的实际数值是 ODBC 和标准 Cli 中相同。 这些别名启用符合标准的应用程序或驱动程序使用 ODBC 3 进行编译 *.x*标头文件。  
+ 若要使用 ISO CLI 和打开组 CLI 对齐，标头文件包含对的调用中使用的信息类型的别名**SQLGetInfo**。 下表中的列"ODBC name"指示 ODBC 中的信息类型的名称[ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。 "标头文件中的别名"列指示在 ISO CLI 和打开组 CLI 中使用的名称。 这些清单名称的实际数值是 ODBC 和标准 Cli 中相同的。 这些别名启用符合标准的应用程序或驱动程序使用 ODBC 3 进行编译 *.x*标头文件。  
   
- 这些别名 ODBC 名称中包括的缩写的扩展，以便的名称是更易于理解。 "最大"扩展为"最大值"，"LEN"为"LENGTH"，"MULT"到"多个"，"OJ"到"OUTER_JOIN"和"TXN"到"事务"。  
+ 这些别名 ODBC 名称中包含的缩写的扩展，以便更易于理解的名称是。 "最大"扩展为"最大值"，"LEN"为"长度"，"MULT"到"多"，"OJ"到"OUTER_JOIN"和"事务"到"事务"。  
   
 |ODBC 名称|标头文件中的别名|  
 |---------------|--------------------------|  

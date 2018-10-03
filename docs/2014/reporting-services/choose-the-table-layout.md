@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
-caps.latest.revision: 24
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7b0e1ab0a208695280d3757f4dbd27d86cb6f32f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bdf0dfcaefa63b611a86a6bb5a10d58045c6602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053727"
 ---
 # <a name="choose-the-table-layout"></a>选择表布局
   使用报表向导的此页可以选择报表中表的布局。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **单步执行**  
  创建报表，其中每一列对应一个字段，组字段显示在详细信息字段列左侧的组头中。 此类型的表没有组尾。  
   

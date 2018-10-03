@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 033cde8c84edc6ceb7b0fb9686e31b6ce98ef1c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129447"
 ---
 # <a name="trace-properties-events-selection-tab"></a>跟踪属性（“事件选择”选项卡）
   使用 **“跟踪属性”** 对话框的 **“事件选择”** 选项卡可以查看或指定跟踪的事件和数据列。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “事件”列  
  通过选中或清除事件列中的复选框，指定跟踪的事件。 **“事件”** 按事件类别进行组织。 模板中指定的事件类是自动选择的。 有关详细信息，请参阅 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   

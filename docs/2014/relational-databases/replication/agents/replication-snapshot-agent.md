@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: e6b6fe366014bdffce0eeef77c7e2e79872f22e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087157"
 ---
 # <a name="replication-snapshot-agent"></a>复制快照代理
   复制快照代理是一个可执行文件，用于准备快照文件（其中包含已发布表和数据库对象的架构及数据），然后将这些文件存储在快照文件夹中，并在分发数据库中记录同步作业。  
@@ -197,12 +194,12 @@ ms.locfileid: "44311687"
 |**2**|输出所有错误消息和进度报告消息，这对于调试很有用。|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 可选参数，指定是否将预提取并缓存的表对象。  默认行为是要预提取使用 SMO 组件上的内部计算基于某些表属性。  此参数可以是有帮助的方案，SMO 预提取操作会花费相当长时间运行。 如果不使用此参数，此决定是在运行时根据作为项目添加到发布的表的百分比。  
+ 可选参数，指定是否预提取并缓存表对象。  默认行为是，根据内部计算结果，使用 SMO 组件来预提取特定表属性。  如果 SMO 预提取操作的耗时相当长，你会发现此参数非常有用。 如果你不使用此参数，此决定是在运行时做出，依据为以项目形式添加到发布中的表所占的百分比。  
   
 |OutputVerboseLevel 值|Description|  
 |------------------------------|-----------------|  
-|**0**|禁用对 SMO 组件的预提取方法调用。|  
-|**1**|快照代理将调用预提取的方法来缓存使用 SMO 某些表属性|  
+|**0**|禁止调用 SMO 组件的预提取方法。|  
+|**1**|快照代理会调用预提取方法，以使用 SMO 缓存一些表属性|  
   
  **-PacketSize** *packet_size*  
  快照代理连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用的数据包大小（以字节为单位）。 默认值为 8192 字节。  
@@ -252,7 +249,7 @@ ms.locfileid: "44311687"
  \- **UsePerArticleContentsView** *use_per_article_contents_view*  
  已不推荐使用此参数，支持它是为了能够向后兼容。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而非域用户帐户（默认值）运行，则该服务仅可访问本地计算机。 如果将在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理下运行的快照代理配置为登录 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则快照代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。  

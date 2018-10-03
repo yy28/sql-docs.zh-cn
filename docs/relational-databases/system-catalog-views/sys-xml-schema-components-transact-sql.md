@@ -1,14 +1,11 @@
 ---
-title: sys.xml_schema_components (Transact SQL) |Microsoft 文档
+title: sys.xml_schema_components (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xml_schema_components
@@ -20,31 +17,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_components catalog view
 ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90fbd2b92ccfcf01da2c2742a3b5a083f30f1e03
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d921ea244bbcc2464e68d32ff4176a694b9cede5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33221948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828245"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  针对 XML 架构的每个组件返回一行。 对 (**collection_id**， **namespace_id**) 是包含的命名空间的复合外键。 对于名为组件，的值**symbol_space**，**名称**， **scoping_xml_component_id**， **is_qualified**， **xml_namespace_id**， **xml_collection_id**是唯一的。  
+  针对 XML 架构的每个组件返回一行。 对 (**collection_id**， **namespace_id**) 是包含的命名空间的复合外键。 对于命名组件，为值**symbol_space**，**名称**， **scoping_xml_component_id**， **is_qualified**， **xml_namespace_id**， **xml_collection_id**是唯一的。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|在数据库中的 XML 架构组件的唯一 ID。|  
 |**xml_collection_id**|**int**|包含此组件的命名空间的 XML 架构集合的 ID。|  
 |**xml_namespace_id**|**int**|集合中的 XML 命名空间的 ID。|  
-|**is_qualified**|**bit**|1 = 该组件具有显式命名空间限定符。<br /><br /> 0 = 这是一个本地范围的组件。 在此情况下，对， **namespace_id**， **collection_id**，指的是"没有命名空间" **targetNamespace**。<br /><br /> 对于通配符组成部分，该值将等于 1。|  
+|**is_qualified**|**bit**|1 = 该组件具有显式命名空间限定符。<br /><br /> 0 = 这是一个本地范围的组件。 在此情况下，对**namespace_id**， **collection_id**，"无命名空间"是指**targetNamespace**。<br /><br /> 对于通配符组成部分，该值将等于 1。|  
 |**名称**|**nvarchar**<br /><br /> **(4000)**|XML 架构组件的唯一名称。 如果该组件未命名，则为 NULL。|  
-|**symbol_space**|**char(1)**|此符号名称是唯一的在其中的空间基于**类型**:<br /><br /> N = 无<br /><br /> T = 类型<br /><br /> E = 元素<br /><br /> M = 模型–组<br /><br /> A = 属性<br /><br /> G = 属性–组|  
-|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|此符号名称是唯一的在其中的空间的说明基于**类型**:<br /><br /> 无<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
+|**symbol_space**|**char(1)**|该符号名称是唯一的在其中的空间根据**种类**:<br /><br /> N = 无<br /><br /> T = 类型<br /><br /> E = 元素<br /><br /> M = 模型–组<br /><br /> A = 属性<br /><br /> G = 属性–组|  
+|**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|该符号名称是唯一的在其中的空间的说明基于**种类**:<br /><br /> 无<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**类型**|**char(1)**|XML 架构组件的类型。<br /><br /> N = 任何类型（特殊的内部组件）<br /><br /> Z = 任意简单类型（特殊的内部组件）<br /><br /> P = Primitive 类型（内部类型）<br /><br /> S = 简单类型<br /><br /> L = 列表类型<br /><br /> U = 联合类型<br /><br /> C = 复杂的简单类型（派生自简单类型）<br /><br /> K = 复杂类型<br /><br /> E = 元素<br /><br /> M = 模型–组<br /><br /> W = 元素-通配符<br /><br /> A = 属性<br /><br /> G = 属性–组<br /><br /> V = 属性-通配符|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|对 XML 架构组件类型的说明：<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
 |**派生**|**char(1)**|派生类型的派生方法：<br /><br /> N = 无（非派生）<br /><br /> X = 扩展<br /><br /> R = 限制<br /><br /> S = 替换|  
@@ -52,7 +48,7 @@ ms.locfileid: "33221948"
 |**base_xml_component_id**|**int**|该组件派生自的组件的 ID。 如果不存在，则为 NULL。|  
 |**scoping_xml_component_id**|**int**|范围组件的唯一 ID。 如果不存在（全局范围），则为 NULL。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

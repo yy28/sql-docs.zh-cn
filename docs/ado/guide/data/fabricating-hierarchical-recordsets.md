@@ -1,13 +1,11 @@
 ---
-title: 构造分层记录集 |Microsoft 文档
+title: 构造分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770885"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>构造分层记录集
-下面的示例演示如何使用调整语法来定义为父、 子节点和孙级的列的数据生成分层记录集而无需基础数据源**记录集**。  
+下面的示例演示如何通过使用数据整理语法来定义列的父级、 子级和孙级编制分层记录集而无需基础数据源**记录集**。  
   
- 生成一种分层**记录集**，必须指定[用于 OLE DB （ADO 服务提供程序） 的 Microsoft 数据调整服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(MSDataShape)，并可以指定无数据提供程序值连接字符串参数[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 有关详细信息，请参阅[所需的提供程序数据成型](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
+ 创建一种分层**记录集**，必须指定[适用于 OLE DB （ADO 服务提供商） 的 Microsoft Data Shaping 服务](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(MSDataShape)，并可以指定数据提供程序值 NONE 中连接字符串参数[开放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 有关详细信息，请参阅[将提供程序所需的数据整理](../../../ado/guide/data/required-providers-for-data-shaping.md)。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -59,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  只要**记录集**已制造，它可以填充、 操作，或保存到文件。  
   
 ## <a name="see-also"></a>请参阅  
- [访问在分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
- [所需的提供程序，供你调整数据](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [形状 APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
+ [访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [数据整理所需的提供程序](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 子句](../../../ado/guide/data/shape-append-clause.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

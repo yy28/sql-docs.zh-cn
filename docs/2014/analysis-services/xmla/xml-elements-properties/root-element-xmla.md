@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Root Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 610ef2a3b332ec59e6ddf31d7f30acfe418549e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110247"
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)
   包含返回的结果[Discover](../xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令使用执行[Execute](../xml-elements-methods-execute.md)方法。  
@@ -56,7 +53,7 @@ ms.locfileid: "37321077"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-n：可多次出现的必需元素。|  
   
 ## <a name="data-type-and-length"></a>数据类型和长度  
@@ -71,9 +68,9 @@ ms.locfileid: "37321077"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[结果](results-element-xmla.md)，[返回](return-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `root`元素包含在返回的信息[DiscoverResponse](../xml-elements-objects-discoverresponse.md)返回单个元素`Discover`方法调用中，或在[ExecuteResponse](../xml-elements-objects-executeresponse.md)元素返回的单个 XMLA 命令执行由单个`Execute`方法调用。  
   
 ## <a name="see-also"></a>请参阅  

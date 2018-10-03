@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AliasName Property (SqlServerAlias Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 263407a4da24424faa4f24b6811835090b4c3d13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9faf224c7fa4b14c8a3dc9a2cdc0439e22ea16d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214758"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084837"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName 属性（SqlServerAlias 类）
   获取服务器连接别名的名称。  
@@ -48,5 +45,5 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定服务器连接别名的 `string` 值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   

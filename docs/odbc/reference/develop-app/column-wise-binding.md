@@ -1,38 +1,35 @@
 ---
-title: 按列绑定 |Microsoft 文档
+title: 按列绑定 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618975"
 ---
 # <a name="column-wise-binding"></a>按列绑定
-使用专用于列的绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据要为其返回每个列。 第一个数组中包含的数据值，并第二个数组拥有长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，将绑定的第三个数组。 每个数组包含有行的行集中的所有元素。  
+使用按列绑定时，应用程序会将一个或两个，或在某些情况下的三个，数组绑定到数据将返回每个列。 第一个数组保留了数据值，并第二个数组长度/指示器缓冲区。 指示器和长度值可以通过存储在单独的缓冲区将 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 描述符字段设置为不同的值;如果此操作后，第三个数组绑定。 每个数组包含任意多个元素的行集中的行一样。  
   
- 应用程序声明，它使用的专用于列的绑定具有 SQL_ATTR_ROW_BIND_TYPE 语句属性，它确定的绑定类型。 而不是参数行集缓冲区设置缓冲区。 驱动程序中的每个数组的连续元素返回每个行的数据。 下图显示列绑定的原理。  
+ 应用程序声明，它使用的按列绑定具有 SQL_ATTR_ROW_BIND_TYPE 语句属性，用于确定行集缓冲区而不是参数的绑定类型设置缓冲区。 驱动程序返回连续的元素的每个数组中的每个行的数据。 下图显示了如何按列绑定的工作方式。  
   
- ![列&#45;的三个列的明智的做法绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![列&#45;的三个列的比较明智的做法绑定](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- 例如，下面的代码将 10 元素数组绑定到 OrderID、 销售人员，和状态列：  
+ 例如，下面的代码将 10 元素数组绑定到订单 id、 销售人员和状态列：  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

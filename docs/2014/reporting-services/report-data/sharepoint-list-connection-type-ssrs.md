@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116339"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
   若要在报表中包含来自 Microsoft SharePoint 列表的数据，您必须添加或创建一个基于 Microsoft SharePoint 列表类型的报表数据源的数据集。 此内置数据源类型是基于 Microsoft SQL Server Reporting Services SharePoint 列表数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]、 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 和 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 站点，并从中检索列表数据。  
@@ -44,19 +41,19 @@ ms.locfileid: "37260393"
   
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|是|“否”|  
-|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|不<sup>2</sup>|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|是|不<sup>2</sup>|  
+|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|用户帐户控制|否|  
+|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|不<sup>2</sup>|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|用户帐户控制|不<sup>2</sup>|  
   
  **表 2**  
   
 ||受支持的凭据|经典模式 Windows 身份验证|<sup>3</sup>声明身份验证|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
-|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|是|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|“否”|“否”|  
-|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|是|不<sup>2</sup>|  
-||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|“否”|不<sup>2</sup>|  
+|本地场 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|用户帐户控制|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|否|否|  
+|远程 SharePoint 列表|Windows 身份验证（集成）或 SharePoint 用户标记|用户帐户控制|不<sup>2</sup>|  
+||存储、 提示、 无 (使用 Windows 凭据<sup>1</sup>)|否|不<sup>2</sup>|  
   
  <sup>1</sup>不支持存储和使用非 Windows 凭据的提示凭据。  
   
