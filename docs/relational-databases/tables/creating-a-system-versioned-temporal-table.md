@@ -5,22 +5,19 @@ ms.date: 05/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d19226b82190e17a9a0d8ee2a7c32bd8e1d1ab4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639415"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -175,9 +172,7 @@ ALTER TABLE InsurancePolicy
   
 #### <a name="important-remarks"></a>重要提示  
   
--   对 SQL Server Enterprise Edition 以外的所有版本而言，将具有默认值的非 null 列添加到一张包含数据的现有表是一种关于数据大小的操作（对 Enterprise Edition 是一种元数据操作）。
- 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表而言，添加非 null 列代价高昂。
-  
+-   对 SQL Server Enterprise Edition 以外的所有版本而言，将具有默认值的非 null 列添加到一张包含数据的现有表是一种关于数据大小的操作（对 Enterprise Edition 是一种元数据操作）。 对于 SQL Server Standard Edition 中包含数据的大型现有历史记录表而言，添加非 null 列代价高昂。  
   
 -   必须小心选择期间开始和期间结束列的约束：  
   

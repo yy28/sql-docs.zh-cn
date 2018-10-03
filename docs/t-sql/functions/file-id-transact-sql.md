@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILE_ID
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f7d7a1a8e585370353050abb508464ce0f1c0ed
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f06f74696d6c846d094049e787af2156077368f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817931"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ file_name
 类型 sysname 的表达式，表示文件的逻辑名称，文件 ID 值 `FILE_ID` 将返回此逻辑名称。  
   
 ## <a name="return-types"></a>返回类型  
-**int**  
+**smallint**  
   
 ## <a name="remarks"></a>Remarks  
 file_name 对应于 sys.master_files 或 sys.database_files 目录视图的 name 列中所显示的逻辑文件名。  
