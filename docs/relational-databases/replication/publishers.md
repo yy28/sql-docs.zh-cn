@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configuredistributionwizard.enablepublishers.f1
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e3573a22bb52d7beaf83495b71afa07237f73ca
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701165"
 ---
 # <a name="publishers"></a>“分发服务器属性”
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "37352599"
   
  被选作发布服务器的服务器将使用此向导的 **“分发数据库”** 页上指定的分发数据库。 若要使用其他分发数据库，此时请不要启用发布服务器。 相反，在完成配置分发向导后，请使用 **“分发服务器属性”** 对话框来添加发布服务器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **发布服务器**  
  选择允许使用此分发服务器的服务器。 请单击发布服务器旁边的属性按钮 (**...**) 以查看和设置其他属性。  
   
