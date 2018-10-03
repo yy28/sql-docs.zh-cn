@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1b879111ec000cbe051df2eb9bd377f265a7c013
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a594b214153c838b1b6f50ca29a3a478b94cf96f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689395"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  此存储过程确定 property_value 对于每个 property_name 是否有效。  
@@ -54,12 +51,12 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
  当配置目录时，将向操作记录中写入一个条目。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

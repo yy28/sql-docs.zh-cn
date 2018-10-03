@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_tables
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c070be83daf534bc3084689aaa9aa8c1149f374
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: da1a73aebef6637b97d400de19379f37a60315a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061890"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688505"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +82,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|表、系统表或视图。|  
 |**备注**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为达到最大互操作性，网关客户端应假定只有 SQL-92 标准的 SQL 模式匹配（% 和 _ 通配符字符）。  
   
  并不总是检查有关当前用户对特定表的读写权限的权限信息。 因此，访问得不到保障。 该结果集不仅包含表和视图，还包含网关的同名和别名，这些网关通往支持这些类型的 DBMS 产品。 如果服务器属性**ACCESSIBLE_TABLES**结果集中为 Y **sp_server_info**，则返回当前用户可以访问的表。  

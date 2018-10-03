@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - filter_TSQL
 - sp_check_TSQL
@@ -25,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73c1941e4aeec64d388f93dc6d6e026c08011786
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: bba95120f551af10d8a67d162339086c291190b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708445"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +69,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_check_join_filter**合并复制中使用。  
   
  **sp_check_join_filter**即使未发布可以对任何相关的表执行。 在定义两个项目之间的联接筛选器之前，可以使用此存储过程验证联接筛选子句。  

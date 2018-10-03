@@ -1,33 +1,30 @@
 ---
-title: 执行批处理 |Microsoft 文档
+title: 执行批处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC], executing
 - SQL statements [ODBC], batches
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22c034d4be28ca8c3212fad4ee1493cb0a22d915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46b224e8167587c4e4860f171b132d23539143e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695026"
 ---
 # <a name="executing-batches"></a>执行批处理
-应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo**使用 SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回行计数 – 生成和生成集 – 语句支持显式批处理和过程，后者的两个选项的可用性返回信息的行计数和结果的设置中时的结果是否 parameterized执行。  
+应用程序执行一批语句之前，应首先检查是否支持它们。 为此，应用程序调用**SQLGetInfo** SQL_BATCH_SUPPORT、 SQL_PARAM_ARRAY_ROW_COUNTS 和 SQL_PARAM_ARRAY_SELECTS 选项。 第一个选项返回是否行计数 – 生成和结果集 – 生成语句中显式批处理和过程，行计数和结果的返回信息可用性设置中的后一种两个选项时支持参数化执行。  
   
- 通过执行的语句的批处理**SQLExecute**或**SQLExecDirect**。 例如，以下调用执行语句，以打开一个新的销售订单的显式批次。  
+ 通过执行语句的批处理**SQLExecute**或**SQLExecDirect**。 例如，以下调用执行语句，以打开新的销售订单的显式批次。  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -41,9 +38,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- 当结果生成的批处理执行语句，它返回其中一个或多个行计数或结果集。 有关如何检索这些信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
+ 结果生成的批处理时执行语句，它将返回一个或多个行计数或结果设置。 有关如何检索这些属性的信息，请参阅[多个结果](../../../odbc/reference/develop-app/multiple-results.md)。  
   
- 如果一批语句包括参数标记，这些编号以升序参数与任何其他语句。 例如，下面的语句的批处理具有编号从 1 到 21; 的参数在第一个那些**插入**语句包括编号 1 到 5 和在最后一个**插入**语句是通过 21 编号的 18。  
+ 如果一批语句包括参数标记，这些编号递增参数顺序，因为它们位于任何其他语句。 例如，以下批处理语句具有参数编号从 1 到 21;第一个中的那些**插入**语句是编号 1 到 5 和最后一个中的那些**插入**语句是通过 21 编号的 18。  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -54,4 +51,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，本部分中更高版本。
+ 有关参数的详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)，在本部分中更高版本。

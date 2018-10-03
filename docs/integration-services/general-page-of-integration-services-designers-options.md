@@ -5,30 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be157e79cece8dedfc2e082112f6fd400f462cb1
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4bd6d830a2c8fc612a7b9030de60e9c8ff458301
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408749"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649035"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 设计器选项的“常规”页
   使用 **“选项”** 对话框中 **“Integration Services 设计器”** 页的 **“常规”** 页，可以指定用于加载、显示和升级包的选项。  
   
  若要打开 **“常规”** 页，请在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，单击 **“工具”** 菜单上的 **“选项”**，展开 **“商业智能设计器”**，然后选择 **“Integration Services 设计器”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **加载包时检查数字签名**  
  选择让 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 在加载包时检查数字签名。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 仅会检查数字签名是否存在、是否有效，并且是否来自可靠来源。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 不会检查包经过签名后是否发生过更改。  
   

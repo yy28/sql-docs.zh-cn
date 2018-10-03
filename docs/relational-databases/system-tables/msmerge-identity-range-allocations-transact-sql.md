@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSmerge_identity_range_allocations
 - MSmerge_identity_range_allocations_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df286fcd67db26ac149bd56d3635425453d78405
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b36d1b4d0065d1049268862aa0cf37af6ab6dd01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102785"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609885"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +33,7 @@ ms.locfileid: "39102785"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**publisher_id**|**int**|发布服务器的 ID。|  
+|**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**nvarchar(128)**|发布数据库的名称。|  
 |**发布**|**nvarchar(128)**|发布的名称。|  
 |**article**|**nvarchar(128)**|项目的名称。|  

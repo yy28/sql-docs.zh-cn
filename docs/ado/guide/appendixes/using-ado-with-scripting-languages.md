@@ -1,69 +1,66 @@
 ---
-title: 使用 ADO 的脚本语言 |Microsoft 文档
+title: 使用 ADO 与脚本语言 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271206"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600385"
 ---
-# <a name="using-ado-with-scripting-languages"></a>使用 ADO 的脚本语言
-在一个脚本编写环境 ADO 可以公开通过服务器端脚本的数据。 在此方案中，ADO，基础 OLE DB 提供程序，它使用，并引用给定的数据存储所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 使用 Active Server Pages (ASP)，ADO 是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历，或查看特定的数据。  
+# <a name="using-ado-with-scripting-languages"></a>配合使用 ADO 与脚本语言
+在脚本编写环境中，可使用 ADO 公开数据通过服务器端脚本。 在此方案中，ADO，基础 OLE DB 提供程序使用，并引用给定的数据存储区所需的任何其他组件安装在运行 Internet 信息服务 (IIS) 的服务器上。 ADO 使用 Active Server Pages (ASP)，是可以生成 HTML，例如脚本中引用的组件。 此 HTML 内容可以通过 HTTP 传递给客户端 Web 浏览器。 通过使用脚本，Web 页可以将操作发送回服务器端脚本，从而允许你更新、 遍历时，或查看特定的数据。  
   
- 在网页中使用 ActiveX 对象之前，务必知道对象是否是可安全执行脚本。 当对象被视为可安全执行脚本时，这意味着控件不能在用户的计算机上执行任何有害的操作，并因此可执行而不请求用户的批准。 下表列出的 ADO 对象，并指示它们是否可安全执行脚本。  
+ 在网页中使用 ActiveX 对象之前，务必要知道的对象是否可安全执行脚本。 如果对象被视为可安全执行脚本，则意味着控件不能在用户计算机上执行任何有害操作，并因此可以执行而不请求用户的批准。 下表列出了 ADO 对象，并指示它们是否可安全执行脚本。  
   
-|Object|用于脚本编写的安全？|  
+|Object|用于编写脚本安全？|  
 |------------|-------------------------|  
-|ADO 连接|是|  
-|ADO 命令|“否”|  
-|ADO 参数|“否”|  
-|ADO 记录集|是|  
-|ADO 记录|是|  
-|ADO 流|是|  
-|ADO 错误|“否”|  
-|ADOX 目录|“否”|  
-|ADOX 单元集|“否”|  
-|RDS DataControl|是|  
-|RDS DataSpace|是|  
-|RDS DataFactory|“否”|  
+|ADO 连接|用户帐户控制|  
+|ADO 命令|否|  
+|ADO 参数|否|  
+|ADO 记录集|用户帐户控制|  
+|ADO 记录|用户帐户控制|  
+|ADO Stream|用户帐户控制|  
+|ADO 错误|否|  
+|ADOX 目录|否|  
+|ADOX 单元集|否|  
+|RDS 数据控件|用户帐户控制|  
+|RDS 数据空间|用户帐户控制|  
+|RDS DataFactory|否|  
   
- 下表列出了包含与 Windows DAC/MDAC 的提供程序，并指示它们是否可安全执行脚本。  
+ 下表列出了包括与 Windows DAC/MDAC 的提供程序，并指示它们是否可安全执行脚本。  
   
-|提供程序|用于脚本编写的安全？|  
+|提供程序|用于编写脚本安全？|  
 |--------------|-------------------------|  
-|形状|是|  
-|保留|是|  
-|Remote|是|  
-|OLE DB Provider for SQL Server (SQLOLEDB)|“否”|  
-|OLE DB Provider for ODBC （msdasql） 一起使用|“否”|  
+|形状|用户帐户控制|  
+|持久保存|用户帐户控制|  
+|Remote|用户帐户控制|  
+|OLE DB Provider for SQL Server (SQLOLEDB)|否|  
+|OLE DB Provider for ODBC (MSDASQL)|否|  
   
 ## <a name="odbc-data-sources"></a>ODBC 数据源  
- 脚本和非脚本 ADO 代码之间的一个显著区别是 ODBC 数据源，如果使用。 对于非脚本应用程序，你可以在 ODBC 数据源管理器中创建用户 DSN。 对于在 IIS 下运行的脚本，你必须创建系统 DSN;否则你的脚本将无法识别你创建的数据源。 这适用于使用 Microsoft OLE DB 访问接口，对于通过 Microsoft IIS ODBC 任何 ADO 脚本应用程序。  
+ 脚本编写和非脚本编写的 ADO 代码之间的一个显著区别是 ODBC 数据源时，如果使用。 对于非脚本编写的应用程序，可以创建一个用户 DSN 中 ODBC 数据源管理器。 对于在 IIS 下运行的脚本，您必须创建系统 DSN;否则脚本将无法识别创建的数据源。 这适用于使用 Microsoft OLE DB Provider for ODBC 通过 Microsoft IIS 任何 ADO 脚本应用程序。  
   
 ## <a name="referencing-the-ado-library"></a>引用 ADO 库  
- 与脚本语言不适用。  
+ 使用脚本语言不适用。  
   
 ## <a name="handling-events"></a>处理事件  
- 与脚本语言不适用。  
+ 使用脚本语言不适用。  
   
- 以下主题包含有关中使用 ADO 的脚本语言的详细信息：  
+ 以下主题包含有关使用 ADO 与脚本语言的更具体信息：  
   
 -   [VBScript ADO 编程](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   

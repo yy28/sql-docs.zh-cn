@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 210f5b0af98cd16efa12d0b8ffc7ba0ae5f9efcf
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 378bcd39420d19ab095eb4c9334d044479180f97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47668275"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>合并包工作流中的数据事件探查任务
   数据事件探查和清除在其早期阶段不适合作为自动过程。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，通常需要对数据事件探查任务的输出进行直观的分析和人为判断，以确定报告的冲突是有意义还是过多。 即使在确认了数据质量问题之后，仍然需要通过周详的计划来确定执行清除的最佳方法。  

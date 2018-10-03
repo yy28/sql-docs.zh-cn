@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 61d8e6684e2d8880541e29fa73e82b170de87f1d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 5111dc665554f7ee3612d512166c12a6f7b02a65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658755"
 ---
 # <a name="extensions-ssrs"></a>扩展插件 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的报表服务器使用扩展插件来模块化其为身份验证、数据处理、报表呈现和报表传递接受的输入或输出的类型。 这便于现有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安装利用行业中的新的软件标准，例如新的身份验证架构或自定义数据源类型。 报表服务器支持自定义的身份验证扩展插件、数据处理扩展插件、报表处理扩展插件、呈现扩展插件和传递扩展插件，并且支持在 RSReportServer.config 配置文件中向用户提供的可配置的扩展插件。 例如，您可以限制报表查看器允许使用的导出格式。 报表服务器至少分别需要一个身份验证扩展插件、数据处理扩展插件和呈现扩展插件。 传递扩展插件和报表处理扩展插件是可选的，但如果希望支持报表分发或自定义控件，则是必需的。  

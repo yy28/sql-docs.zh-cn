@@ -1,13 +1,11 @@
 ---
-title: 查看对象 (ADOX) |Microsoft 文档
+title: 查看对象 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,30 +13,29 @@ f1_keywords:
 helpviewer_keywords:
 - View object [ADOX]
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 61b3f81a23c3bb35921e0374eea44e58a31dcd4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287436"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696856"
 ---
 # <a name="view-object-adox"></a>视图对象 (ADOX)
-表示经过筛选的记录或一个虚拟表集。 用 ADO 结合使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  
+表示一组筛选的记录或一个虚拟表。 与 ADO 一起使用时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，**视图**对象可以用于添加、 删除或修改视图。  
   
-## <a name="remarks"></a>Remarks  
- 视图是从其他数据库表或视图创建一个虚拟表。 **视图**对象允许你创建一个视图，而无需知道，或使用提供程序的"创建视图"语法。  
+## <a name="remarks"></a>备注  
+ 视图是从其他数据库表或视图创建一个虚拟表。 **视图**对象使用户可以创建一个视图，而无需知道，或使用提供程序的"创建视图"语法。  
   
  使用的属性**视图**对象，你可以：  
   
 -   指定与视图[名称](../../../ado/reference/adox-api/name-property-adox.md)属性。  
   
--   指定 ADO**命令**可以用于添加、 删除或修改具有的视图对象[命令](../../../ado/reference/adox-api/command-property-adox.md)属性。  
+-   指定 ADO**命令**对象，它可用于添加、 删除或修改与视图[命令](../../../ado/reference/adox-api/command-property-adox.md)属性。  
   
--   返回与日期信息[时间](../../../ado/reference/adox-api/datecreated-property-adox.md)和[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性。  
+-   返回日期信息与[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)并[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)属性。  
   
  本部分包含以下主题。  
   
@@ -46,7 +43,7 @@ ms.locfileid: "35287436"
   
 ## <a name="see-also"></a>请参阅  
  [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [视图追加方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [视图集合，CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [视图删除方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [视图 Append 方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [视图集合、 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [视图 Delete 方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

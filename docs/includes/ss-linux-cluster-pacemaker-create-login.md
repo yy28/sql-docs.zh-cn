@@ -8,14 +8,7 @@
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin]
    ```
 
-   或者，可以在更精细的级别设置权限。 Pacemaker 登录需要 ALTER、CONTROL 和 VIEW DEFINITION PERMISSION 来管理可用性组，并需要 VIEW SERVER STATE 来登录以运行 sp_server_diagnostics。 有关详细信息，请参阅 [GRANT 可用性组权限 (Transact-SQL)](http://msdn.microsoft.com/library/hh968934.aspx) 和 [sp_server_diagnostic 权限](https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql#permissions)。
-
-   以下 Transact-SQL 仅授予 Pacemaker 登录所需的权限。 在下面的语句中，“ag1”是将添加为群集资源的可用性组的名称。
-
-   ```Transact-SQL
-   GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO pacemakerLogin
-   GRANT VIEW SERVER STATE TO pacemakerLogin
-   ```
+  在创建可用性组时，pacemaker 用户需要 ALTER、 控件和 VIEW DEFINITION 权限的可用性组中，创建它之后，但之前的任何节点添加到其中。
 
 1. **在所有 SQL Server 上，保存 SQL Server 登录名的凭据**。
 

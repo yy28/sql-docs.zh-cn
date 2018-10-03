@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_tables
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 855a9a5bde98703909a01b44721c5972c1eefff2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608816"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**FULLTEXT_INDEX_ACTIVE**|**int**|指定该表中为全文索引标记的列是否适于查询：<br /><br /> 0 = 非活动<br /><br /> 1 = 活动|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|全文索引数据所在的全文目录。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  执行权限默认授予的成员**公共**角色。  
   
 ## <a name="examples"></a>示例  

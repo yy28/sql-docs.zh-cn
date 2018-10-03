@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_OAMethod
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28e14076113b89c980756d42ddc126f75792d1a4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9b0e2e11dd905f48eaed16e0c083f11bde103a80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035097"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704435"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *方法名称*  
  要调用的 OLE 对象的方法名。  
   
- *returnvalue***输出**   
+ *returnvalue***输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
  如果该方法返回单个值，指定的局部变量*returnvalue*，这会返回该方法在本地变量中，返回值或不指定*returnvalue*，它将返回方法作为单列、 单行结果集返回到客户端的值。  
@@ -107,7 +103,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此外可以使用**sp_OAMethod**获取属性值。  
   
 ## <a name="permissions"></a>Permissions  

@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10c1d69e243dded003ba9e65bb65a16a9ebc2a46
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 65c51839f1a2204f7b5b105c637112c3ca23378c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680395"
 ---
 # <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +34,10 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @project _name = ] project_name  
- 项目的名称。 project_name 为 nvarchar(128)。  
+ 项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ @object_version_lsn = ] object_version_lsn  
  项目的版本。 object_version_lsn 为 bigint。  
@@ -53,14 +50,14 @@ catalog.restore_project [ @folder_name = ] folder_name
   
  如果无法将项目还原到指定的文件夹，则返回 NO RESULT SET。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
