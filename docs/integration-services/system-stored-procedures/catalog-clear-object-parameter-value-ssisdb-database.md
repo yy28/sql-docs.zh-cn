@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 54c0b537541db593f8c7053f0b66cf6bb4f109ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602725"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +35,13 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ \@folder_name = ] *folder_name*  
- 包含项目的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含项目的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ \@project_name = ] *project_name*  
- 项目的名称。 project_name 为 nvarchar(128)。  
+ 项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ \@object_type = ] *object_type*  
- 对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 object_type 为 smallInt。  
+ 对象的类型。 有效值包括 `20`（对应于项目）和 `30`（对应于包）。 *object_type* 为 **smallInt**。  
   
  [ \@ object _name = ] *object _name*  
  包的名称。 *object _name* 为 **nvarchar(260)**。  
@@ -63,9 +60,9 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   针对项目的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能导致 clear_object_parameter 存储过程引发错误的情况：  

@@ -5,23 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eff8ea30f9f0b76afa43e50209d8014016e7a7a5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c09af6785d83c0e7e953dac6f6fa53120489cc9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650335"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>第 3 课：使用 SSIS 添加日志记录
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含日志记录功能，可通过提供任务和容器事件跟踪监控包执行情况以及进行故障排除。 日志记录功能非常灵活，可以在包级别或在包中的各个任务和容器上启用。 可以选择要记录的事件，也可以对单个包创建多个日志。  
@@ -46,7 +41,7 @@ ms.locfileid: "35402469"
 ## <a name="lesson-tasks"></a>课程任务  
 本课程包含以下任务：  
   
--   [步骤 1：复制 Lesson 2 包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [步骤 1：复制第 2 课包](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [步骤 2：添加并配置日志记录](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   

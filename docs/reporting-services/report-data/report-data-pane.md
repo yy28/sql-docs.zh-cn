@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10039"
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa9614a3-12e7-4e17-9de2-fafccd1f5f9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d751cb78db33d1decaaad7f61b445ec6bbfc3681
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 03fb902cc4150ef9ab0eed9774a3c67fe427de6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611516"
 ---
 # <a name="report-data-pane"></a>“报表数据”窗格
   使用 **“报表数据”** 窗格可以查看报表中当前定义的参数、数据源、数据集、字段集合和图像。 该报表数据窗格会显示表示报表中数据的项的层次结构视图。 顶级节点表示内置字段、参数、图像和数据源引用。 展开每个节点可以查看各数据项。 例如，展开某个数据源节点时，会显示为该数据源定义的数据集。 展开数据集时，会显示其字段集合。 将这些数据项拖放到报表设计图面可将数据与报表页中的报表项链接。  
