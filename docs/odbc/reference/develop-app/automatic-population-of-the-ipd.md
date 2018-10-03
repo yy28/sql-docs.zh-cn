@@ -1,13 +1,11 @@
 ---
-title: 自动填充的 IPD |Microsoft 文档
+title: 自动填充 IPD |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - ipd [ODBC]
 - allocating and freeing descriptors [ODBC]
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9e3d80ea280e4487f5443bca8152a3a541dfbd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767305"
 ---
-# <a name="automatic-population-of-the-ipd"></a>自动填充的 IPD
-某些驱动程序都能准备好参数化的查询之后设置 IPD 的字段。 描述符字段自动填充有关参数，包括数据类型、 精度、 小数位数和其他特征的信息。 这相当于支持**SQLDescribeParam**。 它还没有发现它，例如当应用程序不知道的参数以进行即席查询时的其他方法时，此信息可能特别有价值的应用程序。  
+# <a name="automatic-population-of-the-ipd"></a>自动填充 IPD
+某些驱动程序都能参数化的查询已准备好后设置 IPD 的字段。 有关参数，包括数据类型、 精度、 小数位数和其他特征的信息自动填充的描述符字段。 这相当于支持**SQLDescribeParam**。 具有其他方式来发现它，例如使用应用程序不知道的参数执行即席查询的时间时，此信息可以是特别有价值的应用程序。  
   
- 应用程序确定的驱动程序是否通过调用支持自动填充**SQLGetConnectAttr**与*属性*SQL_ATTR_AUTO_IPD。 如果返回 SQL_TRUE，驱动程序支持它，应用程序可以通过将 SQL_ATTR_ENABLE_AUTO_IPD 语句属性设置为 SQL_TRUE 启用它。  
+ 应用程序确定驱动程序是否支持自动填充通过调用**SQLGetConnectAttr**与*属性*SQL_ATTR_AUTO_IPD。 如果返回 SQL_TRUE，则驱动程序支持它并且应用程序可以通过将 SQL_ATTR_ENABLE_AUTO_IPD 语句属性设置为 SQL_TRUE 启用它。  
   
- 支持并启用自动填充程序，该驱动程序将填充的字段的 IPD 包含参数标记的 SQL 语句已准备好通过调用之后**SQLPrepare**。 应用程序可以通过调用来检索此信息**SQLGetDescField**或**SQLGetDescRec**，或**SQLDescribeParam**。 若要将绑定参数的最适合应用程序缓冲区，或若要为其指定的数据转换，应用程序可以使用信息。  
+ 包含参数标记的 SQL 语句已准备好通过调用后，该驱动程序时支持和启用自动填充，填充 IPD 的字段**SQLPrepare**。 应用程序可以检索此信息通过调用**SQLGetDescField**或**SQLGetDescRec**，或**SQLDescribeParam**。 应用程序可以使用信息，以将为参数最合适的应用程序缓冲区绑定或为其指定的数据转换。  
   
- 自动填充的 IPD 可能会产生对性能产生负面影响。 应用程序可以将其关闭由正在 SQL_ATTR_ENABLE_AUTO_IPD 语句属性重置为 SQL_FALSE （默认值）。
+ 自动填充 IPD 可能会产生对性能产生负面影响。 应用程序可以将其关闭由正在 SQL_ATTR_ENABLE_AUTO_IPD 语句属性重置为 SQL_FALSE （默认值）。

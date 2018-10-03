@@ -5,21 +5,18 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c34761cfb2c627ed93a01f30e0168bbe5de0e167
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: aa089bb523fd3fe6787dba911cb314aaf71a520f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749769"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +40,10 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>参数  
  [@folder_name =] folder_name  
- 包含要执行的包的文件夹名称。 folder_name 为 nvarchar(128)。  
+ 包含要执行的包的文件夹名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [@project_name =] project_name  
- 包含要执行的包的项目的名称。 project_name 为 nvarchar(128)。  
+ 包含要执行的包的项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [@package_name =] package_name  
  包含要执行的包的名称。 package_name 为 nvarchar(260)。  
@@ -101,24 +98,24 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 EXECUTE 权限，如果适用，则需要针对引用环境的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
 
  如果 @runinscaleout 为 1，则此存储过程需要下列权限之一：
  
--   ssis_admin 数据库角色的成员资格
+-   **ssis_admin** 数据库角色的成员资格
 
 -   **ssis_cluster_executor** 数据库角色的成员资格
 
--   sysadmin 服务器角色的成员资格
+-   **sysadmin** 服务器角色的成员资格
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可引发错误或警告的情况：  

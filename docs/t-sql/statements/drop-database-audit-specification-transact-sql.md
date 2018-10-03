@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database audit specification
 - DROP DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3feb0b24e1a92a0e681ece96db0d615c7ce5ee3b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 63a88b1b389f9e3e3df5de3634ead91a3f757a18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782778"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742075"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  DROP DATABASE AUDIT SPECIFICATION 删除审核规范的元数据，但在发出 DROP 命令之前不会删除所收集的审核数据。 必须先使用 `ALTER DATABASE AUDIT SPECIFICATION` 将数据库审核规范状态设置为 OFF，然后才可以删除该规范。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  具有 ALTER ANY DATABASE AUDIT 权限的用户可以删除数据库审核规范。  
   
 ## <a name="examples"></a>示例  

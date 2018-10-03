@@ -1,13 +1,11 @@
 ---
-title: 流属性 |Microsoft 文档
+title: Stream 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282546"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822007"
 ---
-# <a name="stream-property"></a>流属性
-获取或设置 OLE DB**流**对象从/上**ADOStreamConstruction**对象。  
+# <a name="stream-property"></a>Stream 属性
+获取或设置 OLE DB **Stream**对象从/上**ADOStreamConstruction**对象。  
   
  读/写。  
   
@@ -44,10 +41,10 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parameters  
  *ppStream*  
- 指向 OLE DB**流**对象。  
+ 指向 OLE DB **Stream**对象。  
   
  *pStream*  
- OLE DB**流**对象。  
+ OLE DB **Stream**对象。  
   
 ## <a name="return-values"></a>返回值  
  此属性方法返回的标准的 HRESULT 值。 这包括，则为 S_OK 和 E_FAIL。  

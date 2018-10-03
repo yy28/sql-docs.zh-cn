@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_primary
@@ -21,12 +18,12 @@ ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07b8769d1c466b9f70f0a84cfab53dea518227c2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 04e1fb52d74366893ff43deb9fabad9cac7135cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843887"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ sp_help_log_shipping_monitor_primary
 |**last_backup_date_utc**|上一次在主数据库上执行事务日志备份操作的时间和日期，使用协调世界时表示。|  
 |**history_retention_period**|日志传送历史记录在删除前保留在给定主数据库中的时间（分钟）。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_help_log_shipping_monitor_primary**必须从运行**主**在监视服务器上的数据库。  
   
 ## <a name="permissions"></a>Permissions  

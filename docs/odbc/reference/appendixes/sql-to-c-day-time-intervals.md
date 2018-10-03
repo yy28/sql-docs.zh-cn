@@ -1,13 +1,11 @@
 ---
-title: 为 c： 一天时间间隔的 SQL |Microsoft 文档
+title: 从 SQL 到 c： 日期时间间隔 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], day-time intervals
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - data conversions from SQL to C types [ODBC], day-time intervals
 - intervals [ODBC], converting
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0155a2ac3d07ce4d31562abdd0094d41467ca192
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e6629ca60201d701eab3c487e68cb4faad04087
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776355"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>为 c： 一天时间间隔的 SQL
-一天时间间隔 ODBC SQL 数据类型的标识符都是：  
+# <a name="sql-to-c-day-time-intervals"></a>从 SQL 到 C：日期时间间隔
+日期时间间隔 ODBC SQL 数据类型的标识符是：  
   
  SQL_INTERVAL_DAY  
   
@@ -49,23 +46,23 @@ ms.locfileid: "32910612"
   
  SQL_INTERVAL_MINUTE_TO_SECOND  
   
- 下表显示 ODBC C 数据类型天时间间隔 SQL 数据可能转换到的目标。 列和表中的条款的说明，请参阅[转换数据从 SQL C 数据类型到](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+ 下表显示 ODBC C 数据类型可能会转换为日期时间间隔 SQL 数据。 列和表中的条款的说明，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|所有的一天时间 C 间隔类型|不会被截断的尾随字段部分<br /><br /> 尾随字段部分被截断<br /><br /> 前导精度不是目标的不够大，无法从源中保存数据|Data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度<br /><br /> 数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT [b] SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|间隔精度是单个字段和数据转换而不发生截断<br /><br /> 间隔精度是单个字段和截断小数<br /><br /> 间隔精度是单个字段的和已截断整个<br /><br /> 间隔精度不是单个字段|Data<br /><br /> 截断的数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 数据的长度<br /><br /> 数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 < *BufferLength*<br /><br /> 整体 （而不是小数） 数字个数 > = *BufferLength*|Data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|所有日期时间 C 间隔类型|不会被截断尾随的字段部分<br /><br /> 截断尾随的字段部分<br /><br /> 前导精度是目标的不足够大以保存数据源中|data<br /><br /> 截断的数据<br /><br /> 未定义|数据的长度<br /><br /> 数据的长度<br /><br /> 未定义|不适用<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT [b] 为 SQL_C_UTINYINT [b] SQL_C_USHORT [b] SQL_C_SHORT [b] SQL_C_SLONG [b] SQL_C_ULONG [b] SQL_C_NUMERIC [b] SQL_C_BIGINT [b]|时间间隔精度是单个字段和数据转换而无需截断<br /><br /> 时间间隔精度是单个字段，并截断小数部分<br /><br /> 时间间隔精度是单个字段或整个已截断<br /><br /> 时间间隔精度不是单个字段|data<br /><br /> 截断的数据<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> 数据的长度<br /><br /> 数据的长度<br /><br /> C 数据类型的大小|不适用<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_CHAR|字符字节长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+_C_WCHAR|字符长度 < *BufferLength*<br /><br /> 数字位数 （而不是小数部分） 的整个 < *BufferLength*<br /><br /> 数字位数整体 （而不是小数） > = *BufferLength*|data<br /><br /> 截断的数据<br /><br /> 未定义|C 数据类型的大小<br /><br /> C 数据类型的大小<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
   
- 可以为任何一天时间间隔 C 类型转换 [a] 的一天时间间隔 SQL 类型。  
+ [a] 的日期时间间隔 SQL 类型可以转换为任何一天时间间隔 C 类型。  
   
- [b] 如果间隔精度，单个字段 （一个天、 小时、 分钟或秒的） 间隔 SQL 类型可转换为任何具体的数字 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_USHORT、 SQL_C_SHORT、 SQL_C_SLONG、 SQL_C_ULONG 或 SQL_C_NUMERIC）。  
+ [b] 如果时间间隔精度为单个字段 （天、 小时、 分钟或秒的一个），可将 SQL 类型的时间间隔转换任何精确数值 （SQL_C_STINYINT、 SQL_C_UTINYINT、 SQL_C_USHORT、 SQL_C_SHORT、 SQL_C_SLONG、 SQL_C_ULONG 或 SQL_C_NUMERIC）。  
   
- 一个时间间隔 SQL 类型的默认转换是相应的 C 间隔数据类型。 应用程序然后将绑定的列或参数 （或设置 SQL_DESC_DATA_PTR 字段中的 ARD 相应的记录） 以指向初始化 SQL_INTERVAL_STRUCT 结构 (或将指针传递给 SQL_ INTERVAL_STRUCT 结构用作*TargetValuePtr*对的调用中的自变量**SQLGetData**)。  
+ SQL 类型的时间间隔的默认转换为相应的 C 间隔数据类型。 应用程序然后将列或参数绑定 （或 ARD 的相应记录中设置 SQL_DESC_DATA_PTR 字段） 以指向已初始化 SQL_INTERVAL_STRUCT 结构 (或将指针传递给SQL_INTERVAL_STRUCT结构*TargetValuePtr*的调用中的自变量**SQLGetData**)。  
   
- 下面的示例演示如何将数据从类型 SQL_INTERVAL_DAY_TO_MINUTE 的列传输到 SQL_INTERVAL_STRUCT 结构以便返回为 DAY_TO_HOUR 间隔。  
+ 下面的示例演示如何将数据从 SQL_INTERVAL_DAY_TO_MINUTE 类型的列的传输到 SQL_INTERVAL_STRUCT 结构，以便返回 DAY_TO_HOUR 时间间隔。  
   
 ```  
 SQL_INTERVAL_STRUCT is;  

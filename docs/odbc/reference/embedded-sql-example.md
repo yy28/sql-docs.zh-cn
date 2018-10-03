@@ -1,32 +1,29 @@
 ---
-title: 嵌入式 SQL 示例 |Microsoft 文档
+title: 嵌入式 SQL 示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
 - SQL statements [ODBC], embedded SQL
 - embedded SQL [ODBC]
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8983bcabb791c99974055fa718bdd89057e2d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750471"
 ---
-# <a name="embedded-sql-example"></a>嵌入式的 SQL 的示例
-下面的代码是一个简单嵌入的 SQL 程序，用 C 语言编写程序演示很多，但不是全部的嵌入 SQL 技术。 程序提示用户输入订单号、 检索客户编号、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  
+# <a name="embedded-sql-example"></a>嵌入式 SQL 示例
+下面的代码是一个简单嵌入式的 SQL 的程序，用 c 语言编写该程序说明了很多，但不是全部的嵌入式 SQL 技术。 该程序提示用户输入订单号、 检索的客户数量、 销售人员和订单的状态，并在屏幕上显示检索到的信息。  
   
 ```  
 int main() {  
@@ -68,12 +65,12 @@ bad_number:
 }  
 ```  
   
- 请注意有关此程序：  
+ 请注意有关此程序的以下信息：  
   
--   **承载变量**括在部分中声明的主机变量**开始声明部分**和**结尾声明部分**关键字。 每个主机变量名称作为前缀的嵌入式 SQL 语句中出现冒号 （:）。 冒号允许预编译器来区分主机变量和数据库对象，例如表和列，具有相同的名称。  
+-   **托管变量**括起来的一个部分中声明的主机变量**开始声明一节**并**结尾声明部分**关键字。 每个主机变量名称作为前缀的嵌入式 SQL 语句中出现时冒号 （:）。 冒号允许使用预编译器来区分主机变量和数据库对象，如表和列，具有相同的名称。  
   
--   **数据类型**DBMS 和主机语言支持的数据类型可以是有很大差异。 这会影响主机变量，因为它们发挥双重作用。 在一方面，主机变量是程序变量，声明和操作由主机语言语句。 另一方面，它们用于嵌入的 SQL 语句中检索数据库数据。 如果不存在主机语言类型对应于 DBMS 数据类型，DBMS 自动将数据转换。 但是，由于每个 DBMS 具有其自己的规则和转换过程与关联的特性，主机变量类型必须慎重选择。  
+-   **数据类型**DBMS 和主机语言支持的数据类型会大不相同。 这会影响主机变量，因为它们发挥双重作用。 一方面，主机变量是程序变量，声明和操作主机语言语句。 但是，它们用于嵌入的 SQL 语句中检索数据库数据。 如果没有主机语言类型的 DBMS 数据类型相对应，DBMS 将会自动转换数据。 但是，由于每个 DBMS 具有其自己的规则和转换过程与关联的特性，主机变量类型必须慎重选择。  
   
--   **错误处理**DBMS 向应用程序通过 SQL 通信区域，或 SQLCA 报告运行时错误。 在前面的代码示例中，第一个嵌入的 SQL 语句是包括 SQLCA。 这将告知预编译器在程序中包括 SQLCA 结构。 每当程序将处理返回的 DBMS 错误，这是必需的。 WHENEVER...GOTO 语句告知预编译器生成的分支到特定的标签错误发生的错误处理代码。  
+-   **错误处理**DBMS 向应用程序通过 SQL 通信区域中或 SQLCA 报告运行时错误。 在前面的代码示例中，第一个嵌入的 SQL 语句是包括 SQLCA。 这将告知预编译器，若要在程序中包括 SQLCA 结构。 这是必需的只要该程序将处理返回的 DBMS 错误。 WHENEVER...GOTO 语句告知预编译器生成错误时的特定标签的分支发生的错误处理代码。  
   
--   **单独选择**用于返回数据的语句是单独的 SELECT 语句; 也就是说，它返回单个行的数据。 因此，此代码示例不声明或不使用游标。
+-   **单一实例选择**用来返回数据的语句是一个单独的 SELECT 语句; 也就是说，它返回单个行的数据。 因此，代码示例不声明或使用游标。

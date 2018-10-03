@@ -1,32 +1,29 @@
 ---
-title: 群集属性示例 （VC + +） |Microsoft 文档
+title: Clustered 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 091bef85e3312507c3924d216e65e125956c4bce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827572"
 ---
-# <a name="clustered-property-example-vc"></a>Clustered 的属性示例 （VC + +）
-此示例演示[聚集](../../../ado/reference/adox-api/clustered-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 请注意，Microsoft Jet 数据库不支持聚集的索引，因此本示例将返回**False**为**聚集**属性中的所有索引*Northwind*数据库。  
+# <a name="clustered-property-example-vc"></a>Clustered 属性示例 (VC++)
+此示例演示[Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 请注意，Microsoft Jet 数据库不支持聚集的索引，因此此示例将返回**False**有关**Clustered**属性中的所有索引*Northwind*数据库。  
   
 ```  
 // BeginClusteredCpp.cpp  

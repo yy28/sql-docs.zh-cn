@@ -1,28 +1,25 @@
 ---
-title: 批处理 |Microsoft 文档
+title: 批处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], batch processing
 - batches [ODBC], interoperable applications
 ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ccac736bed438ed4df161bbe7ec18199182e7541
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c4aa7b22e2d7b419db0e80d723ab7b0d875c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778583"
 ---
 # <a name="batch-processing"></a>批处理
-支持的 SQL 语句的批次不是大范围，因此可互操作的应用程序应在有条件地要么根本不使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。
+对 SQL 语句的批处理支持不是被广泛使用，因此可互操作应用程序有条件地或根本不应使用它们。 有关详细信息，请参阅[执行批处理](../../../odbc/reference/develop-app/executing-batches.md)。

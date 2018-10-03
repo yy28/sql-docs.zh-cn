@@ -1,13 +1,11 @@
 ---
-title: 连接关闭方法，表类型的属性示例 (VB) |Microsoft 文档
+title: 连接的 Close 方法、 表 Type 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADOX], Visual Basic example
 - Type property [ADOX], Visual Basic example
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749345"
 ---
-# <a name="connection-close-method-table-type-property-example-vb"></a>连接关闭方法，表类型的属性示例 (VB)
-设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性**执行任何操作**应关闭给该目录的连接。 关联的集合将为空。 将孤立从目录中的架构对象创建的任何对象。 已缓存这些对象上的任何属性仍将可用，但尝试读取属性需要访问接口的调用将失败。  
+# <a name="connection-close-method-table-type-property-example-vb"></a>连接的 Close 方法、表 Type 属性示例 (VB)
+设置[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)属性设置为**Nothing**应关闭连接到目录。 关联的集合将为空。 从目录中的架构对象创建的任何对象都被孤立。 对已缓存这些对象的任何属性仍将可用，但尝试读取属性需要调用提供程序将失败。  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -70,7 +67,7 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- 关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)用于打开该目录的对象应具有相同的效果与设置**ActiveConnection**属性**执行任何操作**。  
+ 关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象，用于打开该目录应具有相同的效果与设置**ActiveConnection**属性设置为**Nothing**。  
   
 ```  
 Attribute VB_Name = "Connection"  

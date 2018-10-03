@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_logininfo_TSQL
@@ -21,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c10a914bc69b60b1cfd6cd3e88cae97a73f9aa0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843825"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +67,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**映射的登录名**|**sysname**|拥有用户特权的用户帐户**映射登录名**显示了映射的登录名的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]尝试前面添加的映射的规则使用的域名与此帐户登录时使用。|  
 |**权限路径**|**sysname**|使帐户得到访问权限的组成员身份。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果*account_name*指定，则**xp_logininfo**报告指定的 Windows 用户或组的最高权限级别。 如果 Windows 用户同时拥有系统管理员和域用户访问权限，则会报告为系统管理员。 如果该用户是多个具有相等特权级别的 Windows 组的成员，则只报告第一个被授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限的组。  
   
  如果*account_name*是有效的 Windows 用户或组不具有关联的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名，则返回一个空结果集。 如果*account_name*无法识别为有效的 Windows 用户或组，返回一条错误消息。  

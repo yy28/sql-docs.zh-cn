@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_get_rpo_duration
@@ -19,12 +17,12 @@ ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50b92b70a0ea3045236c6084f046f1d2c0c88146
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0882344345c315f13d6cca11b7a1d1db88c9417b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769695"
 ---
 # <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +45,10 @@ sp_rda_get_rpo_duration @durationinhours output
  *@durationinhours*    
   是的小时数 （非 null 的整数值） 的 SQL Server 可在保留当前已启用延伸的数据库的已迁移数据。    
     
-## <a name="permissions"></a>权限    
+## <a name="permissions"></a>Permissions    
  需要 db_owner 权限。    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
  通过运行更改该值[sys.sp_rda_set_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)。    
     
 ## <a name="see-also"></a>请参阅    

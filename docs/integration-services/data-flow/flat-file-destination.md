@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.flatfiledest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a2ce50a3c40d6c9d9b1a0ff83901fc47ad087c7
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a1b44ed7bde897b97018731e99f9286c8a2e7b55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789797"
 ---
 # <a name="flat-file-destination"></a>平面文件目标
   平面文件目标将数据写入文本文件。 文本文件可以为带分隔符格式、固定宽度格式、固定宽度并使用行分隔符格式或右边未对齐格式。  
@@ -60,7 +57,7 @@ ms.locfileid: "35411789"
 ## <a name="flat-file-destination-editor-connection-manager-page"></a>平面文件目标编辑器（“连接管理器”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“连接管理器”** 页为目标选择平面文件连接，以及指定是覆盖现有目标文件还是追加到现有目标文件。 平面文件目标可以将数据写入文本文件。 该文本文件可以采用带分隔符、固定宽度、带有行分隔符的固定宽度或右边未对齐的格式。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **平面文件连接管理器**  
  使用列表框选择现有的连接管理器，或单击“新建”创建新的连接管理器。  
   
@@ -83,7 +80,7 @@ ms.locfileid: "35411789"
 ## <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作将可用输入列映射到目标列。  
   

@@ -1,27 +1,23 @@
 ---
-title: 查看重播结果 |Microsoft 文档
+title: 查看重播结果 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf4c08dee623e659e04e3be97f8e015daa57aa8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073954"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822205"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +59,9 @@ ms.locfileid: "33073954"
 ## <a name="column-descriptions-for-result-trace"></a>跟踪结果的列说明  
  下表说明了结果跟踪数据的各列。  
   
-|数据列名称|数据类型|Description|列 ID|  
+|数据列名称|数据类型|描述|列 ID|  
 |----------------------|---------------|-----------------|---------------|  
-|EventClass|**nvarchar**|事件类的名称。|@shouldalert|  
+|EventClass|**nvarchar**|事件类的名称。|1|  
 |EventSequence|**bigint**|对于提供程序错误、内部错误和警告，这是对应于错误或警告的捕获事件序列。<br /><br /> 对于所有其他事件类，这是原始跟踪数据中的事件序列。|2|  
 |ReplaySequence|**bigint**|对于提供程序错误、内部错误和警告，这是对应于错误或警告的重播事件序列。<br /><br /> 对于所有其他事件类，这是在重播期间分配的事件的序列。|3|  
 |TextData|**ntext**|TextData 的内容取决于 EventClass。<br /><br /> 对于审核登录和 ExistingConnection，这是用于连接的设置选项。<br /><br /> 对于 SQL:BatchStarting，这是批处理请求的正文。<br /><br /> 对于 RPC:Starting，这是调用的存储过程。<br /><br /> 对于重播设置事件，此列包含在重播配置文件中定义的设置。<br /><br /> 对于重播统计信息事件，这包含以下信息：<br /><br /> -重播目标 SQL Server<br /><br /> -可重播事件的总数<br /><br /> -提供程序错误的数量<br /><br /> -内部错误的数量<br /><br /> -内部警告<br /><br /> -总错误数<br /><br /> -整体通过率<br /><br /> -重播时间 (HH:MM:SS:MMM)<br /><br /> 对于重播结果集事件，这将显示返回结果列标题的列表。<br /><br /> 对于重播结果行事件，这将显示该行所有列的返回值。<br /><br /> 对于重播内部警告和重播提供程序错误，此列包含提供程序警告或错误。|4|  

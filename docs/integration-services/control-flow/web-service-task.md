@@ -5,9 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2ce926659bd322dfc24c105a1c684ff087944352
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757545"
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -85,7 +82,7 @@ ms.locfileid: "35411039"
 ## <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **HTTPConnection**  
  在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   
@@ -132,7 +129,7 @@ ms.locfileid: "35411039"
 ## <a name="web-service-task-editor-input-page"></a>Web 服务任务编辑器（“输入”页）
   可以使用 **“Web 服务任务编辑器”** 对话框的 **“输入”** 页，指定 Web 服务、Web 方法和作为输入提供给 Web 方法的值。 可通过直接在“值”列中键入字符串或在“值”列中选择变量来提供这些值。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **服务**  
  从列表中选择用来执行 Web 方法的 Web 服务。  
   

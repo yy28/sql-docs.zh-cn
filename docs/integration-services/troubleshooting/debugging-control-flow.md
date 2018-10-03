@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.setbreakpoints.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b117289c9877835d6c74d48497152021b47dc5ad
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: fcc1dd9aa113c53071363beefc5d9ad238144e28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796135"
 ---
 # <a name="debugging-control-flow"></a>调试控制流
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features 和 tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中控制流故障的功能和工具。  
@@ -144,7 +141,7 @@ ms.locfileid: "35405299"
 ## <a name="set-breakpoints"></a>“设置断点”
   可以使用 **“设置断点”** 对话框，指定要启用断点和控制断点行为的事件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **已启用**  
  选择此选项可以对事件启用断点。  
   

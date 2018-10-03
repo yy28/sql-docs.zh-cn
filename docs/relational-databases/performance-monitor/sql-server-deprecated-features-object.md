@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748396"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server，Deprecated Features 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +38,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 下表描述了 SQL Server **Deprecated Features** 性能对象。
 
-|**SQL Server Deprecated Features 计数器**|Description|  
+|**SQL Server Deprecated Features 计数器**|描述|  
 |-------------|-----------------|  
 |**用法**|SQL Server 自上次启动以来的功能使用情况。|
   
  下表描述了 SQL Server Deprecated Features 计数器实例。  
   
-|SQL Server Deprecated Features 计数器实例|Description|  
+|SQL Server Deprecated Features 计数器实例|描述|  
 |------------------------------------------------------|-----------------|  
 |“#”和“##”作为临时表和存储过程的名称|遇到不包含 # 以外的任何字符的标识符。 请至少使用一个其他字符。 每次编译时发生。|  
 |“::”函数调用语法|表值函数遇到 :: 函数调用语法。 替换为 `SELECT column_list FROM` *< function_name>*`()`。 例如，将 `SELECT * FROM ::fn_virtualfilestats(2,1)` 替换为 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次编译时发生。|  

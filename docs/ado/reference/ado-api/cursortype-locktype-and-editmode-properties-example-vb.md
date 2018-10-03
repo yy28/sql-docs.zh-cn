@@ -1,13 +1,11 @@
 ---
-title: 游标类型、 LockType，以及 EditMode 属性示例 (VB) |Microsoft 文档
+title: CursorType、 LockType、 和 EditMode 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - CursorType property [ADO], Visual Basic example
 - LockType property [ADO], Visual Basic example
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e624b9b45ae02524cba20d6a01915818b5589fa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c77629975b495d43e21f5d985264ed12f42dd56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277316"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838215"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>游标类型、 LockType，以及 EditMode 属性示例 (VB)
-此示例演示如何设置[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性在打开之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各种条件下的属性。 有关运行此过程需要 EditModeOutput 函数。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>CursorType、 LockType、 和 EditMode 属性示例 (VB)
+此示例演示如何设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)并[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性，然后打开才能[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)各种条件下的属性。 若要运行此过程需要 EditModeOutput 函数。  
   
 ```  
 'BeginEditModeVB  
@@ -127,7 +124,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [游标类型属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
  [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
  [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   

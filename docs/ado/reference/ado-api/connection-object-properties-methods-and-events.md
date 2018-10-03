@@ -1,27 +1,24 @@
 ---
-title: 连接对象的属性、 方法和事件 |Microsoft 文档
+title: 连接对象的属性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744025"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>连接对象的属性、 方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
@@ -49,10 +46,10 @@ ms.locfileid: "35276946"
   
  [State 属性](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Version 属性](../../../ado/reference/ado-api/version-property-ado.md)  
+ [版本属性](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>方法  
- [BeginTrans、 CommitTrans 和不方法](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [BeginTrans、 CommitTrans 和 RollbackTrans 方法](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
  [Cancel 方法](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
@@ -67,7 +64,7 @@ ms.locfileid: "35276946"
 ## <a name="events"></a>事件  
  [BeginTransComplete、 CommitTransComplete 和 RollbackTransComplete 事件](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete 并断开连接事件](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete 和 Disconnect 事件](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [ExecuteComplete 事件](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   

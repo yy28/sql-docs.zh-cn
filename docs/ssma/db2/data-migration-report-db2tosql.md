@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 689c37383a9fee4e0bd38cedb33009d3406c1677
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827045"
 ---
 # <a name="data-migration-report-db2tosql"></a>数据迁移报表 (DB2ToSQL)
 **数据迁移报表**迁移到的数据后，会出现对话框[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

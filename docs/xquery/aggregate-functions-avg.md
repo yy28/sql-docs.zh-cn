@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,18 +14,17 @@ helpviewer_keywords:
 - fn:avg function
 - avg function [XQuery]
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6c347eb78dd3ac8e58075cc91edeee87b3a4418d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833355"
 ---
-# <a name="aggregate-functions---avg"></a>聚合函数-avg
+# <a name="aggregate-functions---avg"></a>聚合函数 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   返回一组数值的平均值。  
@@ -44,7 +40,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  一组要计算平均值的原子值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  传递给的原子化值的所有类型**avg （)** 需要的三种内置数值基类型或 xdt: untypedatomic 的一个子类型。 不能使用不同的数值类型。 类型为 xdt:untypedAtomic 的值视为 xs:double。 结果**avg （)** 接收传入的类型，如在 xdt: untypedatomic 的情况下 xs: double 的基类型。  
   
  如果输入为静态空值，则空值为隐式表达，并会返回静态错误。  

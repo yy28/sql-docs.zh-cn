@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - IS_SRVROLEMEMBER_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6e72a58e17eb584cd0420f04ec10e2b479069fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 43087fe361e611d3cca013bdbe9aa222a5fc99d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748075"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +64,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |返回值|描述|  
 |------------------|-----------------|  
 |0|login 不是 role 的成员。<br /><br /> 在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中，此语句始终返回 0。|  
-|@shouldalert|login 是 role 的成员。|  
+|1|login 是 role 的成员。|  
 |NULL|role 或 login 无效，或者没有查看角色成员身份的权限。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -92,7 +89,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="related-functions"></a>相关函数  
  若要确定当前用户是否为指定 Windows 组或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库角色的成员，请使用 [IS_MEMBER (Transact-SQL)](../../t-sql/functions/is-member-transact-sql.md)。 若要确定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名是否为数据库角色的成员，请使用 [IS_ROLEMEMBER (Transact-SQL)](../../t-sql/functions/is-rolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器角色的 VIEW DEFINITION 权限。  
   
 ## <a name="examples"></a>示例  

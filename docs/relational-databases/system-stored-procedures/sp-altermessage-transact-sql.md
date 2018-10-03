@@ -1,14 +1,11 @@
 ---
-title: sp_altermessage (Transact SQL) |Microsoft 文档
+title: sp_altermessage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_altermessage_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_altermessage
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce6620bbc74d5c83cef907ab87f8252f963748a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761965"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,29 +43,29 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
   
 ## <a name="arguments"></a>参数  
  [**@message_id =** ] *message_number*  
- 是要从 alter 的消息的错误号**sys.messages**。 *message_number*是**int**无默认值。  
+ 是从更改的消息的错误号**sys.messages**。 *message_number*是**int** ，无默认值。  
   
  [ **@parameter =** ] **'***write_to_log*'  
- 与使用**@parameter_value**以指示消息已写入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *write_to_log*是**sysname**无默认值。 *write_to_log*必须设置为 WITH_LOG 或 NULL。 如果*write_to_log*设置 WITH_LOG 或 NULL，并且的值为**@parameter_value**是**true**，消息写入到 Windows 应用程序日志。 如果*write_to_log*设置 WITH_LOG 或 NULL 和的值为**@parameter_value**是**false**，消息不始终写入 Windows 应用程序日志中，但可能编写取决于如何引发错误。 如果*write_to_log*指定的值**@parameter_value**还必须指定。  
+ 与一起使用**@parameter_value**以指示该消息将写入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *write_to_log*是**sysname** ，无默认值。 *write_to_log*必须设置为 WITH_LOG 或 NULL。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且的值**@parameter_value**是**true**，到 Windows 应用程序日志写入消息。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且的值**@parameter_value**是**false**，消息不始终写入 Windows 应用程序日志，但可能编写根据如何产生错误。 如果*write_to_log*指定的值**@parameter_value**还必须指定。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
  [ **@parameter_value =** ]**'***value*'  
- 与使用**@parameter**以指示该错误是写入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *值*是**varchar(5)**，无默认值。 如果**true**，此错误始终写入 Windows 应用程序日志。 如果**false**，该错误不始终写入 Windows 应用程序日志中，但可能取决于如何引发错误编写。 如果*值*指定，则*write_to_log*为**@parameter**还必须指定。  
+ 与一起使用**@parameter**以指示要写入到错误[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *值*是**varchar(5)**，无默认值。 如果 **，则返回 true**，此错误始终写入 Windows 应用程序日志。 如果**false**，该错误不始终写入 Windows 应用程序日志，但可能会根据如何产生此错误将写入。 如果*值*指定，则*write_to_log*有关**@parameter**还必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- 效果**sp_altermessage**对于 WITH_LOG 选项是类似于 RAISERROR WITH LOG 参数，只不过**sp_altermessage**更改的现有消息日志记录行为。 如果消息已更改为 WITH_LOG，则总是将其写入 Windows 应用程序日志，而不管这一错误是怎样造成的。 即使执行 RAISERROR 时不含 WITH_LOG 选项，也会将错误写入 Windows 应用程序日志。  
+## <a name="remarks"></a>备注  
+ 效果**sp_altermessage** WITH_LOG 选项是类似于 RAISERROR WITH LOG 参数，不同之处在于**sp_altermessage**更改现有的消息的日志记录行为。 如果消息已更改为 WITH_LOG，则总是将其写入 Windows 应用程序日志，而不管这一错误是怎样造成的。 即使执行 RAISERROR 时不含 WITH_LOG 选项，也会将错误写入 Windows 应用程序日志。  
   
- 可以使用修改系统消息**sp_altermessage**。  
+ 可以通过修改系统消息**sp_altermessage**。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**serveradmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -80,7 +76,7 @@ EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

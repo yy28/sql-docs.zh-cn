@@ -1,40 +1,37 @@
 ---
-title: 绑定参数按名称 （命名参数） |Microsoft 文档
+title: 绑定参数按名称 （命名参数） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619514"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848895"
 ---
-# <a name="binding-parameters-by-name-named-parameters"></a>绑定参数按名称 （命名参数）
-某些 Dbms 允许应用程序按名称而不是按位置在过程调用中指定的存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持命名参数的使用。 ODBC 中, 命名的参数仅在对存储过程调用中使用，并且不在其他 SQL 语句中使用。  
+# <a name="binding-parameters-by-name-named-parameters"></a>按名称绑定参数（命名参数）
+某些 Dbms 允许应用程序能够通过名称而不是按位置在过程调用中指定的存储过程的参数。 此类参数称为*命名参数*。 ODBC 支持使用命名参数。 在 ODBC 中，命名的参数仅在存储过程调用中使用和不能在其他 SQL 语句中使用。  
   
- 该驱动程序检查以确定是否可以使用名为使用参数 IPD SQL_DESC_UNNAMED 字段的值。 如果未设置为 SQL_UNNAMED SQL_DESC_UNNAMED，驱动程序会使用 IPD SQL_DESC_NAME 字段中名称来标识参数。 若要将该参数绑定，应用程序可以调用**SQLBindParameter**到指定的参数信息，然后可以调用**SQLSetDescField**设置 IPD SQL_DESC_NAME 字段。 当使用命名的参数时，在过程调用中的参数的顺序并不重要，忽略参数的记录数。  
+ 该驱动程序检查的 SQL_DESC_UNNAMED 字段 IPD 以确定是否名为使用参数的值。 如果未设置为 SQL_UNNAMED SQL_DESC_UNNAMED，驱动程序会使用 IPD 的 SQL_DESC_NAME 字段中名称来标识参数。 若要将该参数的绑定，应用程序可以调用**SQLBindParameter**到指定的参数信息，然后可以调用**SQLSetDescField**设置 IPD SQL_DESC_NAME 字段。 当使用命名的参数时，过程调用中的参数的顺序并不重要，参数的记录号将被忽略。  
   
- 中的描述符记录编号和过程中的参数 %之间的关系是未命名的参数和命名的参数之间的差异。 当使用未命名的参数时，第一个参数标记都与参数描述符，反过来都与在过程调用中的第一个参数 （按创建顺序） 中的第一个记录。 当使用命名的参数时，第一个参数标记仍相关参数描述符，第一条记录，但不再存在的描述符记录编号和过程中的参数 %之间的关系。 命名的参数到过程的参数位置; 不使用描述符记录号的映射相反，映射到过程参数名称中的描述符记录名称。  
+ 未命名的参数和命名的参数之间的区别是中的描述符记录数和在该过程的参数编号之间的关系。 当使用未命名的参数时，第一个参数标记与参数描述符，又与在过程调用中的第一个参数 （按创建顺序） 中的第一个记录。 当使用命名的参数时，第一个参数标记仍然相关参数描述符，第一条记录，但不再存在的描述符记录数和在该过程的参数编号之间的关系。 命名的参数不使用过程参数位置; 到描述符记录号的映射相反，描述符记录名称映射到过程参数名称。  
   
 > [!NOTE]  
->  如果启用了自动填充的 IPD，驱动程序将填充描述符以便描述符记录的顺序将匹配在过程定义中，参数的顺序即使使用命名的参数。  
+>  如果启用了自动填充 IPD，驱动程序将填充描述符，以便描述符记录的顺序将匹配过程定义中参数的顺序即使使用命名的参数。  
   
- 如果使用命名的参数，则所有参数必须命名都为参数。 如果任何参数不是一个命名的参数，然后无参数 ca 命名参数。 如果没有命名的参数和未命名的参数的组合，则行为将驱动程序相关。  
+ 如果使用命名的参数，则所有参数必须被都命名参数。 如果任何参数不是一个命名的参数，none 参数 ca 被命名参数。 如果混合使用命名的参数和未命名的参数，则行为将驱动程序相关。  
   
  作为命名参数的示例，假设 SQL Server 存储过程已定义，如下所示：  
   
@@ -42,7 +39,7 @@ ms.locfileid: "35619514"
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 在此过程中，第一个参数， @title_id，默认值为 1。 应用程序可以使用下面的代码来调用此过程，以便它指定只有一个动态参数。 此参数是名称的命名的参数"\@引号"。  
+ 在此过程中，第一个参数， @title_id，默认值为 1。 应用程序可以使用以下代码以调用此过程，以便它指定只有一个动态参数。 此参数是一个命名的参数名"\@报价"。  
   
 ```  
 // Prepare the procedure invocation statement.  

@@ -1,27 +1,23 @@
 ---
-title: 重播跟踪数据 |Microsoft 文档
+title: 重播跟踪数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc1bf91650cd45f3bdc3c7a17a6e907205c7c258
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bc31568ba3dfc603f2abe850d2388729fc25813
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33073144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746265"
 ---
 # <a name="replay-trace-data"></a>重播跟踪数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +25,7 @@ ms.locfileid: "33073144"
   
  使用管理工具 **replay** 选项启动分布式重播的事件重播阶段。 此阶段包含两个部分：跟踪数据调度和分布式重播的启动与同步。  
   
- ![分布式重播对事件](../../tools/distributed-replay/media/eventreplay.gif "分布式重播事件")  
+ ![分布式事件重播](../../tools/distributed-replay/media/eventreplay.gif "分布式事件重播")  
   
  您可以以两种顺序模式之一重播跟踪数据：压力模式或同步模式。 默认行为是在压力模式下重播跟踪数据。 有关事件重播阶段和顺序模式的详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   

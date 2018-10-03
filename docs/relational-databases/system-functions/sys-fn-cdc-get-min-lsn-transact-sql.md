@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_get_min_lsn (Transact SQL) |Microsoft 文档
+title: sys.fn_cdc_get_min_lsn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825229"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回从指定的捕获实例的 start_lsn 列值[cdc.change_tables 反映](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系统表。 该值表示捕获实例的有效性间隔的低端点。  
+  返回从指定的捕获实例的 start_lsn 列值[cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)系统表。 该值表示捕获实例的有效性间隔的低端点。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +43,18 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ```  
   
 ## <a name="arguments"></a>参数  
-  *capture_instance_name*   
- 是捕获实例的名称。 *capture_instance_name*是**sysname**。  
+ **'** *capture_instance_name*   
+ 是的捕获实例的名称。 *capture_instance_name*是**sysname**。  
   
 ## <a name="return-types"></a>返回类型  
  **binary(10)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  当捕获实例不存在或调用方未获得访问与该捕获实例关联的更改数据的授权时，将返回 0x00000000000000000000。  
   
  该函数通常用于标识与某个捕获实例关联的变更数据捕获时间线的低端点。 您也可以在请求更改数据之前，使用该函数来验证某个查询范围的端点是否处于捕获实例时间线内。 执行这种检查是很重要的，因为当对更改表执行清理时，捕获实例的低端点会发生变化。 如果更改数据的两次请求之间相距的时间很长，则即使将上一个更改数据请求的高端点设置为低端点，此低端点也可能处于在当前时间线之外。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 sysadmin 固定服务器角色或 db_owner 固定数据库角色的成员身份。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -101,7 +95,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

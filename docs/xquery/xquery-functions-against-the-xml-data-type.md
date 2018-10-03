@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -20,23 +15,22 @@ helpviewer_keywords:
 - xml data type [SQL Server], XQuery
 - functions [SQL Server], XQuery
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db1906027692ec40974668f48521588b2231cebd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ab763da75dda7a2f55f70d89b5e06368358f2c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746746"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>针对 xml 数据类型的 XQuery 函数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   本主题及其副主题描述指定 XQuery 时可以使用的函数**xml**数据类型。 有关 W3C 规范，请参阅[ http://www.w3.org/TR/2004/WD-xpath-functions-20040723 ](http://go.microsoft.com/fwlink/?LinkId=4873)。  
   
- XQuery 函数属于http://www.w3.org/2004/07/xpath-functions命名空间。 W3C 规范使用“fn:”命名空间前缀来说明这些函数。 使用这些函数时，不必显式指定“fn:”命名空间前缀。 由于这个原因，也为了提高可读性，此文档中通常不使用命名空间前缀。  
+ XQuery 函数属于 http://www.w3.org/2004/07/xpath-functions命名空间。 W3C 规范使用“fn:”命名空间前缀来说明这些函数。 使用这些函数时，不必显式指定“fn:”命名空间前缀。 由于这个原因，也为了提高可读性，此文档中通常不使用命名空间前缀。  
   
  下表列出了针对支持的 XQuery 函数**xml**数据类型。  
   
@@ -55,7 +49,7 @@ ms.locfileid: "37997109"
 |[基于节点的函数](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[local-name 函数 (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[命名空间 uri 函数 (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[上下文函数](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[最后一个](../xquery/context-functions-last-xquery.md)|  
+|[上下文函数](http://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[位置](../xquery/context-functions-position-xquery.md)|  
 |[基于序列的函数](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[为空](../xquery/functions-on-sequences-empty.md)|  
 ||[非重复值](../xquery/functions-on-sequences-distinct-values.md)|  
@@ -64,7 +58,7 @@ ms.locfileid: "37997109"
 ||[avg](../xquery/aggregate-functions-avg.md)|  
 ||[最小值](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[sum](../xquery/aggregate-functions-sum.md)|  
+||[Sum](../xquery/aggregate-functions-sum.md)|  
 |[构造函数&#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[构造函数](../xquery/constructor-functions-xquery.md)|  
 |[数据取值函数](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[data](../xquery/data-accessor-functions-data-xquery.md)|  

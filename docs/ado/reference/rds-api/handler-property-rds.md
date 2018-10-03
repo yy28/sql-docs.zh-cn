@@ -1,36 +1,33 @@
 ---
-title: 处理程序属性 (RDS) |Microsoft 文档
+title: 处理程序属性 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8e1c2fdfe518a7ab1f331e6961ed6b84b1b33e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038cb740cd2d8e2457f83f829c85f4d6598b9f97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288337"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824075"
 ---
-# <a name="handler-property-rds"></a>处理程序属性 (RDS)
-指示扩展的功能的服务器端自定义程序 （处理程序） 名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，和使用的任何参数*处理程序*。  
+# <a name="handler-property-rds"></a>Handler 属性 (RDS)
+指示服务器端自定义程序 （处理程序） 的功能进行扩展的名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，并使用任何参数*处理程序*。  
   
  **适用于：** [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,26 +38,26 @@ DataControl.Handler = String
   
 #### <a name="parameters"></a>Parameters  
  *DataControl*  
- 表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *字符串*  
- A**字符串**值，包含名称的处理程序和任何参数，所有其用逗号隔开 (例如， `"handlerName,parm1,parm2,...,parm` *N*`"`)。  
+ 一个**字符串**值，该值包含名称的处理程序和任何参数，所有通过以逗号分隔 (例如， `"handlerName,parm1,parm2,...,parm` *N*`"`)。  
   
-## <a name="remarks"></a>Remarks  
- 此属性支持[自定义](../../../ado/guide/remote-data-service/datafactory-customization.md)，一种功能，需要设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性**adUseClient**。  
+## <a name="remarks"></a>备注  
+ 此属性支持[自定义](../../../ado/guide/remote-data-service/datafactory-customization.md)，需要设置的功能[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
   
- 名称的处理程序，它的参数，如果有的话，之间用逗号 （"，"）。 如果分号，将会导致不可预知的行为 （";"） 中的任何位置显示*字符串*。 你可以编写你自己的处理程序，提供它支持**IDataFactoryHandler**接口。  
+ 名称的处理程序和其参数，如果有，用逗号分隔 （"，"）。 如果分号将会导致不可预知的行为 （";"） 中任意位置出现*字符串*。 您可以编写自己的处理程序，前提是它支持**IDataFactoryHandler**接口。  
   
- 默认处理程序的名称是**MSDFMAP。处理程序**，其默认参数就是一个名为的自定义文件和**MSDFMAP。INI**。 使用此属性来调用由服务器管理员创建的备用自定义项文件。  
+ 默认处理程序的名称是**MSDFMAP。处理程序**，其默认参数是一个名为的自定义项文件**MSDFMAP。INI**。 使用此属性来调用由服务器管理员创建的备用自定义项文件。  
   
- 设置的替代**处理程序**属性是一个处理程序和中的使用参数指定[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 = * * * handlerName，parameter1，parameter2...;*".  
+ 设置的替代方法**处理程序**属性是指定一个处理程序和中的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性; 也就是说，"**处理程序 = * * * parameter1，处理程序名称parameter2...;*".  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>请参阅  
- [处理程序属性示例 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
- [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [Handler 属性示例 (VB)](../../../ado/reference/rds-api/handler-property-example-vb.md)   
+ [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [DataFactory 对象 (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
 
 

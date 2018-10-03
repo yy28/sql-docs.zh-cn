@@ -1,42 +1,39 @@
 ---
-title: SQLGetInfo (dBASE 驱动程序) |Microsoft 文档
+title: SQLGetInfo (dBASE 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetInfo
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7dd5e69042548543328a5c0a377e13778ce6219
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 603e88703f7a2554ab874a3e5fdd8b4b1a87cda0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833845"
 ---
-# <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE 驱动程序)
+# <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo（dBASE 驱动程序）
 > [!NOTE]  
->  本主题提供 dBASE 特定于驱动程序的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供 dBASE 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  **SQLGetInfo**支持 SQL_FILE_USAGE 信息类型。 返回的值是一个 16 位整数，指示如何驱动程序直接处理数据源中的文件：  
   
--   SQL_FILE_NOT_SUPPORTED-驱动程序不是单层驱动程序。  
+-   SQL_FILE_NOT_SUPPORTED-驱动程序不是单个层驱动程序。  
   
--   SQL_FILE_TABLE-单层驱动程序将视为表中的数据源的文件。  
+-   SQL_FILE_TABLE — 单层驱动程序将视为表中的数据源的文件。  
   
--   SQL_FILE_QUALIFIER-单层驱动程序将视为限定符数据源中的文件。  
+-   SQL_FILE_QUALIFIER — 单层驱动程序将视为一个限定符的数据源中的文件。  
   
- ODBC 驱动程序返回 SQL_FILE_TABLE，由于每个文件是一个表。  
+ ODBC 驱动程序返回 SQL_FILE_TABLE，因为每个文件是一个表。  
   
 ## <a name="sqlaltertable"></a>SQL_ALTER_TABLE  
  SQL_AT_ADD_COLUMN &AMP;#124; SQL_AT_DROP_COLUMN  

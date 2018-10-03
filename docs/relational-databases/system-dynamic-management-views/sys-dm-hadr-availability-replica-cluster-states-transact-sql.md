@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_availability_replica_cluster_states (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_hadr_availability_replica_cluster_states (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_availability_replica_cluster_states_TSQL
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_availability_replica_cluster_states dynamic management view
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ed7ea6041b29c4ce231e9a2f4ba150f440eae5d8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464673"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806215"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 Windows Server 故障转移群集 (WSFC) 群集中返回每个 Alwayson 可用性副本 （而不考虑其联接状态） 的所有 Always On 可用性组 （不论副本位置） 的行。  
+  在 Windows Server 故障转移群集 (WSFC) 群集中返回的每个 Alwayson 可用性副本 （而不考虑其联接状态） 的所有 Always On 可用性组 （不论副本位于） 的行。  
   
 ##  <a name="connected_state"></a>  
   
@@ -46,12 +43,12 @@ ms.locfileid: "34464673"
 |**join_state**|**tinyint**|0 = 未联接<br /><br /> 1 = 已联接，独立实例<br /><br /> 2 = 已联接，故障转移群集实例|  
 |**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE_INSTANCE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
- [监视可用性组 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [监视可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

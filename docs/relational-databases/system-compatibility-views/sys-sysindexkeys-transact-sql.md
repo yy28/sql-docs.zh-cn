@@ -1,14 +1,11 @@
 ---
-title: sys.sysindexkeys (Transact SQL) |Microsoft 文档
+title: sys.sysindexkeys (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysindexkeys
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysindexkeys system table
 - sys.sysindexkeys compatibility view
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 975a50f5a2df3ec497860a927eb4cb0ea65fcb33
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0ff0be855fe7c610b98942cd26a008c8085dffb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836385"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,12 +39,12 @@ ms.locfileid: "33220338"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|表的 ID。|  
-|**indid**|**int**|索引的 ID。|  
-|**colid**|**int**|列的 ID。|  
-|**keyno**|**int**|该列在索引中的位置。|  
+|**indid**|**smallint**|索引的 ID。|  
+|**列 id**|**smallint**|列的 ID。|  
+|**keyno**|**smallint**|该列在索引中的位置。|  
   
-## <a name="see-also"></a>另请参阅  
- [将系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [系统表映射到系统视图&#40;Transact SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [兼容性视图&#40;Transact SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

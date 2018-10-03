@@ -1,13 +1,11 @@
 ---
-title: SaveOptionsEnum |Microsoft 文档
+title: SaveOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - SaveOptionsEnum enumeration [ADO]
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739e06a2038a61c821fd9acf779ec70df9621b16
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788757"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-指定是否应创建或覆盖时从保存文件[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。 值可以是**adSaveCreateNotExist**或**adSaveCreateOverWrite**...  
+指定文件是否应创建或覆盖从保存时[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。 值可以是**adSaveCreateNotExist**或**adSaveCreateOverWrite**...  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|@shouldalert|默认值。 如果指定的文件创建一个新文件*FileName*参数尚不存在。|  
-|**adSaveCreateOverWrite**|2|中当前打开的数据将覆盖该文件**流**对象，如果指定的文件*Filename*参数已存在。 如果指定的文件*Filename*参数不存在，则创建新的文件。|  
+|**adSaveCreateNotExist**|1|默认值。 如果指定的文件创建一个新文件*文件名*参数尚不存在。|  
+|**adSaveCreateOverWrite**|2|使用来自当前打开的数据将覆盖文件**Stream**对象，如果指定的文件*Filename*参数已存在。 如果指定的文件*文件名*参数不存在，创建一个新文件。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 这些常量没有 ADO/WFC 等效项。  
+ 这些常量不具有 ADO/WFC 等效项。  
   
 ## <a name="applies-to"></a>适用范围  
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)

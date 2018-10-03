@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745315"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038478"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步序列化模式运行时可能出现的问题
+ 您可能会遇到一种症状的重播功能出现的"停止"或重播事件速度非常缓慢。 如果在重播的跟踪依赖于数据和/或事件还原的目标数据库中不存在，则会发生这种现象。 
+ 
+ 例如，在 Service Broker 接收 WAITFOR 语句中使用 waitfor 子句，如捕获工作负荷。 使用同步序列化模式时，批处理是按顺序重播。 如果数据库备份之后发生对源数据库插入，但重播捕获跟踪已启动，在重播过程中发出 WAITFOR 接收可能需要等待 WAITFOR 的整个持续时间。 设置后将停止 WAITFOR 接收要重播的事件。 WAITFOR 完成之前，这可能导致重播数据库目标删除为零的 Batch Requests/sec 性能监视器计数器。 
+ 
+ 如果您需要使用同步模式并且想要避免此行为，必须执行以下操作：
+ 
+1.  停止你将使用为重播目标的数据库。
+
+2.  允许所有挂起的活动完成。
+
+3.  备份数据库，并允许备份完成。
+
+4.  启动分布式的重播跟踪捕获和恢复正常工作负荷。 
+ 
+ 
 ## <a name="see-also"></a>另请参阅  
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   

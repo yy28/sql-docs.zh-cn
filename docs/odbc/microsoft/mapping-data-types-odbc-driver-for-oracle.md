@@ -1,39 +1,36 @@
 ---
-title: 映射数据类型 （适用于 Oracle 的 ODBC 驱动程序） |Microsoft 文档
+title: 映射数据类型 （Oracle ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping data types [ODBC]
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92e8df65faf6be2cbe7d63d00e922ac1c4ed3af2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775805"
 ---
-# <a name="mapping-data-types-odbc-driver-for-oracle"></a>数据类型映射 （适用于 Oracle 的 ODBC 驱动程序）
+# <a name="mapping-data-types-odbc-driver-for-oracle"></a>映射数据类型（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- 在 Oracle 服务器支持一的组数据类型。 用于 Oracle 的 ODBC 驱动程序将这些数据类型映射到其相应的 ODBC SQL 数据类型。 下表列出 Oracle 7.3 Server 数据类型和其相应的 ODBC SQL 数据类型。  
+ Oracle 服务器支持一组数据类型。 Oracle ODBC 驱动程序将这些数据类型映射到其相应的 ODBC SQL 数据类型。 下表列出了 Oracle 7.3 Server 数据类型和其相应的 ODBC SQL 数据类型。  
   
- 用于 Oracle 的 ODBC 驱动程序支持 Oracle 7.3 和某些 Oracle8 数据类型。 有关受支持 Oracle8 数据类型的详细信息，请参阅[支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)。  
+ Oracle ODBC 驱动程序支持 Oracle 7.3 和某些 Oracle8 数据类型。 有关受支持 Oracle8 数据类型的详细信息，请参阅[支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)。  
   
-|Oracle 服务器数据类型|ODBC SQL 数据类型|  
+|Oracle Server 数据类型|ODBC SQL 数据类型|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
