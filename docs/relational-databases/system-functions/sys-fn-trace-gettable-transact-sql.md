@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_gettable
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - fn_trace_gettable function
 - sys.fn_trace_gettable function
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e8c573a9995ee8ca0d23cd89ab2e032a88c6f9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a52a8482f56bb81f6d4436d8196a39e9e277ea7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38014925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689155"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +50,14 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  指定要读取的滚动更新文件数。 此数字包括中指定的初始文件*文件名*。 *number_files*是**int**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果*number_files*指定为**默认**， **fn_trace_gettable**读取所有滚动更新文件，直到到达跟踪结尾为止。 **fn_trace_gettable**返回包含所有列的表指定跟踪有效。 有关详细信息，请参阅[sp_trace_setevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)。  
   
  请注意，fn_trace_gettable 函数将不会加载滚动更新文件 (如果通过指定此选项*number_files*参数) 原始跟踪文件名使用下划线和数字值的结束位置。 （这不适用于在文件滚动更新时自动追加的下划线和数字。）作为一种解决方法，您可以重命名这些跟踪文件以便删除原始文件名中的下划线。 例如，如果原始文件被命名为**Trace_Oct_5.trc**和名为滚动更新文件**Trace_Oct_5_1.trc**，您可以重命名的文件**TraceOct5.trc**和**TraceOct5_1.trc**。  
   
  该函数可以读取在执行该函数所在实例中仍处于活动状态的跟踪。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对服务器具有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  

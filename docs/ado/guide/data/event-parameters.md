@@ -1,13 +1,11 @@
 ---
-title: 事件参数 |Microsoft 文档
+title: 事件参数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Error parameter [ADO]
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cfc652cc0cb59e426d2f2655684705deb20c20f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718785"
 ---
 # <a name="event-parameters"></a>事件参数
-每个事件处理程序有一个控制事件处理程序的状态参数。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整事件还具有一个错误参数，以便提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象参数**命令**，**记录集**，和**连接**对象与事件关联。 在以下的 Microsoft® Visual Basic® 示例中，你可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**程序使用的对象**执行**方法。  
+每个事件处理程序有一个状态参数，用于控制事件处理程序。 对于完整事件，此参数还用于指示成功或失败的生成事件的操作。 最完整的事件还具有错误参数来提供有关可能发生，任何错误以及一个或多个引用用来执行该操作的 ADO 对象的对象参数的信息。 例如， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)事件包括对象的参数**命令**，**记录集**，以及**连接**对象与事件关联。 在以下 Microsoft® Visual Basic® 示例中，您可以看到 pCommand、 pRecordset 和 pConnection 对象表示**命令**，**记录集**，和**连接**使用的对象**Execute**方法。  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -40,22 +37,22 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
      ByVal pConnection As ADODB.Connection)  
 ```  
   
- 除**错误**对象，相同的参数传递给将事件。 可以在此检查每个对象，将在挂起的操作中使用，并确定是否应允许该操作完成。  
+ 除**错误**对象时，相同的参数传递给将事件。 此允许您检查每个对象，将挂起的操作中使用，并确定是否应允许该操作完成。  
   
- 某些事件处理程序具有*原因*参数，它提供有关事件的发生原因的其他信息。 例如， **WillMove**和**MoveComplete**事件可能会导致任何一种导航方法出现 (**MoveNext**， **MovePrevious**，依次类推) 能够调用或作为重新查询的结果。  
+ 某些事件处理程序有*原因*参数，它提供有关事件的发生原因的其他信息。 例如， **WillMove**并**MoveComplete**事件发生的任何一种导航方法原因 (**MoveNext**， **MovePrevious**，依次类推) 能够调用或作为重新查询的结果。  
   
 ## <a name="status-parameter"></a>状态参数  
- 当调用的事件处理程序例程时，*状态*参数设置为下列值之一。  
+ 当调用的事件处理程序例程时，*状态*参数设置为以下值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|**adStatusOK**|传递给将和完成的事件。 此值意味着引起该事件已成功完成该操作。|  
-|**adStatusErrorsOccurred**|传递给完成的事件。 此值表示引起该事件的操作不成功，或将事件取消该操作。 检查*错误*更多详细信息的参数。|  
-|**adStatusCantDeny**|传递给仅将事件。 此值表示不能通过将事件取消该操作。 必须执行它。|  
+|**adStatusOK**|传递给将和完成事件数。 此值表示引发事件已成功完成的操作。|  
+|**adStatusErrorsOccurred**|传递给完成事件数。 此值表示引发事件的操作不成功，或将事件已取消该操作。 检查*错误*参数的更多详细信息。|  
+|**adStatusCantDeny**|传递给仅将事件。 此值表示将事件不能取消该操作。 必须执行它。|  
   
- 如果你确定应继续该操作，你将事件中，将*状态*参数保持不变。 只要传入的状态参数未设置为**adStatusCantDeny**，但是，可以通过更改取消挂起的操作*状态*到**adStatusCancel**。 执行此操作时，与操作关联的完整事件具有其*状态*参数设置为**adStatusErrorsOccurred**。 **错误**对象传递给完成的事件将包含值**adErrOperationCancelled**。  
+ 如果您确定在将事件的操作应继续中，将保留*状态*参数保持不变。 只要传入的状态参数未设置为**adStatusCantDeny**，但是，您可以通过更改取消挂起操作*状态*到**adStatusCancel**。 与操作关联的完成事件时执行此操作，具有其*状态*参数设置为**adStatusErrorsOccurred**。 **错误**传递给完成事件对象将包含值**adErrOperationCancelled**。  
   
- 如果你不再想要处理的事件，则可以设置*状态*到**adStatusUnwantedEvent**和你的应用程序将不再接收该事件的通知。 但请记住某些事件可以由多个原因。 在这种情况下，必须指定**adStatusUnwantedEvent**对于每个可能的原因。 例如，若要停止接收通知的挂起**RecordChange**事件，必须设置*状态*参数**adStatusUnwantedEvent**为**adRsnAddNew**， **adRsnDelete**， **adRsnUpdate**， **adRsnUndoUpdate**， **adRsnUndoAddNew**，**adRsnUndoDelete**，和**adRsnFirstChange**发生。  
+ 如果不再想要处理的事件，则可以设置*状态*到**adStatusUnwantedEvent**和你的应用程序将不会再收到该事件的通知。 但请记住，某些事件可以引发多个原因。 在这种情况下，必须指定**adStatusUnwantedEvent**对每个可能的原因。 例如，若要停止接收通知的挂起**RecordChange**事件，必须设置*状态*参数**adStatusUnwantedEvent**为**adRsnAddNew**， **adRsnDelete**， **adRsnUpdate**， **adRsnUndoUpdate**， **adRsnUndoAddNew**，**adRsnUndoDelete**，并**adRsnFirstChange**发生。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -63,13 +60,13 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|请求取消将要发生的操作。|  
   
 ## <a name="error-parameter"></a>错误参数  
- *错误*参数是对 ADO 的引用[错误](../../../ado/reference/ado-api/error-object.md)对象。 当*状态*参数设置为**adStatusErrorsOccurred**、**错误**对象包含有关操作失败的原因的详细信息。 如果将事件与完整的事件相关联已取消该操作，通过设置*状态*参数**adStatusCancel**，错误对象始终设置为**adErrOperationCancelled**。  
+ *错误*参数是对 ADO 引用[错误](../../../ado/reference/ado-api/error-object.md)对象。 当*状态*参数设置为**adStatusErrorsOccurred**，则**错误**对象包含有关操作失败的原因的详细信息。 如果与完成的事件关联的将事件已取消该操作，通过设置*状态*参数**adStatusCancel**，则错误对象始终设置为**adErrOperationCancelled**。  
   
 ## <a name="object-parameter"></a>对象参数  
- 每个事件都接收一个或多个对象表示在操作中涉及的对象。 例如， **ExecuteComplete**事件接收**命令**对象，**记录集**对象，和一个**连接**对象。  
+ 每个事件接收一个或多个对象表示在操作中涉及的对象。 例如， **ExecuteComplete**事件接收**命令**对象，**记录集**对象，和一个**连接**对象。  
   
 ## <a name="reason-parameter"></a>原因参数  
- *原因*参数， *adReason*，提供有关事件发生原因的其他信息。 事件的*adReason*参数可能被调用多次，即使对于相同的操作，由于其他原因每次。 例如， **WillChangeRecord**即将做或撤消插入、 删除或修改的记录的操作调用事件处理程序。 如果你想要处理的事件，只有由于特定原因时，您可以使用*adReason*参数来筛选出您不感兴趣的匹配项。 例如，如果你想要处理记录更改事件仅当它们发生原因已添加一条记录时，你可以使用类似于以下内容。  
+ *原因*参数， *adReason*，提供了有关事件的发生原因的其他信息。 使用事件*adReason*参数可能会被调用多次，即使对于相同的操作，由于其他原因每次。 例如， **WillChangeRecord**正准备执行或撤消插入、 删除或修改记录的操作调用事件处理程序。 如果你想要处理的事件，只有由于特定原因时，您可以使用*adReason*参数来筛选出不感兴趣的出现次数。 例如，如果你想要处理记录更改事件仅在它们发生因为添加一条记录时，您可以使用类似于以下的内容。  
   
 ```  
 ' BeginEventExampleVB01  
@@ -86,12 +83,12 @@ End Sub
 ' EndEventExampleVB01  
 ```  
   
- 在这种情况下，通知可能会为每个其他原因。 但是，它将只出现一次对于每个原因。 通知发生一次对于每个原因之后，你将收到通知仅用于添加一条新记录。  
+ 在这种情况下，通知可能会为每个其他原因。 但是，它会发生一次只能对每个原因。 通知发生一次对每个原因后，将收到一条新记录添加通知。  
   
- 与此相反，你需要设置*adStatus*到**adStatusUnwantedEvent**仅一次，以请求的事件处理程序而无需**adReason**参数停止接收事件发送通知。  
+ 与此相反，您需要设置*adStatus*到**adStatusUnwantedEvent**仅一次，以请求的事件处理程序而无需**adReason**参数停止接收事件通知。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO 事件处理程序摘要](../../../ado/guide/data/ado-event-handler-summary.md)   
- [通过语言的 ADO 事件实例化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [事件处理程序是如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)   
+ [ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [事件处理程序如何协同工作](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [事件类型](../../../ado/guide/data/types-of-events.md)

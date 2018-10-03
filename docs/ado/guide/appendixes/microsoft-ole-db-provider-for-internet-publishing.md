@@ -1,35 +1,32 @@
 ---
-title: 用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft 文档
+title: 用于 Internet 发布的 Microsoft OLE DB 提供程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c8d3caac3bd857b790372bd6b41fc818090210a0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 56e780efde72007d9ed4f1b701cde220a0f9be4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271216"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688115"
 ---
-# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 发布概述
-Microsoft OLE DB 提供程序用于 Internet 发布允许 ADO 由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的访问资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
+# <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB 提供程序用于 Internet 发布概述
+Microsoft OLE DB 访问接口用于 Internet 发布允许 ADO 访问由 Microsoft FrontPage 或 Microsoft Internet 信息服务器提供服务的资源。 资源包括 web 源代码文件，例如 HTML 文件或 Windows 2000 web 文件夹。
 
 ## <a name="connection-string-parameters"></a>连接字符串参数
- 若要连接到此提供程序，设置*提供程序*参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性：
+ 若要连接到此提供程序，请设置*提供程序*的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性设置为：
 
 ```
 MSDAIPP.DSO
@@ -38,7 +35,7 @@ MSDAIPP.DSO
  此值还可以设置或读取使用[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)属性。
 
 ## <a name="typical-connection-string"></a>典型的连接字符串
- 此提供程序的典型连接字符串是：
+ 此提供程序的典型的连接字符串是：
 
 ```
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
@@ -54,18 +51,18 @@ MSDAIPP.DSO
 
 |关键字|Description|
 |-------------|-----------------|
-|**提供程序**|指定 Internet 发布的 OLE DB 访问接口。|
-|**数据源**-或- **URL**|指定的文件或目录发布的 Web 文件夹中的 URL。|
-|**用户 ID**|指定的用户名。|
-|**密码**|指定的用户密码。|
+|**提供程序**|指定用于 Internet 发布的 OLE DB 访问接口。|
+|**数据源**-或- **URL**|指定的文件或目录已发布的 Web 文件夹中的 URL。|
+|**用户 ID**|指定用户名称。|
+|**密码**|指定用户密码。|
 
 > [!NOTE]
->  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码连接字符串中的信息。
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。
 
- 如果你设置*ResourceURL*值从"URL ="值无效的连接字符串，在默认情况下 Internet 发布提供程序会引发一个对话框，提示输入有效的值。 这是中间层应用程序中的组件的意外行为，因为暂停程序执行，直到清除对话框中，客户端似乎会冻结因为它没有收到响应来自该组件。
+ 如果您设置*ResourceURL*值从"URL ="在连接字符串为无效值，默认情况下 Internet 发布提供程序引发一个对话框，提示输入有效的值。 这是应用程序的中间层中的组件的意外行为，因为暂停程序执行，直到清除对话框中，客户端似乎会冻结，因为它不从组件接收响应。
 
 > [!NOTE]
->  如果 MSDAIPP。DSO 显式指定的提供程序，使用值为*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 本主题中所示相反，只需指定 URL[与 OLE DB 提供程序用于 Internet 发布使用 ADO](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)。
+>  如果 MSDAIPP。作为提供程序，使用的值显式指定 DSO*提供程序*连接字符串关键字或**提供程序**属性，不能使用"URL ="连接字符串中。 如果这样做，将会出错。 本主题中所示，只需指定的 URL[用于 Internet 发布针对 OLE DB 访问接口使用 ADO](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)。
 
 ## <a name="see-also"></a>请参阅
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md) [Internet 发布的 OLE DB 访问接口](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)

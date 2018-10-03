@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlps
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 395eb782b93042a3edaf5be464748b88f9964083
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600706"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,11 +69,11 @@ sqlps
  **-**  
  **-Command-** 指定 **sqlps** 实用工具从标准输入读取输入内容。  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **-args**_参数\_数组_]  
  指定要运行的 PowerShell 命令块，块必须用大括号 {} 括起来。 仅当从*script_block* 或其他 **script_block** 实用工具会话调用 **script_block** 实用工具时，才能指定 **script_block** 。 *Argument_array* 是 PowerShell 变量的数组，包含 *script_block*中 PowerShell 命令的参数。  
   
  *字符串* [ *command_parameters* ]  
- 指定包含要运行的 PowerShell 命令的字符串。 使用 "&{command}" 格式****。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
+ 指定包含要运行的 PowerShell 命令的字符串。 使用 **"&{**_command_**}"** 格式。 双引号指明是字符串，调用运算符 (&) 使 **sqlps** 实用工具运行命令。  
   
  [ **-?** | **-Help** ]  
  显示 **sqlps** 实用工具选项的语法摘要。  

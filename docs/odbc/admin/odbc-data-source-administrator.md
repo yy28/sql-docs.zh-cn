@@ -1,31 +1,28 @@
 ---
-title: ODBC 数据源管理器 |Microsoft 文档
+title: ODBC 数据源管理器 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c718595d0912e4d87bb190788a6357453a8a0ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677275"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 数据源管理器
-Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 此应用程序位于下 Windows 控制面板**管理工具**。 在 Windows 8 中从开始，图标名为**ODBC 数据源**，并且在 64 位操作系统上没有 32 位和 64 位版本。  
+Microsoft® ODBC 数据源管理器管理数据库驱动程序和数据源。 此应用程序位于 Windows 控制面板下**管理工具**。 从 Windows 8 开始，该图标名为**ODBC 数据源**，并且在 64 位操作系统上没有 32 位和 64 位版本。  
   
  ODBC 管理器的详细过程有关的信息，请打开[ODBC 数据源管理器](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)对话框中，单击**帮助**。  
   

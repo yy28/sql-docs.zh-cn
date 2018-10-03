@@ -6,23 +6,20 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
 - sql.data.tools.queryresults.executequerydeletingrow
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a52c3875e5b6368a8f5f229dd3309f60bd078fe7
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 543611c2e5c327d50ea7155969a670ac4a0e836e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685426"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>如何查看和编辑表中的数据
 您可以使用直观的数据编辑器查看、编辑和删除现有表中的数据。  

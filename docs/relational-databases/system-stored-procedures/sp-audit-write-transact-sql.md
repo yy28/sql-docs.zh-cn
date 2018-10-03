@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_audit_write
@@ -21,12 +18,12 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732895"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
  失败是由不正确的输入参数或者未能写入目标审核日志导致的。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当**USER_DEFINED_AUDIT_GROUP**添加到服务器审核规范或数据库审核规范，触发的事件**sp_audit_write**将包含在审核日志。  
   
 ## <a name="permissions"></a>Permissions  

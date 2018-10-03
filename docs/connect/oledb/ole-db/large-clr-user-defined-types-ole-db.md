@@ -5,23 +5,20 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 51993f2d607eadda48b97e92b377bd763ee0e9f4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3b76617a92d593750f86ca5929a9fac8e5e7ecdf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026826"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622145"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 用户定义类型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +135,7 @@ ms.locfileid: "43026826"
   
 |符号|含义|  
 |------------|-------------|  
-|@shouldalert|如果使用 ICommandWithParameters::SetParameterInfo 指定了非 DBTYPE_UDT 的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
+|1|如果使用 ICommandWithParameters::SetParameterInfo 指定了非 DBTYPE_UDT 的服务器类型，而取值函数类型为 DBTYPE_UDT，则执行该语句时将出错。  将出现 DB_E_ERRORSOCCURRED 错误，参数状态将为 DBSTATUS_E_BADACCESSOR。<br /><br /> 如为类型不是 UDT 的服务器参数指定 UDT 类型的参数，则会出现错误。|  
 |2|数据从十六进制字符串转换为二进制数据。|  
 |3|数据从二进制数据转换为十六进制字符串。|  
 |4|在使用 CreateAccessor 或 GetNextRows 时进行验证。 错误为 DB_E_ERRORSOCCURRED 错误。 绑定状态设置为 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  

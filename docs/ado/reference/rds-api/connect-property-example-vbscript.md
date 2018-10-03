@@ -1,35 +1,32 @@
 ---
-title: 连接属性示例 (VBScript) |Microsoft 文档
+title: Connect 属性示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55f60063261a600d57667cc94f6c514eb52af6b6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c1d76ff4205e84033542b28938509b4267988163
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730745"
 ---
-# <a name="connect-property-example-vbscript"></a>连接属性示例 (VBScript)
+# <a name="connect-property-example-vbscript"></a>Connect 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 此代码演示如何设置[连接](../../../ado/reference/rds-api/connect-property-rds.md)在设计时属性：  
+ 此代码演示如何设置[Connect](../../../ado/reference/rds-api/connect-property-rds.md)在设计时属性：  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -41,9 +38,9 @@ ms.locfileid: "35287396"
 </OBJECT>  
 ```  
   
- 下面的示例演示如何设置**连接**属性在运行时中的 VBScript 代码。  
+ 下面的示例演示如何设置**Connect** VBScript 代码在运行时属性。  
   
- 若要测试此示例中，代码剪切并粘贴之间\<正文 > 和\</b o > 标记中普通的 HTML 文档，并将其命名**ConnectVBS.asp**。 ASP 脚本将标识你的服务器。  
+ 若要测试此示例中，代码剪切并粘贴之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**ConnectVBS.asp**。 ASP 脚本将识别您的服务器。  
   
 ```  
 <!-- BeginConnectVBS -->  

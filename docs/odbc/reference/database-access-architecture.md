@@ -1,13 +1,11 @@
 ---
-title: 数据库访问体系结构 |Microsoft 文档
+title: 数据库访问体系结构 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC]
 ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 69217d94191a51c6b413699337278480a4d4f6a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42fc1d3880e01c435e7991fb5781d0f815a83db5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612286"
 ---
 # <a name="database-access-architecture"></a>数据库访问体系结构
-ODBC 开发中的问题之一就是标准化的数据库访问体系结构的哪个部分。 编程接口上一节中所述的 SQL-嵌入式 SQL，SQL 模块和 Cli — 只有一个属于此体系结构。 事实上，因为 ODBC 主要用于连接到小型计算机和大型机 Dbms 基于个人计算机的应用程序，还有大量的网络组件，无法采用其中一些进行标准化。  
+ODBC 的开发中的问题之一是数据库访问体系结构进行标准化的哪个部分。 编程接口上一节中所述的 SQL-嵌入式 SQL，SQL 模块和 Cli — 只有一个属于此体系结构。 事实上，因为 ODBC 主要用于基于个人计算机的应用程序连接到小型计算机和大型机 Dbms，还有多个网络组件，其中一些无法进行标准化。  
   
  本部分包含以下主题。  
   

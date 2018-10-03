@@ -1,31 +1,27 @@
 ---
-title: 索引元素 (DTA) |Microsoft 文档
+title: 索引元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bb4901d63454c3c7eb6af4ad06c9f626ada5524
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fdbe54ce16b8ee0ed441bfcf7098d28004d482d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620245"
 ---
 # <a name="index-element-dta"></a>索引元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "33074064"
   
 ## <a name="element-attributes"></a>元素属性  
   
-|索引属性|数据类型|Description|  
+|索引属性|数据类型|描述|  
 |---------------------|---------------|-----------------|  
 |**群集**|**boolean**|可选。 指定一个聚集索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Clustered="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
 |**唯一**|**boolean**|可选。 指定唯一索引。 设置为“true”或“false”，例如：<br /><br /> `<Index Unique="true">`<br /><br /> 默认情况下，此属性设置为“false”。|  
@@ -62,7 +58,7 @@ ms.locfileid: "33074064"
   
 ## <a name="element-characteristics"></a>元素特征  
   
-|特征|Description|  
+|特征|描述|  
 |--------------------|-----------------|  
 |**数据类型和长度**|无。|  
 |**默认值**|无。|  

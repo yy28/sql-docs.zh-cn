@@ -1,13 +1,11 @@
 ---
-title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) |Microsoft 文档
+title: setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setServerPreparedStatementDiscardThreshold
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b1511a2fe703a21dd61050e8bd608044caad8b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d008e26d4eb7e6c2ac4b362f03ce3b2716a4cc46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655025"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>setServerPreparedStatementDiscardThreshold 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 指定的特定连接实例的行为。 此设置控制多少未完成准备语句放弃操作 (sp_unprepare) 可以是每个连接未完成之前执行的调用，以清理服务器上未完成的句柄。 当设置为 < = 1 取消-准备在关闭已准备的语句上立即执行操作。 如果值设为 > 1 进行一起批处理这些调用以避免调用 sp_unprepare 过于频繁的开销。
+ 指定特定的连接实例的行为。 此设置控制多少未完成准备语句丢弃之前执行调用以清理服务器上未完成的句柄，则可以每个连接未完成操作 (sp_unprepare)。 当设置为 < = 1 取消-准备关闭已准备的语句上立即执行操作。 如果值设置为 > 1 这些调用会一起批处理，以避免过于频繁调用 sp_unprepare 的开销。
 
 
 ## <a name="syntax"></a>语法  
@@ -47,8 +44,8 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>注释  
- 此方法是从 JDBC 驱动程序版本 6.4 可用且开始。
+## <a name="remarks"></a>Remarks  
+ 此方法是可从 JDBC driver 6.4 及前向。
  
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

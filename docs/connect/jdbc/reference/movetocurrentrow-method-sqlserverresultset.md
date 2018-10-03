@@ -1,13 +1,11 @@
 ---
-title: moveToCurrentRow 方法 (SQLServerResultSet) |Microsoft 文档
+title: moveToCurrentRow 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.moveToCurrentRow
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d032c266325c1190c3b3c8197b39b1dc1681fe0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: abae2c5d7a21e8772c00ed6d6ee74a2a551e4984
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650315"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,8 +38,8 @@ public void moveToCurrentRow()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 moveToCurrentRow 方法指定此 moveToCurrentRow 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 moveToCurrentRow 方法由 java.sql.ResultSet 接口中的 moveToCurrentRow 方法指定。  
   
  如果游标未处在插入行中，此方法没有作用。  
   

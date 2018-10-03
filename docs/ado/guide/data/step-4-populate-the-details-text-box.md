@@ -1,28 +1,25 @@
 ---
-title: 步骤 4： 填充详细信息文本框中 |Microsoft 文档
+title: 步骤 4： 填充详细信息文本框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da260e3dd3006a56e0be90c2b7e0c33ed0869781
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb2a49043857cfe9278862efd9e540e4597808
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706831"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>步骤 4： 填充详细信息文本框中
-若要填充详细信息文本框中，创建一个名为的新子例程**recFields**并插入以下代码：  
+# <a name="step-4-populate-the-details-text-box"></a>步骤 4：填充详细信息文本框
+若要填充详细信息文本框中，创建名为一个新的子例程**recFields**并插入以下代码：  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -48,7 +45,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 此代码用来填充`lstDetails`与字段和值传递到的简单记录`recFields`。 如果资源是一个文本文件，文本流被打开从该资源记录。 代码将确定是否为 ASCII 字符集，并将复制到的流内容`txtDetails`。  
+ 这段代码填入`lstDetails`使用的字段和值的简单记录传递给`recFields`。 如果资源是一个文本文件，文本 Stream 打开从该资源记录。 该代码确定的字符集是 ASCII 并将复制到 Stream 内容`txtDetails`。  
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   

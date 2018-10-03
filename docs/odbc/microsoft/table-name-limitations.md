@@ -1,39 +1,36 @@
 ---
-title: 表名称限制 |Microsoft 文档
+title: 表名称限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, table name limitations
 - table name limitations [ODBC]
 - Excel driver [ODBC], table name limitations
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c33928107e3094e0e2116170b79352268ec9964
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707045"
 ---
-# <a name="table-name-limitations"></a>表名称的限制
-表名称可以包含任何有效字符 （例如，空格）。 如果表名称包含除字母、 数字和下划线的任何字符，必须由将其括起来后引号 （'） 中分隔名称。  
+# <a name="table-name-limitations"></a>表名称限制
+表名可以包含任何有效的字符 （例如，空格）。 如果表名称中包含除字母、 数字和下划线的任何字符，必须由括在单引号 （'）） 后分隔名称。  
   
- 在使用 Microsoft Excel 驱动程序，并且由数据库引用不限定表名，则会进行隐式的默认数据库。 如果在 Microsoft Excel 中的名称包含"！"字符，它将自动将其转换为"$"字符相反。  
+ 当使用 Microsoft Excel 驱动程序，并由数据库引用不限定表名时，则暗指的默认数据库。 如果在 Microsoft Excel 中的名称包含"！"字符，它都将自动转换为"$"字符相反。  
   
- 引用的 Microsoft Excel 表名称\<文件名 > 支持 Microsoft Excel 3.0 和 4.0 的文件。 引用的 Microsoft Excel 表名称\<工作薄名称 > 的 Microsoft Excel 5.0、 7.0 或 97 文件支持。  
+ 引用的 Microsoft Excel 表名\<文件名 > 支持适用于 Microsoft Excel 3.0 和 4.0 的文件。 引用的 Microsoft Excel 表名\<工作簿名称 > 的 Microsoft Excel 5.0、 7.0、 或 97 文件支持。  
   
- 当使用 dBASE 驱动程序时，与 ASCII 值大于 127 个字符将转换为下划线。  
+ 当使用 dBASE 驱动程序时，使用 ASCII 值大于 127 的字符都转换为下划线。  
   
- 当使用 Microsoft Access 驱动程序时，表名称被限制为 64 个字符。  
+ 使用 Microsoft Access 驱动程序时，表名称限于 64 个字符。  
   
  当使用 dBASE，Microsoft Excel 3.0 或 4.0，Paradox 或文本驱动程序时，特殊 MS-DOS 关键字 CON、 AUX、 LPT1，和 LPT2 应不用作表名。

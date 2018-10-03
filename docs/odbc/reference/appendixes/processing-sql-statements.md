@@ -1,43 +1,40 @@
 ---
-title: 处理 SQL 语句 |Microsoft 文档
+title: 处理 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689745"
 ---
 # <a name="processing-sql-statements"></a>处理 SQL 语句
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- ODBC 游标库所有 SQL 语句将直接都传递到除以下驱动程序：  
+ ODBC 游标库的所有 SQL 语句将直接都传递到除以下驱动程序：  
   
--   定位更新和 delete 语句  
+-   定位 update 和 delete 语句  
   
--   **选择更新**语句  
+-   **SELECT FOR UPDATE**语句  
   
 -   批处理的 SQL 语句  
   
- 若要执行的定位的更新和 delete 语句并将光标置于要调用的行**SQLGetData**该行，光标库构造标识行的搜索的语句。  
+ 若要执行定位的更新和删除语句并将光标置于行以调用**SQLGetData**该行，游标库构造搜索的语句，标识的行。  
   
  本部分包含以下主题。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b341033bd881046cb040227ab7de591ed8d845f5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d906594e1db5f12123c34088e284916bd892c5d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43058325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678325"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "43058325"
 |Severity|**int**|异常的严重级别。|20|用户帐户控制|  
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|错误消息文本（如果存在）。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|错误消息文本（如果存在）。|1|用户帐户控制|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  

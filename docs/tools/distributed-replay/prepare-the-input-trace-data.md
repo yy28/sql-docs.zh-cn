@@ -1,33 +1,29 @@
 ---
-title: 准备输入的跟踪数据 |Microsoft 文档
+title: 准备输入的跟踪数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 902e1753c1331d1bd35eebea58e53bb7ab7f6777
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54cb4fe84a416a945ab9fdd2a3ffdb4d2ebda057
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676656"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分布式重播功能开始分布式重播之前，必须先从分布式重播管理工具启动预处理阶段以准备输入跟踪数据。 在预处理阶段，分布式重播控制器处理跟踪数据并生成一个中间文件：  
   
- ![分布式重播预处理阶段](../../tools/distributed-replay/media/preprocess.gif "分布式重播预处理阶段")  
+ ![Distributed replay 预处理阶段](../../tools/distributed-replay/media/preprocess.gif "Distributed replay 预处理阶段")  
   
  有关预处理阶段的详细信息，请参阅 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)。  
   

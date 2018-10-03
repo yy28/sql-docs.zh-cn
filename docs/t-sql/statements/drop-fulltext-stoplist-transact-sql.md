@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_FULLTEXT_STOPLIST_TSQL
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 3ee2a2bb-1dfb-4e7c-90e9-9d917cd84a15
-caps.latest.revision: 24
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3792a7c675b8a0121908a942dc0e58e61efc074e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9ed184138e4bec2f973cfe6df8ea758b90b4a6af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711815"
 ---
 # <a name="drop-fulltext-stoplist-transact-sql"></a>DROP FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ DROP FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  如果有任何全文索引引用了已删除的全文本非索引字表，则 DROP FULLTEXT STOPLIST 会失败。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要删除非索引字表，则必须对该非索引字表具有 DROP 权限，或者必须是 **db_owner** 或 **db_ddladmin** 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

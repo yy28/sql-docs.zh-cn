@@ -1,33 +1,27 @@
 ---
-title: 快捷键 (AccessToSQL) |Microsoft 文档
+title: 键盘快捷方式 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 19bc5765a47d28514403e895d693152cc2edec6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b1c9991c12cb35ed89217afc41d31c8b447c5de9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732005"
 ---
-# <a name="shortcut-keys-accesstosql"></a>快捷键 (AccessToSQL)
-键盘快捷方式可用于浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  
+# <a name="shortcut-keys-accesstosql"></a>键盘快捷方式 (AccessToSQL)
+可以使用键盘快捷方式来浏览 SSMA 应用程序。 有关详细信息，请参阅以下主题。  
   
--   [菜单命令和其他快捷键&#40;AccessToSQL&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
+-   [菜单命令和其他键盘快捷方式&#40;AccessToSQL&#41;](../../ssma/access/menu-commands-and-other-shortcut-keys-accesstosql.md)  
   
 ## <a name="see-also"></a>请参阅  
-[开始使用用于访问 SQL Server Migration Assistant &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[开始使用用于访问 SQL Server 迁移助手&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
   

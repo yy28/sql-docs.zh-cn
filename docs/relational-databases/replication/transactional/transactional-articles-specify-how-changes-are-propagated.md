@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7cf50bad1e75b5729bc946f6887e02654b69d8d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683045"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>事务项目 - 指定如何传播更改
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38005970"
   
 -   **sp_MSdel_\<** *tablename* **>**，用于处理删除。  
   
- 过程中使用的 \<tablename>**** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
+ 过程中使用的 **\<**_tablename_**>** 取决于如何将项目添加到发布中，以及订阅数据库是否包含名称相同但所有者不同的表。  
   
  所有这些过程都可以替换为在将项目添加到发布中时指定的自定义过程。 自定义过程用于应用程序需要自定义逻辑的情况，例如在订阅服务器上更新行时将数据插入审核表。 有关指定自定义存储过程的详细信息，请参阅上面列出的“如何”主题。  
   

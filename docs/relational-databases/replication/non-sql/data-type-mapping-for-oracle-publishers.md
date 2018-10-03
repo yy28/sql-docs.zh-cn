@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], data type mapping
 - data types [SQL Server replication], Oracle publishing
 - mapping data types [SQL Server replication]
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
-caps.latest.revision: 47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76e46f9c9a157261f8341243583e855a0681756d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37360179"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739185"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 发布服务器的数据类型映射
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,36 +30,36 @@ ms.locfileid: "37360179"
   
 |Oracle 数据类型|SQL Server 数据类型|备用|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|是|  
-|BLOB|VARBINARY(MAX)|是|  
-|CHAR([1-2000])|CHAR([1-2000])|是|  
-|CLOB|VARCHAR(MAX)|是|  
-|DATE|DATETIME|是|  
-|FLOAT|FLOAT|“否”|  
-|FLOAT([1-53])|FLOAT([1-53])|“否”|  
-|FLOAT([54-126])|FLOAT|“否”|  
-|INT|NUMERIC(38)|是|  
-|INTERVAL|DATETIME|是|  
-|LONG|VARCHAR(MAX)|是|  
-|LONG RAW|IMAGE|是|  
-|NCHAR([1-1000])|NCHAR([1-1000])|“否”|  
-|NCLOB|NVARCHAR(MAX)|是|  
-|NUMBER|FLOAT|是|  
-|NUMBER([1-38])|NUMERIC([1-38])|“否”|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|是|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|“否”|  
-|RAW([1-2000])|VARBINARY([1-2000])|“否”|  
-|real|FLOAT|“否”|  
-|ROWID|CHAR(18)|“否”|  
-|TIMESTAMP|DATETIME|是|  
-|TIMESTAMP(0-7)|DATETIME|是|  
-|TIMESTAMP(8-9)|DATETIME|是|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|是|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|“否”|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|是|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|“否”|  
-|UROWID|CHAR(18)|“否”|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|是|  
+|BFILE|VARBINARY(MAX)|用户帐户控制|  
+|BLOB|VARBINARY(MAX)|用户帐户控制|  
+|CHAR([1-2000])|CHAR([1-2000])|用户帐户控制|  
+|CLOB|VARCHAR(MAX)|用户帐户控制|  
+|DATE|DATETIME|用户帐户控制|  
+|FLOAT|FLOAT|否|  
+|FLOAT([1-53])|FLOAT([1-53])|否|  
+|FLOAT([54-126])|FLOAT|否|  
+|INT|NUMERIC(38)|用户帐户控制|  
+|INTERVAL|DATETIME|用户帐户控制|  
+|LONG|VARCHAR(MAX)|用户帐户控制|  
+|LONG RAW|IMAGE|用户帐户控制|  
+|NCHAR([1-1000])|NCHAR([1-1000])|否|  
+|NCLOB|NVARCHAR(MAX)|用户帐户控制|  
+|NUMBER|FLOAT|用户帐户控制|  
+|NUMBER([1-38])|NUMERIC([1-38])|否|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|用户帐户控制|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|否|  
+|RAW([1-2000])|VARBINARY([1-2000])|否|  
+|real|FLOAT|否|  
+|ROWID|CHAR(18)|否|  
+|TIMESTAMP|DATETIME|用户帐户控制|  
+|TIMESTAMP(0-7)|DATETIME|用户帐户控制|  
+|TIMESTAMP(8-9)|DATETIME|用户帐户控制|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|用户帐户控制|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|否|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|用户帐户控制|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|否|  
+|UROWID|CHAR(18)|否|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|用户帐户控制|  
   
 ## <a name="considerations-for-data-type-mapping"></a>数据类型映射注意事项  
  在从 Oracle 数据库复制数据时需注意下列数据类型问题。  

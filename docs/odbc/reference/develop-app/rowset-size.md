@@ -1,13 +1,11 @@
 ---
-title: 行集大小 |Microsoft 文档
+title: 行集大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0fa3d2feb8bcd3c4c342567e67f403edfb8029a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912332"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695215"
 ---
 # <a name="rowset-size"></a>行集大小
-要使用哪些行集大小取决于应用程序。 基于屏幕的应用程序通常按照两个策略之一。 第一种是将行集大小设置为显示在屏幕; 上的行数如果用户调整屏幕的大小，应用程序做相应更改的行集大小。 第二个是行集的大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集尽可能本地滚动，并仅在它滚动外部行集时提取新行。  
+若要使用的行集大小取决于应用程序。 基于屏幕的应用程序通常遵循以下两个策略之一。 第一种是将行集大小设置为在屏幕上显示的行数如果在用户调整屏幕，该应用程序做相应更改的行集大小。 第二个是行集大小设置为一个更大数字，如 100，从而减少了对数据源的调用数。 应用程序内的行集时可能本地滚动，并仅当外部行集将滚动时提取新行。  
   
- 其他应用程序，如报表，往往会将行集大小设置为最大的应用程序可以合理地处理的行数-具有更大的行集，有时减少网络开销每行。 恰好一个行集可以设置为多大取决于每个行和可用内存量的大小。  
+ 其他应用程序，如报表，往往会将行集大小设置为最大的应用程序可以合理地处理的行数，具有更大的行集，有时会减少网络开销每行。 完全大行集可以是取决于每个行和可用内存量的大小。  
   
- 通过调用设置行集大小**SQLSetStmtAttr**与*属性*SQL_ATTR_ROW_ARRAY_SIZE 自变量。 应用程序可以更改的行集大小，将新行集缓冲区 (通过调用**SQLBindCol**或指定绑定的偏移量) 甚至已提取行后，和/或文件名。 更改的行集大小的含义取决于该函数：  
+ 通过调用设置行集大小**SQLSetStmtAttr**与*属性*SQL_ATTR_ROW_ARRAY_SIZE 参数。 该应用程序可以更改的行集大小，将绑定新行集缓冲区 (通过调用**SQLBindCol**或指定绑定偏移量) 甚至已提取的行后，或两者。 更改的行集大小的影响取决于该函数：  
   
--   **SQLFetch**和**SQLFetchScroll**在调用时使用的行集大小，以确定要提取的行数。 但是， **SQLFetchScroll**与*FetchOrientation*的 SQL_FETCH_NEXT 增量光标基于上次读取和然后提取行集上基于当前的行集大小的行集。  
+-   **SQLFetch**并**SQLFetchScroll**在调用时使用的行集大小，以确定要提取的行数。 但是， **SQLFetchScroll**与*FetchOrientation* SQL_FETCH_NEXT 递增，增量为基于游标的上一个提取，然后提取行集上基于当前的行集大小的行集。  
   
--   **SQLSetPos**使用实际上是从前面调用开始的行集大小**SQLFetch**或**SQLFetchScroll**，这是因为**SQLSetPos**行集上运行已设置的。 **SQLSetPos**还将可以选取最新的行集大小如果**SQLBulkOperations**后已更改的行集大小已调用。  
+-   **SQLSetPos**使用从前面的调用开始实际上是行集大小**SQLFetch**或**SQLFetchScroll**，这是因为**SQLSetPos**对行集已设置的。 **SQLSetPos**还会选取新的行集大小如果**SQLBulkOperations**行集大小已发生更改后调用。  
   
--   **SQLBulkOperations**使用行集的大小实际上在时调用，因为它执行独立于任何提取的行集表的操作。
+-   **SQLBulkOperations**行集大小实际上在时使用的调用，因为它执行独立于任何提取的行集的表操作。

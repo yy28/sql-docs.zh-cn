@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - removing delivery extensions
 - deleting delivery extensions
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24036ae33b6b6a8da46b988189a055f5b17cca46
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: daebad069ec1d9791ceab58af1d25f03524c82cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704887"
 ---
 # <a name="removing-a-delivery-extension"></a>删除传递扩展插件
   要删除 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件，只需从配置文件中删除传递扩展插件的 Extension 元素。 删除配置信息之后，传递扩展插件对于报表服务器将不再可用。  

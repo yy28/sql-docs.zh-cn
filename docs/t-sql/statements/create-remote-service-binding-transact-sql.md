@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE REMOTE SERVICE BINDING
@@ -37,16 +35,15 @@ helpviewer_keywords:
 - conversation security [Service Broker]
 - remote service bindings [Service Broker], creating
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dd14b0c623ef89d872eb222f5546b4d06afaf41d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 53b43fece12144b60a4d6b0cfcd0918997e55613
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783638"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710505"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +88,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  如果用户拥有多个证书，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将从当前有效的并标记为 AVAILABLE FOR BEGIN_DIALOG 的证书中选择过期日期最晚的证书。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  下列用户默认拥有创建远程服务绑定的权限：在 USER 子句中指定的用户、db_owner 固定数据库角色的成员、db_ddladmin 固定数据库角色的成员以及 sysadmin 固定服务器角色的成员。  
   
  执行 CREATE REMOTE SERVICE BINDING 语句的用户必须对该语句中指定的主体数据库拥有模拟权限。  

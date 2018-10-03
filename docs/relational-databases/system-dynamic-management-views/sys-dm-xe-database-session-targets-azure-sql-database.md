@@ -1,29 +1,25 @@
 ---
-title: sys.dm_xe_database_session_targets （Azure SQL 数据库） |Microsoft 文档
+title: sys.dm_xe_database_session_targets （Azure SQL 数据库） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8978a41b22beb36ccc31d1cfdc0a73eaf2da34ec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2ce53be179bd25a71c92d2f0510036ef0d5c3f1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704523"
 ---
-# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets （Azure SQL 数据库）
+# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回有关会话目标的信息。  
@@ -41,7 +37,7 @@ ms.locfileid: "38041015"
 |execution_duration_ms|**bigint**|目标已经执行的总时间（以毫秒为单位）。 不可为 null。|  
 |target_data|**nvarchar(max)**|目标维护的数据，例如事件聚合信息。 可以为 Null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43fccc172756b8e7afdb4522c53693915be0f23c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662329"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613415"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -41,7 +38,7 @@ JDBC 驱动程序可用的文件上的 GitHub 存储库的 Microsoft JDBC 驱动
 **升级驱动程序时，我应该知道什么？**  
  Microsoft JDBC 驱动程序 7.0 支持 JDBC 4.2 和 4.3 （部分） 规范，并按如下所示安装包中包括两个 JAR 类库：
 
-| JAR                        | JDBC 规范            | JDK 版本 |
+| JAR                        | JDBC 规范            | 添加版本 |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 （部分） 和 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
@@ -70,7 +67,7 @@ Microsoft JDBC Drivers 6.0 和 4.2 for SQL Server 支持 JDBC 4.0、 4.1 和 4.2
 
 Microsoft JDBC Driver 4.1 for SQL Server 支持 JDBC 4.0 规范，并按如下所示安装包中包含一个 JAR 类库：
 
-| JAR           | JDBC 规范 | JDK 版本     |
+| JAR           | JDBC 规范 | 添加版本     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 和 6.0 |
 

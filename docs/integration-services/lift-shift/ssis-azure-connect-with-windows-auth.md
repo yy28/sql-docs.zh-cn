@@ -5,19 +5,18 @@ ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608629"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>从 Azure 的 SSIS 包中使用 Windows 身份验证连接到数据源和文件共享
 可以使用 Windows 身份验证连接到本地/Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime (IR) 位于同一虚拟网络的数据源和文件共享。 可以通过以下三种方法使用 Windows 身份验证从在 Azure-SSIS IR 上运行的 SSIS 包连接到数据源和文件共享：

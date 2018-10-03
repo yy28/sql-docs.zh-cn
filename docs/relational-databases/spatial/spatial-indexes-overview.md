@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725165"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +103,7 @@ ms.locfileid: "43102979"
   
  例如，上图显示了一个完全适合第 1 级网格的单元 15 的八边形。 在此图中，单元 15 已进行分割，将八边形分成了九个二级单元。 此图假定每对象单元数限制为 9 或更大。 然而，如果每对象单元数限制为 8 或更小，则单元 15 将不进行分割，而只为该对象对单元 15 进行计数。  
   
- 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而，[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT=n 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
+ 默认情况下，每对象单元数限制为每个对象 16 个单元，这将在大多数空间索引的空间和精度之间提供一个令人满意的折中方案。 然而， [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句支持 CELLS_PER_OBJECT**=**_n_ 子句，使用该子句可以指定介于 1 和 8192（包含这两者）之间的每对象单元数限制。  
   
 > [!NOTE]  
 >  空间索引的 **cells_per_object** 设置显示在 [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) 目录视图中。  
@@ -136,7 +132,7 @@ ms.locfileid: "43102979"
 >  可以使用 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
   
 ##### <a name="the-bounding-box"></a>边界框  
- 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 该边界框由四个坐标（x-min、y-min）和（x-max、y-max）******** 定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
+ 几何图形数据占有的平面可以是无限的。 然而，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，空间索引需要有限空间。 为了建立有限空间以用于分解，几何图形网格分割方案需要矩形“边界框” 。 该边界框由四个坐标 **(**_x-min_**，**_y-min_**)** 和 **(**_x-max_**，**_y-max_**)** 定义，这些坐标存储为空间索引的属性。 这些坐标所表示的意义如下：  
   
 -   x-min 是边界框左下角的 x 坐标。  
   
@@ -149,11 +145,11 @@ ms.locfileid: "43102979"
 > [!NOTE]  
 >  这些坐标通过 [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 BOUNDING_BOX 子句指定。  
   
- （x-min、y-min）和（x-max、y-max）******** 坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
+ **(**_x-min_**，**_y-min_**)** 和 **(**_x-max_**，**_y-max_**)** 坐标确定边界框的位置和尺寸。 边界框的外部空间视作一个编号为 0 的单元。  
   
  空间索引将分解边界框的内部空间。 网格层次结构的第 1 级网格将填充边界框。 若要在网格层次结构中放置几何对象，空间索引会将该对象的坐标与边界框的坐标进行比较。  
   
- 下图显示了由边界框的（x-min、y-min）和（x-max、y-max）******** 坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
+ 下图显示了由边界框的 **(**_x-min_**，**_y-min_**)** 和 **(**_x-max_**，**_y-max_**)** 坐标定义的点。 网格层次结构的顶级显示为 4x4 网格。 出于演示的目的，这里省略了较低级别。 边界框的外部空间用零 (0) 指示。 请注意，对象“A”部分超出了边界框，对象“B”完全位于边界框外部，即单元 0 中。  
   
  ![显示坐标和单元 0 的边界框。](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "显示坐标和单元 0 的边界框。")  
   

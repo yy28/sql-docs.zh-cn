@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_update_collection_item (TRANSACT-SQL) |Microsoft 文档
+title: sp_syscollector_update_collection_item (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d94ce7762facb878e0e6d8deb60647ee2d05482e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717115"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +48,10 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>参数  
  [ @collection_item_id =] *collection_item_id*  
- 标识收集项的唯一标识符。 *collection_item_id*是**int**默认值为 NULL。 *collection_item_id*必须具有一个值，如果*名称*为 NULL。  
+ 标识收集项的唯一标识符。 *collection_item_id*是**int**默认值为 NULL。 *collection_item_id*时，必须具有值*名称*为 NULL。  
   
  [ @name =] '*名称*  
- 收集项的名称。 *名称*是**sysname**默认值为 NULL。 *名称*必须具有一个值，如果*collection_item_id*为 NULL。  
+ 收集项的名称。 *名称*是**sysname**默认值为 NULL。 *名称*时，必须具有值*collection_item_id*为 NULL。  
   
  [ @new_name =] '*new_name*  
  收集项的新名称。 *new_name*是**sysname**，并且如果使用，不能为空字符串。  
@@ -71,7 +67,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或 1 （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  如果将收集组设置为非缓存模式，则忽略更改频率，这是因为此模式将导致数据收集和上载按为收集组指定的计划执行。 若要查看收集组的状态，请运行下面的查询。 将 `<collection_item_id>` 替换为要更新的收集项的 ID。  
   
 ```  
@@ -86,7 +82,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 dc_admin 或 dc_operator（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。 尽管 dc_operator 可以运行此存储过程，但是此角色的成员在其属性更改权限方面受到限制。 下列属性只能由 dc_admin 更改：  
   
 -   @new_name  
@@ -94,7 +90,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>示例  
- 下面的示例基于示例中定义中创建的集合项[sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)。  
+ 以下示例基于在中定义的示例中创建的集合项[sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)。  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. 更改收集频率  
  以下示例更改指定收集项的收集频率。  
@@ -142,10 +138,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   
