@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185367"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>高级多网站配置（SSRS 本机模式）
   使用此对话框可创建和管理用于访问报表服务器或报表管理器的 URL。 **“高级多网站配置”** 对话框用于创建附加 URL 和包含主机标头名称的自定义 URL，或者用于指定 IPv4 或 IPv6 格式的 IP 地址。  
@@ -34,7 +31,7 @@ ms.locfileid: "37220727"
   
  单击 **“确定”** 保存所做的更改。 如果添加或删除 URL 后，没有先单击 **“确定”** 就关闭了对话框，所做的更改将丢失。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **IP 地址**  
  标识 TCP/IP 网络上的报表服务器计算机。 有效值包括：  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da12f40cba7da5a7c56d702c20d7ad2e7759b796
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0e1fd77ed97e42eaadd76f7b9c50f74d6b5007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162737"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>“地图视区属性”对话框 -&gt;“优化”
   针对 **“地图视区属性”** 对话框选择 **“优化”** 有助于控制用于在报表中查看地图的分辨率。  
@@ -31,7 +28,7 @@ ms.locfileid: "37150248"
   
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“性能”**  
  滑动指针使之靠近 **“性能”** 可简化地图并减少其显示细节。  
   

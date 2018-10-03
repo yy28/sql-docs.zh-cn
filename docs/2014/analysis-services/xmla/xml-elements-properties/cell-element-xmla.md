@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: 88daba54-89e9-423f-8d12-8de80cf52d6b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18110400e76f10e9e8ac90fc2793a7a90f25d4de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec8b6eee3e3eefe1c86bf92d45bfac6032905f8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241219"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219407"
 ---
 # <a name="cell-element-xmla"></a>Cell 元素 (XMLA)
   包含 [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) 命令更新的单元的相关信息。  
@@ -54,8 +51,8 @@ ms.locfileid: "37241219"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -71,7 +68,7 @@ ms.locfileid: "37241219"
 |---------------|-----------------|  
 |CellOrdinal|所需`Long`属性。 包含要更新的单元的序号位置，序号从零开始。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关更新单元的详细信息，请参阅[更新单元 (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  
   
 ## <a name="see-also"></a>请参阅  

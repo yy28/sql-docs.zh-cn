@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166097"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint PowerPivot 库中发布的 PowerPivot 工作簿检索数据。  
@@ -51,7 +48,7 @@ ms.locfileid: "37234747"
 ## <a name="parameters"></a>Parameters  
  在“筛选器”窗格中，针对某个筛选器选择 **“参数”** 选项，以便自动使用与所选筛选器对应的可用值创建报表参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果您从 PowerPivot 库中的 PowerPivot 工作簿打开报表生成器，则不会在报表中重新创建 PowerPivot 工作簿中的数据透视表、数据透视图、切片器以及其他布局和分析功能。 而是生成一个空报表，其中包含一个预配置的数据源，该数据源指向 PowerPivot 工作簿中的数据。 基于 PowerPivot 工作簿设计报表可能很费时费力，具体取决于您要在报表中重新创建的切片器、筛选器以及表或图表的数量。 一个更好的方法是独立于 PowerPivot 设计构思您要包含在报表中的数据的显示格式。  
   
  PowerPivot 工作簿中的数据经过高度压缩；而从 PowerPivot 工作簿中为报表检索的数据未经压缩。 使用查询设计器可指定筛选器和参数，以便将数据限制为仅是报表中所需的数据。  

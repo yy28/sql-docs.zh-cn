@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: be8b75318aec2bd921a7d995f63e722f38881426
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fce2675b361b3b6d4d8ffc46afdabb0b6d128cc7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180857"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>RunningValue 函数（报表生成器和 SSRS）
   返回在给定作用域中计算的，由表达式指定的所有非 Null 数值的运行聚合。  
@@ -47,7 +44,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>返回类型  
  由 *function* 参数中指定的聚合函数确定。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  值为`RunningValue`重置为 0，为每个作用域的新实例。 如果指定组，则会在更改组表达式时重置该运行值。 如果指定数据区域，则会为该数据区域的每个新实例重置该运行值。 如果指定数据集，则不会在整个数据集中重置该运行值。  
   
  `RunningValue` 不能在筛选器或排序表达式中使用。  

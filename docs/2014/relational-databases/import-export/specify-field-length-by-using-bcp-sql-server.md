@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3d4be0ba5a6b24174134fbef6f5dc2e87fa3af9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ed900eae974eb768223d534e6ac43025e9718c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202867"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>使用 bcp 指定字段长度 (SQL Server)
   字段长度指示以字符格式表示数据时所要求的最大字符数。 如果数据以本机格式存储，则字段长度就是已知的，例如，`int` 数据类型占 4 个字节。 如果指示前缀长度为 0 **bcp**命令将提示你输入字段长度、 默认字段长度以及字段长度对包含的数据文件中的数据存储的影响`char`数据。  
@@ -66,7 +63,7 @@ ms.locfileid: "37158568"
 |`nvarchar`|定义的列长度的两倍|  
 |`Text`|0|  
 |`ntext`|0|  
-|`bit`|@shouldalert|  
+|`bit`|1|  
 |`binary`|定义的列长度的两倍 + 1|  
 |`varbinary`|定义的列长度的两倍 + 1|  
 |`image`|0|  
@@ -100,7 +97,7 @@ ms.locfileid: "37158568"
   
 |数据类型|默认长度（字符数）|  
 |---------------|-----------------------------------|  
-|`bit`|@shouldalert|  
+|`bit`|1|  
 |`binary`|定义的列长度|  
 |`varbinary`|定义的列长度|  
 |`image`|0|  
@@ -111,7 +108,7 @@ ms.locfileid: "37158568"
 |`int`|4|  
 |`bigint`|8|  
 |`smallint`|2|  
-|`tinyint`|@shouldalert|  
+|`tinyint`|1|  
 |`money`|8|  
 |`smallmoney`|4|  
 |`decimal` <sup>1</sup>|<sup>*</sup>|  

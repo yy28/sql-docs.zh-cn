@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Database Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Database element
 ms.assetid: c3bc7eaf-ed0d-4395-a3b7-8d9cfacfe911
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56efc69c0e8f7f0e3e008aa5ea769774ee5014af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46166d77185836c65fe1d026255620dfb87c1f66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191027"
 ---
 # <a name="database-element-assl"></a>Database 元素 (ASSL)
   定义[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库。  
@@ -74,8 +71,8 @@ ms.locfileid: "37332813"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -85,7 +82,7 @@ ms.locfileid: "37332813"
 |父元素|[数据库](../collections/databases-element-assl.md)|  
 |子元素|[帐户](../collections/accounts-element-assl.md)， [AggregationPrefix](../properties/aggregationprefix-element-assl.md)，[批注](../collections/annotations-element-assl.md)，[程序集](../collections/assemblies-element-assl.md)，[排序规则](../properties/collation-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[多维数据集](../collections/cubes-element-assl.md)， [DatabasePermissions](../collections/databasepermissions-element-assl.md)， [DataSources](../collections/datasources-element-assl.md)， [DataSourceViews](../collections/datasourceviews-element-assl.md)，[描述](../properties/description-element-assl.md)，[维度](../collections/dimensions-element-assl.md)， [EstimatedSize](../properties/estimatedsize-element-assl.md)， [ID](../properties/id-element-assl.md)，[语言](../properties/language-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [LastUpdate](../properties/lastupdate-element-assl.md)， [MasterDatasourceID](../properties/datasourceid-element-assl.md)， [MiningStructures](../collections/miningstructures-element-assl.md)，[名称](../properties/name-element-assl.md)，[角色](../collections/roles-element-assl.md)，[状态](../properties/state-element-assl.md)，[翻译](../collections/translations-element-assl.md)，[可见](../properties/visible-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.Database>。  
   
 ## <a name="see-also"></a>请参阅  

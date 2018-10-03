@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01b3535c7a6c2547bdef9a4f74956ff647f1b864
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226167"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>“依赖关系网络”选项卡（挖掘模型查看器）
   **“依赖关系网络”** 选项卡提供挖掘模型所包含的所有属性的图形视图，并显示这些属性之间的关系。  
@@ -34,7 +31,7 @@ ms.locfileid: "37279983"
   
  [使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   

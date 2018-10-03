@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.databasesettings.f1
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f0e8806408c7a8b07512733acba74040e697222
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 357d7ba5fdd790bf32534b8e274ed67ef715cdea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178248"
 ---
 # <a name="server-properties-database-settings-page"></a>服务器属性（“数据库设置”页）
   使用此页可以查看或修改数据库设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **默认索引填充因子**  
  指定在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用现有数据创建新索引时对每一页的填充程度。 由于在页填充时 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必须花时间来拆分页，因此填充因子会影响性能。  
   

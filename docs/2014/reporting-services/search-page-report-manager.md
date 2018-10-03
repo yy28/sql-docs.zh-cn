@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206127"
 ---
 # <a name="search-page-report-manager"></a>“搜索”页（报表管理器）
   使用“搜索结果”页可以查看为报表、链接报表、报表模型、共享数据源、文件夹或资源指定的搜索操作的结果。 搜索结果按字母顺序列出。 您可以按照类型、名称或说明进行排序。  
@@ -37,7 +34,7 @@ ms.locfileid: "37192987"
   
 2.  在页面顶部的 **“搜索”** 框中键入搜索条件。 然后按 Enter 或单击“搜索”箭头。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **删除**  
  单击此选项可从报表服务器数据库中删除项。  
   

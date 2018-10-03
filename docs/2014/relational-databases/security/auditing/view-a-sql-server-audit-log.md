@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - audits [SQL Server], viewing logs
@@ -16,12 +14,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c70487017cb8e92570bfe9adb1bc957cf70e7e52
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 75de66ef1759cc9e20b98f1f38c9ffa6361d31a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026259"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229680"
 ---
 # <a name="view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中查看 SQL Server 审核日志。  
@@ -47,7 +45,7 @@ ms.locfileid: "43026259"
   
 #### <a name="to-view-a-sql-server-audit-log"></a>查看 SQL Server 审核日志  
   
-1.  在对象资源管理器中，展开“安全性”文件夹。  
+1.   在对象资源管理器中，展开“安全性”文件夹。  
   
 2.  展开“审核”文件夹。  
   

@@ -5,8 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
@@ -15,12 +13,12 @@ ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220527"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
   有两种方法可以将结果集或数据从过程返回给调用程序：输出参数和返回代码。 本主题提供了有关这两种方法的信息。  
@@ -162,7 +160,7 @@ EXECUTE @result = my_proc;
 |返回代码值|含义|  
 |-----------------------|-------------|  
 |0|成功执行。|  
-|@shouldalert|未指定所需参数值。|  
+|1|未指定所需参数值。|  
 |2|指定参数值无效。|  
 |3|获取销售额数值时出错。|  
 |4|该销售人员的销售额数值为 NULL。|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2febce5efbc51e3a25693b56f3ab000ab9101be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9561f5031b59d67144ee16e535d444c0d679a2d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202467"
 ---
 # <a name="create-infopackage"></a>创建 InfoPackage
   使用 **“创建 InfoPackage”** 对话框在 SAP Netweaver BW 系统中创建新的 InfoPackage。  
@@ -39,7 +36,7 @@ ms.locfileid: "37292867"
   
 4.  在 **“连接管理器”** 页中，找到 **“创建 SAP BW 对象”** 组框，选择 **“InfoPackage”**，然后单击 **“创建”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **InfoSource**  
  输入新 InfoPackage 应基于的 InfoSource 的名称。  
   

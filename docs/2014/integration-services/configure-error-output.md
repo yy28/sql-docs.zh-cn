@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2098e880ab85d145d0c2975c407c31920b9735a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279cacedf44d237de2821cb0ec7da837a43c2f06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162197"
 ---
 # <a name="configure-error-output"></a>配置错误输出
   可以使用 **“配置错误输出”** 对话框，为支持错误输出的数据流转换配置错误处理选项。  
   
  若要了解有关使用错误输出的详细信息，请参阅 [数据中的错误处理](data-flow/error-handling-in-data.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入或输出**  
  查看输出的名称。  
   

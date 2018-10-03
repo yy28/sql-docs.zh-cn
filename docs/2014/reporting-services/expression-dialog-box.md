@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325637"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207673"
 ---
 # <a name="expression-dialog-box"></a>“表达式”对话框
   使用**表达式**对话框可以编写[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]表达式的报表项属性。 您可以使用表达式来设置多个属性，包括颜色、字体和边框。 在运行时，报表处理器对表达式进行计算，然后用结果替代属性的值。  
@@ -71,7 +68,7 @@ ms.locfileid: "37325637"
   
  常见函数包括内置报表函数和聚合函数[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]运行时库函数，并[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]公共语言运行时 (CLR) 类中的<xref:System.Math>和<xref:System.Convert>命名空间。 你还可以添加对没有显示在类别列表中的 CLR 类和外部程序集的引用。 有关详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  代码窗口  
  使用顶部窗格中的代码窗口可以键入表达式。 在打开 **“表达式”** 对话框时，代码窗口将包含该表达式。 您可替换或修改该表达式。 您可以添加函数调用、运算符、常量、字段、参数、全局集合中的项以及对自定义代码的引用。 在您进行更改时，代码窗口会显示您所做的更改。  
   

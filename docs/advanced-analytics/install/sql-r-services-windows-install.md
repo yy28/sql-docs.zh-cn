@@ -3,17 +3,17 @@ title: 安装 SQL Server 2016 R Services （数据库） |Microsoft Docs
 description: 当在 Windows 上安装 SQL Server 2016 R Services，SQL Server 中的 R 才可用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 92d477434460c9395342e1a522173a301b5a0ad8
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229927"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,9 @@ ms.locfileid: "46713299"
 
 SQL Server 2017 中提供的 R 集成[机器学习服务](../r/r-server-standalone.md)，专用于反映将 Python 添加。 如果想要 R 集成并且具有 SQL Server 2017 安装介质，请参阅[安装 SQL Server 2017 机器学习服务](sql-machine-learning-services-windows-install.md)添加功能。 
 
-## <a name="bkmk_prereqs"> </a> 预安装清单
+<a name="bkmk_prereqs"> </a> 
+
+## <a name="pre-install-checklist"></a>预安装清单
 
 + 数据库引擎实例是必需的。 尽管将其添加到现有实例的以增量方式，你不能安装只需 R。
 
@@ -46,11 +48,15 @@ SQL Server 2017 中提供的 R 集成[机器学习服务](../r/r-server-standalo
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
- ###  <a name="bkmk_ga_instalpatch"></a> 安装修补程序要求 
+<a name="bkmk_ga_instalpatch"></a>
+
+ ### <a name="install-patch-requirement"></a>安装修补程序要求 
 
 Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件存在问题，这些二进制文件是作为 SQL Server 系统必备进行安装的。 如果未安装适用于该 VC 运行时二进制文件的更新，则在某些情况下 SQL Server 可能会遇到稳定性问题。 在安装 SQL Server 之前，请按照 [SQL Server 发行说明](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)中的说明来确定你的电脑是否需要 VC 运行时二进制文件的修补程序。  
 
-## <a name="bkmk2016top"></a>运行安装程序
+<a name="bkmk2016top"></a>
+
+## <a name="run-setup"></a>运行安装程序
 
 对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取和执行权限的域帐户。
 
@@ -85,8 +91,9 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 7. 安装完成时，如果要求您重新启动计算机后请立即登录。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
+<a name="bkmk_enableFeature"></a>
 
-##  <a name="bkmk_enableFeature"></a>启用脚本执行
+##  <a name="enable-script-execution"></a>启用脚本执行
 
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
@@ -118,6 +125,8 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>验证安装
+
+检查安装状态的实例使用[自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
 使用以下步骤来验证用于启动外部脚本的所有组件正在都运行。
 
@@ -151,7 +160,29 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
     |----|
     | 1|
 
-## <a name="bkmk_FollowUp"></a> 附加配置
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>应用更新
+
+我们建议将最新的累积更新应用到数据库引擎和机器学习组件。
+
+在连接 internet 的设备上通常可通过 Windows 更新应用累积更新，但还可以使用以下步骤，受控的更新。 数据库引擎的更新应用时，安装程序将拉取的 R 库安装在同一实例的累积更新。 
+
+断开连接的服务器上执行额外的步骤是必需的。 有关详细信息，请参阅[在没有 internet 访问权限的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
+
+1. 开始使用已安装的基线实例： SQL Server 2016 初始版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2。
+
+2. 转到累积更新列表： [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 选择最新的累积更新。 可执行文件是自动下载并提取。
+
+4. 运行安装程序。 接受许可条款，然后在功能选择页上，查看为其应用累积更新的功能。 应会看到每一项功能为当前实例，包括 R Services 安装。 安装程序将下载更新的所有功能所必需的 CAB 文件。
+
+5. 继续完成向导，接受的 R 分发许可条款。 
+
+<a name="bkmk_FollowUp"></a> 
+
+## <a name="additional-configuration"></a>其他配置
 
 如果外部脚本执行验证步骤是否成功，你可以从 SQL Server Management Studio、 Visual Studio Code 中或可以向服务器发送 T-SQL 语句的任何其他客户端运行 Python 命令。
 
@@ -169,7 +200,9 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 > [!NOTE]
 > 并非所有列出的更改是必需的并无可能要求。 要求取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 其他故障排除提示可在此处找到：[升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-### <a name="bkmk_configureAccounts"></a>启用为 Launchpad 帐户组的隐式身份验证
+<a name="bkmk_configureAccounts"></a>
+
+### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>启用为 Launchpad 帐户组的隐式身份验证
 
 在安装期间，某些新的 Windows 用户帐户创建用于运行任务的安全令牌下[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。 当用户从外部客户端发送 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户，将其映射到调用用户的标识和运行 R 脚本，代表用户。 数据库引擎的此新服务支持的调用的外部脚本执行安全*隐式身份验证*。
 
@@ -189,7 +222,9 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 6. 单击**确定**一次以关闭**选择用户或组**对话框。
 7. 在中**登录名-新建**对话框中，单击**确定**。 默认情况下，将登录名分配到 **公共** 角色，且有权连接到数据库引擎。
 
-### <a name="bkmk_AllowLogon"></a>向用户授予权限来运行外部脚本
+<a name="bkmk_AllowLogon"></a>
+
+### <a name="give-users-permission-to-run-external-scripts"></a>授予用户运行外部脚本的权限
 
 > [!NOTE]
 > 如果在 SQL Server 计算上下文中运行 R 脚本使用 SQL 登录名，则不需要此步骤。
@@ -209,7 +244,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > 
 > [监视使用自定义报表的机器学习服务](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
 
-### <a name="permissions-db"></a> 授予用户读取、 写入或 DDL 权限访问数据库
+<a name="permissions-db"></a>
+
+###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>授予用户读取、 写入或 DDL 权限访问数据库
 
 用于运行 R 的用户帐户可能需要从其他数据库读取数据创建新表以存储结果，并将数据写入到表。 因此，对于每个用户都将执行 R 脚本，请确保用户对数据库具有适当的权限： *db_datareader*， *db_datawriter*，或*db_ddladmin*.
 
@@ -240,7 +277,9 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 如果您认为您可能经常使用 R，或者如果希望有很多用户同时处于正在运行的脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
 
-### <a name="bkmk_optimize"></a>优化执行外部脚本的服务器
+<a name="bkmk_optimize"></a>
+
+### <a name="optimize-the-server-for-external-script-execution"></a>优化执行外部脚本的服务器
 
 默认设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装程序旨在优化的各种数据库引擎，这可能包括提取、 转换和加载 (ETL) 进程、 报告、 审核所支持的服务的服务器的余额和使用的应用程序[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据。 因此，默认设置下，可能会发现为机器学习的资源的有时限制或受限制，尤其是在占用大量内存的操作。
 
@@ -262,17 +301,6 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 不同 SQL Server 2016 和 SQL Server 2017 中安装和管理 R 包的过程。 在 SQL Server 2016 中，数据库管理员必须安装 R 包，用户需要。 在 SQL Server 2017 中，可以设置用户组共享每个数据库级别上的包或配置数据库角色，以使用户能够安装其自己的包。 有关详细信息，请参阅[安装新 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
-
-## <a name="get-help"></a>获取帮助
-
-需要安装或升级的帮助？ 常见的问题和已知的问题的答案，请参阅以下文章：
-
-* [升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-若要检查的实例的安装状态并解决常见的问题，请尝试这些自定义报表。
-
-* [SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
-
 ## <a name="next-steps"></a>后续步骤
 
 R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQL Server 配合工作的基础知识。 下一步，请参阅以下链接：
@@ -281,5 +309,3 @@ R 开发人员可以开始使用一些简单的示例，并了解 R 如何与 SQ
 + [教程： 在数据库内分析 R 开发人员](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 若要查看的机器学习基于实际方案的示例，请参阅[机器学习教程](../tutorials/machine-learning-services-tutorials.md)。
-
-

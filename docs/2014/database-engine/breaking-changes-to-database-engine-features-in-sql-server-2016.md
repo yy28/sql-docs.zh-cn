@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 - breaking changes [SQL Server]
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
-caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c20cb1efa3cc6048e9c3b2284e76852ace41c66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227087"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的重大更改
   本主题介绍了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]早期版本中的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -46,7 +43,7 @@ ms.locfileid: "40396466"
 |ALTER TABLE|ALTER TABLE 语句只允许两部分的表名称 (schema.object)。 在编译时出现错误 117 失败，指定表名现在使用以下格式：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在早期版本中指定格式 server.database.schema.table 会返回错误 4902。 指定格式 .database.schema.table 或 ..schema.table 则会成功。 要解决此问题，请不要使用 4 部分的前缀。|  
 |浏览元数据|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 查询视图时，现在会返回视图的元数据而非基础对象的元数据。 此行为现在匹配浏览元数据的其他方法。|  
 |SOUNDEX|数据库兼容级别为 110 时，SOUNDEX 函数实现的新规则可能导致由该函数计算的值不同于更低兼容级别时计算的值。 在升级到兼容性级别 110 后，可能需要重新生成使用 SOUNDEX 函数的索引、堆或 CHECK 约束。 有关详细信息，请参阅 [SOUNDEX (Transact-SQL)](/sql/t-sql/functions/soundex-transact-sql)
- 实例时都提供 SQL Server 登录名。|  
+ .|  
 |失败的 DML 语句的行计数消息|在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中，DML 语句失败时，[!INCLUDE[ssDE](../includes/ssde-md.md)]将以一致方式将包含 RowCount: 0 的 TDS DONE 令牌发送到客户端。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本中，当 TRY-CATCH 块包含失败的 DML 语句并且该语句由[!INCLUDE[ssDE](../includes/ssde-md.md)]自动参数化或 TRY-CATCH 块所处的级别不同于失败语句的级别时，会向客户端发送不正确的值 -1。 例如，如果 TRY-CATCH 块调用存储过程且该过程中的 DML 语句失败，客户端将错误地收到 -1 值。<br /><br /> 依赖这种不正确行为的应用程序将失败。|  
 |SERVERPROPERTY (‘Edition’)|所安装的 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 实例的产品版本。 使用该属性的值确定已安装的产品支持的功能和限制（如最大 CPU 数）。<br /><br /> 基于安装的 Enterprise 版，它可以返回“Enterprise Edition”或“Enterprise Edition：基于内核授予许可”。 根据单个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例的最大计算能力来区分 Enterprise 版本。 有关详细信息中的计算能力限制[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]，请参阅[Compute Capacity Limits by Edition 的 SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。|  
 |CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '`*密码*`' HASHED`选项不能用于创建的哈希[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]7 或更早版本。|  

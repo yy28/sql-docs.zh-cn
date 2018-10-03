@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164507"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 Microsoft 逻辑回归算法的模型特有的挖掘模型内容。 有关如何解释所有模型类型共享的统计信息和结构，以及与挖掘模型内容相关的常规术语定义的说明，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
@@ -78,7 +75,7 @@ ms.locfileid: "37328927"
   
 |节点类型 ID|Description|  
 |------------------|-----------------|  
-|@shouldalert|模型。|  
+|1|模型。|  
 |17|子网的组织程序节点。|  
 |18|输入层的组织程序节点。|  
 |19|隐藏层的组织程序节点。 隐藏层为空。|  

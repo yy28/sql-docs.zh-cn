@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224011"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210229"
 ---
 # <a name="enumstring-data-type-xmla"></a>EnumString 数据类型 (XMLA)
   定义一个派生数据类型，该类型表示一组给定枚举器的命名常量。  
@@ -49,17 +46,17 @@ ms.locfileid: "37224011"
 |特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|`string`|  
-|派生数据类型|InclusionThresholdSetting|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
-|子元素|InclusionThresholdSetting|  
-|派生元素|InclusionThresholdSetting|  
+|父元素|None|  
+|子元素|None|  
+|派生元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  XML for Analysis (XMLA) 可以使用枚举将字符串值限制为一组可验证设置。 `EnumString` 可以使用标准 XML `string` 数据类型。 每个命名常量的特定值都通过枚举器定义指定。 通过将它们添加到定义枚举器[DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md)架构行集，并可以通过使用检索[Discover](../xml-elements-methods-discover.md)方法替换 DISCOVER_ENUMERATORS 请求类型。  
   
  下表描述了支持的实例的枚举器[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  

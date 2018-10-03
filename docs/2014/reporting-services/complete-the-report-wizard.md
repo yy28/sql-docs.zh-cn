@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
-caps.latest.revision: 28
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b9f101d61676b5364db2637bc9f0ff6f36c9daf1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f997ab99213f23c6220867b1105e0a5e71b97f38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180927"
 ---
 # <a name="complete-the-report-wizard"></a>完成报表向导
   使用此页可以对报表进行命名并检查要应用于报表的选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **报表名称**  
  键入此报表的名称。 此名称还将显示为报表的标题。 可以在设计视图中更改标题。  
   

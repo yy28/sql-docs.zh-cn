@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d82f21fa-6be1-4723-a72e-f2526fafd1b6
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ba49bf6834800a4da450952e94a8474d40f2b5f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6f7b32b9e3d87c783efe2a064714454c50a886c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214247"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>管理内存中 OLTP 的内存
   内存优化表要求存在足够的内存，以便将所有行和索引保留在内存中。 因为内存是有限的资源，所以了解和管理系统的内存使用情况非常重要。 本节中的主题介绍一些常见的内存使用和管理方案。  

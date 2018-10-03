@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - View Designer, query creation
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 76b6fc0e-c324-4d66-b6ed-496fa25fea1e
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0ab7aa0c57afbcdb02904d6aff48011742c106c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e12595ddb5074ac780e997f2d0255e57c4470aa8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165227"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>查询类型 (Visual Database Tools)
   查询和视图设计器为某些查询类型（例如“选择”、“插入结果”、“插入值”、“更新”和“生成表”）提供了内置的功能，并且还支持 UNION、全文搜索和 CASE 表达式查询。  

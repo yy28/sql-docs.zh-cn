@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211277"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
   正在启动[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系统数据库 （Master、 模型、 MSDB 和 TempDB） 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用服务器消息块 (SMB) 文件服务器作为存储选项安装的用户数据库。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  

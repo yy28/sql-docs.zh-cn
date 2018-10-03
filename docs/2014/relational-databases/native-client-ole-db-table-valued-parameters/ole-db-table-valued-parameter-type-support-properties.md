@@ -1,32 +1,29 @@
 ---
-title: OLE DB 表值参数类型支持 （属性） |Microsoft Docs
+title: OLE DB 表值参数类型支持（属性） | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bc75c4ebdbbbe4d38f18692ae8c9588957e32e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 024e6fb62da2038c19faad0919413e9f2c52fe0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189097"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 表值参数类型支持（属性）
   本主题提供有关与表值参数行集对象相关联的 OLE DB 属性和属性集的信息。  
   
 ## <a name="properties"></a>属性  
- 以下是通过表值参数行集对象上的 IRowsetInfo::GetPropeties 方法公开的属性的列表。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为非默认值将导致错误，并且会创建任何对象。  
+ 下面的列表列出了通过表值参数行集对象的 IRowsetInfo::GetPropeties 方法公开的属性 。 请注意，所有表值参数行集属性都是只读的。 因此，尝试设置任何通过 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 属性的方法为非默认值将导致错误，并且会创建任何对象。  
   
  在此处未列出在表值参数行集对象中未实现的属性。 有关属性的完整列表，请参阅 Windows 数据访问组件中的 OLE DB 文档。  
   
@@ -35,7 +32,7 @@ ms.locfileid: "37408416"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/w： 只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在表值参数行集对象上不允许书签。|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：在表值参数行集对象上不允许书签。|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -47,7 +44,7 @@ ms.locfileid: "37408416"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意： 表值参数行集对象支持 IRowsetChange 接口。<br /><br /> 通过使用 DBPROP_IRowsetChange 等于 VARIANT_TRUE 而创建的行集将展现立即更新模式行为。<br /><br /> 但是，如果 BLOB 列绑定为的 ISequentialStream 对象，使用者应将它们保留表值参数行集对象的生存期。|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意：表值参数行集对象支持 IRowsetChange 接口。<br /><br /> 通过使用 DBPROP_IRowsetChange 等于 VARIANT_TRUE 而创建的行集将展现立即更新模式行为。<br /><br /> 但是，如果 BLOB 列绑定用作 ISequentialStream 对象，则使用者应在该表值参数行集对象的整个生存期中保留这些列。|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -98,6 +95,6 @@ ms.locfileid: "37408416"
   
 ## <a name="see-also"></a>请参阅  
  [OLE DB 表值参数类型支持](ole-db-table-valued-parameter-type-support.md)   
- [使用表值参数&#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  
+ [使用表值参数 (OLE DB)](table-valued-parameters-ole-db.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], source controls
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb720843f38c9fb7718f5bd3f2453cb42448e5d9
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187997"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>将解决方案和项目添加到源代码管理
   将解决方案添加到源代码管理中时，该解决方案会成为由源代码管理提供程序创建并维护的动态版本控制存档的一部分。 每次有人在解决方案的新版本中执行检查时，该版本都会成为存档的一部分，并可供其他源代码管理用户使用。  

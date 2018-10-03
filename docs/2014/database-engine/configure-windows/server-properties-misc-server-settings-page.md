@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f8e94efb4d7aeae7324b0e694e220c575c459a62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3789af3364d624ed94f64aa6205a626143ef18b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219197"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>服务器属性（“杂项服务器设置”页）
   使用此页可以查看或修改服务器设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **用户的默认语言**  
  指定所有新建登录名的默认语言。  
   

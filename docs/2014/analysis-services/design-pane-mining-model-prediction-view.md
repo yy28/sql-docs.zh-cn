@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189758"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>“设计”窗格（“挖掘模型预测”视图）
   **“设计”** 窗格包含可用于生成数据挖掘预测的预测查询生成器。 您可以设计使用数据源视图中的输入数据表的预测查询来生成大量预测，也可以创建允许您提供各个值的单独预测查询。  
@@ -35,7 +32,7 @@ ms.locfileid: "37316027"
   
  **有关详细信息，请参阅**[数据挖掘查询](data-mining/data-mining-queries.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **切换到查询结果视图**  
  单击此项可以在“设计”、“查询”和“结果”窗格之间切换。 切换到 **“结果”** 窗格可以运行查询。  
   
@@ -86,10 +83,10 @@ ms.locfileid: "37316027"
  从派生自源表的列的列表中选择列。 如果在 **“源”** 中选择了 **“预测函数”**，则此字段将包含所选挖掘模型中可用的预测函数。  
   
  **分组**  
- 与“和/或”列一起使用，将表达式组合到一起。 例如， `(expr1 Or expr2) And expr3`。  
+ 与“和/或”列一起使用，将表达式组合到一起。 例如 `(expr1 Or expr2) And expr3` 。  
   
  **和/或**  
- 用于创建逻辑查询。 例如， `(expr1 Or expr2) And expr3`。  
+ 用于创建逻辑查询。 例如 `(expr1 Or expr2) And expr3` 。  
   
  **条件/参数**  
  指定应用于该列的条件表达式或用户表达式。 可以将列从包含挖掘模型的表和输入表中拖动到单元。  
