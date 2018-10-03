@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
 - extended events [SQL Server], create session
 ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8524274c0fe1f79bb0f62008ba0caf6ad115004b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e0c243dcacf653167477137e26f0767985f6fa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150867"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>使用查询编辑器创建扩展事件会话
   您可以使用查询编辑器创建扩展事件会话，也可以在对象资源管理器中创建会话。 在对象资源管理器中，扩展事件提供了两个可用来创建、修改和查看事件会话数据的用户界面，即，一个指导您完成事件会话创建过程的向导和一个提供了更多高级配置选项的新会话 UI。 您可以创建扩展事件会话来诊断 SQL Server 跟踪，这样您便能解决如下问题：  

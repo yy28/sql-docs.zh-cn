@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - DiscretizationMethod property
 - EQUAL_AREAS method
 ms.assetid: 3f16215c-531e-4ecf-a11f-ee7c6a764463
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138f416d6dc7e1408bd65d10da0a8538906da3b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa474cfd298b5d482f8b1804159f085fca5f8c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195557"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>创建神经网络结构和模型（数据挖掘中级教程）
   若要创建数据挖掘模型，必须先使用数据挖掘向导基于新数据源视图创建一个新的挖掘结构。 在本任务中，您将使用该向导创建一个挖掘结构，同时创建一个基于 [!INCLUDE[msCoName](../includes/msconame-md.md)] 神经网络算法的关联挖掘模型。  
@@ -100,15 +97,15 @@ ms.locfileid: "37304747"
     |AutomaticResponses|连续|Long|  
     |AverageTimePerIssue|连续|Long|  
     |Calls|连续|Long|  
-    |DayOfWeek|离散|文本|  
+    |DayOfWeek|离散|Text|  
     |FactCallCenterID|Key|Long|  
     |IssuesRaised|连续|Long|  
     |LevelOneOperators|连续|Long|  
     |LevelTwoOperators|连续|Long|  
     |Orders|连续|Long|  
     |ServiceGrade|连续|双精度|  
-    |班次|离散|文本|  
-    |WageType|离散|文本|  
+    |班次|离散|Text|  
+    |WageType|离散|Text|  
   
 13. 上**创建测试设置**页上，清除选项时，文本框**测试数据百分比**。 单击“下一步” 。  
   
@@ -273,7 +270,7 @@ ms.locfileid: "37304747"
     |**建模标志**||  
     |**名称**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
-    |**Usage**|预测|  
+    |**Usage**|Predict|  
   
 5.  在任意位置单击**挖掘模型**选项卡。  
   
@@ -283,7 +280,7 @@ ms.locfileid: "37304747"
     |---------------|----------------------------|---------------------------|  
     ||Microsoft 神经网络|Microsoft 神经网络|  
     |AutomaticResponses|输入|输入|  
-    |AverageTimePerIssue|预测|预测|  
+    |AverageTimePerIssue|Predict|Predict|  
     |Calls|输入|输入|  
     |DayOfWeek|输入|输入|  
     |FactCallCenterID|Key|Key|  
@@ -292,7 +289,7 @@ ms.locfileid: "37304747"
     |LevelTwoOperators|输入|输入|  
     |Orders|输入|输入|  
     |ServceGrade Binned|Ignore|预测 (ServiceGrade)|  
-    |ServiceGrade|预测|Ignore|  
+    |ServiceGrade|Predict|Ignore|  
     |班次|输入|输入|  
     |Total Operators|输入|输入|  
     |WageType|输入|输入|  

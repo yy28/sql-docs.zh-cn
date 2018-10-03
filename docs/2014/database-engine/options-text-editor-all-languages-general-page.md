@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d9919d2d74bfa0fe26ca7f7ad915dd808f29382
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048629"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>选项（“文本编辑器”-“所有语言”-“常规”页）
   使用此对话框可以设置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的所有五个编辑器的常规编辑选项。 若要显示这些选项，请在 **“工具”** 菜单上单击 **“选项”** 。 选择 **“文本编辑器”** 文件夹，展开 **“所有语言”** 文件夹，再单击 **“常规”**。  

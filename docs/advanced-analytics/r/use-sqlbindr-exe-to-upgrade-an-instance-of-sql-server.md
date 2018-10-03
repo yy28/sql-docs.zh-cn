@@ -3,29 +3,35 @@ title: 升级 SQL Server 实例 （机器学习服务） 中的 R 和 Python 组
 description: 升级 R 和 Python 在 SQL Server 2016 Services 或 SQL Server 2017 机器学习服务使用 sqlbindr.exe 绑定到机器学习服务器中。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/19/2018
+ms.date: 09/30/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: c2677885719c0b9a54a39b1609a0c2652728820f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078887"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>升级 SQL Server 实例中的机器学习 （R 和 Python） 组件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有包。 在标准 SQL Server 服务，会根据 SQL Server 发布周期，与向现有包的当前版本的 bug 修复更新 R 和 Python 包。 
+SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有包。 在标准 SQL Server 服务包更新根据 SQL Server 发布周期，与错误修复的最新版本，但没有主版本升级现有包中。 
 
-大部分数据科学家习惯于使用较新的包可用。 有关 SQL Server 2017 机器学习服务 （数据库内） 和 SQL Server 2016 R Services （数据库内），可以通过更改获取较新版本的 R 和 Python*绑定*从 SQL Server 服务到[Microsoft机器学习服务器](https://docs.microsoft.com/machine-learning-server/index)并[新式生命周期支持策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+但是，许多数据科学家习惯于使用较新的包可用。 有关 SQL Server 2017 机器学习服务 （数据库内） 和 SQL Server 2016 R Services （数据库内），可以获取[较新版本的 R 和 Python](#version-map)通过*绑定*到**Microsoft机器学习服务器**。 
 
-绑定不会更改您的安装的基础知识： R 和 Python 集成仍然是数据库引擎实例的一部分许可不变的 （无额外成本与绑定相关联），并且数据库仍保留 SQL Server 支持策略引擎。 但重新绑定会更改如何维护 R 和 Python 包。 本文的其余部分介绍的绑定机制及其使用方式的每个版本的 SQL Server。
+## <a name="what-is-binding"></a>什么绑定？
+
+绑定是交换出使用较新的可执行文件，库，R_SERVICES 和 PYTHON_SERVICES 文件夹的内容和工具的安装流程[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。
+
+与更新的组件是为模型中的交换机。 而不是[SQL Server 产品生命周期](https://support.microsoft.com/lifecycle/search?alpha=SQL%20Server%202017)，使用[SQL Server 累积更新](https://support.microsoft.com/help/4047329/sql-server-2017-build-versions)，你的服务更新现在符合[Microsoft R Server （& a） 计算机的支持时间线学习 Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support)上[现代生命周期](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+
+组件版本和服务更新，除了绑定不会更改您的安装的基础知识： R 和 Python 集成仍然是数据库引擎实例的一部分许可不变的 （无额外成本与绑定相关联），和 SQL数据库引擎仍保留服务器支持策略。 本文的其余部分介绍的绑定机制及其使用方式的每个版本的 SQL Server。
 
 > [!NOTE]
-> 绑定适用于仅 （数据库内） 实例。 绑定不相关 （独立版） 安装。
+> 绑定适用于仅它们被绑定到 SQL Server 实例 （数据库内） 实例。 绑定不相关 （独立版） 安装。
 
 **SQL Server 2017 绑定注意事项**
 
@@ -33,7 +39,9 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
 
 **SQL Server 2016 绑定注意事项**
 
-对于 SQL Server 2016 R Services 的客户，绑定提供更新后的 R 包，新的包不是原始安装的一部分 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))，并[预先训练模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)，所有这些可进一步在每个新的主版本号和次版本的 Microsoft 机器学习服务器刷新。 绑定未提供 Python 支持，后者是 SQL Server 2017 功能。 
+对于 SQL Server 2016 R Services 的客户，绑定提供更新后的 R 包，新的包不是原始安装的一部分 ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))，并[预先训练模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)，所有这些可进一步在每个新的主版本号和次版本的刷新[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 绑定未提供 Python 支持，后者是 SQL Server 2017 功能。 
+
+<a name="version-map"></a>
 
 ## <a name="version-map"></a>版本映射
 
@@ -67,16 +75,16 @@ SQL Server 中的 R 和 Python 集成包括开放源代码和 Microsoft 专有�
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [预先训练的模型](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
-## <a name="how-component-upgrade-works"></a>组件升级的工作原理
+## <a name="how-component-upgrade-works"></a>组件升级的工作原理 
 
-组件升级发生时您*绑定*到 SQL Server 2016 R Services 实例 （或 SQL Server 2017 机器学习服务实例） [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index)。 此过程基本上会覆盖 C:\Program Files\Microsoft SQL Server\MSSQL14 的内容。MSSQLSERVER\R_SERVICES C:\Program Files\Microsoft\ML Server\R_SERVER 的内容与安装的 SQL Server 安装程序。 
+R 和 Python 库和可执行文件将升级现有安装的 R 和 Python 绑定到机器学习服务器时。 绑定执行者[Microsoft 机器学习服务器安装程序](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)现有 SQL Server 数据库引擎实例上，2016年或 2017 中，运行安装程序时具有 R 或 Python 集成。 安装程序检测到的现有功能，并提示您重新绑定到 Machine Learning Server。 
 
-Microsoft 机器学习服务器是在本地服务器产品单独的来自 SQL Server，但具有相同的解释器和包。 绑定交换出 SQL Server 服务更新机制，以便可以使用 R 和 Python 包随附 Microsoft 机器学习服务器，这通常是比由 SQL Server 安装更新。 切换的支持策略是个不错的选择的数据科学团队需要更高版本生成 R 和 Python 模块对其解决方案。 
+在绑定中，C:\Program Files\Microsoft SQL Server\MSSQL14 的内容。MSSQLSERVER\R_SERVICES 和 \PYTHON_SERVICES 会覆盖较新的可执行文件和 C:\Program Files\Microsoft\ML Server\R_SERVER 和 \PYTHON_SERVER 的库。
 
-绑定执行者[MLS installer](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)。 安装程序更新特定的 R 和 Python 包，但不会替换 SQL Server 数据库实例使用一个独立的断开连接的服务器安装。
+同时，维护服务模型还翻转从 SQL Server 更新机制到的 Microsoft Machine Learning Server 更频繁的主版本号和次版本周期。 切换的支持策略是个不错的选择的数据科学团队需要更高版本生成 R 和 Python 模块对其解决方案。 
 
 + 没有绑定，R 和 Python 包安装 SQL Server service pack 或累积更新 (CU) 时的 bug 修复修补。 
-+ 使用绑定，则较新的包版本可应用于您的实例，不考虑 CU 版本计划下[Modern Lifecycle 策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning Server。 现代生命周期支持策略相比更短、 一年使用期限更频繁的更新。 后期绑定，将继续 MLS 安装程序用于将来的 R 和 Python 的 Microsoft Machine Learning Server 中可用时的更新。
++ 使用绑定，则较新的包版本可应用于您的实例，不考虑 CU 版本计划下[Modern Lifecycle 策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)和版本的 Microsoft Machine Learning Server。 现代生命周期支持策略相比更短、 一年使用期限更频繁的更新。 后期绑定，您将继续使用 R 和 Python 的将来更新 MLS 安装程序，如 Microsoft 下载站点上可用。
 
 绑定适用于 R 和 Python 功能。 也就是说，对 R 和 Python 功能 （Microsoft R Open，Anaconda） 和专有的开放源代码包打包 RevoScaleR 和 revoscalepy，等。 绑定不会更改数据库引擎实例的支持模型，并且不会更改 SQL Server 的版本。
 

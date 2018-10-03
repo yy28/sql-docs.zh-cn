@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060048"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>“查找远程文件夹”对话框（Analysis Services - 多维数据）
   **“查找远程文件夹”** 对话框显示为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例定义的可用日志和数据文件夹的列表。 您可以选择列出的文件夹，也可以根据需要指定其他文件夹。 通过执行下列步骤之一，可以显示 **“查找远程文件夹”** 对话框：  
@@ -34,7 +31,7 @@ ms.locfileid: "37212067"
   
 -   在同步数据库向导中的“为本地分区指定位置”页或“为远程分区指定位置”页上，单击“位置”选项内“目标文件夹”列中的省略号按钮 (**...**)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择的文件夹**  
  选择一个文件夹，以将“所选路径”设置为所需路径。  
   

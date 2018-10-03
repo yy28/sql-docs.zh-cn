@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f4aa2ae97b594372e92283520a9346d1524b88a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c2dae72cf4246b2d78b246e52ca96d5f52f7183a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725265"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +69,7 @@ sp_cursor  cursor, optype, rownum, table
   
  *rownum*是一个必需的参数，为调用**int**输入值。  
   
- @shouldalert  
+ 1  
  指示提取缓冲区中的第一行。  
   
  2  
@@ -103,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>返回代码值  
  当使用 RPC 时，缓冲区编号为 0 的定位的 DELETE 或 UPDATE 操作将返回一条 DONE 消息与*rowcount*为 0 （失败） 或 1 （成功） 提取缓冲区中的每一行。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="optype-parameter"></a>optype 参数  
  除了 SETPOSITION 与 UPDATE、 DELETE、 刷新或锁; 的组合或使用 UPDATE 或 DELETE，绝对*optype*是互斥的值。  

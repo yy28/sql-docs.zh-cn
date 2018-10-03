@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cca12397250ad12e4f892d00271b9afdbb81ca2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171257"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
   本主题介绍的是连接字符串属性，您可能需要在某个设计器或管理工具中设置这些属性，也可能在连接到并查询 Analysis Services 数据的客户端应用程序所生成的连接字符串中看到这些属性。 因此，它仅涉及可用属性的一部分。 完整列表包含各种服务器和数据库属性，允许您为特定应用程序自定义连接，而不管实例或数据库在服务器上是如何配置的。  
@@ -73,7 +70,7 @@ ms.locfileid: "37319467"
 |`Integrated Security`|调用方的 Windows 标识用于连接到 Analysis Services。 有效值为空、SSPI 和 BASIC。<br /><br /> `Integrated Security`=`SSPI` 是 TCP 连接，从而允许 NTLM、 Kerberos 或匿名身份验证的默认值。 HTTP 连接的默认值为空。<br /><br /> 使用时`SSPI`，`ProtectionLevel`必须设置为以下值之一： `Connect`， `PktIntegrity`， `PktPrivacy`。|  
 |`Persist Encrypted`|当客户端应用程序需要数据源对象以加密形式保存敏感身份验证信息（如密码）时设置此属性。 默认情况下，不保存身份验证信息。|  
 |`Persist Security Info`|有效值为 True 和 False。 设置为 True 时，在建立连接后可以从连接获取安全信息（如以前在连接字符串上指定的用户标识或密码）。 默认值为 False。|  
-|`ProtectionLevel`|确定连接上使用的安全级别。 有效值为<br /><br /> `None`的用户。 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect`的用户。 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity`的用户。 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy`的用户。 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
+|`ProtectionLevel`|确定连接上使用的安全级别。 有效值为<br /><br /> `None`。 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br /><br /> `Connect`。 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br /><br /> `PktIntegrity`。 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br /><br /> `PktPrivacy`。 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> <br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
 |`Roles`|指定逗号分隔的预定义的角色列表，以使用该角色具有的权限连接到服务器或数据库。 如果忽略此属性，则使用所有角色且有效权限为所有角色的组合权限。 如果将此属性设置为空值（例如 Roles=’ ‘），则客户端连接没有角色成员身份。<br /><br /> 管理员使用此属性通过角色具有的权限进行连接。 如果角色的权限不足，一些命令可能失败。|  
 |`SSPI`|显式指定将 `Integrated Security` 设置为 `SSPI` 时要将哪个安全包用于客户端身份验证。 SSPI 支持多个包，但是您可以使用此属性指定特定的包。 有效值为“协商”、Kerberos、NTLM 和“匿名用户”。 如果未设置此属性，则所有包可用于连接。|  
 |`Use Encryption for Data`|加密数据传输。 有效值为 True 和 False。|  

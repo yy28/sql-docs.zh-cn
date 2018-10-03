@@ -1,13 +1,11 @@
 ---
-title: SQLSetScrollOptions 函数 |Microsoft 文档
+title: SQLSetScrollOptions 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLSetScrollOptions
@@ -19,33 +17,32 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC]
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5cebcb3c31234d24971e4a2a0226110a653ce256
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a738e4e1206c8df393fe7cfc5562fc72c080ba32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709725"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 函数
-**一致性**  
- 版本引入了： ODBC 1.0 标准合规性： 不推荐使用  
+**符合性**  
+ 版本引入了： ODBC 1.0 标准符合性： 不推荐使用  
   
  **摘要**  
- ODBC 3 中 *.x*，ODBC 2.0 函数**SQLSetScrollOptions**已通过调用替换为**SQLGetInfo**和**SQLSetStmtAttr**。  
+ 在 ODBC 3 *.x*，ODBC 2.0 函数**SQLSetScrollOptions**已由调用**SQLGetInfo**并**SQLSetStmtAttr**。  
   
 > [!NOTE]  
->  有关什么驱动程序管理器时，将映射此函数可对 ODBC 2 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)为了向后兼容的附录 g： 驱动程序准则中。  
+>  有关哪些驱动程序管理器时，将映射此函数可对 ODBC 2 详细信息 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)中向后兼容性的附录 g： 驱动程序指南。  
   
 > [!NOTE]  
->  当驱动程序管理器映射**SQLSetScrollOptions**为应用程序使用 ODBC 3 *.x*驱动程序不支持**SQLSetScrollOptions**，驱动程序管理器将设置 SQL_ROWSET_SIZE 语句选项，不 SQL_ATTR_ROW_ARRAY_SIZE 语句特性，为*RowsetSize*中的参数**SQLSetScrollOption**。 因此， **SQLSetScrollOptions**按调用提取多行时，应用程序不使用**SQLFetch**或**SQLFetchScroll**。 仅当通过调用提取多个行时，才可以使用它**SQLExtendedFetch**。  
+>  当驱动程序管理器映射**SQLSetScrollOptions**应用程序使用 ODBC 3 *.x*不支持的驱动程序**SQLSetScrollOptions**，驱动程序管理器将设置 SQL_ROWSET_SIZE 语句选项，不将 SQL_ATTR_ROW_ARRAY_SIZE 语句属性，为*RowsetSize*中的参数**SQLSetScrollOption**。 因此， **SQLSetScrollOptions**由在调用提取多行时，应用程序不能使用**SQLFetch**或**SQLFetchScroll**。 仅当通过调用提取多行时，可以使用它**SQLExtendedFetch**。  
   
-## <a name="remarks"></a>注释  
- 如果你的应用程序将在 64 位操作系统上运行，请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)。  
+## <a name="remarks"></a>备注  
+ 如果你的应用程序将在 64 位操作系统上运行，请参阅[ODBC 64-Bit 信息](../../../odbc/reference/odbc-64-bit-information.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 24
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 360d49814a2d4a80194242e2c0e14c8e469dcf8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096147"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>导出到 Microsoft Excel（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 呈现扩展插件通过 [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 的本机格式呈现报表。 使用 Excel 呈现扩展插件，Excel 中的列宽度更精确地反映了报表中的列宽度。  
@@ -181,7 +178,7 @@ ms.locfileid: "37152098"
 |每个工作表的最大列数|256|16,384|  
 |每个工作表的最大行数|65,536|1,048,576|  
 |工作表中允许的颜色数|56（调色板）<br /><br /> 如果报表中使用的颜色超过 56 种，呈现扩展插件就会将所需颜色与自定义调色板中已有的 56 种颜色之一匹配。|大约 1600 万种（24 位颜色）|  
-|ZIP 压缩文件|InclusionThresholdSetting|ZIP 压缩|  
+|ZIP 压缩文件|None|ZIP 压缩|  
 |默认字体系列|Arial|Calibri|  
 |默认字号|10 磅|11 磅|  
 |默认行高|12.75 磅|15 磅|  

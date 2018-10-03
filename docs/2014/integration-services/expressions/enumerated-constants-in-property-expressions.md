@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089649"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置`LoggingMode`属性，则必须使用数值 2 而不是友好名称已禁用。  
@@ -55,7 +52,7 @@ ms.locfileid: "37221827"
 |DTSPackageType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |，则“默认”|0|  
-|DTSWizard|@shouldalert|  
+|DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
@@ -66,7 +63,7 @@ ms.locfileid: "37221827"
 |DTSCheckpointUsage 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |从不|0|  
-|IfExists|@shouldalert|  
+|IfExists|1|  
 |始终|2|  
   
  `PackagePriorityClass` 属性-通过使用中的值设置`DTSPriorityClass`枚举。  
@@ -74,7 +71,7 @@ ms.locfileid: "37221827"
 |DTSPriorityClass 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |，则“默认”|0|  
-|AboveNormal|@shouldalert|  
+|AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
@@ -84,7 +81,7 @@ ms.locfileid: "37221827"
 |DTSProtectionLevel 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |DontSaveSensitive|0|  
-|EncryptSensitiveWithUserKey|@shouldalert|  
+|EncryptSensitiveWithUserKey|1|  
 |EncryptSensitiveWithPassword|2|  
 |EncryptAllWithPassword|3|  
 |EncryptAllWithUserKey|4|  
@@ -95,7 +92,7 @@ ms.locfileid: "37221827"
   
 |DTSPrecedenceEvalOp 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
-|表达式|@shouldalert|  
+|表达式|1|  
 |约束|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
@@ -105,7 +102,7 @@ ms.locfileid: "37221827"
 |友好名称|数值|  
 |-------------------|-------------------|  
 |成功|0|  
-|失败|@shouldalert|  
+|失败|1|  
 |Completion|2|  
 |已取消|3|  
   
@@ -118,7 +115,7 @@ ms.locfileid: "37221827"
 |ADOEnumerationType 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |EnumerateTables|0|  
-|EnumerateAllRows|@shouldalert|  
+|EnumerateAllRows|1|  
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 枚举器  
@@ -127,7 +124,7 @@ ms.locfileid: "37221827"
 |SourceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |文件连接|0|  
-|变量|@shouldalert|  
+|变量|1|  
 |DirectInput|2|  
   
  `EnumerationType` 属性-通过使用中的值设置`EnumerationType`枚举。  
@@ -135,7 +132,7 @@ ms.locfileid: "37221827"
 |EnumerationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Navigator|0|  
-|节点|@shouldalert|  
+|节点|1|  
 |NodeText|2|  
 |ElementCollection|3|  
   
@@ -144,7 +141,7 @@ ms.locfileid: "37221827"
 |InnerElementType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |Navigator|0|  
-|节点|@shouldalert|  
+|节点|1|  
 |NodeText|2|  
   
 ##  <a name="Tasks"></a> “任务”  
@@ -156,7 +153,7 @@ ms.locfileid: "37221827"
 |DDLSourceType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |DirectInput|0|  
-|文件连接|@shouldalert|  
+|文件连接|1|  
 |变量|2|  
   
 ### <a name="bulk-insert-task"></a>大容量插入任务  
@@ -165,7 +162,7 @@ ms.locfileid: "37221827"
 |DTSBulkInsert_DataFileType 中的友好名称|数值|  
 |--------------------------------------------------|-------------------|  
 |DTSBulkInsert_DataFileType_Char|0|  
-|DTSBulkInsert_DataFileType_Native|@shouldalert|  
+|DTSBulkInsert_DataFileType_Native|1|  
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
@@ -174,7 +171,7 @@ ms.locfileid: "37221827"
   
 |ResultSetType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
-|ResultSetType_None|@shouldalert|  
+|ResultSetType_None|1|  
 |ResultSetType_SingleRow|2|  
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
@@ -183,7 +180,7 @@ ms.locfileid: "37221827"
   
 |SqlStatementSourceType 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |文件连接|2|  
 |变量|3|  
   
@@ -193,7 +190,7 @@ ms.locfileid: "37221827"
 |DTSFileSystemOperation 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
 |CopyFile|0|  
-|MoveFile|@shouldalert|  
+|MoveFile|1|  
 |DeleteFile|2|  
 |RenameFile|3|  
 |SetAttributes|4|  
@@ -208,7 +205,7 @@ ms.locfileid: "37221827"
 |DTSFileSystemAttributes 中的友好名称|数值|  
 |----------------------------------------------|-------------------|  
 |Normal|0|  
-|Archive|@shouldalert|  
+|Archive|1|  
 |Hidden|2|  
 |ReadOnly|4|  
 |系统|8|  
@@ -219,7 +216,7 @@ ms.locfileid: "37221827"
 |DTSFTPOp 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|@shouldalert|  
+|Receive|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -233,7 +230,7 @@ ms.locfileid: "37221827"
 |MQMessageType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |DTSMQMessageType_String|0|  
-|DTSMQMessageType_DataFile|@shouldalert|  
+|DTSMQMessageType_DataFile|1|  
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
@@ -242,7 +239,7 @@ ms.locfileid: "37221827"
 |MQStringMessageCompare 中的友好名称|数值|  
 |---------------------------------------------|-------------------|  
 |DTSMQStringMessageCompare_None|0|  
-|DTSMQStringMessageCompare_Exact|@shouldalert|  
+|DTSMQStringMessageCompare_Exact|1|  
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
@@ -251,7 +248,7 @@ ms.locfileid: "37221827"
 |MQType 中的友好名称|数值|  
 |-----------------------------|-------------------|  
 |DTSMQType_Sender|0|  
-|DTSMQType_Receiver|@shouldalert|  
+|DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>发送邮件任务  
  `MessageSourceType` 属性-通过使用中的值设置`SendMailMessageSourceType`枚举。  
@@ -259,14 +256,14 @@ ms.locfileid: "37221827"
 |SendMailMessageSourceType 中的友好名称|数值|  
 |------------------------------------------------|-------------------|  
 |DirectInput|0|  
-|文件连接|@shouldalert|  
+|文件连接|1|  
 |变量|2|  
   
  `Priority` 属性-通过使用中的值设置`MailPriority`枚举。  
   
 |MailPriority 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
-|High|@shouldalert|  
+|High|1|  
 |Normal|3|  
 |Low|5|  
   
@@ -276,14 +273,14 @@ ms.locfileid: "37221827"
 |TransferAction 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |复制|0|  
-|“移动”|@shouldalert|  
+|“移动”|1|  
   
  `Method` 属性-通过使用中的值设置`TransferMethod`枚举。  
   
 |TransferMethod 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |DatabaseOffline|0|  
-|DatabaseOnline|@shouldalert|  
+|DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>传输错误消息任务  
  `IfObjectExists` 属性-通过使用中的值设置`IfObjectExists`枚举。  
@@ -291,7 +288,7 @@ ms.locfileid: "37221827"
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>传输作业任务  
@@ -300,7 +297,7 @@ ms.locfileid: "37221827"
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>传输登录名任务  
@@ -309,7 +306,7 @@ ms.locfileid: "37221827"
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
  `LoginsToTransfer` 属性-通过使用中的值设置`LoginsToTransfer`枚举。  
@@ -317,7 +314,7 @@ ms.locfileid: "37221827"
 |LoginsToTransfer 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |AllLogins|0|  
-|SelectedLogins|@shouldalert|  
+|SelectedLogins|1|  
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>传输主存储过程任务  
@@ -326,7 +323,7 @@ ms.locfileid: "37221827"
 |IfObjectExists 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |FailTask|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>传输 SQL Server 对象任务  
@@ -335,7 +332,7 @@ ms.locfileid: "37221827"
 |ExistingData 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |替换|0|  
-|追加|@shouldalert|  
+|追加|1|  
   
 ### <a name="web-service-task"></a>Web 服务任务  
  `OutputType` 属性-通过使用中的值设置`DTSOutputType`枚举。  
@@ -343,7 +340,7 @@ ms.locfileid: "37221827"
 |DTSOutputType 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |文件|0|  
-|变量|@shouldalert|  
+|变量|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI 数据读取器任务  
  `OverwriteDestination` 属性-通过使用中的值设置`OverwriteDestination`枚举。  
@@ -351,7 +348,7 @@ ms.locfileid: "37221827"
 |OverwriteDestination 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |OverwriteDestination|0|  
-|AppendToDestination|@shouldalert|  
+|AppendToDestination|1|  
 |KeepOriginal|2|  
   
  `OutputType` 属性-通过使用中的值设置`OutputType`枚举。  
@@ -359,7 +356,7 @@ ms.locfileid: "37221827"
 |OutputType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |DataTable|0|  
-|PropertyValue|@shouldalert|  
+|PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
  `DestinationType` 属性-通过使用中的值设置`DestinationType`枚举。  
@@ -367,14 +364,14 @@ ms.locfileid: "37221827"
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|@shouldalert|  
+|变量|1|  
   
  `WqlQuerySourceType` 属性-通过使用中的值设置`QuerySourceType`枚举。  
   
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |变量|2|  
   
  WMI 事件观察器 `ActionAtEvent` 属性 - 通过使用 `ActionAtEvent` 枚举中的值设置。  
@@ -382,21 +379,21 @@ ms.locfileid: "37221827"
 |ActionAtEvent 中的友好名称|数值|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
-|LogTheEvent|@shouldalert|  
+|LogTheEvent|1|  
   
  `ActionAtTimeout` 属性-通过使用中的值设置`ActionAtTimeout`枚举。  
   
 |ActionAtTimeout 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
-|LogTimeout|@shouldalert|  
+|LogTimeout|1|  
   
  `AfterEvent` 属性-通过使用中的值设置`AfterEvent`枚举。  
   
 |AfterEvent 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|@shouldalert|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  `AfterTimeout` 属性-通过使用中的值设置`AfterTimeout`枚举。  
@@ -404,7 +401,7 @@ ms.locfileid: "37221827"
 |AfterTimeout 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |ReturnWithSuccess|0|  
-|ReturnWithFailure|@shouldalert|  
+|ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
  `WqlQuerySourceType` 属性-通过使用中的值设置`QuerySourceType`枚举。  
@@ -412,7 +409,7 @@ ms.locfileid: "37221827"
 |QuerySourceType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |文件连接|0|  
-|DirectInput|@shouldalert|  
+|DirectInput|1|  
 |变量|2|  
   
 ### <a name="xml-task"></a>XML 任务  
@@ -421,7 +418,7 @@ ms.locfileid: "37221827"
 |DTSXMLOperation 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |验证|0|  
-|XSLT|@shouldalert|  
+|XSLT|1|  
 |XPATH|2|  
 |合并|3|  
 |差异|4|  
@@ -432,7 +429,7 @@ ms.locfileid: "37221827"
 |DTSXMLSourceType 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|@shouldalert|  
+|变量|1|  
 |DirectInput|2|  
   
  `DestinationType` 并**DiffGramDestinationType**属性-通过使用中的值设置`DTSXMLSaveResultTo`枚举。  
@@ -440,29 +437,29 @@ ms.locfileid: "37221827"
 |DTSXMLSaveResultTo 中的友好名称|数值|  
 |-----------------------------------------|-------------------|  
 |文件连接|0|  
-|变量|@shouldalert|  
+|变量|1|  
   
  `ValidationType` 属性-通过使用中的值设置`DTSXMLValidationType`枚举。  
   
 |DTSXMLValidationType 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
-|XSD|@shouldalert|  
+|XSD|1|  
   
  `XPathOperation` 属性-通过使用中的值设置`DTSXMLXPathOperation`枚举。  
   
 |DTSXMLXPathOperation 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |Evaluation|0|  
-|值|@shouldalert|  
+|值|1|  
 |NodeList|2|  
   
  `DiffOptions` 属性-通过使用中的值设置`DTSXMLDiffOptions`枚举。 此枚举器中的选项不相互排斥。 若要使用多个选项，请将要应用的选项作为逗号分隔的列表提供。  
   
 |DTSXMLDiffOptions 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
-|IgnoreChildOrder|@shouldalert|  
+|None|0|  
+|IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
 |IgnoreWhitespace|8|  
@@ -476,7 +473,7 @@ ms.locfileid: "37221827"
 |DTSXMLDiffAlgorithm 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
 |Auto|0|  
-|Fast|@shouldalert|  
+|Fast|1|  
 |Precise|2|  
   
 ##  <a name="MaintenancePlanTasks"></a> 维护计划任务  
@@ -491,8 +488,8 @@ ms.locfileid: "37221827"
   
 |DatabaseSelection 中的友好名称|数值|  
 |----------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
-|All|@shouldalert|  
+|None|0|  
+|All|1|  
 |系统|2|  
 |用户|3|  
 |Specific|4|  
@@ -501,8 +498,8 @@ ms.locfileid: "37221827"
   
 |TableSelection 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
-|InclusionThresholdSetting|0|  
-|All|@shouldalert|  
+|None|0|  
+|All|1|  
 |Specific|2|  
   
  `ObjectTypeSelection` 属性-通过使用中的值设置`ObjectType`枚举。  
@@ -510,7 +507,7 @@ ms.locfileid: "37221827"
 |ObjectType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |表|0|  
-|“查看”|@shouldalert|  
+|“查看”|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>“备份数据库”任务  
@@ -519,21 +516,21 @@ ms.locfileid: "37221827"
 |DestinationType 中的友好名称|数值|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
-|Manual|@shouldalert|  
+|Manual|1|  
   
  `ExistingBackupsAction` 属性-通过使用中的值设置`ActionForExistingBackups`枚举。  
   
 |ActionForExistingBackups 中的友好名称|数值|  
 |-----------------------------------------------|-------------------|  
 |追加|0|  
-|Overwrite|@shouldalert|  
+|Overwrite|1|  
   
  `BackupAction` 属性-通过使用中的值设置`BackupTaskType`枚举。 此属性适用于`BackupIsIncremental`属性来定义该任务执行的备份类型。  
   
 |BackupTaskType 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |“数据库”|0|  
-|“文件”|@shouldalert|  
+|“文件”|1|  
 |日志|2|  
   
  `BackupDevice` 属性 - 通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理对象 (SMO) `DeviceType` 枚举中的值设置。  
@@ -541,7 +538,7 @@ ms.locfileid: "37221827"
 |DeviceType 中的友好名称|数值|  
 |---------------------------------|-------------------|  
 |LogicalDevice|0|  
-|磁带|@shouldalert|  
+|磁带|1|  
 |文件|2|  
 |Pipe|3|  
 |VirtualDevice|4|  
@@ -552,14 +549,14 @@ ms.locfileid: "37221827"
 |FileType 中的友好名称|数值|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
-|FileReport|@shouldalert|  
+|FileReport|1|  
   
  `OlderThanTimeUnitType` 属性-通过使用中的值设置`TimeUnitType`枚举。  
   
 |TimeUnitType 中的友好名称|数值|  
 |-----------------------------------|-------------------|  
 |Day|0|  
-|Week|@shouldalert|  
+|Week|1|  
 |Month|2|  
 |Year|3|  
   
@@ -568,7 +565,7 @@ ms.locfileid: "37221827"
   
 |StatisticsTarget 中的友好名称|数值|  
 |---------------------------------------|-------------------|  
-|“列”|@shouldalert|  
+|“列”|1|  
 |索引|2|  
 |All|3|  
   
@@ -579,9 +576,9 @@ ms.locfileid: "37221827"
   
 |DTSForcedExecResult 中的友好名称|数值|  
 |------------------------------------------|-------------------|  
-|InclusionThresholdSetting|-1|  
+|None|-1|  
 |成功|0|  
-|失败|@shouldalert|  
+|失败|1|  
 |Completion|2|  
   
  `IsolationLevel` 属性 - 由 .NET Framework `IsolationLevel` 枚举设置。 详细信息，请参阅位于 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
@@ -591,7 +588,7 @@ ms.locfileid: "37221827"
 |DTSLoggingMode 中的友好名称|数值|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|已启用|@shouldalert|  
+|已启用|1|  
 |禁用|2|  
   
  `TransactionOption` 属性-通过使用中的值设置`DTSTransactionOption`枚举。  
@@ -599,7 +596,7 @@ ms.locfileid: "37221827"
 |DTSTransactionOption 中的友好名称|数值|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|是否支持|@shouldalert|  
+|是否支持|1|  
 |Required|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  

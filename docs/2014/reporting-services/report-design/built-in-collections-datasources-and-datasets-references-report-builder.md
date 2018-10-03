@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095107"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>DataSources 和 DataSets 集合引用（报表生成器和 SSRS）
   `DataSources` 集合表示在报表中使用的所有数据源。 同样，`DataSets`集合表示在报表中的所有数据源的所有数据集。 使用 **“报表数据”** 窗格显示报表数据集的层次结构视图，报表数据集按照它们所引用的数据源组织。 如果这些集合中包含引用，则在预览报表时将不会看到值。 这些集合只有在将报表发布到报表服务器之后才可用。  
@@ -32,7 +29,7 @@ ms.locfileid: "37168148"
   
 |**变量**|`Type`|**Description**|  
 |------------------|--------------|---------------------|  
-|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012`的用户。|  
+|`DataSourceReference`|`String`|报表服务器上数据源定义的完整路径。 例如，可以包括用作部分报表历史记录的报表中的所有数据源列表。 下面的示例显示名为 AdventureWorks2012 的数据源的完整路径：<br /><br /> `/DataSources/AdventureWorks2012`。|  
 |`Type`|`String`|数据源数据访问接口的类型。 例如， `SQL`。|  
   
 ## <a name="datasets"></a>DataSets  

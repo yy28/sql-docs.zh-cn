@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.login.f1
 ms.assetid: fb012bc8-5105-438a-afcc-74264ebae035
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d711a45d6580700d813e92c101992ef718d0c389
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192237"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>连接到服务器（“登录”页）(Analysis Services)
   连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 时，使用此选项卡可查看或指定以下选项。  

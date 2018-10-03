@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066877"
 ---
 # <a name="server-configuration---service-accounts"></a>服务器配置 - 服务帐户
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导的“服务器配置”页可以为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配登录帐户。 此页上配置的实际服务取决于您选择安装的功能。  
   
  用于启动和运行的启动帐户[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以是超链接"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User"域用户帐户、 本地用户帐户、 托管的服务帐户虚拟帐户或内置系统帐户。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 对于大多数安装建议采用默认帐户。  
   
  在 Windows 7 和 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 上，大多数帐户默认为虚拟帐户。  

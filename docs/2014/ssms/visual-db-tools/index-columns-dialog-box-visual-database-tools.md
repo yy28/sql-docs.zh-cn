@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87c6b1c72273a9ca0185de4274cfbbcbd31982df
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2cecd9aced6b4135c581910e5cbfb3a23d2aefd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168617"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>“索引列”对话框 (Visual Database Tools)
   使用此对话框可为索引选择列并设置它们的排序顺序。 一个索引可以使用一个或多个列，并且可以按升序或降序对每个列进行排序。 若要访问此对话框，请在“索引/键”对话框中，单击“常规”部分中的“列”行的省略号按钮。  

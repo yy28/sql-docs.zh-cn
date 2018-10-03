@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 027ccec12f08efddc9b48c56ad7ed2f22ec5b15b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ae9006603a9c76e9e7cbd308275c4f8a8c7594b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155748"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109507"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 函数（报表生成器和 SSRS）
   返回在递归层次结构中的当前深度级别。  
@@ -41,7 +38,7 @@ Level(scope)
 ## <a name="return-type"></a>返回类型  
  返回`Integer`。 如果*作用域*指定的数据集或数据区域，或指定非递归分组 (即，不使用的分组`Parent`元素)，`Level`返回 0。 如果省略 *scope* ，则返回当前作用域的级别。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Level` 函数返回的值从 0 开始；即，层次结构中的第一级为 0。  
   
  `Level` 函数可用于为递归层次结构（如雇员列表）提供缩进格式。  

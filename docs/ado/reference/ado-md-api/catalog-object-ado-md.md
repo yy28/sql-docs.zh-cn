@@ -1,13 +1,11 @@
 ---
-title: 目录对象 (ADO MD) |Microsoft 文档
+title: 目录对象 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADO MD]
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cda7947458e9183323de5c3879dd27bf2d1f131
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827655"
 ---
 # <a name="catalog-object-ado-md"></a>目录对象 (ADO MD)
-包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即，多维数据集和基础维度、 层次结构、 级别和成员）。  
+包含特定于多维数据提供程序 (MDP) 的多维架构信息 （即多维数据集和基础维度、 层次结构、 级别和成员）。  
   
-## <a name="remarks"></a>Remarks  
- 使用集合和属性的**目录**对象，你可以执行以下操作：  
+## <a name="remarks"></a>备注  
+ 使用集合和属性的**目录**对象，您可以执行以下操作：  
   
--   通过设置打开目录[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性设置为标准 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或有效的连接字符串。  
+-   通过设置打开目录[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性设置为标准的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或到有效的连接字符串。  
   
--   标识**目录**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
+-   识别**目录**与[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性。  
   
 -   循环访问在目录中使用的多维数据集[CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)集合。  
   
@@ -43,6 +40,6 @@ ms.locfileid: "35283376"
 -   [属性、 方法和事件](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## <a name="see-also"></a>请参阅  
- [目录 (VB) 示例](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
+ [目录示例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 集合 (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

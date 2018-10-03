@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 457eb70ec1ce9883a5de4c2032fae60ec664703b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6c7b5f7239f480159f1ea75a11930aa0d4184e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175957"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>“报表属性”对话框 ->“代码”（报表生成器和 SSRS）
   在 **“报表属性”** 对话框中选择 **“代码”** 可以定义将由报表中的表达式使用的自定义代码。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **自定义代码**  
  键入要在报表中使用的方法。 代码必须是用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]编写的。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f9f671a0980d979436e4780579d99122cb9e669
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096347"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>创建测试集（数据挖掘向导）
   可以使用 **“创建测试集”** 页指定用于定型的数据量，以及为用作测试集而保留的数据量。 在创建挖掘结构时将数据分成定型集和测试集，可以更方便地评估以后创建的挖掘模型的准确性。  
@@ -40,7 +37,7 @@ ms.locfileid: "37326877"
   
  **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)、[数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **测试数据的百分比**  
  单击向上箭头和向下箭头可以增大或减小用作测试数据的数据百分比，也可以在文本框中键入介于 0 到 100 之间的值。  
   

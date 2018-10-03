@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4c04690906d9b5f3fd38ddf444d6c3f99e917a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054059"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>兼容级别（SSAS 表格 SP1）
   您可以指定*兼容性级别*或导入 PowerPivot 工作簿时创建新表格模型项目时、 升级现有表格模型项目时、 升级已部署表格模型数据库。  

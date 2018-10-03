@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Restore Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Restore command
 ms.assetid: bb5a0c92-3927-4fa4-975b-6e4d79e0a912
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 682806680604606d54c133617b2150b975cf8c03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df3e4814b0dafadd8ba7a5c6f572fba7d48e6d4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094657"
 ---
 # <a name="restore-element-xmla"></a>Restore 元素 (XMLA)
   还原[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库从备份文件。  
@@ -59,8 +56,8 @@ ms.locfileid: "37275653"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -70,7 +67,7 @@ ms.locfileid: "37275653"
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |子元素|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md)， [DatabaseName](../xml-elements-properties/name-element-xmla.md)， [DatabaseID](../xml-elements-properties/id-element-xmla.md)，[文件](../xml-elements-properties/file-element-xmla.md)，[位置](../xml-elements-properties/locations-element-xmla.md)，[密码](../xml-elements-properties/password-element-xmla.md)，[安全](../xml-elements-properties/security-element-xmla.md)， [DbStorageLocation](../xml-elements-properties/dbstoragelocation-element.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Restore`命令还原[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定数据库`DatabaseName`从备份文件和 （可选） 从远程备份文件还原远程分区的元素。  
   
  根据备份文件中存储的对象使用的存储模式`Restore`命令还原下表中列出的信息。  

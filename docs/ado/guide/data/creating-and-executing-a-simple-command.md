@@ -1,31 +1,28 @@
 ---
-title: 创建和执行简单的命令 |Microsoft 文档
+title: 创建和执行简单的命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811345"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>创建和执行简单的命令
-一个简单的命令是指不参数化并且需要没有持久性。 有三种方法创建和执行简单的命令。  
+一个简单的命令是指未参数化并且需要不暂留。 有三种方法来创建和执行简单的命令。  
   
 -   使用**命令**对象  
   
@@ -34,9 +31,9 @@ ms.locfileid: "35270906"
 -   使用**记录集**对象  
   
 ## <a name="using-a-command-object"></a>使用命令对象  
- 若要创建简单的命令使用**命令**对象，你必须将分配到的指令**CommandText**属性**命令**对象并设置适当的值**CommandType**属性。 执行该命令需要打开的连接分配给**ActiveConnection**属性**命令**对象，然后通过调用**执行**方法上**命令**对象。  
+ 创建一个简单的命令使用**命令**对象，必须将分配到的指令**CommandText**属性**命令**对象并设置适当的值**CommandType**属性。 执行命令要求打开的连接分配给**ActiveConnection**的属性**命令**对象，然后通过调用**Execute**方法上**命令**对象。  
   
- 下面的代码段演示了基本方法的使用**命令**对象以执行对数据源执行命令。 此示例使用返回行的命令，并返回作为执行命令的结果**记录集**对象。  
+ 下面的代码段显示了使用的基本方法**命令**对象对数据源执行命令。 此示例使用返回行的命令，并返回作为执行命令的结果**记录集**对象。  
   
 ```  
     'BeginBasicCmd  
@@ -112,7 +109,7 @@ End Function
 ```  
   
 ## <a name="using-a-recordset-object"></a>使用记录集对象  
- 你还可以通过以下方式创建命令作为文本字符串以及 pa 到**打开**方法**记录集**对象，与命令类型 (adCmdText) 一起执行。 下面的代码段演示此操作。  
+ 此外可以创建一个命令，作为文本字符串以及 pa 到**开放**方法**记录集**对象，与命令类型 (adCmdText) 一起执行。 以下代码片段演示此操作。  
   
 ```  
   
@@ -151,7 +148,7 @@ Set objRs = Nothing
 ```  
   
 ## <a name="using-a-connection-object"></a>使用连接对象  
- 你还可以在打开的连接对象上执行命令。 前面的代码示例现在成为此：  
+ 此外可以在打开的连接对象上执行命令。 前面的代码示例现在将成为此：  
   
 ```  
 Const DS = "MySqlServer"  

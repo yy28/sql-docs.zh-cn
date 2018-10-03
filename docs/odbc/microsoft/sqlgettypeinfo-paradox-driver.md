@@ -1,33 +1,30 @@
 ---
-title: SQLGetTypeInfo （Paradox 驱动程序） |Microsoft 文档
+title: SQLGetTypeInfo （Paradox 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetTypeInfo function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLGetTypeInfo
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 300bc6086246abe0e6faff7801d12b4536520520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20b5776b5b0e1490ef31ff07d1876afef326db9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711481"
 ---
-# <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo （Paradox 驱动程序）
+# <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo（Paradox 驱动程序）
 > [!NOTE]  
->  本主题提供 Paradox 特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供了特定于 Paradox 驱动程序的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
- 生成的表中返回的类型 (TYPE_NAME) 名称**SQLGetTypeInfo**将是最常使用的数据源的名称。  
+ 在生成的表中返回的类型 (TYPE_NAME) 名称**SQLGetTypeInfo**将是最常用的数据源的名称。  
   
- SQL_ALL_EXCEPT_LIKE 将返回可搜索的列中的字节，计数器、 双精度型、 单、 long 类型的值和短数据类型。 (可以通过将值转换为字符使用 ODBC 规范的转换函数，来实现类似的功能，然后执行比较。)
+ SQL_ALL_EXCEPT_LIKE 将返回在可搜索的列中的字节，计数器、 Double、 单、 长时间和 Short 数据类型。 (可通过将值转换为字符使用 ODBC 规范转换函数，实现类似功能，然后执行比较。)
