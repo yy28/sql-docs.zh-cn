@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_defaultlanguage
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a920323efff6126a2afb5c2c88dde4fe69501103
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6ab8c72a9b3b4dc3771705a1bccc89bb44a3905c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641724"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_defaultlanguage**调用 ALTER LOGIN，后者支持其他选项。 有关更改其他登录名的默认值的信息，请参阅[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  使用 SET LANGUAGE 语句更改当前会话的语言。 使用 @@LANGUAGE函数以显示当前语言设置。  

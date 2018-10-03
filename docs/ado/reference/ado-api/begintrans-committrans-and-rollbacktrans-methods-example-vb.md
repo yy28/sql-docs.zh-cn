@@ -1,13 +1,11 @@
 ---
-title: BeginTrans、 CommitTrans，以及如果不方法示例 (VB) |Microsoft 文档
+title: BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72defd0f6467f432be5ee5f41e5b3d57b97ade9b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 51c616882d3655e1c7b16411c6de8d5bb2fcf94c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633685"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、 CommitTrans，以及如果不方法示例 (VB)
-此示例将更改中的所有心理书籍的书籍类型***标题***在数据库表。 后[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法会启动的事务的隔离对所做的所有更改***标题***表， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法将保存所做的更改。 你可以使用[不](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法来撤消使用保存的更改[更新](../../../ado/reference/ado-api/update-method.md)方法。  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、 CommitTrans 和 RollbackTrans 方法示例 (VB)
+此示例将更改中的所有心理学书籍的 book 类型***标题***数据库表。 之后[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法启动的事务的隔离对所做的所有更改***标题***表中， [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法保存所做的更改。 可以使用[RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)方法来撤消使用保存的更改[更新](../../../ado/reference/ado-api/update-method.md)方法。  
   
 ```  
 'BeginBeginTransVB  
@@ -136,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [BeginTrans、 CommitTrans 和不方法 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [BeginTrans、 CommitTrans 和 RollbackTrans 方法 (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_system_health_state_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dbdc22b03d58bb3aac10b684d4fdc2e0c074123b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 115883fa460f370f618c9286b9529e3cf221d12c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640305"
 ---
 # <a name="syspolicysystemhealthstate-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "43027866"
 |target_query_expression|**nvarchar(max)**|定义评估策略所依据的目标的表达式。|  
 |result|**bit**|此目标与策略有关的运行状态：<br /><br /> 0 = 失败<br /><br /> 1 = 成功|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  syspolicy_system_health_state 视图显示每个活动（已启用）策略的目标查询表达式的最近运行状态。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 对象资源管理器和“对象资源管理器详细信息”页聚合此视图中的策略运行状态以显示关键运行状态。  
   
 ## <a name="permissions"></a>Permissions  

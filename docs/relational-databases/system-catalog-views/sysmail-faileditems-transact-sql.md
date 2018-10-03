@@ -1,14 +1,11 @@
 ---
-title: sysmail_faileditems (TRANSACT-SQL) |Microsoft 文档
+title: sysmail_faileditems (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_faileditems
@@ -18,23 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 010f88d77ef90cd0ebe8363be1b34eea12936913
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 92e8031b42b3b0b54aac09913e7eb54e5be07e86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221654"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624085"
 ---
 # <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  每个数据库邮件消息中对应一行**失败**状态。 使用该视图可确定未成功发送的消息。  
+  有关与每个数据库邮件消息中对应一行**失败**状态。 使用该视图可确定未成功发送的消息。  
   
- 若要查看通过数据库邮件处理的所有消息，使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要查看未发送的邮件，使用[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要查看已发送的消息，使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
+ 若要查看数据库邮件处理的所有消息，请使用[sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)。 若要仅查看未发送的消息，请使用[sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)。 若要查看已发送的消息，请使用[sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)。 若要查看电子邮件附件，请使用[sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,10 +46,10 @@ ms.locfileid: "33221654"
 |**敏感度**|**varchar(12)**|**敏感度**消息参数。|  
 |**file_attachments**|**varchar(max)**|附加到电子邮件中的文件名列表，以分号分隔。|  
 |**Attachment_encoding**|**varchar(20)**|邮件附件的类型。|  
-|**Query**|**varchar(max)**|邮件程序所执行的查询。|  
+|**“数据集属性”**|**varchar(max)**|邮件程序所执行的查询。|  
 |**execute_query_database**|**sysname**|邮件程序在其中执行查询的数据库上下文。|  
 |**attach_query_result_as_file**|**bit**|如果该值为 0，则查询结果包含在电子邮件的正文中，在正文的内容之后。 如果该值为 1，则结果作为附件返回。|  
-|**query_result_header**|**bit**|值为 1 时，查询结果将包含列标题。 0 值时，查询结果未包含列标题。|  
+|**query_result_header**|**bit**|如果值为 1，则查询结果包含列标题。 值为 0 时，查询结果并不包括列标题。|  
 |**query_result_width**|**int**|**Query_result_width**消息参数。|  
 |**query_result_separator**|**char(1)**|用于分隔查询输出中的各列的字符。|  
 |**exclude_query_output**|**bit**|**Exclude_query_output**消息参数。 有关详细信息，请参阅[sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)。|  
@@ -66,10 +62,10 @@ ms.locfileid: "33221654"
 |**last_mod_date**|**datetime**|上次修改行的日期和时间。|  
 |**last_mod_user**|**sysname**|上次修改行的用户。|  
   
-## <a name="remarks"></a>注释  
- 使用**sysmail_faileditems**视图以查看数据库邮件不发送哪些消息。 排除数据库邮件故障时，该视图可以向您显示未发送的消息的属性，从而帮助您确定问题的性质。 若要查看失败的原因，请参阅中的失败消息的条目[sysmail_event_log &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)视图。  
+## <a name="remarks"></a>备注  
+ 使用**sysmail_faileditems**视图，以查看通过数据库邮件未发送的消息。 排除数据库邮件故障时，该视图可以向您显示未发送的消息的属性，从而帮助您确定问题的性质。 若要查看失败的原因，请参阅中的失败消息的条目[sysmail_event_log &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)视图。  
   
-## <a name="permissions"></a>权限  
- 授予**sysadmin**固定的服务器角色和**databasemailuserrole**数据库角色。 由的成员执行时**sysadmin**固定服务器角色，此视图显示所有失败的消息。 所有其他用户仅可查看他们已提交的失败的消息。  
+## <a name="permissions"></a>Permissions  
+ 授予**sysadmin**固定的服务器角色和**databasemailuserrole**数据库角色。 成员执行时**sysadmin**固定服务器角色，此视图显示所有失败的消息。 所有其他用户仅可查看他们已提交的失败的消息。  
   
   

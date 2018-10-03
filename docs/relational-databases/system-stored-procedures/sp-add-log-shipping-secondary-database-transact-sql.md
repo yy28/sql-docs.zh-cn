@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
@@ -21,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 56090e1f012bb0e9d490997c9b3dcc7e497641c9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635905"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +108,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_add_log_shipping_secondary_database**必须从运行**主**辅助服务器上的数据库。 此存储过程执行以下操作：  
   
 1.  **sp_add_log_shipping_secondary_primary**主日志传送辅助服务器上的数据库信息进行初始化，该存储过程之前，应调用。  

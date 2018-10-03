@@ -1,13 +1,11 @@
 ---
-title: 支持方法 |Microsoft 文档
+title: 支持方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 97c0e4660c14845ddfb59ce4f5f509a0954d98f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616975"
 ---
-# <a name="supports-method"></a>支持方法
+# <a name="supports-method"></a>Supports 方法
 确定指定[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象支持特定类型的功能。  
   
 ## <a name="syntax"></a>语法  
@@ -38,22 +35,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**布尔**值，该值指示是否将的所有功能标识*CursorOptions*自变量受提供程序。  
+ 返回**布尔**值，该值指示是否所有功能标识*CursorOptions*提供程序支持参数。  
   
 #### <a name="parameters"></a>Parameters  
  *CursorOptions*  
- A**长**表达式包含一个或多个[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值。  
+ 一个**长**包含一个或多个表达式[CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
- 使用**支持**方法来确定哪些类型的功能**记录集**对象支持。 如果**记录集**对象支持的功能，其相应常量位于*CursorOptions*、**支持**方法返回**True**. 否则，它将返回**False**。  
+## <a name="remarks"></a>备注  
+ 使用**支持**方法来确定哪些类型的功能**记录集**对象支持。 如果**记录集**对象支持的功能，其相应的常量是*CursorOptions*，则**支持**方法将返回**True**. 否则，它将返回**False**。  
   
 > [!NOTE]
->  尽管**支持**方法可能返回**True**对于给定的功能，它无法保障，该提供程序可以使该功能可在所有情况下。 **支持**方法只返回满足某些条件的下提供程序是否支持指定的功能。 例如，**支持**方法可能表明**记录集**对象支持更新，即使光标基于多个表联接，其中某些列不能更新。  
+>  尽管**支持**方法可能会返回**True**对于给定的功能，它不保证，提供程序可以使该功能可在所有情况下。 **支持**方法仅返回满足某些条件的下提供程序是否支持指定的功能。 例如，**支持**方法可能指示**记录集**对象支持更新，即使光标基于多个表联接，其中某些列不是可更新。  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [支持方法示例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [支持方法示例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [Supports 方法示例 (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [Supports 方法示例 （VC + +）](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

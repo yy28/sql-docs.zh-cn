@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_scriptdynamicupdproc_TSQL
 - sp_scriptdynamicupdproc
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8675cc6e79bbfd78b82abb756a6de80cd33d54d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627915"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +45,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>结果集  
  返回一个结果集包含单个**nvarchar(4000)** 列。 该结果集构成了用于创建自定义存储过程的完整 CREATE PROCEDURE 语句。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_scriptdynamicupdproc**事务复制中使用。 默认的 MCALL 脚本编写逻辑包括 UPDATE 语句中的所有列，并使用一个位图来确定已更改的列。 如果某列未更改，则将其恢复回自身，这种做法通常不会导致任何问题。 如果该列被索引，则需要进行额外的处理。 动态方法仅包括已更改的列，这样可提供一个最优的 UPDATE 字符串。 然而，生成动态 UPDATE 语句时会在运行时发生额外处理。 建议您先测试动态方法和静态方法，然后选择最佳解决方案。  
   
 ## <a name="permissions"></a>Permissions  

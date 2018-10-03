@@ -1,33 +1,30 @@
 ---
-title: 配置 RDS |Microsoft 文档
+title: 配置 RDS |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273777"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630675"
 ---
 # <a name="configuring-rds"></a>配置 RDS
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要有效地实现 RDS，请确保你熟悉可用的各种配置给您。 本部分包括有关安全性和可伸缩性的重要信息的 rds.实现中 请参阅以下主题了解有关配置计算机以使用 rds.  
+ 若要有效地实现 RDS，请确保已熟悉向你提供的各种配置。 本部分包括有关安全性和可伸缩性的重要信息在实现中的 rds。 请参阅以下主题，了解如何配置计算机以使用 rds。  
   
 -   [授予 Web 服务器计算机来宾特权](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   
@@ -48,8 +45,8 @@ ms.locfileid: "35273777"
 -   [配置用于安全或不受限制模式的 DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
 ## <a name="see-also"></a>请参阅  
- [使用 RDS 的相关的技术](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [对 RDS 使用相关的技术](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
+ [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS 故障排除](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
 
 

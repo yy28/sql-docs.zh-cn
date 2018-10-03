@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cbac4c732605b40af64162a763d7d5da5c8b99ac
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: eda345764ef6f8b917f1496e05c8cb73471c9624
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638045"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "43063198"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在调用 BCPDone 方法之后，不能对 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 接口调用其他操作。 唯一的可能性是调用 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法以启动新的大容量复制操作。 这类似于调用 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>返回代码值  

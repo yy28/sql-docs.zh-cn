@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stored_procedures_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 001a3476555b82c5262af4ff59cd70f5b88a0c5e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8a195a39d30becaef2404a4ae50953a4ffb12159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024663"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636895"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**备注**|**varchar(254)**|对过程的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
 |**PROCEDURE_TYPE**|**smallint**|过程类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 始终返回 2.0。 此值可以为下列值之一：<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为了获得最大互操作性，网关客户端应只采用 SQL 标准模式匹配（百分号 (%) 和下划线 (_) 通配符）。  
   
  由于不就当前用户对特定存储过程执行访问的权限信息进行必要的检查，因此访问得不到保证。 请注意只使用三部分命名。 这表示在对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 执行时，只返回本地存储过程而不返回要求四部分命名的远程存储过程。 如果服务器特性 ACCESSIBLE_SPROC 为 Y 结果集中**sp_server_info**，仅可由当前用户执行的存储的过程返回。  

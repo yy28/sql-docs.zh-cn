@@ -1,31 +1,28 @@
 ---
-title: DDL 语句 |Microsoft 文档
+title: DDL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], DDL statements
 - DDL statements [ODBC]
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d077c86fb7a87658bc62d9530e9019e9f25da987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14d9eb18a5c6c3cbd62cea0c668f3c53f8da48f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626675"
 ---
 # <a name="ddl-statements"></a>DDL 语句
-数据定义语言 (DDL) 语句在 Dbms 之间有很大差异。 ODBC SQL 定义语句的最常见的数据定义操作： 创建和删除表、 索引和视图。更改表;授予，并撤消权限。 所有其他 DDL 语句是数据源 – 特定。 因此，可互操作的应用程序无法执行某些数据定义操作。 一般情况下，这不是问题，因为此类操作往往是高度特定于 DBMS，并且最佳从左到专用的数据库管理软件附带大多数 Dbms 或安装程序附带的驱动程序。  
+数据定义语言 (DDL) 语句在 Dbms 之间有很大差异。 ODBC SQL 定义语句的最常见的数据定义操作： 创建和删除表、 索引和视图。更改表;和授予和撤消权限。 所有其他 DDL 语句是源特定的数据。 因此，可互操作应用程序不能执行一些数据定义操作。 一般情况下，这并不是问题，因为此类操作往往是高度特定于 DBMS 的和最左侧的专有数据库管理软件附带的大多数 Dbms 或安装程序附带的驱动程序。  
   
- 数据定义中的另一个问题是该数据类型名称在 Dbms 之间有很大差异。 而不是定义标准数据类型名称和强制驱动程序以将它们转换为特定于 DBMS 的名称， **SQLGetTypeInfo**提供应用程序能够发现特定于 DBMS 的数据类型名称的方法。 可互操作的应用程序应使用这些名称在 SQL 语句中创建和更改的表;中列出的名称[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，和[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)，仅为示例。
+ 数据定义中的另一个问题是该数据类型名称在 Dbms 之间有很大差异。 而不是定义标准数据类型名称和强制驱动程序，以将其转换为特定于 DBMS 的名称**SQLGetTypeInfo**提供应用程序发现特定于 DBMS 的数据类型名称的方法。 可互操作应用程序应使用这些名称在 SQL 语句中创建和更改的表;中列出的名称[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，并[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)，仅为示例。

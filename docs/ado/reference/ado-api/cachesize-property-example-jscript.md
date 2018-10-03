@@ -1,32 +1,29 @@
 ---
-title: CacheSize 属性示例 (JScript) |Microsoft 文档
+title: CacheSize 属性示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9d0267aec726c6213d36d9224b457fcff3caf97
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648835"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize 属性示例 (JScript)
-此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性，以显示的操作的性能差异执行显式超时和没有 30 记录缓存。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**CacheSizeJS.asp**。  
+此示例使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)属性显示的操作的性能差别执行具有和没有 30 记录缓存。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**CacheSizeJS.asp**。  
   
 ```  
 <!-- BeginCacheSizeJS -->  

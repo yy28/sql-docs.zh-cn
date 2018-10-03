@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_denylogin_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_denylogin
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39a33d466b06b070bb3fcf1e47a99b8e296c2a87
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3d999de2caaf75334271ca3c4886c4424d6151f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031405"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681155"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_denylogin**拒绝对映射到指定的 Windows 用户或 Windows 组的服务器级别主体 CONNECT SQL 权限。 如果服务器主体不存在，将创建它。 将显示在新的主体[sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)目录视图。  
   
  **sp_denylogin**不能在用户定义的事务内执行。  

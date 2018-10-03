@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 966fbd2efde6934f8cfe1b59706dec27b92e301e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c2a1978aeea7ec69ea45bc088bbdff432de3c9f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980678"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621865"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,10 +43,10 @@ ms.locfileid: "37980678"
   
  此视图按保留的最大行有关的信息，请参阅"最小值和最大值"中[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 权限。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  sys.dm_pdw_exec_requests 不筛选查询结果根据特定于数据库的权限。 具有 VIEW SERVER STATE 权限的登录名可以获取结果的所有数据库的查询结果  
   
 > [!WARNING]  

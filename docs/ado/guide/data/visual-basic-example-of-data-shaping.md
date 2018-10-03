@@ -1,31 +1,28 @@
 ---
-title: Visual Basic 示例中的数据成型 |Microsoft 文档
+title: Visual Basic 数据整理示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic example of data shaping[ADO], about data shaping
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e6f7fd8431a189a031b44206b13c711ea74e7b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 772fb84482346402133874ff5e177f4d3c8b30c4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645635"
 ---
-# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 示例中的调整，数据
+# <a name="visual-basic-example-of-data-shaping"></a>Visual Basic 数据整理示例
 ```  
 ' This application makes use of Microsoft Hierarchical FlexGrid  
 ' Control, which is named as MSHFLexGrid.  
@@ -102,8 +99,8 @@ End Function
   
 3.  从选择"Microsoft 分层 FlexGrid 控件 6.0 (OLEDB)"**组件**弹出窗口，然后单击**保存**。  
   
-4.  双击 FlexGrid 控件在 Visual Basic 工作区的工具箱窗格中。 将此实例的名称更改为 MSHFLEXGRID。  
+4.  双击 FlexGrid 控件，在 Visual Basic 工作区的工具箱窗格中。 将此实例的名称更改为 MSHFLEXGRID。  
   
-5.  复制上面的代码并将其粘贴到**代码**页后，可以将任何现有代码。  
+5.  复制上面的代码并将其粘贴到**代码**页后，可以替换任何现有代码。  
   
-6.  选择**启动**从**运行**菜单可执行应用程序。
+6.  选择**启动**从**运行**菜单执行应用程序。

@@ -1,32 +1,29 @@
 ---
-title: 使用 ADO 的 Microsoft Visual c + + |Microsoft 文档
+title: 使用 ADO 与 Microsoft Visual c + + |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, using with Visual C++
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15fcf82b5a1ce0edd3b20d1784bfd8f4f61a5dd1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634865"
 ---
-# <a name="using-ado-with-microsoft-visual-c"></a>使用 ADO 的 Microsoft Visual c + +
-有关使用 ADO 的 Visual c + + 的信息，请参阅以下各节：  
+# <a name="using-ado-with-microsoft-visual-c"></a>配合使用 ADO 与 Microsoft Visual C++
+有关使用 ADO 与 Visual c + + 的信息，请参阅以下各节：  
   
 -   [Visual C++ ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
   
@@ -40,8 +37,8 @@ ms.locfileid: "35270416"
   
 ## <a name="see-also"></a>请参阅  
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [ADO COM 的 Visual c + + 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO 的 Visual c + + 语法 #import 索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [ADO for COM 的 Visual c + + 语法索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [ADO for Visual c + + 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [使用 ADO 与 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [使用 ADO 的脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
+ [使用 ADO 与脚本语言](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
  [ADO 的 Visual C++ 扩展](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)

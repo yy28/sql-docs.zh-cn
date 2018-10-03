@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79cf19f29f64f9db7370c993b023a3e54258cec
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644145"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar(** 32 **)**|可用列权限中的一个。 列权限可以是下列值中的一个（或定义实现时数据源支持的其他值）：<br /><br /> SELECT = GRANTEE 可以检索列的数据。<br /><br /> INSERT = 当 (GRANTEE) 向表中插入新行时，GRANTEE 可以为此列提供数据。<br /><br /> UPDATE = GRANTEE 可以修改列中的现有数据。<br /><br /> REFERENCES = GRANTEE 可以用主键/外键关系引用外表中的列。 通过使用表约束定义主键/外键关系。|  
 |IS_GRANTABLE|**varchar (** 3 **)**|指示是否允许被授权者向其他用户 （通常称为"授予再授予"权限） 授予权限。 可以是 YES、NO 或 NULL。 为未知或 NULL，值引用的"授予再授予"不适用于的数据源。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以用 GRANT 语句授予权限，用 REVOKE 语句除去权限。  
   
 ## <a name="permissions"></a>Permissions  

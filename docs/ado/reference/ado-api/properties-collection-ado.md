@@ -1,13 +1,11 @@
 ---
-title: 属性集合 (ADO) |Microsoft 文档
+title: 属性集合 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,25 +15,24 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616755"
 ---
 # <a name="properties-collection-ado"></a>属性集合 (ADO)
 包含所有[属性](../../../ado/reference/ado-api/property-object-ado.md)对象的特定实例的对象。  
   
-## <a name="remarks"></a>Remarks  
- 一些 ADO 对象具有**属性**组成的集合**属性**对象。 每个**属性**对象都对应于特定于所提供的 ADO 对象的特征。  
+## <a name="remarks"></a>备注  
+ 某些 ADO 对象具有**属性**组成的集合**属性**对象。 每个**属性**对象对应于特定于访问接口的 ADO 对象的特征。  
   
 > [!NOTE]
->  请参阅[属性](../../../ado/reference/ado-api/property-object-ado.md)对象主题有关的更多详细说明如何使用**属性**对象。  
+>  请参阅[属性](../../../ado/reference/ado-api/property-object-ado.md)如何使用更多详细说明的主题**属性**对象。  
   
  **动态属性**的**记录集**对象超出范围 （变得不可用） 时转**记录集**已关闭。  
   

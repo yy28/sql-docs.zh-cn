@@ -1,34 +1,31 @@
 ---
-title: 附录 e： 标量函数 |Microsoft 文档
+title: 附录 e： 标量函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
 - functions [ODBC], scalar
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: acaab68fab32c25ab101f65ccd196abe7ebceef2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94e33460d3c50363e96e90fb457467b8e5cda315
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631855"
 ---
-# <a name="appendix-e-scalar-functions"></a>附录 e： 标量函数
-ODBC 指定以下类型的标量函数，有关上述每种函数类型，在此附录的相应章节中提供的详细信息。 函数说明中包含相关联的语法。  
+# <a name="appendix-e-scalar-functions"></a>附录 E：标量函数
+ODBC 指定以下类型的标量函数，有关每个相应部分的本附录中提供这些函数类型的详细信息。 函数说明包含关联的语法。  
   
- 本附录包含以下主题。  
+ 本附录包含的以下主题。  
   
 -   [字符串函数](../../../odbc/reference/appendixes/string-functions.md)  
   
@@ -42,11 +39,11 @@ ODBC 指定以下类型的标量函数，有关上述每种函数类型，在此
   
 -   [SQL-92 CAST 函数](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- 因为函数通常是数据源 – 特定 ODBC 不强制返回值的数据类型要求从标量函数。 应用程序应使用 CONVERT 标量函数，只要有可能，以强制数据类型转换。  
+ 因为这些函数通常是数据源特定于 ODBC 不强制返回值的数据类型要求从标量函数。 应用程序应使用 CONVERT 标量函数，只要有可能以强制数据类型转换。  
   
-## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 和 SQL 92 标量函数  
- 本附录中的表包含 ODBC 3.0 为了符合 SQL 92 已添加的函数。 ODBC 中定义为特定类型的标量函数，添加这些函数会显示在每个部分。  
+## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC 和 SQL-92 的标量函数  
+ 本附录中的表包含在 ODBC 3.0 以符合 SQL-92 中已添加的函数。 定义在 ODBC 中，添加特定类型的标量函数，这些函数是每个节中所述。  
   
- ODBC 和 SQL 92 分类其标量函数以不同的方式。 ODBC 将分类自变量类型; 标量的函数SQL 92 对它们进行分类的返回值。 例如，EXTRACT 函数归类为 timedate 函数通过 ODBC，因为提取字段自变量是一个 datetime 关键字，提取源参数是日期时间或间隔的表达式。 Sql-92，另一方面，将提取分类为数值的标量函数，因为返回值是一个数字。  
+ ODBC 和 SQL-92 分类及其标量函数以不同的方式。 ODBC 将分为两类标量函数的参数类型;SQL-92 进行分类的返回值。 例如，提取函数归类为 timedate 函数通过 ODBC，因为提取字段参数是 datetime 关键字并且提取源参数为 datetime 或间隔的表达式。 SQL-92，但是，将提取分类为数值的标量函数，因为返回值是数字。  
   
- 应用程序可以确定驱动程序还支持通过调用哪些标量函数**SQLGetInfo**。 信息类型是包含对于 ODBC 和标量函数的 SQL 92 分类。 因为这些分类不同，对于某些标量函数的支持可能会指出与 ODBC 和 SQL 92 并不对应的信息类型中。 SQL_TIMEDATE_FUNCTIONS 信息类型; 例如，指示用于 ODBC 中提取的支持另一方面，用于提取在 sql-92，支持由 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 信息类型表示。
+ 应用程序可以确定驱动程序支持通过调用的标量函数**SQLGetInfo**。 ODBC 和 SQL-92 的标量函数的分类中包含的信息类型。 因为这些分类不同，可能会在不对应于 ODBC 和 SQL-92 的信息类型中指示某些标量函数的支持。 SQL_TIMEDATE_FUNCTIONS 信息类型; 例如，指示 ODBC 中提取的支持但是，支持 SQL-92 中提取 SQL_SQL92_NUMERIC_VALUE_FUNCTIONS 信息类型的指示。

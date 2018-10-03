@@ -1,37 +1,34 @@
 ---
-title: SQLSetConnectOption (dBASE 驱动程序) |Microsoft 文档
+title: SQLSetConnectOption (dBASE 驱动程序) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], dBASE Driver
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a7860fbea2f87cf8d582141c699a21055b8b10a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0b3c421ad00a1627ddfb7e6f4fb63ee5d30981a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618785"
 ---
-# <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (dBASE 驱动程序)
+# <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption（dBASE 驱动程序）
 > [!NOTE]  
->  本主题提供 dBASE 特定于驱动程序的信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供 dBASE 驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
 |fOption|注释|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，该驱动程序不会阻止更新，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY。|  
-|SQL_AUTOCOMMIT|DBASE 驱动程序仅支持 SQL_AUTOCOMMIT 被设置为于 （默认状态），因为它不支持事务。|  
+|SQL_AUTOCOMMIT|DBASE 驱动程序仅支持 SQL_AUTOCOMMIT 上 （默认状态），设置为，因为它不支持事务。|  
 |SQL_CURRENT_QUALIFIER|支持。|  
 |SQL_LOGIN_TIMEOUT|不提供支持。|  
 |SQL_OPT_TRACE|支持。|  
