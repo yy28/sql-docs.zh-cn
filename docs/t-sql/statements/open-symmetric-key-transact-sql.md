@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPEN SYMMETRIC KEY
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], opening
 - OPEN SYMMETRIC KEY statement
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 123689fada7686f68b7dce614198452355876d12
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b5fbd7c16e5150c9d547699c26038e435f1e96c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749582"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  无法打开使用加密提供程序创建的对称密钥。 没有 **OPEN** 语句，使用此类对称密钥的加密和解密操作也会成功，因为加密提供程序会打开和关闭密钥。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  调用方必须具有对密钥的某些权限，并且必须未被拒绝授予对密钥的 VIEW DEFINITION 权限。 其他权限要求因解密机制的而异：  
   
 -   DECRYPTION BY CERTIFICATE：具有对证书的 CONTROL 权限并且知道加密其私钥的密码。  

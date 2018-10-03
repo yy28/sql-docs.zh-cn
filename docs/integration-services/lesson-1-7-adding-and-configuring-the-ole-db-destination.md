@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5280503f66c70f5d9fe2955d376a71c139e27e27
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f6e0e9e862590fc7a0dce63e71340c922e82a80e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599505"
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>第 1-7 课 - 添加和配置 OLE DB 目标
 现在，您的包可以从平面文件源中提取数据，并将数据转换为与目标兼容的格式。 下一个任务是将已转换的数据实际加载到目标。 若要加载数据，您必须将 OLE DB 目标添加到数据流。 OLE DB 目标可以使用数据库表、视图或 SQL 命令将数据加载到各种 OLE DB 兼容的数据库中。  

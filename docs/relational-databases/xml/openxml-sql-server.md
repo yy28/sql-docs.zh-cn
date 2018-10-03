@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 13ec9c1cea7a47853b45cb5f60f9161c75a0f0e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3534d1772fcc13ebcd420bc845b004bf20b1d446
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629856"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +139,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  下表介绍了边缘表的结构。  
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|文档节点的唯一 ID。<br /><br /> 根元素具有的 ID 值为 0。 保留负的 ID 值。|  
 |**parentid**|**bigint**|标识节点的父节点。 此 ID 标识的父节点不一定是父元素。 但具体情况取决于此 ID 所标识节点的子节点的节点类型。 例如，如果节点为文本节点，则其父节点可能是一个属性节点。<br /><br />  如果节点位于 XML 文档的顶层，则其 ParentID 为 NULL。|  

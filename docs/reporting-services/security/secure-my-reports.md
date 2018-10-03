@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2d98c4caab843730bb6061ac9ac83106d350c20
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 86ff5bb9df79c23ba0bfb04954790ba0c475a3d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277350"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775815"
 ---
 # <a name="secure-my-reports"></a>保护“我的报表”
   “我的报表”功能为使用报表提供了一个由用户管理的工作区。 为了发挥“我的报表”文件夹应有的作用，该文件夹与其他普通文件夹相比，需要限制条件较少的权限。 只有在其他文件夹中查看和运行报表的权限的用户可能需要一组扩展的权限来管理其“我的报表”文件夹及其所拥有的内容。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供专用于此用途的角色分配和角色定义。  

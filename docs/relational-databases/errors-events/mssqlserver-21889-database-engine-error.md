@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 21889 (Database Engine error)
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
-caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3a42d6959fcf743ea17f582a7aa1c9bf752bd423
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635205cbc92121034cd8c949382c4910c794b55e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332207"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835345"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "37332207"
 |事件源|MSSQLSERVER|  
 |组件|SQLEngine|  
 |符号名称|SQLErrorNum21889|  
-|消息正文|SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”（具有分发服务器“%s”）上运行 sp_adddistributor，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。|  
+|消息正文|SQL Server 实例“%s”不是复制发布服务器。 在 SQL Server 实例“%s”(具有分发服务器“%s”)上运行 sp_adddistributor，以便使该实例承载发布数据库“%s”。 确保指定的登录名和密码与用于原始发布服务器的登录名和密码相同。|  
   
 ## <a name="explanation"></a>解释  
 为了承载发布服务器数据库，SQL Server 实例必须为复制发布服务器。 **sp_validate_redirected_publisher** 在远程服务器上调用 **sp_helpdistributor** 来确定该服务器是否为复制发布服务器。 此错误表示 SQL Server 的目标实例不是复制发布服务器。  

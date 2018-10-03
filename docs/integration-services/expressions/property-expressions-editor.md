@@ -5,30 +5,27 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.propertyexpressionseditor.f1
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b1460f926f0b418ddd576ac59ae3e89b95b1fd5f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bbca50777271309b338940abc2bfde8c8d6ae679
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793565"
 ---
 # <a name="property-expressions-editor"></a>属性表达式编辑器
   可以使用 **“属性表达式编辑器”** 对话框创建、编辑或删除用于更新属性值的属性表达式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **属性**  
  从列表中选择对象属性。  
   

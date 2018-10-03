@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b3b63c4b9bf5ccbfd3246c7247394fda1dcd723
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2ab9b5d763fba9d33af7ccfb9229e223522a919f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43091049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615215"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "43091049"
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|要从缓存中删除的 SQL 文本。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|要从缓存中删除的 SQL 文本。|1|用户帐户控制|  
 |TransactionID|**bigint**|系统分配的事务 ID。|4|用户帐户控制|  
 |XactSequence|**bigint**|用于说明当前事务的标记。|50|用户帐户控制|  
   

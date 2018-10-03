@@ -4,10 +4,8 @@ ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.excelconnection.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5db2ab4b9967af3d6267f398395c015b1bec068
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1da4be7553134528a9f02e61726818afee0ce2de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817045"
 ---
 # <a name="excel-connection-manager"></a>Excel 连接管理器
   Excel 连接管理器使包可以连接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿文件。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的 Excel 源和 Excel 目标使用 Excel 连接管理器。  
@@ -56,7 +53,7 @@ ms.locfileid: "35334781"
 ## <a name="excel-connection-manager-editor"></a>Excel 连接管理器编辑器
   使用 **“Excel 连接管理器编辑器”** 对话框可以将连接添加到现有或新的 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 工作簿文件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Excel 文件路径**  
  键入一个现有或新的 Excel 工作簿文件的路径和文件名。  
    

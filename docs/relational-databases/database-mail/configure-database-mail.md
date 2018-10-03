@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: database-mail
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,16 +38,15 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1df9d91458211d66722ac1b844e5d938690acc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625771"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +156,7 @@ ms.locfileid: "32933232"
  键入电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的帐户的回信可能会发送给数据库管理员 danw@Adventure-Works.com。  
   
  **服务器名称**  
- 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 smtp.<your_company>.com****。如需相关帮助，请询问您的邮件管理员。  
+ 键入此帐户发送电子邮件所用的 SMTP 服务器的名称或 IP 地址。 通常此格式类似于 smtp.<your_company>.com****。 如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  键入此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  
@@ -210,7 +206,7 @@ ms.locfileid: "32933232"
  查看或更新电子邮件地址，该地址是答复由此帐户发送的电子邮件所用到的地址。 答复电子邮件为可选项。 例如，给 SQL Server 代理的帐户的回信可能会发送给数据库管理员 **danw@Adventure-Works.com**的计算机上的用户对应。  
   
  **服务器名称**  
- 查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。如需相关帮助，请询问您的邮件管理员。  
+ 查看或更新该帐户发送电子邮件所用的 SMTP 服务器的名称。 通常此格式类似于 **smtp.<your_company>.com**。 如需相关帮助，请询问您的邮件管理员。  
   
  **端口号**  
  查看或更新此帐户的 SMTP 服务器的端口号。 大多数 SMTP 服务器使用端口 25。  
