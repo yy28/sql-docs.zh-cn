@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - troubleshooting [Reporting Services], errors
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0a09771deaff3f6996250840920675159209daf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c3a0dc2db7de79eb7fac8a54fa437ee66f1d365
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067807"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>错误和事件参考 (Reporting Services)
   本主题提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的错误和事件的信息。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 日志文件中也包含错误信息。 有关可用的日志文件以及如何查看日志类型的详细信息，请参阅[Reporting Services 日志文件和源](../report-server/reporting-services-log-files-and-sources.md)。  
@@ -44,7 +41,7 @@ ms.locfileid: "37255379"
 |109|信息|管理|报表服务器<br /><br /> 报表管理器|配置文件已修改。 有关详细信息，请参阅[Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)。|  
 |110|警告|管理|报表服务器<br /><br /> 报表管理器|其中一个配置文件中的设置已修改，导致该设置不再有效。 此时将使用默认值。 有关详细信息，请参阅[Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md)。|  
 |111|错误|日志记录|报表服务器<br /><br /> 报表管理器|\<Source> 无法创建跟踪日志。 有关详细信息，请参阅 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)。|  
-|112|警告|Security|报表服务器|报表服务器已检测到可能存在拒绝服务攻击。 有关详细信息，请参阅[Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。|  
+|112|警告|安全性|报表服务器|报表服务器已检测到可能存在拒绝服务攻击。 有关详细信息，请参阅[Reporting Services 安全性和保护](../security/reporting-services-security-and-protection.md)。|  
 |113|错误|日志记录|报表服务器|报表服务器无法创建性能计数器。|  
 |114|错误|启动/关闭|报表管理器|报表管理器无法连接到报表服务器服务。|  
 |115|警告|计划|计划和传递处理器|SQL Server 代理队列中的计划任务已修改或已删除。|  
@@ -63,8 +60,8 @@ ms.locfileid: "37255379"
 |128|错误|激活|报表服务器|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件。|  
 |129|错误|管理|报表服务器<br /><br /> 计划和传递处理器|无法解密已加密的配置文件设置。|  
 |130|错误|管理|报表服务器<br /><br /> 计划和传递处理器|\<Source> 找不到配置文件。 报表服务器要求有配置文件。|  
-|131|错误|Security|报表服务器<br /><br /> 计划和传递处理器|无法解密已加密的用户数据值。|  
-|132|错误|Security|报表服务器|加密用户数据时出现错误。 无法保存该值。|  
+|131|错误|安全性|报表服务器<br /><br /> 计划和传递处理器|无法解密已加密的用户数据值。|  
+|132|错误|安全性|报表服务器|加密用户数据时出现错误。 无法保存该值。|  
 |133|错误|管理|报表服务器<br /><br /> 报表管理器<br /><br /> 计划和传递处理器|无法加载配置文件。 如果 XML 无效，则可能发生这一错误。|  
 |134|错误|管理|报表服务器|报表服务器无法加密配置文件中某个设置的值。|  
   

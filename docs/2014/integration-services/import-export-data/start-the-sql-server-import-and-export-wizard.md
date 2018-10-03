@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0791e226f4c4a1c19ab2dffb7a9e7845e59a418c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100337"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>运行 SQL Server 导入和导出向导
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 导入和导出向导为在数据源之间复制数据和构造基本包提供了一种最为简单的方法。 有关向导的详细信息，请参阅[SQL Server 导入和导出向导](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  

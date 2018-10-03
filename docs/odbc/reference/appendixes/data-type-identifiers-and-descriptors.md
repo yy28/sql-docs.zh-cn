@@ -1,13 +1,11 @@
 ---
-title: 数据类型标识符和描述符 |Microsoft 文档
+title: 数据类型标识符和描述符 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
@@ -17,25 +15,24 @@ helpviewer_keywords:
 - data types [ODBC], descriptors
 - concise data types [ODBC]
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 690df82a803df4bb4b987026753c448f90734600
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6594c2b47ed5f57f6814ac704b9d36073e0a8304
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792995"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>数据类型标识符和描述符
-中列出的数据类型[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)和[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面的部分是"简洁"数据类型： 每个标识符是指一种数据类型。 没有标识符和数据类型之间的一一对应关系。 描述符，但是，此未显示在所有情况下使用单个值以确定数据类型。 在某些情况下，它们可以使用"详细"数据类型和类型子代码。 对于除日期时间和间隔数据类型以外的所有数据类型，详细类型标识符等同于简洁类型标识符和 SQL_DESC_DATETIME_INTERVAL_CODE 中的值等于 0。 对于日期时间和间隔的数据类型，但是，详细的类型 （SQL_DATETIME 或 SQL_INTERVAL） 存储在 SQL_DESC_TYPE、 简洁类型存储在 SQL_DESC_CONCISE_TYPE，和为每种简洁的类型的子存储在 SQL_DESC_DATETIME_INTERVAL_CODE。 设置这些字段之一将影响其他。 有关这些字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。  
+中列出的数据类型[SQL 数据类型](../../../odbc/reference/appendixes/sql-data-types.md)并[C 数据类型](../../../odbc/reference/appendixes/c-data-types.md)本附录前面的部分是"简洁"数据类型： 每个标识符是指一种数据类型。 没有标识符和数据类型之间的一一对应关系。 描述符，但是，此不能在所有情况下使用单个值来标识数据类型。 在某些情况下，它们可以使用"详细"的数据类型和类型子代码。 对于除日期时间和间隔数据类型的所有数据类型，详细的类型标识符的简洁类型标识符相同，SQL_DESC_DATETIME_INTERVAL_CODE 中的值等于 0。 对于日期时间和间隔数据类型，但是，详细的类型 （SQL_DATETIME 或 SQL_INTERVAL） 存储中的 SQL_DESC_TYPE、 简洁类型存储在 SQL_DESC_CONCISE_TYPE，并且为每种简洁类型子代码存储在 SQL_DESC_DATETIME_INTERVAL_CODE。 设置这些字段之一会影响其他。 有关这些字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函数说明。  
   
- 当 SQL_DESC_TYPE 或 SQL_DESC_CONCISE_TYPE 字段设置为某些数据类型时，SQL_DESC_DATETIME_INTERVAL_PRECISION、 SQL_DESC_LENGTH、 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段将自动设置为默认值，作为适用于数据类型。 有关详细信息，请参阅中的 SQL_DESC_TYPE 字段的说明[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 如果任何默认值设置不合适，应用程序应显式设置通过调用描述符字段**SQLSetDescField**。  
+ 为某些数据类型设置的 SQL_DESC_TYPE 或 SQL_DESC_CONCISE_TYPE 字段后，SQL_DESC_DATETIME_INTERVAL_PRECISION、 SQL_DESC_LENGTH、 SQL_DESC_PRECISION 和 SQL_DESC_SCALE 字段将自动设置为默认值，根据数据类型。 有关详细信息，请参阅中的 SQL_DESC_TYPE 字段的说明[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 如果默认值设置的任何不适当，应用程序应显式设置描述符字段通过调用**SQLSetDescField**。  
   
- 下表显示简洁类型标识符、 详细类型标识符和类型为每个日期时间和间隔 SQL 和 C 类型标识符的子代码。 SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段，此表所示，对于日期时间和间隔的数据类型，具有相同的清单常量对于 SQL 数据类型 （在实现描述符） 和 （在应用程序的 C 数据类型描述符）。  
+ 下表显示了简单的类型标识符、 详细的类型标识符和类型为每个日期时间和间隔 SQL 和 C 类型标识符的子代码。 此表所示，对于日期时间和间隔数据类型的 SQL_DESC_TYPE 和 SQL_DESC_DATETIME_INTERVAL_CODE 字段具有 SQL 数据类型 （在实现描述符） 和 （在应用程序的 C 数据类型都相同的清单常量描述符）。  
   
-|简洁 SQL 类型|简洁 C 类型|详细的类型|DATETIME_INTERVAL_CODE|  
+|简单的 SQL 类型|简单的 C 类型|详细的类型|DATETIME_INTERVAL_CODE|  
 |----------------------|--------------------|------------------|------------------------------|  
 |SQL_TYPE_DATE|SQL_C_TYPE_DATE|SQL_DATETIME|SQL_CODE_DATE|  
 |SQL_TYPE_TIME|SQL_C_TYPE_TIME|SQL_DATETIME|SQL_CODE_TIME|  

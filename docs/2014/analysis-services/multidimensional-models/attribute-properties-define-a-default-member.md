@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default members
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - members [Analysis Services], default
 - DefaultMember property
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6899b40cd317db9d74a426038e7f0201223d9993
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fce657a6a8142b641f52ee792557b7b7f8dbf5f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067183"
 ---
 # <a name="define-a-default-member"></a>定义默认成员
   在查询中不包括特性层次结构的情况下，可以使用特性层次结构的默认成员来计算表达式。 如果查询包括的特性层次结构或用户层次结构包含产生特性层次结构的特性，那么将忽略默认成员。 这是因为将使用查询中指定的成员。  

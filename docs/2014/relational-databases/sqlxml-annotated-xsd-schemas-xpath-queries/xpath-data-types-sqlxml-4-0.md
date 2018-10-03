@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping XDR types to XPath types [SQLXML]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - XPath data types [SQLXML]
 - operators [SQLXML]
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bd591ecb5c0e37acc4ffea7d7b22bf85636c585
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c7890449a68770d6c6a14a100af061b1394040
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054747"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 数据类型 (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、XPath 和 XML 架构 (XSD) 具有相差很大的数据类型。 例如，XPath 没有整数或日期数据类型，但 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 XSD 则具有许多此类数据类型。 XSD 可将纳秒精度用于时间值，而 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 最高只能使用 1/300 秒的精度。 因此，将一种数据类型映射到另一种数据类型并不是始终可行的。 有关映射的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型到 XSD 数据类型，请参阅[数据类型强制转换和 sql: datatype 批注&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)。  
@@ -45,7 +42,7 @@ ms.locfileid: "37167138"
  XPath 具有三种数据类型：`string`、`number` 和 `boolean`。 `number` 数据类型始终是 IEEE 754 双精度浮点。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `float(53)`数据类型是 XPath 到最接近`number`。 但是，`float(53)` 与 IEEE 754 并不完全相同。 例如，NaN（非数字）和 infinity 均未使用。 尝试将非数字字符串转换为 `number` 和尝试以零作除数将导致错误。  
   
 ## <a name="xpath-conversions"></a>XPath 转换  
- 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范，XML 路径语言 (XPath) 版本 1.0 W3C 推荐建议，1999 年 10 月 8，可以在 W3C Web 站点上找到http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 在您使用 `OrderDetail[@UnitPrice > "10.0"]` 之类的 XPath 查询时，隐式和显式数据类型转换可能会对查询的意义产生细微的变化。 因此，理解 XPath 数据类型的实现方式十分重要。 XPath 语言规范，XML 路径语言 (XPath) 版本 1.0 W3C 推荐建议，1999 年 10 月 8，可以在 W3C Web 站点上找到 http://www.w3.org/TR/1999/PR-xpath-19991008.html 。  
   
  XPath 运算符分为四个类别：  
   
@@ -76,7 +73,7 @@ ms.locfileid: "37167138"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不执行针对节点集的位置选择：例如，XPath 查询 `Customer[3]` 意味着第三个客户；但在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支持此类型的位置选择。 因此，无法实现 XPath 规范所述的节点集到 `string` 转换或者节点集到 `number` 转换。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用“任何”语义，而 XPath 规范指定“第一个”语义。 例如，基于 W3C XPath 规范，XPath 查询`Order[OrderDetail/@UnitPrice > 10.0]`的第一个选择以下顺序**OrderDetail**具有**UnitPrice**大于 10.0。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，此 XPath 查询选择以下任何顺序**OrderDetail**具有**UnitPrice**大于 10.0。  
   
- 转换为 `boolean` 将产生存在测试；因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 SQL 表达式“Products.Discontinued is not null”，而非 SQL 表达式“Products.Discontinued = 1”。 若要使该查询等效于后一个 SQL 表达式，请首先将节点集转换为非 `boolean` 类型，如 `number`。 例如， `Products[number(@Discontinued) = true()]`。  
+ 转换为 `boolean` 将产生存在测试；因此，XPath 查询 `Products[@Discontinued=true()]` 等效于 SQL 表达式“Products.Discontinued is not null”，而非 SQL 表达式“Products.Discontinued = 1”。 若要使该查询等效于后一个 SQL 表达式，请首先将节点集转换为非 `boolean` 类型，如 `number`。 例如 `Products[number(@Discontinued) = true()]` 。  
   
  因为如果运算符对于节点集中任一节点为 TRUE，则大多数运算符均定义为 TRUE；所以，在节点集为空时，这些运算的计算结果始终为 FALSE。 因此，如果 A 为空，则 `A = B` 和 `A != B` 均为 FALSE，并且 `not(A=B)` 和 `not(A!=B)` 均为 TRUE。  
   

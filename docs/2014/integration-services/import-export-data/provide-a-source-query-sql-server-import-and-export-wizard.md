@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.providesourcequery.f1
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d85fb5d22f88e363c3cc6fd07cf0b7c757911d83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abb49fa9e2e73ae5c610b5e940a6deba5079d62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069857"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>提供源查询（SQL Server 导入和导出向导）
   使用**提供源查询**页后，可以键入 SQL 语句，将生成要将数据从源复制到目标的数据。  
@@ -30,7 +27,7 @@ ms.locfileid: "37291023"
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL 语句**  
  键入查询语句，以便从源数据库中检索所选的数据行。 例如，以下查询语句可以从 AdventureWorks 数据库中检索提成比例超过 1.5% 的销售人员的 **SalesPersonID**、 **SalesQuota**和 **SalesYTD** 。  
   

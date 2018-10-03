@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5baccb74f86d4de59d5323c647db5378d5469e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1a0d8e895189e3fe71d9d99178beff7cd603208
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103967"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>通过使用 ODBC 目标来加载数据
   本过程说明如何使用 ODBC 目标加载数据。 若要添加和配置 ODBC 目标，包中必须已包含至少一个数据流任务和源。  

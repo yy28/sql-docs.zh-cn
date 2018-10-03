@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da54f048e74810566aa596b5b900ca5ba1246b57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 877d7d8e4831a785586680ce57d21975443da645
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254579"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070047"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>传输登录名任务编辑器（“登录名”页）
   可以使用 **“传输登录名任务编辑器”** 对话框的 **“登录名”** 页，指定用于将一个或多个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名从一个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例复制到另一个实例的属性。 有关此任务的详细信息，请参阅 [Transfer Logins Task](control-flow/transfer-logins-task.md)。  
@@ -31,7 +28,7 @@ ms.locfileid: "37254579"
 > [!IMPORTANT]  
 >  执行传输登录名任务时，在目标服务器上创建的登录名将具有随机的密码，并且密码处于禁用状态。 只有在 **sysadmin** 固定服务器角色的某个成员更改并启用这些登录名的密码后，才可使用这些登录名。 无法传输 **sa** 登录名。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SourceConnection**  
  从列表中选择 SMO 连接管理器，或单击“\<新建连接...>”，创建与源服务器的新连接。  
   

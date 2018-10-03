@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41eae162370ed26a1d84428f1c4e6a5d7eb5e2c7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 98de1a3a2e03a576b84543bf3578d87e7ad6c655
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657966"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>有关 SQL Server 概述 Microsoft OLE DB 提供程序
 Microsoft OLE DB 提供程序的 SQL Server，SQLOLEDB，允许 ADO 访问 Microsoft SQL Server。
@@ -59,7 +56,7 @@ User ID=MyUserID;Password=MyPassword;"
 |**密码**或**密码**|指定用户密码 （对于 SQL Server 身份验证）。|
 
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应该指定**Trusted_Connection = 是**或**集成安全性 = SSPI**而不是用户 ID 和密码连接字符串中的信息。
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。
 
 ## <a name="provider-specific-connection-parameters"></a>提供程序特定的连接参数
  此提供程序支持除 ADO 定义的多个提供程序特定的连接参数。 如 ADO 连接的属性，使用这些特定于提供程序的属性可以设置通过[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合的[连接](../../../ado/reference/ado-api/connection-object-ado.md)或可被设置为的一部分**连接字符串**.
@@ -113,22 +110,22 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="sql-server-features"></a>SQL Server 功能
  可以使用 SQL Server 使用 ADO XML**命令**输入和检索结果 XML 流格式，而不是在**记录集**对象。 有关详细信息，请参阅[命令输入使用流](../../../ado/guide/data/command-streams.md)和[到流中检索结果集](../../../ado/guide/data/retrieving-resultsets-into-streams.md)。
 
-### <a name="accessing-sqlvariant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>使用 MDAC 2.7、 MDAC 2.8 或 Windows DAC 6.0 sql_variant 数据访问
- Microsoft SQL Server 具有名为数据类型**sql_variant**。 类似于 OLE DB 的**DBTYPE_VARIANT**， **sql_variant**数据类型可以将几种不同类型的数据存储。 但是，有几个主要区别**DBTYPE_VARIANT**和**sql_variant**。 ADO 还可以处理数据存储为**sql_variant**不同于它如何处理其他数据类型的值。 下面的列表描述要考虑当您访问 SQL Server 数据类型的列中存储的问题**sql_variant**。
+### <a name="accessing-sqlvariant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>访问使用 MDAC 2.7、 MDAC 2.8 或 Windows DAC 6.0 sql_variant 数据
+ Microsoft SQL Server 具有一个名为的数据类型**sql_variant**。 类似于 OLE DB 的**DBTYPE_VARIANT**，则**sql_variant**数据类型可以存储多种不同类型的数据。 但是，有几个主要区别**DBTYPE_VARIANT**并**sql_variant**。 ADO 还可以处理作为存储的数据**sql_variant**方式不同于它如何处理其他数据类型值。 以下列表介绍了需要考虑访问 SQL Server 数据类型的列中存储时的问题**sql_variant**。
 
--   在 MDAC 2.7、 MDAC 2.8 和 Windows 数据访问组件 (Windows DAC) 6.0 中，SQL Server 的 OLE DB 提供程序支持**sql_variant**类型。 对于 ODBC OLE DB 提供程序却没有。
+-   在 MDAC 2.7、 MDAC 2.8 和 Windows 数据访问组件 (Windows DAC) 6.0 中，SQL Server 的 OLE DB 访问接口支持**sql_variant**类型。 对于 ODBC OLE DB 提供程序却没有。
 
--   **Sql_variant**类型不完全匹配**DBTYPE_VARIANT**数据类型。  **Sql_variant**类型支持几个新的子类型不支持**DBTYPE_VARIANT，** 包括**GUID**， **ANSI** (非 UNICODE)字符串，和**BIGINT**。 使用子类型不在前面列出的那些才能正常工作。
+-   **Sql_variant**类型不完全匹配**DBTYPE_VARIANT**数据类型。  **Sql_variant**类型支持几个新的子类型不受**DBTYPE_VARIANT**包括**GUID**， **ANSI** (非 UNICODE)字符串，并**BIGINT**。 使用子类型不在前面列出的那些才能正常工作。
 
--   **Sql_variant**子类型**数字**不匹配**DBTYPE_DECIMAL**的大小。
+-   **Sql_variant**子类型**数值**不符**DBTYPE_DECIMAL**的大小。
 
--   多个数据类型强制转换将导致类型不匹配。 例如，强迫**sql_variant**的子类型与**GUID**到**DBTYPE_VARIANT**将导致子类型的**safearray**（字节）. 将此类型转换回**sql_variant**将导致一个新分类的**数组**（字节）。
+-   多个数据类型强制转换将导致类型不匹配。 例如，将强制转换**sql_variant**使用的子类型**GUID**到**DBTYPE_VARIANT**会导致的子类型**safearray**（字节）. 将此类型转换回**sql_variant**将导致新的子类型**数组**（字节）。
 
--   **记录集**字段包含**sql_variant**数据可以进行远程控制 （封送处理） 或持久性的才**sql_variant**包含特定的子类型。 试图远程或保留与不支持下列数据子类型将导致运行时错误 （不受支持的转换） 从 Microsoft 持久性提供器 (MSPersist): **VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**，**将**， **VT_BSTR**，和**VT_DISPATCH。**
+-   **记录集**包含的字段**sql_variant**数据可远程处理 （封送处理） 或持久化的才**sql_variant**包含特定的子类型。 尝试远程或将数据保存以下不受支持的子类型将导致运行时错误 （不受支持的转换） 从 Microsoft 持久性提供程序 (MSPersist): **VT_VARIANT**， **VT_RECORD**， **VT_ILLEGAL**， **VT_UNKNOWN**， **VT_BSTR**，和**VT_DISPATCH。**
 
--   SQL Server 在 MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 的 OLE DB 提供程序具有一个名为的动态属性**允许本机变种**，顾名思义，允许开发人员访问**sql_variant**中其本机格式，而不是**DBTYPE_VARIANT**。 如果将此属性设置，以及**记录集**时打开客户端游标引擎 (**adUseClient**)、 **Recordset.Open**调用将失败。 如果将此属性设置和**记录集**用服务器游标打开时 (**adUseServer**)、 **Recordset.Open**调用会成功，但访问类型为的列**sql_variant**将生成一个错误。
+-   MDAC 2.7、 MDAC 2.8 和 Windows DAC 6.0 中的 SQL Server 的 OLE DB 访问接口的一个名为的动态属性**允许本机变体**，其名称所示，允许开发人员访问**sql_variant**中相对于其本机窗体**DBTYPE_VARIANT**。 如果将此属性设置，以及**记录集**时打开客户端游标引擎 (**adUseClient**)、 **Recordset.Open**调用将失败。 如果设置此属性，然后**记录集**使用服务器游标打开 (**adUseServer**)，则**Recordset.Open**调用将成功，但访问类型的列**sql_variant**将产生错误。
 
--   在客户端应用程序使用 MDAC 2.5 **sql_variant**数据可与 Microsoft SQL Server 查询。 但是的值**sql_variant**数据被视为字符串。 此类客户端应用程序应该升级到 MDAC 2.7、 MDAC 2.8 或 Windows DAC 6.0。
+-   在客户端应用程序使用 MDAC 2.5 **sql_variant**数据可用于针对 Microsoft SQL Server 的查询。 但是，值**sql_variant**数据被视为字符串。 此类客户端应用程序应该升级到 MDAC 2.7、 MDAC 2.8 或 Windows DAC 6.0。
 
 ## <a name="recordset-behavior"></a>记录集行为
  SQLOLEDB 不能使用 SQL Server 游标支持许多命令生成的多结果。 如果使用者请求需要 SQL Server 游标支持一个记录集时，如果所用的命令文本生成多个单个记录集作为其结果，就会出错。

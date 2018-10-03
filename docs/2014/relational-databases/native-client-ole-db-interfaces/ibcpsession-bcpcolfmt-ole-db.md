@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPColFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058677"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   在程序变量与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列之间创建绑定。  
@@ -43,14 +40,14 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- **BCPColFmt**方法用于创建 BCP 数据文件字段之间的绑定和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
+## <a name="remarks"></a>备注  
+ BCPColFmt 方法用于在 BCP 数据文件字段和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列之间创建绑定。 它将列的长度、类型、终止符和前缀长度视为参数处理，并为各个字段设置所有这些属性。  
   
  如果用户选择交互模式，则调用该方法两次；一次按照默认值（与服务器列的类型相对应）设置列格式，另一次按照在交互模式期间选择的客户端的所选列类型为每个列设置格式。  
   
  在非交互模式中，对每列只调用它一次，以便将每个列的类型设置为字符或本机类型，并设置列和行终止符。  
   
- **BCPColFmt**方法，可指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
+ 使用 BCPColFmt 方法可以为大容量复制指定用户文件格式。 对于大容量复制，格式包含以下部分：  
   
 -   从用户文件字段到数据库列的映射。  
   
@@ -64,14 +61,14 @@ DBORDINALidxServerCol);
   
 -   可选终止字节序列的长度。  
   
- 每次调用**BCPColFmt**指定一个用户文件字段的格式。 例如，若要更改在五个字段的用户数据文件中的三个字段的默认设置，请先调用`BCPColumns(5)`，然后调用**BCPColFmt**五次，其中三次调用设置您的自定义格式。 对于剩余的两个调用，设置*eUserDataType*为 BCP_TYPE_DEFAULT，并将*cbIndicator*， *cbUserData*，和*cbUserDataTerm*为 0、bcp_variable_length 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
+ 对 BCPColFmt 的每次调用将指定一个用户文件字段的格式。 例如，要在具有 5 个字段的用户数据文件中更改 3 个字段的默认设置，请先调用 `BCPColumns(5)`，再调用 BCPColFmt 五次，其中三次调用设置自定义格式。 对于剩余的两个调用，设置*eUserDataType*为 BCP_TYPE_DEFAULT，并将*cbIndicator*， *cbUserData*，和*cbUserDataTerm*为 0、bcp_variable_length 和 0 分别。 此过程复制全部五列，其中的三列采用您的自定义格式，另两列采用默认格式。  
   
 > [!NOTE]  
->  [Ibcpsession:: Bcpcolumns](ibcpsession-bcpcolumns-ole-db.md)到进行任何调用之前，必须在调用方法**BCPColFmt**。 必须调用**BCPColFmt**一次针对每个用户文件中的列。 调用**BCPColFmt**不止一次对任何用户文件列会导致错误。  
+>  在对 BCPColFmt 进行任何调用之前，必须先调用 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) 方法。 必须对用户文件中的每个列调用一次 BCPColFmt。 对任何用户文件列多次调用 BCPColFmt 将导致错误。  
   
  不必将用户文件中的所有数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表。 若要跳过某一列，请指定该列的数据格式，并且将 idxServerCol 参数设置为 0。 若要跳过某一字段，仍然需要所有信息才能让该方法正常工作。  
   
- **请注意** [ibcpsession:: Bcpwritefmt](ibcpsession-bcpwritefmt-ole-db.md)函数可用于维持格式规范通过提供**BCPColFmt**。  
+ **注意** [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 函数可以用于持久化通过 BCPColFmt 提供的格式规范。  
   
 ## <a name="arguments"></a>参数  
  *idxUserDataCol*[in]  
@@ -111,17 +108,17 @@ DBORDINALidxServerCol);
  要用于列的终止符序列的长度（单位为字节）。 如果终止符不存在或不希望其出现在数据中，请将该值设置为 0。  
   
  *idxServerCol*[in]  
- 数据库表中列的序号位置。 第一个列编号为 1。 报告列的序号位置**icolumnsinfo:: Getcolumninfo**或类似的方法。 如果该值是 0，则大容量复制将忽略数据文件中的相应字段。  
+ 数据库表中列的序号位置。 第一个列编号为 1。 列的序号位置由 IColumnsInfo::GetColumnInfo 或类似方法报告。 如果该值是 0，则大容量复制将忽略数据文件中的相应字段。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  方法成功。  
   
  E_FAIL  
- 有关详细的信息可使用提供程序特定错误发生[ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)接口。  
+ 出现访问接口特定的错误；要获取详细信息，请使用 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 接口。  
   
  E_UNEXPECTED  
- 意外调用了该方法。 例如， [ibcpsession:: Bcpinit](ibcpsession-bcpinit-ole-db.md)调用此方法之前，未调用方法。  
+ 意外调用了该方法。 例如，在调用该方法之前，未调用 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 方法。  
   
  E_INVALIDARG  
  参数无效。  

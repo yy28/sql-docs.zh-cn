@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 62
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dc2878c9a913b5bb95ef32c9f00a6e7b1e94520
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089380"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608806"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -81,7 +77,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0|当*@objname*为 null 或为未指定，返回两个结果集。 两个结果集是默认行为。|  
-|@shouldalert|当*@objname* = null 或为未指定，则返回单个结果集。|  
+|1|当*@objname* = null 或为未指定，则返回单个结果集。|  
   
  *oneresultset*是**位**，默认值为**0**。  
 
@@ -172,7 +168,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar(18)**|其中包含 UNDER CONSTRUCTION、 活动状态，并且合并的目标，以 kb 为单位的状态的检查点文件的总大小。 这是主要使用内存优化表中的数据的磁盘空间。 如果数据库不具有 memory_optimized_data 文件组具有至少一个容器，则返回 NULL。 *此列才包含的 if @include_total_xtp_storage= 1*。| 
 |**xtp_pending_truncation**|**varchar(18)**|具有状态 WAITING_FOR_LOG_TRUNCATION，以 kb 为单位的检查点文件的总大小。 这是用于等待清理后进行日志截断, 的检查点文件的磁盘空间。 如果数据库不具有 memory_optimized_data 文件组具有至少一个容器，则返回 NULL。 此列才包含的如果`@include_total_xtp_storage=1`。|
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **database_size**始终是大于的总和**保留** + **未分配的空间**因为它包括日志文件的大小，但**保留**并**unallocated_space**只考虑数据页。  
   
  使用 XML 索引和全文索引的页中包含**index_size**对这两个结果集。 当*objname*指定的 XML 索引和全文索引的对象的页总计中也被计入**保留**并**index_size**结果。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Content Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27152b0c181061e25727270fd89bd423728a5a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097857"
 ---
 # <a name="content-element-assl"></a>Content 元素 (ASSL)
   描述中的列的内容[MiningStructure](../objects/miningstructure-element-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37267473"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：可出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37267473"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此枚举描述由挖掘结构列表示的内容类型，可根据需要通过挖掘算法提供程序进行扩展。 有关内容类型的详细信息，请参阅[内容类型（数据挖掘）](../../data-mining/content-types-data-mining.md)。  
   
  下表中列出的值通常所有挖掘算法提供程序都支持。  
@@ -78,7 +75,7 @@ ms.locfileid: "37267473"
 |*标准偏差*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的概率标准偏差。|  
 |*ProbabilityVariance*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的概率方差。|  
 |*ProbabilityStdDev*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的标准偏差。|  
-|*支持*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的支持信息。 **注意：** 此列作为标准的一部分提供的第三方挖掘算法提供程序。 **注意：** Microsoft 提供的算法没有任何使用此列。 <br /><br /> 实例时都提供 SQL Server 登录名。|  
+|*支持*|该列的值指定父 `ClassifiedColumns` 的 `ScalarMiningStructureColumn` 元素中包含的列的支持信息。 **注意：** 此列作为标准的一部分提供的第三方挖掘算法提供程序。 **注意：** Microsoft 提供的算法没有任何使用此列。 <br /><br /> .|  
 |*Key*|该列为键列。 **注意：** 此内容类型是仅适用于在其中的键列`IsKey`元素设置为`True`。|  
   
  除了这些标准值挖掘算法提供程序附带[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持下表中的值。  

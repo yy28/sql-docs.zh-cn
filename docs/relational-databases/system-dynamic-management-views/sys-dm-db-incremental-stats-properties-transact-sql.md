@@ -1,15 +1,11 @@
 ---
-title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server 2014
 f1_keywords:
 - sys.dm_db_incremental_stats_properties
 - sys.dm_db_incremental_stats_properties_TSQL
@@ -20,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 562c6de437c37052b65b9d31571fa4c9b2c3a749
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602055"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +72,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 
 统计信息更新日期连同[直方图](../../relational-databases/statistics/statistics.md#histogram)和[密度矢量](../../relational-databases/statistics/statistics.md#density)一起存储在[统计信息 blob 对象](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，而不是存储在元数据中。 当不读取任何数据，无法生成统计信息数据时，不会创建统计信息 blob，日期不可用，并且*last_updated*列为 NULL。 针对谓词不返回任何行或新的空表，筛选的统计信息便是这种情况。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求用户对统计信息列拥有 select 权限，或用户拥有表，或用户是 `sysadmin` 固定服务器角色、`db_owner` 固定数据库角色或 `db_ddladmin` 固定数据库角色的成员。  
   
 ## <a name="examples"></a>示例  

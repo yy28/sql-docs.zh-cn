@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_droparticle_TSQL
 - sp_droparticle
 helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc5a59df61730eba41316454c58afc3695689bd9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fee7899b0667d65ba35f3f768306d3850232e6a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033289"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852265"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +72,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_droparticle**快照和事务复制中使用。  
   
  水平筛选项目**sp_droparticle**检查**类型**列中的项目的[sysarticles &#40;-&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md)到表确定是否一个视图或筛选器也应删除。 如果视图或筛选是自动生成的，则将其与项目一起删除。 如果是手动创建的，则不将其删除。  

@@ -1,30 +1,26 @@
 ---
-title: SqlErrorLogEvent 类 |Microsoft 文档
+title: SqlErrorLogEvent 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 724e07a08a0dd08efe47b6a9da8906e3ea49b66d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02bf982b6b154d99c5f3f153550c8531f23afa72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669655"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +47,11 @@ class SQLErrorLogEvent
 |-|-|  
 |FileName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 错误日志文件的名称。|  
 |InstanceName|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> 日志文件所在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。|  
-|LogDate|数据类型： **datetime**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 在日志文件中记录该事件的日期和时间。|  
+|LogDate|数据类型：**日期时间**<br /><br /> 访问类型：只读<br /><br /> 限定符：键<br /><br /> <br /><br /> 在日志文件中记录该事件的日期和时间。|  
 |消息|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 事件消息。|  
 |ProcessInfo|数据类型：**字符串**<br /><br /> 访问类型：只读<br /><br /> <br /><br /> 与事件的源服务器进程 ID (SPID) 有关的信息。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 |||  
 |-|-|  
@@ -64,7 +60,7 @@ class SQLErrorLogEvent
 |命名空间|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>示例  
- 下面的示例显示如何检索指定的日志文件中所有记录的事件的值。 若要运行该示例，请替换\< *Instance_Name*> 的实例的名称与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如 Instance1 和文件名同名的错误日志文件，如 ERRORLOG.1 替换。  
+ 下面的示例显示如何检索指定的日志文件中所有记录的事件的值。 若要运行该示例，请替换\< *Instance_Name*> 的实例的名称与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如 Instance1 和替换 File_Name 错误日志文件的名称，例如 ERRORLOG.1。  
   
 ```  
 on error resume next  
@@ -85,24 +81,24 @@ Next
 ```  
   
 ## <a name="comments"></a>注释  
- 当*InstanceName*或*FileName*查询将返回的默认实例和当前信息在 WQL 语句中，未提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件。 例如，以下 WQL 语句将从默认实例 (MSSQLSERVER) 上的当前日志文件 （错误日志） 返回所有日志事件。  
+ 当*InstanceName*或*FileName*未提供在 WQL 语句中，该查询将返回默认实例和当前信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件。 例如，以下 WQL 语句将从默认实例 (MSSQLSERVER) 上的当前日志文件 (ERRORLOG) 返回所有日志事件。  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  若要连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日志文件通过 WMI，必须在本地和远程计算机上具有以下权限：  
   
 -   读取访问权限**Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间。 默认情况下，每个人都可以通过“启用帐户”权限获得读取权限。  
   
--   包含错误日志的文件夹的读取权限。 默认情况下，错误日志文件位于以下路径 (其中\<*驱动器 >* 代表你的安装位置的驱动器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和\< *InstanceName*> 是实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   包含错误日志的文件夹的读取权限。 默认情况下，错误日志位于以下路径中 (其中\<*驱动器 >* 表示您安装的驱动器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并\< *InstanceName*> 是实例的名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<驱动器 >: files\microsoft SQL Server\MSSQL13** **。\<InstanceName > \MSSQL\Log**  
+     **\<驱动器 >: \Program Files\Microsoft SQL Server\MSSQL13** **。\<实例名 > \MSSQL\Log**  
   
- 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程从 Windows Vista 开始](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程启动 Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SqlErrorLogFile 类](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
  [查看脱机日志文件](../../relational-databases/logs/view-offline-log-files.md)  
   

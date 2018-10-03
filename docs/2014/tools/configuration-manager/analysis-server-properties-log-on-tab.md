@@ -1,25 +1,22 @@
 ---
-title: 分析服务器属性 （在选项卡上的日志） |Microsoft Docs
+title: Analysis Server 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23f462e28beb4a29ce8f6e396c3bca66aa8fdcaa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54a310d16df2ddfbbea052975fcc0756ec093485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116037"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>分析服务器属性（“登录”选项卡）
   使用 **“分析服务器属性”** 对话框中的 **“登录”** 选项卡可以指定 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 服务使用的帐户，还可以启动和停止该服务。  
@@ -27,7 +24,7 @@ ms.locfileid: "37194757"
 > [!NOTE]  
 >  更改群集实例上的服务使用的 **“帐户名”** 时，新帐户必须是安装期间为待更改服务指定的域组的成员，或者您必须有权添加该组的成员。 如果您无权修改组成员身份，请与域管理员联系。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **本地系统帐户**  
  指定一个不要求输入密码的本地系统帐户。 不过，本地系统帐户可能会限制该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  
   

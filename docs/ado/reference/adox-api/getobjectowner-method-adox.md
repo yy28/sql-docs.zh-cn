@@ -1,13 +1,11 @@
 ---
-title: GetObjectOwner 方法 (ADOX) |Microsoft 文档
+title: GetObjectOwner 方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetObjectOwner method [ADOX]
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06f3cb14603c7799e7084af407df437b12be4769
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9b2c967ac293ed59fde6494e12c2afc2c5b6de90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687205"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner 方法 (ADOX)
-返回中的某个对象的所有者[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。  
+返回中的对象的所有者[目录](../../../ado/reference/adox-api/catalog-object-adox.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,20 +35,20 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**字符串**值，该值指定[名称](../../../ado/reference/adox-api/name-property-adox.md)的[用户](../../../ado/reference/adox-api/user-object-adox.md)或[组](../../../ado/reference/adox-api/group-object-adox.md)拥有对象。  
+ 返回**字符串**值，该值指定[名称](../../../ado/reference/adox-api/name-property-adox.md)的[用户](../../../ado/reference/adox-api/user-object-adox.md)或者[组](../../../ado/reference/adox-api/group-object-adox.md)拥有此对象。  
   
 #### <a name="parameters"></a>Parameters  
  *ObjectName*  
- A**字符串**值，该值指定为其返回的所有者的对象的名称。  
+ 一个**字符串**值，该值指定要为其返回所有者对象的名称。  
   
  *ObjectType*  
- A**长**值可以是之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，，指定要为其获取所有者的对象的类型。  
+ 一个**长**值，它可以是其中一个的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，它指定要获取其所有者的对象的类型。  
   
  *ObjectTypeId*  
- 可选。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 可选。 一个**变体**由 OLE DB 规范定义的值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
-## <a name="remarks"></a>Remarks  
- 如果提供程序不支持返回对象所有者，将会出错。  
+## <a name="remarks"></a>备注  
+ 如果提供程序不支持返回对象的所有者，将会出错。  
   
 ## <a name="applies-to"></a>适用范围  
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  

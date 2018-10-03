@@ -1,13 +1,11 @@
 ---
-title: 书签 C 数据类型 |Microsoft 文档
+title: 书签 C 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - C data types [ODBC], bookmark C data type
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - bookmarks [ODBC]
 - bookmark C data type [ODBC]
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f4566f0851b67e239ec11acff9883940caae69d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6264b245667d4378e126151616bd1e936000fcd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905532"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712587"
 ---
 # <a name="bookmark-c-data-type"></a>书签 C 数据类型
-书签 C 数据类型允许应用程序检索书签。 书签 C 类型仅用于检索书签可以是长度; 中的变量的值它们不应转换为其他数据类型。 应用程序中检索结果的第 0 列从设置的书签**SQLBulkOperations** （与 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
+书签 C 数据类型允许应用程序来检索一个书签。 书签 C 类型仅用于检索可以是变量的长度; 的书签值它们不应转换为其他数据类型。 应用程序将检索从第 0 列的结果与设置的书签**SQLBulkOperations** （带有 SQL_ADD 的操作）， **SQLFetch**， **SQLFetchScroll**，或**SQLGetData**。 有关详细信息，请参阅[书签](../../../odbc/reference/develop-app/bookmarks-odbc.md)。  
   
- 下表列出的值*CType*实现书签 C 数据类型，以及此数据定义，则 ODBC C 数据类型从 SQL 对于书签 C 数据类型的类型。H。  
+ 下表列出的值*CType*书签 C 数据类型中，键入从 SQL 实现书签 C 数据类型，并且此类数据定义的 ODBC C 数据类型。H.  
   
 > [!NOTE]  
->  已弃用 SQL_C_BOOKMARK 数据类型。 ODBC 3 *.x*应用程序不应使用 SQL_C_BOOKMARK。 ODBC 3 *.x*驱动程序需要支持 SQL_C_BOOKMARK，仅当他们想要使用 ODBC 2。*x*使用它的应用程序。 当应用程序适用于 ODBC 2 时，驱动程序管理器映射到 SQL_C_BOOKMARK SQL_C_VARBOOKMARK。*x*驱动程序。  
+>  已弃用 SQL_C_BOOKMARK 数据类型。 ODBC 3 *.x*应用程序不应使用 SQL_C_BOOKMARK。 ODBC 3 *.x*驱动程序需要仅当他们想要使用 ODBC 2 支持 SQL_C_BOOKMARK。*x*使用它的应用程序。 当应用程序适用于 ODBC 2 时，驱动程序管理器映射到 SQL_C_BOOKMARK SQL_C_VARBOOKMARK。*x*驱动程序。  
   
 |C 类型标识符|ODBC C typedef|C 类型|  
 |-----------------------|--------------------|------------|  
-|SQL_C_BOOKMARK<br />（不推荐使用）|书签|无符号长整数|  
+|SQL_C_BOOKMARK<br />（不推荐使用）|书签|无符号长整型|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|

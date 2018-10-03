@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Help [PowerShell]
 - Help [SQL Server], PowerShell
 - PowerShell [SQL Server], help
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd87e91e3a463294d5039583f669a989d7e3ef3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3851ebeb72cc76ce6466d4456772ec13de48a38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065317"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   有关使用 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序和 cmdlet 的信息有多个来源， 这包括 Windows PowerShell 环境中提供的帮助。  

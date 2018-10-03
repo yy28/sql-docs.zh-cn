@@ -1,14 +1,11 @@
 ---
-title: fn_syscollector_get_execution_stats (TRANSACT-SQL) |Microsoft 文档
+title: fn_syscollector_get_execution_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811192"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ fn_syscollector_get_execution_stats ( log_id )
 |-----------------|---------------|-----------------|  
 |avg_row_count_in|**int**|平均输入包的数据流任务的行数。<br /><br /> 注意： 数据流任务是[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]处理数据的组件。 该数据采用关系格式，因此它具有由行组成的输入数据集。 这是进入该任务的行数。 数据在转换后成为由行组成的结果集输出。 数据流任务将转换数据并输出由行组成的结果集。 该输出是退出任务的行数。|  
 |min_row_count_in|**int**|进入包的数据流任务的最少行数。|  
-|max_row_count_in|**int**|最大输入数据的行数数据流任务的包。|  
+|max_row_count_in|**int**|最大输入的数据的行数数据流任务的包。|  
 |avg_row_count_out|**int**|退出包的数据流任务的平均行数。|  
 |min_row_count_out|**int**|最小退出数据的行数数据流任务的包。|  
 |max_row_count_out|**int**|退出包的数据流任务的最大行数。|  
@@ -63,11 +59,11 @@ fn_syscollector_get_execution_stats ( log_id )
 |min_duration|**int**|在包的数据流组件中消耗的最短时间，以毫秒为单位。|  
 |max_duration|**int**|在包的数据流组件中消耗的最长时间，以毫秒为单位。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要为选择**dc_operator**。  
   
-## <a name="see-also"></a>另请参阅  
- [syscollector_execution_stats &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>请参阅  
+ [syscollector_execution_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

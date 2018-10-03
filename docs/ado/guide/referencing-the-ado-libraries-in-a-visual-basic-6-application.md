@@ -1,10 +1,8 @@
 ---
-title: 引用在 Visual Basic 6 应用程序的 ADO 库 |Microsoft 文档
+title: 引用 ADO 库在 Visual Basic 6 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,36 +14,35 @@ helpviewer_keywords:
 - referencing libraries in a Visual Basic application[ADO]
 - ADO, libraries
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b504f924019c20a6203e18974d72e086e65f06c8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e8e37459c5e48fe817a3bdbb6a824550cf977f66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696966"
 ---
-# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>引用在 Visual Basic 6 应用程序的 ADO 库
-若要将 ADO 库导入一个 Microsoft Visual Basic 6 应用程序，必须在 Visual Basic 项目中设置的引用。  
+# <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>在 Visual Basic 6 应用程序中引用 ADO 库
+要导入到 Microsoft Visual Basic 6 应用程序中的 ADO 库，必须在 Visual Basic 项目中设置的引用。  
   
-### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>在 Visual Basic 项目中设置对 ADO 库的引用  
+### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>若要在 Visual Basic 项目中设置的引用 ADO 库  
   
-1.  创建一个新或打开现有的 Visual Basic 项目。  
+1.  创建新的或打开现有的 Visual Basic 项目。  
   
-2.  单击**项目**菜单项，然后选择**引用...** 从下拉列表菜单面板。  
+2.  单击**项目**菜单项并选择**引用...** 下拉列表菜单面板中。  
   
-3.  从**可用引用**，选中对应的框**Microsoft ActiveX 数据对象*n.n*库**，其中***n.n***表示最新版本号。 **位置**下面字段应标识为所选 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目录的路径的 ADO 库已安装。  
+3.  从**可用的引用**，选中的复选框**Microsoft ActiveX 数据对象*n.n*库**，其中***n.n***表示最新版本号。 **位置**下面的字段应确定为所选 *$installDir\msado15.dll*，其中 *$installDir*表示在其中的目录的路径的 ADO 库已安装。  
   
-4.  如果你想要使用 ADO MD，重复步骤 3 以选择**Microsoft ActiveX 数据对象 （多维） *n.n*库**。 **位置**字段应标识作为此选择 *$installDir\msadomd.dll*。  
+4.  如果你想要使用 ADO MD，重复步骤 3 以选择**Microsoft ActiveX 数据对象 （多维） *n.n*库**。 **位置**字段应确定此选项作为 *$installDir\msadomd.dll*。  
   
-5.  如果你想要使用 ADOX，重复步骤 3 以选择**Microsoft ADO 分机*n.n* DDL 和安全**。 **位置**字段应标识作为此选择 *$installDir\msadox.dll*。  
+5.  如果你想要使用 ADOX，重复步骤 3 以选择**Microsoft ADO ext. *n.n* DDL 和安全**。 **位置**字段应确定此选项作为 *$installDir\msadox.dll*。  
   
 6.  单击**确定**完成设置引用。  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- 安装 ADO 还会将复制早期版本的以下类型的库：  
+ 安装 ADO 还将复制早期版本的以下类型的库：  
   
 -   *msado27.tlb*，ADO 2.7 类型库  
   
@@ -57,4 +54,4 @@ ms.locfileid: "35273566"
   
 -   *msado20.tlb*，ADO 2.0 类型库  
   
- 如果你的应用程序必须使用任何这些 ADO 库的向后兼容性原因，你需要导入类型库的适当版本。 若要执行此操作，请按照上一节中的过程替换*msado15.dll*通过*msadoXX.tlb*，其中*XX*表示需要导入的版本号。
+ 如果你的应用程序必须使用其中任何 ADO 库出于向后兼容性，需要导入类型库的适当版本。 若要执行此操作，请按照上一节中的过程替换*msado15.dll*通过*msadoXX.tlb*，其中*XX*表示需要导入的版本号。

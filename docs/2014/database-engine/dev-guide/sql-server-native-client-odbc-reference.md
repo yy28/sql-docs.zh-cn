@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, ODBC
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ODBC drivers, programmer's reference
 - ODBC drivers
 ms.assetid: 06b7edee-8636-49d9-9b5c-2c710bf4fa2d
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8d75ba1cd25b32a49924105c2b298e5b31c0a6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edaddc413c972672beee3033b861b04dce92a180
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125637"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client (ODBC) 参考
   开放式数据库连接 (ODBC) 是 Microsoft Win32 应用程序编程接口，应用程序使用该接口来访问 ODBC 数据源中的数据。  

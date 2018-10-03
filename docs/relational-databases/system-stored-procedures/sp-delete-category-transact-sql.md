@@ -1,14 +1,11 @@
 ---
-title: sp_delete_category (Transact SQL) |Microsoft 文档
+title: sp_delete_category (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4cdd9f5e3104ac2673bce0f60a6653defde5ca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249194"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670455"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =**] *****类*****  
- 类别的类。 *类*是**varchar(8)**，没有默认值，并且必须使用具有这些值之一。  
+ [  **@class =**] **'***类*****  
+ 类别的类。 *类*是**varchar(8)**，无默认值，并且必须具有下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**JOB**|删除作业类别。|  
-|**警报**|删除警报类别。|  
+|**发出警报**|删除警报类别。|  
 |**运算符**|删除操作员类别。|  
   
  [ **@name =**] **'***name***'**  
@@ -61,14 +57,14 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  **sp_delete_category**必须从运行**msdb**数据库。  
   
  如果删除某个类别，则该类别中的所有作业、警报或操作员将重新分类到类的默认类别中。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以运行此过程。  
   
 ## <a name="examples"></a>示例  
@@ -85,9 +81,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_add_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

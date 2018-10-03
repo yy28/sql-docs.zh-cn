@@ -1,45 +1,42 @@
 ---
-title: 启用 Visual Studio Analyzer |Microsoft 文档
+title: 启用 Visual Studio Analyzer |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio Analyzer [ODBC], enabling
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: db5e7540f76384ec38a290a00b9a3c51db9a9a84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909922"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633635"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>启用 Visual Studio Analyzer
 > [!IMPORTANT]  
->  Windows 8 （Visual Studio Analyzer 仅包含在较旧版本的 Visual Studio。） 从开始已删除的 Visual Studio Analyzer 的支持。 有关故障排除机制的替代方法，使用 BID 跟踪。  
+>  在 Windows 8 中 （Visual Studio 分析器仅包含在较旧版本的 Visual Studio。） 开始已不再对 Visual Studio 分析器的支持。 有关故障排除机制的替代方法，使用 BID 跟踪。  
   
- Microsoft Visual Studio Analyzer 是旨在提供跨所有层和系统的高级查看应用程序的性能的应用程序分析工具。 它注重组件之间的交互。 Visual Studio 分析器可以启动和停止从 ODBC 管理器的跟踪选项卡。  
+ Microsoft Visual Studio 分析器是应用程序分析工具，旨在提供跨所有层和系统的深入了解应用程序的性能。 它主要关注组件之间的交互。 Visual Studio 分析器可以启动和停止从 ODBC 管理器的跟踪选项卡。  
   
- 若要查看任何 ODBC 生成的事件，请按照下列步骤：  
+ 若要查看的任何 ODBC 生成事件，请执行以下步骤：  
   
 1.  访问 ODBC 数据源管理器。  
   
 2.  单击**跟踪**选项卡。  
   
-3.  单击**启动 Visual Studio Analyzer 跟踪**。  
+3.  单击**启动 Visual Studio 分析器跟踪**。  
   
-4.  单击 **“确定”**。  
+4.  单击“确定” 。  
   
- Visual Studio 分析器事件生成将继续，直至**停止 Visual Studio Analyzer 跟踪**选择。  
+ Visual Studio Analyzer 事件生成将继续，直至**停止 Visual Studio 分析器跟踪**处于选中状态。  
   
  本部分包含以下主题。  
   

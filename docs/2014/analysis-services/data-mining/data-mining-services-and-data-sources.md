@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090967"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
   数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
@@ -27,7 +24,7 @@ ms.locfileid: "37297467"
  本主题提供了在连接到 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例以创建、处理、部署或查询数据挖掘模型时需要了解的信息。  
   
 ## <a name="data-mining-services"></a>数据挖掘服务  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的服务器组件是应用程序 msmdsrv.exe，该程序通常作为一项 Windows 服务来运行。 该应用程序包含安全组件、一个 XML for Analysis (XMLA) 侦听器组件、一个查询处理器组件以及执行下列功能的多个其他内部组件：  
   
 -   分析从客户端接收的语句  
   
@@ -54,7 +51,7 @@ ms.locfileid: "37297467"
 |----------|-----------------|  
 |2383|默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。|  
 |2382|其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的重定向程序。|  
-|在服务器启动时动态分配| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
+|在服务器启动时动态分配|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的命名实例。|  
   
  有关控制此服务所用端口的详细信息，请参阅 [将 Windows 防火墙配置为允许 Analysis Services 访问](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   

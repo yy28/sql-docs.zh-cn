@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2082afaf4928ffd563b064ac7aba84c973edb2c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104617"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI（SSAS 表格）
   在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能。 本主题帮助表格模型作者对表格模型中的 KPI 有一个基本的了解。  

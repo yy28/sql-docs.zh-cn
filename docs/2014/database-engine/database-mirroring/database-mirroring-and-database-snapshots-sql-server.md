@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - snapshots [SQL Server database snapshots], database mirroring
 - database snapshots [SQL Server], database mirroring
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
-caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f1a2d072a648d58d77b41cf94b7bd9bc55c8482b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131687"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>数据库镜像和数据库快照 (SQL Server)
   可以利用为了实现可用性目标而维护的镜像数据库来减轻报表的负载。 若要将镜像数据库用于报表，可以在镜像数据库中创建数据库快照，并将客户端连接请求定向到最新的快照。 由于数据库快照只在创建快照时存在，因此，它是一个静态的、只读的并与其源数据库保持事务一致的快照。 若要在镜像数据库中创建数据库快照，数据库必须处于同步镜像状态。  

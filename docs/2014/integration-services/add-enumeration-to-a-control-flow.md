@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - repeating workflows
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
-caps.latest.revision: 38
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39dea3ee955dea9a2d464d30a261993d7f72c827
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223719"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089567"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>将枚举添加到控制流
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 Foreach 循环容器，此容器是一个控制流元素，利用它可以轻松地将枚举文件和对象的循环构造包括到包的控制流中。 有关详细信息，请参阅 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
@@ -37,10 +34,10 @@ ms.locfileid: "37223719"
 ### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>在控制流中实现 Foreach 循环容器  
   
 1.  将 Foreach 循环容器添加到包。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  实例时都提供 SQL Server 登录名。  
+  .  
   
 2.  将任务和容器添加到 Foreach 循环容器。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  实例时都提供 SQL Server 登录名。  
+  .  
   
 3.  使用优先约束连接 Foreach 循环容器中的任务和容器。 有关详细信息，请参阅 [使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)。  
   

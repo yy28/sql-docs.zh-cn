@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CHECK constraints, modifying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - constraints [SQL Server], check
 - constraints [SQL Server], modifying
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4669aff39622e7d05da2c127207dc0fc481fa1a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa91f2910fabac44c4c434f70ae3d8bb0ae78c8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114037"
 ---
 # <a name="modify-check-constraints"></a>修改 CHECK 约束
   当您希望更改约束表达式或更改对特定条件启用或禁用约束的选项时，可通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中修改 CHECK 约束。  

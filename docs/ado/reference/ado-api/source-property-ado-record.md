@@ -1,13 +1,11 @@
 ---
-title: Source 属性 （ADO 记录） |Microsoft 文档
+title: 源属性 （ADO 记录） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,33 +18,32 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803045"
 ---
-# <a name="source-property-ado-record"></a>源属性 （ADO 记录）
+# <a name="source-property-ado-record"></a>Source 属性（ADO 记录）
 指示数据源或由表示对象[记录](../../../ado/reference/ado-api/record-object-ado.md)。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**Variant**值，该值指示所表示的实体**记录**。  
+ 设置或返回**Variant**值，该值指示表示的实体**记录**。  
   
-## <a name="remarks"></a>Remarks  
- **源**属性返回*源*参数**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 它可以包含一个绝对或相对 URL 字符串。 绝对 URL 可用但不包括设置[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性以直接打开**记录**对象。 一种隐式**连接**在这种情况下创建对象。  
+## <a name="remarks"></a>备注  
+ **源**属性将返回*源*自变量**记录**对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 它可以包含一个绝对或相对 URL 字符串。 可以设置不使用绝对 URL [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性以直接打开**记录**对象。 隐式**连接**这种情况下创建对象。  
   
- **源**属性还可以包含对已打开的引用**记录集**，这将打开**记录**表示中的当前行对象**记录集**。  
+ **源**属性还可以包含对已打开的引用**记录集**，这将打开**记录**对象，表示当前行中的**记录集**。  
   
- **源**属性还可能包含对引用[命令](../../../ado/reference/ado-api/command-object-ado.md)从提供程序返回数据的单个行的对象。  
+ **源**属性可能还包含对引用[命令](../../../ado/reference/ado-api/command-object-ado.md)对象可从提供程序返回一行数据。  
   
- 如果**ActiveConnection**还设置属性，则**源**属性必须指向某个存在该连接的作用域内的对象。 例如，在树状命名空间中，如果**源**属性包含一个绝对 URL，则必须指向在由连接字符串中的 URL 标识的节点范围内存在的节点。 如果**源**属性包含相对 URL，然后通过设置的上下文中验证**ActiveConnection**属性。  
+ 如果**ActiveConnection**还设置属性，则**源**属性必须指向该连接的作用域中存在某些对象。 例如，在树状命名空间中，如果**源**属性包含绝对 URL，它必须指向现有的连接字符串中的 URL 标识的节点范围内的节点。 如果**源**属性包含的相对 URL，然后通过设置上下文中对其验证**ActiveConnection**属性。  
   
- **源**属性为读/写时**记录**对象已关闭，并且为只读时**记录**对象处于打开状态。  
+ **源**属性为读/写同时**记录**对象已关闭，并且为只读时**记录**对象处于打开状态。  
   
 > [!NOTE]
 >  Url 使用 http 方案将自动调用[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  

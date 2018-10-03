@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expanded-QName function
 - fn:expanded-QName function
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b76f85fae2f01322838c40b79227da896fabd01c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cbf18272b3cb8cfebd24f09c8ae33f50a18da4e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739835"
 ---
-# <a name="functions-related-to-qnames---expanded-qname"></a>与 Qname 展开的 QName 相关的函数
+# <a name="functions-related-to-qnames---expanded-qname"></a>与 QName 相关的函数 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回与命名空间中指定 URI 的 xs: qname 类型值 *$paramURI*中指定的本地名称和 *$paramLocal*。 如果 *$paramURI*是空字符串或空序列，它表示无命名空间。  
@@ -48,7 +42,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName 的本地名称部分。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  以下规则适用于**expanded-qname （)** 函数：  
   
 -   如果 *$paramLocal*指定值不是 xs: ncname 类型的正确词汇格式中，会返回空序列，并表示动态错误。  

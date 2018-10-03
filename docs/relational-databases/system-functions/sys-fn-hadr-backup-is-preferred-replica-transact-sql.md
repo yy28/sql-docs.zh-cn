@@ -1,14 +1,11 @@
 ---
-title: sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft 文档
+title: sys.fn_hadr_backup_is_preferred_replica (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - active secondary replicas [SQL Server], backup on secondary replicas
 - sys.fn_hadr_backup_is_preferred_replica function
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d89528595dc2cec10bd86f9605b8ef55331c8ab5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232473"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597651"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +44,14 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ```  
   
 ## <a name="arguments"></a>参数  
- *dbname*  
- 要备份的数据库的名称。 *dbname*是 sysname 类型。  
+ '*dbname*  
+ 要备份的数据库的名称。 *dbname*的类型为 sysname。  
   
 ## <a name="returns"></a>返回  
  如果当前实例上的数据库位于首选副本上，则返回 1。 否则，返回 0。  
   
-## <a name="remarks"></a>注释  
- 在备份脚本中使用此函数来确定当前数据库是否位于用于备份的首选副本上。 您可以在每个可用性副本上运行脚本。 上述每个作业可以去相同数据以便确定哪些作业应该运行，因此只有一个计划作业实际上将继续到备份阶段。 示例代码可与以下代码相似。  
+## <a name="remarks"></a>备注  
+ 在备份脚本中使用此函数来确定当前数据库是否位于用于备份的首选副本上。 您可以在每个可用性副本上运行脚本。 每个这些作业看起来相同的数据来确定哪些作业应该运行，因此只有一个计划作业实际上将继续到备份阶段。 示例代码可与以下代码相似。  
   
 ```  
 If sys.fn_hadr_backup_is_preferred_replica( @dbname ) <> 1   
@@ -78,13 +74,13 @@ GO
   
 ##  <a name="RelatedTasks"></a> 相关任务  
   
--   [在可用性副本 & #40; 上配置备份SQL server& #41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
+-   [配置可用性副本备份 (SQL Server)](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
-## <a name="see-also"></a>另请参阅  
- [Alwayson 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [Always On 可用性组函数&#40;Transact SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [AlwaysOn 可用性组 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [创建可用性组 & #40;Transact SQL & #41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [活动辅助副本： 辅助副本上备份&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Alwayson 可用性组目录视图&#40;Transact SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [活动辅助副本： 次要副本备份&#40;Always On 可用性组&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[Always On 可用性组目录视图&#40;Transact SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084517"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>脚本转换编辑器（“输入和输出”页）
   可以使用 **“脚本转换编辑器”** 对话框的 **“输入和输出”** 页，添加、删除和配置脚本转换的输入和输出。  

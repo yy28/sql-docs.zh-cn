@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48442ba8e5d17a652f60aaebb24040345bda474f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280033"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055387"
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
   CSDLBI 中的 Property 元素是一种复杂类型，它向 CSDL 中的 Property 元素提供附加内容，以便支持商业智能数据模型。  
@@ -30,11 +27,11 @@ ms.locfileid: "37280033"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|目录|“否”|一个字符串，该字符串包含请求的 LCID。|  
-|DefaultAggregationFunction|是|一个字符串，当对属性执行计算且没有指定任何其他函数时，该字符串指定应使用的聚合函数。<br /><br /> 如果未指定，则使用模型的默认聚合，通常是 SUM。|  
-|GroupingBehavior|“否”|指定如何对查询结果进行分组的值。 属性的内容由 TGroupingBehavior 简单类型定义（请参阅下面的表）。|  
-|OrderBy|“否”|对模型内用于定义该属性值的排序顺序的其他属性的引用。<br /><br /> 这两个属性的值“应”具有 1 对 1 映射。 否则，未定义排序行为。<br /><br /> 如果忽略此元素，则基于属性的值对属性排序。|  
-|稳定性|“否”|一个指定刷新操作之间的属性值的稳定性的特性。<br /><br /> 此属性不是由用户设置，而是由设计时环境仅针对不稳定的值发出。 它始终应用于包含行号的列以及所包含的公式生成不确定结果的列，如 NOW() 或 RAND()。<br /><br /> 此属性的值在下面用于说明 Stabilitysimple 类型的表中定义。|  
+|目录|否|一个字符串，该字符串包含请求的 LCID。|  
+|DefaultAggregationFunction|用户帐户控制|一个字符串，当对属性执行计算且没有指定任何其他函数时，该字符串指定应使用的聚合函数。<br /><br /> 如果未指定，则使用模型的默认聚合，通常是 SUM。|  
+|GroupingBehavior|否|指定如何对查询结果进行分组的值。 属性的内容由 TGroupingBehavior 简单类型定义（请参阅下面的表）。|  
+|OrderBy|否|对模型内用于定义该属性值的排序顺序的其他属性的引用。<br /><br /> 这两个属性的值“应”具有 1 对 1 映射。 否则，未定义排序行为。<br /><br /> 如果忽略此元素，则基于属性的值对属性排序。|  
+|稳定性|否|一个指定刷新操作之间的属性值的稳定性的特性。<br /><br /> 此属性不是由用户设置，而是由设计时环境仅针对不稳定的值发出。 它始终应用于包含行号的列以及所包含的公式生成不确定结果的列，如 NOW() 或 RAND()。<br /><br /> 此属性的值在下面用于说明 Stabilitysimple 类型的表中定义。|  
   
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 简单类型的值。  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_bind
@@ -17,17 +15,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7fa336f3e2c7820dfbd2a6f9707f6119c6e9b09
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fac6931d7645a778bd332f8bc5e1ef3d2f5059ed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629909"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +174,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用**bcp_bind**若要将数据从程序变量复制到的表中的快速、 高效的方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  调用[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)之前调用此方法或任何其他大容量复制函数。 调用**bcp_init**设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]大容量复制的目标表。 调用时**bcp_init**用于**bcp_bind**并[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)，则**bcp_init** *szDataFile*参数，指示数据文件中，设置为 NULL;**bcp_init * * * eDirection*参数设置为 DB_IN。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 - clickthrough reports, templates
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cd097e0a59a51529ae3fa373ad1e7e8b84b6b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095889"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>将报表作为点击链接型报表链接到模型
   您可以不使用默认的点击链接型报表模板，而创建报表生成器报表并将其链接到报表模型中的特定实体。 当查看报表的用户单击主报表中的交互式数据时，该报表便会显示为点击链接型报表。 若要将报表链接到的实体，请使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表管理器。  

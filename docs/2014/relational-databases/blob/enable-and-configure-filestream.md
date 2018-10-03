@@ -5,8 +5,6 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
@@ -14,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 463df899682bc2466c53e0069200e7a9aa32fa89
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132179"
 ---
 # <a name="enable-and-configure-filestream"></a>启用和配置 FILESTREAM
   在开始使用 FILESTREAM 之前，必须在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]实例中启用 FILESTREAM。 本主题说明了如何使用 SQL Server 配置管理器来启用 FILESTREAM。  
@@ -83,9 +81,9 @@ ms.locfileid: "37413146"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID 级别|写性能|读性能|容错|Remarks|  
+|RAID 级别|写性能|读性能|容错|备注|  
 |RAID 5|Normal|Normal|很好|性能比一个磁盘或 JBOD 更好；比 RAID 0 或条带化 RAID 5 差。|  
-|RAID 0|很好|很好|InclusionThresholdSetting||  
+|RAID 0|很好|很好|None||  
 |RAID 5 ＋ 条带化|很好|很好|很好|成本最高的选项。|  
   
 

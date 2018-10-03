@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066347"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新建全文非索引字表（“常规”页）
   使用此对话框可以创建全文非索引字表。 “非索引字表”  是一组称为“非索引字” 的常用字，在使用非索引字表的表的全文索引中会省略这些非索引字。 有关详细信息，请参阅 [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)。  
@@ -29,7 +26,7 @@ ms.locfileid: "37221967"
   
 -   [为全文搜索配置和管理非索引字和非索引字表](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **全文非索引字表名称**  
  输入全文非索引字表的名称。  
   

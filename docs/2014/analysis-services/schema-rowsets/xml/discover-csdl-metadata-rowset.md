@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27e3a36850dcf0d314398e994485d5e7410f9a8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293519"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051385"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 行集
   返回有关 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据模型（表格或多维）的信息，同时提供 CSDLBI 格式（带 BI 注释的概念性架构定义语言）的模型定义。 CSDLBI 基于 CSDL，CSDL 是实体数据框架使用的 XML 架构，用于在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器和 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 客户端之间进行通信。 商业智能 (BI) 注释提供有关表格模型以及其中对象的其他元数据。 有关表格数据模型的详细信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
@@ -34,13 +31,13 @@ ms.locfileid: "37293519"
   
 |**列名**|**类型指示符**|**限制**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`CATALOG_NAME`|`DBTYPE_WSTR`|是|指定请求 CSDLBI 说明的数据库的名称。 如果省略，则使用当前数据库。<br /><br /> 这一限制对所有模型类型都是必需的。|  
-|`PERSPECTIVE_ID`|`DBTYPE_WSTR`|是|指定已对由 CATALOG_NAME 指定的模型定义的透视的 ID。<br /><br /> 可选限制。 适用于所有模型类型。|  
-|`PERSPECTIVE_NAME`|`DBTYPE_WSTR`|是|指定已对 CATALOG_NAME 指定的模型定义的透视的名称。<br /><br /> 当表格模型包含透视或多维解决方案包含多个多维数据集或透视时，此限制是必需的。|  
-|`METADATA`|`DBTYPE_WSTR`|“否”|根据 CSDLBI 架构，包含数据源的 XML 定义及其属性的字符串。|  
-|`CUBE_ID`|`DBTYPE_WSTR`|是|字符串标识符。<br /><br /> 此限制对于多维数据库是可选的。 如果多个多维数据集可用并且忽略限制，则返回默认多维数据集。|  
+|`CATALOG_NAME`|`DBTYPE_WSTR`|用户帐户控制|指定请求 CSDLBI 说明的数据库的名称。 如果省略，则使用当前数据库。<br /><br /> 这一限制对所有模型类型都是必需的。|  
+|`PERSPECTIVE_ID`|`DBTYPE_WSTR`|用户帐户控制|指定已对由 CATALOG_NAME 指定的模型定义的透视的 ID。<br /><br /> 可选限制。 适用于所有模型类型。|  
+|`PERSPECTIVE_NAME`|`DBTYPE_WSTR`|用户帐户控制|指定已对 CATALOG_NAME 指定的模型定义的透视的名称。<br /><br /> 当表格模型包含透视或多维解决方案包含多个多维数据集或透视时，此限制是必需的。|  
+|`METADATA`|`DBTYPE_WSTR`|否|根据 CSDLBI 架构，包含数据源的 XML 定义及其属性的字符串。|  
+|`CUBE_ID`|`DBTYPE_WSTR`|用户帐户控制|字符串标识符。<br /><br /> 此限制对于多维数据库是可选的。 如果多个多维数据集可用并且忽略限制，则返回默认多维数据集。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  DISCOVER_CSDL_METADATA 具有以下要求：  
   
 -   如果数据库未使用 CATALOG_NAME 限制指定，DISCOVER 请求将失败。  

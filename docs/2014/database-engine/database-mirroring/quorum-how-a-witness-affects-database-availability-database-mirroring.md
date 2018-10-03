@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - quorum [SQL Server], database mirroring
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - full quorum [SQL Server]
 - high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2088dee445275316eb439508e80230316508d6bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3dd9b33de1ca429afbae8a8fe6ccdc7a41583a44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067547"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>仲裁：见证服务器如何影响数据库可用性（数据库镜像）
   每当为数据库镜像会话设置见证服务器时，都需要“仲裁  ”。 仲裁是数据库镜像会话中两个或多个服务器实例彼此连接时存在的一种关系。 仲裁通常包括三个互连的服务器实例。 设置见证服务器时，必须具有仲裁才能使用数据库。 仲裁旨在用于具有自动故障转移功能的高安全性模式，可确保一个数据库一次只属于一个伙伴。  

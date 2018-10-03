@@ -1,34 +1,31 @@
 ---
-title: 光标库的代码示例 |Microsoft 文档
+title: 游标库代码示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 054cd6d20ff72e69e01defbba3834602fdf2bf47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907042"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691695"
 ---
-# <a name="cursor-library-code-example"></a>光标库的代码示例
+# <a name="cursor-library-code-example"></a>游标库代码示例
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 下面的示例使用的是光标库从 ORDERS 表中检索每个订单 ID、 打开日期和状态。 然后，它显示 20 行数据。 如果用户更新此数据，该代码将更新的行集缓冲区，并执行的定位的更新语句。 最后，它将提示用户的方向向下滚动并重复的过程。  
+ 以下示例使用游标库从 ORDERS 表中检索每个订单 ID、 打开的日期和状态。 然后，它显示 20 行的数据。 如果用户更新此数据，该代码将更新的行集缓冲区，并执行定位的更新语句。 最后，它会提示用户的方向滚动，并重复此过程。  
   
 ```  
 #define ROWS 20  

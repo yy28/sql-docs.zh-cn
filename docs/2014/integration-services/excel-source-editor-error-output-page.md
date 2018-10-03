@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-caps.latest.revision: 18
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51b10976652d366f1c9016e3e9fb51c47735695b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106407"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 源编辑器（“错误输出”页）
   可以使用 **“Excel 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
  若要了解有关 Excel 源的详细信息，请参阅 [Excel Source](data-flow/excel-source.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入或输出**  
  查看数据源的名称。  
   

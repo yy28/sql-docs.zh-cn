@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - registering report servers
 - report servers [Reporting Services], registering
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 49c367adde71d1d42a0052e6029ab2fa6d015d9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099037"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>在 Management Studio 中连接到报表服务器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 提供了对象资源管理器，可用于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系列中的任何服务器，并以图形方式浏览其内容。 对于 Reporting Services，可以使用对象资源管理器执行以下操作：  
@@ -83,7 +80,7 @@ ms.locfileid: "37172148"
   
     -   对于本机模式的报表服务器，请键入报表服务器实例的名称。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 默认情况下，本地报表服务器实例的实例名称就是计算机的名称。 如果将报表服务器作为命名实例进行安装，请使用此语法来指定该服务器：\<servername>[\\<instancename\>]。  
   
-    -   对于在 SharePoint 集成模式下运行的报表服务器，要连接到的服务器是连接报表服务器的 SharePoint 站点。 为查看用于控制对报表服务器内容和操作的访问的权限级别，必须连接到 SharePoint 站点。 可以指定网站集中的任何站点。 下例说明了相应的语法：http://mysharepointsite。  
+    -   对于在 SharePoint 集成模式下运行的报表服务器，要连接到的服务器是连接报表服务器的 SharePoint 站点。 为查看用于控制对报表服务器内容和操作的访问的权限级别，必须连接到 SharePoint 站点。 可以指定网站集中的任何站点。 下例说明了相应的语法： http://mysharepointsite。  
   
 5.  对于 **“身份验证”**，请选择访问 Web 服务器时所用的身份验证模式。 必须选择报表服务器已经使用的身份验证模式。  
   
@@ -104,7 +101,7 @@ ms.locfileid: "37172148"
   
  在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “连接到服务器” **对话框中将** 指定为服务器类型时，可以指定报表服务器名称或 Web 服务端点。  
   
-|连接到|“任务”|权限|  
+|连接到|“任务”|Permissions|  
 |----------------|-----------|-----------------|  
 |本机模式的报表服务器，作为默认实例或命名实例进行连接：<br /><br /> \<server name>\<_instance><br /><br /> 与报表服务器的连接是通过报表服务器 WMI 提供程序建立的。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  
 |本机模式的报表服务器，作为默认实例或命名实例进行连接，通过报表服务器 Web 服务端点：<br /><br /> http://\<服务器名 > / reportserver<br /><br /> 指定指向报表服务器的 URL 提供了另一种连接到报表服务器的方法。|查看和设置服务器属性与默认值。<br /><br /> 查看和取消作业。<br /><br /> 创建和管理共享计划。<br /><br /> 创建、修改或删除角色定义。|分配给“系统管理员”角色。|  

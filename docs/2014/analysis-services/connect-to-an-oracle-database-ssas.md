@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connoracledb.f1
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0068f805467e9503e7a1bc2d194c3cd7b593179
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79808c965828844a467fc232a5432d1207b25c34
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058491"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>连接到 Oracle 数据库 (SSAS)
   **“表导入向导”** 的这一页可用于指定用于连接到 Oracle 数据库的设置。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

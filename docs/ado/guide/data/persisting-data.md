@@ -1,13 +1,11 @@
 ---
-title: 保存数据 |Microsoft 文档
+title: 保留数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,31 +13,30 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438a09dd8f835653f9b2c76d73b7ce7f4583c1a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8fc264df4708b5d6c58c8a87861597d299cdca2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722985"
 ---
-# <a name="persisting-data"></a>保存数据
-（例如，使用便携式计算机） 的可移植计算已生成可以在连接和断开连接状态中运行的应用程序的需求。 ADO 通过让能够保存客户端游标的开发人员添加了对此支持**记录集**到磁盘，然后重新加载它更高版本。  
+# <a name="persisting-data"></a>保留数据
+（例如，使用便携式计算机） 的可移植计算已经生成了可以在这两个连接和断开连接状态中运行的应用程序的需要。 ADO 现已支持这通过让开发人员能够保存客户端游标**记录集**到磁盘并重新加载它更高版本。  
   
- 有几种方案，你无法在其中使用此类型的功能，包括以下：  
+ 有几种方案可以在其中使用此类功能，其中包括：  
   
--   **旅行：** 时旅途采用应用程序，则必须提供能够更改和添加新的记录，然后可以重新连接到数据库中更高版本并提交。  
+-   **旅行：** 时在旅途中使应用程序，有必要提供进行更改和添加新记录，然后可以重新连接到数据库中更高版本和已提交的功能。  
   
--   **不经常更新查找：** 通常在应用程序，表用作查找 — 例如，状态税务表。 它们不经常更新，并且是只读的。 而不是需要重新读取此数据从服务器每次启动应用程序时，应用程序可以只需将数据加载从本地持久化**记录集**。  
+-   **不经常更新的查找：** 通常在应用程序中，表用作查找 — 例如，状态税务表。 它们不经常更新，并且是只读的。 而不是重新读取此数据从服务器每次启动应用程序时，应用程序可以只需将数据从加载本地持久化**记录集**。  
   
- 在 ADO 中，保存和加载**记录集**，使用**Recordset.Save**和**Recordset.Open(,,,adCmdFile)** 方法 ADO**记录集**对象。  
+ 在 ADO 中，保存和加载**记录集**，使用**Recordset.Save**并**Recordset.Open(,,,adCmdFile)** ADO 方法**记录集**对象。  
   
- 你可以使用**记录集保存**方法以保留你 ADO**记录集**到磁盘上的文件。 (你还可以保存**记录集**到 ADO**流**对象。 **流式传输**对象将更高版本在指南中讨论。)稍后，你可以使用**打开**方法重新打开**记录集**当你准备好要使用它。 默认情况下，ADO 将保存**记录集**为专有的 Microsoft 高级数据表图 (ADTG) 格式。 使用指定此二进制格式**adPersistADTG PersistFormatEnum**值。 或者，你可以选择保存你**记录集**为 XML，而不使用扩展**xml 格式持久化记录**。 有关记录集保存为 XML 的详细信息，请参阅[保留的记录，采用 XML 格式](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
+ 可以使用**记录集保存**方法以持久保存在 ADO**记录集**到磁盘上的文件。 (您还可以保存**记录集**到 ADO **Stream**对象。 **Stream**对象将更高版本在指南中讨论。)更高版本，可以使用**开放**方法以重新打开**记录集**时已准备好使用它。 默认情况下，将保存 ADO**记录集**专用的 Microsoft 高级数据 TableGram (ADTG) 格式。 使用指定此二进制格式**adPersistADTG PersistFormatEnum**值。 或者，您可以选择保存你**记录集**作为 XML 而不使用带**adPersistXML**。 有关以 XML 形式保存记录集的详细信息，请参阅[以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)。  
   
- 语法**保存**方法是，如下所示：  
+ 语法**保存**方法如下所示：  
   
 ```  
   
@@ -49,25 +46,25 @@ Destination, PersistFormat
   
 ```  
   
- 第一次保存**记录集**，它是可选若要指定*目标*。 如果省略*目标*，将使用设置为的值的名称创建一个新文件[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)属性**记录集**。  
+ 首次保存**记录集**，也可不指定*目标*。 如果省略*目标*，将使用设置为的值的名称创建一个新的文件[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)属性**记录集**。  
   
- 省略*目标*当你随后调用**保存**后将会出现第一次保存或运行时错误。 如果您随后调用**保存**用新*目标*、**记录集**保存到新的目标位置。 但是，新的目标和原始目标将将打开。  
+ 省略*目标*当您随后调用**保存**后会发生第一次保存或运行时错误。 如果您随后调用**保存**有一个新*目标*，则**记录集**保存到新的目标。 但是，新的目标和原始目标会将打开。  
   
- **保存**不会关闭**记录集**或*目标*，因此可以继续使用**记录集**并保存最新更改。 *目标*保持打开状态，除非**记录集**已关闭，在这段时间的其他应用程序可以读取但不是向写入*目标*。  
+ **保存**不会关闭**记录集**或*目标*，因此可以继续使用**记录集**并保存所做的最新更改。 *目标*保持打开状态，直到**记录集**处于关闭状态，在这段时间的其他应用程序可以读取但不是写入*目标*。  
   
- 出于安全，**保存**方法允许仅从由 Microsoft Internet Explorer 中执行的脚本的低和自定义安全设置的使用。  
+ 出于安全性原因**保存**方法允许仅从由 Microsoft Internet Explorer 执行的脚本的低和自定义安全设置的使用。  
   
- 如果**保存**时异步调用方法**记录集**提取、 执行，或更新操作正在进行，**保存**等待，直到在异步操作完成。  
+ 如果**保存**方法时异步调用**记录集**提取、 执行，或更新操作正在进行，**保存**等待，直到异步操作完成。  
   
- 记录保存开头的第一行**记录集**。 当**保存**方法运行完毕后，当前行位置移动到的第一行**记录集**。  
+ 保存记录开头的第一行**记录集**。 当**保存**方法完成后，当前行位置移动到的第一行**记录集**。  
   
- 为获得最佳结果，设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性**adUseClient**与**保存**。 如果你的提供程序不支持所有必要的功能，保存**记录集**对象，则游标服务将提供该功能。  
+ 为获得最佳结果，设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**与**保存**。 如果您的提供程序不支持所有必要的功能，保存**记录集**对象时，游标服务将提供该功能。  
   
- 当**记录集**一起持久化**CursorLocation**属性设置为**adUseServer**，使用的更新功能**记录集**限制。 通常情况下，仅单表更新、 插入和删除允许 （依赖于提供程序功能）。 [重新同步](../../../ado/reference/ado-api/resync-method.md)方法也将在此配置中不可用。  
+ 当**记录集**与一起持久保留**CursorLocation**属性设置为**adUseServer**，为更新功能**记录集**限制。 通常情况下，仅限单个表中的更新、 插入和删除操作允许 （依赖于提供程序功能）。 [重新同步](../../../ado/reference/ado-api/resync-method.md)方法也是在此配置中不可用。  
   
- 因为*目标*参数可接受任何对象支持 OLE DB **IStream**接口，可以保存**记录集**直接对 ASP **响应**对象。  
+ 因为*目标*参数可接受任何对象支持 OLE DB **IStream**接口，您可以保存**记录集**直接对 ASP **响应**对象。  
   
- 在下面的示例中，**保存**和**打开**方法用于保存**记录集**和以后重新打开它：  
+ 在以下示例中，**保存**并**打开**方法用于保存**记录集**和更高版本重新打开它：  
   
 ```  
 'BeginPersist  
@@ -116,7 +113,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  本部分包含以下主题。  
   
 -   [更多有关记录集暂留的信息](../../../ado/guide/data/more-about-recordset-persistence.md)  

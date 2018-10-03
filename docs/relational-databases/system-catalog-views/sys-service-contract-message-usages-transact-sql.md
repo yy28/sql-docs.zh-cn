@@ -1,14 +1,11 @@
 ---
-title: sys.service_contract_message_usages (Transact SQL) |Microsoft 文档
+title: sys.service_contract_message_usages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - service_contract_message_usages_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_message_usages catalog view
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 119cb20286a6c1a55f3593959852c8ef89683775
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 280686087a0099fa374664eb0cbfe9d7c2b244ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742055"
 ---
 # <a name="sysservicecontractmessageusages-transact-sql"></a>sys.service_contract_message_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +39,7 @@ ms.locfileid: "33219758"
 |**is_sent_by_initiator**|**bit**|可由会话发起方发送消息类型。 不可为 NULL。|  
 |**is_sent_by_target**|**bit**|可由会话目标发送消息类型。 不可为 NULL。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
   

@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_enumdsn
 - sp_enumdsn_TSQL
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30aa77cb33e5d55bef6b110e020116467536eaff
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0efa131401cddf568d3cf92842387d5cdd8f09ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657896"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +50,7 @@ sp_enumdsn
 |**类型**|**int**|数据源类型：<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB 数据源|  
 |**提供程序名称**|**varchar(255)**|OLE DB 访问接口的名称。 ODBC DSN 的值为 NULL。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  每个[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服务都有一个用户上下文。 用户上下文是一组注册表项，其中包含用户的 ODBC 数据源定义。 用户上下文由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 正在其下运行的用户名提供。  
   
  例如，如果服务器运行于系统帐户用户上下文中，则返回的数据源名称 (DSN) 将全部是与系统帐户关联的系统 DSN。 如果服务器在专用用户帐户下运行，则只返回为该用户的专用帐户定义的 DSN。  

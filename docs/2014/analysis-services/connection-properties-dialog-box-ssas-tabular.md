@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.ConnectionProperties.F1
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 29871222a68b9babfb2abd5b2d477316c1d6ac34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8057222588cb388eafcb3e3bf1bd6daec443cca6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077287"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>“连接属性”对话框（SSAS - 表格）
   使用此页可在 SQL Server Management Studio 中查看或修改表格模型数据库使用的数据源的连接属性。  
   
  此对话框提供了时间戳和其他说明性信息，以及确定连接特性的可自定义属性。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

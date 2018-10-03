@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8b1e7438714807260b4e317e9367ff77f9916df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dabe6cf0748f220fcef7bfb9b2577426c7ff65a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091627"
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 元素 (CSDLBI)
   EntitySet 元素定义 CSDLBI 数据模型中特定类型的实体集合。  
@@ -34,10 +31,10 @@ ms.locfileid: "37314567"
   
 |属性名称|是否必需|Description|  
 |--------------------|-----------------|-----------------|  
-|Caption|“否”|实体集的用户友好说明。|  
-|CollectionCaption|“否”|一个包含实体的复数名称的字符串。|  
-|ReferenceName|“否”|包含实体的未合并的完全限定名称。 在多维模型中，这对应于 CubeDimension 名称。|  
-|Hidden|“否”|指示该实体是否隐藏。 默认情况下不隐藏实体。|  
+|Caption|否|实体集的用户友好说明。|  
+|CollectionCaption|否|一个包含实体的复数名称的字符串。|  
+|ReferenceName|否|包含实体的未合并的完全限定名称。 在多维模型中，这对应于 CubeDimension 名称。|  
+|Hidden|否|指示该实体是否隐藏。 默认情况下不隐藏实体。|  
   
 ## <a name="example"></a>示例  
  **表格**  

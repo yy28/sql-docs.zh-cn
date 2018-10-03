@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9e6be682816d4a7572414d9e91d0840cc6417aa
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 03e6fd79540a4657f5f3d35ca7f3bfcff361d57d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761726"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +92,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar(2)**|操作代码，用于指示将行应用到目标环境时所必需的操作。 它的差异取决于参数的值*row_filter_option*调用中提供：<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> *row_filter_option* = all update old<br /><br /> 'D' - 删除操作<br /><br /> 'I' - 插入操作<br /><br /> 'UN' - 更新操作的新值<br /><br /> 'UO' - 更新操作的旧值|  
 |\<中的列@update_flag_list>|**bit**|通过将 _uflag 追加到列名称的末尾所命名的位标记。 该标志始终设置为 NULL 时\__CDC_OPERATION 有 '，'I'，'或 'uo'。 当\__CDC_OPERATION 是 ' UN '，如果更新更改为相应的列设置为 1。 否则为 0。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  fn_all_changes_<capture_instance> 函数充当 cdc.fn_cdc_get_all_changes_<capture_instance> 查询函数的包装。 sys.sp_cdc_generate_wrapper 存储过程用于生成用于创建包装的脚本。  
   
  不会自动创建包装函数。 必须做两件事，才能创建包装函数：  

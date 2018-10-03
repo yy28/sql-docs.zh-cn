@@ -1,13 +1,11 @@
 ---
-title: 更新和正在执行的方法示例 (VB) |Microsoft 文档
+title: Update 和 CancelUpdate 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb0ba0f097bb0885478360f4ea2cc34b2d829f54
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 506d35b93cd873aed344ebb5dd5b019d6cbf3867
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662286"
 ---
-# <a name="update-and-cancelupdate-methods-example-vb"></a>更新和正在执行的方法示例 (VB)
-此示例演示[更新](../../../ado/reference/ado-api/update-method.md)方法结合[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  
+# <a name="update-and-cancelupdate-methods-example-vb"></a>Update 和 CancelUpdate 方法示例 (VB)
+此示例演示[更新](../../../ado/reference/ado-api/update-method.md)方法一起[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  
   
 ```  
 'BeginUpdateVB  
@@ -118,13 +115,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- 此示例演示**更新**方法结合[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法。  
+ 此示例演示**更新**方法一起[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)方法。  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [正在执行方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
+ [CancelUpdate 方法 (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update 方法](../../../ado/reference/ado-api/update-method.md)

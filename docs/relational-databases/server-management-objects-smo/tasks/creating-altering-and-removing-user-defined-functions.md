@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: smo
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 756571974b052b6a6b63db0a2969c19f05a8d038
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 592dc044f15ba1063370ca5bf42f51bf45e69265
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730435"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>创建、更改和删除用户定义函数
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +66,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>在 Visual C# 中创建标量用户定义函数  
- 此代码示例演示如何创建和删除的输入的标量用户定义函数<xref:System.DateTime>对象参数和整数返回类型中的[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 在创建用户定义函数[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 该示例将创建用户定义函数。 `ISOweek` 的用户。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用此函数之前将数据库 `DATEFIRST` 选项设置为 `1` 。  
+ 此代码示例演示如何创建和删除的输入的标量用户定义函数<xref:System.DateTime>对象参数和整数返回类型中的[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 在创建用户定义函数[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 该示例将创建用户定义函数。 `ISOweek`。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用此函数之前将数据库 `DATEFIRST` 选项设置为 `1` 。  
   
 ```csharp  
 {  
@@ -106,7 +102,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>在 PowerShell 中创建标量用户定义函数  
- 此代码示例演示如何创建和删除的输入的标量用户定义函数<xref:System.DateTime>对象参数和整数返回类型中的[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 在创建用户定义函数[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 该示例将创建用户定义函数。 `ISOweek` 的用户。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用此函数之前将数据库 `DATEFIRST` 选项设置为 `1` 。  
+ 此代码示例演示如何创建和删除的输入的标量用户定义函数<xref:System.DateTime>对象参数和整数返回类型中的[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]。 在创建用户定义函数[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]数据库。 该示例将创建用户定义函数。 `ISOweek`。 此函数使用日期参数来计算 ISO 周数。 要使此函数能正确计算，必须在调用此函数之前将数据库 `DATEFIRST` 选项设置为 `1` 。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

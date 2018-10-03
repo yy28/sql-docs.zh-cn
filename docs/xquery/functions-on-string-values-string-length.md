@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - string-length function
 - fn:string-length function
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
-caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 229aaf528780001001b9319ae352913f35d067fb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9871fb0f7f11a83506631ecb27d756bfaf8d036e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796265"
 ---
-# <a name="functions-on-string-values---string-length"></a>基于字符串值的字符串长度的函数
+# <a name="functions-on-string-values---string-length"></a>基于字符串值的函数 - string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回字符串的长度（以字符为单位）。  
@@ -47,7 +41,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  要计算其长度的源字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果的值 *$arg*是一个空序列**xs: integer**返回值为 0。  
   
  XQuery 函数中代理对的行为依赖于数据库兼容级别。 如果该兼容级别为 110 或更高，则每个代理对都作为单个字符计数。 对于更低的兼容级别，它们会作为两个字符计数。 有关详细信息，请参阅[ALTER DATABASE 兼容性级别&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)并[排序规则和 Unicode 支持](../relational-databases/collations/collation-and-unicode-support.md)。  

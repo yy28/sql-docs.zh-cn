@@ -5,10 +5,6 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.component: system-objects
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 697c602b41c1225202f12cae52297009ae1e99dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: aadbe305d7ad72858a46b1df2af4ef2cb0e940be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843355"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +37,7 @@ ms.locfileid: "37993891"
 |data_compression_desc|`nvarchar(60)`|指示每个分区的压缩状态。 可能的值为 NONE、ROW 和 PAGE。|  
 |pdw_node_id|`int`|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

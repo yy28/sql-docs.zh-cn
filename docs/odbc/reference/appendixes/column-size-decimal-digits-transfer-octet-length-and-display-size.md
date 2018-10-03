@@ -1,13 +1,11 @@
 ---
-title: 列大小、 十进制数字，传输八位字节长度显示大小 |Microsoft 文档
+title: 列大小、 十进制数字、 传输八位字节长度的显示大小 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
@@ -21,33 +19,32 @@ helpviewer_keywords:
 - column size of data types [ODBC]
 - data types [ODBC], transfer octet length
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4a63c37dae0e8cbb06f00f5d043576028dd0508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726805"
 ---
-# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数，再传输八位字节长度和显示大小-ODBC
-数据类型的特征是其列 （或参数） 的大小、 小数位数、 长度、 和显示大小。 以下的 ODBC 函数返回数据源上的这些属性中的 SQL 语句的参数或 SQL 数据类型。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  
+# <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列大小、 十进制数字、 传输八位字节长度和显示大小-ODBC
+数据类型的特征体现在其列 （或参数） 的大小、 小数位数、 长度和显示大小。 以下 ODBC 函数返回对数据源中的 SQL 语句的参数或 SQL 数据类型的这些属性。 每个 ODBC 函数返回一组不同的这些属性，如下所示：  
   
--   **SQLDescribeCol**返回它所描述的列的大小和十进制数字的列。  
+-   **SQLDescribeCol**返回它所描述的列的大小和小数位数的列。  
   
--   **SQLDescribeParam**返回它所描述的参数的大小和十进制数字的参数。 **SQLBindParameter** SQL 语句中设置的参数的参数的大小和十进制数字。  
+-   **SQLDescribeParam**返回它所描述的参数的大小和小数位数的参数。 **SQLBindParameter** SQL 语句中设置的参数的参数的大小和小数位数。  
   
--   目录函数**SQLColumns**， **SQLProcedureColumns**，和**SQLGetTypeInfo**表、 结果集或过程参数中返回的列的属性和数据源中的数据类型目录属性中。 **SQLColumns** （如基础表、 视图或系统表） 的指定表中返回的列大小、 十进制数字和的列长度。 **SQLProcedureColumns**在过程中返回的列大小、 十进制数字和的列长度。 **SQLGetTypeInfo**返回的数据源的最大列大小和 SQL 数据类型的最小和最大十进制数字。  
+-   目录函数**SQLColumns**， **SQLProcedureColumns**，并**SQLGetTypeInfo**表、 结果集或过程参数中返回的列的属性和数据源中的数据类型的目录属性。 **SQLColumns** （例如基础表、 视图或系统表） 的指定表中返回的列的大小、 十进制数和列的长度。 **SQLProcedureColumns**在过程中返回的列的大小、 十进制数和列的长度。 **SQLGetTypeInfo**对数据源返回的最大列大小和 SQL 数据类型的最小值和最大十进制位数。  
   
- 这些函数的列返回的值或参数大小对应于"精度"作为 ODBC 2 中定义。*x*。 但是，值并不一定对应 SQL_DESC_PRECISION 或任何其他一个描述符字段中返回的值中。 同样适用于十进制数字，它们分别对应于"规模"作为 ODBC 2 中定义。*x*。 它不一定对应中 SQL_DESC_SCALE 或任何其他的一个描述符字段，返回的值，但来自不同描述符字段，具体取决于数据类型。 有关详细信息，请参阅[列大小](../../../odbc/reference/appendixes/column-size.md)和[十进制数字](../../../odbc/reference/appendixes/decimal-digits.md)。  
+ 这些函数的列返回的值或参数的大小对应于"精度"作为 ODBC 2 中定义。*x*。 但是，在 SQL_DESC_PRECISION 或任何其他一个描述符字段中返回的值不一定对应值。 同样适用于十进制数字，它们分别对应于"规模"作为 ODBC 2 中定义。*x*。 它不一定对应中 SQL_DESC_SCALE 或任何其他的一个描述符字段，返回的值，但来自不同的描述符字段，具体取决于数据类型。 有关详细信息，请参阅[列的大小](../../../odbc/reference/appendixes/column-size.md)并[十进制数字](../../../odbc/reference/appendixes/decimal-digits.md)。  
   
- 同样，传输八位字节长度的值不是来自 SQL_DESC_LENGTH。 来自的字段的所有字符和二进制类型属性的描述符 SQL_DESC_OCTET_LENGTH。 保存此信息对于其他类型没有描述符字段。  
+ 同样，传输八位字节长度的值不是来自 SQL_DESC_LENGTH。 它们来自的所有字符和二进制类型的描述符字段的 SQL_DESC_OCTET_LENGTH。 没有任何保存此信息对于其他类型的描述符字段。  
   
  所有数据类型的显示大小值对应于单个描述符字段，SQL_DESC_DISPLAY_SIZE 中的值。  
   
- 描述符字段描述结果集的特征。 描述符字段不包含有关在语句执行之前的数据的有效值。 列的值的大小，十进制数字，和显示大小由**SQLColumns**， **SQLProcedureColumns**，和**SQLGetTypeInfo**、 一端另一方面，返回在数据源的目录中存在的数据库对象，例如表中的列和数据类型的特征。 同样，其结果集中， **SQLColAttribute**返回的列大小、 十进制数字和传输八位字节长度的列在数据源; 这些值不一定是 SQL_DESC_PRECISION，SQL_ 中的值相同DESC_SCALE 和 SQL_DESC_OCTET_LENGTH 描述符字段。  
+ 描述符字段描述结果集的特征。 描述符字段不包含有关语句执行之前的数据有效的值。 列的值的大小，十进制数，并显示返回的大小**SQLColumns**， **SQLProcedureColumns**，并**SQLGetTypeInfo**另一方面只手，返回数据库对象，如表中的列和数据类型的特征的数据源的目录中存在。 同样，其结果集中， **SQLColAttribute**返回列的大小、 十进制数，以及传输八位字节长度的列的数据源; 这些值不一定是 SQL_DESC_PRECISION，SQL_ 中的值相同DESC_SCALE 和的 SQL_DESC_OCTET_LENGTH 描述符字段。  
   
  有关这些描述符字段的详细信息，请参阅[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。  
   

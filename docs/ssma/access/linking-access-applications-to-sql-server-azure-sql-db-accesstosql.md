@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases, linking to SQL Azure
 - Access databases, linking to SQL Server
@@ -25,16 +20,15 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6a7dd2935bbd733621596c77fb5504a7ef552a96
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 61558536574750e7588124afb75cf26ee580b22a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701505"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>链接到 SQL Server-Azure SQL DB (AccessToSQL) 访问应用程序
 如果想要使用现有的 Access 应用程序，用于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，你可以将原始 Access 表链接到已迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 表。 链接会修改你的 Access 数据库，以便你的查询、 窗体、 报表和数据访问页使用中的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库而不是你的 Access 数据库中的数据。  

@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-caps.latest.revision: 34
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090227"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服务任务编辑器（“常规”页）
   使用“Web 服务任务编辑器”对话框的“常规”页，可以指定 HTTP 连接管理器，指定 Web 服务任务所使用的 Web 服务描述语言 (WSDL) 文件的位置，对 Web 服务任务进行说明，以及下载 WSDL 文件。  
   
  有关此任务的详细信息，请参阅 [Web 服务任务](control-flow/web-service-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **HTTPConnection**  
  在列表中选择一个连接管理器，或单击“\<新建连接…>”新建一个连接管理器。  
   

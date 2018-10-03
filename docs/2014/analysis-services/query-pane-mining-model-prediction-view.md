@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.query.f1
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ede17228e9dc21a170815ecc46900fd38ab7d978
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133227"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>“查询”窗格（“挖掘模型预测”视图）
   “查询”窗格显示预测查询生成器创建的数据挖掘表达式 (DMX) 语句。 您可以修改这些语句，再单击 **“切换到查询结果视图”** 按钮以返回结果。 如果切换回 **“设计”** 视图，则对语句所做的所有更改都将丢失。  
   
  **有关详细信息，请参阅**[数据挖掘扩展插件（数据操作语句）](/sql/dmx/dmx-statements-data-manipulation)、[在 SQL Server Management Studio 中创建一个 DMX 查询](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **切换到查询结果视图**  
  单击此项可以在“设计”、“查询”和“结果”窗格之间切换。 切换到 **“结果”** 窗格可以运行查询。  
   

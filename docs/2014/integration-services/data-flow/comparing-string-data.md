@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing string data
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c5c471942764076ac0c03044d1037c3600e83fc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 950456557177ed0e794aae92df14536ee524e36b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100947"
 ---
 # <a name="comparing-string-data"></a>比较字符串数据
   字符串比较是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]执行的许多转换中的重要组成部分，字符串比较也用在变量表达式和属性表达式的求值中。 例如，排序转换比较数据集中的值，从而以升序或降序对数据进行排序。  

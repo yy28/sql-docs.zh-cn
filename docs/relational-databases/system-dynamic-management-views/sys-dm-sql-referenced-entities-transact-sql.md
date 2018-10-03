@@ -5,9 +5,7 @@ ms.date: 11/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de28f90a9863ebc1ee24f571da03ac460e9ad411
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0e1ada8f652b88e0cb3570f1fada7f4f50d28e35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756235"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +114,7 @@ sys.dm_sql_referenced_entities (
   
  无法解析列依赖关系时，返回错误 2020。 此错误不会阻止查询返回对象级依赖关系。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以在任何数据库的上下文中执行此函数以返回引用服务器级 DDL 触发器的实体。  
   
  下表列出了为其创建和维护依赖关系信息的实体类型。 不为规则、默认值、临时表、临时存储过程或系统对象创建或维护依赖关系信息。  

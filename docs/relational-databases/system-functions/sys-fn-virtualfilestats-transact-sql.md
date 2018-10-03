@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8e8bf556d721ac18af7fa552db558395bff76f2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090985"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731805"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**文件句柄**|**bigint**|文件句柄的值。|  
 |**BytesOnDisk**|**bigint**|磁盘上的物理文件大小（以字节为单位）。<br /><br /> 对于数据库文件，这是相同的值**大小**中**sys.database_files**，但所采用字节而不是页。<br /><br /> 对于数据库快照备用文件，它是操作系统用于文件的空间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **fn_virtualfilestats**是的系统文件执行表值函数，提供统计信息，如的 I/o 总数。 可使用该函数来帮助跟踪用户读取文件或写入到文件必须等待的时间长度。 该函数还可帮助您识别出发生了大量 I/O 活动的文件。  
   
 ## <a name="permissions"></a>Permissions  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4024ffd9bee842173998fed81c9bbf80152fa530
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126766"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
   为了精简全文检索，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一种机制，用于去掉那些经常出现但对搜索无益的字符串。 这些去掉的字符串称为“非索引字” 。 在索引创建期间，全文引擎将忽略全文检索中的非索引字。 也就是说全文查询将不搜索非索引字。  
@@ -37,7 +34,7 @@ ms.locfileid: "37284833"
   
 |Word|位置|  
 |----------|--------------|  
-|Instructions|@shouldalert|  
+|Instructions|1|  
 |are|2|  
 |applicable|3|  
 |实例部署到 Windows Azure 虚拟机 (VM) 中的|4|  

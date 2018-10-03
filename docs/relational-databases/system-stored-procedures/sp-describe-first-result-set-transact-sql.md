@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03d40263e27c16dcf3eff5300f942f3deb295bd9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705875"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -112,7 +108,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|供内部使用。|  
 |**tds_collation_sort_id**|**tinyint NULL**|供内部使用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_describe_first_result_set**保证，如果该过程返回 （假设） 的第一个结果集元数据批处理 A，如果该批处理 （A） 随后执行然后批处理将是 (1) 引发优化时错误，(2)引发运行时错误，(3) 不返回任何结果集，或者 (4) 返回的第一个结果集所描述的相同元数据**sp_describe_first_result_set**。  
   
  名称、为 Null 性和数据类型可能不同。 如果**sp_describe_first_result_set**返回空结果集，保证是批处理执行将返回任何结果集。  
@@ -200,7 +196,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|NULL|NULL|NULL|NULL|  
+|0|1|b3|NULL|NULL|NULL|NULL|  
   
  以下示例使用 1，指示它将返回信息，就好像它在查询中包含 FOR BROWSE 选项一样。  
   
@@ -213,8 +209,8 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|b3|dbo|t|B1|0|  
-|@shouldalert|2|（英文）。|dbo|t|（英文）。|@shouldalert|  
+|0|1|b3|dbo|t|B1|0|  
+|1|2|（英文）。|dbo|t|（英文）。|1|  
   
  以下示例使用 2，指示执行分析，就好像您在准备游标一样。  
   
@@ -226,8 +222,8 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
 |is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
-|0|@shouldalert|B3|dbo|v|B2|0|  
-|@shouldalert|2|ROWSTAT|NULL|NULL|NULL|0|  
+|0|1|B3|dbo|v|B2|0|  
+|1|2|ROWSTAT|NULL|NULL|NULL|0|  
   
 ### <a name="examples-of-problems"></a>问题示例  
  下面的示例对所有示例使用两个表。 请执行以下语句以创建示例表。  

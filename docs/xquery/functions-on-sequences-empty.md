@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - empty function
 - fn:empty function
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f312276737406070eb07f371d5fb1c807b8e24b2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f2757e1ccb461aea9df9a5be9445951f80e206be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47795565"
 ---
-# <a name="functions-on-sequences---empty"></a>基于序列的空的函数
+# <a name="functions-on-sequences---empty"></a>基于序列的函数 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   如果返回 True 的值 *$arg*是一个空序列。 否则，该函数返回 False。  
@@ -46,7 +40,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  项序列。 如果该序列为空，则此函数返回 True。 否则，该函数返回 False。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Fn:exists()** 不支持函数。 作为替代方法， **not （)** 函数可用。  
   
 ## <a name="examples"></a>示例  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropremotelogin
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a834dbb26bfc8c712531084e528f82bba50cd05e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026494"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800695"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果只有*remoteserver*指定，则从本地服务器中删除该远程服务器的所有远程登录。 如果*登录名*也是从指定的所有远程登录名*remoteserver*从本地服务器中删除映射到该特定本地登录名。 如果*remote_name*同时指定，则仅从该远程用户的远程登录名*remoteserver*从本地服务器中删除。  
   
  若要添加本地服务器用户，请使用**sp_addlogin**。 若要删除本地服务器用户，请使用**sp_droplogin**。  

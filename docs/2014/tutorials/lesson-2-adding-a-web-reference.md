@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ff0efdd840ee2f4efb0da802da64494640911b80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102507"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>第 2 课：添加 Web 引用
   Web 服务发现是客户端查找 Web 服务并获取其服务说明的过程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 中的 Web 服务发现过程涉及询问网站是否遵循预定算法。 此过程的目的是查找服务说明，它是使用 Web 服务描述语言 (WSDL) 的一个 XML 文档。  
@@ -50,7 +47,7 @@ ms.locfileid: "37275623"
   
 7.  在项目菜单上单击**添加引用**。  
   
-8.  在中 **添加引用** 对话框中 **.NET**选项卡上，选择 **System.Web.Services** ，然后单击**确定**。  
+8.  在中**添加引用**对话框中 **.NET**选项卡上，选择**System.Web.Services**，然后单击**确定**。  
   
  有关详细信息，请参阅[访问 SOAP API](../reporting-services/report-server-web-service/accessing-the-soap-api.md)。  
   

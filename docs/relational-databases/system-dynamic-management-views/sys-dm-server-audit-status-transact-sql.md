@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_server_audit_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712507"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,21 +33,21 @@ ms.locfileid: "34467464"
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|审核的 ID。 映射到**audit_id**字段**sys.audits**目录视图。|  
-|**名称**|**sysname**|审核的名称。 与相同**名称**字段**sys.server_audits**目录视图。|  
-|**status**|**int**|服务器审核的数值状态：<br /><br /> 0 = 不启动<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 关闭|  
+|**audit_id**|**int**|审核的 ID。 映射到**audit_id**字段中**sys.audits**目录视图。|  
+|**名称**|**sysname**|审核的名称。 与相同**名称**字段中**sys.server_audits**目录视图。|  
+|**status**|**smallint**|服务器审核的数值状态：<br /><br /> 0 = 未启动<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      运行时失败<br /><br /> 3 = 目标创建失败<br /><br /> 4 = 正在关闭|  
 |**status_desc**|**nvarchar(256)**|显示服务器审核状态的字符串：<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|审核的最后状态更改的时间戳（UTC 格式）。|  
 |**event_session_address**|**varbinary(8)**|与审核关联的扩展事件会话的地址。 与相关**sys.db_xe_sessions.address**目录视图。|  
 |**audit_file_path**|**nvarchar(256)**|当前使用的审核文件目标的完整路径名和文件名。 仅对文件审核填充。|  
 |**audit_file_size**|**bigint**|审核文件的近似大小（字节数）。 仅对文件审核填充。|  
   
-## <a name="permissions"></a>权限  
- 主体必须具有**VIEW SERVER STATE**和**选择**权限。  
+## <a name="permissions"></a>Permissions  
+ 主体必须具有**VIEW SERVER STATE**并**选择**权限。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

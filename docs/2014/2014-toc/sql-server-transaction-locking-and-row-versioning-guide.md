@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
-caps.latest.revision: 17
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f37da0a2d3425d5aacc9b201183977f3c931d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cec7bddf8f44036d98457cb080b66c2cacd40c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117297"
 ---
-# SQL Server 事务锁定和行版本控制指南
+# <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 事务锁定和行版本控制指南
   在任意数据库中，事务管理不善常常导致用户很多的系统中出现争用和性能问题。 随着访问数据的用户数量的增加，拥有能够高效地使用事务的应用程序也变得更为重要。 本指南说明 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用的锁定和行版本控制机制，以确保每个事务的物理完整性并提供有关应用程序如何高效控制事务的信息。  
   
 **适用于**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]通过[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有说明。  
@@ -63,12 +60,12 @@ ms.locfileid: "37311327"
   
 -   事务管理特性，强制保持事务的原子性和一致性。 事务启动之后，就必须成功完成（提交），否则[!INCLUDE[ssDE](../includes/ssde-md.md)]实例将撤消该事务启动之后对数据所做的所有修改。 此操作称为回滚事务，因为它将数据恢复到那些更改发生前的状态。  
   
-### 控制事务  
+### <a name="controlling-transactions"></a>控制事务  
  应用程序主要通过指定事务启动和结束的时间来控制事务。 可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或数据库应用程序编程接口 (API) 函数来指定这些时间。 系统还必须能够正确处理那些在事务完成之前便终止事务的错误。 有关详细信息，请参阅[Transaction 语句&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)， [ODBC 中的事务](http://technet.microsoft.com/library/ms131281.aspx)并[事务在 SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
   
  默认情况下，事务按连接级别进行管理。 在一个连接上启动一个事务后，该事务结束之前，在该连接上执行的所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句都是该事务的一部分。 但是，在多个活动的结果集 (MARS) 会话中，[!INCLUDE[tsql](../includes/tsql-md.md)] 显式或隐式事务将变成批范围的事务，这种事务按批处理级别进行管理。 当批处理完成时，如果批范围的事务还没有提交或回滚，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将自动回滚该事务。 有关详细信息，请参阅[多个活动结果集 (MARS) SQL Server 中](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)。  
   
-#### 启动事务  
+#### <a name="starting-transactions"></a>启动事务  
  使用 API 函数和 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句，可以在 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例中将事务作为显式、自动提交或隐式事务来启动。  
   
  **显式事务**  
@@ -120,7 +117,7 @@ ms.locfileid: "37311327"
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)]应用程序可以通过 [!INCLUDE[tsql](../includes/tsql-md.md)] 或数据库 API 来管理分布式事务。 有关详细信息，请参阅 [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)。  
   
-#### 结束事务  
+#### <a name="ending-transactions"></a>结束事务  
  您可以使用 COMMIT 或 ROLLBACK 语句，或者通过相应 API 函数来结束事务。  
   
  COMMIT  
@@ -132,14 +129,14 @@ ms.locfileid: "37311327"
 > [!NOTE]  
 >  在为支持多个活动的结果集 (MARS) 而建立的连接中，只要还有待执行的请求，就无法提交通过 API 函数启动的显式事务。 如果在未完成的操作还在运行时尝试提交此类事务，将导致出现错误。  
   
-#### 事务处理过程中的错误  
+#### <a name="errors-during-transaction-processing"></a>事务处理过程中的错误  
  如果某个错误使事务无法成功完成，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会自动回滚该事务，并释放该事务占用的所有资源。 如果客户端与[!INCLUDE[ssDE](../includes/ssde-md.md)]实例的网络连接中断了，那么当网络向实例通知该中断后，该连接的所有未完成事务均会被回滚。 如果客户端应用程序失败或客户端计算机崩溃或重新启动，也会中断连接，而且当网络向[!INCLUDE[ssDE](../includes/ssde-md.md)]实例通知该中断后，该实例会回滚所有未完成的连接。 如果客户端从该应用程序注销，所有未完成的事务也会被回滚。  
   
  如果批中出现运行时语句错误（如违反约束），那么[!INCLUDE[ssDE](../includes/ssde-md.md)]中的默认行为是只回滚产生该错误的语句。 可以使用 SET XACT_ABORT 语句更改此行为。 在执行 SET XACT_ABORT ON 语句后，任何运行时语句错误都将导致自动回滚当前事务。 编译错误（如语法错误）不受 SET XACT_ABORT 的影响。 有关详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql)。  
   
  出现错误时，纠正操作（COMMIT 或 ROLLBACK）应包括在应用程序代码中。 一种处理错误（包括那些事务中的错误）的有效工具是 [!INCLUDE[tsql](../includes/tsql-md.md)] TRY...CATCH 构造。 有关包括事务的示例的详细信息，请参阅 [TRY...CATCH (Transact-SQL)](/sql/t-sql/language-elements/try-catch-transact-sql)。 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，您可以使用 THROW 语句引发异常并将执行转移到 TRY…CATCH 构造的 CATCH 块。 有关详细信息，请参阅 [THROW (Transact-SQL)](/sql/t-sql/language-elements/throw-transact-sql)。  
   
-##### 自动提交模式下的编译和运行时错误  
+##### <a name="compile-and-run-time-errors-in-autocommit-mode"></a>自动提交模式下的编译和运行时错误  
  在自动提交模式下，有时看起来好像[!INCLUDE[ssDE](../includes/ssde-md.md)]实例回滚了整个批处理而不是仅仅一个 SQL 语句。 当遇到的错误是编译错误而非运行时错误时，会发生这种情况。 编译错误会阻止[!INCLUDE[ssDE](../includes/ssde-md.md)]生成执行计划，这样批处理中的任何语句都不会执行。 尽管看起来好像是回滚了产生错误的语句之前的所有语句，但该错误阻止了批处理中的所有语句的执行。 在下面的示例中，由于发生编译错误，第三个批处理中的 `INSERT` 语句都没有执行。 但看起来好像是前两个 `INSERT` 语句没有执行便进行了回滚。  
   
 ```sql
@@ -196,10 +193,10 @@ GO
   
  应用程序可以选择事务隔离级别，为事务定义保护级别，以防被其他事务所修改。 可以为各个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句指定表级别的提示，进一步定制行为以满足应用程序的要求。  
   
-### 管理并发数据访问  
+### <a name="managing-concurrent-data-access"></a>管理并发数据访问  
  同时访问一种资源的用户被视为并发访问资源。 并发数据访问需要某些机制，以防止多个用户试图修改其他用户正在使用的资源时产生负面影响。  
   
-#### 并发影响  
+#### <a name="concurrency-effects"></a>并发影响  
  修改数据的用户会影响同时读取或修改相同数据的其他用户。 即这些用户可以并发访问数据。 如果数据存储系统没有并发控制，则用户可能会看到以下负面影响：  
   
 -   丢失更新  
@@ -254,7 +251,7 @@ GO
   
          当您使用 READ UNCOMMITTED，如果您的查询读取行使用分配顺序扫描 （使用 IAM 页） 时，可能会缺失行，如果其他事务导致页拆分。 当使用已提交的读取时不会发生这种情况，因为在页拆分期间将会保持表锁；当表没有聚集索引时也不会发生这种情况，因为更新不会导致页拆分。  
   
-#### 并发类型  
+#### <a name="types-of-concurrency"></a>并发类型  
  当许多人试图同时修改数据库中的数据时，必须实现一个控制系统，使一个人所做的修改不会对他人所做的修改产生负面影响。 这称为并发控制。  
   
  并发控制理论根据建立并发控制的方法而分为两类：  
@@ -269,7 +266,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支持一定范围的并发控制。 用户通过为游标上的连接或并发选项选择事务隔离级别来指定并发控制的类型。 这些特性可以使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句或通过数据库应用程序编程接口（API，如 ADO、ADO.NET、OLE DB 和 ODBC）的属性和特性来定义。  
   
-#### 数据库引擎中的隔离级别  
+#### <a name="isolation-levels-in-the-database-engine"></a>数据库引擎中的隔离级别  
  事务指定一个隔离级别，该隔离级别定义一个事务必须与其他事务所进行的资源或数据更改相隔离的程度。 隔离级别从允许的并发副作用（例如，脏读或虚拟读取）的角度进行描述。  
   
  事务隔离级别控制：  
@@ -291,7 +288,7 @@ GO
   
  较低的隔离级别可以增强许多用户同时访问数据的能力，但也增加了用户可能遇到的并发副作用（例如脏读或丢失更新）的数量。 相反，较高的隔离级别减少了用户可能遇到的并发副作用的类型，但需要更多的系统资源，并增加了一个事务阻塞其他事务的可能性。 应平衡应用程序的数据完整性要求与每个隔离级别的开销，在此基础上选择相应的隔离级别。 最高隔离级别（可序列化）保证事务在每次重复读取操作时都能准确检索到相同的数据，但需要通过执行某种级别的锁定来完成此操作，而锁定可能会影响多用户系统中的其他用户。 最低隔离级别（未提交读）可以检索其他事务已经修改、但未提交的数据。 在未提交读中，所有并发副作用都可能发生，但因为没有读取锁定或版本控制，所以开销最少。  
   
-##### 数据库引擎隔离级别  
+##### <a name="database-engine-isolation-levels"></a>数据库引擎隔离级别  
  ISO 标准定义了下列隔离级别，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]支持所有这些隔离级别：  
   
 |隔离级别|定义|  
@@ -312,11 +309,11 @@ GO
   
 |隔离级别|脏读|不可重复读|虚拟读取|  
 |---------------------|----------------|------------------------|-------------|  
-|**未提交的读取**|是|是|是|  
-|**已提交的读取**|“否”|是|是|  
-|**可重复的读取**|“否”|否|是|  
-|**快照**|“否”|否|“否”|  
-|**可序列化**|“否”|否|“否”|  
+|**未提交的读取**|用户帐户控制|是|用户帐户控制|  
+|**已提交的读取**|否|是|用户帐户控制|  
+|**可重复的读取**|否|否|用户帐户控制|  
+|**快照**|否|否|否|  
+|**可序列化**|否|否|否|  
   
  有关每个事务隔离级别控制的特定类型的锁定或行版本控制的详细信息，请参阅 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)。  
   
@@ -352,7 +349,7 @@ GO
   
  应用程序一般不直接请求锁。 锁由[!INCLUDE[ssDE](../includes/ssde-md.md)]的一个部件（称为“锁管理器”）在内部管理。 当[!INCLUDE[ssDE](../includes/ssde-md.md)]实例处理 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句时，[!INCLUDE[ssDE](../includes/ssde-md.md)]查询处理器会决定将要访问哪些资源。 查询处理器根据访问类型和事务隔离级别设置来确定保护每一资源所需的锁的类型。 然后，查询处理器将向锁管理器请求适当的锁。 如果与其他事务所持有的锁不会发生冲突，锁管理器将授予该锁。  
   
-### 锁粒度和层次结构  
+### <a name="lock-granularity-and-hierarchies"></a>锁粒度和层次结构  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]具有多粒度锁定，允许一个事务锁定不同类型的资源。 为了尽量减少锁定的开销，[!INCLUDE[ssDE](../includes/ssde-md.md)]自动将资源锁定在适合任务的级别。 锁定在较小的粒度（例如行）可以提高并发度，但开销较高，因为如果锁定了许多行，则需要持有更多的锁。 锁定在较大的粒度（例如表）会降低了并发度，因为锁定整个表限制了其他事务对表中任意部分的访问。 但其开销较低，因为需要维护的锁较少。  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)]通常必须获取多粒度级别上的锁才能完整地保护资源。 这组多粒度级别上的锁称为锁层次结构。 例如，为了完整地保护对索引的读取，[!INCLUDE[ssDE](../includes/ssde-md.md)]实例可能必须获取行上的共享锁以及页和表上的意向共享锁。  
@@ -376,7 +373,7 @@ GO
 > [!NOTE]  
 >  使用 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 的 LOCK_ESCALATION 选项会对 HoBT 和 TABLE 锁带来影响。  
   
-### 锁模式  
+### <a name="lock-modes"></a>锁模式  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用不同的锁模式锁定资源，这些锁模式确定了并发事务访问资源的方式。  
   
  下表显示了[!INCLUDE[ssDE](../includes/ssde-md.md)]使用的资源锁模式。  
@@ -391,20 +388,20 @@ GO
 |大容量更新 (BU)|时使用大容量复制数据到表和**TABLOCK**指定提示。|  
 |键范围|当使用可序列化事务隔离级别时保护查询读取的行的范围。 确保再次运行查询时其他事务无法插入符合可序列化事务的查询的行。|  
   
-#### 共享锁  
+#### <a name="shared-locks"></a>共享锁  
  共享锁（S 锁）允许并发事务在封闭式并发控制下读取 (SELECT) 资源。 资源上存在共享锁（S 锁）时，任何其他事务都不能修改数据。 读取操作一完成，就立即释放资源上的共享锁（S 锁），除非将事务隔离级别设置为可重复读或更高级别，或者在事务持续时间内用锁定提示保留共享锁（S 锁）。  
   
-#### 更新锁  
+#### <a name="update-locks"></a>更新锁  
  更新锁（U 锁）可以防止常见的死锁。 在可重复读或可序列化事务中，此事务读取数据 [获取资源（页或行）的共享锁（S 锁）]，然后修改数据 [此操作要求锁转换为排他锁（X 锁）]。 如果两个事务获得了资源上的共享模式锁，然后试图同时更新数据，则一个事务尝试将锁转换为排他锁（X 锁）。 共享模式到排他锁的转换必须等待一段时间，因为一个事务的排他锁与其他事务的共享模式锁不兼容；发生锁等待。 第二个事务试图获取排他锁（X 锁）以进行更新。 由于两个事务都要转换为排他锁（X 锁），并且每个事务都等待另一个事务释放共享模式锁，因此发生死锁。  
   
  若要避免这种潜在的死锁问题，请使用更新锁（U 锁）。 一次只有一个事务可以获得资源的更新锁（U 锁）。 如果事务修改资源，则更新锁（U 锁）转换为排他锁（X 锁）。  
   
-#### 排他锁  
+#### <a name="exclusive-locks"></a>排他锁  
  排他锁（X 锁）可以防止并发事务对资源进行访问。 使用排他锁（X 锁）时，任何其他事务都无法修改数据；仅在使用 NOLOCK 提示或未提交读隔离级别时才会进行读取操作。  
   
  数据修改语句（如 INSERT、UPDATE 和 DELETE）合并了修改和读取操作。 语句在执行所需的修改操作之前首先执行读取操作以获取数据。 因此，数据修改语句通常请求共享锁和排他锁。 例如，UPDATE 语句可能根据与一个表的联接修改另一个表中的行。 在此情况下，除了请求更新行上的排他锁之外，UPDATE 语句还将请求在联接表中读取的行上的共享锁。  
   
-#### 意向锁  
+#### <a name="intent-locks"></a>意向锁  
  [!INCLUDE[ssDE](../includes/ssde-md.md)]使用意向锁来保护共享锁（S 锁）或排他锁（X 锁）放置在锁层次结构的底层资源上。 意向锁之所以命名为意向锁，是因为在较低级别锁前可获取它们，因此会通知意向将锁放置在较低级别上。  
   
  意向锁有两种用途：  
@@ -426,14 +423,14 @@ GO
 |共享意向更新 (SIU)|S 锁和 IU 锁的组合，作为分别获取这些锁并且同时持有两种锁的结果。 例如，事务执行带有 PAGLOCK 提示的查询，然后执行更新操作。 带有 PAGLOCK 提示的查询将获取 S 锁，更新操作将获取 IU 锁。|  
 |更新意向排他 (UIX)|U 锁和 IX 锁的组合，作为分别获取这些锁并且同时持有两种锁的结果。|  
   
-#### 架构锁  
+#### <a name="schema-locks"></a>架构锁  
  [!INCLUDE[ssDE](../includes/ssde-md.md)]在表数据定义语言 (DDL) 操作（例如添加列或删除表）的过程中使用架构修改 (Sch-M) 锁。 保持该锁期间，Sch-M 锁将阻止对表进行并发访问。 这意味着 Sch-M 锁在释放前将阻止所有外围操作。  
   
  某些数据操作语言 (DML) 操作（例如表截断）使用 Sch-M 锁阻止并发操作访问受影响的表。  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)]在编译和执行查询时使用架构稳定性 (Sch-S) 锁。 Sch-S 锁不会阻止某些事务锁，其中包括排他 (X) 锁。 因此，在编译查询的过程中，其他事务（包括那些针对表使用 X 锁的事务）将继续运行。 但是，无法针对表执行获取 Sch-M 锁的并发 DDL 操作和并发 DML 操作。  
   
-#### 大容量更新锁  
+#### <a name="bulk-update-locks"></a>大容量更新锁  
  大容量更新锁（BU 锁）允许多个线程将数据并发地大容量加载到同一表，同时防止其他不进行大容量加载数据的进程访问该表。 在满足以下两个条件时，[!INCLUDE[ssDE](../includes/ssde-md.md)]使用大容量更新 (BU) 锁。  
   
 -   您使用 Transact-SQL BULK INSERT 语句或 OPENROWSET(BULK) 函数，或者您使用某个大容量插入 API 命令（如 .NET SqlBulkCopy）、OLEDB 快速加载 API 或 ODBC 大容量复制 API 来将数据大容量复制到表。  
@@ -443,10 +440,10 @@ GO
 > [!TIP]  
 >  与持有较少限制性大容量更新锁的 BULK INSERT 语句不同，具有 TABLOCK 提示的 INSERT INTO…SELECT 语句持有一个针对表的排他 (X) 锁。 也就是说您不能使用并行插入操作插入行。  
   
-#### 键范围锁  
+#### <a name="key-range-locks"></a>键范围锁  
  在使用可序列化事务隔离级别时，对于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句读取的记录集，键范围锁可以隐式保护该记录集中包含的行范围。 键范围锁可防止虚拟读取。 通过保护行之间键的范围，它还防止对事务访问的记录集进行虚拟插入或删除。  
   
-### 锁兼容性  
+### <a name="lock-compatibility"></a>锁兼容性  
  锁兼容性控制多个事务能否同时获取同一资源上的锁。 如果资源已被另一事务锁定，则仅当请求锁的模式与现有锁的模式相兼容时，才会授予新的锁请求。 如果请求锁的模式与现有锁的模式不兼容，则请求新锁的事务将等待释放现有锁或等待锁超时间隔过期。 例如，没有与排他锁兼容的锁模式。 如果具有排他锁（X 锁），则在释放排他锁（X 锁）之前，其他事务均无法获取该资源的任何类型（共享、更新或排他）的锁。 另一种情况是，如果共享锁（S 锁）已应用到资源，则即使第一个事务尚未完成，其他事务也可以获取该项的共享锁或更新锁（U 锁）。 但是，在释放共享锁之前，其他事务无法获取排他锁。  
   
  下表显示了最常见的锁模式的兼容性。  
@@ -454,12 +451,12 @@ GO
 ||现有的授予模式||||||  
 |------|---------------------------|------|------|------|------|------|  
 |**请求的模式**|**IS**|**S**|**U**|**IX**|**SIX**|**X**|  
-|**意向共享 (IS)**|是|是|是|是|是|“否”|  
-|**共享 (S)**|是|是|是|否|否|“否”|  
-|**更新 (U)**|是|是|否|否|否|“否”|  
-|**意向排他 (IX)**|是|否|否|是|否|“否”|  
-|**意向排他共享 (SIX)**|是|否|否|否|否|“否”|  
-|**排他 (X)**|“否”|否|否|否|否|“否”|  
+|**意向共享 (IS)**|用户帐户控制|是|是|是|是|否|  
+|**共享 (S)**|用户帐户控制|是|是|否|否|否|  
+|**更新 (U)**|用户帐户控制|是|否|否|否|否|  
+|**意向排他 (IX)**|用户帐户控制|否|否|是|否|否|  
+|**意向排他共享 (SIX)**|用户帐户控制|否|否|否|否|否|  
+|**排他 (X)**|否|否|否|否|否|否|  
   
 > [!NOTE]  
 >  意向排他锁（IX 锁）与 IX 锁模式兼容，因为 IX 表示打算只更新部分行而不是所有行。 还允许其他事务尝试读取或更新部分行，只要这些行不是其他事务当前更新的行即可。 此外，如果两个事务尝试更新同一行，将在表级和页级上授予这两个事务 IX 锁。 但是，将在行级授予一个事务 X 锁。 另一个事务必须在该行级锁被删除前等待。  
@@ -468,14 +465,14 @@ GO
   
  ![关系图显示锁兼容性矩阵](media/lockconflicttable.gif "关系图显示锁兼容性矩阵")  
   
-### 键范围锁定  
+### <a name="key-range-locking"></a>键范围锁定  
  在使用可序列化事务隔离级别时，对于 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句读取的记录集，键范围锁可以隐式保护该记录集中包含的行范围。 可序列化隔离级别要求每当在事务期间执行任一查询时，该查询都必须获取相同的行集。 键范围锁可防止其他事务插入其键值位于可序列化事务读取的键值范围内的新行，从而确保满足此要求。  
   
  键范围锁可防止虚拟读取。 通过保护行之间的键范围，它还可以防止对事务访问的记录集进行虚拟插入。  
   
  键范围锁放置在索引上，指定开始键值和结束键值。 此锁将阻止任何要插入、更新或删除任何带有该范围内的键值的行的尝试，因为这些操作会首先获取索引上的锁。 例如，可序列化事务可能发出了一个 SELECT 语句，读取键值介于“AAA”与“CZZ”之间的所有行。 从“AAA”到“CZZ”范围内的键值上的键范围锁可阻止其他事务插入带有该范围内的键值（例如“ADG”、“BBD”或“CAL”）的行。  
   
-#### 键范围锁模式  
+#### <a name="key-range-lock-modes"></a>键范围锁模式  
  键范围锁包括按范围-行格式指定的范围组件和行组件：  
   
 -   范围表示保护两个连续索引项之间的范围的锁模式。  
@@ -499,15 +496,15 @@ GO
 ||现有的授予模式|||||||  
 |------|---------------------------|------|------|------|------|------|------|  
 |**请求的模式**|**S**|**U**|**X**|**RangeS-S**|**RangeS-U**|**RangeI-N**|**RangeX-X**|  
-|**共享 (S)**|是|是|否|是|是|是|“否”|  
-|**更新 (U)**|是|否|否|是|否|是|“否”|  
-|**排他 (X)**|“否”|否|否|否|否|是|“否”|  
-|**RangeS-S**|是|是|否|是|是|否|“否”|  
-|**RangeS-U**|是|否|否|是|否|否|“否”|  
-|**RangeI-N**|是|是|是|否|否|是|“否”|  
-|**RangeX-X**|“否”|否|否|否|否|否|“否”|  
+|**共享 (S)**|用户帐户控制|是|否|是|是|是|否|  
+|**更新 (U)**|用户帐户控制|否|否|是|否|是|否|  
+|**排他 (X)**|否|否|否|否|否|是|否|  
+|**RangeS-S**|用户帐户控制|是|否|是|是|否|否|  
+|**RangeS-U**|用户帐户控制|否|否|是|否|否|否|  
+|**RangeI-N**|用户帐户控制|是|是|否|否|是|否|  
+|**RangeX-X**|否|否|否|否|否|否|否|  
   
-#### 转换锁  
+#### <a name="conversion-locks"></a>转换锁  
  当键范围锁与其他锁重叠时，将创建转换锁。  
   
 |锁定 1|锁 2|转换锁|  
@@ -520,7 +517,7 @@ GO
   
  在不同的复杂环境下（有时是在运行并发进程时），可以在一小段时间内观察到转换锁。  
   
-#### 可序列化范围扫描、单独提取、删除和插入  
+#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>可序列化范围扫描、单独提取、删除和插入  
  键范围锁定确保以下操作是可序列化的：  
   
 -   范围扫描查询  
@@ -537,12 +534,12 @@ GO
   
 -   查询处理器必须使用索引来实现范围筛选谓词。 例如，SELECT 语句中的 WHERE 子句可以用以下谓词建立范围条件：ColumnX BETWEEN N'AAA' AND N'CZZ'。 仅当 ColumnX 被索引键覆盖时，才能获取键范围锁。  
   
-#### 示例  
+#### <a name="examples"></a>示例  
  以下表和索引用作随后的键范围锁定示例的基础。  
   
  ![数据库表具有索引 b 树插图](media/btree4.gif "具有索引 b 树图的数据库表")  
   
-##### 范围扫描查询  
+##### <a name="range-scan-query"></a>范围扫描查询  
  为了确保范围扫描查询是可序列化的，每次在同一事务中执行的相同查询应返回同样的结果。 其他事务不能在范围扫描查询中插入新行；否则这些插入将成为虚拟插入。 例如，以下查询将使用上图中的表和索引：  
   
 ```  
@@ -556,7 +553,7 @@ SELECT name
 > [!NOTE]  
 >  包含的 RangeS-S 锁数量为 n+1，此处 n 是满足查询条件的行数。  
   
-##### 对不存在的数据的单独提取  
+##### <a name="singleton-fetch-of-nonexistent-data"></a>对不存在的数据的单独提取  
  如果事务中的查询试图选择不存在的行，则以后在相同的事务中发出这一查询时，必须返回相同的结果。 不允许其他事务插入不存在的行。 例如，对于下面的查询：  
   
 ```  
@@ -567,7 +564,7 @@ SELECT name
   
  键范围锁放置在与从 `Ben` 到 `Bing` 的名称范围对应的索引项上，因为名称 `Bill` 将插入到这两个相邻的索引项之间。 RangeS-S 模式键范围锁放置在索引项 `Bing` 上。 这样可阻止其他任何事务在索引项 `Bill` 与 `Ben` 之间插入值（例如 `Bing`）。  
   
-##### 删除操作  
+##### <a name="delete-operation"></a>删除操作  
  在事务中删除值时，在事务执行删除操作期间不必锁定该值所属的范围。 锁定删除的键值直至事务结束足以保持可序列化性。 例如，对于下面的 DELETE 语句：  
   
 ```  
@@ -579,7 +576,7 @@ DELETE mytable
   
  可以使用三个基本锁模式执行范围删除：行锁、页锁或表锁。 行、页或表锁定策略由查询优化器确定，或者可以由用户通过优化程序提示（例如 ROWLOCK、PAGLOCK 或 TABLOCK）来指定。 当使用 PAGLOCK 或 TABLOCK 时，如果从某个索引页中删除所有的行，则[!INCLUDE[ssDE](../includes/ssde-md.md)]将立即释放该索引页。 相反，当使用 ROWLOCK 时，所有删除的行只是标记为已删除；以后通过后台任务从索引页中删除它们。  
   
-##### 插入操作  
+##### <a name="insert-operation"></a>插入操作  
  在事务中插入值时，在事务执行插入操作期间不必锁定该值所属的范围。 锁定插入的键值直至事务结束足以维护可序列化性。 例如，对于下面的 INSERT 语句：  
   
 ```  
@@ -588,7 +585,7 @@ INSERT mytable VALUES ('Dan');
   
  RangeI-N 模式键范围锁放置在与名称 David 对应的索引项上，以测试范围。 如果已授权锁，则插入 `Dan`，并且排他锁（X 锁）将放置在值 `Dan` 上。 RangeI-N 模式键范围锁仅对测试范围是必需的，而不在执行插入操作的事务期间保留。 其他事务可以在插入的值 `Dan` 的前后插入或删除值。 但是，任何试图读取、插入或删除值 `Dan` 的事务都将被阻塞，直到插入的事务提交或回滚为止。  
   
-### 动态锁定  
+### <a name="dynamic-locking"></a>动态锁定  
  使用低级锁（如行锁）可以降低两个事务同时在相同数据块上请求锁的可能性，从而提高并发性。 使用低级锁还会增加锁的数量以及管理锁所需的资源。 使用高级表锁或页锁可以减少开销，但代价是降低了并发性。  
   
  ![关系图显示成本与粒度](media/lockcht.gif "显示成本与粒度的关系图")  
@@ -605,7 +602,7 @@ INSERT mytable VALUES ('Dan');
   
  在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更高版本，锁升级的行为已更改与引入了 LOCK_ESCALATION 选项。 有关详细信息，请参阅的 LOCK_ESCALATION 选项[ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)。  
   
-### 死锁  
+### <a name="deadlocking"></a>死锁  
  在两个或多个任务中，如果每个任务锁定了其他任务试图锁定的资源，此时会造成这些任务永久阻塞，从而出现死锁。 例如：  
   
 -   事务 A 获取了行 1 的共享锁。  
@@ -632,7 +629,7 @@ INSERT mytable VALUES ('Dan');
   
  当表进行了分区并且 ALTER TABLE 的 LOCK_ESCALATION 设置设为 AUTO 时也会发生死锁。 当 LOCK_ESCALATION 设置为自动时，会增加并发情况，从而[!INCLUDE[ssDE](../includes/ssde-md.md)]在 HoBT 级别而不是 TABLE 级别锁定表分区。 但是，当单独的事务在某个表中持有分区锁并希望在其他事务分区上的某处持有锁时，会导致发生死锁。 通过将 lock_escalation 设为表; 可以避免这种类型的死锁尽管此设置会减少并发情况强制为分区，以等待某个表锁的大量更新。  
   
-#### 检测和结束死锁  
+#### <a name="detecting-and-ending-deadlocks"></a>检测和结束死锁  
  在两个或多个任务中，如果每个任务锁定了其他任务试图锁定的资源，此时会造成这些任务永久阻塞，从而出现死锁。 下图清楚地显示了死锁状态，其中：  
   
 -   任务 T1 具有资源 R1 的锁（通过从 R1 指向 T1 的箭头指示），并请求资源 R2 的锁（通过从 T1 指向 R2 的箭头指示）。  
@@ -645,7 +642,7 @@ INSERT mytable VALUES ('Dan');
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]自动检测 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的死锁循环。 [!INCLUDE[ssDE](../includes/ssde-md.md)]选择一个会话作为死锁牺牲品，然后终止当前事务（出现错误）来打断死锁。  
   
-##### 可以死锁的资源  
+##### <a name="resources-that-can-deadlock"></a>可以死锁的资源  
  每个用户会话可能有一个或多个代表它运行的任务，其中每个任务可能获取或等待获取各种资源。 以下类型的资源可能会造成阻塞，并最终导致死锁。  
   
 -   **锁**。 等待获取资源（如对象、页、行、元数据和应用程序）的锁可能导致死锁。 例如，事务 T1 在行 r1 上有共享锁（S 锁）并等待获取行 r2 的排他锁（X 锁）。 事务 T2 在行 r2 上有共享锁（S 锁）并等待获取行 r1 的排他锁（X 锁）。 这将导致一个锁循环，其中，T1 和 T2 都等待对方释放已锁定的资源。  
@@ -675,7 +672,7 @@ INSERT mytable VALUES ('Dan');
   
  ![逻辑关系图显示用户进程死锁。](media/udb9-logicflowexamplec.gif "逻辑关系图显示用户进程死锁。")  
   
-##### 死锁检测  
+##### <a name="deadlock-detection"></a>死锁检测  
  上面列出的所有资源均参与[!INCLUDE[ssDE](../includes/ssde-md.md)]死锁检测方案。 死锁检测是由锁监视器线程执行的，该线程定期搜索[!INCLUDE[ssDE](../includes/ssde-md.md)]实例的所有任务。 以下几点说明了搜索进程：  
   
 -   默认时间间隔为 5 秒。  
@@ -696,10 +693,10 @@ INSERT mytable VALUES ('Dan');
   
  使用 CLR 时，死锁监视器将自动检测托管过程中访问的同步资源（监视器、读取器/编写器锁和线程联接）的死锁。 但是，死锁是通过在已选为死锁牺牲品的过程中引发异常来解决的。 因此，请务必理解异常不会自动释放牺牲品当前拥有的资源；必须显式释放资源。 用于标识死锁牺牲品的异常与异常行为一样，也会被捕获和解除。  
   
-##### 死锁信息工具  
+##### <a name="deadlock-information-tools"></a>死锁信息工具  
  为了查看死锁信息，[!INCLUDE[ssDE](../includes/ssde-md.md)]提供了监视工具，分别为两个跟踪标志以及 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中的死锁图形事件。  
   
-###### 跟踪标志 1204 和跟踪标志 1222  
+###### <a name="trace-flag-1204-and-trace-flag-1222"></a>跟踪标志 1204 和跟踪标志 1222  
  发生死锁时，跟踪标志 1204 和跟踪标志 1222 会返回在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误日志中捕获的信息。 跟踪标志 1204 会报告由死锁所涉及的每个节点设置格式的死锁信息。 跟踪标志 1222 会设置死锁信息的格式，顺序为先按进程，然后按资源。 可以同时启用这两个跟踪标志，以获取同一个死锁事件的两种表示形式。  
   
  除了定义跟踪标志 1204 和 1222 的属性之外，下表还显示了它们之间的相似之处和不同之处。  
@@ -708,9 +705,9 @@ INSERT mytable VALUES ('Dan');
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |输出格式|在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误日志中捕获输出。|主要针对死锁所涉及的节点。 每个节点都有一个专用部分，并且最后一部分说明死锁牺牲品。|返回采用不符合 XML 架构定义 (XSD) 架构的类 XML 格式的信息。 该格式有三个主要部分。 第一部分声明死锁牺牲品； 第二部分说明死锁所涉及的每个进程； 第三部分说明与跟踪标志 1204 中的节点同义的资源。|  
 |标识属性|**SPID:\<x > ECID:\<x >。** 标识并行进程中的系统进程 ID 线程。 该条目`SPID:<x> ECID:0`，其中\<x > 将替换为 SPID 值，表示主线程。 该条目`SPID:<x> ECID:<y>`，其中\<x > 将替换为 SPID 值和\<y > 大于 0，表示具有相同 spid 的子线程。<br /><br /> **BatchID**（对于跟踪标志 1222 为 sbid）。 标识代码执行从中请求锁或持有锁的批处理。 多个活动的结果集 (MARS) 禁用后，BatchID 值为 0。 MARS 启用后，活动批处理的值为 1 到 n。 如果会话中没有活动的批处理，则 BatchID 为 0。<br /><br /> **模式**。 指定线程所请求的、获得的或等待的特定资源的锁的类型。 模式可以为 IS（意向共享）、S（共享）、U（更新）、IX（意向排他）、SIX（意向排他共享）和 X（排他）。<br /><br /> **行编号**（对于跟踪标志 1222 为行）。 列出发生死锁时当前批处理中正在执行的语句的行数。<br /><br /> **Input Buf**（对于跟踪标志 1222 为 inputbuf）。 列出当前批处理中的所有语句。|**Node**。 表示死锁链中的项数。<br /><br /> **List**。 锁所有者可能属于以下列表：<br /><br /> **Grant List**。 枚举资源的当前所有者。<br /><br /> **Convert List**。 枚举尝试将其锁转换为较高级别的当前所有者。<br /><br /> **Wait List**。 枚举对资源的当前新锁请求。<br /><br /> **Statement Type**。 说明线程对其具有权限的 DML 语句的类型（SELECT、INSERT、UPDATE 或 DELETE）。<br /><br /> **Victim Resource Owner**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 选择作为牺牲品来中断死锁循环的参与线程。 选定的线程和所有的现有子线程都将终止。<br /><br /> **Next Branch**。 表示死锁循环中涉及的两个或多个具有相同 SPID 的子线程。|**deadlock victim**。 表示选为死锁牺牲品的任务的物理内存地址（请参阅 [sys.dm_os_tasks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql)）。 如果任务为无法解析的死锁，则它可能为 0（零）。 不能选择正在回滚的任务作为死锁牺牲品。<br /><br /> **executionstack**。 表示发生死锁时正在执行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 代码。<br /><br /> **Priority**。 表示死锁优先级。 在某些情况下，[!INCLUDE[ssDE](../includes/ssde-md.md)]可能在短时间内改变死锁优先级以更好地实现并发。<br /><br /> **logused**。 任务使用的日志空间。<br /><br /> **owner id**。可控制请求的事务的 ID。<br /><br /> **status**。 任务的状态。 为下列值之一：<br /><br /> >> **pending**。 正在等待工作线程。<br /><br /> >> **runnable**。 可以运行，但正在等待量程。<br /><br /> >> **running**。 当前正在计划程序上运行。<br /><br /> >> **suspended**。 执行已挂起。<br /><br /> >> **done**。 任务已完成。<br /><br /> >> **spinloop**。 正在等待自旋锁释放。<br /><br /> **waitresource**。 任务需要的资源。<br /><br /> **waittime**。 等待资源的时间（毫秒）。<br /><br /> **schedulerid**。 与此任务关联的计划程序。 请参阅 [sys.dm_os_schedulers (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **hostname**。 工作站的名称。<br /><br /> **isolationlevel**。 当前事务隔离级别。<br /><br /> **Xactid**。 可控制请求的事务的 ID。<br /><br /> **currentdb**。 数据库的 ID。<br /><br /> **lastbatchstarted**。 客户端进程上次启动批处理执行的时间。<br /><br /> **lastbatchcompleted**。 客户端进程上次完成批处理执行的时间。<br /><br /> **clientoption1 和 clientoption2**。 此客户端连接上的 Set 选项。 这是一个位掩码，包含有关 SET 语句（如 SET NOCOUNT 和 SET XACTABORT）通常控制的选项的信息。<br /><br /> **associatedObjectId**。 表示 HoBT（堆或 b 树）ID。|  
-|资源属性|**RID**。 标识持有锁或请求锁的表中的单行。 RID 表示为 RID: db_id:file_id:page_no:row_no。 例如， `RID: 6:1:20789:0`。<br /><br /> **OBJECT**。 标识持有锁或请求锁的表。 OBJECT 表示为 OBJECT: db_id:object_id。 例如， `TAB: 6:2009058193`。<br /><br /> **KEY**。 标识持有锁或请求锁的索引中的键范围。 KEY 表示为 KEY: db_id:hobt_id（索引键哈希值）。 例如， `KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 标识持有锁或请求锁的页资源。 PAG 表示为 PAG: db_id:file_id:page_no。 例如， `PAG: 6:1:20789`。<br /><br /> **EXT**。 标识区结构。 EXT 表示为 EXT: db_id:file_id:extent_no。 例如， `EXT: 6:1:9`。<br /><br /> **DB**。 标识数据库锁。 **DB 以下列方式之一表示：**<br /><br /> DB: db_id<br /><br /> DB: db_id[BULK-OP-DB]，这标识备份数据库持有的数据库锁。<br /><br /> DB: db_id[BULK-OP-LOG]，这标识此特定数据库的备份日志持有的锁。<br /><br /> **APP**。 标识应用程序资源持有的锁。 APP 表示为 APP: lock_resource。 例如， `APP: Formf370f478`。<br /><br /> **METADATA**。 表示死锁所涉及的元数据资源。 由于 METADATA 具有许多子资源，因此，返回的值取决于已发生死锁的子资源。 例如，元数据。返回 USER_TYPE `user_type_id =` \< *integer_value*>。 有关 METADATA 资源和子资源的详细信息，请参阅 [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 表示死锁所涉及的堆或 b 树。|此跟踪标志没有任何排他。|此跟踪标志没有任何排他。|  
+|资源属性|**RID**。 标识持有锁或请求锁的表中的单行。 RID 表示为 RID: db_id:file_id:page_no:row_no。 例如 `RID: 6:1:20789:0` 。<br /><br /> **OBJECT**。 标识持有锁或请求锁的表。 OBJECT 表示为 OBJECT: db_id:object_id。 例如 `TAB: 6:2009058193` 。<br /><br /> **KEY**。 标识持有锁或请求锁的索引中的键范围。 KEY 表示为 KEY: db_id:hobt_id（索引键哈希值）。 例如 `KEY: 6:72057594057457664 (350007a4d329)` 。<br /><br /> **PAG**。 标识持有锁或请求锁的页资源。 PAG 表示为 PAG: db_id:file_id:page_no。 例如 `PAG: 6:1:20789` 。<br /><br /> **EXT**。 标识区结构。 EXT 表示为 EXT: db_id:file_id:extent_no。 例如 `EXT: 6:1:9` 。<br /><br /> **DB**。 标识数据库锁。 **DB 以下列方式之一表示：**<br /><br /> DB: db_id<br /><br /> DB: db_id[BULK-OP-DB]，这标识备份数据库持有的数据库锁。<br /><br /> DB: db_id[BULK-OP-LOG]，这标识此特定数据库的备份日志持有的锁。<br /><br /> **APP**。 标识应用程序资源持有的锁。 APP 表示为 APP: lock_resource。 例如 `APP: Formf370f478` 。<br /><br /> **METADATA**。 表示死锁所涉及的元数据资源。 由于 METADATA 具有许多子资源，因此，返回的值取决于已发生死锁的子资源。 例如，元数据。返回 USER_TYPE `user_type_id =` \< *integer_value*>。 有关 METADATA 资源和子资源的详细信息，请参阅 [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 表示死锁所涉及的堆或 b 树。|此跟踪标志没有任何排他。|此跟踪标志没有任何排他。|  
   
-###### 跟踪标志 1204 示例  
+###### <a name="trace-flag-1204-example"></a>跟踪标志 1204 示例  
  下面的示例显示启用跟踪标志 1204 时的输出。 在此示例中，节点 1 中的表为没有索引的堆，节点 2 中的表为具有非聚集索引的堆。 节点 2 中索引键在发生死锁时正在进行更新。  
   
 ```  
@@ -750,7 +747,7 @@ Victim Resource Owner:
      Mode: U SPID:55 BatchID:0 ECID:0 TaskProxy:(0x0475E374) Value:0x315d4a0 Cost:(0/380)  
 ```  
   
-###### 跟踪标志 1222 示例  
+###### <a name="trace-flag-1222-example"></a>跟踪标志 1222 示例  
  下面的示例显示启用跟踪标志 1222 时的输出。 在此示例中，一个表为没有索引的堆，另一个表为具有非聚集索引的堆。 在第二个表中，索引键在发生死锁时正在进行更新。  
   
 ```  
@@ -816,14 +813,14 @@ deadlock-list
      waiter id=process689978 mode=U requestType=wait  
 ```  
   
-###### 事件探查器死锁图形事件  
+###### <a name="profiler-deadlock-graph-event"></a>事件探查器死锁图形事件  
  这是 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]中表示死锁所涉及的任务和资源的图形描述的事件。 下面的示例显示启用死锁图形事件时 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 的输出。  
   
  ![逻辑流关系图显示用户进程死锁。](media/udb9-profilerdeadlockgraphc.gif "逻辑流关系图显示用户进程死锁。")  
   
  有关运行详细信息[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]死锁图，请参阅[保存死锁图形&#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)。  
   
-#### 处理死锁  
+#### <a name="handling-deadlocks"></a>处理死锁  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实例选择某事务作为死锁牺牲品时，将终止当前批处理，回滚事务并将错误消息 1205 返回应用程序。  
   
  `Your transaction (process ID #52) was deadlocked on {lock | communication buffer | thread} resources with another process and has been chosen as the deadlock victim. Rerun your transaction.`  
@@ -834,7 +831,7 @@ deadlock-list
   
  应用程序在重新提交其查询前应短暂暂停。 这样会给死锁涉及的另一个事务一个机会来完成并释放构成死锁循环一部分的该事务的锁。 这将把重新提交的查询请求其锁时，死锁重新发生的可能性降到最低。  
   
-#### 将死锁减至最少  
+#### <a name="minimizing-deadlocks"></a>将死锁减至最少  
  尽管死锁不能完全避免，但遵守特定的编码惯例可以将发生死锁的机会降至最低。 将死锁减至最少可以增加事务的吞吐量并减少系统开销，因为只有很少的事务：  
   
 -   回滚，撤消事务执行的所有工作。  
@@ -859,23 +856,23 @@ deadlock-list
   
 -   使用绑定连接。  
   
-##### 按同一顺序访问对象  
+##### <a name="access-objects-in-the-same-order"></a>按同一顺序访问对象  
  如果所有并发事务按同一顺序访问对象，则发生死锁的可能性会降低。 例如，如果两个并发事务先获取 Supplier 表上的锁，然后获取 Part 表上的锁，则在其中一个事务完成之前，另一个事务将在 Supplier 表上被阻塞。 当第一个事务提交或回滚之后，第二个事务将继续执行，这样就不会发生死锁。 将存储过程用于所有数据修改可以使对象的访问顺序标准化。  
   
  ![显示避免死锁的关系图](media/dedlck2.gif "显示避免死锁的关系图")  
   
-##### 避免事务中的用户交互  
+##### <a name="avoid-user-interaction-in-transactions"></a>避免事务中的用户交互  
  避免编写包含用户交互的事务，因为没有用户干预的批处理的运行速度远快于用户必须手动响应查询时的速度（例如回复输入应用程序请求的参数的提示）。 例如，如果事务正在等待用户输入，而用户去吃午餐或甚至回家过周末了，则用户就耽误了事务的完成。 这将降低系统的吞吐量，因为事务持有的任何锁只有在事务提交或回滚后才会释放。 即使不出现死锁的情况，在占用资源的事务完成之前，访问同一资源的其他事务也会被阻塞。  
   
-##### 保持事务简短并处于一个批处理中  
+##### <a name="keep-transactions-short-and-in-one-batch"></a>保持事务简短并处于一个批处理中  
  在同一数据库中并发执行多个需要长时间运行的事务时通常会发生死锁。 事务的运行时间越长，它持有排他锁或更新锁的时间也就越长，从而会阻塞其他活动并可能导致死锁。  
   
  保持事务处于一个批处理中可以最小化事务中的网络通信往返量，减少完成事务和释放锁可能遭遇的延迟。  
   
-##### 使用较低的隔离级别  
+##### <a name="use-a-lower-isolation-level"></a>使用较低的隔离级别  
  确定事务是否能在较低的隔离级别上运行。 实现已提交读允许事务读取另一个事务已读取（未修改）的数据，而不必等待第一个事务完成。 使用较低的隔离级别（例如已提交读）比使用较高的隔离级别（例如可序列化）持有共享锁的时间更短。 这样就减少了锁争用。  
   
-##### 使用基于行版本控制的隔离级别  
+##### <a name="use-a-row-versioning-based-isolation-level"></a>使用基于行版本控制的隔离级别  
  如果将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON，则在已提交读隔离级别下运行的事务在读操作期间将使用行版本控制而不是共享锁。  
   
 > [!NOTE]  
@@ -885,13 +882,13 @@ deadlock-list
   
  实现这些隔离级别可使得在读写操作之间发生死锁的可能性降至最低。  
   
-##### 使用绑定连接  
+##### <a name="use-bound-connections"></a>使用绑定连接  
  使用绑定连接，同一应用程序打开的两个或多个连接可以相互合作。 可以像主连接获取的锁那样持有次级连接获取的任何锁，反之亦然。 这样它们就不会互相阻塞。  
   
-### 锁分区  
+### <a name="lock-partitioning"></a>锁分区  
  对于大型计算机系统，在经常被引用的对象上放置的锁可能会变成性能瓶颈，因为获取和释放锁对内部锁资源造成了争用。 锁分区通过将单个锁资源拆分为多个锁资源而提高了锁性能。 此功能只适用于拥有 16 个或更多 CPU 的系统，它是自动启用的，而且无法禁用。 只有对象锁可以分区。拥有子类型的对象锁不能分区。 有关详细信息，请参阅 [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。  
   
-#### 了解锁分区  
+#### <a name="understanding-lock-partitioning"></a>了解锁分区  
  锁任务访问几个共享资源，其中两个通过锁分区进行优化：  
   
 -   **调节锁**。 它控制对锁资源（例如行或表）的访问。  
@@ -904,7 +901,7 @@ deadlock-list
   
      获取调节锁后，锁结构将存储在内存中，然后即可对其进行访问和可能的修改。 将锁访问分布到多个资源中有助于消除在 CPU 之间传输内存块的需要，这有助于提高性能。  
   
-#### 实现和监视锁分区  
+#### <a name="implementing-and-monitoring-lock-partitioning"></a>实现和监视锁分区  
  默认情况下，对于具有 16 个或更多 CPU 的系统，锁分区是打开的。 启用锁分区后，将在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 错误日志中记录一条信息性消息。  
   
  获取已分区资源的锁时：  
@@ -919,7 +916,7 @@ deadlock-list
   
  在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 中的 Locks 事件下，BigintData1 列为每个锁分区资源提供锁分区 ID。  
   
-#### 使用锁分区  
+#### <a name="working-with-lock-partitioning"></a>使用锁分区  
  以下代码示例说明了锁分区。 在这些示例中，为了显示一个具有 16 个 CPU 的计算机系统上的锁分区行为，在两个不同的会话中执行了两个事务。  
   
  这些 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句创建了后续示例中使用的测试对象。  
@@ -940,7 +937,7 @@ INSERT INTO TestTable VALUES (1);
 GO  
 ```  
   
-##### 示例 A  
+##### <a name="example-a"></a>示例 A  
  会话 1：  
   
  在一个事务中执行一个 `SELECT` 语句。 由于 `HOLDLOCK` 锁提示的原因，此语句将获取并保留一个对此表的意向共享锁（IS 锁）（此例中忽略行锁和页锁）。 IS 锁只能在分配给事务的分区中获取。 对于此示例，假定 IS 锁是在 ID 为 7 的分区中获取的。  
@@ -975,7 +972,7 @@ SELECT col1
     WITH (TABLOCKX);  
 ```  
   
-##### 示例 B  
+##### <a name="example-b"></a>示例 B  
  会话 1：  
   
  在一个事务中执行一个 `SELECT` 语句。 由于 `HOLDLOCK` 锁提示的原因，此语句将获取并保留一个对此表的意向共享锁（IS 锁）（此例中忽略行锁和页锁）。 IS 锁只能在分配给事务的分区中获取。 对于此示例，假定 IS 锁是在 ID 为 6 的分区中获取的。  
@@ -1047,7 +1044,7 @@ BEGIN TRANSACTION
 > [!NOTE]  
 >  对于短期运行的事务，已修改行的版本将可能缓存在缓冲池中，而不会写入 `tempdb` 数据库的磁盘文件中。 如果只是临时需要副本行，它将只是简单地从缓冲池中删除而不会引发 I/O 开销。  
   
-### 读取数据时的行为  
+### <a name="behavior-when-reading-data"></a>读取数据时的行为  
  当在基于行版本控制的隔离下运行的事务读取数据时，读取操作不会获取正被读取的数据上的共享锁（S 锁），因此不会阻塞正在修改数据的事务。 同时，由于减少了所获取的锁的数量，因此最大程度地降低了锁定资源的开销。 使用行版本控制的已提交读隔离和快照隔离旨在提供副本数据的语句级或事务级读取一致性。  
   
  所有查询，包括在基于行版本控制的隔离级别下运行的事务，都在编译和执行期间获取 Sch-S（架构稳定性）锁。 因此，当并发事务持有表的 Sch-M（架构修改）锁时，将阻塞查询。 例如，数据定义语言 (DDL) 操作在修改表的架构信息之前获取 Sch-M 锁。 查询事务，包括在基于行版本控制的隔离级别下运行的事务，都会在尝试获取 Sch-S 锁时被阻塞。 相反，持有 Sch-S 锁的查询将阻塞尝试获取 Sch-M 锁的并发事务。  
@@ -1065,7 +1062,7 @@ BEGIN TRANSACTION
 > [!NOTE]  
 >  即使使用行版本控制的已提交读事务提供了在语句级别上事务一致的数据视图，但此类事务生成或访问的行版本还将保留，直到事务完成时为止。  
   
-### 修改数据时的行为  
+### <a name="behavior-when-modifying-data"></a>修改数据时的行为  
  在使用行版本控制的已提交读事务中，使用阻塞性扫描（其中读取数据值时将在数据行上采用更新锁（U 锁）完成选择要更新的行。 这与不使用行版本控制的已提交读事务相同。 如果数据行不符合更新标准，在该行上将释放更新锁并且将锁定下一行并对其进行扫描。  
   
  在快照隔离下运行的事务对数据修改采用乐观方法：获取数据上的锁后，才执行修改以强制应用约束。 否则，直到数据修改时才获取数据上的锁。 当数据行符合更新标准时，快照事务将验证未被并发事务（在快照事务开始后提交）修改的数据行。 如果数据行已在快照事务以外修改，则将出现更新冲突，同时快照事务也将终止。 更新冲突由[!INCLUDE[ssDE](../includes/ssde-md.md)]处理，无法禁用更新冲突检测。  
@@ -1081,7 +1078,7 @@ BEGIN TRANSACTION
 >   
 >  但是，即使是在这些条件下，更新操作仍将继续验证数据是否未经其他事务修改。 如果数据已被其他事务修改，则快照事务将遭遇更新冲突并终止。  
   
-### 行为摘要  
+### <a name="behavior-in-summary"></a>行为摘要  
  下表概括了使用行版本控制的快照隔离与已提交读隔离之间的差异。  
   
 |“属性”|使用行版本控制的已提交读隔离级别|快照隔离级别|  
@@ -1092,7 +1089,7 @@ BEGIN TRANSACTION
 |如何处理更新。|从行版本恢复到实际的数据，以选择要更新的行并使用选择的数据行上的更新锁。 获取要修改的实际数据行上的排他锁。 没有更新冲突检测。|使用行版本选择要更新的行。 尝试获取要修改的实际数据行上的排他锁，如果数据已被其他事务修改，则出现更新冲突，同时快照事务也将终止。|  
 |有更新冲突检测。|无。|集成支持。 无法禁用。|  
   
-### 行版本控制资源的使用情况  
+### <a name="row-versioning-resource-usage"></a>行版本控制资源的使用情况  
  行版本控制框架支持 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中提供的下列功能：  
   
 -   触发器  
@@ -1111,7 +1108,7 @@ BEGIN TRANSACTION
   
  基于行版本控制的隔离级别增加了数据修改所需的资源。 启用这些选项会导致要复制数据库中要修改的所有数据。 即使没有使用基于行版本控制隔离的活动事务，也将修改前的数据备份在 tempdb 中。 修改后的数据包括一个指向存储在 tempdb 中的修改前的数据的指针。 对于大型对象，只将对象中更改过的部分复制到 tempdb 中。  
   
-#### tempdb 中使用的空间  
+#### <a name="space-used-in-tempdb"></a>tempdb 中使用的空间  
  对于每个[!INCLUDE[ssDE](../includes/ssde-md.md)]实例，tempdb 都必须具有足够的空间以容纳在该实例中为每个数据库生成的行版本。 数据库管理员必须确保 tempdb 具有足够的空间来支持版本存储区。 tempdb 中有两种版本存储区：  
   
 -   联机索引生成版本存储区，用于所有数据库中的联机索引生成操作。  
@@ -1135,7 +1132,7 @@ BEGIN TRANSACTION
   
 -   尝试访问由于 tempdb 完全回滚而未生成的行版本的事务终止，并生成错误消息 3958。  
   
-#### 数据行中使用的空间  
+#### <a name="space-used-in-data-rows"></a>数据行中使用的空间  
  每个数据库行的结尾处最多可以使用 14 个字节记录行版本控制信息。 行版本控制信息包含提交版本的事务的事务序列号和指向版本行的指针。 如果符合下列任何一种条件，则第一次修改行时或插入新行时添加这 14 个字节：  
   
 -   READ_COMMITTED_SNAPSHOT 或 ALLOW_SNAPSHOT_ISOLATION 选项为 ON。  
@@ -1160,7 +1157,7 @@ BEGIN TRANSACTION
   
  减少[填充因子](../relational-databases/indexes/specify-fill-factor-for-an-index.md)可能有助于避免或减少索引页碎片。 若要查看的数据和索引的表或视图的碎片信息，可以使用[DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql)。  
   
-#### 大型对象中使用的空间  
+#### <a name="space-used-in-large-objects"></a>大型对象中使用的空间  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]支持六种数据类型（最多可以容纳大小为 2 GB 的大型字符串）：`nvarchar(max)`、`varchar(max)`、`varbinary(max)`、`ntext`、`text` 和 `image`。 使用这些数据类型的大型字符串存储在一系列与数据行链接的数据片段中。 行版本控制信息存储在用于存储这些大型字符串的每个片段中。 数据片段是表中专用于大型对象的页集合。  
   
  新的大型值添加到数据库中时，系统会为它们分配数据片段，每个片段最多可以存储 8040 个字节的数据。 早期版本的[!INCLUDE[ssDE](../includes/ssde-md.md)]中，每个片段最多可以存储 8080 个字节的 `ntext`、`text` 或 `image` 数据。  
@@ -1171,10 +1168,10 @@ BEGIN TRANSACTION
   
  应该分配足够的磁盘空间来满足此要求。  
   
-#### 监视行版本控制和版本存储区  
+#### <a name="monitoring-row-versioning-and-the-version-store"></a>监视行版本控制和版本存储区  
  为了监视行版本控制、版本存储区和快照隔离进程以了解性能和问题，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了一些工具，包括动态管理视图 (DMV) 和 Windows 系统监视器中的性能计数器。  
   
-##### DMV  
+##### <a name="dmvs"></a>DMV  
  下列 DMV 提供有关 tempdb 的当前系统状态、版本存储区以及使用行版本控制的事务的信息。  
   
  sys.dm_db_file_space_usage。 返回数据库中每个文件的空间使用信息。 有关详细信息，请参阅 [sys.dm_db_file_space_usage (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql)。  
@@ -1198,7 +1195,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_current_snapshot。 返回一个虚拟表，其中显示有当前快照隔离事务启动时的所有活动事务。 如果当前事务正在使用快照隔离，则该函数不返回行。 sys.dm_tran_current_snapshot 类似于 sys.dm_tran_transactions_snapshot，只不过它仅返回当前快照的活动事务。 有关详细信息，请参阅 [sys.dm_tran_current_snapshot (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql)。  
   
-##### 性能计数器  
+##### <a name="performance-counters"></a>性能计数器  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 性能计数器提供有关受 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 进程影响的系统性能的信息。 下列性能计数器监视 tempdb、版本存储区以及使用行版本控制的事务。 这些性能计数器包含在 SQLServer:Transactions 性能对象中。  
   
  **Free Space in tempdb (KB)**。 监视 tempdb 数据库中的可用空间 (KB)。 tempdb 中必须有足够的可用空间来容纳支持快照隔离的版本存储区。  
@@ -1211,9 +1208,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)**。 监视所有版本存储区的大小 (KB)。 此信息有助于确定版本存储区在 tempdb 数据库中所需的空间大小。 监视计数器一段时间，可以获得有用的信息来估计在 tempdb 数据库中所需的额外空间。  
   
- `Version Generation rate (KB/s)`的用户。 监视所有版本存储区中的版本生成速率（KB/秒）。  
+ `Version Generation rate (KB/s)`。 监视所有版本存储区中的版本生成速率（KB/秒）。  
   
- `Version Cleanup rate (KB/s)`的用户。 监视所有版本存储区中的版本清除速率（KB/秒）。  
+ `Version Cleanup rate (KB/s)`。 监视所有版本存储区中的版本清除速率（KB/秒）。  
   
 > [!NOTE]  
 >  Version Generation rate (KB/s) 和 Version Cleanup rate (KB/s) 的信息可以用于预测 tempdb 空间要求。  
@@ -1230,19 +1227,19 @@ BEGIN TRANSACTION
   
  **Transactions**。 监视活动事务的总数， 不包括系统事务。  
   
- `Snapshot Transactions`的用户。 监视活动快照事务的总数。  
+ `Snapshot Transactions`。 监视活动快照事务的总数。  
   
- `Update Snapshot Transactions`的用户。 监视执行更新操作的活动快照事务的总数。  
+ `Update Snapshot Transactions`。 监视执行更新操作的活动快照事务的总数。  
   
- `NonSnapshot Version Transactions`的用户。 监视生成版本记录的活动非快照事务的总数。  
+ `NonSnapshot Version Transactions`。 监视生成版本记录的活动非快照事务的总数。  
   
 > [!NOTE]  
 >  Update Snapshot Transactions 与 NonSnapshot Version Transactions 之和表示参与版本生成的事务的总数。 Snapshot Transactions 与 Update Snapshot Transactions 之差表示只读快照事务数。  
   
-### 基于行版本控制的隔离级别示例  
+### <a name="row-versioning-based-isolation-level-example"></a>基于行版本控制的隔离级别示例  
  下列示例说明使用行版本控制的快照隔离事务与已提交读事务的行为差异。  
   
-#### A. 使用快照隔离  
+#### <a name="a-working-with-snapshot-isolation"></a>A. 使用快照隔离  
  在此示例中，在快照隔离下运行的事务将读取数据，然后由另一事务修改此数据。 快照事务不阻塞由其他事务执行的更新操作，它忽略数据的修改继续从版本化的行读取数据。 但是，当快照事务尝试修改已由其他事务修改的数据时，快照事务将生成错误并终止。  
   
  在会话 1 上：  
@@ -1338,7 +1335,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### B. 使用通过行版本控制的已提交读  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. 使用通过行版本控制的已提交读  
  在此示例中，使用行版本控制的已提交读事务与其他事务并发运行。 已提交读事务的行为与快照事务的行为有所不同。 与快照事务相同的是，即使其他事务修改了数据，已提交读事务也将读取版本化的行。 然而，与快照事务不同的是，已提交读将执行下列操作：  
   
 -   在其他事务提交数据更改后，读取修改的数据。  
@@ -1442,7 +1439,7 @@ ROLLBACK TRANSACTION;
 GO  
 ```  
   
-### 启用基于行版本控制的隔离级别  
+### <a name="enabling-row-versioning-based-isolation-levels"></a>启用基于行版本控制的隔离级别  
  数据库管理员可以通过在 ALTER DATABASE 语句中使用 READ_COMMITTED_SNAPSHOT 和 ALLOW_SNAPSHOT_ISOLATION 数据库选项来控制行版本控制的数据库级别设置。  
   
  将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON 后，用于支持该选项的机制将立即激活。 设置 READ_COMMITTED_SNAPSHOT 选项时，数据库中只允许存在执行 ALTER DATABASE 命令的连接。 在 ALTER DATABASE 完成之前，数据库中不允许有其他打开的连接。 数据库不必处于单用户模式。  
@@ -1480,7 +1477,7 @@ ALTER DATABASE AdventureWorks2012
   
  在 master 数据库、tempdb 数据库或 msdb 数据库中，用户不能将 READ_COMMITTED_SNAPSHOT 选项设置为 ON。  
   
-### 使用基于行版本控制的隔离级别  
+### <a name="using-row-versioning-based-isolation-levels"></a>使用基于行版本控制的隔离级别  
  行版本控制框架在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中始终处于启用状态，并被多个功能使用。 它除了提供基于行版本控制的隔离级别之外，还用于支持对触发器和多个活动结果集 (MARS) 会话的修改，以及 ONLINE 索引操作的数据读取。  
   
  基于行版本控制的隔离级别是在数据库级别上启用的。 访问已启用数据库的对象的任何应用程序可以使用以下隔离级别运行查询：  
@@ -1524,7 +1521,7 @@ ALTER DATABASE AdventureWorks2012
                 ON t1.col1 = t2.col2;  
     ```  
   
-#### 使用基于行版本控制的隔离级别的事务的限制  
+#### <a name="limitations-of-transactions-using-row-versioning-based-isolation-levels"></a>使用基于行版本控制的隔离级别的事务的限制  
  使用基于行版本控制的隔离级别时，请考虑下列限制：  
   
 -   READ_COMMITTED_SNAPSHOT 无法在 tempdb、msdb 或 master 中启用。  
@@ -1562,9 +1559,9 @@ ALTER DATABASE AdventureWorks2012
   
  ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
-## 自定义锁定和行版本控制  
+## <a name="customizing-locking-and-row-versioning"></a>自定义锁定和行版本控制  
   
-### 自定义锁超时  
+### <a name="customizing-the-lock-time-out"></a>自定义锁超时  
  当 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例由于其他事务已拥有资源的冲突锁而无法将锁授予给某个事务时，将阻塞第一个事务，等待现有锁被释放。 默认情况下，没有强制的超时期限，并且除了尝试访问数据（有可能被无限期阻塞）外，没有其他方法可以测试某个资源是否在锁定之前已被锁定。  
   
 > [!NOTE]  
@@ -1581,7 +1578,7 @@ SELECT @@lock_timeout;
 GO  
 ```  
   
-### 自定义事务隔离级别  
+### <a name="customizing-transaction-isolation-level"></a>自定义事务隔离级别  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]的默认隔离级别为 READ COMMITTED。 如果应用程序必须在其他隔离级别运行，则它可以使用以下方法设置隔离级别：  
   
 -   运行 [SET TRANSACTION ISOLATION LEVEL](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) 语句。  
@@ -1650,7 +1647,7 @@ GO
   
  `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`  
   
-### 锁提示  
+### <a name="locking-hints"></a>锁提示  
  可以在 SELECT、INSERT、UPDATE 及 DELETE 语句中为单个表引用指定锁提示。 提示指定 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例用于表数据的锁类型或行版本控制。 当需要对对象所获得锁类型进行更精细控制时，可以使用表级锁提示。 这些锁提示覆盖会话的当前事务隔离级别。  
   
  有关特定锁提示及其行为的详细信息，请参阅[表提示 (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-table)。  
@@ -1712,7 +1709,7 @@ GO
   
 ##  <a name="Advanced"></a> 高级事务信息  
   
-### 嵌套事务  
+### <a name="nesting-transactions"></a>嵌套事务  
  显式事务可以嵌套。 这主要是为了支持存储过程中的一些事务，这些事务可以从已在事务中的进程调用，也可以从没有活动事务的进程中调用。  
   
  下列示例显示了嵌套事务的用途。 `TransProc` 过程强制执行其事务，而不管执行事务的进程的事务模式。 如果在事务活动时调用 `TransProc`，很可能会忽略 `TransProc` 中的嵌套事务，而根据对外部事务采取的最终操作提交或回滚其 INSERT 语句。 如果由不含未完成事务的进程执行 `TransProc`，则在该过程结束时，COMMIT TRANSACTION 将有效地提交 INSERT 语句。  
@@ -1758,7 +1755,7 @@ GO
   
  @@TRANCOUNT函数记录当前事务嵌套级别。 每个 BEGIN TRANSACTION 语句使@TRANCOUNT1。 @ 每个 COMMIT TRANSACTION 或 COMMIT WORK 语句递减@TRANCOUNT1。 ROLLBACK WORK 或没有事务名称的 ROLLBACK TRANSACTION 语句将回滚所有嵌套的事务和 @ 递减@TRANCOUNT为 0。 在一组嵌套事务中使用最外部事务的事务名称的 ROLLBACK TRANSACTION 回滚所有嵌套的事务，并将 @@TRANCOUNT为 0。 如果要在无法确定是否已在事务中，选择@TRANCOUNT以确定它是一个或多个。 如果 @@TRANCOUNT为 0，则不在事务中。  
   
-### 使用绑定会话  
+### <a name="using-bound-sessions"></a>使用绑定会话  
  绑定会话有利于在同一台服务器上的多个会话之间协调操作。 绑定会话允许一个或多个会话共享相同的事务和锁，并可以使用同一数据，而不会有锁冲突。 可以从同一个应用程序内的多个会话中创建绑定会话，也可以从包含不同会话的多个应用程序中创建绑定会话。  
   
  若要参与绑定会话，会话必须调用**sp_getbindtoken**或**srv_getbindtoken** （通过开放式数据服务） 来获取绑定令牌。 绑定令牌是一个字符串，它唯一地标识每个绑定事务。 然后，将绑定令牌发送给要与当前会话绑定的其他会话。 其他会话通过调用 sp_bindsession，并使用从第一个会话中接收到的绑定令牌绑定到事务。  
@@ -1778,7 +1775,7 @@ GO
   
  绑定会话后，每个会话仍保留其隔离级别设置。 使用 SET TRANSACTION ISOLATION LEVEL 更改某个会话的隔离级别设置不会影响绑定到该会话的任何其他会话的设置。  
   
-#### 绑定会话的类型  
+#### <a name="types-of-bound-sessions"></a>绑定会话的类型  
  有两种类型的绑定会话：本地绑定会话和分布式绑定会话。  
   
 -   本地绑定会话  
@@ -1791,17 +1788,17 @@ GO
   
  分布式绑定会话不是用字符串绑定令牌标识，而是用分布式事务标识号标识。 如果某个本地事务中涉及到某个绑定会话，且该会话使用 SET REMOTE_PROC_TRANSACTIONS ON 在远程服务器上执行 RPC，则 MS DTC 将该本地绑定事务自动提升为分布式绑定事务，并且 MS DTC 会话也会启动。  
   
-#### 何时使用绑定会话  
+#### <a name="when-to-use-bound-sessions"></a>何时使用绑定会话  
  在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，绑定会话主要用于开发必须执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句（代表调用它们的进程）的扩展存储过程。 让调用进程在绑定令牌中作为扩展存储过程的一个参数进行传递，可使该过程加入到调用进程的事务空间中，从而将扩展存储过程与该调用进程结合在一起。  
   
  在 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中，使用 CLR 编写的存储过程比扩展存储过程更安全、具有更高的伸缩性并且更稳定。 使用 CLR 存储过程**SqlContext**对象不联接调用会话的上下文**sp_bindsession**。  
   
  绑定会话可以用来开发三层应用程序，在这些应用程序中，业务逻辑合并到在单个业务事务上协同工作的单独程序中。 必须对这些程序进行编码，以仔细协调它们对数据库的访问。 由于两个会话共享同一个锁，因此两个程序不得同时修改同一数据。 在任何时间点，事务中只能有一个会话在执行，不存在并行执行操作。 只能在定义完善的时间点于会话之间切换事务，例如，已完成所有 DML 语句且已检索其结果时。  
   
-### 编写有效的事务  
+### <a name="coding-efficient-transactions"></a>编写有效的事务  
  尽可能使事务保持简短很重要。 当事务启动后，数据库管理系统 (DBMS) 必须在事务结束之前保留很多资源，以保护事务的原子性、一致性、隔离性和持久性 (ACID) 属性。 如果修改数据，则必须用排他锁保护修改过的行，以防止任何其他事务读取这些行，并且必须将排他锁控制到提交或回滚事务时为止。 根据事务隔离级别设置，SELECT 语句可以获取必须控制到提交或回滚事务时为止的锁。 特别是在有很多用户的系统中，必须尽可能使事务保持简短以减少并发连接间的资源锁定争夺。 在有少量用户的系统中，运行时间长、效率低的事务可能不会成为问题，但是在有上千个用户的系统中，将不能忍受这样的事务。 从 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 开始支持延迟持久事务。 延迟持久事务并不保证持续性。 有关详细信息，请参阅主题[事务持续性](../relational-databases/logs/control-transaction-durability.md)。  
   
-#### 编码指导原则  
+#### <a name="coding-guidelines"></a>编码指导原则  
  以下是编写有效事务的指导原则：  
   
 -   不要在事务处理期间要求用户输入。  
@@ -1830,12 +1827,12 @@ GO
   
      这样可以减少锁定的行数，从而减少事务之间的争夺。  
   
-#### 避免并发问题和资源问题  
+#### <a name="avoiding-concurrency-and-resource-problems"></a>避免并发问题和资源问题  
  为了防止并发问题和资源问题，应小心管理隐式事务。 使用隐式事务时，COMMIT 或 ROLLBACK 后的下一个 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句会自动启动一个新事务。 这可能会在应用程序浏览数据时（甚至在需要用户输入时）打开一个新事务。 在完成保护数据修改所需的最后一个事务之后，应关闭隐性事务，直到再次需要使用事务来保护数据修改。 此过程使 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 能够在应用程序浏览数据以及获取用户输入时使用自动提交模式。  
   
  另外，启用快照隔离级别后，尽管新事务不会控制锁，但是长时间运行的事务将阻止从 `tempdb`中删除旧版本。  
   
-### 管理长时间运行的事务  
+### <a name="managing-long-running-transactions"></a>管理长时间运行的事务  
  “长时间运行的事务”是一个未及时提交或回滚事务的活动事务。 例如，如果事务的开始和结束由用户控制，则导致长时间运行事务的一般原因是用户在开始事务之后便离开，而事务等待用户的响应。  
   
  长时间运行的事务可能导致数据库的严重问题，如下所示：  
@@ -1844,7 +1841,7 @@ GO
   
 -   更重要的是，尽管等待事务可能生成很小的日志，但是它无限期阻止日志截断，导致事务日志不断增加并可能填满。 如果事务日志填满，数据库将无法再执行任何更新。 有关详细信息，请参阅[解决事务日志已满&#40;SQL Server 错误 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)，和[的事务日志的&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
-#### 查看长时间运行的事务  
+#### <a name="discovering-long-running-transactions"></a>查看长时间运行的事务  
  若要查看长时间运行的事务，请使用下列方法之一：  
   
 -   **sys.dm_tran_database_transactions**  
@@ -1857,12 +1854,12 @@ GO
   
      通过此语句，您可以标识该事务所有者的用户 ID，因此可以隐性地跟踪该事务的源以得到更加有序的终止（将其提交而非回滚）。 有关详细信息，请参阅 [DBCC OPENTRAN (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-opentran-transact-sql)。  
   
-#### 停止事务  
+#### <a name="stopping-a-transaction"></a>停止事务  
  您可能必须使用 KILL 语句。 但是，在使用此语句时请务必小心，特别是在运行重要的进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql)。  
   
  ![使用顶部的链接的箭头图标](media/uparrow16x16.gif "使用顶部的链接的箭头图标")[中此指南](#Top)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 2005 行版本控制基于事务隔离](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   
  [行版本控制的系统开销](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
  [如何在 SQL Server 2008 中创建自治事务](http://blogs.msdn.com/b/sqlprogrammability/archive/2008/08/22/how-to-create-an-autonomous-transaction-in-sql-server-2008.aspx)  

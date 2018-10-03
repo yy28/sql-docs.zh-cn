@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40393983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091117"
 ---
 # <a name="cube-space"></a>多维数据集空间
   “多维数据集空间”是多维数据集属性层次结构的成员与多维数据集的度量值的乘积。 因此，多维数据集空间由多维数据集中所有属性层次结构成员和多维数据集的度量值的组合乘积确定，并且定义多维数据集的最大大小。 需要特别注意的是，此空间包括属性层次结构成员的所有可能组合；甚至包括在真实世界可能会认定为不可能的组合，例如城市是巴黎而国家/地区是英国、西班牙、日本、印度或其他地方的组合。  

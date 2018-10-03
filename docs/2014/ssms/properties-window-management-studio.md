@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - modifying properties
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 430e196f295b0a648f4d18b9da8e7884e8b5c778
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 24b026183748ef6ca89b37eee0ed261e5886a856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099544"
 ---
 # <a name="properties-window-management-studio"></a>属性窗口 (Management Studio)
   使用此窗口可查看选定元素的属性。 还可以使用“属性”窗口查看文件、项目和解决方案的属性。 在“视图”菜单上单击“属性窗口”，即可显示“属性”窗口。  

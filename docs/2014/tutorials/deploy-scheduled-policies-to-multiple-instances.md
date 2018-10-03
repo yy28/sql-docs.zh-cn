@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
-caps.latest.revision: 6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ebabe1d982f427002eea31f09541cd40654bcfc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0e98af473babc84863c8e0a1610107843ca76d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128267"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>将计划的策略部署到多个实例
   通过使用已注册的服务器，可以从一个集中位置将计划的策略部署到多个托管服务器。 您可以从本地服务器组或中央管理服务器部署计划的策略。  
@@ -93,7 +90,7 @@ ms.locfileid: "37249527"
     > [!NOTE]  
     >  若要在运行计划的策略之后查看评估结果，请打开目标实例上的“策略历史记录”日志。 若要打开日志，请右键单击**策略管理**，然后单击**查看历史记录**。  
   
-## <a name="summary"></a>“摘要”  
+## <a name="summary"></a>总结  
  本教程介绍了如何针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的一个或多个实例执行最佳实践策略的按需和计划评估。  
   
 ## <a name="next"></a>Next  

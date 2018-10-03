@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621075"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>配置 SQL Server Always On 可用性组以在 Linux 上实现高可用性
 
@@ -68,6 +66,8 @@ ms.locfileid: "39082709"
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>创建 AG
+
+在本部分中的示例说明如何创建使用 Transact SQL 可用性组。 此外可以使用 SQL Server Management Studio 可用性组向导。 使用向导创建 AG 时，它将返回错误时将副本联接到可用性组。 若要解决此问题，请授予`ALTER`， `CONTROL`，和`VIEW DEFINITIONS`到所有副本上可用性组上的 pacemaker。 后主副本上授予权限，将节点联接到可用性组通过向导，但若要正常运行，请授予权限的所有副本上的高可用性。
 
 对于高可用性配置，以确保自动故障转移，可用性组要求至少三个副本。 以下配置之一可以支持高可用性：
 
@@ -192,6 +192,13 @@ ms.locfileid: "39082709"
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>将辅助副本联接到可用性组
 
+Pacemaker 用户需要`ALTER`， `CONTROL`，和`VIEW DEFINITION`上所有副本的可用性组的权限。 若要授予权限，请运行以下 TRANSACT-SQL 脚本后立即添加到可用性组中之后，在主副本和每个辅助副本上创建可用性组。 在运行该脚本之前，替换`<pacemakerLogin>`pacemaker 用户帐户的名称。
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 以下 TRANSACT-SQL 脚本将 SQL Server 实例加入名为 AG `ag1`。 为环境更新脚本。 每个承载辅助副本的 SQL Server 实例上运行以下 TRANSACT-SQL 加入可用性组。
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 >在配置群集，并将可用性组添加为群集资源之后，不能使用 TRANSACT-SQL 进行故障转移可用性组资源。 Linux 上的 SQL Server 群集资源与此操作系统的耦合性不及 Windows Server 故障转移群集 (WSFC) 上的高。 SQL Server 服务不知道此群集的存在。 所有业务流程都通过群集管理工具完成。 在 RHEL 或 Ubuntu 中使用`pcs`。 在 SLES 中使用`crm`。 
 
 >[!IMPORTANT]
->如果可用性组群集资源，其中强制故障转移到异步副本的数据丢失不起作用的当前版本没有已知的问题。 此问题将在即将发布的版本中得到解决。 手动或自动故障转移到同步副本会成功。 
+>如果可用性组群集资源，其中强制故障转移到异步副本的数据丢失不起作用的当前版本没有已知的问题。 此问题将在即将发布的版本中得到解决。 手动或自动故障转移到同步副本会成功。
 
 
 ## <a name="next-steps"></a>后续步骤

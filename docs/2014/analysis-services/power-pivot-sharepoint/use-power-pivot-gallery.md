@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113587"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 库
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库是一种专用的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
   
 > [!NOTE]  
->  根据配置您的服务器的方式，您可能会在特定文档的预览区域中看到警告或错误消息。 在 Excel 工作簿设置为只要打开它就自动刷新其数据时，可能会显示消息。 如果 Excel Services 配置为显示“数据刷新时警告”错误消息，则数据刷新警告消息将以预览图像出现。 场或服务管理员可以修改配置设置，以允许显示实际工作表的预览。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+>  根据配置您的服务器的方式，您可能会在特定文档的预览区域中看到警告或错误消息。 在 Excel 工作簿设置为只要打开它就自动刷新其数据时，可能会显示消息。 如果 Excel Services 配置为显示“数据刷新时警告”错误消息，则数据刷新警告消息将以预览图像出现。 场或服务管理员可以修改配置设置，以允许显示实际工作表的预览。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="bkmk_top"></a> 本主题内容  
   

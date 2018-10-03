@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_xml_handles
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5ccfe2818779f41badf60908b6496653d242f96
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 959e43a965a3a64eaa39bd20cd9147d074e73296
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799695"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -66,7 +63,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**row_count**|**bigint**|该文档句柄以前的所有 OPENXML 调用返回的行数。|  
 |**dormant_duration_ms**|**bigint**|自上次 OPENXML 调用以来经过的时间（毫秒）。 如果未调用 OPENXML，则返回起经过的毫秒**sp_xml_preparedocumen**t 调用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  生存期**sql_handle**用来检索执行调用的 SQL 文本**sp_xml_preparedocument**长于缓存用来执行查询的计划。 如果查询文本在缓存中不可用，则无法使用函数结果中提供的信息来检索数据。 如果您正在运行多个大型批处理，则可能出现上述情况。  
   
 ## <a name="permissions"></a>Permissions  

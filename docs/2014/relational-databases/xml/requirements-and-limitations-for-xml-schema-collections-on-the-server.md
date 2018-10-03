@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - identifiers [XML schema collections]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 83
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 886837ca2a6ec7176519df698856452e974359b7
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 79bff5e280731a52681c36ec4935e8935d460071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889304"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073147"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>在服务器上使用 XML 架构集合的要求和限制
   XML 架构定义语言 (XSD) 验证具有某些限制使用的 SQL 列`xml`数据类型。 下表提供有关这些限制的详细信息，还提供了修改 XSD 架构的准则以使它可以与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一起使用。 本部分中的主题提供有关使用这些特定限制和准则的其他信息。  
