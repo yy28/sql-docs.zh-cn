@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bb6025b8cf196d45fe0a6c9ac5cf0c19aa54013e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105707"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 函数（报表生成器和 SSRS）
   返回指定作用域内行数的运行计数。  
@@ -38,7 +35,7 @@ RowNumber(scope)
  *作用域*  
  (`String`) 的数据集、 数据区域或组或为 null 的名称 (`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，它指定在其中计算行数的上下文。 `Nothing` 指定最外层的上下文中，通常为报表数据集。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `RowNumber` 返回指定作用域内的行计数的运行值一样[RunningValue](report-builder-functions-runningvalue-function.md)返回聚合函数的运行值。 指定作用域时，需要指定何时将行计数重新设置为 1。  
   
  *scope* 不能是表达式。 *scope* 必须是包含作用域。 典型的从最外层到最内层包容的作用域是报表数据集、数据区域、行组或列组。  

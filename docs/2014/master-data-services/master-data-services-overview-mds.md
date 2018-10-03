@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-caps.latest.revision: 24
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31402ae63b4e4f87a437d260ad6b12a7ccd7723
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066177"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概述
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，模型是你的主数据结构中的最高级别的容器。 创建一个模型来管理类似数据的组，例如管理联机产品数据。 模型包含一个或多个实体，而实体包含属于数据记录的成员。  

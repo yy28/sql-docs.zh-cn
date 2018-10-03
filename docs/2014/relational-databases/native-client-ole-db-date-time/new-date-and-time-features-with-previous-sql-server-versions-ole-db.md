@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125488"
 ---
-# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>新的日期和时间功能与 SQL Server 早期版本 (OLE DB)
+# <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>SQL Server 早期版本的新日期和时间功能 (OLE DB)
   本主题介绍预期的行为时使用增强的日期和时间功能的客户端应用程序的版本与通信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，并在客户端使用的版本进行编译时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端早于[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]发送到服务器的命令支持增强的日期和时间功能。  
   
 ## <a name="down-level-client-behavior"></a>下级客户端行为  
@@ -41,7 +38,7 @@ ms.locfileid: "37420177"
 |DBTYPE_DBTIME||Time(7)|失败 – 无效的时间文字。|“确定”|  
 |DBTYPE_DBTIMESTAMP|||失败 – 无效的时间文字。|“确定”|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|“确定”|“确定”|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|“确定”|“确定”|  
+|DBTYPE_DBTIMESTAMP||datetime2(7)|“确定”|“确定”|  
 |DBTYPE_DBDATE|Smalldatetime|date|“确定”|“确定”|  
 |DBTYPE_DBTIMESTAMP|||时间字段设置为零。|如果时间字段非零值，则由于字符串截断将失败 IRowsetChange。|  
 |DBTYPE_DBTIME||Time(0)|“确定”|“确定”|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420177"
  允许对新的日期/时间类型使用所有比较运算符，因为这些比较运算符显示为字符串类型，而不是显示为日期/时间类型。  
   
 ## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

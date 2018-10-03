@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.exportpackage.f1
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bb36260542709ad9c1776f8bd7f00ae037fa039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269335"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116720"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>“导出包”对话框 UI 参考
   可以使用 **中的** “导出包” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包导出到其他位置并根据需要修改包的保护级别。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **包位置**  
  选择要将包导出到的存储区的类型。 可用选项包括：  
   

@@ -4,21 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: cd91a80d322fb8048489ffead0bcbbeaf7e00c08
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743815"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成测试用例准备 (OracleToSQL)
 向导的最后一页显示的测试用例说明和测试中涉及的对象的信息。 此外，在此页上，可以设置测试执行选项。  

@@ -1,14 +1,11 @@
 ---
-title: core.sp_purge_data (TRANSACT-SQL) |Microsoft 文档
+title: core.sp_purge_data (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 002ba9d499039651eecdd2d05c92cda63c9dab62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cbcd8616fc743ee749b3adb9b30f343939fa7f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239257"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819235"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  基于保留策略从管理数据仓库中删除数据。 此过程通过 mdw_purge_data 每日执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对管理数据仓库的代理作业与指定的实例相关联。 可以使用此存储过程从管理数据仓库中执行数据的按需删除。  
+  基于保留策略从管理数据仓库中删除数据。 此过程由 mdw_purge_data 每日执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理作业对管理数据仓库与指定的实例相关联。 可以使用此存储过程从管理数据仓库中执行数据的按需删除。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,12 +48,12 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>参数  
  [@retention_days =] *retention_days*  
- 管理数据仓库表中的数据的保留天数。 带有时间戳早于数据*retention_days*中删除。 *retention_days*是**smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
+ 管理数据仓库表中的数据的保留天数。 数据带有时间戳早于*retention_days*中删除。 *retention_days*是**smallint**，默认值为 NULL。 如果指定，该值必须是正数。 为 NULL 时，core.snapshots 视图中的 valid_through 列中的值决定了符合删除条件的行。  
   
  [@instance_name =] '*instance_name*  
  收集组实例的名称。 *instance_name*是**sysname**，默认值为 NULL。  
   
- *instance_name*必须是完全限定的实例名称，其中包含计算机名称和窗体中的实例名称*computername*\\*instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
+ *instance_name*必须是完全限定的实例名称，其中包含计算机名称和实例名称，格式*computername*\\*instancename*。 为 NULL 时，使用本地服务器上的默认实例。  
   
  [@collection_set_uid = ] '*collection_set_uid*'  
  收集组的 GUID。 *collection_set_uid*是**uniqueidentifier**，默认值为 NULL。 为 NULL 时，将删除所有收集组中的限定行。 若要获取此值，请查询 syscollector_collection_sets 目录视图。  
@@ -68,14 +64,14 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  此过程将基于保留期选择 core.snapshots 视图中符合删除条件的行。 符合删除条件的所有行将从 core.snapshots_internal 表中删除。 删除位于前面的行将在所有管理数据仓库表中触发级联删除操作。 通过使用 ON DELETE CASCADE 子句可以完成此操作，该子句是为用于存储收集的数据的所有表定义的。  
   
- 每个快照及其关联的数据都将在显式事务中删除，然后提交。 因此，如果已手动停止该清除操作，或指定的值@duration超出，仅未提交的数据保持。 此数据可以在下一次运行作业时删除。  
+ 每个快照及其关联的数据都将在显式事务中删除，然后提交。 因此，如果手动停止清除操作，或指定的值@duration超出时，仅未提交的数据将保留。 此数据可以在下一次运行作业时删除。  
   
  必须在管理数据仓库数据库的上下文中执行此过程。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**mdw_admin** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -90,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. 指定保留期和持续时间值  
- 下面的示例从管理数据仓库中删除超过 7 天的数据。 此外，@duration参数指定，因此该操作将运行不超过 5 分钟。  
+ 下面的示例从管理数据仓库中删除超过 7 天的数据。 此外，@duration参数指定，因此该操作将运行时间不超过 5 分钟。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -99,7 +95,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. 指定实例名称和收集组  
- 下面的示例从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的给定收集组的管理数据仓库中删除数据。 因为@retention_days未指定，则 core.snapshots 视图中的 valid_through 列中的值用于确定适合删除收集组的行。  
+ 下面的示例从指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的给定收集组的管理数据仓库中删除数据。 因为@retention_days未指定，core.snapshots 视图中的 valid_through 列中的值用于确定收集组中符合删除条件的行。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -112,7 +108,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

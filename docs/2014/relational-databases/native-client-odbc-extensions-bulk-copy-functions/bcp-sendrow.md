@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_sendrow
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_sendrow function
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
-caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2810dd25a14f35ed275a7d1117fc21d7946cc90e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055761"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
   将一行数据从程序变量发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -49,7 +46,7 @@ hdbc
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Bcp_sendrow**函数生成的行从程序变量，并将其发送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  然后再调用**bcp_sendrow**，您必须进行到调用[bcp_bind](bcp-bind.md) ，指定包含行数据的程序变量。  

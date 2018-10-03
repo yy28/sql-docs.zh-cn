@@ -1,56 +1,53 @@
 ---
-title: ADO 事件模型示例 （VC + +） |Microsoft 文档
+title: ADO 事件模型示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614445"
 ---
-# <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 （VC + +）
-Visual c + + 部分[ADO 事件实例化语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)常规说明如何实例化 ADO 事件模型。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
+# <a name="ado-events-model-example-vc"></a>ADO 事件模型示例 (VC++)
+Visual c + + 部分[ADO 事件实例化的语言](../../../ado/guide/data/ado-event-instantiation-by-language.md)提供了如何实例化 ADO 事件模型的一般说明。 以下是实例化创建的环境中的事件模型的特定示例 **#import**指令。  
   
- 概括介绍使用**adoint.h**作为方法签名的参考。 但是，一般的说明中的一些详细信息作为使用略微 **#import**指令：  
+ 使用一般的说明**adoint.h**作为方法签名的引用。 但是，在一般的说明中的一些详细信息作为使用略微 **#import**指令：  
   
--   **#Import**指令解析**typedef**的方法签名数据类型以及到其基本窗体的修饰符。  
+-   **#Import**指令解析**typedef**的方法签名的数据类型，并向其基本窗体的修饰符。  
   
--   必须覆盖的纯虚方法的前缀为"**raw_**"。  
+-   必须覆盖的纯虚方法以前缀"**raw_**"。  
   
  某些代码只是反映编码样式。  
   
--   将指针与**IUnknown**由**建议**方法通过调用显式获取**QueryInterface**。  
+-   指向指针**IUnknown**由**Advise**方法显式获取通过调用**QueryInterface**。  
   
--   你不需要进行显式编码中的类定义的析构函数。  
+-   不需要进行显式编码中的类定义的析构函数。  
   
--   你可能想要代码的 QueryInterface、 AddRef 和发布版更可靠的实现。  
+-   您可能想要代码更强大的 QueryInterface、 AddRef 和 Release 的实现。  
   
 -   **__Uuidof()** 指令广泛使用，以获取接口 Id。  
   
  最后，该示例包含一些工作代码。  
   
--   该示例将记录为一个控制台应用程序。  
+-   该示例编写为控制台应用程序。  
   
--   应插入您自己的代码注释，在"`// Do some work`"。  
+-   应插入你自己的代码注释，在"`// Do some work`"。  
   
--   所有事件处理程序的默认不执行任何操作，且取消进一步的通知。 应插入相应的代码，你的应用程序，并允许通知，如果需要。  
+-   所有事件处理程序的默认不执行任何操作，并取消进一步的通知。 应插入相应的代码使应用程序，并根据需要允许通知。  
   
 ```  
 // ADO_Events_Model_Example.cpp  

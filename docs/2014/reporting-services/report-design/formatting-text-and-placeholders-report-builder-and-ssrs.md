@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - "10132"
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b395410bfe5a5a8a1dad97260c766500c0e814e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111739"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>设置文本和占位符的格式（报表生成器和 SSRS）
   文本框可以是数据区域中包含以下内容的报表项或独立单元：文本、计算字段、指向数据库中字段的指针或前面所有三项的组合。 您可以混合字体和颜色、添加加粗和倾斜样式以及使用段落样式（如对齐和悬挂缩进）。 可以设置整个文本框的格式，也可以设置文本框内特定文本、数字、表达式或字段的格式。  

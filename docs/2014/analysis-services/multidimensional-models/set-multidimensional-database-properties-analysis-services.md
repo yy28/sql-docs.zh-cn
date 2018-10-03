@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e08cccf573d86d7904e695afdab289084f65604
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113423"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>设置多维数据库属性 (Analysis Services)
   可在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库设计器中配置许多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 数据库属性。  

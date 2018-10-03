@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b64202ccd2b5f420eceeb0287407656dde1cefe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ca2338983aae168dce33bd0cd21b37ccac6e9fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051337"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>创建数据源视图（数据挖掘基础教程）
   数据源视图是在某个数据源的基础上生成的，并且定义可在您的挖掘结构中使用的数据的子集。 您还可以使用数据源视图来添加列、创建计算列和聚合以及添加命名视图。 通过数据源视图，可以选择与项目相关的数据，建立表之间的关系，以及修改数据的结构，而不必修改原始的数据源。 有关详细信息，请参阅 [多维模型中的数据源视图](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  

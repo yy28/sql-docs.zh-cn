@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - aggregate functions [CLR integration]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 - UDTs [CLR integration], user-defined aggregates
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93163efb9de969bbca62b46b0f23e8df36b5fa8e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 44aee43742fdc451012a9516249c0558b3ce0d35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354559"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129176"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>CLR 用户定义聚合的要求
   只要公共语言运行时 (CLR) 程序集中的类型实现了所需的聚合约定，就可以将它作为用户定义聚合函数注册。 此约定由 `SqlUserDefinedAggregate` 属性和聚合约定方法组成。 聚合约定包括保存聚合中间状态的机制以及累计新值的机制，它由四个方法组成：`Init`、`Accumulate`、`Merge` 和 `Terminate`。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](clr-user-defined-aggregate-invoking-functions.md)。  

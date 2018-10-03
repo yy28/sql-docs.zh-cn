@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - validation [CLR integration]
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - invoking UDT methods
 - indexes [CLR integration]
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
-caps.latest.revision: 66
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee6c24bbf6017604d4999964478d3d19a763fb64
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352539"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107367"
 ---
 # <a name="clr-user-defined-types"></a>CLR 用户定义类型
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于创建基于以 .NET Framework 公共语言运行时 (CLR) 创建的程序集而编写的数据库对象。 数据库对象包括触发器、存储过程、函数、聚合函数和类型，它们可以利用 CLR 提供的丰富的编程模型。  

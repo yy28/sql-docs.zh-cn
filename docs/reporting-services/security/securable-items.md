@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - securable items [Reporting Services]
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f51f30d7fc120a1a6531d6ff7a94e3850351772d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 12b9110b50125197cab13a2c8bebee4c984f58b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857206"
 ---
 # <a name="securable-items"></a>安全对象
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用基于角色的安全性来控制对报表服务器上存储的项的访问权限。 通常通过创建一对角色分配来向用户授予对报表服务器的访问权限：  

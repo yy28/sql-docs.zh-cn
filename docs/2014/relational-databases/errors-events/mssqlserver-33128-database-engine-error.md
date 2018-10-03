@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 918ffa93e65fc4b553d979103e40cd7b34d98c2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057787"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
     
@@ -47,7 +44,7 @@ ms.locfileid: "37430326"
   
 |State|Description|  
 |-----------|-----------------|  
-|@shouldalert|RC4 密钥在内置的 encryptbykey() 函数使用。 内置函数返回 NULL。 此消息仅显示在环形缓冲区中。|  
+|1|RC4 密钥在内置的 encryptbykey() 函数使用。 内置函数返回 NULL。 此消息仅显示在环形缓冲区中。|  
 |2|RC4 密钥在内置的 decryptbykey() 函数中使用。 此消息仅显示在环形缓冲区中。|  
 |3|对称密钥正在对不推荐使用的 RC4 密钥加密。 显示给用户和在环形缓冲区中显示。 不能在兼容级别 110 中更改不推荐使用的 RC4 对称密钥。 尝试使用非 RC4 密钥进行加密操作。 如果需要，将向后兼容级别设置为 90 或 100。|  
 |4|不推荐使用的 RC4 对称密钥正在对非 RC4 密钥加密。 显示给用户和在环形缓冲区中显示。 修改应用程序以使用非 RC4 对称密钥或将向后兼容级别设置为 90 或 100。|  

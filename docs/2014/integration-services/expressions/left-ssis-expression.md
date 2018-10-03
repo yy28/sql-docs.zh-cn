@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da89c1a1740d8acd0f284d9cf1475d34ca651792
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41aef87375e50d40ccdec3b6d80782ab028bbf1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252589"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103677"
 ---
 # <a name="left-ssis-expression"></a>LEFT（SSIS 表达式）
   返回从给定字符表达式最左侧开始的指定数量的字符。  
@@ -41,7 +38,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 *number* 大于 *character_expression*的长度，则该函数将返回 *character_expression*。  
   
  如果 *number* 为 0，则该函数返回零长度的字符串。  

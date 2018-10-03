@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2ca9f48a5f5cc545f89b226b869291ecef54907
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 730e203281c4bc964e2b2694e475095280483d58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095777"
 ---
 # <a name="create-relationships"></a>创建关系
   可以使用 **“创建关系”** 对话框，编辑源列与在模糊查找转换编辑器、查找转换编辑器或字词查找转换编辑器中配置的查找表列之间的映射。  
@@ -31,7 +28,7 @@ ms.locfileid: "37269393"
   
  若要了解有关使用 **“创建关系”** 对话框的转换的详细信息，请参阅 [Fuzzy Lookup Transformation](lookup-transformation.md)、 [Lookup Transformation](lookup-transformation.md)和 [Term Lookup Transformation](term-lookup-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入列**  
  从可用输入列的列表中进行选择。  
   

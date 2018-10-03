@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a70454b82f13b6bee786ad660b6e69985bafc8aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6381c494f1f5ecc95eb2e06d34959e43a9133726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139609"
 ---
 # <a name="create-the-sql-server-change-database"></a>创建 SQL Server 更改数据库
   当您启动新建实例向导时，“创建 CDC 数据库”页将打开。 使用“创建 CDC 数据库”页可提供与新的 CDC 实例有关的信息并且创建新的更改数据库。  
@@ -35,7 +32,7 @@ ms.locfileid: "37287693"
   
  有关在“连接到 SQL Server”对话框中输入数据的信息，请参阅 [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Oracle CDC 实例**  
  键入与您正创建的 CDC 实例有关的以下信息。  
   

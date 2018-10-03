@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053007"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在系统上安装 Service Pack 并且尽量缩短镜像数据库停机时间
   本主题介绍了如何在安装 Service Pack 和修补程序时尽量减少镜像服务器的停机时间。 此过程包括按顺序升级参与数据库镜像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实例。 这种形式的更新，这被称为*滚动更新*，停机时间减少为仅一次故障转移。 请注意，对于高性能模式会话中的镜像服务器与主体服务器从地理上遥远，滚动更新可能不合适。  

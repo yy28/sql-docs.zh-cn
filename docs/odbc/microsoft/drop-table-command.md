@@ -1,30 +1,27 @@
 ---
-title: DROP TABLE 命令 |Microsoft 文档
+title: DROP TABLE 命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - drop table command [ODBC]
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 657f175f52f7a098a2c026cf384fdf1b77f43484
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852295"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
-从指定与数据源的数据库中删除一个表并将其从磁盘中删除。  
+指定与数据源的数据库中移除一个表并从磁盘中删除它。  
   
  Visual FoxPro ODBC 驱动程序支持本机 Visual FoxPro 语言语法，此命令。 特定于驱动程序的信息，请参阅备注。  
   
@@ -35,23 +32,23 @@ ms.locfileid: "32900192"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>设置  
+## <a name="settings"></a>“设置”  
  *TableName*  
- 指定要与数据源指定的数据库中删除并从磁盘中删除的表。  
+ 指定从指定的数据源的数据库中删除并从磁盘中删除的表。  
   
  *FileName*  
- 指定用于从磁盘中删除的可用表。  
+ 指定要从磁盘中删除的可用表。  
   
  ?  
- 显示删除对话框中，你可以从中选择一个表，从指定与数据源的数据库中删除，若要从磁盘中删除。  
+ 显示删除对话框中，您可以从中选择一个表，从指定的数据源的数据库中删除，若要从磁盘中删除。  
   
-## <a name="remarks"></a>注释  
- 发出 DROP TABLE 后，还会删除所有主索引、 默认值，以及与该表关联的验证规则。 DROP TABLE 还会影响其他表中的数据库指定与数据源，如果这些表具有规则或要删除的表关联的关系。 从数据库中删除表时，将不再有效的规则和关系。  
+## <a name="remarks"></a>备注  
+ 当发出 DROP TABLE 时，也会删除所有主索引，默认值，以及与该表关联的验证规则。 DROP TABLE 还会影响其他表中的数据库指定与数据源，如果这些表具有规则或与所要删除的表相关联的关系。 当从数据库中删除表时，都不再有效的规则和关系。  
   
 ## <a name="driver-remarks"></a>驱动程序备注  
- 当你的应用程序将 ODBC SQL 语句 DROP TABLE 发送到数据源时，Visual FoxPro ODBC 驱动程序将使用下表中所示的语法 Visual FoxProDROP TABLE 命令转换为命令。  
+ 当你的应用程序将发送到数据源的 ODBC SQL 语句删除表时，Visual FoxPro ODBC 驱动程序将使用下表中所示的语法的 Visual FoxProDROP TABLE 命令转换为该命令。  
   
 |ODBC 语法|数据源|Visual FoxPro 语法|  
 |-----------------|-----------------|--------------------------|  
-|DROP TABLE*基本表名称*|数据库 （.dbc 文件）|删除表*TableName*删除|  
-||可用的表 （.dbf 文件） 的目录|擦除*dbfName*<br /><br /> 擦除*cdxName*<br /><br /> 擦除*fptName*|
+|DROP TABLE*基础表名称*|数据库 （.dbc 文件）|删除表*TableName*删除|  
+||可用表 （.dbf 文件） 的目录|擦除*dbfName*<br /><br /> 擦除*cdxName*<br /><br /> 擦除*fptName*|

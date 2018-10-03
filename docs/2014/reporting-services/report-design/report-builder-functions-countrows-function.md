@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 86b8b79fc5bcac1842a4fae82535afdff06c305e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0d844f9f58b22a2982c19ca0347bd75f41da1a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106899"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows 函数（报表生成器和 SSRS）
   返回指定作用域内的行数，包括含有 Null 值的行。  
@@ -44,7 +41,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回`Integer`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `CountRows` 对指定范围内，其中包括具有 null 值行的所有行进行都计数。  
   
  *scope* 的值不能是表达式，并且必须引用当前作用域或包含作用域。  

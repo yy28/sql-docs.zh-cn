@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb0063ac9887d12b8ebeaf329c044f4974e49607
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a415a5f735e731efe3f3ae8b282f8ce2a1ad2eba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155830"
 ---
 # <a name="html-device-information-settings"></a>HTML 设备信息设置
   下表列出了以 HTML 格式呈现时的设备信息设置。  
@@ -50,7 +47,7 @@ ms.locfileid: "37177215"
 |**ReplacementRoot(\*)**|在 ReportViewer 控件之外呈现时预置在报表中的所有钻取、切换和书签链接之前的字符串。 例如，可使用此设置将用户的单击操作重定向到某个自定义页。|  
 |**ResourceStreamRoot(\*)**|此字符串预置在所有图像资源的 URL 之前，如用于切换或排序的图像。|  
 |**部分**|要呈现的报表的页码。 值为 `0` 指示将呈现报表的所有部分。 默认值是 `1`。|  
-|**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如，http://\<servername>/resources/companyimages）。|  
+|**StreamRoot (\*)**|一个路径，用于添加在由报表服务器返回的 HTML 报表中 IMG 元素的 **src** 属性的值之前。 默认情况下，报表服务器提供此路径。 可以使用此设置为报表中的图像指定根路径（例如， http://\<servername>/resources/companyimages）。|  
 |**StyleStream**|指示是否将样式和脚本创建为单独的流，而不是在文档中创建它们。 默认值是 `false`。|  
 |`Toolbar`|指示是显示还是隐藏工具栏。 此参数的默认值是`true`。 如果此参数的值是`false`，将忽略所有剩余选项 （文档结构图除外）。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。<br /><br /> 当您使用 URL 访问以呈现报表时，将呈现报表查看器工具栏。 此工具栏不通过 SOAP API 呈现。 但是，`Toolbar`设备信息设置影响的方式显示报表时使用 SOAP`Render`方法。 如果此参数的值是`true`时使用 SOAP 呈现到 HTML，呈现报表中的，仅第一节。 如果值为 `false`，则整个 HTML 报表将呈现为单个 HTML 页。|  
 |`UserAgent`|`user-agent`发出请求，可在 HTTP 请求中的浏览器的字符串。|  

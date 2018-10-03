@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 02/28/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPARMCM.F1
 - SQL11.DTS.DESIGNER.AFPARMCM.F1
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
-caps.latest.revision: 2
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ddde8d5e677dd2cf480ca523c97cfd8e04bf67ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a275b540d6199183475298e6a32940ba272f9bc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169268"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072447"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure 资源管理器连接管理器
 借助 Azure 资源管理器连接管理器，SSIS 包能够使用[服务主体](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)管理 Azure 资源。

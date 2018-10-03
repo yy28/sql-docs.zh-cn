@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.definecolumncollation
 - vdtsql.chm:65561
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db1b76788ea1dbd931eb021f9f3da270d57abfdf
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c48d4fc1d475a07dc9133173418c6474a87f9cab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070417"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>“排序规则”对话框 (Visual Database Tools)
   使用此对话框可为列指定排序规则顺序。 列的排序规则顺序可用在将列值与其他列的值或常量值进行比较的各项操作中。 它还会影响一些字符串函数（如 SUBSTRING 和 CHARINDEX）的行为。 有关列排序规则设置的效果的完整列表，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文档。  

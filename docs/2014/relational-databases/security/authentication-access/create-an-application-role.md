@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.approle.general.f1
 helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
-caps.latest.revision: 26
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9719f784b1fd1e6f088209af40fb8c336ccde0ac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9a46c83c497c8eaeba3873bafef399f924506916
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076257"
 ---
 # <a name="create-an-application-role"></a>创建应用程序角色
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中创建应用程序角色。 应用程序角色可限制用户通过除特定应用程序之外的其他方式访问数据库。 应用程序角色不包含任何用户，因此，在选择 **“应用程序角色”** 时不会显示 **“角色成员”** 列表。  
@@ -72,8 +69,7 @@ ms.locfileid: "43025796"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- 
-  **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
+ **“应用程序– 新建”** 对话框还在两个其他页上提供了选项： **“安全对象”** 和 **“扩展属性”**。  
   
 -   **“安全对象”** 页将列出所有可能的安全对象以及可授予登录名的针对这些安全对象的权限。  
   

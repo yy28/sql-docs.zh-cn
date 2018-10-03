@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - header files [SQL Server Native Client]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0d38f93bb5677ff679ee85b36c9a0cd77377d2a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393821"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141177"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 头文件和库文件
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件随 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一起安装。 开发应用程序时，应将开发所需的所有文件复制到开发环境并进行安装，这一点非常重要。 有关安装和重新分发的详细信息[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，请参阅[安装 SQL Server Native Client](installing-sql-server-native-client.md)。  

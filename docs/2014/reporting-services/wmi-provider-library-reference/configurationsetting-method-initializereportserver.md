@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - InitializeReportServer (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e534aea75ef51802db343765ad0ab00b98007336
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31276958172d94e72c7b6970728bfac968f678aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114327"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 方法 (WMI MSReportServer_ConfigurationSetting)
   初始化指定的报表服务实例。  
@@ -57,7 +54,7 @@ public void InitializeReportServer(string InstallationID,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  调用此方法时，将使用由 *InstallationID*标识的报表服务器的公钥，对访问该报表服务器数据库安全信息的加密密钥进行加密。  
   
  指定报表服务器的公钥必须在先前已写入报表服务器数据库。  

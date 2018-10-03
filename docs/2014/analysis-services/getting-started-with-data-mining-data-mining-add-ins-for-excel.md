@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094127"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>数据挖掘入门（Excel 数据挖掘外接程序）
   数据挖掘是在数据中发现有意义的模式的过程。 数据挖掘是通过传统的商业智能来浏览和理解数据的过程的自然而然的补充。 计算机算法可以处理大量数据，并发现以其他方式可能发现不了的模式和趋势。  

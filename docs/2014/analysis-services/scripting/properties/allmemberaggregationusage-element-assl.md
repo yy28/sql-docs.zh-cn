@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllMemberAggregationUsage Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllMemberAggregationUsage element
 ms.assetid: 264fe9d8-8e9a-4642-8cee-7c2804126926
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35d13952ed0cc77405f1c0518562a67749d1521f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e044340af4ed275af18a3e8dfe788e8a766b542c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074387"
 ---
 # <a name="allmemberaggregationusage-element-assl"></a>AllMemberAggregationUsage 元素 (ASSL)
   控件如何聚合设计器中[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]设计聚合。  
@@ -59,9 +56,9 @@ ms.locfileid: "37252949"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimension](../data-type/dimension-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中的字符串之一。  
   
 |ReplTest1|Description|  
@@ -71,7 +68,7 @@ ms.locfileid: "37252949"
 |*不受限制*|聚合设计器不作任何限制。|  
 |*默认*|与相同*不受限制*。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`AllMemberAggregationUsage`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubeDimension>。  
   
 ## <a name="see-also"></a>请参阅  

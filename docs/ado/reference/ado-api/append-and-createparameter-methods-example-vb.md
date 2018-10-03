@@ -1,13 +1,11 @@
 ---
-title: 追加和 CreateParameter 方法示例 (VB) |Microsoft 文档
+title: Append 和 CreateParameter 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 684c0b96d383558b70176f726cf3f1df992537ea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741915"
 ---
-# <a name="append-and-createparameter-methods-example-vb"></a>追加和 CreateParameter 方法示例 (VB)
-此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法执行具有输入参数的存储的过程。  
+# <a name="append-and-createparameter-methods-example-vb"></a>Append 和 CreateParameter 方法示例 (VB)
+此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)并[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)执行带有输入参数的存储的过程的方法。  
   
 ```  
 'BeginAppendVB  

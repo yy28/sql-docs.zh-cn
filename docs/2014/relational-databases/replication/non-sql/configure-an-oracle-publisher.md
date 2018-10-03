@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66bd7f7e6bc67856a3c5f6e231a2c554a3eb4b29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a84224e68be8b5d4c5ad9fcd3f2be1ddce78fdb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057457"
 ---
 # <a name="configure-an-oracle-publisher"></a>配置 Oracle 发布服务器
   Oracle 发布服务器中的发布的创建方法与典型快照和事务发布相同，但在创建 Oracle 发布服务器中的发布之前，必须先完成下列步骤（本主题详细介绍步骤 1、步骤 3 和步骤 4）：  

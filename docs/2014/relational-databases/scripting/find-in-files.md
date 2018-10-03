@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56fd7e36c7ceee6d3a257bc1b5ad2d71d46d689a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 882e13938e85db653dbe43e859bbc582833d68d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114057"
 ---
 # <a name="find-in-files"></a>在文件中查找
   使用“查找和替换”窗口的 **“在文件中查找”** 选项卡，您可以在指定文件集的代码中搜索字符串或表达式。 在 **“结果选项”** 中所选的“查找结果”窗口将列出找到的匹配项和执行的操作。  

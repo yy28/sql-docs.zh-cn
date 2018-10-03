@@ -5,9 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32ccdd28dc8993107cdc1d5e2a3b5daac618b7f4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1b53839079c2a5cfc1e09788d44b955f5da3da7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401899"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857275"
 ---
 # <a name="cache-transform"></a>缓存转换
   “缓存转换”转换通过将所连接数据源中的数据写入流入缓存连接管理器的数据流，可以为查找转换生成一个引用数据集。 查找转换通过将所连接数据源输入列中的数据与引用数据库中的列进行联接来执行查找。  
@@ -66,7 +63,7 @@ ms.locfileid: "35401899"
   
  若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **缓存连接管理器**  
  使用列表选择现有的缓存连接管理器，或使用“新建”按钮创建新的连接。  
   

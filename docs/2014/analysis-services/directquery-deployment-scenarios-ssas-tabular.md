@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89454dfd53b641401352928ecf8e08b4b23e784c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135177"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 部署方案（SSAS 表格）
   本主题提供 DirectQuery 模型的设计和部署过程的演练。 您可以将 DirectQuery 配置为只使用关系数据（仅限 DirectQuery），也可以将模型配置为在仅使用缓存数据或仅使用关系数据之间进行切换（混合模式）。 本主题说明了两种模式的实现过程，并根据模式和安全配置描述有关查询结果的可能的差异。  

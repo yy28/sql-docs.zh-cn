@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c2f181638b9c995b01d9a5434e7b004241d6fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117987"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>“定位数据库文件”对话框（Analysis Services - 多维数据）
   **“定位数据库文件”** 对话框显示一组可用文件的列表，这些文件位于为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例定义的日志和数据文件夹中。 您可以选择一个列出的文件，如果需要的话，您也可以指定另一个文件夹和文件。 您可以通过执行以下操作之一显示 **“定位数据库文件”** 对话框：  
@@ -30,7 +27,7 @@ ms.locfileid: "37192837"
   
 -   在“还原数据库”对话框的“分区”页上，单击“还原备份分区”选项网格中“备份文件”列上的省略号按钮 (**...**)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择的文件夹**  
  选择一个文件夹，以将“所选路径”设置为所需路径。  
   

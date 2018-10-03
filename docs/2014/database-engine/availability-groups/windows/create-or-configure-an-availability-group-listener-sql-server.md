@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052367"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
   本主题说明如何通过在 *中使用* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 PowerShell 为 AlwaysOn 可用性组创建或配置单个“可用性组侦听器” [!INCLUDE[tsql](../../../includes/tsql-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
@@ -68,14 +65,14 @@ ms.locfileid: "37225897"
   
 ###  <a name="WinPermissions"></a> Windows 权限  
   
-|权限|链接|  
+|Permissions|链接|  
 |-----------------|----------|  
 |托管可用性组的 WSFC 群集的群集对象名称 (CNO) 必须具有“创建计算机对象”权限。<br /><br /> 在 Active Directory 中，CNO 默认不具有显式“创建计算机对象”权限，并且可以创建 10 个虚拟计算机对象 (VCO)。 在创建了 10 个 VCO 后，再创建 VCO 将失败。 您可以通过将权限显式授予 WSFC 群集的 CNO，避免此情况发生。 请注意，您已删除的可用性组的 VCO 并不自动在 Active Directory 中删除，因此，在手动删除它们之前，10 个 VCO 的默认数目限制仍会将其计算在内。<br /><br /> 在某些组织中，安全策略禁止向单独用户帐户授予  “创建计算机对象”权限。|[故障转移群集分步指南：在 Active Directory 中配置帐户](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)中的*为安装此群集的人员配置帐户的步骤*<br /><br /> [故障转移群集分步指南：在 Active Directory 中配置帐户](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)中的*预配置群集名称帐户的步骤*|  
 |如果你的组织要求你为侦听器虚拟网络名称预配置计算机帐户，则你需要具有  “帐户操作员”组的成员资格或域管理员的帮助。<br /><br /> 提示：一般情况下，最简单的方法是不为侦听程序虚拟网络名称预配置计算机帐户。 如果可以，请在运行 WSFC 高可用性向导时自动创建并配置该帐户。|*故障转移群集分步指南：在 Active Directory 中配置帐户* 中的 [为群集服务或应用程序预配置帐户的步骤](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 权限  
   
-|任务|权限|  
+|任务|Permissions|  
 |----------|-----------------|  
 |创建可用性组侦听器|需要 **sysadmin** 固定服务器角色的成员资格，以及 CREATE AVAILABILITY GROUP 服务器权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  
 |修改现有可用性组侦听器|对可用性组要求 ALTER AVAILABILITY GROUP 权限、CONTROL AVAILABILITY GROUP 权限、ALTER ANY AVAILABILITY GROUP 权限或 CONTROL SERVER 权限。|  

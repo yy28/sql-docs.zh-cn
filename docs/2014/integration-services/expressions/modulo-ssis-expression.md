@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '% (modulo operator)'
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3a6261b63b77410cef156b3e968b7af8e6f35c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7f2b131e53b72156e1b0c929bceb379d12fa070
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310087"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123607"
 ---
 # <a name="modulo-ssis-expression"></a>（取模）（SSIS 表达式）
   将第一个数据表达式的值除以第二个数据表达式的值后，提供整数余数。  
@@ -46,7 +43,7 @@ dividend % divisor
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  两个表达式的计算结果必须为有符号或无符号整数数据类型。  
   
  如果任意一个操作数为 Null，则结果为 Null。  

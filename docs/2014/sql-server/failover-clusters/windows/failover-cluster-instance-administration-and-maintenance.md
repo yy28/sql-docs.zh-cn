@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user accounts [SQL Server], failover clustering
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - removing nodes
 - virtual servers [SQL Server], adding nodes
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a954eb61a7cf5b4ed39ca2cd62ab763d753ac3d1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110537"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>故障转移群集实例管理和维护
   维护任务，例如添加或删除节点从现有 AlwaysOn 故障转移群集实例 (FCI) 都通过[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装程序。 其他管理任务（如更改 IP 地址资源、从某些 FCI 情形中恢复）则使用故障转移群集管理器管理单元来完成，该管理单元专用于 Windows Server 故障转移群集 (WSFC) 服务。  

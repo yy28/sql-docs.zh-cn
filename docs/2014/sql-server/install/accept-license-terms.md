@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - license terms
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Registration Information page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Registration Information page
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
-caps.latest.revision: 38
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b060499f9b3a008e0106455afde5f1a7691d90f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260087"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141557"
 ---
 # <a name="accept-license-terms"></a>接受许可条款
   使用 **安装向导的** “接受许可条款” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以接受该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的许可条款。  
@@ -63,7 +60,7 @@ ms.locfileid: "37260087"
 ## <a name="error-reporting"></a>错误报告  
  使用 **安装向导的** “错误和使用情况报告设置” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页，可以启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的功能错误和使用情况报告功能。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 及其组件，功能使用情况数据收集和错误报告功能在默认情况下已禁用。  
   
  错误报告  

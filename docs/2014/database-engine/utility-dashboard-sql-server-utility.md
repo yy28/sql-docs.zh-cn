@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61519602a7387c11b1374c827628c7063a499ed8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2d423dc8eb00dfce0434c680046f39e0fb9dfa8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101507"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>实用工具面板（SQL Server 实用工具）
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具仪表板中查看数据，请在标有“Utility<UCP_Name>\\(ComputerName\UCP)”的实用工具资源管理器树中选择顶端节点。 该面板包括来自 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的所有托管实例和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具中所有数据层应用程序的摘要和详细信息数据。 若要刷新仪表板中的数据，请在实用工具资源管理器树中右键单击该顶端节点，然后选择“刷新”。  

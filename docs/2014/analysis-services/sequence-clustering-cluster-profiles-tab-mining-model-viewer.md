@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068787"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>顺序分析和聚类分析的“分类配置文件”选项卡（挖掘模型查看器）
   “Microsoft 顺序分析和聚类分析查看器”中的“分类剖面图”提供每个分类中包含的序列的具有颜色编码的视图。  
@@ -30,7 +27,7 @@ ms.locfileid: "37323127"
   
  **有关详细信息：**[Microsoft 序列聚类分析算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[使用 Microsoft 序列分类查看器浏览模型  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   

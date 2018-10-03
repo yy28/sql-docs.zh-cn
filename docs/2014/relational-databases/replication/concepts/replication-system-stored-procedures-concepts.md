@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147487"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，对复制拓扑中所有用户可配置的功能的编程访问是由系统存储过程提供的。 虽然可使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 sqlcmd 命令行实用工具来单独执行存储过程，但编写可执行具有一定逻辑顺序的复制任务的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 脚本文件也有诸多好处。  
@@ -53,7 +50,7 @@ ms.locfileid: "37292267"
   
 -   使用复制向导或  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]的用户。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 有关详细信息，请参阅 [Scripting Replication](../scripting-replication.md)。  
   
 -   使用复制管理对象 (RMO) 以编程方式生成脚本，从而创建 RMO 对象。  
   

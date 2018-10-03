@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
-caps.latest.revision: 31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5517f2962bef05e560697c55348a5372a80aa62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049147"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>将跟踪与 Windows 性能日志数据关联 (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 可以将 Microsoft Windows 系统监视器计数器与相关联[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]事件。 Windows 系统监视器将指定计数器的系统活动记录在性能日志中。  

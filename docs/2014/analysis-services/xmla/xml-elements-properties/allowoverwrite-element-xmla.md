@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllowOverwrite Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllowOverwrite element
 ms.assetid: e7e92481-5f29-47f2-9efd-4e5e60c002bb
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad153d33b57f7fea763666d19e8e0b44fa155c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb0d58570349fbbb17b442ddebc0fd3193531149
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131427"
 ---
 # <a name="allowoverwrite-element-xmla"></a>AllowOverwrite 元素 (XMLA)
   确定是否父级[备份](../xml-elements-commands/backup-element-xmla.md)或[还原](../xml-elements-commands/restore-element-xmla.md)命令尝试覆盖目标文件或数据库。  
@@ -60,9 +57,9 @@ ms.locfileid: "37190897"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[备份](../xml-elements-commands/backup-element-xmla.md)，[还原](../xml-elements-commands/restore-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于 `Backup` 命令，`AllowOverwrite` 元素可确定该命令是否可以覆盖在 `File` 元素中指定的备份文件。  
   
  有关`Restore`元素，`AllowOverwrite`元素可确定命令是否可以覆盖[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库中指定`DatabaseName`元素。  

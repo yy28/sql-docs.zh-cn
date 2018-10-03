@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189824"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071287"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>在报表服务器上配置基本身份验证
   默认情况下，Reporting Services 接受指定 Negotiate 和 NTLM 身份验证的请求。 如果部署中包括使用基本身份验证的客户端应用程序或浏览器，则必须将基本身份验证添加到支持的类型列表中。 此外，若要使用报表生成器，必须启用对报表生成器文件的匿名访问。  
@@ -90,7 +87,7 @@ ms.locfileid: "37189824"
   
 |元素|Required|有效值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。 （默认值）<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|  
+|LogonMethod|用户帐户控制<br /><br /> 如果不指定值，将使用 3。|`2` = 网络登录，针对要对纯文本密码进行身份验证的高性能服务器。<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。 （默认值）<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|  
 |领域|可选|指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|  
 |默认域|可选|指定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果计算机是域的成员，则该域是默认域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|  
   

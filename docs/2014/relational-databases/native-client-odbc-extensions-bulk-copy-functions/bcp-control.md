@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_control
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46e834874b35e81791f027b380ab2f905bc8fbde
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1e20a7ebdffc8972a1c3d1449fd65d2560a1d71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145237"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   更改用于在文件和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间进行大容量复制的各种控制参数的默认设置。  
@@ -140,7 +137,7 @@ iValue
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数设置用于大容量复制操作的各种控制参数，其中包括取消大容量复制之前允许的错误数、要从数据文件中复制的第一批和最后一批的行数和批大小。  
   
  从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制 SELECT 的结果集时，此函数还可用于指定 SELECT 语句。 设置*eOption*为 BCPHINTS，并设置*iValue*要有一个指针指向包含该 SELECT 语句的 SQLTCHAR 字符串。  

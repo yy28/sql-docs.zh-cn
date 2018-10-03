@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.files.f1 in the code
 - sql12.swb.restoredb.files.f1
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 789bc3c3e8ffbc55e63f6aa0d897e3edb98ab7db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158368"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093606"
 ---
 # <a name="restore-database-files-page"></a>还原数据库（“文件”页）
   使用 **“还原数据库”** 对话框的 **“文件”** 页可以管理数据库中您选择要还原的特定文件。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="restore-database-files-as"></a>将数据库文件还原为  
  用来向还原的文件分配新文件路径并进行管理。  

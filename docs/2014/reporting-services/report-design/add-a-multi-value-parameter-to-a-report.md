@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 00ee8c2e88f571e3e9fcf5455a6627c0d7ff65cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1f113778433e13e68b8847e5f54f1d9ae2bdc6e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074456"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>将多值参数添加到报表
   可以将参数添加到报表，以允许用户为参数选择多个值。  

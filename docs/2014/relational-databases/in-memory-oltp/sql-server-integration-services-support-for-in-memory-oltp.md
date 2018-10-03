@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
-caps.latest.revision: 10
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a22740aa92ee21eb76d1b4c3d61e207a9a903119
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ccd4469ef7bb52927213e27e72498afa961e81a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126327"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>对内存中 OLTP 的 SQL Server Integration Services 支持
   你可以使用内存优化的表、引用内存优化表的视图或本机编译的存储过程作为你的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 包的源或目标。 你可以在 SSIS 包的数据流中使用 [ADO NET 源](../../integration-services/data-flow/ado-net-source.md)、 [OLE DB 源](../../integration-services/data-flow/ole-db-source.md)或 [ODBC 源](../../integration-services/data-flow/odbc-source.md) 并配置源组组件以便从内存优化的表或视图检索数据，或指定一个 SQL 语句来执行本机编译的存储过程。 同样，你可以使用 [ADO NET 目标](../../integration-services/data-flow/ado-net-destination.md)、 [OLE DB 目标](../../integration-services/data-flow/ole-db-destination.md)或 [ODBC 目标](../../integration-services/data-flow/odbc-destination.md) 将数据加载到内存优化的表或视图，或指定一个 SQL 语句来执行本机编译的存储过程。  

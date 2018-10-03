@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.bids.converttolegacydeployment.f1
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cb982b23645821f6c24c51b4ce4402336c08ea5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17b3dae4dd2087fcae152718b9333d1b3afb52c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140137"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>“转换为包部署模型”对话框
   使用 **“转换为包部署模型”** 命令可以在检查项目和项目中的每个包与包部署模型是否兼容后将包转换为该模型。 如果包使用项目部署模型特有的功能（如参数），则不能转换该包。  

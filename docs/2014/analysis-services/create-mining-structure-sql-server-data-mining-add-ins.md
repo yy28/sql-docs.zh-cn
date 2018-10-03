@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086337"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>创建挖掘结构（SQL Server 数据挖掘外接程序）
   ![创建挖掘结构按钮，数据挖掘功能区](media/dmc-createstruct.gif "创建挖掘结构按钮、 数据挖掘功能区")  
@@ -113,7 +110,7 @@ ms.locfileid: "37244047"
   
      如果不确定是否将需要使用该列，则可以在挖掘结构中始终包括该列，然后创建一个不使用该列的挖掘模型。 例如，您可以在数据中包括一个电话号码列用于以后引用，但创建一个忽略电话号码的聚类分析模型。 创建分类之后，您可以创建将返回属于特定分类的人员的电话号码的查询。  
   
--   所有算法均都需要**密钥**列。 “键”列中的值必须是唯一的。 一个**Key Time**列是所需仅用于预测或时序模型。 实例时都提供 SQL Server 登录名。  
+-   所有算法均都需要**密钥**列。 “键”列中的值必须是唯一的。 一个**Key Time**列是所需仅用于预测或时序模型。 .  
   
 ### <a name="requirements"></a>要求  
  若要创建数据挖掘结构，必须具有到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的连接。 连接是必需的，即使处理的是临时结构也需要连接。 有关如何创建或更改连接的详细信息，请参阅[连接到源数据&#40;Excel 数据挖掘客户端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  

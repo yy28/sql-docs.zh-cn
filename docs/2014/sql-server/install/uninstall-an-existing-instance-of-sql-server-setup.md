@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42cf94bc46fd8cb31eb11f6afeb9813bc256d657
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9961b074839559bca04d1860084d46fd94ce1b70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187604"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085907"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>卸载现有 SQL Server 实例（安装程序）
   本文介绍如何卸载 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的独立实例。 使用本主题中提供的步骤，您还可以准备系统以便重新安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  

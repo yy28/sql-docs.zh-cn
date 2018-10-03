@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157037"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>规划 Reporting Services 和 Power View 浏览器支持 (Reporting Services 2014)
   在中[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，使用 web 浏览器查看报表和运行报表管理器。 并非所有浏览器都支持所有的报表功能。 本主题将说明对于报表管理器管理功能、查看报表、Visual Studio 中的报表查看器控件的支持和要求。 本主题还将概述对于支持的浏览器的功能可用性、身份验证要求和脚本要求。  
@@ -173,14 +170,14 @@ ms.locfileid: "37164318"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 |**浏览者**|**Windows 8** 和 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 和 **2012 R2**|**Windows Server 2008** 和 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 – 10.9**|**说明**|  
-|**（适用于台式机的 Internet Explorer 11**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 10 （适用于台式机）**|是|是|是|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 9**|不支持|是|不支持|是|是|是|Internet Explorer 支持全部 ReportViewer 功能。|  
-|**Internet Explorer 8.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
-|**Internet Explorer 7.0**|不支持|是|不支持|是|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
-|**Firefox (最新公开发布的版本)**|是|是|是|是|是|不支持|不支持打印和缩放。|  
-|**Safari (最新公开发布的版本)**|不支持|不支持|不支持|不支持|不支持|是|不支持打印和缩放。<br /><br /> 在此浏览器中禁用了用于在参数化报表上选择日期的日历控件。 用户必须在参数提示区域中手动键入要使用的日期。|  
-|**Chrome (最新公开发布的版本)**|是|是|是|是|是|不支持|不支持打印和缩放。|  
+|**（适用于台式机的 Internet Explorer 11**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 10 （适用于台式机）**|用户帐户控制|是|用户帐户控制|不支持|不支持|不支持|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 9**|不支持|用户帐户控制|不支持|用户帐户控制|是|用户帐户控制|Internet Explorer 支持全部 ReportViewer 功能。|  
+|**Internet Explorer 8.0**|不支持|用户帐户控制|不支持|用户帐户控制|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|不支持|用户帐户控制|不支持|用户帐户控制|是<sup>1</sup>|不支持|Internet Explorer 支持全部 ReportViewer 功能。 <sup>1</sup>|  
+|**Firefox (最新公开发布的版本)**|用户帐户控制|是|是|是|用户帐户控制|不支持|不支持打印和缩放。|  
+|**Safari (最新公开发布的版本)**|不支持|不支持|不支持|不支持|不支持|用户帐户控制|不支持打印和缩放。<br /><br /> 在此浏览器中禁用了用于在参数化报表上选择日期的日历控件。 用户必须在参数提示区域中手动键入要使用的日期。|  
+|**Chrome (最新公开发布的版本)**|用户帐户控制|是|是|是|用户帐户控制|不支持|不支持打印和缩放。|  
   
  <sup>1</sup>在标准模式下，Internet Explorer 7.0 和 8.0 不显示在报表中的斜线。 如果在报表中使用斜线，请将 ASP.NET 页设置为在 Internet Explorer 怪异模式下运行。 若要执行此操作，找到\<！DOCTYPE > 在 ASP.NET 页中的标记。 如果，如果使用母板页，可以在 .master 文件中查找它。 此标记类似于以下内容：  
   

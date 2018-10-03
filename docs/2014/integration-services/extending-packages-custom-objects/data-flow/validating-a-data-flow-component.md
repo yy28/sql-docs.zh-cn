@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 545d4b494dc5214d0fa5b1b25f4687a7263330cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 357e3030657933c20715cb334ec66026b3a97adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252449"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154437"
 ---
 # <a name="validating-a-data-flow-component"></a>验证数据流组件
   <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> 基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 方法用于防止执行未正确配置的组件。 使用此方法可验证组件是否具有预期数量的输入和输出对象，组件的自定义属性是否具有可接受的值，以及所需的任何连接是否都已指定。 使用此方法还可以验证输入和输出集合中的列是否具有正确的数据类型，以及是否为组件正确设置了每列的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>。 基类实现通过检查组件的输入列集合并确保该集合中的每一列都引用上游组件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> 中的一列来支持验证过程。  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.dimensionproperties.f1
 helpviewer_keywords:
 - Dimension Properties dialog box
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d73fa2387255a1bba847a2cff30eaa68c518077
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155208"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101467"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>“维度属性”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “维度属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的维度的属性。 在对象资源管理器中右键单击某个维度，并选择“属性”，可以显示“维度属性”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

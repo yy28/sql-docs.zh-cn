@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.parametermapping.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c35360c4cddebecf7f6237071bc430b74f726cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 867ecaedcdcbafb972ccd289b5257fc73b353a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082949"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092367"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>执行 SQL 任务编辑器（“参数映射”页）
   可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
@@ -45,7 +42,7 @@ ms.locfileid: "39082949"
  **参数名称**  
  提供参数名称。  
   
- 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 某些连接管理器类型要求参数名称的第一个字符是\@登录，如特定名称\@Param1 或列名称作为参数名称。  
+ 必须使用数值还是参数名称取决于任务所用的连接管理器类型。 一些连接管理器类型要求，参数名的首字符必须为 \@ 符号（如 \@Param1 等特定名称），或将列名用作参数名。  
   
  **相关主题：**[执行 SQL 任务中的参数和返回代码](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)  
   

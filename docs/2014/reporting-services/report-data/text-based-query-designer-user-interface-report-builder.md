@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10010"
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c596018bcef960d176cf41a49221972d5652f20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2eecd40de68a6678b3011d15fc13f7cf9757022
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111867"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>基于文本的查询设计器用户界面（报表生成器）
   使用基于文本的查询设计器可以用数据源支持的查询语言来指定查询，还可以运行查询并在运行时查看结果。 您可以指定多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句，为自定义数据处理扩展插件指定查询或命令语法，还可以指定指定为表达式的查询。 因为基于文本的查询设计器不会对查询进行预处理，并且能适应任何类型的查询语法，所以成为了众多数据源类型的默认查询设计器工具。  
@@ -40,7 +37,7 @@ ms.locfileid: "37162118"
 ## <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  基于文本的查询设计器为所有命令类型都提供一个单一工具栏。 下表列出了该工具栏中的每个按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 并非所有的数据源类型都支持图形查询设计器。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 sql 和 rdl 文件类型|  
@@ -54,7 +51,7 @@ ms.locfileid: "37162118"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |查询|显示 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询文本。 使用此窗格可以编写或编辑 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查询。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  
@@ -77,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |查询|显示存储过程的名称和所有输入参数。|  
 |结果|显示查询的结果。 若要运行查询，请右键单击任意窗格，然后单击“运行”，或者单击工具栏中的“运行”按钮。|  

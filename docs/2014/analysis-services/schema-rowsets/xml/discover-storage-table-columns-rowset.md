@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 24abb88e-33a9-4ae2-829d-cdef0ff22ec1
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e480f60aa857506a1d192452b299cede3f7161e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 240230784860e9484ebc03ba6740eaf5d56387fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089067"
 ---
 # <a name="discoverstoragetablecolumns-rowset"></a>DISCOVER_STORAGE_TABLE_COLUMNS 行集
   在列级提供有关在 SharePoint 或表格模式下运行的 Analysis Services 数据库使用的存储表的信息。  
@@ -32,9 +29,9 @@ ms.locfileid: "37153148"
   
 |**列名**|**类型指示符**|**限制**|**Description**|  
 |---------------------|------------------------|---------------------|---------------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含表的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`行集，可通过使用此列进行限制。|  
-|`CUBE_NAME`|`DBTYPE_WSTR`|是|指定包含表的多维数据集或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`行集，可通过使用此列进行限制。|  
-|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|是|度量值组的名称。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|用户帐户控制|指定包含表的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_STORAGE_TABLE_COLUMNS`行集，可通过使用此列进行限制。|  
+|`CUBE_NAME`|`DBTYPE_WSTR`|用户帐户控制|指定包含表的多维数据集或模型。<br /><br /> `DISCOVER_STORAGE_TABLES`行集，可通过使用此列进行限制。|  
+|`MEASURE_GROUP_NAME`|`DBTYPE_WSTR`|用户帐户控制|度量值组的名称。|  
 |`DIMENSION_NAME`|`DBTYPE_WSTR`||维度的名称。|  
 |`ATTRIBUTE_NAME`|`DBTYPE_WSTR`||该属性的名称。|  
 |`TABLE_ID`|`DBTYPE_WSTR`||表的 ID。|  

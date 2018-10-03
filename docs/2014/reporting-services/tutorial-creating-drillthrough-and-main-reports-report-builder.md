@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 3428c80e86f510b29ffb875bef604293cb1558a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093817"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
   本教程教您如何创建两种报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 下图显示了将创建的报表。  
@@ -344,10 +341,10 @@ ms.locfileid: "39084039"
   
 1.  在“报表数据”窗格中，展开“参数”。  
   
-2.  右键单击\@ProductProductCategoryName，然后单击**参数属性**。  
+2.  右键单击“\@ProductProductCategoryName”，再单击“参数属性”。  
   
     > [!NOTE]  
-    >  \@名称旁边的字符指示这是一个参数。  
+    >  名称旁边的 \@ 字符指明这是参数。  
   
 3.  在“常规”选项卡中，单击“隐藏”。  
   

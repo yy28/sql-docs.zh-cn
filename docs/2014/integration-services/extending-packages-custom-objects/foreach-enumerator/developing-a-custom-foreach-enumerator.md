@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services]
 - custom foreach enumerators [Integration Services], about custom foreach enumerators
 - foreach enumerators [Integration Services]
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b055244216ef6bc84f0a7448ba3938c1cb1c3bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 07df48880932c5e40c2ce8923b87d5c5ddbef876
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085017"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>开发自定义 ForEach 枚举器
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 使用 Foreach 枚举器可循环访问集合中的项并为每个元素执行相同的任务。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括支持常用集合的各种 Foreach 枚举器，例如文件夹中的所有文件、数据库中的所有表或包变量中存储的所有列表元素。 如果提供的 Foreach 枚举器和集合不能完全满足您的需要，您可以创建自定义 Foreach 枚举器。  

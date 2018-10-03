@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a04bd99b8106615efc7e210c11c281abd4fdaf9f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086829"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855277"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 在本演练中，将创建一个 SQL Server 单元测试，该测试验证多个存储过程的行为。 创建 SQL Server 单元测试可帮助确定可能会引发不正确的应用程序行为的代码缺陷。 可以将 SQL Server 单元测试和应用程序测试作为一组自动执行的测试的一部分来运行。  

@@ -1,32 +1,29 @@
 ---
-title: 目录示例 (VB) |Microsoft 文档
+title: 目录示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Catalog object, Visual Basic example
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7edb3a1f3e2c0767dd320e36a18a69a6fb0f85dd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749572"
 ---
-# <a name="catalog-example-vb"></a>目录 (VB) 示例
-此 Visual Basic 项目创建新多维数据集使用 MDX。 然后，它记录的 Microsoft Word 文档中的多维数据集的结构。  
+# <a name="catalog-example-vb"></a>目录示例 (VB)
+此 Visual Basic 项目中创建新多维数据集使用 MDX。 然后，它介绍在 Microsoft Word 文档中的多维数据集的结构。  
   
 ```  
 Private Sub cmdCreateDocForCube_Click()  

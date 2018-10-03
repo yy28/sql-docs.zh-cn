@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa529b30c25b4a21edd8d34a74c7fdfb5f8bdd64
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 977a4c0b0406a3da51d7f36210e797fc2024d77b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854985"
 ---
 # <a name="xml-source"></a>XML 源
   XML 源读取 XML 数据文件，并用数据填充源输出中的列。  
@@ -135,7 +132,7 @@ ms.locfileid: "35409569"
 ## <a name="xml-source-editor-columns-page"></a>XML 源编辑器（“列”页）
   可以使用“XML 源编辑器”对话框的“列”节点，将输出列映射到外部（源）列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   
@@ -148,7 +145,7 @@ ms.locfileid: "35409569"
 ## <a name="xml-source-editor-error-output-page"></a>XML 源编辑器（“错误输出”页）
   可以使用 **“XML 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

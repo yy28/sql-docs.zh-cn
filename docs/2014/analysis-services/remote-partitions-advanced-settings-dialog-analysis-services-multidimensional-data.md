@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21550167b2850d8e76daa74c0fdb860ca4e98cc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074927"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>“远程分区 - 高级设置”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“远程分区 - 高级设置”对话框，编辑高级设置（如代表维护远程分区的远程 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库的数据源连接字符串），以及使用“还原数据库”对话框将远程分区从远程备份文件还原到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库。 在选择“还原远程分区”选项之后，通过单击某个远程分区的省略号按钮 (**...**)，可以从“还原数据库”对话框的“分区”页显示“远程分区 - 高级设置”对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f897668d21a9f213cf841a688f217a5ff1a9fe02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055760"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>从文本文件导入（SSAS 表格）
   可以通过使用表导入向导从 Microsoft Excel 文件和文本文件中导入数据。  

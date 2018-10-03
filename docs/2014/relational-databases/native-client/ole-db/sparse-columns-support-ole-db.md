@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e545872853953c426504ed22c0972975a9d5c3db
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b286ba7bde145a9a3676f38f329a8efbd932a4cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106374"
 ---
 # <a name="sparse-columns-support-ole-db"></a>稀疏列支持 (OLE DB)
   本主题提供有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 对稀疏列的支持的信息。 有关稀疏列的详细信息，请参阅[SQL Server Native Client 中的稀疏列支持](../features/sparse-columns-support-in-sql-server-native-client.md)。 有关示例，请参阅[显示列和目录元数据对稀疏列&#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
@@ -55,7 +52,7 @@ ms.locfileid: "37418626"
 |IColumnsInfo::GetColumnsInfo|新的 DBCOLUMNFLAGS 标记的值的设置 DBCOLUMNFLAGS_SS_ISCOLUMNSET`column_set`中的列*dwFlags*。<br /><br /> 为 `column_set` 列设置了 DBCOLUMNFLAGS_WRITE。|  
 |IColumsRowset::GetColumnsRowset|为 DBCOLUMN_FLAGS 中的 `column_set` 列设置了新的 DBCOLUMNFLAGS 标记值 DBCOLUMNFLAGS_SS_ISCOLUMNSET。<br /><br /> 对于 `column_set` 列，将 DBCOLUMN_COMPUTEMODE 设置为 DBCOMPUTEMODE_DYNAMIC。|  
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS 返回两个新列：SS_IS_COLUMN_SET 和 SS_IS_SPARSE。<br /><br /> DBSCHEMA_COLUMNS 仅返回不属于 `column_set` 成员的列。<br /><br /> 已添加两个新架构行集：不管 `column_set` 成员身份的稀疏性如何，DBSCHEMA_COLUMNS_EXTENDED 都将返回所有列。 DBSCHEMA_SPARSE_COLUMN_SET 仅返回属于 `column_set` 成员的列。 这些新行集具有与 DBSCHEMA_COLUMNS 相同的列和限制。|  
-|IDBSchemaRowset::GetSchemas|Idbschemarowset:: Getschemas 可用架构行集的列表中包括的新行集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 Guid。|  
+|IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas 将新行集 DBSCHEMA_COLUMNS_EXTENDED 和 DBSCHEMA_SPARSE_COLUMN_SET 的 GUID 包括在可用架构行集的列表中。|  
 |ICommand::Execute|如果**选择\*从***表*是使用，它将返回所有列的不是成员的稀疏`column_set`，外加一个 XML 列包含的所有非 null 列的值成员的稀疏`column_set`，如果存在。|  
 |IOpenRowset::OpenRowset|Iopenrowset:: Openrowset 使用 icommand:: Execute，与相同的列的行集返回与**选择\*** 同一个表的查询。|  
 |ITableDefinition|对于稀疏列或 `column_set` 列，该接口没有更改。 必须进行架构修改的应用程序必须直接执行正确的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Parallel Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c722d8bb1b32e17ef5dc27e8ea0c84b00ff80e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091557"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
   标识父 [Batch](../xml-elements-commands/batch-element-xmla.md) 命令以并行方式运行的命令。  
@@ -54,8 +51,8 @@ ms.locfileid: "37161018"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -71,7 +68,7 @@ ms.locfileid: "37161018"
 |---------------|-----------------|  
 |maxParallel|可选`Integer`属性。 指示要以并行方式运行命令于其上的最大线程数量。 如果未指定或设置为 0，则 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例将根据计算机上可用的处理器数目来确定最优线程数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [属性&#40;XMLA&#41;](xml-elements-properties.md)  

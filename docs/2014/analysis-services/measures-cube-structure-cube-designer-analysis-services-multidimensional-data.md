@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090300"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>度量值（“多维数据集结构”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用 **“度量值”** 窗格，操作多维数据集设计器中的 **“多维数据集结构”** 选项卡上的度量值组和成员。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “度量值”  
  根据所选视图显示多维数据集中包含的度量值组和度量值：  
   
- trEE  
+ 树  
  显示度量值组的树视图，度量值显示为子节点。  
   
  展开度量值组可以查看度量值。 单击所选度量值组或度量值可以分别重命名度量值组或度量值。  

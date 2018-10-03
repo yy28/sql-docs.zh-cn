@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - primary databases [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efe42f33e2e4f40f6fa73edc0918b0181216b27a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149644"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>故障转移到日志传送辅助服务器 (SQL Server)
   如果主服务器实例失败或需要维护，则在出现故障时转移到日志传送辅助服务器将十分有用。  

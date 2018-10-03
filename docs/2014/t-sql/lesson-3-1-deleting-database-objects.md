@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting database objects
@@ -14,12 +12,12 @@ ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5cdb612a422610e9c077aa7cb51bddba43df4216
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034411"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092292"
 ---
 # <a name="deleting-database-objects"></a>删除数据库对象
   若要删除在本教程中创建的所有对象，您只需删除数据库即可。 但是，在本主题中，您将完成下列步骤执行与教程中每项操作相反的操作。  

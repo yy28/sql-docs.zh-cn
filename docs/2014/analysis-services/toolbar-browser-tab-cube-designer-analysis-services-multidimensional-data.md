@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126467"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在设计或浏览多维数据集或其对象或在创建 MDX 查询期间，使用多维数据集设计器的 **“工具栏”** 中的功能可以执行常规操作。 在设计时和查询视图中均可执行的操作包括设置用户上下文、处理对象以及设置默认语言。  
   
  下表列出了 **“工具栏”** 按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
@@ -55,7 +52,7 @@ ms.locfileid: "37300917"
   
 -   **显示聚合**（![“显示聚合”按钮](media/rsqdicon-showaggregations.gif "Show Aggregations button")）  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |选项|Description|  
 |------------|-----------------|  

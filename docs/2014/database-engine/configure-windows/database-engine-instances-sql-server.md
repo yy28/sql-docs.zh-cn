@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157947"
 ---
 # <a name="database-engine-instances-sql-server"></a>数据库引擎实例 (SQL Server)
   实例[!INCLUDE[ssDE](../../includes/ssde-md.md)]是一份`sqlservr.exe`作为操作系统服务运行的可执行文件。 每个实例管理几个系统数据库以及一个或多个用户数据库。 每台计算机都可以运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的多个实例。 应用程序连接到实例，以便在实例管理的数据库中执行任务。  

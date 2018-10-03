@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02cdf6e739ff0feb8c60bec5b9bf3bc4a87ffb7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065687"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安装 Reporting Services 本机模式报表服务器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式报表服务器可从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导安装或从命令行安装。 在安装向导中，您可以选择：1) 安装文件并使用默认设置配置服务器；或 2) 仅安装文件，不通过安装向导配置服务器。  本主题讨论“本机模式默认配置”，其中，安装程序安装并配置报表服务器实例。 安装程序结束后，报表服务器便进入运行状态，可供使用。 本机模式报表服务器作为一个独立的应用程序服务器运行。 本机模式是默认服务器模式。  

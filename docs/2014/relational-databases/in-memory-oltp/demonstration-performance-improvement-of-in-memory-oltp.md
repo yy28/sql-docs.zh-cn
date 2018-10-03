@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2922d77122bdf87616e8869e6e03b29eb9a4cbf0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393610"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127987"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
   此示例通过比较针对内存优化表和传统的基于磁盘的表运行完全相同的 TRANSACT-SQL 查询时响应时间上的差异，演示了使用内存中 OLTP 时的性能改进。 另外，还将创建本机编译存储过程（基于相同的查询），然后运行以演示你通常可在使用本机编译存储过程查询内存优化表时，获取最佳响应时间。 此示例只显示访问内存优化表数据时一个方面的性能改进；执行插入操作时的数据访问效率。 此示例是单线程的，未能利用内存中 OLTP 的并发利益。 使用并发的工作负荷将带来更高的性能提升。  

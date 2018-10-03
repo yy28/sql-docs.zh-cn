@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutMaxPercent element
 ms.assetid: e375cc51-5f9d-4252-98a1-326ca0dbbf83
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53689f28351a4a5505f1c1bc1d4c8a9586074704
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ef3a056404f350ea8b9bfe5d369b9091bad0de9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140262"
 ---
 # <a name="holdoutmaxpercent-element"></a>HoldoutMaxPercent 元素
   指定将用于的测试集所在维持分区在数据源中的事例的最大百分比[MiningStructure](../objects/miningstructure-element-assl.md)元素。 其余事例用于定型。 值为 0 指示对可作为测试集来维持的事例数没有限制。  
@@ -55,9 +52,9 @@ ms.locfileid: "37278143"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 `HoldoutMaxPercent` 和 `HoldoutMaxCases` 的值都指定，则算法会将测试集限制为这两个值中的较小值。  
   
  如果`HoldoutMaxCases`设置为默认值为 0，并且尚未为设置一个值`HoldoutMaxPercent`，该算法使用完整数据集用于定型。  

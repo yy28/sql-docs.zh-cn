@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2218fdb184fb4fe67d110b95c42f10f761ef3975
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098847"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教程：地图报表（报表生成器）
   本教程旨在帮助您了解地图功能，您可以使用该功能针对地理背景显示报表数据。  

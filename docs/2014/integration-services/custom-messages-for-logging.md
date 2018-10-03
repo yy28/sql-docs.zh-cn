@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3929d8c861723c2204214ba66e73ea9268c19cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28e4b5a405279b1aaede6fc9db96cf9024a59b96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148047"
 ---
 # <a name="custom-messages-for-logging"></a>日志记录的自定义消息
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一组丰富的自定义事件来写入包和很多任务的日志项。 使用这些项可以记录预定义的事件或用户定义的消息，供随后分析时使用，从而将有关执行进度、结果和问题的详细信息保存下来。 例如，可以记录大容量插入的开始和结束时间，从而找出包运行时的性能问题。  

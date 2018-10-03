@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Columns Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16e8d446b3ffeb4895bde76a739d7ec63a01337d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131507"
 ---
 # <a name="columns-element-assl"></a>Columns 元素 (ASSL)
   包含与父元素关联的列的集合。  
@@ -58,8 +55,8 @@ ms.locfileid: "37231907"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
   
 |祖先或父级|基数|  
 |------------------------|-----------------|  
@@ -79,7 +76,7 @@ ms.locfileid: "37231907"
 |[MiningModel](../objects/miningmodel-element-assl.md)， [MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
 |[MiningStructure](../objects/miningstructure-element-assl.md)， [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关`DrillThroughAction`元素，`Columns`集合标识包含要执行的操作时，返回的数据的列。  
   
  有关`TableMiningStructureColumn`元素，`Columns`集合只允许一级递归。 换而言之，任何`TableMiningStructureColumn`包括在此集合中的元素不能包含任何`TableMiningStructureColumn`中的元素及其`Columns`集合。  

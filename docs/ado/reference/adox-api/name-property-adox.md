@@ -1,13 +1,11 @@
 ---
-title: Name 属性 (ADOX) |Microsoft 文档
+title: Name 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -41,16 +39,15 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f078f8664ce0386bba6069d771ba880b1c02e026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737185"
 ---
 # <a name="name-property-adox"></a>Name 属性 (ADOX)
 指示对象的名称。  
@@ -58,15 +55,15 @@ ms.locfileid: "35286596"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值。  
   
-## <a name="remarks"></a>Remarks  
- 不必在集合中是唯一名称。  
+## <a name="remarks"></a>备注  
+ 不需要在集合中是唯一名称。  
   
- **名称**属性为读/写上[列](../../../ado/reference/adox-api/column-object-adox.md)，[组](../../../ado/reference/adox-api/group-object-adox.md)，[密钥](../../../ado/reference/adox-api/key-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)， [表](../../../ado/reference/adox-api/table-object-adox.md)，和[用户](../../../ado/reference/adox-api/user-object-adox.md)对象。 **名称**属性为只读上[目录](../../../ado/reference/adox-api/catalog-object-adox.md)，[过程](../../../ado/reference/adox-api/procedure-object-adox.md)，和[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
+ **名称**属性为读/写上[列](../../../ado/reference/adox-api/column-object-adox.md)，[组](../../../ado/reference/adox-api/group-object-adox.md)，[密钥](../../../ado/reference/adox-api/key-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)， [表](../../../ado/reference/adox-api/table-object-adox.md)，并[用户](../../../ado/reference/adox-api/user-object-adox.md)对象。 **名称**属性是只读[目录](../../../ado/reference/adox-api/catalog-object-adox.md)，[过程](../../../ado/reference/adox-api/procedure-object-adox.md)，以及[视图](../../../ado/reference/adox-api/view-object-adox.md)对象。  
   
- 为读/写对象 (**列**，**组**，**密钥**，**索引**，**表**和**用户**对象)，默认值为空字符串 ("")。  
+ 对于读/写对象 (**列**，**组**，**密钥**，**索引**，**表**和**用户**对象)，默认值为空字符串 ("")。  
   
 > [!NOTE]
->  对于密钥，此属性是在只读**密钥**已追加到集合的对象。 对于表，此属性是只读的**表**已追加到集合的对象。  
+>  对于密钥，此属性是只读**密钥**已追加到集合的对象。 对于表，此属性是只读的**表**已追加到集合的对象。  
   
 ## <a name="applies-to"></a>适用范围  
   
@@ -77,6 +74,6 @@ ms.locfileid: "35286596"
 |[表对象 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[用户对象 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [列和表追加方法名称的属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [列和表 Append 方法、 Name 属性示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

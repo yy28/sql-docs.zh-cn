@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Calculation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Calculation element
 ms.assetid: c96e37cf-b7ff-4296-a043-f9a5a5c444ce
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7900d511cb847a98d9b4f037a39864b0b89c93a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c33adc47ad29224753109d1666f0f579d146409
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049877"
 ---
 # <a name="calculation-element-assl"></a>Calculation 元素 (ASSL)
   将计算与[角度来看](perspective-element-assl.md)元素。  
@@ -50,7 +47,7 @@ ms.locfileid: "37261333"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -58,9 +55,9 @@ ms.locfileid: "37261333"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[计算](../collections/calculations-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中，对应的元素为 <xref:Microsoft.AnalysisServices.CalculationType> 和 <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>。  
   
 ## <a name="see-also"></a>请参阅  

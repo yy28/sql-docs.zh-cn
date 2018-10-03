@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 006418a07f393fd50334a2ea9c122cdd92353cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092827"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
   了解群集通过在查看器中浏览模型以获得进一步的序列后，您可以在使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  
@@ -58,7 +55,7 @@ ms.locfileid: "37198297"
   
 |$SEQUENCE|Line Number|“模型”|  
 |---------------|-----------------|-----------|  
-|@shouldalert||Mountain-200|  
+|1||Mountain-200|  
   
  这些结果是什么意思？ 请记住，您没有指定任何输入。 因此，该预测针对整个事例，Analysis Services 会返回最可能的总预测。  
   
@@ -163,7 +160,7 @@ NATURAL PREDICTION JOIN
   
 |$SEQUENCE|Line Number|“模型”|  
 |---------------|-----------------|-----------|  
-|@shouldalert||Touring Tire Tube|  
+|1||Touring Tire Tube|  
 |2||Sport-100|  
 |3||Long-Sleeve Logo Jersey|  
   

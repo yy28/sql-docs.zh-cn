@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24fe0a9aab029226757cc84ef70e4e8da898e9c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbb0d38a4bcab7592893aaa63acb1bbb96dac5c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157577"
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty 元素 (CSDLBI)
   NavigationProperty 元素是一种复杂类型，可扩展 CSDL 成员类型以便在商业智能数据模型中支持导航。  
@@ -33,7 +30,7 @@ ms.locfileid: "37287963"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|CollectionCaption|“否”|用于引用一组导航属性实例的复数名称。<br /><br /> 如果忽略此属性，则使用基本 Member 的 Caption 属性。|  
+|CollectionCaption|否|用于引用一组导航属性实例的复数名称。<br /><br /> 如果忽略此属性，则使用基本 Member 的 Caption 属性。|  
   
 ## <a name="example"></a>示例  
  **表格**  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6539627f9b1fc5fc41b9cc535efd5cb4c5949ecc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b11c64fe270eeff5fad8631d8d75dfd3bd9c60b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135134"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服务应用程序
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 在 SharePoint 管理中心内管理服务应用程序。 “管理”和“属性”页允许您更新服务应用程序的配置及常见管理任务。  
@@ -94,7 +91,7 @@ ms.locfileid: "37153868"
   
 |设置|注释|  
 |-------------|--------------|  
-|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 实例时都提供 SQL Server 登录名。 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅[报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)|  
+|启用执行日志记录|默认值为 TRUE。<br /><br /> 指定报表服务器是否会生成跟踪日志及指定日志保留的天数。 . 这些日志存储在报表服务器计算机上的 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 文件夹中。 每次重新启动该服务时都要启动新的日志文件。 有关日志文件的详细信息，请参阅[报表服务器服务跟踪日志](report-server/report-server-service-trace-log.md)|  
 |保留执行日志的天数|默认值为 60 天。|  
   
  所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 都支持 SharePoint ULS 日志记录。  有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -113,7 +110,7 @@ ms.locfileid: "37153868"
 |设置|注释|  
 |-------------|--------------|  
 |启用报表生成器下载|默认值为 TRUE。<br /><br /> 指定客户端是否能够看到可用于下载报告生成器应用程序的按钮。|  
-|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 若要将 Report Builder 3.0 作为 Click-Once 应用程序启动，请输入以下值：http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
+|报表生成器启动 URL|当报表服务器不使用默认报表生成器 URL 时，可指定自定义 URL。 此设置是可选的。 如果不指定值，将使用默认 URL，它将启动报表生成器。 若要将 Report Builder 3.0 作为 Click-Once 应用程序启动，请输入以下值： http://\<computername>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application。|  
 |启用客户端打印|默认值为 TRUE。<br /><br /> 指定用户是否可以下载提供打印选项的客户端控件。|  
 |编辑会话超时|默认值为 7200 秒。|  
 |编辑会话缓存限制|默认值为 5。|  
@@ -159,7 +156,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
   
  有关详细信息，请参阅[Reporting Services SharePoint 模式的 PowerShell cmdlet](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **指定执行帐户**  
  选择此选项可指定一个帐户。  
   
@@ -175,7 +172,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 电子邮件设置  
  使用此页可指定简单邮件传输协议 (SMTP) 设置，这些设置用于启用报表服务器的报表服务器电子邮件传递功能。 可使用报表服务器电子邮件传递扩展插件通过电子邮件订阅来分发报表或报表处理通知。 报表服务器电子邮件传递扩展插件需要使用 SMTP 服务器并在“发件人:”字段中使用电子邮件地址。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **使用 SMTP 服务器**  
  指定报表服务器电子邮件通过 SMTP 服务器进行路由。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - TableBinding data type
 ms.assetid: 3195dca4-82bf-46b7-a31f-5383586e3573
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 475044a0bcad3c90ffaffa71eeeb6735a37f96c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab697a42fa489152801a98fb9791fcd657bc5762
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059503"
 ---
 # <a name="tablebinding-data-type-assl"></a>TableBinding 数据类型 (ASSL)
   定义一个派生数据类型，该类型表示与表的绑定。  
@@ -52,17 +49,17 @@ ms.locfileid: "37220247"
 |特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[TabularBinding](binding-data-type-assl.md)|  
-|派生数据类型|InclusionThresholdSetting|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[DataSourceID](../properties/id-element-assl.md)， [DbSchemaName](../properties/name-element-assl.md)， [DbTableName](../properties/dbtablename-element-assl.md)|  
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  请注意，在筛选表达式中通过使用嵌套 select 语句引用其他表可能会影响某些数据源的性能。 但设计器可以通过在数据源视图中定义一个命名查询并引用该查询来完全控制 SQL 表达式。  
   
  为分区定义绑定的方法与数据源视图中的分区表的用法无关。  

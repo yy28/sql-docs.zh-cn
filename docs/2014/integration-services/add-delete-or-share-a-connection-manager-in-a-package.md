@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148307"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>在包中添加、删除或共享连接管理器
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括多种连接管理器用于连接到不同的数据源，例如关系数据库、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]数据库以及 CSV 和 XML 格式的文件。 可以在包级别或项目级别创建连接管理器。 在项目级别创建的连接管理器对项目中的所有包可用。 而在包级别创建的连接管理器对该特定包可用。  
@@ -72,7 +69,7 @@ ms.locfileid: "37277403"
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 源编辑器”|“常规”|  
+    |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)|  
@@ -108,7 +105,7 @@ ms.locfileid: "37277403"
   
      随即打开与所选连接管理器类型对应的自定义对话框。 有关连接管理器类型以及可用选项的详细信息，请参阅下面的选项表。  
   
-    |“ODBC 源编辑器”|“常规”|  
+    |“ODBC 源编辑器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)|  

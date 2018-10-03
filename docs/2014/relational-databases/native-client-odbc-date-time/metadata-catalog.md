@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 - catalog metadata [ODBC]
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57a57a1df129f3d8afa07fe2359c8f794e4786a1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff7f94a0daf7ebd62286aa033c63780e25221e85
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136127"
 ---
 # <a name="catalog-metadata"></a>目录元数据
   本主题描述 `SQLColumns` 和 `SQLProcedureColumns` 返回的列元数据，以及 `SQLGetTypeInfo` 返回的数据类型元数据。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  以下列值由 `SQLColumns` 和 `SQLProcedureColumns` 为日期/时间类型返回。  
   
 |参数类型|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  

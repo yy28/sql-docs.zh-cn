@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], about data profiling
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc1acfc6e3eaece880f4ce3242f746a2a15a5c6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a20b4b2ddaee99a9ce6f2f9efa5ffc5dbbc206a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119908"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  

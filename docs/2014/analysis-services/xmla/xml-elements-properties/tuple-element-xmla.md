@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Tuple Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32dc7b75f47acf69a8d16e33bc25ac505b1c9333
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061337"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 元素 (XMLA)
   包含一组 [Member](member-element-xmla.md) 元素，这些元素包含在父 [Tuples](tuples-element-xmla.md) 元素中。  
@@ -53,8 +50,8 @@ ms.locfileid: "37233687"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -64,7 +61,7 @@ ms.locfileid: "37233687"
 |父元素|[元组](tuples-element-xmla.md)|  
 |子元素|[成员](member-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当客户端应用程序设置`AxisFormat`属性设置为*TupleFormat*，则轴将表示为一组元组。 每个 `Axis` 元素都包含一个表示该轴上的元组集的 `Tuples` 元素。 每个元组都是通过使用 `Tuple` 元素来表示的，该元素包含轴上每个层次结构中的 `Member` 元素。  
   
 ## <a name="example"></a>示例  

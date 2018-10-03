@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TDE, SQL Database
@@ -16,12 +14,12 @@ ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0f5a78b0045e004b17c09bc9e87863179e38eee5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049777"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>借助 Azure SQL 数据库实现透明数据加密
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明数据加密 （预览版） 可帮助保护用户免受恶意活动的威胁执行实时加密和解密的数据库、 关联的备份和事务日志文件，而无需更改应用程序。  

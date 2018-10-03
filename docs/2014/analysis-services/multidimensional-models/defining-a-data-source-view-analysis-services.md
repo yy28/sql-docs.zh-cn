@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Source View Wizard
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d7dc1fe18ff942594b070074df853c196d98f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150387"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定义数据源视图 (Analysis Services)
   数据源视图包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多维数据库对象（即多维数据集、维度和挖掘结构）使用的架构的逻辑模型。 数据源视图是统一维度模型 (UDM) 和挖掘结构所使用的那些架构元素的元数据定义，以 XML 格式进行存储。 数据源视图：  

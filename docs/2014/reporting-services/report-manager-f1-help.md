@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133287"
 ---
 # <a name="report-manager-f1-help"></a>报表管理器的 F1 帮助
   下列主题提供有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表管理器的页级帮助。 该应用程序中的每一页都有一个对应的主题。 并非所有页面都可用。 安全设置确定了您可以访问的页面。 若要从报表管理器中访问这些主题，请在主工具栏上单击 **“帮助”** 。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 43da85b3e7435bb3685090ae1f2e80830793b3f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec3d958d709b1b0307b4df9be8a3d05165d0a92a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150197"
 ---
 # <a name="item-level-tasks"></a>项级任务
   项级任务是一个权限的集合，并且这些权限是与报表、文件夹、报表模型、资源或共享数据源有关的。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 还包括应用于整个报表服务器站点的系统级任务。 有关详细信息，请参阅 [系统级任务](tasks-and-permissions-system-level-tasks.md)。 有关任务和权限总体情况的详细信息，请参阅[任务和权限](tasks-and-permissions.md)。  
@@ -34,7 +31,7 @@ ms.locfileid: "37150138"
   
  共享数据集使用与报表相同的权限集。 报表部件使用与资源相同的权限集。  
   
-|任务|应用到的项|权限|  
+|任务|应用到的项|Permissions|  
 |----------|---------------------|-----------------|  
 |使用报表|报表|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  
 |使用报表|共享数据集|读取内容<br /><br /> 读取报表定义<br /><br /> 读取属性|  

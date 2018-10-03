@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data source properties
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c04c4da84040c97656c956698b4e66bd5a6a5862
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056807"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>创建、修改和删除共享数据源 (SSRS)
   共享数据源是一组可供在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器上运行的多个报表、模型和数据驱动订阅引用的数据源连接属性。 共享数据源为随时间推移经常发生变化的数据源属性的管理提供了一种简单的方法。 如果用户帐户或密码发生更改，或者如果将数据库移到其他服务器，则可在一个位置对连接信息进行更新。  

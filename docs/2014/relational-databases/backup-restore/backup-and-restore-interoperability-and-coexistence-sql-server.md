@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - file restores [SQL Server], related features
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], files or filegroups
 - file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 655e4079fdd1bbdeaea6dd99fd5c36a0cac7f762
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155567"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>备份和还原：互操作性和共存 (SQL Server)
   本主题描述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中若干功能的备份和还原注意事项。 这些功能包括：文件还原和数据库启动、联机还原和禁用的索引、数据库镜像以及段落还原和全文索引。  

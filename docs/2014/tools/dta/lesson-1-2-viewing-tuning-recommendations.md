@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f21cb4a4e5142cd0410153daf37b05ef181be9d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052488"
 ---
 # <a name="viewing-tuning-recommendations"></a>查看优化建议
   此任务将用到[优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的优化会话。 使用 MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本优化了 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库后，[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问将在“建议”选项卡中显示优化结果。以下任务介绍了[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问图形用户界面 (GUI) 中的“建议”选项卡，并指导你浏览该选项卡中提供的有关优化会话结果的信息。  
@@ -50,7 +47,7 @@ ms.locfileid: "37157708"
   
 8.  类型`EvaluateMySession`新**会话名称**，然后单击**开始分析**工具栏上的按钮。 可以对新的优化会话重复步骤 2 和步骤 3 以查看其建议。  
   
-## <a name="summary"></a>“摘要”  
+## <a name="summary"></a>总结  
  你已经查看了 MySession 优化会话的“建议”选项卡的内容，并在新的 EvaluateMySession 优化会话中评估了其建议的子集。  
   
  如果在运行会话之后必须更改优化选项，则可能有必要评估优化建议的子集。 例如，如果在指定会话的优化选项时要求[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问考虑索引视图，但在生成了建议后又决定不使用索引视图。 那么，可以使用“操作”菜单上的“评估建议”选项让[!INCLUDE[ssDE](../../includes/ssde-md.md)]优化顾问在不考虑索引视图的情况下重新评估会话。 使用“评估建议”选项时，将假设将以前生成的建议应用于当前物理设计，以获得第二个优化会话的物理设计。  

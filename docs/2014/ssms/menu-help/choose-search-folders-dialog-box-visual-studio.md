@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.lookin
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b4658d8bc6ec0733673f9cc4087e44da962c7733
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0010ab5333237eac6504986f0ac8a042d861e712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095147"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>“选择搜索文件夹”对话框 (Visual Studio)
   使用该对话框，您可以组合、保存和修改自己命名的搜索文件夹集，并指定文件夹的搜索顺序。 若要显示此对话框，请在“在文件中查找”、“在文件中替换”或“查找和替换”窗口上，选择“查找范围”下拉列表旁的“浏览(...)”按钮。  

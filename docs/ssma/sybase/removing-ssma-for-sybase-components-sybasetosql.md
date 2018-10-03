@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6e676ff9adb8d098cf795d7599788bcfa3d0f515
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392697"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744805"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>删除 SSMA for Sybase 组件 (SybaseToSQL)
 完成后将数据库从 Sybase Adaptive Server Enterprise (ASE) 中，为迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可能需要卸载 SSMA 组件。 您可以在任何时候，卸载客户端组件，但不是应卸载扩展包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除非你确信你迁移的数据库不能再使用中的函数**ssma_syb**架构**sysdb**数据库。  

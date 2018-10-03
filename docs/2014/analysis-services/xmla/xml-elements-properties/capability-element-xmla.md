@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Capability Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Capability element
 ms.assetid: 544a733e-77fc-48a0-8f92-9cd1fdbcf824
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5b14b43b41f74c05d433c599b18486c5737b27c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c6fd189a44ec34283e87cd220f2c582f982ffa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105337"
 ---
 # <a name="capability-element-xmla"></a>Capability 元素 (XMLA)
   指示父代中的协议功能的支持[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)标头元素。  
@@ -53,7 +50,7 @@ ms.locfileid: "37201887"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37201887"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ProtocolCapabilities](../xml-elements-headers/protocolcapabilities-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Capability`元素指示一个特定的功能，如二进制或压缩，受包含的任一应用程序`ProtocolCapabilities`SOAP 标头的 SOAP 请求，或由的实例中的标头元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含`ProtocolCapabilities`SOAP 响应的 SOAP 标头中的标头元素。 `Capability` 元素的值为所支持的功能的名称。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持下表所列出的功能。  

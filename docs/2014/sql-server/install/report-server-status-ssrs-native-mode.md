@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8cf6558824461b0de36323f1788933a0cd01815c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de8c0b06607ef2a9716229fff7e972c96c916fca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128617"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>报表服务器状态（SSRS 本机模式）
   使用此页可以查看当前连接的报表服务器实例的有关信息。 此页是报表服务器配置的起始页。 此外还提供了用于配置 URL、服务帐户、报表服务器数据库、报表服务器电子邮件传递、扩展部署和加密密钥的其他页。  
@@ -35,7 +32,7 @@ ms.locfileid: "37292217"
   
  如果连接到报表服务器，但所有页面链接均显示为灰色，请验证是否已启动报表服务器服务。 **报表服务状态：** 应为“已启动”。 还可以使用“管理工具”中的“服务”控制台应用程序检查服务状态。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL Server 实例**  
  显示当前连接的报表服务器实例的有关信息。 报表服务器实例的名称基于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]命名实例。 默认实例为 MSSQLSERVER。 命名实例将是您在安装过程中指定的值。 有关实例的详细信息，请参阅[使用多个版本和 SQL Server 的实例](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。  
   
