@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075087"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中分析（“浏览器”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   **“在 Excel 中分析”** 为多维数据集开发人员提供了一种快速检查项目将如何呈现给最终用户的方式。 使用 **“在 Excel 中分析”** 功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接，以及自动将数据透视表添加到工作表。 此功能将取代 Office Web Control，后者在以前版本的“浏览器”选项卡中提供了一个嵌入的数据透视表。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077577"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
   以下各表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。 若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
@@ -59,7 +56,7 @@ ms.locfileid: "37296037"
 |存储过程源文本中的字节数|批处理大小中的较小者或 250 MB|批处理大小中的较小者或 250 MB|  
 |每个 `varchar(max)`、`varbinary(max)`、`xml`、`text` 或 `image` 列的字节数|2^31-1|2^31-1|  
 |每个 `ntext` 或 `nvarchar(max)` 列的字符数|2^30-1|2^30-1|  
-|每个表的聚集索引数|@shouldalert|@shouldalert|  
+|每个表的聚集索引数|1|1|  
 |GROUP BY、ORDER BY 中的列数|仅受字节数限制|仅受字节数限制|  
 |GROUP BY WITH CUBE 或 WITH ROLLUP 语句中的列数或表达式数目|10|10|  
 |每个索引键的列数<br /><br /> 注意： 如果表包含一个或多个 XML 索引，用户表的聚集键是限制为 15 列因为 XML 列添加到主 XML 索引的聚集键。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，可以将非键列包含在非聚集索引，以避免 16 键列的最大限制。 有关详细信息，请参阅 [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md)。|16|16|  
@@ -73,12 +70,12 @@ ms.locfileid: "37296037"
 |数据库大小|524,272 TB|524,272 TB|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|32,767|32,767|  
 |每个数据库的文件组个数|32,767|32,767|  
-|每个数据库的内存优化数据文件组个数|不支持|@shouldalert|  
+|每个数据库的内存优化数据文件组个数|不支持|1|  
 |每个数据库的文件个数|32,767|32,767|  
 |文件大小（数据）|16 TB|16 TB|  
 |文件大小（日志）|2 TB|2 TB|  
 |每个数据库的内存优化数据文件个数|不支持|4.096|  
-|每个内存优化数据文件的差异文件|不支持|@shouldalert|  
+|每个内存优化数据文件的差异文件|不支持|1|  
 |每个表的外键表引用数<br /><br /> 注意： 尽管表可以包含无限的数量的 FOREIGN KEY 约束，但建议最大值为 253。 根据承载 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的硬件配置，指定额外的 FOREIGN KEY 约束对查询优化器的处理而言可能开销很大。|253|253|  
 |标识符长度（以字符计）|128|128|  
 |每台计算机的实例数|所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本的独立服务器上为 50 个实例。<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 25 个实例在故障转移群集时使用的共享的群集磁盘的存储选项作为群集安装支持[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支持 50 个实例在故障转移群集，如果选择 SMB 文件共享作为你的群集安装的存储选项有关详细信息，请参阅[的硬件和软件要求安装 SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md)。|独立服务器上为 50 个实例。<br /><br /> 在使用共享群集磁盘作为您的群集安装的存储选项时，在故障转移群集上支持 25 个实例。如果您为群集安装选择 SMB 文件共享作为存储选项，则 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在故障转移群集上支持 50 个实例。|  
@@ -97,7 +94,7 @@ ms.locfileid: "37296037"
 |每个数据表的 REFERENCE 个数|253|253|  
 |每个数据表的行数|受可用存储空间限制|受可用存储空间限制|  
 |每个数据库的表数<br /><br /> 注意： 数据库对象包括表、 视图、 存储的过程、 用户定义的函数、 触发器、 规则、 默认值和约束等对象。 数据库中所有对象的数量总和不能超过 2,147,483,647。|受数据库中对象数限制|受数据库中对象数限制|  
-|每个分区表或索引的分区数|1,000<br /><br /> **\*\* 重要\* \* **创建具有超过 1,000 个分区的表或索引可以在 32 位系统上，但不是受支持。|15,000|  
+|每个分区表或索引的分区数|1,000<br /><br /> **\*\* 重要\* \*** 创建具有超过 1,000 个分区的表或索引可以在 32 位系统上，但不是受支持。|15,000|  
 |非索引列的统计信息条数|30,000|30,000|  
 |每个 SELECT 语句的表个数|仅受可用资源限制|仅受可用资源限制|  
 |每个表的触发器数<br /><br /> 注意： 数据库对象包括表、 视图、 存储的过程、 用户定义的函数、 触发器、 规则、 默认值和约束等对象。 数据库中所有对象的数量总和不能超过 2,147,483,647。|受数据库中对象数限制|受数据库中对象数限制|  
@@ -115,9 +112,9 @@ ms.locfileid: "37296037"
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例总数|200*|200*|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实例的用户数据库数（包括数据层应用程序）|50|50|  
 |每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的用户数据库总数|1,000|1,000|  
-|每个数据库的文件组数|@shouldalert|@shouldalert|  
-|每个文件组的数据文件数|@shouldalert|@shouldalert|  
-|每个数据库的日志文件数|@shouldalert|@shouldalert|  
+|每个数据库的文件组数|1|1|  
+|每个文件组的数据文件数|1|1|  
+|每个数据库的日志文件数|1|1|  
 |每台计算机的卷数|3|3|  
   
  * 的托管实例的最大数[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]受[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]实用程序可能根据服务器的硬件配置而有所不同。 有关入门信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。 并非在每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本中均提供 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 实用工具控制点。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -127,7 +124,7 @@ ms.locfileid: "37296037"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象|最大大小/数量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（32 位）|最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
 |------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|每个 DAC 的数据库数|@shouldalert|@shouldalert|  
+|每个 DAC 的数据库数|1|1|  
 |每个 DAC 的对象数*|受数据库中对象数或可用内存限制。|受数据库中对象数或可用内存限制。|  
   
  *限制中包含的对象类型为用户、表、视图、存储过程、用户定义函数、用户定义数据类型、数据库角色、架构和用户定义表类型。  

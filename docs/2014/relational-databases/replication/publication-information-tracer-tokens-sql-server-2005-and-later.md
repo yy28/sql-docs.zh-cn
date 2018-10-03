@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.tracertokens.f1
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ea4849d69bc1552141709180f00d38f1efb72549
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 901905ad17d5788bf0ca6a222083ebef17211656
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072807"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>发布信息，跟踪令牌（事务发布，SQL Server 2005 和更高版本）
   可以使用 **“跟踪令牌”** 选项卡验证连接，以及测量使用事务复制的系统的滞后时间。 将令牌（少量数据）写入发布数据库的事务日志中，就像标记典型的复制事务一样对其进行标记，使用令牌可以执行以下计算：  
@@ -36,7 +33,7 @@ ms.locfileid: "37278913"
   
 -   在应当收到跟踪令牌的订阅服务器中，哪些订阅服务器（如果有）没有收到跟踪令牌？  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], passwords
@@ -20,12 +18,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075727"
 ---
 # <a name="strong-passwords"></a>强密码
   在服务器安全部署中，密码可能是最薄弱的一个环节。 请务必在选择密码时保持高度谨慎。 强密码有以下特征：  
@@ -54,7 +52,7 @@ ms.locfileid: "43025924"
   
 -   以 $ 或 \@ 字符开头。  
   
- 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@ 的用户。 这些字符用于初始化连接或分隔连接值。  
+ 如果用于 OLE DB 或 ODBC 连接字符串，则登录名或密码不能包含以下字符：[] {}() , ; ? * ! \@。 这些字符用于初始化连接或分隔连接值。  
   
 ## <a name="related-content"></a>相关内容  
  [密码策略](password-policy.md)  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data access [SQL Server Native Client], building applications
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb6c7fda2ca253bdbf10773b116b136dd4160784
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8c6f7333b9a0fea3ef0408ed1eea4c8c84287222
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070027"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>使用 SQL Server Native Client 生成应用程序
   开发使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 库的应用程序时，会出现很多问题。 本节中的主题讨论了多个此类问题，包括如何从 MDAC 升级到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client，如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 头文件和库文件，以及可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的各种连接字符串的概述。  

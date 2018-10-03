@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077737"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>“创建处理查询”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “创建处理查询” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“存储选项”** 对话框的 **“通知”** 选项卡中创建处理查询。 处理查询返回的行集包含与 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象相关联的表自上次轮询之后所做的更改，用于增量更新该对象的多维 OLAP (MOLAP) 缓存。 Analysis Services 使用另一种称为轮询查询的查询，来轮询与对象相关联的表并确定该表是否已经更改。 完全更新对象的 MOLAP 缓存时，不需要处理查询。  
@@ -53,7 +50,7 @@ ms.locfileid: "37244097"
   
      对于高级用户，一般查询生成器视图提供了一个更为简单直接的用户界面，用于构造和测试 SQL 查询。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **数据源**  
  为查询指定数据源。  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e9ffea3675f13320d68d5b829cde29272c83f28d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b865adca53c432cc5347fff38d52cfeda5334c7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072687"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 字符串用户定义数据类型 (UDT)
   SQL Server 的 UTF8String 示例说明了用户定义数据类型的实现。 该示例显示了 UTF8 用户定义数据类型的实现，UTF8 用户定义数据类型扩展了数据库的类型系统，允许其存储 UTF8 编码值。 此类型还实现了 Unicode 字符串与 UTF8 字符串之间互相转换的代码。  

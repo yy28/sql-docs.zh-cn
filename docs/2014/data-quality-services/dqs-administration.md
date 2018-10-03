@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dqs administration
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2dd08fce2cc93b62d323aee669f9e5e8b49dffa5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df11b61a3369823d89b9e1b48b5540d9495d1b73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077717"
 ---
 # <a name="dqs-administration"></a>dqs 管理
   使用[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)，您可以管理在 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]上执行的各种 DQS 活动、配置与 DQS 活动有关的服务器级属性、配置 Reference Data Services 设置以及 DQS 日志设置。 通过 **的** 管理 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]功能来执行这些操作。 根据您在 DQS 中的安全访问权限（角色），授权/拒绝您在此区域中执行某些功能。  
@@ -53,8 +50,7 @@ ms.locfileid: "37222667"
 ### <a name="configuration"></a>配置  
  DQS 管理员使用 **中的** “配置” [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 屏幕执行以下操作：  
   
--   
-  **引用数据**：配置引用数据服务提供程序：Microsoft Azure 市场或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Microsoft Azure 市场。  
+-   **引用数据**：配置引用数据服务提供程序：Microsoft Azure 市场或直接引用数据服务提供程序。 在设置引用数据服务提供程序后，可以在域管理活动期间在知识库中使用引用数据映射域/复合域，然后将同一知识库用于数据质量项目中的清理活动。 您还可以使用它指定连接到 Internet 的代理设置以使用 Microsoft Azure 市场。  
   
 -   **常规设置**：指定数据清理和数据匹配的阈值，以及在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中是否启用事件探查的通知。 DQS 在执行数据质量项目中的计算机辅助的清理和匹配活动期间使用这些阈值。  
   

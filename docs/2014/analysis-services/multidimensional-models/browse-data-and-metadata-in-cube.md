@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 319b15dec052cdae73c6b1f1a6c0fed1290d447e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e074a41f6d9f5053562dd7b6be453644cb5fa176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076627"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>浏览多维数据集中的数据和元数据
   可以使用多维数据集设计器中的 **“浏览器”** 选项卡浏览多维数据集数据。 您可以使用此视图查看多维数据集的结构和数据库对象的数据、计算、格式设置和安全性。 可以像最终用户在报告工具或其他客户端应用程序中查看多维数据集一样来快速查看它。 浏览多维数据集数据时，可以查看不同的维度、深化到成员以及通过维度进行切片。  

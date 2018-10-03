@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimal logging [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 956b1af15c2356225d9429bccad6a8d1f4f515e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072217"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
   对于完整恢复模式下的数据库，大容量导入执行的所有行插入操作都会完整地记录在事务日志中。 如果使用完整恢复模式，大型数据导入会导致填充事务日志的速度很快。 相反，对于简单恢复模式或大容量日志恢复模式，大容量导入操作的最小日志记录减少了大容量导入操作填满日志空间的可能性。 另外，最小日志记录的效率也比按完整方式记录日志高。  

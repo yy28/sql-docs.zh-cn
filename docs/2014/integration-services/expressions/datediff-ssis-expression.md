@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03334b761d9c5e9fa479fd939f06089e7aae8c6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04bedeba150a98bbb0ecba04aad6f54f3dd1182d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069587"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF（SSIS 表达式）
   返回两个指定日期之间所跨的日期和时间边界的数目。 *datepart* 参数标识要比较的日期和时间边界。  
@@ -47,7 +44,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>结果类型  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。  
   
 |datepart|缩写形式|  
