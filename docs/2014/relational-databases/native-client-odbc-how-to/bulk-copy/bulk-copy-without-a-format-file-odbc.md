@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], file formats
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6896cc412a01aaa6ce73c80250b15709f78771ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f4298c3cc0283ab268dbf5336fef32ddfb35856f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074007"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>在不使用格式化文件的情况下进行大容量复制 (ODBC)
   此示例显示了如何使用大容量复制函数创建本机模式数据文件，而不带格式化文件。 此示例是面向 ODBC 3.0 版或更高版本开发的。  

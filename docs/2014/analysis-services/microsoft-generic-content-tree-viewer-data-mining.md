@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.contentviewer.f1
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85c2cccfe0d5b578c0faa359ca3c276b654aaa21
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dff4254252523096b187bb2894782fe9eea523be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066939"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般内容树查看器（数据挖掘）
   **“Microsoft 一般内容树查看器”** 以标准化 HTML 表格式显示有关数据挖掘模式的内容的详细信息。 此视图很有用，因为它将公开模型的基础结构，以及有关系数、值的分布等项的详细信息。  
@@ -30,7 +27,7 @@ ms.locfileid: "37286173"
   
  此查看器中显示的信息使用基于挖掘模型的内容架构行集的通用结构。 内容架构行集是用于存储数据挖掘模型的模式、统计信息和其他内容的通用框架。 有关挖掘模型的数据挖掘架构行集中的列的列表，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **节点标题 (唯一 ID)**  
  此窗格显示所选挖掘模型中所有节点的列表。 节点在树中的排列方式随要查看的模型类型的不同而不同。  
   

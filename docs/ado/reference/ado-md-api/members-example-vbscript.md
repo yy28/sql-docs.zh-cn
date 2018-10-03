@@ -1,32 +1,29 @@
 ---
-title: 成员示例 (VBScript) |Microsoft 文档
+title: 成员示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Members collection [ADO MD], VBScript example
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6b4a539ec7a7edeb7085fbad9828cc7229de75c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751725"
 ---
 # <a name="members-example-vbscript"></a>成员示例 (VBScript)
-此示例使用 MDX 查询字符串检索 OLAP 数据，并将生成的单元集写入列跨越功能用于多个维度单元集一个 HTML 表结构。  
+此示例使用 MDX 查询字符串检索 OLAP 数据并将生成的单元集写入到一个 HTML 表结构，用于多个维度单元集的列跨越式功能。  
   
 ```  
 <%@ Language=VBScript %>  

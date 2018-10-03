@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddd050608557d8a721ad986ea5aa5b1eef5dee66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1d4595ee3b5bb01e32fbd733c97ea65488b9dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083747"
 ---
 # <a name="article-issues"></a>项目问题
   **“项目问题”** 页列出了已发现的项目情况以及这些情况导致的所有必需更改。 下表列出了可能出现的问题以及确保复制和现有应用程序正常运行所必需的操作：  

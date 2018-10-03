@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091729"
 ---
 # <a name="dta-utility"></a>dta 实用工具
   **dta** 实用工具是数据库引擎优化顾问的命令提示符版。 通过 **dta** 实用工具，您可以在应用程序和脚本中使用数据库引擎优化顾问功能。  
@@ -154,7 +151,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|使用*database_name* 选项指定的 **database_name** |  
 |*owner_name*|**dbo**<br /><br /> 注意： *owner_name*必须是**dbo**。 如果指定了其他值，则 **dta** 执行将失败并返回错误。|  
-|*table_name*|InclusionThresholdSetting|  
+|*table_name*|None|  
   
  如果使用文件，则指定 .xml 作为其扩展名。 例如，TuningLog.xml。  
   
@@ -338,7 +335,7 @@ dta -n number_of_events -A 0
  **-x**  
  启动优化会话，然后退出。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  按 Ctrl+C 一次可停止优化会话，并可根据 **dta** 此时已完成的分析生成建议。 系统将提示您确定是否要生成建议。 再次按 Ctrl+C 停止优化会话，而不生成建议。  
   
 ## <a name="examples"></a>示例  

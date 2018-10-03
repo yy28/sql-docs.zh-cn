@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_columns
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1107919200b3546274a3a78a89562c9ed715216
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427446"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096917"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   用于设置在以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作为源或目标执行大容量复制时所用的用户文件中找到的列的总数。 [bcp_setbulkmode](bcp-setbulkmode.md)可用来代替 bcp_columns 并[bcp_colfmt](bcp-colfmt.md)。  
@@ -55,7 +52,7 @@ nColumns
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以调用此函数后，才[bcp_init](bcp-init.md)已调用具有有效的文件名称。  
   
  仅当您要使用不同于默认设置的用户文件格式时，才应当调用该函数。 有关默认用户文件格式的说明的详细信息，请参阅**bcp_init**。  

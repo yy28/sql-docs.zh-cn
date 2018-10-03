@@ -1,13 +1,11 @@
 ---
-title: 保存和打开方法的示例 （VC + +） |Microsoft 文档
+title: Save 和 Open 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735985"
 ---
-# <a name="save-and-open-methods-example-vc"></a>保存和打开方法的示例 （VC + +）
-这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)和**打开**方法可以一起使用。  
+# <a name="save-and-open-methods-example-vc"></a>Save 和 Open 方法示例 （VC + +）
+这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)并**打开**方法可以一起使用。  
   
- 假定你在出差进行并想要携带从数据库表。 你在继续之前，你访问数据作为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并将其保存在可移植的窗体中。 当你亲自前往你的目标时，你访问**记录集**用作局部，断开连接**记录集**。 对进行更改**记录集**，然后将其再次保存。 最后，当你回到家时，你重新连接到数据库，并更新与公路所做的更改。  
+ 假定您将在出差并且想要参加巡回赛从数据库表。 在之前，访问将数据作为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并将其保存在可移植的窗体中。 当您在目标中，您可以访问**记录集**为本地，断开连接**记录集**。 进行更改**记录集**，然后再次保存。 最后，您回到家时，您将再次连接到数据库并更新与公路所做的更改。  
   
 ```  
 // BeginSaveCpp.cpp  

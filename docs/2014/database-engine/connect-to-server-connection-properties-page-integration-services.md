@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodts.connectionproperties.f1
 - sql12.ssiseditserverregistration.connectionproperties.f1
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e7ea7d5bafa4e08aa98f9eb8ebfca3dd4811987
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809624"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092767"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>连接到服务器（“连接属性”页）(Integration Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssIS](../includes/ssis-md.md)] 时，此对话框中仅显示“测试”和“保存”。  

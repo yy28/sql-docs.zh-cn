@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.connecttoreplicas.f1
 - sql12.swb.adddatabasewizard.connecttoreplicas.f1
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
-caps.latest.revision: 5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f7282c48e5c31dc4ee71ddb8dee5d828f70a049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085646"
 ---
-# <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>连接到现有的次要副本页 （添加副本向导和添加数据库向导）
+# <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>“连接到现有的次要副本”页（添加副本向导和添加数据库向导）
   本帮助主题介绍 **“连接到现有的辅助副本”** 页的选项。 本主题由 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 的“ [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ”和“ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]”使用。  
   
  **网格列：**  

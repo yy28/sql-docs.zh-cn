@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f322526680b3a91f2fcb7e93e3159f79b79793a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34547b62ecac2a41f9d59d96d8f5c9d99f79b21e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081057"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供了图形查询设计器生成多维表达式 (MDX) 查询和数据挖掘表达式 (DMX) 查询[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据源。 该主题介绍了 MDX 查询设计器。 有关 DMX 查询设计器的详细信息，请参阅[针对 DMX 的 Analysis Services 连接类型&#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)。  
@@ -44,13 +41,13 @@ ms.locfileid: "37323847"
   
  下表列出了查询模式下的窗格：  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
 |“元数据”窗格|显示在选定多维数据集中定义的度量值、关键绩效指标 (KPI) 和维度的层次列表。|  
 |“计算成员”窗格|显示当前定义的可在查询中使用的计算成员。|  
 |“筛选器”窗格|用于选择维度和相关的层次结构，以筛选源中的数据并限制返回报表的数据。|  
-|“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 实例时都提供 SQL Server 登录名。|  
+|“数据”窗格|在从“元数据”窗格向“计算成员”窗格拖动项目时，显示结果集的列标题。 如果选中 **“自动执行”** 按钮，则可自动更新结果集。 .|  
   
  可以将“元数据”窗格中的维度、度量值和 KPI 以及“计算成员”窗格中的计算成员拖至“数据”窗格。 在“筛选器”窗格中，您可以选择维度和相关的层次结构，并设置筛选器表达式以限制可用于查询的数据。 如果选中工具栏上的“自动执行”（![自动执行查询](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")）切换按钮，则每次将元数据对象拖到“数据”窗格时，查询设计器都将运行查询。 可以使用工具栏上的“运行”（![运行查询](../../analysis-services/media/rsqdicon-run.gif "Run the query")）按钮手动运行查询。  
   
@@ -92,7 +89,7 @@ ms.locfileid: "37323847"
   
  下表列出了查询模式下的窗格：  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
 |元数据/函数/模板窗格|显示在选定多维数据集中定义的度量值、KPI 和维度的层次列表。|  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9a31c9d497b94836bb6a41e707e3285f337f7985
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 399665103725cec573a790667c9253b25836b076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095947"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>刷新数据（用于 Excel 的 MDS 外接程序）
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，当你要从 MDS 存储库中获取最新信息但不想打开新工作表时，可刷新数据。 您可以刷新所有单元，也可以刷新所选单元。 如果您插入的列中包含自定义公式或其他不由 MDS 管理但您想要保留的数据，这样做会很有帮助。  

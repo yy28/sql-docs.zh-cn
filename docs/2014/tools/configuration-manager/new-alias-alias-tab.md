@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41072a6b92fc509a4d200ae82566629a41dc9a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8bf73a049dbff9980da4a87c6226f946e3caf13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076467"
 ---
 # <a name="new-alias-alias-tab"></a>新建别名（“别名”选项卡）
   别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 使用“别名 - 新建”对话框中的“别名”页可以指定别名连接字符串的元素。 若要更改现有别名的连接字符串，请参阅 [<别名> 属性（别名选项卡）](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)。  

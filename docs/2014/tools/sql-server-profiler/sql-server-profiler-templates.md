@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default SQL Server Profiler templates
@@ -17,22 +15,20 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9772140475683ed1c98dc228318d213c10f36ba4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7fe736aae767d9d3ec434c2f62deac4491e2126
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084647"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 模板
   可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 来创建模板，定义要包含在跟踪中的事件类和数据列。 定义并保存模板后，可以运行跟踪来记录每个选定事件类的数据。 您可以将一个模板用于多个跟踪；模板本身并不会执行。  
   
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供了预定义的跟踪模板，使您可以轻松配置特定跟踪可能最需要的事件类。 例如，Standard 模板可帮助您创建通用跟踪，用于记录登录、注销、已完成的批处理和连接信息。 您可以使用此模板来运行跟踪而无需修改，也可以基于该模板创建具有不同事件配置的其他模板。  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]提供了预定义的跟踪模板，使您可以轻松配置特定跟踪可能最需要的事件类。 例如，Standard 模板可帮助您创建通用跟踪，用于记录登录、注销、已完成的批处理和连接信息。 您可以使用此模板来运行跟踪而无需修改，也可以基于该模板创建具有不同事件配置的其他模板。  
   
 > [!NOTE]  
 >  除了通过预定义模板进行跟踪以外， [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 还允许您从空模板（默认情况下不包含任何事件类）创建跟踪。 当计划的跟踪与任何预定义模板的配置都不相符时，使用空跟踪模板会十分有用。  

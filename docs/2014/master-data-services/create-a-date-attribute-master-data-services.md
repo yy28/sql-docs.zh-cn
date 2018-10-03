@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87dba370e2bce35a1e1995269070821a424aae07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083737"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入日期作为属性值时创建日期属性。  
@@ -85,7 +82,7 @@ ms.locfileid: "37164898"
 |Seq|19|  
 |List Option|dd/MM/yyyy hh:mm:ss tt|  
 |Option ID|19|  
-|IsVisible|@shouldalert|  
+|IsVisible|1|  
 |Group_ID|3|  
   
  在 mdm.tblList 表中输入具有上述值的行后，在“输入掩码”列表框中会提供“dd/MM/yyyy hh:mm:ss tt”掩码。 然后，您可以选择该掩码，以便在 MDS 资源管理器中某实体的日期时间属性列中显示日期和时间。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writeback [Analysis Services], cubes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - UPDATE CUBE statement
 - cubes [Analysis Services], writeback
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e74303a0796f1b1ffbee4771b0e7ecbf40085b7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062939"
 ---
 # <a name="using-cube-writebacks-mdx"></a>使用多维数据集写回 (MDX)
   可以使用 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 语句更新多维数据集。 通过此语句，您可以使用特定值更新元组。 若要有效地使用 UPDATE CUBE 语句更新多维数据集，必须了解该语句的语法、发生错误的条件以及更新可能对多维数据集产生的影响。  
@@ -45,7 +42,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  可以将 UPDATE CUBE 语句视为一个子例程，该子例程生成原子单元的一系列单独的写回操作。 然后，所有这些单独的写回操作汇总出一个指定的和。  
   
 > [!NOTE]  
->  如果更新的单元不相互重叠，则 `Update Isolation Level` 连接字符串属性可用于提高 UPDATE CUBE 的性能。 有关详细信息，请参阅<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>。  
+>  如果更新的单元不相互重叠，则 `Update Isolation Level` 连接字符串属性可用于提高 UPDATE CUBE 的性能。 有关详细信息，请参阅 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 。  
   
 ## <a name="example"></a>示例  
  您可以使用 Adventure Works 多维数据集中的 Sales Targets 度量值组来测试 UPDATE CUBE。 此度量值组包含由 SUM 聚合的度量值，这是 UPDATE CUBE 的一个要求。  

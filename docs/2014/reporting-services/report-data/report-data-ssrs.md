@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e57b58eb5b3a3321397dc17668b92ab10e0c5169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093277"
 ---
 # <a name="report-data-ssrs"></a>报表数据 (SSRS)
   报表数据可以来自您的组织中的多种数据源。 设计报表的第一步是创建表示基础报表数据的数据源和数据集。 每个数据源都包含数据连接信息。 每个数据集都包含一个查询命令，该命令定义要用作来自数据源的数据的字段集。 若要展现来自各数据集的数据，请添加表、矩阵、图表或地图之类的数据区域。 处理报表时，将对数据源运行查询，并且每个数据区域都可以根据需要进行扩展，以便显示数据集的查询结果。  

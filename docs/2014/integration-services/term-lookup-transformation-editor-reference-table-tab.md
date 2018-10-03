@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0870761f4281b6897fb9cc9395d9f7720c865f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071658"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>字词查找转换编辑器（“引用表”选项卡）
   可以使用“字词查找转换编辑器”对话框的“引用表”选项卡指定到引用（查找）表的连接。  
   
  若要了解有关字词查找转换的详细信息，请参阅 [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“无缓存”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   

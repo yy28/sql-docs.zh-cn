@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076487"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>“处理选项”属性页（报表管理器）
   使用“处理选项”属性页可为当前所选的报表设置报表执行属性。 这些选项将确定处理报表数据的时间。 您可以设置这些选项，使报表数据的检索时间错开高峰期。 如果有经常访问的报表，则可以临时缓存其副本，这样，在每隔几分钟便有多个用户访问同一报表的情况下可使用户无需等待。  
@@ -40,7 +37,7 @@ ms.locfileid: "37288383"
   
 4.  选择 **“处理选项”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **始终用最新数据运行此报表**  
  如果您希望在用户选择报表时检索报表数据，请使用此选项。 如果有缓存的报表副本可用，则会将缓存副本返回给用户；否则，在用户选择报表时将执行数据检索和呈现。  
   

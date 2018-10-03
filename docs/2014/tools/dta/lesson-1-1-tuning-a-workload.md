@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02c10662607423a5dba423977572876f18394e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073777"
 ---
 # <a name="tuning-a-workload"></a>优化工作负荷
   可以使用数据库引擎优化顾问，针对您选择进行优化的数据库和表来找到查询性能最佳的物理数据库设计。  
@@ -30,7 +27,7 @@ ms.locfileid: "37172088"
   
 ### <a name="tune-a-workload-transact-sql-script-file"></a>优化工作负荷 Transact-SQL 脚本文件  
   
-1.  从  [SELECT 示例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) 中的“A. 使用 SELECT 检索行和列”复制示例 SELECT 语句或语句，并将语句粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中。 将该文件作为**MyScript.sql**其中，您可以轻松地找到的目录中。  
+1.  从  [SELECT 示例 (Transact-SQL)](/sql/t-sql/queries/select-examples-transact-sql) 中的“A. 使用 SELECT 检索行和列”复制示例 SELECT 语句或语句，并将语句粘贴到 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的查询编辑器中。 将该文件保存为 MyScript.sql，并存储在可以轻松找到的目录中。  
   
 2.  启动数据库引擎优化顾问。 请参阅[启动数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)。  
   
@@ -48,7 +45,7 @@ ms.locfileid: "37172088"
   
 8.  分析完成之后，在“操作”菜单中，单击“保存建议”，将建议保存为 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本。 在“另存为”对话框中，导航到要保存建议脚本的目录，然后键入文件名 **MyRecommendations**。  
   
-## <a name="summary"></a>“摘要”  
+## <a name="summary"></a>总结  
  您已完成对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库的简单 SELECT 语句工作负荷的优化。 数据库引擎优化顾问还可将 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪文件和表作为优化工作负荷。 下一个任务将向您展示如何查看和解释进行优化后所收到的优化建议。  
   
 ## <a name="next-task-in-lesson"></a>课程中的下一个任务  

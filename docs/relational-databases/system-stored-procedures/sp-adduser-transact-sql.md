@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_adduser
@@ -21,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f7dbb8c5830fd5a24b436f5e0f8e0630b8046f75
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031340"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766525"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_adduser**还将创建一个架构具有的用户的名称。  
   
  在添加完用户之后，可以使用 GRANT、DENY 和 REVOKE 等语句来定义控制用户所执行的活动的权限。  

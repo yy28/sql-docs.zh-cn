@@ -1,30 +1,27 @@
 ---
-title: IDSOShapeExtensions 接口 |Microsoft 文档
+title: IDSOShapeExtensions 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IDSOShapeExtensions interface [ADO]
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbffd2f45ada95c455bb1cc44165a4c9455cfe3e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613325"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 接口
-获取形状提供商基础的 OLE DB 数据源对象。  
+获取形状提供程序的基础的 OLE DB 数据源对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -42,7 +39,7 @@ public:
   
 |||  
 |-|-|  
-|[GetDataProviderDSO 方法](../../../ado/reference/ado-api/getdataproviderdso-method.md)|从 Shape 提供程序检索基础的 OLE DB 数据源对象。|  
+|[GetDataProviderDSO 方法](../../../ado/reference/ado-api/getdataproviderdso-method.md)|从 Shape 提供程序检索基础 OLE DB 数据源对象。|  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  

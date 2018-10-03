@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.DA.f1
 helpviewer_keywords:
 - Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf27eb864e2d0caca4d6cdf27f073a949479bdf9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25de27327b79c0bff1a08ba36c93d68f236a868a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089457"
 ---
 # <a name="distribution-agent-security"></a>分发代理安全性
   使用 **“分发代理安全性”** 对话框可以指定用于运行分发代理的 Windows 帐户。 对于推送订阅，分发代理在分发服务器上运行；对于请求订阅，分发代理在订阅服务器上运行。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户也称为“进程帐户 ”，因为代理进程是在此帐户下运行。 该对话框中可用的其他选项取决于访问对话框的方式：  
@@ -34,7 +31,7 @@ ms.locfileid: "37290413"
   
  所有帐户必须是有效的，并且为每个帐户指定了正确的密码。 在运行代理之前不会对帐户和密码进行验证。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **进程帐户**  
  输入运行分发代理所使用的 Windows 帐户：  
   

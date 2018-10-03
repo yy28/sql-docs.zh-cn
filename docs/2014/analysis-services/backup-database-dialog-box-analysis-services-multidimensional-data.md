@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d325d1cb634f1fb7548ff0a1030c97e866681b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067317"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>“备份数据库”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“备份数据库”对话框，使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 备份文件 (.abf) 格式将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库备份到备份文件中。  
@@ -33,7 +30,7 @@ ms.locfileid: "37234437"
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹或“对象资源管理器”中的数据库，然后单击“备份”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **脚本**  
  创建备份脚本，该脚本基于在对话框中选定的选项。 还原脚本是用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 编写的。  
   

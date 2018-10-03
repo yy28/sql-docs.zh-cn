@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea47f8957d942e57a6dfda79e263dcbe5600e38c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a357e02af88c1e3a0c9806b1f1a228881137397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254869"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069847"
 ---
 # <a name="-multiply-ssis-expression"></a>*（乘）（SSIS 表达式）
   将两个数值表达式相乘。  
@@ -42,7 +39,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>结果类型  
  由两个参数的数据类型确定。 有关详细信息，请参阅 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果任意一个操作数为 Null，则结果为 Null。  
   
 ## <a name="expression-examples"></a>表达式示例  

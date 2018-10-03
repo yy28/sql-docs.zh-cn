@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sysmergepublications
 - sysmergepublications_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 200a35f046d4e21c2aedc719776f51ee72f7f7dc
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: d2a7ed15f4c971cdd7489084717f2a11ecd9a2e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790274"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +70,10 @@ ms.locfileid: "39102575"
 |**backward_comp_level**|**int**|数据库兼容级别。 可以是下列值之一：<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**达到**|**int**|允许的最大并发合并进程数。 值为**0**此属性则表示没有在任何给定时间运行的并发合并进程数没有限制。 此属性设置以指明可以对合并发布一次运行的并发合并进程数限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
 |**max_concurrent_dynamic_snapshots**|**int**|允许针对合并发布运行的最大并发筛选数据快照会话数。 如果**0**，可以针对任何给定时间上的发布同时运行的并发筛选的数据快照会话的最大数目没有限制。 此属性对可以同时对合并发布运行的最大并发快照进程数设置限制。 如果同时调度的快照进程数比允许运行的进程数多，则多出的作业将放置在队列中等待，直到当前正在运行的合并进程完成。|  
-|**use_partition_groups**|**int**|指定发布是否使用预计算分区。|  
+|**use_partition_groups**|**smallint**|指定发布是否使用预计算分区。|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|一组分号分隔的函数，用于发布的参数化行筛选器。|  
 |**partition_id_eval_proc**|**sysname**|指定由订阅服务器的合并代理运行的过程名称，以便确定为其分配的分区 ID。|  
-|**publication_number**|**int**|指定提供双字节映射到标识列**pubid**。 **pubid**是全局唯一标识符的发布而发布号是仅在指定的数据库中唯一。|  
+|**publication_number**|**smallint**|指定提供双字节映射到标识列**pubid**。 **pubid**是全局唯一标识符的发布而发布号是仅在指定的数据库中唯一。|  
 |**replicate_ddl**|**int**|指示发布是否支持架构复制。<br /><br /> **0** = DDL 语句不会复制。<br /><br /> **1** = DDL 复制在发布服务器执行语句。<br /><br /> 有关详细信息，请参阅[对发布数据库进行架构更改](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。|  
 |**allow_subscriber_initiated_snapshot**|**bit**|指示订阅服务器是否可以启动使用参数化筛选器为发布生成快照的进程。 **1**指示订阅服务器可以启动快照进程。|  
 |**dynamic_snapshot_queue_timeout**|**int**|指定使用参数化筛选器时，订阅服务器必须在队列中等待快照生成进程开始的分钟数。|  

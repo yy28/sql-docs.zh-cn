@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbca5b4d378861731b77472c5f88442a3f6e793f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 708aed70836bfc5fdccb9dd8ba3afc2545e093f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889853"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089317"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>查看存储 XML 架构集合
   使用 [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)导入 XML 架构集合之后，架构组件便存储在元数据中。 你可以使用 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)内部函数重新构造 XML 架构集合。 此函数将返回`xml`数据类型实例。  

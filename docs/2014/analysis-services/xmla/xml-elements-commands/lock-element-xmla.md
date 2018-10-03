@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Lock Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aee5d603c2708cb42b666d3cc0c9acc5ea208f0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079517"
 ---
 # <a name="lock-element-xmla"></a>Lock 元素 (XMLA)
   锁定指定的对象上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]实例。  
@@ -54,8 +51,8 @@ ms.locfileid: "37209867"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37209867"
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |子元素|[ID](../xml-elements-properties/id-element-xmla.md)，[模式](../xml-elements-properties/mode-element-xmla.md)，[对象](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Lock` 命令锁定当前活动事务上下文中的对象，该锁可为共享锁或排他锁。 只有数据库管理员或服务器管理员可以显式发出 `Lock` 命令。 对象上的锁将阻止提交事务，直到删除该锁为止。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持两种类型的锁：共享锁和排他锁。 有关支持的锁类型的详细信息[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[Mode 元素&#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md)。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 仅允许锁定数据库。 `Object` 元素必须包含对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库的对象引用。 如果未指定 `Object` 元素或 `Object` 元素引用数据库以外的对象，则将引发错误。  

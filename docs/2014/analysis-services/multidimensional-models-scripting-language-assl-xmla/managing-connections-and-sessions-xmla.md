@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statefulness [XML for Analysis]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - XMLA, sessions
 - sessions [XML for Analysis]
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16efaf9be9db55935cc7b6a3df0349f81d170b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062799"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
   *有状态性*是在此期间服务器将保留标识和上下文的方法调用之间的客户端的条件。 *无状态*是在此期间服务器不会记住标识和上下文的客户端方法调用完成后一情况。  

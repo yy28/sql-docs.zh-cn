@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sequence.general.f1
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fc9a711c16c0c7e9b5ed3a66f93013b5f2031bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54a6d265c6ad8f7c585a629c2adc997b808d636b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063237"
 ---
 # <a name="sequence-properties-general-page"></a>序列属性（“常规”页）
   创建一个序列对象并指定其属性。 序列是用户定义的绑定到架构的对象，该对象可根据创建序列所依据的规范来生成数值序列。 这组数值以定义的间隔按升序或降序生成，并且可配置为用尽时重新启动（循环）。 序列不与特定表相关联，这一点与标识列不同。 应用程序将引用某一序列对象以便检索其下一个值。 序列与表之间的关系由应用程序控制。 用户应用程序可以引用一个序列对象，并跨多个行和表协调值。  
@@ -32,7 +29,7 @@ ms.locfileid: "37157978"
   
  访问此页的方法有如下两种：在对象资源管理器中右键单击“序列”，再单击“新建序列”，或者右键单击现有序列，再单击“属性”。 如果右键单击现有序列，再单击“属性”，则以下某些选项是不可编辑的。 要更改序列选项，请使用 [ALTER SEQUENCE (Transact-SQL)](/sql/t-sql/statements/alter-sequence-transact-sql) 语句，或删除并重新创建序列对象。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **序列名称**  
  在此处输入序列名称。  
   
@@ -87,7 +84,7 @@ ms.locfileid: "37157978"
   
  有关创建序列选项的其他信息，请参阅 [CREATE SEQUENCE (Transact-SQL)](/sql/t-sql/statements/create-sequence-transact-sql)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求对 SCHEMA 拥有 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 权限。  
   
 ## <a name="see-also"></a>请参阅  

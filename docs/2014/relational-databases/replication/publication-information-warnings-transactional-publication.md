@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publicationinfo.warningsandagents.tran.f1
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2744e4481963a5e37d14f95f9c5b01b2bd4784ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 219993c5ae5bec7ba55c6c25084fa7d10aa948c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093417"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>发布信息，警告（事务发布，SQL Server 2005 及更高版本）
   **“警告”** 选项卡适用于运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本的分发服务器。 使用 **“警告”** 选项卡可以为所选发布执行下列任务：  
@@ -57,7 +54,7 @@ ms.locfileid: "37175854"
   
  除了在复制监视器中显示警告之外，达到阈值也可以触发警报。 通过单击 **“配置警报”** 并在 **“配置复制警报”** 对话框中提供信息，可以定义警报。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **已启用**  
  选择此项可以启用警告并指定阈值。  
   

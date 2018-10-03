@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4672647d8e9caae94e3b64fc43c3b687aa010920
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091397"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>针对 SQL Server 2014 自助商业智能的许可证拓扑和成本示例
   本主题说明了选择的高级注意事项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]商业智能版或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业版。 本主题包括若干本地 Microsoft 自助商业智能 (BI) 拓扑示例。 这些示例包括可用来在成本和性能之间取得最佳平衡的版本和许可证。 拓扑、服务器数目和许可成本 **仅作为示例**提供。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 在许可中引入了若干更改，为您许可服务器、用户和设备提供了更多方式选择。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 许可支持与商业智能相关的相同方案。  

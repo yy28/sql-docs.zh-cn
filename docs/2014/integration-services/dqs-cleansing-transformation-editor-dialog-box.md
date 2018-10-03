@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062460"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>“DQS 清除转换编辑器”对话框
   可使用 Data Quality Services (DQS) 通过“DQS 清除转换编辑器”对话框来更正数据。 有关详细信息，请参阅 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
