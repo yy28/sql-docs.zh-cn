@@ -1,32 +1,29 @@
 ---
-title: 在运行时构造的 SQL 语句 |Microsoft 文档
+title: 在运行时构造的 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - run time constructed SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18f5a02bdcec575ac1362d3f656480eb0ab9b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914292"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848095"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>在运行时构造的 SQL 语句
-在运行时，通常执行即席分析的应用程序生成 SQL 语句。 例如，电子表格可能允许用户选择要从中检索数据的列：  
+执行即席分析常用的应用程序在运行时生成的 SQL 语句。 例如，电子表格可能会使用户能够选择要从其中检索数据的列：  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -72,8 +69,8 @@ int main() {
 }  
 ```  
   
- 应用程序通常在运行时构造 SQL 语句的另一个类是应用程序的开发环境。 但是，它们构造的语句是硬编码在它们在构建，其中他们可以通常优化和测试应用程序中。  
+ 应用程序通常在运行时构建 SQL 语句的另一个类是应用程序的开发环境。 但是，它们构建的语句是硬编码它们要构建，其中它们通常进行优化和测试应用程序中。  
   
- 应用程序在运行时构造 SQL 语句可以向用户提供更大的灵活性。 可以从前面的示例，甚至不支持诸如常见操作看到**其中**子句， **ORDER BY**子句或联接，在运行时构造 SQL 语句是极大地更复杂比硬编码的语句。 此外，测试此类应用程序会产生问题的因为它们可以构造任意数目的 SQL 语句。  
+ 在运行时构造 SQL 语句的应用程序可以向用户提供更大的灵活性。 前面的示例，甚至不支持等常见操作中可以看出**其中**子句**ORDER BY**子句或联接，在运行时构造 SQL 语句是代价相当复杂比硬编码的语句。 此外，测试此类应用程序是有问题的因为它们可以构造任意数目的 SQL 语句。  
   
- 在运行时构造 SQL 语句的潜在缺点是它需要更多的时间比使用硬编码语句构造的语句。 幸运的是，这很少是一个问题。 此类应用程序往往是一个用户界面大量和应用程序所花费的时间构造 SQL 语句是通常不大与用户所输入的条件花费的时间进行比较。
+ 在运行时构造 SQL 语句的一个潜在缺点是它将比以往更多时间来构造的语句不是使用硬编码的语句。 幸运的是，这并不是问题。 此类应用程序往往是占用大量用户界面，且应用程序所花费的时间构造 SQL 语句是通常较小用户在输入条件方面所花费的时间。

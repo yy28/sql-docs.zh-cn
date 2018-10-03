@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 089e20c09880feaaafc355896fd0249de6a13746
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621025"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.locfileid: "39102256"
 |\<捕获的源表列>|不定|更改表中的其余列是在创建捕获实例时源表中标识为已捕获列的那些列。 如果已捕获列的列表中未指定任何列，则源表中的所有列将包括在此表中。|  
 |**__ $ command_id** |**int** |跟踪操作的事务中的顺序。 |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 `__$command_id`列已在版本 2012 到 2016年的累积更新中引入了列。 有关版本和下载信息，请参阅知识库文章 3030352[修复： 更改表进行排序错误地更新为 Microsoft SQL Server 数据库行后启用变更数据捕获](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)。  有关详细信息，请参阅[CDC 功能的 SQL Server 2012、 2014年和 2016年升级到最新 CU 后可能会破坏](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 

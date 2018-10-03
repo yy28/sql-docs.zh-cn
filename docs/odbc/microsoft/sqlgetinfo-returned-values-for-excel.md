@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo excel 返回值 |Microsoft 文档
+title: Excel 的 SQLGetInfo 返回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC], SQLGetInfo
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d8987a1e6c171ccc4154e71cb4e6a80c964cd5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71eec87e4cdf325a20e6ad213dd8f591a094f825
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686576"
 ---
-# <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo excel 返回值
-下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
+# <a name="sqlgetinfo-returned-values-for-excel"></a>Excel 的 SQLGetInfo 返回值
+下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回一个 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
+>  其中**SQLGetInfo**返回一个 32 位掩码，垂直条 (&#124;) 表示按位 OR。  
   
 |信息类型|返回值|  
 |--------------|--------------------|  
@@ -85,7 +82,7 @@ ms.locfileid: "32904882"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用驱动程序关键字|  
+|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用 DRIVER 关键字|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
@@ -126,7 +123,7 @@ ms.locfileid: "32904882"
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> CREATE TABLE 语句时使用 Microsoft Excel 驱动程序，可能会使 256 列，但 255 列限制仍然有效，并且插入到列 256 将失败。|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> CREATE TABLE 语句时使用 Microsoft Excel 驱动程序，可能会允许 256 列，但 255 列限制仍然有效，并且到 256 列插入将失败。|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  

@@ -1,32 +1,29 @@
 ---
-title: GetRows 方法示例 （VC + +） |Microsoft 文档
+title: GetRows 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Getrows method [ADO], VC++ example
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f4af181439ea74b0f55f49e97f19e955eec517
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695122"
 ---
-# <a name="getrows-method-example-vc"></a>GetRows 方法示例 （VC + +）
-此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的数目的行从[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并使用生成的数据来填充数组。 **GetRows**方法将返回所需的行数小于在两种情况： 任一如果[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**只有第二种情况发生时。 有关运行此过程需要 GetRowsOK 函数。  
+# <a name="getrows-method-example-vc"></a>GetRows 方法示例 (VC++)
+此示例使用[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)方法来检索指定的从的行数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后使用生成的数据填充数组。 **GetRows**方法将返回所需的行数小于两种情况下： 任一 if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)已达到，或者，如果**GetRows**尝试检索已记录删除由另一个用户。 该函数将返回**False**仅当第二种情况发生。 若要运行此过程需要 GetRowsOK 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -248,6 +245,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [BOF，EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF、 EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows 方法 (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

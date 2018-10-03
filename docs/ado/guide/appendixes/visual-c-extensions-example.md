@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 扩展示例 |Microsoft 文档
+title: Visual c + + 扩展示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6543dbf03ab2d81e721c304b1c135509afd081b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a54c32287a977899838a091543fc776577d54e02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845195"
 ---
-# <a name="visual-c-extensions-example"></a>Visual c + + 扩展示例
-此程序说明如何从字段检索和转换为 C/c + + 变量值。  
+# <a name="visual-c-extensions-example"></a>Visual C++ 扩展示例
+此程序说明如何从字段中检索和转换为 C/c + + 变量值。  
   
- 此示例还可利用"智能指针，"自动处理调用的特定于 COM 的详细信息`QueryInterface`和引用计数**IADORecordBinding**接口。  
+ 此示例还会利用的"智能指针，"它会自动处理调用的特定于 COM 的详细信息`QueryInterface`和引用计数**IADORecordBinding**接口。  
   
- 没有智能指针，则应编码为：  
+ 没有智能指针的情况下将代码：  
   
 ```  
 IADORecordBinding   *picRs = NULL;  
@@ -42,19 +39,19 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 使用智能指针派生`IADORecordBindingPtr`键入从`IADORecordBinding`此语句的接口：  
+ 使用智能指针派生`IADORecordBindingPtr`类型从`IADORecordBinding`接口使用此语句：  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- 并实例化此类指针：  
+ 并实例化此类的指针：  
   
 ```  
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- 因为 Visual c + + 扩展实现的**记录集**对象、 智能指针中，构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`查找`IADORecordBinding`接口。  
+ 因为由实现 Visual c + + 扩展**记录集**对象，智能指针构造函数`picRs`，采用 _`RecordsetPtr`指针， `pRs`。 构造函数调用`QueryInterface`使用`pRs`若要查找`IADORecordBinding`接口。  
   
 ```  
 // Visual_Cpp_Extensions_Example.cpp  

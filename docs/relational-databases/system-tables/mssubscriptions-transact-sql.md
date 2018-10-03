@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - MSsubscriptions_TSQL
 - MSsubscriptions
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d580a5164595a12d96ae8f7b491bc896d451fa8
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 22a80f913566a65596d86bd08fce9ff9c7ee1570
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728855"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +34,11 @@ ms.locfileid: "39102965"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|发布服务器数据库的 ID。|  
-|**publisher_id**|**int**|发布服务器的 ID。|  
+|**publisher_id**|**smallint**|发布服务器的 ID。|  
 |**publisher_db**|**sysname**|发布服务器数据库的名称。|  
 |**publication_id**|**int**|发布 ID。|  
 |**article_id**|**int**|项目的 ID。|  
-|**subscriber_id**|**int**|订阅服务器 ID。|  
+|**subscriber_id**|**smallint**|订阅服务器 ID。|  
 |**subscriber_db**|**sysname**|订阅数据库的名称。|  
 |**subscription_type**|**int**|订阅的类型：<br /><br /> **0** = 推送。<br /><br /> **1** = 请求。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同步类型：<br /><br /> **1** = automatic。<br /><br /> **2** = 不同步。|  

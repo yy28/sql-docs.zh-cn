@@ -1,13 +1,11 @@
 ---
-title: 列和表追加方法，将属性示例 (VB) |Microsoft 文档
+title: 列和表 Append 方法、 命名属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - Name property [ADOX], Visual Basic example
 - Append method [ADOX], Visual Basic example
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9e3f480ab34c22a720f4ed8b0d51870f209fb7f6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681517"
 ---
-# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>列和表追加方法名称的属性示例 (VB)
+# <a name="columns-and-tables-append-methods-name-property-example-vb"></a>列和表 Append 方法、Name 属性示例 (VB)
 下面的代码演示如何创建一个新表。  
   
 ```  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e17467d6d3e207456bd525bde4be6183b92c6450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244023"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068037"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>添加带有嵌套表的数据源视图（数据挖掘中级教程）
   要创建市场篮模型，您必须使用支持关联数据的数据源视图。 该数据源视图还将用于顺序分析和聚类分析方案。  
@@ -37,7 +34,7 @@ ms.locfileid: "37244023"
 -   在事例表和嵌套表之间指定多对一关系。  
   
     > [!NOTE]  
-    >  实例时都提供 SQL Server 登录名。 按照所述步骤执行很重要，这样可以正确指定事例表和嵌套表之间的关系，并且可以避免在处理模型时出现错误。  
+    >  . 按照所述步骤执行很重要，这样可以正确指定事例表和嵌套表之间的关系，并且可以避免在处理模型时出现错误。  
   
 -   定义如何在模型中使用数据列。  
   

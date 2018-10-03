@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_audit_specifications_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604906"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ ms.locfileid: "43027295"
 |is_state_enabled|**bit**|审核规范状态：<br /><br /> 0 - 禁用<br /><br /> 1 – 启用|  
 |audit_GUID|**uniqueidentifer**|包含此规范的审核的 GUID。 在数据库附加/启动期间枚举成员数据库审核规范时使用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果数据库处于只读模式下，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 功能无法添加数据库审核规范。  
   
 ## <a name="permissions"></a>Permissions  
  具有主体**ALTER ANY DATABASE AUDIT**或**VIEW DEFINITION**权限、 dbo 角色以及 db_owners 固定的数据库角色的成员有权访问此目录视图。 此外，不得被拒绝主体**VIEW DEFINITION**权限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 的用户。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   

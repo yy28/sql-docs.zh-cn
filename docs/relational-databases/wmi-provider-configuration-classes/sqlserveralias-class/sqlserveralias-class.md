@@ -1,14 +1,11 @@
 ---
-title: SqlServerAlias 类 |Microsoft 文档
+title: SqlServerAlias 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SqlServerAlias Class
@@ -18,30 +15,29 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServerAlias class
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fb5c8262739f89518ad92d8f09819c810167a659
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75ca27fc8c035a2b62cc70bbf740dd746f341d45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603525"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)类表示的服务器连接别名。  
+  [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)类表示服务器连接别名。  
   
  出现以下两种情况时需要服务器连接别名：  
   
--   客户端连接到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过网络传输不是默认网络传输。  
+-   客户端连接到的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在不是默认网络传输的网络传输。  
   
 -   客户端连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例侦听备用命名管道。  
   
- **注意：** [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)继承**放**从提供程序类的方法。 但是，它不返回任何结果由**Provider::Put**方法。 有关详细信息，请参阅 WMI 文档。  
+ **注意：** [SqlServerAlias 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md)继承**放**从提供程序类的方法。 但是，它不返回任何结果所示**Provider::Put**方法。 有关详细信息，请参阅 WMI 文档。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  
   
   

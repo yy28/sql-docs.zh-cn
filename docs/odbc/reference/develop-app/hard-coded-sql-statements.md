@@ -1,40 +1,37 @@
 ---
-title: 硬编码的 SQL 语句 |Microsoft 文档
+title: 硬编码 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], hard-coded
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab17362cdece97582e26e6bc99ed38e678db6a4c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746235"
 ---
-# <a name="hard-coded-sql-statements"></a>硬编码的 SQL 语句
-通常执行固定的任务的应用程序包含硬编码 SQL 语句。 例如，订单输入系统可能会使用对列表未结的销售订单的以下调用：  
+# <a name="hard-coded-sql-statements"></a>硬编码 SQL 语句
+通常执行固定的任务的应用程序包含硬编码的 SQL 语句。 例如，订单输入系统可能会使用对列表打开销售订单的以下调用：  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 有几个优点硬编码的 SQL 语句： 写入应用程序; 时，可以进行测试它们是实现比语句在运行时; 构造变得简单和它们简化了应用程序。  
+ 有个硬编码的 SQL 语句的几个优点： 可以测试时编写的应用程序;它们是在运行时; 构造的语句比易于实现和它们简化了应用程序。  
   
- 使用语句参数和准备语句提供更好方式使用硬编码 SQL 语句。 例如，假定部件表包含 PartID、 描述和价格列。 此表中插入新行的一种方法是构造并执行**插入**语句：  
+ 使用语句参数和准备语句提供更好的方式来使用硬编码的 SQL 语句。 例如，假设在部件表包含 PartID、 描述和价格列。 此表中插入新行的一种方法是构造并执行**插入**语句：  
   
 ```  
 #define DESC_LEN 51  
@@ -55,7 +52,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 更好的方法是使用硬编码，参数化语句。 这样做有通过使用硬编码数据值的语句的两个好处。 首先，很容易地构造参数化的语句，因为可以在本机类型，如整数和浮点数，而不是将它们转换为字符串中发送的数据值。 其次，此类语句可以使用多个一次只需通过更改参数值和 reexecuting没有无需重新生成它。  
+ 更好的方法是使用硬编码的参数化语句。 这有两个好处，通过使用硬编码数据值的语句。 首先，很容易构造参数化的语句，因为可以在其本机类型，例如整数和浮点数，而不将它们转换为字符串中发送的数据值。 其次，此类语句可以使用多个一次只需通过更改参数值并重新执行它;没有无需重新生成它。  
   
 ```  
 #define DESC_LEN 51  
@@ -82,7 +79,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- 假设此语句一次执行，它可以是准备好甚至更高的效率：  
+ 假设要多次执行此语句，这样可以随时准备为甚至更高的效率：  
   
 ```  
 #define DESC_LEN 51  
@@ -110,7 +107,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- 可能使用语句的最有效方法是构造一个包含该语句的过程，如下面的代码示例中所示。 该过程是在开发期间构造，并存储在数据源，因为它不需要在运行时准备。 此方法的缺点是用于创建过程的语法是特定于 DBMS 的和必须为每个应用程序是在其运行的 DBMS 单独构造过程。  
+ 可能是使用该语句的最有效方法是构造包含语句的过程，如下面的代码示例中所示。 该过程是在开发时构建和数据源上存储，因为它不需要在运行时准备。 此方法的一个缺点是用于创建过程的语法是特定于 DBMS 的和必须为每个应用程序是在其运行的 DBMS 单独构造过程。  
   
 ```  
 #define DESC_LEN 51  
@@ -133,4 +130,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- 有关参数、 已准备的语句和过程的详细信息，请参阅[执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。
+ 有关参数、 预定义的语句和过程的详细信息，请参阅[执行语句](../../../odbc/reference/develop-app/executing-a-statement.md)。

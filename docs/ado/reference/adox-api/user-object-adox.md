@@ -1,13 +1,11 @@
 ---
-title: 用户对象 (ADOX) |Microsoft 文档
+title: 用户对象 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,34 +13,33 @@ f1_keywords:
 helpviewer_keywords:
 - User object [ADOX]
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 206d8fb122b9c2f28370a56f3a4acaeabebf111b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3acdea5ae284b2e9a0ac9c28fe8430a11de8fbd4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823626"
 ---
 # <a name="user-object-adox"></a>用户对象 (ADOX)
-表示具有受保护的数据库内的访问权限的用户帐户。  
+表示具有受保护的数据库中的访问权限的用户帐户。  
   
-## <a name="remarks"></a>Remarks  
- [用户](../../../ado/reference/adox-api/users-collection-adox.md)集合[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示目录的所有用户。 **用户**集合[组](../../../ado/reference/adox-api/group-object-adox.md)表示只有特定组的用户。  
+## <a name="remarks"></a>备注  
+ [用户](../../../ado/reference/adox-api/users-collection-adox.md)系列[目录](../../../ado/reference/adox-api/catalog-object-adox.md)表示目录的所有用户。 **用户**集合[组](../../../ado/reference/adox-api/group-object-adox.md)表示只有特定组的用户。  
   
- 与属性、 集合和方法的**用户**对象，你可以：  
+ 使用属性、 集合和方法**用户**对象，你可以：  
   
 -   标识与用户[名称](../../../ado/reference/adox-api/name-property-adox.md)属性。  
   
 -   更改具有的用户的密码[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法。  
   
--   确定是否用户具有读取、 写入或删除权限[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)和[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。  
+-   确定用户是否具有读取、 写入或删除的权限[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)并[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)方法。  
   
--   访问与用户所属组[组](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  
+-   访问用户所属的组[组](../../../ado/reference/adox-api/groups-collection-adox.md)集合。  
   
--   访问与提供程序特定属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+-   访问特定于提供程序的属性与[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
 -   确定[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)用户。  
   

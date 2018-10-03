@@ -1,13 +1,11 @@
 ---
-title: 准备属性 (ADO) |Microsoft 文档
+title: 准备好属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,33 +13,32 @@ f1_keywords:
 helpviewer_keywords:
 - Prepared property [ADO]
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70557d20239eedef30abc280de563a03b39b4a81
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d7317b6b9a5251c8d104e6c2153ec8c009b2aea7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772895"
 ---
-# <a name="prepared-property-ado"></a>已准备好的属性 (ADO)
+# <a name="prepared-property-ado"></a>Prepared 属性 (ADO)
 指示是否要保存的已编译的版本[命令](../../../ado/reference/ado-api/command-object-ado.md)之前执行。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**布尔**值，如果设置为**True**，该值指示应准备命令。  
+ 设置或返回**布尔**值，如果设置为**True**，指示应准备命令。  
   
-## <a name="remarks"></a>Remarks  
- 使用**已准备**属性能够保存中指定的查询的已准备的 （或已编译的） 版本的提供程序[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性之前[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的第一次执行。 这可能减慢命令的第一次执行，但后提供程序将编译命令，该提供程序将用于该命令的已编译的版本任何后续的执行，这将导致改进性能。  
+## <a name="remarks"></a>备注  
+ 使用**已准备**属性具有以下提供程序将准备就绪 （或已编译） 查询中指定的版本保存[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的第一次执行。 这样可能会降低命令的第一次执行，但后提供程序进行了编译命令，该提供程序将用于该命令的已编译的版本任何后续的执行，这将导致改进性能。  
   
- 如果属性是**False**，提供程序将执行**命令**直接而无需创建的已编译的版本的对象。  
+ 如果该属性是**False**，提供程序将执行**命令**直接而无需创建已编译的版本的对象。  
   
- 如果提供程序不支持命令准备，当此属性设置为，它可能会返回错误**True**。 如果提供程序不返回错误，只需忽略请求后，若要准备的命令和集**已准备**属性**False**。  
+ 如果提供程序不支持命令准备，此属性设置为时，它可能返回错误 **，则返回 True**。 如果提供程序不返回错误，只需忽略准备的命令和集请求**已准备**属性设置为**False**。  
   
 ## <a name="applies-to"></a>适用范围  
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [已准备好的属性示例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
+ [Prepared 的属性示例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared 属性示例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

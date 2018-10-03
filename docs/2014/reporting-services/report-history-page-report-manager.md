@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b5865ecbca2ea5577fccf0c28faeabf27b9573d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053137"
 ---
 # <a name="report-history-page-report-manager"></a>“报表历史记录”页（报表管理器）
   使用“报表历史记录”页可以查看一段时间中生成并存储的报表快照。 根据报表服务器上设置的选项，报表历史记录可能只包含较新的快照。  
@@ -44,7 +41,7 @@ ms.locfileid: "37196733"
   
 3.  在下拉菜单中，单击 **“查看报表历史记录”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **删除**  
  单击此选项可删除一个或多个快照。 在单击 **“删除”** 之前，请选中要删除的快照旁的复选框。  
   

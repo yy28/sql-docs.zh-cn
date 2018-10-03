@@ -1,32 +1,29 @@
 ---
-title: 准备属性示例 (VB) |Microsoft 文档
+title: 准备好属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Prepared property [ADO], Visual Basic example
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2339cb94af5140bab96fe78add90b163e84ced60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813025"
 ---
-# <a name="prepared-property-example-vb"></a>已准备好的属性示例 (VB)
-此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象-准备的一个，另一个未准备好。  
+# <a name="prepared-property-example-vb"></a>Prepared 属性示例 (VB)
+此示例演示[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)通过打开两个属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象 — 一个准备好，另一个未准备好。  
   
 ```  
 'BeginPreparedVB  

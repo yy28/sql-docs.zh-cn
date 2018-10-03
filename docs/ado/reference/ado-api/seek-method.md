@@ -1,13 +1,11 @@
 ---
-title: 查找方法 |Microsoft 文档
+title: Seek 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612425"
 ---
-# <a name="seek-method"></a>查找方法
-搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到的行与匹配的指定的值，并更改为该行的当前行位置。  
+# <a name="seek-method"></a>Seek 方法
+搜索的索引[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)快速找到匹配指定的值，并将更改为该行的当前行位置的行。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,26 +35,26 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *KeyValues*  
- 数组**Variant**值。 索引包含一个或多个列，该数组包含要针对每个相应的列进行比较的值。  
+ *架构*  
+ 一个数组**变体**值。 索引的一个或多个列组成，该数组包含要与每个对应列进行比较的值。  
   
  *SeekOption*  
- A [SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，该值指定要进行索引的列和相应之间的比较类型*KeyValues*。  
+ 一个[SeekEnum](../../../ado/reference/ado-api/seekenum.md)值，该值指定要进行索引的列与相应之间的比较类型*架构*。  
   
-## <a name="remarks"></a>Remarks  
- 使用**Seek**方法结合[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以确定基础提供程序是否支持**Seek**，和**Supports(adIndex)** 若要确定此提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**和**索引**。)  
+## <a name="remarks"></a>备注  
+ 使用**Seek**方法一起[索引](../../../ado/reference/ado-api/index-property.md)如果基础提供程序上支持索引属性**记录集**对象。 使用[支持](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** 方法，以确定基础提供程序是否支持**搜寻**，以及**Supports(adIndex)** 若要确定该提供程序是否支持索引的方法。 (例如， [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)支持**Seek**并**索引**。)  
   
- 如果**Seek**功能不查找所需的行，没有错误发生，以及行是否定位在的结尾**记录集**。 设置**索引**为之前执行此方法所需索引的属性。  
+ 如果**Seek**不找到所需的行中，没有错误发生，而且行位于末尾处**记录集**。 设置**索引**之前执行此方法所需索引的属性。  
   
- 此方法仅支持服务器端游标。 查找时不支持**记录集**对象的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性值是**adUseClient**。  
+ 使用服务器端游标仅支持此方法。 查找时不支持**记录集**对象的[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性值是**adUseClient**。  
   
- 此方法只能时使用**记录集**对象使用打开[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值**adCmdTableDirect**。  
+ 此方法仅可使用时**记录集**以打开对象[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)的值**adCmdTableDirect**。  
   
 ## <a name="applies-to"></a>适用范围  
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [查找方法和索引的属性示例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [查找方法和索引的属性示例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
+ [Seek 方法和 Index 属性示例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Seek 方法和 Index 属性示例 （VC + +）](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find 方法 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index 属性](../../../ado/reference/ado-api/index-property.md)

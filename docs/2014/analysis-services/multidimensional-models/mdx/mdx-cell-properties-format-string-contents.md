@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052259"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 内容 (MDX)
   `FORMAT_STRING`单元属性格式化`VALUE`单元属性的值为`FORMATTED_VALUE`单元属性。 `FORMAT_STRING`单元属性可以处理字符串和数字原始值，应用针对要返回的格式化的值的值的格式表达式`FORMATTED_VALUE`单元属性。 下列各表详述了用于处理字符串值和数值的语法和格式字符。  
@@ -74,7 +71,7 @@ ms.locfileid: "37293587"
   
 |字符|Description|  
 |---------------|-----------------|  
-|InclusionThresholdSetting|显示不带任何格式的数字。|  
+|None|显示不带任何格式的数字。|  
 |**0**|表示显示一个数字或零 (0) 的数字占位符。<br /><br /> 如果数字在格式字符串中出现零的位置有一个数字，格式化值将显示该数字。 否则，格式化值在该位置显示零。<br /><br /> 如果数字的位数少于格式表达式中零的个数（不管在小数点的哪一侧），格式化值将显示前导零或尾随零。<br /><br /> 如果小数点分隔符右侧的数字位数多于格式表达式中小数点分隔符右侧的零的个数，格式化值将对数字四舍五入，使其小数位数与零的个数一样多。<br /><br /> 如果小数点分隔符左侧的数字位数多于格式表达式中小数点分隔符左侧的零的个数，格式化值将显示多出的位数而不作任何修改。|  
 |**#**|表示显示一个数字或不显示任何内容的数字占位符。<br /><br /> 如果表达式在格式字符串中出现数字符号 (**#**) 的位置有一个数字，格式化值将显示该数字。 否则，格式化值在该位置什么也不显示。<br /><br /> 除了当数字的位数等于或少于格式表达式中小数点分隔符任意一侧的**#** 字符数时不显示前导零或尾随零外，数字符号 (**) 占位符的作用类似于零 (** 0 **#** ) 数字占位符。|  
 |**。**|表示决定小数点分隔符左侧和右侧显示几位数的小数点占位符。<br /><br /> 如果格式表达式中句点 (**#**.**) 左侧只包含数字符号 (**) 字符，则小于 1 的数字以小数点分隔符开头。 若要显示用小数显示的前导零，请使用零 (0) 作为小数点分隔符左侧的第一个数字占位符。<br /><br /> 在格式化输出中用作小数点占位符的实际字符取决于计算机系统所识别的数字格式。<br /><br /> 注意：在某些区域设置中，用逗号作为小数点分隔符。|  

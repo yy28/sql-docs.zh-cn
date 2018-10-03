@@ -5,33 +5,30 @@ ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6933fb1690b11d373974892672b43fe8df218860
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603965"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>步骤 3：使用 ADO.NET 连接到 SQL 的概念证明
 
-- 以前的文章：&nbsp;&nbsp;&nbsp;[步骤 2： 创建 ADO.NET 开发 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 前一篇文章：&nbsp;&nbsp;&nbsp;[步骤 2： 创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
 - 下一篇文章：&nbsp;&nbsp;&nbsp;[步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-此 C# 代码示例，应考虑仅概念证明。 示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。  
+此 C# 代码示例，应考虑仅概念证明。 示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。  
   
 ## <a name="step-1-connect"></a>步骤 1： 连接
   
-该方法**SqlConnection.Open**用于连接到你的 SQL 数据库。  
+该方法**SqlConnection.Open**用于连接到 SQL 数据库。  
 
 
 ```CSharp  
@@ -73,7 +70,7 @@ ms.locfileid: "35288886"
 SqlCommand.ExecuteReader 方法：  
   
 - 向 SQL 系统发出 SQL SELECT 语句。  
-- 返回 SqlDataReader 以提供对结果行访问的一个实例。  
+- 返回实例的 SqlDataReader 以提供对结果行的访问。  
   
   
   

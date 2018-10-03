@@ -1,13 +1,11 @@
 ---
-title: 记录集和 SourceRecordset 属性示例 (VBScript) |Microsoft 文档
+title: Recordset 和 SourceRecordset 属性示例 (VBScript) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - Source property [ADO], VBScript example
 - Recordset property [ADO], VBScript example
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cce066348b8bf711993f4296fcc38fec285e91a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 325b6f9a6adb53752b8f0229a0333934f179042a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737285"
 ---
-# <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>记录集和 SourceRecordset 属性示例 (VBScript)
+# <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset 和 SourceRecordset 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何设置所需的参数的[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)在运行时的默认业务对象。  
+ 下面的示例演示如何设置的所需的参数[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)在运行时的默认业务对象。  
   
- 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o > 标记中普通的 HTML 文档，并将其命名**RecordsetVBS.asp**。 ASP 脚本将标识你的服务器。  
+ 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**RecordsetVBS.asp**。 ASP 脚本将识别您的服务器。  
   
 ```  
 <!-- BeginRecordSetVBS -->  

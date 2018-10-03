@@ -1,12 +1,10 @@
 ---
-title: 执行相关的动态管理视图和函数 (Transact SQL) |Microsoft 文档
+title: 与执行相关的动态管理视图和函数 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f435d835e62ef5e129bba5bc33a9ec91cf1470b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d4527aba3a9ba14ac3af978b477ff5c8cbd1b3de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468513"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47774637"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>与执行有关的动态管理视图和函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +54,9 @@ ms.locfileid: "34468513"
 
   
 > [!NOTE]  
->  **Sys.dm_exec_query_transformation_stats**动态管理视图标识仅用于提供信息。 不提供支持。 不保证以后的兼容性。  
+>  **Sys.dm_exec_query_transformation_stats**动态管理视图被标识为仅供参考。 不提供支持。 不保证以后的兼容性。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

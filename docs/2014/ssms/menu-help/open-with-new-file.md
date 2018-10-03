@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.openwith
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 89d4d09713717d74a5116b7295523be3f24e7cfa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f7ea982dcc8a3f1d0cc16857e657003c63c60f94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065797"
 ---
 # <a name="open-with-new-file"></a>打开方式（新建文件）
   通过在“文件”菜单上单击“打开”再单击“文件”，可以在一个或多个编辑器中打开文档。 在“打开文件”对话框中，选择文件，单击“打开”箭头，再单击“打开方式”。 在“打开方式”对话框中的“选择要打开的程序”列表中，单击要使用的程序，再单击“打开”。  

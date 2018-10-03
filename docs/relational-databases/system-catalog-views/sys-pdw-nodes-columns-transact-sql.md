@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20bb25d3699a6fab734da0974bc0726da7e5cb96
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b811bb94039974faa8c145ef93df92949fbd702
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714905"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "38058135"
 |column_id|**int**|列的 ID。 对象中是唯一的。||  
 |system_type_id|**tinyint**|系统类型的列的 ID。||  
 |user_type_id|**int**|用户定义的列类型的 ID。||  
-|max_length|**int**|列的最大长度（字节）。|包括对不受支持的列类型 （无效）-1。|  
+|max_length|**smallint**|列的最大长度（字节）。|包括对不受支持的列类型 （无效）-1。|  
 |精度|**tinyint**|如果基于数值; 列的精度否则为为 0。||  
 |小数位数|**tinyint**|如果基于数值，则为列的小数位数；否则为 0。||  
 |collation_name|**sysname**|如果基于字符的; 的列的排序规则名称否则，为 NULL。||  
@@ -58,7 +54,7 @@ ms.locfileid: "38058135"
 |is_column_set|**bit**|1 = 列为列集。|始终为 0。|  
 |pdw_node_id|**int**|唯一标识符[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|NOT NULL|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 权限。  
   
 ## <a name="see-also"></a>请参阅  

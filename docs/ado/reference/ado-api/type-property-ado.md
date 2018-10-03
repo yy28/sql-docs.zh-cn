@@ -1,13 +1,11 @@
 ---
-title: 类型属性 (ADO) |Microsoft 文档
+title: 类型属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820785"
 ---
-# <a name="type-property-ado"></a>类型属性 (ADO)
+# <a name="type-property-ado"></a>Type 属性 (ADO)
 指示的操作的类型或数据类型[参数](../../../ado/reference/ado-api/parameter-object.md)，[字段](../../../ado/reference/ado-api/field-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
- 有关**参数**对象，**类型**属性为读/写。 新**字段**已追加到的对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)，**类型**仅次于为读/写[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**已指定的数据提供程序已经成功地添加新和**字段**通过调用[更新](../../../ado/reference/ado-api/update-method.md)方法**字段**集合。  
+## <a name="remarks"></a>备注  
+ 有关**参数**对象，**类型**属性为读/写。 对新**字段**已追加到的对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)，**类型**后才为读/写[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**已指定并且数据提供程序已成功添加新**域**通过调用[更新](../../../ado/reference/ado-api/update-method.md)的方法**字段**集合。  
   
  对于所有其他对象，**类型**属性是只读的。  
   
@@ -45,7 +42,7 @@ ms.locfileid: "35282566"
 |[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|[属性对象 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [类型属性示例 （字段） (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [类型属性示例 （属性） （VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Type 属性示例 （字段） (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Type 属性示例 （属性） （VC + +）](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType 属性 (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type 属性（ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)

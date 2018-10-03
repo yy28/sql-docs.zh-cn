@@ -1,30 +1,26 @@
 ---
-title: 全文搜索和语义搜索函数 (Transact SQL) |Microsoft 文档
+title: 全文搜索和语义搜索函数 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - semantic search [SQL Server], system functions
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 04356970f56a3a2e5ee8f2a824b722801fe7262a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f2a6364d002200cea1c04b35216dcec6dc0743d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33226275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780985"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>全文搜索和语义搜索函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33226275"
  返回由包含以下各项的列组成的零行、一行或多行表：单个词或短语的完全匹配项或模糊匹配项、词在一定差别范围内的相近或加权匹配项。  
   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- 返回由零个、 一个或多行包含匹配的含义，，而不仅仅是词必须完全相同中指定, 的文本的值的这些列的表*freetext_string*。  
+ 返回的零个、 一个或多个行包含以下与匹配的含义，但不只是确切的措辞中指定的文本的值的列的表*freetext_string*。  
   
 ## <a name="semantic-search-functions"></a>语义搜索函数  
  [semantickeyphrasetable (Transact-SQL)](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  

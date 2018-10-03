@@ -1,13 +1,11 @@
 ---
-title: 项属性 (ADO) |Microsoft 文档
+title: 项属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,19 +43,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655646"
 ---
 # <a name="item-property-ado"></a>Item 属性 (ADO)
-按名称或序号指示集合的特定成员。  
+指示集合中的特定成员按名称或序号。  
   
 ## <a name="syntax"></a>语法  
   
@@ -66,16 +63,16 @@ Set object = collection.Item ( Index )
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回一个对象引用。  
+ 返回的对象引用。  
   
 ## <a name="parameters"></a>Parameters  
  *Index*  
- A **Variant**表达式计算结果为名称或集合中对象的序号。  
+ 一个**变体**表达式的计算结果为名称或集合中的对象的初始数字。  
   
-## <a name="remarks"></a>Remarks  
- 使用**项**属性集合中返回特定对象。 如果**项**在对应的集合中找不到对象*索引*自变量，就会出错。 此外，某些集合不支持命名的对象;对于这些集合中，你必须使用序号引用。  
+## <a name="remarks"></a>备注  
+ 使用**项**属性以返回特定对象在集合中。 如果**项**对应的集合中找不到对象*索引*参数，就会出错。 另外，某些集合不支持命名的对象;对于这些集合，必须使用序号引用。  
   
- **项**属性是所有集合的默认属性; 因此，以下语法窗体是可互换：  
+ **项**属性是所有集合的默认属性; 因此，以下语法形式是可互换的：  
   
 ```  
 collection.Item (Index)  
@@ -95,5 +92,5 @@ collection (Index)
 |[视图集合 (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>请参阅  
- [项的属性示例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+ [Item 属性示例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item 属性示例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

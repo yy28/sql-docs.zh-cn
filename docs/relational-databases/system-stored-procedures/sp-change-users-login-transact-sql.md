@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 12/13/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_users_login
@@ -21,12 +18,12 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c0afb67e094d18942c0da683dd90778047ee5c8f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026042"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747115"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +75,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|数据库用户名。|  
 |UserSID|**varbinary(85)**|用户的安全标识符。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 sp_change_users_login 将当前数据库中的数据库用户链接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 如果用户登录名已更改，则使用 sp_change_users_login 将用户链接到新的登录，而不会丢失用户的权限。 新*登录名*不能为 sa，并*用户*不能为 dbo、 guest 或 INFORMATION_SCHEMA 用户。  
   
  sp_change_users_login 不能用于将数据库用户映射到 Windows 级主体、证书或非对称密钥。  

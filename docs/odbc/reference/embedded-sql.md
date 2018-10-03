@@ -1,13 +1,11 @@
 ---
-title: 嵌入式 SQL |Microsoft 文档
+title: 嵌入式 SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL [ODBC], embedded SQL
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d74fcd9aaecebf409580ad139b504b05f67e286
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915953"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855276"
 ---
-# <a name="embedded-sql"></a>嵌入式的 SQL
-将 SQL 语句发送到 DBMS 的第一个技术嵌入 SQL。 因为 SQL 不使用变量和控制的流语句，它通常用于为数据库子语言，可以添加到在传统的编程语言中，例如 C 或 COBOL 编写的程序。 这是一个中央的嵌入式 SQL 了解： 置于主机编程语言中编写的程序的 SQL 语句。 简言之，以下方法用于在主机语言中嵌入的 SQL 语句：  
+# <a name="embedded-sql"></a>嵌入式 SQL
+嵌入的第一个方法用于将 SQL 语句发送到 DBMS SQL。 因为 SQL 不使用变量和控制流语句，它是通常用作可以添加到以传统的编程语言，例如 C 或 COBOL 编写的程序数据库子语言。 这是一个中央嵌入式 SQL 的概念： SQL 语句置于主机编程语言中编写的程序。 简单地说，以下方法用于在宿主语言中嵌入的 SQL 语句：  
   
--   由特殊 SQL 预编译器处理嵌入的 SQL 语句。 所有 SQL 语句开头引导，结尾的终止符，这两种预编译器标志的 SQL 语句。 引导和终结器因主机语言。 例如，引导是在 C 中的"执行 SQL"和"（& a) SQL ("腮腺炎，在终结器是一个分号 （;） 和 C 和腮腺炎中的右括号中。  
+-   由特殊 SQL 使用预编译器处理嵌入的 SQL 语句。 所有 SQL 语句与引导开头和结尾终结器，这两个标记的 SQL 语句预编译器。 引导和终结器因主机语言。 例如，引导是在 C 中的"执行 SQL"和"& SQL ("中腮腺炎，终止符是以分号 （;） 在 C 和腮腺炎中的右括号中。  
   
--   只要允许使用常量，从应用程序，称为主机变量的变量可以在嵌入的 SQL 语句中使用。 这些可用输入来定制特定的情况，然后在接收查询结果的输出的 SQL 语句。  
+-   只要允许使用常量，可以在嵌入的 SQL 语句中使用从应用程序，称为主机变量的变量。 这些可用于在输入定制到特定的情况并输出接收查询的结果上的 SQL 语句。  
   
--   返回数据的单个行的查询处理与单独的 SELECT 语句;此语句指定查询和主机变量中返回数据。  
+-   返回单个数据行的查询处理与单独的 SELECT 语句;此语句指定查询和返回数据中的主机变量。  
   
--   返回多行数据的查询的处理游标。 将跟踪游标的结果集内的当前行。 DECLARE CURSOR 语句定义查询、 OPEN 语句开始查询处理、 FETCH 语句检索的数据，连续行和关闭语句结束查询处理。  
+-   返回多行数据的查询处理与游标的游标。 跟踪结果集内的当前行的游标。 DECLARE CURSOR 语句定义查询、 OPEN 语句启动的查询处理、 FETCH 语句检索的数据，连续的行和 CLOSE 语句结束查询处理。  
   
--   打开游标时，可以使用定位的更新和定位的 delete 语句，来更新或删除当前选择光标的行。  
+-   打开游标时，可以使用定位的更新和定位的 delete 语句，若要更新或删除当前选择光标的行。  
   
  本部分包含以下主题。  
   

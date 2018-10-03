@@ -1,13 +1,11 @@
 ---
-title: 应用程序和驱动程序兼容性 |Microsoft 文档
+title: 应用程序和驱动程序兼容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - compatibility [ODBC], application and driver compatibility
 - application compatibility issues [ODBC]
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 857d36456ec08596d329ea7502e92d2a3f4646e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598075"
 ---
 # <a name="application-and-driver-compatibility"></a>应用程序和驱动程序兼容性
-ODBC 应用程序和驱动程序都属于的除了其版本的类别数。 一些这些应用程序是与某些驱动程序; 不兼容在其他情况下，此应用程序或驱动程序的类型可能会对它们之间的向后兼容性问题影响。  
+ODBC 应用程序和驱动程序分为许多类别，除了其版本。 与某些驱动程序; 不兼容的这些应用程序一些在其他情况下，应用程序或驱动程序的类型可能会它们之间的向后兼容性问题重的负担。  
   
  本部分包含以下主题。  
   

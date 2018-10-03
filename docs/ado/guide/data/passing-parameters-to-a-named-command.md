@@ -1,33 +1,30 @@
 ---
-title: 将参数传递给命名命令 |Microsoft 文档
+title: 将参数传递给命名命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO], passing parameters to a named command
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51243e0b57bf9cfe4619368e1abf49c048a19fd7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0f7db54ca3cd3b7574896bac11bce87446b6d4b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272356"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773385"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>将参数传递给命名命令
-就像该命令的结果作为传递*出*变量命名的命令中，参数来参数化的命令可以被传入的作为*中*命名命令的变量。  
+只需命令的结果作为传递*出*变量的已命名的命令参数已参数化的命令可为传入的*中*命名命令的变量。  
   
- 下面的代码示例尝试检索所有订单放置客户其**CustomerID**是来自 Northwind 数据库的"ALKFI"。 值**CustomerID**在调用命名的命令时提供。  
+ 下面的代码示例尝试检索所有订单放置客户通过其**CustomerID**是来自 Northwind 数据库的"ALKFI"。 值**CustomerID**在调用已命名的命令时提供。  
   
 ```  
 Const DS = "MySqlServer"  
@@ -80,21 +77,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- 请注意所有输入的参数必须优先于任何输出变量，并且参数的数据类型必须匹配，或可以转换为与相应的字段。 下面的语句-  
+ 请注意，所有输入的参数必须在之前的任何输出变量和参数的数据类型必须匹配或可以转换为与相应的字段。 以下语句：  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -将导致错误的不匹配的数据类型，因为所需的输入的参数属于**字符串**类型，不是**整数**类型。  
+ — 将导致错误的数据类型不匹配，因为必需的输入的参数的**字符串**类型，不是**整数**类型。  
   
- 以下调用-  
+ 以下调用：  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -有效，但会产生任何设置，因为数据库中不存在任何此类记录了空结果。  
+ — 虽然有效，但会产生空结果集，因为在数据库中不存在任何此类记录。  
   
 ## <a name="see-also"></a>请参阅  
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

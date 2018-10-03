@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053987"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>“新建系统角色分配: 编辑系统角色分配”页（报表管理器）
   使用“新建系统角色分配”页或“编辑系统角色分配”页可以定义报表服务器的安全性。 所有安全性都是通过将特定用户或组映射到这些用户或组可以执行的任务的角色分配来定义的。 任务列表表现为您在进行角色分配时选择的角色定义。  
@@ -45,7 +42,7 @@ ms.locfileid: "37331267"
   
 4.  要创建新的角色分配，在工具栏中单击 **“新建角色分配”** 。 要编辑现有角色分配，请在“安全属性”页上单击组或用户旁边的 **“编辑”** 。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **组或用户**  
  键入域中的组或用户帐户的名称。 如果报表服务器在本地帐户下运行，则必须指定本地组或用户。 如果报表服务器在域帐户下运行，则必须指定域组或域用户。 按以下格式输入帐户：\<域 >\\< 帐户\>。  
   

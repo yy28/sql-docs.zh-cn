@@ -1,34 +1,31 @@
 ---
-title: 编辑数据 |Microsoft 文档
+title: 编辑数据 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, editing data
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270266"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823379"
 ---
 # <a name="editing-data"></a>编辑数据
-我们已介绍了如何使用 ADO 连接到数据源、 执行命令和获取结果中**记录集**对象，并在中导航**记录集**。 本部分重点介绍下一步的基本 ADO 操作： 编辑数据。  
+我们已介绍了如何使用 ADO 来连接到数据源、 执行命令、 获取中的结果**记录集**对象，并在导航**记录集**。 本部分重点介绍下一步的基础 ADO 操作： 编辑数据。  
   
- 本部分将继续使用示例**记录集**中引入[检查数据](../../../ado/guide/data/examining-data.md)，与一个重要的更改。 下面的代码用于打开**记录集**:  
+ 本部分将继续使用该示例**记录集**中引入[检查数据](../../../ado/guide/data/examining-data.md)，使用一项重要更改。 下面的代码用于打开**记录集**:  
   
 ```  
 'BeginEditIntro  
@@ -47,13 +44,13 @@ ms.locfileid: "35270266"
 'EndEditIntro  
 ```  
   
- 对代码的重要的更改包括设置**CursorLocation**属性**连接**对象等于**adUseClient**中*GetNewConnection*函数 （在下一步的示例中显示），这表示客户端游标的使用。 有关客户端和服务器端游标之间的差异的详细信息，请参阅[了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
+ 对代码进行重要更改，需要**CursorLocation**的属性**连接**对象等于**adUseClient**中*GetNewConnection*函数 （在下一步的示例中显示），用于指示客户端游标的用途。 有关客户端和服务器端游标之间差异的详细信息，请参阅[了解游标和锁定](../../../ado/guide/data/understanding-cursors-and-locks.md)。  
   
- **CursorLocation**属性的**adUseClient**设置将数据源 (SQL Server，在此情况下) 中的光标的位置移动到客户端代码 （桌面工作站） 的位置。 此设置将强制 ADO 以创建和管理光标在客户端上调用 OLE DB 客户端游标引擎。  
+ **CursorLocation**属性的**adUseClient**设置将数据源 (SQL Server，在此情况下) 中的光标位置移动到的客户端代码 （桌面工作站） 的位置。 此设置会强制 ADO 来创建和管理光标以在客户端上调用 OLE DB 客户端游标引擎。  
   
- 你可能还具有注意到， **LockType**参数**打开**方法更改为**adLockBatchOptimistic**。 这将在批处理模式下打开光标。 (提供程序缓存多个更改，并将其写入到基础数据源仅在调用**UpdateBatch**方法。)对所做的更改**记录集**将不会更新在数据库中，直到**UpdateBatch**调用方法。  
+ 您可能还注意到， **LockType**的参数**打开**方法更改为**adLockBatchOptimistic**。 这将在批处理模式下打开游标。 (提供程序缓存多项更改，并将其写入到基础数据源仅在调用**UpdateBatch**方法。)对所做的更改**记录集**将不会更新在数据库中，直到**UpdateBatch**调用方法。  
   
- 最后，本部分中的代码使用 GetNewConnection 函数的修改的版本。 此版本的函数现在可返回客户端游标。 该函数如下所示：  
+ 最后，在本部分中的代码使用 GetNewConnection 函数的修改的版本。 此版本的函数现在返回客户端游标。 该函数如下所示：  
   
 ```  
 'BeginNewConnection  

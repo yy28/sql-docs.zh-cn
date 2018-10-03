@@ -1,39 +1,33 @@
 ---
-title: 算术表达式 (XQuery) |Microsoft 文档
+title: 算术表达式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expressions [XQuery], arithmetic
 - arithmetic expressions
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b39c5febb04d22b5dd79791585cd1c0fb51e1649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d970209b71a842aa1c78b2f7dd0db980e0ce73e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642645"
 ---
 # <a name="arithmetic-expressions-xquery"></a>算术表达式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  支持所有算术运算符，除**idiv**。 以下示例将说明算术运算符的基本用法：  
+  支持的所有算术运算符，除**idiv**。 以下示例将说明算术运算符的基本用法：  
   
 ```  
 DECLARE @x xml  
@@ -42,7 +36,7 @@ SELECT @x.query('2 div 2')
 SELECT @x.query('2 * 2')  
 ```  
   
- 因为**idiv**是不受支持，解决方案是使用**xs:integer()** 构造函数：  
+ 因为**idiv**是不受支持，一种解决方案是使用**xs:integer()** 构造函数：  
   
 ```  
 DECLARE @x xml  
@@ -53,17 +47,17 @@ SET @x=''
 SELECT @x.query('xs:integer(2 div 3)')  
 ```  
   
- 从算术运算符得到的类型基于输入值的类型。 如果操作数为不同类型，则将在需要时根据类型层次结构将一个或两个操作数转换为常用基元基类型。 有关类型层次结构的信息，请参阅[在 XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
+ 从算术运算符得到的类型基于输入值的类型。 如果操作数为不同类型，则将在需要时根据类型层次结构将一个或两个操作数转换为常用基元基类型。 有关类型层次结构的信息，请参阅[XQuery 中的类型转换规则](../xquery/type-casting-rules-in-xquery.md)。  
   
- 如果两个操作为不同的数字基类型，则将产生数字类型升级。 例如，添加**xs: decimal**到**将 xs: double**将首先将十进制值更改为双精度值。 然后，将执行导致双精度值的添加操作。  
+ 如果两个操作为不同的数字基类型，则将产生数字类型升级。 例如，添加**xs: decimal**到**xs: double**会首先将十进制值更改为双精度值。 然后，将执行导致双精度值的添加操作。  
   
- 非类型化的原子值都转换为另一个操作数的数值基类型，或设置为**将 xs: double**如果另一个操作数还是非类型化。  
+ 非类型化原子值都转换到另一个操作数的数字基类型，或**xs: double**如果其他操作数也为非类型化。  
   
 ## <a name="implementation-limitations"></a>实现限制  
  限制如下：  
   
--   对于算术运算符的参数必须是数值类型或**untypedAtomic**。  
+-   算术运算符的参数必须为数值类型或**untypedAtomic**。  
   
--   对操作**xs:integer**值导致类型的值**xs: decimal**而不是**xs:integer**。  
+-   上的操作**xs: integer**值会导致类型的值**xs: decimal**而不是**xs: integer**。  
   
   

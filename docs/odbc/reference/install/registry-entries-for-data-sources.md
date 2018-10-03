@@ -1,13 +1,11 @@
 ---
-title: 数据源的注册表条目 |Microsoft 文档
+title: 数据源的注册表项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - data sources [ODBC], configuring
 - registry entries for data sources [ODBC]
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d052b4d64e858837a51a907fc77548bac231c35d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692915"
 ---
 # <a name="registry-entries-for-data-sources"></a>数据源的注册表项
 > [!NOTE]  
->  从 Windows XP 和 Windows Server 2003 开始，在 Windows 操作系统中包含 ODBC。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
+>  从 Windows XP 和 Windows Server 2003 开始，ODBC 包括在 Windows 操作系统中。 在早期版本的 Windows 上，应仅显式安装 ODBC。  
   
- 安装程序 DLL 维护注册表中有关每个数据源的信息。 在 Microsoft Windows NT/Windows 2000 和 Microsoft Windows 95/98，此信息存储在注册表中的以下两个密钥之一下的子项：  
+ 安装程序 DLL 维护注册表中的每个数据源有关的信息。 在 Microsoft Windows NT/Windows 2000 和 Microsoft Windows 95/98 中，此信息存储在注册表中的以下两个键的一个帐户下的子项：  
   
  HKEY_LOCAL_MACHINE  
   
@@ -49,7 +46,7 @@ ms.locfileid: "32916382"
   
  Odbc.ini  
   
- 使用哪些密钥取决于数据源是*系统数据源，* 这是可供所有用户，或*用户数据源，* 这是仅供当前用户。 在 HKEY_LOCAL_MACHINE 树中，存储系统数据源和用户数据源将存储在 HKEY_CURRENT_USER 树。 在所有其他方面，系统数据源和用户数据源均相同。  
+ 使用的密钥取决于数据源是*系统数据源*可供所有用户，或*用户数据源，* 这是仅供当前用户。 在 HKEY_LOCAL_MACHINE 树中，存储系统数据源和用户数据源存储在 HKEY_CURRENT_USER 树上。 在所有其他方面，系统数据源和用户数据源均相同。  
   
  本部分包含以下主题。  
   

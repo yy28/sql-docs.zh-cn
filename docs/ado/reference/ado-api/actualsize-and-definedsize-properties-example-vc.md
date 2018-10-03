@@ -1,13 +1,11 @@
 ---
-title: ActualSize 和 DefinedSize 属性示例 （VC + +） |Microsoft 文档
+title: ActualSize 和 DefinedSize 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789275"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 和 DefinedSize 属性示例 （VC + +）
-此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)和[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小的字段的属性。  
+此示例使用[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)并[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)要显示的定义的大小和实际大小字段的属性。  
   
 ## <a name="example"></a>示例  
   
@@ -132,23 +129,23 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **存储名称： Eric 读取丛书**  
-**定义大小： 40**  
+ **存储区名称： Eric 读取丛书**  
+**定义的大小： 40**  
 **实际大小： 19**  
-**存储名称： Barnum**  
-**定义大小： 40**  
+**存储区名称： Barnum**  
+**定义的大小： 40**  
 **实际大小： 8**  
-**存储名称： 新闻和 Brews**  
-**定义大小： 40**  
+**存储区名称： 新闻和啤酒**  
+**定义的大小： 40**  
 **实际大小： 12**  
-**存储名称： 文档-U-Mat： 质量细目和书籍**  
-**定义大小： 40**  
+**存储区名称： Doc U Mat： 质量洗衣房和书籍**  
+**定义的大小： 40**  
 **实际大小： 36**  
-**存储名称： 音符书店**  
-**定义大小： 40**  
+**存储区名称： 音符书店**  
+**定义的大小： 40**  
 **实际大小： 18**  
 **存储名称： Bookbeat**  
-**定义大小： 40**  
+**定义的大小： 40**  
 **实际大小： 8**   
 ## <a name="see-also"></a>请参阅  
  [ActualSize 属性 (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

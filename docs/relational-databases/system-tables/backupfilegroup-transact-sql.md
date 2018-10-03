@@ -1,14 +1,11 @@
 ---
-title: backupfilegroup (TRANSACT-SQL) |Microsoft 文档
+title: backupfilegroup (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832975"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +32,7 @@ ms.locfileid: "33259227"
   备份时数据库中的每个文件组在表中占一行。 **backupfilegroup**存储在**msdb**数据库。  
   
 > [!NOTE]  
->  **Backupfilegroup**表显示的数据库，而不是备份集的文件组配置。 若要确定是否在备份集中包含一个文件，使用**is_present**列[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表。  
+>  **Backupfilegroup**表显示了文件组配置的数据库，而不是备份集。 若要确定是否将文件包括在备份集中，使用**is_present**的列[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)表。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,16 +46,16 @@ ms.locfileid: "33259227"
 |**is_readonly**|**bit**|1 = 文件组为只读文件组。|  
 |**log_filegroup_guid**|**uniqueidentifier**|可以为 NULL。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  相同的文件组名称可以出现在不同数据库中；但是，每个文件组都有自己的 GUID。 因此， **(backup_set_id，filegroup_guid)** 是一个用于标识的文件组中的唯一键**backupfilegroup**。  
   
- RESTORE VERIFYONLY 从*backup_device*与 LOADHISTORY 填充的列**backupmediaset**介质集标头中的相应值的表。  
+ RESTORE VERIFYONLY FROM*备份设备*WITH LOADHISTORY 使用的列来填充**backupmediaset**介质集标头中的相应值的表。  
   
- 若要减少在此表，其他备份和历史记录表中的行数，执行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)存储过程。  
+ 若要减少此表中和其他备份和历史记录表中的行数，请执行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)存储过程。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [备份和还原表&#40;Transact SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   

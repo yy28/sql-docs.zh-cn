@@ -1,32 +1,29 @@
 ---
-title: 状态属性示例 (VB) |Microsoft 文档
+title: 状态属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - State property [ADO], Visual Basic example
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f3f7126a9da116dd34ef2c0e99559eeb7dc122e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753717"
 ---
 # <a name="state-property-example-vb"></a>State 属性示例 (VB)
-此示例使用[状态](../../../ado/reference/ado-api/state-property-ado.md)属性在异步连接打开和异步执行命令时显示一条消息。  
+此示例使用[状态](../../../ado/reference/ado-api/state-property-ado.md)属性在异步打开连接和异步执行命令时显示一条消息。  
   
 ```  
 'BeginStateVB  

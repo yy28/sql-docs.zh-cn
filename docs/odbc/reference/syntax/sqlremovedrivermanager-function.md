@@ -1,13 +1,11 @@
 ---
-title: SQLRemoveDriverManager 函数 |Microsoft 文档
+title: SQLRemoveDriverManager 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLRemoveDriverManager
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLRemoveDriverManager function function [ODBC]
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad7508ef6825bda50adee02fe92665e4d3445ee5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa90a3ec804717ff23c249b8a54e23665933f1a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794265"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 函数
-**一致性**  
- 版本引入： ODBC 3.0： 在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更高版本操作系统中已过时。  
+**符合性**  
+ 版本引入了： ODBC 3.0： 在 Windows XP Service Pack 2、 Windows Server 2003 Service Pack 1 和更高版本操作系统中已过时。  
   
  **摘要**  
- **SQLRemoveDriverManager**更改或删除中的系统信息的 Odbcinst.ini 条目有关 ODBC 核心组件的信息。  
+ **SQLRemoveDriverManager**更改或删除从 Odbcinst.ini 条目的系统信息中有关 ODBC 核心组件的信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,22 +47,22 @@ BOOL SQLRemoveDriverManager(
  [输出]使用情况计数的驱动程序管理器后调用此函数中。  
   
 ## <a name="returns"></a>返回  
- 如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。 如果没有条目存在的系统信息中，调用此函数时，此函数将返回 FALSE。  
+ 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。 如果没有条目中的系统信息调用此函数时，该函数将返回 FALSE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLRemoveDriverManager**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLRemoveDriverManager**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|对于发生了错误其中没有任何特定的安装程序错误。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序无法删除驱动程序管理器信息，因为它在注册表中不存在或无法在注册表中找到。|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|无法递增或递减的组件使用计数|安装程序无法减少的使用情况计数的驱动程序管理器。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序无法删除驱动程序管理器的信息，因为它在注册表中不存在或找不到注册表中。|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|无法递增或递减的组件使用计数|安装程序无法减少使用情况计数的驱动程序管理器。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
   
 ## <a name="comments"></a>注释  
- **SQLRemoveDriverManager**进行了补充**SQLInstallDriverManager**函数，并且更新的组件使用情况计数的系统信息。 只能从安装程序应用程序，应调用此函数。  
+ **SQLRemoveDriverManager**进行了补充**SQLInstallDriverManager**函数，并且更新的组件使用情况计数中的系统信息。 只能从安装程序应用程序应调用此函数。  
   
- **SQLRemoveDriverManager**将按 1 递减的核心组件使用计数。 如果组件使用情况计数归为 0，则将删除的条目系统信息。 核心组件条目已在"ODBC 核心"的标题下的系统信息中的以下位置：  
+ **SQLRemoveDriverManager**将核心组件使用情况计数递减 1。 如果组件使用情况计数达到 0，则将删除条目系统信息。 核心组件条目中下标题"ODBC 核心"的系统信息中的以下位置为：  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -76,11 +73,11 @@ BOOL SQLRemoveDriverManager(
  `Odbcinst.ini`  
   
 > [!CAUTION]  
->  应用程序不应以物理方式删除驱动程序管理器文件的组件使用计数和文件使用情况计数达到零时。  
+>  应用程序不应以物理方式删除驱动程序管理器文件时的组件使用计数和文件使用情况计数归零。  
   
- **SQLRemoveDriverManager**不会实际删除任何文件。 调用程序负责删除文件和维护的文件使用情况计数。 驱动程序管理器文件应不是，但是，删除时的组件使用计数和文件使用率计数已达到零，因为这些文件可能由其他应用程序具有不会增加文件使用率计数。  
+ **SQLRemoveDriverManager**不会实际删除任何文件。 调用程序负责删除文件和维护的文件使用情况计数。 驱动程序管理器文件但是不应、 时被删除的组件使用计数和文件使用率计数已达到零，因为这些文件可能由其他应用程序具有不会增加文件使用情况计数。  
   
- **SQLRemoveDriverManager**作为卸载过程中调用。 作为一个整体卸载 ODBC 核心组件 （包括驱动程序管理器、 光标库，安装程序、 的语言库、 管理员、 形式转换文件和等等）。 以下文件不是删除时**SQLRemoveDriverManager**作为卸载过程中调用：  
+ **SQLRemoveDriverManager**作为卸载过程的一部分调用。 作为一个整体卸载 ODBC 核心组件 （其中包括驱动程序管理器、 光标库、 安装程序、 语言库、 管理员、 形式转换文件和等等）。 以下文件不是删除何时**SQLRemoveDriverManager**称为卸载过程的一部分：  
   
 |||  
 |-|-|  
@@ -92,9 +89,9 @@ BOOL SQLRemoveDriverManager(
 |MSVCRT40。DLL|ODBCAD32。EXE|  
 |ODBCCP32。CPL||  
   
- **SQLRemoveDriverManager**也称为升级过程的一部分。 如果应用程序检测到它已执行升级，以及它以前已安装该驱动程序，则应删除该驱动程序，并将其然后重新安装。  
+ **SQLRemoveDriverManager**也称为升级过程的一部分。 如果应用程序检测到它必须执行升级和它以前已安装的驱动程序，应删除并再重新安装该驱动程序。  
   
- **SQLRemoveDriverManager**首先应调用以减少的组件使用情况计数。 **SQLInstallDriverEx**然后应调用以递增的组件使用计数。 应用程序安装程序必须用新的文件替换旧的核心组件文件。 文件使用情况计数将保持不变，并使用以前版本的核心组件文件的其他应用程序现在将使用较新版本文件。  
+ **SQLRemoveDriverManager**首先应调用要递减的组件使用计数。 **SQLInstallDriverEx**然后应调用来增加的组件使用情况计数。 应用程序安装程序必须将新文件替换为旧的核心组件文件。 文件使用情况计数将保持不变，并使用较旧版本的核心组件文件的其他应用程序现在将使用较新版本文件。  
   
 ## <a name="related-functions"></a>相关函数  
   

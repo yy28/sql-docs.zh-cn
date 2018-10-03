@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:min function
 - min function [XQuery]
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c52144d2cef297109c3c8aef1751690edf723cf9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792466"
 ---
-# <a name="aggregate-functions---min"></a>聚合函数-min
+# <a name="aggregate-functions---min"></a>聚合函数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回一组原子值 *$arg*，其值最小值的所有其他的一个项。  
@@ -46,7 +40,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  要返回其最小值的一组数值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  所有类型的原子化值传递给**min （)** 必须是同一基类型的子类型。 接受的基类型是支持的类型**gt**操作。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果混合使用这些类型，或者传递其他类型的其他值，会引发静态错误。  
   
  结果**min （)** 接收传入的类型，如在 xdt: untypedatomic 的情况下 xs: double 的基类型。 如果输入为静态空，则暗示，并返回静态错误。  

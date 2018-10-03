@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructure Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructure element
 ms.assetid: b943cd92-0ed8-4bd8-8fbc-7dab0534aede
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed39aafbe937c637abd7a6ec67fbd7343b62b116
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d03e52ccb38dc35fada602b6a293d018150efd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052087"
 ---
 # <a name="miningstructure-element-assl"></a>MiningStructure 元素 (ASSL)
   定义一组挖掘模型的结构。  
@@ -70,8 +67,8 @@ ms.locfileid: "37271823"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -81,7 +78,7 @@ ms.locfileid: "37271823"
 |父元素|[MiningStructures](../collections/miningstructures-element-assl.md)|  
 |子元素|[批注](../collections/annotations-element-assl.md)， [CacheMode](../properties/cachemode-element-assl.md)，[排序规则](../properties/collation-element-assl.md)，[列](../collections/columns-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[说明](../properties/description-element-assl.md)， [ErrorConfiguration](errorconfiguration-element-assl.md)，<br /><br /> [HoldoutActualSize](../properties/holdoutactualsize-element.md)，<br /><br /> [HoldoutMaxCases](../properties/holdoutmaxcases-element.md)，<br /><br /> [HoldoutMaxPercent](../properties/holdoutmaxpercent-element.md)，<br /><br /> [HoldoutSeed](../properties/holdoutseed-element.md)，<br /><br /> [ID](../properties/id-element-assl.md)，[语言](../properties/language-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [MiningModels](../collections/miningmodels-element-assl.md)， [MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)，[名称](../properties/name-element-assl.md)，[源](../properties/source-element-binding-assl.md)，[状态](../properties/state-element-assl.md)，[翻译](../collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  挖掘结构定义列和绑定。 在定义挖掘结构之后，可以使用该结构来定义多个挖掘模型。 可以对挖掘结构及其所包含的各个挖掘模型进行单独处理。  
   
 > [!NOTE]  

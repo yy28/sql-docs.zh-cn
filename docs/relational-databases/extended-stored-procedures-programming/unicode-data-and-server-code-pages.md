@@ -1,30 +1,26 @@
 ---
-title: Unicode 数据和服务器代码页 |Microsoft 文档
+title: Unicode 数据和服务器代码页 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [SQL Server], stored procedures
 - Unicode [SQL Server], extended stored procedures
 - extended stored procedures [SQL Server], metadata
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d38bf13ae6f80de24e9595d79042b8e3e40ef310
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846135"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode 数据和服务器代码页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,18 +30,18 @@ ms.locfileid: "32934902"
   
  扩展存储过程 API 将对 Unicode 数据启用；但是，它不对 Unicode 元数据启用。 #define Unicode 指令不影响扩展存储过程 API。  
   
- 由扩展存储过程 API 返回的或由您的扩展存储过程应用程序提供给它的所有元数据都假定位于服务器的多字节代码页中。 扩展存储过程 API 服务器应用程序的默认代码页是运行应用程序的计算机可通过调用中获取的 ANSI 代码页**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE。  
+ 由扩展存储过程 API 返回的或由您的扩展存储过程应用程序提供给它的所有元数据都假定位于服务器的多字节代码页中。 扩展存储过程 API 服务器应用程序的默认代码页是运行应用程序可通过调用获取的计算机的 ANSI 代码页**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE。  
   
  如果您的扩展存储过程 API 应用程序启用了 Unicode，则必须将您的 Unicode 元数据列名称、错误消息等转换为多字节数据，然后才能将该数据传递给扩展存储过程 API。  
   
 ## <a name="example"></a>示例  
  以下扩展存储过程提供了上述 Unicode 转换的示例。 注意：  
   
--   列数据传递到的 Unicode 数据作为**srv_describe**因为列将被描述为 SRVNVARCHAR。  
+-   列数据作为 Unicode 数据传递**srv_describe**因为该列被描述为 SRVNVARCHAR。  
   
 -   列名称元数据传递给**srv_describe**作为多字节数据。  
   
-     扩展存储过程调用**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE 若要获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+     扩展存储过程调用**srv_pfield**字段参数设置为 SRV_SPROC_CODEPAGE，若要获取的多字节代码页[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   错误消息传递给**srv_sendmsg**作为多字节数据。  
   
@@ -155,7 +151,7 @@ ms.locfileid: "32934902"
   
     ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [srv_wsendmsg&#40;扩展存储过程 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

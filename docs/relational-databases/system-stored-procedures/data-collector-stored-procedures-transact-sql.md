@@ -1,14 +1,11 @@
 ---
-title: 数据收集器存储过程 (Transact SQL) |Microsoft 文档
+title: 数据收集器存储过程 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,21 +14,20 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e004af91b72dfe3ffe1fb1731797036d42f82512
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741885"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>数据收集器存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server 支持以下用于处理与数据收集器和以下组件的系统存储过程： 收集组、 集合项和集合类型。  
+  SQL Server 支持以下系统存储过程用来处理数据收集器和以下组件： 收集组、 收集项和集合类型。  
   
 > [!IMPORTANT]  
 >  与常规存储过程不同的是，数据收集器存储过程的参数已严格类型化，不支持自动的数据类型转换。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
@@ -71,7 +67,7 @@ ms.locfileid: "33239757"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: DataSpace 对象和 CreateObject 方法示例 (VBScript) |Microsoft 文档
+title: DataSpace 对象和 CreateObject 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DataSpace object [RDS], VBScript example
 - CreateObject method [ADO], VBScript example
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9fd9d098362f45d4ff2d0e7a3bc24d67130a0be9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 196641267bfedaff0de657d842b75a38c7cac75a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753355"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace 对象和 CreateObject 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 下面的示例演示如何使用[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法[rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)默认业务对象[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o > 标记中普通的 HTML 文档，并将其命名**DataSpaceVBS.asp**。 ASP 脚本将标识你的服务器。  
+ 下面的示例演示如何使用[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法的[rds。DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)默认业务对象时，[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)。 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**DataSpaceVBS.asp**。 ASP 脚本将识别您的服务器。  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -136,10 +133,10 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
  下面的示例演示如何使用**CreateObject**方法来创建自定义业务对象，VbBusObj.VbBusObjCls 的实例。 它还使用脚本来标识 Web 服务器名称 Active Server Pages。  
   
- 若要查看完整的示例，请打开示例应用程序选择器。 在**客户端层**列中，选择**在 Internet Explorer 中的 VBScript**。 在**中间层**列中，选择**自定义 Visual Basic 业务对象**。  
+ 若要查看完整示例，请打开示例应用程序选择器。 在中**客户端层**列中，选择**在 Internet Explorer 中的 VBScript**。 在中**中间层**列中，选择**自定义 Visual Basic 业务对象**。  
   
 > [!NOTE]
->  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码连接字符串中的信息。  
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
   
 ```  
 Sub Window_OnLoad()  

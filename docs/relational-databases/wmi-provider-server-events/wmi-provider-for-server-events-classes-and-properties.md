@@ -1,30 +1,26 @@
 ---
-title: WMI Provider for Server Events 类和属性 |Microsoft 文档
+title: WMI Provider for Server Events 类和属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event classes [WMI]
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3514bd676b6b84436141cdcf669cc6c8f33598e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4c980a70772ed8e63065cc741326b8d497a29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011314"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762055"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events 类和属性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,22 +28,22 @@ ms.locfileid: "33011314"
   
  若要了解可以通过事件或事件组查询的属性，请参考事件架构。 默认情况下，事件架构安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，你可以参阅发布事件架构[ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ 或者，您可以参考上发布的事件架构[ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)。  
   
- 例如，通过引用 ALTER_DATABASE 事件，您将了解其父事件是 DDL_SERVER_LEVEL_EVENTS，而其属性都是**TSQLCommand**和**DatabaseName**。 该事件还继承属性**SQLInstance**， **PostTime**， **ComputerName**， **SPID**，和**LoginName**. 该事件没有子事件。  
+ 例如，通过参考 ALTER_DATABASE 事件，您将了解其父事件为 DDL_SERVER_LEVEL_EVENTS 和其属性是**TSQLCommand**并**DatabaseName**。 该事件还继承属性**SQLInstance**， **PostTime**， **ComputerName**， **SPID**，和**LoginName**. 该事件没有子事件。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的系统存储过程还可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和**sp_addtype**存储的过程都将激发针对 CREATE_TYPE 事件创建事件通知。 有关详细信息，请参阅[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
   
  **数据定义语言事件和事件组**  
   
- ![WMI 提供程序服务器事件事件树](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "服务器事件事件树的 WMI 提供程序")  
+ ![WMI Provider for Server Events 事件树](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "WMI Provider for Server Events 事件树")  
   
  **跟踪事件和事件组**  
   
- ![跟踪事件和事件组](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "跟踪事件和事件组")  
+ ![将跟踪事件和事件组](../../relational-databases/wmi-provider-server-events/media/sql-wmi-trc-all-events.gif "跟踪事件和事件组")  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [WMI Provider for Server Events 的概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)   
  [将 WQL 与 WMI Provider for Server Events 结合使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
   

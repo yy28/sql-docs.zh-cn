@@ -1,13 +1,11 @@
 ---
-title: 应用程序 |Microsoft 文档
+title: 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - off-the-shelf applications [ODBC]
@@ -18,44 +16,43 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac9d98b3b7f6261333626d888c6a8b1d750f2d1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834775"
 ---
 # <a name="applications"></a>应用程序
-*应用程序*是一个程序，调用 ODBC API 访问数据。 虽然许多类型的应用程序可能，但大多数分为三个类别，用作本指南中的示例。  
+*应用程序*是调用 ODBC API 访问数据的程序。 尽管许多类型的应用程序可能，但大多数划分为三个类别，用作在本指南中的示例。  
   
--   **通用应用程序**这些也称为拆封授权应用程序或现成的应用程序。 通用应用程序用于处理各种不同 Dbms。 示例包括一个电子表格或统计信息包使用 ODBC 来导入数据以供进一步分析和使用 ODBC 来从数据库获取邮件列表字处理器。  
+-   **通用应用程序**这些也称为打包应用程序或现成的应用程序。 通用应用程序用于处理各种不同的 Dbms。 示例包括电子表格或使用 ODBC 来导入数据以供进一步分析的统计信息包，并使用 ODBC 来从数据库获取邮件列表的字处理器。  
   
-     通用应用程序的重要子类别是应用程序开发环境，如 PowerBuilder 或 Microsoft® Visual Basic®。 尽管可能会只使用单个 DBMS，构造使用这些环境的应用程序本身的环境需要使用多个 Dbms。  
+     重要的子类别的通用应用程序是应用程序开发环境，如 PowerBuilder 或 Microsoft® Visual Basic®。 尽管使用这些环境构建的应用程序可能只使用单个 DBMS，环境本身需要能够处理多个 Dbms。  
   
-     所有通用应用程序具有的共同点是，它们是在 Dbms 之间高度可互操作，它们需要使用 ODBC 相对通用的方式。 关于互操作性的详细信息，请参阅[选择的互操作级别性](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md)。  
+     所有通用应用程序具有的共同点是，它们是在 Dbms 之间高度可互操作，它们需要使用 ODBC 相对较通用的方式。 有关互操作性的详细信息，请参阅[选择的互操作级别性](../../odbc/reference/develop-app/choosing-a-level-of-interoperability.md)。  
   
--   **垂直应用程序**垂直应用程序执行单一类型的任务，例如订单条目或跟踪生产数据及使用应用程序的开发人员控制的数据库架构。 对于特定的客户，应用程序适用于单个 DBMS。 例如，小型企业可能会使用应用程序与 dBase，而的大型企业可能会使用它与 Oracle。  
+-   **垂直应用程序**垂直应用程序执行单一类型的任务，例如订单录入或跟踪生产数据和使用由应用程序的开发人员控制的数据库架构。 对于特定的客户，应用程序处理单个 DBMS。 例如，小型企业可能会使用该应用程序 dBase，而大型企业可能使用它与 Oracle。  
   
-     应用程序使用 ODBC 以此方式应用程序不会绑定到任何一个 DBMS，尽管它可能与有限数量的 Dbms 提供类似的功能。 因此，应用程序开发人员可以出售独立于 DBMS 应用程序。 当它们开发，但有时修改后的客户已选 DBMS 包括 noninteroperable 代码时，垂直应用程序进行互操作。  
+     尽管它可能会绑定到有限数量的 Dbms 提供类似的功能，应用程序中应用程序未绑定到任何一个 DBMS，这种方式使用 ODBC。 因此，应用程序开发人员可以销售应用程序独立于 DBMS。 开发但有时会被修改为客户选择 DBMS 后包括 noninteroperable 代码时，垂直应用程序进行互操作。  
   
--   **自定义应用程序**使用自定义应用程序以便在单个公司执行特定任务。 例如，大型公司中的应用程序可能从多个部门 （其中每个使用不同 DBMS） 收集销售数据，并创建单个报表。 使用 ODBC 是因为它是一个公共接口并使程序员不必了解多个接口。 此类应用程序通常是不可互操作和写入到特定 Dbms 和驱动程序。  
+-   **自定义应用程序**自定义应用程序都用于在一家公司中执行特定任务。 例如，一家大型公司中的应用程序可能从多个部门 （其中每个使用不同的 DBMS） 中收集销售数据，并创建单个报表。 使用 ODBC，因为它是一个通用接口，使程序员无需了解多个接口。 此类应用程序中通常无法进行互操作性，并写入到特定 Dbms 和驱动程序。  
   
- 大量的任务是通用的所有应用程序，无论他们如何使用 ODBC。 综上所述，他们很大程度上会定义任何 ODBC 应用程序流。 任务包括：  
+ 多个任务是通用的所有应用程序，无论他们如何使用 ODBC。 它们合起来看，很大程度上定义任何 ODBC 应用程序的流。 任务包括：  
   
 -   选择数据源并连接到它。  
   
--   正在提交执行 SQL 语句。  
+-   正在提交用于执行 SQL 语句。  
   
--   检索结果 （如果有）。  
+-   正在检索结果 （如果有）。  
   
 -   处理错误。  
   
--   提交或回滚事务封闭的 SQL 语句。  
+-   提交或回滚封闭的 SQL 语句的事务。  
   
--   正在从数据源断开连接。  
+-   断开与数据源的连接。  
   
- 因为大多数数据访问工作使用 SQL 来完成，为其应用程序使用 ODBC 的主要任务是提交 SQL 语句和检索这些语句所生成的结果 （如果有）。 为其应用程序使用 ODBC 的其他任务包括确定和调整到驱动程序功能和浏览数据库目录。
+ 由于大多数数据访问工作通过 SQL，对其应用程序使用 ODBC 的主要任务是提交 SQL 语句并检索这些语句生成的结果 （如果有）。 为其应用程序使用 ODBC 的其他任务包括确定并对驱动程序功能的调整和浏览数据库目录。

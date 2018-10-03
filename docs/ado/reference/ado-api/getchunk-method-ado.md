@@ -1,13 +1,11 @@
 ---
-title: GetChunk 方法 (ADO) |Microsoft 文档
+title: GetChunk 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d39075e6d3c16540ded137a8ac78ccc6f8d94f8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 538ccfd71375521bf0ba035ccfa55746c4d76af9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602505"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 方法 (ADO)
-返回所有或较大的文本或二进制数据的内容的一部分，[字段](../../../ado/reference/ado-api/field-object.md)对象。  
+返回所有或大文本或二进制数据的内容的一部分，[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,25 +35,25 @@ variable = field.GetChunk(Size)
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**Variant**。  
+ 返回**变体**。  
   
 #### <a name="parameters"></a>Parameters  
  *Size*  
- A**长**等于的字节或你想要检索的字符数的表达式。  
+ 一个**长**等于的字节数或你想要检索的字符数的表达式。  
   
-## <a name="remarks"></a>Remarks  
- 使用**GetChunk**方法**字段**要检索其长二进制或字符数据的部分或全部对象。 在系统内存有限的情况下，你可以使用**GetChunk**方法，以操作部分，而不是较长的值。  
+## <a name="remarks"></a>备注  
+ 使用**GetChunk**方法**字段**要检索其长二进制或字符数据的部分或全部对象。 在系统内存有限的情况下，你可以使用**GetChunk**方法来操作部分，而不是很长的值。  
   
- 数据的**GetChunk**调用返回分配给*变量*。 如果*大小*大于剩余的数据， **GetChunk**方法仅返回的剩余数据而无需填充*变量*用空格。 如果该字段为空， **GetChunk**方法返回一个 null 值。  
+ 数据的**GetChunk**调用返回分配给*变量*。 如果*大小*大于剩余数据**GetChunk**方法仅返回的其余数据而无需填充*变量*具有空白空间。 如果该字段为空， **GetChunk**方法将返回 null 值。  
   
- 每个后续**GetChunk**呼叫会检索数据从何处开始以前**GetChunk**调用中断。 但是，如果你从一个字段，然后您设置或读取的当前记录中的另一个字段的值在检索数据，ADO 假定完第一个字段从检索数据。 如果调用**GetChunk**上再次，第一个字段 ADO 的方法将解释为新的调用**GetChunk**操作并开始读取数据的起始位置。 访问在其他字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)不是克隆的第一个对象**记录集**对象将不会打乱**GetChunk**操作。  
+ 每个后续**GetChunk**调用会检索数据从何处开始以前**GetChunk**离开的调用。 但是，如果要从一个字段，然后您设置或读取的当前记录中的另一个字段的值来检索数据，ADO 假定你已完成从第一个字段中检索数据。 如果您调用**GetChunk**同样，第一个字段 ADO 方法将解释为一个新的调用**GetChunk**操作并开始读取数据的起始位置。 访问其他字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)不是第一个克隆的对象**记录集**对象不会破坏**GetChunk**操作。  
   
- 如果**adFldLong**中位[属性](../../../ado/reference/ado-api/attributes-property-ado.md)属性**字段**对象设置为**True**，你可以使用**GetChunk**该字段的方法。  
+ 如果**adFldLong**位[特性](../../../ado/reference/ado-api/attributes-property-ado.md)属性**字段**对象设置为**True**，可以使用**GetChunk**为该字段的方法。  
   
- 如果没有最新记录时你使用**GetChunk**方法**字段**对象时，发生错误 3021 （最新记录）。  
+ 如果没有最新记录时使用**GetChunk**方法**字段**对象时，会发生错误 3021 （最新记录）。  
   
 > [!NOTE]
->  **GetChunk**方法不对上进行操作**字段**的对象[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 它不会执行任何操作，并将生成运行时错误。  
+>  **GetChunk**方法不对上进行操作**字段**的对象[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 它不会执行任何操作，并将产生运行时错误。  
   
 ## <a name="applies-to"></a>适用范围  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  

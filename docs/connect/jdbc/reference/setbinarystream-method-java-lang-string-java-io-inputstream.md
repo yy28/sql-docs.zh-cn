@@ -1,25 +1,22 @@
 ---
-title: setBinaryStream 方法输入流) |Microsoft 文档
+title: setBinaryStream 方法的输入流) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f9423687eebd16c16426353a7d48a6d9a2a06e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 67b7b7ae7e9e90bab4ad22cbebf248b62351749b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766777"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>setBinaryStream 方法 (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,22 +32,22 @@ public void setBinaryStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ parameterName  
   
- A**字符串**，其中包含参数的名称。  
+ 一个字符串，该字符串包含参数的名称。  
   
  *x*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定此 setBinaryStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setBinaryStream 方法由 java.sql.CallableStatement 接口中的 setBinaryStream 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
+ [setBinaryStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

@@ -1,15 +1,12 @@
 ---
-title: AdvancedProperties 属性 （SqlService 类） |Microsoft 文档
+title: AdvancedProperties 属性 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - AdvancedProperties Property (SqlService Class)
@@ -18,16 +15,15 @@ apilocation:
 helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 98c6d4e4f4ad9b3382abfd2077b4bad74e007e0c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a13b3c22333205f671fad33c8208c819541fb743
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822815"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,15 +37,15 @@ object.AdvancedProperties [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
- 数组[SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)包含的高级的属性的对象**SqlService**对象。  
+ 一个数组[SqlServiceAdvancedProperty 类](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)包含的高级的属性的对象**SqlService**对象。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

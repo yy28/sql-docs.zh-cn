@@ -1,14 +1,11 @@
 ---
-title: dbo.systargetservers (Transact SQL) |Microsoft 文档
+title: dbo.systargetservers (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.systargetservers_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - systargetservers system table
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f425fb530d10abb4a3285f664b8bed8b083197b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c8297c02d66671ea41b8a2dae4462514d4ef2fe4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783515"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +39,8 @@ ms.locfileid: "33260703"
 |**location**|**nvarchar(200)**|指定目标服务器的位置。|  
 |**time_zone_adjustment**|**int**|与格林尼治标准时间 (GMT) 之间的时差调整量（以小时为单位）。|  
 |**enlist_date**|**datetime**|指定目标服务器的登记日期和时间。|  
-|**last_poll_date**|**datetime**|日期和时间的指定的目标服务器上一次轮询多服务器的**sysdownloadlist**运行的作业的系统表。|  
-|**status**|**int**|目标服务器的状态：<br /><br /> **1** = 正常<br /><br /> **2** = 挂起的重新同步<br /><br /> **4** = 置疑脱机|  
+|**last_poll_date**|**datetime**|指定的目标服务器上次轮询多服务器的日期和时间**sysdownloadlist**运行的作业的系统表。|  
+|**status**|**int**|目标服务器的状态：<br /><br /> **1** = 正常<br /><br /> **2** = 重新同步挂起<br /><br /> **4** = 发生可疑的脱机|  
 |**local_time_at_last_poll**|**datetime**|上一次轮询目标服务器作业操作的日期和时间。|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|执行的人员的用户名**sp_msx_enlist**目标服务器上。|  
 |**poll_internal**|**int**|目标服务器为获得新下载指令而轮询主服务器前要经过的秒数。|  

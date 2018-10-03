@@ -1,35 +1,32 @@
 ---
-title: SQLTables （文本文件驱动程序） |Microsoft 文档
+title: SQLTables （文本文件驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], SQLTables
 - SQLTables function [ODBC], Text File Driver
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dfa9b97d6354d5f6ead2d53622dafed89156a794
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1299af287d9826893fc8c1f93007967509704d30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903922"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811865"
 ---
-# <a name="sqltables-text-file-driver"></a>SQLTables （文本文件驱动程序）
+# <a name="sqltables-text-file-driver"></a>SQLTables（文本文件驱动程序）
 > [!NOTE]  
->  本主题提供文本文件特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供了文本文件驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
 |参数|注释|  
 |--------------|--------------|  
-|*szTableOwner*|唯一有效参数*szTableOwner*是 NULL，因为无驱动程序支持所有者名称。 与*szTableOwner*设置为 NULL，返回所有表。 TABLE_OWNER 列中返回 NULL。|  
-|*szTableQualifier*|在 TABLE_QUALIFIER 列中， **SQLTables**将返回目录的路径。|  
-|*SzTableType*|"表"是唯一支持的表类型。<br /><br /> 使用文本驱动程序时，通过返回的文件列表**SQLTables**由中的文件扩展名确定**扩展列表**框中**ODBC 文本安装**对话框。|
+|*szTableOwner*|唯一有效参数*szTableOwner*为 NULL，因为没有任何驱动程序支持所有者名称。 与*szTableOwner*设置为 NULL，则返回所有表。 在 TABLE_OWNER 列中返回 NULL。|  
+|*szTableQualifier*|在 TABLE_QUALIFIER 专栏中， **SQLTables**将返回到目录的路径。|  
+|*SzTableType*|"表"是唯一支持的表类型。<br /><br /> 使用文本驱动程序时，返回的文件的列表**SQLTables**由中的文件扩展名**扩展列表**框中**ODBC 文本设置**对话框。|

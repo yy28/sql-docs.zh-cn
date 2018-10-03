@@ -1,13 +1,11 @@
 ---
-title: AffectEnum |Microsoft 文档
+title: AffectEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,26 +13,25 @@ f1_keywords:
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 797ee0a58457848b3dec133c695d1d36dc579bbe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772195"
 ---
 # <a name="affectenum"></a>AffectEnum
 指定的操作会影响哪些记录。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|如果没有[筛选器](../../../ado/reference/ado-api/filter-property.md)应用于**记录集**，影响所有记录。<br /><br /> 如果**筛选器**属性设置为字符串条件 (如"作者 = 'Smith'")，则该操作会影响当前章节中的可见记录。<br /><br /> 如果**筛选器**属性设置为属于[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或数组的书签，则该操作将影响的所有行**记录集**。 **注意：****adAffectAll**在 Visual Basic 对象浏览器中隐藏。|  
-|**adAffectAllChapters**|4|影响的所有同级章节中的所有记录**记录集**，包括那些通过任何不可见**筛选器**，当前应用。|  
-|**adAffectCurrent**|@shouldalert|影响仅当前记录。|  
-|**adAffectGroup**|2|影响满足当前的记录[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置。 必须设置**筛选器**属性**FilterGroupEnum**值或数组的**书签**要使用此选项。|  
+|**adAffectAll**|3|如果不存在[筛选器](../../../ado/reference/ado-api/filter-property.md)应用于**记录集**，影响所有记录。<br /><br /> 如果**筛选器**属性设置为字符串条件 (如"作者 = Smith")，则该操作会影响当前的一章中可见的记录。<br /><br /> 如果**筛选器**属性设置为的成员[FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)或数组的书签，则该操作将影响的所有行**记录集**。 **注意：****adAffectAll**隐藏在 Visual Basic 对象浏览器中。  |  
+|**adAffectAllChapters**|4|影响所有记录中的所有同级章节**记录集**，包括那些通过任何不可见**筛选器**当前应用。|  
+|**adAffectCurrent**|1|会影响仅当前记录。|  
+|**adAffectGroup**|2|影响满足当前的记录[筛选器](../../../ado/reference/ado-api/filter-property.md)属性设置。 必须设置**筛选器**属性设置为**FilterGroupEnum**值或数组**书签**要使用此选项。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  包： **com.ms.wfc.data**  

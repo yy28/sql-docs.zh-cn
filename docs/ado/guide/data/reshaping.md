@@ -1,33 +1,30 @@
 ---
-title: 重新调整 |Microsoft 文档
+title: 重塑 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714525"
 ---
-# <a name="reshaping"></a>重新调整
-A**记录集**创建可能的形状的子句来指定命令*别名*名称 （通常使用 AS 关键字）。 形状的别名**记录集**可以完全不同的命令中引用。 也就是说，你可以重复使用，或*重塑*，以前整形**记录集**新形状命令中。 若要支持此功能，ADO 提供一个属性，[重新调整形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  
+# <a name="reshaping"></a>重新整理
+一个**记录集**创建形状的子句命令可能会分配*别名*名称 （通常使用 AS 关键字）。 形状的别名**记录集**可以完全不同的命令中引用。 也就是说，您可以重复使用，或*重塑*，以前形状**记录集**中新的形状命令。 若要支持此功能，ADO，提供了一个属性，[改变形状名称](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  
   
- 重新调整有两个主要功能。 第一种是将相关联的现有**记录集**使用新的父**记录集**。  
+ 重新调整具有两个主要功能。 第一种是将相关联的现有**记录集**使用新的父**记录集**。  
   
 ## <a name="example"></a>示例  
   
@@ -40,10 +37,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- 第二个函数是，启用到现有子非章节访问**记录集**对象，使用语法"形状\<记录集重新调整形状名称 >"。  
+ 第二个函数是用于非章节访问现有的子**记录集**对象，使用语法"形状\<记录集重新调整形状名称 >"。  
   
 > [!NOTE]
->  不能将列追加到现有**记录集**，重新调整形状参数化**记录集**或**记录集**对象在任何干预计算子句中，或执行聚合操作任何**记录集**子代从**记录集**改变了形状的。 **记录集**改变了形状的和新形状命令都必须使用相同[连接](../../../ado/reference/ado-api/connection-object-ado.md)。  
+>  不能将列追加到现有**记录集**，调整参数化**记录集**或**记录集**任何干预的 COMPUTE 子句中的对象或执行聚合对任何的操作**记录集**的后代**记录集**改变了形状的。 **记录集**改变了形状的和新形状命令都必须使用相同[连接](../../../ado/reference/ado-api/connection-object-ado.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [数据整理示例](../../../ado/guide/data/data-shaping-example.md)

@@ -1,29 +1,26 @@
 ---
-title: 密钥对象属性、 方法和事件 |Microsoft 文档
+title: 密钥对象属性、 方法和事件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 248302463ab934fbe8b4df189d3f3f286b05a913
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8627f933ea2d9de89c5c93252589fb3d7162abc3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828477"
 ---
-# <a name="key-object-properties-methods-and-events"></a>项对象属性、 方法和事件
+# <a name="key-object-properties-methods-and-events"></a>项对象属性、方法和事件
 ## <a name="propertiescollections"></a>属性/集合  
  [列集合](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
@@ -33,7 +30,7 @@ ms.locfileid: "35286516"
   
  [RelatedTable 属性](../../../ado/reference/adox-api/relatedtable-property-adox.md)  
   
- [类型属性 （密钥）](../../../ado/reference/adox-api/type-property-key-adox.md)  
+ [Type 属性 （密钥）](../../../ado/reference/adox-api/type-property-key-adox.md)  
   
  [UpdateRule 属性](../../../ado/reference/adox-api/updaterule-property-adox.md)  
   

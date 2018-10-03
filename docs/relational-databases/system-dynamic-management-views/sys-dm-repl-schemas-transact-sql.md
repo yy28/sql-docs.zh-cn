@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_schemas (Transact SQL) |Microsoft 文档
+title: sys.dm_repl_schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_repl_schemas_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_schemas dynamic management function
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9dfbe8ca8cf3261e898731967aeec34e81c010c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2aa0b4e885d586e64c6c613e07d2969d77885715
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467643"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763375"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +36,12 @@ ms.locfileid: "34467643"
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|已发布的表项目的缓存架构结构的内存中地址。|  
 |**tabid**|**bigint**|已复制的表的 ID。|  
-|**indexid**|**int**|已发布的表上的聚集索引的 ID。|  
+|**indexid**|**smallint**|已发布的表上的聚集索引的 ID。|  
 |**idSch**|**bigint**|表架构的 ID。|  
 |**tabschema**|**nvarchar(510)**|表架构的名称。|  
-|**ccTabschema**|**int**|表架构的字符长度。|  
+|**ccTabschema**|**smallint**|表架构的字符长度。|  
 |**tabname**|**nvarchar(510)**|已发布表的名称。|  
-|**ccTabname**|**int**|已发布的表名的字符长度。|  
+|**ccTabname**|**smallint**|已发布的表名的字符长度。|  
 |**rowsetid_delete**|**bigint**|已删除的行的 ID。|  
 |**rowsetid_insert**|**bigint**|已插入的行的 ID。|  
 |**num_pk_cols**|**int**|主键列数。|  
@@ -55,43 +52,43 @@ ms.locfileid: "34467643"
 |**re_numcols**|**int**|已发布的列数。|  
 |**re_colid**|**int**|发布服务器上的列标识符。|  
 |**re_awcName**|**nvarchar(510)**|已发布的列的名称。|  
-|**re_ccName**|**int**|列名中的字符数。|  
+|**re_ccName**|**smallint**|列名中的字符数。|  
 |**re_pk**|**tinyint**|已发布的列是否为主键的一部分。|  
 |**re_unique**|**tinyint**|已发布的列是否为唯一索引的一部分。|  
-|**re_maxlen**|**int**|已发布的列的最大长度。|  
+|**re_maxlen**|**smallint**|已发布的列的最大长度。|  
 |**re_prec**|**tinyint**|已发布的列的精度。|  
 |**re_scale**|**tinyint**|已发布的列的小数位数。|  
 |**re_collatid**|**bigint**|已发布的列的排序规则 ID。|  
-|**re_xvtype**|**int**|已发布的列的类型。|  
-|**re_offset**|**int**|已发布的列的偏移量。|  
+|**re_xvtype**|**smallint**|已发布的列的类型。|  
+|**re_offset**|**smallint**|已发布的列的偏移量。|  
 |**re_bitpos**|**tinyint**|已发布的列的位位置（以字节向量表示）。|  
 |**re_fNullable**|**tinyint**|指定已发布的列是否支持 NULL 值。|  
 |**re_fAnsiTrim**|**tinyint**|指定是否对已发布的列使用 ANSI 剪裁。|  
-|**re_computed**|**int**|指定已发布的列是否为计算列。|  
+|**re_computed**|**smallint**|指定已发布的列是否为计算列。|  
 |**se_rowsetid**|**bigint**|行集的 ID。|  
 |**se_schema_lsn_begin**|**binary(8000)**|架构版本日志记录的开始 LSN。|  
 |**se_schema_lsn_end**|**binary(8000)**|架构版本日志记录的结束 LSN。|  
 |**se_numcols**|**int**|列数。|  
 |**se_colid**|**int**|订阅服务器上的列的 ID。|  
-|**se_maxlen**|**int**|列的最大长度。|  
+|**se_maxlen**|**smallint**|列的最大长度。|  
 |**se_prec**|**tinyint**|列的精度。|  
 |**se_scale**|**tinyint**|列的小数位数。|  
 |**se_collatid**|**bigint**|列的排序规则 ID。|  
-|**se_xvtype**|**int**|列的类型。|  
-|**se_offset**|**int**|列的偏移量。|  
+|**se_xvtype**|**smallint**|列的类型。|  
+|**se_offset**|**smallint**|列的偏移量。|  
 |**se_bitpos**|**tinyint**|列的位位置（以字节向量表示）。|  
 |**se_fNullable**|**tinyint**|指定列是否支持 NULL 值。|  
 |**se_fAnsiTrim**|**tinyint**|指定是否对列使用 ANSI 剪裁。|  
-|**se_computed**|**int**|指定列是否为计算列。|  
+|**se_computed**|**smallint**|指定列是否为计算列。|  
 |**se_nullBitInLeafRows**|**int**|指定列值是否为 NULL。|  
   
-## <a name="permissions"></a>权限  
- 需要 VIEW DATABASE STATE 权限的发布数据库上调用**dm_repl_schemas**。  
+## <a name="permissions"></a>Permissions  
+ 要求具有对发布数据库的 VIEW DATABASE STATE 权限，调用**dm_repl_schemas**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  只为复制项目缓存中当前加载的复制的数据库对象返回信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

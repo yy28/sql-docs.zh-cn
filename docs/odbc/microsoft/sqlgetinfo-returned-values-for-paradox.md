@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo Paradox 为返回值 |Microsoft 文档
+title: Paradox 的 SQLGetInfo 返回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Paradox driver
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - Paradox driver [ODBC], SQLGetInfo
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c24935a0409d2d29c82c46ab8c0910c68598d38b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a06cfce6ca1afb23f0257c64c5acdd8695cac68b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813165"
 ---
-# <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo Paradox 为返回值
-下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
+# <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox 的 SQLGetInfo 返回值
+下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回一个 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
+>  其中**SQLGetInfo**返回一个 32 位掩码，垂直条 (&#124;) 表示按位 OR。  
   
 |信息类型|返回值|  
 |--------------|--------------------|  
@@ -48,7 +45,7 @@ ms.locfileid: "32904682"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|"目录"|  
 |SQL_CATALOG_USAGE|多个值|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -85,7 +82,7 @@ ms.locfileid: "32904682"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用驱动程序关键字|  
+|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用 DRIVER 关键字|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"（这取决于数据源。）|  
 |SQL_DATABASE_NAME|当前数据库目录|  
 |SQL_DATETIME_LITERALS|0|  
@@ -123,7 +120,7 @@ ms.locfileid: "32904682"
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 （限制未知或不适用）|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 （限制未知或不可用）|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  

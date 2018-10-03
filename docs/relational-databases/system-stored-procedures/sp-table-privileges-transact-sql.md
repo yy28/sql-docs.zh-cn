@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddd0407cda5bf3a623c0fad4121384aaa61d8264
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815745"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|可用的表权限之一。 表权限可以是下列值之一（或在定义实现时数据源所支持的其他值）：<br /><br /> SELECT = GRANTEE 可以检索一列或多列的数据。<br /><br /> INSERT = GRANTEE 可为一列或多列的新行提供数据。<br /><br /> UPDATE = GRANTEE 可为一列或多列修改现有数据。<br /><br /> DELETE = GRANTEE 可从表中删除行。<br /><br /> REFERENCES = GRANTEE 可以用主键/外键关系引用外表中的列。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主键/外键关系是使用表约束来定义的。<br /><br /> 由给定的表特权给予 GRANTEE 的操作的作用域是由数据源决定的。 例如，UPDATE 特权可能允许 GRANTEE 更新一个数据源的表中的所有列，而只允许 GRANTOR 更新另一数据源中它具有 UPDATE 特权的特定列。|  
 |IS_GRANTABLE|**sysname**|指示是否允许 GRANTEE 向其他用户授权（通常称为“再授权”(grant with grant) 权限）。 可以是 YES、NO 或 NULL。 未知（或 NULL）值是指不适用“再授权”的数据源。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_table_privileges 存储过程与 ODBC 中的 SQLTablePrivileges 等同。 返回结果按 TABLE_QUALIFIER、TABLE_OWNER、TABLE_NAME 和 PRIVILEGE 顺序排列。  
   
 ## <a name="permissions"></a>Permissions  

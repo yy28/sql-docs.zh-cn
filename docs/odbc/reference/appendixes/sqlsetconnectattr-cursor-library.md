@@ -1,36 +1,33 @@
 ---
-title: SQLSetConnectAttr （光标库） |Microsoft 文档
+title: SQLSetConnectAttr （游标库） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetConnectAttr function [ODBC], Cursor Library
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d10356488b0a590fb065c49a36a05f0e9b976991
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d4023c513ffda04a3cf499110185d3746ca40d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907702"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713451"
 ---
-# <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr （光标库）
+# <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr（游标库）
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 本主题讨论使用**SQLSetConnectAttr**光标库中的函数。 有关常规信息**SQLSetConnectAttr**，请参阅[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 本主题介绍如何使用**SQLSetConnectAttr**游标库中的函数。 有关常规信息**SQLSetConnectAttr**，请参阅[SQLSetConnectAttr 函数](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
- 应用程序调用**SQLSetConnectAttr**具有 SQL_ATTR_ODBC_CURSORS 属性指定的是光标库是始终使用、 驱动程序不支持可滚动游标，如果使用或从未使用过。 游标库假定驱动程序支持可滚动游标，如果它返回 SQL_CA1_RELATIVE SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型**SQLGetInfo**。  
+ 应用程序调用**SQLSetConnectAttr**与 SQL_ATTR_ODBC_CURSORS 属性来指定游标库是始终使用、 驱动程序不支持可滚动游标，如果使用或从未使用过。 游标库假设使用驱动程序支持可滚动游标，如果它返回 SQL_STATIC_CURSOR_ATTRIBUTES1 信息类型 SQL_CA1_RELATIVE **SQLGetInfo**。  
   
- 应用程序必须调用**SQLSetConnectAttr**以后它会调用指定的光标库使用情况**SQLAllocHandle**与*HandleType*的 SQL_HANDLE_DBC 分配连接和之后才会连接到数据源。 如果应用程序调用**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性与连接时仍处于活动状态，游标库返回错误。  
+ 应用程序必须调用**SQLSetConnectAttr**来指定游标库使用情况之后它将调用, **SQLAllocHandle**与*HandleType*设为 SQL_HANDLE_DBC 以分配连接和之后才会连接到数据源。 如果应用程序调用**SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 属性与连接时仍处于活动状态，该游标库将返回错误。  
   
- 若要将与连接相关联的所有语句光标 library 所支持的语句特性设置，应用程序必须调用**SQLSetConnectAttr**连接到数据源和之前它后该语句属性将打开光标。 如果应用程序调用**SQLSetConnectAttr**属性并且光标位于在与连接关联的语句上打开与语句一起使用，则不语句属性将应用于该语句中，直到关闭游标和重新打开。
+ 若要设置的游标库与连接关联的所有语句的支持的语句属性，应用程序必须调用**SQLSetConnectAttr**后它连接到数据源和之前该语句属性打开游标。 如果应用程序调用**SQLSetConnectAttr**属性和游标是打开与连接关联的语句上使用语句、 语句属性将不会应用于该语句之前关闭游标和重新打开。

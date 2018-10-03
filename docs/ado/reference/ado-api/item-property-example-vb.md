@@ -1,34 +1,31 @@
 ---
-title: 项的属性示例 (VB) |Microsoft 文档
+title: 项属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Item property [ADO], Visual Basic example
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdbddb4af085077b3aa86eec760253442dfefbd9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707575"
 ---
-# <a name="item-property-example-vb"></a>项的属性示例 (VB)
-此示例演示如何[项](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合的成员。 该示例打开***作者***表***Pubs***使用参数化命令的数据库。  
+# <a name="item-property-example-vb"></a>Item 属性示例 (VB)
+此示例演示如何[项](../../../ado/reference/ado-api/item-property-ado.md)属性访问集合的成员。 该示例打开***作者***表的***Pubs***使用参数化命令的数据库。  
   
- 从访问中对数据库发出命令的参数[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)由索引和名称的集合。 返回的字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)然后从该对象的访问[字段](../../../ado/reference/ado-api/fields-collection-ado.md)由索引和名称的集合。  
+ 从访问中对数据库发出的命令的参数[命令](../../../ado/reference/ado-api/command-object-ado.md)对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)由索引和名称的集合。 所返回的字段[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)然后从该对象的访问[字段](../../../ado/reference/ado-api/fields-collection-ado.md)由索引和名称的集合。  
   
 ```  
 'BeginItemVB  

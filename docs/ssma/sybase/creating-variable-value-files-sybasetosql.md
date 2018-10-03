@@ -1,38 +1,32 @@
 ---
-title: 创建变量值文件 (SybaseToSQL) |Microsoft 文档
+title: 创建变量值文件 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Sybase Console,Creating Variable Value Files
 - Sybase Console,Variable Value File Validation
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
-caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 10bbb156c439ca6642b0b705dff3339e04bf41e8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ede31fedb765e431f9cd3efc926f0074f28e5cc6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672880"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>创建变量值文件 (SybaseToSQL)
-变量的值文件是 XML 文件包含频繁更改从一台服务器迁移到另一个类似的源或目标服务器名称的命令的参数值。 多个变量的文件，用于存储每个源服务器的值时将发生大量的数据库迁移，将创建并中的主脚本文件引用 **– v**切换在命令行。 这有助于在维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
+变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
   
 > [!NOTE]  
-> 1.  变量名是前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
-> 2.  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是变量。  
-> 3.  出于可维护性目的，可以在声明变量`‘variable-group’`的用户的逻辑分隔的元素定义的变量。  此元素的使用情况不是必需的。  
+> 1.  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，将导致停止控制台执行过程的脚本文件的分析过程中遇到错误。  
+> 2.  转义符**$** 是**$$**。 如果参数的变量或静态值的值将包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
+> 3.  出于可维护性目的，可以在声明变量`‘variable-group’`元素的逻辑分隔的用户定义的变量。  此元素的使用情况不是必需的。  
   
 **示例：**  
   
@@ -94,10 +88,10 @@ ms.locfileid: "34778523"
 ```  
   
 ## <a name="variable-value-file-validation"></a>变量值文件验证  
-用户可以轻松地验证他/她变量值文件是否符合的架构定义文件**ConsoleScriptVariablesSchema.xsd**架构文件夹中可用。  
+用户可以轻松地验证他/她变量值文件是否符合架构定义文件**ConsoleScriptVariablesSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[服务器连接文件创建&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
+在操作控制台中的下一步是[创建服务器连接文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
 ## <a name="see-also"></a>请参阅  
 [创建服务器文件 (Sybase)](http://msdn.microsoft.com/en-us/35ef396f-9f98-429d-9fc5-4f413d08fb37)  

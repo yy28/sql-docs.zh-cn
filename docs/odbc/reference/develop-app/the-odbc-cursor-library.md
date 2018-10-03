@@ -1,13 +1,11 @@
 ---
-title: ODBC 游标库 |Microsoft 文档
+title: ODBC 游标库 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - cursors [ODBC], cursor library
 - block cursors [ODBC]
 ms.assetid: 32fb7df0-953a-4f68-b041-7d2852e45d0f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 861b4c98042dc5f7b94e831dc8ed1306ea8b3213
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a85868cf22fa6d385c3bf75261e0f1cd54e4e1d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727367"
 ---
 # <a name="the-odbc-cursor-library"></a>ODBC 游标库
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
+>  此功能将 Windows 的未来版本中删除。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 Microsoft 建议使用驱动程序的游标功能。  
   
- 块和可滚动游标是非常有用补充许多应用程序。 但是，并非所有驱动程序支持块和可滚动游标。 相同适用于定位更新和 delete 语句和**SQLSetPos**，其中论述了更新的数据。 因此，Windows SDK，以前包含在 Microsoft 数据访问组件 (MDAC) SDK，ODBC 组件包括游标库。 游标库实现块、 静态游标、 定位的更新和 delete 语句和**SQLSetPos**满足打开组标准 CLI 一致性级别任何驱动程序。 游标库可能与 ODBC 应用程序一起重新分发查看许可协议中的 SDK 的详细信息。  
+ 块和可滚动游标是许多应用程序的非常有用附加工具。 但是，并非所有驱动程序支持块和可滚动游标。 相同的定位更新和删除语句和**SQLSetPos**，论述了更新的数据中。 因此，以前包含在 Microsoft 数据访问组件 (MDAC) SDK，Windows SDK 的 ODBC 组件包括游标库。 游标库实现块、 静态游标、 定位的 update 和 delete 语句，并**SQLSetPos**满足打开组标准 CLI 的一致性级别的任何驱动程序。 游标库可以与 ODBC 应用程序; 再分发请参阅 SDK for 的详细信息中的许可协议。  
   
- 若要使用的是光标库，应用程序设置之后才会连接到数据源 SQL_ATTR_ODBC_CURSORS 连接属性。 游标库有关的详细信息，请参阅[附录 f: ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。
+ 若要使用游标库，应用程序设置 SQL_ATTR_ODBC_CURSORS 连接属性之后才会连接到数据源。 有关游标库的详细信息，请参阅[附录 f: ODBC 游标库](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)。

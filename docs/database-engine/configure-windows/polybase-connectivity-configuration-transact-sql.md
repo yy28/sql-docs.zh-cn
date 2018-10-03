@@ -5,24 +5,21 @@ ms.date: 08/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4f67ce40623a69dfaa7fbfc0c6f64486a8a25bbc
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 4e70d30aaaef2d256f2dcff38b1d5989e1f6e5f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784805"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 连接配置 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -49,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@configname=** ] **'***option_name***'**  
+ [ **@configname=** ] **'**_option\_name_**'**  
  配置选项的名称。 *option_name* 的数据类型为 **varchar(35)**，默认值为 NULL。 如果未指定该参数，则返回选项的完整列表。  
   
- [ @configvalue= ] 'value'****  
+ [ **@configvalue=** ] **'**_value_**'**  
  新的配置设置。 *value* 的数据类型为 **int**，默认值为 NULL。 最大值取决于各个选项。  
   
  **“hadoop 连接”**  

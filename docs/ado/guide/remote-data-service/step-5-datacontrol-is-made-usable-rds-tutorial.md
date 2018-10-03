@@ -1,37 +1,34 @@
 ---
-title: '步骤 5: DataControl 可进行 （RDS 教程） |Microsoft 文档'
+title: '步骤 5: DataControl 是变为可用选 （RDS 教程） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3f25c8276c6985e38f0beef46c8db7d60f6e16a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734505"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5: DataControl 可进行 （RDS 教程）
-返回**记录集**对象是可供使用。 你可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 如何使用**记录集**取决于你的环境。 Visual Basic 和 Visual c + + 提供了可视控件，可以使用**记录集**直接或间接启用的数据控件的帮助。  
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步骤 5：DataControl 变为可用（RDS 教程）
+返回**记录集**对象是可供使用。 您可以检查、 导航，或对其进行编辑，就像任何其他**记录集**。 使用可以做什么**记录集**取决于你的环境。 Visual Basic 和 Visual c + + 有可用的可视化控件**记录集**直接或间接的启用的数据控件的帮助。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 例如，如果在 Microsoft Internet Explorer 中显示网页，你可能想要显示**记录集**对象 visual 控件中的数据。 在网页上的可视化控件不能访问**记录集**直接对象。 但是，它们可以访问**记录集**对象通过[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **Rds.DataControl**可用视觉对象控制其[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)属性设置为**记录集**对象。  
+ 例如，如果要在 Microsoft Internet Explorer 中显示网页，你可能想要显示**记录集**对象可视控件中的数据。 在网页上的可视化控件不能访问**记录集**直接对象。 但是，它们可以访问**记录集**对象，通过[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)。 **Rds。DataControl**视觉对象变得可用时控制其[SourceRecordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)属性设置为**记录集**对象。  
   
- 可视控件对象必须具有其**DATASRC**参数设置为**rds.DataControl**，并将其**DATAFLD**属性设置为**记录集**对象字段 （列）。  
+ 可视控件对象必须具有其**DATASRC**参数设置为**rds。DataControl**，并将其**DATAFLD**属性设置为**记录集**对象字段 （列）。  
   
  在本教程中，设置**SourceRecordset**属性：  
   

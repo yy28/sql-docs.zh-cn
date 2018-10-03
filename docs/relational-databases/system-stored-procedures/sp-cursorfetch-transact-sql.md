@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 43cf13284789fa599c3f2f7b8841d7fe54e3b2e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732117"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +88,7 @@ sp_cursorfetch cursor
 |如果定位在结果集前面|0|  
 |如果定位在结果集后面|-1|  
 |对于 KEYSET 游标和 STATIC 游标|结果集中当前位置的绝对行号|  
-|对于 DYNAMIC 游标|@shouldalert|  
+|对于 DYNAMIC 游标|1|  
 |对于 ABSOLUTE|-1 返回集中的最后一行。<br /><br /> -2 返回集中的倒数第二行，依此类推。<br /><br /> 注意： 如果多个行请求提取这种情况下，则返回结果集的最后两行。|  
   
 |*\<nrows >*|设置为|  
@@ -101,7 +97,7 @@ sp_cursorfetch cursor
 |对于 KEYSET 游标和 STATIC 游标|通常为当前键集大小。<br /><br /> **– m**如果光标位于异步创建的*m*到此点找不到行。|  
 |对于 DYNAMIC 游标|-1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="cursor-parameter"></a>cursor 参数  
  在执行任何提取操作之前，游标的默认位置位于结果集第一行的前面。  

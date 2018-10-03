@@ -1,34 +1,31 @@
 ---
-title: 键入属性示例 （属性） （VC + +） |Microsoft 文档
+title: 键入属性示例 （属性） （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b62b3db629cabd77cea270cf41e76bd36c5b1cb4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282736"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736745"
 ---
-# <a name="type-property-example-property-vc"></a>类型属性示例 （属性） （VC + +）
-此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。 它是一个用于列出的名称和类型的一个集合，如实用程序的模型[属性](../../../ado/reference/ado-api/properties-collection-ado.md)，[字段](../../../ado/reference/ado-api/fields-collection-ado.md)等。  
+# <a name="type-property-example-property-vc"></a>Type 属性示例（属性）(VC++)
+此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)属性。 这是一个模型用于列出名称和类型的集合，如实用工具[属性](../../../ado/reference/ado-api/properties-collection-ado.md)，[字段](../../../ado/reference/ado-api/fields-collection-ado.md)，等等。  
   
- 我们不需要打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)访问其**属性**集合; 它们就应该考虑是否存在时**记录集**实例化对象。 但是，将设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性**adUseClient**将添加到多个动态属性**记录集**对象的**属性**集合，使示例更有意思。 为了进行说明，我们显式使用[项](../../../ado/reference/ado-api/item-property-ado.md)属性来访问每个[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
+ 我们不需要打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)访问其**属性**集合; 它们就应该考虑是否存在时**记录集**实例化对象。 但是，将设置[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**添加到多个动态属性**记录集**对象的**属性**集合，使该示例的一些更有趣。 为了进行说明，我们显式使用[项](../../../ado/reference/ado-api/item-property-ado.md)属性来访问每个[属性](../../../ado/reference/ado-api/property-object-ado.md)对象。  
   
 ```  
 // BeginTypePropertyCpp.cpp  

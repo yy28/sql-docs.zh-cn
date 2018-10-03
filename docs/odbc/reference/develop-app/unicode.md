@@ -1,43 +1,40 @@
 ---
-title: Unicode |Microsoft 文档
+title: Unicode |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC]
 - Unicode [ODBC], about Unicode
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61195f58629f1eb3cdbcb7ee66b5b2ace87b4558
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a9ee58c367e83a61afef45d7df3358488dcb85a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821065"
 ---
 # <a name="unicode"></a>Unicode
-Unicode 定义许多语言中的字符编码。  
+Unicode 定义针对多种语言中的字符进行编码。  
   
- 有关 Unicode 标准的详细信息，请参阅[Unicode 协会](http://www.unicode.org)。  
+ 有关 Unicode 标准的详细信息，请参阅[Unicode Consortium](http://www.unicode.org)。  
   
- Unicode 定义通用的字符集。 Windows ANSI 代码页定义字符集，通常包含一种语言的字符。 它可能会更加难以编写的应用程序需要使用不同的代码页。  
+ Unicode 定义通用字符集。 Windows ANSI 代码页定义字符集，通常包含一种语言的字符。 可能会更难编写的应用程序需要使用不同的代码页。  
   
- Unicode 不需要的代码页。 每个码位映射到某些语言中的单个字符。  
+ Unicode 不需要代码页。 每个代码点映射到某些语言中的单个字符。  
   
- 目前，唯一的 Unicode 编码 ODBC 支持为 ucs-2、 使用 16 位整数 （固定长度） 来表示字符。 Unicode 允许应用程序中不同语言的工作。  
+ 目前，唯一的 Unicode 编码，ODBC 支持为 ucs-2，使用 16 位整数 （固定长度） 来表示字符。 Unicode 允许应用程序在不同的语言中工作。  
   
- ODBC 3.5 （或更高版本） 驱动程序管理器完全支持 Unicode。 这会影响两个主要区域： 函数调用和字符串数据类型。 驱动程序管理器映射函数字符串自变量和所需的应用程序和驱动程序的字符串数据，这两种可以是 Unicode 启用或 ANSI 已启用。 在部分中，详细地讨论了这两个方面[Unicode 函数自变量](../../../odbc/reference/develop-app/unicode-function-arguments.md)和[Unicode 数据](../../../odbc/reference/develop-app/unicode-data.md)。  
+ ODBC 3.5 （或更高版本） 驱动程序管理器完全支持 Unicode。 这会影响两个主要领域： 函数调用，并且字符串数据类型。 驱动程序管理器映射函数的字符串参数和所需的应用程序和驱动程序的字符串数据，这两种可以是支持 Unicode 或 ANSI 已启用。 部分，详细讨论了这两个方面[Unicode 函数自变量](../../../odbc/reference/develop-app/unicode-function-arguments.md)并[Unicode 数据](../../../odbc/reference/develop-app/unicode-data.md)。  
   
- ODBC 3.5 （或更高版本） 驱动程序管理器支持使用 Unicode 应用程序和 ANSI 应用程序的 Unicode 驱动程序使用。 它还支持使用与 ANSI 应用程序的 ANSI 驱动程序。 驱动程序管理器提供了有限的 Unicode ANSI 映射为 Unicode 应用程序使用 ANSI 驱动程序。  
+ ODBC 3.5 （或更高版本） 驱动程序管理器支持 Unicode 驱动程序使用 Unicode 应用程序和 ANSI 应用程序的使用。 它还支持使用 ANSI 应用程序的 ANSI 驱动程序使用。 驱动程序管理器提供了有限的 Unicode 到 ANSI 映射为 Unicode 应用程序使用 ANSI 驱动程序。  
   
  本部分包含以下主题。  
   

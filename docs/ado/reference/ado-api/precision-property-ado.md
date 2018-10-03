@@ -1,13 +1,11 @@
 ---
-title: 精度属性 (ADO) |Microsoft 文档
+title: Precision 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,29 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - Precision property [ADO]
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 630bae40ab9e473656abeb3fa8cdb79de89e258c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9819567ebe48a7654ee7a90f516ba14c8062bdcf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280632"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846895"
 ---
-# <a name="precision-property-ado"></a>精度属性 (ADO)
-表示的数字值在精度程度[参数](../../../ado/reference/ado-api/parameter-object.md)对象或对数值[字段](../../../ado/reference/ado-api/field-object.md)对象。  
+# <a name="precision-property-ado"></a>Precision 属性 (ADO)
+指示中数值的精度的程度[参数](../../../ado/reference/ado-api/parameter-object.md)对象或对数值[字段](../../../ado/reference/ado-api/field-object.md)对象。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**字节**值，该值指示最多的用来表示值的位数。  
+ 设置或返回**字节**值，该值指示用于表示值的最大位数。  
   
-## <a name="remarks"></a>Remarks  
- 使用**精度**属性来确定用于表示的数字值的数字的最大数**参数**或**字段**对象。  
+## <a name="remarks"></a>备注  
+ 使用**精度**属性来确定用于表示数值的值的最大位数**参数**或**字段**对象。  
   
- 值为读/写上**参数**对象。  
+ 值为读/写 on**参数**对象。  
   
- 有关**字段**对象，**精度**是通常是只读的。 但是，新对于**字段**已追加到的对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合[记录](../../../ado/reference/ado-api/record-object-ado.md)，**精度**为仅读/写后[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**已指定的数据提供程序已经成功地添加新和**字段**通过调用[更新](../../../ado/reference/ado-api/update-method.md)方法**字段**集合。  
+ 有关**字段**对象，**精度**是通常是只读的。 但是，新对于**字段**已追加到的对象[字段](../../../ado/reference/ado-api/fields-collection-ado.md)的集合[记录](../../../ado/reference/ado-api/record-object-ado.md)，**精度**为读/写仅后[值](../../../ado/reference/ado-api/value-property-ado.md)属性**字段**已指定并且数据提供程序已成功添加新**字段**通过调用[更新](../../../ado/reference/ado-api/update-method.md)的方法**字段**集合。  
   
 ## <a name="applies-to"></a>适用范围  
   
@@ -47,6 +44,6 @@ ms.locfileid: "35280632"
 |[字段对象](../../../ado/reference/ado-api/field-object.md)|[参数对象](../../../ado/reference/ado-api/parameter-object.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [NumericScale 和精度属性示例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale 和精度属性示例 （VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale 和 Precision 属性示例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
+ [NumericScale 和 Precision 属性示例 （VC + +）](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale 属性 (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

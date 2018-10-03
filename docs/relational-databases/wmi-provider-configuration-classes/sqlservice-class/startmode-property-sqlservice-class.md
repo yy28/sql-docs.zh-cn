@@ -1,15 +1,12 @@
 ---
-title: StartMode 属性 （SqlService 类） |Microsoft 文档
+title: StartMode 属性 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - StartMode Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d5f9ba82b7ef75fa9b2a6fff80dab8e0180d59f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e8e6fd01db9c390588bbd1d521411c1467a46ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809215"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 属性（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.StartMode [= value]
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
@@ -54,20 +50,20 @@ object.StartMode [= value]
  值 = 0。 服务由操作系统加载程序启动。 此选项只对驱动程序服务有效。  
   
  系统  
- 值 = 1。 通过启动服务**IoInitSystem**方法。 此选项只对驱动程序服务有效。  
+ 值 = 1。 服务首先**IoInitSystem**方法。 此选项只对驱动程序服务有效。  
   
  自动  
  值 = 2。 服务将在系统启动期间由服务控制管理器自动启动。  
   
  Manual  
- 值 = 3。 服务启动的计算机管理器时的进程调用**StartService**方法。  
+ 值 = 3。 服务将由计算机管理器时将在进程调用**StartService**方法。  
   
- Disabled  
+ 禁用  
  值 = 4。 无法启动服务。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

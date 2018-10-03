@@ -5,11 +5,7 @@ ms.date: 02/01/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-stored-procedures
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sp_execute_remote
@@ -18,19 +14,18 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 319eee940c5f5d90d6cfe9442c66f506670c26a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c61098eabfe58cb1e791dd379cafb5f91d50f247
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837085"
 ---
-# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote （Azure SQL 数据库）
+# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   执行[!INCLUDE[tsql](../../includes/tsql-md.md)]上的单个远程 Azure SQL 数据库或数据库用作在水平分区方案中的分片集的语句。  
@@ -80,7 +75,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Permissions  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `sp_execute_remote` 必须按特定顺序输入参数，如上面的语法部分中所述。 如果这些参数的输入顺序不正确，则会显示一条错误消息。  
   
  `sp_execute_remote` 具有相同的行为[EXECUTE &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md)对于批处理和名称的作用域。 TRANSACT-SQL 语句或批处理在 sp_execute_remote  *\@stmt*直到执行 sp_execute_remote 语句参数时才编译。  

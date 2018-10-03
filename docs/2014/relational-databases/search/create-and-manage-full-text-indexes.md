@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054728"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>创建和管理全文索引
   全文引擎使用全文索引中的信息来编译可快速搜索表中的特定词或词组的全文查询。 全文索引将有关重要的词及其位置的信息存储在数据库表的一列或多列中。 全文索引是一种特殊类型的基于标记的功能性索引，它是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护的。 生成全文索引的过程不同于生成其他类型的索引。 全文引擎并非基于特定行中存储的值来构造 B 树结构，而是基于要编制索引的文本中的各个标记来生成倒排、堆积且压缩的索引结构。  全文索引大小仅受运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的可用内存资源限制。  
@@ -56,7 +53,7 @@ ms.locfileid: "37307457"
   
 |DocumentID|Title|  
 |----------------|-----------|  
-|@shouldalert|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -70,20 +67,20 @@ ms.locfileid: "37307457"
   
 |关键字|ColId|DocId|出现次数|  
 |-------------|-----------|-----------|----------------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|维护|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Front|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Bracket|@shouldalert|3|3|  
-|Assembly|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
-|安装|@shouldalert|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|维护|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
+|安装|1|3|4|  
   
  **Keyword** 列包含在创建索引时提取的单个标记的表示形式。 断字符可确定组成标记的词。  
   
@@ -108,8 +105,8 @@ ms.locfileid: "37307457"
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  从 Fragment 2 可以看到，全文查询需要在内部查询每个碎片，并放弃更旧的条目。 因此，全文索引中太多的全文索引碎片会导致查询性能大幅下降。 若要减少碎片数，请使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句的 REORGANIZE 选项来重新组织全文目录。 此语句将执行一次 *主合并*，主合并将碎片合并成一个更大的碎片，并从全文索引中删除所有过时的条目。  
   
@@ -117,18 +114,18 @@ ms.locfileid: "37307457"
   
 |关键字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|维护|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Assembly|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|维护|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Assembly|1|2|6|  
+|3|1|2|7|  
   
  [本主题内容](#top)  
   

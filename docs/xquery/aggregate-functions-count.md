@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:count function
 - count function [XQuery]
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc9e161196787413b6c4fe3a3943ff197f0b5d79
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9e995026b8690f4254f8f4db357874bbd2fa833b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835595"
 ---
-# <a name="aggregate-functions---count"></a>聚合函数-count
+# <a name="aggregate-functions---count"></a>聚合函数 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回指定的序列中包含的项数目 *$arg*。  
@@ -46,7 +40,7 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  要计数的项。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果将返回 0 *$arg*是一个空序列。  
   
 ## <a name="examples"></a>示例  

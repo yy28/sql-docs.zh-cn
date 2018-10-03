@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/10/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, msdb database
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - jobs [SQL Server], msdb database
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33f5804831a0adb341d37f199556273842c00918
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e0862083d323131523d0e9eee03b7e4d2f52e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154508"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058797"
 ---
 # <a name="msdb-database"></a>msdb 数据库
   **代理使用** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库来计划警报和作业， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 和数据库邮件等其他功能也使用该数据库。  
@@ -51,34 +48,34 @@ ms.locfileid: "37154508"
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|“否”|  
-|ANSI_NULL_DEFAULT|OFF|是|  
-|ANSI_NULLS|OFF|是|  
-|ANSI_PADDING|OFF|是|  
-|ANSI_WARNINGS|OFF|是|  
-|ARITHABORT|OFF|是|  
-|AUTO_CLOSE|OFF|是|  
-|AUTO_CREATE_STATISTICS|ON|是|  
-|AUTO_SHRINK|OFF|是|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|“否”|  
-|CONCAT_NULL_YIELDS_NULL|OFF|是|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
-|CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 是<br /><br /> 是|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|是|  
-|ENCRYPTION|OFF|“否”|  
-|NUMERIC_ROUNDABORT|OFF|是|  
-|PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
-|QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
-|RECOVERY|SIMPLE|是|  
-|RECURSIVE_TRIGGERS|OFF|是|  
-|Service Broker 选项|ENABLE_BROKER|是|  
-|TRUSTWORTHY|ON|是|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|否|  
+|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
+|ANSI_NULLS|OFF|用户帐户控制|  
+|ANSI_PADDING|OFF|用户帐户控制|  
+|ANSI_WARNINGS|OFF|用户帐户控制|  
+|ARITHABORT|OFF|用户帐户控制|  
+|AUTO_CLOSE|OFF|用户帐户控制|  
+|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_SHRINK|OFF|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|CHANGE_TRACKING|OFF|否|  
+|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
+|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 是<br /><br /> 用户帐户控制|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|DB_CHAINING|ON|用户帐户控制|  
+|ENCRYPTION|OFF|否|  
+|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
+|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
+|PARAMETERIZATION|SIMPLE|用户帐户控制|  
+|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|READ_COMMITTED_SNAPSHOT|OFF|否|  
+|RECOVERY|SIMPLE|用户帐户控制|  
+|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|Service Broker 选项|ENABLE_BROKER|用户帐户控制|  
+|TRUSTWORTHY|ON|用户帐户控制|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   

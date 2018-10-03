@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
 ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
-caps.latest.revision: 29
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a6e8e45ea1ba74aeef1f063ad03154a9574bc9e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048967"
 ---
 # <a name="query-options-execution-general-page"></a>“查询选项”中的“执行”（“常规”页）
   使用此页可指定用于运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 若要访问此对话框，请右键单击“查询编辑器”窗口的主体，再单击“查询选项”。  
@@ -39,7 +36,7 @@ ms.locfileid: "37269803"
  **批处理分隔符**  
  键入用来将 Transact-SQL 语句分隔为批的词。 默认值为 GO。  
   
- **默认情况下，在 SQLCMD 模式下打开新查询**  
+ 默认情况下，在 SQLCMD 模式下打开新查询  
  选中此复选框可在 SQLCMD 模式下打开新查询。 只有从 **“工具”** 菜单打开该对话框时，此复选框才可见。  
   
  选择此选项时，请记住下列限制：  
@@ -50,7 +47,7 @@ ms.locfileid: "37269803"
   
 -   由于查询编辑器无法响应操作系统提示，因此您一定要记住不要运行交互式语句。  
   
- **重置为默认值**  
+ 重置为默认值  
  将此页上的所有值重置为原始默认值。  
   
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de55ccede25cbfffd1930cfbb9088b9de1394ff0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393360"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763255"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +79,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|通过通知的操作员的 ID 号**网络发送**在作业完成。|  
 |**operator_id_paged**|**int**|作业完成时通过寻呼通知的操作员的 ID 号。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此过程可提供作业的当前状态快照。 返回的结果表示处理请求时的有关信息。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理在每次启动代理服务时都会创建一个会话 ID。 会话 id 存储在表**msdb.dbo.syssessions**。  

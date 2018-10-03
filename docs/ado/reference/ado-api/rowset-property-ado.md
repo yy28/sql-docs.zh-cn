@@ -1,13 +1,11 @@
 ---
-title: 行集属性 (ADO) |Microsoft 文档
+title: 行集属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c28d9b4398c0ef17067117ee392ff52aeef5e8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701655"
 ---
-# <a name="rowset-property-ado"></a>行集属性 (ADO)
-获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。 当你使用 put_Rowset 时，行集转换 ADO**记录集**对象。  
+# <a name="rowset-property-ado"></a>Rowset 属性 (ADO)
+获取或设置 OLE DB**行集**对象从/上**ADORecordsetConstruction**对象。 当使用 put_Rowset 时，将行集转换成 ADO**记录集**对象。  
   
  读/写。  
   

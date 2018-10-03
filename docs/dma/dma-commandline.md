@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 2fa770fad98918ab9e15231822b499787790a900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240205"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745275"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>从命令行运行数据迁移助手
 版本 2.1 和更高版本，当你安装数据迁移助手，它还会安装在 dmacmd.exe *%programfiles%\\Microsoft Data Migration Assistant\\*。 Dmacmd.exe 用于评估在无人参与模式下，数据库，并输出到 JSON 或 CSV 文件的结果。 评估多个数据库或大型数据库时，此方法是特别有用。 
@@ -45,16 +42,16 @@ DmaCmd.exe /AssessmentName="string"
 
 |参数  |Description  | 必需 （是/否）
 |---------|---------|---------------|
-| `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | 否
-|`/AssessmentName`     |   评估项目的名称   | 是
-|`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | 是
-|`/AssessmentTargetPlatform`     | 用于评估，支持的值的目标平台： SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | 否
-|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | 否
-|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | 是 <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
-|`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | 是 <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
-|`/AssessmentOverwriteResult`     | 覆盖结果文件    | 否
-|`/AssessmentResultJson`     | JSON 结果文件的完整路径     | 是 <br> （AssessmentResultJson 或 AssessmentResultCsv 是必需的）
-|`/AssessmentResultCsv`    | CSV 结果文件的完整路径   | 是 <br>（AssessmentResultJson 或 AssessmentResultCsv 是必需的）
+| `/help or /?`     | 如何使用 dmacmd.exe 帮助文本        | N
+|`/AssessmentName`     |   评估项目的名称   | Y
+|`/AssessmentDatabases`     | 连接字符串的以空格分隔列表。 数据库名称 （初始目录） 是区分大小写。 | Y
+|`/AssessmentTargetPlatform`     | 用于评估，支持的值的目标平台： SqlServer2012、 SqlServer2014、 SqlServer2016 和 AzureSqlDatabaseV12。 默认值是 SqlServer2016   | N
+|`/AssessmentEvaluateFeatureParity`  | 运行功能奇偶一致性规则  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | 运行兼容性规则  | Y <br> （AssessmentEvaluateCompatibilityIssues 或 AssessmentEvaluateRecommendations 是必需的。
+|`/AssessmentEvaluateRecommendations`     | 运行功能推荐        | Y <br> （AssessmentEvaluateCompatibilityIssues 或所需的 AssessmentEvaluateRecommendationsis）
+|`/AssessmentOverwriteResult`     | 覆盖结果文件    | N
+|`/AssessmentResultJson`     | JSON 结果文件的完整路径     | Y <br> （AssessmentResultJson 或 AssessmentResultCsv 是必需的）
+|`/AssessmentResultCsv`    | CSV 结果文件的完整路径   | Y <br>（AssessmentResultJson 或 AssessmentResultCsv 是必需的）
 
 
 ## <a name="examples-of-assessments-using-the-cli"></a>评估使用 CLI 的示例
@@ -155,22 +152,22 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 |参数  |Description  | 必需 （是/否）
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | 执行 SKU 评估，请参阅 DMA 命令行 | 是
-|`/SkuRecommendationInputDataFilePath`  | 从承载数据库的计算机收集的性能计数器文件的完整路径 |    是
-|`/SkuRecommendationTsvOutputResultsFilePath`   | TSV 结果文件的完整路径 |    是 <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
-|`/SkuRecommendationJsonOutputResultsFilePath`  | JSON 结果文件的完整路径 |   是 <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
-|`/SkuRecommendationHtmlResultsFilePath` |  HTML 结果文件的完整路径 | 是 <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
-|`/SkuRecommendationPreventPriceRefresh` |  防止发生价格刷新。 如果在脱机模式下运行，请使用此选项。 |    是 <br>（此参数用于静态价格或下面的所有参数都需要选择用于获取最新的价格）
-|`/SkuRecommendationCurrencyCode` | 要在其中显示的价格 （例如货币"美元"） | 是 <br>（如果你想要获取最新的价格）
-|`/SkuRecommendationOfferName` |    产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。 |   是 <br>（如果你想要获取最新的价格）
-|`/SkuRecommendationRegionName` |   区域名称 （例如"WestUS") |   是 <br>（如果你想要获取最新的价格）
-|`/SkuRecommendationSubscriptionId` | 订阅的 ID。 |    是 <br>（如果你想要获取最新的价格）
-|`/AzureAuthenticationTenantId` | 身份验证租户中。 |  是 <br>（如果你想要获取最新的价格）
-|`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用客户端 ID。 | 是 <br>（如果你想要获取最新的价格）
-|`/AzureAuthenticationInteractiveAuthentication`    | 设置为 true 以弹出窗口。 |   是 <br>（如果你想要获取最新的价格） <br>（选择一个 3 个身份验证选项的选项 1）
-|`/AzureAuthenticationCertificateStoreLocation` | 设置为证书存储位置 （例如"CurrentUser")。 | 是 <br>（如果你想要获取最新的价格） <br>（挑选一位的 3 个身份验证选项-选项 2）
-|`/AzureAuthenticationCertificateThumbprint`    | 将设置为证书指纹。 | 是 <br>（如果你想要获取最新的价格） <br>（挑选一位的 3 个身份验证选项-选项 2）
-|`/AzureAuthenticationToken` |  将设置为证书令牌。 | 是 <br>（如果你想要获取最新的价格） <br>（选择一个 3 个身份验证选项-选项 3）
+|`/Action=SkuRecommendation` | 执行 SKU 评估，请参阅 DMA 命令行 | Y
+|`/SkuRecommendationInputDataFilePath`  | 从承载数据库的计算机收集的性能计数器文件的完整路径 |    Y
+|`/SkuRecommendationTsvOutputResultsFilePath`   | TSV 结果文件的完整路径 |    Y <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
+|`/SkuRecommendationJsonOutputResultsFilePath`  | JSON 结果文件的完整路径 |   Y <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
+|`/SkuRecommendationHtmlResultsFilePath` |  HTML 结果文件的完整路径 | Y <br>（TSV 或 JSON 或 HTML 文件路径是必需的）
+|`/SkuRecommendationPreventPriceRefresh` |  防止发生价格刷新。 如果在脱机模式下运行，请使用此选项。 |    Y <br>（此参数用于静态价格或下面的所有参数都需要选择用于获取最新的价格）
+|`/SkuRecommendationCurrencyCode` | 要在其中显示的价格 （例如货币"美元"） | Y <br>（如果你想要获取最新的价格）
+|`/SkuRecommendationOfferName` |    产品/服务命名 （例如"MS-条-0003 P")。 有关详细信息，请参阅[Microsoft Azure 产品/服务详细信息](https://azure.microsoft.com/support/legal/offer-details/)页。 |   Y <br>（如果你想要获取最新的价格）
+|`/SkuRecommendationRegionName` |   区域名称 （例如"WestUS") |   Y <br>（如果你想要获取最新的价格）
+|`/SkuRecommendationSubscriptionId` | 订阅的 ID。 |    Y <br>（如果你想要获取最新的价格）
+|`/AzureAuthenticationTenantId` | 身份验证租户中。 |  Y <br>（如果你想要获取最新的价格）
+|`/AzureAuthenticationClientId` | 用于身份验证的 AAD 应用客户端 ID。 | Y <br>（如果你想要获取最新的价格）
+|`/AzureAuthenticationInteractiveAuthentication`    | 设置为 true 以弹出窗口。 |   Y <br>（如果你想要获取最新的价格） <br>（选择一个 3 个身份验证选项的选项 1）
+|`/AzureAuthenticationCertificateStoreLocation` | 设置为证书存储位置 （例如"CurrentUser")。 | Y <br>（如果你想要获取最新的价格） <br>（挑选一位的 3 个身份验证选项-选项 2）
+|`/AzureAuthenticationCertificateThumbprint`    | 将设置为证书指纹。 | Y <br>（如果你想要获取最新的价格） <br>（挑选一位的 3 个身份验证选项-选项 2）
+|`/AzureAuthenticationToken` |  将设置为证书令牌。 | Y <br>（如果你想要获取最新的价格） <br>（选择一个 3 个身份验证选项-选项 3）
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>SKU 评估使用 CLI 的示例
 

@@ -1,29 +1,26 @@
 ---
-title: 默认子项 |Microsoft 文档
+title: 默认子项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default subkey [ODBC]
 - registry entries for data sources [ODBC], default subkey
 - subkeys [ODBC], default subkey
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30107acd2f22ffd64636c63ce4043c1c809c50d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4f52e01375a142772f7514ea6bcf766a5a3225e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764265"
 ---
 # <a name="default-subkey"></a>默认子项
-注册表可能会与默认子项指定的默认数据源。 此子项是一种特殊情况的数据源规范子项，具有与任何其他数据源规范子项相同的值。 唯一的区别是未列为 ODBC 数据源子项下一个值。
+注册表可能会使用默认子项指定默认数据源。 此子项是一种特殊情况的数据源规范子项，并具有与任何其他数据源规范子项相同的值。 唯一的区别是在 ODBC 数据源的子项下的值作为未列出。

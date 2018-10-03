@@ -1,31 +1,28 @@
 ---
-title: 源属性示例 （VC + +） |Microsoft 文档
+title: 源属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Source property [ADO], VC++ example
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b601c336ba8b8fdc6c581bfb00bfb80f84f025
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1ecc2960e583b46b44839259bc9b84d3d941a553
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786597"
 ---
-# <a name="source-property-example-vc"></a>源属性示例 （VC + +）
+# <a name="source-property-example-vc"></a>Source 属性示例 (VC++)
 此示例演示[源](../../../ado/reference/ado-api/source-property-ado-recordset.md)通过打开三个属性[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象基于不同的数据源。  
   
 ```  

@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_browsesnapshotfolder
 - sp_browsesnapshotfolder_TSQL
@@ -22,12 +17,12 @@ ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f399ac4baf1191ec4bc554e1921519300f315744
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6fffd6e0131c00194ae65fb425b202add18cd23f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785225"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +59,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|快照目录的完整路径。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_browsesnapshotfolder**快照复制和事务复制中使用。  
   
  如果*订阅服务器*并*subscriber_db*字段保留为 NULL，则存储的过程返回的最新的快照，它可以找到发布的快照文件夹。 如果*订阅服务器*并*subscriber_db*指定字段，存储的过程将返回指定订阅的快照文件夹。 如果没有为发布生成快照，则返回空结果集。  
