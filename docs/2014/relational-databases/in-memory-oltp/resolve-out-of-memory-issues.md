@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394221"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067399"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解决内存不足问题
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 相比， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 随着需求的不断增加，为 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 安装和分配的内存量可能会不足。 这时内存就会不足。 本主题介绍如何从 OOM 情况恢复。 有关可帮助你避免很多 OOM 情况的指南，请参阅 [内存使用情况的监视和故障排除](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -87,7 +84,7 @@ ms.locfileid: "40394221"
 #### <a name="free-up-existing-memory"></a>释放现有内存  
   
 ##### <a name="delete-non-essential-memory-optimized-table-rows-and-wait-for-garbage-collection"></a>删除不重要的内存优化表行并等待垃圾收集  
- 您可以删除内存优化表中不重要的行。 垃圾收集器将这些行使用的内存返回可用内存 实例时都提供 SQL Server 登录名。 内存中 OLTP 引擎能够积极回收垃圾。 但是，长时间运行的事务可能会妨碍垃圾收集。 例如，如果有一个事务运行 5 分钟，在事务活动期间，无法对所有因更新/删除操作而创建的行版本进行垃圾收集。  
+ 您可以删除内存优化表中不重要的行。 垃圾收集器将这些行使用的内存返回可用内存 . 内存中 OLTP 引擎能够积极回收垃圾。 但是，长时间运行的事务可能会妨碍垃圾收集。 例如，如果有一个事务运行 5 分钟，在事务活动期间，无法对所有因更新/删除操作而创建的行版本进行垃圾收集。  
   
 ##### <a name="move-one-or-more-rows-to-a-disk-based-table"></a>将一行或多行移到基于磁盘的表  
  下面的 TechNet 文章提供有关将行从内存优化表移到基于磁盘的表的指导。  
@@ -138,7 +135,7 @@ GO
 > 有关详细信息，请参阅主题 [最佳做法：在 VM 环境下使用内存中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) 。  
   
 ##  <a name="bkmk_PageAllocFailure"></a> 在提供足够内存时，解决由于内存不足导致的页分配失败问题  
- 如果你收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”。 请参阅 http://go.microsoft.com/fwlink/?LinkId=330673 有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
+ 如果你收到错误消息“由于资源池 '*\<resourcePoolName>*' 内存不足，不允许对数据库 '*\<databaseName>*' 进行页分配”。 请参阅 http://go.microsoft.com/fwlink/?LinkId=330673有关详细信息。" ，这可能是因为禁用了资源调控器。 在资源调控器被禁用时，MEMORYBROKER_FOR_RESERVE 导致虚假内存压力。  
   
  若要解决此问题，您需要启用资源调控器。  
   

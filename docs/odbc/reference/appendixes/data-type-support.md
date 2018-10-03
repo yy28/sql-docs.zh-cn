@@ -1,13 +1,11 @@
 ---
-title: 数据类型支持 |Microsoft 文档
+title: 数据类型支持 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - data types [ODBC], ODBC drivers
 - ODBC drivers [ODBC], data types
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 820e48a17e397bc9046c8ca431677074e69b8cb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848185"
 ---
 # <a name="data-type-support"></a>数据类型支持
-ODBC 驱动程序必须支持 SQL_CHAR 和 SQL_VARCHAR 中至少一个。 由驱动程序的或数据源的 SQL 92 一致性级别确定对其他数据类型的支持。 应用程序应调用**SQLGetTypeInfo**来确定由驱动程序支持的数据类型。  
+ODBC 驱动程序必须支持至少一个 SQL_CHAR 和 SQL_VARCHAR。 支持的其他数据类型取决于驱动程序或数据源的 SQL-92 的一致性级别。 应用程序应调用**SQLGetTypeInfo**以确定驱动程序支持的数据类型。  
   
- 数据类型的详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。
+ 有关数据类型的详细信息，请参阅[附录 d： 数据类型](../../../odbc/reference/appendixes/appendix-d-data-types.md)。

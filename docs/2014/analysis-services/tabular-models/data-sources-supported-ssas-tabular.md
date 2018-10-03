@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b8aac369dd82f75f251df1195ac29c8ccf3b983
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 606d597bd539da9e50b1c0452d9126e2f4671731
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054367"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>支持的数据源（SSAS 表格）
   本主题介绍可用于表格模型的数据源的类型。  
@@ -69,9 +66,7 @@ ms.locfileid: "37185294"
   
 ##  <a name="bkmk_tips"></a> 选择数据源的提示  
   
-1.  
-              *
-              * 从关系数据库导入表可以省去一些操作步骤，因为在导入过程中将使用外键关系在模型设计器的各表之间创建关系。  
+1.   从关系数据库导入表可以省去一些操作步骤，因为在导入过程中将使用外键关系在模型设计器的各表之间创建关系。  
   
 2.  导入多个表，然后删除不需要的表，这样也可以省去一些操作步骤。 如果一次导入一个表，则仍可能需要手动创建表之间的关系。  
   

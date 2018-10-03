@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER REMOTE SERVICE BINDING
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - ALTER REMOTE SERVICE BINDING statement
 - modifying remote service bindings
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
-caps.latest.revision: 37
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd6cfcbb65e7ef90f88f7fa8a895d39e815e8824
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598355"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +56,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="remarks"></a>Remarks  
  与 user_name 关联的证书中的公钥用于对发送到远程服务的消息进行身份验证，并对会话密钥进行加密，然后使用加密的会话密钥对会话进行加密。 user_name 的证书必须与承载远程服务的数据库登录证书相对应。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下，远程服务绑定所有者、db_owner 固定数据库角色成员以及 sysadmin 固定服务器角色成员具有更改远程服务绑定的权限。  
   
  执行 ALTER REMOTE SERVICE BINDING 语句的用户必须具有该语句中所指定用户的模拟权限。  

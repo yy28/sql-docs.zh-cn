@@ -1,32 +1,29 @@
 ---
-title: 使用 ExtendedAnsiSQL 连接字符串属性 |Microsoft 文档
+title: 使用 ExtendedAnsiSQL 连接字符串属性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], ExtendedAnsiSql
 - extendedANSISQL [ODBC]
 - extendedANSISQL [ODBC], about ExtendedAnsiSQL
 ms.assetid: 92675c30-9100-43ae-aa35-041f3006a54f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34ebab5ed23c57996ff508818b25597c42a64d9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742231"
 ---
-# <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 连接字符串属性 （Access 驱动程序）
-Jet 4.0 具有几个新功能，默认情况下，ODBC 桌面数据库驱动程序版本 4.0 中未启用。 若要充分利用这些新功能，应用程序将必须将新的连接属性设置，将新属性添加到连接字符串，或在 DSN 中设置特性。 该属性被称为 ExtendedAnsiSQL，有关仅对 Microsoft ODBC 桌面数据库驱动程序 4.0 及更高版本。  
+# <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 连接字符串属性（Access 驱动程序）
+Jet 4.0 具有 ODBC 桌面数据库驱动程序 4.0 版中默认情况下不启用的几个新功能。 若要充分利用这些新功能，应用程序将具有以设置新的连接属性、 将新属性添加到连接字符串，或在 DSN 中设置的属性。 该属性称为 ExtendedAnsiSQL，与仅向 Microsoft ODBC 桌面数据库驱动程序 4.0 及更高版本。  
   
  本部分包含以下主题。  
   
@@ -36,6 +33,6 @@ Jet 4.0 具有几个新功能，默认情况下，ODBC 桌面数据库驱动程�
   
 -   [使用 ExtendedAnsiSQL 创建和删除视图和过程](../../odbc/microsoft/creating-and-dropping-views-and-procedures-using-extendedansisql.md)  
   
--   [启用使用 ExtendedAnsiSQL 数据 Trunctation 检测](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
+-   [使用 ExtendedAnsiSQL 启用的数据 Trunctation 检测](../../odbc/microsoft/data-truncation-detection-enabled-using-extendedansisql.md)  
   
--   [Jet 4.0 ExtendedAnsiSQL 设置时使用 SQL 92 保留的字列表](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)
+-   [ExtendedAnsiSQL 设置时，jet 4.0 使用 SQL-92 保留的字列表](../../odbc/microsoft/jet-4-0-uses-sql-92-reserved-words-list-when-extendedansisql-set.md)

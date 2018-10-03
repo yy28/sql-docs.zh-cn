@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235e7bf226544e415ecc32264c0c627d33f95aa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804655"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
   
 ## <a name="what-is-change-data-capture"></a>什么是变更数据捕获？  
  源表随时间而变化。 基于这些表的数据市场或数据仓库需要反映这些变更。 但是，定期复制整个源的快照的过程要耗费大量时间和资源。 而包括时间戳列、触发器或复杂查询在内的其他方法通常会损害性能和增加复杂性。 用户所需要的是结构化的可靠更改数据流，以便使用者可以轻松地将其应用到数据的目标表示形式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的变更数据捕获提供此种解决方案。  

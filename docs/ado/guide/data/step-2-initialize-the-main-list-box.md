@@ -1,28 +1,25 @@
 ---
-title: 步骤 2： 初始化主列表框 |Microsoft 文档
+title: 步骤 2： 初始化主列表框 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272846"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735515"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>步骤 2： 初始化主列表框
-若要声明全局记录和记录集对象，请将下面的代码插入 （常规） （声明） form1:  
+# <a name="step-2-initialize-the-main-list-box"></a>步骤 2：初始化主列表框
+若要声明全局记录和记录集对象，请插入 （常规） （声明） 为 Form1 的以下代码：  
   
 ```  
 Option Explicit  
@@ -30,10 +27,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- 此代码声明将使用更高版本在此方案中的记录和记录集对象的全局对象引用。  
+ 此代码声明用于将更高版本在此方案中使用的记录和记录集对象的全局对象引用。  
   
-## <a name="to-connect-to-a-url-and-populate-lstmain"></a>若要连接到的 URL 并填充 lstMain  
- 下面的代码 form1 插入窗体加载事件处理程序中：  
+## <a name="to-connect-to-a-url-and-populate-lstmain"></a>若要连接到的 URL，并填充 lstMain  
+ Form1 到窗体加载事件处理程序中插入以下代码：  
   
 ```  
 Private Sub Form_Load()  
@@ -49,9 +46,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 此代码实例化的全局的记录和记录集对象。 所记录的对象， `grec`，将打开，其中指定为 ActiveConnection 的 URL。 如果 URL 存在，则打开它;如果它尚不存在，则创建它。 请注意，应将"http://servername/foldername/"与来自你的环境的有效 URL。  
+ 此代码实例化的全局的记录和记录集对象。 记录对象`grec`，使用指定为 ActiveConnection URL 打开。 如果 URL 存在，它会打开;如果它尚不存在，则创建它。 请注意，应将为"http://servername/foldername/"与您的环境中有效的 URL。  
   
- 记录集对象， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`用于发布到 URL 的资源的文件名称填充。  
+ 记录集对象中， `grs`，在该记录的子级上打开`grec`。 然后`lstMain`填充用于发布到的 URL 的资源的文件名称。  
   
 ## <a name="see-also"></a>请参阅  
  [Internet 发布方案](../../../ado/guide/data/internet-publishing-scenario.md)   

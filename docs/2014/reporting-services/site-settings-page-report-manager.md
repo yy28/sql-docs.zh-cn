@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065288"
 ---
 # <a name="site-settings-page-report-manager"></a>“站点设置”页（报表管理器）
   使用“站点设置”页可以更改应用程序标题，为报表历史记录限制和报表处理超时值设置服务器范围的默认值，管理系统级角色分配以及管理共享计划。 必须拥有“内容管理员”和“系统管理员”权限才能查看此页。  
@@ -38,7 +35,7 @@ ms.locfileid: "37232607"
   
      **注意：** 如果您没有看到**站点设置**选项在菜单中，您没有所需的权限，有关详细信息，请参阅的"站点设置"部分[配置为在本机模式报表服务器本地管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  指定要使用的此实例的标题[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]报表管理器。 默认情况下，标题是"[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]"。  
   

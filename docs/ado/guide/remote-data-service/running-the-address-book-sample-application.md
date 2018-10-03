@@ -1,49 +1,46 @@
 ---
-title: 运行通讯簿示例应用程序 |Microsoft 文档
+title: 运行通讯簿示例应用程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34611cf13d72d962902bb6e143324d0c2771c1ab
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e205c869d3091a5651eabefdb62d7b83801528a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604797"
 ---
 # <a name="running-the-address-book-sample-application"></a>运行通讯簿示例应用程序
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
- 若要运行通讯簿应用程序，请按照此过程。  
+ 若要运行通讯簿应用程序，请执行此过程。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ### <a name="to-run-this-application"></a>若要运行此应用程序  
   
-1.  请确保 Microsoft SQL Server 正在运行。 单击**启动**，指向**程序**，指向**Microsoft SQL Server 7.0**，然后单击**Service Manager**。 如果没有在白色圆圈的绿色箭头，然后 SQL Server 正在运行。 如果不是绿色箭头 （白色圆圈内将有红色正方形），单击**开始/继续**。  
+1.  请确保 Microsoft SQL Server 正在运行。 单击**启动**，依次指向**程序**，指向**Microsoft SQL Server 7.0**，然后单击**Service Manager**。 如果在白色圆圈中出现一个绿色箭头，然后运行 SQL Server。 如果不是 （有将红色正方形的白色圆圈），单击**开始/继续**。  
   
-2.  Microsoft Internet Explorer 4.0 版或更高版本中，键入以下地址：  
+2.  Microsoft Internet Explorer 4.0 或更高版本中，键入以下地址：  
   
      **http://** *webserver* **/RDS/AddressBook/AddrBook.asp**  
   
-     其中*web 服务器*是 RDS 服务器组件已安装 Web 服务器的名称。  
+     其中*web 服务器*安装 RDS 服务器组件的 Web 服务器的名称。  
   
-3.  然后，您可以尝试通讯簿示例应用程序，在各种方案，如搜索某个人基于他或她列出"程序管理器"的标题的所有人员的电子邮件名称或编辑现有的记录。 单击**查找**可以用所有可用的姓名填充数据网格。  
+3.  然后可以尝试在通讯簿示例应用程序中的各种方案，如搜索人员根据其列出了标题为"经理"的所有人的电子邮件名称或编辑现有的记录。 单击**查找**数据网格中填充所有可用的名称。  
   
 ## <a name="see-also"></a>请参阅  
  [通讯簿数据绑定对象](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -25,12 +22,12 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: aabd005381dc2e18b01fb88d125ddeeb3f8b6428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803855"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|用于唯一标识源表中的行的索引列的列表。|  
 |captured_column_list|**nvarchar(max)**|已捕获的源列的列表。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当同时*source_schema*并*source_name*默认为 NULL，或显式设置为 NULL，此存储的过程返回所有数据库的信息捕获实例的调用方已选择访问权限。 当*source_schema*并*source_name*是非 null 时，返回特定的命名启用表的唯一信息。  
   
 ## <a name="permissions"></a>Permissions  

@@ -1,39 +1,33 @@
 ---
-title: 数据函数 (XQuery) |Microsoft 文档
+title: 数据函数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:data function
 - data function [XQuery]
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74f8e5b5df2b8a6a95766576bdf5a1c8d83a4027
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 949286cef32dd3c6c9e55e1ad34504afffc20989
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078074"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734046"
 ---
-# <a name="data-accessor-functions---data-xquery"></a>数据访问器函数的数据 (XQuery)
+# <a name="data-accessor-functions---data-xquery"></a>数据取值函数 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  返回由指定每个项的类型化的值 *$arg*。  
+  返回指定的每项的类型化的值 *$arg*。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +40,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  将返回其类型化值的各项的顺序。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  下列情况适用于类型化值：  
   
 -   原子值的类型化值是原子值。  
@@ -63,19 +57,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   如果属性节点用 XML 架构类型类型化，则相应地，该节点的类型化值就是类型化值。  
   
--   如果非类型化的属性节点，其类型化的值等于其实例的形式返回的字符串值**xdt:untypedAtomic**。  
+-   如果属性节点是非类型化，其类型化的值等于其实例的形式返回的字符串值**xdt: untypedatomic**。  
   
--   如果元素节点未类型化，其类型化的值等于其实例的形式返回的字符串值**xdt:untypedAtomic**。  
+-   如果尚未类型化元素节点，其类型化的值等于其实例的形式返回的字符串值**xdt: untypedatomic**。  
   
  下列情况适用于类型化元素节点：  
   
--   如果元素具有简单内容类型， **data （)** 返回元素的类型化的值。  
+-   如果元素具有简单内容类型**data （)** 返回元素的类型化的值。  
   
--   如果节点为复杂类型，包括 xs: anytype， **data （)** 返回静态错误。  
+-   如果该节点为复杂类型，包括 xs: anytype， **data （)** 返回静态错误。  
   
- 尽管使用**data （)** 函数是经常是可选的如以下示例中，指定所示**data （)** 函数显式提高了查询可读性。 有关详细信息，请参阅[XQuery 基础知识](../xquery/xquery-basics.md)。  
+ 尽管使用**data （)** 函数通常不是强制，如以下示例中，指定中所示**data （)** 函数会显式增加查询的可读性。 有关详细信息，请参阅[XQuery 基础知识](../xquery/xquery-basics.md)。  
   
- 不能指定**data （)** 上构造 XML，如在下面的示例所示：  
+ 不能指定**data （)** 对 XML 构造，如在下面的示例所示：  
   
 ```  
 declare @x xml  
@@ -84,10 +78,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>示例  
- 本主题提供对 XML 实例存储在各种 XQuery 示例**xml** AdventureWorks 数据库中的类型列。  
+ 本主题提供了一些针对 XML 实例存储在各种 XQuery 示例**xml**类型列中的 AdventureWorks 数据库。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. 使用 data() XQuery 函数提取节点的类型化值  
- 以下查询说明了如何**data （)** 函数用于检索属性、 元素和文本节点的值：  
+ 以下查询演示了如何**data （)** 函数用于检索属性、 元素和文本节点的值：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -112,7 +106,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 如前文所述， **data （)** 函数是可选的当你在构造属性。 如果不指定**data （)** 函数，隐式假设。 下面的查询将与前面的查询生成相同的结果：  
+ 如前文所述， **data （)** 构造属性时，函数是可选。 如果未指定**data （)** 函数，它隐式假设。 下面的查询将与前面的查询生成相同的结果：  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -133,7 +127,7 @@ WHERE ProductModelID = 19
   
  以下示例说明了在其中实例**data （)** 函数是必需。  
   
- 在下面的查询， **$pd / p1:Specifications / 材料**返回 <`Material`> 元素。 此外，**数据 ($pd/p1:Specifications/材料)** 返回字符数据类型化为 xdt:untypedAtomic，因为 <`Material`> 是非类型化。 当输入是非类型化、 的结果**data （)** 被类型化为**xdt:untypedAtomic**。  
+ 在下面的查询 **$pd / p1:Specifications / 材料**返回 <`Material`> 元素。 此外，**数据 ($pd/p1:Specifications/材料)** 返回字符数据类型为 xdt: untypedatomic，因为 <`Material`> 是非类型化。 当输入是非类型化、 的结果**data （)** 被类型化为**xdt: untypedatomic**。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -157,7 +151,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 在下面的查询， **data($pd/p1:Features/wm:Warranty)** 返回静态的错误，因为 <`Warranty`> 是一个复杂类型元素。  
+ 在下面的查询**data($pd/p1:Features/wm:Warranty)** 将返回静态错误，因为 <`Warranty`> 是一个复杂类型元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -174,7 +168,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [针对 xml 数据类型的 XQuery 函数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

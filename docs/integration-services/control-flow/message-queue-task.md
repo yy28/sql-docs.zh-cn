@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.messagequeuetask.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: da585aaf4894c1e37e8aa75585004818622eb8ce
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 260512d99817084b6a7cc4af1e39e6557f6fea37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332481"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720205"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   通过消息队列任务，你可以使用消息队列（也称为 MSMQ）在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包之间发送和接收消息，或将消息发送到由自定义应用程序处理的应用程序队列。 这些消息可以采用简单文本格式、文件格式或变量及其值的格式。  
@@ -106,7 +103,7 @@ ms.locfileid: "35332481"
 ## <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为消息队列任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -130,7 +127,7 @@ ms.locfileid: "35332481"
 ## <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包发送消息。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **UseEncryption**  
  指示是否对消息进行加密。 默认值为 **False**。  
   
@@ -171,7 +168,7 @@ ms.locfileid: "35332481"
 ## <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **RemoveFromMessageQueue**  
  指示在接收后是否从队列中删除消息。 默认情况下，此值设置为 **False**。  
   
@@ -282,7 +279,7 @@ ms.locfileid: "35332481"
 ## <a name="select-variables"></a>选择变量
   可以使用 **“选择变量”** 对话框，指定在消息队列任务的发送消息操作中使用的变量。 “可用变量”列表包括消息队列任务或其父容器作用域内的系统变量和用户定义变量。 该任务使用 **“所选变量”** 列表中的变量。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用变量**  
  选择一个或多个变量。  
   

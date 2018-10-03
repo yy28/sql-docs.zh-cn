@@ -5,9 +5,7 @@ ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_resource_pools_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a1d56202136dbc06d6bf2eabb49d40bc5c756bd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6a3084f7b98edc3c9159576ae19323baeaa1b105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082747"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712765"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +79,7 @@ ms.locfileid: "43082747"
 |io_issue_delay_total_ms|**bigint**|**适用范围**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 预定发出 IO 和实际发出 IO 之间的总时间（毫秒）。 可以为 Null。 如果没有为 IO 调控资源池，则为 null。 也就是说，资源池 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 设置均为 0。|  
 |pdw_node_id|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  资源调控器工作负荷组和资源调控器资源池具有多对一映射关系。 因此，许多资源池统计信息都是派生自工作负荷组统计信息。  
   
  此动态管理视图显示了内存中配置。 若要查看存储的配置元数据，请使用 sys.resource_governor_resource_pools 目录视图。  

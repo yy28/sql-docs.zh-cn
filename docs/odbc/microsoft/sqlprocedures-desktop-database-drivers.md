@@ -1,32 +1,29 @@
 ---
-title: SQLProcedures （桌面数据库驱动程序） |Microsoft 文档
+title: SQLProcedures （桌面数据库驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLProcedures function [ODBC], Desktop Database Drivers
 ms.assetid: c996ad6f-e790-40f4-a962-843422496149
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 714afa45f411b510ef7a24d9656408c1469cff63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813627"
 ---
-# <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures （桌面数据库驱动程序）
-**SQLProcedures**将只返回有关这些过程，具有至少一个自变量的行。 没有任何参数的过程将被视为视图。  
+# <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures（桌面数据库驱动程序）
+**SQLProcedures**将只返回那些具有至少一个参数的过程的行。 没有任何自变量的过程将被视为视图。  
   
-|列|注释|  
+|“列”|注释|  
 |------------|--------------|  
 |PROCEDURE_QUALIFIER|数据库文件的路径。|  
 |PROCEDURE_OWNER|NULL|  

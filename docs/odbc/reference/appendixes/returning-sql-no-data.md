@@ -1,31 +1,28 @@
 ---
-title: 返回 SQL_NO_DATA |Microsoft 文档
+title: 返回 sql_no_data 指示到达 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL_NO_DATA [ODBC]
 - backward compatibility [ODBC], SQL_NO_DATA
 - compatibility [ODBC], SQL_NO_DATA
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9964b3a71797021b021fe8c97bd5261d81e3f023
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686375"
 ---
 # <a name="returning-sqlnodata"></a>返回 SQL_NO_DATA
-当一个 ODBC 2。*x*应用程序但 ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**，和搜索的更新或删除语句已执行，但未影响任何行在数据源，ODBC 3 *.x*驱动程序应返回 SQL_SUCCESS。 当 ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**与相同的结果，ODBC 3 *.x*驱动程序应返回 SQL_NO_DATA。  
+当 ODBC 2。*x*应用程序 workingwith ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**，并搜索的 update 或 delete 语句已执行但未影响任何行在数据源，ODBC 3 *.x*驱动程序应返回 SQL_SUCCESS。 当 ODBC 3 *.x*应用程序使用 ODBC 3 *.x*驱动程序调用**SQLExecDirect**， **SQLExecute**，或**SQLParamData**具有相同的结果，ODBC 3 *.x*驱动程序应返回 sql_no_data 为止。  
   
- 如果搜索的更新或删除语句中的一批语句不会影响数据源中的任何行**SQLMoreResults**返回 SQL_SUCCESS。 它不能返回 SQL_NO_DATA，因为这可能意味着有更多结果，不是有搜索更新/删除影响任何行从一个结果。
+ 如果搜索的 update 或 delete 语句在一批语句不会影响任何行在数据源**SQLMoreResults**返回 SQL_SUCCESS。 它不能返回 SQL_NO_DATA，因为这可能意味着没有更多的结果，不是有是从搜索更新/删除受影响任何行的结果。

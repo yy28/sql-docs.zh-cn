@@ -1,13 +1,11 @@
 ---
-title: DrilledDown 属性 (ADO MD) |Microsoft 文档
+title: DrilledDown 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,27 +14,26 @@ f1_keywords:
 helpviewer_keywords:
 - DrilledDown property [ADO MD]
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d1ae46067d933941548b877da2cd2973947156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9021ce8b3ad4f7442650731cb60b70cd4376d78a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828205"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown 属性 (ADO MD)
-该值指示是否立即跟随子级[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)在轴上。  
+指示是否直接子级[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)在轴上。  
   
 ## <a name="return-values"></a>返回值  
- 返回**布尔**值并且是只读的。 **DrilledDown**返回**True**如果没有在轴上的当前成员的子成员。 **DrilledDown**返回**False**如果当前的成员具有在轴上的一个或多个子成员。  
+ 返回**布尔**值并且是只读的。 **DrilledDown**将返回**True**如果没有在轴上的当前成员的子成员。 **DrilledDown**将返回**False**如果当前成员在轴上具有一个或多个子成员。  
   
-## <a name="remarks"></a>Remarks  
- 使用**DrilledDown**属性来确定是否存在紧跟此成员在轴上的此成员的至少一个子级。 显示该成员时，此信息很有用。  
+## <a name="remarks"></a>备注  
+ 使用**DrilledDown**属性来确定是否存在此成员紧跟此成员在轴上的至少一个子级。 显示成员时，此信息很有用。  
   
- 在上才支持此属性[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。 从引用此属性时出现错误**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
+ 此属性仅支持[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。 从引用此属性时出错**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
   
 ## <a name="applies-to"></a>适用范围  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

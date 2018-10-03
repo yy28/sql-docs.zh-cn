@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor_columns
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_columns
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a02701d091f2294af34450d3e370022a32cc143
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036230"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716705"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ sp_describe_cursor_columns
 |dbid|**int**|包含提供列的基表的数据库 ID。 如果结果集列由表达式生成，则 dbid 为 -1。|  
 |dbname|**sysname**<br /><br /> （可为 null）|包含提供列的基表的数据库名称。 如果结果集列由表达式生成，则 dbname 为 NULL。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_describe_cursor_columns 描述服务器游标结果集中的列属性，例如每个游标的名称和数据类型。 使用 sp_describe_cursor 描述服务器游标的全局特性。 使用 sp_describe_cursor_tables 报告游标引用的基表。 若要获取连接中可见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的报表，请使用 sp_cursor_list。  
   
 ## <a name="permissions"></a>Permissions  

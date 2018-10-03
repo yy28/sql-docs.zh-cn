@@ -5,9 +5,7 @@ ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - permissions [SQL Server], certificates
 - GRANT statement, certificates
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb037d3908879e6ae023951a5b71d925f2ec5398
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 447fe67a9fa97fbb475f9d6daaed181347cabe50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656005"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 证书权限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +86,7 @@ AS granting_principal
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  授权者（或用 AS 选项指定的主体）必须具有带 GRANT OPTION 的相同权限，或具有隐含所授予权限的更高权限。  
   
  如果使用 AS 选项，还必须满足以下附加要求：  

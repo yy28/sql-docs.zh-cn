@@ -1,14 +1,11 @@
 ---
-title: sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft 文档
+title: sp_syscollector_create_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b65f9ccc2c68fffd8137dfc7a6d289e7c4f38e13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254417"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781705"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  为数据收集器创建收集器类型。 收集器类型是的逻辑包装[!INCLUDE[ssIS](../../includes/ssis-md.md)]用于收集数据并将其上载到管理数据仓库中提供的实际机制的包。  
+  为数据收集器创建收集器类型。 收集器类型是一个逻辑包装[!INCLUDE[ssIS](../../includes/ssis-md.md)]包，可用于收集数据并将数据上载到管理数据仓库中提供的实际机制。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,10 +48,10 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>参数  
  [ @collector_type_uid = ] '*collector_type_uid*'  
- 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**和如果它为的 NULL，它将自动创建和返回作为输出。  
+ 是收集器类型的 GUID。 *collector_type_uid*是**uniqueidentifier**并且如果它为的 NULL，它将自动创建并作为 OUTPUT 返回。  
   
  [ @name =] '*名称*  
- 收集器类型的名称。 *名称*是**sysname**并且必须指定。  
+ 收集器类型的名称。 *名称*是**sysname** ，并且必须指定。  
   
  [ @parameter_schema =] '*parameter_schema*  
  此收集器类型的 XML 架构。 *parameter_schema*是**xml**默认值为 NULL。  
@@ -72,7 +68,7 @@ sp_syscollector_create_collector_type
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要具有 dc_admin（拥有 EXECUTE 权限）固定数据库角色的成员身份才能执行此过程。  
   
 ## <a name="example"></a>示例  
@@ -113,8 +109,8 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [数据收集](../../relational-databases/data-collection/data-collection.md)  
+ [“数据收集”](../../relational-databases/data-collection/data-collection.md)  
   
   

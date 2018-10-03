@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 943d896b2afd0e0fe30a211899f0fe805d89cbf8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59e9b89200e9510266f40e7ae8e471d4f6283a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595415"
 ---
 # <a name="management-data-warehouse"></a>管理数据仓库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +40,7 @@ ms.locfileid: "33145048"
   
  下表介绍了核心架构中的数据库表。 这些数据库表使得数据收集器可以跟踪数据来自何处、谁插入的数据以及数据是什么时候上载至数据仓库的。  
   
-|表名|Description|  
+|表名|描述|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|存储有关管理数据仓库报表应如何对性能计数器进行分组和聚合的信息。|  
 |core.snapshots_internal|标识每个新快照。 只要上载包开始上载一批新数据，此表中即会插入新的一行。|  

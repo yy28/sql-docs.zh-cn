@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061157"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>备份、还原和同步数据库 (XMLA)
   在 XML for Analysis 中，有三个命令分别用于备份、还原和同步数据库：  
@@ -66,7 +63,7 @@ ms.locfileid: "37159598"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
+|*skipMembership*|在备份文件中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在备份文件中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在备份文件中包括安全定义。|  
   
@@ -96,7 +93,7 @@ ms.locfileid: "37159598"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
+|*skipMembership*|在数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在数据库中包括安全定义。|  
   
@@ -134,7 +131,7 @@ ms.locfileid: "37159598"
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
+|*skipMembership*|在目标数据库中包括安全定义，但不包括成员身份信息。|  
 |*CopyAll*|在目标数据库中包括安全定义和成员身份信息。|  
 |*IgnoreSecurity*|不在目标数据库中包括安全定义。|  
   
@@ -148,7 +145,7 @@ ms.locfileid: "37159598"
 ### <a name="synchronizing-rolap-objects"></a>同步 ROLAP 对象  
  `Synchronize` 命令无法同步使用 ROLAP 存储的对象的聚合或数据，因为此类信息存储在基础关系数据源的表中。 但可以同步 ROLAP 对象的元数据。 为了同步元数据，`Synchronize` 命令会对关系数据源重新创建表结构。  
   
- 可以使用 Synchronize 命令中的 `Location` 元素同步 ROLAP 对象。 每个`Location`元素用于重新定位数据源`DataSourceType`属性必须显式设置为*本地*。 实例时都提供 SQL Server 登录名。 还必须将 `ConnectionString` 元素的 `Location` 属性设置为新位置的连接字符串。 在同步过程中，`Synchronize` 命令将使用 `DataSourceID` 元素的 `Location` 属性的值替换由 `ConnectionString` 元素的 `Location` 属性标识的数据源的连接字符串。  
+ 可以使用 Synchronize 命令中的 `Location` 元素同步 ROLAP 对象。 每个`Location`元素用于重新定位数据源`DataSourceType`属性必须显式设置为*本地*。 . 还必须将 `ConnectionString` 元素的 `Location` 属性设置为新位置的连接字符串。 在同步过程中，`Synchronize` 命令将使用 `DataSourceID` 元素的 `Location` 属性的值替换由 `ConnectionString` 元素的 `Location` 属性标识的数据源的连接字符串。  
   
 ## <a name="see-also"></a>请参阅  
  [备份元素&#40;XMLA&#41;](../xmla/xml-elements-commands/backup-element-xmla.md)   

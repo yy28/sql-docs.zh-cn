@@ -1,14 +1,11 @@
 ---
-title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) |Microsoft 文档
+title: sp_fulltext_semantic_unregister_language_statistics_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ec9142a0d39405db9fd6473a8db6c2d0283027e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: aefc83920cfe20f150c34ff7f35ad639f78739ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259447"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756065"
 ---
 # <a name="spfulltextsemanticunregisterlanguagestatisticsdb-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +53,7 @@ GO
 ## <a name="general-remarks"></a>一般备注  
  撤消注册语义语言统计数据库后，与之关联的所有元数据也随之删除。  
   
- **sp_fulltext_semantic_unregister_language_statistics_db**执行以下步骤：  
+ **sp_fulltext_semantic_unregister_language_statistics_db**将执行以下步骤：  
   
 1.  确保当前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例未在进行语义填充。  
   
@@ -66,22 +62,22 @@ GO
  有关详细信息，请参阅 [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)。  
   
 ## <a name="metadata"></a>元数据  
- 有关安装的实例上的语义语言统计数据库信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查询目录视图[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
+ 实例上安装了语义语言统计数据库有关的信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查询目录视图[sys.fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要具有 CONTROL SERVER 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例演示如何通过调用取消注册语义语言统计数据库**sp_fulltext_semantic_unregister_language_statistics_db**。  
+ 下面的示例演示如何通过调用中取消注册语义语言统计数据库**sp_fulltext_semantic_unregister_language_statistics_db**。  
   
 ```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [安装和配置语义搜索](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

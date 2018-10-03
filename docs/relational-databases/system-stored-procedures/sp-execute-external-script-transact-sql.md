@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f49cf4c10ccd16fe229b1d6a5f4089b8d9094f67
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 4421ac28e3ee8914cf016f5df23e5f163bacfd9b
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864395"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
@@ -102,8 +98,8 @@ sp_execute_external_script
  指定的变量名称中包含要返回到的数据的外部脚本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储的过程调用完成后。 外部脚本的变量中的数据类型取决于语言。 对于 R，输出必须是数据帧。 对于 Python，输出必须为 pandas 数据帧。 *output_data_1_name*是**sysname**。  默认值是*OutputDataSet*。  
 
  [ **@parallel** = 0 | 1]  
- 通过设置启用并行执行 R 脚本`@parallel`参数为 1。 为此参数默认值为 0 （不能并行）。 如果`@parallel = 1`和输出进行流式处理直接向客户端计算机，则`WITH RESULTS SETS`子句是必需的并且必须指定输出架构。  
-  
+ 通过设置启用并行执行 R 脚本`@parallel`参数为 1。 为此参数默认值为 0 （不能并行）。 如果`@parallel = 1`和输出进行流式处理直接向客户端计算机，则`WITH RESULT SETS`子句是必需的并且必须指定输出架构。  
+
  + 为不使用 RevoScaleR 函数，请使用 R 脚本`@parallel`参数可以是有益于处理大型数据集，假设可以不费力地并行执行该脚本。 例如，在使用 R`predict`函数和一个模型来生成新预测，设置`@parallel = 1`作为对查询引擎的提示。 如果可以并行执行查询，将行分布根据**MAXDOP**设置。  
   
  + 使用 RevoScaleR 函数的 R 脚本，并行处理进行处理自动，并且不应指定`@parallel = 1`到**sp_execute_external_script**调用。  
@@ -121,7 +117,7 @@ sp_execute_external_script
 
 使用**sp_execute_external_script**执行以受支持的语言编写的脚本。 目前，支持的语言是 SQL Server 2016 R Services，和 Python 和 R 的 SQL Server 2017 机器学习服务的 R。 
 
-默认情况下，此存储过程返回的结果集是使用未命名的列的输出。 列名称的脚本中使用脚本编写环境和本地不会反映在输出的结果集。 若要命名结果集列，使用`WITH RESULTS SET`子句[ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)。
+默认情况下，此存储过程返回的结果集是使用未命名的列的输出。 列名称的脚本中使用脚本编写环境和本地不会反映在输出的结果集。 若要命名结果集列，使用`WITH RESULT SET`子句[ `EXECUTE` ](../../t-sql/language-elements/execute-transact-sql.md)。
   
  除了返回的结果集，可以返回标量值到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用输出参数。 下面的示例显示了输出参数可返回已用作输入的脚本的序列化的 R 模型的使用：  
   
@@ -281,7 +277,7 @@ END;
 GO
 ```
 
-Python 代码中使用的列标题不是对 SQL Server 的输出；因此，使用 WITH RESULTS 语句来为 SQL 指定要使用的列名称和数据类型。
+使用 Python 代码中的列标题不是输出到 SQL Server;因此，使用与结果语句指定的列名称和 SQL 使用的数据类型。
 
 要进行评分，还可以使用本机 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 函数，此函数无需调用 Python 或 R 运行时，因此更加快速。
 

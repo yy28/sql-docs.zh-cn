@@ -1,13 +1,11 @@
 ---
-title: UnderlyingValue 属性 |Microsoft 文档
+title: UnderlyingValue 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,32 +15,31 @@ f1_keywords:
 helpviewer_keywords:
 - UnderlyingValue property
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f0548dd9c42e18b988cc848ebd214dd191f8489
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282786"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836065"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 属性
-指示的当前值[字段](../../../ado/reference/ado-api/field-object.md)数据库中的对象。  
+指示当前的值[字段](../../../ado/reference/ado-api/field-object.md)数据库中的对象。  
   
 ## <a name="return-value"></a>返回值  
  返回**Variant**值，该值指示的值**字段**。  
   
-## <a name="remarks"></a>Remarks  
- 使用**UnderlyingValue**属性以从数据库中返回当前的字段值。 中的字段值**UnderlyingValue**属性是对你的交易可见，则可能会由另一个事务的新更新的结果的值。 这可能不同于[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)属性，反映了已向最初返回的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+## <a name="remarks"></a>备注  
+ 使用**UnderlyingValue**属性，以便从数据库返回当前字段值。 中的字段值**UnderlyingValue**属性是对您的事务可见，并且可能是一个新的更新由其他事务的结果的值。 这可能不同于[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)属性，这反映了最初返回到的值[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 这是类似于使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法，但**UnderlyingValue**属性从当前记录返回仅特定字段的值。 这是相同的值，[重新同步](../../../ado/reference/ado-api/resync-method.md)方法使用取代[值](../../../ado/reference/ado-api/value-property-ado.md)属性。  
+ 这是类似于使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法，但**UnderlyingValue**属性将返回从当前记录仅特定字段的值。 这是相同的值，该值[重新同步](../../../ado/reference/ado-api/resync-method.md)方法使用替换[值](../../../ado/reference/ado-api/value-property-ado.md)属性。  
   
- 当你使用此属性与**OriginalValue**属性，您可以解决冲突所带来的批处理更新。  
+ 当使用此属性与**OriginalValue**属性，可以解析从批处理更新而引起的冲突。  
   
 ## <a name="record"></a>录制  
- 有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，此属性将为空的字段之前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
+ 有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象，此属性将为空的字段前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
   
 ## <a name="applies-to"></a>适用范围  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  

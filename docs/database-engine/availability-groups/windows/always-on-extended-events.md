@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6152a89af59acd56478b6dabee5d29f8d009f9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b010e4b913d6e7259306cceb73d61cebcdb13b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32862552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629525"
 ---
 # <a name="always-on-availability-groups-extended-events"></a>Always On 可用性组扩展事件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|availability_replica_state_change|  
 |类别|alwayson|  
@@ -98,7 +95,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -121,7 +118,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|availability_group_lease_expired|  
 |类别|alwayson|  
@@ -129,7 +126,7 @@ GO
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -149,7 +146,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“属性”|Description|  
+|“属性”|描述|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
 |类别|alwayson|  
@@ -157,7 +154,7 @@ GO
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -186,7 +183,7 @@ GO
 ###  <a name="BKMK_error_reported"></a>error_reported（多个错误号）：传输或连接问题  
  每个已筛选事件表示在可用性组依赖的传输或数据库镜像终结点中发生了连接问题。  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|error_reported<br /><br /> 要筛选的错误号：35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |类别|错误|  
@@ -194,7 +191,7 @@ GO
   
 #### <a name="error-numbers-to-filter"></a>要筛选的错误号  
   
-|错误号|Description|  
+|错误号|描述|  
 |------------------|-----------------|  
 |35201|尝试建立与可用性副本“%ls”的连接时发生连接超时。|  
 |35202|已成功建立可用性组“%ls”从 ID 为 [%ls] 的可用性副本“%ls”到 ID 为 [%ls] 的“%ls”的连接。  这只是一条信息性消息。 不需要任何用户操作。|  
@@ -249,7 +246,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|data_movement_suspend_resume|  
 |类别|AlwaysOn|  
@@ -259,7 +256,7 @@ GO
   
 ||||  
 |-|-|-|  
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |availability_group_id|guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称（如果可用）。|  
 |availability_replica_id|guid|可用性副本的 ID。|  
@@ -292,7 +289,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|alwayson_ddl_execution|  
 |类别|alwayson|  
@@ -300,7 +297,7 @@ GO
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性组的 ID。|  
 |availability_group_name|unicode_string|可用性组的名称。|  
@@ -325,7 +322,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|availability_replica_manager_state_change|  
 |类别|alwayson|  
@@ -333,7 +330,7 @@ GO
   
 #### <a name="event-fields"></a>事件字段  
   
-|“属性”|Type_name|Description|  
+|“属性”|Type_name|描述|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|可用性副本管理器的当前状态。<br /><br /> 联机<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
   
@@ -356,7 +353,7 @@ GO
   
 #### <a name="event-information"></a>事件信息  
   
-|“列”|Description|  
+|“列”|描述|  
 |------------|-----------------|  
 |“属性”|error_reported<br /><br /> 错误号 1480：由于 REASON_MSG，REPLICATION_TYPE_MSG 数据库“DATABASE_NAME”正在将角色从“OLD_ROLE”更改为“NEW_ROLE”|  
 |类别|错误|  

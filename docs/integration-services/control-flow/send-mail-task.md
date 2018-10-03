@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sendmailtask.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d84c243d448376490b50835278b936c18fe0a47e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 805036ee530834ea2581613578fa0417087def82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331891"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682496"
 ---
 # <a name="send-mail-task"></a>发送邮件任务
   发送邮件任务可以发送电子邮件。 通过使用发送邮件任务，包可以在包工作流中的任务成功或失败时发送邮件，也可为响应运行时包引发的事件而发送邮件。 例如，该任务可以通知数据库管理员，告知备份数据库任务是成功还是失败。  
@@ -91,7 +88,7 @@ ms.locfileid: "35331891"
 ## <a name="send-mail-task-editor-general-page"></a>发送邮件任务编辑器（“常规”页）
   可以使用 **“发送邮件任务编辑器”** 对话框的 **“常规”** 页，对发送邮件任务进行命名和说明。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为发送邮件任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -103,7 +100,7 @@ ms.locfileid: "35331891"
 ## <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **SMTPConnection**  
  从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
   

@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 48069bea-31cb-4a0e-9849-a07edc94088f
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 263611784926f137c334e98df9ad28701145679f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 4f7345cab2ebabc87cc41a06dbe62b415a86a897
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793125"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +36,10 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>参数  
  [ @folder_name = ] folder_name  
- 正在引用环境的项目的文件夹名称。 folder_name 为 nvarchar(128)。  
+ 正在引用环境的项目的文件夹名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [ @project_name = ] project_name  
- 正在引用环境的项目的名称。 project_name 为 nvarchar(128)。  
+ 正在引用环境的项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [ @environment_name = ] environment_name  
  被引用环境的名称。 environment_name 为 nvarchar(128)。  
@@ -60,16 +57,16 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 MODIFY 权限，以及针对环境的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

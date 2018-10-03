@@ -1,13 +1,11 @@
 ---
-title: 新增功能 |Microsoft 文档
+title: 新增功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], new features in release
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - compatibility [ODBC], new features in release
 - ODBC [ODBC], new features
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed343aadff0390858230a4b8c3512245ed338062
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5d489a533caf4fe53521d440991b545483be76e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833965"
 ---
 # <a name="new-features"></a>新功能
-ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器使用 ODBC 2 时不将这些功能 *.x*驱动程序。  
+在 ODBC 3 引入了以下新功能。*x*。 ODBC 3。*x*应用程序使用 ODBC 2 *.x*驱动程序将不能使用此功能。 ODBC 3。*x*驱动程序管理器不映射这些功能时使用的 ODBC 2 *.x*驱动程序。  
   
--   采用一个说明符的函数处理作为自变量： **SQLSetDescField**， **SQLGetDescField**， **SQLSetDescRec**， **SQLGetDescRec**，和**SQLCopyDesc**。  
+-   采用一个说明符的函数处理作为参数： **SQLSetDescField**， **SQLGetDescField**， **SQLSetDescRec**， **SQLGetDescRec**，并**SQLCopyDesc**。  
   
--   函数**SQLSetEnvAttr**和**SQLGetEnvAttr**。  
+-   函数**SQLSetEnvAttr**并**SQLGetEnvAttr**。  
   
--   使用**SQLAllocHandle**分配的描述符句柄。 (使用**SQLAllocHandle**分配环境、 连接和语句的句柄是重复的、 不是新功能。)  
+-   利用**SQLAllocHandle**以分配描述符句柄。 (使用**SQLAllocHandle**分配环境、 连接和语句句柄是重复的不是新功能。)  
   
--   使用**SQLGetConnectAttr**获取 SQL_ATTR_AUTO_IPD 连接属性。 (使用**SQLSetConnectAttr**若要设置，和**SQLGetConnectAttr**若要获取，其他连接属性是重复的、 不是新功能。)  
+-   利用**SQLGetConnectAttr**以获取 SQL_ATTR_AUTO_IPD 连接属性。 (使用**SQLSetConnectAttr**若要设置，并**SQLGetConnectAttr**若要获取，其他连接属性是重复的不是新功能。)  
   
--   使用**SQLSetStmtAttr**若要设置，和**SQLGetStmtAttr**若要获取，以下语句属性。 (使用**SQLSetStmtAttr**若要设置，和**SQLGetStmtAttr**若要获取，其他语句属性是重复的、 不是新功能。)  
+-   利用**SQLSetStmtAttr**若要设置，并**SQLGetStmtAttr**若要获取，以下语句属性。 (使用**SQLSetStmtAttr**若要设置，并**SQLGetStmtAttr**若要获取，其他语句属性是重复的不是新功能。)  
   
      SQL_ATTR_APP_ROW_DESC  
   
@@ -70,43 +67,43 @@ ODBC 3 中引入了以下新功能。*x*。 一个 ODBC 3。*x*应用程序使�
   
      SQL_ATTR_ROW_ARRAY_SIZE  
   
--   使用**SQLGetStmtAttr**以获取以下语句属性。 (使用**SQLGetStmtAttr**以获取其他语句属性是重复的功能，不是新功能。)  
+-   利用**SQLGetStmtAttr**以获取以下语句属性。 (使用**SQLGetStmtAttr**以获取其他语句属性是重复的功能，不是新功能。)  
   
      SQL_ATTR_IMP_ROW_DESC SQL_ATTR_IMP_PARAM_DESC  
   
--   使用间隔 C 数据类型、 间隔 SQL 数据类型、 BIGINT C 数据类型和 SQL_C_NUMERIC 数据结构。  
+-   间隔 C 数据类型、 interval SQL 数据类型、 BIGINT C 数据类型和 SQL_C_NUMERIC 数据结构的使用。  
   
 -   按行绑定的参数。  
   
--   基于偏移量的书签提取，例如，调用**SQLFetchScroll**与*FetchOrientation* SQL_FETCH_BOOKMARK 和指定的偏移量 0 以外的参数。  
+-   例如，调用基于偏移量的书签提取**SQLFetchScroll**与*FetchOrientation* SQL_FETCH_BOOKMARK 和指定的偏移量 0 以外的参数。  
   
--   **SQLFetch**返回行状态数组，提取的行数，读取多行，与混合调用**SQLFetchScroll**，并使用混合调用**SQLBulkOperations**或**SQLSetPos**。 有关详细信息，请参阅下一部分中，[块状游标可滚动游标，对于 ODBC 3.x 应用程序的向后兼容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
+-   **SQLFetch**返回的行状态数组提取的行数，提取多个行，使用混合调用**SQLFetchScroll**，和使用进行混合调用**SQLBulkOperations**或**SQLSetPos**。 有关详细信息，请参阅下一部分中，[块状游标、 可滚动游标和 ODBC 3.x 应用程序的向后兼容性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)。  
   
 -   命名的参数。  
   
--   任何 ODBC 3。*x*– 特定**SQLGetInfo**选项。 （如果检测到 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序将调用具有替代几个 ODBC 2 的 SQL_XXX_CURSOR_ATTRIBUTES1 信息类型。*x*信息类型的某些信息可能可靠，但一些可能是不可靠。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
+-   任何 ODBC 3。*x*– 特定**SQLGetInfo**选项。 （如果检测到 ODBC 3。*x*应用程序使用 ODBC 2。*x*驱动程序调用 SQL_XXX_CURSOR_ATTRIBUTES1 信息类型，已取代多个 ODBC 2。*x*信息类型的一些信息可能可靠，但某些可能会不可靠。 有关详细信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)  
   
--   将绑定偏移量。  
+-   将绑定的偏移量。  
   
--   更新、 刷新，以及删除书签 (通过调用**SQLBulkOperations**)。  
+-   更新、 刷新和删除书签 (通过调用**SQLBulkOperations**)。  
   
 -   调用**SQLBulkOperations**或**SQLSetPos** S5 状态中。  
   
--   中的诊断记录的方式和 COLUMN_NUMBER 字段 (其中包含要由替换函数检索**SQLGetDiagField**或**SQLGetDiagRec**)。  
+-   诊断记录中的 ROW_NUMBER 和 COLUMN_NUMBER 字段 (其中包含要检索的替代函数**SQLGetDiagField**或**SQLGetDiagRec**)。  
   
--   近似的行计数。  
+-   近似行计数。  
   
 -   警告信息 (从 SQL_ROW_SUCCESS_WITH_INFO **SQLFetchScroll**)。  
   
 -   长度可变的书签。  
   
--   扩展的错误信息的数组的参数。  
+-   扩展错误信息的数组的参数。  
   
--   所有中由目录函数返回的结果集的新列。  
+-   所有目录函数返回的结果集中的新列。  
   
--   利用**SQLDescribeCol**和**SQLColAttribute**列 0。  
+-   利用**SQLDescribeCol**并**SQLColAttribute**上第 0 列。  
   
--   使用任何 ODBC 3。*x*– 对的调用中的特定列属性**SQLColAttribute**。  
+-   使用的任何 ODBC 3。*x*– 对的调用中的特定列属性**SQLColAttribute**。  
   
 -   使用多个环境句柄。  
   

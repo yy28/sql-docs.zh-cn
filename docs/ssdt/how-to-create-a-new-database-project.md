@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,16 +15,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673255"
 ---
 # <a name="how-to-create-a-new-database-project"></a>如何创建新的数据库项目
 您可以创建一个新的数据库项目，并从现有数据库、.sql 脚本文件或数据层应用程序 (.dacpac) 中导入数据库架构。 然后可以调用可用于所连接的数据库开发的相同可视化设计器工具（Transact\-SQL 编辑器、表设计器），对脱机数据库项目进行更改，然后将更改发布回生产数据库。 这些更改也可以另存为脚本以便在以后发布。 使用“项目属性”窗格，可以将目标平台更改为不同的 SQL Server 版本（包括 SQL Azure）。  

@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XACT_STATE
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d14b5af9c0ad7ca0e6261e1e7a34d13704ca54f2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d74e1ebfb3f1d8e2bc36c2a4bd0432a830934b5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098116"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799335"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +52,7 @@ XACT_STATE()
   
 |返回值|含义|  
 |------------------|-------------|  
-|@shouldalert|当前请求有活动的用户事务。 请求可以执行任何操作，包括写入数据和提交事务。|  
+|1|当前请求有活动的用户事务。 请求可以执行任何操作，包括写入数据和提交事务。|  
 |0|当前请求没有活动的用户事务。|  
 |-1|当前请求具有活动的用户事务，但出现了致使事务被归类为无法提交的事务的错误。 请求无法提交事务或回滚到保存点；它只能请求完全回滚事务。 请求在回滚事务之前无法执行任何写操作。 请求在回滚事务之前只能执行读操作。 事务回滚之后，请求便可执行读写操作并可开始新的事务。<br /><br /> 当最外面的批处理运行完时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 会自动回滚所有不可提交的活跃事务。 如果事务进入不可提交状态时未发送错误消息，则当批处理结束时，将向客户端应用程序发送一个错误消息。 此消息指示检测到并回滚了一个不可提交的事务。|  
   

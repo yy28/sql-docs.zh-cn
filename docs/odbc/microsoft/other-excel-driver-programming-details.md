@@ -1,33 +1,30 @@
 ---
-title: 其他 Excel 驱动程序编程详细信息 |Microsoft 文档
+title: 其他 Excel 驱动程序的编程详细信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Excel driver
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6871b83a19037529b2b9179ca9aefc65944ba553
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15710b867c5d766787480b1830de3257f54da6be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847105"
 ---
-# <a name="other-excel-driver-programming-details"></a>其他 Excel 驱动程序编程详细信息
+# <a name="other-excel-driver-programming-details"></a>其他 Excel 驱动程序的编程详细信息
 > [!NOTE]  
->  本部分提供有关 ODBC 函数和其他编程的详细信息的 Excel 驱动程序的特定信息。 有关函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本部分提供有关 ODBC 函数和其他编程的详细信息的特定于 Excel 驱动程序的信息。 有关函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
  本部分包含以下主题。  
   

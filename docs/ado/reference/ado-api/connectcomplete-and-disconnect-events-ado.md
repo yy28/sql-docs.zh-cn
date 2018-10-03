@@ -1,13 +1,11 @@
 ---
-title: ConnectComplete 并断开连接事件 (ADO) |Microsoft 文档
+title: ConnectComplete 和 Disconnect 事件 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - Disconnect event [ADO]
 - ConnectComplete event [ADO]
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ac6301a8ed8ab0c84f26225e20c2bfd971ff761
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752765"
 ---
-# <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和断开连接事件 (ADO) 连接
+# <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 和 Disconnect 事件 (ADO)
 **ConnectComplete**连接启动后，将调用事件。 **断开连接**连接结束后，将调用事件。  
   
 ## <a name="syntax"></a>语法  
@@ -43,17 +40,17 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Parameters  
  *pError*  
- [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述发生错误的值*adStatus*是**adStatusErrorsOccurred**; 不会设置。  
+ [错误](../../../ado/reference/ado-api/error-object.md)对象。 它描述了如果发生的错误的值*adStatus*是**adStatusErrorsOccurred**; 不会设置。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值始终返回**adStatusOK**。  
+ [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)值，它始终返回**adStatusOK**。  
   
  当**ConnectComplete**是调用，此参数设置为**adStatusCancel**如果**WillConnect**事件已请求取消挂起的连接。  
   
- 这两个事件返回之前，将此参数设置为**adStatusUnwantedEvent**以防止后续的通知。 但是，关闭并重新打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)导致会再次发生，这些事件。  
+ 这两个事件返回之前，此参数设置为**adStatusUnwantedEvent**以防止后续的通知。 但是，关闭并重新打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)导致这些事件再次发生。  
   
  *pConnection*  
- **连接**对象为此事件时应用。  
+ **连接**对象应用此事件。  
   
 ## <a name="see-also"></a>请参阅  
  [ADO 事件模型示例 （VC + +）](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   

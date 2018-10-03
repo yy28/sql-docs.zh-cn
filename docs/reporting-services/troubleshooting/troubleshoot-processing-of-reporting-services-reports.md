@@ -4,17 +4,16 @@ ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 70dbbaa44b18dec81ecad4f07905cb44ff65df1d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 02d4f890c3e2d5f74c49100c14e88fcb6a683a92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813595"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>排除 Reporting Services 报表处理故障
 检索报表数据后，报表处理器会将这些数据与布局信息组合。 将在组合的数据和布局的上下文中计算具有表达式的每个报表项属性。 使用本主题可以帮助解决这些问题。   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c10ba380b31a2d8169dcf0a57de15418db059eac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 61097f1cee2616e18199edcd662db2b7344b04c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028156"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596435"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +136,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0  
  过程成功。  
   
- @shouldalert  
+ 1  
  过程失败。  
   
  2  
@@ -152,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  如果成功执行了 sp_cursoropen 过程，则将发送 RPC 返回参数和具有 TDS 列格式信息（0xa0 和0xa1 消息）的结果集。 如果不成功，则发送一条或多条 TDS 错误消息。 在任一情况下，将不返回任何行数据并*完成*消息计数将为零。 如果您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本低于 7.0，将返回 0xa0、0xa1（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。 如果您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0，将返回 0x81（SELECT 语句的标准）以及 0xa5 和 0xa4 标记流。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="stmt-parameter"></a>stmt 参数  
  如果*stmt*指定执行存储过程的输入的参数可能要么定义为常量作为的一部分*stmt*字符串，或指定为*boundparam*自变量。 通过此方法，可以将声明的变量作为绑定参数传递。  

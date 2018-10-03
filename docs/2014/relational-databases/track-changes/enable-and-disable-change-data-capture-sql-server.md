@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], enabling tables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], disabling databases
 - change data capture [SQL Server], disabling tables
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e96cb5bb777544b8a3a390eee59a16e0213c857f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebbfd8c66737afb03564dee557757f4406a5c5a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057557"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>启用和禁用变更数据捕获 (SQL Server)
   本主题说明如何对数据库和表启用和禁用变更数据捕获。  
@@ -76,7 +73,7 @@ GO
   
  创建捕获实例时，可以指定以下选项：  
   
- `Columns in the source table to be captured`的用户。  
+ `Columns in the source table to be captured`。  
   
  默认情况下，源表中的所有列都将标识为已捕获列。 如果只需要跟踪这些列中的部分列（如出于隐私或性能方面的原因），请使用 *@captured_column_list* 参数指定这些列的子集。  
   

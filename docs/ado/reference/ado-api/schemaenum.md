@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,21 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e28e750ad7a3521150dabdbf6b2771f3372bb0b3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4dd7edb2f5969f7ec8ded931c5e562c0c1992768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749225"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 指定的架构的类型**记录集**的[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)方法检索。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  为每个 ADO 常量，可以找到主题中返回的函数和列有关的其他信息[附录 b： 架构行集](http://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)的 OLE DB 程序员参考。 下表描述部分中的括号中列出每个主题的名称。  
   
  为每个 ADO MD 常量可以找到主题中返回的函数和列有关的其他信息[OLE DB for OLAP 对象和架构行集](http://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)OLE DB 中的联机分析处理 (OLAP) 文档。 下表描述列中的括号中列出每个主题的名称。  
@@ -41,7 +38,7 @@ ms.locfileid: "38984319"
 |常量|ReplTest1|Description|约束列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|返回在目录中定义的由给定用户拥有的断言。<br /><br /> （断言行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
-|**adSchemaCatalogs**|@shouldalert|返回与 DBMS 从可访问的目录关联的物理属性。<br /><br /> （行集目录）|CATALOG_NAME|  
+|**adSchemaCatalogs**|1|返回与 DBMS 从可访问的目录关联的物理属性。<br /><br /> （行集目录）|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|返回在目录中定义的、 给定用户可访问字符集。<br /><br /> （CHARACTER_SETS 行集）|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
 |**adSchemaCheckConstraints**|5|返回在目录中定义的、 给定用户拥有的 check 约束。<br /><br /> (CHECK_CONSTRAINTS)行集）|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|返回的字符排序规则在目录中定义的给定用户可访问。<br /><br /> （排序规则行集）|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  

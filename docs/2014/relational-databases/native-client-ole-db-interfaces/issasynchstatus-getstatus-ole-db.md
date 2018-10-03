@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::GetStatus (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9b12653f05171514c3a311edd42b2a3af9f58da
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d17a75b7bd6021e908200b7a4be5bc800ec81283
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050237"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   返回异步执行操作的状态。  
@@ -46,50 +43,50 @@ HRESULT GetStatus(
  *hChapter*[in]  
  章节句柄。 如果轮询的对象不是行集对象或操作不适用于某一章节，则应将此参数设置为 DB_NULL_HCHAPTER，访问接口将忽略此参数。  
   
- *eOperation*[in]  
+ eOperation[in]  
  请求其异步状态的操作。 其值应为：  
   
  DBASYNCHOP_OPEN – 使用者请求有关异步打开或填充行集或者异步初始化数据源对象的信息。 如果访问接口是支持直接 URL 绑定且与 OLE DB 2.5 兼容的访问接口，使用者则请求有关异步初始化或填充数据源、行集、行或流对象的信息。  
   
  *pulProgress*[out]  
- 指向用于返回预期的最大值相关的异步操作的当前进度的内存的指针所示*pulProgressMax*参数。 有关详细信息的含义*pulProgress*，请参阅的说明*peAsynchPhase*。  
+ 指向内存的指针，将在此内存中返回与 pulProgressMax 参数指示的预期最大值相关的异步操作的当前进度。 有关 pulProgress 的含义的详细信息，请参阅对 peAsynchPhase 的说明。  
   
- 如果*pulProgress*是 null 指针，不返回进度。  
+ 如果 pulProgress 为空指针，则不返回进度。  
   
- *pulProgressMax*[out]  
- 指向内存中要返回的预期最大值的指针*pulProgress*参数。 此值可以随此方法的每次调用而更改。 有关详细信息的含义*pulProgressMax*，请参阅的说明*peAsynchPhase*。  
+ pulProgressMax[out]  
+ 指向内存的指针，将在此内存中返回 pulProgress 参数的预期最大值。 此值可以随此方法的每次调用而更改。 有关 pulProgressMax 的含义的详细信息，请参阅对 peAsynchPhase 的说明。  
   
- 如果*pulProgressMax*是 null 指针，不返回任何预期的最大值。  
+ 如果 pulProgressMax 为空指针，则不返回预期的最大值。  
   
  *peAsynchPhase*[out]  
  指向内存的指针，将在此内存中返回有关异步操作的进度的其他信息。 有效值包括：  
   
- DBASYNCHPHASE_INITIALIZATION - 对象处于初始化阶段。 自变量*pulProgress*并*pulProgressMax*指示估计的完成比率。 对象尚未完全具体化。 尝试调用任何其他接口可能失败，并且可能无法对该对象使用整套接口。 如果异步操作是因调用**icommand:: Execute**有关命令的更新、 删除或插入行以及是否*cParamSets*大于 1， *pulProgress*并*pulProgressMax*可能表示一组参数或参数集的完整阵列的进度。  
+ DBASYNCHPHASE_INITIALIZATION - 对象处于初始化阶段。 参数 pulProgress 和 pulProgressMax 指示估计的完成比率。 对象尚未完全具体化。 尝试调用任何其他接口可能失败，并且可能无法对该对象使用整套接口。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，并且如果 cParamSets 大于 1，pulProgress 和 pulProgressMax 可以指示一个参数集或所有参数集的进度。  
   
- DBASYNCHPHASE_POPULATION - 对象处于填充阶段。 尽管已完全初始化行集，并且可针对该对象使用整套接口，但是可能还有其他行尚未填充到行集中。 虽然*pulProgress*并*pulProgressMax*可以基于填充的行数，它们通常基于填充行集所需工作量的时间。 因此，调用方应将此信息用作对此过程所需时间的粗略估计，而不是最终的行计数。 此阶段仅在填充行集期间返回；它永远不会在数据源对象初始化期间返回，也不会因执行更新、删除或插入行的命令而返回。  
+ DBASYNCHPHASE_POPULATION - 对象处于填充阶段。 尽管已完全初始化行集，并且可针对该对象使用整套接口，但是可能还有其他行尚未填充到行集中。 虽然 pulProgress 和 pulProgressMax 可以基于填充的行数，但它们通常基于填充行集所需的时间和工作。 因此，调用方应将此信息用作对此过程所需时间的粗略估计，而不是最终的行计数。 此阶段仅在填充行集期间返回；它永远不会在数据源对象初始化期间返回，也不会因执行更新、删除或插入行的命令而返回。  
   
- DBASYNCHPHASE_COMPLETE - 已完成对象的所有异步处理。 **Issasynchstatus:: Getstatus**返回一个 HRESULT，指示操作的结果。 通常，如果已同步调用操作，则将返回 HRESULT。 如果异步操作是因调用**icommand:: Execute**的命令的更新、 删除或插入行， *pulProgress*并*pulProgressMax*是等于受影响的命令行的总数。 如果*cParamSets*是大于 1，这是受影响的所有执行过程中指定的参数集行的总数。 如果*peAsynchPhase*是 null 指针，则返回任何状态代码。  
+ DBASYNCHPHASE_COMPLETE - 已完成对象的所有异步处理。 **Issasynchstatus:: Getstatus**返回一个 HRESULT，指示操作的结果。 通常，如果已同步调用操作，则将返回 HRESULT。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 和 pulProgressMax 则等于该命令所影响的总行数。 如果 cParamSets 大于 1，则等于执行过程中指定的所有参数集所影响的总行数。 如果 peAsynchPhase 为空指针，则不返回状态代码。  
   
- DBASYNCHPHASE_CANCELED - 已中止对象的异步处理。 **Issasynchstatus:: Getstatus**返回 DB_E_CANCELED。 如果异步操作是因调用**icommand:: Execute**的命令的更新、 删除或插入行， *pulProgress*等于行，所有的参数集的总数在取消之前命令所影响。  
+ DBASYNCHPHASE_CANCELED - 已中止对象的异步处理。 **Issasynchstatus:: Getstatus**返回 DB_E_CANCELED。 如果异步操作是因调用更新、删除或插入行的命令的 ICommand::Execute 而引起的，pulProgress 则等于取消之前该命令所影响的所有参数集的总行数。  
   
  *ppwszStatusText*[in/out]  
  指向包含有关操作的其他信息的内存的指针。 访问接口可以使用此值区分不同的操作元素，例如，要访问的不同资源。 该字符串的本地化形式基于数据源对象的 DBPROP_INIT_LCID 属性。  
   
- 如果*ppwszStatusText*是输入非 null，访问接口将返回与标识的特定元素相关联的状态*ppwszStatusText*。 如果*ppwszStatusText*并不表示的元素*eOperation*，该提供程序返回 S_OK，并*pulProgress*和*pulProgressMax*设置为相同值。 如果提供程序不区分基于文本标识符元素，它会设置*ppwszStatusText* NULL，并返回有关的信息操作作为一个整体; 否则为如果*ppwszStatusText*是在输入非 null，访问接口将使*ppwszStatusText*保持不变。  
+ 如果 ppwszStatusText 在输入时为非 Null，提供程序则返回与 ppwszStatusText 标识的特定元素相关联的状态。 如果 ppwszStatusText 未指示 eOperation 的元素，提供程序则返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值。 如果提供程序不能基于文本标识符区分各元素，则会将 ppwszStatusText 设置为 NULL，并返回有关整个操作的信息；否则，如果 ppwszStatusText 在输入时为非 Null，提供程序将使 ppwszStatusText 保持不变。  
   
- 如果*ppwszStatusText*的输入，提供程序集为 null *ppwszStatusText*到一个值，该值有关此操作，或为 NULL 的详细信息，如果没有此类信息不可用，或如果**Issasynchstatus:: Getstatus**返回错误。 当*ppwszStatusText*是 null 输入时，该提供程序为状态字符串分配内存并返回此内存地址。 使用者释放此内存以及**imalloc:: Free**当不再需要该字符串。  
+ 如果*ppwszStatusText*的输入，提供程序集为 null *ppwszStatusText*到一个值，该值有关此操作，或为 NULL 的详细信息，如果没有此类信息不可用，或如果**Issasynchstatus:: Getstatus**返回错误。 如果 ppwszStatusText 在输入时为 Null，提供程序将为状态字符串分配内存，并返回此内存的地址。 如果不再需要此字符串，使用者可以使用 IMalloc::Free 释放此内存。  
   
- 如果*ppwszStatusText*在输入为 NULL，返回没有状态字符串和提供程序一般情况下返回有关操作的任何元素或操作的相关信息。  
+ 如果 ppwszStatusText 在输入时为 NULL，则不会返回状态字符串，提供程序将返回有关操作的任一元素的信息或有关操作的总体信息。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
  该方法已成功返回。  
   
--   如果*peAsynchPhase*是等于 DBASYNCHPHASE_INITIALIZATION，该对象尚未完全初始化; 尝试调用任何其他接口可能会失败，并且完整的接口集可能不可用的对象上。  
+-   如果 peAsynchPhase 等于 DBASYNCHPHASE_INITIALIZATION，则尚未完全初始化对象；尝试调用任何其他接口可能失败，并且可能无法对该对象使用整套接口。  
   
--   如果*peAsynchPhase*是等于 DBASYNCHPHASE_POPULATION，完全初始化行集和接口的完整范围是可针对该对象; 但是，可能有其他行尚未填充到行集中。  
+-   如果 peAsynchPhase 等于 DBASYNCHPHASE_POPULATION，则已完全初始化行集，并且可针对该对象使用整套接口；但是可能还有其他行尚未填充到行集中。  
   
--   如果*peAsynchPhase*是等于 DBASYNCHPHASE_COMPLETE，已完成的对象的所有异步处理。 已完全初始化并填充该对象。  
+-   如果 peAsynchPhase 等于 DBASYNCHPHASE_COMPLETE，则已完成对象的所有异步处理。 已完全初始化并填充该对象。  
   
  DB_E_CANCELED  
  异步处理在行集填充过程中取消。 填充停止，但是对于已填充的行，该行集仍保持有效。  
@@ -109,20 +106,20 @@ HRESULT GetStatus(
  E_FAIL  
  发生了特定于访问接口的错误。  
   
-## <a name="remarks"></a>Remarks  
- **Issasynchstatus:: Getstatus**方法的行为完全相同**IDBAsynchStatus::GetStatus**方法，不同之处在于如果源对象的数据初始化被中止，将返回 E_UNEXPECTED，而不是比 DB_E_CANCELED (尽管[issasynchstatus:: Waitforasynchcompletion](issasynchstatus-waitforasynchcompletion-ole-db.md)将返回 DB_E_CANCELED)。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
+## <a name="remarks"></a>备注  
+ ISSAsynchStatus::GetStatus 方法的行为与 IDBAsynchStatus::GetStatus 方法完全类似，不同之处在于如果中止对数据源对象的初始化，前者将返回 E_UNEXPECTED，而不是 DB_E_CANCELED（但是 [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) 将返回 DB_E_CANCELED）。 这是因为在中止后，数据源对象不会照常处于僵停状态，以便进一步尝试初始化操作。  
   
  如果异步初始化或填充行集，则必须支持此方法。  
   
- 除了列出的返回值**issasynchstatus:: Getstatus**可以返回任何 HRESULT，则由启动异步操作，该方法返回，该值指示该操作成功与否。  
+ 除列出的返回值以外，ISSAsynchStatus::GetStatus 还可以返回应由启动异步操作的方法返回的任何 HRESULT，以指示操作成功或失败。  
   
- 某些异步操作可能无法返回除“完成”和“尚未完成”以外的任何状态。 它们应设置*pulProgressMax*为值 1，指示其估计值，要么粒度以便将为 0/1 / 1。  
+ 某些异步操作可能无法返回除“完成”和“尚未完成”以外的任何状态。 这些异步操作应将 pulProgressMax 值设置为 1，指示其估计的粒度（全部粒度或没有任何粒度），因此返回的值将为 0/1 或 1/1。  
   
- 一个提供程序可能会更改*pulProgressMax*在后续调用中，甚至返回比例较低比以前，如果这反映了任务的完成程度的改善估计。  
+ 提供程序可以在后续调用中更改 pulProgressMax，甚至返回比先前更小的比率，条件是该比率反映对任务完成程度的改善估计。  
   
  访问接口不必保证任何进一步的准确性，但是对于可以对完成情况进行合理估计的情况，建议执行此工作。 这一工作将改进用户界面的质量，因为此函数的主要用途是向用户提供进度反馈。 由于改善了长期运行的不可见任务的反馈质量，用户的满意度也随之提高。  
   
- 调用**issasynchstatus:: Getstatus**上初始化的数据源对象或填充行集，或将值传递*eOperation*除 dbasynchop_open 以外，返回 S_OK，并*pulProgress*并*pulProgressMax*设置为相同值。 如果**issasynchstatus:: Getstatus**上执行的命令的更新、 删除或插入行，从创建的对象调用同时*pulProgress*和*pulProgressMax*指示受命令影响的总行数。  
+ 对已初始化的数据源对象或已填充的行集调用 ISSAsynchStatus::GetStatus，或者传递除 DBASYNCHOP_OPEN 以外的 eOperation 值将返回 S_OK，并将 pulProgress 和 pulProgressMax 设置为相同的值。 如果**issasynchstatus:: Getstatus**上执行的命令的更新、 删除或插入行，从创建的对象调用同时*pulProgress*和*pulProgressMax*指示受命令影响的总行数。  
   
 ## <a name="see-also"></a>请参阅  
  [执行异步操作](../native-client/features/performing-asynchronous-operations.md)   

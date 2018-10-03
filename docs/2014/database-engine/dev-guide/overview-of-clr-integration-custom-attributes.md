@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes [CLR integration]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database objects [CLR integration], custom attributes
 - building database objects [CLR integration], custom attributes
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbc881f565d48510c55af8f9887bdb05cbef7b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063179"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 集成自定义属性的概览
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的公共语言运行时 (CLR) 允许使用称为属性的描述性关键字。 这些属性为许多元素（如方法和类）提供附加信息。 这些属性与对象的元数据一同保存在程序集中，并且可用于向其他开发工具描述您的代码，或者可用于影响 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内的运行时行为。  
