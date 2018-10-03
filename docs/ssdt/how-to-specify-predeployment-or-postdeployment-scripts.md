@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d7b1e6537aa58d06d21eb3df0b4523bfd703252
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731245"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>如何：指定预先部署或后期部署脚本
 预先部署和后期部署脚本在从数据库项目生成的主部署脚本之前和之后执行 Transact\-SQL 语句。 一个项目只能有一个预先部署脚本和一个后期部署脚本。 这些脚本可用于许多用途。 例如：  

@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a22b2741f7e8c3f38fe313699027d6b0ae458809
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729555"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +27,7 @@ ms.locfileid: "35406049"
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|参数的唯一标识符 (ID)。|  
 |project_id|**bigint**|项目的唯一 ID。|  
-|object_type|**int**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
+|object_type|**smallint**|参数的类型。 对于项目参数，该值是 `20`；对于包参数，值是 `30`。|  
 |object_name|**sysname**|包含对应项目或包的名称。|  
 |parameter_name|**sysname(nvarchar(128))**|参数名。|  
 |data_type|**nvarchar(128)**|参数的数据类型。|  
@@ -45,12 +42,12 @@ ms.locfileid: "35406049"
 |validation_status|**char(1)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
 |last_validation_time|**datetimeoffset(7)**|标识为仅供参考。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中不使用。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要查看此视图中的行，您必须具有以下权限之一：  
   
 -   针对项目的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
 -   sysadmin 服务器角色中的成员资格。  
   

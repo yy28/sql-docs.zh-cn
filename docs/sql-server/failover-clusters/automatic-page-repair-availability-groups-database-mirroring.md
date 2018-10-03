@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76ab4cee846252b749a664619d1117eacd4aa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036694"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844637"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>自动页修复（可用性组：数据库镜像）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +44,10 @@ ms.locfileid: "33036694"
   
 -   [如何查看自动页修复尝试](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a>导致自动页修复尝试的错误类型  
+##  <a name="ErrorTypes"></a> 导致自动页修复尝试的错误类型  
  数据库镜像自动页修复只尝试修复特定数据文件中的页，此数据文件是指对其执行的操作由于下表中列出的某一错误而失败的数据文件。  
   
-|错误号|Description|导致自动页修复尝试的实例|  
+|错误号|描述|导致自动页修复尝试的实例|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|仅当操作系统对数据执行循环冗余检查 (CRC) 失败时才执行此操作。|ERROR_CRC。 此错误的操作系统值为 23。|  
 |824|逻辑错误。|逻辑数据错误，例如残缺写或错误的页校验和。|  
