@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.configdistwizard.subscribers.f1
 helpviewer_keywords:
 - Subscriber Properties dialog box
 ms.assetid: 32aa0347-64e4-4aa4-ac57-6bd3e5d52070
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a38b712b520584f69acea3d065d226578097e059
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a84f6880cb0ef1ea41adc616718f167b165b767b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691235"
 ---
 # <a name="subscriber-properties"></a>订阅服务器属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   “订阅服务器属性”对话框包含与运行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的订阅服务器有关的信息。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **到订阅服务器的代理连接**  
  分发代理和合并代理从分发服务器连接到订阅服务器时所处的上下文。此选项只适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以前的版本。  
   

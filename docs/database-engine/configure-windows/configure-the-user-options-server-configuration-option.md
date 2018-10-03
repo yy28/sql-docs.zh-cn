@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b355563ee256302279575440b6cf59ef5c0c9c3b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670165"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>配置 user options 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +51,9 @@ ms.locfileid: "32868602"
   
 -   下表列出并说明了 **user options**的配置值。 并非所有配置值都是相互兼容的。 例如，不能同时设置 ANSI_NULL_DFLT_ON 和 ANSI_NULL_DFLT_OFF。  
   
-    |ReplTest1|配置|Description|  
+    |ReplTest1|配置|描述|  
     |-----------|-------------------|-----------------|  
-    |@shouldalert|DISABLE_DEF_CNST_CHK|控制执行期间或延迟的约束检查。|  
+    |1|DISABLE_DEF_CNST_CHK|控制执行期间或延迟的约束检查。|  
     |2|IMPLICIT_TRANSACTIONS|对于 DBLIB 网络库连接，控制执行语句时是否隐式启动事务。 IMPLICIT_TRANSACTIONS 设置对 ODBC 或 OLEDB 连接没有影响。|  
     |4|CURSOR_CLOSE_ON_COMMIT|控制执行提交操作后游标的行为。|  
     |8|ANSI_WARNINGS|控制聚合警告中的截断和 NULL。|  

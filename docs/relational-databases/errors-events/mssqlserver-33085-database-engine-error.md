@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fffb759d4914935334925744cb9ed818bc655542
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1cd3639eba44863806c43fb4c81496420fb31236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47693495"
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "34320458"
   
 |State|描述|  
 |---------|---------------|  
-|@shouldalert|SqlCryptInitializeProvider|  
+|1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  
 |3|SqlCryptOpenSession|  
 |4|SqlCryptCloseSession|  

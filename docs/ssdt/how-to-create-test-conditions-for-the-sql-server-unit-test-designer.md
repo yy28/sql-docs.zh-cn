@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681965"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
 可以使用可扩展的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  
@@ -181,7 +178,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 |特性参数|位置|描述|  
 |-----------------------|------------|---------------|  
-|DisplayName|@shouldalert|在“测试条件”组合框中标识字符串。 此名称必须唯一。 如果两个条件具有相同的显示名称，将向用户显示找到的第一个条件，并且在 Visual Studio 错误管理器将显示警告。|  
+|DisplayName|1|在“测试条件”组合框中标识字符串。 此名称必须唯一。 如果两个条件具有相同的显示名称，将向用户显示找到的第一个条件，并且在 Visual Studio 错误管理器将显示警告。|  
 |ImplementingType|2|该参数用于唯一标识扩展。 您需要更改该参数以便匹配您要放置特性的类型。 本示例使用 ResultSetColumnCountCondition 类型，因此请使用 typeof(ResultSetColumnCountCondition)。 如果你的类型是 NewTestCondition，请使用 typeof(NewTestCondition)。|  
   
 在这个示例中，您添加两个属性。 自定义测试条件的用户可以使用 ResultSet 属性指定应验证其列计数的结果集。 然后，用户可以使用 Count 属性指定期望的列计数。  

@@ -5,23 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c982c84bb84f3acc098b6216117118d528f0993
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: e72c8705c6aa8ca04b284c959bab6f96a0bfec62
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410719"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675605"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>对为捕获更改选择的表进行更改
   在此对话框中，您可以从要捕获变更的所选表中选择特定列。 您还可以编辑 **“安全角色”** 和 **“捕获实例”** 信息。  

@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: develop
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 16fa4c7e7ca6e694318fc387f3fef386ae40c41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27bcc991088135b95305842639f55b0dc389c4ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32890722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685695"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>创建自定义工作流 - XML 说明
 
@@ -72,7 +66,7 @@ ms.locfileid: "32890722"
   
  下表描述此 XML 所包含的一些标记：  
   
-|标记|Description|  
+|标记|描述|  
 |---------|-----------------|  
 |\<Type>|在 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的“工作流类型”文本框中输入的文本，用于标识要加载的自定义工作流程序集。|  
 |\<SendData>|由 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 中的“消息中包括成员数据”复选框控制的一个布尔值。 值 1 表示发送 \<MemberData> 部分；否则表示未发送 \<MemberData> 部分。|  

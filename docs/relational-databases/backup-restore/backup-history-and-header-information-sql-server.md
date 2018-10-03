@@ -5,9 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684735"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>备份历史记录和标头信息 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "32922382"
 ##  <a name="BnRHistoryTables"></a> 备份和还原历史记录表  
  本部分介绍 **msdb** 系统数据库中存储备份和还原元数据的历史记录表。  
   
-|历史记录表|Description|  
+|历史记录表|描述|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|每个备份的数据或日志文件在表中占一行。|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|备份集中的每个文件组在表中占一行。|  
@@ -92,7 +89,7 @@ ms.locfileid: "32922382"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY 和 RESTORE VERIFYONLY Transact-SQL 语句需要 CREATE DATABASE 权限。 与以前的版本相比，这项新要求为您的备份文件提高了安全性，并更周全地保护了您的备份信息。 有关此权限的信息，请参阅 [GRANT 数据库权限 (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
-|信息语句|备份历史记录表|Description|  
+|信息语句|备份历史记录表|描述|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|返回一个结果集，其中包含一个列出了指定备份集中包含的数据库和日志文件的列表。<br /><br /> 有关详细信息，请参阅本主题后面的“列出数据库文件和事务日志文件”部分。|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|在特定的备份设备上检索所有备份集的所有备份标头信息。 执行 RESTORE HEADERONLY 的结果是一个结果集。<br /><br /> 有关详细信息，请参阅本主题后面的“查看备份标头信息”部分。|  

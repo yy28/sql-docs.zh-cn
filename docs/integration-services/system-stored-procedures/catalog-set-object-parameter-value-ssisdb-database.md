@@ -5,21 +5,18 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2dbc544c20a85bca73be07e49106ed98f6343b78
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1ae6bf032e4b2a3e2b47907e055ffa5a05286bf3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335421"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671259"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +37,13 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="arguments"></a>参数  
  [@object_type =] object_type  
- 参数的类型。 使用值 `20` 表示项目参数，使用值 `30` 表示包参数。 object_type 为 smallInt。  
+ 参数的类型。 使用值 `20` 表示项目参数，使用值 `30` 表示包参数。 *object_type* 为 **smallInt**。  
   
  [@folder_name =] folder_name  
- 包含参数的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含参数的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [@project_name =] project_name  
- 包含参数的项目的名称。 project_name 为 nvarchar(128)。  
+ 包含参数的项目的名称。 *project_name* 为 **nvarchar(128)**。  
   
  [@parameter_name =] parameter_name  
  参数名。 parameter_name 为 nvarchar(128)。  
@@ -64,16 +61,16 @@ catalog.set_object_parameter_value [@object_type =] object_type
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对项目的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能导致此存储过程引发错误的情况：  
