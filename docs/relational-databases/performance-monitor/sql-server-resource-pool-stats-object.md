@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reosurce Pool Stats object
 - 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26a4d2ab7c1a39b2cdaa2865f6f5cc025d59a886
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0866673feed877c1eb48d282ebb1cdef2edac50d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802955"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server，Resource Pool Stats 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +28,7 @@ ms.locfileid: "32953422"
   
  每个活动资源池都创建一个 SQLServer:Resource Pool Stats 性能对象实例，实例的名称与资源调控器资源池的名称相同。 下表介绍了此实例支持的计数器。  
   
-|计数器名称|Description|  
+|计数器名称|描述|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|当前授予的内存总量，以千字节 (KB) 为单位。 此信息还可在 [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)中获得。| 
 |**Active memory grants count**|当前内存授予总数。 此信息还可在 [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)中获得。|  
@@ -50,7 +46,7 @@ ms.locfileid: "32953422"
 |**CPU usage %**|属于此池的所有工作负荷组中所有请求的 CPU 带宽使用量。 此值是相对于计算机度量的，并针对系统中的所有 CPU 进行规范化。 此值将随着可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程的 CPU 量的变化而变化。 它不会针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程接收的信息进行规范化。|  
 |**CPU usage % base**|仅限内部使用。|
 |**CPU usage target %**|资源池基于资源池配置设置和系统负荷的目标 CPU 使用率 (%)。|  
-|**CPU violated %**|CPU 保留和有效计划百分比之差。|
+|**CPU violated %**|CPU 预留和有效计划百分比之差。|
 |**Disk Read Bytes/sec**|在上一秒中从磁盘读取的字节数。|  
 |**Disk Read IO Throttled/sec**|在上一秒中中止的读取操作数。|  
 |**Disk Read IO/sec**|在上一秒中从磁盘读取的操作数。| 

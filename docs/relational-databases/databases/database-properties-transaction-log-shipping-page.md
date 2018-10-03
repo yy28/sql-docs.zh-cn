@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a84c96b1f1699bc2373e40a404c1c0b07d7e91a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f38c5d29192b5f61decb0a4b229a5faefbb637b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32927402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801965"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>数据库属性（“事务日志传送”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +27,7 @@ ms.locfileid: "32927402"
   
  有关日志传送概念的说明，请参阅 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **将此数据库启用为日志传送配置中的主数据库**  
  将此数据库启用为日志传送的主数据库。 请选中该选项，然后再配置此页上的剩余选项。 如果清除此复选框，则将删除此数据库的日志传送配置。  
   
