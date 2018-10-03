@@ -1,34 +1,31 @@
 ---
-title: SQLCleanupConnectionPoolID 函数 |Microsoft 文档
+title: SQLCleanupConnectionPoolID 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b417ddc7b2aedcf2c23e2f607ceb53ee7ffb4c6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666165"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函数
-**一致性**  
- 版本引入了： ODBC 3.81 标准合规性： ODBC  
+**符合性**  
+ 版本引入了： ODBC 3.81 标准符合性： ODBC  
   
  **摘要**  
- **SQLCleanupConnectionPoolID**通知的驱动程序池 ID 已超时。池 ID 可以超时，每当中具有该池 ID 相关联的池的所有连接都已超时。请参阅[Microsoft 数据访问组件中的池](http://msdn.microsoft.com/library/ms810829.aspx)有关连接超时的详细信息。  
+ **SQLCleanupConnectionPoolID**通知池 ID 已超时的驱动程序。池 ID 可以超时，只要中具有该池 ID 相关联的池的所有连接都已超时。请参阅[Microsoft 数据访问组件中的池](http://msdn.microsoft.com/library/ms810829.aspx)连接超时值有关的详细信息。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,20 +46,20 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  SQL_SUCCESS、 SQL_SUCCESS_WITH_INFO、 SQL_ERROR 或 SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>诊断  
- 驱动程序管理器将不会处理从返回的诊断信息**SQLCleanupConnectionPoolID**。  
+ 驱动程序管理器不会处理从返回的诊断信息**SQLCleanupConnectionPoolID**。  
   
- 应用程序无法接收由驱动程序返回的错误消息。  
+ 应用程序不能接收由驱动程序返回的错误消息。  
   
-## <a name="remarks"></a>注释  
- **SQLCleanupConnectionPoolID**可以调用任何时候，但驱动程序管理器可保证其他任何线程都同时调用**SQLGetPoolID**和其他任何线程都同时调用**SQLRateConnection**和**SQLPoolConnect**与连接信息令牌分配有该池 id。 因此，该驱动程序必须确保此函数是线程安全。  
+## <a name="remarks"></a>备注  
+ **SQLCleanupConnectionPoolID**可能会调用在任何时候，但是，驱动程序管理器保证没有其他线程同时调用**SQLGetPoolID**并没有其他线程同时调用**SQLRateConnection**并**SQLPoolConnect**与连接信息令牌分配有该池 id。 因此，该驱动程序必须确保此函数是线程安全。  
   
- 驱动程序可以清除与池 id。 关联的资源  
+ 驱动程序可以清理池 id。 与关联的资源  
   
  应用程序不应直接调用此函数。 支持识别驱动程序的连接池的 ODBC 驱动程序必须实现此函数。  
   
- 包括 sqlspi.h ODBC 驱动程序的开发。  
+ 包括 sqlspi.h 的 ODBC 驱动程序开发。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [识别驱动程序的连接池](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [在 ODBC 驱动程序中开发连接池感知](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

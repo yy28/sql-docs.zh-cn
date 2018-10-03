@@ -1,13 +1,11 @@
 ---
-title: OriginalValue 属性 (ADO) |Microsoft 文档
+title: OriginalValue 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,32 +13,31 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5c77c1badaa812efb13767b8f30afa37341bc07c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648987"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 属性 (ADO)
-指示的值[字段](../../../ado/reference/ado-api/field-object.md)进行任何更改之前存在的记录。  
+指示的值[字段](../../../ado/reference/ado-api/field-object.md)进行任何更改之前存在该记录。  
   
 ## <a name="return-value"></a>返回值  
- 返回**Variant**值，该值表示任何更改之前字段的值。  
+ 返回**变体**值，该值表示在任何更改前的字段的值。  
   
-## <a name="remarks"></a>Remarks  
- 使用**OriginalValue**属性从当前记录返回的字段的原始字段值。  
+## <a name="remarks"></a>备注  
+ 使用**OriginalValue**属性以返回从当前记录的字段的原始字段值。  
   
- 在*立即更新模式*(在其中提供程序将更改写入基础数据源后调用[更新](../../../ado/reference/ado-api/update-method.md)方法)，则**OriginalValue**属性将返回任何更改之前存在的字段值 (即，自上次操作后**更新**方法调用)。 这是相同的值，[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法使用取代[值](../../../ado/reference/ado-api/value-property-ado.md)属性。  
+ 在中*立即更新模式*(在其中提供程序将更改写入到基础数据源调用后[更新](../../../ado/reference/ado-api/update-method.md)方法)，则**OriginalValue**属性将返回任何更改之前存在的字段值 (即，自上次**更新**方法调用)。 这是相同的值，该值[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法使用替换[值](../../../ado/reference/ado-api/value-property-ado.md)属性。  
   
- 在*批处理更新模式下*(在其中提供程序缓存多个更改，并将其写入到基础数据源仅在调用[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法)，则**OriginalValue**属性返回的任何更改之前存在的字段值 (即，自上次操作后**UpdateBatch**方法调用)。 这是相同的值，[执行](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法使用取代**值**属性。 当你使用此属性与[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性，您可以解决冲突所带来的批处理更新。  
+ 在中*批更新模式*(提供程序将多个更改缓存并将其写入到基础数据源仅在调用[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法)，则**OriginalValue**属性返回的任何更改之前存在的字段值 (即，自上次**UpdateBatch**方法调用)。 这是相同的值，该值[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)方法使用替换**值**属性。 当使用此属性与[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)属性，可以解析从批处理更新而引起的冲突。  
   
 ## <a name="record"></a>录制  
- 有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象， **OriginalValue**属性将为空的字段之前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
+ 有关[记录](../../../ado/reference/ado-api/record-object-ado.md)对象， **OriginalValue**属性将为空的字段前添加[更新](../../../ado/reference/ado-api/update-method.md)调用。  
   
 ## <a name="applies-to"></a>适用范围  
  [字段对象](../../../ado/reference/ado-api/field-object.md)  

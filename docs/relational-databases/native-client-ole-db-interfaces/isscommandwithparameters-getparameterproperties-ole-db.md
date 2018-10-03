@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6c79ebc4f2d14755130c3e31fb9409cd529fa17
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f8e13ede890599c7424c2bb181a966608b09b0b5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062260"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686637"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +49,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  **GetParameterProperties**方法将返回相同的错误代码与核心 OLE DB **icommandproperties:: Getproperties**方法中的，除 DB_S_ERRORSOCCURRED 和 DB_E_ERRORSOCCURED 之外不能为引发。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Isscommandwithparameters:: Getparameterproperties**相对于一致的行为**GetParameterInfo**。 如果[isscommandwithparameters:: Setparameterproperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md)或**SetParameterInfo**尚未调用或使用等于零的 cParams 调用了**GetParameterInfo**中派生参数信息并返回此信息。 如果**isscommandwithparameters:: Setparameterproperties**或**SetParameterInfo**已为至少一个参数调用**isscommandwithparameters:: Getparameterproperties**为其返回仅为这些参数的属性**isscommandwithparameters:: Setparameterproperties**已调用。 如果**isscommandwithparameters:: Setparameterproperties**后，会调用**isscommandwithparameters:: Getparameterproperties**或**GetParameterInfo**，对后续调用**isscommandwithparameters:: Getparameterproperties**重写这些参数的值返回为其**isscommandwithparameters:: Setparameterproperties**已调用。  
   
  SSPARAMPROPS 结构的定义如下所示：  

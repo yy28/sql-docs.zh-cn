@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - instructions, migration
 - migrating databases, overview
@@ -18,16 +13,15 @@ helpviewer_keywords:
 - procedure, migration
 - recommended migration process
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: f3552b4617d4579be7beebccae357b417ea6a563
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b15ecd732acf373dbc5cee817983305c1d792fe4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683705"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Access 数据库迁移到 SQL Server-Azure SQL DB (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 是一个工具，提供了一个全面的环境，可帮助你快速访问将数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 可以通过使用 SSMA，评审访问权限和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象、 评估迁移的 Access 数据库、 访问数据库对象转换、 加载到它们[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，然后将数据迁移。  

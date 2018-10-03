@@ -1,15 +1,12 @@
 ---
-title: SetServiceAccount 方法 （SqlService 类） |Microsoft 文档
+title: SetServiceAccount 方法 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetServiceAccount Method (SqlService Class)
@@ -19,22 +16,21 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetServiceAccount method
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f44268f2c9d94a6336b516f1c259c1791767f3b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27985e94766a76efa755d05e81bce3ccb59ed6c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010554"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664325"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 方法（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   尝试更改运行服务实例时使用的用户名和密码。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -42,7 +38,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -51,9 +47,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   如果帐户属于内置域，则可以指定“\用户名”。  
   
--   如果指定 NULL，则服务将记录为**LocalSystem**帐户。  
+-   如果指定 NULL，则该服务将以登录**LocalSystem**帐户。  
   
- 内核或系统级的驱动程序， *StartName*包含驱动程序对象名称，\FileSystem\Rdr 或 \Driver\Xns，I/O 系统用来加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
+ 对于内核或系统级驱动程序*StartName*包含驱动程序对象名称 \FileSystem\Rdr 或 \Driver\Xns，I/O 系统用于加载设备驱动程序。 如果指定 NULL，驱动程序将以 I/O 系统基于服务名称创建的默认对象名称运行，例如 DWDOM\Admin。  
   
  *ServiceStartPassword*  
  一个字符串值，指定的密码中的帐户名称*StartName*参数。 如果不更改密码，请指定 NULL。 如果服务没有密码，请指定一个空字符串。  
@@ -61,9 +57,9 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1。 其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

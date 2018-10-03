@@ -1,13 +1,11 @@
 ---
-title: 执行、 重新执行查询，并清除方法示例 （VC + +） |Microsoft 文档
+title: 执行、 再次查询和清除方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef62e7ad551b0e94642348c09b743eeb0bec8925
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278086"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655402"
 ---
-# <a name="execute-requery-and-clear-methods-example-vc"></a>执行、 重新执行查询，并清除方法示例 （VC + +）
-此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 ExecuteCommand 和 PrintOutput 函数所需运行此示例。  
+# <a name="execute-requery-and-clear-methods-example-vc"></a>执行、 再次查询和清除方法示例 （VC + +）
+此示例演示**Execute**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[再次查询](../../../ado/reference/ado-api/requery-method.md)方法来检索中的当前数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法以清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 若要运行此示例需要 ExecuteCommand 和 PrintOutput 函数。  
   
 ```  
 // Execute_Requery_Clear_Method_Sample.cpp  
@@ -196,6 +193,6 @@ void PrintComError(_com_error &e) {
  [命令对象 (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [执行方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute 方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

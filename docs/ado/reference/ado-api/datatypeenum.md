@@ -1,13 +1,11 @@
 ---
-title: DataTypeEnum |Microsoft 文档
+title: DataTypeEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,62 +13,61 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4e9f6e0188bf8752a4bbecb91b084c49317a238
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615285"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
-指定的数据类型[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)。 对应的 OLE DB 类型指示符显示在下表描述列中的括号中。  
+指定的数据类型[字段](../../../ado/reference/ado-api/field-object.md)，[参数](../../../ado/reference/ado-api/parameter-object.md)，或[属性](../../../ado/reference/ado-api/property-object-ado.md)。 相应的 OLE DB 类型指示器显示在下表描述列中的括号中。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**AdArray**|0x2000|标志值，与另一个数据类型的常量，指示其他数据类型的数组始终结合使用。 不适用于 ADOX。|  
-|**adBigInt**|20|指示的 8 字节有符号的整数 (是 DBTYPE_I8)。|  
+|**AdArray**|0x2000|与另一个数据类型常量，用于指示其他数据类型的数组始终结合使用标记值。 不适用于 ADOX。|  
+|**adBigInt**|20|指示一个 8 字节有符号的整数 (DBTYPE_I8)。|  
 |**adBinary**|128|指示一个二进制值 (DBTYPE_BYTES)。|  
 |**adBoolean**|11|指示**布尔**值 (DBTYPE_BOOL)。|  
-|**adBSTR**|8|指示以 null 结尾的字符串 (Unicode) (DBTYPE_BSTR)。|  
-|**adChapter**|136|指示用于标识子行集 (DBTYPE_HCHAPTER) 中的行的 4 字节章值。|  
+|**adBSTR**|8|指示一个以 null 结尾的字符串 (Unicode) (DBTYPE_BSTR)。|  
+|**adChapter**|136|指示用于标识子行集 (DBTYPE_HCHAPTER) 中的行的一章将 4 字节值。|  
 |**adChar**|129|指示一个字符串值 (DBTYPE_STR)。|  
-|**adCurrency**|6|表示货币值 (DBTYPE_CY)。 货币是小数点的带有四个数字右侧的定点数字。 它存储在按 10,000 缩放的 8 字节有符号整数。|  
-|**adDate**|7|指示日期值 (DBTYPE_DATE)。 日期存储为双精度型，其中的整个部分是自 1899 年 12 月 30 日以来的天数的小数部分是一天的部分。|  
+|**adCurrency**|6|指示货币值 (DBTYPE_CY)。 带小数点右边的四个位数的定点数是货币。 它存储在按 10,000 缩放的 8 字节有符号整数。|  
+|**adDate**|7|指示日期值 (DBTYPE_DATE)。 日期存储为双精度型，其整数部分是自 1899 年 12 月 30 日以来的天数数字的小数部分是一天的小部分。|  
 |**adDBDate**|133|指示日期值 (yyyymmdd) (DBTYPE_DBDATE)。|  
 |**adDBTime**|134|指示时间值 (hhmmss) (DBTYPE_DBTIME)。|  
-|**adDBTimeStamp**|135|指示日期/时间戳 （yyyymmddhhmmss 加上以 billionths 的分数形式） (DBTYPE_DBTIMESTAMP)。|  
+|**adDBTimeStamp**|135|指示日期/时间戳 （yyyymmddhhmmss 加上在十亿分之一一小部分） (DBTYPE_DBTIMESTAMP)。|  
 |**adDecimal**|14|指示具有固定的精度和小数位数 (DBTYPE_DECIMAL) 的精确数值。|  
 |**adDouble**|5|指示一个双精度浮点值 (DBTYPE_R8)。|  
 |**adEmpty**|0|未指定任何值 (DBTYPE_EMPTY)。|  
-|**adError**|10|表示 32 位错误代码 (DBTYPE_ERROR)。|  
-|**adFileTime**|64|指示从 (DBTYPE_FILETIME) 1601 年 1 月 1 日表示的 100 毫微秒隔数的 64 位值。|  
+|**adError**|10|指示 32 位错误代码 (DBTYPE_ERROR)。|  
+|**adFileTime**|64|指示表示从 1601 年 1 月 1 日 (DBTYPE_FILETIME) 起 100 纳秒间隔数的 64 位值。|  
 |**adGUID**|72|指示全局唯一标识符 (GUID) (DBTYPE_GUID)。|  
 |**adIDispatch**|9|指示一个指向**IDispatch** COM 对象 (DBTYPE_IDISPATCH) 上的接口。<br /><br /> **请注意**ADO 当前不支持此数据类型。 使用情况可能会导致不可预知的结果。|  
-|**adInteger**|3|指示一个 4 字节有符号的整数 (DBTYPE_I4)。|  
+|**adInteger**|3|指示一个四字节有符号的整数 (DBTYPE_I4)。|  
 |**adIUnknown**|13|指示一个指向**IUnknown** COM 对象 (DBTYPE_IUNKNOWN) 上的接口。<br /><br /> **请注意**ADO 当前不支持此数据类型。 使用情况可能会导致不可预知的结果。|  
 |**adLongVarBinary**|205|指示长度的二进制值。|  
 |**adLongVarChar**|201|指示一个长字符串值。|  
-|**adLongVarWChar**|203|指示一个长时间以 null 结尾的 Unicode 字符串值。|  
+|**adLongVarWChar**|203|指示一个长时间的以 null 结尾的 Unicode 字符串值。|  
 |**adNumeric**|131|指示具有固定的精度和小数位数 (DBTYPE_NUMERIC) 的精确数值。|  
 |**adPropVariant**|138|指示自动化 PROPVARIANT (DBTYPE_PROP_VARIANT)。|  
 |**adSingle**|4|指示一个单精度浮点值 (DBTYPE_R4)。|  
 |**adSmallInt**|2|指示两个字节有符号的整数 (DBTYPE_I2)。|  
 |**adTinyInt**|16|指示一个单字节有符号的整数 (DBTYPE_I1)。|  
 |**adUnsignedBigInt**|21|指示一个 8 字节无符号的整数 (DBTYPE_UI8)。|  
-|**adUnsignedInt**|19|指示的 4 字节无符号的整数 (DBTYPE_UI4)。|  
+|**adUnsignedInt**|19|指示一个四字节无符号的整数 (DBTYPE_UI4)。|  
 |**adUnsignedSmallInt**|18|指示两个字节无符号的整数 (DBTYPE_UI2)。|  
 |**adUnsignedTinyInt**|17|指示一个单字节无符号的整数 (DBTYPE_UI1)。|  
-|**adUserDefined**|132|指示用户定义变量 （以外，dbtype_udt 还）。|  
+|**adUserDefined**|132|指示用户定义变量 (DBTYPE_UDT)。|  
 |**adVarBinary**|204|指示一个二进制值。|  
 |**adVarChar**|200|指示一个字符串值。|  
-|**adVariant**|12|指示自动化**Variant** (DBTYPE_VARIANT)。<br /><br /> **请注意**ADO 当前不支持此数据类型。 使用情况可能会导致不可预知的结果。|  
+|**adVariant**|12|指示自动化**变体**(DBTYPE_VARIANT)。<br /><br /> **请注意**ADO 当前不支持此数据类型。 使用情况可能会导致不可预知的结果。|  
 |**adVarNumeric**|139|指示数字值。|  
-|**adVarWChar**|202|指示以 null 结尾的 Unicode 字符字符串。|  
-|**adWChar**|130|指示以 null 结尾 Unicode 字符的字符串 (DBTYPE_WSTR)。|  
+|**adVarWChar**|202|指示以 null 结尾的 Unicode 字符串。|  
+|**adWChar**|130|指示 null 终止的 Unicode 字符字符串 (DBTYPE_WSTR)。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  包： **com.ms.wfc.data**  

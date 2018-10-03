@@ -1,13 +1,11 @@
 ---
-title: 描述符字段一致性 |Microsoft 文档
+title: 描述符字段一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642305"
 ---
 # <a name="descriptor-field-conformance"></a>描述符字段一致性
 下表指示每个 ODBC 描述符标头字段，这是定义完善的一致性级别。  
@@ -33,7 +30,7 @@ ms.locfileid: "32911842"
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|核心|  
 |SQL_DESC_ARRAY_SIZE|核心|  
-|SQL_DESC_ARRAY_STATUS_PTR|核心 （对于 APD、 IPR 和 IRD）;级别 1 （对于 ARD)|  
+|SQL_DESC_ARRAY_STATUS_PTR|核心 （用于 APD、 IPR 和 IRD）;级别 1 （适用于 ARD)|  
 |SQL_DESC_BIND_OFFSET_PTR|核心|  
 |SQL_DESC_BIND_TYPE|核心|  
 |SQL_DESC_COUNT|核心|  
@@ -77,6 +74,6 @@ ms.locfileid: "32911842"
 |SQL_DESC_UNSIGNED|核心|  
 |SQL_DESC_UPDATABLE|核心|  
   
- [1] 支持为这些记录的字段是必需的仅当该驱动程序支持的适用的数据类型。  
+ [该驱动程序支持适用的数据类型，才需要 1] 对这些记录的字段的支持。  
   
- [2] 的核心级别的一致性，驱动程序必须支持 SQL_PARAM_INPUT。 为级别 2 接口符合规则，该驱动程序还必须支持 SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT。
+ [2] 的核心级别的一致性，驱动程序必须支持 SQL_PARAM_INPUT。 为级别 2 接口一致性，驱动程序还必须支持 SQL_PARAM_INPUT_OUTPUT 和 SQL_PARAM_OUTPUT。

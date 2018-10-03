@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_increment_lsn (Transact SQL) |Microsoft 文档
+title: sys.fn_cdc_increment_lsn (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_increment_lsn_TSQL
 - sys.fn_cdc_increment_lsn_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_increment_lsn
 - sys.fn_cdc_increment_lsn
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9202afab2c6b0fca9c230a60b1448a3069232d58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648925"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +44,17 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- LSN 值。 *lsn_value*是**binary （10)**。  
+ LSN 值。 *lsn_value*是**binary(10)**。  
   
 ## <a name="return-type"></a>返回类型  
  **binary(10)**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  此函数返回的 LSN 值始终大于指定的值，并且不存在介于这两个值之间的 LSN 值。  
   
  若要系统地查询随时间变化的更改数据流，可以定期重复调用该查询函数，每次调用时指定一个新的查询间隔来限定查询中返回的更改的范围。 为帮助确保不丢失数据，通常使用前一个查询的上限来生成后一个查询的下限。 由于查询间隔是一个闭区间，因此新的下限必须大于前一个上限，但要足够小，以确保不存在 LSN 值介于此值与旧上限之间的更改。 sys.fn_cdc_increment_lsn 函数就是用来获取此值的。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有公用数据库角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -77,7 +71,7 @@ SELECT * from cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   

@@ -1,45 +1,42 @@
 ---
-title: 如转义序列 |Microsoft 文档
+title: LIKE 转义序列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], LIKE
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37733aadb069cd161427fc8f186647cfba030b6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906502"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626615"
 ---
-# <a name="like-escape-sequence"></a>如转义序列
-ODBC 为 LIKE 子句使用转义序列。 此转义序列的语法如下所示：  
+# <a name="like-escape-sequence"></a>LIKE 转义序列
+ODBC LIKE 子句中使用转义序列。 此转义序列的语法如下所示：  
   
 ```  
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>注释  
- BNF 表示法中的语法，如下所示是：  
+## <a name="remarks"></a>备注  
+ BNF 表示法中的语法是按如下所示：  
   
- *ODBC 类似转义*:: =  
+ *类似的 ODBC 转义*:: =  
   
  *ODBC esc 启动器*转义*转义符* *ODBC esc 终止符*  
   
- *转义字符*:: =*字符*  
+ *转义符*:: =*字符*  
   
  *ODBC esc 启动器*:: = {  
   

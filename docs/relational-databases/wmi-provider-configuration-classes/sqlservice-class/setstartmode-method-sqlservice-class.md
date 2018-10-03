@@ -1,15 +1,12 @@
 ---
-title: SetStartMode 方法 （SqlService 类） |Microsoft 文档
+title: SetStartMode 方法 （SqlService 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetStartMode Method (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStartMode method
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5f3973183d5564f813ab12c561e7097b3f68f09d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6513b7f6e8ef99d18d407617c998831d1a8024d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010134"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644975"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode 方法（SqlService 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.SetStartMode(StartMode)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
+ 对象  
  一个表示服务的 [SqlService 类](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 对象。  
   
 #### <a name="parameters"></a>Parameters  
@@ -64,9 +60,9 @@ object.SetStartMode(StartMode)
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1。 其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

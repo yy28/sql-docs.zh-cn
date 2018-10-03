@@ -1,13 +1,11 @@
 ---
-title: BOF、 EOF 和书签属性示例 （VC + +） |Microsoft 文档
+title: BOF、 EOF 和 Bookmark 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659525"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、 EOF 和书签属性示例 （VC + +）
-此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试移过的第一个或最后一个记录会将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性以使用户能够标志中的记录**记录集**并稍后返回到它。  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、 EOF 和 Bookmark 属性示例 （VC + +）
+在此示例中的第一个函数使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)并[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试跳过的第一个或最后一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性，会让用户标记中的记录**记录集**并稍后返回到它。  
   
- 第二个函数使用书签属性将**书签**中的每个其他记录的**记录集**为数组，然后使用数组记录集的筛选器。  
+ 第二个函数使用书签属性来放置**书签**的所有其他记录从**记录集**到一个数组，然后使用数组的记录集的筛选器。  
   
 ## <a name="example"></a>示例  
   
@@ -210,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [BOF，EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [书签属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [BOF、 EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Bookmark 属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

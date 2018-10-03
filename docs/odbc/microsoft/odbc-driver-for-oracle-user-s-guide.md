@@ -1,33 +1,30 @@
 ---
-title: ODBC Driver for Oracle 用户&#39;s 指南 |Microsoft 文档
+title: Oracle 用户的 ODBC 驱动程序&#39;指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], using ODBC driver for Oracle
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8eeed38c323bb447d7d20b993898873448e3a8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690995"
 ---
-# <a name="odbc-driver-for-oracle-user39s-guide"></a>ODBC Driver for Oracle 用户&#39;s 指南
+# <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 用户的 ODBC 驱动程序&#39;指南
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- ODBC Driver for Oracle 用户指南旨在补充可以通过安装程序帮助[ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  
+ ODBC Driver for Oracle 用户指南 》 旨在补充安装帮助，可以通过访问[ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  
   
  本部分包含以下主题。  
   

@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2470213ff4b86a1604d37e18154874ea2321105a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ab01e5745293bd4e50f59358b17a0fa5d06d9e39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785235"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "37358309"
   
  有关这些作业的详细信息，请参阅[复制代理管理](../../relational-databases/replication/agents/replication-agent-administration.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  

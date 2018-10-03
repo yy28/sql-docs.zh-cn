@@ -1,31 +1,28 @@
 ---
-title: ODBC 简介 |Microsoft 文档
+title: ODBC 简介 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC]
 - ODBC [ODBC], about ODBC
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e02b32f0534c8b521261b701af08d3e6d57fd33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2a91a26f46b8722c4114c485a9924a83d5669edd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917122"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636825"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 简介
-本部分提供的结构化查询语言和 ODBC，简要的历史记录，并包括 ODBC 接口的概念性信息。  
+本部分提供简要的历史记录的结构化查询语言和 ODBC，并包括有关 ODBC 接口的概念信息。  
   
  本节包含下列主题：  
   

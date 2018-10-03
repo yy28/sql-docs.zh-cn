@@ -1,13 +1,11 @@
 ---
-title: WriteText 方法 |Microsoft 文档
+title: WriteText 方法 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679885"
 ---
 # <a name="writetext-method"></a>WriteText 方法
-将一个指定的文本字符串写入[流](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
+将一个指定的文本字符串写入[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,20 +36,20 @@ Stream.WriteText Data, Options
   
 #### <a name="parameters"></a>Parameters  
  *数据*  
- A**字符串**值，该值包含要写入的字符中的文本。  
+ 一个**字符串**值，该值包含要写入的字符中的文本。  
   
  *选项*  
- 可选。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串的末尾写入的行的分隔符。  
+ 可选。 一个[StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，该值指定是否必须在指定的字符串末尾写入行分隔符字符。  
   
-## <a name="remarks"></a>Remarks  
- 指定的字符串写入到**流**没有任何干预空格或每个字符串之间的字符的对象。  
+## <a name="remarks"></a>备注  
+ 指定的字符串写入到**Stream**对象而无需任何干预空格或每个字符串之间的字符。  
   
- 当前[位置](../../../ado/reference/ado-api/position-property-ado.md)设置为以下写入的数据的字符。 **WriteText**方法不截断流中的数据的其余部分。 如果要进行截断操作这些字符，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
+ 当前[位置](../../../ado/reference/ado-api/position-property-ado.md)设置为后面写入的数据的字符。 **WriteText**方法不会截断其余流中的数据。 如果你想要截断这些字符，调用[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  
   
- 如果您编写过去的当前[EOS](../../../ado/reference/ado-api/eos-property.md)位置，[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)的**流**将增加以包含新的任何字符，和**EOS**将移到新的最后一字节在**流**。  
+ 如果过去的当前写入[EOS](../../../ado/reference/ado-api/eos-property.md)位置[大小](../../../ado/reference/ado-api/size-property-ado-stream.md)的**Stream**将增加以包含新的任何字符，以及**EOS**将移动到新的最后一个字节中**Stream**。  
   
 > [!NOTE]
->  **WriteText**与文本流中使用方法 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 为二进制流 (**类型**是**adTypeBinary**)，使用[编写](../../../ado/reference/ado-api/write-method.md)。  
+>  **WriteText**方法使用文本流 ([类型](../../../ado/reference/ado-api/type-property-ado-stream.md)是**adTypeText**)。 对于二进制流 (**类型**是**adTypeBinary**)，使用[编写](../../../ado/reference/ado-api/write-method.md)。  
   
 ## <a name="applies-to"></a>适用范围  
  [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

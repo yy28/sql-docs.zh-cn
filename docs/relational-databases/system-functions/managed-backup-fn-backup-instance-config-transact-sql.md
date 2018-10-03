@@ -1,14 +1,11 @@
 ---
-title: managed_backup.fn_backup_instance_config (TRANSACT-SQL) |Microsoft 文档
+title: managed_backup.fn_backup_instance_config (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_backup_instance_config
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - smart_admin.fn_backup_instance_config
 - fn_backup_instance_config
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
-caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4dae80911e6508a1a398cf208300bf4145faeecc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2be102c3d1b967d4376385b2bc20f61e16ecbde7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970499"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627536"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> 参数  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -63,9 +59,9 @@ managed_backup.fn_backup_db_config ()
 |encryptor_type|NVARCHAR （32)|使用的加密程序的类型：证书或非对称密钥。 如果未指定加密程序，则设置为 NULL。|  
 |encryptor_name|SYSNAME|证书或非对称密钥的名称。 如果未指定名称，则设置为 NULL|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求的成员身份**db_backupoperator**拥有数据库角色**ALTER ANY CREDENTIAL**权限。 用户应被拒绝**VIEW ANY DEFINITION**权限。  
   
 ## <a name="examples"></a>示例  

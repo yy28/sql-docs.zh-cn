@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_missing_index_columns_TSQL
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d931f3a77c8994b5cd2cf822b84f3f679c31655
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649527"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |column_name|**sysname**|表列的名称。|  
 |**column_usage**|**varchar(20)**|查询使用列的方式。 可能的值和及其说明是：<br /><br /> 相等性： 列分配给一个谓词，表示窗体的相等性： <br />                        *table.column* = *constant_value*<br /><br /> 是否不相等： 列分配给一个谓词，例如，表示不相等，形式的谓词： *table.column* > *constant_value*。 “=”之外的任何比较运算符都表示不相等。<br /><br /> INCLUDE： 列不用于谓词赋值，但用于另一个原因，例如，以包含查询。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回的信息**sys.dm_db_missing_index_columns**时更新查询优化查询优化器，因而不会持久保留。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  
   
 ## <a name="transaction-consistency"></a>事务一致性  

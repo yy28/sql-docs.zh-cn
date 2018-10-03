@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addapprole_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5f06edfbafa98c3156d8a718e0b18836950fb2b0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 04163593c48a22bebdd933881b165af3418e0dfa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690685"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +54,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更早版本中，用户（和角色）与架构并非完全不同。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，架构与角色已完全不同。 此新体系结构反映在 CREATE APPLICATION ROLE 的行为中。 此语句取代了**sp_addapprole**。  
   
  若要保持与早期版本的向后兼容性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **sp_addapprole**将执行以下操作：  

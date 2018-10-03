@@ -1,35 +1,32 @@
 ---
-title: API 一致性级别 （适用于 Oracle 的 ODBC 驱动程序） |Microsoft 文档
+title: API 一致性级别 （Oracle ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], API
 - API conformance level [ODBC]
 - ODBC driver for Oracle [ODBC], conformance levels
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bafbf2eb51e47ee77ee7671e8e92dd6b0b8aaa1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbacb3f2e217d5fff95c59027e17e1caf67b43bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900232"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654895"
 ---
-# <a name="api-conformance-level-odbc-driver-for-oracle"></a>API 一致性级别 （适用于 Oracle 的 ODBC 驱动程序）
+# <a name="api-conformance-level-odbc-driver-for-oracle"></a>API 一致性级别（Oracle ODBC 驱动程序）
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- ODBC Driver for Oracle 支持[核心级别 API 函数](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)和[级别 1 API 函数](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)。 该驱动程序还支持以下[级别 2 API 函数](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md):  
+ Oracle 支持 ODBC 驱动程序[核心级别 API 函数](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)并[级别 1 API 函数](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)。 该驱动程序还支持以下[级别 2 API 函数](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md):  
   
 -   [SQLBrowseConnect （)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   

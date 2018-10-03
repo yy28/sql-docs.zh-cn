@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - LockTypeEnum enumeration [ADO]
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4137ced62a083bb355a685222a044fdd9efacdf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279216"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625935"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-指定的编辑期间在记录上放置的锁的类型。  
+指定锁，在编辑期间放置在记录的类型。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|指示开放式批量更新。 批处理更新模式，所需。|  
-|**adLockOptimistic**|3|指示乐观锁定，记录的记录。 提供程序使用乐观锁定，锁定记录，仅在调用[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
-|**adLockPessimistic**|2|指示悲观锁定，记录的记录。 提供程序执行必要的操作以确保成功编辑的记录，通常通过编辑后立即锁定数据源中的记录。|  
-|**adLockReadOnly**|@shouldalert|指示只读的记录。 无法更改的数据。|  
-|**adLockUnspecified**|-1|未指定锁的类型。 克隆，具有相同的锁类型与原始创建克隆。|  
+|**adLockBatchOptimistic**|4|表示开放式批量更新。 所需的批更新模式。|  
+|**adLockOptimistic**|3|指示乐观锁定，记录的记录。 提供程序使用乐观锁定，锁定记录仅在调用[更新](../../../ado/reference/ado-api/update-method.md)方法。|  
+|**adLockPessimistic**|2|指示悲观锁定，记录的记录。 提供程序执行必要的以确保成功编辑的记录，通常通过编辑后立即锁定记录在数据源。|  
+|**adLockReadOnly**|1|指示只读的记录。 不能更改的数据。|  
+|**adLockUnspecified**|-1|不会指定锁的类型。 对于克隆，具有相同的锁类型与原始创建克隆。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  包： **com.ms.wfc.data**  

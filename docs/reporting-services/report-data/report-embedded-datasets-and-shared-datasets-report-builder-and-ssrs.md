@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: adacff369cf262ebfbbc19f79f1013395f9d6662
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793675"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  

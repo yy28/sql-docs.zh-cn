@@ -1,13 +1,11 @@
 ---
-title: 刷新方法 (RDS) |Microsoft 文档
+title: Refresh 方法 (RDS) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,22 +15,21 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee9fd5b4748d2343b78e2dc696e7826341223d53
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8ba03aa3be2b644dfbd554528824162a75bc30a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691045"
 ---
-# <a name="refresh-method-rds"></a>刷新方法 (RDS)
-将重新查询中指定的数据源[连接](../../../ado/reference/rds-api/connect-property-rds.md)属性和更新查询结果。  
+# <a name="refresh-method-rds"></a>Refresh 方法 (RDS)
+将重新查询中指定的数据源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性和更新查询结果。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -43,22 +40,22 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>Parameters  
  *DataControl*  
- 表示的对象变量[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示的对象变量[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
-## <a name="remarks"></a>Remarks  
- 必须设置[连接](../../../ado/reference/rds-api/connect-property-rds.md)，[服务器](../../../ado/reference/rds-api/server-property-rds.md)，和[SQL](../../../ado/reference/rds-api/sql-property.md)属性在使用之前**刷新**方法。 使用关联的窗体上的所有数据绑定控件**rds.DataControl**对象将反映新的记录集。 预先存在的任何[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)在释放对象，任何未保存的更改将被丢弃。 **刷新**方法自动使第一条记录的当前记录。  
+## <a name="remarks"></a>备注  
+ 必须设置[Connect](../../../ado/reference/rds-api/connect-property-rds.md)，[服务器](../../../ado/reference/rds-api/server-property-rds.md)，并[SQL](../../../ado/reference/rds-api/sql-property.md)属性，然后使用**刷新**方法。 使用关联的窗体上的所有数据绑定控件**rds。DataControl**对象将反映新的记录集。 已存在的任何[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)释放对象，并丢弃所有未保存的更改。 **刷新**方法自动使第一条记录的当前记录。  
   
- 它是一个好办法调用**刷新**方法定期当你处理的数据。 如果检索数据，然后将其保留在客户端计算机上一段时间，则很可能变得过期。 很可能你所做的任何更改将失败，因为其他人可能已更改的记录和提交更改之前。  
+ 它是调用一个好办法**刷新**方法定期处理数据。 如果检索数据，然后将其保留在客户端计算机一段时间，则可能会过期。 很可能所做的任何更改将失败，因为其他人可能已更改该记录并提交前您的更改。  
   
 ## <a name="applies-to"></a>适用范围  
  [DataControl 对象 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>请参阅  
- [刷新方法示例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [刷新方法示例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
+ [Refresh 方法示例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
+ [Refresh 方法示例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [通讯簿命令按钮](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
- [正在执行方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [刷新方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
+ [CancelUpdate 方法 (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
+ [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [SubmitChanges 方法 (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

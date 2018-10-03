@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,12 +15,12 @@ ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3fe5e6b71836854fc6cdcc409e61ef1936641def
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679645"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>对象层次结构语法 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.locfileid: "43032535"
   
  要求使用双引号 (")。 指定了所有位置参数后，才能指定命名参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果*TraversedObject*未指定，则*PropertyOrMethod*是必需的。  
   
  如果*PropertyOrMethod*未指定，则*TraversedObject*从 OLE 自动化存储过程返回作为对象令牌输出参数。 如果*PropertyOrMethod*指定的属性或方法*TraversedObject*调用时，并且属性值或方法返回值返回为输出参数从 OLE 自动化存储的过程。  

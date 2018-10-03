@@ -1,28 +1,25 @@
 ---
-title: 出现算术错误 |Microsoft 文档
+title: 算术错误 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - arithmetic errors [ODBC]
 - desktop database drivers [ODBC], arithmetic errors
 ms.assetid: 1c47bfac-7455-4487-b673-6b47d2a2d756
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 867de0b8982b22f9f9574c334226bccc01798065
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0d957d6091dc5fa29ee8a0b707c0e7fe7dfc7c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899492"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696295"
 ---
-# <a name="arithmetic-errors"></a>出现算术错误
-ODBC 驱动程序计算结果中的 SELECT 语句的 WHERE 子句，因为它，则提取每个行。 如果某一行包含一个值，会导致出现算术错误，例如通过零除或数值溢出，驱动程序返回所有行，但都返回的列出现算术错误的错误。 插入或更新时，然而，ODBC 驱动程序将会停止插入或更新数据时遇到的第一个的算术错误。
+# <a name="arithmetic-errors"></a>算术错误
+ODBC 驱动程序评估中的 SELECT 语句的 WHERE 子句，如提取每个行。 如果行包含一个值，将导致算术错误，例如被零除或数值溢出时，驱动程序将返回所有行，但都返回列的算术错误的错误。 当插入或更新，但是，ODBC 驱动程序将停止插入或更新数据时遇到的第一个算术错误。

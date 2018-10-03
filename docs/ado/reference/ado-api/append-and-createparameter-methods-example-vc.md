@@ -1,13 +1,11 @@
 ---
-title: 追加和 CreateParameter 方法示例 （VC + +） |Microsoft 文档
+title: Append 和 CreateParameter 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], VC++ example
 - Append method [ADO], VC++ example
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb35881eda386d881c78d8359acf2cf20d6af60c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630885"
 ---
-# <a name="append-and-createparameter-methods-example-vc"></a>追加和 CreateParameter 方法示例 （VC + +）
-此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)和[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)方法执行具有输入参数的存储的过程。  
+# <a name="append-and-createparameter-methods-example-vc"></a>Append 和 CreateParameter 方法示例 （VC + +）
+此示例使用[追加](../../../ado/reference/ado-api/append-method-ado.md)并[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)执行带有输入参数的存储的过程的方法。  
   
 ## <a name="example"></a>示例  
   

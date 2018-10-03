@@ -1,32 +1,29 @@
 ---
-title: 干预形状 COMPUTE 子句 |Microsoft 文档
+title: 中间 Shape COMPUTE 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - COMPUTE clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b576c0ac9da230cd945623679e72727895ec4fc7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632115"
 ---
-# <a name="intervening-shape-compute-clauses"></a>干预形状 COMPUTE 子句
-它是有效父与子之间的一个或多个计算子句嵌入在参数化的形状命令中，如以下示例所示：  
+# <a name="intervening-shape-compute-clauses"></a>中间 Shape COMPUTE 子句
+它是有效嵌入父级和子级之间的一个或多个 COMPUTE 子句在参数化的形状命令中，如以下示例所示：  
   
 ```  
 SHAPE {select au_lname, state from authors} APPEND   
@@ -40,6 +37,6 @@ RELATE state TO PARAMETER 0)
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -5,25 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dbmmonitor.main.f1
 helpviewer_keywords:
 - Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a8219948f4d1673d5e7b7b45882c89db0580609
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: ffbb59250f7038ce235b959dd5ea183133d0bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311946"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790795"
 ---
 # <a name="database-mirroring-monitor-overview"></a>数据库镜像监视器概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.locfileid: "35311946"
   
 -   每个伙伴的上一个已知角色（主体或镜像）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要监视数据库镜像，必须是 **sysadmin** 固定服务器角色的成员，或是服务器实例上 **msdb** 数据库的 **dbm_monitor** 固定数据库角色的成员。 如果你只是某一个伙伴服务器实例中的 **sysadmin** 或 **dbm_monitor** 的成员，则监视器只能连接到该伙伴；监视器不能从其他伙伴中检索信息。  
   
  如果你只是服务器实例上的 **dbm_monitor** 的成员，你对该服务器实例只具有有限的权限。 您只能查看最新的状态行。 如果使用 **dbm_monitor** 权限连接到服务器实例，数据库镜像监视器将提示你的权限有限。  

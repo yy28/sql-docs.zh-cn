@@ -1,30 +1,27 @@
 ---
-title: ODBC Jet 错误消息 |Microsoft 文档
+title: ODBC Jet 错误消息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages (ODBC driver for oracle)
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f487fce920dd82fc36e460467733393ffdbbc36
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620275"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 错误消息
-对于在数据源中发生的错误，ODBC 驱动程序返回错误消息返回到该 ODBC 文件库。 对于 ODBC 驱动程序或驱动程序管理器中发生的错误，该驱动程序将返回一条错误消息基于文本与 SQLSTATE 关联。  
+对于数据源中出现的错误，ODBC 驱动程序返回错误消息返回到该 ODBC 文件库。 对于 ODBC 驱动程序或驱动程序管理器中发生的错误，的返回一条错误消息基于文本的驱动程序与关联的 SQLSTATE。  
   
  错误消息具有以下格式：  
   
@@ -32,9 +29,9 @@ ms.locfileid: "32901412"
 [vendor][ODBC-component][data-source]message-text  
 ```  
   
- 方括号 ([]) 中的前缀标识错误的位置。 在驱动程序管理器中，发生错误时*数据源*未提供。 在数据源中发生错误时 [*供应商*] 和 [*ODBC 组件*] 前缀确定的供应商和从数据源收到了错误的 ODBC 组件名称。  
+ 方括号 ([]) 中的前缀标识错误的位置。 在驱动程序管理器中，发生错误时*数据源*未提供。 在数据源中发生错误时 [*供应商*] 和 [*ODBC 组件*] 前缀标识供应商和从数据源收到了错误的 ODBC 组件名称。  
   
- 下表显示由驱动程序管理器和驱动程序 ISAM 返回的错误消息：  
+ 下表显示了由驱动程序管理器和驱动程序 ISAM 返回的错误消息：  
   
 |错误消息|错误位置|  
 |-------------------|--------------------|  

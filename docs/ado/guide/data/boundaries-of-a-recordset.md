@@ -1,44 +1,41 @@
 ---
-title: 记录集边界 |Microsoft 文档
+title: 记录集的边界 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EOF property [ADO], boundaries of a Recordset
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49282472acf783008a45d0b66f12e0aefc13ecb6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633445"
 ---
 # <a name="boundaries-of-a-recordset"></a>记录集的边界
-**记录集**支持**BOF**和**EOF**属性来描述的开头和结尾，分别，数据集。 你可以将**BOF**和**EOF**为位于开头和末尾的"影子"记录**记录集**。 计数**BOF**和**EOF**，我们的示例**记录集**现在如下所示：  
+**记录集**支持**BOF**并**EOF**属性来描述的开头和结尾，分别将数据集。 您可以看作**BOF**并**EOF**作为定位在开头和末尾的"虚拟"记录**记录集**。 计数**BOF**并**EOF**，我们的示例**记录集**现在如下所示：  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
 |BOF|||  
-|7|位置 Bob 环保干的梨|30.0000|  
+|7|柳贡干的梨|30.0000|  
 |14|豆腐|23.2500|  
 |28|Rssle 泡菜口味|45.6000|  
 |51|猪肉干|53.0000|  
 |74|Longlife 豆腐|10.0000|  
 |EOF|||  
   
- 当光标移过最后一条记录， **EOF**设置为**True**; 否则为其值是**False**。 同样，当光标将移动第一个记录之前, **BOF**设置为**True**; 否则为其值是**False**。 这些属性通常用于枚举在数据集中，如以下 JScript 代码段中所示。  
+ 当最后一条记录，游标将移**EOF**设置为**True**; 否则为它的值是**False**。 同样，当光标将移之前的第一个记录**BOF**设置为**True**; 否则为它的值是**False**。 这些属性通常用于枚举在数据集中，如以下 JScript 代码段中所示。  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -58,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- 如果这两个**BOF**和**EOF**是**True**、**记录集**对象为空。 这两个属性将**False**为到新打开的非空**记录集**对象。 你可以使用**BOF**和**EOF**属性一起用来确定如果**记录集**对象为空或不，如以下 JScript 代码段中所示。  
+ 如果这两个**BOF**并**EOF**是**True**，则**记录集**对象为空。 这两个属性将**False**为到新打开的非空**记录集**对象。 可以使用**BOF**并**EOF**属性一起用来确定如果**记录集**对象为空或不是，如以下 JScript 代码段中所示。  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  
@@ -71,6 +68,6 @@ else
 }  
 ```  
   
- 此方案适用于所有类型的游标，并独立于基础提供程序。 如果你尝试确定的空**记录集**对象通过检查其**RecordCount**属性值为零 (0)，或不，您必须采取预防措施，要使用相应的光标和提供程序，支持返回的结果中的记录数。  
+ 此方案适用于所有类型的游标和独立于基础提供程序。 如果您尝试确定的空**记录集**通过检查对象及其**RecordCount**属性值为零 (0)，或不，你必须采取预防措施，以使用适当的游标和提供程序，支持返回的结果中的记录数。  
   
- 如果你删除中的最后一个剩余记录**记录集**对象时，游标仍处于不确定状态。 **BOF**和**EOF**属性可能会一直保留**False**之前尝试重新定位的当前记录，具体情况取决于提供程序。 有关详细信息，请参阅[使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。
+ 如果删除中的最后一个剩余记录**记录集**对象时，光标会处于不确定状态。 **BOF**并**EOF**属性可能会保持**False**之前尝试重新定位当前记录，视提供程序。 有关详细信息，请参阅[使用 Delete 方法删除记录](../../../ado/guide/data/deleting-records-using-the-delete-method.md)。

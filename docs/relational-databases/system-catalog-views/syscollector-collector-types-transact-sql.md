@@ -1,14 +1,11 @@
 ---
-title: syscollector_collector_types (TRANSACT-SQL) |Microsoft 文档
+title: syscollector_collector_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650575"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +43,22 @@ ms.locfileid: "33221885"
 |**upload_package_id**|**uniqueidentifer**|上载包的 GUID。 不可为 null。|  
 |**upload_package_path**|**nvarchar(4000)**|提供上载包的路径。 可以为 Null。|  
 |**upload_package_name**|**sysname**|上载包的名称。 不可为 null。|  
-|**is_system**|**bit**|(1) 打开或关闭的 (0)，以指示如果收集器类型随数据收集器或更高版本通过添加**dc_admin**。 这可以是内部开发的或由第三方开发的自定义类型。 不可为 null。|  
+|**is_system**|**bit**|打开 (1) 还是 off (0) 以指示如果收集器类型随数据收集器或更高版本通过添加**dc_admin**。 这可以是内部开发的或由第三方开发的自定义类型。 不可为 null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要为选择**dc_operator**， **dc_proxy**。  
   
 ## <a name="change-history"></a>更改历史记录  
   
-|更新内容|  
+|更新的内容|  
 |---------------------|  
-|更新**collection_type_uid**到的列名称**collector_type_uid**。|  
-|更正的说明**parameter_schema**指示的值是可以为 null 的列。|  
+|更新**collection_type_uid**列名**collector_type_uid**。|  
+|更正了对说明**parameter_schema**指示的值是可以为 null 的列。|  
 |添加**parameter_formatter**列。|  
-|更正的数据类型**collection_package_path**列，并更新描述以指明的值是可以为 null。|  
-|更正的数据类型**upload_package_path**列，并更新描述以指明的值是可以为 null。|  
+|更正的数据类型**collection_package_path**列中，更新了说明以指示该值为 null。|  
+|更正的数据类型**upload_package_path**列中，更新了说明以指示该值为 null。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  

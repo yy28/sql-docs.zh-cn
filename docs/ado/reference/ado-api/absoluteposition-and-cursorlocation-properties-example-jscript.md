@@ -1,13 +1,11 @@
 ---
-title: AbsolutePosition 和 CursorLocation 属性示例 (JScript) |Microsoft 文档
+title: AbsolutePosition 和 CursorLocation 属性示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - AbsolutePosition property [ADO], JScript example
 - CursorLocation property [ADO], JScript example
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42804caabae25b5c3617b6a17bcb74a77531bbe1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647963"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition 和 CursorLocation 属性示例 (JScript)
-此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AbsolutePositionJS.asp**。  
+此示例演示如何[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)属性可以跟踪枚举中的所有记录的循环的进度[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性来启用**AbsolutePosition**通过将光标设置为客户端游标的属性。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**AbsolutePositionJS.asp**。  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  

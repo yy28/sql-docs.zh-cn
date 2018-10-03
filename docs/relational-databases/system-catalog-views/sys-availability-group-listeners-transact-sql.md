@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - availability_group_listeners_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3ce9f05f546fe9ad9a1d22d17424fe8f06482499
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2e0075fed6695ffa106891843c4f42106e1bfc74
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625705"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +46,9 @@ ms.locfileid: "37989359"
 |**is_conformant**|**bit**|此 IP 配置是否符合标准，可为下列值之一：<br /><br /> 1 = 侦听器符合标准。 在其 Internet 协议 (IP) 地址之间仅存在“OR”关系。 *符合的*包含每个已通过一个 IP 配置[CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]语句。 此外，如果 IP 配置是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之外创建的（例如通过使用 WSFC 故障转移群集管理器），但可以通过 ALTER AVAILABILITY GROUP tsql 语句修改，该 IP 配置也符合标准。<br /><br /> 0 = 侦听器不符合标准。 通常，这表示无法通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令配置的 IP 地址可以直接在 WSFC 群集中定义。|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|该侦听器的群集 IP 配置字符串（如果有）。 NULL = 侦听器没有虚拟 IP 地址。 例如：<br /><br /> IPv4 地址：`65.55.39.10`。<br /><br /> IPv6 地址：`2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  

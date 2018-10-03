@@ -1,32 +1,29 @@
 ---
-title: MarshalOptions 属性示例 （VC + +） |Microsoft 文档
+title: MarshalOptions 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MarshalOptions property [ADO], VC++ example
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efb7b9e10c1cf89d95c066986ae29f7edd9e7f97
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b2460acf8e95e623e6817aa8a0c70db5429de359
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615165"
 ---
-# <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 （VC + +）
-此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送回服务器 — 所有行或仅修改的行。  
+# <a name="marshaloptions-property-example-vc"></a>MarshalOptions 属性示例 (VC++)
+此示例使用[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)属性来指定哪些行发送回服务器，所有行或仅修改的行。  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  

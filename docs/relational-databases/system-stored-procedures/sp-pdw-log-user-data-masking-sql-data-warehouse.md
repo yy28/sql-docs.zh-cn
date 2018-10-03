@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16de9489583cce2e696a94c75c7e5fd3ac1c0fe1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630235"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking （SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  执行**sp_pdw_ log_user_data_masking**没有参数作为标量结果集在设备上返回 TDE 日志用户数据掩码的当前状态。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  用户数据中屏蔽[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]与中的预定义常量值的活动日志启用文本替换**选择**和 DML 语句，因为它们可以包含用户数据。 设置*masking_mode*为 1 不会屏蔽元数据，例如列名称或表名称。 设置*masking_mode*为 2 会删除与元数据，例如列名称或表名称的语句。  
   
  用户数据中屏蔽[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]活动日志实现如下所示：  
@@ -69,7 +65,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   你可以显式启用用户数据中屏蔽[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]通过使用活动日志**sp_pdw_log_user_data_masking**过程。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**sysadmin**固定数据库角色或**CONTROL SERVER**权限。  
   
 ## <a name="example"></a>示例  

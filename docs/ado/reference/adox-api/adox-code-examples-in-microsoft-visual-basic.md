@@ -1,35 +1,32 @@
 ---
-title: ADOX 代码示例在 Microsoft Visual Basic |Microsoft 文档
+title: Microsoft Visual Basic 中的 ADOX 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADOX code examples, Visual Basic
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f8ca2fab56a9fef224040dd0dcfa56163d8877b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284637"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645745"
 ---
-# <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX 代码示例在 Microsoft Visual Basic
-这些主题提供有助于您了解如何使用 ADOX 的示例代码。 所有的代码示例是使用 Microsoft Visual Basic 编写的。  
+# <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic 中的 ADOX 代码示例
+这些主题提供示例代码，以帮助你了解如何使用 ADOX。 使用 Microsoft Visual Basic 中编写所有代码示例。  
   
 > [!NOTE]
->  将整个代码示例中的，从子到 End Sub 粘贴到您的代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，则可能无法正确运行。  
+>  将整个代码示例中的，从到 End Sub，子粘贴到您的代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
   
 ## <a name="methods"></a>方法  
   
@@ -47,7 +44,7 @@ ms.locfileid: "35284637"
   
 -   [索引 Append 方法示例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [过程 Append 方法示例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -71,9 +68,9 @@ ms.locfileid: "35284637"
   
 -   [Command 和 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [命令属性，参数集合的 (VB) 示例。](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Command 属性，参数集合示例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [CommandText 属性，视图集合示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [CommandText 属性，视图收集示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [DateCreated 和 DateModified 属性示例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -83,11 +80,11 @@ ms.locfileid: "35284637"
   
 -   [IndexNulls 属性示例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [密钥类型、 RelatedColumn、 RelatedTable，和 UpdateRule 属性、 键追加方法示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [密钥类型、 RelatedColumn、 RelatedTable，和 UpdateRule 属性、 键 Append 方法示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
--   [Name 属性、 列和表追加方法示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
+-   [Name 属性、 列和表 Append 方法示例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
--   [NumericScale 和精度属性示例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
+-   [NumericScale 和 Precision 属性示例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)  
   
 -   [ParentCatalog 属性示例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)  
   
@@ -95,7 +92,7 @@ ms.locfileid: "35284637"
   
 -   [SortOrder 属性示例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [表类型的属性，连接关闭的方法，示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [表类型属性，连接的 Close 方法示例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>集合  
   
