@@ -1,36 +1,33 @@
 ---
-title: SQLAsyncNotificationCallback 函数 |Microsoft 文档
+title: SQLAsyncNotificationCallback 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c785f8547730817c0b1723da38f7ee021aa4f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758045"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 函数
-**一致性**  
+**符合性**  
  版本引入了： ODBC 3.8  
   
- 标准合规性： 无  
+ 标准符合性： 无  
   
  **摘要**  
- **SQLAsyncNotificationCallback**允许要在没有为当前的异步操作的某些进度驱动程序返回 SQL_STILL_EXECUTING 之后时回调到驱动程序管理器的驱动程序。 **SQLAsyncNotificationCallback**只能由驱动程序调用。  
+ **SQLAsyncNotificationCallback**使驱动程序没有为当前的异步操作的某些进度后驱动程序返回 SQL_STILL_EXECUTING 时回调到驱动程序管理器。 **SQLAsyncNotificationCallback**只能由驱动程序调用。  
   
- 驱动程序不调用**SQLAsyncNotificationCallback**使用函数名**SQLAsyncNotificationCallback**。 相反，驱动程序管理器的函数指针到驱动程序将作为传递相应的连接句柄或语句句柄的 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 或 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 特性的值分别。 不同的句柄可能会分配不同的函数指针值。 函数指针的类型定义为 SQL_ASYNC_NOTIFICATION_CALLBACK。  
+ 驱动程序不调用**SQLAsyncNotificationCallback**使用函数名**SQLAsyncNotificationCallback**。 相反，驱动程序管理器函数将指针传递到驱动程序的相应连接句柄或语句句柄的 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 或 SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性的值分别。 可在不同的图柄分配不同的函数指针值。 函数指针的类型定义为 SQL_ASYNC_NOTIFICATION_CALLBACK。  
   
  **SQLAsyncNotificationCallback**是线程安全的。 驱动程序可以选择使用多个线程调用**SQLAsyncNotificationCallback**上不同处理同时。  
   
@@ -44,23 +41,23 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
 ## <a name="arguments"></a>参数  
  *pContex*  
- 指向由驱动程序管理器中定义的数据结构的指针。 通过 SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) 或 SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT) 传递到该驱动程序的值。  该驱动程序没有值的访问。  
+ 定义由驱动程序管理器中的数据结构的指针。 通过 SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) 或 SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT) 传递给驱动程序的值。  该驱动程序没有访问的值。  
   
  *fLast*  
- 由驱动程序用于指示此回调函数调用是当前的异步操作的最后一个。 驱动程序管理器再次调用此函数时，该驱动程序将返回非 SQL_STILL_EXECUTING 的返回代码。 驱动程序管理器可以使用此信息，例如，通知应用程序提前异步操作将完成。  
+ 由驱动程序来指示调用此回调函数是当前的异步操作的最后一个。 驱动程序管理器会再次调用该函数时，该驱动程序将返回 SQL_STILL_EXECUTING 之外的返回代码。 驱动程序管理器可能会使用此信息，例如，若要通知的应用程序预先将完成异步操作。  
   
- 如果*处理*不由指定的类型是有效句柄*HandleType*， **SQLCancelHandle**返回 SQL_INVALID_HANDLE。  
+ 如果*处理*不是由指定类型的有效句柄*HandleType*， **SQLCancelHandle**返回 SQL_INVALID_HANDLE。  
   
 ## <a name="returns"></a>返回  
  SQL_SUCCESS 或 SQL_ERROR。  
   
 ## <a name="diagnostics"></a>诊断  
- **SQLAsyncNotificationCallback**可以返回 SQL_ERROR 以下两种情况下 （这些警报表示在驱动程序或驱动程序管理器中的存在实施问题。  
+ **SQLAsyncNotificationCallback**可以返回 SQL_ERROR，以下两种情况下 （这些指示驱动程序或驱动程序管理器中的实现问题。  
   
 |错误|Description|  
 |-----------|-----------------|  
-|连接或语句未请求通知。||  
-|无效*处理*|在失败的内部的驱动程序管理器验证测试的无效句柄中传递该驱动程序。|  
+|连接或语句没有请求通知。||  
+|无效*处理*|该驱动程序传递失败的内部驱动程序管理器验证测试的无效句柄。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [异步执行（轮询方法）](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057307"
 ---
 # <a name="create-a-database-user"></a>创建数据库用户
   本主题介绍如何创建映射到中的登录名的数据库用户[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 数据库用户是连接到数据库时的登录名的标识。 数据库用户可以使用与登录名相同的名称，但这不是必需的。 本主题假设 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中已存在登录名。 有关如何创建登录名的信息，请参阅[创建一个登录名](create-a-login.md)。  
@@ -89,8 +87,7 @@ ms.locfileid: "43030649"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他选项  
- 
-  **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”** 和 **“扩展属性”**。  
+ **“数据库用户 – 新建”** 对话框还在四个其他页面上提供了选项： **“拥有的架构”**、 **“成员身份”**、 **“安全对象”** 和 **“扩展属性”**。  
   
 -   **“拥有的架构”** 页列出了可由新的数据库用户拥有的所有可能的架构。 若要向数据库用户添加架构或者从数据库用户中删除架构，请在 **“此用户拥有的架构”** 下选中或取消选中架构旁边的复选框。  
   

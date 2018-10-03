@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187477"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用情况数据收集
   使用情况数据收集是场级 SharePoint 功能。 PowerPivot for SharePoint 使用并扩展此系统以便在 PowerPivot 管理面板中提供显示 PowerPivot 数据和服务的使用情况的报告。 根据您安装 SharePoint 的方式，可能会为场禁用使用情况数据收集。 场管理员必须启用使用情况日志记录，才能创建显示在 PowerPivot 管理面板中的使用情况数据。 有关如何启用和配置 PowerPivot 的使用情况数据收集详细信息请参阅事件[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
@@ -47,7 +44,7 @@ ms.locfileid: "37304687"
   
 |阶段|Description|  
 |-----------|-----------------|  
-|@shouldalert|使用情况数据收集由 SharePoint 部署中的 PowerPivot 组件和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据访问接口所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 PowerPivot 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”**。|  
+|1|使用情况数据收集由 SharePoint 部署中的 PowerPivot 组件和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据访问接口所生成的事件触发。 可启用或禁用的可配置事件包括连接请求、加载和卸载请求以及应用程序服务器上 PowerPivot 服务监视的查询响应计时事件。 由服务器管理单独并且不能禁用的其他事件。 这些事件包括数据刷新事件和服务器运行状况事件。<br /><br /> 最初，使用 SharePoint 系统的数据收集功能在本地日志文件中收集和存储使用情况数据。 这些文件和它们的位置是 SharePoint 中标准使用情况数据收集系统的一部分。 文件的位置在场中的每个服务器上均相同。 要查看或更改日志记录目录的位置，请在 SharePoint 管理中心中转到 **“监视”** ，然后单击 **“配置 Usage and Health Data Collection”**。|  
 |2|“Microsoft SharePoint Foundation 使用情况数据导入”计时器作业按照计划的间隔（默认为每小时）将使用情况数据从本地文件移到 PowerPivot 服务应用程序数据库。 如果您在场中具有多个 PowerPivot 服务应用程序，则每个应用程序都将具有自己的数据库。 事件包含标识哪个 PowerPivot 服务应用程序生成此事件的内部信息。 应用程序标识符确保使用情况数据绑定到创建它的应用程序。|  
 |3|数据复制到可用于管理中心中的 PowerPivot 管理面板的内部报告数据库。|  
 |4|该数据源是您可以访问以便在 Excel 中创建自定义报告的 PowerPivot 工作簿。 只有源工作簿的一个实例。 本地化的报告都基于相同的源工作簿。|  

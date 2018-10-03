@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - saving database diagrams
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 15d39118b0ca4df7bc223d549d308e6164241b45
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 47064af46b21eb8a06b52fc9b03799dac73dcbad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070458"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>保存数据库关系图 (Visual Database Tools)
   通过保存数据库关系图，可以保存对其所做的所有更改，包括对表、列和其他数据库对象所做的任何更改。  

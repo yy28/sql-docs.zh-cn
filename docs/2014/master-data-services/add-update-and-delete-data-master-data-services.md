@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
-caps.latest.revision: 6
 author: leolimsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6751dcfca820fcd7bdcdf73ff6979e572c7159fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066587"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>添加、更新和删除数据 (Master Data Services)
   你可以添加数据并将数据批量更改为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的模型。  

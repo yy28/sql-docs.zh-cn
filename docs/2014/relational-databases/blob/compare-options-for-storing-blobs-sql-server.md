@@ -5,19 +5,17 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.technology: filestream
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a622ad290a00a58c3fb0d0e4003e291a7ba77d3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 48a46b3f35b8ce19382996bf8c0667b6222dc5c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059727"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>比较用于存储 Blob 的选项 (SQL Server)
   讨论和比较用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储文件和文档的选项。  
@@ -49,13 +47,13 @@ ms.locfileid: "37421106"
   
 |功能|文件服务器和数据库解决方案|FILESTREAM 解决方案|FileTable 解决方案|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**用于管理任务的单个存储区**|“否”|是|**是**|  
-|**单组服务**：搜索、报告、查询等|“否”|是|**是**|  
-|**集成的安全模型**|“否”|是|**是**|  
-|**FILESTREAM 数据的就地更新**|是|“否”|**是**|  
-|**在数据库中维护文件和目录层次结构**|“否”|“否”|**是**|  
-|**Windows 应用程序兼容性**|是|“否”|**是**|  
-|**对文件属性的关系访问**|“否”|“否”|**是**|  
+|**用于管理任务的单个存储区**|否|用户帐户控制|**是**|  
+|**单组服务**：搜索、报告、查询等|否|用户帐户控制|**是**|  
+|**集成的安全模型**|否|用户帐户控制|**是**|  
+|**FILESTREAM 数据的就地更新**|用户帐户控制|否|**是**|  
+|**在数据库中维护文件和目录层次结构**|否|否|**是**|  
+|**Windows 应用程序兼容性**|用户帐户控制|否|**是**|  
+|**对文件属性的关系访问**|否|否|**是**|  
   
 ##  <a name="CompareRBS"></a> FILESTREAM 和远程 BLOB 存储区 (RBS) 的比较  
  有关这两种功能的比较，请参阅来自 RBS 团队的以下博客： [SQL Server 远程 BLOB 存储区和 FILESTREAM 功能比较](http://go.microsoft.com/fwlink/?LinkId=210317)。  

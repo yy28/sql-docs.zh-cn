@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_active_snapshot_database_transactions_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ef3ff9a4507474543a3d2049a56f7ce91f1eec2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825155"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +77,7 @@ sys.dm_tran_active_snapshot_database_transactions
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sys.dm_tran_active_snapshot_database_transactions**报告事务分配事务序列号 (XSN)。 XSN 在事务首次访问版本存储区时分配。 在为快照隔离或使用行版本控制的已提交读隔离启用的数据库中，下面的示例说明何时将 XSN 分配给事务：  
   
 -   如果事务在可序列化隔离级别下运行，则 XSN 在事务首次执行导致创建行版本的语句（例如，UPDATE 操作）时分配。  

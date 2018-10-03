@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], connecting tasks
 - constraints [Integration Services]
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23dfe0adbf0a20f48beee7330fdc7486bf9169b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5b0e52cbce50f020cf2b16b1774707524e8a0f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068087"
 ---
 # <a name="connecting-tasks-programmatically"></a>以编程方式连接任务
   优先约束在对象模型中由 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 类表示，它确立 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 对象在包中的运行顺序。 优先约束允许包中容器和任务的执行取决于前一任务或容器的执行结果。 优先约束是通过调用容器对象中的 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 集合的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 方法，在成对的 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 对象之间建立的。 在两个可执行对象之间创建约束后，设置 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 属性可建立约束中定义的第二个可执行对象的执行条件。  

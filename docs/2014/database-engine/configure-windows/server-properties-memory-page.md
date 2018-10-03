@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 86b1356a28f817f96cdd597d748909799c6cce2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e9d0a6b6322c0a8a02c02ba53748e769bf9f656
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069837"
 ---
 # <a name="server-properties-memory-page"></a>服务器属性（“内存”页）
   使用此页可以查看或修改服务器内存选项。 当 **“最小服务器内存”** 设置为 0 而 **“最大服务器内存”** 设置为 2147483647 MB 时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以在任何给定的时间使用最合理的内存量，具体取决于操作系统以及其他应用程序当前使用的内存量。 当计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上的负载更改时，分配的内存也会更改。 可以进一步将此动态内存分配限制为下面指定的最小值和最大值。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **最小服务器内存(MB)**  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 应该至少以分配的最小内存量启动，在低于此值时不释放内存。 请根据 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的大小和活动设置此值。 始终将此选项设置为合理的值，以确保操作系统不会从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 请求过多的内存，从而避免降低 Windows 的性能。  
   

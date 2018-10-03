@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 094a968fb48c9eabf554bfdccb89efc69e12391a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 078ccc5951bc0bf607bcc14d3bddcd11a9a12264
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142637"
 ---
 # <a name="conversions-from-sql-to-c"></a>由 SQL 转换为 C
   下表列出了从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间类型转换为 C 类型时要注意的问题。  
@@ -30,8 +27,8 @@ ms.locfileid: "37427966"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|@shouldalert|@shouldalert|@shouldalert|  
+|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
+|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_TYPE_DATE|“确定”|12|13|12|13,23|14|16|16|  
 |SQL_SS_TIME2|12|8|15|“确定”|10,23|17|16|16|  
 |SQL_TYPE_TIMESTAMP|18|7,8|“确定”|7|23|19|16|16|  
@@ -42,7 +39,7 @@ ms.locfileid: "37427966"
 |符号|含义|  
 |------------|-------------|  
 |“确定”|无转换问题。|  
-|@shouldalert|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
+|1|应用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的规则。|  
 |2|忽略前导空格和尾随空格。|  
 |3|字符串解析为日期、时间、时区或时区偏移量，且秒的小数部分允许多达 9 位。 如果解析时区偏移量，则时间将转换为客户端时区。 如果在此转换过程中发生错误，诊断记录生成具有 SQLSTATE 22018 和消息"日期时间字段溢出"。|  
 |4|如果该值不是有效的日期、时间戳或时间戳偏移量值，则生成具有 SQLSTATE 22018 和消息“为转换指定的字符值无效”的诊断记录。|  

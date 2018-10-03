@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a29d4953919644100b5863c3f4766895ea356c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285469"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075574"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步骤 4：添加平面文件目标
   Lookup Currency Key 转换的错误输出将无法执行查找操作的所有数据行重定向到脚本转换。 为了突显相关错误的信息，脚本转换将运行可获取错误说明的脚本。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.condition.referencingpolicies.f1
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d355bc18a3f236aeae808041a971b19e8b2839a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f7849b2d6cac7259022601e4dca2e2d8c3e5255a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085077"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>“打开条件”对话框，“依赖策略”页
   使用此对话框可以显示当前引用此基于策略的管理条件的策略的列表。 有关条件与方面和策略如何关联的详细信息，请参阅 [使用基于策略的管理来管理服务器](administer-servers-by-using-policy-based-management.md)。  

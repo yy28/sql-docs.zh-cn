@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.performance.f1
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88124bde6d1f8b54a875f1c30076408dc24fcc2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48717793cb90a0e8a0c7ea7d77594f1ebecd9d66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187987"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>订阅，未分发的命令（事务订阅，SQL Server 2005 和更高版本）
   **“未分发的命令”** 选项卡显示分发数据库中尚未传递到所选订阅服务器的命令数的相关信息，以及传递这些命令的估计时间。 有关查看分发数据库中的命令的信息，请参阅 [sp_replshowcmds (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **分发数据库中等待应用于此订阅服务器的命令数**  
  在分发数据库中尚未传递到所选订阅服务器的命令数。 一个命令由一个 Transact-SQL 数据操作语言 (DML) 语句或一个数据定义语言 (DDL) 语句组成。  
   

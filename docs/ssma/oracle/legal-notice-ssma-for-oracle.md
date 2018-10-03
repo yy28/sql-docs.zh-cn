@@ -1,48 +1,45 @@
 ---
-title: Legal Notice (SSMA for Oracle) | Microsoft Docs
+title: 法律声明 (SSMA for Oracle) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bac17c33e987d41bb682d670394e2e1fb92846fe
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0857669590f5d81c7ab6aa585de4a4aa052ca492
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777353"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657448"
 ---
-# <a name="legal-notice-ssma-for-oracle"></a>Legal Notice (SSMA for Oracle)
-This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  
+# <a name="legal-notice-ssma-for-oracle"></a>法律声明 (SSMA for Oracle)
+本文档（包括本文档中使用的示例应用程序）仅供参考，并在无任何明示或暗示担保的情况下提供。 本文档中的信息（包括 URL 和其他 Internet 网站引用）如有更改，恕不另行通知。 由于使用本文档而带来的任何风险或后果均由用户自行承担。  
   
-The primary purpose of a sample contained within this documentation is to illustrate a concept, or a reasonable use of a particular statement or clause. Most samples do not include all of the code that may normally be found in a full production system, as some of the usual data validation and error handling is removed to focus the sample on a particular concept or statement. Technical support is not available for these samples or for any included source code.  
+本文档中包含的示例主要用于说明概念以及特定语句或子句的合理用法。 大多数示例不包括完整的生产系统通常所包含的全部代码，因为其中删除了某些常用的数据验证和错误处理，以便使示例突出特定的概念或语句。 对这些示例或所包括的源代码，我们不提供技术支持。  
   
-Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, person, place, or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this documentation may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.  
+除非另有说明，本文档示例所提及的公司、组织、产品、域名、电子邮件地址、人物、地点和事件纯属虚构。不应据此联想或推断到任何真实的公司、组织、产品、域名、电子邮件地址、人物、地点或事件。 用户有责任遵守所有适用的版权法/著作权法。 除了版权法/著作权法所规定的权利以外，未经 Microsoft Corporation 的明确书面许可，不得对本文档中的任何部分进行复制、存储或引入检索系统，也不能以任何形式或借助任何手段（电子、机械、影印、录制或其他手段）、出于任何目的进行传播。  
   
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this documentation. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this documentation does not give you any license to these patents, trademarks, copyrights, or other intellectual property.  
+Microsoft 可能拥有本文档中内容的专利、专利申请、商标、版权或其他知识产权。 除非 Microsoft 提供了明确的书面许可协议，否则提供本文档并不意味着赋予您有关这些专利、商标、版权或其他知识产权的任何许可。  
   
-© 2016 Microsoft Corporation. All rights reserved.  
+© 2016 Microsoft Corporation。 保留所有权利。  
   
-Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System, and WinFX are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries/regions.  
+Microsoft、Windows、Windows NT、Windows Server、Active Directory、ActiveX、BackOffice、bCentral、BizTalk、DirectX、Excel、Hotmail、IntelliSense、J/Direct、Jscript、Microsoft Press、MSDN、MS-DOS、Outlook、PivotChart、PivotTable、PowerPoint、SharePoint、SQL Server、Visual Basic、Visual C#、Visual C++、Visual FoxPro、Visual InterDev、Visual J#、Visual J++、Visual SourceSafe、Visual Studio、Win32、Win32s、Windows Mobile、Windows Server System 和 WinFX 是 Microsoft Corporation 在美国和/或其他国家/地区的注册商标或商标。  
   
-SAP NetWeaver is the registered trademark of SAP AG in Germany and in several other countries/regions.  
+SAP NetWeaver 是 SAP AG 在德国和其他几个国家/地区的注册商标。  
   
-All other trademarks are property of their respective owners.  
+所有其他商标均为其各自所有者的财产。  
   
-## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Documentation Policy for SQL Server Support and Upgrade  
-Content that appears in SQL Server documentation is published only after it has been tested sufficiently. Product documentation – SQL Server Books Online, readme files, known issues documents, and Knowledge Base articles – contains content regarding SQL Server features and functionality that is robust enough to be safe for general use by all customers. This policy applies to all SQL Server documentation, including readme files for releases and services packs; a readme file is considered an extension of Books Online.  
+## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>SQL Server 支持和升级文档策略  
+SQL Server 文档中显示的内容仅在经过充分测试后才发布。 产品文档（SQL Server 联机丛书、自述文件、已知问题文档和知识库文章）包含与 SQL Server 的特性和功能相关的内容，对于所有客户的正常使用，该内容足够可靠并且安全。 本策略适用于所有 SQL Server 文档，包括版本和 Service Pack 的自述文件；自述文件被视为联机丛书的扩展。  
   
-In some cases, a particular feature is not something that customers should use directly and, therefore, it is not documented. Unless a feature is also discussed in SQL Server documentation published by Microsoft, content from third-party books or Web sites is not supported by Microsoft customer support, and should not be used in production databases or applications.  
+在某些情况下，特定功能不是客户应直接使用的功能，因此，未将其记录其中。 除非某种功能还在 Microsoft 发布的 SQL Server 文档中进行讨论，否则来自第三方书籍或网站的内容不受 Microsoft 客户支持的支持，并不应在生产数据库或应用程序中使用。  
   
-Customers must not use undocumented APIs, including but not limited to: stored procedures, extended stored procedures, functions, views, tables, columns, properties, or metadata. Microsoft customer support will not support databases or applications that leverage or use undocumented entry points.  
+客户不得使用未记录的 API，其中包括但不限于：存储过程、扩展存储过程、函数、视图、表、列、属性或元数据。 Microsoft 客户支持将不支持利用或使用未记录的入口点的数据库或应用程序。  
   
-Server and database upgrades to future versions of SQL Server are not guaranteed for applications and databases that leverage and use undocumented entry points. Use of SQL Server features and functionality must be limited to those that are included in Microsoft SQL Server documentation. If a feature is not documented in Microsoft SQL Server documentation, it is not a supported part of SQL Server.  
+对于利用和使用未记录的入口点的应用程序和数据库，升级至 SQL Server 的未来版本的服务器和数据库未得到保证。 必须将 SQL Server 特性和功能的使用限制为 Microsoft SQL Server 文档中包含的内容。 如果功能未在 Microsoft SQL Server 文档中记录，则它不属于 SQL Server 支持的部分。  
   

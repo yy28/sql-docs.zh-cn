@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - OpenSqlFilestream
@@ -15,16 +13,15 @@ api_location:
 helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee7c3745466565a5baf8262fe6cc20dc80c0a3d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6afb64b852ac6050a2705c1c4d7da7d2d9b52f1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059447"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 访问 FILESTREAM 数据
   OpenSqlFilestream API 获取 Win32 兼容的文件句柄的 FILESTREAM 二进制大型对象 (BLOB) 存储在文件系统中。 可以将该句柄传递给以下任意 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果将此句柄传递给其他任何 Win32 API，将返回错误 ERROR_ACCESS_DENIED。 必须首先将此句柄传递给 Win32 [CloseHandle](http://go.microsoft.com/fwlink/?LinkId=86428) API 来关闭它，才能提交或回退事务。 未能关闭句柄将导致服务器端资源泄漏。  
@@ -59,7 +56,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
 |“属性”|ReplTest1|含义|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|可从文件中读取数据。|  
-|SQL_FILESTREAM_WRITE|@shouldalert|可将数据写入文件。|  
+|SQL_FILESTREAM_WRITE|1|可将数据写入文件。|  
 |SQL_FILESTREAM_READWRITE|2|可从文件读取数据并将数据写入文件。|  
   
 > [!NOTE]  
@@ -98,7 +95,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
  [!code-cpp[FILESTREAM#FS_CPP_WriteBLOB](../../snippets/tsql/SQL15/tsql/filestream/cpp/filestream.cpp#fs_cpp_writeblob)]  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 才能使用此 API。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 随同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端工具一起安装。 有关详细信息，请参阅 [安装 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
   
 ## <a name="see-also"></a>请参阅  

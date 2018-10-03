@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoredb.general.f1
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
-caps.latest.revision: 85
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 79929bf3f9bebec61605ad173a460fbdbe2269f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188387"
 ---
 # <a name="restore-database-general-page"></a>还原数据库（“常规”页）
   使用“常规”页，可以指定数据库还原操作的目标数据库和源数据库的有关信息。  
@@ -34,14 +31,14 @@ ms.locfileid: "37219477"
 > [!NOTE]  
 >  当使用指定还原任务[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，可以生成相应[!INCLUDE[tsql](../../includes/tsql-md.md)][还原](/sql/t-sql/statements/restore-statements-transact-sql)通过单击脚本**脚本**，再选择脚本目标。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  如果不存在要还原的数据库，则用户必须有 CREATE DATABASE 权限才能执行 RESTORE。 如果该数据库存在，则 RESTORE 权限默认授予 **sysadmin** 和 **dbcreator** 固定服务器角色成员以及该数据库的所有者 (**dbo**)。  
   
  RESTORE 权限被授予那些成员身份信息始终可由服务器使用的角色。 因为只有在固定数据库可以访问且没有损坏时（在执行 RESTORE 时并不会总是这样）才能检查固定数据库角色成员身份，所以 **db_owner** 固定数据库角色成员没有 RESTORE 权限。  
   
  从加密的备份还原需要`VIEW DEFINITION`到证书或在备份期间用于加密的对称密钥的权限。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="source"></a>数据源  
  “还原自” 面板中的选项可标识数据库的备份集的位置以及要还原的备份集。  

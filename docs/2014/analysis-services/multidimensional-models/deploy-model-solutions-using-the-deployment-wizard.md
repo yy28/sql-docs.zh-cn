@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Analysis Services deployments, Analysis Services Deployment Wizard
 - Analysis Services Deployment Wizard, about Analysis Services Deployment Wizard
 ms.assetid: ff711e8e-971c-43ba-b479-effc034af4a4
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4c8544aaa91cb9dcfcd248e70a4debd766eb1f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087647"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>使用部署向导部署模型解决方案
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署向导将从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中生成的 XML 输出文件作为输入文件。 可以轻松地修改这些输入文件，以自定义 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的部署。 随后，可以立即运行生成的部署脚本，也可以保留此脚本供以后部署。  

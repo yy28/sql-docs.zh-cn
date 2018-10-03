@@ -1,13 +1,11 @@
 ---
-title: 自动提交模式 |Microsoft 文档
+title: 自动提交模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,20 +15,19 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 679bbb3486c947ef3ebbd7d285f74f3cb510172f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a5bababd2129ffb7e0aad36a2ceb3362d4acd9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908602"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792355"
 ---
 # <a name="auto-commit-mode"></a>自动提交模式
-*在自动提交模式下，* 每个数据库操作是执行时提交的事务。 此模式适合于很多包含单个 SQL 语句的实际事务。 它是不必要分隔或指定这些事务完成。 在数据库中没有事务支持，自动提交模式是唯一支持的模式。 在此类数据库中，语句时，将提交，它们将执行，并且没有无法回滚它们;它们是因此始终在自动提交模式下。  
+*在自动提交模式下，* 每个数据库操作是在执行时已提交的事务。 此模式适合用于包含单个 SQL 语句的许多实际的事务。 不需要分隔，或者指定的这些事务完成。 在数据库中不支持事务的情况下，自动提交模式是唯一支持的模式。 在此类数据库语句仅在提交后可以执行它们并没有方法回滚它们;它们因此始终处于自动提交模式。  
   
- 如果基础的 DBMS 不支持自动提交模式事务，该驱动程序可模拟它们都会在执行手动提交每个 SQL 语句。  
+ 如果遵循基础 DBMS 不支持自动提交模式下事务，该驱动程序可以模拟它们通过手动提交每个 SQL 语句，因为它执行。  
   
- 如果在自动提交模式下执行一批 SQL 语句，则它是数据源 – 特定提交批次中的语句时。 它们可以将其提交会在执行时或作为一个整体后执行整个批处理。 某些数据源可能支持这两个这些行为，可以提供一种方法选择一个或其他。 具体而言，如果中间批处理时出错，则数据源 – 特定已执行语句是提交还是回滚。 因此，可互操作应用程序使用批处理，并且需要它们来提交或回滚作为一个整体应仅在手动提交模式下执行批处理。
+ 如果在自动提交模式下执行一批 SQL 语句，则它是数据源特定的语句批处理中提交时。 它们可以是已提交会在执行时或作为一个整体后执行整个批处理。 某些数据源可能支持这两个这些行为，并且可能会提供一种方法选择一个或其他人。 具体而言，如果批处理过程中发生错误，则数据源特定于已执行语句是提交还是回滚。 因此，使用批次，且需要它们来提交或回滚作为一个整体的可互操作应用程序应仅在手动提交模式下执行批处理。

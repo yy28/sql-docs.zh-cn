@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5cdb0804e91e74486facbbc7d7b77885d87d6bc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 318ad51d389a25905056fd08b8789bc3250383c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186980"
 ---
 # <a name="data-quality-client-home-screen"></a>数据质量客户端主屏幕
   使用此屏幕可以访问 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的三组主要任务的用户界面：知识库管理、数据质量项目和管理。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="knowledge-base-management"></a>知识库管理  
  DQS 知识库是 DQS 用来提高数据质量的元数据储存库。 该元数据在两个过程中创建：在计算机辅助的知识发现过程中由 DQS 平台创建，以及在交互式的域管理过程中由数据专员创建。  

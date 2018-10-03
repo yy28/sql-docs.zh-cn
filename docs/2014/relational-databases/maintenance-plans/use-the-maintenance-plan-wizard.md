@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.maintwiz.planprop.f1
@@ -34,16 +32,15 @@ helpviewer_keywords:
 - Database Maintenance Plan Wizard
 - Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6ee9a3c08fc00b5e7c6b340d3963e2003cfb0343
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e168c23035722174451d316ef53b14be3cc5c8ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127877"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>使用维护计划向导
   本主题说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用维护计划向导创建单个服务器或多服务器维护计划。 维护计划向导用于创建 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可定期运行的维护计划。 它使您可以执行各种数据库管理任务，包括备份、数据库完整性检查或以指定的间隔更新数据库统计信息。  

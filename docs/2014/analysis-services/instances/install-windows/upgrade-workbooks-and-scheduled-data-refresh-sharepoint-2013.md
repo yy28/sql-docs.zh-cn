@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bb205ac875315770454a9075ab0c6acbabd97fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f321f4851a5257ebaacccbc05ecec46ba1baae4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190257"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>升级工作簿和计划的数据刷新 (SharePoint 2013)
   本主题说明在以前的 PowerPivot 环境中创建的工作簿的用户体验，以及如何升级 PowerPivot 工作簿以便您可以利用此版本中引入的新功能。 若要了解有关新增功能的详细信息，请参阅 [PowerPivot 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=203917)。  

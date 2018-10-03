@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abab1915e4a17ddd4e9c3ea3a6f524dcb5493150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184190"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>“分类关系图”选项卡（挖掘模型查看器）
   **“分类关系图”** 选项卡提供聚类分析模型中包含的所有分类的图形视图。  
   
  **有关详细信息，请参阅** [Microsoft 聚类分析算法](data-mining/microsoft-clustering-algorithm.md)和[使用 Microsoft 分类查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   

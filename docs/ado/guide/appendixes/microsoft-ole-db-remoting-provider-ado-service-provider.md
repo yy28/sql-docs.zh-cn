@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB remoting provider [ADO]
 - providers [ADO], OLE DB remoting provider
 - remoting provider [ADO]
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da4daddadce73d58dcaa58d5fb56cde1d532ec87
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624605"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 远程处理提供程序概述
 Microsoft OLE DB 远程处理提供程序使客户端计算机上的本地用户来调用远程计算机上的数据提供程序。 指定远程计算机的数据提供程序参数，就像您像在远程计算机上的本地用户。 然后指定远程处理提供程序用于访问远程计算机的参数。 然后，就像本地用户，可以访问远程计算机。
@@ -53,7 +50,7 @@ Microsoft OLE DB 远程处理提供程序使客户端计算机上的本地用户
 |**DFMode**|指示数据工厂模式。 一个字符串，指定所需的版本的[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)服务器上的对象。 将此属性设置打开的连接请求的特定版本之前**DataFactory**。 如果请求的版本不可用，将尝试使用以前的版本。 如果没有以前的版本，将会出错。 如果**DFMode**小于可用的版本中，将会出错。 在建立连接后，此属性是只读的。<br /><br /> 可以是下列有效的字符串值之一：<br /><br /> -"25"，版本 2.5 （默认值）<br />-"21"，版本 2.1<br />-"20"，版本 2.0<br />-"15"-1.5 版|
 |**命令属性**|指示将添加到由 MS 远程提供程序发送到服务器的命令 （行集） 属性的字符串的值。 此字符串的默认值为 vt_empty。|
 |**当前 DFMode**|表示实际版本号**DataFactory**在服务器上。 检查此属性以了解是否请求中的版本**DFMode**接受属性。<br /><br /> 可以是下列有效的长整型值之一：<br /><br /> -25-版本 2.5 （默认值）<br />-21-版本 2.1<br />-20-2.0 版<br />-15-1.5 版<br /><br /> 添加"DFMode = 20;"到连接字符串使用时**MSRemote**更新数据时，提供程序可以提高你的服务器的性能。 使用此设置，**提高**对象在服务器上的使用较低占用大量资源的模式。 但是，以下功能不可用在此配置中：<br /><br /> -使用参数化的查询。<br />-获取参数或列的信息，然后再调用**Execute**方法。<br />-设置**Transact 更新**到**True**。<br />-获取行状态。<br />-调用**重新同步**方法。<br />-通过刷新 （显式或自动）**更新重新同步**属性。<br />-设置**命令**或**记录集**属性。<br />-使用**adCmdTableDirect**。|
-|**处理程序**|指示扩展功能的服务器端自定义程序 （或处理程序） 的名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，并使用由处理程序的所有参数 *，* 各项之间由逗号 （","). 一个**字符串**值。|
+|**处理程序**|指示扩展功能的服务器端自定义程序 （或处理程序） 的名称[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)，并使用由处理程序的所有参数 *，* 各项之间由逗号 （","). 一个字符串值。|
 |**Internet 超时**|指示最大请求传送到 / 从服务器等待毫秒的数。 （默认值为 5 分钟）。|
 |**远程提供程序**|指示要在远程服务器上使用的数据提供程序的名称。|
 |**远程服务器**|指示使用此连接的服务器名称和通信协议。 此属性等效于[rds。DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象[Server](../../../ado/reference/rds-api/server-property-rds.md)属性。|
@@ -73,7 +70,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  ADO 2.0，OLE DB 远程处理提供程序可能只在中指定*ActiveConnection*的参数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象**打开**方法。 从 ADO 2.1 开始，提供程序还可以指定在*ConnectionString*的参数[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象**打开**方法。
 
  等效于**rds。DataControl**对象[SQL](../../../ado/reference/rds-api/sql-property.md)属性不可用。 [记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象**打开**方法*源*改为使用参数。

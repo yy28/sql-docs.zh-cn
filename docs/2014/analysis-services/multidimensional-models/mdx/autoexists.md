@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142697"
 ---
 # <a name="autoexists"></a>Autoexists
   “autoexists”  的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  

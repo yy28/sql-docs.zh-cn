@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f1ec48661147c78449e7767e87bafd475bb7819
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128633"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>复制到内存优化表订阅服务器
   充当事务复制订阅服务器的表（不包括对等事务复制）可以配置为内存优化表。 其他复制配置与内存优化表不兼容。  

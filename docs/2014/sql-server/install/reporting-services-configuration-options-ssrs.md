@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], installing
 - SQL Server Installation Wizard, Report Server Installation Options page
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9afc4e179807d6cc10925d4fb4964cea857427d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185337"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 配置选项 (SSRS)
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导中的“Reporting Services 配置”页来指定如何安装和配置报表服务器。 安装选项的可用性取决于您以前在 **“功能选择”** 页选择的选项以及在安装报表服务器的同时是否还安装了 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本地实例。  
@@ -34,7 +31,7 @@ ms.locfileid: "37327077"
   
  有关最新信息有关[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和的安装和配置此版本中，请参阅[其他安装信息](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="reporting-services-native-mode"></a>Reporting Services 本机模式  
  如果安装程序由于一条或多条要求未得到满足而无法执行默认的报表服务器配置，那么安装向导只允许选择最小化安装选项；同时，它会复制所需的文件，但要求在安装结束后，使用 Reporting Services 配置管理器来配置本机模式报表服务器。  

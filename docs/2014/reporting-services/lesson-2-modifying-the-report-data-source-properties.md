@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f7ede1d878eb966ec810098a3a8c1cd6475c4d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a729c844d88ffb11b5de3622868fc9bc2eee17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175240"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159617"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
   在本课中，您将使用报表管理器来选择要传递给收件人的报表。 你将定义的数据驱动订阅将分发在 **创建基本表报表（SSRS 教程）** 教程中创建的 [创建基本表报表（SSRS 教程）](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)报表。 在接下来的步骤中，将修改此报表使用的数据源连接信息，以获取数据。 只有使用 **已存储凭据** 访问报表数据源的报表才能通过数据驱动订阅进行分发。 已存储凭据是处理无人参与的报表所必需的。  

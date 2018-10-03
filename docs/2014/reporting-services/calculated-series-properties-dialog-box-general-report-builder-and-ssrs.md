@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
-caps.latest.revision: 20
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41ae566621a527fb55c83d06e8bf8dcaaec227b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b202d3eadef7abc2f638cc8c084849249f8eaab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168032"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096727"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>“计算序列属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   在“计算序列属性”对话框中选择“公式”可以添加或修改将根据使用现有序列数据作为输入的内置公式计算的序列。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **公式**  
  选择要对图表应用的公式。 选项包括：  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetDefaults Method (ClientSettings Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
-caps.latest.revision: 28
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92224fb0d9e8a46702a1bbfdecc6c8cf64d18ecf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e51f316b383b24ac8e8fdd86d880e79e28e92f83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114007"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults 方法（ClientSettings 类）
   设置实例的所有默认值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]选择覆盖现有数据的客户端。  
@@ -57,5 +54,5 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   

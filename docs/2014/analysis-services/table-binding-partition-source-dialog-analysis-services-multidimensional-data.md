@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitiontableselection.f1
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 434d89e19bceae3011f7ff365b81fd799c58e2a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093058"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>表绑定详细信息（“分区源”对话框）（Analysis Services - 多维数据）
   可以使用 **“分区源”** 对话框中的 **“表绑定”** 选项，指定为分区提供数据的事实数据表。 通过从 **“分区源”** 对话框中的 **“绑定类型”** 选项中选择 **“表绑定”** ，可以显示此窗格。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **度量值组**  
  显示此分区的度量值组。  
   

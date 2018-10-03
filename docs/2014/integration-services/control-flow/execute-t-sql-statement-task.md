@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executetsqlstatementtask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - Execute T-SQL Statement task [Integration Services]
 ms.assetid: 7e9086ca-d27e-46c0-bfad-d61333ebd55e
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36aac75b9fece324fd2ee9f8f31dff43b549ee3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2ad857b2174528db8f6c2d7c8453b956129686d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058489"
 ---
 # <a name="execute-t-sql-statement-task"></a>执行 T-SQL 语句任务
   执行 T-SQL 语句任务运行 Transact-SQL 语句。 有关详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](/sql/t-sql/language-reference)和 [Integration Services (SSIS) 查询](../integration-services-ssis-queries.md)。  

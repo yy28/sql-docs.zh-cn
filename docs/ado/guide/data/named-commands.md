@@ -1,31 +1,28 @@
 ---
-title: 名为命令 |Microsoft 文档
+title: 名为命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670583"
 ---
-# <a name="named-commands"></a>命名的命令
-[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法执行命令。 还有一种方法： 你可以使其命名的命令，，然后调用此命名的命令是直接对**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 命名命令意味着分配到名称**名称**属性**命令**对象。 例如，  
+# <a name="named-commands"></a>命名命令
+[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)演示一种方法来执行命令。 还有一种方法： 可以将它命名的命令，，然后调用此命令是直接在命名**连接**对象 (分配给**ActiveConnection**属性**命令**对象)。 分配将名称传递给命名命令意味着**名称**的属性**命令**对象。 例如，  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,7 +30,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- 命名的命令上看起来就像它是"自定义方法"**连接**对象。 该命令的结果返回为此"自定义方法"的 out 参数。  
+ 已命名的命令看起来就像它是"自定义方法"一样上**连接**对象。 作为此"自定义方法"的输出参数返回命令的结果。  
   
  下面的示例阐释了此功能。  
   

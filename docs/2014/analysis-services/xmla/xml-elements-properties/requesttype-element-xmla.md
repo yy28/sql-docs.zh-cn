@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RequestType Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322b212853f94a1e1e5b1b48534dee649632d164
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105307"
 ---
 # <a name="requesttype-element-xmla"></a>RequestType 元素 (XMLA)
   确定返回的元数据的类型[发现](../xml-elements-methods-discover.md)方法。  
@@ -53,7 +50,7 @@ ms.locfileid: "37171188"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37171188"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[发现](../xml-elements-methods-discover.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `RequestType` 元素可确定 `Discover` 方法从其返回数据的架构行集。 此枚举仅限于支持的架构行集的名称[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 有关架构行集的详细信息，请参阅[Analysis Services 架构行集](../../schema-rowsets/analysis-services-schema-rowsets.md)。  
   
 > [!NOTE]  

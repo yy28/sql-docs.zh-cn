@@ -1,30 +1,27 @@
 ---
-title: 命令对象参数 |Microsoft 文档
+title: 命令对象参数 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], parameters
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87854c3e048fc7fc5730ad8c1c475a32554fbab5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701735"
 ---
 # <a name="command-object-parameters"></a>命令对象参数
-上一个主题中讨论[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 一个更有趣用于[命令](../../../ado/reference/ado-api/command-object-ado.md)对象显示在下一步的示例中，已在其中参数化 SQL 命令。 此修改，使可以再次使用该命令，将传递不同的值为参数每次。 因为[准备属性](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**true**，ADO 将需要提供商联系以编译中指定的命令[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前执行第一次。 它还将保留在内存中编译后的命令。 这会稍稍命令的执行第一次执行由于准备，但导致的性能有所提高每次之后调用该命令所需的开销。 因此，仅当它们将使用不止一次，则应准备命令。  
+上一个主题中讨论[创建和执行简单的命令](../../../ado/guide/data/creating-and-executing-a-simple-command.md)。 对于使用更微妙[命令](../../../ado/reference/ado-api/command-object-ado.md)对象显示在下一示例中，在其中已参数化 SQL 命令。 这种修改，使可能重复使用该命令，传入不同的值为参数每次。 因为[准备好属性](../../../ado/reference/ado-api/prepared-property-ado.md)上的属性**命令**对象设置为**true**，ADO 将要求要编译的命令中指定的提供程序[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)之前执行第一次。 它还将保留在内存中编译后的命令。 这会降低执行命令略有第一次执行由于准备它，但生成的性能提升每次之后调用该命令所需的开销。 因此，它们将使用一次，才应准备命令。  
   
 ```  
 'BeginManualParamCmd  
@@ -122,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- 并非所有提供程序支持已准备的命令。 如果提供程序不支持命令准备，它会返回一个错误，此属性设置为时，就会立即**True**。 如果它不返回错误，它将忽略请求后，若要准备的命令和集**已准备**属性**false**。
+ 并非所有提供程序支持准备好的命令。 如果提供程序不支持命令准备，它会返回一个错误，只要此属性设置为 **，则返回 True**。 如果它不返回错误，它会忽略准备的命令和集请求**已准备**属性设置为**false**。

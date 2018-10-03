@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data mining [Reporting Services]
 - passing parameters [Reporting Services]
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
-caps.latest.revision: 62
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 287f6539400ad87a898340cc7c8709e0ab07fd91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a909c905fd9cb61df019f2db5eca85279cc85a8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328929"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085657"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>针对 DMX 的 Analysis Services 连接类型 (SSRS)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据源创建数据集时，如果检测到有效多维数据集，则报表设计器将显示多维表达式 (MDX) 查询设计器。 如果未检测到多维数据集，但有数据挖掘模型可用，则报表设计器将会显示数据挖掘扩展插件 (DMX) 查询设计器。 要在 MDX 和 DMX 设计器之间切换，请单击工具栏上的“命令类型 DMX”（![更改为 DMX 查询语言视图](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")）按钮。 使用 DMX 查询设计器以交互方式生成使用图形元素的 DMX 查询。 若要使用 DMX 查询设计器，指定的数据源必须已具有可提供数据的数据挖掘模型。 查询结果被转换为要在报表中使用的平展行集。  

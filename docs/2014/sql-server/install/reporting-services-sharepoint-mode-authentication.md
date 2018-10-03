@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade SharePoint Mode [Reporting Services]
 - SharePoint integration
 - SharePoint Mode
 ms.assetid: 2c19794a-dd55-4fe5-b901-6dd93e9f6beb
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 704d104b8834675f7511c952db7fafb9fcccafd3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c4c0e1536a32fa5aca0bc63ec80e255ad755491
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185289"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 模式身份验证
   使用   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页可以指定在当前 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中使用的服务帐户的凭据。 这些凭据将用来创建新的 SharePoint 应用程序池。 此外，还将创建一个新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服务应用程序。 客户端应用程序名称将包含前一个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 -   **“SSRS 应用程序池帐户名称:”** 选项是只读的。 系统将自动使用来自您正在升级的现有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装中的当前值填充此值。  
   

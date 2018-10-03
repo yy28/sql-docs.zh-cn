@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 763fea9f0ff216fab263edb1d30b56e8ca6a630f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077507"
 ---
 # <a name="browsing-the-cube"></a>浏览多维数据集
   在部署多维数据集后，可以在多维数据集设计器的“浏览器”选项卡中查看多维数据集数据，以及在维度设计器的“浏览器”选项卡中查看维度数据。 浏览多维数据集和维度数据是以增量方式检查您的工作的方式。 您可以在处理对象后，验证对属性、关系和其他对象的细微更改是否具有期望的效果。 在使用“浏览器”选项卡来查看多维数据集和维度数据时，该选项卡将基于您正在浏览的对象提供不同的功能。  

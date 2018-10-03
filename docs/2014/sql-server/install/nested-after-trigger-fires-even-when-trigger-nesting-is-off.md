@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DML triggers, nested
 - nested triggers option
 - triggers [SQL Server], nested
 ms.assetid: 94d72960-676e-40d9-81bc-08bffe778110
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 683ffcfa3bb4715b25fb912fa12808be3b0873ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 826961aef9133c001c643c1ee7058d01438fe868
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098417"
 ---
 # <a name="nested-after-trigger-fires-even-when-trigger-nesting-is-off"></a>即使触发器嵌套功能设置为 OFF，也会触发嵌套的 AFTER 触发器
   升级顾问检测到一个嵌套在一个或多个表中定义的 INSTEAD OF 触发器中的 AFTER 触发器。 即使在 `nested triggers` 服务器配置选项设置为 0 时，也可能会激发嵌套 AFTER 触发器。  

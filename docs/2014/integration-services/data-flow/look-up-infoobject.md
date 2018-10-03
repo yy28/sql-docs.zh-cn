@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f4c7df344ac5e4fe2d00863615783195aed6d45
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c3fa39cde45e568ad713a3238c98e96d40f8495
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155037"
 ---
 # <a name="look-up-infoobject"></a>查找 InfoObject
   使用 **“查找 InfoObject”** 对话框查找在 SAP Netweaver BW 系统中定义的 InfoObject。 当可用 InfoObject 列表显示时，选择您需要的 InfoObject，然后 SAP BW 目标将使用需要的值填充关联的选项。  

@@ -5,11 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_usage_TSQL
@@ -22,17 +18,16 @@ helpviewer_keywords:
 - resource_usage
 - sys.resource_usage
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0a79eed306e8920ece4cc6ea1de97352c4706622
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604615"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -58,7 +53,7 @@ ms.locfileid: "37985049"
 |usage_in_seconds|**int**|该小时内使用的 CPU 时间之和。<br /><br /> 注意： 此列的 V11 已弃用并且不适用于 V12。 **值始终设置为 0。**|  
 |storage_in_megabytes|**decimal**|该小时的最大存储大小，包括数据库数据、索引、存储过程和元数据。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图可供所有用户角色有权连接到虚拟**主**数据库。  
   
   

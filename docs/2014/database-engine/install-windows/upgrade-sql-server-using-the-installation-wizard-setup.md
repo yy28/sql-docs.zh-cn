@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060567"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  

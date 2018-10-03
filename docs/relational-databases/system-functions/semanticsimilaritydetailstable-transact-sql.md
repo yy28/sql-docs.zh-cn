@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritydetailstable (TRANSACT-SQL) |Microsoft 文档
+title: semanticsimilaritydetailstable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritydetailstable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritydetailstable function
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31e23931b0b4b22df06cde0981209c28aecef373
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7b6bdccdb0c9d84b7ad814c0342a6fe267522d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718055"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -91,13 +87,13 @@ SEMANTICSIMILARITYDETAILSTABLE
   
 -   [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
- 下面的示例检索 5 个关键短语具有最高的相似性得分中指定的候选人间**HumanResources.JobCandidate** AdventureWorks2012 示例数据库的表。 @CandidateId和@MatchedID变量表示全文索引的键列的值。  
+ 下面的示例检索具有最高的相似性得分中指定候选人间的 5 个关键短语**HumanResources.JobCandidate** AdventureWorks2012 示例数据库的表。 @CandidateId和@MatchedID变量表示全文索引的键列的值。  
   
 ```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192187"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
@@ -241,8 +238,7 @@ ms.locfileid: "40393132"
   
  Sales.SpecialOffer  
   
--   
-  *检查* 和 *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOffer_inmem 和 Sales.usp_DeleteSpecialOffer_inmem 可用于插入和删除特价商品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
+-   *检查* 和 *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOffer_inmem 和 Sales.usp_DeleteSpecialOffer_inmem 可用于插入和删除特价商品；这些过程验证域和引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证域和引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOffer_inmem')  
@@ -253,8 +249,7 @@ ms.locfileid: "40393132"
   
  Sales.SpecialOfferProduct  
   
--   
-  *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOfferProduct_inmem 可用于插入和删除特价商品与产品之间的关系；此过程验证引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
+-   *外键约束* 通过两种方式实现：存储过程 Sales.usp_InsertSpecialOfferProduct_inmem 可用于插入和删除特价商品与产品之间的关系；此过程验证引用完整性，在违反完整性时会失败。 此外，以下脚本还可用于按原样验证引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SpecialOfferProduct_inmem')  
@@ -747,8 +742,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
-|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
  可以看到，大部分空间由预先创建的数据和差异文件使用。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 为每个逻辑处理器预先创建一对（数据、差异）文件。 此外，数据文件的预设大小为 128MB，差异文件的预设大小为 8MB，以便更高效地向这些文件插入数据。  
   
@@ -793,8 +788,8 @@ ORDER BY state, file_type
 |**state_desc**|**file_type_desc**|**计数**|**磁盘上大小 (MB)**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
-|UNDER CONSTRUCTION|DATA|@shouldalert|128|  
-|UNDER CONSTRUCTION|DELTA|@shouldalert|8|  
+|UNDER CONSTRUCTION|DATA|1|128|  
+|UNDER CONSTRUCTION|DELTA|1|8|  
   
  我们仍有 16 对预先创建的文件，准备好在关闭检查点时执行。  
   

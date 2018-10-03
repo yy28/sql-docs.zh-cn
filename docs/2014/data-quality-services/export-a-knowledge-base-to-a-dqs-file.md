@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f243c45504f5233460eb5a8fe31b2ae8fbb2e1b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8bc0155747591a9125a6333cbca1ac10dec1d70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192317"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>将知识库导出到 .dqs 文件
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将整个知识库导出到 .dqs 数据文件。 您可以将域或整个知识库导出到数据文件。 有关导出域的信息，请参阅[将域导出到 .dqs 文件](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md)。  

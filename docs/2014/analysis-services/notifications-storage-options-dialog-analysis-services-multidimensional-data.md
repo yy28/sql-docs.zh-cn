@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.notifications.f1
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5833c07701cfb9ff6c07704683d606e80f204259
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6ba7fd0995066b90ef984f8dfa436864e06db95
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183394"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193697"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>通知（“存储选项”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “存储选项” **对话框上的** “通知” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 选项卡，设置维度、多维数据集、度量值组或分区的通知方法和相关设置。  
@@ -29,7 +26,7 @@ ms.locfileid: "37183394"
 > [!NOTE]  
 >  您必须熟悉存储模式和主动缓存功能，才可以修改这些设置。 有关详细信息，请参阅[主动缓存（分区）](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

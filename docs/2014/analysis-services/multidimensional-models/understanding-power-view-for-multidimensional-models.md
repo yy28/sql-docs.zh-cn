@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: df50d1ac785e58bf3136f6d8777a01c98a81d568
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169007"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
   本文介绍 Microsoft SQL Server 2014 中用于多维模型的 Power View 功能，并为希望在组织中实现多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
@@ -223,9 +220,9 @@ ms.locfileid: "37288053"
   
 |“属性”|Required|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|是|目录\数据库名称。|  
+|CATALOG_NAME|用户帐户控制|目录\数据库名称。|  
 |PERSPECTIVE_NAME|是（如果多维数据集包含多个透视）。 如果只有一个多维数据集或有一个默认透视，则为可选的。|多维数据库中的多维数据集名称或透视名称。|  
-|VERSION|是|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
+|VERSION|用户帐户控制|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
   
  返回的 CSDL out 文档将模型表示为命名空间，其中包含实体、关联和属性。  
   

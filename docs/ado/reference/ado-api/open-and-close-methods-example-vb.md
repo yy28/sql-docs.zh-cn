@@ -1,13 +1,11 @@
 ---
-title: 打开和关闭方法的示例 (VB) |Microsoft 文档
+title: Open 和 Close 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Close method [ADO], Visual Basic example
 - Open method [ADO], Visual Basic example
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a445a8c51616c49f765a8be7afbb38cbf2536d57
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b3c094abbe0f67e3670fc0a1f89ee00b527893ee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725845"
 ---
-# <a name="open-and-close-methods-example-vb"></a>打开和关闭方法的示例 (VB)
-此示例使用**打开**和[关闭](../../../ado/reference/ado-api/close-method-ado.md)两侧方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)打开过的对象。  
+# <a name="open-and-close-methods-example-vb"></a>Open 和 Close 方法示例 (VB)
+此示例使用**开放**和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法同时[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)已打开的对象。  
   
 ```  
 'BeginOpenVB  

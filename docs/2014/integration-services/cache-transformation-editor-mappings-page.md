@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ec474543bad0eb83d313fd4bf16b2b3163176b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af8dd4e4671f808f762d5044fd261047386fe2d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157417"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>缓存转换编辑器（“映射”页）
   可以使用 **“缓存转换编辑器”** 的 **“映射”** 页，将“缓存转换”转换中的输入列映射到缓存连接管理器中的目标列。  
@@ -33,7 +30,7 @@ ms.locfileid: "37243057"
   
  若要了解有关缓存连接管理器的详细信息，请参阅 [Cache Connection Manager](connection-manager/cache-connection-manager.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作将可用输入列映射到目标列。  
   

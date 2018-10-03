@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 34d4ab217564f931dc441d5c90b077960bd11486
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e86c8ebb206ac6aefb6a68ccc1da02de88e48fe2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123547"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>在辅助轴上绘制数据（报表生成器和 SSRS）
   图表有两个轴类型：主轴和辅助轴。 将两个值集与共享共有类别的两个不同数据范围进行比较时，辅助轴将非常有用。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML data sources [Analysis Services with SharePoint]
 - data feeds [Analysis Services with SharePoint]
 - Atom data feeds
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6187d8959a79fef77daa33c509b1f0770bd99f51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131147"
 ---
 # <a name="powerpivot-data-feeds"></a>PowerPivot 数据馈送
   数据馈送从联机数据源按需向客户端应用程序提供数据流。 在[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，可以使用数据馈送将来自支持 Atom 的 Web 服务或应用程序到 Excel 工作簿中的 PowerPivot 数据源添加数据。  

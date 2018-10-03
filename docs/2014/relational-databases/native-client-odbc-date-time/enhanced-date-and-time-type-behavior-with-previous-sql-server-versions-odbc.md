@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91052172849df1cd0234fe73cd39130d4568f131
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 392e09bee33370116ba0c4ff6e0f9f13ce0fdad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184187"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>与 SQL Server 早期版本的增强日期和时间类型行为 (ODBC)
   本主题说明当使用增强的日期和时间功能的客户端应用程序与早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本通信时的预期行为，以及使用 Microsoft 数据访问组件、Windows 数据访问组件或早于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client 版本的客户端应用程序向支持增强的日期和时间功能的服务器发送命令时的预期行为。  
@@ -43,7 +40,7 @@ ms.locfileid: "37422956"
 ||Time(7)|SQL_C_TIME|失败 – 无效的时间文字。|确定 (1)|  
 |||SQL_C_TYPE_TIMESTAMP|失败 – 无效的时间文字。|确定 (1)|  
 ||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|“确定”|确定 (1)|  
-||Datetime2(7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
+||datetime2(7)|SQL_C_TYPE_TIMESTAMP|“确定”|由客户端转换将值舍入到 1/300 秒。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|“确定”|“确定”|  
 |||SQL_C_TYPE_TIMESTAMP|时间字段设置为零。|成功 (2)<br /><br /> 如果时间字段非零，则失败。 适用于[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
 ||Time(0)|SQL_C_TYPE_TIME|“确定”|“确定”|  
@@ -54,7 +51,7 @@ ms.locfileid: "37422956"
   
 |符号|含义|  
 |------------|-------------|  
-|@shouldalert|如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本。|  
+|1|如果已适用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，应继续适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本。|  
 |2|已与 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 一起使用的应用程序在与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的更新版本一起使用时，可能失败。|  
   
  请注意只考虑了常见的架构更改。 以下是常见的更改：  

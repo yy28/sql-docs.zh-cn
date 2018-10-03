@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE
 - MaximumItemsetSize property
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
-caps.latest.revision: 53
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fffd2e560cc8b9aaace349fefbcc4da1fe3fb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185027"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的关联算法，对建议引擎非常有用。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐产品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。 市场篮分析的示例，请参阅[第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)中的数据挖掘基础教程。  
@@ -90,7 +87,7 @@ ms.locfileid: "37165668"
   
  若要尽量缩短处理时间，并降低项集的复杂度，可以在分析数据之前尝试按照类别对关联项进行分组。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

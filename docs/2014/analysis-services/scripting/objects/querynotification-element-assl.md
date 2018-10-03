@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - QueryNotification Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - QueryNotification element
 ms.assetid: 0ee06730-81ff-4913-96e6-f39b6f181650
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7d31cef8ee52964bf9aeb0c7c489f2831f5cb80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4eddd5a96c5c5ab541ba9349d7b664b110589a74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177729"
 ---
 # <a name="querynotification-element-assl"></a>QueryNotification 元素 (ASSL)
   包含确定数据源是否已修改时所执行的查询相关的 [ProactiveCaching](proactivecaching-element-assl.md) 元素信息。  
@@ -48,8 +45,8 @@ ms.locfileid: "37153298"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|1-n：可多次出现的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,7 +56,7 @@ ms.locfileid: "37153298"
 |父元素|[QueryNotifications](../collections/querynotifications-element-assl.md)|  
 |子元素|[“数据集属性”](../properties/query-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.QueryNotification>。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_sproc_columns
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_sproc_columns
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8923e4f38ec6ef69de9817ebc3940da07a1518db
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077167"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833135"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,14 +88,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可创建允许空值的数据类型。<br /><br /> 0 = 不允许空值。|  
 |**备注**|**varchar (** 254 **)**|对过程列的说明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不为此列返回值。|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|列的默认值。|  
-|**SQL_DATA_TYPE**|**smallint**|显示在 SQL 数据类型的值**类型**的描述符字段。 此列是与相同**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。 该列始终返回值。|  
-|**SQL_DATETIME_SUB**|**smallint**|**Datetime** ISO**间隔**子代码如果的值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 对于数据类型以外**datetime**和 ISO**间隔**，此字段为 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|显示在 SQL 数据类型的值**类型**的描述符字段。 此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。 该列始终返回值。|  
+|**SQL_DATETIME_SUB**|**smallint**|如果 SQL_DATA_TYPE 的值为 SQL_DATETIME 或 SQL_INTERVAL，则为 datetime ISO interval 子代码。 对于数据类型以外**datetime**和 ISO**间隔**，此字段为 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|以字节为单位的最大长度**字符**或**二进制**数据类型列。 对于所有其他数据类型，此列返回 NULL。|  
 |**ORDINAL_POSITION**|**int**|列在表中的序号位置。 表中的第一列为 1。 该列始终返回值。|  
 |**IS_NULLABLE**|**varchar(254)**|表中的列的为 Null 性。 根据 ISO 规则确定为 Null 性。 遵从 ISO 标准的 DBMS 不能返回空字符串。<br /><br /> 如果列可包含 NULL，则显示 YES；如果列不能包含 NULL，则显示 NO。<br /><br /> 如果为 Null 性为未知，该列将返回零长度字符串。<br /><br /> 该列返回的值与 NULLABLE 列返回的值不同。|  
 |**SS_DATA_TYPE**|**tinyint**|扩展存储过程使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型。 有关详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_sproc_columns**等效于**SQLProcedureColumns** ODBC 中。 返回的结果按排序**PROCEDURE_QUALIFIER**， **PROCEDURE_OWNER**， **PROCEDURE_NAME**，以及参数在过程中出现的顺序定义。  
   
 ## <a name="permissions"></a>Permissions  

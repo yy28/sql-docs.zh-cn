@@ -1,30 +1,27 @@
 ---
-title: 为 Paradox 创建索引 |Microsoft 文档
+title: Paradox 的 CREATE INDEX |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE INDEX [ODBC]
 - Paradox driver [ODBC], create index
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 473c8d73e33504e7cc22d3b02aaca789d9c7a620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649045"
 ---
-# <a name="create-index-for-paradox"></a>为 Paradox 创建索引
+# <a name="create-index-for-paradox"></a>Paradox 的 CREATE INDEX
 ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法是：  
   
  **创建**[**UNIQUE**]**索引***索引名称*  
@@ -35,45 +32,45 @@ ODBC Paradox 驱动程序的 CREATE INDEX 语句的语法是：
   
  [**，** *列标识符*[**ASC**]...]**)**  
   
- ODBC Paradox 驱动程序不支持**DESC** CREATE INDEX 语句的 ODBC SQL 语法中的关键字。 *表名*自变量可以指定表的完整路径。  
+ ODBC Paradox 驱动程序不支持**DESC** ODBC SQL 语法的 CREATE INDEX 语句中的关键字。 *表名称*参数可指定表的完整路径。  
   
- 如果关键字**UNIQUE** ODBC Paradox 驱动程序将创建唯一索引的指定。 第一个唯一索引作为主索引创建。 这是名为的一个 Paradox 主密钥文件*表名*。PX。 主索引受到以下限制：  
+ 如果关键字**UNIQUE** ODBC Paradox 驱动程序将创建唯一索引的指定。 第一个唯一索引作为主索引创建。 这是名为 Paradox 主要密钥文件*表名称*。像素。 主索引是有以下限制：  
   
--   在任何行添加到表之前，必须创建主索引。  
+-   任何行添加到表之前，必须创建主索引。  
   
 -   在表中的第一个"n"列时，必须定义主索引。  
   
 -   只有一个主索引允许每个表中。  
   
--   表不能通过 Paradox 驱动程序更新，如果未对表定义主索引。 （请注意这不是最适用于一个空表，它可以更新，即使未在表上定义唯一索引。）  
+-   如果未对表定义主索引，则不能通过 Paradox 驱动程序更新的表。 （请注意，这不是为一个空表，它可以更新，即使未对表定义唯一索引，则返回 true。）  
   
--   *索引名称*主索引的参数必须为表中，根据需要通过 Paradox 的基名称相同。  
+-   *索引名称*参数的主索引必须是表中，所需的 Paradox 的基名称相同。  
   
- 如果关键字**UNIQUE**是省略，ODBC Paradox 驱动程序将创建非唯一索引。 这包括名为的两个 Paradox 辅助索引文件*表名*。X*nn*和*表名*。Y*nn*，其中*nn*是表中的列数。 非唯一索引受到以下限制：  
+ 如果关键字**UNIQUE**是省略，ODBC Paradox 驱动程序将创建非唯一索引。 这两个名为的 Paradox 辅助索引文件组成*表名称*。X*nn*并*表名*。Y*nn*，其中*nn*是表中的列数。 非唯一索引受到以下限制：  
   
--   可以对表创建非唯一索引之前，该表必须存在主索引。  
+-   可以为表创建非唯一索引之前，该表必须存在主索引。  
   
--   可能是 3。*x*、*索引名称*主索引 （唯一或非唯一） 以外的任何索引的参数必须是列名称相同。 可能是 4。*x*和 5。*x*，此类索引的名称可以是，但不一定是，列名称相同。  
+-   可能是 3。*x*，则*索引名称*参数的主索引 （唯一或非唯一） 之外的任何索引必须是列名称相同。 可能是 4。*x*和 5。*x*，此类索引的名称可以但不一定是列名称相同。  
   
 -   为非唯一索引，可以指定只有一个列。  
   
- 一旦在表上定义索引，不能添加列。 如果 CREATE TABLE 语句的自变量列表的第一列创建索引，第二列不能包含自变量列表中。  
+ 在表上定义索引后，无法添加列。 如果 CREATE TABLE 语句的参数列表的第一列创建索引，第二个列不能包含参数列表中。  
   
- 例如，若要使用销售订单号和行号列作为 SO_LINES 表的唯一索引，请使用语句：  
+ 例如，若要使用的销售订单号和行号列作为 SO_LINES 表的唯一索引，使用该语句：  
   
 ```  
 CREATE UNIQUE INDEX SO_LINES  
  ON SO_LINES (SONum, LineNum)  
 ```  
   
- 若要使用的部件号列作为 SO_LINES 表上的非唯一索引，请使用语句：  
+ 若要将部件号列用作 SO_LINES 表的非唯一索引，使用该语句：  
   
 ```  
 CREATE INDEX PartNum  
  ON SO_LINES (PartNum)  
 ```  
   
- 请注意时执行两个 CREATE INDEX 语句，第一个语句将始终创建主索引具有与表相同的名称和第二个语句将始终创建非唯一索引具有与列相同的名称。 这些索引将进行命名这种方式，即使在 CREATE INDEX 语句中输入不同名称，即使索引标记 UNIQUE 为第二个 CREATE INDEX 语句中。  
+ 请注意，当执行两个 CREATE INDEX 语句时，第一条语句将始终创建主索引与表相同的名称与第二个语句将始终具有相同名称的列创建非唯一索引。 这些索引名称将为这种方式即使 CREATE INDEX 语句中输入不同的名称，即使索引 UNIQUE 标记为在第二个 CREATE INDEX 语句中。  
   
 > [!NOTE]  
->  当你使用 Paradox 驱动程序，而无需实现高数据库引擎，仅读取并追加允许语句。
+>  当使用 Paradox 驱动程序而无需实现 borland 公司数据库引擎，只读取和追加允许语句。

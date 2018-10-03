@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OrderBy property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - ordering dimensions [Analysis Services]
 - OrderByAttributeID property
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 622dc698bfcae76297e208015a7c257feadd6b5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 916663a7d667187acc6b881ec4ac3c68d406c987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189797"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>定义维度的排序
   可通过将属性排序增强功能添加到多维数据集或维度中，指定属性成员的排序方式。 成员可以按属性的名称或键进行排序，也可以按另一个属性的名称或键基于属性关系进行排序。 默认情况下，成员按名称排序。 此增强功能更改`OrderBy`和`OrderByAttributeID`维度中的属性的属性设置。  

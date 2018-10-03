@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d93967a9f35c7c6817326293f6b2dd12e23780e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ed0ba22087a12f08e7a951a89a7ca989bb6487f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110587"
 ---
 # <a name="neural-network-model-query-examples"></a>神经网络模型查询示例
   在对数据挖掘模型创建查询时，可以创建内容查询，也可以创建预测查询。内容查询提供有关分析时发现的模式的详细信息，预测查询使用模型中的模式来对新数据进行预测。 例如，神经网络模型的内容查询可能会检索模型元数据，如隐藏层数。 而预测查询会基于输入提供分类建议，还可以选择是否提供每个分类的概率。  
@@ -69,7 +66,7 @@ WHERE NODE_TYPE = 24
   
 |MODEL_CATALOG|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |--------------------|-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|@shouldalert|  
+|Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|Missing|0|0|1|  
 |Adventure Works DW Multidimensional 2012|Call Center NN|Average Time Per Issue|< 64.7094100096|11|0.407407407|5|  
   
  有关架构行集中的列在神经网络模型的上下文中的含义的定义，请参阅[神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)。  

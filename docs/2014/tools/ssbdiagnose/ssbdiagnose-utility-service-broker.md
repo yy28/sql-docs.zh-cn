@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c9d0d1885413e5931f495c6eb5cd711bc0a9106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111167"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
   **ssbdiagnose** 实用工具可报告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会话或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务配置中的问题。 可为两个服务或单个服务执行配置检查。 检查出的问题在命令提示符窗口以人工读取文本的形式报告，或输出为可重定向到文件或其他程序的格式化 XML。  
@@ -258,7 +255,7 @@ WHERE database_id = DB_ID();
  **-?**  
  显示命令行帮助。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 **ssbdiagnose** 可以执行下列操作：  
   
 -   确认在新配置的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 应用程序中没有配置错误。  
@@ -312,7 +309,7 @@ WHERE database_id = DB_ID();
 ## <a name="sqlcmd-environment-variables"></a>sqlcmd 环境变量  
  **ssbdiagnose** 实用工具支持 **sqlcmd** 实用工具也使用的 SQLCMDSERVER、SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDLOGINTIMOUT 环境变量。 设置环境变量可以使用命令提示 SET 命令，也可以使用通过 **sqlcmd** 运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本中的 **setvar**命令。 有关如何在 **sqlcmd** 中使用 **setvar**的详细信息，请参阅 [将 sqlcmd 与脚本变量结合使用](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  在每个 **connectionoptions** 子句中，通过 **-E** 或 **-U** 指定的登录名必须是 **-S** 所指定实例中 **sysadmin**固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  

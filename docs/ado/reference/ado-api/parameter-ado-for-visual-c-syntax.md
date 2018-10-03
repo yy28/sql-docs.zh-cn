@@ -1,13 +1,11 @@
 ---
-title: 参数 (Visual c + + 语法的 ADO) |Microsoft 文档
+title: 参数 (ADO for Visual c + + 语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - Parameter collection [ADO], ADO for Visual C++ syntax
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43500a8e2ea054d4af7f82992cd94e20f0fc293d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 291ef7f063ef8c5fb0769ea8430eacef946797bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280496"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851505"
 ---
-# <a name="parameter-ado-for-visual-c-syntax"></a>参数 (Visual c + + 语法的 ADO)
+# <a name="parameter-ado-for-visual-c-syntax"></a>参数（ADO for Visual C++ 语法）
 ## <a name="methods"></a>方法  
   
 ```  

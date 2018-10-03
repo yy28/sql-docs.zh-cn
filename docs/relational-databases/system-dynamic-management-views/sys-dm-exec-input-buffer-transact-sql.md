@@ -5,9 +5,7 @@ ms.date: 10/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_exec_input_buffer
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7746f0fb0e23bf3c02d27b82ce1cdc69eca54bf6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708035"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
  上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，如果用户是数据库所有者，用户将看到所有正在执行的会话上[!INCLUDE[ssSDS](../../includes/sssds-md.md)]; 否则为用户会看到仅为当前会话。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此动态管理函数可以通过这样做，使用与 sys.dm_exec_sessions 或 sys.dm_exec_requests **CROSS APPLY**。  
   
 ## <a name="examples"></a>示例  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - secondary databases [SQL Server], Availability Groups
 - Availability Groups [SQL Server], troubleshooting
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
-caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09b6d19aad9b0095029405a5e0e4ddb1f7597b61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188117"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>解决失败的添加文件操作问题（AlwaysOn 可用性组）
   在某些 AlwaysOn 可用性组部署中，文件路径在承载主副本的系统与承载辅助副本的系统之间存在差异。 如果辅助副本上不存在添加文件操作的文件路径，则添加文件操作会在主数据库上取得成功。 但添加文件操作将会导致辅助数据库挂起。 而这又会导致辅助副本进入“非同步”状态。  

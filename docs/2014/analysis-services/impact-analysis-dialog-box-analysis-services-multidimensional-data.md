@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.impactanalysisdialog.f1
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02b5ee9613672762c466ba023ccabf1fa90d5892
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79a356f8afe169c049cfcf55ceb2626a9e3c9ec1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191487"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>“影响分析”对话框（Analysis Services - 多维数据）
   如果 **“处理”** 对话框中列出的对象已处理，则使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 **“影响分析”** 对话框来标识和处理受影响的依赖对象。 通过在 **“处理”** 对话框中单击 **“影响分析”** ，可以显示 **“影响分析”** 对话框。  
@@ -29,7 +26,7 @@ ms.locfileid: "37299377"
 > [!NOTE]  
 >  如果某个对象在多个方面受到影响，则该对象将显示多次。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **对象列表**  
  在网格中显示依赖对象的列表。 该网格包含以下列：  
   

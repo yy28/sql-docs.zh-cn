@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5af02be1c79b69fa113bec095ea9bf7a35354799
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5dd2ca31f890f0f16b3bbc68097572bb82d2bef2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179157"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 方法 (WMI MSReportServer_ConfigurationSetting)
   设置报表服务器的安全连接级别。  
@@ -54,7 +51,7 @@ public void SetSecureConnectionLevel(Int32 Level,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  调用时，报表服务器 SecureConnectionLevel 属性设置为指定的值。 值为 0 表示关闭了 SSL。 值大于或等于 1 标识打开了 SSL。  
   
 -   当设置值时，更改报表服务器配置文件中的 SecureConnectionLevel 元素，并`URLRoot`配置文件中的元素设置为使用"https://"，如果指定*级别*大于或如果等于 1 或使用"http://"指定*级别*为 0。  

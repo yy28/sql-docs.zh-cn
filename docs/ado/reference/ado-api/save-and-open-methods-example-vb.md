@@ -1,13 +1,11 @@
 ---
-title: 保存和打开方法的示例 (VB) |Microsoft 文档
+title: Save 和 Open 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - Save method [ADO], Visual Basic example
 - Open method [ADO]
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6541e8d8da07f956557d80d2f66144e56f216a24
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828845"
 ---
-# <a name="save-and-open-methods-example-vb"></a>保存和打开方法的示例 (VB)
-这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)和[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  
+# <a name="save-and-open-methods-example-vb"></a>Save 和 Open 方法示例 (VB)
+这三个示例演示如何[保存](../../../ado/reference/ado-api/save-method.md)并[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法可以一起使用。  
   
- 假定你在出差进行，并想要沿从数据库表。 你在继续之前，你访问数据作为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并将其保存在可移植的窗体中。 当你亲自前往你的目标时，你访问**记录集**用作局部，断开连接**记录集**。 对进行更改**记录集**，然后再次保存。 最后，当你回到家时，你重新连接到数据库，并更新与公路所做的更改。  
+ 假定您将在出差并且想要参加巡回赛从数据库表。 在之前，访问将数据作为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)并将其保存在可移植的窗体中。 当您在目标中，您可以访问**记录集**为本地，断开连接**记录集**。 进行更改**记录集**，然后再次保存。 最后，您回到家时，您将再次连接到数据库并更新与公路所做的更改。  
   
- 首先，访问并保存***作者***表。  
+ 首先，访问，并保存***作者***表。  
   
 ```  
 'BeginSaveVB  
@@ -88,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- 此时，您已经到达目标。 将访问***作者***表作为本地，断开连接**记录集**。 你必须具有**MSPersist**访问保存的文件中，你所使用的计算机上的提供程序 a:\Pubs.xml。  
+ 此时，您已到达目标。 将访问***作者***表为本地，断开连接**记录集**。 您必须具有**MSPersist**您用来访问保存在文件中，在计算机上的提供程序 a:\Pubs.xml。  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -103,5 +100,5 @@ Attribute VB_Name = "Save"
 ## <a name="see-also"></a>请参阅  
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [有关记录集持久性的详细信息](../../../ado/guide/data/more-about-recordset-persistence.md)   
+ [有关记录集暂留的详细信息](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

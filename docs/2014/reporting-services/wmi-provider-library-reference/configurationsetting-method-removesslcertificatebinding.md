@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c958eef4066c4eeb2c65a80b97457d94f8387554
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdd7f7431e4a266e17343d0d793b3bbaaffd2d6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146957"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings 方法 (WMI MSReportServer_ConfigurationSetting)
   删除 SSL 证书绑定。  
@@ -66,7 +63,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功；错误代码指示调用未成功。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法可以从 rsreportserver.config 文件中删除特定的绑定，也可以选择从 HTTP.SYS 中删除特定的绑定。  
   
 ## <a name="requirements"></a>要求  

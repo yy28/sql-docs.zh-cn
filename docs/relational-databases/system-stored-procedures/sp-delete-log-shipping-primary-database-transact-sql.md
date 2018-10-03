@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_log_shipping_primary_database
@@ -21,12 +18,12 @@ ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 302cdeb85ad475354d26a988580283db57415a40
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4b560b807dc1efbb2f89b0d446b962e2791a8e46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810565"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_delete_log_shipping_primary_database**必须从运行**主**主服务器上的数据库。 此存储过程执行以下操作：  
   
 1.  为指定的主数据库删除备份作业。  

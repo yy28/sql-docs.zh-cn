@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.tsql.f1
 helpviewer_keywords:
 - Execute T-SQL Statement Task dialog box
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
-caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9403ca422aa710c17a859b96d30ef0edcfb021b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dca18f0660785ec0c40837a561e6b632ab3c2d5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062289"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>“执行 T-SQL 语句”任务（维护计划）
   使用“执行 T-SQL 语句任务”对话框，可以通过向此维护计划添加所选择的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句来自定义维护计划。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“连接”**  
  选择执行此任务时使用的服务器连接。  
   

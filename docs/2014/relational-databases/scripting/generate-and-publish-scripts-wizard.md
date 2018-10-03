@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
@@ -42,16 +40,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc5ba07db49ac27ff5f36762abe6c1f1bcfac1d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192849"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>“生成和发布脚本向导”
   你可以使用“生成和发布脚本向导”创建脚本，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 的实例之间传输数据库。 您可以在本地网络中或从 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]为数据库引擎实例上的数据库生成脚本。 生成的脚本可以在数据库引擎或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]的另一个实例上运行。 您还可以使用该向导将数据库的内容直接发布到使用 Database Publishing Services 创建的 Web 服务。 您可以为整个数据库创建脚本，或将其限制为特定的对象。  

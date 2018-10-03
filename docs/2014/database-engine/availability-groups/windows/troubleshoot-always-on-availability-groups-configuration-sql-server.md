@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182257"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>解决 AlwaysOn 可用性组配置问题 (SQL Server)
   本主题提供的信息可帮助您解决在为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]配置服务器实例时遇到的典型问题。 典型配置问题包括 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 被禁用、帐户配置不当、数据库镜像端点不存在、端点无法访问（SQL Server 错误 1418）、网络访问不存在，以及联接数据库命令失败（SQL Server 错误 35250）。  

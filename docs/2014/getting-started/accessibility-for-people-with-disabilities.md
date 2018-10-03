@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server documentation, accessibility features
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-caps.latest.revision: 32
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 089dd0a7c9ab492450865d849ab3c24bd4473ec3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b3b0c85dd8fc106edff636f5e217bf46e281b42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184447"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>为残障人士提供的辅助功能
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 致力于使所有用户更轻松地使用其产品和服务。 本主题提供了一些有关可使 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 系列产品更便于残障人士使用的功能、产品和服务的信息。  

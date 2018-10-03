@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 396b4b32d2af95b8c7d49beab0fde988d2bee903
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4deeeaae2bb08d9f1e2b4c434ec262d0fb7bd679
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077487"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>无法刷新工作簿中用于数据连接的数据。 请重试，或与系统管理员联系。 以下连接无法刷新：PowerPivot 数据
   对于包含 PowerPivot 数据的 Excel 工作簿，如果 Excel Services 提交对某一 PowerPivot 服务器的连接请求并且该请求失败，则会返回此错误。  

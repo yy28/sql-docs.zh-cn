@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ab8dd8da08b66b3f954207c2f99ed94e5f080860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7451a7d6cdb93e4c5ab6d66e240d3a5c14ff4b59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134767"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>编写自定义 Foreach 枚举器代码
   创建继承自 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator> 基类的类并将 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 属性应用于该类后，必须重写基类的属性和方法的实现以提供自定义功能。  
@@ -112,7 +109,7 @@ Public Overrides Function GetEnumerator() As Object
 End Function  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [创建自定义 Foreach 枚举器](creating-a-custom-foreach-enumerator.md)   

@@ -1,1 +1,1 @@
-<Token>Microsoft SQL Operations Studio （预览版）</Token>
+Azure 数据 Studio

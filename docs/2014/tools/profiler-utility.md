@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ed282771deab06c6d3e2d5b7c52999562d17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ec9ce68b6c1838507cbb139130a4bcf7bf986ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128289"
 ---
 # <a name="profiler-utility"></a>Profiler 实用工具
   **Profiler** 实用工具可以启动 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 工具。 利用此主题后面列出的可选参数，可以控制应用程序的启动方式。  
@@ -64,7 +61,7 @@ ms.locfileid: "37268083"
  用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的用户登录 ID。 登录 ID 区分大小写。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]的用户。  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]。  
   
  **/P** *password*  
  指定用户指定的用于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证的密码。  
@@ -121,7 +118,7 @@ ms.locfileid: "37268083"
  **/Z**  *file_size*  
  指定跟踪文件的大小（以兆字节 (MB) 为单位）。 默认大小是 5 MB。 若启用了滚动功能，则所有滚动文件的大小将被限制为此参数所指定的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要使用特定的模板启动跟踪，请同时使用 **/S** 和 **/T** 选项。 例如，若要使用 MyServer\MyInstance 上的 Standard 模板启动跟踪，请在命令提示符处输入以下内容：  
   
 ```  

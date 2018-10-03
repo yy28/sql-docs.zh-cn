@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - displaying jobs
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20bc9dd5fa7e211ee0892324dc9b9a36c14977a6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 89bef0dbae6e3468fbb04d318dd8c68816892f75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181209"
 ---
 # <a name="view-or-modify-jobs"></a>查看或修改作业
   您可以查看任何已创建的作业。 运行完一个作业后，还可以查看它的历史记录。 查看作业历史记录使您可以查看作业何时运行、整个作业的状态以及作业中每步作业的状态。 在作业成功完成后，您可以查看该作业过去是否曾失败，还可以查看作业每次运行时创建的输出内容。 **sysadmin** 固定服务器角色的成员可以查看或修改所有人的作业。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copycolumntrans.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bd1ef03d1a45151e6f81d46b15e4e7fbc19f9a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d6c78e6dd604d5b7062ccebfcd4170fdee27578
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064257"
 ---
 # <a name="copy-column-transformation"></a>复制列转换
   复制列转换通过复制输入列并将新列添加到转换输出来创建新列。 以后在数据流中，可将不同的转换应用到列副本。 例如，您可以使用复制列转换来创建列的副本，然后使用字符映射表转换将复制的数据转换为大写字符，或使用聚合转换将聚合应用到此新列。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
 - Reporting Services, scripting
 - scripting [Reporting Services]
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b69a9713d015db66945a1c096f8896998459406
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 949ceb6b2aff0dd393cfa0c58e91355f20f4c741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166509"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>脚本编写和带 Reporting Services 的 PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 支持范围广泛的开发和管理方案，通过脚本，包括 rs.exe 命令行实用工具、 适用于 SharePoint 模式报表服务器，PowerShell cmdlet 以及利用[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]从适用于本机 PowerShell 的对象模型和SharePoint 模式。  

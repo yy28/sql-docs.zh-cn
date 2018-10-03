@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FTP connection manager
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b22fbb63dda4b6e3211a5bb53cfd70e243e6960f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 989049c5371d35d53282f5780dcfc9db13312c7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188837"
 ---
 # <a name="ftp-connection-manager"></a>FTP 连接管理器
-  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
+  FTP 连接管理器使得包可以连接到文件传输协议 (FTP) 服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含的 FTP 任务使用此连接管理器。  
   
  将 FTP 连接管理器添加到包时，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建可以在运行时决定 FTP 连接的连接管理器，设置该连接管理器的属性，并将该连接管理器添加到包中的 `Connections` 集合。  
   

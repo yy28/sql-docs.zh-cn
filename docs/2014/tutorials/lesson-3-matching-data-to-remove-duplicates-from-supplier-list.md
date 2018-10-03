@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f244dc7d62f19967aae7ee3bc32a634008fcc94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c5074a670fa1ab1c6a837f06b5cd27b21707400
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139587"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>第 3 课：匹配数据以便从供应商列表中删除重复项
   您可以通过在知识库中创建匹配策略，为执行匹配活动准备知识库。 一个知识库中只能有一个匹配策略。 一个匹配策略包含一个或多个匹配规则。 规则识别匹配过程中涉及的域，并指定每个域值在匹配判断中的权重。 您可以在规则中指定域值必须是精确匹配还是相似匹配以及相似度。 还指定域匹配是否为匹配过程的先决条件。 您可以针对示例数据单独测试每个规则以及测试整个策略。 测试过程显示的记录其匹配分数大于**最低记录分数**分类 （组） 中的 DQS 配置中指定的阈值。 您可以继续更改策略中的规则，直到满意为止。  

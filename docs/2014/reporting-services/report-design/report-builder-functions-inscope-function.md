@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ebf90710587c73206408dfda1429a90b58f39621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e37a25432e6e701ffd97bf95799b1a567748e1df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183779"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 函数（报表生成器和 SSRS）
   指示项的当前实例是否位于指定的作用域中。  
@@ -40,7 +37,7 @@ InScope(scope)
 ## <a name="return-type"></a>返回类型  
  返回`Boolean`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `InScope`函数测试中指定的作用域的成员的当前实例的报表项作用域*作用域*参数。  
   
  *Scope* 不能是表达式。  

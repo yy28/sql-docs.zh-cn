@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event forwarding servers [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - alerts [SQL Server], management servers
 - SQL Server Agent alerts, management servers
 ms.assetid: 8f4ee7f5-80df-49fd-b2b8-d020e04b6e1b
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 459d771b9f8b79a5194c754a81ab132b18559bf5
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2d1bbf304680611eca21f5d5baeb98a251f279e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807533"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193007"
 ---
 # <a name="manage-events"></a>管理事件
   可以将达到或超过特定错误严重级别的所有事件消息转发到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 这称为“事件转发”。 转发服务器是一台专用服务器，同时也可以是一台主服务器。 可以利用事件转发对一组服务器进行集中警报管理，从而减少负荷较重的服务器的工作负荷。  

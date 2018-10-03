@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190277"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>聚类分析模型的挖掘模型内容（Analysis Services – 数据挖掘）
   本主题介绍使用 Microsoft 聚类分析算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -44,7 +41,7 @@ ms.locfileid: "37153308"
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|方差|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |年龄|Missing|0|0|0|1（缺失）|  
-|年龄|44.9016152716593|12939|@shouldalert|125.663453102554|3（连续）|  
+|年龄|44.9016152716593|12939|1|125.663453102554|3（连续）|  
 |性别|Missing|0|0|0|1（缺失）|  
 |性别|F|6350|0.490764355823479|0|4（离散）|  
 |性别|M|6589|0.509235644176521|0|4（离散）|  
@@ -156,7 +153,7 @@ ms.locfileid: "37153308"
   
  **群集节点** 分类的名称。 示例：分类 1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了用于创建聚类分析模型的多种方法。 如果不了解所使用的模型是使用哪种方法创建的，可以使用 ADOMD 客户端或 AMO，也可以通过查询该数据挖掘架构行集，以编程方式检索该模型的元数据。 有关详细信息，请参阅 [查询用于创建挖掘模型的参数](query-the-parameters-used-to-create-a-mining-model.md)。  
   
 > [!NOTE]  

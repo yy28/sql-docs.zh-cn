@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [SQL Server Native Client]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d6eb857c3bd21bbbd1c98a2c5a19806a253df6b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d9635a55fbf36aacabb6c24512d5afd7219f8476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079857"
 ---
 # <a name="performing-bulk-copy-operations"></a>执行大容量复制操作
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 大容量复制功能支持将大量数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表或视图中，或从其中传出。 也可以通过指定 SELECT 语句将数据传出。 可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和操作系统的数据文件（比如 ASCII 文件）之间移动数据。 数据文件可以有不同格式；定义格式是为了对格式文件中的数据进行大容量复制。 也可以选择将数据加载到程序变量中，然后使用大容量复制函数和方法将数据传输到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  

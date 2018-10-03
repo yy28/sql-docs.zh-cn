@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 34d6c6eb60d48edad7d00a4baf890814dab8a016
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186197"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 实用工具故障排除
   解决 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具问题可能包括解决向 UCP 注册 SQL Server 实例的失败的操作、排除导致 UCP 上托管实例列表视图中图标灰显的失败的数据收集故障、缓解性能瓶颈或者解决资源运行状况问题。 有关标识的资源运行状况问题的缓解[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]UCP，请参阅[进行故障排除 SQL Server 资源运行状况&#40;SQL Server 实用工具&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)。  

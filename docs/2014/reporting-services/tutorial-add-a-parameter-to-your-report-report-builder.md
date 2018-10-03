@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec3f74d9237d917fd4b5d94e029cb5a15ea6e59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190297"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教程：向报表添加参数（报表生成器）
   通过向报表添加参数，用户可以筛选来自数据源的报表数据或报表中的报表数据。 报表参数是针对您在数据集查询中包含的每个查询参数自动创建的。 参数的数据类型确定了参数在报表视图工具栏上显示的方式。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6609ffe7c70169a2c261ca6103eeb74d34a62533
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 236f883056ccfd7c66701f5126b313ccbe2361b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074557"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Teradata 连接类型 (SSRS)
   若要在报表中包含来自 Teradata 关系数据库的数据，您必须拥有一个基于 Teradata 类型的报表数据源的数据集。 此内置数据源类型基于 .NET Managed Provider for Teradata 数据处理扩展插件。  

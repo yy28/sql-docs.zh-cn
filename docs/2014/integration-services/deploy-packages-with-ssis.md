@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49aff131d55dbc38511fdae0dc930e161904a985
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188967"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教程：部署包
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供将包轻松部署到其他计算机的工具。 部署工具还管理任何依赖项，如包需要的配置和文件。 在本教程中，您将了解如何使用这些工具在目标计算机上安装包及其依赖项。  
@@ -66,7 +63,7 @@ ms.locfileid: "37213427"
   
 -   带有 AdventureWorks 数据库的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的用户。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   

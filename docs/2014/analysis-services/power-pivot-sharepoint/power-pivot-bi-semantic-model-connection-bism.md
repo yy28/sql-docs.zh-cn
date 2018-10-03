@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7816d4cebb8ad8344c240a7c5a32229e0b07105f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191587"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 语义模型连接 (.bism)
   BI 语义模型连接 (.bism) 是可移植的连接 Excel 连接或[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]向报告[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格模型数据库或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]在多维模式下的实例。 如果您熟悉 Office 数据连接 (.odc) 文件，则您会注意到定义和使用 .bism 连接文件的方式的相似性。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13781ef7b1854026acf1a237deb56f4fbaf6fa98
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1ee55e0ec602ee2723b9e31b5dc80c611071b8e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073877"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>报表服务器数据库（SSRS 本机模式）
   报表服务器是一种无状态服务器，它使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 来存储元数据和对象定义。 为了将永久数据存储与临时存储要求分开，本机模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装使用两个数据库。 这两个数据库一起创建，并按名称绑定。 默认情况下，数据库名称分别为 **reportserver** 和 **reportservertempdb**。  

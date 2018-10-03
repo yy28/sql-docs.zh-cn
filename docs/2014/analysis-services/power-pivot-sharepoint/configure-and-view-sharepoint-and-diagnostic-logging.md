@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7099282f8fef9d8d029249ba5637eba6fa6bf1f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255839"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188347"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>配置和查看 SharePoint 日志文件和诊断日志记录 (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器操作、 事件和消息记录在 SharePoint 日志文件中。 使用此主题中的信息可配置日志记录级别和查看日志文件信息。 您可以控制要将哪些 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服务器事件记录到文件中。 还可以控制所记录的消息的严重性。 有关详细信息，请参阅[配置使用情况数据收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  

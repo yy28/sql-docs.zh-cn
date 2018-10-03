@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], fetching rows
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - ODBC cursors, scrolling rows
 - bookmarks [ODBC]
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb9f3284ab180ed05acc2a199c3b8cece8a1e40b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7f54f9c61bb78a3c0e52adc491b95e03ad85ecd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430696"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102062"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>在 ODBC 中为行加书签
   书签是用于标识数据行的值。 只有驱动程序或数据源才知道书签值的含义。 例如，书签可能与行号一样简单，也可能与磁盘地址一样复杂。 在 ODBC 中，应用程序为特定行请求书签，存储该书签，并将其传回到游标以返回到该行。  

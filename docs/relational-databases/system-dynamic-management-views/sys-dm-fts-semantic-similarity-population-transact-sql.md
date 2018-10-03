@@ -1,12 +1,10 @@
 ---
-title: sys.dm_fts_semantic_similarity_population (Transact SQL) |Microsoft 文档
+title: sys.dm_fts_semantic_similarity_population (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_semantic_similarity_population dynamic management view
 ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e28dfafb637aebf7e22f4b61f595f02de0f1284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: d65ba08739cde5dede23745c1a891246a6194360
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644235"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   为关联有语义索引的每个表中的每个相似性索引返回一行关于文档相似性索引填充状态的信息。  
   
- 填充步骤紧随提取步骤。 相似性提取步骤的状态信息，请参阅[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
+ 填充步骤紧随提取步骤。 有关相似性提取步骤的状态信息，请参阅[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
     
 ||||  
 |-|-|-|  
@@ -58,9 +55,9 @@ ms.locfileid: "34465573"
 ## <a name="metadata"></a>元数据  
  语义索引编制的状态的详细信息，请查询[sys.dm_fts_index_population &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -71,7 +68,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [管理和监视语义搜索](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

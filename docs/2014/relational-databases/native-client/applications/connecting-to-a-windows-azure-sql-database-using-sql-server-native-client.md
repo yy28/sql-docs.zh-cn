@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c0734537d44382e6a638b3033d4a3d822821dbf
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a03d8d9aa407fd57f658c76a035650952648dcfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063757"
 ---
 # <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>使用 SQL Server Native Client 连接到 Azure SQL Database
   有关示例，演示如何连接到[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client，请参阅[开发： 操作指南主题 （Windows Azure SQL 数据库）](http://msdn.microsoft.com/library/ee621787.aspx)。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, commands
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 231c749ec41e571de17e18405e805210e6dc4b0b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186427"
 ---
 # <a name="preparing-commands"></a>准备命令
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持命令准备，以优化多次执行的单个命令。不过，命令准备会带来开销，使用者不必准备执行次数多于一次的命令。 一般而言，如果命令的执行次数超过三次，则应当进行准备。  
@@ -42,17 +39,17 @@ ms.locfileid: "37428636"
   
  临时存储过程的创建由特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口的初始化属性 SSPROP_INIT_USEPROCFORPREP 控制。 如果属性值为 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会在准备命令时尝试创建存储过程。 如果应用程序用户拥有足够的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 权限，存储过程将创建成功。  
   
- 对于很少断开连接的用户来说，创建的临时存储过程可能需要大量资源的**tempdb**，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]创建临时对象的系统数据库。 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON，那么由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口创建的临时存储过程，仅当创建命令的会话断开与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接时才会删除。 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
+ 对于很少断开连接的使用者，临时存储过程的创建可能需要大量的 tempdb（即在其中创建临时对象的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据库）资源。 如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ ON，那么由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口创建的临时存储过程，仅当创建命令的会话断开与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的连接时才会删除。 如果该连接为数据源初始化时创建的默认连接，则临时存储过程仅当数据源变成未初始化状态时才删除。  
   
  如果 SSPROP_INIT_USEPROCFORPREP 的值为 SSPROPVAL_USEPROCFORPREP_ON_DROP，那么当发生以下情况之一时，会删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口临时存储过程：  
   
--   使用者使用**icommandtext:: Setcommandtext**以指示新的命令。  
+-   使用者使用 ICommandText::SetCommandText 指示新的命令。  
   
--   使用者使用**icommandprepare:: Unprepare**以指示它不再需要命令文本。  
+-   使用者使用 ICommandPrepare::Unprepare 指示它不再需要命令文本。  
   
 -   使用者使用临时存储过程释放对命令对象的所有引用。  
   
- 命令对象中具有最多一个临时存储的过程**tempdb**。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
+ 命令对象在 tempdb 中最多具有一个临时存储过程。 任何现有的临时存储过程都表示特定命令对象的当前命令文本。  
   
 ## <a name="see-also"></a>请参阅  
  [命令](commands.md)  

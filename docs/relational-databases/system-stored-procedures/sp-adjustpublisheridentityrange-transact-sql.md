@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -22,12 +17,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2016996f05393777f8284c78d854301f22ba8f73
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625015"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +53,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_adjustpublisheridentityrange**用于所有类型的复制。  
   
  对于已启用自动标识范围的发布，分发代理或合并代理负责基于发布的阈值自动调整发布的标识范围。 但是，如果出于某种原因分发代理或合并代理未运行的一小段时间，并且标识范围资源已使用了很大程度到阈值的点，用户可以调用**sp_adjustpublisheridentityrange**若要为发布服务器分配新范围的值。  

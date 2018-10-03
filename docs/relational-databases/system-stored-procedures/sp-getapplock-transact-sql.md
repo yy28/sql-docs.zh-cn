@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63a6367bbacb5affa3bf16a30ce9187a46add9fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099656"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796205"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,13 +73,13 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |ReplTest1|结果|  
 |-----------|------------|  
 |0|锁已同时成功授予。|  
-|@shouldalert|在等待释放其他不兼容锁后成功授予锁。|  
+|1|在等待释放其他不兼容锁后成功授予锁。|  
 |-1|锁请求超时。|  
 |-2|锁请求被取消。|  
 |-3|选择锁请求作为死锁牺牲品。|  
 |-999|指示参数验证或其他调用错误。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对资源设置的锁与当前事务或当前会话相关联。 当事务提交或回滚时，将释放与当前事务相关联的锁。 当会话注销时，将释放与会话相关联的锁。当服务器因任何原因而关闭时，将释放所有锁。  
   
  sp_getapplock 创建的锁资源在会话的当前数据库中创建。 每个锁资源都由下列值的组合值进行标识：  

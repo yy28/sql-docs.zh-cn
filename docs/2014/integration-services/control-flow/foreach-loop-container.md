@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3d67e256b6dca357db45cd831b2f9eab3ff93dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103449"
 ---
 # <a name="foreach-loop-container"></a>Foreach 循环容器
   Foreach 循环容器定义包中的重复控制流。 循环的实现与编程语言中的 **Foreach** 循环结构类似。 在包中，通过使用 Foreach 枚举器启用循环。  Foreach 循环容器将重复指定枚举器的每个成员的控制流。  

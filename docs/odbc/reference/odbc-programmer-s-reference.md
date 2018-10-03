@@ -1,128 +1,125 @@
 ---
-title: ODBC 程序员&#39;的参考 |Microsoft 文档
+title: ODBC 程序员&#39;的参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], reference
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b4ac57816359fe1b69fb46d5d60967804cde5d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fc5177fda3562efe4561f9d165629419f8a629b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850917"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程序员&#39;的参考
 *ODBC 程序员参考*包含以下各节。  
   
 -   [What's New in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md)列出已添加 Windows 8 SDK 中的新 ODBC 功能。  
   
--   [示例 ODBC 程序](../../odbc/reference/sample-odbc-program.md)演示一个示例 ODBC 程序程序。  
+-   [示例 ODBC 程序](../../odbc/reference/sample-odbc-program.md)显示示例 ODBC 程序。  
   
--   [简介 ODBC](../../odbc/reference/introduction-to-odbc.md)提供简要的历史记录的结构化查询语言和 ODBC 和 ODBC 接口的概念性信息。  
+-   [ODBC 简介](../../odbc/reference/introduction-to-odbc.md)提供简要的历史记录的结构化查询语言和 ODBC 和 ODBC 接口的概念信息。  
   
--   [开发应用程序](../../odbc/reference/develop-app/developing-applications.md)包含有关开发使用 ODBC 接口和驱动程序实现它的应用程序的信息。  
+-   [开发应用程序](../../odbc/reference/develop-app/developing-applications.md)包含有关开发使用 ODBC 接口和实现它的驱动程序的应用程序的信息。  
   
--   [安装和配置 ODBC 软件](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md)提供有关安装和设置 DLL 的函数参考信息。  
+-   [安装和配置 ODBC 软件](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md)提供有关安装和设置 DLL 函数引用的信息。  
   
 -   [开发 ODBC 驱动程序](../../odbc/reference/develop-driver/developing-an-odbc-driver.md)包含编写驱动程序的信息。  
   
--   [API 参考](../../odbc/reference/syntax/odbc-reference.md)包含语法和语义信息所有 ODBC 函数。  
+-   [API 参考](../../odbc/reference/syntax/odbc-reference.md)包含的语法和语义信息的所有 ODBC 函数。  
   
--   [ODBC 附录](../../odbc/reference/appendixes/odbc-appendixes.md)包含技术详细信息表和引用表 ODBC 错误代码、 数据类型和 SQL 语法。  
+-   [ODBC 附录](../../odbc/reference/appendixes/odbc-appendixes.md)包含技术详细信息和引用表的 ODBC 错误代码、 数据类型和 SQL 语法。  
   
 ## <a name="working-with-the-odbc-documentation"></a>使用 ODBC 文档  
- ODBC 接口用于 C 编程语言。 使用 ODBC 接口跨越三个区域： ODBC 的 SQL 语句的函数调用及 C 编程。 本文档假设如下：  
+ ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三大块： SQL 语句，ODBC 函数调用，以及 C 编程。 本文档的假设条件如下：  
   
 -   C 编程语言的应用知识。  
   
 -   常规 DBMS 知识和熟悉 SQL。  
   
- 将使用以下排字约定。  
+ 使用以下排字约定。  
   
-|格式|用于|  
+|“格式”|用于|  
 |------------|--------------|  
-|选择 * 从|大写字母指示 SQL 语句、 宏名称和在操作系统命令级别使用的术语。|  
-|`RETCODE SQLFetch(hdbc)`|等宽字体用于示例命令行和程序代码。|  
-|argument|斜体字表示编程参数，用户或应用程序必须提供，或者 word 强调的信息。|  
-|**SQLEndTran**|粗体类型指示必须严格按所示，包括函数名称键入语法。|  
-|&#124;|竖线分隔的语法行中的两个互相排斥的选项。|  
+|选择 * 从|大写的字母指示 SQL 语句、 宏名称和操作系统命令级别使用的术语。|  
+|`RETCODE SQLFetch(hdbc)`|Monospace 字体用于示例命令行和程序代码。|  
+|argument|斜体字表明以编程方式参数，用户或应用程序必须提供，或 word 强调的信息。|  
+|**SQLEndTran**|粗体表示必须按所示，其中包括函数名称的原样键入的语法。|  
+|&#124;|竖线用于分隔两个互斥选项的语法行中。|  
 |...|省略号表示自变量可以重复多次。|  
-|。 。 。|三个点的一列指示延续前面的代码行。|  
+|. . .|三个点的列指示延续前面的代码行。|  
   
 ## <a name="about-the-code-examples"></a>有关代码示例  
- 本指南中的代码示例旨在仅用于说明目的。 因为它们编写主要是为了演示 ODBC 原则，效率有时在一旁为了清楚起见。 此外，代码的整个部分有时省略了为清楚起见。 其中包括非 ODBC 函数 （其名称不会启动与"SQL"这些函数） 和大多数的错误处理的定义。  
+ 本指南中的代码示例旨在仅用于说明目的。 因为它们编写主要是为了演示 ODBC 原则，效率有时会在一旁为了清楚起见。 此外，代码的整个部分有时省略了为清楚起见。 其中包括非 ODBC 函数 （其名称不以"SQL"开头的那些函数） 和大多数的错误处理的定义。  
   
- 所有的代码示例使用 ANSI 字符串和相同的数据库架构，启动时显示[目录函数](../../odbc/reference/develop-app/catalog-functions.md)。  
+ 所有代码示例都使用 ANSI 字符串和相同的数据库架构，而会显示在开头[目录函数](../../odbc/reference/develop-app/catalog-functions.md)。  
   
 ## <a name="recommended-reading"></a>推荐阅读的主题  
  有关 SQL 的详细信息，以下标准有：  
   
--   使用完整性增强功能，ANSI，1989 ANSI X3.135 1989 数据库语言 — SQL。  
+-   数据库语言 — SQL 完整性增强功能，ANSI，1989 ANSI X3.135 1989 与。  
   
--   数据库语言-SQL: ANSI X3H2 和 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL 92)。  
+-   数据库语言-SQL: ANSI X3H2 和 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92)。  
   
--   打开组、 数据管理： 结构化的查询语言 (SQL) 版本 2 (Open Group，1996年)。  
+-   打开组、 数据管理： 结构化查询语言 (SQL)，版本 2 (Open Group，1996年)。  
   
- 除了标准和特定于供应商 SQL 指南，很多书描述 SQL，包括：  
+ 除了标准和特定于供应商 SQL 参考线，很多书描述 SQL，包括：  
   
 -   日期、 C.J.，与 Darwen，Hugh: *SQL 标准的指南*(Addison Wesley，1993年)。  
   
--   坚持、 Sandra l。、 Darnovsky、 Marcy 和 Bowman，Judith s。:*实际 SQL 手册*(Addison Wesley，1989年)。  
+-   Emerson、 Sandra L.、 Darnovsky、 Marcy 和 Bowman，Judith S.:*实际 SQL 手册*(Addison Wesley，1989年)。  
   
--   Groff，James。 和 Weinberg，Paul N.:*使用 SQL* （Osborne McGraw-峰，1990年）。  
+-   Groff，James R.和 Weinberg，Paul N.:*使用 SQL* (Osborne Mcgraw-hill，1990年)。  
   
 -   Gruber，Martin:*了解 SQL* (Sybex，1990年)。  
   
--   Hursch 上, 插座 l。 和菲 J.: *SQL、 结构化的查询语言*（选项卡丛书，1988年）。  
+-   Hursch，Jack L.和菲 J.: *SQL、 结构化的查询语言*(选项卡 Books，1988年)。  
   
--   Melton、 Jim 和人 Simon Alan。:*了解新的 SQL： 完整指南*（Morgan Kaufmann 发布者，1993年）。  
+-   Melton、 Jim 和 Simon，Alan R.:*了解新的 SQL： 的完整指南*（Morgan Kaufmann 出版社，1993年）。  
   
--   Pascal、 Fabian: *SQL 和关系的基础知识*(& T 丛书，1990年)。  
+-   Pascal，卡尔蔡司工业： *SQL 和关系的基础知识*（M 和 T 书籍，1990年）。  
   
--   Trimble、 j.Harvey，先生和 Chappell，David: *Visual SQL 简介*(Wiley，1989)。  
+-   Trimble、 J.Harvey，Jr.和 Chappell，David: *SQL 的视频介绍*(Wiley，1989)。  
   
 -   Van der Lan、 Rick F.:*简介 SQL* (Addison Wesley，1988年)。  
   
--   Vang、 Soren: *SQL 和关系数据库*（Microtrend 丛书，1990年）。  
+-   Vang、 Soren: *SQL 和关系数据库*(Microtrend Books，1990年)。  
   
 -   Viescas，John: *SQL 快速参考指南*(Microsoft Corp.，1989年)。  
   
- 有关处理的事务的其他信息，请参阅：  
+ 有关事务处理的其他信息，请参阅：  
   
--   灰色，j.n。 和 Reuter、 Andreas:*事务处理： 概念和技术*（Morgan Kaufmann 发布者，1993年）。  
+-   灰色，J.n。 和 Reuter，Andreas:*事务处理： 概念和技术*（Morgan Kaufmann 出版社，1993年）。  
   
 -   Hackathorn，Richard D.:*企业数据库连接*(Wiley & 儿子，1993年)。  
   
- 有关调用级接口的详细信息，以下标准有：  
+ 有关调用级别接口的详细信息，以下标准有：  
   
--   Open Group*数据管理： SQL 调用级别界面 (CLI)，C451* （打开组，1995年）。  
+-   Open Group*数据管理： SQL 调用级别接口 (CLI) C451* (Open Group，1995年)。  
   
--   ISO/IEC 9075-3:1995，调用级接口 (SQL/CLI)。  
+-   ISO/IEC 9075-3:1995，调用级别接口 (SQL/CLI)。  
   
- 有关 ODBC 的其他信息，有多种丛书都是可用，包括：  
+ 有关 ODBC 的其他信息，大量书籍可供使用，包括：  
   
 -   Geiger Kyle:*内 ODBC* (Microsoft Press®，1995年)。  
   
--   Gryphon、 Robert、 Charpentier、 Luc、 Oelschlager、 Jon、 Shoemaker，Andrew，交叉，Jim，和 Lilley、 说 W.:*使用 ODBC 2* （汉阳，1994年）。  
+-   Gryphon、 Robert、 Charpentier、 l u c、 Oelschlager、 Jon、 Shoemaker，Andrew，交叉，Jim，和 Lilley、 Albert W.:*使用 ODBC 2* (Que，1994年)。  
   
--   Johnston、 Tom 和 Osborne，标记： *ODBC 开发人员指南*(Howard W.Sam & 公司，1994年)。  
+-   约翰斯顿、 Tom 和 Osborne，标记： *ODBC 开发人员指南*（Howard W.Sam 和公司，1994年）。  
   
--   北部，Ken: *Windows 多 DBMS 编程： 为 DBMS 项目使用 c + +、 Visual Basic、 ODBC、 OLE 2 和工具*(John Wiley & 儿子，Inc.，1995年)。  
+-   北部，Ken: *Windows 多 DBMS 编程： 使用 c + +、 Visual Basic、 ODBC、 OLE 2 和工具，用于 DBMS 项目*（John Wiley 和儿子，Inc.，1995年）。  
   
--   Stegman、 Michael o。、 Signore、 Robert 和 Creamer，John: *ODBC 解决方案、 开放式数据库连接中的分布式环境*（McGraw 峰，1995年）。  
+-   Stegman、 Michael O.、 Signore、 Robert 和 Creamer，John: *ODBC 解决方案、 开放式数据库连接中的分布式环境*(2.0》(mcgraw-Hill，1995年)。  
   
--   图案来工作，Keith:*使用 ODBC 2* （汉阳，1994年）。  
+-   Welch，Keith:*使用 ODBC 2* (Que，1994年)。  
   
--   Whiting，帐单：*自学 ODBC 在 21 天内*(Howard W.Sam & 公司，1994年)。
+-   Whiting，Bill:*自学 ODBC 二十一个天内*（Howard W.Sam 和公司，1994年）。

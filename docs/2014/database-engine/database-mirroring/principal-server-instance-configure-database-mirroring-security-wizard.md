@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.principalsrvr.f1
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1a0074f6b48b3b8c02a2cf85603ccf807e1098b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188847"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>主体服务器实例（配置数据库镜像安全向导）
   使用此页可以指定有关主体数据库的服务器实例的信息。 主体数据库是开始镜像会话的数据库的副本。 会话开始后，主体数据库是接受用户更改的数据库副本。 （当发生故障转移时，主体和镜像角色交换；因此，初始的主体数据库可能不再是主体数据库。）  
@@ -31,7 +28,7 @@ ms.locfileid: "37209757"
   
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **主体服务器实例**  
  因为 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的数据库镜像总是从主体服务器配置，所以当前的服务器实例总是为主体服务器实例。  
   

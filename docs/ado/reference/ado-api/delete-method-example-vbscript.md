@@ -1,38 +1,35 @@
 ---
-title: 删除方法示例 (VBScript) |Microsoft 文档
+title: Delete 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787455"
 ---
-# <a name="delete-method-example-vbscript"></a>删除方法示例 (VBScript)
+# <a name="delete-method-example-vbscript"></a>Delete 方法示例 (VBScript)
 此示例使用[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)方法来删除从指定的记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 使用下面的示例活动服务器页面 (ASP)。 若要查看此完全正常运行的示例，必须具有源 AdvWorks.mdb （随 SDK 一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑的路径以反映的代码示例中的数据此文件的实际位置。 这是 Microsoft Access 数据库文件。  
+ 使用下面的示例 Active Server Page (ASP)。 若要查看此示例中完全正常运行，必须具有源 AdvWorks.mdb （随 SDK 一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑路径以反映代码示例中的数据此文件的实际位置。 这是 Microsoft Access 数据库文件。  
   
- 使用**查找**找到文件 Adovbs.inc 并将其放置在你打算使用的目录中。 剪切和将下面的代码粘贴到记事本或其他文本编辑器，并将其保存为**DeleteVBS.asp**。 你可以在任何客户端浏览器中查看的结果。  
+ 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并将以下代码粘贴到记事本或其他文本编辑器，并将其保存为**DeleteVBS.asp**。 你可以在任何客户端浏览器中查看结果。  
   
- 若要执行该示例，请尝试使用[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)示例首先以添加一些记录。 然后你可以尝试将其删除。 在任何客户端浏览器中查看的结果。  
+ 若要演练本示例，请尝试使用[AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)首先添加某些记录的示例。 然后您可以尝试将其删除。 在任何客户端浏览器中查看结果。  
   
 ```  
 <!-- BeginDeleteVBS -->  

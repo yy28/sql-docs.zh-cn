@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
 - log shipping [SQL Server], database mirroring
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 97b618470bbf5fb95ed4817f17f48890a70a5990
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112092"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>数据库镜像和日志传送 (SQL Server)
   可以镜像或使用日志传送给定的数据库；也可以同时镜像并使用日志传送该数据库。 若要选择使用的方法，请考虑下列事项：  
@@ -68,7 +65,7 @@ ms.locfileid: "37269583"
   
  ![日志传送和数据库镜像](../media/logshipping-and-dbm-automatic-failover.gif "日志传送和数据库镜像")  
   
- 完成镜像故障转移之后，辅助服务器上定义的主服务器名称保持不变。 实例时都提供 SQL Server 登录名。  
+ 完成镜像故障转移之后，辅助服务器上定义的主服务器名称保持不变。 .  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>数据库镜像对远程监视实例的影响  
  当日志传送与远程监视实例一起使用时，组合使用日志传送会话和数据库镜像会影响监视器表中的信息。 有关主服务器的信息是在主体/主服务器上配置的监视器与在每个辅助服务器上配置的监视器的组合。  

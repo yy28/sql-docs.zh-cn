@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - crawls [full-text search]
 - max full-text crawl range option
 ms.assetid: a49de86b-0891-4dcd-89c0-ead30aab00e0
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e564a81b9466750e882d4ebe19604deb92f87e34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 640e2ad264f57233297ba9dcfaae2312588e74a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090727"
 ---
 # <a name="max-full-text-crawl-range-server-configuration-option"></a>max full-text crawl range 服务器配置选项
   使用 **max full-text crawl range** 选项可以优化 CPU 使用率，从而提高完全爬网时的爬网性能。 使用此选项，可以指定索引完全爬网时 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的分区数。 例如，如果有许多 CPU 且它们的使用率并非最佳，则可以增加此选项的最大值。 除了此选项以外， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 还使用众多其他因素（如表中的行数和 CPU 数）来确定应该使用的实际分区数。  

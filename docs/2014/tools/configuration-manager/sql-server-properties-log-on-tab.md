@@ -1,25 +1,22 @@
 ---
-title: SQL Server 属性 （在选项卡上的日志） |Microsoft Docs
+title: SQL Server 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 942c6734b215c8d6c4acafbb7560d6b762246a44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48746f150d12342b8ab0c5b95ab6a1164d7b2500
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062877"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server 属性（“登录”选项卡）
   使用 **“SQL Server 属性”** 对话框中的 **“登录”** 选项卡，可以指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务使用的帐户，更改帐户密码，还可以启动和停止该服务。 对帐户密码的更改立即生效。  
@@ -29,7 +26,7 @@ ms.locfileid: "37272403"
 >   
 >  有关选择帐户以运行服务的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机帮助中的“设置 Windows 服务帐户”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **内置帐户**  
  **Local System**  
  -   指定本地系统帐户。 该帐户不需要密码。 但是，本地系统帐户可能会阻止该服务与其他服务器进行交互，具体取决于该帐户所拥有的权限。  

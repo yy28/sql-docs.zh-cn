@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], architecture
 - architecture [CLR integration]
 ms.assetid: 05e4b872-3d21-46de-b4d5-739b5f2a0cf9
-caps.latest.revision: 39
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4ecea20b8ec2cb42d6945e14ea0777166a37d9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c361cb95f8da933b108591c5524f032750362f8d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183627"
 ---
 # <a name="architecture-of-clr-integration"></a>CLR 集成体系结构
   与 .NET Framework 公共语言运行时 (CLR) 集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使数据库程序员可以使用诸如 Visual C#、Visual Basic .NET 和 Visual C++ 等语言。 函数、存储过程、触发器、数据类型和聚合即属于程序员可以用这些语言编写的业务逻辑种类。  

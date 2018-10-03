@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
 - LTRIM function
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57270915299162ce45558dda7f8c44d56520082e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9477429dd90f8fd9e21f8dfa1d255c3b472e69a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189157"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM（SSIS 表达式）
   返回删除了前导空格的字符表达式。  
@@ -44,7 +41,7 @@ LTRIM(character expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  LTRIM 只可用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 LTRIM 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](cast-ssis-expression.md)。  
   
  如果参数为空，LTRIM 将返回空结果。  

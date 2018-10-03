@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1c2b325e10223cf30d233facb3de3e3282eaa7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393783"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782065"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入门 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 Oracle 允许您快速转换到的 Oracle 数据库架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]架构中，将为生成的架构上传[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]并将数据迁移到的 Oracle 从[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -87,7 +84,7 @@ SSMA 具有两个工具栏： 项目工具栏和迁移工具栏。
 #### <a name="migration-toolbar"></a>迁移工具栏  
 下表显示了迁移工具栏命令：  
   
-|按钮|函数|  
+|Button|函数|  
 |------|--------|  
 |**创建报表**|将转换为所选的 Oracle 对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法，然后创建一个报表来显示如何成功转换了。<br /><br />此命令将禁用 Oracle 元数据资源管理器中选择对象。|  
 |**转换架构**|将转换为所选的 Oracle 对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象。<br /><br />此命令将禁用 Oracle 元数据资源管理器中选择对象。|  

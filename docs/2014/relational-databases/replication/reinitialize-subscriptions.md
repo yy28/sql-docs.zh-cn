@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ca8769e10a525ef1543dc10983aaa2caaa12ffb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5da82ba90913af85f448f30c3e0663fb130f795b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186759"
 ---
 # <a name="reinitialize-subscriptions"></a>重新初始化订阅
   重新初始化订阅包括对一个或多个订阅服务器应用一个或多个项目的新快照：事务复制和快照复制允许对各个项目单独重新初始化；而合并复制需要对所有项目重新初始化。 无法重新初始化对等事务复制拓扑中的节点。 如果需要确保节点有新的数据副本，请在该节点上还原备份。 对于下列一种或两种情况，将进行重新初始化：  

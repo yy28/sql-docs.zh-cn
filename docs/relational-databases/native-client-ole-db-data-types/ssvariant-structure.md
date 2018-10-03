@@ -5,26 +5,23 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e5cb798b9172b88ec8857eee449cc99c0a5f74
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 64f71a290e9a3f56249c3564ed9d7eefdc9a76a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654805"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "43070450"
   
  **SSVARIANT**是区分的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示符](http://go.microsoft.com/fwlink/?LinkId=122171)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING：  
   
 -   VT_SS_DATETIMEOFFSET  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.usagebasedoptimizationwizard.f1
 helpviewer_keywords:
 - Usage-Based Optimization Wizard
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e01a630552f70586b3444394e143dc6978153d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7ef284a927504bb4c7567d8700a8b15d63c92be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190797"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>基于使用情况的优化向导的 F1 帮助
   基于使用情况的优化向导用于为分区设计聚合，它在输出方面与聚合设计向导相似。 但是，基于使用情况的优化向导设计聚合时所基于的是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例查询日志中所记录的特定使用模式的查询。 聚合允许 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 直接从多维数据集存储区中检索预先计算好的汇总数据，而不必为每一个查询从基础数据源重新计算数据，从而提高了性能。  

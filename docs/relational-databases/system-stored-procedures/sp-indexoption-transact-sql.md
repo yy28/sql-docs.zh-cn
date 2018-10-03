@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_indexoption
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e18340d595a133311a05fc1a788aee92233053
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596415"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或大于 0（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不支持 XML 索引。 如果指定 XML 索引，或指定了不包含索引名的表名，且该表包含 XML 索引，则该语句将失败。 若要设置这些选项，请使用[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)相反。  
   
  若要显示的当前行和页锁属性，请使用[INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md)或[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)目录视图。  

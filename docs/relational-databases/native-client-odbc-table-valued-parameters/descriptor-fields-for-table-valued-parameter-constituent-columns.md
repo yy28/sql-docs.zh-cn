@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf63905bd987c8ec4143288aaaa56df336129b1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7399a5f2764bfbdcdac04a2f973f500ee2e797e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701265"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>表值参数构成列的描述符字段
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +27,7 @@ ms.locfileid: "43068658"
 
   在本部分中所述的表值参数描述符字段操作通过使用[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)并[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)与实现参数描述符 （的句柄IPD)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SQL_DESC_AUTO_UNIQUE_VALUE 用于表值参数以及其他功能。  
   
 |属性名称|类型|Description|  

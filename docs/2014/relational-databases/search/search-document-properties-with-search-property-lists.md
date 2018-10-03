@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90f0d34d522f27fd29c0c1103076632c3cb4bbee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086837"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索属性列表搜索文档属性
   文档属性的内容先前无法与文档正文的内容区分。 此局限性将全文查询限制为针对整个文档进行一般搜索。 但现在，对于 `varbinary`、`varbinary(max)`（包括 `FILESTREAM`）或 `image` 二进制数据列中支持的文档类型，您可以配置全文索引以支持对特定属性（如 Author 和 Title）进行属性范围内的搜索。 这种形式的搜索称为“属性搜索” 。  

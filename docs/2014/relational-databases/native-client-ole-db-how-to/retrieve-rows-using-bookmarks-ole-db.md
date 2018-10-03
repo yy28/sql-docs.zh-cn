@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bookmarks [OLE DB]
 - rows [OLE DB]
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f66ee5a77a93d51bc11f3c0cb77f6785598a94c5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ba05ca5d43ac83e4223fd9eeb15f8c747da5ceab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186347"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>使用书签检索行 (OLE DB)
   使用者将绑定结构的 `dwFlag` 字段值设置为 DBCOLUMNSINFO_ISBOOKMARK，以指示将该列用作书签。 使用者还可将行集属性 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE。 这允许在行集中出现第 0 列。 然后，使用 `IRowsetLocate::GetRowsAt` 方法提取行（起始行的位置为书签加上一个偏移量得到的位置）。  
@@ -46,9 +43,9 @@ ms.locfileid: "37411246"
   
  在该示例中，将从执行 SELECT 语句产生的结果集中检索第五行。  
   
- 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行以下 C++ 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

@@ -1,14 +1,11 @@
 ---
-title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft 文档
+title: semanticsimilaritytable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791175"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ SEMANTICSIMILARITYTABLE
  **source_key**  
  请求特定行的结果的行的唯一键。  
   
- 在使用密钥隐式转换为尽可能与源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。  
+ 键隐式转换为尽可能与源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。  
   
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的相似或相关文档的信息。  
@@ -85,7 +81,7 @@ SEMANTICSIMILARITYTABLE
  有关详细信息，请参阅[查找相似和相关文档使用语义搜索](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
- 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数仅从同一源列中，由标识列中检索相似的文档**source_key**自变量。  
+ 不能跨列查询相似的文档。 **SEMANTICSIMILARITYTABLE**函数只从与源列，这由相同的列检索相似文档**source_key**参数。  
   
 ## <a name="metadata"></a>元数据  
  有关语义相似性的提取和填充的信息和状态，请查询以下动态管理视图：  
@@ -94,9 +90,9 @@ SEMANTICSIMILARITYTABLE
   
 -   [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  

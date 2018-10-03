@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b54eb6377a0d0816d186d612075b678e8eaadb7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9b125cafb521461bfb17fcdf6fa31a5509411a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067867"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>数据库镜像监视器（状态页）
   该只读页面显示导航树中当前选定数据库的主体和镜像服务器实例的最新镜像状态。 如果有关某一实例的信息当前不可用，则 **“状态”** 网格与该实例对应的一些单元格将呈灰色并显示 **“未知”**。  
@@ -29,7 +26,7 @@ ms.locfileid: "37228297"
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“状态”**  
  显示包含每个主体和镜像服务器实例的最新高级镜像状态的网格。 **“状态”** 网格行的排列顺序如下：  
   
@@ -95,7 +92,7 @@ ms.locfileid: "37228297"
   
 -   **带自动故障转移功能的高安全(同步)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **dbm_monitor** 固定数据库角色成员可以使用数据库镜像监视器或 **sp_dbmmonitorresults** 存储过程查看现有的镜像状态。 但是这些用户不能更新状态表。 它们依赖于“数据库镜像监视器作业” 来定期更新状态表。 若要了解所显示状态的保留时间，用户可以在“主体日志 (\<time>)”**** 和“镜像日志 (\<time>)”**** 标签上查看时间。  
   
  如果该作业不存在或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理已停止，状态将变得越来越陈旧，并且可能不再反映镜像会话的配置。 例如，在一次故障转移之后，伙伴可能分享相同的角色 - 主体或镜像。或者，当前主体服务器可能显示为镜像，而当前的镜像服务器显示为主体。  

@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.send.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc35be8153ec5ebbaa5da4ebe5004deb360f9766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97abb785026fa4709e08526e8fb033e97120c97f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095937"
 ---
 # <a name="message-queue-task-editor-send-page"></a>消息队列任务编辑器（“发送”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“发送”** 页，配置消息队列任务以便从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包发送消息。  
   
  若要了解此任务，请参阅 [Message Queue Task](control-flow/message-queue-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **UseEncryption**  
  指示是否对消息进行加密。 默认值为 `False`。  
   

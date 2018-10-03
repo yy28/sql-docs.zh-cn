@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120787"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>报表服务器内容管理（SSRS 本机模式）
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，内容管理是指对报表服务器项进行管理。 通过属性和安全设置，所有项可以彼此独立地进行管理。 可以将任何一项移动到报表服务器文件夹命名空间中的不同位置。 为了有效管理项，您需要了解道内容管理员所执行的任务。  

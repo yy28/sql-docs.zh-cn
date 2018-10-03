@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5131f6f2b7735bd083b68e25d2237119d689faf7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a43085040e3bc1fde5f01b9ccb769695ea877341
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129837"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 源编辑器（“错误输出”页）
   可以使用 **“CDC 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -37,7 +34,7 @@ ms.locfileid: "37203877"
   
 3.  在 **“CDC 源编辑器”** 中，单击 **“错误输出”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

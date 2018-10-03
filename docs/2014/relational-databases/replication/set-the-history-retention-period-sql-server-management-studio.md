@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - history retention periods [SQL Server replication]
 - retention periods [SQL Server replication]
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cd733e414ff554765cafcab8694d4dd174d43aaf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1e5694e84ab04c3161ed2485a534660bc72f495
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191537"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>设置历史记录保持期 (SQL Server Management Studio)
   在“分发数据库属性 - \<分发数据库>”对话框的“常规”页上指定历史记录保持期。 此设置控制复制代理历史记录可存储的时间。 可以从“分发服务器属性 - \<分发服务器>”对话框的“常规”页中访问该页。 有关访问此对话框的详细信息，请参阅[查看和修改分发服务器和发布服务器属性](view-and-modify-distributor-and-publisher-properties.md)。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8e064d68544b72844d364047b51ba90cda39c63b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e3e43a8b2f39d4396945d47ee7e943e64fd1195
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072427"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Tablix 数据区域单元、行和列（报表生成器和 SSRS）
   若要控制 tablix 数据区域的行和列如何在报表中显示数据，必须了解如何为详细信息数据、组数据和标签与总计指定行和列。 在大多数情况下，可以使用表、矩阵或列表的默认结构来显示数据。 有关详细信息，请参阅[表&#40;报表生成器和 SSRS&#41;](tables-report-builder-and-ssrs.md)，[矩阵&#40;报表生成器和 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)，或者[列出&#40;报表生成器和SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  

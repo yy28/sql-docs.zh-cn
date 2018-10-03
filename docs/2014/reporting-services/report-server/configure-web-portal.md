@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 279c83692b507c3031d3fbe638ad2e8dee4f591a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184947"
 ---
 # <a name="configure-report-manager-native-mode"></a>配置报表管理器（本机模式）
   报表管理器是一种用于查看报表、管理报表服务器内容以及向用户授予本机模式报表服务器访问权限的 Web 前端应用程序。 如果在安装程序中选择 **“以默认的本机模式配置安装”** 选项，则可以将报表管理器与报表服务器 Web 服务一起安装在同一个报表服务器实例中，并有选择地进行配置。 还可以在安装完成后配置报表管理器。 本主题提供有关以下报表管理器配置方案的信息：  

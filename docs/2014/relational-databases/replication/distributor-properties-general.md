@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distproperties.general.f1
 helpviewer_keywords:
 - Distributor Properties dialog box
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2a32e262bd8096ad77ce0ea813e7ced8440c1dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04d0ae695a5851c56944e709dfa562963e54b7e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087287"
 ---
 # <a name="distributor-properties-general"></a>分发服务器属性，常规
   使用 **“分发服务器属性”** 对话框的 **“常规”** 页，可以添加和删除分发数据库，以及设置分发数据库属性。  
   
  分发数据库用于存储所有类型复制的元数据和历史记录数据，并存储事务复制的事务。 在许多情况下，单个分发数据库就能够满足需要。 不过，如果多个发布服务器使用单个分发服务器，则应考虑为每个发布服务器都创建一个分发数据库。 这样可确保通过每个分发数据库的数据流是不同的。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **数据库**  
  **“数据库”** 属性网格显示了分发服务器上分发数据库的名称和保持期属性。 **“事务保持期”** 是指为事务复制存储事务的时间长度（事务保持期也称为分发保持期）。 **“历史记录保持期”** 是指为所有类型的复制存储历史记录元数据的时间长度。 有关分发保持期的详细信息，请参阅[订阅过期和停用](subscription-expiration-and-deactivation.md)。  
   

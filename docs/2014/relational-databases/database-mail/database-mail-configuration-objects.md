@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlimail.manageexistingaccount.f1
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - profiles [SQL Server], Database Mail
 - accounts [Database Mail]
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8e6b3e16590eee0eafc805fbc719cc436ca5352
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a42886a0477c6844b2e59d439cd9748adcaa4b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089667"
 ---
 # <a name="database-mail-configuration-objects"></a>数据库邮件配置对象
   数据库邮件具有两种配置对象：数据库配置对象提供了一种方法，您可以使用此方法配置从数据库应用程序或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理发送电子邮件时数据库邮件应使用的设置。  
@@ -151,7 +148,7 @@ ms.locfileid: "37217397"
 |[sysmail_update_profile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql)|更改数据库邮件配置文件的说明或名称。|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql)|更新数据库邮件配置文件中帐户的序列号。|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
   
 |“属性”|Description|  
 |----------|-----------------|  

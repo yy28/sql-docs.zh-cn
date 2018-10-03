@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c71a335db4b17f365bcb40ebf4c7cefb13c30b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa283164549ba6c675632b65e40cfe636a0491eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177817"
 ---
 # <a name="define-database-dimensions"></a>定义数据库维度
   可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的维度设计器，在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或数据库中配置现有数据库维度。 可以使用维度设计器执行下列任务：  
@@ -44,7 +41,7 @@ ms.locfileid: "37269903"
   
  维度设计器中有三个不同的选项卡，下表对这些选项卡进行了说明。  
   
-|选项卡|Description|  
+|Tab|Description|  
 |---------|-----------------|  
 |**维度结构**|使用此选项卡可以处理维度结构 - 为维度检查或创建数据源视图架构，使用属性以及组织用户定义层次结构中的属性。|  
 |**属性关系**|使用此选项卡可以创建、修改或删除维度的属性关系。|  

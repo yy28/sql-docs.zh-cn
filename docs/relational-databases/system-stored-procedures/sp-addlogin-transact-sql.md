@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -21,12 +18,12 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eb5604df7df4213db9c30bae494022fc5041962c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022137"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724566"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名可以包含 1 到 128 个字符，其中包括字母、符号和数字。 登录名不能包含反斜杠 (\\); 可以是保留的登录名，例如 sa 或 public，或已经存在; 或者为 NULL 或空字符串 (`''`)。  
   
  如果提供默认数据库的名称，则不用执行 USE 语句就可以连接到指定的数据库。 但是，不能使用的默认数据库，直到你被授予访问权限的数据库由数据库所有者 (通过使用[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)或[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) 或[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  

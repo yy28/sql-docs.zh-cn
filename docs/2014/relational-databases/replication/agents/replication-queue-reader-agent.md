@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], Queue Reader Agent
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Queue Reader Agent, parameter reference
 - Queue Reader Agent, executables
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4d77806809ce3b7306d9f7560b126ff32980ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8ba3f9ef9c76957872114fd05cf98520ce44bb4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078237"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
   复制队列读取器代理是一个可执行文件，该文件读取存储在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 队列或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 消息队列中的消息，然后将这些消息应用于发布服务器。 队列读取器代理与允许排队更新的快照发布和事务发布一起使用。  
@@ -126,7 +123,7 @@ ms.locfileid: "37309547"
  **-ResolverState** [ **1**| **2**| **3**]  
  指定解决排队更新冲突的方式。 值为 **1** ，表示发布服务器赢得冲突且当前发生冲突的排队事务将在发布服务器和发起更新的订阅服务器上回滚，后续排队事务的处理过程将继续进行。 值为 **2** 表示订阅服务器赢得冲突且排队事务将覆盖发布服务器上的值。 值为 **3** 表示任何冲突都将导致订阅服务器重新初始化；发布服务器赢得冲突，后续排队事务的处理过程将终止且订阅将重新初始化。 事务发布的默认设置为 **1** ，快照发布的默认设置为 **3** 。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要启动队列读取器代理，请从命令提示符下执行 **qrdrsvc.exe** 。 有关信息，请参阅 [复制代理可执行文件](../concepts/replication-agent-executables-concepts.md)。  
   
 ## <a name="see-also"></a>请参阅  

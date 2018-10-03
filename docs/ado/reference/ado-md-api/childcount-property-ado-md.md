@@ -1,13 +1,11 @@
 ---
-title: ChildCount 属性 (ADO MD) |Microsoft 文档
+title: ChildCount 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,29 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - ChildCount property [ADO MD]
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fdc3697ac683b63df1f40fbec543e113f11037e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 01be10781c0925683ed2da9fdff24190d175fca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611405"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 属性 (ADO MD)
-指示为其成员的数目当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象是层次结构中的父级。  
+指示为其成员的当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)对象是父对象的层次结构中。  
   
 ## <a name="return-values"></a>返回值  
- 返回**长**整数并且是只读的。  
+ 返回**长**整数和是只读的。  
   
-## <a name="remarks"></a>Remarks  
- 使用**ChildCount**属性以返回多少子级估计**成员**具有。 实际的子级**成员**可以由[子级](../../../ado/reference/ado-md-api/children-property-ado-md.md)属性。  
+## <a name="remarks"></a>备注  
+ 使用**ChildCount**属性以返回多少个子级的估计**成员**具有。 实际的子级**成员**可以返回由[子级](../../../ado/reference/ado-md-api/children-property-ado-md.md)属性。  
   
- 有关**成员**对象从[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象，返回的最大数量为 65536。 如果子级的实际数目超过 65536，返回的值仍为 65536。 因此，应用程序应将解释为**ChildCount**的 65536 为等于或大于 65536 的子级。  
+ 有关**成员**中的对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象，返回的最大数目为 65536。 如果子级的实际数目超过 65536，返回的值将仍是小于 65536。 因此，应用程序应如何解释**ChildCount**的等于或大于 65536 子级为 65536。  
   
- 有关**成员**对象从[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象，请使用 ADO 集合[计数](../../../ado/reference/ado-api/count-property-ado.md)属性**子级**集合以确定子级的精确数目。 确定的子级的精确数目可能会比较慢，如果在集合中的子级的数量很大。  
+ 有关**成员**中的对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象，请使用 ADO 集合[计数](../../../ado/reference/ado-api/count-property-ado.md)属性**子级**集合以确定子级的精确数目。 确定的子级的精确数目可能会很慢，如果集合中的子级的数量很大。  
   
 ## <a name="applies-to"></a>适用范围  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

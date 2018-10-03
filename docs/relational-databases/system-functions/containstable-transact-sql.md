@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/24/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
@@ -33,17 +30,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9599c1f169f8dae877c677876108f18cf1df72d9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1fcef69d8602e72e559ccd65c5c528149b48209e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661690"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -149,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  指定要在 column_name 中搜索的文本和匹配条件。 有关搜索条件的信息，请参阅[包含&#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  全文谓词和函数作用于 FROM 谓词所示的单个表。 若要对多个表进行搜索，请在 FROM 子句中使用联接表，以搜索由两个或更多个表的乘积构成的结果集。  
   
  返回表中有一个名为列**密钥**，其中包含全文键值。 每个全文索引的表包含的列的值一定是唯一的和中返回的值**密钥**列是全文索引键值的行中指定的选择条件匹配的包含搜索条件。 **TableFulltextKeyColumn**属性，从 OBJECTPROPERTYEX 函数获取提供此唯一键列的标识。 若要获取与全文索引的全文键相关联的列的 ID，请使用**sys.fulltext_indexes**。 有关详细信息，请参阅[sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)。  

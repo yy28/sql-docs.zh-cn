@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d6dbc52caa183352376ae04887ec02088e8459ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af836875b6427663a7d6006243445d716ab4e862
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157717"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
   有两种类型的空间数据。 `geometry` 数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。  

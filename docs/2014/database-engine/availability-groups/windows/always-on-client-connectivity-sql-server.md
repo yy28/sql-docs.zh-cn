@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbf124c02a6fd80485b110f27e6bb2cbded6077e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 53f514e83e980e0a91184581d186bcb4046727c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192739"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>AlwaysOn 客户端连接 (SQL Server)
   本主题介绍与 AlwaysOn 可用性组进行客户端连接时的注意事项，包括针对客户端配置和设置的先决条件、限制和建议。  
@@ -38,11 +35,11 @@ ms.locfileid: "37158938"
   
 |驱动程序|多子网故障转移|应用程序意向|只读路由|多子网故障转移：更快的单子网端点故障转移|多子网故障转移：SQL 群集实例的命名实例解析|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
-|SQL Native Client 11.0 ODBC|是|是|是|是|是|  
-|SQL Native Client 11.0 OLEDB|“否”|是|是|否|“否”|  
-|ADO.NET 与.NET Framework 4.0 和连接性修补程序**<sup>*</sup>**|是|是|是|是|是|  
-|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>**</sup>**|是|是|是|是|是|  
-|Microsoft JDBC driver 4.0 for SQL Server|是|是|是|是|是|  
+|SQL Native Client 11.0 ODBC|用户帐户控制|是|是|是|用户帐户控制|  
+|SQL Native Client 11.0 OLEDB|否|是|是|否|否|  
+|ADO.NET 与.NET Framework 4.0 和连接性修补程序**<sup>*</sup>**|用户帐户控制|是|是|是|用户帐户控制|  
+|ADO.NET 与.NET Framework 3.5 SP1 和连接性修补程序 **<sup>**</sup>**|用户帐户控制|是|是|是|用户帐户控制|  
+|Microsoft JDBC driver 4.0 for SQL Server|用户帐户控制|是|是|是|用户帐户控制|  
   
  **<sup>*</sup>**  下载.NET Framework 4.0 的 ADO.NET 连接性修补程序： [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211)。  
   

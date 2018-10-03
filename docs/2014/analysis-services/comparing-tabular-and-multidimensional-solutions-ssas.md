@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
-caps.latest.revision: 45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbd022ac0771fd862909761b1d4f1abd6e0acf90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36238b6cc481e58161b67442d8f5fdbf0e663e52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181054"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138465"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>比较表格和多维解决方案 (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 为数据建模提供两种不同方法： 表格和多维。 虽然它们之间有明显的重叠现象，但也有重要的差异，你可以通过差异决定如何继续。 在本主题中，我们提供功能比较，并解释每种方法如何满足常见项目要求。 例如，如果对特定数据源的支持是最重要的因素，则有关数据源的部分有助于指导您决定采用哪种建模方法。  
@@ -101,24 +98,24 @@ ms.locfileid: "37181054"
 ||||  
 |-|-|-|  
 ||**多维**|**表格**|  
-|操作|[是](multidimensional-models/actions-in-multidimensional-models.md)|“否”|  
-|Aggregation 对象|[是](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|“否”|  
-|计算度量值|[是](multidimensional-models/create-calculated-members.md)|是|  
-|自定义程序集|[是](multidimensional-models/multidimensional-model-assemblies-management.md)|“否”|  
-|自定义汇总|是|“否”|  
+|操作|[是](multidimensional-models/actions-in-multidimensional-models.md)|否|  
+|Aggregation 对象|[是](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|否|  
+|计算度量值|[是](multidimensional-models/create-calculated-members.md)|用户帐户控制|  
+|自定义程序集|[是](multidimensional-models/multidimensional-model-assemblies-management.md)|否|  
+|自定义汇总|用户帐户控制|否|  
 |Distinct Count|[是](multidimensional-models/use-aggregate-functions.md)|是 （通过 DAX) *|  
-|钻取|[是](multidimensional-models/actions-in-multidimensional-models.md)|是|  
-|层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
-|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|是|  
-|链接度量值组|[是](multidimensional-models/linked-measure-groups.md)|“否”|  
-|多对多关系|[是](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|“否”|  
+|钻取|[是](multidimensional-models/actions-in-multidimensional-models.md)|用户帐户控制|  
+|层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|用户帐户控制|  
+|KPI|[是](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|用户帐户控制|  
+|链接度量值组|[是](multidimensional-models/linked-measure-groups.md)|否|  
+|多对多关系|[是](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|否|  
 |父子层次结构|[是](multidimensional-models/parent-child-dimension.md)|是（通过 DAX）|  
 |“度量值组”|[是](tabular-models/partitions-ssas-tabular.md)|  
 |透视|[是](multidimensional-models/perspectives-in-multidimensional-models.md)|[是](tabular-models/partitions-ssas-tabular.md)|  
 |半累加性度量值|[是](multidimensional-models/define-semiadditive-behavior.md)|是（通过 DAX）|  
-|翻译|[是](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|“否”|  
-|用户定义的层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|是|  
-|写回|[是](multidimensional-models/set-partition-writeback.md)|“否”|  
+|翻译|[是](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|否|  
+|用户定义的层次结构|[是](multidimensional-models/user-defined-hierarchies-create.md)|用户帐户控制|  
+|写回|[是](multidimensional-models/set-partition-writeback.md)|否|  
   
  * 如果你的解决方案必须支持非常大量的非重复计数 （例如，数以百万计的客户 Id），请首先考虑表格。 表格在此方案中往往具有更高的性能。 有关白皮书中的非重复计数部分，请参阅 [Analysis Services 案例研究：在大型商业解决方案中使用表格模型](http://msdn.microsoft.com/library/dn751533.aspx)。  
   

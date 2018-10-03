@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2b851ad5-cc46-4a2e-8873-d8556faca809
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a2c2495a29481be7463e347677c1f74ffd23860
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40bd787702243bcd85adb05eeb241330e08b63af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080407"
 ---
 # <a name="role-element--xmla"></a>Role 元素 (XMLA)
   标识要使用父一个对多关系的一端[RelationshipEnd](../../scripting/data-type/relationshipend-data-type-assl.md)。  
@@ -41,7 +38,7 @@ ms.locfileid: "37265214"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1：可出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -49,7 +46,7 @@ ms.locfileid: "37265214"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[RelationshipEnd](../../scripting/data-type/relationshipend-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   

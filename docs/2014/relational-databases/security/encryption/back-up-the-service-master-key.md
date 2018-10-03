@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f4933108a167ca0572ed59e2bb834dcb260bbc6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180537"
 ---
 # <a name="back-up-the-service-master-key"></a>备份服务主密钥
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中备份服务主密钥。 服务主密钥是加密层次结构的根。 应当对服务主密钥进行备份，并将其存储在另外一个安全的位置。 创建该备份应该是首先在服务器上执行的管理操作之一。  

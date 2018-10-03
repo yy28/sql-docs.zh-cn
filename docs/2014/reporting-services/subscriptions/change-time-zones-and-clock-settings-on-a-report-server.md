@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5157a079ec42264ef3f688e42b6ac294f2e54ef3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b02c018f48f2198e0dc2398ab1cfea7323995df5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108747"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>更改报表服务器上的时区和时钟设置
   报表服务器始终使用其所在计算机的本地时间。 您不能将它配置为使用其他时区。 如果客户端应用程序指向位于其他时区中的报表服务器，则将按该报表服务器所在时区的时间来执行计划操作。 在报表管理器和 SharePoint 管理页中，每个计划页上都标有时区，这样您可以确切知道执行计划操作的时间。 例如，用于创建自定义计划的页将注明“时间用 (UTC-08:00) 太平洋时间（美国和加拿大）来表示”。  

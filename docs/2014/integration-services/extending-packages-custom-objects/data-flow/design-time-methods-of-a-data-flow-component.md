@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], method execution sequence
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ff3fcc3a158b06305d61893bc0b43f7c4458b16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b39095b87737fa8d13e665bf19a38e90861576d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185587"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>数据流组件的设计时方法
   在执行前，称数据流任务处于设计时状态，因为它将接受增量更改。 这些更改可以包括添加或删除组件、添加或删除连接组件的路径对象以及更改组件的元数据。 出现元数据更改时，组件可监视这些更改并对这些更改作出响应。 例如，组件可以禁止某些更改或为响应某一更改而进行其他更改。 在设计时，设计器通过设计时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 接口与组件进行交互。  

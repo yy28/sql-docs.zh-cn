@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.expressionbuilder.f1
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: be402c290ef355f93147b7aa66d8055c054f52ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0560d4cc4b5aeaa0b96269e5ee1bbfe9c61e83c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118457"
 ---
 # <a name="expression-builder"></a>表达式生成器
   可以使用“表达式生成器”对话框创建和编辑属性表达式，或者编写使用图形用户界面设置变量值的表达式，此类表达式列出不同的变量并提供对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言包含的函数、类型转换和运算符的内置引用。  
@@ -40,7 +37,7 @@ ms.locfileid: "37151128"
   
  了解有关属性表达式和编写表达式的详细信息，请参阅[在包中使用属性表达式](use-property-expressions-in-packages.md)和 [Integration Services (SSIS) 表达式](integration-services-ssis-expressions.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

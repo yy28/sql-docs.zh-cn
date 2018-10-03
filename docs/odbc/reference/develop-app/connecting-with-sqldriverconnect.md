@@ -1,13 +1,11 @@
 ---
-title: 使用 SQLDriverConnect 连接 |Microsoft 文档
+title: 使用 SQLDriverConnect 连接 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,25 +18,24 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da68bea5d1cf62effc85911b8d9a4d66568dd823
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909392"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797905"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>使用 SQLDriverConnect 连接
-**SQLDriverConnect**用于连接到数据源使用连接字符串。 **SQLDriverConnect**而不是使用**SQLConnect**原因如下：  
+**SQLDriverConnect**用于连接到数据源使用的连接字符串。 **SQLDriverConnect**而不是使用**SQLConnect**原因如下：  
   
 -   若要让应用程序使用特定于驱动程序的连接信息。  
   
 -   请求驱动程序提示用户输入连接信息。  
   
--   若要连接，而指定的数据源。  
+-   若要连接而无需指定数据源。  
   
  本部分包含以下主题。  
   

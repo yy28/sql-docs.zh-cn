@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b16869b-158a-4934-9c85-bee934b35378
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05e7f592527e237798618b8af08cf471759d8786
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4b342251e2b7bac68aa8c7015be82ec9dc1df19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056247"
 ---
 # <a name="contents-page-report-manager"></a>“内容”页（报表管理器）
   使用“内容”页可以查看当前文件夹的内容，选择要查看的项，或导航到其他文件夹。 选择一个文件夹后即可打开此页。 此页也是报表管理器的主页。  
   
  “内容”页显示您可以查看的项。 根据所拥有权限的不同，您可能还可以移动、删除和添加项。 您必须单击 **“详细信息视图”** ，才能使用 **“删除”** 和 **“移动”** 按钮。 如果您根本看不到任何项，请询问报表服务器管理员。 可能是未向您分配能够访问报表服务器内容或操作的角色。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **新建文件夹**  
  单击此选项可打开“新建文件夹”页，通过此页可以在当前文件夹下创建新文件夹。  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d53a1a4c67e4447fd64d47c609e2a0f244e75c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d5a09e2b641828cacefb188859f5bd794d6e105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085027"
 ---
 # <a name="log-ssis-expression"></a>LOG（SSIS 表达式）
   返回数值表达式以 10 为底的对数。  
@@ -41,7 +38,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>结果类型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  计算对数前， *数值表达式* 被转换为 DT_R8 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
  如果 *numeric_expression* 的计算结果为 0 或负值，则返回结果为 Null。  

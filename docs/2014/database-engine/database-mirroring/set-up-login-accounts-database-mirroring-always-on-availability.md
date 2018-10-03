@@ -4,33 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba315e277513bb0f488982dcfb84bded5cc48a73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178327"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>设置数据库镜像或 AlwaysOn 可用性组的登录帐户 (SQL Server)
   为了使两个服务器实例能够连接到彼此的[数据库镜像端点](the-database-mirroring-endpoint-sql-server.md)，每个实例的登录帐户都要具有访问另一实例的权限。 每个登录帐户还要具有可以连接到另一实例的数据库镜像端点的权限。  
   
  此要求的影响取决于服务器实例是否使用相同的域用户帐户运行：  
   
--   
-              **
-              ** 如果服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 master 数据库中。 这样可简化数据库镜像和 AlwaysOn 可用性组的安全配置。  
+-    如果服务器实例使用相同的域用户帐户运行，则正确的用户登录名将自动存在于全部两个 master 数据库中。 这样可简化数据库镜像和 AlwaysOn 可用性组的安全配置。  
   
 -   如果服务器实例使用不同的用户帐户运行，则在承载镜像服务器的服务器实例上或承载辅助副本的每个服务器实例上都必须手动复制承载主体服务器或主要副本的服务器实例上的用户登录名。 有关详细信息，请参阅本主题后面的[为不同帐户创建登录名](#CreateLogin)和[授予连接权限](#GrantConnect)。  
   

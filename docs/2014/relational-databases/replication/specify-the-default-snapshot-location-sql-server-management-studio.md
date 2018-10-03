@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], default locations
 - default snapshot locations
 ms.assetid: 27c5d9ad-a915-4c59-a8b7-82e3af61ac4d
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b94fd7bcd72476fd550c139533e7540e66f39d4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc9734cb3da7c61da7c15ce108cd86f09be8ea1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148837"
 ---
 # <a name="specify-the-default-snapshot-location-sql-server-management-studio"></a>指定默认快照位置 (SQL Server Management Studio)
   可以在配置分发向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[配置发布和分发](configure-publishing-and-distribution.md)。 如果在未配置为分发服务器的服务器上创建发布，请在新建发布向导的 **“快照文件夹”** 页上指定默认快照位置。 有关使用此向导的详细信息，请参阅[创建发布](publish/create-a-publication.md)。  

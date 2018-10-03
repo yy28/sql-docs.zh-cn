@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], security
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e129d7b64d079104a2378fb24dcc0419dd4e8647
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 754cec388eb6eb6ce30ae600b23a9397cc84f205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266209"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191397"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>配置事件通知的对话安全模式
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话安全模式。 必须按照 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 对话完全安全模式手动配置对话安全模式。 完全安全模式可以为在远程服务器之间发送的消息启用加密和解密功能。 虽然事件通知单向发送，但其他消息（例如错误）也会从相反的方向返回。  

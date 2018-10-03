@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e007ca5b58c557b73910f07a1eef698d00ba505
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 80c7cff0831ef49610c05b28fda94b82e51225e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052587"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>在“条件”窗格中组合搜索条件的约定 (Visual Database Tools)
   您可以创建包含用任意多个 AND 和 OR 运算符链接的任意多个搜索条件的查询。 具有 AND 和 OR 子句组合的查询会变得非常复杂。因此，了解在执行此类查询时如何对其进行解释，以及在[“条件”窗格](visual-database-tools.md)和 [SQL 窗格](sql-pane-visual-database-tools.md)中如何表示此类查询，是非常有用的。  

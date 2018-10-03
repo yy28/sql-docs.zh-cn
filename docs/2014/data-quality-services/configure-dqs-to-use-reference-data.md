@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.rds.f1
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a7e2624248380059027db83d7f0342e64ca28dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd050cfcfee69f7e1c11e5c9d572cfe7ce5507dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193592"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>将 DQS 配置为使用引用数据
   本主题介绍如何将 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 配置为使用引用数据来清理您的数据。 您可以使用来自 Microsoft Azure 市场或来自直接联机第三方引用数据提供程序的引用数据。  
@@ -38,9 +35,7 @@ ms.locfileid: "37161098"
 ####  <a name="Permissions"></a> Permissions  
  您必须具有 DQS_MAIN 数据库的 dqs_administrator 角色，才能在 DQS 中配置引用数据服务设置。  
   
-##  
-  <a name="Marketplace">
-  </a> 将 DQS 配置为使用来自市场的引用数据  
+##  <a name="Marketplace"></a> 将 DQS 配置为使用来自市场的引用数据  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../../2014/data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -72,7 +67,7 @@ ms.locfileid: "37161098"
   
     4.  在“架构”框中，指定一个架构，此架构定义要从直接引用数据服务提供程序中使用的字段（列名称）的字符串。 字段名称不能包含空格，且字段应该用逗号进行分隔。 例如： `FirstName, LastName, City, State`。  
   
-    5.  在 **URI** 框中，键入直接引用数据服务提供程序的 URI。 DQS 中仅允许安全 URI（地址以“https://”开头）。  
+    5.  在 **URI** 框中，键入直接引用数据服务提供程序的 URI。 DQS 中仅允许安全 URI（地址以 “https://” 开头）。  
   
     6.  在 **“最大批处理大小”** 框中，键入将发送到引用数据服务提供程序以执行清理的每批的最大记录数。 可为清理活动指定每批最多 100 条记录。  
   

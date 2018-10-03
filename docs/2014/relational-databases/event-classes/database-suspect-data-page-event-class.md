@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 - Database Suspect Data Page event class
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c67265ee31ebf9f9a013546ccac631c2cd53f373
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ee8a83c87ec6f2b14ac07caa77774b7a7c2d15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137899"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 事件类
   **Database Suspect Data Page** 事件类指示何时将某页添加到 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 中的 [suspect_pages](../databases/msdb-database.md)表中。 在监视是否出现可疑页的跟踪中包括此事件类。  
@@ -40,14 +37,14 @@ ms.locfileid: "37331457"
   
 |数据列名称|数据类型|Description|列 ID|可筛选|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**DatabaseID**|**int**|已为其引发可疑页事件的数据库 ID。 这与 **suspect_pages** 表的 **database_id** 列相同。|3|是|  
-|**EventClass**|**int**|事件类型为 213。|27|“否”|  
-|**EventSequence**|**int**|事件类在批处理中的顺序。|51|“否”|  
-|**SPID**|**int**|遇到可疑页的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 任务的 ID。|12|是|  
-|**StartTime**|**datetime**|事件发生的时间。|14|是|  
-|**Exchange Spill**|**int**|包含可疑页的数据库文件的 ID。 这与 **suspect_pages** 表的 **file_id** 列相同。|22|是|  
-|**ObjectID2**|**int**|文件中可疑页的 ID。 这与 **suspect_pages** 表的 **page_id** 列相同。|56|是|  
-|**错误**|**int**|遇到的错误的类型。 该值与 **suspect_pages** 表中相应页的 **event_type** 值相同。|31|是|  
+|**DatabaseID**|**int**|已为其引发可疑页事件的数据库 ID。 这与 **suspect_pages** 表的 **database_id** 列相同。|3|用户帐户控制|  
+|**EventClass**|**int**|事件类型为 213。|27|否|  
+|**EventSequence**|**int**|事件类在批处理中的顺序。|51|否|  
+|**SPID**|**int**|遇到可疑页的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 任务的 ID。|12|用户帐户控制|  
+|**StartTime**|**datetime**|事件发生的时间。|14|用户帐户控制|  
+|**Exchange Spill**|**int**|包含可疑页的数据库文件的 ID。 这与 **suspect_pages** 表的 **file_id** 列相同。|22|用户帐户控制|  
+|**ObjectID2**|**int**|文件中可疑页的 ID。 这与 **suspect_pages** 表的 **page_id** 列相同。|56|用户帐户控制|  
+|**错误**|**int**|遇到的错误的类型。 该值与 **suspect_pages** 表中相应页的 **event_type** 值相同。|31|用户帐户控制|  
   
 ## <a name="see-also"></a>请参阅  
  [sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

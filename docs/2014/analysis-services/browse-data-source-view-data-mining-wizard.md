@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.browsedatasourceview.f1
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24348462faa76777b279576c105c312b333b83f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187273"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>浏览数据源视图（数据挖掘向导）
   可以使用 **“浏览数据源视图”** 对话框查看在向导的 **“选择数据源视图”** 页中选择的数据源视图。  
@@ -31,7 +28,7 @@ ms.locfileid: "37155648"
   
  **有关详细信息，请参阅**[多维模型中的数据源视图](multidimensional-models/data-source-views-in-multidimensional-models.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **缩放**  
  使用此项可更改关系图中显示的详细程度。  
   

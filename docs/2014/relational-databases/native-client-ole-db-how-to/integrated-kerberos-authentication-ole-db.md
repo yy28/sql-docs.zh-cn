@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163377"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>集成的 Kerberos 身份验证 (OLE DB)
   此示例显示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 中的 OLE DB 获得 Kerberos 相互身份验证。 此示例适用于 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本。  
   
- 有关 Spn 和 Kerberos 身份验证的详细信息，请参阅[服务主体名称&#40;SPN&#41;中的客户端连接支持](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 有关 SPN 和 Kerberos 身份验证的详细信息，请参阅[客户端连接中的服务主体名称 (SPN) 支持](../native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>示例  
  必须指定一个服务器。 在 .cpp 文件中，将“MyServer”更改为具有 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）实例的计算机名称。  

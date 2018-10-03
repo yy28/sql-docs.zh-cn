@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0aefc0500cd57bedc266401a7a987ea979b7c99c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ca60a27f670dbb630692507cf9ec1a8731b2a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183400"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>组织跟踪中显示的列 (SQL Server Profiler)
   通过在跟踪表或 **“跟踪文件属性”** 对话框中选择 **“组织列”** ，或者在定义跟踪时，都可以将跟踪中的数据列分组。 将数据列分组可以更好地分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 跟踪输出。 有关详细信息，请参阅 [使用 SQL Server Profiler 查看和分析跟踪](view-and-analyze-traces-with-sql-server-profiler.md)。  
@@ -36,7 +33,7 @@ ms.locfileid: "37301267"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|审核登录|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   仅为分组选择一列，可对跟踪事件进行分组和聚合。 当仅为分组选择一个数据列时，跟踪窗口中所显示的事件将按数据列中的值分组并折叠在该数据列下。 在为分组选择的数据列中的事件左侧会显示加号 (**+**)，且事件右侧的括号中会显示折叠在数据列下的事件数。 以下示例显示如果仅为分组选择 **EventClass** 数据列，将如何显示跟踪窗口网格。 请注意，所有事件都组织在 **EventClass** 数据列下。 若要查看所有事件，请单击加号来展开和显示该类型的所有事件类。  

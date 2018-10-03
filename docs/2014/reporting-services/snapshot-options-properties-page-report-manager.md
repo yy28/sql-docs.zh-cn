@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078097"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>“快照选项”属性页（报表管理器）
   使用“快照选项”属性页可以计划将报表快照添加到报表历史记录的时间，以及设置报表历史记录中存储的报表快照的数量限制。  
@@ -40,7 +37,7 @@ ms.locfileid: "37218867"
   
 4.  选择 **“快照选项”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **允许手动创建报表历史记录**  
  选中此复选框可以根据需要将快照添加到报表历史记录中。 选中此复选框后，“历史记录”页上将显示 **“新建快照”** 按钮。  
   
