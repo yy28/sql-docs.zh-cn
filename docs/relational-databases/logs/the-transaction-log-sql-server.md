@@ -5,25 +5,22 @@ ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877c48ecbe9befaf0bb04f34a866dd8fee6671bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ecd041e75644fa726e2dc388c4b5ee34d8cded8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664685"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,10 +102,10 @@ ms.locfileid: "32948072"
   
  实际上，日志截断会由于多种原因发生延迟。 查询 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目录视图的 **log_reuse_wait** 和 **log_reuse_wait_desc** 列，了解哪些因素（如果存在）阻止日志截断。 下表对这些列的值进行了说明。  
   
-|log_reuse_wait 值|log_reuse_wait_desc 值|Description|  
+|log_reuse_wait 值|log_reuse_wait_desc 值|描述|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|当前有一个或多个可重复使用的[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|  
-|@shouldalert|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个[虚拟日志 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
+|1|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个[虚拟日志 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截断事务日志前，需要进行日志备份。 （仅限完整恢复模式或大容量日志恢复模式）<br /><br /> 完成下一个日志备份后，一些日志空间可能变为可重复使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|数据备份或还原正在进行（所有恢复模式）。<br /><br /> 如果数据备份阻止了日志截断，则取消备份操作可能有助于解决备份直接导致的此问题。|  
 |4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）：<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式下的日志截断，包括简单恢复模式，在该模式下事务日志一般在每个自动检查点截断。<br /><br /> 延迟事务。 “延迟的事务  ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。<br /> <br /> 长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据（`SELECT` 查询），也可能会以用户事务的名义创建和使用内部对象， 然后就会填充 tempdb 事务日志。|  

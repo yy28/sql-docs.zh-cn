@@ -4,17 +4,16 @@ ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0e20a42c42702e99e1ed607b7ebb7a74a88e6b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e6ea519e4f22c3b08485f520537fe1f22c3b069d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666696"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>表达式（报表生成器和 SSRS）
   表达式在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中被广泛使用，以便对数据进行检索、计算、显示、分组、排序、筛选、参数化和格式设置。 

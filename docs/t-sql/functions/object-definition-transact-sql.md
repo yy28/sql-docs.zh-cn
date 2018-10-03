@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OBJECT_DEFINITION_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - displaying source text
 - OBJECT_DEFINITION function
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4065e474035fcf021dfe330d228eafc59ff26a4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 5cf2cd082156f5f4a889a2912efcceaa9d5f7692
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640063"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   V = 视图  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  系统对象定义对所有用户可见。 用户对象的定义对于对象所有者或具有下列任一权限的被授权者可见：ALTER、CONTROL、TAKE OWNERSHIP 或 VIEW DEFINITION。 **db_owner**、 **db_ddladmin**和 **db_securityadmin** 固定数据库角色的成员隐式具有这些权限。  
   
 ## <a name="examples"></a>示例  

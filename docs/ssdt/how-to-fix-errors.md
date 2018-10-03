@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1aa9159335f5eaf3f426a77bd577cdfeb3d0739b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664015"
 ---
 # <a name="how-to-fix-errors"></a>如何修复错误
 “错误列表”窗格显示任何部署或生成错误。 当你编辑数据库实体及其定义时，因在 Transact\-SQL 编辑器或表设计器中编辑而导致的语法和语义错误也会显示在列表中。 在您跨不同的选项卡编辑脚本时，错误列表将动态更新。 然后，您可以按照标识的错误进一步排除故障。  

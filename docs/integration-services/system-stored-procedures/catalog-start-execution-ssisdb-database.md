@@ -5,21 +5,18 @@ ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7ffacadf9ed93c4af75f1ba70aa7e37591604a5d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 90144dc6169de000f94c2a07fa45893925ead915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659686"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,16 +63,16 @@ GO
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对执行实例的 READ 和 MODIFY 权限，针对项目的 READ 和 EXECUTE 权限，针对引用环境的 READ 权限（如果适用）  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  

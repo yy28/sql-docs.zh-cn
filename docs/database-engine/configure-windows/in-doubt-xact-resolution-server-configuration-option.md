@@ -5,25 +5,22 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - distributed transactions [SQL Server], unresolved transactions
 - unresolved transactions
 - in-doubt xact resolution option
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f8b649548cf2c8182dfa05fe0680c3c4d7b6f94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8bf7949d13738df6b78a7b3c8edfebcdea017e46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646461"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +29,10 @@ ms.locfileid: "32864762"
   
  下表列出了解决有疑问的事务可能出现的结果值。  
   
-|结果值|Description|  
+|结果值|描述|  
 |-------------------|-----------------|  
 |0|没有假设。 如果 MS DTC 无法解决任何有疑问的事务，恢复就会失败。|  
-|@shouldalert|假设提交。 假设已提交任何 MS DTC 有疑问的事务。|  
+|1|假设提交。 假设已提交任何 MS DTC 有疑问的事务。|  
 |2|假设中止。 假设已中止任何 MS DTC 有疑问的事务。|  
   
  若要尽可能减少扩展的停止工作时间，管理员可以选择将此选项配置为假设提交或假设中止，如以下示例所示。  

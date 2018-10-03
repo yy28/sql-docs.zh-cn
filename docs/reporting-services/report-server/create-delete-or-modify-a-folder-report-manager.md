@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec8bc029591a9c693016cfd512190bb5128fc8b9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 437116ae427f9d5ed6492962ad290b496f7b1090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666835"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>创建、删除或修改文件夹（报表管理器）
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
@@ -34,7 +33,7 @@ ms.locfileid: "43279979"
   
      此时，将打开 **“新建文件夹”** 页。  
   
-3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：; ? : \@ & = + , $ / * < > |。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
+3.  键入文件夹名称。 文件夹名称可以包含空格，但不能包含以下用于 URL 编码的保留字符：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。 不能通过键入一系列文件夹名称来同时创建多个文件夹。  
   
 4.  根据需要，可以键入说明。  
   

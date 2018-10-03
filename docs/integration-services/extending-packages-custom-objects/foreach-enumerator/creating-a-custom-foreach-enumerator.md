@@ -5,28 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07d16c03ff2e4538c47350e1c975be95323f00b5
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9060f3b43f7a7973ffa1580643ef4d429269e48a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665431"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>创建自定义 Foreach 枚举器
   创建自定义 foreach 枚举器的步骤与创建其他任何 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 自定义对象的步骤相似。  

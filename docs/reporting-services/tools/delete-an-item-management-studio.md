@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69dbe5d284c7d384805c9fb4ea8fd6d652866612
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1b089c749a1f7a9ef55d82b5c324f80d5de3dfb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667135"
 ---
 # <a name="delete-an-item-management-studio"></a>删除项 (Management Studio)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中连接到报表服务器实例时，您可以删除角色定义和共享计划， 但不能删除报表服务器上的报表、模型或其他项。 若要删除报表服务器内容，请改用报表管理器。 或者，如果报表服务器被配置为 SharePoint 集成模式，请使用包含您的内容的 SharePoint 库中的项管理功能。  

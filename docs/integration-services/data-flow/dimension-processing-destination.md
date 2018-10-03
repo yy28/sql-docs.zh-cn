@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dimensionprocessingdest.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Dimension Processing
 - dimensions [Analysis Services], processing
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1404eb940dc99453b4a991b10c2a0be8651b1ef8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cd1c27f60e8b551972ef1e6c84645227a5950068
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652796"
 ---
 # <a name="dimension-processing-destination"></a>维度处理目标
   维度处理目标加载并处理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 维度。 有关维度的详细信息，请参阅[维度（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
@@ -60,7 +57,7 @@ ms.locfileid: "35333141"
 ## <a name="dimension-processing-destination-editor-connection-manager-page"></a>维度处理目标编辑器（“连接管理器”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“连接管理器”** 页指定与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例之间的连接。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
  从列表中选择现有连接管理器，或单击“新建”创建新的连接管理器。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "35333141"
 ## <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   
@@ -98,7 +95,7 @@ ms.locfileid: "35333141"
 ## <a name="dimension-processing-destination-editor-advanced-page"></a>维度处理目标编辑器（“高级”页）
   可以使用 **“维度处理目标编辑器”** 对话框中的 **“高级”** 页配置错误处理方式。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **使用默认错误配置**  
  指定是否使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的默认错误处理方式。 默认情况下，此值为 **True**。  
   
