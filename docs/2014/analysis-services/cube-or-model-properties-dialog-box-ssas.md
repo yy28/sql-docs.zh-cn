@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317461"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153497"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>“多维数据集或模型属性”对话框 (SSAS)
   可以使用 **中的** “数据库属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框设置多维数据集或模型数据库的属性。 通过右键单击“对象资源管理器”中的多维数据集或模型，再选择“属性”，即可显示此对话框。  
@@ -34,7 +31,7 @@ ms.locfileid: "37317461"
   
 -   [主动缓存&#40;分区属性对话框&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

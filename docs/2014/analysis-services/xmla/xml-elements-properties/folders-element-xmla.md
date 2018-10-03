@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Folders Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Folders element
 ms.assetid: fefb0469-22ea-4804-8dc3-9c49825b32f1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00d90fd45456a0b672c12cdd44706e63011cbb28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e8097a5499f1d8d34d9dd5dd53726bf02a4b098
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174347"
 ---
 # <a name="folders-element-xmla"></a>Folders 元素 (XMLA)
   包含执行 [Restore](folder-element-xmla.md) 或 [Synchronize](location-element-xmla.md) 命令期间父 [Location](../xml-elements-commands/restore-element-xmla.md) 元素使用的 [Folder](../xml-elements-commands/synchronize-element-xmla.md) 元素的集合。  
@@ -55,7 +52,7 @@ ms.locfileid: "37148528"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|无（集合）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37148528"
 |父元素|[位置](location-element-xmla.md)|  
 |子元素|[文件夹](folder-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [Restore 元素&#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

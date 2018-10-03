@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRowsetChange interface
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa1b0857b155f077920f60eee85cbcebb2ef4250
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159188"
 ---
 # <a name="setting-large-data"></a>设置大型数据
   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，您可以通过将指针传递给使用者存储对象设置 BLOB 数据。  
   
  使用者创建包含数据的存储对象，并将指向此存储对象的指针传递给访问接口。 然后，访问接口从使用者存储对象读取数据，并将其写入 BLOB 列中。  
   
- 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者调用**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**绑定 BLOB 列的取值函数方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
+ 为了将指针传递给它自己的存储对象，使用者创建一个取值函数，该取值函数绑定 BLOB 列的值。 然后，使用者通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。 它将指针传递给使用者的存储对象中的某个存储接口。  
   
  本主题涉及可用于以下函数的功能：  
   
@@ -42,19 +39,19 @@ ms.locfileid: "37423016"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何设置大型数据  
- 若要将指针传递给它自己的存储对象，使用者创建取值函数绑定 BLOB 列，然后调用的值**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**方法。 若要设置 BLOB 数据，请：  
+ 为了将指针传递给它自己的存储对象，使用者创建一个绑定 BLOB 列的值的取值函数，然后调用 IRowsetChange::SetData 或 IRowsetChange::InsertRow 方法。 若要设置 BLOB 数据，请：  
   
-1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 设置*dwFlag*为 STGM_READ，并且组 DBOBJECT 结构的元素*iid*为 IID_ISequentialStream （要公开的接口） 的元素。  
+1.  创建一个描述应如何访问 BLOB 列的 DBOBJECT 结构。 将 DBOBJECT 结构的 dwFlag 元素设置为 STGM_READ，并将 iid 元素设置为 IID_ISequentialStream（要公开的接口）。  
   
 2.  设置 DBPROPSET_ROWSET 属性组中的属性，以使行集可更新。  
   
-3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 设置*wType*为 DBTYPE_IUNKNOWN，DBBINDING 结构中的元素和*pObject*元素以指向您创建的 DBOBJECT 结构。  
+3.  通过使用 DBBINDING 结构数组创建一组绑定（每列一个）。 将 DBBINDING 结构中的 wType 元素设置为 DBTYPE_IUNKNOWN，并将 pObject 元素设置为指向创建的 DBOBJECT 结构。  
   
 4.  使用 DBBINDINGS 结构数组中的绑定信息创建取值函数。  
   
-5.  调用**GetNextRows**提取到行集中的下一步的行。 调用**GetData**以读取行集中的数据。  
+5.  调用 GetNextRows 将后续的行提取到行集中。 调用 GetData 以读取行集中的数据。  
   
-6.  创建一个包含数据 （以及长度指示器），存储对象，然后调用**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 的取值函数绑定 BLOB 列设置数据。  
+6.  创建一个包含数据（及长度指示器）的存储对象，然后通过绑定 BLOB 列的取值函数调用 IRowsetChange::SetData（或 IRowsetChange::InsertRow）以设置数据。  
   
 ## <a name="example"></a>示例  
  本示例说明如何设置 BLOB 数据。 本示例创建表、添加示例记录、从行集中提取该记录，然后设置该 BLOB 字段的值：  
@@ -721,7 +718,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Blob 和 OLE 对象](blobs-and-ole-objects.md)   
+ [BLOB 和 OLE 对象](blobs-and-ole-objects.md)   
  [使用大值类型](../native-client/features/using-large-value-types.md)  
   
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3115805cf5d6d8fabfa67100305f7bdffea1d339
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b247bd63087003b1c9205719a6d1cb0563390cc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161532"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>更改 DirectQuery 分区（SSAS 表格）
   因为在一个表中只能有一个分区可以指定为 DirectQuery 分区，所以，默认情况下，Analysis Services 使用在该表中创建的第一个分区。 在模型项目创作过程中，您可以通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的“分区管理器”对话框来更改 DirectQuery 分区。 对于部署的模型，您可以通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]来更改 DirectQuery 分区。  

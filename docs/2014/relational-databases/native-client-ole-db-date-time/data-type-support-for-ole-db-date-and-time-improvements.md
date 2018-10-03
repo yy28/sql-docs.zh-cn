@@ -1,29 +1,26 @@
 ---
-title: 数据类型的 OLE DB 日期和时间改进的支持 |Microsoft Docs
+title: 针对 OLE DB 日期和时间改进的数据类型支持 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157917"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 日期和时间改进的数据类型支持
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>针对 OLE DB 日期和时间改进的数据类型支持
   本主题提供有关支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期/时间数据类型的 OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 类型的信息。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行集和参数中的数据类型映射  
@@ -183,6 +180,6 @@ enum SQLVARENUM {
  当应用程序指定了在 DBTYPE_DBTIMESTAMP *wType*，它会重写到映射`datetime2`通过提供中的类型名称*pwszTypeName*。 如果`datetime`指定，则*bScale*必须为 3。 如果`smalldatetime`指定，则*bScale*必须为 0。 如果*bScale*与不一致*wType*并*pwszTypeName*，则返回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

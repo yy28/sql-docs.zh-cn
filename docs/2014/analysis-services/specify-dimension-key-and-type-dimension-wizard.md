@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionkeyandtype.f1
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 897aa6a576c93776cbefb29cbf80c858a651b229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94e34c092b833f6740562e56c3ebbe713ffc2572
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179947"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>指定维度键和类型（维度向导）
   可以使用“指定维度键和类型”页定义维度的键属性，并指示维度是否为渐变维度 (SCD)。  
@@ -29,7 +26,7 @@ ms.locfileid: "37293437"
 > [!NOTE]  
 >  只有在“选择生成方法”页上选择了“不使用数据源生成维度”，并在“选择维度类型”页上选择了“标准维度”时，才会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **键属性**  
  选择要作为维度键属性的属性。  
   

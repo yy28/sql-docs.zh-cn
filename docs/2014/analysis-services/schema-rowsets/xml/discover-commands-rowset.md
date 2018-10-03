@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMANDS rowset
 ms.assetid: d228f265-05d9-4d2c-a622-44c73eab7a71
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 860645ba09ee294b6421472f235a38d66f54abe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8b7987e5d3934e28357587eb625e4701d7acf24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174377"
 ---
 # <a name="discovercommands-rowset"></a>DISCOVER_COMMANDS 行集
   在服务器上提供有关当前正在执行或最后一个执行的命令打开的连接中的资源使用情况和活动信息。  
@@ -34,7 +31,7 @@ ms.locfileid: "37157318"
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|是|会话 ID。|  
+|`SESSION_SPID`|`DBTYPE_I4`|用户帐户控制|会话 ID。|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||自会话开始后已执行的命令数。|  
 |`COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||上次命令开始的日期和时间，以服务器上的 UTC 时间表示。|  
 |`COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`||自命令开始起经过的时间（毫秒）。|  

@@ -3,17 +3,17 @@ title: SQL Server 中的独立的 R Server 或 Machine Learning Server 安装 |M
 description: 为独立版 R Server 概述简介和机器学习服务器在 SQL Server 安装程序
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176427"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server （独立版） 和 SQL Server 中的机器学习服务器 （独立版）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server 提供独立的 R Server 或运行独立于 SQL Server 的机器学�
 在 SQL Server 2016 中，此功能称为**R Server （独立版）** 是仅限 R 的。 在 SQL Server 2017 中，名为**Machine Learning Server （独立版）** 并包括 R 和 Python。  
 
 > [!Note]
-> 独立服务器安装的 SQL Server 安装程序，在功能上等效于非 SQL 品牌版本的[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持相同的用户方案，包括远程执行操作化和 web 服务以及 RevoScaleR 和 revoscalepy 函数的完整集合。
+> 独立服务器安装的 SQL Server 安装程序，在功能上等效于非 SQL 品牌版本的[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)，支持相同的用户方案，包括远程执行操作化和 web 服务以及 R 和 Python 库的完整集合。
 
 ## <a name="components"></a>组件
 

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Visual Database Tools]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], joins
 - joins [SQL Server], queries
 ms.assetid: 8f068207-d777-4e64-8c4c-d821f0ddb450
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4ca2da0f658db385e3dcc23a2384f4dc7afc859
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: cdf03d4e890347af90984989b0cffbd3c1691295
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174157"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>使用联接进行查询 (Visual Database Tools)
   查询结果可包含来自多个表或表值对象的数据。 若要组合来自多个表值对象的数据，可使用 SQL 的 JOIN 操作。  

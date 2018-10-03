@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DISCOVER_DATASOURCES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 070fcc80266169753d98a8ca0673e748250556ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185254"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174407"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 行集
   返回服务器或 Web 服务上可用的 XML for Analysis (XMLA) 访问接口数据源的列表。 发布的数据源从应用程序 Web 服务器的 URL 返回。 客户端可以连接到该列表中的一个数据源。  
@@ -42,13 +39,13 @@ ms.locfileid: "37185254"
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DataSourceName`|`DBTYPE_WSTR`|是|数据源的名称，如 `Adventure Works`。|  
+|`DataSourceName`|`DBTYPE_WSTR`|用户帐户控制|数据源的名称，如 `Adventure Works`。|  
 |`DataSourceDescription`|`DBTYPE_WSTR`||发布服务器输入的数据源的说明。<br /><br /> 可能会返回 `NULL`。|  
-|`URL`|`DBTYPE_WSTR`|是|显示为该数据源调用 XML for Analysis (XMLA) 方法的位置的唯一路径。<br /><br /> 可能会返回 `NULL`。|  
+|`URL`|`DBTYPE_WSTR`|用户帐户控制|显示为该数据源调用 XML for Analysis (XMLA) 方法的位置的唯一路径。<br /><br /> 可能会返回 `NULL`。|  
 |`DataSourceInfo`|`DBTYPE_WSTR`||包含连接到数据源所需的任何附加信息的字符串。<br /><br /> 可能会返回 `NULL`。|  
-|`ProviderName`|`DBTYPE_WSTR`|是|数据源的访问接口的名称。<br /><br /> 例如：`"MSOLAP"`<br /><br /> 可能会返回 `NULL`。|  
-|`ProviderType`|`DBTYPE_WSTR`|是|访问接口支持的数据的类型。 此数组可包含一个或多个以下类型：<br /><br /> `MDP`：多维数据访问接口。<br /><br /> `TDP`：表格数据访问接口。<br /><br /> `DMP`：数据挖掘访问接口（实现 OLE DB for Data Mining 规范）。|  
-|`AuthenticationMode`|`DBTYPE_WSTR`|是|数据源使用的安全模式类型的规范。 可以是下列值之一：<br /><br /> `Unauthenticated`：不必发送用户 ID 或密码。<br /><br /> `Authenticated`：连接数据源所需的信息中必须包括用户 ID 和密码。<br /><br /> `Integrated`：数据源使用基础安全性确定授权，如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 提供的集成安全性。|  
+|`ProviderName`|`DBTYPE_WSTR`|用户帐户控制|数据源的访问接口的名称。<br /><br /> 例如：`"MSOLAP"`<br /><br /> 可能会返回 `NULL`。|  
+|`ProviderType`|`DBTYPE_WSTR`|用户帐户控制|访问接口支持的数据的类型。 此数组可包含一个或多个以下类型：<br /><br /> `MDP`：多维数据访问接口。<br /><br /> `TDP`：表格数据访问接口。<br /><br /> `DMP`：数据挖掘访问接口（实现 OLE DB for Data Mining 规范）。|  
+|`AuthenticationMode`|`DBTYPE_WSTR`|用户帐户控制|数据源使用的安全模式类型的规范。 可以是下列值之一：<br /><br /> `Unauthenticated`：不必发送用户 ID 或密码。<br /><br /> `Authenticated`：连接数据源所需的信息中必须包括用户 ID 和密码。<br /><br /> `Integrated`：数据源使用基础安全性确定授权，如 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS) 提供的集成安全性。|  
   
  未对此架构行集进行排序。  
   

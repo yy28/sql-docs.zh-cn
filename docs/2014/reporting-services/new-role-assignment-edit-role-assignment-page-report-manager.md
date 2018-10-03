@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181787"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>“新建角色分配: 编辑角色分配”页（报表管理器）
   使用“新建角色分配”或“编辑角色分配”页可以授予对报表服务器项和操作的权限。 需要访问报表服务器的每个用户都必须拥有用来定义访问级别的角色分配。 可以针对根节点或者针对特定的报表、模型、文件夹、资源或共享数据源创建角色分配。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安全性可以通过您应用到项的角色分配来强制执行。 角色分配将某个组或用户匹配到某个角色定义，每个角色定义标识该组或用户可以执行的与某一特定项相关的任务。  
@@ -42,7 +39,7 @@ ms.locfileid: "37179644"
     > [!NOTE]  
     >  如果某项当前从父项继承安全性，则在工具栏中单击 **“编辑项安全设置”** 可以更改安全设置。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **组或用户名称**  
  键入要为其创建角色分配的组或用户帐户的名称。 组名或用户名必须是有效的 Windows 域帐户。 按以下格式输入帐户：\<域 >\\< 帐户\>。  
   

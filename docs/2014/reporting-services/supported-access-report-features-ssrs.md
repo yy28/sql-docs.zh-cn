@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-caps.latest.revision: 43
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2beb25cee62fda3e3f71290d0f91a0a8954feed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d3c218b5e72e231179443c146a6ea3c23747d4e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180607"
 ---
 # <a name="supported-access-report-features-ssrs"></a>支持的 Access 报表功能 (SSRS)
   将报表导入报表设计器时，导入过程会将 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 报表转换为 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持多项 Access 功能；但是，由于 Access 和 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 之间存在差异，因此某些功能会略有修改或不受支持。 本主题介绍如何将 Access 报表功能转换为 RDL。  
@@ -84,7 +81,7 @@ ms.locfileid: "37268473"
 |BorderWidth|BottomMargin|CanGrow（文本框）|CanShrink（文本框）|  
 |Caption|FontBold|FontItalic|FontName|  
 |FontSize|FontUnderline|FontWeight|ForceNewPage|  
-|ForeColor|高度|HideDuplicates|Hyperlink|  
+|ForeColor|高度|HideDuplicates|超链接|  
 |IsHyperlink|IsVisible|KeepTogether（组）|Left|  
 |LeftMargin|LineSlant|LineSpacing|LinkChildFields|  
 |LinkMasterFields|NewRowOrCol|PageFooter|PageHeader|  
@@ -216,7 +213,7 @@ ms.locfileid: "37268473"
 |FileLen|FreeFile|GetAllSettings|GetAttr|  
 |GetSetting|Loc|LOF|QBColor|  
 |RGB|SaveSetting|Seek|SetAttr|  
-|Shell|Spc|选项卡||  
+|Shell|Spc|Tab||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 不支持以下交互函数：  
   

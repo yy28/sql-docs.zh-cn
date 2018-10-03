@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connections [ADOMD.NET]
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b77fefaad8ac573e526412f1c81be3969743a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180854"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178207"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>在 ADOMD.NET 中建立安全连接
   在 ADOMD.NET 中使用连接时，连接所用的安全方法取决于调用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 方法时所使用的连接字符串的 `ProtectionLevel` 属性的值。  
@@ -53,10 +50,10 @@ ms.locfileid: "37180854"
   
 |ProtectionLevel 值|是否用于 TCP 连接？|结果|  
 |---------------------------|------------------------------|-------------|  
-|`None`|是|指定不要求身份验证的连接。<br /><br /> TCP 流从访问接口请求，但是不会对请求该流的用户执行任何形式的身份验证。|  
-|`Connect`|是|指定要求身份验证的连接。<br /><br /> TCP 流的请求从提供程序，以及然后请求该流的用户的安全上下文进行身份验证对服务器：<br /><br /> -如果验证成功，则不执行任何其他操作。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。<br /><br /> 验证成功或失败后，会释放用于验证该连接的安全上下文。|  
-|`Pkt Integrity` 或 `PktIntegrity`|是|指定签名连接。<br /><br /> TCP 流的请求从提供程序，以及然后请求该流的用户的安全上下文进行身份验证对服务器：<br /><br /> -如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象关闭现有 TCP 流，然后打开已签名的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，对每个包都进行数字签名，以确保 TCP 包的负载没有经过任何方式的更改。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。|  
-|`Pkt Privacy` 或 `PktPrivacy`|是|指定加密连接。 **注意：** 还可以通过不设置指定的加密的连接`ProtectionLevel`连接字符串中的属性。 <br /><br /> TCP 流从访问接口请求，然后在服务器上对请求该流的用户的安全上下文进行身份验证：<br /><br /> -如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象关闭现有 TCP 流，并打开加密的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，每一 TCP 包的负载都会使用该访问接口和多维数据源都支持的最高级别加密方法进行加密。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。|  
+|`None`|用户帐户控制|指定不要求身份验证的连接。<br /><br /> TCP 流从访问接口请求，但是不会对请求该流的用户执行任何形式的身份验证。|  
+|`Connect`|用户帐户控制|指定要求身份验证的连接。<br /><br /> TCP 流的请求从提供程序，以及然后请求该流的用户的安全上下文进行身份验证对服务器：<br /><br /> -如果验证成功，则不执行任何其他操作。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。<br /><br /> 验证成功或失败后，会释放用于验证该连接的安全上下文。|  
+|`Pkt Integrity` 或 `PktIntegrity`|用户帐户控制|指定签名连接。<br /><br /> TCP 流的请求从提供程序，以及然后请求该流的用户的安全上下文进行身份验证对服务器：<br /><br /> -如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象关闭现有 TCP 流，然后打开已签名的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，对每个包都进行数字签名，以确保 TCP 包的负载没有经过任何方式的更改。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。|  
+|`Pkt Privacy` 或 `PktPrivacy`|用户帐户控制|指定加密连接。 **注意：** 还可以通过不设置指定的加密的连接`ProtectionLevel`连接字符串中的属性。 <br /><br /> TCP 流从访问接口请求，然后在服务器上对请求该流的用户的安全上下文进行身份验证：<br /><br /> -如果验证成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象关闭现有 TCP 流，并打开加密的 TCP 流来处理所有请求。 对数据或元数据的每一请求都会使用打开连接时所用的安全上下文进行身份验证。 另外，每一 TCP 包的负载都会使用该访问接口和多维数据源都支持的最高级别加密方法进行加密。<br />-如果身份验证失败，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>对象从多维数据源断开连接，并引发异常。|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>对连接使用 Windows 集成安全性  
  Windows 集成安全性是建立和保护与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接的最安全方式。 Windows 集成安全性不会在身份验证过程中泄露安全凭据，如用户名或密码，而是使用当前运行进程的安全标识符来确立标识。 对于大多数客户端应用程序，此安全标识符代表当前登录用户的标识。  
@@ -77,9 +74,9 @@ ms.locfileid: "37180854"
   
 |ProtectionLevel 值|用于 HTTP 还是 HTTPS|  
 |---------------------------|----------------------------|  
-|`None`|“否”|  
+|`None`|否|  
 |`Connect`|HTTP|  
-|`Pkt Integrity` 或 `PktIntegrity`|“否”|  
+|`Pkt Integrity` 或 `PktIntegrity`|否|  
 |`Pkt Privacy` 或 `PktPrivacy`|HTTPS|  
   
 ### <a name="opening-a-secure-http-connection"></a>打开安全 HTTP 连接  

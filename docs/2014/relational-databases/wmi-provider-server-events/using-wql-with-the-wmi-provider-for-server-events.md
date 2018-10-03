@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - queries [WMI]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5e71a51917f770ba91f0708f7bad4e2e4ecf9b40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16bf7df8d4c20db8f2598259af296824df3eeade
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182077"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
   管理应用程序通过发出 WMI 查询语言 (WQL) 语句来访问使用 WMI Provider for Server Events 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件。 WQL 是结构化查询语言 (SQL) 的简化子集，它还包含一些特定于 WMI 的扩展。 当使用 WQL 时，应用程序将针对特定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例、数据库或数据库对象（当前唯一支持的对象为队列）来检索事件类型。 WMI Provider for Server Events 会将查询转换为数据库范围或对象范围事件通知，或在目标数据库中创建的事件通知**主**服务器作用域的事件的数据库通知。  
@@ -87,7 +84,7 @@ WHERE where_condition
   
  只有 `=` 操作数可与 `DatabaseName`、`SchemaName` 和 `ObjectName` 一起使用。 其他表达式不能与这些事件属性一起使用。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *Where_condition* WMI Provider for Server Events 的语法确定以下：  
   
 -   提供程序尝试检索指定的作用域*event_type*： 服务器级、 数据库级别或对象级别 （目前支持的唯一对象为队列）。 最后，此范围用于确定在目标数据库中创建的事件通知的类型。 这个过程称为事件通知注册。  

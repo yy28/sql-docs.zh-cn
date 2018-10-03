@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134257"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 时序算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序算法提供了用于预测的连续值，如产品销量，随着时间的推移进行了优化的回归算法。 虽然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法（如决策树）也能预测趋势，但是他们需要使用其他新信息列作为输入才能进行预测，而时序模型则不需要。 时序模型仅根据用于创建该模型的原始数据集就可以预测趋势。 进行预测时您还可以向模型添加新数据，随后新数据会自动纳入趋势分析范围内。  
@@ -107,8 +104,8 @@ ms.locfileid: "37325107"
   
 |TimeID|Product|Sales|数据量|  
 |------------|-------------|-----------|------------|  
-|1/2001|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|1000|600|  
-|2/2001|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -146,7 +143,7 @@ ms.locfileid: "37325107"
   
 -   服务器使用的 64 位操作系统不同，时序模型作出的预测也可能不同（有时差异会很大）。 出现这些差异的原因是基于 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]的系统表示和处理浮点算术数字的方式与基于 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的系统处理这些计算的方式不同。 由于预测结果可能是特定于操作系统的，因此建议您在评估模型时使用与将用于生产的操作系统相同的操作系统。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

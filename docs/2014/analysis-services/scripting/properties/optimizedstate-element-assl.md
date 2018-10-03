@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - OptimizedState Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - OptimizedState element
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 932ef541a0e9613ad46a032be5c218eccd5276ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 484164e3c792a103dd7eabe9b860d539bc4b121e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160903"
 ---
 # <a name="optimizedstate-element-assl"></a>OptimizedState 元素 (ASSL)
   确定应用于层次结构的优化级别。  
@@ -59,9 +56,9 @@ ms.locfileid: "37224067"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubeHierarchy](../data-type/hierarchy-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  

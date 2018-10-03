@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalendarEndDate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalendarEndDate element
 ms.assetid: abedd074-9a28-4169-85b5-49ea57f10fb6
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dd23c1747f25eb092a1c1e9a6d6ccd1029380d5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2a79d69a3d336b594e7149d76189822e58eba42c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161048"
 ---
 # <a name="calendarenddate-element-assl"></a>CalendarEndDate 元素 (ASSL)
   定义的日历周期的结束日期[TimeBinding](../data-type/binding-data-type-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37332557"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|DateTime|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：可出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37332557"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[TimeBinding](../data-type/binding-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `CalendarEndDate` 必须在 `CalendarStartDate` 之后。  
   
  父级对应的元素`CalendarEndDate`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  

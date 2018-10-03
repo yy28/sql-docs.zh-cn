@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2750412c9024263f4e576a883a23b4ffb430924
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dabde936354e052a7a670b0235b994edf26093f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178287"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE（SSIS 表达式）
   将表达式中的一个字符串替换为另一个字符串或空字符串后，返回一个字符表达式。  
@@ -50,7 +47,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *searchstring* 的长度一定不能为零。  
   
  *replacementstring* 的长度可以为零。  

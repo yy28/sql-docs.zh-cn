@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-caps.latest.revision: 29
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f6a75e3f558b13b1bd068341249c73649699256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 284a99d74e8b0aa2e3c3b47cc1f277df537b7e9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168777"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>安装、卸载和报表生成器支持
   报表生成器是一种可用于创建、更新和共享报表、报表部件和共享数据集的报表创作工具。 报表生成器有两个版本： 独立和[!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]。 独立版本由您或管理员安装到您的计算机上。 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]自动安装的版本与[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]，从报表管理器或集成的 SharePoint 站点下载到您的计算机[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
@@ -132,7 +129,7 @@ ms.locfileid: "37311437"
   
  有关详细信息，请参阅[报表服务器内容管理&#40;SSRS 本机模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)msdn.microsoft.com 上。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  管理员会授予针对报表服务器的权限。 作为报表生成器用户，您需要先具有报表服务器的权限，然后才能访问报表服务器的内容和功能。 例如，您可能希望使用存储在报表服务器上的报表部件，更新报表然后将它们重新保存到报表服务器，在报表管理器中运行报表。 根据您的需要和所执行的任务，可能会授予更低或更高的权限。 例如，与需要修改共享报表的用户相比，应将具有更低特权的权限授予那些只需打开共享报表的用户。  
   
  在本机模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，管理员可以：  

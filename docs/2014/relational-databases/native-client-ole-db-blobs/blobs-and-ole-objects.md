@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BLOBs, OLE objects
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 743873bce06d995b21c6d72e028a221f93d86868
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180317"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 和 OLE 对象
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**ISequentialStream**接口以支持使用者访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文本**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和 xml 数据类型作为二进制大型对象 (Blob). **读**方法**ISequentialStream**检索大量数据中易于管理的块，使用者可以。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口公开**ISequentialStream**接口以支持使用者访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**，**文本**，**图像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，和 xml 数据类型作为二进制大型对象 (Blob). 通过对 ISequentialStream 执行 Read 方法，使用者可以用便于管理的方式成块检索大量数据。  
   
  有关演示此功能的示例，请参阅[大型数据集&#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md)。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "37428666"
   
 ## <a name="storage-object-limitations"></a>存储对象限制  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口可以支持只有一个打开的存储对象。 尝试打开多个存储对象 (若要获取对多个引用**ISequentialStream**接口指针) 返回 DBSTATUS_E_CANTCREATE。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口可以支持只有一个打开的存储对象。 尝试打开多个存储对象（以获取对多个 ISequentialStream 接口指针的引用）返回 DBSTATUS_E_CANTCREATE。  
   
 -   在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序，DBPROP_BLOCKINGSTORAGEOBJECTS 只读属性的默认值为 VARIANT_TRUE。 这指示如果存储对象处于活动状态，某些方法（存储对象上的方法除外）将失败，并返回 E_UNEXPECTED。  
   

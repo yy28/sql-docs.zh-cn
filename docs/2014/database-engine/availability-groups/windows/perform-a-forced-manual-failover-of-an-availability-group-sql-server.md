@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287984"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177787"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  

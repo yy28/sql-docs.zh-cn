@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d8ec82b43cdfd215254c3f16577b1c82af52b47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145250"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>用于索引的 SORT_IN_TEMPDB 选项
   当创建或重新生成索引时，通过将 SORT_IN_TEMPDB 选项设置为 ON，可以指定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 使用 **tempdb** 来存储用于生成索引的中间排序结果。 虽然此选项会增加创建索引所用的临时磁盘空间量，但是当 **tempdb** 与用户数据库位于不同的磁盘集上时，该选项可减少创建或重新生成索引所需的时间。 有关 **tempdb**的详细信息，请参阅 [配置 index create memory 服务器配置选项](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)。  

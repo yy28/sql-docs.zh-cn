@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b75bed7642e2075b0281cb9f19502ea2bb624b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e2f62236d844a6ded850f33207bad9da082ce62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177287"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>任务 14：将执行 SQL 任务添加到控制流以运行 MDS 的存储过程
   在将数据加载到 MDS 的临时表后，您运行与该表相关联的存储过程以便将数据从临时表加载到 MDS 数据库的相应表中。 此存储过程有两个需要传递的必需参数：LogFlag 和 VersionName。 LogFlag 指定在临时过程中是否将事务记入日志，而 VersionName 表示模型版本。 请参阅[临时存储过程](http://msdn.microsoft.com/library/hh231028.aspx)主题的更多详细信息。  
@@ -42,7 +39,7 @@ ms.locfileid: "37260083"
   
     |“属性”|数据类型|ReplTest1|  
     |----------|---------------|-----------|  
-    |LogFlag|Int32|@shouldalert|  
+    |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  
   
      ![SSIS 变量窗口](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-02.jpg "SSIS 变量窗口")  
@@ -69,7 +66,7 @@ ms.locfileid: "37260083"
   
     |“变量名称”|数据类型（重要）|参数名称|  
     |-------------------|-----------------------------|--------------------|  
-    |User::LogFlag|LONG|@shouldalert|  
+    |User::LogFlag|LONG|1|  
     |User::BatchTag|NVARCHAR|2|  
   
      ![执行 SQL 任务编辑器-参数映射](../../2014/tutorials/media/et-addingesqltasktocftorunthespformds-04.jpg "执行 SQL 任务编辑器-参数映射")  
