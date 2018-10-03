@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0c0ec3e7f76da7eb908cf2154cd33a2ee55b40
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5d95910ce8874d2a9eacdc28c6abf5d7d3be6efa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103387"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 提供了一种替代方法[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md)用于指定列格式。 Ibcpsession:: Bcpcolfmt，这会设置单个列格式属性，与 IBCPSession2::BCPSetBulkMode 设置所有属性。  
@@ -60,17 +57,17 @@ HRESULT BCPSetBulkMode (
 |||  
 |-|-|  
 |`S_OK`|方法成功。|  
-|`E_FAIL`|将出现提供程序特定的错误，有关详细的信息，请使用 ISQLServerErrorInfo 接口。|  
+|`E_FAIL`|出现访问接口特定的错误；要获取详细信息，请使用 ISQLServerErrorInfo 接口。|  
 |`E_UNEXPECTED`|意外调用了该方法。 例如，`IBCPSession2::BCPInit`调用 IBCPSession2::BCPSetBulkMode 之前，未调用方法。|  
 |`E_INVALIDARG`|参数无效。|  
 |`E_OUTOFMEMORY`|内存不足错误。|  
   
-## <a name="remarks"></a>Remarks  
- 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 当 IBCPSession2::BCPSetBulkMode 用于查询语句外大容量复制时，它必须在调用之前调用`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`来指定查询语句。  
+## <a name="remarks"></a>备注  
+ 可以使用 IBCPSession2::BCPSetBulkMode 外的查询或表大容量复制。 使用 IBCPSession2::BCPSetBulkMode 向外大容量复制查询语句时，必须先调用该方法，再调用 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 来指定查询语句。  
   
  应该避免在单个命令文本内将 RPC 调用语法与批查询语法结合使用（例如 `{rpc func};SELECT * from Tbl`）。  这将导致 icommandprepare:: Prepare 方法返回一个错误并阻止您检索元数据。 如果需要在单个命令文本内结合执行存储过程和批查询，请使用 ODBC CALL 语法（例如 `{call func}; SELECT * from Tbl`）。  
   
- 下表列出的常量*属性*参数。  
+ 下表列出了 property 参数的常量。  
   
 |“属性”|Description|  
 |--------------|-----------------|  
@@ -83,7 +80,7 @@ HRESULT BCPSetBulkMode (
   
  不能调用使用 ibcpsession:: Bcpcontrol`BCP_OPTION_TEXTFILE`和 IBCPSession2::BCPSetBulkMode。  
   
- 如果你尝试调用的函数调用序列，其中包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol 和 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一个函数调用将返回序列错误。 如果您选择更正错误，调用 ibcpsession:: Bcpinit 重置设置并重新开始。  
+ 如果你尝试调用的函数调用序列，其中包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol 和 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一个函数调用将返回序列错误。 如果选择更正错误，请调用 IBCPSession::BCPInit 重置设置，然后重新开始。  
   
  下表提供了会造成函数序列错误的函数调用的一些示例：  
   

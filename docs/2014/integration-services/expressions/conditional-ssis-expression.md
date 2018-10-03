@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36514b86afc211f9ef699300c93e1652749b5b1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d1713e75acf4ad8e76cfdf309ede46523690b4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197257"
 ---
 # <a name="--conditional-ssis-expression"></a>? :（条件）（SSIS 表达式）
   根据布尔表达式的计算结果，返回两个表达式之一。 如果布尔表达式的计算结果为 TRUE，则计算第一个表达式，结果为该表达式的结果。 如果布尔表达式的计算结果为 FALSE，则计算第二个表达式，结果为该表达式的结果。  
@@ -48,7 +45,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>结果类型  
  *expression1* 或 *expression2*的数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 *boolean_expression* 的计算结果为 NULL，则表达式结果为 NULL。 如果选择的表达式（ *expression1* 或 *expression2* ）为 NULL，则结果为 NULL。 如果选择的表达式不为 NULL，但未选择的表达式为 NULL，则结果为所选表达式的值。  
   
  如果 *expression1* 和 *expression2* 的数据类型相同，则结果便为该数据类型。 对于结果类型适用于下列附加规则：  

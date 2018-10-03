@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8c4b2ae49de561dd7a82785bda955d6701abc770
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251279"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146337"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>任务 5：从 Excel 中创建基于域的属性
   在此任务中，您将转换**状态**的属性**供应商**作为实体**基于域的属性**。 配置基于域的一个，并将其发布到 MDS，名为的新实体的 State 属性之后**状态**将所有值位于列中的 MDS 服务器上创建并**状态**的属性**供应商**将使用中的值填充实体**状态**实体。 现在，**供应商**模型应具有两个实体：**供应商**并**状态**其中**状态**属性**供应商**实体是一个基于域的属性，取决于**状态**实体。  

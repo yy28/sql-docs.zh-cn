@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120867"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>“输入选择”选项卡（“挖掘准确性图表”视图）
   可以使用 **“挖掘准确性图表”** 设计器的 **“输入选择”** 选项卡，指定用于测试模型和生成准确性图表的数据源。  
   
  **有关详细信息，请参阅**[测试和验证（数据挖掘）](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **同步预测**  **列和值**  
  选中此项可以协调网格中的可预测属性，这样在模型定型期间，即使这些属性具有不同名称，也会从相同的可预测挖掘结构列中派生。  
   

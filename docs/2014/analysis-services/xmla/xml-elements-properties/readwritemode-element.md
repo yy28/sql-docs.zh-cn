@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa1febe828bf8711ff87f50cfd5a8ce7cbd6eed8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166647"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
   `ReadWriteMode` 数据库属性指定数据库是处于 `ReadWrite` 模式还是处于 `ReadOnly` 模式。 只可能有两个属性值。  
@@ -51,9 +48,9 @@ ms.locfileid: "37285783"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[“数据库”](database-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  数据库只能在 `ReadWrite` 模式下创建， 而不能在 `ReadOnly` 模式下创建。  
   
  `ReadWriteMode` 元素的值限定为下表中列出的字符串之一。  

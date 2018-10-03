@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52db8610999add505d5aa5e524a2d68b72886ce0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f500b1805d4af2e7b13ad74b439fff72d667060f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271063"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185077"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>对扩展事件使用 PowerShell 提供程序
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供程序管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 扩展事件。 XEvent 子文件夹位于 SQLSERVER 驱动器下。 您可以使用以下任意一种方法访问该文件夹：  
@@ -110,7 +107,7 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  若要创建、更改或删除扩展事件会话，您必须拥有 ALTER ANY EVENT SESSION 权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - fill from example
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48972682ed3de37bfbffe3156b44f1e0d5b36039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160897"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>从示例填充（Excel 表分析工具）
   ![从示例填充表分析工具中的按钮](media/tat-fillex.gif "从示例填充表分析工具中的按钮")  

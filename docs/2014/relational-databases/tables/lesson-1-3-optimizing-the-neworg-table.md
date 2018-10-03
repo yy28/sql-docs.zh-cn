@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146977"
 ---
 # <a name="optimizing-the-neworg-table"></a>优化 NewOrg 表
   **NewOrd**中创建表[使用现有层次结构数据填充表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)任务包含所有雇员的信息，并使用表示层次结构`hierarchyid`数据类型。 此任务添加了新的索引，以便支持对 `hierarchyid` 列的搜索。  

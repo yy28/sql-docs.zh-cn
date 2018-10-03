@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version control services [SQL Server], file history
 - historical information [SQL Server], files
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac14534a577f8e43aa87342593d655c6ca469651
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184787"
 ---
 # <a name="view-file-history"></a>查看文件历史记录
   可以使用**历史记录**命令查看源代码管理的文件的版本历史记录。 此历史记录包括在源代码管理中添加文件或签入文件的日期和时间。  

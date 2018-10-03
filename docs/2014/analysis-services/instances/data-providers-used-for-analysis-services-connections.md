@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136997"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>用于 Analysis Services 连接的数据提供程序
   Analysis Services 为服务器和数据访问提供了三个数据访问接口。 连接到 Analysis Services 的所有应用程序均使用以下访问接口之一来进行数据访问操作。 ADOMD.NET 和 Analysis Services 管理对象 (AMO) 这两个访问接口为托管数据访问接口。 Analysis Services OLE DB 访问接口 (MSOLAP DLL) 为本地数据访问接口。  

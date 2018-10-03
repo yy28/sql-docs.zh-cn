@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125327"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>任务 12：添加派生列转换以添加 MDS 所需的列
   在本任务中，您将向数据流添加派生列转换。 添加两个派生的列**ImportType**并**BatchTag**到记录传递给此转换。 您应该在将数据上载到 MDS 中的临时表之前添加这些列。 这两列是 MDS 中的临时表所必需的列。 请参阅[叶成员临时表](../master-data-services/leaf-member-staging-table-master-data-services.md)的更多详细信息。  

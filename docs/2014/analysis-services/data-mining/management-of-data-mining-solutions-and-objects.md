@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164287"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
@@ -45,8 +42,7 @@ ms.locfileid: "37218297"
 >  诸如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 数据挖掘外接程序之类的客户端还可用于创建会话挖掘模型和挖掘结构，它们使用到实例的连接，但只在会话期间在服务器中存储挖掘结构和挖掘模型。 您仍然可以通过客户端管理这些模型，就如同管理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库中存储的结构和模型一样，但断开与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的连接后，不会持久化这些对象。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中管理数据挖掘对象  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供便于创建、浏览和编辑数据挖掘对象的功能。  
   
  以下链接提供有关如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改数据挖掘对象的信息：  
   

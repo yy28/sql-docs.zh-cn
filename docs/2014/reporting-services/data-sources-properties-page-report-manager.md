@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179554"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192137"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>“数据源”属性页（报表管理器）
   使用“数据源”属性页可以定义当前报表连接到外部数据源的方式。 您可以覆盖原先与报表一起发布的数据源连接信息。 如果一个报表有多个数据源，则每个数据源在属性页中都有其自己的特定区域。 数据源按照在报表中定义的顺序列出。  
@@ -39,7 +36,7 @@ ms.locfileid: "37179554"
   
 4.  选择 **“数据源”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **共享的数据源**  
  指定报表的共享数据源。 有关创建新的数据源的详细信息，请参阅[创建、 删除或修改共享数据源&#40;报表管理器&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。  
   

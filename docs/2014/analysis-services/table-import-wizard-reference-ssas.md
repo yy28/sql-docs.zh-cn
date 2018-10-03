@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
 ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 348e92e73e4ca03e995fa17546691dc032f03ad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218174"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>表导入向导参考 (SSAS)
   本节提供有关 **“表导入向导”** 的帮助。 此向导可用于从各种数据源导入数据。 若要从模型设计器中访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

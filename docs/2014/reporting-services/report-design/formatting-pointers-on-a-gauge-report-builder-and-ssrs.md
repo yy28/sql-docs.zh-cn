@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 625aa7736ba6cc9ac4b1b77a65c0be31688d1e37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183179"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>设置仪表上指针的格式（报表生成器和 SSRS）
   仪表指针指示仪表的当前值。 默认情况下，添加字段之后，字段中包含的值将聚合为仪表指针显示的一个值。 可以为仪表添加多个指针以便指向基于相同刻度的多个值，也可以添加多个刻度，并为添加的每个刻度各添加一个指针。 向仪表添加字段之后，必须对相应刻度设置最大值和最小值，以便为指针值提供上下文。 您还可以选择设置某一范围的最小值和最大值，该范围在刻度上显示一个关键区域。  

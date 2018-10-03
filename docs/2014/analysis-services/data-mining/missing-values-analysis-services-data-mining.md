@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb5e69c5f65dc92345a3e8b6f33b2c59136d3fef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 11356ea0e7bb5b8388867eab330d0849163b6257
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164323"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Missing 值（Analysis Services - 数据挖掘）
   正确处理“Missing 值”   是有效建模的重要组成部分。 本节说明什么是 Missing 值，并介绍在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的、用于处理在生成数据挖掘结构和挖掘模型时的 Missing 值的功能。  
@@ -55,7 +52,7 @@ ms.locfileid: "37220467"
 |ReplTest1|事例|  
 |-----------|-----------|  
 |0|9296|  
-|@shouldalert|9098|  
+|1|9098|  
 |Missing|0|  
   
  此分布显示大约一半的客户已经购买了自行车，而一半的客户还没有购买自行车。 此特定数据集十分清晰；因此，每个事例的 [Bike Buyer] 列中都有一个值，并且 `Missing` 值的计数为 0。 但是，如果任何用例的 [Bike Buyer] 字段中，必须为空[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]会将该行计为具有的事例`Missing`值。  
@@ -71,7 +68,7 @@ ms.locfileid: "37220467"
 |ReplTest1|事例|概率|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
-|@shouldalert|9098|49.42%|  
+|1|9098|49.42%|  
 |Missing|0|0.03%|  
   
  有些奇怪的概率`Missing`的事例数为 0 时，计算值为 0.03%。 实际上，此行为是设计造成的，目的是通过这种调整使模型可以适当地处理未知值。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RefreshInterval Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76651edd1818204fed5c2ab9f8d8d787f4501d6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175837"
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval 元素 (ASSL)
   指定与父元素关联的绑定数据的刷新时间间隔。  
@@ -60,9 +57,9 @@ ms.locfileid: "37315047"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionBinding](../data-type/dimensionbinding-data-type-assl.md)， [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)， [ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md)， [ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中，与 `RefreshInterval` 的父级对应的元素为 <xref:Microsoft.AnalysisServices.DimensionBinding>、<xref:Microsoft.AnalysisServices.MeasureGroupBinding>、<xref:Microsoft.AnalysisServices.ProactiveCachingIncrementalProcessingBinding> 和 <xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>。  
   
 ## <a name="see-also"></a>请参阅  

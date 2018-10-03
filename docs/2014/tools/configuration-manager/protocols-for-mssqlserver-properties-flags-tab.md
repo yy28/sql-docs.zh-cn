@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22b60c7558ab9ce95bdeb9e989617ad49f1ea60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fae80bd45cceb4c6de416fd0f3c1b6f4a0cbadd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134147"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>MSSQLSERVER 的协议属性（“标志”选项卡）
   当服务器上装有证书时，使用 **“MSSQLSERVER 的协议属性”** 对话框中的 **“标志”** 选项卡可以查看或指定协议加密以及隐藏实例选项。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 设置，必须重新启动 **ForceEncryption** 。  
@@ -38,7 +35,7 @@ ms.locfileid: "37153528"
 ## <a name="cluster-servers"></a>集群服务器  
  若要在故障转移群集中使用加密，必须在故障转移群集中的所有节点上安装具有完全限定的虚拟服务器 DNS 名称的服务器证书。 例如，如果有一个包含两个分别名为“test1.\<your company>.com”和“test2.\<your company>.com”节点的群集，还有一个名为“virtsql”的虚拟服务器，则需要在这两个节点上安装“virtsql.\<your company>.com”的证书。 然后，可以选中 **SQL Server 配置管理器** 中的 **ForceEncryption** 复选框以将故障转移群集配置为使用加密。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **ForceEncryption**  
  强制协议加密。 加密是通过将数据更改为不可读的形式来保密敏感信息的方法。 即使在传输过程中有人查看了传输数据包，加密也可以确保数据安全。 若要使用渠道绑定，请将 **“强行加密”** 设置为 **“打开”** ，并在 **“高级”** 选项卡上配置 **“扩展保护”** 。  
   

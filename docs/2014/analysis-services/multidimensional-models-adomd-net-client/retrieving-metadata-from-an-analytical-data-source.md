@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 654ea55f3b285409dab5e3f1cf178b8ff7818bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153047"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>从分析数据源检索元数据
   对于检索和使用分析数据的应用程序，元数据是非常重要的。 从关系数据源检索数据时，这些数据的维数是可预测的，即使对嵌套数据集也是如此。 关系数据库的结果集的结构通常是二维的或为标量。 但是，从分析数据源检索的数据的维数是可变的，组织的层次结构可能会很深。  

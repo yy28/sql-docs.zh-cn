@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106898"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>创建和管理远程分区 (Analysis Services)
   对度量值组进行分区时，可将远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上的辅助数据库配置为分区存储。  
@@ -114,7 +111,7 @@ ms.locfileid: "37315037"
   
 #### <a name="set-up-the-remote-partition-in-ssdt"></a>设置远程分区（在 SSDT 中）  
   
-1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. 实例时都提供 SQL Server 登录名。 .) 按钮编辑现有分区。  
+1.  在主服务器上：在多维数据集设计器中打开多维数据集，然后单击 **“分区”** 选项卡。展开度量值组。 如果已为多个分区配置了度量值组，则单击“新建分区”，或单击“源”列中的浏览 (. . .) 按钮编辑现有分区。  
   
 2.  在分区向导的 **“指定源信息”** 中，选择初始数据源视图和事实数据表。  
   

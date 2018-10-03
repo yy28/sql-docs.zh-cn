@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log Reader Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Log Reader Agent
 - command prompt [SQL Server replication]
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
-caps.latest.revision: 50
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff0ad36402857082e069a322e4519d64b13f7e65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202427"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
   复制日志读取器代理是一个可执行文件，用于监视为事务复制配置的每个数据库的事务日志，以及将标记为进行复制的事务从事务日志复制到分发数据库中。  
@@ -188,7 +185,7 @@ ms.locfileid: "37215337"
  **-RecoverFromDataErrors**  
  指定日志读取器代理在从非 SQL Server 发布服务器发布的列数据中遇到错误时应继续运行。 默认情况下，这类错误可导致日志读取器代理失败。 在使用 **-RecoverFromDataErrors**后，出错的列数据将复制为 NULL 或者适当的非 Null 值，并在 [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) 表中记录警告消息。 仅 Oracle 发布服务器支持此参数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 > [!IMPORTANT]  
 >  如果您安装的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理是通过本地系统帐户而不是域用户帐户（默认值）运行，则该服务仅可访问本地计算机。 如果以 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理身份运行的日志读取器代理已配置为在登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]时使用 Windows 身份验证模式，则日志读取器代理将失败。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 默认设置为  身份验证。 有关更改安全帐户的信息，请参阅 [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md)。  

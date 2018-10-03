@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 077b79d820a30902b2c705a1e2ec55bda31c8d6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45991def5af8ea0efbb1b9ea9a7bc6246770b3d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116869"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 日志文件和来源
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器和报表服务器环境使用各种日志目标来记录有关服务器操作和状态的信息。 有两个基本日志记录类别：执行日志记录和跟踪日志记录。 执行日志记录包含有关报表执行统计信息、审核、性能诊断和优化的信息。 跟踪日志记录是有关错误消息和一般诊断的信息。  
@@ -38,7 +35,7 @@ ms.locfileid: "37210717"
 |Log|Description|  
 |---------|-----------------|  
 |[报告服务器执行日志和 ExecutionLog3 视图](report-server-executionlog-and-the-executionlog3-view.md)|执行日志是存储在报表服务器数据库中的 SQL Server 视图。<br /><br /> 报表服务器执行日志包含特定报表的有关数据，包括报表的运行时间、运行人员、目标传递位置以及所用的呈现格式。|  
-|SharePoint 跟踪日志|对于在 SharePoint 下运行的报表服务器，SharePoint 跟踪日志包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 信息。 此外可以配置[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint 统一日志服务的特定信息。 有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
+|SharePoint 跟踪日志|对于在 SharePoint 下运行的报表服务器，SharePoint 跟踪日志包含 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 信息。 可为 SharePoint 统一日志服务配置 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定信息。 有关详细信息，请参阅[为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
 |[报表服务器服务跟踪日志](report-server-service-trace-log.md)|服务跟踪日志包含的信息极为详细，这对于调试应用程序或者调查问题或事件很有帮助。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|  
 |[报表服务器 HTTP 日志](report-server-http-log.md)|HTTP 日志文件中包含有关由报表服务器 Web 服务和报表管理器处理的所有 HTTP 请求和响应的记录。|  
 |[Windows 应用程序日志](windows-application-log.md)|Microsoft Windows 应用程序日志包含报表服务器事件的有关信息。|  

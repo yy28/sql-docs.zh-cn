@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c777c26de51c9e66244ce9be1931ea40da33a29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130827"
 ---
 # <a name="cache-connection-manager-editor"></a>缓存连接管理器编辑器
   缓存连接管理器从缓存转换或缓存文件 (.caw) 中读取引用数据集，并且可以将数据保存到缓存文件中。 这些数据始终存储在内存中。  
@@ -42,7 +39,7 @@ ms.locfileid: "37241127"
 ##  <a name="generaltab"></a> “常规”选项卡  
  “缓存连接管理器编辑器”对话框的“常规”选项卡用于指示是从文件读取缓存还是将缓存保存到文件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **连接管理器名称**  
  为工作流中的缓存连接提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   
@@ -73,7 +70,7 @@ ms.locfileid: "37241127"
 ##  <a name="columnstab"></a> “列”选项卡  
  **“缓存连接管理器编辑器”** 对话框的 **“列”** 选项卡用于配置缓存中各列的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **列**  
  指定列名。  
   

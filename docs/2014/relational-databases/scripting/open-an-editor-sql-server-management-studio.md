@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a67b2c268aa269356e1620b8bf3fd5f5998810a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9791e381b9233137055c680efb8bdfcad62929a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110697"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>打开编辑器 (SQL Server Management Studio)
   本主题介绍如何在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]查询、MDX、DMX 或 XML/A 编辑器。 打开后，每个编辑器窗口都在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的中心窗格中显示为一个选项卡。  
@@ -30,7 +27,7 @@ ms.locfileid: "37199147"
 ### <a name="limitations-and-restrictions"></a>限制和局限  
  如果与其他站点上使用非重复代码页的用户共享文件，则应使用相应的 Unicode 代码页保存文件，以避免读取该文件时出错。 此外，在保存用于 UNIX 或 Macintosh 的文件时，请确保使用相应的文档格式来保存文件。 在 **“文件”** 菜单上，单击 **“另存为”**，再单击 **“保存”** 按钮旁边向下箭头中的 **“编码保存”** ，然后在 **“行尾”** 下选择 **Unix** 或 **Macintosh**。  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  在代码编辑器中执行的操作会受到为您用于登录的身份验证帐户所授予的权限的约束。 例如，如果您使用 Windows 身份验证打开一个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器窗口，则无法执行引用您的 Windows 登录帐户无权访问的对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  
   
 ## <a name="how-to-open-editors"></a>如何打开编辑器  

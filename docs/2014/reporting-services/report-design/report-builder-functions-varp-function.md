@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 64764a82da2b41401631c1eeb31a7f0928df4e3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a85a61213c4b24fe0a6df3e90ccf6280f65cee3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217607"
 ---
 # <a name="varp-function-report-builder-and-ssrs"></a>VarP 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的、由表达式指定的所有非 Null 数值的总体方差。  
@@ -47,7 +44,7 @@ VarP(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回`Decimal`对于十进制表达式和`Double`对于所有其他表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  表达式中指定的数据集必须具有相同的数据类型。 若要将转换具有多个数值数据类型为相同的数据类型的数据，请使用转换函数，例如`CInt`，`CDbl`或`CDec`。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  

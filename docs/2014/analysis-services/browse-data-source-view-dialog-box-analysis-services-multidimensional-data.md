@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Browse Data Source View dialog box
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70b89ee36a2a613398cf092cf9e9b25f70386330
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163617"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>“浏览数据源视图”对话框（Analysis Services - 多维数据）
   “浏览数据源视图”对话框显示所选数据源视图的简单图形关系图。 另外，数据源视图的名称还将显示为对话框的标题。  

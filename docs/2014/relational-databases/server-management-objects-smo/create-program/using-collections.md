@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SMO [SQL Server], collections
 - collections [SMO]
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3a56d7b6335734f8ddc90ea1a4438e6b6ae1763
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33c0d43f3be1ca48904a7e4fa130f04ea0cc7445
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179613"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174977"
 ---
 # <a name="using-collections"></a>使用集合
   集合是指从相同对象类构造的并共享同一父对象的对象列表。 集合对象始终包含对象类型的名称并具有 Collection 后缀。 例如，若要访问指定表中的列，请使用 <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection> 对象类型。 它包含所有属于同一 <xref:Microsoft.SqlServer.Management.Smo.Column> 对象的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象。  

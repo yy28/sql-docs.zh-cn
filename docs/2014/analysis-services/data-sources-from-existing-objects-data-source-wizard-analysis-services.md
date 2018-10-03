@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.specifyobject.f1
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 39ae96a5ebc4849e61fe2a2630702c2a8cf16111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142237"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>来自现有对象的数据源（数据源向导）(Analysis Services)
   可以使用 **“来自现有对象的数据源”** 页，指定新数据源基于的现有数据源或项目。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **创建基于解决方案中的现有数据源的数据源**  
  选择此选项可基于解决方案中的现有数据源创建新的数据源。 在生成、刷新或部署使用新数据源的项目时，新数据源将从您在选择此选项时指定的数据源获取设置。  
   

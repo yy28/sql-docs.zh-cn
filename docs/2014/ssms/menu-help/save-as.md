@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0164c0a426f0d317107178a5f7c2e7eb9e41c5b8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4862c346e29eceb38712d0062c4f3f4865afabe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116781"
 ---
 # <a name="save-as"></a>另存为
   使用此对话框可以将当前项的实例以指定的文件格式保存到指定位置。 若要显示此对话框中，单击**保存** *\<文件 >* **作为**上**文件**菜单 (其中 *\<文件 >* 是当前项的名称)，或按 ALT + F，一个在代码编辑器中。  

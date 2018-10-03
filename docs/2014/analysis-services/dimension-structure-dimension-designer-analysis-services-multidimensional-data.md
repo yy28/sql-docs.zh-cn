@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.f1
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 223c50685ed41cb23ddff81e1fded12b9cac5fa5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172227"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>维度结构（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“维度结构”** 页修改所选维度的属性、层次结构和级别。 **“维度结构”** 页包含一个工具栏和三个窗格。  

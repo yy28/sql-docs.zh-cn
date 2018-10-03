@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110590"
 ---
 # <a name="report-model-query-designer-user-interface"></a>报表模型查询设计器用户界面
   报表设计器提供了两个查询设计器，可帮助您指定报表服务器模型数据源中要用于报表的数据。 使用图形查询设计器可以浏览和选择模型实体和实体字段。 使用基于文本的查询设计器可以直接以 XML 格式使用语义模型定义语言 (SMDL) 规范。  
@@ -43,7 +40,7 @@ ms.locfileid: "37301747"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“资源管理器”窗格|显示模型中的实体和实体字段的图形化表示形式。 使用此窗格可以浏览实体、实体之间的关系以及字段。|  
 |设计区域|显示模型中的字段列表。 使用此窗格可以排列所选字段的布局。|  
@@ -56,7 +53,7 @@ ms.locfileid: "37301747"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  设计查询时也可以使用工具栏按钮。 下表列出了工具栏中的按钮及其用途。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 报表服务器模型数据源的查询为 XML 格式的语义模型查询语言 (SMQL) 规范。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -76,7 +73,7 @@ ms.locfileid: "37301747"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“查询”窗格|显示 SMQL 规范文本。|  
 |“结果”窗格|显示查询的结果。 若要运行查询，请右键单击任意窗格，再单击“运行”，或者单击工具栏中的“运行”按钮。|  
@@ -84,7 +81,7 @@ ms.locfileid: "37301747"
 ### <a name="text-based-query-designer-toolbar"></a>基于文本的查询设计器工具栏  
  设计查询时也可以使用工具栏按钮。 下表列出了工具栏中的按钮及其用途。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。|  
 |**导入**|从现有报表导入查询。|  

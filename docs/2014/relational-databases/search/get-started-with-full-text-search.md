@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 722921015886e8aed687a8bf689dd7f7d8c592ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125037"
 ---
 # <a name="get-started-with-full-text-search"></a>全文搜索入门
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库在默认情况下支持全文索引。 不过，若要对表使用全文索引，必须对要使用全文引擎访问的表列设置全文索引功能。  

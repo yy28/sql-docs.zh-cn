@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - assemblies [Analysis Services]
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172107"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多维模型程序集管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了一些可用于多维表达式 (MDX) 和数据挖掘扩展插件 (DMX) 语言的内部函数，这些内部函数经过专门设计，可用于完成从标准统计计算到遍历层次结构中的成员的所有任务。 但是，任何复杂且健壮的产品都需要不断地扩展其功能，本产品也不例外。  
@@ -83,7 +80,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  程序集的安全性基于 .NET Framework 安全模式，这是一个代码访问安全模式。 .NET Framework 支持代码访问安全机制，此机制假设：运行时可承载完全可信和部分可信的代码。 .NET Framework 代码访问安全性所保护的资源通常由要求具有相应权限才能访问资源的托管代码所包装。 仅当调用堆栈中的所有调用方（在程序集层）均具有相应资源权限时，此权限要求才得到满足。  
   
  对于程序集，执行权限随 `PermissionSet` 对象的 `Assembly` 属性传递。 托管代码接收的权限由有效的安全策略确定。 非[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 宿主环境中已有三个有效的策略级别：企业、计算机和用户。 代码接收的有效权限列表由这三个级别获得的权限交集所确定。  

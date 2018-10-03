@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763d33dd182883f3b781b3e7e70cf91eda906044
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157927"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>用于 SharePoint 模式下在报表服务器上已发布的报表项的 URL 示例 (SSRS) 
   若要将报表和相关项发布到 SharePoint 库，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 创作工具（如报表设计器）发布内容，或者使用 SharePoint 站点操作来上载内容。  
@@ -62,7 +59,7 @@ ms.locfileid: "37214727"
   
  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 或 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]上，库显示在服务器名称之后，例如 http://*servername/* Shared Documents。  
   
- 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如，http://*servername/site/* Documents。  
+ 在 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 或 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]中，库显示在站点和子站点之后。 例如， http://*servername/site/* Documents。  
   
  若要查找新的 SharePoint 库或某个不熟悉站点的路径信息，请打开浏览器，然后找到要发布报表的 SharePoint 库。 如果该库为空，则上载任意文件。 右键单击该文件，然后选择“属性”以打开“属性”窗口。 文件地址中包含发布操作所需的 URL 值。  
   

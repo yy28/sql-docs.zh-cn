@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifyprocessingandstorage.f1
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eae2e7c380b7b0de69047079edac87d273f07d52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198617"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>处理位置和存储位置（分区向导）
   可以使用 **“处理位置和存储位置”** 页，指定拥有分区的多维数据集的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例以及存储分区数据的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。 通过指定远程 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例或指定默认存储位置之外的其他存储位置，可以将分区定义为远程分区。 有关远程分区的详细信息，请参阅 [远程分区](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。  

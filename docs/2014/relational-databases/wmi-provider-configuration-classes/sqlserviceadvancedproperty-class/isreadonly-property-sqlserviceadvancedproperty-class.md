@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IsReadOnly Property (SqlServiceAdvancedProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - IsReadOnly property
 ms.assetid: 9672e70f-1d8c-4133-ac73-3b5733a1c4ee
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f149dcd62d9e2e91df6b129d64022bcbc305ba8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6d6239c0187047a05775d2ffdf2ab027413273ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202557"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>IsReadOnly 属性（SqlServiceAdvancedProperty 类）
   获取或设置用于指定高级属性是否为只读的布尔值。  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定高级属性是否为只读的布尔值：如果高级属性为只读，则为 `true`；如果高级属性可以修改，则为 `false`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

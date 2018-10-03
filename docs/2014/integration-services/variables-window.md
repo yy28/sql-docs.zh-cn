@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.variables.f1
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59c097bcc9ee8e2e1b6872ab84cf807deec9d9ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2be1625093dfd89e59cef4731e61411f2c7e4b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158177"
 ---
 # <a name="variables-window"></a>“变量”窗口
   可以使用“变量”窗口创建和修改用户定义变量，以及查看系统变量。  
@@ -35,7 +32,7 @@ ms.locfileid: "37162848"
 > [!NOTE]  
 >  值`Name`和`Namespace`属性必须以字母字符开头，如 Unicode 标准 2.0 中或下划线 (_) 所定义。 后续字符可以是在 Unicode 标准 2.0 中定义的字母或数字，或是下划线 (\_)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **添加变量**  
  添加用户定义变量。  
   

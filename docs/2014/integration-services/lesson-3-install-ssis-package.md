@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2251360bfc69fd4e1846ace6a072ff537c6248e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ded3fa139483e5a9e3c337bbfd8c63825a749a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287571"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130027"
 ---
 # <a name="lesson-3-installing-packages"></a>第 3 课：安装包
   在中[第 2 课： 创建部署捆绑](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)，生成部署实用工具，并创建部署捆绑包包含的项，必须在另一台计算机上安装包。 您还验证了部署捆绑中的文件列表，检查了在生成部署实用工具时创建的清单文件的内容。  
@@ -40,6 +37,6 @@ ms.locfileid: "37287571"
 ## <a name="start-the-lesson"></a>开始课程  
  [步骤 1：复制部署捆绑](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
-![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
   

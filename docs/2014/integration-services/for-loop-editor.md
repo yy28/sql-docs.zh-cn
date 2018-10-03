@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af80869fbba015492b469af030d5cc297e7127e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27f4fc4d938f9b82ca3a4ad126f0cda6d75d8d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123367"
 ---
 # <a name="for-loop-editor"></a>For 循环编辑器
   可以使用 **“For 循环编辑器”** 对话框的 **“For 循环”** 页，配置只有在指定条件的计算结果为 False 时才会停止重复执行工作流的循环。  
   
  若要了解有关 For 循环容器以及如何在包中使用它的信息，请参阅 [For Loop Container](control-flow/for-loop-container.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **InitExpression**  
  提供初始化该循环所用值的表达式（可选）。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server], OLE Automation
@@ -19,12 +17,12 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc91ee4a040ce2a2dbe15afed5b1655dbcf7a052
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160150"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 自动化结果集
   如果 OLE 自动化属性或方法返回的数据是一维或二维数组，则该数组将作为结果集返回到客户端：  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a3e0f94a0785aa13fc4c83c304e207b8775e58b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260513"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121497"
 ---
 # <a name="choose-item-location-page-report-manager"></a>“选择项位置”页（报表管理器）
   使用“选择项位置”页可以为新链接报表或新模型选择文件夹。 如果要为特定的用户组创建链接报表或模型，则最好将该项放在包含这组用户所使用的其他报表和模型的文件夹中。 必须选择一个已经存在并且有权对其添加内容的文件夹。  
@@ -55,7 +52,7 @@ ms.locfileid: "37260513"
   
 4.  在 **“常规”** 选项卡的属性页中，单击 **“更改位置”** 以打开“选择项位置”页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **位置**  
  指定用来包含所创建项的文件夹的名称。 您可以键入全名，也可以使用树视图导航到想要使用的文件夹。  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b932ac5fac719be29bda37f134f9beb06d1483f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104777"
 ---
 # <a name="level-element-csdlbi"></a>Level 元素 (CSDLBI)
   Level 元素是定义层次结构中的单个级别的复杂类型  
@@ -30,10 +27,10 @@ ms.locfileid: "37211477"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|数据源|是|属性引用的容器。|  
-|PropertyRef|是|对实例属性的引用。 可以从所引用的实例属性中获取其他级别属性（例如标题、名称和引用名称）。 如果是这样，则不需要在 Level 元素中指定这些属性。|  
+|数据源|用户帐户控制|属性引用的容器。|  
+|PropertyRef|用户帐户控制|对实例属性的引用。 可以从所引用的实例属性中获取其他级别属性（例如标题、名称和引用名称）。 如果是这样，则不需要在 Level 元素中指定这些属性。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关表格模型中的层次结构的详细信息，请参阅[层次结构元素 (CSDLBI)](hierarchy-element-csdlbi.md)。  
   
 ## <a name="example"></a>示例  

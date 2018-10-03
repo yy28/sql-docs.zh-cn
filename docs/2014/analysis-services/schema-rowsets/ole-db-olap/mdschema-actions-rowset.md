@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_ACTIONS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 317ddc9a284df779a44866c0c037310b29f76d02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140715"
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS 行集
   介绍可用于客户端应用程序的操作。  
@@ -74,7 +71,7 @@ ms.locfileid: "37319367"
   
  客户端应用程序可通过使用 OR 运算符定义多个 `ACTION_TYPE`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了有效的 `COORDINATE` 和 `COORDINATE_TYPE` 组合。  
   
 |COORDINATE 对象类型|COORDINATE_TYPE|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-caps.latest.revision: 74
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145887"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用报表设计器设计报表 (SSRS)
   使用报表设计器可以创建功能齐全的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和报表解决方案。 报表设计器提供可在其中定义数据源、数据集和查询的图形界面，用于数据区域和字段的报表布局位置，以及交互功能（例如一起使用的参数和报表集）。  
@@ -181,7 +178,7 @@ ms.locfileid: "37218947"
 |错误级别|Description|  
 |-----------------|-----------------|  
 |0|最严重且无法避免的生成错误，将阻止预览和部署报表。|  
-|@shouldalert|严重的生成错误，会彻底更改报表布局。|  
+|1|严重的生成错误，会彻底更改报表布局。|  
 |2|不太严重的生成错误，会明显更改报表布局。|  
 |3|很小的生成问题，以轻微的方式更改报表布局，您可能注意不到所发生的更改。|  
 |4|仅用于发布警告。|  

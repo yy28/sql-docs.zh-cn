@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectdimension.f1
 ms.assetid: 0bea4831-982e-4848-86cd-e6219c860138
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09e21a926e306394b30314a885a5fe394fb36b1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfedee8dfc4f5ece1d4502716d6a7690fa73d9cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193789"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>创建自定义成员公式（维度）（商业智能向导）
   可以使用“创建自定义成员公式”页选择一个维度，商业智能向导将该维度的属性与自定义成员公式列相关联；这些列包含定义该属性成员值的多维表达式 (MDX) 语句。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Dimension**  
  选择维度，向导会将此维度中包含的属性与自定义成员公式关联。  
   

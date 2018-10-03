@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238517"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179287"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>“地图颜色规则”对话框 -&gt;“常规”
   选择 **“颜色规则属性”** 对话框中的 **“常规”** 可以定义此层上地图元素的颜色选项。 地图元素包括多边形、线条和点。 当您创建了基于空间数据的地图元素和来自数据集字段（或来自空间数据源字段）的分析数据之间的关系后，就可以应用颜色规则。  
   
  若要通过指定具有不同主要颜色和辅助颜色的装饰性渐变来显示层上的所有地图元素，请使用“地图多边形属性”对话框的 **“填充”** 页。 对于层来说，颜色规则优先于显示属性。 有关详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **应用模板样式**  
  选择此选项可以基于主题使用颜色，该主题在向导中选择或在“多边形”、“线条”或“点”层属性中设置。 主题为地图的颜色、字体和边框设置默认选项。 对于此选项，不应用任何规则来将颜色分配给每个地图元素。  
   

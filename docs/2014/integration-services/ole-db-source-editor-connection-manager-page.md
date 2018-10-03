@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-caps.latest.revision: 41
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172977"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 源编辑器（“连接管理器”页）
   可以使用 **“OLE DB 源编辑器”** 对话框的 **“连接管理器”** 页，为源选择 OLE DB 连接管理器。 使用此页还可以选择数据库中的表或视图。  

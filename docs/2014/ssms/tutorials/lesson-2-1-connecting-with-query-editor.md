@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 666904837a211b0aa76214155c2d55024175c5c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145854"
 ---
 # <a name="connecting-with-query-editor"></a>连接查询编辑器
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 允许在与服务器断开连接时编写或编辑代码。 当服务器不可用或要节省短缺的服务器或网络资源时，这一点很有用。 您也可以更改查询编辑器与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的连接，而无需打开新的查询编辑器窗口或重新键入代码。  

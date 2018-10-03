@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.notifyoperator.f1
 helpviewer_keywords:
 - Notify Operator Task dialog box
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 323a22356efbdc63ea92e001f201e1553e82c93a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bda53a04dcfe573855c9eb1c0adf9fbd558cbe1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211157"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156367"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>“通知操作员”任务（维护计划）
   使用 **“‘通知操作员’任务”** 对话框可以向此维护计划中添加自动通知。 若要使用此任务，必须启用数据库邮件并将 MSDB 正确配置为邮件主机数据库，而且还要具有一个带有有效电子邮件地址的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理操作员。  
   
  此任务使用 sp_notify_operator 存储过程。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“连接”**  
  选择执行此任务时使用的服务器连接。  
   

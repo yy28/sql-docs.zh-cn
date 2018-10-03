@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7906ba748e55b238cfc5ca074190d687be5f96bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fba1021e4152d5d810b54d29417864936f067800
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183367"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目标编辑器（“错误输出”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项。  
@@ -38,7 +35,7 @@ ms.locfileid: "37256783"
   
 -   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Analysis Services, installing
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
-caps.latest.revision: 47
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149897"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>在多维和数据挖掘模式下安装 Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为商业智能应用程序提供联机分析处理 (OLAP) 和数据挖掘功能。 在此版本中，OLAP 数据库和数据挖掘模型的支持均可在安装时[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中*多维模式下*。 多维模式是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 运行时所采用的三种服务器模式之一。 它是默认模式。 如果使用默认值安装 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则将获得运行多维数据库和数据挖掘模型的实例。  

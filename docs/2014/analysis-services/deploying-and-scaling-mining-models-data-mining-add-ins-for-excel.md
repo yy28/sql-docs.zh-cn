@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - manage
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ee14168bab11ec19aa748651ec1e871ee047ef6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103877"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>部署和缩放挖掘模型（Excel 数据挖掘外接程序）
   中的工具**模型使用情况**并**管理**组可以帮助您管理和浏览现有挖掘模型。 您可以使用这些工具来查看在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例上存储的任意模型，而不仅仅是使用外接程序创建的那些模型。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpibrowserpane.f1
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 520024140f0406f897e897cd2d41eff065923aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174597"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 浏览器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 浏览器”窗格查看和测试关键绩效指标 (KPI) 的结果。 在浏览之前，必须先将 KPI 部署到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例。  
@@ -29,7 +26,7 @@ ms.locfileid: "37257373"
 > [!NOTE]  
 >  此窗格仅显示在浏览器视图中。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **子多维数据集网格**  
  用于定义子多维数据集和限制在“结果”窗格中显示的 KPI 结果。 该网格包含以下列：  
   

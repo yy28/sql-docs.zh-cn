@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, processing options
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying processing options
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5f20e9061aae762eda6b773c7bdb345273fd1b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 450cc656d22d471225e013bfcd2664f6eb27dba9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149098"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173193"
 ---
 # <a name="specifying-processing-options"></a>指定处理选项
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取处理选项从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用上指定的处理选项**部署**页*\<项目名称 >* **属性页**对话框中，若要创建\<*项目名称*>.deploymentoptions 文件。  
@@ -39,7 +36,7 @@ ms.locfileid: "37149098"
   
     -   完全处理  
   
-    -   InclusionThresholdSetting  
+    -   None  
   
 -   **写回表选项** 如果在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中启用了写回，则此设置可定义处理写回的方式。 有以下三个写回表选项：  
   

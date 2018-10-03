@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192937"
 ---
 # <a name="process-odbc-errors-odbc"></a>处理 ODBC 错误 (ODBC)
   可以使用两个 ODBC 函数调用来检索 ODBC 消息： [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)并[SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md)。 若要获取 **SQLState**、**pfNative** 和 **ErrorMessage** 诊断字段中有关 ODBC 的主要信息，请调用 [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402)，直到其返回 SQL_NO_DATA 为止。 对于每条诊断记录，可以调用 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 来检索各个字段。 所有特定于驱动程序的字段都必须使用 `SQLGetDiagField` 来检索。  

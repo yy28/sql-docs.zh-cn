@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.f1
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8abea104cf6d59ba0558489a387ae35af7b6e7cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291393"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218147"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用“将副本添加到可用性组向导”(SQL Server Management Studio)
   使用“将副本添加到可用性组向导”可帮助您将新的辅助副本添加到现有 AlwaysOn 可用性组。  
@@ -82,7 +79,7 @@ ms.locfileid: "37291393"
   
 5.  在 **“指定副本”** 页上，为可用性组指定和配置一个或多个新的辅助副本。 此页包含三个选项卡。 下表介绍了这些选项卡。 有关详细信息，请参阅[“指定副本”页（新建可用性组向导：添加副本向导）](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)。  
   
-    |选项卡|简短说明|  
+    |Tab|简短说明|  
     |---------|-----------------------|  
     |**副本**|使用此选项卡可以指定将承载新的辅助副本的每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。|  
     |**端点**|使用此选项卡可验证每个新的辅助副本的现有数据库镜像端点（如果有）。 如果在其服务帐户使用 Windows 身份验证的服务器实例上缺少该端点，则该向导会自动创建该端点。 **注意：** 如果任何服务器实例在非域用户帐户下运行，需要执行操作之前可以在向导中继续对服务器实例进行手动更改。 有关详细信息，请参阅本主题前面的 [先决条件](#Prerequisites)。|  

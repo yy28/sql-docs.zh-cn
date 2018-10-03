@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], how-to topics
 - Visual Database Tools [SQL Server], database diagrams
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df7176913dd50fe3ac60d6015b1825cbe84d129f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 67bef8e8cc3a696a137b9f1ce5da61a80f32fe0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159007"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>将数据库关系图复制到剪贴板 (Visual Database Tools)
   您可以创建数据库关系图图像，并将其复制到其他应用程序。  

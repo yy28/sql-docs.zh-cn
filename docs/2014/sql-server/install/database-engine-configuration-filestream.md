@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], about FILESTREAM
 ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 82bf651e6242be7e1835caac7fd7d3419b51cf31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 190a6ce588ed40ab7cc9181476ca3730eeef34b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112965"
 ---
 # <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 使[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]使用 NTFS 文件系统通过将存储`varbinary(max)`二进制大型对象 (BLOB) 数据作为文件系统上的文件。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  

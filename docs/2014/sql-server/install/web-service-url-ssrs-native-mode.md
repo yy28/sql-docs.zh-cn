@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 21a9ede5ef83169d312bb59e84bfd3f33619dafb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099027"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web 服务 URL（SSRS 本机模式）
   使用“Web 服务 URL”页可配置或修改用于访问报表服务器的 URL。 将基于指定的 URL 创建“URL 预留”。 URL 预留定义适用于所有 URL 的语法和规则，随后可使用这些 URL 来访问报表服务器 Web 服务。 它指定报表服务器 Web 服务的前缀、主机、端口和虚拟目录。 根据指定主机的方式不同，一个预留可能会对应多个 URL。 主机的默认值指定强通配符。 使用强通配符，可在 URL 中指定可解析为承载报表服务器的计算机的任何主机名。 有关 URL 配置和保留的详细信息，请参阅[配置 URL &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)并[配置报表服务器 Url &#40;SSRS 配置管理器&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
@@ -38,7 +35,7 @@ ms.locfileid: "37270233"
   
  如果你重新安装[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和发现尝试使用所有已分配和端口 80 的默认 IP 地址值时遇到错误，通常可以通过重新启动该服务后重新创建该 URL 来解决该错误。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **虚拟目录**  
  指定报表服务器 Web 服务的虚拟目录名称。 在同一台计算机上，每个报表服务器 Web 服务实例只能有一个虚拟名称。  
   
