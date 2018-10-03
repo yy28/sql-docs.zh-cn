@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
-caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1584eecec18d8cbc33a833c8e85e370ba0d9d6c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ab9ff4990c3e2ce3444f241522d928f5c97003b9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203227"
 ---
 # <a name="outdated-backup"></a>过时的备份
   此规则检查数据库是否有最新备份。 计划定期备份对于防止数据库因多种不同故障而造成数据丢失很重要。 用于备份数据的合适频率取决于数据库的恢复模式、有关可能数据丢失的业务需求以及数据库的更新频率。 在频繁更新的数据库中，两次备份之间丢失工作的风险增加得相当快。  

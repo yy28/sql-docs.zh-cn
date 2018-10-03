@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25560f82b1a697618dd606f7df8393abb74727c6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354419"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199723"
 ---
 # <a name="coding-user-defined-types"></a>用户定义类型编码
   编写用户定义类型 (UDT) 的定义时，必须根据是要将 UDT 作为类还是作为结构实现以及您所选择的格式和序列化选项来实现各种功能。  

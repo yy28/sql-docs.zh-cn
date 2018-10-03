@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Application Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b4a9b82bef51b02d65c934a6b8adbbbdb30e2e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200387"
 ---
 # <a name="application-element-assl"></a>Application 元素 (ASSL)
   标识关联的应用程序[操作](../objects/action-element-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37279493"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37279493"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[操作](../objects/action-element-assl.md)或其派生的元素之一： [DrillThroughAction](../data-type/action-data-type-assl.md)， [ReportAction](../data-type/reportaction-data-type-assl.md)， [StandardAction](../data-type/standardaction-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  客户端应用程序可以使用 `Application` 元素确定哪些操作适用于给定的应用程序。 客户端应用程序负责计算此元素的值。  
   
  父级对应的元素`Application`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Action>。  

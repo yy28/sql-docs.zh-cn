@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0c9bf50f92be44a137f05a9f56a307910977cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d885c6b62917759b77473f0811bbf534c8db2ccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208087"
 ---
 # <a name="distributor-information-agents"></a>分发服务器信息，代理
   **“代理”** 选项卡显示与发布服务器和订阅服务器关联的代理和维护作业的相关信息。  
@@ -30,7 +27,7 @@ ms.locfileid: "37294713"
   
  有关快照代理、日志读取器代理和队列读取器代理的详细信息，请参阅 [Publisher Information, Agents](publisher-information-agents.md)。 请注意，当您查看分发服务器的 **“代理”** 选项卡上的代理信息时，将提供快照代理和日志读取器代理的发布服务器信息。 不过，在分发服务器视图中分发服务器的 **“代理”** 选项卡中，您还可以选择 **“分发服务器代理”** 和 **“合并代理”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  以下各节说明了此选项卡上为分发服务器代理和合并代理显示的数据。  
   
 ### <a name="distributor-agent"></a>“分发服务器代理”  

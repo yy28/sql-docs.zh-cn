@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206179"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Windows Azure 中的 SQL Server 数据文件
   Windows Azure 中的 SQL Server 数据文件可为作为 Windows Azure Blob 存储的 SQL Server 数据库文件提供本机支持。 通过此功能，您可以在本地或在 Windows Azure 中虚拟机上运行的 SQL Server 中创建数据库，而将数据存储在 Windows Azure Blob 存储中的专用存储位置。 此增强功能使用分离和附加操作，简化了计算机之间的数据库移动。 此外，它还允许您将数据库备份文件从 Windows Azure 存储还原或还原到 Windows Azure 存储，为数据库备份文件提供了备选存储位置。 因此，它在数据虚拟化、数据移动、安全性和可用性、轻松降低成本以及维护方面都具备优势，可实现高可用性和弹性扩展，支持几种混合解决方案。  
@@ -83,7 +80,7 @@ ON
   
  **重要说明：** 如果当前存在任何对容器中数据文件的引用，则尝试删除相应的 SQL Server 凭据会失败。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  以下是在 Windows Azure 存储中存储 SQL Server 数据文件时的安全注意事项和要求。  
   
 -   为 Windows Azure Blob 存储服务创建容器时，建议您将访问权限设置为“私有”。 将访问权限设置为“私有”后，只有 Windows Azure 帐户所有者才可读取容器和 Blob 数据。  

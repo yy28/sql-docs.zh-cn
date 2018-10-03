@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202027"
 ---
 # <a name="planning-a-report-report-builder"></a>规划报表 (报表生成器)
   利用报表生成器可创建多种类型的报表。 例如，可以创建显示摘要或详细销售数据、营销和销售趋势的报表、操作报表或面板。 还可以为销售订单、产品目录或套用信函等创建利用丰富格式文本的报表。 所有这些报表都是在报表生成器中使用相同基本构造块的不同组合创建的。 若要创建有用且易于理解的报表，报表生成器可帮助首先进行规划。 开始创建报表之前最好考虑以下几个问题：  

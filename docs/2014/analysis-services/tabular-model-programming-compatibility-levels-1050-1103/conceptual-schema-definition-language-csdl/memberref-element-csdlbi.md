@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 399aaa34-896c-48e7-aacb-18564f31b568
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f308a9c890c36b5948c0f2c8a8468350c2e7cf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb0912afd99c7a4859ca4750a3ba1b66fdecd5f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205708"
 ---
 # <a name="memberref-element-csdlbi"></a>MemberRef 元素 (CSDLBI)
   MemberRef 元素标识作为引用目标的属性的名称。  
@@ -30,7 +27,7 @@ ms.locfileid: "37265263"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|“属性”|是|MemberRef 元素中包含的属性的名称。|  
+|“属性”|用户帐户控制|MemberRef 元素中包含的属性的名称。|  
   
 ## <a name="memberrefs-element"></a>MemberRefs 元素  
  MemberRefs 是一种复杂类型，用于定义 MemberRef 元素中包含每个成员的成员集合。  
@@ -39,7 +36,7 @@ ms.locfileid: "37265263"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|MemberRef|是|一个包含成员引用的字符串。|  
+|MemberRef|用户帐户控制|一个包含成员引用的字符串。|  
   
 ## <a name="example"></a>示例  
  **表格**  

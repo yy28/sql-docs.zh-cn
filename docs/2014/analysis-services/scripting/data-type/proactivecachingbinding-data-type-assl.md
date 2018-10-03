@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingBinding data type
 ms.assetid: 02e6ff2f-2f18-4607-9198-bb46f113f9ac
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d440911eefa33981ef435240c4e440378da34a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a8d34019463453b52df520d1c0153420903a0f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209757"
 ---
 # <a name="proactivecachingbinding-data-type-assl"></a>ProactiveCachingBinding 数据类型 (ASSL)
   定义表示信息的抽象的派生的数据类型[ProactiveCaching](../objects/proactivecaching-element-assl.md)元素有关需要重新生成缓存的数据源更改或重新生成过程的状态。  
@@ -53,11 +50,11 @@ ms.locfileid: "37189094"
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
-|子元素|InclusionThresholdSetting|  
-|派生元素|InclusionThresholdSetting|  
+|父元素|None|  
+|子元素|None|  
+|派生元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关详细信息`Binding`类型，包括 Analysis Services 脚本语言 (ASSL) 对象的表`Binding`类型和继承层次结构`Binding`类型，请参阅[绑定数据类型&#40;ASSL&#41;](binding-data-type-assl.md).  
   
  有关 ASSL 中数据绑定的概述，请参阅[数据源和绑定&#40;SSAS 多维&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  

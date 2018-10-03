@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 11542b799e24e33fea852e8cac9e118349787a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5550a321e812b84c2d3e2dc8c64efd298e8eb95f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206333"
 ---
 # <a name="url-access-ssrs"></a>URL 访问 (SSRS)
   通过 SQL Server Reporting Services (SSRS) 中报表服务器的 URL 访问，您可以通过 URL 请求将命令发送到报表服务器。 例如，您可以自定义报表在本机模式报表服务器上或 SharePoint 库中的呈现。 您可能已经使用了一组特定的报表参数值查看了报表，或者可能正在查看报表中感兴趣的特定页。 您可以使用预定义的 URL 访问参数在 URL 中封装这些信息。 您可以通过为呈现格式嵌入参数，或者为报表查看器的外观嵌入参数，进一步自定义报表服务器处理报表的方式。 然后，您可以将此 URL 直接粘贴到电子邮件或网页中，让他人在浏览器中采用相同的方式访问您的报表。  

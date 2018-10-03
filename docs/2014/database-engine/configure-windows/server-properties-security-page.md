@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.security.f1
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 991424e737ba09012bdbb327dd0dfe4c560d82b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb9d19b96350ebfc9eb2f3e047866c272e8d1e35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178424"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195263"
 ---
 # <a name="server-properties-security-page"></a>服务器属性（“安全性”页）
   使用此页可以查看或修改服务器安全选项。  
@@ -68,7 +65,7 @@ ms.locfileid: "37178424"
  **密码**  
  指定代理帐户的密码。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **启用 C2 审核跟踪**  
  审核对语句和对象的所有访问尝试，并记录到文件中，对于默认 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，该文件位于 \MSSQL\Data 目录中，对于*命名实例，该文件位于 \MSSQL$* instancename [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Data 目录中。 有关详细信息，请参阅 [c2 审核模式服务器配置选项](c2-audit-mode-server-configuration-option.md)。  
   

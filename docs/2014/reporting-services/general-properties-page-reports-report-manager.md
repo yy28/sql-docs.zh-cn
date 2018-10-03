@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7d4b9885c1dc28d7786296a220d76f56e24a43e1
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084649"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206157"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>报表的“常规”属性页（报表管理器）
   使用报表的“常规”属性页可以重命名、删除、移动或替换报表定义。 也可以使用此页创建链接报表。 页面顶部显示了有关创建或修改报表的用户以及发生更改的时间等详细信息。  

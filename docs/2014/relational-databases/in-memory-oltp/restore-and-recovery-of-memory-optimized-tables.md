@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 532f764aea94c63b9ad4638eb7e80734c69f79c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208947"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>内存优化表的还原和恢复
   检索或还原具有内存优化表的数据库的基本机制类似于仅具有基于磁盘的表的数据库。 但与基于磁盘的表不同，必须首先将内存优化表加载到内存中，然后数据库才可用于用户访问。 这会在数据库恢复中添加一个新步骤。 按如下所示更改数据库恢复中修改的步骤：  

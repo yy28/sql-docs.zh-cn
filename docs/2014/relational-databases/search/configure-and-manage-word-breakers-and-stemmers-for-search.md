@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - conjugating verbs [full-text search]
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
-caps.latest.revision: 88
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0804fedde52ad335197c142b897afab8743f45b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199443"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>配置和管理断字符和词干分析器以便搜索
   断字符和词干分析器用于对所有全文索引数据执行语言分析。 语言分析将涉及到查找词边界（断字）和组合动词（词干分析）。 断字符和词干分析器是特定于语言的，并且各语言的语言分析规则也各不相同。 对于给定语言，“断字符”  通过根据语言的词法规则确定词的边界位置来标识各个词。 每个词（也称为标记）使用压缩表示形式插入全文索引以减少其大小。 词干分析器根据该语言的规则生成特定词的变形形式（例如，“running”、“ran”和“runner”是单词“run”的不同形式）。  

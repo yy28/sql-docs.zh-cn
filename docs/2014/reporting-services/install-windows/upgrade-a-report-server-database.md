@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ee01868f27e12f709ec5784e868eadcdd46f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64e215061aea44becca793a38d69c6abf2f14d6f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253569"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208688"
 ---
 # <a name="upgrade-a-report-server-database"></a>升级报表服务器数据库
   报表服务器数据库可为一个或多个报表服务器实例提供存储。 因为报表服务器数据库架构可能会因为推出新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本而有所变化，所以要求数据库版本与使用的报表服务器实例的版本相匹配。 大多数情况下，报表服务器数据库可以自动升级，您不需要执行任何具体操作。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245689"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198527"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>分区向导的 F1 帮助（Analysis Services - 多维数据）
   可以使用分区向导为多维数据集中的度量值组定义分区。 默认情况下，会对多维数据集中每个度量值组定义单个分区。 不过，如果是大型分区，这样将会降低访问和处理性能。 通过创建多个分区，使每个分区都包含度量值组的一部分数据，这样可以提高该度量值组的访问和处理性能。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5540401d4b0a05c3ebe87742f902e6e16b59498a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208217"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>配置拓扑（对等复制）
   可以使用 **“配置拓扑”** 页执行常见的配置任务，如添加新节点、删除节点，以及在现有节点之间添加新连接。 在此向导的 **“发布”** 页上选定的节点会显示在设计图面上。 若要指定配置选项，请右键单击某个节点、连接或者设计图面。  
@@ -29,7 +26,7 @@ ms.locfileid: "37322317"
 > [!NOTE]  
 >  配置对等拓扑向导关闭时请求拓扑信息。 如果该向导在所有节点响应信息请求之前关闭并重新打开，则该向导可能会显示部分网络。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“配置拓扑”** 页包含界面元素和在右键单击元素后显示的选项。 下表对每一界面元素进行了介绍。  
   
 |界面元素|Description|  

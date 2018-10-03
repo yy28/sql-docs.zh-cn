@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0f2b5914c31c3cacce4bfb8887ebde73e0d932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05236d05e1b543ea7acb36f0856083e1c1db77a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209717"
 ---
 # <a name="impersonation-information"></a>模拟信息
   使用 **“模拟信息”** 页可以指定 Analysis Services 将用于连接到数据源的凭据。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用特定 Windows 用户名和密码**  
  选择此选项将使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 对象使用指定 Windows 用户帐户的安全凭据。 指定凭据将用于执行处理、ROLAP 查询、外部绑定、本地多维数据集、挖掘模型、远程分区、链接对象以及从目标到源的同步。 但是，对于数据挖掘扩展插件 (DMX) OPENQUERY 语句，则忽略此选项，并且将使用当前用户的凭据而不是指定用户帐户的凭据。  
   

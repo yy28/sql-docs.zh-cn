@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.fill.f1
@@ -19,21 +17,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.fill.f1
 - "10124"
 ms.assetid: 93a91d02-d558-4a0e-8d17-3fdf21e208d3
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 135a2d1d7ac4a9783bf2cc66f26dc60953ec2f76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35c8786c571936a27570166c8d331cbd2a641b76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204647"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>“填充”对话框（报表生成器和 SSRS）
   在 **“填充”** 选项卡上，您可以为数据区域或文本框中的单个或多个单元的背景指定颜色选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **填充颜色**  
  单击此颜色按钮可为矩形选择填充颜色。 单击 **Expression***(fx)* 按钮可编辑表达式，可以是 RGB 颜色或中提供的预定义的颜色名称之一的十六进制值**表达式**对话框。 若要查看预定义的颜色的列表，请在 **“项”** 窗格中选择 **Web**。 可在表达式文本窗格中键入 **“标题”** 窗格中列出的颜色名称。 键入颜色名称时请勿使用等号 (=) 或引号 ("")。  
   

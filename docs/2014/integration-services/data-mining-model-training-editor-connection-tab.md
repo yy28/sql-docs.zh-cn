@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 604012c4fa0db262ab862eb56627d794e57eaa7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201287"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>数据挖掘模型定型编辑器（“连接”选项卡）
   可以使用 **“数据挖掘模型定型编辑器”** 对话框的 **“连接”** 页选择要定型的挖掘模型。  
   
  若要了解有关数据挖掘模型定型目标的详细信息，请参阅 [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
  从现有 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接的列表中进行选择，或者通过使用下面介绍的“新建”按钮创建新的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 连接。  
   

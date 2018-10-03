@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], scripts
 - scripts [Analysis Services], calculations
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bcdd7fdf3a16224b3189cbeaaf5160518c26892
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c03a6b532dbbc5b243119d20e14856a232180c6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196737"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定义赋值和其他脚本命令
   在多维数据集设计器的“计算”选项卡上，单击工具栏中的“新建脚本命令”图标以创建空脚本。 创建新脚本时，该脚本最初以空白标题显示在“计算”选项卡的 **“脚本组织程序”** 窗格中。您在“计算表达式”窗格中键入的字符将在 **“脚本组织程序”** 中显示为项的名称。 因此，您可能要在第一行中键入被注释的名称，以更方便地标识 **“脚本组织程序”** 窗格中的脚本。 有关详细信息，请参阅 [对 Microsoft SQL Server 2005 中的 MDX 脚本编写的介绍](http://go.microsoft.com/fwlink/?LinkId=81892)。 有关与 MDX 查询和计算相关的性能问题的详细信息，请参阅 [SQL Server 2005 Analysis Services 性能指南](http://go.microsoft.com/fwlink/?LinkId=81621)中的“编写有效的 MDX”。  

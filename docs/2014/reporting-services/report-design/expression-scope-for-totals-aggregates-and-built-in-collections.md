@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60825f051b0e80cbd55ec36c5b3e49cf9838e77b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253509"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204877"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>总计、聚合和内置集合的表达式作用域（报表生成器和 SSRS）
   在编写表达式时，您会发现在很多情况下都会使用“作用域”  一词。 作用域可以指定要用于计算表达式的数据、呈现的页面上的文本框集、可基于切换显示或隐藏的报表项集。 “作用域”  一词出现在与表达式计算、聚合函数语法和条件可见性相关的主题中以及有关这些范畴的错误消息中。 使用以下说明有助于区分“作用域”  适用的含义：  

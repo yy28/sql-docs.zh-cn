@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - schemas [SQL Server replication], replicating changes
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd2ea10d145e52150d3a34a8f1b668152922ddb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203027"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>对发布数据库进行架构更改
   复制支持对已发布对象进行多种架构更改。 对 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 发布服务器中相应的已发布对象进行以下任何架构更改时，默认情况下更改都将传播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器：  

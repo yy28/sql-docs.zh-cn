@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.ACTIVITYMON.F1
 - sql12.ag.jobactivitymonitor.alljobs.f1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d185f8c5e74359ac8f8dfa0a2673da603e611414
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 33a5730066cd18cf32a294fdc272e09b629d35af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206047"
 ---
 # <a name="job-activity-monitor"></a>作业活动监视器
   使用此页可以查看 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的当前活动。 单击“筛选器”可以限制显示的作业。 “代理作业活动”网格是只读的。 单击列标题可以对网格进行排序。 若要修改作业，请双击该作业以打开“作业属性”对话框。 右键单击网格中的作业，可以启动作业以运行其所有作业步骤，在特定作业步骤处启动作业，禁用或启用作业，刷新作业，删除作业，查看作业的历史记录以及查看作业属性。 单击“刷新”可以将网格更新为当前信息。  

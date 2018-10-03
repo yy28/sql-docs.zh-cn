@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2728200068787d69c6eaa225e0195170625cac4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194167"
 ---
 # <a name="using-user-defined-tables"></a>使用用户定义表
   用户定义表表示表格信息。 将表格数据传递到存储过程或用户定义函数中时，用户定义表可作为参数使用。 用户定义表不能用于表示数据库表中的列。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - System.Data library
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3f476b727527e1c2616106451409c98870f9810
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205287"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 中的 SQL Server 数据类型
   `SqlTypes` 库是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 的基类库的一部分。 它设计为向数据类型提供与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中相同的语义和精度。 本主题描述针对 .NET Framework 程序员的新语义，并且介绍在 `System.Data.SqlTypes` 库中包括的 `System.Data` 命名空间中实现的类型。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], panes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - displaying View Designer panes
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36fa7ef7bbc75c916f72d71894ad4f0bc2efefb0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: aedc73a4cb3ffa14e5f701dee54788783690bb59
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198089"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>显示查询和视图设计器窗格 (Visual Database Tools)
   查询和视图设计器由四个独立的窗格组成：“关系图”窗格、“条件”窗格、SQL 窗格和“结果”窗格。 通常，当您打开一个视图或者创建一个新查询时，将会打开所有四个窗口，但是如果您需要打开其中的任何窗口，只要查询和视图设计器处于打开状态，您就可以打开特定的窗口。  

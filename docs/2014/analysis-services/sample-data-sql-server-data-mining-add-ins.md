@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - partitioning data [data mining]
 - mining models, testing
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5984bbbaa3dc2bb55ce8f20a59dd5132de0ca72a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72579d679b0ced1fd3c260098bc68237f2980a3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209887"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>示例数据（SQL Server 数据挖掘外接程序）
   ![数据挖掘功能区中的分区数据向导](media/dmc-partition.gif "数据挖掘功能区中的数据进行分区向导")  
@@ -36,7 +33,7 @@ ms.locfileid: "37178964"
  为模型的定型和测试创建正确类型的数据是数据挖掘的一个重要部分，但如果没有适当的工具，将非常单调乏味。 该向导执行分层抽样以确保定型和测试集均衡。  
   
 ## <a name="random-sampling-and-oversampling"></a>随机抽样和过度抽样  
- 实例时都提供 SQL Server 登录名。 随机抽样是确保用于测试模型的数据能准确表示用于创建模型的数据的最佳方式。 可对存储在 Excel 或外部数据源中的数据进行随机抽样  
+ . 随机抽样是确保用于测试模型的数据能准确表示用于创建模型的数据的最佳方式。 可对存储在 Excel 或外部数据源中的数据进行随机抽样  
   
  如果使用随机抽样选项**示例数据**向导会自动创建定型和测试数据集，并将其输出到单独的 Excel 工作表以供日后参考。  
   
@@ -74,7 +71,7 @@ ms.locfileid: "37178964"
 ## <a name="related-options"></a>相关的选项  
  在向导中前进时，将有以下选项：  
   
-|“常规”|注释|  
+|选项|注释|  
 |-------------|--------------|  
 |“选择源数据”对话框（Excel 数据挖掘客户端）|选择包含数据的 Excel 范围或表。 如果要使用外部数据，则可使用关系数据，但这些数据必须包括在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源中。 T|  
 |“选择抽样类型”页（Excel 数据挖掘客户端）|如果您使用外部数据源，则会限制您只能使用随机抽样选项。 此外，必须指定要使用创建在最终数据集中的行数**行计数**选项。 不能指定源数据的百分比。|  

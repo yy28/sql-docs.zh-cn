@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 208
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c268854800acdfa1e725b4d00b564c018dd70f94
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 0741d908dba86e84ac3ee4cdc526caa853b462bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196957"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的数据库引擎功能
   本主题介绍 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但不推荐使用的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
@@ -98,23 +95,23 @@ ms.locfileid: "39084069"
 |本机 XML Web 服务|带有 FOR SOAP 选项的 CREATE ENDPOINT 或 ALTER ENDPOINT 语句。<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|请改用 Windows Communications Foundation (WCF) 或 ASP.NET。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |可删除的数据库|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |可删除的数据库|sp_dbremove|DROP DATABASE|sp_dbremove|76|  
-|Security|ALTER LOGIN WITH SET CREDENTIAL 语法|由新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 语法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
-|Security|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
-|Security|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
-|Security|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
-|Security|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
-|Security|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
-|Security|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
-|Security|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
-|Security|sp_control_dbmasterkey_password|主密钥必须存在，并且密码必须是正确的。|sp_control_dbmasterkey_password|274|  
-|Security|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
-|Security|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
-|Security|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
-|Security|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|这些存储过程返回在 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中是正确的信息。 该输出不反映在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中实现的权限层次结构的更改。 有关详细信息，请参阅 [固定服务器角色的权限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
-|Security|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 特定权限。|ALL 权限|35|  
-|Security|PERMISSIONS 内部函数|请改为查询 sys.fn_my_permissions。|PERMISSIONS|170|  
-|Security|SETUSER|EXECUTE AS|SETUSER|165|  
-|Security|RC4 和 DESX 加密算法|请使用其他算法，如 AES。|DESX 算法|238|  
+|安全性|ALTER LOGIN WITH SET CREDENTIAL 语法|由新的 ALTER LOGIN ADD 和 DROP CREDENTIAL 语法取代|ALTER LOGIN WITH SET CREDENTIAL|230|  
+|安全性|sp_addapprole<br /><br /> sp_dropapprole|CREATE APPLICATION ROLE<br /><br /> DROP APPLICATION ROLE|sp_addapprole<br /><br /> sp_dropapprole|53<br /><br /> 54|  
+|安全性|sp_addlogin<br /><br /> sp_droplogin|CREATE LOGIN<br /><br /> DROP LOGIN|sp_addlogin<br /><br /> sp_droplogin|39<br /><br /> 40|  
+|安全性|sp_adduser<br /><br /> sp_dropuser|CREATE USER<br /><br /> DROP USER|sp_adduser<br /><br /> sp_dropuser|49<br /><br /> 50|  
+|安全性|sp_grantdbaccess<br /><br /> sp_revokedbaccess|CREATE USER<br /><br /> DROP USER|sp_grantdbaccess<br /><br /> sp_revokedbaccess|51<br /><br /> 52|  
+|安全性|sp_addrole<br /><br /> sp_droprole|CREATE ROLE<br /><br /> DROP ROLE|sp_addrole<br /><br /> sp_droprole|56<br /><br /> 57|  
+|安全性|sp_approlepassword<br /><br /> sp_password|ALTER APPLICATION ROLE<br /><br /> ALTER LOGIN|sp_approlepassword<br /><br /> sp_password|55<br /><br /> 46|  
+|安全性|sp_changeobjectowner|ALTER SCHEMA 或 ALTER AUTHORIZATION|sp_changeobjectowner|58|  
+|安全性|sp_control_dbmasterkey_password|主密钥必须存在，并且密码必须是正确的。|sp_control_dbmasterkey_password|274|  
+|安全性|sp_defaultdb<br /><br /> sp_defaultlanguage|ALTER LOGIN|sp_defaultdb<br /><br /> sp_defaultlanguage|47<br /><br /> 48|  
+|安全性|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|ALTER LOGIN DISABLE<br /><br /> CREATE LOGIN<br /><br /> DROP LOGIN|sp_denylogin<br /><br /> sp_grantlogin<br /><br /> sp_revokelogin|42<br /><br /> 41<br /><br /> 43|  
+|安全性|USER_ID|DATABASE_PRINCIPAL_ID|USER_ID|16|  
+|安全性|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|这些存储过程返回在 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]中是正确的信息。 该输出不反映在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]中实现的权限层次结构的更改。 有关详细信息，请参阅 [固定服务器角色的权限](http://msdn.microsoft.com/library/ms175892\(SQL.100\).aspx)。|sp_srvrolepermission<br /><br /> sp_dbfixedrolepermission|61<br /><br /> 60|  
+|安全性|GRANT ALL<br /><br /> DENY ALL<br /><br /> REVOKE ALL|GRANT、DENY 和 REVOKE 特定权限。|ALL 权限|35|  
+|安全性|PERMISSIONS 内部函数|请改为查询 sys.fn_my_permissions。|PERMISSIONS|170|  
+|安全性|SETUSER|EXECUTE AS|SETUSER|165|  
+|安全性|RC4 和 DESX 加密算法|请使用其他算法，如 AES。|DESX 算法|238|  
 |SET 选项|SET FMTONLY|[sys.dm_exec_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)、[sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql)、[sp_describe_first_result_set (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) 和 [sp_describe_undeclared_parameters (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql)。|SET FMTONLY|250|  
 |服务器配置选项|c2 审核选项<br /><br /> default trace enabled 选项|[启用了通用准则合规性的服务器配置选项](configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [扩展事件](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 类|`Microsoft.SQLServer.Management.Smo.Information` 类<br /><br /> `Microsoft.SQLServer.Management.Smo.Settings` 类<br /><br /> `Microsoft.SQLServer.Management.Smo.DatabaseOptions` 类<br /><br /> `Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication` 属性|`Microsoft.SqlServer.Management.Smo.Server` 类<br /><br /> `Microsoft.SqlServer.Management.Smo.Server` 类<br /><br /> `Microsoft.SqlServer.Management.Smo.Database` 类<br /><br /> None|None|None|  
@@ -128,7 +125,7 @@ ms.locfileid: "39084069"
 |表压缩|vardecimal 存储格式的使用。|不推荐使用 Vardecimal 存储格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供的数据压缩功能可以压缩十进制值和其他数据类型的值。 建议您使用数据压缩，而不使用 vardecimal 存储格式。|vardecimal 存储格式|200|  
 |表压缩|sp_db_vardecimal_storage_format 过程的使用。|不推荐使用 Vardecimal 存储格式。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 提供的数据压缩功能可以压缩十进制值和其他数据类型的值。 建议您使用数据压缩，而不使用 vardecimal 存储格式。|sp_db_vardecimal_storage_format|201|  
 |表压缩|sp_estimated_rowsize_reduction_for_vardecimal 过程的使用。|请改用数据压缩和 sp_estimate_data_compression_savings 过程。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|表提示|在 UPDATE 或 DELETE 语句的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|请从 FROM 子句中删除 NOLOCK 或 READUNCOMMITTED 表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|@shouldalert|  
+|表提示|在 UPDATE 或 DELETE 语句的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|请从 FROM 子句中删除 NOLOCK 或 READUNCOMMITTED 表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|1|  
 |表提示|不借助 WITH 关键字指定表提示。|使用 WITH。|不带 WITH 的表提示|8|  
 |表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointers|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  

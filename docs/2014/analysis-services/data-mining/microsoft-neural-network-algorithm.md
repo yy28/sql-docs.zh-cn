@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - input neurons [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203477"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，则[!INCLUDE[msCoName](../../includes/msconame-md.md)]神经网络算法组合输入属性的每个可能状态的可预测属性，每个可能状态，并使用定型数据来计算概率。 之后，可以根据输入属性，将这些概率用于分类或回归，并预测被预测属性的结果。  
@@ -82,7 +79,7 @@ ms.locfileid: "37202047"
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持钻取或数据挖掘维度， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   

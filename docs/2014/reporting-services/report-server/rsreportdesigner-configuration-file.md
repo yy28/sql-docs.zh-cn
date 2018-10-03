@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9a19c05387c61e96573ec9525d8e0cab2eb7c8ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211699"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 配置文件
   RSReportDesigner.config 文件存储有关可用于报表设计器的呈现扩展插件和数据处理扩展插件的设置。 数据处理扩展插件信息存储在`Data`元素。 呈现扩展插件信息存储在 `Render` 元素中。 `Designer` 元素可枚举报表设计器中所用的查询生成器。  

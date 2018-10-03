@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5fd3826b-8f75-48eb-910c-bf784163e53b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538b54cde0de7a49ff151f2f978346a2d8767317
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9552bd8fac2012ead7359f38776d368b85e0dbd2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196667"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>在服务器组中注册 Analysis Services 实例
   如果有大量 Analysis Services 服务器实例，可以在 Management Studio 中创建服务器组来方便管理服务器。 服务器组的作用是在管理工作区内提供一组相关服务器的近似性。 例如，假定您负责管理 10 个单独的 Analysis Services 实例。 通过按服务器模式、运行时间条件或部门/区域将它们分组，您可以更易于查看并连接到共享相同特征的实例。 您还可以添加描述性信息，帮助您记住如何使用服务器。  

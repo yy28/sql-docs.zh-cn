@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 25f45f72ddbfc389deb77e6c20588660e599cb19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f0e371ceef793daea080e3a588f6b87161083a6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208477"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Web 应用程序要求 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 是 Internet Information Services (IIS) 托管的 Web 应用程序。 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 仅适用于 Internet 资源管理器 (IE) 7 或更高版本。 IE 7 及早期版本、Microsoft Edge 和 Chrome 均不受支持。  
@@ -51,7 +48,7 @@ ms.locfileid: "37205677"
   
 ||  
 |-|  
-|Web 服务器<br /><br /> 常见的 HTTP 功能<br /><br /> 静态内容<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 应用程序开发<br /><br /> ASP.NET<br /><br /> .NET 可扩展性<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> Security<br /><br /> Windows 身份验证<br /><br /> 请求筛选<br /><br /> 性能<br /><br /> 静态内容压缩<br /><br /> 管理工具<br /><br /> IIS 管理控制台|  
+|Web 服务器<br /><br /> 常见的 HTTP 功能<br /><br /> 静态内容<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 应用程序开发<br /><br /> ASP.NET<br /><br /> .NET 可扩展性<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> 安全性<br /><br /> Windows 身份验证<br /><br /> 请求筛选<br /><br /> 性能<br /><br /> 静态内容压缩<br /><br /> 管理工具<br /><br /> IIS 管理控制台|  
   
 ### <a name="role-and-role-services-windows-server-2012-or-windows-8-operating-systems"></a>角色和角色服务 （Windows Server 2012 或 Windows 8 操作系统）  
  在 Windows Server 2012 中，可以使用 **“服务器管理器”**（在 Microsoft 管理控制台 (MMC) 中提供）来安装 **“Web 服务器(IIS)”** 角色和以下必需的角色服务。  
@@ -61,7 +58,7 @@ ms.locfileid: "37205677"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布]<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> Security<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
+|Internet Information Services<br /><br /> Web 管理工具<br /><br /> IIS 管理控制台<br /><br /> 万维网服务<br /><br /> 应用程序开发<br /><br /> .NET Extensibility 3.5<br /><br /> .NET Extensibility 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 扩展插件<br /><br /> ISAPI 筛选器<br /><br /> 常见的 HTTP 功能<br /><br /> 默认文档<br /><br /> 目录浏览<br /><br /> HTTP 错误<br /><br /> 静态内容<br /><br /> [注意：请不要安装 WebDAV 发布]<br /><br /> 运行状况和诊断<br /><br /> HTTP 日志记录<br /><br /> 请求监视器<br /><br /> “性能”<br /><br /> 静态内容压缩<br /><br /> 安全性<br /><br /> 请求筛选<br /><br /> Windows 身份验证|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>功能（Windows Server 2008 或 Windows Server 2008 R2、Windows 7 操作系统）  
  上[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]或 Windows Server 2008 R2，您可以使用**服务器管理器**来安装以下必需的功能。  

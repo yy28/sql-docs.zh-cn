@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Cluster Resource Group
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
-caps.latest.revision: 10
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e62e122b2202b3e9aa6a59f37758a4b9c6fb5982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67de722e96d6818dc491410da4feb0f5dfe76bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202567"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201917"
 ---
 # <a name="cluster-resource-group"></a>群集资源组
   使用“群集资源组”页可以指定用于放置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 虚拟服务器资源的磁盘。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集资源组名称。 您有以下两种选择：  
   
 -   使用下拉框指定一个要使用的现有组。  

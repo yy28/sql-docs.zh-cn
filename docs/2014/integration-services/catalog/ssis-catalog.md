@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201337"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   `SSISDB`目录是用于处理的中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 项目的已部署到[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -64,7 +61,7 @@ ms.locfileid: "39084079"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   \@ 不允许作为第一个字符，但后续字符可使用\@。  
+-   首字母不得为 \@，但后续字符可以是 \@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084079"
   
 -   名称不得包含前导空格或尾随空格。  
   
--   \@ 不允许作为第一个字符，但后续字符可使用\@。  
+-   首字母不得为 \@，但后续字符可以是 \@。  
   
 -   名称的长度必须大于 0 且小于或等于 128。  
   

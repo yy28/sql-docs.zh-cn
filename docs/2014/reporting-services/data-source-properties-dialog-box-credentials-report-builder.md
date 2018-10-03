@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18c950015de84ac6b4204e657dfd52f894b6bced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207427"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>“数据源属性”对话框 -&gt;“凭据”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“凭据”** 可以显示和修改用于连接到报表中的嵌入数据源的凭据。 您所提供的凭据用于访问数据源以便预览报表。 有关凭据的详细信息，请参阅 [在报表生成器中指定凭据](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用 Windows 身份验证 （集成安全性）**  
  选择此选项可以使用 Windows 身份验证。  
   

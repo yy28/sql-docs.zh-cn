@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f77cb6ae0912bb5885cfc61aeb729a6eea25f833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195468"
 ---
 # <a name="set-warning-thresholds"></a>设置警告阈值
   使用该对话框可为在 **“数据库镜像监视器”** 对话框的导航树中选定的数据库启用和配置一个或多个警告阈值。  
@@ -31,7 +28,7 @@ ms.locfileid: "37277973"
   
 -   [启动数据库镜像监视器 (SQL Server Management Studio)](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  *服务器实例及其连接状态*  
  伙伴服务器实例的名称格式为 SYSTEM\\INSTANCE_NAME**。 对于默认服务器实例，只显示系统名。  
   
@@ -86,7 +83,7 @@ ms.locfileid: "37277973"
  **确定**  
  单击“确定”可关闭此对话框，并显示当前在“警告”选项卡式页的“阈值”网格中指定的警告阈值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在同一时间阈值只适用于一个伙伴，但我们建议您在两个伙伴上都为给定事件设置阈值，以确保数据库进行故障转移时，警告仍然存在。 每个伙伴的相应阈值取决于伙伴系统的性能。  
   
  更新状态表时，只有在性能值处于或高于阈值的情况下，才会将事件写入性能的事件日志。 如果峰值在两次状态更新之间瞬间达到阈值，峰值将丢失。  

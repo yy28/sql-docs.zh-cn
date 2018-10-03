@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 520f237c4f73708841a6e1f46c1bd14d49c84fa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200807"
 ---
 # <a name="integration-services-containers"></a>Integration Services 容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中为包提供结构和为任务提供服务的对象。 它们支持包中的重复控制流，并且将任务和容器分组为有意义的工作单元。 除了任务，容器还可以包含其他容器。  
@@ -55,23 +52,23 @@ ms.locfileid: "37283623"
   
 |“属性”|Description|  
 |--------------|-----------------|  
-|`DelayValidation`|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>。|  
-|`Description`|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>。|  
-|`Disable`|指示容器是否运行的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>。|  
+|`DelayValidation`|指示是否将容器的验证推迟到运行时进行的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A> 。|  
+|`Description`|容器说明。 该属性包含一个字符串，但可以为空。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A> 。|  
+|`Disable`|指示容器是否运行的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A> 。|  
 |`DisableEventHandlers`|指示与容器关联的事件处理程序是否运行的布尔值。 此属性的默认值是`False`。|  
-|`FailPackageOnFailure`|指定如果容器中出现错误包是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>。|  
-|`FailParentOnFailure`|指定如果容器中出现错误父容器是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>。|  
-|`ForcedExecutionValue`|如果`ForceExecutionValue`设置为`True`，包含容器的可选执行值的对象。 此属性的默认值为 **0**。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>。|  
+|`FailPackageOnFailure`|指定如果容器中出现错误包是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A> 。|  
+|`FailParentOnFailure`|指定如果容器中出现错误父容器是否失败的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A> 。|  
+|`ForcedExecutionValue`|如果`ForceExecutionValue`设置为`True`，包含容器的可选执行值的对象。 此属性的默认值为 **0**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A> 。|  
 |`ForcedExecutionValueType`|数据类型的`ForcedExecutionValue`。 此属性的默认值是`Int32`。|  
-|`ForceExecutionResult`|指定运行包或容器的强制结果的值。 值是`None`， `Success`， `Failure`，和`Completion`。 此属性的默认值是`None`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>。|  
-|`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>。|  
-|`ID`|容器 GUID，该属性是在创建包时分配的。 该属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>的用户。|  
-|`IsolationLevel`|容器事务的隔离级别。 其值为：`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable` 和 `Snapshot`。 此属性的默认值是`Serializable`。 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>。|  
-|`LocaleID`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>。|  
-|`LoggingMode`|指定容器日志记录行为的值。 值是`Disabled`， `Enabled`，和`UseParentSetting`。 此属性的默认值是`UseParentSetting`。 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>。|  
-|`MaximumErrorCount`|容器停止运行前可以出现的最大错误数。 此属性的默认值为 **1**。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>。|  
-|`Name`|容器的名称。<br /><br /> 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>。|  
-|`TransactionOption`|容器的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值是`Supported`。 有关详细信息，请参阅<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>。|  
+|`ForceExecutionResult`|指定运行包或容器的强制结果的值。 值是`None`， `Success`， `Failure`，和`Completion`。 此属性的默认值是`None`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A> 。|  
+|`ForceExecutionValue`|指定容器的可选执行值是否应强制包含特定值的布尔值。 此属性的默认值是`False`。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A> 。|  
+|`ID`|容器 GUID，该属性是在创建包时分配的。 该属性为只读。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
+|`IsolationLevel`|容器事务的隔离级别。 其值为：`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable` 和 `Snapshot`。 此属性的默认值是`Serializable`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> 。|  
+|`LocaleID`|Microsoft Win32 区域设置。 此属性的默认值为本地计算机上操作系统的区域设置。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A> 。|  
+|`LoggingMode`|指定容器日志记录行为的值。 值是`Disabled`， `Enabled`，和`UseParentSetting`。 此属性的默认值是`UseParentSetting`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 。|  
+|`MaximumErrorCount`|容器停止运行前可以出现的最大错误数。 此属性的默认值为 **1**。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A> 。|  
+|`Name`|容器的名称。<br /><br /> 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A> 。|  
+|`TransactionOption`|容器的事务参与情况。 其值为：`NotSupported`、`Supported`、`Required`。 此属性的默认值是`Supported`。 有关详细信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> 。|  
   
  在以编程方式配置 Foreach 循环容器、For 循环容器、序列容器和任务宿主容器时，若要了解可用于这些容器的所有属性，请参阅以下 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API 主题：  
   

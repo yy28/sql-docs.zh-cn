@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
-caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 24e303409568f028ff57cf189cad4f1022111e82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202727"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>共享数据集的“常规”属性页（报表管理器）
   使用“共享数据集”页可以查看和管理共享数据集项的属性。  
@@ -39,7 +36,7 @@ ms.locfileid: "37290303"
   
 3.  在下拉列表中，单击 **“管理”**。 此时，将打开“常规”属性页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入共享数据集的名称，此名称用于标识报表服务器文件夹层次结构内的项。  
   

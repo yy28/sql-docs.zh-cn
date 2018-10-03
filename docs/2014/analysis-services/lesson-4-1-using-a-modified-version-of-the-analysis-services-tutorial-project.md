@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b198990c967b6ef40eaa4bfdc2bfeedfff13e13
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70b4a8bedc86023c9eaf1304e61573c4840a62bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194707"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>使用 Analysis Services Tutorial 项目的修改版本
   本教程中的其余几节课基于您已在前三课中完成的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 项目的增强版本。 已向 **Adventure Works DW 2012[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源视图中添加了额外的表和命名计算；已向该项目添加了额外的维度，并且已将这些新维度添加到**  Tutorial 多维数据集内。 此外，还添加了另一个度量值组，该组包含另一个事实数据表中的度量值。 这一增强项目使您无需重复学习前面已了解的技能，即可继续学习如何在商业智能应用程序中添加功能。  

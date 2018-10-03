@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeAttribute data type
 ms.assetid: 114ffb44-460b-4971-b31b-dd844e960b81
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1df72c234fe7835d739e2b1835b01041aa9cbe6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d64224c1b7489895ff0d9dca00a3841be0ed0bbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203297"
 ---
 # <a name="cubeattribute-data-type-assl"></a>CubeAttribute 数据类型 (ASSL)
   定义一个基元数据类型，表示与关联的属性[多维数据集](../objects/cube-element-assl.md)元素。  
@@ -53,18 +50,18 @@ ms.locfileid: "37319347"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|InclusionThresholdSetting|  
-|派生数据类型|InclusionThresholdSetting|  
+|基本数据类型|None|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[AggregationUsage](../properties/aggregationusage-element-assl.md)，[批注](../collections/annotations-element-assl.md)， [AttributeHierarchyEnabled](../properties/enabled-element-assl.md)， [AttributeHierarchyOptimizedState](../properties/state-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeID](../properties/id-element-assl.md)|  
 |派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[CubeDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *AttributeHierarchyOptimizedState*在 DeploymentMode 配置属性值为 1 或 2 （SharePoint 或表格模式，用于运行 PowerPivot 和表格模型数据库） 运行服务时，不支持元素。  
   
  属性不能作为层次结构级别添加时属性， *AtttributeHierarchyEnabled*，设置为 FALSE 并且该实例正在 DeploymentMode 1 或 2 （SharePoint 或表格服务器模式） 下操作。  

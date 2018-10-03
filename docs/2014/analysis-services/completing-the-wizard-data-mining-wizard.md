@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202567"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>完成向导（数据挖掘向导）
   可以使用 **“完成向导”** 页查看在完成向导后创建的挖掘结构。 您还可以设置挖掘结构的名称。  
@@ -33,7 +30,7 @@ ms.locfileid: "37278423"
   
  **有关详细信息：**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[数据挖掘设计器](data-mining/data-mining-designer.md)、[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **挖掘结构名称**  
  键入“数据挖掘向导”定义的挖掘结构的名称。  
   

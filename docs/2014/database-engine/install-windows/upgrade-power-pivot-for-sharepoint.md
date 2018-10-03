@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
-caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b01d05d497691d2790b9423265cf420f236065f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197243"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
   本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  

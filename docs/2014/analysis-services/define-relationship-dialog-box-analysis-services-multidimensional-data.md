@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1
 helpviewer_keywords:
 - Define Relationship dialog box
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93c76ad9d504e9ec6fc1ba417407a16bd93e8adf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bc1ab86373fc7c3b4b32cdfdbc87f5d5dd4acf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196297"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>“定义关系”对话框（Analysis Services - 多维数据）
   使用 **“定义关系”** 对话框，可以定义多维数据集设计器中的多维数据集维度与度量值组之间的关系。 在多维数据集设计器的 **“维度用法”** 选项卡上，单击 **“网格”** 窗格中单元上的 **...** ，可以显示 **“定义关系”** 对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择关系类型**  
  选择要在多维数据集维度与度量值组之间创建的维度关系的类型。 选择维度关系类型可以更改 **“详细信息”** 窗格的内容。  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], defaults
 - default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0708836299d1c436caf9c70b6727dfd2345014cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98f50eb8fb9d45c782eb1c134464141a041e30d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194177"
 ---
 # <a name="specify-default-values-for-columns"></a>指定列的默认值
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 指定将在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的列中输入的默认值。 如果您没有分配默认值，并且将该列保留为空白，则：  

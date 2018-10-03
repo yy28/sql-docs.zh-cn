@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
-caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 065f8d2d32d8ad16fe955ba8e36c7e65926bec95
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202407"
 ---
 # <a name="edit-checked-in-files"></a>编辑签入文件
   通常，必须先将源代码管理的文件签出，才能对其进行编辑。 但是，可以配置 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，以便修改尚未签出的文件。执行此操作时，更改将暂存在内存中，直到保存文件为止。 然后会提示您从源代码管理中签出文件。  

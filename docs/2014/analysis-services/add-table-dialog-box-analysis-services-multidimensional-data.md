@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addtable.f1
 helpviewer_keywords:
 - Add Table dialog box
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25f1767aa1ee1422a6bbe17f35fa8e2ccfdce9c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 111453302bd72396e9bc44d357851cccf2f30e74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273903"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209699"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>“添加表”对话框（Analysis Services - 多维数据）
   在 **“创建命名查询”** 、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “创建轮询查询” **或** “创建处理查询” **对话框中创建查询时，可以使用** 中的 **“添加表”** 对话框添加表。 通过在 **“创建命名查询”** 对话框、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] “创建轮询查询” **对话框或** “创建处理查询” **对话框的** “工具栏” **窗格中单击** “添加表” **，可以在** 中显示 **“添加表”** 对话框。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-caps.latest.revision: 72
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 75a43dd1ba07915bdba0ce3b42aee2a517311769
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d5e885e1429507b2ae86759a1a34cd68c61d622
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206887"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 对象模型中，除了对大多数数据流对象通用的属性以外，许多数据流对象还具有特定于该对象的自定义属性。 这些自定义属性仅在运行时可用，并未记录在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 托管编程参考文档中。  
@@ -187,7 +184,7 @@ ms.locfileid: "37243187"
   
 |“属性”|数据类型|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值是`False`。 有关详细信息，请参阅 [Fast Parse](../../fast-parse.md) 和 [Standard Parse](../../standard-parse.md)。 实例时都提供 SQL Server 登录名。<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
+|FastParse|Boolean|该值用于指示列是使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 此属性的默认值是`False`。 有关详细信息，请参阅 [Fast Parse](../../fast-parse.md) 和 [Standard Parse](../../standard-parse.md)。 .<br /><br /> 注意：此属性在“数据转换编辑器” 中不可用，但可通过“高级编辑器” 进行设置。|  
 |SourceInputColumnLineageId|Integer|`LineageID`源的输出列的输入列。|  
   
  数据转换的输入、输入列和输出不包含自定义属性。  

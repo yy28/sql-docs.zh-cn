@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ag.msxwiz.complete.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, master servers
 - Master Server Wizard
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07de36ae643e44f80ccecbdcd460e2eb0646530a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 14e3d90b8406dc5411c1325038afee184684b7b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812343"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210567"
 ---
 # <a name="make-a-master-server"></a>设置主服务器
   本主题描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 设置主服务器 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  

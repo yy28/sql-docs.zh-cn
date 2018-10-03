@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0915cda96047732894ec848c861e83319888d6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60a6c6a9271245e36c3e491b946c36e175f12d12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209467"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>报表模型查询中的公式（报表生成器和 SSRS）
   公式用于对报表中将报表模型用作数据源的值进行计算。 公式可以包含函数、运算符、常量和对字段或实体的引用。 使用公式，您可以对数字和文本数据进行组合、聚合、筛选和计算。 您可以创建公式并将其另存为新字段；或者您也可以修改现有字段的公式。  

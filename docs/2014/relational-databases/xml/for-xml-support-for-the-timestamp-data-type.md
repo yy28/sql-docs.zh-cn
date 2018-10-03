@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5783e1684f5ab6e78111d13c0f88d550cea99799
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 95f33ea5c042217f4d4e1fbc11353a1a2ee088b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204747"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp 数据类型的 FOR XML 支持
   在 FOR XML 转换中， **timestamp** 类型值被视为 **varbinary(8)** 数据，并且始终为 Base64 编码。 XSD 架构或 XDR 架构反映此类型（如果请求）。  

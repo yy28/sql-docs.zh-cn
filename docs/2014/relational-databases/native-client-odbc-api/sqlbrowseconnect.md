@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93fdfd34974916e67b218f53408596ca649693ba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5300285872c0c03ce25410ba0bfd636c7ccf6bca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208511"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect**使用三个级别的连接信息进行分类的关键字。 对于每个关键字，下表指示是否返回有效值列表以及该关键字是否可选。  
@@ -31,25 +28,25 @@ ms.locfileid: "37421866"
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/A|“否”|返回的数据源的名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
-|DRIVER|N/A|“否”|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
+|DSN|N/A|否|返回的数据源的名称**SQLDataSources**。 如果使用 DRIVER 关键字，则无法使用 DSN 关键字。|  
+|DRIVER|N/A|否|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序名称是 {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}。 如果使用 DSN 关键字，则无法使用 DRIVER 关键字。|  
   
 ## <a name="level-2"></a>级别 2  
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|是|“否”|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
-|UID|“否”|是|用户登录 id。|  
-|PWD|“否”|是（取决于用户）|用户指定的密码。|  
-|APP|“否”|是|应用程序调用的名称**SQLBrowseConnect**。|  
-|WSID|“否”|是|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
+|SERVER|用户帐户控制|否|数据源所驻留网络上的服务器名称。 可以输入术语 "(local)" 作为服务器，在此情况下，即使此为非联网版本，也可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地副本。|  
+|UID|否|用户帐户控制|用户登录 id。|  
+|PWD|否|是（取决于用户）|用户指定的密码。|  
+|APP|否|用户帐户控制|应用程序调用的名称**SQLBrowseConnect**。|  
+|WSID|否|用户帐户控制|工作站 id。 通常，这是运行应用程序的计算机的网络名称。|  
   
 ## <a name="level-3"></a>级别 3  
   
 |关键字|是否返回列表？|是否可选？|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DATABASE|是|是|名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。|  
-|LANGUAGE|是|是|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
+|DATABASE|用户帐户控制|用户帐户控制|名称[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。|  
+|LANGUAGE|用户帐户控制|用户帐户控制|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的区域语言。|  
   
  **SQLBrowseConnect**忽略存储在 ODBC 数据源定义中的 DATABASE 和 LANGUAGE 关键字的值。 如果数据库或连接字符串中指定的语言传递给**SQLBrowseConnect**是无效的**SQLBrowseConnect**返回 SQL_NEED_DATA 和级别 3 连接属性。  
   

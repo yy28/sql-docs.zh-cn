@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 383b28d86ca87457d26446e1bc881ddcda1084f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2822193b536423e29f0d838ad64dda20664c7f8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200957"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>分区处理目标编辑器（“连接管理器”页）
   可以使用 **“分区处理目标编辑器”** 对话框的 **“连接管理器”** 页，指定与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]实例之间的连接。  
@@ -33,7 +30,7 @@ ms.locfileid: "37162968"
 > [!NOTE]  
 >  此处所述的任何不适用于 Analysis Services 表格模型。  你无法将输入列映射到表格模型的分区列。 您可以改用 [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) 处理分区。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“ODBC 目标编辑器”**  
  从列表中选择一个现有连接管理器，或通过单击“新建”创建一个新连接。  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 947216cb426750807e99b48ae2e691a5903ed3a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b26701352b94150a61fe0586f4c32cdf3db87137
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211007"
 ---
 # <a name="create-and-manage-role-assignments"></a>创建和管理角色分配
   “  角色分配”是确定用户或组是否可以访问特定报表服务器项或执行操作的安全策略。 角色分配由单个用户帐户名或组帐户名以及一个或多个角色定义组成。  

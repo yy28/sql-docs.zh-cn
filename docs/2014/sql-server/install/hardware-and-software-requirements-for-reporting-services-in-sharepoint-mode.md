@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 27e25103ae362a664a4432ee62befd0efbc9681a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27ca12268f34f116b4158533a12b75920265d179
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210527"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>SharePoint 模式下的 Reporting Services 的硬件和软件要求
   本主题介绍在 SharePoint 模式下运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的必备条件、硬件要求和安装注意事项。 因为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式需要 SharePoint 服务器，大多数要求均基于 SharePoint 环境。 对于本机模式的报表服务器，您的硬件应满足运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的最低硬件和软件要求。 有关详细信息，请参阅 [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 132
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6045b6e54758a210014c302d1d1301d29aae073d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199578"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>支持的版本和版本升级
   可以从升级[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，并[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，和[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。 本主题列出了支持的从这些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本进行升级的途径以及支持的 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]版本升级。  

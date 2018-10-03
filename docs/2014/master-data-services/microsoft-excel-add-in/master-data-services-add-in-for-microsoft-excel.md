@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-caps.latest.revision: 17
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: faf49ce16cdf76af644944a2a3cc21700863ade9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198367"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>用于 Microsoft Excel 的 Master Data Services 外接程序
   与[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以将引用数据的主列表分发给你组织中使用 Excel 的每个人。 可通过安全权限来确定用户可以查看和更新的数据。  

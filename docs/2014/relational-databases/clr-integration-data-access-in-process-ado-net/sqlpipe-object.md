@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom result sets [CLR integration]
 - SqlPipe object
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
-caps.latest.revision: 54
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201357"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 对象
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本中，编写向调用客户端发送结果或输出参数的存储过程（或扩展存储过程）非常常见。  

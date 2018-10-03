@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
-caps.latest.revision: 41
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b44973dda00e956d25c694c835e7dc1e683eab9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa56e9366fdc60a5b411e19b200706f0404e7312
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169182"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209727"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查找转换编辑器（“高级”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“高级”** 页，配置部分缓存以及修改查找转换的 SQL 语句。  
   
  若要了解有关查找转换的详细信息，请参阅 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **缓存大小(32 位)**  
  调整 32 位计算机的缓存大小 (MB)。 默认值为 5 MB。  
   

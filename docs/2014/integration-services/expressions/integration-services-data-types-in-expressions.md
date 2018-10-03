@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9195d5fad08c8e6539419ba33eb64a840a4688d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194870"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>表达式中的 Integration Services 数据类型
   表达式计算器使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 当数据首次进入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流中时，数据流引擎将所有列数据转换为 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型，因此，表达式使用的列数据已具有 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数据类型。 有条件拆分和派生列转换中使用的表达式可以引用列，因为它们是包含列数据的数据流的一部分。  

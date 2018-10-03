@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - excluding files from source control
 - source controls [SQL Server Management Studio], file exclusions
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1379d18c84db90207e68d548219740ac8d60af
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195087"
 ---
 # <a name="exclude-files-from-source-control"></a>从源代码管理中排除文件
   如果您使用的解决方案包含不需要源代码管理服务的文件，则可以使用**从源代码管理中排除**命令以从源代码管理中排除该文件。 如果执行上述操作，这些被排除的文件仍会保留在 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 数据库中，但不再随项目签入或签出。  

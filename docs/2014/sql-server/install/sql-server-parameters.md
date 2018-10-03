@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine analysis [Upgrade Advisor]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Upgrade Advisor [SQL Server], Database Engine
 - analyzing system [Upgrade Advisor], Database Engine
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
-caps.latest.revision: 36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6c34842d1a157629b123b813779a7c3fd3ee142
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b34f5fe42185bf280a62a7077e4fb29e3385c70d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261913"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211067"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 参数
   在该页上，设置分析器将用于[!INCLUDE[ssDE](../../includes/ssde-md.md)]分析的参数。 您可以分析一个、多个或所有数据库，分析通过使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]创建的跟踪文件，以及 SQL 批处理文件。  
@@ -32,7 +29,7 @@ ms.locfileid: "37261913"
 > [!NOTE]  
 >  只有提交要分析的跟踪文件或 SQL 批处理文件时，才能检测到某些升级问题。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **要分析的数据库**  
  若要分析的所有数据库，选择**所有数据库**复选框。 若要分析多个数据库，请选中相应的每个数据库旁边的复选框以将其包括在扫描范围内。  
   

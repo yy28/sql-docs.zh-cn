@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tracking data changes [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 - change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dba3c283bb5215bb573fa90caf6f8e9cff74ca63
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97ed62336cad7f3e1bc0bbe70edd895384336205
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197747"
 ---
 # <a name="manage-change-tracking-sql-server"></a>管理更改跟踪 (SQL Server)
   本主题说明如何管理更改跟踪。 本主题还说明如何配置安全性以及如何确定使用更改跟踪时对存储和性能的影响。  
@@ -41,7 +38,7 @@ ms.locfileid: "37232977"
   
  此外， [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) 目录视图还列出了对用户表启用更改跟踪时所创建的内部表。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  若要使用 [更改跟踪函数](/sql/relational-databases/system-functions/change-tracking-functions-transact-sql)访问更改跟踪信息，主体必须拥有以下权限：  
   
 -   至少针对主键列（已启用更改跟踪的表针对被查询表的主键列）拥有 SELECT 权限。  

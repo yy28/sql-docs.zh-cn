@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f87139ed82025b35173465f346709e384a858c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30af34c41cbea7d28e78d2684ce2aa316b116b39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196977"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>SQL Server 连接类型 (SSRS)
   若要在报表中包括来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的数据，您必须具有一个基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据扩展插件。 使用此数据源类型可连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的当前版本和早期版本并从中检索数据。  

@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.general.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22a76ae1c006eae5b2670e0405fb0c61c3b8f6e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea436e349a19d10eeb86a62b74f154b56b60ef7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204007"
 ---
 # <a name="message-queue-task-editor-general-page"></a>消息队列任务编辑器（“常规”页）
   可以使用 **“消息队列任务编辑器”** 对话框的 **“常规”** 页，对消息队列任务进行命名和说明，指定消息格式，以及指示任务是发送还是接收消息。  
   
  若要了解此任务，请参阅 [Message Queue Task](control-flow/message-queue-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为消息队列任务提供唯一的名称。 此名称用作任务图标中的标签。  
   

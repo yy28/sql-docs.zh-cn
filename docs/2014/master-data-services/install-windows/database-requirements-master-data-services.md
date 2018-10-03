@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
-caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ae9989f2ca04e0d0beb2d246fbea4d47fcf3a6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f230705afab21f6e2b4090d5576dd786714a8d0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201807"
 ---
 # <a name="database-requirements-master-data-services"></a>数据库要求 (Master Data Services)
   所有主数据都存储于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库中。 承载此数据库的计算机必须运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.as.daxref.CreataCalculatedColumn.f1
 ms.assetid: 59440510-2d76-41dc-9b55-edc15259f9da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b88ac967733abd8cb8c29089435552039f1c55d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca7b73e08941d42ceccd1ff3dab04a686b120d98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201397"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>创建计算列（SSAS 表格）
   通过计算列，可以将新数据添加到您的模型。 您可以创建用于定义列的行级值的 DAX 公式，而不用在列中粘贴或导入值。 计算列中每行的值在您创建有效公式并单击 Enter 后会进行计算和填充。 然后可以将计算列添加到报告或分析应用程序中，就像添加任何其他数据列一样。 本主题说明如何使用模型设计器中的 DAX 编辑栏创建新的计算列。  

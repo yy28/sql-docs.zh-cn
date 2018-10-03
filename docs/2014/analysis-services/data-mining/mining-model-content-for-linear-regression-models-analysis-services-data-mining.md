@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200977"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -142,7 +139,7 @@ ms.locfileid: "37198247"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建模型时，数据挖掘引擎创建决策树模型的特殊实例，并提供约束树的参数，将树约束为在单个节点中包含所有定型数据。 将标记所有连续输入并将其视为潜在回归量，但仅将适合数据的回归量作为回归量保留在最终模型中。 分析过程要么为每个回归量各生成一个回归公式，要么根本不生成任何回归公式。  
   
  你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。  
@@ -154,7 +151,7 @@ ms.locfileid: "37198247"
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |年龄|471.687717702463|0|0|126.969442359327|7|  
 |年龄|234.680904692439|0|0|0|8|  

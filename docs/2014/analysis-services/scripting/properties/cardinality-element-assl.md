@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cardinality Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Cardinality element
 ms.assetid: 60ac8a26-7c8b-4011-9b9b-a29863779428
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7446923efc15a2fe05f3e8bf8c86a2e9f429a2c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c75017321a0f00a3e88a74d12336768f1bfc78b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197837"
 ---
 # <a name="cardinality-element-assl"></a>Cardinality 元素 (ASSL)
   指示描述的关系的基数[AttributeRelationship](../objects/attributerelationship-element-assl.md)或[RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md)。  
@@ -57,9 +54,9 @@ ms.locfileid: "37325077"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[AttributeRelationship](../objects/attributerelationship-element-assl.md)， [RegularMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中的字符串之一。  
   
 |ReplTest1|Description|  

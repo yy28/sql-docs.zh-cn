@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c567f91d526d3ac44485704f7c76fdfa345c11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202527"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教程：向报表添加饼图（报表生成器）
   饼图和圆环图将数据显示为整体的一定比例。 饼图常用于在各组之间进行比较。 饼图和圆环图与棱锥图和漏斗图一起构成一组称为形状图的图表。 形状图没有轴。 在形状图上放置某数值字段后，该图表将计算每个值相对总计的百分比。  

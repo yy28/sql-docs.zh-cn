@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editgroup.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - server groups [SQL Server]
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f26f6d5a89c07a1057ffbd95aea6a76dc94f37f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: af727a26191e4691cf401c9a990dd41acc8ec188
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206697"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>创建或编辑服务器组 (SQL Server Management Studio)
   本主题说明如何通过创建服务器组并将服务器放入服务器组中，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中整理已注册服务器中的服务器。 可以随时在已注册的服务器中创建服务器组，也可以在注册服务器时创建服务器组。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.createrelationship.f1
 helpviewer_keywords:
 - Create Relationship dialog box
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 152f9cb38adcad9a90a393150216fea0f10ecd55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abcfea8c23806de0e784b8784064d77195ad5cf1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197677"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>“创建或编辑关系”对话框（Analysis Services - 多维数据）
   可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的“创建/编辑关系”对话框，定义或修改数据源视图中的关系。 通过执行以下操作之一，可以显示“创建/编辑关系”对话框：  
@@ -37,7 +34,7 @@ ms.locfileid: "37167638"
 > [!NOTE]  
 >  可以在**数据源视图设计器**中创建基础数据源中不存在的关系，并从基础数据源中的现有外键关系中删除通过**数据源视图设计器**创建的关系。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **源 （外键） 表**  
  选择包含对目标表中一个或多个列的引用的表或命名查询。  
   

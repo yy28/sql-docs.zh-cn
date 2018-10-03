@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d3112f43436fa7e0a0bb87d58cca062857bae8e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0d955078772767804b625e1fb560e8cd0d15683
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201965"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>使用 SQL Server 代理计划包
   下面的过程提供了通过使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 代理作业步骤运行包来自动执行该包的步骤。  
@@ -69,12 +66,12 @@ ms.locfileid: "37215757"
   
      **包源**：SSIS 目录  
   
-    |选项卡|“常规”|  
+    |Tab|选项|  
     |---------|-------------|  
     |**“包”**|**Server**<br /><br /> 键入或选择承载 SSISDB 目录的数据库服务器实例的名称。<br /><br /> 如果 **“SSIS 目录”** 为包源，则可以仅使用 Microsoft Windows 用户帐户登录该服务器。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 身份验证不可用。|  
     ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”** 节点下的文件夹中选择包。|  
-    |**Parameters**<br /><br /> 位于 **“配置”** 选项卡上。|为包中包含的参数输入新值。 您可以输入一个文字值，或使用已经映射到该参数的服务器环境变量所包含的值。  **\*\* 重要\* \* **如果有多个参数和/或连接管理器属性映射到包含多个环境中的变量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> <br /><br /> **“参数”** 选项卡显示您在设计包（例如通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]来设计包）时就已添加的参数。 该选项卡还显示在将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目从包部署模型转换为项目部署模型后添加到包中的参数。 **“Integration Services 项目转换向导”** 支持您使用参数替换包配置。<br /><br /> 有关如何创建服务器环境以及如何将变量映射到参数的信息，请参阅[创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。|  
-    |**连接管理器**<br /><br /> 位于 **“配置”** 选项卡上。|更改连接管理器属性的值。 例如，您可以更改服务器名称。<br /><br /> 将在 SSIS 服务器上为连接管理器属性自动生成参数。<br /><br /> 若要更改某个属性值，可以输入一个文字值，或使用已经映射到连接管理器属性的服务器环境变量所包含的值。 **\*\* 重要\* \* **如果有多个参数和/或连接管理器属性映射到包含多个环境中的变量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> <br /><br /> 有关如何创建服务器环境以及如何将变量映射到连接管理器属性的信息，请参阅[创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。|  
+    |**Parameters**<br /><br /> 位于 **“配置”** 选项卡上。|为包中包含的参数输入新值。 您可以输入一个文字值，或使用已经映射到该参数的服务器环境变量所包含的值。  **\*\* 重要\* \*** 如果有多个参数和/或连接管理器属性映射到包含多个环境中的变量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> <br /><br /> **“参数”** 选项卡显示您在设计包（例如通过使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]来设计包）时就已添加的参数。 该选项卡还显示在将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目从包部署模型转换为项目部署模型后添加到包中的参数。 **“Integration Services 项目转换向导”** 支持您使用参数替换包配置。<br /><br /> 有关如何创建服务器环境以及如何将变量映射到参数的信息，请参阅[创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。|  
+    |**连接管理器**<br /><br /> 位于 **“配置”** 选项卡上。|更改连接管理器属性的值。 例如，您可以更改服务器名称。<br /><br /> 将在 SSIS 服务器上为连接管理器属性自动生成参数。<br /><br /> 若要更改某个属性值，可以输入一个文字值，或使用已经映射到连接管理器属性的服务器环境变量所包含的值。 **\*\* 重要\* \*** 如果有多个参数和/或连接管理器属性映射到包含多个环境中的变量[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> <br /><br /> 有关如何创建服务器环境以及如何将变量映射到连接管理器属性的信息，请参阅[创建和映射服务器环境](../../2014/integration-services/create-and-map-a-server-environment.md)。|  
     |**高级**<br /><br /> 位于 **“配置”** 选项卡上。|为包执行配置以下附加设置。<br /><br /> <br /><br /> **属性覆盖**： 单击**添加**包属性输入新值，指定属性路径，并指示属性值是否为敏感值。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器将对敏感数据加密。 若要编辑或删除某个属性的设置，请单击 **“属性”** 覆盖框中的某一行，然后单击 **“编辑”** 或 **“删除”**。 请注意，**属性重写**选项用于具有从以前的版本升级的配置包[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 使用 [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 创建并部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器的包使用参数而不是配置。 你可以通过执行以下操作之一查找属性路径：<br /><br /> 从 XML 配置文件中复制属性路径 (\*.dtsconfig) 文件。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例。<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> 运行**包配置向导**并从最后复制属性路径**完成向导**页。 随后可以取消该向导。|  
     ||**日志记录级别**： 您选择的日志记录级别决定了在 SSISDB 视图和报表中显示的信息[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服务器。 请注意，选择“性能”  或“详细”  日志记录级别可能影响包的执行性能。 选择包执行的以下日志记录级别之一：<br /><br /> **无**： 关闭日志记录。 仅记录包执行状态。<br /><br /> **基本**： 记录所有事件，自定义和诊断事件之外。 这是日志记录级别的默认值。<br /><br /> **性能**： 仅性能统计信息、 OnError 和 OnWarning 事件记录。<br /><br /> **详细**： 记录所有事件，包括自定义和诊断事件。<br /><br /> 有关详细信息，请参阅 [在 SSIS 服务器上启用包执行的日志记录](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md)。|  
     ||**错误转储**： 指定包的执行期间出现任意错误时是否生成调试转储文件。<br /><br /> 这些文件包含有关包的执行信息，可帮助您解决出现的问题。<br /><br /> 若选择此选项，当在执行过程中出现错误时，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 会创建一个 .mdmp 文件（二进制文件）和一个 .tmp 文件（文本文件）。 默认情况下，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。|  
@@ -84,7 +81,7 @@ ms.locfileid: "37215757"
   
      许多可以设置为 SQL Server、 SSIS 包存储区或文件系统中存储的包的选项对应的命令行选项`dtexec`命令提示实用工具。 有关该实用工具和命令行选项的详细信息，请参阅 [dtexec 实用工具](packages/dtexec-utility.md)。  
   
-    |选项卡|“常规”|  
+    |Tab|选项|  
     |---------|-------------|  
     |**“包”**<br /><br /> 这些是存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 包存储区中的包的选项卡选项。|**Server**<br /><br /> 为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务键入或选择数据库服务器实例的名称。|  
     ||**Use Windows Authentication**<br /><br /> 选择此选项可以使用 Microsoft Windows 用户帐户登录该服务器。|  

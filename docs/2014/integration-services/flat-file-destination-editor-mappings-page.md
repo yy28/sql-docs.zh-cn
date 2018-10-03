@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ecdc542e8bea3717a37c40c6addb2b35b9a5f03b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195307"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>平面文件目标编辑器（“映射”页）
   可以使用 **“平面文件目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
  若要了解有关平面文件目标的详细信息，请参阅 [Flat File Destination](data-flow/flat-file-destination.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作将可用输入列映射到目标列。  
   
