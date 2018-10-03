@@ -1,13 +1,11 @@
 ---
-title: LevelName 属性 (ADO MD) |Microsoft 文档
+title: LevelName 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - LevelName property [ADO MD]
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0a9b5ce969bb65f04ea8078b1c4f45952c0fdb3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8692091715592e1c0b821339c805679940fb2972
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732855"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 属性 (ADO MD)
-指示的级别的名称[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
+指示的级别名称[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  
   
 ## <a name="return-values"></a>返回值  
  返回**字符串**和是只读的。  
   
-## <a name="remarks"></a>Remarks  
- 使用**LevelName**属性，以检索成员所属的级别的名称。 这对应于[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)属性[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
+## <a name="remarks"></a>备注  
+ 使用**LevelName**属性检索的成员所属的级别名称。 这对应于[名称](../../../ado/reference/ado-md-api/name-property-ado-md.md)的属性[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。  
   
 ## <a name="applies-to"></a>适用范围  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bca95756f99b957f410e1d9dadcb7186c404ffbb
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2844d9c1a1c8ea7263de09c1dc2b5544b11fd783
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828417"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +29,9 @@ ms.locfileid: "35402319"
 |列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |operation_id|**bigint**|操作的唯一标识符 (ID)。|  
-|operation_type|**int**|操作的类型。|  
+|operation_type|**smallint**|操作的类型。|  
 |created_time|**datetimeoffset**|创建操作的时间。|  
-|object_type|**int**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
+|object_type|**smallint**|受操作影响的对象的类型。 该对象可能是文件夹 (`10`）、项目 (`20`）、包 (`30`)、环境 (`40`） 或执行实例 （`50`)。|  
 |object_id|**bigint**|操作影响的对象的 ID。|  
 |object_name|nvarchar(260)|对象的名称。|  
 |status|**int**|操作的状态。 可能的值是已创建 (`1`)、正在运行 (`2`)、已取消 (`3`)、失败 (`4`)、挂起 (`5`)、意外结束 (`6`)、已成功 (`7`)、停止 (`8`) 和已完成 (`9`)。|  
@@ -66,14 +63,14 @@ ms.locfileid: "35402319"
 |`301`|**validate_package**<br /><br /> （存储过程）|项目 ID|包名称|  
 |`1000`|**configure_catalog**<br /><br /> （存储过程）|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图需要下列权限之一：  
   
 -   针对操作的 READ 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 > [!NOTE]  
 >  当您具有在服务器上执行操作的权限时，您还具有查看有关此操作的信息的权限。 将实施行级安全性；只显示您有权查看的行。  

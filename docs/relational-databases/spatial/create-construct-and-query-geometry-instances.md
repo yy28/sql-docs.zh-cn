@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 540650cecdf31842b93d2626136756247a13b111
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f311c0b605b745aeb274865863fc3e7b1cd098f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101124"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764735"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>创建、构造和查询几何图形实例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -225,7 +221,7 @@ ms.locfileid: "43101124"
   
   
 ###  <a name="empty"></a> Empty  
- 空的 geometry 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
+ 空 **geometry** 实例不包含任何点。 空的 **LineString, CircularString**、 **CompoundCurve**和 **MultiLineString** 实例的长度为零。 空的 **Polygon**、 **CurvePolygon**和 **MultiPolygon** 实例的面积为 0。  
   
  **确定实例是否为空**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md)。  
@@ -280,7 +276,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 闭合  
- 闭合的 geometry 实例是起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
+ 闭合的 **geometry** 实例是指起始点和终点相同的图形。 **Polygon** 实例被视为闭合的。 **Point** 实例不是闭合的。  
   
  环是一个简单、闭合的 **LineString** 实例。  
   

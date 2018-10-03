@@ -5,25 +5,21 @@ ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 9e985a19-f93f-4c56-b644-12c529298011
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7f2f646a1099bb946431d17ccfb52b360a4adcd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 869ed1a58cde0c8350bfd05a97538a5e73931548
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758725"
 ---
-# <a name="sysdmxedatabasesessionevents-azure-sql-database"></a>sys.dm_xe_database_session_events （Azure SQL 数据库）
+# <a name="sysdmxedatabasesessionevents-azure-sql-database"></a>sys.dm_xe_database_session_events（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   返回有关会话事件的信息。 事件是离散执行点。 如果事件不包含所需的信息，则可对事件应用谓词以阻止其激发。  
@@ -39,7 +35,7 @@ ms.locfileid: "38041945"
 |event_package_guid|**uniqueidentifier**|包含事件的包的 GUID。 不可为 null。|  
 |event_predicate|**nvarchar(2048)**|应用于事件的谓词树的 XML 表示形式。 可以为 Null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求拥有 VIEW DATABASE STATE 权限。  
   
 ### <a name="relationship-cardinalities"></a>关系基数  

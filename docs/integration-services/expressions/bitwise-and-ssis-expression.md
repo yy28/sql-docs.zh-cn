@@ -5,25 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5b48be5058e606f9306c4a2144ebf10ce43e5c4c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 12db68600b9f96de2eb4728bef47720c1b02756d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727797"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp;（位算符 AND）（SSIS 表达式）
   对两个整数值执行“位与”运算。 它会将第一个操作数的每一位与第二个操作数中对应的每一位进行比较。 如果两位都是 1，则相应的结果位设置为 1。 否则，相应的结果位设置为 0。  

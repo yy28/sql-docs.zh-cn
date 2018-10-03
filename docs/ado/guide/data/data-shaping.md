@@ -1,29 +1,26 @@
 ---
-title: 数据成型 |Microsoft 文档
+title: 数据整理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO]
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0087c1d3d74a02fa939ad1b16491a3d46d3b86fe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1b74505591b2f883b6cc7541a89c485435d5bab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805446"
 ---
-# <a name="data-shaping"></a>调整数据
+# <a name="data-shaping"></a>数据整理
 本部分包含以下主题。  
   
 -   [数据整理概述](../../../ado/guide/data/data-shaping-overview.md)  
@@ -52,4 +49,4 @@ ms.locfileid: "35270456"
   
 -   [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)  
   
--   [Visual Basic 应用程序函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+-   [Visual Basic for Applications 函数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

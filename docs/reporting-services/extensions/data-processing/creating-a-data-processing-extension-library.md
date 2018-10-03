@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82f4b71b-dd39-467d-8d8c-6771eb2b12de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f463397fbe4c1b7fa11f9c223c501e5d2ffaafbd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 47e23541c46aab4f52707e07a054ece3c9641f8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823495"
 ---
 # <a name="creating-a-data-processing-extension-library"></a>创建数据处理扩展插件库
   您创建的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据处理扩展插件都应分配到唯一的命名空间并被内置到某个库或程序集文件中。 命名空间的确切名称并不重要，但命名空间必须是唯一的且不能与任何其他扩展插件共享。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 可以将命名空间 <xref:Microsoft.ReportingServices.DataProcessing> 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的数据处理扩展插件。 您应该为公司的数据处理扩展插件创建您自己的唯一命名空间。  

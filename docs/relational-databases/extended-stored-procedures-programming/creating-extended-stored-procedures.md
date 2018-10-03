@@ -1,14 +1,11 @@
 ---
-title: 创建扩展存储过程 |Microsoft 文档
+title: 创建扩展存储过程 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - warnings [SQL Server]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], creating
 - messages [SQL Server], extended stored procedures
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21d29aa0ceb7ba16216db3f52e18379f55b775dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711801"
 ---
 # <a name="creating-extended-stored-procedures"></a>创建扩展存储过程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "32936575"
   
 -   必须导出从 DLL 外部调用的所有函数（所有扩展存储过程函数）。  
   
-     你可以通过列出的.def 文件，导出部分中其名称中导出函数，或可以前缀源代码与 __declspec （dllexport），Microsoft 编译器扩展中的函数名称 (请注意， \__declspec() 开头两个下划线)。  
+     可以通过列出其.def 文件的 EXPORTS 部分中的名称导出函数也可以使用 __declspec （dllexport），一个 Microsoft 编译器扩展名的源代码中的函数名称 (请注意， \__declspec() 以两个下划线开头)。  
   
  创建扩展存储过程 DLL 时需要这些文件。  
   
@@ -68,18 +64,18 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) 是 Microsoft 特定的编译器扩展名。 如果您的编译器不支持此指令，则应在 DEF 文件的 EXPORTS 部分之下导出此函数。  
   
- 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-T260 或如果具有系统管理员特权的用户运行 DBCC TRACEON (260) 和扩展存储过程 DLL 不支持 __getxpversion，一条警告消息 (错误 8131： 扩展存储的过程DLL %不会导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 开头两个下划线。)  
+ 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]开始使用跟踪标志-t260 开始，或者如果具有系统管理员特权的用户运行 DBCC TRACEON (260)，并且如果扩展存储过程 DLL 不支持 __getxpversion （），一条警告消息 (错误 8131： 扩展存储的过程DLL '%' 不导出\__GetXpVersion().) 打印到错误日志。 (请注意， \__GetXpVersion() 以两个下划线开头。)  
   
- 如果扩展存储过程 DLL 导出 __GetXpVersion()，但函数返回的版本低于服务器所要求的版本，则会向错误日志中打印一条警告消息，其中说明函数返回的版本和服务器预期的版本。 如果您收到此消息，您在返回值不正确从\__GetXpVersion()，或者你正在用较旧版本的 srv.h 进行编译。  
+ 如果扩展存储过程 DLL 导出 __GetXpVersion()，但函数返回的版本低于服务器所要求的版本，则会向错误日志中打印一条警告消息，其中说明函数返回的版本和服务器预期的版本。 如果收到此消息，您要返回不正确的值从\__GetXpVersion()，或您正在使用早的 srv.h 版本进行编译。  
   
 > [!NOTE]  
 >  SetErrorMode 是一个 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Win32 函数，不应在扩展存储过程中调用它。  
   
  建议长时间运行的扩展存储过程应定期调用 srv_got_attention，以便在连接终止或批处理中止时此过程可以终止自身。  
   
- 若要调试扩展存储过程 DLL，请将其复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 目录。 若要为调试会话指定可执行文件，输入路径和文件名的[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可执行文件 (例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 Sqlservr 参数有关的信息，请参阅[sqlservr 应用程序](../../tools/sqlservr-application.md)。  
+ 若要调试扩展存储过程 DLL，请将其复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn 目录。 若要为调试会话指定可执行文件，请输入路径和文件名的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可执行文件 (例如，C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 有关 sqlservr 参数的信息，请参阅[sqlservr 应用程序](../../tools/sqlservr-application.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [srv_got_attention&#40;扩展存储过程 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

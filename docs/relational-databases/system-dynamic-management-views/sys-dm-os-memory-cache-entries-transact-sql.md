@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_memory_cache_entries (Transact SQL) |Microsoft 文档
+title: sys.dm_os_memory_cache_entries (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_cache_entries
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_entries dynamic management view
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb6c3adbf021eb08b8e76892217cf04c9caeafe0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2d00a5e39057f6c1410cb170095bc9c0d5f322fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468013"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763175"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "34468013"
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中返回有关缓存中所有条目的信息。 使用此视图可对缓存条目进行跟踪，直至它们的关联对象。 还可使用此视图获取有关缓存条目的统计信息。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_memory_cache_entries**。  
+>  若要调用此项从[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_memory_cache_entries**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -55,16 +52,16 @@ ms.locfileid: "34468013"
 |**pages_kb**|**bigint**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 此缓存条目使用的内存量 (KB)。  不可为 null。|  
 |**entry_data**|**nvarchar(2048)**|缓存条目的序列化表示形式。 此信息与缓存存储相关。 可以为 Null。|  
 |**pool_id**|**int**|**适用范围**： [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 与条目关联的资源池 ID。 可以为 Null。<br /><br /> 不是 katmai|  
-|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限 
+## <a name="permissions"></a>Permissions 
 
 上[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`权限。   
 上[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`数据库中的权限。   
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  
-  [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

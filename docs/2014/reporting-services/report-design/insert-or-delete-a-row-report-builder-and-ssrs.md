@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7cc7b1450f6e1d115b44a2c703516f2c562b90ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8ee7c9665186648217f522ce1642cc791274ad0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053567"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>插入或删除行（报表生成器和 SSRS）
   可以在 Tablix 数据区域中添加或删除行。 Tablix 数据区域可以是一个表、矩阵或列表。 下面的过程不适用于图表和仪表数据区域。  

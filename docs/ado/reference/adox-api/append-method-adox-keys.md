@@ -1,13 +1,11 @@
 ---
-title: Append 方法 （ADOX 键） |Microsoft 文档
+title: Append 方法 （ADOX 项） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eaef312977613409453dfa1d876674d6b95c927
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1c0bc0e9b9c565c0c6d72fab4f87ab0a9fd0091a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818675"
 ---
-# <a name="append-method-adox-keys"></a>Append 方法 （ADOX 键）
-添加新[密钥](../../../ado/reference/adox-api/key-object-adox.md)对象传递给[密钥](../../../ado/reference/adox-api/keys-collection-adox.md)集合。  
+# <a name="append-method-adox-keys"></a>Append 方法（ADOX 项）
+添加一个新[键](../../../ado/reference/adox-api/key-object-adox.md)对象传递给[密钥](../../../ado/reference/adox-api/keys-collection-adox.md)集合。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,28 +36,28 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
   
 #### <a name="parameters"></a>Parameters  
  *Key*  
- **密钥**要追加的对象或创建并追加密钥的名称。  
+ **密钥**对象以追加或创建并追加的密钥的名称。  
   
  *KeyType*  
- 可选。 A**长**值，该值指定键的类型。 *密钥*参数对应于[类型](../../../ado/reference/adox-api/type-property-key-adox.md)属性**密钥**对象。  
+ 可选。 一个**长**值，该值指定键的类型。 *键*参数对应于[类型](../../../ado/reference/adox-api/type-property-key-adox.md)属性**密钥**对象。  
   
  *列*  
- 可选。 A**字符串**值，该值指定要编制索引的列的名称。 *列*参数对应于值[名称](../../../ado/reference/adox-api/name-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
+ 可选。 一个**字符串**值，该值指定要编制索引的列的名称。 *列*参数对应的值[名称](../../../ado/reference/adox-api/name-property-adox.md)属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
   
  *RelatedTable*  
- 可选。 A**字符串**值，该值指定相关的表的名称。 *RelatedTable*参数对应于值**名称**属性[表](../../../ado/reference/adox-api/table-object-adox.md)对象。  
+ 可选。 一个**字符串**值，该值指定在相关表的名称。 *RelatedTable*参数对应的值**名称**属性[表](../../../ado/reference/adox-api/table-object-adox.md)对象。  
   
  *RelatedColumn*  
- 可选。 A**字符串**值，该值指定外键的相关列的名称。 *RelatedColumn*参数对应于值**名称**属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
+ 可选。 一个**字符串**值，该值指定外键的相关列的名称。 *RelatedColumn*参数对应的值**名称**属性[列](../../../ado/reference/adox-api/column-object-adox.md)对象。  
   
-## <a name="remarks"></a>Remarks  
- *列*参数可以采用的列名称或列名称的数组。  
+## <a name="remarks"></a>备注  
+ *列*参数可以采用的一列的名称或列名称的数组。  
   
 ## <a name="applies-to"></a>适用范围  
  [项集合 (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
 ## <a name="see-also"></a>请参阅  
- [密钥追加方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [项 Append 方法、 密钥类型、 RelatedColumn、 RelatedTable 和 UpdateRule 属性示例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Append 方法 （ADOX 列）](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append 方法 （ADOX 组）](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Append 方法 （ADOX 索引）](../../../ado/reference/adox-api/append-method-adox-indexes.md)   

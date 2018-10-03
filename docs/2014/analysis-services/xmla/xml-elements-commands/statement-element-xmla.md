@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Statement Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Statement command
 ms.assetid: bfedc03c-d476-4d55-b5fd-36169f01351a
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 72a2b52b8a95233dfa0f889603d74548fb031305
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96b37de3307a044b046c67bb4ab6fe341ad5e480
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056457"
 ---
 # <a name="statement-element-xmla"></a>Statement 元素 (XMLA)
   包含查询或要发送的语句使用`Execute`的实例方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -51,7 +48,7 @@ ms.locfileid: "37300807"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37300807"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Statement` 命令可对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例执行查询或语句。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 支持以下语言：  
   
 -   多维表达式 (MDX)  

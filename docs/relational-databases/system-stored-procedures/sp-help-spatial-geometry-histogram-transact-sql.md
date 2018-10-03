@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 731004301f0419d3ce4229e2e901bf9b3bd0507e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c193e3cddf5e7446f38b7cf6bd78630522a708fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026096"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800265"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permissions  
  用户必须是属于**公共**角色。 需要服务器和对象的 READ ACCESS 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SSMS 空间选项卡显示结果的图形表示形式。 您可以针对空间窗口查询结果，以获取近似的结果项数。 表中的对象可能涵盖多个单元，因此单元之和可能大于实际对象数。  
   
  可能会向结果集中添加一个附加行，用于保存在范围框之外或与范围框边界接触的对象数。 **Cellid**此行是 0 和**单元格**此行包含**LineString**表示的边界框。 此行表示在范围框之外的整个空间。  

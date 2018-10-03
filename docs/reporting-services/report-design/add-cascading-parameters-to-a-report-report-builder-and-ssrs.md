@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a434a4d72c63c4915208256647a6ebcd86b3d45f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270460"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744015"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
   级联参数提供了一种管理大量报表数据的方法。 您可以定义一组相关参数，使一个参数的值列表取决于其他参数选取的值。 例如，第一个参数是独立的，并且可能提供产品类别列表。 当用户选中某个类别后，第二个参数则取决于第一个参数的值。 第二个参数的值根据所选类别中的子类别列表进行更新。 用户查看报表时，类别和子类别参数的值用于筛选报表数据。  

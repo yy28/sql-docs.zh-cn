@@ -5,11 +5,7 @@ ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -26,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 068f01bc17a9f907aafaac6d39370be2a0480f57
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789505"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "43038128"
 |create_date|**日期时间**|创建数据库级防火墙设置时的 UTC 日期和时间。|  
 |modify_date|**日期时间**|上次修改数据库级防火墙设置时的 UTC 日期和时间。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要删除数据库防火墙规则，请使用[sp_delete_database_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)。 若要设置的所有防火墙规则[!INCLUDE[ssSDS](../../includes/sssds-md.md)]，请参阅[sp_set_firewall_rule &#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)。 若要返回有关现有数据库的信息的防火墙规则，请查询[sys.database_firewall_rules （Azure SQL 数据库）](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)。  
   
 ## <a name="permissions"></a>Permissions  

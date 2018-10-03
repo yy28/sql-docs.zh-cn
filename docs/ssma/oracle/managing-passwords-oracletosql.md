@@ -1,30 +1,27 @@
 ---
-title: 管理密码 (OracleToSQL) |Microsoft 文档
+title: 管理密码 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2b99f456fe02dbebcbaecf1a59a3fcc9f0d536e2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: aab7c06903f334ee0b24907cb4189b56d620b49a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777383"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842965"
 ---
 # <a name="managing-passwords-oracletosql"></a>管理密码 (OracleToSQL)
-本节是有关保护数据库密码和导入或将其导出跨服务器的过程：  
+本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
   
 1.  保护密码  
   
@@ -37,15 +34,15 @@ SSMA 允许你保护你的数据库的密码。
   
 指定一个有效的密码，使用以下三种方法之一：  
   
-1.  **明文形式：** 'password' 节点的值属性中键入数据库密码。 它是在脚本文件或服务器连接文件的服务器部分中的服务器定义节点下找到。  
+1.  **明文形式：** 键入的 value 属性的密码节点中的数据库密码。 服务器连接文件的脚本文件的服务器部分中的服务器定义节点下找到它。  
   
-    以明文形式的密码是不安全的。 因此，你将遇到控制台输出中的以下警告消息： *"服务器&lt;服务器 id&gt;密码是提供以不安全的明文形式，SSMA 控制台应用程序提供了一个选项来保护密码通过加密，请参阅帮助文件了解详细信息中 SSMA – securepassword 选项。"*  
+    密码以明文形式是不安全的。 因此，将会遇到以下警告消息在控制台输出中： *"服务器&lt;服务器 id&gt;密码是提供不安全的明文形式 SSMA 控制台应用程序提供了一个选项来保护通过加密的密码，请参阅帮助文件了解详细信息在 SSMA 中的 – securepassword 选项。"*  
   
-    **加密的密码：** 指定的密码，在这种情况下，存储在 ProtectedStorage.ssma 的本地计算机上以加密形式。  
+    **加密的密码：** 指定的密码，在这种情况下，存储在本地计算机中 ProtectedStorage.ssma 以加密形式。  
   
     -   **保护密码**  
   
-        -   执行`SSMAforOracleConsole.exe`与`–securepassword`并在命令行传递包含中的服务器定义部分的密码节点的连接或脚本文件的服务器添加交换机。  
+        -   执行`SSMAforOracleConsole.exe`与`–securepassword`，并在命令行传递包含中的服务器定义部分的密码节点的连接或脚本文件的服务器添加开关。  
   
         -   在提示符下，要求用户输入数据库密码并确认它。  
   
@@ -75,7 +72,7 @@ SSMA 允许你保护你的数据库的密码。
     
     -   **删除加密的密码**  
   
-        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–remove`切换在将服务器 id，以从本地计算机上存在的受保护的存储文件中删除加密的密码传递的命令行。  
+        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–remove`开关在命令行传递的服务器 id，以从本地计算机上存在受保护的存储文件中删除加密的密码。  
         
         例如：  
         
@@ -84,18 +81,18 @@ SSMA 允许你保护你的数据库的密码。
   
     -   **列出其密码进行加密的服务器 Id**  
   
-        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–list`切换在命令行，若要列出其密码已加密的所有服务器 id。  
+        执行`SSMAforOracleConsole.exe`与`–securepassword`和`–list`切换通过在命令行列出了其密码已加密的服务器 id。  
   
         例如：  
         
             C:\SSMA\SSMAforOracleConsole.EXE –securepassword –list  
   
     > [!NOTE]  
-    > 1.  在脚本或服务器的连接文件中提到的明文密码将优先于受保护的文件中的加密密码。  
-    > 2.  服务器连接文件或脚本文件的服务器部分中不存在的任何密码时或者如果它不在固定在本地计算机上，则控制台将提示您输入的密码。  
+    > 1.  在脚本或服务器连接文件中提及的明文密码将优先于受保护的文件中的加密密码。  
+    > 2.  在服务器连接文件或脚本文件的服务器部分中存在没有密码时或者如果它不在固定在本地计算机上，控制台将提示您输入的密码。  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>导出或导入加密的密码  
-SSMA 控制台应用程序，可将加密的数据库密码存在于本地计算机上的文件导出到受保护的文件，反之亦然。 该步骤有助于使加密的密码机独立。 导出功能读取服务器 id 和密码从本地受保护的存储，并将信息保存在一个加密文件。 系统会提示用户输入的受保护的文件的密码。 请确保输入的密码为 8 个字符长度或更大。 在不同计算机之间，此受保护的文件是可移植的。 导入功能从受保护的文件读取服务器 id 和密码信息。 用户提示您输入的受保护的文件的密码，并将信息追加到受保护的本地存储。  
+SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上的文件中存在导出为受保护的文件，反之亦然。 它有助于使加密的密码机独立。 导出功能读取服务器 id 和密码从本地保护的存储，并将信息保存在加密文件。 提示用户为受保护的文件输入密码。 请确保输入的密码是 8 个字符长度或详细信息。 不同的计算机上，此受保护的文件是可移植的。 导入功能从受保护的文件读取服务器 id 和密码信息。 用户提示输入密码的受保护文件，并将信息追加到受保护的本地存储。  
   
 例如：  
 

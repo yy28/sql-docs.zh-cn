@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0903c065381ce2828795240321a91c52f0c13e8b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d1f668fd09c2eb5bfc796f1fcd74d5f4d8e569ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716345"
 ---
 # <a name="tutorial-using-the-odata-source"></a>教程：使用 OData 源
   本教程介绍了从示例 Northwind OData 服务 (http://services.odata.org/V3/Northwind/Northwind.svc/)) 提取 Employees 集合，然后将它加载到某一平面文件中的过程。  

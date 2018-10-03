@@ -5,12 +5,8 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,16 +17,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: ff92a96a-8af6-4532-82cc-c0bbff92401b
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7e1b4fc380182279fa2215f0ba696d27a5f32bb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: a1d4b145407464853728e2ac62d0ae9dcbcde05f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35313166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850466"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>以编程方式查找数据流组件
   向包中添加数据流任务后，下一步是确定可用的数据流组件。 可以用编程方式查找本地计算机上安装并且可用的数据流源、转换和目标。 有关向包添加数据流任务的信息，请参阅[以编程方式添加数据流任务](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)。  

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER PARTITION FUNCTION
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - partition functions [SQL Server], modifying
 - partitioned tables [SQL Server], merging
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 925d1864f14786dcd2af86b513a38609e8040bdd
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: dd91fdb2419be15b08fc42ee4928f8bf52c56a1f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709735"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +99,7 @@ ALTER PARTITION FUNCTION partition_function_name()
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不对修改分区函数提供复制支持。 必须在订阅数据库中手动应用对发布数据库中的分区函数的更改。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  可以使用以下任意权限执行 ALTER PARTITION FUNCTION：  
   
 -   ALTER ANY DATASPACE 权限。 默认情况下，此权限授予 **sysadmin** 固定服务器角色和 **db_owner** 及 **db_ddladmin** 固定数据库角色的成员。  

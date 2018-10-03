@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6573c0a6b939104a5b0844bde1da07effc6d8f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789365"
 ---
 # <a name="server-properties---connections-page"></a>服务器属性 -“连接”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "32867062"
  **Default connection options**  
  指定默认连接选项，如下表所述：  
   
-|配置选项|Description|  
+|配置选项|描述|  
 |--------------------------|-----------------|  
 |**disable deferred constraint checking**|控制执行期间或延迟的约束检查。|  
 |**隐式事务**|控制在运行一条语句时，是否隐式启动一项事务。|  

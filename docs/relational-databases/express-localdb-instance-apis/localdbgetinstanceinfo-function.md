@@ -1,15 +1,12 @@
 ---
-title: LocalDBGetInstanceInfo 函数 |Microsoft 文档
+title: LocalDBGetInstanceInfo 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBGetInstanceInfo
@@ -17,22 +14,21 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5bb8e123f084b20fb16e3fd4e0e52bd482a2760b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 239dfd78fd2f1ce4721953c53efeb47cb29da4cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740326"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   返回有关指定的 SQL Server Express LocalDB 实例的信息，如该实例是否存在、实例使用的 LocalDB 版本以及实例是否正在运行等。  
   
- 在返回的信息**结构**名为**LocalDBInstanceInfo**，它具有以下定义。  
+ 在返回的信息**struct**名为**LocalDBInstanceInfo**，其中包含以下定义。  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -133,9 +129,9 @@ HRESULT LocalDBGetInstanceInfo(
  发生了意外错误。 有关详细信息，请参阅事件日志。  
   
 ## <a name="details"></a>详细信息  
- 引入背后的基本原理**结构**大小自变量 (*lpInstanceInfoSize*) 是启用要返回的不同版本的 API **LocalDBInstanceInfostruct**，从而有效地启用向前和向后兼容性。  
+ 引入的基本原理**struct**大小参数 (*lpInstanceInfoSize*) 是为了使 API 能够返回不同版本的**LocalDBInstanceInfostruct**，从而有效地实现向前和向后兼容。  
   
- 如果**结构**大小自变量 (*lpInstanceInfoSize*) 匹配的大小的已知版本**LocalDBInstanceInfostruct**，该版本的**结构**返回。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
+ 如果**struct**大小参数 (*lpInstanceInfoSize*) 与已知版本的大小匹配**LocalDBInstanceInfostruct**，该版本的**结构**返回。 否则，返回 LOCALDB_ERROR_INVALID_PARAMETER。  
   
  典型示例**LocalDBGetInstanceInfo** API 使用情况如下所示：  
   
@@ -145,9 +141,9 @@ LocalDBInstanceInfo(L”Test”, &ii, sizeof(LocalDBInstanceInfo));
   
 ```  
   
- 使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
+ 有关使用 LocalDB API 的代码示例，请参阅[SQL Server Express LocalDB 参考](../../relational-databases/sql-server-express-localdb-reference.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server Express LocalDB 标头信息和版本信息](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

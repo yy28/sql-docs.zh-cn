@@ -1,14 +1,11 @@
 ---
-title: core.sp_remove_collector_type (TRANSACT-SQL) |Microsoft 文档
+title: core.sp_remove_collector_type (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_remove_collector_type
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sp_remove_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f6e7a6fddad656d183d4993bb6b6f7e065d1ecba
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ef7aa35eea529857072492d4b1d80ddf92c69ef6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236714"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726865"
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求的成员身份**mdw_admin** （拥有 EXECUTE 权限） 固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
@@ -70,7 +66,7 @@ SELECT @collector_type_uid = (SELECT collector_type_uid FROM msdb.dbo.syscollect
 EXECUTE @RC = core.sp_remove_collector_type @collector_type_uid;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理数据仓库](../../relational-databases/data-collection/management-data-warehouse.md)  

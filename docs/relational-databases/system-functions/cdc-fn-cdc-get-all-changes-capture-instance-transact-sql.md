@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b5814bd16fc3c5c7b6fc67a99c5787d42e50b85
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f4614ab97c2f5726c1c5382fbe87b9198f9cf2f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800725"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +80,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Permissions  
  要求的成员身份**sysadmin**固定的服务器角色或**db_owner**固定的数据库角色。 对于所有其他用户，要求对源表中的所有已捕获列具有 SELECT 权限；如果已定义捕获实例的访问控制角色，则还要求具有该数据库角色的成员身份。 如果调用方不具有查看源数据的权限，该函数将返回错误 229 ("的 SELECT 权限被拒绝对对象 'fn_cdc_get_all_changes_...'，数据库\<数据库名称 >'，架构 'cdc'。")。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果指定的 LSN 范围不在捕获实例的更改跟踪时间线范围之内，则函数将返回错误 208（“为过程或函数 cdc.fn_cdc_get_all_changes 提供的参数数目不足。”）。  
   
  数据类型的列**图像**，**文本**，并**ntext**始终被分配一个 NULL 值时 **__ $operation** = 1 或 **__ $操作**= 3。 数据类型的列**varbinary （max)**， **varchar （max)**，或**nvarchar （max)** 指定一个 NULL 值时 **__ $operation** = 3除非在更新期间更改了该列。 当 **__ $operation** = 1，这些列在删除时指定它们的值。 捕获实例中包含的计算列的值始终为 NULL。  

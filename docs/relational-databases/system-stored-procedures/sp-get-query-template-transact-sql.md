@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_get_query_template
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027743"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810275"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ sp_get_query_template
  @parameters  
  是输出参数的类型**nvarchar （max)** 按指示接收中已参数化的参数名称和数据类型的字符串文字提供@templatetext。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果出现下列情况，sp_get_query_template 会返回错误。  
   
 -   它不会不参数化中的任何常量文字值*query_text*。  

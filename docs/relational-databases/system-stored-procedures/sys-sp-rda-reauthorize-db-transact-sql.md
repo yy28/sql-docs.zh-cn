@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rda_reauthorize_db
@@ -19,12 +17,12 @@ ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9991ad7e43ffa367387392b40a22a1bea9aed37c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790435"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +54,10 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 >0（失败）  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 权限。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在运行时[sys.sp_rda_reauthorize_db (Transact SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)重新连接到远程 Azure 数据库，此操作会自动重置查询模式 LOCAL_AND_REMOTE，到这是 Stretch Database 的默认行为。 也就是说，查询返回结果从本地和远程数据。  
   
 ## <a name="example"></a>示例  

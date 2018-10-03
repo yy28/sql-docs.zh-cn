@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - identifiers [SQL Server], PowerShell
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce761307cf9b808f4455f09436265fc63d78713c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83c6ad761f6b92370c9a95b71a81b0a971fa2f0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053041"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell 中的 SQL Server 标识符
   用于 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序使用 Windows PowerShell 路径中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符可包含 Windows PowerShell 不支持在路径中使用的字符。 在 Windows PowerShell 路径中使用标识符时，必须对这些字符进行转义或者对它们使用特殊的编码。  

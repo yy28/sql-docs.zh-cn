@@ -4,31 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newsubwizard.webserverinformation.f1
 ms.assetid: 86d72275-45c7-459f-98cf-f5a366ed279c
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e9faa9b11e5ac913f95dfc80f56de2f1cef03dc
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: bb30e6b9376b0691950e9e618cfe027692cd05f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792365"
 ---
 # <a name="web-server-information"></a>Web 服务器信息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   若要使用合并复制的 Web 同步选项，必须提供 Web 服务器信息。 有关配置 Web 同步的信息，请参阅[配置 Web 同步](../../relational-databases/replication/configure-web-synchronization.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Web 服务器地址**  
  如果在“发布属性”对话框的“FTP 快照和 Internet”页中指定了 Web 服务器地址，该地址将作为默认值显示在此文本框中。 您可以接受此默认值，也可以为同步此订阅的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet 信息服务 (IIS) 服务器输入完全限定的 Web 服务器地址。  
   

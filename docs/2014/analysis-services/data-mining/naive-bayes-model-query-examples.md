@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060447"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 模型查询示例
   在创建针对数据挖掘模型的查询时，您既可以创建内容查询，也可创建预测查询；内容查询提供有关分析过程中发现的模式的详细信息，而预测查询则使用模型中的模式来对新数据进行预测。 您还可以通过使用针对数据挖掘架构行集的查询来检索元数据。 本节说明如何创建针对基于 Microsoft Naive Bayes 算法的模型的查询。  
@@ -92,10 +89,10 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|@shouldalert|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
-|TM_NaiveBayes|Bike Buyer|@shouldalert|8615|0.492736216|4|  
-|TM_NaiveBayes|性别|Missing|0|0|@shouldalert|  
+|TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
+|TM_NaiveBayes|性别|Missing|0|0|1|  
 |TM_NaiveBayes|性别|F|8656|0.495081217|4|  
 |TM_NaiveBayes|性别|M|8828|0.504918783|4|  
   
@@ -119,7 +116,7 @@ WHERE ATTRIBUTE_NAME = 'Region'
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
-|10|Bike Buyer -> Region|@shouldalert|17484|84.51555875|10|  
+|10|Bike Buyer -> Region|1|17484|84.51555875|10|  
 |11|Bike Buyer -> Region = Missing|0|0|0|11|  
 |11|Bike Buyer -> Region = North America|0.508236102|8886|0|11|  
 |11|Bike Buyer -> Region = Pacific|0.193891558|3390|0|11|  
@@ -211,7 +208,7 @@ NATURAL PREDICTION JOIN
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
 |0|10161.5714|0.581192599|0.010530981|0|0|  
-|@shouldalert|7321.428768|0.418750215|0.008945684|0|0|  
+|1|7321.428768|0.418750215|0.008945684|0|0|  
 ||0.999828444|5.72E-05|5.72E-05|0|0|  
   
  表的最后一行显示对支持和概率的缺失值调整。 方差和标准偏差值始终为 0，因为 Naive Bayes 模型无法对连续值建立模型。  

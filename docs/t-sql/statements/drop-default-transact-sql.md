@@ -5,9 +5,7 @@ ms.date: 05/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_DEFAULT_TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - DROP DEFAULT statement
 - defaults [SQL Server], removing
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 79662a7ae01f52051d81d0ae018bab09057c1f23
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 44f5ed1f8c898753e10b967d5124b09cf8597595
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942893"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730805"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
   
  从允许空值的列中删除默认值后，当添加行且没有显式提供值时，将在该位置插入 NULL。 从 NOT NULL 列中删除默认值后，当添加行且没有显式提供值时，将返回错误消息。 这些行以后作为典型 INSERT 语句行为的一部分添加。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行 DROP DEFAULT，用户至少应对默认值所属的架构具有 ALTER 权限。  
   
 ## <a name="examples"></a>示例  

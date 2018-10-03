@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_replshowcmds
 - sp_replshowcmds_TSQL
 helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 40faa94a8d2e43d3a3cab1f20c1a621924b6871e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811365"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +54,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**类型**|**int**|命令的类型。|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_replshowcmds**事务复制中使用。  
   
  使用**sp_replshowcmds**，可以查看当前未分发的事务 （事务日志中尚未发送到分发服务器的）。  

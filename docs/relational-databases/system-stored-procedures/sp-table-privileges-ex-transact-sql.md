@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges_ex
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97486a281f2c962cb10d24762957769eba806387
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752747"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**特权**|**varchar(** 32 **)**|可用的表权限之一。 表权限可以是以下值之一或定义实现时数据源支持的其他值：<br /><br /> 选择 =**被授权者**可以检索一个或多列的数据。<br /><br /> INSERT =**被授权者**可以为一个或多个列的新行提供数据。<br /><br /> UPDATE =**被授权者**可为一个或多个列修改现有数据。<br /><br /> 删除 =**被授权者**可以从表中删除行。<br /><br /> 引用 =**被授权者**可以引用外部表中主键/外键关系中的列。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，主键/外键关系是使用表约束定义的。<br /><br /> 提供给操作的作用域**被授权者**由特定表特权是由数据源决定。 例如，UPDATE 权限可以启用**被授权者**若要为其更新一个数据源的表中的所有列和这些列仅**GRANTOR**对另一个数据源具有更新权限。|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|指示是否**被授权者**允许向其他用户授予权限。 这常常称为“授予再授予”权限。 可以是 YES、NO 或 NULL。 未知的（或 NULL）值指不适用“授予再授予”的数据源。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回的结果按排序**TABLE_QUALIFIER**， **TABLE_OWNER**， **TABLE_NAME**，以及**特权**。  
   
 ## <a name="permissions"></a>Permissions  

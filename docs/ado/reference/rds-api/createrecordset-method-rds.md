@@ -1,13 +1,11 @@
 ---
-title: CreateRecordset 方法 (RDS) |Microsoft 文档
+title: CreateRecordset 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 791586badfeff0c1bde35b5cdf25ba750f79fe80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779025"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 方法 (RDS)
-创建一个空断开连接[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+创建一个空断开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -45,29 +42,29 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>Parameters  
  *对象*  
- 表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
+ 表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)或[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
  *ColumnsInfos*  
- A **Variant**定义每个列中的特性的数组**记录集**创建。 每个列定义包含四个必需的特性和一个可选属性的数组。  
+ 一个**Variant**的定义中的每列的属性数组**记录集**创建。 每个列定义中包含的四个必需的属性和一个可选属性的数组。  
   
 |Attribute|Description|  
 |---------------|-----------------|  
 |“属性”|列标题的名称。|  
 |类型|数据类型的整数。|  
-|Size|以字符为单位，无论何种数据类型的宽度的整数。|  
+|Size|以字符为单位，而不考虑数据类型为宽度的整数。|  
 |可空性|布尔值。|  
-|小数位数 （可选）|此可选属性定义数值字段的小数位数。 如果未指定此值，数字值将被截断为三个级别。 精度不受影响，但是在小数点的数字个数将截断为三个。|  
+|规模 （可选）|此可选属性定义的数值字段的小数位数。 如果未指定此值，数值将被截断为 3 的小数位数。 精度不受影响，但将为三个截断小数点后面的数字个数。|  
   
- 列数组的一套则组合到一个数组，它定义**记录集**。  
+ 列数组集然后分组到一个数组，它定义**记录集**。  
   
-## <a name="remarks"></a>Remarks  
- 服务器端业务对象可以填充生成**记录集**如与从非 OLE DB 数据提供程序的数据，操作系统文件包含股票报价。  
+## <a name="remarks"></a>备注  
+ 服务器端业务对象可以填充得到**记录集**从非 OLE DB 数据访问接口的数据，如操作系统文件包含股票报价。  
   
- 下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)支持的值**CreateRecordset**方法。 列出数是用于定义字段的引用数。  
+ 下表列出[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)支持的值为**CreateRecordset**方法。 列出的电话号码是用于定义字段的参考编号。  
   
- 每种数据类型为固定的长度或可变长度。 固定长度的类型应定义大小为 – 1，因为大小是预先确定，仍然需要大小定义。 可变长度数据类型允许大小为 1 到 32767 之间。  
+ 每种数据类型是固定的长度或可变长度。 固定长度的类型应定义大小为 – 1，因为大小是预先确定，仍然需要的大小定义。 长度可变的数据类型允许从 1 到 32767 之间的大小。  
   
- 对于某些变量数据类型，类型可强制转换为在替换列中记下的类型。 你将看不到之前的替换之后**记录集**被创建并填充。 然后你可以检查的实际数据类型，如有必要。  
+ 对于某些变量的数据类型，该类型可强制转换为替换列中记下的类型。 你将看不到之前的替换之后**记录集**创建并填充。 然后您可以检查实际的数据类型，如有必要。  
   
 |长度|常量|Number|Substitution|  
 |------------|--------------|------------|------------------|  

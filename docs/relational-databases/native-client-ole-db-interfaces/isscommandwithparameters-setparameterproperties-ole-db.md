@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7747c8efdc01efdc30ee3c6b8b369c7613aa1874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 01d61838d1267b54eedd1c389c198d50fa52f7d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844485"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +49,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>返回代码值  
  ISSCommandWithParameters::SetParameterProperties 方法返回的错误代码与核心 OLE DB ICommandProperties::SetProperties 方法返回的错误代码相同。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  允许按照序号基于每个参数使用此方法设置参数属性，或者在已经从属性数组生成 SSPARAMPROPS 之后使用单个 ISSCommandWithParameters::SetParameterProperties 调用设置参数属性。  
   
  在调用 ISSCommandWithParameters::SetParameterProperties 方法之前，必须首先调用 SetParameterInfo 方法。 调用 `SetParameterProperties(0, NULL)` 可清除所有指定的参数属性，而调用 `SetParameterInfo(0,NULL,NULL)` 则会清除所有参数信息（包括可能与某个参数相关的任何属性）。  

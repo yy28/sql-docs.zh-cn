@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - IHarticles
 - IHarticles_TSQL
@@ -21,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a4c4d5bb88260b8b4639633f279191786ab7d77
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 7ae16b2b0a7f38f9d70e77acf7dfb045d50b1042
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738485"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +37,9 @@ ms.locfileid: "39102505"
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|为项目提供唯一 ID 号的标识列。|  
 |**名称**|**sysname**|与项目关联的名称，在发布内是唯一的。|  
-|**publication_id**|**int**|项目所属发布的 ID。|  
+|**publication_id**|**smallint**|项目所属发布的 ID。|  
 |**table_id**|**int**|从发布的表的 ID [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)。|  
-|**publisher_id**|**int**|非 SQL Server 发布服务器的 ID。|  
+|**publisher_id**|**smallint**|非 SQL Server 发布服务器的 ID。|  
 |**creation_script**|**nvarchar(255)**|项目的架构脚本。|  
 |**del_cmd**|**nvarchar(255)**|复制对表项目的删除操作时所使用的复制命令类型。 有关详细信息，请参阅[指定如何传播事务项目的更改](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。|  
 |**filter**|**int**|此列未使用，包括只是为了[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)视图**IHarticles**表与兼容[sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)用于 SQL Server 的文章 （视图[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  

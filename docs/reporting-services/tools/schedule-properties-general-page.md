@@ -4,19 +4,18 @@ ms.date: 06/11/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9c1dabbeafa319839db2650e0cd61152a1dc254
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ecd386a4fe3004e36d5039a2fe8e98dfcc185033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816505"
 ---
 # <a name="schedule-properties-general-page"></a>计划属性（“常规”页）
   使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 页中的 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 可查看或修改共享计划。 共享计划可以用于替代报表特定计划或订阅特定计划。 将在保存计划之后应用对计划进行的更改。 对计划进行编辑不会影响当前正在进行的作业。 如果要编辑正在使用的计划，则将允许完成从该计划触发的、当前正在处理的所有报表和订阅。  

@@ -1,13 +1,11 @@
 ---
-title: 创建邮件使用 Visual FoxPro 数据的 Microsoft Word 中的标签 |Microsoft 文档
+title: 创建邮件在使用 Visual FoxPro 数据的 Microsoft Word 中的标签 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data [ODBC], mailing labels
@@ -16,29 +14,28 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], Word
 - FoxPro ODBC driver [ODBC], word
 ms.assetid: c901b60c-9f84-407a-b3d1-b4d301a71370
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 858379b3aa670a4e6bb8776303e2d16c85c9d30b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899552"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778567"
 ---
-# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>创建邮件使用 Visual FoxPro 数据的 Microsoft Word 中的标签
-Windows 95 或 Windows 98 的文档，可以使用 Microsoft Word 中的 Visual FoxPro 数据。 例如，你可能想要从 Visual FoxPro 表中存储的客户信息创建邮件标签。  
+# <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>使用 Visual FoxPro 数据在 Microsoft Word 中创建邮件标签
+Windows 95 或 Windows 98 的文档，可以在 Microsoft Word 中使用 Visual FoxPro 数据。 例如，你可能想要从 Visual FoxPro 表中存储的客户信息创建邮件标签。  
   
 ### <a name="to-create-mailing-labels"></a>若要创建邮件标签  
   
-1.  在 Microsoft Word 中，创建一个新的空白文档。  
+1.  在 Microsoft Word 中创建一个新的空白文档。  
   
 2.  从工具菜单中，选择邮件合并。  
   
-3.  在邮件合并帮助中，选择创建，然后选择邮件标签。  
+3.  在邮件合并帮助器，选择创建，然后选择邮寄标签。  
   
-4.  在主文档下选择活动窗口。  
+4.  在主文档中，选择活动窗口。  
   
 5.  在数据源下选择获取数据，然后选择打开数据源。  
   
@@ -46,18 +43,18 @@ Windows 95 或 Windows 98 的文档，可以使用 Microsoft Word 中的 Visual 
   
 7.  在选择数据源对话框中，选择 Visual FoxPro 数据源，然后单击使用。  
   
-8.  如果通过您的数据源访问的数据库包含表，请从添加表对话框中选择一个表。 Microsoft Query 上半部分的查询设计器中显示已添加的表。  
+8.  如果通过您的数据源访问的数据库包含表，请从添加表对话框中选择一个表。 Microsoft 查询的查询设计器的上半部分中显示已添加的表。  
   
-9. 通过将它们从表拖动到较低一半设计器中选择你的查询的字段。  
+9. 通过将它们从表拖动到较低的设计器的下半部分选择为查询的字段。  
   
-10. 从文件菜单中，选择将数据返回到 Microsoft Word。 Microsoft Query 关闭，并且你选择的数据是可在您的邮件合并文档中使用。  
+10. 从文件菜单中，选择将数据返回到 Microsoft Word。 Microsoft 查询关闭，并且你选择的数据是可在您的邮件合并文档中使用。  
   
-11. 在主文档下选择安装。  
+11. 在主文档中，选择安装程序。  
   
-12. 在标签选项对话框中，选择你想，然后单击确定的打印机和标签信息。  
+12. 在标签选项对话框中，选择您想，然后单击确定的打印机和标签信息。  
   
 13. 在创建标签对话框中，选择你想要在邮件的标签上打印，然后单击确定的字段。  
   
-14. 在邮件合并帮助，在合并数据和文档，单击合并。  
+14. 在邮件合并帮助下合并数据和文档，单击合并。  
   
-15. 在合并对话框中，选择你想，然后单击合并的选项。
+15. 在合并对话框中，选择所需的选项然后单击合并。

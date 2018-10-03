@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 704f250c7cf3056cd2950cfb53224cb8b5c2b21d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d1807caf5b5ef2687121dd465e87eb55b9fd2df
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056207"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
   “报表生成器”教程是希望您能够在报表服务器上或与报表服务器集成的 SharePoint 站点上查看和保存报表。 对于数据，所有教程都使用必须由 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]实例处理的文字查询。  
@@ -33,7 +30,7 @@ ms.locfileid: "37296377"
   
      若要使用报表管理器中，打开报表管理器，然后单击**报表生成器**。 默认情况下，报表管理器的 URL 为 http://\<*servername*> / 报告。  
   
-     若要使用 SharePoint 站点，请导航至该站点，单击“文档”选项卡，再单击“新建文档”，然后从下拉列表中单击“报表生成器报表”。 例如，http://\<服务器名 >/站点/mySite/报告。 SharePoint 管理员必须为每个文档库启用“报表生成器报表”功能。  
+     若要使用 SharePoint 站点，请导航至该站点，单击“文档”选项卡，再单击“新建文档”，然后从下拉列表中单击“报表生成器报表”。 例如， http://\<服务器名 >/站点/mySite/报告。 SharePoint 管理员必须为每个文档库启用“报表生成器报表”功能。  
   
 -   到 URL [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]与集成报表服务器或 SharePoint 站点的[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表服务器。 您必须拥有保存和查看报表、共享数据源、共享数据集、报表部件和模型的权限。 默认情况下，报表服务器的 URL 为 http://\<服务器名 > / reportserver。 默认情况下，SharePoint 站点的 URL 为 http://\<站点名称 > 或 http://\<服务器 > / 站点。  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_proxy
@@ -22,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dd1cfe2c6ba8be242d3b5a921fd468ccd4026532
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47763515"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +72,7 @@ sp_update_proxy
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  任一**@proxy_name**或**@proxy_id**必须指定。 如果同时指定这两个参数，这两个参数必须引用相同的代理，否则存储过程会失败。  
   
  任一**@credential_name**或**@credential_id**必须指定要更改代理的凭据。 如果两个参数均被指定，则它们必须引用相同的凭据，否则存储过程将失败。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 826eea9ec6160568bf4eb63d5ddf7bf27ca7502d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6312332a6c0c8cc9cf07a93f67aa71ebd61b62ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263204"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054237"
 ---
 # <a name="token--ssis-expression"></a>TOKEN（SSIS 表达式）
   基于分隔字符串中的标记的指定分隔符以及表示要返回的标记的标记数目，从字符串返回标记（子字符串）。  
@@ -43,7 +40,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数将 <character_expression> 字符串拆分为一组由 <delimiter_string> 中指定的分隔符分隔的标记，然后返回第 N 个标记，其中 N 是 \<occurrence> 参数指定的标记出现的次数。 有关此函数的用法示例，请参阅“示例”部分。  
   
  下面的备注适用于 TOKEN 函数：  

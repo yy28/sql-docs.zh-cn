@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5994e35479f73fb4bee3c062eb76858778a72d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060707"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 目标编辑器（“连接管理器”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“连接管理器”** 页，为目标选择 ODBC 连接管理器。 使用此页还可以选择数据库中的表或视图。  
@@ -38,7 +35,7 @@ ms.locfileid: "37158978"
   
 -   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  

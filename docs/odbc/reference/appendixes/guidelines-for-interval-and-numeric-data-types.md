@@ -1,28 +1,25 @@
 ---
-title: 间隔和数值数据类型准则 |Microsoft 文档
+title: 时间间隔和数值数据类型的指导原则 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30a67b5eaeb0319206ef03bf2f982a3acfb8189d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a26e7ecbae97fb5174004384efdf83b892502c82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905788"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755705"
 ---
-# <a name="guidelines-for-interval-and-numeric-data-types"></a>间隔和数值数据类型的准则
-以下各节介绍间隔和数值数据类型。  
+# <a name="guidelines-for-interval-and-numeric-data-types"></a>间隔和数字数据类型的准则
+以下各节介绍间隔和数字数据类型。  
   
 -   [间隔数据类型](../../../odbc/reference/appendixes/interval-data-types.md)  
   

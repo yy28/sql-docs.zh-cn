@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:concat function
 - concat function [XQuery]
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: da1d900d1218fa6da185fc7fda10aecf8c0ad324
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981929"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788035"
 ---
-# <a name="functions-on-string-values---concat"></a>基于字符串值-concat 函数
+# <a name="functions-on-string-values---concat"></a>基于字符串值的函数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   接受零或更多个字符串作为参数，并返回通过连接其中的每个参数值而创建的字符串。  
@@ -48,7 +42,7 @@ fn:concat ($string as xs:string?
  *$string*  
  可选择进行连接的字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数必须至少包含两个参数。 如果一个参数为空序列，则将被作为零长度字符串处理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>补充字符（代理项对）  

@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURRENT_REQUEST_ID_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CURRENT_REQUEST_ID
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2761901c3b04b0b38fc92f08238a968d8efb6786
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: aeac77c2d32ce06c95bddc8518a27e2d650b257f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744265"
 ---
 # <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ CURRENT_REQUEST_ID()
 ```  
   
 ## <a name="return-types"></a>返回类型
-**int**
+**smallint**
   
 ## <a name="remarks"></a>Remarks  
 若要查找有关当前会话的准确信息，请使用 @@SPID。 有关当前请求的确切信息，请使用 CURRENT_REQUEST_ID()。

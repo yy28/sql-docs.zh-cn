@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c0878c78af38a8d8b4d6b5d1c6f17a0188b5a50b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053887"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 集合引用（报表生成器和 SSRS）
   `ReportItems` 内置集合是来自报表项（如报表设计图面上的数据区域行或文本框）的文本框集合。 `ReportItems`集合包括页眉、 页脚或表体的当前作用域中的文本框。 此集合在运行时由报表处理器和报表呈现器确定。 用户查看报表页面时，如果报表处理器连续组合报表数据和报表项布局元素，则当前作用域将随之变化。 可以使用`ReportItems`内置集合中生成每个页面显示的第一个和最后一个项的字典样式页眉。  

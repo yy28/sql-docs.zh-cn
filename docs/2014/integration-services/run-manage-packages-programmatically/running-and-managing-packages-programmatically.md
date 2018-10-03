@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 659952d44fa2c530a313a4f6bd29cfbfddf9d236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5322a21037fdbef79c3e1d6554128fcc10bff97f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051537"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>以编程方式运行和管理包
   如果您需要在开发环境之外管理和运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，可以采用编程方式对包进行操作。 如果采用这种方法，则您有多种选择：  

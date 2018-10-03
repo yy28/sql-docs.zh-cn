@@ -1,14 +1,11 @@
 ---
-title: sp_upgrade_log_shipping (Transact SQL) |Microsoft 文档
+title: sp_upgrade_log_shipping (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_upgrade_log_shipping
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca589512c10c344aeed5ab22b25b96b73dab3a7d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e5b806f897a22c53688731067acf53f7b647acb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254249"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737605"
 ---
 # <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  升级特定到日志传送的元数据自动调用 sp_upgrade_log_shipping 存储过程。  
+  Sp_upgrade_log_shipping 存储过程是自动调用用于升级特定于日志传送的元数据。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,16 +48,16 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>结果集  
  无。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升级过程中会自动调用此存储过程，以升级用于日志传送的元数据。 您不需要显式执行此过程，除非在升级过程中元数据出现问题。  
   
  sp_upgrade_log_shipping 必须在主服务器、辅助服务器或监视服务器的 master 数据库中运行。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
-## <a name="see-also"></a>另请参阅  
- [有关日志传送 & #40;SQL server& #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

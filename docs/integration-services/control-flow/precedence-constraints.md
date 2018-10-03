@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.precedenceconstraint.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca90530dbce46d98f3fbaa9faeaa744426e4843f
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733655"
 ---
 # <a name="precedence-constraints"></a>优先约束
   优先约束在控制流中链接包中的可执行文件、容器和任务，并指定决定可执行文件是否运行的条件。 可执行文件可以是 For 循环容器、Foreach 循环容器、序列容器、任务或事件处理程序。 事件处理程序也使用优先约束将其可执行文件链接为控制流。  
@@ -112,7 +109,7 @@ ms.locfileid: "35333431"
 ## <a name="precedence-constraint-editor"></a>优先约束编辑器
 可以使用 **“优先约束编辑器”** 对话框配置优先约束。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **求值运算**  
  指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”** 和 **“表达式或约束”**。  
   

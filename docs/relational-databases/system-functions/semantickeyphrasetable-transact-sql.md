@@ -1,14 +1,11 @@
 ---
-title: semantickeyphrasetable (TRANSACT-SQL) |Microsoft 文档
+title: semantickeyphrasetable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d837abe05cf99051230e24fd0d418e1263aa4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785325"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,14 +63,14 @@ SEMANTICKEYPHRASETABLE
  **source_key**  
  请求特定行的结果的行的唯一键。  
   
- 在使用密钥隐式转换为尽可能与源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。 如果省略 source_key，则返回所有行的结果。  
+ 键隐式转换为尽可能与源表中的全文唯一键的类型。 可以将此键指定为一个常量或变量，但不能是表达式或标量子查询的结果。 如果省略 source_key，则返回所有行的结果。  
   
 ## <a name="table-returned"></a>返回的表  
  下表介绍此行集函数返回的关键短语的信息。  
   
 |Column_name|类型|Description|  
 |------------------|----------|-----------------|  
-|**column_id**|**int**|从中提取和索引当前的关键短语的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
+|**column_id**|**int**|从中对当前关键短语提取并编制索引的列的 ID。<br /><br /> 有关如何在列名称和 column_id 之间相互检索对方的详细信息，请参阅 COL_NAME 和 COLUMNPROPERTY 函数。|  
 |**document_key**|**\***<br /><br /> 此键与源表中的唯一键的类型相匹配。|从中对当前关键短语进行索引的文档或行的唯一键值。|  
 |**keyphrase**|**NVARCHAR**|在由 column_id 表示的列中找到的关键短语，与 document_key 指定的文档关联。|  
 |**score**|**REAL**|一个相对值，用来表示此关键短语与索引列中同一文档的所有其他关键短语的关系。<br /><br /> 该值是范围 [0.0, 1.0] 中的小数值，较高的得分表示较高权重，1.0 是最理想的得分。|  
@@ -89,14 +85,14 @@ SEMANTICKEYPHRASETABLE
   
 -   [sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要对创建全文和语义搜索所基于的基表具有 SELECT 权限。  
   
 ## <a name="examples"></a>示例  
   
-###  <a name="HowToTopPhrases"></a>示例 1： 查找特定文档中的最重要关键短语  
+###  <a name="HowToTopPhrases"></a> 示例 1： 查找特定文档中最重要关键短语  
  以下示例从通过 @DocumentId 变量指定的文档中检索前 10 个关键短语，该变量位于 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中。 @DocumentId 变量表示全文检索的键列的一个值。 **SEMANTICKEYPHRASETABLE** 函数使用索引查找替代表扫描高效检索这些结果。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  
@@ -111,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>示例 2： 查找包含特定关键短语顶级文档  
+###  <a name="HowToTopDocuments"></a> 示例 2： 查找包含特定关键短语的最相关文档  
  以下示例从 AdventureWorks 示例数据库的 Production.Document 表的 Document 列中检索包含关键短语“Bracket”的前 25 个文档。 此示例假定列已配置为进行全文和语义索引。  
   
 ```sql  

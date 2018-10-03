@@ -1,33 +1,30 @@
 ---
-title: 操作的非参数化命令 |Microsoft 文档
+title: 操作非参数化命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa3ed637aa9206921f6da91f0218f67faf0154a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 884ef4e72b975de0eb9dd92e80ec3ce0d513546b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822142"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>操作非参数化命令
-非参数化命令，请执行所有提供程序命令和**记录集**命令执行过程中创建。 如果该命令以同步方式，执行所有**记录集**将完全填充。 如果选择了异步填充模式的填充的状态**记录集**将取决于的填充模式和的大小**记录集**。  
+对于非参数化命令，执行所有提供程序命令和**记录集**命令执行时创建。 如果该命令同步执行的所有**记录集**将完全填充。 如果选择了异步填充模式，填充的状态**记录集**将取决于填充模式和的大小**记录集**。  
   
- 例如，*父命令*可能返回**记录集**的 Customers 表，从公司的客户和*子命令*可能返回**记录集**的 Orders 表中的所有客户的订单。  
+ 例如，*父命令*可能会返回**记录集**的 Customers 表，从公司的客户并*子命令*可能返回**记录集**的 Orders 表中的所有客户的订单。  
   
 ```  
 SHAPE {SELECT * FROM Customers}   
@@ -35,17 +32,17 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- 对于非参数化父-子关系，每个父和子**记录集**对象必须具有共同点以将其关联的列。 RELATE 子句中指定了列*父列*第一个，然后*子列*。 列可能具有不同的名称在其各自**记录集**对象，但必须引用相同的信息才能指定有意义的关系。 例如，**客户**和**订单记录集**对象可能具有 customerID 字段。 因为子的成员身份**记录集**由提供程序命令，子**记录集**可以包含孤立的行。 这些孤立的行进行访问，而无需其他重新调整。  
+ 对于非参数化父-子关系，每个父级和子级**记录集**对象必须具有共同点要将其关联的列。 RELATE 子句中对列的命名*父列*第一个，然后*子列*。 列可能具有不同的名称在其各自**记录集**对象而必须引用相同的信息来指定有意义的关系。 例如，**客户**并**订单记录集**对象均可以是客户 id 字段。 由于子级的成员身份**记录集**由提供程序命令，子**记录集**可以包含孤立的行。 这些孤立的行将无法访问而无需其他重新调整。  
   
- 数据调整将章节列追加到父**记录集**。 中的章节列的值是对子组织单位中的行的引用**记录集**，其中满足 RELATE 子句。 相同的值，即处于*父列*给定的父行中的*子列*的章节子项的所有行。 当在相同 RELATE 子句中使用多个收件人子句时，它们将隐式组合使用 AND 运算符。 如果在 RELATE 子句中的父列不会构成父级的键**记录集**，单个子行可以有多个父行。  
+ 数据整理将章节列追加到父级**记录集**。 中的章节列的值是对子组织单位中的行的引用**记录集**，其中满足 RELATE 子句。 也就是说，相同的值是在*父列*给定的父行中的*子列*的一章子级的所有行。 当同一 RELATE 子句中使用多个 TO 子句时，它们是隐式组合使用 AND 运算符。 如果在 RELATE 子句中的父列不构成对父键**记录集**，单个子行可以有多个父行。  
   
- 当访问中的章节列的引用时，会自动检索 ADO**记录集**表示引用。 请注意，在非参数化命令中，虽然整个子**记录集**已被检索，章节只显示的行的子集。  
+ 在访问中的章节列的引用时，会自动检索 ADO**记录集**表示引用。 请注意，在非参数化命令中，虽然整个子**记录集**已检索，章节只显示的行的子集。  
   
- 如果追加的列未包含任何*章别名*，它将自动生成名称。 A[字段](../../../ado/reference/ado-api/field-object.md)对象列将追加到**记录集**对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合，并且其数据类型将**adChapter**.  
+ 如果没有追加的列*章别名*，它将自动生成名称。 一个[字段](../../../ado/reference/ado-api/field-object.md)列将附加到对象**记录集**对象的[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合，并且其数据类型将是**adChapter**.  
   
- 有关导航分层结构信息**记录集**，请参阅[访问分层记录集中的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
+ 了解如何浏览的分层**记录集**，请参阅[访问分层记录集的行](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ee6ca6856de4bb5c4b920f19645db00dd9e64df
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: e2d6833165def5c73ebe15ec77cf23cffb1c1a3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717375"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
 
@@ -40,7 +37,7 @@ ms.locfileid: "35333671"
   
 ###### <a name="program-files-default-permissions"></a>程序文件默认权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊权限|  
 |SYSTEM|特殊权限|  
@@ -53,7 +50,7 @@ ms.locfileid: "35333671"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、读取和执行、列出文件夹内容、读取、写入|  
 |管理员|修改、读取和执行、列出文件夹内容、读取、写入|  
@@ -61,7 +58,7 @@ ms.locfileid: "35333671"
   
 ###### <a name="webconfig-permissions"></a>Web.config 权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、读取和执行、读取、写入|  
 |管理员|完全控制、修改、读取和执行、读取、写入|  

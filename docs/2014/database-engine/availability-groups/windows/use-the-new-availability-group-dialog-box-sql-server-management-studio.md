@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3501e3190495ffe41ce0a77e05c8048080e5536b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66f36164c6199d51d8a01916d84f1085d479235a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051677"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>使用“新建可用性组”对话框 (SQL Server Management Studio)
   本主题包含有关如何使用 **的** “新建可用性组” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 对话框在为 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 启用的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]实例上创建 AlwaysOn 可用性组的信息。 “可用性组”  定义一组用户数据库，这些用户数据库将以支持故障转移的单个单元和一组故障转移伙伴（称作“可用性副本” ）的形式进行故障转移。  

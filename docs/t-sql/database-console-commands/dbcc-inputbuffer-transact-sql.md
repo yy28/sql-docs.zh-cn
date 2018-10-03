@@ -5,9 +5,7 @@ ms.date: 04/04/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC INPUTBUFFER
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - DBCC INPUTBUFFER statement
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
-caps.latest.revision: 51
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: da4393aecd4371afc5a9a3cba0725b7bfa55b34c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd0df0cb932778164dfe4c97027c19e591439fd2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262149"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805425"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,10 +67,10 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>结果集  
 DBCC INPUTBUFFER 返回包含如下列的行集。
   
-|列名|数据类型|Description|  
+|列名|数据类型|描述|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|事件类型。 这可能是 RPC 事件或 Language 事件。 检测不到上一个事件时，输出为 No Event。|  
-|**Parameters**|**int**|0 = 文本<br /><br /> 1- n = Parameters|  
+|**Parameters**|**smallint**|0 = 文本<br /><br /> 1- n = Parameters|  
 |**EventInfo**|**nvarchar(4000)**|对于 RPC 的 EventType，EventInfo 仅包含过程名。 对于 Language 的 EventType，仅显示事件的前 4000 个字符。|  
   
 例如，当缓冲区中的最后一个事件是 DBCC INPUTBUFFER(11) 时，DBCC INPUTBUFFER 将返回以下结果集。
@@ -91,7 +88,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，使用 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 返回有关提交到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的语句的信息。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，要求具有下列权限之一：
 -   用户必须是 sysadmin 固定服务器角色的成员。  
 -   用户必须具有 VIEW SERVER STATE 权限。  

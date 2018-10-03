@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobschedule
@@ -21,12 +18,12 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c60decc6d074208d2149a3597818963d57a50e7
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6e52684ee8c73c976e42c29ca54079ac716527a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834485"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +149,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  作业计划现在可以独立于作业进行管理。 若要添加到作业的计划，请使用**sp_add_schedule**以创建的计划和**sp_attach_schedule**将计划附加到作业。  
   
 ## <a name="permissions"></a>Permissions  

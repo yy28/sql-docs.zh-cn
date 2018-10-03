@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_TSQL
@@ -21,12 +18,12 @@ ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1f51b575ff8ee40db402fe48cacf8396b89ac45
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724425"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +65,7 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|两次还原操作之间允许的间隔时间（分钟），一旦超过此值，就会生成警报。 **restore_threshold**不能为 NULL。|  
 |**is_restore_alert_enabled**|**bit**|指定是否引发警报时**restore_threshold**超出。 一个值 (**1**)，默认值，表示要引发警报。<br /><br /> NULL = 信息不可用或者不相关。<br /><br /> 若要设置还原阈值，请使用[sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_help_log_shipping_monitor**必须从运行**主**在监视服务器上的数据库。  
   
 ## <a name="permissions"></a>Permissions  

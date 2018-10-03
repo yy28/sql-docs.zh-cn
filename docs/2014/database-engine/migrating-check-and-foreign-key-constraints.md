@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049097"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>迁移检查约束和外键约束
   检查和外键约束中不支持[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这些构造通常用来强制实施架构中的逻辑数据完整性，可能必须维护相关的功能的应用程序的正确性。  

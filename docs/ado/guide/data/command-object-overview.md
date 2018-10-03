@@ -1,49 +1,46 @@
 ---
-title: 命令对象概述 |Microsoft 文档
+title: 命令对象概述 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - command object [ADO]
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d2d4eafc42e67f67b4f95c8493521f4204bc746
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759848"
 ---
 # <a name="command-object-overview"></a>命令对象概述
-与**命令**对象，你可以执行以下操作：  
+与**命令**对象，您可以执行以下操作：  
   
--   通过使用定义的命令 （例如，SQL 语句或存储的过程） 的可执行文本**CommandText**属性。  
+-   通过使用定义的命令 （例如，SQL 语句或存储的过程） 可执行文件的文本**CommandText**属性。  
   
--   通过定义参数化的查询或存储的过程自变量**参数**对象和**参数**集合。  
+-   使用定义参数化的查询或存储的过程参数**参数**对象和**参数**集合。  
   
--   执行命令并返回**记录集**对象，如果适当，通过使用**执行**方法。  
+-   执行命令并返回**记录集**对象，如果需要，通过使用**Execute**方法。  
   
--   通过使用指定的命令类型**CommandType**属性，然后执行以优化性能。  
+-   使用指定的命令的类型**CommandType**属性，然后执行以优化性能。  
   
--   使用指定的命令文本相关的特定信息**方言**属性**命令**对象。  
+-   使用指定的命令文本有关的特定信息**方言**的属性**命令**对象。  
   
--   控制提供程序是否使用保存在执行之前命令的已准备的 （或已编译的） 版本**已准备**属性。  
+-   提供程序是否使用保存之前执行该命令的准备就绪 （或已编译） 版本控制**已准备**属性。  
   
--   设置提供程序将等待要通过使用执行的命令的秒数**CommandTimeout**属性。  
+-   设置提供程序将等待命令执行使用的秒数**CommandTimeout**属性。  
   
--   将关联的打开连接使用**命令**对象通过设置其**ActiveConnection**属性。  
+-   将与打开的连接相关联**命令**对象通过设置其**ActiveConnection**属性。  
   
 -   设置**名称**属性来标识**命令**作为关联的方法的对象**连接**对象。  
   
--   传递**命令**对象传递给**源**属性**记录集**为了获取数据。  
+-   传递**命令**对象传递给**源**属性**记录集**为获得数据。  
   
--   传递**流**到提供程序支持它的包含命令 （例如，XML 命令） 的对象。
+-   传递**Stream**对象，它包含到提供程序支持它的命令 （例如，XML 命令）。

@@ -1,12 +1,10 @@
 ---
-title: sys.dm_xe_packages (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_xe_packages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_packages_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9901245681412017736e26c79b000e7f5c845365
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cab25279fe7842d21b3657d34edef8234ae058cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738855"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +35,18 @@ ms.locfileid: "34467173"
  
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|包的名称。 包自身便可显示说明。 不可为 null。|  
+|NAME|**nvarchar(60)**|包的名称。 包自身便可显示说明。 不可为 null。|  
 |guid|**uniqueidentifier**|标识包的 GUID。 不可为 null。|  
-|description|**nvarchar(256)**|包说明。 descriptionis 由程序包作者设置，并且不可以为 null。|  
+|description|**nvarchar(256)**|包说明。 descriptionis 由包的作者设置，不可为 null。|  
 |capabilities|**int**|说明此包的功能的位图。 可以为 Null。|  
 |capabilities_desc|**nvarchar(256)**|此包可能具有的所有功能的列表。 可以为 Null。|  
 |module_guid|**uniqueidentifier**|公开此包的模块的 GUID。 不可为 null。|  
 |module_address|**varbinary(8)**|用于加载包含此包的模块的基址。 单个模块可以公开多个包。 不可为 null。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  向扩展事件引擎注册的包可以公开事件、激发事件时可采取的操作以及事件数据的同步和异步处理目标。  
   
  这些包可以动态加载到进程地址空间中。 包在加载时将向扩展事件引擎注册其公开的所有对象。  

@@ -4,7 +4,6 @@ ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -22,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95427bd5ccb158ede439cb32aa7ebfcb24c61bf9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 44d376414ce4043bca6f053c6523365af5d96d4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264434"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714098"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>将报表发布到报表服务器
   在设计并测试完一个或一组报表后，可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能将报表发布到报表服务器上。 可以发布单独报表或包含多个报表和数据源的报表服务器项目。 发布报表服务器项目是发布多个报表的最简单方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用术语“部署”替代术语“发布”。 这两个术语可以互换。  

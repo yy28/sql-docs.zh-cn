@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808285"
 ---
 # <a name="odbc-destination"></a>ODBC 目标
   ODBC 目标可以将数据大容量加载到支持 ODBC 的数据库表中。 ODBC 目标使用 ODBC DB 连接管理器来连接到数据源。  
@@ -99,7 +96,7 @@ ms.locfileid: "35409979"
   
 -   在 **“ODBC 目标编辑器”** 中，单击 **“连接管理器”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="connection-manager"></a>“ODBC 源编辑器”  
  从列表中选择现有 ODBC 连接管理器，或单击“新建”创建新的连接。 该连接可以指向支持 ODBC 的任何数据库。  
@@ -123,7 +120,7 @@ ms.locfileid: "35409979"
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 目标编辑器（“映射”页）
   可以使用 **“ODBC 目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到目标列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="available-input-columns"></a>可用输入列  
  可用输入列的列表。 将输入列拖放到某一可用目标列以映射这些列。  
@@ -150,7 +147,7 @@ ms.locfileid: "35409979"
   
 -   在 **“ODBC 目标编辑器”** 中，单击 **“错误输出”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
   
 #### <a name="inputoutput"></a>输入/输出  
  查看数据源的名称。  

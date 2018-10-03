@@ -1,34 +1,31 @@
 ---
-title: '附录 c: 使用 ADO 编程 |Microsoft 文档'
+title: 附录 c： 使用 ADO 进行编程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc648bb210f7f8d526886043b2b096de95c456ab
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789205"
 ---
-# <a name="appendix-c-programming-with-ado-in-development-environments"></a>使用在开发环境 ADO 编程附录 c:
-ADO 是可以用于许多编程语言，包括 Microsoft Visual Basic、 VBScript、 JScript 和 Visual c + + COM 自动化接口组件。 ADO 的版本与每个这些工具和其他应用程序，如 Microsoft Office 和 Microsoft SQL Server 安装。
+# <a name="appendix-c-programming-with-ado-in-development-environments"></a>附录 c： 使用在开发环境中的 ADO 编程
+ADO 是 COM 自动化接口组件可以与多种编程语言，包括 Microsoft Visual Basic、 VBScript、 JScript 和 Visual c + + 一起使用。 ADO 的版本与每个这些工具和其他应用程序，如 Microsoft Office 和 Microsoft SQL Server 安装。
 
- ADO 库是 msado15.dll 和程序 ID (ProgID) 前缀为"ADODB。" 例如，若要显式引用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，使用`ADODB.Recordset`。
+ 适用于 ADO 的库是 msado15.dll，程序 ID (ProgID) 前缀是"ADODB。" 例如，若要显式引用 ADO[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，使用`ADODB.Recordset`。
 
- 有关各种开发环境中使用 ADO 编程的详细信息，请参阅以下主题：
+ 有关在不同的开发环境中使用 ADO 编程的详细信息，请参阅以下主题：
 
 -   [配合使用 ADO 与 Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)
 

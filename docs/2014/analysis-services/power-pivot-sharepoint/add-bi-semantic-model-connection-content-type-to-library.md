@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15537b159f34df3e69c3b415a8a00845ff2fe79f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c7be80b40c80edf3811f996e8037cbdbc9fa4d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052967"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>将 BI 语义模型连接内容类型添加到库 (PowerPivot for SharePoint)
   BI 语义模型连接是在 SharePoint 中创建的，它提供对网络服务器上的 PowerPivot 工作簿或 Analysis Services 表格模型数据库中的商业智能语义模型数据的重定向。 当您在 SharePoint 中创建 BI 语义模型连接之前，必须对文档库进行扩展以便允许创建 .bism 文件。 对于每个库，仅需执行此步骤一次，但对于您要从其创建 .bism 文件的任何库，您都将需要重复执行此步骤。 作为最佳做法，建议您为存储 .bism 文件创建一个集中的库，以便可以在一个地方管理权限。  

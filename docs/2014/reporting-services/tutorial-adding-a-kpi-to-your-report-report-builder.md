@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f06fa546153ef62edda97c173a8c4fb9cc4d9362
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056518"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
   关键绩效指标 (KPI) 是对业务具有重大意义的可测量值。 本教程教您如何在报表中包含一个 KPI。 在本教程中，按产品子类别进行的销售汇总为 KPI。 可以使用颜色、仪表和指示器来显示 KPI 的当前状态。  

@@ -1,58 +1,55 @@
 ---
-title: 调整用于 OLE DB （ADO 服务提供程序） 的服务的 Microsoft 数据 |Microsoft 文档
+title: Microsoft 数据整理服务用于 OLE DB （ADO 服务提供程序） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], data shaping service for OLE DB
 - data shaping service for OLE DB [ADO]
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1e3dac6aefb8db2dbd1c651f0a2cf27b0f29559c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734989"
 ---
-# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据定形 OLE DB 概述的服务
+# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 数据整理服务的 OLE DB 概述
 > [!IMPORTANT]
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，应用程序应使用 XML。
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，应用程序应使用 XML。
 
- Microsoft 数据调整服务 OLE DB 服务提供程序支持的分层构造 （形状）[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从数据提供程序的对象。
+ Microsoft Data Shaping 服务的 OLE DB 服务访问接口支持分层的构造 （形状）[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从数据访问接口的对象。
 
 ## <a name="provider-keyword"></a>提供程序关键字
- 若要对于 OLE DB 调用数据调整服务，请在连接字符串中指定以下关键字和值。
+ 若要调用的 OLE DB Data Shaping 服务，请连接字符串中指定以下关键字和值。
 
 ```
 "Provider=MSDataShape"
 ```
 
 ## <a name="dynamic-properties"></a>动态属性
- 当调用此服务提供程序时，将下面的动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。
+ 当调用该服务提供程序时，将以下动态属性添加到[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。
 
 |动态属性名称|Description|
 |---------------------------|-----------------|
-|**唯一的形状名称**|指示是否**记录集**具有重复值的对象及其**重新调整形状名称**允许属性。 如果此动态属性为**True**和新**记录集**创建具有相同的用户指定形状名称与现有**记录集**，然后新**记录集**修改对象的形状名称以确保其唯一性。 如果此属性为**False**和新**记录集**创建具有相同的用户指定形状名称与现有**记录集**，这两个**记录集**对象将具有相同的调整形状名称。 因此，既不**记录集**，只要两个记录集存在可以改变。<br /><br /> 属性的默认值是**False**。|
-|**数据提供程序**|指示将提供要定形的行的提供程序的名称。 如果提供程序不会用于提供行，此值可以为 NONE。|
+|**唯一调整形状名称**|指示是否**记录集**具有重复值的对象及其**重新调整形状名称**允许使用属性。 如果此动态属性是 **，则返回 True**和一个新**记录集**创建具有相同的用户指定调整形状名称与现有**记录集**，然后新**记录集**修改对象的形状名称使其成为唯一。 如果此属性为**False**和一个新**记录集**创建具有相同的用户指定调整形状名称与现有**记录集**，这两个**记录集**对象将具有相同的调整形状名称。 因此，既不**记录集**考虑，只要这两个记录集存在。<br /><br /> 该属性的默认值是**False**。|
+|**数据提供程序**|指示将提供的形状的行的提供程序的名称。 如果提供程序不会用于提供行，此值可以为 NONE。|
 
- 此外可以通过指定其名称作为连接字符串中的关键字设置可写的动态属性。 例如，在 Microsoft Visual Basic 中，设置**数据提供程序**动态属性通过指定"MSDASQL":
+ 此外可以通过指定其名称为连接字符串中的关键字设置可写的动态属性。 例如，在 Microsoft Visual Basic 中，设置**数据提供程序**动态属性设置为"MSDASQL"通过指定：
 
 ```
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- 你还可以设置或通过指定其名称作为到索引中检索的动态属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)属性。 例如，下面的代码示例获取在指定的位置，并输出的当前值**数据提供程序**动态属性，然后设置新的值，如果 cn。DataProvider 已设置为"MSDataShape"(直接或间接通过连接字符串) 和未打开连接：
+ 此外可以设置或通过指定其名称为索引来检索动态属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)属性。 例如，下面的代码示例获取并列显的当前值**数据提供程序**动态属性，然后设置新值，如果 cn。数据提供程序已设置为"MSDataShape"(直接或间接通过连接字符串) 和未打开连接：
 
 ```
 Debug.Print cn.Properties("Data Provider")
@@ -60,9 +57,9 @@ cn.Properties("Data Provider") = "MSDASQL"
 ```
 
 > [!NOTE]
->  动态属性，**数据提供程序**，可以是一组仅在未打开**连接**对象。 打开连接时，一旦**数据提供程序**属性变为只读的。
+>  动态属性**数据提供程序**，可以是仅设置上未打开**连接**对象。 打开连接时，一旦**数据提供程序**属性将变为只读。
 
- 有关数据调整的详细信息，请参阅[数据成型](../../../ado/guide/data/data-shaping-overview.md)。
+ 有关数据调整的详细信息，请参阅[数据整理](../../../ado/guide/data/data-shaping-overview.md)。
 
 ## <a name="see-also"></a>请参阅
  [附录 A：提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_physical_stats
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: 95
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375700"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717571"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +115,7 @@ sys.dm_db_index_physical_stats (
 |column_store_delete_buffer_state|TINYINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
 |column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 无效 – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  
   
 ## <a name="scanning-modes"></a>扫描模式  

@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE VIEW
@@ -36,17 +34,16 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-caps.latest.revision: 85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6d9ffdfee5a7347570fc6797d43dabc0beb9d4a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808455"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +148,7 @@ OR ALTER
  对 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) 表中包含 CREATE VIEW 语句文本的项进行加密。 使用 WITH ENCRYPTION 可防止在 SQL Server 复制过程中发布视图。  
   
  SCHEMABINDING  
- 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)**。 所有被引用对象都必须在同一个数据库内。  
+ 将视图绑定到基础表的架构。 如果指定了 SCHEMABINDING，则不能按照将影响视图定义的方式修改基表或表。 必须首先修改或删除视图定义本身，才能删除将要修改的表的依赖关系。 使用 SCHEMABINDING 时，select_statement 必须包含所引用的表、视图或用户定义函数的两部分名称 (schema.object)。 所有被引用对象都必须在同一个数据库内。  
   
  不能删除参与了使用 SCHEMABINDING 子句创建的视图的视图或表，除非该视图已被删除或更改而不再具有架构绑定。 否则，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将引发错误。 另外，如果对参与具有架构绑定的视图的表执行 ALTER TABLE 语句，而这些语句又会影响视图定义，则这些语句将会失败。  
   
