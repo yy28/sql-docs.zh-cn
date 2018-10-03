@@ -1,54 +1,51 @@
 ---
-title: SQLSTATEs |Microsoft 文档
+title: SQLSTATEs |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9408522a47b442e3001e09cdca2d636063f73fb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa0875017c4b7a099af8da1c6f8eca105006aca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682945"
 ---
 # <a name="sqlstates"></a>SQLSTATEs
-SQLSTATEs 提供有关原因的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于这些在 ISO/IEF CLI 规范中，找到特定于 ODBC 开头 IM 这些 SQLSTATEs 虽然。  
+SQLSTATEs 提供原因有关的警告或错误的详细的信息。 本手册中的 SQLSTATEs 基于 ISO/IEF CLI 规范中的那些虽然使用 IM 启动这些 SQLSTATEs 是特定于 ODBC。  
   
- 不同于的返回代码，本手册中的 SQLSTATEs 是指南，并驱动程序不需要返回它们。 因此，虽然驱动程序应返回任何错误或警告能够检测正确的 SQLSTATE，应用程序应不依靠始终发生。 这种情况的原因有两个方面：  
+ 与不同的返回代码，本手册中的 SQLSTATEs 是指导原则，并驱动程序不需要将其返回。 因此，虽然驱动程序应返回正确的任何错误或警告所支持检测的 SQLSTATE，应用程序不应统计上始终发生。 这种情况的原因是两方面：  
   
--   **不完整**; 尽管本手册列出大量的错误和警告和可能的原因，这些错误和警告，但它并不完整，并且可能不会是驱动程序实现只需改变太多。 任何给定的驱动程序可能不会返回所有 SQLSTATEs 本手册中列出，并可能会返回 SQLSTATEs 本手册中未列出。  
+-   **不完整**; 虽然本手册列出了大量的错误和警告和可能的原因，这些错误和警告，但它并不完整并且可能不会是驱动程序实现，只需改变太多。 任何给定的驱动程序可能不会返回所有 SQLSTATEs 本手册中列出，并且可能会返回 SQLSTATEs 本手册中未列出。  
   
--   **复杂性**的某些数据库引擎-尤其是关系数据库引擎-返回按原义数千个错误和警告。 此类引擎的驱动程序不太可能映射所有这些错误和警告记录到 SQLSTATEs 工作量由于涉及到，映射的 inexactness、 生成的代码，大型大小和生成的代码，通常返回编程的低值在运行时应永远不会遇到的错误。 因此，驱动程序应映射尽可能多的错误和警告如看起来合理，并且请务必将这些错误和警告的哪些应用程序逻辑映射可能遵循，如 SQLSTATE 01004 （数据截断）。  
+-   **复杂性**的某些数据库引擎 — 尤其是关系数据库引擎-返回数千个错误和警告。 此类引擎的驱动程序不太可能所有这些错误和警告记录到 SQLSTATEs 由于工作涉及的映射的 inexactness、 生成的代码，大型大小和生成的代码，通常返回编程的低值在运行时应永远不会遇到的错误。 因此，驱动程序应尽可能多的错误和警告似乎是合理并确保将这些错误和警告的应用程序逻辑上映射可能为基础，如 SQLSTATE 01004 （数据被截断）。  
   
- 因为 SQLSTATEs 不可靠地返回，因此大多数应用程序只需向其关联的诊断消息，通常适用于特定的错误或发生的警告，以及用户和本机错误代码显示它们。 因为应用程序不能使基于大多数 SQLSTATEs 的编程逻辑仍没有这样做中的功能很少任何丢失。 例如，假设**SQLExecDirect**返回 SQLSTATE 42000 （语法错误或访问冲突）。 如果导致此错误的 SQL 语句是硬编码或生成的应用程序，这是编程错误，该代码需要修复。 如果通过用户输入的 SQL 语句，这是用户错误，并在应用程序完成所有可通过通知用户的问题。  
+ 因为 SQLSTATEs 不可靠地返回，因此大多数应用程序只需为其关联的诊断消息，通常适用于特定错误或发生的警告，以及用户和本机错误代码显示它们。 因为应用程序不能基于编程逻辑大多数 SQLSTATEs 仍没有丢失很少任何在执行此操作，此功能。 例如，假设**SQLExecDirect**返回 SQLSTATE 42000 （语法错误或访问冲突）。 如果导致此错误的 SQL 语句是硬编码或生成的应用程序，这是一种编程错误，代码需要修复。 如果用户输入的 SQL 语句，则这是用户错误，应用程序已完成的所有可通过通知问题的用户。  
   
- 如果应用程序执行操作的编程逻辑基于 SQLSTATEs，它们应为 SQLSTATE 无法返回或不同的 SQLSTATE 要返回准备。 完全其可靠地返回 SQLSTATEs 可以基于仅与多个驱动程序的体验。 但是，一般原则是 SQLSTATEs 驱动程序或驱动程序管理器，而不是数据源中发生的错误会更容易可靠地返回。 例如，大多数驱动程序可能返回 SQLSTATE HYC00 （可选未实现的功能），而较少的驱动程序可能返回 SQLSTATE 42021 （列已存在）。  
+ 当应用程序进行基本的编程逻辑上 SQLSTATEs 时，它们应不要返回的 SQLSTATE 或不同的 SQLSTATE 要返回准备。 完全的可靠地返回 SQLSTATEs 可以仅基于多个驱动程序的经验。 但是，一般准则是驱动程序或驱动程序管理器，而不是数据源中发生的错误的 SQLSTATEs 很有可能会可靠地返回。 例如，大多数驱动程序可能返回 SQLSTATE HYC00 （可选功能未实现），而较少的驱动程序可能返回 SQLSTATE 42021 （列已存在）。  
   
- 以下 SQLSTATEs 指示运行时错误或警告，并且是很好的候选对象，其为基础的编程逻辑。 但是，是没有保证的所有驱动程序将它们返回。  
+ 以下 SQLSTATEs 指示运行时错误或警告，是基于编程逻辑的最佳候选项。 但是，是没有保证的所有驱动程序将其返回。  
   
--   01004 （截断的数据）  
+-   01004 （数据被截断）  
   
--   01s02 的警告 （选项值已更改）  
+-   01S02 （选项值已更改）  
   
 -   HY008 （已取消的操作）  
   
 -   HYC00 （未实现的可选功能）  
   
--   HYT00 （超时）  
+-   HYT00 （超时已过期）  
   
- SQLSTATE HYC00 （未实现的可选功能） 很特别重要，因为它是在其中应用程序可以确定驱动程序是否支持特定语句或连接属性的唯一方法。  
+ SQLSTATE HYC00 （未实现的可选功能） 是一点非常重要，因为它是在其中应用程序可以确定驱动程序是否支持特定的语句或连接属性的唯一方法。  
   
- SQLSTATEs 和哪些函数都返回它们的完整列表，请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 每个函数可能会在其下返回特定 SQLSTATE 的条件的详细说明，请参阅该函数。
+ SQLSTATEs 和哪些函数返回它们的完整列表，请参阅[附录 a: ODBC 错误代码](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。 在其下的每个函数可能会返回特定 SQLSTATE 的条件的详细说明，请参阅该函数。

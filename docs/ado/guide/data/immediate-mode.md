@@ -1,41 +1,38 @@
 ---
-title: 即时模式 |Microsoft 文档
+title: 即时模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data updates [ADO], immediate mode
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86f5e21088061ef47b8f191b0527f8150f10c9a5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657665"
 ---
 # <a name="immediate-mode"></a>即时模式
-即时模式，则当**LockType**属性设置为**adLockOptimistic**或**adLockPessimistic**。 在即时模式下，对记录的更改会传播到数据源通过调用声明行上的操作完成时，就会立即**更新**方法。  
+即时模式，则当**LockType**属性设置为**adLockOptimistic**或**adLockPessimistic**。 在直接模式下，对记录的更改传播到数据源通过调用声明的行的操作完成时，就立即**更新**方法。  
   
 ## <a name="calling-update"></a>调用更新  
- 如果你将从该记录移正在添加或编辑，然后再调**更新**方法时，将自动调用 ADO**更新**以保存所做的更改。 必须调用**正在执行**之前导航，如果你想要取消对当前记录所做的任何更改或丢弃新添加的记录的方法。  
+ 如果将从该记录移正在添加或编辑，然后再调**更新**方法，将自动调用 ADO**更新**以保存所做的更改。 必须调用**CancelUpdate**之前如果想要取消对当前记录所做的任何更改或放弃新添加的记录的导航方法。  
   
- 当前记录后，仍当前调用**更新**方法。  
+ 当前记录保持最新调用后**更新**方法。  
   
-## <a name="cancelupdate"></a>正在执行  
- 使用**正在执行**方法可取消对当前行进行任何更改，或放弃新添加的行。 您无法取消对当前行或新行的更改后调用**更新**方法，除非所做的更改是你可以回滚，事务的任一一部分**不**方法或部分批量更新。 对于批处理更新时，你可以取消**更新**与**正在执行**或**执行**方法。  
+## <a name="cancelupdate"></a>CancelUpdate  
+ 使用**CancelUpdate**方法取消对当前行所做的任何更改或丢弃新添加的行。 调用后，无法取消对当前行或新行的更改**更新**方法，除非所做的更改，可以使用回滚的事务的一部分，否则**RollbackTrans**方法或部分在批处理更新。 在批处理更新的情况下，你可以取消**更新**与**CancelUpdate**或**CancelBatch**方法。  
   
- 如果在调用时，要添加新行**正在执行**方法，当前行变成之前的当前行**AddNew**调用。  
+ 如果在调用时，你要添加新行**CancelUpdate**方法，将成为当前行的行之前的当前**AddNew**调用。  
   
- 如果你没有更改当前行或添加新行，则调用**正在执行**方法将生成错误。
+ 如果未更改的当前行或添加新行，则调用**CancelUpdate**方法将生成错误。

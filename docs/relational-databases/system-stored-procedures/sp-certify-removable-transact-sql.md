@@ -1,14 +1,11 @@
 ---
-title: sp_certify_removable (Transact SQL) |Microsoft 文档
+title: sp_certify_removable (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238727"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691405"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +47,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
  [ **@dbname=**] **'***dbname***'**  
  指定要验证的数据库。 *dbname*是**sysname**。  
   
- [  **@autofix=**] **auto**  
+ [  **@autofix=**] **'auto'**  
  对系统管理员授予数据库及所有数据库对象的所有权，并除去任何用户创建的数据库用户及非默认的权限。 *自动*是**nvarchar(4)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>注释  
- 如果正确配置数据库， **sp_certify_removable**执行以下：  
+## <a name="remarks"></a>备注  
+ 如果正确配置数据库，则**sp_certify_removable**执行以下：  
   
 -   将数据库设置为脱机，以便复制文件。  
   
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   将数据文件组标记为只读，以便将这些文件复制到只读介质中。  
   
- 系统管理员必须是数据库和所有数据库对象的所有者。 系统管理员是正在运行的所有服务器存在的已知的用户[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而且可能会出现存在数据库更高版本分发和安装时。  
+ 系统管理员必须是数据库和所有数据库对象的所有者。 系统管理员是存在于正在运行的所有服务器的已知的用户[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，以及可以预期存在更高版本分发和安装数据库时。  
   
- 如果你运行**sp_certify_removable**而无需**自动**值并返回有关以下任何条件的信息：  
+ 如果在运行**sp_certify_removable**而无需**自动**值并返回有关以下条件的任何信息：  
   
 -   系统管理员不是数据库所有者。  
   
@@ -86,8 +82,8 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  注意，该存储过程只检查用户和用户权限。 可以向数据库添加组并且对这些组授予权限。 有关详细信息，请参阅 [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)的信息。  
   
-## <a name="permissions"></a>权限  
- 执行权限仅限于属于**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 执行权限仅限于的成员**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
  下面的示例验证 `inventory` 数据库已准备好删除。  
@@ -96,11 +92,11 @@ sp_certify_removable [ @dbname= ] 'dbname'
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [sp_create_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

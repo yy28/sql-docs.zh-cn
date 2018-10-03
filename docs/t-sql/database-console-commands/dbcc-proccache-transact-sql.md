@@ -5,9 +5,7 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC PROCCACHE
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-caps.latest.revision: 31
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 33589511fcb6461143a25558121d3ad66c65ea52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d4580bb57680392c1e3901c2fd64b399c125736
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741105"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 ## <a name="result-sets"></a>结果集  
 下表说明了结果集的各个列。
   
-|列名|Description|  
+|列名|描述|  
 |-----------------|-----------------|  
 |**num proc buffs**|过程缓存中所有项使用的总页数。|  
 |**num proc buffs used**|当前正在使用的所有项使用的总页数。|  
@@ -71,7 +68,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
 |**proc cache used**|当前正在使用的总项数。|  
 |**proc cache active**|仅为保持向后兼容。 当前正在使用的总项数。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要求具有 **sysadmin** 固定服务器角色或 **db_owner** 固定数据库角色的成员身份。
   
 ## <a name="see-also"></a>另请参阅  

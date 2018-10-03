@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addrolemember_TSQL
@@ -22,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a8ef2d06470253fb88279eb00cc017e782e484e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 610c4c6a5692496ff8bcf6bd2650557264f70862
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076410"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659645"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +61,7 @@ sp_addrolemember 'role', 'security_account'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用 sp_addrolemember 添加到角色中的成员会继承该角色的权限。 如果新成员是没有对应数据库用户的 Windows 级主体，则会创建数据库用户，但数据库用户可能不会完全映射到登录名。 始终应检查登录名是否存在以及是否能访问数据库。  
   
  角色不能将自身包含为成员。 即使只有一个或多个中间成员身份间接体现这种成员关系，这种“循环”定义也无效。  

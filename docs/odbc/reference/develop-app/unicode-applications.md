@@ -1,13 +1,11 @@
 ---
-title: Unicode 应用程序 |Microsoft 文档
+title: Unicode 应用程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], compiling as Unicode application
@@ -15,32 +13,31 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ff0858bbfe88ecc9f49306af2426d88a1db072f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fc9cb98837d206d5279d1f14d4a57ce56782759
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664195"
 ---
 # <a name="unicode-applications"></a>Unicode 应用程序
-你可以重新编译应用程序作为 Unicode 应用程序在两种方式之一：  
+您可以重新编译为 Unicode 应用程序中有两种应用程序：  
   
--   包括 Unicode **#define**包含在应用程序中的 Sqlucode.h 标头文件。  
+-   包括 Unicode **#define**包含在应用程序中 Sqlucode.h 头文件。  
   
--   使用编译器的 Unicode 选项将应用程序进行编译。 （此选项将不同的编译器不同。）  
+-   编译该应用程序使用编译器的 Unicode 选项。 （此选项将为不同的编译器不同。）  
   
- 若要将转换为 Unicode 应用程序的 ANSI 应用程序，请编写应用程序存储并将 Unicode 数据传递。 此外，必须将对支持 SQLPOINTER 自变量的函数的调用转换为使用的字节数。  
+ 若要将转换到 Unicode 应用程序的 ANSI 应用程序，请编写应用程序存储和传递 Unicode 数据。 此外，必须将对支持 SQLPOINTER 参数的函数的调用转换为使用的字节数。  
   
- 如果应用程序调用 ODBC API 函数 （不带后缀），作为 Unicode 应用程序，编译应用程序后，驱动程序管理器识别形式 Unicode 应用程序的应用程序，并将转换到 Unicode 函数 （与函数调用*W*后缀) 如果基础的驱动程序支持 Unicode。 当 ANSI 应用程序进行调用不带后缀的函数时，驱动程序管理器将其转换为 ANSI 如果基础的驱动程序支持 ANSI。 如果应用程序和驱动程序支持相同的字符编码，驱动程序管理器将传递到该驱动程序 （带有 ANSI 应用程序特定异常） 通过调用。  
+ 应用程序编译为 Unicode 应用程序，如果应用程序调用 ODBC API 函数 （不带后缀） 后，驱动程序管理器识别应用程序作为 Unicode 应用程序，并将转换函数调用到 Unicode 函数 （与*W*后缀) 如果基础驱动程序支持 Unicode。 ANSI 应用程序时会调用不带后缀的函数，驱动程序管理器将其转换为 ANSI 如果基础驱动程序支持 ANSI。 如果应用程序和驱动程序支持相同的字符编码，驱动程序管理器将传递到 （使用 ANSI 应用程序某些例外情况） 驱动程序通过调用。  
   
- 应用程序可以调用这两个 Unicode 函数 (与*W*后缀) 和 ANSI 函数 (带有或不带*A*后缀)。 可以混合 Unicode 和 ANSI 函数调用。 如果要使用的是光标库，但是，不能混合 Unicode 和 ANSI 函数调用。 游标库是 Unicode 或 ANSI，不混合。  
+ 应用程序可以调用这两个 Unicode 函数 (与*W*后缀) 和 ANSI 函数 (带有或不带*A*后缀)。 可以混合 Unicode 和 ANSI 函数调用。 如果要使用游标库，但是，不能混合 Unicode 和 ANSI 函数调用。 游标库是 Unicode 或 ANSI，不是混合。  
   
- 可以编写应用程序，以便它可以编译为 Unicode 应用程序或 ANSI 应用程序。 在这种情况下，字符数据类型可声明为 SQL_C_TCHAR。 这是插入 SQL_C_WCHAR，如果应用程序编译为 Unicode 应用程序，或者插入 SQL_C_CHAR，如果它被编译成 ANSI 应用程序的宏。 因为 length 参数的大小会更改 （对于字符串数据类型） 应用程序程序员必须小心采用 SQLPOINTER 作为其自变量的函数的具体取决于应用程序是否 ANSI 或 Unicode。  
+ 可以编写一个应用程序，以便它可以编译为 Unicode 应用程序或 ANSI 应用程序。 在这种情况下，字符数据类型可以声明为 SQL_C_TCHAR。 这是一个宏来插入 SQL_C_WCHAR，如果应用程序编译为 Unicode 应用程序，或者插入 SQL_C_CHAR，如果它被编译成 ANSI 应用程序。 因为 length 参数的大小会更改 （适用于字符串数据类型） 应用程序编程人员必须小心的采用 SQLPOINTER 作为其参数，具体取决于应用程序是 ANSI 或 Unicode。  
   
- 可以在三种方式之一中调用函数： 作为仅限 Unicode 的函数调用 (使用*W*后缀)，为仅限 ANSI 的函数调用 (使用*A*后缀)，或作为无后缀 ODBC 函数调用。 三种形式的函数的自变量是相同的。 只有这些函数与 SQLCHAR\*自变量或指向字符串的 SQLPOINTER 参数需要 Unicode 和 ANSI 窗体。 对于具有可以为字符类型，如声明的自变量的函数**SQLBindCol**或**SQLGetData** （其中没有 Unicode 和 ANSI 窗体），该参数可以声明为 Unicode 类型，ANSI 类型，或者在 C 的情况下的类型自变量，SQL_C_TCHAR 宏。 有关详细信息，请参阅[Unicode 数据](../../../odbc/reference/develop-app/unicode-data.md)。  
+ 在三种方式之一来调用函数： 为仅限 Unicode 的函数调用 (与*W*后缀)，与仅限 ANSI 的函数调用 (与*一个*后缀)，或作为无后缀的 ODBC 函数调用。 一个函数的三种形式的参数是相同的。 只有这些函数与 SQLCHAR\*参数或指向字符串的 SQLPOINTER 参数需要 Unicode 和 ANSI 窗体。 有关函数的参数可以声明为字符类型，如**SQLBindCol**或**SQLGetData** （其中没有 Unicode 和 ANSI 窗体），该参数可以声明为 Unicode 类型，ANSI 类型，或在 C 的情况下类型实参，SQL_C_TCHAR 宏。 有关详细信息，请参阅[Unicode 数据](../../../odbc/reference/develop-app/unicode-data.md)。  
   
- 应用程序可以编写为 Unicode 应用程序，即使没有 Unicode 驱动程序可用于它以使用。 驱动程序管理器将 Unicode 函数和数据类型映射到 ANSI。 有一些限制为可执行的 ANSI 映射到 Unicode。 Unicode 应用程序以使用 Unicode 驱动程序存在将导致更好的性能，并且将删除 ANSI 映射到 Unicode 中固有的限制。
+ 应用程序可以编写为 Unicode 应用程序，即使没有 Unicode 驱动程序是可用于以使其使用。 驱动程序管理器将 Unicode 函数和数据类型映射为 ANSI。 没有为 Unicode 到 ANSI 映射可以执行一些限制。 Unicode 应用程序以使用 Unicode 驱动程序存在将导致更好的性能，并将删除的 Unicode 到 ANSI 的映射中固有的限制。

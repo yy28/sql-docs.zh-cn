@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717885"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -66,7 +63,7 @@ ms.locfileid: "40175091"
   
         |ID|FirstName|LastName|  
         |--------|---------------|--------------|  
-        |@shouldalert|John|Doe|  
+        |1|John|Doe|  
         |2|Jane|Doe|  
   
     4.  将“OLE DB 源”组件从“SSIS 工具箱”拖到“数据流设计器”。  

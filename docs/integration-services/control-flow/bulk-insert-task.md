@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.bulkinserttask.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96d6c75ebf58b0e51e7a83402c99b37c8210d2e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1277c3ac24e434b9e51b58cd41a7cfb307bcf5ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402709"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728835"
 ---
 # <a name="bulk-insert-task"></a>大容量插入任务
   大容量插入任务为将大量的数据复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表或视图提供了有效的方法。 例如，假定贵公司在大型主机系统上存储了数百万行的产品列表，但公司的电子商务系统却使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来填充网页。 您必须每晚都用大型机的主产品列表更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 产品表。 若要更新表，请以制表符分隔格式保存产品列表，并使用大容量插入任务将数据直接复制到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中。  
@@ -123,7 +120,7 @@ ms.locfileid: "35402709"
   
  若要了解大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“连接”**  
  在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
   
@@ -168,7 +165,7 @@ ms.locfileid: "35402709"
 ## <a name="bulk-insert-task-editor-general-page"></a>大容量插入任务编辑器（“常规”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“常规”** 页，对大容量插入任务进行命名和说明。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为大容量插入任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -183,7 +180,7 @@ ms.locfileid: "35402709"
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](../../integration-services/control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **CodePage**  
  指定数据文件中数据的代码页。  
   

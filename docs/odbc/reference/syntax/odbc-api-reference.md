@@ -1,35 +1,32 @@
 ---
-title: ODBC API 参考 |Microsoft 文档
+title: ODBC API 参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3920299ded492ef40bee8bd181e5ea60aaa9960
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6553984255843cf940b48d745d4494522b357159
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921942"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680825"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 参考
-此部分中的主题描述了每个 ODBC 函数按字母顺序。 每个函数定义为 C 编程语言的函数。 说明如下所示：  
+在本部分中的主题介绍每个 ODBC 函数按字母顺序。 每个函数被定义为 C 编程语言的函数。 说明如下：  
   
 -   用途  
   
 -   ODBC 版本  
   
--   标准 CLI 一致性级别  
+-   标准 CLI 的一致性级别  
   
 -   语法  
   
@@ -39,20 +36,20 @@ ms.locfileid: "32921942"
   
 -   诊断  
   
--   有关用法和实现注释  
+-   有关使用情况和实现的注释  
   
 -   代码示例  
   
 -   对相关函数的引用  
   
- 标准的 CLI 一致性级别可以是以下之一： ISO 92、 Open Group、 ODBC 或已弃用。 标记为符合的 ISO 92 – 也将出现在 Open Group 版本 1，因为 Open Group 是 ISO 92 的纯超集函数。 标记为打开组符合函数也会出现在 ODBC 3。*x*，因为 ODBC 3。*x*为纯 Open Group 版本 1 的超集。 标记为符合 ODBC 的函数显示在既不标准。 ODBC 3 中，标记为已弃用的函数已弃用。*x*。  
+ 标准的 CLI 的一致性级别可以是以下之一： ISO 92、 Open Group、 ODBC 或已弃用。 标记为符合的 ISO 92-也将出现在 Open Group 版本 1，因为 Open Group 是纯超集的 ISO 92 函数。 标记为打开组符合标准的函数也会出现在 ODBC 3。*x*，因为 ODBC 3。*x*是纯 Open Group 版本 1 的超集。 标记为符合 ODBC 函数既不标准中出现。 标记为已弃用的函数已弃用在 ODBC 3。*x*。  
   
- 中介绍了的诊断信息的处理[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。 SQLSTATE 值与关联的文本包含是为了提供条件的说明，但不是要规定特定文本。  
+ 诊断信息的处理中所述[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。 SQLSTATE 值与关联的文本是包括在内，以提供条件的说明，但不是应规定特定的文本。  
   
 > [!NOTE]  
 >  有关 ODBC 函数特定于驱动程序的信息，请参阅驱动程序部分。  
   
- 本部分包含有关以下函数的主题：  
+ 本部分包含主题的以下函数：  
   
 -   [SQLAllocConnect 函数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

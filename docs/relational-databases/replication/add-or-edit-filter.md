@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditfilter.f1
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
-caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c29de77be7dc0a36ce7311055fa081a3ca9a36d6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37358119"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719945"
 ---
 # <a name="add-or-edit-filter"></a>添加或编辑筛选器
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "37358119"
   
  通过使用行筛选器，可以指定要从表中发布的行的子集。 可以将行筛选器用于隐藏用户不需要查看的行（例如，包含敏感信息或机密信息的行），或用于创建发送到不同订阅服务器的不同数据分区。 将不同的数据分区发布到不同的订阅服务器，还有助于避免由于多个订阅服务器更新相同的数据而导致的冲突。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  对于事务发布和快照发布，此对话框涉及的过程分为两个步骤；对于合并分布，此对话框涉及的过程分为三个步骤。 所有发布类型都要求您选择要筛选的表以及要包含在筛选器中的一列或多列，并将筛选器定义为标准的 WHERE 子句。  
   
 1.  **选择要筛选的表**  

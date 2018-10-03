@@ -1,13 +1,11 @@
 ---
-title: 查看集合 (ADOX) |Microsoft 文档
+title: 视图集合 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,22 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6feb1cf590598724a4464d6cbcb2a6d555fb088a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7644a596eed74c400444034fe16303886e1edb19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661286"
 ---
 # <a name="views-collection-adox"></a>视图集合 (ADOX)
 包含所有[视图](../../../ado/reference/adox-api/view-object-adox.md)的目录对象。  
   
-## <a name="remarks"></a>Remarks  
- [追加](../../../ado/reference/adox-api/append-method-adox-views.md)方法**视图**集合是唯一的 ADOX。 您可以：  
+## <a name="remarks"></a>备注  
+ [追加](../../../ado/reference/adox-api/append-method-adox-views.md)方法**视图**是唯一的 ADOX 集合。 您可以：  
   
 -   将新视图添加到具有集合**追加**方法。  
   
@@ -43,7 +40,7 @@ ms.locfileid: "35287286"
   
 -   在集合中删除视图[删除](../../../ado/reference/adox-api/delete-method-adox-collections.md)方法。  
   
--   更新以反映当前的数据库架构和集合中的对象[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
+-   更新以反映与当前的数据库架构集合中的对象[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
   
  本部分包含以下主题。  
   
@@ -51,9 +48,9 @@ ms.locfileid: "35287286"
   
 ## <a name="see-also"></a>请参阅  
  [视图和字段集合示例 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [视图追加方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [视图集合，CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [视图删除方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [视图刷新方法示例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
+ [视图 Append 方法示例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [视图集合、 CommandText 属性示例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [视图 Delete 方法示例 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [视图 Refresh 方法示例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [视图对象 (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

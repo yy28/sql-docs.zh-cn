@@ -4,21 +4,18 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-exception-handling
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74fa5f7e857555edf8ebb30319a482617c7e47c7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2aec981adb3f0c1c71130dd1c60769ef89d3c6be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741405"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 错误表
   报表服务器基于在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中发生的错误在 SOAP 异常中生成错误和错误消息。 下表显示可通过报表服务器 Web 服务中的“SoapException”从方法访问的错误。 该表按引发异常的方法组织。  

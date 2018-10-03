@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b8dc94bbea97be9740ae5d455d7103b0da70f3c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 128614f4276c3853bc2b5d5f69306ac89db6c370
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270399"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744565"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>创建 Reporting Services 移动报表
 借助 SQL Server 移动报表发布服务器，可以在网格行和列可调整且移动报表元素灵活的设计图面上快速创建 SQL Server 2016 Reporting Services 移动报表，这些报表可轻松缩放至任何屏幕大小。  

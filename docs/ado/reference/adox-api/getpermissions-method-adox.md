@@ -1,13 +1,11 @@
 ---
-title: GetPermissions 方法 (ADOX) |Microsoft 文档
+title: GetPermissions 方法 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -18,19 +16,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetPermissions method [ADOX]
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55a5d4f9096d5a75855d4b612a202afd034b11da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648986"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 方法 (ADOX)
-返回的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象或对象容器上。  
+返回的权限[组](../../../ado/reference/adox-api/group-object-adox.md)或[用户](../../../ado/reference/adox-api/user-object-adox.md)对象或对象容器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,17 +37,17 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>返回值  
- 返回**长**值，该值指定该位掩码包含组或用户具有对对象的权限。 此值可为一个或多个[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量。  
+ 返回**长**值，该值指定该位掩码包含组或用户具有对对象的权限。 此值可以是一种或多种[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)常量。  
   
 #### <a name="parameters"></a>Parameters  
  *名称*  
- A **Variant**值，该值指定为其设置权限对象的名称。 设置*名称*为 null 的值，如果你想要获取对象容器的权限。  
+ 一个**变体**值，该值指定要为其设置权限的对象的名称。 设置*名称*为 null 的值，如果你想要获取对象容器的权限。  
   
  *ObjectType*  
- A**长**值可以是之一的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，用于指定要为其获取权限对象的类型。  
+ 一个**长**值，它可以是其中一个的[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)常量，指定要为其获取权限的对象类型。  
   
  *ObjectTypeId*  
- 可选。 A **Variant** OLE DB 规范所定义值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
+ 可选。 一个**变体**由 OLE DB 规范定义的值，该值未指定提供程序对象类型的 GUID。 此参数是必需的如果*ObjectType*设置为**adPermObjProviderSpecific**; 否则为不使用它。  
   
 ## <a name="applies-to"></a>适用范围  
   

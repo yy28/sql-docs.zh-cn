@@ -1,35 +1,29 @@
 ---
-title: 创建变量值文件 (AccessToSQL) |Microsoft 文档
+title: 创建变量值文件 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3865c268ef4da360b5e21cba96e88ddf6028ae6a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 005be9b3009ba8812219a6974fa13465bf786747
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773803"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680945"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>创建变量值文件 (AccessToSQL)
-变量的值文件是 XML 文件包含频繁更改跨服务器迁移的命令 （例如源或目标服务器名称） 的参数值。 大量的数据库迁移发生时，多个变量的文件，用于存储每个源服务器的值都是创建，并且在主脚本文件与引用 **– v**切换在命令行。 此行为有助于维护几个脚本文件中的多个变量的文件中的变量值的静态值。  
+变量值文件是 XML 文件包含的命令 （如源或目标服务器名称） 的服务器迁移而频繁更改的参数值。 大量的数据库迁移发生时，创建和使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 此行为有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
   
 > [!NOTE]  
-> -  变量名是前缀和后缀，以 $ （美元） 符号。 如果变量的值文件中的值，而不分配的变量，分析脚本文件的过程将会出错，导致停滞控制台执行过程。  
-> -  The escape character for **$** is **$$**. 如果一个变量或静态参数的值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是变量。  
-> -  出于可维护性目的，可以在声明变量`‘variable-group’`逻辑分隔的用户定义的变量的元素。  此元素的使用情况不是必需的。  
+> -  变量名称是作为前缀和后缀，以 $ （美元） 符号。 如果变量未分配的变量值文件中的值，在脚本文件的分析过程将会出错，导致拖延症控制台执行过程。  
+> -  转义符**$** 是**$$**。 如果参数的变量或静态值的值包含**$** （美元） 符号，然后**$$** 必须指定将其视为字符而不是一个变量。  
+> -  出于可维护性目的，可以在声明变量`‘variable-group’`用户定义的变量的逻辑分隔的元素。  此元素的使用情况不是必需的。  
   
 **示例：**  
   
@@ -95,11 +89,11 @@ ms.locfileid: "34773803"
 ```  
   
 ## <a name="variable-value-file-validation"></a>变量值文件验证  
-用户可以轻松地验证他/她变量值文件是否符合的架构定义文件**ConsoleScriptVariablesSchema.xsd**架构文件夹中可用。  
+用户可以轻松地验证他/她变量值文件是否符合架构定义文件**ConsoleScriptVariablesSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[服务器连接文件创建&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+在操作控制台中的下一步是[创建服务器连接文件&#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[创建服务器连接文件 (Access)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[创建服务器连接文件 （访问）](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

@@ -1,13 +1,11 @@
 ---
-title: AppendChunk 和 GetChunk 方法示例 (VB) |Microsoft 文档
+title: AppendChunk 和 GetChunk 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - GetChunk method [ADO], Visual Basic example
 - AppendChunk method [ADO], Visual Basic example
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 020d4af5f0f029ae92e906e992156fe22c2a69b2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: be7e0a83f7624dc471eb8c47108fa4886b7e09ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666255"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk 和 GetChunk 方法示例 (VB)
-此示例使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)和[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法以用从另一条记录的数据填充某一图像字段。  
+此示例使用[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)并[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)方法以使用另一条记录中的数据填充图像字段。  
   
 ```  
 'BeginAppendChunkVB  
