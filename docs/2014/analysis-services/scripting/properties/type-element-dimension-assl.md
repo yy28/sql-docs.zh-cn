@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Dimension)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab2d68ab78b31373e08185c3ee816241fe82bbd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283943"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117617"
 ---
 # <a name="type-element-dimension-assl"></a>Type 元素 (Dimension) (ASSL)
   提供有关维度内容的信息。  
@@ -59,9 +56,9 @@ ms.locfileid: "37283943"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Dimension](../objects/dimension-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  某些值`Type`，例如*帐户*，确定特定行为。  
   
  此元素的值限定为下表中列出的字符串之一。  

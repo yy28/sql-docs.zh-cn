@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ColumnBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ColumnBinding data type
 ms.assetid: 3ab1bac1-6716-4b17-a107-d5f9c744c5e6
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 227801af8b66d66ebeba50d2713267720adffa9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 271b4ae8b305e554f94bd1b0da3bbed96a7dd476
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149337"
 ---
 # <a name="columnbinding-data-type-assl"></a>ColumnBinding 数据类型 (ASSL)
   定义一个派生的数据类型，表示绑定到数据源视图中的列[DataItem](dataitem-data-type-assl.md)元素。  
@@ -51,17 +48,17 @@ ms.locfileid: "37200107"
 |特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[绑定](binding-data-type-assl.md)|  
-|派生数据类型|InclusionThresholdSetting|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[ColumnID](../properties/columnid-element-eventcolumn-assl.md)， [TableID](../properties/id-element-assl.md)|  
 |派生元素|请参阅[绑定](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  若要创建有效的 XML 元素名称， [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] `DataSet`对象对表名称进行编码，因为它们序列化到 XML 架构定义 (XSD); 例如，名称"Order Details"变为"Order_x0020_Details"。 同样，在序列化过程中，`ColumnID` 元素中包含的、引用数据源视图 (DSV) 中对象的 `TableID` 和 `ColumnBinding` 元素也必须对名称进行编码，以确保名称与 DSV 中的文本直接匹配。 正如 `DataSet` 对象模型一样，Analysis Services 实例会对这些名称进行解码。  
   
  包含在使用 `TableDefinitions` 数据类型的元素中并引用 DSV 中的表的 `TableBinding` 元素也必须在名称序列化为 XSD 时对它们进行编码。 但不应对 `Partition` 绑定中的表名称进行编码，因为这些名称只是存在于数据库中的表的名称，不必存储在 DSV 中。 不对 `Partition` 绑定中的表名称进行编码还可带来以下好处：  

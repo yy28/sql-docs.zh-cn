@@ -1,13 +1,11 @@
 ---
-title: SQLSetConnectOption 函数 |Microsoft 文档
+title: SQLSetConnectOption 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLSetConnectOption
@@ -19,33 +17,32 @@ f1_keywords:
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC]
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 965a563620dc95720602b03091dd38507cfa1e08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f2a4965fedc7da47751742e863119b818a9fcba9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646355"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 函数
-**一致性**  
- 版本引入了： ODBC 1.0 标准合规性： 不推荐使用  
+**符合性**  
+ 版本引入了： ODBC 1.0 标准符合性： 不推荐使用  
   
  **摘要**  
- ODBC 3 中 *.x*，ODBC 2.0 函数**SQLSetConnectOption**已被取代**SQLSetConnectAttr**。 有关详细信息，请参阅 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
+ 在 ODBC 3 *.x*，ODBC 2.0 函数**SQLSetConnectOption**已由**SQLSetConnectAttr**。 有关详细信息，请参阅 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)。  
   
 > [!NOTE]  
->  有关什么驱动程序管理器时，将映射此函数可对 ODBC 2 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
+>  有关哪些驱动程序管理器时，将映射此函数可对 ODBC 2 详细信息 *.x*应用程序使用 ODBC 3 *.x*驱动程序，请参阅[映射已弃用函数](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)".  
   
-## <a name="remarks"></a>注释  
- 请参阅[ODBC 64 位信息](../../../odbc/reference/odbc-64-bit-information.md)，如果你的应用程序将在 64 位操作系统上运行。  
+## <a name="remarks"></a>备注  
+ 请参阅[ODBC 64-Bit 信息](../../../odbc/reference/odbc-64-bit-information.md)，如果你的应用程序将在 64 位操作系统上运行。  
   
 > [!NOTE]  
->  不支持的特性 ODBC 3.8 中引入的 SQL_ASYNC_DBC_FUNCTION_ENABLE **SQLSetConnectOption**。 使用连接句柄上的异步操作的应用程序必须使用**SQLSetConnectAttr**。  
+>  不支持属性符合 ODBC 3.8 中引入的 SQL_ASYNC_DBC_FUNCTION_ENABLE **SQLSetConnectOption**。 使用连接句柄上的异步操作的应用程序必须使用**SQLSetConnectAttr**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 头文件](../../../odbc/reference/install/odbc-header-files.md)

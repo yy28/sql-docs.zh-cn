@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_batch_params
@@ -21,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac3b42956cacbd10718ca716e7b00b67e0afb949
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 00efe39e8ab60df83ddd267269461f6a6ff61ee0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033537"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594626"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**SCALE**|**smallint**|小数点右边的数字位数。 此值为 NULL。|  
 |**RADIX**|**smallint**|数值类型的基数。 此值为 NULL。|  
 |**可以为 NULL**|**smallint**|指定为空性：<br /><br /> 1 = 可以将参数数据类型创建为允许空值。<br /><br /> 0 = 不允许空值。<br /><br /> 此值为 NULL。|  
-|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 此列是与相同**DATA_TYPE**列中，除**datetime**和 ISO**间隔**数据类型。 该列始终返回值。 此值为 NULL。|  
+|**SQL_DATA_TYPE**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，在说明符的 TYPE 字段中显示。 此列与 DATA_TYPE 列相同，datetime 和 ISO interval 数据类型除外。 该列始终返回值。 此值为 NULL。|  
 |**SQL_DATETIME_SUB**|**smallint**|**Datetime**或 ISO**间隔**子代码如果的值**SQL_DATA_TYPE**为 SQL_DATETIME 或 SQL_INTERVAL。 对于数据类型以外**datetime**和 ISO**间隔**，此列为 NULL。 此值为 NULL。|  
 |**CHAR_OCTET_LENGTH**|**int**|以字节为单位的最大长度**字符**或**二进制**数据类型参数。 对于所有其他数据类型，此列返回 NULL。 此值始终为 NULL。|  
 |**ORDINAL_POSITION**|**int**|参数在批处理中的顺序位置。 如果参数名称重复多次，则此列使用第一次出现的序号。 第一个参数的序号为 1。 该列始终返回值。|  

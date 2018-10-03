@@ -3,9 +3,7 @@ title: sys.trusted_assemblies (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 989233e4e13a26b316a554a908a1282d384565f6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710715"
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "43081080"
 | | | |
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 使用**需要添加 sp_add_trusted_assembly**并**需要添加 sys.trusted_assemblies**添加或删除程序集从`sys.trusted_assemblies`。
 

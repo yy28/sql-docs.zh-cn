@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for Oracle
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66e2994479c222c5f050ce13e19eb3a9ed5c01e8
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979209"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698575"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概述
 > [!IMPORTANT]
@@ -59,7 +56,7 @@ MSDAORA
 |**密码**|指定用户密码。|
 
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应该指定**Trusted_Connection = 是**或**集成安全性 = SSPI**而不是用户 ID 和密码连接字符串中的信息。
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。
 
 ## <a name="provider-specific-connection-parameters"></a>提供程序特定的连接参数
  此提供程序支持除 ADO 定义的多个提供程序特定的连接参数。 如使用 ADO 连接属性，可以通过设置这些特定于提供程序的属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列[连接](../../../ado/reference/ado-api/connection-object-ado.md)或作为的一部分**ConnectionString**.

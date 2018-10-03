@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.changedatabase.F1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Change Database Wizard
 - report server database, create
 ms.assetid: 1a2e8d18-5997-482f-a9c1-87d99f7407b8
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1a05be3f6879101995da67fc94aa2e3638ea4d0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50870072259f89af43fc14ee23465f282f4c3e9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066127"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>更改数据库向导（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 提供了更改数据库向导可引导您完成创建新的报表服务器数据库或选择现有的报表服务器数据库用于当前报表服务器实例的步骤。  
@@ -35,7 +32,7 @@ ms.locfileid: "37236207"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **操作**  
  选择您要执行的任务。 您可以在本机模式或 SharePoint 集成模式下创建新的数据库。 或者，您也可以选择现有的报表服务器数据库以将其与当前报表服务器实例一起使用。  
   

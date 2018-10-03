@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118709"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>处理返回代码和输出参数 (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数从服务器发送的最后一个数据包和不可用于应用程序，直到[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)返回 sql_no_data 为止。 如果从存储过程返回错误，则调用 SQLMoreResults 可以前进到下一个结果，直到返回 SQL_NO_DATA。  

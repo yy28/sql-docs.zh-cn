@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msgqueuetask.receive.f1
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 384d15668d835db7d75f9e612595d00d83f41da4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0226a655ff1adc7269e0ee66996e7680f659826e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256823"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060838"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>消息队列任务编辑器（“接收”页）
   可以使用“消息队列任务编辑器”对话框的“接收”页，配置消息队列任务以接收 [!INCLUDE[msCoName](../includes/msconame-md.md)] 消息队列 (MSMQ) 消息。  
   
  若要了解此任务，请参阅 [Message Queue Task](control-flow/message-queue-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **RemoveFromMessageQueue**  
  指示在接收后是否从队列中删除消息。 默认情况下，此值设置为 `False`。  
   

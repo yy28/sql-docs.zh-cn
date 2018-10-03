@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139569"
 ---
 # <a name="query-options-execution-advanced-page"></a>“查询选项”中的“执行”（“高级”页）
   可以通过 **SET** 语句使用各种选项。 使用此页，可以指定 **set** 选项以运行 Microsoft SQL Server 查询。 有关其中每个选项的详细信息，请参阅 SQL Server 联机丛书。  
@@ -73,7 +70,7 @@ GO
  **执行查询后断开连接**  
  选中此复选框时，查询完成后会终止与 SQL Server 之间的连接。 默认情况下，此选项处于未选中状态。  
   
- **重置为默认值**  
+ 重置为默认值  
  将此页上的所有值重置为原始默认值。  
   
   

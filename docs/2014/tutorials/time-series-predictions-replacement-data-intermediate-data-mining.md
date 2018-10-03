@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120279"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>使用替换数据进行时序预测（数据挖掘中级教程）
   在本任务中，您将基于全球范围内的销售额数据生成新模型。 然后，将创建一个将全球范围内的销售额模型应用于某个单独区域的预测查询。  

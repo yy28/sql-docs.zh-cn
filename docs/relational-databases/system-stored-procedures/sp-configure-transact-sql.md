@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ebd6f7eb1493afda5adba7071cfeff175b7458b
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852335"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -91,7 +87,7 @@ RECONFIGURE
 |**config_value**|**int**|设置为值配置选项是使用**sp_configure** (中的值**sys.configurations.value**)。 有关这些选项的详细信息，请参阅[服务器配置选项&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)并[sys.configurations &#40;-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
 |**run_value**|**int**|当前正在运行的配置选项的值 (中的值**sys.configurations.value_in_use**)。<br /><br /> 有关详细信息，请参阅[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用**sp_configure**来显示或更改服务器级别的设置。 若要更改数据库级别设置，请使用 ALTER DATABASE。 若要更改仅影响当前用户会话的设置，请使用 SET 语句。  
   
 ## <a name="updating-the-running-configuration-value"></a>更新运行的配置值  

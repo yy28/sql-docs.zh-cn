@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_status_sp (TRANSACT-SQL) |Microsoft 文档
+title: sysmail_help_status_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_status_sp
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_status_sp
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8205d9350dba7a2cec7079a0197420e920eaa612
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c08985b4fe50a657c08de40f112776cf064b2846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614246"
 ---
 # <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  显示数据库邮件队列的状态。 使用**sysmail_start_sp**启动数据库邮件队列和**sysmail_stop_sp**停止数据库邮件队列。  
+  显示数据库邮件队列的状态。 使用**sysmail_start_sp**若要启动数据库邮件队列并**sysmail_stop_sp**停止数据库邮件队列。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +46,10 @@ sysmail_help_status_sp
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**状态**|**nvarchar(7)**|数据库邮件的状态。 可能的值为**已启动**和**已停止**。|  
+|**“状态”**|**nvarchar(7)**|数据库邮件的状态。 可能的值为**STARTED**并**已停止**。|  
   
-## <a name="permissions"></a>权限  
- 默认情况下，只有的成员**sysadmin**固定的服务器角色可以访问此过程。  
+## <a name="permissions"></a>Permissions  
+ 默认情况下，只有的成员**sysadmin**固定的服务器角色才能访问此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例显示数据库邮件的状态。  
@@ -71,9 +67,9 @@ Status
 STARTED  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库邮件外部程序](../../relational-databases/database-mail/database-mail-external-program.md)   
- [sysmail_start_sp &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [sysmail_start_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
  [sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

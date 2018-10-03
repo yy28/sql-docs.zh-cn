@@ -1,13 +1,11 @@
 ---
-title: RowPosition 属性 (ADO) |Microsoft 文档
+title: RowPosition 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - RowPosition property [ADO]
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281336"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616435"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 属性 (ADO)
-获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。 当你使用**put_RowPosition**设置**RowPosition**对象，生成**记录集**对象使用**RowPosition**对象传递给确定当前行。  
+获取或设置 OLE DB **RowPosition**对象从/上**ADORecordsetConstruction**对象。 当你使用**put_RowPosition**若要设置**RowPosition**生成的对象**记录集**对象使用**RowPosition**对象传递给确定当前行。  
   
  读/写。  
   
@@ -52,8 +49,8 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
 ## <a name="return-values"></a>返回值  
  此属性方法返回的标准的 HRESULT 值，包括，则为 S_OK 和 E_FAIL。  
   
-## <a name="remarks"></a>Remarks  
- 设置此属性时，如果**行集**对象上**RowPosition**对象与不同**行集**对象上**记录集**对象，前者将覆盖后者。 相同的行为将应用于当前**章**的**RowPosition**以及。  
+## <a name="remarks"></a>备注  
+ 设置此属性时，如果**行集**对象上**RowPosition**对象是从不同**行集**对象上**记录集**对象，前者将覆盖后者。 相同的行为适用于当前**章**的**RowPosition**也。  
   
 ## <a name="applies-to"></a>适用范围  
  [ADORecordsetConstruction 接口](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)

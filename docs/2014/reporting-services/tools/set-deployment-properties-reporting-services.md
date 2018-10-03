@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06703a6f1a95b66a0c90fa022c186dca90d21b8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276373"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080847"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>设置部署属性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，你必须指定报表服务器，并视需要指定报表文件夹和共享数据源，以便你可以将报表服务器项目中的项发布到报表服务器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成、预览和部署报表所需的属性和值存储在报表服务器项目的项目配置中。 可以为这些项目属性创建多个命名集，从而方便地在属性集之间切换。 每个属性集都是一个配置。 例如，可拥有一个向测试服务器发布报表的配置，还可拥有另一个向生产服务器发布报表的配置。  
@@ -69,7 +66,7 @@ ms.locfileid: "37276373"
   
 10. 在 **TargetServerURL** 文本框中，键入目标报表服务器的 URL。 在发布报表之前，必须将此属性设置为有效的报表服务器 URL。 向在本机模式下运行的报表服务器发布时，请使用报表服务器虚拟目录的 URL（例如，http:*//server/reportserver* 或 https:*//server/reportserver*）。 这是报表服务器的虚拟目录，而不是报表管理器的虚拟目录。  
   
-     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
+     发布到在 SharePoint 集成模式下运行的报表服务器时，请使用 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点（例如 http://*servername*、 http://*servername*/*site* 或 http://*servername*/*site*/*subsite*）。  
   
 ### <a name="to-set-configuration-manager-properties"></a>设置配置管理器属性  
   

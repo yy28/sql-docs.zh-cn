@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], about
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 103254951e111a0340a2869ba12e189e79ec1510
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa7cb2ad5c23900bd44aae89e1af6f8478fb2f74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095859"
 ---
 # <a name="master-database"></a>master 数据库
   **master** 数据库记录 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统的所有系统级信息。 这包括实例范围的元数据（例如登录帐户）、端点、链接服务器和系统配置设置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，系统对象不再存储在 **master** 数据库中，而是存储在 [Resource 数据库](resource-database.md)中。 此外， **master** 数据库还记录了所有其他数据库的存在、数据库文件的位置以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的初始化信息。 因此，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **数据库不可用，则** 无法启动。  
@@ -42,34 +39,34 @@ ms.locfileid: "37245037"
   
 |数据库选项|默认值|是否可修改|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|“否”|  
-|ANSI_NULL_DEFAULT|OFF|是|  
-|ANSI_NULLS|OFF|是|  
-|ANSI_PADDING|OFF|是|  
-|ANSI_WARNINGS|OFF|是|  
-|ARITHABORT|OFF|是|  
-|AUTO_CLOSE|OFF|“否”|  
-|AUTO_CREATE_STATISTICS|ON|是|  
-|AUTO_SHRINK|OFF|“否”|  
-|AUTO_UPDATE_STATISTICS|ON|是|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|是|  
-|CHANGE_TRACKING|OFF|“否”|  
-|CONCAT_NULL_YIELDS_NULL|OFF|是|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|是|  
-|CURSOR_DEFAULT|GLOBAL|是|  
-|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|“否”<br /><br /> 否<br /><br /> “否”|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|是|  
-|DB_CHAINING|ON|“否”|  
-|ENCRYPTION|OFF|“否”|  
-|NUMERIC_ROUNDABORT|OFF|是|  
-|PAGE_VERIFY|CHECKSUM|是|  
-|PARAMETERIZATION|SIMPLE|是|  
-|QUOTED_IDENTIFIER|OFF|是|  
-|READ_COMMITTED_SNAPSHOT|OFF|“否”|  
-|RECOVERY|SIMPLE|是|  
-|RECURSIVE_TRIGGERS|OFF|是|  
-|Service Broker 选项|DISABLE_BROKER|“否”|  
-|TRUSTWORTHY|OFF|是|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|否|  
+|ANSI_NULL_DEFAULT|OFF|用户帐户控制|  
+|ANSI_NULLS|OFF|用户帐户控制|  
+|ANSI_PADDING|OFF|用户帐户控制|  
+|ANSI_WARNINGS|OFF|用户帐户控制|  
+|ARITHABORT|OFF|用户帐户控制|  
+|AUTO_CLOSE|OFF|否|  
+|AUTO_CREATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_SHRINK|OFF|否|  
+|AUTO_UPDATE_STATISTICS|ON|用户帐户控制|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|用户帐户控制|  
+|CHANGE_TRACKING|OFF|否|  
+|CONCAT_NULL_YIELDS_NULL|OFF|用户帐户控制|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|用户帐户控制|  
+|CURSOR_DEFAULT|GLOBAL|用户帐户控制|  
+|数据库可用性选项|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|否<br /><br /> 否<br /><br /> 否|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|用户帐户控制|  
+|DB_CHAINING|ON|否|  
+|ENCRYPTION|OFF|否|  
+|NUMERIC_ROUNDABORT|OFF|用户帐户控制|  
+|PAGE_VERIFY|CHECKSUM|用户帐户控制|  
+|PARAMETERIZATION|SIMPLE|用户帐户控制|  
+|QUOTED_IDENTIFIER|OFF|用户帐户控制|  
+|READ_COMMITTED_SNAPSHOT|OFF|否|  
+|RECOVERY|SIMPLE|用户帐户控制|  
+|RECURSIVE_TRIGGERS|OFF|用户帐户控制|  
+|Service Broker 选项|DISABLE_BROKER|否|  
+|TRUSTWORTHY|OFF|用户帐户控制|  
   
  有关这些数据库选项的说明，请参阅 [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)。  
   

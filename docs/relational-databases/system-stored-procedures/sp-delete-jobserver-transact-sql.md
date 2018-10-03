@@ -1,14 +1,11 @@
 ---
-title: sp_delete_jobserver (Transact SQL) |Microsoft 文档
+title: sp_delete_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobserver
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b311f4de82a416fc61a0464077aa5aaa03de99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 886f63ad94921451ca7136064f2148b46eeaba17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246188"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729716"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,22 +48,22 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  要从中删除指定目标服务器的作业的名称。 *job_name*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必须指定; 不能同时指定。  
+>  任一*job_id*或*job_name*必须指定; 不能同时指定两者。  
   
  [ **@server_name=** ] **'***server***'**  
- 要从指定作业中删除的目标服务器的名称。 *服务器*是**nvarchar (30)**，无默认值。 *服务器*可以是 **（本地）** 或远程目标服务器的名称。  
+ 要从指定作业中删除的目标服务器的名称。 *服务器*是**nvarchar(30)**，无默认值。 *服务器*可以是 **(LOCAL)** 或远程目标服务器的名称。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
- 若要运行此存储的过程，用户必须是的成员**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 若要运行此存储的过程，用户必须是成员的**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
- 下面的示例删除服务器`SEATTLE2`从处理`Weekly Sales Backups`作业。  
+ 下面的示例将服务器中删除`SEATTLE2`从处理`Weekly Sales Backups`作业。  
   
 > [!NOTE]  
 >  此示例假定事先已创建了 `Weekly Sales Backups` 作业。  
@@ -82,9 +78,9 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_help_jobserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
+ [sp_help_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

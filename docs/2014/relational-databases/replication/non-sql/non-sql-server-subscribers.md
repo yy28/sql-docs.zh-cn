@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], non-SQL Server Subscribers
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0287d3ecf1b3bcbb68acab13eb9a576ea4106477
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19516e1b90a04c29efdfc8175d003a30ddf7957c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071057"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   下列非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器可通过推送订阅来订阅快照发布和事务发布。 支持所列每个数据库的两个最新版本使用所列 OLE DB 访问接口的最新版本进行订阅。  
@@ -91,11 +88,9 @@ ms.locfileid: "37230797"
   
 ### <a name="replication-feature-support"></a>复制功能支持  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种订阅类型：推送订阅和请求订阅。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器必须使用推送订阅，在这种订阅中，分发代理运行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器中。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种订阅类型：推送订阅和请求订阅。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器必须使用推送订阅，在这种订阅中，分发代理运行在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分发服务器中。  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器需要字符模式快照。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了两种快照格式：本机 bcp 模式和字符模式。 非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器需要字符模式快照。  
   
 -   非[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 订阅服务器不能使用即时更新订阅或排队更新订阅，也不能作为对等拓扑中的节点。  
   

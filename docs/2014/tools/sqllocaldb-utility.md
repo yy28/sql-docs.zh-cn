@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SqlLocalDB utility [SQL Server]
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a3c83dfc8e7282ea67c3aff783ad4ec50826865
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41bdf706a4834ffb2f4e5d5df1b5b7633a20d603
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100507"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB 实用工具
   使用`SqlLocalDB`实用工具创建的实例[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**。 `SqlLocalDB`实用工具 (SqlLocalDB.exe) 是一个简单的命令行工具，使用户和开发人员能够创建和管理的实例[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**。 有关如何使用信息**LocalDB**，请参阅[SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)。  
@@ -76,7 +73,7 @@ SqlLocalDB.exe
  **-?**  
  返回的简短说明每个`SqlLocalDB`选项。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *实例名称* 参数必须遵循 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 标识符规则，或者必须将该参数放入双引号。  
   
  执行不带参数的 SqlLocalDB 将返回帮助文档。  

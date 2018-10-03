@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +24,17 @@ helpviewer_keywords:
 - hosted environments [CLR integration]
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
-caps.latest.revision: 60
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 50343b871322c373b297e5b1a062df844621ba2d
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779185"
 ---
-# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构-CLR 宿主环境
+# <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构 - CLR 宿主环境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   与 .NET Framework 公共语言运行时 (CLR) 集成的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使数据库程序员可以使用诸如 Visual C#、Visual Basic .NET 和 Visual C++ 等语言。 函数、存储过程、触发器、数据类型和聚合即属于程序员可以用这些语言编写的业务逻辑种类。  
   
@@ -67,7 +65,7 @@ ms.locfileid: "37352809"
   
  不同的线程化、计划和内存管理的模型给需要支持成千上万的并发用户会话的关系数据库管理系统 (RDBMS) 带来了集成挑战。 体系结构应确保直接调用线程化、内存和同步基元的应用程序编程接口 (API) 的用户代码不损害系统的可伸缩性。  
   
-###### <a name="security"></a>Security  
+###### <a name="security"></a>安全性  
  在数据库中运行的用户代码在访问诸如表和列的数据库对象时，必须遵守 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证和授权规则。 此外，数据库管理员应能从在数据库中运行的用户代码控制对操作系统资源的访问，如文件和网络访问。 这对于托管编程语言很重要，因为与诸如 Transact-SQL 之类的非托管语言不同，托管编程语言提供访问这类资源的 API。 系统必须为用户代码提供安全的方法来访问[!INCLUDE[ssDE](../../includes/ssde-md.md)]进程之外的计算机资源。 有关详细信息，请参阅 [CLR Integration Security](../../relational-databases/clr-integration/security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>“性能”  
@@ -128,9 +126,9 @@ ms.locfileid: "37352809"
 |-|-|-|-|  
 |权限集|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |代码访问安全性|仅执行|执行和访问外部资源|“无限制”|  
-|编程模型限制|是|是|无限制|  
-|可验证性要求|是|是|“否”|  
-|调用本机代码的能力|“否”|否|是|  
+|编程模型限制|用户帐户控制|用户帐户控制|无限制|  
+|可验证性要求|用户帐户控制|是|否|  
+|调用本机代码的能力|否|否|用户帐户控制|  
   
  SAFE 是最可靠和安全的模式，并且在允许的编程模型方面也具有相关的限制。 给 SAFE 程序集授予了足够的权限，以便运行、执行计算以及访问本地数据库。 SAFE 程序集需要具有可验证的类型安全性，并且不允许调用非托管代码。  
   

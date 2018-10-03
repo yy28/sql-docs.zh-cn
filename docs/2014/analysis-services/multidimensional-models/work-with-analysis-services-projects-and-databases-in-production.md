@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a28d61cd262fb348e839055ea0f0d443187bf75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46f9cc26759470630c51cd50521f7c3705791939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131727"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>在生产环境中使用 Analysis Services 项目和数据库
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中开发 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库并将其部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例之后，必须确定要如何对已部署数据库中的对象进行更改。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]进行与安全角色、分区和存储设置相关的特定更改。 其他更改则只能使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]在项目模式或联机模式下进行（例如添加属性或用户定义层次结构）。  

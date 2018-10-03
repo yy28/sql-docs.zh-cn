@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: bc968281f9aec0cc86f7b5f8f92fb035d9854af9
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348336"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443141"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>配置服务帐户 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "43348336"
 ## <a name="logon-account-recommendations"></a>登录帐户推荐  
  在故障转移群集中，Analysis Services 的所有实例应配置为使用 Windows 域用户帐户。 将相同帐户分配给所有实例。 有关详情，请参见 [如何群集 Analysis Services](http://msdn.microsoft.com/library/dn736073.aspx) 。  
   
- 独立实例应使用默认虚拟帐户， **NT Service\MSSQLServerOLAPService**对于默认实例中，或 **NT Service\MSOLAP$ * * * 实例名称*对于命名实例。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
+ 单独的实例应使用默认虚拟帐户，针对默认实例使用 **NT Service\MSSQLServerOLAPService** ，或针对命名实例使用 **NT Service\MSOLAP$**_instance-name_ 。 此建议适用于所有服务模式（假设 Windows Server 2008 R2 以及更高版本用于操作系统，SQL Server 2012 以及更高版本用于 Analysis Services）中的 Analysis Services 实例。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>向 Analysis Services 授予权限  
  此部分阐释了 Analysis Services 用于本地、内部操作所需的权限，例如，启动可执行程序、读取配置文件和从数据目录加载数据库。 若要查找关于设置外部数据访问的权限以及与其他服务和应用程序的互操作性的指南，请进一步参阅此主题中的 [授予特定服务器操作的其他权限](#bkmk_tasks) 。  

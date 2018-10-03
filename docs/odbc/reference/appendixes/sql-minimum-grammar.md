@@ -1,57 +1,54 @@
 ---
-title: SQL 最小语法 |Microsoft 文档
+title: SQL 最低语法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3e31f53abf8d8788f719adc9e00e180ca7aa96f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818895"
 ---
-# <a name="sql-minimum-grammar"></a>SQL 最小语法
-本部分介绍 ODBC 驱动程序必须支持的最小 SQL 语法。 本节中所述的语法是 SQL 92 条目级别语法的子集。  
+# <a name="sql-minimum-grammar"></a>SQL 最低语法
+本部分介绍的 ODBC 驱动程序必须支持的最小 SQL 语法。 在本部分中所述的语法是 SQL-92 的条目级别语法的子集。  
   
- 应用程序可以使用任何语法在本部分中，并确保任何符合 ODBC 的驱动程序将支持该语法。 若要确定是否支持 sql-92 不在本部分中的附加功能，应用程序应调用**SQLGetInfo** SQL_SQL_CONFORMANCE 信息类型。 即使该驱动程序不符合到任何 SQL 92 一致性级别时，应用程序仍可以使用本部分中描述的语法。 如果驱动程序符合 SQL 92 级别，另一方面，它支持在该级别中包含的所有语法。 这在本部分包括语法，因为此处所述的最小语法是纯最低的 SQL 92 一致性级别的子集。 一旦应用程序知道支持的 SQL 92 级别，它可以确定是否更高级别的功能支持 （是否有） 通过调用**SQLGetInfo**与对应于该功能的单独的信息类型。  
+ 应用程序可以使用任何语法在本部分中，并确保任何符合 ODBC 驱动程序将支持该语法。 若要确定是否支持 SQL-92 不在本部分中的其他功能，应用程序应调用**SQLGetInfo** SQL_SQL_CONFORMANCE 信息类型。 即使该驱动程序不符合任何 SQL-92 的一致性级别，应用程序仍可以使用本部分中描述的语法。 如果驱动程序符合 SQL-92 级别，但是，它支持在该级别中包含的所有语法。 这在本部分中包含的语法，因为此处所述的最小语法是纯的最低 SQL-92 符合性级别的子集。 一旦应用程序知道支持的 SQL-92 级别，它可以确定是否支持某一更高级别的功能是 （是否有） 通过调用**SQLGetInfo**与对应于该功能的单个信息类型。  
   
- 只能使用只读的数据源的驱动程序可能不支持语法包括在本部分处理的更改数据的那些的部分。 应用程序可以确定数据源通过调用是否是只读的**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 信息类型。  
+ 仅使用只读数据源的驱动程序可能不支持此部分中包含的语法处理变化的数据的那些的部分。 应用程序可以确定数据源通过调用是否是只读**SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 信息类型。  
   
 ## <a name="statement"></a>。  
- *创建 table 语句*:: =  
+ *create table 语句*:: =  
   
- CREATE TABLE*基本表名称*  
+ CREATE TABLE*基础表名称*  
   
- (*列标识符数据类型*[*，列标识符数据类型*]...)  
+ (*数据类型列标识符*[*，列标识符的数据类型*]...)  
   
 > [!IMPORTANT]  
->  作为*数据类型*中*创建 table 语句*，应用程序必须使用从 TYPE_NAME 列数据类型为返回的结果集**SQLGetTypeInfo**。  
+>  作为*数据类型*中*create table 语句*，应用程序必须使用返回的结果集的 TYPE_NAME 列中数据类型**SQLGetTypeInfo**。  
   
  *delete 语句搜索*:: =  
   
- DELETE FROM*表名*[其中*搜索条件*]  
+ DELETE FROM *l e-n* [其中*搜索条件*]  
   
  *drop table 语句*:: =  
   
- DROP TABLE*基本表名称*  
+ DROP TABLE*基础表名称*  
   
  *insert 语句*:: =  
   
- INSERT INTO*表名*[(*列标识符*[，*列标识符*]...)]     值 (*插入值*[，*插入值*]...)  
+ INSERT INTO *l e-n* [(*列标识符*[，*列标识符*]...)]     值 (*插入值*[， *insert 值*]...)  
   
  *选择语句*:: =  
   
@@ -63,7 +60,7 @@ ms.locfileid: "32909962"
   
  [*order by 子句*]  
   
- *语句*:: =*创建 table 语句*  
+ *语句*:: = *create table 语句*  
   
  &#124;*delete 语句搜索*  
   
@@ -71,11 +68,11 @@ ms.locfileid: "32909962"
   
  &#124;*insert 语句*  
   
- &#124;*选择语句*  
+ &#124;*select 语句*  
   
  &#124;*更新语句搜索*  
   
- *更新语句搜索*  
+ *update 语句搜索*  
   
  更新*表名称*  
   

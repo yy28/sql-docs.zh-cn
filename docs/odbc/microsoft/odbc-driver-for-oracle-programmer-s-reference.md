@@ -1,29 +1,26 @@
 ---
-title: ODBC Driver for Oracle 程序员&#39;的参考 |Microsoft 文档
+title: Oracle 程序员的 ODBC 驱动程序&#39;的参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751135"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>ODBC Driver for Oracle 程序员&#39;的参考
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Oracle 程序员的 ODBC 驱动程序&#39;的参考
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
  本节包括下列主题：  
   
@@ -45,9 +42,9 @@ ms.locfileid: "32900932"
   
 -   [使用由键集驱动的游标的限制](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
--   [适用于 Oracle 的 ODBC 驱动程序存储过程](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
+-   [Oracle ODBC 驱动程序存储过程](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [ODBC Driver for Oracle 错误消息](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Oracle 错误消息的 ODBC 驱动程序](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
 -   [ODBC 一致性级别](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
@@ -55,4 +52,4 @@ ms.locfileid: "32900932"
   
 -   [支持的数据类型](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
--   [映射数据类型](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)
+-   [数据类型映射](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)

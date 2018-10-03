@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdefinition.f1
 ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7213f8bcec9a72c5e319631f7cbf6997b6b7ab7d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148537"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>选择定义方法（数据挖掘向导）
   可以使用 **“选择定义方法”** 页选择用于创建新挖掘模型的来源。 因为基于多维数据集的挖掘结构与基于关系数据源的挖掘结构所要求的构造步骤不同，所以根据您的选择情况，您使用该向导时所经过的步骤也会不同。  
   
  **有关详细信息，请参阅**[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)、[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **从现有关系数据库或数据仓库**  
  选择此选项可基于现有关系数据库或数据仓库创建挖掘模型。  
   

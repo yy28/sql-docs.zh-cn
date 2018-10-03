@@ -1,14 +1,11 @@
 ---
-title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft 文档
+title: sp_dbmmonitorresults (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702745"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = 不更新数据库的状态。 仅使用最后两行计算结果，其保留时间取决于何时刷新状态表。  
   
- 1 = 数据库的状态更新通过调用**sp_dbmmonitorupdate**之前计算结果。 但是，如果已更新状态表在前 15 秒或用户不是成员的**sysadmin**固定服务器角色、 **sp_dbmmonitorresults**运行而不更新的状态。  
+ 1 = 通过调用来更新数据库状态**sp_dbmmonitorupdate**计算结果之前。 但是，如果已更新状态表在前 15 秒或用户不是成员的**sysadmin**固定服务器角色**sp_dbmmonitorresults**运行，而不更新状态。  
   
 ## <a name="return-code-values"></a>返回代码值  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="result-sets"></a>结果集  
  返回指定数据库的所请求行数的历史记录状态。 每一行包含以下信息：  
@@ -104,14 +100,14 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|镜像数据库当前跟踪的主体的近似系统时钟时间。 此值只有在主体服务器实例上才有意义。|  
 |**local_time**|**datetime**|更新此行时本地服务器实例上的系统时钟时间。|  
   
-## <a name="remarks"></a>注释  
- **sp_dbmmonitorresults**可以仅在上下文中执行**msdb**数据库。  
+## <a name="remarks"></a>备注  
+ **sp_dbmmonitorresults**可以执行的上下文中仅**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
- 要求的成员身份**sysadmin**固定的服务器角色或在**dbm_monitor**中的固定的数据库角色**msdb**数据库。 **Dbm_monitor**角色可让其成员，若要查看数据库镜像状态，但不是更新它，但不是查看或配置数据库镜像事件。  
+## <a name="permissions"></a>Permissions  
+ 要求的成员身份**sysadmin**固定的服务器角色中或在**dbm_monitor**固定的数据库角色的**msdb**数据库。 **Dbm_monitor**角色使其成员可以查看数据库镜像状态，但不是更新它，但不是查看或配置数据库镜像事件。  
   
 > [!NOTE]  
->  第一次**sp_dbmmonitorupdate**执行，它会创建**dbm_monitor**中的固定的数据库角色**msdb**数据库。 成员**sysadmin**固定的服务器角色可以添加到任何用户**dbm_monitor**固定的数据库角色。  
+>  第一次**sp_dbmmonitorupdate**执行时，它会创建**dbm_monitor**固定的数据库角色的**msdb**数据库。 成员**sysadmin**固定的服务器角色可以添加到任何用户**dbm_monitor**固定的数据库角色。  
   
 ## <a name="examples"></a>示例  
  以下示例返回在前面两个小时内记录的行，但不更新数据库状态。  
@@ -121,12 +117,12 @@ USE msdb;
 EXEC sp_dbmmonitorresults AdventureWorks2012, 2, 0;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [监视数据库镜像 (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [sp_dbmmonitorchangemonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
- [sp_dbmmonitoraddmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
- [sp_dbmmonitordropmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
- [sp_dbmmonitorhelpmonitoring &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
+ [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
+ [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
+ [sp_dbmmonitordropmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   
+ [sp_dbmmonitorhelpmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
  [sp_dbmmonitorupdate (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
   

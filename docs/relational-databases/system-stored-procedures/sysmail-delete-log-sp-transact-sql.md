@@ -1,14 +1,11 @@
 ---
-title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft 文档
+title: sysmail_delete_log_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f565100bff8373839e70231b0a99a716efc76ec7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649198"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +42,22 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@logged_before** =] *****logged_before*****  
- 删除条目最多的日期和时间指定*logged_before*自变量。 *logged_before*是**datetime**替换为默认值为 NULL。 NULL 指示所有日期。  
+ [ **@logged_before** =] **'***logged_before*****  
+ 删除之前的日期和时间所指定的项*logged_before*参数。 *logged_before*是**datetime**默认值为 NULL。 NULL 指示所有日期。  
   
  [ **@event_type** = ] **'***event_type***'**  
- 删除日志条目指定为的类型的*event_type*。 *event_type*是**varchar(15)** 无默认值。 有效值包括**成功**，**警告**，**错误**，和**条信息性**。 NULL 指示所有事件类型。  
+ 删除日志条目的类型指定为*event_type*。 *event_type*是**varchar(15)** ，无默认值。 有效输入包括**成功**，**警告**，**错误**，以及**信息性**。 NULL 指示所有事件类型。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- 使用**sysmail_delete_log_sp**存储过程来从数据库邮件日志中永久删除条目。 某个可选参数通过提供日期和时间，允许您仅删除较早的记录。 早于该参数的事件将被删除。 可选参数，可删除仅事件的特定类型，指定为**event_type**自变量。  
+## <a name="remarks"></a>备注  
+ 使用**sysmail_delete_log_sp**存储过程来从数据库邮件日志中永久删除条目。 某个可选参数通过提供日期和时间，允许您仅删除较早的记录。 早于该参数的事件将被删除。 某个可选参数允许您若要删除的特定类型，指定为仅事件**event_type**参数。  
   
- 删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)从数据库邮件表中删除电子邮件。  
+ 删除数据库邮件日志中的项不会从数据库邮件表中删除电子邮件项。 使用[sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)若要从数据库邮件表中删除电子邮件。  
   
-## <a name="permissions"></a>权限  
- 只有的成员**sysadmin**固定的服务器角色可以访问此过程。  
+## <a name="permissions"></a>Permissions  
+ 只有的成员**sysadmin**固定的服务器角色才能访问此过程。  
   
 ## <a name="examples"></a>示例  
   
@@ -91,9 +87,9 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sysmail_event_log &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [创建 SQL Server 代理作业以存档数据库邮件和事件日志](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

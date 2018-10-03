@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 40d01901ff90c22d4286e59c5d0589b07ad424a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e43f90743b2449b4be99a0169a061f76fdcf3fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084587"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>任务 8：添加有条件拆分转换以拆分清理输出
   在此转换中，您向数据流添加有条件拆分转换。 有条件拆分转换可以根据数据内容将行路由到不同的输出。 对于本教程中，你使用**记录状态**从 DQS 清理转换的输出列。 在本教程中，您将只向 MDS 服务器上载正确或已更正的记录。 因此，您可以检查**记录状态**是**更正**或**已更正**，和之前上载到 MDS 中合并的记录。  

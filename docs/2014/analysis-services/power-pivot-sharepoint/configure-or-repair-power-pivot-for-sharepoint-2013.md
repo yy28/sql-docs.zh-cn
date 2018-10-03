@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d5ae9e2ca42a4066aacf7793aade11808da386a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fc6556929b26cb7de683794a670ea592ff35461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073027"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2013（PowerPivot 配置工具）
   若要配置或修复 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 的安装，请使用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装向导安装 SharePoint 2010 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具以及 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 本主题介绍 SharePoint 2013 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2010 &#40;PowerPivot 配置工具&#41;](../configure-repair-powerpivot-sharepoint-2010.md)。  
@@ -191,7 +188,7 @@ ms.locfileid: "37169688"
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 配置工具将场功能、应用程序和服务设置为在单个帐户下运行。 这简化了安装，但会导致部署无法满足 SharePoint 场的安全要求。 若要创建更可靠的部署，请在完成安装后，将应用程序池和服务标识更改为基于不同的帐户运行。 有关详细信息，请参阅[配置 PowerPivot 服务帐户](configure-power-pivot-service-accounts.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中创建其他可信站点  
- 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点上改变权限和配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的站点上改变权限和配置设置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>生成 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿  
  在您在场中安装了服务器组件后，可以创建使用嵌入的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据的第一个 Excel 2013 工作簿，然后将其发布到 SharePoint 库。 或者，您可以上载或发布示例 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿以验证 SharePoint 中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 有关详细信息，请参见以下内容：  

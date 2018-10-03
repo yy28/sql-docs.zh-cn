@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 71dcca516c1533c048d424e68d6aaae197d032ba
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704755"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ sp_setnetname
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果计算机名包含无效的标识符，对 Windows 计算机的一些远程存储过程调用则可能遇到问题。  
   
  因为链接服务器和远程服务器驻留在相同的命名空间内，所以它们的名称不能相同。 但是，您可以定义链接的服务器和针对指定的服务器的远程服务器通过指派不同的名称并使用**sp_setnetname**其中之一的网络名称设置为基础服务器的网络名称。  

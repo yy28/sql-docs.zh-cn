@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - properties [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, properties
 - ASSL, properties
 ms.assetid: 9a38cdc9-a210-421a-90e9-6391876765fa
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a000f4f4c9a73698f04a0bd88882db55b8661e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6371a751cdd5a4d647b781373ab74629103e0c44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061397"
 ---
 # <a name="properties-assl"></a>属性 (ASSL)
   本参考部分包含作为 Analysis Services 脚本语言 (ASSL) 架构中的对象属性的所有元素的语法和用法信息。  

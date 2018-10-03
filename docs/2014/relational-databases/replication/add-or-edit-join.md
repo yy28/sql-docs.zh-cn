@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.addeditjoin.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b2cd147f146b664122e1c6e42c124dedb5b5438
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abe1fb743410bdf7e0e9b586fc175a4308d8e8ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130331"
 ---
 # <a name="add-or-edit-join"></a>添加或编辑联接
   可以使用 **“添加联接”** 和 **“编辑联接”** 对话框为合并发布添加和编辑联接筛选器。  
@@ -36,7 +33,7 @@ ms.locfileid: "37169055"
 > [!IMPORTANT]  
 >  联接筛选器可关联的表数量不受限制，但有大量表的筛选器会影响合并处理过程中的性能。 如果要生成五个或更多表的联接筛选器，请考虑其他解决方案：不筛选小表、不会发生更改的表或主要是查找表的表。 仅在必须跨订阅服务器分区的表之间使用联接筛选器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  此对话框涉及三个步骤，用以在两个表之间创建联接筛选器。 创建一个以上的联接筛选器需要多次调用此对话框。  
   
 1.  **验证筛选的表并选择联接的表**  

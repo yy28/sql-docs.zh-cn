@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51a462b29365153aea43deb626f6905375aeafc1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124017"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
   除了少数例外情况，可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询或 DML 操作（SELECT、INSERT、UPDATE 或 DELETE）、即席批处理和 SQL 模块（如存储过程、表值函数、触发器和视图）来访问内存优化表。  

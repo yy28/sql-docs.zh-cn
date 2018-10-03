@@ -1,35 +1,32 @@
 ---
-title: SQLColumns （文本文件驱动程序） |Microsoft 文档
+title: SQLColumns （文本文件驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], SQLColumns
 - SQLColumns function [ODBC], Text File Driver
 ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34e9f27d1c5c939553d52546f9adbdd92f9d84ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8189a5f6a89f072988404e722a88c29af2d88ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829525"
 ---
-# <a name="sqlcolumns-text-file-driver"></a>SQLColumns （文本文件驱动程序）
+# <a name="sqlcolumns-text-file-driver"></a>SQLColumns（文本文件驱动程序）
 > [!NOTE]  
->  本主题提供文本文件特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
+>  本主题提供了文本文件驱动程序特定信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
-|列|注释|  
+|“列”|注释|  
 |------------|--------------|  
 |TABLE_QUALIFIER|返回到目录的路径。|  
-|TABLE_OWNER|因为不支持所有者名称，将在此列中返回 NULL。|  
-|NULLABLE|SQL_NO_NULLS 针对参与的列返回中的主键或唯一索引。|
+|TABLE_OWNER|在本专栏中则返回 NULL，因为不支持所有者名称。|  
+|NULLABLE|SQL_NO_NULLS 主键或唯一索引中的参与的列返回。|

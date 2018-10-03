@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 207a5df2cc4641819eb2b06ddb0fe1aec6d4d984
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3ef93973a6be743a6c79b2ba46c2f05d2af6bae5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113353"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>“空间索引”对话框 (Visual Database Tools)
   使用“空间索引”对话框可为“几何”或“地理”数据类型的列（空间列）创建索引，不能使用“索引/键”对话框为这些列创建索引。 每个空间列可以有多个空间索引，但一次只能创建一个索引。  

@@ -1,13 +1,11 @@
 ---
-title: NumericScale 属性 (ADOX) |Microsoft 文档
+title: NumericScale 属性 (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,24 +17,23 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7bbe61177e9af6db7d3c663e18afd01b4f2b951e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 328170d487d3de11b9370825bc89e6bb5b799cd7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734032"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 属性 (ADOX)
-指示列中数值的小数位数。  
+指示列中的数值小数位数。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置并返回**字节**该键列中的数据值的刻度值时[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性是**adNumeric**或**adDecimal**。 **NumericScale**对于所有其他数据类型，将忽略。  
+ 设置并返回**字节**列中的数据值的小数位数的值时[类型](../../../ado/reference/adox-api/type-property-column-adox.md)属性是**adNumeric**或者**adDecimal**。 **NumericScale**忽略所有其他数据类型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  默认值为零 (0)。  
   
  **NumericScale**是只读的[列](../../../ado/reference/adox-api/column-object-adox.md)已追加到集合的对象。  
@@ -45,5 +42,5 @@ ms.locfileid: "35286716"
  [列对象 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>请参阅  
- [ADOX 代码示例： NumericScale 和精度属性示例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [ADOX 代码示例： NumericScale 和 Precision 属性示例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type 属性（列）(ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic member properties [MDX]
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cbfcb8926d8d4b1ae71c5a3b6ed35c3beb7796c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236027"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049328"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
@@ -105,7 +102,7 @@ ms.locfileid: "37236027"
 |`IS_DATAMEMBER`|一个指示成员是否为数据成员的布尔值。|  
 |`IS_PLACEHOLDERMEMBER`|用来指明成员是否为占位符的布尔值。|  
 |`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果密钥是非组合键，则 KEY0 等同于`Key`。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
-|`LCID` *x*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
+|`LCID` *X*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |`LEVEL_NUMBER`|成员距层次结构的根的距离。 根级别为零。|  
 |`LEVEL_UNIQUE_NAME`|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_CAPTION`|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 `MEMBER_NAME`。|  

@@ -1,13 +1,11 @@
 ---
-title: 提供程序和 DefaultDatabase 属性示例 (VB) |Microsoft 文档
+title: Provider 和 DefaultDatabase 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,22 +13,21 @@ helpviewer_keywords:
 - DefaultDatabase property [ADO], Visual Basic example
 - provider property [ADO], Visual Basic example
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe65e3e4e68af0fee63bb3202bcb0e4b6c95b5b5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280816"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704925"
 ---
-# <a name="provider-and-defaultdatabase-properties-example-vb"></a>提供程序和 DefaultDatabase 属性示例 (VB)
-此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性来设置 Microsoft ODBC 访问接口的默认数据库。  
+# <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 和 DefaultDatabase 属性示例 (VB)
+此示例演示[提供程序](../../../ado/reference/ado-api/provider-property-ado.md)通过打开三个属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象使用不同的提供程序。 它还使用[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)属性将默认数据库设置为 Microsoft ODBC 提供程序。  
   
 > [!NOTE]
->  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码连接字符串中的信息。  
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
   
 ```  
 'BeginProviderVB  

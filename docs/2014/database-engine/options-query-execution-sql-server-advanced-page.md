@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
-caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067398"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>选项 (查询执行： SQL Server: 高级页)
+# <a name="options-query-executionsql-serveradvanced-page"></a>选项（“查询执行”:“SQL Server”:“高级”页）
   有几个使用 SET 命令的选项。 使用此页可以指定在 SQL Server 查询编辑器中运行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询时的 **set** 选项。 这些选项对其他代码编辑器不起任何作用。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请单击 **“查询”** 菜单或 **查询窗口中快捷菜单上的** “查询选项” [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 在 **“执行”** 下，单击 **“高级”**。 有关每个选项的详细信息，请参阅 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 联机丛书。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SET NOCOUNT**  
  不随结果集以消息形式返回行计数。 默认情况下，此复选框处于未选中状态。  
   
@@ -74,7 +71,7 @@ GO
  **执行查询后断开连接**  
  选中此复选框时，查询完成后会终止与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之间的连接。 默认情况下，此复选框处于未选中状态。  
   
- **重置为默认值**  
+ 重置为默认值  
  将此页上的所有值重置为原始默认值。  
   
   

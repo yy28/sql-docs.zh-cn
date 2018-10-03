@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Annotation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8c8b70e9e15e01a0864cd9f3491aa188be6777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103397"
 ---
 # <a name="annotation-element-assl"></a>Annotation 元素 (ASSL)
   包含用于扩展 Analysis Services 脚本语言 (ASSL) 架构的元素。  
@@ -52,8 +49,8 @@ ms.locfileid: "37304497"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +60,7 @@ ms.locfileid: "37304497"
 |父元素|[批注](../collections/annotations-element-assl.md)|  
 |子元素|[名称](../properties/name-element-assl.md)，[值](../properties/value-element-assl.md)，[可见性](../properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Annotation` 元素为所有对象（不包括仅用于定义复杂数据类型的对象）提供 ASSL 架构的扩展性。 `Value` 元素的 `Annotation` 元素可包含来自非 ASSL 的任何 XML 命名空间的有效 XML，但应遵守以下规则：  
   
 -   XML 只能包含元素。  

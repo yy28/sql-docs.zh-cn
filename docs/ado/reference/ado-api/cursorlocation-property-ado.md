@@ -1,13 +1,11 @@
 ---
-title: CursorLocation 属性 (ADO) |Microsoft 文档
+title: CursorLocation 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,34 +14,33 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocation property [ADO]
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a720586cc2ee6f866565fe9e43382395bcb44e65
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3860434236f5a0751ddb857c6b8bce1cf54d19ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718775"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 属性 (ADO)
-指示光标服务的位置。  
+指示游标服务的位置。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，可以将设置为其中一个[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
+ 设置或返回**长**值，可以设置为之一[CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md)值。  
   
-## <a name="remarks"></a>Remarks  
- 此属性，可在各种提供程序访问的光标库中进行选择。 通常情况下，你可以使用在服务器上的客户端游标库或一个位于之间进行选择。  
+## <a name="remarks"></a>备注  
+ 此属性可以访问该提供程序的各种游标库之间进行选择。 通常情况下，可以选择使用客户端游标库或其中一个位于服务器上。  
   
- 此属性设置会影响仅后未设置该属性建立的连接。 更改**CursorLocation**属性具有现有连接没有影响。  
+ 此属性设置会影响仅后设置该属性建立的连接。 更改**CursorLocation**属性不起作用的现有连接。  
   
- 返回的游标[执行](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法继承此设置。 **记录集**对象将自动继承此设置从其相关联的连接。  
+ 通过返回的游标[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法将继承此设置。 **记录集**对象将自动继承此设置其关联的连接。  
   
- 此属性为读/写上[连接](../../../ado/reference/ado-api/connection-object-ado.md)或关闭[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并处于打开状态以只读方式**记录集**。  
+ 此属性为读/写上[连接](../../../ado/reference/ado-api/connection-object-ado.md)或已关闭[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和上一个打开只读**记录集**。  
   
 > [!NOTE]
->  **远程数据服务使用情况**时在客户端上使用**记录集**或**连接**对象， **CursorLocation**属性只能设置到**adUseClient**。  
+>  **远程数据服务使用情况**客户端上使用时**记录集**或**连接**对象**CursorLocation**属性只能设置为**adUseClient**。  
   
 ## <a name="applies-to"></a>适用范围  
   

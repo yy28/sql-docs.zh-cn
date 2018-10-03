@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scoring [data mining]
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1620b1dc5f25506e1da54c426333817efd29882a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118187"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉验证（Analysis Services – 数据挖掘）
   交叉验证是分析中的一个标准工具，同时也是一项重要的功能，有助于开发和优化数据挖掘模型。 在创建了一个挖掘结构及其关联的挖掘模型之后，可使用交叉验证来确定该模型的有效性。  交叉验证具有以下应用：  

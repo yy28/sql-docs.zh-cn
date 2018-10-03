@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665d4de0f1ee61942e4f1af431889672bcc313bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757415"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  指定维护计划的计划 ID。 *plan_id*是**UNIQUEIDENTIFIER**。 默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  
- InclusionThresholdSetting  
+ None  
   
 ## <a name="result-sets"></a>结果集  
  如果*plan_id*指定，则**sp_help_maintenance_plan**将返回三个表： 计划、 数据库和作业。  
@@ -86,10 +82,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|所有与维护计划相关的作业的 ID。 *job_id*是**uniqueidentifier**。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_help_maintenance_plan**处于**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_help_maintenance_plan**。  
   
 ## <a name="examples"></a>示例  

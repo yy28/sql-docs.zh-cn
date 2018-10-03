@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO MD]
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49d811ed0eb60bb02767579c604a6a4be3c5b337
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 237639f949b67d015cd37ccdf50a9e9a758a9210
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702056"
 ---
 # <a name="open-method-ado-md"></a>Open 方法 (ADO MD)
 检索多维查询的结果，并返回到结果[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  
@@ -44,7 +41,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  可选。 一个**Variant**的计算结果为字符串指定有效的 ADO[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象变量的名称或连接的定义。 *ActiveConnection*参数指定要在其中打开连接[单元集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)对象。 如果通过连接定义为此参数，ADO 将打开一个新的连接，使用指定的参数。 *ActiveConnection*参数对应于[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)属性。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **打开**方法将生成错误，如果省略了其参数之一并且未在尝试打开之前设置其相应的属性值**单元集**。  
   
 ## <a name="applies-to"></a>适用范围  

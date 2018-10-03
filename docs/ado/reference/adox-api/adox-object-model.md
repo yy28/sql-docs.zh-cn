@@ -1,34 +1,31 @@
 ---
-title: ADOX 对象模型 |Microsoft 文档
+title: ADOX 对象模型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ca46f636c295b56de346889e672e439e2aab41a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284746"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718935"
 ---
 # <a name="adox-object-model"></a>ADOX 对象模型
-下图说明如何表示和 ADOX 的相关对象。 有关特定对象或集合的详细信息，请参阅特定参考主题，或[ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)和[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)。  
+下图说明了如何表示和 ADOX 中的相关对象。 有关特定对象或集合的详细信息，请参阅特定参考主题，或[ADOX 对象](../../../ado/reference/adox-api/adox-objects.md)并[ADOX 集合](../../../ado/reference/adox-api/adox-collections.md)。  
   
  ![ADOX 对象模型](../../../ado/reference/adox-api/media/adox_object_model.gif "ADOX_object_model")  
   
- 每个[表](../../../ado/reference/adox-api/table-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)，和[列](../../../ado/reference/adox-api/column-object-adox.md)对象还具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
+ 每个[表](../../../ado/reference/adox-api/table-object-adox.md)，[索引](../../../ado/reference/adox-api/index-object-adox.md)，并[列](../../../ado/reference/adox-api/column-object-adox.md)对象还具有标准 ADO[属性](../../../ado/reference/ado-api/properties-collection-ado.md)集合。  
   
 ## <a name="see-also"></a>请参阅  
  [ADOX API 参考](../../../ado/reference/adox-api/adox-api-reference.md)   

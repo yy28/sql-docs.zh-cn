@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_missing_index_groups
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_groups dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_groups dynamic management view
 ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6bb53e0f67c6db6f9ca0e5f6260812abfdac4c1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 6f5d7386d11433d71d3f47dd870f4b94648b51b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719165"
 ---
 # <a name="sysdmdbmissingindexgroups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "43066819"
 |**index_group_handle**|**int**|标识缺失索引组。|  
 |**index_handle**|**int**|标识缺失索引所属由指定的组**index_group_handle**。<br /><br /> 一个索引组仅包含一个索引。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回的信息**sys.dm_db_missing_index_groups**时更新查询优化查询优化器，因而不会持久保留。 缺失索引信息只保留到重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 前。 如果数据库管理员要在服务器回收后保留缺失索引信息，则应定期制作缺失索引信息的备份副本。  
   
  输出结果集中的任一列都不是一个键，但是它们结合在一起将形成一个索引键。  

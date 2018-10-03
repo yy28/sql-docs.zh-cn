@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 805abefbd6f934781b86060e98c73ab6ee8fd3c0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824017"
 ---
 # <a name="visual-c-extensions"></a>Visual c + + 扩展
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 接口
@@ -135,7 +132,7 @@ Update(CADORecordBinding *binding)
 |常量|ReplTest1|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|返回非 null 字段值。|
-|**adFldBadAccessor**|@shouldalert|绑定无效。|
+|**adFldBadAccessor**|1|绑定无效。|
 |**adFldCantConvertValue**|2|无法转换值，而原因并非符号不匹配或数据溢出。|
 |**adFldNull**|3|一个字段时，指示返回了 null 值。<br /><br /> 当设置的字段，指示该字段应设置为**NULL**对该字段不能进行编码**NULL**本身 （例如，字符数组或整数）。|
 |**adFldTruncated**|4|数字位数或长度可变的数据已被截断。|

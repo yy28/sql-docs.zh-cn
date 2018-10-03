@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], startup options
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - SQL Server services, setting startup options
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0eb6d3cc33a737f6d9930da4fc9d4726e362b74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a2bde2933c8495da25c87da3aa6a40a9585b96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072927"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>配置服务器启动选项（SQL Server 配置管理器）
   本主题介绍如何使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中配置在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每次启动时将使用的启动选项。 有关启动选项列表，请参阅 [数据库引擎服务启动选项](database-engine-service-startup-options.md)。  

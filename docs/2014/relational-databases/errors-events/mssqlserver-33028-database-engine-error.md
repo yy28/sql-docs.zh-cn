@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2820abe304ce16234029caa16164285f6f66f9b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150317"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
     
@@ -41,7 +38,7 @@ ms.locfileid: "37415317"
 |错误代码|Description|  
 |----------------|-----------------|  
 |0|成功。 没有错误。|  
-|@shouldalert|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
+|1|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
 |2|缓冲区不足。 无法为加密提供程序分配空间。|  
 |3|不提供支持。 此版本不支持该加密提供程序。 请选择其他加密提供程序。|  
 |4|找不到该加密提供程序。 指定的加密提供程序不存在或您无权访问这些文件。|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorepage.general.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dcda45c3aa53bfe6e3e73338e2a37f207b3007d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279713"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108727"
 ---
 # <a name="restore-pages-sql-server"></a>还原页 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]在  中还原页。 页面还原的目的是还原一个或多个损坏的页，而不还原整个数据库。 通常，要进行还原的页已经由于在访问该页时遇到错误而标记为“可疑”。 可疑页在 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 数据库的 **suspect_pages** 表中进行了标识。  
@@ -133,7 +130,7 @@ ms.locfileid: "37279713"
      **备份集**  
      此部分显示参与还原的备份集。  
   
-    |标题|值|  
+    |Header|值|  
     |------------|------------|  
     |**名称**|备份集的名称。|  
     |**组件**|已备份的组件：**数据库**、**文件**或 **\<blank>**（用于事务日志）。|  

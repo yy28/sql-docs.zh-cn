@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f6d37f88044d9888c82b5770ea1bca366423459
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123247"
 ---
 # <a name="managing-report-parts"></a>管理报表部件
   开头[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，报表部件可以发布到报表服务器和重复使用在其他报表中以及由其他用户，如果他们具有适当的权限。  
@@ -57,13 +54,13 @@ ms.locfileid: "37286693"
   
 |“属性”|Description|报表部件<br /><br /> 库搜索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|“属性”|这是用户可在报表部件库中搜索的条件之一。|是|  
-|Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|是|  
-|CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|是|  
-|CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|是|  
-|ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|是|  
-|ModifiedDate|在服务器上最后修改报表部件的日期。<br /><br /> 此字段用作确定何时存在对报表部件的服务器端更新的逻辑的一部分。 有关详细信息，请参阅本表后面对 ComponentID 的说明。|是|  
-|SubType (*)|SubType 是指示要搜索的报表部件类型的字符串，如“Tablix”或“Chart”。|是|  
+|“属性”|这是用户可在报表部件库中搜索的条件之一。|用户帐户控制|  
+|Description|您可能希望以更方便用户在库中查找的方式组织报表部件名称。 例如，对于涉及销售相关的数据和展示的所有报表部件，您可以搜索以“Sales>>”开头的说明。|用户帐户控制|  
+|CreatedBy|将报表部件添加到了报表服务器数据库的用户的 ID。 确切格式取决于身份验证方法。 例如，某些身份验证方法将导致 CreatedBy 和 ModifiedBy 字段中显示完整的“域\用户名”。|用户帐户控制|  
+|CreationDate|最初创建报表部件的日期。<br /><br /> 这是用户可在报表部件库中搜索的条件之一。|用户帐户控制|  
+|ModifiedBy|ModifiedBy 是上次修改报表部件的用户的 ID。|用户帐户控制|  
+|ModifiedDate|在服务器上最后修改报表部件的日期。<br /><br /> 此字段用作确定何时存在对报表部件的服务器端更新的逻辑的一部分。 有关详细信息，请参阅本表后面对 ComponentID 的说明。|用户帐户控制|  
+|SubType (*)|SubType 是指示要搜索的报表部件类型的字符串，如“Tablix”或“Chart”。|用户帐户控制|  
 |ComponentID (*)|ComponentID 是报表部件的唯一标识符。 这是添加到目录中的新字段，并且在服务器端以及报表创作应用程序（例如报表生成器）中均可见。<br /><br /> 客户端应用程序在检查服务器上是否存在报表部件的更新时使用此字段。 客户端应用程序搜索服务器上在当前客户端报表中的 ComponentID。 当存在匹配的 ComponentID 时，然后将 ModifiedDate 与该报表项的客户端 SyncDate 进行比较。|否|  
   
 ## <a name="controlling-access-to-report-parts"></a>控制对报表部件的访问  

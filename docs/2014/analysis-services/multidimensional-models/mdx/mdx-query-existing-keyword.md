@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8431c4b29f20b3c87e3b944736612d009426900a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106547"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 关键字 (MDX)
   强制在当前上下文中计算所指定的集。  
@@ -39,7 +36,7 @@ Existing Set_Expression
  *Set_Expression*  
  有效的多维表达式 (MDX) 集表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  默认情况下，在包含集成员的多维数据集的上下文中对集进行求值。 `Existing`关键字强制指定的集计算当前上下文中。  
   
 ## <a name="example"></a>示例  

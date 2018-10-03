@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.rules.f1
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 614491293ed7cafc51ca885876b401a99e0a4ed9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059597"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>“规则”选项卡（挖掘模型查看器）
   可以使用关联模型中的 **“规则”** 窗格来查看算法从数据中提取的规则。 规则不仅说明了各项之间相互关联的方式，并且可用于创建建议。  
@@ -33,7 +30,7 @@ ms.locfileid: "37197967"
   
  **有关详细信息：**[Microsoft 关联算法](data-mining/microsoft-association-algorithm.md)、[使用 Microsoft 关联规则查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   

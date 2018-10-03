@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_migrate_user_to_contained
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da98251792db96d766f63183715bd39f0a394406
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7761a5602e1700949b8ae072342cd65927a24b9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031930"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843975"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_migrate_user_to_contained**创建包含的数据库用户具有密码，而不考虑属性或登录名的权限。 例如，过程可能会成功如果禁用该登录名或用户被拒绝**CONNECT**对数据库的权限。  
   
  **sp_migrate_user_to_contained**具有以下限制。  
@@ -73,7 +69,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   **sp_migrate_user_to_contained**不能在系统数据库中使用。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  在迁移用户时，切勿从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中禁用或删除所有管理员登录名。 如果删除所有登录名，请参阅[连接到 SQL Server 系统管理员被锁定时](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)。  
   
  如果**BUILTIN\Administrators**登录名存在，管理员可以通过启动其应用程序使用连接**以管理员身份运行**选项。  

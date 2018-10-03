@@ -1,32 +1,29 @@
 ---
-title: 监视的功能 |Microsoft 文档
+title: 监视的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 704fc0c45706e80408218d185146a438099da829
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770615"
 ---
-# <a name="features-to-watch-for"></a>监视的功能
-本部分介绍大量的应用程序开发人员通常需要理所当然的功能。 实际上，这些功能差别很大支持和 Dbms; 支持的方式为它们的代码的失败是可能会导致可互操作的应用程序中的问题。  
+# <a name="features-to-watch-for"></a>要监视的功能
+本部分介绍大量的应用程序开发人员往往需要理所当然的功能。 实际上，这些功能差异很大支持和 Dbms; 支持的方式故障代码，使其很可能会导致可互操作应用程序中的问题。  
   
- 本部分不会列出应用程序开发人员需要考虑的所有功能。 该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，和[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明，[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，和本手册中讨论了每个功能的部分。  
+ 本部分不会列出应用程序开发人员需要考虑的所有功能。 该信息，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)， [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)，并[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)函数说明、[附录 c: SQL 语法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)，并讨论每个功能此手册的部分。  
   
  本部分包含以下主题。  
   

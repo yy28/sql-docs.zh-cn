@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - large value data types
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1f76fef29f1e90e1759c039bafaccad23a61bba
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c9553eb4a9993186e3864a9ae0014ce702b7a8f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136187"
 ---
 # <a name="using-large-value-types"></a>使用大值类型
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，若要使用大值数据类型，必须进行特殊的处理。 大值数据类型是那些超过 8 KB 的最大行大小。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入**最大**说明符**varchar**， **nvarchar**并**varbinary**数据类型，以允许存储值的最大为 2 ^31-1字节数。 表的列和[!INCLUDE[tsql](../../../includes/tsql-md.md)]变量可以指定**varchar （max)**， **nvarchar （max)** 或**varbinary （max)** 数据类型。  

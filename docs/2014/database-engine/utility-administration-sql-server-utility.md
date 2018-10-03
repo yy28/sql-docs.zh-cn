@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 96c81c4f6913c4e355ca368ae67f04c1c5fde12b
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128837"
 ---
 # <a name="utility-administration-sql-server-utility"></a>实用工具管理（SQL Server 实用工具）
   使用“实用工具管理”选项卡可以管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具的策略、安全性和数据仓库设置。 有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实用工具概念的详细信息，请参阅 [SQL Server 实用工具功能和任务](../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  

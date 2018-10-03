@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: 79
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c423da52c8604fa31fd510894ec97d8410443994
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053557"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server 2014（安装程序）
   本主题提供了使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 可以安装的各种组件的详细信息，请参阅[安装 SQL Server 2014](installation-for-sql-server.md)。  有关如何安装详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]组件，请参阅[安装 SQL Server 2014](install-sql-server.md)。  

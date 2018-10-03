@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146317"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大容量插入任务编辑器（“选项”页）
   使用 **“大容量插入任务编辑器”** 对话框的 **“选项”** 页，可以设置大容量插入操作的属性。 大容量插入任务可以将大量的数据复制到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表或视图中。  
   
  若要了解如何使用大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和 [BULK INSERT (Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **CodePage**  
  指定数据文件中数据的代码页。  
   

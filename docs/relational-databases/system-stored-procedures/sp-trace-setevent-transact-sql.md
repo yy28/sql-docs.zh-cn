@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 352d406b2c8735cb09787e9cd1554a4df7dd1bc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739905"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -250,7 +246,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |列号|列名|Description|  
 |-------------------|-----------------|-----------------|  
-|@shouldalert|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
+|1|**TextData**|与跟踪内捕获的事件类相关的文本值。|  
 |2|**BinaryData**|与在跟踪中捕获的事件类相关的二进制值。|  
 |3|**DatabaseID**|通过使用指定的数据库的 ID*数据库*语句或如果无需使用的默认数据库*数据库*给定连接发出语句。<br /><br /> 可以使用 DB_ID 函数确定数据库的值。|  
 |4|**TransactionID**|系统分配的事务 ID。|  
@@ -337,7 +333,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |返回代码|Description|  
 |-----------------|-----------------|  
 |0|没有错误。|  
-|@shouldalert|未知错误。|  
+|1|未知错误。|  
 |2|本跟踪当前正在运行。 此时更改跟踪将导致错误。|  
 |3|指定的事件无效。 该事件可能不存在或者它不适用于此存储过程。|  
 |4|指定的列无效。|  
@@ -346,7 +342,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
 |16|该函数对此跟踪无效。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_trace_setevent**执行以前由早期版本中可用的扩展存储过程执行的操作的许多[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setevent**而不是以下：  
   
 -   **xp_trace_addnewqueue**  
@@ -361,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  有关使用跟踪存储过程的示例，请参阅[创建跟踪 (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 458fd50e6387a2929e660deb81400fc79271ff20
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b3c09c2a1771f1fad8640031ea1c1327921f8c82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38058095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698235"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,7 +40,7 @@ ms.locfileid: "38058095"
 |**pdw_node_id**|**int**|唯一 id[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]节点。|  
 |**distribution_id**|**int**|分发的唯一 id。|
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  针对每个表中具有聚合或非聚合列存储索引的每个列存储行组返回一行。  
   
  使用**sys.pdw_nodes_column_store_row_groups**以确定包含在行组和行组的大小的行数。  
@@ -55,7 +51,7 @@ ms.locfileid: "38058095"
   
  如果列存储行组已填充，它将进行压缩并停止接受新行。 当从压缩组中删除行时，这些行将保留但标记为已删除。 对压缩组的更新将实现为压缩组中的删除以及对打开组的插入。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

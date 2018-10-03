@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850365"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **注意：****sp_help_jobschedule**中的值将返回**dbo.sysjobschedules**并**dbo.sysschedules**系统表中**msdb**.   **sysjobschedules**更新每隔 20 分钟。 这可能会影响此存储过程返回的值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  参数**sp_help_jobschedule**可以仅在某些组合中使用。 如果*schedule_id*指定，则既不*job_id*也不*job_name*可以指定。 否则为*job_id*或*job_name*参数，可用于*schedule_name*。  
   
 ## <a name="permissions"></a>Permissions  

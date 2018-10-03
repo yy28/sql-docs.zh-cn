@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 33f2e8751befd42ee0b92690a17d668ba37a4c9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089717"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 聚类分析算法技术参考
   本节说明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法的实现，包括可用来控制聚类分析模型的行为的参数。 还提供关于在创建和处理聚类分析模型时如何提高性能的指南。  
@@ -100,7 +97,7 @@ ms.locfileid: "37306597"
   
 |ID|方法|  
 |--------|------------|  
-|@shouldalert|可缩放 EM|  
+|1|可缩放 EM|  
 |2|不可缩放 EM|  
 |3|可缩放 k-means|  
 |4|不可缩放 k-means。|  

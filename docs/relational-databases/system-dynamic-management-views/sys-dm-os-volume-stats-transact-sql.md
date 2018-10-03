@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_volume_stats (Transact SQL) |Microsoft 文档
+title: sys.dm_os_volume_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468303"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670485"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +44,15 @@ sys.dm_os_volume_stats (database_id, file_id)
  数据库 ID。 database_id 的数据类型为 int，无默认值。 不能为 NULL。  
   
  *file_id*  
- 文件 ID。 *file_id*是**int**，无默认值。 不能为 NULL。  
+ 文件的 ID。 *file_id*是**int**，无默认值。 不能为 NULL。  
   
 ## <a name="table-returned"></a>返回的表  
   
 ||||  
 |-|-|-|  
-|**列**|**数据类型**|**Description**|  
+|**列**|**Data type**|**Description**|  
 |**database_id**|**int**|数据库 ID。 不可为 null。|  
-|**file_id**|**int**|文件 ID。 不可为 null。|  
+|**file_id**|**int**|文件的 ID。 不可为 null。|  
 |**volume_mount_point**|**nvarchar(512)**|根卷上的装入点。 可返回空字符串。|  
 |**volume_id**|**nvarchar(512)**|操作系统卷 ID。 可以返回空字符串|  
 |**logical_volume_name**|**nvarchar(512)**|逻辑卷名称。 可以返回空字符串|  
@@ -68,9 +65,9 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**is_read_only**|**bit**|指示卷当前是否标记为只读。 不可为 null。|  
 |**is_compressed**|**bit**|指示此卷当前是否已压缩。 不可为 null。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  需要 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -93,7 +90,7 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   

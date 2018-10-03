@@ -1,32 +1,29 @@
 ---
-title: 计数属性示例 (VB) |Microsoft 文档
+title: Count 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Count property [ADO], Visual Basic example
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5e462bef0846b71a963c1e510fac1e23d00e010
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277256"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747215"
 ---
-# <a name="count-property-example-vb"></a>计数属性示例 (VB)
-此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)具有两个集合中属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。 另一种方法而无需使用枚举这些集合**计数**属性是使用`For Each...Next`语句。  
+# <a name="count-property-example-vb"></a>Count 属性示例 (VB)
+此示例演示[计数](../../../ado/reference/ado-api/count-property-ado.md)与中的两个集合的属性***员工***数据库。 属性获取的每个集合中的对象数，并设置枚举这些集合的循环的上限。 另一种方法来枚举这些集合，而无需使用**计数**属性是使用`For Each...Next`语句。  
   
 ```  
 'BeginCountVB  

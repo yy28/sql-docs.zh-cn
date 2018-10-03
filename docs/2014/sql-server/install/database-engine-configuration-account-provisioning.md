@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
-caps.latest.revision: 28
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 895af367f5acdd8c17c66d7575bf64376a401867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69885ad9affb87ea160231fa6f6d42d0fef7ea6c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099043"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>数据库引擎配置 - 帐户设置
   使用此页可以设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全模式，并添加 Windows 用户或组作为 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的管理员。  
@@ -27,7 +24,7 @@ ms.locfileid: "37284463"
 ## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>有关运行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的注意事项  
  在以前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，将 **BUILTIN\Administrators** 组设置为 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中的登录名，本地 Administrators 组的成员可以使用其管理员凭据登录。 使用提升的权限并不是最好的做法。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，未将 **BUILTIN\Administrators** 组设置为登录名。 因此，您应为每个管理用户创建一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，并在安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]新实例的过程中将该登录名添加到 sysadmin 固定服务器角色中。 对于用来运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业的 Windows 帐户，您也应该执行这些操作。 这些作业包括复制代理作业。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **安全模式** - 选择“Windows 身份验证”或“混合模式身份验证”用于安装。  
   
  **Windows 主体设置** - 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的早期版本中，Windows Builtin\Administrator 本地组放入了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 服务器角色中，有效授予了 Windows 管理员对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的访问权限。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的 sysadmin 服务器角色中未设置 Builtin\Administrator 组， 而是改为由您在安装过程中为新安装显式设置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员。  

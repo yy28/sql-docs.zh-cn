@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupset
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: 70
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 929126a397db75729002566a25a1d2d9907d50c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7b5bf5ce20678845111a1f410739674c50c7bb61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596156"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -106,7 +102,7 @@ ms.locfileid: "43073671"
 |**encryptor_thumbprint**|**varbinary(20)**|可用于在数据库中查找证书或非对称密钥的加密程序的指纹。 在备份未加密的情况下，此值为 NULL。|  
 |**encryptor_type**|**nvarchar(32)**|使用的加密程序的类型：证书或非对称密钥。 . 在备份未加密的情况下，此值为 NULL。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  RESTORE VERIFYONLY FROM*备份设备*WITH LOADHISTORY 使用填充的列**backupmediaset**介质集标头中的相应值的表。  
   
  若要减少此表中和其他备份和历史记录表中的行数，请执行[sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)存储过程。  

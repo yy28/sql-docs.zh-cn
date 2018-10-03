@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267583"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118967"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>查看数据刷新历史记录 (PowerPivot for SharePoint)
   数据刷新历史记录用于记录 Excel 工作簿中 PowerPivot 数据的所有数据刷新活动。 将根据您提供的计划，对 SharePoint 场中的 Analysis Services 服务器实例执行数据刷新操作。 默认情况下，数据刷新历史记录将保留一年时间。 但是，场管理员可以为使用情况和事件历史记录指定不同的保持策略，以确定将数据刷新记录保留多长时间。  

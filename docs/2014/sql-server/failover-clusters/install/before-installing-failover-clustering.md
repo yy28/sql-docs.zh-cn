@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 137
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116443"
 ---
 # <a name="before-installing-failover-clustering"></a>安装故障转移群集前的准备工作
   安装 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集之前，必须选择运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的硬件和操作系统。 还必须配置 Windows Server 故障转移群集 (WSFC)，检查网络和安全性，并了解将在故障转移群集上运行的其他软件的注意事项。  
@@ -194,12 +191,12 @@ ms.locfileid: "37268153"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] （64 位） X64<sup>1</sup>|是|是|是<sup>2</sup>|是<sup>2</sup>|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|是|是|是 <sup>2</sup>|是 <sup>2</sup>|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|是|是|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|是|是|是|是|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|是|是|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] （64 位） X64<sup>1</sup>|用户帐户控制|用户帐户控制|是<sup>2</sup>|是<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise（32 位）|用户帐户控制|用户帐户控制|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（64 位）|用户帐户控制|用户帐户控制|是 <sup>2</sup>|是 <sup>2</sup>|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer（32 位）|用户帐户控制|用户帐户控制|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（64 位）|用户帐户控制|是|是|用户帐户控制|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard（32 位）|用户帐户控制|用户帐户控制|||  
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在 WOW 模式下不支持群集。 这包括从最初安装在 WOW 中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集的早期版本进行升级。 对于这种情况，只能选择通过并行安装新版本并迁移进行升级。  
   

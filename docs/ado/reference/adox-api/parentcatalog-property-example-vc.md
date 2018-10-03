@@ -1,32 +1,29 @@
 ---
-title: ParentCatalog 属性示例 （VC + +） |Microsoft 文档
+title: ParentCatalog 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686e8a9dff329f4082c83af83d25855d4b30e2f2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6df31a3de47ca9e8e792258a7123c8b20e7a35ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823086"
 ---
-# <a name="parentcatalog-property-example-vc"></a>ParentCatalog 属性示例 （VC + +）
-下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问提供程序特定属性，然后追加到目录的表。 该属性是**AutoIncrement**，这将在 Microsoft Jet 数据库中创建 AutoIncrement 字段。  
+# <a name="parentcatalog-property-example-vc"></a>ParentCatalog 属性示例 (VC++)
+下面的代码演示如何使用[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)属性来访问特定于提供程序的属性，然后将一个表追加到一个目录。 该属性是**AutoIncrement**，Microsoft Jet 数据库中创建一个自动递增字段。  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  

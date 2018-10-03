@@ -1,12 +1,10 @@
 ---
-title: sys.dm_server_registry (Transact SQL) |Microsoft 文档
+title: sys.dm_server_registry (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_registry_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_registry dynamic management view
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4207ee898acec0d0f5f2f00594835ffcef40e9d1
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467254"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788615"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +34,12 @@ ms.locfileid: "34467254"
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|注册表项名称。 可以为 Null。|  
-|value_name|**nvarchar(256)**|项值名称。 这是中所示的项**名称**列在注册表编辑器。 可以为 Null。|  
-|value_data|**sql_variant**|项数据的值。 这是中显示的值**数据**列在注册表编辑器的给定项。 可以为 Null。|  
+|value_name|**nvarchar(256)**|项值名称。 这是在显示的项**名称**列在注册表编辑器。 可以为 Null。|  
+|value_data|**sql_variant**|项数据的值。 这是中所示的值**数据**列在注册表编辑器的给定项。 可以为 Null。|  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
 ## <a name="examples"></a>示例  
@@ -92,7 +89,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SuperSocketNetLib%';  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sys.dm_server_services &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [sys.dm_server_services &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

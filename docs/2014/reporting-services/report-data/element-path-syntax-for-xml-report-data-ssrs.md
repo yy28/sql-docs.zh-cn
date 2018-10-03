@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238493"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058887"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
   在报表设计器中，可以通过定义元素路径（区分大小写）来指定 XML 数据源中要用于报表的数据。 元素路径指示如何遍历 XML 数据源中的 XML 层次结构节点及其属性。 若要使用默认元素路径，请将数据集查询或 XML `ElementPath` 的 XML `Query` 保留为空。 从 XML 数据源检索数据时，具有文本值的元素节点和元素节点属性将成为结果集中的列。 运行查询时，节点值和属性将成为行数据。 该列在“报表数据”窗格中显示为数据集字段集合。 本主题介绍元素路径语法。  
@@ -70,7 +67,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表总结了元素路径字词。 该表中的示例引用示例 XML 文档 Customers.xml，该文档包含于本主题的“示例”部分中。  
   
 > [!NOTE]  
@@ -99,8 +96,8 @@ XMLLocalName :: =
   
     |订单|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-    |Chair|6|@shouldalert|Bobby|Moore|11|http://www.adventure-works.com|  
-    |表|@shouldalert|2|Bobby|Moore|11|http://www.adventure-works.com|  
+    |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
+    |表|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
     |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
     |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -125,7 +122,7 @@ XMLLocalName :: =
     |订单|Qty|  
     |-----------|---------|  
     |Chair|6|  
-    |表|@shouldalert|  
+    |表|1|  
     |Sofa|2|  
     |EndTables|2|  
   
@@ -133,7 +130,7 @@ XMLLocalName :: =
   
     |Order.ID|FirstName|LastName|ID|  
     |--------------|---------------|--------------|--------|  
-    |@shouldalert|Bobby|Moore|11|  
+    |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
     |8|Crystal|Hu|20|  
     |15|Wyatt|Diaz|33|  

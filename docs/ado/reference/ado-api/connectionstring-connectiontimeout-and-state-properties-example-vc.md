@@ -1,13 +1,11 @@
 ---
-title: 连接属性示例 （VC + +） |Microsoft 文档
+title: 连接属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - ConnectionTimeout property [ADO], VC++ example
 - State property [ADO], VC++ example
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f9e382f7a01a83a0c301b1cf83266950755e441
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3190e622790c1c9e58e26e18c1a963b14db1afab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277046"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655665"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、 ConnectionTimeout 和状态属性示例 （VC + +）
-此示例演示使用的不同方式[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)以打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性设置的连接超时周期，和[状态](../../../ado/reference/ado-api/state-property-ado.md)属性检查连接的状态。 有关运行此过程需要 GetState 函数。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、 ConnectionTimeout 和 State 属性示例 （VC + +）
+此示例演示使用的不同方式[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)以打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)属性来设置连接超时期限，并且[状态](../../../ado/reference/ado-api/state-property-ado.md)属性来检查连接状态。 若要运行此过程需要 GetState 函数。  
   
 > [!NOTE]
->  如果你要连接到的数据源提供程序支持 Windows 身份验证，你应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码连接字符串中的信息。  
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。  
   
 ```  
 // ConnectionStringSampleCpp.cpp  

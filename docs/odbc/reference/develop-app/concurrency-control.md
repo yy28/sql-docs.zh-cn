@@ -1,37 +1,34 @@
 ---
-title: 并发控制 |Microsoft 文档
+title: 并发控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2fd05a84e70b601180ce67a94cbdc4caabf7e37e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d31fc1f929ca60d34e49db135cefd1a8ae7ebc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910312"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831365"
 ---
 # <a name="concurrency-control"></a>并发控制
-*并发*是两个事务能够在同一时间，使用相同的数据和增加的事务隔离通常伴随并发减少。 这是因为事务隔离通常实现锁定的行，并且因为锁定更多的行，可以不会被锁定的行至少暂时阻止的情况下完成更少的事务。 尽管并发减少通常作为用来维护数据库完整性更高事务隔离级别权衡可接受，它可以获得交互式应用程序中的问题就成为与使用游标的高读/写活动。  
+*并发*是两个事务能够一次使用相同的数据和与增加的交易隔离通常并发减少。 这是因为由锁定行，通常实现事务隔离，因为锁定了更多的行，可以不会被锁定的行至少暂时阻止的情况下完成较少的事务。 并发减少通常被认为有必要维护数据库的完整性更高事务隔离级别的权衡，尽管它可以与使用游标的高读/写活动成为交互式应用程序中的问题。  
   
- 例如，假设应用程序执行的 SQL 语句**选择\*从订单**。 它调用**SQLFetchScroll**滚动解决结果设置，并允许用户更新，删除或插入订单。 用户更新、 删除或插入订单后，应用程序提交事务。  
+ 例如，假设应用程序执行 SQL 语句**选择\*从订单**。 它将调用**SQLFetchScroll**滚动结果集和允许用户更新，请删除或插入订单。 用户更新、 删除或插入订单后，应用程序提交事务。  
   
- 事务的隔离级别是否 Repeatable Read，可能-具体取决于实现方式-锁定返回每个行**SQLFetchScroll**。 如果隔离级别，可序列化事务可能会锁定整个 Orders 表。 在任一情况下，事务释放其锁定，仅当提交或回滚。 因此，如果用户耗费大量时间读取订单和更新、 删除很少的时间或将它们插入，事务无法轻松地锁定大量行，使其不可用于其他用户。  
+ 事务隔离级别为 Repeatable Read，如果可能，具体取决于如何实现-锁定返回的每一行**SQLFetchScroll**。 如果隔离级别为 Serializable，事务可能会锁定整个 Orders 表。 在任一情况下，事务仅当提交或回滚时，才释放其锁定。 因此如果花了很多时间读取订单和很短的时间更新、 删除或将它们插入，事务可以轻松地锁定大量行，使其不可用于其他用户。  
   
- 这是问题，即使光标是只读的和应用程序允许用户读取唯一现有订单。 在这种情况下，应用程序提交事务，并在它调用时释放锁， **SQLCloseCursor** （在自动提交模式下） 或**SQLEndTran** （在手动提交模式下）。  
+ 即使游标是只读的并在应用程序允许用户读取唯一现有订单，这是一个问题。 在这种情况下，应用程序提交事务，并释放锁，当它调用**SQLCloseCursor** （在自动提交模式下） 或**SQLEndTran** （在手动提交模式下）。  
   
  本部分包含以下主题。  
   

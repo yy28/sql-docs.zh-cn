@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119734"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集窗体编辑器（“计算”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   在多维数据集设计器的 **“计算”** 选项卡上，可以使用 **“命名集窗体编辑器”** 窗格创建或修改命名集。  
@@ -29,7 +26,7 @@ ms.locfileid: "37291643"
 > [!NOTE]  
 >  此窗格仅显示在窗体视图中。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入命名集的名称。  
   

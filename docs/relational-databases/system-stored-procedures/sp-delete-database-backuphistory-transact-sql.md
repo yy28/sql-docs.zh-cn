@@ -1,14 +1,11 @@
 ---
-title: sp_delete_database_backuphistory (TRANSACT-SQL) |Microsoft 文档
+title: sp_delete_database_backuphistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_backuphistory
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_database_backuphistory
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 64eda53e73aa4765ba1f846f8151c2cad1c05227
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5393a2c9808584cfcc52088ad32f63c8a4ec2562
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241943"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731475"
 ---
 # <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +47,9 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  **sp_delete_database_backuphistory**必须从运行**msdb**数据库。  
   
  此存储过程影响下列表：  
@@ -74,7 +70,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
   
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有 **sysadmin** 固定服务器角色的成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -87,8 +83,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_delete_backuphistory &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_delete_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [备份历史记录和标头信息 (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

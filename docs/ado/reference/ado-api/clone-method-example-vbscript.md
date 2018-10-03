@@ -1,36 +1,33 @@
 ---
-title: 克隆方法示例 (VBScript) |Microsoft 文档
+title: Clone 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276386"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783665"
 ---
-# <a name="clone-method-example-vbscript"></a>克隆方法示例 (VBScript)
-此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立定位记录每个副本的指针。  
+# <a name="clone-method-example-vbscript"></a>Clone 方法示例 (VBScript)
+此示例使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的副本[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，然后允许用户独立地定位记录每个副本的指针。  
   
- 使用下面的示例活动服务器页面 (ASP)。 此示例使用**Northwind**随 Microsoft Access 数据库。 剪切并粘贴到记事本或其他文本编辑器下面的代码，然后将其保存为 CloneVBS.asp。 你可以在任何客户端浏览器中查看的结果。  
+ 使用下面的示例 Active Server Page (ASP)。 此示例使用**Northwind**随 Microsoft Access 数据库。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为 CloneVBS.asp。 你可以在任何客户端浏览器中查看结果。  
   
- 若要执行该示例，请将行更改`RsCustomerList.Source = "Customers"`到`RsCustomerList.Source = "Products"`进行计数较大的表。  
+ 若要进行的示例，请将行更改`RsCustomerList.Source = "Customers"`到`RsCustomerList.Source = "Products"`进行计数更大的表。  
   
 ```  
 <!-- BeginCloneVBS -->  

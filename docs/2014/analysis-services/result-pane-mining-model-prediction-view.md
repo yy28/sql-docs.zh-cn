@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63fc7eff1a4ae3544fb82f0e7abb88e2fb25d656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071177"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>“结果”窗格（“挖掘模型预测”视图）
   **“结果”** 窗格显示在预测查询生成器的 **“设计”** 视图中设计的数据挖掘预测查询的结果。 您可以将结果网格中的所选内容或整个网格复制到剪贴板。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **切换到查询设计视图**  
  单击此项可以在“设计”、“查询”和“结果”窗格之间切换。  
   

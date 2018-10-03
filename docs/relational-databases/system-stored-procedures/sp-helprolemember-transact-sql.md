@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprolemember_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7e59f3c4b97beaa700fab07a66d60ddb447dcd6
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745265"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**成员名称**|**sysname**|成员的名称**数据库角色。**|  
 |**MemberSID**|**varbinary(85)**|安全标识符**成员名称。**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果数据库包含嵌套的角色， **MemberName**可能是角色的名称。 **sp_helprolemember**不显示通过嵌套角色获取的成员身份。 例如，如果 User1 是 Role1 的成员，而 Role1 是 Role2 的成员，则 `EXEC sp_helprolemember 'Role2'` 将返回 Role1，而不是 Role1 的成员（在这个示例中为 User1）。 若要返回嵌套的成员身份，必须执行**sp_helprolemember**重复的每个嵌套角色。  
   
  使用**sp_helpsrvrolemember**显示固定的服务器角色的成员。  

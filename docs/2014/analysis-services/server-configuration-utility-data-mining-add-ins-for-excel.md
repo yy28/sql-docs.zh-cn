@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae026e24210385a24b53f9ddf0cf1533a0e27e40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178924"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069627"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>服务器配置实用工具（Excel 数据挖掘外接程序）
   在安装 Excel 数据挖掘外接程序时，还会安装服务器配置实用工具，当您打开外接程序时将首次运行该工具。本主题说明如何使用该实用工具连接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的实例并设置使用数据挖掘模型的数据库。  

@@ -1,41 +1,38 @@
 ---
-title: ODBC 64 位信息 |Microsoft 文档
+title: ODBC 64-Bit 信息 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 62497d2249131db94d2169e6138a67ee48e73a34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677725"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 位信息
-从 Windows Server 2003 开始，Microsoft 操作系统具有支持的 64 位 ODBC 库。 ODBC 标头和库首次发布与 MDAC 2.7 SDK 包含以允许程序员可以轻松地写入新的 64 位平台的代码的更改。 通过确保你的代码使用下面列出的 ODBC 定义类型，可以编译为 64 位和 32 位平台的两个基于相同的源代码 **_WIN64**或**WIN32**宏。  
+从 Windows Server 2003 开始，Microsoft 操作系统必须支持 64 位 ODBC 库。 ODBC 标头和库首次随 MDAC 2.7 SDK 包含更改，以允许编程人员能够轻松地编写新的 64 位平台的代码。 通过确保您的代码使用下面列出的定义的 ODBC 类型，可以编译为 64 位和 32 位平台基于相同的源代码 **_WIN64**或**WIN32**宏。  
   
- 有多个适用于 64 位处理器进行编程时，需要注意的事项：  
+ 有几个事项需要适用于 64 位处理器进行编程时请记住：  
   
--   尽管指针的大小已从 4 个字节更改为 8 个字节，4 字节值仍是整数和长型值。 类型**INT64**和**UINT64**已定义为 8 字节整数。 新的 ODBC 类型**SQLLEN**和**SQLULEN**在 ODBC 标头文件中以定义**INT64**和**UINT64**时 **_WIN64**已定义。  
+-   尽管的大小已从 4 个字节更改为 8 个字节，4 字节值仍是指针的整数和长型值。 类型**INT64**并**UINT64**已定义为 8 字节整数。 新的 ODBC 类型**SQLLEN**并**SQLULEN**作为 ODBC 头文件中定义**INT64**并**UINT64**时 **_WIN64**已定义。  
   
--   ODBC 中的多个函数声明为采用指针参数中。 在 32 位 ODBC 参数定义为指针通常用于将一个整数值或指针传递到具体取决于调用的上下文缓冲区。 这是，当然，可能因为，指针和整数具有相同的大小。 在 64 位 Windows 中，这不是这样。  
+-   在 ODBC 中的多个函数声明为采用指针参数中。 在 32 位 ODBC 参数定义为指针通常用于将一个整数值或指针传递给具体取决于调用的上下文缓冲区。 这是，当然，可能由于该指针和整数具有相同的大小。 在 64 位 Windows 中并非如此。  
   
--   某些已使用以前定义的 ODBC 函数**SQLINTEGER**和**SQLUINTEGER**适当为使用新的位置已更改参数**SQLLEN**和**SQLULEN** typedef。 在下一步的部分中，函数声明更改列出了这些更改。  
+-   使用以前定义的某些 ODBC 函数**SQLINTEGER**并**SQLUINTEGER**已更改参数在适当的使用新**SQLLEN**和**SQLULEN** typedef。 在下一步的部分中，函数声明更改列出了这些更改。  
   
--   其中一些可通过各种设置描述符字段**SQLSet**和**SQLGet**函数已更改，以容纳 64 位值，而有些则是仍是 32 位值。 请确保使用适当的大小的变量时设置和检索这些字段。 详细信息字段已更改的哪些描述符下列出函数声明的更改。  
+-   可以通过各种设置的描述符字段的一些**SQLSet**并**SQLGet**函数已更改，以容纳 64 位的值，而有些则是还是 32 位值。 请确保使用适当的大小的变量时设置和检索这些字段。 在函数声明更改列出的描述符字段已更改的详细信息。  
   
-## <a name="function-declaration-changes"></a>函数声明更改  
- 64 位编程已经更改了以下函数签名。 以粗体项是不同的特定参数。  
+## <a name="function-declaration-changes"></a>函数声明的更改  
+ 64 位编程的情况下，以下函数签名已更改。 以粗体文本的项是不同的特定参数。  
   
 ```  
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
@@ -116,7 +113,7 @@ SQLSetStmtOption (SQLHSTMT StatementHandle, SQLUSMALLINT Option,
 ```  
   
 ## <a name="changes-in-sql-data-types"></a>SQL 数据类型中的更改  
- 在 32 位仅; 仍支持以下的四个 SQL 类型未定义为 64 位编译器。 这些类型不能再用于 MDAC 2.7; 中的任何参数在 64 位平台上，使用这些类型将导致编译器失败。  
+ 仍在 32 位; 仅支持以下四种 SQL 类型未定义为 64 位编译器。 这些类型不能再用于 MDAC 2.7; 中的任何参数在 64 位平台上，使用这些类型会导致编译器失败。  
   
 ```  
 #ifdef WIN32   
@@ -127,7 +124,7 @@ typedef SQLLEN SQLROWOFFSET;
 #endif  
 ```  
   
- SQLSETPOSIROW 的定义已更改为 32 位和 64 位编译器：  
+ SQLSETPOSIROW 的定义已更改为 32 位和 64 位编译器中：  
   
 ```  
 #ifdef _WIN64   
@@ -137,7 +134,7 @@ typedef UINT64 SQLSETPOSIROW;
 #endif  
 ```  
   
- SQLLEN 和 SQLULEN 的定义已更改为 64 位编译器：  
+ 为 SQLLEN 和 sqlulen 生成的定义已更改为 64 位编译器：  
   
 ```  
 #ifdef _WIN64   
@@ -149,7 +146,7 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- 尽管 SQL_C_BOOKMARK 2.0 客户端上的 64 位编译器已弃用在 ODBC 3.0 中，此值已更改：  
+ 尽管 SQL_C_BOOKMARK 为 2.0 客户端上的 64 位编译器已弃用在 ODBC 3.0 中，此值已更改：  
   
 ```  
 #ifdef _WIN64   
@@ -159,18 +156,18 @@ typedef UINT64 SQLULEN;
 #endif  
 ```  
   
- 书签类型中的较新的标头以不同方式定义：  
+ 书签类型中的较新的标头以不同的方式定义：  
   
 ```  
 typedef SQLULEN BOOKMARK;  
 ```  
   
 ## <a name="values-returned-from-odbc-api-calls-through-pointers"></a>从通过指针的 ODBC API 调用返回值  
- 作为输入参数将下列 ODBC 函数调用从驱动程序返回数据的缓冲区的指针。 由其他函数的输入参数确定的上下文和返回的数据的含义。 在某些情况下，这些方法现在可能会返回而不是典型的 32 位 （4 字节） 整数值的 64 位 （8 字节整数） 值。 这种情况下如下所示：  
+ 作为输入参数采取以下 ODBC 函数调用到从驱动程序返回数据的缓冲区指针。 由其他函数的输入参数确定的上下文和返回的数据的含义。 在某些情况下，这些方法可能会立即返回而不是典型的 32 位 （4 字节） 整数值的 64 位 （8 字节整数） 值。 这种情况下是按如下所示：  
   
  **SQLColAttribute**  
   
- 当*FieldIdentifier*参数具有以下值之一，在返回 64 位值 **NumericAttribute*:  
+ 当*FieldIdentifier*参数具有以下值之一，在返回的 64 位值 **NumericAttribute*:  
   
  SQL_DESC_AUTO_UNIQUE_VALUE  
   
@@ -208,7 +205,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLColAttributes**  
   
- 当*fDescType*参数具有以下值之一，在返回 64 位值 **pfDesc*:  
+ 当*fDescType*参数具有以下值之一，在返回的 64 位值 **pfDesc*:  
   
  SQL_COLUMN_COUNT  
   
@@ -232,9 +229,9 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectAttr**  
   
- 当*属性*参数具有以下值之一，64 位，则返回值中*值*:  
+ 当*特性*参数具有以下值之一，64 位返回的值是*值*:  
   
- SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE 设置  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -244,13 +241,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetConnectOption**  
   
- 当*属性*参数具有以下值之一，64 位，则返回值中*值*:  
+ 当*特性*参数具有以下值之一，64 位返回的值是*值*:  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLGetDescField**  
   
- 当*FieldIdentifier*参数具有以下值之一，在返回 64 位值 **ValuePtr*:  
+ 当*FieldIdentifier*参数具有以下值之一，在返回的 64 位值 **ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -274,7 +271,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetDiagField**  
   
- 当*DiagIdentifier*参数具有以下值之一，在返回 64 位值 **DiagInfoPtr*:  
+ 当*DiagIdentifier*参数具有以下值之一，在返回的 64 位值 **DiagInfoPtr*:  
   
  SQL_DIAG_CURSOR_ROW_COUNT  
   
@@ -284,7 +281,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetInfo**  
   
- 当*信息类型*参数具有以下值之一，在返回 64 位值 **InfoValuePtr*:  
+ 当*信息类型*参数具有以下值之一，在返回的 64 位值 **InfoValuePtr*:  
   
  SQL_DRIVER_HDBC  
   
@@ -292,7 +289,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_DRIVER_HLIB  
   
- 当*信息类型*已为以下两个值 **InfoValuePtr*是 64 位上输入和输出：  
+ 当*信息类型*具有以下 2 个值之一 **InfoValuePtr*为 64 位上输入和输出：  
   
  SQL_DRIVER_HDESC  
   
@@ -300,13 +297,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtAttr**  
   
- 当*属性*参数具有以下值之一，在返回 64 位值 **ValuePtr*:  
+ 当*特性*参数具有以下值之一，在返回的 64 位值 **ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE 设置  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -368,7 +365,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLGetStmtOption**  
   
- 当*选项*参数具有以下值之一，在返回 64 位值 **值*:  
+ 当*选项*参数具有以下值之一，在返回的 64 位值 **值*:  
   
  SQL_KEYSET_SIZE  
   
@@ -380,9 +377,9 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectAttr**  
   
- 当*属性*参数具有以下值之一，64 位值传递中*值*:  
+ 当*特性*参数具有以下值之一，为 64 位值传入*值*:  
   
- SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE 设置  
   
  SQL_ATTR_ENLIST_IN_DTC  
   
@@ -392,13 +389,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetConnectOption**  
   
- 当*属性*参数具有以下值之一，64 位值传递中*值*:  
+ 当*特性*参数具有以下值之一，为 64 位值传入*值*:  
   
  SQL_ATTR_QUIET_MODE  
   
  **SQLSetDescField**  
   
- 当*FieldIdentifier*参数具有以下值之一，64 位值传递中*ValuePtr*:  
+ 当*FieldIdentifier*参数具有以下值之一，为 64 位值传入*ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -422,13 +419,13 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtAttr**  
   
- 当*属性*参数具有以下值之一，64 位值传递中*ValuePtr*:  
+ 当*特性*参数具有以下值之一，为 64 位值传入*ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
  SQL_ATTR_APP_ROW_DESC  
   
- SQL_ATTR_ASYNC_ENABLE  
+ SQL_ATTR_ASYNC_ENABLE 设置  
   
  SQL_ATTR_CONCURRENCY  
   
@@ -490,7 +487,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- 当*选项*参数具有以下值之一，64 位值传递中*值*:  
+ 当*选项*参数具有以下值之一，为 64 位值传入*值*:  
   
  SQL_KEYSET_SIZE  
   
@@ -500,5 +497,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [ODBC 简介](../../odbc/reference/introduction-to-odbc.md)

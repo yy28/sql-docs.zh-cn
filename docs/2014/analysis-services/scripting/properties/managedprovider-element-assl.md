@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ManagedProvider Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7b29b4db3d2acf34e684d89588ef5f1e2a935aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101627"
 ---
 # <a name="managedprovider-element-assl"></a>ManagedProvider 元素 (ASSL)
   包含派生自的元素使用的托管访问接口名称[数据源](../data-type/datasource-data-type-assl.md)数据类型。  
@@ -49,7 +46,7 @@ ms.locfileid: "37180844"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -57,9 +54,9 @@ ms.locfileid: "37180844"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DataSource](../data-type/datasource-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果数据源使用托管访问接口，则 `ManagedProvider` 元素将包含该托管访问接口的名称。  
   
 ## <a name="see-also"></a>请参阅  

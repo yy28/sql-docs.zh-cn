@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075127"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用对象资源管理器详细信息监视可用性组 (SQL Server Management Studio)
   本主题说明如何通过使用 **的** “对象资源管理器详细信息” [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 窗格来监视和管理现有的 AlwaysOn 可用性组、可用性副本和可用性数据库。  

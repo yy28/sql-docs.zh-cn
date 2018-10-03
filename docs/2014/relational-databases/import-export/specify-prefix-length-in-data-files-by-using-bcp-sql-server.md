@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058757"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定数据文件中的前缀长度 (SQL Server)
   当将本机格式的数据批量导出到数据文件中时，为了使文件存储空间最为紧凑， **bcp** 命令会在每个字段前面使用一个或多个字符来指明字段长度。 这些字符称为“长度前缀字符” 。  
@@ -64,21 +61,21 @@ ms.locfileid: "37212897"
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
 |`image` <sup>1</sup>|4|4|4|4|  
-|`datetime`|0|@shouldalert|0|@shouldalert|  
-|`smalldatetime`|0|@shouldalert|0|@shouldalert|  
-|`decimal`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|`numeric`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|`float`|0|@shouldalert|0|@shouldalert|  
-|`real`|0|@shouldalert|0|@shouldalert|  
-|`int`|0|@shouldalert|0|@shouldalert|  
-|`bigint`|0|@shouldalert|0|@shouldalert|  
-|`smallint`|0|@shouldalert|0|@shouldalert|  
-|`tinyint`|0|@shouldalert|0|@shouldalert|  
-|`money`|0|@shouldalert|0|@shouldalert|  
-|`smallmoney`|0|@shouldalert|0|@shouldalert|  
-|`bit`|0|@shouldalert|0|@shouldalert|  
-|`uniqueidentifier`|@shouldalert|@shouldalert|0|@shouldalert|  
-|`timestamp`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|`datetime`|0|1|0|1|  
+|`smalldatetime`|0|1|0|1|  
+|`decimal`|1|1|1|1|  
+|`numeric`|1|1|1|1|  
+|`float`|0|1|0|1|  
+|`real`|0|1|0|1|  
+|`int`|0|1|0|1|  
+|`bigint`|0|1|0|1|  
+|`smallint`|0|1|0|1|  
+|`tinyint`|0|1|0|1|  
+|`money`|0|1|0|1|  
+|`smallmoney`|0|1|0|1|  
+|`bit`|0|1|0|1|  
+|`uniqueidentifier`|1|1|0|1|  
+|`timestamp`|1|1|1|1|  
 |`varchar(max)`|8|8|8|8|  
 |`varbinary(max)`|8|8|8|8|  
 |UDT（用户定义的数据类型）|8|8|8|8|  

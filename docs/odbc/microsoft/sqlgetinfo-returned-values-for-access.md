@@ -1,13 +1,11 @@
 ---
-title: SQLGetInfo 为访问返回值 |Microsoft 文档
+title: 访问的 SQLGetInfo 返回值 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbebc3569c35020b54f2d516d4fde99f14fbd69f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a79e97721f246d47f8fab413be8074836f753cbe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904642"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826255"
 ---
-# <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo 为访问返回值
-下表列出了 C 语言 #defines *fInfoType*自变量和返回的相应值**SQLGetInfo**。 可以通过将列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*自变量。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
+# <a name="sqlgetinfo-returned-values-for-access"></a>Access 的 SQLGetInfo 返回值
+下表列出了 C 语言 #defines *fInfoType*参数和返回的相应值**SQLGetInfo**。 可以通过列出的 C 语言检索此信息 #defines **SQLGetInfo**中*fInfoType*参数。 有关返回的值的详细信息**SQLGetInfo**，请参阅*ODBC 程序员参考*。  
   
 > [!NOTE]  
->  其中**SQLGetInfo**返回一个 32 位位掩码，垂直条 (&#124;) 表示按位 OR。  
+>  其中**SQLGetInfo**返回一个 32 位掩码，垂直条 (&#124;) 表示按位 OR。  
   
 |信息类型|返回的值|  
 |--------------|--------------------|  
@@ -85,9 +82,9 @@ ms.locfileid: "32904642"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用驱动程序关键字|  
+|SQL_DATA_SOURCE_NAME|从 Odbc.ini，DSN 或""如果在 Odbc.ini 中使用 DRIVER 关键字|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
-|SQL_DATABASE_NAME|文件名|  
+|SQL_DATABASE_NAME|File name|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"访问"|  
 |SQL_DBMS_VER|多个值|  

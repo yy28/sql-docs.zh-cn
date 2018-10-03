@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.INSERTFUNCTIONDB.F1
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77045c8ec5b542f8a01829adaa8074724a693092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125934"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>“插入函数”对话框 (SSAS)
   **“插入函数”** 对话框可用于从生成公式时可使用的函数列表中进行选择。 若要从模型设计器访问该对话框，请在各表之上的公式栏中，单击函数 (**fx**) 按钮。 有关如何选择要在公式中使用的函数的详细信息，请参阅“DAX 简介和生成公式”。  
@@ -48,7 +45,7 @@ ms.locfileid: "37159668"
   
  统计  
   
- 文本  
+ Text  
   
 ## <a name="measures-and-formulas"></a>度量值和公式  
  **“插入函数”** 对话框仅在您生成公式时可用。 您可以在计算列或者数据透视表或数据透视图中创建计算。 您生成的明确用于数据透视表中的公式也称作“度量值” 。 有关详细信息，请参阅[创建计算列（SSAS 表格）](tabular-models/ssas-calculated-columns-create-a-calculated-column.md)和[创建和管理度量值（SSAS 表格）](tabular-models/measures-ssas-tabular.md)。  

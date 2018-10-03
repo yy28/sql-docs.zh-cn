@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StorageLocation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45ba999d7cd7de44eaf6a9abaec55ff796dcc800
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079267"
 ---
 # <a name="storagelocation-element-assl"></a>StorageLocation 元素 (ASSL)
   包含文件系统中的父元素内容存储位置。  
@@ -55,18 +52,18 @@ ms.locfileid: "37163528"
   
 |祖先或父级|默认值|  
 |------------------------|-------------------|  
-|[Cube](../objects/cube-element-assl.md)|InclusionThresholdSetting|  
+|[Cube](../objects/cube-element-assl.md)|None|  
 |[度量值组](../objects/group-element-assl.md)|`StorageLocation` 父元素的 `Cube` 的值。|  
-|分区[](../objects/partition-element-assl.md)|`StorageLocation` 父元素的 `MeasureGroup` 的值。|  
+|[分区](../objects/partition-element-assl.md)|`StorageLocation` 父元素的 `MeasureGroup` 的值。|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[多维数据集](../objects/cube-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[分区](../objects/partition-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`StorageLocation`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.Cube>， <xref:Microsoft.AnalysisServices.MeasureGroup>，和<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>请参阅  

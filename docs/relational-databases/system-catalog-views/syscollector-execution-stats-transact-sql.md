@@ -1,14 +1,11 @@
 ---
-title: syscollector_execution_stats (TRANSACT-SQL) |Microsoft 文档
+title: syscollector_execution_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_stats
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - syscollector_execution_stats view
 - data collector view
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fef0f1da7d6ec8d1a66525e3b985c61fe52991
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b89823af1295b329046395a8f3c345401ca61805
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779715"
 ---
 # <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +41,10 @@ ms.locfileid: "33221028"
 |**execution_time_ms**|**int**|完成任务所需的时间（单位为毫秒）。 可以为 Null。|  
 |**log_time**|**datetime**|记录此信息的时间。 不可为 null。|  
   
-## <a name="permissions"></a>权限  
- 需要选择权限**dc_operator**。  
+## <a name="permissions"></a>Permissions  
+ 要求具有 SELECT 权限的**dc_operator**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  

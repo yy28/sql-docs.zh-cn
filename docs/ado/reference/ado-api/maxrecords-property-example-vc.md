@@ -1,32 +1,29 @@
 ---
-title: 最大记录的属性示例 （VC + +） |Microsoft 文档
+title: MaxRecords 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636905"
 ---
-# <a name="maxrecords-property-example-vc"></a>最大记录的属性示例 （VC + +）
-此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含中的 10 成本最高标题***标题***表。  
+# <a name="maxrecords-property-example-vc"></a>MaxRecords 属性示例 (VC++)
+此示例使用[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)以打开[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)包含 10 个最贵的书中***标题***表。  
   
 ## <a name="example"></a>示例  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **按价格的前十个标题：**  
+ **价格的前十个标题：**  
 **但它是用户友好？---22.95**  
-**计算机 Phobic 和非 Phobic 个人： 行为变体---21.59**  
-**洋葱、 Leeks 和蒜蓉： 烹饪地中海地区---20.95 机密**  
-**硅谷---20.00 的密钥**  
-**忙高级管理人员的数据库指南---19.99**  
-**直谈一谈计算机---19.99**  
+**计算机 Phobic 和非恐惧症的个人： 行为变体---21.59**  
+**洋葱、 Leeks 和蒜蓉： 烹饪地中海---20.95 机密**  
+**硅谷---20.00 的秘密**  
+**繁忙主管的数据库指南---19.99**  
+**有关计算机---19.99 直接对话**  
 **硅谷 Gastronomic 将---19.99**  
 **长时间的数据 Deprivation： 四个案例研究---19.99**  
 **寿司，任何人？---14.99**  
-**Buckingham 宫殿厨房---11.95 中的 50 个年**   
+**在 Buckingham 店厨房---11.95 五十年**   
 ## <a name="see-also"></a>请参阅  
- [最大记录属性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
+ [MaxRecords 属性 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

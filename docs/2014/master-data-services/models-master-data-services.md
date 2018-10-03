@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b7d295a5f9eac9c6a333618dc62d53cbf8294f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e4abc0b318af1ad13856d4ab6f1ca13e011d76a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088797"
 ---
 # <a name="models-master-data-services"></a>模型 (Master Data Services)
   模型是 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中最高级别的数据组织。 模型定义了您的主数据管理解决方案中的数据结构。 模型包含以下对象：  

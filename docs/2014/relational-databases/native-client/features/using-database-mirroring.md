@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database mirroring [SQL Server], interoperability
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058027"
 ---
 # <a name="using-database-mirroring"></a>使用数据库镜像
     
@@ -41,7 +38,7 @@ ms.locfileid: "40395058"
   
  生产服务器实例称为“主体服务器”，而备用服务器实例称为“镜像服务器”，两个实例相互通信。 主体服务器和镜像服务器在数据库镜像会话中充当伙伴。 如果主体服务器失败，镜像服务器可以通过称为“故障转移”的过程将其数据库转为主体数据库。 例如，Partner_A 和 Partner_B 是两个伙伴服务器，主体数据库最初位于作为主体服务器的 Partner_A 中，镜像数据库位于作为镜像服务器的 Partner_B 中。 如果 Partner_A 脱机，Partner_B 上的数据库可以进行故障转移，成为当前的主体数据库。 当 Partner_A 重新加入镜像会话时，该服务器变为镜像服务器，并且其数据库变为镜像数据库。  
   
- {0}备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。{0} 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
+ 备用数据库镜像配置提供不同级别的性能和数据安全，并支持不同形式的故障转移。 有关详细信息，请参阅[数据库镜像 (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)。  
   
  指定镜像数据库名称时可以使用别名。  
   

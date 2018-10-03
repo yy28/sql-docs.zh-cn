@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (MeasureGroupAttribute)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfe3b0cda9061e18b9a275eac98e02ed90453adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087903"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Type 元素 (MeasureGroupAttribute) (ASSL)
   包含的类型[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)元素。  
@@ -59,9 +56,9 @@ ms.locfileid: "37254849"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  

@@ -1,27 +1,24 @@
 ---
-title: 创建和删除视图和过程使用 ExtendedAnsiSQL |Microsoft 文档
+title: 创建和删除视图和过程使用 ExtendedAnsiSQL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - extendedANSISQL [ODBC], views and procedures
 ms.assetid: 3e67627e-dbf2-4f38-b8bb-956c7dec9ad6
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 346242a202c2ccbdbab3f929ca87f8bce79b7951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2d664b5f66b742b02404dc35952d02b03b8c7103
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32897822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782145"
 ---
-# <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>创建和删除视图和过程使用 ExtendedAnsiSQL
-启用 ExtendedAnsiSQL 标志后，Jet 4.0 支持创建和删除视图和通过 SQL 过程的功能。 这些视图和过程不会通过访问可见。
+# <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>使用 ExtendedAnsiSQL 创建和删除视图和过程
+启用 ExtendedAnsiSQL 标志后，Jet 4.0 支持创建和删除视图和过程通过 SQL 功能。 这些视图和过程将不会显示通过访问。

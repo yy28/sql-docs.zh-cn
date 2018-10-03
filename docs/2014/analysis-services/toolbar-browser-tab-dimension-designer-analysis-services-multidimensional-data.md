@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb561ed65f629879f48aa8c47cf470dfecedff74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192369"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091247"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“工具栏”** 窗格执行 **维度设计器** 的 **“浏览器”** 选项卡上的常规操作。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **处理**  
  单击此项可打开“处理”对话框，并处理所选维度。  
   

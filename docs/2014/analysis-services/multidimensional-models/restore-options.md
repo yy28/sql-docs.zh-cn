@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], restoring
 - restoring databases [Analysis Services]
 ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d12a3491ba2eade07f780bb1941126dcad24426
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 348e3254cb31cfef72e40b35ac74cbe9cf578834
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060357"
 ---
 # <a name="restore-options"></a>还原选项
   可通过多种方式还原 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，但都要求您具有服务器计算机和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的管理员权限。 若要还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库，可在 **中打开** “还原数据库” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]对话框，选择相应的选项配置，再从该对话框运行还原。 也可以使用文件中已指定的设置创建一个脚本，然后，可保存该脚本，并按需要的频率运行。 这样一来，就可使用 XMLA 来完成还原，如下所述。  

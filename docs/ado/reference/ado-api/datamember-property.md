@@ -1,13 +1,11 @@
 ---
-title: DataMember 属性 |Microsoft 文档
+title: DataMember 属性 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d194cea2dd1a7bbabf8acd2e9d89945772eddd31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7a1bb2d55fbf4e8d2030c612a1d000b93ca1110
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603705"
 ---
 # <a name="datamember-property"></a>DataMember 属性
 指示将从检索的数据成员的名称[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)所引用的[数据源](../../../ado/reference/ado-api/datasource-property-ado.md)属性。  
@@ -32,12 +29,12 @@ ms.locfileid: "35277406"
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**字符串**值。 名称不区分大小写。  
   
-## <a name="remarks"></a>Remarks  
- 此属性用于与数据环境中创建数据绑定控件。 数据环境负责维护的包含的数据 （数据源） 的集合命名对象 （数据成员） 将表示为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
+## <a name="remarks"></a>备注  
+ 此属性用于数据环境下创建数据绑定控件。 数据环境负责维护数据 （数据源） 包含集合的命名对象 （数据成员） 将表示为[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。  
   
- **DataMember**和**数据源**属性必须一起使用。  
+ **DataMember**并**数据源**属性必须一起使用。  
   
- **DataMember**属性确定指定的对象**数据源**属性将表示为**记录集**对象。 **记录集**对象必须先关闭，然后设置此属性。 如果生成错误**DataMember**之前未设置属性**数据源**属性，或者如果**DataMember**中指定的对象无法识别名**数据源**属性。  
+ **DataMember**属性确定指定的对象**数据源**属性将表示为**记录集**对象。 **记录集**之前设置此属性，必须关闭对象。 如果生成错误**DataMember**属性未设置之前**数据源**属性，或者，如果**DataMember**中指定的对象无法识别名称**数据源**属性。  
   
 ## <a name="usage"></a>用法  
   

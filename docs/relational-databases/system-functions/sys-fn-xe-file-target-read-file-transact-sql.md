@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29a0eda47d510292d657bfdb7912a9fe8940b023
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635725"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -83,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|适用范围：[!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br />日期和事件的时间 （UTC 时区）。 不可为 null。|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  读取大型结果集通过执行**sys.fn_xe_file_target_read_file**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可能会导致错误。 使用**结果保存到文件**模式 (**Ctrl + Shift + F**) 将大型结果集导出到文件并转而读取具有另一种工具的文件。  
   
 ## <a name="permissions"></a>Permissions  

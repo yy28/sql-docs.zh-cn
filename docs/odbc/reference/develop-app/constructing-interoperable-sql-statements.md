@@ -1,35 +1,32 @@
 ---
-title: 构造可互操作的 SQL 语句 |Microsoft 文档
+title: 构造交互 SQL 语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 257440b78a466178d09e954e9aed5b9385325b8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809165"
 ---
-# <a name="constructing-interoperable-sql-statements"></a>构造可互操作的 SQL 语句
-如前面的部分中所述，可互操作的应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题面临的可互操作的应用程序。 例如，应用程序作用是什么如果它想要使用包含的功能，如外部联接中，不支持的所有数据源？  
+# <a name="constructing-interoperable-sql-statements"></a>构造交互 SQL 语句
+如前面各节中所述，可互操作应用程序应使用 ODBC SQL 语法。 除了使用此语法，但是，许多其他问题所面临的可互操作应用程序。 例如，有什么作用应用程序？ 想要使用的所有数据源不都支持的功能，如外部联接  
   
- 此时，应用程序编写器必须进行有关哪些语言功能是必需的这是可选的一些决策事项。 在大多数情况下，如果特定的驱动程序不支持的功能所需的应用程序，应用程序只需拒绝使用该驱动程序运行。 但是，如果是一个可选功能，应用程序可以解决该功能。 例如，它可能会禁用允许要使用该功能的用户界面中的这些部分。  
+ 此时，应用程序编写器必须进行一些有关哪些语言功能是必需，哪些是可选的决策。 在大多数情况下，如果特定的驱动程序不支持一项功能所需的应用程序，该应用程序只需拒绝使用该驱动程序运行。 但是，如果该功能是可选的该应用程序可以解决该功能。 例如，它可能会禁用允许要使用该功能的用户界面中的这些部分。  
   
- 若要确定支持的功能，通过调用应用程序启动**SQLGetInfo** SQL_SQL_CONFORMANCE 选项。 SQL 一致性级别为应用程序提供了广泛视图 SQL 支持。 若要优化此视图中，应用程序调用**SQLGetInfo**与任意大量其他选项。 有关这些选项的完整列表，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。 最后， **SQLGetTypeInfo**返回有关所支持的数据源的数据类型的信息。 下列部分列出了大量的可能构造可互操作的 SQL 语句时应用程序应监视的因素。  
+ 若要确定支持哪些功能，通过调用应用程序启动**SQLGetInfo** SQL_SQL_CONFORMANCE 选项。 SQL 一致性级别为应用程序提供了广泛的支持 SQL 视图。 若要优化此视图中，应用程序调用**SQLGetInfo**与任何数目的其他选项。 有关这些选项的完整列表，请参阅[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)函数说明。 最后， **SQLGetTypeInfo**返回有关所支持的数据源的数据类型的信息。 以下各节列出的应用程序构建可互操作的 SQL 语句时应监视可能因素的数量。  
   
  本部分包含以下主题。  
   

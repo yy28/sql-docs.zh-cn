@@ -1,34 +1,31 @@
 ---
-title: Internet 发布方案 |Microsoft 文档
+title: Internet 发布方案 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, Internet publishing
 - publishing to Internet [ADO]
 - Internet publishing [ADO]
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4fa78abc00e38c03b0d951e0b837bd4761c8edda
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271716"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602995"
 ---
 # <a name="internet-publishing-scenario"></a>Internet 发布方案
-此代码示例演示如何使用 ADO Microsoft OLE DB Provider for Internet 发布。 在此方案中，你将创建的 Visual Basic 应用程序使用**记录集**，**记录**，和**流**通过发布的对象显示的资源的内容Internet 发布提供程序。  
+此代码示例演示如何适用于 Internet 发布的 Microsoft OLE DB 访问接口使用 ADO。 在此方案中，将创建一个使用的 Visual Basic 应用程序**记录集**，**记录**，并**Stream**与已发布对象，以显示资源的内容Internet 发布提供程序。  
   
- 以下步骤是创建此方案所需的：  
+ 以下步骤是创建此方案所必需的：  
   
 -   [步骤 1：设置 Visual Basic 项目](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: CommandTimeout 属性 (ADO) |Microsoft 文档
+title: CommandTimeout 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1addc5de70e53087cdcbaa77fea87211958cbcdc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c5bb74384e043130ccfe4c3399b363b25d40737c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632155"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 属性 (ADO)
-指示在终止尝试并生成错误之前执行命令时所等待的时间。  
+指示在终止尝试并生成错误之前执行命令时，请等待的时间。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
  设置或返回**长**值，该值指示，以秒为单位，多长时间等待要执行的命令。 默认值为 30。  
   
-## <a name="remarks"></a>Remarks  
- 使用**CommandTimeout**属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象以允许取消[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)方法调用时，由从网络流量或大量服务器使用的延迟。 如果在中设置的间隔**CommandTimeout**之前该命令完成执行，就会出错并 ADO 取消的命令经过的属性。 如果将属性设置为零，ADO 将等待无限期地执行完成。 请确保你编写的代码的支持的提供程序和数据源**CommandTimeout**功能。  
+## <a name="remarks"></a>备注  
+ 使用**CommandTimeout**上的属性[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象或[命令](../../../ado/reference/ado-api/command-object-ado.md)对象，以允许取消[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)方法由于网络流量或大量服务器，请使用从延迟调用。 如果在间隔中设置**CommandTimeout**前该命令完成执行时，出现错误和 ADO 取消的命令经过的属性。 如果将属性设置为零，ADO 将执行完成之前无限期等待。 请确保你编写的代码的支持的提供程序和数据源**CommandTimeout**功能。  
   
- **CommandTimeout**上设置**连接**对象不起任何作用**CommandTimeout**上设置**命令**对象上同一**连接**; 即，**命令**对象的**CommandTimeout**属性不会继承的值**连接**对象的**CommandTimeout**值。  
+ **CommandTimeout**上设置**连接**对象不起任何作用**CommandTimeout**上设置**命令**对象上相同**连接**; 即**命令**对象的**CommandTimeout**属性不会继承的值**连接**对象的**CommandTimeout**值。  
   
  上**连接**对象， **CommandTimeout**后的属性保持为读/写**连接**打开。  
   

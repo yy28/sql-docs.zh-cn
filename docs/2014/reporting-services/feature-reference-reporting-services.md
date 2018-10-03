@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 2.0, F1 help
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c1a0b1b5105c5dc5be5edcd9c43028d4bca8ae2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2cfa74b5f85b17c8f4dca36884943ad283422ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080999"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  

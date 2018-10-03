@@ -1,38 +1,35 @@
 ---
-title: 移动方法示例 (VBScript) |Microsoft 文档
+title: Move 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602515"
 ---
-# <a name="move-method-example-vbscript"></a>移动方法示例 (VBScript)
-此示例使用[移动](../../../ado/reference/ado-api/move-method-ado.md)方法来定位记录指针中，根据用户输入。  
+# <a name="move-method-example-vbscript"></a>Move 方法示例 (VBScript)
+此示例使用[移动](../../../ado/reference/ado-api/move-method-ado.md)方法将记录指针中，基于用户输入。  
   
- 使用下面的示例活动服务器页面 (ASP)。 若要查看此完全正常运行的示例，必须具有源 AdvWorks.mdb （随 SDK 一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑的路径以反映的代码示例中的数据此文件的实际位置。 这是 Microsoft Access 数据库文件。  
+ 使用下面的示例 Active Server Page (ASP)。 若要查看此示例中完全正常运行，必须具有源 AdvWorks.mdb （随 SDK 一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑路径以反映代码示例中的数据此文件的实际位置。 这是 Microsoft Access 数据库文件。  
   
- 使用**查找**找到文件 Adovbs.inc 并将其放置在你打算使用的目录中。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**MoveVBS.asp**。 你可以在任何浏览器中查看的结果。  
+ 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**MoveVBS.asp**。 你可以在任何浏览器中查看结果。  
   
- 请尝试输入字母或非整数若要查看的错误处理工作。  
+ 请尝试输入以字母或非整数以查看错误处理工作。  
   
 ```  
 <!-- BeginMoveVBS -->  

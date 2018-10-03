@@ -1,13 +1,11 @@
 ---
-title: 最大记录属性 (ADO) |Microsoft 文档
+title: MaxRecords 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,25 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - MaxRecords property [ADO]
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b83fad35d6bc237e932dad9ed40ab2ae6f4ea279
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac5097a8692ed7a9e6566707354112547c5a619c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789395"
 ---
-# <a name="maxrecords-property-ado"></a>最大记录属性 (ADO)
-指示要返回到的记录的最大[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从查询。  
+# <a name="maxrecords-property-ado"></a>MaxRecords 属性 (ADO)
+指示要返回到的记录的最大数[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)从查询。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 设置或返回**长**值，表示要返回的记录的最大数目。 默认值为零 (**0**)，这意味着没有限制。  
+ 设置或返回**长**值，该值指示要返回的记录的最大数。 默认值为零 (**0**)，这意味着没有限制。  
   
-## <a name="remarks"></a>Remarks  
- 使用**MaxRecords**属性可限制的提供程序从数据源返回的记录数。 此属性的默认设置为零，这意味着该提供程序返回所有请求的记录。  
+## <a name="remarks"></a>备注  
+ 使用**MaxRecords**属性来限制从数据源的提供程序返回的记录数。 此属性的默认设置为零，这意味着访问接口将返回所有请求的记录。  
   
  **MaxRecords**属性为读/写时**记录集**打开时为已关闭，只读的。  
   
@@ -41,5 +38,5 @@ ms.locfileid: "35279236"
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>请参阅  
- [最大记录的属性示例 (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
+ [MaxRecords 属性示例 (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
  [MaxRecords 属性示例 (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   

@@ -1,35 +1,29 @@
 ---
-title: 连接到 Azure SQL DB (AccessToSQL) |Microsoft 文档
+title: 连接到 Azure SQL DB (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Connect to SQL Azure dialog box
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d61eab04dffa1723c6d77a118033eee535a917e2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 57a745385de80a3040897310ddc5b43b1301ea86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773443"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717475"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>连接到 Azure SQL DB (AccessToSQL)
-用于连接到 SQL Azure 对话框连接到你想要迁移的 SQL Azure 数据库。  
+用于连接到 SQL Azure 对话框的连接到你想要迁移的 SQL Azure 数据库。  
   
-若要访问此对话框中，在**文件**菜单上，选择**连接到 SQL Azure**。 如果你以前连接，则命令是**重新连接到 SQL Azure。**  
+若要访问此对话框，请在**文件**菜单中，选择**连接到 SQL Azure**。 如果你之前已连接，则命令是**重新连接到 SQL Azure。**  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **服务器名称**  
   
 选择或输入用于连接到 SQL Azure 服务器名称。  
@@ -39,7 +33,7 @@ ms.locfileid: "34773443"
 选择中，输入或**浏览**数据库名称。  
   
 > [!IMPORTANT]  
-> 在 SQL Azure 中访问的 SSMA 不支持对 master 数据库的连接。  
+> 适用于 Access 的 SSMA 不支持在 SQL Azure 中的对 master 数据库的连接。  
   
 **用户名**  
   
@@ -56,17 +50,17 @@ SSMA 建议加密的连接到 SQL Azure。
 ## <a name="create-azure-database"></a>创建 Azure 数据库  
 若要创建新的 azure 数据库，请执行以下步骤  
   
-1.  单击位于在连接到 SQL Azure 对话框中的浏览按钮  
+1.  单击浏览按钮显示在连接到 SQL Azure 对话框的  
   
-2.  如果没有数据库，会出现两个菜单项  
+2.  如果不存在数据库，两个菜单项显示  
   
-    1.  **（未找到数据库）** 这将禁用且灰出所有的时间  
+    1.  **（找不到数据库）** 的已禁用，所有时间会变灰  
   
-    2.  **创建新的数据库**其始终处于启用状态，使用户可以在 SQL Azure 帐户上创建新的 azure 数据库。 单击此菜单项，在创建 azure 数据库对话框中是否存在与数据库名称和大小。  
+    2.  **创建新的数据库**始终启用的使用户可以在 SQL Azure 帐户上创建新的 azure 数据库。 单击此菜单项，创建 azure 数据库对话框是包含数据库名称和大小。  
   
-3.  在创建数据库时，这两个参数作为输入提供。  
+3.  在创建数据库时，这两个参数是作为输入提供。  
   
     1.  **数据库名称：** 输入数据库名称。  
   
-    2.  **数据库大小：** 选择你需要在 SQL Azure 帐户中创建的数据库大小。  
+    2.  **数据库大小：** 选择您需要在 SQL Azure 帐户中创建的数据库大小。  
   

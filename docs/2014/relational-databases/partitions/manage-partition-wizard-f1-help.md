@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130667"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>“管理分区向导”的 F1 帮助
   使用 **管理分区向导** 可以通过分区切换或实现可调窗口应用场景来管理和修改现有已分区表。 使用此向导，可以轻松管理分区，并可简化表中数据的定期迁入和迁出。  
@@ -178,7 +175,7 @@ ms.locfileid: "37197557"
 ##  <a name="NewJob"></a> 新建作业计划页  
  使用 **“新建作业计划”** 页可以查看和更改计划的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业选择所需的计划类型。  
   
  **名称**  
@@ -270,7 +267,7 @@ ms.locfileid: "37197557"
 ##  <a name="Progress"></a> “进度”页  
  使用 **“进度”** 页可以监视有关 **“管理分区向导”** 操作的状态信息。 根据在向导中选择的选项， **“进度”** 页可能会包含一个操作或多个操作。 最上面的方框显示向导的总体状态和向导已接收到的状态、错误和警告消息数。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **详细信息**  
  提供向导执行的操作所返回的操作、状态和所有消息。  
   

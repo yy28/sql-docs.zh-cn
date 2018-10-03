@@ -1,43 +1,40 @@
 ---
-title: 可滚动游标类型 |Microsoft 文档
+title: 可滚动游标类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54acbd1010d546649b1ad92a34289fa4d04da162
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720495"
 ---
 # <a name="scrollable-cursor-types"></a>可滚动游标类型
-可滚动游标的四种类型是静态、 动态、 键集驱动和混合。 静态游标检测弱或根本没有更改，但相对比较便宜实现。 动态游标检测到的所有更改，但难以实现。 游标键集驱动的和混合游标位于之间，检测的大多数更改，但在更少的开销比动态游标。  
+四种类型的可滚动游标是静态、 动态、 由键集驱动和混合。 静态游标检测少或没有更改，但相对比较便宜，来实现。 动态游标检测到的所有更改，但难以实现。 由键集驱动和混合游标介于二者之间，能检测到大部分变化，但在更少的开销比动态游标。  
   
- 以下术语用于定义每种类型的可滚动游标的特征：  
+ 使用以下术语来定义每种类型的可滚动游标的特征：  
   
--   **拥有更新、 删除和插入。** 更新、 删除和插入通过游标，请通过调用进行**SQLBulkOperations**或**SQLSetPos**或使用定位更新或删除语句。  
+-   **自己的更新、 删除和插入。** 更新、 删除和插入通过游标，通过对调用进行**SQLBulkOperations**或**SQLSetPos**或使用定位更新或删除语句。  
   
--   **其他更新、 删除和插入。** 更新、 删除和不所做的光标，包括那些由同一个事务中的其他操作插入、 那些通过其他事务和所做的其他应用程序。  
+-   **其他更新、 删除和插入。** 更新、 删除和不所做的光标，包括所做的其他操作在同一事务中插入、 所做通过其他事务和所做的其他应用程序。  
   
 -   **成员身份。** 在结果集中的行集。  
   
--   **顺序。** 将光标返回行的顺序。  
+-   **顺序。** 游标返回的行顺序。  
   
--   **值。** 结果集中的每一行中的值。  
+-   **值。** 在结果集中的每个行中的值。  
   
  有关如何更新、 删除和插入数据的信息，请参阅[更新数据概述](../../../odbc/reference/develop-app/updating-data-overview.md)。  
   

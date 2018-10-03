@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.olapconnection.f1
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbb2fe2bc936fc66fe930ea5c0de60190b0ae5e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5157d67fe96939c8942ff3dc0351cc09deb030f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184644"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063239"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>“添加 Analysis Services 连接管理器”对话框 UI 参考
   可以使用 **“添加 Analysis Services 连接管理器”** 对话框，创建与运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的服务器之间的连接或编辑连接属性。  
   
  若要了解有关 Analysis Services 连接管理器的详细信息，请参阅 [Analysis Services Connection Manager](analysis-services-connection-manager.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **与运行 Analysis Services 的计算机建立连接**  
  使用与运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器的默认连接，或者通过单击“编辑”建立新连接。  
   

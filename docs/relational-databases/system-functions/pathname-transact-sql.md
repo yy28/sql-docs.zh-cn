@@ -1,14 +1,11 @@
 ---
-title: 路径名 (Transact SQL) |Microsoft 文档
+title: 路径名 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fc13baa2d538e054ed88607cd4b45c6477cb6e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852015"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径来返回应用程序可用于处理 BLOB 数据的使用 Win32 Api 的句柄。 PathName 是只读的。  
+  返回 FILESTREAM 二进制大型对象 (BLOB) 路径。 OpenSqlFilestream API 使用此路径来返回应用程序可用于通过使用 Win32 Api 处理 BLOB 数据的句柄。 PathName 是只读的。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,27 +41,27 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>参数  
  column_name  
- 是列的名称的**varbinary （max)** FILESTREAM 列。 *column_name*必须是列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
+ 列名称**varbinary （max)** FILESTREAM 列。 *column_name*必须是一个列名称。 它不能是表达式，也不能是 CAST 或 CONVERT 语句的结果。  
   
- 请求的任何其他数据类型或有关的列的路径名**varbinary （max)** columnthat 没有 FILESTREAM 存储属性将导致查询编译时错误。  
+ 请求的任何其他数据类型或为的列的路径名**varbinary （max)** columnthat 不具有 FILESTREAM 存储属性将会导致查询编译时错误。  
   
  *@option*  
- 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，它定义应如何格式化路径的服务器组件。 *@option* 可以是以下值之一。 默认值为 0。  
+ 一个整数[表达式](../../t-sql/language-elements/expressions-transact-sql.md)，用于定义应如何格式化路径的服务器组件。 *@option* 可以是下列值之一。 默认值为 0。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|返回转换为 BIOS 格式的服务器名称，例如：`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|返回未经转换的服务器名称，例如：`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
 |2|返回完整的服务器路径，例如：`\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- 位值，该值定义如何 Always On 可用性组中返回的服务器名称。  
+ 一个位值，该值定义如何在 Always On 可用性组中返回的服务器名称。  
   
- 当数据库不属于 Alwayson 可用性组时，将忽略此自变量的值。 在路径中始终使用计算机名称。  
+ 当数据库不属于 Always On 可用性组时，将忽略此参数的值。 在路径中始终使用计算机名称。  
   
- 如果数据库属于 Alwayson 可用性组，然后的值*use_replica_computer_name*会产生以下影响上的输出**路径名**函数：  
+ 如果数据库所属的 Always On 可用性组时，值*use_replica_computer_name*具有以下效果的输出**路径名**函数：  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |未指定。|函数返回路径中的虚拟网络名称 (VNN)。|  
 |0|函数返回路径中的虚拟网络名称 (VNN)。|  
@@ -77,7 +73,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>返回值  
  返回的值是 BLOB 的完全限定逻辑路径或 NETBIOS 路径。 PathName 不返回 IP 地址。 尚未创建 FILESTREAM BLOB 时返回 NULL。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  ROWGUID 列必须在任何调用 PathName 的查询中可见。  
   
  只能使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 来创建 FILESTREAM BLOB。  
@@ -152,8 +148,8 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [二进制大型对象 (Blob) 数据 (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+## <a name="see-also"></a>请参阅  
+ [二进制大型对象 &#40;Blob&#41; 数据 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [使用 OpenSqlFilestream 访问 FILESTREAM 数据](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

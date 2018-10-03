@@ -1,33 +1,30 @@
 ---
-title: 了解游标和锁定 |Microsoft 文档
+title: 了解游标和锁定 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273036"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696956"
 ---
 # <a name="understanding-cursors-and-locks"></a>了解游标和锁定
-请务必了解让您可以选择应用程序的数据访问要求的最佳和最有效的光标类型游标的工作方式。 小于比最佳的光标配置可以使数据访问操作非常缓慢。  
+请务必了解这样您就可以选择应用程序的数据访问要求的最佳和最高效的游标类型游标的工作方式。 不太理想的游标配置可以进行数据访问操作带来痛苦的煎熬。  
   
- 许多功能的 ADO**记录集**由对象的类型和位置光标处以及的锁类型。  
+ 许多功能的 ADO**记录集**对象由类型和位置的光标处以及锁类型。  
   
  本部分包含以下主题。  
   

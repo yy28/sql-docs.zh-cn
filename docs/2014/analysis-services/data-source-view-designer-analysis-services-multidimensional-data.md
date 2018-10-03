@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
 helpviewer_keywords:
 - Data Source View Designer
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08fb948e9dd0cd401e1cc2fa3fe2a4bc60ff4e11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075307"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>数据源视图设计器（Analysis Services - 多维数据）
   数据源视图 (DSV) 是用于在多维模型中创建多维数据集和维度的外部关系数据源的逻辑视图。  

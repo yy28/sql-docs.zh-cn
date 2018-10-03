@@ -1,32 +1,29 @@
 ---
-title: 状态属性示例 （VC + +） |Microsoft 文档
+title: Status 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Status property [ADO], VC++ example
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 107eb797ac6c7ffbc0ee461e27c4747211b1f614
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281986"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851451"
 ---
-# <a name="status-property-example-vc"></a>状态属性示例 （VC + +）
-此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改的记录。  
+# <a name="status-property-example-vc"></a>Status 属性示例 (VC++)
+此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改哪些记录。  
   
 ```  
 // BeginStatusCpp.cpp  

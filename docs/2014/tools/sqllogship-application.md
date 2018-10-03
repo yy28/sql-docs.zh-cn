@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8e31a24d54b9f1c8013c67628fbe6e279604a31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123637"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
   **sqllogship** 应用程序用于执行日志传送配置中的备份、复制或还原操作以及相关的清理任务。 这些操作是在特定的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例上针对特定数据库执行的。  
@@ -62,7 +59,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |level|Description|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
-|@shouldalert|输出错误处理消息。|  
+|1|输出错误处理消息。|  
 |2|输出警告消息和错误处理消息。|  
 |**3**|输出信息性消息、警告和错误处理消息。 这是默认值。|  
 |4|输出所有调试消息和跟踪消息。|  
@@ -73,17 +70,17 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-querytimeout** *timeout_value*  
  指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 timeout_value 为 int。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) 存储过程。  
   
  由 **sqllogship** 创建的日志传送历史记录与由日志传送备份、复制和还原作业创建的历史记录混杂在一起。 如果打算反复使用 **sqllogship** 来执行日志传送配置中的备份、复制或还原操作，请考虑禁用相应的日志传送作业。 有关详细信息，请参阅 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
  **Sqllogship** x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目录中安装应用程序，SqlLogShip.exe。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **sqllogship** 使用 Windows 身份验证。 运行此命令所使用的 Windows 身份验证帐户需要 Windows 目录访问权限和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 要求取决于 **sqllogship** 命令是指定 **-backup**、 **-copy**还是 **-restore** 选项。  
   
-|选项|目录访问权限|权限|  
+|选项|目录访问权限|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要对备份目录的读/写访问权限。|需要与 BACKUP 语句相同的权限。 有关详细信息，请参阅 [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)。|  
 |**-copy**|需要对备份目录的读取访问权限以及对复制目录的写入访问权限。|需要与 [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) 存储过程相同的权限。|  

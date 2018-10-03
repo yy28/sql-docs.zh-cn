@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - UNSAFE assemblies
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2e0d51e1c3268fd7399467f22fb833e77f14131
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075997"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
   公共语言运行时 (CLR) 支持用于托管代码的一种称为代码访问安全性的安全模式。 在这种模式下，根据代码的标识来对程序集授予权限。 有关详细信息，请参阅 .NET Framework 软件开发包中的“代码访问安全性”部分。  
@@ -45,7 +42,7 @@ ms.locfileid: "37349879"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 主机策略级别权限集  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 主机策略级别授予程序集的代码访问安全性权限集由创建该程序集时指定的权限集决定。 有三个权限集： `SAFE`，`EXTERNAL_ACCESS`并`UNSAFE`(使用指定**PERMISSION_SET**选项[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)).  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的用户。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此策略并不用于在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 创建 CLR 实例时有效的默认应用程序域。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fixedpolicy 系统程序集和用户指定策略的用户程序集。  
   
@@ -110,10 +107,10 @@ ms.locfileid: "37349879"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
-|`Programming model restrictions`|是|是|无限制|  
-|`Verifiability requirement`|是|是|否|  
+|`Programming model restrictions`|用户帐户控制|用户帐户控制|无限制|  
+|`Verifiability requirement`|用户帐户控制|是|否|  
 |`Local data access`|是|是|是|  
-|`Ability to call native code`|否|否|是|  
+|`Ability to call native code`|否|否|用户帐户控制|  
   
 ## <a name="see-also"></a>请参阅  
  [CLR 集成安全性](clr-integration-security.md)   

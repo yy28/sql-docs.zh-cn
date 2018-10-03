@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
 ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b1bdcf78e3a7fd35da53e7a39bea5c24e217ae8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105138"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>选择成员（商业智能向导）
   可以使用 **“选择成员”** 页，确定商业智能向导应对哪些成员应用 **“设置货币换算选项”** 页上指定的货币换算功能。  
@@ -29,7 +26,7 @@ ms.locfileid: "37321237"
 > [!NOTE]  
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **度量值维度**  
  选择此选项可以对多维数据集中的一个或多个度量值应用货币换算功能。  
   

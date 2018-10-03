@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000efcad2db89e05bbfac8e1471ccf4551bc1956
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2014aa68bee9e78477fb4ee9993053e13a33abe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077627"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用正则表达式搜索文本
   正则表达式是简明而灵活的表示法，用于查找和替换各种模式的文本。 在 **的** “查找和替换” [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“查找内容”** 字段中，可以使用一组特定的正则表达式。  
@@ -84,7 +81,7 @@ ms.locfileid: "37298037"
 |Escape|\e|Unicode U+001B。|  
 |响铃|\g|Unicode U+0007。|  
 |退格键|\h|Unicode U+0008。|  
-|选项卡|\t|匹配制表符，Unicode U+0009。|  
+|Tab|\t|匹配制表符，Unicode U+0009。|  
 |Unicode 字符|\x#### 或 \u####|匹配由 Unicode 值确定的字符，其中 #### 为十六进制数字。 可以使用 ISO 10646 码位或给出代理项对值的两个 Unicode 码位，指定基本多语言面（即代理项）以外的字符。|  
   
  下表列出了按标准 Unicode 字符属性匹配时的语法。 双字母缩写和 Unicode 字符属性数据库中列出的缩写相同。 可以将这些缩写指定为字符集的一部分。 例如，表达式 [:Nd:Nl:No] 匹配任何数字。  
