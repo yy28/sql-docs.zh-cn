@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - New Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - New element
 ms.assetid: 1321adcb-67f7-40f0-8f20-b17c1d3e3f17
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f93da2c5c9dab8b8d7542db68e70df67a87afbe8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01f159352499625bf5065c96fcbd057590570610
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222377"
 ---
 # <a name="new-element-xmla"></a>New 元素 (XMLA)
   包含使用的新文件系统存储位置[文件夹](folder-element-xmla.md)元素。  
@@ -53,7 +50,7 @@ ms.locfileid: "37203977"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37203977"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[文件夹](folder-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `New` 元素包含一个 UNC 路径，对于执行 `Original` 或 `Folder` 命令时分别还原或同步的所有对象，该路径将替换父 `Restore` 元素所包含的 `Synchronize` 元素值。 `Original` 元素的值将与每个多维数据集、度量值组或分区的 `StorageLocation` 元素值进行比较，如果发现匹配，则在还原或同步期间，此元素的值将用于更新对象的 `StorageLocation`。  
   
  有关备份和还原对象的详细信息，请参阅[备份和还原对象 (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  

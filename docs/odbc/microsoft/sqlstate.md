@@ -1,27 +1,24 @@
 ---
-title: SQLSTATE |Microsoft 文档
+title: SQLSTATE |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSTATE
 ms.assetid: 942f53f8-7755-418c-b453-047b3e030156
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd82a0375164742e5af063dba696b3ce840cb047
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2540c52a1b85a1c89c1d149116d91705ebee9869
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702837"
 ---
 # <a name="sqlstate"></a>SQLSTATE
-对于在数据源中发生的错误，ODBC 驱动程序将返回的本机错误映射到相应的 SQLSTATE。 有错误的检测到由驱动程序或驱动程序管理器，ODBC 驱动程序或驱动程序管理器生成相应的 SQLSTATE。
+对于数据源中出现的错误，ODBC 驱动程序将返回本机错误映射到相应的 SQLSTATE。 有错误，如果检测到由驱动程序或驱动程序管理器，ODBC 驱动程序或驱动程序管理器生成相应的 SQLSTATE。

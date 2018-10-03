@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3f4c1efc392020f943759d7698c837316f4fdf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214987"
 ---
 # <a name="access-to-files-used-by-packages"></a>对包使用的文件的访问
   包保护级别不保护存储在包以外的文件。 这些文件包括下面的文件：  
@@ -42,8 +39,7 @@ ms.locfileid: "37178414"
  这些文件必须单独进行保护，尤其是在它们包括敏感的信息时。  
   
 ## <a name="configuration-files"></a>配置文件  
- 如果配置中有敏感的信息，例如登录名和密码信息，则应当考虑将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，或使用访问控制列表 (ACL) 来限制对存储文件的位置或文件夹的访问，并只允许访问某些帐户。 通常，可以向允许其运行包的帐户以及负责管理包和排除包的故障的帐户授予访问权，这些权限可能包括检查配置、检查点和日志文件的内容。 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了更安全的存储方式，因为它在服务器和数据库级别提供保护。 若要将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型。 若要保存到文件系统，请使用 XML 配置类型。  
+ 如果配置中有敏感的信息，例如登录名和密码信息，则应当考虑将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，或使用访问控制列表 (ACL) 来限制对存储文件的位置或文件夹的访问，并只允许访问某些帐户。 通常，可以向允许其运行包的帐户以及负责管理包和排除包的故障的帐户授予访问权，这些权限可能包括检查配置、检查点和日志文件的内容。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供了更安全的存储方式，因为它在服务器和数据库级别提供保护。 若要将配置保存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，请使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 配置类型。 若要保存到文件系统，请使用 XML 配置类型。  
   
  有关详细信息，请参阅 [包配置](../../2014/integration-services/package-configurations.md)、 [创建包配置](../../2014/integration-services/create-package-configurations.md)和 [有关 SQL Server 安装的安全注意事项](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)。  
   

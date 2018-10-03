@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.newmeasuredialog.f1
 helpviewer_keywords:
 - New Measure dialog box
 ms.assetid: 86dc9146-cc6d-4cef-b178-9a6b4cf616e8
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35bb394a835d8a667aa1ff3e339717ab4e1cf8e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225177"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>“新建度量值”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “新建度量值” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集设计器的度量值组中添加新度量值。 通过执行以下操作之一，可以显示 **“新建度量值”** 对话框：  
@@ -32,7 +29,7 @@ ms.locfileid: "37310427"
   
 -   在多维数据集设计器中的“多维数据集结构”选项卡上，右键单击“度量值”窗格中的度量值组或度量值，再从上下文菜单中选择“新建度量值”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Usage**  
  选择新度量值要使用的聚合函数。  
   

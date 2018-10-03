@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220079"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>还原加密密钥（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 为确保您可以继续访问加密数据，请务必创建加密密钥的备份，以备以后因服务帐户发生变化而需要还原它或需要将它作为计划迁移的一部分还原时使用。 本主题将概述如何使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器来还原密钥。  
@@ -39,7 +36,7 @@ ms.locfileid: "37303627"
   
  若要打开还原加密密钥对话框中，单击**加密密钥**中的导航窗格[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager，然后单击**还原**。 更新使用服务帐户页中的服务帐户时，也会显示此对话框[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 有关更多信息  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **文件位置**  
  选择包含对称密钥副本的受密码保护的文件。 默认的文件扩展名为 .snk。  
   

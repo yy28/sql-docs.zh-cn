@@ -1,13 +1,11 @@
 ---
-title: 间隔数据类型精度 |Microsoft 文档
+title: 间隔数据类型精度 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], interval data types
@@ -18,24 +16,23 @@ helpviewer_keywords:
 - interval leading precision [ODBC]
 - interval precision [ODBC]
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44f00ddbbd577731d9485aedc1a63659dfe59414
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98be3b4a7e4db30f394a2834364ecab9a20ef182
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706425"
 ---
-# <a name="interval-data-type-precision"></a>时间间隔数据类型精度
-间隔数据类型的精度包括前导精度、 间隔精度和秒精度的间隔。  
+# <a name="interval-data-type-precision"></a>间隔数据类型精度
+间隔数据类型精度包括间隔起始精度、 时间间隔精度和秒的精度。  
   
- 一个时间间隔的前导字段是有符号的数字。 最多的前导字段的位数由调用的数量*间隔前导精度，* 这是数据类型声明的部分。 例如，声明： 间隔 HOUR(5) 为分钟具有前导精度为 5; 一个时间间隔小时字段可以采用值从 –99999 至 99999。 描述符记录 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段中包含前导精度的间隔。  
+ 时间间隔的前导字段是有符号的数字。 前导字段的最大位数由名为 quantity*间隔起始精度，* 这是数据类型声明的一部分。 例如，声明： 间隔 HOUR(5) 到分钟具有间隔起始精度为 5;小时字段接受的值从 –99999 至 99999。 间隔起始精度的描述符记录 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段中包含。  
   
- 间隔数据类型组成的字段的列表称为*间隔精度*。 它不是数值，术语"精度"可能暗示。 例如，类型间隔天收件人的间隔精度第二个是列表天、 小时、 分钟、 秒。 没有包含此值; 该值的描述符字段始终可以通过间隔数据类型确定时间间隔精度。  
+ 间隔数据类型组成的字段的列表称为*时间间隔精度*。 它不是数值，因为术语"精度"可能暗示。 例如，时间间隔精度类型 INTERVAL DAY TO 的第二个是列表天、 小时、 分钟、 秒。 保存此值; 没有描述符字段时间间隔精度始终可通过间隔数据类型确定。  
   
- 任何具有第二个字段的间隔数据类型具有*秒精度*。 这是允许的秒值的小数部分的十进制数字的数目。 此函数不同于其他数据类型，精度其中表示小数点前的数字个数。 间隔数据类型的秒精度是小数点后的位数。 例如，如果秒精度设置为 6，数字 123456 部分字段中将被解释为.123456 和数量 1230年将被解释为.001230。 对于其他数据类型，这被称为缩放。 间隔秒精度的描述符 SQL_DESC_PRECISION 字段中包含。 如果 SQL 间隔值的小数部分组成的秒部分的精度大于 C 间隔结构中可容纳新增功能，它是驱动程序定义中的 SQL 间隔的秒的小数部分值是否被舍入或截断时转换为 C间隔结构。  
+ 任何具有第二个字段的时间间隔数据类型具有*精度的秒数*。 这是值的十进制数字的小数部分的秒中允许的数量。 这是不同于其他数据类型，其中的精度表示小数点前的数字个数。 间隔数据类型的秒精度是小数点后的位数。 例如，如果秒的精度设置为 6，数量 123456 分数字段中将解释为.123456 和号 1230年将解释为.001230。 对于其他数据类型，这被称为规模。 描述符的 SQL_DESC_PRECISION 字段中包含时间间隔的秒精度。 如果 SQL 间隔值的秒小数部分精度大于什么可以保存在 C 间隔结构，它是驱动程序定义中的 SQL 时间间隔的秒的小数部分值是否被舍入或截断时转换为 C间隔结构。  
   
- 当 SQL_DESC_CONCISE_TYPE 字段设置为间隔的数据类型时，将 SQL_DESC_TYPE 字段设置为 SQL_INTERVAL 和 SQL_DESC_DATETIME_INTERVAL_CODE 设置为间隔数据类型的代码。 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段将自动设置为 2 的默认间隔前导精度和 SQL_DESC_PRECISION 字段将自动设置为 6 的默认间隔秒精度。 如果上述任一值不合适，应用程序应显式设置通过调用描述符字段**SQLSetDescField**。
+ 当 SQL_DESC_CONCISE_TYPE 字段设置为时间间隔数据类型时，SQL_DESC_TYPE 字段设置为 SQL_INTERVAL 和 SQL_DESC_DATETIME_INTERVAL_CODE 设置为时间间隔数据类型的代码。 SQL_DESC_DATETIME_INTERVAL_PRECISION 字段将自动设置为 2 的默认间隔前导精度和 SQL_DESC_PRECISION 字段将自动设置为 6 的默认间隔秒精度。 如果这些值不合适，应用程序应显式设置描述符字段通过调用**SQLSetDescField**。

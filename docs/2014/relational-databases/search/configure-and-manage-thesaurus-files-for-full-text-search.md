@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-caps.latest.revision: 82
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ca1d323f2b0e53e458aa808f791936b823eef7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a6d6197cb525ba4ad395da590ea113bdd0a1f0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164258"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220337"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>为全文搜索配置和管理同义词库文件
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，全文查询可以通过使用同义词库来搜索用户指定的字词的同义词。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*同义词库*为特定语言定义一组同义词。 系统管理员可以定义两种形式的同义词：扩展集和替换集。 通过开发针对全文数据定制的同义词库，您可以有效地扩大对这些数据的全文查询的范围。 仅对所有 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 和 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 查询以及指定 FORMSOF THESAURUS 子句的任意 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 和 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 查询执行同义词库匹配操作。  
@@ -119,7 +116,7 @@ ms.locfileid: "37164258"
     |标注字符设置|ReplTest1|XML|  
     |------------------------|-----------|---------|  
     |不区分重音|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
-    |区分重音|@shouldalert|`<diacritics_sensitive>1</diacritics_sensitive>`|  
+    |区分重音|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
   
     > [!NOTE]  
     >  只能在文件中应用一次此设置，它适用于文件中的所有搜索模式。 不能为各个模式单独指定此设置。  

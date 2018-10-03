@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationInfoSecurity Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ImpersonationInfoSecurity element
 ms.assetid: 583fec36-90ef-4d6a-9888-ece6ae865c53
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6ed6386f862e6fb9d1cababe870cbcca105e7be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4aaf5aee83f6aa6102aeeb9488ddb7a75c4af540
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189184"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224898"
 ---
 # <a name="impersonationinfosecurity-element-assl"></a>ImpersonationInfoSecurity 元素 (ASSL)
   包含一个只读的值，指示是否对中提供的安全凭据进行了任何更改[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)数据类型。  
@@ -49,7 +46,7 @@ ms.locfileid: "37189184"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -57,9 +54,9 @@ ms.locfileid: "37189184"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中的字符串之一。  
   
 |ReplTest1|Description|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event groups
@@ -16,12 +14,12 @@ ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d034c52b9b2ebde245d286718dc38d2df42f69b1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1550c3fa2f9fa4ba8e0cb9dc6256bd5eb2535cd8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225077"
 ---
 # <a name="ddl-event-groups"></a>DDL 事件组
   下表列出了可用于运行 DDL 触发器或事件通知的 DDL 事件组以及它们所涵盖的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 请注意事件组的内在关系。 例如，指定 FOR DDL_TABLE_EVENTS (10018) 的 DDL 触发器或事件通知涵盖 CREATE TABLE、ALTER TABLE 和 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 指定 FOR DDL_TABLE_VIEW_EVENTS (10017) 的 DDL 触发器或事件通知涵盖 DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS 和 DDL_STATISTICS_EVENTS 类型下的所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。  

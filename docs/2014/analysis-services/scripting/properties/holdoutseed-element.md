@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185224"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097590"
 ---
 # <a name="holdoutseed-element"></a>HoldoutSeed 元素
   指定的测试集所在的可重复的维持分区的种子[MiningStructure](../objects/miningstructure-element-assl.md)元素。 此种子可确保模型内容在处理过程中保持不变。 如果未指定或设置为 0，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]上的挖掘结构名称使用哈希算法创建种子。  
@@ -55,9 +52,9 @@ ms.locfileid: "37185224"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  首次创建挖掘结构时，ID 和名称是相同的。 但是，您可以更改挖掘结构的名称。 因此，若要确保分区可重复使用，则不应依赖基于名称创建的种子，而应对种子进行显式设置。  
   
  此外，当您创建挖掘结构的副本通过使用`EXPORT`语句，[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]将保留新挖掘结构的名称，但会自动生成新的 id。 因此，两个挖掘结构可以共享相同的名称但具有不同的 ID。 任何两个名称相同的挖掘结构都将具有相同的种子。 但是，由于数据的分区还依赖于源数据，因此每个结构中分区的实际内容可能不同。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Traces Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Traces element
 ms.assetid: 7ca2c7d1-fda3-4c76-9e32-fd9b5dda56e9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e761f8ac9bb193ed0c04b0a475f0841513505e5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7edffd8786b359a0cc9275f6d5a3657be46c1ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221257"
 ---
 # <a name="traces-element-assl"></a>Traces 元素 (ASSL)
   包含与某个 [Server](../objects/server-element-assl.md) 元素关联的 [Trace](../objects/trace-element-assl.md) 元素的集合。  
@@ -52,8 +49,8 @@ ms.locfileid: "37215947"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -63,7 +60,7 @@ ms.locfileid: "37215947"
 |父元素|[Server](../objects/server-element-assl.md)|  
 |子元素|[Trace](../objects/trace-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.TraceCollection>。  
   
 ## <a name="see-also"></a>请参阅  

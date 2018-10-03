@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a0d6af0d7f643ae312015479a31cae4b04f1d34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224227"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>定义计算作用域（商业智能向导）
   可以使用 **“定义计算作用域”** 页将新的时间计算与各度量值相关联。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用度量值**  
  选择时间计算所适用的度量值。  
   

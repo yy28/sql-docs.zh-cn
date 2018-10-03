@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0c4a4a8f66f00e8446c189bddfe31ed626d0170
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118207"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 函数（报表生成器和 SSRS）
   返回指定作用域内某项的前一个实例的值或该实例的指定聚合值。  
@@ -44,7 +41,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>返回类型  
  返回`Variant`或`Binary`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Previous` 函数返回在应用所有排序和筛选之后，指定作用域内计算的表达式的前一个值。  
   
  如果*表达式*不包含聚合，`Previous`函数默认为报表项的当前作用域。  

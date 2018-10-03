@@ -4,56 +4,53 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223878"
 ---
 # <a name="query-options-results-text-page"></a>“查询选项”中的“结果”（“文本”页）
   使用此页可以指定以文本格式显示查询结果集的选项。 在选择 **“将结果保存到文件”** 时也会应用此页上的设置。  
   
- **输出格式**  
+ 输出格式  
  默认情况下，将在通过用空格分隔结果而得到的列中显示输出。 您还可以使用逗号、制表符或空格来分隔列。 选中 **“自定义分隔符”** 复选框，可以在 **“自定义分隔符”** 框中指定其他分隔字符。  
   
- **自定义分隔符**  
+ 自定义分隔符  
  自行指定用于分隔列的字符。 只有在 **“输出格式”** 框中选中 **“自定义分隔符”** 复选框后，才可使用此选项。  
   
- **在结果集中包括列标题**  
+ 在结果集中包括列标题  
  如果不希望每列都带有列标题，请清除此复选框。  
   
- **接收到结果时滚动**  
+ 接收到结果时滚动  
  选中此复选框将使得结果集的显示侧重于结尾处最近返回的记录。 清除此复选框，则使其侧重于接收到的前几行。  
   
- **右对齐数值**  
+ 右对齐数值  
  选中此复选框可以将数值与列的右侧对齐。 这样，就可以更方便地查看具有固定小数位数的数值。  
   
- **执行查询后放弃结果**  
+ 在执行查询后放弃结果  
  当屏幕显示接收到查询结果之后，通过放弃查询结果来释放内存。  
   
- **在单独的选项卡中显示结果**  
+ 在单独选项卡中显示结果  
  选中此复选框可在新文档窗口中显示结果集，而不是在查询文档窗口的底部显示。  
   
- **执行查询后切换到结果选项卡**  
+ 执行查询后切换到“结果”选项卡  
  单击此项可将屏幕焦点自动设置到结果集。  
   
- **最大每列中显示的字符数**  
+ 每列中显示的最大字符数  
  此值默认为 256。 增大此值可显示更大的结果集，而不会将其截断。  
   
- **重置为默认值**  
+ 重置为默认值  
  将此页上的所有值重置为原始默认值。  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>使用标题保存文本结果集  

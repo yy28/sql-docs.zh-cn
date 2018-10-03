@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3a743fd3fe576296a67072762cdfa3a186584cd0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23832b226bb9408ab4e5b2fbb50718e1ead710b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217287"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>任务 9：配置引用数据服务
   在本任务中，您将 DQS 配置为使用 Microsoft Azure 市场上的引用数据服务。 在下一个任务，您将配置**地址验证**域以使用此服务。 在运行时，在清理活动，DQS 将传递的值中的域**地址验证**的域和服务以进行清理。 请参阅[配置 DQS 以使用引用数据](http://msdn.microsoft.com/library/hh213070.aspx)的更多详细信息。  

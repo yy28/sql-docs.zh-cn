@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], statement construction
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2911415122307216afc5f6ff7d41a8f54e46f059
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407475"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228757"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>为游标构造 SQL 语句
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序使用服务器游标实现 ODBC 规范中定义的游标功能。 ODBC 应用程序通过使用控制游标行为[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)设置不同的语句属性。 以下为属性及其默认值。  
@@ -36,7 +33,7 @@ ms.locfileid: "37407475"
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
 |SQL_ATTR_CURSOR_SCROLLABLE|SQL_NONSCROLLABLE|  
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_ATTR_ROW_ARRAY_SIZE|@shouldalert|  
+|SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
  在执行 SQL 语句时的时间为其默认值设置这些选项时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序不使用服务器游标实现结果集; 相反，它使用默认结果集。 如果上述任何选项在执行 SQL 语句时，其默认值中更改[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将尝试使用服务器游标实现结果集。  
   

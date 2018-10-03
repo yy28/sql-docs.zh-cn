@@ -1,30 +1,27 @@
 ---
-title: SQL Server 属性 （服务选项卡） |Microsoft Docs
+title: SQL Server 属性（“服务”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e4ae0c6b-6fd8-4325-b54e-1758fc659958
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d0bc655df6b1c822245a1b4daeb68184a9f3658
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d69ded06359dfc7f5f7c71864d3be6b64de6f7af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149048"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227316"
 ---
 # <a name="sql-server-properties-service-tab"></a>SQL Server 属性（“服务”选项卡）
   使用“MSSQLSERVER 属性”对话框上的“服务”选项卡查看或指定下列选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **二进制路径**  
  列出此服务所使用的程序文件的位置。  
   

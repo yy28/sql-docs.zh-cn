@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e018bf778a877ed62612e631951ca92258aaec0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218937"
 ---
 # <a name="translations-in-multidimensional-models"></a>多维模型中的翻译
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以通过翻译实现对多语言的支持。 翻译包含一个语言标识符，以及可以以多种语言显示的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象属性的绑定。 例如，您可以为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库定义一种翻译，从而以指定的语言显示数据库的标题和说明。 有关翻译的详细信息，请参阅[多维数据集翻译](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)。  

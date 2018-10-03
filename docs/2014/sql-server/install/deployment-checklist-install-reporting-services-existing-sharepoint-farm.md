@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c7c7270a3c4ef11f12894c97b51bb6cd09389fea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf76bca14e7ae1dbf96cfd9c0123bad42e31a94
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220517"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>部署核对清单：将 Reporting Services 安装到现有 SharePoint 场中
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 报表服务器可安装到新的 SharePoint 场或现有 SharePoint 场。 本主题介绍可能的方案和安装的最佳实践[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到现有 SharePoint 场。  
@@ -68,7 +65,7 @@ ms.locfileid: "37297537"
 |备份[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]数据库||  
 |备份[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]加密密钥||  
 |还原 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据库和加密密钥||  
-|将映射到新的所有 web 应用程序[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序| |  
+|将映射到新的所有 web 应用程序[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服务应用程序|The new installation <bpt id="p1">**</bpt>is now functional<ept id="p1">**</ept>|  
 |删除旧服务器上的集成 URL。|在 SharePoint 管理中心内的 **“常规应用程序设置”** 页上，单击 **“Reporting Services 集成”**。|  
 |如果需要，从旧安装中卸载 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。||  
   

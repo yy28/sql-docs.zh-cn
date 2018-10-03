@@ -1,34 +1,31 @@
 ---
-title: StayInSync 属性示例 （VC + +） |Microsoft 文档
+title: StayInSync 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729485"
 ---
-# <a name="stayinsync-property-example-vc"></a>StayInSync 属性示例 （VC + +）
+# <a name="stayinsync-property-example-vc"></a>StayInSync 属性示例 (VC++)
 此示例演示如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)属性便于访问行以分层[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
- 外部循环显示每个作者的名字和姓氏、 状态和标识。 追加**记录集**每一行检索从[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合并自动分配给**rstTitleAuthor**通过**StayInSync**属性每当父**记录集**移动至一个新行。 内部循环显示从每个行的四个字段中追加的记录集。  
+ 外部循环显示每个作者的名字和姓氏的名称、 状态和标识。 在追加**记录集**从检索的每一行[字段](../../../ado/reference/ado-api/fields-collection-ado.md)集合并自动分配给**rstTitleAuthor**通过**StayInSync**属性时父**记录集**将移到新行。 内部循环中追加的记录集显示每个行中的四个字段。  
   
 ```  
 // BeginStayInSyncCpp.cpp  

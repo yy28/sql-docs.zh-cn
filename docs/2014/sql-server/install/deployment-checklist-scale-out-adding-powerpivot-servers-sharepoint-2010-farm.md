@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 53ae2b68e51e534cc1b00afa9cf40e1786d644bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a9e726aea4428ac061ca57a4c1bc28199492492
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218127"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>部署核对清单： 横向扩展到 SharePoint 2010 场添加 PowerPivot 服务器
   如果您预期在 SharePoint 场中对 PowerPivot 查询处理有大量请求，则可以通过添加额外的 PowerPivot for SharePoint 实例来无缝地添加新的查询和数据处理支持。  
@@ -47,7 +44,7 @@ ms.locfileid: "37264163"
   
 |步骤|链接|  
 |----------|----------|  
-|确定已在场中的 Analysis Services 实例的服务帐户|您安装的每个附加实例在运行时使用的帐户必须与第一个实例使用的帐户相同。 使用以下两种方法之一可以确定服务帐户：<br /><br /> 在管理中心内，在安全性部分中，单击**配置服务帐户**。 选择**Windows 服务 – SQL Server Analysis Services**。 在选择该服务后，服务帐户名称将显示在页面中。<br /><br /> 在服务器上已有的 PowerPivot 服务安装，打开**Services**控制台应用程序中管理工具。 双击**SQL Server Analysis Services**。 单击**Log On**选项卡以查看服务帐户。<br />**\*\* 重要\* \* **仅使用管理中心更改服务帐户。 如果您使用其他工具或方法，将无法在场中正确更新权限。|  
+|确定已在场中的 Analysis Services 实例的服务帐户|您安装的每个附加实例在运行时使用的帐户必须与第一个实例使用的帐户相同。 使用以下两种方法之一可以确定服务帐户：<br /><br /> 在管理中心内，在安全性部分中，单击**配置服务帐户**。 选择**Windows 服务 – SQL Server Analysis Services**。 在选择该服务后，服务帐户名称将显示在页面中。<br /><br /> 在服务器上已有的 PowerPivot 服务安装，打开**Services**控制台应用程序中管理工具。 双击**SQL Server Analysis Services**。 单击**Log On**选项卡以查看服务帐户。<br />**\*\* 重要\* \*** 仅使用管理中心更改服务帐户。 如果您使用其他工具或方法，将无法在场中正确更新权限。|  
 |运行安装程序以安装 PowerPivot for SharePoint 的第二个实例|[安装 PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> 选择已加入场中但在其上尚无 PowerPivot 实例的应用程序服务器。<br /><br /> 在安装过程中，当系统提示您指定服务帐户时，请输入上一步中的帐户。 Analysis Services 服务的所有实例都必须在同一域帐户下运行。 为了遵循这一要求，您必须在 SharePoint 中使用托管帐户功能，以便在同一位置更新同一类型的所有服务实例的密码。|  
 |配置第二个实例|可以使用以下两种方法来配置实例： [PowerPivot 配置工具](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)或[使用 Windows PowerShell 配置 PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)<br /><br /> 配置第二个实例时，您只需要设置本地服务。 所有其他配置任务（例如创建服务应用程序或配置数据刷新）均在初始配置期间执行，并由您所安装的后续实例使用。|  
 |安装后任务|无需特别执行进一步的步骤。 您不需要创建服务应用程序、激活功能、部署解决方案或更改服务应用程序标识。 现有 Web 应用程序和服务应用程序将自动发现和使用新的服务器软件。<br /><br /> （可选）如果您安装第二个服务器是为了将一个服务器用于查询而将另一个用于数据刷新，则现在可以配置服务器实例属性以指定由每个服务器处理的请求类型。 有关详细信息，请参阅[配置专用数据刷新或 Query-Only 处理&#40;PowerPivot for SharePoint&#41;](../../analysis-services/configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)。|  

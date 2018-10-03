@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cc77781f2ee4a8a12a5c150ea29ebae3ca4d4cdf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a903d6d517b0840b4539a6398ddaf42360f5152
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088827"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING（SSIS 表达式）
   返回字符表达式的一部分，该部分从指定位置开始并具有指定长度。 *position* 参数和 *length* 参数的取值必须为整数。  
@@ -47,7 +44,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  SUBSTRING 使用从 1 开始的索引。 如果 *position* 为 1，则子字符串从 *character_expression*的第一个字符开始。  
   
  SUBSTRING 只能处理 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 SUBSTRING 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](cast-ssis-expression.md)。  

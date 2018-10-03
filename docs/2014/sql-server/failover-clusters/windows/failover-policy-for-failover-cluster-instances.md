@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3b48cf86ed58813c8bcaccea0506e55feb7927a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2114b180a1ecabf3f792437a113b9f4bedef8a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218217"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集实例 (FCI) 中，在给定的时间只有一个节点可以拥有 Windows Server 故障转移群集 (WSFC) 群集资源组。 客户端请求通过 FCI 中的此节点进行处理。 在发生故障和重新启动失败时，组的所有权将转移给 FCI 中的另一个 WSFC 节点。 此过程称为故障转移。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高了故障检测的可靠性，并提供灵活的故障转移策略。  
@@ -98,7 +95,7 @@ ms.locfileid: "37238187"
 |Level|条件|Description|  
 |-----------|---------------|-----------------|  
 |0|无自动故障转移或重新启动|表示对于任何故障条件将不自动触发故障转移或重新启动。 此级别仅适用于系统维护目的。|  
-|@shouldalert|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
+|1|服务器关闭时进行故障转移或重新启动|指示当满足以下条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。|  
 |2|服务器不响应时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。|  
 |3*|出现严重服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。|  
 |4|出现中等服务器错误时进行故障转移或重新启动|指示当满足以下任意条件时将触发服务器重新启动或故障转移：<br /><br /> SQL Server 服务停止。<br /><br /> SQL Server 实例不响应（资源 DLL 在 HealthCheckTimeout 设置时间内未收到来自 sp_server_diagnostics 的数据）。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“系统错误”。<br /><br /> 系统存储过程 sp_server_diagnostics 返回“资源错误”。|  

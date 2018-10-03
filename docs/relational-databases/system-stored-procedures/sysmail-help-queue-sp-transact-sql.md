@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_queue_sp (Transact SQL) |Microsoft 文档
+title: sysmail_help_queue_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -18,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5087f212e72f4fa6970aff614983d8116d1f5b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 76f51489a449c44dd7d43bab75d504f68e946374
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259517"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796506"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果参数**@queue_type**未指定，则为每个队列的存储的过程返回一行。  
+  数据库邮件中具有两个队列：邮件队列和状态队列。 邮件队列存储正在等待发送的邮件项。 状态队列存储已发送项的状态。 此存储过程允许查看邮件队列的状态或状态队列的状态。 如果将参数**@queue_type**未指定，则存储的过程的每个队列返回一行。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,8 +40,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@queue_type** =] *****queue_type*****  
- 可选参数删除为指定的类型的电子邮件*queue_type*。 *queue_type*是**nvarchar(6)** 无默认值。 有效值包括**邮件**和**状态**。  
+ [ **@queue_type** =] **'***queue_type*****  
+ 可选参数，删除作为指定类型的电子邮件*queue_type*。 *queue_type*是**nvarchar(6)** ，无默认值。 有效输入包括**邮件**并**状态**。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
@@ -54,17 +50,17 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|队列的类型。 可能的值为**邮件**和**状态**。|  
-|**length**|**int**|指定队列中邮件项的数量。|  
-|**状态**|**nvarchar(64)**|监视器的状态。 可能的值为**非活动**（队列处于非活动状态）， **NOTIFIED** (队列已被通知回执发生)，和**RECEIVES_OCCURRING** （接收队列）。|  
+|**queue_type**|**nvarchar(6)**|队列的类型。 可能的值为**邮件**并**状态**。|  
+|**长度**|**int**|指定队列中邮件项的数量。|  
+|State|**nvarchar(64)**|监视器的状态。 可能的值为**非活动**（队列处于非活动状态）， **NOTIFIED** (队列已被通知发生)，并且**RECEIVES_OCCURRING** （接收队列）。|  
 |**last_empty_rowset_time**|**日期时间**|上次队列为空的日期和时间。 采用军用时间格式和 GMT 时区。|  
 |**last_activated_time**|**日期时间**|上次激活队列的日期和时间。 采用军用时间格式和 GMT 时区。|  
   
-## <a name="remarks"></a>注释  
- 进行疑难解答时数据库邮件，使用**sysmail_help_queue_sp**若要查看队列中有多少项，状态队列，以及上一次激活。  
+## <a name="remarks"></a>备注  
+ 当数据库邮件故障排除，使用**sysmail_help_queue_sp**若要查看队列中有多少项，状态队列，以及上一次激活。  
   
-## <a name="permissions"></a>权限  
- 默认情况下，只有的成员**sysadmin**固定的服务器角色可以访问此过程。  
+## <a name="permissions"></a>Permissions  
+ 默认情况下，只有的成员**sysadmin**固定的服务器角色才能访问此过程。  
   
 ## <a name="examples"></a>示例  
  以下示例返回邮件队列和状态队列。  
@@ -86,7 +82,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)  
   
   

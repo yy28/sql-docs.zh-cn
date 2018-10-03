@@ -1,32 +1,29 @@
 ---
-title: 查找方法示例 (JScript) |Microsoft 文档
+title: Find 方法示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Find method [ADO], JScript example
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 067f8c214d3ebf1f90871108444b666e0da77bfb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1bd954af100273e3a8a8d91a72daae71b995ddab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811095"
 ---
-# <a name="find-method-example-jscript"></a>查找方法示例 (JScript)
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并显示在公司***Northwind***数据库名称以开头的字母 g。 剪切和粘贴下面的代码到记事本或其他文本编辑器，和将其保存为**FindJS.asp**。  
+# <a name="find-method-example-jscript"></a>Find 方法示例 (JScript)
+此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法来查找并显示在公司***Northwind***数据库名称以开头的字母 G.剪切和粘贴以下代码到记事本或其他文本编辑器，并将其保存为**FindJS.asp**。  
   
 ```  
 <!-- BeginFindJS -->  

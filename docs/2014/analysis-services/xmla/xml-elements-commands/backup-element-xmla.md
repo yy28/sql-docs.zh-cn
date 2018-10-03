@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Backup Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a571681f52fb34e55df238229f659aa883bc84ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 59efda960de14ae96b0c7c948b66c89980d8f990
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216491"
 ---
 # <a name="backup-element-xmla"></a>Backup 元素 (XMLA)
   备份[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库添加到备份文件。  
@@ -59,8 +56,8 @@ ms.locfileid: "37215647"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -70,7 +67,7 @@ ms.locfileid: "37215647"
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |子元素|[AllowOverwrite](../xml-elements-properties/allowoverwrite-element-xmla.md)， [ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md)， [BackupRemotePartitions](../xml-elements-properties/backupremotepartitions-element-xmla.md)，[文件](../xml-elements-properties/file-element-xmla.md)，[位置](../xml-elements-properties/locations-element-xmla.md)， [对象](../xml-elements-properties/object-element-xmla.md)，[密码](../xml-elements-properties/password-element-xmla.md)，[安全](../xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Backup`命令备份[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定的数据库[对象](../xml-elements-properties/object-element-xmla.md)到备份文件，还可以选择将远程分区备份到远程备份文件的元素。 如果 `Object` 元素指向非 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据库对象，则会出错。  
   
  哪些信息`Backup`命令将备份取决于数据库中的对象使用的存储模式。 下表标识基于所用存储模式的备份的信息。  

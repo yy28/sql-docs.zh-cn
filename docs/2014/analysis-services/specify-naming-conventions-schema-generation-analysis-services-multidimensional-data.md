@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226247"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定命名约定（架构生成向导）（Analysis Services - 多维数据）
   可以使用 **“指定命名约定”** 页，定义在创建架构对象时架构生成向导使用的命名约定。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选项**  
  指定向导所使用的命名约定。 下表对您可以指定的选项进行了说明：  
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f2d811dc542bf24c2cf75fe792a079046830076
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 7947bba9f41ffb77a1260ce79a5f4afb6c773295
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110927"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>从对象资源管理器连接到实例
   若要使用对象资源管理器管理对象，必须首先将对象资源管理器连接到包含对象的实例。 可以同时将对象资源管理器连接到多个实例。  

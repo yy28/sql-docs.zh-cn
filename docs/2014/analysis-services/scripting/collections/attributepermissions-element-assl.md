@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributePermissions Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00abbc7be0b8efa045074773ee6e2a3526192694
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227957"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 元素 (ASSL)
   包含的属性权限的个人的集合[角色](../objects/role-element-assl.md)上的特定维度的元素[多维数据集](../objects/cube-element-assl.md)元素。  
@@ -50,8 +47,8 @@ ms.locfileid: "37249037"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,7 +58,7 @@ ms.locfileid: "37249037"
 |父元素|[CubeDimensionPermission](../data-type/permission-data-type-assl.md)， [DimensionPermission](../objects/dimensionpermission-element-assl.md)|  
 |子元素|[AttributePermission](../objects/attributepermission-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于 `DimensionPermission`，此集合只可包含每个属性的一个 `AttributePermission`。  
   
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AttributePermissionCollection>。  

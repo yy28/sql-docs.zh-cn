@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cf5b1d813261786201f366e7f8dee6c296451c7
-ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
+ms.openlocfilehash: 62a4a0737f57d6040d2c166847f191f13d435071
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39359614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229478"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>第 1 课：创建项目和基本包
   在本课中，将创建一个简单 ETL 包，该包可以从单个平面文件源中提取数据，使用两个查找转换组件转换该数据，然后将该数据写入 **AdventureWorksDW2012** 的 **FactCurrency**事实数据表中。 在本课中，您还将学习如何创建新包、添加和配置数据源和目标连接以及使用新的控制流和数据流组件。  
@@ -77,7 +74,7 @@ ms.locfileid: "39359614"
 |平面文件列|表名|列名|数据类型|  
 |----------------------|----------------|-----------------|---------------|  
 |0|AdventureWorksDW2012|AverageRate|float|  
-|@shouldalert|DimCurrency|CurrencyAlternateKey|nchar(3)|  
+|1|DimCurrency|CurrencyAlternateKey|nchar(3)|  
 |2|DimDate|FullDateAlternateKey|日期|  
 |3|AdventureWorksDW2012|EndOfDayRate|FLOAT|  
   
