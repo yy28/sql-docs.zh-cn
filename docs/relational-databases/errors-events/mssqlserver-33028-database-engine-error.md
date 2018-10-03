@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a53189762bb4eb7782db32d2fa3040549e7ce7b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 5de604fe71e9d2840db271fe801fa19f4587c156
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34320468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852635"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "34320468"
 |错误代码|描述|  
 |--------------|---------------|  
 |0|成功。 没有错误。|  
-|@shouldalert|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
+|1|失败。 出现了未指定的错误或意外错误。 无法获得其他信息。|  
 |2|缓冲区不足。 无法为加密提供程序分配空间。|  
 |3|不提供支持。 此版本不支持该加密提供程序。 请选择其他加密提供程序。|  
 |4|找不到该加密提供程序。 指定的加密提供程序不存在或您无权访问这些文件。|  

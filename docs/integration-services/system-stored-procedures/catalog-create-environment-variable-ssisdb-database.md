@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9815078be9ef3585edde4239f5a8c5ddea7d9f95
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 376a4e713cb2fe3cac6947da8ae148dcab4285d7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849365"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>参数  
  [@folder_name =] folder_name  
- 包含环境的文件夹的名称。 folder_name 为 nvarchar(128)。  
+ 包含环境的文件夹的名称。 *folder_name* 为 **nvarchar(128)**。  
   
  [@environment_name =] environment_name  
  环境的名称。 environment_name 为 nvarchar(128)。  
@@ -64,16 +61,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0（成功）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对环境的 READ 和 MODIFY 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
   
 ## <a name="errors-and-warnings"></a>错误和警告  
  下面的列表描述了一些可能引发错误或警告的情况：  
@@ -100,7 +97,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Byte**|**binary**、**varbinary**|  
 |**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
 |**双精度**|精确数字：**decimal**、**numeric**；近似数字：**float**、**real**|  
-|**Int16**|**int**|  
+|**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Single**|精确数字：**decimal**、**numeric**；近似数字：**float**、**real**|  
