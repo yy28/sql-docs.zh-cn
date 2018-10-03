@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ConnectionStringSecurity Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ConnectionStringSecurity element
 ms.assetid: f25c4448-bb0d-4945-bc84-9c015eefa0eb
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9479865bd2e3f10570418ee33064bc30f4b7b786
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6237271e3952c05c9c7b231332454aaf2aa0c3ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219419"
 ---
 # <a name="connectionstringsecurity-element-assl"></a>ConnectionStringSecurity 元素 (ASSL)
   指定是否出于安全目的从数据源连接字符串中抽取用户的密码。  
@@ -51,7 +48,7 @@ ms.locfileid: "37300867"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37300867"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DataSource](../objects/datasource-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中的字符串之一。  
   
 |ReplTest1|Description|  

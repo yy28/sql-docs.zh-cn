@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AttributeAllMemberTranslation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AttributeAllMemberTranslation element
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d70f1420c0324cf1f1a2b3bb06fb68394268071
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 806233fab69adb2bd2a2d004f9a10e7af4e6503e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163127"
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>AttributeAllMemberTranslation 元素 (ASSL)
   包含标题的翻译`All`的成员[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)元素。  
@@ -49,7 +46,7 @@ ms.locfileid: "37314687"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|[翻译](../data-type/translation-data-type-assl.md)|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -57,9 +54,9 @@ ms.locfileid: "37314687"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[AttributeAllMemberTranslations](../collections/translations-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中，与 `AttributeAllMemberTranslations` 集合的父级对应的元素为 <xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>请参阅  

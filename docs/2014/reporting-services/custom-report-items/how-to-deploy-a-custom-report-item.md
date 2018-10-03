@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8ba4a32d7c1bd86e9eb21ca65da7ce80a3fb5370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48e55cfb3eb754af540ca4eb4d19ae415d396f60
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175867"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>如何部署自定义报表项
   若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义报表项，必须修改报表服务器配置文件，并将设计时和运行时组件程序集复制到报表设计器和报表服务器的相应应用程序文件夹中。  

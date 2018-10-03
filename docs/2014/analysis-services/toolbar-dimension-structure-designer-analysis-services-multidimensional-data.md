@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32bc1568a2e12b8e48978857f169a58f7dffef41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146429"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具栏（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用工具栏执行 **维度设计器** 的 **“维度结构”** 页中的常规操作。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **添加商业智能**  
  显示“商业智能向导”以添加商业智能功能。  
   
@@ -38,7 +35,7 @@ ms.locfileid: "37187214"
   
      显示当前维度的属性列表。 这是默认设置。  
   
--   trEE  
+-   树  
   
      显示当前维度的属性的树视图，给定属性的成员属性将显示为此属性的从属注释。  
   

@@ -1,13 +1,11 @@
 ---
-title: Visual c + + 扩展标头 |Microsoft 文档
+title: Visual c + + 扩展标头 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d4b5c823cb992d6b3895740d4c227ae82b30c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dd004d781f267fdc9872dbab32fefe4352558cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741285"
 ---
-# <a name="visual-c-extensions-header"></a>Visual c + + 扩展标头
-以下标头， **icrsint.h**，详细信息的接口，允许客户端检索字段从**记录集**到派生自的类中定义的变量**CADORecordBinding**. 必须指定你想要访问每个字段的 ADO 绑定宏。  
+# <a name="visual-c-extensions-header"></a>Visual C++ 扩展标头
+以下标头**icrsint.h**，详细介绍了允许客户端检索中的字段的界面**记录集**到派生类中定义的变量**CADORecordBinding**. 必须指定想要访问每个字段的 ADO 绑定宏。  
   
 ```  
 #ifndef _ICRSINT_H_  

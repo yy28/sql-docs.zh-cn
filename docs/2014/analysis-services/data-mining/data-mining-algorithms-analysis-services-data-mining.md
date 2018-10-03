@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], algorithms
 - machine learning algorithms [Analysis Services]
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
-caps.latest.revision: 72
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bba1521f808be45dabb89f1fe025ae1b9aa461bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218567"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>数据挖掘算法（Analysis Services – 数据挖掘）
   一个*数据挖掘算法*是一组试探法和计算的数据创建数据挖掘模型。 为了创建模型，算法将首先分析您提供的数据，并查找特定类型的模式和趋势。 算法使用此分析的结果来定义用于创建挖掘模型的最佳参数。 然后，这些参数应用于整个数据集，以便提取可行模式和详细统计信息。  

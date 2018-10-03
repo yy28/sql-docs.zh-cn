@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e3a4f951a901361e47e1582146d306955da0e9bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064847"
 ---
 # <a name="create-a-model-using-report-manager"></a>使用报表管理器创建模型
   您可以使用报表管理器从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据集、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库或 Oracle 数据库生成模型。 报表模型是从已发布到报表服务器上的共享数据源中生成。 如果尚未拥有共享数据源，则必须先创建一个。  

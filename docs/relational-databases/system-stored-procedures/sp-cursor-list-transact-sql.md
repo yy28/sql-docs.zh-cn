@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursor_list
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_list
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 249b6789d6242a982e3b23b577740fdca9bafcdd
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43018079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757812"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +50,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|@shouldalert|报告所有本地游标。|  
+|1|报告所有本地游标。|  
 |2|报告所有全局游标。|  
 |3|报告本地游标和全局游标。|  
   
@@ -83,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|上次对游标执行的操作：<br /><br /> 0 = 没有对游标执行操作。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|在服务器作用域内标识游标的唯一值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_cursor_list 生成连接打开的当前服务器游标列表，并对每个游标的全局属性进行说明，例如游标的可滚动性和可更新性。 sp_cursor_list 列出的游标包括：  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Plan Cache object
 - SQLServer:Plan Cache
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cdb57132850bd99836a7f768a41eea0e72efde09
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e24c072897a46d8a5b3add713f94a84e12a642b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813243"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190787"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server Plan Cache 对象
   **Plan Cache** 对象提供用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如何使用内存来存储对象（例如存储过程、即席和准备的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以及触发器）的计数器。 可同时监视 **Plan Cache** 对象的多个实例，每个实例代表一个要监视的不同类型的计划。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0603ccd35973b27993207d634ebc89aa90e6fa1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140598"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>故障转移和故障转移模式（AlwaysOn 可用性组）
   在可用性组的上下文中，可用性副本的主角色和辅助角色在称为“故障转移” 的过程中通常是可互换的。 存在三种故障转移形式：自动故障转移（无数据丢失）、计划的手动故障转移（无数据丢失）和强制手动故障转移（可能丢失数据）。最后一种形式通常称为“强制故障转移”。 自动故障转移和计划的手动故障转移会保留您的所有数据。 可用性组在可用性副本级别进行故障转移。 也就是说，可用性组故障转移到其次要副本之一（当前故障转移目标）。  
@@ -67,9 +64,9 @@ ms.locfileid: "37310437"
   
 ||异步提交模式|同步提交模式（手动故障转移模式）|同步提交模式（自动故障转移模式）|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|自动故障转移 (automatic failover)|“否”|否|是|  
-|计划的手动故障转移|“否”|是|是|  
-|强制故障转移|是|是|是的**<sup>*</sup>**|  
+|自动故障转移 (automatic failover)|否|否|用户帐户控制|  
+|计划的手动故障转移|否|是|用户帐户控制|  
+|强制故障转移|用户帐户控制|用户帐户控制|是的**<sup>*</sup>**|  
   
  **<sup>*</sup>**  如果发出对已同步辅助副本的强制故障转移命令，辅助副本的行为与手动故障转移相同。  
   
@@ -219,9 +216,9 @@ ms.locfileid: "37310437"
   
 |辅助副本的可用性模式|数据库是否同步？|是否可能发生数据丢失？|  
 |--------------------------------------------|-------------------------------|----------------------------|  
-|同步提交|是|“否”|  
-|同步提交|“否”|是|  
-|异步提交|“否”|是|  
+|同步提交|用户帐户控制|否|  
+|同步提交|否|用户帐户控制|  
+|异步提交|否|用户帐户控制|  
 ||||  
   
  辅助数据库仅跟踪两个恢复分叉，因此，如果您执行多个强制故障转移，则确实已与先前的强制故障转移启动数据同步的任何辅助数据库都可能无法恢复运行。 如果发生这种情况，则需要从可用性组中删除无法恢复的所有辅助数据库，还原到正确的时间点，然后重新加入可用性组。 还原不能跨多个恢复分叉执行，因此请确保在执行多个强制故障转移后执行日志备份。  

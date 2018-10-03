@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5e028dbad5824b9a119c457fbd793b0f7e87f1b2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d2be16142733fe7c54558781e6f916d3c17e7484
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395030"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717015"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>项目设置 （转换） (DB2ToSQL)
 转换页**项目设置**对话框中包含自定义如何 SSMA 将转换到 DB2 语法设置的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]语法。  

@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.connection.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-caps.latest.revision: 36
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb74d6cb0a3496718ef6768ffc69456b76aaf784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73f175bc92c49423cd58bc65ce67712f916b1ab5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229417"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目标编辑器（“连接管理器”页）
   可以使用 **“SQL 目标编辑器”** 对话框的 **“连接管理器”** 页，指定数据源信息以及预览结果。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目标可以将数据加载到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的表或视图中。  
   
  若要了解有关 SQL Server 目标的详细信息，请参阅 [SQL Server Destination](data-flow/sql-server-destination.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“无缓存”**  
  从列表中选择现有连接，或通过单击“新建”创建一个新连接。  
   

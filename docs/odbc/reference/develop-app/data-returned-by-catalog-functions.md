@@ -1,37 +1,34 @@
 ---
-title: 目录函数返回的数据 |Microsoft 文档
+title: 目录函数返回的数据 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d27d395913ce64d263798205521a3d1136460105
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d68c1a5a1b45ce5a3923ae1b4b346ae786ea9a4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857255"
 ---
 # <a name="data-returned-by-catalog-functions"></a>目录函数返回的数据
-每个目录函数返回数据作为结果集。 此结果集是与任何其他结果集中没有什么不同。 它通常生成通过预定义参数化**选择**是硬编码在驱动程序或存储在数据源中的过程的语句。 有关如何从结果集中检索数据的信息，请参阅[已结果设置创建？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  
+每个目录函数返回的数据作为结果集。 此结果集是与任何其他结果集没有什么不同。 它通常生成的一个预定义参数化**选择**是硬编码在驱动程序或存储在数据源中的过程中的语句。 有关如何从结果集中检索数据的信息，请参阅[是一个结果集创建？](../../../odbc/reference/develop-app/was-a-result-set-created.md)。  
   
- 每个目录函数的结果集是该函数的引用项中所述。 除了所列出的列，结果集可以包含特定于驱动程序的列，最后一个的预定义列之后。 驱动程序文档描述了这些列 （如果有）。  
+ 该函数的引用项中描述的每个目录函数的结果集。 除了所列出的列，结果集可以包含特定于驱动程序的列，最后一个预定义列之后。 驱动程序文档中描述了这些列 （如果有）。  
   
- 应用程序应绑定相对于结果集的末尾的驱动程序的特定列。 应为最后一列数计算的特定于驱动程序的列数，即-使用检索**SQLNumResultCols** -较晚所需的列的列数。 这无需更改应用程序，新列添加到结果时可以节省设置在将来版本的 ODBC 或驱动程序。 对于此方案中工作，驱动程序必须添加新的驱动程序的特定列之前旧驱动程序的特定列，以便将列号不会更改相对于结果集的末尾。  
+ 应用程序应将相对于结果集末尾的驱动程序特定列绑定。 应该作为最后一列数计算的特定于驱动程序的列数，即 — 使用检索**SQLNumResultCols** — 更少的所需的列后出现的列数。 这样无需更改应用程序的新列添加到结果时可以节省设置在将来版本的 ODBC 或驱动程序。 若要运行此方案，驱动程序必须添加新驱动程序特定列之前旧驱动程序特定列，以便列号不会更改相对于结果集的末尾。  
   
- 不带引号的标识符，在结果集中返回，即使它们包含特殊字符。 例如，假定标识符引号字符 (这是特定于驱动程序和通过返回**SQLGetInfo**) 是双引号 （"） 和 Accounts Payable 表包含一个名为客户名称列。 在返回的行**SQLColumns**对于此列，TABLE_NAME 列的值为应付帐款不"Accounts Payable"，而 COLUMN_NAME 列的值是客户名称，不"客户名称"。 若要检索的应付帐款表中的客户的名称，该应用程序将引用这些名称定义：  
+ 不带引号的标识符，在结果集中返回，即使它们包含特殊字符。 例如，假定标识符引号字符 (这是特定于驱动程序和通过返回**SQLGetInfo**) 是双引号 （"） 和 Accounts Payable 表包含一个名为 Customer Name 列。 在返回的行**SQLColumns**为本专栏中，TABLE_NAME 列的值为 Accounts Payable 日，不 Accounts Payable，且 COLUMN_NAME 列的值是客户名称，不"Customer Name"。 若要检索 Accounts Payable 表中的客户的名称，该应用程序会引用这些名称：  
   
 ```  
 SELECT "Customer Name" FROM "Accounts Payable"  
@@ -39,6 +36,6 @@ SELECT "Customer Name" FROM "Accounts Payable"
   
  有关详细信息，请参阅[带引号的标识符](../../../odbc/reference/develop-app/quoted-identifiers.md)。  
   
- 目录函数基于在其中连接将进行基于用户名和密码，并仅为其用户具有权限的数据返回的类似 SQL 的授权模型。 密码保护的单个文件，不适合此模型，是驱动程序定义的。  
+ 目录函数基于在其中建立了连接基于用户名和密码，并返回用户对其具有权限的数据的类似于 SQL 的授权模型。 密码保护的单独的文件，不适合此模型，是驱动程序定义的。  
   
- 目录函数返回结果集几乎从未可更新，并且应用程序不应期望能够通过更改中这些结果集的数据更改数据库的结构。
+ 目录函数返回的结果集几乎始终可更新，其应用程序不应期望将无法通过更改这些的结果集中的数据更改的数据库的结构。

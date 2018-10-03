@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - data mining layout toolbar
 - dependency network
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3efc5633a31af6d26fa7ae4abc5ce5b97f8542b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197927"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依赖关系网络关系图演练（数据挖掘外接程序）
   几种不同的数据挖掘模型将网络图用作探索数据中各种关系的方法。 可以将这些模型导入使用 Visio**依赖关系网络**形状，然后再继续进行自定义和增强布局。 **Visio 数据挖掘形状**包括以下自定义控件适用于依赖关系网络关系图：  

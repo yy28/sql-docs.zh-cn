@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 905d673939c1831cbe84d49e863ec401a03ec4b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af0db1ac3d03fa03ea7bb3267656597d164c5302
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222199"
 ---
 # <a name="server-properties-general-page"></a>服务器属性（“常规”页）
   使用此页可以查看或修改报表管理器中所使用的标题，启用或禁用“我的报表”，为“我的报表”安全性选择角色定义以及启用或禁用客户端打印控件。  
@@ -30,7 +27,7 @@ ms.locfileid: "37290263"
   
  服务器模式决定可以设置哪些服务器属性。 如果要管理配置为 SharePoint 集成模式的报表服务器，则不能启用“我的报表”，也不能为报表管理器设置应用程序标题。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入将显示在报表管理器中的应用程序名称。 默认情况下，此值为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 指定的名称仅显示在报表管理器中。  
   

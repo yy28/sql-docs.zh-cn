@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50d2c364a6632052dbab387544e6c224d0bb1e05
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3bea7e5bac71c3e4fdd90253f30a503dc44f44d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208997"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` 可以消除数据转换时用于提供数据的负担[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序，从而导致应用程序的客户端和服务器组件的显著的性能提升。 其他好处包括在插入或更新近似数字数据类型时减少精度损失。  

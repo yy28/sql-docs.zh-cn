@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
 - common language runtime [SQL Server], enabling
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f6f17415e13b3f0a9774a1e530756955f28c32dd
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353289"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075647"
 ---
 # <a name="enabling-clr-integration"></a>启用 CLR 集成
   默认情况下关闭公共语言运行时 (CLR) 集成功能，必须启用该功能才能使用借助 CLR 集成实现的对象。 若要启用 CLR 集成，请使用**clr 已启用**的选项**sp_configure**存储过程：  

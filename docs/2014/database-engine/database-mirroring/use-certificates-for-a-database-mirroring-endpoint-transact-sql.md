@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d593de81b25e335e55e61dab5a8fce4205828656
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116c5d900cf56d89c01bbf333d2d8bd3905aa371
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157128"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224987"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>使用数据库镜像端点证书 (Transact-SQL)
   若要在给定的服务器实例上启用数据库镜像的证书验证，系统管理员必须配置每个服务器实例，以在出站连接和进站连接中使用证书。 必须先配置出站连接。  
@@ -63,7 +60,7 @@ ms.locfileid: "37157128"
   
  有关详细信息，请参阅 [允许数据库镜像终结点将证书用于入站连接 (Transact-SQL)](database-mirroring-use-certificates-for-inbound-connections.md)。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  建议您对数据库镜像连接进行加密，除非您能够保证网络的安全。 有关详细信息，请参阅 [数据库镜像终结点 (SQL Server)](the-database-mirroring-endpoint-sql-server.md)。  
   
  将证书复制到其他系统时，请使用安全的复制方法。 必须格外小心地保证所有证书的安全。  

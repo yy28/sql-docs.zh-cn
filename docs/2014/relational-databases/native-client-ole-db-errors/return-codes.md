@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB error handling, return codes
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - FAILED macro
 - errors [OLE DB], return codes
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00082a5c6053d8b9f0319c26ae8d72302c14d218
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7a84ad46068260524a2e6232ca668da445447529
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207417"
 ---
 # <a name="return-codes"></a>返回代码
   在最基本的级别上，成员函数要么成功，要么失败。 在稍微精确一些的级别上，函数可能会成功，但是它的成功可能并不是应用程序开发人员想要的成功。  
   
- 有关 OLE DB 返回代码的详细信息，请参阅[返回代码 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)。  
+ 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)（返回代码 (OLE DB)）。  
   
  当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序成员函数返回 S_OK，该函数执行成功。  
   

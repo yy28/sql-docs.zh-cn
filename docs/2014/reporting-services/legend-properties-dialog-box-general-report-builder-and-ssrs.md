@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 172fc72cd09356281ddf10f2e048a2a81684c29a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b939fe20f4bcd280c00dc6279ebb1c8ba3a1f45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230669"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082239"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>“图例属性”对话框 ->“常规”（报表生成器和 SSRS）
   使用 **“图例”** 对话框可以定义图表中图例的外观和布局。 有关详细信息，请参阅[设置图表上的图例的格式&#40;报表生成器和 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为相应图例键入一个名称。  
   

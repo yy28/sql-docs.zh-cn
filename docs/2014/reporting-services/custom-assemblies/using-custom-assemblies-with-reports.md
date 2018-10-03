@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services]
 - assemblies [Reporting Services], custom
 - custom assemblies [Reporting Services], about custom assemblies
 ms.assetid: 53d141d0-2185-466a-84dc-7b90d284da3d
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef7579e104fecc5d73e35398f9e54b7b9d8bd7e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ab2fc2b4411fa97f99b2888142ad7783d9b514
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219437"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>将自定义程序集用于报表
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中，您可以为报表项值、样式和格式设置编写自定义代码。 例如，您可以使用自定义代码基于区域性设置货币的格式，使用特殊格式设置标记某些值，或者为您的公司应用其他实行中的业务规则。 在报表中包括此代码的方法之一就是使用可以从报表定义文件内引用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 创建自定义代码程序集。 报表运行时，服务器将调用自定义程序集中的函数。 自定义程序集可用于检索您计划在报表中使用的指定函数。  

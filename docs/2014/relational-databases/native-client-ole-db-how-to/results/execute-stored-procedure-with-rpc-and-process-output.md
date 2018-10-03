@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bffe276292dc64731e6114df52b6dd0317fb04a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fe22e706e8083ad14c278e6f38d160600838cd81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224087"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>执行存储过程（使用 RPC 语法）以及处理返回代码和输出参数 (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 存储过程可具有整数返回代码和输出参数。 返回代码和输出参数位于从服务器发送的最后一个数据包中，因此直到行集完全释放时它们才可供应用程序使用。 如果命令返回多个结果，则输出参数数据在 `IMultipleResults::GetResult` 返回 DB_S_NORESULT 时或 `IMultipleResults` 接口完全释放时（以二者中先发生的为准）可用。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应将它们与加密[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 对它们加密。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>处理返回代码和输出参数  
   
@@ -50,11 +47,11 @@ ms.locfileid: "37408196"
 ## <a name="example"></a>示例  
  此示例说明了如何处理行集、返回代码和输出参数。 不处理结果集。 IA64 平台不支持此示例。  
   
- 此示例需要 AdventureWorks 示例数据库中，您可以从下载[Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  执行第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以创建该应用程序要使用的存储过程。  
   
- 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请更改连接字符串从"到 L"(local)\\\name"，其中名称是命名的实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
+ 使用 ole32.lib 和 oleaut32.lib 编译并执行第二个 (C++) 代码列表。 此应用程序连接到您的计算机上默认的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在某些 Windows 操作系统上，您需要将 (localhost) 或 (local) 更改为您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例的名称。 若要连接到命名实例，请将连接字符串从 L"(local)" 更改为 L"(local)\\\name"，其中 name 是命名实例。 默认情况下，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 安装在命名实例中。 请确保您的 INCLUDE 环境变量包括含有 sqlncli.h 的目录。  
   
  执行第三个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表，以删除该应用程序使用的存储过程。  
   
@@ -397,6 +394,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [处理结果操作指南主题&#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [处理结果操作指南主题 (OLE DB)](processing-results-how-to-topics-ole-db.md)  
   
   

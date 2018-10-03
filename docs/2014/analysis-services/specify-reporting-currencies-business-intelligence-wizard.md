@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cda6eecd004b4e437552f3db07b7487c7529594
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156517"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>指定报表货币（商业智能向导）
   使用“定义报表货币”页为货币换算功能定义报表货币，该功能涵盖“选择换算类型”页中指定的多对多或一对多换算类型。 （报表货币是换算“选择度量值”页中所选度量值时使用的货币。）从货币维度中选择的成员可以为商业智能向导所生成的货币换算定义报表货币维度_。  
@@ -29,7 +26,7 @@ ms.locfileid: "37243527"
 > [!NOTE]  
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”页中选择了“多对一”，那么将不会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **报表货币**  
  选择“报表货币”可以将报表货币维度中货币维度所列出的所有成员都包括在内。 清除 **“报表货币”** 可以排除所有列出的成员。  
   

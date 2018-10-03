@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - LINKEDSERVERS rowset
 - enumerating data sources [OLE DB]
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60930ce7a43066c9041dfdaa92e0c4be254d78ae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159087"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 行集 (OLE DB)
-  **LINKEDSERVERS**行集枚举可以参与的组织数据源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分布式查询。  
+  LINKEDSERVERS 行集用于枚举可以参与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分布式查询的组织数据源。  
   
- **LINKEDSERVERS**行集包含以下列。  
+ LINKEDSERVERS 行集包含以下列。  
   
 |列名|类型指示符|Description|  
 |-----------------|--------------------|-----------------|  
@@ -40,6 +37,6 @@ ms.locfileid: "37422396"
  行集按 SRV_NAME 排序，并支持对 SRV_NAME 的单个限制。  
   
 ## <a name="see-also"></a>请参阅  
- [架构行集支持&#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [架构行集支持 (OLE DB)](schema-rowset-support-ole-db.md)  
   
   

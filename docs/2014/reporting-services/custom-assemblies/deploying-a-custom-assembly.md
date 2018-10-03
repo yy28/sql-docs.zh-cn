@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deploying custom assemblies [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], updating
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72edfdc6070140f2b9d72c1a4ba50c05cfda8d96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 204e5828442182065c8f31c96b2af15eafa31788
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095953"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自定义程序集
   为了在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自定义程序集，请将程序集同时放到报表设计器和报表服务器的应用程序文件夹中。 默认情况下，将在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中向自定义程序集授予 `Execution` 权限。 若要向自定义程序集授予超过执行权限的特权，需要对报表服务器编辑 rssrvpolicy.config 配置文件，并对报表设计器预览窗口编辑 rspreviewpolicy.config 配置文件。 也可以选择将自定义程序集安装到全局程序集缓存 (GAC) 中。  

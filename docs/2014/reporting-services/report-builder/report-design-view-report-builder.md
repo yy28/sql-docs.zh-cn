@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a1e17c424e4447e64d48bebbe25960aec165e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225027"
 ---
 # <a name="report-design-view-report-builder"></a>报表设计视图（报表生成器）
   报表生成器窗口旨在帮助您轻松组织报表资源并快速生成所需报表。 设计图面位于窗口中央，功能区位于上方，“报表数据”、“分组”和“属性”窗格及“报表部件库”分别位于左侧、下方和右侧。 设计图面用于添加和组织报表项。 功能区将传统菜单项分为多个类别，使您可以轻松查找和使用它们。 这些窗格可帮助您添加、选择和组织报表资源，以及更改报表项属性。  

@@ -1,30 +1,27 @@
 ---
-title: '附录 b: ADO 错误 |Microsoft 文档'
+title: 附录 B:ADO 错误 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO], types
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f27575e48ddc9b8e1f5e6b3add5700a981ceefe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 392b14a057c42091acb6b92e0c64d41d94b8eb10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746585"
 ---
 # <a name="appendix-b-ado-error-codes"></a>附录 b: ADO 错误代码
-请参阅以下主题有关特定错误消息的详细信息：
+请参阅有关特定错误消息的详细信息的以下主题：
 
 -   [ADO 错误代码](../../../ado/guide/appendixes/ado-error-codes.md)
 

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 7039bebb-1f25-4cf3-81f1-393dfb78da12
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 18b1f6d38f67dacc2a8da06a061d6bd76e055196
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818103"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061417"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>备份文件必须位于与数据库文件分开的设备上
   此规则检查数据库文件是否位于与备份文件分开的设备上。 如果数据库文件和备份文件位于同一台设备上并且该设备出现故障，数据库和备份都将不可用。 此外，将数据库和备份文件放到不同的设备上还可以优化使用数据库和写入备份时的 I/O 性能。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data transfers [SMO]
 - transferring data
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70224f60f7bd6da21b757cdff265749c9ac35979
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3fa6ee3b25169e2dafe6ed7ad8380169dfe91d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186134"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164737"
 ---
 # <a name="transferring-data"></a>传输数据
   <xref:Microsoft.SqlServer.Management.Smo.Transfer> 类是一个实用工具类，它提供用于传输对象和数据的工具。  

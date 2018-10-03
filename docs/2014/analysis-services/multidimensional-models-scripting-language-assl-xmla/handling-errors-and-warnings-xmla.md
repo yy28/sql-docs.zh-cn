@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - warnings [XML for Analysis]
 - inline warnings [XMLA]
 ms.assetid: ab895282-098d-468e-9460-032598961f45
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc4d145d9f64c7a8b0761b6006aab9ede1184aa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 206fbaa364f6410c9ac242aff9f4d3f10e14f9c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229479"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>处理错误和警告 (XMLA)
   错误处理时是必需的 XML for Analysis (XMLA) [Discover](../xmla/xml-elements-methods-discover.md)或[Execute](../xmla/xml-elements-methods-execute.md)方法调用不会运行，成功运行，但将生成错误或警告，或成功运行，但返回的结果包含错误的。  
@@ -57,11 +54,11 @@ ms.locfileid: "37226347"
   
 |列名|类型|Description|允许 null<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|指示方法是成功还是失败的返回代码。 十六进制值必须转换为 `UnsignedInt` 值。|“否”|  
-|`WarningCode`|`UnsignedInt`|指示警告条件的返回代码。 十六进制值必须转换为 `UnsignedInt` 值。|是|  
-|`Description`|`String`|由生成错误的组件返回的错误或警告的文本和说明。|是|  
-|`Source`|`String`|生成错误或警告的组件的名称。|是|  
-|`HelpFile`|`String`|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|是|  
+|`ErrorCode`|`UnsignedInt`|指示方法是成功还是失败的返回代码。 十六进制值必须转换为 `UnsignedInt` 值。|否|  
+|`WarningCode`|`UnsignedInt`|指示警告条件的返回代码。 十六进制值必须转换为 `UnsignedInt` 值。|用户帐户控制|  
+|`Description`|`String`|由生成错误的组件返回的错误或警告的文本和说明。|用户帐户控制|  
+|`Source`|`String`|生成错误或警告的组件的名称。|用户帐户控制|  
+|`HelpFile`|`String`|指向介绍错误或警告的“帮助”文件或主题的路径或 URL。|用户帐户控制|  
   
  <sup>1</sup>指示是否将数据是必需的并且必须返回，或是否数据是可选的如果列不适用于允许使用 null 字符串。  
   

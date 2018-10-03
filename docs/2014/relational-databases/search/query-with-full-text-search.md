@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e8c8867b932d291415f584f93a09478bbd05725
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152717"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文查询使用全文谓词（CONTAINS 和 FREETEXT）以及全文函数（CONTAINSTABLE 和 FREETEXTTABLE）来定义全文搜索。 它们支持复杂的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法，这种语法支持各种形式的查询词。 若要编写全文查询，必须了解何时以及如何使用这些谓词和函数。  

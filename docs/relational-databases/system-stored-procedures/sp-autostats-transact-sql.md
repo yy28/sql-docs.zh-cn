@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_autostats_TSQL
@@ -22,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d077eea6d2043a4412347364bae42a9a7989ee4f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a3a7a6c0ddee6e425ff80155be3002d8deffe187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067520"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721266"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +78,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  结果集的表或索引的视图包括为索引，使用 AUTO_CREATE_STATISTICS 选项生成的单列统计信息创建统计信息和统计信息创建与[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)语句。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果禁用了指定的索引，或者指定的表具有被禁用的聚集索引，将显示错误消息。  
   
  对于内存优化表，AUTO_UPDATE_STATISTICS 始终为 OFF。  

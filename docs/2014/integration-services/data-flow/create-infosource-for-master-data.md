@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 52ed129a45ce66596ff243a1a75b71b65d1e1dd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e01694abcfc7576f9c5f1a91a1e795163d2f323
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065438"
 ---
 # <a name="create-infosource-for-master-data"></a>“创建主数据的 InfoSource”
   使用 **“创建主数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的主数据创建一个新的 InfoSource。  
@@ -41,7 +38,7 @@ ms.locfileid: "37314287"
   
 5.  在 **“创建 InfoSource”** 对话框中，选择 **“主数据”**，然后单击 **“确定”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **InfoObject 名称**  
  输入新 InfoSource 应基于的 InfoObject 的名称。  
   

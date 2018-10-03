@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.advanced.f1
 helpviewer_keywords:
 - Replay Configuration dialog box
 ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7d010365e010fc7748e6cb04d6d71479f0f2f9d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192477"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server Profiler - 重播配置（高级重播选项）
   在 **“重播配置”** 对话框中，使用 **“高级重播选项”** 选项卡可以指定如何重播跟踪文件。  
   
  若要查看此窗口，请使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]打开包含相应重播事件的跟踪文件或表。 有关详细信息，请参阅 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)。 打开跟踪文件或表后，在 **“重播”** 菜单上，单击 **“启动”**，连接到要重播跟踪的 SQL Server 实例，再单击 **“高级重播选项”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **重播系统 SPID**  
  指定 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]是否重播系统进程标识符 (SPID)。  
   

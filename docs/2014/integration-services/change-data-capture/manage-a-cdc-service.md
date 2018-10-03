@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e0c2078adeff636f11acdc86b78355c43c46a30a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e38da453edf4aeddc81ea4bcaa3498f69318b715
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064777"
 ---
 # <a name="manage-a-cdc-service"></a>管理 CDC 服务
   您可以使用 CDC 设计器控制台查看通过 CDC 服务配置控制台创建的服务并且管理 Oracle CDC 服务中的所有实例。  

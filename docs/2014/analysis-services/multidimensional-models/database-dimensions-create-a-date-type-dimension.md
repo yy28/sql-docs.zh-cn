@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - time intelligence [Analysis Services]
 ms.assetid: 6d692856-4b01-4dca-a650-f97ac220c114
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1e38812dbdff6ecf36bd0c1398ce733d29af6e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1b842c891f69672511450ccaa389ca6ada01675
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218677"
 ---
 # <a name="create-a-date-type-dimension"></a>创建日期类型维度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，时间维度是指其属性表示时间段（如年、半期、季度、月和天）的维度类型。 时间维度中的时间段可提供用于分析和报告的基于时间的粒度级别。 属性将按层次结构进行组织，并且时间维度的粒度主要由历史数据的业务和报表需求决定。 例如，商业智能应用程序中的大多数财务数据和销售数据使用月粒度或季度粒度。  
@@ -55,7 +52,7 @@ ms.locfileid: "37315071"
   
  可以在维度设计器中手动构造这些不同的日历。 但是，在创建时间维度或服务器时间维度时，维度向导会提供几个层次结构模板，可用于自动生成若干种类型的日历。 下表说明了可通过维度向导生成的各种日历。  
   
-|日历|Description|  
+|Calendar|Description|  
 |--------------|-----------------|  
 |标准日历|十二个月的公历，从 1 月 1 日开始，到 12 月 31 日结束。<br /><br /> 无论使用维度向导创建时间维度还是服务器时间维度，在定义了表示维度的时间段属性之后，该向导都会生成一个标准日历的层次结构。 如果使用维度向导创建服务器时间维度，则可将标准日历的开始日期调整为 1 月 1 日以外的某一天。|  
 |会计日历|十二个月会计日历。 如果选择该日历，则要为单位使用的会计日历指定开始的月份和日期。<br /><br /> 注意：只有在使用维度向导创建服务器时间维度时，该日历才可用。|  

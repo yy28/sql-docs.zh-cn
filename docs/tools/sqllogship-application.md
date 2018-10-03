@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqllogship
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0dbdc7e2ccfdd2afc3e674100605a39d727bf5ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5b1961f8ce9eadd34ece73f498d532428b50d001
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42784168"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710955"
 ---
 # <a name="sqllogship-application"></a>sqllogship 应用程序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,16 +59,16 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |level|描述|  
 |-----------|-----------------|  
 |0|不输出跟踪消息和调试消息。|  
-|@shouldalert|输出错误处理消息。|  
+|1|输出错误处理消息。|  
 |2|输出警告消息和错误处理消息。|  
 |**3**|输出信息性消息、警告和错误处理消息。 这是默认值。|  
 |4|输出所有调试消息和跟踪消息。|  
   
  **–logintimeout** *timeout_value*  
- 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 timeout_value 为 int。  
+ 指定所分配的在登录尝试超时之前可用于尝试登录到服务器实例的时间。默认值为 15 秒。 *timeout_value* 为 **int**_._  
   
  **-querytimeout** *timeout_value*  
- 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 timeout_value 为 int。  
+ 指定所分配的在尝试启动指定操作超时之前的尝试时间。默认情况下不指定超时期限。 *timeout_value* 为 **int**_._  
   
 ## <a name="remarks"></a>Remarks  
  我们建议您尽可能使用备份、复制和还原作业来执行备份、复制和还原操作。 若要从批处理操作或其他应用程序启动这些作业，请调用 [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) 存储过程。  

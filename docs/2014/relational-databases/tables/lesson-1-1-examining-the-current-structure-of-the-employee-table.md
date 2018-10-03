@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227158"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211427"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>检查 Employee 表的当前结构
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库包含基于 **HumanResources** 架构的 **Employee**表。 为了避免更改原始表，此步骤将对名为 **EmployeeDemo** 的 **Employee**表创建一个副本。 若要简化此示例，你只需从原始表中复制五列数据。 然后，查询**HumanResources.EmployeeDemo**表以查看数据的方式在表中而无需使用`hierarchyid`数据类型。  

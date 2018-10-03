@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196887"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>提供相关列建议（数据挖掘向导）
   可以使用 **“提供相关列建议”** 页，查看在向导的上一页中选择的 **“建议”** 功能所提供的建议。 将根据与所选“可预测”列的关联预先选择输入列。 如果接受此对话框中的更改，则这些更改将反映在 **“指定定型数据”** 页中。  
   
  **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **列名**  
  显示在向导的“指定定型数据”页中定义的输入列。  
   

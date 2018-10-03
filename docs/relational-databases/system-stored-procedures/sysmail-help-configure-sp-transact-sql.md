@@ -1,14 +1,11 @@
 ---
-title: sysmail_help_configure_sp (Transact SQL) |Microsoft 文档
+title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257466"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838425"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,30 +41,30 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>参数  
  [**@parameter_name** = ] **'***parameter_name***'**  
- 要检索的配置设置名称。 如果指定，在返回的配置设置的值**@parameter_value**输出参数。 如果没有**@parameter_name**指定，此存储的过程返回的结果集包含所有实例中的数据库邮件配置设置。  
+ 要检索的配置设置名称。 如果指定，在返回的配置设置的值**@parameter_value**输出参数。 如果未**@parameter_name**指定，则此存储的过程返回的结果集包含所有实例中的数据库邮件配置设置。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果没有**@parameter_name**指定，则返回具有以下各列的结果集。  
+ 如果未**@parameter_name**指定时，返回的结果集包含以下列。  
   
 ||||  
 |-|-|-|  
 |列名|数据类型|Description|  
 |**paramname**|**nvarchar(256)**|配置参数的名称。|  
 |**paramvalue**|**nvarchar(256)**|配置参数的值。|  
-|**说明**|**nvarchar(256)**|配置参数的说明。|  
+|**description**|**nvarchar(256)**|配置参数的说明。|  
   
-## <a name="remarks"></a>注释  
- 存储的过程**sysmail_help_configure_sp**列出实例的当前数据库邮件配置设置。  
+## <a name="remarks"></a>备注  
+ 存储的过程**sysmail_help_configure_sp**列出该实例的当前数据库邮件配置设置。  
   
- 当**@parameter_name**指定，但没有输出参数进行**@parameter_value**，此存储的过程会产生任何输出。  
+ 当**@parameter_name**指定，则为没有提供任何输出参数，但**@parameter_value**，此存储的过程会生成任何输出。  
   
- 存储的过程**sysmail_help_configure_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称调用过程**msdb**。  
+ 存储的过程**sysmail_help_configure_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称调用该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>权限  
- 执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例显示如何列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的数据库邮件配置设置。  
@@ -92,7 +88,7 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

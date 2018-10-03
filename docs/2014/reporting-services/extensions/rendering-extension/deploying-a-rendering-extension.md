@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190877"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署呈现扩展插件
   在编写 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表呈现扩展插件并将其编译为 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 库之后，需要使其变得可供报表服务器和报表设计器发现。 为此，请将此扩展插件复制到适当的目录并向适当的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置文件添加条目。  

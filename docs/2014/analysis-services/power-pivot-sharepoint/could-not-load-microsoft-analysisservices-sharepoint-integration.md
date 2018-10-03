@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca2e1ae13b001277d50be3bee5dbe782a8c23786
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227887"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>无法加载文件或程序集&#39;Microsoft.Data.Services，版本 = 3.5.0.0，区域性 = 中性，PublicKeyToken = b77a5c561934e089&#39;或其某个依赖项。 系统找不到指定的文件。
   在具有 PowerPivot for SharePoint 的 SharePoint 2010 环境中，如果您尝试执行数据馈送导出并且系统缺少 Microsoft ADO.NET Data Services 的必需版本，则会出现此错误。  

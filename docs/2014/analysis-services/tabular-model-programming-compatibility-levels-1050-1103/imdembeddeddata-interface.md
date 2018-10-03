@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218019"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 接口
   IMDEmbedded 接口是用于管理嵌入的 PowerPivot 数据库或表格模型数据库的公共接口。 此接口继承自 `IPersistStream` 接口。 此接口允许以下操作：  
@@ -103,7 +100,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  在访问流标识符时出现错误。  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>备注  
  为了确认当前连接是否包含嵌入数据库，用户应从 OLE DB 连接属性查看 DBPROP_MSMD_EMBEDDED_DATA 属性的值。  
   
  DBPROP_MSMD_EMBEDDED_DATA 的可能值包括：  

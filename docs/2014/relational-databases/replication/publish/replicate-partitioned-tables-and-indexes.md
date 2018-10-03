@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 09/10/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned indexes [SQL Server], replicating
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], partitioned tables
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9764adf620688c4fa5335a65d9cba5d70480ed8a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b55612e8143a8ec207902ff7c802d518382820b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214818"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>复制已分区表和索引
   由于使用分区可以快速而有效地管理和访问数据子集，并同时保持数据集合的完整性，因而使大型表或索引更易于管理。 有关详细信息，请参阅 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 复制支持分区，提供了一组属性来指定如何处理已分区表和索引。  
@@ -45,7 +42,7 @@ ms.locfileid: "37253879"
   
 -   通过使用以下其中一个存储过程的 *schema_option* 参数：  
   
-    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 或 transactional replication  
+    -   用于事务复制的[sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 或 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)  
   
     -   用于合并复制的[sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 或 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) f或 merge replication  
   

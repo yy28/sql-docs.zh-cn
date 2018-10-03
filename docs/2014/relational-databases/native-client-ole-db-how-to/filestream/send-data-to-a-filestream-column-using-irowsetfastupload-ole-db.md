@@ -1,24 +1,21 @@
 ---
-title: 将数据发送到 FILESTREAM 列使用 IRowsetFastUpload (OLE DB) |Microsoft Docs
+title: 使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4ce42fac1366dccc4f46285d783666c4b469036
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408928"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192874"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)
   此示例使用 IRowsetFastUpload 接口向 filestream 列发送大小在 4 MB 与 4 GB 之间的数据。  
@@ -40,7 +37,7 @@ ms.locfileid: "37408928"
   
  编译 IRowsetFastLoadUpload.cpp、ISSHelper.cpp、ole32.lib 和 oleaut32.lib。  
   
- 当你运行此示例，您必须在服务器或服务器，以及一个值的名称之间传递 4 MB (0x400001) 和 4 GB (0xFFFFFFFF)，该值指示的数据量来编写。  
+ 运行此示例时，必须传递服务器名称或“服务器\实例名称”，以及一个介于 4 MB (0x400001) 与 4 GB (0xFFFFFFFF) 之间的值，指示写入的数据量。  
   
  第四个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表删除此示例创建的数据库。  
   

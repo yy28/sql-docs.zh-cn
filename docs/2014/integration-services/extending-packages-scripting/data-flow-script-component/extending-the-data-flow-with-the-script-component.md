@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Script component [Integration Services]
 - data flow [Integration Services], components
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 393c4c4ffb5882b982f3a696c1fa4e625ff5b1ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0475bbe29899e6e282104610cdc2a6c96701ff82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071857"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extending the Data Flow with the Script Component
   脚本组件通过以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 编写，在包运行时编译和执行的自定义代码来扩展 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包的数据流功能。 当 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含的数据流源、转换或目标不能完全满足您的需求时，脚本组件可简化自定义数据流源、转换或目标的开发。 用预期输入和输出配置该组件后，它将为您编写所有必需的基础结构代码，这样您就可以只将注意力集中于自定义处理所需的代码。  

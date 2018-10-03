@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aa82d94a6e034c514b173e623f8c6d0ab9932880
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246157"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112217"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>数据源视图（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用 **“数据源视图”** 窗格，查看与所选维度关联的数据源视图中的表和列。 使用此窗格，可以通过将列从 **“数据源视图”** 窗格中拖动到 **“属性”** 窗格或 **“层次结构和级别”** 窗格中，来创建特性、成员属性、层次结构和级别。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **数据源视图**  
  显示与所选维度相关联的数据源视图。  
   
@@ -79,7 +76,7 @@ ms.locfileid: "37246157"
   
      显示与当前维度相关联的表和列的关系图。  
   
--   trEE  
+-   树  
   
      显示树视图，其中包含与当前维度相关联的表和列。  
   

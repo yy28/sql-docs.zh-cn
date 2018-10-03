@@ -1,12 +1,10 @@
 ---
-title: sys.dm_repl_articles (Transact SQL) |Microsoft 文档
+title: sys.dm_repl_articles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467983"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791066"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +40,21 @@ ms.locfileid: "34467983"
 |**artid**|**bigint**|唯一标识该表中的每一项。|  
 |**artfilter**|**bigint**|用于水平筛选项目的存储过程 ID。|  
 |**artobjid**|**bigint**|已发布对象的 ID。|  
-|**artpubid**|**bigint**|文章所属的发布 ID。|  
-|**artstatus**|**tinyint**|项目选项和状态的位掩码，它可以是对下面的一个或多个值执行逻辑位或运算的结果：<br /><br /> **1** = 文章处于活动状态。<br /><br /> **8** = 包括 INSERT 语句中的列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> **24** = 这两在 INSERT 语句中包括的列名称并使用参数化的语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为 17。 如果值为 0，则表示项目处于非活动状态，而且未定义其他属性。|  
-|**arttype**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的文章。<br /><br /> **3**带手工筛选 = 基于日志的文章。<br /><br /> **5** = 与手动视图基于日志的文章。<br /><br /> **7** = 具有手工筛选和手动视图基于日志的项目。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。|  
+|**artpubid**|**bigint**|该项目所属的发布的 ID。|  
+|**artstatus**|**tinyint**|项目选项和状态的位掩码，它可以是对下面的一个或多个值执行逻辑位或运算的结果：<br /><br /> **1** = 项目处于活动状态。<br /><br /> **8** = 包括 INSERT 语句中的列名称。<br /><br /> **16** = 使用参数化语句。<br /><br /> **24** = 同时在 INSERT 语句中包括的列名称并使用参数化的语句。<br /><br /> 例如，使用参数化语句的活动项目在此列中的值为 17。 如果值为 0，则表示项目处于非活动状态，而且未定义其他属性。|  
+|**arttype**|**tinyint**|项目的类型：<br /><br /> **1** = 基于日志的项目。<br /><br /> **3** = 具有手动筛选器基于日志的项目。<br /><br /> **5** = 具有手动视图并且基于日志的项目。<br /><br /> **7** = 具有手动筛选器和手动视图并且基于日志的项目。<br /><br /> **8** = 存储过程执行。<br /><br /> **24** = 可序列化的存储的过程执行。<br /><br /> **32** = 存储过程 （仅限架构）。<br /><br /> **64** = 视图 （仅限架构）。<br /><br /> **128** = 函数 （仅限架构）。|  
 |**wszArtdesttable**|**nvarchar(514)**|目标中已发布对象的名称。|  
 |**wszArtdesttableowner**|**nvarchar(514)**|目标中已发布对象的所有者。|  
 |**wszArtinscmd**|**nvarchar(510)**|用于插入的命令或存储过程。|  
-|**cmdTypeIns**|**int**|用于插入存储过程的调用语法，可以为以下值之一。<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = 未知|  
+|**cmdTypeIns**|**int**|用于插入存储过程的调用语法，可以为以下值之一。<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = 无<br /><br /> **7** = 未知|  
 |**wszArtdelcmd**|**nvarchar(510)**|用于删除的命令或存储过程。|  
-|**cmdTypeDel**|**int**|用于删除存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = 未知|  
+|**cmdTypeDel**|**int**|用于删除存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = 无<br /><br /> **7** = 未知|  
 |**wszArtupdcmd**|**nvarchar(510)**|用于更新的命令或存储过程。|  
-|**cmdTypeUpd**|**int**|用于更新存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 未知|  
+|**cmdTypeUpd**|**int**|用于更新存储过程的调用语法，可以为以下值之一。<br /><br /> **0** = XCALL<br /><br /> **1** = 调用<br /><br /> **2** = SQL<br /><br /> **3** = 无<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = 未知|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|用于部分更新的命令或存储过程。|  
 |**cmdTypePartialUpd**|**int**|用于部分更新存储过程的调用语法，可以为以下值之一。<br /><br /> **2** = SQL|  
 |**numcol**|**int**|垂直筛选项目的分区中的列数。|  
-|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = DELETE<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分更新|  
+|**artcmdtype**|**tinyint**|当前复制的命令类型，可以为下列值之一。<br /><br /> **1** = 插入<br /><br /> **2** = 删除<br /><br /> **3** = 更新<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = 无<br /><br /> **6** = 仅限内部使用<br /><br /> **7** = 仅限内部使用<br /><br /> **8** = 部分 UPDATE|  
 |**artgeninscmd**|**nvarchar(510)**|基于项目中所包含列的 INSERT 命令模板。|  
 |**artgendelcmd**|**nvarchar(510)**|DELETE 命令模板，可以包括项目中包含的主键或列，具体取决于所使用的调用语法。|  
 |**artgenupdcmd**|**nvarchar(510)**|UPDATE 命令模板，可以包括主键、更新列或完整的列列表，具体取决于所使用的调用语法。|  
@@ -67,15 +64,15 @@ ms.locfileid: "34467983"
 |**artgendel2cmd**|**nvarchar(510)**|在并发快照处理期间协调项目时使用的 DELETE 命令模板。|  
 |**fInReconcile**|**tinyint**|在并发快照处理期间指示当前是否正在协调项目。|  
 |**fPubAllowUpdate**|**tinyint**|指示发布是否允许更新订阅。|  
-|**intPublicationOptions**|**bigint**|指定其他发布选项的位图，其中位选项值包括：<br /><br /> **0x1** -已启用对等复制。<br /><br /> **0x2** -发布仅本地更改。<br /><br /> **0x4** -已启用的非 SQL Server 订阅服务器。|  
+|**intPublicationOptions**|**bigint**|指定其他发布选项的位图，其中位选项值包括：<br /><br /> **0x1** -对等复制启用。<br /><br /> **0x2** -仅发布本地更改。<br /><br /> **0x4** -为非 SQL Server 订阅服务器启用。|  
   
-## <a name="permissions"></a>权限  
- 需要 VIEW DATABASE STATE 权限的发布数据库上调用**dm_repl_articles**。  
+## <a name="permissions"></a>Permissions  
+ 要求具有对发布数据库的 VIEW DATABASE STATE 权限，调用**dm_repl_articles**。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  只为复制项目缓存中当前加载的复制的数据库对象返回信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [与复制相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

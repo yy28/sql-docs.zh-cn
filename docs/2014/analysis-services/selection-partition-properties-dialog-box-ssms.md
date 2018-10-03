@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.selection.f1
 ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8533f27f5cd58991b83833522c8b04ad07d1705b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173328"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149347"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>选择（“分区属性”对话框）(SSMS)
   在 SQL Server Management Studio 中，对于要在 **“常规”** 、 **“主动缓存”** 或 **“错误配置”** 窗格中查看或修改属性的度量值组，可以使用 **“分区属性”** 对话框的 **“选择”** 页选择分区。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **网格**  
  显示包含所选分区的度量值组的分区。  
   

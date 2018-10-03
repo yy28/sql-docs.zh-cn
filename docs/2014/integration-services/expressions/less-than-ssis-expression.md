@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e61faf60834ecfb312859ba80d953d49b82a477a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 877c8f762b8f70c68ae3549417e0eeb3e3410473
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156927"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;（小于）（SSIS 表达式）
   通过比较确定第一个表达式是否小于第二个表达式。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -47,7 +44,7 @@ expression1 < expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b90318de4420df1776c01e5e881740d9d44ea20
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148547"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>授予对存储过程的权限 (Analysis Services)
   存储过程或程序集，在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是编写的外部例程[!INCLUDE[msCoName](../includes/msconame-md.md)].NET 编程语言的扩展功能的[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 通过程序集，开发人员可以利用跨语言集成、异常处理、版本支持、部署支持以及调试支持。  

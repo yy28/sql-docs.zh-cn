@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replaying cursors
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41ea37154bc03428b0e16a2101ca8f71e3852251
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e076ffe977423e8068759aca0a3624c03eb6e44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211897"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>重播至光标处 (SQL Server Profiler)
   本主题介绍了如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]重播到光标处即暂停的跟踪文件或表。 在光标处暂停跟踪可支持调试，因为您可以将长跟踪脚本的重播分成较短的段，以便逐步进行分析。  

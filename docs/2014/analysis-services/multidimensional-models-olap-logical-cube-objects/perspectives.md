@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ready-only cube view
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb27b635b450b8815087d3ac5a93f9e360cddf96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81e6fa2e6331c254d2748fd919878e6f1b98eb0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155298"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131677"
 ---
 # <a name="perspectives"></a>透视
   透视是一种定义，允许用户以一种更简单的方式查看多维数据集。 透视是多维数据集功能的子集。 管理员使用透视可以创建多维数据集的视图，从而帮助用户将注意力集中在与他们关系最为密切的数据上。 透视包含多维数据集所有对象的子集。 但它不能包含父多维数据集中未定义的元素。  
@@ -63,7 +60,7 @@ ms.locfileid: "37155298"
   
  透视是多维数据集的只读视图；无法使用透视来重命名或更改多维数据集中的对象。 同样，也无法使用透视更改多维数据集的行为或功能（如可见总计的用法）。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  透视的用途不是为了作为一种安全机制，而是作为一个可在商业智能应用程序中为用户提供更好体验的工具。 特定透视的所有安全性都从基础多维数据集继承。 例如，透视无法让用户访问该用户尚未拥有访问权的多维数据集中的对象。 必须先解决多维数据集的安全性，然后才能通过透视访问多维数据集中的对象。  
   
   

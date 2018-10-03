@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], assemblies
 - assemblies [CLR integration], managing
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
-caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab48a77c21b3ae288f18b166241b1021a7ee6766
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1e65bb5c651862a82d78faede158234d20392c1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352511"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229297"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 集成程序集
   托管代码在被编译后部署在称作程序集的单元中。 程序集将打包为 DLL 或可执行 (.exe) 文件。 尽管可执行文件可以自动运行，但 DLL 必须在现有应用程序中承载。 可以加载到托管的 DLL 程序集，并在由托管[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 CREATE ASSEMBLY 语句，才能在进程中加载和使用的数据库。 还可以使用 ALTER ASSEMBLY 语句从更新的版本更新程序集，或者使用 DROP ASSEMBLY 语句从 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中删除程序集。  

@@ -1,13 +1,11 @@
 ---
-title: 文本文件格式 （文本文件驱动程序） |Microsoft 文档
+title: 文本文件格式 （文本文件驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
@@ -15,40 +13,39 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2f0de1d7b5ca14c5ae51cd057244d0c3252780a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739525"
 ---
-# <a name="text-file-format-text-file-driver"></a>文本文件格式 （文本文件驱动程序）
-ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件由可选的标头行和零个或多个文本行组成。  
+# <a name="text-file-format-text-file-driver"></a>文本文件格式（文本文件驱动程序）
+ODBC 文本驱动程序支持这两个分隔和固定宽度的文本文件。 文本文件包含可选的标头行和零个或多个文本行。  
   
- 标头行使用相同的格式，如其他行的文本文件中，尽管 ODBC 文本驱动程序将作为列名称，不是数据解释标头行条目。  
+ 尽管标头行的文本文件中的其他行作为使用相同的格式，但 ODBC 文本驱动程序将标头行条目解释为列名称，不是数据。  
   
- 带分隔符的文本行包含由分隔符分隔的一个或多个数据值： 逗号、 制表符或自定义分隔符。 在整个文件，必须使用相同的分隔符。 由它们之间没有数据行中的两个分隔符表示 null 数据值。 带分隔符的文本行中的字符字符串可以括在双引号 ("")。 之前或之后分隔的值，可以进行没有空白。  
+ 带分隔符的文本行包含由分隔符分隔的一个或多个数据值： 逗号、 制表符或自定义分隔符。 在整个文件，必须使用相同的分隔符。 由它们之间没有数据行中的两个分隔符表示 null 数据值。 带分隔符的文本行中的字符字符串可以包含在双引号 ("")。 没有空格可以出现之前或之后带分隔符的值。  
   
- 架构中指定了固定宽度的文本行中每个数据条目的宽度。 由空格表示 null 数据值。  
+ 在架构中指定的固定宽度文本行中每个数据条目的宽度。 由空格表示 null 数据值。  
   
- 表仅限于最多 255 个域。 字段名称限制为 64 个字符，并且字段宽度被限制为 32766 个字符。 记录仅限于 65000 字节。  
+ 表被限制为最多为 255 个字段。 字段名称限制为 64 个字符，并且字段宽度被限制为 32,766 个字符。 记录仅限于 65,000 个字节。  
   
- 可以只为单个用户打开一个文本文件。 不支持多个用户。  
+ 可以仅为单个用户打开一个文本文件。 不支持多个用户。  
   
- 以下语法，为程序员，编写定义可由 ODBC 文本驱动程序读取的文本文件的格式：  
+ 以下语法，为程序员编写定义 ODBC 文本驱动程序可以读取文本文件的格式：  
   
-|格式|表示|  
+|“格式”|表示|  
 |------------|--------------------|  
-|非斜体|必须按所示方式输入的字符|  
-|*斜体*|在语法中其他位置定义的自变量|  
+|非斜体|根据所示，必须输入的字符|  
+|*斜体*|在语法中其他位置定义的参数|  
 |方括号 ([])|可选项|  
 |大括号 ({})|互相排斥的选项列表|  
-|垂直图条 (&#124;)|单独互相排斥的选择|  
-|省略号 （...）|一个或多个时间可以重复的项|  
+|垂直条 (&#124;)|单独互斥选项|  
+|省略号 （...）|可以重复的一个或多个时间的项|  
   
  将文本文件的格式为：  
   
@@ -117,11 +114,11 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  为带分隔符的文件，NULL 不表示两个分隔符之间的任何数据。  
+>  对于带分隔符的文件，由两个分隔符之间没有数据表示为空。  
   
 ```  
 fixed-width-null ::= <SPACE>...  
 ```  
   
 > [!NOTE]  
->  对于固定宽度文件，由空格表示 null 值。
+>  对于固定宽度文件，由空格表示为空。

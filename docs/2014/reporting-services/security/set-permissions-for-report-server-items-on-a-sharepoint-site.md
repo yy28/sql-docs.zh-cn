@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282603"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078633"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>在 SharePoint 站点上为报表服务器项设置权限（SharePoint 集成模式下的 Reporting Services）
   如果默认安全设置未提供您需要的访问权限级别，则可以创建新的权限级别以提供对特定报表服务器项或操作的访问权限。 如果希望限制对特定报表的访问权限，则自定义安全设置非常有用。  

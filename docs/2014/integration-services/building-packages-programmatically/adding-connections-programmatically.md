@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 030ba6850c05f6fd81d106833205566576474faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39a8eaf1f487d70e7e7042129410fcf2b6fb4a67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167058"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105727"
 ---
 # <a name="adding-connections-programmatically"></a>以编程方式添加连接
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类表示与外部数据源的物理连接。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 类可将连接的实现细节与运行时隔离。 这可使运行时以一致且可预测的方式与每个连接管理器进行交互。 连接管理器包含一组所有连接通用的常用属性，如 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>。 但是，通常配置连接管理器只需 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 和 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 属性。 在其他编程范例中，连接类会提供一些方法（如 `Open` 或 `Connect`）以物理方式建立与数据源的连接，而不同的是，运行时引擎会在包运行时管理包的所有连接。  

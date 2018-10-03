@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fcccefeda97346c43fd70b41653f2f125816adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136207"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 属性 （IP 地址选项卡）
   使用 **“TCP/IP 属性（‘IP 地址’选项卡）”** 对话框，可以配置特定 IP 地址的 TCP/IP 协议选项。 只有选中 **“IP All”** ，才能一次配置所有地址的 **“TCP 动态端口”** 和 **“TCP 端口”**。  
@@ -35,7 +32,7 @@ ms.locfileid: "37187585"
 ## <a name="dynamic-ports"></a>动态端口  
  如果某个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例已配置为侦听动态端口，则在启动时，该实例将检查操作系统中的可用端口，并为该端口打开一个端点。 传入连接必须指定要连接的端口号。 由于每次启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时端口号都可能会改变，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务监视端口，并将传入连接指向该实例的当前端口。 使用动态端口会增加通过防火墙连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的复杂性，因为重新启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时端口号可能会改变，从而需要更改防火墙设置。 若要避免通过防火墙连接的问题，请将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置为使用静态端口。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **在职**  
  指示该 IP 地址在计算机上处于活动状态。 不适用于 **“IPAll”**。  
   

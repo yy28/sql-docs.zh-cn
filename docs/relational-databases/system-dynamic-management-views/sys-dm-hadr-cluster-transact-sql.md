@@ -1,12 +1,10 @@
 ---
-title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_hadr_cluster (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_hadr_cluster
@@ -20,23 +18,22 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8bbdbf9cf7e51371568ad160b1dd8c1f5d05a1c0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2c4e66ed6471ec0959cfece477af4b939fb129c6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748235"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  如果中的托管实例的 Windows Server 故障转移群集 (WSFC) 节点[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为启用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]具有 WSFC 仲裁， **sys.dm_hadr_cluster**返回公开群集名称和信息的行有关仲裁。 如果 WSFC 节点不包含任何仲裁，则不返回任何行。  
+  如果 Windows Server 故障转移群集 (WSFC) 节点承载的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]为启用[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]具有 WSFC 仲裁**sys.dm_hadr_cluster**返回公开群集名称和信息的一行有关仲裁。 如果 WSFC 节点没有仲裁，未不返回任何行。  
  > [!TIP]
- > 从[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图支持 Alwayson 故障转移群集实例除了 Alwayson 可用性组。
+ > 从[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]，此动态管理视图支持 Alwayson 故障转移群集实例除了 Always On 可用性组。
 
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,13 +43,13 @@ ms.locfileid: "34464763"
 |**quorum_state**|**tinyint**|WSFC 仲裁的状态，可为下列值之一：<br /><br /> 0 = 未知仲裁状态<br /><br /> 1 = 标准仲裁<br /><br /> 2 = 强制仲裁|  
 |**quorum_state_desc**|**varchar(50)**|说明**quorum_state**、 一个的：<br /><br /> UNKNOWN_QUORUM_STATE<br /><br /> NORMAL_QUORUM<br /><br /> FORCED_QUORUM|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [AlwaysOn 可用性组动态管理视图和函数 (Transact-SQL)](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性组目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [监视可用性组 & #40;Transact SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [监视可用性组 (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   
   

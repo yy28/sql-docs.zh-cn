@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 604a290e0f8ac64c9edbcba72c488c0ad67f7b9a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167047"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>“数据集属性”对话框 -&gt;“选项”（报表生成器）
   在“数据集属性”对话框中选择“选项”可更改查询的数据选项，如排序规则选项和将小计视为详细数据进行处理。 有关排序规则的详细信息，请参阅 [SQL Server 联机丛书](../../relational-databases/collations/collation-and-unicode-support.md) 中的 [排序规则和 Unicode 支持](http://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -32,7 +29,7 @@ ms.locfileid: "37255789"
   
  有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **排序规则**  
  选择用于决定在对数据排序时所用的排序规则顺序的区域设置。 **“默认值”** 指示报表服务器在报表运行时将尝试从数据访问接口派生该值。 如果无法派生该值，则将从计算机的区域设置派生默认值。  
   

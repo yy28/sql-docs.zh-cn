@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], expiration
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - retention periods [SQL Server replication]
 - deactivating subscriptions
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 95cdae09ead5238e8a48d3797f2b1f9a32b483f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc35e6e4f0fe4befe6db2ba93f990b9a7b8c6434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220837"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>设置订阅的过期期限
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中设置订阅的过期期限。 订阅的过期期限决定了订阅在经过多长时间后过期并被删除。 有关详细信息，请参阅 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)。  

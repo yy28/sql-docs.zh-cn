@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NotifyTableChange Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - NotifyTableChange command
 ms.assetid: b76898eb-20d3-48c8-9eb8-1fd5df638bcc
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 612738591115a2e7af964ba4ee5d9950587e45bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d060b73f7fb5999d4eb04faaa209eb7713f9d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224427"
 ---
 # <a name="notifytablechange-element-xmla"></a>NotifyTableChange 元素 (XMLA)
   通知的实例[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]到指定的数据源中的表发生更改。  
@@ -53,8 +50,8 @@ ms.locfileid: "37203897"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -64,7 +61,7 @@ ms.locfileid: "37203897"
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |子元素|[对象](../xml-elements-properties/object-element-xmla.md)， [TableNotifications](../xml-elements-properties/tablenotifications-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `NotifyTableChange` 命令允许客户端应用程序显式通知 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例数据源中包含的一个或多个表发生了更改。 对于主动缓存，此通知指示应该查看并更新基于这些表的关系 OLAP (ROLAP) 对象。  
   
  这种通知方法最好使用 ROLAP 对象基于视图或命名查询中为其更改可能很难检测和跟踪的数据源视图定义。  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.oracleconnection.login.f1
 helpviewer_keywords:
 - Connect to Server dialog box, replication
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3f1b07feed76a99c1d878cc9c93a6cc65603fe4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 733f727c1889dc969c1b2104739c988a895b2349
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081097"
 ---
 # <a name="connect-to-server-oracle-login"></a>连接到服务器 (Oracle)，登录名
   可以使用 **“连接到服务器”** 对话框的 **“登录名”** 选项卡，指定建立从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分发服务器到 Oracle 发布服务器的连接时使用的帐户。 所使用的帐户必须是配置发布服务器期间为复制管理用户架构指定的同一帐户。 有关详细信息，请参阅[配置 Oracle 发布服务器](non-sql/configure-an-oracle-publisher.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **服务器实例**  
  Oracle 发布服务器的透明网络底层 (TNS)，是在配置分发服务器上安装的 Oracle 客户端软件期间指定的。  
   

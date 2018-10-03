@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-caps.latest.revision: 60
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d990d18498547434a6f7774dfcee076d2986ee40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220807"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 课：向报表添加表 (Reporting Services)
   定义数据集后，您可以开始定义报表。 将要纳入报表的数据区域、文本框、图像和其他项拖放到设计图面上来创建报表布局。  

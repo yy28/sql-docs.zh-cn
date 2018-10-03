@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.typefilterexpression.f1
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b633b19331c836878487920e8145f12aae86f73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167578"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131707"
 ---
 # <a name="restrict-rows-partition-wizard"></a>限制行（分区向导）
   可以使用 **“限制行”** 页，限制从指定表中检索、聚合并包括到分区中的行。  
@@ -32,7 +29,7 @@ ms.locfileid: "37167578"
 > [!CAUTION]  
 >  如果在“指定源信息”页上的“可用表”中指定了由另一个分区使用的表，则必须在“限制行”页中提供查询，否则在多维数据集中会出现数据重复的风险。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **指定查询以限制行**  
  选择此选项可以输入查询，对进入“查询”框中的行进行限制。  
   

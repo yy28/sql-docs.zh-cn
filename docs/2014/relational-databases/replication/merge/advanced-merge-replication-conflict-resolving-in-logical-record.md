@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logical records [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: f2e55040-ca69-4ccf-97d1-c362e1633f26
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1e12ca76aa43b61eef3b41e4ceadf587ce1f6824
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97678edeeaf9ff749b3dd7a1da9d25044d106ae1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144607"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detecting and Resolving Conflicts in Logical Records
   本主题介绍使用逻辑记录时冲突检测和冲突解决方法的各种可能组合。 多个节点更改同一数据，或者合并复制遇到某些类型的错误（如复制更改时违反了约束）时，合并复制中会出现冲突。 有关冲突检测和解决的详细信息，请参阅 [高级合并复制冲突的检测和解决](advanced-merge-replication-conflict-detection-and-resolution.md)。  

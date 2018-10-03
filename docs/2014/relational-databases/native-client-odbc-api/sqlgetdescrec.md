@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c003245f344ad635aeba2ecaf42dd906c058881b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 51f83f4bc0cfc60a2e8137407a7efc9635dd9f70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229217"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   本主题讨论特定于 SQLGetDescRec 功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机客户端。  
@@ -40,7 +37,7 @@ ms.locfileid: "37418976"
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
-|*NullablePtr*|@shouldalert|SQL_DESC_NULLABLE|  
+|*NullablePtr*|1|SQL_DESC_NULLABLE|  
   
  有关表值参数的详细信息，请参阅[表值参数&#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
   

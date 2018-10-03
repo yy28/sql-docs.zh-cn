@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [SQL Server replication]
 - programming [SQL Server replication]
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8726fd8595c769513fa56203f33fd2a3ee58b0e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce2054924f26ab5b8d94814c3ad716b00f425064
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212517"
 ---
 # <a name="developer39s-guide-replication"></a>开发人员&#39;指南 （复制）
   如果能够以编程方式配置、维护和监视复制拓扑，则不仅可以简化重复性的复制任务，而且还可以改善基于复制的应用程序的用户体验。 通过复制编程，最终用户可以获得自定义的复制功能，既无须熟悉复制存储过程和复制代理可执行文件，也无须使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 实现的复制用户界面。  
