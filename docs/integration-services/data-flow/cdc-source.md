@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsource.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa7e66d1f7c8a0cd2ad808d59508975b3ca0bb2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5b6d0f537db9195ff0afb9994f48ca14411dcf30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599295"
 ---
 # <a name="cdc-source"></a>CDC 源
   CDC 源从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更改表中读取某一范围的更改数据并且将更改向下传递给其他 SSIS 组件。  
@@ -138,7 +135,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”** 中，单击 **“连接管理器”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **ADO.NET 连接管理器**  
  从列表中选择现有连接管理器，或单击“新建”创建新的连接。 该连接必须是指向为 CDC 启用的并且所选更改表位于其中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的连接。  
   
@@ -191,7 +188,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”** 中，单击 **“列”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用外部列**  
  数据源中的可用外部列的列表。 无法使用此表添加或删除列。 在源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  
   
@@ -213,7 +210,7 @@ use <cdc-enabled-database-name>
   
 3.  在 **“CDC 源编辑器”** 中，单击 **“错误输出”**。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

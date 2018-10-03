@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e693f27ef976afcc9fcb86ace9c16c114af90c70
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 115435aae796ea846e6412e6db5526cd9eb50526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599305"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>配置灵活的自动故障转移策略
 
@@ -91,7 +88,7 @@ ms.locfileid: "39509196"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] 值|级别|当出现以下情况时，自动启动故障转移…|  
         |------------------------------|-----------|-------------------------------------------|  
-        |@shouldalert|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
+        |1|一级|当服务器关闭时。 SQL Server 服务因故障转移或重新启动而停止。|  
         |2|二级|当服务器无响应时。 满足任何下限值条件，SQL Server 服务连接到群集，超过运行状况检查超时阈值，或当前主副本处于失败状态。|  
         |3|三级|出现严重服务器错误时。 满足任何下限值条件或发生严重的内部服务器错误。<br /><br /> 这是默认级别。|  
         |4|四级|出现严重服务器错误时。 满足任何下限值条件或发生中度的服务器错误。|  
