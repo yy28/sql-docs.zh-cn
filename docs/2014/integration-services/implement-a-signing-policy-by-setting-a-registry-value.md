@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2968561d90f1bc45f50f040d7d303b969cc3c3b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320637"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103017"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>通过设置注册表值实现签名策略
   使用可选的注册表值可以管理组织用于加载签名包和未签名包的策略。 如果使用此注册表值，则必须在将运行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包以及将强制实施该策略的每台计算机上创建此注册表值。 设置该注册表值后， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 将在加载包之前检查或验证签名。  
@@ -41,7 +38,7 @@ ms.locfileid: "37320637"
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0|无管理限制。|  
-|@shouldalert|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
+|1|阻止无效签名。<br /><br /> 该设置不阻止未签名的包。|  
 |2|阻止无效签名和不可信签名。<br /><br /> 该设置不阻止未签名的包，但会阻止自我生成的签名。|  
 |3|阻止无效签名、不可信签名以及未签名的包<br /><br /> 该设置也阻止自我生成的签名。|  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -15,21 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185760"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184657"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>“选择颜色”对话框（报表生成器和 SSRS）
   使用 **“选择颜色”** 对话框可以为数据区域或文本框中单个或多个单元的背景指定颜色选项，或为图表指定颜色选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **颜色选择器**  
  从三个用于指定颜色选择方式的选项中进行选择：  
   
@@ -66,7 +63,7 @@ ms.locfileid: "37185760"
  **蓝色**  
  代表 RGB 颜色中蓝色部分的十进制值。 使用数字调整框可更改值或键入一个介于 0 到 255 之间的值。  
   
- **Alpha**  
+ **alpha**  
  代表颜色中 Alpha 或透明度部分的十进制值。 启用该值后，您可使用滑块开关调整至所需的透明度。  
   
  **色调**  

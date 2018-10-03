@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118977"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>指定的列&#39;s 内容和数据类型 （数据挖掘向导）
   可以使用 **“指定列的内容和数据类型”** 页修改向导已设置的列和内容类型。 向导使用源列的数据类型和所选算法的功能来确定每个列的默认数据和内容类型。  
   
  **有关详细信息，请参阅**[数据挖掘向导（Analysis Services - 数据挖掘）](data-mining/data-mining-wizard-analysis-services-data-mining.md)[创建关系挖掘结构](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“列”**  
  在向导的“指定定型数据”页中定义的列的列表。  
   

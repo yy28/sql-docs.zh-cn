@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.previewview.f1
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3114b56007619d54d0a9aea95e136d65fe0f725b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89bea23ea4add737dbd9edf9a02d147abb35adbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212217"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206767"
 ---
 # <a name="preview-view"></a>“预览”视图
   使用 **“预览”** 视图可以显示呈现的报表。 在预览报表时，报表设计器将在本地运行该报表，并在“预览”视图中显示该报表。 在预览模式下会对报表进行完全处理。 如果报表具有复杂的查询或具有大量数据，则首次查看时，预览可能需要花费几分钟的时间才能完成。 对于只影响报表格式的后续更改，预览使用缓存数据。  
@@ -31,7 +28,7 @@ ms.locfileid: "37212217"
 > [!IMPORTANT]  
 >  当[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]运行时作为 RemoteApp，报表不能显示在**预览版**中查看[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 RemoteApp 程序是通过远程桌面服务进行远程访问的程序。 有关详细信息，请参阅[TS RemoteApp 分步指南](http://technet.microsoft.com/library/cc730673\(WS.10\).aspx)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  使用工具栏可以管理预览功能。  
   
  **显示或隐藏文档结构图**  

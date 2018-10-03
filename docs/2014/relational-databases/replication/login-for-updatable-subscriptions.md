@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e06d1b519043cd2eb21d0e9337bd7f3a457381e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2055ac3e09a82bba6ae4ee7357e689086f6da659
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190657"
 ---
 # <a name="login-for-updatable-subscriptions"></a>可更新订阅的登录名
   如果在此向导的 **“可更新订阅”** 页上选择 **“复制”** ，则必须在与发布服务器建立连接的订阅服务器上指定一个帐户以立即更新订阅。 连接用于在订阅服务器上激发的触发器，这些触发器用于将更改传播到发布服务器。 即使在 **“可更新订阅”** 页上选择 **“对更改进行排队并在可能时提交”** ，也需要使用此帐户，因为默认情况下，新建订阅向导将排队更新配置为在必要时可切换到立即更新。  
@@ -39,7 +36,7 @@ ms.locfileid: "37184174"
   
  可以在此向导中指定前两个选项。 最后一个选项只能使用 [sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) 指定；将参数 **@security_mode** 的值指定为 **1**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **创建使用以下 SQL Server 身份验证登录名进行连接的链接服务器：**  
  复制使用在 **“登录名”** 和 **“密码”** 字段中指定的凭据创建链接服务器。  
   

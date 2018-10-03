@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyNotFound Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyNotFound element
 ms.assetid: 2a93bbfa-2409-4e94-8b68-926532895a4c
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58228d8f4029fecf22062a3e3c5c0c9adf3eafe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7e8a2233797d3d9ddeecc91d5c2b5f096866d624
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156597"
 ---
 # <a name="keynotfound-element-assl"></a>KeyNotFound 元素 (ASSL)
   指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]时遇到引用完整性错误的响应。  
@@ -59,9 +56,9 @@ ms.locfileid: "37281803"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当依赖表中的外键值在父表中没有对应条目时会引发引用完整性错误。 当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理维度时，如果其中的事实数据表引用该维度的维度表中不存在的外键值，或者当 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理分区时，分区中包含的某个维度的维度主表引用另一个关联维度表中不存在的键值，则会引发此错误。 （如果是具有父子层次结构和父属性的维度，则当分区中包含的某个维度的维度主表引用同一维度表中不存在的键值时，也会引发此错误。）  
   
  此元素的值限定为下表中的字符串之一。  

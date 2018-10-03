@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - CHANGE_TRACKING_CLEANUP_VERSION
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], security
 - change data capture [SQL Server], other SQL Server features and
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af4d06242048038bd73429a2f10e517e30d77e9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef16266b62754884017528a9db6065ca824e4eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190637"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供两个用于在数据库中跟踪数据更改的功能： [变更数据捕获](#Capture) 和 [更改跟踪](#Tracking)。 这两个功能使应用程序能够确定对数据库中的用户表所做的 DML 更改（插入、更新和删除操作）。 可对同一个数据库启用变更数据捕获和更改跟踪；没有特殊的注意事项。 各版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支持变更数据捕获和更改跟踪，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
@@ -72,11 +69,11 @@ ms.locfileid: "37307547"
 |功能|变更数据捕获|更改跟踪|  
 |-------------|-------------------------|---------------------|  
 |**跟踪的更改**|||  
-|DML 更改|是|是|  
+|DML 更改|用户帐户控制|用户帐户控制|  
 |**跟踪的信息**|||  
-|历史数据|是|“否”|  
-|是否更改了列|是|是|  
-|DML 类型|是|是|  
+|历史数据|用户帐户控制|否|  
+|是否更改了列|用户帐户控制|用户帐户控制|  
+|DML 类型|用户帐户控制|用户帐户控制|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  变更数据捕获通过获取进行 DML 更改的方面和更改的实际数据，提供用户表的历史更改信息。 更改是使用异步进程捕获的，此进程读取事务日志，并且对系统造成的影响很小。  
@@ -104,11 +101,11 @@ ms.locfileid: "37307547"
   
 |列类型|在更改表中捕获更改|限制|  
 |--------------------|---------------------------------------|-----------------|  
-|稀疏列|是|不支持在使用列集时捕获更改。|  
-|计算列|“否”|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
-|XML|是|不跟踪对单个 XML 元素的更改。|  
-|timestamp|是|更改表中的数据类型将转换为 binary。|  
-|BLOB 数据类型|是|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
+|稀疏列|用户帐户控制|不支持在使用列集时捕获更改。|  
+|计算列|否|不跟踪对计算列的更改。 在更改表中该列将显示为相应类型，不过其值为 NULL。|  
+|XML|用户帐户控制|不跟踪对单个 XML 元素的更改。|  
+|timestamp|用户帐户控制|更改表中的数据类型将转换为 binary。|  
+|BLOB 数据类型|用户帐户控制|仅当 BLOB 列本身更改时才存储该列的上一映像。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>变更数据捕获和其他 SQL Server 功能  
  本节说明下列功能如何与变更数据捕获交互：  

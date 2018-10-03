@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48046a2a5570a4ef5809bc41666188c3afd68dc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103239"
 ---
-# <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio.NET 中创建 Visual Basic SMO 项目
+# <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中创建 Visual Basic SMO 项目
   本节介绍了如何生成简单的 SMO 控制台应用程序。  
   
  此示例导入命名空间，这样，程序即可以引用 SMO 类型。 可以选择导入 `Agent` 命名空间。 当编写使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的程序时使用此命名空间。 需要使用 `Common` 命名空间来建立与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的安全连接。 使用 `SqlClient` 命名空间处理 SQL 异常错误。  

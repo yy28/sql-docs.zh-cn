@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 84403d87fac40506b244931fd967504d2a18e78c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cc2dfb12427625c9bdb6fdf8731e32083673ffd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136277"
 ---
 # <a name="publisher-information-agents"></a>发布服务器信息，代理
   **“代理”** 选项卡显示与发布服务器关联的代理和维护作业的相关信息：  
@@ -48,7 +45,7 @@ ms.locfileid: "37266793"
   
  有关这些作业的详细信息，请参阅[复制代理管理](agents/replication-agent-administration.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  若要显示有关代理或作业的信息，请从 **“代理和作业类型”** 下拉菜单中选择。 若要查看与代理或作业相关的详细信息和任务，请右键单击该代理或作业所在的行，然后单击快捷菜单上的选项。 若要更改网格显示数据的方式，请右键单击网格，然后单击以下选项之一：  
   
 -   **排序**：按 **“列排序”** 对话框中的一列或多列排序。  

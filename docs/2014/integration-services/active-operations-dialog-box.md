@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3c9105d6649443d8ec2d3425f86d609dfe6a2b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d20e7102df982f961aed770aedc19812c5aca949
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151118"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185877"
 ---
 # <a name="active-operations-dialog-box"></a>“活动操作”对话框
   使用 **“活动操作”** 对话框可以查看 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服务器上当前运行的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 操作的状态，例如部署、验证和包执行。 此数据存储在 SSISDB 目录中。  
@@ -45,13 +42,13 @@ ms.locfileid: "37151118"
   
 ##  <a name="options"></a> 配置选项  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **类型**  
  指定操作的类型。 以下是可能的值为**类型**字段与 TRANSACT-SQL 的 operations_type 列中的对应值`catalog.operations`视图。  
   
 |||  
 |-|-|  
-|Integration Services 初始化|@shouldalert|  
+|Integration Services 初始化|1|  
 |操作清除（SQL 代理作业）|2|  
 |项目版本清除（SQL 代理作业）|3|  
 |部署项目|101|  

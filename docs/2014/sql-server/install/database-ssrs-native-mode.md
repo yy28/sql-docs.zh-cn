@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bce0a9aa3adcddb7363224138a7ec3f51a47622
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183934"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102487"
 ---
 # <a name="database-ssrs-native-mode"></a>数据库（SSRS 本机模式）
   使用“数据库”页创建和配置为一个或多个报表服务器实例提供内部存储的报表服务器数据库。 如果配置为使用远程报表服务器数据库的报表服务器，则必须使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器来创建数据库。  
@@ -34,7 +31,7 @@ ms.locfileid: "37183934"
   
  若要打开此页上，启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器并单击**数据库**在导航窗格中。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL Server 名称**  
  在当前报表服务器数据库中， **SQL Server 名称**指定的名称[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]运行报表服务器数据库。 可以使用本地或远程计算机上的默认或命名实例。  
   

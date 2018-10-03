@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0582293082f6c1ec5b2333575431d2887929afe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e4e680bc7b22e31bf9da0c3502adf49d3bc8159
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153653"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>关于对可用性副本的客户端连接访问 (SQL Server)
   在 AlwaysOn 可用性组中，您可以配置一个或多个可用性副本，以便在辅助角色下运行时（即作为辅助副本运行时）允许只读连接。 还可以将每个可用性副本配置为在主角色下运行时（即作为主副本运行时）允许或排除只读连接。  
@@ -100,8 +97,8 @@ ms.locfileid: "37228507"
   
 |副本|提交模式|初始角色|辅助角色的连接访问|主角色的连接访问|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|同步|主|InclusionThresholdSetting|读写|  
-|Replica2|同步|辅助副本|InclusionThresholdSetting|读写|  
+|Replica1|同步|主|None|读写|  
+|Replica2|同步|辅助副本|None|读写|  
 |Replica3|异步|辅助副本|仅读意向|读写|  
 |Replica4|异步|辅助副本|仅限读意向|读写|  
   

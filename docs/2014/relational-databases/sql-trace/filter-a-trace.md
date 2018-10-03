@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server], events
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
-caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 367a9669c11cb1841a4af3801abb98e385571388
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70654d0d256b311d5e15807a3ccf6b895f00ed52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138117"
 ---
 # <a name="filter-a-trace"></a>筛选跟踪
   筛选器将限制跟踪内收集的事件。 如果没有设置筛选器，则跟踪输出中将返回选定事件类的所有事件。 例如，如果将跟踪中的 Windows 用户名限定为特定用户，将仅输出与那些用户相关的数据。  
@@ -141,7 +138,7 @@ ms.locfileid: "37212827"
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- <sup>1</sup>如果跟踪中的事件**osql**实用程序或**sqlcmd**实用程序，始终追加** % **上的筛选器到**TextData**数据列。  
+ <sup>1</sup>如果跟踪中的事件**osql**实用程序或**sqlcmd**实用程序，始终追加**%** 上的筛选器到**TextData**数据列。  
   
  SQL 跟踪作为一种安全预防措施，会自动从跟踪中省略任何影响密码的、与安全相关的存储过程。 此安全机制不可配置，并且始终有效。 此机制阻止有权跟踪 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上的所有活动的用户捕获密码。  
   

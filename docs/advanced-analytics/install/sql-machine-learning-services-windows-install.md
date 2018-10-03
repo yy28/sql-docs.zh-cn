@@ -3,17 +3,17 @@ title: 安装 SQL Server 机器学习在 Windows 上的服务 （数据库） |M
 description: 当您在 Windows 上安装 SQL Server 2017 机器学习服务，SQL Server 或 SQL Server 上的 Python 中的 R 才可用。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/14/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713029"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142657"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,9 @@ ms.locfileid: "46713029"
 
 7. 安装完成时，如果要求您重新启动计算机后请立即登录。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)。
 
-## <a name="bkmk_enableFeature"></a>启用脚本执行
+<a name="bkmk_enableFeature"></a>
+
+## <a name="enable-script-execution"></a>启用脚本执行
 
 1. 打开 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 
 
@@ -136,6 +138,8 @@ ms.locfileid: "46713029"
 可以使用右键单击该服务重新启动**重新启动**命令，以在 SSMS 中，或使用的实例进行**Services**面板在控制面板中，或通过使用[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>验证安装
+
+检查中的实例的安装状态[自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)或安装程序日志。
 
 使用以下步骤来验证用于启动外部脚本的所有组件正在都运行。
 
@@ -191,6 +195,28 @@ ms.locfileid: "46713029"
 > 
 > 例如，可以添加以下行以生成任意列名称： `WITH RESULT SETS ((Col1 AS int))`
 
+<a name="apply-cu"></a>
+
+## <a name="apply-updates"></a>应用更新
+
+我们建议将最新的累积更新应用到数据库引擎和机器学习组件。
+
+在连接 internet 的设备上通常可通过 Windows 更新应用累积更新，但还可以使用以下步骤，受控的更新。 当在应用于数据库引擎更新时，安装程序中取出同一实例安装任何 R 或 Python 功能的累积的更新。 
+
+断开连接的服务器上执行额外的步骤是必需的。 有关详细信息，请参阅[在没有 internet 访问权限的计算机上安装 > 应用累积更新](sql-ml-component-install-without-internet-access.md#apply-cu)。
+
+1. 开始使用已安装的基线实例： SQL Server 2017 初始版本
+
+2. 转到累积更新列表： [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+
+3. 选择最新的累积更新。 可执行文件是自动下载并提取。
+
+4. 运行安装程序。 接受许可条款，然后在功能选择页上，查看为其应用累积更新的功能。 应会看到每一项功能为当前实例，包括机器学习功能安装。 安装程序将下载更新的所有功能所必需的 CAB 文件。
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. 继续完成向导，接受 R 和 Python 分发版的许可条款。 
+
 ## <a name="additional-configuration"></a>其他配置
 
 如果外部脚本执行验证步骤是否成功，你可以从 SQL Server Management Studio、 Visual Studio Code 中或可以向服务器发送 T-SQL 语句的任何其他客户端运行 R 或 Python 命令。
@@ -212,7 +238,9 @@ ms.locfileid: "46713029"
 > [!NOTE]
 > 是否需要其他配置取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 
 
-###  <a name="bkmk_configureAccounts"></a> 启用 SQL 受限制的用户组 (SQLRUserGroup) 帐户组的隐式身份验证
+<a name="bkmk_configureAccounts"></a> 
+
+###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>启用 SQL 受限制的用户组 (SQLRUserGroup) 帐户组的隐式身份验证
 
 如果需要从远程数据科学客户端，运行脚本和使用 Windows 身份验证，则需要其他配置才能提供辅助角色帐户运行 R 和 Python 进程中登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。 此行为称为*隐式身份验证*，并由数据库引擎，以支持在 SQL Server 2016 和 SQL Server 2017 中的外部脚本的安全执行实现。
 
@@ -235,7 +263,9 @@ ms.locfileid: "46713029"
 在 SQL Server 2019 中辅助角色帐户替换为 AppContainers，与 SQL Server Launchpad 服务下正在执行的进程。 尽管不能再使用辅助角色帐户，但仍将要求你将添加一个数据库登录名**SQLRUsergroup**如果隐式需要身份验证。 就像辅助角色帐户没有登录名的权限，快速启动板服务标识执行不是任何一个。 创建一个登录名**SQLRUserGroup**，其中包含在此版本中，快速启动板服务允许隐式身份验证工作。
 ::: moniker-end
 
-### <a name="permissions-external-script"></a> 向用户授予权限来运行外部脚本
+<a name="permissions-external-script"></a> 
+
+### <a name="give-users-permission-to-run-external-scripts"></a>授予用户运行外部脚本的权限
 
 如果您安装了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您和您自己在你自己的实例中运行 R 或 Python 脚本，通常以管理员身份执行脚本。 因此，各种操作和数据库中的所有数据具有隐式权限。
 
@@ -250,7 +280,9 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
 > [!NOTE]
 > 权限不特定于支持的脚本语言。 换而言之，没有与 Python 脚本的 R 脚本的单独的权限级别。 如果您需要保持对这些语言的单独权限，在单独的实例上安装 R 和 Python。
 
-### <a name="permissions-db"></a> 对其授予用户读取、 写入或数据定义语言 (DDL) 权限的数据库
+<a name="permissions-db"></a> 
+
+### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>对其授予用户读取、 写入或数据定义语言 (DDL) 权限的数据库
 
 在用户运行脚本时，用户可能需要从其他数据库读取数据。 用户可能还需要创建新表以存储结果，并将数据写入到表。
 
@@ -305,16 +337,6 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 不同 SQL Server 2016 和 SQL Server 2017 中安装和管理 R 包的过程。 在 SQL Server 2016 中，数据库管理员必须安装 R 包，用户需要。 在 SQL Server 2017 中，可以设置用户组共享每个数据库级别上的包或配置数据库角色，以使用户能够安装其自己的包。 有关详细信息，请参阅[在 SQL Server 中安装新 R 包](../r/install-additional-r-packages-on-sql-server.md)。
 
-
-## <a name="get-help"></a>获取帮助
-
-需要安装或升级的帮助？ 常见的问题和已知的问题的答案，请参阅以下文章：
-
-* [升级和安装常见问题解答-机器学习服务](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-若要检查的实例的安装状态并解决常见的问题，请尝试这些自定义报表。
-
-* [SQL Server R Services 的自定义报表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>后续步骤
 

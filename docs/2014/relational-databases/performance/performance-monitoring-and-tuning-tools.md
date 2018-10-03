@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [SQL Server], monitoring performance
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - performance [SQL Server], monitoring tools
 - server performance [SQL Server], tools
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1848d19202b8bfe7a7c44b00b9b2e781366ca90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b3139aa4fab106e048e21847acadafc6bc90b8bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204727"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>性能监视和优化工具
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了一套综合的工具，用于监视 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的事件和优化物理数据库的设计。 工具的选择取决于要执行的监视或优化类型和要监视的具体事件。  
@@ -54,12 +51,12 @@ ms.locfileid: "37262463"
   
 |事件或活动|SQL Server 事件探查器|分布式重播|系统监视器|活动监视器|Transact-SQL|错误日志|  
 |-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|  
-|走向分析|是||是||||  
+|走向分析|用户帐户控制||用户帐户控制||||  
 |重播捕获的事件|是（从单台计算机）|是（从多台计算机）|||||  
-|临时监视|是|||是|是|是|  
-|生成警报|||是||||  
-|图形界面|是||是|是||是|  
-|在自定义应用程序内使用|是 <sup>1</sup>||||是||  
+|临时监视|用户帐户控制|||是|是|用户帐户控制|  
+|生成警报|||用户帐户控制||||  
+|图形界面|用户帐户控制||是|是||用户帐户控制|  
+|在自定义应用程序内使用|是 <sup>1</sup>||||用户帐户控制||  
   
  <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]系统存储过程。  
   

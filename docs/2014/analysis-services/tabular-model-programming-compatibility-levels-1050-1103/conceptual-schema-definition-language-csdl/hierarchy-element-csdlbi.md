@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34ef944610a9e3b52fec600b3da5e1f9b06790bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129247"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Hierarchy 元素 (CSDLBI)
   Hierarchy 元素是表中可彼此链接以形成层次结构的各个字段的逻辑容器。 Hierarchy 元素派生自 CSDL 的 Member 元素，并已扩展为支持在商业智能数据模型中创建的层次结构。  
@@ -30,10 +27,10 @@ ms.locfileid: "37250787"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|文档|“否”|层次结构的说明。|  
-|级别|是|定义层次结构中使用的列的一个或多个 Level 元素。<br /><br /> 请参阅 [Level 元素 (CSDLBI)](level-element-csdlbi.md)。|  
+|文档|否|层次结构的说明。|  
+|级别|用户帐户控制|定义层次结构中使用的列的一个或多个 Level 元素。<br /><br /> 请参阅 [Level 元素 (CSDLBI)](level-element-csdlbi.md)。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在表格模型中，层次结构是通过在同一个表的各列间指定父子关系来创建的。 有关详细信息，请参阅[层次结构（SSAS 表格）](../../tabular-models/hierarchies-ssas-tabular.md)。  
   
 ## <a name="example"></a>示例  

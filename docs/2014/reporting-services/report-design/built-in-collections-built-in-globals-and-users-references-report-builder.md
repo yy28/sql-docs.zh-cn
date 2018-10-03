@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166637"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>内置的全局和用户引用（报表生成器和 SSRS）
   内置字段集合包含 `Globals` 和 `User` 集合，表示处理报表时由 Reporting Services 提供的全局值。 `Globals` 集合提供一些值，例如报表名称、开始处理报表的时间，以及报表表头或表尾的当前页码。 `User` 集合提供用户标识符和语言设置。 这些值在表达式中用于对报表中的结果进行筛选。  
@@ -78,7 +75,7 @@ ms.locfileid: "37331007"
   
 |**成员**|**类型**|**Description**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|运行报表的用户的语言。 例如， `en-US`。|  
+|`Language`|`String`|运行报表的用户的语言。 例如 `en-US` 。|  
 |`UserID`|`String`|运行报表的用户的 ID。 如果您使用的是 Windows 身份验证，则此值为当前用户的域帐户。 此值由 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安全扩展插件确定，此插件可以使用 Windows 身份验证，也可以使用自定义身份验证。|  
   
  有关在报表中支持多种语言的详细信息，请参阅 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 联机丛书 [中的](http://go.microsoft.com/fwlink/?LinkId=120955)文档中的“多语言或全局部署的解决方案设计注意事项”。  

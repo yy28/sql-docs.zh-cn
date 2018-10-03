@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 235f7cb4c724f03fddc662231a34b30639bc0256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e96ad77f71674042b16b402f51d555b22867669
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204617"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 查询设计器 (PowerPivot)
   Analysis Services 多维表达式 (MDX) 查询设计器提供了图形用户界面，可帮助你为 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据源创建 MDX 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个“元数据”窗格，从该窗格中可以拖动所选多维数据集的成员，以生成可检索要使用的数据的 MDX 查询。  
@@ -38,7 +35,7 @@ ms.locfileid: "37270003"
   
  下表列出了查询模式下的窗格：  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
 |“元数据”窗格|显示在选定多维数据集中定义的度量值、关键绩效指标 (KPI) 和维度的层次列表。|  
@@ -90,7 +87,7 @@ ms.locfileid: "37270003"
   
  下表列出了查询模式下的窗格：  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |选择“多维数据集”按钮 (**...**)|显示当前选定的多维数据集。|  
 |元数据/函数/模板窗格|显示在选定多维数据集中定义的度量值、KPI 和维度的层次列表。|  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd751224b24583cf5426194d7b4fc5074349bdfd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306141"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121743"
 ---
-# <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>故障排除 SQL Server 托管备份到 Windows Azure
+# <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>排除针对 Microsoft Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
   
 ## <a name="overview"></a>概述  

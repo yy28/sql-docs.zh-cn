@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164867"
 ---
-# SQL Server 事务日志体系结构和管理
+# <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server 事务日志体系结构和管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   每个 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 事务日志是数据库的重要组件，如果系统出现故障，则可能需要使用事务日志将数据库恢复到一致状态。 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。  
@@ -82,7 +79,7 @@ ms.locfileid: "37301337"
   
  如果日志包含多个物理日志文件，则逻辑日志在回绕到首个物理日志文件始端之前，将沿着所有物理日志文件移动。  
   
-### 日志截断  
+### <a name="log-truncation"></a>日志截断  
  日志截断主要用于阻止日志填充。 日志截断从 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的逻辑事务日志中删除不活动的虚拟日志文件，释放逻辑日志中的空间以便物理事务日志重用这些空间。 如果事务日志从不截断，它最终将填满分配给物理日志文件的所有磁盘空间。 但是，在截断日志前，必须执行检查点操作。 检查点将当前内存中已修改的页（称为“脏页”）和事务日志信息从内存写入磁盘。 执行检查点时，事务日志的不活动部分将标记为可重用。 此后，日志截断可以释放不活动的部分。 有关检查点的详细信息，请参阅[数据库检查点 (SQL Server)](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
  下列各图显示了截断前后的事务日志。 第一个图显示了从未截断的事务日志。 当前，逻辑日志使用四个虚拟日志文件。 逻辑日志开始于第一个逻辑日志文件的前面，并结束于虚拟日志 4。 MinLSN 记录位于虚拟日志 3 中。 虚拟日志 1 和虚拟日志 2 仅包含不活动的日志记录。 这些记录可以截断。 虚拟日志 5 仍未使用，不属于当前逻辑日志。  
@@ -117,15 +114,15 @@ ms.locfileid: "37301337"
   
  若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
   
-### 日志链  
+### <a name="the-log-chain"></a>日志链  
  日志备份的连续序列称为“日志链”。 日志链从数据库的完整备份开始。 通常，仅当第一次备份数据库时，或者将恢复模式从简单恢复模式切换到完整恢复模式或大容量日志恢复模式之后，才会开始一个新的日志链。 除非在创建完整数据库备份时选择覆盖现有备份集，否则现有的日志链将保持不变。 在该日志链保持不变的情况下，便可从介质集中的任何完整数据库备份还原数据库，然后再还原相应恢复点之前的所有后续日志备份。 恢复点可以是上次日志备份的结尾，也可以是任何日志备份中的特定恢复点。 有关详细信息，请参阅[事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要将数据库还原到故障点，必须保证日志链是完整的。 也就是说，事务日志备份的连续序列必须能够延续到故障点。 此日志序列的开始位置取决于您所还原的数据备份类型：数据库备份、部分备份或文件备份。 对于数据库备份或部分备份，日志备份序列必须从数据库备份或部分备份的结尾处开始延续。 对于一组文件备份，日志备份序列必须从整组文件备份的开头开始延续。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-### 还原日志备份  
+### <a name="restore-log-backups"></a>还原日志备份  
  还原日志备份将前滚事务日志中记录的更改，使数据库恢复到开始执行日志备份操作时的状态。 还原数据库时，必须还原在所还原完整数据库备份之后创建的日志备份，或者从您还原的第一个文件备份的开始处进行还原。 通常情况下，在还原最新数据或差异备份后，必须还原一系列日志备份直到到达恢复点。 然后恢复数据库。 这将回滚所有在恢复开始时未完成的事务并使数据库联机。 恢复数据库后，不得再还原任何备份。 有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
-## 其他阅读主题  
+## <a name="additional-reading"></a>其他阅读主题  
  有关事务日志的其他信息，我们建议阅读以下文章和书籍。  
   
  [了解 SQL Server 中的日志记录和恢复（作者：Paul Randall）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  

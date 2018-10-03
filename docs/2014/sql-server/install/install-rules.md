@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SCC
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, System Configuration Check page
 - SCC [SQL Server]
 ms.assetid: 168c0445-5651-42fc-91f4-d9f27d9e2281
-caps.latest.revision: 49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df13e2ac5e6caf247f633e7f59ac397b2c5d22c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6105444259697caa655145c40f795469a9b6304f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251489"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127413"
 ---
 # <a name="install-rules"></a>安装规则
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装操作完成前验证您的计算机配置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程中，系统配置检查器 (SCC) 会对将要安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机进行扫描。 SCC 将检查阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装操作成功完成的条件。 在安装程序启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导之前，SCC 会检索每个项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  

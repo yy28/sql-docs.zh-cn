@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207377"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>“报表属性”对话框 ->“页面设置”（报表生成器）
   选择 **“报表属性”** 对话框中的 **“页面设置”** 可设置整个报表的页面选项。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **英寸**  
  指定页大小（以英寸为单位）。 默认情况下，本地设置确定选择哪个页面单位。  
   

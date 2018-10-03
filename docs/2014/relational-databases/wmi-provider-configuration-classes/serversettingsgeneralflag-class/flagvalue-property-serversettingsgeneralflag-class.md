@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FlagValue Property (ServerSettingsGeneralFlag Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ecd0bd7bd1d0604f54b124afb150a20f4a599d92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6f1aff6636814b358972675487eb7b2ed5cf2ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161049"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>FlagValue 属性（ServerSettingsGeneralFlag 类）
   获取标志的值。  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定标志的值的布尔值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

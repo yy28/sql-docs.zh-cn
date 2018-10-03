@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DiscretizationMethod Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75308b5270eb762236be22fc0838a480474898dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252999"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200468"
 ---
 # <a name="discretizationmethod-element-assl"></a>DiscretizationMethod 元素 (ASSL)
   定义用于离散化的方法。  
@@ -59,9 +56,9 @@ ms.locfileid: "37252999"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)， [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `DiscretizationMethod` 元素的值可确定如何离散化 `DimensionAttribute` 或 `ScalarMiningStructureColumn` 的值，或如何将其组织到特定的组集中。 有关离散化方法的详细信息，请参阅[离散化方法&#40;数据挖掘&#41;](../../data-mining/discretization-methods-data-mining.md)。  
   
  此元素的值限定为下表中的字符串之一。  

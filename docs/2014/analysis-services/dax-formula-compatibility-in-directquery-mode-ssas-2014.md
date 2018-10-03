@@ -4,27 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
-caps.latest.revision: 3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68a73fd64b9bba02a917c8538f79062ff85afbdb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113687"
 ---
-# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>在 DirectQuery 模式 (SSAS 2014) 中的 DAX 公式兼容性
+# <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
 可以使用数据分析表达式语言 (DAX) 在 Analysis Services 表格模型中，创建度量值和使用其他自定义公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 工作簿中的数据模型和 Power BI Desktop 数据模型。 在大多数方面，在这些环境中创建的模型是相同的并可以使用相同的度量值、 关系和 Kpi，等等。但是，如果创建 Analysis Services 表格模型并将其部署在 DirectQuery 模式下，有一些限制，可以使用的公式。 本主题概述了这些差异，列出了在兼容级别 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式下，不支持的函数并列出了支持的函数但可能返回不同的结果。  
   
 在本主题中，我们使用术语*内存中模型*若要引用的表格模型，这是完全托管在表格模式下运行的 Analysis Services 服务器上的内存中缓存的数据。 我们使用*DirectQuery 模型*来指代已创作和/或在 DirectQuery 模式下部署的表格模型。 有关 DirectQuery 模式下的信息，请参阅[DirectQuery 模式 （SSAS 表格）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Master Data Services], file and folder
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 1cee48c465b95598f4bdbcca6f22df2cf623945d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06cec1895333e305739476d6c2eca731544fcd3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204127"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>文件夹和文件权限 (Master Data Services)
   在您安装 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]时，文件夹和文件将安装在您为 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共享功能指定的安装路径处的文件系统中。 如果使用的默认安装路径[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共享的功能、 的安装路径[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]是*驱动器*: \Program Files\Microsoft SQL Server\120\Master Data Services。 尽管您可以更改共享功能安装路径，但要注意从父文件夹继承的权限以及为 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]显式设置的权限。  
@@ -37,7 +34,7 @@ ms.locfileid: "37318767"
   
 ###### <a name="program-files-default-permissions"></a>程序文件默认权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|特殊权限|  
 |SYSTEM|特殊权限|  
@@ -50,7 +47,7 @@ ms.locfileid: "37318767"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|修改、读取和执行、列出文件夹内容、读取、写入|  
 |管理员|修改、读取和执行、列出文件夹内容、读取、写入|  
@@ -58,7 +55,7 @@ ms.locfileid: "37318767"
   
 ###### <a name="webconfig-permissions"></a>Web.config 权限  
   
-|组或帐户名称|权限|  
+|组或帐户名称|Permissions|  
 |---------------------------|-----------------|  
 |SYSTEM|完全控制、修改、读取和执行、读取、写入|  
 |管理员|完全控制、修改、读取和执行、读取、写入|  

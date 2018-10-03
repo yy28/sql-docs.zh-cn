@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d4dc8cb04d2755f534b8ff4f13b113639a14f3b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bdae6fe44e416786e842eb2ecc36d213d771cf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179237"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅[在 URL 中指定设备信息设置](specify-device-information-settings-in-a-url.md)。  
@@ -37,7 +34,7 @@ ms.locfileid: "37306907"
   
 |参数|Description|值|  
 |---------------|-----------------|------------|  
-|*工具栏*|显示或隐藏工具栏。<br /><br /> **\*\* 重要\* \* ** *rc: toolbar* = `false`并不适用于 URL 访问字符串使用 IP 地址，而不是域名，以针对上托管的报表SharePoint 站点。|如果此参数的值为 `false`，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值是`true`。<br /><br /> `true` <br /> `false`|  
+|*工具栏*|显示或隐藏工具栏。<br /><br /> **\*\* 重要\* \***  *rc: toolbar* = `false`并不适用于 URL 访问字符串使用 IP 地址，而不是域名，以针对上托管的报表SharePoint 站点。|如果此参数的值为 `false`，将忽略所有剩余的选项。 如果您忽略此参数，则自动为支持工具栏的呈现格式显示此工具栏。 此参数的默认值是`true`。<br /><br /> `true` <br /> `false`|  
 |*Parameters*|显示或隐藏工具栏的参数区域。<br /><br /> `Native` 模式示例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed`<br /><br /> `SharePoint` 模式示例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed`|如果将此参数设置为 `true`，将显示工具栏的参数区域。 如果此参数设置为 `false`，则不显示参数区域，用户也不能显示参数区域。 如果此参数设置为 `Collapsed` 值，则不会显示参数区域，但最终用户可以对参数区域进行切换。 此参数的默认值是`true`。 有效值为<br /><br /> `true` <br /> `false` <br /> `Collapsed`|  
 |*缩放*|设置报表缩放值，缩放值以整数百分比或字符串常量表示。<br /><br /> `Native` 模式示例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Zoom=Page Width`<br /><br /> `SharePoint` 模式示例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width`|标准字符串值包括 `Page Width` 和 `Whole Page`。 早于 Internet Explorer 5.0 的 Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 浏览器忽略此参数。 此参数的默认值是`100`。|  
 |*部分*|设置将显示报表中的哪一页。<br /><br /> `Native` 若要显示报表的第 2 页的模式示例：<br /><br /> `http://myrshost/reportserver?/Sales&rc:Section=2`<br /><br /> `SharePoint` 若要显示报表的第 2 页的模式示例：<br /><br /> `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2`|对于任何设置为大于报表页数的值，都将显示最后一页。 对于任何小于 `0` 的值，都将显示报表的第 1 页。 此参数的默认值是`1`。|  

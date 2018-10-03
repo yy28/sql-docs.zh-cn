@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Components to Install page
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
-caps.latest.revision: 86
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cedec01a7e8c7da94f75c00e377a2c965bd58c7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087407"
 ---
 # <a name="feature-selection"></a>功能选择
   使用  安装向导的“功能选择” [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 页上的复选框为您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装选择组件。  
@@ -81,7 +78,7 @@ ms.locfileid: "37315487"
 ## <a name="disk-space-requirements"></a>磁盘空间要求  
  使用“磁盘成本摘要”页可以检查选择安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能的磁盘空间要求。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  如果所需的磁盘空间太大，应考虑以下选项：  
   
 -   将安装目录更改为具有更多磁盘空间的驱动器。  

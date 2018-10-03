@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6ae425405db24ca56f00dff7952ee0e7b4d1623
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bf61e09dbb1e1a98b1af609cb092cf072821a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106039"
 ---
 # <a name="choose-link-page-report-manager"></a>“选择链接”页（报表管理器）
   使用“选择链接”页可为当前所选链接报表选择要基于的不同报表。 链接报表基于已发布到报表服务器的其他报表。 链接报表使用基础报表的布局和数据，但是其属性页与基础报表不同，以便您可以自定义参数属性、安全设置、名称、说明和位置。  
@@ -39,7 +36,7 @@ ms.locfileid: "37242277"
   
 4.  在 **“常规”** 选项卡上的属性页中单击 **“更改链接”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **位置**  
  指定已发布报表的全名，包括文件夹路径和报表名称。 您可以键入报表的全名，也可以使用树视图导航到要使用的报表。  
   

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167187"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>在服务器和客户端之间执行的转换
   本主题说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
@@ -30,7 +27,7 @@ ms.locfileid: "37430856"
   
 |目标 -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1,7|“确定”|-|-|@shouldalert|1,3|1,7|-|确定 (VT_BSTR)|“确定”|“确定”|4|4|  
+|date|1,7|“确定”|-|-|1|1,3|1,7|-|确定 (VT_BSTR)|“确定”|“确定”|4|4|  
 |Time|5,6,7|-|9|“确定”|6|3,6|5,6|-|确定 (VT_BSTR)|“确定”|“确定”|4|4|  
 |Smalldatetime|7|8|9,10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  
 |DATETIME|5,7|8|9,10|10|“确定”|3|7|-|7 (VT_DATE)|“确定”|“确定”|4|4|  
@@ -39,7 +36,7 @@ ms.locfileid: "37430856"
 |Char、Varchar、<br /><br /> Nchar、Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/A|N/A|N/A|N/A|N/A|N/A|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|“确定”|3|7|-|7(VT_DATE)|“确定”|“确定”|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|“确定”|3|7|-|7(VT_DATE)|“确定”|“确定”|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|“确定”|2|2|@shouldalert|1,3|1,7|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|“确定”|2|2|1|1,3|1,7|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
 |Sql_variant<br /><br /> (time)|5,6,7|2|6|“确定”|6|3,6|5,6|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
 |Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|“确定”|3|5,7|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
 |Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|“确定”|5,7,11|-|OK(VT_BSTR)|“确定”|“确定”|4|4|  
@@ -50,7 +47,7 @@ ms.locfileid: "37430856"
 |------------|-------------|  
 |“确定”|不需要任何转换。|  
 |-|不支持任何转换。 如果调用 iaccessor:: Createaccessor 时验证绑定，在中返回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 当延迟取值函数验证时，则设置 DBSTATUS_E_BADACCESSOR。|  
-|@shouldalert|时间字段设置为零。|  
+|1|时间字段设置为零。|  
 |2|设置 DBSTATUS_E_CANTCONVERTVALUE。|  
 |3|时区设置为零。|  
 |4|如果客户端缓冲区不够大，则设置 DBSTATUS_S_TRUNCATED。 如果服务器类型包含秒的小数部分，结果字符串中的位数与服务器类型的小数位数完全匹配。|  
@@ -65,6 +62,6 @@ ms.locfileid: "37430856"
 |13|字符串分析为 ISO 文字并转换为目标类型。 如果上述操作失败，该字符串则分析为 OLE 日期文字（还包含时间部分），并从 OLE 日期 (DBTYPE_DATE) 转换为目标类型。 除非目标为 DBTYPE_DATE 或 DBTYPE_DBTIMESTAMP，否则该字符串必须符合日期时间文字的语法。 在这种情况下，允许日期时间或时间文字，以便成功分析 ISO 格式。 若要成功分析 OLE，字符串必须符合可由 OLE 识别的语法。 如果无法分析该字符串，则设置 DBSTATUS_E_CANTCONVERTVALUE。 如果任一部分的值超出范围，则设置 DBSTATUS_E_DATAOVERFLOW。|  
   
 ## <a name="see-also"></a>请参阅  
- [绑定和转换&#40;OLE DB&#41;](conversions-ole-db.md)  
+ [绑定和转换 (OLE DB)](conversions-ole-db.md)  
   
   

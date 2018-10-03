@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152168"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114027"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 函数（报表生成器和 SSRS）
   返回在给定作用域上下文中计算的，由表达式指定的非 Null 值的计数。  
@@ -47,7 +44,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>返回类型  
  返回`Integer`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   
  *Expression* 可以包含对嵌套聚合函数的调用，但具有以下例外和条件：  
