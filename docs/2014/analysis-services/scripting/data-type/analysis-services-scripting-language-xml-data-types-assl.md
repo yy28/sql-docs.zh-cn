@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Types
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc773c4eda7b9f26b8ddafab5f6c80b068d32ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ff2f0989aa2c88a69351d698c847ca6e835285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276633"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179247"
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Analysis Services 脚本语言 XML 数据类型 (ASSL)
   本参考部分包含在 Analysis Services 脚本语言 (ASSL) 架构中作为类型的每个元素的语法和用法信息。  
@@ -39,7 +36,7 @@ ms.locfileid: "37276633"
   
  类型元素与对象元素类似，它们在 ASSL 架构中从不是叶级元素，而是包含了子元素和与对象属性对应的元素。  
   
- 但是类型元素永远不会显示为一个脚本定义或描述中的元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。 类型元素是作为其他对象元素的类型而出现的，通常使用 `type` 或 `xsi:type` 的“XML 架构实例”架构的 `xs:type` 属性来指定。 例如， `<Assembly xsi:type="ClrAssembly">...</Assembly>`。  
+ 但是类型元素永远不会显示为一个脚本定义或描述中的元素[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。 类型元素是作为其他对象元素的类型而出现的，通常使用 `type` 或 `xsi:type` 的“XML 架构实例”架构的 `xs:type` 属性来指定。 例如 `<Assembly xsi:type="ClrAssembly">...</Assembly>` 。  
   
  在某些情况下，一个类型派生自另一个类型。 例如，`CubeBinding` 类型是从父 `Binding` 类型派生的。  
   

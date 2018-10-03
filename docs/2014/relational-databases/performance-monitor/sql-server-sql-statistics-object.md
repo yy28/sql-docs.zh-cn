@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 57fb6867343a62b95465d5c67fbd587e806e8002
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187247"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server:SQL Statistics 对象
   **中的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对象提供计数器来监视编译和发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的请求类型。 通过监视查询编译和重新编译的次数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例收到的批数，可了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 处理用户查询的速度，以及查询优化器处理查询的效率。  

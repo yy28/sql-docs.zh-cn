@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179574"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159517"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>在 Analysis Services 的 MDX 查询设计器中定义参数（报表生成器和 SSRS）
   若要参数化 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 数据源的 MDX 查询，则必须向查询添加查询参数。 在 MDX 查询设计器中，在设计模式和查询模式下都可以通过指定筛选器来添加查询参数。 使用查询参数定义查询后，Reporting Services 会自动创建报表参数和数据集，以提供有效值的列表。 这样用户就可以指定要直接传递给查询的值。  

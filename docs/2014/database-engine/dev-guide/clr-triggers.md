@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160988"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226697"
 ---
 # <a name="clr-triggers"></a>CLR 触发器
   由于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 集成，因此，您可以使用任何 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 语言来创建 CLR 触发器。 本部分包含通过 CLR 集成实现的触发器的特定信息。 有关触发器的完整讨论，请参阅[DDL 触发器](../../relational-databases/triggers/ddl-triggers.md)。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axis Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8587e1cdb0105d72d2bc0219c8d038ca0bd03ca4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153459"
 ---
 # <a name="axis-element-xmla"></a>Axis 元素 (XMLA)
   包含一组用于表示在多维数据集中所包含的单个轴的元组[轴](axes-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[Execute](../xml-elements-methods-execute.md)方法。  
@@ -56,8 +53,8 @@ ms.locfileid: "37263223"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -67,7 +64,7 @@ ms.locfileid: "37263223"
 |父元素|[轴](axes-element-xmla.md)|  
 |子元素|[CrossProduct](crossproduct-element-xmla.md)或[元组](tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Axis` 元素的内容因 `AxisFormat` 方法所使用的`Execute` XMLA 属性的值而异。  
   
 ## <a name="tupleformat"></a>TupleFormat  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Member Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 318a54528ed5f9d22f0925ff10e0596413e47043
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ab24b02a46a5e6416018d9f77c733b0d3de7153
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168967"
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)
   表示父命名空间中的单个成员[成员](members-element-xmla.md)或[元组](tuple-element-xmla.md)元素。  
@@ -70,8 +67,8 @@ ms.locfileid: "37217927"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -87,7 +84,7 @@ ms.locfileid: "37217927"
 |---------------|-----------------|  
 |层次结构|必需的 `String` 属性（仅用于父 `Tuple` 元素）。 `Member` 元素表示的成员所属的层次结构的名称。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Member` 元素包含标识和显示给定层次结构中的成员所需的信息。 对于父 `Members` 元素，层次结构已由父元素的 `Hierarchy` 属性指定。 对于父 `Tuple` 元素，层次结构使用 `Hierarchy` 元素的 `Member` 属性来指定。  
   
 ## <a name="see-also"></a>请参阅  

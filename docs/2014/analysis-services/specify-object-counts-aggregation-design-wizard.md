@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1
 ms.assetid: 305d9d79-d1ab-4704-a7b5-3283842b3996
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a2040623e235b79a16c767062655deac81d6271
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3711c21f6d69a7b5fd93456811e4bd3874116774
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160877"
 ---
 # <a name="specify-object-counts-aggregation-design-wizard"></a>指定对象计数（聚合设计向导）
   可以使用 **“指定对象计数”** 页自动计算多维数据集中的对象计数，或者手动输入估计的计数。 聚合设计向导使用对象计数来估计存储要求。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **多维数据集对象**  
  显示多维数据集中的维度和属性。 属性不具有其`AggregationUsage`属性设置为`None`中**查看聚合使用情况**显示向导页，因为这些是需要指定计数的唯一属性。  
   

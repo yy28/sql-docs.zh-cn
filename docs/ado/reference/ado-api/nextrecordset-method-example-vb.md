@@ -1,32 +1,29 @@
 ---
-title: 方法签名示例 (VB) |Microsoft 文档
+title: NextRecordset 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28c553c49a658be1882b48cc0b18a39a21b607ad
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 848034e40a4b3a7c98cd59eb7204c7f00b147b67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827385"
 ---
-# <a name="nextrecordset-method-example-vb"></a>方法签名示例 (VB)
-此示例使用[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法来查看数据，在记录集中使用的三个单独组成的复合命令语句**选择**语句。  
+# <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法示例 (VB)
+此示例使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以查看数据集中使用复合命令语句组成的三个单独的记录**选择**语句。  
   
 ```  
 'BeginNextRecordsetVB  
@@ -99,5 +96,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [方法签名 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
+ [NextRecordset 方法 (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a89c8c66eab37f20c8816823b44cefcfb77ad9ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208388"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>“新建订阅”或“编辑订阅”页（报表管理器）
   使用“新建订阅”或“编辑订阅”页，可为报表创建新订阅或修改报表的现有订阅。 此页包含的选项取决于您的角色分配。 具有高级权限的用户可以使用附加选项。  
@@ -44,7 +41,7 @@ ms.locfileid: "37212587"
   
     -   单击 **“订阅”**。 这会打开该报表的 **“新建订阅”** 页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **传递方式**  
  选择用于分发报表的传递扩展插件。 根据选定的传递扩展插件，会显示下列设置：  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - files [Reporting Services]
 - folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9abf4ad5aef29b6064b53af80553b02ee01c2fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: efb68eefbaff0f984c38393c9bf863f0654716fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162567"
 ---
 # <a name="upload-files-to-a-folder"></a>将文件上载到文件夹
   您可以从文件系统上载文件，然后将其作为托管项存储在报表服务器数据库中。 上载文件时的情况因文件类型而异。  

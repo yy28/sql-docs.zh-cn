@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7136e9f5bda8cd873ae9d30c14ef66b6acf324ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcfc0dea167b972f4e463333ab6851b038a284ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062798"
 ---
 # <a name="configure-backup-compression-sql-server"></a>配置备份压缩 (SQL Server)
   安装时，默认情况下关闭了备份压缩。 备份压缩的默认行为是由“备份压缩默认值”选项服务器级配置选项定义的。 但是，您可以在创建单个备份或计划一系列例行备份时覆盖服务器级默认设置。 若要更改服务器级默认设置，请参阅 [查看或配置备份压缩默认值服务器配置选项](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)。  

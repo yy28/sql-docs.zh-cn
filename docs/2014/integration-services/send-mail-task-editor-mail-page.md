@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sendmailtask.mail.f1
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96dab2f64143d167662ccae0b2d7c9a85e85873
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f8c4992477fa5bdbf533f3a1933c4092f1d162c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318791"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089491"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>发送邮件任务编辑器（“邮件”页）
   使用 **“发送邮件任务编辑器”** 对话框中的 **“邮件”** 页，可以指定收件人、邮件类型和邮件的优先级。 您还可以在邮件中附加文件。 邮件正文可以是您提供的字符串，也可以是指向包含文本的文件连接，还可以是包含文本的变量的名称。  
   
  若要了解此任务，请参阅 [Send Mail Task](control-flow/send-mail-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SMTPConnection**  
  从列表中选择一个 SMTP 连接管理器，或单击 \<“新建连接…”> 创建新的连接管理器。  
   

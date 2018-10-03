@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8ba142bcac50883ded20c7ff54d282e64a86562
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9ae78c114b9c46fd23d066a37837620441c6e6a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181147"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用于管理您的 SQL Server 基础架构的集成环境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供用于配置、监视和管理 SQL Server 实例的工具。 此外，它还提供了用于部署、监视和升级数据层组件（如应用程序使用的数据库和数据仓库）的工具以生成查询和脚本。  

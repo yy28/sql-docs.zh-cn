@@ -1,13 +1,11 @@
 ---
-title: BOF、 EOF，以及书签属性示例 (VB) |Microsoft 文档
+title: BOF、 EOF 和 Bookmark 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275996"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698215"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、 EOF，以及书签属性示例 (VB)
-此示例使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)和[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试移过的第一个或最后一个记录会将[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性以使用户能够标志中的记录**记录集**并稍后返回到它。  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF 和 Bookmark 属性示例 (VB)
+此示例使用[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)并[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)属性，以显示一条消息，如果用户尝试跳过的第一个或最后一个记录[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它使用[书签](../../../ado/reference/ado-api/bookmark-property-ado.md)属性，会让用户标记中的记录**记录集**并稍后返回到它。  
   
 ```  
 'BeginBOFVB  
@@ -133,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- 此示例使用**书签**和[筛选器](../../../ado/reference/ado-api/filter-property.md)属性以创建的有限的视图**记录集**。 书签数组引用的唯一记录进行访问。  
+ 此示例使用**书签**并[筛选器](../../../ado/reference/ado-api/filter-property.md)属性创建的有限的视图**记录集**。 书签数组所引用的唯一记录进行访问。  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [BOF，EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [书签属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
+ [BOF、 EOF 属性 (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [Bookmark 属性 (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

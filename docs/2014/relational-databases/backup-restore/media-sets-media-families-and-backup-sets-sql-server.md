@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - backups [SQL Server], backup sets
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13466b4d9d5cc497830906f144e95f044442e318
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197307"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>介质集、介质簇和备份集 (SQL Server)
   本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份和还原的基本备份介质术语，适用于对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不熟悉的读者。 本主题介绍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于备份介质的格式、备份介质和备份设备之间的对应关系、备份介质上备份的组织结构，以及介质集和介质簇的若干注意事项。 本主题还介绍在第一次使用备份介质或在使用新介质集替代旧介质集之前对备份介质进行初始化和格式化的步骤，如何覆盖介质集中的旧备份集，以及如何将新备份集追加到介质集。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2b729c41bf0ed0950c20b465bd1f0c70ebbee4a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdbca550f6ecb985248975b6dce332fb9ca05fe9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218306"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>共享数据源的“常规”属性页（报表管理器）
   使用“常规”属性页可以查看或修改共享数据源项的属性。 单击 **“应用”** 后，对属性所做的任何更改对于引用该项的所有报表都将生效。  
@@ -35,7 +32,7 @@ ms.locfileid: "37162278"
   
 3.  在下拉菜单中，单击 **“管理”**。 这会打开共享数据源的“常规属性”页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  指定共享数据源的名称。此名称用于在报表服务器命名空间内标识项。  
   

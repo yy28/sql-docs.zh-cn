@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RollbackTransaction Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RollbackTransaction command
 ms.assetid: 40e7dc00-656f-412f-97f0-d05bf7caa196
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eaaf3d92849e0d2ddb7f94686bb30e627d3abcb7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ae78f589c1c85713c751a737d6fb93fac9efeda
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218800"
 ---
 # <a name="rollbacktransaction-element-xmla"></a>RollbackTransaction 元素 (XMLA)
   回滚上的实例的当前会话的事务[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -50,8 +47,8 @@ ms.locfileid: "37300797"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37300797"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `RollbackTransaction` 命令可回滚在当前会话上使用 `BeginTransaction` 元素显式定义的所有活动事务。 如果不存在活动事务，则会出现错误。 如果存在活动事务，则 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例会将当前会话的事务引用计数减少到零，以回滚所有活动事务。  
   
 ## <a name="see-also"></a>请参阅  

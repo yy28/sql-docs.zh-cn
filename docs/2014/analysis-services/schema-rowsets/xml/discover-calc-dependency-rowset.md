@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199029"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 行集
   报告计算之间的依赖关系以及这些计算中引用的对象。 您可以在客户端应用程序中使用这些信息来报告与复杂公式相关的问题，或者在删除或修改相关对象时发出警告。 您还可以使用行集提取在度量值或计算列中使用的 DAX 表达式。  
@@ -34,9 +31,9 @@ ms.locfileid: "37297237"
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含要请求对其进行依赖关系分析的对象的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_DEPENDENCY_CALC`行集，可通过使用此列进行限制。|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|是|指示要请求对其进行依赖关系分析的对象的类型。 该对象必须是以下类型之一：<br /><br /> -   `ACTIVE_RELATIONSHIP`： 活动的关系<br />-   `CALC_COLUMN`： 计算列<br />-   `HIERARCHY`： 层次结构<br />-   `MEASURE`： 度量值<br />-   `RELATIONSHIP`： 关系<br />-   `KPI`: KPI （关键绩效指标）<br /><br /> `DISCOVER_DEPENDENCY_CALC`行集，可通过使用此列进行限制。|  
-|`QUERY`|`DBTYPE_WSTR`|是|对于在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 中创建的表格模型，您可以包含 DAX 查询或表达式，以显示该查询或表达式的依赖关系图。 QUERY 限制为客户端应用程序提供了一种方法，以确定 DAX 查询所使用的对象。<br /><br /> 可在 XMLA 中或 DMV 查询的 WHERE 子句中指定 `QUERY` 限制。 有关详细信息，请参阅示例部分。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|用户帐户控制|指定包含要请求对其进行依赖关系分析的对象的数据库名称。 如果省略，则使用当前数据库。<br /><br /> `DISCOVER_DEPENDENCY_CALC`行集，可通过使用此列进行限制。|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|用户帐户控制|指示要请求对其进行依赖关系分析的对象的类型。 该对象必须是以下类型之一：<br /><br /> -   `ACTIVE_RELATIONSHIP`： 活动的关系<br />-   `CALC_COLUMN`： 计算列<br />-   `HIERARCHY`： 层次结构<br />-   `MEASURE`： 度量值<br />-   `RELATIONSHIP`： 关系<br />-   `KPI`: KPI （关键绩效指标）<br /><br /> `DISCOVER_DEPENDENCY_CALC`行集，可通过使用此列进行限制。|  
+|`QUERY`|`DBTYPE_WSTR`|用户帐户控制|对于在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 中创建的表格模型，您可以包含 DAX 查询或表达式，以显示该查询或表达式的依赖关系图。 QUERY 限制为客户端应用程序提供了一种方法，以确定 DAX 查询所使用的对象。<br /><br /> 可在 XMLA 中或 DMV 查询的 WHERE 子句中指定 `QUERY` 限制。 有关详细信息，请参阅示例部分。|  
 |`TABLE`|`DBTYPE_WSTR`||要为其生成依赖关系信息的对象所在的表的名称。|  
 |`OBJECT`|`DBTYPE_WSTR`||要为其生成依赖关系信息的对象的名称。 如果该对象是某一度量值或计算列，则使用该度量值的名称。 如果该对象是某一关系，则为包含参与该关系的列的表（或者多维数据集维度）的名称。|  
 |`EXPRESSION`|`DBTYPE_WSTR`||包含要寻找其依赖关系的对象的公式。|  

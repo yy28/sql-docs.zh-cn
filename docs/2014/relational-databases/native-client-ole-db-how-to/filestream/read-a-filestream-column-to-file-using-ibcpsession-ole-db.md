@@ -1,24 +1,21 @@
 ---
-title: FILESTREAM 列读入文件使用 IBCPSession (OLE DB) |Microsoft Docs
+title: 使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2298503d85090cebc234fcaedc39bb9fee61cf4b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203687"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 将 FILESTREAM 列读入文件 (OLE DB)
   此示例使用 IBCPSession 接口将 filestream 列读入文件并编写格式化文件。  
@@ -30,9 +27,9 @@ ms.locfileid: "37412866"
   
  使用以下示例之一创建此示例读取的表：  
   
--   [将数据发送到 FILESTREAM 列使用绑定于 ICommandText 参数的 ISequentialStream &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用绑定到 ICommandText 参数的 ISequentialStream 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [将数据发送到使用 IRowsetFastUpload FILESTREAM 列&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Rowset Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c4ce1858e8274e5ae964c497972b4f2b082a712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170117"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 数据类型 (XMLA)
   定义一个派生的数据类型，表示[根](../xml-elements-properties/root-element-xmla.md)返回的表格数据的元素[Discover](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法调用。  
@@ -55,17 +52,17 @@ ms.locfileid: "37279443"
 |特征|Description|  
 |--------------------|-----------------|  
 |基本数据类型|[结果集](resultset-data-type-xmla.md)|  
-|派生数据类型|InclusionThresholdSetting|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[行](../xml-elements-properties/row-element-xmla.md)|  
 |派生元素|[根](../xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  XML 不允许某些字符作为元素和属性的名称。 若要解决此命名约束，XML for Analysis (XMLA) 支持定义的编码方式[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 对于包含不符合 XML 1.0 规范的有效的 XML 名称字符的列名，XMLA 使用相应的十六进制值不是有效的 Unicode 字符进行编码。 十六进制值被转义为 _x*HHHH*\_，其中*HHHH*代表最高有效位的第一个订单中的字符的四位十六进制 ucs-2 代码。 例如，XMLA 将名称“Order Details”编码为 Order_x0020_Details，将空格字符替换为相应的十六进制代码。  
   
  编码会使可扩展样式语言 (XSL) 转换变得困难。 若要支持的实际，快速查找未编码列名称、 添加`sql:field`属性为每个列的 XML 行集架构，如下面的示例中所示：  

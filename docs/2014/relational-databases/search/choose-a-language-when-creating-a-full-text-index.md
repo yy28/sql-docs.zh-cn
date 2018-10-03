@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - languages [SQL Server], full-text indexes
 - word breakers [full-text search]
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ce5d56ec84c1dcf33e3a915a8fa8bf94b1cdced
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70afd9ea708a82e45ba10e90022224c6ffdc088a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229495"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>创建全文索引时选择语言
   创建全文索引时，需要为索引列指定列级语言。 所指定语言的 [断字符和词干分析器](configure-and-manage-word-breakers-and-stemmers-for-search.md) 将由针对相应列的全文查询使用。 如果要在创建全文索引时选择列语言，有几个事项需要注意。 这些注意事项均与全文引擎如何对文本进行词汇切分再编制其索引有关。  
@@ -50,7 +47,7 @@ ms.locfileid: "37268673"
   
      测试表明这些新的断字符在高压查询环境中非常可靠。  
   
--   Security  
+-   安全性  
   
      默认情况下已启用新的断字符[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由于语言组件的安全性得到改进。 我们极力建议对诸如断字符和筛选器之类的外部组件进行签名以提高 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的整体安全性和可靠性。 可以按如下方式配置全文查询以验证是否对这些组件进行了签名：  
   

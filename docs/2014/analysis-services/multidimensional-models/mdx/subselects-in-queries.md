@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212087"
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
   嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
@@ -342,7 +339,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  正如您所看到的，在这两个结果集之间存在差异。 第一个查询指明在前 5 个销售区域中哪些产品的销量最高；第二个查询指明对于前 5 种销售产品哪些区域的销量最高。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>备注  
  嵌套 select 语句具有以下限制：  
   
 -   WHERE 子句不筛选子空间。  

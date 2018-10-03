@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.warningsandalerts.f1
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 18cf646a29f6a6c0d8e0c80a283e9920a3da7888
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56720ad795fb6df4de3c4cca72b9634d6fb6cf96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213207"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>数据库镜像监视器（警告页）
   显示数据库镜像事件所支持警告的只读列表和指定的警告阈值（如果有）。  
@@ -50,7 +47,7 @@ ms.locfileid: "37192423"
   
  有关详细信息，请参阅本主题后面的“备注”。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果服务器实例的信息目前不可用，则相应 **“阈值”** 列的单元格将显示灰色背景和水印文本。 如果监视器未与服务器实例连接，则网格将根据实例是默认实例还是命名实例，在每个单元格中显示“未连接到 <SYSTEM_NAME>”或“未连接到 <SYSTEM_NAME>\\<instance_name>”**。 如果监视器正在等待返回查询，那么每个单元格中的网格都将显示 **“等待数据...”** 。  
   
  当信息可用时，每个警告的单元格将会显示指定的阈值（和度量单位）或“未启用”。  
@@ -71,7 +68,7 @@ ms.locfileid: "37192423"
 |**如果最早的未发送事务的保留时间超出了阈值，则发出警告**|最早的未发送事务|32044|  
 |**如果镜像提交开销超过了阈值则发出警告**|镜像提交开销|32045|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要拥有完全访问权限，需要具有 **sysadmin** 固定服务器角色的成员身份。 只有 **sysadmin** 的成员才可以配置和查看关键绩效指标的警告阈值。  
   
  如果是 **dbm_monitor** 角色中的成员，则只能查看“警告”页上最新的状态行。  

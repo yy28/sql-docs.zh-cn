@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8609654bbfe3448b30f90975e9c628756d05f278
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163497"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  

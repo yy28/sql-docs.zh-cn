@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152979"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>选项 （查询执行 SQL Server-常规页）
   使用此页可指定用于运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询的选项。 对这些选项所做的更改仅应用于新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询。 若要更改当前查询的选项，请在“查询”菜单上单击“查询选项”，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查询窗口中单击右键，再选择“查询选项”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SET ROWCOUNT**  
  默认值为 0，指示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在收到所有结果之前将一直等待结果。 如果希望 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在获取指定数目的行后暂停查询，请提供一个大于 0 的值。 若要关闭此选项（以便返回所有的行），请将 SET ROWCOUNT 指定为 0。  
   
@@ -39,7 +36,7 @@ ms.locfileid: "37167148"
  **批处理分隔符**  
  键入用来将 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句分隔为批的词。 默认值为 GO。  
   
- **默认情况下，在 SQLCMD 模式下打开新查询**  
+ 默认情况下，在 SQLCMD 模式下打开新查询  
  选中此复选框可在 SQLCMD 模式下打开新查询。 有关 SQLCMD 模式的详细信息，请参阅[使用查询编辑器编辑 SQLCMD 脚本](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)。  
   
  选择此选项时，请记住下列限制：  
@@ -50,7 +47,7 @@ ms.locfileid: "37167148"
   
 -   由于查询编辑器无法响应操作系统提示，因此您一定要记住不要运行交互式语句。  
   
- **重置为默认值**  
+ 重置为默认值  
  单击此项可将此页上的所有值重置为原始默认值。  
   
 ## <a name="see-also"></a>请参阅  

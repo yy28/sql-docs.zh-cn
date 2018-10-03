@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3eb2aa1b151866166e77ea89eda4ba98c2866a53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a562c7b9a888f6bfbb071e3068a3c4cf661c3ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215527"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>修改或删除角色分配（报表管理器）
   角色分配将组或用户帐户映射到包含可执行任务的预定义的角色定义。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的操作类型。 若要创建、修改或删除角色分配，请使用报表管理器。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  

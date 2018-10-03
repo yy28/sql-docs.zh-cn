@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
 - geometry data type [SQL Server], spatial data
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6581a93e30e058e909b4e7df2bec7be6b52e4926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146867"
 ---
 # <a name="point"></a>点
   在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]空间数据`Point`是表示单个位置的零维对象，可能包含 Z （标高） 和 M （度量） 值。  

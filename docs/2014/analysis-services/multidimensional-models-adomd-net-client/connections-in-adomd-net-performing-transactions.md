@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - transactions [ADOMD.NET]
 - ADOMD.NET, transactions
 - AdomdTransaction object
 ms.assetid: 7978c28b-c255-43c0-ad05-f38604d4d8fe
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04157786e3a3d9349c2f1e324291a3a0bda5928d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa3fd6ad27ced739c6d8ebd5d2fb2ad00bd6f707
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167588"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169747"
 ---
 # <a name="performing-transactions-in-adomdnet"></a>在 ADOMD.NET 中执行事务
   在 ADOMD.NET 中，可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 对象管理给定 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 对象的事务上下文。 使用此功能可在同一上下文中运行多个命令。 每个命令将读取相同的数据，在每个命令执行之间不会更改读取的数据。  

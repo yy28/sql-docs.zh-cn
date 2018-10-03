@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0ac6ea9d3437e22a1493c9888ccb75e7996f1c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219857"
 ---
-# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>升级服务器实例时，尽量减少镜像数据库的停机时间
+# <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升级服务器实例时最大限度地减少镜像数据库的停机时间
   升级到的服务器实例时[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，你可以减少每个镜像数据库的停机时间仅一次的手动故障转移到按顺序进行升级，称为*滚动升级*。 滚动升级是一个多阶段过程，其最简单的形式如下：升级当前在镜像会话中充当镜像服务器的服务器实例，然后对镜像数据库进行手动故障转移，升级以前的主体服务器，恢复镜像。 实际上，确切过程将取决于运行模式以及在所升级的服务器实例上运行的镜像会话的编号和布局。  
   
 > [!NOTE]  

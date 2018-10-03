@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 208a63412351e0f3e9ab6b7a5b5d79c6ef51aca3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed72704f230ede202d9363a37d4775b2fdd250d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178337"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>维度处理目标编辑器（“映射”页）
   可以使用 **“维度处理目标编辑器”** 对话框的 **“映射”** 页，将输入列映射到维度列。  
   
  若要了解有关维度处理目标的详细信息，请参阅 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用输入列**  
  查看可用输入列的列表。 使用拖放操作可以将表中的可用输入列映射到目标列。  
   

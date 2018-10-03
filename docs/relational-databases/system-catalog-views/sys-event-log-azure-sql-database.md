@@ -5,9 +5,6 @@ ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: ''
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - event_log
@@ -24,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5e6433496d1807317cfa2591dc453d6115f2a7cc
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089959"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826345"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -89,7 +86,7 @@ ms.locfileid: "44089959"
 ## <a name="permissions"></a>Permissions  
  具有访问权限的用户**主**数据库具有对此视图的只读访问。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ### <a name="event-aggregation"></a>事件聚合  
  在 5 分钟的间隔内收集和聚合此视图的事件信息。 **Event_count**列代表一个特殊的次数**event_type**并**event_subtype**某个给定的时间间隔内发生的特定数据库。  

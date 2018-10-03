@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFolder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73de197b50ebd3636cb97e6a011fee1e8c3a71af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220097"
 ---
 # <a name="displayfolder-element-assl"></a>DisplayFolder 元素 (ASSL)
   指定要在其中列出父元素的文件夹。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 开发人员和管理员的应用程序可能支持使用显示文件夹来直观地对多个元素进行分类。  
@@ -51,7 +48,7 @@ ms.locfileid: "37293197"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37293197"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CalculationProperty](../objects/calculationproperty-element-assl.md)，[层次结构](../objects/hierarchy-element-assl.md)， [Kpi](../objects/kpi-element-assl.md)，[度量值](../objects/measure-element-assl.md)，[翻译](../objects/translation-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在较大的多维数据集中，可能有几百个度量值和层次结构。 `DisplayFolder` 属性可定义客户端的用户外观。 `DisplayFolder` 属性的值可包含任何下列选项之一：  
   
 -   为空，表示该度量值不属于文件夹。  

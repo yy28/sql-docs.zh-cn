@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sa account
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - server authentication mode [SQL Server]
 - modifying server authentication mode
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab213ee1c49eaf50150c8e3317244e94a99dd1cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dec6d868a1eb568b20794d35774712eb98f6677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295397"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175648"
 ---
 # <a name="change-server-authentication-mode"></a>更改服务器身份验证模式
   本主题介绍如何通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中更改服务器身份验证模式。 安装过程中， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 设置为 **“Windows 身份验证模式”** 或 **“SQL Server 和 Windows 身份验证模式”**。 安装完成后，您可以随时更改身份验证模式。  

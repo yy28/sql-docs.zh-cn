@@ -1,20 +1,21 @@
 ---
 title: 有关创建、 定型和计分 R （SQL Server 机器学习服务） 功能基于分区的模型的教程 |Microsoft Docs
+description: 了解如何建模、 定型和使用分区时使用的 SQL Server 机器学习基于分区的建模功能动态创建的数据。
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46715057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232561"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>教程： 在 SQL Server 上的 R 中创建基于分区的模型
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "46715057"
 在本教程中，了解基于分区的建模使用经典 NYC 出租车示例数据和 R 脚本。 分区列是付款方法。
 
 > [!div class="checklist"]
-> * 基于 payment_type 列的分区。 此列段数据，为每种付款类型的一个分区中的值。
+> * 分区都基于付款类型 (5)。
 > * 创建和训练每个分区上的模型和数据库中存储的对象。
 > * 对每个分区模型，使用保留的实现此目的的示例数据预测小费的结果的概率。
 
@@ -37,21 +38,17 @@ ms.locfileid: "46715057"
  
 若要完成本教程中，您必须具有：
 
-+ SQL Server 2019 数据库引擎实例中使用机器学习服务和 R 功能
-+ 示例数据
-+ T-SQL 查询的执行，SQL Server Management Studio 等的工具
++ 足够的系统资源。 数据集较大和培训操作占用大量资源。 如果可能，请使用具有至少 8 GB RAM 的系统。 或者，可以使用较小的数据集以解决资源限制。 减少数据集的说明将以内联方式。 
 
-### <a name="system-resources"></a>系统资源
++ T-SQL 的一个工具查询执行，例如[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。
 
-数据集较大和培训操作占用大量资源。 如果可能，请使用具有至少 8 GB RAM 的系统。 或者，可以使用较小的数据集以解决资源限制。 减少数据集的说明将以内联方式。 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)，你可[下载并还原](sqldev-download-the-sample-data.md)到本地数据库引擎实例。 文件大小为约 90 MB。
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>SQL Server 数据库引擎使用机器学习服务
++ SQL Server 2019 预览版数据库引擎实例中使用机器学习服务和 R 集成。
 
-SQL Server 2019 CTP 2.0 或更高版本，使用机器学习服务安装和配置，是必需的。 您可以通过执行检查在 Management Studio 中的服务器版本`SELECT @@Version`为 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.0)-15.0.x"。
+检查版本，通过执行**`SELECT @@Version`** 作为查询工具中的 T-SQL 查询。 输出应为"Microsoft SQL Server 2019 (CTP 2.0)-15.0.x"。
 
-### <a name="r-packages"></a>R 包
-
-本教程使用与机器学习服务安装 R。 可以通过返回格式正确的数据库引擎实例与当前安装的所有 R 包列表验证 R 安装：
+检查可用性的 R 包通过返回格式正确的数据库引擎实例与当前安装的所有 R 包列表：
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>用于执行查询的工具
-
-你可以[下载并安装 SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)，或使用任何工具，用于连接到关系数据库并运行 T-SQL 脚本。 请确保可以连接到具有机器学习服务的数据库引擎实例。
-
-### <a name="sample-data"></a>示例数据
-
-数据源自[NYC 出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公共数据集。 
-
-+ 下载[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak )数据库备份文件和数据库引擎实例上还原它。
-
-数据库文件名称必须是**NYCTaxi_sample**如果你想要在不修改运行以下脚本。
 
 ## <a name="connect-to-the-database"></a>连接到数据库
 

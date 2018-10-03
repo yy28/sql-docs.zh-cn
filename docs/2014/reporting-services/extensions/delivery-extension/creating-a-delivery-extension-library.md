@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
 - assigning namespaces to extensions
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f0663b49de4704e45f7127f41e200cf6f042f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77d98f92747741f80c8a0af613ecc93f7647c5af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157527"
 ---
 # <a name="creating-a-delivery-extension-library"></a>创建传递扩展插件库
   您创建的每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 传递扩展插件都应分配到唯一的命名空间并被内置到某个库或程序集文件中。 命名空间的确切名称并不重要，但命名空间必须是唯一的且不能与任何其他扩展插件共享。 您应该为公司的传递扩展插件创建您自己的唯一命名空间。  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.chooseperspect.f1
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d838dbf683746b212967f2775c6c943310ce6cb6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b918cca81ba7e2ba0964012b7efcf40ad0a09fde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224497"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>在 Excel 中分析表格模型（SSAS 表格）
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的“在 Excel 中分析”功能可以打开 Microsoft Excel、创建到模型工作区数据库的数据源连接以及将数据透视表添加到工作表。 模型对象（表、列、度量值、层次结构和 KPI）作为数据透视表字段列表中的字段包含。  

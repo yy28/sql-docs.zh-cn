@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71f7745a3f3ea39309d871d5fafef737176d3a45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054387"
 ---
 # <a name="type-element-xmla"></a>Type 元素 (XMLA)
   确定要由执行的处理类型[进程](../xml-elements-commands/process-element-xmla.md)元素。  
@@ -53,7 +50,7 @@ ms.locfileid: "37193777"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37193777"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[处理](../xml-elements-commands/process-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  详细了解可用的处理选项对象的实例上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，请参阅[多维模型对象处理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  `Type` 元素的值限定为下表中列出的字符串之一。  

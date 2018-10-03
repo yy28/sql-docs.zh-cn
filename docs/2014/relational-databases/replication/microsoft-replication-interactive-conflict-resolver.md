@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.interactiveresolver.f1
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 325cc57e7d4ae89de553c98ae1103e33aa22700e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c1637301eb6a6c9663f122e61447b9a8adb1623
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213579"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft Replication Interactive Conflict Resolver
   Microsoft Replication Interactive Conflict Resolver 可以用于使用 Windows 同步管理器进行同步的合并订阅。 使用它可以查看、比较、编辑和选择数据冲突的结果。 复制还包括冲突查看器，使用冲突查看器可以提交冲突结果之后查看和修改冲突结果。 Microsoft Replication Interactive Conflict Resolver 允许您在同步期间选择结果。  
@@ -29,7 +26,7 @@ ms.locfileid: "37305487"
 > [!NOTE]  
 >  包含逻辑记录的冲突不会显示在交互式冲突解决程序中。 若要查看有关这些冲突的信息，请使用复制存储过程。 有关详细信息，请参阅[查看合并发布的冲突信息（复制 Transact-SQL 编程）](view-conflict-information-for-merge-publications.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **列名**  
  表中所有列的名称。 一个或多个列可能包含冲突的数据。 不管哪些列发生冲突，整个入选行将覆盖整个落选行。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI provider [SMO]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - network settings [SMO]
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc42cd7c5f7670ed3ece73ee424de03891ed5781
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211657"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供程序管理服务和网络设置
   WMI 提供程序是一个已发布的接口，可供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]管理控制台 (MMC) 管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服务和网络协议。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>对象表示 WMI 提供程序。  

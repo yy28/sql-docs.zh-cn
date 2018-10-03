@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], disk space requirements
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a39a0dd5320245b99bae1256deedea52e201be47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182264"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211017"
 ---
 # <a name="index-disk-space-example"></a>索引磁盘空间示例
   无论什么时候创建、重新生成或删除索引，在相应的文件和文件组中都需要用于存储旧（源）结构和新（目标）结构的磁盘空间。 旧的结构只有在提交索引创建事务后才会释放。 还可能需要附加临时磁盘空间以进行排序操作。 有关详细信息，请参阅 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  

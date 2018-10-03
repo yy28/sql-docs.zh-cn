@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42e6f4473e9589ce861c22d6e85d83502e6329b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0148cca6701db9f28ed6dd7abccb1a1f00269510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111849"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>设置连接管理器的属性
   所有连接管理器都可以使用 **“属性”** 窗口进行配置。  
@@ -55,7 +52,7 @@ ms.locfileid: "37190607"
   
 4.  在“连接管理器”区域中，双击连接管理器以打开“连接管理器”对话框。 有关特定连接管理器类型以及每种类型可用的选项的信息，请参阅下表。  
   
-    |“连接管理器”|“常规”|  
+    |“连接管理器”|选项|  
     |------------------------|-------------|  
     |[ADO 连接管理器](connection-manager/ado-connection-manager.md)|[配置 OLE DB 连接管理器](configure-ole-db-connection-manager.md)|  
     |[ADO.NET 连接管理器](connection-manager/ado-net-connection-manager.md)|[配置 ADO.NET 连接管理器](configure-ado-net-connection-manager.md)|  

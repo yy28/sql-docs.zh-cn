@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191737"
 ---
 # <a name="relationships-ssas-tabular"></a>关系（SSAS 表格）
   在表格模型中，关系是两个数据表之间的连接。 该关系确立两个表中的数据应该如何相关。 例如，Customers 表和 Orders 表可以彼此相关，以便显示与每个订单关联的客户名称。  
@@ -52,8 +49,8 @@ ms.locfileid: "37314529"
   
 |CustomerID|“属性”|EMail|DiscountRate|OrderID|OrderDate|Product|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  这种方法可以用，但会存储大量冗余数据，如每个订单的客户电子邮件地址。 存储成本低廉，但如果电子邮件地址发生更改，就必须确保更新该客户的每一行数据。 针对这一问题，一种解决方法是将数据拆分到多个表中，然后在这些表之间定义关系。 这就是关系数据库  （如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）中使用的方法。 例如，导入模型的某个数据库可以使用三个相关表来表示订单数据：  
@@ -62,22 +59,22 @@ ms.locfileid: "37314529"
   
 |[CustomerID]|“属性”|EMail|  
 |--------------------|----------|-----------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|@shouldalert|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|Product|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
  如果从同一数据库导入这些表，则“表导入向导”可以根据 [方括号] 中的列来检测这些表之间的关系，并可以在模型设计器中再现这些关系。 有关详细信息，请参阅本主题中的 [关系的自动检测和推理](#detection) 。 如果从多个源导入表，您可以手动创建关系，如中所述[创建表之间的关系两个&#40;SSAS 表格&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a87b2ecdcce3b50eaebcc73471b44f6db48f04b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5a06cf806845645073c883d87e8a7b0e0338cfb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205607"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>日期和时间以及架构行集
   本主题提供有关 COLUMNS 行集和 PROCEDURE_PARAMETERS 行集的信息。 该信息与 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中引入的 OLE DB 日期和时间增强功能相关。  
@@ -57,7 +54,7 @@ ms.locfileid: "37431676"
   
  在 COLUMN_FLAGS 中提供了新标记 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允许应用程序确定 DATA_TYPE 为 DBTYPE_DBTIMESTAMP 的那些列的服务器类型。 为标识服务器类型还必须使用 DATETIME_PRECISION。  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效时连接到[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或更高版本的服务器。 连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
+ 仅当连接到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本服务器时 DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效。 连接到下级服务器时，未定义 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 行集  
  DATA_TYPE 包含与 COLUMNS 架构行集相同的值，并且 TYPE_NAME 包含服务器类型。  

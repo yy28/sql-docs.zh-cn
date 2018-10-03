@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d418e75aa451c14db6010f6cb3673cd8c3a74bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a7e165afc901b82d73f11f04fbb2c2cbb5402ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229557"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224887"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
   `AssociationSet` 元素是一种用于定义关联的复杂类型。 在 CSDLBI 数据模型中，关联是指两个表之间的关系。  
@@ -32,8 +29,8 @@ ms.locfileid: "37229557"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|State|是|指示关联是否有效的字符串。 值由 State 元素定义。|  
-|Hidden|“否”|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 `false`，表示所有关系在模型中均可见。|  
+|State|用户帐户控制|指示关联是否有效的字符串。 值由 State 元素定义。|  
+|Hidden|否|指示关系是否可见的布尔值。 默认情况下，Hidden 的值为 `false`，表示所有关系在模型中均可见。|  
   
 ## <a name="state-element"></a>State 元素  
  `State` 元素是一种简单类型，说明关联是否处于活动状态，如果处于活动状态，则应在计算中使用；如果处于非活动状态，则必须显式在计算中引用。  

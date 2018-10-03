@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d3685d6827f8ed57394f6440b018935662fb9e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78fb82daf907173befd246799686433a6eab3b43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190817"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>候选键配置文件请求选项（数据事件探查任务）
   可以使用 **“配置文件请求”** 页的 **“请求属性”** 窗格，为请求窗格中选定的 **“候选键配置文件请求”** 设置选项。 候选键配置文件报告某个列或列集对于选定的表是键还是近似键。 此配置文件还有助于标识数据中的问题，如潜在键列中存在重复值。  
@@ -115,7 +112,7 @@ ms.locfileid: "37266963"
  **RequestID**  
  键入一个标识此配置文件请求的描述性名称。 通常无需更改自动生成的值。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **ThresholdSetting**  
  此属性具有下表所列的选项。 此属性的默认值为 **Specified**。  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services, programming
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5434546f2a6d392cb8eed82704d8164c31620e91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 634cbd5158331dde35afc81dd58c2e30b8d41fed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156547"
 ---
 # <a name="integration-services-programming-overview"></a>Integration Services 编程概述
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的体系结构是将数据移动和转换与包控制流和管理分开。 有两个截然不同的引擎定义此体系结构，对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程可以扩展这两个引擎并使其自动化。 运行时引擎实现控制流和包管理基础结构，该基础结构使开发人员能够控制执行流并为日志记录、事件处理程序和变量设置选项。 数据流引擎是一个专用高性能引擎，专用于提取、转换和加载数据。 对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程时，将针对这两个引擎进行编程。  
@@ -52,8 +49,7 @@ ms.locfileid: "37271643"
 ## <a name="supported-languages"></a>支持的语言  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 完全支持 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。 这使开发人员可以自主选择符合 .NET 的语言来对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 进行编程。 尽管运行时引擎和数据流引擎都是用本机代码编写的，但是都可以通过完全托管对象模型来使用。  
   
- 可以用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包、自定义任务和组件进行编程。 
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
+ 可以用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或者另一种代码或文本编辑器对 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包、自定义任务和组件进行编程。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 为开发人员提供了许多工具和功能以简化和加速编码、调试和测试的迭代周期。 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 还使部署更加容易。 但是，您不需要 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 编译和生成 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 代码项目。 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 包括 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 和 [!INCLUDE[csprcs](../includes/csprcs-md.md)] 编译器和相关工具。  
   
 > [!IMPORTANT]  
 >  默认情况下，[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 与 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 一起安装，但不安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK。 除非 SDK 已安装在计算机上，并且 SDK 文档包含在联机丛书集中，否则本部分中指向 SDK 内容的链接将无效。 安装 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK 后，可以按照[添加或删除 SQL Server 的产品文档](../2014-toc/books-online-for-sql-server-2014.md)中的说明将 SDK 文档添加到联机丛书集和目录中。  

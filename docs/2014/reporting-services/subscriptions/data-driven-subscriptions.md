@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 423a893fc3586334464d50357626c319d9a27ffe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f33cf9021864e141b51c10d357fd53f379b3f567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217381"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
   数据驱动订阅提供了一种使用动态订阅数据的方式，这些数据是在运行时从外部数据源中检索的。 数据驱动订阅还可以使用定义订阅时指定的静态文本和默认值。 可以使用数据驱动订阅来执行以下操作：  

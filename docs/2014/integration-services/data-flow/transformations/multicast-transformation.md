@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead69f8be189f80fedb30493a7c8be64178d3e39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0587daef403b80ce42781f2a9a4c5677842eca2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182977"
 ---
 # <a name="multicast-transformation"></a>多播转换
   多播转换将其输入分发到一个或多个输出。 此转换与有条件拆分转换类似。 这两种转换都将一个输入定向到多个输出。 这两者之间的区别在于多播转换将每行定向到每个输出，而有条件拆分则将一行定向到单个输出。 有关详细信息，请参阅 [Conditional Split Transformation](conditional-split-transformation.md)。  

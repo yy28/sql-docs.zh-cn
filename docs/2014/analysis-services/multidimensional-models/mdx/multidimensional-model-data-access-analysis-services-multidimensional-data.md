@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - manipulating objects [Analysis Services]
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cf03599736be8dbec6666c6977543279607bbdc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203717"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
   使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  

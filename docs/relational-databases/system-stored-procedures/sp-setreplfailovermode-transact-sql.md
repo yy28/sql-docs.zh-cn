@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_setreplfailovermode
 - sp_setreplfailovermode_TSQL
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eff9cf8dea592fdf711634e29ba4b175f18c9f22
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 97254571aaa19acb71928424a20ec9ffb741ee02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772935"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +69,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_setreplfailovermode**用于快照复制或事务复制的订阅已启用，要么排队更新，且故障转移到立即更新，或使用故障转移的立即更新排队正在更新。  
   
 ## <a name="permissions"></a>Permissions  

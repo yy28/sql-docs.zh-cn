@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,12 +24,12 @@ ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbb0ac8f46b34b61134076ef5ccc523f55f769bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6b4876d7d41a286cae12a39e11d8442d1fbe360f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152690"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升级数据层应用程序
   使用“升级数据层应用程序向导”或 Windows PowerShell 脚本可以更改当前部署的数据层应用程序 (DAC) 的架构和属性，以便匹配在 DAC 的新版本中定义的架构和属性。  

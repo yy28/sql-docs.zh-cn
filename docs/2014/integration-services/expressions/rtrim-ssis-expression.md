@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5ef553ad49cc2bc78248d2b244eefd827ce80df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6ace4587398ede5b55ef67599db2b6377596ee2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201167"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM（SSIS 表达式）
   返回删除了尾随空格的字符表达式。  
@@ -44,7 +41,7 @@ RTRIM(character expression)
 ## <a name="result-types"></a>结果类型  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  RTRIM 只用于 DT_WSTR 数据类型。 如果 *character_expression* 参数是字符串文字或数据类型为 DT_STR 的数据列，则它在 RTRIM 执行操作前隐式转换为 DT_WSTR 数据类型。 其他数据类型必须显式转换为 DT_WSTR 数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)和[转换（SSIS 表达式）](cast-ssis-expression.md)。  
   
  如果该参数为空，则 RTRIM 返回的结果为空。  

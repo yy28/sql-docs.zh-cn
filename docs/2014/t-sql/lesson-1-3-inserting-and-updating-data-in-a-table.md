@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting and updating data
@@ -14,19 +12,19 @@ ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 051301fc440de5336701438e35fbbaebc68b0b17
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035501"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217628"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>插入和更新表中的数据（教程）
   现在已经创建了 **Products** 表，可以通过使用 INSERT 语句将数据插入到表中。 插入数据后，将通过使用 UPDATE 语句更改行的内容。 您将使用 UPDATE 语句的 WHERE 子句，以限制对单个行的更新。 这四条语句将输入以下数据。  
   
 |ProductID|ProductName|价格|ProductDescription|  
 |---------------|-----------------|-----------|------------------------|  
-|@shouldalert|Clamp|12.48|Workbench clamp|  
+|1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires.|  
 |3000|3mm Bracket|.52||  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - first triggers [SQL Server]
@@ -18,12 +16,12 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6f3679768500152e3ba96c55eedaec2be8544b04
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 199b3723decf7ab487b7413eec5a1c4220836d50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208647"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一个和最后一个触发器
   可将与表关联的 AFTER 触发器之一指定为执行每个 INSERT、DELETE 和 UPDATE 触发操作时激发的第一个或最后一个 AFTER 触发器。 在第一个和最后一个触发器之间激发的 AFTER 触发器将按未定义的顺序执行。  

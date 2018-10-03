@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-caps.latest.revision: 21
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 9a6895b0b0654f5309aaec9debb88b26c7a9a15a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70301dae9505cce59e924cd37149e32314f6868d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204659"
 ---
 # <a name="grouping-pane"></a>“分组”窗格
   “分组”窗格显示当前所选 Tablix 数据区域的行组和列组。 “分组”窗格对“图表”或“仪表”数据区域不可用。 “分组”窗格由“行组”窗格和“列组”窗格组成。 “分组”窗格有两种模式：默认和高级。 默认模式显示行组和列组的动态成员的层次结构视图。 高级模式同时显示行组和列组的动态及静态成员。 组是来自数据区域显示的报表数据集中的一组命名的数据。 组被组织到包括静态和动态成员的层次结构中。 有关详细信息，请参阅[了解组（报表生成器和 SSRS）](../report-design/understanding-groups-report-builder-and-ssrs.md)。  
@@ -67,11 +64,11 @@ ms.locfileid: "37189814"
   
 -   **KeepTogether**。  
   
--   `KeepWithGroup`的用户。 布尔值。 仅适用于静态行成员。 如果可能，则将此行与上一个或下一个同级动态成员一起显示（如果它未隐藏）。  
+-   `KeepWithGroup`。 布尔值。 仅适用于静态行成员。 如果可能，则将此行与上一个或下一个同级动态成员一起显示（如果它未隐藏）。  
   
 -   **RepeatOnNewPage**。 布尔值。 仅适用于静态行成员，并且 KeepWithGroup 不为“无”时。 如果可能，则在至少有一个由 KeepWithGroup 指定的动态成员实例的每一页上重复该静态行。  
   
--   `Hidden`的用户。 布尔值。 指示行或列最初是否应当隐藏。  
+-   `Hidden`。 布尔值。 指示行或列最初是否应当隐藏。  
   
 -   **ToggleItem。** 字符串。 向其添加切换图像的文本框的名称。 该文本框必须在相同的组作用域或包含作用域中。  
   

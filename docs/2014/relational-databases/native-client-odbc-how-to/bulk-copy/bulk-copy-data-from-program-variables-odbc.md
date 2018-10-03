@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy [ODBC], program variables
 - bulk copy [ODBC]
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e76a57da680d224989b013db5a5121fa3e7c224
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5be9f005c7bbfbbd931b2947ce61cc91e1d9969b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192867"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>从程序变量大容量复制数据 (ODBC)
   此示例演示如何通过 `bcp_bind` 和 `bcp_sendrow` 使用大容量复制函数将数据从程序变量大容量复制到 SQL Server。 （为简化此示例，已删除错误检查代码。）  
   
  此示例是面向 ODBC 3.0 版或更高版本开发的。  
   
- **安全说明**如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应将它们与加密[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+ **安全说明**如果可能，请使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
   
 ### <a name="to-use-bulk-copy-functions-directly-on-program-variables"></a>直接在程序变量上使用大容量复制函数  
   

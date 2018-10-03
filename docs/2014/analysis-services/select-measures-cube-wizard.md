@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.measureselection.f1
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d1fdd20f88a3bb0e823db534b9f18e28535dd37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e37d532bd669474e4e91cfcdb0942b691ba3234
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197627"
 ---
 # <a name="select-measures-cube-wizard"></a>选择度量值（多维数据集向导）
   可以使用 **“选择度量值”** 页选择要创建的度量值组和度量值。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **度量值**  
  显示可用的度量值组及其度量值。  
   

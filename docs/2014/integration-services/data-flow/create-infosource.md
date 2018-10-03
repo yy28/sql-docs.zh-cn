@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9594829eeac884b5d936ee1c38f187821c6236e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a210c3b7fbc76f63861442cd7182fdfe1f31f36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052757"
 ---
 # <a name="create-infosource"></a>“创建 InfoSource”
   使用 **“创建 InfoSource”** 对话框创建一个新 InfoSource。 要创建新 InfoSource，请使用 **“创建事务数据的 InfoSource”** 或 **“创建主数据的 InfoSource”** 对话框。  
@@ -39,7 +36,7 @@ ms.locfileid: "37228187"
   
 4.  在 **“连接管理器”** 页的 **“创建 SAP BW 对象”** 组框中，选择 **“InfoSource”**，然后单击 **“创建”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **事务数据**  
  创建事务数据的新 InfoSource。  
   

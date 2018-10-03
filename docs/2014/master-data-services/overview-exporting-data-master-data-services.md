@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e7a228062035772b9c394a246de0452f36239b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332157"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158637"
 ---
 # <a name="exporting-data-master-data-services"></a>导出数据 (Master Data Services)
   您可以通过创建订阅视图将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据导出到订阅系统。 然后，任何订阅系统都可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中查看发布的数据。 有关视图的详细信息，请参阅 [视图](../relational-databases/views/views.md)。  

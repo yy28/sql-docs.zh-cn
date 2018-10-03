@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3dc80b0e2412712b5bd70e036d42ad41fbb43a04
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 050f82b51537cc7d375ddd04a86e67b8e48a9f06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083549"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192167"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services (SSIS) 表达式
   表达式是生成单个数据值的符号（标识符、文字、函数和运算符）的组合。 简单的表达式可以是单个常量、变量或函数。 更多情况下，表达式较为复杂，会使用多个运算符和函数，并且引用多个列和变量。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]中，表达式可以用于定义 CASE 语句的条件，创建和更新数据列中的值，为变量赋值，在运行时更新或填充属性，定义优先约束中的约束，以及提供 For 循环容器所使用的表达式。  
@@ -47,9 +44,9 @@ ms.locfileid: "39083549"
   
 -   变量可以使用表达式来设置其值。 例如，GETDATE() 可以将变量的值设置为当前日期。  
   
--   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为`true`或`false`。 例如，表达式\@一个 > \@B 比较两个用户定义变量，以确定是否运行受约束的任务。  
+-   优先约束可以使用表达式指定确定在包中运行约束任务还是容器的条件。 优先约束中使用的表达式的计算结果必须为`true`或`false`。 例如，表达式“\@A > \@B”比较两个用户定义的变量，以确定是否运行受约束任务。  
   
--   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式\@计数器 = 1 初始化循环计数器。  
+-   For 循环容器可以使用表达式来生成循环结构使用的初始化语句、计算语句、增量语句。 例如，表达式 \@Counter = 1 初始化循环计数器。  
   
  表达式还可以用于更新包、容器（如 For 循环和 Foreach 循环）、任务、包和项目级连接管理器、日志提供程序以及 Foreach 枚举器的属性值。 例如，使用属性表达式，可以将字符串“Localhost.AdventureWorks”分配给执行 SQL 任务的 ConnectionName 属性。 有关详细信息，请参阅 [在包中使用属性表达式](use-property-expressions-in-packages.md)。  
   
@@ -59,7 +56,7 @@ ms.locfileid: "39083549"
 ## <a name="expression-builder"></a>表达式生成器  
  表达式生成器是一种用于生成表达式的图形工具。 **“有条件拆分转换编辑器”** 对话框、 **“派生列转换编辑器”** 对话框和 **“表达式生成器”** 对话框中提供的表达式生成器是用于生成表达式的图形工具。  
   
- 表达式生成器提供包含包特定元素的文件夹，还提供包含表达式语言所提供的函数、类型转换和运算符的文件夹。 包特定元素包括系统变量和用户定义的变量。 在 **“有条件拆分转换编辑器”** 对话框和 **“派生列转换编辑器”** 对话框中，您还可以查看数据列。 若要为转换生成表达式，可以将项从文件夹中拖到 **“条件”** 或 **“表达式”** 列中，也可以直接在列中键入表达式。 表达式生成器会自动添加所需的语法元素，如\@变量名的前缀。  
+ 表达式生成器提供包含包特定元素的文件夹，还提供包含表达式语言所提供的函数、类型转换和运算符的文件夹。 包特定元素包括系统变量和用户定义的变量。 在 **“有条件拆分转换编辑器”** 对话框和 **“派生列转换编辑器”** 对话框中，您还可以查看数据列。 若要为转换生成表达式，可以将项从文件夹中拖到 **“条件”** 或 **“表达式”** 列中，也可以直接在列中键入表达式。 表达式生成器会自动添加所需的语法元素，如变量名的 \@ 前缀。  
   
 > [!NOTE]  
 >  用户定义的变量名和系统变量名区分大小写。  

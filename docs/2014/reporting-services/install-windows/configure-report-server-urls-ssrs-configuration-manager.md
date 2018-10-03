@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Windows service, virtual directories
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - virtual directories [Reporting Services]
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 085eaf6b8b21462f675d2eca2033cbf8cfa4efa3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a142d7532c94f1ec9a3ed797d7e7a1db0e5d863d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214697"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，Url 用于访问报表服务器 Web 服务和报表管理器。 在可以使用任一应用程序之前，必须分别为 Web 服务和报表管理器至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -41,7 +38,7 @@ ms.locfileid: "37230597"
 |主机名|TCP/IP 网络使用 IP 地址来唯一标识网络上的设备。 计算机中安装的每个网络适配器都有一个物理 IP 地址。 如果 IP 地址解析为主机标头，则可以指定主机标头。 如果要将报表服务器部署到企业网络上，则可以使用计算机的网络名称。|  
 |端口|TCP 端口是设备上的端点。 报表服务器将侦听指定端口上的请求。|  
 |虚拟目录|端口通常由多个 Web 服务或应用程序共享。 为此，报表服务器 URL 始终包括与获取请求的应用程序对应的虚拟目录。 您必须为侦听同一 IP 地址和端口的每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都指定唯一的虚拟目录名称。|  
-|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅[配置本机模式报表服务器上的 SSL 连接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]联机丛书。|  
+|SSL 设置|可以将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 配置为使用计算机中先前安装的现有 SSL 证书。 有关详细信息，请参阅 [联机丛书中的](../security/configure-ssl-connections-on-a-native-mode-report-server.md) 配置本机模式报表服务器上的 SSL 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
   
 ## <a name="default-urls"></a>默认 URL  
  通过 URL 访问报表服务器或报表管理器时，该 URL 应包括主机名称而不是 IP 地址。 在 TCP/IP 网络上，IP 地址将解析为主机名称（或计算机的网络名称）。 如果使用了默认值配置 URL，则应可以使用将计算机名称或 localhost 指定为主机名的 URL 来访问报表服务器 Web 服务：  

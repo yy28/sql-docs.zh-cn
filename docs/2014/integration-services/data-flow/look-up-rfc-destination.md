@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eea7cee81892b7ffb5ce35d747c54b413ceb1d62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 043ae99502b8f1f128ca892dbfe4e3f84c4af14d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191837"
 ---
 # <a name="look-up-rfc-destination"></a>查找 RFC 目标
   使用 **“查找 RFC 目标”** 对话框查找在 SAP Netweaver BW 系统中定义的 RFC 目标。 当可用 RFC 目标列表显示时，选择您需要的目标，然后组件将使用需要的值填充关联的选项。  
@@ -41,7 +38,7 @@ ms.locfileid: "37252619"
   
      在“SAP BW 源编辑器”中，仅当“执行模式”为“P - 触发进程链”或“W - 等待通知”时，“RFC 目标”组框才会显示。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **目标**  
  查看在 SAP Netweaver BW 系统中定义的 RFC 目标的名称。  
   

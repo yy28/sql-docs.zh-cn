@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb51c9ec57e20ecd641a06964624987e636a6c40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269983"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164387"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>分区（“还原数据库”对话框）（Analysis Services - 多维数据）
   可以使用 **中的** “还原数据库” **对话框上的** “分区” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 页，指定还原本地分区的位置、是否还原远程分区以及在还原远程分区时使用的远程备份文件。  
@@ -36,7 +33,7 @@ ms.locfileid: "37269983"
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的“数据库”文件夹或**对象资源管理器**中的数据库，单击“还原”，然后在“选择页”下单击“分区”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **脚本**  
  创建还原脚本，该脚本基于在对话框中选定的选项。 还原脚本是用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 编写的。  
   
@@ -67,7 +64,7 @@ ms.locfileid: "37269983"
 |------------|-----------------|  
 |**Cube**|显示包含本地分区的多维数据集的名称。|  
 |**度量值组**|显示包含本地分区的度量值组的名称。|  
-|分区|显示本地分区的名称。|  
+|**分区**|显示本地分区的名称。|  
 |**大小(MB)**|显示本地分区的大小 (MB)。|  
 |**原始文件夹**|显示存储本地分区的原始文件夹的名称。|  
 |**还原文件夹**|键入本地分区的还原文件夹的名称，或单击省略号按钮 (**...**) 以显示“查找远程文件夹”对话框，再选择要使用的文件夹的路径。 有关“查找远程文件夹”对话框的详细信息，请参阅[“查找远程文件夹”对话框（Analysis Services - 多维数据）](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)。|  

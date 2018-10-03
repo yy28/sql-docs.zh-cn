@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetNumericalValue Method (ClientNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
-caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b8adfe2eec24a8af8e785d6a8528d63050049e7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0ede7819db79c67f1f7ee2e6b19cf8962f0de30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220567"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue 方法（ClientNetworkProtocolProperty 类）
   设置引用的当前属性的数值[PropertyIdx 属性 （ClientNetworkProtocolProperty 类）](clientnetworkprotocolproperty-class.md)值。  
@@ -54,7 +51,7 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 `uint32` 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [配置客户端协议](../../../database-engine/configure-windows/configure-client-protocols.md)  

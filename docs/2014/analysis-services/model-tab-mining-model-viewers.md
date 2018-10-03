@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164167"
 ---
 # <a name="model-tab-mining-model-viewers"></a>“模型”选项卡（挖掘模型查看器）
   Microsoft 时序查看器中的 **“模型”** 选项卡会将时序的表示形式显示为图形中的节点，这与决策树模型中采用的方式类似。  
@@ -30,7 +27,7 @@ ms.locfileid: "37278463"
   
  **有关详细信息，请参阅** [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)、[使用 Microsoft 时序查看器浏览模型](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)和 [Microsoft 时序算法](data-mining/microsoft-time-series-algorithm.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **刷新查看器内容**  
  在查看器中重新加载挖掘模型。  
   

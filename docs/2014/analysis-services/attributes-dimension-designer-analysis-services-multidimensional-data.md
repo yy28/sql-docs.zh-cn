@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229807"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性（“维度结构”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格管理与所选维度关联的属性。 可以将属性从此窗格拖到 **“层次结构”** 窗格，以创建层次结构和级别。 有关详细信息，请参阅[层次结构&#40;维度结构选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -34,7 +31,7 @@ ms.locfileid: "37161618"
   
 2.  如果未选定维度，请单击 **“维度结构”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **属性**  
  显示所选维度可用的属性。 可以在以下模式中查看此选项：  
   

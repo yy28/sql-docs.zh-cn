@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190267"
 ---
 # <a name="define-semiadditive-behavior"></a>定义半累加性行为
   在很多业务方案中，半累加性度量值是非常常见的，它不在所有维度中统一进行聚合。 每个基于余额快照的多维数据集都会随着时间的推移而出现此问题。 您可以在用于处理证券、帐户余额、预算、人力资源、保险策略和法律事务以及很多其他业务领域的应用程序中找到这些快照。  
@@ -52,7 +49,7 @@ ms.locfileid: "37265413"
   
 -   First Nonempty Child  
   
--   InclusionThresholdSetting  
+-   None  
   
  此选项不会更改使用下列常规聚合函数的度量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
   
@@ -82,7 +79,7 @@ ms.locfileid: "37265413"
 |LastNonEmpty|将成员值认定为其包含数据的沿时间维度的最后一个子级的值。|  
 |Max|应用标准的最大值聚合函数。|  
 |Min|应用标准的最小值聚合函数。|  
-|InclusionThresholdSetting|不应用聚合。|  
+|None|不应用聚合。|  
 |SUM|应用标准的求和函数。|  
   
  完成向导时，将覆盖任何现有的半累加性行为。  

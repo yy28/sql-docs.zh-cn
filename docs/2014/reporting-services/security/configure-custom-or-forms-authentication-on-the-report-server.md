@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6308b2b3da495518fb2c377e7a0994a27f14dbcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3417491298352ac6cc72ce5543542142a412d89e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206507"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176717"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>在报表服务器上配置自定义身份验证或窗体身份验证
   Reporting Services 提供了可扩展的体系结构，该体系结构允许您插入自定义的或基于窗体的身份验证模块。 如果部署要求不包含 Windows 集成安全性或基本身份验证，则可考虑实现自定义的身份验证扩展插件。 使用自定义身份验证的最常见情形是支持对 Web 应用程序的 Internet 或 Extranet 访问。 使用自定义身份验证扩展插件替换默认的 Windows 身份验证扩展插件，可更好地控制如何授予外部用户访问报表服务器的权限。  

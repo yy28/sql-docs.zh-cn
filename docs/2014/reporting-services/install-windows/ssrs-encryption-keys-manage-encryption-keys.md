@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - public keys [Reporting Services]
 ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a1851a46b6602bc9d92d5c7e0111ece8701d43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222507"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>配置和管理加密密钥（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的凭据和连接信息。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，通过一组用于保护敏感数据的公钥、私钥和对称密钥支持加密。 安装或配置报表服务器时，在报表服务器初始化期间会创建对称密钥，报表服务器使用此对称密钥对存储在报表服务器中的敏感数据进行加密。 公钥和私钥由操作系统创建，用于保护对称密钥。 对于在报表服务器数据库中存储敏感数据的每个报表服务器实例，都要创建一个公钥私钥对。  

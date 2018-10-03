@@ -1,13 +1,11 @@
 ---
-title: '连接 （Visual c + + 语法索引与 #import） |Microsoft 文档'
+title: '连接 （使用的 Visual c + + 语法索引 #import） |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Connection collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba9e8475ad1bdc39383d8187bf8e568d229714a4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5bafba8f62f5e5120cb593bc7620e74056224271
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277096"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617005"
 ---
-# <a name="connection-visual-c-syntax-index-with-import"></a>连接 （Visual c + + 语法索引与 #import）
+# <a name="connection-visual-c-syntax-index-with-import"></a>连接 （使用的 Visual c + + 语法索引 #import）
 ## <a name="methods"></a>方法  
   
 ```  

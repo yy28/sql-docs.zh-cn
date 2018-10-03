@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming databases
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 192582ec7724e16b0c02d499fac89798c4c17cd6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168217"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>重命名多维数据库 (Analysis Services)
   更改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库名称的方式取决于如何连接 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。 若要更改现有数据库的名称，则必须在联机模式下进行连接。 若要更改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目中要进行实例化的对象所在数据库的名称，必须以项目模式进行连接。  

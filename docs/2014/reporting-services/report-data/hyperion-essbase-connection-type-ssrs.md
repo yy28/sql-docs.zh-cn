@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94a17b12d3d9c5ce30db7a57e76c3053008ff281
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a551b7be49ebcb38221973657658000c38d369a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232529"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223937"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Hyperion Essbase 连接类型 (SSRS)
   若要在报表中包含来自 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源的数据，您必须拥有一个基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]类型的报表数据源的数据集。 此内置数据源类型基于 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的数据扩展插件，让你可以从 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 外部数据源检索多维数据。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164108"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197577"
 ---
 # <a name="dependent-items-page-report-manager"></a>“依赖项”页（报表管理器）
   使用“依赖项”页可以查看引用共享数据源的报表和模型的列表。 每个项类型的图标指明该项是报表还是模型。 在列表视图或详细信息视图中可以查看此页。 使用详细信息视图可以显示每个项的详细信息。 详细信息视图中还有其他页选项。 为了帮助您管理共享数据源，此页提供了一些指向使用该数据源的报表和模型的链接、有关报表或模型的上次运行或修改时间的指标，以及“删除”和“移动”按钮，以便您可以方便地删除不再使用的报表和模型，或者将其移至另一个位置以待您确定是否仍然需要它们。  
@@ -37,7 +34,7 @@ ms.locfileid: "37164108"
   
 4.  选择 **“依赖项”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  显示报表或模型的名称。 单击报表的名称即可打开该报表。 单击模型的名称可以打开其属性页。  
   

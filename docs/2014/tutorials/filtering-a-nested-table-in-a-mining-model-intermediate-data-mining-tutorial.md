@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d39ec6f60a9d281f6e1a76f26da585b555066dcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159964"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>筛选挖掘模型中的嵌套表（数据挖掘中级教程）
   创建并浏览模型后，您决定将精力集中在客户数据的某个子集上。 例如，您可能希望仅分析包含特定项的购物篮，或者可能希望仅分析在某个时间段内没有购买任何物品的客户的人口统计信息。  
@@ -95,7 +92,7 @@ ms.locfileid: "37273793"
   
  您可以通过下面的方法进行验证：使用 Microsoft 一般内容树查看器并查看 NODE_SUPPORT 的值，看筛选模型所包含事例的数目是否小于原始模型中事例的数目。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  您刚才创建的嵌套表筛选器仅检查嵌套表中是否至少存在一个行；然而，您还可以创建用来检查特定产品是否存在的筛选条件。  例如，可以创建下面的筛选器：  
   
 ```  

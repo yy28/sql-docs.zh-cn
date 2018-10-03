@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Read Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Read element
 ms.assetid: 2e2c1173-72ca-4e8a-a6cd-fd348ef96d78
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d4d8b256e29f3f4e4998fdc029f0d9eb3e1a893
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f950d35e74a64b75ec239c7d35ba31660ec8f08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157377"
 ---
 # <a name="read-element-assl"></a>Read 元素 (ASSL)
   确定是否可用于读取数据或元数据给定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或[权限](../data-type/permission-data-type-assl.md)元素。  
@@ -57,9 +54,9 @@ ms.locfileid: "37321197"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubeDimensionPermission](../objects/cubepermission-element-assl.md)，[权限](../data-type/permission-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
@@ -67,7 +64,7 @@ ms.locfileid: "37321197"
 |*无*|不允许访问父对象的数据或元数据。|  
 |*允许*|允许对父对象的数据和元数据进行读取访问。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`Read`在 Analysis Management Objects (AMO) 对象模型<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
   
 ## <a name="see-also"></a>请参阅  

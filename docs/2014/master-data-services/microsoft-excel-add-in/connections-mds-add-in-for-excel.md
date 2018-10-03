@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ccba6c40a826925651e33c85cc842cdf86eb7dfe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e03e9a63017db0dc719c8b82a8755c25150ded7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204827"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>连接（用于 Excel 的 MDS 外接程序）
   若要将数据下载到 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，必须首先创建连接。 通过建立连接， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服务才知道要连接到哪个 MDS 数据库。  

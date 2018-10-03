@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Cluster Viewer [Analysis Services]
 - mining models [Analysis Services], clusters
 ms.assetid: 591fe30b-d88f-4a71-94d4-4a3907fc275d
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ebba3499c092ab89bacb4011671b0f90df67eb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 185e9a154a7eb51ff15ce1b45bfd82dc2e36adf0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087767"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>使用 Microsoft 分类查看器浏览模型
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分类查看器显示使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法生成的挖掘模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 聚类分析算法是一种分段算法，用于浏览数据以标识数据中的变体并创建预测。 有关此算法的详细信息，请参阅 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)。  

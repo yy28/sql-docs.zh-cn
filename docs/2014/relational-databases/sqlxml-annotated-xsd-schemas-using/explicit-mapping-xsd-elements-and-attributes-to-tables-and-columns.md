@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - explicit schema mapping [SQLXML]
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - table mapping [SQLXML], explicit mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1bbc0a7243252a657011e6d9814f9d070fa7ea52
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26fa0d203edf479e93ae95323bc469b506025cf0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221009"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222277"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>XSD 元素和属性到表和列的显式映射 (SQLXML 4.0)
   当使用 XSD 架构提供关系数据库的 XML 视图时，必须将该架构的元素和属性映射至数据库的表和列。 数据库表/视图中的行将映射至 XML 文档中的元素。 数据库中的列值映射到属性或元素。  

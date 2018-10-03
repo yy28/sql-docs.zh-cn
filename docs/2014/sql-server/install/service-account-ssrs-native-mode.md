@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 36b1b0621cd660855638e4fa0a936e9700efb4d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96cee57e82cc9fbb01a43dc1ec13bf0691f737fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079119"
 ---
 # <a name="service-account-ssrs-native-mode"></a>服务帐户（SSRS 本机模式）
   使用“服务帐户”页可以指定运行报表服务器服务的帐户。 此帐户最初在安装过程中进行配置。 如果要更改此帐户或密码，则可以对其进行修改。 报表服务器 Web 服务、报表管理器和后台处理应用程序都使用此页上指定的服务标识运行。  
@@ -35,7 +32,7 @@ ms.locfileid: "37153548"
 > [!IMPORTANT]  
 >  无论何时需要更新帐户或密码，强烈建议你使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 使用配置管理器更新帐户可确保其他基于此服务标识的内部设置都能同时自动更新。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用内置帐户**  
  从此列表中选择 **Network Service**、 **Local System**或 **Local Service** 。 建议只选择 **Network Service** ；不过，可以将帐户配置为使用任何可用的帐户。  
   

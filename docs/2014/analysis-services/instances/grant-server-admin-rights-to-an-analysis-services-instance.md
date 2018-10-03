@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administrator rights [Analysis Services]
 - server-wide administrative permissions [Analysis Services]
 ms.assetid: 20d1234b-a457-4a84-ae08-fe356870c466
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4af61a59de6175d4241cb6b1b9700ff7ba816430
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3100fc8ccf9f21a6c0cf760d799dcf1b15cbb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202207"
 ---
 # <a name="grant-server-administrator-permissions-analysis-services"></a>授予服务器管理员权限 (Analysis Services)
   对于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例中的所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象和数据，该实例中的服务器管理员角色的成员具有无限访问权限。 用户必须是服务器管理员角色的成员才能执行任何服务器范围内的任务，如创建或处理数据库、修改服务器属性或启动跟踪（处理事件除外）。  

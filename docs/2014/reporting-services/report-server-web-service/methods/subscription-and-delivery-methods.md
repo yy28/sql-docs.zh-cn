@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], delivering
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 614ec62fec8cbd77c86c6d8e038d897d7769de7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5598122d95d3c90bcd91a32b8423117e05dc2a90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175139"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163589"
 ---
 # <a name="subscription-and-delivery-methods"></a>订阅和传递方法
   可以使用这些方法来创建和管理目录项的订阅和传递。  

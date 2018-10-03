@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f75ca11e-b7f5-4ac0-ba17-fe6f82742dad
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2f23be5833220535cc5e53e5fa5fc1eb965f3a35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c559c9bf22cc5aff2ce75ba255055c18af649976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096737"
 ---
 # <a name="stock-charts-report-builder-and-ssrs"></a>股价图（报表生成器和 SSRS）
   股价图是为每个数据点使用多达四个值的财务或科学数据而专门设计的。 这些值与用于绘制财务股价数据的高、低、开盘和收盘值相对应。 这种图表类型通过使用标记（通常为线条或三角形）来显示开盘值和收盘值。 在下例中，开盘值由左侧的标记表示，收盘值由右侧的标记表示。  

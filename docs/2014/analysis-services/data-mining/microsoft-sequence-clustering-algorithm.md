@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190777"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 顺序分析和聚类分析算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]序列聚类分析算法是由提供顺序分析算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 可以使用此算法来研究包含可通过以下路径，链接的事件的数据或*序列*。 该算法通过对相同的顺序进行分组或分类来查找最常见的顺序。 下面是一些数据示例，其中包含可用于数据挖掘的序列，旨在帮助您深入了解常见问题或业务方案：  
@@ -72,7 +69,7 @@ ms.locfileid: "37306577"
   
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。 有关如何针对顺序分析和聚类分析模型使用查询的示例，请参阅 [顺序分析和聚类分析模型查询示例](clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51be69399e63734bd1d5d9b6b1012eaf38c1d429
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66515d57cada938abe9241d89116cb16beaf431e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192257"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 针对英语安装断字符和词干分析器的新版本（版本 14.0.4999.1038），以替换这些组件的以前版本（版本 12.0.6828.0）。 有关新组件的更改的行为的信息，请参阅 [全文搜索的行为更改](full-text-search.md)。 本主题说明如何在这些组件的新版本和以前的版本间切换。 对于群集安装，应对所有主节点和被动节点进行这些更改。  

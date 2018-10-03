@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d11fc38c9e1729ae4651f632d2755bfbbe2f0e2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085079"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202879"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>创建、删除或修改共享数据源（报表管理器）
   共享数据源指定数据源的连接属性。 如果数据源供大量的报表、模型或数据驱动订阅使用，则可考虑创建共享数据源，以消除必须在多个位置维护相同连接信息的开销。  

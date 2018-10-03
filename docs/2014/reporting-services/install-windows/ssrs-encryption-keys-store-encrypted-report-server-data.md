@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58b9dbd53149ca710753e8a355d379b21e1c7b5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19434a73f39e0701479f754b5af5dbe9ab4d8030
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186074"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149087"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>存储加密的报表服务器数据（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将加密值存储在报表服务器数据库和配置文件中。 大多数加密值都是用于访问向报表提供数据的外部数据源的凭据。 本主题介绍对哪些值进行了加密、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中使用的加密功能以及您应当了解的其他类型的已存储机密数据。  

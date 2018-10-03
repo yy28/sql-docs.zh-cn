@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - GenerateDatabaseCreationScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseCreationScript method
 ms.assetid: 25232dc7-00fe-4cd1-8a1c-7e36d552de00
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42898aba8f621688ba229fcf01d367b4da1a4f71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d456e0949f38a402b4947c72a3f3f9ec029f2a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149028"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213478"
 ---
 # <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成可用于创建报表服务器数据库的 SQL 脚本。  
@@ -67,7 +64,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此方法将生成一个 SQL 脚本，创建适用于当前所连接的报表服务器版本的报表服务器数据库。  
   
  在 DatabaseName 参数中提供的值必须符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库命名约定。  

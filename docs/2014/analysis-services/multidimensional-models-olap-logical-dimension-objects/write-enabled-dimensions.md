@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - write-enabled cubes [Analysis Services]
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293521"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225127"
 ---
 # <a name="write-enabled-dimensions"></a>启用写操作的维度
     
@@ -59,7 +56,7 @@ ms.locfileid: "37293521"
 > [!NOTE]  
 >  链接维度不支持维度写回。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  只有那些在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库角色中被授予对维度的读/写权限的业务用户，才可以更新启用写操作的维度。 对于每个角色，均可控制哪些成员可以更新，哪些成员不能更新。 要使业务用户能更新启用写操作的维度，其客户端应用程序必须支持此功能。 对于这些用户，启用写操作的维度必须包括在自上次更改维度以来处理过的多维数据集中。 有关详细信息，请参阅[授予对对象和操作的访问权限 (Analysis Services)](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
  包括在“管理员”角色中的用户和组可更新启用写操作的维度的属性成员，即使维度不包括在多维数据集中也是如此。  

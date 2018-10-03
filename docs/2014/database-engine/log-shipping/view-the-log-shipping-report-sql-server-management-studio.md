@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing log shipping reports
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - log shipping [SQL Server], monitoring
 - log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48e6fdf0e29ce4cf8370dad0bf73a38f9dd5e47e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85eb934b93d22acc2534d1eb34aa967cbb4f2714
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169581"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>查看日志传送报告 (SQL Server Management Studio)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看事务日志传送状态报告。 您可以在监视服务器、主服务器或辅助服务器中运行状态报告。 若要查看有关日志传送配置的最完整的信息，请在监视服务器实例上查看此报告。  

@@ -1,14 +1,11 @@
 ---
-title: 全文搜索和语义搜索目录视图 (Transact SQL) |Microsoft 文档
+title: 全文搜索和语义搜索目录视图 (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], catalog views
 - full-text indexes [SQL Server], catalog views
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce32b848982bb16155d7f2661bdec0067b984717
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9a6785c198bedb99ea0fd5b42f54cab431535527
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735025"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>全文搜索和语义搜索目录视图 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33180133"
  每个全文目录对应一行。  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- 为可用于全文索引操作的每个文档类型返回一行。 每一行都表示**IFilter**注册 SQL Server 实例中的接口。  
+ 为可用于全文索引操作的每个文档类型返回一行。 每一行代表**IFilter**的 SQL Server 实例中注册的接口。  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  对于全文索引引用的每个全文目录，返回与其对应的一行。  
@@ -53,7 +49,7 @@ ms.locfileid: "33180133"
  表对象的每个全文索引各占一行。  
   
  [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)  
- 在 SQL Server 中注册了断字符的每种语言各占一行。 每行显示的 LCID 和的语言名称。  
+ 在 SQL Server 中注册了断字符的每种语言各占一行。 每行显示的 LCID 和语言的名称。  
   
  [sys.fulltext_stoplists](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  
  对于数据库中的每个全文非索引字表，均存在对应的一行。  
@@ -77,7 +73,7 @@ ms.locfileid: "33180133"
  [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)  
  为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中注册统计模型的每种语言返回一行。 注册语言模型后，则支持对该语言进行语义索引。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [全文搜索和语义搜索动态管理视图和函数&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  

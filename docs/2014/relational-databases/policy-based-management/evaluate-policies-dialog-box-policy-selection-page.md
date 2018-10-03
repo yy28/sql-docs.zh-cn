@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 24d41eba6a7cdbcd04827f426e5bfe14fe1d3727
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e3c45cc239c1c8fa3539b168ab3f322cd757e25f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151577"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>“评估策略”对话框，“策略选择”页
   此对话框用于评估基于策略的管理策略。 选择 **“评估结果”** 页后，可以将策略应用于目标集中不符合这些策略的项。  

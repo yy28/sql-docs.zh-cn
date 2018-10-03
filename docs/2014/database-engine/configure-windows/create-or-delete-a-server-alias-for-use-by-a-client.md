@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - server alias
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ad94dc1af7f5725e0f32f5a3d6789122f1ca129c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3927bc1b414a30bb86148fa6c00c3e0bcb2316a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213138"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client-sql-server-configuration-manager"></a>创建或删除供客户端使用的服务器别名（SQL Server 配置管理器）
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中创建或删除服务器别名。 别名是可用于进行连接的备用名称。 别名封装了连接字符串所必需的元素，并使用用户所选择的名称显示这些元素。 可对任何客户端应用程序使用别名。 通过创建服务器别名，客户端计算机便可使用不同的网络协议连接到多个服务器，无需针对每台服务器指定协议和连接详细信息。 另外，还可以一直启用各种网络协议，即使只是偶尔会用到它们。 如果已将服务器配置为侦听非默认端口号或命名管道，并且禁用了 SQL Server Browser 服务，请创建一个别名来指定新端口号或命名管道。  

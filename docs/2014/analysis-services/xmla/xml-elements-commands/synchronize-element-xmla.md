@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Synchronize Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13bdb64dbc3ba0b034af3a54ae10a50c403555a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187094"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225817"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 元素 (XMLA)
   同步[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]数据库与另一个现有数据库。  
@@ -55,8 +52,8 @@ ms.locfileid: "37187094"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -66,7 +63,7 @@ ms.locfileid: "37187094"
 |父元素|[Command](../xml-elements-properties/command-element-xmla.md)|  
 |子元素|[ApplyCompression](../xml-elements-properties/applycompression-element-xmla.md)，[位置](../xml-elements-properties/locations-element-xmla.md)，[源](../xml-elements-properties/source-element-synchronize-xmla.md)， [SynchronizeSecurity](../xml-elements-properties/security-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `Synchronize` 命令将目标数据库与源实例和 `Source` 元素中指定的数据库同步。 还可以选择使用 `Synchronize` 命令来同步源数据上定义的远程分区。  
   
  根据备份文件中存储的对象所使用的存储模式，`Synchronize` 命令同步下表中列出的信息。  

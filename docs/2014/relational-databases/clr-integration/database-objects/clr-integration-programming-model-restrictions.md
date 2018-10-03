@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], programming model restrictions
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - programming model restrictions [CLR integration]
 - assemblies [CLR integration], runtime checks
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5126690791d59a41f65885e5c57f7cb9098eaf21
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a7b7dfcbd9d7cc7407ed33cc0ea00e93df839b93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187937"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 集成编程模型限制
   在生成托管存储的过程或其他托管的数据库对象，在某些执行代码检查[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]托管的代码程序集执行检查时首次将其注册在数据库中，使用`CREATE ASSEMBLY`语句中，另外在运行时。 在运行时也将检查托管代码，这是因为在程序集中，也许存在在运行时实际上可能永远无法访问的代码路径。  这样一来，在注册第三方程序集时尤其灵活，因为，当存在专门在客户端环境下运行而从不在承载的 CLR 中执行的“不安全”代码时，不会阻塞程序集。 托管的代码必须满足的要求取决于是否作为注册的程序集`SAFE`， `EXTERNAL_ACCESS`，或`UNSAFE`，`SAFE`是最严格的并在下方列出。  

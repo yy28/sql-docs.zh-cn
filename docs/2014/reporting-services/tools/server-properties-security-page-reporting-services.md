@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.security.f1
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cefcaaf281cf8b3981fec2383fd004ad8bd8f967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161434"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>服务器属性（“安全性”页）- Reporting Services
   使用此页可以关闭有可能会危及报表服务器安全的功能。 关闭这些功能将限制某个功能，但是可以通过缓解特定的威胁来改进报表服务器的总体安全性。  
   
  若要打开此页，请启动 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，连接到报表服务器实例，右键单击报表服务器名称，然后选择“属性”。 单击 **“安全性”** 将此页打开。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **对报表数据源启用 Windows 集成安全性**  
  指定是否可以使用请求报表的用户的 Windows 安全令牌与报表数据源建立连接。  
   

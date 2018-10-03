@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23534a159e659cde0b9154a5f7484f6b405f57be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222627"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171107"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>启动 dta 命令提示实用工具并优化工作负荷
   此任务指导你如何从命令提示符下启动 **dta** 实用工具，查看其帮助，以及使用它优化工作负荷。 此任务将使用在数据库引擎优化顾问图形用户界面 (GUI) 练习 [优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的工作负荷 MyScript.sql。  
@@ -56,7 +53,7 @@ ms.locfileid: "37222627"
   
 3.  数据库引擎优化顾问完成了优化工作负荷后，将显示一个消息指示优化会话已成功完成。 若要查看优化结果，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开 MySession2OutputScript.sql 和 MySession2Output.xml 文件。 此外，也可以在数据库引擎优化顾问 GUI 中打开 MySession2 优化会话并查看其建议和报告，执行的方式与 [查看优化建议](lesson-1-2-viewing-tuning-recommendations.md) 和 [查看优化报告](lesson-1-3-viewing-tuning-reports.md)中执行的方式相同。  
   
-## <a name="summary"></a>“摘要”  
+## <a name="summary"></a>总结  
  你已使用 **dta** 实用工具在命令提示符下完成了对一个简单工作负荷的优化。 该工具还提供了其他许多优化选项。 有关详细信息，请参阅工具帮助 (**dta -?**) 和参考主题 [dta 实用工具](dta-utility.md) 。  
   
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  

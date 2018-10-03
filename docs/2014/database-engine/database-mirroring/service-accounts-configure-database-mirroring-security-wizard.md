@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.serviceaccounts.f1
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d6479097305016d471a2b5434f7cab18a452928d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182771"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212557"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>服务帐户（配置数据库镜像安全向导）
   使用 Windows 身份验证时，如果服务器实例使用若干个不同的帐户，请为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定服务帐户。 这些服务帐户必须都是域帐户（在相同域或可信域中）。  
@@ -36,7 +33,7 @@ ms.locfileid: "37182771"
   
 -   [启动配置数据库镜像安全向导 (SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **主体**  
  指定主体服务器实例的服务帐户。 以大写形式输入域名：  
   

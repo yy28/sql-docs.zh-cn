@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reserved keywords
 ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5969fdcd95f0168dad587552bc114f874a3feeef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb9f8956108b07fdc6561c5ef8582e7510240434
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226978"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>删除保留关键字后的冒号
   升级顾问检测到脚本中包含位于保留关键字后的冒号 (:)。 在早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，会忽略此语法，因而语句能够成功执行。 现在，当数据库兼容模式设置为 100 或更高时，此语法会导致语句执行失败。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dimensions [Analysis Services], modifying
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171647"
 ---
 # <a name="enable-dimension-writeback"></a>“启用维度写回”
   通过为多维数据集或维度添加维度写回增强功能，可以使用户手动修改维度结构和成员。 对允许写维度的更新直接记录在该维度表中。 此增强功能更改了维度的 `WriteEnabled` 属性设置。  
@@ -44,7 +41,7 @@ ms.locfileid: "37247427"
 ## <a name="setting-dimension-writeback-capability"></a>设置维度写回功能  
  在向导的第二个 **“启用维度写回”** 页中，实际设置 **“在维度中启用写回”** 选项。 如果选择此选项将自动设置`WriteEnabled`属性的维度与`True`。 自动清除此选项将属性设置为`False`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  创建新成员时，必须包括维度中的所有属性。 您不能插入未指定维度的键属性值的成员。 因此，创建成员时，应服从对维度表定义的任何约束（例如，非空键值）。 如在指定了列，还应考虑根据需要指定维度属性的列`CustomRollupColumn`，`CustomRollupPropertiesColumn`或`UnaryOperatorColumn`维度属性。  
   
 > [!WARNING]  

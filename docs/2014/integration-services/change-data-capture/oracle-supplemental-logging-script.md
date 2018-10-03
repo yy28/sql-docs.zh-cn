@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c982204b6d8bbb5140a612388028db0fb0e194e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3736ebcdcf189ab377624b962a119de864130668
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184497"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle 补充日志记录脚本
   此对话框显示 Oracle 补充日志记录脚本。  
@@ -28,7 +25,7 @@ ms.locfileid: "37274973"
   
  根据您的组织中的 Oracle DBA 策略，运行补充日志记录脚本可能要求 Oracle DBA 的审批。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  以下是可用于执行脚本的选项。  
   
  **运行脚本**  

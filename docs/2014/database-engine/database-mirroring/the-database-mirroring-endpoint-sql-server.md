@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170367"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>数据库镜像端点 (SQL Server)
   若要参与 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像，服务器实例需要有自己专用的“数据库镜像端点” 。 此端点用途特殊，专门用于接收来自其他服务器实例的这些连接。 在某一给定服务器实例上，与任何其他服务器实例的每个 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或数据库镜像连接都使用单个数据库镜像端点。  

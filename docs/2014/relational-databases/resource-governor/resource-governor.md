@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91023c40feeae880db3afd20603645ea0fecadb6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e911fc797777c9c428cb43dd584d05b2dd30df28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166978"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214748"
 ---
 # <a name="resource-governor"></a>Resource Governor
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 资源调控器是一项可用于管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作负荷和系统资源使用情况的功能。 您可使用资源调控器指定传入应用程序请求可以使用的 CPU、物理 IO 和内存的数量限制。  

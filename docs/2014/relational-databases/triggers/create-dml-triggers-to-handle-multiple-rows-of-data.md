@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple row DML triggers
@@ -19,12 +17,12 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0413a39428b11c3bdc14741ac518e48fbfd1c294
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417096"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124317"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>创建 DML 触发器以处理多行数据
   为 DML 触发器编写代码时，请考虑导致触发器激发的语句可能是影响多行数据（而不是单行）的单个语句。 这对于 UPDATE 和 DELETE 触发器很常见，因为这些语句经常影响多行。 而这对于 INSERT 触发器比较少见，因为基本 INSERT 语句仅添加单行。 但是，由于 INSERT 触发器可以通过 INSERT INTO (*table_name*) SELECT 语句触发，因此插入多行可能导致调用单个触发器。  

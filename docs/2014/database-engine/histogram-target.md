@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198137"
 ---
 # <a name="histogram-target"></a>直方图目标
   直方图目标基于事件数据对发生的特定事件类型进行分组。 事件的分组是基于指定的事件列或操作进行计数的。 您可以使用直方图目标来排除性能问题。 通过标识哪些事件发生的频率最高，您就可以找到可能引起性能问题的“作用点”。  
@@ -61,7 +58,7 @@ ms.locfileid: "37293117"
 |-----------|----------------|  
 |file_io|2|  
 |网络|2|  
-|sleep|@shouldalert|  
+|sleep|1|  
   
  直方图目标只保留指定源的事件数据。 某些情况下，事件数据可能太大而无法完全保留，这时便会截断数据。 截断事件数据后，将记录字节数并以 XML 输出方式显示出来。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.fragmentation.f1
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - LOB data [SQL Server], defragmenting
 - clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 739d358cf237ea2158c20951255476680a799d4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 159dd55d8573af5b23dcb71c3393539fa8a0ac37
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160127"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重新组织或重新生成碎片索引。 无论何时对基础数据执行插入、更新或删除操作， [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 都会自动维护索引。 随着时间的推移，这些修改可能会导致索引中的信息分散在数据库中（含有碎片）。 当索引包含的页中的逻辑排序（基于键值）与数据文件中的物理排序不匹配时，就存在碎片。 碎片非常多的索引可能会降低查询性能，导致应用程序响应缓慢。  

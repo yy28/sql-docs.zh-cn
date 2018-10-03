@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-caps.latest.revision: 15
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 763fff831e0b481c6727921c23497492fa8b9297
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229785"
 ---
 # <a name="restore-the-service-master-key"></a>还原服务主密钥
   本主题介绍如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中还原服务主密钥。  

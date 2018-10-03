@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 359f48b4f0177b1e17d0fdb8a0a81cb5759d1b84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72af5f06486a4158b60949a6f299f79766a795ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169580"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>为 CDC 准备 SQL Server
   Oracle CDC 服务要求所有目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例都包含 MSXDBCDC 数据库。 您可以在 CDC 服务配置控制台中使用“准备 SQL Server”操作创建此数据库。 这将创建一个特殊的脚本，运行此脚本可创建所需的表、存储过程以及此数据库的其他所需项目。 只能为每个目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例执行一次此任务。  
@@ -30,7 +27,7 @@ ms.locfileid: "37269453"
   
  在 CDC 服务配置控制台中，单击“准备 SQL Server”。 如果此选项不可用，则请确保在该控制台的左侧窗格中选择了“本地 CDC 服务”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="server-name"></a>服务器名称  
  键入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在的服务器的名称。  
@@ -44,7 +41,7 @@ ms.locfileid: "37269453"
   
  若要为 Oracle CDC 准备 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，该登录名必须对 MSXDBCDC 数据库具有写入权限。 输入对 MSXDBCDC 数据库具有写入权限的登录名的凭据，例如 `sysasmin` 角色的成员。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  单击箭头可以查看要配置的可用选项。 您可以选择保留这些选项不变，使用其默认值。 可用选项是：  
   
 -   **连接超时值**：键入一个时间（秒钟），未超过该时间，Oracle CDC 服务将等待与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的连接，超过该时间后即超时。默认值为 **15**。  

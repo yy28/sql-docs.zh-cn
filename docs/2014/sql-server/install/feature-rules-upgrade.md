@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 653b15db-a984-4b4b-b224-81b0285b099b
-caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4a14e6c82ac731bed6fe5097a27d9be01fc04f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 998ff700a63274c2a57f7e3dc9d6981b2e43bb53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193100"
 ---
 # <a name="feature-rules-upgrade"></a>功能规则（升级）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将安装操作完成前验证您的计算机配置。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装期间，系统会扫描将安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的计算机，并检查是否有妨碍 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 成功安装的任何情况。 在安装程序启动升级向导之前，系统会检索每一项的状态。 然后，将检索结果与所需条件进行比较并提供如何排除妨碍性问题的指导。  

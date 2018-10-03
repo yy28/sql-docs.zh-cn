@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e7bd0228b5eaf02b51313414cbd8ebab48f14522
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278703"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227267"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>实现 IRenderingExtension 接口
   呈现扩展插件从与实际数据相结合的报表定义中获取结果，并将得到的数据呈现为某种可用的格式。 组合的数据和格式的转换是通过一个实现 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 的公共语言运行时 (CLR) 类完成的。 该类将对象模型转换为可由查看器、打印机或其他输出目标使用的输出格式。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
-caps.latest.revision: 15
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e7e534ec77dce09c99ba9172f6917308e39022c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 092bc63ac93c58d1a37f7fa52fde4fd9bf1d8486
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213767"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212407"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>使用 CLR 和 XML 创建联系信息
   SQL Server 的联系人示例提供了一些有用的实用工具，这些实用工具在基本的 AdventureWorks2012 示例数据库之上形成了一层额外的功能。 第一个实用工具为 AdventureWorks2012 数据库中所涉及的各种类型的人创建联系记录。 联系信息通过使用 XML 来指定，并传递到基于 C# 的存储过程或 VB 存储过程，以创建 XML 并将其放入该数据库中的正确表。  

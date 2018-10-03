@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.destinationtable.f1
 helpviewer_keywords:
 - Destination Table dialog box
 ms.assetid: 88ee6090-b2f5-4dc5-997a-1d45fa7e3e84
-caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e416d035544b61f238781750eb5522a2dcbc3e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154788"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227557"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server Profiler - 目标表
   使用 **“目标表”** 对话框可以指定要用于存储跟踪的表。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL Server**  
  指定当前连接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例。 此字段将自动填充，并且无法更新。 若要更改服务器，请单击 **“取消”** ，然后连接到要用于存储跟踪表的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。  
   

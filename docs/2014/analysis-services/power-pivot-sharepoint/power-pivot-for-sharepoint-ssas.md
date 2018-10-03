@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1028dc0f73c6acb9832ce83bc5fad82e11322a13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209856"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是一个在 SharePoint 模式下运行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器。 PowerPivot for SharePoint 对 SharePoint 场中的 PowerPivot 数据提供服务器托管。 PowerPivot 数据是使用以下值之一生成的分析数据模型：  

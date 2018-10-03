@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - rowsets [Analysis Services]
 - schema rowsets [Analysis Services], retrieving
 ms.assetid: 820d4b59-d428-4616-b792-c848e5da407e
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d01770593787032d96ab869dd59cd40658eca4b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 474de14a40b24fe113cebf1c933f7e28a351d5bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227897"
 ---
 # <a name="analysis-services-schema-rowsets"></a>Analysis Services 架构行集
   架构行集是预定义的表，其中包含有关 Analysis Services 对象和服务器状态（包括在服务器上执行的数据库架构、活动的会话、连接、命令和作业）的信息。 您可以在 SQL Server Management Studio 的 XML/A 脚本窗口中查询架构行集表、对架构行集运行 DMV 查询，或创建包含架构行集信息的自定义应用程序（例如，检索可用于创建报表的可用维度列表的报表应用程序）。  

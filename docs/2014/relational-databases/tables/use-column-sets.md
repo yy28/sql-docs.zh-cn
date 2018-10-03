@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180657"
 ---
 # <a name="use-column-sets"></a>使用列集
   使用稀疏列的表可以指定一个列集以返回表中的所有稀疏列。 列集是一种非类型化的 XML 表示形式，它将表的所有稀疏列组合成为一种结构化的输出。 列集与计算列的相似之处在于，列集并不是物理地存储在表中。 列集与计算列的不同之处在于，列集可直接更新。  
@@ -129,7 +126,7 @@ GO
   
  ** 不适用 = 在针对列集的选择操作期间不会为这些属性输出值。 当调用方在插入或更新操作期间使用为列集提供的 XML 表达形式为该属性指定值时，会生成错误。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
  列集的安全模式的工作原理类似于表与列之间存在的安全模式。 可以将列集视为一个小型表，选择操作类似于针对该微型表的 SELECT * 操作。 但是，列集与稀疏列之间的关系是分组关系，而不是严格意义上的容器关系。 安全模式检查列集列的安全性，并允许对基础稀疏列执行 DENY 操作。 安全模式的其他特征有：  
   
 -   可以为列集列授予安全权限，也可以撤消这一权限，这与表中的其他任何列类似。  

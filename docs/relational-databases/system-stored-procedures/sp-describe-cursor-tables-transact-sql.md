@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor_tables_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea3ceaa425321202c14c3df6f1d2c225a7ec16b7
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038830"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721695"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ sp_describe_cursor_tables
 |dbid|**int**|表所在的数据库的 ID。 如果使用 OPENQUERY 或 OPENROWSET，则为 0。|  
 |dbname|**sysname**，**可以为 null**|表所在的数据库的名称。 如果使用 OPENQUERY 或 OPENROWSET，则为 NULL。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_describe_cursor_tables 说明由服务器游标引用的基表。 要查看游标所返回的结果集的属性说明，请使用 sp_describe_cursor_columns。 要查看游标的全局特性（例如，其可滚动性和可更新性）的说明，请使用 sp_describe_cursor。 若要获得在连接时可见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的报表，请使用 sp_cursor_list。  
   
 ## <a name="permissions"></a>Permissions  

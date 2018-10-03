@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa7f94ad690362189b29c7e86e34519d1a937bc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a3fd12d81fe8789bb8900707d09c9b8a6d71652
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156857"
 ---
 # <a name="preview"></a>预览
   使用 **“预览”** 对话框可以预览 SAP BW 源所要提取的数据。  
@@ -50,7 +47,7 @@ ms.locfileid: "37281593"
     > [!NOTE]  
     >  单击 **“预览”** 还将打开 **“请求日志”** 对话框。 有关此对话框的详细信息，请参阅 [Request Log](request-log.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“预览”** 对话框显示从 SAP Netweaver BW 系统中请求的行。 显示的列为源数据中定义的列。  
   
  此对话框中没有其他选项。  

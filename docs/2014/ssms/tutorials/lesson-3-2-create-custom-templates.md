@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e94112325267cf65329d825f46a30f3ed9c50450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215577"
 ---
 # <a name="create-custom-templates"></a>创建自定义模板
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 附带用于许多常见任务的模板，但模板的真正作用在于它能为必须频繁创建的复杂脚本创建自定义模板。 在本练习中，您将创建带有较少参数的简单脚本，但是模板也适用于较长的重复脚本。  

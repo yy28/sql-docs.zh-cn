@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managedbackup.configure.f1
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
-caps.latest.revision: 9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d09c001bc7c267b2235377a1312609ee8b7b3fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0403d34b48b74d0517aaf3cb31ea520dbc436f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165597"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>配置托管备份 (SQL Server Management Studio)
   **托管备份**对话框可以配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]实例的默认值。 本主题介绍如何使用此对话框可以配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]的实例和执行此操作时必须考虑的选项的默认设置。 当[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]配置对于实例，设置将应用于任何此后创建的新数据库。  
@@ -35,7 +32,7 @@ ms.locfileid: "37209827"
 ## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 使用函数的托管备份接口在 SQL Server Management Studio  
  在此版本中，您只能配置实例级别默认设置，请使用**管理备份**接口。 无法配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]数据库中，暂停或恢复[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作或设置电子邮件通知。 了解如何执行操作当前不支持通过**托管备份**接口，请参阅[SQL Server 托管备份到 Windows Azure-保持和存储设置](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  **查看托管备份节点是 SQL Server Management Studio:** 以查看**托管备份**中的节点**对象资源管理器**，您必须是系统管理员或具有以下权限专门授予您的用户帐户：  
   
 -   `db_backupoperator`  

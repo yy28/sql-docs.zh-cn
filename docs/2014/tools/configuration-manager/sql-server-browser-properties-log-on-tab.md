@@ -1,25 +1,22 @@
 ---
-title: SQL Server Browser 属性 （在选项卡上的日志） |Microsoft Docs
+title: SQL Server Browser 属性（“登录”选项卡）| Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bacd58650b9c86a455714cfc464b9b995396a83e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 685911d9efb0b43b9b0d111e5d45a341c5436a13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273773"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210507"
 ---
 # <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server 浏览器属性（“登录”选项卡）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器程序以服务的形式在服务器上运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器侦听对 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源的传入请求，并提供计算机上安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的相关信息。  
@@ -28,7 +25,7 @@ ms.locfileid: "37273773"
   
  对帐户密码的更改立即生效，无需重新启动服务。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **本地系统帐户**  
  在本地系统帐户的安全上下文中运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服务。 请尽可能使用低权限帐户。  
   

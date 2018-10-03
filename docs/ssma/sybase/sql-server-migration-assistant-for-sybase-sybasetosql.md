@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6dc6a4e86435e2dffc7d681cedd78a3be6defa23
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a0d72eea63d104d4cd110df4a12a505675a41344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732725"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant for Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 Sybase Adaptive Server Enterprise (ASE) 是一个工具，用于将 ASE 数据库迁移到[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （预览版） 上的或[!INCLUDE[msCoName](../../includes/msconame_md.md)]Azure SQL DB。 适用于 Sybase 的 SSMA 将转换到 ASE 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象中，创建这些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL，然后再将数据迁移从 ASE 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。  
