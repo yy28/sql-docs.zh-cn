@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 527ad5bc399654bd69a05bbca4f801e7c6d643ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608053"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server，Query Store 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32951162"
   
  下表介绍了 **SQLServer:Query Store**计数器。  
   
-|SQL Server Query Store 计数器|Description|  
+|SQL Server Query Store 计数器|描述|  
 |-------------------------------------|-----------------|  
 |**Query Store CPU 使用率**|指明 Query Store 的 CPU 使用率。|  
 |**Query Store 逻辑读取次数**|指明由 Query Store 执行的逻辑读取次数。|  
@@ -42,7 +38,7 @@ ms.locfileid: "32951162"
   
  对象中的每个计数器均包含以下实例：  
   
-|Query Store 实例|Description|  
+|Query Store 实例|描述|  
 |--------------------------|-----------------|  
 |**_Total**|此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的 Query Store 信息。|  
 |\<数据库名称>|此数据库的 Query Store 信息。|  

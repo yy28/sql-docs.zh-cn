@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.asprocessingtask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5a4a205f1e1cd89b86bcfc0929d95a638cd24d78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609527"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -86,7 +83,7 @@ ms.locfileid: "35333471"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 处理任务编辑器（“常规”页）
   可以使用“Analysis Services 处理任务编辑器”对话框的“常规”页，对 Analysis Services 处理任务进行命名和说明。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **名称**  
  为 Analysis Services 处理任务提供唯一的名称。 此名称用作任务图标中的标签。  
   
@@ -109,7 +106,7 @@ ms.locfileid: "35333471"
   
 4.  对表格模型忽略批处理设置。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **Analysis Services 连接管理器**  
  从列表中选择现有的 Analysis Services 连接管理器，或单击“新建”以创建新的连接管理器。  
   

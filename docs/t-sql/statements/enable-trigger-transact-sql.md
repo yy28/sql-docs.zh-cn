@@ -5,9 +5,7 @@ ms.date: 05/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ENABLE TRIGGER
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - DML triggers, enabling
 - ENABLE TRIGGER statement
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
-caps.latest.revision: 39
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6d1f7ab7c0f0cb9f6fb5195be1409bb5109c13b4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: a92ebf725860db4537b03d4d5eb917475774201a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599435"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="remarks"></a>Remarks  
  启用触发器并不是要重新创建它。 禁用的触发器仍以对象形式存在于当前数据库中，但并不激发。 启用触发器将导致在执行触发器最初编程时所针对的任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句时激发。 可以使用 [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 禁用触发器。 还可以通过使用 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 来禁用或启用为表定义的 DML 触发器。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要启用 DML 触发器，用户必须至少对于创建触发器所在的表或视图拥有 ALTER 权限。  
   
  若要启用具有服务器作用域 (ON ALL SERVER) 的 DDL 触发器或登录触发器，用户必须对服务器具有 CONTROL SERVER 权限。 若要启用具有数据库范围 (ON DATABASE) 的 DDL 触发器，用户至少应在当前数据库中拥有 ALTER ANY DATABASE DDL TRIGGER 权限。  

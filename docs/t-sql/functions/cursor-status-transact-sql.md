@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CURSOR_STATUS
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a9fa9ea228f5fdf872e1ec10a4ccdc9ee5b7b53
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 2543cb82826957ecf596b05adb352fa05d1ab2d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788178"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599958"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,11 +62,11 @@ CURSOR_STATUS
 游标变量的名称。 必须使用 cursor 数据类型定义游标变量。
   
 ## <a name="return-types"></a>返回类型
-**int**
+**smallint**
   
 |返回值|游标名|游标变量|  
 |---|---|---|
-|@shouldalert|游标结果集至少有一行。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|分配给该变量的游标已打开。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|  
+|1|游标结果集至少有一行。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|分配给该变量的游标已打开。<br /><br /> 对于不区分的游标和键集游标，结果集至少有一行。<br /><br /> 对于动态游标，结果集可以有零行、一行或多行。|  
 |0|游标结果集为空。*|分配给该变量的游标已经打开，然而结果集肯定为空。*|  
 |-1|游标被关闭。|分配给该变量的游标被关闭。|  
 |-2|不适用。|可能性如下：<br /><br /> 先前调用的过程未向此 OUTPUT 变量分配任何游标。<br /><br /> 先前分配的过程向此 OUTPUT 变量分配了一个游标，但在过程结束时，游标处于关闭状态。 因此，游标被释放，并且没有返回调用过程。<br /><br /> 未向已声明的游标变量分配任何游标。|  
