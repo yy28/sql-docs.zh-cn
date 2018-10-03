@@ -1,32 +1,29 @@
 ---
-title: 查找方法示例 （VC + +） |Microsoft 文档
+title: Find 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682115"
 ---
-# <a name="find-method-example-vc"></a>查找方法示例 （VC + +）
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并计数业务中的标题数目**Pubs**数据库。 该示例假定基础提供程序不支持类似的功能。  
+# <a name="find-method-example-vc"></a>Find 方法示例 (VC++)
+此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[查找](../../../ado/reference/ado-api/find-method-ado.md)方法定位并业务中的标题数目进行计数**Pubs**数据库。 该示例假定基础提供程序不支持类似的功能。  
   
 ```  
 // BeginFindCpp.cpp  

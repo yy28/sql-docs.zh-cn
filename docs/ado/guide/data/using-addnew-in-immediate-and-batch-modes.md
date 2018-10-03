@@ -1,13 +1,11 @@
 ---
-title: 使用中立即 AddNew 和批处理模式 |Microsoft 文档
+title: 使用 AddNew 以即时和批处理模式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54a57f3ae4d5c7ffb7ec1a8de47567ec904cadc4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6295e4499a6f6f25f9111497012f2e9f1d6dc421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273276"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616645"
 ---
-# <a name="using-addnew-in-immediate-and-batch-modes"></a>使用中立即 AddNew 和批处理模式
-行为**AddNew**方法取决于的更新模式**记录集**对象和是否传递*FieldList*和*值*自变量。  
+# <a name="using-addnew-in-immediate-and-batch-modes"></a>以即时和批处理模式使用 AddNew
+行为**AddNew**上的更新模式的方法取决于**记录集**对象和是否传递*FieldList*和*值*自变量。  
   
- 在立即更新模式下 (在其中提供程序将更改写入基础数据源一旦调用**更新**方法)，则调用**AddNew**方法，而自变量集**EditMode**属性**adEditAdd。** 提供程序将任何字段值更改在本地缓存。 调用**更新**方法发送到数据库的新记录，并将重置**EditMode**属性**adEditNone。** 如果你通过*FieldList*和*值*自变量，ADO 立即发送到数据库的新记录 (没有**更新**调用是必需的); **EditMode**属性值不会更改 (**adEditNone**)。  
+ 在立即更新模式 (在其中提供程序将更改写入到基础数据源后，调用**更新**方法)，则调用**AddNew**方法无参数集**EditMode**属性设置为**adEditAdd。** 提供程序将任何字段值更改在本地缓存。 调用**更新**方法将发布到数据库的新记录，并将重置**EditMode**属性设置为**adEditNone。** 如果传递*FieldList*并*值*自变量，ADO 立即发布到数据库的新记录 (没有**更新**才需要调用); **EditMode**属性值不会更改 (**adEditNone**)。  
   
- 在批处理更新模式下，调用**AddNew**方法，而自变量集**EditMode**属性**adEditAdd**。 提供程序将任何字段值更改在本地缓存。 调用**更新**方法将新的记录添加到当前**记录集**并重置**EditMode**属性**adEditNone**，但提供程序不会发送到基础数据库更改，直到你调用**UpdateBatch**方法。 如果你通过*FieldList*和*值*自变量，ADO 将新记录发送到缓存中的存储提供程序; 你需要调用**UpdateBatch**发布新的方法记录到基础数据库。 有关详细信息**更新**和**UpdateBatch**，请参阅[更新和保持数据](../../../ado/guide/data/updating-and-persisting-data.md)。
+ 在批更新模式下，调用**AddNew**方法，而参数集**EditMode**属性设置为**adEditAdd**。 提供程序将任何字段值更改在本地缓存。 调用**更新**方法将新记录添加到当前**记录集**并重置**EditMode**属性设置为**adEditNone**，但提供程序不会不将更改发布到基础数据库之前调用**UpdateBatch**方法。 如果传递*FieldList*和*值*自变量，ADO 将新记录发送到缓存中存储的提供程序; 您需要调用**UpdateBatch**要发布的新方法记录到基础数据库。 有关详细信息**更新**并**UpdateBatch**，请参阅[更新和保存数据](../../../ado/guide/data/updating-and-persisting-data.md)。

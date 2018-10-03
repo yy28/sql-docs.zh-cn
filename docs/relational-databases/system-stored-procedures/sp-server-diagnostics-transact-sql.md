@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_diagnostics
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d8266418969de6249f0e2313ad7368a8054576c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644687"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +63,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**creation_time**|**datetime**|指示行创建的时间戳。 单个行集中的每一行都具有相同的时间戳。|  
 |**component_type**|**sysname**|指示行是否包含信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例级别组件或 Always On 可用性组：<br /><br /> instance<br /><br /> Alwayson： 可用性组|  
 |**组件**|**sysname**|指示组件的名称或可用性组的名称：<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> 事件<br /><br /> *\<可用性组的名称 >*|  
-|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
+|State|**int**|指示组件的运行状况状态：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|描述状态列。 与状态列中的值对应的说明：<br /><br /> 0： 未知<br /><br /> 1： 清理<br /><br /> 2： 警告<br /><br /> 3： 错误|  
 |**data**|**varchar (max)**|指定特定于组件的数据。|  
   
@@ -85,7 +81,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<可用性组的名称 >**： 收集指定的可用性组的数据 (如果 component_type ="始终在： AvailabilityGroup")。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 从故障角度而言，系统、资源和 query_processing 组件可用于故障检测，而 io_subsystem 和事件组件只能用于诊断用途。  
   
 下表将组件映射到其关联的运行状态。  

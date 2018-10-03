@@ -1,13 +1,11 @@
 ---
-title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft 文档
+title: 使用 SQLGetDiagRec 和 SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916032"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626035"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>使用 SQLGetDiagRec 和 SQLGetDiagField
-应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索诊断信息。 这些函数接受一个环境、 连接、 语句或描述符句柄，并从上次使用该句柄的函数返回诊断。 使用该句柄调用新函数时，将被丢弃登录特定句柄的诊断。 如果该函数返回多个诊断记录，在应用程序调用这些函数多次;通过调用检索的状态记录总数**SQLGetDiagField** SQL_DIAG_NUMBER 选项的标头记录 （记录 0）。  
+应用程序调用**SQLGetDiagRec**或**SQLGetDiagField**检索诊断信息。 这些函数接受一个环境、 连接、 语句或描述符句柄，并从上一次使用该句柄的函数返回诊断。 使用该句柄调用新的函数时，将被丢弃特定句柄上记录的诊断。 如果该函数返回多个诊断记录，应用程序调用这些函数多次;通过调用检索的状态记录总数**SQLGetDiagField** SQL_DIAG_NUMBER 选项具有的标头记录 （记录 0）。  
   
- 应用程序通过调用来检索各个诊断字段**SQLGetDiagField**并指定要检索的字段。 某些诊断字段没有任何意义对某些类型的句柄。 有关诊断的字段以及它们的含义的列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。  
+ 应用程序通过调用来检索各个诊断字段**SQLGetDiagField**并指定要检索的字段。 特定诊断字段没有任何意义，对某些类型的句柄。 诊断字段及其含义的列表，请参阅[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)函数说明。  
   
- 应用程序通过调用检索 SQLSTATE、 本机错误代码和在单个调用中的诊断消息**SQLGetDiagRec**;**SQLGetDiagRec**不能用于从标头记录中检索信息。  
+ 应用程序通过调用检索 SQLSTATE、 本机错误代码和单个调用中的诊断消息**SQLGetDiagRec**;**SQLGetDiagRec**不能用于从标头记录中检索信息。  
   
  例如，下面的代码会提示用户输入的 SQL 语句，并执行它。 如果未返回任何诊断信息，则会调用**SQLGetDiagField**若要获取的状态记录数和**SQLGetDiagRec**从那些获取 SQLSTATE、 本机错误代码和诊断消息记录。  
   

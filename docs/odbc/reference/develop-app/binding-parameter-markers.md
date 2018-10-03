@@ -1,43 +1,40 @@
 ---
-title: 绑定参数标记 |Microsoft 文档
+title: 绑定参数标记 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter markers [ODBC]
 - binding parameter markers [ODBC]
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29f7f37bb67a20d994e3e82e383332b2b35197bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645985"
 ---
 # <a name="binding-parameter-markers"></a>绑定参数标记
-应用程序的调用将参数绑定**SQLBindParameter**。 **SQLBindParameter**将一个参数绑定一次。 通过该对话框，指定以下应用程序：  
+应用程序将参数绑定通过调用**SQLBindParameter**。 **SQLBindParameter**将一个参数绑定一次。 使用它，该应用程序指定以下：  
   
--   参数号。 参数是按在 SQL 语句中，从号 1 开始的递增参数顺序编号。 而是合法指定更高的参数数量时执行的语句，则将忽略超过的 SQL 语句中的参数数量，参数值。  
+-   参数数目。 参数是以参数按升序排列在 SQL 语句中，从数字 1 开始编号。 而是合法指定较高的参数数量时执行的语句，则将忽略的 SQL 语句中的参数数量，参数值。  
   
--   参数类型 （输入、 输入/输出，或输出）。 除了在过程调用中的参数，所有参数都是输入的参数。 有关详细信息，请参阅[过程参数](../../../odbc/reference/develop-app/procedure-parameters.md)，本部分中更高版本。  
+-   参数类型 （输入、 输入/输出或输出）。 除了在过程调用中的参数，所有参数都是输入的参数。 有关详细信息，请参阅[过程参数](../../../odbc/reference/develop-app/procedure-parameters.md)，在本部分中更高版本。  
   
--   C 数据类型、 地址和字节长度的变量绑定到参数。 该驱动程序必须能够将数据从 C 数据类型转换为 SQL 数据类型或返回错误。 有关支持的转换的列表，请参阅[C 中为 SQL 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附录 d： 数据类型中。  
+-   该变量的 C 数据类型、 地址和字节长度绑定到参数。 该驱动程序必须能够将数据从 C 数据类型转换到 SQL 数据类型或返回错误。 有关支持的转换的列表，请参阅[转换将数据从 C 到 SQL 数据类型](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)附录 d： 数据类型。  
   
--   SQL 数据类型、 精度和小数位数本身。  
+-   SQL 数据类型、 精度和小数位数参数本身。  
   
--   长度/指示器缓冲区的地址。 它提供的字节长度的二进制或字符数据、 指定数据为 NULL，或指定将与发送数据**SQLPutData**。 有关详细信息，请参阅[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+-   长度/指示器缓冲区的地址。 它提供了二进制或字符数据的字节长度，指定数据为 NULL，或指定的数据将发送具有**SQLPutData**。 有关详细信息，请参阅[使用长度/指示器值](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
   
- 例如，下面的代码绑定*销售人员*和*CustID*到销售和 CustID 列的参数。 因为*销售人员*包含字符数据，这是可变长度，该代码指定的字节长度的*销售人员*(11)，并将绑定*SalesPersonLenOrInd*到包含中的数据的字节长度*销售人员*。 此信息不需要*CustID*因为它包含的固定长度的整数数据。  
+ 例如，下面的代码绑定*销售人员*并*CustID*到销售人员和 CustID 列的参数。 因为*销售人员*包含字符数据，这是可变长度，该代码指定的字节长度*销售人员*(11)，并将绑定*SalesPersonLenOrInd*到包含中的数据的字节长度*销售人员*。 此信息不是所需*CustID*因为它包含固定长度的整数数据。  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -62,7 +59,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- 当**SQLBindParameter**是调用，该驱动程序将存储此信息在该语句的结构。 当执行语句时，它使用的信息检索参数数据并将其发送到数据源。  
+ 当**SQLBindParameter**是调用，该驱动程序将此信息存储在该语句的结构。 该语句执行时，它使用的信息来检索参数数据并将其发送到数据源。  
   
 > [!NOTE]  
->  在 ODBC 1.0 中，参数绑定与**SQLSetParam**。 驱动程序管理器将调用之间映射**SQLSetParam**和**SQLBindParameter**，具体的 ODBC 应用程序和驱动程序使用的版本取决于。
+>  在 ODBC 1.0 中，参数绑定与**SQLSetParam**。 驱动程序管理器将调用之间映射**SQLSetParam**并**SQLBindParameter**，取决于应用程序和驱动程序使用 ODBC 的版本。

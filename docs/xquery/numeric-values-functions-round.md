@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:round function
 - round function [XQuery]
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69c9e11d9cb6dda3aa50a2d49e3eb9c55b99a57b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eb480cfe18a7f58dfb86a943a4cbdd34fa801138
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683655"
 ---
-# <a name="numeric-values-functions---round"></a>数值函数-round
+# <a name="numeric-values-functions---round"></a>数值函数 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回与参数最接近的整数。 如果有多个这样的数，将返回最接近正无穷的那个数。 例如：  
@@ -54,7 +48,7 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  将应用该函数的数字。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果类型 *$arg*是三个基本数字类型之一**xs: float**， **xs: double**，或**xs: decimal**，返回类型是与相同 *$arg*类型。 如果类型 *$arg*是从其中一个数值类型派生的类型的返回类型为基的数值类型。  
   
  如果输入到**fn: floor**， **fn: ceiling**，或**fn: round** functions 是**xdt: untypedatomic**，非类型化的数据，它将隐式转换为**xs: double**。  

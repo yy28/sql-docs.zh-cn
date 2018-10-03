@@ -5,10 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_objects_impacted_on_version_change_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ae5daae796ba134c883cb074ffd4130c67e0aba1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 11445fefd94925f32e40173491f27b8ea0837218
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645355"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,7 +42,7 @@ ms.locfileid: "38051285"
 |minor_id|**int** NULL|**NULL**约束<br /><br /> 索引和堆的 Index_id|  
 |dependency|**nvarchar(60)** 不为 NULL|导致约束或索引受影响的依赖项的说明。 同一值也用于在升级期间生成的警告。<br /><br /> 示例：<br /><br /> **空间**(对于内部函数)<br /><br /> **geometry** （适用于系统 UDT）<br /><br /> **geography:: parse** （适用于系统 UDT 方法）|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要拥有 VIEW DATABASE STATE 权限。  
   
 ## <a name="example"></a>示例  
@@ -66,14 +62,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ### <a name="how-to-update-impacted-objects"></a>如何升级受影响的对象  
  以下有序步骤介绍将在六月份服务版本升级后要采取的纠正措施。  
   
 |订单|受影响的对象|纠正措施|  
 |-----------|---------------------|-----------------------|  
-|@shouldalert|**“索引”**|重新生成标识的任何索引**sys.dm_db_objects_impacted_on_version_change**为例：  `ALTER INDEX ALL ON <table> REBUILD`<br />或多个<br />`ALTER TABLE <table> REBUILD`|  
+|1|**“索引”**|重新生成标识的任何索引**sys.dm_db_objects_impacted_on_version_change**为例：  `ALTER INDEX ALL ON <table> REBUILD`<br />或多个<br />`ALTER TABLE <table> REBUILD`|  
 |2|**对象**|通过标识的所有约束**sys.dm_db_objects_impacted_on_version_change**必须重新计算基础表中的几何图形和地理数据后重新验证。 对于约束，使用 ALTER TABLE 进行重新验证。 <br />例如： <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />或多个<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

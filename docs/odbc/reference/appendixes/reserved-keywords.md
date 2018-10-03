@@ -1,31 +1,28 @@
 ---
-title: 保留关键字 |Microsoft 文档
+title: 保留关键字 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626335"
 ---
 # <a name="reserved-keywords"></a>保留关键字
-保留了下列关键字以用于 ODBC 函数调用。 这些单词不会限制的最小的 SQL 语法;但是，若要确保使用支持的核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**值 SQL_ODBC_KEYWORDS 包含这些关键字的以逗号分隔列表。  
+保留了下列关键字以用于 ODBC 函数调用。 这些单词不限定最小 SQL 语法;但是，若要确保与支持核心 SQL 语法的驱动程序的兼容性，应用程序应避免使用任何这些关键字。 #**定义**SQL_ODBC_KEYWORDS 值包含逗号分隔这些关键字的列表。  
   
 |||  
 |-|-|  
@@ -71,7 +68,7 @@ ms.locfileid: "32912815"
 |CONNECTION|重叠|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
+|CONTINUE|帕斯卡命名法|  
 |CONVERT|位置|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
@@ -82,7 +79,7 @@ ms.locfileid: "32912815"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -92,7 +89,7 @@ ms.locfileid: "32912815"
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|删除|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -115,13 +112,13 @@ ms.locfileid: "32912815"
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|翻译|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
@@ -131,9 +128,9 @@ ms.locfileid: "32912815"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|USER|  
+|IDENTITY|User|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

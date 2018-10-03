@@ -1,31 +1,28 @@
 ---
-title: 接收结果 |Microsoft 文档
+title: 接收结果 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - receiving results [ADO]
 - Recordset object [ADO], receiving results
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 950a4d88d525afd713209982cbeaa77ed060395a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272396"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657097"
 ---
 # <a name="receiving-results"></a>接收结果
-在 ADO 大多数命令会返回到调用方的一些信息。 返回行集的命令，请在收到的结果**记录集**对象，它是可能最常用的 ADO 对象。  
+在 ADO 中的大多数命令导致返回给调用方的一些信息。 返回行集的命令，请在收到的结果**记录集**对象，它是可能最常用的 ADO 对象。  
   
  有几种方法来接收中的数据**记录集**从数据源，包括调用以下对象：  
   
@@ -39,8 +36,8 @@ ms.locfileid: "35272396"
   
 -   [Connection.StoredProcedure](../../../ado/guide/data/calling-a-stored-procedure-as-a-method-on-a-connection-object.md)  
   
- 接收数据中的**记录集**对象结束获取数据的参与的过程**连接**对象和一个**命令**对象时，隐式或显式。 在典型的客户端/服务器应用程序系统中，获取数据的整个过程需要一次往返过程通过网络为每个填充**记录集**。  
+ 接收中的数据**记录集**对象以获取数据，参与的进程结束**连接**对象和一个**命令**对象时，隐式或显式。 在典型的客户端/服务器应用程序系统中，获取数据的整个过程需要一次往返过程在网络上为每个填充**记录集**。  
   
- 若要接收多个结果集意味着你将需要进行多次往返通过网络，另一个用于封装在每个数据集**记录集**对象。 对于缓慢或堵塞的网络，减少往返次数可能有助于提高应用程序的性能。 因此，某些提供商提供支持，以获得多个**记录集**在单个往返过程。 以下主题中讨论了这是：  
+ 若要接收多个结果集意味着，将需要进行多次往返通过网络，另一个用于封装在每个数据集**记录集**对象。 对于速度缓慢或堵塞网络，减少往返次数可帮助提高应用程序的性能。 因此，某些提供商提供支持，以便接收多个**记录集**的往返一次。 以下主题中对此进行了讨论：  
   
 -   [接收多个记录集](../../../ado/guide/data/receiving-multiple-recordsets.md)

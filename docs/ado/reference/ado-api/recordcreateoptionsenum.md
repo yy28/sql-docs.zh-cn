@@ -1,13 +1,11 @@
 ---
-title: RecordCreateOptionsEnum |Microsoft 文档
+title: RecordCreateOptionsEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb2c6a46518a64989bd59fc5106dde52e93b6dd5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679945"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
-指定是否现有**记录**应打开或新**记录**为创建[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 可以使用 AND 运算符组合的值。  
+指定是否将现有**记录**应为打开或一个新**记录**为创建[记录](../../../ado/reference/ado-api/record-object-ado.md)对象[打开](../../../ado/reference/ado-api/open-method-ado-record.md)方法。 可以使用 AND 运算符组合这些值。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adCreateCollection**|0x2000|创建一个新**记录**在指定的节点*源*参数，而不是打开的现有**记录**。 如果源指向现有节点中，就会发生运行时错误，除非**adCreateCollection**与结合**adOpenIfExists**或**adCreateOverwrite**。|  
+|**adCreateCollection**|0x2000|创建一个新**记录**在指定的节点*源*参数，而不是打开的现有**记录**。 如果源指向现有节点，则会出现运行时错误，除非**adCreateCollection**结合**adOpenIfExists**或**adCreateOverwrite**。|  
 |**adCreateNonCollection**|0|创建一个新**记录**类型的[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)。|  
-|**adCreateOverwrite**|0x4000000|修改创建标志**adCreateCollection**， **adCreateNonCollection**，和**adCreateStructDoc**。 时或如果源 URL 指向的现有节点与此值，并创建标志值，一个使用或**记录**，则现有**记录**不覆盖，因此新的位置中创建的一个。 此值不能使用连同**adOpenIfExists**。|  
+|**adCreateOverwrite**|0x4000000|修改创建标志**adCreateCollection**， **adCreateNonCollection**，并**adCreateStructDoc**。 时或如果源 URL 指向的现有节点使用此值和一个创建标志值，或**记录**，则现有**记录**已覆盖以及新在其原位置创建一个。 不能使用此值连同**adOpenIfExists**。|  
 |**adCreateStructDoc**|0x80000000|创建一个新**记录**类型的[adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md)，而不是打开的现有**记录**。|  
-|**adFailIfNotExists**|-1|默认值。 如果将导致运行时错误*源*指向不存在节点。|  
-|**adOpenIfExists**|0x2000000|修改创建标志**adCreateCollection**， **adCreateNonCollection**，和**adCreateStructDoc**。 时或如果源 URL 指向的现有节点与此值，并创建标志值，一个使用或**记录**对象，然后提供程序必须打开现有**记录**而不是创建一个新一个。 此值不能使用连同**adCreateOverwrite**。|  
+|**adFailIfNotExists**|-1|默认值。 如果会导致运行时错误*源*指向不存在节点。|  
+|**adOpenIfExists**|0x2000000|修改创建标志**adCreateCollection**， **adCreateNonCollection**，并**adCreateStructDoc**。 当使用与此值和一个创建标志值，如果源 URL 指向的现有节点或**记录**对象，则提供程序必须打开现有**记录**而不是创建一个新其中一个。 不能使用此值连同**adCreateOverwrite**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
- 这些常量没有 ADO/WFC 等效项。  
+ 这些常量不具有 ADO/WFC 等效项。  
   
 ## <a name="applies-to"></a>适用范围  
  [Open 方法（ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)
