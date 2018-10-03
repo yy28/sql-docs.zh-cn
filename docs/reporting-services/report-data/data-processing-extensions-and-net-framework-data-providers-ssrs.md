@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 747ac0342b416caac84a3a6afa431a20da8899bf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1471714c99dc11b8367d73fd7327c3776dd3f1fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264326"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818625"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>数据处理扩展插件和 .NET Framework 数据访问接口 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件是随 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安装的组件，用于从特定类型的数据源检索数据，并提供支持报表设计和报表处理的额外功能。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据提供程序是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 中或第三方源提供的组件，第三方源支持可使你检索和修改来自特定类型的数据源数据的 <xref:System.Data> 接口。  

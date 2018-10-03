@@ -3,17 +3,16 @@ title: 向场中添加另一个 Reporting Services Web 前端 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6007739085d0b1d485d07628f9938e2be6e584a4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 09d930c7241a2fb0beb7c5455c5e2db7b6caeb61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815605"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>向场中添加另一个 Reporting Services Web 前端
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式包括应用程序服务器和 Web 前端 (WFE) 服务器所需的组件。 本主题主要介绍如何为 WFE 服务器安装所需的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 组件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能（例如订阅、数据警报和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]）使用的应用程序页。 WFE 所需的主要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安装是安装用于 SharePoint 2016 产品的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 外接程序。  

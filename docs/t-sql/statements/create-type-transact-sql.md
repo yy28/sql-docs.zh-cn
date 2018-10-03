@@ -5,9 +5,7 @@ ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sql13.swb.sysdatatype.properties.f1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 - data types [SQL Server], creating
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
-caps.latest.revision: 92
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7743c3c9a4e343a168fcaa2897eb511b8d312297
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: fb00480cb014e994c0dd888afa35acaeb8dd93c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943049"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814575"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -177,7 +174,7 @@ column_name <data_type>
 |**date**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**图像**|**int**|  
 |**money**|nchar( n )|**ntext**|**numeric**|  
-|nvarchar( n &#124; max)|**real**|**smalldatetime**|**int**|  
+|nvarchar( n &#124; max)|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
 |**tinyint**|**uniqueidentifier**|varbinary( n &#124; max)|varchar( n &#124; max)|  
   
@@ -265,7 +262,7 @@ column_name <data_type>
 ## <a name="memory-optimized-table-types"></a>内存优化表类型  
  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 开始，可在主内存中而不是磁盘上执行表类型中的数据的处理。 有关详细信息，请参阅[内存中 OLTP&#40;内存中优化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。 对于演示如何创建内存优化表类型的代码示例，请参阅[创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求在当前数据库中具有 CREATE TYPE 权限，以及具有对 *schema_name*的 ALTER 权限。 如果未指定 *schema_name* ，则将应用用于确定当前用户的架构的默认名称解析规则。 如果指定了 assembly_name，则用户必须拥有该程序集或对其具有 REFERENCES 权限。  
 
  如果 CREATE TABLE 语句中的任何列被定义为用户定义类型，则需要具有对此用户定义类型的 REFERENCES 权限。

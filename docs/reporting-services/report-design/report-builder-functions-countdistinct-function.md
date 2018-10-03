@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8864156047b00474b18a667b2af74ead7d11b27f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 9b1cbc3721c90beae1203cb1f9391b7d86b071b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816196"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>报表生成器函数 - CountDistinct 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非重复的非 Null 值计数。  

@@ -5,24 +5,21 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - grant_permission stored procedure [Integration Services]
 - catalog.grant_permission stored procedure [Integration Services]
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dc98f1d78b7f75e7575931e4d5c58a0681d1abbd
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 856b4dfea1025e9cd9b6818a35410d9463d01e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817768"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission（SSISDB 数据库）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,16 +62,16 @@ catalog.grant_permission [ @object_type = ] object_type
  5（其他错误）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此存储过程需要下列权限之一：  
   
 -   针对对象的 ASSIGN_PERMISSIONS 权限  
   
--   ssis_admin 数据库角色的成员资格  
+-   **ssis_admin** 数据库角色的成员资格  
   
--   sysadmin 服务器角色的成员资格  
+-   **sysadmin** 服务器角色的成员资格  
 
 此过程不能由 SQL Server 验证了身份的登录名调用。 它不能由 sa 登录名调用。
   

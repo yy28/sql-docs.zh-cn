@@ -4,33 +4,29 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.profiles.perfprofileprops.f1
 helpviewer_keywords:
 - Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
-caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec61ac6e4f1cae2a0339d3a9f6fc2478a4d4036b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b45f374ecc0768c87052974b9d6c0eae575c0031
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47813505"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 属性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可以使用 **“代理配置文件属性”** 对话框查看为配置文件中的每个代理参数指定的值，以及修改用户定义的配置文件的值。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  配置文件的名称。  
   

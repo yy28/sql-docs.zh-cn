@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Deadlock Graph event class
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bd3d71a8c8a8d971bb9f6a4628f98fe1cffda54
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 16b53261745e40f0d49a034421ee6fc6c35dfe13
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831325"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件类
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "43101098"
 |**SessionLoginName**|**nvarchar**|发起会话的用户的登录名。 例如，如果你使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 **SessionLoginName** 将显示 Login1，而 **LoginName** 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |**SPID**|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |**StartTime**|**datetime**|检测到死锁的时间。|14|用户帐户控制|  
-|**TextData**|**ntext**|死锁的 XML 描述。|@shouldalert|用户帐户控制|  
+|**TextData**|**ntext**|死锁的 XML 描述。|1|用户帐户控制|  
 |**TransactionID**|**bigint**|未使用。|4|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e79d87d33d412dce6ed4e15b074dbcb89bb6960
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c16950d0848e2999e3dee3991904eddeee8a0eee
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808725"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>规划地图报表（报表生成器和 SSRS）
 好的报表提供的信息可指导您采取措施或让您洞察实际情况。 若要展示分析数据，如某一地理背景下的总销售额或人口统计，可将地图添加到 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表。 一个地图可以包含多个图层，每个图层都显示由特定类型的空间数据定义的地图元素：代表地点的点、代表路线的线条以及代表区域的多边形。 您可以将分析数据与每个图层上的地图元素相关联。  

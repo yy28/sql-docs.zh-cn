@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.slowlychangingdimtrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a8d50ca3c1b998bd564b4cdad967db3e28e3986
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: fcf04dc0eb2209afcd9dfc180d59e6452e5b52d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329681"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820065"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>渐变维度转换
   渐变维度转换协调数据仓库维度表中的记录更新与插入。 例如，可以用此转换配置转换输出，这些转换输出使用来自 AdventureWorks OLTP 数据库中的 Production.Products 表的数据在 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 数据库的 DimProduct 表中插入和更新记录。  

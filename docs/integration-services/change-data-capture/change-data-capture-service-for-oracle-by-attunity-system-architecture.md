@@ -5,21 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c180bee8d1d7e603cf95f30e31afc3839db6c5c3
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1961b787023e995a6d3735559d35a13607727853
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829455"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity 系统体系结构
   Oracle CDC 服务将对一个或多个源 Oracle 数据库中所选表的更改捕获到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 数据库中。 下面的关系图显示构成 Oracle CDC 服务的各组件。  
