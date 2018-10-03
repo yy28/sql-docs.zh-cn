@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bf01599d3144ca6eb3ebbfa74435ab16b25176a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e31fb80768b6d8b025589d97ffbb635c36aa5556
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628685"
 ---
-# <a name="functions-on-string-values---substring"></a>基于字符串值的子字符串的函数
+# <a name="functions-on-string-values---substring"></a>基于字符串值的函数 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回的值的一部分 *$sourceString*的值指示的位置处开始 *$startingLoc，* ，并持续所指示的值的字符数 *$长度*。  
@@ -57,7 +51,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [可选] 要检索的字符数。 如果未指定，则从中指定的位置返回的所有字符 *$startingLoc*到字符串的末尾。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  带有三个参数的函数将返回 `$sourceString` 中其位置 `$p` 遵守以下指定的字符串：  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 411d5af51163124448823c2fda553a5b294c4368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643155"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43066967"
 |**default_language_lcid**|**int**|**适用范围**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指示此主体的默认 LCID。|  
 |**allow_encrypted_value_modifications**|**bit**|适用范围：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 取消在大容量复制操作期间对服务器进行加密元数据检查。 这使用户能够使用 Always encrypted 加密，之间表或数据库，而无需解密数据的大容量复制数据。 默认为 OFF。 |      
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *PasswordLastSetTime*属性可用于在所有受支持配置的 SQL Server，但在 Windows Server 2003 或更高版本和 CHECK_POLICY 和 CHECK_ 上运行 SQL Server 时，其他属性才可用过期已启用。 请参阅[密码策略](../../relational-databases/security/password-policy.md)有关详细信息。  
   
 ## <a name="permissions"></a>Permissions  

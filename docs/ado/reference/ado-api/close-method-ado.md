@@ -1,13 +1,11 @@
 ---
-title: Close 方法 (ADO) |Microsoft 文档
+title: Close 方法 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1cf9ee921355368dc9aaffb2905fb79eced5b7d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f43e59ed38dfde8091cb851f75a133c60874a6af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644686"
 ---
 # <a name="close-method-ado"></a>Close 方法 (ADO)
-关闭打开的对象和任何从属对象。  
+关闭打开的对象和所有依赖对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,24 +35,24 @@ ms.locfileid: "35276477"
 object.Close  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 使用**关闭**方法来关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)、[记录](../../../ado/reference/ado-api/record-object-ado.md)、[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[流](../../../ado/reference/ado-api/stream-object-ado.md)对象若要释放任何关联的系统资源。 关闭对象不会删除它从内存;你可以更改其属性设置，以后再打开它。 若要完全消除从内存的对象，关闭对象并将对象变量设置为*执行任何操作*（在 Visual Basic 中)。  
+## <a name="remarks"></a>备注  
+ 使用**关闭**方法以关闭[连接](../../../ado/reference/ado-api/connection-object-ado.md)即[记录](../../../ado/reference/ado-api/record-object-ado.md)即[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，或[Stream](../../../ado/reference/ado-api/stream-object-ado.md)对象若要释放所有关联的系统资源。 关闭对象不会删除它从内存;可以更改其属性设置，并在以后再次打开它。 若要完全消除从内存对象，关闭该对象，然后将对象变量设置为*Nothing* （在 Visual Basic)。  
   
 ## <a name="connection"></a>连接  
- 使用**关闭**方法来关闭**连接**对象也会关闭任何活动**记录集**与连接关联的对象。 A[命令](../../../ado/reference/ado-api/command-object-ado.md)与关联的对象**连接**将会保留你在将关闭的对象，但将不再与它关联**连接**对象; 即，其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性将设置为**执行任何操作**。 此外，**命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)将清除集合的任何提供程序定义的参数。  
+ 使用**关闭**方法以关闭**连接**对象也会关闭任何活动**记录集**与连接关联的对象。 一个[命令](../../../ado/reference/ado-api/command-object-ado.md)与关联的对象**连接**将会保留你在关闭的对象，但它不能再将关联**连接**对象; 即，其[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)属性将设置为**Nothing**。 此外，**命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合将被清除的任何提供程序定义的参数。  
   
- 你可以稍后调用[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法才能重新建立与相同数据源或其他数据源的连接。 虽然**连接**对象已关闭，则调用需要与数据源的开放连接的任何方法将产生错误。  
+ 你可以稍后调用[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法以重新建立与源相同，或其他数据源连接。 虽然**连接**对象已关闭，则调用需要与数据源的开放连接的任何方法将产生错误。  
   
- 关闭**连接**对象时没有打开的**记录集**连接上的对象将回滚所有挂起的更改中的所有**记录集**对象。 显式关闭**连接**对象 (调用**关闭**方法) 在事务执行过程中进度将生成错误。 如果**连接**对象在事务正在进行时超出范围，ADO 自动回滚事务。  
+ 关闭**连接**对象时没有开放**记录集**在连接上的对象将回滚所有挂起的更改中的所有**记录集**对象。 显式关闭**连接**对象 (调用**关闭**方法) 在事务正在进行生成错误。 如果**连接**对象超出作用域事务正在进行时，ADO 自动回滚事务。  
   
-## <a name="recordset-record-stream"></a>记录集，则请记录，流式传输  
- 使用**关闭**方法来关闭**记录集**，**记录**，或**流**对象版本关联的数据和任何的独占访问权你可能获得了对通过该特定对象的数据。 你可以稍后调用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法重新打开具有相同，或修改后，对象属性。  
+## <a name="recordset-record-stream"></a>记录集，则请记录，Stream  
+ 使用**关闭**方法以关闭**记录集**，**记录**，或者**Stream**对象释放关联的数据和任何独占访问权限你可能已具有通过此特定对象的数据。 你可以稍后调用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法重新打开具有相同，或修改对象属性。  
   
- 虽然**记录集**对象已关闭，则调用需要实时光标任何方法将产生错误。  
+ 虽然**记录集**对象已关闭，则调用需要实时游标的任何方法将产生错误。  
   
- 如果正在处于立即更新模式下时进行了编辑，则调用**关闭**方法会生成错误; 而应调用[更新](../../../ado/reference/ado-api/update-method.md)或[正在执行](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法第一个。 如果你关闭**记录集**对象在批处理更新模式下，自上次操作后的所有更改[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)调用都将丢失。  
+ 如果编辑正在进行中立即更新模式中，则调用**关闭**方法将生成错误; 而是调用[更新](../../../ado/reference/ado-api/update-method.md)或[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法第一个。 如果关闭**记录集**对象在批更新模式中，最后一个之后的所有更改[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)调用都将丢失。  
   
- 如果你使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法创建的打开副本**记录集**对象，则关闭原始或克隆不会影响任何其他副本。  
+ 如果您使用[克隆](../../../ado/reference/ado-api/clone-method-ado.md)方法来创建副本的一种开放**记录集**对象，则关闭原始或克隆不会影响任何其他副本。  
   
 ## <a name="applies-to"></a>适用范围  
   
@@ -65,9 +62,9 @@ object.Close
 |[记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>请参阅  
- [打开和关闭方法的示例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [打开和关闭方法的示例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [打开和关闭方法的示例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Open 和 Close 方法示例 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Open 和 Close 方法示例 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Open 和 Close 方法示例 （VC + +）](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
  [Open 方法 （ADO 连接）](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open 方法 （ADO 记录集）](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Save 方法](../../../ado/reference/ado-api/save-method.md)

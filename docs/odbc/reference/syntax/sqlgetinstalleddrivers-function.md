@@ -1,13 +1,11 @@
 ---
-title: SQLGetInstalledDrivers 函数 |Microsoft 文档
+title: SQLGetInstalledDrivers 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetInstalledDrivers
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b45bd7c06b5c8e87c13fd8d9e956072ffebe858
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 093da37d061153013682772c3284e0afe88b7866
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917503"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618935"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 函数
-**一致性**  
+**符合性**  
  版本引入了： ODBC 1.0  
   
  **摘要**  
- **SQLGetInstalledDrivers**读取的系统信息 [ODBC 驱动程序] 部分，并返回已安装的驱动程序的说明的列表。  
+ **SQLGetInstalledDrivers**读取系统信息 [ODBC Drivers] 部分，并返回已安装的驱动程序的说明的列表。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,29 +46,29 @@ BOOL SQLGetInstalledDrivers(
   
 ## <a name="arguments"></a>参数  
  *lpszBuf*  
- [输出]安装的驱动程序的说明列表。 有关列表结构的信息，请参阅"注释"。  
+ [输出]安装驱动程序的说明列表。 列表结构有关的信息，请参阅"注释"。  
   
  *cbBufMax*  
  [输入]长度*lpszBuf*。  
   
  *pcbBufOut*  
- [输出]总字节数 （不包括 null 终止字节） 中返回*lpszBuf*。 可用于返回的字节数是否大于或等于*cbBufMax*的驱动程序中的说明列表*lpszBuf*截断为*cbBufMax*减null 终止字符。 *PcbBufOut*参数可以是 null 指针。  
+ [输出]总字节数 （不包括 null 终止字节） 中返回*lpszBuf*。 可用来返回的字节数是否大于或等于*cbBufMax*，驱动程序中的说明的列表*lpszBuf*将被截断为*cbBufMax*减null 终止字符。 *PcbBufOut*参数可以是 null 指针。  
   
 ## <a name="returns"></a>返回  
- 如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
+ 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLGetInstalledDrivers**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLGetInstalledDrivers**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|对于发生了错误其中没有任何特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|无效的缓冲区长度|*LpszBuf*参数为 NULL 或无效，或*cbBufMax*自变量为小于或等于 0。|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序在注册表中找不到 [ODBC 驱动程序] 部分。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|无效缓冲区长度|*LpszBuf*参数为 NULL 或无效，或*cbBufMax*参数为小于或等于 0。|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|在注册表中找不到组件|安装程序找不到注册表中的 [ODBC Drivers] 部分。|  
 |ODBC_ERROR_OUT_OF_MEM|内存不足|由于内存不足，安装程序无法执行该函数。|  
   
 ## <a name="comments"></a>注释  
- 每个驱动程序说明终止与 null 字节，并且整个列表因 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）如果已分配的缓冲区不大到能够容纳整个列表，列表将被截断而未出现错误。 如果作为传递 null 指针，则返回一个错误*lpszBuf*。  
+ 每个驱动程序的描述终止 null 字节，并且整个列表终止 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）如果分配的缓冲区不足够大以保存整个列表，列表将被截断不会出错。 如果作为传入 null 指针，则返回错误*lpszBuf*。  
   
 ## <a name="related-functions"></a>相关函数  
   

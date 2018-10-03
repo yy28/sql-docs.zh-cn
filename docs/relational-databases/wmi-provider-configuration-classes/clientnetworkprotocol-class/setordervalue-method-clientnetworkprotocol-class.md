@@ -1,15 +1,12 @@
 ---
-title: SetOrderValue 方法 （ClientNetworkProtocol 类） |Microsoft 文档
+title: SetOrderValue 方法 （ClientNetworkProtocol 类） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -19,22 +16,21 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dc2eb5f9c08731406d2dfce9bfab38599b21801
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5ca80a39e5e7359b0120a364ebe7046078e8e84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012924"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620195"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>SetOrderValue 方法（ClientNetworkProtocol 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   从客户端协议列表中选择具有指定顺序值的协议。  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>语法  
   
 ```  
   
@@ -42,8 +38,8 @@ object.SetOrderValue(OrderValue)
 ```  
   
 ## <a name="parts"></a>组成部分  
- *对象*  
- 一个表示 [客户端使用的网络协议的](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) ClientNetworkProtocol 类 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 对象。  
+ 对象  
+ 一个[ClientNetworkProtocol 类](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)对象，表示使用的网络协议[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]客户端。  
   
 #### <a name="parameters"></a>Parameters  
   
@@ -54,9 +50,9 @@ object.SetOrderValue(OrderValue)
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个 **uint32** 值，如果服务已成功修改，则为 0；如果不支持请求，则为 1；其他任何数字表示出现错误。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
   
-## <a name="see-also"></a>另请参阅  
- [客户端协议属性 （顺序选项卡）](http://technet.microsoft.com/library/ms187884.aspx)  
+## <a name="see-also"></a>请参阅  
+ [客户端协议属性（“顺序”选项卡）](http://technet.microsoft.com/library/ms187884.aspx)  
   
   

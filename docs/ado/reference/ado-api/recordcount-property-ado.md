@@ -1,13 +1,11 @@
 ---
-title: RecordCount 属性 (ADO) |Microsoft 文档
+title: RecordCount 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623091"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 属性 (ADO)
 
@@ -36,23 +33,23 @@ ms.locfileid: "35280886"
 
 返回**长**值，该值指示中的记录数**记录集**。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
-使用**RecordCount**属性来查明多少个记录位于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或光标类型不支持**RecordCount**。 读取**RecordCount**属性关闭**记录集**会导致错误。
+使用**RecordCount**属性来找出的记录数处于**记录集**对象。 该属性返回-1 时 ADO 无法确定的记录数，或提供程序或游标类型不支持**RecordCount**。 读取**RecordCount**属性对已关闭**记录集**将导致错误。
 
 #### <a name="bookmarks-or-approximate-positioning"></a>书签或近似定位
 
-如果记录集对象*未*支持任一书签或近似定位，此属性在记录集中返回的记录的精确数目。 此属性返回而不考虑是否记录集已完全填充的精确数目。
+如果记录集对象*does*支持任一书签或近似定位，此属性在记录集中返回的记录的精确数目。 此属性返回而不考虑是否记录集已完全填充的精确数目。
 
-相反，如果该记录集对象的功能*不*支持书签或近似定位，请访问此属性可能会大量消耗资源。 使用量，便会出现的所有记录必须检索计数以返回精确的 RecordCount 值。
+相反，如果该记录集对象的功能*不*支持书签或近似定位，访问此属性可能会大量消耗资源。 流失出现的原因的所有记录，必须检索和计数以返回精确 RecordCount 的值。
 
-- **adBookmark**相关的书签。
-- **adApproxPosition**与近似定位相关。
+- **adBookmark**与书签相关。
+- **adApproxPosition**与近似位置。
 
 > [!NOTE]
-> 在 ADO 版本 2.8 及更早版本中，SQLOLEDB 访问接口提取所有记录，当使用服务器端游标时，它将返回的情况下**True**两个**支持 (adApproxPosition)** 和**支持 (adBookmark)**。
+> 在 ADO 版本 2.8 和更早版本中，SQLOLEDB 访问接口提取所有记录，使用服务器端游标时，它将返回尽管 **，则返回 True**两个**支持 (adApproxPosition)** 并**支持 (adBookmark)**。
   
-游标类型的**记录集**对象会影响是否可以确定的记录数。 **RecordCount**属性将返回-1 表示只进游标; 输入一个静态的实际计数或键集游标; 或者为-1 或动态游标，具体取决于数据源的实际计数。
+游标类型的**记录集**对象会影响是否可确定记录数。 **RecordCount**属性将返回-1 的只进游标; 对于静态的实际计数或键集游标; 或者为-1 或动态游标，具体取决于数据源的实际计数。
   
 ## <a name="applies-to"></a>适用范围
 
@@ -60,7 +57,7 @@ ms.locfileid: "35280886"
   
 ## <a name="see-also"></a>请参阅
 
-[筛选器和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[筛选器和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
+[Filter 和 RecordCount 属性示例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
+[Filter 和 RecordCount 属性示例 （VC + +）](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
 [AbsolutePosition 属性 (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
 [PageCount 属性 (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

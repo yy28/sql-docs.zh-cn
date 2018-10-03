@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - max function [XQuery]
 - fn:max function
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a53b02bc682bf7b3c918a02d5a16dc326ca3a594
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 814d8b0d33c55bd6aac77965d19a403ee7aec0c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625145"
 ---
-# <a name="aggregate-functions---max"></a>聚合函数-max
+# <a name="aggregate-functions---max"></a>聚合函数 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回一组原子值 *$arg*，其值是否大于所有其他的一个项。  
@@ -46,7 +40,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  返回原子值序列中的最大值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  所有类型的原子化值传递给**max （)** 必须是同一基类型的子类型。 接受的基类型是支持的类型**gt**操作。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型为 xdt:untypedAtomic 的值将转换为 xs:double。 如果混合使用这些类型，或者传递其他类型的其他值，会引发静态错误。  
   
  结果**max （)** 接收传入的类型，如在 xdt: untypedatomic 的情况下 xs: double 的基类型。 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

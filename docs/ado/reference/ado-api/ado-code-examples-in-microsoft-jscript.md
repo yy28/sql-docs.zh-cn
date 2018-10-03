@@ -1,51 +1,48 @@
 ---
-title: ADO 代码示例以 Microsoft JScript |Microsoft 文档
+title: Microsoft JScript 中的 ADO 代码示例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c65e6242525e0c3615e7b00d9067897a9ac898c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02dc045c97f79f70263d2ad2edabdbc2c0d2983f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646672"
 ---
-# <a name="ado-code-examples-in-microsoft-jscript"></a>ADO 代码示例以 Microsoft JScript
-使用下面的代码示例以了解如何使用 ADO 方法、 属性和事件时在 JScript 中编写。  
+# <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript 中的 ADO 代码示例
+使用下面的代码示例来了解如何使用 ADO 方法、 属性和事件时在 JScript 中编写。  
   
 > [!NOTE]
->  将粘贴整个代码示例中的，从开头到末尾，到代码编辑器。 如果使用完整的示例，或如果段落格式设置都将丢失，则可能无法正确运行。  
+>  将粘贴整个代码示例中的，从开头到末尾到代码编辑器。 如果使用完整的示例或段落格式设置都将丢失，该示例可能无法正确运行。  
   
 ## <a name="methods"></a>方法  
   
 -   [AddNew 方法示例](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
   
--   [追加和 CreateParameter 方法示例](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Append 和 CreateParameter 方法示例](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
   
--   [执行、 重新执行查询，并清除方法示例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [执行、 再次查询和清除方法示例](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
   
--   [查找方法示例](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Find 方法示例](../../../ado/reference/ado-api/find-method-example-jscript.md)  
   
 -   [GetRows 方法示例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>属性  
   
--   [AbsolutePage、 PageCount，以及 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [AbsolutePage、 PageCount、 和 PageSize 属性示例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
 -   [AbsolutePosition 和 CursorLocation 属性示例](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
@@ -57,7 +54,7 @@ ms.locfileid: "35275346"
   
 -   [CacheSize 属性示例](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
   
--   [筛选器和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Filter 和 RecordCount 属性示例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>请参阅  
  [在 Visual Basic 中的 ADO 代码示例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   

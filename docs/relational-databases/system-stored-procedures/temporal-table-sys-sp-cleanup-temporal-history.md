@@ -4,25 +4,20 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-database
-ms.service: sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
-caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6216ca6584c2bf6d78bb66096145cd49428398dc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e38a137e2aff51573bcf1284c36cd3658e970591
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051192"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624283"
 ---
 # <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,13 +45,13 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 输出参数返回的已删除的行数。 如果历史记录表具有聚集列存储索引，将返回此参数始终为 0。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 此存储的过程可用于仅临时表，具有有限保留期指定。
 仅当你需要立即清除历史记录表中的所有过期的行时，才使用此存储的过程。 您应该知道，它会有重大影响的数据库日志和 I/O 子系统上，删除在同一事务中所有符合条件的行。 
 
 建议始终依赖于清理内部后台任务删除过期的行上的常规工作负载和在常规的数据库的影响降到最低。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要 db_owner 权限。  
 
 ## <a name="example"></a>示例
