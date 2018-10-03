@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1cf82c10523a2d323e694ea56de205b3ecbb2ba8
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 36f2797d6dd3870f352aba2fc409ec1086a0bd3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403859"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771605"
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -40,14 +37,14 @@ ms.locfileid: "35403859"
   
 |追加|截断|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
-|False|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|False|True|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|True|“否”|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
-|False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
-|False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
-|True|False|是|转换将打开文件并将数据写入到文件末尾。|  
-|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|False|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|False|True|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|True|否|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
+|False|False|用户帐户控制|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
+|False|True|用户帐户控制|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
+|True|False|用户帐户控制|转换将打开文件并将数据写入到文件末尾。|  
+|True|True|用户帐户控制|该转换的设计时验证失败。 将两个属性都设置为 **true**是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
  可以按照下列方式配置导出列转换：  
@@ -78,7 +75,7 @@ ms.locfileid: "35403859"
 ## <a name="export-column-transformation-editor-columns-page"></a>导出列转换编辑器（“列”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“列”** 页，指定数据流中要提取到文件的列。 可以指定导出列转换是将数据追加到文件还是覆盖现有文件。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **提取列**  
  从包含文本数据或图像数据的输入列的列表中进行选择。 所有行都应包含 **“提取列”** 和 **“文件路径列”** 的定义。  
   
@@ -97,7 +94,7 @@ ms.locfileid: "35403859"
 ## <a name="export-column-transformation-editor-error-output-page"></a>导出列转换编辑器（“错误输出”页）
   可以使用 **“导出列转换编辑器”** 对话框的 **“错误输出”** 页指定错误的处理方式。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看输出的名称。 单击名称可以展开视图以包括列。  
   

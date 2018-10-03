@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406488"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755875"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>基于时间的行筛选器的最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +61,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|招待会|112|2006-10-04|@shouldalert|  
+|1|招待会|112|2006-10-04|1|  
 |2|宴会|112|2006-10-10|0|  
 |3|聚会|112|2006-10-11|0|  
 |4|婚礼|112|2006-10-12|0|  
@@ -89,10 +85,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**复制**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|招待会|112|2006-10-04|0|  
-|2|宴会|112|2006-10-10|@shouldalert|  
-|3|聚会|112|2006-10-11|@shouldalert|  
-|4|婚礼|112|2006-10-12|@shouldalert|  
+|1|招待会|112|2006-10-04|0|  
+|2|宴会|112|2006-10-10|1|  
+|3|聚会|112|2006-10-11|1|  
+|4|婚礼|112|2006-10-12|1|  
   
  现在，下周的事件被标记为正准备进行复制。 当下次为事件协调器 112 使用的订阅运行合并代理时，将把第 2、3 和 4 行下载到订阅服务器中，并从订阅服务器中删除第 1 行。  
   

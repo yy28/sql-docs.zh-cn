@@ -1,34 +1,31 @@
 ---
-title: 描述符字段 |Microsoft 文档
+title: 描述符字段 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], fields
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cddf01c0ef40b582410773ba109c2d1c23ee1e7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696576"
 ---
 # <a name="descriptor-fields"></a>描述符字段
-描述符包含*标头*和*记录*完整地描述列或参数的字段。  
+描述符包含*标头*并*记录*完整地描述列或参数的字段。  
   
- 描述符包含以下标头字段的单个副本。 更改标头字段会影响所有列或参数。  
+ 描述符包含以下标头字段的一个副本。 更改标头字段会影响所有列或参数。  
   
 |||  
 |-|-|  
@@ -37,7 +34,7 @@ ms.locfileid: "32912572"
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- 描述符包含零个或多个描述符记录。 每个记录描述的一个列或参数，具体取决于描述符的类型。 当绑定的新列或参数时，一条新记录将添加到描述符。 未绑定的列或参数时，将从描述符中删除一条记录。 每个记录包含以下字段的单个副本：  
+ 描述符包含零个或多个描述符记录。 每条记录描述列或参数，具体取决于描述符的类型。 当绑定的新列或参数时，一条新记录添加到描述符。 未绑定列或参数时，记录是从描述符中删除。 每个记录包含以下字段的一个副本：  
   
 |||  
 |-|-|  
@@ -58,9 +55,9 @@ ms.locfileid: "32912572"
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- 许多语句特性对应于描述符的标头字段中。 将通过调用这些特性设置**SQLSetStmtAttr**并通过调用设置相应的描述符标头字段**SQLSetDescField**具有相同的效果。 同样适用于**SQLGetStmtAttr**和**SQLGetDescField**，这两种中检索相同信息。 调用而不是描述符函数语句函数具有的描述符句柄没有要检索的优点。  
+ 多个语句属性对应于一个描述符的标头字段。 设置这些属性通过调用**SQLSetStmtAttr**并通过调用设置相应的描述符标头字段**SQLSetDescField**具有相同的效果。 同样适用于**SQLGetStmtAttr**并**SQLGetDescField**，这两个检索相同的信息。 调用而不是描述符函数语句函数不会有描述符句柄不具有要检索的优点。  
   
- 通过设置语句特性，可以设置以下标头字段：  
+ 通过设置语句属性可设置以下标头字段：  
   
 |||  
 |-|-|  

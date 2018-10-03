@@ -1,32 +1,29 @@
 ---
-title: 方法签名的示例 （VC + +） |Microsoft 文档
+title: NextRecordset 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c12be648119f53e5dd9c03544bae3c234cf18e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279906"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687995"
 ---
-# <a name="nextrecordset-method-example-vc"></a>方法签名的示例 （VC + +）
-此示例使用[签名](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法来查看数据，在记录集中使用的三个单独组成的复合命令语句**选择**语句。  
+# <a name="nextrecordset-method-example-vc"></a>NextRecordset 方法示例 (VC++)
+此示例使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以查看数据集中使用复合命令语句组成的三个单独的记录**选择**语句。  
   
 ```  
 // BeginNextRecordsetCpp.cpp  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_disable_db
@@ -25,12 +22,12 @@ ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9b2c437c356b5e956f5658d76064930cb6887a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c4da7b9306b24294c835498eefa874994ad8c03f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023222"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690925"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ sys.sp_cdc_disable_db
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sys.sp_cdc_disable_db**禁用变更数据捕获当前已启用的数据库中的所有表。 与变更数据捕获相关的所有系统对象（如更改表、作业、存储过程和函数）都将被删除。 **Is_cdc_enabled**列中的数据库条目[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目录视图设置为 0。  
   
 > [!NOTE]  

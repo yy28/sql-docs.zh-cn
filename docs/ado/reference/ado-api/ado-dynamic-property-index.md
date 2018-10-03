@@ -1,97 +1,94 @@
 ---
-title: ADO 动态属性索引 |Microsoft 文档
+title: ADO 动态属性索引 |Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 306b4ecf404afef9e7e6ed2c523c2ca362fab23b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32796510"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684725"
 ---
-# <a name="ado-dynamic-property-index"></a>ADO 动态 Property 索引
-数据提供程序、 服务提供商和服务组件可以添加到的动态属性**属性**集合的未打开[连接](../../../ado/reference/ado-api/connection-object-ado.md)和[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  
+# <a name="ado-dynamic-property-index"></a>ADO 动态属性索引
+数据提供程序、 服务提供程序和服务组件可以添加到动态属性**属性**的未打开集合[连接](../../../ado/reference/ado-api/connection-object-ado.md)并[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 打开这些对象时，给定的提供程序还可能会插入其他属性。 中列出了这些属性的一些[ADO 动态属性](../../../ado/reference/ado-api/ado-dynamic-properties.md)部分。 下列出中的特定提供程序的详细信息[附录 a： 提供程序](../../../ado/guide/appendixes/appendix-a-providers.md)部分。  
   
- 下表是每个标准的 OLE DB 提供程序动态属性的 ADO 和 OLE DB 名称 cross-indexes。 你的提供商可能此处添加属性多于列出的属性。 有关提供程序特定的动态属性的特定信息，请参阅提供程序文档。  
+ 下表是为每个标准的 OLE DB 提供程序动态属性的 ADO 和 OLE DB 名称 cross-indexes。 你的提供商可能此处添加更多属性比列出。 有关特定于提供程序的动态属性的特定信息，请参阅提供程序文档。  
   
- OLE DB 程序员参考指 ADO 属性名称，术语"Description"。 有关这些标准属性的详细信息，搜索或浏览中的索引[OLE DB 文档](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)按其名称的 OLE DB 属性。  
+ OLE DB 程序员参考引用 ADO 属性名称术语"说明"。 有关这些标准属性的详细信息，搜索或浏览中的索引[OLE DB 文档](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)OLE DB 属性按其名称。  
   
 ## <a name="connection-dynamic-properties"></a>连接的动态属性  
   
-|ADO 属性名称|OLE DB 属性名称|  
+|ADO 属性名称|OLE DB 属性名|  
 |-----------------------|--------------------------|  
 |活动会话|DBPROP_ACTIVESESSIONS|  
 |异步终止|DBPROP_ASYNCTXNABORT|  
 |可异步提交|DBPROP_ASYNCTNXCOMMIT|  
 |自动提交隔离级别|DBPROP_SESS_AUTOCOMMITISOLEVELS|  
 |目录位置|DBPROP_CATALOGLOCATION|  
-|目录术语|DBPROP_CATALOGTERM|  
+|目录项|DBPROP_CATALOGTERM|  
 |列定义|DBPROP_COLUMNDEFINITION|  
 |连接超时值|DBPROP_INIT_TIMEOUT|  
 |当前目录|DBPROP_CURRENTCATALOG|  
 |数据源|DBPROP_INIT_DATASOURCE|  
 |数据源名称|DBPROP_DATASOURCENAME|  
-|线程处理模型的数据源对象|DBPROP_DSOTHREADMODEL|  
+|数据源对象线程模型|DBPROP_DSOTHREADMODEL|  
 |DBMS 名称|DBPROP_DBMSNAME|  
 |DBMS 版本|DBPROP_DBMSVER|  
 |扩展属性|DBPROP_INIT_PROVIDERSTRING|  
-|按支持进行分组|DBPROP_GROUPBY|  
+|支持按分组|DBPROP_GROUPBY|  
 |异类表支持|DBPROP_HETEROGENEOUSTABLES|  
 |标识符区分大小写|DBPROP_IDENTIFIERCASE|  
 |初始目录|DBPROP_INIT_CATALOG|  
 |隔离级别|DBPROP_SUPPORTEDTXNISOLEVELS|  
-|隔离保留|DBPROP_SUPPORTEDTXNISORETAIN|  
+|隔离保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |区域设置标识符|DBPROP_INIT_LCID|  
 |位置|DBPROP_INIT_LOCATION|  
 |最大索引大小|DBPROP_MAXINDEXSIZE|  
 |最大行大小|DBPROP_MAXROWSIZE|  
 |最大行大小包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
-|在选择的最大表|DBPROP_MAXTABLESINSELECT|  
-|模式|DBPROP_INIT_MODE|  
+|最大的表中选择|DBPROP_MAXTABLESINSELECT|  
+|“模式”|DBPROP_INIT_MODE|  
 |多个参数集|DBPROP_MULTIPLEPARAMSETS|  
 |多个结果|DBPROP_MULTIPLERESULTS|  
 |多个存储对象|DBPROP_MULTIPLESTORAGEOBJECTS|  
 |多表更新|DBPROP_MULTITABLEUPDATE|  
-|NULL 的排序规则顺序|DBPROP_NULLCOLLATION|  
-|NULL 串联行为|DBPROP_CONCATNULLBEHAVIOR|  
+|空排序|DBPROP_NULLCOLLATION|  
+|空串联行为|DBPROP_CONCATNULLBEHAVIOR|  
 |OLE DB 服务|DBPROP_INIT_OLEDBSERVICES|  
 |OLE DB 版本|DBPROP_PROVIDEROLEDBVER|  
 |OLE 对象支持|DBPROP_OLEOBJECTS|  
-|打开行集支持|DBPROP_OPENROWSETSUPPORT|  
-|通过选择列表中的列进行排序|DBPROP_ORDERBYCOLUMNSINSELECT|  
+|打开行集合支持|DBPROP_OPENROWSETSUPPORT|  
+|按选择列表中的列进行排序|DBPROP_ORDERBYCOLUMNSINSELECT|  
 |输出参数可用性|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
-|通过 Ref 访问器|DBPROP_BYREFACCESSORS|  
-|密码|DBPROP_AUTH_PASSWORD|  
+|传递 By Ref 访问器|DBPROP_BYREFACCESSORS|  
+|Password|DBPROP_AUTH_PASSWORD|  
 |持久性安全信息|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |持久性 ID 类型|DBPROP_PERSISTENTIDTYPE|  
 |准备中止行为|DBPROP_PREPAREABORTBEHAVIOR|  
 |准备提交行为|DBPROP_PREPARECOMMITBEHAVIOR|  
-|过程术语|DBPROP_PROCEDURETERM|  
+|过程项|DBPROP_PROCEDURETERM|  
 |提示|DBPROP_INIT_PROMPT|  
-|提供程序的友好名称|DBPROP_PROVIDERFRIENDLYNAME|  
+|提供程序友好名称|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |提供程序版本|DBPROP_PROVIDERVER|  
-|仅限读取的数据源|DBPROP_DATASOURCEREADONLY|  
+|只读数据源|DBPROP_DATASOURCEREADONLY|  
 |在命令行集转换|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
-|架构术语|DBPROP_SCHEMATERM|  
+|架构项|DBPROP_SCHEMATERM|  
 |架构使用情况|DBPROP_SCHEMAUSAGE|  
 |SQL 支持|DBPROP_SQLSUPPORT|  
 |结构化的存储|DBPROP_STRUCTUREDSTORAGE|  
 |子查询支持|DBPROP_SUBQUERIES|  
-|表术语|DBPROP_TABLETERM|  
+|表项|DBPROP_TABLETERM|  
 |事务 DDL|DBPROP_SUPPORTEDTXNDDL|  
 |用户 ID|DBPROP_AUTH_USERID|  
 |用户名|DBPROP_USERNAME|  
@@ -100,7 +97,7 @@ ms.locfileid: "32796510"
 ## <a name="recordset-dynamic-properties"></a>记录集动态属性  
  请注意，**动态属性**的**记录集**对象超出范围 （变得不可用） 时转**记录集**已关闭。  
   
-|ADO 属性名称|OLE DB 属性名称|  
+|ADO 属性名称|OLE DB 属性名|  
 |-----------------------|--------------------------|  
 |IAccessor|DBPROP_IACCESSOR|  
 |IChapteredRowset||  
@@ -130,46 +127,46 @@ ms.locfileid: "32796510"
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |访问顺序|DBPROP_ACCESSORDER|  
 |仅限追加的行集|DBPROP_APPENDONLY|  
-|异步行集处理|DBPROP_ROWSET_ASYNCH|  
+|异步行集合处理|DBPROP_ROWSET_ASYNCH|  
 |自动重新计算|DBPROP_ADC_AUTORECALC|  
 |背景提取大小|DBPROP_ASYNCHFETCHSIZE|  
 |后台线程优先级|DBPROP_ASYNCHTHREADPRIORITY|  
 |批大小|DBPROP_ADC_BATCHSIZE|  
-|阻止存储对象|DBPROP_BLOCKINGSTORAGEOBJECTS|  
+|模块化存储对象|DBPROP_BLOCKINGSTORAGEOBJECTS|  
 |书签类型|DBPROP_BOOKMARKTYPE|  
-|Bookmarkable|DBPROP_IROWSETLOCATE|  
-|排序的书签|DBPROP_ORDEREDBOOKMARKS|  
+|可存为书签|DBPROP_IROWSETLOCATE|  
+|书签已排序|DBPROP_ORDEREDBOOKMARKS|  
 |缓存子行|DBPROP_ADC_CACHECHILDROWS|  
 |缓存延迟的列|DBPROP_CACHEDEFERRED|  
 |更改插入的行|DBPROP_CHANGEINSERTEDROWS|  
 |列权限|DBPROP_COLUMNRESTRICT|  
-|列集通知|DBPROP_NOTIFYCOLUMNSET|  
+|列设置通知|DBPROP_NOTIFYCOLUMNSET|  
 |可写的列|DBPROP_MAYWRITECOLUMN|  
 |命令超时|DBPROP_COMMANDTIMEOUT|  
-|光标引擎版本|DBPROP_ADC_CEVER|  
+|游标引擎版本|DBPROP_ADC_CEVER|  
 |延迟列|DBPROP_DEFERRED|  
 |延迟存储对象更新|DBPROP_DELAYSTORAGEOBJECTS|  
-|向后获取|DBPROP_CANFETCHBACKWARDS|  
-|筛选器操作|DBPROP_FILTERCOMPAREOPS|  
+|向后提取|DBPROP_CANFETCHBACKWARDS|  
+|筛选器的操作|DBPROP_FILTERCOMPAREOPS|  
 |查找操作|DBPROP_FINDCOMPAREOPS|  
 |隐藏的列 （计数）|DBPROP_HIDDENCOLUMNS|  
-|保存行|DBPROP_CANHOLDROWS|  
-|固定的行|DBPROP_IMMOBILEROWS|  
+|保留行|DBPROP_CANHOLDROWS|  
+|固定行|DBPROP_IMMOBILEROWS|  
 |初始提取大小|DBPROP_ASYNCHPREFETCHSIZE|  
-|文本书签|DBPROP_LITERALBOOKMARKS|  
-|文本行标识|DBPROP_LITERALIDENTITY|  
+|书签|DBPROP_LITERALBOOKMARKS|  
+|行标识|DBPROP_LITERALIDENTITY|  
 |维护更改状态|DBPROP_ADC_MAINTAINCHANGESTATUS|  
-|打开的最大行数|DBPROP_MAXOPENROWS|  
-|最大挂起行|DBPROP_MAXPENDINGROWS|  
+|最大打开行数|DBPROP_MAXOPENROWS|  
+|最大挂起行数|DBPROP_MAXPENDINGROWS|  
 |最大行数|DBPROP_MAXROWS|  
 |内存使用量|DBPROP_MEMORYUSAGE|  
-|通知粒度|DBPROP_NOTIFICATIONGRANULARITY|  
+|通知间隔|DBPROP_NOTIFICATIONGRANULARITY|  
 |通知阶段|DBPROP_NOTIFICATIONPHASES|  
 |事务处理的对象|DBPROP_TRANSACTEDOBJECT|  
-|可见的其他用户的更改|DBPROP_OTHERUPDATEDELETE|  
+|其他可见更改|DBPROP_OTHERUPDATEDELETE|  
 |其他可见插入|DBPROP_OTHERINSERT|  
-|拥有更改可见|DBPROP_OWNUPDATEDELETE|  
-|自己插入可见|DBPROP_OWNINSERT|  
+|自己的可见更改|DBPROP_OWNUPDATEDELETE|  
+|自己的可见插入|DBPROP_OWNINSERT|  
 |中止时保留|DBPROP_ABORTPRESERVE|  
 |提交时保留|DBPROP_COMMITPRESERVE|  
 |Private1||  
@@ -181,22 +178,22 @@ ms.locfileid: "32796510"
 |重新同步命令|DBPROP_ADC_CUSTOMRESYNCH|  
 |返回挂起的插入|DBPROP_RETURNPENDINGINSERTS|  
 |行删除通知|DBPROP_NOTIFYROWDELETE|  
-|行的第一个更改通知|DBPROP_NOTIFYROWFIRSTCHANGE|  
+|行首次更改通知|DBPROP_NOTIFYROWFIRSTCHANGE|  
 |行插入通知|DBPROP_NOTIFYROWINSERT|  
-|行的权限|DBPROP_ROWRESTRICT|  
-|行重新同步通知|DBPROP_NOTIFYROWRESYNCH|  
-|线程处理模型的行|DBPROP_ROWTHREADMODEL|  
+|行特权|DBPROP_ROWRESTRICT|  
+|行重同步通知|DBPROP_NOTIFYROWRESYNCH|  
+|行线程模型|DBPROP_ROWTHREADMODEL|  
 |行撤消更改通知|DBPROP_NOTIFYROWUNDOCHANGE|  
 |行撤消删除通知|DBPROP_NOTIFYROWUNDODELETE|  
 |行撤消插入通知|DBPROP_NOTIFYROWUNDOINSERT|  
 |行更新通知|DBPROP_NOTIFYROWUPDATE|  
 |行集提取位置更改通知|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|  
-|行集版本通知|DBPROP_NOTIFYROWSETRELEASE|  
+|行集合释放通知|DBPROP_NOTIFYROWSETRELEASE|  
 |向后滚动|DBPROP_CANSCROLLBACKWARDS|  
 |服务器游标|DBPROP_SERVERCURSOR|  
-|跳过删除书签|DBPROP_BOOKMARKSKIPPED|  
+|跳过删除的书签|DBPROP_BOOKMARKSKIPPED|  
 |强行标识|DBPROP_STRONGIDENTITY|  
-|唯一的目录|DBPROP_ADC_UNIQUECATALOG|  
+|唯一目录|DBPROP_ADC_UNIQUECATALOG|  
 |唯一行|DBPROP_UNIQUEROWS|  
 |唯一的架构|DBPROP_ADC_UNIQUESCHEMA|  
 |唯一表|DBPROP_ADC_UNIQUETABLE|  
