@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReadSourceData Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ReadSourceData element
 ms.assetid: 7da4665a-fba3-4aae-8dee-678dc14d3b05
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 38e24d324a6f29b55cfb8bf0b55289e2139bfb85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c341162a62eb74dc0b07863959e0e5318daf0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166508"
 ---
 # <a name="readsourcedata-element-assl"></a>ReadSourceData 元素 (ASSL)
   确定如何唯一名称中包含的层次结构生成[CubePermission](../objects/cubepermission-element-assl.md)。  
@@ -57,9 +54,9 @@ ms.locfileid: "37194187"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[CubePermission](../objects/cubepermission-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  
@@ -67,7 +64,7 @@ ms.locfileid: "37194187"
 |*无*|不允许访问计算传递 0 上可用的数据。|  
 |*允许*|允许访问计算传递 0 上可用的数据。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`ReadSourceData`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.CubePermission>。  
   
 ## <a name="see-also"></a>请参阅  

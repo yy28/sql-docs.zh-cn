@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Data Mining Wizard
 - relational mining models [Analysis Services]
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
-caps.latest.revision: 56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 837acee30eb9aa6f6bf2a89c61d598abf52f972b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30b9bbc04e7008a6d5be33e364ef6de7e91edf8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223837"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>数据挖掘向导（Analysis Services - 数据挖掘）
   每次向数据挖掘项目中添加新的挖掘结构时，都会启动 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的数据挖掘向导。 该向导可帮助您选择数据源并设置可定义要用于分析的数据的数据源视图，然后帮助您创建初始模型。  
@@ -40,7 +37,7 @@ ms.locfileid: "37288413"
   
 -   您要将哪些列或属性用于预测？ 哪些列或属性适合用作分析的输入？  
   
--   应使用哪种算法？  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
+-   应使用哪种算法？ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法都具有不同的特征并产生不同的结果。 幸运的是，您并不是只能对每个数据集使用一个模型，您可以通过添加不同的模型来进行任意尝试。  
   
 -   您是否需要能针对统一数据集来测试模型？ 如果需要，请考虑使用为测试保留一些数据的选项。 您可以选择一个百分比，并根据需要用指定行数设置其上限。  
   

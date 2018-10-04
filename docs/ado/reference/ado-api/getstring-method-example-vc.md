@@ -1,34 +1,31 @@
 ---
-title: GetString 方法示例 （VC + +） |Microsoft 文档
+title: GetString 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815585"
 ---
-# <a name="getstring-method-example-vc"></a>GetString 方法示例 （VC + +）
+# <a name="getstring-method-example-vc"></a>GetString 方法示例 (VC++)
 此示例演示[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  
   
- 假设你正在调试某个数据访问问题，并且需要快速、 简单的打印一个较小的当前内容方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
+ 假设您正在调试数据访问问题并且需要打印一个较小的当前内容的快速、 简单地[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
   
 ## <a name="example"></a>示例  
   

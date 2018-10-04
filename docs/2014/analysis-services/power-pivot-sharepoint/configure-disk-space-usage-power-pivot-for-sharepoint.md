@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 538efc15ea53c9c7666589c71c039ce21fa21b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bff9e3f913ee432988bd7a666673e8f27bc4d04e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069633"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>配置磁盘空间使用情况 (PowerPivot for SharePoint)
   PowerPivot for SharePoint 部署使用主机上的磁盘空间来缓存 PowerPivot 数据库以便更快地重新加载。 在内存中加载的每个 PowerPivot 数据库首先缓存到磁盘，以便以后可以更快地重新加载来支持新请求。 默认情况下，PowerPivot for SharePoint 使用所有可用磁盘空间来缓存其数据库，但是可以通过设置限制磁盘空间使用量的属性来修改此行为。  

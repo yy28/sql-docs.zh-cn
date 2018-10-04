@@ -1,26 +1,23 @@
 ---
-title: SQL Server Express LocalDB 错误消息参考 |Microsoft 文档
+title: SQL Server Express LocalDB 错误消息参考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ee413207-d6f5-4938-82a1-0e245037e246
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b19c9d16b22eb2a7c893d578214b48457482df7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: bb937510fcfb8bef049d90a254591958a54999ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768035"
 ---
-# <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 引用的错误消息
+# <a name="sql-server-express-localdb-reference---error-messages"></a>SQL Server Express LocalDB 参考 - 错误消息
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本节提供有关以下 SQL Server Express LocalDB 错误消息的参考信息：  
   
@@ -88,7 +85,7 @@ ms.locfileid: "34330658"
  指定的共享名称名已存在。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](../../relational-databases/express-localdb-error-messages/localdb-error-sql-server-startup-failed.md)  
- SQL Server 进程启动，但 SQL Server 启动失败。  
+ SQL Server 进程已启动，但 SQL Server 启动失败。  
   
  [LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES](../../relational-databases/express-localdb-error-messages/localdb-error-too-many-shared-instances.md)  
  共享实例过多。  

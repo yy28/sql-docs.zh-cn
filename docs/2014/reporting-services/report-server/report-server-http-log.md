@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3d697c1cb894028de8ccea5e3b87fc7d0cf155d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b990f4a2dbf321b20d9d8e45ecf13b3ede47987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147867"
 ---
 # <a name="report-server-http-log"></a>报表服务器 HTTP 日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器 HTTP 日志文件记录报表服务器所处理的所有 HTTP 请求和响应。 由于请求溢出和超时错误不会到达报表服务器，因此这些错误不会记录在日志文件中。  
@@ -62,25 +59,25 @@ ms.locfileid: "37202597"
   
 |字段|Description|，则“默认”|  
 |-----------|-----------------|-------------|  
-|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|是|  
-|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|“否”|  
-|date|活动发生的日期。|“否”|  
-|Time|活动发生的时间。|“否”|  
-|ClientIp|访问报表服务器的客户端的 IP 地址。|是|  
-|UserName|访问报表服务器的用户的名称。|“否”|  
-|ServerPort|连接使用的端口号。|“否”|  
-|主机|主机标头的内容。|“否”|  
-|方法|从客户端调用的操作或 SOAP 方法。|是|  
-|UriStem|访问的资源。|是|  
-|UriQuery|用于访问资源的查询。|“否”|  
-|ProtocolStatus|HTTP 状态代码。|是|  
-|BytesReceived|服务器接收的字节数。|“否”|  
-|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|“否”|  
-|ProtocolVersion|客户端使用的协议版本。|“否”|  
-|UserAgent|客户端使用的浏览器类型。|“否”|  
-|CookieReceived|服务器接收的 cookie 的内容。|“否”|  
-|CookieSent|服务器发送的 cookie 的内容。|“否”|  
-|Referrer|客户端以前访问过的站点。|“否”|  
+|HttpTraceFileName|该值是可选的。 默认值为 ReportServerServiceHTTP_。 如果您想要使用其他文件命名约定（例如，在将日志文件保存到中央位置时要包括服务器名），则可指定不同的值。|用户帐户控制|  
+|HTTPTraceSwitches|该值是可选的。 如果指定该字段，则可以逗号分隔的格式配置要在日志文件中使用的字段。|否|  
+|date|活动发生的日期。|否|  
+|Time|活动发生的时间。|否|  
+|ClientIp|访问报表服务器的客户端的 IP 地址。|用户帐户控制|  
+|UserName|访问报表服务器的用户的名称。|否|  
+|ServerPort|连接使用的端口号。|否|  
+|主机|主机标头的内容。|否|  
+|方法|从客户端调用的操作或 SOAP 方法。|用户帐户控制|  
+|UriStem|访问的资源。|用户帐户控制|  
+|UriQuery|用于访问资源的查询。|否|  
+|ProtocolStatus|HTTP 状态代码。|用户帐户控制|  
+|BytesReceived|服务器接收的字节数。|否|  
+|TimeTaken|从即时 HTTP.SYS 返回请求数据到服务器完成最后一次发送所用的时间（以毫秒计），不包括网络传输时间。|否|  
+|ProtocolVersion|客户端使用的协议版本。|否|  
+|UserAgent|客户端使用的浏览器类型。|否|  
+|CookieReceived|服务器接收的 cookie 的内容。|否|  
+|CookieSent|服务器发送的 cookie 的内容。|否|  
+|Referrer|客户端以前访问过的站点。|否|  
   
 ## <a name="see-also"></a>请参阅  
  [报表服务器服务跟踪日志](report-server-service-trace-log.md)   

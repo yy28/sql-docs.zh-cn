@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_job_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9335f011aa823c262bc6bf1fcac383cf868bc418
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1c9b6b7e6118fc23ef821d85ea6d0ac2f040e69b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603035"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **@originating_server** 中存在**sp_add_job**但没有列在参数。 **@originating_server** 已保留供内部使用。  
   
  之后**sp_add_job**执行添加作业，请**sp_add_jobstep**可用于添加作业执行的活动的步骤。 **sp_add_jobschedule**可用于创建计划[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务用来执行该作业。 使用**sp_add_jobserver**若要设置[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作业执行的位置的实例并**sp_delete_jobserver**若要从作业中删除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235687"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181367"
 ---
 # <a name="roles-ssas-tabular"></a>角色（SSAS 表格）
   在表格模型中，角色定义模型的成员权限。 每个角色都包含成员（按 Windows 用户名或按 Windows 组）和权限（读取、处理、管理员）。 该角色的成员可按照角色权限的定义对模型执行操作。 使用读取权限定义的角色也可以通过使用行级别筛选器在行级别提供附加的安全性。  
@@ -66,9 +63,9 @@ ms.locfileid: "37235687"
   
  每个角色都可以定义下列权限之一：  
   
-|权限|Description|使用 DAX 进行行筛选|  
+|Permissions|Description|使用 DAX 进行行筛选|  
 |-----------------|-----------------|----------------------------|  
-|InclusionThresholdSetting|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
+|None|成员无法对模型数据库架构进行任何修改，也无法查询数据。|不应用行筛选器。 此角色中的用户无法看见数据|  
 |读取|允许成员查询数据（基于行筛选器），但是无法看到 SSMS 中的模型数据库，无法更改模型数据库架构，并且用户无法处理模型。|应用行筛选器。 用户仅能看见在行筛选器 DAX 公式中指定的数据。|  
 |读取和处理|允许成员查询数据（基于行级别筛选器）并通过运行包含处理命令的脚本或包来运行处理操作，但无法对数据库进行任何更改。 无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查看模型数据库。|应用行筛选器。 仅能查询在行筛选器 DAX 公式中指定的数据。|  
 |处理|成员可以通过运行包含处理命令的脚本或包来运行处理操作。 不能修改模型数据库架构。 无法查询数据。 无法在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中查询模型数据库。|不应用行筛选器。 此角色中没有可查询的数据|  
@@ -124,7 +121,7 @@ ms.locfileid: "37235687"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|@shouldalert|企业|  
+|1|企业|  
 |2|一般行政和管理|  
 |3|库存管理|  
 |4|生产|  

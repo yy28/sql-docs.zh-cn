@@ -1,32 +1,29 @@
 ---
-title: 状态属性示例 （记录集） (VB) |Microsoft 文档
+title: Status 属性示例 （记录集） (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Recordset], Visual Basic example
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f31aa0ab4086e6c02c85ff08fa214a58467d6fa2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604535"
 ---
-# <a name="status-property-example-recordset-vb"></a>状态属性示例 （记录集） (VB)
-此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改的记录。  
+# <a name="status-property-example-recordset-vb"></a>Status 属性示例（记录集）(VB)
+此示例使用[状态](../../../ado/reference/ado-api/status-property-ado-recordset.md)属性来显示之前发生的批处理更新批处理操作中修改哪些记录。  
   
 ```  
 'BeginStatusRecordsetVB  

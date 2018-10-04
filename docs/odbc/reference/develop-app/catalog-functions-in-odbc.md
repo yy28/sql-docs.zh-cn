@@ -1,28 +1,25 @@
 ---
-title: 目录中 ODBC 函数 |Microsoft 文档
+title: ODBC 中的目录函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bbff6af05123484c09cbd514f626b05d438d79e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721245"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC 中的目录函数
 ODBC 包含以下目录函数：  
@@ -31,17 +28,17 @@ ODBC 包含以下目录函数：
 |--------------|-----------------|  
 |**SQLTables**|返回数据源中的目录、 架构、 表或表类型的列表。|  
 |**SQLColumns**|一个或多个表中返回的列的列表。|  
-|**SQLStatistics**|返回有关单个表的统计信息列表。 也会返回与该表关联的索引的列表。|  
-|**SQLSpecialColumns**|返回唯一标识单个表中的行的列的列表。 此外会自动更新该表中返回的列的列表。|  
-|**SQLPrimaryKeys**|返回构成单个表的主键的列的列表。|  
-|**SQLForeignKeys**|单个表或单个表引用其他表中的外键的列表中返回外键的列表。|  
-|**SQLTablePrivileges**|返回与一个或多个表相关联的特权的列表。|  
-|**SQLColumnPrivileges**|返回一个表中的一个或多个列相关联的特权的列表。|  
+|**SQLStatistics**|返回有关单个表的统计信息的列表。 也会返回一系列与该表相关联的索引。|  
+|**SQLSpecialColumns**|返回唯一标识单个表中的行的列的列表。 此外会自动更新此表中返回的列的列表。|  
+|**SQLPrimaryKeys**|返回构成单个表的主键列的列表。|  
+|**SQLForeignKeys**|在单个表或单个表引用其他表中的外键的列表中返回外键的列表。|  
+|**SQLTablePrivileges**|返回与一个或多个表关联的特权的列表。|  
+|**SQLColumnPrivileges**|返回一个表中的一个或多个列与关联的特权的列表。|  
 |**SQLProcedures**|返回数据源中的过程的列表。|  
-|**SQLProcedureColumns**|在单一过程的结果集中返回输入和输出参数、 返回值和列的列表。|  
-|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 这些数据类型通常用在**CREATE TABLE**和**ALTER TABLE**语句。|  
+|**SQLProcedureColumns**|在结果集中的单个过程返回输入和输出参数、 返回值和列的列表。|  
+|**SQLGetTypeInfo**|返回数据源支持的 SQL 数据类型的列表。 在通常使用这些数据类型**CREATE TABLE**并**ALTER TABLE**语句。|  
   
- 因为**SQLTables**， **SQLColumns**， **SQLStatistics**，和**SQLSpecialColumns**遵循打开组 CLI 和**SQLGetTypeInfo**符合 ISO 92 CLI，它们实现大多数驱动程序。 剩余的目录函数位于 ODBC 一致性级别。  
+ 因为**SQLTables**， **SQLColumns**， **SQLStatistics**，以及**SQLSpecialColumns**符合开放组 CLI 和**SQLGetTypeInfo**符合 ISO 92 CLI，它们实现大多数驱动程序。 剩余的目录函数是在 ODBC 一致性级别中。  
   
  本部分包含以下主题。  
   

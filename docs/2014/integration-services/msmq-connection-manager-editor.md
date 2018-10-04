@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b5aee1ea61c8c92c16bbc08e2e1b9c98048deab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42fe0f316914a83ab87deed68ff7095b66b80402
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162878"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226547"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 连接管理器编辑器
   可以使用“MSMQ 连接管理器”对话框指定“消息队列”（也称为 MSMQ）消息队列的路径。  
@@ -33,7 +30,7 @@ ms.locfileid: "37162878"
 > [!NOTE]  
 >  MSMQ 连接管理器支持本地公共队列、本地专用队列和远程公共队列。 它不支持远程专用队列。 有关使用脚本任务的解决方法，请参阅 [Sending to a Remote Private Message Queue with the Script Task](control-flow/script-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为工作流中的 MSMQ 连接管理器提供唯一的名称。 所提供的名称将在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 设计器中显示。  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17c7a8f084db4c252da7f235762a60078ef39214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6737a32eb7597f8115a7ee6797bcf1aedbd006b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220777"
 ---
 # <a name="image-device-information-settings"></a>图像设备信息设置
   下表列出了用于以 IMAGE 格式呈现的设备信息设置。  
@@ -38,7 +35,7 @@ ms.locfileid: "37315467"
 |**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginTop**|要为报表设置的上边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `11in`)。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `8.5in`)。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  

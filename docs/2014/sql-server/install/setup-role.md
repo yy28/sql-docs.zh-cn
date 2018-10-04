@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
-caps.latest.revision: 14
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77a3e61d36ce9661a9b01095c868c7d54de81f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130557"
 ---
 # <a name="setup-role"></a>安装角色
   使用此页可以指定是使用“功能选择”页来分别选择各项功能，还是使用安装角色来进行安装。  
   
  `setup role`是实现预定义 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置所需全部功能和共享组件的固定选择集。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能安装**  
  选择此选项可分别选择各项功能和共享组件。 实例功能包括数据库引擎服务、Analysis Services（本机模式）和 Reporting Services。  
   

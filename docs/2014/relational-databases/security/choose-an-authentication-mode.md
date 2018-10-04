@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
@@ -25,12 +23,12 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163777"
 ---
 # <a name="choose-an-authentication-mode"></a>选择身份验证模式
   在安装过程中，必须为 [!INCLUDE[ssDE](../../includes/ssde-md.md)]选择身份验证模式。 可供选择的模式有两种：Windows 身份验证模式和混合模式。 Windows 身份验证模式会启用 Windows 身份验证并禁用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 混合模式会同时启用 Windows 身份验证和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 Windows 身份验证始终可用，并且无法禁用。  

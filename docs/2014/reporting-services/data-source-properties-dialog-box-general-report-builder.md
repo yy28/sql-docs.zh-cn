@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138719"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>“数据源属性”对话框 -&gt;“常规”（报表生成器）
   在 **“数据源属性”** 对话框中选择 **“常规”** 可从报表服务器中选择共享数据源，或者创建或修改报表中嵌入的数据源的连接信息。  
@@ -43,7 +40,7 @@ ms.locfileid: "37288453"
   
  如果指定的凭据不完整（例如需要密码），则报表生成器会在需要连接到数据源时再次提示您输入运行时凭据。 设计时凭据将存储起来，不再提示您进行输入。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入数据源的名称。 数据源名称在报表中必须是唯一的。 默认情况下，会为数据源分配一个常规名称，如 DataSource1 或 DataSource2。  
   

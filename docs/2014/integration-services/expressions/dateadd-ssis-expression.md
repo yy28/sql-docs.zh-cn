@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], DATEADD
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 061ded2d69926f07a82e80cf59200a8e0f4245b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8f49e6ebab115dd4d0363fd19ae477902389bd8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140587"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD（SSIS 表达式）
   将表示日期或时间间隔的数值与日期中指定的日期部分相加后，返回一个新的 DT_DBTIMESTAMP 值。 number 参数的值必须为整数，而 date 参数的取值必须为有效日期。  
@@ -48,7 +45,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>结果类型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表列出了表达式计算器可以识别的日期部分和缩写形式。 日期部分名称不区分大小写。  
   
 |datepart|缩写形式|  

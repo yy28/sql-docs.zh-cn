@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], dropping
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], adding and dropping articles
 - articles [SQL Server replication], adding
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 30d2946d580c539ca5acdbaca24cdc90dd90849a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 411a97c4e143ea06ee5bd00dc9a357c4c2c7e1ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187257"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
   在创建发布后，可以添加和删除项目。 可以随时添加项目，但删除项目所需的操作取决于复制的类型和删除项目的时间。  

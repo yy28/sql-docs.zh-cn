@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - neural network algorithms [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c561ce22f55007083e07fc898063295fa8008b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179387"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 逻辑回归算法
   逻辑回归是一种众所周知的统计方法，用于对二进制结果建模。  
@@ -72,7 +69,7 @@ ms.locfileid: "37278383"
   
 -   有关查询逻辑回归模型的示例，请参阅 [聚类分析模型查询示例](clustering-model-query-examples.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持钻取， 这是因为挖掘模型中节点的结构不一定直接与基础数据对应。  
   

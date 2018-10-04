@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,18 +14,17 @@ helpviewer_keywords:
 - distinct-values function
 - fn:distinct-values function
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 480183fb649589869645b3ffc98279b8c9722c8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618025"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>基于序列的非重复值的函数
+# <a name="functions-on-sequences---distinct-values"></a>基于序列的函数 - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   删除重复的值从指定的序列 *$arg*。 如果 *$arg*是一个空序列，该函数将返回空序列。  
@@ -44,7 +40,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  原子值序列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  所有类型的原子化值传递给**distinct-values （)** 必须是同一基类型的子类型。 接受的基类型是支持的类型**eq**操作。 这些类型包括三种内置数值基类型、日期/时间基类型、xs:string、xs:boolean 和 xdt:untypedAtomic。 类型 xdt:untypedAtomic 的值转换为 xs:string。 如果这些类型混合在一起，或者传递了其他类型的其他值，则会引发静态错误。  
   
  结果**distinct-values （)** 接收带有原始基数的传入的类型，例如 untypedatomic xs: string 的基类型。 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  

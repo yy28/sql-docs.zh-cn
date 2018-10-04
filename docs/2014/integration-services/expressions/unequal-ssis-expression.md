@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbf78899779f87837ec6df2db46549563454d398
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92d3f38973671a29f5de28f2337afb33ede6f337
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259043"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052987"
 ---
 # <a name="-unequal-ssis-expression"></a>!=（不等于）（SSIS 表达式）
   执行比较操作以确定具有兼容数据类型的两个表达式是否不相等。 在执行比较前表达式计算器会自动转换多种数据类型。  
@@ -44,7 +41,7 @@ expression1 != expression2
 ## <a name="result-types"></a>结果类型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果比较中的任一表达式为空，则比较结果为空。 如果两个表达式都为空，则结果为空。  
   
  表达式集， *expression1* 和 *expression2*，必须遵守下列规则之一：  

@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.reinit.single.f1
 helpviewer_keywords:
 - Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5a980ebeed4cb3570928e2c0b76c00c93a1e302f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29cad541b0791740a0c339607267cf7c2e90f993
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085403"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>重新初始化订阅 - 一个订阅
   可以使用 **“重新初始化订阅”** 对话框标记需要重新初始化的订阅。 重新初始化会涉及将快照应用于订阅服务器；对于事务发布的订阅，是由分发代理执行的；而对于合并发布的订阅，则是由合并代理执行的。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用当前快照**  
  选择此项可以在分发代理或合并代理下一次运行时将当前快照应用于订阅服务器。 如果无法获得有效快照，将无法选定此选项。  
   

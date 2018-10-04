@@ -1,34 +1,31 @@
 ---
-title: XML 持久性格式 |Microsoft 文档
+title: XML 暂留格式 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842159"
 ---
-# <a name="xml-persistence-format"></a>XML 持久性格式
-ADO 使用 utf-8 编码为 XML 流，它仍然存在。  
+# <a name="xml-persistence-format"></a>XML 暂留格式
+ADO 使用 utf-8 编码的 XML 流，它仍然存在。  
   
- ADO XML 格式将划分成两个部分后, 跟的数据部分架构部分。 下面是从 Northwind 数据库的 Shippers 表的示例 XML 文件。 下面的示例介绍了各个部分的 XML。  
+ ADO XML 格式将划分成两个部分后, 跟数据部分的架构部分。 以下是 Northwind 数据库中的运货商表的示例 XML 文件。 下面的示例介绍了各个部分的 XML。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- 该架构显示命名空间、 的架构部分中，和的数据部分的声明。 架构部分包含行、 ShipperID、 CompanyName 和 Phone 的定义。  
+ 架构演示了命名空间、 架构部分和数据部分的声明。 架构部分包含行、 ShipperID、 CompanyName 和 Phone 的定义。  
   
- 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)以及是否 （但不会在 Internet Explorer 5） 验证可完全验证。 XML 数据当前是记录集持久性的唯一支持的架构格式。  
+ 架构定义符合[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)（尽管在 Internet Explorer 5 中将不进行验证） 可以完全验证。 XML 数据当前是记录集暂留的唯一支持的架构格式。  
   
- 数据节中有三个行包含有关货主的信息。 为空的行集，数据部分可能为空，但\<rs： 数据 > 标记必须存在。 没有数据，你可以编写标记速记简单地\<rs： 数据 / >。 前缀为"rs"任何标记指示它是在命名空间中定义的架构 urn:-microsoft-com:rowset。  
+ 数据节中有三个行包含运货商有关的信息。 对于空的行集，数据部分可能为空，但\<rs： 数据 > 标记必须存在。 不包含数据，您可以编写标记速记简单地\<rs： 数据 / >。 前缀为"rs"任何标记指示它是由 urn： 架构定义的命名空间中的 microsoft-com:rowset。  
   
 ## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

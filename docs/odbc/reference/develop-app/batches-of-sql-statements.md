@@ -1,34 +1,31 @@
 ---
-title: SQL 语句的批处理 |Microsoft 文档
+title: SQL 语句的批处理 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d5b9953f193009f6aa521b08cf1af9b335e079
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775096"
 ---
 # <a name="batches-of-sql-statements"></a>SQL 语句的批处理
-SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效果的一组两个或多个 SQL 语句的单个 SQL 语句。 在某些实现中，可使用任何结果之前执行整个批处理语句。 这通常会更高效比单独，提交语句，因为通常可以减少网络流量和数据源有时可以优化的一批 SQL 语句的执行。 在其他实现中，调用**SQLMoreResults**触发的批次中的下一个语句执行。 ODBC 支持以下类型的批处理：  
+一批 SQL 语句是一组两个或多个 SQL 语句或单个 SQL 语句具有相同的效果的一组两个或多个 SQL 语句。 在某些实现中，整个批处理语句之前，执行任何结果都可用。 这主要是通常比单个提交语句，因为通常可以减少网络流量和数据源有时可以优化执行一批 SQL 语句有效。 在其他实现中，调用**SQLMoreResults**触发批处理中的下一个语句执行。 ODBC 支持以下类型的批处理：  
   
--   **显式批处理***显式批处理*是用分号 （;） 分隔的两个或多个 SQL 语句。 例如，下面的 SQL 语句的批处理会打开新的销售订单。 这需要将行插入到订单和行的表。 请注意最后一个语句后没有任何分号。  
+-   **显式批处理***显式批处理*是以分号 （;） 分隔的两个或多个 SQL 语句。 例如，以下批处理 SQL 语句会打开一个新销售订单。 这要求将行插入到订单和行的表。 请注意最后一个语句后没有分号。  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -43,7 +40,7 @@ SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效�
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **过程**如果一个过程包含多个 SQL 语句，它被视为可一批 SQL 语句。 例如，下面的 SQL Server 特定语句将创建返回的结果集包含有关客户和结果集列出为该客户的所有未结销售订单信息的过程：  
+-   **过程**如果过程包含多个 SQL 语句，它被视为可一批 SQL 语句。 例如，下面的 SQL Server 特定语句创建返回的结果集包含有关客户和结果集列出所有打开该客户销售订单信息的过程：  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -52,18 +49,18 @@ SQL 语句的批处理是一组两个或多个 SQL 语句或具有相同的效�
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     **CREATE PROCEDURE**语句本身不是一批 SQL 语句。 但是，它将创建的过程是一批的 SQL 语句。 不使用分号分隔两个**选择**语句因为**CREATE PROCEDURE**语句是特定于 SQL Server 和 SQL Server 不需要用分号分隔多个语句中**CREATE PROCEDURE**语句。  
+     **CREATE PROCEDURE**语句本身不是一批 SQL 语句。 但是，它会创建该过程是一批 SQL 语句。 没有使用分号分隔两个**选择**语句由于**CREATE PROCEDURE**语句是特定于 SQL Server 和 SQL Server 不需要分号来分隔中的多个语句**CREATE PROCEDURE**语句。  
   
--   **参数数组**可与参数化 SQL 语句，可以有效地执行大容量操作使用的参数数组。 例如，可以替换为以下使用的参数数组**插入**语句以执行只有单个 SQL 语句时将多个行插入到行表：  
+-   **参数的数组**参数的数组可以用于参数化 SQL 语句，可以有效地执行批量操作。 例如，可以使用以下使用参数的数组**插入**语句以执行仅单个 SQL 语句时将多个行插入到行表：  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     如果数据源不支持的参数数组，该驱动程序可以通过执行一次为每个参数集的 SQL 语句来模拟它们。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)和[参数值的数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)，本部分中更高版本。  
+     如果数据源不支持参数的数组，该驱动程序可以模拟它们通过执行每组参数一次的 SQL 语句。 有关详细信息，请参阅[语句参数](../../../odbc/reference/develop-app/statement-parameters.md)并[参数值数组](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)稍后在本部分中。  
   
- 不同类型的批处理不能混合在互操作的方式。 即，应用程序如何确定执行显式的批处理包含过程的结果调用时，使用的参数，数组的显式批处理和使用的参数数组的过程调用是特定于驱动程序的。  
+ 不能以可互操作的方式混合不同类型的批处理。 即，应用程序如何确定执行显式批包含过程的结果调用使用的参数数组的显式批次，并使用参数的数组的过程调用是特定于驱动程序的。  
   
  本部分包含以下主题。  
   

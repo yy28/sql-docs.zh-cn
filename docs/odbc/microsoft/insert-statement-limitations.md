@@ -1,49 +1,46 @@
 ---
-title: INSERT 语句限制 |Microsoft 文档
+title: INSERT 语句限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC SQL grammar, INSERT statement limitations
 - INSERT statement limitations [ODBC]
 - truncation of data [ODBC]
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f15f7c8a45593b86f50ac4da3dc254dca507aae7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26d4be96ca4dabebd93ee96e2888e18d39257412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904452"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610335"
 ---
-# <a name="insert-statement-limitations"></a>插入语句的限制
-如果太长，无法适应列，而不发出警告右侧截断插入的数据。  
+# <a name="insert-statement-limitations"></a>INSERT 语句限制
+插入的数据进行截断而不发出警告右侧太长，无法适应列。  
   
- 尝试插入一个值，超出的列的数据类型范围会导致 NULL 插入到列。  
+ 尝试插入不在范围内的列的数据类型的值会导致 NULL 插入列。  
   
- 当使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 时，将一个零长度字符串插入列实际上将插入 NULL 改为。  
+ 当使用 dBASE、 Microsoft Excel、 Paradox 或 Textdriver 时，将插入列的长度为零的字符串实际上将插入 NULL 改为。  
   
- 当使用 Microsoft Excel 驱动程序时，如果列中插入一个空字符串时，将空字符串转换为 NULL;使用空字符串的 WHERE 子句中执行的搜索 SELECT 语句将对该列不会成功。  
+ 使用 Microsoft Excel 驱动程序时，如果为空字符串插入到的列，则为空字符串转换为 NULL;使用空字符串的 WHERE 子句中执行的搜索选择语句将不会在该列上成功。  
   
- 表不可更新由两个条件下 Paradox 驱动程序：  
+ 该表不能在两种情况下 Paradox 驱动程序更新：  
   
--   当表上未定义唯一索引。 不能为一个空表，它可以更新与单个行中，即使唯一索引未定义表上同时运行。 如果在没有唯一索引的空表中插入一行，应用程序无法创建唯一索引或在插入单个行后插入其他数据。  
+-   当未对表定义唯一索引。 这不是为一个空表，它可以更新与单一行，即使未对表定义唯一索引，则返回 true。 如果不具有唯一索引的空表中插入单个行，则应用程序不能创建唯一索引，或在插入单个行后插入其他数据。  
   
--   如果未实现高数据库引擎，仅读取和追加 Paradox 表上允许语句。  
+-   如果未实现 borland 公司数据库引擎，只读取和追加 Paradox 表上允许语句。  
   
- 使用文本驱动程序时，NULL 值将由在固定长度的文件，填补空白的字符串表示，但没有空格分隔的文件中表示。 例如，在以下行中包含三个字段，第二个字段为 NULL 值：  
+ 使用文本驱动程序时，NULL 值都是固定长度的文件中的填补空白的字符串，但没有空格分隔的文件中表示。 例如，在包含三个字段的以下行，第二个字段是一个 NULL 值：  
   
 ```  
 "Smith:,, 123  
 ```  
   
- 当使用文本驱动程序时，可以用前导空格填充所有列的值。 任何行的长度必须小于或等于 65,543 字节。
+ 使用文本驱动程序时，可以用前导空格填充所有列的值。 任何行的长度必须小于或等于 65,543 字节。

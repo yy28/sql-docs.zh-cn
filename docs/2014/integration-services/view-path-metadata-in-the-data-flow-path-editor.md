@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-caps.latest.revision: 23
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7163b07ea791330299603e9b90d5eca7b1c33b4f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b495401e95971848a864b228368c17231bee5e4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122457"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>在数据流路径编辑器中查看路径元数据
   路径连接两个数据流组件。 若要查看路径元数据，数据流必须包含至少两个已连接的数据流组件。 有关详细信息，请参阅 [在数据流中添加或删除组件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [连接数据流中的组件](data-flow/connect-components-in-a-data-flow.md)。  

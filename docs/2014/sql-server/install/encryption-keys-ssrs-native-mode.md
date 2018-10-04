@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.encryptionkeypanel.F1
 ms.assetid: cc7e6f84-80e1-4b5e-9409-d0e074edd147
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a494ca4f59abb618c9cbfbffd36bc57e481a71e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144227"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>加密密钥（SSRS 本机模式）
   使用“加密密钥”页可以管理用于对报表服务器中数据进行加密和解密的对称密钥。 管理加密密钥是报表服务器配置的一个重要方面。 在创建报表服务器数据库时，自动创建并应用对称密钥。 创建对称密钥的备份副本，以便您可以执行例行的维护操作。 您需要具有对称密钥的有效副本，才可执行以下维护任务：  
@@ -48,7 +45,7 @@ ms.locfileid: "37328907"
   
  若要打开此页，请启动[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器，然后选择导航窗格中的链接。 有关详细信息，请参阅 [Reporting Services Configuration Manager（本机模式）](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **备份**  
  将对称密钥复制到您指定的文件。 对称密钥决不能以纯文本形式存储。 您必须键入密码来保护该文件。  
   

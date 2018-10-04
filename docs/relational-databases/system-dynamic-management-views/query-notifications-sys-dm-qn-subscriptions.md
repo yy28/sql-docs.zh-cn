@@ -1,12 +1,10 @@
 ---
-title: sys.dm_qn_subscriptions (Transact SQL) |Microsoft 文档
+title: sys.dm_qn_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465263"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834705"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>查询通知-sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +37,7 @@ ms.locfileid: "34465263"
 |**database_id**|**int**|执行通知查询所在数据库的 ID。 该数据库存储该订阅的相关信息。|  
 |**sid**|**varbinary(85)**|创建并拥有该订阅的服务器主体的安全 ID。|  
 |**object_id**|**int**|存储有关订阅参数信息的内部表的 ID。|  
-|**创建**|**datetime**|日期和创建订阅后的时间。|  
+|**创建**|**datetime**|日期和时间创建的订阅。|  
 |**timeout**|**int**|订阅超时（以秒为单位）。 在经过这段时间后，通知将标记为激发。<br /><br /> 注意： 实际的激发时间可能大于指定的超时。但是，如果在指定的超时之后、激发订阅之前发生了使订阅无效的更改，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会确保激发在发生更改的时候进行。|  
 |**status**|**int**|指示订阅的状态。 有关代码列表，请参阅备注下的表。|  
   
@@ -51,7 +48,7 @@ ms.locfileid: "34465263"
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|多对一|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|多对一|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  状态代码为 0 指示未确定的状态。  
   
  下面的状态代码指示由于更改而激发了订阅：  
@@ -59,7 +56,7 @@ ms.locfileid: "34465263"
 |代码|次要状态|信息|  
 |----------|------------------|----------|  
 |65798|因为更改数据而激发订阅|由插入触发的订阅|  
-|65799|因为更改数据而激发订阅|删除|  
+|65799|因为更改数据而激发订阅|DELETE|  
 |65800|因为更改数据而激发订阅|Update|  
 |65801|因为更改数据而激发订阅|合并|  
 |65802|因为更改数据而激发订阅|截断表|  
@@ -94,7 +91,7 @@ ms.locfileid: "34465263"
 |199168|订阅处于活动状态。|未确定的信息模式|  
 |199424|该订阅已初始化，但尚未处于活动状态|未确定的信息模式|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要针对服务器的 VIEW SERVER STATE 权限。  
   
 > [!NOTE]  
@@ -134,9 +131,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [查询通知相关的动态管理视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
- [KILL 查询通知订阅&#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
+ [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

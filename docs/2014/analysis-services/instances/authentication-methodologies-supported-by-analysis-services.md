@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 248d5431a4f6015b03d5b2f99cec2e1a037d00c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 729780b737502557830e6f1ccdea39203b0154ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077827"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支持的身份验证方法
   从客户端应用程序到 Analysis Services 实例的连接需要 Windows 身份验证（集成）。 您可以使用以下任意方法提供 Windows 用户标识：  

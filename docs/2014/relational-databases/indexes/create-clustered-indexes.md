@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b31e05c06e88e77596637572f5116692e3fa3bc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dda9622ec6b5faa753310861557961ca54b4971
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063157"
 ---
 # <a name="create-clustered-indexes"></a>创建聚集索引
   可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建表的聚集索引。 除了个别表之外，每个表都应该有聚集索引。 聚集索引除了可以提高查询性能之外，还可以按需重新生成或重新组织来控制表碎片。 也可以对视图创建聚集索引。 （ [描述的聚集索引和非聚集索引](clustered-and-nonclustered-indexes-described.md)主题中定义了聚集索引。）  

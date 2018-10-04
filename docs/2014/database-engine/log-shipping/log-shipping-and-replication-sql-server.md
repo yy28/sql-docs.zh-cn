@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], log shipping and
 - log shipping [SQL Server], replication and
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ff05cc362f5be17df9b5ae0b282d55db4d030ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e107acad4bfd844478c47cfc5c19aa947c74bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104107"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>日志传送和复制 (SQL Server)
   日志传送涉及单个数据库的两个副本，而这两个副本通常驻留在不同的计算机上。 在任何给定时间都只有一个数据库副本可供客户端使用。 该副本称为主数据库。 通过日志传送将客户端对主数据库所做的更新传播到数据库的另一副本（称为辅助数据库）。 日志传送涉及将由主数据库上执行的每个插入、更新或删除所组成的事务日志应用到辅助数据库上。  

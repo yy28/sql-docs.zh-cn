@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161757"
 ---
-# SQL Server 2014 联机丛书
+# <a name="books-online-for-sql-server-2014"></a>SQL Server 2014 联机丛书
   欢迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 联机丛书。 联机丛书包含任务描述以及说明如何使用执行数据管理和商业智能工作的参考文档[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **进行试用：**  
  ![Azure 虚拟机小](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 是否拥有 Azure 帐户？  然后转**[此处](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 启动具有 SQL Server 2014 Service Pack 1 (SP1) 的虚拟机已安装。 SQL Server 2014 (SP1) 的详细信息，请参阅[SQL Server 2014 Service Pack 1 发布信息](https://support.microsoft.com/en-us/kb/3058865)。 
   
-## SQL Server 技术  
+## <a name="sql-server-technologies"></a>SQL Server 技术  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包括多种数据管理和分析技术。 单击下表中的链接可找到每种技术的功能、任务和参考文档。  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310194"
 |![复制图标](media/replication.gif "复制图标")|[复制](../relational-databases/replication/sql-server-replication.md)<br /><br /> 复制是一组技术，用于在数据库间复制和分发数据和数据库对象，然后在数据库间进行同步操作，使其保持一致。 使用复制时，可以通过局域网和广域网、拨号连接、无线连接和 Internet，将数据分发到不同位置以及分发给远程用户或移动用户。|  
 |![Reporting Services 图标](media/reportingservices.gif "Reporting Services 图标")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> Reporting Services 提供企业级的 Web 报表功能，从而使您可以创建从多个数据源提取数据的表，发布各种格式的表，以及集中管理安全性和订阅。|  
   
-## Web 上的 SQL Server 信息  
+## <a name="sql-server-information-on-the-web"></a>Web 上的 SQL Server 信息  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 在多个网站上发布有关 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的其他信息。  
   
  **SQL Server 网站**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310194"
   
 -   [XML 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## 请参阅  
+## <a name="see-also"></a>请参阅  
  [SQL Server 配置管理器帮助](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

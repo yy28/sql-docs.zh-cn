@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - full-text search [SMO]
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f666336ccc3040139042ba65351fe66ea97d90cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b962f0934c840bc37ef6bb4d9f0c14233dc0a96
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073288"
 ---
 # <a name="implementing-full-text-search"></a>实现全文搜索
   全文搜索对于每个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例都可用且在 SMO 中由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 对象来表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 对象位于 `Server` 对象下。 它用于管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文搜索服务的配置选项。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 对象属于 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象，并且它是表示为数据库定义的全文目录的 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 对象的集合。 与普通索引不同，只能为每个表定义一个全文索引。 此索引由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 对象中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 对象表示。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc749db6d8eee973ef4c146d62ce5ebebda230e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0cd5fd82a77d85b59de9fb4ebedebfd560c759f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276593"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211338"
 ---
 # <a name="report-server-system-properties"></a>报表服务器系统属性
   已保留以下系统属性名称。 您不能创建具有相同名称的用户定义属性。 您可以使用 Web 服务方法读取或修改其中的许多属性。  

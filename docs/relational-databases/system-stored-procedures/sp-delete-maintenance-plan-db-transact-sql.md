@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_db_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a8fb8d48b03d49f63775a165217d60f8df2e9279
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786975"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +58,14 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_delete_maintenance_plan_db**必须从运行**msdb**数据库。  
   
  **Sp_delete_maintenance_plan_db**存储的过程将删除维护计划和指定的数据库之间的关联; 它不会删除或破坏数据库。  
   
  当**sp_delete_maintenance_plan_db**删除最后一个数据库从维护计划，该存储的过程还删除维护计划。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_delete_maintenance_plan_db**。  
   
 ## <a name="examples"></a>示例  

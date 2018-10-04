@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - result sets [ODBC], autotranslating character data
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - ODBC data types, autotranslating character data
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7921d0bc0c41fc5053ceb0fbcd95e56dc4b4fd5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bc96c78af702a2239b517b4fbde78f6926b8490a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076696"
 ---
 # <a name="autotranslation-of-character-data"></a>字符数据的自动转换
   字符数据，例如 ANSI 字符 SQL_C_CHAR 用声明的变量或数据存储在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用**char**， **varchar**，或**文本**数据类型，可以表示只有有限的数量的字符。 对于每个字符使用一个字节进行存储的字符数据，它只能表示 256 个字符。 使用客户端计算机的 ANSI 代码页 (ACP) 解释存储在 SQL_C_CHAR 变量中的值。 使用存储的值**char**， **varchar**，或**文本**服务器上的数据类型使用服务器的 ACP 进行评估。  

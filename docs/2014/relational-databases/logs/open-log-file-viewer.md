@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 457d30086bf8be4f44c002ab1fd54c38f92f8031
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170238"
 ---
 # <a name="open-log-file-viewer"></a>打开日志文件查看器
   可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的日志文件查看器来访问有关在以下日志中捕获的错误和事件的信息：  
@@ -49,7 +46,7 @@ ms.locfileid: "37281563"
   
  若要访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 脱机实例的日志文件，不仅必须具有 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 命名空间的读取权限，还必须具有存储日志文件的文件夹的读取权限。 有关详细信息，请参阅 [查看脱机日志文件](view-offline-log-files.md)主题的“安全性”部分。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  要求具有 securityadmin 固定服务器角色的成员身份。  
   
 ### <a name="view-log-files"></a>查看日志文件  

@@ -4,24 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: fefb46e8-6901-4d50-a3f8-7c49ad72e7b1
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63c244c74ac6039867834b7c289fd02de2e03b17
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: baca8a9c339ff55ad25f390ac73a2957fdd26447
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083619"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119367"
 ---
 # <a name="new-linked-report-page-report-manager"></a>“新建链接报表”页（报表管理器）
   使用“新建链接报表”页可以创建链接报表。 链接报表是指具有自己的设置和属性、但链接到其他报表的报表定义的报表。 如果您有一个基础报表并且希望在它的基础上针对特定组或特定用户加以改动，则链接报表很有用；根据您指定为参数的区域代码返回不同数据的区域报表便是链接报表的一个例子。 链接报表通常是通过参数化报表创建。如果您希望每个报表具有不同的参数值，则可以为每个报表实例保存不同的参数值以创建参数化报表。 不过，您也可以通过有权访问的任何报表创建链接报表。  

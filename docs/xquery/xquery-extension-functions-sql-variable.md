@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sql:variable() function
 - sql:variable function
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 299c762bc8c1487990402fc627d0d25268315947
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745335"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数-sql:variable()
+# <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数 - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   显示在 XQuery 表达式中包含 SQL 关系值的变量。  
@@ -42,7 +36,7 @@ ms.locfileid: "38018198"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  本主题中所述[数据 XML 内部绑定关系](../t-sql/xml/binding-relational-data-inside-xml-data.md)，在使用时，可以使用此函数[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)若要显示在 XQuery 内的关系值。  
   
  例如， [query （） 方法](../t-sql/xml/query-method-xml-data-type.md)用来指定针对 XML 实例中存储的查询**xml**数据类型变量或列。 有时，您可能还希望查询使用 [!INCLUDE[tsql](../includes/tsql-md.md)] 变量或参数中的值同时引入关系数据和 XML 数据。 若要执行此操作，您可以使用**sql: variable**函数。  

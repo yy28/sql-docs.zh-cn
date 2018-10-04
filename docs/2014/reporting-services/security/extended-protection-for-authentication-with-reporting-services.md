@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e1de2e37101fe69c1593169d68f314e23e6b9775
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2a857d433a39958c6018ef8026de2ca3e1efba1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168257"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services 针对验证的扩展保护
   扩展保护是针对最新版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 操作系统的一组增强功能。 扩展保护增强了应用程序可用来保护凭据和身份验证的方式。 功能本身并不直接提供保护防止特定攻击 （如凭据转发），但它提供了基础结构应用程序如[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]强制执行身份验证扩展保护。  
@@ -129,8 +126,7 @@ ms.locfileid: "37288763"
 ```  
   
 ## <a name="service-binding-and-included-spns"></a>服务绑定和所包含的 SPN  
- 服务绑定使用服务器主体名称或 SPN 来验证身份验证标记的预期目标。 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用现有的 URL 预留信息来生成视为有效的 SPN 的列表。 使用 URL 预留信息来验证 SPN 和 URL 预留使系统管理员能够从单个位置管理这两者。  
+ 服务绑定使用服务器主体名称或 SPN 来验证身份验证标记的预期目标。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用现有的 URL 预留信息来生成视为有效的 SPN 的列表。 使用 URL 预留信息来验证 SPN 和 URL 预留使系统管理员能够从单个位置管理这两者。  
   
  当报表服务器启动、扩展保护的配置设置更改或回收应用程序域时，将更新有效 SPN 的列表。  
   

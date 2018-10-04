@@ -1,12 +1,10 @@
 ---
-title: sys.dm_os_loaded_modules (TRANSACT-SQL) |Microsoft 文档
+title: sys.dm_os_loaded_modules (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_loaded_modules
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1888f39f6024a0b299834217c2f8b69052761b65
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467163"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794315"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +32,7 @@ ms.locfileid: "34467163"
   针对每个加载到服务器地址空间的模块返回一行。  
   
 > [!NOTE]  
->  若要从我们称之为[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_loaded_modules**。  
+>  若要调用此项从[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名称**sys.dm_pdw_nodes_os_loaded_modules**。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,15 +46,15 @@ ms.locfileid: "34467163"
 |**special_build**|**bit**|1 = 模块是特殊版本的已加载模块。|  
 |**语言**|**int**|模块的版本信息语言。|  
 |**公司**|**nvarchar(256)**|创建模块的公司的名称。|  
-|**说明**|**nvarchar(256)**|模块的说明。|  
+|**description**|**nvarchar(256)**|模块的说明。|  
 |**名称**|**nvarchar(255)**|模块的名称。 包括模块的完整路径。|  
-|**pdw_node_id**|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此分布的节点标识符。|  
+|**pdw_node_id**|**int**|适用于：[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有服务器的 VIEW SERVER STATE 权限。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [与 SQL Server 操作系统相关的动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

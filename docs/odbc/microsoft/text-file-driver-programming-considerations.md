@@ -1,13 +1,11 @@
 ---
-title: 文本文件驱动程序编程注意事项 |Microsoft 文档
+title: 文本驱动程序编程注意事项 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], text file driver
 - Jet-based ODBC drivers [ODBC], text file driver
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae4d2b7474d6177b2fb4cdb36e6ed3e61fb72e97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3a7db9667f24e11fe6a75f73e0dd7e79522db13
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837855"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文本文件驱动程序编程注意事项
 本节包含下列主题：  

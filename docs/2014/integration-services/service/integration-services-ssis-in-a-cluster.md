@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a918816d8fd90624b625ed6107bbdc5e86b2cc08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0846c7bdb0728d79dc3538eb5a46797e1b77e3db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095977"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>群集中的 Integration Services (SSIS)
   建议不要对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行聚类分析，因为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务不是群集服务或群集感知服务，而且不支持从一个群集节点故障转移到另一个节点。 因此，在群集环境内，应当在群集的每个节点上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 并将其作为一个独立服务来启动。  

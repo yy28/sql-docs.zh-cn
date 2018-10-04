@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: df869e1dc331a16d500e95bbc711584ab7482d3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210937"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
   Tablix 数据区域具有四个包含 Tablix 单元的区域：角部区、行组区、列组区和正文区。 每个区域中的单元都具有不同功能。 向 Tablix 正文区添加单元可以显示详细信息数据和分组数据。 创建组时，报表生成器和报表设计器向行组区或列组区添加单元，以便显示组实例值。 存在行组和列组时，报表生成器和报表设计器将创建 Tablix 角单元。  

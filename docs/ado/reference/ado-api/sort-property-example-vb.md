@@ -1,32 +1,29 @@
 ---
-title: 排序属性示例 (VB) |Microsoft 文档
+title: 排序属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770085"
 ---
-# <a name="sort-property-example-vb"></a>排序属性示例 (VB)
-此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[排序](../../../ado/reference/ado-api/sort-property.md)属性重新排序的行**记录集**派生自***作者***的表***Pubs***数据库。 辅助实用程序例程将打印每个行。  
+# <a name="sort-property-example-vb"></a>Sort 属性示例 (VB)
+此示例使用[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象的[排序](../../../ado/reference/ado-api/sort-property.md)属性来重新排列的行**记录集**派生自***作者***的表***Pubs***数据库。 辅助实用工具例程打印每个行。  
   
 ```  
 'BeginSortVB  
@@ -107,7 +104,7 @@ End Sub
 'EndSortVB  
 ```  
   
- 这是打印给定的标题，并指定内容的辅助实用工具例程**记录集**。  
+ 这是打印给定的标题和指定的内容的辅助实用工具例程**记录集**。  
   
 ```  
 Attribute VB_Name = "Sort"  

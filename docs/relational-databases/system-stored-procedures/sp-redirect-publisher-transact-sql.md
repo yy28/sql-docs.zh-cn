@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_redirect_publisher_TSQL
 - sp_redirect_publisher
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d2a6ecf88b7b41929644b78e04544e47f5f98b61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718765"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +57,7 @@ sp_redirect_publisher
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_redirect_publisher**用于允许复制发布服务器重定向到当前主副本的 Always On 可用性组通过将发布服务器/数据库对与某一可用性组的侦听器相关联。 执行**sp_redirect_publisher** AG 侦听器配置包含已发布的数据库的可用性组后。  
   
  如果在原始发布服务器的发布数据库已从可用性组主副本上，执行**sp_redirect_publisher**无需指定值*@redirected_publisher*若要删除发布服务器/数据库对的重定向的参数。 有关重定向发布服务器的详细信息，请参阅[维护 AlwaysOn 发布数据库&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)。  

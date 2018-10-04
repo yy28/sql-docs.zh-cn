@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.general.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 2464bb8d-1139-4b2b-8f98-0983e62167ea
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e7a5fca7092cff71a7ec0995421d0fdf6685b2d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d2c9c57a69f4ee16d614add0e9bfb92129ce429a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263354"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212417"
 ---
 # <a name="trace-file-properties-general-tab"></a>跟踪文件属性（“常规”选项卡）
   使用 **“跟踪文件属性”** 对话框中的 **“常规”** 选项卡可以查看跟踪文件的属性。  
   
  若要查看此窗口，请打开跟踪文件。 然后在 **“文件”** 菜单上，单击 **“属性”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **文件名**  
  所显示的跟踪文件的路径和名称。  
   

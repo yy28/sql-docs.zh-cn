@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.changetracking.f1
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff372309d1f9f5c7eda982b4c431c24556c6f073
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 210fba26d1a99ade85000e3ef94a41e638a8774b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225577"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176207"
 ---
 # <a name="database-properties-changetracking-page"></a>数据库属性（“更改跟踪”页）
   使用此页可查看或修改所选数据库的更改跟踪设置。 有关在此页上可用选项的详细信息，请参阅[启用和禁用更改跟踪 (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **更改跟踪**  
  用于启用或禁用数据库的更改跟踪。  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048619"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>定义本地货币引用（商业智能向导）
   可以使用“定义本地货币引用”页，为涉及“选择换算类型”页中指定的多对多或多对一换算类型的货币换算功能定义本地货币。 本地货币是存储 **“选择度量值”** 页中所选度量值的事务时使用的货币。  
@@ -29,7 +26,7 @@ ms.locfileid: "37206277"
 > [!NOTE]  
 >  如果从维度设计器或者通过在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的解决方案资源管理器中右键单击维度启动了商业智能向导，则将不会显示此页。 如果在“选择换算类型”页中选择了“一对多”，则不会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **事实数据表中的标识符**  
  对于包含“选择度量值”页中所选度量值的事实数据表所引用的货币维度，选择此选项可指定为该货币维度中的本地货币提供货币标识符的属性。 (的货币维度中一个其`Type`属性设置为*货币*。)  
   

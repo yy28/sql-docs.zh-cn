@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147302"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>第 4 课：浏览 Targeted Mailing 模型（数据挖掘基础教程）
   在处理项目中的模型后，可以浏览它们以查找所关注的趋势。 因为仅仅查看数字难以发现复杂的模式，SQL Server 数据挖掘提供一些可视工具，可帮助您调查数据和理解算法在数据内发现的规则和关系。 您还可以使用各种准确性测试来在部署之前验证您的数据集或发现哪个模型的性能最佳。  

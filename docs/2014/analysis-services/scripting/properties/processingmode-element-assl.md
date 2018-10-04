@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessingMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ProcessingMode element
 ms.assetid: dff6eeba-f09c-4d8c-ad81-caef76254af0
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a966a1d800107b18316e875bd8c9552df613cfe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 550b19dc291818052b954b476d3673fd717d38ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148597"
 ---
 # <a name="processingmode-element-assl"></a>ProcessingMode 元素 (ASSL)
   指示该实例应该在处理期间还是处理后进行索引和聚合。  
@@ -59,9 +56,9 @@ ms.locfileid: "37273783"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[多维数据集](../objects/cube-element-assl.md)，[维度](../objects/dimension-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[分区](../objects/partition-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `ProcessingMode` 上的 `Cube` 值可为该多维数据集提供默认值，并可以通过为每个分区设置 `ProcessingMode` 覆盖该值。  
   
  此元素的值限定为下表中列出的字符串之一。  

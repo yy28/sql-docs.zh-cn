@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89a99ed7f3f38abba8eeaaf8b2f420106dbbe790
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198427"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
   Analysis Services 实例将会把服务器通知、错误和警告记录到 msmdsrv.log 文件中 – 你安装的每个实例都有该文件。 管理员参考此日志，了解例程和异常事件等信息。 在最新版本中，已增强日志记录，能容纳更多信息。 日志记录现在包括产品版本和版本信息以及处理器、内存、连接性和阻止事件。 你可在 [日志记录改进](http://support.microsoft.com/kb/2965035)中查看整个更改列表。  
@@ -48,9 +45,9 @@ ms.locfileid: "37228367"
   
 |文件名或位置|类型|用于|在默认情况下启用|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|错误日志|例程监控和基本故障排除|是|  
-|关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|“否”|  
-|SQLDmp\<guid >.mdmp 文件|崩溃和异常|深度故障排除|“否”|  
+|Msmdsrv.log|错误日志|例程监控和基本故障排除|用户帐户控制|  
+|关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|否|  
+|SQLDmp\<guid >.mdmp 文件|崩溃和异常|深度故障排除|否|  
   
  我们强烈建议使用以下链接查看此主题中未涉及的其他信息资源： [来自 Microsoft 支持的初始数据集合提示](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
@@ -159,7 +156,7 @@ ms.locfileid: "37228367"
 |值|Description|  
 |-----------|-----------------|  
 |0|关闭内存转储文件。 忽略在“例外”部分下的所有其他设置。|  
-|@shouldalert|（默认）启用，但不发送内存转储文件。|  
+|1|（默认）启用，但不发送内存转储文件。|  
 |2|启用并自动发送错误报告到 Microsoft。|  
   
  `CrashReportsFolder` 是转储文件的位置。 默认情况下，可在 \Olap\Log 文件夹找到 .mdmp 文件和相关日志记录。  

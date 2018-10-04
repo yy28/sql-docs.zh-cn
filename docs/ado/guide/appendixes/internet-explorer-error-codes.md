@@ -1,31 +1,28 @@
 ---
-title: Internet 资源管理器错误代码 |Microsoft 文档
+title: Internet Explorer 错误代码 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2182c2c57e279e8f364e4d111270518d2b97387
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270298"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803875"
 ---
-# <a name="internet-explorer-error-codes-for-remote-data-service"></a>远程数据服务的 Internet 资源管理器错误代码
-下表列出了与远程数据服务使用情况相关的 Microsoft® Internet Explorer 错误代码。 低两个字节的正十进制转换，显示完整的错误代码和十六进制值的负十进制转换。
+# <a name="internet-explorer-error-codes-for-remote-data-service"></a>远程数据服务的 Internet 资源管理器中的错误代码
+下表列出了与远程数据服务使用情况相关的 Microsoft® Internet Explorer 错误代码。 低两个字节的正十进制转换，显示了完整的错误代码和十六进制值的负十进制转换。
 
 |Internet Explorer (Wininet) 错误|Number|Description|
 |------------------------------------------|------------|-----------------|

@@ -1,17 +1,12 @@
 ---
-title: sys.fn_cdc_map_lsn_to_time (Transact SQL) |Microsoft 文档
+title: sys.fn_cdc_map_lsn_to_time (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_map_lsn_to_time_TSQL
 - sys.fn_cdc_map_lsn_to_time
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_cdc_map_lsn_to_time
 - fn_cdc_map_lsn_to_time
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2352312d37f65dece606616734423ba609c8d923
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230934"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756777"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +44,15 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>参数  
  *lsn_value*  
- 要进行匹配的 LSN 值。 *lsn_value*是**binary （10)**。  
+ 要进行匹配的 LSN 值。 *lsn_value*是**binary(10)**。  
   
 ## <a name="return-type"></a>返回类型  
  **datetime**  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  此函数可用于确定更改基于已提交的时间 **__ $start_lsn**变更数据的行中返回的值。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。  
   
 ## <a name="examples"></a>示例  
@@ -74,8 +68,8 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [cdc.lsn_time_mapping &#40;Transact SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [cdc.lsn_time_mapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  

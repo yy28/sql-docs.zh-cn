@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
 ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613847dca4d6113a8acfc8079ebc1e7a97ef3311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192473"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087900"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>选择源多维数据集维度（数据挖掘向导）
   可以使用 **“选择源多维数据集维度”** 页，从包含要分析的事例的多维数据集中选择维度。 例如，如果您在生成一个依据人口统计信息对客户的购买行为进行分析的模型，您会选择 Customer 维度，该维度中通常包含每个客户的唯一记录以及表示人口统计信息（如性别、住址或收入）的各种属性。 在该向导的后面部分，您将可以添加一个与此事例表相关的表：例如，您可能添加一个列出该客户已购买产品的嵌套表。  
@@ -29,7 +26,7 @@ ms.locfileid: "37192473"
 > [!NOTE]  
 >  只有在向导的“选择定义方法”页上选择了“从现有多维数据集”之后，才会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择源多维数据集维度**  
  选择将为挖掘结构提供源数据的多维数据集的维度。  
   

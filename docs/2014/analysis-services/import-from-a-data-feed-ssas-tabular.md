@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099837"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>从数据馈送导入（SSAS 表格）
   数据馈送是从联机数据源生成的流向目标文档或应用程序的一个或多个 XML 数据流。 可以通过使用“表导入向导”将数据从数据馈送导入模型中。  

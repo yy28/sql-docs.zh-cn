@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3ab94654466cf739f1ee4db7d842223b1f3a31aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a8aa68ed49127f73aeb2244ab2dcb999c65c4b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149757"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS 中的 Reference Data Services
   引用数据指的是可信公共域或高级商业内容提供程序中提供的一组准确和完整的相关或分类全局数据（超越企业的界限）。  
@@ -34,9 +31,7 @@ ms.locfileid: "37302787"
   
 -   支持使用来自 Microsoft Azure 市场的引用数据，以及直接来自第三方引用数据提供程序的引用数据。  
   
-##  
-  <a name="Marketplace">
-  </a> 使用来自 Microsoft Azure 市场的引用数据  
+##  <a name="Marketplace"></a> 使用来自 Microsoft Azure 市场的引用数据  
  DQS 支持使用来自 Microsoft Azure 市场的引用数据，使内容提供程序能够通过市场提供引用数据服务。 Marketplace 是 Microsoft 的一项服务，它为高质量数据和应用程序提供单一市场和交付渠道来作为云服务。 有关市场的详细信息，请参阅 [了解 Microsoft Azure 市场](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291)。  
   
  市场和 DQS 之间的无缝集成简化了与从 DQS 中发现、浏览和获取数据质量项目的信息相关的步骤。 从 DQS 中使用数据，并通过使用一种创新方法将 DQS、市场和引用数据服务提供程序结合起来，帮助 DQS 用户获得高数据质量。  
