@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066800"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文索引
      
@@ -40,7 +37,7 @@ ms.locfileid: "37243107"
     |----------|-----------------|  
     |**常规**|显示全文索引的基本属性。 这些基本属性包括若干个可修改属性和多个不可更改属性，后者如数据库名称、表名和全文键列的名称。 可修改属性包括：<br /><br /> **全文索引非索引字表**<br /><br /> **全文索引已启用**<br /><br /> **更改跟踪**<br /><br /> **搜索属性列表**<br /><br /> <br /><br /> 有关详细信息，请参阅[全文本索引属性（常规页）](full-text-index-properties-general-page.md)。|  
     |**“列”**|显示可用于全文索引的表列。 对于选中的列，均会创建全文索引。 您可以根据需要选择将任意数目的可用列包括在全文索引中。 有关详细信息，请参阅[全文本索引属性（列页）](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \* **退出后**全文本索引属性**对话框中，所有新创建的计划程序与 SQL Server 代理作业 （启动表增量填充*database_name*。*table_name*)。|  
+    |**计划**|使用此页可以创建或管理 SQL Server 代理作业的计划，该作业用于启动全文索引填充的表增量填充。 有关详细信息，请参阅 [填充全文索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \*** 退出后**全文本索引属性**对话框中，所有新创建的计划程序与 SQL Server 代理作业 （启动表增量填充*database_name*。*table_name*)。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 以保存任何更改并退出“全文索引属性”对话框。  
   

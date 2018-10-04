@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.querybuilder.f1
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc765cfceb8e52d3fbb578e3c3b6f212f28a3291
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156318"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116977"
 ---
 # <a name="query-builder"></a>查询生成器
   可以使用 **“查询生成器”** 对话框，创建在执行 SQL 任务、OLE DB 源和 OLE DB 目标以及查找转换中使用的查询。  
@@ -46,7 +43,7 @@ ms.locfileid: "37156318"
   
  查找转换和模糊查找转换也可以使用带有参数和返回代码和变量。 有关 OLE DB 源的信息也适用于上述两种转换。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **工具栏**  
  使用工具栏可以管理数据集、选择要显示的窗格以及控制查询函数。  
   
@@ -67,7 +64,7 @@ ms.locfileid: "37156318"
  **查询定义**  
  查询定义提供可用来定义和测试查询的工具栏和窗格。  
   
-|窗格|Description|  
+|Pane|Description|  
 |----------|-----------------|  
 |**“关系图”** 窗格|在关系图中显示查询。 关系图可显示查询中包含的表以及这些表的联接方式。 选中或清除表中某列旁边的复选框，即可在查询输出中添加或删除该列。<br /><br /> 当您向查询添加表时，查询生成器将根据表和表中的键在表之间创建联接。 若要添加联接，请将一个表中的字段拖到另一个表中的字段上。 若要管理联接，请右键单击该联接，再选择菜单选项。<br /><br /> 右键单击“关系图”窗格，可以添加或删除表，选择所有表，以及显示或隐藏窗格。|  
 |**“网格”** 窗格|在网格中显示查询。 使用此窗格可以在查询中添加和删除列，以及更改每个列的设置。|  

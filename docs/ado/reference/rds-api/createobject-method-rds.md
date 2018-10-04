@@ -1,42 +1,39 @@
 ---
-title: CreateObject 方法 (RDS) |Microsoft 文档
+title: CreateObject 方法 (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d331bdf617e2b7b748039d69347f00f7fb4046a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761215"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
-创建用于目标业务对象的代理，并将指针返回到它。 与业务对象的通信，以通过 Internet 发送请求和数据服务器端存根 （stub） 将代理包和封送处理数据。 对于进程内组件的对象，不使用代理、 提供只需指向对象的指针。  
+创建目标业务对象的代理，并返回的指针。 用来与业务对象的通信通过 Internet 发送的请求和数据服务器端存根 （stub） 代理包和封送数据。 对于进程内组件对象，不使用代理，提供只需指向对象的指针。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
- 远程数据服务支持以下协议： HTTP、 HTTPS (安全套接字层的 HTTP)、 DCOM、 和进程内。  
+ 远程数据服务支持以下协议： HTTP、 HTTPS (安全套接字层的 HTTP)、 DCOM 和进程内。  
   
 |协议|语法|  
 |--------------|------------|  
-|HTTP|设置对象 = DataSpace.CreateObject ("ProgId"，"http://awebsrvr")|  
-|HTTPS|设置对象 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
+|HTTP|集对象 = DataSpace.CreateObject ("ProgId"，"http://awebsrvr")|  
+|HTTPS|集对象 = DataSpace.CreateObject ("ProgId"，"https://awebsrvr")|  
 |DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
 |进程内|Set object = DataSpace.CreateObject("ProgId", "")|  
   
@@ -45,16 +42,16 @@ ms.locfileid: "35287566"
  计算结果为一个对象，它在指定的类型的对象变量*ProgID*。  
   
  *DataSpace*  
- 表示的对象变量[rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)用于创建新对象的实例的对象。  
+ 表示的对象变量[rds。数据空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象，用于创建新对象的实例。  
   
  *ProgID*  
- A**字符串**包含指定实现应用程序的业务规则的服务器端业务对象的编程标识符的值。  
+ 一个**字符串**值，该值包含指定用于实现应用程序的业务规则的服务器端业务对象的编程标识符。  
   
  *awebsrvr*或*computername*  
- A**字符串**值，该值表示用于标识 Internet 信息服务 (IIS) Web 服务器创建服务器业务对象的实例所在的 URL。  
+ 一个**字符串**值，该值表示用于标识在其中创建服务器业务对象的实例的 Internet 信息服务 (IIS) Web 服务器的 URL。  
   
-## <a name="remarks"></a>Remarks  
- *HTTP 协议*是标准 Web 协议;*HTTPS*是安全的 Web 协议。 使用*DCOM 协议*运行时没有 HTTP 的本地网络。 *进程内*协议是本地的动态链接库 (DLL)，它不使用网络。  
+## <a name="remarks"></a>备注  
+ *HTTP 协议*是标准的 Web 协议;*HTTPS*是不安全的 Web 协议。 使用*DCOM 协议*局域网不使用 HTTP 运行时。 *进程内*协议是本地的动态链接库 (DLL); 它不使用网络。  
   
 ## <a name="applies-to"></a>适用范围  
  [DataSpace 对象 (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  

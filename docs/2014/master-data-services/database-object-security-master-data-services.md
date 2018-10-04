@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2e4feb3f09b8012c17156e085e16dcf39df3088
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163498"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183517"
 ---
 # <a name="database-object-security-master-data-services"></a>数据库对象安全性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库中，数据存储在多个数据库表中并可以通过视图查看。 您在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 应用程序中受保护的信息对于具有 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库访问权限的用户是可见的。  
@@ -48,7 +45,7 @@ ms.locfileid: "37163498"
 ##  <a name="Staging"></a> 临时处理数据  
  在下表中，每个安全对象都将“name”作为名称的一部分。 这指示在创建实体时指定的临时表的名称。 有关详细信息，请参阅[数据导入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |将叶成员及其属性加载到临时表中。|stg.name_Leaf|必需：INSERT<br /><br /> 可选：SELECT 和 UPDATE|  
 |将数据从叶临时表加载到相应的 MDS 数据库表中。|stg.udp_name_Leaf|在运行 CREATE 语句前执行|  
@@ -62,7 +59,7 @@ ms.locfileid: "37163498"
   
 ##  <a name="rules"></a> 根据业务规则对数据进行验证  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|---------------|-----------------|  
 |根据业务规则验证数据版本|mdm.udpValidateModel|在运行 CREATE 语句前执行|  
   
@@ -70,7 +67,7 @@ ms.locfileid: "37163498"
   
 ##  <a name="Versions"></a> 删除版本  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |确定要删除的版本的 ID|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |删除模型的版本|mdm.udpVersionDelete|在运行 CREATE 语句前执行|  
@@ -79,7 +76,7 @@ ms.locfileid: "37163498"
   
 ##  <a name="Hierarchy"></a> 立即应用层次结构成员权限  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |立即应用成员权限|mdm.udpSecurityMemberProcessRebuildModel|在运行 CREATE 语句前执行|  
   
@@ -87,7 +84,7 @@ ms.locfileid: "37163498"
   
 ##  <a name="SysAdmin"></a> 更改系统管理员帐户  
   
-|操作|安全对象|权限|  
+|操作|安全对象|Permissions|  
 |------------|----------------|-----------------|  
 |确定新管理员的 SID|mdm.tblUser|SELECT|  
 |更改系统管理员帐户|mdm.udpSecuritySetAdministrator|在运行 CREATE 语句前执行|  

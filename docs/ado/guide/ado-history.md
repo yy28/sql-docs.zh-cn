@@ -1,10 +1,8 @@
 ---
-title: ADO 历史记录 |Microsoft 文档
+title: ADO 历史记录 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,63 +10,62 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, what's new
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55a51c23b60f057d3aaf19270b9e814ea40dfce9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e00a1ff652e3f1463d37e2cd5457965968b4ba4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271456"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709555"
 ---
-# <a name="ado-features-for-each-release"></a>每个版本的 ADO 功能
-本主题列出每个版本的 ADO、 ADO MD 和 ADOX 引入的新功能。
+# <a name="ado-features-for-each-release"></a>对于每个版本的 ADO 功能
+本主题列出了每个版本的 ADO、 ADO MD 和 ADOX 引入的新功能。
 
 ## <a name="ado-60"></a>ADO 6.0
- 在 Windows Vista 中，作为 Windows 数据访问组件 (Windows DAC) 6.0 的一部分包括 ADO 6.0。 ADO 6.0 在功能上等效于 ADO 2.8。
+ ADO 6.0 包含在 Windows Vista，Windows 数据访问组件 (Windows DAC) 6.0 的一部分。 ADO 6.0 是功能上等效于 ADO 2.8。
 
 ## <a name="ado-28"></a>ADO 2.8
  ADO 2.8 已包含在 Windows XP 和 Windows Server 2003 中，作为一部分的 Microsoft 数据访问组件 (MDAC) 2.8。 MDAC 2.8 的可再发行组件版本也是可用;请注意，此可再发行组件版本仅在 Windows 2000 上安装。 ADO 2.8 解决几个与安全相关的问题：
 
- *受信任区域之外不允许硬盘驱动器访问。*
-在跨域脚本涉及非信任的站点，会禁用以下操作： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**、 结合使用**adCmdFile**标志或与 Microsoft OLE DB 持久性提供程序 (MSPersist)。
+ *外部受信任的区域不允许硬盘驱动器访问。*
+在跨域脚本涉及非信任的站点，将禁用以下操作： **Stream.SaveToFile**， **Stream.LoadFromFile**， **Recordset.Save**，和**Recordset.Open**、 与结合使用**adCmdFile**标志或使用 Microsoft OLE DB 永久性提供程序 (MSPersist)。
 
- **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和***Stream.LoadFromFile***物理的文件进行操作。*
-这些方法现在验证文件句柄指向仅限于物理文件。
+ **Recordset.Open** *，***Recordset.Save** *，***Stream.SaveToFile** *，和***Stream.LoadFromFile***对仅限物理文件进行操作。* 
+现在，这些方法验证文件句柄指向仅限物理文件。
 
- **Recordset.ActiveCommand***返回调用从 HTML/ASP 页时出错。*
-这可以防止**命令**被误用的对象。
+ **Recordset.ActiveCommand***返回错误时调用的 HTML/ASP 页中。* 
+这可以防止**命令**对象被误用。
 
- *数***记录集***返回嵌套***形状***命令具有上限。*
-嵌套的形状命令现在返回最多 512 个**记录集**。 这意味着，**形状**不再可以在任何深度嵌套命令。 相反，最大级别深度是 512，如果每个命令结果在一次 （子级）**记录集**。 如果是，在任何级别**形状**命令将返回多个**记录集**，最大深度级别将小于 512。
+ *数***记录集***返回嵌套***形状***命令的上限。* 
+嵌套的形状命令现在返回最多为 512**记录集**。 这意味着**形状**命令不再可以嵌套在任何深度。 相反，级别的最大深度是 512，如果每个命令导致 （子级） 的单个**记录集**。 如果在任何级别**形状**命令返回多个**记录集**，深度的最大级别将为小于 512。
 
 ## <a name="ado-27"></a>ADO 2.7
- *64 位平台支持*ADO 2.7 引入了对 64 位处理器支持。
+ *64 位平台支持*ADO 2.7 引入了对 64 位处理器的支持。
 
 ## <a name="ado-26"></a>ADO 2.6
- **CubDef.GetSchemaObject***方法*从 ADO 2.6 开始，ADO MD 检索对象，可以使用唯一的名称，作为指定的[UniqueName 属性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。 父对象的名称不必已知的也不需父集合填充，以便检索的架构对象。 请参阅[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
+ **CubDef.GetSchemaObject***方法*从 ADO 2.6 开始，ADO MD 对象可以使用检索的唯一名称，由指定[UniqueName 属性 (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md)。   无需已知的父对象的名称和父集合无需填充要检索的架构对象。 请参阅[GetSchemaObject 方法 (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)。
 
- *命令流***命令**对象支持命令以流格式作为使用的替代方法**CommandText**属性。 [CommandStream 属性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可以用来指定 XML 模板或作为 updategram**命令**带有 Microsoft OLE DB Provider for SQL Server 的输入。
+ *命令流***命令**对象作为一种方式使用流格式支持命令**CommandText**属性。 [CommandStream 属性 (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md)可用于指定 XML 模板或 updategram 作为**命令**与 Microsoft OLE DB Provider for SQL Server 的输入。
 
- **方言***属性*[方言](../../ado/reference/ado-api/dialect-property.md)是一个新属性，定义的语法和一般规则提供程序使用来分析字符串或流。
+ **方言***属性*[方言](../../ado/reference/ado-api/dialect-property.md)是一个新属性，定义的语法和提供程序使用来分析该字符串或流的一般规则。  
 
- **Command.Execute***方法*[执行方法](../../ado/reference/ado-api/execute-method-ado-command.md)的 ADO**命令**对象已得到增强，以用于输入和输出的流。
+ **Command.Execute***方法* [Execute 方法](../../ado/reference/ado-api/execute-method-ado-command.md)的 ADO**命令**对象已经过增强，用于输入和输出流。  
 
- *字段 statusvalues*如果修改时，则在用户遇到 DB_E_ERRORSOCCURRED 错误**字段**的**记录集**，现在将填充 ADO **Field.Status**与相应的状态信息的属性，以便用户都具有有关发生的问题的详细信息。 请参阅[状态属性 （ADO 字段）](../../ado/reference/ado-api/status-property-ado-field.md)。
+ *字段 statusvalues*如果用户修改时遇到了 DB_E_ERRORSOCCURRED 错误**字段**的**记录集**，现在将填充 ADO **Field.Status**与相应的状态信息的属性，以便用户将包含有关错误原因的详细信息。 请参阅[Status 属性 （ADO 字段）](../../ado/reference/ado-api/status-property-ado-field.md)。
 
- **NamedParameters***属性* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是的一个新属性**命令**对象，它指示提供程序应使用名为参数。
+ **NamedParameters***属性* [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md)是新的属性**命令**对象，它指示提供程序应使用名为参数。  
 
- *在流的结果集*ADO 可以从数据源中返回的结果集**流**，而不是**记录集**对象。 适用于 SQL Server 使用的 Microsoft OLE DB 提供程序的最新版本，你可以获取 XML 结果从提供程序通过执行"XML"查询。 A**流**接收结果集中可以使用作为源的"XML"命令打开。 请参阅[到流中检索结果集](../../ado/guide/data/retrieving-resultsets-into-streams.md)。
+ *流中的结果集*ADO 可以从数据源中返回的结果集**Stream**，而非**记录集**对象。 使用适用于 SQL Server 的 Microsoft OLE DB 访问接口的最新版本，可以获取从提供程序 XML 结果通过执行"XML"查询。 一个**Stream**用于接收结果集可以使用作为源的"XML"命令打开。 请参阅[到流中检索结果集](../../ado/guide/data/retrieving-resultsets-into-streams.md)。
 
- *单行结果集*ADO**记录**对象现在可以打开上的命令字符串或**命令**从提供程序返回的数据的一个行的对象。 这会导致与 MDAC 2.6 提供程序的改进性能。 请参阅[Open 方法 （ADO 记录）](../../ado/reference/ado-api/open-method-ado-record.md)。
+ *单行结果集*ADO**记录**对象现在可以打开上一个命令字符串或**命令**从提供程序返回一个数据行的对象。 这会导致与 MDAC 2.6 提供改进的性能。 请参阅[Open 方法 （ADO 记录）](../../ado/reference/ado-api/open-method-ado-record.md)。
 
 ## <a name="ado-25"></a>ADO 2.5
- **记录***对象*ADO 2.5 引入了**记录**对象来表示和管理中的行将**记录集**或数据提供程序，或对象封装半结构化的数据，如文件或目录。
+ **记录***对象*ADO 2.5 引入了**记录**对象用于表示和管理中的行将**记录集**或数据提供程序，或对象封装半结构化的数据，例如文件或目录。
 
- **流***对象*ADO 2.5 还引入了**流**对象以代表二进制或文本数据的流。
+ **Stream** *对象*ADO 2.5 还引入了**Stream**对象来表示二进制或文本数据的流。
 
- *URL 绑定*ADO 2.5 引入了一个 URL，将用作连接字符串和命令文本，名称数据存储对象的替代方法。 可以使用某 URL 与现有**连接**和**记录集**对象，以及与新一样**记录**和**流**对象。
+ *URL 绑定*ADO 2.5 引入了一个 URL，用作连接字符串和命令文本，来命名数据存储区对象的替代方法。 可以与现有使用某 URL**连接**和**记录集**对象，也与新一样**记录**并**Stream**对象。
 
- *数据访问接口支持 URL 绑定*ADO 2.5 支持识别 URL 方案的 OLE DB 提供程序。 这包括用于 Internet 发布，也不能访问 Windows 2000 文件系统可识别现有的 HTTP 方案的 OLE DB 提供程序。
+ *数据访问接口支持 URL 绑定*ADO 2.5 支持 OLE DB 访问接口识别的 URL 方案。 用于 Internet 发布，也不能访问 Windows 2000 的文件系统可以识别现有 HTTP 方案，这包括 OLE DB 访问接口。

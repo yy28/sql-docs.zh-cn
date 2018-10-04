@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AxesInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - AxesInfo element
 ms.assetid: 15cfa67d-5acd-4737-8a81-2df34b334d3f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93ad2eb9d35384831cb952d140be267e75a7647d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7bde7feb88ad570665200c1c3357bbba4127a963
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178404"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178487"
 ---
 # <a name="axesinfo-element-xmla"></a>AxesInfo 元素 (XMLA)
   包含一系列[AxisInfo](axisinfo-element-xmla.md)元素，表示轴的元数据包含在父[OlapInfo](olapinfo-element-xmla.md)元素。  
@@ -54,8 +51,8 @@ ms.locfileid: "37178404"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37178404"
 |父元素|[OlapInfo](olapinfo-element-xmla.md)|  
 |子元素|[AxisInfo](axisinfo-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `AxesInfo` 元素为由使用 `AxisInfo` 数据类型的 `root` 元素返回的多维数据集中的每个轴包含一个 `MDDataSet` 元素。  
   
 ## <a name="see-also"></a>请参阅  

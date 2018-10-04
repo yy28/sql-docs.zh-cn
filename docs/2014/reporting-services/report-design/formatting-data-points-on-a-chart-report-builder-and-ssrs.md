@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 5078deb733ed1a7056cbfdebbc6ebd2ac1b41cc1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41369eae8034fc7723d8b5517c525313c0feca72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167907"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
   数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](chart-types-report-builder-and-ssrs.md)。  
@@ -65,16 +62,16 @@ ms.locfileid: "37311427"
 |图表关键字|Description|适用的图表类型|等效的简单表达式的示例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|数据点的 Y 值。|All|`=Fields!MyDataField.Value`|  
-|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|InclusionThresholdSetting|  
-|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|InclusionThresholdSetting|  
-|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|InclusionThresholdSetting|  
-|#SERIESNAME|序列名称。|All|InclusionThresholdSetting|  
-|#LABEL|数据点标签。|All|InclusionThresholdSetting|  
+|#VALY2|数据点的 Y 值 #2。|范围图、气泡图|None|  
+|#VALY3|数据点的 Y 值 #3。|股价图、K 线图|None|  
+|#VALY4|数据点的 Y 值 #4。|股价图、K 线图|None|  
+|#SERIESNAME|序列名称。|All|None|  
+|#LABEL|数据点标签。|All|None|  
 |#AXISLABEL|轴数据点标签。|形状|`=Fields!MyDataField.Value`|  
-|#INDEX|数据点索引。|All|InclusionThresholdSetting|  
+|#INDEX|数据点索引。|All|None|  
 |#PERCENT|数据点 Y 值的百分比。|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|序列中所有 Y 值的总计。|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|对应于图例项文本的文本。|All|InclusionThresholdSetting|  
+|#LEGENDTEXT|对应于图例项文本的文本。|All|None|  
 |#AVG|序列中所有 Y 值的平均值。|All|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|序列中所有 Y 值的最小值。|全部|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  

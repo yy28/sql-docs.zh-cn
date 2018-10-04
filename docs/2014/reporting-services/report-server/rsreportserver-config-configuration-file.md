@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc3c6ab630680d3d0d5cf1e3998153ac3e3a66fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a22d59c38366d5010cc472bb5d86414849cf9e22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188729"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RSReportServer.config** 文件存储报表管理器、报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -107,15 +104,15 @@ ms.locfileid: "37305227"
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
 |**Dsn**|指定承载报表服务器数据库的数据库服务器的连接字符串。 在创建报表服务器数据库时，此值会进行加密并添加到配置文件中。 对于 SharePoint，从 SharePoint 配置数据库获取数据库连接信息。|N,S|  
-|**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效的值为`Default`和`Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|否|  
-|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 值为`LogonUser`， `LogonDomain`，和`LogonCred`时报表服务器的连接配置为使用域帐户创建。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|否|  
+|**ConnectionType**|指定报表服务器用来连接报表服务器数据库的凭据类型。 有效的值为`Default`和`Impersonate`。 如果将报表服务器配置为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录帐户或服务帐户连接到报表服务器数据库，则指定 `Default`。 如果报表服务器使用一个 Windows 帐户连接到报表服务器数据库，则指定 `Impersonate`。|N|  
+|**LogonUser、LogonDomain、LogonCred**|存储报表服务器连接到报表服务器数据库时所使用的域帐户的域、用户名和密码。 值为`LogonUser`， `LogonDomain`，和`LogonCred`时报表服务器的连接配置为使用域帐户创建。 有关报表服务器数据库连接的详细信息，请参阅[配置报表服务器数据库连接（SSRS 配置管理器）](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。|N|  
 |**InstanceID**|报表服务器实例的标识符。 报表服务器实例的名称取决于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 此值指定了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 默认情况下，此值是`MSRS12` *\<实例名 >*。 请不要修改此设置。 以下是完整值的一个示例： `<InstanceId>MSRS12.MSSQLSERVER</InstanceId>`<br /><br /> 以下是 SharePoint 模式的示例：<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N,S|  
-|**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|否|  
+|**InstallationID**|安装程序创建的报表服务器安装的标识符。 此值设置为 GUID。 请不要修改此设置。|N|  
 |**SecureConnectionLevel**|指定 Web 服务调用必须使用的安全套接字层 (SSL) 的级别。 此设置用于报表服务器 Web 服务和报表管理器。 当您在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具中配置 URL 以使用 HTTP 或 HTTPS 时将设置此值。 有效值的范围为 0 到 3 之间，其中 0 的安全性最低。 有关详细信息，请参阅 [使用安全 Web 服务方法](../report-server-web-service/net-framework/using-secure-web-service-methods.md) 和 [配置本机模式报表服务器上的 SSL 连接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)。|N,S|  
-|**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|否|  
+|**DisableSecureFormsAuthenticationCookie**|默认值为 False。<br /><br /> 指定是否禁止将用于窗体和自定义身份验证 cookie 强制标记为安全的。 从 SQL Server 2012 开始， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将在发送到客户端时将用于自定义身份验证扩展插件的窗体身份验证 cookie 标记为安全 cookie。 通过更改此属性，报表服务器管理员和自定义安全扩展插件作者可以恢复以前的行为，即允许自定义安全扩展插件作者确定是否将 cookie 标记为安全 cookie。 建议将安全 cookie 用于窗体身份验证，以便帮助防止网络截取和重播攻击。|N|  
 |**CleanupCycleMinutes**|指定多少分钟后从报告服务器数据库删除旧会话和过期快照。 有效值的范围为 0 到最大整数之间。 默认值为 10。 如果将值设置为 0，将禁止数据库清除进程。|N,S|  
 |**MaxActiveReqForOneUser**|指定一个用户可以同时处理的报表的最大数目。 达到此限制之后，将拒绝进一步的报表处理请求。 有效值介于 1 和最大整数之间。 默认值为 20。<br /><br /> 注意，大多数请求都处理得非常快，因此单个用户在任意给定时间都不太可能拥有 20 个以上的打开连接。 如果用户同时打开了 15 个以上的占用大量进程的报表，则最好增大此值。<br /><br /> 对于在 SharePoint 集成模式下运行的报表服务器，将忽略此设置。|N,S|  
-|**DatabaseQueryTimeout**|指定多少秒后与报表服务器数据库的连接超时。此值将传递到 System.Data.SQLClient.SQLCommand.CommandTimeout 属性。 有效值的范围为 0 到 2147483647。 默认值为 120。 值 0 表示等待时间无限制，因此并不推荐使用该值。|否|  
+|**DatabaseQueryTimeout**|指定多少秒后与报表服务器数据库的连接超时。此值将传递到 System.Data.SQLClient.SQLCommand.CommandTimeout 属性。 有效值的范围为 0 到 2147483647。 默认值为 120。 值 0 表示等待时间无限制，因此并不推荐使用该值。|N|  
 |**AlertingCleanupCycleMinutes**|默认值为 20。<br /><br /> 确定清理在警报数据库中存储的临时数据的频率。|S|  
 |**AlertingDataCleanupMinutes**|默认值为 360。<br /><br /> 确定用于创建或编辑警报定义的会话数据在警报数据库内保留多长时间。 默认值为 6 小时。|S|  
 |**AlertingExecutionLogCleanup**Minutes|默认值为 10080。<br /><br /> 确定保留多长时间的警报执行日志值。 默认值为 7 天。|S|  
@@ -144,13 +141,13 @@ ms.locfileid: "37305227"
   
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
-|**应用程序**|包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的设置。|否|  
-|**名称**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有效值为 ReportServerWebService 或 ReportManager。|否|  
-|**VirtualDirectory**|指定应用程序的虚拟目录名称。|否|  
-|**URLs，URL**|包含应用程序的一个或多个 URL 预留。|否|  
-|**UrlString**|指定适用于 HTTP.SYS 的 URL 语法。 有关语法的详细信息，请参阅 [URL 预留语法（SSRS 配置管理器）](../install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。|否|  
-|`AccountSid`|指定已为其创建 URL 预留的帐户的安全标识符 (SID)。 该帐户应为报表服务器服务运行时所使用的帐户。 如果 SID 与服务帐户不匹配，则报表服务器可能无法侦听相应 URL 上的请求。|否|  
-|`AccountName`|指定与 `AccountSid` 对应的可读帐户名称。 该名称不会被使用，但它会显示在文件中，这样你便可以轻松确定用于相应 URL 预留的帐户的服务帐户。|否|  
+|**应用程序**|包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的设置。|N|  
+|**名称**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序。 有效值为 ReportServerWebService 或 ReportManager。|N|  
+|**VirtualDirectory**|指定应用程序的虚拟目录名称。|N|  
+|**URLs，URL**|包含应用程序的一个或多个 URL 预留。|N|  
+|**UrlString**|指定适用于 HTTP.SYS 的 URL 语法。 有关语法的详细信息，请参阅 [URL 预留语法（SSRS 配置管理器）](../install-windows/url-reservation-syntax-ssrs-configuration-manager.md)。|N|  
+|`AccountSid`|指定已为其创建 URL 预留的帐户的安全标识符 (SID)。 该帐户应为报表服务器服务运行时所使用的帐户。 如果 SID 与服务帐户不匹配，则报表服务器可能无法侦听相应 URL 上的请求。|N|  
+|`AccountName`|指定与 `AccountSid` 对应的可读帐户名称。 该名称不会被使用，但它会显示在文件中，这样你便可以轻松确定用于相应 URL 预留的帐户的服务帐户。|N|  
   
 ##  <a name="bkmk_Authentication"></a> 身份验证（RSReportServer.config 文件）  
  `Authentication` 指定报表服务器所接受的一个或多个身份验证类型。 默认设置和值是本节中介绍的设置和值的子集。 只会自动添加默认设置。 若要添加其他设置，必须使用文本编辑器将相应的元素结构添加到 RSReportServer.config 文件中并设置其值。  
@@ -173,17 +170,17 @@ ms.locfileid: "37305227"
   
 |设置|Description|“模式”|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|指定一个或多个身份验证类型。 有效值为 `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、`RSWindowsBasic` 和 `Custom`。<br /><br /> 类型 `RSWindows` 和 `Custom` 是互斥的。<br /><br /> `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM` 和 `RSWindowsBasic` 是累积的并且可以一起使用，如本节前面的默认值示例所示。<br /><br /> 如果预期会收到来自使用不同类型的身份验证的各种客户端应用程序和浏览器的请求，则必须指定多个身份验证类型。<br /><br /> 不要删除 `RSWindowsNTLM`，否则会将浏览器支持限制为部分受支持的浏览器类型。 有关详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。|否|  
-|`RSWindowsNegotiate`|报表服务器接受 Kerberos 或 NTLM 安全令牌。 如果报表服务器在本机模式下运行并且服务帐户为 Network Service，这便是默认设置。 如果报表服务器在本机模式下运行并且服务帐户已配置为域用户帐户，将忽略该设置。<br /><br /> 如果为报表服务器服务帐户配置了域帐户但未为报表服务器配置服务主体名称 (SPN)，则该设置可能会阻止用户登录该服务器。|否|  
+|**AuthenticationTypes**|指定一个或多个身份验证类型。 有效值为 `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM`、`RSWindowsBasic` 和 `Custom`。<br /><br /> 类型 `RSWindows` 和 `Custom` 是互斥的。<br /><br /> `RSWindowsNegotiate`、`RSWindowsKerberos`、`RSWindowsNTLM` 和 `RSWindowsBasic` 是累积的并且可以一起使用，如本节前面的默认值示例所示。<br /><br /> 如果预期会收到来自使用不同类型的身份验证的各种客户端应用程序和浏览器的请求，则必须指定多个身份验证类型。<br /><br /> 不要删除 `RSWindowsNTLM`，否则会将浏览器支持限制为部分受支持的浏览器类型。 有关详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。|N|  
+|`RSWindowsNegotiate`|报表服务器接受 Kerberos 或 NTLM 安全令牌。 如果报表服务器在本机模式下运行并且服务帐户为 Network Service，这便是默认设置。 如果报表服务器在本机模式下运行并且服务帐户已配置为域用户帐户，将忽略该设置。<br /><br /> 如果为报表服务器服务帐户配置了域帐户但未为报表服务器配置服务主体名称 (SPN)，则该设置可能会阻止用户登录该服务器。|N|  
 |`RSWindowsNTLM`|服务器接受 NTLM 安全令牌。<br /><br /> 如果删除此设置，则会将浏览器支持限制为部分受支持的浏览器类型。 有关详细信息，请参阅[规划 Reporting Services 和 Power View 浏览器支持&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。|N, S|  
-|`RSWindowsKerberos`|服务器接受 Kerberos 安全令牌。<br /><br /> 如果在约束委派身份验证方案中使用 Kerberos 身份验证，则将使用此设置或 RSWindowsNegotiate。|否|  
-|`RSWindowsBasic`|如果建立连接时没有使用凭据，则服务器会接受基本凭据，并发出质询/响应。<br /><br /> 基本身份验证以明文形式在 HTTP 请求中传递凭据。 如果使用基本身份验证，则使用 SSL 对进出报表服务器的网络通信进行加密。 若要查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本身份验证的示例配置语法，请参阅 [针对报表服务器的身份验证](../security/authentication-with-the-report-server.md)。|否|  
-|`Custom`|如果在报表服务器计算机上部署了自定义的安全扩展插件，请指定此值。 有关详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。|否|  
-|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录要对纯文本密码进行身份验证的高性能服务器<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|否|  
-|**Realm**|此值用于`RSWindowsBasic`。 它指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|否|  
-|**DefaultDomain**|此值用于`RSWindowsBasic`。 它用于确定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|否|  
-|**RSWindowsExtendedProtectionLevel**|默认值为 **off**。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)|否|  
-|**RSWindowsExtendedProtectionScenario**|默认值为 **Proxy**。|否|  
+|`RSWindowsKerberos`|服务器接受 Kerberos 安全令牌。<br /><br /> 如果在约束委派身份验证方案中使用 Kerberos 身份验证，则将使用此设置或 RSWindowsNegotiate。|N|  
+|`RSWindowsBasic`|如果建立连接时没有使用凭据，则服务器会接受基本凭据，并发出质询/响应。<br /><br /> 基本身份验证以明文形式在 HTTP 请求中传递凭据。 如果使用基本身份验证，则使用 SSL 对进出报表服务器的网络通信进行加密。 若要查看 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中基本身份验证的示例配置语法，请参阅 [针对报表服务器的身份验证](../security/authentication-with-the-report-server.md)。|N|  
+|`Custom`|如果在报表服务器计算机上部署了自定义的安全扩展插件，请指定此值。 有关详细信息，请参阅 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)。|N|  
+|**LogonMethod**|此值指定的登录类型`RSWindowsBasic`。 如果指定`RSWindowsBasic`，此值是必需的。 有效值为 2 或 3，每个值的含义如下：<br /><br /> `2` = 网络登录要对纯文本密码进行身份验证的高性能服务器<br /><br /> `3` = 明文登录，其中保留了与每个 HTTP 请求一起发送的身份验证包中的登录凭据，这样，服务器可以连接到网络中其他服务器时，模拟用户。<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]不支持值 0（针对交互登录）和 1（针对批处理登录）。|N|  
+|**Realm**|此值用于`RSWindowsBasic`。 它指定包含授权和身份验证功能的资源分区，这些功能用于控制对组织中受保护资源的访问。|N|  
+|**DefaultDomain**|此值用于`RSWindowsBasic`。 它用于确定服务器用来对用户进行身份验证的域。 此值是可选的。但如果忽略此值，报表服务器会将计算机名称用作域。 如果在域控制器上安装了报表服务器，则所用的域为该计算机控制的域。|N|  
+|**RSWindowsExtendedProtectionLevel**|默认值为 **off**。 有关详细信息，请参阅 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)|N|  
+|**RSWindowsExtendedProtectionScenario**|默认值为 **Proxy**。|N|  
 |**EnableAuthPersistence**|确定针对连接还是针对各个请求执行身份验证。<br /><br /> 有效值为 `True`（默认值）或 `False`。 如果设置为 `True`，则从同一连接发出的后续请求会采用第一个请求的模拟上下文。<br /><br /> 如果使用代理服务器软件（如 ISA 服务器）访问报表服务器，则此值必须设置为 `False`。 如果使用代理服务器，则允许多个用户使用来自代理服务器的单个连接。 对于这种情况，您应禁用身份验证持久性，以便可以对各个用户请求单独进行身份验证。 如果未设置**EnableAuthPersistence**到`False`，所有用户都将使用第一个请求的模拟上下文进行都连接。|N,S|  
   
 ##  <a name="bkmk_service"></a> 服务（RSReportServer.config 文件）  
@@ -205,10 +202,10 @@ ms.locfileid: "37305227"
 |**MaxAppDomainUnloadTime**|指定在回收操作期间允许卸载应用程序域的时间间隔。 如果在该时间段内没有完成回收，则应用程序域中的所有处理将会停止。 有关详细信息，请参阅 [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)。<br /><br /> 以分钟为单位指定此值。 有效值的范围为 0 到最大整数之间。 默认值为 **30**。|N,S|  
 |**MaxQueueThreads**|指定报表服务器 Windows 服务同时处理订阅和通知所用的线程数。 有效值的范围为 0 到最大整数之间。 默认值为 0。 如果选择了 0，报表服务器将确定最大的线程数。 如果指定了某个整数，则所指定的值将设置可以同时创建的线程数的上限。 有关报表服务器 Windows 服务如何针对运行中的进程管理内存的详细信息，请参阅 [为报表服务器应用程序配置可用内存](../report-server/configure-available-memory-for-report-server-applications.md)。|N,S|  
 |**UrlRoot**|此设置由报表服务器传递扩展插件使用，用来编写在电子邮件和文件共享订阅中传递的报表使用的 URL。 它必须是有效的指向报表服务器的 URL 地址，通过该地址可以访问已发布的报表。 报表服务器使用此设置生成供脱机访问或以无人参与方式访问的 URL。 这些 URL 用于导出的报表中，传递扩展插件使用它们来编写包含在传递消息（例如电子邮件中的链接）中的 URL。 报表服务器基于以下行为确定报表中的 URL：<br /><br /> 如果 **UrlRoot** 为空（默认值）且存在 URL 预留，则报表服务器会自动确定 URL，其方式与 ListReportServerUrls 方法生成 URL 的方式相同。 将使用 ListReportServerUrls 方法返回的第一个 URL。 或者，如果 SecureConnectionLevel 大于零 (0)，则使用第一个 SSL URL。<br /><br /> 如果将 **UrlRoot** 设置为一个特定值，则会使用显式值。<br /><br /> 如果 **UrlRoot** 为空且未配置任何 URL 预留，则所呈现的报表和电子邮件链接中的 URL 是不正确的。|N,S|  
-|**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../manage-a-reporting-services-sharepoint-service-application.md)|否|  
+|**UnattendedExecutionAccount**|指定报表服务器运行报表时所使用的用户名、密码和域。 这些值已经过加密。 可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具或 **rsconfig** 实用工具来设置这些值。 有关详细信息，请参阅[配置无人参与的执行帐户（SSRS 配置管理器）](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。<br /><br /> 对于 SharePoint 模式，您使用 SharePoint 管理中心设置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务应用程序的执行帐户。 有关详细信息，请参阅 [管理 Reporting Services SharePoint 服务应用程序](../manage-a-reporting-services-sharepoint-service-application.md)|N|  
 |**PolicyLevel**|指定安全策略配置文件。 有效的值为 Rssrvrpolicy.config。有关详细信息，请参阅 [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md)。|N,S|  
 |**IsWebServiceEnabled**|指定报表服务器 Web 服务是否响应 SOAP 和 URL 访问请求。 在使用基于策略的管理的 Reporting Services 的外围应用配置器方面启用或禁用服务时，设置此值。|N,S|  
-|**IsReportManagerEnabled**|指定在报表服务器上是否可以使用报表管理器应用程序。 有效的值为`True`（默认值） 和`False`。 如果值设置为`True`，报表管理器将可用。 请注意，还必须为报表管理器配置 URL 预留，这样才能使用报表管理器。|否|  
+|**IsReportManagerEnabled**|指定在报表服务器上是否可以使用报表管理器应用程序。 有效的值为`True`（默认值） 和`False`。 如果值设置为`True`，报表管理器将可用。 请注意，还必须为报表管理器配置 URL 预留，这样才能使用报表管理器。|N|  
 |**FileShareStorageLocation**|指定文件系统中用于存储临时快照的单个文件夹。 尽管可以将文件夹路径指定为 UNC 路径，但不建议您这样做。 默认值为空。<br /><br /> `<FileShareStorageLocation>`<br /><br /> `<Path>`<br /><br /> `</Path>`<br /><br /> `</FileShareStorageLocation>`|N,S|  
 |**IsRdceEnabled**|指定是否已启用报表定义自定义扩展插件 (RDCE)。 有效的值为`True`和`False`。|N,S|  
   

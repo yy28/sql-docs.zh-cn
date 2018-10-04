@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - CellSet object
 - retrieving data
 - data retrieval [ADOMD.NET], CellSet object
 ms.assetid: 77e4ee58-882d-4012-91a3-0565f18a4882
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 69e53cab56cf22d6627fd8039e6a46735d934ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9bce95fa12e7f5437d6d1f3872470a57114b76d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178894"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180337"
 ---
 # <a name="retrieving-data-using-the-cellset"></a>使用 CellSet 检索数据
   在检索分析数据时，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象提供了最大的交互功能和灵活性。 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象是分层数据和元数据的内存缓存，用于保留数据的原始维数。 还可以在连接或断开连接状态中对 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象进行遍历。 由于此断开连接的功能，<xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象还可用于以任何顺序查看数据和元数据，并为数据检索提供最全面的对象模型。 此断开连接的功能还会导致 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象有最大的开销，并成为要填充的最慢的 ADOMD.NET 数据检索对象模型。  
@@ -57,7 +54,7 @@ ms.locfileid: "37178894"
  通过加载从前一查询返回的 XML，可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象提供全面的方法来浏览分析数据，而不需要活动连接。  
   
 > [!NOTE]  
->  不是 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象中提供的对象的所有属性在断开连接的状态下都可用。 有关详细信息，请参阅<xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A>。  
+>  不是 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象中提供的对象的所有属性在断开连接的状态下都可用。 有关详细信息，请参阅 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> 。  
   
 ### <a name="example-of-retrieving-data-in-a-disconnected-state"></a>在断开连接状态下检索数据的示例  
  下面的示例与本主题中前面介绍的元数据和数据示例类似。 但是，下面示例中运行的命令通过调用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> 运行，并且结果作为 `System.Xml.XmlReader` 返回。 然后，示例填充 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 对象，方法是使用此具有 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet.LoadXml%2A> 方法的 `System.Xml.XmlReader`。 尽管此示例将立即加载 `System.Xml.XmlReader`，但是可以将读取器包含的 XML 缓存到硬盘，或通过任何方法将数据传输到其他应用程序，然后再将该数据加载到单元集。  

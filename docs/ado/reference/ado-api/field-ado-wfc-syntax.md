@@ -1,30 +1,27 @@
 ---
-title: 字段 (ADO-WFC 语法) |Microsoft 文档
+title: 字段 (ADO-WFC 语法) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Field collection [ADO], ADO/WFC syntax
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 327bedf139a68496e4d779dc76fd5273b0fdb99d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 709629c6ef42b8ffeb65959ab9491bbe3c178ab3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613835"
 ---
-# <a name="field-ado---wfc-syntax"></a>字段 (ADO-WFC 语法)
+# <a name="field-ado---wfc-syntax"></a>字段（ADO - WFC 语法）
 ## <a name="package-commswfcdata"></a>包 com.ms.wfc.data  
   
 ### <a name="methods"></a>方法  
@@ -68,13 +65,13 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="field-accessor-methods"></a>字段访问器方法  
- [值](../../../ado/reference/ado-api/value-property-ado.md)属性[字段](../../../ado/reference/ado-api/field-object.md)对象获取或设置该对象的内容。 内容表示为一个变量，可以为其指定值的对象的类型和任何几种数据类型。  
+ [值](../../../ado/reference/ado-api/value-property-ado.md)的属性[字段](../../../ado/reference/ado-api/field-object.md)对象获取或设置该对象的内容。 内容表示为变体，可以分配一个值的对象的类型和任意多个数据类型。  
   
- ADO/WFC 实现**值**具有属性**getValue**方法，返回的变体对象; 与**setValue**方法，后者采用 VARIANT 类型作为自变量。 变体，可以在某些语言中，如 Microsoft Visual Basic 高效率。  
+ ADO/WFC 实现**值**具有属性**getValue**方法，该返回变体的对象; 方法并**setValue**方法，它使用作为参数的变体。 变体是在某些语言中，如 Microsoft Visual Basic 高效率。  
   
- 除了**值**属性，ADO/WFC 提供*访问器*使用 Java 数据类型来获取和设置的内容的方法**字段**对象。 具有窗体的名称，这些方法中的大多数 **获取 * * * 数据类型*或 **设置 * * * 数据类型*。  
+ 除了**值**属性，提供了 ADO/WFC*访问器*方法使用 Java 数据类型来获取和设置的内容**字段**对象。 这些方法中的大多数其名称分别为窗体 **获取 * * * 数据类型*或 **设置 * * * 数据类型*。  
   
- 有两个值得注意的例外情况： 之一**getObject**方法返回一个强制转换为指定类的对象。 没有任何**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
+ 有两个值得注意的例外情况： 之一**getObject**方法会返回强制转换为指定类的对象。 没有任何**getNull**属性; 而是有**isNull**返回一个布尔值，该值指示字段是否为 null 的属性。  
   
 ```  
 public native boolean getBoolean();  

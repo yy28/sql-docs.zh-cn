@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/04/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], about
 - databases [SQL Server], transaction logs
 - logs [SQL Server], transaction logs
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdaae11d21d1018e0c855036c4c82221c57a905d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f22f0ea25b141cf7ee5a3130153837dcf4a1132
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223320"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072887"
 ---
 # <a name="the-transaction-log-sql-server"></a>事务日志 (SQL Server)
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库都具有事务日志，用于记录所有事务以及每个事务对数据库所做的修改。 必须定期截断事务日志以避免它被填满。 但是，一些因素可能延迟日志截断，因此监视日志大小很重要。 某些操作可以最小日志量进行记录以减少其对事务日志大小的影响。  
@@ -82,7 +79,7 @@ ms.locfileid: "37223320"
 |log_reuse_wait 值|log_reuse_wait_desc 值|Description|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|当前有一个或多个可重复使用的虚拟日志文件。|  
-|@shouldalert|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个虚拟日志文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
+|1|CHECKPOINT|自上次日志截断之后，尚未生成检查点，或者日志头尚未跨一个虚拟日志文件移动。 （所有恢复模式）<br /><br /> 这是日志截断延迟的常见原因。 有关详细信息，请参阅[数据库检查点 (SQL Server)](database-checkpoints-sql-server.md)。|  
 |2|LOG_BACKUP|在截断事务日志前，需要进行日志备份。 （仅限完整恢复模式或大容量日志恢复模式）<br /><br /> 完成下一个日志备份后，一些日志空间可能变为可重复使用。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|数据备份或还原正在进行（所有恢复模式）。<br /><br /> 如果数据备份阻止了日志截断，则取消备份操作可能有助于解决备份直接导致的此问题。|  
 |4|ACTIVE_TRANSACTION|事务处于活动状态（所有恢复模式）。<br /><br /> 一个长时间运行的事务可能存在于日志备份的开头。 在这种情况下，可能需要进行另一个日志备份才能释放空间。 请注意，长时间运行的事务将阻止所有恢复模式，包括简单恢复模式，在其下截断事务日志是通常在每个自动检查点模式下的日志截断。<br /><br /> 延迟事务。 “延迟的事务  ”是有效的活动事务，因为某些资源不可用，其回滚受阻。 有关导致事务延迟的原因以及如何使它们摆脱延迟状态的信息，请参阅[延迟的事务 (SQL Server)](../backup-restore/deferred-transactions-sql-server.md)。 <br /><br />长时间运行的事务也可能会填满 tempdb 的事务日志。 Tempdb 由用户事务隐式用于内部对象，例如用于排序的工作表、用于哈希的工作文件、游标工作表，以及行版本控制。 即使用户事务只包括读取数据 （SELECT 查询），可能会创建内部对象，并在用户事务中使用。 然后就会填充 tempdb 事务日志。|  

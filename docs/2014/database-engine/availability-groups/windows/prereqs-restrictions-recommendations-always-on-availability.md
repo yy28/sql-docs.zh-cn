@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 146
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5dc25e9314abf9aa025f489a087fdcc8ae98be36
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a0f8896903c2a7f817efcfa8dcc238ce0532f90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259543"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151897"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)
   本主题介绍在部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]时的注意事项，包括针对主机、Windows Server 故障转移群集 (WSFC) 群集、服务器实例和可用性组的先决条件、限制和建议。 对于上述各组件，还指出了安全注意事项和所需权限（如果有）。  
@@ -66,14 +63,14 @@ ms.locfileid: "37259543"
   
 ||适用于 Windows 2008 SP2|适用于 Windows 2008 R2 SP1|包括在 Windows 2012 中|要支持…|修补程序|链接|  
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**配置最佳 WSFC 仲裁**|在每个 WSFC 节点上，确保安装了在知识库文章 2494036 中介绍的修补程序。<br /><br /> 此修补程序支持使用非自动故障转移目标配置最佳仲裁。 此功能通过使您可以选择哪些节点进行投票，改进了多站点群集。|KB 2494036：  [提供了一个修补程序，使您可以在 Windows Server 2008 和 Windows Server 2008 R2 中配置不具有仲裁投票的群集节点](http://support.microsoft.com/kb/2494036)<br /><br /> 有关仲裁投票的信息，请参阅 [WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**更有效地利用网络带宽**|在每个 WSFC 节点上，确保安装了在知识库文章 2616514 中介绍的修补程序。<br /><br /> 如果没有安装此修补程序，群集服务将在群集节点间发送不必要的注册表通知。 此行为会限制网络带宽，这对于 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]是很严重的问题。|KB 2616514：  [在 Windows Server 2008 或 Windows Server 2008 R2 中，群集服务在群集节点间发送不必要的注册表项更改通知](http://support.microsoft.com/kb/2616514)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|用户帐户控制|**配置最佳 WSFC 仲裁**|在每个 WSFC 节点上，确保安装了在知识库文章 2494036 中介绍的修补程序。<br /><br /> 此修补程序支持使用非自动故障转移目标配置最佳仲裁。 此功能通过使您可以选择哪些节点进行投票，改进了多站点群集。|KB 2494036：  [提供了一个修补程序，使您可以在 Windows Server 2008 和 Windows Server 2008 R2 中配置不具有仲裁投票的群集节点](http://support.microsoft.com/kb/2494036)<br /><br /> 有关仲裁投票的信息，请参阅 [WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|用户帐户控制|**更有效地利用网络带宽**|在每个 WSFC 节点上，确保安装了在知识库文章 2616514 中介绍的修补程序。<br /><br /> 如果没有安装此修补程序，群集服务将在群集节点间发送不必要的注册表通知。 此行为会限制网络带宽，这对于 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]是很严重的问题。|KB 2616514：  [在 Windows Server 2008 或 Windows Server 2008 R2 中，群集服务在群集节点间发送不必要的注册表项更改通知](http://support.microsoft.com/kb/2616514)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|不适用|**执行 VPD 存储测试不是用于所有 WSFC 节点的磁盘上**|如果某一 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，并且在未正确在处于联机状态的磁盘上运行且不可用于 WSFC 群集中的所有节点后“验证 SCSI 设备关键产品数据 (VPD)”存储测试失败，则安装在知识库文章 2531907 中介绍的修补程序。<br /><br /> 此修补程序可避免在磁盘处于联机状态时在验证报告中出现不恰当的警告或错误。|KB 2531907：[安装 Windows Server 2008 R2 SP1 后验证 SCSI 设备关键产品数据 (VPD) 测试失败](http://support.microsoft.com/kb/2531907)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|是|**更快故障转移到本地副本**|如果某个 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，请确保安装了在知识库文章 2687741 中介绍的修补程序。<br /><br /> 此修补程序可以改进 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到本地副本的性能。|KB 2687741：  [为 Windows Server 2008 R2 提供了一个修补程序，可改进 SQL Server 2012 中“AlwaysOn 可用性组”功能的性能](http://support.microsoft.com/KB/2687741)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**非对称存储 — 对于故障转移群集实例 (Fci)**|如果将为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用任何故障转移群集实例 (FCI)，则安装 Windows Server 2008 修补程序 976097。<br /><br /> 该修补程序将启用故障转移群集管理 Microsoft 管理控制台 (MMC) 管理单元，以便支持异步存储 - 仅在某些 WSFC 节点上可用的共享磁盘。|KB 976097：[向异步存储添加了修补程序以便支持运行 Windows Server 2008 或 Windows Server 2008 R2 的故障转移群集的故障转移群集管理 MMC 管理单元](http://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 体系结构指南： 使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://technet.microsoft.com/library/jj215886.aspx)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")||√|用户帐户控制|**更快故障转移到本地副本**|如果某个 WSFC 节点正在运行 Windows Server 2008 R2 Service Pack 1 (SP1)，请确保安装了在知识库文章 2687741 中介绍的修补程序。<br /><br /> 此修补程序可以改进 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 故障转移到本地副本的性能。|KB 2687741：  [为 Windows Server 2008 R2 提供了一个修补程序，可改进 SQL Server 2012 中“AlwaysOn 可用性组”功能的性能](http://support.microsoft.com/KB/2687741)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|用户帐户控制|**非对称存储 — 对于故障转移群集实例 (Fci)**|如果将为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 启用任何故障转移群集实例 (FCI)，则安装 Windows Server 2008 修补程序 976097。<br /><br /> 该修补程序将启用故障转移群集管理 Microsoft 管理控制台 (MMC) 管理单元，以便支持异步存储 - 仅在某些 WSFC 节点上可用的共享磁盘。|KB 976097：[向异步存储添加了修补程序以便支持运行 Windows Server 2008 或 Windows Server 2008 R2 的故障转移群集的故障转移群集管理 MMC 管理单元](http://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 体系结构指南： 使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://technet.microsoft.com/library/jj215886.aspx)|  
 |![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|不适用|**Internet 协议安全性 (IPsec)**|如果您的环境使用 IPsec 连接，则当客户端计算机与虚拟网络名称重新建立 IPsec 连接（在此上下文中将连接到可用性组侦听器）时，可能会出现长时间的延迟（约两到三分钟）。 如果使用 IPsec 连接，我们建议您查看知识库文章 (KB 980915) 中详述的特定应用场景。|KB 980915：  [从运行 Windows Server 2003、Windows Vista、Windows Server 2008、Windows 7 或 Windows Server 2008 R2 的计算机重新建立 IPSec 连接时出现长时间延迟](http://support.microsoft.com/kb/980915)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**IPv6**|如果使用 IPv6，根据您的 Windows Server 操作系统，我们建议您查看知识库文章 2578103 或 2578113 中详述的特定应用场景。<br /><br /> 如果 Windows Server 拓扑使用 IP 版本 6 (IPv6)，则 WSFC 群集服务需要大约 30 秒的时间来对 IPv6 IP 地址进行故障转移。 这会导致客户端等待约 30 秒来重新连接该 IPv6 IP 地址。|KB 2578103 (Windows Server 2008)：[群集服务需要大约 30 秒对 Windows Server 2008 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2)：**Windows Server 2008 R2：**[群集服务需要大约 30 秒才能对 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578113)|  
-|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|是|**没有路由器之间群集和应用程序服务器**|如果故障转移群集与应用程序服务器之间不存在路由器，则群集服务对网络相关资源进行故障转移的速度会很慢。 这在可用性组执行故障转移之后会延迟客户端重新连接。 在缺少路由器时，我们建议您查看知识库文章 2582281 中详述的特定应用场景并安装该修补程序（如果适用于您的环境）。|KB 2582281：  [如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](http://support.microsoft.com/kb/2582281)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|用户帐户控制|**IPv6**|如果使用 IPv6，根据您的 Windows Server 操作系统，我们建议您查看知识库文章 2578103 或 2578113 中详述的特定应用场景。<br /><br /> 如果 Windows Server 拓扑使用 IP 版本 6 (IPv6)，则 WSFC 群集服务需要大约 30 秒的时间来对 IPv6 IP 地址进行故障转移。 这会导致客户端等待约 30 秒来重新连接该 IPv6 IP 地址。|KB 2578103 (Windows Server 2008)：[群集服务需要大约 30 秒对 Windows Server 2008 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113 (Windows Server 2008 R2)：**Windows Server 2008 R2：**[群集服务需要大约 30 秒才能对 Windows Server 2008 R2 中的 IPv6 IP 地址进行故障转移](http://support.microsoft.com/kb/2578113)|  
+|![复选框](../../media/checkboxemptycenterxtraspacetopandright.gif "复选框")|√|√|用户帐户控制|**没有路由器之间群集和应用程序服务器**|如果故障转移群集与应用程序服务器之间不存在路由器，则群集服务对网络相关资源进行故障转移的速度会很慢。 这在可用性组执行故障转移之后会延迟客户端重新连接。 在缺少路由器时，我们建议您查看知识库文章 2582281 中详述的特定应用场景并安装该修补程序（如果适用于您的环境）。|KB 2582281：  [如果群集与应用程序服务器之间不存在路由器，则故障转移操作的速度会很慢](http://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 针对承载可用性副本的计算机的建议（Windows 系统）  
   

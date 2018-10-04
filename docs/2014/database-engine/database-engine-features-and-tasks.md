@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], development
 - development [SQL Server Database Engine]
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f93783a34e76c6a1081a4f8d0d97dfc5ebbc76fa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 433d67076130747fe0baa3ba1b01592bbb9f5dc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131547"
 ---
 # <a name="database-engine-features-and-tasks"></a>数据库引擎功能和任务
   查找任何人员（设计人员、开发人员、分析员或管理员）建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库所需的信息。  

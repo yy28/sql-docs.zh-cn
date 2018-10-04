@@ -6,10 +6,8 @@ ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
@@ -24,12 +22,12 @@ author: josack
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33a3c8b0e1af48d9b93177045cc4d3eff3823f25
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fc51ed4b1cdce8e099a6d8929ad55e045af8c016
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065166"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835425"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +52,7 @@ SQL Server 要求在服务器上的 VIEW SERVER STATE 权限。
 Azure SQL 数据库需要数据库的 VIEW DATABASE STATE 权限。
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 SQL Server 使用分层的网关方法来限制允许的并发编译数。  使用三个网关时，包括小型、 中型和大型。 网关来帮助防止通过更大的编译内存要求使用者的总体内存资源耗尽。
 
 等待延迟的编译中对网关的结果。 在编译中的延迟，除了限制的请求将具有等待类型累积关联的 RESOURCE_SEMAPHORE_QUERY_COMPILE。 RESOURCE_SEMAPHORE_QUERY_COMPILE 等待类型可能指示查询正在编译使用大量的内存和内存已用尽，或者没有足够的内存可用总体而言，在特定的但是可用单位网关都已用完。 输出**sys.dm_exec_query_optimizer_memory_gateways**可用于诊断情况的出现内存不足，无法编译查询执行计划。  

@@ -1,14 +1,11 @@
 ---
-title: sp_add_operator (Transact SQL) |Microsoft 文档
+title: sp_add_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_operator
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3821ebe0886dd5a731e0459f3da686125c02a71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751575"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,17 +54,17 @@ sp_add_operator [ @name = ] 'name'
   
 ## <a name="arguments"></a>参数  
  [ **@name=** ] **'***name***'**  
- 操作员（通知收件人）的名称。 此名称必须是唯一的并且不能包含百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
+ 操作员（通知收件人）的名称。 此名称必须唯一且不能含有百分比 (**%**) 字符。 *名称*是**sysname**，无默认值。  
   
  [  **@enabled=** ]*启用*  
- 指示操作员的当前状态。 *启用*是**tinyint**，默认值为**1** （启用）。 如果**0**，运算符未启用，并且不会收到通知。  
+ 指示操作员的当前状态。 *已启用*是**tinyint**，默认值为**1** （启用）。 如果**0**，运算符未启用，并且不会收到通知。  
   
  [ **@email_address=** ] **'***email_address***'**  
- 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *电子邮件地址*是**nvarchar(100)**，默认值为 NULL。  
+ 操作员的电子邮件地址。 此字符串将直接传递到电子邮件系统。 *email_address*是**nvarchar(100)**，默认值为 NULL。  
   
- 你可以指定一个物理电子邮件地址或的别名*email_address*。 例如：  
+ 您可以指定物理电子邮件地址或别名*email_address*。 例如：  
   
- **jdoe**'**jdoe@xyz.com**  
+ '**jdoe**或**jdoe@xyz.com**  
   
 > [!NOTE]  
 >  必须对数据库邮件使用电子邮件地址。  
@@ -77,27 +73,27 @@ sp_add_operator [ @name = ] 'name'
  操作员的寻呼地址。 此字符串将直接传递到电子邮件系统。 *pager_address*是**narchar(100)**，默认值为 NULL。  
   
  [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
- 工作日（星期一到星期五）中的时间，在到达此时间后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把寻呼通知发送给指定的操作员。 *weekday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00 并且必须使用 HHMMSS 格式输入。  
+ 工作日（星期一到星期五）中的时间，在到达此时间后，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将把寻呼通知发送给指定的操作员。 *weekday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
  [ **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
- 此后的时间**SQLServerAgent**服务不再向寻呼通知指定的运算符在工作日，从星期一到星期五。 *weekday_pager_end_time*是**int**，默认值为 180000，该值指示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+ 此时间后， **SQLServerAgent**服务不再发送寻呼通知向指定操作员在平日，从星期一到星期五。 *weekday_pager_end_time*是**int**，默认值为 180000，表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
  [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
- 此后的时间**SQLServerAgent**服务在星期六将寻呼通知发送到指定的运算符。 *saturday_pager_start_time*是**int**，默认值为 090000，该值指示上午 9:00 并且必须使用 HHMMSS 格式输入。  
+ 此时间后， **SQLServerAgent**服务在星期六将寻呼通知发送到指定的运算符。 *saturday_pager_start_time*是**int**，默认值为 090000，表示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
  [ **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
- 此后的时间**SQLServerAgent**服务在星期六中不再将寻呼通知发送到指定的运算符。 *saturday_pager_end_time*是**int**，默认值为**180000**，指示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+ 此时间后， **SQLServerAgent**服务在星期六中不再将寻呼通知发送到指定的运算符。 *saturday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
  [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
- 此后的时间**SQLServerAgent**服务在星期日将寻呼通知发送到指定的运算符。 *sunday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00 并且必须使用 HHMMSS 格式输入。  
+ 此时间后， **SQLServerAgent**服务在星期日将寻呼通知发送到指定的运算符。 *sunday_pager_start_time*是**int**，默认值为**090000**，指示上午 9:00。 并且必须使用 HHMMSS 格式输入。  
   
  [ **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- 此后的时间**SQLServerAgent**服务在星期日中不再将寻呼通知发送到指定的运算符。 *sunday_pager_end_time*是**int**，默认值为**180000**，指示下午 6:00 并且必须使用 HHMMSS 格式输入。  
+ 此时间后， **SQLServerAgent**服务在星期日中不再将寻呼通知发送到指定的运算符。 *sunday_pager_end_time*是**int**，默认值为**180000**，这表示下午 6:00 并且必须使用 HHMMSS 格式输入。  
   
  [  **@pager_days=** ] *pager_days*  
- 表示操作员可以接收寻呼的天数（受限于指定的开始/结束时间）。 *pager_days*是**tinyint**，默认值为**0**指示运算符永远不会是可用于接收页。 有效值为从**0**通过**127**。 *pager_days*计算通过将各个值添加为所需的天数。 例如，从星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出了一周中每天的值。  
+ 表示操作员可以接收寻呼的天数（受限于指定的开始/结束时间）。 *pager_days*是**tinyint**，默认值为**0** ，该值指示该运算符永远不会是可以接收到一个页面。 有效值为从**0**通过**127**。 *pager_days*通过将所需天数的对应值相加。 例如，从星期一到星期五是**2**+**4**+**8**+**16** + **32** = **62**。 下表列出了一周中每天的值。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**1**|星期日|  
 |**2**|星期一|  
@@ -117,16 +113,16 @@ sp_add_operator [ @name = ] 'name'
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  **sp_add_operator**必须从运行**msdb**数据库。  
   
  电子邮件系统支持寻呼，如果想使用寻呼，则该系统必须有将电子邮件发送到寻呼程序的功能。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 为管理作业提供了一种图形化的简便方法，建议使用此方法来创建和管理作业基础结构。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  只有的成员**sysadmin**固定的服务器角色可以执行**sp_add_operator**。  
   
 ## <a name="examples"></a>示例  
@@ -147,10 +143,10 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

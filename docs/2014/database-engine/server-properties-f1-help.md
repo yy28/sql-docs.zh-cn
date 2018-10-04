@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 34921e1f790b03a002510dc17ea07dff16a3bddb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6632aa6ebcf55234bc89a23f24edc7ff8ee11106
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184677"
 ---
 # <a name="server-properties-f1-help"></a>“服务器属性”页的 F1 帮助
   本部分包含 SQL Server Management Studio 中 **“服务器属性”** 页的 F1 帮助主题。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing alerts
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 798cad5ea58d94d8194b823c8b3940d3f79ccaae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60976006bb9c26a6b3bae613ddfa96f52113dced
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251849"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129429"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>对复制代理事件使用警报
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理提供了使用警报监视事件（如复制代理事件）的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理监视与警报相关联的事件的 Windows 应用程序日志。 如果发生此类事件， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 代理将通过执行已定义的任务和/或向指定操作员发送电子邮件或寻呼消息的方式自动进行响应。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括一组预定义的复制代理警报，您可以配置这些警报以执行某项任务和/或通知某个操作员。 有关如何定义要执行的任务的详细信息，请参阅本主题中的“自动响应警报”部分。  
@@ -39,15 +36,15 @@ ms.locfileid: "37251849"
   
 |消息 ID|预定义的警报|激发警报的条件|在 msdb..sysreplicationalerts 中输入其他信息|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**复制: 代理成功**|代理成功关闭。|是|  
-|14151|**复制: 代理失败**|代理关闭时出现错误。|是|  
-|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|是|  
-|14157|**复制：已删除过期的订阅**|已删除过期的订阅。|“否”|  
-|20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|“否”|  
-|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|是|  
-|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|是|  
+|14150|**复制: 代理成功**|代理成功关闭。|用户帐户控制|  
+|14151|**复制: 代理失败**|代理关闭时出现错误。|用户帐户控制|  
+|14152|**复制：代理重试**|代理在重试某项操作失败后关闭（代理遇到服务器不可用、死锁、连接失败或超时故障之类的错误）。|用户帐户控制|  
+|14157|**复制：已删除过期的订阅**|已删除过期的订阅。|否|  
+|20572|**复制：验证失败后重新初始化了订阅**|响应作业“数据验证失败时重新初始化订阅”成功重新初始化订阅。|否|  
+|20574|**复制：订阅服务器未通过数据验证**|分发代理或合并代理未通过数据验证。|用户帐户控制|  
+|20575|**复制：订阅服务器已通过数据验证**|分发代理或合并代理通过数据验证。|用户帐户控制|  
 |20578|**复制：代理自定义关闭**|||  
-|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|是|  
+|22815|**对等冲突检测警报**|当分发代理尝试在对等节点上应用更改时检测到冲突。|用户帐户控制|  
   
  除这些警报之外，复制监视器还提供了一组与状态和性能相关的警告和警报。 有关详细信息，请参阅[设置阈值和警告在复制监视器中的](../monitor/set-thresholds-and-warnings-in-replication-monitor.md)警报基础结构。 有关详细信息，请参阅[创建用户定义事件](../../../ssms/agent/create-a-user-defined-event.md)。  
   

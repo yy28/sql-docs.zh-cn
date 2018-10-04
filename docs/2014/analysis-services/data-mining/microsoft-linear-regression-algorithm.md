@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180407"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 线性回归算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法的一种变体，有助于计算依赖变量和独立变量之间的线性关系，然后使用该关系进行预测。  
@@ -70,7 +67,7 @@ ms.locfileid: "37315073"
   
  除了通过选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建线性回归模型外，您还可以在可预测属性为连续数值数据类型时，创建包含回归的决策树模型。 在这种情况下，如果找到适当的分离点，该算法会对数据进行拆分；但对于某些数据区域，则会创建回归公式。 有关决策树模型中回归树的详细信息，请参阅[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   不支持使用预测模型标记语言 (PMML) 创建挖掘模型。  
   

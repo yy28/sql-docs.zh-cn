@@ -1,14 +1,11 @@
 ---
-title: sysmail_add_profileaccount_sp (TRANSACT-SQL) |Microsoft 文档
+title: sysmail_add_profileaccount_sp (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_profileaccount_sp
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 776cabb53664a82bbd767301af0c62f4d86887dc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260633"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729855"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +60,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  配置文件和帐户都必须已经存在。 否则，存储过程将返回错误。  
   
  请注意，此存储过程不会更改已与指定的配置文件关联的帐户的序列号。 有关更新的帐户的序列号的详细信息，请参阅[sysmail_update_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)。  
@@ -73,10 +69,10 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  如果存在具有相同序列号的多个帐户，则数据库邮件将只使用这些帐户中的某一个来处理给定的电子邮件。 在此情况下，数据库邮件不能保证使用具有该序列号的特定帐户，也不能保证使用同一个帐户发送各个邮件。  
   
- 存储的过程**sysmail_add_profileaccount_sp**处于**msdb**数据库，而且由拥有**dbo**架构。 如果当前数据库不是，必须使用由三部分名称执行过程**msdb**。  
+ 存储的过程**sysmail_add_profileaccount_sp**处于**msdb**数据库中，归**dbo**架构。 必须使用由三部分名称执行该过程，如果当前数据库不是**msdb**。  
   
-## <a name="permissions"></a>权限  
- 执行此过程默认为成员的权限**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 执行此过程默认情况下的成员的权限**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将配置文件 `AdventureWorks Administrator` 与帐户 `Audit Account` 关联。 审核帐户的序列号为 1。  
@@ -88,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
     @sequence_number = 1 ;  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据库邮件](../../relational-databases/database-mail/database-mail.md)   
  [创建数据库邮件帐户](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [数据库邮件配置对象](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

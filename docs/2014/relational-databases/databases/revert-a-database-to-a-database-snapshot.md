@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: 57
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6594ff2add077ca516cd3f4bf0380cc1af201f6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ffd797b5b59e50b97f2306c1509a01b8372c450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252609"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184297"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>将数据库恢复到数据库快照
   如果联机数据库中的数据损坏，在某些情况下，将数据库恢复到发生损坏之前的数据库快照可能是一种合适的替代方案，替代从备份中还原数据库。 例如，通过恢复数据库可能会有助于从最近出现的严重用户错误（如删除的表）中恢复。 但是，在该快照创建以后进行的所有更改都会丢失。  
@@ -50,7 +47,7 @@ ms.locfileid: "37252609"
   
  在恢复数据库之前，请考虑以下限制：  
   
--   恢复并不适用于介质恢复。 实例时都提供 SQL Server 登录名。 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   恢复并不适用于介质恢复。 . 数据库快照是不完整的数据库文件副本，因此，如果数据库或数据库快照损坏，则不可能从快照进行恢复。 另外，如果损坏的话，即便可以恢复，也可能无法更正该问题。 因此，定期执行备份并对还原计划进行测试对于保护数据库至关重要。 有关详细信息，请参阅 [Back Up and Restore of SQL Server Databases](../backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果需要能够将源数据库还原至创建数据库快照的时点，请使用完整恢复模式并实施允许您执行该操作的备份策略。  
