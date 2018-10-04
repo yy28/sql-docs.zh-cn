@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f5e41f1dac0c9c0048b5751439209e17e289f4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249407"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178127"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用数据馈送 (PowerPivot for SharePoint)
   数据馈送是从联机数据源生成并流向目标文档或应用程序的一个或多个数据流。 如果使用 PowerPivot for Excel，数据馈送可帮助您将任意数据源中的现有公司或业务数据提取到 Excel 2010 工作簿中的 PowerPivot 窗口中。 将数据馈送导入工作簿后，以后可以在 SharePoint 服务器上计划的任何数据刷新操作中引用该数据馈送。  
@@ -41,7 +38,7 @@ ms.locfileid: "37249407"
 ##  <a name="prereq"></a> 先决条件  
  您必须具有 PowerPivot for Excel 才能将数据馈送导入 Excel 2010。  
   
- 您必须具有以 Atom 1.0 格式提供数据的 Web 服务或数据服务。  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 能够以这种格式提供数据。  
+ 您必须具有以 Atom 1.0 格式提供数据的 Web 服务或数据服务。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 能够以这种格式提供数据。  
   
  在将 SharePoint 列表导出为数据馈送之前，必须在该 SharePoint 服务器上安装 ADO.NET Data Services。 有关详细信息，请参阅 [安装 ADO.NET Data Services 以支持 SharePoint 列表的数据馈送导出](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)。  
   
@@ -86,7 +83,7 @@ ms.locfileid: "37249407"
   
     1.  **“基本 URL”** 是可选的。 如果数据服务文档提供多个馈送，则应该指定此选项。 基本 URL 应该指定所有馈送共有的 URL 部分（例如服务器名称和站点）。 如果按照 Reporting Services 报表创建数据服务文档，则基本 URL 将是报表服务器 URL 和报表。  
   
-    2.  **“Web 服务 URL”** 是必需的。 如果没有基本 URL，此值必须在地址中包含 http:// 或 https://。 如果指定了基本 URL，则 Web 服务 URL 为基本 URL 之后的部分。 例如，如果完整的 URL 是http://adventure-works/inventory/today.aspx，则基本 URL 将为http://adventure-works/inventory，和 Web 服务 URL 为 /today.aspx。  
+    2.  **“Web 服务 URL”** 是必需的。 如果没有基本 URL，此值必须在地址中包含 http:// 或 https://。 如果指定了基本 URL，则 Web 服务 URL 为基本 URL 之后的部分。 例如，如果完整的 URL 是 http://adventure-works/inventory/today.aspx，则基本 URL 将为 http://adventure-works/inventory，和 Web 服务 URL 为 /today.aspx。  
   
          Web 服务 URL 可以包括用来筛选或选择数据子集的参数。 提供馈送的应用程序或服务必须支持您在 URL 中指定的参数。  
   

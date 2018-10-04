@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, bulk copy operations
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e9c119392fcf9c6595158a276c71b5897537a0e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 44b39d7bb45425030b0dc28a710aaa3ff851c099
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790229"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>增强的日期和时间类型的大容量复制更改（OLE DB 和 ODBC）
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,10 +110,10 @@ ms.locfileid: "43079689"
   
 |若要：<br /><br /> From|日期|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|date|@shouldalert|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
-|Smalldatetime|1,2|1,4,10|@shouldalert|@shouldalert|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|@shouldalert|1,10|1,5,10|1,11|1,11|  
+|Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
@@ -128,7 +126,7 @@ ms.locfileid: "43079689"
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。<br /><br /> 生成 ODBC 诊断记录，同时还生成 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”。|  
-|@shouldalert|如果提供的数据无效，则生成 ODBC 诊断记录，同时还生成 SQLSTATE 22007 和消息“日期时间格式无效”。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
+|1|如果提供的数据无效，则生成 ODBC 诊断记录，同时还生成 SQLSTATE 22007 和消息“日期时间格式无效”。 对于 datetimeoffset 值，在转换为 UTC 后时间部分必须处于规定范围内，即使不要求转换为 UTC。 这是因为 TDS 和服务器始终规范化 UTC 的 datetimeoffset 值中的时间。 因此，在转换为 UTC 后，客户端必须检查时间部分是否处于支持的范围内。|  
 |2|忽略时间部分。|  
 |3|对于 ODBC，如果发生具有数据丢失的截断，将生成一个诊断记录，同时还生成 SQLSTATE 22001 和消息“字符串数据，右端被截断”。秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 7。 此转换应允许最高 9 位的秒的小数形式位数，这是 ODBC 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **隐式小数位数 1..7** 10,16<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **隐式小数位数 1..7:** 21..27<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **隐式小数位数 1..7:** 28..34<br /><br /> 对于 OLE DB，如果发生具有数据丢失的截断，则会发出错误。 对于 datetime2，秒的小数形式位数（小数位数）根据下表的目标列的大小确定。 对于大于表中范围的列大小，则暗指小数位数为 9。 此转换应允许最高 9 位的秒的小数部分位数，这是 OLE DB 允许的最大位数。<br /><br /> **类型：** DBTIME2<br /><br /> **暗指的小数位数 0** 8<br /><br /> **暗指的小数位数 1..9** 1..9<br /><br /> <br /><br /> **类型：** DBTIMESTAMP<br /><br /> **暗指的小数位数 0：** 19<br /><br /> **暗指的小数位数 1..9：** 21..29<br /><br /> <br /><br /> **类型：** DBTIMESTAMPOFFSET<br /><br /> **暗指的小数位数 0：** 26<br /><br /> **暗指的小数位数 1..9：** 28..36|  
 |4|忽略日期部分。|  

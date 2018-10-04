@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6958198b0482c792a952efea5c3792a182df8564
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9006ff1f237c42be123c3937270a4bdf5e915c6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172807"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>为报表服务器应用程序配置可用内存
   尽管 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可使用所有可用内存，但您可以通过为分配给 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务器应用程序的内存资源总量配置上限来覆盖默认行为。 此外，您还可以设置阈值，以便报表服务器根据内存压力（低、中或高）来更改其排列请求优先级和处理请求的方式。 在内存压力较低时，报表服务器通过为交互式或按需报表处理提供一个略高的优先级进行响应。 在内存压力较高时，报表服务器使用多种方法在可用资源有限的情况下保持运行状态。  

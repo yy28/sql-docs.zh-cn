@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caa3f5d35d51a90809175da88c9732fd883d291d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204137"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 游标中的数据
   正在提取和更新数据时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]游标， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用者应用程序绑定通过相同的注意事项和约束应用于任何其他客户端应用程序。  
@@ -35,9 +32,9 @@ ms.locfileid: "37428326"
  如果客户端应用程序设计使事务长时间保持打开状态，事务隔离级别在定位行时可能造成严重滞后。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口使用 DBPROPVAL_TI_READCOMMITTED 指定的已提交读隔离级别。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持脏读的隔离时行集并发为只读。 因此，使用者可以在可修改行集中请求更高级别的隔离，但是不能成功请求任何更低级别。  
   
 ## <a name="immediate-and-delayed-update-modes"></a>立即更新模式和延迟更新模式  
- 在立即更新模式下，每个调用到**irowsetchange:: Setdata**导致往返于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果使用者对单个行的多个更改，则更高效，提交所有更改与单个**SetData**调用。  
+ 在立即更新模式中，对 IRowsetChange::SetData 的每次调用均导致与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间发生一次往返。 如果使用者对一个行进行了多次更改，通过一个 SetData 调用提交所有更改将更有效。  
   
- 在延迟的更新模式对进行一次往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每一行所示*cRows*并*rghRows*的参数**irowsetupdate:: Update**。  
+ 在延迟更新模式中，针对 IRowsetUpdate::Update 的 cRows 和 rghRows 参数中指示的每个行执行一次与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间的往返。  
   
  无论哪种模式，往返表示当未针对行集打开事务对象时的不同事务。  
   

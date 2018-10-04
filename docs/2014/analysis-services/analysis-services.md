@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services]
 - SSAS, about Analysis Services - Multidimensional Data
 ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4c20d17212de682466947bf86ddd415420b0576
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2bcf7cb620a97578b921ca09d565ff2ef2fe77a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185444"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080958"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 是在决策支持和商业智能解决方案 (BI) 中使用的联机分析数据引擎，它为商业报表和客户端应用程序（如 Excel、Reporting Services 报表和其他第三方 BI 工具）提供分析数据。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的典型工作流包括生成 OLAP 或表格数据模型、将模型作为数据库部署到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例、对数据库进行处理以向其加载数据，以及分配权限以允许数据访问。 所有工作完成后，任何将 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 作为数据源进行支持的客户端应用程序均可访问此多用途数据模型。  

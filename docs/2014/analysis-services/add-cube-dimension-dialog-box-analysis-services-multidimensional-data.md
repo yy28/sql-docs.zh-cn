@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
 helpviewer_keywords:
 - Add Cube Dimension dialog box
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ab3e91d2571c4186ad6eeb1e858a6fe5f3f2d53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148808"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>“添加多维数据集维度”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “添加多维数据集维度” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在多维数据集中添加对数据库维度的引用。 通过执行下列操作之一，可以显示 **“添加多维数据集维度”** 对话框：  
@@ -37,7 +34,7 @@ ms.locfileid: "37232417"
 > [!NOTE]  
 >  每个多维数据集维度与度量值组之间只能有一个关系。 不过，如果多维数据集维度所基于的数据库维度通过数据源视图中的多个关系与度量值组相关，则可以创建多个多维数据集维度并将其添加到多维数据集。 此类维度称为角色共享维度，通常与时间维度一起使用。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择维度**  
  选择现有数据库维度，将基于该数据库维度的多维数据集维度添加到所选多维数据集。 基于同一个数据库维度可以定义多个多维数据集维度。  
   

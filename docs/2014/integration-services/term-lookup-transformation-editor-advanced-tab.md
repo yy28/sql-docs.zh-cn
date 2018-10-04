@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193652a7e813f929191a3e677e164190f0ea3edf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0138c9b016b89f2e524ecffc025203e705f1f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189777"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>字词查找转换编辑器（“高级”选项卡）
   可以使用“字词查找转换编辑器”对话框的“高级”选项卡指定查找是否区分大小写。  
   
  若要了解有关字词查找转换的详细信息，请参阅 [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用区分大小写的字词查找**  
  指示查找是否区分大小写。 默认值为 `False`。  
   

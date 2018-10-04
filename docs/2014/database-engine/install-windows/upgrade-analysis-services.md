@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - installing Analysis Services, upgrading
 - SSAS, upgrading
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
-caps.latest.revision: 63
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f59e24f7028dd54b39ea7b27ab98ad85c149cadd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b933796b755020f5ffdafb9904ab85a5d2202ba9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202197"
 ---
 # <a name="upgrade-analysis-services"></a>升级 Analysis Services
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 有关升级的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 SharePoint 模式下，请参阅[升级 PowerPivot for SharePoint](upgrade-power-pivot-for-sharepoint.md)。 有关升级现有的 SQL Server 实例，请参阅[升级到使用 SQL Server 2014 安装向导&#40;安装程序&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  

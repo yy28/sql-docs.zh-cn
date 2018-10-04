@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 360fa80fb3bd89030832184b86f21d30a5fec532
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3b87563bc8fc7908da703f6ff71165b61142738
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221387"
 ---
 # <a name="powerpivot-data-refresh"></a>PowerPivot 数据刷新
   在您创建包含 PowerPivot 数据的某一工作簿后，最好通过重新运行查询或命令以便从您最初用于创建该工作簿的数据源获取更新的信息，定期刷新数据。 此过程称作 `data refresh`，并且您可以在 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 中按需刷新数据，或者作为在 SharePoint 场中的应用程序服务器上以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 进程形式运行的定期操作来刷新数据。 有关详细信息，请参阅：  

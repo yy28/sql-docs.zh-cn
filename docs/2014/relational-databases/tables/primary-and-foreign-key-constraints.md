@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server]
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063438"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。  

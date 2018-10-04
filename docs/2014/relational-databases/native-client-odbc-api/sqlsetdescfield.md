@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5810760fc0cbc8aba9a1ea743f1dab33df501964
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 64eb7b3dc6f058d5f061f4c015105ba4fc44f183
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206757"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField 可以用于设置表值参数和表值参数列的描述符字段。 有关可用字段的信息，请参阅[表值参数描述符字段](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md)并[表值参数构成列的描述符字段](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  表值参数列仅在将描述符标头字段 SQL_SOPT_SS_PARAM_FOCUS 设置为特定记录（其 SQL_DESC_TYPE 设置为 SQL_SS_TABLE）的序数时可用。 有关 SQL_SOPT_SS_PARAM_FOCUS 的详细信息，请参阅[SQLSetStmtAttr](sqlsetstmtattr.md)。  
   
  如果尝试将 SQL_SOPT_SS_PARAM_FOCUS 设置为不是表值参数的参数的序号，SQLSetStmtAttr 返回 SQL_ERROR，并且诊断记录创建具有 SQLSTATE = HY024 和消息"属性值无效"。 返回 SQL_ERROR 时，不更改 SQL_SOPT_SS_PARAM_FOCUS。  

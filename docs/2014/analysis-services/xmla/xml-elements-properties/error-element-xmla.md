@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210147"
 ---
 # <a name="error-element-xmla"></a>Error 元素 (XMLA)
   包含有关错误的实例返回的信息[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
@@ -67,8 +64,8 @@ ms.locfileid: "37273733"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -81,7 +78,7 @@ ms.locfileid: "37273733"
   
 |Ancestor|子元素|  
 |--------------|--------------------|  
-|[Message](message-element-xmla.md)|InclusionThresholdSetting|  
+|[Message](message-element-xmla.md)|None|  
 |[单元格](cell-element-mddataset-xmla.md)，[行](description-element-xmla.md)， [ErrorCode](errorcode-element-xmla.md)， [HelpFile](file-element-xmla.md)，[源](source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>属性  
@@ -94,7 +91,7 @@ ms.locfileid: "37273733"
 |数据源|可选`String`属性 (仅当`Message`是父元素。)包含生成该错误的组件的名称。|  
 |HelpFile|可选`String`属性 (仅当`Message`是父元素。)包含到介绍该错误的“帮助”文件或主题的路径或 URL。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [Warning 元素&#40;XMLA&#41;](warning-element-xmla.md)   

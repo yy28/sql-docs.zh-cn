@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310294"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205857"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
   **Bcp**大容量复制数据的实例之间[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]和用户指定格式的数据文件。 使用 **bcp** 实用工具可以将大量新行导入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 表，或将表数据导出到数据文件。 除非与 **queryout** 选项一起使用，否则使用该实用工具不需要了解 [!INCLUDE[tsql](../includes/tsql-md.md)]知识。 若要将数据导入表中，必须使用为该表创建的格式文件，或者必须了解表的结构以及对于该表中的列有效的数据类型。  
@@ -147,7 +144,7 @@ ms.locfileid: "39310294"
 |RAW|不进行代码页间的转换。 因为不进行转换，所以这是最快的选项。|  
 |*code_page*|特定的代码页编号，例如 850。<br /><br /> **\*\* 重要\* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]不支持代码页 65001(utf-8 编码）。|  
   
- `-d` *Database_name*  
+ `-d` *database_name*  
  指定要连接到的数据库。 默认情况下，bcp.exe 连接到用户的默认数据库。 如果`-d` *database_name*和三个部分构成的名称 (*database_name.schema.table*，作为第一个参数传递给 bcp.exe) 指定，将发生错误，因为不能指定两次数据库名称。如果*database_name*开始使用连字符 （-） 或正斜杠 （/），不要添加之间有空格`-d`和数据库名称。  
   
  **-e** *err_file*  
@@ -330,7 +327,7 @@ ms.locfileid: "39310294"
  **-x**  
  用于**格式**和 **-f * * * format_file*选项、 生成基于 XML 的格式化文件，而不是默认非 XML 格式化文件。 在导入或导出数据时， **-x** 不起作用。 如果不使用它将生成错误**格式**和 **-f * * * format_file*。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Bcp** 12.0 客户端安装在安装时[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]工具。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的工具，使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 12.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
   
  只有当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  

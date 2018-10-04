@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76d7a8453cec686311f478a439af926ab0e5c690
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be69309ebf3f52246fd9ea5cb0fbc72edcdaa42e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207607"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204589"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server 托管备份到 Windows Azure - 保持和存储设置
   本主题介绍的基本步骤来配置[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]数据库并配置实例的默认设置。 本主题还介绍为实例暂停和恢复[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]服务所需的步骤。  

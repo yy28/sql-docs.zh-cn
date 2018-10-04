@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], storage location
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62d463a424c1e5245a7b5f5a36e9d7a99fe7c9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216537"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况下，`DbStorageLocation`数据库属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 可以在本地磁盘或网络设备中指定的数据库位置。  

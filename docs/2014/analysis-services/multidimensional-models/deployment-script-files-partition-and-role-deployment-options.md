@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - modifying role deployments
 - modifying partition deployments
 ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28be72efd82f72662bada57062d2e69e558793e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14a547098cf72ac4b4f1c49044aba1bb2f024adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055527"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>指定分区和角色部署选项
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]部署向导读取分区和角色部署选项，以从\<*项目名称*>.deploymentoptions 文件。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 在生成时创建此文件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]项目。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用当前的分区和角色部署选项项目何时\<*项目名称*> 创建.deploymentoptions 文件。 有关配置设置的详细信息，请参阅 [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md)。  

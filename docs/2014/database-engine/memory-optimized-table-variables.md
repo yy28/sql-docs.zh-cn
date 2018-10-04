@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065787"
 ---
 # <a name="memory-optimized-table-variables"></a>内存优化表变量
   此外，内存优化表 （用于高效的数据访问） 和本机编译存储的过程 （用于高效的查询处理和业务逻辑执行）[!INCLUDE[hek_2](../includes/hek-2-md.md)]引入了第三种对象： 内存优化表类型。 使用内存优化表类型创建的表变量是内存优化表变量。  

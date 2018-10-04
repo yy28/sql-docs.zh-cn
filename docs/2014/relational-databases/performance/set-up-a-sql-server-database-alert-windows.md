@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ae0709b9135bba9c5a71ba02de9a2d0b2f8a223
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c7a1c7cce1495f7fe1125ace53d428a48481169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283123"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202063"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>设置 SQL Server 数据库警报 (Windows)
   通过使用系统监视器可以创建一个在达到系统监视器计数器的阈值时发出的警报。 作为对警报的响应，系统监视器会启动一个应用程序，例如为处理警报情况而编写的自定义应用程序。 例如，您可以创建在死锁数超过特定值时将会引发的警报。  

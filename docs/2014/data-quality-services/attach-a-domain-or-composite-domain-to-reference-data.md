@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.refdata.f1
 - sql12.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d22efa3a5f3c62915527fd4acc756217fe6556f3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51f76ea70542dd354c414f660259fbe4afcf90f2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149997"
 ---
-# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到引用数据
+# <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>将域或复合域附加到参考数据
   本主题介绍如何将数据质量知识库中的域/复合域附加到 Microsoft Azure 市场中的引用数据服务，以便针对高质量引用数据生成知识。 每个引用数据服务包含一个架构（数据列）。 在将域或复合域附加到引用数据服务后，必须将此附加域或所附加的复合域内的各个域映射到引用数据服务架构中的相应列。 通过将复合域附加到引用数据服务，您可以只将一个域附加到引用数据服务，然后将复合域内的各域映射到引用数据服务架构中的相应列。  
   
 > [!WARNING]  
@@ -41,7 +38,7 @@ ms.locfileid: "37202477"
   
 ###  <a name="Security"></a> 安全性  
   
-#### <a name="permissions"></a>权限  
+#### <a name="permissions"></a>Permissions  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 角色才能将域映射到引用数据。  
   
 ##  <a name="Map"></a> 将域从 Melissa Data 映射到引用数据  

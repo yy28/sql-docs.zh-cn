@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tempdb [SQL Server], size
 - autogrow [SQL Server]
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 33c94b0ac9145e5d36a9c744a3531155ae64b152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f4d247156e4e37786e5822ed0ce3397c1cad7e64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181464"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220497"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>升级期间，确保为所有数据文件和日志文件启用了自动增长功能
   升级顾问检测到未设置为自动增长的数据或日志文件。 新的和增强功能需要额外的磁盘空间来存储用户数据库和**tempdb**系统数据库。 若要确保资源在升级和后续生产操作期间可以容纳大小的增加，我们建议所有用户数据和日志文件自动增长都设置为 ON 并且**tempdb**升级之前的数据和日志文件。  

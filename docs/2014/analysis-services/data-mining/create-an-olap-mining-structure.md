@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 060b2fc3a8cfcb54470d21dace787cd1ccbc025c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27f0ea7b8e215735a0d5ef2f3deb8e354567216a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134539"
 ---
 # <a name="create-an-olap-mining-structure"></a>创建 OLAP 挖掘结构
   基于 OLAP 多维数据集或其他多维数据存储区创建数据挖掘模型有很多好处。 OLAP 解决方案已经包含大量的组织良好、整洁且格式正确的数据；但是，这些数据十分复杂，以致用户难以通过即席浏览找到有意义的模式。 数据挖掘提供发现新关联和提供可操作意见的能力。  

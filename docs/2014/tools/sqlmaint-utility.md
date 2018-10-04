@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110057"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
   如果成功运行，则**sqlmaint** 实用工具可以对一个或多个数据库执行一组指定的维护操作。 使用 **sqlmaint** 可以运行 DBCC 检查、备份数据库及其事务日志、更新统计信息以及重新生成索引。 所有数据库维护活动都会生成报表，可以将此报表发送到指定的文本文件、HTML 文件或电子邮件帐户。 **sqlmaint** 可以执行使用早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]创建的数据库维护计划。 若要从命令提示符运行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 维护计划，请使用 [dtexec 实用工具](../integration-services/packages/dtexec-utility.md)。  
@@ -206,8 +203,7 @@ dbname_log_yyyymmddhhmm.BAK
  对于磁盘备份，指定如果创建备份后的时间间隔超出了 \<time_period>，则删除备份目录中的所有备份文件。  
   
  **-CrBkSubDir**  
- 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 
-  **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
+ 对于磁盘备份，指定在 [*backup_path*] 目录中创建子目录。如果同时指定了 **-UseDefDir** ，则在默认备份目录中创建子目录。 子目录的名称根据 **-D**中指定的数据库名称生成。 **-CrBkSubDir** 提供一种简单的方法将不同数据库的所有备份放置到单独的子目录中，而无需更改 *backup_path* 参数。  
   
  **backup_path**  
  对于磁盘备份，指定在默认的备份目录中创建备份文件。 如果同时指定两者，则**UseDefDir** 将覆盖 *backup_path* 。 在默认 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安装中，默认备份目录为 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup。  
@@ -232,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  如果仅指定 *number* ，则默认日期部分为 **weeks**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sqlmaint** 实用工具可对一个或多个数据库执行维护操作。 如果指定 **-D** ，则在剩余的命令开关中指定的操作仅对指定数据库执行。 如果指定 **-PlanName** 或 **-PlanID** ，则 **sqlmaint** 只从指定的维护计划中检索数据库列表信息。 在其余的 **sqlmaint** 参数中指定的所有操作都会应用于从计划获取的列表中的每个数据库。 **sqlmaint** 实用工具不会应用在计划本身中定义的任何维护活动。  
   
  如果成功运行，则 **sqlmaint** 实用工具将返回 0，如果失败则返回 1。 在下列情况下将报告失败：  
@@ -243,7 +239,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   发生常规错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  对 **具有** 读取和执行 **权限的任何 Windows 用户都可以执行** sqlmaint `sqlmaint.exe`实用工具，默认情况下，该工具存储在 `x:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER1\MSSQL\Binn` 文件夹中。 此外，使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **指定的** 登录名必须具有执行指定的操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。 如果使用 Windows 身份验证连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，则映射到经过身份验证的 Windows 用户的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登录名必须具有执行指定操作所需的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 权限。  
   
  例如，使用 **-BkUpDB** 需要执行 BACKUP 语句的权限。 使用 **-UpdOptiStats** 参数需要执行 UPDATE STATISTICS 语句的权限。 有关详细信息，请参阅联机丛书中相应主题的“权限”部分。  

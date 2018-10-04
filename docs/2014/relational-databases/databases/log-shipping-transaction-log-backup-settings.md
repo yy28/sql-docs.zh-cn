@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1eacdcf8bca99cd5351aaf92414c1d7fc67be73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f4b54d14ff56113e115ce5eb611c227e7bc1020
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208099"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>日志传送事务日志备份设置
   使用此对话框可以配置和修改日志传送配置的事务日志备份设置。  
   
  有关日志传送概念的说明，请参阅 [关于日志传送 (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **备份文件夹的网络路径**  
  在此框中键入备份文件夹的网络共享位置。 用于保存事务日志备份的本地文件夹必须处于共享状态，以便日志传送复制作业可以将这些文件复制到辅助服务器。 必须向代理帐户授予此网络共享的读取权限，复制作业将在辅助服务器实例上的该帐户下运行。 默认情况下，这是辅助服务器实例的 SQLServerAgent 服务帐户，但是管理员可以为该作业选择另一个代理帐户。  
   

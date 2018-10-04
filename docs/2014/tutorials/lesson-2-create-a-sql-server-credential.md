@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64f8805c-1ddc-4c96-a47c-22917d12e1ab
-caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9bac1f166472fa6f4285779f2054d7121133693f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194567"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
   **凭据：**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 凭据是用于存储连接到 SQL Server 外部资源所需的身份验证信息的对象。  在这里，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]备份和还原进程使用凭据向 Windows Azure Blob 存储服务进行身份验证。 凭据存储着存储帐户的名称和存储帐户的 **access key** 值。 创建凭据后，在发出 BACKUP/RESTORE 命令时必须在 WITH CREDENTIAL 选项中指定它。 有关如何查看、 复制或重新生成存储帐户详细信息**访问密钥**，请参阅[存储帐户访问密钥](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - renaming triggers
@@ -16,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88b16bd9aff46e81722a0fa54d7af6e0a32d2e9d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417086"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200868"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重命名 DML 触发器
   本主题将说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改或重命名 DML 触发器。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], exception handling
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Report Server Web service, exception handling
 - XML Web service [Reporting Services], exception handling
 ms.assetid: 54381870-ce67-482b-aa83-6a838cdbf9b9
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3c4ff1e27ada53361879335d90daeac5fc4f21be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03bade736ae1a52942d42a7b1b675077a3ba6e7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185834"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219997"
 ---
 # <a name="introducing-exception-handling-in-reporting-services"></a>介绍 Reporting Services 中的异常处理
   如果您的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序将某一请求发送到报表服务器 Web 服务但该服务无法处理该请求，则该服务会将一个 SOAP 异常返回到客户端。 处理报表服务器 Web 服务引发的异常是您开发的应用程序的重要一环，因为可以在错误发生时将有用信息返回给用户。  

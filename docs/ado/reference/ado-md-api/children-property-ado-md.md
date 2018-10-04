@@ -1,13 +1,11 @@
 ---
-title: Children 属性 (ADO MD) |Microsoft 文档
+title: Children 属性 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Children property [ADO MD]
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ca7bff8aae165833dcf6e0cc20bd1af55d62279
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283536"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626125"
 ---
 # <a name="children-property-ado-md"></a>Children 属性 (ADO MD)
-返回[成员](../../../ado/reference/ado-md-api/members-collection-ado-md.md)为其集合当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)是层次结构中的父级。  
+返回[成员](../../../ado/reference/ado-md-api/members-collection-ado-md.md)为其集合当前[成员](../../../ado/reference/ado-md-api/member-object-ado-md.md)层次结构中父级。  
   
 ## <a name="return-values"></a>返回值  
- 返回**成员**集合是只读的和。  
+ 返回**成员**集合是只读的。  
   
-## <a name="remarks"></a>Remarks  
- **子级**属性包含**成员**为其集合当前**成员**是分层的父级。 叶级别**成员**对象在中有任何子成员**成员**集合。 在上才支持此属性**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 从引用此属性时出现错误**成员**属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。  
+## <a name="remarks"></a>备注  
+ **子级**属性包含**成员**为其集合当前**成员**是层次结构父项。 叶级别**成员**对象没有任何子成员**成员**集合。 此属性仅支持**成员**属于对象[级别](../../../ado/reference/ado-md-api/level-object-ado-md.md)对象。 从引用此属性时出错**成员**属于对象[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)对象。  
   
 ## <a name="applies-to"></a>适用范围  
  [成员对象 (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

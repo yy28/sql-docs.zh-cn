@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
-caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d975ed562e5343ceeb921358160309c20ff0bb4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fea49e73ad3a29606f8642ca144ffd71033e490c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186437"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>配置 HealthCheckTimeout 属性设置
   HealthCheckTimeout 设置用于指定的时间，以毫秒为单位，SQL Server 资源 DLL 应等待返回的信息[sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)报告之前存储过程AlwaysOn 故障转移群集实例 (FCI) 为不响应。 对超时设置所做的更改会立即生效，不需要重新启动 SQL Server 资源。  

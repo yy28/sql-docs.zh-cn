@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58fe8e149a4152399738def5401a7a976cea827f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e322ca0ed99c5c5b84c764cf0d89e2f365b6ed31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221287"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript 方法 (WMI MSReportServer_ConfigurationSetting)
   生成一个 SQL 脚本，用来向用户授予运行报表服务器所需的报表服务器数据库和其他数据库的权限。 调用者需要能够连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库服务器并能够执行该脚本。  
@@ -68,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>返回值  
  返回 *HRESULT* ，指示方法调用是成功还是失败。 值 0 指示方法调用已成功。 非零值指示已发生错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果 *DatabaseName* 为空，则忽略 *IsRemote* ，并且数据库名称使用报表服务器配置文件中的值。  
   
  如果*IsWindowsUser*设置为`true`，*用户名*应采用格式\<域 >\\< 用户名\>。  

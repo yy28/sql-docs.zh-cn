@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96d0a98911daa37461db6700f868b167e0a4fe08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba180417eb3a426d24ffa6ee8dc985c89fb8e0a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205888"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 数据库
   一个 Oracle CDC 实例与在目标 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上具有相同名称的一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库相关联。 此数据库称为 Oracle CDC 数据库（或 CDC 数据库）。  
@@ -114,24 +111,24 @@ ms.locfileid: "37221797"
 |“属性”|，则“默认”|Min|Max|静态|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |跟踪|False|-|-|False|可用值：<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
-|cdc_update_state_interval|10|@shouldalert|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 表中的 memory_limit 列。|  
-|target_max_batched_transactions|100|@shouldalert|1000|True|可在 SQL Server CT 表更新中作为一个事务处理的 Oracle 事务的最大数目。|  
-|target_idle_lsn_update_interval|10|0|@shouldalert|False|用于在捕获表没有任何活动时更新 **lsn_time_mapping** 表的时间间隔（秒）。|  
-|trace_retention_period|24|@shouldalert|24*31|False|时间量（在跟踪表中保存消息的小时数）。|  
+|cdc_update_state_interval|10|1|120|False|为某一事务分配的内存块的大小（一个事务可分配多个块）(KB)。 请参阅 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 表中的 memory_limit 列。|  
+|target_max_batched_transactions|100|1|1000|True|可在 SQL Server CT 表更新中作为一个事务处理的 Oracle 事务的最大数目。|  
+|target_idle_lsn_update_interval|10|0|1|False|用于在捕获表没有任何活动时更新 **lsn_time_mapping** 表的时间间隔（秒）。|  
+|trace_retention_period|24|1|24*31|False|时间量（在跟踪表中保存消息的小时数）。|  
 |sql_reconnect_interval|2|2|3600|False|在重新连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]前等待的时间量（秒）。 此时间间隔与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端的连接超时一起使用。|  
 |sql_reconnect_limit|-1|-1|-1|False|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新连接的最大数目。 默认值为 -1，表示进程在停止前将一直尝试重新连接。|  
 |cdc_restart_limit|6|-1|3600|False|在大多数情况下，CDC 服务将自动重新启动异常结束的 CDC 实例。 此属性定义每小时失败多少次后服务将停止重新启动实例。 值 -1 表示应始终重新启动实例。<br /><br /> 服务将在对配置表的任何更新后返回到重新启动实例。|  
 |cdc_memory_report|0|0|1000|False|如果更改了该参数的值，CDC 实例将在跟踪表上打印其内存报告。|  
-|target_command_timeout|600|@shouldalert|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的命令超时。|  
+|target_command_timeout|600|1|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的命令超时。|  
 |source_character_set|-|-|-|True|可设置为使用特定的 Oracle 编码，而非使用 Oracle 数据库代码页。 这在所使用的字符数据的实际编码方式不同于 Oracle 数据库代码页所表示的方式时很有用。|  
-|source_error_retry_interval|30|@shouldalert|3600|False|在因若干错误（例如连接错误或在系统表之间暂时丢失同步）而重试之前使用。|  
-|source_prefetch_size|100|@shouldalert|10000|True|预提取批处理的大小。|  
-|source_max_tables_in_query|100|@shouldalert|10000|True|切换到读取 Oracle 日志而不进行表筛选之前 WHERE 子句中的表的最大数目。|  
-|source_read_retry_interval|2|@shouldalert|3600|False|源在尝试再次读取 EOF 上的 Oracle 事务日志之前等待的时间。|  
-|source_reconnect_interval|30|@shouldalert|3600|False|等待多长时间后将尝试重新连接到源数据库（秒）。|  
+|source_error_retry_interval|30|1|3600|False|在因若干错误（例如连接错误或在系统表之间暂时丢失同步）而重试之前使用。|  
+|source_prefetch_size|100|1|10000|True|预提取批处理的大小。|  
+|source_max_tables_in_query|100|1|10000|True|切换到读取 Oracle 日志而不进行表筛选之前 WHERE 子句中的表的最大数目。|  
+|source_read_retry_interval|2|1|3600|False|源在尝试再次读取 EOF 上的 Oracle 事务日志之前等待的时间。|  
+|source_reconnect_interval|30|1|3600|False|等待多长时间后将尝试重新连接到源数据库（秒）。|  
 |source_reconnect_limit|-1|-1||False|源数据库重新连接的最大数目。 默认值为 -1，表示进程在停止前将一直尝试重新连接。|  
-|source_command_timeout|30|@shouldalert|3600|False|使用 Oracle 时的连接超时。|  
-|source_connection_timeout|30|@shouldalert|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的连接超时。|  
+|source_command_timeout|30|1|3600|False|使用 Oracle 时的连接超时。|  
+|source_connection_timeout|30|1|3600|False|使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时的连接超时。|  
 |trace_data_errors|True|-|-|False|布尔值。 **True** 指示记录数据转换和截断错误。|  
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|布尔值。 **True** 指示当检测到中断的架构更改时停止。<br /><br /> **False** 指示删除镜像表和捕获实例。|  
 |source_oracle_home||-|-|False|可设置为 CDC 实例将用于连接到 Oracle 的特定 Oracle 主页路径或 Oracle 主页名称。|  

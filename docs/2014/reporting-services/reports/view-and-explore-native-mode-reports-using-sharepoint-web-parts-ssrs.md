@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a4e6dcaedf09ca73691678cb21dd6066c23dbddf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6adc856477cbfb9b870c921676f1bd3470450c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095367"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了多个 Web 部件，可用于特定版本的报表服务器，特别是部署模式。  
@@ -142,7 +139,7 @@ ms.locfileid: "37278396"
   
 6.  当页面处于编辑模式时，在报表查看器 Web 部件中单击 **“编辑 Web 部件”** 。  
   
-7.  在 **“报表管理器 URL”** 中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法：http://\<servername>/reports。  
+7.  在 **“报表管理器 URL”** 中，键入与要访问的本机模式报表服务器相关联的报表管理器实例的 URL。 默认情况下，报表管理器 URL 具有以下语法： http://\<servername>/reports。  
   
 8.  在 **“报表路径”** 中，指定一个正斜杠后接文件夹路径和报表名。 请 **不要** 包括服务器名称或报表管理器虚拟目录。 例如，若要打开 Adventure Works 文件夹中的“Company Sales”报表，请指定 **/Adventure Works/Company Sales**。 下面是另一个示例，其中，报表“Products”位于报表服务器根文件夹 **/Products**中。  
   

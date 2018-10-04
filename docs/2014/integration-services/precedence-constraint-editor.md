@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.precedenceconstraint.f1
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 573ce289579e0d239585f5f4b0f6292a6145b0ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c321d7a3850cf91b996262265492b88a6773f446
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217297"
 ---
 # <a name="precedence-constraint-editor"></a>优先约束编辑器
   可以使用 **“优先约束编辑器”** 对话框配置优先约束。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **求值运算**  
  指定优先约束使用的求值运算。 运算包括： **“约束”**、 **“表达式”**、 **“表达式和约束”** 和 **“表达式或约束”**。  
   

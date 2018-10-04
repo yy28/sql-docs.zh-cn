@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.script.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-caps.latest.revision: 40
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa423929b775dcfb50ef8d49329689820c797772
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ee7bb13e8a9fa4826297cd0c55b82881aee5296
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198077"
 ---
 # <a name="script-task-editor-script-page"></a>脚本任务编辑器（“脚本”页）
   使用 **“脚本任务编辑器”** 对话框的 **“脚本”** 页，可以设置脚本属性并指定脚本可以访问的变量。  
@@ -33,7 +30,7 @@ ms.locfileid: "37295037"
   
  若要了解有关脚本任务的详细信息，请参阅 [Script Task](control-flow/script-task.md) 和 [在脚本任务编辑器中配置脚本任务](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)。 若要了解如何对脚本任务进行编程，请参阅 [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **ScriptLanguage**  
  选择任务的脚本语言， [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#。  
   

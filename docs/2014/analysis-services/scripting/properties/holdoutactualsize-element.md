@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutActualSize element
 ms.assetid: 606a6674-cedb-4cee-82d0-26589f084dd9
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f74b11b9032285bf45bc8b7705953adf6d58f04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8610024c3eb0b3460883fc5eeddb80f057aff86b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096407"
 ---
 # <a name="holdoutactualsize-element"></a>HoldoutActualSize 元素
   指示包含测试集的维持分区在处理后的实际大小[MiningStructure](../objects/miningstructure-element-assl.md)元素。 数据集中的其余事例用于定型。 该属性为只读。  
@@ -55,9 +52,9 @@ ms.locfileid: "37297277"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  值`HoldoutActualSize`取决于源数据，以及对值[HoldoutMaxCases](holdoutmaxcases-element.md)， [HoldoutMaxPercent](holdoutmaxpercent-element.md)，并且[HoldoutSeed](holdoutseed-element.md)。 因此，只有在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 处理完挖掘结构之后，`HoldoutActualSize` 的值才可用。  
   
  父级对应的元素`HoldoutActualSize`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.MiningStructure>。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6cc9478d0c4deed830c23eae4d4a425a1fc112f9
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 3dc982de67c3fc1ddd874b38c1e14eec49d3b0af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220577"
 ---
 # <a name="use-path-mode-with-for-xml"></a>将 PATH 模式与 FOR XML 一起使用
   如 [使用 FOR XML 构造 XML](for-xml-sql-server.md)中所述，PATH 模式提供了一种较简单的方法来混合元素和属性。 PATH 模式还是一种用于引入附加嵌套来表示复杂属性的较简单的方法。 尽管您可以使用 FOR XML EXPLICIT 模式查询从行集构造这种 XML，但 PATH 模式为可能很麻烦的 EXPLICIT 模式查询提供了一种较简单的替代方法。 通过 PATH 模式，以及用于编写嵌套 FOR XML 查询的功能和返回 **xml** 类型实例的 TYPE 指令，您可以编写简单的查询。  

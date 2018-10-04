@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - EXTERNAL_ACCESS assemblies
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87b58d73233cf586ec631e43ad17cb9232d59f8f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802275"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 集成代码访问安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +108,10 @@ ms.locfileid: "37357659"
 |-|-|-|-|  
 ||**安全**|**EXTERNAL_ACCESS**|**不安全**|  
 |**代码访问安全性权限**|仅执行|执行和访问外部资源|不受限制（包括 P/Invoke）|  
-|**编程模型限制**|是|是|无限制|  
-|**可验证性要求**|是|是|“否”|  
-|**本地数据访问**|是|是|是|  
-|**调用本机代码的能力**|“否”|否|是|  
+|**编程模型限制**|用户帐户控制|用户帐户控制|无限制|  
+|**可验证性要求**|用户帐户控制|是|否|  
+|**本地数据访问**|用户帐户控制|是|用户帐户控制|  
+|**调用本机代码的能力**|否|否|用户帐户控制|  
   
 ## <a name="see-also"></a>请参阅  
  [CLR 集成安全性](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query-based subscriptions [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87116018f43f90fa78a8f7a6d4788b9fb0e660f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09b48e20683256eddd7d2619e8f4cbe912c6f0a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207559"
 ---
 # <a name="create-modify-and-delete-a-data-driven-subscription"></a>Create, Modify, and Delete a Data-Driven Subscription
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  

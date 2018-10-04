@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107477"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 课：向市场篮挖掘结构中添加挖掘模型
   在本课中，将两个挖掘模型添加到你在中创建的市场篮挖掘结构[第 1 课： 创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 您可以通过这些挖掘模型创建预测。  

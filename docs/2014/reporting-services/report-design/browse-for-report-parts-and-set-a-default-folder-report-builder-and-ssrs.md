@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 25c367550ca7efb08bb33e99318ceda2e62b9b11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240017"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222247"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）
   创建报表的最简单方式是从报表部件库将现有报表部件（如表和图表）添加到您的报表。 将报表部件添加到报表时，还将添加它正常工作所需的所有内容。 例如，显示数据的任何报表部件都依赖于数据集，即对某数据源的查询和连接。 将报表部件添加到报表后，可以根据需要进行修改。  

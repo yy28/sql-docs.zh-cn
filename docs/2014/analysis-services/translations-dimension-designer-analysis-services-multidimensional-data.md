@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a11a6498320db3a3b9b4733771e2b07b503f000
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161088"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186287"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>翻译（维度设计器）（Analysis Services - 多维数据）
   可以使用维度设计器中的 **“翻译”** 选项卡为维度定义和管理翻译，以及为维度定义和管理层次结构和属性。  

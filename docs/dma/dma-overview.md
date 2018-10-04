@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fbf3441d82f2de405e1a227821834b3943db3285
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 38642f129d61f906e4856946a19f6dca8f11da6f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770795"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
 
@@ -49,7 +46,7 @@ ms.locfileid: "43152688"
 - 了解数据库可以受益于升级后在目标 SQL Server 平台中的新增功能。 这些被称为功能建议，并按以下类别进行组织：
 
   - “性能”
-  - Security
+  - 安全性
   - 存储器
 
 - 将本地 SQL Server 实例迁移到最新的 SQL Server 实例，托管在本地或 Azure 可从你的本地网络访问虚拟机 (VM) 上。 可使用 VPN 或其他技术访问 Azure VM。 迁移工作流可帮助你迁移以下组件：

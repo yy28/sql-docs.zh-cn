@@ -1,14 +1,11 @@
 ---
-title: trace_xe_event_map (TRANSACT-SQL) |Microsoft 文档
+title: trace_xe_event_map (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trace_xe_event_map_TSQL
@@ -19,29 +16,28 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0bf9c9db02063fd46b2119866d755b60757e9ded
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cc823459c701bd0045e594f753a803a0a092a244
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608435"
 ---
-# <a name="extended-events-tables---tracexeeventmap"></a>扩展事件表-trace_xe_event_map
+# <a name="extended-events-tables---tracexeeventmap"></a>扩展事件表 - trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  映射到 SQL 跟踪事件类的每个扩展事件各占一行。 此表存储在 master 数据库中，sys 架构中。  
+  映射到 SQL 跟踪事件类的每个扩展事件各占一行。 此表存储在 master 数据库的 sys 架构中。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|trace_event_id|**int**|正在映射的 SQL 跟踪事件类的 ID。|  
+|trace_event_id|**smallint**|正在映射的 SQL 跟踪事件类的 ID。|  
 |package_name|**nvarchar(60)**|映射事件所在的扩展事件包的名称。|  
 |xe_event_name|**nvarchar(60)**|映射到 SQL 跟踪事件类的“扩展事件”事件的名称。|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  您可以使用以下查询确定与 SQL 跟踪事件类等效的“扩展事件”事件：  
   
 ```  
@@ -64,7 +60,7 @@ WHERE xe.trace_event_id IS NULL
   
  在前面的查询中，返回的大多数事件类都与审核相关。 建议您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 进行审核。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 使用扩展事件来帮助创建审核。 有关详细信息，请参阅 [SQL Server Audit（数据库引擎）](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [trace_xe_action_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)  
   
   

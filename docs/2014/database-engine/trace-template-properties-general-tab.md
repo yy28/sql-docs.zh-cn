@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e740d4866797c8d64b8798cd41dea9159f262ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184754"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088807"
 ---
 # <a name="trace-template-properties-general-tab"></a>跟踪模板属性（“常规”选项卡）
   通过使用下列选项，使用 **“跟踪模板属性”** 对话框的 **“常规”** 选项卡可以创建新的跟踪模板。 若要访问此对话框，请在[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]**文件**菜单中，依次指向**模板**，然后单击**新模板**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择服务器类型**  
  指定要对其使用此模板的服务器的类型。  
   

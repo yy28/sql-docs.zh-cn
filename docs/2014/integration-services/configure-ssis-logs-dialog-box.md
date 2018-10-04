@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredtslogs.loggingdetails.f1
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c2a52c7ee15c7fee222b290aa8ac2790965bb91
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4730b52983c778fd71f778412552913d2ee6cbef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189174"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120564"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>“配置 SSIS 日志”对话框
   使用 **“配置 SSIS 日志”** 对话框可以定义包的日志记录选项。  
@@ -48,7 +45,7 @@ ms.locfileid: "37189174"
 ##  <a name="container"></a> 配置“容器”窗格中的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“容器”** 窗格，为包及其容器启用日志记录。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **“配置 SSIS 日志”**  
  选中层次结构视图中的该复选框可以为日志记录启用包和包容器：  
   
@@ -63,7 +60,7 @@ ms.locfileid: "37189174"
 ##  <a name="provider"></a> 配置“提供程序和日志”选项卡上的选项  
  可以使用“配置 SSIS 日志”对话框的“提供程序和日志”选项卡，创建和配置用于捕获运行时事件的日志。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **提供程序类型**  
  从列表中选择日志提供程序的类型。  
   
@@ -87,7 +84,7 @@ ms.locfileid: "37189174"
 ##  <a name="detail"></a> 配置“详细信息”选项卡上的选项  
  可以使用 **“配置 SSIS 日志”** 对话框的 **“详细信息”** 选项卡，指定要启用日志记录的事件以及要记录的详细信息。 所选的信息适用于包中的所有日志提供程序。 例如，无法将一些信息写入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例，而在文本文件中写入另外一些信息。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **事件**  
  为事件启用或禁用日志记录功能。  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
-caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 59b187ec488716200c53021afb0c6da42cba291c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06623eabd8fe22581b7864d74d2d1623b2bd68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161818"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209897"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>安装 PowerPivot for SharePoint
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 是在 SharePoint 2010 场中提供 PowerPivot 数据访问的中间层和后端服务的集合。 如果您的组织使用客户端应用程序 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 来创建包含分析数据的工作簿，您必须具有 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 才能访问服务器环境中的数据。 本主题演练基本安装过程，并包含可帮助您配置 PowerPivot 的其他主题链接。  

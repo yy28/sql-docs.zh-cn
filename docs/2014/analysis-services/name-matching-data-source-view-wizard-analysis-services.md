@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155378"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217765"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>名称匹配（数据源视图向导）(Analysis Services)
   可以使用 **“名称匹配”** 页，针对为数据源视图选择的表以及架构中的其他表，选择用于检测它们之间可能存在的关系的条件。 如果这些表之间不存在物理外键关系，则可以使用所选的条件帮助标识相关的表并将这些表添加到数据源视图中。 通过名称匹配标识的逻辑关系也可以添加到数据源视图中。  
@@ -29,7 +26,7 @@ ms.locfileid: "37155378"
 > [!NOTE]  
 >  只有在您选择的数据源包含多个表，并且这些表中的任意表之间都没有外键关系时，此页才会显示。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **通过匹配列创建逻辑关系**  
  选择此项可使用名称匹配条件，针对您选择的要包含在数据源视图中的表以及架构中的其他表，检测它们之间可能的逻辑依赖关系和关系。 如果清除此复选框，则不会使用任何名称匹配条件来标识数据源中表之间的逻辑关系。  
   

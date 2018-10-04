@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbfeaf04ca7eb8a07637c295a5aa80cc02bedd58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e73545b8417b92abf57747441b49531736ecdd48
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231451"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120808"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 连接管理器编辑器
   使用 **“SAP BW 连接管理器编辑器”** 指定用于连接 SAP Netweaver BW 版本 7 系统的属性。  
@@ -41,7 +38,7 @@ ms.locfileid: "37231451"
   
     -   右键单击 SAP BW 连接管理器，然后选择“编辑”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 > [!NOTE]  
 >  如果您不知道配置连接管理器所需的所有值，可能需要询问您的 SAP 管理员。  

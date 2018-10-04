@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellInfo Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 693495e50c78760cd130df6d12f359d96c5c0807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176384"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216493"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 元素 (XMLA)
   表示单元格元数据包含在父[OlapInfo](olapinfo-element-xmla.md)元素。  
@@ -54,8 +51,8 @@ ms.locfileid: "37176384"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -65,7 +62,7 @@ ms.locfileid: "37176384"
 |父元素|[OlapInfo](olapinfo-element-xmla.md)|  
 |子元素|一个或多个单元属性定义|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  `CellInfo` 元素包含由使用 `root` 数据类型的 `MDDataSet` 元素返回的多维数据集中包含的单元的单元属性集合。 `CellInfo` 元素中的每个单元属性都由单独的 XML 元素定义，每个单元属性都具有 `name` 特性和 `type` 特性。 单元属性的 `name` 特性与 XML 元素表示的 OLE DB for the OLAP 单元属性的名称相对应，而 `type` 特性表示单元属性的 XML 数据类型。 XML 元素的名称用于标识 `CellData` 元素的 `root` 元素中包含的单元的单元属性值。  
   
  下列语法描述了单元属性定义：  

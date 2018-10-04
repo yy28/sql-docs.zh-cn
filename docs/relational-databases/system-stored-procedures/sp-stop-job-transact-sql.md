@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_stop_job_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843908"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ sp_stop_job
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_stop_job**将停止信号发送到数据库。 可以立即停止某些进程和一些必须达到稳定的时间点 （或代码路径的入口点） 可以停止之前。 某些长时间运行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（例如 BACKUP、RESTORE）和某些 DBCC 命令可能要花较长的时间才能完成。 这些运行时，可能需要一段时间之前取消了作业。 停止作业导致在作业历史记录中记录“作业已取消”项。  
   
  如果作业当前正在执行类型的步骤**CmdExec**或**PowerShell**，则强制提前结束正在运行的进程 (例如 MyProgram.exe)。 提前结束可能导致不可预知的行为，如进程正在使用的文件保持为打开状态。 因此， **sp_stop_job**应使用只有在极端情况下，如果作业包含类型的步骤**CmdExec**或**PowerShell**。  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - programmatically enumerate packages [SSIS]
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f40a80731ddf2884bf42648a46135416f9738f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 465d4f2a85939d6bd90dc88e33c9d92ed49af490
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200967"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>以编程方式枚举可用的包
   以编程方式使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时，您可能希望确定个别包或文件夹是否存在，或枚举可用于加载和执行的已保存的包。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 命名空间的 <xref:Microsoft.SqlServer.Dts.Runtime> 类提供了多种满足这些要求的方法。  

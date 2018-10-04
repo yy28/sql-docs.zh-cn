@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.general.f1
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 70d3e2aa852acd34d28c2f2501d17117c6cf8640
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fca1a77392b2cdc6297d0eb96d502726264ee40c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154568"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102787"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>WMI 数据读取器任务编辑器（“常规”页）
   可以使用 **“WMI 数据读取器任务编辑器”** 对话框的 **“常规”** 页，对 WMI 数据读取器任务进行命名和说明。  
   
  若要了解此任务，请参阅 [WMI Data Reader Task](control-flow/wmi-data-reader-task.md)。 有关 WMI 查询语言 (WQL) 的详细信息，请参阅 MSDN 库中的 Windows Management Instrumentation 主题 [Querying with WQL](http://go.microsoft.com/fwlink/?LinkId=79045)（利用 WQL 进行查询）。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为 WMI 数据读取器任务提供唯一的名称。 此名称用作任务图标中的标签。  
   

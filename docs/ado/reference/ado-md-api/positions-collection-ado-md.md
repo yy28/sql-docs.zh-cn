@@ -1,13 +1,11 @@
 ---
-title: 定位集合 (ADO MD) |Microsoft 文档
+title: 定位集合 (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,26 +15,25 @@ f1_keywords:
 helpviewer_keywords:
 - Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1a5d4d611487e74c94fda416fad2cd3aca7b300
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1cef615f2009809cb84d62b284d2c08167b6ba86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284516"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705015"
 ---
 # <a name="positions-collection-ado-md"></a>位置集合 (ADO MD)
-包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)轴定义一个点的对象。  
+包含[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)在轴定义一个点的对象。  
   
-## <a name="remarks"></a>Remarks  
- **位置**是一个标准的 ADO 集合。 属性和方法的集合，您可以执行以下操作：  
+## <a name="remarks"></a>备注  
+ **位置**是一个标准 ADO 集合。 使用的属性和方法的集合，可以执行以下操作：  
   
--   获取集合中具有的对象数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  
+-   获取与集合中的对象数[计数](../../../ado/reference/ado-api/count-property-ado.md)属性。  
   
--   返回从具有默认值的集合的对象[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
+-   具有默认值的集合中返回的对象[项](../../../ado/reference/ado-api/item-property-ado.md)属性。  
   
 -   更新的提供程序从集合中的对象[刷新](../../../ado/reference/ado-api/refresh-method-ado.md)方法。  
   
@@ -47,5 +44,5 @@ ms.locfileid: "35284516"
 ## <a name="see-also"></a>请参阅  
  [单元集示例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [轴对象 (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [单元格对象 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Cell 对象 (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [位置对象 (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nested tables
 - tutorials [Data Mining]
 ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c03f8b54859a960479d78f1d0de7a0a30836347
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f31a323320487623339170043112fceb7ba65d3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255119"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109417"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>第 3 课：生成市场篮方案（数据挖掘中级教程）
   市场部[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想要提高公司的网站以促进交叉销售。 作为网站更新的一部分，他们希望能够根据客户的在线购物篮中已有的其他产品来预测客户可能要购买的产品。 市场部还希望更好的了解客户购买行为，以便他们能够将网站设计为将可能被集中购买的项统一放置在一个位置上。 他们已经了解数据挖掘对于此类“  市场蓝分析”尤其有用，并已经请您来开发一个数据挖掘模型。  

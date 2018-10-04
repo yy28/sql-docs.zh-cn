@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_single_file_db
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_single_file_db
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-caps.latest.revision: 68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647425"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +62,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用**sp_attach_single_file_db**仅在数据库以前使用显式分离从服务器上**sp_detach_db**操作或复制的数据库。  
   
  **sp_attach_single_file_db**仅适用于具有单个日志文件的数据库。 当**sp_attach_single_file_db**的数据库附加到服务器，它会生成一个新的日志文件。 如果该数据库是只读数据库，则会在日志文件的先前位置生成日志文件。  
@@ -78,7 +74,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
   
  不要针对复制数据库使用此过程。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  有关附加数据库时如何处理权限的信息，请参阅[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>示例  

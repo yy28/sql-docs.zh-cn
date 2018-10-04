@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - IBCPSession interface
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d1b8b0ed771996ccd6045c28199dbe0c02a37a3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 142f6ac339e437877c485588333fabb04e0bd66b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212317"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-  **IBCPSession**接口公开支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基于文件的大容量复制操作。 **IBCPSession**接口中公开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与会话位于同一级别 Native Client OLE DB 提供程序。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序数据源对象是会话对象的工厂和连接属性 SSPROP_ENABLEBULKCOPY 中指定大容量复制操作。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
+  IBCPSession 接口公开了对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基于文件的大容量复制操作的支持。 **IBCPSession**接口中公开[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]与会话位于同一级别 Native Client OLE DB 提供程序。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供程序数据源对象是会话对象的工厂和连接属性 SSPROP_ENABLEBULKCOPY 中指定大容量复制操作。 此外，SSPROP_ENABLEFASTLOAD 属性应当设置为 True。  
   
- 调用**idbcreatesession:: Createsession**方法然后将导致创建**BulkCopySession**对象。 通过公开的所有基于文件的大容量复制方法**IBCPSession**对象就可对此极为相似的签名与调用**IBCPSession**对象的**IBCPSession**接口。  
+ 调用 IDBCreateSession::CreateSession 方法随后将创建 BulkCopySession 对象。 然后，可针对此 IBCPSession 对象的 IBCPSession 接口，采用极为相似的签名来调用通过 IBCPSession 对象公开的所有基于文件的大容量复制方法。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口支持通过基于内存的大容量复制操作[IRowsetFastLoad](irowsetfastload-ole-db.md)接口。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0813b466184123fea433ccf3467fdf14b5f58740
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c47b8d7d33626fbba240611f31b1c064e6b91c7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218597"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>向结构中添加挖掘模型（Analysis Services - 数据挖掘）
   挖掘结构旨在支持多个挖掘模型。 因此，在完成向导后，您可以打开结构并添加新的挖掘模型。 每当您创建模型时，可以使用一个不同的算法、更改参数或应用筛选器，以使用不同的数据子集。  

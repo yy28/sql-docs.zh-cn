@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217497"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 函数（报表生成器和 SSRS）
   从包含名称/值对的数据集返回指定名称的第一个匹配值。  
@@ -36,13 +33,13 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameters  
  *source_expression*  
- (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如， `=Fields!ProdID.Value`。  
+ (`Variant`) 在当前作用域中计算结果并指定要查找的名称或键的表达式。 例如 `=Fields!ProdID.Value` 。  
   
  *destination_expression*  
- (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如， `=Fields!ProductID.Value`。  
+ (`Variant`) 针对数据集中的每行计算结果并指定要匹配的名称或键的表达式。 例如 `=Fields!ProductID.Value` 。  
   
  *result_expression*  
- (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如， `=Fields!ProductName.Value`。  
+ (`Variant`) 在数据集中的行计算的表达式其中*source_expression* = *destination_expression*，并指定要检索的值。 例如 `=Fields!ProductName.Value` 。  
   
  *数据集 (dataset)*  
  指定报表中数据集的名称的常量。 例如，“Products”。  
@@ -50,7 +47,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>返回  
  返回`Variant`，或`Nothing`如果没有匹配项。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用`Lookup`从名称/值对的指定数据集中检索值的 1 对 1 关系。 例如，对于表中的 ID 字段，可以使用 `Lookup` 从未绑定到该数据区域的数据集检索对应的名称字段。  
   
  `Lookup` 执行以下操作：  

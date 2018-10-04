@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.sqleditor
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fdf5df86b2c2f3806b571eccd6991f2ef123cda
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5cbde2fecd83feab7752795eec5866e0548f31e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139917"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 编辑器 (Visual Database Tools)
   使用 SQL 编辑器可以编辑现有的存储过程、函数、触发器和 SQL 脚本。 当您打开上述任何对象时，此窗口将打开。 若要创建要对数据源运行的新 SQL 语句，请使用查询设计器的 [SQL 窗格](visual-database-tools.md) 。  

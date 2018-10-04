@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0b910c73b09b2ebb5018c762fdd44c9da17c7924
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173637"
 ---
 # <a name="viewing-tuning-reports"></a>查看优化报表
   在本课程的上一个练习中，您已经查看了在数据库引擎优化顾问建议中创建或删除数据库对象的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本，这些建议是 MySession 优化会话生成的结果。 MySession 优化会话是在 [优化工作负荷](lesson-1-1-tuning-a-workload.md)中创建的。  
@@ -46,7 +43,7 @@ ms.locfileid: "37212177"
   
 7.  单击“选择报告”列表中的其他报告，了解相关内容。  
   
-## <a name="summary"></a>“摘要”  
+## <a name="summary"></a>总结  
  现在，你已经浏览了 MySession 优化会话的数据库引擎优化顾问 GUI 的“报告”选项卡。 可以执行相同的步骤来浏览为 EvaluateMySession 优化会话生成的报告。 双击“会话监视器”窗格中的 **EvaluateMySession** 开始该会话。  
   
 ## <a name="next-lesson"></a>下一课  

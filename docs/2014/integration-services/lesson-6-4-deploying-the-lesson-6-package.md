@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f6d09da64246aa0fe2d68df3ab75780597affae2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177037"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>步骤 4：部署第 6 课包
   部署包涉及将包添加到 SQL Server 实例上 Integration Services 中的 SSISDB 目录。 在本课程中，你会将第 6 课包添加到 SSISDB 目录，设置参数，然后执行该包。 对于本课程，你将使用 SQL Server Management Studio 将第 6 课包添加到 SSISDB 目录，然后部署该包。 部署该包之后，你会修改参数以指向新位置，然后执行该包。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], local
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cc1e27115d898cc2ba839fb14d2f7edfa8c560f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f334a0282a27d707e0c1ec99817ddee3d318fff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149278"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216643"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
   若要创建、更新或删除本地多维数据集，必须编写并执行 ASSL 脚本或 AMO 程序。  
@@ -73,7 +70,7 @@ ms.locfileid: "37149278"
   
 -   只有那些依赖于添加到本地多维数据集中的度量值和维度的计算成员、命名集和分配会显示在本地多维数据集中。 将自动排除无效计算成员、命名集和分配。  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>安全性  
  为了使用户能够从服务器多维数据集创建本地多维数据集，用户必须被授予**钻取和本地多维数据集**对服务器多维数据集的权限。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
  使用诸如服务器多维数据集之类的角色无法确保本地多维数据集的安全。 拥有对本地多维数据集文件的文件级访问权限的任何用户均可在此文件中查询多维数据集。 可以使用本地多维数据集文件的 `Encryption Password` 连接属性为本地多维数据集文件设置密码。 如果为本地多维数据集文件设置密码，则与该本地多维数据集文件的所有连接都需要使用此密码才能查询该文件。  

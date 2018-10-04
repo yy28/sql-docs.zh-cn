@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AllMemberName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AllMemberName element
 ms.assetid: 5fda5563-cb7a-4402-82ad-3d6c432b6a7e
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 62c2790a2c83111c45e09411c3ed4006b38a8195
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a9e16de5a541b9d95cb50c0e2585f6f29ab3ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151418"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139537"
 ---
 # <a name="allmembername-element-assl"></a>AllMemberName 元素 (ASSL)
   包含所有成员的默认语言的标题[层次结构](../objects/hierarchy-element-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37151418"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-1：可出现一次且仅出现一次的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37151418"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[Hierarchy](../objects/hierarchy-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`AllMemberName`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.Hierarchy>。  
   
 ## <a name="see-also"></a>请参阅  

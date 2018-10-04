@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 11be818da421f02ec07b13c632c4fcda87652442
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a028a8cc32003dfb44f6ce449a5f6313492fcfd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211386"
 ---
 # <a name="task-6-setting-synonyms"></a>任务 6：设置同义词
   在本任务中，设置两个域值， **USA**并**美国**的**国家/地区**域为使用同义词**美国**为前导值。 由于**使用前导值**创建时选择了选项**国家/地区**域中，任何**USA**值**国家/地区**域将输出为**美国**（因为 United States 是前导值）。 请参阅[Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx)的更多详细信息。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 51
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a57bbc055c226fdfa9d4454ba22f2160dee06c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220967"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
   若要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中创建报表，必须先创建报表服务器项目以用于保存报表定义 (.rdl) 文件和报表所需的其他所有资源文件。 然后，您将创建实际的报表定义文件、定义报表的数据源、定义数据集并定义报表布局。 运行报表时，将检索实际数据并将其与布局相结合，然后呈现在屏幕上，以便执行导出、打印或保存操作。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a857b51bf884a1bec30e28935591946da43ef390
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184274"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072937"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   查询存储功能让 DBA 可以探查查询计划选项和性能。 它让你可以快速找到查询计划中的更改所造成的性能差异，从而简化了性能疑难解答。 这一性能会自动捕获查询、计划和运行时统计信息的历史记录，并将其保留以供你查看。 它按时间窗口将数据分割开来，使你可以查看数据库使用情况模式并了解服务器上何时发生了查询计划更改。 可以使用配置查询存储[ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options)选项。  

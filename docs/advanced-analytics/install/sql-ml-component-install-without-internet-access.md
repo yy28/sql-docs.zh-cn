@@ -3,17 +3,17 @@ title: 安装 SQL Server 机器学习而无需 internet 访问的 R 和 Python �
 description: 脱机或已断开连接机器学习 R 和 Python 安装程序独立 SQL Server 实例上。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437647"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150539"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安装 SQL Server 机器学习在没有 internet 访问权限的计算机上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ Microsoft Python 服务器    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/
 
 5. 继续以下屏幕上的提示完成安装。
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>应用累积更新
+
+我们建议将最新的累积更新应用到数据库引擎和机器学习组件。 通过安装程序安装累积更新。 
+
+1. 使用基线实例启动。 您仅适用于 SQL Server 的现有安装累积更新：
+
+  + SQL Server 2017 初始版本
+  + SQL Server 2016 初始版本、 SQL Server 2016 SP 1 或 SQL Server 2016 SP 2
+
+2. 在 internet 上连接了设备，请转到你的 SQL Server 版本的累积更新列表：
+
+  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. 选择最新累积更新来下载该可执行文件。
+
+4. 对 R 和 Python 中获取相应的 CAB 文件。 有关下载链接，请参阅[实例上 SQL Server 数据库内分析的累积更新的下载 CAB](sql-ml-cab-downloads.md)。
+
+5. 传输所有文件、 可执行文件和 CAB 文件，在脱机计算机上的同一文件夹。
+
+6. 运行安装程序。 接受许可条款，然后在功能选择页上，查看为其应用累积更新的功能。 应会看到每一项功能为当前实例，包括机器学习功能安装。
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. 继续完成向导，接受 R 和 Python 分发版的许可条款。 在安装期间，系统会提示选择包含已更新的 CAB 文件的文件夹位置。
+
 ## <a name="post-install-configuration"></a>安装后配置
 
 安装完成后，重新启动服务，然后配置服务器以启用脚本执行：
@@ -108,30 +136,6 @@ SQL Server 2017 机器学习服务或 SQL Server 2016 R Services 的初始脱机
 
 + [验证安装是否](sql-machine-learning-services-windows-install.md#verify-installation)(对于 SQL Server 2016 中，单击[此处](sql-r-services-windows-install.md#verify-installation))。
 + [根据需要其他配置](sql-machine-learning-services-windows-install.md#additional-configuration)(对于 SQL Server 2016 中，单击[此处](sql-r-services-windows-install.md#bkmk_FollowUp))。
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>补充升级
-
-补充安装是指对失败的实例安装应用修补或更新，以修复现有的问题。 此方法的优点在于，可以在执行安装的同时更新 SQL Server，避免以后单独重新启动。
-
-如果服务器不具有 Internet 访问权限，应用服务更新下载更新后的 SQL Server 安装程序和特定于语言的 CAB 文件的相应版本。 
-
-1. 使用基线实例启动。 有关这些版本的 SQL Server 支持补充升级：
-
-  + SQL Server 2017 初始版本
-  + SQL Server 2016 初始版本
-  + SQL Server 2016 SP 1
-  + SQL Server 2016 SP 2
-
-2. 获取给定的累积更新 SQL Server 安装程序的更新的版本。 在迁移后的基础数据库引擎实例的累积更新了任何更新机器学习 （R 和 Python） 功能。
-
-  + [SQL Server 2016 更新](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [SQL Server 2017 更新](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. 对 R 和 Python 中获取相应的 CAB 文件。 有关下载链接，请参阅[实例上 SQL Server 数据库内分析的累积更新的下载 CAB](sql-ml-cab-downloads.md)。
-
-4. 将所有文件都放在同一文件夹中，运行安装程序。 在安装期间，系统会提示选择更新的 CAB 文件的文件夹位置。
 
 ## <a name="next-steps"></a>后续步骤
 

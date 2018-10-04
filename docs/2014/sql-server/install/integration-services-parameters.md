@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, parameters
 ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
-caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 15d484ffbd513ac8a14f4388cd3cdce897654164
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2b9fc62d26edbac0244bed07d20931fbb508f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210377"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 参数
   有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，你可以决定分析[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]计算机上的包或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]文件打包的文件系统中。 如果分析文件系统中的文件，则需要提供包含 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的文件夹的路径。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **分析计算机上的 SSIS 包**  
  选择此选项可分析计算机上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 默认情况下，将选中此选项。  
   

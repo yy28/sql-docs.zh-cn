@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10530"
 - sql12.rtp.rptdesigner.reportproperties.references.f1
 ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: abc6ea1f5322303f8a4429f226e44fd32c018962
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55ec2d6fa40e5f2e6aa7fcfd1d5be40667a518d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194327"
 ---
 # <a name="report-properties-dialog-box-references"></a>“报表属性”对话框 ->“引用”
   选择 **“报表属性”** 对话框中的 **“引用”** 可以添加或删除对报表定义中的表达式所使用的自定义程序集或其他外部程序集以及自定义类实例的引用。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **添加或删除程序集**  
  列出报表引用的程序集。 该程序集在安装报表设计工具的计算机上以及报表服务器上必须可用。 引用的名称必须匹配的内容 **\<CodeModule >** 完全标记报表定义语言 (.rdl) 文件中。  
   

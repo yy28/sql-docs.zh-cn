@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_colptr
@@ -17,17 +15,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6daeab182138a3bd51528a53e1ce5f973fa66b0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2bb66baa1cfefdeb857641daad0e454a1088d005
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071745"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648275"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +59,7 @@ RETCODE bcp_colptr (
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Bcp_colptr**功能，您可以更改特定列的源数据的地址，将数据复制到与 SQL Server 时[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)。  
   
  最初，通过调用设置的用户数据指针**bcp_bind**。 如果程序变量数据地址发生更改调用之间**bcp_sendrow**，可以调用**bcp_colptr**重置的数据的指针。 下次调用**bcp_sendrow**发送到调用的数据**bcp_colptr**。  

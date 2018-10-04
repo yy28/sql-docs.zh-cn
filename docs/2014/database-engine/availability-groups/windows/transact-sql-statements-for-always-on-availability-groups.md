@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], about
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 651f340e323dd793a831ccb54d29ec875d40dc83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0c766ed98bf5833790d2c0c1a35bfbff3c91e3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208857"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组的 Transact-SQL 语句概述 (SQL Server)
   本主题介绍支持部署 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 以及创建和管理指定的可用性组、可用性副本和可用性数据库的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 语句。  

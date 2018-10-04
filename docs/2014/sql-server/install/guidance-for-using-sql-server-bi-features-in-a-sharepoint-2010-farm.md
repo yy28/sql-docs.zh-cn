@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f16ab06ab21f266c4993a3148668effadbee2175
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25054c92124930d2d33b9f35eb43a1945d4a22bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197117"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>在 SharePoint 2010 场中使用 SQL Server BI 功能的指南
   本主题总结了基于您所使用的软件版本的功能可用性。 它还介绍了使用特定 SQL Server 功能时对 SharePoint 2010 的安装要求。 有关 SharePoint 2013 的信息，请参阅[在 SharePoint 中的 SQL Server BI 功能的部署拓扑](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md)。  
@@ -49,8 +46,8 @@ ms.locfileid: "37149868"
   
 |支持的功能|SharePoint 产品|  
 |------------------------|------------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]一项功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]的用户。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
-|与 SharePoint 集成的一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表查看和功能。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]的用户。|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]一项功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]外接程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据警报。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。|  
+|与 SharePoint 集成的一般 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表查看和功能。|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard Edition 和 Enterprise Edition。<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]。|  
   
  有关详细信息，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
   

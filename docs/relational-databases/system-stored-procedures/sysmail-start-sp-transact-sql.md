@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_start_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
-caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 08a073099616898ebd4f2a5161b0fe26f4bdb688
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826606"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sysmail_start_sp
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  数据库邮件未启用或未随[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安装。 使用数据库邮件配置向导可以启用并安装数据库邮件对象。  
   
  此存储的过程是在**msdb**数据库。 该存储过程将启动保存待发消息请求的数据库邮件队列，并对外部程序启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 激活。  

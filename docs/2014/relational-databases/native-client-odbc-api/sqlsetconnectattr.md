@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070578"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序忽略 SQL_ATTR_CONNECTION_TIMEOUT 的设置。  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  建立连接之后，应用程序可以查询此属性使用[SQLGetConnectAttr](sqlgetconnectattr.md)以确定故障转移伙伴的标识。 如果主服务器没有故障转移伙伴，则此属性将返回空字符串。 这允许智能应用程序缓存最近确定的备份服务器，但是这类应用程序应注意此信息仅在首次建立连接时才更新或重置（如果缓存），对于长期连接可能过时。  
   
- 有关详细信息，请参阅[Using Database Mirroring](../native-client/features/using-database-mirroring.md)。  
+ 有关详细信息，请参阅[使用数据库镜像](../native-client/features/using-database-mirroring.md)。  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY 强制将 Windows 身份验证用于服务器登录的访问验证。 使用 Windows 身份验证时，该驱动程序将忽略作为的一部分提供的用户标识符和密码值**SQLConnect**， [SQLDriverConnect](sqldriverconnect.md)，或[SQLBrowseConnect](sqlbrowseconnect.md)处理。  

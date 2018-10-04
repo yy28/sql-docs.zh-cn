@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ErrorList
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33092cee171fccd251b8ed0a884ca33d294f35b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 08ba949c2cb835296c1442fcac4d5984a051bb30
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321829"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216357"
 ---
 # <a name="error-list-window-management-studio"></a>“错误列表”窗口 (Management Studio)
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **“错误列表”** 用于显示由 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查询编辑器中的 IntelliSense 代码生成的语法和语义错误。  
   
 ## <a name="features-of-the-error-list"></a>“错误列表”的功能  
  **“错误列表”** 提供下列功能：  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8add1b36631df0706c6463112ed47fcf7f792bb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b272d35b7d8796cd67f17a045def480cc2ade14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190917"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100087"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>连接到表格模型数据库 (SSAS)
   在您生成表格模型并且将其部署到某一 Analysis Services 表格模式服务器后，需要设置权限以使其可供客户端应用程序使用。 本主题介绍了如何设置权限以及如何从客户端应用程序连接到数据库。  

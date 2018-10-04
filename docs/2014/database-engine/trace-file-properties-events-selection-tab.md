@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracefileproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace File Properties dialog box
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74cc7160d66909523628c173e4b80db4045a90e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 956316eb83291f71932c0ee70460274090b7069d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302637"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193367"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>跟踪文件属性（“事件选择”选项卡）
   使用 **“跟踪文件模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看跟踪的列属性或者从跟踪中删除数据列。  
   
  若要查看此窗口，请打开跟踪文件。 然后，在 **“文件”** 菜单上，单击 **“属性”**，再单击 **“事件选择”** 选项卡。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “事件”列  
  查看按事件类别组织的跟踪事件。 最初，跟踪中的所有事件均被选中。 可以通过选中事件框或选中事件的数据列来选择事件。 如果选中事件框，则该事件的所有可用数据列均被选中。 如果选中了某个事件的数据列，则该事件将被选中，并且其他所有必需列也被自动选中。 如果您正在查看跟踪文件或表，清除事件复选框或数据列将减少跟踪窗口中的可见数据量，便于分析。 您也可以更改列筛选器以减少跟踪窗口中的可见数据量。 有关事件类的详细信息，请参阅 [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   

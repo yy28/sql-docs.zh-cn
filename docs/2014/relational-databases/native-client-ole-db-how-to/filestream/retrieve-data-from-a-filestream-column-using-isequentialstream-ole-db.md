@@ -1,24 +1,21 @@
 ---
-title: 从使用 ISequentialStream (OLE DB) 的 FILESTREAM 列检索数据 |Microsoft Docs
+title: 使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af1fdbad51d7d6ae1c6c2320a6ac05d103123324
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086383"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>使用 ISequentialStream 从 FILESTREAM 列检索数据 (OLE DB)
   此示例显示如何使用 ICommandText 接口中的 ISequentialStream 接口从 Filestream 列检索单个记录。  
@@ -30,9 +27,9 @@ ms.locfileid: "37424856"
   
  使用以下示例之一创建此示例读取的表：  
   
--   [将数据发送到 FILESTREAM 列使用绑定于 ICommandText 参数的 ISequentialStream &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用绑定到 ICommandText 参数的 ISequentialStream 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [将数据发送到使用 IRowsetFastUpload FILESTREAM 列&#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload 向 FILESTREAM 列发送数据 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  复制第一个代码列表，并将其粘贴到名为 ISSHelper.h 的文件中。  
   

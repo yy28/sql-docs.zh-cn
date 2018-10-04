@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - calling stored procedures
@@ -16,18 +14,17 @@ helpviewer_keywords:
 - MDX queries [Analysis Services]
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb799a4e366c0301998b46d7244438aabd2c4411
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af1b06ce11cc23781838d0faf3866fa11ba666d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168147"
 ---
-# <a name="calling-stored-procedures"></a>调用存储的过程
+# <a name="calling-stored-procedures"></a>调用存储过程
   可以在服务器上或从客户端应用程序中调用存储过程。 在任何一种情况下，存储过程都始终运行于服务器上，或者使用服务器的上下文，或者使用数据库的上下文。 执行存储过程时，不需要具备特殊的权限。 存储过程由程序集添加到服务器或数据库上下文后，只要用户的角色允许执行存储过程所执行的操作，则任何用户均可执行该存储过程。  
   
  调用 MDX 中的存储过程是按照与调用内部 MDX 函数相同的方式来完成的。 对于不带参数的存储过程，则使用过程名和一对空括号，如下所示：  

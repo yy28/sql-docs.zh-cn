@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ea360997ea9d0f2dd388aa3ff803ab153836073d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50b98c3038d8ec1af9272eb9da0ad6d8ec0e3139
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311871"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215689"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Create Table SQL 语句（SQL Server 导入和导出向导）
   使用**Create Table SQL 语句**对话框以查看自动生成的语句或对其进行修改您的要求。 如果修改此语句，可能还必须对列映射做相关联的更改，而且此后必须手动维护编辑过的 SQL 语句。  
@@ -33,7 +30,7 @@ ms.locfileid: "37311871"
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **SQL 语句**  
  显示自动生成的 SQL 语句，允许对其进行编辑。  
   

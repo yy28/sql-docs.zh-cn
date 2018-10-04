@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 11/20/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sql12.swb.linkedserver.properties.general.f1
 - sql12.swb.linkedserver.properties.security.f1
@@ -19,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294779"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152004"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -40,7 +35,7 @@ ms.locfileid: "37294779"
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>权限  
+### <a name="permissions"></a>Permissions  
  使用时[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，要求`ALTER ANY LINKED SERVER`中的成员身份的服务器上的权限**setupadmin**固定的服务器角色。 使用时[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`权限或成员身份**sysadmin**固定的服务器角色。  
   
 ##  <a name="Procedures"></a> 如何创建链接服务器  

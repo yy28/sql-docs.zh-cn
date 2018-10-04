@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0fd74b1e946ba55c2c647368317b6d872189523a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209817"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>透视详细信息（“透视”选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的 **“透视”** 选项卡上的 **“透视详细信息”** 窗格，管理为查询所选透视的用户提供的元数据。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **多维数据集对象**  
  显示特定多维数据集（可以包含在透视中）中所包含对象和属性的层次列表。  
   

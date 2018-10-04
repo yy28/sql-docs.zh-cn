@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executeprocesstask.general.f1
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cdafe1f838bdfb8fa94efba93432ea25ca50ee26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8724345c7fc043e4e87f2026fe07d5fc1c8e80b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202349"
 ---
 # <a name="execute-process-task-editor-general-page"></a>执行进程任务编辑器（“常规”页）
   可以使用“执行进程任务编辑器”对话框的“常规”页，对执行进程任务进行命名和说明。  
   
  若要了解此任务，请参阅 [Execute Process Task](control-flow/execute-process-task.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为执行进程任务提供唯一的名称。 此名称用作任务图标中的标签。  
   

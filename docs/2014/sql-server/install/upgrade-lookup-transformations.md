@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation and upgrading
 - upgrading caching for Lookup transformation
 - upgrading Lookup transformation
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
-caps.latest.revision: 16
 author: mashamsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8da8551b85948f27f1e657cb70c4bb1140c5314b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 652cec720eae440106a0c8e30bd9910140dcff0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224789"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182617"
 ---
 # <a name="upgrade-lookup-transformations"></a>升级查找转换
   当您从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 时，请考虑将该包修改为利用查找转换中的新功能。 该转换支持 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 中的缓存类型和数据输出选项。 详细了解其他缓存和数据输出，请参阅[查找转换](../../integration-services/data-flow/transformations/lookup-transformation.md)。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a93c08669f0cf3ac962fa72df89423e3cbc8d0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bdc16e4bd09a0f5e93b0335cb8383040e778dc7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251459"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220957"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 故障转移群集实例 (SQL Server)
   作为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 产品/服务的一部分，AlwaysOn 故障转移群集实例利用 Windows Server 故障转移群集 (WSFC) 功能通过冗余在实例级别（ *故障转移群集实例* (FCI)）提供了本地高可用性。 FCI 是在 Windows Server 故障转移群集 (WSFC) 节点上和（可能）多个子网中安装的单个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例。 在网络中，FCI 显示为在单台计算机上运行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例，不过它提供了从一个 WSFC 节点到另一个 WSFC 节点的故障转移（如果当前节点不可用）。  

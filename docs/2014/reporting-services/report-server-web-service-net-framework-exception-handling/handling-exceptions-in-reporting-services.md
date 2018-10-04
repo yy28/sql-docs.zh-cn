@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], exceptions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - exceptions [Reporting Services], about exception handling
 - SoapException object
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
-caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8fbde0cf864ea1ad9313f29ff16554d7bdeb3f62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3cecbb0fcdbaae51e53c5277402b264d9c2468ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068407"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>在 Reporting Services 中处理异常
   在无法完成某一 Reporting Services SOAP API 客户端请求时，报表服务器将返回错误，而非预期调用结果。 在无法完成调用时，针对报表服务器 Web 服务的错误将以 SOAP Fault XML 元素的形式返回。 该错误的主要描述性元素是 detail 元素，它包括报表服务器提供的所有错误消息以及所有附加的 Web 服务错误信息。 detail 元素中的关键信息是报表服务器错误代码。 基于这些消息和错误代码，您可以确定要在应用程序中执行的相应后续操作。 有关 SOAP 错误的详细信息，请参阅万维网联合会 (W3C) 网站，网址为 http://www.w3.org/TR/SOAP。  

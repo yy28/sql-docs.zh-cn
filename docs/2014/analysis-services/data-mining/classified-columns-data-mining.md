@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - PROBABILITY_VARIANCE column
 - SUPPORT column
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 403ab773012d9e9370959bd7094db51f9785e8d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193747"
 ---
 # <a name="classified-columns-data-mining"></a>已分类列（数据挖掘）
   定义已分类列时，在挖掘结构中创建当前列和另一个列之间的关系。 指定为已分类列的挖掘结构列中的数据包含描述挖掘结构中另一个列的值的分类信息。  

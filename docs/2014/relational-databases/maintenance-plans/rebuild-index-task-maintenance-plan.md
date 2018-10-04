@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
@@ -15,23 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 237b9b7ef70b2cc258d57507a7a7e0bd28ef26c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103469"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>“重新生成索引”任务（维护计划）
   使用“重新生成索引任务”对话框可用利用新的填充因子对数据库中的表重新创建索引。 填充因子确定索引中每页上的空白空间量，以容纳将来的扩展内容。 随着向表中添加数据，由于没有维持填充因子，可用空间将逐渐填满。 重新组织数据页和索引页可以重新建立可用空间。  
   
  **“‘重新生成索引’任务”** 使用 ALTER INDEX 语句。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“连接”**  
  选择执行此任务时使用的服务器连接。  
   

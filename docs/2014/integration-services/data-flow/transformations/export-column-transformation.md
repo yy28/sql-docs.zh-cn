@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exportcolumntrans.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96b38988bdeeb47c22deed62d54d5bf0922963e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc32abc07dd76137e735692a4ed1e1f392e9ae29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149018"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205117"
 ---
 # <a name="export-column-transformation"></a>导出列转换
   导出列转换读取数据流中的数据，并将数据插入到文件中。 例如，如果数据流包含产品信息（如每件产品的图片），则可使用导出列转换将图像保存到文件中。  
@@ -38,14 +35,14 @@ ms.locfileid: "37149018"
   
 |追加|截断|文件存在|结果|  
 |------------|--------------|-----------------|-------------|  
-|False|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|False|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|False|True|“否”|该转换将创建一个新文件并将数据写入到该文件中。|  
-|True|True|“否”|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
-|False|False|是|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
-|False|True|是|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
-|True|False|是|转换将打开文件并将数据写入到文件末尾。|  
-|True|True|是|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
+|False|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|False|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|False|True|否|该转换将创建一个新文件并将数据写入到该文件中。|  
+|True|True|否|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
+|False|False|用户帐户控制|发生运行时错误。 文件存在，但转换无法写入到文件中。|  
+|False|True|用户帐户控制|转换将删除文件，然后重新创建文件并将数据写入到文件中。|  
+|True|False|用户帐户控制|转换将打开文件并将数据写入到文件末尾。|  
+|True|True|用户帐户控制|该转换的设计时验证失败。 将两个属性都设置为 `true` 是无效的。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>导出列转换的配置  
  可以按照下列方式配置导出列转换：  

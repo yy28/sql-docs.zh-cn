@@ -1,13 +1,11 @@
 ---
-title: JScript ADO 编程 |Microsoft 文档
+title: JScript ADO 编程 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,35 +13,34 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655625"
 ---
 # <a name="jscript-ado-programming"></a>JScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
- Microsoft JScript 不支持类型库，因此不需要引用 ADO 项目中。 因此，没有关联的功能，如命令行完成是受支持。 此外，默认情况下，枚举的 ADO 常量不在 JScript 中定义。  
+ Microsoft JScript 不支持类型库，因此不需要引用 ADO 在项目中。 因此，如命令行完成任何关联的功能是受不支持。 此外，默认情况下，ADO 枚举常量未在 JScript 中定义。  
   
- 但是，ADO 提供你使用两个包含文件包含用于 JScript 的以下定义：  
+ 但是，ADO 提供了具有两个包含文件包含要与 JScript 一起使用的以下定义：  
   
--   服务器端脚本使用 Adojavas.inc，安装在 ADO 库文件夹。  
+-   用于服务器端脚本使用 Adojavas.inc，ADO 库文件夹中安装。  
   
--   脚本使用 Adcjavas.inc，ADO 库文件夹中安装的客户端。  
+-   用于客户端侧脚本使用 Adcjavas.inc，ADO 库文件夹中安装。  
   
- 您可以复制和粘贴到 ASP 页中，从这些文件的常量定义或时，如果你正在编写服务器端脚本，将 Adojavas.inc 文件复制到您的网站上的文件夹，并引用它的 ASP 页如下：  
+ 您可以复制，将从这些文件的常量定义粘贴到 ASP 页中，或者，如果你正在执行服务器端脚本，将 Adojavas.inc 文件复制到你的网站上的文件夹和引用从 ASP 页如下：  
   
 ```  
 <!--#include File="adojavas.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-jscript"></a>在 JScript 中创建 ADO 对象  
- 您必须改用**CreateObject**函数调用：  
+ 必须改用**CreateObject**函数调用：  
   
 ```  
 var Rs1;  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>JScript 示例  
- 下面的代码是打开的活动服务器页面 (ASP) 文件中的 JScript 服务器端编程的泛型示例**记录集**对象：  
+ 下面的代码是打开的 Active Server Page (ASP) 文件中的 JScript 服务器端编程的一般示例**记录集**对象：  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

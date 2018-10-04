@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0a1091e56ee505731fb9ce0d683975caa9c3d29
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188334"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193187"
 ---
 # <a name="sql-trace"></a>SQL 跟踪
   在 SQL 跟踪中，如果事件是在跟踪定义中列出的事件类的实例，则收集这些事件。 可以将这些事件从跟踪中筛选出来或为其目标进行排队。 目标可以是文件或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理对象 (SMO)，它可以使用管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的应用程序中的跟踪信息。  
@@ -39,7 +36,7 @@ ms.locfileid: "37188334"
  下列词汇介绍了 SQL 跟踪的重要概念。  
   
  **事件**  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]实例内发生的操作。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]实例内发生的操作。  
   
  **数据列**  
  事件的属性。  
@@ -135,7 +132,7 @@ ms.locfileid: "37188334"
 |**TargetLoginName**|42|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的名称。|  
 |**TargetLoginSid**|43|如果是针对登录的操作（例如，添加新的登录），这是所针对登录的 SID。|  
 |**TargetUserName**|39|如果是针对某个数据库用户的操作（例如，授予用户权限），这是该用户的名称。|  
-|**TextData**|@shouldalert|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
+|**TextData**|1|依赖于跟踪中捕获的事件类的文本值。 但是，如果跟踪参数化查询，则不以 **TextData** 列中的数据值显示变量。|  
 |**事务 ID**|4|系统为事务分配的 ID。|  
 |**类型**|57|跟踪中捕获的与事件类对应的整数值。|  
 |**Writes**|17|由服务器代表事件写入物理磁盘的次数。|  

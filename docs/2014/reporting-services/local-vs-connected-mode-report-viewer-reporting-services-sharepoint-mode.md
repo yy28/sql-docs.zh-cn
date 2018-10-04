@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbae778b06c90f1e18cb5e45119a09e25d634738
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157798"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165307"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>报表查看器中的本地模式和连接模式报表对比（SharePoint 模式下的 Reporting Services）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表可以配置为运行中任意一种*本地模式下*或*连接的模式*，以利用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器。 您而是可以在数据扩展插件支持本地模式报表时，使用报表查看器直接从 SharePoint 呈现报表。 这种方法称为“本地模式” 。 在旧版[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，所需连接到 SharePoint 场[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]报表服务器在 SharePoint 模式下配置因此报表查看器控件可以呈现报表。 这种方法称为“远程模式”  或“连接模式” 。  

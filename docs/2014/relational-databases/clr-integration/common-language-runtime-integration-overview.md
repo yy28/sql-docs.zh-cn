@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - managed code [SQL Server], CLR integration
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
-caps.latest.revision: 63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5300f1f82388e9331959d813b27a48928a47a8f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 817ff27eee40a36c2af3f73369c412722745ec7a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349319"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48191817"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>公共语言运行时 (CLR) 集成概述
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 现在具备与 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework 的公共语言运行时 (CLR) 组件集成的功能。 CLR 为托管代码提供服务，例如跨语言集成、代码访问安全性、对象生存期管理以及调试和分析支持。 对于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户和应用程序开发人员来说，CLR 集成意味着您现在可以使用任何 .NET Framework 语言（包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#）编写存储过程、触发器、用户定义类型、用户定义函数（标量函数和表值函数）以及用户定义的聚合函数。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 包括预安装的 .NET Framework 版本 4。  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8ed094b0f98514bcc6c50baf07de75b59161d911
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 3ae1077d933d9872e3b5691e6233af4b82d61d58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218157"
 ---
 # <a name="example-querying-xmltype-columns"></a>示例：查询 XML 类型的列
   下面的查询包括的列`xml`类型。 该查询从 `xml` 类型的 `Instructions` 列的第一个位置检索产品型号 ID、名称和生产步骤。  

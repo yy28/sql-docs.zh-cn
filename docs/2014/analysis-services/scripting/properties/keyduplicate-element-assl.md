@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyDuplicate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2e06d39607acf92dc820bc08cfe53f938bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192434"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055288"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 元素 (ASSL)
   确定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]处理处理期间遇到的重复键错误。  
@@ -59,9 +56,9 @@ ms.locfileid: "37192434"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  仅在维度处理期间，多次遇到属性键时才会生成“重复键”错误。 因为属性键必须是唯一的，因此 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 丢弃重复的记录。 “重复键”错误通常指示维度设计（特别是属性间的关系）中的缺陷。  
   
  此元素的值限定为下表中的字符串之一。  

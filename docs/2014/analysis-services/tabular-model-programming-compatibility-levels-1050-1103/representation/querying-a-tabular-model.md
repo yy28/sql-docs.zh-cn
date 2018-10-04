@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188814"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217377"
 ---
 # <a name="querying-a-tabular-model"></a>查询表格模型
   作为开发人员，查询表格模型意味着从表格数据库检索数据；为完成此目标，您具有两个选项：在 DAX 中使用表查询，或者使用 MDX 并且在数据从多维数据集传入时检索数据。 不过，根据您的表格模型的基础模式，您可能会被限制为仅使用 DAX 表查询；DirectQuery 模式要求使用 DAX 表查询。  
@@ -108,7 +105,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-|@shouldalert|@shouldalert|Bikes|$  28,318,144.65|$  66,302,381.56|  
+|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|组件||$  11,799,076.66|  
   

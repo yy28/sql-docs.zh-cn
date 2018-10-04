@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], hiding instances
 - hiding instances of Database Engine
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 00e68c98a07da6757b33d84408e6ee763485cd8c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04bebf8440d039dd228006a252006b6f687fae08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265253"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093357"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
   本主题说明如何使用 SQL Server 配置管理器在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 中隐藏 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 浏览器服务来枚举安装在计算机上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 这使客户端应用程序可以浏览服务器，并帮助客户端区别同一台计算机上的多个 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例。 您可以使用以下过程防止 SQL Server Browser 服务向尝试通过使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] “浏览” **按钮来查找实例的客户端计算机公开** 实例。  
@@ -35,7 +32,7 @@ ms.locfileid: "37265253"
   
 2.  在 **“标志”** 选项卡的 **“隐藏实例”** 框中，选择 **“是”**，然后单击 **“确定”** 关闭对话框。 对于新连接，更改会立即生效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果你隐藏命名实例，你将需要在连接字符串中提供端口号才能连接到隐藏的实例，即使浏览器服务正在运行也是如此。 对于命名隐藏实例，我们建议你使用静态端口而不是动态端口。  
   有关详细信息，请参阅[将服务器配置为侦听特定 TCP 端口（SQL Sever 配置管理器）](configure-a-server-to-listen-on-a-specific-tcp-port.md)。  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - SMP
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bd866520fbace51ee9ef06a547bb528f46b9435
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156137"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 服务器配置选项
     
@@ -109,7 +106,7 @@ GO
   
 |十进制值|二进制位掩码|允许 SQL Server 线程在哪些处理器上运行|  
 |-------------------|---------------------|--------------------------------------------|  
-|@shouldalert|00000001|0|  
+|1|00000001|0|  
 |3|00000011|0 和 1|  
 |7|00000111|0、1 和 2|  
 |15|00001111|0、1、2 和 3|  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensionattributes.f1
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08e54b933094b86c68af60277ff73b701bb5e4f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6441ffd954beb6514badf55ced35239c61da0859
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263443"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218943"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>选择维度属性（维度向导）
   可以使用 **“选择维度属性”** 页选择和修改要创建的维度的属性。  
@@ -33,7 +30,7 @@ ms.locfileid: "37263443"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  (带复选框的列)  
  选择此项将包括维度中的属性。  
   

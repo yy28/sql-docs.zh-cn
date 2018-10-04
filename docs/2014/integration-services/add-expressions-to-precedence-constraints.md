@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-caps.latest.revision: 43
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc4a614af4bd20a4209d323902c17db1c0a61ece
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8cee9f40b308c545a9ebc74f2e4f1a88618d5008
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208277"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>将表达式添加到优先约束
   优先约束可用表达式定义两个可执行文件之间的约束：优先可执行文件和受约束的可执行文件。 可执行文件可以是任务或容器。 表达式可以单独使用，也可以与优先可执行文件的执行结果结合使用。 可执行文件的执行结果或者为成功，或者为失败。 配置优先约束的执行结果时，可以将执行结果设置为 `Success`、`Failure` 或 `Completion`。 `Success` 要求优先可执行文件成功；`Failure` 要求优先可执行文件失败；而 `Completion` 则指示无论优先任务成功或失败，受约束的可执行文件都应运行。 有关详细信息，请参阅 [Precedence Constraints](control-flow/precedence-constraints.md)。  

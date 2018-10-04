@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85c7682512adb310a487a79742543c9383611f5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 635a5428685feff5887b0800388a41f95a108c1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153768"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209227"
 ---
 # <a name="schedule-properties-reports-page"></a>计划属性（“报表”页）
   使用此页可以查看使用此共享计划的所有报表的列表。 计划可用于刷新报表快照、生成报表历史记录、触发订阅或使报表的缓存副本过期。 若要了解如何使用计划，请查看报表的属性和订阅信息。  
@@ -33,7 +30,7 @@ ms.locfileid: "37153768"
 > [!NOTE]  
 >  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供此功能。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **文件夹**  
  指定报表的路径。  
   

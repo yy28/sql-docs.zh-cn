@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059827"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services 数据警报
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 数据警报是一种数据驱动的警报解决方案，用于在恰当的时间向您通知令您感兴趣或对您重要的报表数据。 通过使用数据警报，您不必再找寻信息，它会直接送达您处。  
@@ -116,9 +113,9 @@ ms.locfileid: "37272333"
 ##  <a name="InstallAlerting"></a> 安装数据警报  
  数据警报功能仅当在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时才可用。 在 SharePoint 模式下安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 时，安装程序会自动创建警报数据库（用于存储数据警报定义和警报元数据）和两个 SharePoint 页（用于管理警报和向 SharePoint 站点添加数据警报设计器）。 没有要执行的特殊步骤或在安装过程中为警报设置的选项。  
   
- 如果你想要了解有关安装的详细信息[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]在 SharePoint 模式下，包括[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]共享服务中的新增[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]并[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服务应用程序，必须创建并配置，然后可以使用[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]功能，请参阅[安装 Reporting Services SharePoint 模式适用于 SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) MSDN 库中。  
+ 若要详细了解如何在 SharePoint 模式中安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，包括 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中新增的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共享服务和使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能前必须先创建和配置的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服务应用程序，请参阅 MSDN 库中的[安装用于 SharePoint 2010 的 Reporting Services SharePoint 模式](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)。  
   
- 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)并[启动、 停止、 暂停、 继续、 重新启动数据库引擎、 SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
+ 如本主题前面的示意图所示，数据警报使用 SQL Server 代理作业。 若要创建这些作业，SQL Server 代理必须运行。 您可能已经配置 SQL Server 代理以在安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]时自动启动。 如果没有，您可以手动启动 SQL Server 代理。 有关详细信息，请参阅[配置 SQL Server 代理](../ssms/agent/configure-sql-server-agent.md)和[启动、停止、暂停、继续、重启数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
  可以使用 SharePoint 管理中心中的 **“设置订阅和警报”** 页来查看 SQL Server 代理是否正在运行，并创建和下载之后要运行以向 SQL Server 代理授予权限的自定义的 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 通过使用 PowerShell 还可以生成 [!INCLUDE[tsql](../includes/tsql-md.md)] 脚本。 有关详细信息，请参阅[用于 SSRS 服务应用程序的设置订阅和警报](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)。  
   

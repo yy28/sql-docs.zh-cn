@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222607"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 课：向自行车购买者挖掘结构添加挖掘模型
   在本课中，将两个挖掘模型添加到你创建的自行车购买者挖掘结构[第 1 课： 创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  

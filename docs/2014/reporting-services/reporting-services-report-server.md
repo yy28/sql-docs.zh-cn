@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - report servers [Reporting Services], about report server
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cb9c580dbd044034923718dd59e4ed27caebab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40394186"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108487"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 报表服务器
   本主题概述在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器上安装 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的中心组件。 报表服务器由一对处理引擎和一组具有特殊用途的扩展插件（用于处理身份验证、数据处理、呈现和传递操作）组成。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表服务器在以下两种部署模式之一下运行：本机模式或 SharePoint 模式。 请参阅功能比较的 [SharePoint 模式和本机模式的功能比较](#bkmk_featuresupport) 部分。  

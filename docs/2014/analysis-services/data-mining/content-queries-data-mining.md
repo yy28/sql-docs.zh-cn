@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 441ad05289df13e34954553db27810406341d77d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6f7db4783f1fc828c183c76563a6fed42ab2ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209807"
 ---
 # <a name="content-queries-data-mining"></a>内容查询（数据挖掘）
   内容查询是一种提取有关内部统计信息以及挖掘模型结构信息的一种方式。 有时，内容查询可提供在查看器中不易查看的详细信息。 您还可以使用内容查询的结果以编程方式提取信息以供他用。  

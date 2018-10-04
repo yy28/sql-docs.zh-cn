@@ -1,34 +1,28 @@
 ---
-title: 连接到 Azure SQL DB (SybaseToSQL) |Microsoft 文档
+title: 连接到 Azure SQL DB (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb6a49072e16f00ba12dd32f1ccd4b6cab8a3620
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778833"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640900"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>连接到 Azure SQL DB (SybaseToSQL)
-用于连接到 Azure SQL DB 对话框连接到你想要迁移的 Azure SQL DB 数据库。  
+用于连接到 Azure SQL 数据库对话框的连接到你想要迁移的 Azure SQL DB 数据库。  
   
-若要访问此对话框中，在**文件**菜单上，选择**连接到 Azure SQL DB**。 如果你以前连接，则命令是**重新连接到 Azure SQL DB。**  
+若要访问此对话框，请在**文件**菜单中，选择**连接到 Azure SQL DB**。 如果你之前已连接，则命令是**重新连接到 Azure SQL DB。**  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
 **服务器名称**  
   
 选择或输入用于连接到 Azure SQL DB 服务器名称。  
@@ -38,7 +32,7 @@ ms.locfileid: "34778833"
 选择中，输入或**浏览**数据库名称。  
   
 > [!IMPORTANT]  
-> Azure SQL DB 中，用于 Sybase 的 SSMA 不支持对 master 数据库的连接。  
+> 适用于 Sybase 的 SSMA 不支持在 Azure SQL DB 中的对 master 数据库的连接。  
   
 **用户名**  
   
@@ -53,21 +47,21 @@ ms.locfileid: "34778833"
 SSMA 建议加密的连接到 Azure SQL DB。  
   
 ## <a name="create-azure-database"></a>创建 Azure 数据库  
-如果 Azure SQL DB 帐户中没有数据库，您可以创建第一个数据库。  
+如果在 Azure SQL DB 帐户中不存在数据库，可以创建第一个数据库。  
   
-若要非常首次创建新的数据库，请执行以下步骤  
+若要为第一次创建新的数据库，请执行以下步骤  
   
-1.  单击位于在连接到 Azure SQL DB 对话框中的浏览按钮  
+1.  单击浏览按钮显示在连接到 Azure SQL 数据库对话框的  
   
-2.  如果不有任何数据库，将显示以下两个菜单项。  
+2.  如果不不存在任何数据库，将显示以下两个菜单项。  
   
-    1.  **（未找到数据库）** 这将禁用且灰出所有的时间  
+    1.  **（找不到数据库）** 的已禁用，所有时间会变灰  
   
-    2.  **创建新的数据库**即 enabled 仅当在 Azure SQL DB 帐户上没有任何数据库时。 如果单击此菜单项，创建 Azure 数据库对话框中不存在与数据库名称和大小。  
+    2.  **创建新的数据库**仅当 Azure SQL 数据库帐户上没有任何数据库时启用的。 单击此菜单项，对话框中创建 Azure 数据库不存在具有数据库名称和大小。  
   
-3.  在创建数据库时，作为输入指定了以下两个参数：  
+3.  在创建数据库时，作为输入提供以下两个参数：  
   
     1.  **数据库名称：** 输入数据库名称。  
   
-    2.  **数据库大小：** 选择你需要在 Azure SQL DB 帐户中创建的数据库大小。  
+    2.  **数据库大小：** 选择您需要在 Azure SQL DB 帐户中创建的数据库大小。  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fc119c1339283353da8ab632785bb30cd65c057a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d532bf8e3cd47f430ccb60470cda996a8c8e6d77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206747"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>以编程方式使用连接管理器
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，关联的连接管理器类的 AcquireConnection 方法是以托管代码方式使用连接管理器时最常调用的方法。 编写托管代码时，必须调用 AcquireConnection 方法以使用连接管理器的功能。 无论是在脚本任务、脚本组件、自定义对象还是自定义应用程序中编写托管代码，都必须调用此方法。  

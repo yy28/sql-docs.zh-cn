@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8ab0e95ce4998540e14849bb74b53d1be1c8e15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261359"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207553"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>含有 AlwaysOn 可用性组的 Analysis Services
   AlwaysOn 可用性组是预定义的 SQL Server 关系数据库集合；当有条件触发任一个数据库进行故障转移时，这些数据库将执行集体故障转移，使请求重定向到同一可用性组中其他实例上的镜像数据库。 如果将可用性组用作高可用性解决方案，您可以将该组中的数据库用作 Analysis Services 表格或多维解决方案中的数据源。 使用可用性数据库时，以下所有 Analysis Services 操作都能按预期工作：处理或导入数据、直接查询关系数据（使用 ROLAP 存储或 DirectQuery 模式）以及写回。  

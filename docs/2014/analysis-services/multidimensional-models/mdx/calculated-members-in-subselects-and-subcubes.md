@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b729fb46b83617f0bcc9b0fc7ea7c93583513da6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188377"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>嵌套 select 和子多维数据集中的计算成员
   在以前的版本中，在嵌套 select 或子多维数据集中不允许使用计算成员。 但从 SQL Server 2008 开始，在连接属性中允许使用和启用计算成员。 此外，在 SQL Server 2008 R2 的嵌套 select 和子多维数据集中，还引入了针对计算成员的一个新行为。  
@@ -33,7 +30,7 @@ ms.locfileid: "37323187"
 |-|-|  
 |ReplTest1|Description|  
 |0|计算成员不允许在嵌套 select 或子多维数据集中使用。<br /><br /> 如果引用计算成员，则在对嵌套 select 或子多维数据集进行计算时，将引发错误。|  
-|@shouldalert|计算成员允许在嵌套 select 或子多维数据集中使用，但在返回子空间中不引入祖先成员。|  
+|1|计算成员允许在嵌套 select 或子多维数据集中使用，但在返回子空间中不引入祖先成员。|  
 |2|计算成员允许在嵌套 select 或子多维数据集中使用，并且在返回子空间中引入祖先成员。 此外，在选择计算成员时允许使用混合粒度。|  
   
  在 SubQueries 属性中使用值 1 或 2 允许计算成员用于筛选嵌套 select 的返回子空间。  
@@ -122,7 +119,7 @@ Where [Measures].[Reseller Sales Amount]
   
  在上面的结果中，[All Geographies]、[United States]、[Oregon] 和 [Washington] 的聚合值来自对 &[Portland]&[OR] 和 &[Spokane]&[WA] 的后代执行的聚合。 没有任何内容来自计算成员。  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>备注  
  在嵌套 select 或子多维数据集表达式中只允许全局或会话计算成员。 在对嵌套 select 或子多维数据集表达式执行计算时，如果在 MDX 表达式中具有查询计算成员，将引发错误。  
   
 ## <a name="see-also"></a>请参阅  

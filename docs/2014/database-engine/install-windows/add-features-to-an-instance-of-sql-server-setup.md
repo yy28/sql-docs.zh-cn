@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
 - SQL Server, features
 - adding features to SQL Server
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c3bdfd58db40fe34cc107b412c531bc8a3e75ebe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8826d410c545ba5d172ee3544919584dd8a32761
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225948"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062147"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>向 SQL Server 2014 的实例添加功能（安装程序）
   本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  

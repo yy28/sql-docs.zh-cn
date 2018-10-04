@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209698"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>级别和成员（“浏览器”选项卡，维度设计器）（Analysis Services - 多维数据）
   可以使用此窗格浏览当前选择的层次结构和语言的成员。 若要选择要浏览的层次结构或语言，请使用 **“工具栏”** 窗格上的 **“层次结构”** 和 **“语言”** 选项。 有关工具栏窗格的详细信息，请参阅[工具栏&#40;浏览器选项卡，维度设计器&#41; &#40;Analysis Services-多维数据&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
@@ -40,7 +37,7 @@ ms.locfileid: "37193967"
 |重命名所选的成员。|右键单击所选的成员，选择“重命名”，或单击已经选择的成员。|  
 |编辑成员的属性值。|双击所选成员的所选成员属性的值，并编辑此值。|  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **当前级别**  
  显示当前在“树”中所选成员所属的级别。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 11/24/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 393c4f88f9ab60f3a25ddaab5bb091fb298e1e02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251879"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200607"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基数估计 (SQL Server)
   称作基数估计器的基数估计逻辑已重新设计中[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以便改进查询计划质量，因此若要提高查询性能。 新的基数估计器纳入在新型 OLTP 和数据仓库工作负荷中表现优异的假设和算法。 它基于针对新型工作负荷的深入基数估计研究，以及我们在过去 15 年在改进 SQL Server 基数估计器方面的学习。 客户反馈表明，尽管大多数查询将会从更改或保持不更改中受益，但与以前的基数估计器相比，少数查询可能会显得退步。  

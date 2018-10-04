@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing [SQL Server replication], stored procedure execution
 - articles [SQL Server replication], stored procedures and
 - transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c0217a945e7197f44869c74b381eb61c75d6bf9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8dcdd88d8ce974acda7363ba0a7b2199ca2dd2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195649"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>在事务复制中发布存储过程执行
   如果在发布服务器上执行一个或多个存储过程并影响已发布的表，请考虑将这些存储过程作为存储过程执行项目包括在发布中。 初始化订阅时，过程定义（CREATE PROCEDURE 语句）将被复制到订阅服务器上；当在发布服务器上执行过程时，复制将在订阅服务器上执行相应的过程。 在执行大量批处理操作的情况下，这可以显著提高性能，因为这仅复制此过程执行而不需要为每一行复制各种更改。 例如，假设在发布数据库中创建下面的存储过程：  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c6316a6e256cf7dab161d57a032b777dfac09a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163627"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>对包中敏感数据的访问控制
   为了保护 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中的数据，可以设置保护级别，以帮助仅保护包中的敏感数据或包中的所有数据。 另外，可以采用密码或用户密钥对数据加密，或依靠数据库对数据进行加密。 另外，您对包所采用的保护级别不一定是静态的，而是在包的整个生命周期内可能变化。 通常，您可以在包开发阶段设置一个保护级别，在包部署阶段设置另一个保护级别。  

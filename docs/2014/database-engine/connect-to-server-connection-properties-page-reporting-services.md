@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttors.connectionproperties.f1
 ms.assetid: 66761a14-d646-44bb-9dff-be5ab2c40e88
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4476624dd63385fb387029046906c076a4e0729d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811944"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066970"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>连接到服务器（“连接属性”页）(Reporting Services)
   当连接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或在“已注册的服务器”中注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，使用此选项卡可以查看或指定选项。 进行连接时，此对话框中仅显示“连接”和“选项”。 注册 [!INCLUDE[ssRS](../includes/ssrs.md)] 时，此对话框中仅显示“测试”和“保存”。  

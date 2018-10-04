@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 834fdb8af069a43f8c0ba1c3960d4516f8400767
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152857"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
   您可以添加对报表中嵌入的自定义代码的引用，或添加对生成并保存到您的计算机并且部署到报表服务器的自定义程序集的引用。 对于自定义常量、复杂的函数，或在一个报表中多次使用的函数，可使用嵌入代码。 可以使用自定义代码程序集在一个位置中维护代码，并共享该代码以便由多个报表使用。 自定义代码可包含新的自定义常量、变量、函数或子例程。 可以包含对内置集合（例如，Parameters 集合）的只读引用。 但是，无法将报表数据值集传递给自定义函数；特别要指出的是，不支持自定义聚合。  

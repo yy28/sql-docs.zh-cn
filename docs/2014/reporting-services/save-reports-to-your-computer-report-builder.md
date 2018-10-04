@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d5ba084d6912d7f60b124b28ea8635aa37d8259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309227"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222286"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>将报表保存到您的计算机（报表生成器）
   在报表生成器中，可以将报表定义保存到您的计算机。 不过，将报表保存到您的计算机后，其他用户将不能查看这些报表，并且引用共享数据源或存储报表项（如图像和子报表）的报表可能不能在外部运行。 建议将报表保存到报表服务器或 SharePoint 站点。  

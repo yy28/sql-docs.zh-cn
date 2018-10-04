@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addtype
@@ -21,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 764241bcd61b407b46e87c796c8a02997d9ff9ad
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023854"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838845"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +85,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="result-sets"></a>结果集  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  别名数据类型名称在数据库中必须是唯一的，但是名称不同的别名数据类型可以有相同的定义。  
   
  执行**sp_addtype**创建别名数据类型，将出现在**sys.types**目录视图的特定数据库。 如果别名数据类型必须为所有用户定义的新数据库中，将其添加到**模型**。 创建了别名数据类型之后，可以在 CREATE TABLE 或 ALTER TABLE 中使用它，也可以将默认值和规则绑定到别名数据类型。 通过使用创建的所有标量别名数据类型**sp_addtype**中包含**dbo**架构。  

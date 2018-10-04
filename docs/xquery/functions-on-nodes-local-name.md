@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:local-name function
 - local-name function
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
-caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a2f53826756ae0caa194080bdc328d08eb492ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650805"
 ---
-# <a name="functions-on-nodes---local-name"></a>基于节点的本地名称的函数
+# <a name="functions-on-nodes---local-name"></a>基于节点的函数 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   返回的名称的本地部分 *$arg*为 xs: string 的将是零长度字符串或 xs: ncname 的词汇形式。 如果未提供参数，默认值为上下文节点。  
@@ -46,7 +40,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  将检索其本地名称部分的节点名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 -   在 SQL Server 中， **fn:local-name()** 没有仅可以使用上下文相关的谓词的上下文中的参数。 特别要指出的是，它只能在方括号 (`[ ]`) 内使用。  
   

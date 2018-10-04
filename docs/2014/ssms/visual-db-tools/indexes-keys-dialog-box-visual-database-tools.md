@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 845ac7c15cdda81ac77853c7642f002e679c22cd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a960d003d998cfdd5d87009e7ef34f434d4f1d43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076789"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>“索引和键”对话框 (Visual Database Tools)
   使用此对话框可以创建或修改索引、主键和唯一键。 若要访问此对话框，请打开具有索引或键的表定义，右键单击表定义网格，再单击“索引/键”。  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [SQL Server], Showplan
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee7efd0626700b5503abd457e32ca5a2160645ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f2688868da0866f521693ebed50f7b3b68937a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143857"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 结果来分析查询
   可以将导致 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在跟踪中收集和显示查询计划信息的 Showplan 事件类添加到跟踪定义。 也可能从跟踪中收集的其他事件中提取显示计划事件，并将这些显示计划事件保存在单独的 XML 文件中。  

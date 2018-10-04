@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - truncating data
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecae86e05bc67275d21d0811d3b1abd642a7e62c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1fc46b6f7827143c3fdd523970fd5748a28aeb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201307"
 ---
 # <a name="error-handling-in-data"></a>数据中的错误处理
   数据流组件将转换应用到列数据、从源提取数据或将数据加载到目标中时，可能会发生错误。 错误常因意外数据值而发生。 例如，如果列包含字符串而不是数字，数据转换将失败；在数据库列中执行插入操作时，如果数据是日期而列的数据类型为数值，此操作将失败；如果因列值为零而导致数学运算无效，表达式将无法计算。  

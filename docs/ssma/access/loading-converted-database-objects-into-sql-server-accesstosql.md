@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases, loading converted objects into SQL Azure
 - Access databases, loading converted objects into SQL Server
@@ -32,16 +27,15 @@ helpviewer_keywords:
 - uploading objects into SQL Azure
 - uploading objects into SQL Server
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 56c600b88c9c1b3237a92887d68cb338ae17058d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64473c9163e63c6add18897edb87d48cef3922c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395455"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816305"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>转换数据库对象加载到 SQL Server (AccessToSQL)
 转换到访问数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以加载到生成的数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您既可以让 SSMA 创建对象，也可以编写对象脚本并自行运行这些脚本。 SSMA 此外，还允许使用的实际内容更新目标元数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库。  

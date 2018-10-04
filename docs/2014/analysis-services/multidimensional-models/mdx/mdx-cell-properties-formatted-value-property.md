@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052348"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>基于 LANGUAGE 和 FORMAT_STRING 的 FORMATED_VALUE
   FORMATTED_VALUE 属性是基于单元的 VALUE、FORMAT_STRING 和 LANGUAGE 属性的交互生成的。 本主题说明这些属性通过何种方式进行交互来生成 FORMATTED_VALUE 属性。  
@@ -82,14 +79,14 @@ ms.locfileid: "37319267"
   
 |成员|FORMATTED_VALUE|解释|  
 |------------|----------------------|-----------------|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|$5,040.00|FORMAT_STRING 设置为 `Currency` ，LANGUAGE 为从系统区域设置值继承的 `1033`|  
+|A|$5,040.00|FORMAT_STRING 设置为 `Currency` ，LANGUAGE 为从系统区域设置值继承的 `1033`|  
 |B|€5.040,00|FORMAT_STRING 设置为 `Currency` （从 A 继承），并且 LANGUAGE 显式设置为 `1034` （西班牙），因此显示的是欧元符号，所使用的小数分隔符和千分分隔符也与前面的示例不相同。|  
 |C|$5.040,00|FORMAT_STRING 设置为 `$#,##0.00` ，取代了来自 A 的 Currency，并且 LANGUAGE 显式设置为 `1034` （西班牙）。 因为 FORMAT_STRING 属性将货币符号显式设置为 $，因此 FORMATTED_VALUE 将使用 $ 符号显示。 然而，因为 `.` （点）和 `,` （逗号）分别为小数分隔符和千位分隔符的占位符，因此该语言规范将对这些占位符所生成的小数点分隔符和千位分隔符的本地化输出结果产生影响。|  
 |D|5.04E+03|FORMAT_STRING 设置为 `Scientific` ，LANGUAGE 设置为从系统区域设置值继承的 `1033`，因此以 `.` （点）作为小数分隔符。|  
 |E|5,04E+03|FORMAT_STRING 设置为 `Scientific` ，LANGUAGE 显式设置为 `1034,` ，因此以 `,` （逗号）作为小数分隔符。|  
 |F|50.40%|FORMAT_STRING 设置为 `Percent` ，LANGUAGE 设置为从系统区域设置值继承的 `1033`，因此以 `.` （点）作为小数分隔符。<br /><br /> 请注意，VALUE 已从 5040 更改为 0.5040|  
 |G|50,40%|FORMAT_STRING 设置为 `Percent`（从 F 继承），LANGUAGE 显式设置为 `1034` ，因此以 `,` （逗号）作为小数点分隔符。<br /><br /> 请注意，VALUE 从 F 的值继承。|  
-|H|“否”|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；因为英语 NO 和西班牙语 NO 之间并无区别，因此用户在 FORMATTED_VALUE 中看不到任何差别。|  
+|H|否|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；因为英语 NO 和西班牙语 NO 之间并无区别，因此用户在 FORMATTED_VALUE 中看不到任何差别。|  
 |I|SI|FORMAT_STRING 设置为 `YES/NO`，VALUE 设置为 59，并且 LANGUAGE 显式设置为 `1034`；根据针对 YES/NO 格式设置的定义，任何零 (0) 以外的值均为 YES，并且因为语言设置为西班牙语，所以 FORMATTED_VALUE 为 SI。|  
 |J|Desactivado|FORMAT_STRING 设置为 `ON/OFF`，VALUE 设置为 0，并且 LANGUAGE 显式设置为 `1034`；根据针对 ON/OFF 格式设置的定义，任何等于零 (0) 的值均为 OFF，并且因为语言设置为西班牙语，因此 FORMATTED_VALUE 为 Desactivado。|  
 |K|Activado|FORMAT_STRING 设置为 `ON/OFF`，VALUE 设置为 -312，并且 LANGUAGE 显式设置为 `1034`；根据针对 ON/OFF 格式设置的定义，任何零 (0) 以外的值均为 ON，并且因为语言设置为西班牙语，因此 FORMATTED_VALUE 为 Activado。|  
@@ -132,7 +129,7 @@ ms.locfileid: "37319267"
   
 |成员|FORMATTED_VALUE|解释|  
 |------------|----------------------|-----------------|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|3/12/1959 6:30:00 AM|FORMAT_STRING 通过 CDate() 表达式隐式设置为 `General Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING 通过 CDate() 表达式隐式设置为 `General Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
 |B|Thursday, March 12, 1959|FORMAT_STRING 显式设置为 `Long Date` ，并且 LANGUAGE 为从系统区域设置值继承的 `1033` （英语）|  
 |C|12/03/1959 6:30:00|FORMAT_STRING 显式设置为 `General Date` ，并且 LANGUAGE 为显式 `1034` （西班牙语）。<br /><br /> 请注意，在与美国格式设置样式进行比较时应切换月和天|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING 显式设置为 `Long Date` ，并且 LANGUAGE 为显式 `1034` （西班牙语）。<br /><br /> 请注意月和星期是用西班牙语拼写的|  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2bebb8f25bcf8c38b6422ad27ffa865d328be45
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177987"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 行集
   提供引用的命令使用的对象的资源使用情况和活动信息。  
@@ -34,11 +31,11 @@ ms.locfileid: "37261193"
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`SESSION_SPID`|`DBTYPE_I4`|是|会话 ID。|  
-|`SESSION_ID`|`DBTYPE_WSTR`|是|会话的唯一标识符，以 GUID 形式表示。|  
+|`SESSION_SPID`|`DBTYPE_I4`|用户帐户控制|会话 ID。|  
+|`SESSION_ID`|`DBTYPE_WSTR`|用户帐户控制|会话的唯一标识符，以 GUID 形式表示。|  
 |`SESSION_COMMAND_COUNT`|`DBTYPE_I4`||命令的序列号。|  
-|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|是|指向当前对象的父对象的路径。|  
-|`OBJECT_ID`|`DBTYPE_WSTR`|是|创建时定义的对象 ID。|  
+|`OBJECT_PARENT_PATH`|`DBTYPE_WSTR`|用户帐户控制|指向当前对象的父对象的路径。|  
+|`OBJECT_ID`|`DBTYPE_WSTR`|用户帐户控制|创建时定义的对象 ID。|  
 |`OBJECT_VERSION`|`DBTYPE_I4`||对象的元数据版本号；每次更改对象时，此编号随之发生变化。|  
 |`OBJECT_DATA_VERSION`|`DBTYPE_I4`||对象中数据的沿袭编号。 每次处理对象时，此编号随之递增。|  
 |`OBJECT_CPU_TIME_MS`|`DBTYPE_I8`||自命令开始后该对象占用的 CPU 时间（毫秒）。|  

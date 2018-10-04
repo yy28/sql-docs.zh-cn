@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication]
 - merge replication precomputed partitions [SQL Server replication], about precomputed partitions
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70edd7a57807f342a3909d16ed0ef4526d68be49
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5b082e9849b7eca02cb3a51c5cac3fb25a877a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160288"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203487"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>使用预计算分区优化参数化筛选器的性能
   预计算分区是一种性能优化方法，可用于已筛选的合并发布。 预计算分区也是在已筛选的发布上使用逻辑记录的一项要求。 有关逻辑记录的详细信息，请参阅[通过逻辑记录对相关行的更改进行分组](group-changes-to-related-rows-with-logical-records.md)。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aed3bff56fcb794f50958f96ffe14df83205bb07
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c6b6bc36139020f64ae4dd280988f5783d6f837
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207667"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults**允许应用程序检索多个结果行集。 如果 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 语句包含 COMPUTE 子句，或是提交了一批 ODBC 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，将导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序生成多个结果集。 在任一种情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都不允许通过创建服务器游标来处理结果。 因此，开发人员必须确保 ODBC 语句具有阻塞作用。 开发人员必须用完返回的数据或者取消 ODBC 语句，然后才能处理来自连接中其他活动语句的数据。  

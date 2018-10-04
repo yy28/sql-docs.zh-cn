@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - manual Reporting Services migrations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - upgrading Reporting Services
 - migrating Reporting Services
 ms.assetid: a6fc56c1-c504-438d-a2b0-5ed29c24e7d6
-caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 85ac1d802949d0398f628ba267afb4dcb354151a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c156dee6d76d9b83cdaa2cc7f1856e128d53186
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082887"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>迁移 Reporting Services 安装（本机模式）
   本主题提供有关将以下 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式部署的支持的版本之一迁移到新的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的分步说明。  
@@ -243,7 +240,7 @@ ms.locfileid: "37309457"
 |远程实例上的报表管理器|[配置报表管理器&#40;本机模式&#41;](../report-server/configure-web-portal.md)|  
   
 ##  <a name="bkmk_windowsservice_group"></a> Windows 服务组与安全 ACL  
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中存在一个服务组，即 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服务组。可使用该组为与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的所有注册表项、文件和文件夹创建安全 ACL。 此 Windows 组的名称以 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 格式显示。 此组将两个 Windows 服务组中的取代[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您有自定义 Acl 与任一[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 组，你将需要将这些 Acl 应用到新报表服务器实例中新的组[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中存在一个服务组，即 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 服务组。可使用该组为与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安装的所有注册表项、文件和文件夹创建安全 ACL。 此 Windows 组的名称以 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 格式显示。 此组将两个 Windows 服务组中的取代[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 如果您有自定义 Acl 与任一[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 组，你将需要将这些 Acl 应用到新报表服务器实例中新的组[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
 ##  <a name="bkmk_verify"></a> 验证部署  
   

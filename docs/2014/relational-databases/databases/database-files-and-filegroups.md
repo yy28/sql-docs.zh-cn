@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [SQL Server], files
@@ -32,16 +30,15 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ff4114fe83098feeb490c45c72178047c072aec3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 780bfc2f1a9c1654f913995a84460f85e19d386a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182844"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205459"
 ---
 # <a name="database-files-and-filegroups"></a>数据库文件和文件组
   每个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库至少具有两个操作系统文件：一个数据文件和一个日志文件。 数据文件包含数据和对象，例如表、索引、存储过程和视图。 日志文件包含恢复数据库中的所有事务所需的信息。 为了便于分配和管理，可以将数据文件集合起来，放到文件组中。  

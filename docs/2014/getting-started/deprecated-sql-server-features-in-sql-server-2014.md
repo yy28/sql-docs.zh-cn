@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fdc0c778-cc8d-42ab-8833-4deb4329f37a
-caps.latest.revision: 20
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7d47249b2263ea3d5523458fd34770e7c009800
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a90c1387a609ee59dec93b67e0a48bd2af7baf77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129767"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 中不推荐使用的 SQL Server 功能
   本主题介绍 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中仍然可用但不推荐使用的功能。 按照计划， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]未来版本将不再具有这些功能。 在新的应用程序中不应使用这些不推荐使用的功能。  
