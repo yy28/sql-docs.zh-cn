@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1890a03b77baa23ea3e87e7894f5f89bf2eee09a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263733"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227067"
 ---
 # <a name="create-scripts-using-templates"></a>使用模板创建脚本
   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了大量脚本模板，其中包含了许多常用任务的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 这些模板包含用户提供的值（如表名称）的参数。 使用该参数，可以只键入一次名称，然后自动将该名称复制到脚本中所有必要的位置。 可以编写自己的自定义模板，以支持频繁编写的脚本。 也可以重新组织模板树，移动模板或创建新文件夹以保存模板。 在以下练习中，将使用模板创建一个数据库，并指定排序规则模板。  

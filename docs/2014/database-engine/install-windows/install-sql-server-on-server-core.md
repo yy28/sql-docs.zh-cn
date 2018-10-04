@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4ca2154a7574ba787fe59737c6165c41bc1d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5235f19b1d85282d7c66ffa64f4dcdc1a43a0fc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225887"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安装 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主题提供用于在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的特定于安装的详细信息。  
@@ -41,25 +38,25 @@ ms.locfileid: "37193877"
   
 |功能|是否支持|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|是|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|是|  
-|全文搜索|是|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制|  
+|全文搜索|用户帐户控制|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|“否”|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|“否”|  
-|客户端工具连接|是|  
-|Integration Services 服务器<sup>[1]</sup>|是|  
-|客户端工具向后兼容性|“否”|  
-|客户端工具 SDK|“否”|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|“否”|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|否|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|否|  
+|客户端工具连接|用户帐户控制|  
+|Integration Services 服务器<sup>[1]</sup>|用户帐户控制|  
+|客户端工具向后兼容性|否|  
+|客户端工具 SDK|否|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书|否|  
 |管理工具 - 基本|仅适用于远程<sup>[2]</sup>|  
 |管理工具 - 完整|仅适用于远程<sup>[2]</sup>|  
-|Distributed Replay 控制器|“否”|  
+|Distributed Replay 控制器|否|  
 |Distributed Replay 客户端|仅适用于远程<sup>[2]</sup>|  
-|SQL 客户端连接 SDK|是|  
+|SQL 客户端连接 SDK|用户帐户控制|  
 |Microsoft Sync Framework|是<sup>[3]</sup>|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|“否”|  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|“否”|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否|  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否|  
   
  <sup>[1]</sup>详细了解新的 Integration Services 服务器和在其功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，请参阅[Integration Services &#40;SSIS&#41;服务器](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md)。  
   

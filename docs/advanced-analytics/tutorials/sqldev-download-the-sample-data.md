@@ -3,118 +3,60 @@ title: 下载 NYC 出租车演示数据和脚本适用于嵌入的 R 和 Python 
 description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server 教程演示如何嵌入 R 中使用数据和 Python 在 SQL Server 存储过程和 T-SQL 的函数。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/22/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 700720f7538467dc3edc38414544eb2c402437a6
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712750"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232571"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>适用于 SQL Server 的 NYC 出租车演示数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文为教程，介绍如何使用 SQL Server 中的数据库内分析 R 和 Python 准备您的系统。
+此文章介绍了如何获取有关 SQL Server 中的数据库内分析 R 和 Python 教程示例数据。
 
-在此练习中，将下载示例数据，用于准备环境的 PowerShell 脚本和[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本在多个教程中使用的文件。 完成后， **NYCTaxi_Sample**有可用的本地实例，提供演示数据获得第一手学习数据库。 
+数据源自[NYC 出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)公共数据集。 我们为我们演示数据库中执行数据集的快照，并捕获的 1%的可用数据。 在系统上的数据库备份文件是略微超过 90 MB，提供在主要数据表中的 1.7 万行。
+
+使用本文中中的步骤完成后**NYCTaxi_Sample**有可用的本地实例，提供演示数据获得第一手学习数据库。 数据库名称必须是**NYCTaxi_Sample**如果你想要在不修改运行演示脚本。
 
 ## <a name="prerequisites"></a>必要條件
 
-你将需要 internet 连接、 PowerShell 和在计算机上的本地管理权限。 您应该[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)或其他工具来验证对象创建。
+您需要 internet 连接、 计算机和数据库引擎实例上的本地管理权限。
 
-## <a name="download-nyc-taxi-demo-data-and-scripts-from-github"></a>从 Github 下载 NYC 出租车演示数据和脚本
+这有助于让[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)或其他工具来验证对象创建。
 
-1.  打开 Windows PowerShell 命令控制台。
-  
-    使用**以管理员身份运行**选项来创建目标目录或文件写入指定的目标。
-  
-2.  运行以下 PowerShell 命令，将参数 DestDir 的值更改为任何本地目录。 此处使用的默认值是“TempRSQL”。
-  
-    ```ps
-    $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
-    $ps1_dest = “$pwd\Download_Scripts_SQL_Walkthrough.ps1”
-    $wc = New-Object System.Net.WebClient
-    $wc.DownloadFile($source, $ps1_dest)
-    .\Download_Scripts_SQL_Walkthrough.ps1 –DestDir ‘C:\tempRSQL’
-    ```
-  
-    如果 DestDir 中指定的文件夹不存在，则可以通过 PowerShell 脚本创建。
-  
-    > [!TIP]
-    > 如果遇到错误，可以暂时将设置为 PowerShell 脚本执行策略**不受限制**仅用于本次演练通过使用 Bypass 参数并将当前会话更改范围。
-    >   
-    >````
-    > Set\-ExecutionPolicy Bypass \-Scope Process
-    >````
-    > 运行此命令不会导致配置更改。
-  
-    根据 Internet 连接，下载可能需要一段时间。
-  
-3.  已下载的所有文件，PowerShell 脚本将打开到*DestDir*文件夹。 在 PowerShell 命令提示符中，运行以下命令并查看已下载的文件。
-  
-    ```
-    ls
-    ```
-  
-    **结果：**
-  
-    ![通过 PowerShell 脚本下载的文件列表](media/rsql-devtut-filelist.png "通过 PowerShell 脚本下载的文件列表")
+## <a name="download-demo-database"></a>下载演示数据库
 
-## <a name="create-nyctaxisample-database"></a>创建 NYCTaxi_Sample 数据库
+示例数据库是由 Microsoft 托管的备份文件。 立即单击链接开始下载文件。 
 
-在下载的文件，您应该看到 PowerShell 脚本 (**RunSQL_SQL_Walkthrough.ps1**) 创建一个数据库和大容量加载数据。 脚本执行的操作包括：
+文件大小为约 90 MB。
 
-+ 如果尚未安装，安装 SQL Native Client 和 SQL 命令行实用工具。 使用 **bcp**将数据大容量加载到数据库时需要这些实用程序。
+1. 单击[NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)下载数据库备份文件。
 
-+ 创建一个数据库和表上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，并大容量插入数据源从.csv 文件。
+2. 将文件复制到 C:\Program files\Microsoft SQL Server\MSSQL 实例 name\MSSQL\Backup 文件夹。
 
-+ 创建多个 SQL 函数和多个教程中使用的存储的过程。
+3. 在 Management Studio 中，右键单击**数据库**，然后选择**还原文件和文件组**。
 
-### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>修改脚本以使用受信任的 Windows 标识
+4. 输入*NYCTaxi_Sample*作为数据库名称。
 
-默认情况下，此脚本假定 SQL Server 数据库用户登录名和密码。 如果您在您的 Windows 用户帐户是 db_owner，可以使用 Windows 标识创建的对象。 若要执行此操作，打开`RunSQL_SQL_Walkthrough.ps1`代码编辑器中并将追加**`-T`** 到 bcp 大容量插入命令 （行 238）：
+5. 单击**从设备**，然后打开文件选择页以选择备份文件。 单击**添加**选择 NYCTaxi_Sample.bak。
 
-```text
-bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
-```
-
-### <a name="run-the-script-to-create-objects"></a>运行脚本，以创建对象
-
-使用管理员 PowerShell C:\tempRSQL，在命令提示符下运行以下命令。
-  
-```ps
-.\RunSQL_SQL_Walkthrough.ps1
-```
-系统会提示输入以下信息：
-
-- 服务器实例[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]已安装。 在默认实例，这可以很简单，只需为计算机名称。
-
-- 数据库名称。 对于本教程中，脚本假定`NYCTaxi_Sample`。
-
-- 用户名和用户密码。 输入这些值的 SQL Server 数据库登录名。 或者，如果您修改了脚本，以接受受信任的 Windows 标识，则按 Enter 将这些值保留为空。 在连接上使用 Windows 标识。
-
-- 在上一课中下载的示例数据的完全限定的文件名。 例如： `C:\tempRSQL\nyctaxi1pct.csv`
-
-提供这些值后，立即执行该脚本。 脚本在执行期间中的所有占位符名称[!INCLUDE[tsql](../../includes/tsql-md.md)]脚本已更新为使用你提供的输入。
+6. 选择**还原**复选框，单击**确定**还原数据库。
 
 ## <a name="review-database-objects"></a>查看数据库对象
    
-脚本执行完成后，确认数据库对象上存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您应看到数据库、 表、 函数和存储的过程。
+确认数据库对象上存在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 您应看到数据库、 表、 函数和存储的过程。
   
    ![rsql_devtut_BrowseTables](media/rsql-devtut-browsetables.png "rsql_devtut_BrowseTables")
 
-> [!NOTE]
-> 如果数据库对象已存在，则无法再次创建。
->   
-> 如果表已存在，则会追加数据，而不是将其覆盖。 因此，运行脚本之前请确保删除所有现有对象。
-
 ### <a name="objects-in-nyctaxisample-database"></a>NYCTaxi_Sample 数据库中的对象
 
-下表总结了在 NYC 出租车演示数据库中创建的对象。 尽管只能运行一个 PowerShell 脚本 (`RunSQL_SQL_Walkthrough.ps1`)，该脚本会调用其他 SQL 脚本又以在数据库中创建的对象。 在说明中提到了用于创建每个对象的脚本。
+下表总结了在 NYC 出租车演示数据库中创建的对象。
 
 |**对象名称**|**对象类型**|**Description**|
 |----------|------------------------|---------------|
@@ -132,9 +74,9 @@ bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" 
 
 作为验证步骤，运行查询以确认数据已上传。
 
-1. 在对象资源管理器，在数据库中，展开**NYCTaxi_Sample**数据库，然后打开表文件夹。
+1. 在对象资源管理器，在数据库中右键单击**NYCTaxi_Sample**数据库，然后启动一个新查询。
 
-2. 右键单击**dbo.nyctaxi_sample** ，然后选择**选择前 1000年行**返回一些数据。
+2. 运行**`select * from dbo.nyctaxi_sample`** 返回所有 1.7 万行。
 
 ## <a name="next-steps"></a>后续步骤
 

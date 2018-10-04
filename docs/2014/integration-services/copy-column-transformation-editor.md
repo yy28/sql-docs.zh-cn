@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.copymaptransformation.f1
 helpviewer_keywords:
 - Copy Column Transformation Editor
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fd2e21da9766248e2004e2101b4422f8a1942cbc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62f2811fb25311ab6aab23d4af66b59befb6611b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250467"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227757"
 ---
 # <a name="copy-column-transformation-editor"></a>复制列转换编辑器
   可以使用 **“复制列转换编辑器”** 对话框选择要复制的列，以及为新的输出列指定名称。  
@@ -33,7 +30,7 @@ ms.locfileid: "37250467"
 > [!NOTE]  
 >  如果只是将所有源数据复制到目标，可能无需使用复制列转换。 某些情况下，如果不需要进行任何数据转换，可以直接将源连接到目标。 在这些情况下，使用 SQL Server 导入和导出向导创建包通常更可取。 以后，您可以根据需要增强并重新配置包。 有关更多信息，请参见 [SQL Server Import and Export Wizard](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用输入列**  
  使用复选框选择要复制的列。 选择后，会将输入列添加到下表中。  
   

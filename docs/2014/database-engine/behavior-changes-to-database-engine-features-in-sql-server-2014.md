@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226267"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中数据库引擎功能的行为更改
   本主题介绍[!INCLUDE[ssDE](../includes/ssde-md.md)]中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  

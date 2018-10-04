@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.depservconfig.f1
 - sql12.asvs.bidtoolset.semmodelprojprop.f1
 ms.assetid: 333c1fc0-361c-415a-bd68-4e057f67bcb7
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d8d8371d2dedf54b82475c2cc6ed5adcfd9b1891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31a335797ad7a40fda7002b910127bb139af3f1b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278013"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226557"
 ---
 # <a name="project-properties-ssas-tabular"></a>项目属性（SSAS 表格）
   本主题介绍模型项目属性。 每个表格模型项目都具有一些指定如何部署项目和模型的部署选项和部署服务器属性。 例如，模型将要部署到的服务器和已部署的模型数据库名称。 这些设置与影响模型工作区数据库的模型属性不同。 此处所述的项目属性位于模式属性对话框中，不同于用于显示其他属性类型的属性窗口。 若要显示模式项目属性，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]“解决方案资源管理器”中右键单击该项目，然后单击“属性”。  

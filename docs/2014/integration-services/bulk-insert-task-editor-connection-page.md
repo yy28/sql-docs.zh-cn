@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.connection.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-caps.latest.revision: 30
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed6ab27e4c60aa398cafe1be0d4bbcb19ce3bb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72b150ecf09dcf2c96c05ac690a366c6d2711586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226857"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>大容量插入任务编辑器（“连接”页）
   可以使用 **“大容量插入任务编辑器”** 对话框的 **“连接”** 页，指定大容量插入操作的源和目标以及使用的格式。  
   
  若要了解大容量插入，请参阅[大容量插入任务](control-flow/bulk-insert-task.md)和[用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“连接”**  
  在列表中选择一个 OLE DB 连接管理器，或单击“\<新建连接…>”，创建一个新连接。  
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7cac4dcd3973b3364862c74f38c3e3226301f6d9
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: eaa5a06916b0956a93fb1c473667bbb80b55bd15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351819"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229897"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>创建自定义工作流 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 使用业务规则创建基本工作流解决方案，如自动更新和验证数据，并根据指定的条件发送电子邮件通知。 当您需要的处理比内置工作流操作提供的处理更复杂时，请使用自定义工作流。 自定义工作流是您创建的 .NET 程序集。 在调用您的工作流程序集时，您的代码可以执行您的情况所需要的任何操作。 例如，如果您的工作流要求复杂的事件处理（如多层审批或复杂的决策树），您可以配置 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 来启动自定义工作流，以便分析数据和确定将其发送到何处以待审批。  

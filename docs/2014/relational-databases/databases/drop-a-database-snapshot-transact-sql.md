@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing database snapshots
 - deleting database snapshots
 - database snapshots [SQL Server], deleting
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b954aac7ca89a2b8fa55287446bd340ee9149c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e20a75d891595333afb19187d90ea7accc679957
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229557"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>删除数据库快照 (Transact-SQL)
   删除数据库快照将删除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的数据库快照，并删除快照使用的稀疏文件。 删除数据库快照会终止所有到此快照的用户连接。  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>安全性  
   
 ###  <a name="Permissions"></a> Permissions  
  具有 DROP DATABASE 权限的任何用户都可以删除数据库快照。  

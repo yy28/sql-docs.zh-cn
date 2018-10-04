@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services], algorithms
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44d5de05cf5ec4a5e66292e7e1f3a85a53fd5f2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226979"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>查看或更改算法参数
   可以更改随用于生成数据挖掘模型的算法一起提供的参数，以自定义模型的结果。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法参数不仅仅更改模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的算法参数不仅仅更改模型的属性，它们可用于从根本上更改处理、分组和显示数据的方式。 例如，您可以使用算法参数执行下列操作：  
   
 -   更改分析方法，如聚类分析方法。  
   

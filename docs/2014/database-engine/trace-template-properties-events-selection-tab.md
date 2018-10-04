@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: 5b202457-ab42-4902-8012-7f3f40aa09f5
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f2be8da8092248ccb49a7db54b9d41367cea2c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211487"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227783"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>跟踪模板属性（“事件选择”选项卡）
   使用 **“跟踪模板属性”** 对话框的 **“事件选择”** 选项卡，可以查看、编辑或指定要包含在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 跟踪模板中的事件类和数据列。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  “事件”列  
  通过选择或清除事件列中的复选框，指定要跟踪的事件。 事件按事件类别进行组织。  
   

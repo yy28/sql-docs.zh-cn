@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31c1adf6d76bfa399e199aa67f5bf4f97392505d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a5316ed842e49e0c0077887dd6d980bf05d4b4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229667"
 ---
 # <a name="cast-ssis-expression"></a>Cast（SSIS 表达式）
   将表达式从一种数据类型显式转换为另一种数据类型。 转换运算符还可以用作截断运算符。  
@@ -48,7 +45,7 @@ ms.locfileid: "37192127"
 ## <a name="result-types"></a>结果类型  
  *type_spec*数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../data-flow/integration-services-data-types.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  以下关系图显示了合法的转换运算。  
   
  ![数据类型之间的合法转换和非法转换](../media/data-conversion.gif "数据类型之间的合法转换和非法转换")  
