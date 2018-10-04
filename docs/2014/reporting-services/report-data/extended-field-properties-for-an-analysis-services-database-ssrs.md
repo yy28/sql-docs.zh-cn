@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f6a3c90fe0df58b27f99df2f1e37d66c1ff523b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268623"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076711"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 数据库的扩展字段属性 (SSRS)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据处理扩展插件支持扩展字段属性。 扩展字段属性是除字段属性 `Value` 和 `IsMissing` 之外的属性，可用于数据源并受数据处理扩展插件支持。 扩展属性并不作为报表数据集的字段集合的一部分显示在“报表数据”窗格中。 可以在报表中包含扩展的字段属性值，通过编写通过使用内置的名称来指定这些表达式`Fields`集合。  
   
  扩展属性包括预定义属性和自定义属性。 预定义的属性是通用的多个数据源映射到特定字段属性名称，并且可以访问通过内置属性`Fields`集合按名称。 自定义属性是特定于每个数据访问接口的属性，只能通过内置 `Fields` 集合，使用将扩展属性名称用作字符串的语法进行访问。  
   
@@ -50,7 +47,7 @@ ms.locfileid: "37268623"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|指定字段的数据值。|  
 |`IsMissing`|`Boolean`|指示是否在结果数据集中找到了该字段。|  
-|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门]。.& [Sales]。 （& a) [北美销售经理]。 [272] &*。|  
+|`UniqueName`|`String`|返回级别的完全限定名称。 例如，`UniqueName`值可能为某位员工 *[Employee]。 [雇员所在部门]。[部门].& [Sales]。 （& a) [北美销售经理]。 [272] &*。|  
 |`BackgroundColor`|`String`|返回数据库中为该字段定义的背景颜色。|  
 |`Color`|`String`|返回数据库中为该项定义的前景色。|  
 |`FontFamily`|`String`|返回数据库中为该项定义的字体的名称。|  
@@ -101,7 +98,7 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|@shouldalert|  
+|1-Jul-01|[Date].[Date].&[1]|星期日|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-Jul-01|[Date].[Date].&[2]|星期一|7/2/2001|[Date].[Date].[All Periods]|2|  
 |3-Jul-01|[Date].[Date].&[3]|星期二|7/3/2001|[Date].[Date].[All Periods]|3|  
   

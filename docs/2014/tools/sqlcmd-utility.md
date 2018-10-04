@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 11/29/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 115
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229967"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`实用工具，可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件在命令提示符下，在**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或的操作系统 (Cmd.exe) 作业步骤[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业。 此实用工具使用 ODBC 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理。  
@@ -402,7 +399,7 @@ ms.locfileid: "37303437"
  **-?**  
  显示 `sqlcmd` 选项的语法摘要。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  不必按语法部分所示的顺序使用选项。  
   
  在返回多个结果时，`sqlcmd` 在批处理中的每个结果集之间输出一个空行。 此外，"\<x > 行受影响"如果不应用于已执行的语句未显示消息。  

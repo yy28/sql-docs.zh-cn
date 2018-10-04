@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138787"
 ---
 # <a name="new-model-page-report-manager"></a>“新建模型”页（报表管理器）
   使用此页可以从共享数据源生成默认的报表模型。 只能从 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维数据源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 关系数据源和 Oracle 关系数据源生成报表模型。  

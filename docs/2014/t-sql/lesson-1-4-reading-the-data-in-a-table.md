@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reading data in a table
@@ -14,12 +12,12 @@ ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ca56db8b92bb0511f4070352f23dc65bacf6af04
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037660"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182007"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>读取表中的数据（教程）
   使用 SELECT 语句可以读取表中的数据。 SELECT 语句是最重要的 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句之一，其语法有许多变体。 在本教程中，您将使用五个简单版本。  

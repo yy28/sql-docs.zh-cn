@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c41d6570b4e267109fbbf696bba7917b63f33b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223177"
 ---
 # <a name="cross-validation-formulas"></a>交叉验证公式
   生成交叉验证报表后，它将包含每个模型的准确性度量值，具体取决于挖掘模型的类型（即，用于创建模型的算法）、可预测属性的数据类型和可预测属性值（如果有）。  

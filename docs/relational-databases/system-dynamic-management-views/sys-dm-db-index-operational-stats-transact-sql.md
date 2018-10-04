@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b6d8841ed2204ef549a3b8a2efafb94806675f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b8ddd123c60806826918f8b42412048aaa408776
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716495"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +129,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|对于表、索引或索引视图的特定分区，针对 PAGE 级压缩计算的页数。 因为未能极大地节省空间，所以将包括未压缩的页。 始终为 0 的列存储索引。|    
 |**page_compression_success_count**|**bigint**|对于表、索引或索引视图的特定分区，使用 PAGE 压缩功能压缩的数据页数。 始终为 0 的列存储索引。|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>备注    
  此动态管理对象不接受来自 CROSS APPLY 和 OUTER APPLY 的相关参数。    
     
  可以使用**sys.dm_db_index_operational_stats**来跟踪用户读取或写入到表、 索引或分区，并确定表或索引时遇到大型 I/O 活动或热而必须等待的时间长度点。    

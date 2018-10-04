@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095547"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>配置本机模式报表服务器扩展部署（SSRS 配置管理器）
   Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。  

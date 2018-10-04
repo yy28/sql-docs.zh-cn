@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revokelogin_TSQL
@@ -21,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a7a6d791b8e8115a2b62b99d526962f59a995871
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706647"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_revokelogin**禁用使用指定的帐户的连接*登录名*参数。 但通过 Windows 组中的成员身份被授权访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 Windows 用户在其单独访问权限被撤消后仍可作为组来连接。 同样，如果*登录名*参数指定 Windows 组的名称，已被分别该组的成员授予访问权限的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]仍将能够连接。  
   
  例如，如果 Windows 用户**ADVWORKS\john**是 Windows 组的成员**ADVWORKS\Admins**，并**sp_revokelogin**吊销的访问权限的`ADVWORKS\john`:  

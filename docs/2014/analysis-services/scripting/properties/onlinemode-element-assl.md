@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - OnlineMode Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - OnlineMode element
 ms.assetid: 0bbac4e2-002f-4be4-8dd6-ccd7034f5f93
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a00e12eaa54724921195727fe16f6bd98f3f44a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7a4469a522b1364df645fc1dcb0362647397a89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196837"
 ---
 # <a name="onlinemode-element-assl"></a>OnlineMode 元素 (ASSL)
   指定是在重新生成缓存刚一开始就立即使数据库恢复到联机状态，还是在完成重新生成缓存后才使数据库恢复到联机状态。  
@@ -59,9 +56,9 @@ ms.locfileid: "37154848"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  

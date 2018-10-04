@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082238"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -138,7 +135,7 @@ ms.locfileid: "37210737"
 |集成安全性|模拟当前用户|对于所有数据源类型，均使用当前的用户帐户进行连接。|  
 |Windows 凭据|模拟指定的用户|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：使用模拟用户帐户进行连接。|  
 |数据库凭据|模拟无人参与的执行帐户或服务帐户。<br /><br /> （Reporting Services 会在使用服务标识发送连接请求时删除管理员权限）。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 将用户名和密码追加到连接字符串中。<br /><br /> 有关[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 如果使用的是 TCP/IP 协议，则连接会成功；否则，连接将失败。<br /><br /> 对于 XML：<br /><br /> 如果使用数据库凭据，则报表服务器上的连接将失败。|  
-|InclusionThresholdSetting|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 有关[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
+|None|模拟无人参与的执行帐户。|对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle、ODBC 和 OLE DB：<br /><br /> 使用连接字符串中定义的凭据。 如果未定义无人参与的执行帐户，则报表服务器上的连接将失败。<br /><br /> 有关[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> 如果未指定任何凭据，则即使定义了无人参与的执行帐户，连接也总会失败。<br /><br /> 对于 XML：<br /><br /> 如果定义了无人参与的执行帐户，则以匿名用户的身份连接；否则，连接将失败。|  
   
 ## <a name="setting-credentials-programmatically"></a>通过编程方式设置凭据  
  您可以通过编写代码来设置凭据，以控制对报表和报表服务器的访问。 有关详细信息，请参阅[数据源和连接方法](../report-server-web-service/methods/data-sources-and-connection-methods.md)。  

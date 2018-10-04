@@ -1,13 +1,11 @@
 ---
-title: CommandText 属性 (ADO) |Microsoft 文档
+title: CommandText 属性 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,31 +13,30 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c333cd961ea8b4b3f37f78c682ebe65c7ac9001
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691175"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 属性 (ADO)
-指示要对提供程序发出命令的文本。  
+指示要对提供程序发出的命令的文本。  
   
 ## <a name="settings-and-return-values"></a>设置和返回值  
- 获取或设置**字符串**值，该值包含提供程序命令，如 SQL 语句、 表名称、 相对 URL 或存储的过程调用。 默认值为空字符串 ("")。  
+ 获取或设置**字符串**值，该值包含提供程序命令，例如 SQL 语句、 表名称、 相对 URL 或存储的过程调用。 默认值为空字符串 ("")。  
   
-## <a name="remarks"></a>Remarks  
- 使用**CommandText**属性来设置或返回表示命令的文本[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 通常这将是一个 SQL 语句，但也可以是任何其他类型的提供程序，如存储的过程调用识别的命令语句。 SQL 语句必须是特定语句或提供程序的查询处理器支持的版本。  
+## <a name="remarks"></a>备注  
+ 使用**CommandText**属性设置或返回由表示命令的文本[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。 通常，这将为 SQL 语句，但也可以是任何其他类型的识别的提供程序，例如存储的过程调用的命令语句。 SQL 语句必须是特定语句或提供程序的查询处理器支持的版本。  
   
- 如果[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)属性**命令**对象设置为**True**和**命令**设置时，将对象绑定到打开的连接**CommandText**属性，ADO 准备查询 （即，已编译形式提供程序存储的查询） 当调用[执行](../../../ado/reference/ado-api/execute-method-ado-command.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法。  
+ 如果[已准备](../../../ado/reference/ado-api/prepared-property-ado.md)的属性**命令**对象设置为**True**并**命令**设置时，将对象绑定到打开的连接**CommandText**属性，ADO 准备查询 （即，已编译的存储提供程序的查询形式） 时调用[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)或[打开](../../../ado/reference/ado-api/open-method-ado-connection.md)方法。  
   
- 具体取决于[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性设置，ADO 可能会更改**CommandText**属性。 你可以阅读**CommandText**在任何时候，若要查看实际命令文本的属性在执行期间将使用该 ADO。  
+ 具体取决于[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)属性设置，则 ADO 可能会更改**CommandText**属性。 可以读取**CommandText**任何时候若要查看实际的命令文本的属性在执行期间将使用该 ADO。  
   
- 使用**CommandText**属性来设置或返回指定的资源，如文件或目录的相对 URL。 资源是相对位置的绝对 URL，或打开通过隐式显式指定[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
+ 使用**CommandText**属性来设置或返回指定的资源，如文件或目录的相对 URL。 资源是相对于显式指定绝对 URL，或隐式打开位置[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。  
   
 > [!NOTE]
 >  Url 使用 http 方案将自动调用[Microsoft OLE DB 访问接口用于 Internet 发布](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)。 有关详细信息，请参阅[绝对和相对 Url](../../../ado/guide/data/absolute-and-relative-urls.md)。  

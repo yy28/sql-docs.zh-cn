@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.snapshotformat.f1
 ms.assetid: 8e9133b1-fc37-4a85-8a7c-d5eaf172fbef
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d238cd2bce87f65c1d29936457e2b966eee40a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ebf115466a916922444818d11ccd3855c49f825
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214117"
 ---
 # <a name="publication-properties-snapshot"></a>发布属性，快照
   可以使用 **“发布属性”** 对话框的 **“快照”** 页设置快照格式、快照文件夹位置以及应用快照前后运行的脚本。 快照文件夹必须指定为共享文件夹，并且对于将文件读/写到快照文件夹的代理有足够的权限。 有关正确保护文件夹的详细信息，请参阅[保护快照文件夹的安全](security/secure-the-snapshot-folder.md)。  
@@ -29,7 +26,7 @@ ms.locfileid: "37214897"
 > [!NOTE]  
 >  若要进行更改，则需要发布的新快照。 有关详细信息，请参阅[更改发布和项目属性](publish/change-publication-and-article-properties.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **快照格式**  
  选择快照格式的本机模式或字符模式。  
   

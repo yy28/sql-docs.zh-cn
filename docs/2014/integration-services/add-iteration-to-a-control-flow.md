@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047838"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>将迭代添加到控制流
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含 For 循环容器，此控制流元素使得可以更简便地包含按条件重复包中控制流的循环。 有关详细信息，请参阅 [For Loop Container](control-flow/for-loop-container.md)。  
@@ -51,10 +48,10 @@ ms.locfileid: "37273413"
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>在控制流中实现 For 循环容器  
   
 1.  将 For 循环容器添加到包。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  实例时都提供 SQL Server 登录名。  
+  .  
   
 2.  将任务和容器添加到 For 循环容器。 有关详细信息，请参阅[添加或删除任务或容器中控制流](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  实例时都提供 SQL Server 登录名。  
+  .  
   
 3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅[使用默认优先约束来连接任务和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)。  
   

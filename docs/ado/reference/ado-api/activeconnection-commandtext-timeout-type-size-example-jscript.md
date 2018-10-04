@@ -1,13 +1,11 @@
 ---
-title: 存储过程属性示例 (JScript) |Microsoft 文档
+title: 存储过程属性示例 (JScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -18,19 +16,18 @@ helpviewer_keywords:
 - Direction property [ADO], JScript example
 - CommandTimeout property [ADO], JScript example
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c22bf12eb688212fb8541f32080442dcdcb9d4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 204b39f91e12970d3e853f21926e9dc34de0a0f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275066"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758855"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection、 CommandText、 CommandTimeout、 CommandType、 大小和方向属性示例 (JScript)
-此示例使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)， [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)， [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，和[方向](../../../ado/reference/ado-api/direction-property.md)属性来执行存储的过程。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveConnectionJS.asp**。  
+此示例使用[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)， [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)， [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)， [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)，并[方向](../../../ado/reference/ado-api/direction-property.md)属性来执行存储的过程。 剪切并粘贴到记事本或其他文本编辑器，下面的代码，然后将其保存为**ActiveConnectionJS.asp**。  
   
 ```  
 <!-- BeginActiveConnectionJS -->  
@@ -183,7 +180,7 @@ BODY {
  [CommandTimeout 属性 (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType 属性 (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [方向属性](../../../ado/reference/ado-api/direction-property.md)   
+ [Direction 属性](../../../ado/reference/ado-api/direction-property.md)   
  [参数对象](../../../ado/reference/ado-api/parameter-object.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -15,27 +13,26 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6817f31ff83e1a502506893f66b5080399200fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93d31c4f9f8f712834131136034541bf469e0014
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119877"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014 的 SQL Server Reporting Services 中不推荐使用的功能
   本主题介绍不推荐使用的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能。 在不推荐使用这些功能的版本中仍提供这些功能，但是计划在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的未来版本中删除它们。 在新的应用程序中不应使用这些不推荐使用的功能。  
   
  本主题内容：  
   
--   [SQL Server 2014 Reporting Services 不推荐使用的功能](#bkmk_2014)  
+-   [SQL Server 2014 Reporting Services 中弃用的功能](#bkmk_2014)  
   
 -   [SQL Server 2012 SP1 Reporting Services 不推荐使用的功能](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services 不推荐使用的功能](#bkmk_2012)  
+-   [SQL Server 2012 Reporting Services 中弃用的功能](#bkmk_2012)  
   
 -   [SQL Server 2008 R2 Reporting Services 不推荐使用的功能](#bkmk_kj)  
   

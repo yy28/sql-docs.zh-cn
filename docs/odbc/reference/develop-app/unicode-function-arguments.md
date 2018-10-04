@@ -1,36 +1,33 @@
 ---
-title: Unicode 函数自变量 |Microsoft 文档
+title: Unicode 函数自变量 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab660a9af95d6232f22c98a868da8fed9ebb0cae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0e67f437cd629411230daed17f6a39f24b7103d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669455"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 函数自变量
-ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版本的所有接受指向字符字符串或 SQLPOINTER 在自变量的指针的函数。 Unicode 函数作为函数来实现 (为后缀*W*)，而不是宏。 ANSI 函数 (其可以调用使用或不是由后缀为*A*) 是等于当前的 ODBC API 函数。  
+ODBC 3.5 （或更高版本） 驱动程序管理器支持所有函数接受字符串或 SQLPOINTER 中其自变量的指针的 ANSI 和 Unicode 的版本。 Unicode 函数作为函数实现 (为后缀*W*)，而不是宏。 ANSI 函数 (带有或不带后缀的可以调用*A*) 与当前的 ODBC API 函数完全相同。  
   
-## <a name="remarks"></a>注释  
- 作为计数的字符传递 Unicode 函数，始终返回或将字符串或长度参数。 对于返回的服务器数据的长度信息的函数，显示大小和精度所述的字符数。 当无法引用字符串或非字符串数据的长度 （传输的数据大小） 时，长度是八位字节长度中所述。 例如， **SQLGetInfoW**操作仍将需要用作计数的字节长度但**SQLExecDirectW**将使用的字符的计数。  
+## <a name="remarks"></a>备注  
+ Unicode 函数始终返回或需要字符串或长度参数将作为字符计数传递。 对于返回的服务器数据的长度信息的函数，显示大小和精度所述的字符数。 长度 （传输的数据大小） 无法引用字符串或非字符串数据，长度是八位字节长度中所述。 例如， **SQLGetInfoW**操作仍将需要为计数字节的长度，但**SQLExecDirectW**将使用的字符数。  
   
- 计数的字符是指的字节数 （八进制） ANSI 函数和 UNICODE 函数 WCHAR （16 位字） 的数目。 具体而言，双字节字符序列 (DBCS) 或多字节字符序列 (MBCS) 可能包括多个字节。 可以由多个 WCHARs 组成 utf-16 Unicode 字符序列。  
+ 字符数表示的字节数 （八进制） ANSI 函数和对于 UNICODE 函数 WCHAR （16 位字） 数。 具体而言，双字节字符序列 (DBCS) 或多字节字符序列 (MBCS) 可以包含多个字节。 可以包含多个 WCHARs utf-16 Unicode 字符序列。  
   
  下面是支持 Unicode (W) 和 ANSI (A) 版本的 ODBC API 函数的列表：  
   
@@ -69,7 +66,7 @@ ODBC 3.5 （或更高版本） 驱动程序管理器支持 ANSI 和 Unicode 版�
 |**SQLInstallDriver**||  
   
 > [!NOTE]  
->  已弃用的函数具有 Unicode ANSI 映射支持，因为 ODBC 3 *.x*驱动程序管理器支持重新编译 ODBC 2。*x*具有 UNICODE 应用程序 **#define**。  
+>  已弃用的函数具有 Unicode 到 ANSI 映射支持，因为 ODBC 3 *.x*驱动程序管理器支持重新编译 ODBC 2。*x*使用 UNICODE 的应用程序 **#define**。  
   
  本部分包含以下主题。  
   

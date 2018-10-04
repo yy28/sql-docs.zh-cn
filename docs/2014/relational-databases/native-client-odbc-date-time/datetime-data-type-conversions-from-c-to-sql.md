@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 638f3acea8ba4d9925851a26bd84ab20f76c38c9
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8f1f44e37b212c973a59fbead2618bfbb477370e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410071"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109497"
 ---
 # <a name="conversions-from-c-to-sql"></a>由 C 转换为 SQL
   本主题列出了要考虑当你从 C 类型转换到的问题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日期/时间类型。  
@@ -30,8 +27,8 @@ ms.locfileid: "37410071"
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|@shouldalert|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|@shouldalert|@shouldalert|1,7|1,5,7|1,13|1,13|  
+|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
+|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
 |SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|N/A|N/A|1,10,11|N/A|N/A|N/A|N/A|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
@@ -50,7 +47,7 @@ ms.locfileid: "37410071"
 |符号|含义|  
 |------------|-------------|  
 |-|不支持任何转换。 生成具有 SQLSTATE 07006 和消息“受限制的数据类型属性冲突”的诊断记录。|  
-|@shouldalert|如果提供的数据无效，则生成具有 SQLSTATE 22007 和消息“日期时间格式无效”的诊断记录。|  
+|1|如果提供的数据无效，则生成具有 SQLSTATE 22007 和消息“日期时间格式无效”的诊断记录。|  
 |2|时间字段必须为零，否则，将生成具有 SQLSTATE 22008 和消息“小数部分截断”的诊断记录。|  
 |3|秒的小数部分必须为零，否则将生成具有 SQLSTATE 22008 和消息“小数部分截断”的诊断记录。|  
 |4|忽略日期部分。|  

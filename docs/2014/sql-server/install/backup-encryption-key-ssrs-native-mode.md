@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.backupencryptionkey.F1
 ms.assetid: eb8c82be-323b-4d86-ab10-c1bf69a4abe3
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 89d5ffa496220bc14b963ebbad08b89b919eec3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db573e1a070b110ff0f5224a6d079f3fe7c377ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061687"
 ---
 # <a name="backup-encryption-key-ssrs-native-mode"></a>备份加密密钥（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用加密密钥来保护存储在报表服务器数据库中的敏感数据。 备份该密钥对于确保可继续访问连接字符串和凭据至关重要。 如果将报表服务器数据库移动到其他计算机，或者更改报表服务器服务帐户的用户名或密码，则必须备份该密钥。 这两个操作均要求您从先前创建的备份副本还原密钥。  
@@ -30,7 +27,7 @@ ms.locfileid: "37191237"
   
  若要打开备份加密密钥对话框中，单击**加密密钥**中的导航窗格[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager，然后单击**备份**。 更新使用服务帐户页中的服务帐户时，也会显示此对话框[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器。 有关详细信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]配置管理器中，请参阅[Reporting Services 配置管理器&#40;本机模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **文件位置**  
  指定的文件名和位置[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]到对称密钥。 对称密钥决不能以纯文本形式存储。 您必须键入密码来保护该文件。  
   

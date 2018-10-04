@@ -1,14 +1,11 @@
 ---
-title: sp_delete_targetserver (Transact SQL) |Microsoft 文档
+title: sp_delete_targetserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b67e059a70c7edfda838d325928a95a8f4b43ab0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692233"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,24 +43,24 @@ sp_delete_targetserver [ @server_name = ] 'server'
   
 ## <a name="arguments"></a>参数  
  [ **@server_name=** ] **'***server***'**  
- 要作为可用目标服务器来删除的服务器的名称。 *服务器*是**nvarchar (30)**，无默认值。  
+ 要作为可用目标服务器来删除的服务器的名称。 *服务器*是**nvarchar(30)**，无默认值。  
   
  [  **@clear_downloadlist=** ] *clear_downloadlist*  
- 指定是否清除目标服务器的下载列表+。 *clear_downloadlist*是类型**位**，默认值为**1**。 当*clear_downloadlist*是**1**，过程删除服务器之前，清除服务器的下载列表。 当*clear_downloadlist*是**0**，下载列表不会清除。  
+ 指定是否清除目标服务器的下载列表+。 *clear_downloadlist*是类型**位**，默认值为**1**。 当*clear_downloadlist*是**1**，过程将删除服务器之前清除该服务器的下载列表。 当*clear_downloadlist*是**0**，不清除下载列表。  
   
  [  **@post_defection=** ] *post_defection*  
- 指定是否向目标服务器发布脱离指令。 *post_defection*是类型**位**，默认值为 1。 当*post_defection*是**1**，该过程将发送到目标服务器之前删除服务器缺陷指令。 当*post_defection*是**0**，该过程不会发送到目标服务器的缺陷指令。  
+ 指定是否向目标服务器发布脱离指令。 *post_defection*是类型**位**，默认值为 1。 当*post_defection*是**1**，过程将在删除服务器之前向目标服务器脱离指令。 当*post_defection*是**0**，该过程不会发送到目标服务器脱离指令。  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
 ## <a name="result-sets"></a>结果集  
- InclusionThresholdSetting  
+ None  
   
-## <a name="remarks"></a>注释  
- 若要删除目标服务器的正常方式是调用**sp_msx_defect**目标服务器上。 使用**sp_delete_targetserver**手动脱离时才有必要。  
+## <a name="remarks"></a>备注  
+ 若要删除目标服务器的常规方法是调用**sp_msx_defect**目标服务器上。 使用**sp_delete_targetserver**手动脱离时才需要。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要运行此存储的过程，必须授予用户**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
@@ -80,8 +76,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [sp_help_targetserver &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [sp_help_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

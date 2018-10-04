@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-caps.latest.revision: 32
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5c2d37db0ef10e8bae5e6fded476ca43e50c61bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9098fcc54fde98a8fa04579fe49154e41fa78943
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164778"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097442"
 ---
 # <a name="conditional-split-transformation-editor"></a>有条件拆分转换编辑器
   可以使用 **“有条件拆分转换编辑器”** 对话框创建表达式，设置表达式计算顺序，以及对有条件拆分输出进行命名。 此对话框包含可以用于生成表达式的数学、字符串和日期/时间函数及运算符。 计算结果为 True 的第一个条件确定了行定向到的输出。  
@@ -33,7 +30,7 @@ ms.locfileid: "37164778"
   
  若要了解有关有条件拆分转换的详细信息，请参阅 [有条件拆分转换](data-flow/transformations/conditional-split-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **订单**  
  选择行并使用右边的箭头键，可以更改计算表达式的顺序。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2ed4731450111c49bfe3936ecda2e1400a09d173
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4cb5529ad750a72fa2572edd62b6b63c20867e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083959"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135737"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理对象 (SMO) 模型和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 管理单元使用与 XPath 表达式相似的两种类型的表达式。 查询表达式是指定一组条件的字符串，用于枚举对象模型层次结构中的一个或多个对象。 统一资源名称 (URN) 是一种特定类型的查询表达式字符串，用于唯一标识单个对象。  
@@ -68,7 +65,7 @@ ms.locfileid: "39083959"
  例如，为 **ServerCollection** 类指定“服务器”，为 **DatabaseCollection** 类指定“数据库”。  
   
  \@*PropertyName*  
- 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性的名称必须带有前缀\@字符。 例如，指定\@为 IsAnsiNull**数据库**类属性**IsAnsiNull**。  
+ 指定与“对象”中指定的对象相关联的类的其中一个属性的名称。 属性名必须以字符 \@ 为前缀。 例如，对 Database 类的 IsAnsiNull 属性指定 \@IsAnsiNull。  
   
  \@*BooleanPropertyName*=true()  
  枚举指定的布尔属性设置为 TRUE 的所有对象。  
@@ -76,7 +73,7 @@ ms.locfileid: "39083959"
  \@*BooleanPropertyName*=false()  
  枚举指定的布尔属性设置为 FALSE 的所有对象。  
   
- 包含 (\@*字符串属性名称*，*模式字符串*)  
+ contains(\@StringPropertyName, 'PatternString')  
  枚举指定的字符串属性中包含“*PatternString*”中指定的一组字符（至少出现一次）的所有对象。  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -97,13 +94,13 @@ ms.locfileid: "39083959"
   
  可以按照存储在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的任何日期格式，计算以此格式指定的日期。  
   
- is_null (\@*PropertyName*)  
+ is_null(\@PropertyName)  
  枚举指定属性的值为 NULL 的所有对象。  
   
  not(\<*PropertyExpression*>)  
- 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，不 (包含 (\@名称，'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
+ 对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  

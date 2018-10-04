@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
 ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bdbc0375dd2f6c77d81ab4028bb5118de93a021f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185314"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155845"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定维度类型（维度向导）
   可以定使用 **“指定维度类型”** 页义维度类型，以及将与所选维度类型关联的特殊属性类型添加到维度中。  
@@ -29,7 +26,7 @@ ms.locfileid: "37185314"
 > [!NOTE]  
 >  只有在“选择维度类型”页上选择了“标准维度”时，才会显示此页。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **维度类型**  
  选择维度的维度类型。 下表列出了可用的维度类型：  
   

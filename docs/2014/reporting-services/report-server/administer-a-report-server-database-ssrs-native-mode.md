@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-caps.latest.revision: 63
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ef8be1c1777e51b14a0db38a15a5ff806a83443d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21f641d9bb33c918e8194ac7ed02af8c4c9469db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193257"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>管理报表服务器数据库（SSRS 本机模式）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署将两个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库用作内部存储。 默认情况下，这两个数据库分别命名为 ReportServer 和 ReportServerTempdb。 ReportServerTempdb 随报表服务器主数据库一同创建，用于存储临时数据、会话信息和缓存的报表。  
@@ -80,7 +77,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>关于数据库版本  
- 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 产品版本信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]通过在日志文件、 所有 SOAP 调用的标头中显示以及当您连接到报表服务器 URL 的文件版本信息指示 (例如，当打开浏览器到http://localhost/reportserver)。  
+ 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，未提供有关数据库版本的显式信息。 但是，由于数据库版本始终与产品版本同步，因此可以使用产品版本信息来了解数据库版本的更改时间。 产品版本信息[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]通过在日志文件、 所有 SOAP 调用的标头中显示以及当您连接到报表服务器 URL 的文件版本信息指示 (例如，当打开浏览器到 http://localhost/reportserver)。  
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 配置管理器&#40;本机模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

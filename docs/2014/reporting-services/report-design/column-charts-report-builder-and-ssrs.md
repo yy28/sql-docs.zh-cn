@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba88d7a078889de09af4bd33e484ae69519721c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5980f2f1213b0f74422cdac773e4dfa9c806fd5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056437"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>柱形图（报表生成器和 SSRS）
   柱形图将序列显示为一组按类别分组的垂直图条。 柱形图对于显示一段时间的数据变化或说明各项之间的比较来说十分有用。 平面柱形图与条形图关系密切，条形图将序列显示为多组水平图条，而范围柱形图将序列显示为多组具有不同起点和终点的垂直图条。 有关详细信息，请参阅[条形图&#40;报表生成器和 SSRS&#41; ](charts-report-builder-and-ssrs.md)并[范围图&#40;报表生成器和 SSRS&#41;](range-charts-report-builder-and-ssrs.md)。  
@@ -39,9 +36,9 @@ ms.locfileid: "37246187"
   
 -   **三维圆柱**。 一种图条在三维图表中的形状类似于圆柱的柱形图。  
   
--   `Histogram`的用户。 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
+-   `Histogram`。 一种图表通过计算以使其图条按正态分布进行排列的柱形图。  
   
--   `Pareto`的用户。 一种图条按从最高到最低排列的柱形图。  
+-   `Pareto`。 一种图条按从最高到最低排列的柱形图。  
   
 ## <a name="data-considerations-for-a-column-chart"></a>柱形图在数据方面的注意事项  
   

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3718045bc6fdcc6d83fd862bbf1f45dce96492dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171467"
 ---
 # <a name="discoverconnections-rowset"></a>DISCOVER_CONNECTIONS 行集
   提供服务器上当前打开的连接的资源使用情况和活动信息。  
@@ -34,17 +31,17 @@ ms.locfileid: "37194297"
   
 |列名|类型指示符|限制|Description|  
 |-----------------|--------------------|------------------|-----------------|  
-|`CONNECTION_ID`|`DBTYPE_I4`|是|标识连接的唯一编号。|  
-|`CONNECTION_USER_NAME`|`DBTYPE_WSTR`|是|连接的用户名。|  
-|`CONNECTION_IMPERSONATED_USER_NAME`|`DBTYPE_WSTR`|是|保留供将来使用。 Analysis Services 始终为 CONNECTION_IMPERSONATED_USER_NAME 的值返回 NULL。|  
-|`CONNECTION_HOST_NAME`|`DBTYPE_WSTR`|是|启动连接的计算机名称。|  
+|`CONNECTION_ID`|`DBTYPE_I4`|用户帐户控制|标识连接的唯一编号。|  
+|`CONNECTION_USER_NAME`|`DBTYPE_WSTR`|用户帐户控制|连接的用户名。|  
+|`CONNECTION_IMPERSONATED_USER_NAME`|`DBTYPE_WSTR`|用户帐户控制|保留供将来使用。 Analysis Services 始终为 CONNECTION_IMPERSONATED_USER_NAME 的值返回 NULL。|  
+|`CONNECTION_HOST_NAME`|`DBTYPE_WSTR`|用户帐户控制|启动连接的计算机名称。|  
 |`CONNECTION_HOST_APPLICATION`|`DBTYPE_WSTR`||启动连接的应用程序名称。|  
 |`CONNECTION_START_TIME`|`DBTYPE_DBTIMESTAMP`||启动连接时的服务器 UTC 日期和时间。|  
-|`CONNECTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|是|自连接开始起经过的时间（毫秒）。|  
+|`CONNECTION_ELAPSED_TIME_MS`|`DBTYPE_I8`|用户帐户控制|自连接开始起经过的时间（毫秒）。|  
 |`CONNECTION_LAST_COMMAND_START_TIME`|`DBTYPE_DBTIMESTAMP`||服务器 UTC 日期和最后一个命令时启动其执行时间。|  
 |`CONNECTION_LAST_COMMAND_END_TIME`|`DBTYPE_DBTIMESTAMP`||上次命令执行结束时的服务器 UTC 日期和时间。|  
-|`CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`|是|自上次命令执行结束后经过的时间（毫秒）。|  
-|`CONNECTION_IDLE_TIME_MS`|`DBTYPE_I8`|是|自连接开始后的空闲时间（毫秒）。|  
+|`CONNECTION_LAST_COMMAND_ELAPSED_TIME_MS`|`DBTYPE_I8`|用户帐户控制|自上次命令执行结束后经过的时间（毫秒）。|  
+|`CONNECTION_IDLE_TIME_MS`|`DBTYPE_I8`|用户帐户控制|自连接开始后的空闲时间（毫秒）。|  
 |`CONNECTION_BYTES_SENT`|`DBTYPE_I8`||自连接开始后该连接发送的累计字节数。|  
 |`CONNECTION_DATA_BYTES_SENT`|`DBTYPE_I8`||自连接开始后该连接发送的累计数据字节数。<br /><br /> 数据在连接中以压缩方式传送；此值表示解压缩后的发送数据。|  
 |`CONNECTION_BYTES_RECEIVED`|`DBTYPE_I8`||自连接开始后该连接收到的累计字节数。|  

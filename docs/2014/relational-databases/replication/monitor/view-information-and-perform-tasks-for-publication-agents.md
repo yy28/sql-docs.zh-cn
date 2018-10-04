@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], viewing information
 - viewing replication agent information
 - agents [SQL Server replication], tasks in Replication Monitor
 ms.assetid: 2a420da2-66f4-4650-9bdd-1992221ed3fd
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f385a167fe56db1c9db2a2238b22de66daa3ab6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d550440b876c392fd6e9a5e129685fc8b579939
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280993"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093347"
 ---
 # <a name="view-information-and-perform-tasks-for-the-agents-associated-with-a-publication-replication-monitor"></a>查看与发布相关的代理的信息并执行此代理的任务（复制监视器）
   复制监视器提供了 **“代理”** 选项卡，其中包含与所选发布关联的代理的相关信息。 分发代理和合并代理均与订阅相关联；有关详细信息，请参阅[查看与订阅关联的代理的信息和执行其任务（复制监视器）](view-information-and-perform-tasks-for-subscription-agents.md)。  

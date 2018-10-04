@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - filegroups [SMO]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd05be78281375f75cca679b3cdbfcb269a984c2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95edb24e7b26ef6cb80d7a0d707f89b6eb79c7da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196447"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>使用文件组和文件存储数据
   数据文件可用于存储数据库文件。 数据文件可细分为文件组。 <xref:Microsoft.SqlServer.Management.Smo.Database> 对象具有 <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> 属性，该属性引用 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 对象。 该集合中的每个 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 对象都具有 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 属性。 此属性引用 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 集合，该集合包含属于数据库的所有数据文件。 文件组主要用于将用于存储数据库对象的文件组合在起来。 将一个数据库对象分布到几个文件上的一个原因是，它可以提高性能，尤其是在文件存储在不同磁盘驱动器上时。  

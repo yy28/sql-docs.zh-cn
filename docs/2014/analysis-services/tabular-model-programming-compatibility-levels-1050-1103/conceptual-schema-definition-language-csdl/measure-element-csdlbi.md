@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bfbc9274-053a-421a-bb81-2095bba710be
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c3a2f2ef1c1dcc80e0b8ac9cb68ce5d5694d104
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de02e5c0233fb5cb1699f038b87871c8757f0256
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224010"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068397"
 ---
 # <a name="measure-element-csdlbi"></a>Measure 元素 (CSDLBI)
   Measure 元素是基于 CSDL 的 Property 元素的复杂类型。 CSDLBI 注释添加了一些属性，以支持要在商业智能数据模型中使用的复杂公式。  
@@ -30,8 +27,8 @@ ms.locfileid: "37224010"
   
 |“属性”|是否必需|Description|  
 |----------|-----------------|-----------------|  
-|Kpi|“否”|仅对于用作 KPI 的度量值是必需元素。 并非所有度量值都是 KPI，但所有 KPI 都必须基于度量值的定义。<br /><br /> [KPI 元素&#40;CSDLBI&#41;](kpi-element-csdlbi.md)|  
-|IsSimpleMeasure|“否”|一个 true/false 值，指示度量值中使用的公式是否为简单聚合（SUM、COUNT、MIN、MAX、AVG、DistinctCount）之一。<br /><br /> 默认为 true。|  
+|Kpi|否|仅对于用作 KPI 的度量值是必需元素。 并非所有度量值都是 KPI，但所有 KPI 都必须基于度量值的定义。<br /><br /> [KPI 元素&#40;CSDLBI&#41;](kpi-element-csdlbi.md)|  
+|IsSimpleMeasure|否|一个 true/false 值，指示度量值中使用的公式是否为简单聚合（SUM、COUNT、MIN、MAX、AVG、DistinctCount）之一。<br /><br /> 默认为 true。|  
   
 ## <a name="example"></a>示例  
  **表格**  

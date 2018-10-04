@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client, uninstalling
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4023294d52724e5cd132ab4a47b8b8e7f910e3a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0847b289498372d74d565f1fafdd7d97f3d0c133
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394229"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138097"
 ---
 # <a name="installing-sql-server-native-client"></a>安装 SQL Server Native Client
   Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安装时安装 Native Client 11.0 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 没有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 有关详细信息，请参阅[What's New in SQL Server Native Client](../sql-server-native-client.md)。 你还可以从 SQL Server 2012 功能包网页获取 sqlncli.msi。 若要下载 SQL Server Native Client 的最新版本，请转到[Microsoft® SQL Server® 2012 SP2 功能包](http://www.microsoft.com/en-us/download/details.aspx?id=43339)。 如果以前版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早于的计算机上，也安装 SQL Server 2012 Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 将与早期版本并行安装。  

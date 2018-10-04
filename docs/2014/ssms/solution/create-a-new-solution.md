@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f19e49a14939da626c5ec647794aa795ef6e8f8c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1638c2d0696ebaac0b9bfebe7f6349080a8332ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816803"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168627"
 ---
 # <a name="create-a-new-solution"></a>新建解决方案
   创建项目时，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 将创建一个解决方案来包含该项目。 一次只能打开一个解决方案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不允许在项目中创建文件夹。 若要对您的工作进行组织，请创建多个项目。  

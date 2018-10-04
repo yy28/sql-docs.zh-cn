@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5711cdcdcedb409330ae1b70591d9fe08db961e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3d161786019750aae9740ce42ab0a15464b0dfc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414148"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160867"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
   取消异步执行的操作。  
@@ -42,14 +39,14 @@ HRESULT Abort(
  *hChapter*[in]  
  要中止其操作的章节的句柄。 如果所调用的对象不是行集对象或操作不适用于一章，调用方必须设置*hChapter*为 DB_NULL_HCHAPTER。  
   
- *eOperation*[in]  
+ eOperation[in]  
  要中止的操作。 其值应为：  
   
  DBASYNCHOP_OPEN — 要取消的请求应用于对行集的异步打开或填充，或应用于对数据源对象的异步初始化。  
   
 ## <a name="return-code-values"></a>返回代码值  
  S_OK  
- 已处理取消异步操作的请求。 这并不保证操作本身已取消。 若要确定是否已取消该操作，使用者应调用[issasynchstatus:: Getstatus](issasynchstatus-getstatus-ole-db.md)并检查是否有 DB_E_CANCELED; 但是，它可能不会返回在紧接着的下一个调用中。  
+ 已处理取消异步操作的请求。 这并不保证操作本身已取消。 若要确定操作是否已取消，使用者应当调用 [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md)，并检查是否有 DB_E_CANCELED；但是，它可能不会正好在下一次调用中返回。  
   
  DB_E_CANTCANCEL  
  异步操作无法取消。  
@@ -66,16 +63,16 @@ HRESULT Abort(
  E_UNEXPECTED  
  **Issasynchstatus:: Abort**在其上的数据源对象上调用**idbinitialize:: Initialize**尚未调用，或未完成。  
   
- **Issasynchstatus:: Abort**在其上的数据源对象上调用**idbinitialize:: Initialize**但随后之前已取消初始化或已超时。数据源对象仍未初始化。  
+ 已对数据源对象调用 ISSAsynchStatus::Abort，此前，该对象已调用 IDBInitialize::Initialize 但随后在初始化或超时之前取消。数据源对象仍未初始化。  
   
  **Issasynchstatus:: Abort**在其上一个行集合上调用**itransaction:: Commit**或**itransaction:: Abort**以前被调用，并在行集中未提交或中止是处于僵停状态。  
   
- **Issasynchstatus:: Abort**已以异步方式取消初始化阶段中的行集时调用。 该行集处于僵停状态。  
+ 已对在初始化阶段异步取消的行集调用 ISSAsynchStatus::Abort。 该行集处于僵停状态。  
   
-## <a name="remarks"></a>Remarks  
- 中止行集或数据源对象的初始化可能使行集或数据源对象处于僵停状态，以便所有方法以外的其他**IUnknown**方法将返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
+## <a name="remarks"></a>备注  
+ 中止行集或数据源对象的初始化可能使行集或数据源对象最后处于僵停状态，以至于除了 IUnknown 方法以外的所有方法都返回 E_UNEXPECTED。 发生这种情况时，使用者的唯一可能操作是释放行集或数据源对象。  
   
- 调用**issasynchstatus:: Abort**并将值传递*eOperation*除了 DBASYNCHOP_OPEN 返回 S_OK。 这并不意味着操作已完成或取消。  
+ 如果调用 ISSAsynchStatus::Abort 并为 eOperation 传递除了 DBASYNCHOP_OPEN 以外的值，将返回 S_OK。 这并不意味着操作已完成或取消。  
   
 ## <a name="see-also"></a>请参阅  
  [执行异步操作](../native-client/features/performing-asynchronous-operations.md)  
