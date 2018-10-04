@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - comparing data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6d073e95d896429e1827009c249b940ade2e7b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32a750ead87e8d775388d93c2ddc84ed12f2ca98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180964"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147928"
 ---
 # <a name="tablediff-utility"></a>tablediff 实用工具
   **tablediff** 实用工具用于比较两个非收敛表中的数据，它对于排除复制拓扑中的非收敛故障非常有用。 可以从命令提示符或在批处理文件中使用该实用工具执行以下任务：  
@@ -172,7 +169,7 @@ ms.locfileid: "37180964"
 |**1**|严重错误|  
 |**2**|存在表差异|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **tablediff** 实用工具不能用于非[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 服务器。  
   
  使用表`sql_variant`不支持数据类型列。  
@@ -214,7 +211,7 @@ ms.locfileid: "37180964"
   
 -   `image`  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要比较表，您必须有要比较的表对象的 SELECT ALL 权限。  
   
  若要使用 **-et** 选项，必须是 db_owner 固定数据库角色的成员，或者在订阅数据库中至少拥有 CREATE TABLE 权限，并且对目标服务器中的目标所有者架构拥有 ALTER 权限。  

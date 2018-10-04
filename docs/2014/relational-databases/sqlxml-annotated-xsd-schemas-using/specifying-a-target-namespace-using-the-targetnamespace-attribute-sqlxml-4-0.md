@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - namespaces [SQLXML], annotated XSD schemas
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - elementFormDefault attribute
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa61e44575761d4ada96d68a887b584664735e7e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 40739c6aa044b4ae632b38e26fe8776451673103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166728"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125057"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>使用 targetNamespace 属性指定目标命名空间 (SQLXML 4.0)
   编写 XSD 架构，您可以使用 XSD **targetNamespace**特性以指定目标命名空间。 本主题介绍如何在 XSD **targetNamespace**， **elementFormDefault**，并**attributeFormDefault**属性起作用，它们如何影响的 XML 实例生成，以及如何使用命名空间指定 XPath 查询。  

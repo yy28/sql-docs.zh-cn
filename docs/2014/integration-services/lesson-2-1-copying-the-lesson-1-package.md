@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97da2e6f299541173246dae96af1055c7df44810
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0237707fb5342b490806e3d0b8a2f32b3929ab38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118641"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>步骤 1：复制 Lesson 1 包
   在本任务中，将为第 1 课中创建的 Lesson 1.dtsx 包创建一个副本。 如果未完成第 1 课的学习，则可以向项目添加本教程中附带的已完成 Lesson 1 包，然后再对其进行复制。 将使用这一新副本来完成第 2 课剩余部分。  

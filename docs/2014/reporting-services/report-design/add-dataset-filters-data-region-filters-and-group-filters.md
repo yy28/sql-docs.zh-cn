@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7f133be198e7a141d13f0fded3ec17388308d44c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200807"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154217"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）
   在报表中，筛选器是创建的数据集、数据区域或数据区域组的一部分，用于限制报表中使用的数据。 如果无法更改数据集查询（例如，如果您使用的是共享数据集），则可使用筛选器帮助您控制报表数据。  

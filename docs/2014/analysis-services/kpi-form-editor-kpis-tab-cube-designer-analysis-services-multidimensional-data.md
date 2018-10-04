@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 284ccc63f98624e1a64b114d31b69215d8e6b1be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49df3dcaf89d98d42da0a89ea7de0b8114093913
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224833"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166377"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 窗体编辑器（KPI 选项卡，多维数据集设计器）（Analysis Services - 多维数据）
   可以使用多维数据集设计器中的“KPI”选项卡上的“KPI 窗体编辑器”窗格，创建或修改所选的关键绩效指标 (KPI)。  
@@ -29,7 +26,7 @@ ms.locfileid: "37224833"
 > [!NOTE]  
 >  此窗格仅显示在窗体视图中。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入 KPI 的名称。  
   

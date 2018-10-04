@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f59c5a1e4666c2cd1d0603298af62d75c43398f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284263"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112897"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>配置或修复 PowerPivot for SharePoint 2010（PowerPivot 配置工具）
   要配置或修复 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安装，请使用 PowerPivot 配置工具。 该配置工具开始是扫描系统，然后返回完成或修复安装所需的操作列表。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]安装向导安装 SharePoint 2010 的 PowerPivot 配置工具以及用于 SharePoint 2013 的 PowerPivot 配置工具。 本主题介绍用于 SharePoint 2010 的 PowerPivot 配置工具。 有关 SharePoint 2010 的详细信息，请参阅[配置或修复 PowerPivot for SharePoint 2013 &#40;PowerPivot 配置工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  
@@ -179,7 +176,7 @@ ms.locfileid: "37284263"
  PowerPivot 配置工具将场功能、应用程序和服务设置为在单个帐户下运行。 这简化了安装，但会导致部署无法满足 SharePoint 场的安全要求。 若要创建更可靠的部署，请在完成安装后，将应用程序池和服务标识更改为基于不同的帐户运行。 有关详细信息，请参阅[配置 PowerPivot 服务帐户](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中创建其他可信站点  
- 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 您可以在 Excel Services 中添加可信站点，以便在提供 Excel 工作簿和 PowerPivot 数据的站点上改变权限和配置设置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="add-servers-or-applications"></a>添加服务器或应用程序  
  一段时间后，如果您确定需要附加的数据存储和处理能力，则可以将第二个 PowerPivot for SharePoint 服务器实例添加到场中。 有关说明，请参阅[部署核对清单： 通过向 SharePoint 2010 场添加 PowerPivot 服务器来进行扩展](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  

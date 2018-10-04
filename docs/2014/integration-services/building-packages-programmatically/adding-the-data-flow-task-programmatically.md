@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5accdf9b1ceed154397d00a2f1675a3fee07235
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5485f0094c822d641bf7f123d1d1f72f10662cf4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102028"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>以编程方式添加数据流任务
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 包含了一个称为数据流任务的任务，由对象模型中的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 命名空间表示。 数据流任务是一个专门用于在包执行期间转换和移动数据的专用高性能任务。 与其他任务相似，数据流任务由 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 对象包装，从运行时引擎的角度出发，此任务只是该包中的另一个任务。 但是，数据流包含称为数据流组件的其他对象。 这些组件将数据从源移到目标，有时候还会经过转换。 这些组件定义数据的移动方向和转换数据的方式。 配置数据流任务涉及向任务添加组件，然后连接这些组件以便建立数据流并完成所需的转换。  
@@ -84,7 +81,7 @@ End Module
 ## <a name="external-resources"></a>外部资源  
  blogs.msdn.com 上的博客文章 [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223)（EzAPI – 为 SQL Server 2012 更新）。  
   
-![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [以编程方式查找数据流组件](../building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-caps.latest.revision: 62
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9226df03f6d1ef018991d4d958430a315ac81cd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140747"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 循环编辑器（“集合”页）
   可以使用“Foreach 循环编辑器”对话框的“集合”页，指定枚举器类型以及配置枚举器。  

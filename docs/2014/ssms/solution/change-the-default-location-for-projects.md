@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], default locations
 - default project locations
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bad8ea26cfbeebe9795c1161cca23d1ea792a054
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 75f4e45315af5b0dd7a4761dfe8e278618a71fbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173477"
 ---
 # <a name="change-the-default-location-for-projects"></a>更改项目的默认位置
   文件和项目的默认位置为“我的文档”文件夹中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 项目文件夹。  

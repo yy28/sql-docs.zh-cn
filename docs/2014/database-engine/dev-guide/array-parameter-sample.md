@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ed705d084bc1c6e5b8d06e4a68e4dbe77f67a2b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115647"
 ---
 # <a name="array-parameter-sample"></a>数组参数示例
   有时需要创建、更新或删除数据库中的一组行。 实现的方法有多种。 其中一种是使用 CLR 集成用户定义数据类型将客户端上的数组信息传递到服务器上的公共语言运行时 (CLR) 集成存储过程。 这类用户定义数据类型的特性将提供给服务器的数据大小限制在 8000 个字节。 因此，此方法不适于大型数据或复杂数据。 如果操作的数据量小且简单，则此方法比为每行调用存储过程有效得多。 通过传递数组可以保留数据顺序，数据顺序对一些应用程序而言非常重要。此示例包含以下内容：  

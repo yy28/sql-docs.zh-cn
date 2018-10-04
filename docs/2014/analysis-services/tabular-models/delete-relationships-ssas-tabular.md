@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 530e00790a649ad7ccaebfddfc3582d23ee1b1e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130637"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>删除关系（SSAS 表格）
   您可以使用模型设计器中的“关系图视图”或使用“管理关系”对话框来删除现有关系。 有关如何在表格模型中使用关系的信息，请参阅[关系&#40;SSAS 表格&#41;](relationships-ssas-tabular.md)。  

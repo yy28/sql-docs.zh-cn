@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Key Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f98ae6863f0aab25149ee4f8a69ef13b65da974
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1532db273c83f16678d278f068befefcd8df4b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101277"
 ---
 # <a name="key-element-xmla"></a>Key 元素 (XMLA)
   包含属性成员的成员键值。  
@@ -53,7 +50,7 @@ ms.locfileid: "37213757"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|Any|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -61,9 +58,9 @@ ms.locfileid: "37213757"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[密钥](keys-element-xmla.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素使用的数据类型应与指定属性的相应键列的数据类型相匹配。 如果未指定父 `Key` 元素的 `Attribute` 元素，则在父 `AttributeName` 元素中指定的 `Name` 和 `Attribute` 元素用于标识要修改的属性成员。  
   
 ## <a name="see-also"></a>请参阅  

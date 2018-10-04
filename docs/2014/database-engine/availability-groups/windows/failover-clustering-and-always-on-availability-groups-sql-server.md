@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e0fc322f09ab45756de441e3edf806ab99a02e5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edb2632b0c523bb1ecf49eef767ff3540694f2af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167937"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]是在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中引入的高可用性和灾难恢复解决方案，它要求 Windows Server 故障转移群集 (WSFC)。 此外，尽管 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 不依赖于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 故障转移群集，但您可以使用故障转移群集实例 (FCI) 来为可用性组承载可用性副本。 因此，了解每种群集技术所扮演的角色以及设计您的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]环境所需的注意事项十分重要。  
@@ -66,11 +63,11 @@ ms.locfileid: "37267143"
   
 ||FCI 内的节点|可用性组内的副本|  
 |-|-------------------------|-------------------------------------------|  
-|**使用 WSFC 群集**|是|是|  
+|**使用 WSFC 群集**|用户帐户控制|用户帐户控制|  
 |**保护级别**|实例|“数据库”|  
 |**存储类型**|共享|非共享<br /><br /> 请注意，尽管可用性组中的副本不共享存储，但是，由 FCI 承载的副本将使用该 FCI 所要求的共享存储解决方案。 该存储解决方案仅由 FCI 内的节点共享，不在可用性组的副本之间共享。|  
 |**存储解决方案**|直连、SAN、装入点、SMB|取决于节点类型|  
-|**可读辅助副本**|否*|是|  
+|**可读辅助副本**|否*|用户帐户控制|  
 |**适用的故障转移策略设置**|WSFC 仲裁<br /><br /> FCI 特有的<br /><br /> 可用性组设置**|WSFC 仲裁<br /><br /> 可用性组设置|  
 |**故障转移资源**|服务器、实例和数据库|仅数据库|  
   

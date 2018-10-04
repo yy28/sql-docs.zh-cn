@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395848"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116917"
 ---
 # <a name="thread-pool-properties"></a>线程池属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用多线程处理许多操作，通过并行运行多个作业提高总体服务器性能。 为了更高效地管理线程， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用线程池预分配线程并提高下一作业的线程可用性。  

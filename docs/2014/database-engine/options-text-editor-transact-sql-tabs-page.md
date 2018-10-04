@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.Tabs
 dev_langs:
 - TSQL
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-caps.latest.revision: 10
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9c97c95ec2dff4d96f37eb274ee6ec98af117f89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dd6e11704497bd37fa4eb78948376587ece1119
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157467"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>选项 （文本编辑器-Transact-SQL-选项卡页）
   使用此对话框可以更改用于对 [!INCLUDE[ssDE](../includes/ssde-md.md)] 脚本进行编程的[!INCLUDE[tsql](../includes/tsql-md.md)]查询编辑器的跳格行为。 若要显示这些设置，请在“工具”菜单上单击“选项”，依次展开“文本编辑器”文件夹和“Transact-SQL”子文件夹，然后单击“制表符”。  

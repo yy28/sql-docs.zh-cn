@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_init
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
-caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a929e7a3f013314915bca3d95aafdc3fa1e28b8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 13bafcd55e2e6cf95dec92e5ad2feeda20dde8f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125467"
 ---
 # <a name="bcpinit"></a>bcp_init
   初始化大容量复制操作。  
@@ -77,7 +74,7 @@ eDirection
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  调用**bcp_init**之前调用任何其他大容量复制函数。 **bcp_init**工作站之间的数据大容量复制执行必要的初始化和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  **Bcp_init**函数必须有启用使用大容量复制函数的 ODBC 连接句柄。 若要启用句柄，请使用[SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md)并将 SQL_COPT_SS_BCP 设置为 SQL_BCP_ON 分配，但尚未连接的连接句柄上。 尝试对已连接的句柄分配属性将导致错误。  

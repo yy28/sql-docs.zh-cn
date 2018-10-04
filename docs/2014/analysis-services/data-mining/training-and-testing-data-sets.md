@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120259"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
   将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  

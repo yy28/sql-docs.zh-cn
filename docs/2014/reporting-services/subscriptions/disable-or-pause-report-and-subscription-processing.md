@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ece2c0fe9ae32652e92a5f8d20b628d924b369a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129307"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暂停报表和订阅处理
   您不能直接暂停报表或订阅。 不过，在报表和订阅处理进程启动之前或者在建立数据源连接时，您可以中断报表和订阅处理。 您还可以通过使用户不能访问报表或订阅，来阻止对报表或订阅进行处理。  

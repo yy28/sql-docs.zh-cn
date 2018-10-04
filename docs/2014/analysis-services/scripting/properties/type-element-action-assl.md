@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Action)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af38eb6a60e8e54ecfc4ac5bb4fb05faeab69feb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168417"
 ---
 # <a name="type-element-action-assl"></a>Type 元素 (Action) (ASSL)
   包含的类型[操作](../objects/action-element-assl.md)元素。  
@@ -51,7 +48,7 @@ ms.locfileid: "37249077"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|String（枚举）|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-1：出现一次且仅出现一次的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -59,9 +56,9 @@ ms.locfileid: "37249077"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[操作](../objects/action-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此元素的值限定为下表中列出的字符串之一。  
   
 |ReplTest1|Description|  

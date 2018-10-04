@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251179"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174017"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>第 1 课：创建时序挖掘模型和挖掘结构
   在本课中，将创建一个挖掘模型，可以使用该模型根据历史数据预测一段时间内的值。 创建该模型时，基础结构会自动生成，且可以用作其他挖掘模型的基础。  

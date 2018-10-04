@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UpgradeAdvisorWizardCmd utility
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150767"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>运行升级顾问（命令提示符）
   使用**UpgradeAdvisorWizardCmd**实用工具从命令提示符运行升级顾问。 可以选择以 XML 格式或以逗号分隔值文件来接收结果。  
@@ -60,10 +57,10 @@ where <server_info> is any combination of the following:
  **的实例** *instance_name*  
  指定要分析的实例的名称。 没有默认值。 如果不指定此参数，[!INCLUDE[ssDE](../../includes/ssde-md.md)]则不会扫描。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认实例的值是 MSSQLSERVER。 对于命名实例，使用实例名称。  
   
- **-ASInstance***AS_instance_name  *  
+ **-ASInstance***AS_instance_name*   
  指定要分析的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 默认实例的值是 MSSQLServerOLAPService。 对于命名实例，使用实例名称。  
   
- **-RSInstance***RS_instance_name  *  
+ **-RSInstance***RS_instance_name*   
  指定要分析的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例的名称。 没有默认值。 如果不指定此值，则不会扫描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认实例的值是 ReportServer。 对于命名实例，使用实例名称。  
   
  **-SqlUser** *login_id*  
@@ -84,7 +81,7 @@ where <server_info> is any combination of the following:
 |正整数|成功完成分析，找到升级问题。|  
 |负整数|分析失败。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可在一个 XML 配置文件中提供运行分析所需的所有信息（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证用户名和密码除外）。 此 XML 配置文件记录在模板中。 如果不使用配置文件，则可以通过指定计算机名和实例名使用默认设置分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中所有安装的组件。 有关默认配置文件设置的说明，请参阅本主题后面的“元素说明”表。  
   
 ## <a name="configuration-file-template"></a>配置文件模板  

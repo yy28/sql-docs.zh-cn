@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - merge replication join filters [SQL Server replication]
 - join filters
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a87090d28b91744fcfb9328045d8aa00c1022c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18a01befd18bfd5a150eea3a7dedf1d71f3e495a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154478"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113664"
 ---
 # <a name="join-filters"></a>Join Filters
   联接筛选器允许根据发布中相关表的筛选方式对表进行筛选。 通常用参数化筛选器筛选父表，然后采用与定义各表之间联接完全相同的方式来定义联接筛选器。 联接筛选器扩展了参数化筛选器，以便仅复制与联接筛选器子句匹配的相关表中的数据。  

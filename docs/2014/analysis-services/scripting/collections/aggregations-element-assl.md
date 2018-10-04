@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Aggregations Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c94129a76064bbbc98f300a855e77826ec57794
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d64819bb59cbd86b2179abfbfd3afb5639577a0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189194"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177587"
 ---
 # <a name="aggregations-element-assl"></a>Aggregations 元素 (ASSL)
   包含用于定义聚合的集合[AggregationDesign](../objects/aggregationdesign-element-assl.md)元素。  
@@ -63,7 +60,7 @@ ms.locfileid: "37189194"
 |父元素|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
 |子元素|[聚合](../objects/aggregation-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationCollection>。  
   
 ## <a name="see-also"></a>请参阅  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119647"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>数据挖掘中级教程（Analysis Services - 数据挖掘）
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供一个集成的环境，用于创建和使用数据挖掘模型。 您可以方便地绑定到数据源、针对同一个数据创建和测试多个模型并部署要用于进行预测分析的模型。  

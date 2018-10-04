@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5be0cec7-f639-4eeb-835e-e3204ae619e9
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 86ac24e1c67d062a0b9d0c2b9d2963bd9b8a479d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ebaafa4b25c4bd4847af24a36462e15d04d7774a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147997"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>为呼叫中心模型创建预测（数据挖掘中级教程）
   现在您已经了解了关于班次、操作员人数、呼叫和服务等级之间的交互，您将准备创建一些可用于业务分析和规划的预测查询。 首先您将在探索模型上创建一些预测来测试某些假设。 接下来，您将通过使用逻辑回归模型创建大容量预测。  
@@ -184,7 +181,7 @@ ms.locfileid: "37321497"
   
  可以在此模型上创建多种其他预测查询。 例如，您可以预测多少运算符所需满足某些服务级别，或要响应一定数量的传入呼叫。 因为您可以在逻辑回归模型中包括多个输出，所以很容易试用不同的独立变量和结果，而无需创建许多单独的模型。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  数据挖掘外接 Excel 2007 提供了逻辑回归向导很轻松地回答一些复杂问题，例如多少名二级操作员所需服务等级提高到一个特定班次的目标级别。 数据挖掘外接程序是免费下载的，并包含基于神经网络或逻辑回归算法的向导。 有关更多信息，请参见下列链接：  
   
 -   [SQL Server 2005 数据挖掘外接适用于 Office 2007](http://www.microsoft.com/sql/technologies/dm/addins.mspx)： 目标查找和假设应用场景分析  

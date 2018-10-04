@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e39eeee91c458dda4fb882e6374075a95d255b94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111738"
 ---
 # <a name="xml-source-editor-error-output-page"></a>XML 源编辑器（“错误输出”页）
   可以使用 **“XML 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项，以及设置错误输出列的属性。  
   
  有关 XML 源的详细信息，请参阅 [XML Source](data-flow/xml-source.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

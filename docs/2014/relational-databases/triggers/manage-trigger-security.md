@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], security
@@ -14,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9a290fd763adb52cc83213478103a93a47d3a274
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128147"
 ---
 # <a name="manage-trigger-security"></a>管理触发器安全性
   默认情况下，在调用触发器的用户的上下文中执行 DML 和 DDL 触发器。 触发器的调用方是执行使触发器运行的语句的用户。 例如，如果用户 **Mary** 执行可以使 DML 触发器 **DML_trigMary** 运行的 DELETE 语句，则 **DML_trigMary** 中的代码将在 **Mary**的用户特权上下文中执行。 希望向数据库或服务器实例中引入恶意代码的用户可以使用此默认行为。 例如，用户 `JohnDoe`创建以下 DDL 触发器：  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-caps.latest.revision: 8
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 818d24b62366e463b4b5e9eca15ce9af70336176
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098987"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他报表中重复使用的报表项。 报表部件具有 .rsc 文件扩展名。  

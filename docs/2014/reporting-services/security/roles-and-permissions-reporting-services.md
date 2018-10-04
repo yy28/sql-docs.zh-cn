@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - access controls [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d373ed35e148bc7994ab88221b71152f6b10e8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116841"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色和权限 (Reporting Services)
   Reporting Services 提供身份验证子系统和基于角色的授权模型。 身份验证和授权模型取决于相应的报表服务器是在本机模式下运行还是在 SharePoint 模式下运行。 如果报表服务器是 SharePoint 部署的一部分，则 SharePoint 权限将确定哪些用户对此报表服务器具有访问权限。  

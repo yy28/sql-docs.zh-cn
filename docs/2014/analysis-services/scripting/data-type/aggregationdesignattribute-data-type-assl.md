@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationDesignAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationDesignAttribute data type
 ms.assetid: 03d29d76-e4bd-4035-92cc-35149d83fbf9
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d723011d0342923e4020ab8655f45abb9a764396
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c20be714c6a302f7ba913cacc67b86f70c5379f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188914"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163298"
 ---
 # <a name="aggregationdesignattribute-data-type-assl"></a>AggregationDesignAttribute 数据类型 (ASSL)
   定义一个基元数据类型，表示属性之间的关联和一个[AggregationDesignDimension](dimension-data-type-assl.md)元素。  
@@ -49,18 +46,18 @@ ms.locfileid: "37188914"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|基本数据类型|InclusionThresholdSetting|  
-|派生数据类型|InclusionThresholdSetting|  
+|基本数据类型|None|  
+|派生数据类型|None|  
   
 ## <a name="data-type-relationships"></a>数据类型关系  
   
 |关系|元素|  
 |------------------|-------------|  
-|父元素|InclusionThresholdSetting|  
+|父元素|None|  
 |子元素|[AttributeID](../properties/id-element-assl.md)， [EstimatedCount](../properties/estimatedcount-element-assl.md)|  
 |派生元素|[特性](../objects/attribute-element-assl.md)([特性](../collections/attributes-element-assl.md)的集合[AggregationDesignDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 Analysis Management Objects (AMO) 对象模型中的相应元素是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>。  
   
 ## <a name="see-also"></a>请参阅  

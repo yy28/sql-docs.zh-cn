@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 43cd7f780bfb85930b1abfb144f65a2f7e7b02a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de6560f7bc91a76652be5ca198a91c4ab9c1f1af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169249"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104499"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>保存并执行包（SQL Server 导入和导出向导）
   使用**保存并执行包**对话框可以保存和 / 或其运行更高版本，立即运行包。  
@@ -33,7 +30,7 @@ ms.locfileid: "37169249"
   
  SQL Server 导入和导出向导的作用是将数据从源复制到目标。 该向导还可以为您创建目标数据库和目标表。 但是，如果必须复制多个数据库或表，或者必须复制其他类型的数据库对象，则应改用复制数据库向导。 有关详细信息，请参阅 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **立即执行**  
  选择此选项将立即运行包。  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10014"
 helpviewer_keywords:
 - query designers, SAP
 ms.assetid: 8edda06d-1608-498b-bd50-10905e54f6ce
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a003655287bbed676620a85264fe6276b1d9a7ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af04c7697d685fe36c34b09060302756f6f51214
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127409"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>SAP NetWeaver BI 查询设计器用户界面（报表生成器）
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了图形查询设计器，可用于为 SAP NetWeaver® Business Intelligence 数据源生成多维表达式 (MDX) 查询。 MDX 图形查询设计器有两种模式：设计模式和查询模式。 每种模式都提供一个元数据窗格，在该窗格中，您可以从 InfoCube、MultiProvider 或根据数据源定义的启用 Web 的查询中拖动成员，创建 MDX 查询以便在处理报表时检索数据。  
@@ -40,7 +37,7 @@ ms.locfileid: "37230207"
   
  下表列出了设计模式下的窗格。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选择的 InfoCube、MultiProvider 或启用 Web 的查询。|  
 |“元数据”窗格|显示 InfoCube、MultiProvider 和查询的层次列表。 在数据源中创建的查询可能显示在相应的多维数据集下。|  
@@ -52,7 +49,7 @@ ms.locfileid: "37230207"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>设计模式下的图形查询设计器工具栏  
  查询设计器工具栏提供了可以帮助您使用图形界面来设计 MDX 查询的按钮。 下表介绍了这些按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。 不可用于此数据源类型。|  
 |**导入**|从文件系统中的报表定义 (.rdl) 文件导入现有查询。|  
@@ -75,7 +72,7 @@ ms.locfileid: "37230207"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |“选择多维数据集”按钮|显示当前选择的 InfoCube、MultiProvider 或其他多维数据集。|  
 |“元数据/函数”窗格|显示一个选项卡式窗口，其中列出了可用于创建查询文本的元数据或函数列表。|  

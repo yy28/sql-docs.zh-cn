@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222297"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168178"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>配置专用数据刷新或仅限查询的处理 (PowerPivot for SharePoint)
   在 SharePoint 集成模式下，可以将 Analysis Services 服务器实例配置为支持特定类型的处理请求，如数据刷新或仅限查询的处理。 默认情况下，支持这两种类型的负载请求。 您可以关闭任一类型，以创建专用查询引擎或数据刷新服务器。  
@@ -73,8 +70,8 @@ ms.locfileid: "37222297"
   
 |实际 RAM（以 GB 为单位）|计算的默认值|CPU 实际数量|计算的最大值|是否增加并发作业数目？|  
 |---------------------------------|------------------------------|------------------------|------------------------------|-------------------------------|  
-|4|@shouldalert|@shouldalert|@shouldalert|否。 默认值和最大值相同。|  
-|4|@shouldalert|4|4|是。 您可以将并发作业数目增加到 2、3 或 4。|  
+|4|1|1|1|否。 默认值和最大值相同。|  
+|4|1|4|4|是。 您可以将并发作业数目增加到 2、3 或 4。|  
 |8|2|4|4|是。 您可以将并发作业数目增加到 3 或 4。|  
 |16|4|4|4|否。 默认值和最大值相同。|  
 |32|使用计算默认值的公式，默认值将是 8。 因为该默认值高于允许的最大值，所以，计算出的默认值在此情况下不使用。|4|4|否。 虽然 RAM 较大可能指示默认 8 个并发作业，但具有 4 个处理器的计算机最多仅支持 4 个并发作业。|  

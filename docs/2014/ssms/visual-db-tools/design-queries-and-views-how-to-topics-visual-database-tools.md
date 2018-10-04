@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - • vs.solutionexplorer.file.query
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Query Designer [SQL Server], about Query Designer
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 200903f4-1208-4563-9dca-26aabaacfa20
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e16c1aa3d906d530b04a0db474c727f8aa2cebcd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1652e8a15b973e46a6692fcc2f79bc56cc2fdff8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108357"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>设计查询和视图操作指南主题 (Visual Database Tools)
   查询和视图设计器可以帮助您创建和维护应用程序的数据检索和数据操作部分。  

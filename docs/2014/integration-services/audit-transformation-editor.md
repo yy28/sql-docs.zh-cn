@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-caps.latest.revision: 12
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0ec690b0c1b90ffc01c5bf275769658c72ffc99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a230d6118d68c588c7671d3b9f410ecd9b5071da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135257"
 ---
 # <a name="audit-transformation-editor"></a>审核转换编辑器
   通过进行审核转换，包中的数据流可以包含有关运行包的环境的数据。 例如，包、计算机和操作员的名称可添加到数据流中。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中包含了提供这些信息的系统变量。  
   
  若要了解有关审核转换的详细信息，请参阅 [Audit Transformation](data-flow/transformations/audit-transformation.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输出列的名称**  
  为包含审核信息的新输出列提供名称。  
   

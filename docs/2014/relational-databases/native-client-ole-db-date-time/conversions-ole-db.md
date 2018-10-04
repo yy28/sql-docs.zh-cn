@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB]
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709fb4abec2e8de8aa845aaddb1418f5c9d957e3
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 16ea4eb3954af5f1095331d05912c1faa0ff9525
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144897"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>绑定和转换 (OLE DB)
   本节介绍如何在 `datetime` 值和 `datetimeoffset` 值之间进行转换。 本节中描述的这些转换或者已由 OLE DB 提供，或者是 OLE DB 的一致扩展。  
@@ -35,7 +32,7 @@ ms.locfileid: "37407987"
   
 -   `time` 字符串的格式是：  
   
-     *hh*:*mm*:*ss*[。*9999999*]  
+     hh:mm:ss[.9999999]  
   
 -   `date` 字符串的格式是：  
   
@@ -72,6 +69,6 @@ ms.locfileid: "37407987"
  说明在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]（或更高版本）与使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 编写的客户端应用程序之间执行的日期/时间转换。  
   
 ## <a name="see-also"></a>请参阅  
- [日期和时间改进&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [日期和时间改进 (OLE DB)](date-and-time-improvements-ole-db.md)  
   
   

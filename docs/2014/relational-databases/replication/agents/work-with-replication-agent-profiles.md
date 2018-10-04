@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], agents and profiles
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], profiles
 - profiles [SQL Server], replication agents
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ccbb2f6a8912a68573b9e3d67d677e7a92c7e1f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c68295673fb34c0257a9772540282b8e814df03b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169782"
 ---
 # <a name="work-with-replication-agent-profiles"></a>使用复制代理配置文件
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或复制管理对象 (RMO) 在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中处理复制代理配置文件。 每个复制代理的行为都受一组参数控制，这些参数是通过代理配置文件设置的。 每个代理都有一个默认配置文件，有些代理还有一些其他的预定义配置文件；每个代理每次只能使用一个配置文件。  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 986e737dd3cccdfe67ef745f2cbcb3789ca3aa12
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 10d432ca5ba341bda0d3aacdb9ef9a9a90f4820c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172307"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>协调多个用户所做的更改 (Visual Database Tools)
   在多用户环境中，多个用户可以同时对同一个对象进行更改。 当您在表或数据库关系图设计器中处理对象的结构时，可能会出现这种情况；对于查询和视图设计器的“结果”窗格内所返回结果中的值，也会出现这种情况。 这可能导致您需要解决的冲突。  

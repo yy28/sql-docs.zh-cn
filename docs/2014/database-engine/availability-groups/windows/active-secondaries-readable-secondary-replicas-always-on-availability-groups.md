@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection access to availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7c483e09f0136ec85ef9a5355a31b0fab733d1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f34499100e8331f968d6f9297280451885290
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176544"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169607"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 活动辅助功能包括支持对一个或多个次要副本的只读访问（可读次要副本）。 可读辅助副本允许对其所有辅助数据库的只读访问。 但是，可读辅助数据库并非设置为只读。 它们是动态的。 当对相应主数据库的更改应用到某一给定的辅助数据库时，该辅助数据库将更改。 对于典型的辅助副本，包括持久内存优化表，辅助数据库中的数据接近实时。 此外，全文检索与辅助数据库同步。 在许多情况下，主数据库和相应的辅助数据库之间的数据滞后时间只有几秒钟。  
@@ -274,10 +271,10 @@ GO
   
     |可读辅助副本？|启用了快照隔离或 RCSI 级别隔离？|主数据库|辅助数据库|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |“否”|“否”|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
-    |否|是|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
-    |是|“否”|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
-    |是|是|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |否|否|无行版本或 14 个字节的系统开销|无行版本或 14 个字节的系统开销|  
+    |否|用户帐户控制|行版本和 14 个字节的系统开销|无行版本但有 14 个字节的系统开销|  
+    |用户帐户控制|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
+    |用户帐户控制|用户帐户控制|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
 ##  <a name="bkmk_RelatedTasks"></a>相关任务  
   

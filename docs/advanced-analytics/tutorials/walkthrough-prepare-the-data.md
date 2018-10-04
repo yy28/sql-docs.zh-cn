@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: cc47b7a8ba7090064983063ab579bd8ac8a1ccbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142087"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>使用 PowerShell （演练） 对数据进行准备
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -265,9 +265,9 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 该数据是纽约市出租车数据集的一个代表样本，其包含 2013 年逾 1.73 亿次单个行程的记录，包括每次行程支付的车费和小费。 为更轻松地使用数据，Microsoft 数据科学团队进行了缩小取样，仅获取 1% 的数据。  此数据已以 CSV 格式共享在 Azure 中的公共 Blob 存储容器中。 源数据是未压缩的文件，低于 350 MB。
 
-+ 公共数据集: [NYC 出租车和礼车委员会] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 公共数据集： [NYC 出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [在 NYC 出租车数据集构建 Azure 机器学习模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [在 NYC 出租车数据集构建 Azure 机器学习模型](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/)。
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 和 R 脚本文件
 

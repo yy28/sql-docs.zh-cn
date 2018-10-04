@@ -4,32 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0cb0e08f48dbb873d3dec7d4d688182ebe3415fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16c0f4451b66b0aa0c004476a4dc332acf973a1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249897"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116002"
 ---
 # <a name="developer39s-guide-reporting-services"></a>开发人员&#39;s 指南 (Reporting Services)
-  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了多个编程接口，你可以在自己的应用程序中利用这些接口。 您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的现有特性和功能将自定义报表和管理工具置入网站和 Windows 应用程序，也可以扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台。  
   
  扩展 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 平台包括创建可用于数据访问、报表传递等等的新组件和资源。 可以向在其组织中使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的公司销售这些组件和资源。  
   

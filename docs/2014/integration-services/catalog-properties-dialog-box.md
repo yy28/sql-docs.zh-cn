@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 717b3d818ddd01868506a3787a698ea8f2f45433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ca73310cbbb45097eeb5a130364ee1f2580e8059
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156937"
 ---
 # <a name="catalog-properties-dialog-box"></a>“目录属性”对话框
   使用“目录属性”对话框可以配置 SSISDB 目录。 目录属性定义如何对敏感数据进行加密、如何保留操作和项目版本控制数据以及验证操作何时超时。SSISDB 目录是用于 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目、包、参数和环境的中心存储区和管理点。  
@@ -47,7 +44,7 @@ ms.locfileid: "37312057"
   
 ##  <a name="options"></a> 配置选项  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  下表描述该对话框中的某些属性以及 catalog.catalog_property 视图中的相应属性。  
   
 |属性名称（“目录属性”对话框）|属性名称（catalog.catalog_property 视图）|Description|  

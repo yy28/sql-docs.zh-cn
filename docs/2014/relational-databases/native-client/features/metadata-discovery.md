@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142227"
 ---
 # <a name="metadata-discovery"></a>元数据发现
   中的元数据发现改进[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]允许[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]本机客户端应用程序以确保从执行的查询返回的列或参数元数据是否与相同或兼容的元数据设置你前面指定的格式执行查询。 如果执行查询后返回的元数据与执行该查询之前指定的元数据格式不兼容，您将会收到错误。  
@@ -27,7 +24,7 @@ ms.locfileid: "40392248"
   
  如果您开发应用程序中使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的本机客户端[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]但连接到的服务器版本早于[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，元数据发现功能将对应于服务器的版本。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中增强了以下 bcp 函数，以提供改进的元数据发现：  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articles.f1
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e1bc1d8da2b6090861d9fdf1bf82bf7df3a7b96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23b060d50a3d19b017f9207d1747b7caf5d1cf62
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162687"
 ---
 # <a name="articles"></a>项目
   在 **“项目”** 页中，可以指定要作为项目包含在发布中的数据库对象。 如果发布的数据库对象依赖于一个或多个其他数据库对象，则必须发布所有被引用对象。 例如，如果要发布的视图依赖于一个表，则也必须发布该表。  
@@ -44,7 +41,7 @@ ms.locfileid: "37156188"
 ## <a name="column-filters"></a>列筛选器  
  通过展开 **“要发布的对象”** 窗格中的表，然后只选择需要的列，可以对此页上的列进行筛选（可以在此向导的 **“筛选表行”** 页上筛选行）。 由于包括安全（防止复制敏感数据）和性能（例如，避免复制较大的二进制大型对象 (BLOB) 列）在内的很多原因，筛选列非常有用。 有关列筛选（包括无法筛选的列类型的列表）的详细信息，请参阅[筛选已发布数据](publish/filter-published-data.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  使用 **“要发布的对象”** 窗格，可以：  
   
 -   查看所有可用于复制的对象。  

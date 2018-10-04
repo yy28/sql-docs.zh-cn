@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7148ac75da5ec7184c771c2411750749c15fa192
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113658"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>“显示表”对话框（Analysis Services - 多维数据）
   使用 **中的** “显示表” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，可以包括与维度、多维数据集或挖掘结构相关联的数据源视图中的表。 通过执行以下操作可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中显示此对话框：  
@@ -38,7 +35,7 @@ ms.locfileid: "37284073"
   
 -   在**数据挖掘模型设计器**的“挖掘结构”页上，右键单击“数据源视图”窗格的背景，然后选择“显示表”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **选择要显示的其他表**  
  选择要添加到“数据源视图”窗格中的表。 使用此选项可显示一个包含可用对象及其类型的网格，这些对象及其类型与“筛选器”中设置的筛选器匹配（如果未设置“筛选器”，则为所有表），但尚未显示在当前关系图中。  
   

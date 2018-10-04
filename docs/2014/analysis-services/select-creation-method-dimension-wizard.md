@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1450762e09481d4b8bfa5883c5c752d01216f29e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132317"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>选择创建方法（维度向导）
   可以使用 **“选择创建方法”** 页选择如何创建维度。  
@@ -30,7 +27,7 @@ ms.locfileid: "37267153"
   
 -   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的**解决方案资源管理器**中，右键单击 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 项目的“维度”文件夹，然后单击“新建维度”。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用现有表**  
  从数据源中的一个或多个表创建维度。 可用于该维度的属性取决于表中数据的结构。  
   

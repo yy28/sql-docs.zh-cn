@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, transactions
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7b63f0690a0126a091879ee934f377a7c62e5036
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395456"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176947"
 ---
 # <a name="transactions-in-odbc"></a>ODBC 中的事务
   ODBC 中的事务按连接级别进行管理。 在应用程序完成某一事务时，它提交或回滚通过该连接上的所有语句句柄完成的所有工作。 若要提交或回滚事务，应用程序应调用[SQLEndTran](../../native-client-odbc-api/sqlendtran.md)而非提交 COMMIT 或 ROLLBACK 语句。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180990"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163677"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>创建和自定义 PowerPivot 库
   PowerPivot 库是一种特殊类型的 SharePoint 文档库，它为包含 PowerPivot 数据的已发布 Excel 工作簿和 Reporting Services 报表提供丰富的预览和文档管理功能。  
@@ -63,7 +60,7 @@ ms.locfileid: "37180990"
   
  预览图像基于 Excel Services 呈现工作簿的方式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中的表示形式应该与在浏览器中查看 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿时看到的内容完全一致。 然而，预览的图面区域有限， 所以可能要对工作簿或报表各部分进行剪裁以适应可用空间。 您可能需要打开工作簿或报表才能查看完整的文档。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中完全支持从外部数据源刷新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿数据，但它要求其他配置。 场或服务管理员必须将 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库添加为一个 Excel Services 可信位置。 有关详细信息，请参阅[在管理中心中创建受信任的位置为 PowerPivot 站点](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ##  <a name="createlib"></a> 创建 PowerPivot 库  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 时系统会为您创建 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 库。 如果已将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 添加到现有场或者您还需要其他库，则可为应用程序或网站新建一个库。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - merge replication monitoring [SQL Server replication]
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0b69773070201021390926e6da1a7fdd20d8fce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137278"
 ---
 # <a name="programmatically-monitor-replication"></a>以编程方式监视复制
   复制监视器是一种可用于监视复制拓扑的图形化工具。 可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 复制存储过程或复制管理对象 (RMO) 以编程方式访问相同的监视数据。 您可以利用这些对象对以下任务进行编程：  
@@ -272,7 +269,7 @@ ms.locfileid: "37167008"
   
         |ReplTest1|Description|  
         |-----------|-----------------|  
-        |@shouldalert|`expiration` -监视对事务发布的订阅是否即将过期。|  
+        |1|`expiration` -监视对事务发布的订阅是否即将过期。|  
         |2|`latency` -监视对事务发布的订阅的性能。|  
         |4|`mergeexpiration` -合并发布的订阅是否即将过期的监视器。|  
         |5|`mergeslowrunduration` -监视通过低带宽 （拨号） 连接的合并同步的持续时间。|  

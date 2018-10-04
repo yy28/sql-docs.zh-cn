@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f29f193daee1d3c2124e288d4c52356df7300a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7213b82f77bf283cf3debf268ed089058b05c7e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140118"
 ---
 # <a name="create-a-linked-domain"></a>创建链接域
   本主题描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建链接域。 链接域可以从先前存在的另一个域创建，并且继承它所链接到的域的所有值、规则和属性，但名称和说明除外。 您可以将一组链接域作为一个链接域进行管理。 通过将一个域链接到另一个域，您可以创建从另一个域继承其内容的域。  

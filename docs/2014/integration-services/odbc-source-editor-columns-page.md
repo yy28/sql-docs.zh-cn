@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b16be16730643cc063b39594c8e01f1321b6a983
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51897dbc1b7cde8707e28678d8de7f3cd7913e81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144655"
 ---
 # <a name="odbc-source-editor-columns-page"></a>ODBC 源编辑器（“列”页）
   可以使用“ODBC 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -37,7 +34,7 @@ ms.locfileid: "37209427"
   
 3.  在 **“ODBC 源编辑器”** 中，单击 **“列”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="available-external-columns"></a>可用外部列  
  数据源中的可用外部列的列表。 无法使用此表添加或删除列。 从源中选择要使用的列。 所选列将按照选择它们时的顺序添加到 **“外部列”** 列表中。  

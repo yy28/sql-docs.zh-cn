@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4d3afbb967238cfef049b491f6ab871f830708b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102457"
 ---
 # <a name="use-a-recordset-destination"></a>使用记录集目标
   记录集目标不会将数据保存到外部数据源中， 而是将数据保存在內存中的一个记录集中，该记录集存储在数据类型为 `Object` 的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包变量中。 在记录集目标保存数据之后，通常使用具有 Foreach ADO 枚举器的 Foreach 循环容器来每次处理记录集的一行。 Foreach ADO 枚举器将当前行中每列的值保存到单独的包变量中。 然后，您在 Foreach 循环容器中配置的任务会从变量中读取这些值，并对它们执行某些操作。  

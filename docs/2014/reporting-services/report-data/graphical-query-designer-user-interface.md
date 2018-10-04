@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -19,21 +17,20 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d554173e6341f4f733cdc3e48af587bb4e544be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27b487c787a82f67fc861153939eb5838373fca1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107997"
 ---
 # <a name="graphical-query-designer-user-interface"></a>图形查询设计器用户界面
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 同时提供了图形查询设计器和基于文本的查询设计器，用于创建在报表设计器中为报表数据集检索关系数据库中的数据的查询。 使用图形查询设计器能够以交互方式生成查询并查看数据源类型 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC 的结果。 使用基于文本的查询设计器可以指定多个 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句、复杂的查询或命令语句以及基于表达式的查询。 有关详细信息，请参阅 [基于文本的查询设计器用户界面](../text-based-query-designer-user-interface.md)。 有关使用特定的数据源类型的详细信息，请参阅[向报表添加数据&#40;报表生成器和 SSRS&#41;](report-datasets-ssrs.md)。  
   
- 实例时都提供 SQL Server 登录名。  
+ .  
   
 ## <a name="graphical-query-designer"></a>图形查询设计器  
  此图形查询设计器支持三种查询命令类型： **Text**、 **StoredProcedure**或 **TableDirect**。 为数据集创建查询之前，必须在 [“数据集属性”](../dataset-properties-dialog-box-query.md) 对话框的“查询”页中选择一个命令类型选项。  
@@ -58,7 +55,7 @@ ms.locfileid: "37327167"
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |关系图|显示查询中表的图形表示形式。 使用此窗格可以选择字段并定义表之间的关系。|  
 |网格|显示查询返回的字段列表。 使用此窗格可以定义别名、排序顺序、筛选器、组和参数。|  
@@ -109,7 +106,7 @@ EXEC uspGetEmployeeManagers '1';
   
  下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |表的下拉列表|列出来自数据源的所有可用表。 从列表中选择一项即可使其处于活动状态。|  
 |结果|显示选定表的所有列。 若要运行表查询，请单击工具栏中的 **“运行”** 按钮。|  
@@ -117,7 +114,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-the-command-type-tabledirect"></a>命令类型 TableDirect 的工具栏按钮  
  图形查询设计器工具栏提供了数据源中的表的下拉列表。 下表列出了每个按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  
@@ -127,7 +124,7 @@ EXEC uspGetEmployeeManagers '1';
 ### <a name="command-type-storedprocedure"></a>命令类型 StoredProcedure  
  在 **StoredProcedure** 类型中，图形查询设计器将显示数据源中可用存储过程的下拉列表和一个“结果”窗格。 下表介绍了每个窗格的功能。  
   
-|窗格|函数|  
+|Pane|函数|  
 |----------|--------------|  
 |存储过程下拉列表|列出来自数据源的所有可用存储过程。 从列表中选择一项即可使其处于活动状态。|  
 |结果|显示运行存储过程的结果。 若要运行选定的存储过程，请单击工具栏中的 **“运行”** 按钮。|  
@@ -135,7 +132,7 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>命令类型 StoredProcedure 的工具栏按钮  
  图形查询设计器工具栏提供了数据源中的存储过程的下拉列表。 下表列出了每个按钮及其功能。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|在基于文本的查询设计器和图形查询设计器之间切换。|  
 |**导入**|从文件或报表中导入现有的查询。 仅支持 .sql 和 .rdl 文件类型。 有关详细信息，请参阅 [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。|  

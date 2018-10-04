@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d9f51c37-b071-45d0-baec-f82fa6db366f
-caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05f67d9ab20df69a7d2232cbbad49f7a16b9db5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13d4141b25a194a3d2536e2ebf3246eefe659f3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168049"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112758"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>SharePoint 与 2008 和 2008 R2 报表服务器集成
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本引入了一种体系结构，在此体系结构中，SharePoint 模式现在基于 SharePoint 共享服务。 在 SharePoint 管理中心中上完成新功能的管理**管理服务**并**管理器服务应用程序**页。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以前为 SharePoint 集成的体系结构仍支持[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]用于 SharePoint 2010 产品，与以前版本的报表服务器集成 SharePoint 2010 外接程序。  

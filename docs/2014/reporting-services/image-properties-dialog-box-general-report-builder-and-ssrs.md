@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108427"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>“图像属性”对话框 -&gt;“常规”（报表生成器和 SSRS）
   在 **“图像属性”** 对话框中选择 **“常规”** 可添加图片、更改图像的默认名称，还可以添加工具提示文本。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  为相应项键入一个名称。 该名称在报表中必须是唯一的。 默认情况下会分配一个常规名称，例如 Image1 或 Image2。  
   
@@ -48,7 +45,7 @@ ms.locfileid: "37292207"
   
  如果要嵌入图像，请从下拉列表中选择要添加到报表中的图像。 单击“导入”按钮可将图像添加到下拉列表中。  
   
- 如果您选择 **“外部”** 选项，请键入相应图像的 URL。 对于发布到配置为本机模式的报表服务器的报表，请使用完整路径或相对路径。 例如，http://\<服务器名 > / images/image1.jpg。 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用完全限定的 URL。 例如，http://\<*SharePointservername*>/\<*站点*> / Documents/images/image1.jpg。  
+ 如果您选择 **“外部”** 选项，请键入相应图像的 URL。 对于发布到配置为本机模式的报表服务器的报表，请使用完整路径或相对路径。 例如， http://\<服务器名 > / images/image1.jpg。 对于发布到配置为 SharePoint 集成模式的报表服务器的报表，请使用完全限定的 URL。 例如， http://\<*SharePointservername*>/\<*站点*> / Documents/images/image1.jpg。  
   
  **导入**  
  单击此选项可以向“使用此图像”下拉列表中添加图像。  

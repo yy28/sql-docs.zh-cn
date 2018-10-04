@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c242dc17e07f90c0bedae4b67f0b4891ff4a5d50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174737"
 ---
 # <a name="defining-a-fact-relationship"></a>定义事实关系
   用户有时需要按事实数据表中的数据项定义度量值的维度，或者查询事实数据表中其他特定的相关信息，例如与特定销售情况有关的发票号或采购订单号。 当根据此类事实数据表项定义维度时，则将该维度称为“事实维度”。 事实维度也称为退化维度。 若要将相关的事实数据表行（例如所有与特定发票号有关的行）组合在一起，事实维度将非常有用。 尽管可以将此信息置于关系数据库中一个单独的维度表内，但为此信息创建单独的维度表没有任何益处，因为维度表与事实数据表按照同一速度增长，只会创建重复的数据并增加不必要的复杂性。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083919"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120574"
 ---
 # <a name="ole-db-source"></a>OLE DB 源
   OLE DB 源通过使用数据库表、视图或 SQL 命令，从各种兼容 OLE DB 的关系数据库中提取数据。 例如，OLE DB 源可以从 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表中提取数据。  
@@ -81,7 +78,7 @@ ms.locfileid: "39083919"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一要求是参数名称匹配的存储过程中的变量名称包括\@登录。  
+ 存储过程希望变量 `@StartProductID` 和 `@CheckDate`提供参数值。 参数出现在 **“映射”** 列表中的顺序是不相关的。 唯一要求是，参数名必须与存储过程中的变量名一致，包括 \@ 符号在内。  
   
 ### <a name="mapping-parameters-to-variables"></a>将参数映射到变量  
  在运行时参数将映射到提供参数值的变量。 尽管也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系统变量，但变量通常是用户定义变量。 如果使用用户定义变量，请确保将数据类型设置为与映射参数所引用的列的数据类型相兼容的类型。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)。  

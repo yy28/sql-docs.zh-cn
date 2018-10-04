@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fc9021085fd238ac2c86fbe73d7db372540cabd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106429"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 源编辑器（“列”页）
   可以使用“ADO NET 源编辑器”对话框的“列”页，将输出列映射到每个外部（源）列。  
@@ -36,7 +33,7 @@ ms.locfileid: "37287683"
   
 3.  在 **“ADO NET 源编辑器”** 中，单击 **“列”**。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用外部列的列表。 无法使用此表添加或删除列。  
   

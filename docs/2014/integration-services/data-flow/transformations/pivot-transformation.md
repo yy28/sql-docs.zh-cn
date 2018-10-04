@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1845f31deda21a34b0ef3e843ef33016981c074b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157587"
 ---
 # <a name="pivot-transformation"></a>透视转换
   通过透视列值的输入数据，透视转换将规范的数据集转变成规范程度稍低、但更为简洁的版本。 例如，在列有客户名称、产品和购买数量的规范的 **Orders** 数据集中，任何购买多种产品的客户都有多行，每一行显示一种产品的详细订购信息。 此时，如果对产品列透视数据集，透视转换可以输出每个客户只有一行的数据集。 这一行列出该客户购买的所有产品，产品名称显示为列名，而数量则显示为产品列的值。 并非每个客户都购买所有产品，所以很多列可能包含空值。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.shrinkdatabase.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - database shrinking [SQL Server]
 - reducing database size
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b77c674ed92b315452a0f7343fccdf09a49bf7b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 414ffe69977f0e50779c26fc62dcddcee8e06bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123477"
 ---
 # <a name="shrink-a-database"></a>收缩数据库
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中使用对象收缩数据库。  
@@ -48,7 +45,7 @@ ms.locfileid: "37258893"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   若要查看数据库中当前的可用（未分配）空间量。 有关详细信息，请参阅 [Display Data and Log Space Information for a Database](display-data-and-log-space-information-for-a-database.md)  
+-   若要查看数据库中当前的可用（未分配）空间量。 有关详细信息，请参阅 [显示数据库的数据和日志空间信息](display-data-and-log-space-information-for-a-database.md)  
   
 -   当您计划收缩数据库时，请考虑以下信息：  
   

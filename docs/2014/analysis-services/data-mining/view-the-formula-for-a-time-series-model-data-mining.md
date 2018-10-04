@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], how-to topics
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - Time Series Viewer [Analysis Services]
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbdd4788ed35f38790c0e038acb15d0342c0bcc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163997"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>查看时序模型的公式（数据挖掘）
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]时序查看器 inData 挖掘设计器提供的最简单的方式查看时序模型中使用的回归公式的详细信息。  

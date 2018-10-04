@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 40ef90cde297a3d7cb0ba2e51b078d22a6d05163
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 121f1265e567636fb979a84c609861bc0e558dcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119767"
 ---
 # <a name="report-model-connection-ssrs"></a>报表模型连接 (SSRS)
   若要包含来自报表模型的数据，必须拥有一个基于作为数据源的报表模型的数据集。 与其他报表数据源不同，报表模型没有数据扩展插件。 在报表生成器中，您可以浏览到该模型或者从报表服务器直接选择该模型。 在报表设计器中，您指定指向报表模型的 URL。  

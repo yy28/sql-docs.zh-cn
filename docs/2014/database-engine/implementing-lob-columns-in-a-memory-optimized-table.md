@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c99792fbb660cb6e1bdff70fcfd60cfba2119dfb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 511e74f40931a22ac56bb27bde0c3fd87eec942b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392704"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166351"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>在内存优化的表中实现 LOB 列
   内存优化的表没有行外或大对象 (LOB) 存储区，且行大小限制为 8060 个字节。 可以通过两种方式存储大的二进制或字符串值：  

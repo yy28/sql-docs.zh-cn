@@ -4,33 +4,30 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2199a6f6524e403139dba85c63519773cdceb1e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324637"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125027"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 目标编辑器（“错误输出”页）
   可以使用 **“Excel 目标编辑器”** 对话框的 **“高级”** 页指定错误处理选项。  
   
  若要了解有关 Excel 目标的详细信息，请参阅 [Excel Destination](data-flow/excel-destination.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **输入或输出**  
  查看数据源的名称。  
   

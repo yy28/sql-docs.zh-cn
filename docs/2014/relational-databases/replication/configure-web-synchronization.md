@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - Web synchronization, security best practices
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
-caps.latest.revision: 73
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f1e6f26bd99827a79140cfb0a14ed9049b82ab7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49f3c4a66c38b339c87b79a30d42bf643f03d730
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184154"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112739"
 ---
 # <a name="configure-web-synchronization"></a>Configure Web Synchronization
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 合并复制的 Web 同步选项支持使用 HTTPS 协议跨 Internet 复制数据。 若要使用 Web 同步，首先需要执行以下配置操作：  

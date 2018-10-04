@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5e973ec6a3c50c43f6ee6bdee4ecfd70f2e2c9b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177614"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165957"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>“我的订阅”页（报表管理器）
   使用“我的订阅”页可以在同一位置查看您的所有订阅。 使用此页可以访问、修改或删除您拥有的任何订阅。 您只拥有您所创建的订阅。 您不能访问其他用户的订阅，也不能访问您可使用但不能拥有的订阅（例如，如果您的名称已添加到由另一个用户定义的某个现有订阅中）。 您不能从本页创建订阅。 有关创建订阅的详细信息，请参阅[新的订阅或编辑订阅页&#40;报表管理器&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)。  
@@ -41,7 +38,7 @@ ms.locfileid: "37177614"
     > [!NOTE]  
     >  “我的订阅”始终可用，即使不具备创建订阅的权限也可使用。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **删除**  
  选中要删除的每个订阅旁边的复选框，再单击 **“删除”**。  
   

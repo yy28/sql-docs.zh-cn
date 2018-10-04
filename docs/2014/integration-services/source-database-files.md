@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
-caps.latest.revision: 16
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9bad26723ccb553144359e77154804cf2ab11982
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 277575fdd10231300bcfa6726f35aa648f75d7e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172797"
 ---
 # <a name="source-database-files"></a>源数据库文件
   可以使用 **“源数据库文件”** 对话框查看源服务器上的数据库文件的名称和位置，或者为传输数据库任务指定网络文件共享位置。 有关此任务的详细信息，请参阅 [传输数据库任务](control-flow/transfer-database-task.md)。  
   
  若要使用源服务器上数据库文件的名称和位置填充此对话框，请首先在 **“传输数据库任务编辑器”** 对话框的 **“数据库”** 页中指定 **SourceConnection** 和 **SourceDatabaseName** 。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **源文件**  
  源服务器上要传输的数据库文件的名称。 **“源文件”** 是只读的。  
   

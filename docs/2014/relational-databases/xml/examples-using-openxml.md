@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b568b8098445a202b638151df729ac17638de09a
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f08cf0902bb58164957fde69ad49aec8f1d4155c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889873"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106887"
 ---
 # <a name="examples-using-openxml"></a>示例：使用 OPENXML
   本主题中的示例说明如何使用 OPENXML 创建 XML 文档的行集视图。 有关 OPENXML 语法的信息，请参阅 [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)。 这些示例说明了 OPENXML 的各个方面，但不包括在 OPENXML 中指定元属性。 有关如何在 OPENXML 中指定元属性的详细信息，请参阅 [在 OPENXML 中指定元属性](specify-metaproperties-in-openxml.md)。  

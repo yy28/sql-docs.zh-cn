@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 263d51971081fec9570c1e6787169c1b9ec50b42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155358"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114227"
 ---
 # <a name="define-linked-dimensions"></a>定义链接维度
   链接维度基于在具有相同版本和兼容性级别的另一个 Analysis Services 数据库中创建和存储的维度。 通过使用链接维度，您可以创建、存储以及维护某个数据库上的维度，同时可让多个数据库的用户使用该维度。 对于用户，链接维度在外观上就像其他任意维度一样。  

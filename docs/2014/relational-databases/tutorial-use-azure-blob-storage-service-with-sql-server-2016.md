@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f805d7a9b0997d9f5a7cecbf61b5120bdf09f3cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b30ee8f664f88f0fcd59a3801c1aa612926d1dad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095477"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>教程：Windows Azure 存储服务中的 SQL Server 数据文件
   欢迎使用“Windows Azure 存储服务中的 SQL Server 数据文件”教程。 本教程帮助您学习如何将 SQL Server 数据文件直接存储在 Windows Azure Blob 存储服务中。  

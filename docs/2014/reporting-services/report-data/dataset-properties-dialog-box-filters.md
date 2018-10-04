@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10170"
 - sql12.rtp.rptdesigner.datasetproperties.filters.f1
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6bff1d3c5d9a687fd01ccd179c86dddde9a8e1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef8e9b56158cb1edfe088b9dc1894e3439d0b9ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280233"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095037"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>“数据集属性”对话框 -&gt;“筛选器”
   在 **“数据集属性”** 对话框中选择 **“筛选器”** 可创建数据集的筛选器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **“添加”**  
  向列表中添加新的筛选子句。  
   

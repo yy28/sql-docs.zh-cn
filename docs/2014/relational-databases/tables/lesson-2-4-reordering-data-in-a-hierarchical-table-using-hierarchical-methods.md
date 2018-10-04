@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c53303d238db802c6da2d1ec5e443fcff503bec8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160137"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>使用分层方法对层次结构表中的数据重新排序
   重新组织层次结构是一项常见的维护任务。 在此任务中，使用包含 [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) 方法的 UPDATE 语句首先将一行移到层次结构的新位置。 然后，我们会将整个子树移到一个新位置。  

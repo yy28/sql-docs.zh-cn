@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], annotated XSD schemas in queries
 - annotated XSD schemas, samples
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a78bacbc6c407946d20fc8e21a3ae91a30b04ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 379b91bfe63cad3078367ddb38872e00eff7c117
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146887"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>用于 XPath 示例的带批注的 XSD 架构示例 (SQLXML 4.0)
   本节中的示例 XPath 查询引用某一映射架构。 该映射架构是一个带批注的 XML 架构 (XSD) 文件。 有关映射架构的详细信息，请参阅[带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  

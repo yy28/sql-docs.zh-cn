@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs names
 ms.assetid: 50633373-83f6-4ed9-99b9-71f92479a14f
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f4312fe66072e9d06e664fee422b994dd9afb5b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ca564fd81a1363f9866a0a8eaf067fc67a1f1f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153738"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128340"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>全文目录名称的长度不能超过 120 个字符
   全文目录名称的最大长度均不能超过 120 个字符，与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以前版本中的 128 个字符限制相比有所减少。  

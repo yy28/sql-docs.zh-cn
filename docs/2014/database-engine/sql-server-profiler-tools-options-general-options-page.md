@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
-caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113057"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具选项 （常规选项页）
   使用 **“常规选项”** 对话框可以查看或指定以下选项：  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 ### <a name="display-options"></a>显示选项  
  **字体名称**  

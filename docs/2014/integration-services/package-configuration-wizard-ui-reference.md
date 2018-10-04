@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-caps.latest.revision: 25
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37322427"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160377"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>包配置向导用户界面参考
   可以使用 **“包配置向导”** 创建在运行时更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包及其对象的属性的配置。 当您在 **“包配置组织程序”** 对话框中添加新配置或者修改现有配置时，将运行该向导。 若要打开 **“包配置组织程序”** 对话框，请在 **上的** SSIS **菜单中选择** “包配置” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 有关详细信息，请参阅[创建包配置](../../2014/integration-services/create-package-configurations.md)。  
@@ -37,7 +34,7 @@ ms.locfileid: "37322427"
 ## <a name="welcome-to-the-package-configuration-wizard-page"></a>“欢迎使用包配置向导”页  
  使用 **“SSIS 配置向导”** 可以创建在运行时更新包及其对象的属性的配置。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **不再显示此页**  
  下次打开向导时跳过欢迎页。  
   
@@ -136,7 +133,7 @@ ms.locfileid: "37322427"
 ## <a name="select-objects-to-export-page"></a>“选择要导出的对象”页  
  使用 **“选择目标属性”** 或“选择要导出的属性”页可以指定配置包含的对象属性。 只有在选择 XML 配置类型时，才能选择多个属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **对象**  
  展开包层次结构并选择要导出的属性。  
   
@@ -149,7 +146,7 @@ ms.locfileid: "37322427"
 ## <a name="completing-the-wizard-page"></a>“完成向导”页  
  使用 **“完成向导”** 页可以提供配置的名称以及查看此向导用于创建配置的设置。 在向导完成之后，将显示 **“包配置组织程序”** ，其中列出了包的所有配置。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **配置名称**  
  键入配置的名称。  
   

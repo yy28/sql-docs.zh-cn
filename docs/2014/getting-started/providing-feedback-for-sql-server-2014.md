@@ -4,8 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sending feedback to Microsoft
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-caps.latest.revision: 26
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e878c3d09e2dde7d32e9fa5b37fd02081a6979c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32068cf03a971cd6b8010618d7b74d1a613ec856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109876"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>提供有关 SQL Server 2014 的反馈
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 非常感谢您花费宝贵时间帮助我们改进 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 产品和文档。 您可以提供有关产品功能和用户界面的建议和错误报告，提交文档反馈，以及选择向 [!INCLUDE[msCoName](../includes/msconame-md.md)] 自动发送错误报告和使用情况数据以供分析。 此处分别介绍了以上三个反馈选项。  

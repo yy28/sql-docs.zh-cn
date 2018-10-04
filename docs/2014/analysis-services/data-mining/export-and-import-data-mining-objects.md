@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining structures [DMX], exporting
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4145ca6834a27b1159a0d2311f620085491343cf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9621a7ed2f7e1dcc26a46a71d59e4febac974d38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173598"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165647"
 ---
 # <a name="export-and-import-data-mining-objects"></a>导出和导入数据挖掘对象
   除了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中提供的用于备份、还原和迁移解决方案的功能外，SQL Server 数据挖掘还提供了可通过使用数据挖掘扩展插件 (DMX)，在不同的服务器之间快速传输数据挖掘结构和模型的功能。  
@@ -53,7 +50,7 @@ ms.locfileid: "37173598"
   
  您还可以导入挖掘结构或挖掘模型使用`Restore`命令。 您的模型或结构将被还原到与其所导出的数据库同名的数据库中。 有关详细信息，请参阅 [Restore Options](../multidimensional-models/restore-options.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果服务器中已存在同名模型或结构，则不能将模型或结构导入该服务器。 同样，也不能先导出数据挖掘对象，然后在导出文件中修改对象的名称。 因此，如果预计会出现命名冲突，请删除目标服务器上的数据挖掘对象，或在导出定义前重新命名该数据挖掘对象。  
   
 ## <a name="see-also"></a>请参阅  

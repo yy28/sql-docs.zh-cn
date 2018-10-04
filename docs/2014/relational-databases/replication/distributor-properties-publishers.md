@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.distproperties.publishers.f1
 helpviewer_keywords:
 - Distributor Properties dialog box
 ms.assetid: 31c81898-11ca-4d2f-afea-2fbc71e19ce4
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32e2801e45c9d7e227be8fe067062da9eb3f4eea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8f572b45154b76f711ab61fe35be339429ed83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162188"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123699"
 ---
 # <a name="distributor-properties-publishers"></a>分发服务器属性，发布服务器
   可以使用 **“分发服务器属性”** 对话框的 **“发布服务器”** 页，允许发布服务器使用此分发服务器。 还可以设置与这些发布服务器关联的属性。 请注意，允许发布服务器将此服务器用作其远程分发服务器的同时，并不会使该服务器成为发布服务器。 必须连接到发布服务器，对其进行配置以用于发布，并选择此服务器作为分发服务器。 您可以通过新建发布向导配置发布服务器并选择分发服务器。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **发布服务器**  
  选择允许使用此分发服务器的服务器。 单击发布服务器旁边的属性按钮 **(...)** 可以查看和设置其他属性。  
   

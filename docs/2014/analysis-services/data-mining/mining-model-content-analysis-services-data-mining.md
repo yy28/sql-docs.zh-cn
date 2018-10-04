@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - support [data mining]
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120897"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
   使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
@@ -80,8 +77,8 @@ ms.locfileid: "37282423"
   
 |NODE_TYPE ID|节点标签|节点内容|  
 |-------------------|----------------|-------------------|  
-|@shouldalert|“模型”|元数据和根内容节点。 适用于所有模型类型。|  
-|2|trEE|分类树的根节点。 适用于决策树模型。|  
+|1|“模型”|元数据和根内容节点。 适用于所有模型类型。|  
+|2|树|分类树的根节点。 适用于决策树模型。|  
 |3|Interior|树中的内部拆分节点。 适用于决策树模型。|  
 |4|Distribution|树的终端节点。 适用于决策树模型。|  
 |5|分类|算法检测到的分类。 适用于聚类分析模型以及顺序分析和聚类分析模型。|  
@@ -217,7 +214,7 @@ ms.locfileid: "37282423"
   
 |VALUE_TYPE ID|值标签|值类型名称|  
 |--------------------|-----------------|---------------------|  
-|@shouldalert|Missing|指示事例数据不包含此属性的值。 `Missing`状态分开计算具有值的属性。|  
+|1|Missing|指示事例数据不包含此属性的值。 `Missing`状态分开计算具有值的属性。|  
 |2|Existing|指示事例数据包含此属性的值。|  
 |3|连续|指示此属性的值是一个连续数值，因此可以由平均值以及偏差和标准偏差表示。|  
 |4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意** 离散值也可能处于缺失状态；不过，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。|  
@@ -256,7 +253,7 @@ ms.locfileid: "37282423"
   
 |节点/属性和值的级别|边际概率|节点概率|  
 |----------------------------------------|--------------------------|----------------------|  
-|模型根<br /><br /> 所有目标客户|@shouldalert|@shouldalert|  
+|模型根<br /><br /> 所有目标客户|1|1|  
 |按性别平分目标客户|.5|.5|  
 |按性别平分目标客户，然后按三种收入级别平分|.33|.5 * .33 = .165|  
   

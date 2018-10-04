@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cb53c5fc259828cbb095d5076dd121f4552f4706
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e379a376dab86259a4efa66c6cd3bf7ef14f26c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093697"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>在数据流组件中记录和定义日志条目
   自定义数据流组件可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> 接口的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 方法将消息发布到现有日志条目。 还可以使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> 方法或者 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 接口的类似方法向用户显示信息。 但是，此方法会导致引发和处理额外事件的开销，并且迫使用户从冗长的信息性消息中筛选出感兴趣的消息。 可以按如下所述使用自定义日志条目，为组件的用户提供不同标记的自定义日志信息。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, bulk copy
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef27718464b59f29d28c61a1fb9fb97566e32d74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102187"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>执行大容量复制操作 (ODBC)
   ODBC 标准不直接支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制操作。 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本 7.0 或更高版本的实例时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序支持执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大容量复制操作的 DB-Library 函数。 这个特定于驱动程序的扩展为使用大容量复制函数的现有 DB-Library 应用程序提供了容易实现的升级路径。 专用的大容量复制支持包含在以下文件中：  
@@ -49,7 +46,7 @@ ms.locfileid: "37421796"
   
  有关使用最小日志记录的信息，请参阅[Prerequisites for Minimal Logging 中大容量导入](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或更高版本中使用 bcp.exe 时，可能在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前未出现错误的情形下出现错误。 这是因为在更高版本中 bcp.exe 不再执行隐式的数据类型转换。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前，如果目标表有 money 数据类型，则 bcp.exe 会将数字数据转换为 money 数据类型。 但是，在这种情况下，bcp.exe 只是截断额外的字段。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，如果文件和目标表的数据类型不匹配，那么，只要有任何数据必须在截断后才能适合放到目标表中，则 bcp.exe 将引发错误。 若要解决该错误，请修复数据，使其与目标数据类型匹配。 另外，也可以选择使用在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前的版本中的 bcp.exe。  
   
 ## <a name="in-this-section"></a>本节内容  

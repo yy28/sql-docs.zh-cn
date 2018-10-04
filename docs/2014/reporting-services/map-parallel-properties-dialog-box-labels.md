@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 107da5c6037988987beed9794ee1ef172ed17e4c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba603b2b05108f6b7cd0b4cb7b6a4d65904af678
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097287"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>“地图纬线属性”对话框 -&gt;“标签”
   使用**MapParallel 属性**对话框可以更改水平网格在地图视区中的标签选项。 根据视区的指定坐标系统，纬线表示以下值之一：  
@@ -33,7 +30,7 @@ ms.locfileid: "37258113"
   
  单击 **“表达式”** (*fx*) 按钮以编辑设置该选项的值的表达式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **时间间隔**  
  键入以度为单位的整数值，指定纬线之间的间隔。 默认情况下，选择 **“自动”** 。 如果将此选项设置为 **“自动”**，则值将由地图数据集中的数据决定。  
   

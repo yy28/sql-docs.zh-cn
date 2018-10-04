@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 5
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97336e053f4c0a9d2cd36bf381bc16f3fd28d919
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78c4b9e0674150c83d79c31a313fc44233f032f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218657"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132428"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Tablix 数据区域（报表生成器和 SSRS）
   Tablix 数据区域是按单元显示报表数据并将这些单元组织为行和列的通用布局报表项。 报表数据可以是从数据源中检索的详细信息数据，也可以是按照指定的组进行分组的聚合详细信息数据。 每个 Tablix 单元可以包含任何报表项（例如文本框或图像），也可以包含其他数据区域（例如 Tablix 区域、图表或仪表）。 若要向某一单元添加多个报表项，请首先添加一个充当容器的矩形， 然后将报表项添加到该矩形中。  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: fb1caec20ab7af7cd6e263e6718820658940d00f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: f75cae5a160eb186721872fbfc4c8d5c6b3c28ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355039"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095987"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>创建主数据管理器 Web 服务代理类
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服务可让您通过任何能访问 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 网站的计算机以编程方式使用 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 的功能。 在开始编写访问 Web 服务的代码之前，必须先生成代理类。 您用于执行 Web 服务操作的主代理类是 <xref:Microsoft.MasterDataServices.ServiceClient> 类，它可实现 <xref:Microsoft.MasterDataServices.IService> 接口。  
@@ -34,7 +32,7 @@ ms.locfileid: "37355039"
   
 3.  保存对文件的更改。  
   
-4.  通过浏览服务 URL 来测试元数据发布，例如：http://yourserver/MDS/service/service.svc。 如果启用元数据发布，则会显示一个以   
+4.  通过浏览服务 URL 来测试元数据发布，例如： http://yourserver/MDS/service/service.svc。 如果启用元数据发布，则会显示一个以   
     “您已创建服务”开头的页面。  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>通过使用 Visual Studio 创建代理类  

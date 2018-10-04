@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connflatfile.f1
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19f315644a829f543a88bdb135dcf25d4d8b5b15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201977"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148947"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>连接到平面文件 (SSAS)
   “表导入向导”的这一页可用于连接到平面文件 (.txt)、制表符分隔的文件 (.tab) 或逗号分隔的文件 (.csv)。 若要从 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]访问该向导，请在 **“模型”** 菜单上，单击 **“从数据源导入”**。  

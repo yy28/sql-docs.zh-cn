@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fbbf4bc264e9dbff37c6dd06ceb1c6f4063e6c2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176377"
 ---
 # <a name="enterprise-information-management-tutorials"></a>企业信息管理教程
   本节包含通过使用在 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中随附的企业信息管理 (EIM) 技术在企业中管理信息的教程。 企业信息管理 (EIM) 提供一组解决方案，使组织能够信任其数据的可信性和一致性，以便组织可以作出关键业务决策。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 具有以下技术，帮助您在企业中实现 EIM 解决方案。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -21,21 +19,20 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], component list
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
-caps.latest.revision: 41
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098648"
 ---
 # <a name="sql-server-components"></a>SQL Server 组件
   可以针对已在本地或远程计算机运行升级顾问分析向导[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安装。 升级前分析的第一步是确定要分析的计算机和组件。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **计算机名称**  
  指定要分析的计算机的名称。 升级顾问将填充**服务器名称**中与本地计算机名称。 也可以使用“.”和“localhost”连接本地计算机。  
   

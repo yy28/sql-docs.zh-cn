@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reportinglogging.f1
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 476a74a5a5a5515add61f726ab7b44f97a9bdfb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6c676e139560eaadf52ee1a98fe641579f5b9d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246447"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155977"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>维护计划（“报告和记录”页）
   使用 **“报告和记录”** 对话框可以配置在执行维护计划时生成的报告和日志。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **生成文本文件报告**  
  指定是否希望 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 写入文本文件报告。  
   

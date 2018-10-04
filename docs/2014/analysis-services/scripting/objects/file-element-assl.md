@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - File Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef9527346b0627d6ba414f9535c00e22a4d59ea6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155348"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169817"
 ---
 # <a name="file-element-assl"></a>File 元素 (ASSL)
   定义组成的文件之一[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md)元素。  
@@ -49,7 +46,7 @@ ms.locfileid: "37155348"
 |特征|Description|  
 |--------------------|-----------------|  
 |数据类型和长度|[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
-|默认值|InclusionThresholdSetting|  
+|默认值|None|  
 |基数|1-n：可多次出现的必需元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -57,9 +54,9 @@ ms.locfileid: "37155348"
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[文件](../collections/files-element-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  父级对应的元素`Files`在 Analysis Management Objects (AMO) 对象模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>请参阅  

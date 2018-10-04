@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, about transactional replication
 - transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 797425197219aadfe23fee8deecb56e5d1a27fb4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7d7b4535bc2c28cdd02a3ff9432d7794f3cf550
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112977"
 ---
 # <a name="transactional-replication"></a>事务复制
   事务复制通常从发布数据库对象和数据的快照开始。 创建了初始快照后，接着在发布服务器上所做的数据更改和架构修改通常在修改发生时（几乎实时）便传递给订阅服务器。 数据更改将按照其在发布服务器上发生的顺序和事务边界应用于订阅服务器，因此，在发布内部可以保证事务的一致性。  

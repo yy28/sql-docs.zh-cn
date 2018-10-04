@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107199"
 ---
 # <a name="use-sparse-columns"></a>使用稀疏列
   稀疏列是对 Null 值采用优化的存储方式的普通列。 稀疏列减少了 Null 值的空间需求，但代价是检索非 Null 值的开销增加。 当至少能够节省 20% 到 40% 的空间时，才应考虑使用稀疏列。 稀疏列和列集是通过使用 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 或 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) 语句定义的。  
@@ -76,7 +73,7 @@ ms.locfileid: "37204967"
 |数据类型|非稀疏字节|稀疏字节|NULL 百分比|  
 |---------------|---------------------|------------------|---------------------|  
 |`bit`|0.125|5|98%|  
-|`tinyint`|@shouldalert|5|86%|  
+|`tinyint`|1|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
 |`bigint`|8|12|52%|  

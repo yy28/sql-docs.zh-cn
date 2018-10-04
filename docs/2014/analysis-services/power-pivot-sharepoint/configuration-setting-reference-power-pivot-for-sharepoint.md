@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147517"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>配置设置参考 (PowerPivot for SharePoint)
   本主题提供有关 SharePoint 场中的 PowerPivot 服务应用程序使用的配置设置的参考文档。 如果您使用 PowerShell 脚本来配置服务器，或如果您要查找特定设置的信息，则本主题中的信息可提供详细的说明。  
@@ -80,7 +77,7 @@ ms.locfileid: "37173558"
 |----------|-------------|------------------|-----------------|  
 |开始时间|上午 04:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的下限。|  
 |结束时间|晚上 08:00|1 至 12 小时，其中，该值为此范围内的有效整数。<br /><br /> 类型为 Time。|设置工作时间范围的上限。|  
-|PowerPivot 无人参与的数据刷新帐户|InclusionThresholdSetting|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
+|PowerPivot 无人参与的数据刷新帐户|None|目标应用程序 ID|此帐户用于代表计划所有者运行数据刷新作业。<br /><br /> 无人参与的数据刷新帐户必须事先定义，然后才能在服务应用程序配置页中引用。 有关详细信息，请参阅[配置 PowerPivot 无人参与的数据刷新帐户&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
 |允许用户输入自定义 Windows 凭据|已启用|Boolean|确定计划的数据刷新配置页是否显示一个选项，让计划所有者能够指定用于运行数据刷新作业的 Windows 用户帐户和密码。<br /><br /> 必须启用安全存储区服务才能使用此选项。 有关详细信息，请参阅[为 PowerPivot 数据刷新配置存储凭据&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
 |最大处理历史记录长度|365|1 到 5000 天|确定数据刷新历史记录在 PowerPivot 服务应用程序数据库中保留多长的时间。 有关详细信息，请参阅[PowerPivot 使用情况数据收集](power-pivot-usage-data-collection.md)。|  
   

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Integration Services]
 - counters [Integration Services]
 - logs [Integration Services], data flow counters
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6ffdb95c84fb905fee3092f9192f0433ebb96abc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c59b8ece981452dd439a8d68d14e6b5553c19df8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132197"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>添加数据流性能计数器的日志
   本过程介绍如何为数据流引擎提供的性能计数器添加日志。  

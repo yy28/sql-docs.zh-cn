@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47fd572aad6fd135aa4563fda63fa4f36c32e45f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ccde5a1c4b79a5c67182789af7c54e2142156ad5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301867"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160457"
 ---
 # <a name="relational-query-designer-user-interface"></a>关系查询设计器用户界面
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的报表设计器同时提供了图形查询设计器和基于文本的查询设计器，帮助创建查询，以指定要从 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 为报表数据集检索的数据。 使用图形查询设计器可以浏览元数据、以交互方式生成查询，还可以查看查询结果。 使用基于文本的查询设计器可以查看图形查询设计器生成的查询，也可以修改查询。 您还可以从文件或报表中导入现有的查询。  
@@ -182,7 +179,7 @@ ms.locfileid: "37301867"
 ### <a name="graphical-query-designer-toolbar"></a>图形查询设计器工具栏  
  关系查询设计器工作栏提供了以下按钮，帮助您指定或查看查询结果。  
   
-|按钮|Description|  
+|Button|Description|  
 |------------|-----------------|  
 |**编辑为文本**|切换到基于文本的查询设计器，可查看自动生成的查询，也可以修改查询。|  
 |**导入**|从文件或报表中导入现有的查询。 支持 .sql 和 .rdl 文件类型。|  

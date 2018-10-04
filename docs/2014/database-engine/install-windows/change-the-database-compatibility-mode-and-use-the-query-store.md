@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143417"
 ---
 # <a name="migrate-query-plans"></a>迁移查询计划
   大多数情况下，将数据库升级到最新版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会提高查询性能。 但是，如果您具有已针对性能进行过认真优化的任务关键查询，在升级前最好为每个查询创建一个计划指南，以保留这些查询的查询计划。 如果在升级后，查询优化器为一个或多个查询选择了效率较低的计划，则可以启用这些计划指南并强制查询优化器使用升级前的计划。  

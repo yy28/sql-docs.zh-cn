@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - InstanceName Property (CInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f5d41c7a6443ba599c51475890300e9efa82637f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af3d20f424a79f6e3a4cc4fdf7acf5eaaa7c5156
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179694"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097787"
 ---
 # <a name="instancename-property-cinstance-class"></a>InstanceName 属性（CInstance Class）
   获取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的名称。  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>属性值/返回值  
  一个指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端实例的名称的字符串值。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
  [配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129457"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 数据类型
   当数据进入包中的数据流时，提取这些数据的源会将数据转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 为数值数据分配数值数据类型，为字符串数据分配字符数据类型，为日期分配日期数据类型。 其他数据，如 GUID 和二进制大型对象块 (BLOB)，也要分配相应的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型。 如果数据的数据类型无法转换为 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型，则会发生错误。  
@@ -64,7 +61,7 @@ ms.locfileid: "37265330"
 |DT_UI4|四字节无符号整数。|  
 |DT_UI8|八字节无符号整数。|  
 |DT_WSTR|以 Null 值结束的 Unicode 字符串，最大长度为 4000 个字符。 （如果列值包含其他 Null 终止符，则字符串将在第一个 Null 值出现的位置截断。）|  
-|DT_IMAGE|二进制值的最大大小为 2<sup>31</sup>-1 (2,147,483,647) 个字节。 实例时都提供 SQL Server 登录名。|  
+|DT_IMAGE|二进制值的最大大小为 2<sup>31</sup>-1 (2,147,483,647) 个字节。 .|  
 |DT_NTEXT|Unicode 字符串，最大长度为 2<sup>30</sup> -1 (1,073,741,823) 个字符。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字符串，最大长度为 2<sup>31</sup>-1 (2,147,483,647) 个字符。|  
   

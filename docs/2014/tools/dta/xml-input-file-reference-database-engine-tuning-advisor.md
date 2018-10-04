@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - input file reference [Database Engine Tuning Advisor]
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca9a22a2f6f4732a97387778484aae261fc0848
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4dfcae2c6d18b295919a3b843efe2edd95062d01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183484"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126187"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 输入文件引用（数据库引擎优化顾问）
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问可以使用 XML 输入文件来优化数据库。 此 XML 文件指定要用于优化会话的数据库、表、工作负荷文件或表以及优化选项。 您还可以使用此文件指定一个用户指定的配置来执行“假设”分析。  

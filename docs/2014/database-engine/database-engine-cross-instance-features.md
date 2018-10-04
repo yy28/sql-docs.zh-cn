@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-caps.latest.revision: 4
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d447ae6b48e7cb352f9350be687332c1fb265e76
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096747"
 ---
 # <a name="database-engine-cross-instance-features"></a>数据库引擎跨实例功能
   本节介绍了与管理和监视服务器以及数据库实例相关的工具和任务。  

@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a6ef3849e91f606cb94ae7fa1f7c67817bfff7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259423"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152799"
 ---
 # <a name="select-creation-method-cube-wizard"></a>选择创建方法（多维数据集向导）
   可以使用 **“选择创建方法”** 页指定创建多维数据集的方式。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **使用现有表**  
  选择此选项可以通过使用数据源中的现有表创建多维数据集。 该向导将引导您完成基于现有表选择和定义度量值组和维度的整个过程，从而生成新多维数据集。  
   

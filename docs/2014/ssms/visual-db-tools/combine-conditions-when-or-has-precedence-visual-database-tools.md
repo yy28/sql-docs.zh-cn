@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search conditions [SQL Server], combining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6eb9e840a818deef2e05bdf989398338dee0f500
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 056c47561a194604861ed7476630ec521f00db00
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815153"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121463"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>在 OR 优先时组合条件 (Visual Database Tools)
   若要用 OR 链接条件，并使其优先级高于用 AND 链接的条件，则必须为每个 OR 条件重复 AND 条件。  

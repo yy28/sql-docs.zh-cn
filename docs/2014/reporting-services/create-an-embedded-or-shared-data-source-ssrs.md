@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-caps.latest.revision: 40
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109433"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>创建嵌入数据源或共享数据源 (SSRS)
   报表数据源指定名称和连接信息。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支持两种类型的数据源，分别是嵌入数据源和共享数据源。 嵌入数据源在报表定义中定义并只由该报表使用。 共享数据源被定义为一个单独项并可由多个报表使用。 有关详细信息，请参阅[嵌入和共享的数据连接或数据源&#40;报表生成器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)。  

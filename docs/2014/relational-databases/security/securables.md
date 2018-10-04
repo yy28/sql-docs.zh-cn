@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectobject.f1
@@ -20,12 +18,12 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: da63c9918fb2d4c89ab32b3a06402c39bea0785b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fa9af5a2542581cad1b3a5f4be956cce9651d4f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029099"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170177"
 ---
 # <a name="securables"></a>安全对象
   安全对象是 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 授权系统控制对其进行访问的资源。 例如，表是安全对象。 通过创建可以为自己设置安全性的名为“范围”的嵌套层次结构，可以将某些安全对象包含在其他安全对象中。 安全对象范围有 **服务器**、 **数据库**和 **架构**。  

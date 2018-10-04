@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: acbeb63fb7e816d432609a56bf6ba72463a5ea48
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0cd386cad85726707f1ce3ea9f7931bda4e66c25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260973"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140497"
 ---
 # <a name="save-copy-of-package"></a>保存包的副本
   可以使用 **中的** “保存包的副本” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]对话框，将 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包的副本从 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 保存到其他位置，并根据需要修改包的保护级别。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **包位置**  
  选择要在其中保存包副本的存储位置的类型。 可用选项包括：  
   

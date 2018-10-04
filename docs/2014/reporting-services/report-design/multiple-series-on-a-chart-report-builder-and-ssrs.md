@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dea720120f13f1546af8a1ab9bdd572badabb350
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160715"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>图表中的多个序列（报表生成器和 SSRS）
   当图表中存在多个序列时，必须确定比较这些序列的最佳方式。 可以使用堆积图显示每个序列的相对比例。 如果仅比较两个共享公用类别 (x) 轴的序列，请使用辅助轴。 当显示两个相关数据序列（例如，价格和数量或收入和税收）时，该方法非常有用。 如果图表不可读，请考虑使用多个图表区以增强各序列之间的目视间隔。  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
-caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3e41c8060a007e52af23c0637c744e72f0d1fb4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ff9743774a9c05f4369cb2d24fde592bf011225
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167759"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150948"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>浏览预测模型（数据挖掘中级教程）
   既然您已经生成预测的挖掘模型，您可以通过使用浏览结果**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]时序查看器包含两个选项卡：**图表**并**模型**。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NameColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NameColumn element
 ms.assetid: 9ff79f2e-26d7-4ab9-a166-14c2c2d1fc07
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0b2a0ae2308c14caaf46edaed876a31e04b82e46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b51c297b2b7c81b4cbec4f629cf3efe9e8b367b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095647"
 ---
 # <a name="namecolumn-element-assl"></a>NameColumn 元素 (ASSL)
   标识提供父元素名称的列。  
@@ -56,16 +53,16 @@ ms.locfileid: "37213937"
 |祖先或父级|默认值|  
 |------------------------|-------------------|  
 |[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|不定（请参阅“备注”）|  
-|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|InclusionThresholdSetting|  
+|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|None|  
   
 ## <a name="element-relationships"></a>元素关系  
   
 |关系|元素|  
 |------------------|-------------|  
 |父元素|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)， [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|子元素|InclusionThresholdSetting|  
+|子元素|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果[KeyColumns](../collections/columns-element-assl.md)系列`DimensionAttribute`包含一个[KeyColumn](column-element-assl.md)表示键列的字符串数据类型，该元素`DataItem`值用作默认值`NameColumn`元素。  
   
  有关详细信息`DataItem`类型，包括 Analysis Services 脚本语言 (ASSL) 对象和属性表`DataItem`类型，请参阅[DataItem 数据类型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  

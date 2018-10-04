@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], roles
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9914bc878f1644ce6f8c8676e3b27178de99f5ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa7e52cd88e4eb07c0df515ebba3e10284be02b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273524"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132414"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 角色（SSIS 服务）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括三个固定的数据库级别角色`db_ssisadmin`， **db_ssisltduser**，和**db_ssisoperator**，用于控制对包的访问。 仅在保存到包上实现角色`msdb`数据库中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]将角色分配给包。 角色分配保存到`msdb`数据库。  
@@ -37,9 +34,9 @@ ms.locfileid: "37273524"
   
 |角色|读操作|写操作|  
 |----------|-----------------|------------------|  
-|`db_ssisadmin`<br /><br /> 或多个<br /><br /> `sysadmin`|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 查看所有包。<br /><br /> 执行自己的包。<br /><br /> 执行所有包。<br /><br /> 导出自己的包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 删除所有包。<br /><br /> 更改自己的包角色。<br /><br /> 更改所有包角色。<br /><br /> <br /><br /> **\*\* 重要\* \* ** db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。|  
+|`db_ssisadmin`<br /><br /> 或多个<br /><br /> `sysadmin`|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 查看所有包。<br /><br /> 执行自己的包。<br /><br /> 执行所有包。<br /><br /> 导出自己的包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 删除所有包。<br /><br /> 更改自己的包角色。<br /><br /> 更改所有包角色。<br /><br /> <br /><br /> **\*\* 重要\* \***  db_ssisadmin 角色和 dc_admin 角色的成员可以将其特权提升为 sysadmin。 因为这些角色可以修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，而 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 sysadmin 安全上下文可以执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包，所以可以实现特权提升。 若要在运行维护计划、数据收集组和其他 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包时防止此权限提升，请将运行包的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业配置为使用具有有限权限的代理帐户，或只将 sysadmin 成员添加到 db_ssisadmin 和 dc_admin 角色。|  
 |**db_ssisadmin**|枚举自己的包。<br /><br /> 枚举所有包。<br /><br /> 查看自己的包。<br /><br /> 执行自己的包。<br /><br /> 导出自己的包。|导入包。<br /><br /> 删除自己的包。<br /><br /> 更改自己的包角色。|  
-|**db_ssisltduser**|枚举所有包。<br /><br /> 查看所有包。<br /><br /> 执行所有包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|InclusionThresholdSetting|  
+|**db_ssisltduser**|枚举所有包。<br /><br /> 查看所有包。<br /><br /> 执行所有包。<br /><br /> 导出所有包。<br /><br /> 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理中执行所有包。|None|  
 |**Windows 管理员**|查看所有正在运行的包的详细执行信息。|停止所有当前正在运行的包。|  
   
 ## <a name="sysssispackages-table"></a>Sysssispackages 表  
@@ -53,7 +50,7 @@ ms.locfileid: "37273524"
   
 -   **ownersid** 列包含创建包的用户的唯一安全标识符。 此列定义包的所有者。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  默认情况下的权限`db_ssisadmin`并**db_ssisoperator**固定的数据库级角色以及创建包的用户的唯一安全标识符适用于程序包和权限的读取器角色`db_ssisadmin`角色和创建包的用户的唯一安全标识符适用于写入者角色。 用户必须是属于`db_ssisadmin`， **db_ssisltduser**，或**db_ssisoperator**角色拥有对包的读取访问权限。 用户必须是属于`db_ssisadmin`角色才能拥有写访问权限。  
   
 ## <a name="access-to-packages"></a>对包的访问  
