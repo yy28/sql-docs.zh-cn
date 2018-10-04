@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1741595891ebc04a70d70c006a3871c7f39ec07e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085701"
 ---
 # <a name="plan-guides"></a>计划指南
   如果您无法或不希望直接在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中更改实际查询文本，则可以使用计划指南来优化查询性能。 计划指南通过将查询提示或固定的查询计划附加到查询来影响查询的优化。 当第三方供应商提供的数据库应用程序中的一个小的查询子集没有按预期执行时，计划指南将很有用。 在计划指南中，您需要指定要优化的 Transact-SQL 语句以及包含要使用的查询提示的 OPTION 子句或要用于优化查询的特定查询计划。 当执行查询时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将 Transact-SQL 语句与计划指南进行匹配，然后在运行时将此 OPTION 子句附加到查询，或使用指定的查询计划。  
