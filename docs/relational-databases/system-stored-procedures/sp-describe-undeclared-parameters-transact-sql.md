@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679627"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   返回包含有关中的未声明参数的元数据的结果集[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理。 考虑使用在每个参数 **\@tsql**批处理，但不是声明中 **\@params**。 每个此类参数在返回的结果集中各占一行，并包含推断的参数类型信息。 该过程返回空结果集如果 **\@tsql**输入的批处理仅包含的参数中声明 **\@params**。  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **\@tsql =** ] **'***Transact SQL_batch*****  
- 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
+ [  **\@tsql =** ] **'**_TRANSACT-SQL\_批处理_  
+ 一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 *Transact SQL_batch*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
   
- [  **\@params =** ] **N'***参数*****  
- \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (***n***)** 或**nvarchar （max)**。  
+ [  **\@params =** ] **N'**_参数_  
+ \@params 参数提供声明字符串[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理，类似于方式 sp_executesql 工作原理。 *参数*可能**nvarchar (**_n_**)** 或**nvarchar （max)**。  
   
  是一个字符串，它包含的定义中嵌入的所有参数*Transact SQL_batch*。 字符串必须是 Unicode 常量或 Unicode 变量。 每个参数定义由参数名称和数据类型组成。 n 是表示附加参数定义的占位符。 如果 TRANSACT-SQL 语句中的批处理不包含参数，\@参数不是必需的。 该参数的默认值为 NULL。  
   
@@ -91,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|供内部使用。|  
 |**suggested_tds_length**|**int NOT NULL**|供内部使用。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_describe_undeclared_parameters**始终返回零返回状态。  
   
  最常见的用途是，为应用程序提供的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可能包含一些参数，并且必须以某种方式处理这些参数。 一个示例是在其中用户提供了使用 ODBC 参数语法的查询的用户界面 （如 ODBCTest 或 RowsetViewer）。 应用程序必须动态查找参数数目，并提示用户输入每个参数。  
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   如果输入[!INCLUDE[tsql](../../includes/tsql-md.md)]批处理中声明的参数声明具有相同名称的本地变量\@params。  
   
--   如果语句引用临时表。  
+- 如果语句引用临时表。
   
  如果\@tsql 没有任何参数中, 声明\@参数，该过程返回空结果集。  
   

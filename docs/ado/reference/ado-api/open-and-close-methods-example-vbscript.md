@@ -1,13 +1,11 @@
 ---
-title: 打开和关闭方法的示例 (VBScript) |Microsoft 文档
+title: Open 和 Close 方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Close method [ADO], VBScript example
 - Open method [ADO], VBScript example
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 375ebc025368551ccf9fda9dfba299027e6225ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709205"
 ---
-# <a name="open-and-close-methods-example-vbscript"></a>打开和关闭方法的示例 (VBScript)
-此示例使用[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[关闭](../../../ado/reference/ado-api/close-method-ado.md)两侧方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)打开过的对象。  
+# <a name="open-and-close-methods-example-vbscript"></a>Open 和 Close 方法示例 (VBScript)
+此示例使用[开放](../../../ado/reference/ado-api/open-method-ado-recordset.md)和[关闭](../../../ado/reference/ado-api/close-method-ado.md)方法同时[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)和[连接](../../../ado/reference/ado-api/connection-object-ado.md)已打开的对象。  
   
- 使用下面的示例活动服务器页面 (ASP)。 使用**查找**找到文件 Adovbs.inc 并将其放置在你打算使用的目录中。 剪切和将下面的代码粘贴到记事本或其他文本编辑器，并将其保存为**OpenVBS.asp**。 你可以在任何浏览器中查看的结果。  
+ 使用下面的示例 Active Server Page (ASP)。 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并将以下代码粘贴到记事本或其他文本编辑器，并将其保存为**OpenVBS.asp**。 你可以在任何浏览器中查看结果。  
   
 ```  
 <!-- BeginOpenVBS -->  

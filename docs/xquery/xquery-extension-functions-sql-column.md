@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981939"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627705"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数-sql: column
+# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 扩展函数 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   主题中所述[数据 XML 内部绑定关系](../t-sql/xml/binding-relational-data-inside-xml-data.md)，可以使用**sql:column(()** 时使用的功能[XML 数据类型方法](../t-sql/xml/xml-data-type-methods.md)若要显示的关系值在 XQuery 内。  
@@ -46,7 +40,7 @@ ms.locfileid: "37981939"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  请注意，引用中指定的列**sql: column**在 XQuery 函数引用的正在处理的行中的列。  
   
  在中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，可以仅指**xml**实例的上下文中的源表达式的 XML DML 插入语句，否则，您不能引用的类型的列**xml**或 CLR用户定义的类型。  

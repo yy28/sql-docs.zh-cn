@@ -1,33 +1,30 @@
 ---
-title: 在 XML 中的分层记录集 |Microsoft 文档
+title: 在 XML 中的分层记录集 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272056"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615955"
 ---
-# <a name="hierarchical-recordsets-in-xml"></a>在 XML 中的分层记录集
-ADO 允许持久性的分层记录集对象转换为 XML。 与层次结构的记录集对象中父记录集的值是字段的另一个记录集。 此类字段将呈现为 XML 流，而不是属性的子元素。  
+# <a name="hierarchical-recordsets-in-xml"></a>XML 中的分层记录集
+ADO 允许到 XML 的分层记录集对象持久性。 分层记录集对象中父记录集的值是字段的另一个记录集。 此类字段表示为 XML 流而不是属性中的子元素。  
   
-## <a name="remarks"></a>Remarks  
- 下面的示例演示这种情况下：  
+## <a name="remarks"></a>备注  
+ 下面的示例演示了这种情况下：  
   
 ```  
 Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select stor_id, ord_num, ord_date, qty from sales} AS rsSales RELATE stor_id TO stor_id)", "Provider=MSDataShape;DSN=pubs;Integrated Security=SSPI;"  
@@ -108,25 +105,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- 如果以这种方式保持不变，记录集的父代中的列的确切顺序不明显。 父代中的任何字段可能包含子记录集。 永久性提供程序出第一次为属性的所有标量列仍然存在，然后作为子元素的父行保存出所有子记录集"列"。 字段的序号位置的父代中可以通过查看该记录集的架构定义获取记录集。 每个字段均包含该字段的序号的记录集架构命名空间中定义的 OLE DB 属性 rs： 数。  
+ 记录集的父代中的列的确切顺序不明显，如果以这种方式保持不变。 父代中的任何字段可以包含子记录集。 持久性提供程序仍然存在出第一次为属性的所有标量列，并作为子元素的父行的所有子记录集"列"出然后仍然存在。 该字段的父代中的序号位置通过查看该记录集的架构定义，可以获取记录集。 每个字段均包含该字段的第几号的记录集架构命名空间中定义的 OLE DB 属性 rs： 数量。  
   
- 中子记录集的所有字段的名称都串联在一起，其中包含此子记录集的父代中字段的名称。 这是为了确保在其中父级和子级这两个记录集包含来自两个不同的表，但又单独命名的字段的情况下没有名称冲突。  
+ 中子记录集的所有字段的名称都串联在一起的记录集，其中包含此子的父代中的字段名称。 这是为了确保在其中父级和子级这两个记录集包含的字段从两个不同表获取的但对名为的情况下没有名称冲突。  
   
- 将层次结构的记录集保存为 XML 时，你应注意的 ADO 中的以下限制：  
+ 在分层记录集保存为 XML 时，应注意在 ADO 中的以下限制：  
   
--   无法将记录与层次结构集挂起的更新保存到 XML。  
+-   不能为 XML 持续的分层记录集包含挂起的更新。  
   
--   不能使用参数化的形状命令创建分层记录集保留 （采用 XML 或 ADTG 格式）。  
+-   使用参数化的形状命令创建一个分层记录集不能持续 （采用 XML 或 ADTG 格式）。  
   
--   ADO 当前将父和子记录集之间的关系保存为二进制大型对象 (BLOB)。 XML 标记来描述此关系具有尚未定义行集架构命名空间中。  
+-   当前，ADO 将父和子记录集之间的关系保存为二进制大型对象 (BLOB)。 XML 标记来描述此关系具有尚未定义行集架构命名空间中。  
   
--   保存分层的记录集后，所有子记录集与一起都保存它。 如果当前的记录集是另一个记录集的子级，则不会保存其父级。 保存所有子窗体的当前记录集的子树的记录集。  
+-   保存分层记录集后，所有子记录集是随一起保存它。 如果当前记录集是另一个记录集的子级，则不会保存其父级。 保存所有子窗体的当前记录集的子树的记录集。  
   
- 当分层的记录集重新打开从其保留在 XML 的格式，你必须注意以下限制：  
+ 当分层记录集重新打开时从其保留在 XML 的格式，您必须注意以下限制：  
   
--   如果子记录包含有没有相应的父记录的记录，这些行不会写出分层记录集的 XML 表达形式。 因此，从其持久化的位置打开记录集时，这些行，将会丢失。  
+-   如果子记录中包含有没有相应的父记录的记录，这些行不会写出在分层记录集的 XML 表示形式。 因此，从其持久化位置重新打开记录集时，这些行将会丢失。  
   
--   如果子记录具有到多个父记录的引用，然后在重新打开记录集，子记录集可能包含重复的记录。 但是，这些重复项只能是如果用户可直接与基础的子行集可见。 如果某章节用于导航子记录集 （这是在 ADO 中导航的唯一方法），则重复项不可见。  
+-   如果子记录具有对多个父记录的引用，然后在重新打开记录集，子记录集可能包含重复的记录。 但是，这些重复项只能是用户可直接与基础子行集时可见。 如果某一章节用于导航子记录集 （这是在 ADO 中导航的唯一方法），则重复项不可见。  
   
 ## <a name="see-also"></a>请参阅  
  [以 XML 格式保留记录](../../../ado/guide/data/persisting-records-in-xml-format.md)

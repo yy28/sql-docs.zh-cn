@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
@@ -22,12 +20,12 @@ ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66c22994acf1784f888ebd245429f24c12afa7cb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4439cddb4af80a5d76a5b4e3600fd5e5ede6b900
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636475"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +39,7 @@ ms.locfileid: "43026535"
 |processor_group|**smallint**|Windows 逻辑处理器组的 ID。 不可为 null。|
 |cpu_mask|**bigint**|表示与此池相关联的 Cpu 的二进制掩码。 不可为 null。|
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 
 创建具有关联的池`AUTO`因为它们具有无关联不出现在此视图。 有关详细信息，请参阅[CREATE EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md)并[ALTER EXTERNAL RESOURCE POOL &#40;-&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)语句。
 

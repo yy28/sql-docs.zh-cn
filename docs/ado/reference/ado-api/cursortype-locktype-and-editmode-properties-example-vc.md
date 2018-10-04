@@ -1,13 +1,11 @@
 ---
-title: 游标类型、 LockType 和 EditMode 属性示例 （VC + +） |Microsoft 文档
+title: CursorType、 LockType、 和 EditMode 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726a7b346052cd847c599f4389480007b6698999
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 43e615d29c10553ef52f536320266abb3d28f542
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277366"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696355"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>游标类型、 LockType 和 EditMode 属性示例 （VC + +）
-此示例演示如何设置[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)和[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性在打开之前[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)在各种条件下的属性。 有关运行此过程需要 EditModeOutput 函数。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、 LockType、 和 EditMode 属性示例 （VC + +）
+此示例演示如何设置[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)并[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)属性，然后打开才能[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)。 它还显示的值[EditMode](../../../ado/reference/ado-api/editmode-property.md)各种条件下的属性。 若要运行此过程需要 EditModeOutput 函数。  
   
 ## <a name="example"></a>示例  
   
@@ -159,14 +156,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **后 AddNew:**   
+  **之后 AddNew:**   
  **EditMode = adEditAdd**  
 **之后更新：**   
  **EditMode = adEditNone**  
 **后编辑：**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>请参阅  
- [游标类型属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
+ [CursorType 属性 (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode 属性](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType 属性 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

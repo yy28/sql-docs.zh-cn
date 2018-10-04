@@ -1,14 +1,11 @@
 ---
-title: sp_update_alert (Transact SQL) |Microsoft 文档
+title: sp_update_alert (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7715e354208953dc62e4a161a44f195babf92f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 24cd1864fc31524dcd661cd9eb108d8cb4fa1b77
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846722"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,30 +70,30 @@ sp_update_alert
  警报的新名称。 该名称必须是唯一的。 *new_name*是**sysname**，默认值为 NULL。  
   
  [  **@enabled =**]*启用*  
- 指定是否启用了警报 (**1**) 或未启用 (**0**)。 *启用*是**tinyint**，默认值为 NULL。 必须启用警报，才能激发警报。  
+ 指定是否启用警报 (**1**) 或未启用 (**0**)。 *已启用*是**tinyint**，默认值为 NULL。 必须启用警报，才能激发警报。  
   
  [ **@message_id =**] *message_id*  
- 警报定义的新消息或错误号。 通常情况下， *message_id*对应于中的错误号**sysmessages**表。 *message_id*是**int**，默认值为 NULL。 可以使用 ID，仅当警报的严重性级别设置为一条消息**0**。  
+ 警报定义的新消息或错误号。 通常情况下， *message_id*中的错误号相对应**sysmessages**表。 *message_id*是**int**，默认值为 NULL。 可以使用 ID，仅当警报的严重性级别设置为一条消息**0**。  
   
  [  **@severity =**]*严重性*  
- 一个新的严重性级别 (从**1**通过**25**) 为该警报定义。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息发送到指定的严重级别的 Windows 应用程序日志将激活警报。 *严重性*是**int**，默认值为 NULL。 可以使用的严重性级别，仅当警报的消息 ID 设置为**0**。  
+ 新的严重级别 (从**1**通过**25**) 为警报定义。 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]消息发送到具有指定的严重级别的 Windows 应用程序日志会激活警报。 *严重性*是**int**，默认值为 NULL。 可以使用严重级别，仅当警报的消息 ID 设置为**0**。  
   
  [ **@delay_between_responses =**] *delay_between_responses*  
  警报响应之间的新的等待间隔（以秒为单位）。 *delay_between_responses*是**int**，默认值为 NULL。  
   
  [ **@notification_message =**] **'***notification_message***'**  
- 其他消息作为电子邮件的一部分发送给操作员的修订后的文本**网络发送**，或寻呼机通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。  
+ 其他消息发送给操作员的电子邮件的一部分的修订后的文本**网络发送**，或寻呼通知。 *notification_message*是**nvarchar(512)**，默认值为 NULL。  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
  指定是否应该在通知消息中包含 Windows 应用程序日志中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误的说明。 *include_event_description_in*是**tinyint**，默认值为 NULL，并且可以是一个或多个值。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**0**|InclusionThresholdSetting|  
+|**0**|None|  
 |**1**|电子邮件|  
 |**2**|寻呼程序|  
 |**4**|**net send**|  
-|**7**|全部|  
+|**7**|All|  
   
  [ **@database_name =**] **'***database***'**  
  只有其中出现错误时才能激发警报的数据库的名称。 *数据库*是**sysname。** 不允许用方括号 ([ ]) 将名称括起来。 默认值为 NULL。  
@@ -112,7 +108,7 @@ sp_update_alert
  为响应该警报而执行的作业名称。 *job_name*是**sysname**，默认值为 NULL。 如果*job_name*指定，则*job_id*必须省略。  
   
  [ **@occurrence_count =** ] *occurrence_count*  
- 重置警报发生的次数。 *occurrence_count*是**int**，默认值为 NULL，并且可以将仅为**0**。  
+ 重置警报发生的次数。 *occurrence_count*是**int**，默认值为 NULL，并且可以设置为仅**0**。  
   
  [ **@count_reset_date =**] *count_reset_date*  
  重置上一次重置发生计数的日期。 *count_reset_date*是**int**，默认值为 NULL。  
@@ -121,28 +117,28 @@ sp_update_alert
  重置上一次重置发生计数的时间。 *count_reset_time*是**int**，默认值为 NULL。  
   
  [ **@last_occurrence_date =**] *last_occurrence_date*  
- 重置上一次发生警报的日期。 *last_occurrence_date*是**int**，默认值为 NULL，并且可以将仅为**0**。  
+ 重置上一次发生警报的日期。 *last_occurrence_date*是**int**，默认值为 NULL，并且可以设置为仅**0**。  
   
  [ **@last_occurrence_time =**] *last_occurrence_time*  
- 重置上一次发生警报的时间。 *last_occurrence_time*是**int**，默认值为 NULL，并且可以将仅为**0**。  
+ 重置上一次发生警报的时间。 *last_occurrence_time*是**int**，默认值为 NULL，并且可以设置为仅**0**。  
   
  [ **@last_response_date =**] *last_response_date*  
- 重置 SQLServerAgent 服务上一次响应警报的日期。 *last_response_date*是**int**，默认值为 NULL，并且可以将仅为**0**。  
+ 重置 SQLServerAgent 服务上一次响应警报的日期。 *last_response_date*是**int**，默认值为 NULL，并且可以设置为仅**0**。  
   
  [ **@last_response_time =**] *last_response_time*  
- 重置 SQLServerAgent 服务上一次响应警报的时间。 *last_response_time*是**int**，默认值为 NULL，并且可以将仅为**0**。  
+ 重置 SQLServerAgent 服务上一次响应警报的时间。 *last_response_time*是**int**，默认值为 NULL，并且可以设置为仅**0**。  
   
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  保留。  
   
  [ **@performance_condition =**] **'***performance_condition***'**  
- 一个表示格式值*****itemcomparatorvalue*****。 *performance_condition*是**nvarchar(512)**，默认值为 NULL，并且这些元素组成。  
+ 格式表示的值 **'***itemcomparatorvalue*****。 *performance_condition*是**nvarchar(512)**，默认值为 NULL，并包含这些元素。  
   
 |格式元素|Description|  
 |--------------------|-----------------|  
 |*项*|性能对象、性能计数器或计数器的命名实例|  
-|*Comparator*|这些运算符之一： **>**， **<**， **=**|  
-|*Value*|计数器的数值|  
+|*Comparator*|以下运算符之一： **>**， **<**， **=**|  
+|*ReplTest1*|计数器的数值|  
   
  [ **@category_name =**] **'***category***'**  
  警报类别的名称。 *类别*是**sysname**默认值为 NULL。  
@@ -156,13 +152,13 @@ sp_update_alert
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  
   
-## <a name="remarks"></a>注释  
- 仅**sysmessages**写入[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志可能会引发警报。  
+## <a name="remarks"></a>备注  
+ 仅**sysmessages**写入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志能够激发警报。  
   
- **sp_update_alert**更改只有这些哪些参数提供值的警报设置。 如果省略某一参数，则保留其当前设置。  
+ **sp_update_alert**更改仅这些参数提供值的警报设置。 如果省略某一参数，则保留其当前设置。  
   
-## <a name="permissions"></a>权限  
- 若要运行此存储的过程，用户必须是属于**sysadmin**固定的服务器角色。  
+## <a name="permissions"></a>Permissions  
+ 若要运行此存储的过程，用户必须属于**sysadmin**固定的服务器角色。  
   
 ## <a name="examples"></a>示例  
  以下示例将已启用的 `Test Alert` 设置更改为 `0`。  
@@ -177,7 +173,7 @@ EXEC dbo.sp_update_alert
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

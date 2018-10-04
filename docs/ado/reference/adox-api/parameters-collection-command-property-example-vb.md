@@ -1,32 +1,29 @@
 ---
-title: 参数集合，命令属性示例 (VB) |Microsoft 文档
+title: 参数集合、 Command 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38b389c04a6f9c4842c700aac0d87e14299ed31
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826777"
 ---
-# <a name="parameters-collection-command-property-example-vb"></a>参数集合，命令属性示例 (VB)
-下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)具有属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象以检索有关该过程的参数信息。  
+# <a name="parameters-collection-command-property-example-vb"></a>参数集合、Command 属性示例 (VB)
+下面的代码演示如何使用[命令](../../../ado/reference/adox-api/command-property-adox.md)具有属性[命令](../../../ado/reference/ado-api/command-object-ado.md)对象检索该过程的参数信息。  
   
 ```  
 ' BeginParametersVB  
@@ -82,6 +79,6 @@ End Sub
 ## <a name="see-also"></a>请参阅  
  [ActiveConnection 属性 (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [目录对象 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [命令属性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Command 属性 (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [过程对象 (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [过程集合 (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

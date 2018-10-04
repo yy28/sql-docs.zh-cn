@@ -6,9 +6,7 @@ ms.date: 07/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_tuning_recommendations
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - database tuning recommendations feature [SQL Server], sys.dm_db_tuning_recommendations dynamic management view
 - sys.dm_db_tuning_recommendations dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 37
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3fee5cae4701b9c7acf43604e73f65af54657aa6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0faae3cec2d71c28056a384b196a9b46929d5d6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792105"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_优化\_建议 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -61,7 +58,7 @@ ms.locfileid: "43069668"
 | **score** | **int** | 估计此建议在 0-100 的值/影响规模 （越大越好） |
 | **详细信息** | **nvarchar(max)** | 包含有关建议的更多详细信息的 JSON 文档。 可以使用下列域：<br /><br />`planForceDetails`<br />-    `queryId` -查询\_回归的查询的 id。<br />-    `regressedPlanId` -plan_id 回归计划。<br />-   `regressedPlanExecutionCount` 的检测到执行的查询回归计划回归分析之前的数。<br />-    `regressedPlanAbortedCount` -回归计划执行期间检测到的错误数。<br />-    `regressedPlanCpuTimeAverage` 的检测到回归分析之前使用回归查询平均 CPU 时间。<br />-    `regressedPlanCpuTimeStddev` 的检测到的回归的查询回归分析之前使用的 CPU 时间标准偏差。<br />-    `recommendedPlanId` -应强制计划的 plan_id。<br />-   `recommendedPlanExecutionCount`-的查询的回归分析检测到之前应强制计划执行数。<br />-    `recommendedPlanAbortedCount` -应强制计划执行期间检测到的错误数。<br />-    `recommendedPlanCpuTimeAverage` 的由与应强制 （计算之前检测到回归） 的计划执行的查询平均 CPU 时间。<br />-    `recommendedPlanCpuTimeStddev` 检测到的回归的查询回归分析之前使用的 CPU 时间的标准偏差。<br /><br />`implementationDetails`<br />-  `method` 的应可用于更正回归方法。 值始终是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 应执行强制实施该建议的计划的脚本。 |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  返回的信息`sys.dm_db_tuning_recommendations`时更新数据库引擎标识潜在查询性能回归，因而不会持久保留。 建议将一直保留，直到仅[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新启动。 如果要在服务器回收后保留，数据库管理员应定期制作备份副本的优化建议。 
 
  `currentValue` 字段中`state`列可能具有以下值：

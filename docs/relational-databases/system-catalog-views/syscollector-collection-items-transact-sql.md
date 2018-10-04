@@ -1,14 +1,11 @@
 ---
-title: syscollector_collection_items (TRANSACT-SQL) |Microsoft 文档
+title: syscollector_collection_items (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e1113453ebe83221fb8dd8b9de92113bcb346c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714355"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +38,12 @@ ms.locfileid: "33220568"
 |**collector_type_uid**|**uniqueidentifier**|用于标识收集器类型的 GUID。 不可为 null。|  
 |**名称**|**nvarchar(4000)**|收集组的名称。 可以为 Null。|  
 |**frequency**|**int**|收集项收集数据的频率。 不可为 null。|  
-|**参数**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 此集合项的 XML 架构验证与 XML 架构 (XSD) 存储在**parameter_schema**特定收集器类型。 可以为 Null。 有关详细信息，请参阅[syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
+|**参数**|**xml**|介绍与相应收集项关联的收集器类型的参数化。 此收集项的 XML 架构验证与 XML 架构 (XSD) 存储在**parameter_schema**特定收集器类型。 可以为 Null。 有关详细信息，请参阅[syscollector_collector_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要为选择**dc_operator**， **dc_proxy**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据收集器存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [数据收集器视图 (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [“数据收集”](../../relational-databases/data-collection/data-collection.md)  

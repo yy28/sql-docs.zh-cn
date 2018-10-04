@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651685"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|上次对游标执行的操作：<br /><br /> 0 = 没有对游标执行操作。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 插入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|服务器范围内的游标唯一值。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_describe_cursor 说明服务器游标的全局特性，如滚动和更新的能力。 使用 sp_describe_cursor_columns 对游标返回的结果集的属性进行说明。 使用 sp_describe_cursor_tables 报告游标引用的基表。 若要获取连接中可见的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服务器游标的报表，请使用 sp_cursor_list。  
   
  DECLARE CURSOR 语句可以请求一个游标类型，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 无法使用 DECLARE CURSOR 中包含的 SELECT 语句支持该游标类型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以将该游标隐式转换为它可用 SELECT 语句支持的类型。 如果在 DECLARE CURSOR 语句中指定了 TYPE_WARNING，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将向应用程序发送一条信息性消息，说明转换已完成。 然后，可以调用 sp_describe_cursor 来确定已实现的游标类型。  

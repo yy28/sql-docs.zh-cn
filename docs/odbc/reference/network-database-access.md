@@ -1,13 +1,11 @@
 ---
-title: 网络数据库访问 |Microsoft 文档
+title: 网络数据库访问权限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], database access
@@ -16,30 +14,29 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39e49ab6e5aba7852968d9ee22ffc4873891be08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916402"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633405"
 ---
 # <a name="network-database-access"></a>网络数据库访问权限
-通过网络访问数据库需要的许多组件，其中每个独立的并且位于下方的编程接口。 下图显示了这些组件。  
+在网络上访问数据库需要多个组件，其中每个独立的并且位于下方的编程接口。 下图显示了这些组件。  
   
- ![要在网络访问的数据库组件](../../odbc/reference/media/pr04.gif "pr04")  
+ ![组件跨网络访问的数据库](../../odbc/reference/media/pr04.gif "pr04")  
   
- 每个组件的更多说明如下所示：  
+ 每个组件的进一步说明如下所示：  
   
--   **编程接口**编程接口如本节前面所述的包含所进行的应用程序调用。 这些接口 (embedded SQL，SQL 模块，并调用级接口) 是通常特定于每个 DBMS，尽管它们通常都基于 ANSI 或 ISO 标准。  
+-   **编程接口**编程接口如前文所述在本部分中，包含由应用程序进行的调用。 这些接口 (嵌入式 SQL，SQL 模块，以及如何调用级别接口) 是通常特定于每个 DBMS，尽管它们通常都基于 ANSI 或 ISO 标准。  
   
--   **数据流协议**数据流协议描述 DBMS 和其客户端之间传输数据的流。 例如，协议可能要求来描述流的其余部分包含的第一个字节： 要执行返回的错误值，或返回的数据的 SQL 语句。 然后，流中的数据的其余部分的格式都依赖于此标志。 例如，标志、 2 字节整数错误代码、 2 字节整数错误消息长度和一条错误消息可能包含错误流。  
+-   **数据 Stream 协议**数据流协议描述 DBMS 和其客户端之间传输数据的流。 例如，协议可能要求来描述流的其余部分包含的第一个字节： 执行返回的错误值，或返回数据的 SQL 语句。 然后，流中的数据的其余部分的格式将取决于此标志。 例如，标志、 2 字节整数错误代码、 2 字节整数错误消息长度和一条错误消息可能包含错误流。  
   
-     数据流协议是一种逻辑协议，并独立于基础网络使用的协议。 因此，通常可以在多种不同的网络上使用单个数据流协议。 数据流协议是通常专有的且具有对其进行了优化，若要使用特定 DBMS。  
+     数据流协议是一种逻辑协议，并独立于基础网络使用的协议。 因此，通常可以在多种不同的网络上使用单个数据流协议。 数据流协议是通常专用和已经过优化，以使用特定 DBMS。  
   
--   **进程间通信机制**进程间通信 (IPC) 机制是依据一个进程与另一个进行通信的过程。 示例包括命名的管道、 TCP/IP 套接字和 DECnet 套接字。 IPC 机制的选择的操作系统和网络正在使用受约束。  
+-   **进程间通信机制**进程间通信 (IPC) 机制是依据一个流程与另一个进行通信的过程。 示例包括命名的管道、 TCP/IP 套接字和 DECnet 套接字。 所选的 IPC 机制受操作系统和所使用的网络。  
   
--   **网络协议**网络协议用于通过网络传输数据的流。 它可被视为联结支持用来实现数据的 IPC 机制流式传输协议，以及支持基本的网络操作，如文件传输和打印共享。 网络协议包括 NetBEUI、 TCP/IP、 DECnet 和 SPX/IPX 和特定于每个网络。
+-   **网络协议**网络协议用于通过网络传输的数据流。 它可被视为支持用于实现数据的 IPC 机制流式传输协议，以及支持基本的网络操作，如文件传输和打印共享的基本功能。 网络协议包括 NetBEUI、 TCP/IP、 DECnet 和 SPX/IPX 和特定于每个网络。

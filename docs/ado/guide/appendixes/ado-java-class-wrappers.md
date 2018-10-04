@@ -1,30 +1,27 @@
 ---
-title: ADO Java 类包装 |Microsoft 文档
+title: ADO Java 类包装器 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - class wrappers [ADO]
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72206624c6952a63d7784e2b054f86b9c6cd43f3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 840d8a0e266a6f913a8a74ec1451bc6285fbb08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729215"
 ---
-# <a name="ado-java-class-wrappers"></a>ADO Java 类包装
-此代码声明的 ADO 实例[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装并初始化它，在相同的代码行上。 此外，它声明的变量中的自变量的每个[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)和[游标类型](../../../ado/reference/ado-api/cursortype-property-ado.md)（因为不支持 Java 枚举类型）。 打开，并关闭**记录集**对象。 只设置为 NULL 的 Rs1 计划以 Java 执行其系统和间歇性版本的未使用的对象时释放该变量。  
+# <a name="ado-java-class-wrappers"></a>ADO Java 类包装器
+此代码声明了 ADO 的实例[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)类包装器，并初始化它，所有内容位于相同的代码行。 此外，为每个中的参数声明的变量[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法，尤其是对于[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)并[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) （由于 Java 不支持枚举类型）。 它打开和关闭**记录集**对象。 只设置为 NULL 的 Rs1 计划 Java 执行系统和间歇性发布的未使用的对象时释放该变量。  
   
 ```  
 public static void main( String args[])  

@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.createrelatedmodel.f1
 ms.assetid: 7729e98e-6296-4ad9-b73c-fb0f29f4c54e
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c03d62fb6196cadb79cb5e16c06483e7efbe174e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204485"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059339"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>“新建挖掘模型”对话框（“挖掘结构”视图）
   可以使用 **“新建挖掘模型”** 对话框在挖掘结构中添加新的挖掘模型。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **模型名称**  
  为新挖掘模型提供唯一的名称。 该名称不仅对于挖掘结构是唯一的，而且对于数据库也必须是唯一的。  
   

@@ -1,31 +1,28 @@
 ---
-title: SQLSpecialColumns （桌面数据库驱动程序） |Microsoft 文档
+title: SQLSpecialColumns （桌面数据库驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSpecialColumns function [ODBC], Desktop Database Drivers
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aebdcc1d45584ec0fa7d287715e2defc8ef278fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840005"
 ---
-# <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns （桌面数据库驱动程序）
-唯一索引将返回 （如果存在） SQL_BEST_ROWID 标志*fColType*。 将 SQL_ROWVER 标志不返回任何结果集。  
+# <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns（桌面数据库驱动程序）
+唯一索引 （如果存在） 的返回 SQL_BEST_ROWID 标志*fColType*。 将 SQL_ROWVER 标志不返回任何结果集。  
   
- 所有行 Id 都具有 SQL_SCOPE_CURROW 的作用域。  
+ 所有行 Id 都具有 sql_scope_currow 之外的作用域。  
   
- 模式匹配为不支持*szTableQualifier*或*szTableName*自变量。
+ 对于不支持模式匹配*szTableQualifier*或*szTableName*参数。

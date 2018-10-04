@@ -1,34 +1,31 @@
 ---
-title: ActiveCommand 属性示例 (VB) |Microsoft 文档
+title: ActiveCommand 属性示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617145"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand 属性示例 (VB)
 此示例演示[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)属性。  
   
- 给定子例程[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，其**ActiveCommand**属性用于显示的命令文本和参数创建**记录集**。  
+ 给定一个子例程[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象，其**ActiveCommand**属性用于显示命令文本和参数，用于创建**记录集**。  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- **ActiveCommandXprint**仅给定例程**记录集**对象，但它必须打印命令文本和参数创建**记录集**。 此可执行，因为**记录集**对象的**ActiveCommand**属性产生关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
+ **ActiveCommandXprint**例程提供仅**记录集**对象，但它必须打印命令文本和参数，用于创建**记录集**。 此可执行，因为**记录集**对象的**ActiveCommand**属性产生关联[命令](../../../ado/reference/ado-api/command-object-ado.md)对象。  
   
- **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性生成的创建参数化的命令**记录集**。 **命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合会生成值已被替代的命令的参数占位符 ("**？**")。  
+ **命令**对象的[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)属性将生成创建的参数化的命令**记录集**。 **命令**对象的[参数](../../../ado/reference/ado-api/parameters-collection-ado.md)集合生成命令的参数占位符已替换的值 ("**？**")。  
   
  最后，输出错误消息或作者的名称和 ID。  
   

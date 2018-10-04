@@ -1,13 +1,11 @@
 ---
-title: PrimaryKey 和唯一属性示例 （VC + +） |Microsoft 文档
+title: PrimaryKey 和 Unique 属性示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bacde66d71826f40eb86cb31c92c1f8663ccac74
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286766"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613315"
 ---
-# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和唯一属性示例 （VC + +）
-此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[Unique](../../../ado/reference/adox-api/unique-property-adox.md)属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码将使用两个列创建一个新表。 **PrimaryKey**和**Unique**属性用于将一个列将不允许重复值的主键。  
+# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 和 Unique 属性示例 (VC++)
+此示例演示[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)并[Unique](../../../ado/reference/adox-api/unique-property-adox.md)的属性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 代码包含两个列创建一个新表。 **PrimaryKey**并**Unique**属性用于使一个列将不允许重复值的主键。  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

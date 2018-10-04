@@ -1,14 +1,11 @@
 ---
-title: sp_help_notification (Transact SQL) |Microsoft 文档
+title: sp_help_notification (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6499d3830859063af74417c84c7fe9e1855b3313
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833575"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,38 +46,38 @@ sp_help_notification
   
 ## <a name="arguments"></a>参数  
  [ **@object_type =**] **'***object_type***'**  
- 要返回的信息的类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的运算符名称警报 *，* 或运算符，其中列出了运算符负责提供警报名称 *。*  
+ 要返回的信息的类型。 *object_type*是**char(9)**，无默认值。 *object_type*可以是警报，其中列出了分配给提供的操作员名称的警报 *，* 或运算符，其中列出了为提供的警报名称负责的操作员 *。*  
   
  [ **@name =**]  **'***name***'**  
- 运算符名称 (如果*object_type* is 运算符) 或警报的名称 (如果*object_type*为警报)。 *名称*是**sysname**，无默认值。  
+ 操作员名称 (如果*object_type* is 运算符) 或警报名称 (如果*object_type*为 ALERTS)。 *名称*是**sysname**，无默认值。  
   
  [ **@enum_type =**] **'***enum_type***'**  
- *Object_type*返回信息。 *enum_type*实际是在大多数情况下。 *enum_type*是**char （10)**，无默认值，并且可为这些值之一。  
+ *Object_type*返回的信息。 *enum_type*是实际在大多数情况下。 *enum_type*是**char （10)**，无默认值，并且可以是下列值之一。  
   
-|“值”|Description|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|ACTUAL|仅列出*object_types*与关联*名称*。|  
-|ALL|列出所有*object_types*包括不与关联的那些*名称*。|  
-|TARGET|仅列出*object_types*匹配所提供*target_name*，而不考虑与关联的*名称*。|  
+|ACTUAL|只列出*object_types*与关联*名称*。|  
+|ALL|列出所有*object_types*包括那些不与相关联*名称*。|  
+|TARGET|只列出*object_types*匹配所提供*target_name*，而不考虑的与关联*名称*。|  
   
  [  **@notification_method =**] *notification_method*  
- 用于确定要返回的通知方法列的数值。 *notification_method*是**tinyint**，和可以是以下值之一。  
+ 用于确定要返回的通知方法列的数值。 *notification_method*是**tinyint**，可以是下列值之一。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
-|**1**|电子邮件地址： 仅返回**use_email**列。|  
-|**2**|页导航： 仅返回**use_pager**列。|  
-|**4**|其通报： 仅返回**use_netsend**列。|  
+|**1**|电子邮件： 只返回**use_email**列。|  
+|**2**|寻呼： 只返回**use_pager**列。|  
+|**4**|NetSend： 只返回**use_netsend**列。|  
 |**7**|全部：返回全部列。|  
   
  [ **@target_name =**] **'***target_name***'**  
- 要搜索的警报名称 (如果*object_type*为警报) 或要搜索的运算符名称 (如果*object_type* is 运算符)。 *target_name*只有当需要*enum_type*是目标。 *target_name*是**sysname**，默认值为 NULL。  
+ 要搜索的警报名称 (如果*object_type*为 ALERTS) 或要搜索的操作员名称 (如果*object_type* is 运算符)。 *target_name*时才需要*enum_type*是目标。 *target_name*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-valves"></a>返回代码值  
  0（成功）或 1（失败）  
   
 ## <a name="result-sets"></a>结果集  
- 如果*object_type*是**警报**，结果集为给定运算符列出所有警报。  
+ 如果*object_type*是**警报**，结果集为给定操作员列出所有警报。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -92,9 +88,9 @@ sp_help_notification
 |**use_netsend**|**int**|使用网络弹出消息通知操作员：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**has_email**|**int**|为此警报发送的电子邮件通知的次数。|  
 |**has_pager**|**int**|为此警报发送的寻呼通知的次数。|  
-|**has_netsend**|**int**|数**网络发送**发送此警报的通知。|  
+|**has_netsend**|**int**|数**网络发送**为此警报发送的通知。|  
   
- 如果**object_type**是**运算符**，结果集列出给定的警报的所有运算符。  
+ 如果**object_type**是**运算符**，结果集将列出为给定的警报的所有运算符。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -102,15 +98,15 @@ sp_help_notification
 |**operator_name**|**sysname**|操作员名称。|  
 |**use_email**|**int**|使用电子邮件发送操作员的通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**use_pager**|**int**|使用寻呼发送操作员的通知：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
-|**use_netsend**|**int**|用于通知该操作员弹出的网络：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
+|**use_netsend**|**int**|用于通知操作员网络弹出窗口：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**has_email**|**int**|操作员有电子邮件地址：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**has_pager**|**int**|操作员有寻呼地址：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**has_netsend**|**int**|操作员已配置网络发送通知。<br /><br /> 1 = 是<br /><br /> 0 = 否|  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  必须从运行此存储的过程**msdb**数据库。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  若要执行此存储过程，用户必须为 **sysadmin** 固定服务器角色的成员。  
   
 ## <a name="examples"></a>示例  
@@ -145,10 +141,10 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [sp_add_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+## <a name="see-also"></a>请参阅  
+ [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [系统存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

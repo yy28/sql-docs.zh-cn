@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sys.dm_exec_query_statistics_xml
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: 6
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ba01e7876c174cc73697628c3b46219ff674f9a7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9fdcbb6bec46043f030172d794cb5238d99a151e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987239"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784655"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +48,13 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="table-returned"></a>返回的表
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|
-|session_id|**int**|会话的 ID。 不可为 Null。|
+|session_id|**smallint**|会话的 ID。 不可为 Null。|
 |request_id|**int**|请求的 ID。 不可为 Null。|
 |sql_handle|**varbinary(64)**|请求的 SQL 文本的哈希映射。 可以为 NULL。|
 |plan_handle|**varbinary(64)**|查询计划哈希映射。 可以为 NULL。|
 |query_plan|**xml**|使用部分统计信息的 Showplan XML。 可以为 NULL。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
 此系统函数是从开始提供[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1。
 
 此系统函数下都适用**标准**并**轻型**查询执行统计信息分析基础结构。  
@@ -78,7 +75,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > TPC C 与工作负荷测试一样，在启用轻型统计信息分析基础结构添加 1.5 到 2%的开销。 与此相反，标准统计信息分析基础结构可以添加多达 90%开销的相同工作负荷方案。
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  要求具有对服务器的 `VIEW SERVER STATE` 权限。  
 
 ## <a name="examples"></a>示例  

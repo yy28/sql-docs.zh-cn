@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d88f2dc9-2933-4be5-9bf3-48ffbc2d0a1a
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5003c84d74f5c75fd840f3bc06f128031f6ffb18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216247"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048427"
 ---
 # <a name="process-data-ssas-tabular"></a>处理数据（SSAS 表格）
   在您在缓存模式下将数据导入表格模型时，您在捕获导入时这些数据的快照。 在某些情况下，这些数据可能永远不会更改并且无需在模型中更新。 但可能性更大的情况是，您所导入的数据定期更改，并且为使您的模型反映数据源中的最新数据，需要处理（刷新）数据并且重新计算已计算的数据。 为了更新模型中的数据，您对所有表、单独表、按分区或者按数据源连接执行处理操作。  

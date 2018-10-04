@@ -1,32 +1,29 @@
 ---
-title: ODBC Visual FoxPro 安装程序对话框中 |Microsoft 文档
+title: ODBC Visual FoxPro 设置对话框 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Visual FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e891cbbdfdf77c49262ca21263a7f5b248a70c27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ec2a9f033c124ab70db996f11179797877c09b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904612"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686435"
 ---
-# <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 安装程序对话框
-**ODBC Visual FoxPro 安装**对话框中，可以添加或更改 Visual FoxPro 数据源。  
+# <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 设置对话框
+**ODBC Visual FoxPro 设置**对话框中，您可以添加或更改 Visual FoxPro 数据源。  
   
  若要下载驱动程序，请参阅[Visual FoxPro ODBC 驱动程序下载站点](http://go.microsoft.com/fwlink/?LinkId=121318)。  
   
@@ -38,40 +35,40 @@ ms.locfileid: "32904612"
  键入数据源的说明。  
   
  **数据库类型**  
- 允许你选择你想要连接到你的数据源的数据库的类型。  
+ 可以选择你想要连接到你的数据源的数据库的类型。  
   
  **Visual FoxPro 数据库 (。DBC)**  
- 指定数据源连接到 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 文件） 和访问所有表和数据库中的本地视图。  
+ 指定数据源连接到 Visual FoxPro[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)（.dbc 文件） 以及所有表和数据库中的本地视图。  
   
  **可用表目录**  
- 指定数据源连接到的目录[释放表](../../odbc/microsoft/visual-foxpro-terminology.md)。 任何[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)位于同一目录中的表，将忽略 ODBC 目录函数如[SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)或[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)。 可以使用通过发送的 SQL SELECT 语句访问数据库表[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)和[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)。  
+ 指定数据源连接到的目录[免费表](../../odbc/microsoft/visual-foxpro-terminology.md)。 任何[数据库](../../odbc/microsoft/visual-foxpro-terminology.md)相同的目录中的表，将忽略 ODBC 目录函数如[SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)或[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)。 可以使用通过发送的 SQL SELECT 语句访问数据库表[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)并[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)。  
   
  **路径**  
- 显示的路径和用于数据库或数据源连接到的可用表的目录的名称。  
+ 显示的路径和名称的数据库或数据源连接的可用表的目录。  
   
- **浏览**  
- 使您可以搜索您的系统和网络中的数据库或你想要连接的数据源的目录。  
+ **“浏览”**  
+ 使您可以搜索您的系统和网络中的数据库或你想要连接到数据源的目录。  
   
- **Options**  
- 展开对话框中，以便您可以设置 Visual FoxPro ODBC 驱动程序选项。  
+ **选项**  
+ 展开此对话框，以便您可以设置 Visual FoxPro ODBC 驱动程序选项。  
   
 ## <a name="driver"></a>驱动程序  
- **排序规则序列**  
- 字段的排序顺序的序列。 默认的序列反映语言版本的操作系统支持的序列。 有关支持的排序规则序列的列表，请参阅[设置 COLLATE](../../odbc/microsoft/set-collate-command.md)。  
+ **对序列进行排序**  
+ 字段的排序顺序的序列。 默认序列反映您的操作系统语言版本支持的序列。 有关受支持的排序规则序列的列表，请参阅[设置 COLLATE](../../odbc/microsoft/set-collate-command.md)。  
   
  **排他**  
- 选中此复选框后，该驱动程序将打开 Visual FoxPro 数据库，以独占方式访问数据源使用的数据时。 当以独占方式打开该数据库，其他用户无法访问数据库或数据库中的表。 为 SHARED 打开以独占方式打开的数据库中的表。 若要以独占方式打开表，请使用[独占设置](../../odbc/microsoft/set-exclusive-command.md)命令。 禁用此复选框时**数据库类型**设置为**可用表目录**。  
+ 选中此复选框，该驱动程序将访问使用数据源的数据时以独占方式打开的 Visual FoxPro 数据库。 以独占方式打开该数据库时，其他用户无法访问数据库或数据库中的表。 以独占方式打开的数据库中的表，则打开为共享。 若要以独占方式打开表，请使用[独占设置](../../odbc/microsoft/set-exclusive-command.md)命令。 禁用此复选框时**数据库类型**设置为**免费表目录**。  
   
  **Null**  
- 确定是否使用 ALTER TABLE 和 CREATE TABLE 创建列允许 null 值。 如果你设置为 Null ON，插入 – SQL 会将 null 值插入到插入-SQL 中不包含任何列...VALUE 子句。 如果为关闭 Null，则将插入空白。 你还可以控制此选项通过传递的连接字符串，如以下代码所示：  
+ 确定是否使用 ALTER TABLE 和 CREATE TABLE 创建的列允许 null 值。 如果设置为 Null ON 时，INSERT-SQL 将 null 值插入到插入-SQL 中不包含任何列...VALUE 子句。 如果 Null 为 OFF，则将插入空白。 此外可以控制此选项在传递的连接字符串，如以下代码所示：  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **删除**  
- 确定是否返回标记为已删除的行。 你还可以控制此选项通过传递的连接字符串，如以下代码所示：  
+ **已删除**  
+ 确定是否返回标记为已删除的行。 此外可以控制此选项在传递的连接字符串，如以下代码所示：  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -79,5 +76,5 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;
 DELETED=YES"  
 ```  
   
- **在后台提取数据**  
- 确定是否将在后台 （渐进式提取） 提取记录或者你的应用程序将等待，直到提取中的结果集的所有记录。
+ **后台提取数据**  
+ 确定是否在后台 （渐进式提取） 中提取的记录，或者你的应用程序将等待，直到提取中的结果集的所有记录。

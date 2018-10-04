@@ -1,36 +1,33 @@
 ---
-title: 存储过程参数限制 |Microsoft 文档
+title: 存储过程参数限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34f3bc435a0bbd514eed4f9ce6100a9cca6b6cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7dc74811bf6cead91850ebd3fcaa8cf64025c80d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848038"
 ---
-# <a name="stored-procedure-parameter-limitations"></a>存储的过程参数限制
+# <a name="stored-procedure-parameter-limitations"></a>存储过程参数限制
 > [!IMPORTANT]  
->  将 Windows 的未来版本中删除该功能。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
+>  此功能将 Windows 的未来版本中删除。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 相反，使用提供的 Oracle 的 ODBC 驱动程序。  
   
- 当运行 Oracle 存储利用 10 的过程或多个输出参数时，存储的过程调用将失败，从而导致访问冲突或 ActiveX 数据对象 (ADO) 错误。 这可以使用 Microsoft ODBC Driver for Oracle 具有发生版本 8.0.4.0.0 和 8.0.4.0.4 Oracle 客户端软件。  
+ 当运行 Oracle 的存储过程，利用 10 或多个输出参数时，存储的过程调用将失败，从而导致访问冲突或 ActiveX 数据对象 (ADO) 错误。 使用 Microsoft ODBC Driver for Oracle 版本 8.0.4.0.0 和 8.0.4.0.4 Oracle 客户端软件可以发生该错误。  
   
- 若要解决此问题，Oracle 客户端软件必须是升级到版本 8.0.4.2.0 或更高版本。 有关详细信息的联系人 Oracle Corporation[修补程序](../../odbc/microsoft/oracle-software-patches.md)。  
+ 若要更正此问题，必须升级到版本 8.0.4.2.0 或更高版本的 Oracle 客户端软件。 有关详细信息联系 Oracle Corporation[修补程序](../../odbc/microsoft/oracle-software-patches.md)。  
   
 > [!NOTE]  
->  Oracle 客户端软件版本 8.0.3.0.0 的早期版本时不会出现此问题。
+>  与早期版本的 Oracle 客户端软件版本 8.0.3.0.0 不会出现此问题。

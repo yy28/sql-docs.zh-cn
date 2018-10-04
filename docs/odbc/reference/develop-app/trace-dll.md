@@ -1,34 +1,31 @@
 ---
-title: 跟踪 DLL |Microsoft 文档
+title: 跟踪 DLL |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - trace DLLs [ODBC]
 - tracing options [ODBC], trace DLLs
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4eaee86f6b1f47f2ce97fda2960409c2ac2d5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7a99f6c2960600d62a789471f68c1f5da89ae8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647835"
 ---
 # <a name="trace-dll"></a>跟踪 DLL
-执行跟踪的 DLL 是 ODBC 核心组件之一。 以前，的跟踪 DLL 作为 Windows SDK 的 ODBC 组件中的示例 DLL 当前提供，已包括 Microsoft 数据访问组件 (MDAC) SDK。 因此，注册表项、 接口和跟踪 DLL 的示例代码将可用。 可以由跟踪由 ODBC 用户或第三方供应商的 DLL 替换此 DLL。 自定义跟踪 DLL 应不同于原始示例跟踪 DLL 的名称。 跟踪 Dll 必须安装在系统目录中，否则它们将无法加载。 连接字符串将不会传递到跟踪 DLL 的驱动程序管理器。  
+执行跟踪的 DLL 是 ODBC 核心组件之一。 跟踪 DLL 作为 Windows SDK 的 ODBC 组件中的示例 DLL 当前提供和了以前包含 Microsoft 数据访问组件 (MDAC) SDK。 因此，注册表项、 接口和跟踪 DLL 的示例代码都可用。 此 DLL 可由跟踪 DLL ODBC 用户或第三方供应商生成的替换。 应为自定义跟踪 DLL 提供不同于原始示例跟踪 DLL 的名称。 跟踪 Dll 必须安装在系统目录中，否则它们将无法加载。 连接字符串将不会传递到跟踪 DLL 由驱动程序管理器。  
   
- 跟踪 DLL 跟踪输入自变量、 输出自变量、 延迟的自变量、 返回代码和 SQLSTATEs。 当启用了跟踪时，驱动程序管理器将调用跟踪 DLL，在两个点： 一次在函数入口 （之前参数验证），再次只是该函数将返回之前。  
+ 跟踪 DLL 跟踪输入的参数、 输出自变量、 延迟的参数、 返回代码和 SQLSTATEs。 驱动程序管理器启用跟踪后，调用跟踪 DLL 在两个点： 一次在函数入口 （之前参数验证），然后再次就该函数将返回之前。  
   
- 当应用程序调用一个函数时，驱动程序管理器跟踪在驱动程序中调用函数或处理调用本身之前的 DLL 中调用跟踪函数。 每个 ODBC 函数有一个相应的跟踪函数 (前缀为*跟踪*) 与 ODBC 函数除名称外完全相同。 当调用跟踪函数时，跟踪 DLL 捕获的输入的参数和返回的返回代码。 因为跟踪 DLL 称为之前驱动程序管理器验证自变量，无效的函数调用跟踪，以便记录状态转换错误和无效自变量。  
+ 当应用程序调用一个函数时，驱动程序管理器跟踪在驱动程序中调用函数或处理本身的调用之前的 DLL 中调用跟踪函数。 每个 ODBC 函数有一个相应的跟踪函数 (带有前缀*跟踪*) 这是除名称外的 ODBC 函数相同。 当调用跟踪函数时，跟踪 DLL 捕获的输入的参数和返回返回代码。 之前驱动程序管理器验证自变量调用跟踪 DLL，因为要跟踪无效的函数调用，因此记录状态转换错误和无效的参数。  
   
- 在调用之后跟踪函数跟踪 DLL 中，驱动程序管理器调用 ODBC 函数驱动程序中。 然后，它调用**TraceReturn**跟踪 DLL 中。 此函数采用两个参数： 跟踪 DLL 对于跟踪函数中，返回的值并返回由驱动程序到驱动程序管理器 ODBC 函数的返回代码 （或如果它处理了该函数返回由驱动程序管理器本身的值）。 该函数使用跟踪函数返回的值捕获的输入的参数值进行操作。 它将写入到日志文件 ODBC 函数返回的代码 （或动态，显示它，如果启用）。 它输出自变量指针取消引用和日志的输出参数值。
+ 在调用之后跟踪函数跟踪 DLL 中，驱动程序管理器调用驱动程序中的 ODBC 函数。 然后，它调用**TraceReturn**跟踪 DLL 中。 此函数采用两个参数： 跟踪 DLL 跟踪函数返回的值并返回由驱动程序的驱动程序管理器的 ODBC 函数的返回代码 （或如果处理该函数返回由驱动程序管理器本身的值）。 该函数使用的跟踪函数返回值来操作捕获的输入的参数值。 它将写入到日志文件的 ODBC 函数返回的代码 （或如果启用，则将其动态地显示）。 它输出自变量指针取消引用和日志输出自变量值。

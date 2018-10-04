@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc23abf114ce4458f40051db3d2bb86b667efca5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758615"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +87,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |返回代码|Description|  
 |-----------------|-----------------|  
 |0|没有错误。|  
-|@shouldalert|未知错误。|  
+|1|未知错误。|  
 |2|本跟踪当前正在运行。 更改跟踪，在此时间会导致错误。|  
 |4|指定的列不是有效的。|  
 |5|不允许筛选指定的列。 只能从返回此值**sp_trace_setfilter**。|  
@@ -101,14 +97,14 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|内存不足。 在没有足够内存执行指定的操作时返回此代码。|  
 |16|该函数对此跟踪无效。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **sp_trace_setfilter**是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程，它执行以前由早期版本中可用的扩展存储过程执行的操作的许多[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用**sp_trace_setfilter**而不是**xp_trace_set\*筛选器**扩展存储的过程来创建，将应用、 删除或操作上跟踪的筛选器。 有关详细信息，请参阅[筛选跟踪](../../relational-databases/sql-trace/filter-a-trace.md)。  
   
  中的一个执行必须一起启用特定列的所有筛选器**sp_trace_setfilter**。 例如，如果用户想对应用程序名称列应用两个筛选器，对用户名列应用一个筛选器，则用户必须按顺序对应用程序名称指定筛选器。 如果用户试图在一次存储过程调用中先对应用程序名称指定一个筛选器，接着对用户名指定筛选器，然后对应用程序名称指定另一个筛选器，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
  参数的所有 SQL 跟踪存储过程 (**sp_trace_xx**) 已严格类型化。 如果这些参数不是使用正确的输入参数数据类型（正如参数说明中指定的一样）调用的，则存储过程会返回错误。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  用户必须拥有 ALTER TRACE 权限。  
   
 ## <a name="examples"></a>示例  

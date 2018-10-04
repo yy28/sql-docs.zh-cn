@@ -1,31 +1,28 @@
 ---
-title: SQLAllocStmt 映射 |Microsoft 文档
+title: SQLAllocStmt 映射 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLAllocStmt
 - SQLAllocStmt function [ODBC], mapping
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09c8b93369bcdcddcead96b33438dcae16f3c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 330c245d8b5839fd8a721a7399a22edea78a2417
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819965"
 ---
 # <a name="sqlallocstmt-mapping"></a>SQLAllocStmt 映射
-在应用程序调用**SQLAllocStmt**到 ODBC 3 *.x*驱动程序，将会调用：  
+当应用程序调用**SQLAllocStmt**通过 ODBC 3 *.x*驱动程序，将会调用：  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  
@@ -37,4 +34,4 @@ SQLAllocStmt(hdbc, phstmt)
 SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)  
 ```  
   
- 与*InputHandle*设置为*hdbc*和*OutputHandlePtr*设置为*phstmt*。
+ 与*InputHandle*设置为*hdbc*并*OutputHandlePtr*设置为*phstmt*。

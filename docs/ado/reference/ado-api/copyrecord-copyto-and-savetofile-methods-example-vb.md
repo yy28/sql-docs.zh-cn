@@ -1,13 +1,11 @@
 ---
-title: CopyRecord、 CopyTo，以及 SaveToFile 方法示例 (VB) |Microsoft 文档
+title: CopyRecord、 CopyTo 和 SaveToFile 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - SaveToFile method [ADO], Visual Basic example
 - CopyTo method [ADO], Visual Basic example
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 213a9aaa3556700bbbe0f88200796a524c65f5e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601675"
 ---
-# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo，以及 SaveToFile 方法示例 (VB)
-此示例演示如何创建的文件使用副本[流](../../../ado/reference/ado-api/stream-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 Internet 发布的 Web 文件夹创建一个副本。 其他属性和方法显示包括[流类型](../../../ado/reference/ado-api/type-property-ado-stream.md)，**打开**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，和[记录打开](../../../ado/reference/ado-api/open-method-ado-record.md)。  
+# <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo 和 SaveToFile 方法示例 (VB)
+此示例演示如何创建的文件使用副本[Stream](../../../ado/reference/ado-api/stream-object-ado.md)或[记录](../../../ado/reference/ado-api/record-object-ado.md)对象。 一个副本对 Internet 发布的 Web 文件夹。 包括其他属性和方法所示[Stream 类型](../../../ado/reference/ado-api/type-property-ado-stream.md)，**打开**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，以及[记录打开](../../../ado/reference/ado-api/open-method-ado-record.md)。  
   
 ```  
 'BeginCopyRecordVB  
@@ -133,8 +130,8 @@ End Sub
  [CopyTo 方法 (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
  [LoadFromFile 方法 (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
  [Open 方法 （ADO 记录）](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open 方法 （ADO 流）](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Open 方法 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [记录对象 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [SaveToFile 方法](../../../ado/reference/ado-api/savetofile-method.md)   
- [流对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
+ [Stream 对象 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type 属性（ADO 流）](../../../ado/reference/ado-api/type-property-ado-stream.md)

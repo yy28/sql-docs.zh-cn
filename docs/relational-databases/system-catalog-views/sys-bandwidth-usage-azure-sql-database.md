@@ -5,11 +5,7 @@ ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -26,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1accec58750bfd4a3806308252113a6c2aecc2ac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031110"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603845"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ ms.locfileid: "43031110"
 ## <a name="permissions"></a>Permissions  
  此视图选项仅适用于**主**与服务器级别主体登录名的数据库。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
 ### <a name="external-and-internal-classes"></a>External 和 Internal 类别  
  在给定时间，使用每个数据库**sys.bandwidth_usage**视图返回显示的类和方向的带宽使用情况的行。 下例列举给定数据库可能公开的数据。 在此示例中，时间为 2012-04-21 17:00: 00，即发生在高峰时段。 数据库名称为 Db1。 在此示例中， **sys.bandwidth_usage**已返回一行，为 Ingress 和 Egress 方向以及 External 和 Internal 类别的所有四种组合，如下所示：  

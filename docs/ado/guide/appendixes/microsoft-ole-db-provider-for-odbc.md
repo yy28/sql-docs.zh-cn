@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a13b9051bafa40ed61d1aecce6f5b47cf4a8f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982159"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638305"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 概述
 到 ADO 或 RDS 的程序员来说，理想情况下将是一个中的每个数据源公开 OLE DB 接口，以便 ADO 无法直接调用到数据源。 尽管越来越多的数据库供应商实现 OLE DB 接口，但某些数据源是尚未公开这种方式。 但是，可以通过 ODBC 访问大多数系统 （DBMS） 目前所用。
@@ -64,7 +61,7 @@ MSDASQL
  由于这是默认的提供程序用于 ADO 中，如果省略**提供程序 =** 将参数从连接字符串，ADO 将尝试建立与此提供程序的连接。
 
 > [!NOTE]
->  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应该指定**Trusted_Connection = 是**或**集成安全性 = SSPI**而不是用户 ID 和密码连接字符串中的信息。
+>  如果您要连接到的数据源提供程序支持 Windows 身份验证，则应指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是用户 ID 和密码在连接字符串中的信息。
 
  提供程序不支持除 ADO 定义的任何特定的连接参数。 但是，该提供程序会将任何非 ADO 连接参数传递到 ODBC 驱动程序管理器。
 
@@ -84,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>备注
  如果您使用**DSN**或**FileDSN**，必须定义通过 ODBC 数据源管理器在 Windows 控制面板中。 在 Microsoft Windows 2000 中，ODBC 管理器位于管理工具。 在早期版本的 Windows 中，名为 ODBC 管理器图标**32 位 ODBC**或仅**ODBC**。
 
  作为设置的替代方法**DSN**，可以指定 ODBC 驱动程序 (**驱动程序 =**)，例如"SQL Server;"服务器名称 (**SERVER =**); 和数据库名称 (**数据库 =**)。
@@ -204,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |方法|ForwardOnly|Dynamic|Keyset|静态|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|是|是|是|是|
-|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|是|是|是|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|是|是|是|是|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|是|是|是|是|
-|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|“否”|否|是|是|
-|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|是|是|是|是|
-|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|是|是|是|是|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|是|是|是|
-|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|是|是|是|是|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|“否”|是|是|是|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|是|是|是|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|“否”|是|是|是|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|是|是|是|是|
-|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|是|是|是|是|
-|[再次查询](../../../ado/reference/ado-api/requery-method.md)|是|是|是|是|
-|[重新同步](../../../ado/reference/ado-api/resync-method.md)|“否”|否|是|是|
-|[支持](../../../ado/reference/ado-api/supports-method.md)|是|是|是|是|
-|[Update](../../../ado/reference/ado-api/update-method.md)|是|是|是|是|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|是|是|是|是|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[克隆](../../../ado/reference/ado-api/clone-method-ado.md)|否|否|是|用户帐户控制|
+|[关闭](../../../ado/reference/ado-api/close-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[删除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|用户帐户控制|是|是|用户帐户控制|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[“移动”](../../../ado/reference/ado-api/move-method-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|用户帐户控制|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|用户帐户控制|是|是|用户帐户控制|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|否|是|是|用户帐户控制|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|用户帐户控制|是|是|用户帐户控制|
+|[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)|用户帐户控制|是|是|用户帐户控制|
+|[再次查询](../../../ado/reference/ado-api/requery-method.md)|用户帐户控制|是|是|用户帐户控制|
+|[重新同步](../../../ado/reference/ado-api/resync-method.md)|否|否|是|用户帐户控制|
+|[支持](../../../ado/reference/ado-api/supports-method.md)|用户帐户控制|是|是|用户帐户控制|
+|[Update](../../../ado/reference/ado-api/update-method.md)|用户帐户控制|是|是|用户帐户控制|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|用户帐户控制|是|是|用户帐户控制|
 
  * 不受支持的 Microsoft Access 数据库。
 

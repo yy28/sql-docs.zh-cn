@@ -1,13 +1,11 @@
 ---
-title: 有关 COM 的 Visual c + + 语法索引的 ADO |Microsoft 文档
+title: ADO for Visual c + + 语法索引 com |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28753a50e8fea591c266db27e8121256869b1d6e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789468"
 ---
-# <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO COM 的 Visual c + + 语法索引
+# <a name="ado-for-visual-c-syntax-index-for-com"></a>用于 COM 的 ADO for Visual C++ 语法索引‎
 此索引是对基于 Microsoft Visual c + + ADO 语言参考的交叉引用。  
   
- 如果你使用 **#import**指令应用程序中，标头将生成文件，使你可以使用类似到 Microsoft Visual Basic 的语法。 在窗体的属性名称 **get_ * * * PropertyName*和 **put_ * * * PropertyName*就像它们已声明为可视为*PropertyName*。 然后可以如同而不是函数的数据成员一样处理属性。  
+ 如果您使用 **#import**指令在应用程序中，标头将生成文件，使您可以使用 Microsoft Visual Basic 类似的语法。 窗体的属性名称 **get_ * * * PropertyName*和 **put_ * * * PropertyName*可以视为如同它们声明为*PropertyName*。 然后可以将属性视为而不是函数的数据成员。  
   
- 所有方法、 属性和事件都返回的函数**HRESULT**，其中你可以对其进行测试以确定是否函数成功执行。  
+ 所有方法、 属性和事件都返回的函数**HRESULT**，其中进行测试以确定是否函数成功执行。  
   
- Visual c + + 中的方法和属性的语法被列出的以下元素：  
+ 在 Visual c + + 中的方法和属性语法列出的以下元素：  
   
 -   [集合](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
@@ -52,8 +49,8 @@ ms.locfileid: "35275506"
   
 -   [记录集对象](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
--   [流对象](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Stream 对象](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>请参阅  
- [ADO 的 Visual c + + 语法 #import 索引](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [ADO for Visual c + + 语法索引与 #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX 数据对象 (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

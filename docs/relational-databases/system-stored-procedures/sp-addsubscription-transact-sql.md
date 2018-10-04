@@ -3,13 +3,10 @@ title: sp_addsubscription (TRANSACT-SQL) |Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -20,12 +17,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663525"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|@shouldalert|一次|  
+|1|一次|  
 |2|按需|  
 |4|每天|  
 |8|每周|  
@@ -164,7 +161,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|@shouldalert|第一个|  
+|1|第一个|  
 |2|第二个|  
 |4|第三个|  
 |8|第四个|  
@@ -179,7 +176,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
-|@shouldalert|一次|  
+|1|一次|  
 |2|第二个|  
 |4|Minute|  
 |8|Hour|  
@@ -283,7 +280,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0（默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 订阅服务器|  
-|@shouldalert|ODBC 数据源服务器|  
+|1|ODBC 数据源服务器|  
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 数据库|  
 |3|OLE DB 访问接口|  
   
@@ -293,7 +290,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>返回代码值  
  0（成功）或 1（失败）  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  sp_addsubscription 用于快照复制和事务复制。  
   
  当 sysadmin 固定服务器角色的成员执行 sp_addsubscription 以创建推送订阅时，将隐式创建分发代理作业并将在 SQL Server 代理服务帐户下运行该作业。 我们建议您执行[sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)并指定不同的、 特定于代理的 Windows 帐户凭据@job_login和@job_password。 有关详细信息，请参阅 [复制代理安全模式](../../relational-databases/replication/security/replication-agent-security-model.md)。  

@@ -1,32 +1,29 @@
 ---
-title: 键入属性示例 （字段） (VB) |Microsoft 文档
+title: 键入属性示例 （字段） (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 700ceebeb78f1cda3d609255bd5406fd711900f1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ab419055687e7715e71005f2d231300269c2868f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282636"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811805"
 ---
-# <a name="type-property-example-field-vb"></a>类型属性示例 （字段） (VB)
-此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性[类型](../../../ado/reference/ado-api/type-property-ado.md)的所有属性[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 有关运行此过程需要 FieldType 函数。  
+# <a name="type-property-example-field-vb"></a>Type 属性示例（字段）(VB)
+此示例演示[类型](../../../ado/reference/ado-api/type-property-ado.md)通过显示的值相对应的常数的名称的属性[类型](../../../ado/reference/ado-api/type-property-ado.md)属性的所有[字段](../../../ado/reference/ado-api/field-object.md)中的对象***员工***表。 若要运行此过程需要 FieldType 函数。  
   
 ```  
 'BeginTypeFieldVB  

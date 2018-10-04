@@ -1,14 +1,11 @@
 ---
-title: sys.fn_validate_plan_guide (TRANSACT-SQL) |Microsoft 文档
+title: sys.fn_validate_plan_guide (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_validate_plan_guide
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - fn_validate_plan_guide function
 - sys.fn_validate_plan_guide function
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b941fabfd4ebbd3ca41375622bf682f12b0fc26
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236187"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798305"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="arguments"></a>参数  
  *plan_guide_id*  
- 为计划指南的 ID 中报告[sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目录视图。 *plan_guide_id*是**int**无默认值。  
+ 是的计划指南 ID 中报告[sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)目录视图。 *plan_guide_id*是**int** ，无默认值。  
   
 ## <a name="table-returned"></a>返回的表  
   
@@ -57,10 +53,10 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|错误消息的 ID。|  
 |severity|**tinyint**|消息的严重级别，在 1 到 25 之间。|  
-|state|**int**|错误的状态号，用于指示发生错误的代码位置。|  
+|state|**smallint**|错误的状态号，用于指示发生错误的代码位置。|  
 |message|**nvarchar(2048)**|错误的消息正文。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  OBJECT 作用域的计划指南要求对被引用的对象具有 VIEW DEFINITION 或 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  
   
  SQL 或 TEMPLATE 作用域的计划指南要求对数据库具有 ALTER 权限，并要求具有编译计划指南中提供的查询或批处理的权限。 例如，如果批处理包含 SELECT 语句，则需要具有对被引用对象的 SELECT 权限。  
@@ -80,7 +76,7 @@ GO
 ```  
   
 ### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. 在对数据库实施更改前测试计划指南的有效性  
- 下面的示例使用显式事务删除索引。 `sys.fn_validate_plan_guide`函数执行，以确定数据库中的任何计划指南将使此操作无效。 基于此函数的结果，将提交 `DROP INDEX` 语句或回滚事务，并且不删除索引。  
+ 下面的示例使用显式事务删除索引。 `sys.fn_validate_plan_guide`执行函数来确定数据库中的任何计划指南将使此操作无效。 基于此函数的结果，将提交 `DROP INDEX` 语句或回滚事务，并且不删除索引。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -97,7 +93,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [计划指南](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

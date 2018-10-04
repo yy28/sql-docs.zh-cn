@@ -1,29 +1,25 @@
 ---
-title: 卸载扩展存储过程 DLL |Microsoft 文档
+title: 卸载扩展存储过程 DLL |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], unloading
 - unloading extended stored procedures
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 216bcba69d2a84414f638c4129ec6d21f1c4c257
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7f05ad92e5e5264801302f2f1e64c76478141d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603121"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>卸载扩展存储过程 DLL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +27,13 @@ ms.locfileid: "32934512"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 请改用 CLR 集成。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 立即加载的 DLL 函数之一进行调用扩展存储的过程 DLL。 该 DLL 会始终保持加载状态，直到服务器关闭或者系统管理员使用 DBCC 语句将其卸载。 例如，此命令卸载**xp_hello.dll**，允许系统管理员联系，以将此文件的较新版本复制到目录，而无需关闭服务器：  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 立即加载到该 DLL 的函数之一进行调用扩展存储的过程 DLL。 该 DLL 会始终保持加载状态，直到服务器关闭或者系统管理员使用 DBCC 语句将其卸载。 例如，此命令将卸载**xp_hello.dll**，允许系统管理员联系，以将此文件的较新版本复制到目录，而无需关闭服务器：  
   
 ```  
 DBCC xp_hello(FREE)  
 ```  
   
-## <a name="see-also"></a>另请参阅  
- [DBCC dll 名称&#40;免费&#41; &#40;Transact SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
+## <a name="see-also"></a>请参阅  
+ [DBCC dllname&#40;免费&#41; &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
   
   

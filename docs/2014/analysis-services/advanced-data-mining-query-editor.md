@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27e7fc46-689d-43a4-9647-1c27d182bdd6
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 75347810fafa87828dd09653059e9a403a1892ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167664"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072797"
 ---
 # <a name="advanced-data-mining-query-editor"></a>高级数据挖掘查询编辑器
   **数据挖掘查询高级编辑器**是一种工具来帮助您构建自定义模型和查询。  

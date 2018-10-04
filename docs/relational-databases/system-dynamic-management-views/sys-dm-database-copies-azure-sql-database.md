@@ -5,10 +5,7 @@ ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_database_copies_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9b2e5b7b257ea0a22cf847f4e28f58c3c89a2d68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d11f152d4d3d929baeab04cbf44e3a4b2848f456
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640465"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -62,10 +58,10 @@ ms.locfileid: "38061475"
 |**is_interlink_connected**|bit|保留的字段。|  
 |**is_offline_secondary**|bit|保留的字段。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  此视图选项仅适用于**主**与服务器级别主体登录名的数据库。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  可以使用**sys.dm_database_copies**中查看**主**数据库的源或目标[!INCLUDE[ssSDS](../../includes/sssds-md.md)]服务器。 当数据库复制成功完成且新数据库变为 ONLINE 之后中的行**sys.dm_database_copies**自动删除视图。  
   
   

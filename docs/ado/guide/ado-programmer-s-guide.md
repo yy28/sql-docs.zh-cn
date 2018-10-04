@@ -1,30 +1,27 @@
 ---
-title: ADO 程序员&#39;s 指南 |Microsoft 文档
+title: ADO 程序员&#39;指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744e81b9da4e44b604350e13da7ab10cb9e825b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e78700456c26fda0a71da9219fc5d244abeec8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761195"
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 程序员&#39;s 指南针对使用 ADO 对象
-本文档概述了如何使用 ADO 对象以便使用来自各种数据源的数据。 首先，简介总结了新功能，以及安装、 使用和重新分发 ADO 组件的要求。 下一步的各节讨论 ADO 对象的各种类型使用。 最后，附录中讨论各种 Microsoft 提供的数据和服务提供商、 错误消息和提示有关如何以多种编程语言，除了示例和术语表使用 ADO。
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO 程序员&#39;s 指南来使用 ADO 对象
+本文档概述了如何使用 ADO 对象来处理来自各种数据源的数据。 首先，引入总结了新功能和安装、 使用和重新分发 ADO 组件的要求。 接下来的部分讨论 ADO 对象的各种类型的使用。 最后，附录中讨论各种 Microsoft 提供的数据和服务提供商、 错误消息和提示有关如何在之外的其他示例和术语表的多个编程语言中使用 ADO。
 
  本部分包含以下主题。
 
@@ -38,4 +35,4 @@ ms.locfileid: "35271017"
 
 -   [数据定义语言和安全性的 ADO 扩展 (ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [附录中](../../ado/guide/appendixes/ado-appendixes.md)
+-   [附录](../../ado/guide/appendixes/ado-appendixes.md)

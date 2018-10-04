@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036269"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799428"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ sp_enum_login_for_proxy
 |**名称**|**sysname**|关联的安全主体服务器的名称。|  
 |**flag**|**int**|安全主体服务器的类型。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名<br /><br /> **1** = 固定的系统角色<br /><br /> **2** = 中的数据库角色**msdb**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果不提供任何参数， **sp_enum_login_for_proxy**列出了每个代理有关的实例中的所有登录名的信息。  
   
  如果提供代理 id 或代理名称， **sp_enum_login_for_proxy**列出有权访问代理的登录名。 如果登录名，则**sp_enum_login_for_proxy**代理登录名具有访问权限的列表。  

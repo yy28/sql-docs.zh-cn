@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 18456 (Database Engine error)
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0221b5775c0127624b4226893f294da6ef6fdaf5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5fe75f73a8e332682ee9511f338813946f5e2a31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055917"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -65,7 +62,7 @@ ms.locfileid: "37415896"
   
 |State|Description|  
 |-----------|-----------------|  
-|@shouldalert|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
+|1|无法获得错误信息。 此状态通常意味着您不拥有接收错误详细信息的权限。 请联系 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理员以获得详细信息。|  
 |2|用户 ID 无效。|  
 |5|用户 ID 无效。|  
 |6|尝试同时使用 SQL Server 身份验证与 Windows 登录名。|  

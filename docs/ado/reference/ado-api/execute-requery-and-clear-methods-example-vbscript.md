@@ -1,13 +1,11 @@
 ---
-title: 执行、 重新执行查询，并清除方法示例 (VBScript) |Microsoft 文档
+title: 执行、 再次查询和清除方法示例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,23 +14,22 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 900bacb5c71a5a3ba7d55fa6d3e2d84d6e1c0e60
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 48028d073c7ab3d730a0af5c433d1a8f0c8f2de8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278076"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727125"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>执行、 重新执行查询，并清除方法示例 (VBScript)
-此示例演示**执行**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[Requery](../../../ado/reference/ado-api/requery-method.md)方法来检索当前数据中的[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，和[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 ExecuteCommand 和 PrintOutput 过程所需运行此过程。  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>执行、 再次查询和清除方法示例 (VBScript)
+此示例演示**Execute**方法从这两个运行时[命令](../../../ado/reference/ado-api/command-object-ado.md)对象和一个[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象。 它还使用[再次查询](../../../ado/reference/ado-api/requery-method.md)方法来检索中的当前数据[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)，并[清除](../../../ado/reference/ado-api/clear-method-ado.md)方法以清除的内容[错误](../../../ado/reference/ado-api/errors-collection-ado.md)集合。 若要运行此过程需要 ExecuteCommand 和 PrintOutput 过程。  
   
- 使用下面的示例活动服务器页面 (ASP)。 若要查看此完全正常运行的示例，必须具有数据源 AdvWorks.mdb （随 SDK 示例一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑到的代码示例中的路径反映此文件的实际位置。 这是 Microsoft Access 数据库文件。  
+ 使用下面的示例 Active Server Page (ASP)。 若要查看此示例中完全正常运行，必须具有数据源 AdvWorks.mdb （随 SDK 示例一起安装） 位于 C:\Program Files\Microsoft 平台 SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb 或编辑的示例代码中的路径反映此文件的实际位置。 这是 Microsoft Access 数据库文件。  
   
- 使用**查找**找到文件 Adovbs.inc 并将其放置在你打算使用的目录中。 剪切和将下面的代码粘贴到记事本或其他文本编辑器，并将其保存为**ExecuteVBS.asp**。 你可以在任何客户端浏览器中查看的结果。  
+ 使用**查找**找到 Adovbs.inc 的文件并将它放置在你打算使用的目录中。 剪切并将以下代码粘贴到记事本或其他文本编辑器，并将其保存为**ExecuteVBS.asp**。 你可以在任何客户端浏览器中查看结果。  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -187,7 +184,7 @@ BODY {
  [连接对象 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [错误对象](../../../ado/reference/ado-api/error-object.md)   
  [错误集合 (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [执行方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [执行方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
+ [Execute 方法 （ADO 命令）](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Execute 方法 （ADO 连接）](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
  [记录集对象 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery 方法](../../../ado/reference/ado-api/requery-method.md)

@@ -1,29 +1,26 @@
 ---
-title: 故障排除 (OracleToSQL) |Microsoft 文档
+title: 故障排除 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5c42002b789eb9572ddcd5a653af16798d6d2297
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3b52dd2347e4c7b22e273abde4d6687a520d5b19
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778003"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635965"
 ---
 # <a name="troubleshooting-oracletosql"></a>故障排除 (OracleToSQL)
-并不少见运行迁移问题中途执行控制台脚本或命令。  
+不常见遇到迁移问题正好执行控制台脚本或命令。  
   
-可能与可修复的错误：  
+可修复的错误可能会涉及到了：  
   
 1.  函数  
   
@@ -33,9 +30,9 @@ ms.locfileid: "34778003"
   
 4.  触发器  
   
-5.  修改数据类型  
+5.  修改的数据类型  
   
 6.  更改项目设置  
   
-可以通过打开通过控制台创建的项目文件中使用的 SSMA 用户界面修复了问题。  
+可以通过打开通过控制台创建的项目文件使用 SSMA 用户界面修复了问题。  
   

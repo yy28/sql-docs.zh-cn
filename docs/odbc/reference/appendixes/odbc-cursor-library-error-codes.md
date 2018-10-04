@@ -1,60 +1,57 @@
 ---
-title: ODBC 游标库错误代码 |Microsoft 文档
+title: ODBC 游标库错误代码 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor library [ODBC], error codes
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26469f2d439c032b1d4f5f377cc9aab4a4189fae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691125"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 游标库错误代码
 > [!IMPORTANT]  
->  Microsoft 数据访问组件的未来版本中，将删除该功能。 避免在新的开发工作中使用此功能，并计划修改当前使用此功能的应用程序。 相反，使用驱动程序和服务器游标。  
+>  Microsoft 数据访问组件的未来版本中，将删除此功能。 避免在新的开发工作中使用此功能并计划修改当前使用此功能的应用程序。 相反，使用驱动程序和服务器游标。  
   
- ODBC 游标库返回除中列出以下 SQLSTATEs [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  
+ ODBC 游标库返回除了所列出的以下 SQLSTATEs [ODBC API 参考](../../../odbc/reference/syntax/odbc-api-reference.md)。  
   
 > [!NOTE]  
->  游标库不排序状态记录。驱动程序管理器和 ODBC 3。*x*驱动程序负责排序状态记录。  
+>  游标库不排序状态记录;驱动程序管理器和 ODBC 3。*x*驱动程序负责排序状态记录。  
   
 |SQLSTATE|Description|可以从返回|  
 |--------------|-----------------|--------------------------|  
-|01000|游标不是可更新的。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|01000|未使用的游标库。 加载失败。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|未使用的游标库。 没有足够的驱动程序支持。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
-|01000|未使用的游标库。 版本不匹配与驱动程序管理器。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|游标是不可更新。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|01000|不使用游标库。 加载失败。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|不使用游标库。 没有足够的驱动程序支持。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
+|01000|不使用游标库。 版本不匹配的驱动程序管理器。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|驱动程序返回 SQL_SUCCESS_WITH_INFO。 警告消息已丢失。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|常规错误： 无法创建文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|常规错误： 无法从文件缓冲区读取。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|常规错误： 无法写入文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|常规错误： 无法关闭或删除文件缓冲区。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
-|SL001|无法执行定位的请求，因为没有可搜索的列绑定。|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
-|SL002|无法执行定位的请求，因为结果集由联接条件。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
-|SL003|绑定的缓冲区超出最大的段大小。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL004|结果集不生成通过**选择**语句。|**SQLGetData**|  
+|返回 S1000|常规错误： 无法创建文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|返回 S1000|常规错误： 无法从文件缓冲区读取。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|返回 S1000|常规错误： 无法写入文件缓冲区。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|返回 S1000|常规错误： 无法关闭或删除文件缓冲区。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|SL001|不能执行定位的请求，因为没有可搜索的列绑定。|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
+|SL002|无法执行定位的请求，因为联接条件创建结果集。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
+|SL003|绑定的缓冲区超出了最大段大小。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL004|通过不生成结果集**选择**语句。|**SQLGetData**|  
 |SL005|**选择**语句包含 GROUP BY 子句。|**SQLGetData**|  
 |SL006|参数数组不支持定位请求。|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
-|SL008|**SQLGetData**上只进的 （非缓冲） 游标不允许。|**SQLGetData**|  
+|SL008|**SQLGetData**不允许对只进的 （非缓冲） 游标。|**SQLGetData**|  
 |SL009|没有列绑定之前调用**SQLFetch**或**SQLFetchScroll**。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|SL010|**SQLBindCol**返回 SQL_ERROR 在尝试将绑定到的内部缓冲区的过程。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|SL011|仅在调用之后的语句选项才有效**SQLFetch**或**SQLFetchScroll**。|**SQLGetStmtAttr**|  
+|SL010|**SQLBindCol**期间尝试绑定到的内部缓冲区返回 SQL_ERROR。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|SL011|语句选项仅在调用后才有效**SQLFetch**或**SQLFetchScroll**。|**SQLGetStmtAttr**|  
 |SL012|打开游标时，不能更改语句绑定。|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|发出定位的请求，并不是所有的列计数字段已缓冲处理。|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
-|SL015|**SQLFetch**和**SQLFetchScroll**不能混合。|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+|SL015|**SQLFetch**并**SQLFetchScroll**不能混合。|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

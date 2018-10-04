@@ -1,44 +1,41 @@
 ---
-title: 编写你自己的自定义处理程序 |Microsoft 文档
+title: 编写你自己的自定义处理程序 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9cb903d276357e46489dbdcd316d4f3974087a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ced8796278ffab61b5f4e45b687e8059bb34255f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680195"
 ---
-# <a name="writing-your-own-customized-handler"></a>编写你自己的自定义处理程序
-你可能想要编写你自己的处理程序是否的 IIS 服务器，则管理员希望获得的默认的 RDS 支持，但更好地控制用户请求和访问权限。  
+# <a name="writing-your-own-customized-handler"></a>编写自己的自定义处理程序
+你可能想要编写自己的处理程序，如果您是 IIS 服务器管理员，并且希望获得的默认的 RDS 支持，但更好地控制用户请求和访问权限。  
   
  MSDFMAP。处理程序实现**IDataFactoryHandler**接口。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性手册](https://www.microsoft.com/en-us/download/details.aspx?id=27416)有关详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 接口  
- 此接口有两种方法， **GetRecordset**和**重新连接**。 这两种方法需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
+ 此接口有两个方法**GetRecordset**并**重新连接**。 这两种方法需要[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)属性设置为**adUseClient**。  
   
- 这两种方法采用第一个逗号后显示的自变量"**处理程序 =**"关键字。 例如，`"Handler=progid,arg1,arg2;"`将传递的一个自变量字符串`"arg1,arg2"`，和`"Handler=progid"`将传递的 null 参数。  
+ 这两种方法采用中第一个逗号后显示的自变量"**处理程序 =**"关键字。 例如，`"Handler=progid,arg1,arg2;"`将传递的参数字符串，其中`"arg1,arg2"`，和`"Handler=progid"`将传递 null 参数。  
   
 ## <a name="getrecordset-method"></a>GetRecordset 方法  
- 此方法会查询其数据源并创建一个新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象使用提供的参数。 **记录集**必须使用打开**adLockBatchOptimistic** ，所以只能不以异步方式打开。  
+ 此方法将查询数据源，创建一个新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象使用提供的参数。 **记录集**必须使用打开**adLockBatchOptimistic** ，必须以异步方式打开。  
   
 ### <a name="arguments"></a>参数  
  ***conn***连接字符串。  
@@ -47,10 +44,10 @@ ms.locfileid: "35274696"
   
  ***查询***进行查询的命令文本。  
   
- ***ppRS***指针其中**记录集**应返回。  
+ ***ppRS***指针位置**记录集**应返回。  
   
 ## <a name="reconnect-method"></a>重新连接方法  
- 此方法将更新数据源。 它创建一个新[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和附加给定**记录集**。  
+ 此方法更新数据源。 创建一个新[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象并附加给定**记录集**。  
   
 ### <a name="arguments"></a>参数  
  ***conn***连接字符串。  
@@ -60,7 +57,7 @@ ms.locfileid: "35274696"
  ***Pr*** A**记录集**对象。  
   
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
- 这是用于的接口定义**IDataFactoryHandler**出现在**msdfhdl.idl**文件。  
+ 这是的接口定义**IDataFactoryHandler**中显示**msdfhdl.idl**文件。  
   
 ```  
 [  
@@ -104,12 +101,12 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [自定义文件连接部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [自定义文件日志部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [自定义文件 Connect 部分](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [自定义文件 Logs 部分](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [自定义文件 SQL 部分](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [自定义文件 UserList 部分](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory 自定义项](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [必需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
+ [自定义 DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
+ [所需的客户端设置](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [了解自定义文件](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
 
 

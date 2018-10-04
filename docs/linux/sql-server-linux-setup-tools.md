@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 4dc9dd24bc3bdfa918ffdc7d02688303d8dcde5e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: da3730d162ecacc0f6559db578ebb124b2fdfa4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698245"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>在 Linux 上安装 sqlcmd 和 bcp SQL Server 命令行工具
 
@@ -66,7 +64,7 @@ ms.locfileid: "40394845"
    sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
-1. 运行以下命令以安装**mssql 工具**使用 unixODBC 开发人员包。
+1. 运行以下命令以安装 **mssql-tools** 和 unixODBC 开发人员包。
 
    ```bash
    sudo yum install mssql-tools unixODBC-devel

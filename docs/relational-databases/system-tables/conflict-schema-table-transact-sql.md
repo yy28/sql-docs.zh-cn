@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - conflict_
@@ -19,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2424c16b56455ca14fafdd8cc1c070aa3058447a
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: c1341b9e9b1f00494c655ed5a91943fadfbd5b76
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39103665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614135"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;架构&gt;_&lt;表&gt;(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "39103665"
 |__$conflict_type|**int**|冲突类型，可以是下列值之一：<br /><br /> 1：更新失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 2：更改失败，因为已删除了本地行。<br /><br /> 3：删除失败，因为另一个更新已更改了本地行，或者删除了本地行并随后重新插入。<br /><br /> 4：删除失败，因为已删除了本地行。<br /><br /> 5：插入失败，因为已插入了本地行，或者已插入并随后更新了本地行。|  
 |__$is_winner|**bit**|指示该表中的行是否为冲突入选方，这意味着将其应用于本地节点。|  
 |__$pre_version|**varbinary (32)**|发起冲突更改的数据库的版本。|  
-|__$reason_code|**int**|冲突的解决代码。 可以是下列值之一：<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ reason_text**。|  
+|__$reason_code|**int**|冲突的解决代码。 可以是下列值之一：<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> 有关详细信息，请参阅 **__ reason_text**。|  
 |__$reason_text|**nvarchar (720)**|冲突的解决情况。 可以是下列值之一：<br /><br /> 已解决 (1)<br /><br /> 未解决 (2)<br /><br /> 未知 (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**。 各不相同大小，具体取决于内容。|一个位图，指示在发生更新-更新冲突的情况下更新的列。|  
 |__$inserted_date|**datetime**|将冲突行插入此表中的日期和时间。|  

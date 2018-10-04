@@ -1,30 +1,27 @@
 ---
-title: 选择的互操作性级别 |Microsoft 文档
+title: 选择的互操作性级别 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interoperability [ODBC], levels
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 686687e4cd10559e4cd57d131a77f81b065d318f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909462"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710635"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>选择互操作性的级别
-假设应用程序将使用 ODBC 下, 一步是确定何种级别的互操作性是必需的。 基本级别的互操作性通常是应用程序类型的函数： 自定义应用程序往往不进行互操作，垂直应用程序往往会进行有限数量的 Dbms，之间互操作和通用应用程序往往会进行互操作在所有 Dbms。  
+假设应用程序将使用 ODBC 下, 一步是确定何种级别的互操作性是必需的。 基本级别的互操作性通常是应用程序类型的函数： 自定义应用程序往往不能够互操作性垂直应用程序往往能够在有限数量的 Dbms，可互操作和泛型应用程序往往是可互操作在所有 Dbms。  
   
  本部分包含以下主题。  
   

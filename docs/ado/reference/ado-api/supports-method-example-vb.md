@@ -1,32 +1,29 @@
 ---
-title: 支持方法示例 (VB) |Microsoft 文档
+title: Supports 方法示例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e0424b37399e3abb2c2333e8bc6928d2cfde9156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830605"
 ---
-# <a name="supports-method-example-vb"></a>支持方法示例 (VB)
-此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法以显示数据集所支持的选项将打开具有不同的游标类型。 有关运行此过程需要 DisplaySupport 过程。  
+# <a name="supports-method-example-vb"></a>Supports 方法示例 (VB)
+此示例使用[支持](../../../ado/reference/ado-api/supports-method.md)方法来显示数据集支持的选项，打开不同的游标类型。 若要运行此过程需要 DisplaySupport 过程。  
   
 ```  
 'BeginSupportsVB  

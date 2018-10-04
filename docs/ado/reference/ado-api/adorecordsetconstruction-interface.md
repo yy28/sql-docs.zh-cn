@@ -1,13 +1,11 @@
 ---
-title: ADORecordsetConstruction 接口 |Microsoft 文档
+title: ADORecordsetConstruction 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c781a5b1db2d501488d609454ee67e240ee35a55
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275616"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634385"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 接口
-**ADORecordsetConstruction**接口用于构造 ADO**记录集**从 OLE DB 对象**行集**C/c + + 应用程序中的对象。  
+**ADORecordsetConstruction**界面用于构造 ADO**记录集**从 OLE DB 对象**行集**C/c + + 应用程序中的对象。  
   
- 此接口支持下列属性：  
+ 此接口支持以下属性：  
   
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|[章](../../../ado/reference/ado-api/chapter-property-ado.md)|读/写。<br />获取/设置 OLE DB**章**对象从/上此 ADO**记录集**对象。|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|读/写。<br />获取/设置 OLE DB **RowPosition**对象从/上此 ADO**记录集**对象。|  
-|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|读/写。<br />获取/设置 OLE DB**行集**对象从/上此 ADO**记录集**对象。|  
+|[一章](../../../ado/reference/ado-api/chapter-property-ado.md)|读/写。<br />获取/设置 OLE DB**章**对象从/对此 ADO**记录集**对象。|  
+|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|读/写。<br />获取/设置 OLE DB **RowPosition**对象从/对此 ADO**记录集**对象。|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|读/写。<br />获取/设置 OLE DB**行集**对象从/对此 ADO**记录集**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -45,8 +42,8 @@ ms.locfileid: "35275616"
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>Remarks  
- 提供 OLE DB**行集**对象 (`pRowset`)，构造的 ADO**记录集**对象 (`adoRs`) 都可对以下三个基本操作：  
+## <a name="remarks"></a>备注  
+ 提供 OLE DB**行集**对象 (`pRowset`)，ADO 构造**记录集**对象 (`adoRs`) 相当于以下三个基本操作：  
   
 1.  创建 ADO**记录集**对象：  
   
@@ -73,7 +70,7 @@ ms.locfileid: "35275616"
   
  所产生的`adoRs`对象现在表示 ADO**记录集**构造从 OLE DB 对象**行集**对象。  
   
- 你还可以构造 ADO**记录集**从 OLE DB 对象**章**或**RowPosition**对象。  
+ 您还可以构造 ADO**记录集**对象从 OLE DB**章**或**RowPosition**对象。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  

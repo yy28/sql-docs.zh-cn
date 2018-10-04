@@ -1,14 +1,11 @@
 ---
-title: dbo.syssubsystems (Transact SQL) |Microsoft 文档
+title: dbo.syssubsystems (Transact SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.syssubsystems
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - syssubsystems system table
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: abe7c8fa687a5868bae73b9590ea39a30fc90ee2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d685f5e8837feebffeeeade95697f4f3bfea4c81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717175"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +36,7 @@ ms.locfileid: "33254827"
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|子系统的 ID。|  
 |**subsystem**|**nvarchar(40)**|子系统的名称。|  
-|**description_id**|**int**|消息中的行的 ID **sys.messages**目录视图，其中包含子系统说明。|  
+|**description_id**|**int**|消息中的行的 ID **sys.messages**目录包含子系统说明的视图。|  
 |**subsystem_dll**|**nvarchar(255)**|子系统 DLL 的位置。|  
 |**agent_exe**|**nvarchar(255)**|使用子系统的可执行文件的完整路径。|  
 |**start_entry_point**|**nvarchar(30)**|初始化子系统时调用的函数。|  
@@ -48,10 +44,10 @@ ms.locfileid: "33254827"
 |**stop_entry_point**|**nvarchar(30)**|子系统运行完成时调用的函数。|  
 |**max_worker_threads**|**int**|给定子系统的最大并发步骤数。|  
   
-## <a name="remarks"></a>注释  
- 只有的成员**sysadmin**固定的服务器角色可以访问此表。  
+## <a name="remarks"></a>备注  
+ 只有的成员**sysadmin**固定的服务器角色才能访问此表。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [dbo.sysproxysubsystem &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
  [dbo.sysproxies &#40;Transact SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
  [sys.messages &#40;Transact SQL &#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  

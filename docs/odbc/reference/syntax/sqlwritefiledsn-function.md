@@ -1,13 +1,11 @@
 ---
-title: SQLWriteFileDSN 函数 |Microsoft 文档
+title: SQLWriteFileDSN 函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteFileDSN
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteFileDSN [ODBC]
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36af0a5a3098dd4afc334de6bd808c0c690a601c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b8c490da7ecfe0230eaad5f98da1c66293f99eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758955"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 函数
-**一致性**  
+**符合性**  
  版本引入了： ODBC 3.0  
   
  **摘要**  
- **SQLWriteFileDSN**将信息写入文件 DSN。  
+ **SQLWriteFileDSN**将信息写入到文件 DSN。  
   
 ## <a name="syntax"></a>语法  
   
@@ -50,38 +47,38 @@ BOOL SQLWriteFileDSN(
   
 ## <a name="arguments"></a>参数  
  *lpszFileName*  
- [输入]为文件 DSN 名称的指针。 DSN 扩展追加到还没有 DSN 扩展的所有文件名。  
+ [输入]指向文件 DSN 的名称。 DSN 扩展附加到所有还没有 DSN 扩展名的文件名称。  
   
  *lpszAppName*  
- [输入]指向应用程序的名称。 ODBC 部分为"ODBC"。  
+ [输入]指向应用程序的名称。 这是针对 ODBC 部分的"ODBC"。  
   
  *lpszKeyName*  
- [输入]一个指针，指向要读取的密钥名称。 有关保留关键字，请参见"注释"。  
+ [输入]指向要读取的键的名称。 有关保留关键字，请参阅"注释"。  
   
  *lpszString*  
- [输出]指向与要写入的键关联的字符串。 通过此自变量指向的字符串的最大长度为 32,767 个字节。  
+ [输出]指向要写入的键与关联的字符串。 通过此参数指向的字符串的最大长度为 32,767 个字节。  
   
 ## <a name="returns"></a>返回  
- 如果它成功，则返回 FALSE 如果失败，则函数将返回 TRUE。  
+ 如果成功，则返回 FALSE 出现故障时，该函数返回 TRUE。  
   
 ## <a name="diagnostics"></a>诊断  
- 当**SQLWriteFileDSN**返回 FALSE，一个关联 *\*pfErrorCode*可通过调用获取值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError**并解释此函数的每个上下文中。  
+ 当**SQLWriteFileDSN**返回 FALSE，关联 *\*pfErrorCode*可以通过调用获取的值**SQLInstallerError**。 下表列出 *\*pfErrorCode*可以返回的值**SQLInstallerError** ，并解释了此函数的每个上下文中。  
   
 |*\*pfErrorCode*|错误|Description|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|对于发生了错误其中没有任何特定的安装程序错误。|  
-|ODBC_ERROR_INVALID_PATH|无效的安装路径|中指定的文件名称的路径*lpszFileName*自变量无效。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*LpszAppName*， *lpszKeyName*，或*lpszString*自变量为 NULL。|  
+|ODBC_ERROR_GENERAL_ERR|常规安装程序错误|出错的其中没有特定的安装程序错误。|  
+|ODBC_ERROR_INVALID_PATH|无效的安装路径|中指定的文件名称的路径*lpszFileName*参数无效。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|请求的类型无效|*LpszAppName*， *lpszKeyName*，或*lpszString*参数为 NULL。|  
   
 ## <a name="comments"></a>注释  
- ODBC 保留的节名称 [ODBC] 要在其中存储的连接信息。 本部分的保留的关键字是相同的连接字符串中的保留**SQLDriverConnect**。 (有关详细信息，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。)  
+ ODBC 保留部分名称 [ODBC] 要在其中存储的连接信息。 本部分中的保留的关键字将与连接字符串中保留相同**SQLDriverConnect**。 (有关详细信息，请参阅[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)函数说明。)  
   
  应用程序可以使用这些保留的关键字将信息直接写入文件 DSN。 如果应用程序想要创建或修改文件 DSN 与关联的 dsn 连接字符串，它可以调用**SQLWriteFileDSN**任何 [ODBC] 部分中的保留的连接字符串关键字。  
   
- 如果*lpszString*参数为 null 指针，指向关键字*lpszKeyName*参数将删除从.dsn 文件。 如果*lpszString*和*lpszKeyName*自变量都是 null 指针，指向部分*lpszAppName*参数将删除从.dsn 文件。  
+ 如果*lpszString*参数为 null 指针，指向关键字*lpszKeyName*参数将删除从.dsn 文件。 如果*lpszString*并*lpszKeyName*自变量都是 null 指针，指向部分*lpszAppName*参数将删除从.dsn 文件。  
   
 ## <a name="related-functions"></a>相关函数  
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|从文件 Dsn 读取信息|[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|
+|从文件 Dsn 中读取信息|[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|

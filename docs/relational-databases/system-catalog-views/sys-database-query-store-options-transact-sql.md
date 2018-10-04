@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbd92f7d3e08c56c55e1b7cb2c67446ac011114b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0d9d04832b09d357725dc7a4986d4ed074469559
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775125"
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ ms.locfileid: "43066468"
 |**max_storage_size_mb**|**bigint**|查询存储的最大磁盘大小。 默认值为 100 MB。<br />对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 高级版，默认值为 1 Gb，对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值则为 10 Mb。<br /><br /> 通过更改`ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)`语句。|  
 |**stale_query_threshold_days**|**bigint**|查询存储中保留任何策略设置的查询的天数。 默认值为 30。 设置为 0 以禁用保留策略。<br />对于 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 基本版，默认值为 7 天。<br /><br /> 通过更改`ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )`语句。|  
 |**max_plans_per_query**|**bigint**|限制存储计划的最大数量。 默认值为 200。 如果达到最大值，Query Store 停止捕获新查询的计划。 设置为 0 会删除在捕获计划的数量方面的限制。<br /><br /> 通过更改`ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)`语句。|  
-|**query_capture_mode**|**smallint**|当前处于活动状态查询捕获模式：<br /><br /> 1 = ALL-捕获所有查询。 这是默认配置值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 2 = AUTO-基于执行计数和资源消耗捕获相关查询。 这是默认配置值[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。<br /><br /> 3 = 无-停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 谨慎使用此配置，因为你可能会错过捕获重要的查询。|  
+|**query_capture_mode**|**smallint**|当前处于活动状态查询捕获模式：<br /><br /> 1 = ALL-捕获所有查询。 这是默认配置值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]通过[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。<br /><br /> 2 = AUTO-基于执行计数和资源消耗捕获相关查询。 这是默认配置值[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。<br /><br /> 3 = 无-停止捕获新查询。 查询存储将继续为已经捕获的查询收集编译和运行时统计信息。 谨慎使用此配置，因为你可能会错过捕获重要的查询。|  
 |**query_capture_mode_desc**|**nvarchar(60)**|查询存储的实际捕获模式的文本说明：<br /><br /> 所有 (默认为[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> 自动 (默认为[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> 无|  
 |**size_based_cleanup_mode**|**smallint**|控制当数据总量接近最大大小时是否自动激活清除：<br /><br /> 0 = OFF – 大小不会自动激活基于的清除。<br /><br /> 1 = AUTO-基于的清理将自动激活时上的磁盘达到 90%的大小的大小**max_storage_size_mb**。 这是默认的配置值。<br /><br />基于大小的清除首先会删除成本最低和最旧的查询。 Max_storage_size_mb 的大约 80%时，它会停止。|  
 |**size_based_cleanup_mode_desc**|**nvarchar(60)**|查询存储的实际基于大小的清理模式的文本说明：<br /><br /> OFF <br /><br /> 自动 （默认值）|  

@@ -1,56 +1,53 @@
 ---
-title: 为 c： 时间戳的 SQL |Microsoft 文档
+title: 从 SQL 到 c： 时间戳 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type [ODBC]
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5582bf0e3c3b498799c229176b824770eec27433
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47a0fa22e2d5810faae10ca4ae620bb2a57bb856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724415"
 ---
-# <a name="sql-to-c-timestamp"></a>为 c： 时间戳的 SQL
+# <a name="sql-to-c-timestamp"></a>从 SQL 到 C：时间戳
 时间戳 ODBC SQL 数据类型的标识符是：  
   
  SQL_TYPE_TIMESTAMP  
   
- 下表显示 ODBC C 数据类型的时间戳 SQL 数据可以转换到的目标。 列和表中的条款的说明，请参阅[转换数据从 SQL C 数据类型到](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
+ 下表显示 ODBC C 数据类型可以转换成的 SQL 时间戳数据。 列和表中的条款的说明，请参阅[从 SQL 到 C 数据类型的转换的数据](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)。  
   
 |C 类型标识符|测试|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> 20 < = *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> 20 < = *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 20|Data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|Data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|时间部分的时间戳为零 [a]<br /><br /> 时间部分的时间戳为非零 [a]|Data<br /><br /> 截断的数据 [c]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|时间戳的秒的小数部分部分为零 [a]<br /><br /> 秒的小数部分的时间戳的部分为非零 [a]|数据 [d]<br /><br /> 截断的数据 [d]、 [e]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
-_C_TYPE_TIMESTAMP|时间戳的秒的小数部分部分不会被截断 [a]<br /><br /> 截断的时间戳的秒的小数部分部分 [a]|数据 [e]<br /><br /> 截断的数据 [e]|16 [f]<br /><br /> 16 [f]|不适用<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > 字符字节长度<br /><br /> 20 < = *BufferLength* < = 字符字节长度<br /><br /> *BufferLength* < 20|data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 字符长度<br /><br /> 20 < = *BufferLength* < = 字符长度<br /><br /> *BufferLength* < 20|data<br /><br /> 截断的数据 [b]<br /><br /> 未定义|以字符为单位的数据的长度<br /><br /> 以字符为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|数据的字节长度 < = *BufferLength*<br /><br /> 数据的字节长度 > *BufferLength*|data<br /><br /> 未定义|以字节为单位的数据的长度<br /><br /> 未定义|不适用<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|时间戳的时间部分为零 [a]<br /><br /> 时间戳的时间部分为非零值 [a]|data<br /><br /> 截断的数据 [c]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|秒小数部分的时间戳为零 [a]<br /><br /> 时间戳的秒小数部分为非零值 [a]|数据 [d]<br /><br /> 截断的数据 [d]、 [e]|6 [f]<br /><br /> 6 [f]|不适用<br /><br /> 01S07|  
+_C_TYPE_TIMESTAMP|不会截断秒小数部分的时间戳 [a]<br /><br /> 截断秒小数部分的时间戳 [a]|数据 [e]<br /><br /> [E] 的截断的数据|16 [f]<br /><br /> 16 [f]|不适用<br /><br /> 01S07|  
   
- [a] 的值*BufferLength*忽略此转换。 该驱动程序假定的大小 **TargetValuePtr*是 C 数据类型的大小。  
+ [a] 的值*BufferLength*忽略此转换。 驱动程序假定的大小 **TargetValuePtr*是 C 数据类型的大小。  
   
- [秒的时间戳 b] 的小数部分将被截断。  
+ [b] 上，时间戳的秒的小数部分将被截断。  
   
- [c] 的时间部分的时间戳将被截断。  
+ [截断时间戳 c] 的时间部分。  
   
- [d] 上，日期部分的时间戳将被忽略。  
+ [忽略时间戳 d] 上，日期部分。  
   
- [时间戳 e] 的秒的小数部分部分将被截断。  
+ [e] 秒的小数部分的时间戳会被截断。  
   
- [f] 这是对应的 C 数据类型的大小。  
+ [f] 这是相应的 C 数据类型的大小。  
   
- 当时间戳 SQL 数据转换为字符 C 数据时，生成的字符串是在"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*]"格式，其中最多 9 个数字，可以用秒的小数部分。 此格式不受 Windows® 国家/地区设置。 （除外的小数点和秒的小数部分，整个格式必须为，则无论使用的时间戳 SQL 数据类型的精度。）
+ 时间戳 SQL 数据转换为 C 字符数据时，生成的字符串时，在"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[。*f...*]"格式，其中在秒的小数部分使用最多到九位。 此格式不受 Windows® 国家/地区设置。 （除了小数点和秒的小数部分，整个格式必须使用，而不考虑时间戳 SQL 数据类型的精度。）

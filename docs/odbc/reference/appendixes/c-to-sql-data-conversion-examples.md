@@ -1,33 +1,30 @@
 ---
-title: C 到 SQL 数据转换示例 |Microsoft 文档
+title: 从 C 到 SQL 的数据转换示例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcba6d92970d0e0b5490f4c24506fe8bb2951217
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906352"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620185"
 ---
-# <a name="c-to-sql-data-conversion-examples"></a>C 到 SQL 数据转换示例
-以下示例阐释如何驱动程序将 C 数据转换为 SQL 数据：  
+# <a name="c-to-sql-data-conversion-examples"></a>从 C 到 SQL 的数据转换示例
+以下示例说明了该驱动程序如何将 C 数据转换为 SQL 数据：  
   
-|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|列<br /><br /> 长度|SQL 数据<br /><br /> 值|SQLSTATE|  
+|C 类型标识符|C 数据值|SQL 类型<br /><br /> 标识符 (identifier)|“列”<br /><br /> 长度|SQL 数据<br /><br /> 值|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|不适用|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -46,8 +43,8 @@ ms.locfileid: "32906352"
   
  [a]"\0"表示 null 终止字节。 仅当数据的长度为 sql_nts 的以 null 终止字节需要。  
   
- [b] 中除了数字的字节数，1 个字节是所必需的登录和另一个字节是所必需的小数点。  
+ [b] 中除了号的字节数，1 个字节是所必需的符号与另一个字节是所必需的小数点。  
   
- [此列表中 c] 的数字是中的字段 SQL_DATE_STRUCT 结构存储数字。  
+ [此列表中 c] 的数字是 SQL_DATE_STRUCT 结构的字段中存储的数字。  
   
- [此列表中 d] 的数字是中的字段 SQL_TIMESTAMP_STRUCT 结构存储数字。
+ [此列表中 d] 的数字是 SQL_TIMESTAMP_STRUCT 结构的字段中存储的数字。

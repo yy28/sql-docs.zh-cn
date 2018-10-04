@@ -4,29 +4,26 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e99f96de2f9b75fb49b0de5a73ef611bb7d991c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067507"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>设置聚合选项（聚合设计向导）
   可以使用 **“设置聚合选项”** 页启动聚合设计进程，为生成的聚合指定存储或性能限制。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **预计存储空间达到**  
  通过指定可用于生成聚合的最大兆字节数 (MB) 或吉字节数 (GB)，可以限制聚合设计。  
   

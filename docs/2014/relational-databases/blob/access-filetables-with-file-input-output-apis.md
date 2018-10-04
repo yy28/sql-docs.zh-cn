@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3083e3365c8303c12adfc631881d887a970e471f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082198"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>使用文件输入输出 API 访问 FileTable
   说明如何在 FileTable 上执行文件系统 I/O。  
@@ -107,26 +104,26 @@ ms.locfileid: "37191737"
   
 |功能|Supported|注释|  
 |----------------|---------------|--------------|  
-|**Oplocks**|是|支持级别 2、级别 1、批处理和筛选器 oplocks。|  
-|**扩展属性**|“否”||  
-|**重分析点**|“否”||  
-|**持久的 ACL**|“否”||  
-|**命名的流**|“否”||  
-|**稀疏文件**|是|只能对文件设置稀疏性，它影响数据流的存储方式。 由于 FILESTREAM 数据存储在 NTFS 卷上，因此 FileTable 功能支持通过将请求转发给 NTFS 文件系统来支持稀疏文件。|  
-|**压缩**|是||  
-|**加密**|是||  
-|**TxF**|“否”||  
-|**文件 ID**|“否”||  
-|**对象 ID**|“否”||  
-|**符号链接**|“否”||  
-|**硬链接**|“否”||  
-|**短名称**|“否”||  
-|**目录更改通知**|“否”||  
-|**字节范围锁定**|是|将对字节范围的锁定请求传递给 NTFS 文件系统。|  
-|**内存映射文件**|“否”||  
-|**取消 I/O**|是||  
-|**安全性**|“否”|实施 Windows 共享级安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表以及列级安全性。|  
-|**USN 日志**|“否”|对 FileTable 中的文件和目录的元数据更改是对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 DML 操作。 因此，将它们记录在相应的数据库日志文件中。 但是，不将它们记录在 NTFS USN 日志（对大小的更改除外）中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改跟踪功能可用于捕获类似的信息。|  
+|**Oplocks**|用户帐户控制|支持级别 2、级别 1、批处理和筛选器 oplocks。|  
+|**扩展属性**|否||  
+|**重分析点**|否||  
+|**持久的 ACL**|否||  
+|**命名的流**|否||  
+|**稀疏文件**|用户帐户控制|只能对文件设置稀疏性，它影响数据流的存储方式。 由于 FILESTREAM 数据存储在 NTFS 卷上，因此 FileTable 功能支持通过将请求转发给 NTFS 文件系统来支持稀疏文件。|  
+|**压缩**|用户帐户控制||  
+|**加密**|用户帐户控制||  
+|**TxF**|否||  
+|**文件 ID**|否||  
+|**对象 ID**|否||  
+|**符号链接**|否||  
+|**硬链接**|否||  
+|**短名称**|否||  
+|**目录更改通知**|否||  
+|**字节范围锁定**|用户帐户控制|将对字节范围的锁定请求传递给 NTFS 文件系统。|  
+|**内存映射文件**|否||  
+|**取消 I/O**|用户帐户控制||  
+|**安全性**|否|实施 Windows 共享级安全性和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表以及列级安全性。|  
+|**USN 日志**|否|对 FileTable 中的文件和目录的元数据更改是对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的 DML 操作。 因此，将它们记录在相应的数据库日志文件中。 但是，不将它们记录在 NTFS USN 日志（对大小的更改除外）中。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改跟踪功能可用于捕获类似的信息。|  
   
 ## <a name="see-also"></a>请参阅  
  [将文件加载到 FileTable 中](load-files-into-filetables.md)   

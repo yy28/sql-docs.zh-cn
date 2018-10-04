@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394220"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617995"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +88,7 @@ sp_help_proxy
 |**credential_id**|**int**|与此代理关联的凭据的标识符。|  
 |**credential_identity_exists**|**int**|是否存在 credential_identity。 { 0 = 不存在，1 = 存在 }|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果不提供任何参数， **sp_help_proxy**列出实例中的所有代理的信息。  
   
  若要确定登录名的代理可用于给定子系统，请指定*名称*并*subsystem_name*。 提供这些参数时， **sp_help_proxy**列出了指定的登录名可以访问，可用于指定子系统的代理。  

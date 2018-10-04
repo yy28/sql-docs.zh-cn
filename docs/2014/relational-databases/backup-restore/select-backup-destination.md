@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.selectbackupdest.f1
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ca8c14c4daae046786bfcd78e04c0bd1b08139d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160558"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061007"
 ---
 # <a name="select-backup-destination"></a>选择备份目标
   使用 **“选择备份目标”** 对话框可以选择一个设备作为备份目标。 备份目标可以是磁盘，也可以是逻辑备份设备。  
@@ -35,7 +32,7 @@ ms.locfileid: "37160558"
   
 -   [备份事务日志 (SQL Server)](back-up-a-transaction-log-sql-server.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  此对话框中的选项取决于所选目标是位于磁盘上还是位于磁带上。  
   
  **磁盘上的目标**  

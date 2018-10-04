@@ -1,13 +1,11 @@
 ---
-title: 属性的一致性 |Microsoft 文档
+title: 属性一致性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c765982a35fd41fc36fdc82ddbd3434b2d90c07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913732"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818835"
 ---
-# <a name="attribute-conformance"></a>属性的一致性
-下表指示这是定义完善的每个 ODBC 环境属性，一致性级别。  
+# <a name="attribute-conformance"></a>属性一致性
+下表指示这是定义完善的一致性级别的每个 ODBC 环境属性。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
@@ -38,12 +35,12 @@ ms.locfileid: "32913732"
   
  [1] 这是一项可选功能，这种情况下不是一致性级别的一部分。  
   
- 下表指示这是定义完善的每个 ODBC 连接属性，一致性级别。  
+ 下表指示这是定义完善的一致性级别的每个 ODBC 连接属性。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|核心|  
-|SQL_ATTR_ASYNC_ENABLE|级别 1/级别 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE 设置|级别 1/级别 2 [1]|  
 |SQL_ATTR_AUTO_IPD|级别 2|  
 |SQL_ATTR_AUTOCOMMIT|级别 1|  
 |SQL_ATTR_CONNECTION_DEAD|级别 1|  
@@ -59,17 +56,17 @@ ms.locfileid: "32913732"
 |SQL_ATTR_TRANSLATE_OPTION|核心|  
 |SQL_ATTR_TXN_ISOLATION|级别 1/级别 2 [2]|  
   
- [1] 应用程序支持连接级别异步 （需要级别 1） 必须支持通过调用此属性设置为 SQL_TRUE **SQLSetConnectAttr**; 不需要为其默认值以外的值可设置属性通过值**SQLSetStmtAttr**。 支持语句级异步 （需要级别 2） 的应用程序必须支持此属性设置为 SQL_TRUE 使用任一函数。  
+ [1] 的应用程序支持连接级别异步 （需要级别 1） 必须支持通过调用此属性设置为 SQL_TRUE **SQLSetConnectAttr**; 属性不需要为其默认值以外的值可设置值通过**SQLSetStmtAttr**。 支持 （需要级别 2） 的语句级异步功能的应用程序必须支持此属性设置为 SQL_TRUE 使用这两种函数。  
   
- [2] 的第 1 级接口一致性的工具，该驱动程序必须支持除了驱动程序定义的默认值的一个值 (可通过调用**SQLGetInfo** SQL_DEFAULT_TXN_ISOLATION 选项)。 级别 2 接口符合规则，该驱动程序还必须支持 SQL_TXN_SERIALIZABLE。  
+ [2] 的级别 1 接口一致性的驱动程序必须支持除了驱动程序定义的默认值的一个值 (可通过调用**SQLGetInfo** SQL_DEFAULT_TXN_ISOLATION 选项)。 级别 2 接口一致性，驱动程序还必须支持 SQL_TXN_SERIALIZABLE。  
   
- 下表指示这是定义完善的每个 ODBC 语句属性，一致性级别。  
+ 下表指示这是定义完善的一致性级别的每个 ODBC 语句属性。  
   
 |函数|一致性级别|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|核心|  
 |SQL_ATTR_APP_ROW_DESC|核心|  
-|SQL_ATTR_ASYNC_ENABLE|级别 1/级别 2 [1]|  
+|SQL_ATTR_ASYNC_ENABLE 设置|级别 1/级别 2 [1]|  
 |SQL_ATTR_CONCURRENCY|级别 1/级别 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|级别 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|级别 2|  
@@ -101,8 +98,8 @@ ms.locfileid: "32913732"
 |SQL_ATTR_SIMULATE_CURSOR|级别 2|  
 |SQL_ATTR_USE_BOOKMARKS|级别 2|  
   
- [1] 应用程序支持连接级别异步 （需要级别 1） 必须支持通过调用此属性设置为 SQL_TRUE **SQLSetConnectAttr**; 不需要为其默认值以外的值可设置属性通过值**SQLSetStmtAttr**。 支持语句级异步 （需要级别 2） 的应用程序必须支持此属性设置为 SQL_TRUE 使用任一函数。  
+ [1] 的应用程序支持连接级别异步 （需要级别 1） 必须支持通过调用此属性设置为 SQL_TRUE **SQLSetConnectAttr**; 属性不需要为其默认值以外的值可设置值通过**SQLSetStmtAttr**。 支持 （需要级别 2） 的语句级异步功能的应用程序必须支持此属性设置为 SQL_TRUE 使用这两种函数。  
   
- [2] 的第 2 级接口一致性的工具，该驱动程序必须支持 SQL_CONCUR_READ_ONLY 和至少一个其他值。  
+ [2] 为级别 2 接口一致性，驱动程序必须支持 SQL_CONCUR_READ_ONLY 和至少一个其他值。  
   
- [3] 的第 1 级接口一致性的工具，该驱动程序必须支持 SQL_CURSOR_FORWARD_ONLY 和至少一个其他值。 为级别 2 接口一致性，驱动程序必须支持本文档中定义的所有值。
+ [3] 的级别 1 接口一致性，驱动程序必须支持 SQL_CURSOR_FORWARD_ONLY 和至少一个其他值。 级别 2 接口一致性，驱动程序必须支持本文档中定义的所有值。

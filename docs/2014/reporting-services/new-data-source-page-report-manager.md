@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a48d913a5222ee566843eff85d71aaec194bd9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073728"
 ---
 # <a name="new-data-source-page-report-manager"></a>“新建数据源”页（报表管理器）
   使用“新建数据源”页，可以创建共享数据源项。 共享数据源定义与外部数据源的连接。 使用共享数据源，可以从使用该数据源的报表、模型和数据驱动订阅分别创建和维护数据源连接设置。  
@@ -33,7 +30,7 @@ ms.locfileid: "37280383"
   
 2.  在工具栏中，单击 **“新建数据源”**。 必须具有“内容管理员”权限才能创建共享数据源。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **名称**  
  键入共享数据源的名称。此名称用于标识报表服务器文件夹层次结构内的项。  
   

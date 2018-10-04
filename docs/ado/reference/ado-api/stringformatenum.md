@@ -1,13 +1,11 @@
 ---
-title: StringFormatEnum |Microsoft 文档
+title: StringFormatEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,23 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - StringFormatEnum enumeration [ADO]
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac774393a914c13171dfa13150ee708b316fbd03
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d2740c7fb25b71e3588bebb924ea9d5f907e3560
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657715"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
-指定检索时的格式[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
+检索时指定的格式[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)作为字符串。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adClipString**|2|分隔行乘以*RowDelimiter*，列 × *ColumnDelimiter*，和 null 值*NullExpr*。 以下三个参数[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法是仅对有效*StringFormat*的**adClipString**。|  
+|**adClipString**|2|分隔行乘以*RowDelimiter*，按列*ColumnDelimiter*，和 null 值*NullExpr*。 这三个参数的[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法是仅对于有效*StringFormat*的**adClipString**。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 等效项  
  包： **com.ms.wfc.data**  

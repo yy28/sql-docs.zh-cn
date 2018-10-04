@@ -1,37 +1,34 @@
 ---
-title: SQLSetConnectOption （Access 驱动程序） |Microsoft 文档
+title: SQLSetConnectOption （Access 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access driver [ODBC], SQLSetConnectOption
 - SQLSetConnectOption function [ODBC], Access Driver
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952bfe683dabbcedeb771c0e7f1787f7a0e6f7bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32905012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706875"
 ---
-# <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption （Access 驱动程序）
+# <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption（Access 驱动程序）
 > [!NOTE]  
 >  本主题提供访问特定于驱动程序信息。 有关此函数的常规信息，请参阅下的相应主题[ODBC API 参考](../../odbc/reference/syntax/odbc-api-reference.md)。  
   
 |fOption|注释|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE fOption 可以设置为 SQL_MODE_READ_ONLY 或 SQL_MODE_READ_WRITE。 但是，该驱动程序不会阻止更新，如果 SQL_ACCESS_MODE 设置为 SQL_MODE_READ_ONLY。|  
-|SQL_AUTOCOMMIT|当使用 Microsoft Access 驱动程序时，SQL_AUTOCOMMIT 选项可能设置为 SQL_AUTOCOMMIT_ON 或 SQL_AUTOCOMMIT_OFF，因为 Microsoft Access 驱动程序支持事务 [1]。|  
+|SQL_AUTOCOMMIT|使用 Microsoft Access 驱动程序时，SQL_AUTOCOMMIT 选项可能设置为 sql_autocommit_on，否则或 SQL_AUTOCOMMIT_OFF，因为 Microsoft Access 驱动程序支持事务 [1]。|  
 |SQL_CURRENT_QUALIFIER|支持。|  
 |SQL_LOGIN_TIMEOUT|不提供支持。|  
 |SQL_OPT_TRACE|支持。|  
@@ -42,4 +39,4 @@ ms.locfileid: "32905012"
 |SQL_TRANSLATION_OPTION|不提供支持。|  
 |SQL_TXN_ISOLATION|SQL_TXN_ISOLATION 始终是 SQL_TXN_READ_COMMITTED。|  
   
- [1] 原子事务不受 Microsoft Access 驱动程序。 有限的延迟时提交事务使用 Microsoft Access 驱动程序，则提交此事务的时间和写入值的时间之间存在到磁盘。 此延迟是由 Microsoft Jet 引擎中的固有延迟确定的。 页超时不将会小于最小值，即使 PageTimeout 选项设置为低于此值。 因此，没有提交数据不能保证是稳定的因为可能会延迟过程中进行更改。
+ [1] 原子事务不受 Microsoft Access 驱动程序。 有限延迟时提交事务使用 Microsoft Access 驱动程序，则在提交事务的时间和写入值的时间之间存在到磁盘。 这种延迟取决于 Microsoft Jet 引擎中固有的延迟。 页超时不会小于最小值，即使 PageTimeout 选项设置为低于该值。 因此，没有提交数据不能保证是稳定的因为可能会在延迟期间进行更改。

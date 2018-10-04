@@ -1,13 +1,11 @@
 ---
-title: 手动提交模式 |Microsoft 文档
+title: 手动提交模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - commit modes [ODBC]
 - transactions [ODBC], rolling back
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fde932df4d3eaa8e9ae3cceb2f28b6511dfb32d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667915"
 ---
 # <a name="manual-commit-mode"></a>手动提交模式
-*在手动提交模式下，* 应用程序必须显式完成事务，通过调用**SQLEndTran**无法提交或回滚它们。 这是大多数关系数据库的正常的事务模式。  
+*在手动提交模式下，* 应用程序必须显式完成事务，通过调用**SQLEndTran**将它们提交或回滚它们。 这是大多数关系数据库的正常事务模式。  
   
- ODBC 中的事务不需要显式启动。 相反，事务隐式开始将每次应用程序启动数据库上运行时。 如果数据源需要显式事务启动，该驱动程序必须提供它每次应用程序执行需要事务的语句和没有任何当前事务时。
+ ODBC 中的事务不需要显式启动。 相反，事务隐式开始将每次应用程序启动对数据库运行时。 如果数据源需要显式事务启动，该驱动程序必须提供它每次应用程序执行需要事务的语句以及没有当前事务时。

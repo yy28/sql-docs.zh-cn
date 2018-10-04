@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - database schemas
 - mapping, databases
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: acb6a8c71c3f144850cb9c24431bcff440cdf761
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b504b0bbf443a35778e4af63bbaed56b8593cf78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845715"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>映射源数据库和目标数据库 (AccessToSQL)
 当您连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您需要指定目标数据库以进行迁移。 如果您有多个 Access 数据库可以将它们映射到多个[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库 （或架构） 或向下连接的 SQL Azure 数据库的多个架构。  

@@ -1,14 +1,11 @@
 ---
-title: sys.function_order_columns (Transact SQL) |Microsoft 文档
+title: sys.function_order_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - function_order_columns
@@ -20,34 +17,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.function_order_columns catalog view
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e62ab7e719200f22cf90496c12fbf62af8f56d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180023"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643515"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  返回每个是的一部分的列的一个行**顺序**常见语言运行时 (CLR) 表值函数的表达式。  
+  每一部分的列返回一行**顺序**该列语言运行时 (CLR) 表值函数的表达式。  
 
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|要定义其顺序的对象（CLR 表值函数）的 ID。|  
-|**order_column_id**|**int**|排序列的 ID。 **order_column_id**仅内是唯一**object_id**。<br /><br /> **order_column_id**表示在排序中此列的位置。|  
-|**column_id**|**int**|中的列 ID **object_id**。<br /><br /> **column_id**仅内是唯一**object_id**。|  
+|**order_column_id**|**int**|排序列的 ID。 **order_column_id**仅中是唯一**object_id**。<br /><br /> **order_column_id**表示此列在排序中的位置。|  
+|**column_id**|**int**|中列的 ID **object_id**。<br /><br /> **column_id**仅中是唯一**object_id**。|  
 |**is_descending**|**bit**|1 = 排序列采用降序排序。<br /><br /> 0 = 排序列采用升序排序。|  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [对象目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

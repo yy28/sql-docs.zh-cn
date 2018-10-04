@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.filtermembers.f1
 helpviewer_keywords:
 - Filter Members dialog box
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 567092a19f3bd8d45064059f805752c3f3d8823d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c8ec7fa93dd583b0f79de00f70451eef24976dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075047"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>“筛选成员”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “筛选成员” [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 对话框，在 **“维度设计器”** 的 **“浏览器”** 选项卡中浏览维度的同时，按当前级别的成员标题、成员名称、成员唯一名称、键列值或值列值对维度成员进行筛选。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
   
 |术语|定义|  
 |----------|----------------|  

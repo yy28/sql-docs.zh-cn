@@ -1,13 +1,11 @@
 ---
-title: ADORecordConstruction 接口 |Microsoft 文档
+title: ADORecordConstruction 接口 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686865"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 接口
-**ADORecordConstruction**接口用于构造 ADO**记录**从 OLE DB 对象**行**C/c + + 应用程序中的对象。  
+**ADORecordConstruction**界面用于构造 ADO**记录**从 OLE DB 对象**行**C/c + + 应用程序中的对象。  
   
- 此接口支持下列属性：  
+ 此接口支持以下属性：  
   
 ## <a name="properties"></a>属性  
   
 |||  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|只写。<br />设置 OLE DB 的容器**行**上此 ADO 对象**记录**对象。|  
-|[行](../../../ado/reference/ado-api/row-property-ado.md)|读/写。<br />获取/设置 OLE DB**行**对象从/上此 ADO**记录**对象。|  
+|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|只写。<br />设置容器的 OLE DB**行**对象上此 ADO**记录**对象。|  
+|[行](../../../ado/reference/ado-api/row-property-ado.md)|读/写。<br />获取/设置 OLE DB**行**对象从/对此 ADO**记录**对象。|  
   
 ## <a name="methods"></a>方法  
  无。  
@@ -44,8 +41,8 @@ ms.locfileid: "35275626"
 ## <a name="events"></a>事件  
  无。  
   
-## <a name="remarks"></a>Remarks  
- 提供 OLE DB**行**对象 (`pRow`)，构造的 ADO**记录**对象 (`adoR`)，都可对以下三个基本操作：  
+## <a name="remarks"></a>备注  
+ 提供 OLE DB**行**对象 (`pRow`)，ADO 构造**记录**对象 (`adoR`)，相当于以下三个基本操作：  
   
 1.  创建 ADO**记录**对象：  
   
@@ -62,7 +59,7 @@ ms.locfileid: "35275626"
                         (void**)&adoRConstruct);  
     ```  
   
-3.  调用**IADORecordConstruction::put_Row**属性方法以设置 OLE DB**行**上 ADO 对象**记录**对象：  
+3.  调用**IADORecordConstruction::put_Row**属性方法以设置 OLE DB**行**对象上 ADO**记录**对象：  
   
     ```  
     IUnknown *pUnk=NULL;  
@@ -72,7 +69,7 @@ ms.locfileid: "35275626"
   
  所产生的**adoR**对象现在表示 ADO**记录**构造从 OLE DB 对象**行**对象。  
   
- ADO**记录**还可从 OLE DB 的容器构造对象**行**对象。  
+ ADO**记录**还可以从 OLE DB 容器构造对象**行**对象。  
   
 ## <a name="requirements"></a>要求  
  **版本：** ADO 2.0 及更高版本  

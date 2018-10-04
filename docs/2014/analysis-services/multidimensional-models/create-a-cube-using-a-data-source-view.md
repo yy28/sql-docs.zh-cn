@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303047"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068307"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用数据源视图创建多维数据集
   如果您想要使用现有的数据源视图，则可以使用这个生成新多维数据集的方法。 使用此方法，您可以指定数据源视图并选择您要在数据源视图中使用的事实数据表和维度表。 然后，您选择要包括在多维数据集中的维度和度量值。  

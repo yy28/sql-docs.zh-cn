@@ -1,32 +1,29 @@
 ---
-title: 实现桌面数据库驱动程序 |Microsoft 文档
+title: 实现桌面数据库驱动程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4de328f3185597a81fa7a61ce2d23a5e5f0bf1c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645875"
 ---
 # <a name="implementing-desktop-database-drivers"></a>实现桌面数据库驱动程序
-可在 ODBC 数据源管理器联机帮助说明和有关如何实现和设置 Microsoft ODBC 桌面数据库驱动程序的技术说明。 此文件可以访问期间从驱动程序安装例程[Microsoft ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  
+可在 ODBC 数据源管理器联机帮助中的说明和有关如何实现和安装 Microsoft ODBC 桌面数据库驱动程序的技术说明。 此文件可以访问在从驱动程序安装例程期间[Microsoft ODBC 数据源管理器](../../odbc/admin/odbc-data-source-administrator.md)。  
   
  本部分包含以下主题。  
   
@@ -36,7 +33,7 @@ ms.locfileid: "32901162"
   
 -   [硬件和软件要求](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [使用桌面数据库驱动程序的描述符](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [与桌面数据库驱动程序的描述符](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [桌面数据库驱动程序的诊断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

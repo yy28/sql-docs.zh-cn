@@ -1,13 +1,11 @@
 ---
-title: 参数化命令使用干预计算命令 |Microsoft 文档
+title: 参数化命令与中间 COMPUTE 命令 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253f961c066932cc6d5913fab0fb8e649d9c80cd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f1675e80522feb0c0b2a46a89dfa6e3bba182198
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851635"
 ---
-# <a name="parameterized-commands-with-intervening-compute-commands"></a>与中间的参数化的命令计算命令
-典型的参数化的形状追加命令具有创建父级的子句**记录集**使用一个查询命令和创建子级的另一个子句**记录集**使用参数化的查询命令-即包含参数占位符的命令 (一个问号"？")。 调整所生成**记录集**具有两个级别，在其中父占用较高级别，且子占用较低的级别。  
+# <a name="parameterized-commands-with-intervening-compute-commands"></a>参数化命令与中间 COMPUTE 命令
+典型的参数化的形状 APPEND 命令具有创建父级的子句**记录集**使用一个查询命令和创建子级的另一个子句**记录集**使用参数化的查询命令-即，包含参数占位符的命令 (一个问号"？")。 生成形状**记录集**有两个级别，在其中父占用较高级别，且子占用更低的级别。  
   
- 创建子子句**记录集**现在可能任意数目的嵌套形状计算命令，其中的嵌套最深的命令都包含参数化的查询。 调整所生成**记录集**具有多个级别，在其中父占用的最顶部的级别，子占据调换级别和任意数目的**记录集**由生成的 s形状计算命令占用中间层。  
+ 创建子子句**记录集**现在可能嵌套形状的任意数量计算命令，其中的嵌套最深的命令都包含参数化的查询。 生成形状**记录集**具有多个级别，在其中父占用的最高级别、 子占用最下方级别和任意数目的**记录集**s 生成的形状计算命令占用的介入性级别。  
   
- 典型使用此功能是调用的聚合函数和分组功能 shapeCOMPUTE 命令创建干扰**记录集**分析信息有关子对象**记录集**. 此外，由于这是参数化的形状命令，每次父级的章节列访问时，新的子级**记录集**可能检索。 因为从子派生中间层，它们还将重新计算。  
+ 典型用此功能是要调用的聚合函数和 shapeCOMPUTE 分组功能的命令创建中间**记录集**分析有关的信息的子对象**记录集**. 此外，由于这是参数化的形状命令，每次父级的章节列访问时，新的子级**记录集**可能检索。 干预的级别都派生自此子级，因为它们也将重新计算。  
   
 ## <a name="see-also"></a>请参阅  
  [数据整理示例](../../../ado/guide/data/data-shaping-example.md)

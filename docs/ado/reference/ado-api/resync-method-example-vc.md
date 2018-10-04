@@ -1,32 +1,29 @@
 ---
-title: 重新同步方法示例 （VC + +） |Microsoft 文档
+title: Resync 方法示例 （VC + +） |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Resync method [ADO], VC++ example
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80a5e39daa31bd781fbeba0f2a3814fca05f5041
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649805"
 ---
-# <a name="resync-method-example-vc"></a>重新同步方法示例 （VC + +）
-此示例演示如何使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法来刷新在静态记录集中的数据。  
+# <a name="resync-method-example-vc"></a>Resync 方法示例 (VC++)
+此示例演示如何使用[重新同步](../../../ado/reference/ado-api/resync-method.md)方法来刷新中静态记录集的数据。  
   
 ```  
 // Resync_Method_Sample.cpp  

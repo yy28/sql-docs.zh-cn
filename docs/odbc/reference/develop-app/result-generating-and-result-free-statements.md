@@ -1,13 +1,11 @@
 ---
-title: 结果生成和无结果的语句 |Microsoft 文档
+title: 结果生成和无结果的语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result-generating statements [ODBC]
@@ -16,28 +14,27 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d314aa68c02a227f84e6785b722f44dd68964d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706905"
 ---
-# <a name="result-generating-and-result-free-statements"></a>结果生成和无结果的语句
+# <a name="result-generating-and-result-free-statements"></a>结果生成和无结果语句
 SQL 语句可以松散分为以下五种类别：  
   
 -   **结果集生成语句**这些是生成的结果集的 SQL 语句。 例如，**选择**语句。  
   
--   **行计数生成语句**这些是生成受影响的行的计数的 SQL 语句。 例如，**更新**或**删除**语句。  
+-   **行计数生成语句**这些是生成受影响的行计数的 SQL 语句。 例如，**更新**或**删除**语句。  
   
--   **数据定义语言 (DDL) 语句**这些是修改数据库的结构的 SQL 语句。 例如， **CREATE TABLE**或**DROP INDEX**。  
+-   **数据定义语言 (DDL) 语句**这些是修改数据库结构的 SQL 语句。 例如， **CREATE TABLE**或**DROP INDEX**。  
   
--   **上下文更改语句**这些是更改数据库的上下文的 SQL 语句。 例如，**使用**和**设置**SQL Server 中的语句。  
+-   **上下文更改语句**这些是更改数据库的上下文的 SQL 语句。 例如，**使用**并**设置**SQL Server 中的语句。  
   
--   **管理语句**这些是用于管理目的在数据库中的 SQL 语句。 例如，**授予**和**撤消**。  
+-   **管理语句**这些是用于管理目的在数据库中的 SQL 语句。 例如， **GRANT**并**撤消**。  
   
- 前两个类别中的 SQL 语句统称为*结果生成语句*。 后三个类别中的 SQL 语句统称为*无结果的语句*。 ODBC 定义包括仅生成结果的语句的批处理的语义。 这些语义有很大差异，因此数据源 – 特定。 例如，SQL Server 驱动程序不支持删除对象，然后引用或重新创建同一个批处理中的相同对象。 因此，术语*批处理*因为用此手册仅指批处理的结果生成的语句。
+ 前两个类别中的 SQL 语句统称为*结果生成语句*。 后一种的三个类别中的 SQL 语句统称为*语句无结果*。 ODBC 定义的批处理包含仅生成结果的语句的语义。 这些语义差异很大，因此数据源特定于。 例如，SQL Server 驱动程序不支持将对象拖动然后引用或重新创建同一批中的同一对象。 因此，术语*批处理*本手册中使用时将只向一批结果生成语句。

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c25ed051cfa061cbe402f6da797e360bae97eee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55ac9eaaaa2313536c27df4c96723e96b70fada5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289405"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060844"
 ---
 # <a name="request-log"></a>请求日志
   使用 **“请求日志”** 对话框查看向 SAP Netweaver BW 系统提出样本数据请求的过程中记录的事件。 此信息可用于排除 SAP BW 源配置的故障。  
@@ -45,7 +42,7 @@ ms.locfileid: "37289405"
     > [!NOTE]  
     >  单击 **“预览”** 还将打开 **“预览”** 对话框。 有关此对话框的详细信息，请参阅 [Preview](preview.md)。  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **Time**  
  显示所记录事件的时间。  
   
@@ -58,7 +55,7 @@ ms.locfileid: "37289405"
 |E|错误消息|  
 |W|警告消息。|  
 |I|信息性消息。|  
-|仅当辅助副本配置为使用手动故障转移模式，并且至少一个辅助副本当前与主要副本同步时，|操作已中止。|  
+|A|操作已中止。|  
   
  **Message**  
  显示与记录事件相关联的消息文本。  

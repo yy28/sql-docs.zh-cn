@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
 - publishing reports [Reporting Services], to a SharePoint library
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9d254bc40b8a4f36bd73913a33729d3235dd8dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061807"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -44,9 +41,9 @@ ms.locfileid: "37317907"
   
      如果不指定值，将使用 **TargetReportFolder** 值。  
   
-6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如，http://TestServer/TestSite/Documents/Reports。  
+6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如， http://TestServer/TestSite/Documents/Reports。  
   
-7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如，http://服务器名、http://服务器名/站点或 http://服务器名/站点/子站点。  
+7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如， http://服务器名、 http://服务器名/站点或 http://服务器名/站点/子站点。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

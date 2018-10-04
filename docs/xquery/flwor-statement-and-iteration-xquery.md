@@ -1,18 +1,13 @@
 ---
-title: FLWOR 语句和迭代 (XQuery) |Microsoft 文档
+title: FLWOR 语句和迭代 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -27,16 +22,15 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9ca8e71d1f71ba6416c08586e5613d129ad35d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078104"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656315"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 语句和迭代 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,13 +98,13 @@ where ProductModelID=7
   
 -   `$Step` 是迭代器变量。  
   
--   [路径表达式](../xquery/path-expressions-xquery.md)， `//AWMI:root/AWMI:Location[1]/AWMI:step`，生成输入的序列。 此序列是第一个 <`Location`> 元素节点的 <`step`> 子元素节点序列。  
+-   [路径表达式](../xquery/path-expressions-xquery.md)， `//AWMI:root/AWMI:Location[1]/AWMI:step`，生成的输入的序列。 此序列是第一个 <`Location`> 元素节点的 <`step`> 子元素节点序列。  
   
 -   不使用可选的谓词子句 `where`。  
   
 -   `return` 表达式将从 <`step`> 元素返回字符串值。  
   
- [字符串函数 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)用于检索的字符串值 <`step`> 节点。  
+ [String 函数 (XQuery)](../xquery/data-accessor-functions-string-xquery.md)用于检索的字符串值 <`step`> 节点。  
   
  下面是部分结果：  
   
@@ -149,9 +143,9 @@ SELECT @x.query('
   
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，不允许使用异类序列。 尤其不允许使用由原子值和节点混合组成的序列。  
   
- 迭代经常使用连同[XML 构造](../xquery/xml-construction-xquery.md)中将 XML 转换的语法格式，如第二个查询中所示。  
+ 一起使用频繁地使用迭代[XML 构造](../xquery/xml-construction-xquery.md)中将 XML 转换的语法格式下, 一个查询中所示。  
   
- 在 AdventureWorks 示例数据库中，生产说明存储在**说明**列**Production.ProductModel**表具有以下形式：  
+ 在 AdventureWorks 示例数据库中，生产说明存储在**说明**的列**Production.ProductModel**表具有以下形式：  
   
 ```  
 <Location LocationID="10" LaborHours="1.2"   
@@ -197,11 +191,11 @@ where ProductModelID=7
   
 -   FLWOR 语句将为特定产品检索 <`Location`> 元素序列。  
   
--   [数据函数 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，因此它们将将添加到生成的 XML 作为而不是作为属性的文本节点。  
+-   [数据函数 (XQuery)](../xquery/data-accessor-functions-data-xquery.md)用于提取每个属性的值，因此它们会将其添加到生成的 XML 作为属性而不是文本节点。  
   
 -   RETURN 子句中的表达式将构造所需的 XML。  
   
- 下面是部分结果：  
+ 这是部分结果：  
   
 ```  
 <Location>  
@@ -254,7 +248,7 @@ where ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   `where`关键字使用**count （)** 函数来计算的数量 <`step`> 子元素中每个工作中心位置。  
+-   `where`关键字使用**count （)** 函数计数的数量 <`step`> 子元素中每个工作中心位置。  
   
 -   `return` 表达式将构造您希望从迭代结果生成的 XML。  
   
@@ -316,7 +310,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- 下面的查询是类似，只不过它针对 Instructions 列中，键入指定**xml**列中的**ProductModel**表。 [XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)用于生成所需的 XML。  
+ 下面的查询是类似，只不过它针对类型化的 Instructions 列指定**xml**列的**ProductModel**表。 [XML 构造 (XQuery)](../xquery/xml-construction-xquery.md)用于生成所需的 XML。  
   
 ```  
 SELECT Instructions.query('  
@@ -336,9 +330,9 @@ WHERE ProductModelID=7
   
 -   `for` 子句定义了两个变量：`$WC` 和 `$S`。 在生产某个自行车产品型号时，与 `$WC` 相关联的表达式将生成一系列生产车间。 分配给 `$S` 变量的路径表达式将为 `$WC` 中的每个生产车间序列生成一个相应的步骤序列。  
   
--   Return 语句构造具有的 XML <`Step`> 元素包含生产步骤和**LocationID**作为其属性。  
+-   Return 语句构造具有 XML <`Step`> 元素，其中包含的生产步骤和**LocationID**作为其属性。  
   
--   **声明默认元素命名空间**以便得到的 XML 中的所有命名空间声明显示在顶级元素，XQuery prolog 中使用。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[处理在 XQuery 中的命名空间](../xquery/handling-namespaces-in-xquery.md)。  
+-   **声明默认元素命名空间**XQuery prolog 中使用，以便生成的 XML 中的所有命名空间声明出现在顶级元素。 这使结果的可读性更强。 有关默认命名空间的详细信息，请参阅[处理 XQuery 中的命名空间](../xquery/handling-namespaces-in-xquery.md)。  
   
  下面是部分结果：  
   
@@ -360,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>使用 order by 子句  
- 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 排序表达式传递给`order by`子句必须返回其类型对有效值**gt**运算符。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
+ 通过使用 FLWOR 表达式中的 `order by` 子句可在 XQuery 中进行排序。 排序表达式传递给`order by`子句必须返回的值的类型的有效值**gt**运算符。 每个排序表达式必须针对每一项生成一个单独的序列。 默认情况下，按升序进行排序。 您也可以选择为每个排序表达式指定升序或降序顺序。  
   
 > [!NOTE]  
 >  通过在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中实现 XQuery 进行的字符串值的排序比较始终是使用二进制 Unicode 码位排序规则来执行的。  
@@ -381,7 +375,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 请注意，[原子化 (XQuery)](../xquery/atomization-xquery.md)过程中检索的原子值 <`number`> 元素之前将其传递给`order by`。 你可以通过使用编写表达式**data （)** 函数，但不需要。  
+ 请注意，[原子化 (XQuery)](../xquery/atomization-xquery.md)过程中检索的原子值 <`number`> 元素之前将其传递给`order by`。 可以通过编写表达式**data （)** 函数，但这不是必需。  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -540,7 +534,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   不支持对 `order by` 使用 empty least、empty greatest 和 collation 关键字  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 表达式](../xquery/xquery-expressions.md)  
   
   

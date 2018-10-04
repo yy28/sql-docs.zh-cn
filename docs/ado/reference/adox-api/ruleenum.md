@@ -1,13 +1,11 @@
 ---
-title: RuleEnum |Microsoft 文档
+title: RuleEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,23 +13,22 @@ f1_keywords:
 helpviewer_keywords:
 - RuleEnum enumeration [ADOX]
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 66a6a38010487345e2b50ae1267bbe291e05407b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787045"
 ---
 # <a name="ruleenum"></a>RuleEnum
-指定应时遵循的规则[密钥](../../../ado/reference/adox-api/key-object-adox.md)被删除。  
+指定何时应遵循的规则[密钥](../../../ado/reference/adox-api/key-object-adox.md)被删除。  
   
 |常量|ReplTest1|Description|  
 |--------------|-----------|-----------------|  
-|**adRICascade**|@shouldalert|级联发生更改。|  
+|**adRICascade**|1|级联更改。|  
 |**adRINone**|0|默认值。 不执行任何操作。|  
 |**adRISetDefault**|3|外键的值设置为默认值。|  
 |**adRISetNull**|2|外键的值设置为 null。|  

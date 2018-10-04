@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CrossProduct Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0612d741cc6aa04d2564f7100179d3d1881b9e5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055217"
 ---
 # <a name="crossproduct-element-xmla"></a>CrossProduct 元素 (XMLA)
   包含来自每个层次结构的成员的有序集之间的叉积[轴](axis-element-xmla.md)使用的元素[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)返回的数据类型[Execute](../xml-elements-methods-execute.md)方法。  
@@ -54,8 +51,8 @@ ms.locfileid: "37278207"
   
 |特征|Description|  
 |--------------------|-----------------|  
-|数据类型和长度|InclusionThresholdSetting|  
-|默认值|InclusionThresholdSetting|  
+|数据类型和长度|None|  
+|默认值|None|  
 |基数|0-n：可多次出现的可选元素。|  
   
 ## <a name="element-relationships"></a>元素关系  
@@ -71,7 +68,7 @@ ms.locfileid: "37278207"
 |---------------|-----------------|  
 |Size|所需`Integer`属性。 指示 `CrossProduct` 元素表示的叉积中包含的元组数。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  当客户端应用程序设置`AxisFormat`属性设置为*ClusterFormat*，每个轴上的成员被划分到其中的每个群集表示之间的每个层次结构中成员的有序集的叉积的群集。 每个分类都由 `CrossProduct` 元素表示。 每个 `CrossProduct` 元素都包含轴上每个层次结构中的 `Members` 元素。 `CrossProduct` 元素可包含单一层次结构的成员。  
   
 ## <a name="example"></a>示例  

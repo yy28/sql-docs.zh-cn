@@ -1,32 +1,29 @@
 ---
-title: 调整 APPEND 子句 |Microsoft 文档
+title: 形状 APPEND 子句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c54daeed05260bd7e6abd804830ce8dac1807d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a7b51e2cbfb298493e7001937f7b0f274044478a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272576"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801574"
 ---
-# <a name="shape-append-clause"></a>形状 APPEND 子句
-形状命令 APPEND 子句将某一列或列追加**记录集**。 通常情况下，这些列即变为章节列，后者是指子**记录集**。  
+# <a name="shape-append-clause"></a>Shape APPEND 子句
+形状命令 APPEND 子句将列或列追加**记录集**。 通常情况下，这些列是章节列，请参阅子**记录集**。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,16 +35,16 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  此子句的部分如下所示：  
   
  *parent-command*  
- 零个或以下一项 (可以忽略*父命令*完全):  
+ 零个或以下一项 (可以省略*父命令*完全):  
   
--   提供程序命令括在大括号 ("{}")，该属性返回**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
+-   提供程序命令括在大括号 ("{}")，它返回**记录集**对象。 该命令颁发给基础数据提供程序，且其语法取决于该提供程序的要求。 这通常是 SQL 语言中，虽然 ADO 不需要任何特定的查询语言。  
   
 -   另一个形状命令嵌入在括号中。  
   
 -   表关键字后, 跟的表中的数据提供程序的名称。  
   
  *父别名*  
- 可选别名引用父**记录集**。  
+ 指的是父级的可选别名**记录集**。  
   
  *column-list*  
  一个或多个以下：  
@@ -68,51 +65,51 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  *child-recordset*  
- -   提供程序命令括在大括号 ("{}")，该属性返回**记录集**对象。 对基础数据提供程序发出该命令，其语法取决于该提供程序的要求。 通常，这是 SQL 语言中，尽管 ADO 不需要任何特定的查询语言。  
+ -   提供程序命令括在大括号 ("{}")，它返回**记录集**对象。 该命令颁发给基础数据提供程序，且其语法取决于该提供程序的要求。 这通常是 SQL 语言中，虽然 ADO 不需要任何特定的查询语言。  
   
 -   另一个形状命令嵌入在括号中。  
   
--   现有的形状名称**记录集**。  
+-   现有的形状的名称**记录集**。  
   
 -   表关键字后, 跟的表中的数据提供程序的名称。  
   
  *child-alias*  
- 到子引用的别名**记录集**。  
+ 引用子级的别名**记录集**。  
   
  *parent-column*  
- 中的列**记录集**返回*父命令。*  
+ 中的列**记录集**返回的*父命令。*  
   
  *child-column*  
- 中的列**记录集**返回*子命令*。  
+ 中的列**记录集**返回的*子命令*。  
   
  *param-number*  
  请参阅[操作的参数化命令](../../../ado/guide/data/operation-of-parameterized-commands.md)。  
   
  *chapter-alias*  
- 指追加到父级的章节列别名。  
+ 指的是附加到父级的章节列别名。  
   
 > [!NOTE]
->  *"父列*收件人*子列"* 子句实际上是一个列表，其中用逗号分隔每个定义的关系  
+>  *"父列*TO*子列"* 子句实际上是一个列表，其中每个定义的关系用逗号分隔  
   
 > [!NOTE]
 >  子句后追加关键字实际上是一个列表，其中每个子句用逗号分隔，并定义要追加到父级的另一列。  
   
-## <a name="remarks"></a>Remarks  
- 构造时提供程序从用户输入的命令为形状命令的一部分，形状会将用户提供的提供程序命令视为不透明的字符串并将它们传递给提供程序的忠实。 例如，在下面的形状命令中，  
+## <a name="remarks"></a>备注  
+ 在提供程序命令从用户输入构造形状命令的一部分时，形状会将用户提供的提供程序命令视为不透明的字符串和如实地将其传递给提供程序。 例如，在以下形状命令中，  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状将执行两个命令：`select * from t1`和 (`select * from t2 RELATE k1 TO k2)`。 如果在用户提供的用分号分隔的多个提供程序命令所组成的复合命令，则形状不能区分差异。 因此，在以下的形状命令，  
+ 形状将执行两个命令：`select * from t1`和 (`select * from t2 RELATE k1 TO k2)`。 如果用户提供的复合命令之间用分号分隔的多个提供程序命令组成，形状不能区分不同之处。 因此，在以下形状命令，  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 形状执行`select * from t1; drop table t1`和 (`select * from t2 RELATE k1 TO k2),`未意识到，`drop table t1`都单独和在此种情况下，很危险，提供程序命令中。 应用程序必须始终验证用户输入，以防止发生这种潜在的黑客攻击。  
+ 形状将执行`select * from t1; drop table t1`和 (`select * from t2 RELATE k1 TO k2),`并未意识到，`drop table t1`是单独在此示例中为危险的提供程序命令。 应用程序必须始终验证用户输入，以防止发生这种潜在的黑客攻击。  
   
  本部分包含以下主题。  
   
@@ -125,6 +122,6 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
 -   [中间 Shape COMPUTE 子句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
 ## <a name="see-also"></a>请参阅  
- [调整示例数据](../../../ado/guide/data/data-shaping-example.md)   
- [正式形状语法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [数据整理示例](../../../ado/guide/data/data-shaping-example.md)   
+ [正式 Shape 语法](../../../ado/guide/data/formal-shape-grammar.md)   
  [常用 Shape 命令](../../../ado/guide/data/shape-commands-in-general.md)

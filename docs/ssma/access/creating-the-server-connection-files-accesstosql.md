@@ -1,30 +1,24 @@
 ---
-title: 创建服务器连接文件 (AccessToSQL) |Microsoft 文档
+title: 创建服务器连接文件 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773623"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672655"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>创建服务器连接文件 (AccessToSQL)
-服务器信息可以是指定在脚本文件的服务器部分。 此外可以在单独的服务器连接文件中指定服务器信息。 服务器连接文件的命令行参数是`-c <serverconnectionfile>`。 如果在脚本和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
+服务器信息可以是指定在脚本文件的服务器部分。 此外可以在单独的服务器连接文件中指定服务器信息。 服务器连接文件的命令行参数是`-c <serverconnectionfile>`。 如果脚本和服务器连接文件中存在相同的服务器 id，则被视为脚本文件中的服务器定义。  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -68,11 +62,11 @@ ms.locfileid: "34773623"
 ```  
   
 ## <a name="server-connection-file-validation"></a>服务器连接文件验证  
-用户可以轻松地验证他/她服务器连接文件的架构定义文件和**A2SSConsoleScriptServersSchema.xsd**架构文件夹中可用。  
+用户可以轻松地验证他/她服务器连接文件和架构定义文件**A2SSConsoleScriptServersSchema.xsd**架构文件夹中可用。  
   
 ## <a name="next-step"></a>下一步  
-操作控制台的下一步是[执行 SSMA 控制台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+在操作控制台中的下一步是[执行 SSMA 控制台&#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>另请参阅  
-[执行 SSMA 控制台 (Access)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+[执行 SSMA 控制台 （访问）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

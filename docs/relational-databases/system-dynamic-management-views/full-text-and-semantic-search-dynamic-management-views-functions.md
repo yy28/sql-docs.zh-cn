@@ -1,12 +1,10 @@
 ---
-title: 全文和语义搜索动态管理视图-函数 |Microsoft 文档
+title: 全文和语义搜索动态管理视图的函数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], full-text search
 - full-text search [SQL Server], dynamic management views
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5aff261fa7697f3a3c7ba3693ce68ac11bee4362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 1d854cd444de6bb25e7f1f56f3b7e92b1e435bb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468493"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843365"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文和语义搜索动态管理视图-函数
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>全文和语义搜索动态管理视图的函数
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   本节包含以下与全文搜索和语义搜索相关的动态管理视图和函数。  
@@ -47,7 +44,7 @@ ms.locfileid: "34468493"
  在给定表的全文索引中返回与属性相关的所有内容。 其中包括属于与全文索引关联的搜索属性列表注册的任何属性的所有数据。  
   
  sys.dm_fts_index_keywords_position_by_document  
- 返回文档中的关键字的位置。  
+ 在文档中返回关键字的位置。  
   
  [sys.dm_fts_index_population](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)  
  返回有关当前正在进行的全文索引填充的信息。  
@@ -71,7 +68,7 @@ ms.locfileid: "34468493"
  [sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  为关联有语义索引的每个表中的每个相似性索引返回一行关于文档相似性索引填充状态的信息。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [动态管理视图和函数 (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
