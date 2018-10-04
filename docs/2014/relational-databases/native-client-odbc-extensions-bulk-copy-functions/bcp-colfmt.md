@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad117fe5580267db103f1e6a44ec6798bf87c023
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089277"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   指定用户文件中的数据的源或目标格式。 用作源格式时**bcp_colfmt**指定的现有数据文件中大容量复制到的数据源作为格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]表。 作为目标格式使用时，使用指定的列格式创建数据文件**bcp_colfmt**。  
@@ -105,9 +102,9 @@ idxServerCol
   
  有关[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]字符和二进制数据类型*cbUserData*可以是 SQL_VARLEN_DATA、 SQL_NULL_DATA、 0，或某个正值。 如果*cbUserData*为 SQL_VARLEN_DATA，则系统使用长度指示符，如果存在或终止符序列来确定数据的长度。 如果长度指示符和终止符序列均提供，则大容量复制将采用导致数据复制量最少的方法。 如果*cbUserData*为 SQL_VARLEN_DATA，数据类型是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定字符或二进制类型，并且既不名技术长度指示器和终止符序列，则系统将返回一条错误消息。  
   
- 如果*cbUserData*为 0 或正值，则系统使用*cbUserData*作为最大数据长度。 但是，如果除了正*cbUserData*、 提供长度指示器或终止符序列，系统使用导致数据复制量最少的方法来确定数据长度。  
+ 如果 cbUserData 为 0 或正值，则系统使用 cbUserData 作为最大数据长度。 但是，如果除了正的 cbUserData 以外，还提供了长度指示器或终止符序列，则系统使用导致数据复制量最少的方法来确定数据长度。  
   
- *CbUserData*值表示数据的字节计数。 如果字符数据由 Unicode 宽字符，则正*cbUserData*参数值表示乘以大小，以字节为单位，每个字符的字符数。  
+ cbUserData 值表示数据的字节计数。 如果字符数据由 Unicode 宽字符表示，则正的 cbUserData 参数值表示字符数乘以每个字符大小（字节）。  
   
  *pUserDataTerm*  
  要用于该列的终止符序列。 此参数主要用于字符数据类型，因为所有其他类型均属于固定长度，或者在二进制数据的情况下，要求长度指示器以精确记录提供的字节数目。  
@@ -129,7 +126,7 @@ idxServerCol
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **Bcp_colfmt**函数，可指定大容量复制的用户文件格式。 对于大容量复制，格式包含以下部分：  
   
 -   从用户文件列到数据库列的映射。  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 api_name:
 - DatabaseLogonTimeout Property
@@ -18,16 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseLogonTimeout property
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
-caps.latest.revision: 37
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b93c42c786707f11144b06e1da55569b05701fae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c6971b8ef85aba6202af111b114e16db137eab4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091377"
 ---
 # <a name="databaselogontimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseLogonTimeout 属性 (WMI MSReportServer_ConfigurationSetting)
   指定尝试登录到报表服务器数据库失败前等待的秒数。 值 **0** 指示无限期的等待时间。 只读。  
