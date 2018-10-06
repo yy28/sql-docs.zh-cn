@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6c1a6a7ef05a10662a878c9b0e86d336835af4a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775781"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782366"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 快速入门： 运行 SQL Server 容器映像
 
@@ -54,7 +54,7 @@ any changes to one section should be duplicated in the other-->
 
 ## <a id="pullandrun2017"></a> 请求和运行容器映像
 
-1. 从 Docker Hub 中拉出 SQL Server 2017 Linux 容器映像。
+1. 从 Microsoft 容器注册表拉取 SQL Server 2017 Linux 容器映像。
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:2017-latest
@@ -67,7 +67,7 @@ any changes to one section should be duplicated in the other-->
    > [!TIP]
    > 如果你想要试用 SQL Server 2019 预览图像，请参阅[这篇文章的 SQL Server 2019 预览版本](quickstart-install-connect-docker.md?view=sql-server-linux-ver15#pullandrun2019)。
 
-   前一个命令请求最新的 SQL Server 2017 容器映像。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `mcr.microsoft.com/mssql/server:2017-GA`。 要查看所有可用映像，请参阅 [mssql-server-linux Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)。
+   前一个命令请求最新的 SQL Server 2017 容器映像。 如果想请求某个特定映像，需添加一个冒号和标记名称（例如 `mcr.microsoft.com/mssql/server:2017-GA-ubuntu`。 若要查看所有可用映像，请参阅[mssql server Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server)。
 
    在本文中，bash 命令`sudo`使用。 在 MacOS 上，`sudo`可能不需要。 在 Linux 上，如果不想要使用`sudo`若要运行 Docker，可以配置**docker**组，并将用户添加到该组。 有关详细信息，请参阅[安装后步骤适用于 Linux](https://docs.docker.com/install/linux/linux-postinstall/)。
 
@@ -93,13 +93,13 @@ any changes to one section should be duplicated in the other-->
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听容器中的 TCP 1433 并公开的端口 1433，在主机上。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **microsoft/mssql-server-linux:2017-latest** | SQL Server 2017 Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -175,13 +175,13 @@ SELECT @@SERVERNAME,
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | Description |
+   | 参数 | 描述 |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
    | **-p 1433:1433** | 建立主机环境（第一个值）上的 TCP 端口与容器（第二个值）中 TCP 端口的映射。 在此示例中，SQL Server 侦听容器中的 TCP 1433 并公开的端口 1433，在主机上。 |
    | **--name sql1** | 为容器指定一个自定义名称，而不是使用随机生成的名称。 如果运行多个容器，则无法重复使用相同的名称。 |
-   | **microsoft/mssql-server-linux:vNext-CTP2.0** | SQL Server 2019 CTP 2.0 Linux 容器映像。 |
+   | **mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu** | SQL Server 2019 CTP 2.0 Linux 容器映像。 |
 
 3. 要查看 Docker 容器，请使用 `docker ps` 命令。
 

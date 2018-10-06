@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724341"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798585"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 课： 浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "44724341"
     GO
     ```
 
-存储的过程**PlotHistogram2**等同于预先存在的存储过程**PlotHistogram**创建的`RunSQL_SQL_Walkthrough.ps1`脚本。 
+存储的过程**PlotHistogram2**等同于预先存在的存储过程**PlotHistogram** NYCTaxi_sample 数据库中找到。 
   
 + 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。
   
@@ -164,7 +164,7 @@ ms.locfileid: "44724341"
 
 通常情况下，数据科学家生成多个数据可视化来了解将数据从不同的角度。 在此示例中，存储的过程使用 Hist 函数创建直方图，例如为常用格式导出的二进制数据。JPG、。PDF、 和。PNG。 
 
-1. 使用现有的存储的过程**PlotInOutputFiles**编写直方图、 散和到其他 R 图形。JPG 和。PDF 格式。 `RunSQL_SQL_Walkthrough.ps1`创建**PlotInOutputFiles**并将其添加数据库。 使用右键单击**修改**查看的源。
+1. 使用现有的存储的过程**PlotInOutputFiles**编写直方图、 散和到其他 R 图形。JPG 和。PDF 格式。 使用右键单击**修改**查看的源。
 
 2. （可选） 作为练习，创建您自己作为过程的副本**PlotInOutputFiles2**，以避免命名冲突的唯一名称。
 

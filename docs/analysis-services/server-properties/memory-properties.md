@@ -1,6 +1,6 @@
 ---
 title: 内存属性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054869"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264877"
 ---
 # <a name="memory-properties"></a>内存属性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 预先适度的在启动时的内存分配，以便可以立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
+  Analysis Services 预分配适度的在启动时的内存，因此可以立即处理请求。 可随着查询和处理工作负荷增加而分配更多内存。 
   
   通过指定配置设置，可以控制释放内存时的阈值。 例如， **HardMemoryLimit** 设置指定自行强制实施的内存不足条件（默认情况下，此阈值未启用），在此条件下会彻底拒绝新请求，直到有更多资源可用。
 
-若要了解有关每个 Analysis Services 实例使用的版本的最大内存的详细信息，请参阅[各版本和支持的 SQL Server 功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
+若要了解有关每个 SQL Server Analysis Services 实例使用的版本的最大内存的详细信息，请参阅[各版本和支持的 SQL Server 功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
   
- 下列设置适用于这两个表格和多维服务器模式，除非另有说明。  
+ 除非另有说明，以下设置将适用于表格和多维服务器。  
  
 ## <a name="default-memory-configuration"></a>默认内存配置
 
@@ -33,9 +33,9 @@ ms.locfileid: "38054869"
 
 请记住，配置设置是基于每个实例的。 如果在相同硬件上运行 Analysis Services 的多个实例（如表格和多维实例），则每个实例都独立于其他实例来分配自己的内存。
 
-下表简要介绍使用频率较高的内存设置（在参考部分中提供了详细信息）。 你应配置这些设置仅当 Analysis Services 争夺内存与同一台服务器上的其他应用程序：
+下表简要介绍使用频率较高的内存设置（在参考部分中提供了详细信息）。 仅当 Analysis Services 争夺内存与其他应用程序在同一服务器上配置这些设置：
 
-设置 | Description
+设置 | 描述
 --------|------------
 LowMemoryLimit | 对于多维实例，这是阈值下限，达到该阈值时，服务器首先开始释放分配给不常使用的对象的内存。
 VertiPaqMemoryLimit | 对于表格实例，这是阈值下限，达到该阈值时，服务器首先开始释放分配给不常使用的对象的内存。
@@ -66,12 +66,10 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **VertiPaqPagingPolicy**  
   仅针对表格实例，指定服务器内存不足时的分页行为。 以下是有效值：  
   
-  
-
-设置  |Description  
+设置  |描述  
 ---------|---------
-**0**     |  禁用分页。 如果内存不足，处理将失败，同时显示内存不足错误。 如果禁用分页，必须向服务帐户授予 Windows 特权。 有关说明，请参阅[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
-**1**     |  （默认）该属性支持使用操作系统分页文件 (pagefile.sys) 对磁盘进行分页。   
+**0**     |  （默认值为 Azure Analysis Services）禁用分页。 如果内存不足，处理将失败，同时显示内存不足错误。 如果禁用分页，必须向服务帐户授予 Windows 特权。 有关说明，请参阅[配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md)。 
+**1**     |  （SQL Server Analysis Services 的默认值）该属性允许使用操作系统页文件 (pagefile.sys) 分页到磁盘。   
   
 设置为 1 时，处理不大可能由于内存限制而失败，因为服务器将尝试使用指定的方法对磁盘进行分页。 设置 **VertiPaqPagingPolicy** 属性并不会确保内存错误永远不会发生。 在下列条件下仍然可能会发生内存不足错误：  
   
@@ -90,7 +88,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **MemoryHeapType**  
   这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。 SQL Server 2016 SP1 及更高版本的 Analysis Services 中的有效值如下所示：
   
-  设置 | Description
+  设置 | 描述
 --------|------------
 **-1** | （默认）Automatic。 该引擎将决定具体使用哪一个。
 **1** | Analysis Services HEAP。
@@ -102,7 +100,7 @@ HardMemoryLimit | 这是另一个阈值，达到该阈值时，由于内存压�
  **HeapTypeForObjects**  
   这是一项高级属性，除非有 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技术支持的指导，否则不应更改此属性。 以下是有效值：
   
-   设置 | Description
+   设置 | 描述
 --------|------------
 **-1** | （默认）Automatic。 该引擎将决定具体使用哪一个。
 **0** | Windows LFH 堆。

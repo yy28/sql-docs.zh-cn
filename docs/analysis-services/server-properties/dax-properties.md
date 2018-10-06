@@ -1,6 +1,6 @@
 ---
 title: DAX 属性 |Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9150eb13b6c39f74f1e65743b6a79aca0a07676a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 794caf245e0cc3494713991159c5a911a187afae
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033526"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264858"
 ---
 # <a name="dax-properties"></a>DAX 属性
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
 
-   msmdsrv.ini 的 DAX 区域包含用于控制 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中某些查询行为的设置，例如 DAX 查询结果集中返回行数量的上限。
+   Msmdsrv.ini 的 DAX 区域包含用于控制在 Analysis Services 中，某些查询行为例如 DAX 查询结果集中返回的行数的上限的设置。
 
   对于非常大的行集，例如 DirectQuery 模型中返回的行集，默认值 100 万行可能会不够。 如果出现这个错误：“外部数据源的查询结果集已超过了允许的最大行数(1000000) 行”，你就知道是否需要调整限制。
 
@@ -43,7 +43,7 @@ ms.locfileid: "38033526"
 
 ## <a name="property-descriptions"></a>属性说明
 
-设置 |ReplTest1 |Description
+设置 |ReplTest1 |描述
 --------|-------|-----------
 MaxIntermediateRowsetSize | 1000000 | DAX 查询中返回的最大行数。 手动将此条目添加到 msmdsrv.ini 文件中，如果默认值过低，请增加值。
 PredicateCheckSpoolCardinalityThreshold| 5000 | 这是一项高级属性，除非有 Microsoft 技术支持的指导，否则不应更改此属性。

@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808625"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252005"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808625"
 
 了解如何使用持久性存储区以实现高可用性 (HA) 在 Kubernetes 中 Azure Kubernetes 服务 (AKS) 上配置 SQL Server 实例。 该解决方案提供复原能力。 如果 SQL Server 实例失败，Kubernetes 会自动重新创建该新 pod 中。 Kubernetes 还提供了针对节点故障的复原能力。
 
-本教程演示如何在 AKS 上的容器中配置高度可用的 SQL Server 实例。 此外可以[在 Kubernetes 上创建一个 SQL Server 可用性组](tutorial-sql-server-ag-kubernetes.md)。 若要比较两个不同的 Kubernetes 解决方案，请参阅[SQL Server 容器的高可用性](sql-server-linux-container-ha-overview.md)。
+本教程演示如何在 AKS 上的容器中配置高度可用的 SQL Server 实例。 此外可以创建[Always On 可用性组的 SQL Server 容器](sql-server-ag-kubernetes.md)。 若要比较两个不同的 Kubernetes 解决方案，请参阅[SQL Server 容器的高可用性](sql-server-linux-container-ha-overview.md)。
 
 > [!div class="checklist"]
 > * 创建的 SA 密码

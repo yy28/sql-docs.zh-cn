@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759355"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251995"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On 可用性组 Kubernetes 运算符参数
 
-Always On 可用性组在 Kubernetes 上的需要一个运算符。 .Yaml 文件中描述的运算符。  中的规范示例，请参阅[本教程](tutorial-sql-server-ag-kubernetes.md)。
+Always On 可用性组在 Kubernetes 上的需要一个运算符。 清单说明运算符。 该清单是`.yaml`文件。 中的规范示例，请参阅[Always On 可用性组的 SQL Server 容器](sql-server-ag-kubernetes.md)。
 
 本文介绍了运算符全局环境变量。
 
@@ -35,11 +35,11 @@ Always On 可用性组在 Kubernetes 上的需要一个运算符。 .Yaml 文件
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * 可选
-  * **说明**: sql server 外部的持续时间编写租约来保留 sql server 可写并防止裂脑情况。 辅助副本等待此过期后选择新领导。
+  * **说明**: sql server 写入租赁的持续时间。 使用保留的 sql server 可写并防止出现裂脑情况。 辅助副本等待此选择新领导后的秒数。
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * 可选
-  * **说明**： 段来监视可用性组的状态。 确定如何快速添加和删除副本。 必须是小于`MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`。
+  * **说明**： 要监视可用性组的状态的期间。 确定如何快速添加和删除副本。 必须是小于`MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`。
   * **默认**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

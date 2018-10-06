@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6df953eed1226e6be62ba694651f3b3244736a5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626165"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251961"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Always On 可用性组的 SQL Server 容器
 
@@ -58,7 +58,7 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 
 1. 创建数据库并将它们附加到可用性组
 
-有关详细步骤，请参阅[在 Kubernetes 中配置 SQL Server Always On 可用性组，以实现高可用性](tutorial-sql-server-ag-kubernetes.md)。
+有关详细步骤，请参阅[Always On 可用性组的 SQL Server 容器](sql-server-ag-kubernetes.md)。
 
 ## <a name="sql-server-kubernetes-operator"></a>SQL Server Kubernetes 运算符
 

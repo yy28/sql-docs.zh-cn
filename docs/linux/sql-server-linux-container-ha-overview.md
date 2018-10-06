@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: ccf4b3bab89c29fde1ff592a166baa3747afa890
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f5c3cc4756c305ba82af4c110488722ec24a9af
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843217"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251984"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 容器的高可用性
 
@@ -27,7 +27,7 @@ ms.locfileid: "47843217"
 
 SQL Server 2017 提供在 Kubernetes 上部署的 Docker 映像。 可以使用 Kubernetes 永久性卷声明 (PVC) 来配置该映像。 Kubernetes 监视 SQL Server 进程在容器中。 如果进程、 pod、 容器或节点发生故障，Kubernetes 将自动启动另一个实例，并重新连接到存储。
 
-SQL Server 2019 引入了与 Kubernetes StatefulSet 更可靠就。 这样，Kubernetes 安排在可以加入 SQL Server Always On 可用性组中的容器映像中的 SQL Server 实例。 这可以提供改进的运行状况监视，更快地恢复，卸载备份，并读出规模。  
+SQL Server 2019 （预览版） 引入了与 Kubernetes StatefulSet 更强大的体系结构。 Kubernetes 会协调 SQL Server 实例在参与 SQL Server Always On 可用性组中的容器映像中。 改进了运行状况监视、 更快地恢复、 卸载备份和读取的横向扩展，提供了此模式。  
 
 ## <a name="container-with-sql-server-instance-on-kubernetes"></a>与在 Kubernetes 上的 SQL Server 实例的容器
 
@@ -39,7 +39,7 @@ Kubernetes 版本 1.6 和更高版本已支持[*存储类*](http://kubernetes.io
 
 在上图中，`mssql-server`中是一个 SQL Server 实例 （容器） [ *pod*](http://kubernetes.io/docs/concepts/workloads/pods/pod/)。 一个[副本集](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 pod。 应用程序连接到服务。 在这种情况下，该服务表示承载的发生故障后保持不变的 IP 地址的负载均衡器`mssql-server`。
 
-Kubernetes 会协调群集中的资源。 当 pod 或托管在容器中的 SQL Server 实例的节点失败时，业务流程协调程序会引导 SQL Server 实例具有相同 pod 中的容器，并将其附加到相同的持久存储。
+Kubernetes 会协调群集中的资源。 当托管 SQL Server 实例容器的节点失败时，它会引导具有 SQL Server 实例的新容器，并将其附加到相同的持久存储。
 
 SQL Server 2017 和更高版本支持容器的 Kubernetes 上。
 
@@ -53,7 +53,7 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 
 在上图中，四个节点 kubernetes 群集承载可用性组具有三个副本。 该解决方案包含以下组件：
 
-* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 部署包括运算符和配置映射。 这些提供容器映像、 软件和部署可用性组的 SQL Server 实例所需的说明。
+* Kubernetes [*部署*](http://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 部署包括运算符和配置映射。 部署描述容器映像、 软件和部署可用性组的 SQL Server 实例所需的说明。
 
 * 三个节点，每个托管[ *StatefulSet*](http://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)。 StatefulSet 包含一个 pod。 包含每个 pod:
   * 运行一个 SQL Server 实例的 SQL Server 容器。
@@ -67,9 +67,9 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 
 此外，群集存储[*机密*](http://kubernetes.io/docs/concepts/configuration/secret/)密码、 证书、 密钥和其他敏感信息。
 
-## <a name="compare-sql-server-high-availabiltiy-on-containers-with-and-without-the-availability-group"></a>比较使用和不使用可用性组的容器上的 SQL Server 高可用性
+## <a name="compare-sql-server-high-availability-on-containers-with-and-without-the-availability-group"></a>比较使用和不使用可用性组的容器上的 SQL Server 高可用性
 
-以下表 compairs 容器的 Kubernetes 上使用和不可用性组中的 SQL Server 高可用性功能：
+下表比较了容器的 Kubernetes 上使用和不可用性组中的 SQL Server 高可用性功能：
 
 | |与某个可用性组 | 独立容器实例<br/> 无可用性组
 |:------|:------|:------
@@ -82,7 +82,7 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 |辅助副本备份 | 用户帐户控制 | 
 |StatefulSet 作为运行 | 用户帐户控制 | 
 
-一个主要区别是通过在容器中的 SQL Server 的单个实例的可用性组相比更快地恢复 （或故障转移） 时间。 这是因为 SQL Server 可用性组在群集中其他节点上将可用性组数据库的次要副本。 故障转移时，辅助副本是选择并升级为主要副本。 连接到服务的应用程序将重定向到新的主副本。 
+一个主要区别是通过在容器中的 SQL Server 的单个实例的可用性组相比更快地恢复 （或故障转移） 时间。 此项改进是因为 SQL Server 可用性组在群集中其他节点上将辅助副本。 故障转移时，辅助副本是选择并升级为主要副本。 连接到服务的应用程序将重定向到新的主副本。
 
 没有可用性组中，当 Kubernetes 检测到故障转移，它需要进行创建容器，将其连接到存储，，然后连接到服务的应用程序重新连接在一起。 确切的故障转移时间取决于其中已故障转移，以及如何检测到它。 
 
@@ -90,9 +90,9 @@ SQL Server 2019 在 Kubernetes 中的容器上支持可用性组。 对于可用
 
 ## <a name="next-steps"></a>后续步骤
 
-若要将 SQL Server 容器在 Azure Kubernetes 服务 (AKS) 部署，请遵循以下教程之一：
+若要将 SQL Server 容器在 Azure Kubernetes 服务 (AKS) 部署，请参阅这些示例：
 
 * [部署 Docker 容器中的 SQL Server](sql-server-linux-configure-docker.md)
 * [将 SQL Server 容器在 Kubernetes 中部署](tutorial-sql-server-containers-kubernetes.md)
-* [部署 SQL Server Always On 可用性组 Kubernetes](tutorial-sql-server-ag-kubernetes.md)
+* [Always On 可用性组的 SQL Server 容器](sql-server-ag-kubernetes.md)
 

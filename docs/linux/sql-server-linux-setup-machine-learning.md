@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b61eb365cc818bafc3e0b584f91dd9e85b09cc24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770935"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782356"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安装 SQL Server 2019 机器学习服务 (R、 Python、 Java) 在 Linux 上
 
@@ -75,7 +75,7 @@ zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
 
 在与 internet 连接的设备，包下载并安装独立于数据库引擎的每个操作系统使用包安装程序。 下表描述了所有可用的包，但对于连接到 internet 的安装，您只需要*一个*R 或 Python 包，以获取功能的特定组合。
 
-| 包名称 | 适用于 | Description |
+| 包名称 | 适用于 | 描述 |
 |--------------|----------|-------------|
 |mssql server 扩展性  | All | 用于运行 R、 Python 或 Java 代码的可扩展性框架。 |
 |mssql server 扩展性 java | Java | 用于加载的 Java 执行环境的 Java 扩展。 没有任何其他库或用于 Java 的包。 |
@@ -273,13 +273,19 @@ GO
 
 可以安装并通过追加 R、 Python 或 Java 包和参数的命令将安装数据库引擎上一个过程中配置的数据库引擎和机器学习服务。 
 
-下面的示例是组合的包安装如下所示使用 Yum 包管理器的"模板"说明：
+下面的示例是组合的包安装如下所示使用 Yum 包管理器的"模板"说明。 它将安装数据库引擎，并添加可扩展性框架包作为依赖项中提取的 Java 语言扩展。
 
 ```bash
-sudo yum install -y mssql-sqlserver mssql-server-extensibility-java 
+sudo yum install -y mssql-server mssql-server-extensibility-java 
 ```
 
-该示例安装数据库引擎，并将可扩展性框架包作为依赖项中提取的 Java 语言扩展。 所有在此示例中使用的包位于相同的路径。 如果您过去添加 R 包，则需要 microsoft r open 包存储库的注册。
+包含所有扩展 （Java、 R、 Python） 的一个扩展的示例如下所示：
+
+```bash
+sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.5* mssql-mlservices-packages-py-9.4.5*
+```
+
+除 R 系统必备组件，所有在此示例中使用的包位于相同的路径。 添加 R 要求你[注册 microsoft r open 包存储库](#mro)作为额外的步骤来获取 MRO。 MRO 是 R 可扩展性的先决条件。 在连接到 internet 的计算机，MRO 检索并自动作为的一部分安装的 R 扩展假设配置这两个存储库。
 
 安装后，请记住使用 mssql-conf 工具配置整个安装并接受许可协议。 自动检测到的开放源代码 R 和 Python 组件不被接受的 Eula，并且系统会提示你接受这些条款，以及适用于 SQL Server EULA。
 
@@ -421,7 +427,7 @@ mssql-mlservices-mml-py-9.4.5
 
 没有 Linux 和 Windows 的之间的奇偶校验[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)外部资源池，但的统计信息[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)当前具有Linux 上的不同单位。 在将来的 ctp 版本中将对齐单元。
  
-| 列名   | Description | Linux 上的值 | 
+| 列名   | 描述 | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 最大资源池使用的内存量。 | 在 Linux 上，此统计信息来源于 CGroups 内存子系统，其中的值是 memory.max_usage_in_bytes |
 |write_io_count | 写入自重置资源调控器统计信息以来发出的 Io 总数。 | 在 Linux 上，此统计信息来源于其中的值写入行是 blkio.throttle.io_serviced 的 CGroups blkio 子系统 | 
