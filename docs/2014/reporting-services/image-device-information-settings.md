@@ -35,7 +35,7 @@ ms.locfileid: "48220777"
 |**MarginLeft**|要为报表设置的左边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginRight**|要为报表设置的右边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
 |**MarginTop**|要为报表设置的上边距值，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `1in`)。 此值将覆盖报表的原始设置。|  
-|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
+|**OutputFormat**|之一[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) 支持的输出格式： `BMP`， `EMF`， `GIF`， `JPEG`， `PNG`，或`TIFF`。|  
 |**PageHeight**|要为报表设置的页高，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `11in`)。 此值将覆盖报表的原始设置。|  
 |**PageWidth**|要为报表设置的页宽，以英寸为单位。 必须包含一个整数或小数值后, 跟"in"(例如， `8.5in`)。 此值将覆盖报表的原始设置。|  
 |**PrintDpiX**|输出图像的水平分辨率。 默认值是 `300`。 适用于增强型图元文件 (`EMF`) 输出格式。|  
