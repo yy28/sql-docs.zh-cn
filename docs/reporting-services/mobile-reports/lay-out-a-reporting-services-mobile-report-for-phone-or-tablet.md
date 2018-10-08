@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f8632816-068f-4a87-b15a-779387f3d3a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bec2d40ac002b1e952bde416fd30963be722abd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 59de5d316bcef9fb2842d26ef2e7a1154270f5cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644256"
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>为手机或平板电脑设计 Reporting Services 移动报表
 在 [中创建](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md) Reporting Services 移动报表 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)]后，即可设计手机和平板电脑版移动报表。  

@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d0533c37a1dee34c63edc5b102af180d2f006ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ba0a8ac8f1e008c4adc2e8206b900e53689ea9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618925"
 ---
 # <a name="backup-device-general-page"></a>备份设备（“常规”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "32921102"
   
 -   [查看逻辑备份设备的属性和内容 (SQL Server)](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>“常规”  
+## <a name="options"></a>选项  
  **设备名称**  
  查看现有逻辑备份设备的名称，或指定新逻辑备份设备的名称。  
   

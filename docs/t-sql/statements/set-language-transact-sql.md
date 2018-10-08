@@ -5,9 +5,7 @@ ms.date: 06/05/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET_LANGUAGE_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - options [SQL Server], date
 - default languages
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
-caps.latest.revision: 20
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83ead0b1aeaf215e044023e33a8432bc84df5cc0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 784d3f707bf57338a8385a1c4837e9b77fd43f2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073120"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609546"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,8 +46,8 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>参数  
- [N]'language' | @language_var****  
- 存储在 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的语言的名称。 此参数可以是 Unicode，或者是转换为 Unicode 的 DBCS。 若要指定使用 Unicode 的语言，请使用 N'language'****。 如果将语言指定为变量，则变量的数据类型必须为 **sysname**。  
+ [**N**]**'**_language_**'** | **@**_language\_var_  
+ 存储在 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的语言的名称。 此参数可以是 Unicode，或者是转换为 Unicode 的 DBCS。 若要指定使用 Unicode 的语言，请使用 **N'**_language_**'**。 如果将语言指定为变量，则变量的数据类型必须为 **sysname**。  
   
 ## <a name="remarks"></a>Remarks  
  SET LANGUAGE 的设置是在执行或运行时设置，而不是在分析时设置。  

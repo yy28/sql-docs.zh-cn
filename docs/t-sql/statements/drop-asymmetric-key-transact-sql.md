@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP ASYMMETRIC KEY
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - deleting asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: bf94ac07-9b62-4318-b55b-1eed8f3a1ac6
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bb266c52467a3f1b8d74bece16a0b2450c9efaa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 7a859f8c7ce44cb830e10b1ce72a6d2ccbaede0c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760377"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +59,7 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
   
  如果将非对称密钥映射到 EKM 设备上的可扩展密钥管理 (EKM) 密钥并且未指定 REMOVE PROVIDER KEY 选项，则会从数据库中删除该密钥，但不会从设备上删除它。 这时会发出一条警告。  
   
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
  需要对非对称密钥具有 CONTROL 权限。  
   
 ## <a name="examples"></a>示例  

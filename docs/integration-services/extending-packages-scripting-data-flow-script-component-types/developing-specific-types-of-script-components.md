@@ -4,27 +4,21 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-data-flow-script-component-types
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Script component [Integration Services], examples
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9637747f78bab20f0ad0fadb7b4adf49159d1dea
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 45609373f311c18d144b87a7fcd29702ae671dde
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657155"
 ---
 # <a name="developing-specific-types-of-script-components"></a>开发特定类型的脚本组件
   脚本组件是一个可配置的工具，您可以在包的数据流中使用，它可以满足几乎所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 附带的源、转换和目标所无法满足的要求。 本节包含一些脚本组件代码示例，这些示例演示了用于配置脚本组件的四个选项：  

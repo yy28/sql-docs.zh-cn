@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e9b43dcd5d7d3e6f744ba2659c0ba4958e9c42a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3f8cb3a1a2ae171c386b9f8a0b9c18e06b3cc723
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078734"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627855"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,7 @@ ms.locfileid: "43078734"
   
 5.  从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。  
   
-6.  在“文件”菜单上，单击“保存table name”。  
+6.  在“文件”菜单上，单击“保存”以保存表名。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>将计算列定义添加到现有列中  
   

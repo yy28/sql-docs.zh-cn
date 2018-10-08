@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d20ac630bbd2550364b62c8412c03a41d25f1f8f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 42d3a15f611f56d6b8a3bb81511be036b09c7f52
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697594"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "43065080"
 |SessionLoginName|**nvarchar**|发起会话的用户的登录名。 例如，如果您使用 Login1 连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，再以 Login2 的身份执行语句，则 SessionLoginName 将显示 Login1，而 LoginName 将显示 Login2。 此列将同时显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名和 Windows 登录名。|64|用户帐户控制|  
 |SPID|**int**|发生该事件的会话的 ID。|12|用户帐户控制|  
 |StartTime|**datetime**|该事件（如果存在）的启动时间。|14|用户帐户控制|  
-|TextData|**ntext**|物理设备名称 [ ( 逻辑设备名称 ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|@shouldalert|用户帐户控制|  
+|TextData|**ntext**|物理设备名称 [ ( 逻辑设备名称 ) ]。 仅当在 sys.backup_devices 目录视图中定义了逻辑设备名称时，它才会显示出来。|1|用户帐户控制|  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

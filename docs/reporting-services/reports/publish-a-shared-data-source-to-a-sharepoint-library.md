@@ -4,7 +4,6 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 47d685aca95ea9f9ad8269103c4aa79efe0fdae1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b1b49a7637537be5a77f3c3645c00e2b50283df6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607996"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  

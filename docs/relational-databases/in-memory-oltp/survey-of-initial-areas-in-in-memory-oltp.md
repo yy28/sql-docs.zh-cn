@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 09/05/2017"
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: in-memory-oltp
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed5bcf08a4be00896e3d59b79494fcaffca5c63
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596125"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,10 +59,8 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
 稍后你可以查看以下文章，这些文章提供从内存中 OLTP 获取性能的演示：  
   
-- 
-  [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
-- 
-  [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
+- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
+- [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
   
   
   
@@ -505,7 +499,5 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
     
 以下文章介绍了某些代码，演示了通过使用内存中 OLTP 可实现的性能提升：  
   
-- 
-  [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
-- 
-  [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  
+- [演示：内存中 OLTP 的性能改善](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供了更大的潜在性能提升的小规模演示。  
+- [内存中 OLTP 的示例数据库](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供了更大规模的演示。  

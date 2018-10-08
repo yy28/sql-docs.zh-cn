@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e417d14e4c46172fc93eb4f0e386d4e211dee989
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c93c32d70ccc2cf1180b44e16c5983d584b2b19b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616066"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>将报表绑定到共享数据源 (SSRS)
   在某些情况下，例如将报表从测试服务器移到生产服务器时，最好将文件保存到本地计算机，然后将其上传到其他报表服务器。 将报表上传到新服务器时，需要将其重新绑定到存储在新报表服务器上的共享数据源。 如果不重新绑定报表，在从新报表服务器对其进行访问时，报表将无法正常工作。  
