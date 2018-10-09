@@ -65,7 +65,7 @@ ms.locfileid: "47773855"
 |-----------------|-----------|--------------------|-----------|  
 |WSFC 群集状态|[WSFC 群集服务处于脱机状态](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|严重|SQL Server 实例|  
 |可用性组联机状态|[可用性组处于脱机状态](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|严重|可用性组 (availability group)|  
-|可用性组自动故障转移就绪|[Availability group is not ready for automatic failover](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|严重|可用性组 (availability group)|  
+|可用性组自动故障转移就绪|[可用性组未准备好进行自动故障转移](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|严重|可用性组 (availability group)|  
 |可用性副本数据同步状态|[一些可用性副本未同步数据](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性组 (availability group)|  
 |同步副本数据同步状态|[一些同步副本不同步](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性组 (availability group)|  
 |可用性副本角色状态|[一些可用性副本不具有正常运行的角色](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性组 (availability group)|  

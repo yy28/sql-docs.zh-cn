@@ -51,7 +51,7 @@ ms.locfileid: "48148777"
   
 2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**和 **@subscriber**，为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   
-3.  在订阅服务器上，执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+3.  在订阅服务器上，执行 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 4.  在订阅服务器上，执行 [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建请求订阅](create-a-pull-subscription.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48148777"
   
 1.  确保订阅数据库中存在架构和数据。 有关详细信息，请参阅 [初始化事务订阅（不使用快照）](initialize-a-transactional-subscription-without-a-snapshot.md)中手动初始化订阅。  
   
-2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关更新订阅的信息，请参阅 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
+2.  在发布服务器的发布数据库中，执行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 为 **@destination_db**指定订阅服务器上包含已发布数据的数据库的名称，并将 **@subscription_type** 的值指定为 **@subscription_type**，将 **@sync_type** 的值指定为 **@sync_type**中手动初始化订阅。 有关更新订阅的信息，请参阅 [创建事务发布的可更新订阅](publish/create-an-updatable-subscription-to-a-transactional-publication.md)。  
   
 3.  在发布服务器的发布数据库中，执行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)。 有关详细信息，请参阅 [创建推送订阅](create-a-push-subscription.md)。  
   
