@@ -33,7 +33,7 @@ ms.locfileid: "47713225"
   
     1.  创建变更集。 变更集处于打开状态。 请参阅 [创建变更集 (Master Data Services)](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  应用变更集，并向变更集中添加一些更改。 请参阅 [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  应用变更集，并向变更集中添加一些更改。 请参阅 [应用并更新变更集&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  将变更集提交给实体管理员进行批准。 变更集处于挂起状态。 请参阅 [确认或提交变更 (Master Data Services)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   

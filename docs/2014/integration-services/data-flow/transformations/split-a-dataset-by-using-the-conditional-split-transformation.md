@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Conditional Split transformation
 - splitting dataset
 - datasets [Integration Services], splitting
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
-caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac3634ca4e4cb6839114d6e0463f28d299f00c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252499"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184727"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用有条件拆分转换拆分数据集
   若要添加和配置有条件拆分转换，包必须已包含至少一个数据流任务和一个源。  
@@ -68,7 +65,7 @@ ms.locfileid: "37252499"
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
  [Integration Services 数据类型](../integration-services-data-types.md)   
- [数据流任务](../../control-flow/data-flow-task.md)   
+ [数据流任务] (../../control-flow/data-flow-task.md)   
  [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)  
   
   

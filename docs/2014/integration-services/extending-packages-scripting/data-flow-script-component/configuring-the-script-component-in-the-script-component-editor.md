@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292887"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116687"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在脚本组件编辑器中配置脚本组件
   在脚本组件中编写自定义代码之前，必须选择要创建的数据流组件的类型：源、转换或目标，然后在“脚本转换编辑器”中配置组件的元数据和属性。  
@@ -108,7 +105,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` 属性的布尔值指定组件是应在设计时针对外部数据源执行验证，还是应推迟到运行时才验证。 默认情况下，此属性的值为 `True`；也就是说，在设计时和运行时都对外部元数据进行验证。 如果外部数据源在设计时不可用，可以将此属性的值设置为 `False`；例如，当包仅在运行时下载源或创建目标时。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 和 ReadWriteVariables 属性  
- 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本组件代码中可用于只读或读/写访问。 这些变量可在代码中通过自动生成的基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性来访问。 有关详细信息，请参阅 [使用脚本 Component]((using-variables-in-the-script-component.md) 中变量。  
+ 可以输入以逗号分隔的现有变量列表作为这些属性的值，使这些变量在脚本组件代码中可用于只读或读/写访问。 这些变量可在代码中通过自动生成的基类的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 和 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 属性来访问。 有关详细信息，请参阅 [使用脚本 Component] ((using-variables-in-the-script-component.md) 中变量。  
   
 > [!NOTE]  
 >  变量名称区分大小写。  
@@ -117,7 +114,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  您可以选择 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 作为脚本组件的编程语言。  
   
 #### <a name="edit-script-button"></a>“编辑脚本”按钮  
- 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本。 有关详细信息，请参阅 [的编码和调试脚本 Component]((coding-and-debugging-the-script-component.md)。  
+ 使用“编辑脚本”按钮可打开 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE，你可以在其中编写自定义脚本。 有关详细信息，请参阅 [的编码和调试脚本 Component] ((coding-and-debugging-the-script-component.md)。  
   
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>脚本转换编辑器的“连接管理器”页  
  在“脚本转换编辑器”的“连接管理器”页中，可以添加和删除要在自定义脚本中使用的连接管理器。 通常，创建源或目标组件时需要引用连接管理器。  
@@ -129,11 +126,11 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 有关详细信息，请参阅 [连接到脚本 Component]((connecting-to-data-sources-in-the-script-component.md) 中的数据源。  
+ 有关详细信息，请参阅 [连接到脚本 Component] ((connecting-to-data-sources-in-the-script-component.md) 中的数据源。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services  **<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
- [的编码和调试脚本组件]((coding-and-debugging-the-script-component.md)  
+ [的编码和调试脚本组件] ((coding-and-debugging-the-script-component.md)  
   
   

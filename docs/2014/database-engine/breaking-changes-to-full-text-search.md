@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], breaking changes
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f0252eb3ba9d0aea5e69ffa077dfc6b3ac1f3bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275383"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122397"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>对全文搜索的重大更改
   本主题介绍全文搜索的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
@@ -62,6 +59,6 @@ ms.locfileid: "37275383"
   
 ## <a name="see-also"></a>请参阅  
  [全文搜索的行为更改](../relational-databases/search/full-text-search.md)   
- [全文搜索]((../ relational-databases/search/full-text-search.md)  
+ [全文搜索] ((../ relational-databases/search/full-text-search.md)  
   
   
