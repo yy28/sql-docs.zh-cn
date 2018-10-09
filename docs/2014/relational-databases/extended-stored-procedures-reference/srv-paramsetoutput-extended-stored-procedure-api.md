@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramsetoutput
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramsetoutput
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d1ea832995c65a0b0b07fc4f666523fbdf07b31
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf5e962de42509eab06e2077de19e668efbc754f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212467"
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput（扩展存储过程 API）
     
@@ -85,7 +82,7 @@ fNull
   
 -   cbLen 参数无效。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  **安全说明** 应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，应对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
   
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_convert
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_convert
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b3324bfef3d9c00cd32d6616971127c5ef80c03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5849e92ff2ac64d22e87e041d38c4c1339ca4f2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076714"
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert（扩展存储过程 API）
     
@@ -95,7 +92,7 @@ destlen
 ## <a name="returns"></a>返回  
  如果数据类型转换成功，则返回转换后的数据的长度（单位为字节）。 当 srv_convert 遇到它不支持的转换请求时，它将调用开发人员提供的错误处理程序（如果有），设置全局错误号，并返回 -1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  srv_willconvert 函数决定是否允许进行特定转换。  
   
  转换为近似的数字数据类型 SRVFLT4 或 SRVFLT8 可能会造成一定的精度损失。 从近似的数字数据类型 SRVFLT4 或 SRVFLT8 转换为 SRVCHAR 或 SRVTEXT 也可能造成一定的精度损失。  

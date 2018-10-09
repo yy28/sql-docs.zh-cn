@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_wsendmsg
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_wsendmsg
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ed9efee806d432019be9c8d606c84004f80e97d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 391388b7842395319bac80fd76cf2cd5c37f56ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260813"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100171"
 ---
 # <a name="srvwsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg（扩展存储过程 API）
     
@@ -76,7 +73,7 @@ msglen
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用此函数以 Unicode 格式发送消息。 这类似于 srv_sendmsg，但是它发送的消息是一个 WCHAR 字符串而不是 DBCHAR 类型的字符串。 请注意，以字符而不是字节为单位报告消息长度，而且 msglen 绝不会等于 SRV_NULLTERM。  
   
  该函数在以下情况下返回 FAIL：  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_alloc
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_alloc
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a5cc264f27814ed5d577dddfae5bc0d2cb81cc34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4db67e20af33be8f7365b4431d9cc394998a3f6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236777"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204097"
 ---
 # <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc（扩展存储过程 API）
     
@@ -56,7 +53,7 @@ size
 ## <a name="returns"></a>返回  
  指向新分配的空间的指针。 如果无法分配 size 字节，则返回 Null 指针。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  srv_alloc 函数等效于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API GlobalAlloc 函数。 可以在扩展存储过程 API 应用程序中使用普通 Windows API C 运行时内存管理函数。  
   
 > [!IMPORTANT]  

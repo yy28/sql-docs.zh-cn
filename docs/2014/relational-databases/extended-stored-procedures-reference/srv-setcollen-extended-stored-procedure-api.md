@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_setcollen
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcollen
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 668e6e0af87ac1a2c240c5b6a636b0529d23615c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5200939bad794bd9ee099a6b472d94ddef0bf6e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272693"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209137"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen（扩展存储过程 API）
     
@@ -69,7 +66,7 @@ len
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须首先使用 srv_describe 定义行的每个列。 列数据长度通过对 srv_describe 或 srv_setcollen 的最后一次调用进行设置。 如果某一行长度可变的数据（以 Null 值结束的数据）发生更改，必须使用 srv_setcollen 将该数据设置为新的长度，然后才能调用 srv_sendrow。 对于允许 Null 值的列，必须已调用 srv_describe，并将 desttype 设置为允许 Null 值的数据类型（如 SRVINTN），NULL 数据的指定方法是：调用 srv_setcollen 并将 len 设置为 0。 不能使用扩展存储过程 API 指定长度为零的数据。  
   
  请注意，当列数据类型的长度可变时，则不检查 len。 如果调用固定长度的列，该函数则返回 FAIL。  

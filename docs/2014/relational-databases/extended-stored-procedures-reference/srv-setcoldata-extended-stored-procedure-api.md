@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_setcoldata
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setcoldata
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5422a819203a80a85e192b0a62174c6502d62dc2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f56c16d1b497bffb55362eb63ed755456c6a6406
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152467"
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
     
@@ -69,7 +66,7 @@ data
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  必须首先使用 srv_describe 定义行的每个列。 列数据地址最初使用 srv_describe 进行设置。 如果列数据的地址发生更改，则必须调用 srv_setcoldata 以便指定该数据的新地址，并且必须针对更改后的每个列单独调用 srv_setcoldata。  
   
  使用 srv_setcollen 将列的长度设置为 0 可以表示 Null 数据。 随后将忽略数据地址。  

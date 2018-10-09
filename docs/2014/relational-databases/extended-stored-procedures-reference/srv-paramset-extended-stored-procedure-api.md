@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramset
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2caae5a5cc900234cc21dd71659eed27a67c1ad7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d90d58ea3017102d2e059f2e7b32274b401d87f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274793"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209257"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset（扩展存储过程 API）
     
@@ -93,7 +90,7 @@ len
 |IG = 将忽略值||  
 |valid = 任何有效的数据指针||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  参数包含通过远程存储过程在客户端和应用程序之间传递的数据。 客户端可以指定某些参数作为返回参数。 这些返回参数可包含开放式数据服务服务器应用程序传递回客户端的值。 使用返回参数类似于通过引用传递参数。  
   
  不能设置未作为返回参数调用的参数的返回值。 可以使用 srv_paramstatus 来确定参数的调用方式。  

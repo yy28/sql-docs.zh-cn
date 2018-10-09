@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramnumber
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramnumber
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cb706950bdda865d4f68d2971bfad36edb909e90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e81566cab21b5369b6aabec57d2d7b25e0a8798b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141167"
 ---
 # <a name="srvparamnumber-extended-stored-procedure-api"></a>srv_paramnumber（扩展存储过程 API）
     
@@ -69,7 +66,7 @@ namelen
 ## <a name="returns"></a>返回  
  命名参数的参数编号。 第一个参数是 1。 如果没有参数命名为 name 或没有远程存储过程，则返回 0 并生成一条消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  

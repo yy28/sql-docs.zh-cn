@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_willconvert
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_willconvert
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f8adefdd3f867dfdce3014ea84779b9f5868f91b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56a3036741a5e4833ab8033dc036993e465725a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193207"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
     
@@ -63,7 +60,7 @@ desttype
 ## <a name="returns"></a>返回  
  如果支持数据类型转换，则为 TRUE；否则为 FALSE。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  有关每种数据类型的说明，请参阅[数据类型（扩展存储过程 API）](data-types-extended-stored-procedure-api.md)。  
   
 > [!IMPORTANT]  

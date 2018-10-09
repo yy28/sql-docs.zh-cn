@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcoptions
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcoptions
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: abd2c1348e3ede8f08c738ec0d4babbe42f9b4bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5087c29feb94f22395573614ea10beb09ba344b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073836"
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions（扩展存储过程 API）
     
@@ -56,7 +53,7 @@ srvproc
 ## <a name="returns"></a>返回  
  一个位图，它包含用逻辑 OR 联接的当前远程存储过程的运行时标志。 如果无当前远程存储过程，则返回 0 并生成一条消息。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  下表说明每个运行时标志。  
   
 |运行时标志|Description|  

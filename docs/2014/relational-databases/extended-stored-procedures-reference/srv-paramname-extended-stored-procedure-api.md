@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramname
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramname
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8108cbf1c08f9259734280105df931dc3f91203a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65844bb9d810242381eabada835ceea5053ca414
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114977"
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname（扩展存储过程 API）
     
@@ -60,7 +57,7 @@ SRV_PROC * srvproc,intn, int *len );
 ## <a name="returns"></a>返回  
  指向包含参数名称的 Null 值结束字符串的指针。 参数名称的长度存储在 len 中。 如果没有第 n 个参数或没有远程存储过程，则返回 NULL，len 会设置为 -1，并且会发送信息性错误消息。 如果参数名称为 NULL，len 则将设置为 0，并且返回以 null 值终止的空字符串。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该函数获取远程存储过程调用参数的名称。 使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  
   
 > [!IMPORTANT]  

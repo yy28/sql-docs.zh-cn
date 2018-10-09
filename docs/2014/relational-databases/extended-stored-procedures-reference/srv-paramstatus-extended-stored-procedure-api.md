@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramstatus
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramstatus
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01dc9aa7608cacfabb980803b79a27c9f55f8ce3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1968748fb47fa666ed7f84c4971c39e652af6cb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212627"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus（扩展存储过程 API）
     
@@ -63,7 +60,7 @@ n
 ## <a name="returns"></a>返回  
  包含参数的状态标志的 `int`。 目前，只有一个标志：如果位 0 设置为 1，则参数为一个返回参数。 如果没有第 n 个参数或没有任何远程存储过程，则返回 -1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此例程返回远程存储过程调用参数的状态标志。  
   
  参数包含通过远程存储过程在客户端和应用程序之间传递的数据。 客户端可以指定某些参数作为返回参数。 这些返回参数可包含应用程序传递回客户端的值。  

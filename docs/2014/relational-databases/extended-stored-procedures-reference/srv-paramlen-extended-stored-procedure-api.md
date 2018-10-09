@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramlen
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1981d64f0371f665cc2441fd107d18ace9ec1666
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d6e306b0537180f2b2fa230e819fbc72c9fe6e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069597"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen（扩展存储过程 API）
     
@@ -78,7 +75,7 @@ n
   
  \*   实际长度  = 多字节字符串 (cch) 的长度  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  每个远程存储过程参数都具有实际数据长度和最大数据长度。 对于不允许使用 Null 值的标准固定长度数据类型，实际长度和最大长度相同。 对于可变长度数据类型，长度可以变化。 例如，声明为 `varchar(30)` 的参数可以具有长度仅为 10 个字节的数据。 该参数的实际长度为 10，最大长度为 30。 srv_paramlen 函数获取远程存储过程的实际数据长度（以字节为单位）。 要获取参数的最大数据长度，请使用 srv_parammaxlen。  
   
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果使用部分按名称传递，部分按位置传递的参数调用远程存储过程，则会发生错误。 仍然会调用 SRV_RPC 处理程序，但是它看起来没有参数并且 srv_rpcparams 返回 0。  

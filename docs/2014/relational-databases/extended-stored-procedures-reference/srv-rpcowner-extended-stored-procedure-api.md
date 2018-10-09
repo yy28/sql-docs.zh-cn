@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcowner
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcowner
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0c8f633959116752457d5e5776aa963f3d1aa2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db4ad39f83b7e929c6af12ee5760a2c8735f70b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124087"
 ---
 # <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner（扩展存储过程 API）
     
@@ -63,7 +60,7 @@ len
 ## <a name="returns"></a>返回  
  一个 DBCHAR 指针，指向当前远程存储过程的以 Null 值结束的所有者组件。 如果当前无远程存储过程，则返回 NULL，且 len 设置为 -1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数只返回远程存储过程的所有者组件。 不包括名称、远程存储过程名称和远程存储过程编号的可选说明符。  
   
 > [!IMPORTANT]  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21b60f8b5007ae574ab48bdd46e2e8f430b299cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213443"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcname
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcname
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4415c7cd4ed79426403d73650d4502edace44fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 582c59efd38f2eed7a4fa09d34fab783c605e485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174517"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname（扩展存储过程 API）
     
@@ -63,7 +60,7 @@ len
 ## <a name="returns"></a>返回  
  一个 DBCHAR 指针，指向当前远程存储过程的远程存储过程名称部分的以 NULL 值结束的字符串。 如果当前无远程存储过程，则返回 NULL，且 len 设置为 -1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  此函数只返回远程存储过程的名称。 不包括所有者、数据库名称和远程存储过程编号的可选说明符。  
   
  由于在无远程存储过程的情况下也可以调用 srv_rpcname（不会出现信息性错误），因此，该函数也可用于确定是否存在远程存储过程。  

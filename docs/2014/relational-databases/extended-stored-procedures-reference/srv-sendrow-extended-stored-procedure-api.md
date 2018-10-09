@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_sendrow
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_sendrow
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04b4a4b4b39665e5d8ea020c28fff0769b7c6402
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02ef251faf8e19e725b586da85de1c09a1b46f6b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329367"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186779"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow（扩展存储过程 API）
     
@@ -56,7 +53,7 @@ srvproc
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  对于发送到客户端的每行调用一次 srv_sendrow 函数。 在使用 srv_sendmsg、srv_status 或 srv_senddone 发送任何消息、状态值或完成状态之前，必须将所有行发送到客户端。  
   
  如果发送尚未使用 srv_describe 定义其所有列的某行，则会导致扩展存储过程 API 应用程序引发信息性错误消息并向客户端返回 FAIL。 在此情况下，将不发送该行。  

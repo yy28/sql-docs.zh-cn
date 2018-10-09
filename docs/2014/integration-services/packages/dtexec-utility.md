@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a94da30fb0e52fdf75b58c1139b8d32a2fe80aa8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 116d82b57db147abc8b4b5ebecd5874f36a37001
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106297"
 ---
 # <a name="dtexec-utility"></a>dtexec 实用工具
   `dtexec`命令提示实用工具用于配置和执行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]包。 使用 `dtexec` 实用工具，可以访问所有包配置和执行功能，如参数、连接、属性、变量、日志和进度指示器等。 `dtexec`实用工具，可以加载来自以下源的包：[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]服务器、.ispac 项目文件， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库，[!INCLUDE[ssIS](../../includes/ssis-md.md)]包存储区和文件系统。  
@@ -110,7 +107,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 |ReplTest1|Description|  
 |-----------|-----------------|  
 |0|已成功执行包。|  
-|@shouldalert|包失败。|  
+|1|包失败。|  
 |3|用户取消了包。|  
 |4|实用工具找不到请求的包。 无法找到包。|  
 |5|实用工具无法加载请求的包。 无法加载包。|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcparams
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcparams
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e3910a9b26487b536761ade4835e30862d723261
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99010c8d4ece2811c8b98b588489b874501544e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069877"
 ---
 # <a name="srvrpcparams-extended-stored-procedure-api"></a>srv_rpcparams（扩展存储过程 API）
     
@@ -56,7 +53,7 @@ srvproc
 ## <a name="returns"></a>返回  
  远程存储过程中的参数个数。 如果远程存储过程中没有参数，或没有当前远程存储过程，则返回 -1，并发生信息错误。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  该函数返回当前远程存储过程中的参数个数。 通常是从远程存储过程调用该函数。  
   
  使用参数调用远程存储过程时，可以按名称或位置（未命名）传递参数。 如果进行远程存储过程调用时，一些参数按名称传递而另一些按位置传递，则会出现错误。 发生该错误时，将调用远程存储过程处理程序，但它不接收参数，并且 srv_rpcparams 返回 0。  

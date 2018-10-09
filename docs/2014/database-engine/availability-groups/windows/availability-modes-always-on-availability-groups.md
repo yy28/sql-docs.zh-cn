@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273743"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129037"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式（AlwaysOn 可用性组）
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，“可用性模式”是一个副本属性，该属性确定某一给定可用性副本是否可在同步提交模式下运行。 对于每个可用性副本，必须为同步提交模式或异步提交模式配置可用性模式。  如果主要副本配置为“异步提交模式”，则它不会等待任何次要副本将传入的事务日志记录写入磁盘（以便强制写入日志）。 如果某一给定的辅助副本配置为异步提交模式，则主副本不会等待该辅助副本强制写入日志。 如果主要副本和某一给定次要副本都配置为同步提交模式，则主要副本将等待次要副本，以便确认它已强制写入日志（除非次要副本在主要副本的会话超时期限内未能使用 ping 命令联系上主要副本）。  
@@ -53,10 +50,10 @@ ms.locfileid: "37273743"
   
 |当前主副本|自动故障转移目标|具有以下节点的同步提交模式行为|具有以下节点的异步提交模式行为|能否自动故障转移|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 和 03|04|是|  
-|02|01|01 和 03|04|是|  
-|03||01 和 02|04|“否”|  
-|04|||01、02 和 03|“否”|  
+|01|02|02 和 03|04|用户帐户控制|  
+|02|01|01 和 03|04|用户帐户控制|  
+|03||01 和 02|04|否|  
+|04|||01、02 和 03|否|  
   
  通常，节点 04 作为异步提交副本，部署在灾难恢复站点中。 在故障转移到节点 04 后节点 01、02 和 03 保持在异步提交模式，这一情况有助于避免因两个站点之间网络延迟较长而导致您的可用性组中的性能下降。  
   

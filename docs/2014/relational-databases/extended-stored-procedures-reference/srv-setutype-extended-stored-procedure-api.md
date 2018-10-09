@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_setutype
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_setutype
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44d61cd675c1d1236cc6359a99d285d1995fdd1b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5f1b038d574da6e04fa934d4f4c599966341a7c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217385"
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype（扩展存储过程 API）
     
@@ -69,7 +66,7 @@ user_type
 ## <a name="returns"></a>返回  
  SUCCEED 或 FAIL。 如果相应列不存在，则返回 FAIL。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  列具有两种数据类型：其实际数据类型及其用户定义数据类型。 用户定义数据类型由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用于存储实际的用户定义数据类型的列和（如果有的话）列说明信息，例如，列的为 Null 性和可更新性。  
   
  在使用 srv_describe 定义列后，并且在发送最后一行前，随时都可以调用 srv_setutype 函数。  
