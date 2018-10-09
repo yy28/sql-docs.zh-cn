@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 782b254eca5a0fb60ab354e35b40eae5d5fd2640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810805"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851972"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -59,7 +59,16 @@ ms.locfileid: "47810805"
 
 > [!NOTE]  
 > JDBC 分布式事务组件包含在 JDBC 驱动程序安装的 xa 目录中。 这些组件包括 xa_install.sql 和 sqljdbc_xa.dll 文件。  
-  
+
+> [!NOTE]  
+> 从 SQL Server 2019 公共预览版 CTP 2.0 开始，JDBC XA 分布式的事务组件包含在 SQL Server 引擎可启用或禁用使用系统存储过程。 若要启用所需的组件来执行 XA 分布式事务使用 JDBC 驱动程序，请执行以下存储的过程。
+>
+> EXEC sp_sqljdbc_xa_install
+>
+> 若要禁用以前安装的组件，请执行以下存储的过程。 
+>
+> EXEC sp_sqljdbc_xa_uninstall
+
 ### <a name="running-the-ms-dtc-service"></a>运行 MS DTC 服务
 
 在服务管理器中，MS DTC 服务应标记为“自动”，以确保其在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务时运行。 若要为 XA 事务启用 MS DTC，必须执行以下步骤：  

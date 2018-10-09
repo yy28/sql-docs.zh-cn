@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1ba74df9a4218424e7ed25a40bb6fc8e17b3d25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb27c4ca77382887acdbfec788df40e5cbfd76c7
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816956"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798615"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -362,7 +362,7 @@ OUTPUT 子句
   
 -   提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型的值，条件是该用户定义类型支持该类型的隐式转换或显式转换。 下面的示例演示了如何基于字符串进行显式转换将值插入到用户定义的类型 `Point` 的列中。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( CONVERT(Point, '12.3:46.2') );  
     ```  
@@ -371,7 +371,7 @@ OUTPUT 子句
   
 -   调用一个用户定义函数，该函数返回用户定义类型的值。 下面的示例使用用户定义函数 `CreateNewPoint()` 创建一个用户定义类型 `Point` 的新值，并将该值插入到 `Cities` 表中。  
   
-    ```  
+    ```sql
     INSERT INTO Cities (Location)  
     VALUES ( dbo.CreateNewPoint(x, y) );  
     ```  
@@ -431,7 +431,7 @@ OUTPUT 子句
 #### <a name="a-inserting-a-single-row-of-data"></a>A. 插入单行数据  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中插入一行。 该表中的各列是 `UnitMeasureCode`、`Name` 和 `ModifiedDate`。 由于提供了所有列的值并按表中各列的顺序列出这些值，因此不必在列列表中指定列名  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
@@ -439,7 +439,7 @@ VALUES (N'FT', N'Feet', '20080414');
 #### <a name="b-inserting-multiple-rows-of-data"></a>B. 插入多行数据  
  下面的示例使用[表值构造函数](../../t-sql/queries/table-value-constructor-transact-sql.md)在单个 INSERT 语句中将三行插入 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表。 由于提供了所有列的值并按表中各列的顺序列出这些值，因此不必在列列表中指定列名。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure  
 VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
@@ -448,7 +448,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 按与表列顺序不同的顺序插入数据  
  下面的示例使用列列表显式指定插入到每个列中的值。 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.UnitMeasure` 表中的列顺序为 `UnitMeasureCode`、`Name`、`ModifiedDate`；但这些列的列出顺序与 column_list 中的顺序不同。  
   
-```  
+```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
     ModifiedDate)  
 VALUES (N'Square Yards', N'Y2', GETDATE());  
@@ -460,7 +460,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. 将数据插入其列具有默认值的表  
  下面的示例演示了如何将行插入到包含自动生成值或具有默认值的列的表中。 `Column_1` 是一个计算列，它通过将一个字符串与插入 `column_2` 的值进行串联，自动生成一个值。 `Column_2` 是用默认约束定义的。 如果没有为该列指定值，将使用默认值。 `Column_3` 是使用 rowversion 数据类型定义的，它自动生成一个唯一的、递增的二进制数字。 `Column_4` 不自动生成值。 如果没有为该列指定值，将插入 NULL。 INSERT 语句插入一些行，这些行只有部分列包含值。 在最后一个 INSERT 语句中，未指定列，只通过使用 DEFAULT VALUES 子句插入了默认值。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 AS 'Computed column ' + column_2,   
@@ -486,7 +486,7 @@ GO
 #### <a name="e-inserting-data-into-a-table-with-an-identity-column"></a>E. 将数据插入到含标识列的表中  
  下面的示例演示了将数据插入到标识列中的不同方法。 前两个 INSERT 语句允许为新行生成标识值。 第三个 INSERT 语句用 SET IDENTITY_INSERT 语句覆盖列的 IDENTITY 属性，并将一个显式值插入到标识列中。  
   
-```  
+```sql
 CREATE TABLE dbo.T1 ( column_1 int IDENTITY, column_2 VARCHAR(30));  
 GO  
 INSERT T1 VALUES ('Row #1');  
@@ -505,7 +505,7 @@ GO
 #### <a name="f-inserting-data-into-a-uniqueidentifier-column-by-using-newid"></a>F. 通过使用 NEWID() 将数据插入到 uniqueidentifier 列中  
  下面的示例使用 [NEWID](../../t-sql/functions/newid-transact-sql.md)() 函数获取 `column_2` 的 GUID。 与标识列不同，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 不为 [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md) 数据类型的列自动生成值（如第二个 `INSERT` 语句所示）。  
   
-```  
+```sql
 CREATE TABLE dbo.T1   
 (  
     column_1 int IDENTITY,   
@@ -524,7 +524,7 @@ FROM dbo.T1;
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. 将数据插入到用户定义类型列中  
  下面的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句将三行插入到 `PointValue` 表的 `Points` 列中。 该列使用 [CLR 用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) (UDT)。 `Point` 数据类型由作为 UDT 属性公开的 X 和 Y 整数值组成。 必须使用 CAST 或 CONVERT 函数，才能将以逗号分隔的 X 和 Y 值转换为 `Point` 类型。 前两个语句使用 CONVERT 函数将字符串值转换为 `Point` 类型，第三个语句使用 CAST 函数。 有关详细信息，请参阅[操作 UDT 数据](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md)。  
   
-```  
+```sql
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '1,5'));  
 INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));  
@@ -538,7 +538,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
   
  第一个 INSERT 语句使用 SELECT 语句从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的源表（`Employee`、`SalesPerson` 和 `Person`）中派生数据，并将结果集存储在 `EmployeeSales` 表中。 第二个 INSERT 语句使用 EXECUTE 子句调用包含 SELECT 语句的存储过程，第三个 INSERT 使用 EXECUTE 子句将 SELECT 语句作为文字字符串引用。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( DataSource   varchar(20) NOT NULL,  
   BusinessEntityID   varchar(11) NOT NULL,  
@@ -591,7 +591,7 @@ FROM dbo.EmployeeSales;
 #### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>I. 使用 WITH 公共表表达式定义插入的数据  
  下面的示例在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中创建 `NewEmployee` 表。 公用表表达式 (`EmployeeTemp`) 定义要插入到 `NewEmployee` 表中的来自一个或多个表的行。 INSERT 语句引用公用表表达式中的列。  
   
-```  
+```sql
 CREATE TABLE HumanResources.NewEmployee  
 (  
     EmployeeID int NOT NULL,  
@@ -634,7 +634,7 @@ GO
 #### <a name="j-using-top-to-limit-the-data-inserted-from-the-source-table"></a>J. 使用 TOP 限制从源表插入的数据  
  下面的示例创建 `EmployeeSales` 表，并插入 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `HumanResources.Employee` 表中的前 5 名随机雇员的姓名和本年度到目前为止的销售数据。 INSERT 语句选择 `SELECT` 语句返回的任意 5 行。 OUTPUT 子句将显示插入 `EmployeeSales` 表中的行。 请注意，SELECT 语句中的 ORDER BY 子句不用于确定前 5 名雇员。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   nvarchar(11) NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -655,7 +655,7 @@ INSERT TOP(5)INTO dbo.EmployeeSales
   
  如果必须使用 TOP 来插入按有意义的时间顺序排列的行，您必须同时使用 TOP 和嵌套 select 语句中的 ORDER BY，如以下示例所示。 OUTPUT 子句将显示插入 `EmployeeSales` 表中的行。 请注意，现在基于 ORDER BY 子句的结果而非随机行插入前 5 名员工。  
   
-```  
+```sql
 INSERT INTO dbo.EmployeeSales  
     OUTPUT inserted.EmployeeID, inserted.FirstName, 
         inserted.LastName, inserted.YearlySales  
@@ -673,7 +673,7 @@ INSERT INTO dbo.EmployeeSales
 #### <a name="k-inserting-data-by-specifying-a-view"></a>K. 通过指定视图来插入数据  
  下面的示例将一个视图名指定为目标对象，但将新行插入到基础基表中。 `INSERT` 语句中值的顺序必须与视图的列顺序相匹配。 有关详细信息，请参阅[通过视图修改数据](../../relational-databases/views/modify-data-through-a-view.md)。  
   
-```  
+```sql
 CREATE TABLE T1 ( column_1 int, column_2 varchar(30));  
 GO  
 CREATE VIEW V1 AS   
@@ -694,7 +694,7 @@ GO
 #### <a name="l-inserting-data-into-a-table-variable"></a>L. 向表变量中插入数据  
  下面的示例将一个表变量指定为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的目标对象。  
   
-```  
+```sql
 -- Create the table variable.  
 DECLARE @MyTableVar table(  
     LocationID int NOT NULL,  
@@ -721,7 +721,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -736,7 +736,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source in the FROM clause using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -750,7 +750,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 INSERT OPENQUERY (MyLinkServer, 
     'SELECT Name, GroupName 
      FROM AdventureWorks2012.HumanResources.Department')  
@@ -763,7 +763,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
 -- Specify a valid server name for Data Source using the format 
 -- server_name or server_nameinstance_name.  
@@ -780,7 +780,7 @@ GO
   
 **适用于**： [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 -- Create an external table.   
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] (  
         [FirstName] char(25) NOT NULL,   
@@ -811,7 +811,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 #### <a name="q-inserting-data-into-a-heap-with-minimal-logging"></a>Q. 将数据插入堆中并按最小方式记录日志  
  下面的示例创建一个新表（一个堆），并使用最小方式记录日志将来自其他表中的数据插入到这个新表中。 此示例假定 `AdventureWorks2012` 数据库的恢复模式设置为 FULL。 若要确保使用最小方式记录，应在插入行之前将 `AdventureWorks2012` 数据库的恢复模式设置为 BULK_LOGGED，并在 INSERT INTO…SELECT 语句后重置为 FULL。 此外，为目标表 `Sales.SalesHistory` 指定了 TABLOCK 提示。 这确保语句在事务日志中占用最少的空间并且高效执行。  
   
-```  
+```sql
 -- Create the target heap.  
 CREATE TABLE Sales.SalesHistory(  
     SalesOrderID int NOT NULL,  
@@ -856,7 +856,7 @@ GO
   
 **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-```  
+```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
 SELECT b.Name, b.GroupName   
 FROM OPENROWSET (  
@@ -876,7 +876,7 @@ FROM OPENROWSET (
   
 适用范围：[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。  
   
-```  
+```sql
 INSERT INTO Production.Location WITH (XLOCK)  
 (Name, CostRate, Availability)  
 VALUES ( N'Final Inventory', 15.00, 80.00);  
@@ -888,7 +888,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 #### <a name="t-using-output-with-an-insert-statement"></a>T. 将 OUTPUT 用于 INSERT 语句  
  下面的示例将行插入到 `ScrapReason` 表中，并使用 `OUTPUT` 子句将语句的结果返回到 `@MyTableVar` 表变量。 由于 `ScrapReasonID` 列使用 `IDENTITY` 属性定义，因此未在 `INSERT` 语句中为该列指定值。 但应注意，[!INCLUDE[ssDE](../../includes/ssde-md.md)]为该列生成的值在 `OUTPUT` 列中的 `INSERTED.ScrapReasonID` 子句中返回。  
   
-```  
+```sql
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -907,7 +907,7 @@ FROM Production.ScrapReason;
 #### <a name="u-using-output-with-identity-and-computed-columns"></a>U. 将 OUTPUT 用于标识列和计算列  
  下面的示例创建 `EmployeeSales` 表，然后使用 INSERT 语句向其中插入若干行，并使用 SELECT 语句从源表中检索数据。 `EmployeeSales` 表包含标识列 (`EmployeeID`) 和计算列 (`ProjectedSales`)。 由于这些值是在插入操作期间由[!INCLUDE[ssDE](../../includes/ssde-md.md)]生成的，因此不能在 `@MyTableVar` 中定义上述两列。  
   
-```  
+```sql
 CREATE TABLE dbo.EmployeeSales  
 ( EmployeeID   int IDENTITY (1,5)NOT NULL,  
   LastName     nvarchar(20) NOT NULL,  
@@ -944,7 +944,7 @@ FROM dbo.EmployeeSales;
 #### <a name="v-inserting-data-returned-from-an-output-clause"></a>V. 插入从 OUTPUT 子句返回的数据  
  下面的示例捕获从 MERGE 语句的 OUTPUT 子句返回的数据，并将该数据插入到另一个表中。 MERGE 语句根据在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Quantity` 表中处理的订单每天更新 `ProductInventory` 表的 `SalesOrderDetail` 列。 它还删除库存降为 0 的产品所在的行。 本示例捕获已删除的行并将这些行插入另一个表 `ZeroInventory` 中，该表跟踪没有库存的产品。  
   
-```  
+```sql
 --Create ZeroInventory table.  
 CREATE TABLE Production.ZeroInventory (DeletedProductID int, RemovedOnDate DateTime);  
 GO  
@@ -974,7 +974,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
 #### <a name="w-inserting-data-using-the-select-option"></a>W. 使用 SELECT 选项插入数据  
  以下示例说明如何使用 INSERT 语句通过 SELECT 选项插入多行数据。 第一个 `INSERT` 语句使用 `SELECT` 语句直接从源表中检索数据，然后将结果集存储在 `EmployeeTitles` 表中。  
   
-```  
+```sql
 CREATE TABLE EmployeeTitles  
 ( EmployeeKey   INT NOT NULL,  
   LastName     varchar(40) NOT NULL,  
@@ -989,7 +989,7 @@ INSERT INTO EmployeeTitles
 #### <a name="x-specifying-a-label-with-the-insert-statement"></a>X. 使用 INSERT 语句指定标签  
  以下示例说明了如何通过 INSERT 语句使用标签。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCurrency   
@@ -1000,7 +1000,7 @@ OPTION ( LABEL = N'label1' );
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. 通过 INSERT 语句使用标签和查询提示  
  此查询显示通过 INSERT 语句使用标签和查询联接提示的基本语法。 将查询提交到控制节点后，运行在计算节点上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在生成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查询计划时应用哈希联接策略。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 INSERT INTO DimCustomer (CustomerKey, CustomerAlternateKey, 
