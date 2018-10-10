@@ -22,7 +22,7 @@ ms.locfileid: "47713906"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+  当为了最小化停机时间和风险而计划将 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 从 SQL Server 的先前版本进行升级时，有几种方法可以考虑。 你可以执行就地升级、迁移到新安装或者执行滚动升级。 下面的图表将帮助你在这些方法中进行选择。 图表中的每个方法也会在下面进行讨论。 为了有助于你了解图表中的决策点，也请查阅 [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
  ![数据库引擎升级方法决策树](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "数据库引擎升级方法决策树")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713906"
   
 -   不需要高可用性 (HA) 配置的开发环境。  
   
--   能够容忍停机时间且在最新的硬件和软件上运行的非任务关键生产的环境。 停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+-   能够容忍停机时间且在最新的硬件和软件上运行的非任务关键生产的环境。 停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
 > [!WARNING]  
 >  在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序时，作为运行预升级检查的一部分，将停止并重启 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。  
@@ -73,7 +73,7 @@ ms.locfileid: "47713906"
  新的   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境有了与现有环境相同的系统对象后，则可立即以最小化现有系统的停机时间的方式从现有系统将用户数据库迁移到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 使用备份和还原完成数据库迁移，或者如果你处于 SAN 环境下，则通过重构 LUN 来完成数据库迁移。 两种方法的步骤如以下图表中所述。  
   
 > [!CAUTION]  
->  停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+>  停机时间量取决于你的数据库大小和 I/O 子系统速度。 在内存优化表处于使用中时升级 SQL Server 2014 会耗费一些额外时间。 有关详细信息，请参阅 [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
  迁移用户数据库之后，可使用多种方法中的一种将新用户指向到新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例（如重命名服务器、使用 DNS 条目、修改连接字符串）。  与就地升级相比，新的安装方法可以降低风险和停机时间，并可有助于同时完成操作系统的升级和升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47713906"
 -   SQL Server Reporting Services 扩展环境：有关在此环境中执行滚动升级的详细步骤，请参阅 [升级和迁移 Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)。  
   
 ## <a name="next-steps"></a>后续步骤
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [计划并测试数据库引擎升级计划](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [完成数据库引擎升级](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
