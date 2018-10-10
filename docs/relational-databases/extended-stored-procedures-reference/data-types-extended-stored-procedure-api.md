@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - extended stored procedures [SQL Server], data types
 - data types [SQL Server], extended stored procedures
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e703c80db732560a45db72d8f8c0bf2a2ce21fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 770dfdb06d7f29019ee9583e2f37b2517ceb2c92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47671765"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "32938342"
   
  若要使用扩展存储过程 API 数据类型，请在程序中包括 Srv.h 头文件。  
   
-|数据类型|SQL Server 数据类型|Description|  
+|数据类型|SQL Server 数据类型|描述|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|binary 数据类型，长度为 0 至 8000 个字节。|  
 |SRVBIGCHAR|**char**|character 数据类型，长度为 0 至 8000 个字节。|  
@@ -54,7 +50,7 @@ ms.locfileid: "32938342"
 |SRVFLTN|**real** &#124; **float null**|real 或 float 数据类型，允许为 null 值。|  
 |SRVIMAGE|**图像**|image 数据类型。|  
 |SRVINT1|**tinyint**|1 字节的 tinyint 数据类型。|  
-|SRVINT2|**int**|2 字节的 smallint 数据类型。|  
+|SRVINT2|**smallint**|2 字节的 smallint 数据类型。|  
 |SRVINT4|**int**|4 字节的 int 数据类型。|  
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|tinyint、smallint 或 int 数据类型，允许为 null 值。|  
 |SRVMONEY4|**smallmoney**|4 字节的 smallmoney 数据类型。|  
