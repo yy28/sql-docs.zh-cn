@@ -48,7 +48,7 @@ ms.locfileid: "47597866"
 > [!NOTE]  
 >  有关描述如何使用 cmdlet 来执行 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 任务的 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 联机丛书中的主题列表，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)的“相关任务”一节。  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="ConfiguringServerInstance"></a> 服务器实例配置 Alwayson 可用性组  
   
 |Cmdlet|描述|支持平台|  
 |-------------|-----------------|------------------|
@@ -58,7 +58,7 @@ ms.locfileid: "47597866"
 |[**Set-SqlHadrEndpoint**](/powershell/module/sqlserver/set-sqlhadrendpoint)|更改现有数据库镜像端点的属性，如名称、状态或身份验证属性。|支持 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 并缺少数据库镜像端点的服务器实例|  
 
   
-##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
+##  <a name="BnRcmdlets"></a> 备份和还原数据库和事务日志  
   
 |Cmdlet|描述|支持平台|  
 |-------------|-----------------|------------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "47597866"
   
  有关使用这些 cmdlet 来准备辅助数据库的信息，请参阅[为可用性组手动准备辅助数据库 (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)。  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> 创建和管理可用性组  
   
 |Cmdlet|描述|支持平台|  
 |-------------|-----------------|------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "47597866"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|设置可用性组的属性；使可用性组联机/脱机|承载主副本的服务器实例|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|启动下列形式之一的故障转移：<br /><br /> 可用性组的强制故障转移（可能会丢失数据）。<br /><br /> 可用性组的手动故障转移。|承载目标辅助副本的服务器实例|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> 创建和管理可用性组侦听器  
   
 |Cmdlet|描述|支持平台|  
 |------------|-----------------|------------------|  
@@ -87,7 +87,7 @@ ms.locfileid: "47597866"
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|修改现有可用性组侦听器的端口设置。|承载主副本的服务器实例|  
 |[**Add-SqlAvailabilityGroupListenerStaticIp**](/powershell/module/sqlserver/add-sqlavailabilitygrouplistenerstaticip)|将一个静态 IP 地址添加到现有的可用性组侦听器配置。 此 IP 地址可以是带子网的 IPv4 地址或 IPv6 地址。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
+##  <a name="DeployManageARs"></a> 创建和管理可用性副本  
   
 |Cmdlet|描述|支持平台|  
 |-------------|-----------------|------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "47597866"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|删除可用性副本。|承载主副本的服务器实例|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|设置可用性副本的属性。|承载主副本的服务器实例|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> 添加和管理可用性数据库  
   
 |Cmdlet|描述|支持平台|  
 |-------------|-----------------|------------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "47597866"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|恢复已挂起的可用性数据库的数据移动。|已挂起数据库所在的服务器实例。|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|挂起可用性数据库的数据移动。|承载可用性副本的任何服务器实例。|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> 监视可用性组运行状况  
  以下 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet 支持您监视可用性组及其副本和数据库的运行状况。  
   
 > [!IMPORTANT]  
