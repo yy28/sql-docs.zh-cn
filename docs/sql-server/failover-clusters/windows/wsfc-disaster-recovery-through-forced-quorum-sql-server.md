@@ -27,7 +27,7 @@ ms.locfileid: "47685475"
   
 -   **准备工作：**[先决条件](#Prerequisites)、[安全性](#Security)  
   
--   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
+-   **通过强制仲裁过程进行 WSFC 灾难恢复** [通过强制仲裁过程进行 WSFC 灾难恢复](#Main)  
   
 -   [相关任务](#RelatedTasks)  
   

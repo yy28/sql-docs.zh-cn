@@ -22,7 +22,7 @@ ms.locfileid: "48226117"
   
  此列表中不包括不推荐使用的对象。  
   
- 有关支持语义搜索的数据库对象的列表，请参阅 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)。  
+ 有关支持语义搜索的数据库对象的列表，请参阅[语义搜索 DDL、 函数、 存储过程和视图](../views/views.md)。  
   
 ##  <a name="ddl"></a> Transact-SQL 数据定义语言 (DDL) 语句  
   

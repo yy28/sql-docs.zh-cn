@@ -44,7 +44,7 @@ ms.locfileid: "48169467"
   
  该图有三个包含行的 Bucket。 顶部的第二个 Bucket 包含三个红色行。 第四个 Bucket 包含一个蓝色行。 底部的 Bucket 包含两个绿色行。 这些可能是同一行的不同版本。  
   
- 有关内存优化表的索引的详细信息，请参阅[Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 有关内存优化表的索引的详细信息，请参阅[在内存优化表上使用索引的准则](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
 ## <a name="see-also"></a>请参阅  
  [内存优化表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

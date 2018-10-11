@@ -45,7 +45,7 @@ ms.locfileid: "47828585"
 ####  <a name="Permissions"></a> Permissions  
  您必须具有针对 DQS_MAIN 数据库的 dqs_kb_editor 或 dqs_administrator 角色，才能从 Excel 文件导入域值。  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> 值从 Excel 文件导入域  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][运行 Data Quality Client 应用程序](../data-quality-services/run-the-data-quality-client-application.md)。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47828585"
   
 -   如果出于任何原因不能在应用程序中手动连接这些值，则这些值将不适用于导入操作。  
   
-##  <a name="How"></a> How the import works  
+##  <a name="How"></a> 导入的工作原理  
  此操作将导入下列值：  
   
  在导入操作中，DQS 按如下所示从 Excel 文件进行导入：  
