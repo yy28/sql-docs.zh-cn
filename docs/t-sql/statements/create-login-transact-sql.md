@@ -5,9 +5,7 @@ ms.date: 08/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d7509aaa81af19bc94fdb09526f3a940695651a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840968"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -53,7 +50,7 @@ ms.locfileid: "43074470"
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL 并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\* SQL Server \*_**|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -91,18 +88,18 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 login_name  
 指定创建的登录名。 有四种类型的登录：SQL Server 登录、Windows 登录、证书映射登录和非对称密钥映射登录。 在创建从 Windows 域帐户映射的登录名时，必须以 [\<domainName>\\<login_name>] 格式使用 Windows 2000 之前的用户登录名。 不能使用 login_name@DomainName 格式的 UPN。 有关示例，请参阅本文后面的示例 D。 身份验证登录的类型为 sysname，它必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，且不能包含“\\”。 Windows 登录名可以包含“\\”。 Active Directory 用户的登录名需少于 21 个字符。 
 
-PASSWORD *='password' 仅适用于 SQL Server 登录。 指定正在创建的登录名的密码。 应使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 SQL Server 2012 (11.x) 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。 
+PASSWORD **='**_password_**'* 仅适用于 SQL Server 登录。 指定正在创建的登录名的密码。 应使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 SQL Server 2012 (11.x) 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。 
   
 密码是区分大小写的。 密码应始终至少包含 8 个字符，并且不能超过 128 个字符。 密码可以包含 a-z、A-Z、0-9 和大多数非字母数字字符。 密码不能包含单引号或 login_name。 
   
-PASSWORD =hashed_password  
+PASSWORD **=**_hashed\_password_  
 仅适用于 HASHED 关键字。 指定要创建的登录名的密码的哈希值。 
   
 HASHED 仅适用于 SQL Server 登录。 指定在 PASSWORD 参数后输入的密码已经过哈希运算。 如果未选择此选项，则在将作为密码输入的字符串存储到数据库中之前，对其进行哈希运算。 此选项应仅用于在服务器之间迁移数据库。 切勿使用 HASHED 选项创建新的登录名。 HASHED 选项不能用于 SQL 7 或更早版本创建的哈希。
 
 MUST_CHANGE 仅适用于 SQL Server 登录。 如果包括此选项，则 SQL Server 将在首次使用新登录时提示用户输入新密码。 
   
-CREDENTIAL =credential_name  
+CREDENTIAL **=**_credential\_name_  
 将映射到新 SQL Server 登录的凭据名称。 该凭据必须已存在于服务器中。 当前此选项只将凭据链接到登录名。 凭据不能映射到系统管理员 (sa) 登录名。 
   
 SID = sid  
@@ -276,7 +273,7 @@ GO
 >   <th><strong><em>* SQL 数据库<br />逻辑服务器*</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -405,7 +402,7 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
 >   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -535,7 +532,7 @@ GO
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>>   <th><strong><em>* SQL 数据<br />仓库*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -644,7 +641,7 @@ GO
  [创建登录名](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -658,13 +655,13 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
+>   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
+# <a name="parallel-data-warehouse"></a>并行数据仓库
 
   
 ## <a name="syntax"></a>语法 
@@ -686,7 +683,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 login_name  
 指定创建的登录名。 有四种类型的登录：SQL Server 登录、Windows 登录、证书映射登录和非对称密钥映射登录。 在创建从 Windows 域帐户映射的登录名时，必须以 [\<domainName>\\<login_name>] 格式使用 Windows 2000 之前的用户登录名。 不能使用 login_name@DomainName 格式的 UPN。 有关示例，请参阅本文后面的示例 D。 身份验证登录的类型为 sysname，它必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则，且不能包含“\\”。 Windows 登录名可以包含“\\”。 Active Directory 用户的登录名需少于 21 个字符。 
 
-PASSWORD *='password' 仅适用于 SQL Server 登录。 指定正在创建的登录名的密码。 应使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 SQL Server 2012 (11.x) 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。 
+PASSWORD **='**_password_**'* 仅适用于 SQL Server 登录。 指定正在创建的登录名的密码。 应使用强密码。 有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)和[密码策略](../../relational-databases/security/password-policy.md)。 从 SQL Server 2012 (11.x) 开始，存储的密码信息使用 SHA-512 加盐密码进行计算。 
   
 密码是区分大小写的。 密码应始终至少包含 8 个字符，并且不能超过 128 个字符。 密码可以包含 a-z、A-Z、0-9 和大多数非字母数字字符。 密码不能包含单引号或 login_name。 
   

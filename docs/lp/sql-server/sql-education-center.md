@@ -6,12 +6,12 @@ description: 了解如何使用 Microsoft Azure 云服务生成和管理功能�
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 80a2d50537aeb133aa6489786924b5bf11d95cd3
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797208"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878000"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -81,182 +81,7 @@ ms.locfileid: "48797208"
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li class="fullSpan">
-                                <div class="container intro">
-                                <h2>SQL 内部指南</h2>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>虚影记录清除过程</h3>
-                                                    <p> 此指南概述虚影清除过程，这是一个后台进程，用于删除页面中已标记为删除的记录。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>索引体系结构和设计</h3>
-                                                    <p>在索引体系结构上的本指南包含的信息和最佳做法可帮助设计满足应用程序需要的高效索引。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>内存管理体系结构</h3>
-                                                    <p> 本指南介绍了 SQL Server 如何管理内存，以及如何在读取和写入页时管理内存使用率。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>页和区体系结构</h3>
-                                                    <p>本指南介绍用于管理所有版本的 SQL Server 中的页和区的数据结构。 要设计和开发高效执行的数据库，了解页和区的体系结构是很重要的。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>迁移后验证和优化</h3>
-                                                    <p>概述迁移到 SQL Server 平台后会遇到的一些常见性能方案及其应对方法。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>查询处理体系结构</h3>
-                                                    <p>SQL Server 数据库引擎可处理对多种数据存储体系结构（例如，本地表、已分区表以及分布在多个服务器上的表）执行的查询。 此指南介绍了 SQL Server 如何处理查询并通过执行计划缓存来优化查询重用。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>事务日志体系结构和管理</h3>
-                                                    <p> 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>线程和任务体系结构</h3>
-                                                    <p>线程是操作系统功能，允许将应用程序逻辑分到几个并发的执行路径中。 此指南介绍了 SQL 如何操作线程和任务。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>事务锁定和行版本控制</h3>
-                                                    <p> 本指南说明 SQL Server 数据库引擎使用的锁定和行版本控制机制，以确保每个事务的物理完整性并提供有关应用程序如何高效控制事务的信息。 </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="fullSpan">
+                           <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>教程</h2>
                             </li>
@@ -449,7 +274,182 @@ ms.locfileid: "48797208"
                                         </div>
                                     </div>
                                 </a>
+                            </li>  
+                            <li class="fullSpan">
+                                <div class="container intro">
+                                <h2>SQL 内部指南</h2>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>虚影记录清除过程</h3>
+                                                    <p> 此指南概述虚影清除过程，这是一个后台进程，用于删除页面中已标记为删除的记录。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>索引体系结构和设计</h3>
+                                                    <p>在索引体系结构上的本指南包含的信息和最佳做法可帮助设计满足应用程序需要的高效索引。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>内存管理体系结构</h3>
+                                                    <p> 本指南介绍了 SQL Server 如何管理内存，以及如何在读取和写入页时管理内存使用率。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>页和区体系结构</h3>
+                                                    <p>本指南介绍用于管理所有版本的 SQL Server 中的页和区的数据结构。 要设计和开发高效执行的数据库，了解页和区的体系结构是很重要的。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>迁移后验证和优化</h3>
+                                                    <p>概述迁移到 SQL Server 平台后会遇到的一些常见性能方案及其应对方法。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>查询处理体系结构</h3>
+                                                    <p>SQL Server 数据库引擎可处理对多种数据存储体系结构（例如，本地表、已分区表以及分布在多个服务器上的表）执行的查询。 此指南介绍了 SQL Server 如何处理查询并通过执行计划缓存来优化查询重用。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>事务日志体系结构和管理</h3>
+                                                    <p> 本指南提供有关事务日志的物理和逻辑体系结构的信息。 了解该体系结构可以提高您在管理事务日志时的效率。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>线程和任务体系结构</h3>
+                                                    <p>线程是操作系统功能，允许将应用程序逻辑分到几个并发的执行路径中。 此指南介绍了 SQL 如何操作线程和任务。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>事务锁定和行版本控制</h3>
+                                                    <p> 本指南说明 SQL Server 数据库引擎使用的锁定和行版本控制机制，以确保每个事务的物理完整性并提供有关应用程序如何高效控制事务的信息。 </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                            
                         </ul>
                     </li>
                 </ul>
