@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796625"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252114"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](sqlcmd-utility.md)。
+ > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+)。
 
  > 有关如何在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
@@ -479,7 +480,7 @@ sqlcmd
  如果可选参数是除 **1**之外的任何值，则将生成错误并且 **sqlcmd** 将退出。  
   
  **-X**[**1**]  
- 从批处理文件执行 **sqlcmd** 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别；**sqlcmd** 发出警告消息并继续。 如果指定了可选参数 **1**，则 **sqlcmd** 将生成错误消息，然后退出。 使用 **-X** 选项时，将禁用以下命令：  
+ 从批处理文件执行 **sqlcmd** 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别； **sqlcmd** 发出警告消息并继续。 如果指定了可选参数 **1** ，则 **sqlcmd** 将生成错误消息，然后退出。 使用 **-X** 选项时，将禁用以下命令：  
   
 -   **ED**  
   
@@ -519,7 +520,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|默认|  
+|变量|相关开关|R/W|，则“默认”|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -644,9 +645,9 @@ sqlcmd
   **:On Error**[ **exit** | **ignore**]  
  设置在脚本或批处理执行过程中发生错误时要执行的操作。  
   
- 使用 **exit** 选项时，**sqlcmd** 退出，并显示相应的错误值。  
+ 使用 **exit** 选项时， **sqlcmd** 退出，并显示相应的错误值。  
   
- 使用 **ignore** 选项时，**sqlcmd** 会忽略错误，并继续执行批处理或脚本。 默认情况下，打印一条错误消息。  
+ 使用 **ignore** 选项时， **sqlcmd** 会忽略错误，并继续执行批处理或脚本。 默认情况下，打印一条错误消息。  
   
  [**:**] **QUIT**  
  导致 **sqlcmd** 退出。  
@@ -706,7 +707,7 @@ sqlcmd
  如果文件包含的 Transact-SQL 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
   
 > [!NOTE]  
->  系统会相对于 **sqlcmd** 在其中运行的启动目录读取 **\<** *filename* **>**。  
+>  **\<** *在其中运行的启动目录读取* **>** filename  。  
   
  当遇到批处理终止符之后，将读取并执行该文件。 可以发出多个 **:r** 命令。 该文件可以包含任何 **sqlcmd** 命令， 包括批处理终止符 **GO**。  
   
@@ -759,11 +760,11 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 文件名  
  可以使用**sqlcmd** 选项或 **sqlcmd** 命令指定 **sqlcmd** 输入文件。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
   
--   **:Error**、**:Out** 和 **:Perftrace** 应使用不同的 **\<**_filename_**>**。 如果使用了相同的 **\<**_filename_**>**，这些命令的输入可能会混杂在一起。  
+-   **:Error**、**:Out** 和 **:Perftrace** 应使用不同的 **\<**_filename_**>**。 如果使用了相同的 **\<**_filename_**>** ，这些命令的输入可能会混杂在一起。  
   
 -   如果从本地计算机的 sqlcmd 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :Out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
--   有效文件路径包括：`C:\<filename>`、`\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
+-   有效文件路径包括： `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
   
 -   每个新的 **sqlcmd** 会话都将覆盖现有的同名文件。  
   
