@@ -1,13 +1,11 @@
 ---
-title: getShort 方法 (SQLServerCallableStatement) |Microsoft 文档
+title: getShort 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getShort
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54475341466889bca0ec596ca896871509409aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4bc8b2b05e795299836c479d50aca91e8675975e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655671"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>getShort 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**短**Java 编程语言中。  
+  检索指定参数作为 Java 编程语言中的 short 的值。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|检索与指定参数的值**短**java 编程语言提供的参数索引。|  
-|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|检索与指定参数的值**短**java 编程语言提供的参数名称。|  
+|[getShort (int)](../../../connect/jdbc/reference/getshort-method-int.md)|在给定参数索引的情况下，检索指定参数的值作为 Java 编程语言中的 short。|  
+|[getShort (java.lang.String)](../../../connect/jdbc/reference/getshort-method-java-lang-string.md)|在给定参数名称的情况下，检索指定参数的值作为 Java 编程语言中的 short。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

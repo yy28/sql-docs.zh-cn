@@ -1,13 +1,11 @@
 ---
-title: getSQLStateType 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getSQLStateType 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSQLStateType
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d5778b2b42af466ced101633a38ac9d0db83791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733195"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +36,17 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **Int**指示 SQLSTATE，类型可以是下列值之一：  
+ 指示 SQLSTATE 类型的 int，可以为以下值之一：  
   
--   有关 Java Runtime Environment 版本 5.0： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则为 DatabaseMetaData.sqlStateSQL99。  
+-   对于 5.0 版的 Java 运行时环境： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则为 DatabaseMetaData.sqlStateSQL99。  
   
--   Java Runtime Environment 版本 6.0 的： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则为 DatabaseMetaData.sqlStateSQL。  
+-   对于 6.0 版的 Java 运行时环境： 如果**xopenStates**连接属性设置为**true**，此方法返回 DatabaseMetaData.sqlStateXOpen。 否则为 DatabaseMetaData.sqlStateSQL。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getSQLStateType 方法指定此 getSQLStateType 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getSQLStateType 方法由 java.sql.DatabaseMetaData 接口中的 getSQLStateType 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

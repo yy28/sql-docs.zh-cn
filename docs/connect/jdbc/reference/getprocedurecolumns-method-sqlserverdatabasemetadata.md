@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getProcedureColumns
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cae6530dc0b37b57d986ab160ce9be0bf4d5a33e
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734695"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,9 +64,9 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="remarks"></a>Remarks  
  此 getProcedureColumns 方法由 java.sql.DatabaseMetaData 接口中的 getProcedureColumns 方法指定。  
   
- GetProcedureColumns 方法返回的结果集将包含以下信息：  
+ 由 getProcedureColumns 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|指定的存储过程所在数据库的名称。|  
 |PROCEDURE_SCHEM|**String**|存储过程的架构。|  

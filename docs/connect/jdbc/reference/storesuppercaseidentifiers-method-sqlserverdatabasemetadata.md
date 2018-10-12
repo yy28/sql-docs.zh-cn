@@ -1,13 +1,11 @@
 ---
-title: storesUpperCaseIdentifiers 方法 |Microsoft 文档
+title: storesUpperCaseIdentifiers 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.storesUpperCaseIdentifiers
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a32c65682c651c5b8fd6469501666afaf0f2bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 87093982fc165a6e1a2ad60fb83e554d7e35c5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847462"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731925"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public boolean storesUpperCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果标识符存储以大写形式。 否则为 **false**。  
+ 如果以大写形式存储标识符，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 storesUpperCaseIdentifiers 方法指定此 storesUpperCaseIdentifiers 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 storesUpperCaseIdentifiers 方法由 java.sql.DatabaseMetaData 接口中的 storesUpperCaseIdentifiers 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

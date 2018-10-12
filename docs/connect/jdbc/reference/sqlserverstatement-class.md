@@ -1,25 +1,22 @@
 ---
-title: SQLServerStatement 类 |Microsoft 文档
+title: SQLServerStatement 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14add0b451947092946129c9388366eb10186dce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7488efcb3392623e6f54cff440a16494c10e0a69
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705345"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "32846272"
   
  **包：** com.microsoft.sqlserver.jdbc  
   
- **实现：** [ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
+ **实现：**[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,10 +34,10 @@ ms.locfileid: "32846272"
 public class SQLServerStatement  
 ```  
   
-## <a name="remarks"></a>注释  
- 有关准备语句，可调用语句 JDBC，SQLServerStatement 类还提供大量的基类实现方法。 SQLServerStatement 类的基本角色是运行 SQL 语句，然后返回更新计数和结果将设置为用户应用程序。  
+## <a name="remarks"></a>Remarks  
+ SQLServerStatement 类还提供了大量基类实现方法，以用于 JDBC 准备就绪语句和可调用语句。 SQLServerStatement 类的基本作用是先运行 SQL 语句，再向用户应用程序返回更新计数和结果集。  
   
- 此类支持到 SQLServerStatement 类、 ISQLServerStatement 接口以及 java.sql.Statement 接口解包。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
+ 此类支持取消对 SQLServerStatement 类、ISQLServerStatement 接口和 java.sql.Statement 接口。 有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerStatement 成员](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

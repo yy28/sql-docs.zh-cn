@@ -1,30 +1,27 @@
 ---
-title: 关闭在不使用时的对象 |Microsoft 文档
+title: 关闭在不使用时的对象 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 644f3f22d544940e1f0f72cdfbfd5351fee6f519
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 47ad0a6d69ccf19b34ff0e15e7afa39b2dfcce41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32826692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687417"
 ---
 # <a name="closing-objects-when-not-in-use"></a>不使用时关闭对象
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  当你处理的对象的[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]，特别是[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)或语句之一对象如[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)， [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)或[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)，应显式关闭它们在不再需要时通过其关闭的方法。 这样可以尽快地释放驱动程序和服务器资源，而不是等待 Java 虚拟机垃圾收集器执行此操作，从而提高性能。  
+  当处理 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的对象（尤其是 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)，或者某个 Statement 对象，例如 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 或 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)）时，如果不再需要这些对象，应使用其 close 方法来显式关闭它们。 这样可以尽快地释放驱动程序和服务器资源，而不是等待 Java 虚拟机垃圾收集器执行此操作，从而提高性能。  
   
  当您使用滚动锁定时，要在服务器上保持良好的并发性能，则关闭对象尤其重要。 上一次访问的提取缓冲区中的滚动锁定会一直保持，直到关闭结果集。 类似地，语句准备的句柄会一直保留，直到关闭此语句。 如果您对多条语句重复使用一个连接，则在让语句退出作用域之前关闭这些语句会使服务器过早地清除已准备的句柄。  
   

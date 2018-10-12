@@ -1,13 +1,11 @@
 ---
-title: updateByte 方法 (SQLServerResultSet) |Microsoft 文档
+title: updateByte 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateByte
@@ -15,28 +13,27 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2369f46be838999e5eb3b023d7120a27b08fe4c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29f5c2b41598fa1afbce0fe41913837696ed4c31
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849912"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627875"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新的指定的列**字节**值。  
+  使用字节值更新指定列。  
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[updateByte （int、 字节）](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|更新的指定的列**字节**给定的列索引的值。|  
-|[updateByte （java.lang.String，字节）](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|更新的指定的列**字节**给定的列名称的值。|  
+|[updateByte （int，byte）](../../../connect/jdbc/reference/updatebyte-method-int-byte.md)|根据给定的列索引使用 byte 值更新指定的列。|  
+|[updateByte (java.lang.String, byte)](../../../connect/jdbc/reference/updatebyte-method-java-lang-string-byte.md)|根据给定的列名称使用 byte 值更新指定的列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

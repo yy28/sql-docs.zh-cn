@@ -1,25 +1,22 @@
 ---
-title: updateNCharacterStream 方法 （java.lang.String，java.io.Reader） |Microsoft 文档
+title: updateNCharacterStream 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 504d7d06-0227-45e1-8b01-899c3e6006e8
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94f50da3e2d042d3570455c75a1bb193f25cae73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5c1b4baeb3fb44c68e0b8a1492b85df62fb1e69b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677325"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader"></a>updateNCharacterStream 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,22 +34,22 @@ public void updateNCharacterStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parameters  
  *columnLabel*  
   
- A**字符串**包含列标签。  
+ 一个包含列标签的字符串。  
   
- *读取器*  
+ reader  
   
  一个读取器对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSet 接口中的 updateNCharacterStream 方法指定此 updateNCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 updateNCharacterStream 方法由 java.sql.ResultSet 接口中的 updateNCharacterStream 方法指定。  
   
- 此方法将从读取器对象，选择传递 Unicode 字符**nchar**， **nvarchar (max)**， **ntext**和**xml**列。 在其他数据类型列上使用此方法会引发异常。  
+ 此方法将来自要选择的读取器对象中传递 Unicode 字符**nchar**， **nvarchar （max)**， **ntext**并**xml**列。 在其他数据类型列上使用此方法会引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
- [updateNCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+ [updateNCharacterStream 方法 (SQLServerResultSet)](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 类](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

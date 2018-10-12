@@ -1,25 +1,22 @@
 ---
 title: OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持 | Microsoft Docs
-description: OLE DB Driver for SQL Server 对高可用性和灾难恢复的支持
+description: 适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ac2a123be5557069964edaddf0a3d6234fba6d19
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027523"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674815"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>适用于 SQL Server 的 OLE DB 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +82,7 @@ SQL Server 的 OLE DB 驱动程序同时支持**ApplicationIntent**并**MultiSub
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- 适用于 SQL Server 的 OLE DB 驱动程序的连接字符串关键字的详细信息，请参阅[OLE DB 驱动程序适用于 SQL Server 连接字符串关键字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
+ 有关适用于 SQL Server 的 OLE DB 驱动程序中连接字符串关键字的详细信息，请参阅[结合使用连接字符串关键字与适用于 SQL Server 的 OLE DB 驱动程序](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
 
 ### <a name="application-intent"></a>应用程序意向 
 

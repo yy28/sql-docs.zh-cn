@@ -5,21 +5,18 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992789"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776495"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "37992789"
 |[转换数据类型](../../connect/php/converting-data-types.md)|介绍如何指定数据类型并提供有关默认数据类型的详细信息。|  
 |[处理错误和警告](../../connect/php/handling-errors-and-warnings.md)|介绍如何处理错误和警告。|  
 |[日志记录活动](../../connect/php/logging-activity.md)|提供有关记录错误和警告的信息。|  
-|[使用 Always Encrypted Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|提供有关的 PHP 驱动程序使用始终加密功能的信息。|  
+|[对 Microsoft Drivers for PHP for SQL Server 使用 Always Encrypted 功能](../../connect/php/using-always-encrypted-php-drivers.md)|提供有关的 PHP 驱动程序使用始终加密功能的信息。|  
 |[安全注意事项 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|介绍有关开发、部署和运行应用程序的安全注意事项。|  
   
 ## <a name="see-also"></a>另请参阅  

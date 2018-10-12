@@ -1,36 +1,33 @@
 ---
-title: SQLServerDataSourceObjectFactory 成员 |Microsoft 文档
+title: SQLServerDataSourceObjectFactory 成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2e75b9b237288eb2b0f004b3716993bc86a467f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701985"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>SQLServerDataSourceObjectFactory 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出了通过公开的成员[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)类。  
+  下表列出了由 [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 类公开的成员。  
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[SQLServerDataSourceObjectFactory （)](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化的新实例[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)类。|  
+|[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|初始化 [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md) 类的新实例。|  
   
 ## <a name="fields"></a>字段  
  无。  
@@ -40,7 +37,7 @@ ms.locfileid: "32846782"
   
 ## <a name="methods"></a>方法  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|检索指定数据源对象的实例。|  
   
@@ -48,7 +45,7 @@ ms.locfileid: "32846782"
   
 |类继承自：|方法|  
 |---------------------------|-------------|  
-|java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
+|java.lang.Object|clone、equals、finalize、getClass、hashCode、notify、notifyAll、toString、wait|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDataSourceObjectFactory 类](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  

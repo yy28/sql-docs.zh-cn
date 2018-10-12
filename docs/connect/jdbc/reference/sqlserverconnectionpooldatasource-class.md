@@ -1,25 +1,22 @@
 ---
-title: SQLServerConnectionPoolDataSource 类 |Microsoft 文档
+title: SQLServerConnectionPoolDataSource 类 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdbe0150749782416eda8d713224df097a68f43a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 416f9dd730bd1cc085f8a48d1b748584037d1b65
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845902"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692275"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource 类
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +36,8 @@ ms.locfileid: "32845902"
 public class SQLServerConnectionPoolDataSource  
 ```  
   
-## <a name="remarks"></a>注释  
- 在 Java 应用程序服务器环境支持内置的连接池，需要提供物理连接，如 Java 平台企业版 (Java ConnectionPoolDataSource 中通常使用 SQLServerConnectionPoolDataSourceEE) 应用程序服务器，它提供 JDBC 3.0 API 规范连接池。  
+## <a name="remarks"></a>Remarks  
+ SQLServerConnectionPoolDataSource 通常用于 Java 应用程序服务器环境中，此环境支持内置连接池并需要 ConnectionPoolDataSource 提供物理连接，例如可以提供 JDBC 3.0 API 规范连接池的 Java Platform、Enterprise Edition (Java EE) 应用程序服务器。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnectionPoolDataSource 成员](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   

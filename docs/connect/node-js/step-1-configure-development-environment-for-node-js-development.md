@@ -1,36 +1,33 @@
 ---
-title: 步骤 1： 配置用于 Node.js 开发的开发环境 |Microsoft 文档
+title: 步骤 1：配置用于 Node.js 开发的开发环境 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f918eead7fb0af9d28cd85b173e3e076c5ba9416
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 823177f8fef91dda8cf879f6be84ef6706224fad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288956"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600235"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1： 配置用于 Node.js 开发的开发环境
-你将需要配置你的开发环境满足先决条件，以便开发应用程序使用的 SQL Server Node.js 驱动程序。  最常见方法是使用 node 程序包管理器 (npm) 安装需要很长时间的模块，但你可以下载此模块需要很长时间直接在[Github](https://github.com/pekim/tedious)如果你愿意。  
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>步骤 1：配置用于 Node.js 开发的开发环境
+你将需要在满足先决条件配置开发环境，以便开发使用 Node.js Driver for SQL Server 的应用程序。  最常见方法是使用节点包管理器 (npm) 安装枯燥乏味的模块，但可以在下载单调乏味模块直接在[Github](https://github.com/pekim/tedious)您的喜好而定。  
   
-请注意，Node.js 驱动程序使用 TDS 协议，默认情况下，SQL Server 和 Azure SQL 数据库中启用。  这种方式无需任何其他配置。  
+请注意，Node.js 驱动程序使用 SQL Server 和 Azure SQL 数据库中的默认情况下启用的 TDS 协议。  这种方式无需任何其他配置。  
   
 ## <a name="windows"></a>Windows  
   
-1. **安装 Node.js 运行时和 npm 包管理器**  
+1. **安装 Node.js 运行时和 npm 程序包管理器**  
 A. 转到[Node.js](https://nodejs.org/en/download/)  
-B. 单击相应的 Windows installer msi 链接。   
+B. 单击相应的 Windows 安装程序 msi 链接。   
 c. 下载完成后，运行 msi 安装 Node.js  
   
 2. **打开 cmd.exe**  
@@ -40,12 +37,12 @@ c. 下载完成后，运行 msi 安装 Node.js
 > mkdir HelloWorld  
 > cd HelloWorld  
 ```  
-4. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在你的项目目录中看到的 package.json 文件。  
+4. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在项目目录中看到一个 package.json 文件。  
 ```  
 > npm init  
 ```  
   
-5. **在项目中安装需要很长时间的模块。**  这是该驱动程序用于与 SQL Server 进行通信的 TDS 协议的实现。  
+5. **在项目中安装枯燥乏味的模块。**  这是驱动程序使用与 SQL Server 进行通信的 TDS 协议的实现。  
 ```  
 > npm install tedious  
 ```  
@@ -58,7 +55,7 @@ c. 下载完成后，运行 msi 安装 Node.js
 ```  
 >sudo apt-get install node  
 ```  
-3. **安装 npm （node 包管理器）**  
+3. **安装 npm （节点包管理器）**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -68,22 +65,22 @@ c. 下载完成后，运行 msi 安装 Node.js
 > cd HelloWorld  
 ```  
   
-5. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在你的项目目录中看到的 package.json 文件。  
+5. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在项目目录中看到一个 package.json 文件。  
 ```  
 > sudo npm init  
 ```  
   
-6. **在项目中安装需要很长时间的模块。**  这是该驱动程序用于与 SQL Server 进行通信的 TDS 协议的实现。  
+6. **在项目中安装枯燥乏味的模块。**  这是驱动程序使用与 SQL Server 进行通信的 TDS 协议的实现。  
 ```  
 > sudo npm install tedious  
 ```  
   
 ## <a name="mac"></a>Mac  
   
-1. **安装 Node.js 运行时和 npm 包管理器**  
+1. **安装 Node.js 运行时和 npm 程序包管理器**  
 A. 转到[Node.js](https://nodejs.org/en/download/)  
 B. 单击相应的 Mac OS 安装程序链接。  
-c. 下载完成后，运行 dmg 安装 Node.js  
+c. 下载后，运行 dmg 安装 Node.js  
   
 2. **打开终端**  
   
@@ -93,12 +90,12 @@ c. 下载完成后，运行 dmg 安装 Node.js
 > cd HelloWorld  
 ```  
   
-4. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在你的项目目录中看到的 package.json 文件。  
+4. **创建节点项目。**  若要在项目创建期间保留默认值，按 enter，直到创建项目。 在此步骤结束时，你应在项目目录中看到一个 package.json 文件。  
 ```  
 > npm init  
 ```  
   
-5. **在项目中安装需要很长时间的模块。**  这是该驱动程序用于与 SQL Server 进行通信的 TDS 协议的实现。  
+5. **在项目中安装枯燥乏味的模块。**  这是驱动程序使用与 SQL Server 进行通信的 TDS 协议的实现。  
 ```  
 > npm install tedious  
 ```  

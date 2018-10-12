@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786453"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697411"
 ---
 # <a name="understanding-ssl-support"></a>了解 SSL 支持
 
@@ -36,7 +33,7 @@ ms.locfileid: "42786453"
   
 ## <a name="remarks"></a>Remarks
 
-为了允许应用程序使用 SSL 加密，从 1.2 版开始，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 引入了以下连接属性：encrypt、trustServerCertificate、trustStore、trustStorePassword 和 hostNameInCertificate。 有关设置连接属性的详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
+为了允许应用程序使用 SSL 加密，从 1.2 版开始，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 引入了以下连接属性：encrypt、trustServerCertificate、trustStore、trustStorePassword 和 hostNameInCertificate。 有关详细信息，请参阅[设置连接属性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
  下表总结了此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 版本对于可能的 SSL 连接方案的行为方式。 每种方案使用一组不同的 SSL 连接属性。 该表包含：  
   
@@ -82,7 +79,7 @@ ms.locfileid: "42786453"
   
 - 证书使用者中的公用名 (CN) 或使用者替代名称 (SAN) 中的 DNS 名称与连接字符串中指定的 serverName 值完全匹配，或与 hostNameInCertificate 属性值（如果指定）完全匹配。  
   
-- DNS 名称可包含通配符。 但 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不支持通配符匹配。 也就是说，abc.com 与 *.com 不匹配，但 \*.com 与 \*.com 匹配。  
+- DNS 名称可包含通配符。 但 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不支持通配符匹配。 也就是说，abc.com 与 \*.com 不匹配，但 \*.com 与 \*.匹配。  
   
 ## <a name="see-also"></a>另请参阅
 

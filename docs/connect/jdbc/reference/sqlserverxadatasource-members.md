@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d496016fc323bd0fc6616a019c9c3a4668b384d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4e9e25a45940304b977623b0f009ed134b56caed
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784866"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672325"
 ---
 # <a name="sqlserverxadatasource-members"></a>SQLServerXADataSource 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +25,7 @@ ms.locfileid: "42784866"
   
 ## <a name="constructors"></a>构造函数  
   
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[SQLServerXADataSource ()](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|初始化 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) 类的新实例。|  
   
@@ -40,7 +37,7 @@ ms.locfileid: "42784866"
   
 ## <a name="methods"></a>方法  
   
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回 applicationIntent 连接属性的值。|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）返回应用程序名称。|  
@@ -77,7 +74,7 @@ ms.locfileid: "42784866"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置一个 int 值，此值指示在数据库报告锁定超时前要等待的毫秒数。|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置此 DataSource 对象在尝试进行连接时将等待的秒数。|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置用于所有日志记录和跟踪消息的字符输出流。|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|(继承自[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) 设置的值**multiSubnetFailover**连接属性。|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置 multiSubnetFailover 连接属性的值。|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置将用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的密码。|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置用于与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 通信的端口号。|  
 |[setSelectMethod](../../../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md)|（继承自 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)）设置用于通过使用此 DataSource 对象创建的所有结果集的默认游标类型。|  

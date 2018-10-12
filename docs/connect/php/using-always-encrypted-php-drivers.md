@@ -3,19 +3,18 @@ title: 在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted | 
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 12f0427b4ff23452f244c830c9116913dfb03968
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 29adbfcbce3701a853f18f7f1b3079bc0bb6f8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695675"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>在适用于 SQL Server 的 PHP 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "39174964"
 
 本文提供有关如何开发 PHP 应用程序使用的信息[Always Encrypted （数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)并[适用于 SQL Server PHP 驱动程序](../../connect/php/Microsoft-php-driver-for-sql-server.md)。
 
-始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 驱动程序，如 SQL Server ODBC 驱动程序以透明方式进行加密和解密客户端应用程序中的敏感数据。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 SQL Server PHP 驱动程序使用 ODBC 驱动程序用于加密敏感数据的 SQL Server。
+始终加密允许客户端应用程序对敏感数据进行加密，并且永远不向 SQL Server 或 Azure SQL 数据库显示该数据或加密密钥。 启用了 Always Encrypted 的驱动程序（如适用于 SQL Server 的 ODBC 驱动程序）在客户端应用程序中以透明方式对敏感数据进行加密和解密。 该驱动程序自动确定哪些查询参数与敏感数据库列（使用始终加密进行保护）相对应，并对这些参数的值进行加密，然后再将数据传递到 SQL Server 或 Azure SQL 数据库。 同样，该驱动程序以透明方式对查询结果中从加密数据库列检索到的数据进行解密。 有关详细信息，请参阅 [始终加密（数据库引擎）](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 SQL Server PHP 驱动程序使用 ODBC 驱动程序用于加密敏感数据的 SQL Server。
 
 ## <a name="prerequisites"></a>必备条件
 
@@ -154,7 +153,7 @@ $stmt->execute();
 ### <a name="plaintext-data-retrieval-example"></a>纯文本数据检索示例
 
 下面的示例演示如何根据加密的值和从使用 SQLSRV 和 PDO_SQLSRV 驱动程序的加密列中检索纯文本数据的筛选数据。 请注意以下几点：
- -   在 WHERE 子句来筛选 SSN 列需要用于传递使用绑定参数，以便该驱动程序可以以透明方式对其进行加密发送到服务器之前的值。
+ -   WHERE 子句中用于筛选 SSN 列的值需要使用 bind 参数进行传递，以便驱动程序可以在将其发送到数据库之前以透明方式对其加密。
  -   执行带有绑定参数的查询，PHP 驱动程序将自动确定用户的 SQL 类型，除非用户明确指定的 SQL 类型时使用 SQLSRV 驱动程序。
  -   该程序打印的所有值都均以纯文本形式，因为该驱动程序以透明方式解密从 SSN 和 BirthDate 列中检索的数据。
  
@@ -229,7 +228,7 @@ $row = $stmt->fetch();
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>由于传递纯文本而非加密值而发生的错误
 
-需要发送到服务器之前将其加密任何面向加密的列的值。 尝试插入、 修改或筛选加密的列将导致错误的纯文本值。 为防止发生此类错误，请确保：
+需要发送到服务器之前将其加密任何面向加密的列的值。 尝试插入、修改或者按纯文本值筛选加密列会导致错误。 为防止发生此类错误，请确保：
  -   启用始终加密 (连接字符串中设置`ColumnEncryption`关键字`Enabled`)。
  -   使用 bind 参数发送面向加密列的数据。 下面的示例显示了按文本/常量对加密列 (SSN) 进行错误筛选的查询：
 ```
@@ -266,7 +265,7 @@ Always Encrypted 是一种客户端加密技术，因此，大部分性能开销
 
 对于 Microsoft Driver 5.3.0 for PHP for SQL Server，支持仅 Windows 证书存储区提供程序和 Azure 密钥保管库。 尚不支持其他密钥存储提供程序支持的 ODBC 驱动程序 （自定义密钥存储提供程序）。
 
-### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储区提供程序
+### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 
 Windows 上的 SQL Server ODBC 驱动程序包含名为 Windows 证书存储的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不是在 macOS 或 Linux 上可用。）与此提供程序，客户端计算机上本地存储 CMK 和应用程序无额外配置才可使用的驱动程序。 但是，应用程序必须具有对证书和私钥的访问的存储中。 有关详细信息，请参阅 [创建并存储列主密钥 (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)。
 
@@ -279,7 +278,7 @@ Azure Key Vault 提供了一种方法来存储加密密钥、 密码和其他机
      -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStorePrincipalId`必须是应用程序客户端 id。
  -   `KeyStoreSecret` 采用一个字符串，表示凭据机密。 
      -   如果`KeyStoreAuthentication`设置为`KeyVaultPassword`，然后`KeyStoreSecret`必须是用户的密码。 
-     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStoreSecret`必须与应用程序客户端 id。 关联的应用程序机密
+     -   如果`KeyStoreAuthentication`设置为`KeyVaultClientSecret`，然后`KeyStoreSecret`必须与应用程序客户端 ID 关联的应用程序机密。
 
 所有三个选项中必须存在要使用 Azure 密钥保管库的连接字符串。 此外，`ColumnEncryption`必须设置为`Enabled`。 如果`ColumnEncryption`设置为`Disabled`但 Azure 密钥保管库选项都存在，该脚本将继续而不进行错误但会执行任何加密。
 

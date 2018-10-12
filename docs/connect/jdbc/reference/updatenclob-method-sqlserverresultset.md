@@ -1,25 +1,22 @@
 ---
-title: updateNClob 方法 (SQLServerResultSet) |Microsoft 文档
+title: updateNClob 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0cb0d347-4449-4920-b382-05f88f2a3225
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7bf23197bd15040c40170784379a0a6c12bed55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6a4d9fb9ef9173dcca7c0b7a49db1e8ba384a6d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677205"
 ---
 # <a name="updatenclob-method-sqlserverresultset"></a>updateNClob 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,14 +25,14 @@ ms.locfileid: "32851324"
   
 ## <a name="overload-list"></a>重载列表  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[updateNClob 方法&#40;int、 java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|更新的指定的列**NClob**值。|  
-|[updateNClob 方法&#40;java.lang.String、 java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|更新的指定的列**NClob**值。|  
-|[updateNClob 方法&#40;int、 java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|更新使用指定的指定的列**读取器**对象。|  
-|[updateNClob 方法&#40;int、 java.io.Reader，长&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|更新使用指定的指定的列**读取器**对象，它是指定的字符数。|  
-|[updateNClob 方法&#40;java.lang.String、 java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|更新使用指定的指定的列**读取器**对象。|  
-|[updateNClob 方法&#40;java.lang.String、 java.io.Reader，长&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|更新使用指定的指定的列**读取器**对象，它是指定的字符数。|  
+|[updateNClob 方法 &#40;int, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-sql-nclob.md)|使用 NClob 值更新指定列。|  
+|[updateNClob 方法 &#40;java.lang.String, java.sql.NClob&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-sql-nclob.md)|使用 NClob 值更新指定列。|  
+|[updateNClob 方法 &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader.md)|使用指定的 Reader 对象更新指定列。|  
+|[updateNClob 方法 &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatenclob-method-int-java-io-reader-long.md)|使用具有指定字符数长度的指定 Reader 对象更新指定列。|  
+|[updateNClob 方法 &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader.md)|使用指定的 Reader 对象更新指定列。|  
+|[updateNClob 方法 &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/updatenclob-method-java-lang-string-java-io-reader-long.md)|使用具有指定字符数长度的指定 Reader 对象更新指定列。|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

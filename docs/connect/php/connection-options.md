@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727485"
 ---
 # <a name="connection-options"></a>连接选项
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "42783991"
 本主题列出了关联阵列中允许的选项（当在 SQLSRV 驱动程序中使用 [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) 时）或数据源名称 (dsn) 中允许的关键字（当在PDO_SQLSRV 驱动程序中使用 [PDO::__construct](../../connect/php/pdo-construct.md) 时）。  
 
 ## <a name="table-of-connection-options"></a>表的连接选项
-|Key|ReplTest1|描述|，则“默认”|  
+|Key|ReplTest1|描述|默认|  
 |-------|---------|---------------|-----------|  
 |APP|String|指定跟踪中所使用的应用程序名称。|未设置任何值。|  
 |ApplicationIntent|String|连接到服务器时声明应用程序工作负荷类型。 可能的值为 ReadOnly 和 ReadWrite。<br /><br />有关详细信息[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]支持[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]，请参阅[支持的高可用性和灾难恢复](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|ReadWrite|  
@@ -36,9 +33,9 @@ ms.locfileid: "42783991"
 |CharacterSet<br /><br />（在 PDO_SQLSRV 驱动程序中不受支持）|String|指定用于将数据发送到服务器的字符集。<br /><br />可能的值为 SQLSRV_ENC_CHAR 和 UTF-8。 有关详细信息，请参阅 [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)。|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|启用或禁用|指定是否启用始终加密功能。 |禁用|  
 |ConnectionPooling|1 或 **true** ，表示启用连接池。<br /><br />0 或 **false** ，表示禁用连接池。|指定是否从连接池分配连接（1 或 true 表示是，0 或 false 表示否）<sup>1</sup>。|true (1)|  
-|ConnectRetryCount|0 到 255 （含） 之间的整数|尝试重新建立断开的连接之前放弃的最大次数。 默认情况下进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试任何重新连接。|@shouldalert|  
-|ConnectRetryInterval|介于 1 和 60 （含） 之间的整数|以秒为单位，两次尝试重新建立的连接之间的时间。 应用程序将尝试在检测到断开的连接后立即重新连接，并会然后等到 ConnectRetryInterval 秒，然后重试。 如果 ConnectRetryCount 等于 0，则忽略此关键字。|@shouldalert|  
-|“数据库”|String|指定用于建立连接的数据库名称<sup>2</sup>。|供登录时使用的默认数据库。|  
+|ConnectRetryCount|0 到 255 （含） 之间的整数|尝试重新建立断开的连接之前放弃的最大次数。 默认情况下进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试任何重新连接。|1|  
+|ConnectRetryInterval|介于 1 和 60 （含） 之间的整数|以秒为单位，两次尝试重新建立的连接之间的时间。 应用程序将尝试在检测到断开的连接后立即重新连接，并会然后等到 ConnectRetryInterval 秒，然后重试。 如果 ConnectRetryCount 等于 0，则忽略此关键字。|1|  
+|数据库|String|指定用于建立连接的数据库名称<sup>2</sup>。|供登录时使用的默认数据库。|  
 |驱动程序|String|指定用于与 SQL Server 进行通信的 Microsoft ODBC 驱动程序。<br /><br />可能的值有：<br />ODBC Driver 17 for SQL Server<br />ODBC Driver 13 for SQL Server<br />ODBC Driver 11 for SQL Server (仅 Windows)。|如果未指定 Driver 关键字，Microsoft Drivers for PHP for SQL Server 尝试查找受支持的 Microsoft ODBC 驱动程序在系统中，启动 ODBC 的最新版本，等等。|  
 |Encrypt|1 或 **true** ，表示启用加密。<br /><br />0 或 **false** ，表示禁用加密。|指定是加密（1 或 true）还是解密（0 或 false）与 SQL Server 的通信<sup>3</sup>。|false (0)|  
 |Failover_Partner|String|指定要在主服务器不可用时使用的服务器和数据库镜像的实例（如果已启用且已配置）。<br /><br />对于将 Failover_Partner 与 MultiSubnetFailover 结合使用，存在一些限制。 有关详细信息，请参阅[对高可用性和灾难恢复的支持](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|未设置任何值。|  
@@ -67,7 +64,7 @@ ms.locfileid: "42783991"
 
 3. 因为加密数据需要计算开销，所以启用 *Encryption* 可能会影响某些应用程序的性能。  
 
-4. 要连接到的 *UID* 身份验证进行连接时，必须同时设置 *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性。  
+4. 要连接到的 UID 身份验证进行连接时，必须同时设置 PWD 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 属性。  
 
 许多支持的键都是 ODBC 连接字符串属性。 有关 ODBC 连接字符串的信息，请参阅 [将连接字符串关键字用于 SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 

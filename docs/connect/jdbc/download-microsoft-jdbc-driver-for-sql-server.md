@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710547"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>下载 Microsoft SQL Server JDBC 驱动程序
 
@@ -43,6 +40,6 @@ JDBC 驱动程序可以通过将其添加为依赖项在 POM.xml 文件中使用
  * [Microsoft SQL Server JDBC 驱动程序 4.1](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>不受支持的驱动程序  
-无法从此处下载不受支持的驱动程序版本。 我们在不断改善 Java 连接支持。 这种情况下我们强烈建议使用最新版本的 Microsoft JDBC 驱动程序。  
+无法从此处下载不受支持的驱动程序版本。 我们在不断改善 Java 连接支持。 因此，强烈建议使用最新版 Microsoft JDBC Driver。  
   
   

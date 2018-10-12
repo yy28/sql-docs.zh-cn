@@ -1,13 +1,11 @@
 ---
-title: getAsciiStream (int) |Microsoft 文档
+title: getAsciiStream (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getAsciiStream(int paramIndex)
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerCallableStatement.getAsciiStream(int paramIndex)
 apitype: Assembly
 ms.assetid: 9d8b235e-4208-40ee-b5a5-bc76f73b82f8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc2425abff18f9ba679c83afda4e6d5ae012cce5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6ec317c8c345b6965cb5f36f30171bc02a2eff7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726971"
 ---
 # <a name="getasciistream-int"></a>getAsciiStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索指定参数的值为流**ASCII**字符给定参数索引。  
+  根据给定的参数索引检索指定参数作为 ASCII 字符流的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,13 +41,13 @@ public final java.io.InputStream getAsciiStream(int paramIndex)
  指示参数索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [getAsciiStream 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
+ [getAsciiStream 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

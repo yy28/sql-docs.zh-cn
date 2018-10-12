@@ -1,29 +1,26 @@
-﻿---
-title: SQL Server 的 Microsoft ADO.NET |Microsoft 文档
+---
+title: 用于 SQL Server 的 Microsoft ADO.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11b52720be2b22b3bef6839623e960f205fe509f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a237531d89aee072c234f57024a09fd1774f99f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288876"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765525"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>用于 SQL Server 的 Microsoft ADO.NET
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下载向下箭头线圈出](../../ssdt/media/download.png)[下载 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.SqlClient 命名空间从其他供应商访问 SQL Server 或提供程序以访问其存储空间。 使用 System.Data.Odbc 或 System.Data.Oledb 从使用其他数据访问技术的 .NET 语言访问数据。 当需要在客户端应用程序中的脱机数据缓存时，请使用 System.Data.Dataset。 它还提供本地暂留和 XML 功能，这些功能对于 Web 服务很有用。  
   
@@ -36,7 +33,7 @@ ADO.NET 是用于 .NET 语言的核心数据访问技术。 使用 System.Data.S
 ## <a name="documentation"></a>文档  
 * [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
 * [SQL Server 和 ADO.NET](https://msdn.microsoft.com/library/kb9s9ks0.aspx)  
-* [System.Data.SqlClient Namespace](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
+* [System.Data.SqlClient 命名空间](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)  
   
 ## <a name="community"></a>社区  
 * [ADO.NET 托管提供程序论坛](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  

@@ -1,30 +1,27 @@
 ---
-title: getCharacterStream 方法 （长，长型值） |Microsoft 文档
+title: getCharacterStream 方法 (long，long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea78140d5a0bd24a71d9ab4c846ded3e74822f18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d875e82b4db5e1725f43307348d27a6701e2a88d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830692"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697785"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream 方法 (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回**Clob**数据作为读取器对象或与指定的位置和长度的字符流。  
+  将 Clob 数据作为 Reader 对象或字符流返回且具有指定位置和长度。  
   
 ## <a name="syntax"></a>语法  
   
@@ -37,11 +34,11 @@ public java.io.Reader getCharacterStream(long pos,
 #### <a name="parameters"></a>Parameters  
  *pos*  
   
- A**长**，该值指示要检索的部分的值的第一个字符的偏移量。  
+ 指示与要检索的部分值的第一个字符之间偏移量的 long 值。  
   
  *length*  
   
- A**长**，该值指示以字符为单位要检索的部分的值的长度。  
+ 指示要检索的部分值的字符长度的 long。  
   
 ## <a name="return-value"></a>返回值  
  读取器对象，其中包含**Clob**数据。  
@@ -49,11 +46,11 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Clob 接口中的 getCharacterStream 方法指定此 getCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getCharacterStream 方法由 java.sql.Clob 接口中的 getCharacterStream 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [getCharacterStream 方法&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   
+ [getCharacterStream 方法 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   
  [SQLServerClob 方法](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob 成员](../../../connect/jdbc/reference/sqlserverclob-members.md)  
   

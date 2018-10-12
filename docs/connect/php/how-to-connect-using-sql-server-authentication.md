@@ -1,27 +1,24 @@
 ---
-title: 如何： 使用 SQL Server 身份验证进行连接 |Microsoft 文档
+title: 如何：使用 SQL Server 身份验证进行连接 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, SQL Server Authentication
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
-caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2eca3084ccdabf2ecd0f5be9ca707fb5f5f3387f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307296"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731795"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>How to: Connect Using SQL Server Authentication
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +31,7 @@ ms.locfileid: "35307296"
   
 -   必须在服务器上启用 SQL Server 混合模式身份验证。  
   
--   用户 ID 和密码 (*UID*和*PWD* SQLSRV 驱动程序中的连接属性) 尝试建立连接时，必须设置。 用户 ID 和密码必须映射到有效的 SQL Server 用户和密码。  
+-   当尝试建立连接时，必须设置用户 ID 和密码（SQLSRV 驱动程序中的 UID 和 PWD 连接属性）。 用户 ID 和密码必须映射到有效的 SQL Server 用户和密码。  
   
 > [!NOTE]  
 > 包含右大括号 (}) 的密码必须使用另一个右大括号进行转义。 例如，如果 SQL Server 密码为“pass}word”，则 *PWD* 连接属性的值必须设置为“pass}}word”。  
@@ -54,9 +51,9 @@ ms.locfileid: "35307296"
 > 在建立连接时，可以设置除用户 ID 和密码之外的连接属性。 有关受支持的连接属性的完整列表，请参阅 [Connection Options](../../connect/php/connection-options.md)。  
   
 ## <a name="example"></a>示例  
-以下示例使用 SQLSRV 驱动程序和 SQL Server 身份验证来连接到 SQL Server 的本地实例。 所需的值*UID*和*PWD*连接属性会从应用程序特定的文本文件， *uid.txt*和*pwd.txt*中*C:\AppData*目录。 建立连接后，将查询服务器以验证用户登录名。  
+以下示例使用 SQLSRV 驱动程序和 SQL Server 身份验证来连接到 SQL Server 的本地实例。 所需的 UID 和 PWD 连接属性的值从 C:\AppData 目录中应用程序特定的文本文件 uid.txt 和 pwd.txt 中获取。 建立连接后，将查询服务器以验证用户登录名。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 当从浏览器运行该示例时，所有输出都将写入该浏览器。  
   
 ```  
 <?php  
@@ -133,22 +130,22 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [如何：使用 SQL Server 身份验证进行连接](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[For PHP for SQL Server 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
+[适用于 SQL Server for PHP 编程 Microsoft 驱动程序的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[SUSER_SNAME (Transact SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
+[SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[如何： 创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)
+[如何：创建 SQL Server 登录名](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[如何： 创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[如何：创建数据库用户](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [管理用户、角色和登录帐户](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [用户架构分离](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Grant 对象权限 (TRANSACT-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+[授予对象权限 (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

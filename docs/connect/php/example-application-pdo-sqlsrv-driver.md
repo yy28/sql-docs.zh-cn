@@ -1,44 +1,41 @@
 ---
-title: 示例应用程序 （PDO_SQLSRV 驱动程序） |Microsoft 文档
+title: 示例应用程序 （PDO_SQLSRV 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307626"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651975"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>示例应用程序 （PDO_SQLSRV 驱动程序）
+# <a name="example-application-pdosqlsrv-driver"></a>示例应用程序（PDO_SQLSRV 驱动程序）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-AdventureWorks 产品评论示例应用程序是使用 PDO_SQLSRV 驱动程序的 Web 应用程序[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 该应用程序可使用户通过输入关键字来搜索产品、查看选定产品的评论、为选定产品撰写评论以及为选定产品上载图像。  
+AdventureWorks 产品评论示例应用程序是使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 PDO_SQLSRV 驱动程序的 Web 应用程序。 该应用程序可使用户通过输入关键字来搜索产品、查看选定产品的评论、为选定产品撰写评论以及为选定产品上载图像。  
   
 ### <a name="running-the-example-application"></a>运行示例应用程序  
   
-1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  安装 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 有关详细信息，请参阅[开始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  将文本档后面列出的代码复制到两个文件中：adventureworks_demo.php 和 photo.php。  
 3.  将 adventureworks_demo.php 和 photo.php 文件放在 Web 服务器的根目录中。  
-4.  通过启动运行该应用程序 http://localhost/adventureworks_demo.php 从浏览器。  
+4.  运行应用程序通过启动 http://localhost/adventureworks_demo.php从浏览器。  
   
 ## <a name="requirements"></a>要求  
 若要运行 AdventureWorks 产品评论示例应用程序，你的计算机必须符合以下情况：  
   
 -   你的系统满足 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的要求。 有关详细信息，请参阅[Microsoft Drivers for PHP for SQL Server 的系统要求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
  -   adventureworks_demo.php 和 photo.php 文件放置在 Web 服务器的根目录中。 文件必须包含本文档后面列出的代码。  
--   SQL Server 2005 或 SQL Server 2008 中，与[AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)附加，数据库在本地计算机上安装。  
+-   已在本地计算机上安装了已连接 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库的 SQL Server 2005 或 SQL Server 2008。  
 -   安装了 Web 浏览器。  
   
 ## <a name="demonstrates"></a>演示  
@@ -52,7 +49,7 @@ AdventureWorks 产品评论示例应用程序演示以下内容：
 ## <a name="example"></a>示例  
 AdventureWorks 产品评论示例应用程序为名称包含用户输入的字符串的产品返回数据库中的产品信息。 从返回的产品列表中，用户可以查看评论、查看图像、上载图像和为选定产品撰写评论。  
   
-将下面的代码放入名为 adventureworks_demo_pdo.php 的文件：  
+将以下代码放在名为 adventureworks_demo_pdo.php 的文件中：  
   
 ```  
 <!--=============  
@@ -458,7 +455,7 @@ function PopulateProductsTable( $values )
 ## <a name="example"></a>示例  
 photo.php 脚本返回指定的 **ProductID**的产品照片。 此脚本从 adventureworks_demo.php 脚本中调用。  
   
-将下面的代码放入名为 photo_pdo.php 的文件：  
+将以下代码放在名为 photo_pdo.php 的文件中：  
   
 ```  
 <?php  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [连接到服务器](../../connect/php/connecting-to-the-server.md)
 
 [比较执行函数](../../connect/php/comparing-execution-functions.md)

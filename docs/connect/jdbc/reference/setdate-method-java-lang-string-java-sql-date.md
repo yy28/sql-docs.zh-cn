@@ -1,13 +1,11 @@
 ---
-title: setDate 方法 setDate 方法为日期值-字符串 |Microsoft 文档
+title: setDate 方法 setDate 方法为日期值的字符串 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setDate (java.lang.String, java.sql.Date)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4762e2bd-5e94-4562-97d5-f023ecffc08c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a06dc5093726c43075a4a9bd2c59c9a5843c710
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: da5eedcbdd76e16da87f8e84c35fa07ef2cc5ccc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683535"
 ---
 # <a name="setdate-method-javalangstring-javasqldate"></a>setDate 方法 (java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +41,15 @@ public void setDate(java.lang.String sCol,
   
  包含参数名称的字符串。  
   
- *D*  
+ *d*  
   
  Date 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- SetDate 方法 java.sql.CallableStatement 界面中指定此 setDate 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setDate 方法是由 java.sql.CallableStatement 接口中的 setDate 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

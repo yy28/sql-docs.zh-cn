@@ -1,25 +1,22 @@
 ---
-title: getSchemas 方法 （String，String） |Microsoft 文档
+title: getSchemas 方法 （String，String） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0684e2ec5e840d6fbe2f45cdcb66f39feb404320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837542"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684605"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas 方法 (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,29 +34,29 @@ public ResultSet getSchemas(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的架构。 如果它是**null**，目录名称不用于搜索。  
+ 数据库中的目录名称。 如果该名称为空字符串 ""，则结果将包括无目录的架构。 如果此字符串为“null”，目录名称则不可用于搜索。  
   
  *schemaPattern*  
   
- 架构的名称。 如果它是**null**，架构名称不用于搜索。  
+ 架构的名称。 如果此字符串为“null”，架构名称则不可用于搜索。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- GetSchemas 方法 java.sql.DatabaseMetaData 界面中指定此 getSchemas 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getSchemas 方法是由 java.sql.DatabaseMetaData 接口中的 getSchemas 方法指定的。  
   
- GetSchemas 方法所返回的结果集包含以下信息：  
+ 由 getSchemas 方法返回的结果集包含以下信息：  
   
-|名称|类型|Description|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
-|TABLE_SCHEM|**字符串**|架构的名称。|  
-|TABLE_CATALOG|**字符串**|架构的目录名称。|  
+|TABLE_SCHEM|**String**|架构的名称。|  
+|TABLE_CATALOG|**String**|架构的目录名称。|  
   
- 通过 TABLE_CATALOG 然后 TABLE_SCHEM，对结果进行排序。 各行均以 TABLE_SCHEM 作为第一列并以 TABLE_CATALOG 作为第二列。  
+ 结果先按 TABLE_CATALOG 再按 TABLE_SCHEM 排序。 各行均以 TABLE_SCHEM 作为第一列并以 TABLE_CATALOG 作为第二列。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

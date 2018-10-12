@@ -1,31 +1,28 @@
 ---
-title: 如何： 检索输出参数使用 SQLSRV 驱动程序 |Microsoft 文档
+title: 如何：使用 SQLSRV 驱动程序检索输出参数 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34563885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700455"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序检索输出参数
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主题演示如何调用一个参数已在其中定义为输出参数的存储过程。 在检索输出或输入/输出参数，可访问返回的参数值之前，必须先使用存储过程返回的所有结果。  
+本主题演示如何调用一个参数已在其中定义为输出参数的存储过程。 在检索输出参数或输入/输出参数时，必须在可以访问返回的参数值前使用存储过程返回的所有结果。  
   
 > [!NOTE]  
 > 已初始化或更新为 **null**、 **DateTime**的变量或流类型无法用作输出参数。  
@@ -43,7 +40,7 @@ ms.locfileid: "34563885"
 > [!NOTE]  
 > 建议使用规范语法来调用存储过程。 有关规范语法的详细信息，请参阅[调用存储过程](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -124,10 +121,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 如果值超出了范围可能最终为 bigint 类型，绑定一个输出参数时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，你将需要其 SQL 字段类型指定为 SQLSRV_SQLTYPE_BIGINT。 否则，它可能会导致"超出范围的值"异常。
+> 输出参数绑定到 bigint 类型，如果值的最终可能会超出范围时[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)，将需要为 SQLSRV_SQLTYPE_BIGINT 指定其 SQL 字段类型。 否则，它可能会导致"超出范围的值"异常。
 
 ## <a name="example-2"></a>示例 2
-此代码示例演示如何将绑定大型 bigint 值作为输出参数。  
+此代码示例演示如何将大型 bigint 值作为输出参数绑定。  
 
 ```
 <?php
@@ -153,7 +150,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [如何：使用 SQLSRV 驱动程序指定参数方向](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [如何：使用 SQLSRV 驱动程序检索输入和输出参数](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

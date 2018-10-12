@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
@@ -22,22 +19,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 3e1764fdd2a96fcf1d0da218ef86b2e4cb62fd8c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025908"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687861"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驱动程序是独立的数据访问应用程序编程接口 (API)，用于 OLE DB 中引入的[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 SQL Server 的 OLE DB 驱动程序提供了一个动态链接库 (DLL) 中的 SQL OLE DB 驱动程序。 除 Windows 数据访问组件（Windows DAC，以前为 Microsoft 数据访问组件或 MDAC）提供的功能之外，它还提供新的功能。 适用于 SQL Server 的 OLE DB 驱动程序可用于创建新的应用程序或增强现有应用程序的性能，使其能够利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的功能，例如多个活动结果集 (MARS)、用户定义数据类型 (UDT)、查询通知、快照隔离和 XML 数据类型支持。  
+  适用于 SQL Server 的 OLE DB 驱动程序是独立的数据访问应用程序编程接口 (API)，用于 OLE DB，是在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的。 适用于 SQL Server 的 OLE DB 驱动程序提供了一个动态链接库 (DLL) 中的 SQL OLE DB 驱动程序。 除 Windows 数据访问组件（Windows DAC，以前为 Microsoft 数据访问组件或 MDAC）提供的功能之外，它还提供新的功能。 适用于 SQL Server 的 OLE DB 驱动程序可用于创建新的应用程序或增强现有应用程序的性能，使其能够利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入的功能，例如多个活动结果集 (MARS)、用户定义数据类型 (UDT)、查询通知、快照隔离和 XML 数据类型支持。  
   
 > [!NOTE]  
->  要查看列表了解 SQL Server 的 OLE DB 驱动程序与 Windows DAC 的差异，并了解将 Windows DAC 应用程序更新高 SQL Server 的 OLE DB 驱动程序之前要考虑的问题，请参阅[通过 MDAC 将应用程序更新到 SQL Server 的 OLE DB 驱动程序](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
+>  有关适用于 SQL Server 的 OLE DB 驱动程序与 Windows DAC 之间差异的列表，以及将 Windows DAC 应用程序更新到适用于 SQL Server 的 OLE DB 驱动程序之前要考虑问题的信息，请参阅[从 MDAC 将应用程序更新到适用于 SQL Server 的 OLE DB 驱动程序](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)。  
   
  适用于 SQL Server 的 OLE DB 驱动程序可与 Windows DAC 提供的 OLE DB 核心服务一起使用，但这不是必要条件；是否选择使用核心服务取决于单个应用程序的要求（例如是否必需连接池）。  
   

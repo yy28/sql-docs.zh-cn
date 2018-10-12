@@ -1,13 +1,11 @@
 ---
-title: getXAResource 方法 (SQLServerXAConnection) |Microsoft 文档
+title: getXAResource 方法 (SQLServerXAConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerXAConnection.getXAResource
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc93f1b4ee29d25893c64c7334c8ce6458354624
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d48ba821cee687eca112c405e5f0363244bc7842
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700135"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource 方法 (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)对象，将使用事务管理器来管理连接字符串[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)对象的参与分布式事务。  
+  检索 [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 对象，事务管理器将使用它来管理此 [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) 对象如何参与分布式事务。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,13 +36,13 @@ public javax.transaction.xa.XAResource getXAResource()
 ```  
   
 ## <a name="return-value"></a>返回值  
- XAResource 对象。  
+ 一个 XAResource 的对象。  
   
 ## <a name="exceptions"></a>异常  
  java.sql.SQLException  
   
-## <a name="remarks"></a>注释  
- 由 javax.sql.XAConnection 接口中的 getXAResource 方法指定此 getXAResource 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getXAResource 方法由 javax.sql.XAConnection 接口中的 getXAResource 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerXAConnection 方法](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

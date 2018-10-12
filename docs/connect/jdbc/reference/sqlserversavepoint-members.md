@@ -1,36 +1,33 @@
 ---
-title: SQLServerSavepoint 成员 |Microsoft 文档
+title: SQLServerSavepoint 成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d347f887ff171553f519a08753470c59c12ebde7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632755"
 ---
 # <a name="sqlserversavepoint-members"></a>SQLServerSavepoint 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出了通过公开的成员[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类。  
+  下表列出了由 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类公开的成员。  
   
 ## <a name="constructors"></a>构造函数  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[SQLServerSavepoint （SQLServerConnection，java.lang.StringName）](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|初始化的新实例[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)类基于给定的连接和名称。|  
+|[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|基于给定的连接和名称初始化 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 类的新实例。|  
   
 ## <a name="fields"></a>字段  
  无。  
@@ -40,7 +37,7 @@ ms.locfileid: "32848792"
   
 ## <a name="methods"></a>方法  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|获取保存点标签的名称。|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|获取保存点的 ID。|  
@@ -51,7 +48,7 @@ ms.locfileid: "32848792"
   
 |类继承自：|方法|  
 |---------------------------|-------------|  
-|java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
+|java.lang.Object|clone、equals、finalize、getClass、hashCode、notify、notifyAll、toString、wait|  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerSavepoint 类](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  

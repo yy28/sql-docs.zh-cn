@@ -1,13 +1,11 @@
 ---
-title: getResponseBuffering 方法 (SQLServerDataSource) |Microsoft 文档
+title: getResponseBuffering 方法 (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getResponseBuffering()
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de608f0932c26b4ae0609d5920cb255e247164d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7f63ae057278b996b02b42668c3ad97bcf7b3f50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839062"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645465"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering 方法 (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回此缓冲模式响应[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)对象。  
+  返回此 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 对象的响应缓冲模式。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,17 +36,17 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>返回值  
- A**字符串**包含小写**完整**或**自适应**。  
+ 一个**字符串**，其中包含小写**完整**或**自适应**。  
   
-## <a name="remarks"></a>注释  
- **完整**值指定在运行时从服务器读取整个结果。  
+## <a name="remarks"></a>Remarks  
+ 指定在运行时从服务器读取全部结果的 full 值。  
   
- **自适应**值指定最小可能的数据在必要时进行缓冲。 **自适应**值是默认设置缓冲模式。  
+ adaptive 值指定在必要时缓冲尽可能少的数据。 adaptive 值为默认缓冲模式。  
   
  有关使用响应缓冲模式的详细信息，请参阅[使用自适应缓冲](../../../connect/jdbc/using-adaptive-buffering.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [setResponseBuffering 方法&#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
+ [setResponseBuffering 方法 &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
  [SQLServerDataSource 成员](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 类](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

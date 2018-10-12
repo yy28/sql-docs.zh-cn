@@ -1,30 +1,27 @@
 ---
-title: unwrap 方法 (SQLServerCallableStatement) |Microsoft 文档
+title: unwrap 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666785"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  返回一个实现指定的接口，以允许访问的对象[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]的特定方法。  
+  返回一个实现指定接口的对象，从而允许访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的方法。  
   
 ## <a name="syntax"></a>语法  
   
@@ -36,7 +33,7 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Parameters  
  *iface*  
   
- 类型的类**T**定义的接口。  
+ 定义接口的类型为 T 的类。  
   
 ## <a name="return-value"></a>返回值  
  实现指定接口的对象。  
@@ -44,16 +41,16 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- [Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)由 java.sql.Wrapper 接口，在引入 JDBC 4.0 规范中定义方法。  
+## <a name="remarks"></a>Remarks  
+ [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)方法由在 JDBC 4.0 规范中引入的 java.sql.Wrapper 接口定义。  
   
- 应用程序可能需要访问特定于 JDBC API 扩展[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 Unwrap 方法支持解包到此对象扩展的公共类，如果类公开供应商扩展。  
+ 应用程序可能需要访问特定于 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的 JDBC API 扩展。 如果类公开供应商扩展，则 unwrap 方法支持对此对象扩展的公共类取消包装。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)实现[ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，从扩展[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)。 当调用此方法时，该对象解包到以下类： [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)， [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，和[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 实现自 [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 扩展而来的 [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)。 当此方法获调用时，对象会取消对下列类的包装：[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
   
  有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
- 下面的代码示例演示如何使用 isWrapperFor 和 unwrap 方法来检查驱动程序扩展和调用特定于供应商的方法，如[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)和[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)。  
+ 下面的代码示例展示了如何通过使用 isWrapperFor 和 unwrap 方法，检查驱动程序扩展并调用供应商专用方法（如 [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 和 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)）。  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  
@@ -110,7 +107,7 @@ public static void executeStoredProcedure(Connection con) {
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [isWrapperFor 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
+ [isWrapperFor 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -1,13 +1,11 @@
 ---
-title: executeUpdate 方法 （java.lang.String，int） |Microsoft 文档
+title: executeUpdate 方法 （java.lang.String，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeUpdate (java.lang.String, int)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c173fa5ed1c2d431038cb6ffd8b917d1d521e27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8d7baa2edfdc1d8583dbea5bf16ea05db2e3afad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831282"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611345"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +39,9 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>Parameters  
  *sql*  
   
- A**字符串**包含 SQL 语句。  
+ 一个**字符串**，其中包含 SQL 语句。  
   
- *flag*  
+ flag  
   
  指示是否应使自动生成的键可用的 int 值。 它必须是下列常量之一：  
   
@@ -58,8 +55,8 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Statement 接口中的 executeUpdate 方法指定此 executeUpdate 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 executeUpdate 方法是由 java.sql.Statement 接口中的 executeUpdate 方法指定的。  
   
  如果执行存储过程将产生大于 1 的更新计数，或生成多个结果集，则请使用 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 方法执行存储过程。  
   

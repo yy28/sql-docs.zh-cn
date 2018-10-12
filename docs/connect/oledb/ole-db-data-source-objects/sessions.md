@@ -1,15 +1,12 @@
 ---
 title: 会话 |Microsoft Docs
-description: 适用于 SQL Server 的 OLE DB 驱动程序中的命令
+description: 适用于 SQL Server 的 OLE DB 驱动程序中的会话
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
@@ -17,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f8b67e4fdc46cd387e6c19d6389a8278a00b6ae4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0753e0d4347a86db3401806c2b46cba7224342eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030042"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731415"
 ---
 # <a name="sessions"></a>会话
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -186,12 +183,12 @@ EXIT:
 }  
 ```  
   
- 对于持续创建和释放会话对象的应用程序，连接 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口会话对象和  实例可生成很大的开销。 可以通过有效地管理用于 SQL Server 会话对象的 OLE DB 驱动程序降到最低开销。 通过至少维护一个会话对象接口的引用，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 访问接口应用程序可以使该对象的  连接处于活动状态。  
+ 对于持续创建和释放会话对象的应用程序，连接针对 SQL Server 会话对象的 OLE DB 驱动程序和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例可能会产生很大的开销。 可以通过有效地管理用于 SQL Server 会话对象的 OLE DB 驱动程序降到最低开销。 通过维护至少一个会话对象接口的引用，适用于 SQL Server 应用程序的 OLE DB 驱动程序可以使该对象的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接处于活动状态。  
   
- 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此池维护代码向需要会话的应用程序方法传递有效的 IDBCreateCommand** 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
+ 例如，维护命令创建对象引用池将保持该池中这些会话对象的活动连接。 由于需要会话对象，因此，池维护代码将向需要会话的应用程序方法传递有效的 IDBCreateCommand 接口指针。 当应用程序方法不再需要该会话时，该方法将接口指针返回到池维护代码，而不是释放应用程序对命令创建对象的引用。  
   
 > [!NOTE]  
->  在前面的示例中，使用 IDBCreateCommand **接口的原因在于 ICommand** 接口实现 GetDBSession** 方法，该方法是命令或行集作用域中允许对象确定其创建所在的会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
+>  在前面的示例中，使用 IDBCreateCommand 接口的原因在于 ICommand 接口实现 GetDBSession 方法，该方法是命令或行集作用域中允许对象确定创建其会话的唯一方法。 因此，只有命令对象才允许应用程序检索可创建其他会话的数据源对象指针。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据源对象&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

@@ -1,35 +1,32 @@
 ---
-title: 数据源向导屏幕 4 (ODBC Driver for SQL Server) |Microsoft 文档
+title: 数据源向导屏幕 4 （SQL Server ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f53180976b3a4778f687ef8a83d9438ea858c05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724365"
 ---
 # <a name="data-source-wizard-screen-4"></a>数据源向导屏幕 4
 
-指定要用于 SQL Server 消息的语言，转换过程中，字符集和 SQL Server 的 ODBC 驱动程序是否应使用区域设置。 还可以控制长时间运行查询的日志记录和驱动程序统计信息设置。
+指定用于 SQL Server 消息的语言、字符集转换，以及适用于 SQL Server 的 ODBC 驱动程序是否应使用区域设置。 还可以控制长时间运行查询的日志记录和驱动程序统计信息设置。
 
 ## <a name="options"></a>选项
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>将 SQL Server 系统消息的语言更改为
 
-每个 SQL Server 实例可以具有多个集的系统消息，使用不同的语言 （例如，英语、 西班牙语、 法语和等等） 的每个组。 如果对具有多组系统消息的服务器定义一个数据源，您可以指定要为系统消息使用哪种语言。 在此列表中，单击该语言。 如果只在 SQL Server 上安装了一种语言，则此选项将不可用。
+SQL Server 的每个实例都有多组系统消息，每组消息使用不同的语言（例如，英语、西班牙语、法语等等）。 如果对具有多组系统消息的服务器定义一个数据源，您可以指定要为系统消息使用哪种语言。 在此列表中，单击该语言。 如果 SQL Server 中仅安装了一种语言，则此选项不可用。
 
 ### <a name="use-strong-encryption-for-data"></a>对数据使用强加密
 
@@ -37,13 +34,13 @@ ms.locfileid: "32855884"
 
 ### <a name="trust-server-certificate"></a>信任服务器证书
 
-此选项是适用时，才**对数据进行强加密**已启用。 当选中时，服务器的证书将不验证服务器的正确的主机名，以及由受信任的证书颁发机构颁发。 
+此选项才适用时，才**对数据使用强加密**已启用。 选中时，不将验证服务器的证书具有正确的主机名的服务器和受信任的证书颁发机构颁发。 
 
 ### <a name="perform-translation-for-character-data"></a>执行字符数据翻译
 
-选中此复选框后，ODBC driver for SQL Server 将通过使用 Unicode 之间的客户端计算机和 SQL Server 发送的 ANSI 字符串转换。 ODBC 驱动程序有时的 SQL Server 代码页和 Unicode 之间转换，客户端计算机上。 这要求 SQL Server 使用的代码页是一个客户端计算机上可用的代码页。
+选中此复选框后，适用于 SQL Server 的 ODBC 驱动程序使用 Unicode 对客户端计算机和 SQL Server 之间发送的 ANSI 字符串进行转换。 ODBC 驱动程序有时会在 SQL Server 代码页和客户端计算机中的 Unicode 之间进行转换。 这要求 SQL Server 使用的代码页为客户端计算机中可用的代码页之一。
 
-清除此复选框后，当在客户端应用程序和服务器之间发送 ANSI 字符串时，将不会对 ANSI 字符串中的扩展字符进行翻译。 如果客户端计算机使用 ANSI 代码页 (ACP) 不同于 SQL Server 代码页，采用 ANSI 字符字符串的扩展的字符可能被错误解释。 如果客户端计算机使用的 SQL Server 正在使用其 ACP 相同的代码页，正确解释扩展的字符。
+清除此复选框后，当在客户端应用程序和服务器之间发送 ANSI 字符串时，将不会对 ANSI 字符串中的扩展字符进行翻译。 如果客户端计算机使用不同于 SQL Server 代码页的 ANSI 代码页 (ACP)，则可能会错误地解释 ANSI 字符串中的扩展字符。 如果客户端计算机对 SQL Server 使用的 ACP 使用同一代码页，则会正确地解释扩展字符。
 
 ### <a name="use-regional-settings-when-outputting-currency-numbers-dates-and-times"></a>在输出货币、数字、日期和时间时使用区域设置
 
@@ -51,7 +48,7 @@ ms.locfileid: "32855884"
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>将长时间运行的查询保存到日志文件
 
-指定驱动程序记录任何查询，所用时间长于**长查询时间**值。 长时间运行的查询将记录到指定文件中。 若要指定日志文件，请在框中，键入完整路径和文件名，或单击**浏览**通过浏览现有文件目录中选择一个日志文件。
+指定驱动程序记录任何时间超出“长查询时间”值的查询。 长时间运行的查询将记录到指定文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”，在现有文件目录中导航选择一个日志文件。
 
 ### <a name="long-query-time-milliseconds"></a>长查询时间(毫秒)
 
@@ -59,7 +56,7 @@ ms.locfileid: "32855884"
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>将 ODBC 驱动程序统计信息记录到日志文件
 
-指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定日志文件，请在框中键入完整的路径和文件名称，或单击**浏览**通过浏览现有文件目录中选择一个日志文件。
+指定记录的统计信息。 统计信息将记录到指定的文件中。 若要指定一个日志文件，可以在此框中键入完整的路径和文件名，也可以单击“浏览”，在现有文件目录中导航选择一个日志文件。
 
 统计信息日志是一个制表符分隔文件，可以在 Microsoft Excel 或支持制表符分隔文件的任何其他应用程序中进行分析。
 
@@ -67,17 +64,17 @@ ms.locfileid: "32855884"
 
 指定重试连接尝试失败次数。
 
-### <a name="connect-retry-interval-seconds"></a>连接重试间隔 （秒）
+### <a name="connect-retry-interval-seconds"></a>连接重试时间间隔(秒)
 
-指定每次连接重试尝试之间的秒的数。 有关此操作的详细信息和**连接重试计数**选项，请参见[Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+指定每次连接重试尝试之间相隔的秒数。 有关此操作的详细信息和**连接重试计数**选项，请参阅[Windows ODBC 驱动程序中的连接弹性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
 
 ### <a name="back"></a>返回
 
-单击此按钮以返回到向导的上一页。
+单击此按钮可返回到向导的上一页。
 
 ### <a name="finish"></a>完成
 
-如果在此屏幕上指定的信息已完成，你可以单击**完成**。 使用此向导的其他屏幕上指定的所有属性创建 DSN 和您有机会测试新创建的 DSN。
+如果在此屏幕上指定的信息已完成，可以单击**完成**。 使用此向导中，其他屏幕上指定的所有属性创建 DSN，并提供机会来测试新创建的 DSN。
 
 ## <a name="next-steps"></a>后续步骤
 

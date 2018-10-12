@@ -1,13 +1,11 @@
 ---
-title: setCatalog 方法 (SQLServerConnection) |Microsoft 文档
+title: setCatalog 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setCatalog
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91597c7a995fb0ecf810d3b0f58760c12784564e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a123f6d8a51bdb20f5a90bec39eb4b44b19f110e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622765"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  设置要选择这些子空间的给定的目录名称[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)要在其中工作的对象的数据库。  
+  将给定目录名称设置为选择在其中使用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的数据库的子空间。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,15 +38,15 @@ public void setCatalog(java.lang.String catalog)
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- A**字符串**，其中包含目录名称。  
+ 一个包含目录名称的字符串。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Connection 接口中的 setCatalog 方法指定此 setCatalog 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setCatalog 方法由 java.sql.Connection 接口中的 setCatalog 方法指定。  
   
- *目录*由自变量进行转义[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自动。 使用此方法设置连接对象的目录属性。 无法通过任何其他方法隐式设置该属性。  
+ *目录*转义参数[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]自动。 使用此方法可为 Connection 对象设置目录属性。 无法通过任何其他方法隐式设置该属性。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

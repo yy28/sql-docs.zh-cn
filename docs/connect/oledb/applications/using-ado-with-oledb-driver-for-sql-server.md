@@ -1,15 +1,12 @@
 ---
-title: 结合使用 ADO 和 OLE DB Driver for SQL Server |Microsoft Docs
+title: 结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序 | Microsoft Docs
 description: 结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|applications
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, ADO
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 08872859a41b77dfe0ed972a4e43b689adfc83f2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711195"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>结合使用 ADO 和适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +35,7 @@ ms.locfileid: "43026053"
 > [!NOTE]  
 >  现有 ADO 应用程序可以使用 SQLOLEDB 访问接口来访问和更新 XML、UDT 以及大型值文本和二进制字段值。 新的更大型的 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型分别作为 ADO 类型 adLongVarChar、adLongVarWChar 和 adLongVarBinary 返回。 XML 列作为 adLongVarChar 返回，而 UDT 列作为 adVarBinary 返回。 但是，如果使用 OLE DB 驱动程序的 SQL Server (MSOLEDBSQL) 而不是 SQLOLEDB，您需要确保设置**DataTypeCompatibility**关键字为"80"，以便新的数据类型能正确映射到 ADO 数据类型。  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>通过 ADO 启用 OLE DB Driver for SQL Server   
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>通过 ADO 启用适用于 SQL Server 的 OLE DB 驱动程序  
  ADO 应用程序需要在其连接字符串中实现下列关键字，才能使用适用于 SQL Server 的 OLE DB 驱动程序：  
 
 -   `Provider=MSOLEDBSQL`  

@@ -5,21 +5,18 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6e8108127c3a25cb3a040cefbf782d7d0f2a2681
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1e00183ef3558cbad211fabeb063a81f25d5f29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024400"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702223"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>客户端连接中的服务主体名称 (SPN) (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +24,7 @@ ms.locfileid: "43024400"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 有关 SPN 和 Kerberos 身份验证的详细信息，请参阅[客户端连接中的服务主体名称 (SPN) 支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
+  本主题说明支持客户端应用程序中的服务主体名称 (SPN) 的 OLE DB 属性和成员函数。 有关客户端应用程序中 SPN 的详细信息，请参阅[客户端连接中的服务主体名称 &#40;SPN&#41; 支持](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。 有关示例，请参阅[集成的 Kerberos 身份验证&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
   
 ## <a name="provider-initialization-string-keywords"></a>访问接口初始化字符串关键字  
  以下访问接口初始化字符串关键字支持 OLE DB 应用程序中的 SPN。 在下表中，关键字列中的值用于 IDBInitialize::Initialize 的访问接口字符串。 使用 ADO 或 IDataInitialize::GetDataSource 建立连接时，在初始化字符串中使用说明列中的值。  
@@ -40,7 +37,7 @@ ms.locfileid: "43024400"
 ## <a name="data-source-initialization-properties"></a>数据源初始化属性  
  中的以下属性**DBPROPSET_SQLSERVERDBINIT**属性集允许应用程序指定 Spn。  
   
-|“属性”|类型|用法|  
+|名称|类型|用法|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR，读/写|指定服务器的 SPN。 默认值为空字符串，它将导致 OLE DB 驱动程序用于使用默认的 SQL Server，提供程序生成的 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，读/写|指定故障转移伙伴的 SPN。 默认值为空字符串，它将导致 OLE DB 驱动程序用于使用默认的 SQL Server，提供程序生成的 SPN。|  
@@ -48,7 +45,7 @@ ms.locfileid: "43024400"
 ## <a name="data-source-properties"></a>数据源属性  
  中的以下属性**DBPROPSET_SQLSERVERDATASOURCEINFO**属性集使应用程序发现身份验证方法。  
   
-|“属性”|类型|用法|  
+|名称|类型|用法|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，只读|返回用于连接的身份验证方法。 返回到应用程序的值是 Windows 适用于 SQL Server 到 OLE DB 驱动程序将返回的值。 以下列出的是可能的值： <br />“NTLM”，使用 NTLM 身份验证打开连接时将返回该值。<br />“Kerberos”，使用 Kerberos 身份验证打开连接时将返回该值。<br /><br /> 如果已经打开连接但无法确定身份验证方法，将返回 VT_EMPTY。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果试图在初始化数据源之前读取该属性，IDBProperties::GetProperies 将视情况返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，并且将在 DBPROPSET_PROPERTIESINERROR 中为此属性设置 DBPROPSTATUS_NOTSUPPORTED。 此行为符合 OLE DB 核心规范。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_ BOOL，只读|如果建立连接的服务器之间已通过相互身份验证，则返回 VARIANT_TRUE；否则返回 VARIANT_FALSE。<br /><br /> 只能在已经初始化数据源时读取此属性。 如果试图在初始化数据源之前读取该属性，IDBProperties::GetProperies 将视情况返回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，并且将在 DBPROPSET_PROPERTIESINERROR 中为此属性设置 DBPROPSTATUS_NOTSUPPORTED。 此行为符合 OLE DB 核心规范<br /><br /> 如果针对未使用 Windows 身份验证的连接查询此属性，将返回 VARIANT_FALSE。|  

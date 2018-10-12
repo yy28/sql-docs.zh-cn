@@ -1,13 +1,11 @@
 ---
-title: getDouble 方法 (java.lang.String) |Microsoft 文档
+title: getDouble 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getDouble (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 483a735699670160bee6faab3f762c4b3b052c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 36575b1d5b8fb7696c151b7939f667f85500f45a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694747"
 ---
 # <a name="getdouble-method-javalangstring"></a>getDouble 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的参数名称，检索指定参数的值作为 Java 编程语言中的 double。  
+  根据给定的参数名称，检索指定参数作为 Java 编程语言中的 double 的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,13 +41,13 @@ public double getDouble(java.lang.String sCol)
  包含参数名称的字符串。  
   
 ## <a name="return-value"></a>返回值  
- A **double**值。  
+ 一个**double**值。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getDouble 方法指定此 getDouble 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getDouble 方法是由 java.sql.CallableStatement 接口中的 getDouble 方法指定的。  
   
  此方法使用 Java double 精度返回所有基于数字的数据类型。  
   

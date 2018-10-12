@@ -1,13 +1,11 @@
 ---
-title: executeBatch 方法 (SQLServerStatement) |Microsoft 文档
+title: executeBatch 方法 (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.executeBatch
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb25a65508e2249a71e67e4db3f3e762476f33df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cbe50ae21da22b7b05d8d52d6de0e6305a8917ff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643967"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch 方法 (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,15 +36,15 @@ public int[] executeBatch()
 ```  
   
 ## <a name="return-value"></a>返回值  
- 数组**int**s 包含更新的计数。  
+ 一个包含更新计数的 int 数组。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Statement 接口中的 executeBatch 方法指定此 executeBatch 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 executeBatch 方法是由 java.sql.Statement 接口中的 executeBatch 方法指定的。  
   
  向数据库提交命令后，此方法将清除批中的所有命令。  
   

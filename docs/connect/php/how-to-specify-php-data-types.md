@@ -1,28 +1,25 @@
 ---
-title: 如何： 指定 PHP 数据类型 |Microsoft 文档
+title: 如何： 指定 PHP 数据类型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307596"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691815"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,18 +28,18 @@ ms.locfileid: "35307596"
   
 以下步骤概括了如何在使用 SQLSRV 驱动程序从服务器中检索数据时指定 PHP 数据类型：  
   
-1.  设置并执行 Transact SQL 查询使用[sqlsrv_query](../../connect/php/sqlsrv-query.md)或的组合[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
+1.  使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 组合，设置并执行 Transact-SQL 查询。  
   
 2.  通过 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)使数据行可供读取。  
   
 3.  结合使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 与所需的 PHP 数据类型（指定为可选的第三个参数）从返回行中检索字段数据。 如果未指定可选的第三个参数，将根据默认 PHP 类型返回数据。 有关默认 PHP 返回类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-    有关用于指定 PHP 数据类型的常量的信息，请参阅的 Phptype 部分[常量&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+    有关用于指定 PHP 数据类型的常量的信息，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 PHPTYPE 部分。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中， *ReviewDate*字段检索字符串形式和*注释*流的形式检索字段。 通过使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，ReviewDate 字段以字符串形式进行检索，Comments 字段以流形式进行检索。 通过使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
   
-该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -101,14 +98,14 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在示例中，检索第二个字段 (*ReviewDate*) 因为字符串保留 SQL Server DATETIME 数据类型的精度为毫秒。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
+在该示例中，以字符串形式检索第二个字段 (ReviewDate) 会保留精确到毫秒的 SQL Server DATETIME 数据类型。 默认情况下，将 SQL Server DATETIME 数据类型作为 PHP DateTime 对象进行检索，但无法精确到毫秒。  
   
-检索第四个字段 (*注释*) 流出于演示目的的形式。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
+出于演示目的，以流形式检索第四个字段 (Comments)。 默认情况下，将 SQL Server 数据类型 nvarchar(3850) 作为字符串进行检索，大多数情况下都可接受此方式。  
   
 > [!NOTE]  
 > [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) 函数提供了在执行查询之前获取字段信息（包括类型信息）的方法。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [检索数据](../../connect/php/retrieving-data.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)

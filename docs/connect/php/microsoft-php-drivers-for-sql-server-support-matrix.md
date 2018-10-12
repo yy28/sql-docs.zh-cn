@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728695"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP Drivers for SQL Server 支持矩阵
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268765"
   本页包含 SQL Server 的 Microsoft PHP 驱动程序的支持矩阵和支持生命周期策略。
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Microsoft PHP 驱动程序支持生命周期矩阵和策略
- Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 PHP 驱动程序版本 3.x、 4.x 和 5.x 有五年的主流支持从驱动程序发布日期。 主流支持在 [Microsoft 支持生命周期网站](https://support.microsoft.com/lifecycle)上定义。
+ Microsoft 支持生命周期 (MSL) 策略提供了与 Microsoft 产品的支持生命周期有关的可预测透明信息。 PHP Driver 3.x 版、4.x 版和 5.x 版提供五年主要支持（自驱动程序发布之日起开始计算）。 主流支持在 [Microsoft 支持生命周期网站](https://support.microsoft.com/lifecycle)上定义。
 
  Microsoft PHP 驱动程序不提供扩展和自定义支持选项。
 

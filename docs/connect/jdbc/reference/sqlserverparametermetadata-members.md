@@ -1,30 +1,27 @@
 ---
-title: SQLServerParameterMetaData 成员 |Microsoft 文档
+title: SQLServerParameterMetaData 成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ce99e161c3b825c88c4eee33fa6778b5444db07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: abd82d1a5da6e64962ee10edac0e3ad4ed2db0eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621805"
 ---
 # <a name="sqlserverparametermetadata-members"></a>SQLServerParameterMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出了通过公开的成员[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)类。  
+  下表列出了通过 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 类公开的成员。  
   
 ## <a name="constructors"></a>构造函数  
  无。  
@@ -34,19 +31,19 @@ ms.locfileid: "32849362"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |java.sql.ParameterMetaData|parameterModeIn、parameterModeInOut、parameterModeOut、parameterModeUnknown、parameterNoNulls、parameterNullable、parameterNullableUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
-|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|检索其实例应传递给的 Java 类的完全限定名称[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)方法[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)类。|  
-|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|检索中的参数数目[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)此对象[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)对象包含的信息。|  
+|[getParameterClassName](../../../connect/jdbc/reference/getparameterclassname-method-sqlserverparametermetadata.md)|检索指定 Java 类的完全限定名称，而该 Java 类的实例应传递给 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 类中的 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 方法。|  
+|[getParameterCount](../../../connect/jdbc/reference/getparametercount-method-sqlserverparametermetadata.md)|检索指定 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 对象中的参数数目，此 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 对象包含该指定对象的信息。|  
 |[getParameterMode](../../../connect/jdbc/reference/getparametermode-method-sqlserverparametermetadata.md)|检索指定参数的模式。|  
 |[getParameterType](../../../connect/jdbc/reference/getparametertype-method-sqlserverparametermetadata.md)|检索指定参数的 SQL 类型。|  
-|[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|检索指定参数的特定于数据库的类型名称。|  
+|[getParameterTypeName](../../../connect/jdbc/reference/getparametertypename-method-sqlserverparametermetadata.md)|检索指定参数的数据库特定类型名称。|  
 |[getPrecision](../../../connect/jdbc/reference/getprecision-method-sqlserverparametermetadata.md)|检索指定参数的小数位数。|  
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverparametermetadata.md)|检索指定参数的小数点右侧的位数。|  
 |[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverparametermetadata.md)|检索指定参数中是否允许 Null 值。|  
@@ -56,7 +53,7 @@ ms.locfileid: "32849362"
   
 |类继承自：|方法|  
 |---------------------------|-------------|  
-|java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
+|java.lang.Object|clone、equals、finalize、getClass、hashCode、notify、notifyAll、toString、wait|  
 |java.sql.Wrapper|isWrapperFor、unwrap|  
   
 ## <a name="see-also"></a>另请参阅  

@@ -1,28 +1,25 @@
 ---
-title: SQLServerException 构造函数 （java.lang.String，java.lang.Throwable） |Microsoft 文档
+title: SQLServerException 构造函数 （java.lang.String，java.lang.Throwable） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 89f0f9540def7d618bffebac995887a9ad7bd987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cf04e89adec8cc9ff02dbee83cc21083d57f4f79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634805"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 构造函数 （java.lang.String，java.lang.Throwable）
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +39,9 @@ public SQLServerException(java.lang.String errText,
   
  包含错误文本的字符串。
  
- *可能的原因*  
+ *cause*  
   
- 一个包含异常原因的可引发对象。
+ 一个包含异常的原因可引发对象。
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerException 构造函数](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

@@ -1,45 +1,42 @@
 ---
-title: 步骤 1： 配置用于 ADO.NET 开发的开发环境 |Microsoft 文档
+title: 步骤 1：配置用于 ADO.NET 开发的开发环境 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9a7163a7cd0062313d1e0dbdf23cd96c7b61d5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f4c78d9001a802b60963f9c02ad03b84b431a025
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616995"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>步骤 1： 配置用于 ADO.NET 开发的开发环境
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>步骤 1：配置用于 ADO.NET 开发的开发环境
 
-- 接下来文章：&nbsp;&nbsp;&nbsp;[步骤 2： 创建 ADO.NET 开发 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 下一篇文章：&nbsp;&nbsp;&nbsp;[步骤 2：创建用于 ADO.NET 开发的 SQL 数据库](step-2-create-a-sql-database-for-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>下载.NET SQL 驱动程序
 
-我们当前的代码示例使用适用于 Windows 的.NET Framework 中，ADO.NET。 .NET Core 是适用于 Linux 和 MacOS （除了 Windows)。
+我们当前的代码示例使用 ADO.NET 的.NET Framework 中，为 Windows。 .NET Core 是适用于 Linux 和 MacOS （除了 Windows)。
 
-### <a name="adonet-for-windows"></a>ADO.NET 中，适用于 Windows
+### <a name="adonet-for-windows"></a>用于 Windows 的 ADO.NET
 
-1. ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载并安装.NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![下载向下箭头线圈出](../../ssdt/media/download.png)[下载并安装.NET Framework，包括 ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. 安装 Visual Studio Community、 或类似集成开发环境 (IDE)，用于编写和编译 C# 源代码。 Microsoft 现在提供 Visual Studio Community*免费*。  
-    - [下载 Visual Studio Community](http://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Visual Studio 的免费更多选项](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+2. 安装 Visual Studio Community，或类似集成开发环境 (IDE) 进行编写和编译 C# 源代码。 Microsoft 现在提供 Visual Studio Community*免费*。  
+    - [下载 Visual Studio 社区](http://www.visualstudio.com/products/visual-studio-community-vs)  
+    - [免费 Visual Studio 的更多选项](http://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core，有关 Linux Ubuntu 和 MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>用于 Linux Ubuntu 和 MacOS 的.NET core
 
-在可用的链接来下载.NET Core，各种不同的操作系统，如下：
+链接以下载.NET Core，各种操作系统，位于：
 
-- ![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载并安装.NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![下载向下箭头线圈出](../../ssdt/media/download.png)[下载并安装.NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

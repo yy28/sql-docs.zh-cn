@@ -1,13 +1,11 @@
 ---
-title: setCharacterStream 方法 （java.lang.String、 java.io.Reader，int） |Microsoft 文档
+title: setCharacterStream 方法 (java.lang.String, java.io.Reader, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setCharacterStream
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fed8100ff45c9440fede1b73fec4a41a045347ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1705a738f327ec07641d6d6dbf960ab37c30b9f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842572"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639665"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>setCharacterStream 方法 (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的参数设置为 specifiedReader 对象，它是个字符长的 specifiednumber。  
+  将指定参数设置为具有指定字符数的指定的 Reader 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,27 +38,27 @@ public final void setCharacterStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ parameterName  
   
- A**字符串**，其中包含参数的名称。  
+ 一个字符串，该字符串包含参数的名称。  
   
- *值*  
+ *value*  
   
- 一个包含 Unicode 数据的读取器对象。  
+ 包含 Unicode 数据的 Reader 对象。  
   
  *length*  
   
- **Int** ，该值指示以字符数的长度。  
+ 以字符数指示长度的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 setCharacterStream 方法指定此 setCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setCharacterStream 方法由 java.sql.CallableStatement 接口中的 setCharacterStream 方法指定。  
   
- 如果不同于在指定流的长度时*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setCharacterStream 方法 （java.lang.String，java.io.Reader）](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，我们建议使用 JDBC 4.0 方法 [setCharacterStream 方法 (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

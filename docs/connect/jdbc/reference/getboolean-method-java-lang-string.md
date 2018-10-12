@@ -1,13 +1,11 @@
 ---
-title: getBoolean 方法 (java.lang.String) |Microsoft 文档
+title: getBoolean 方法 (java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getBoolean (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee2dd953e2677bcc609f9ae4dc0557d7cef4a9ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9f9d2d36e523a5619b574e96c86cd3700ddc3c4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739155"
 ---
 # <a name="getboolean-method-javalangstring"></a>getBoolean 方法 (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索与指定参数的值**布尔**给定参数名称的值。  
+  根据给定的参数名称检索指定参数作为 boolean 值的值。  
   
 ## <a name="syntax"></a>语法  
   
@@ -49,8 +46,8 @@ public boolean getBoolean(java.lang.String sCol)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.CallableStatement 接口中的 getBoolean 方法指定此 getBoolean 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getBoolean 方法是由 java.sql.CallableStatement 接口中的 getBoolean 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [getBoolean 方法 (SQLServerCallableStatement)](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)   

@@ -1,26 +1,23 @@
 ---
-title: 步骤 2： 创建 Node.js 开发 SQL 数据库 |Microsoft 文档
+title: 步骤 2：创建用于 Node.js 开发的 SQL 数据库 | Microsoft 文档
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14be607f-f1dc-4201-a664-5fa4682cfaae
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90b77625d52a76e1cffebaec1535a85cd265b510
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 2ac45caaa10fde65e5cad0699dae0618a3d8b528
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667885"
 ---
-# <a name="step-2-create-a-sql-database-for-nodejs-development"></a>步骤 2： 创建 Node.js 开发 SQL 数据库
+# <a name="step-2-create-a-sql-database-for-nodejs-development"></a>步骤 2：创建用于 Node.js 开发的 SQL 数据库
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

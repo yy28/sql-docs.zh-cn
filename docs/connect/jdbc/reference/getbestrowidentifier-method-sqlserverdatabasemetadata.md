@@ -1,13 +1,11 @@
 ---
-title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getBestRowIdentifier 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getBestRowIdentifier
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c36b69543f5253a4d62c1d4b149933febcf0b4b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832972"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730316"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,19 +42,19 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- A**字符串**，其中包含目录名称。  
+ 一个包含目录名称的字符串。  
   
  *schema*  
   
- A**字符串**包含架构的名称。  
+ 一个包含架构名称的字符串。  
   
  *table*  
   
- A**字符串**包含表的名称。  
+ 一个包含表名称的字符串。  
   
  *作用域*  
   
- **Int** ，该值指示感兴趣的作用域。 可以包括下列值：  
+ 指示相关范围的 int。 可以包括下列值：  
   
  bestRowTemporary (0)  
   
@@ -65,34 +62,34 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  bestRowSession (2)  
   
- *可以为 null*  
+ *nullable*  
   
- **true**以包括可以为 null 的列。 否则为 **false**。  
+ true 可包含可为 Null 的列。 否则为 **false**。  
   
 ## <a name="return-value"></a>返回值  
- A [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)对象。  
+ 一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getBestRowIdentifier 方法指定此 getBestRowIdentifier 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getBestRowIdentifier 方法由 java.sql.DatabaseMetaData 接口中的 getBestRowIdentifier 方法指定。  
   
- GetBestRowIdentifier 方法所返回的结果集将包含以下信息：  
+ 由 getBestRowIdentifier 方法返回的结果集将包含以下信息：  
   
-|名称|类型|Description|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
-|SCOPE|short|返回结果的范围。 它可以是以下值之一：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
-|COLUMN_NAME|字符串|列的名称。|  
+|SCOPE|short|返回结果的范围。 可以为下列值之一：<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
+|COLUMN_NAME|String|列的名称。|  
 |DATA_TYPE|short|来自 java.sql.Types 的 SQL 数据类型。|  
-|TYPE_NAME|字符串|数据类型的名称。|  
-|COLUMN_SIZE|int|列的精度。|  
-|BUFFER_LENGTH|int|缓冲区长度。|  
+|TYPE_NAME|String|数据类型的名称。|  
+|COLUMN_SIZE|ssNoversion|列的精度。|  
+|BUFFER_LENGTH|ssNoversion|缓冲区长度。|  
 |DECIMAL_DIGITS|short|列的小数位数。|  
-|PSEUDO_COLUMN|short|指示列是否为伪列。 它可以是以下值之一：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
+|PSEUDO_COLUMN|short|指示列是否为伪列。 可以为下列值之一：<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
 ## <a name="example"></a>示例  
- 下面的示例演示如何使用 getBestRowIdentifier 方法以返回有关 Person.Contact 表中的最佳行标识符信息[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]示例数据库。  
+ 下例演示了如何使用 getBestRowIdentifier 方法返回 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 示例数据库中的 Person.Contact 表的最佳行标识符的信息。  
   
 ```  
 public static void executeGetBestRowIdentifier(Connection con) {  

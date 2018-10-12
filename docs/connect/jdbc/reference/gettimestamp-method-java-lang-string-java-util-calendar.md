@@ -1,13 +1,11 @@
 ---
-title: getTimestamp 方法 (java.lang.String, java.util.Calendar)
+title: getTimestamp 方法 (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getTimestamp (java.lang.String,java.util.Calendar)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cff62d2115540d3e7644cdca65dd912fc7621234
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 27ee52e2dd8acb976d732baa76d32a0401ba445d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666085"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp 方法 (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  根据给定的参数名称，使用  对象检索指定参数的值作为 Java 编程语言中的 java.sql.Timestamp 对象。  
+  根据给定参数名称，使用 Calendar 对象检索指定参数作为 Java 编程语言中的 java.sql.Timestamp 对象的值。  
   
 ## <a name="syntax"></a>语法  
   

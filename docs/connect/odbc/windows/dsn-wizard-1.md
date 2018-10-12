@@ -1,29 +1,26 @@
 ---
-title: 数据源向导屏幕 1 (ODBC Driver for SQL Server) |Microsoft 文档
+title: 数据源向导屏幕 1 （适用于 SQL Server ODBC 驱动程序） |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d97cbdf8e73254b790ff0c8f965fa8b6d647951a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852152"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641966"
 ---
 # <a name="data-source-wizard-screen-1"></a>数据源向导屏幕 1
 
-指定的名称和说明的数据源，以及运行数据源将连接到的 SQL Server 的服务器的名称。 
+指定数据源的名称和说明，以及该数据源要连接的运行 SQL Server 的服务器名称。 
     
 ## <a name="options"></a>选项
 
@@ -31,23 +28,23 @@ ms.locfileid: "32852152"
 
 ODBC 应用程序请求与数据源连接时使用的数据源名称。 例如，“Personnel”。 该数据源名称显示在“ODBC 数据源管理器”对话框中。
 
-### <a name="description"></a>Description
+### <a name="description"></a>描述
 
 （可选）数据源的说明。 例如，“所有雇员的雇佣日期、发薪记录和当前审核”。
 
 ### <a name="select-or-enter-a-server-name"></a>选择或输入服务器名称
 
-你的网络上的 SQL Server 实例的名称。 您需要在下一个编辑框中指定一个服务器。
+在网络上的 SQL Server 实例的名称。 您需要在下一个编辑框中指定一个服务器。
 
-在大多数情况下，可以通过使用默认协议顺序以及在此框中提供的服务器名称连接的 ODBC 驱动程序。 如果你想要创建服务器的别名或配置客户端网络库，请使用 SQL Server 配置管理器。
+大多数情况下，ODBC 驱动程序可通过使用此框中提供的默认协议顺序和服务器名称进行连接。 如果要创建服务器别名或配置客户端网络库，请使用 SQL Server 配置管理器。
 
-你可以输入"(local)"在服务器中时要用作 SQL Server 在同一台计算机。 然后，用户可以连接到 SQL Server，即使当运行非联网版本的 SQL Server 的本地实例。 多个 SQL Server 实例可以在同一台计算机上运行。 若要指定 SQL Server 的命名的实例，服务器名称指定为_ServerName_\\_InstanceName_。
+当使用与 SQL Server 相同的计算机时，你可以在服务器框中输入“(local)”。 即使正在运行非联网版的 SQL Server，用户也可以连接到 SQL Server 的本地实例。 在同一台计算机上可以运行 SQL Server 的多个实例。 若要指定 SQL Server 的命名实例，则将服务器名称指定为 _ServerName_\\_InstanceName_。
 
-有关不同类型的网络的服务器名称的详细信息，请参阅 SQL Server 联机丛书中的 SQL Server 安装文档。
+有关不同网络类型的服务器名称的详细信息，请参阅“SQL Server 联机丛书”中的 SQL Server 安装文档。
 
 ### <a name="finish"></a>完成
 
-如果在此屏幕上指定的信息为所有所需连接到 SQL Server，你可以单击**完成**。 对于在向导的其他屏幕上指定的所有属性都使用默认值。
+如果此屏幕上指定的信息为连接到 SQL Server 所需的全部信息，则可以单击“完成”。 对于在向导的其他屏幕上指定的所有属性都使用默认值。
 
 ### <a name="next"></a>Next
 

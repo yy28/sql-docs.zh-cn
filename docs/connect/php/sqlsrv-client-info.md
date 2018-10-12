@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_client_info
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: 47
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 145249dc452cd7aeabb9b9667c337a4e17e39637
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309236"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710440"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,21 +44,21 @@ sqlsrv_client_info( resource $conn)
   
 **对于适用于 SQL Server 版本 3.2 和 3.1 的 PHP**：  
   
-|Key|Description|  
+|Key|描述|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]版本 3.2 或 3.1)|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x (有关[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]版本 3.2)<br /><br />3.1.xxxx.x (有关[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]版本 3.1)|  
+|DriverVer|ODBC Driver 11 for SQL Server DLL 版本：<br /><br />xx.yy.zzzz（[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 3.2 或 3.1）|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />3.2.xxxx.x（适用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 3.2）<br /><br />3.1.xxxx.x（适用于 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 3.1）|  
   
 **对于适用于 SQL Server 版本 3.0 和 2.0 的 PHP**：  
   
-|Key|Description|  
+|Key|描述|  
 |-------|---------------|  
-|DriverDllName|SQLNCLI10。DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
+|DriverDllName|SQLNCLI10.DLL（[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 2.0）|  
 |DriverODBCVer|ODBC 版本 (xx.yy)|  
-|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
-|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 2.0 版)|  
+|DriverVer|SQL Server Native Client DLL 版本：<br /><br />10.50.xxx（[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 2.0）|  
+|ExtensionVer|php_sqlsrv.dll 版本：<br /><br />2.0.xxxx.x（[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 版本 2.0）|  
   
 ## <a name="example"></a>示例  
 当从命令行运行以下示例时，该示例会将客户端信息写入控制台。 该示例假定已在本地计算机上安装了 SQL Server。 从命令行运行该示例时，所有输出都将写入控制台。  
@@ -96,7 +93,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [文档中相关的代码示例](../../connect/php/about-code-examples-in-the-documentation.md)  

@@ -1,13 +1,11 @@
 ---
-title: storesLowerCaseIdentifiers 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: storesLowerCaseIdentifiers 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.storesLowerCaseIdentifiers
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8889bf20b9a9a4dfca2b69d61bd1c4fff12934af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 10a0bc171ca6f31070464471baea496331e550e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846252"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771381"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public boolean storesLowerCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果标识符存储以小写形式。 否则为 **false**。  
+ 如果以小写形式存储标识符，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 storesLowerCaseIdentifiers 方法指定此 storesLowerCaseIdentifiers 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 storesLowerCaseIdentifiers 方法由 java.sql.DatabaseMetaData 接口中的 storesLowerCaseIdentifiers 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

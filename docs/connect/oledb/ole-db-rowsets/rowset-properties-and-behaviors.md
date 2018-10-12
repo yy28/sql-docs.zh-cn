@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rowsets [OLE DB], properties
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7c98299d1dc55a19d2199222ea3e639ae1e5d4bb
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037430"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754825"
 ---
 # <a name="rowset-properties-and-behaviors"></a>行集属性和行为
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43037430"
 |DBPROP_ACCESSORDER|R/W：读/写<br /><br /> 默认值：DBPROPVAL_AO_RANDOM<br /><br /> 说明：访问顺序。 访问行集中的列时必须遵照的顺序。<br /><br /> DBPROPVAL_AO_RANDOM：可以按任意顺序访问列。<br /><br /> DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS：只能按照由列序号确定的顺序依次访问绑定为存储对象的列。<br /><br /> DBPROPVAL_AO_SEQUENTIAL：所有列都必须按照由列序号确定的顺序依次访问。|  
 |DBPROP_APPENDONLY|适用于 SQL Server 中，OLE DB 驱动程序不被实现此行集属性。 尝试读取或写入属性值将生成错误。|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R/W：只读<br /><br /> 默认值：VARIANT_TRUE<br /><br /> 说明： OLE DB Driver for SQL Server 存储对象阻止使用其他行集方法。|  
-|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：适用于 SQL Server 的 OLE DB 驱动程序支持在 DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS 是 VARIANT_TRUE 时使用书签标识行集的行。<br /><br /> 将其中任一属性设置为 VARIANT_TRUE 都不会启用按书签为行集定位。 将 DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 设置为 VARIANT_TRUE 可创建支持按书签为行集定位的行集。<br /><br /> 适用于 SQL Server 的 OLE DB 驱动程序使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标以支持包含书签的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 如果设置的这些属性与适用于 SQL Server 的 OLE DB 驱动程序游标定义的其他属性冲突时，将导致错误。 例如，如果将 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE 且 DBPROP_OTHERINSERT 也为 VARIANT_TRUE，那么，当使用者尝试打开行集时，将生成错误。|  
+|DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R/W：读/写<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：适用于 SQL Server 的 OLE DB 驱动程序支持在 DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS 是 VARIANT_TRUE 时使用书签标识行集的行。<br /><br /> 将其中任一属性设置为 VARIANT_TRUE 都不会启用按书签为行集定位。 将 DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 设置为 VARIANT_TRUE 可创建支持按书签为行集定位的行集。<br /><br /> 适用于 SQL Server 的 OLE DB 驱动程序使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]游标以支持包含书签的行集。 有关详细信息，请参阅[行集和 SQL Server 游标](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)。<br /><br /> 注意：如果设置的这些属性与 OLE DB Driver for SQL Server 游标定义的其他属性发生冲突，便会导致错误。 例如，如果将 DBPROP_BOOKMARKS 设置为 VARIANT_TRUE 且 DBPROP_OTHERINSERT 也为 VARIANT_TRUE，那么，当使用者尝试打开行集时，将生成错误。|  
 |DBPROP_BOOKMARKSKIPPED|R/W：只读<br /><br /> 默认值：VARIANT_FALSE<br /><br /> 说明：如果在定位或搜索带书签的行集时使用者指示某书签无效，则适用于 SQL Server 的 OLE DB 驱动程序返回 DB_E_BADBOOKMARK。|  
 |DBPROP_BOOKMARKTYPE|R/W：只读<br /><br /> 默认值：DBPROPVAL_BMK_NUMERIC<br /><br /> 说明： SQL Server 的 OLE DB 驱动程序只实现数字书签。 用于 SQL Server 书签的 OLE DB 驱动程序是 32 位无符号的整数，类型为 DBTYPE_UI4。|  
 |DBPROP_CACHEDEFERRED|适用于 SQL Server 中，OLE DB 驱动程序不被实现此行集属性。 尝试读取或写入属性值将生成错误。|  

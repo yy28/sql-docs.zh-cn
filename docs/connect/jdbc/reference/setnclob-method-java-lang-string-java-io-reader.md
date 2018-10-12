@@ -1,30 +1,27 @@
 ---
-title: setNClob 方法 （java.lang.String，java.io.Reader） |Microsoft 文档
+title: setNClob 方法 (java.lang.String, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a595679a-89b7-4b18-9ad2-d9cb13af2a28
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: deed16eb7703bb1d63a40c91906a71c6ea02ce9f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9532a3f66fdc2be1254a612cecb7b33d3e0230de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773787"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader"></a>setNClob 方法 (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  将指定的参数设置为指定的读取器对象。  
+  将指定参数设置为指定的 Reader 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -35,24 +32,24 @@ public final void setNClob(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *参数名称*  
+ parameterName  
   
  包含参数名称的字符串。  
   
- *读取器*  
+ reader  
   
  一个读取器对象。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 此方法应该用于**NCHAR**， **NVARCHAR**， **NTEXT**，和**XML**参数数据类型。  
+## <a name="remarks"></a>Remarks  
+ 此方法应用于**NCHAR**， **NVARCHAR**， **NTEXT**，以及**XML**参数数据类型。  
   
- 由 java.sql.CallableStatement 接口中的 setNClob 方法指定此 setNClob 方法。  
+ 此 setNClob 方法是由 java.sql.CallableStatement 接口中的 setNClob 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
- [setNClob 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
+ [setNClob 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: isSearchable 方法 (SQLServerResultSetMetaData) |Microsoft 文档
+title: isSearchable 方法 (SQLServerResultSetMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSetMetaData.isSearchable
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d11c732b5b75b79c7016f6affebab0a8db49e774
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eccee93632d466d5799ddda6b19aebc462a68743
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597891"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>isSearchable 方法 (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,13 +41,13 @@ public boolean isSearchable(int column)
  指示列索引的 int。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果可以在 WHERE 子句中使用列的列。 否则为 **false**。  
+ 如果可以在 WHERE 子句中使用此列，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.ResultSetMetaData 接口中的 isSearchable 方法指定此 isSearchable 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 isSearchable 方法由 java.sql.ResultSetMetaData 接口中的 isSearchable 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSetMetaData 方法](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -1,25 +1,22 @@
 ---
-title: isWrapperFor 方法 (SQLServerXADataSource) |Microsoft 文档
+title: isWrapperFor 方法 (SQLServerXADataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d53da9b90b1b3b74cce924304c33fab50e82e315
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eb5c7e7d4b95b66cfb1524d9c9729f9b9132fc5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841702"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722127"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor 方法 (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,18 +33,18 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameters  
  *iface*  
   
- A**类**定义的接口。  
+ 一个**类**定义的接口。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果此对象实现接口或包装实现接口的对象。 否则为 **false**。  
+ 如果此对象实现了接口或包装了实现接口的对象，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- [IsWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)方法和[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)方法定义由 java.sql.Wrapper 接口，在 JDBC 4.0 规范中引入。  
+## <a name="remarks"></a>Remarks  
+ [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) 方法由在 JDBC 4.0 规范中引入的 java.sql.Wrapper 接口定义。  
   
- 如果此方法返回 true，则调用[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)用同一参数将会成功。  
+ 如果此方法返回 true，则将使用同一参数成功调用 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)。  
   
  有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getColumnPrivileges
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16c0b0314d4e0e3b2b28e81c118ef0533ba55768
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 792b09cc57fbfb1438c6c4e9d372beb6547635d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697775"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,19 +41,19 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Parameters  
  *catalog*  
   
- 一个包含目录名称的字符串。  
+ 一个包含目录名称的 String。  
   
  *schema*  
   
- 一个包含架构名称的字符串。  
+ 一个包含架构名称的 String。  
   
  *table*  
   
- 一个包含表名称的字符串。  
+ 一个包含表名称的 String。  
   
  *col*  
   
- 一个包含列名称模式的字符串。  
+ 一个包含列名称模式的 String。  
   
 ## <a name="return-value"></a>返回值  
  一个 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象。  
@@ -67,9 +64,9 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="remarks"></a>Remarks  
  此 getColumnPrivileges 方法由 java.sql.DatabaseMetaData 接口中的 getColumnPrivileges 方法指定。  
   
- GetColumnPrivileges 方法返回的结果集将包含以下信息：  
+ 由 getColumnPrivileges 方法返回的结果集将包含以下信息：  
   
-|“属性”|类型|描述|  
+|名称|类型|描述|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|目录名称。|  
 |TABLE_SCHEM|**String**|表架构名称。|  

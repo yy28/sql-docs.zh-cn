@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setTimestamp (int, java.sql.Timestamp, java.util.Calendar))
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 10c93cbf-f831-4e00-8e37-ea728bf34b1e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319972f9c911236ffbcc35c14e7489d0f581328a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0c1cfbda2b7ac6530242cfb4ff6191fd733865d8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002169"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712205"
 ---
 # <a name="settimestamp-method-int-javasqltimestamp-javautilcalendar"></a>setTimestamp 方法 (int, java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +54,7 @@ public final void setTimestamp(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 此 setTimestamp 方法由 java.sql.PreparedStatement 接口中的 setTimestamp 方法指定。  
+ 此 setTimestamp 方法是由 java.sql.PreparedStatement 接口中的 setTimestamp 方法指定的。  
   
 ## <a name="see-also"></a>另请参阅  
  [setTimestamp 方法 (SQLServerPreparedStatement)](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)   

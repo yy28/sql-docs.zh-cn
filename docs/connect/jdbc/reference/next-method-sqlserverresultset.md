@@ -1,13 +1,11 @@
 ---
-title: 下一步方法 (SQLServerResultSet) |Microsoft 文档
+title: 下一步方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.next
@@ -15,18 +13,17 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa878b809af8dab927877f8af0db3d54a6a3eb30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c2b5611c9f925c95a49982f8f9c936a6d84952f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702836"
 ---
-# <a name="next-method-sqlserverresultset"></a>下一步方法 (SQLServerResultSet)
+# <a name="next-method-sqlserverresultset"></a>next 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   将游标从当前位置下移一行。  
@@ -39,17 +36,17 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**新的当前行是否有效。 **false**如果没有更多的行来处理。  
+ **true**新的当前行是否有效。 **false**如果没有要处理的多个行。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 此下一个方法被指定 java.sql.ResultSet 接口中的下一步方法。  
+## <a name="remarks"></a>Remarks  
+ 此 next 方法是由 java.sql.ResultSet 接口中的 next 方法指定的。  
   
- 结果集游标最初位于第一行之前。 对下一步的方法的第一个调用将第一行作为当前行，第二个调用作出第二个行的当前行中，依次类推。  
+ 结果集游标最初位于第一行之前。 第一次调用 next 方法让第一行成为当前行，第二次调用让第二行成为当前行，以此类推。  
   
- 如果打开当前行的输入的流，对下一步的方法的调用将隐式关闭它。 警告链[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)时读取新行时，对象将被清除。  
+ 如果输入流对当前行是打开的，调用 next 方法会隐式关闭它。 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 对象的警告链会在新行被读取时清除。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerResultSet 成员](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

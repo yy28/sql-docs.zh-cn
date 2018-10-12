@@ -1,25 +1,22 @@
 ---
-title: isWrapperFor 方法 (SQLServerCallableStatement) |Microsoft 文档
+title: isWrapperFor 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4b0474c6301b450bcb8f43ffaaad66cfdcb56aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 587c1217d42aa02c269b986837997dfbe89be278
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841752"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737015"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>isWrapperFor 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,23 +33,23 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Parameters  
  *iface*  
   
- A**类**定义的接口。  
+ 一个**类**定义的接口。  
   
 ## <a name="return-value"></a>返回值  
- **true**如果此对象实现接口或包装实现接口的对象。 否则为 **false**。  
+ 如果此对象实现了接口或包装了实现接口的对象，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- [IsWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)方法和[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)方法定义由 java.sql.Wrapper 接口，在 JDBC 4.0 中引入。  
+## <a name="remarks"></a>Remarks  
+ [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md) 方法和 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) 方法由在 JDBC 4.0 中引入的 java.sql.Wrapper 接口定义。  
   
- 如果此方法返回**true**，则调用[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)用同一参数将会成功。  
+ 如果此方法返回 true，则将使用同一参数成功调用 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)。  
   
  有关详细信息，请参阅[包装和接口](../../../connect/jdbc/wrappers-and-interfaces.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [unwrap 方法&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   
+ [unwrap 方法 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement 成员](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement 类](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

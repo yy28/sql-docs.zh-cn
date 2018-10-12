@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792d167461ae330689bda8dfd10806258ccd704f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 424d15af41db2980b62c8ab8af6311889c67fb78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784867"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672557"
 ---
 # <a name="connecting-with-sqlcmd"></a>使用 sqlcmd 进行连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +64,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -k 删除或替换控制字符。  
   
-- **-K * * * application_intent*  
+- **-K**_应用程序\_意向_  
 连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 -K，`sqlcmd` 将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[ODBC 驱动程序在 Linux 和 macOS 的高可用性和灾难恢复](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -77,7 +74,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 - -m error_level 控制将哪些错误消息发送到 stdout。  
   
-- **-M * * * multisubnet_failover*  
+- **-M**_单子\_故障转移_  
 在连接到 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性组或 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 故障转移群集实例的可用性组侦听程序时，应始终指定 **-M**。 -M 将为（当前）活动服务器提供更快的故障检测和连接速度。 如果不指定 **–M** ，则 **-M** 处于关闭状态。 有关详细信息[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]，请参阅[Linux 和 macOS 的高可用性和灾难恢复的 ODBC 驱动程序](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
   
 > [!NOTE]  
@@ -101,7 +98,7 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
   
 - -s *column_separator_char*指定列分隔符字符。  
 
-- -S [protocol:] server[*,***port]  
+- -S [*protocol*:] *server*[**,**_port_]  
 指定的实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]若要连接的对象，或如果-D 是使用，DSN。 在 Linux 和 macOS 上的 ODBC 驱动程序需要-s。 请注意， **tcp**是唯一有效的协议。  
   
 - -t query_timeout 指定命令（或 SQL 语句）超时之前的秒数。  
@@ -213,13 +210,13 @@ sqlcmd –Sxxx.xxx.xxx.xxx –Uxxx -Pxxx
 
 -   ApplicationIntent=ReadOnly  
 
--   **数据库 = * * * database_name*  
+-   **数据库 =**_数据库\_名称_  
   
 -   **驱动程序适用于 SQL Server = ODBC Driver 11**或**驱动程序适用于 SQL Server = ODBC Driver 13**
   
 -   MultiSubnetFailover=Yes  
   
--   **Server = * * * server_name_or_IP_address*  
+-   **Server =**_服务器\_名称\_或\_IP\_地址_  
   
 -   **Trusted_Connection=yes**|**no**  
   

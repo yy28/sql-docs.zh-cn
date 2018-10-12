@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce11cfca3416796f24299c722c65e755d64f4d4e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032971"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643845"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +39,7 @@ ms.locfileid: "38032971"
   
 3.  构建要在准备或执行查询时使用的 *$params* 数组。 请注意，在指定 SQL Server 数据类型时， *$params* 数组的每个元素必须也是一个数组。  
   
-4.  通过将相应的 SQLSRV_SQLTYPE_\* 常量用作 $params 数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_\* 常量的完整列表，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
+4.  通过将相应的 SQLSRV_SQLTYPE_&#42; 常量用作 $params 数组的每个子数组中的第四个参数，指定所需的 SQL Server 数据类型。 有关 SQLSRV_SQLTYPE_&#42; 常量的完整列表，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 SQLTYPE 部分。 例如，在下列代码中， *$changeDate*、 *$rate*和 *$payFrequency* 分别指定为 **$params**数组中的 SQL Server 类型 **datetime**、 **money** 和 *tinyint* 。 因为没有为 *$employeeId* 指定任何 SQL Server 类型，并且该类型初始化为一个整数，所以将使用默认的 SQL Server 类型 **integer** 。  
   
     ```  
     $employeeId = 5;  
