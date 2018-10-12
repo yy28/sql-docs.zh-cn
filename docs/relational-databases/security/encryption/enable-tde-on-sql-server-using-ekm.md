@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/15/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b70e78455aca3f25ba880d3a4fb8ad5bd8ed32c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627455"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>使用 EKM 在 SQL Server 上启用 TDE
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主题介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来保护数据库加密密钥。  
+  本文介绍如何在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中启用透明数据加密 (TDE)，以便通过结合使用存储在可扩展密钥管理 (EKM) 模块中的非对称密钥和 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 来保护数据库加密密钥。  
   
- TDE 使用称为数据库加密密钥的对称密钥加密整个数据库的存储。 还可以使用受 master 数据库的数据库主密钥保护的证书来保护数据库加密密钥。 有关使用数据库主密钥保护数据库加密密钥的详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 有关当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上运行时配置 TDE 的信息，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 有关使用 Azure 密钥保管库中的密钥配置 TDE 的信息，请参阅 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
+ TDE 使用称为数据库加密密钥的对称密钥加密整个数据库的存储。 还可以使用受主数据库的数据库主密钥保护的证书来保护数据库加密密钥。 有关使用数据库主密钥保护数据库加密密钥的详细信息，请参阅[透明数据加密 (TDE)](../../../relational-databases/security/encryption/transparent-data-encryption.md)。 有关当 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在 Azure VM 上运行时配置 TDE 的信息，请参阅[使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)。 有关使用 Azure 密钥保管库中的密钥配置 TDE 的信息，请参阅 [使用具有 SQL 加密功能的 SQL Server 连接器](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)。 
 
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
@@ -40,7 +37,7 @@ ms.locfileid: "43084203"
   
 -   必须是高特权用户（如系统管理员）才能创建数据库加密密钥以及加密数据库。 该用户必须能够通过 EKM 模块进行身份验证。  
   
--   启动时， [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必须打开数据库。 为此，您应创建一个将通过 EKM 进行身份验证的凭据，并将该凭据添加到一个基于非对称密钥的登录名。 用户无法使用该登录名进行登录，但 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 将能够通过 EKM 设备对其自身进行身份验证。  
+-   启动时，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必须打开数据库。 为此，您应创建一个将通过 EKM 进行身份验证的凭据，并将该凭据添加到一个基于非对称密钥的登录名。 用户无法使用该登录名进行登录，但 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 将能够通过 EKM 设备对其自身进行身份验证。  
   
 -   如果存储在 EKM 模块中的非对称密钥丢失， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]将无法打开数据库。 如果 EKM 提供程序允许您备份非对称密钥，则应该创建备份并将该备份存储到安全的位置。  
   
@@ -49,7 +46,7 @@ ms.locfileid: "43084203"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> Permissions  
- 本主题使用了以下权限：  
+ 本文使用了以下权限：  
   
 -   若要更改配置选项以及运行 RECONFIGURE 语句，您必须具有 ALTER SETTINGS 服务器级别权限。 ALTER SETTINGS 权限由 **sysadmin** 和 **serveradmin** 固定服务器角色隐式持有。  
   

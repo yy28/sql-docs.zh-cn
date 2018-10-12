@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e3337d0912e0249c7ac49523bb4159458ba36e8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274044"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775036"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>使用 SOAP 集成 Reporting Services - Windowsb 应用程序
   可以通过 Reporting Services SOAP API 访问报表服务器的完整功能。 SOAP API 是一个 Web 服务，同样可以轻松地访问此服务以向自定义业务应用程序提供企业报表功能。 只需通过编写对此 Web 服务进行调用的代码，即可在 Windows 应用程序中访问此服务。 使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]，可以生成一个代理类，该类公开此 Web 服务的属性和方法，并使你能够使用熟悉的基础结构和工具来生成建立在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 技术之上的业务应用程序。  
@@ -90,11 +87,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  然而，可以使用 SOAP API 的 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法以编程方式呈现报表并将它们保存为不同的输出格式。 这是强于 URL 访问的一个优势，它要求用户交互。 当您使用 SOAP API <xref:ReportExecution2005.ReportExecutionService.Render%2A> 方法呈现报表时，您可以呈现为所支持的任何输出格式。  
   
- 还可以使用随 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供的免费分发的 ReportViewer 控件。 通过 ReportViewer 控件，可以轻松地将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能嵌入到自定义应用程序中。 ReportViewer 控件供开发人员使用，以提供预先设计并编写完全的报表，作为应用程序功能集的一部分（例如，网站管理应用程序可能包含显示对公司网站的点击流分析的报表）。 在应用程序中嵌入控件为在应用程序部署中包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器组件提供了简化的替代方法。 这些控件提供报表功能，但不提供可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中找到的其他对报表创作、发布或分发和传递的支持。  
+ 还可以使用随 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 提供的免费分发的报表查看器控件。 通过报表查看器控件，可以轻松地将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能嵌入到自定义应用程序中。 报表查看器控件供开发人员使用，以提供预先设计并编写完全的报表，作为应用程序功能集的一部分（例如，网站管理应用程序可能包含显示对公司网站的点击流分析的报表）。 在应用程序中嵌入控件为在应用程序部署中包含 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器组件提供了简化的替代方法。 这些控件提供报表功能，但不提供可在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中找到的其他对报表创作、发布或分发和传递的支持。  
   
- ReportViewer 控件有两个版本，一个用于各种 Windows 客户端应用程序，另一个用于 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序。 这两个控件都支持本地处理模式和远程处理模式。 在本地处理模式中，应用程序提供报表定义以及数据集报表处理和触发器报表处理。 在远程处理模式中，数据检索和报表处理在报表服务器上进行，而 ReportViewer 控件用于显示和报表导航。 使用此模式可以生成丰富的应用程序，小至桌面应用程序，大到企业级应用程序。  
+ 报表查看器控件有两个版本，一个用于各种 Windows 客户端应用程序，另一个用于 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 应用程序。 这两个控件都支持本地处理模式和远程处理模式。 在本地处理模式中，应用程序提供报表定义以及数据集报表处理和触发器报表处理。 在远程处理模式中，数据检索和报表处理在报表服务器上进行，而 ReportViewer 控件用于显示和报表导航。 使用此模式可以生成丰富的应用程序，小至桌面应用程序，大到企业级应用程序。  
   
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 联机帮助中有关于 ReportViewer 控件的记载。 有关详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 产品文档。  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 联机帮助中有关于报表查看器控件的记载。 有关详细信息，请参阅 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 产品文档。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 Web 服务和 .NET Framework 生成应用程序](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

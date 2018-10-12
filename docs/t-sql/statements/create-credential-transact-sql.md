@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171609"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608839"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,13 +56,13 @@ WITH IDENTITY = 'identity_name'
  credential_name  
  指定要创建的凭据的名称。 credential_name 不能以数字符号 (#) 开头。 系统凭据以 ## 开头。  使用共享访问签名 (SAS) 时，该名称必须与容器路径匹配，以 https 开头并且不能包含正斜杠。 请参见下面的示例 D。  
   
- IDENTITY ='identity_name'****  
+ IDENTITY **='**_identity\_name_**'**  
  指定从服务器外部进行连接时要使用的帐户名称。 当凭据用于访问 Azure Key Vault 时，IDENTITY 是该密钥保管库的名称。 请参阅以下示例 C。 凭据使用共享访问签名 (SAS) 时，IDENTITY 是 SHARED ACCESS SIGNATURE。 请参见下面的示例 D。  
  
 > [!IMPORTANT]
 > Azure SQL 数据库仅支持 Azure Key Vault 和共享访问签名标识。 不支持 Windows 用户标识。
  
- SECRET ='secret'****  
+ SECRET = 'secret'  
  指定发送身份验证所需的机密内容。  
   
  当该凭据用于访问 Azure Key Vault 时，CREATE CREDENTIAL 的 SECRET 参数要求将 \<客户端 ID>（无连字符）和 Azure Active Directory 中服务主体的 \<Secret> 一起传递，且二者之间不留空格。 请参阅以下示例 C。 凭据使用共享访问签名时，SECRET 是共享访问签名令牌。 请参见下面的示例 D。  有关在 Azure 容器上创建存储访问策略和共享访问签名的详细信息，请参阅[第 1 课：在 Azure 容器上创建存储访问策略和共享访问签名](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)。  

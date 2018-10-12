@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082040"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776965"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  公用表表达式还可与 SELECT、INSERT、DELETE 和 CREATE VIEW 等语句一起使用。 有关详细信息，请参阅 [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md)。  
   
- TOP ( expression) [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  指定更新的行数或行数百分比。 *expression* 可以是行数或行的百分比。  
   
  与 INSERT、UPDATE 或 DELETE 一起使用的 TOP 表达式中被引用行将不按任何顺序排列。  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  method_name ( argument [ ,... n] )  
  带一个或多个参数的 udt_column_name 的非静态公共赋值函数方法。  
   
- .WRITE (expression,@Offset,@Length)****  
+ **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
  指定要修改的 column_name 值的一部分。 expression 替换从 column_name 的 @Offset 开始的 @Length 单位。 使用该子句只能指定 varchar(max)、nvarchar(max) 或 varbinary(max) 的列。 column_name 不能为 NULL，也不能由表名或表别名限定。  
   
  expression 是复制到 column_name 的值。 expression 的计算结果必须为 column_name 类型或者 expression 必须能够隐式强制转换为此类型。 如果 expression 设置为 NULL，则忽略 @Length，并将 column_name 中的值按指定的 @Offset 截断。  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  @ variable  
  已声明的变量，该变量将设置为 expression 所返回的值。  
   
- SET @variable = column = expression 将变量设置为与列相同的值。 这与 SET @variable = column, column = expression 不同，后者将变量设置为列更新前的值。  
+ SET **@**_variable_ = *column* = *expression* 将变量设置为与列相同的值。 这与 SET **@**_variable_ = _column_, _column_ = _expression_ 不同，后者将变量设置为列更新前的值。  
   
  \<OUTPUT_Clause>  
  在 UPDATE 操作中，返回更新后的数据或基于更新后的数据的表达式。 针对远程表或视图的任何 DML 语句都不支持 OUTPUT 子句。 有关详细信息，请参阅 [OUTPUT 子句 (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md)。  
@@ -334,7 +331,7 @@ GO
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的未来版本中将删除 ntext、text 和 image 数据类型。 请避免在新开发工作中使用这些数据类型，并考虑修改当前使用这些数据类型的应用程序。 请改用 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)和 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 。  
   
 ### <a name="updating-large-value-data-types"></a>更新大值数据类型  
- 使用 .WRITE (expression,@Offset,@Length) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新* **。 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字符，而完整更新则删除或修改该列中的所有数据。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
+ 使用 **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 子句执行 varchar(max)、nvarchar(max) 和 varbinary(max) 数据类型的部分或完整更新。 例如，对 varchar(max) 列的部分更新可能只删除或修改该列的前 200 个字符，而完整更新则删除或修改该列中的所有数据。 如果将数据库恢复模式设置为大容量日志模式或简单模式，则对插入或追加新数据的 .WRITE 更新进行最小日志记录。 在更新现有值时，不使用最小日志记录。 有关详细信息，请参阅 [事务日志 (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md)。  
   
  当 UPDATE 语句导致下列任一操作时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]便会将部分更新转换为完整更新：  
 -   更改分区视图或表的键列。  
@@ -346,7 +343,7 @@ GO
   
 为了获得最佳性能，建议按照块区大小为 8040 字节倍数的方式插入或更新数据。  
   
-如果在 OUTPUT 子句中引用了由 .WRITE 子句修改的列，则该列的完整值（deleted.column_name 中的前像或 inserted.column_name 中的后像）返回到表变量中的指定列。 请参阅后面的示例 R。  
+如果在 OUTPUT 子句中引用了由 .WRITE 子句修改的列，则该列的完整值（**deleted.**_column\_name_ 中的前像或 **inserted.**_column\_name_ 中的后像）返回到表变量中的指定列。 请参阅后面的示例 R。  
   
 若要针对其他字符或二进制数据类型获得相同的 .WRITE 功能，请使用 [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)。  
   

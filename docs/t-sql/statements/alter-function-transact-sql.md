@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d24ea0f9548968723aa195211e268d97bde9788
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065990"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643405"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -258,11 +255,11 @@ RETURNS return_data_type
  指定标量函数返回标量值。  
   
  TABLE  
- 指定表值函数的返回值为表。 只有常量和 @local_variables 可以传递到表值函数。  
+ 指定表值函数的返回值为表。 只有常量和 @local\_variables 可以传递到表值函数。  
   
  在内联表值函数中，TABLE 返回值是通过单个 SELECT 语句定义的。 内联函数没有关联的返回变量。  
   
- 在多语句表值函数中，@return_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。只能将  **return_variable* 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
+ 在多语句表值函数中，@return\_variable 是 TABLE 变量，用于存储和汇总应作为函数值返回的行。 只能将 @return\_variable 指定用于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数，而不能用于 CLR 函数。  
   
  select-stmt  
  定义内联表值函数返回值的单个 SELECT 语句。  
@@ -278,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- \<table_type_definition>( { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ ,...n ])  
+ \<__table\_type\_definition\>__( { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ ,...n ])  
  定义 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数的表数据类型。 表声明包含列定义和列约束（或表约束）。  
   
-\< clr_table_type_definition > ( { column_namedata_type } [ ,...n ] ) 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
+\< clr_table_type_definition \> ( { column_name**data_type } [ ,...n ] ) 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[某些区域为预览版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）。  
   
  定义 CLR 函数的表数据类型。 表声明仅包含列名称和数据类型。  
   

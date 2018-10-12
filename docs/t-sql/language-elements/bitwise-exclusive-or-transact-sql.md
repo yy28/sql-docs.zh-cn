@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ^_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - exclusive OR mathematical operations
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3c3ed5a501df1971268c2c647e57af4f11a840
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 83ab3a0beb034311f7d29ede9c33b6e291c20a32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072619"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663665"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^（位异或）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +63,7 @@ expression ^ expression
 ## <a name="remarks"></a>Remarks  
  通过从两个表达式中取对应的位，^ 位运算符对两个表达式执行按位逻辑异或运算。 如果在输入表达式的正在被解析的对应位中，任意一位（但不是两个位）的值为 1，则结果中该位的值被设置为 1。 如果相对应的两个位的值都为 0 或者都为 1，那么结果中该位的值被清除为 0。  
   
- 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallint 表达式转换成了 int。  
+ 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallintexpression 转换成了 int。  
   
 ## <a name="examples"></a>示例  
  以下示例创建一个表，其中使用 int 数据类型存储原始值，并将两个值插入一行。  

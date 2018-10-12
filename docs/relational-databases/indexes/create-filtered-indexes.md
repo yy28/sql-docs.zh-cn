@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065464"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603245"
 ---
 # <a name="create-filtered-indexes"></a>创建筛选索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065464"
   
 ###  <a name="Restrictions"></a> 限制和局限  
   
--   不能对视图创建筛选索引。 但是，查询优化器可以从对视图中引用的表定义的筛选索引中获益。 对于从视图中选择数据的查询，如果查询结果正确，查询优化器会考虑对此查询使用筛选索引。  
+-   不能对视图创建筛选索引。 但是，查询优化器可以从对视图中引用的表定义的筛选索引中获益。 对于从视图中选择数据的查询，如果查询结果正确，查询优化器会考虑对此查询使用筛选索引。
+
+-   当筛选器表达式中访问的列为 CLR 数据类型，不能在表中创建筛选过的索引。
   
 -   筛选索引与索引视图相比，具有以下优点：  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065464"
   
 6.  在 **“索引键列”** 下，单击 **“添加…”**。  
   
-7.  在“从table_name选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
+7.  在“从 table\_name 选择列”对话框中，选中要添加到唯一索引的一个或多个表列的复选框。  
   
 8.  单击“确定” 。  
   

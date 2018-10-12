@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782415"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>创建完整数据库备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -266,7 +263,7 @@ ms.locfileid: "43348478"
     |选项|“说明”|  
     |------------|-----------------|  
     |*database*|要备份的数据库。|  
-    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =physical_backup_device_name<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
+    |*backup_device* [ **,**...*n* ]|指定一个列表，它包含 1 至 64 个用于备份操作的备份设备。 您可以指定物理备份设备，也可以指定对应的逻辑备份设备（如果已定义）。 若要指定物理备份设备，请使用 DISK 或 TAPE 选项：<br /><br /> { DISK &#124; TAPE } =物理\_备份\_设备\_名称<br /><br /> 有关详细信息，请参阅 [备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。|  
     |WITH with_options [ **,**...*o* ]|您也可以指定一个或多个附加选项 *o*。 有关某些基本 WITH 选项的信息，请参阅步骤 2。|  
   
 2.  （可选）指定一个或多个 WITH 选项。 下面描述了几个基本 WITH 选项。 有关所有 WITH 选项的详细信息，请参阅 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)。  
@@ -279,10 +276,10 @@ ms.locfileid: "43348478"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          仅在 SQL Server 2014 或更高版本中，指定要使用的加密算法以及要用于保护加密的证书或非对称密钥。  
   
-         DESCRIPTION = { 'text' | @text_variable }****  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
-         NAME = { backup_set_name | @backup_set_name_var }  
+         NAME = { backup_set_name | @backup\_set\_name\_var }  
          指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。  
   
     -   基本备份集 WITH 选项：  
@@ -291,7 +288,7 @@ ms.locfileid: "43348478"
   
          或者，若要将备份介质格式化，可以使用 FORMAT 选项：  
   
-         FORMAT [ , MEDIANAME = { media_name | @media_name_variable } ] [ , MEDIADESCRIPTION = { text | @text_variable } ]  
+         FORMAT [ , MEDIANAME= { media_name | @media\_name\_variable } ] [ , MEDIADESCRIPTION = { text | @text\_variable } ]  
          当您第一次使用介质或者希望覆盖所有现有数据时可以使用 FORMAT 子句。 根据需要，可以为新介质指定介质名称和说明。  
   
         > [!IMPORTANT]  

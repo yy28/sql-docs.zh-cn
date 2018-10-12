@@ -5,9 +5,7 @@ ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -31,17 +29,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 99
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b9796266ff1c5ff8d7e42ffbc3a94e44fd4b142
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3b84acd01f7291ad420cf2a643ffb9bc350e0a6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072647"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777965"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -153,7 +150,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  max_degree_of_parallelism 可以是：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -183,7 +180,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { partition_scheme_name(column_name***)* | filegroup_name | "default"**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 支持将 "default" 作为文件组名称。  
   
  指定一个位置，以移动当前处于聚集索引叶级别的数据行。 数据将以堆的形式移动到这一新位置。 可以将分区方案或文件组指定为新位置，但该分区方案或文件组必须已存在。 MOVE TO 对索引视图或非聚集索引无效。 如果未指定分区方案或文件组，则生成的表将位于为聚集索引定义的同一分区方案或文件组中。  
@@ -234,7 +231,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  删除索引视图的聚集索引时，将自动删除同一视图的所有非聚集索引和自动创建的统计信息。 手动创建的统计信息不会删除。  
   
- 保留 table_or_view_name.index_name 语法是为了保持后向兼容性**。 XML 索引或空间索引无法使用向后兼容的语法删除。  
+ 保留 _table\_or\_view\_name_**.**_index\_name_ 语法是为了保持后向兼容性。 XML 索引或空间索引无法使用向后兼容的语法删除。  
   
  删除带有 128 个或更多区数的索引时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将延迟实际页释放及其关联的锁，直到提交事务为止。  
   
@@ -264,10 +261,10 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 脱机删除聚集索引时，只删除较高级别的聚集索引；因此，该操作的执行速度很快。 如果联机删除聚集索引，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将重新生成堆两次，一次针对步骤 1，一次针对步骤 2。 有关数据压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
 ## <a name="xml-indexes"></a>XML 索引  
- 删除 XML 索引时，不能指定选项。 此外，不能使用 table_or_view_name.index_name 语法**。 删除主 XML 索引时，将自动删除所有关联的辅助 XML 索引。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。  
+ 删除 XML 索引时，不能指定选项。 此外，不能使用 _table\_or\_view\_name_**.**_index\_name_ 语法。 删除主 XML 索引时，将自动删除所有关联的辅助 XML 索引。 有关详细信息，请参阅 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="spatial-indexes"></a>空间索引  
- 只有表支持空间索引。 删除空间索引时，无法指定任何选项或使用 .index_name。 正确的语法如下：  
+ 只有表支持空间索引。 删除空间索引时，无法指定任何选项或使用 **.**_index\_name_。 正确的语法如下：  
   
  DROP INDEX spatial_index_name ON spatial_table_name;  
   

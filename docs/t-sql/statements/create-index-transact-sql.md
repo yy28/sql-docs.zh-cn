@@ -1,13 +1,11 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE INDEX
@@ -53,17 +51,16 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-caps.latest.revision: 223
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd2ee86fe01f568f6eb2a91800632f6f896ed3e5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777725"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -244,7 +241,7 @@ CLUSTERED
  *column*  
  索引所基于的一列或多列。 指定两个或多个列名，可为指定列的组合值创建组合索引。 在 table_or_view_name 后的括号中，按排序优先级列出组合索引中要包括的列。  
   
- 一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前的版本，此限制为 16 列和 900 字节。  
+ 一个组合索引键中最多可组合 32 列。 组合索引键中的所有列必须在同一个表或视图中。 对于聚集索引，组合索引值允许的最大大小为 900 字节，对于非聚集索引则为 1,700 字节。 对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前的版本，此限制为 16 列和 900 字节。  
   
  无法将 ntext、text、varchar(max)、nvarchar(max)、varbinary(max)、xml 或 image 大型对象 (LOB) 数据类型的列指定为索引的键列。 另外，即使 CREATE INDEX 语句中并未引用 ntext、text 或 image 列，视图定义中也不能包含这些列。  
   
@@ -253,7 +250,7 @@ CLUSTERED
  [ ASC | DESC ]  
  确定特定索引列的升序或降序排序方向。 默认值为 ASC。  
   
- INCLUDE (column [ ,... n ] )  
+ INCLUDE **(** column [ **,**... n ] **)**  
  指定要添加到非聚集索引的叶级别的非键列。 非聚集索引可以唯一，也可以不唯一。  
   
  在 INCLUDE 列表中列名不能重复，且不能同时用于键列和非键列。 如果对表定义了聚集索引，则非聚集索引始终包含聚集索引列。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
@@ -337,9 +334,9 @@ ON partition_scheme_name ( column_name )
   
  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，该对象可以是聚集列存储索引存储的表。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 database_name.[schema_name].object_name，其中 database_name 为当前数据库，或 database_name 为 tempdb，object_name 以 # 开头**。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 支持由三部分组成的名称格式 database\_name.[schema_name].object\_name，其中 database_name 为当前数据库，或 database_name 为 tempdb，object_name 以 # 开头。  
   
- **\<relational_index_option>::=**  
+ **\<relational_index_option\>::=**  
   
  指定创建索引时要使用的选项。  
   
@@ -358,7 +355,7 @@ ON partition_scheme_name ( column_name )
   
  在向后兼容的语法中，WITH PAD_INDEX 等效于 WITH PAD_INDEX = ON。  
   
- FILLFACTOR = fillfactor  
+ FILLFACTOR =fillfactor  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或重新生成索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 如果 fillfactor 为 100，[!INCLUDE[ssDE](../../includes/ssde-md.md)]会创建完全填充叶级页的索引。  
@@ -465,7 +462,7 @@ ONLINE = { ON | OFF }
  
 RESUMABLE **=** { ON | **OFF**}
 
-适用对象：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 为公共预览版功能
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
  指定联机索引操作是否可恢复。
 
@@ -475,7 +472,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION = time [MINUTES]，与 RESUMABLE = ON 一起使用（要求 ONLINE = ON）。
  
-适用对象：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 为公共预览版功能 
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 指示可恢复联机索引操作在暂停之前执行的时间（以分钟为单位指定的整数值）。 
 
@@ -522,7 +519,7 @@ MAXDOP = max_degree_of_parallelism
   
  max_degree_of_parallelism 可以是：  
   
- @shouldalert  
+ 1  
  取消生成并行计划。  
   
  \>1  
@@ -647,7 +644,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  有关 XML 索引的信息，请参阅 [CREATE XML INDEX (Transact-SQL)](../../t-sql/statements/create-xml-index-transact-sql.md) 和 [XML 索引 (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)。  
   
 ## <a name="index-key-size"></a>索引键大小  
- 对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。  
+ 对于聚集索引，索引键的最大大小为 900 字节，对于非聚集索引为 1700 字节。 （对于 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 之前的版本，此限制始终为 900 字节。）如果创建索引时，varchar 列中的现有数据未超过限制，则可以对这些列创建超过字节限制的索引；但是，以后在这些列上执行会导致总大小超过该限制的插入或更新操作时将失败。 聚集索引的索引键不能包含在 ROW_OVERFLOW_DATA 分配单元中具有现有数据的 **varcharr** 列。 如果对 **varchar** 列创建了聚集索引，并且 IN_ROW_DATA 分配单元中存在现有数据，则对该列执行的将数据推送到行外的后续插入或更新操作将会失败。  
   
  非聚集索引可以在索引的叶级别包含非键列。 计算索引键大小时，[!INCLUDE[ssDE](../../includes/ssde-md.md)]不考虑这些列。 有关详细信息，请参阅 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)。  
   
@@ -691,7 +688,7 @@ INSERT INTO t1 VALUES (1, 0);
 ## <a name="specifying-index-options"></a>指定索引选项  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中引入了新的索引选项，还修改了指定选项的方式。 在向后兼容的语法中，WITH option_name 等效于 WITH ( \<option_name> = ON )。 在设置索引选项时，下列规则适用： 
   
--   只能使用 WITH (option_name = ON | OFF) 指定新的索引选项。  
+-   新的索引选项只能使用 WITH (option\_name = ON | OFF) 指定。  
 -   指定选项时不能在同一语句中同时使用向后兼容语法和新语法。 例如，指定 WITH (DROP_EXISTING, ONLINE = ON) 会导致语句失败。  
 -   在创建 XML 索引时，必须使用 WITH (option_name= ON | OFF) 指定选项。  
   
@@ -719,7 +716,7 @@ INSERT INTO t1 VALUES (1, 0);
  
 ### <a name="resumable-indexes"></a> 可恢复索引操作
 
-适用对象：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 为公共预览版功能。
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 下列指南适用于可恢复索引操作：
 
@@ -731,14 +728,12 @@ INSERT INTO t1 VALUES (1, 0);
 - 重新执行原始 CREATE INDEX 语句的可恢复索引，会自动恢复暂停的索引创建操作。
 - 可恢复索引不支持 SORT_IN_TEMPDB=ON 选项。 
 - 无法在显式事务（不能属于 begin TRAN … COMMIT 块）中执行具有“RESUMEABLE = ON”的 DDL 命令。
-- 若要恢复/中止索引生成/重新生成，请使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 语法
+- 若要恢复/中止索引创建/重新生成，请使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 语法
 
 > [!NOTE]
 > DDL 命令会运行到完成、暂停或失败。 如果命令暂停，则会发出错误，指示操作已暂停并且索引创建未完成。 可以从 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 获取有关当前索引状态的详细信息。 如同之前一样，发生失败时，也会发出错误。 
 
-若要指示索引创建作为可恢复操作执行并检查其当前执行状态，请参阅 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 对于公共预览版，此视图中的以下列设置为 0：
-- total_execution_time
-- percent_complete 和 page_count
+若要指示索引创建作为可恢复操作执行并检查其当前执行状态，请参阅 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 
 
 资源 可恢复联机索引创建操作需要以下资源
 - 使索引保持生成所需的附加空间，包括索引暂停的时间
@@ -748,17 +743,12 @@ INSERT INTO t1 VALUES (1, 0);
 
 **当前功能限制**
 
-> [!IMPORTANT]
-> 可恢复联机索引创建目前仅支持非聚集索引。
-
 对于可恢复索引创建操作会禁用以下功能
-- 公共预览版的聚集索引不支持可恢复索引创建。
 - 可恢复联机索引创建操作暂停后，不能更改 MAXDOP 的初始值
-- 不支持 DROP EXISTING 子句
 - 创建一个索引，其中包含 
  - 已计算或 TIMESTAMP 列作为键列
  - LOB 列作为包含列的可恢复索引创建
-- 筛选索引
+ - 筛选索引
  
 ## <a name="row-and-page-locks-options"></a>行锁和页锁选项  
  如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，则访问索引时允许行级、页级和表级锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]将选择相应的锁，并且可以将锁从行锁或页锁升级到表锁。  
@@ -1048,6 +1038,8 @@ GO
 ```  
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 创建、恢复、暂停和中止可恢复索引操作
 
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
+
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
 CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
@@ -1074,6 +1066,8 @@ ALTER INDEX test_idx2 on test_table ABORT
   
 ### <a name="n-basic-syntax"></a>N. 基本语法  
   ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>创建、恢复、暂停和中止可恢复索引操作
+
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

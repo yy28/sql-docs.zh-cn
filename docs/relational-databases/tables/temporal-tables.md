@@ -5,22 +5,19 @@ ms.date: 07/11/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4171beb8274ab12235b435c7c7fc4a2eab048bb5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 336b6d329f5c488ac5501627bd8be43974d66be5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059909"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856715"
 ---
 # <a name="temporal-tables"></a>临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -122,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  系统 datetime2 列中记录的时间基于事务本身的开始时间。 例如，在单个事务中插入的所有行具有对应于 **SYSTEM_TIME** 的开始时间段列中记录的相同 UTC 时间。  
   
 ## <a name="how-do-i-query-temporal-data"></a>如何查询临时数据？  
- SELECT 语句 FROM\<table> 子句提供新的 FOR SYSTEM_TIME 子句和五个特定于临时表的子子句，用于跨当前表和历史记录表查询数据。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。  
+ **SELECT** 语句 **FROM**_\<table\>_ 子句提供新的 **FOR SYSTEM_TIME** 子句和五个特定于时态表的从属子句，用于跨当前表和历史记录表查询数据。 支持对通过多个联接传播的，以及通过多个临时表顶层的视图传播的单个表直接使用这种新的 **SELECT** 语句语法。  
   
  ![临时表查询](../../relational-databases/tables/media/temporal-querying.PNG "临时表查询")  
   
@@ -152,7 +149,7 @@ SELECT * FROM Employee
 |**ALL**|所有行|返回属于当前表和历史记录表的行的联合。|  
   
 > [!NOTE]  
->  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（SELECT \* FROM\<table> 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
+>  （可选）可以选择隐藏这些期限列，以便不显式引用这些期限列的查询不会返回这些列（**SELECT \* FROM**_\<table\>_ 方案）。 若要返回隐藏的列，只需在查询中显式引用隐藏的列。 同样，如果这些新的期限列不存在， **INSERT** 和 **BULK INSERT** 语句将会继续（并且列值将自动填充）。 有关使用 **HIDDEN** 子句的详细信息，请参阅 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) 和 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)的支持。  
   
 ## <a name="see-also"></a>另请参阅  
  [系统版本控制临时表入门](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

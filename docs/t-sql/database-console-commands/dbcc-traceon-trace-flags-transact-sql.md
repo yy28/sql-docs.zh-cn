@@ -5,9 +5,7 @@ ms.date: 06/09/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 088c7b60bff2c050cec0b486fd4c91f3b9df1213
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 78a904579a0ee2664bc9d4146fb353c9aae99ee4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564113"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843757"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +100,7 @@ ms.locfileid: "45564113"
 |**4137**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更早版本的查询优化器基数估计模型下估计筛选器的 AND 谓词以说明相关性时，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用最小选择性生成一个计划。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2658214)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请在使用旧版 CE 时添加 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 120 或更高版本。 请改用跟踪标志 9471。<br /><br />**作用域**：全局、会话或查询| 
 |**4138**|导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 生成一个计划，该计划不对包含 TOP、OPTION (FAST N)、IN 或 EXISTS 关键字的查询使用行目标调整。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2667211)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'DISABLE_OPTIMIZER_ROWGOAL' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询| 
 |**4139**|无论键列处于什么状态，均启用自动生成的快速统计信息（直方图修正）。 如果设置了跟踪标志 4139，则无论前导统计信息列处于什么状态（升序、降序或静止），都会在查询编译时调整用于估计基数的直方图。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2952101)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**注意：** 此跟踪标志不适用于 CE 版本 70。 请改用跟踪标志 2389 和 2390。<br /><br />**作用域**：全局、会话或查询|
-|**4199**|<a name="4199"></a>启用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新和 Service Pack 中发布的查询优化器 (QO) 更改。<br /><br />默认情况下会在给定产品版本的最新数据库[兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)下启用对早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所做的 QO 更改，但不启用跟踪标志 4199。<br /><br />下表总结了使用特定数据库兼容性级别和跟踪标志 4199 时的行为。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/974006)。<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**数据库兼容性级别**</td><td>**TF 4199**</td><td>**来自以前的数据库兼容性级别的 QO 更改**</td><td>**当前版本后期 RTM 的 QO 更改**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100 至 120**</td><td>Off</td><td>禁用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>Off</td><td>已启用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>Off</td><td>已启用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr></table><br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在查询级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 QUERY_OPTIMIZER_HOTFIXES 选项。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询|
+|**4199**|<a name="4199"></a>启用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 累积更新和 Service Pack 中发布的查询优化器 (QO) 更改。<br /><br />默认情况下会在给定产品版本的最新数据库[兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)下启用对早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所做的 QO 更改，但不启用跟踪标志 4199。<br /><br />下表总结了使用特定数据库兼容性级别和跟踪标志 4199 时的行为。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/974006)。<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**数据库兼容性级别**</td><td>**TF 4199**</td><td>**来自以前的数据库兼容性级别的 QO 更改**</td><td>**当前版本后期 RTM 的 QO 更改**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100 至 120**</td><td>Off</td><td>禁用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>Off</td><td>已启用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>Off</td><td>已启用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr><tr valign="middle" align="center"><td rowspan="2">150</td><td>Off</td><td>已启用</td><td>禁用</td></tr><tr valign="middle" align="center"><td>On</td><td>已启用</td><td>已启用</td></tr></table><br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在查询级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 QUERY_OPTIMIZER_HOTFIXES 选项。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询|
 |**4610**|将存储缓存条目的哈希表的大小增加 8 倍。 与跟踪标志 4618 一起使用时，TokenAndPermUserStore 缓存存储中的条目数增加到 8,192 个。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/959823)。<br /><br />**作用域：** 仅全局|
 |**4616**|使应用程序角色可以看到服务器级元数据。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，应用程序角色无法访问自身数据库以外的元数据，因为应用程序角色与服务器级别主体不相关联。 这是对早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的行为的更改。 设置此全局标志将禁用新的限制，并允许应用程序角色访问服务器级元数据。<br /><br />**作用域**：仅全局|
 |**4618**|将 TokenAndPermUserStore 缓存存储中的条目数限制为 1,024 个。 与跟踪标志 4610 一起使用时，TokenAndPermUserStore 缓存存储中的条目数增加到 8,192 个。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/959823)。<br /><br />**作用域：** 仅全局|
@@ -114,7 +111,7 @@ ms.locfileid: "45564113"
 |**6533**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，针对空间数据类型提高查询操作的性能。 根据配置、查询类型和对象的不同，性能提升程度将有所不同。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3107399)。<br /><br />**注意：** 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，此行为由引擎控制，跟踪标志 6533 不再有效。<br /><br />**作用域**：全局和会话| 
 |**6534**|在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，针对空间数据类型提高查询操作的性能。 根据配置、查询类型和对象的不同，性能提升程度将有所不同。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3107399)。<br /><br />**作用域**：仅全局|
 |**7314**|使用 OLE DB 提供程序将精度/确定位数未知的 NUMBER 值强制视为双精度值。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3051993)。<br /><br />**作用域**：全局和会话|  
-|**7412**|启用轻型查询执行统计信息分析基础结构。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3170113)。<br /><br />**作用域**：仅全局|
+|**7412**|启用轻型查询执行统计信息分析基础结构。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3170113)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更高内部版本。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 开始，此跟踪标志将不起作用，因为默认情况下启用轻量分析。<br /><br />**作用域**：仅全局|
 |**7471**|为单个表上的不同统计信息启用多个 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 并发运行。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3156157)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 及更高内部版本。<br /><br />**作用域**：仅全局|
 |**7745**|强制查询存储在数据库关闭时不将数据刷新到磁盘。<br /><br />**注意：** 使用此跟踪可能会导致先前未刷新到磁盘的查询存储数据在关闭时丢失。 关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，可以使用 SHUTDOWN WITH NOWAIT 命令强制立即关闭，而不是使用此跟踪标志。<br /><br />**作用域**：仅全局|
 |**7752**|启用查询存储的异步加载。<br /><br />**注意：** 如果 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] 遇到大量与查询存储同步加载（默认行为）相关的 QDS_LOADDB 等待，则使用此跟踪标志。<br /><br />**作用域**：仅全局|

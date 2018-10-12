@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: udf
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8bbadd1b4405f770adf31b96403100e72dd6898
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d02dd4a286321a6d5b2334f5cedcb06926f245fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43111592"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652261"
 ---
 # <a name="delete-user-defined-functions"></a>删除用户定义函数
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +71,7 @@ ms.locfileid: "43111592"
 5.  在 **“删除对象”** 对话框中，单击 **“确定”**。  
   
     > [!IMPORTANT]  
-    >  单击“删除对象”对话框中的“显示依赖关系”，打开“function_name 依赖关系”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
+    >  单击“删除对象”对话框中的“显示依赖关系”，打开“_function\_name_**依赖关系**”对话框。 这将显示依赖于该函数的所有对象和该函数依赖的所有对象。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

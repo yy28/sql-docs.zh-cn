@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020800"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599095"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>数据库镜像 - 建立会话 - Windows 身份验证
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020800"
   
 4.  若要将主体服务器设置为镜像数据库中的伙伴，请连接到镜像服务器，然后执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     其中，*<database_name>* 是要镜像的数据库的名称（此名称在两个伙伴上相同），*<server_network_address>* 是主体服务器的服务器网络地址。  
+     其中，_\<database\_name\>_ 是要镜像的数据库的名称（此名称在两个伙伴上相同），_\<server\_network\_address\>_ 是主体服务器的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
+     其中，_system-address>\<_ 是明确标识目标计算机系统的字符串，_port>\<_ 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   
      例如，在镜像服务器实例中，下面的 ALTER DATABASE 语句将伙伴设置为原始主体服务器实例。 数据库名称为 **AdventureWorks**，系统地址为 DBSERVER1（伙伴系统的名称），伙伴数据库镜像端点使用的端口为 7022：  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020800"
   
 5.  若要将镜像服务器设置为主体数据库中的伙伴，请连接到主体服务器，然后执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET PARTNER =<server_network_address>  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      有关详细信息，请参阅步骤 4。  
   

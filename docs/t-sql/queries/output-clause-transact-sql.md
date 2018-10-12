@@ -5,9 +5,7 @@ ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OUTPUT_TSQL
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e433b736a9c129eb5a43ebf8bf1ffb7d653527d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088359"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47629245"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +134,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  column_name  
- 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED.column_name******。  
+ 显式列引用。 任何对正在修改的表的引用都必须使用相应的 INSERTED 或 DELETED 前缀正确限定，例如：INSERTED.column\_name。  
   
  $action  
  仅可用于 MERGE 语句。 在 MERGE 语句的 OUTPUT 子句中指定一个 nvarchar(10) 类型的列，该子句为每行返回以下三个值之一：“INSERT”、“UPDATE”或“DELETE”，返回哪个值取决于对该行执行的操作。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table_variable****** | output_table } 子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
+ OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { \@table\_variable | output\_table }子句可以在单个 INSERT、UPDATE、DELETE 或 MERGE 语句中进行定义。  
   
 > [!NOTE]  
 >  除非另行指定，否则，对 OUTPUT 子句的引用将同时引用 OUTPUT 子句和 OUTPUT INTO 子句。  

@@ -1,31 +1,32 @@
 ---
-title: PolyBase 受版本控制的功能摘要 | Microsoft Docs
+title: PolyBase 功能和限制 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc95156f93b6b87d317348f56e1b06f57439ada2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102105"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848275"
 ---
-# <a name="polybase-versioned-feature-summary"></a>PolyBase 受版本控制的功能摘要
+# <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
+
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
 可用于 SQL Server 产品和服务的 PolyBase 功能摘要。  
   
-## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要  
- 此表概述了 PolyBase 的主要功能以及提供这些功能的产品。  
+## <a name="feature-summary-for-product-releases"></a>产品版本的功能摘要
+
+此表概述了 PolyBase 的主要功能以及提供这些功能的产品。  
   
 ||||||
 |-|-|-|-|-|   
@@ -41,8 +42,8 @@ ms.locfileid: "43102105"
 |从 Azure Data Lake Store 导出数据|否|否|是|否|
 |从 Microsoft 的 BI 工具运行 PolyBase Queries|是|否|是|是|   
 
-
 ## <a name="pushdown-computation-supported-t-sql-operators"></a>下推计算支持 T-SQL 运算符
+
 在 SQL Server 和 APS 中，不是所有 T-SQL 运算符都可下推到 hadoop 群集。 下表列出了所有支持的运算符和不支持运算符的子集。 
 
 ||||
@@ -56,7 +57,38 @@ ms.locfileid: "43102105"
 |排序|否|否|
 
 部分聚合意味着一旦数据到达 SQL Server，必须立即发生最终聚合，但是一部分聚合发生在 Hadoop 中。 这是在大规模并行处理系统中计算聚合的一种常见方法。  
+
+## <a name="known-limitations"></a>已知的限制
+
+PolyBase 具有以下限制：
+
+- 在 SQL Server 中最大行大小（包括可变长度列的全长）不能超过 32 KB，在 Azure SQL 数据仓库中不能超过 1 MB。
+
+- PolyBase 不支持 Hive 0.12+ 数据类型（即 Char()、VarChar()）
+
+- 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
+
+- 无法读取或写入 Hadoop 中的静态加密数据。 这包括 HDFS 加密区域或透明加密。
+
+- 如果已启用 KNOX，则 PolyBase 无法连接 Hortonworks 实例。
+
+- 如果使用事务为 true 的 Hive 表，PolyBase 将无法访问 Hive 表目录中的数据。
+
+<!--SQL Server 2016-->
+::: moniker range="= sql-server-2016 || =sqlallproducts-allversions"
+
+- [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+::: moniker-end
+
+- TBD：行宽
+- TBD：类型映射
+- TBD：身份验证
+- TBD：排序规则 
+- TBD：下推  
+
+## <a name="security-and-authentication"></a>安全性和身份验证 
+
 ## <a name="see-also"></a>另请参阅  
- [PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
-  
-  
+
+[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  

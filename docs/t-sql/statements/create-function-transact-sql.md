@@ -36,12 +36,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4e29041776bb0b4c9edde3d2e839b89b8e88100a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55bbcbb08d9062d4eb8402a8c15dd243aa9b6a98
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596875"
+ms.locfileid: "47864285"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -338,7 +338,7 @@ RETURNS return_data_type
  *select_stmt*  
  定义内联表值函数返回值的单个 SELECT 语句。  
   
- ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“有关使用排序顺序的指南”部分。  
+ ORDER (\<order_clause>) 指定从表值函数中返回结果的顺序。 有关详细信息，请参阅本主题后面的“[在 CLR 表值函数中使用排序顺序](#using-sort-order-in-clr-table-valued-functions)”部分。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name* **适用于**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   

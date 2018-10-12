@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLONEDATABASE
@@ -37,16 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-caps.latest.revision: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 00c1d492b8fd4b2315d825c2b74bac701781e9bd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258409"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666674"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +110,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令。
+> 如果有列存储索引，请参阅[在克隆数据库上使用列存储索引优化查询的注意事项](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)对列存储索引进行更新，然后再运行 DBCC CLONEDATABASE 命令。  自 SQL Server 2019 起，上文中所述的手动步骤将不再是必需的，因为 **DBCC CLONEDATABASE** 命令会自动收集此信息。
 
 有关克隆数据库的数据安全的信息，请参阅[了解克隆数据库中的数据安全](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/)。
 
@@ -175,7 +171,7 @@ DBCC CLONEDATABASE 使用源数据库的内部数据库快照来实现执行复�
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>权限  
+## <a name="permissions"></a>Permissions  
 要求具有 **sysadmin** 固定服务器角色的成员身份。
 
 ## <a name="error-log-messages"></a>错误日志消息

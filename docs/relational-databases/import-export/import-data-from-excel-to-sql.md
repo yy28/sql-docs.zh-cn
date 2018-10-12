@@ -1,26 +1,23 @@
 ---
 title: 将 Excel 数据导入 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: import-export
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8613f9fc6a92519f2ffaf584919ab3d65c88f3de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5d2947097545c2ddcd53dd9e5dda75dcd98c3769
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826445"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>将 Excel 数据导入 SQL Server 或 Azure SQL 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +68,7 @@ SSIS 或 Azure 数据工厂等复杂工具和服务的完整描述不属于本�
 ## <a name="openrowset"></a> OPENROWSET 和链接服务器
 
 > [!NOTE]
-> 在 Azure 中，OPENROWSET 和 OPENDATASOURCE 函数仅在 SQL 数据库托管实例（预览版）上可用。
+> 在 Azure 中，OPENROWSET 和 OPENDATASOURCE 函数仅在 SQL 数据库托管实例上可用。
 
 > [!NOTE]
 > 连接到 Excel 数据源的 ACE 提供程序（前身为 Jet 提供程序）旨在用于交互式客户端用途。 如果在服务器上使用 ACE 提供程序，尤其是在自动进程或并行运行的进程中，可能会发生意外结果。

@@ -5,9 +5,7 @@ ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.DATABASEUSER.MEMBERSHIP.F1
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - adding a member to a role
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84bfd4050ba971d74532f9a8b8adc6abbfae57c5
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 2ed0fb7bcc834127254a6d3298d3baba7404386c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118129"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699355"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +79,9 @@ ms.locfileid: "43118129"
   
 4.  右键单击要编辑的角色，然后选择“属性”。  
   
-5.  在“服务器角色属性 - server_role_name”对话框的“成员”页中单击“添加”。  
+5.  在“服务器角色属性 - _server\_role\_name_”对话框的“成员”页中，单击“添加”。  
   
-6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - server_role_name”对话框。  
+6.  在“选择服务器登录名或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该服务器角色的登录名或服务器角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“服务器角色属性 - _server\_role\_name_”对话框。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -104,9 +101,9 @@ ms.locfileid: "43118129"
   
 7.  右键单击要编辑的角色，然后选择“属性”。  
   
-8.  在“数据库角色属性 - database_role_name”对话框的“常规”页中，单击“添加”。  
+8.  在“数据库角色属性 - _database\_role\_name_”对话框的“常规”页中，单击“添加”。  
   
-9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - database_role_name”对话框。  
+9. 在“选择数据库用户或角色”对话框的“输入要选择的对象名称(示例)”下，输入要添加到该数据库角色的登录名或数据库角色。 或者，单击 **“浏览...”** ，然后在 **“浏览对象”** 对话框中选择任意对象或所有可用对象。 单击“确定”以返回“数据库角色属性 - _database\_role\_name_”对话框。  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_SERVER_AUDIT_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT statement
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
-caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 314e7c2c454c7ef885b66340c9a609cd1ab15125
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 5f5eea2555792f5c25338407144df53d5784ed39
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756556"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,10 +82,10 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > 在 Azure SQL 数据库托管实例中，SQL 审核在服务器一级运行，并在 Azure Blob 存储中存储 `.xel` 文件。
   
- FILEPATH = 'os_file_path'****  
+ FILEPATH **= '** os\_file\_path **'**  
  审核记录的路径。 文件名是基于审核名称和审核 GUID 生成的。  
   
- MAXSIZE =max_size  
+ MAXSIZE **=** max\_size  
  指定审核文件可增大到的最大大小。 max_size 值必须是后跟 MB、GB、TB 或 UNLIMITED 的整数。 可以为 max_size 指定的最小大小为 2 MB，最大大小为 2,147,483,647 TB。 如果指定为 UNLIMITED，则文件将增长到磁盘变满为止。 指定一个小于 2 MB 的值将引发错误 MSG_MAXSIZE_TOO_SMALL。 默认值为 UNLIMITED。  
   
  MAX_ROLLOVER_FILES =integer | UNLIMITED  
@@ -101,7 +98,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE = { ON | OFF }  
  此选项会按 MAXSIZE 值为磁盘上的文件预先分配大小。 仅在 MAXSIZE 不等于 UNLIMITED 时适用。 默认值为 OFF。  
   
- QUEUE_DELAY =integer  
+ QUEUE_DELAY = integer  
  确定在强制处理审核操作之前可能经过的时间（以毫秒为单位）。 值 0 指示同步传递。 可设置的最小延迟值为 1000（1 秒），这是默认值。 最大值为 2,147,483,647（2,147,483.647 秒或者 24 天 20 小时 31 分钟 23.647 秒）。 指定无效数字将引发 MSG_INVALID_QUEUE_DELAY 错误。  
   
  ON_FAILURE = { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

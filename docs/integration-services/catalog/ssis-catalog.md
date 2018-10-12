@@ -5,25 +5,22 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085769"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864295"
 ---
 # <a name="ssis-catalog"></a>SSIS 目录
   **SSISDB**目录是使用已部署到 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器的 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 项目的中心点。 例如，您可以设置项目和包参数，配置环境以便为包指定运行时值，执行包并对包进行故障排除，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 服务器操作。  
@@ -602,7 +599,7 @@ ms.locfileid: "39085769"
 > -   将 SSISDB 添加到 Always On 可用性组后，必须为 Always On 启用 SSIS 支持。  
 
 > [!NOTE]
-> 若要详细了解此过程，请参阅 SQL Server MVP Marcos Freccia 发布的以下演练及附加屏幕截图：[将 SSISDB 添加到 SQL Server 2016 的 AG](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)。
+> 若要详细了解此过程，请参阅数据平台 MVP Marcos Freccia 发布的以下演练及附加屏幕截图：[将 SSISDB 添加到 SQL Server 2016 的 AG](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/)。
 
 ####  <a name="Step1"></a> 步骤 1：创建 Integration Services 目录  
   

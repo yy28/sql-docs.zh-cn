@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410964"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613125"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>权限：GRANT、DENY、REVOKE（Azure SQL 数据仓库、并行数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] securable ON 子句描述要授予、拒绝授予或撤消权限的安全对象参数。  
   
- \<class_type> 安全对象的类类型。 它可以是 LOGIN、DATABASE、OBJECT、SCHEMA、ROLE 或 USER。 此外，可向 SERVERclass_type 授予权限，但没有为这些权限指定 SERVER。 权限包含单词 DATABASE（例如 ALTER ANY DATABASE）时，不指定 DATABASE。 如果未指定 class_type，并且权限类型不限于服务器或数据库类，则该类假定为 OBJECT。  
+ \<class_type> 安全对象的类类型。 它可以是 LOGIN、DATABASE、OBJECT、SCHEMA、ROLE 或 USER。 此外，可向 **SERVER**_class\_type_ 授予权限，但没有为这些权限指定 SERVER。 权限包含单词 DATABASE（例如 ALTER ANY DATABASE）时，不指定 DATABASE。 如果未指定 class_type，并且权限类型不限于服务器或数据库类，则该类假定为 OBJECT。  
   
  securable  
  要授予、拒绝授予或撤销权限的登录名、数据库、表、视图、架构、过程、角色或用户。 可使用 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) 中所述的三部分命名规则来指定对象名称。  

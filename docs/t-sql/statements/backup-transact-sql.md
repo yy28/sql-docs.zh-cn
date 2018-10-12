@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60fae479512b89afe2d9499716071a9376edd439
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d35448aeeaba9815fbbc983bcb59e01d3e930476
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40406474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760985"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -81,7 +78,7 @@ ms.locfileid: "40406474"
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -213,7 +210,8 @@ LOG
 > [!NOTE]  
 >  执行典型日志备份后，如果没有指定 `WITH NO_TRUNCATE` 或 `COPY_ONLY`，某些事务日志记录将变为不活动状态。 一个或多个虚拟日志文件中的所有记录变为不活动状态后，日志将被截断。 如果日志在常规日志备份后未被截断，则可能是某些操作延迟了日志截断。 有关详细信息，请参阅[可能延迟日志截断的因素](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation)。  
   
-{ database_name | @database_name_var } 是备份事务日志、部分数据库或完整的数据库时所用的源数据库 *。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量***。  
+{ database\_name | **@**_databasename\_var\__ }   
+备份事务日志、部分数据库或完整的数据库时所用的源数据库。 如果作为变量 (@database\_name\_var) 提供，则可以将此名称指定为字符串常量 (@database\_name\_var=databasename) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
 > [!NOTE]  
 > 不能备份数据库镜像伙伴关系中的镜像数据库。  
@@ -221,10 +219,10 @@ LOG
 \<file_or_filegroup> [ **,**...*n* ]  
 只能与 BACKUP DATABASE 一起使用，用于指定某个数据库文件或文件组包含在文件备份中，或指定某个只读文件或文件组包含在部分备份中。  
   
-FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
+FILE **=** { logical_file_name | **@** logical\_file\_name\_var }  
 文件或变量的逻辑名称，其值等于要包含在备份中的文件的逻辑名称。  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { logical\_filegroup\_name | **@** logical\_filegroup\_name\_var }  
 文件组或变量的逻辑名称，其值等于要包含在备份中的文件组的逻辑名称。 在简单恢复模式下，只允许对只读文件组执行文件组备份。  
   
 > [!NOTE]  
@@ -235,7 +233,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
   
 有关详细信息，请参阅[完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和[备份文件和文件组 (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。  
   
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { logical\_filegroup\_name | **@** logical\_filegroup\_name\_var } [ **,**...n ] ]  
 指定部分备份。 部分备份包括数据库中的所有读/写文件：主文件组和任何读/写辅助文件组，以及任何指定的只读文件或文件组。  
   
 READ_WRITE_FILEGROUPS  
@@ -244,7 +242,7 @@ READ_WRITE_FILEGROUPS
 > [!IMPORTANT]  
 > 使用 FILEGROUP 而不是 READ_WRITE_FILEGROUPS 显式列出读/写文件组将会创建文件备份。  
   
-FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP = { logical_filegroup_name | **@** logical\_filegroup\_name\_var }  
 只读文件组或变量的逻辑名称，其值等于要包含在部分备份中的只读文件组的逻辑名称。 有关详细信息，请参阅本主题前面的“\<file_or_filegroup>”。
   
 *n*  
@@ -258,9 +256,10 @@ TO \<backup_device> [ ,...n ] 指示附带的[备份设备](../../relational-dat
 
 指定用于备份操作的逻辑备份设备或物理备份设备。  
   
-{ logical_device_name | @logical_device_name_var } 适用范围：SQL Server 是要将数据库备份到的备份设备的逻辑名称 *。逻辑名称必须遵守标识符规则。如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量 (@logical_device_name_var*= logical backup device name) 或任何字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+{ logical_device_name | **@** logical\_device\_name\_var } 适用范围：SQL Server   
+要将数据库备份到的备份设备的逻辑名称。 逻辑名称必须遵守标识符规则。 如果作为变量 (@logical_device_name_var) 提供，则可以将该备份设备名称指定为字符串常量（@logical\_device\_name\_var= 逻辑备份设备名称）或任何字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
-{ DISK | TAPE | URL} = { 'physical_device_name' | *@***physical_device_name_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL****。 
+{ DISK | TAPE | URL} **=** { **'** physical\_device\_name **'** | **@** physical\_device\_name\_var | 'NUL' } 适用范围：磁盘、磁带和用于 SQL Server 的 URL。 
 指定磁盘文件或磁带设备，或者 Microsoft Azure 存储服务。 此 URL 格式用于创建到 Microsoft Azure 存储服务的备份。 有关详细信息和示例，请参阅[使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。 有关教程的信息，请参阅[教程：SQL Server 备份和还原到 Microsoft Azure Blob 存储服务](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。 
 
 > [!NOTE] 
@@ -371,13 +370,13 @@ COMPRESSION
 NO_COMPRESSION  
 显式禁用备份压缩。  
   
-DESCRIPTION = { 'text' | @text_variable }****  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { backup_set_name | **@** backup\_set\_var }  
 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。  
   
-{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *天数* }  
+{ EXPIREDATE **='** date **'** | RETAINDAYS **=** days }  
 指定允许覆盖该备份的备份集的日期。 如果同时使用这两个选项，RETAINDAYS 的优先级别将高于 EXPIREDATE。  
   
 如果这两个选项均未指定，则过期日期由 mediaretention 配置设置确定。 有关详细信息，请参阅 [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)版本的组合自动配置的最大工作线程数。   
@@ -385,9 +384,10 @@ NAME **=** { *backup_set_name* | **@***backup_set_var* }
 > [!IMPORTANT]  
 > 这些选项仅仅阻止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 覆盖文件。 用其他方法仍可擦除磁带，而通过操作系统也可以删除磁盘文件。 有关过期验证的详细信息，请参阅本主题中的 SKIP 和 FORMAT。  
   
-EXPIREDATE = { 'date' | *@date_var } 指定备份何时到期并可覆盖****。如果作为变量 (@* date_var*) 提供，则该日期必须采用已配置系统日期/时间的格式，并指定为下列类型之一：  
+EXPIREDATE **=** { **'** date **'** | **@** date\_var }  
+指定备份集到期和允许被覆盖的日期。 如果作为变量 (@date\_var*) 提供，则该日期必须采用已配置系统日期/时间的格式，并指定为下列类型之一：  
   
-- 字符串常量 (@*date_var* **=** date)  
+- 字符串常量 (@date\_var = date)  
 - 字符串数据类型（ntext 或 text 数据类型除外）的变量  
 - smalldatetime  
 - datetime 变量  
@@ -402,7 +402,8 @@ EXPIREDATE = { 'date' | *@date_var } 指定备份何时到期并可覆盖****。
 > [!NOTE]  
 > 若要忽略过期日期，请使用 `SKIP` 选项。  
   
-RETAINDAYS = { days | @days_var } 指定必须经过多少天才可以覆盖该备份媒体集 *。如果作为变量 (**@***days_var*) 提供，则必须指定为整数。  
+RETAINDAYS **=** { days | **@**_daysvar\__ }  
+指定必须经过多少天才可以覆盖该备份介质集。 如果作为变量 (@days\_var) 提供，则必须指定为整数。  
   
 **媒体集选项**  
   
@@ -456,13 +457,13 @@ FORMAT
   
 指定 FORMAT 即表示 `SKIP`；`SKIP` 无需显式声明。  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { text | **@** text\_variable }  
 指定介质集的自由格式文本说明，最多为 255 个字符。  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { media_name | **@** media\_name\_variable }  
 指定整个备份介质集的介质名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 用字节数来指定物理块的大小。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。  
   
 如果要建立一个计划在 CD-ROM 上进行复制和还原的备份，请指定 BLOCKSIZE=2048。  
@@ -472,7 +473,7 @@ BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }
   
 **数据传输选项**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。  
   
 缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize。  
@@ -480,7 +481,7 @@ BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
+MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
 
 > [!NOTE]  
 > 使用 SQL 编写器服务创建备份时，如果数据库已配置 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)（文件流）或包含[内存优化文件组](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)，则恢复时的 `MAXTRANSFERSIZE` 应大于或等于创建备份时使用的 `MAXTRANSFERSIZE`。 
@@ -693,7 +694,7 @@ BACKUP 语句的 `TO` 子句中指定的每个备份设备均对应于一个媒�
 |镜像|媒体簇 1|媒体簇 2|介质簇 3|  
 |---------|---------|---------|---------|  
 |0|`Z:\AdventureWorks1a.bak`|`Z:\AdventureWorks2a.bak`|`Z:\AdventureWorks3a.bak`|  
-|@shouldalert|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
+|1|`Z:\AdventureWorks1b.bak`|`Z:\AdventureWorks2b.bak`|`Z:\AdventureWorks3b.bak`|  
   
  介质簇必须总是备份到特定镜像中的同一个设备。 因此，每次使用现有介质集时，请按照创建介质集时指定的相同顺序列出各个镜像的设备。  
   
@@ -955,7 +956,7 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -1009,7 +1010,8 @@ DATABASE
   
 还原由 BACKUP DATABASE（“数据备份”）创建的备份时，将还原整个备份。 若要从 Azure SQL 数据库托管实例自动备份还原，请参阅 [SQL 数据库还原](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
-{ database_name | @database_name_var } 是备份完整的数据库时所用的源数据库 *。如果作为变量 (**@***database_name_var) 提供，则可以将此名称指定为字符串常量 (*@database_name_var=***database name) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量***。  
+{ database_name | **@** database\_name\_var }   
+是备份完整的数据库时所用的源数据库。 如果作为变量 (@database\_name\_var) 提供，则可以将此名称指定为字符串常量 (@database\_name\_var=databasename) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
 有关详细信息，请参阅[完整文件备份 (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 和[备份文件和文件组 (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)。  
   
@@ -1061,24 +1063,24 @@ COMPRESSION
 NO_COMPRESSION  
 显式禁用备份压缩。  
   
-DESCRIPTION = { 'text' | @text_variable }****  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 指定说明备份集的自由格式文本。 该字符串最长可达 255 个字符。  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { backup_set_name | **@** backup\_set\_var }  
 指定备份集的名称。 名称最长可达 128 个字符。 如果未指定 NAME，它将为空。  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { text | **@** text\_variable }  
 指定介质集的自由格式文本说明，最多为 255 个字符。  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { media_name | **@** media\_name\_variable }  
 指定整个备份介质集的介质名称。 介质名称的长度不能多于 128 个字符，如果指定了 `MEDIANAME`，则该名称必须匹配备份卷上已存在的先前指定的介质名称。 如果未指定该选项或指定了 SKIP 选项，将不会对介质名称进行验证检查。  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 用字节数来指定物理块的大小。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 BACKUP 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。  
   
 **数据传输选项**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 指定用于备份操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。  
   
 缓冲区使用的总计空间由以下内容确定：buffercount/maxtransfersize。  
@@ -1086,7 +1088,7 @@ BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }
 > [!NOTE]  
 > 有关使用 `BUFFERCOUNT` 选项的重要信息，请参阅[不正确的 BufferCount 数据传输选项可导致 OOM 情况](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx)博客。  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
+MAXTRANSFERSIZE **=** { maxtransfersize | **@** maxtransfersize\_variable } 指定要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和备份介质之间使用的最大传输单元（字节）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
 
 > [!NOTE]  
 > 对于具有单个数据文件且支持[透明数据加密 (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) 的数据库，默认 `MAXTRANSFERSIZE` 为 65536 (64 KB)。 对于非 TDE 加密数据库，使用备份到 DISK 时，默认 `MAXTRANSFERSIZE` 为 1048576 (1 MB)，使用 VDI 或 TAPE.时为 65536 (64 KB)。
@@ -1159,7 +1161,7 @@ WITH STATS = 5;
 [还原数据库](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1171,13 +1173,13 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
+>   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
+# <a name="parallel-data-warehouse"></a>并行数据仓库
 
 创建 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库的备份并将该备份存储在设备以外的用户指定网络位置。 将此语句与 [RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md) 配合使用，用于灾难恢复或用于将数据库从一台设备复制到另一台设备。  
   
@@ -1221,12 +1223,12 @@ TO DISK = '\\\\UNC_path\\backup_directory'
 - UNC 路径和备份目录名称的最大长度为 200 个字符。  
 - 必须以 IP 地址的形式指定服务器或主机。  不能以主机名称或服务器名称的形式指定。  
   
-DESCRIPTION = **'***text***'**  
+DESCRIPTION = **'** text **'**  
 指定备份的文字描述。 文本的最大长度为 255 个字符。  
   
 描述存储在元数据中，在使用 RESTORE HEADERONLY 还原备份标头时显示。  
   
-NAME = **'***backup _name***'**  
+NAME = **'** backup \_name **'**  
 指定备份的名称。 备份名称可以与数据库名称不同。  
   
 - 名称最长可达 128 个字符。  

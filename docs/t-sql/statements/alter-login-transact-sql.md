@@ -5,9 +5,7 @@ ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9faa9de82ed9b5db0ba2ccac071d038fb430f096
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c0097d1b2b6accad7283a1f97d4f28f9ec289c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061570"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749081"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,12 +130,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  启用或禁用此登录名。 禁用登录名不会影响已连接登录名的行为。 （使用 `KILL` 语句终止现有连接。）禁用的登录名将保留它们的权限，且仍然可以模拟。  
   
- PASSWORD ='password'****  
+ PASSWORD ='password'  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定正在更改的登录名的密码。 密码是区分大小写的。  
   
  与 SQL 数据库持续保持活动连接需要至少每隔 10 小时进行重新授权（由数据库引擎执行）。 数据库引擎使用最初提交的密码尝试重新授权，且无需用户输入。 出于性能原因，在 SQL 数据库中重置密码时，连接将不会重新进行身份验证，即使该连接因连接池而重置。 这与本地 SQL Server 的行为不同。 如果自最初授权连接时已更改密码，则必须终止连接，并使用新密码建立新连接。 具有 KILL DATABASE CONNECTION 权限的用户可使用 KILL 命令，显式终止与 SQL 数据库的连接。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)。  
   
- PASSWORD =hashed_password  
+ PASSWORD **=**_hashed\_password_  
  **适用范围**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
  仅适用于 HASHED 关键字。 指定要创建的登录名的密码的哈希值。  
@@ -152,7 +149,7 @@ ALTER LOGIN login_name
   
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 指定在 PASSWORD 参数后输入的密码已经过哈希运算。 如果未选择此选项，则在将密码存储到数据库之前，对其进行哈希运算。 此选项只能用于在两台服务器之间同步登录名。 切勿使用 HASHED 选项定期更改密码。  
   
- OLD_PASSWORD ='oldpassword'****  
+ OLD_PASSWORD ='oldpassword'  
  仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名。 要指派新密码的登录的当前密码。 密码是区分大小写的。  
   
  MUST_CHANGE  
@@ -300,7 +297,7 @@ GO
 ```  
   
 ### <a name="f-unlocking-a-login"></a>F. 解除锁定登录名  
- 若要解除锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，请执行以下语句，并将 **** 替换为所需帐户密码。  
+ 若要解除锁定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名，请执行以下语句，并将 \*\*\*\* 替换为所需帐户密码。  
   
   
 ```sql  

@@ -5,9 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - users [SQL Server]
 ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
-caps.latest.revision: 111
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e044f1555019aca5f50694f1367ee79b6237cc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 533622016967deef4f1fbcb4ead0c17975910899
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43094851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618085"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +162,7 @@ CREATE USER user_name
  指定在此数据库中用于识别该用户的名称。 *user_name* 为 **sysname**。 它的长度最多是 128 个字符。 在创建基于 Windows 主体的用户时，除非指定其他用户名，否则 Windows 主体名称将成为用户名。  
   
  LOGIN *login_name*  
- 指定要为其创建数据库用户的登录名。 *login_name* 必须是服务器中的有效登录名。 可以是基于 Windows 主体（用户或组）的登录名，也可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 当此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进入数据库时，它将获取正在创建的这个数据库用户的名称和 ID。 在创建从 Windows 主体映射的登录名时，请使用格式 [\<domainName>\\\<loginName>]****。 有关示例，请参阅[语法摘要](#SyntaxSummary)。  
+ 指定要为其创建数据库用户的登录名。 *login_name* 必须是服务器中的有效登录名。 可以是基于 Windows 主体（用户或组）的登录名，也可以是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的登录名。 当此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录名进入数据库时，它将获取正在创建的这个数据库用户的名称和 ID。 在创建从 Windows 主体映射的登录名时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。  
   
  如果 CREATE USER 语句是 SQL 批处理中唯一的语句，则 Windows Azure SQL Database 将支持 WITH LOGIN 子句。 如果 CREATE USER 语句不是 SQL 批处理中唯一的语句或在动态 SQL 中执行，则不支持 WITH LOGIN 子句。  
   
@@ -173,7 +170,7 @@ CREATE USER user_name
  指定服务器为此数据库用户解析对象名时将搜索的第一个架构。  
   
  '*windows_principal*'  
- 指定正为其创建数据库用户的 Windows 主体。 *windows_principal* 可以是 Windows 用户或 Windows 组。 即使 *windows_principal* 没有登录名，也会创建该用户。 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果 *windows_principal* 没有登录名，Windows 主体必须通过有登录名的 Windows 组中的成员身份在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中进行身份验证，或者连接字符串必须将包含的数据库指定为初始目录。 在从 Windows 主体创建用户时，请使用格式 [\<domainName>\\\<loginName>]****。 有关示例，请参阅[语法摘要](#SyntaxSummary)。 基于 Active Directory 用户的用户的名称限制为少于 21 个字符。    
+ 指定正为其创建数据库用户的 Windows 主体。 *windows_principal* 可以是 Windows 用户或 Windows 组。 即使 *windows_principal* 没有登录名，也会创建该用户。 连接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，如果 *windows_principal* 没有登录名，Windows 主体必须通过有登录名的 Windows 组中的成员身份在[!INCLUDE[ssDE](../../includes/ssde-md.md)]中进行身份验证，或者连接字符串必须将包含的数据库指定为初始目录。 在从 Windows 主体创建用户时，请使用格式 [\<domainName\>\\\<loginName\>]。 有关示例，请参阅[语法摘要](#SyntaxSummary)。 基于 Active Directory 用户的用户的名称限制为少于 21 个字符。    
   
  '*Azure_Active_Directory_principal*'  
  适用范围：[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]。  

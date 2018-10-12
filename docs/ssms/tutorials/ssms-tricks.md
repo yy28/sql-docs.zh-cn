@@ -6,7 +6,6 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: Tutorial
-ms.suite: sql
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864385"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
 本教程将提供一些使用 SQL Server Management Studio (SSMS) 的其他技巧。 本文介绍如何： 
@@ -83,12 +82,19 @@ ms.locfileid: "40020671"
 7. 突出显示除“更改数据库”命令之外的所有内容，然后选择“注释”按钮：
 
     ![注释全部内容](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > 注释的文本的键盘快捷方式是 CTRL + K，CTRL + C。 
 
 8. 突出显示文本的“更改数据库”部分，然后选择工具栏中的“取消注释”按钮以取消注释：
 
     ![取消注释文本](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > 取消注释的文本的键盘快捷方式是 CTRL + K，CTRL + U。 
+    
 9. 选择“执行”运行取消注释的文本部分。 
+
 
 ## <a name="indent-your-text"></a>缩进文本
 可使用工具栏上的缩进按钮增加或减少文本的缩进。 

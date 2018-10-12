@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677931"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -74,7 +71,7 @@ ms.locfileid: "43348368"
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -726,7 +723,7 @@ RESTORE DATABASE Sales
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />数据仓库</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
 > </tr>
 > </table>
 
@@ -855,7 +852,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > 此视图可能会显示两个还原请求。 一个是客户端发送的原始 RESTORE 语句，另一个是在客户端连接失败时仍执行的后台 RESTORE 语句。
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -867,13 +864,13 @@ WHERE r.command = 'RESTORE DATABASE'
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><strong><em>* SQL Parallel<br />数据仓库*</em></strong></th>
+>   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL 并行数据仓库
+# <a name="parallel-data-warehouse"></a>并行数据仓库
 
 
 将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE（并行数据仓库）](../../t-sql/statements/backup-transact-sql.md)命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。  

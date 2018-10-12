@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653410"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 发行说明
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +28,9 @@ ms.locfileid: "38041005"
 **试用 SQL Server！**
 - [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [下载 SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![创建虚拟机](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [启动具有 SQL Server 2017 的虚拟机](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> SQL Server 2019 预览版现已推出。 有关详细信息，请参阅 [SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15)。
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 正式发布版（2017 年 10 月）
 ### <a name="database-engine"></a>数据库引擎
@@ -115,14 +116,14 @@ ms.locfileid: "38041005"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **问题和客户影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项 *。系统找不到指定文件。*
+- **问题和客户影响：** 在已安装 2016 版 TSqlLanguageService.msi 的计算机上安装（通过 SQL 安装程序或作为独立可再发行组件安装）后，系统将删除 v13.* (SQL 2016) 版 Microsoft.SqlServer.Management.SqlParser.dll 和 Microsoft.SqlServer.Management.SystemMetadataProvider.dll。 任何在这些程序集的 2016 版本上具有依赖项的应用程序都会停止工作，并且生成类似以下的错误：错误: 无法加载文件或程序集“Microsoft.SqlServer.Management.SqlParser，版本=13.0.0.0，区域性=中性，PublicKeyToken=89845dcd8080cc91”或其某个依赖项 *。系统找不到指定文件。
 
    此外，尝试重新安装 2016 版 TSqlLanguageService.msi 也会失败，并且会看到以下消息：无法安装 Microsoft SQL Server 2016 T-SQL 语言服务，因为计算机上已安装更高版本。
 
 - **解决方法**：要解决此问题并修复依赖于 v13 版程序集的应用程序，请执行下列步骤：
 
    1. 转到“添加/删除程序”
-   2. 找到 Microsoft SQL Server vNext T-SQL 语言服务 CTP2.1，右键单击它，然后选择“卸载”。
+   2. 找到 Microsoft SQL Server 2019 T-SQL 语言服务 CTP2.1，右键单击它，然后选择“卸载”。
    3. 删除组件后，修复已损坏的应用程序，或重新安装适当版本的 TSqlLanguageService.MSI。
 
    此解决方法将删除这些程序集的 v14 版本，因此任何依赖 v14 版本的应用程序都无法再正常运行。 如果需要这些程序集，则需单独安装，无需并行安装任何 2016 版。

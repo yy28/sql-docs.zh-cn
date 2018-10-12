@@ -1,11 +1,10 @@
 ---
 title: 联机索引操作准则 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b37a9c192d17275deb4d37ac244f45ad402f8b4b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8b2947f9e9d3a6ba075bfe1a87d5f76cdbcb84c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059669"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730997"
 ---
 # <a name="guidelines-for-online-index-operations"></a>联机索引操作准则
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43059669"
 -   如果表包含 LOB 数据类型，但索引定义中未使用这些列中的任何列作为键或非键（包含性）列，则可以联机创建非唯一的非聚集索引。  
   
 -   无法为本地临时表联机创建、重新生成或删除索引。 全局临时表的索引则没有此限制。
-- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)。 
+- 发生意外故障、数据库故障转移或使用 PAUSE 命令后，索引可从其停止的位置继续执行。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 > [!NOTE]  
 >  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的各版本支持的功能列表，请参阅[各个版本支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
@@ -94,7 +91,7 @@ ms.locfileid: "43059669"
 ## <a name="resumable-index-considerations"></a>可恢复索引注意事项
 
 > [!NOTE]
-> 可恢复索引选项适用于 SQL Server（从 SQL Server 2017 开始）（仅限索引重新生成）和 SQL 数据库（创建非聚集索引和索引重新生成）。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)（目前仅提供 SQL 数据库的公共预览版）和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
+> 可恢复索引选项适用于 SQL Server（从 SQL Server 2017 开始）（仅限索引重新生成）和 SQL 数据库（创建索引和索引重新生成）。 请参阅[创建索引](../../t-sql/statements/create-index-transact-sql.md)（目前提供 SQL 数据库和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的公共预览版）和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
 执行可恢复的联机索引创建或重新生成操作时，请参考下列准则：
 -   管理、规划和延长索引维护时段。 为适应维护时段，可多次暂停并重启索引创建或重新生成操作。
@@ -118,7 +115,7 @@ ms.locfileid: "43059669"
 ## <a name="online-default-options"></a>联机默认选项 
 
 > [!IMPORTANT]
-> 这些选项处于公共预览状态。
+> 这些选项处于 SQL 数据库和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 的公共预览状态。
 
 通过设置 ELEVATE_ONLINE 或 ELEVATE_RESUMABLE 数据库范围的配置选项，可以在数据库级别设置默认的“联机”或“可恢复”选项。 使用这些默认选项，可避免意外执行使数据库表脱机的操作。 这两个选项都会导致引擎自动将特定操作提升为联机或可恢复执行。  
 可使用 [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 命令将任一选项设为 FAIL_UNSUPPORTED、WHEN_SUPPORTED 或 OFF。 可为“联机”和“可恢复”设置不同的值。 
@@ -129,12 +126,9 @@ ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 均仅适用于分别支持联机和可恢�
 > ELEVATE_ONLINE 和 ELEVATE_RESUMABLE 不适用于 XML 索引操作。 
  
 ## <a name="related-content"></a>相关内容  
- [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+- [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
   

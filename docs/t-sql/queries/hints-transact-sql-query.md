@@ -1,13 +1,11 @@
 ---
 title: 查询提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -53,17 +51,17 @@ helpviewer_keywords:
 - MIN_GRANT_PERCENT query hint
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
+- QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: 78184096ba6466e2d4f3bb299ee416125c3d69ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684835"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +104,7 @@ ms.locfileid: "44089987"
   | NO_PERFORMANCE_SPOOL   
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
-  | PARAMETERIZATION { SIMPLE | FORCED }  
+  | PARAMETERIZATION { SIMPLE | FORCED }   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -155,7 +153,7 @@ ms.locfileid: "44089987"
   
  实际上，该查询提示不允许在查询计划中直接使用索引视图和直接在索引视图上使用索引。  
   
- 只有在查询的 SELECT 部分中直接引用视图，而且指定了 WITH (NOEXPAND) 或 WITH (NOEXPAND, INDEX( index_value [ ,...n ] ) ) 时，才不展开索引视图******。 有关查询提示 WITH (NOEXPAND) 的详细信息，请参阅 [FROM](../../t-sql/queries/from-transact-sql.md)。  
+ 只有在查询的 SELECT 部分中直接引用视图，而且指定了 WITH (NOEXPAND) 或 WITH (NOEXPAND, INDEX( index_value [ ,...n ] ) ) 时，才不展开索引视图。 有关查询提示 WITH (NOEXPAND) 的详细信息，请参阅 [FROM](../../t-sql/queries/from-transact-sql.md)。  
   
  只有语句的 SELECT 部分中的视图（包括 INSERT、UPDATE、MERGE 和 DELETE 语句中的视图）才受提示影响。  
   
@@ -241,7 +239,7 @@ ms.locfileid: "44089987"
 > 有关详细信息，请参阅[使用计划指南指定查询参数化行为](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)。
   
  SIMPLE 用于指示查询优化器尝试进行简单参数化。 FORCED 用于指示查询优化器尝试进行强制参数化。 有关详细信息，请参阅[查询处理体系结构指南中的强制参数化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查询处理体系结构指南中的简单参数化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
-  
+
  RECOMPILE  
  指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 为查询生成新的临时计划，并在查询完成执行后立即放弃该计划。 在未指定 RECOMPILE 的情况下执行同一查询时，生成的查询计划不会替换存储在缓存中的计划。 如果未指定 RECOMPILE，[!INCLUDE[ssDE](../../includes/ssde-md.md)]将缓存查询计划并重新使用它们。 在编译查询计划时，RECOMPILE 查询提示将使用查询中任意本地变量的当前值，如果查询位于存储过程中，这些当前值将传递给任意参数。  
   
@@ -252,7 +250,7 @@ ms.locfileid: "44089987"
   
  如果不能使用这样的计划，查询优化器将返回错误而不是延迟对查询执行的错误检测。 行可以包含可变长度列；[!INCLUDE[ssDE](../../includes/ssde-md.md)]允许将行大小定义为超过[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力的最大可能的大小。 通常，应用程序存储实际大小在[!INCLUDE[ssDE](../../includes/ssde-md.md)]处理能力范围内的行，而不管最大可能大小。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]遇到过长的行，则返回执行错误。  
  
-<a name="use_hint"></a> USE HINT ( 'hint_name' )****    
+<a name="use_hint"></a> USE HINT ( 'hint\_name' )    
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始）和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。
  
  按照单引号内的提示名称的指定，向查询处理器提供一个或多个其他提示。   
@@ -284,13 +282,23 @@ ms.locfileid: "44089987"
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- 在查询级别强制执行查询优化器行为，就像使用数据库兼容性级别 n 来编译该查询（其中 n 是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n 支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。   
+ 在查询级别强制执行查询优化器行为，就像使用数据库兼容性级别 n 来编译该查询（其中 n 是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n 支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
  
-    > [!NOTE]
-    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不会重写默认或旧版基数估计设置（如果它是通过数据库范围的配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的）。   
-    > 此提示仅影响查询优化器的行为。 它不会影响可能依赖于[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他功能（例如，某些数据库功能的可用性）。   
-  
-  可以使用动态管理视图 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 查询所有受支持的 USE HINT 名称的列表。    
+   > [!NOTE]
+   > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不会重写默认或旧版基数估计设置（如果它是通过数据库范围的配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的）。   
+   > 此提示仅影响查询优化器的行为。 它不会影响可能依赖于[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他功能（例如，某些数据库功能的可用性）。  
+   > 若要了解有关此提示的详细信息，请参阅[开发人员选择：提示查询执行模型](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)。
+    
+*  'QUERY_PLAN_PROFILE'      
+ 启用用于查询的轻型分析。 当包含此新提示的查询完成时，会触发一个新扩展事件：query_plan_profile。 此扩展事件公开执行统计信息和实际执行计划 XML，类似于 query_post_execution_showplan 扩展事件，但仅针对包含新提示的查询。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始）。 
+ 
+  > [!NOTE]
+  > 如果启用收集 query_post_execution_showplan 扩展事件，会向在服务器上运行的每个查询添加标准分析基础结构，因此可能会影响服务器的总体性能。      
+  > 如果启用 query_thread_profile 扩展事件集合以改为使用轻量分析基础结构，这将在很大程度上减少性能开销，但仍会影响服务器的总体性能。       
+  > 如果启用 query_plan_profile 扩展事件，将只启用通过 QUERY_PLAN_PROFILE 执行的查询的轻量分析基础结构，因此不会影响服务器上的其他工作负载。 使用此提示来分析特定查询，而不会影响服务器工作负载的其他部分。
+  > 若要了解有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
+ 
+可以使用动态管理视图 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 查询所有受支持的 USE HINT 名称的列表。    
 
 > [!TIP]
 > 提示名称不区分大小写。   
@@ -298,10 +306,10 @@ ms.locfileid: "44089987"
 > [!IMPORTANT] 
 > 某些 USE HINT 提示可能与在全局或会话级别启用的跟踪标志或与数据库作用域配置设置存在冲突。 在这种情况下，查询级别提示 (USE HINT) 将始终优先。 如果 USE HINT 与另一个查询提示或在查询级别启用（例如由 QUERYTRACEON 启用）的跟踪标志存在冲突，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将在尝试执行查询时生成错误。 
 
- USE PLAN N'xml_plan'****     
- 强制查询优化器对查询使用由 'xml_plan' 指定的现有查询计划****。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
+ USE PLAN N'xml\_plan'     
+ 强制查询优化器对查询使用由 'xml\_plan' 指定的现有查询计划。 不能使用 INSERT、UPDATE、MERGE 或 DELETE 语句来指定 USE PLAN。  
   
-TABLE HINT (exposed_object_name [ , \<table_hint> [ [, ]...n ] ] ) 将指定表提示应用于与 exposed_object_name 对应的表或视图**。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。  
+TABLE HINT (exposed\_object\_name [ **,** \<table_hint> [ [, ]...n ] ] ) 将指定表提示应用于与 exposed_object_name 对应的表或视图。 我们建议仅在[计划指南](../../relational-databases/performance/plan-guides.md)的上下文中将表提示用作查询提示。  
   
  exposed_object_name 可以为以下引用之一：  
   
@@ -311,7 +319,7 @@ TABLE HINT (exposed_object_name [ , \<table_hint> [ [, ]...n ] ] ) 将指定表�
   
  如果指定了 exposed_object_name 但未指定表提示，则将忽略在查询中指定为对象表提示的一部分的任何索引，并由查询优化器来决定索引的使用。 当您无法修改原始查询时，可以使用此方法来消除 INDEX 表提示的影响。 请参阅示例 J。  
   
-\<table_hint> ::= { [ NOEXPAND ] { INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value ) | FORCESEEK [(index_value(index_column_name [,... ] )) ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是用作与 exposed_object_name 对应的表或视图的查询提示的表提示**。 有关这些提示的说明，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
+\<table_hint> ::= { [ NOEXPAND ] { INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value ) | FORCESEEK [(index\_value(index\_column\_name [,... ] )) ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } 是作为查询提示应用于与 exposed_object_name 想对应的表或视图的表提示。 有关这些提示的说明，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
  不允许将非 INDEX、FORCESCAN 和 FORCESEEK 的表提示用作查询提示，除非该查询已经具有一个指定该表提示的 WITH 子句。 有关详细信息，请参阅“备注”。  
   

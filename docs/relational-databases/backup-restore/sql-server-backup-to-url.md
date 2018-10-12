@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175170"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614887"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +59,24 @@ ms.locfileid: "40175170"
   
  在 Azure 订阅中创建 Microsoft Azure 存储帐户是此过程中的第一步。 此存储帐户是对使用存储帐户创建的所有容器和对象具有完全管理权限的管理帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Microsoft Azure 存储帐户名称及其访问密钥值来进行身份验证，将 blob 写入到 Microsoft Azure Blob 存储服务和从中读取 blob，也可以使用特定容器上生成的共享访问签名令牌授予它读取和写入权限。 有关 Azure 存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) ；有关共享访问签名的详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。  
   
+###  <a name="blockbloborpageblob"></a> 备份到块 blob 和页 blob 
+ Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 SQL Server 备份可以使用任意 blob 类型，具体取决于所使用的 Transact-SQL 语法：如果凭据中使用了存储密钥，则将使用页 blob；如果使用了共享访问签名，则将使用块 blob。
+ 
+ 备份到块 blob 仅在 SQL Server 2016 或更高版本中可用。 如果正在运行 SQL Server 2016 或更高版本，我们建议你备份到块 blob 而不是页 blob。 主要原因是：
+- 与存储密钥相比，共享访问签名是用来授予 blob 访问权限的更为安全的方式。
+- 你可以备份到多个块 blob 以获得更好的备份和还原性能，并支持更大的数据库备份。
+- [块 blob](https://azure.microsoft.com/pricing/details/storage/blobs/) 比[页 blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/) 便宜。 
+
+备份到块 blob 时，可以指定的最大块大小为 4 MB。 单个块 blob 文件的最大大小为 4MB * 50000 = 195GB。 如果你的数据库大于 195 GB，我们建议：
+- 使用备份压缩
+- 备份到多个块 blob
+
 ###  <a name="Blob"></a> Microsoft Azure Blob 存储服务  
  **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Microsoft Azure Blob 存储服务，请首先创建一个 Microsoft Azure 存储帐户。 有关详细信息，请参阅 [创建存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
   
  **容器：** 一个容器提供对一组 Blob 的分组，并且可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Microsoft Azure Blob 存储服务，你必须至少创建根容器。 你可以在容器上生成共享访问签名令牌，并只授予其对特定容器上的对象的访问权限。  
   
- **Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 可使用以下 URL 格式寻址：https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅 [如何通过 .NET 使用 Blob 存储](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
+ **Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 可使用以下 URL 格式寻址： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅 [如何通过 .NET 使用 Blob 存储](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
   
  ![Azure Blob 存储](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   

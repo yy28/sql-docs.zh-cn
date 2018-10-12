@@ -1,5 +1,7 @@
 items:
-- name: SQL Server 机器学习
+- name: SQL Server ML 和编程扩展文档
+  href: index.md
+- name: 机器学习扩展（R、Python）
   items:
   - name: 机器学习服务（R、Python）
     href: what-is-sql-server-machine-learning.md
@@ -9,8 +11,20 @@ items:
     href: r/r-server-standalone.md
   - name: 新增功能
     href: what-s-new-in-sql-server-machine-learning-services.md
+- name: Java 扩展
+  items:
+  - name: 在 SQL 上运行 Java 代码
+    href: java/extension-java.md
+  - name: 如何从 SQL 调用 Java
+    href: java/howto-call-java-from-sql.md
+  - name: Java 示例
+    href: java/java-first-sample.md
+  - name: Java 和 SQL 数据类型
+    href: java/java-sql-datatypes.md
 - name: Install
   items:
+  - name: SQL Server 2019 中的差异
+    href: install/sql-machine-learning-services-ver15.md
   - name: 机器学习服务（R、Python）
     href: install/sql-machine-learning-services-windows-install.md
   - name: R Services
@@ -54,6 +68,8 @@ items:
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
+    - name: 创建基于分区的模型
+      href: tutorials/r-tutorial-create-models-per-partition.md
     - name: 了解数据库内分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
@@ -161,30 +177,32 @@ items:
   items:
   - name: 包管理
     items:
-    - name: 默认包
-      href: r/installing-and-managing-r-packages.md
-    - name: 获取包信息
-      href: r/determine-which-packages-are-installed-on-sql-server.md
-    - name: 安装新 Python 包
-      href: python/install-additional-python-packages-on-sql-server.md
-    - name: 安装新 R 包
-      href: r/install-additional-r-packages-on-sql-server.md
+    - name: 包管理
       items:
-      - name: 使用 R 包管理器
-        href: r/use-r-package-managers-on-sql-server.md
-      - name: 使用 T-SQL
-        href: r/install-r-packages-tsql.md
-      - name: 使用 RevoScaleR
-        href: r/use-revoscaler-to-manage-r-packages.md
+      - name: 默认包
+        href: r/installing-and-managing-r-packages.md
+      - name: 获取包信息
+        href: r/determine-which-packages-are-installed-on-sql-server.md
+      - name: 安装新 Python 包
+        href: python/install-additional-python-packages-on-sql-server.md
+      - name: 安装新 R 包
+        href: r/install-additional-r-packages-on-sql-server.md
         items:
-        - name: 启用远程 R 包管理
-          href: r/r-package-how-to-enable-or-disable.md
-        - name: 同步 R 包
-          href: r/package-install-uninstall-and-sync.md
-      - name: 创建 miniCRAN 存储库
-        href: r/create-a-local-package-repository-using-minicran.md
-      - name: 使用 R 包的提示
-        href: r/packages-installed-in-user-libraries.md
+        - name: 使用 R 包管理器
+          href: r/use-r-package-managers-on-sql-server.md
+        - name: 使用 T-SQL
+          href: r/install-r-packages-tsql.md
+        - name: 使用 RevoScaleR
+          href: r/use-revoscaler-to-manage-r-packages.md
+          items:
+          - name: 启用远程 R 包管理
+            href: r/r-package-how-to-enable-or-disable.md
+          - name: 同步 R 包
+            href: r/package-install-uninstall-and-sync.md
+        - name: 创建 miniCRAN 存储库
+          href: r/create-a-local-package-repository-using-minicran.md
+        - name: 使用 R 包的提示
+          href: r/packages-installed-in-user-libraries.md
   - name: 数据探索和建模
     items:
     - name: R 库和数据类型
@@ -213,25 +231,25 @@ items:
       href: sql-native-scoring.md
   - name: “性能”
     items:
-    - name: R 的性能优化 - 概述
+    - name: R 中的性能优化概述
       href: r/sql-server-r-services-performance-tuning.md
-    - name: R 的性能优化 - SQL Server 配置）
+    - name: 性能优化服务器配置
       href: r/sql-server-configuration-r-services.md
-    - name: R 的性能优化 - R 和数据优化
+    - name: 性能优化 - R 中的数据优化
       href: r/r-and-data-optimization-r-services.md
-    - name: R 的性能优化 - 结果
+    - name: R 中的性能优化结果
       href: r/performance-case-study-r-services.md
     - name: 使用 R 代码分析函数
       href: r/using-r-code-profiling-functions.md
   - name: Security
     items:
-    - name: SQL Server 中 R 运行时的安全注意事项
+    - name: 安全注意事项
       href: r/security-considerations-for-the-r-runtime-in-sql-server.md
     - name: R 的安全性
       href: r/security-overview-sql-server-r.md
     - name: Python 安全性
       href: python/security-overview-sql-server-python-services.md
-    - name: SQL Server Launchpad 服务帐户
+    - name: SQL Server Launchpad 帐户
       href: general/sql-server-launchpad-service-account.md
     - name: 修改 SQLRUserGroup
       href: r/modify-the-user-account-pool-for-sql-server-r-services.md
@@ -257,25 +275,32 @@ items:
       href: xe-event-predict-tsql.md
     - name: 机器学习服务的 DMV
       href: r/dmvs-for-sql-server-r-services.md
+    - name: 适用于 Python 的 DMV
+      href: python/dmvs-for-python.md
     - name: 使用 R 代码分析函数
       href: r/using-r-code-profiling-functions.md
     - name: 使用 Management Studio 中的自定义报表监视机器学习服务
       href: r/monitor-r-services-using-custom-reports-in-management-studio.md
-- name: 包参考
+- name: 参考
   href: r/machine-learning-services-r-reference.md
   items:
-  - name: MicrosoftML (SQL)
-    href: using-the-microsoftml-package.md
-  - name: RevoScaleR (SQL)
-    href: r/revoscaler-overview.md
-  - name: 用于 SQL Server 数据的 RevoScaleR 函数列表
-    href: r/scaler-functions-for-working-with-sql-server-data.md
-  - name: sqlrutils (SQL)
-    href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
-  - name: olapR (SQL)
-    href: r/how-to-create-mdx-queries-using-olapr.md
-  - name: revoscalepy (SQL)
-    href: python/what-is-revoscalepy.md
+  - name: R 包
+    href: r/machine-learning-services-r-reference.md
+    items:
+    - name: olapR (SQL)
+      href: r/how-to-create-mdx-queries-using-olapr.md
+    - name: MicrosoftML (SQL)
+      href: using-the-microsoftml-package.md
+    - name: RevoScaleR (SQL)
+      href: r/revoscaler-overview.md
+    - name: 用于 SQL Server 数据的 RevoScaleR 函数列表
+      href: r/scaler-functions-for-working-with-sql-server-data.md
+    - name: sqlrutils (SQL)
+      href: r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md
+  - name: Python 包
+    items:
+    - name: revoscalepy (SQL)
+      href: python/what-is-revoscalepy.md
 - name: Resources
   items:
   - name: 已知问题
@@ -307,9 +332,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a260cd92015fbbf8864f24ee1091fff86e892a00
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888863"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713699"

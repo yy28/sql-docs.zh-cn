@@ -1,30 +1,26 @@
 ---
 title: 配置发布和分发 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], distribution
 - distribution configuration [SQL Server replication]
 - publishing [SQL Server replication], configuring
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7314f0938cc7ef97ad87a6777f9717d33cd2905a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c5d302195025be0d9ab1e19ac0227e427e7b4bbc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087809"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832085"
 ---
 # <a name="configure-publishing-and-distribution"></a>配置发布和分发
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +65,7 @@ ms.locfileid: "39087809"
 
 2. 在分发服务器（也是发布服务器）上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。
 
-   对于 SQL 数据库托管实例（预览版）上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
+   对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 
 3. 在发布服务器上执行 [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。 对 `@dbname` 指定要发布的数据库，对 `@optname` 指定复制类型，并对 `@value` 指定值 `true`。
 
@@ -83,7 +79,7 @@ ms.locfileid: "39087809"
 
 2. 在分发服务器上，执行 [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)，同时对 `@working_directory` 指定用作默认快照文件夹的 UNC 共享。 如果分发服务器在连接到发布服务器时使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证，还必须对 `@security_mode` 指定值 `0`，并对 `@login` 和 `@password` 指定 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录信息。
 
-   对于 SQL 数据库托管实例（预览版）上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
+   对于 SQL 数据库托管实例上的分发服务器，对 `@working_directory` 使用 Azure 存储帐户，对 `@storage_connection_string` 使用存储访问密钥。 
 
 3. 在发布服务器上，对 master 数据库执行 [sp_adddistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)。 对 `@password` 指定第 1 步中使用的强密码。 发布服务器在连接到分发服务器时将使用此密码。
 

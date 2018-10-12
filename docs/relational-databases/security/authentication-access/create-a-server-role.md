@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d99c22f795ff37487a220851b0828e952b192cd
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659769"
 ---
 # <a name="create-a-server-role"></a>创建服务器角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +72,7 @@ ms.locfileid: "43118445"
   
 3.  右键单击“服务器角色”文件夹，然后选择“新建服务器角色…”。  
   
-4.  在“新建服务器角色 - server_role_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称。  
+4.  在“新建服务器角色 - server\_role\_name”对话框的“常规”页上，在“服务器角色名称”框中输入新的服务器角色的名称。  
   
 5.  在 **“所有者”** 框中，输入拥有新角色的服务器主体的名称。 或者，单击省略号 **(…)** 打开“选择服务器登录名或角色”对话框。  
   

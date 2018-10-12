@@ -1,13 +1,11 @@
 ---
 title: OData 源 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 09/17/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.ODATASOURCE.F1
@@ -15,29 +13,40 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d00e25ec5c03101ea71d6d45063d2248a0c3404
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8b0a2404d61f9eaeffae606cec86cedb1ecb491f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401429"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692125"
 ---
 # <a name="odata-source"></a>OData 源
-在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。 该组件支持 OData v3 和 v4 协议。  
+在 SSIS 包中使用 OData 源组件可以使用开放数据协议 (OData) 服务中的数据。
+
+## <a name="supported-protocols-and-data-formats"></a>支持的协议和数据格式
+
+该组件支持 OData v3 和 v4 协议。  
   
 -   对于 OData V3 协议，该组件支持 ATOM 和 JSON 数据格式。  
   
 -   对于 OData V4 协议，该组件支持 JSON 数据格式。  
 
+## <a name="supported-data-sources"></a>支持的数据源
+
 OData 源包括对以下数据源的支持：
 -   Microsoft Dynamics AX Online 和 Microsoft Dynamics CRM Online
--   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL：http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
+-   SharePoint 列表。 要查看 SharePoint 服务器上的所有列表，请使用以下 URL： http://\<server>/_vti_bin/ListData.svc。 有关 SharePoint URL 约定的详细信息，请参阅 [SharePoint Foundation REST 接口](http://msdn.microsoft.com/library/ff521587.aspx)。
 
-> [!NOTE]
+## <a name="supported-data-types"></a>支持的数据类型
+
+OData 源支持以下简单的数据类型：int、byte[]、bool、byte、DateTime、DateTimeOffset、decimal、double、Guid、Int16、Int32、Int64、sbyte、float、string 和 TimeSpan。
+
+若要发现数据源中列的数据类型，请查看 `http://<OData feed endpoint>/$metadata` 页。
+
+> [!IMPORTANT]
 > OData 源组件不支持 SharePoint 列表中的复杂类型，例如多选项。
 
 ## <a name="odata-format-and-performance"></a>OData 格式和性能
@@ -98,7 +107,7 @@ OData 源包括对以下数据源的支持：
 ## <a name="odata-source-editor-columns-page"></a>OData 源编辑器（“列”页）
   使用“OData 源编辑器”对话框的“列”页可选择要包含在输出中的外部（源）列并将它们映射到输出列。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **可用外部列**  
  查看数据源中可用源列的列表。 使用列表中的复选框可向页底部的表添加或删除列。 所选列会添加到输出中。  
   
@@ -111,7 +120,7 @@ OData 源包括对以下数据源的支持：
 ## <a name="odata-source-editor-error-output-page"></a>OData 源编辑器（“错误输出”页）
   可以使用 **“OData 源编辑器”** 对话框的 **“错误输出”** 页选择错误处理选项以及设置错误输出列的属性。  
   
-### <a name="options"></a>“常规”  
+### <a name="options"></a>选项  
  **输入/输出**  
  查看数据源的名称。  
   

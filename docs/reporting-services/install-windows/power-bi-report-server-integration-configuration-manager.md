@@ -1,22 +1,18 @@
 ---
 title: Power BI 报表服务器集成（配置管理器）| Microsoft Docs
-ms.date: 10/05/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-native
-ms.suite: pro-bi
-ms.topic: conceptual
-f1_keywords:
-- pbi
-- power bi
-- power bi integration
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 76ce650fba286a81e803a304d22ae5b30e79f3dc
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+manager: kfile
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.topic: conceptual
+ms.date: 09/17/2017
+ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759425"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
@@ -55,6 +51,9 @@ ms.locfileid: "43277793"
 1. 选择 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 集成页。
 
 2. 单击“注册 Power BI”。
+
+    >[!Note]
+    > 确保端口 443 未被阻止。
 
 3. 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 登录对话框中，键入用于登录 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]的凭据。
 

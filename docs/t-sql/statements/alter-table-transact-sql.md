@@ -1,13 +1,11 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - WAIT_AT_LOW_PRIORITY
@@ -58,17 +56,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 2eb222b681c5106c8b368b4694c82909f060fc6c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727705"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -465,12 +462,14 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
 >  
 > 无法将主键约束中包括的列从非 NULL 更改为 NULL。  
   
-如果正在修改的列使用了 `ENCRYPTED WITH` 进行加密，则可以将数据类型更改为兼容的数据类型（例如从 INT 更改为 BIGINT），但不能更改任何加密设置。  
+使用 Always Encrypted（不带安全 enclave）时，如果正在修改的列使用了“ENCRYPTED WITH”进行加密，则可以将数据类型更改为兼容的数据类型（例如从 INT 更改为 BIGINT），但不能更改任何加密设置。  
+
+使用具有安全 enclave 的 Always Encrypted 时，只要用于保护列的列加密密钥（以及新的列加密密钥，如果更改了密钥）支持 enclave 计算（使用启用了 enclave 的列主密钥进行加密），就可以更改任何加密设置。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
   
  column_name  
  要更改、添加或删除的列的名称。 column_name 最多可以包含 128 个字符。 对于使用 timestamp 数据类型创建的新列，则可以省略 column_name。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp。  
   
- [ type_schema_name. ] type_name  
+ [ _type\_schema\_name_**.** ] _type\_name_  
  更改后的列的新数据类型或添加的列的数据类型。 不能为已分区表的现有列指定 type_name。 type_name 可以是以下任何一种数据类型：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系统数据类型。  
@@ -634,7 +633,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
   
  将此参数与 SET SYSTEM_VERSIONING 参数结合使用可对现有表启用系统版本控制。 有关详细信息，请参阅[时态表](../../relational-databases/tables/temporal-tables.md)和 [Azure SQL 数据库中的时态表入门](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)。  
   
- 自 [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 起，用户将能够使用 HIDDEN 标志标记一个或两个时间段列，以隐式隐藏这些列，这样 SELECT \* FROM\<table> 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。  
+ 自 [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 起，用户将能够使用 **HIDDEN** 标志标记一个或两个时间段列，以隐式隐藏这些列，这样 **SELECT \* FROM**_\<table/>_ 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。  
   
 DROP  
 指定删除一个或多个列定义、计算列定义或者表约束，或删除系统将用于系统版本控制的列的规范。  
@@ -716,7 +715,7 @@ COLUMN column_name
 > [!NOTE]  
 > 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的各版本中均不提供联机索引操作。 有关详细信息，请参阅 [SQL Server 2016 的各版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
- MOVE TO { partition_scheme_name(column_name [ 1, ... n] ) | filegroup | "default" }**  
+ MOVE TO { _partition\_scheme\_name_**(**_column\_name_ [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定一个位置以移动聚集索引的叶级别中的当前数据行。 表被移至新位置。 此选项仅适用于创建聚集索引的约束。  
@@ -753,7 +752,7 @@ COLUMN column_name
   
  指定[!INCLUDE[ssDE](../../includes/ssde-md.md)]是否跟踪哪些更改跟踪列已更新。 默认值为 OFF。  
   
- SWITCH [ PARTITION source_partition_number_expression ] TO [ schema_name. ] target_table [ PARTITION target_partition_number_expression ]  
+ SWITCH [ PARTITION *source_partition_number_expression* ] TO [ _schema\_name_**.** ] *target_table* [ PARTITION *target_partition_number_expression* ]  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  用下列方式之一切换数据块：  
@@ -1446,6 +1445,33 @@ ALTER TABLE T3
 ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;  
 GO  
 ```  
+#### <a name="d-encrypting-a-column"></a>D. 加密列  
+ 以下示例演示如何使用[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 加密列。 
+
+首先，将创建没有任何加密列的表。  
+  
+```sql  
+CREATE TABLE T3  
+(C1 int PRIMARY KEY,  
+C2 varchar(50) NULL,  
+C3 int NULL,  
+C4 int ) ;  
+GO  
+```  
+  
+ 接着，使用列加密密钥（名为 CEK1）和随机加密来加密列“C2”。 请注意，要使下面的语句成功：
+- 列加密密钥必须已启用 enclave，即必须使用允许 enclave 计算的列主密钥进行加密。
+- 目标 SQL Server 实例必须支持具有安全 enclave 的 Always Encrypted。
+- 必须通过为具有安全 enclave 的 Always Encrypted 设置的连接且使用受支持的客户端驱动程序发出该语句。
+- 调用应用程序必须有权访问列主密钥，用来保护 CEK1。
+
+```sql  
+ALTER TABLE T3  
+ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;  
+GO  
+```  
+
+
   
 ###  <a name="alter_table"></a>更改表定义  
  本节中的示例说明如何更改表定义。  

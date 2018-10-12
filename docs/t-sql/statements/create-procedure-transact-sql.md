@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PROC
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac2db40895cfc8690151b84beacb12f2fb8e3fac
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780805"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +178,7 @@ OR ALTER
   
  如果指定了 FOR REPLICATION，则无法声明参数。  
   
- [ type_schema_name***.* ] data_type  
+ [ _type\_schema\_name_**.** [ =] data_type  
  参数的数据类型以及该数据类型所属的架构。  
   
 针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 过程的准则：  
@@ -245,7 +242,7 @@ FOR REPLICATION
  { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }  
  构成过程主体的一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句。 您可以使用可选的 BEGIN 和 END 关键字将这些语句括起来。 有关信息，请参阅后面的“最佳实践”、“一般备注”以及“限制和局限”部分。  
   
-EXTERNAL NAME assembly_name.class_name.method_name  
+EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  指定 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 程序集的方法，以便 CLR 过程引用。 class_name 必须为有效的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符，并且必须作为类存在于程序集中。 如果类包含一个使用句点 (.) 分隔命名空间各部分的限定命名空间的名称，则必须使用方括号 ([]) 或引号 ("") 将类名称分隔开。 指定的方法必须为该类的静态方法。  

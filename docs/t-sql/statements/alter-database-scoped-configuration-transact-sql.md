@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410967"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741225"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ WHEN_SUPPORTED
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+适用对象*：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于通常支持可恢复的操作。 
 
@@ -242,7 +239,7 @@ ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库�
   
 **DacFx**  
   
- 由于 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL 数据库和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 的导出无法导入到下级服务器。  
+ 由于 ALTER DATABASE SCOPED CONFIGURATION 是 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 的导出无法导入到下级服务器。  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +247,7 @@ ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库�
 
 **ELEVATE_RESUMABLE**
 
-此选项仅适用于支持 WITH(ONLINE= 语法的 DDL 语句。 不影响 XML 索引 
-
+此选项仅适用于支持 WITH(RESUMABLE= syntax) 的 DDL 语句。 不影响 XML 索引 
   
 ## <a name="metadata"></a>元数据  
 
@@ -356,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>I.  设置 ELEVATE_ONLINE 
 
-**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+适用范围：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 为公共预览版功能
  
 此示例将 ELEVATE_ONLINE 设置为 FAIL_UNSUPPORTED。  tsqlCopy 
 
@@ -366,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>J. 设置 ELEVATE_RESUMABLE 
 
-**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+适用范围：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
 此示例将 ELEVEATE_RESUMABLE 设置为 WHEN_SUPPORTED。  tsqlCopy 
 
@@ -401,8 +397,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [联机索引操作准则](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>详细信息  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [数据库和文件目录视图](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [数据库和文件目录视图](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [服务器配置选项](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [联机索引操作的工作方式](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [联机执行索引操作](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

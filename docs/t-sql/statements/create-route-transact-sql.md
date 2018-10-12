@@ -5,9 +5,7 @@ ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_ROUTE_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - activating routes
 - CREATE ROUTE statement
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
-caps.latest.revision: 42
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0046c563fdf979b3d2ce00f1e4ccac74eb133507
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452321"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595685"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -70,10 +67,10 @@ WITH
  替换为  
  介绍用于定义要创建的路由的子句。  
   
- SERVICE_NAME = 'service_name'****  
+ SERVICE_NAME = **'** service\_name **'**  
  指定此路由指向的远程服务的名称。 service_name 必须与远程服务使用的名称完全匹配。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 service_name 匹配。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 如果省略 SERVICE_NAME，则此路由将与任何服务名称匹配，但比指定 SERVICE_NAME 的路由的匹配优先级低。 服务名称为 'SQL/ServiceBroker/BrokerConfiguration' 的路由是指向 Broker Configuration Notice 服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
- BROKER_INSTANCE = 'broker_instance_identifier'****  
+ BROKER_INSTANCE = **'** broker\_instance\_identifier **'**  
  指定承载目标服务的数据库。 broker_instance_identifier 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
 ```  
@@ -84,15 +81,15 @@ WHERE database_id = DB_ID()
   
  如果省略 BROKER_INSTANCE 子句，则此路由将与任何 Broker 实例匹配。 如果会话没有指定 Broker 实例，则匹配任何 Broker 实例的路由的匹配优先级高于具有显式 Broker 实例的路由的匹配优先级。 对于指定了 Broker 实例的会话，具有 Broker 实例的路由的优先级高于匹配任何 Broker 实例的路由的优先级。  
   
- LIFETIME =route_lifetime  
+ LIFETIME **=** route\_lifetime  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则 route_lifetime 为 NULL，并且路由始终不过期。  
   
- ADDRESS ='next_hop_address'****  
+ ADDRESS **='** next\_hop\_address **'**  
 对于 SQL 数据库托管实例，`ADDRESS` 必须是本地的。 
 
 指定此路由的网络地址。 next_hop_address 按以下格式指定 TCP/IP 地址：  
   
- TCP://{ dns_name | netbios_name | ip_address } :port_number  
+ TCP://{ dns_name | netbios_name | ip_address } :port\_number  
   
  指定的 port_number 必须与指定计算机上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 端点的端口号匹配。 这可以通过在选定数据库中运行如下查询获得：  
   
@@ -110,7 +107,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  当路由为 next_hop_address 指定 'TRANSPORT' 时，根据服务名称中的网络地址确定网络地址。 指定了 'TRANSPORT' 的路由不能指定服务名称或 Broker 实例。  
   
- MIRROR_ADDRESS ='next_hop_mirror_address'****  
+ MIRROR_ADDRESS **='** next\_hop\_mirror\_address **'**  
  指定有一个镜像数据库驻留在 next_hop_address 的镜像数据库的网络地址。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址：  
   
  TCP://{ dns_name | netbios_name | ip_address } : port_number  

@@ -1,13 +1,11 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -46,16 +44,15 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 1a92ea51c62e296deac026e3c60dcf7b14d2c4e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171889"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685545"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -430,7 +427,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  有关 FILESTREAM 相关话题，请参阅 [二进制大型对象 &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
- [ type_schema_name. ] type_name  
+ [ _type\_schema\_name_**.** ] type_name  
  指定列的数据类型以及该列所属的架构。 对于基于磁盘的表，可以为以下数据类型之一：  
   
 -   系统数据类型。  
@@ -496,7 +493,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  指定系统使用指定的 datetime2 列来记录记录有效的开始时间或记录有效的结束时间。 此列须定义为 NOT NULL。 如果把该列定义为 NULL，系统便会引发错误。 如果不将时间段列显式指定为 NOT NULL，系统则会将该列默认定义为 NOT NULL。 将此参数与 SYSTEM_TIME 参数和 WITH SYSTEM_VERSIONING = ON 参数结合使用，启用表的系统版本控制。 有关详细信息，请参阅 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)。  
   
- 可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM `<table>` 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建。  
+ 可将一个或两个时间段列标记为 HIDDEN 标志，隐式隐藏这些列，这样 SELECT \* FROM`<table>` 就不会返回这些列中的值。 默认情况下，时间段列不会处于隐藏状态。 若要使用隐藏的列，则它必须显式包含在直接引用时态表的所有查询中。 若要更改现有时间段列的 HIDDEN 特性，须先删除 PERIOD，再使用不同的隐藏标志重新创建。  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -518,7 +515,7 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
   
  将非聚集列存储索引作为聚集列存储索引进行存储和管理。 称其为非聚集列存储索引，是因为这些列可能是有限的，且作为表的二级索引存在。  
   
- ON partition_scheme_name(column_name)***  
+ ON _partition\_scheme\_name_**(**_column\_name_**)**  
  指定分区方案，该方案定义要将分区索引的分区映射到的文件组。 须通过执行 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 或 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)，使数据库中存在该分区方案。 column_name 指定对已分区索引进行分区所依据的列。 该列必须与 partition_scheme_name 使用的分区函数参数的数据类型、长度和精度相匹配。 column_name 不限于索引定义中的列。 除了在对 UNIQUE 索引分区时，必须从用作唯一键的列中选择 column_name 外，还可以指定基表中的任何列。 通过此限制，[!INCLUDE[ssDE](../../includes/ssde-md.md)]可验证单个分区中的键值唯一性。  
   
 > [!NOTE]  
@@ -569,9 +566,11 @@ TEXTIMAGE_ON 仅更改“LOB 存储空间”的位置，不影响数据存储在
  ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **确定性加密** 使用一种对任何给定的纯文本值始终生成相同的加密值的方法。 使用确定性加密可基于加密值进行下列操作：使用相等性比较进行搜索、分组、使用相等性联接联接各表，此外，还允许未经授权的用户通过检查加密列中的模式来猜测加密值的相关信息。 只有使用相同的列加密密钥对两列进行加密，才能在已进行确定性加密的该列上联结两个表。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。  
   
- **随机加密** 使用一种以更不可预测地方式加密数据的方法。 随机加密更加安全，但不支持对加密列进行等式搜索、分组和联结。 使用随机加密的列无法编制索引。  
+ **随机加密** 使用一种以更不可预测地方式加密数据的方法。 随机加密更为安全，但会阻止对加密列进行任何计算和索引编制，除非你的 SQL Server 实例支持具有安全 enclave 的 Always Encrypted。 请参阅[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 以了解详细信息。
   
- 对作为搜索参数或分组参数（例如政府 ID 号）的列使用确定性加密。 对以下数据使用随机加密，即未与其他记录分组的数据、未用于联结表的数据、因使用其他列（例如事务号）查找包含已加密的兴趣列，而不用于搜索的数据。  
+ 如果使用的是 Always Encrypted（不带安全 enclave），请对要使用参数或分组参数搜索的列使用确定性加密，例如政府 ID 号。 对以下数据使用随机加密，即未与其他记录分组的数据、未用于联结表的数据、因使用其他列（例如事务号）查找包含已加密的兴趣列，而不用于搜索的数据。
+
+ 如果使用的是具有安全 enclave 的 Always Encrypted，则随机加密是推荐的加密类型。
   
  列必须是符合条件的数据类型。  
   
@@ -653,7 +652,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  FOREIGN KEY REFERENCES  
  为列中的数据提供引用完整性的约束。 FOREIGN KEY 约束要求列中的每个值在所引用的表中对应的被引用列中都存在。 FOREIGN KEY 约束只能引用在所引用的表中是 PRIMARY KEY 或 UNIQUE 约束的列，或所引用的表中在 UNIQUE INDEX 内的被引用列。 计算列上的外键也必须标记为 PERSISTED。  
   
- [ schema_name.] referenced_table_name]  
+ [ _schema\_name_**.**] *referenced_table_name*]  
  是 FOREIGN KEY 约束引用的表的名称，以及该表所属架构的名称。  
   
  ( ref_column [ ,... n ] )  
@@ -724,7 +723,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  partition_scheme_name  
  分区架构的名称，该分区架构定义要将已分区表的分区映射到的文件组。 数据库中必须存在该分区架构。  
   
- [ partition_column_name. ]  
+ [ _partition\_column\_name_**.** ]  
  指定对已分区表进行分区所依据的列。 此列必须与 partition_scheme_name 在数据类型、长度和精度方面使用的分区函数中指定的列相匹配。 必须将参与分区函数的计算列显式标记为 PERSISTED。  
   
 > [!IMPORTANT]  
@@ -815,7 +814,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  PAD_INDEX = { ON | OFF }  
  如果为 ON，则 FILLFACTOR 指定的可用空间百分比将应用于该索引的中间级别页。 如果未指定 OFF 或 FILLFACTOR 值，则考虑到中间级别页的键集，将中间级别页填充到一个近似容量，以留出足够的空间来容纳至少一个索引的最大行。 默认为 OFF。  
   
- FILLFACTOR = fillfactor  
+ FILLFACTOR =fillfactor  
  指定一个百分比，指示在[!INCLUDE[ssDE](../../includes/ssde-md.md)]创建或修改索引的过程中，应将每个索引页面的叶级填充到什么程度。 fillfactor 必须是 1 到 100 之间的整数。 默认值为 0。 填充因子的值 0 和 100 在所有方面都是相同的。  
   
  IGNORE_DUP_KEY = { ON | OFF }  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e0ec3e7ae9771d4cb3f63e3f2bc9f670a47ac3b2
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 77bb74d2337864e5a7542e3c9b1da44f5885380c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775009"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705146"
 ---
 # <a name="delete-a-job-category"></a>删除作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,13 +69,13 @@ ms.locfileid: "42775009"
   
 3.  右键单击 **“作业”** 文件夹，然后选择 **“管理作业类别”**。  
   
-4.  在“管理作业类别server_name” 对话框中，选择要删除的作业类别。  
+4.  在“管理作业类别 _server\_name_”对话框中，选择要删除的作业类别。  
   
 5.  单击 **“删除”**。  
   
 6.  在 **“作业类别”** 对话框中，单击 **“是”**。  
   
-7.  关闭“管理作业类别server_name” 对话框。  
+7.  关闭“管理作业类别 _server\_name_”对话框。  
   
 ## <a name="TSQL"></a>使用 Transact-SQL  
   

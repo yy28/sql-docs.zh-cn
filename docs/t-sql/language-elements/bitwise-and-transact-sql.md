@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44b9d4acd20051477779edd721089340114c7fb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34c2bd981869095df9cb4b4e79c383a9c58fd479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077379"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716806"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;（位与）(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ expression & expression
 ## <a name="remarks"></a>Remarks  
  & 位运算符将在两个表达式之间执行位与逻辑运算，从两个表达式取对应的位。 当且仅当输入表达式中两个位（正在被解析的当前位）的值都为 1 时，结果中的位才被设置为 1；否则，结果中的位被设置为 0。  
   
- 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallint 表达式转换成了 int。  
+ 如果左侧和右侧的表达式具有不同的整数数据类型（例如，左侧的表达式的数据类型为 smallint，右侧的表达式的数据类型为 int），则会将较小数据类型的参数转换为较大数据类型。 此示例中，smallintexpression 转换成了 int。  
   
 ## <a name="examples"></a>示例  
  以下示例将使用 int 数据类型创建一个表，用于存储值，并将两个值插入到一行中。  

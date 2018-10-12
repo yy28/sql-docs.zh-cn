@@ -5,9 +5,7 @@ ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 79
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2983be97fa3d0f3ab33ed00fc98e48d155396912
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c37482e2adb298af1c2d650c5a6c0e5d06ece2b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43097300"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650965"
 ---
 # <a name="create-indexed-views"></a>创建索引视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,11 +89,11 @@ ms.locfileid: "43097300"
   
 -   创建索引时，`IGNORE_DUP_KEY` 选项必须设置为 OFF（默认设置）。    
   
--   在视图定义中，表必须由两部分组成的名称（即 schema.tablename**）引用。    
+-   在视图定义中，必须使用两部分名称（即 _schema_**.**_tablename_ ）来引用表。    
   
 -   视图中引用的用户定义函数必须使用 `WITH SCHEMABINDING` 选项创建。    
   
--   视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 \<schema>.\<function>）引用**。   
+-   视图中引用的任何用户定义的函数都必须由两部分组成的名称（即 _\<schema\>_**.**_\<function\>_）引用。   
   
 -   用户定义函数的数据访问属性必须是 `NO SQL`，外部访问属性必须是 `NO`。   
   

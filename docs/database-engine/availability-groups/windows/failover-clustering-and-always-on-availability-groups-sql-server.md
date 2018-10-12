@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40410951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864305"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>故障转移群集和 AlwaysOn 可用性组 (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40410951"
 > [!NOTE]  
 >  有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 概念的详细信息，请参阅 [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。  
   
- **本主题内容：**  
-  
--   [Windows Server 故障转移群集](#WSFC)  
-  
--   [SQL Server 故障转移群集](#SQLServerFC)  
-  
--   [将 WSFC 故障转移群集管理器用于可用性组的限制](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server 故障转移群集和可用性组  
  部署 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 需要一个 Windows Server 故障转移群集 (WSFC) 群集。 若要启用 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例必须驻留在某一 WSFC 节点上，并且该 WSFC 群集和节点必须处于联机状态。 此外，给定可用性组的每个可用性副本必须位于相同 WSFC 群集的不同节点上。 唯一的例外是在迁移到另一个 WSFC 群集时，此时一个可用性组可能会暂时跨两个群集。  
@@ -115,6 +105,9 @@ ms.locfileid: "40410951"
 -   不要更改任何可用性组属性，例如可能的所有者和首选所有者。 这些属性由可用性组自动设置。  
   
 -   不要使用故障转移群集管理器将可用性组移到不同节点或者故障转移可用性组。 故障转移群集管理器不知道可用性副本的同步状态，因此，这样做可能会导致延长停机时间。 必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。  
+
+  >[!WARNING]
+  > 使用故障转移群集管理器将托管可用性组的故障转移群集实例移动到已在托管同一个可用性组副本的节点，可能会导致可用性组副本丢失，使其无法在目标节点上重新联机。 故障转移群集的单个节点不能托管同一个可用性组的多个副本。 有关如何发生这种情况以及如何恢复的详细信息，请参阅博客[在可用性组中意外删除副本](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/)。 
   
 ##  <a name="RelatedContent"></a> 相关内容  
   

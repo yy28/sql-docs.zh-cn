@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070840"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672095"
 ---
 # <a name="create-statistics"></a>创建统计信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070840"
   
 4.  右键单击“统计信息”文件夹，然后选择“新建统计信息…”。  
   
-     以下属性显示在“新建表table_name的统计信息”对话框的“常规”页面上。  
+     以下属性将显示在“新建表 _table\_name_ 的统计信息”对话框的“常规”页面上。  
   
      **表名**  
      显示统计信息中所涉及表的名称。  
@@ -117,12 +115,12 @@ ms.locfileid: "43070840"
      **更新这些列的统计信息**  
      选中此项后将在对话框关闭时更新统计信息。  
   
-     以下属性显示在“新建表table_name的统计信息”对话框的“筛选器”页面上。  
+     以下属性将显示在“新建 _table\_name_ 的统计信息”对话框的“筛选器”页面上。  
   
      **筛选表达式**  
      定义要将哪些数据行包含在筛选的统计信息中。 例如，使用 IPv4 地址 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  在“新建表table_name的统计信息”对话框的“常规”页面上，单击“添加”。  
+5.  在“新建表 _table\_name_ 的统计信息”对话框中，在“常规”页面上，单击“添加”。  
   
      **“选择列”** 对话框中显示以下属性： 此信息为只读信息。  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070840"
   
 6.  在 **“选择列”** 对话框中，选中要为其创建统计信息的每个列旁边的复选框，然后单击 **“确定”**。  
   
-7.  在“新建表table_name的统计信息”对话框中，单击“确定”。  
+7.  在“新建表 _table\_name_ 的统计信息”对话框中，单击“确定”。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MERGE
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4aa14bf055805a7dc779fe6c489694d2d0815934
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696365"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,10 +125,13 @@ SET
     <search_condition>  
   
 <search condition> ::=  
-    { [ NOT ] <predicate> | ( <search_condition> ) }   
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
-[ ,...n ]   
-  
+    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
+    
+<search_condition_without_match> ::=
+    { [ NOT ] <predicate> | ( <search_condition_without_match> ) 
+    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
+[ ,...n ]  
+
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
     | string_expression [ NOT ] LIKE string_expression   
@@ -145,7 +145,21 @@ SET
     | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
   { ALL | SOME | ANY} ( subquery )   
     | EXISTS ( subquery ) }   
+
+<graph_search_pattern> ::=
+    { <node_alias> { 
+                      { <-( <edge_alias> )- } 
+                    | { -( <edge_alias> )-> }
+                    <node_alias> 
+                   } 
+    }
   
+<node_alias> ::=
+    node_table_name | node_table_alias 
+
+<edge_alias> ::=
+    edge_table_name | edge_table_alias
+
 <output_clause>::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
@@ -266,6 +280,9 @@ SET
   
  \<search condition>  
  指定用于指定 \<merge_search_condition> 或 \<clause_search_condition> 的搜索条件。 有关此子句的参数的详细信息，请参阅[搜索条件 (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md)。  
+
+ \<graph search pattern>  
+ 指定图匹配模式。 有关此子句的参数的详细信息，请参阅 [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)
   
 ## <a name="remarks"></a>Remarks  
  必须指定三个 MATCHED 子句中的至少一个子句，但可以按任何顺序指定。 不能在同一个 MATCHED 子句中多次更新一个变量。  
@@ -446,6 +463,82 @@ FROM
  WHERE Action = 'UPDATE';  
 GO  
 ```  
+
+### <a name="e-using-merge-to-perform-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. 使用 MERGE 对图形数据库中的目标边缘表执行 INSERT 或 UPDATE
+在此示例中，我们将创建节点表 `Person` 和 `City` 以及边缘表 `livesIn`。 如果 `Person` 和 `City` 之间尚不存在 `livesIn` 边缘，则我们将使用 MERGE 语句插入新行。 如果 `livesIn` 边缘已存在，则我们只需更新 StreetAddress 属性。
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Person
+    (
+        ID INTEGER PRIMARY KEY, 
+        PersonName VARCHAR(100)
+    )
+AS NODE
+GO
+
+CREATE TABLE City
+    (
+        ID INTEGER PRIMARY KEY, 
+        CityName VARCHAR(100), 
+        StateName VARCHAR(100)
+    )
+AS NODE
+GO
+
+CREATE TABLE livesIn
+    (
+        StreetAddress VARCHAR(100)
+    )
+AS EDGE
+GO
+
+-- INSERT some test data into node and edge tables
+INSERT INTO Person VALUES (1, 'Ron'), (2, 'David'), (3, 'Nancy')
+GO
+
+INSERT INTO City VALUES (1, 'Redmond', 'Washington'), (2, 'Seattle', 'Washington')
+GO
+
+INSERT livesIn SELECT P.$node_id, C.$node_id, c
+FROM Person P, City C, (values (1,1, '123 Avenue'), (2,2,'Main Street')) v(a,b,c)
+WHERE P.id = a AND C.id = b
+GO
+
+-- Use MERGE to update/insert edge data
+CREATE OR ALTER PROCEDURE mergeEdge
+    @PersonId integer,
+    @CityId integer,
+    @StreetAddress varchar(100)
+AS
+BEGIN
+    MERGE livesIn
+        USING ((SELECT @PersonId, @CityId, @StreetAddress) AS T (PersonId, CityId, StreetAddress)
+                JOIN Person ON T.PersonId = Person.ID
+                JOIN City ON T.CityId = City.ID)
+        ON MATCH (Person-(livesIn)->City)
+    WHEN MATCHED THEN
+        UPDATE SET StreetAddress = @StreetAddress
+    WHEN NOT MATCHED THEN
+        INSERT ($from_id, $to_id, StreetAddress)
+        VALUES (Person.$node_id, City.$node_id, @StreetAddress) ;
+END
+GO
+
+-- Following will insert a new edge in the livesIn edge table
+EXEC mergeEdge 3, 2, '4444th Avenue'
+GO
+
+-- Following will update the StreetAddress on the edge that connects Ron to Redmond
+EXEC mergeEdge 1, 1, '321 Avenue'
+GO
+
+-- Verify that all the address were added/updated correctly
+SELECT PersonName, CityName, StreetAddress
+FROM Person , City , livesIn 
+WHERE MATCH(Person-(livesIn)->city)
+GO
+```
   
 ## <a name="see-also"></a>另请参阅  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

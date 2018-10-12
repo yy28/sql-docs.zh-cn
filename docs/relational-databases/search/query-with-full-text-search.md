@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4e62ce63f377d085d8726f7b1ad187351f164cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 92b2a975fbee89249850e4acfdf23f7f47e5bd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078640"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652625"
 ---
 # <a name="query-with-full-text-search"></a>使用全文搜索查询
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -218,7 +214,7 @@ GO
   
  将会返回所有与星号 (*) 之前指定的文本相匹配的文本。 如果未在文本和星号前后加上双引号标记（如 `CONTAINS (DESCRIPTION, 'top*')`），则全文搜索将不把星号当作通配符。  
   
- 当前缀词是短语时，组成该短语的每个标记均被看作是单独的前缀词。 将返回包含以这些前缀词开头的词的所有行。 例如，前缀词“light bread*”将查找带有“light breaded”、“lightly breaded”或“light bread”文本的行，但不会返回“lightly toasted bread”。
+ 当前缀词是短语时，组成该短语的每个标记均被看作是单独的前缀词。 将返回包含以这些前缀词开头的词的所有行。 例如，前缀词“light bread\*”将查找带有“light breaded”、“lightly breaded”或“light bread”文本的行，但不会返回“lightly toasted bread”。
 
 #### <a name="more-info-about-prefix-searches"></a>有关前缀搜索的详细信息
 

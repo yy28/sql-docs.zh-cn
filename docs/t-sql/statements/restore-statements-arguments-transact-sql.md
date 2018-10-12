@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 154
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a9dc5fcb6f7cb550d890d621f36fc79714c34edf
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746025"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ ms.locfileid: "40008879"
   
  有关详细信息，请参阅[应用事务日志备份 (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)。  
   
- { database_name | *@***database_name_var}  
+ { _database\_name_ | **@**_database\_name\_var_}  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- 是将日志或整个数据库还原到的数据库。 如果作为变量 (@**database_name_var) 提供，则可以将此名称指定为字符串常量 (@*database_name_var = database_name*) 或指定为字符串数据类型（ntext 或 text 数据类型除外）的变量 **。  
+ 是将日志或整个数据库还原到的数据库。 如果作为变量 (**@**_database\_name\_var_) 提供，则可以将此名称指定为字符串常量 (**@**_database\_name\_var_ = *database*\_*name*) 或指定为字符串数据类型（**ntext** 或 **text** 数据类型除外）的变量。  
   
  \<file_or_filegroup_or_page> [ ,...n ]  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -84,10 +81,10 @@ ms.locfileid: "40008879"
   
 -   如果备份中包含主文件组，则会执行部分还原。 在这种情况下，由于日志可从备份集中自动还原，因此不需要还原日志。  
   
-FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_var*}  
+FILE **=** { *logical_file_name_in_backup*| **@**_logical\_file\_name\_in\_backup\_var_}  
  命名一个要包含在数据库还原任务中的文件。  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
  命名一个要包含在数据库还原任务中的文件组。  
   
  **注意** 仅当指定文件组为只读文件组，且还原任务是部分还原（也就是说，如果使用的是 WITH PARTIAL）时，才允许在简单恢复模式中使用 FILEGROUP。 任何未还原的读写文件组将被标记为失效，而且以后无法被还原到最终的数据库中。  
@@ -95,7 +92,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  选择所有读写文件组。 如果希望在还原读写文件组之后，并在还原只读文件组之前还原某些只读文件组，该选项尤其有用。  
   
-PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
+PAGE = **'**_file_**:**_page* [ **,**...*n* ]**'**  
  指定用于页面还原的一页或多页列表（只有使用完整恢复模式或大容量日志恢复模式的数据库支持页面还原）。 这些值如下所示：  
   
 PAGE  
@@ -130,9 +127,11 @@ FROM { \<backup_device> [ ,...n ]| \<database_snapshot> } 通常指定要从哪�
   
  \<backup_device>::= 指定用于备份操作的逻辑备份设备或物理备份设备，如下所示：  
   
- { *logical_backup_device_name* | **@***logical_backup_device_name_var* } 是由 **sp_addumpdevice** 创建的备份设备（数据库将从该备份设备还原）的逻辑名称，该名称必须符合标识符规则。如果作为变量 (**@**logical_backup_device_name_var*) 提供，则可以将该备份设备名称指定为字符串常量 (*@**logical_backup_device_name_var* = logical_backup_device_name) 或字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
+ 是由 **sp_addumpdevice** 创建的备份设备（数据库将从该备份设备还原）的逻辑名称，该名称必须符合标识符规则。 如果作为变量 (**@**_logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
- {DISK | TAPE }  { 'physical_backup_device_name' | @***physical_backup_device_name_var } 允许从指定的磁盘或磁带设备还原备份**=*******。应当以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。如果指定为变量 (**@**physical_backup_device_name_var*)，则可以将该备份设备名称指定为字符串常量 (@**physical_backup_device_name_var* = 'physcial_backup_device_name*') 或字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ 允许从指定的磁盘或磁带设备还原备份。 应当以设备的实际名称（例如，完整路径和文件名）指定磁盘和磁带的设备类型：`DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` 或 `TAPE ='\\\\.\TAPE0'`。 如果指定为变量 (**@**_physical\_backup\_device\_name\_var_)，则可以将该设备名称指定为字符串常量 (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   
@@ -155,7 +154,7 @@ FROM { \<backup_device> [ ,...n ]| \<database_snapshot> } 通常指定要从哪�
 \<database_snapshot>::=  
 **支持的语句：**[RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT **=***database_snapshot_name*  
+DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
  将数据库恢复为由 database_snapshot_name 指定的数据库快照。 DATABASE_SNAPSHOT 选项只能用于完整数据库还原。 在还原操作中，数据库快照将取代完整数据库备份。  
   
  还原操作要求指定的数据库快照是数据库中的唯一快照。 在还原操作过程中，数据库快照和目标数据库都会被标记为 `In restore`。 有关详细信息，请参阅 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 中的“备注”部分。  
@@ -201,7 +200,7 @@ DATABASE_SNAPSHOT **=***database_snapshot_name*
   
  在某些情况下，RESTORE WITH NORECOVERY 会将前滚集滚动到足够靠前的位置，使它与数据库一致。 在这种情况下将不会出现回滚，数据仍会保持脱机状态，正如使用该选项预期出现的情况一样。 但[!INCLUDE[ssDE](../../includes/ssde-md.md)]会发出一条信息性消息，表明现在可以用 RECOVERY 选项恢复前滚集。  
   
-STANDBY **=***standby_file_name*  
+STANDBY **=**_standby\_file\_name_  
  指定一个允许撤消恢复效果的备用文件。 STANDBY 选项可以用于脱机还原（包括部分还原）， 但不能用于联机还原。 尝试为联机还原操作指定 STANDBY 选项将会导致还原操作失败。 如果必须升级数据库，也不允许使用 STANDBY 选项。  
   
  备用文件用于为 RESTORE WITH STANDBY 的撤消过程中修改的页面保留一个“写入时副本”预映像。 备用文件允许用户在事务日志还原期间以只读方式访问数据库，并允许数据库用于备用服务器情形，或用于需要在日志还原操作之间检查数据库的特殊恢复情形。 执行完 RESTORE WITH STANDBY 操作之后，下一个 RESTORE 操作会自动删除撤消文件。 如果在下一个 RESTORE 操作之前手动删除了这个备用文件，则必须重新还原整个数据库。 当数据库处于 STANDBY 状态时，您应将这个备用文件视为和任何其他数据库文件同样重要。 该文件与其他数据库文件不同，[!INCLUDE[ssDE](../../includes/ssde-md.md)]仅在活动还原操作过程中持续打开该文件。  
@@ -226,7 +225,7 @@ LOADHISTORY
 ##### <a name="restore-operation-options"></a>还原操作选项  
  这些选项影响还原操作的行为。  
   
-MOVE 'logical_file_name_in_backup' TO 'operating_system_file_name' [ ...n ]********  
+MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  指定对于逻辑名称由 logical_file_name_in_backup 指定的数据或日志文件，应当通过将其还原到 operating_system_file_name 所指定的位置来对其进行移动。 创建备份集时，备份集中的数据或日志文件的逻辑文件名与其在数据库中的逻辑名称匹配。  
@@ -286,7 +285,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>备份集选项  
  这些选项作用于包含要还原的备份的备份集。  
   
-FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  标识要还原的备份集。 例如， *backup_set_file_number* 为 **1** 指示备份介质中的第一个备份集， *backup_set_file_number* 为 **2** 指示第二个备份集。 你可以通过使用 *RESTORE HEADERONLY* 语句来获取备份集的 [backup_set_file_number](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 。  
@@ -294,9 +293,9 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
  未指定时，默认值是 **1**，但对 RESTORE HEADERONLY 例外，后者会处理介质集中的所有备份集。 有关详细信息，请参阅本主题后面的“指定备份集”。  
   
 > [!IMPORTANT]  
->  此 FILE 选项与用于指定数据库文件的 FILE 选项 (FILE **=** { logical_file_name_in_backup | **@**logical_file_name_in_backup_var** }) 无关。  
+>  此 FILE 选项与用于指定数据库文件的 FILE 选项 (FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }) 无关。  
   
- PASSWORD  **=** { *password* | **@***password_variable* }  
+ PASSWORD  **=** { *password* | **@**_password\_variable_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供备份集的密码。 备份集密码是一个字符串。  
@@ -312,7 +311,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="media-set-options"></a>介质集选项  
  这些选项作为一个整体对介质集进行操作。  
   
- MEDIANAME **=** { *media_name* | **@***media_name_variable*}  
+ MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  指定介质名称。 如果提供了介质名称，该名称必须与备份卷上的介质名称相匹配，否则还原操作将终止。 如果 RESTORE 语句中没有给出介质名称，将不会对备份卷执行介质名称匹配检查。  
@@ -320,7 +319,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  在备份和还原操作中使用一致的介质名称可以为用于还原操作的介质提供额外的安全检查。  
   
- MEDIAPASSWORD **=** { *mediapassword* | **@***mediapassword_variable* }  
+ MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) 和 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)。  
   
  提供介质集的密码。 介质集密码是一个字符串。  
@@ -333,7 +332,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 > [!IMPORTANT]  
 >  此密码只能为介质集提供弱保护。 有关详细信息，请参阅相关语句的“权限”部分。  
   
- BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+ BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  用字节数来指定物理块的大小。 支持的大小是 512、1024、2048、4096、8192、16384、32768 和 65536 (64 KB) 字节。 对于磁带设备默认为 65536，其他情况为 512。 通常，由于 RESTORE 自动选择适合于设备的块大小，因此不需要此选项。 显式声明块大小将覆盖自动选择块大小。  
@@ -346,14 +345,14 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 ##### <a name="data-transfer-options"></a>数据传输选项  
  该选项使您可以优化与备份设备之间的数据传输。  
   
- BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+ BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定用于还原操作的 I/O 缓冲区总数。 可以指定任何正整数；但是，较大的缓冲区数可能导致由于 Sqlservr.exe 进程中的虚拟地址空间不足而发生“内存不足”错误。  
   
- 缓冲区使用的总计空间由以下内容确定：buffercount****\**** maxtransfersize*。  
+ 缓冲区使用的总计空间由以下内容确定：_buffercount_**\**_maxtransfersize_。  
   
- MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
+ MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  指定要在备份介质和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之间使用的最大传输单元（以字节为单位）。 可能的值是 65536 字节 (64 KB) 的倍数，最多可到 4194304 字节 (4 MB)。  
@@ -498,8 +497,8 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT **=** { **'***datetime***'** | **@***datetime_var* }  
- 指定将数据库还原到它在 datetime 或 **@**datetime_var** 参数指定的日期和时间时的状态。 有关指定日期和时间的信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
+ STOPAT **=** { **'**_datetime_**'** | **@**_datetime\_var* }  
+ 指定将数据库还原到它在 *datetime* 或 **@**_datetime\_var_ 参数指定的日期和时间时的状态。 有关指定日期和时间的信息，请参阅[日期和时间数据类型和功能 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。  
   
  如果某变量用于 STOPAT，则此变量必须是 **varchar****char**、**smalldatetime** 或 **datetime** 数据类型。 只有在指定的日期和时间前写入的事务日志记录才能应用于数据库。  
   
@@ -508,7 +507,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  有关详细信息，请参阅[将 SQL Server 数据库还原到某个时间点（完整恢复模式）](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)。  
   
- STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  指定恢复至指定的恢复点。 恢复中包括指定的事务，但是，仅当该事务最初于实际生成事务时已获得提交，才可进行本次提交。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支持 lsn_number 参数。 该参数指定了一个日志序列号。  
@@ -522,7 +521,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  有关详细信息，请参阅[使用标记的事务一致地恢复相关的数据库的事务（完全恢复模式）](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)和[恢复到日志序列号 (SQL Server)](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)。  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
  指定恢复至指定的恢复点为止。 在恢复中不包括指定的事务，且在使用 WITH RECOVERY 时将回滚。  
   
  RESTORE DATABASE 和 RESTORE LOG 都支持 lsn_number 参数。 该参数指定了一个日志序列号。  
@@ -561,7 +560,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  用于指定要还原的备份集的选项是：  
   
- FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }  
+ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
   
  其中，backup_set_file_number 指示备份在介质集中的位置。 backup_set_file_number 为 1 (FILE = 1) 指示备份介质上的第一个备份集，backup_set_file_number 为 2 (FILE = 2) 指示第二个备份集，依此类推。  
   
@@ -575,7 +574,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |RESTORE VERIFYONLY|默认 backup_set_file_number 是 1。|  
   
 > [!NOTE]  
->  用于指定备份集的 FILE 选项与用于指定数据库文件的 FILE 选项 (FILE **=** { logical_file_name_in_backup | **@**logical_file_name_in_backup_var** }) 无关。  
+>  用于指定备份集的 FILE 选项与用于指定数据库文件的 FILE 选项 (FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }) 无关。  
   
 ## <a name="summary-of-support-for-with-options"></a>WITH 选项支持摘要  
  仅有 RESTORE 语句支持以下 WITH 选项：BLOCKSIZE、BUFFERCOUNT、MAXTRANSFERSIZE、PARTIAL、KEEP_REPLICATION、{ RECOVERY | NORECOVERY | STANDBY }、REPLACE、RESTART、RESTRICTED_USER 和 { STOPAT | STOPATMARK | STOPBEFOREMARK }  
@@ -599,7 +598,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
 |STATS|√|—|—|—|—|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> FILE **=**backup_set_file_number** 它与 {FILE | FILEGROUP} 不同。  
+ <sup>1</sup> FILE **=**_backup\_set\_file\_number_，与 {FILE | FILEGROUP} 不同。  
   
 ## <a name="permissions"></a>Permissions  
  有关权限，请参阅下列主题：  

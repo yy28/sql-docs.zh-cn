@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faccfb4456001f6a807e69cc69c89f31e8320955
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 01e165cf75dbb411507ead1bab3728cf4e142df9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982299"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799722"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>文本与图像函数 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +67,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |函数或语句|描述|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'*%pattern%**'***,** *expression***)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
-|DATALENGTH(expression)****|返回 text、ntext 和 image 列中数据的长度。|  
+|PATINDEX **(**'%pattern%'**,** expression **)**|返回指定字符串在 text 和 ntext 列中所处的字符位置。|  
+|DATALENGTH **(**_expression_**)**|返回 text、ntext 和 image 列中数据的长度。|  
 |SET TEXTSIZE|返回使用 SELECT 语句时返回的 text、ntext 或 image 数据的限制（字节）。|  
   
 ## <a name="examples"></a>示例  

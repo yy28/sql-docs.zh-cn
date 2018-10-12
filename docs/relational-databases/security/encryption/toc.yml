@@ -56,6 +56,11 @@ items:
 - name: 始终加密
   href: always-encrypted-database-engine.md
   items:
+  - name: 具有安全 enclave 的 Always Encrypted
+    href: always-encrypted-enclaves.md
+    items:
+    - name: 配置具有安全 enclave 的 Always Encrypted
+      href: configure-always-encrypted-enclaves.md
   - name: 始终加密向导
     href: always-encrypted-wizard.md
   - name: Always Encrypted 密钥管理概述
@@ -83,9 +88,9 @@ items:
     href: always-encrypted-cryptography.md
   - name: 迁移通过“始终加密”保护的敏感数据
     href: migrate-sensitive-data-protected-by-always-encrypted.md
-ms.openlocfilehash: 4d6219ec9932717897d1ddd559e73e96c8a45c16
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ccb3f918e75b02d71ee1b83558ef72a86a961e2e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40427328"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713585"

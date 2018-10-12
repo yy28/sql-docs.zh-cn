@@ -5,9 +5,7 @@ ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_CERTIFICATE_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - ALTER CERTIFICATE statement
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d73be79f224a4d95e7c397b55ee1441d5d0cdd9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1e83bc2c83f654ae82ed5a84c33f5801c5a06549
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071362"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781335"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -73,13 +70,13 @@ ALTER CERTIFICATE certificate_name
  certificate_name  
  在数据库中标识证书的唯一名称。  
   
- FILE ='path_to_private_key'****  
+ FILE **='**_path\_to\_private\_key_**'**  
  指定私钥的完整路径（包括文件名）。 此参数可以是本地路径或网络位置的 UNC 路径。 将在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户的安全上下文中访问此文件。 使用此选项时，必须确保服务帐户有权访问指定的文件。  
   
- DECRYPTION BY PASSWORD ='key_password'****  
+ DECRYPTION BY PASSWORD **='**_key\_password_**'**  
  指定解密私钥所需的密码。  
   
- ENCRYPTION BY PASSWORD ='password'****  
+ ENCRYPTION BY PASSWORD ='password'  
  指定用于对数据库中的证书私钥进行加密的密码。 password 必须符合运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计算机的 Windows 密码策略要求。 有关详细信息，请参阅 [Password Policy](../../relational-databases/security/password-policy.md)。  
   
  REMOVE PRIVATE KEY   

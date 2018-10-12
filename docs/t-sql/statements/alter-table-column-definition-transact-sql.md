@@ -1,13 +1,11 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664045"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **确定性加密** 使用一种对任何给定的纯文本值始终生成相同的加密值的方法。 使用确定性加密可基于加密值进行下列操作：使用相等性比较进行搜索、分组、使用相等性联接联接各表，此外，还允许未经授权的用户通过检查加密列中的模式来猜测加密值的相关信息。 只有使用相同的列加密密钥对两列进行加密，才能在已进行确定性加密的该列上联结两个表。 确定性加密必须使用具有字符列的 binary2 排序顺序的列排序规则。  
   
- **随机加密** 使用一种以更不可预测地方式加密数据的方法。 随机加密更加安全，但不支持对加密列进行等式搜索、分组和联结。 使用随机加密的列无法编制索引。  
+ **随机加密** 使用一种以更不可预测地方式加密数据的方法。 随机加密更为安全，但会阻止对加密列进行任何计算和索引编制，除非你的 SQL Server 实例支持[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。
   
- 对作为搜索参数或分组参数（例如政府 ID 号）的列使用确定性加密。 对以下数据使用随机加密，即未与其他记录分组的数据、未用于联结表的数据、因使用其他列（例如事务号）查找包含已加密的兴趣列，而不用于搜索的数据。  
+ 如果使用的是 Always Encrypted（不带安全 enclave），请对要使用参数或分组参数搜索的列使用确定性加密，例如政府 ID 号。 对以下数据使用随机加密，即未与其他记录分组的数据、未用于联结表的数据、因使用其他列（例如事务号）查找包含已加密的兴趣列，而不用于搜索的数据。  
+
+ 如果使用的是具有安全 enclave 的 Always Encrypted，则随机加密是推荐的加密类型。  
   
  列必须是符合条件的数据类型。  
   

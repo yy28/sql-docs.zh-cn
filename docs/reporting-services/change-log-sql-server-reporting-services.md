@@ -4,17 +4,16 @@ ms.date: 08/31/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: ''
 ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a89c64e6762c2dad2ad9085b27754b3920ffb917
-ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
+ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43381245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728754"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 及更高版本的更改日志
 
@@ -23,6 +22,12 @@ ms.locfileid: "43381245"
 本文介绍 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的更改内容。 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
+
+### <a name="version-140600906-released-september-12-2018"></a>版本 14.0.600.906，发布日期：2018 年 9 月 12 日
+
+已修复以下 bug：
+
+- 自定义身份验证未返回正确的 cookie 信息
 
 ### <a name="version-140600892-released-august-31-2018"></a>版本 14.0.600.892，发布日期：2018 年 8 月 31 日
 

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 39a00b53ae37f52c0ade4c123f52fb7b72aa4a5b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: afb34cc77a8a2c720c2bff9bb68e0031c8ca21fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628355"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>将作业分配到作业类别
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ ms.locfileid: "42775578"
   
 4.  右键单击要编辑的作业，然后选择“属性”。  
   
-5.  在“作业属性 - job_name”对话框的“类别”列表中，选择要分配给作业的作业类别。  
+5.  在“作业属性 - _job\_name_”对话框的“类别”列表中，选择要分配给作业的作业类别。  
   
 6.  单击“确定” 。  
   

@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106246"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760331"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |设置|char(n) NOT NULL 或 binary(n) NOT NULL|char(n) NULL 或 binary(n) NULL|varchar(n) 或 varbinary(n)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 ON，则遵从与 char(n) 或 binary(n) NOT NULL 相同的规则********。|不剪裁插入 **varchar** 列中的字符值的尾随空格。 不剪裁插入 **varbinary** 列中的二进制值的尾随零。 不将值填充到列的长度。|  
+|ON|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 ON，则遵从与 char(_n_) 或 binary(_n_) NOT NULL 相同的规则。|不剪裁插入 **varchar** 列中的字符值的尾随空格。 不剪裁插入 **varbinary** 列中的二进制值的尾随零。 不将值填充到列的长度。|  
 |OFF|填充原始值（**char** 列具有尾随空格的值，**binary** 列具有尾随零的值），以达到列的长度。|如果 SET ANSI_PADDING 为 OFF，则遵从与 **varchar** 或 **varbinary** 相同的规则。|剪裁插入 **varchar** 列中的字符值的尾随空格。 剪裁插入 **varbinary** 列中的二进制值的尾随零。|  
   
 > [!NOTE]  

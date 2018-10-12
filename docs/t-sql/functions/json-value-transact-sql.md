@@ -5,9 +5,7 @@ ms.date: 07/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - JSON_VALUE
@@ -20,12 +18,12 @@ ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 8a688156d1d31a7f3b0dfaa90390dc091eeea950
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b311660253d893673927966ffe6309d2f3530d79
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687296"
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +44,7 @@ JSON_VALUE ( expression , path )
  *expression*  
  一个表达式。 通常是包含 JSON 文本的变量或列的名称。  
  
- 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误。 如果 *JSON_VALUE 找不到由 path 标识的值，则它会扫描整个文本，并会在找到 expression 中任何位置无效的 JSON 时返回错误。
+ 如果 JSON_VALUE 在找到由 path 标识的值之前，找到在 expression 中无效的 JSON，则函数会返回错误。 如果 JSON_VALUE 找不到路径标识的值，则它将扫描整个文本，如果在表达式中的任何位置发现无效的 JSON，则返回错误。
   
  path  
  指定要提取属性的 JSON 路径。 有关详细信息，请参阅 [JSON 路径表达式 (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)。  

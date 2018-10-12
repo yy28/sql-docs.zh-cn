@@ -5,23 +5,20 @@ ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cost threshold for parallelism option
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f318a0d82a2fc131554f12d0d15f049d588a3928
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32867262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768575"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>配置并行的开销阈值服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +57,9 @@ ms.locfileid: "32867262"
   
     -   **“最大并行度”** 选项设置为 1。  
   
- 逻辑处理器是处理器硬件的基本单元，可让操作系统调度任务或执行线程上下文。 每个逻辑处理器一次只执行一个线程上下文。 处理器内核是提供解码和执行指令的能力的电路。 一个处理器内核可能包含一个或多个逻辑处理器。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询可用于获取系统的 CPU 信息。  
+逻辑处理器是处理器硬件的基本单元，可让操作系统调度任务或执行线程上下文。 每个逻辑处理器一次只执行一个线程上下文。 处理器内核是提供解码和执行指令的能力的电路。 一个处理器内核可能包含一个或多个逻辑处理器。 以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询可用于获取系统的 CPU 信息。  
   
-```  
+```sql  
 SELECT (cpu_count / hyperthread_ratio) AS PhysicalCPUs,   
 cpu_count AS logicalCPUs   
 FROM sys.dm_os_sys_info  
@@ -72,9 +69,9 @@ FROM sys.dm_os_sys_info
   
 -   此选项是一个高级选项，仅应由有经验的数据库管理员或认证的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 专业人员更改。  
   
--   在某些情况下，即使查询的开销计划小于当前 **“并行的开销阈值”** 的值，也有可能选择并行计划。 出现这种情况，是因为使用并行还是串行计划是根据完成完全优化之前所提供的开销估计确定的。  
+-   在某些情况下，即使查询的开销计划小于当前 **“并行的开销阈值”** 的值，也有可能选择并行计划。 出现这种情况，是因为使用并行还是串行计划是根据先前优化过程所提供的开销估计确定的。 有关详细信息，请参阅[查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。  
 
--   尽管保留默认值 5 以获得向后兼容性，但当前系统可能适合使用更大的值。 许多 SQL Server 专业人员建议以 25 或 50 作为起始值，然后使用较高和较低的值执行应用程序测试以便优化应用程序性能。
+-   虽然对于大多数系统而言，默认值 5 已足够，但可能需要不同的值。 如果需要，可以使用高值和低值执行应用程序测试，以优化应用程序性能。
   
 ###  <a name="Security"></a> 安全性  
   
@@ -89,7 +86,7 @@ FROM sys.dm_os_sys_info
   
 2.  单击 **“高级”** 节点。  
   
-3.  在 **“并行”** 下，将 **“CostThresholdForParallelism”** 选项更改为所需值。 键入或选择一个值（介于 0 到 32767 之间）。  
+3.  在“并行”下，将“并行的开销阈值”选项更改为所需值。 键入或选择一个值（介于 0 到 32767 之间）。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
   

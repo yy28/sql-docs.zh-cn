@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 130
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2ff620929c51cde29b82096c6437f7a6bfeefa50
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: a9d56cab3d149490b176aade356708c15767cf9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838495"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -146,7 +143,7 @@ OPENROWSET
 |ACP|将数据类型为 char、varchar 或 text 的列由 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |OEM（默认值）|将数据类型为 char、varchar 或 text 的列由系统 OEM 代码页 (ISO 1252) 转换为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代码页。|  
 |RAW|不执行从一个代码页到另一个代码页的转换。 这是执行最快的选项。|  
-|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> **\*\*重要提示\*\*** 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
+|*code_page*|指示数据文件中字符数据已编码的源代码页，例如 850。<br /><br /> &#42;&#42; 重要提示 &#42;&#42; 低于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的版本不支持代码页 65001（UTF-8 编码）。|  
   
  ERRORFILE ='*file_name*'  
  指定用于收集格式有误且不能转换为 OLE DB 行集的行的文件。 这些行将按原样从数据文件复制到此错误文件中。  
@@ -235,7 +232,7 @@ FIELDQUOTE **=** 'field_quote'
   
  访问远程 OLE DB 数据源时，服务器不会自动委托可信连接的登录标识，客户端通过此登录标识才能连接到正在查询的服务器。 必须配置身份验证委托。  
   
- 如果 OLE DB 访问接口在指定的数据源中支持多个目录和架构，那么就需要目录及架构名称。 如果 OLE DB 提供程序并不支持多个目录和架构，那么可以忽略 catalog 和 schema 的值。 如果提供程序只支持架构名称，那么必须指定一个格式为 schema.object 的两部分名称**。 如果提供程序只支持目录名称，那么必须指定一个格式为 catalog.schema.object 的三部分名称**。 必须为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的传递查询指定由三部分组成的名称。 有关详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
+ 如果 OLE DB 访问接口在指定的数据源中支持多个目录和架构，那么就需要目录及架构名称。 如果 OLE DB 提供程序并不支持多个目录和架构，则可以忽略 catalog 和 schema 的值。 如果提供程序只支持架构名称，那么必须指定一个格式为 schema.object 的两部分名称。 如果提供程序只支持目录名称，那么必须指定一个格式为 catalog.schema.object 的三部分名称。 必须为使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供程序的传递查询指定由三部分组成的名称。 有关详细信息，请参阅 [Transact-SQL 语法约定 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
  `OPENROWSET` 不接受其参数的变量。  
   

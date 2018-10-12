@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table dependencies [SQL Server]
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e2e0ad779b9299538e99d16b6f91c6b668bebfe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: bff2fbab16e2f087e0e670e91185aad7b817d3a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099594"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724585"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "43099594"
   
 2.  右键单击某个表，然后单击“查看依赖关系”。  
   
-3.  在“对象依赖关系 \<对象名称>”**对话框中，选择“依赖于 \<对象名称> 的对象”** 或“\<对象名称> 依赖的对象”****。  
+3.  在“对象依赖关系_\<对象名称\>_”对话框中，选择“依赖于 _\<对象名称\>_ 的对象”或“_\<对象名称\>_ 依赖的对象”。  
   
 4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
   

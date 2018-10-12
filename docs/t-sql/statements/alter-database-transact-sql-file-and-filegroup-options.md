@@ -5,9 +5,7 @@ ms.date: 07/03/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD FILE
@@ -41,17 +39,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - databases [SQL Server], moving
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
-caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
-ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
+ms.openlocfilehash: a6a51a012ce9a131829abe128f1da8b1098ff572
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44089997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47682695"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项 
 
@@ -190,7 +187,7 @@ NEWNAME *new_logical_file_name*
 *new_logical_file_name*  
 用于替换现有逻辑文件名称的名称。 该名称在数据库中必须唯一，并且必须符合[标识符](../../relational-databases/databases/database-identifiers.md)规则。 该名称可以是字符或 Unicode 常量、常规标识符或分隔标识符。  
   
-FILENAME { 'os_file_name' | 'filestream_path' | 'memory_optimized_data_path'}************  
+FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**}  
 指定操作系统（物理）文件名称。  
   
 ' *os_file_name* '  
@@ -295,7 +292,7 @@ REMOVE FILEGROUP *filegroup_name*
 > [!NOTE]  
 > 除非 FILESTREAM 垃圾回收器已从 FILESTREAM 容器中删除所有文件，删除 FILESTREAM 容器的 ALTER DATABASE REMOVE FILE 操作将失败并返回错误。 请参阅本主题后面“备注”中的“删除 FILESTREAM 容器”部分。  
   
-MODIFY FILEGROUP filegroup_name { \<filegroup_updatability_option> | DEFAULT | NAME *=***new_filegroup_name } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
   
 \<filegroup_updatability_option>  
 对文件组设置只读或读/写属性。  
@@ -829,7 +826,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 REMOVE FILEGROUP *filegroup_name*  
 从数据库中删除文件组。 除非文件组为空，否则无法将其删除。 首先从文件组中删除所有文件。 有关详细信息，请参阅本主题前面的“REMOVE FILE *logical_file_name*”。  
   
-MODIFY FILEGROUP filegroup_name { \<filegroup_updatability_option> | DEFAULT | NAME *=***new_filegroup_name } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } 通过将状态设置为 READ_ONLY 或 READ_WRITE、将文件组设置为数据库的默认文件组或者更改文件组名称来修改文件组。  
   
 \<filegroup_updatability_option>  
 对文件组设置只读或读/写属性。  

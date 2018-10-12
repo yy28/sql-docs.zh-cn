@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4938666c0a8a23aca2760b55d94bc3d7e03947f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e3501dc7245d583c0fa30e6c50aabcdd9e2e5e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086279"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669875"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>演练：扩展数据库项目生成以生成模型统计信息
 可以创建生成参与者以便在生成数据库项目时执行自定义操作。 在本演练中，您将创建一个名为 ModelStatistics 的生成参与者，该参与者可在生成数据库项目时从 SQL 数据库模型中输出统计信息。 由于此生成参与者在您生成时会使用一些参数，因此需要执行一些额外步骤。  
@@ -59,12 +56,12 @@ ms.locfileid: "39086279"
   
 |**类**|**方法/属性**|**Description**|  
 |-------------|------------------------|-------------------|  
-|[TSqlModel](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 – 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
-|[TSqlObject](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
+|[TSqlModel](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|用于查询对象的模型，并且是模型 API 的主入口点。 只能查询顶级类型，如表或视图 – 诸如列这样的类型只能通过遍历模型来查找。 如果未指定 ModelTypeClass 筛选器，则将返回所有顶级类型。|  
+|[TSqlObject](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|查找与当前 TSqlObject 引用的元素的关系。 例如，对于表，这将返回类似表的列的对象。 在此情况下，ModelRelationshipClass 筛选器可用于指定要查询的确切关系（例如，使用“Table.Columns”筛选器将确保仅返回列）。<br /><br />有多种类似的方法，如 GetReferencingRelationshipInstances、GetChildren 和 GetParent。 有关详细信息，请参阅 API 文档。|  
   
 **唯一标识你的参与者**  
   
-在生成过程中，将从标准扩展目录中加载自定义参与者。 生成参与者由 [ExportBuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性标识。 必须使用该属性才能发现参与者。 此属性应与下面类似：  
+在生成过程中，将从标准扩展目录中加载自定义参与者。 生成参与者由 [ExportBuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.exportbuildcontributorattribute.aspx) 属性标识。 必须使用该属性才能发现参与者。 此属性应与下面类似：  
   
 ```  
 [ExportBuildContributor("ExampleContributors.ModelStatistics", "1.0.0.0")]  
@@ -78,7 +75,7 @@ ms.locfileid: "39086279"
   
 -   创建类库项目并添加所需的引用。  
   
--   定义从 [BuildContributor](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)继承的名为 ModelStatistics 的类。  
+-   定义从 [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 继承的名为 ModelStatistics 的类。  
   
 -   重写 OnExecute 方法。  
   

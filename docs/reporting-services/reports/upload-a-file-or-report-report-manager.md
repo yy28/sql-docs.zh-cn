@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b24b1d8a73aa2f371642f9b8a54b20471e20cb23
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277286"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660195"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在报表管理器中上传文件或报表
 报表服务器的 Web 门户提供上传功能，以便可以将报表和其他文件添加到报表服务器而不必从客户端应用程序发布这些项。 从文件系统上载的文件会存储为报表服务器上的项。 所上载的文件类型决定存储方式：  
@@ -35,7 +34,7 @@ ms.locfileid: "43277286"
   
 4.  浏览到想要上传的文件。 可以上载报表定义文件、图像、文档或任何要在报表服务器上可用的文件。  
   
-5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符: ; ? : \@ & = + , $ / * < > |。  
+5.  键入新项的名称。 项名称可以包括空格，但不能包括保留字符：\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。  
   
 6.  若要用新项替换现有项，请选择 **“如果该项已存在，则覆盖该项”**。  
   

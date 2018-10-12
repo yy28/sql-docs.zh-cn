@@ -5,9 +5,7 @@ ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099373"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666595"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 兼容级别
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
   
 |Product|数据库引擎版本|兼容级别指定|支持的兼容级别值|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
-|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140、130、120、110、100|
+|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150、140、130、120、110、100| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140、130、120、110、100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 逻辑服务器|12|130|150、140、130、120、110、100|  
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 托管实例|12|130|150、140、130、120、110、100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|  
@@ -170,7 +168,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>兼容性级别 140 和 150 的区别  
 此部分介绍了随兼容性级别 150 一起引入的新行为。
 
-对于 Azure SQL 数据库，数据库兼容性级别 150 目前是个人预览版。  除了数据库兼容性级别 140 中引入的改进之外，此数据库兼容性级别还将与下一代查询处理改进相关联。  
+对于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 和 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]，数据库兼容性级别 150 目前是个人预览版。 除了数据库兼容性级别 140 中引入的改进之外，此数据库兼容性级别还将与下一代查询处理改进相关联。     
+
+有关数据库兼容性级别 150 中启用的查询处理功能的详细信息，请参阅 [SQL Server 2019 中的新增功能](../../sql-server/what-s-new-in-sql-server-ver15.md)。     
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>兼容级别 130 与兼容级别 140 之间的差异  
 本节介绍随兼容级别 140 引入的新行为。

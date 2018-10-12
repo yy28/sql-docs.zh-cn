@@ -3,132 +3,417 @@ layout: HubPage
 hide_bc: true
 title: Microsoft SQL 文档 | Microsoft 文档
 description: 了解 SQL
-ms.date: 09/01/2018
-author: craigg-msft
-ms.author: craigg
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: install
-ms.openlocfilehash: 20861197abd978fc6598d9290fffa5b0059f8153
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+author: barbkess
+ms.author: barbkess
+ms.topic: hub-page
+ms.technology:
+- database-engine
+ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232541"
 ---
 <div id="main" class="v2">
     <div class="container">
-        <h1>SQL 文档</h1>
+        <ul class="cardsY panelContent featuredContent">
+            <li>
+                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-sql-server.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">下载 SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/get-azure-sql-vm.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">通过 SQL Server 获取 Azure VM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/sql/ssms/download-sql-server-management-studio-ssms">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-ssms.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">下载 SQL Server Management Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 class="screenReader">Microsoft SQL 文档</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#main"></a>
-                <ul id="main">
+                <a href="#sqlserver">SQL Server</a>
+                <ul id="sqlserver">
                     <li>
-                        <a href="#databases">数据库</a>
-                        <ul id="databases" class="cardsL">
+                        <a href="#sqlserver"></a>
+                        <ul id="sqlserver" class="cardsL cols cols3">
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/windows.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>Windows 上的 SQL Server</h3>
+                                              <ul class="noBullet">
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>本地</strong></a></li>
+                                              <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>在 Azure VM 上</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>新增功能</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/azure.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>作为 Azure 服务的 SQL</h3>
+                                              <ul class="noBullet">
+                                                  <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL 数据库</strong></a></li>
+                                                  <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL 数据仓库</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="media/index/linux.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>Linux 上的 SQL Server</h3>
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview/"><strong>本地</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/quickstart-install-connect-clouds/"> <strong>在 Azure VM 上</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-whats-new/"><strong>新增功能</strong></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="fullSpan">
-                                <div class="container intro">
-                                    <p>在数据中心或 Azure 上管理 SQL 数据库的关系数据。 使用机器学习和分析来深入了解 SQL 数据。 </p>
-                                </div>
+                                <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
+                                    <li>
+                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/install-or-upgrade.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>安装或升级</h3>
+                                                          <p>开始使用详细说明如何安装和升级 SQL Server 及其相关服务的文档。</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>业务连续性</h3>
+                                                          <p><b>高可用性、灾难恢复、Always On 可用性组、Always On 故障转移群集实例、数据库镜像、备份和还原</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/secure-sql-server.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Security</h3>
+                                                          <p><b>权限、访问管理、Always Encrypted、TDE、SSL</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/manage-monitor-tune.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>管理、监视和优化</h3>
+                                                          <p><b>维护计划、SQL 事件探查器、自动 Tunic、内存中 OLTP、分区、统计信息、索引、基数估计 </b>  </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/load-move-data.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>迁移、加载和移动数据</h3>
+                                                          <p><b>迁移助手、Integration Services、导入导出向导、复制</b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/database-design/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/database-design.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>数据库设计</h3>
+                                                          <p><b>文件流、文件表、空间数据、视图、触发器、图形、序列号、存储过程、跟踪更改 </b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/query-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/query-data.svg" alt="" /> 
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>查询数据</h3>
+                                                          <p><b>游标、同义词、脚本、联接、用户定义的函数、全文搜索</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/learn-sql.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>了解 SQL Server</h3>
+                                                          <p>通过一系列指南和教程了解 SQL Server 的体系结构内部。 </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                </ul>
                             </li>
-                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">“数据库”</h3>
-                                                <h4>SQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Azure SQL 数据库</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL 数据仓库</a></li>                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
-                                                    <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">早期 SQL Server 版本 (2005 - 2012)</a></li>
-                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">分析平台系统 - 并行数据仓库</a><li>
-                                                </ul>
-                                                <h4>在 Windows 或 Linux 上运行</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview">Linux 上的 SQL Server</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/linux/">Linux 虚拟机</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/windows/">Windows 虚拟机</a></li>
-                                                </ul>
-                                                <h4>开放源代码 SQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/postgresql/">适用于 PostgreSQL 的 Azure 数据库</a></li>
-                                                    <li><a class="barLink" href="/azure/mysql/">适用于 MySQL 的 Azure 数据库</a></li>
-                                                </ul>
-                                                <h4>NoSQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/cosmos-db/">Cosmos DB</a></li>
-                                                </ul>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>设计</h3>
+                                                        <ul class="noBullet">
+                                                          <li><a class="barLink" href="/sql/relational-databases/database-features/">关系数据库概念</a></li>
+                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">与客户端应用程序本地连接</a></li>
+                                                            <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Azure SQL DB 连接库</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Azure SQL DB 应用程序</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
-                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">开发</h3>
-                                                <h4>设计</h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>工具</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
+                                                            <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 
+                                                            <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
+                                                            <li><a class="barLink" href="/sql/tools/overview-sql-tools">其他 SQL 工具</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                    <div class="cardText">
+                                                        <h3>参考</h3>
+                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">与客户端应用程序连接</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/database-features">关系数据库概念</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/security">SQL 安全性</a></li>
-                                                </ul>
-                                                <h4>工具</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio <sup>预览版</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SQL Server Management Studio (SSMS)</a></li>
-                                                    <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SQL Server Data Tools (SSDT)</a></li>
-                                                    <li><a class="barLink" href="/sql/tools/overview-sql-tools">查看所有 SQL 工具</a></li>
-                                                </ul>
-                                                <h4>参考</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMV</a></li>
+                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMV</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
-                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
-                                                </ul>
-                                                <h4>示例</h4>
+                                                </ul></td>
+                                                <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">GitHub 上的代码示例</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">Wide World Importers DB</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">AdventureWorks DB</a></li>
-                                                </ul>
+                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
+                                                     <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">数据库示例</a></li>
+                                                     <li><a class="barLink" href="/previous-versions/sql/">已存档内容 (SQL 2005-2012)</a></li>
+                                                </ul></td></tr></table>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">数据分析</h3>
-                                                <h4>分析</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services（2016、2017）</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure 机器学习</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">SQL Server 机器学习服务</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">机器学习服务器（独立）</a></li>
-                                                </ul>
-                                                <h4>报表</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services（2016、2017）</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI 服务</a></li>
-                                                </ul>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>报表</h3>
+                                                        <ul class="noBullet">
+                                                             <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">PowerBI 服务</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI 报表服务器</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>数据分析</h3>
+                                                        <ul class="noBullet">
+                                                        <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>AI 和机器学习</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL 机器学习服务</a></li>
+                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/azure/machine-learning/">Azure 机器学习</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -136,4 +421,27 @@ ms.locfileid: "44343122"
             </li>
         </ul>
     </div>
-</div>
+<div class="container centered pageFooter">
+        <h2>请与我们保持联系</h2>
+        <ul class="links">
+           <li>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与编辑 SQL 文档</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文档反馈</a>
+            </li>
+           <li>
+                <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">博客</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/sqldocs" data-linktype="external">Twitter</a>
+            </li>
+            <li>
+                <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc" data-linktype="external">MSDN 论坛</a>
+            </li>
+            <li>
+                <a href="https://feedback.azure.com/forums/908035-sql-server" data-linktype="external">用户语音</a>
+            </li>
+        </ul>
+    </div>
+

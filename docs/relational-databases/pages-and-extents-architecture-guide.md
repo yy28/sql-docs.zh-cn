@@ -1,31 +1,27 @@
 ---
 title: 页和区体系结构指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/21/2016
+ms.date: 09/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - page and extent architecture guide
 - guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
-caps.latest.revision: 2
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af33c1a357342a04d086ce0dee33856f9c7138e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9dc6bc734f81f9bba423f51591815f3eee676996
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857126"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>页和区体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +36,9 @@ ms.locfileid: "43103817"
 
 ### <a name="pages"></a>页
 
-在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，页的大小为 8 KB。 这意味着 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中每 MB 有 128 页。 每页的开头是 96 字节的标头，用于存储有关页的系统信息。 此信息包括页码、页类型、页的可用空间以及拥有该页的对象的分配单元 ID。
+在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，页的大小为 8-KB。 这意味着 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库中每 MB 有 128 页。 每页的开头是 96 字节的标头，用于存储有关页的系统信息。 此信息包括页码、页类型、页的可用空间以及拥有该页的对象的分配单元 ID。
 
-下表说明了 SQL Server 数据库的数据文件中所使用的页类型。
+下表说明了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库的数据文件中所使用的页类型。
 
 |页类型 | 目录 |
 |-------|-------|
@@ -64,24 +60,29 @@ ms.locfileid: "43103817"
 
 #### <a name="large-row-support"></a>大型行支持  
 
-行不能跨页，但是行的部分可以移出行所在的页，因此行实际可能非常大。 页的单个行中的最大数据量和开销是 8,060 字节 (8 KB)。 但是，这不包括用 Text/Image 页类型存储的数据。 
+行不能跨页，但是行的部分可以移出行所在的页，因此行实际可能非常大。 页的单个行中的最大数据量和开销是 8,060 字节 (8-KB)。 但是，这不包括用 Text/Image 页类型存储的数据。 
 
-对于包含 varchar、nvarchar、varbinary 或 sql_variant 列的表，可以放宽此限制。 当表中的所有固定列和可变列的行的总大小超过限制的 8,060 字节时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将从最大长度的列开始动态将一个或多个可变长度列移动到 ROW_OVERFLOW_DATA 分配单元中的页。 
+对于包含 varchar、nvarchar、varbinary 或 sql_variant 列的表，可以放宽此限制。 当表中的所有固定列和可变列的行的总大小超过限制的 8,060 字节时，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 将从最大长度的列开始以动态方式将一个或多个可变长度列移动到 ROW_OVERFLOW_DATA 分配单元中的页。 
 
-每当插入或更新操作将行的总大小增大到超过限制的 8,060 字节时，将会执行此操作。 将列移动到 ROW_OVERFLOW_DATA 分配单元中的页后，将在 IN_ROW_DATA 分配单元中的原始页上维护 24 字节的指针。 如果后续操作减小了行的大小，SQL Server 会动态将列移回到原始数据页。 
+每当插入或更新操作将行的总大小增大到超过限制的 8,060 字节时，将会执行此操作。 将列移动到 ROW_OVERFLOW_DATA 分配单元中的页后，将在 IN_ROW_DATA 分配单元中的原始页上维护 24 字节的指针。 如果后续操作减小了行的大小，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 会动态将列移回到原始数据页。 
 
 ### <a name="extents"></a>Extents 
 
 区是管理空间的基本单位。 一个区是八个物理上连续的页（即 64 KB）。 这意味着 SQL Server 数据库中每兆字节有 16 个区。
 
-为了使空间分配有效，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有两种盘区类型： 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有两种盘区类型： 
 
 * 统一盘区，由单个对象所有。盘区中的所有八页只能由所属对象使用。
 * 混合盘区，最多可由八个对象共享。 区中八页的每页可由不同的对象所有。
 
-通常从混合区向新表或索引分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。
+一直到（并且包括）[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不会将所有盘区分配给包含少量数据的表。 新表或索引通常从混合区分配页。 当表或索引增长到 8 页时，将变成使用统一区进行后续分配。 如果对现有表创建索引，并且该表包含的行足以在索引中生成 8 页，则对该索引的所有分配都使用统一区进行。 但是，从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，数据库中所有分配的默认值都是统一区。
 
 ![Extents](../relational-databases/media/extents.gif)
+
+> [!NOTE]
+> 一直到，并且包括 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]，跟踪标志 1118 可用于将默认分配更改为始终使用统一区。 有关此跟踪标志的详细信息，请参阅 [DBCC TRACEON - 跟踪标志](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
+>   
+> 从 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 开始，将为 TempDB 自动启用 TF 1118 提供的功能。 对于用户数据库，此行为受 `ALTER DATABASE` 的 `SET MIXED_PAGE_ALLOCATION` 选项控制，同时默认值设置为禁用，且跟踪标志 1118 无效。 有关详细信息，请参阅 [ALTER DATABASE SET 选项 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md)。
 
 ## <a name="managing-extent-allocations-and-free-space"></a>管理区分配和可用空间 
 
@@ -98,38 +99,38 @@ ms.locfileid: "43103817"
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用两种类型的分配映射表来记录盘区的分配： 
 
 - 全局分配映射表 (GAM)   
-  GAM 页记录已分配的区。 每个 GAM 包含 64,000 个区，相当于近 4 GB 的数据。 GAM 用一个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区可用；如果位为 0，则区已分配。 
+  GAM 页记录已分配的区。 每个 GAM 包含 64,000 个区，相当于近 4 GB 的数据。 GAM 用 1 个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区可用；如果位为 0，则区已分配。 
 
 - 共享全局分配映射表 (SGAM)   
-  SGAM 页记录当前用作混合区且至少有一个未使用的页的区。 每个 SGAM 包含 64,000 个区，相当于近 4 GB 的数据。 SGAM 用一个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区正用作混合区且有可用页。 如果位为 0，则区未用作混合区，或者虽然用作混合区但其所有页均在使用中。 
+  SGAM 页记录当前用作混合区且至少有一个未使用的页的区。 每个 SGAM 包含 64,000 个区，相当于近 4-GB 的数据。 SGAM 用 1 个位来表示所涵盖区间内的每个区的状态。 如果位为 1，则区正用作混合区且有可用页。 如果位为 0，则区未用作混合区，或者虽然用作混合区但其所有页均在使用中。 
 
 根据区当前的使用情况，GAM 和 SGAM 中每个区具有以下位模式。 
 
 |区的当前使用情况 | GAM 位设置 | SGAM 位设置 |
 |---------|----------|------| 
-|可用，未使用 |@shouldalert |0 |
+|可用，未使用 |1 |0 |
 |统一区或已满的混合区 |0 |0 |
-|具有可用页的混合区 |0 |@shouldalert |
+|具有可用页的混合区 |0 |1 |
  
 这将简化区管理算法。 
 -   若要分配统一区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将搜索 GAM 以查找为 1 的位并将其设置为 0。 
 -   为了查找具有可用页的混合区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]搜索 SGAM 以查找为 1 的位。 
 -   若要分配混合区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在 GAM 中搜索为 1 的位，并将其设置为 0；然后将 SGAM 中的对应位设置为 1。 
--   若取消分配某个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]确保 GAM 位设置为 1，而 SGAM 位设置为 0。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在内部实际使用的算法比本主题介绍的内容更复杂，因为[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]在数据库中平均分布数据。 但是，由于无需管理区分配信息链，因此即使是实际算法也会被简化。
+-   若取消分配某个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]确保 GAM 位设置为 1，而 SGAM 位设置为 0。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在内部实际使用的算法比本文介绍的内容更复杂，因为 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 在数据库中平均分布数据。 但是，由于无需管理区分配信息链，因此即使是实际算法也会被简化。
 
 ### <a name="tracking-free-space"></a>跟踪可用空间
 
-“页可用空间 (PFS)”页记录每页的分配状态，是否已分配单个页以及每页的可用空间量。 PFS 对每页都有一个字节，记录该页是否已分配。如果已分配，则记录该页是为空、已满 1% 到 50%、已满 51% 到 80%、已满 81% 到 95% 还是已满 96% 到 100%。
+“页可用空间 (PFS)”页记录每页的分配状态，是否已分配单个页以及每页的可用空间量。 PFS 对每页都有 1 个字节，记录该页是否已分配。如果已分配，则记录该页是为空、已满 1% 到 50%、已满 51% 到 80%、已满 81% 到 95% 还是已满 96% 到 100%。
 
-将区分配给对象后，数据库引擎将使用 PFS 页来记录区中的哪些页已分配或哪些页可用。 当数据库引擎必须分配新页时，将使用此信息。 保留的页中的可用空间量仅用于堆和 Text/Image 页。 当数据库引擎必须找到一个具有可用空间的页来保存新插入的行时，将使用此信息。 索引不要求跟踪页的可用空间，因为插入新行的点是由索引键值设置的。
+将区分配给对象后，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将使用 PFS 页来记录区中的哪些页已分配或哪些页可用。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须分配新页时，将使用此信息。 保留的页中的可用空间量仅用于堆和 Text/Image 页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须找到一个具有可用空间的页来保存新插入的行时，使用此信息。 索引不要求跟踪页的可用空间，因为插入新行的点是由索引键值设置的。
 
-在数据文件中，PFS 页是文件头页之后的第一页（页 ID 为 1）。 接着是 GAM 页（页 ID 为 2），然后是 SGAM 页（页 ID 为 3）。 第一个 PFS 页之后是一个大小大约为 8,000 页的 PFS 页。 在第 2 页的第一个 GAM 页之后还有另一个 GAM 页（包含 64,000 个区），在第 3 页的第一个 SGAM 页之后也有另一个 SGAM 页（包含 64,000 个区）。 下图显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]用来分配和管理区的页顺序。
+在数据文件中，PFS 页是文件头页之后的第一页（页 ID 为 1）。 接着是 GAM 页（页 ID 为 2），然后是 SGAM 页（页 ID 为 3）。 在第一个 PFS 页后有一个新的 PFS 页（约 8,000 页），在后续的 8,000 页间隔区内还有其他 PFS 页。 在第 2 页的第一个 GAM 页之后还有另一个 GAM 页（包含 64,000 个区），在第 3 页的第一个 SGAM 页之后也有另一个 SGAM 页（包含 64,000 个区），并且在后续的 64,000 个区的间隔范围内还有其他 GAM 和 SGAM 页。 下图显示了[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]用来分配和管理区的页顺序。
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
 ## <a name="managing-space-used-by-objects"></a>管理对象使用的空间 
 
-“索引分配映射 (IAM)”页将映射分配单元使用的数据库文件中 4 GB 部分中的盘区。 分配单元有下列三种类型：
+“索引分配映射 (IAM)”页将映射分配单元使用的数据库文件中 4-GB 部分中的盘区。 分配单元有下列三种类型：
 
 - IN_ROW_DATA   
     用于存储堆分区或索引分区。
@@ -140,7 +141,7 @@ ms.locfileid: "43103817"
 - ROW_OVERFLOW_DATA   
    包含超过 8,060 字节行大小限制的 varchar、nvarchar、varbinary 或 sql_variant 列中存储的可变长度数据。 
 
-堆或索引的每个分区至少包含一个 IN_ROW_DATA 分配单元。 根据堆或索引的架构，可能还包含一个 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。 有关分配单元的详细信息，请参阅表和索引组织。
+堆或索引的每个分区至少包含一个 IN_ROW_DATA 分配单元。 根据堆或索引的架构，可能还包含一个 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元。
 
 一个 IAM 页在文件中的范围为 4 GB，与 GAM 或 SGAM 页的范围相同。 如果分配单元包含来自多个文件的区，或者超过一个文件的 4 GB 范围，那么一个 IAM 链中将链接多个 IAM 页。 因此，每个分配单元在有区的每个文件中至少有一个 IAM 页。 如果分配给分配单元的文件中的区的范围超过了一个 IAM 页能够记录的范围，一个文件中也可能会有多个 IAM 页。 
 
@@ -149,13 +150,13 @@ ms.locfileid: "43103817"
 IAM 页根据需要分配给每个分配单元，在文件中的位置也是随机的。 系统视图 (sys.system_internals_allocation_units) 指向分配单元的第一个 IAM 页。 该分配单元的所有 IAM 页都链接到一个链中。
 
 > [!IMPORTANT]
-> sys.system_internals_allocation_units 系统视图仅供内部使用，随时可能更改。 不保证兼容性。
+> `sys.system_internals_allocation_units` 系统视图仅供内部使用，随时可能更改。 不保证兼容性。
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
 每个分配单元的链中所链接的 IAM 页 IAM 页有一个标头，指明 IAM 页所映射的区范围的起始区。 IAM 页中还有一个大位图，其中每个位代表一个区。 位图中的第一个位代表范围内的第一个区，第二个位代表第二个区，依此类推。 如果某个位是 0，它所代表的区将不会分配给拥有该 IAM 页的分配单元。 如果这个位是 1，它所代表的区将被分配给拥有该 IAM 页的分配单元。
 
-当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须在当前页中插入新行，而当前页中没有可用空间时，它将使用 IAM 和 PFS 页查找要将该行分配到的页，或者（对于堆或 Text/Image 页）查找具有足够空间容纳该行的页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用 IAM 页查找分配给分配单元的区。 对于每个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将搜索 PFS 页，以查看是否有可用的页。 每个 IAM 和 PFS 页覆盖大量数据页，因此一个数据库内只有很少的 IAM 和 PFS 页。 这意味着 IAM 和 PFS 页通常位于内存中的 SQL Server 缓冲池中，以便可以快速搜索它们。 对于索引，新行的插入点由索引键设置。 在这种情况下，不会出现上述搜索过程。
+当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]必须在当前页中插入新行，而当前页中没有可用空间时，它将使用 IAM 和 PFS 页查找要将该行分配到的页，或者（对于堆或 Text/Image 页）查找具有足够空间容纳该行的页。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用 IAM 页查找分配给分配单元的区。 对于每个区，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]将搜索 PFS 页，以查看是否有可用的页。 每个 IAM 和 PFS 页覆盖大量数据页，因此一个数据库内只有很少的 IAM 和 PFS 页。 这意味着 IAM 和 PFS 页通常位于内存中的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 缓冲池中，所以能够很快找到它们。 对于索引，新行的插入点由索引键设置。 在这种情况下，不会出现上述搜索过程。
 
 仅当 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]不能在现有的区中快速找到足以容纳插入行的页时，才将新区分配给分配单元。 
 
@@ -174,4 +175,7 @@ IAM 页根据需要分配给每个分配单元，在文件中的位置也是随�
 DCM 页和 BCM 页的间隔与 GAM 和 SGAM 页的间隔相同，都是 64,000 个区。 在物理文件中，DCM 和 BCM 页位于 GAM 和 SGAM 页之后。
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
- 
+
+## <a name="see-also"></a>另请参阅
+[sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+[堆（没有聚集索引的表）](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    

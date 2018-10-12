@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084305"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719255"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ PolyBase 仅使用自定义日期格式来导入数据。 它不使用自定义�
 ## <a name="performance"></a>“性能”
  使用压缩文件时始终需要在传输更少的数据（在外部数据源与 SQL Server 之间）与提高 CPU 使用率来压缩和解压缩数据之间进行权衡。
   
- Gzip 压缩文本文件不可拆分。 若要提高 Gzip 压缩文本文件的性能，建议生成全部存储在外部数据源中同一目录中的多个文件。 此文件结构使 PolyBase 可以使用多个读取器和解压缩进程更快地读取和解压缩数据。 理想的压缩文件数是每个计算节点的最大数据读取器进程数。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]中，最大数据读取器进程数在当前版本中是每个节点 8 个。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每个节点的最大数据读取器进程数因 SLO 而异。 有关详细信息，请参阅 [Azure SQL 数据仓库加载模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)。  
+ Gzip 压缩文本文件不可拆分。 若要提高 Gzip 压缩文本文件的性能，建议生成全部存储在外部数据源中同一目录中的多个文件。 此文件结构使 PolyBase 可以使用多个读取器和解压缩进程更快地读取和解压缩数据。 理想的压缩文件数是每个计算节点的最大数据读取器进程数。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 中，最大数据读取器进程数为每节点 8 个，除了 Azure SQL 数据仓库 Gen2，其每个节点为 20 个读取器。 在 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]中，每个节点的最大数据读取器进程数因 SLO 而异。 有关详细信息，请参阅 [Azure SQL 数据仓库加载模式和策略](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)。  
   
 ## <a name="examples"></a>示例  
   

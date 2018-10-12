@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4eef7eee4073a2c1b10633c043aec1b452c2d5a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 009433960a4662985d78c09c10b125cfb5f7100f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564043"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690656"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -115,7 +112,19 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
 ```  
   
 ## <a name="arguments"></a>参数  
-CREATE CLUSTERED COLUMNSTORE INDEX  
+
+某些选项并非在所有数据库引擎版本中均可用。 下表显示了聚集列存储索引和非聚集列存储索引中引入选项时的版本：
+
+|选项| CLUSTERED | NONCLUSTERED |
+|---|---|---|
+| COMPRESSION_DELAY | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+| DATA_COMPRESSION | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | 
+| ONLINE | [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] |
+| WHERE 子句 | N/A | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] |
+
+所有选项在 Azure SQL 数据库中均可用。
+
+### <a name="create-clustered-columnstore-index"></a>CREATE CLUSTERED COLUMNSTORE INDEX  
 创建一个聚集列存储索引，并按列压缩和存储其中的所有数据。 该索引包含表中的所有列，并且存储整个表。 如果现有表是堆或聚集索引，则该表会转换为聚集列存储索引。 如果该表已作为聚集列存储索引存储，则会删除并重新生成现有索引。  
   
 *index_name*  
@@ -126,13 +135,16 @@ CREATE CLUSTERED COLUMNSTORE INDEX
 ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
    指定要作为聚集列存储索引存储的由一部分、两部分或三部分构成的名称。 如果该表是堆或聚集索引，则会将其从行存储转换为列存储。 如果该表已经是列存储，则此语句会重新生成聚集列存储索引。  
   
-替换为  
-DROP_EXISTING = [OFF] | ON  
-   DROP_EXISTING = ON 指定删除现有的聚集列存储索引，并创建一个新的列存储索引。  
-
+#### <a name="with-options"></a>WITH 选项  
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+   `DROP_EXISTING = ON` 指定删除现有的索引，并创建一个新的列存储索引。  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (DROP_EXISTING = ON);
+```
    DROP_EXISTING = OFF（默认值）要求索引名称与现有名称相同。 如果指定的索引名称已存在，则会出错。  
   
-MAXDOP = max_degree_of_parallelism  
+##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism  
    在索引操作期间覆盖现有的最大并行度服务器配置。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
    max_degree_of_parallelism 可为以下值：  
@@ -140,27 +152,44 @@ MAXDOP = max_degree_of_parallelism
    - \>1 - 基于当前系统工作负载，将并行索引操作中使用的最大处理器数限制为指定数量或更少。 例如，当 MAXDOP = 4 时，使用的处理器数为 4 或更少。  
    - 0（默认值） - 根据当前系统工作负荷使用实际的处理器数量或更少数量的处理器。  
   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH (MAXDOP = 2);
+```
    有关详细信息，请参阅[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)和[配置并行索引操作](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
  
-COMPRESSION_DELAY = 0 | delay [ Minutes ]  
-   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-
-   对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数。 由于基于磁盘的表不会跟踪各个行的插入和更新时间，因此，SQL Server 会向处于关闭状态的增量行组应用延迟。  
+###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+   对于基于磁盘的表，delay 指定处于关闭状态的增量行组在 SQL Server 可以将它压缩为压缩行组之前，必须保持为增量行组的最小分钟数。 由于基于磁盘的表不对单个行跟踪插入和更新时间，因此 SQL Server 会将该延迟应用于处于关闭状态的增量行组。  
    默认为 0 分钟。  
+   
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( COMPRESSION_DELAY = 10 Minutes );
+```
+
    有关何时使用 COMPRESSION_DELAY 的建议，请参阅[开始使用列存储进行实时运行分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)。  
   
-DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
-   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：   
-COLUMNSTORE  
-   COLUMNSTORE 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
+##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+   为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：   
+- `COLUMNSTORE` 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
+- `COLUMNSTORE_ARCHIVE` 将表或分区进一步压缩为更小的大小。 可在许多情况下使用此选项，例如，用于要求存储更小并且可以付出更多时间来进行存储和检索的存档。  
   
-COLUMNSTORE_ARCHIVE  
-   COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 可在许多情况下使用此选项，例如，用于要求存储更小并且可以付出更多时间来进行存储和检索的存档。  
-  
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( DATA_COMPRESSION = COLUMNSTORE_ARCHIVE );
+```
    有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
 
-ON  
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]
+- `ON` 指定列存储索引在生成新副本时保持联机并可用。
+- `OFF` 指定索引在生成新副本时不可用。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+       WITH ( ONLINE = ON );
+```
+
+#### <a name="on-options"></a>ON 选项 
    使用 ON 选项，您可为数据存储指定选项，例如分区架构、特定的文件组或默认文件组。 如果未指定 ON 选项，索引会使用现有表的分区设置或文件组设置。  
   
    partition_scheme_name ( column_name )   
@@ -176,7 +205,7 @@ ON
   
    如果指定了 "default"，则当前会话的 QUOTED_IDENTIFIER 选项必须为 ON。 QUOTED_IDENTIFIER 默认为 ON。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
-CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
+### <a name="create-nonclustered-columnstore-index"></a>CREATE [NONCLUSTERED] COLUMNSTORE INDEX  
 对存储为堆或聚集索引的行存储表创建内存中非聚集列存储索引。 该索引可以具有经过筛选的条件，并且不需要包含基础表的所有列。 列存储索引需要足够的空间来存储数据副本。 它是可更新的，在基础表发生更改时会进行更新。 聚集索引上的非聚集列存储索引可启用实时分析。  
   
 index_name  
@@ -189,12 +218,13 @@ index_name
 ON [database_name. [schema_name ] . | schema_name . ] *table_name*  
    指定包含该索引的由一部分、两部分或三部分名称组成的表。  
 
-WITH DROP_EXISTING = [OFF] | ON  
+#### <a name="with-options"></a>WITH 选项
+##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON：删除并重新生成现有索引。 指定的索引名称必须与当前的现有索引相同；但可以修改索引定义。 例如，可以指定不同的列或索引选项。
   
    DROP_EXISTING = OFF：如果指定的索引名称已存在，则会显示一条错误。 使用 DROP_EXISTING 不能更改索引类型。 在向后兼容的语法中，WITH DROP_EXISTING 等效于 WITH DROP_EXISTING = ON。  
 
-MAXDOP = max_degree_of_parallelism  
+###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = max_degree_of_parallelism  
    在索引操作期间覆盖[配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)配置选项。 使用 MAXDOP 可以限制在执行并行计划的过程中使用的处理器数量。 最大数量为 64 个处理器。  
   
    max_degree_of_parallelism 可为以下值：  
@@ -207,29 +237,26 @@ MAXDOP = max_degree_of_parallelism
 > [!NOTE]  
 >  并非在 [!INCLUDE[msC](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个版本中均支持并行索引操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 各版本支持的功能列表，请参阅 [SQL Server 2016 的版本和支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
-ONLINE = [ON | OFF]   
-   适用范围：[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]，仅限非聚集列存储索引。
-ON 指定非聚集列存储索引在生成新副本时保持联机并可用。
+###### <a name="online--on--off"></a>ONLINE = [ON | OFF]   
+- `ON` 指定列存储索引在生成新副本时保持联机并可用。
+- `OFF` 指定索引在生成新副本时不可用。 在非聚集索引中，基表仍然可用，只不过非聚集列存储索引在新索引完成前不能用于满足查询。 
 
-   OFF 指定索引在生成新副本时不可用。 由于这只是非聚集索引，因此基表仍然可用，只不过非聚集列存储索引在新索引完成前不能用于满足查询。 
+```sql
+CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
+```
 
-COMPRESSION_DELAY = 0 | \<delay>[Minutes]  
-   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 
-  
+##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    指定某一行在适合迁移到压缩行组之前，应在增量行组中保留的时间下限。 例如，客户可以说，如果某一行在 120 分钟内保持不变，则可以将其压缩为列存储格式。 对于基于磁盘的表中的列存储索引，我们不跟踪行的插入或更新时间，而是使用增量行组关闭时间作为行代理。 默认持续时间为 0 分钟。 一旦增量行组中累积了 100 万行，并且该行组标记为已关闭，就会将行迁移到列存储。  
   
-DATA_COMPRESSION  
-   为指定的表、分区号或分区范围指定数据压缩选项。 选项如下所示：  
-COLUMNSTORE  
-   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE 是默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
-  
-COLUMNSTORE_ARCHIVE  
-   适用范围：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
-仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
+###### <a name="datacompression"></a>DATA_COMPRESSION  
+   为指定的表、分区号或分区范围指定数据压缩选项。 仅适用于列存储索引，包括非聚集列存储索引和聚集列存储索引。 选项如下所示：
+   
+- `COLUMNSTORE` - 默认值，它指定使用性能最高的列存储压缩进行压缩。 这是典型选择。  
+- `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE 将表或分区进一步压缩为更小的大小。 这可用于存档，或者用于要求更小存储大小并且可以付出更多时间来进行存储和检索的其他情形。  
   
  有关压缩的详细信息，请参阅[数据压缩](../../relational-databases/data-compression/data-compression.md)。  
   
-WHERE \<filter_expression> [ AND \<filter_expression> ] 适用于：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    调用一个筛选器谓词，它指定哪些行包含在索引中。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对筛选索引中的数据行创建筛选统计信息。  
   
@@ -242,7 +269,7 @@ WHERE \<filter_expression> [ AND \<filter_expression> ] 适用于：[!INCLUDE[ss
    
    有关筛选索引的指南，请参阅[创建筛选索引](../../relational-databases/indexes/create-filtered-indexes.md)。  
   
-ON  
+#### <a name="on-options"></a>ON 选项  
    这些选项指定创建该索引时所在的文件组。  
   
 *partition_scheme_name* **(** *column_name* **)**  

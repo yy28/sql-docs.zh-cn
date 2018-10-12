@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE_REWINDONLY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - rewinding backup devices
 - RESTORE REWINDONLY statement
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 486715799d2fee564c51336bd958eb603cd1b490
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 0ba43b04bc5c77d060fd2f8edda25d8a925a2856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038655"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602285"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>RESTORE 语句 - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +61,11 @@ FROM <backup_device> [ ,...n ]
   
  指定要用于还原操作的逻辑或物理备份设备。  
   
- { logical_backup_device_name | @logical_backup_device_name_var } 是由 sp_addumpdevice 创建的备份设备（数据库将从该备份设备还原）的逻辑名称，该名称必须符合标识符规则。*如果作为变量 (**@**logical_backup_device_name_var*) 提供，则可以将该备份设备名称指定为字符串常量 (*@**logical_backup_device_name_var* = logical_backup_device_name) 或字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ { *logical_backup_device_name* | **@**_logical\_backup\_device\_name\_var_ }  
+ 由 sp_addumpdevice 创建的、用于还原数据库的备份设备的逻辑名称，该名称必须符合有关标识符的规则。 如果作为变量 (**@**_logical\_backup\_device\_name\_var_) 提供，则可以将该备份设备名称指定为字符串常量 (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
- {DISK | TAPE }  { 'physical_backup_device_name' | @physical_backup_device_name_var } 允许从指定的磁盘或磁带设备还原备份**=*******。应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。如果指定为变量 (**@**physical_backup_device_name_var*)，则可以将该备份设备名称指定为字符串常量 (@**physical_backup_device_name_var* = 'physcial_backup_device_name*') 或字符串数据类型（ntext 或 text 数据类型除外）的变量*。  
+ {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
+ 允许从指定的磁盘或磁带设备还原备份。 应使用设备的实际名称（例如，完整的路径和文件名）指定磁盘和磁带的设备类型：DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'。 如果指定为变量 (**@**_physical\_backup\_device\_name\_var_)，则可以将该设备名称指定为字符串常量 (**@**_physical\_backup\_device\_name\_var_ = '*physcial_backup_device_name*') 或字符字符串数据类型（ntext 或 text 数据类型除外）的变量。  
   
  如果使用的是具有 UNC 名称（必须包含计算机名称）的网络服务器，请指定磁盘的设备类型。 有关如何使用 UNC 名称的详细信息，请参阅[备份设备 (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
   

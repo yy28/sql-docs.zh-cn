@@ -5,24 +5,21 @@ ms.date: 12/21/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index types [SQL Server]
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
-caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e30951b56cc0296b8028ab2c49463db9ef822a10
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43060370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770355"
 ---
 # <a name="indexes"></a>索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,14 +43,15 @@ ms.locfileid: "43060370"
 |全文|一种特殊类型的基于标记的功能性索引，由 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文引擎生成和维护。 用于帮助在字符串数据中搜索复杂的词。|[填充全文索引](../../relational-databases/search/populate-full-text-indexes.md)|  
   
 ## <a name="related-content"></a>相关内容  
- [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md) [用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
- [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)  
- [启用索引和约束](../../relational-databases/indexes/enable-indexes-and-constraints.md)  
- [重命名索引](../../relational-databases/indexes/rename-indexes.md)  
- [设置索引选项](../../relational-databases/indexes/set-index-options.md)  
- [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
- [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
- [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
- [页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md) [描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)  
-  
+ [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)      
+ [用于索引的 SORT_IN_TEMPDB 选项](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)     
+ [禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)     
+ [启用索引和约束](../../relational-databases/indexes/enable-indexes-and-constraints.md)    
+ [重命名索引](../../relational-databases/indexes/rename-indexes.md)     
+ [设置索引选项](../../relational-databases/indexes/set-index-options.md)     
+ [索引 DDL 操作的磁盘空间要求](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)     
+ [重新组织和重新生成索引](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)     
+ [为索引指定填充因子](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)     
+ [页和区体系结构指南](../../relational-databases/pages-and-extents-architecture-guide.md)     
+ [描述的聚集索引和非聚集索引](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)     
   
