@@ -1,37 +1,34 @@
 ---
-title: 步骤 3： 连接到 SQL 使用 Node.js 的概念证明 |Microsoft 文档
+title: 步骤 3：使用 Node.js 连接到 SQL 的概念证明 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6d9e49b709396519a3eb08ce37fb802c66aa283
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
-ms.translationtype: MT
+ms.openlocfilehash: 4ffefc34eed32a27b29f40836762a16fd69cdd4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288916"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834135"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3： 连接到 SQL 使用 Node.js 的概念证明
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>步骤 3：使用 Node.js 连接到 SQL 的概念证明
 
-![下载向下箭头带圆圈](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![下载向下箭头线圈出](../../ssdt/media/download.png)[下载 Node.js SQL 驱动程序](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-此示例中，应考虑仅概念证明。  示例代码为清楚起见，简化，并不一定表示 Microsoft 推荐的最佳做法。 其他示例使用相同的重要功能是可在 Github 上：
+此示例中，应考虑仅概念证明。  示例代码简化为清楚起见，而不一定表示 Microsoft 推荐的最佳做法。 其他示例使用相同的关键功能是可在 Github 上：
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>步骤 1： 连接  
   
-**新连接**函数用于连接到 SQL 数据库。  
+**新的连接**函数用于连接到 SQL 数据库。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -52,7 +49,7 @@ ms.locfileid: "35288916"
 ## <a name="step-2--execute-a-query"></a>步骤 2：执行查询  
   
   
-在使用执行所有 SQL 语句**new request （)** 函数。 如果语句返回行，例如 select 语句，你可以检索它们使用**request.on （)** 函数。 如果没有行，request.on （） 函数将返回空列表。  
+使用执行所有 SQL 语句**new request （)** 函数。 如果该语句将返回行，如 select 语句可以检索这些使用**request.on （)** 函数。 如果没有任何行，request.on （） 函数将返回空列表。  
   
   
 ```javascript  
@@ -101,7 +98,7 @@ ms.locfileid: "35288916"
   
 ## <a name="step-3-insert-a-row"></a>步骤 3： 插入行  
   
-在此示例中，你将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句安全地，传递参数，保护你的应用程序从该[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在此示例中您将了解如何执行[插入](../../t-sql/statements/insert-transact-sql.md)语句，传递参数以保护应用程序免遭[SQL 注入](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```javascript  

@@ -1,18 +1,17 @@
 ---
-title: 发行说明 （OLE DB 驱动程序适用于 SQL Server） |Microsoft Docs
+title: 发行说明（适用于 SQL Server 的 OLE DB 驱动程序） | Microsoft Docs
 ms.date: 07/03/2018
 ms.prod: sql
-ms.suite: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: ec5abfce888f0af956f1b72f509ef298ee7405a0
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109369"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789115"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 Microsoft OLE DB 驱动程序发行说明
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

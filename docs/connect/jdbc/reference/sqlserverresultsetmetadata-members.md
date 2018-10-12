@@ -1,30 +1,27 @@
 ---
-title: SQLServerResultSetMetaData 成员 |Microsoft 文档
+title: SQLServerResultSetMetaData 成员 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03374d523c0dda429b7193404cefddbb9b5711ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818595"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData 成员
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  下表列出了通过公开的成员[SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)类。  
+  下表列出了由 [SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 类公开的成员。  
   
 ## <a name="constructors"></a>构造函数  
  无。  
@@ -34,19 +31,19 @@ ms.locfileid: "32852652"
   
 ## <a name="inherited-fields"></a>继承的字段  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls、columnNullable、columnNullableUnknown|  
   
 ## <a name="methods"></a>方法  
   
-|名称|Description|  
+|名称|描述|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|获取包括指定列的表的目录名称。|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|返回其实例生产如果的 Java 类的完全限定名称[getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md)方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)类调用以检索列的值。|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|如果调用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 类的 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 方法来从列中检索值，则返回生成其实例的 Java 类的完全限定名称。|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|返回结果集中的列数。|  
-|[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|返回普通的最大宽度，以字符为单位指定的列。|  
-|[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|用于打印输出和指定列的显示获取建议的标题。|  
+|[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|返回指定列的正常最大宽度（以字符数计）。|  
+|[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|获取在打印输出和显示屏中使用的指定列的建议标题。|  
 |[getColumnName](../../../connect/jdbc/reference/getcolumnname-method-sqlserverresultsetmetadata.md)|获取指定列的名称。|  
 |[getColumnType](../../../connect/jdbc/reference/getcolumntype-method-sqlserverresultsetmetadata.md)|检索指定列的 SQL 类型。|  
 |[getColumnTypeName](../../../connect/jdbc/reference/getcolumntypename-method-sqlserverresultsetmetadata.md)|检索指定列的数据库特定类型名称。|  
@@ -54,8 +51,8 @@ ms.locfileid: "32852652"
 |[getScale](../../../connect/jdbc/reference/getscale-method-sqlserverresultsetmetadata.md)|获取指定列的小数点右侧的位数。|  
 |[getSchemaName](../../../connect/jdbc/reference/getschemaname-method-sqlserverresultsetmetadata.md)|获取指定列的表架构名称。|  
 |[getTableName](../../../connect/jdbc/reference/gettablename-method-sqlserverresultsetmetadata.md)|获取指定列的表名称。|  
-|[IsAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|指示指定列是否为自动编号，这将使该列处于只读状态。|  
-|[IsCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|指示列是否区分大小写。|  
+|[isAutoIncrement](../../../connect/jdbc/reference/isautoincrement-method-sqlserverresultsetmetadata.md)|指示指定列是否为自动编号，这将使该列处于只读状态。|  
+|[isCaseSensitive](../../../connect/jdbc/reference/iscasesensitive-method-sqlserverresultsetmetadata.md)|指示列是否区分大小写。|  
 |[isCurrency](../../../connect/jdbc/reference/iscurrency-method-sqlserverresultsetmetadata.md)|指示指定列是否为现金值。|  
 |[isDefinitelyWritable](../../../connect/jdbc/reference/isdefinitelywritable-method-sqlserverresultsetmetadata.md)|指示指定列上的写入操作是否将一定成功。|  
 |[isNullable](../../../connect/jdbc/reference/isnullable-method-sqlserverresultsetmetadata.md)|指示指定列中的值的为 Null 性。|  
@@ -69,7 +66,7 @@ ms.locfileid: "32852652"
   
 |类继承自：|方法|  
 |---------------------------|-------------|  
-|java.lang.Object|clone、 equals、 finalize、 getClass、 hashCode、 notify、 notifyAll、 toString、 wait|  
+|java.lang.Object|clone、equals、finalize、getClass、hashCode、notify、notifyAll、toString、wait|  
 |java.sql.Wrapper|isWrapperFor、unwrap|  
   
 ## <a name="see-also"></a>另请参阅  

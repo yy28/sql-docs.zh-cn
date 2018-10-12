@@ -1,13 +1,11 @@
 ---
-title: sqlsrv_send_stream_data |Microsoft 文档
+title: sqlsrv_send_stream_data |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_send_stream_data
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99be2cc8d56cde6ce960b5fc8d6caa2fab156a74
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c1ce0db099046fb243151a7977823ab0fcf458ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47790605"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-将数据从参数流发送至服务器。 最多八千字节 (8 K) 的数据发送到每次调用**sqlsrv_send_stream_data**。  
+将数据从参数流发送至服务器。 每次调用 sqlsrv_send_stream_data 时，最多可以发送八千字节 (8K) 的数据。  
   
 > [!NOTE]  
 > 默认情况下，当执行查询时，所有流数据都将发送到服务器。 如果未更改此默认行为，则无需使用 **sqlsrv_send_stream_data** 来向服务器发送流数据。 有关更改默认行为的信息，请参阅 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)的“参数”部分。  
@@ -50,7 +47,7 @@ sqlsrv_send_stream_data( resource $stmt)
 布尔：如果有更多数据需要发送，则为 **true** 。 否则为 **false**。  
   
 ## <a name="example"></a>示例  
-下面的示例将以流的形式打开产品评论，并将其发送到服务器。 禁用执行时发送所有流数据的默认行为。 该示例假定 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)数据库安装在本地计算机上。 从命令行运行该示例时，所有输出都将写入控制台。  
+下面的示例将以流的形式打开产品评论，并将其发送到服务器。 禁用执行时发送所有流数据的默认行为。 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   
 ```  
 <?php  
@@ -98,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
 [SQLSRV 驱动程序 API 参考](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [更新数据（Microsoft Drivers for PHP for SQL Server）](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

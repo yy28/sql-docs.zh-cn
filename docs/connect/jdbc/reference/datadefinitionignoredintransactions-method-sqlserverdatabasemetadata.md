@@ -1,13 +1,11 @@
 ---
-title: 数据库是否忽略在事务中的数据定义语句 |Microsoft 文档
+title: 数据库是否忽略事务内的数据定义语句 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.dataDefinitionIgnoredInTransactions
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7551216ae4f6f3ff54611497c0e3d6d7ba5b3919
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 31720bc3dfb2d39bb0dc83bfa7aa771aa1ef02fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828792"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809805"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public boolean dataDefinitionIgnoredInTransactions()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **true**如果 DDL 语句忽略在事务内。 否则为 **false**。  
+ 如果忽略事务内的 DDL 语句，则为 true。 否则为 **false**。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 dataDefinitionIgnoredInTransactions 方法指定此 dataDefinitionIgnoredInTransactions 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 dataDefinitionIgnoredInTransactions 方法由 java.sql.DatabaseMetaData 接口中的 dataDefinitionIgnoredInTransactions 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,15 +1,12 @@
 ---
 title: sqlcmd 实用工具 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2017
+ms.date: 09/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlcmd
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -28,17 +25,16 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 318ce145febf62b282c96560be91cc08b7de9ea8
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
-ms.translationtype: MTE75
+ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785590"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796625"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -128,7 +124,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令行选项  
  **登录相关选项**  
   **-A**  
- 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接仅适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不可用的 Azure Active Directory 管理员。
+ 使用专用管理员连接 (DAC) 登录 SQL Server。 此类型连接用于排除服务器故障。 此连接仅适用于支持 DAC 的服务器计算机。 如果 DAC 不可用，sqlcmd 会生成错误消息并退出。 有关 DAC 的详细信息，请参阅 [用于数据库管理员的诊断连接](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 选项不支持使用-G 选项。 当连接到 SQL 数据库使用-A，您必须是 SQL server 管理员。 DAC 不适用于 Azure Active Directory 管理员。
   
  **-C**  
  该开关供客户端用于将其配置为隐式表示信任服务器证书且无需验证。 此选项等同于 ADO.NET 选项 `TRUSTSERVERCERTIFICATE = true`。  
@@ -151,7 +147,8 @@ sqlcmd
  当连接到 SQL 数据库或 SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 此选项设置 **sqlcmd** 脚本变量 SQLCMDUSEAAD = true。 -G 开关至少需要 **sqlcmd** 版本 [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要确定你的版本，请执行 `sqlcmd -?`。 有关详细信息，请参阅 [使用 Azure Active Directory 身份验证连接到 SQL 数据库或 SQL 数据仓库](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -A 选项不支持使用-G 选项。
 
 > [!IMPORTANT]
-> **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。 
+> **-G** 选项仅适用于 Azure SQL 数据库 和 Azure 数据仓库。
+> 目前在 Linux 或 macOS 上不支持 AAD 集成身份验证。 
 
 - **Azure Active Directory 用户名和密码：** 
 
@@ -168,7 +165,8 @@ sqlcmd
 
 - **Azure Active Directory 集成** 
  
-   要进行 Azure Active Directory 集成身份验证，可提供 **-G** 选项而无需用户名或密码： 
+   要进行 Azure Active Directory 集成身份验证，可提供 -G 选项而无需用户名或密码。
+   *AAD 集成身份验证目前不支持在 Linux 或 macOS 上*。
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net  -G
@@ -230,14 +228,14 @@ sqlcmd
   
  如果 **-P** 选项后有多个参数，将生成错误消息并退出程序。  
   
- **-S** [*协议*:]*server*[**\\***instance_name*] [**，* **端口*]  
+ **-S** [*协议*:]*server*[**\\**_实例\_名称_] [**，**_端口_]  
  指定要连接的 SQL Server 实例。 它设置 **sqlcmd** 脚本变量 SQLCMDSERVER。  
   
- 指定 server_name 可连接到该服务器计算机上的 SQL Server 默认实例。 指定要连接到该服务器计算机上 SQL Server 命名实例的 server_name [ \\instance_name ]。 如果不指定服务器，sqlcmd 将连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
+ 指定 server_name 可连接到该服务器计算机上的 SQL Server 默认实例。 指定要连接到该服务器计算机上 SQL Server 命名实例的 server_name [ \\_instance\_name_ ]。 如果不指定服务器，sqlcmd 将连接到本地计算机上 SQL Server 的默认实例。 从网络上的远程计算机执行 **sqlcmd** 时，此选项是必需的。  
   
  *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** （共享内存）或 **np** （命名管道）。  
   
- 如果在启动 sqlcmd 时未指定 server_name [ \\instance_name ]，SQL Server 将检查并使用 SQLCMDSERVER 环境变量。  
+ 如果在启动 sqlcmd 时未指定 server_name [ \\_instance\_name_ ]，SQL Server 将检查并使用 SQLCMDSERVER 环境变量。  
   
 > [!NOTE]  
 >  为实现向后兼容性而保留了 OSQLSERVER 环境变量。 SQLCMDSERVER 环境变量优先于 OSQLSERVER 环境变量；也就是说 **sqlcmd** 和 **osql** 可以彼此相邻使用而不会相互干扰，并且旧式脚本可以继续使用。  
@@ -250,7 +248,7 @@ sqlcmd
   
  如果 -U 选项和 -P 选项均未指定，sqlcmd 将尝试使用 Microsoft Windows 身份验证模式进行连接。 身份验证基于运行 **sqlcmd**的用户的 Windows 帐户。  
   
- 如果 **-U** 选项与 **-E** 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
+ 如果 -U 选项与 -E 选项（将在本主题的后面进行说明）一起使用，则会生成错误消息。 如果 **–U** 选项后有多个参数，将生成错误消息并退出程序。  
   
  **-z** *new_password*  
  更改密码：  
@@ -263,7 +261,7 @@ sqlcmd
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **输入/输出选项**  
-  **-f** *codepage* | **i:***codepage*[**,o:***codepage*] | **o:***codepage*[**,i:*** codepage*]  
+  **-f** *codepage* | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
  指定输入和输出代码页。 代码页页码是指定已安装的 Windows 代码页的数值。  
   
  代码页转换规则：  
@@ -278,7 +276,7 @@ sqlcmd
   
  在命令提示符处输入 **chcp** 以验证 Cmd.exe 的代码页。  
   
- **-i** *input_file*[**，* * * input_file2*...]  
+ **-i** *input_file*[**，**_输入\_file2_...]  
  标识包含一批 SQL 语句或存储过程的文件。 可以指定要按顺序读取和处理的多个文件。 文件名之间不要使用任何空格。 **sqlcmd** 将首先检查所有指定的文件是否都存在。 如果有一个或多个文件不存在， **sqlcmd** 将退出。 -i 和 -Q/-q 选项是互斥的。  
   
  路径示例：  
@@ -291,7 +289,7 @@ sqlcmd
   
  包含空格的文件路径必须用引号引起来。  
   
- 此选项可以多次使用：**-i***input_file* **-I***I input_file.*  
+ 此选项可以使用多次：-i_input\_file_ -I_I input_file。_  
   
  **-o** *output_file*  
  标识从 **sqlcmd**接收输出的文件。  
@@ -323,7 +321,7 @@ sqlcmd
  **-I**  
  将 SET QUOTED_IDENTIFIER 连接选项设置为 ON。 默认情况下，此选项设置为 OFF。 有关详细信息，请参阅 [SET QUOTED_IDENTIFIER (Transact-SQL)](~/t-sql/statements/set-quoted-identifier-transact-sql.md)。  
   
- **-q"** *cmdline query* **"**  
+ -q " cmdline query "  
  启动 **sqlcmd** 时执行查询，但是在查询结束运行时不退出 **sqlcmd** 。 可以执行多个以分号分隔的查询。 将查询用引号引起来，如下例所示。  
   
  在命令提示符下，键入：  
@@ -335,9 +333,9 @@ sqlcmd
 > [!IMPORTANT]  
 >  请不要在查询中使用 GO 终止符。  
   
- 如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 **-b** 将在本主题后面部分进行介绍。  
+ 如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 -b 将在本文后面部分进行介绍。  
   
- **-Q"** *cmdline query* **"**  
+ -Q " cmdline query "  
  在 **sqlcmd** 启动时执行查询，随后立即退出 **sqlcmd**。 可以执行多个以分号分隔的查询。  
   
  将查询用引号引起来，如下例所示。  
@@ -351,7 +349,7 @@ sqlcmd
 > [!IMPORTANT]  
 >  请不要在查询中使用 GO 终止符。  
   
- 如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 **-b** 将在本主题后面部分进行介绍。  
+ 如果在指定此选项的同时还指定了 **-b** ， **sqlcmd** 在遇到错误时将退出。 -b 将在本文后面部分进行介绍。  
   
  **-t** *query_timeout*  
  指定命令（或 SQL 语句）超时的时间。此选项设置 **sqlcmd** 脚本变量 SQLCMDSTATTIMEOUT。 如果未指定 *time_out* 值，则命令将不会超时。querytime_out 必须是介于 1 和 65534 之间的数字。 如果提供的值不是数值或不在此范围内， **sqlcmd** 将生成错误消息。  
@@ -360,7 +358,7 @@ sqlcmd
 >  实际的超时值可能会与指定的 time_out  值相差几秒。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 创建可在 **sqlcmd**脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 可以指定多个 var="values" 值****。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
+ 创建可在 **sqlcmd**脚本中使用的 **sqlcmd** 脚本变量。 如果该值包含空格，则将其用引号引起来。 可以指定多个 _var_="_values_"值。 如果指定的任何值中有错误， **sqlcmd** 会生成错误消息，然后退出。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -371,7 +369,7 @@ sqlcmd
   
  **格式设置选项**  
   **-h** *headers*  
- 指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 **-1** 指定不可输出标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
+ 指定要在列标题之间输出的行数。 默认为每一组查询结果输出一次标题。 此选项设置 **sqlcmd** 脚本变量 SQLCMDHEADERS。 使用 -1 指定不应输出标题。 任何无效的值都将导致 **sqlcmd** 生成错误消息并随后退出。  
   
  **-k** [**1** | **2**]  
  删除输出中的所有控制字符，例如制表符和换行符。 此参数在返回数据时保留列格式。 如果指定了 1，则控制字符被一个空格替代。 如果指定了 2，则连续的控制字符被一个空格替代。 **-k** 与 **-k1**相同。  
@@ -481,7 +479,7 @@ sqlcmd
  如果可选参数是除 **1**之外的任何值，则将生成错误并且 **sqlcmd** 将退出。  
   
  **-X**[**1**]  
- 从批处理文件执行 **sqlcmd** 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别； **sqlcmd** 发出警告消息并继续。 如果指定了可选参数 **1** ，则 **sqlcmd** 将生成错误消息，然后退出。 使用 **-X** 选项时，将禁用以下命令：  
+ 从批处理文件执行 **sqlcmd** 时，将禁用可能危及系统安全的命令。 禁用的命令仍然可以被识别；**sqlcmd** 发出警告消息并继续。 如果指定了可选参数 **1**，则 **sqlcmd** 将生成错误消息，然后退出。 使用 **-X** 选项时，将禁用以下命令：  
   
 -   **ED**  
   
@@ -497,7 +495,7 @@ sqlcmd
   
  在返回多个结果时， **sqlcmd** 在批处理中的每个结果集之间输出一个空行。 此外，如果没有应用于已执行的语句，则不会出现 `<x> rows affected` 消息。  
   
- 若要交互使用 **sqlcmd** ，请在命令提示符处带本主题前面介绍的一个或多个选项键入 **sqlcmd** 。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ 若要交互使用 sqlcmd，请在命令提示符处使用本文前面介绍的一个或多个选项键入 sqlcmd。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](~/relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  选项 **-L**、 **-Q**、 **-Z** 或 **-i** 会导致 **sqlcmd** 在执行后退出。  
@@ -521,7 +519,7 @@ sqlcmd
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd 脚本变量  
   
-|变量|相关开关|R/W|，则“默认”|  
+|变量|相关开关|R/W|默认|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER|-U|R|""|  
 |SQLCMDPASSWORD|-P|--|""|  
@@ -541,7 +539,7 @@ sqlcmd
 |SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | R/W | "" |  
   
- 使用 **:Connect** 时设置 SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER。  
+ 使用 :Connect 时设置 SQLCMDUSER、SQLCMDPASSWORD 和 SQLCMDSERVER。  
   
  R 表示在程序初始化过程中只能设置一次值。  
   
@@ -567,7 +565,7 @@ sqlcmd
 -   除 GO 以外，所有 **sqlcmd** 命令必须以冒号 (:) 为前缀。  
   
     > [!IMPORTANT]  
-    >  为了保持现有 **osql** 脚本的向后兼容性，有些命令会被视为不带冒号。 这由 [**:**] 指示。  
+    >  为了保持现有 osql 脚本的向后兼容性，有些命令会被视为不带冒号，通过 [:] 指示。
   
 -   **sqlcmd** 命令只有出现在一行的开头时，才能够被识别。  
   
@@ -592,7 +590,7 @@ sqlcmd
  输出语句缓存的内容。  
   
  **变量**  
-  **: Setvar** \< **var**> [ **"***值***"** ]  
+  **: Setvar** \< **var**> [ **"**_值_**"** ]  
  定义 **sqlcmd** 脚本变量。 脚本变量具有如下格式： `$(VARNAME)`。  
   
  变量名称不区分大小写。  
@@ -624,7 +622,7 @@ sqlcmd
   
  **输出命令**  
   **:Error**   
- ***\<***  *filename*  ***>|* STDERR|STDOUT**  
+ _**\<**_  _filename_  _>|_ STDERR|STDOUT  
  将所有错误输出重定向到 *file name*指定的文件、 **stderr** 或 **stdout**。 **Error** 命令可以在一个脚本中多次出现。 默认情况下，错误输出将发送到 **stderr**。  
   
  *file name*  
@@ -646,14 +644,14 @@ sqlcmd
   **:On Error**[ **exit** | **ignore**]  
  设置在脚本或批处理执行过程中发生错误时要执行的操作。  
   
- 使用 **exit** 选项时， **sqlcmd** 退出，并显示相应的错误值。  
+ 使用 **exit** 选项时，**sqlcmd** 退出，并显示相应的错误值。  
   
- 使用 **ignore** 选项时， **sqlcmd** 会忽略错误，并继续执行批处理或脚本。 默认情况下，会输出错误消息。  
+ 使用 **ignore** 选项时，**sqlcmd** 会忽略错误，并继续执行批处理或脚本。 默认情况下，打印一条错误消息。  
   
  [**:**] **QUIT**  
  导致 **sqlcmd** 退出。  
   
- [**:**] **EXIT**[ **(***statement***)** ]  
+ [**:**] **EXIT**[ **(**_statement_**)** ]  
  允许将 SELECT 语句的结果用作 **sqlcmd**的返回值。 如果为数值，最后一个结果行的第一列将转换为 4 字节的整数（长整型）。 MS-DOS 将低字节传递给父进程或操作系统错误级别。 Windows 200x 传递整个 4 字节整数。 语法为：  
   
  `:EXIT(query)`  
@@ -703,7 +701,7 @@ sqlcmd
   
  **其他命令**  
   **:r \<** *filename* **>**  
- 将来自 \<filename> 指定的文件中的其他 Transact-SQL 语句和 sqlcmd 命令分析到语句缓存中****。  
+ 将来自 \<_filename_> 指定的文件中的其他 Transact-SQL 语句和 sqlcmd 命令分析到语句缓存中。  
   
  如果文件包含的 Transact-SQL 语句后面没有跟随 **GO**，则必须在 **:r** 的后一行中输入 **GO**。  
   
@@ -718,7 +716,7 @@ sqlcmd
  **:Serverlist**  
  列出在本地配置的服务器和在网络上广播的服务器的名称。  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ :Connect  server_name[\\_instance\_name_] [-l timeout] [-U user_name [-P password]]  
  连接到 SQL Server 的一个实例。 同时关闭当前的连接。  
   
  超时选项：  
@@ -732,7 +730,7 @@ sqlcmd
   
  如果未指定 *timeout* ，则其默认值将为 SQLCMDLOGINTIMEOUT 变量的值。  
   
- 仅当指定了 *user_name* （作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会出现此提示。 如果既未提供选项，又未提供环境变量，便会使用 Windows 身份验证模式进行登录。 例如，若要使用集成安全性连接到 SQL Server 的一个实例 `instance1`（如 `myserver`），则会使用以下内容：  
+ 仅当指定了 *user_name* （作为选项或环境变量）时，才会提示用户输入密码。 如果已设置 SQLCMDUSER 或 SQLCMDPASSWORD 环境变量，则不会提示用户。 如果既未提供选项，又未提供环境变量，便会使用 Windows 身份验证模式进行登录。 例如，若要使用集成安全性连接到 SQL Server 的一个实例 `instance1`（如 `myserver`），则会使用以下命令：  
   
  `:connect myserver\instance1`  
   
@@ -753,7 +751,7 @@ sqlcmd
 >  该命令在运行 **sqlcmd** 的计算机上执行。  
   
  **:XML** [**ON** | **OFF**]  
- 有关详细信息，请参阅本主题中的 [XML 输出格式](#OutputXML) 和 [JSON 输出格式](#OutputJSON)  
+ 有关详细信息，请参阅本文中的 [XML 输出格式](#OutputXML)和 [JSON 输出格式](#OutputJSON)  
   
  **:Help**  
  列出 **sqlcmd** 命令以及每个命令的简短说明。  
@@ -761,11 +759,11 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd 文件名  
  可以使用**sqlcmd** 选项或 **sqlcmd** 命令指定 **sqlcmd** 输入文件。 可以使用 **-o** 选项或 **:Error**、 **:Out** 和 **:Perftrace** 命令指定输出文件。 以下是使用这些文件的一些原则：  
   
--   :Error、:Out 和 :Perftrace 应使用不同的 \<filename>****。 如果使用了相同的 \<filename>，这些命令的输入可能会混杂在一起****。  
+-   **:Error**、**:Out** 和 **:Perftrace** 应使用不同的 **\<**_filename_**>**。 如果使用了相同的 **\<**_filename_**>**，这些命令的输入可能会混杂在一起。  
   
--   如果从本地计算机的 **sqlcmd** 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
+-   如果从本地计算机的 sqlcmd 调用远程服务器上的输入文件，并且该文件包含驱动器文件路径（如 :Out c:\OutputFile.txt）， 将在本地计算机而不是远程服务器上创建输出文件。  
   
--   有效文件路径包括： `C:\<filename>`、 `\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
+-   有效文件路径包括：`C:\<filename>`、`\\<Server>\<Share$>\<filename>` 和 `"C:\Some Folder\<file name>"`。 如果路径中包含空格，请使用引号。  
   
 -   每个新的 **sqlcmd** 会话都将覆盖现有的同名文件。  
   
@@ -773,7 +771,7 @@ sqlcmd
 
 sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中，执行 Transact-SQL 语句后会输出信息性消息。
   
-在命令提示符下键入以下内容：
+在命令提示符下键入以下命令：
 
 `sqlcmd`
   
@@ -790,7 +788,7 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
   
  此行将跟随一行分隔行，分隔行是一系列的破折号字符。 以下输出显示了一个示例。  
   
- 启动 **sqlcmd**。 在 **sqlcmd** 命令提示符下键入以下命令：  
+ 启动 **sqlcmd**。 在 sqlcmd 命令提示符下键入以下查询：  
   
  `USE AdventureWorks2012;`  
   
@@ -812,7 +810,7 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
   
  `(2 row(s) affected)`  
   
- 虽然 `BusinessEntityID` 列只有 4 个字符宽，但已将其扩展以适应更长的列名。 默认情况下，输出会在 80 个字符处终止。 可通过使用 **-w** 选项或设置 SQLCMDCOLWIDTH 脚本变量来进行更改。  
+ 虽然 `BusinessEntityID` 列宽只有四个字符，但已将其扩展以适应更长的列名。 默认情况下，输出会在 80 个字符处终止。 可通过使用 **-w** 选项或设置 SQLCMDCOLWIDTH 脚本变量来进行更改。  
   
 ###  <a name="OutputXML"></a> XML 输出格式  
  从 FOR XML 子句得到的 XML 输出是在连续流中的未格式化的输出。  
@@ -822,11 +820,11 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
 > [!NOTE]  
 >  **sqlcmd** 将采用常见的格式返回错误消息。 请注意，XML 文本流中的错误消息还将采用 XML 格式输出。 如果使用 `:XML ON`，则 **sqlcmd** 不显示信息性消息。  
   
- 若要关闭 XML 模式，请使用以下命令： `:XML OFF`。  
+ 若要关闭 XML 模式，请使用以下命令：`:XML OFF`。  
   
  发出 XML OFF 命令之前不应显示 GO 命令，因为 XML OFF 命令会将 **sqlcmd** 切换回面向行的输出。  
   
- XML（流形式）数据和行集数据不能混合。 如果在执行输出 XML 流的 Transact-SQL 语句之前未发出 XML ON 命令，则输出将为乱码。 如果已发出 XML ON 指令，则无法执行输出常规行集的 Transact-SQL 语句。  
+ XML（流式）数据和行集数据不能混合。 如果在执行输出 XML 流的 Transact-SQL 语句之前未发出 XML ON 命令，则输出为乱码。 发出 XML ON 命令后，将无法执行输出常规行集的 Transact-SQL 语句。  
   
 > [!NOTE]  
 >  **:XML** 命令不支持 SET STATISTICS XML 语句。  
@@ -834,9 +832,9 @@ sqlcmd 打印输出服务器发送的所有信息性消息。 在以下示例中
 ###  <a name="OutputJSON"></a> JSON 输出格式  
  若要得到 JSON 输出，请使用以下命令： `:XML ON`。 否则，输出包括的列名和 JSON 文本。 此输出不是有效的 JSON。  
   
- 若要关闭 XML 模式，请使用以下命令： `:XML OFF`。  
+ 若要关闭 XML 模式，请使用以下命令：`:XML OFF`。  
   
- 有关详细信息，请参阅本主题中的 [XML 输出格式](#OutputXML) 。  
+ 有关详细信息，请参阅本文中的 [XML 输出格式](#OutputXML)。  
 
 ### <a name="using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证  
 使用 Azure Active Directory 身份验证的示例：

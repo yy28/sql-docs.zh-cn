@@ -1,13 +1,11 @@
 ---
-title: getMaxConnections 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getMaxConnections 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getMaxConnections
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a16036562020da4d599b351e921a7c262dc32f61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2bda30a06bd2d6325dbbce4f06c7f8e50bbc93c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835932"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838945"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public int getMaxConnections()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **Int** ，该值指示最大允许的并发连接数。  
+ 指示允许的最大并发连接数的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getMaxConnections 方法指定此 getMaxConnections 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getMaxConnections 方法由 java.sql.DatabaseMetaData 接口中的 getMaxConnections 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

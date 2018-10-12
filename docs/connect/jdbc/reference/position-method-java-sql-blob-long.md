@@ -1,13 +1,11 @@
 ---
-title: 位置方法 (java.sql.Blob，长) |Microsoft 文档
+title: position 方法 (java.sql.Blob，long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerBlob.position (java.sql.Blob.long)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 326803fce62ad1e68fd8f4446183dac53172d6e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f7d4ae8550d35b65589ba735765016df623fc7c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830085"
 ---
 # <a name="position-method-javasqlblob-long"></a>position 方法 (java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,25 +37,25 @@ public long position(java.sql.Blob pattern,
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *pattern*  
+ pattern  
   
  要搜索的模式。  
   
- *start*  
+ start  
   
  要搜索的起始索引。  
   
 ## <a name="return-value"></a>返回值  
- A**长**其中已找到该模式，该位置的值则为-1 如果未找到。  
+ 指示找到模式的位置的 long 值，如果未找到，则为 -1。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Blob 接口中的位置方法指定此位置方法。  
+## <a name="remarks"></a>Remarks  
+ 此位置方法由 java.sql.Blob 接口中的位置方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
- [定位方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [position 方法&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob 方法](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob 成员](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob 类](../../../connect/jdbc/reference/sqlserverblob-class.md)  

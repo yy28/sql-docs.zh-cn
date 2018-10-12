@@ -1,25 +1,20 @@
 ---
 title: 在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 10/01/2018
+ms.date: 09/01/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: 3
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: b32be273b26a163263798c3b6a5312432cc54eb6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: dfe1777044234ec43c13f738fa1b0de896f96616
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828265"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>在适用于 SQL Server 的 ODBC 驱动程序中使用 Always Encrypted
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +94,7 @@ CREATE TABLE [dbo].[Patients](
 
 - 对于示例代码中的加密，没有什么特定的注意事项。 该驱动程序会自动检测并加密 SSN 和日期参数，面向加密的列的值。 这使得加密操作对应用程序而言是透明的。
 
-- 插入到数据库列，包括加密的列的值作为绑定参数传递 (请参阅[SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx))。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询会失败，因为该驱动程序不会尝试加密或其他处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
+- 插入到数据库列（包括加密列）中的值将作为绑定参数传递（请参阅 [SQLBindParameter 函数](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx)）。 在将值发送到非加密列时，可以选择使用参数（强烈建议使用它，因为它有助于防止 SQL 注入），而在发送面向加密列的值时，必须使用该参数。 如果插入到 SSN 或 BirthDate 列中的值作为查询语句中嵌入的文本传递，查询会失败，因为该驱动程序不会尝试加密或其他处理查询中的文本。 因此，服务器会因为与加密列不兼容而拒绝它们。
 
 - 插入到 SSN 列的参数的 SQL 类型设置为 SQL_CHAR，映射到**char** SQL Server 数据类型 (`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)。 如果参数的类型设置为 SQL_WCHAR，映射到**nchar**，查询将失败，因为始终加密不支持从加密的 nchar 值为加密的 char 值的服务器端转换。 请参阅[ODBC 程序员参考-附录 d： 数据类型](https://msdn.microsoft.com/library/ms713607.aspx)有关的数据类型映射信息。
 
@@ -144,9 +139,9 @@ CREATE TABLE [dbo].[Patients](
 
 以下示例演示如何根据加密值筛选数据，以及从加密列中检索纯文本数据。 请注意以下事项：
 
-- 在 WHERE 子句来筛选 SSN 列需要用于传递使用 SQLBindParameter，以便该驱动程序可以以透明方式对其进行加密发送到服务器之前的值。
+- WHERE 子句中用于筛选 SSN 列的值需要使用 SQLBindParameter 进行传递，以便驱动程序可以在将其发送到数据库之前以透明方式对其加密。
 
-- 该程序打印的所有值都会以纯文本形式，因为该驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索数据。
+- 程序打印的所有值均为纯文本形式，因为驱动程序将以透明方式解密从 SSN 和 BirthDate 列中检索到的数据。
 
 > [!NOTE]
 > 仅当加密是确定性的查询可以对加密列执行相等比较。 有关详细信息，请参阅[选择确定性加密或随机加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)。
@@ -352,7 +347,7 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 SQL Server 的 ODBC 驱动程序附带以下内置密钥存储提供程序：
 
-| “属性” | 描述 | 提供程序 （元数据） 的名称 |可用性|
+| 名称 | 描述 | 提供程序 （元数据） 的名称 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |在 Azure Key Vault 中存储 Cmk | `AZURE_KEY_VAULT` |Windows、 macOS、 Linux|
 |Windows 证书存储|Windows 密钥存储在本地存储 Cmk| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -399,7 +394,7 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 
 任何其他 ODBC 应用程序更改所不需的 CMK 存储使用 AKV。
 
-### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储区提供程序
+### <a name="using-the-windows-certificate-store-provider"></a>使用 Windows 证书存储提供程序
 
 Windows 上的 SQL Server ODBC 驱动程序包含名为 Windows 证书存储的内置列主密钥存储提供程序`MSSQL_CERTIFICATE_STORE`。 （此提供程序不是在 macOS 或 Linux 上可用。）与此提供程序，客户端计算机上本地存储 CMK 和应用程序无额外配置才可使用的驱动程序。 但是，应用程序必须具有对证书和私钥的访问的存储中。 有关详细信息，请参阅[创建并存储列主密钥 (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted)。
 
@@ -572,16 +567,16 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ### <a name="connection-string-keywords"></a>连接字符串关键字
 
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
-|`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` -禁用始终加密的连接的功能。 <br><br>默认值为 `Disabled`。|  
+|`ColumnEncryption`|接受的值是`Enabled` / `Disabled`。<br>`Enabled` - 启用或针对连接的 Always Encrypted 功能。<br>`Disabled` - 禁用针对连接的 Always Encrypted 功能。 <br><br>默认值为 `Disabled`。|  
 |`KeyStoreAuthentication` | 有效值：`KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`，将此值设置为有效的 Azure Active Directory 用户主体名称。 <br>当`KeyStoreAuthetication`  =  `KeyVaultClientSecret`将此值设置为有效 Azure Active Directory 应用程序客户端 ID |
 |`KeyStoreSecret` | 当`KeyStoreAuthentication`  =  `KeyVaultPassword`将此值设置为相应的用户名的密码。 <br>当`KeyStoreAuthentication`  =  `KeyVaultClientSecret`将此值设置为与有效 Azure Active Directory 应用程序客户端 ID 关联的应用程序机密|
 
 ### <a name="connection-attributes"></a>连接属性
 
-|“属性”|类型|描述|  
+|名称|类型|描述|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|预连接|`SQL_COLUMN_ENCRYPTION_DISABLE` (0)--禁用始终加密 <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1)--启用始终加密|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|后连接|[设置]尝试加载 CEKeystoreProvider<br>[获取]返回 CEKeystoreProvider 名称|
@@ -591,7 +586,7 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 ### <a name="statement-attributes"></a>语句属性
 
-|“属性”|描述|  
+|名称|描述|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0)--语句禁用了 always Encrypted <br>`SQL_CE_RESULTSETONLY` (1)--仅解密。 结果集和返回值解密的、 和未加密的参数 <br>`SQL_CE_ENABLED` (3)--始终加密已启用并使用参数和结果|
 
@@ -599,13 +594,13 @@ ODBC Driver 17 for SQL Server 加密前字符和二进制列不能检索使用 S
 
 |IPD 字段|大小/类型|默认值|描述|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 个字节）|0|当 0 （默认值）： 决定加密此参数由加密元数据的可用性。<br><br>当非零值： 如果此参数加密元数据不可用，则被加密。 否则，请求将失败，错误 [CE300] 为参数指定了 [Microsoft] [ODBC Driver 13 for SQL Server] 强制加密，但通过服务器提供的加密元数据。|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD （2 个字节）|0|当 0 （默认值）：决定加密此参数由加密元数据的可用性。<br><br>当非零值： 如果此参数加密元数据不可用，则被加密。 否则，请求将失败，错误 [CE300] 为参数指定了 [Microsoft] [ODBC Driver 13 for SQL Server] 强制加密，但通过服务器提供的加密元数据。|
 
 ### <a name="bcpcontrol-options"></a>bcp_control 选项
 
 |选项名称|默认值|描述|
 |-|-|-|
-|`BCPMODIFYENCRYPTED` (21)|FALSE|为 TRUE 时，允许 varbinary （max） 值插入到加密列。 为 FALSE 时，阻止插入，除非提供正确的类型和加密元数据。|
+|`BCPMODIFYENCRYPTED` (21)|FALSE|为 TRUE 时，允许 varbinary (max) 值插入到加密列。 为 FALSE 时，阻止插入，除非提供正确的类型和加密元数据。|
 
 ## <a name="see-also"></a>另请参阅
 

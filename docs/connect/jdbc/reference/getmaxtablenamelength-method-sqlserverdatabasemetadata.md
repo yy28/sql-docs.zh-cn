@@ -1,13 +1,11 @@
 ---
-title: getMaxTableNameLength 方法 (SQLServerDatabaseMetaData) |Microsoft 文档
+title: getMaxTableNameLength 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getMaxTableNameLength
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15cd32cad0eae24655dc44c610e6a8f9454d4d54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c92624d88142e4b4e1909acd298e4ed439d57d6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835672"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819725"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>getMaxTableNameLength 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +36,13 @@ public int getMaxTableNameLength()
 ```  
   
 ## <a name="return-value"></a>返回值  
- **Int** ，该值指示最大允许的字符数。  
+ 指示允许的最大字符数的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.DatabaseMetaData 接口中的 getMaxTableNameLength 方法指定此 getMaxTableNameLength 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getMaxTableNameLength 方法由 java.sql.DatabaseMetaData 接口中的 getMaxTableNameLength 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerDatabaseMetaData 方法](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

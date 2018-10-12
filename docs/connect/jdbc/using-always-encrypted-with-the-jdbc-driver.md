@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 6ce122713ce5d57daa9a7313d8b6d184bd33b850
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842745"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>对 JDBC 驱动程序使用 Always Encrypted
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -368,7 +365,7 @@ SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 - 应用程序可以访问用于保护列加密密钥的列主密钥，以便对查询到的数据库列加密。 若要使用 Java 密钥存储提供程序，你需要提供连接字符串中的其他凭据。 有关详细信息，请参阅[使用 Java 密钥存储提供程序](#using-java-key-store-provider)。
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>配置如何将 java.sql.Time 值发送到服务器
-可以通过使用 sendTimeAsDatetime 连接属性配置如何发送 java.sql.Time 值。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此，使用加密的时间列时将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
+sendTimeAsDatetime 连接属性用于配置将 java.sql.Time 值发送到服务器的方式。 设置为 false 时，将为 SQL Server 时类型发送的时间值。 何时设置为 true，值发送为 datetime 类型的时间。 如果时间列已加密， **sendTimeAsDatetime**属性必须为 false，因为加密的列不支持从时间转换为日期时间。 另请注意，此属性是通过默认为 true，因此，使用加密的时间列时将需要将其设置为 false。 否则，该驱动程序将引发异常。 SQLServerConnection 类从驱动程序版本 6.0 开始，有两种方法以编程方式配置此属性的值：
  
 * public void setSendTimeAsDatetime (布尔 sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
@@ -640,7 +637,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCache
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 
-天、 小时、 分钟或秒为时间单位支持。  
+天、小时、分钟或秒为时间单位支持。  
 
 ## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>复制 SQLServerBulkCopy 使用的加密的数据
 

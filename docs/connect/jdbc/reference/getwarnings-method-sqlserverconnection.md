@@ -1,13 +1,11 @@
 ---
-title: getWarnings 方法 (SQLServerConnection) |Microsoft 文档
+title: getWarnings 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getWarnings
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f232461aafbb9c5c5d35ac04e0723e968ea7ea8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b57d4a5f49bd292ea76ab0047b8ddf871aed6c08
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839603"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812875"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  检索此报告的调用的第一个警告[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)对象。  
+  检索调用此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象时报告的第一个警告。  
   
 ## <a name="syntax"></a>语法  
   
@@ -44,10 +41,10 @@ public java.sql.SQLWarning getWarnings()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Connection 接口中的 getWarnings 方法指定此 getWarnings 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 getWarnings 方法由 java.sql.Connection 接口中的 getWarnings 方法指定。  
   
- 后续警告都是链接到第一个 SQLWarning，使用 getNextWarning 方法调用。 如果在关闭的连接上调用，将引发异常。  
+ 后续的警告都是链接到第一个 SQLWarning，与 getNextWarning 方法调用。 如果在关闭的连接上调用，将引发异常。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

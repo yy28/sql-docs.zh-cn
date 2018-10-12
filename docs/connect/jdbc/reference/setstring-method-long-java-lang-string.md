@@ -1,13 +1,11 @@
 ---
-title: setString 方法 (长，java.lang.String) |Microsoft 文档
+title: setString 方法 (long，java.lang.String) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7194a8778ecae136d7a70086c5fa2e9353988a93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839105"
 ---
 # <a name="setstring-method-long-javalangstring"></a>setString 方法 (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  写入给定**字符串**到给定位置开始 CLOB。  
+  将给定的 String 写入 CLOB（从给定位置开始）。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,7 +43,7 @@ public int setString(long pos,
   
  *s*  
   
- **字符串**都写入到 CLOB。  
+ 要写入 CLOB 的 String。  
   
 ## <a name="return-value"></a>返回值  
  写入的字符数。  
@@ -54,10 +51,10 @@ public int setString(long pos,
 ## <a name="exceptions"></a>异常  
  java.sql.SQLException  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Clob 接口中的 setString 方法指定此 setString 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setString 方法由 java.sql.Clob 接口中的 setString 方法指定。  
   
- 从指定位置开始覆盖字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定的位置 + 2 或更高版本 （或零个或更少） 值将导致位置错误引发。  
+ 从指定位置开始覆盖字符数据，并可以超过 CLOB 的初始长度。 指定“位置+1”值将追加到字符串末尾。 指定“位置+2”或更大值（或零或更小值）会引发位置错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [setString 方法&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   

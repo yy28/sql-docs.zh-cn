@@ -1,13 +1,11 @@
 ---
-title: setTransactionIsolation 方法 (SQLServerConnection) |Microsoft 文档
+title: setTransactionIsolation 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.setTransactionIsolation
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1a4fb0ef1c55c54a17dfe1825fd208ebd6035f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 992ce78ec0fab556bb2bb91fdcaf97f54f3145e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846162"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811815"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  尝试将事务隔离级别更改此[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)到给定的对象。  
+  尝试将此 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 对象的事务隔离级别更改为给定级别。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,9 +36,9 @@ public void setTransactionIsolation(int level)
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *级别*  
+ *level*  
   
- **Int**值，该值包含以下的隔离级别之一：  
+ 包含下列隔离级别之一的 int 值：  
   
  TRANSACTION_READ_UNCOMMITTED  
   
@@ -56,8 +53,8 @@ public void setTransactionIsolation(int level)
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Connection 接口中的 setTransactionIsolation 方法指定此 setTransactionIsolation 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setTransactionIsolation 方法由 java.sql.Connection 接口中的 setTransactionIsolation 方法指定。  
   
  如果在事务中间调用此方法，将不提交事务。  
   

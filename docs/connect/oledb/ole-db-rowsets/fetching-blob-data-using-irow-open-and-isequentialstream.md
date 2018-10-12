@@ -1,15 +1,12 @@
 ---
-title: 使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 数据 | Microsoft Docs
+title: 使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据 | Microsoft Docs
 description: 使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -19,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8e38c8886a491eca788d17b39602e7f5d7d0b1ee
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6c71488ab4e92e241ac7de9873febbe5e6537421
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031424"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834155"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +30,7 @@ ms.locfileid: "43031424"
 
   IRow::Open 只支持打开 DBGUID_STREAM 和 DBGUID_NULL 对象类型。  
   
- 以下函数使用 IRow::Open **和 ISequentialStream** 提取大型数据。  
+ 以下函数使用 IRow::Open 和 ISequentialStream 提取大型数据。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,7 +81,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型数据可使用 ISequentialStream** 接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
+ 大型数据可使用 ISequentialStream 接口进行绑定或检索。 对于绑定列，状态标志指示是否通过设置 DBSTATUS_S_TRUNCATED 来截断数据。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 IRow 提取 BLOB 数据](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  

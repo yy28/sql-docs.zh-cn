@@ -1,30 +1,27 @@
 ---
-title: createClob 方法 (SQLServerConnection) |Microsoft 文档
+title: createClob 方法 (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79f0c95a76dec9250c6855d291becca935cd0dd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9fcddefa3ce439d53263526759ce2c776c254090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830565"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>createClob 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  创建 Clob 对象不包含任何数据。  
+  创建不包含任何数据的 Clob 对象。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,10 +36,10 @@ public java.sql.Clob createClob()
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.Connection 接口中的 createClob 方法指定此 createClob 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 createClob 方法由 java.sql.Connection 接口中的 createClob 方法指定。  
   
- 此方法取代[SQLServerClob 构造函数&#40;SQLServerConnection，java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)。  
+ 此方法无需[SQLServerClob 构造函数&#40;SQLServerConnection，java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

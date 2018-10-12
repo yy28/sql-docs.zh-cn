@@ -1,13 +1,11 @@
 ---
-title: setBinaryStream 方法 （int、 java.io.InputStream，int） |Microsoft 文档
+title: setBinaryStream 方法 (int, java.io.InputStream, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setBinaryStream
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0f4277288a89752e53952d49906300221571e6a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7a8324ff410c0896b890ce12c1e51d0e4e47c4a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785595"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream 方法 (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,28 +40,28 @@ public final void setBinaryStream(int n,
 #### <a name="parameters"></a>Parameters  
  *n*  
   
- **Int** ，该值指示参数号。  
+ 指示参数编号的 int。  
   
  *x*  
   
- 一个 InputStream 对象中。  
+ InputStream 对象。  
   
  *length*  
   
- **Int** ，该值指示的字节数。  
+ 指示字节数的 int。  
   
 ## <a name="exceptions"></a>异常  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>注释  
- 由 java.sql.PreparedStatement 接口中的 setBinaryStream 方法指定此 setBinaryStream 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 setBinaryStream 方法由 java.sql.PreparedStatement 接口中的 setBinaryStream 方法指定。  
   
- 流的长度是否与在指定的内容不同*长度*参数，在更新或插入行时的 JDBC 驱动程序引发异常。  
+ 如果流长度与 length 参数指定的长度不同，则 JDBC 驱动程序将在更新或插入行时引发异常。  
   
- 如果流的长度为未知，*长度*参数可能设置为-1，以指示该驱动程序应接受而不考虑其长度流。 与 sqljdbc4.jar，我们建议你使用 JDBC 4.0 方法[setBinaryStream 方法&#40;int、 java.io.InputStream&#41; ](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)当应用程序希望更新的列从一个流，其长度为未知。  
+ 如果流长度未知，则可将 length 参数设置为 -1 以指示驱动程序应接受流而不考虑其长度。 使用 sqljdbc4.jar，当应用程序希望使用长度未知的流来更新列时，建议使用 JDBC 4.0 方法 [setBinaryStream 方法 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setbinarystream-method-int-java-io-inputstream.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [setBinaryStream 方法&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
+ [setBinaryStream 方法 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement 成员](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

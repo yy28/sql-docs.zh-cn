@@ -1,13 +1,11 @@
 ---
-title: addConnectionEventListener 方法 (SQLServerPooledConnection) |Microsoft 文档
+title: addConnectionEventListener 方法 (SQLServerPooledConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPooledConnection.addConnectionEventListener
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 142830a8-8d4e-48ca-911d-85bf195ca4fe
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6482521780045b1d5f0482731c1b6f8e2f5f3571
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7fbd278bfa95d0697d7435ccac132a60112b32d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799605"
 ---
 # <a name="addconnectioneventlistener-method-sqlserverpooledconnection"></a>addConnectionEventListener 方法 (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  注册给定的事件侦听器，以便它将对此事件发生时将收到通知[SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)对象。  
+  注册给定的事件侦听器，以便在此 [SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 对象发生事件时通知该侦听器。  
   
 ## <a name="syntax"></a>语法  
   
@@ -39,12 +36,12 @@ public void addConnectionEventListener(javax.sql.ConnectionEventListener listene
 ```  
   
 #### <a name="parameters"></a>Parameters  
- *侦听器*  
+ *listener*  
   
  一个 ConnectionEventListener 对象。  
   
-## <a name="remarks"></a>注释  
- 由 javax.sql.PooledConnection 接口中的 addConnectionEventListener 方法指定此 addConnectionEventListener 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 addConnectionEventListener 方法由 javax.sql.PooledConnection 接口中的 addConnectionEventListener 方法指定。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerPooledConnection 方法](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
