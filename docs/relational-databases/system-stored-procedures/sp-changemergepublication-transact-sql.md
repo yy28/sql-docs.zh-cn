@@ -17,12 +17,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 919e55df9dce3384b2a9eea6f5052ca25c094ac3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89e1ca46f323bb565eea9080a0118fb19b39af08
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758735"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072291"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,7 +149,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>备注  
  **sp_changemergepublication**合并复制中使用。  
   
- 若要更改下列属性，需要生成新的快照。 您必须指定的值**1**有关*force_invalidate_snapshot*参数。  
+ 若要更改下列属性，需要生成新的快照。 必须指定的值**1**有关*force_invalidate_snapshot*参数。  
   
 -   **alt_snapshot_folder**  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786965"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906227"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上的 SQL Server 的安全功能演练
 
@@ -67,7 +67,7 @@ GO
 
 ## <a name="granting-access-with-least-privileges"></a>授予特权最少的访问权限
 
-第一个连接到用户数据库的用户将是管理员和数据库所有者帐户。 但这些用户具有数据库的所有权限。 其权限要比大多数用户应该拥有的更多。 
+第一个连接到用户数据库的用户将是管理员和数据库所有者帐户。 但是这些用户在数据库上具有提供的所有权限。 其权限要比大多数用户应该拥有的更多。 
 
 如果你刚开始，可以使用内置的分配某些常规类别的权限*固定数据库角色的成员*。 例如，`db_datareader`固定的数据库角色可以读取所有表在数据库中，但不进行任何更改。 通过使用授予固定的数据库角色的成员身份[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)语句。 下面的示例将用户添加`Jerry`到`db_datareader`固定的数据库角色。   
    
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-有关详细信息，请参阅[备份加密](../relational-databases/backup-restore/backup-encryption.md)。
+有关详细信息，请参阅 [备份加密](../relational-databases/backup-restore/backup-encryption.md)。
 
 
 ## <a name="next-steps"></a>后续步骤

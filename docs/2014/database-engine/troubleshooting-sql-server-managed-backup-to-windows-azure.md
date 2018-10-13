@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121743"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120064"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>排除针对 Microsoft Azure 的 SQL Server 托管备份的故障
   本主题说明可以用来对[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]操作期间可能发生的错误进行故障排除的任务和工具。  
@@ -56,7 +56,7 @@ ms.locfileid: "48121743"
   
 1.  **启用或配置时出错[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     错误：“未能访问存储 URL… 提供有效的 SQL 凭据..." ： 你可能会看到此错误和 SQL 凭据的其他类似错误。  在此类情况下，请检查您所提供的 SQL 凭据的名称，以及 SQL 凭据中存储的信息，即存储帐户名称、存储访问密钥，并确保它们是最新的有效信息。  
+     错误：“未能访问存储 URL… 提供有效的 SQL 凭据..." ： 你可能会看到此错误和 SQL 凭据的其他类似错误。  在这种情况下，查看的名称以及 SQL 凭据提供，也存储在 SQL 凭据-存储帐户名称和存储访问密钥的信息并确保它们是最新且有效。  
   
      错误:"... 无法配置数据库...因为它是系统数据库": 你将看到此错误，如果尝试启用[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]系统数据库。  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]不支持系统数据库备份。  要为系统数据库配置备份，请使用其他 SQL Server 备份计术，如维护计划。  
   

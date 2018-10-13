@@ -17,12 +17,12 @@ ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 299c762bc8c1487990402fc627d0d25268315947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 938560986eeaae29ee1d0a2b37f1b2bcceec5b53
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745335"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119764"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 扩展函数 - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
  以下是查询语句：  
   
-```  
+```sql
 DECLARE @price money  
   
 SET @price=2500.00  
@@ -88,7 +88,7 @@ WHERE ProductID=771
   
  结果如下：  
   
-```  
+```xml
 <Product ProductID="771" ProductModelID="19"   
          ProductModelName="Mountain 100"   
          ListPrice="3399.99" DiscountPrice="2500" />  

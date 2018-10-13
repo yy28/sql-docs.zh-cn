@@ -12,12 +12,12 @@ ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfed461589882e91f4fa4ec2394bc858def67d96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d7fe9246e0b689335d43a124c4a2391778f127a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182267"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905013"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 元素
   W3C XSD **redefine** 元素为重新定义架构组件提供了支持。 但是，对此指令可能会严重影响性能，同时还要求的支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新进行验证的所有实例`xml`重新定义的架构与相关联的数据类型。 因此， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支持此元素。 服务器拒绝包含 **\<xsd:redefine>** 元素的 XML 架构。  
@@ -26,7 +26,7 @@ ms.locfileid: "48182267"
   
 1.  用修改后的架构组件创建新的 XML 架构集合。  
   
-2.  重新类型化使用要重新定义的 XML 架构集合的所有 `xml` 数据类型 (XML DT)，以便改用新的 XML 架构集合。 为此，请使用 ALTER TABLE 命令的 ALTER COLUMN 选项来重新类型化列，或更改对变量或参数的 XML 架构集合约束。  
+2.  重新键入所有`xml`使用 XML 架构集合重新定义以改为使用新的 XML 架构集合的数据类型 (XML DT)。 为此，请使用 ALTER TABLE 命令的 ALTER COLUMN 选项来重新类型化列，或更改对变量或参数的 XML 架构集合约束。  
   
 3.  删除旧版本的 XML 架构集合。  
   

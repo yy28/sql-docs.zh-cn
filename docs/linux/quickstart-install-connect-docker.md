@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782366"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085283"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>使用 Docker 快速入门： 运行 SQL Server 容器映像
 
@@ -41,7 +41,7 @@ ms.locfileid: "48782366"
 
 此映像包含在 Linux（基于 Ubuntu 16.04）上运行的 SQL Server。 它可与适用于 Linux 的 Docker 引擎 1.8 以上版本或适用于 Mac/Windows 的 Docker 配合使用。 本快速入门专门重点介绍使用 SQL Server 上**linux**映像。 虽然未介绍 Windows 映像，但可在 [mssql-server-windows-developer Docker 中心页](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)上找到关于它的详细信息。
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> 先决条件
 
 - 适用于支持的任一 Linux 分发版的 Docker 引擎 1.8 以上版本，或适用于 Mac/Windows 的 Docker。 有关详细信息，请参阅 [Install Docker](https://docs.docker.com/engine/installation/)（安装 Docker）。
 - 至少 2 GB 的磁盘空间
@@ -93,7 +93,7 @@ any changes to one section should be duplicated in the other-->
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | 描述 |
+   | 参数 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
@@ -175,7 +175,7 @@ SELECT @@SERVERNAME,
 
    下表对前一个 `docker run` 示例中的参数进行了说明：
 
-   | 参数 | 描述 |
+   | 参数 | Description |
    |-----|-----|
    | **-e 'ACCEPT_EULA=Y'** |  将 **ACCEPT_EULA** 变量设置为任意值，以确认接受[最终用户许可协议](http://go.microsoft.com/fwlink/?LinkId=746388)。 SQL Server 映像的必需设置。 |
    | **-e SA_PASSWORD =\<YourStrong ！Passw0rd\>** | 指定至少包含 8 个字符且符合 [SQL Server 密码要求](../relational-databases/security/password-policy.md)的强密码。 SQL Server 映像的必需设置。 |
@@ -213,7 +213,7 @@ SELECT @@SERVERNAME,
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a name="change-the-sa-password"></a>更改 SA 密码
+## <a id="sapassword"></a> 更改 SA 密码
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

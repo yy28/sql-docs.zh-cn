@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195917"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120375"
 ---
 # <a name="modify-the-trace-results-view"></a>修改跟踪结果视图
   本主题介绍如何通过执行以下任务修改 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中扩展事件会话的跟踪结果视图。  
@@ -228,7 +228,7 @@ ms.locfileid: "48195917"
   
     -   **表列**。 使用此选项可在跟踪窗口中搜索所有可见列。  
   
-    -   **详细信息**。 使用此选项可在跟踪窗口中搜索在打开 **“在扩展事件中查找”** 对话框之前已选择的所有列（提升和非提升的）。  
+    -   **详细信息**。 使用此选项以搜索所有列 （提升和非提升） 在开始之前已选择的跟踪窗口中**在扩展事件中查找**对话框。  
   
     -   **\<输入列名称 >**。 使用此选项可在下拉列表的特定事件列中进行搜索。  
   

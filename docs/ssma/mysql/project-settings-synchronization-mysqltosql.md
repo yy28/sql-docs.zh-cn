@@ -10,12 +10,12 @@ ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630700b4541bf804ca9dd5b1b6c6ca705412643c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792555"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072081"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>项目设置（同步）(MySQLToSQL)
 同步**项目设置**使您可以配置 MySQL 数据库对象的 SQL Server 数据库对象的同步方式。  
@@ -63,7 +63,7 @@ ms.locfileid: "47792555"
 ##### <a name="action-when-local-object-metadata-is-missing"></a>缺少本地对象元数据时执行的操作  
 缺少本地元数据时，请在同步对话框中指定的默认设置。  
   
--   如果选择**从数据库刷新**，SSMA SSMA 将数据库定义到的元数据时加载满足的条件。  
+-   如果选择**从数据库刷新**，SSMA 将数据库定义到的元数据时加载满足的条件。  
   
 -   如果选择**跳过**，SSMA 将不执行刷新操作  
   

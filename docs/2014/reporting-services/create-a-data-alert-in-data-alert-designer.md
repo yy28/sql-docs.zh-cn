@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144417"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071841"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>在数据警报设计器中创建数据警报
   您在数据警报设计器中创建数据警报定义。 在您保存警报定义后，可以在数据警报设计器中重新打开、编辑和重新保存它们。 有关编辑警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md) 和 [在警报设计器中编辑数据警报](edit-a-data-alert-in-alert-designer.md)。  
@@ -55,7 +55,7 @@ ms.locfileid: "48144417"
   
      警报定义的默认名称即为报表的名称。 警报定义名称不一定是唯一的，因此，在您以后在数据警报管理器中查看警报的列表时，可能很难区分这些警报。 建议使用有意义且唯一的警报定义名称。  
   
-6.  或者，将默认数据选项从 **“在数据馈送中具有任何数据”** 更改为 **“在数据馈送中没有任何数据”**。  
+6.  （可选） 更改默认数据选项从**中的数据馈送的任何数据具有**到**数据馈送中的没有任何数据具有**。  
   
 7.  单击 **“添加规则”**。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144417"
      默认情况下，警报消息没有停止日期。  
   
     > [!NOTE]  
-    >  停止警报消息并不会删除警报定义。 停止警报消息之后，可以通过更新开始日期和停止日期来重新启动警报消息。 有关删除警报定义的信息，请参阅[管理我的数据警报在数据警报管理器](manage-my-data-alerts-in-data-alert-manager.md)。  
+    >  停止警报消息并不会删除警报定义。 停止警报消息之后，可以通过更新开始日期和停止日期来重新启动警报消息。 有关删除警报定义的信息，请参阅 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 18. 还可以清除 **“仅当结果更改时才发送消息”** 复选框。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48144417"
   
 ## <a name="see-also"></a>请参阅  
  [数据警报设计器](../../2014/reporting-services/data-alert-designer.md)   
- [管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services 数据警报](../ssms/agent/alerts.md)  
   
   

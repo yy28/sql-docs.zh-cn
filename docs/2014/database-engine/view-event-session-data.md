@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159487"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120294"
 ---
 # <a name="view-event-session-data"></a>查看事件会话数据
   本主题介绍如何使用显示用户界面查看和分析扩展的事件数据：  
@@ -26,7 +26,7 @@ ms.locfileid: "48159487"
 -   处理数据  
   
 ## <a name="view-target-data"></a>查看目标数据  
- 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中显示收集到指定目标内的数据。  
+ 您可以在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中显示收集到指定目标内的数据。  
   
 ### <a name="view-target-data"></a>查看目标数据  
  查看目标数据：  
@@ -45,13 +45,13 @@ ms.locfileid: "48159487"
   
 -   对于 event_file 目标，请使用以下方法之一查看文件目标数据（.XEL 文件）：  
   
-    -   使用文件-> 中的打开[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中使用“文件”->“打开”。  
   
-    -   将文件拖放到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中。  
+    -   将文件拖放到 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中。  
   
     -   双击 .XEL 文件。  
   
-    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，右键单击正在运行的扩展事件会话，然后选择“查看目标数据”。  
+    -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中，右键单击正在运行的扩展事件会话，然后选择“查看目标数据”。  
   
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159487"
  **“详细信息”** 窗格显示选定事件的所有列，包括字段和操作。 通过在 **“详细信息”** 窗格中右键单击某一行，再选择 **“显示表中的列”**，可以向目标数据表添加列。  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>创建、修改或删除合并列  
- 合并列允许您将要显示的一组字段合并到一列中。 合并列将依据各字段添加到字段列表中的顺序从第一个非 NULL 字段开始显示数据。 它类似于中看到的内容[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler，其中的特定列可能会显示不同的数据，根据事件 (最常见的例子是中的 TextData 字段[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Profiler)。 例如，您可以将 sql_statement_completed 事件中的 statement 字段和 sql_batch_completed 事件中的 batch_text 字段合并到名为 myStatement 的字段中。 在表中显示 myStatement 列时，它将显示所关联事件的相应数据。  
+ 合并列允许您将要显示的一组字段合并到一列中。 合并列将依据各字段添加到字段列表中的顺序从第一个非 NULL 字段开始显示数据。 这类似于您在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler 中看到的数据，其中的特定列可能根据事件显示不同的数据（最常见的例子是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler 中的 TextData 字段）。 例如，您可以将 sql_statement_completed 事件中的 statement 字段和 sql_batch_completed 事件中的 batch_text 字段合并到名为 myStatement 的字段中。 在表中显示 myStatement 列时，它将显示所关联事件的相应数据。  
   
  您可以创建、修改或删除合并列：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159487"
  如果已对列进行分组，则对某个列进行排序将只对组中的数据进行排序。  
   
 ### <a name="group-results"></a>对结果进行分组  
- 分组的结果是对功能的等效`GROUP BY`子句中的[!INCLUDE[tsql](../includes/tsql-md.md)]。 目标数据表将显示组合在一起的数据，允许您展开和折叠数据。  
+ 分组的结果等效于 [!INCLUDE[tsql](../includes/tsql-md.md)] 中 `GROUP BY` 子句的功能。 目标数据表将显示组合在一起的数据，允许您展开和折叠数据。  
   
  您必须先对数据进行分组，之后才能聚合数据。 例如，您可以基于 query_hash 值进行分组，然后按持续时间降序排序，获取每个组的平均持续时间，然后对聚合结果降序排序。  这将生成一个列表，显示从最长到最短的平均持续时间排序的唯一语句列表。 展开顶部分组后，您会看到该特定查询按最长到最短持续时间排序的各次执行情况。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159487"
   
     -   表列。 使用此选项可在跟踪窗口中搜索所有可见列。  
   
-    -   详细信息。 使用此选项可在跟踪窗口中搜索在打开 **“在扩展事件中查找”** 对话框之前已选择的所有列（提升和非提升的）。  
+    -   详细信息。 使用此选项以搜索所有列 （提升和非提升） 在开始之前已选择的跟踪窗口中**在扩展事件中查找**对话框。  
   
     -   *Event_column_name*。 使用此选项可在下拉列表的特定事件列中进行搜索。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159487"
   
  若要复制跟踪结果，请选择某个单元格、一行或多行，右键单击并选择 **“复制”** ，然后选择 **“单元格”**、 **“行”** 或 **“详细信息”**。 扩展事件最多支持复制 1000 行。  
   
- 您可以将跟踪结果导出到。XEL 文件、 表、 或。通过选择 CSV 文件**导出到**从**扩展事件**中的菜单选项[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。  
+ 通过从 **的** “扩展事件” **菜单选项中选择** “导出到” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]，您可以将跟踪结果导出到 .XEL 文件、表或 .CSV 文件。  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>查看死锁图和查询计划  
  可以查看“详细信息”窗格中的 **xml_deadlock_report** 死锁图，帮助解决死锁问题。 还可以查看以下事件的查询计划图：  

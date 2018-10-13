@@ -31,12 +31,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 962060d5b057feddcc5b9366fdfdd7131ee9c67f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185027"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120024"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 关联算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法是指 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的关联算法，对建议引擎非常有用。 建议引擎根据客户已购买的项或者客户已对其表现出兴趣的项向他们推荐产品。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联算法对市场篮分析也非常有用。 市场篮分析的示例，请参阅[第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)中的数据挖掘基础教程。  
@@ -79,7 +79,7 @@ ms.locfileid: "48185027"
  有关如何创建针对数据挖掘模型的查询的信息，请参阅 [数据挖掘查询](data-mining-queries.md)。  
   
 ## <a name="performance"></a>“性能”  
- 创建项集和对关联进行计数的过程可能会非常耗时。 尽管[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法使用优化技术来节省空间并使处理更快，您应该知道，如下所示的情况下可能会出现性能问题：  
+ 创建项集和对关联进行计数的过程可能会非常耗时。 尽管[!INCLUDE[msCoName](../../includes/msconame-md.md)]关联规则算法使用优化技术来节省空间并使处理更快，则应了解在如下所示的情况下可能会出现性能问题：  
   
 -   数据集很大，包含许多单个项。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48185027"
 -   支持创建数据挖掘维度。  
   
 ## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)   
  [使用 Microsoft 关联规则查看器浏览模型](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)   
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)   
  [Microsoft 关联算法技术参考](microsoft-association-algorithm-technical-reference.md)   
  [关联模型查询示例](association-model-query-examples.md)  
   

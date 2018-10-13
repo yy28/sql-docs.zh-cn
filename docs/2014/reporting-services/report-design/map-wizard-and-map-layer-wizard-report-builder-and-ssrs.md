@@ -15,12 +15,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 98a6efa4bcac46a50de84c70fcfb49a0e202c860
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee420b28442909af74a17a196ffac653b6089eb5
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128867"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072321"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
   地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -30,7 +30,7 @@ ms.locfileid: "48128867"
   
  向报表添加地图或向地图添加地图层之前，必须具有以下信息：  
   
--   **空间数据源。** 例如，提供空间数据的源的名称与连接的位置[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]实例和数据库包含空间数据或 Environmental Systems Research Institute，Inc.(ESRI) 形状文件的名称。  
+-   **空间数据源。** 提供空间数据的源的位置或连接，例如，包含空间数据的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例和数据库的名称，或是 Environmental Systems Research Institute, Inc.(ESRI) 形状文件的名称。  
   
 -   **空间数据的第三方站点。** 来自空间数据源，是包含用于指定位置的一系列坐标的字段。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48128867"
   
  单击向导页标题以获得相应的帮助内容。 您看到的页面取决于您选择的地图类型、空间数据源和分析数据源。  
   
-1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可以来自地图库、 Environmental Systems Research Institute，Inc.(ESRI) 形状文件，或中的空间数据来自[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]关系数据库。  
+1.  [选择空间数据的源](#SpatialDataSource)。 空间数据可来自地图库、Environmental Systems Research Institute, Inc. (ESRI) 形状文件，或来自 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 关系数据库中的空间数据。  
   
     -   [什么是空间数据？](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48128867"
   
  添加地图或地图层并预览报表之后，您可以更改在向导中设置的地图和地图层选项。 有关详细信息，请参阅[自定义地图或地图层的数据和显示（报表生成器和 SSRS）](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 有关地图的详细信息，请参阅[映射&#40;报表生成器和 SSRS&#41;](maps-report-builder-and-ssrs.md)。 有关向报表添加地图的分步说明，请参阅[教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)。  
+ 有关地图的详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。 有关向报表添加地图的分步说明，请参阅[教程：地图报表（报表生成器）](../tutorial-map-report-report-builder.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "48128867"
 > [!NOTE]  
 >  这一 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 地图功能使用的数据来自经美国人口免费获得 ([http://www.census.gov/](http://www.census.gov/))。 TIGER/Line 形状文件是从 Census MAF/TIGER 数据库中精选的地理和制图信息的摘录。 TIGER/Line 形状文件可以从美国人口普查局免费获得。 若要获取有关 TIGER/Line 形状文件的详细信息，请访问 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)。 TIGER/Line 形状文件中的边界信息仅用于统计数据收集和制表目的；其中用于统计目的的描述和名称不构成对于司法机构、所有权或享有权利的界定，它们不是法律上关于领土的说明。 Census TIGER 和 TIGER/Line 是美国人口普查局的注册商标。  
   
- 若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅[地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。  
+ 若要扩展地图库，可以在地图库目录中添加或删除报表，并添加文件夹对地图进行组织。 有关详细信息，请参阅 [地图（报表生成器和 SSRS）](maps-report-builder-and-ssrs.md)。  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
  ESRI 形状文件是一个文件集，其中的数据符合 Environmental Systems Research Institute, Inc. (ESRI) 形状文件空间数据格式。 该文件集通常包含 \<filename.shp> 文件（包含空间数据）和一个支持文件 \<filename.dbf>。  
@@ -198,7 +198,7 @@ ms.locfileid: "48128867"
   
  有关图块的详细信息，请参阅 [Bing 地图图块系统](http://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隐私声明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中在[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中.  
+ 若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅[报表故障排除： 地图报表&#40;报表生成器和 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和"计划地图"中[Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 联机丛书中。  
   
  有关自定义图块层的其他方式的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "48128867"
   
  **“分析图”** 表示每个地图元素的一个或多个分析数据聚合的相关值。 例如，将商店销售额表示为标记大小，将产品类别的利润范围表示为标记颜色，将畅销产品表示为标记类型。  
   
- 有关详细信息，请参阅[规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)。  
+ 有关详细信息，请参阅 [规划地图报表（报表生成器和 SSRS）](plan-a-map-report-report-builder-and-ssrs.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   
@@ -266,7 +266,7 @@ ms.locfileid: "48128867"
   
 -   **点：** 可以指定颜色、大小和标记类型规则。  
   
- 报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅[按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
+ 报表处理器应用您设置的规则，并自动确定要显示在图例中的项列表。 默认情况下，所有层的所有规则的结果都会显示在第一个图例中。 您可以在完成向导操作后对此进行调整。 有关详细信息，请参阅 [按规则和分析数据更改多边形、线条和点的显示方式（报表生成器和 SSRS）](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)。  
   
  ![用于“返回页首”链接的箭头图标](../../2014-toc/media/uparrow16x16.gif "用于“返回页首”链接的箭头图标")[返回页首](#BackToTop)  
   

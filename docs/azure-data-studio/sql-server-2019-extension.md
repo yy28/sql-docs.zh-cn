@@ -2,7 +2,7 @@
 title: Azure 数据 Studio SQL Server 2019 扩展 （预览版） |Microsoft Docs
 description: SQL Server 2019 预览适用于 Azure Data Studio 扩展
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131227"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168781"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 扩展 （预览版）
 
@@ -24,23 +24,31 @@ SQL Server 2019 扩展 （预览版） 提供预览支持新功能和工具支�
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>安装 SQL Server 2019 扩展 （预览版）
 
-下载并安装 SQL Server 2019 扩展 （预览版）：
+若要安装 SQL Server 2019 扩展 （预览版），下载并安装关联的.vsix 文件。
 
-  |平台|下载|发布日期|
-  |:---|:---|:---|
-  |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24日日|
-  |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24日日 |
-  |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24日日 |
+1. SQL Server 2019 扩展 （预览版）.vsix 文件下载到本地目录：
 
+   |平台|下载|发布日期|
+   |:---|:---|:---|
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024911)|2018 年 9 月 24日日|
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024587)|2018 年 9 月 24日日 |
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2024841)|2018 年 9 月 24日日 |
 
-在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。 选择**是**当系统提示你确认已安装并等待的安装已成功的通知。
+1. 在 Azure Data Studio 中选择**安装 VSIX 包中的扩展插件**从**文件**菜单，然后选择已下载的.vsix 文件。
 
-選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
+1. 选择**是**当系统提示你确认已安装并等待安装成功的通知。
 
+1. 選取**重新載入**啟用該擴充功能 （只有第一次安裝擴充功能時需要）。
+
+1. 重新加载后，该扩展将安装依赖项。 你可以查看在输出窗口中，进度，可能需要几分钟的时间。
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 大数据群集支持
 
 * 单击**添加连接**中*对象资源管理器*，然后选择**SQL Server 大数据群集**作为连接类型。
+
+   > [!TIP]
+   > 如果没有看到**SQL Server 大数据群集**连接类型，请重新启动 Azure Data Studio。
+
 * 输入主机名或 IP 地址的群集终结点以及用户名和密码用于连接。
 * （可选） 包含中的友好显示名称**名称**字段。
 * 单击**Connect** ，然后可以启动的常见任务在仪表板中，浏览**HDFS**中对象资源管理器，并从那里运行的上下文中任务。

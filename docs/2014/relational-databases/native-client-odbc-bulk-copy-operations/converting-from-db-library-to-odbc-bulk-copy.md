@@ -16,12 +16,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80d0b21a54e8249007d961cd6eb26e4334fb361a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176610"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169368"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>从 DB-Library 转换到 ODBC 大容量复制
   将 Db-library 大容量复制程序转换到 ODBC 很容易，因为大容量复制函数支持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将类似于 Db-library 大容量复制函数，但存在以下例外：  
@@ -37,7 +37,7 @@ ms.locfileid: "48176610"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序不支持 Db-library 消息和错误处理程序; 必须调用**SQLGetDiagRec**获取错误和消息由 ODBC 大容量复制函数引发。 大容量复制函数的 ODBC 版本返回标准的大容量复制返回代码 SUCCEED 或 FAILED，而不是 ODBC 样式的返回代码，比如 SQL_SUCCESS 或 SQL_ERROR。  
   
--   DB 库指定的值[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*参数以不同方式解释与 ODBC **bcp_bind * * * cbData*参数。  
+-   DB 库指定的值[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen*参数以不同方式解释与 ODBC **bcp_bind**_cbData_参数。  
   
     |指示条件|Db-library *varlen*值|ODBC *cbData*值|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "48176610"
   
      在 Db-library *varlen*值为-1 指示，正在提供可变长度数据，在 ODBC *cbData*转译为表示为正在提供仅 NULL 值。 更改任何 Db-library *varlen*规范为 sql_varlen_data，则为-1 并将任何*varlen*规范 0 为 SQL_NULL_DATA。  
   
--   Db-library  **bcp_colfmt * * * file_collen*和 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * 具有同样的问题作为 **bcp_bind * * * varlen*并*cbData*上面记下的参数。 更改任何 Db-library *file_collen*规范为 sql_varlen_data，则为-1 并将任何*file_collen*规范 0 为 SQL_NULL_DATA。  
+-   Db-library **bcp\_colfmt**_文件\_collen_和 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData*具有同样的问题作为**bcp_bind**_varlen_并*cbData*上面记下的参数。 更改任何 Db-library *file_collen*规范为 sql_varlen_data，则为-1 并将任何*file_collen*规范 0 为 SQL_NULL_DATA。  
   
 -   *IValue*参数的 ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)函数是 void 指针的指针。 在 Db-library *iValue*是整数。 将值转换为 ODBC *iValue*为 void *。  
   

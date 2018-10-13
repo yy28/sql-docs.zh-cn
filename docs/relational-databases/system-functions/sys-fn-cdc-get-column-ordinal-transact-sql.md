@@ -21,12 +21,12 @@ ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3170d1b191538f23b374a59af19084effa73e81
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624205"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072011"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
  此函数用于标识变更数据捕获更新掩码内的已捕获列的序号位置。 它主要用于与函数一起[sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md)查询更改数据时，从更新掩码提取信息。  
   
 ## <a name="permissions"></a>Permissions  
- 要求对源表的所有已捕获列具有 SELECT 权限。 如果对捕获实例指定了变更数据捕获组件的数据库角色，则同时需要具有该角色的成员身份。  
+ 要求对所有已捕获列的源表的 SELECT 权限。 如果对捕获实例指定了变更数据捕获组件的数据库角色，则同时需要具有该角色的成员身份。  
   
 ## <a name="examples"></a>示例  
  以下示例将获取 `VacationHours` 捕获实例更新掩码中的 `HumanResources_Employee` 列的序号位置。 然后将在调用 `sys.fn_cdc_is_bit_set` 时使用该值以从返回的更新掩码中提取信息。  

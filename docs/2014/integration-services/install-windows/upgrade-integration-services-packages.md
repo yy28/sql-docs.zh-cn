@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 002ef268bbb858db961862c1a30479a3e8462237
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d22744898dcc45ac213436afcdf25359ba24adec
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136057"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072197"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   当升级的实例[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]到最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您的现有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]包不会自动升级到的当前版本的包格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用。 您必须选择一种升级方法并手动升级包。  
@@ -29,7 +29,7 @@ ms.locfileid: "48136057"
  有关在将项目转换为项目部署模型时升级包的信息，请参阅 [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)。  
   
 ## <a name="sql-server-2000-data-transformation-services-packages"></a>SQL Server 2000 Data Transformation Services 包  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，已不支持迁移或运行数据转换服务 (DTS) 包。 不再提供以下 DTS 功能：  
+ 当前版本中，已不支持迁移或运行 Data Transformation Services (DTS) 包[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不再提供以下 DTS 功能：  
   
 -   DTS 运行时  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48136057"
   
 |组件或功能|升级结果|  
 |--------------------------|---------------------|  
-|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意： 您不能使用上述过程更新连接字符串或表达式设置时的连接字符串存储在配置文件或数据源文件，`ConnectionString`属性。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
+|连接字符串|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 包，某些提供程序的名称已更改，而且需要在连接字符串中使用不同的值。 若要更新连接字符串，请使用下列过程之一：<br /><br /> -使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包升级向导升级包，并选择“更新连接字符串以使用新的提供程序名称”选项。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，在“选项”对话框的“常规”页上，选择“更新连接字符串以使用新的提供程序名称”选项。 有关此选项的详细信息，请参阅 [General Page](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，打开该包并手动更改 ConnectionString 属性的文本。<br /><br /> 注意：在连接字符串存储于配置文件或数据源文件中，或表达式设置了 `ConnectionString` 属性时，不能使用上述过程更新连接字符串。 若要在这两种情况下更新连接字符串，必须手动更新文件或表达式。<br /><br /> 有关数据源的详细信息，请参阅[数据源](../connection-manager/data-sources.md)。|  
 |查找转换|有关[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]包，升级过程会自动升级查找转换为当前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 不过，此组件的当前版本有一些您可能想要利用的额外功能。<br /><br /> 有关详细信息，请参阅 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |脚本任务和脚本组件|对于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 包，升级过程会自动将脚本任务和脚本组件中的脚本从 VSA 迁移到 VSTA。<br /><br /> 有关在迁移之前可能需要进行的脚本更改以及脚本转换失败的详细信息，请参阅[将脚本迁移到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   

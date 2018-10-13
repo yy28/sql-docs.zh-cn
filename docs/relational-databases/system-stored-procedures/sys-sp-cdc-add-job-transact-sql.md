@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812096"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168780"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@job_type=** ] **'***job_type*****  
+ [  **@job_type=** ] **'**_作业\_类型_  
  要添加的作业类型。 *job_type*是**nvarchar(20)** 且不能为 NULL。 有效输入包括 **'capture'** 并 **'cleanup'**。  
   
  [  **@start_job=** ] *start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans*仅对捕获作业有效。  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=**_最大\_扫描_  
  为了从日志中提取所有行而要执行的最大扫描循环次数。 *max_scans*是**int**默认值为 10。  
   
  *max_scan*仅对捕获作业有效。  
   
- [ **@continuous** ] **= * * * 连续*  
+ [ **@continuous** ] **=**_连续_  
  指示捕获作业是要连续运行 (1) 还是仅运行一次 (0)。 *持续*是**位**默认值为 1。  
   
  当*连续*= 1， [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md)作业将扫描日志并且最多可处理 (*max_trans* \* *max_scans*)事务。 然后，在等待中指定的秒数*polling_interval*开始下一次日志扫描之前。  
@@ -74,17 +74,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *连续*仅对捕获作业有效。  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=**_轮询\_间隔_  
  日志扫描循环之间相隔的秒数。 *polling_interval*是**bigint**默认值为 5。  
   
  *polling_interval*仅对捕获的有效作业*连续*设置为 1。 如果指定了此参数，则该值不能负数，且不能超过 24 小时。 如果指定的值为 0，则不会在两次日志扫描之间等待。  
   
- [ **@retention** ] **= * * * 保留期*  
+ [ **@retention** ] **=**_保留期_  
  更改数据行要在更改表中保留的分钟数。 *保留期*是**bigint**默认值为 4320 （72 小时）。 最大值为 52494800（100 年）。 如果指定值，则该值必须是一个正整数。  
   
  *保留期*仅对清除作业有效。  
   
- [  **@threshold =** ] **'***delete_threshold*****  
+ [  **@threshold =** ] **'**_删除\_阈值_  
  可以通过清除上一条语句删除的删除项的最大数目。 *delete_threshold*是**bigint**默认值为 5000。  
   
 ## <a name="return-code-values"></a>返回代码值  
@@ -98,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  因为清理和捕获作业是默认创建的，所以仅当显式删除某个作业并且必须重新创建它时才需要使用此存储过程。  
   
- 作业的名称是**cdc。***< 数据库名称 >***_cleanup**或**cdc。***< 数据库名称 >***_capture**，其中 *< 数据库名称 >* 是当前数据库的名称。 如果已存在具有相同名称的作业，名称追加一个句点 (**。**) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
+ 作业的名称是**cdc。**_\<数据库\_名称\>_**\_清理**或**cdc。**_\<数据库\_名称\>_**\_捕获**，其中 *< 数据库名称 >* 名称当前数据库中。 如果已存在具有相同名称的作业，名称追加一个句点 (**。**) 跟的唯一标识符，例如： **cdc。AdventureWorks_capture。A1ACBDED-13FC-428C-8302-10100EF74F52**。  
   
  若要查看清除或捕获作业的当前配置，请使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)。 若要更改作业的配置，请使用[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)。  
   

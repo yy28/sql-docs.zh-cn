@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213877"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085473"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>浏览顺序分析和聚类分析模型（数据挖掘中级教程）
   现在，您构建**Sequence Clustering with Region**模型，您可以浏览该模型使用[!INCLUDE[msCoName](../includes/msconame-md.md)]序列聚类分析查看器**挖掘模型查看器**数据挖掘设计器选项卡。 [!INCLUDE[msCoName](../includes/msconame-md.md)]序列分类查看器包含五个选项卡：**分类关系图**，**分类剖面图**，**分类特征**， **ClusterDiscrimination**，并**的状态转换**。 有关如何使用此查看器的详细信息，请参阅[使用 Microsoft 序列分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "48213877"
   
 2.  选择**Cycling Cap**中**状态**列表。  
   
-     该图会进行更新，以显示所选产品在每个分类中的集中度。 最暗的分类包含自行车帽的密度最大。 可以更改明暗度变量，以使用任何输入列的任意状态。  
+     该图会进行更新，以显示所选产品在每个分类中的集中度。 最暗的分类包含自行车帽的密度最大。 可以更改明暗度变量，以使用任何输入任何的列状态。  
   
 3.  在中**明暗度变量**列表中，选择**填充**。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "48213877"
  [创建相关聚类分析模型的顺序&#40;数据挖掘中级教程&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>请参阅  
- [Microsoft 序列聚类分析算法](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [顺序分析和聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

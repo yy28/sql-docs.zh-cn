@@ -16,12 +16,12 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 313d128d0323c8400828e43c7d80f94614950ee5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1ce3195b114969a44f818ca0eb69d2979087e55
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080837"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169117"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>查看表的依赖关系
   您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中查看表的依赖关系。  
@@ -53,7 +53,7 @@ ms.locfileid: "48080837"
   
 2.  右键单击某个表，然后单击“查看依赖关系”。  
   
-3.  在“对象依赖关系 \<对象名称>”**对话框中，选择“依赖于 \<对象名称> 的对象”** 或“\<对象名称> 依赖的对象”****。  
+3.  在“对象依赖关系 \<对象名称>”对话框中，选择“依赖于 \<对象名称> 的对象”或“\<对象名称> 依赖的对象”。  
   
 4.  在 **“依赖关系”** 网格中选择一个对象。 对象类型（如“触发器”或“存储过程”）显示在“类型”框中。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48080837"
   
 #### <a name="to-view-the-objects-that-depend-on-a-table"></a>查看依赖于表的对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48080837"
   
 #### <a name="to-view-the-objects-on-which-a-table-depends"></a>查看表依赖的对象  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   

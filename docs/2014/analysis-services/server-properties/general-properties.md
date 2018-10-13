@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171177"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905757"
 ---
 # <a name="general-properties"></a>常规属性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支持下表中列出的服务器属性。 本主题介绍 msmdsrv.ini 文件中未专门介绍的那些服务器属性，如 Security、Network 或 ThreadPool。 有关更多服务器属性以及如何设置这些属性的详细信息，请参阅 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)。  
@@ -61,7 +61,7 @@ ms.locfileid: "48171177"
  一个字符串属性，它在分隔的列表中指定在 Analysis Services 对话框中保存、打开和查找文件时可浏览的文件夹。 Analysis Services 服务帐户必须对您添加到该列表的所有文件夹都具有读写权限。  
   
  `BackupDir`  
- 一个字符串属性，用于标识目录名称。如果 Backup 命令中未指定路径，将默认在该目录中存储备份文件。  
+ 一个字符串属性，事件作为 Backup 命令的一部分未指定路径中标识的默认情况下，存储备份文件的目录名称。  
   
  `CollationName`  
  字符串属性，用于标识服务器排序规则。 有关详细信息，请参阅[语言和排序规则 (Analysis Services)](../languages-and-collations-analysis-services.md)。  
@@ -77,12 +77,12 @@ ms.locfileid: "48171177"
  `CoordinatorCancelCount`  
  有符号 32 位整数属性，用于定义服务器应检查是否发生取消事件的频率（基于内部迭代计数）。 如果减小此值，则可加快检查取消事件的频率，同时将降低系统的整体性能。  
   
- `CoordinatorCancelCount` 在表格服务器模式被忽略。  
+ `CoordinatorCancelCount` 在表格服务器模式下将被忽略。  
   
  `CoordinatorExecutionMode`  
  有符号 32 位整数属性，用于定义服务器将尝试的最大并行操作（包括处理操作和查询操作）数。 零 (0) 指示服务器将基于内部算法来决定。 正数指示最大操作总数。 如果是符号相反的负数，则指示每个处理器的最大操作数。  
   
- `CoordinatorExecutionMode` 在表格服务器模式被忽略。  
+ `CoordinatorExecutionMode` 在表格服务器模式下将被忽略。  
   
  此属性的默认值为 -4，指示将服务器限制为每个处理器 4 个并行操作。 有关此属性的详细信息，请参阅 [SQL Server 2008 R2 Analysis Services 操作指南](http://go.microsoft.com/fwlink/?LinkID=225539)。  
   

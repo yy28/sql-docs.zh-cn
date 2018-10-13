@@ -17,12 +17,12 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0ccb9267242dbe3a44350efd1762c45bc6bbccbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4119b2ef17bcb735669d25662972ae4c79bbae31
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140697"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906407"
 ---
 # <a name="data-profiling-task"></a>数据事件探查任务
   数据事件探查任务计算的各种配置文件可帮助您熟悉数据源并找出数据中要修复的问题。  
@@ -30,7 +30,7 @@ ms.locfileid: "48140697"
  可以在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包中使用数据事件探查任务对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中存储的数据进行事件探查并标识潜在的数据质量问题。  
   
 > [!NOTE]  
->  本主题只介绍数据事件探查任务的功能和要求。 有关如何使用数据事件探查任务的演练，请参阅 [数据事件探查任务和查看器](data-profiling-task-and-viewer.md)。  
+>  本主题仅介绍的功能和要求的数据事件探查任务。 有关如何使用数据事件探查任务的演练，请参阅 [数据事件探查任务和查看器](data-profiling-task-and-viewer.md)。  
   
 ## <a name="requirements-and-limitations"></a>要求和限制  
  数据事件探查任务仅适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中存储的数据。 此任务不适用于第三方或基于文件的数据源。  
@@ -55,7 +55,7 @@ ms.locfileid: "48140697"
 |列长度分布配置文件|报告所选列中各个字符串值的不同长度，以及每个长度表示的行在表中的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的值。 例如，美国州代码列应以两个字符来表示，但在对其进行事件探查时却发现有超过两个字符的值。|  
 |列 Null 比率配置文件|报告所选列中 Null 值的百分比。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如列中 null 值的比率意外偏高。 例如，您对邮政编码列进行事件探查，却发现缺失的邮政编码所占的比例超出允许的范围。|  
 |列模式配置文件|报告一组正则表达式，其中涵盖字符串列中指定百分比的值。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的字符串。 它还可以建议可用于以后验证新值的正则表达式。 例如，美国邮政编码列的模式配置文件可能会生成正则表达式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果看到其他正则表达式，则数据可能包含无效或格式不正确的值。|  
-|列统计信息配置文件|报告的统计信息，例如最小值、 最大值、 平均值和标准偏差数字列，以及最小值和最大值`datetime`列。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
+|列统计信息配置文件|报告各种统计信息，例如数值列的最小值、最大值、平均值和标准偏差，以及 `datetime` 列的最小值和最大值。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，如无效的日期。 例如，您对历史日期列进行事件探查，却发现最近的日期是一个将来的日期。|  
 |列值分布配置文件|报告选定列中所有的非重复值以及每个值所表示的行在表中的百分比。 还可以报告一些表示该表中的行超过指定百分比的值。<br /><br /> 此配置文件可以帮助您识别数据中存在的问题，例如列中非重复值的数目不正确。 例如，您对应该包含美国的各州的列进行事件探查，却发现 50 多个非重复值。|  
   
  以下三个配置文件分析多个列或列与表之间的关系。  
@@ -76,12 +76,12 @@ ms.locfileid: "48140697"
 |-------------|------------------------|  
 |列统计信息配置文件|numeric 类型或 `datetime` 类型的列（`mean` 列无 `stddev` 和 `datetime`）|  
 |列 Null 比率配置文件|所有列**|  
-|列值分布配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
-|列长度分布配置文件|列的`char`类型|  
-|列模式配置文件|列的`char`类型|  
-|候选键配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
-|函数依赖关系配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
-|包含配置文件|列`integer`类型，`char`类型，和`datetime`类型|  
+|列值分布配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|列长度分布配置文件|`char` 类型的列|  
+|列模式配置文件|`char` 类型的列|  
+|候选键配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|函数依赖关系配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
+|包含配置文件|`integer` 类型、`char` 类型和 `datetime` 类型的列|  
   
  \* 在上述有效的数据类型的表`integer`， `char`， `datetime`，和`numeric`类型包括以下特定的数据类型：  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48140697"
   
  Date 和 time 类型包括 `datetime`、`smalldatetime` 和 `timestamp`。  
   
- 数值类型包括`integer`类型 (除了`bit`)， `money`， `smallmoney`， `decimal`， `float`， `real`，和`numeric`。  
+ Numeric 类型包括 `integer`（`bit` 除外）、`money`、`smallmoney`、`decimal`、`float`、`real` 和 `numeric`。  
   
  \*\* `image``text`， `XML`， `udt`，和`variant`不支持除列 Null 比率配置文件以外的配置文件的类型。  
   
@@ -134,25 +134,25 @@ ms.locfileid: "48140697"
  使用 **“数据事件探查任务编辑器”** 配置数据事件探查任务。 此编辑器有以下两页：  
   
  [“常规”页](../general-page-of-integration-services-designers-options.md)  
- 在“常规”页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅[单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
+ 在“常规”页上，可指定输出文件或变量。 还可以选择 **“快速配置文件”** 对任务进行快速配置，以便使用默认的设置来计算配置文件。 有关详细信息，请参阅 [单个表快速配置文件窗体（数据事件探查任务）](data-profiling-task.md)。  
   
- [配置文件请求的页面](data-profiling-task-editor-profile-requests-page.md)  
+ [“配置文件请求”页](data-profiling-task-editor-profile-requests-page.md)  
  在“配置文件请求”页上，可指定数据源，选择要计算的数据配置文件并对其进行配置。 有关可以配置的各种配置文件的详细信息，请参阅以下主题：  
   
--   [候选键配置文件请求选项&#40;数据事件探查任务&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [候选键配置文件请求选项（数据事件探查任务）](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [列长度分布配置文件请求选项&#40;数据事件探查任务&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [列长度分布配置文件请求选项（数据事件探查任务）](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [列 Null 比率配置文件请求选项&#40;数据事件探查任务&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [列 Null 比率配置文件请求选项（数据事件探查任务）](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [列模式配置文件请求选项&#40;数据事件探查任务&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [列模式配置文件请求选项（数据事件探查任务）](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [列统计信息配置文件请求选项&#40;数据事件探查任务&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [列统计信息配置文件请求选项（数据事件探查任务）](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [列值分布配置文件请求选项&#40;数据事件探查任务&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [列值分布配置文件请求选项（数据事件探查任务）](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [函数依赖关系配置文件请求选项&#40;数据事件探查任务&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [函数依赖关系配置文件请求选项（数据事件探查任务）](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [值包含配置文件请求选项&#40;数据事件探查任务&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [值包含配置文件请求选项（数据事件探查任务）](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

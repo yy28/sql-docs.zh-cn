@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deda1f440b12fc46b4d3e3e9e6fe5731995273a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200868"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084966"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>修改或重命名 DML 触发器
   本主题将说明如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]修改或重命名 DML 触发器。  
@@ -48,7 +48,7 @@ ms.locfileid: "48200868"
   
 ###  <a name="Recommendations"></a> 建议  
   
--   我们建议你不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 存储过程重命名触发器。 更改对象名的任一部分都可能破坏脚本和存储过程。 重命名触发器将不会更改 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目录视图的定义列中相应对象名的名称。 我们建议删除并重新创建触发器。  
+-   我们建议你不要使用 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 存储过程重命名触发器。 更改对象名的任一部分都可能破坏脚本和存储过程。 重命名触发器将不会更改 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 目录视图的定义列中相应对象名的名称。 我们建议你删除并重新创建触发器。  
   
 -   如果更改了 DML 触发器引用的对象名，则必须修改触发器以使其文本反映新的名称。 因此，在重命名对象之前，需要先显示该对象的依赖关系，以确定所建议的更改是否会影响任何触发器。  
   

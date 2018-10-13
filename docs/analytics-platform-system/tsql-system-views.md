@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392917"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906137"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平台系统并行数据仓库的系统视图
 系统视图的分析平台系统 (APS) SQL Server 并行数据仓库 (PDW)。
@@ -133,7 +133,7 @@ ms.locfileid: "40392917"
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 中提供的 Dmv 并行数据仓库
 并行数据仓库公开许多 SQL Server 动态管理视图 (Dmv)。 这些视图，在并行数据仓库中，查询时它们将报告分布区上运行的 SQL Server 数据库的状态。
 
-每个这些 DMV 有一个名为 pdw_node_id 的特定列。 这是计算节点的标识符。 
+每个这些 DMV 有一个名为 pdw_node_id 的特定列。 这是为计算节点的标识符。 
 
 > [!NOTE]
 > 若要使用这些视图，请在名称插入 pdw_nodes_ 下, 表中所示。

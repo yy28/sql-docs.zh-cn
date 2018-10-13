@@ -8,12 +8,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f007549021fc246d943929f73a763e6343c5641a
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 2bd03c4c1dfb019238785b5284b4cceffc95c3a2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714921"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878150"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 机器学习服务安装在 SQL Server 2019 之间的差异  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "46714921"
 
 ## <a name="implied-authentication"></a>隐式身份验证
 
-因为在这之前，其他配置仍需要*隐式身份验证*脚本或代码具有要重新连接到 SQL Server 使用受信任的身份验证以检索数据或资源。 其他配置涉及到创建数据库登录名**SQLRUserGroup**，其唯一的成员现在是而不是多个辅助角色帐户的单个 SQL Server 快速启动板服务帐户。 有关此任务的详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../r/add-sqlrusergroup-to-database.md)。
+因为在这之前，其他配置仍需要*隐式身份验证*脚本或代码具有要重新连接到 SQL Server 使用受信任的身份验证以检索数据或资源。 其他配置涉及到创建数据库登录名**SQLRUserGroup**，其唯一的成员现在是而不是多个辅助角色帐户的单个 SQL Server 快速启动板服务帐户。 有关此任务的详细信息，请参阅[作为数据库用户添加 SQLRUserGroup](../security/add-sqlrusergroup-to-database.md)。
 
 
 ## <a name="symbolic-link-created-by-setup"></a>安装程序创建的符号链接
@@ -60,7 +60,7 @@ ms.locfileid: "46714921"
 为当前的默认值创建符号链接**R_SERVICES**并**PYTHON_SERIVCES**作为 SQL Server 安装程序的一部分。 如果不想要创建此链接，一种替代方法是所有应用程序包读取的权限授予指向文件夹的层次结构。
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 + [安装 SQL Server 机器学习在 Windows 上的服务](sql-machine-learning-services-windows-install.md)
 

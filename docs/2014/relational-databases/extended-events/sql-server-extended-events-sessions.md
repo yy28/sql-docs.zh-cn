@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051357"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120254"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件会话是在用于承载 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 扩展事件引擎的进程中创建的。 扩展事件会话的以下各方面信息可为您理解扩展事件基础结构和所发生的常规处理提供有关背景知识：  
@@ -55,7 +55,7 @@ ms.locfileid: "48051357"
   
  对照前面的图，可注意到：  
   
--   包对象与会话之间的映射是多对多映射，也就是说，一个对象可在多个会话中出现，一个会话也可包含多个对象。  
+-   包对象和会话之间的映射是多对多，这意味着对象可以出现在多个会话和会话可以包含多个对象。  
   
 -   可在多个会话中启用同一个事件 (Event 1) 或目标 (Target 1)。  
   

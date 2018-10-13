@@ -11,12 +11,12 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 81119bcb31e46667e572c4d5cd2ea37858306876
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7cc4a80849f9dfd12bd7148351c0230e30e64ed
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177037"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905037"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>步骤 4：部署第 6 课包
   部署包涉及将包添加到 SQL Server 实例上 Integration Services 中的 SSISDB 目录。 在本课程中，你会将第 6 课包添加到 SSISDB 目录，设置参数，然后执行该包。 对于本课程，你将使用 SQL Server Management Studio 将第 6 课包添加到 SSISDB 目录，然后部署该包。 部署该包之后，你会修改参数以指向新位置，然后执行该包。  
@@ -31,7 +31,7 @@ ms.locfileid: "48177037"
   
 -   在 SSMS 中执行包。  
   
-### <a name="to-locate-or-add-the-the-ssisdb-catalog"></a>找到或添加 SSISDB 目录  
+### <a name="to-locate-or-add-the-ssisdb-catalog"></a>找到或添加 SSISDB 目录  
   
 1.  单击“开始”，依次指向“所有程序”和“Microsoft SQL Server 2012”，然后单击“SQL Management Studio”。  
   

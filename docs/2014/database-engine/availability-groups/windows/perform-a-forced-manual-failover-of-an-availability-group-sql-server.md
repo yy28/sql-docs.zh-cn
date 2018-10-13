@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ea5731811b1ac6c0e6dcde82fc80a7844cdab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5afd389288de04ec77f3258706bf8fd31b228ec
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177787"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120334"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
   本主题说明如何在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell 对 AlwaysOn 可用性组执行强制故障转移（可能会丢失数据）。 强制故障转移是一种在不可能进行 [计划的手动故障转移](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 时严格限制用于灾难恢复的手动故障转移。 如果您强制故障转移到某一未同步的辅助副本，则可能会丢失一些数据。 因此，我们强烈建议您仅在以下情况下才强制故障转移：您必须立即将服务还原到可用性组并且您愿意承担丢失数据的风险。  
@@ -132,7 +132,7 @@ ms.locfileid: "48177787"
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **强制故障转移（可能丢失数据）**  
   
-1.  连接到一个服务器实例，该服务器实例承载需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
+1.  连接到承载其角色处于 SECONDARY 或 RESOLVING 状态需要故障转移在可用性组中的副本的服务器实例。  
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 语句：  
   
@@ -151,15 +151,15 @@ ms.locfileid: "48177787"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
   
-1.  将目录 (`cd`) 更改为一个服务器实例，该服务器实例承载需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
+1.  将目录更改 (`cd`) 到承载其角色处于 SECONDARY 或 RESOLVING 状态需要故障转移在可用性组中的副本的服务器实例。  
   
 2.  以下列形式之一使用 `Switch-SqlAvailabilityGroup` cmdlet 以及 `AllowDataLoss` 参数：  
   
     -   `-AllowDataLoss`  
   
-         默认情况下，`-AllowDataLoss` 参数会让 `Switch-SqlAvailabilityGroup` 向您进行提示，以提醒您强制故障转移可能会导致丢失未提交的事务，并请求确认。 若要继续，请输入`Y`; 若要将取消该操作，请输入`N`。  
+         默认情况下，`-AllowDataLoss` 参数会让 `Switch-SqlAvailabilityGroup` 向您进行提示，以提醒您强制故障转移可能会导致丢失未提交的事务，并请求确认。 若要继续，请输入 `Y`；若要取消操作，请输入 `N`。  
   
-         下面的示例对可用性组 `MyAg` 执行强制故障转移（可能会造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName`服务器实例上的次要副本。 系统将提示您确认此操作。  
+         下面的示例对可用性组 `MyAg` 执行强制故障转移（可能会造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName` 服务器实例上的辅助副本。 系统将提示您确认此操作。  
   
         ```  
         Switch-SqlAvailabilityGroup `  
@@ -169,7 +169,7 @@ ms.locfileid: "48177787"
   
     -   **-AllowDataLoss-Force**  
   
-         要启动强制故障转移而无需确认，请同时指定 `-AllowDataLoss` 和 `-Force` 参数。 如果您要在脚本中包含此命令而无需用户交互来运行它，此操作很有用。  但是，使用`-Force`选项时，要注意，因为强制故障转移可能会导致参与可用性组的数据库中的数据丢失。  
+         要启动强制故障转移而无需确认，请同时指定 `-AllowDataLoss` 和 `-Force` 参数。 如果您要在脚本中包含此命令而无需用户交互来运行它，此操作很有用。  但是，应慎重使用 `-Force` 选项，因为强制故障转移可能导致参与可用性组的数据库中的数据丢失。  
   
          下面的示例将对可用性组 `MyAg` 执行强制故障转移（可能造成数据丢失），以将故障转移到名为 `SecondaryServer\InstanceName`的服务器实例。 `-Force` 选项将取消确认此操作。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "48177787"
         ```  
   
     > [!NOTE]  
-    >  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+    >  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
 3.  强制可用性组进行故障转移之后，请完成必要的后续步骤。 有关详细信息，请参阅本主题后面的 [跟进：强制故障转移后的重要任务](#FollowUp)。  
   

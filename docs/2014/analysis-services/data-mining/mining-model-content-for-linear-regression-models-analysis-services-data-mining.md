@@ -15,18 +15,18 @@ ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4dcf25989915a7fc9c10b63b3521d7c0eb31a68c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200977"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120034"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
-  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>了解线性回归模型的结构  
- 线性回归模型的结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，以及包含每个可预测属性的回归公式的回归树节点 (NODE_TYPE = 25)。  
+ 线性回归模型的结构非常简单。 每个模型具有表示该模型及其元数据的单一父节点和回归树节点 (NODE_TYPE = 25)，其中包含每个可预测属性的回归公式。  
   
  ![用于线性回归模型的结构](../media/modelcontentstructure-linreg.gif "用于线性回归模型的结构")  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48200977"
 ## <a name="model-content-for-a-linear-regression-model"></a>线性回归模型的模型内容  
  本部分提供的详细信息和示例仅针对挖掘模型内容中与线性回归有特殊关系的列。  
   
- 有关架构行集中通用列的信息，请参阅[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 有关架构行集中的通用列的信息，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  存储模型的数据库的名称。  
@@ -188,7 +188,7 @@ ms.locfileid: "48200977"
  因此，假定平均年龄约为 45，回归公式的截距 (VALUETYPE = 11) 则指示平均收入。  
   
 ## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 线性回归算法](microsoft-linear-regression-algorithm.md)   
  [Microsoft 线性回归算法技术参考](microsoft-linear-regression-algorithm-technical-reference.md)   
  [线性回归模型查询示例](linear-regression-model-query-examples.md)  

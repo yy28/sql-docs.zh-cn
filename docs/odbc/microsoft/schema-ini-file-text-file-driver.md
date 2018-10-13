@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713205"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169217"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini 文件（文本文件驱动程序）
 使用文本驱动程序时，使用架构信息文件来确定文本文件的格式。 架构信息文件是始终命名为 Schema.ini，始终放置在文本数据源所在的同一目录中。 架构信息文件提供了有关的信息的一般格式的文件、 列名称和数据类型信息和几个其他数据特征 IISAM。 Schema.ini 文件始终都需要访问固定长度的数据。 当文本表包含日期时间、 货币或小数数据或只要您希望更好地控制的表中的数据处理时，应使用 Schema.ini 文件。  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- 下一个条目将在表中的字段指定使用的列号 (**Col * * * n*) 选项，这是可选的分隔字符的文件和所需的固定长度的文件。 该示例显示了两个字段，10 个字符列可以是 CustomerNumber 文本字段和 30 个字符 CustomerName 文本字段的 Schema.ini 项：  
+ 下一个条目将在表中的字段指定使用的列号 (**Col**_n_) 选项，这是可选的分隔字符的文件和所需的固定长度的文件。 该示例显示了两个字段，10 个字符列可以是 CustomerNumber 文本字段和 30 个字符 CustomerName 文本字段的 Schema.ini 项：  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- 语法 **Col * * * n*是：  
+ 语法**Col**_n_是：  
   
 ```  
   
@@ -99,8 +99,8 @@ n=ColumnNametype [#]
   
 |参数|Description|  
 |---------------|-----------------|  
-|*列名称*|文本列的名称。 如果列名称包含嵌入的空格，则必须将其括在双引号。|  
-|*type*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 货币<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
+|*ColumnName*|文本列的名称。 如果列名称包含嵌入的空格，则必须将其括在双引号。|  
+|*类型*|数据类型是按如下所示：<br /><br /> **Microsoft Jet 的数据类型**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> 货币<br /><br /> Single<br /><br /> 双精度<br /><br /> DateTime<br /><br /> Text<br /><br /> 备忘录<br /><br /> **ODBC 数据类型**Char （与文本相同）<br /><br /> Float （与 Double 相同）<br /><br /> 整数 （相同短格式）<br /><br /> LongChar （等同于备注）<br /><br /> 日期*日期格式*|  
 |宽度|文本字符串值`Width`。 指示下面的编号，将指定的列的宽度 （对于字符分隔的文件是可选的; 对于固定长度的文件所需）。|  
 |*#*|指定列的宽度的整数值 (需要**宽度**指定)。|  
   

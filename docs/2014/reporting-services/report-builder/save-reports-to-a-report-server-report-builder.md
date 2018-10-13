@@ -11,12 +11,12 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 1ecb94722bc5eed521be2d731bf8d65f9d4c7efd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d0efbb500a3c433f4670c3ec2ad2e35d88b8b59
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092909"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168898"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>将报表保存到报表服务器（报表生成器）
   在报表生成器中，可以将报表定义保存到报表服务器（也称为发布报表）。 将报表保存到报表服务器时，其他用户可以查看报表。 每次运行已发布的报表时，将检索最新的数据。 若要保存所呈现报表的静态副本，请将该报表导出为另一文件格式并保存它，或使用报表历史记录功能来保存所呈现报表的各个版本。  
@@ -26,7 +26,7 @@ ms.locfileid: "48092909"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>将报表保存到报表服务器  
   
-1.  从“报表生成器”按钮，单击 **“保存”**。 此时，将打开“另存为***\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“保存”**。 **另存为**_\<报表项\>_ 对话框随即打开。  
   
     > [!NOTE]  
     >  如果正在重新保存报表，会自动将其重新保存到以前的位置。 使用“另存为”选项可以更改位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "48092909"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>将报表另存为不同名称  
   
-1.  从“报表生成器”按钮，单击 **“另存为”**。 此时，将打开“另存为***\<报表项>”对话框。  
+1.  从“报表生成器”按钮，单击 **“另存为”**。 **另存为**_\<报表项\>_ 对话框随即打开。  
   
 2.  浏览到报表服务器位置或要保存报表的文件共享。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48092909"
 ## <a name="see-also"></a>请参阅  
  [查找、查看和管理报表（报表生成器和 SSRS）](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [导出报表&#40;报表生成器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [保存报表&#40;报表生成器&#41;](saving-reports-report-builder.md)   
+ [保存报表（报表生成器）](saving-reports-report-builder.md)   
  [将报表导出为其他文件类型（报表生成器和 SSRS）](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

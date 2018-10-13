@@ -13,12 +13,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152747"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072281"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
   本主题讨论 SQL Server Native Client 中为支持大型公共语言运行时 (CLR) 用户定义类型 (UDT) 而对 ODBC 进行的更改。  
@@ -163,7 +163,7 @@ ms.locfileid: "48152747"
  本节讨论为支持大型 CLR UDT 而对 SQL Server Native Client ODBC 函数进行的更改。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT 所需的值如下所示：  
@@ -196,13 +196,13 @@ ms.locfileid: "48152747"
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  新类型可用的描述符字段如本主题前面的章节“参数的描述符字段”和“结果的描述符字段”中所述。  
@@ -222,7 +222,7 @@ ms.locfileid: "48152747"
  为 UDT 返回的值如本主题前面的章节“SQLColumns 和 SQLProcedureColumns 返回的列元数据（目录元数据）”中所述。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 参数值从 C 数据类型转换为 SQL 数据类型。  
+ UDT 参数值是从 C 转换为 SQL 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  "参数的描述符字段"和"结果的描述符字段"部分中，本主题中前面部分中描述了适用于新类型的描述符字段。  

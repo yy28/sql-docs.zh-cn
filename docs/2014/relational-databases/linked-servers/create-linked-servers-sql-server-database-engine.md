@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152004"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120204"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
   本主题说明如何通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 创建链接服务器和访问来自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的数据。 通过创建链接服务器，您可以使用来自多个数据源的数据。 该链接服务器不必是其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例，尽管这种情况很常见。  
@@ -82,7 +82,7 @@ ms.locfileid: "48152004"
     > [!NOTE]  
     >  如果该 **SQL Server** 实例是默认实例，则输入承载 **SQL Server**实例的计算机的名称。 如果该 **SQL Server** 是命名实例，则输入计算机名称和实例名称，例如 **Accounting\SQLExpress**。  
   
-3.  在 **“服务器类型”** 区域中，选择 **SQL Server** 以便指示该链接服务器是 **SQL Server**的另一个实例。  
+3.  在中**服务器类型**区域中，选择**SQL Server**以指示该链接的服务器的另一个实例**SQL Server**。  
   
 4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择 **“使用登录名的当前安全上下文建立连接”** 通常是最佳选择。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”**，然后提供在链接服务器上进行身份验证时所必需的凭据。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48152004"
      只对访问接口调用 0 级的 OLE DB 接口。  
   
      **允许进程内**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 外实例化提供程序时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]处理，请更新或插入长的引用列 (`text`， `ntext`，或`image`) 不允许。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许将访问接口实例化为进程内服务器。 如果未设置此选项，则默认行为是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口，可防止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程在访问接口中出错。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进程外实例化访问接口时，不允许更新或插入长的引用列（`text`、`ntext` 或 `image`）。  
   
      **非事务更新**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许更新，即使 **ITransactionLocal** 不可用时也是如此。 如果启用此选项，对访问接口的更新将不可恢复，因为该访问接口不支持事务。  

@@ -16,40 +16,42 @@ helpviewer_keywords:
 - query_store_wait_stats catalog view
 - sys.query_store_wait_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: AndrejsAnt
-ms.author: AndrejsAnt
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4972618d10d6d9e0f03a6211423fc1cd8628eeb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96f6b91d68159bd1326b30ffc8b7e89e61cb8402
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640505"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169137"
 ---
 # <a name="sysquerystorewaitstats-transact-sql"></a>sys.query_store_wait_stats (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   包含有关查询的等待信息的信息。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
-|**wait_stats_id**|**bigint**|表示 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 的等待统计信息的行的标识符。 它是唯一的仅为过去的运行时统计信息时间间隔。 当前处于活动状态的时间间隔都可能有多个行表示引用的 plan_id，与表示 execution_type 和由 wait_category 等待此等待类别的执行类型的计划的等待统计信息。 通常情况下，一行表示等待统计信息将被刷新到磁盘，而其他 (s) 表示内存中状态。 因此，若要获取的每个时间间隔的实际状态需要聚合指标按 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 分组。 |  
+|**wait_stats_id**|**bigint**|表示 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 的等待统计信息的行的标识符。 它是唯一的仅为过去的运行时统计信息时间间隔。 当前处于活动状态的间隔时间，都可能有多个行表示引用的 plan_id，与表示 execution_type 和由 wait_category 等待此等待类别的执行类型的计划的等待统计信息。 通常情况下，一行表示等待统计信息将被刷新到磁盘，而其他 (s) 表示内存中状态。 因此，若要获取的每个时间间隔的实际状态需要聚合指标按 plan_id、 runtime_stats_interval_id、 execution_type 和 wait_category 分组。 |  
 |**plan_id**|**bigint**|外键。 加入[sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。|  
 |**runtime_stats_interval_id**|**bigint**|外键。 加入[sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)。|  
-|**wait_category**|**tinyint**|等待类型进行分类使用下表，然后等待时间汇总跨这些等待类别。 不同的等待类别需要不同的后续分析才能解决此问题，但相同类别的等待类型可引起非常相似的故障排除体验，并假定基于等待的受影响的查询会成为用于成功完成此类调查的大部分内容的缺少的部分。|
-|**wait_category_desc**|**nvarchar(128)**|等待类别字段的文本说明，请查看下表。|
+|**wait_category**|**tinyint**|等待类型进行分类使用下表，然后等待时间汇总跨这些等待类别。 不同的等待类别需要不同的后续分析，以解决此问题，但等待类型从同一类别潜在顾客到类似的故障排除体验，并等待除了提供受影响的查询是缺少的信息以完成此类调查的大部分成功。|
+|**wait_category_desc**|**nvarchar(128)**|有关的等待类别字段的文本说明，请查看下表。|
 |**execution_type**|**tinyint**|确定类型的查询执行：<br /><br /> 0 – 常规执行 （成功完成）<br /><br /> 3 – 客户端启动已中止执行<br /><br /> 4-异常已中止执行|  
 |**execution_type_desc**|**nvarchar(128)**|执行类型字段的文本说明：<br /><br /> 0 – 常规<br /><br /> 3 – 已中止<br /><br /> 4-异常|  
-|**total_query_wait_time_ms**|**bigint**|总 CPU 的聚合时间间隔内的查询计划的等待时间，并等待类别 （以毫秒为单位报告）。|
+|**total_query_wait_time_ms**|**bigint**|总`CPU wait`聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
 |**avg_query_wait_time_ms**|**float**|平均等待每次执行 （以毫秒为单位报告） 在聚合时间间隔和等待类别中的查询计划的持续时间。|
 |**last_query_wait_time_ms**|**bigint**|上次等待持续时间内聚合间隔的查询计划，然后等待类别 （以毫秒为单位报告）。|
-|**min_query_wait_time_ms**|**bigint**|最小 CPU 聚合间隔内的查询计划的等待时间，并等待类别 （以毫秒为单位报告）。|
-|**max_query_wait_time_ms**|**bigint**|最高 CPU 等待聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
-|**stdev_query_wait_time_ms**|**float**|查询等待持续时间内聚合间隔的查询计划的标准偏差，并等待类别 （以毫秒为单位报告）。|
+|**min_query_wait_time_ms**|**bigint**|最小值`CPU wait`聚合间隔内的查询计划的时间，并等待类别 （以毫秒为单位报告）。|
+|**max_query_wait_time_ms**|**bigint**|最大 'CPU 等待 ' 聚合间隔内的查询计划的时间，并且等待类别 （以毫秒为单位报告）。|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` 查询的持续时间标准偏差计划聚合时间间隔内，并等待类别 （以毫秒为单位报告）。|
 
- ## <a name="wait-categories-mapping-table"></a>等待类别映射表  
-  *"%"用作通配符*
+## <a name="wait-categories-mapping-table"></a>等待类别映射表
+
+"%"用作通配符
   
 |整数值|等待类别|在类别中包括等待类型|  
 |-----------------|---------------|-----------------|  
@@ -78,21 +80,20 @@ ms.locfileid: "47640505"
 |**22**|**复制**|SE_REPL_ %、 REPL_ %、 HADR_ % **（但不是 HADR_THROTTLE_LOG_RATE_GOVERNOR）**，PWAIT_HADR_ %，REPLICA_WRITES、 FCB_REPLICA_WRITE、 FCB_REPLICA_READ、 PWAIT_HADRSIM|
 |**23**|**日志速率调控器**|LOG_RATE_GOVERNOR，POOL_LOG_RATE_GOVERNOR，HADR_THROTTLE_LOG_RATE_GOVERNOR INSTANCE_LOG_RATE_GOVERNOR|
 
-***编译**目前不支持等待类别。 
+**编译**目前不支持等待类别。
 
-  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  需要**VIEW DATABASE STATE**权限。  
   
-## <a name="see-also"></a>请参阅  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [查询存储存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>请参阅
+
+- [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+- [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+- [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+- [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+- [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+- [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+- [使用查询存储来监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+- [查询存储存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  

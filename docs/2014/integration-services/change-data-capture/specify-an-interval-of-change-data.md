@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116369"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119835"
 ---
 # <a name="specify-an-interval-of-change-data"></a>指定变更数据的间隔
-  在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些终结点`datetime`值，将存储在包变量中以更高版本在包中使用。  
+  在用于执行变更数据增量加载的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的控制流中，第一个任务是计算变更数据的端点。 这些端点是 `datetime` 值，将存储在包变量中以供以后在包中使用。  
   
 > [!NOTE]  
 >  有关设计控制流的总体过程的说明，请参阅[变更数据捕获 (SSIS)](change-data-capture-ssis.md)。  
@@ -35,44 +35,44 @@ ms.locfileid: "48116369"
   
 2.  在 **“变量”** 窗口中创建以下变量：  
   
-    1.  创建具有变量`datetime`数据类型，以保存间隔的起始点。  
+    1.  创建一个数据类型为 `datetime` 的变量以保存间隔的起始点。  
   
          以下示例使用变量名 ExtractStartTime。  
   
-    2.  创建与另一个变量`datetime`数据类型，以保存间隔的结束点。  
+    2.  再创建一个数据类型为 `datetime` 的变量以保存间隔的结束点。  
   
          以下示例使用变量名 ExtractEndTime。  
   
  如果在执行多个子包的主包中计算端点，则可使用父包变量配置将这些变量的值传递给各个子包。 有关详细信息，请参阅 [执行包任务](../control-flow/execute-package-task.md) 和 [在子包中使用变量和参数的值](../use-the-values-of-variables-and-parameters-in-a-child-package.md)。  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>计算变更数据的起始点和结束点  
- 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 这两个[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言和 TRANSACT-SQL 都具有使用的函数`datetime`值：  
+ 为间隔端点设置包变量之后，即可计算这些端点的实际值并将这些值映射到相应的包变量中。 因为这些端点为 `datetime` 值，所以您必须使用可以计算或处理 `datetime` 值的函数。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言和 Transact-SQL 都具有可处理 `datetime` 值的函数：  
   
- 中的函数[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用的表达式语言`datetime`值  
- -   [DATEADD &#40;SSIS 表达式&#41;](../expressions/dateadd-ssis-expression.md)  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言中可处理 `datetime` 值的函数  
+ -   [DATEADD（SSIS 表达式）](../expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF &#40;SSIS 表达式&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF（SSIS 表达式）](../expressions/datediff-ssis-expression.md)  
   
--   [DATEPART &#40;SSIS 表达式&#41;](../expressions/datepart-ssis-expression.md)  
+-   [DATEPART（SSIS 表达式）](../expressions/datepart-ssis-expression.md)  
   
--   [天&#40;SSIS 表达式&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY（SSIS 表达式）](../expressions/day-ssis-expression.md)  
   
--   [GETDATE &#40;SSIS 表达式&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE（SSIS 表达式）](../expressions/getdate-ssis-expression.md)  
   
--   [GETUTCDATE &#40;SSIS 表达式&#41;](../expressions/getutcdate-ssis-expression.md)  
+-   [GETUTCDATE（SSIS 表达式）](../expressions/getutcdate-ssis-expression.md)  
   
--   [月&#40;SSIS 表达式&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH（SSIS 表达式）](../expressions/month-ssis-expression.md)  
   
--   [年&#40;SSIS 表达式&#41;](../expressions/year-ssis-expression.md)  
+-   [YEAR（SSIS 表达式）](../expressions/year-ssis-expression.md)  
   
- 中使用的 TRANSACT-SQL 函数`datetime`值  
+ Transact-SQL 中可处理 `datetime` 值的函数  
  [日期和时间的数据类型及函数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
  在使用上述任一 `datetime` 函数来计算端点之前，必须先确定间隔是否固定并且定期发生。 通常，您会希望定期将在源表中发生的变更应用到目标表中。 例如，您可能希望每小时、每天或每周应用这些变更。  
   
  在了解变更间隔是固定的还是随机的之后，即可计算端点：  
   
--   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定的时间间隔，则可以通过使用计算该值`datetime`函数的 TRANSACT-SQL 或的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
+-   **计算起始日期和时间**。 将上一次加载的结束日期和时间作为当前的起始日期和时间。 如果对增量加载使用固定间隔，则可使用 Transact-SQL 或 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 表达式语言的 `datetime` 函数来计算此值。 否则，您可能需要保持两个执行之间的端点，并使用执行 SQL 任务或脚本任务来加载上一个端点。  
   
 -   **计算结束日期和时间**。 如果对增量加载使用固定间隔，则可将当前的结束日期和时间作为起始日期和时间的偏移量来计算。 同样，您可以通过使用计算此值`datetime`函数的 TRANSACT-SQL 或的[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]表达式语言。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116369"
 3.  在 **“执行 SQL 任务编辑器”** 的 **“结果集”** 页上，将 ExtractStartTime 结果映射到 ExtractStartTime 包变量，并将 ExtractEndTime 结果映射到 ExtractEndTime 包变量。  
   
     > [!NOTE]  
-    >  如果使用表达式设置 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 变量的值，则每次访问该变量的值时都会计算表达式。  
+    >  当您使用表达式的值设置[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]变量，计算该表达式，每次访问该变量的值。  
   
 ## <a name="next-step"></a>下一步  
  计算变更范围的起始点和结束点之后，下一步就是确定变更数据是否已准备就绪。  

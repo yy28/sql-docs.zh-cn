@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796205"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851882"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  锁的所有者，它是请求锁时所指定的 lock_owner 值。 lock_owner 是 nvarchar(32)。 该值可以是 Transaction（默认值）或 Session。 当*指定的 lock_owner*值是**事务**，也可由默认设置还是显式指定，sp_getapplock 必须在从事务内执行。  
   
  [ @LockTimeout=] '*值*  
- 锁超时值（毫秒）。 默认值是返回的值与相同@LOCK_TIMEOUT。 若要指示对于不能立即授予的请求，锁请求应返回一个错误，而不应等待锁，请指定 0。  
+ 锁超时值（毫秒）。 默认值是返回的值与相同@LOCK_TIMEOUT。 若要指示时不能立即授予的请求，锁请求应返回返回代码为-1 而不是等待锁，请指定 0。  
   
  [ @DbPrincipal=] '*database_principal*  
  对数据库中的对象具有权限的用户、角色或应用程序角色。 该函数的调用方必须是的成员*database_principal*，dbo 或 db_owner 固定数据库角色，才能成功调用该函数。 默认值为 public。  

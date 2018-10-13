@@ -15,12 +15,12 @@ ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6805a64e8f7fd27513d87bfdb87dec7087addfa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7dada71a017f37969f94382e23cd07ad75dd356
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171987"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119784"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>在系统管理员被锁定时连接到 SQL Server
   本主题介绍如何以系统管理员身份重新获得对 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的访问权限。 系统管理员可能会由于下列原因之一失去对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的访问权限：  
@@ -62,11 +62,11 @@ ms.locfileid: "48171987"
 5.  上**启动参数**选项卡上，在**指定启动参数**框中，键入`-m`，然后单击`Add`。 （这是短划线后跟小写字母 m。）  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 最后，在添加新参数`;-m`，然后单击`OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”**。 参数在非常小的窗口中打开。 请注意不要更改任何现有参数。 在最后，添加新参数 `;-m`，然后单击 `OK`。 （这是一个分号，后跟短划线和小写字母 m。）  
   
 6.  单击`OK`，右键单击服务器名称，并重新启动的消息，显示后，然后单击**重新启动**。  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理未在运行。 如果启动，它将占用您唯一的连接。  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重启之后，你的服务器将处于单用户模式。 请确保[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理未运行。 如果启动，它将占用您唯一的连接。  
   
 8.  在 Windows 8 启动屏幕上，右键单击 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 的图标。 在屏幕的底部，选择““以管理员身份运行” 。 （这会将您的管理员凭据传递到 SSMS。）  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48171987"
 11. 上**启动参数**选项卡上，在**现有参数**框中，选择`-m`，然后单击`Remove`。  
   
     > [!NOTE]  
-    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”。 参数在非常小的窗口中打开。 删除`;-m`的前面，添加，然后单击`OK`。  
+    >  对于某些早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，没有“启动参数”  选项卡。在这种情况下，在“高级”选项卡上，双击“启动参数”**。 参数在非常小的窗口中打开。 删除`;-m`的前面，添加，然后单击`OK`。  
   
 12. 右键单击你的服务器名称，然后单击“重启”。  
   

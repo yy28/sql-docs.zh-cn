@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392053"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100370"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>分析平台系统中的工作负荷管理
 
@@ -60,7 +60,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 |资源类|请求重要性|最大内存使用情况 *|并发槽数 (最大 = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|默认值|Medium|400 MB|@shouldalert|默认情况下，每个登录名被允许的少量内存和并发为其请求的资源。<br /><br />当一个登录名添加到资源类时，新类将优先。 当所有资源类中删除的登录名时，该登录名会还原为默认资源分配。|  
+|默认值|Medium|400 MB|1|默认情况下，每个登录名被允许的少量内存和并发为其请求的资源。<br /><br />当一个登录名添加到资源类时，新类将优先。 当所有资源类中删除的登录名时，该登录名会还原为默认资源分配。|  
 |MediumRC|Medium|1200 MB|3|可能需要中等资源类的请求的示例：<br /><br />CTAS 操作具有大型的哈希联接。<br /><br />选择需要更多内存来避免缓存到磁盘的操作。<br /><br />将数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织聚集列存储索引的较小的表具有 10-15 列。|  
 |Largerc|High|2.8 GB|7|可能需要大型资源类的请求的示例：<br /><br />具有巨大的哈希联接或包含大型的聚合，如大型的 ORDER BY 或 GROUP BY 子句的非常大 CTAS 操作。<br /><br />选择需要的内存量非常大的操作，如哈希联接或 ORDER BY 或 GROUP BY 子句之类的聚合的操作<br /><br />将数据加载到聚集列存储索引。<br /><br />生成、 重新生成和重新组织聚集列存储索引的较小的表具有 10-15 列。|  
 |xlargerc|High|8.4 GB|22|特大资源类是对于可能需要在运行时的特大资源消耗的请求。|  
@@ -107,7 +107,7 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 SQL Server PDW 运行语句之前，它将尝试获取所需的请求的并发槽。 如果它无法获取足够的并发槽位，SQL Server PDW 会将请求移动到要执行的等待状态。 已分配给请求的所有资源系统都返回给系统中。  
   
-大多数 SQL 语句始终需要默认的资源分配，并因此不由资源类控制。 例如，创建登录名仅需少量的资源，和分配的默认资源，即使调用创建登录名的登录名所在的资源类。  例如，如果 Anna 是 largerc 资源类的成员，她将提交的 CREATE LOGIN 语句 CREATE LOGIN 语句将用默认数量的资源运行。  
+大多数 SQL 语句始终需要默认的资源分配，并因此不由资源类控制。 例如，创建登录名仅需要少量的资源，而分配的默认资源，即使调用创建登录名的登录名是资源类的成员。  例如，如果 Anna 是 largerc 资源类的成员，她将提交的 CREATE LOGIN 语句 CREATE LOGIN 语句将用默认数量的资源运行。  
   
 SQL 语句和资源类控制的操作：  
   

@@ -15,12 +15,12 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f51c538b050e746a3d806e5a226eaa77eba1c8b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 31ff1f88e55905e8d67dd96c91cd80c8b6677fe2
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054077"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905977"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>关于 URL 预留和注册（SSRS 配置管理器）
   Reporting Services 应用程序的 URL 在 HTTP.SYS 中定义为 URL 预留。 URL 预留定义了指向 Web 应用程序的 URL 端点的语法。 在报表服务器上配置应用程序时，将定义报表服务器 Web 服务和报表管理器的 URL 预留。 通过安装程序或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置工具配置 URL 时，会自动为你创建 URL 预留：  
@@ -59,7 +59,7 @@ ms.locfileid: "48054077"
   
  如果停止服务或回收 Web 服务或报表管理器应用程序域，则会撤消注册 URL。 如果在服务正在运行时修改 URL 预留，报表服务器将会立即回收应用程序域，以便可以撤消注册旧的 URL，开始注册新的 URL。  
   
- 下面几个简单的示例说明了 URL 预留的概念以及它与用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL 地址之间的关联。 需要注意一个关键点，即 URL 预留与用于访问应用程序的 URL 具有不同的语法：  
+ 下面几个简单的示例说明了 URL 预留的概念以及它与用于 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序的 URL 地址之间的关联。 需要注意的一个关键点是 URL 保留项具有不同的语法比用于访问该应用程序的 URL:  
   
 |HTTP.SYS 中的 URL 预留|URL|解释|  
 |---------------------------------|---------|-----------------|  
@@ -98,7 +98,7 @@ ms.locfileid: "48054077"
   
  服务帐户没有默认值。 但是，在安装过程中需要指定服务帐户，即使以“仅文件”模式安装服务器，也会在 RSReportServer.config 中的 `URLReservation` 中指定服务帐户。 服务帐户的有效值包括域用户帐户、`LocalSystem` 或 `NetworkService`。  
   
- 匿名访问已禁用，因为默认安全性是`RSWindowsNegotiate`。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+ 因为默认安全性为 `RSWindowsNegotiate`，所以匿名访问已禁用。 对于 Intranet 访问，报表服务器 URL 使用网络计算机名称。 如果要为 Internet 连接配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，必须使用其他设置。 有关身份验证的详细信息，请参阅 [联机丛书中的](../security/authentication-with-the-report-server.md) 使用报表服务器进行身份验证 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
 ##  <a name="URLlocalAdmin"></a> 用于本地管理的 URL  
  如果为 URL 预留指定了强通配符或弱通配符，则可使用 http://localhost/reportserver 或 http://localhost/reports。  
@@ -123,7 +123,7 @@ ms.locfileid: "48054077"
  如果您集成了某个报表服务器扩展部署以便在较大的 SharePoint 产品或技术部署中运行，请对各报表服务器节点进行负载平衡，并定义指向该扩展部署的单个虚拟服务器 URL。 报表服务器集成设置只允许您指定单个报表服务器 URL。 如果是扩展部署，则此 URL 必须是该扩展部署中各服务器节点的访问点。  
   
 ## <a name="see-also"></a>请参阅  
- [配置 URL &#40;SSRS 配置管理器&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [配置 URL（SSRS 配置管理器）](configure-a-url-ssrs-configuration-manager.md)   
  [URL 预留语法（SSRS 配置管理器）](url-reservation-syntax-ssrs-configuration-manager.md)  
   
   

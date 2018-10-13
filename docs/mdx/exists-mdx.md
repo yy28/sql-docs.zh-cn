@@ -1,5 +1,5 @@
 ---
-title: 存在 (MDX) |Microsoft 文档
+title: 存在 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7237a4023bf9ad67f0050951b60b1ee33db4a53f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740606"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119587"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  返回与第二个指定集的一个或多个元组共存的第一个指定集中的元组集。 该函数手动执行自动 Exists 以自动方式执行的操作。 存在自动有关的详细信息，请参阅[在 MDX 中的关键概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
+  返回与第二个指定集的一个或多个元组共存的第一个指定集中的元组集。 该函数手动执行自动 Exists 以自动方式执行的操作。 存在有关自动的详细信息，请参阅[MDX 中的重要概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)。  
   
- 如果可选\<度量值组名称 > 提供该函数通过第二个集和具有关联的行的事实数据表中指定的度量值组的这些元组返回的元组存在与一个或多个元组。  
+ 如果可选\<度量值组名称 > 提供该函数将返回从第二个集和具有关联的事实数据表中指定的度量值组的行的元组的存在元组与一个或多个元组。  
   
 ## <a name="syntax"></a>语法  
   
@@ -40,11 +40,11 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  指定度量值组名称的有效字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
   
-1.  包含 null 值的度量值的度量值组行贡献**Exists**指定 MeasureGroupName 自变量时。 下面是此形式的 Exists 和 Nonempty 函数之间的差异：如果这些度量值的 NullProcessing 属性设置为 Preserve，则意味着在对该部分的多维数据集运行查询时这些度量值将显示 Null 值；NonEmpty 始终从集中删除具有 Null 度量值的元组，而具有 MeasureGroupName 参数的 Exists 将不筛选具有关联的度量值组行的元组，甚至在度量值为 Null 时也是如此。  
+1.  包含 null 值的度量值的度量值组行贡献**Exists**时指定了 MeasureGroupName 参数。 这是这种形式的 Exists 和 Nonempty 函数之间的差异： 如果这些度量值的 NullProcessing 属性设置为保留，这意味着根据多维数据集; 该部分运行查询时，度量值将显示 Null 值而具有 MeasureGroupName 参数的 Exists 将不会筛选具有关联的度量值组行的元组，即使度量值均为 Null，nonEmpty 始终将从一组具有 Null 度量值的删除元组。  
   
-2.  如果*MeasureGroupName*参数时，结果将取决于引用的度量值组中是否存在可见的度量值; 如果被引用的度量值组中不有任何可见的度量值则 EXISTS 将始终返回空集，而不考虑的值*Set_Expression1*和*Set_Expression2*。  
+2.  如果*MeasureGroupName*参数，结果将取决于引用的度量值组中是否具有可见度量值; 如果引用的度量值组中有无可见度量值，则将始终返回 EXISTS空集，而不考虑的值*Set_Expression1*并*Set_Expression2*。  
   
 ## <a name="examples"></a>示例  
  居住在加利福尼亚的客户：  
@@ -94,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)   
  [叉积&#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [非空&#40;MDX&#41;](../mdx/nonempty-mdx.md)   

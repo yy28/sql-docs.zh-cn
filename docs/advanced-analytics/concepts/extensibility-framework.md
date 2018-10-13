@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: fae8beb4f865c537f00fa8b58a01cafe09541d71
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892854"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878180"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的可扩展性体系结构 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,6 +47,8 @@ SQL Server 2016 支持 R 运行时中引入了可扩展性框架。 SQL Server 2
   ![组件体系结构](../media/generic-architecture.png "组件体系结构")
 
 组件包括**快速启动板**服务用来调用特定于语言的启动器 （R 或 Python），语言和特定于库的逻辑，用于加载解释器和库。 启动器加载语言中运行的时间，加上任何专有的模块。 例如，如果你的代码包括 RevoScaleR 函数，会加载 RevoScaleR 解释器。 **BxlServer**并**SQL Satellite**管理与 SQL Server 的通信和数据传输。
+
+<a name="launchpad"></a>
 
 ## <a name="launchpad"></a>启动板
 

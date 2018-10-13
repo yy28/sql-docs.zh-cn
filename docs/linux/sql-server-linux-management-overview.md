@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: e3b76a386598b7439d9cb2ffbad738d86b1b9183
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788245"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874293"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>选择合适的工具管理 Linux 上的 SQL Server
 
@@ -31,9 +31,9 @@ ms.locfileid: "47788245"
 
 几乎所有在客户端工具中可以完成的工作，都可以使用 Transact - SQL 语句来完成。 SQL Server 提供了[动态管理视图 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)的查询的状态和配置 SQL Server。 此外，还有[Transact-SQL 命令](../t-sql/language-reference.md)数据库管理任务。 可以在支持连接到 SQL Server 和运行 TRANSACT-SQL 查询，例如任何客户端工具中运行这些命令[sqlcmd](sql-server-linux-setup-tools.md)或[Visual Studio Code](sql-server-linux-develop-use-vscode.md)。
 
-## <a name="azure-data-studio-preview"></a>Azure Data Studio （预览版）
+## <a name="azure-data-studio"></a>Azure Data Studio
 
-新的 Azure Data Studio （预览版） 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[Azure Data Studio （预览版）](../azure-data-studio/what-is.md)。
+新的 Azure Data Studio 是用于管理 SQL Server 的跨平台工具。 有关详细信息，请参阅[Azure Data Studio](../azure-data-studio/what-is.md)。
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows 上的 SQL Server Management Studio
 

@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217427"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169310"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>执行包实用工具 (DtExecUI) UI 参考
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 可以从打开此用户界面[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或通过键入`dtexecui`在命令提示符，是通过使用在运行包的替代方法**DTExec**命令提示工具。  
@@ -52,7 +52,7 @@ ms.locfileid: "48217427"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>在命令提示符下打开执行包实用工具  
   
--   在命令提示符窗口中，运行`dtexecui`。  
+-   在命令提示符窗口中，运行 `dtexecui`。  
   
  以下各节描述了 **“执行包实用工具”** 对话框的各页。  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217427"
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="logging-page"></a>“日志记录”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 */LOGGER***classid 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 **/LOGGER**_classid_ 选项。  
   
 ### <a name="options"></a>选项  
  **日志提供程序**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217427"
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="set-values-page"></a>“设置值”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 */SET***propertypath;value 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 **/SET**_propertypath;value_ 选项。  
   
 ### <a name="options"></a>选项  
  **属性路径**  

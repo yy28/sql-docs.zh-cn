@@ -18,12 +18,12 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 039961b8c2811d32fcf8544f395c527e7981abb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 117391f9cbefeb7ed7fbc76d2c1d93376e5a1fa6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073007"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085333"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>配置可用性副本备份 (SQL Server)
   本主题说明如何通过在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell 配置 AlwaysOn 可用性组的辅助副本的备份。  
@@ -111,13 +111,13 @@ ms.locfileid: "48073007"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **配置辅助副本备份**  
   
-1.  设置默认值 (`cd`) 到承载主副本的服务器实例。  
+1.  将默认的 (`cd`) 设置为承载主副本的服务器实例。  
   
 2.  （可选）配置要添加或修改的每个可用性副本的备份优先级。 此优先级由承载主副本的服务器实例用来确定哪一副本应该用于针对可用性组中某一数据库的自动备份请求（选择具有最高优先级的副本）。 该优先级可以是 0 和 100 之间（含 0 和 100）的任何数字。 优先级 0 指示副本不应视作支持备份请求的候选。  默认设置为 50。  
   
      在将可用性副本添加到可用性组中时，请使用 `New-SqlAvailabilityReplica` cmdlet。 在修改现有可用性副本时，请使用 `Set-SqlAvailabilityReplica` cmdlet。 在任一情况下，指定`BackupPriority` *n*参数，其中*n*是从 0 到 100 的值。  
   
-     例如，以下命令设置可用性副本的备份优先级`MyReplica`到`60`。  
+     例如，以下命令会将可用性副本 `MyReplica` 的备份优先级设置为 `60`。  
   
     ```  
     Set-SqlAvailabilityReplica -BackupPriority 60 `  
@@ -126,7 +126,7 @@ ms.locfileid: "48073007"
   
 3.  （可选）配置要创建或修改的可用性组的自动备份首选项。 此首选项指示在选择执行备份的位置时备份作业应该如何评估主副本。 默认设置是首选辅助副本。  
   
-     创建可用性组时，使用 `New-SqlAvailabilityGroup` cmdlet。 当修改现有可用性组，使用`Set-SqlAvailabilityGroup`cmdlet。 在任一情况下，指定`AutomatedBackupPreference`参数。  
+     创建可用性组时，使用 `New-SqlAvailabilityGroup` cmdlet。 修改现有可用性组时，使用 `Set-SqlAvailabilityGroup` cmdlet。 在任一情况下，指定 `AutomatedBackupPreference` 参数。  
   
      其中：  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48073007"
     ```  
   
 > [!NOTE]  
->  若要查看某个 cmdlet 的语法，请使用`Get-Help`cmdlet 在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 环境。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要查看 cmdlet 的语法，请在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 环境中使用 `Get-Help` cmdlet。 有关详细信息，请参阅 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
  **设置和使用 SQL Server PowerShell 提供程序**  
   

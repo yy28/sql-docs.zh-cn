@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c1da774f52f78b67e6adb34f33513930c316991
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4ba4e28a17b0a025b48d41b077d4a536a9be8e9
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229927"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878120"
 ---
 # <a name="install-sql-server-2016-r-services"></a>安装 SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,86 +188,22 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 
 如果你在运行命令时收到错误，，查看此部分中的其他配置步骤。 您可能需要对服务或数据库进行相应的其他配置。
 
-需要进行其他更改的常见方案包括：
+在实例级别，可能包括其他配置：
 
-* [配置 Windows 防火墙以允许入站连接](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server 机器学习服务的防火墙配置](../../advanced-analytics/security/firewall-configuration.md)
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [将内置权限扩展到远程用户](#bkmk_configureAccounts)
-* [授予运行外部脚本的权限](#bkmk_AllowLogon)
-* [授予对单个数据库访问权限](#permissions-db)
+
+<a name="bkmk_configureAccounts"></a>
+<a name="bkmk_AllowLogon"></a>
+
+在数据库中，则可能需要以下配置更新：
+
+* [授予用户对 SQL Server 机器学习服务的权限](../../advanced-analytics/security/user-permission.md)
+* [将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
 > 并非所有列出的更改是必需的并无可能要求。 要求取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 其他故障排除提示可在此处找到：[升级和安装常见问题解答](../r/upgrade-and-installation-faq-sql-server-r-services.md)
-
-<a name="bkmk_configureAccounts"></a>
-
-### <a name="enable-implied-authentication-for-the-launchpad-account-group"></a>启用为 Launchpad 帐户组的隐式身份验证
-
-在安装期间，某些新的 Windows 用户帐户创建用于运行任务的安全令牌下[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。 当用户从外部客户端发送 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户，将其映射到调用用户的标识和运行 R 脚本，代表用户。 数据库引擎的此新服务支持的调用的外部脚本执行安全*隐式身份验证*。
-
-您可以查看这些帐户中的 Windows 用户组**SQLRUserGroup**。 默认情况下，会创建 20 个辅助角色帐户，即通常足以运行 R 作业。
-
-但是，如果您需要从远程数据科学客户端运行 R 脚本，并使用 Windows 身份验证，则必须授予这些辅助角色帐户登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。
-
-1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的“对象资源管理器”中，展开“安全性” ，右键单击“登录名” ，然后选择“新建登录名” 。
-2. 在中**登录名-新建**对话框中，选择**搜索**。
-3. 选择**对象类型**并**组**复选框，然后清除其他所有复选框。
-4. 单击**高级**，验证要搜索的位置是当前计算机，然后单击**立即查找**。
-5. 滚动浏览列表，直到找到一个开始在服务器上的组帐户的`SQLRUserGroup`。
-    
-    + 与的 Launchpad 服务关联的组的名称_默认实例_只是始终**SQLRUserGroup**。 选择此帐户仅对于默认实例。
-    + 如果使用的_命名实例_，实例名追加到默认名称， `SQLRUserGroup`。 因此，如果你的实例名为"MLTEST"，此实例的默认用户组名称将是**SQLRUserGroupMLTest**。
-5. 单击**确定**以关闭高级的搜索对话框中，并验证已选择正确的实例的帐户。 每个实例可以使用其自己的快速启动板服务和该服务创建的组。
-6. 单击**确定**一次以关闭**选择用户或组**对话框。
-7. 在中**登录名-新建**对话框中，单击**确定**。 默认情况下，将登录名分配到 **公共** 角色，且有权连接到数据库引擎。
-
-<a name="bkmk_AllowLogon"></a>
-
-### <a name="give-users-permission-to-run-external-scripts"></a>授予用户运行外部脚本的权限
-
-> [!NOTE]
-> 如果在 SQL Server 计算上下文中运行 R 脚本使用 SQL 登录名，则不需要此步骤。
-
-如果您安装了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中你自己的实例，您通常会执行脚本以管理员身份，或者至少为数据库的所有者，并因此具有的各种操作，该数据库，并能够安装新的包中的所有数据的隐式权限根据需要。
-
-但是，在企业方案中，大多数用户，包括通过使用 SQL 登录名访问数据库的用户不具有这种提升的权限。 因此，对于每个用户都将运行 R 脚本，必须授予用户权限中，将使用外部脚本在每个数据库中运行脚本。
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
-
-> [!TIP]
-> 需要有关安装程序的帮助？ 不确定是否已执行所有步骤？ 使用这些自定义报表来检查安装状态，并运行其他步骤。 
-> 
-> [监视使用自定义报表的机器学习服务](../r/monitor-r-services-using-custom-reports-in-management-studio.md)。
-
-<a name="permissions-db"></a>
-
-###  <a name="give-your-users-read-write-or-ddl-permissions-to-the-database"></a>授予用户读取、 写入或 DDL 权限访问数据库
-
-用于运行 R 的用户帐户可能需要从其他数据库读取数据创建新表以存储结果，并将数据写入到表。 因此，对于每个用户都将执行 R 脚本，请确保用户对数据库具有适当的权限： *db_datareader*， *db_datawriter*，或*db_ddladmin*.
-
-例如，以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句为 SQL 登录名 *MySQLLogin* 提供在 *RSamples* 数据库中运行 T-SQL 查询的权限。 若要运行此语句，SQL 登录名必须已经存在于服务器的安全上下文中。
-
-```SQL
-USE RSamples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-有关每个角色中包括的权限的详细信息，请参阅[数据库级别角色](../../relational-databases/security/authentication-access/database-level-roles.md)。
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>为数据科学客户端上的实例创建 ODBC 数据源
-
-如果你的数据科学客户端计算机上创建 R 解决方案并且需要通过使用 SQL Server 计算机作为计算上下文中运行代码，可以使用 SQL 登录名或集成的 Windows 身份验证。
-
-* 对于 SQL 登录名：确保该登录名对要读取数据的数据库拥有相应的权限。 您为此，可添加*连接到*并*选择*权限，或通过添加到该登录名*db_datareader*角色。 需要创建对象的登录名，将添加*DDL_admin*权限。 对于必须将数据保存到表的登录名添加到该登录名*db_datawriter*角色。
-
-* 为 Windows 身份验证： 你可能需要指定实例名称和其他连接信息的数据科学客户端上配置 ODBC 数据源。 有关详细信息，请参阅[ODBC 数据源管理器](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
 
 ## <a name="suggested-optimizations"></a>建议的优化
 
@@ -275,7 +211,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>添加更多的辅助角色帐户
 
-如果您认为您可能经常使用 R，或者如果希望有很多用户同时处于正在运行的脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+如果您认为您可能经常使用 R，或者如果希望有很多用户同时处于正在运行的脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../administration/modify-user-account-pool.md)。
 
 <a name="bkmk_optimize"></a>
 
@@ -289,7 +225,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
 - 若要更改数据库的保留的内存量，请参阅[服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
   
-- 若要更改可以通过启动的 R 帐户数[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，请参阅[修改机器学习的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+- 若要更改可以通过启动的 R 帐户数[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，请参阅[修改机器学习的用户帐户池](../administration/modify-user-account-pool.md)。
 
 如果您使用的标准版，但没有资源调控器，则可以使用动态管理视图 (Dmv) 和扩展事件，以及 Windows 事件监视来帮助管理使用的服务器资源有关详细信息，请参阅[监视和管理 R Services](../r/managing-and-monitoring-r-solutions.md)。
 

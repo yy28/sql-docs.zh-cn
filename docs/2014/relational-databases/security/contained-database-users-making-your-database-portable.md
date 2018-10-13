@@ -13,12 +13,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 1eb00a83a33bea0f45a31ed157ea0b8c39ee4566
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e793680a5171493460ff1f66caf7a918103619cf
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066954"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851806"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含的数据库用户 - 使你的数据库可移植
   使用包含的数据库用户在数据库级别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 连接进行身份验证。 “包含的数据库”是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 实例（和 master 数据库）的一种数据库。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持包含的数据库用户进行 Windows 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证。 使用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]时，将包含的数据库用户与数据库级别防火墙规则相结合。 本主题介绍与传统的登录名/用户模型和 Windows 或服务器级别防火墙规则相比，使用包含的数据库模型的差异和好处。 在特定情况下，可管理性或应用程序业务逻辑可能仍然需要使用传统登录名/用户模型和服务器级别防火墙规则。  
@@ -84,8 +84,8 @@ ms.locfileid: "48066954"
 -   使用你通常用于登录名的相同强度密码。  
   
 ## <a name="see-also"></a>请参阅  
- [Contained Databases](../databases/contained-databases.md)   
- [Security Best Practices with Contained Databases](../databases/security-best-practices-with-contained-databases.md)   
+ [包含的数据库](../databases/contained-databases.md)   
+ [针对包含数据库的安全性最佳方法](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)  
   
   

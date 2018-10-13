@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb82c69119fd899410bb1fd8f24be65cc07dac4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852538"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072211"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 用户定义类型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ ms.locfileid: "47852538"
  本节讨论为支持大型 CLR UDT 而对 SQL Server Native Client ODBC 函数进行的更改。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT 所需的值如下所示：  
@@ -201,13 +201,13 @@ ms.locfileid: "47852538"
 |SQL_SS_UDT<br /><br /> （长度大于 8000 个字节）|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 结果列值从 SQL 数据类型转换为 C 数据类型。  
+ UDT 结果列值从 SQL 转换为 C 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  新类型可用的描述符字段如本主题前面的章节“参数的描述符字段”和“结果的描述符字段”中所述。  
@@ -227,7 +227,7 @@ ms.locfileid: "47852538"
  为 UDT 返回的值如本主题前面的章节“SQLColumns 和 SQLProcedureColumns 返回的列元数据（目录元数据）”中所述。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- 按本主题前面的章节“绑定和转换”中所述，将 UDT 参数值从 C 数据类型转换为 SQL 数据类型。  
+ UDT 参数值是从 C 转换为 SQL 数据类型中的"绑定和转换"部分，本主题中前面所述。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  "参数的描述符字段"和"结果的描述符字段"部分中，本主题中前面部分中描述了适用于新类型的描述符字段。  

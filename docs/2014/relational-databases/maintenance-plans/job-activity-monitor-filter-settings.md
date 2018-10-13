@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207549"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168818"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>作业活动监视器（筛选设置）
   使用此页可以减少作业活动监视器中可见的行数。 在一个或多个可用框中输入条件，以便仅显示符合指定值的行。 其中某些框（如“状态”或“阻塞类型”）通过下拉列表提供有限数量的可能值。 其他框（如 **“应用程序”** ）则允许以逗号分隔的列表形式输入不限数量的任意值。 使用工具栏图标，可以按类别或按字母顺序对可用的框进行排序。 单击各个条件可以显示该条件的简短说明。  
@@ -60,7 +60,7 @@ ms.locfileid: "48207549"
  选定条件后，此未命名框将提供对所选条件的简短说明。  
   
  **“应用筛选器”**  
- 若要应用筛选器，请单击“应用****筛选器”，再单击“确定”。 若要保留“筛选器****设置”对话框中的筛选器设置，但不予以应用，请取消选中“应用****筛选器”，再单击“确定”，以显示所有行。  
+ 若要应用筛选器，请单击**应用筛选器**，然后单击**确定**。 若要保留中的筛选器设置**筛选器设置**对话框框中，但不是将其应用，请取消选中**应用筛选器**，然后单击**确定**，以显示所有行。  
   
  **Clear**  
  将筛选器设置恢复为默认设置。  

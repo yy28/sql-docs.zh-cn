@@ -13,15 +13,15 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e255d37a5f6fff65b223d889755bab4cf70d0687
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132937"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072271"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>将受 TDE 保护的数据库移到其他 SQL Server
-  本主题介绍如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 通过透明数据加密 (TDE) 来保护数据库，然后再将数据库移动到 [!INCLUDE[tsql](../../../includes/tsql-md.md)]的其他实例。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
+  本主题介绍如何使用透明数据加密 (TDE) 保护数据库，然后将数据库移动到另一个实例[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../../includes/tsql-md.md)]。 TDE 可对数据和日志文件执行实时 I/O 加密和解密。 这种加密使用数据库加密密钥 (DEK)，该密钥存储在数据库引导记录中以供恢复时使用。 DEK 是使用存储在服务器的 `master` 数据库中的证书保护的对称密钥，或者是由 EKM 模块保护的非对称密钥。  
   
  **本主题内容**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48132937"
   
 -   需要`CREATE CERTIFICATE`权限`master`数据库来创建保护 DEK 的证书。  
   
--   需要`CONTROL DATABASE`已加密数据库的权限和`VIEW DEFINITION`证书或非对称密钥用于加密数据库加密密钥的权限。  
+-   需要拥有已加密数据库的 `CONTROL DATABASE` 权限和用于加密数据库加密密钥的证书或非对称密钥的 `VIEW DEFINITION` 权限。  
   
 ##  <a name="SSMSProcedure"></a> 创建由透明数据加密保护的数据库  
   

@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180047"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085393"
 ---
 # <a name="drillthrough-on-mining-models"></a>对挖掘模型的钻取功能
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
@@ -24,7 +24,7 @@ ms.locfileid: "48180047"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来生成数据的事例，也可以钻取到挖掘结构中的事例。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>钻取到模型事例与钻取到结构  
- 钻取到“模型事例”  用于查找与模型中的规则、模式或群集有关的其他详细信息。 例如，您可能未在聚类分析模型中使用客户联系信息进行分析，即使数据可用，但通过使用钻取，您可以获取对模型中信息的访问权限。  
+ 钻取到“模型事例”  用于查找与模型中的规则、模式或群集有关的其他详细信息。 例如，您不会使用客户联系信息进行聚类分析模型中的分析，即使数据可用，使用钻取功能，您可以获得从模型的访问权限。  
   
  相反，“钻取到结构”  数据旨在提供对在模型中未提供的信息的访问。 例如，一些结构列可能已从模型中排除，因为数据类型不兼容或者数据对分析无用。  
   

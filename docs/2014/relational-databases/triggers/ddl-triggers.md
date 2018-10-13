@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141564"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072031"
 ---
 # <a name="ddl-triggers"></a>DDL 触发器
   DDL 触发器将激发，以响应各种数据定义语言 (DDL) 事件。 这些事件主要与以关键字 CREATE、ALTER、DROP、GRANT、DENY、REVOKE 或 UPDATE STATISTICS 开头的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句对应。 执行 DDL 式操作的系统存储过程也可以激发 DDL 触发器。  
@@ -35,14 +35,14 @@ ms.locfileid: "48141564"
   
 ## <a name="types-of-ddl-triggers"></a>DDL 触发器的类型  
  Transact-SQL DDL 触发器  
- 用于执行一个或多个 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句以响应服务器范围或数据库范围事件的一种特殊类型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程。 例如，如果执行某个语句（如 ALTER SERVER CONFIGURATION）或者使用 DROP TABLE 删除某个表，则激发 DDL 触发器。  
+ 一种特殊[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程执行一个或多个[!INCLUDE[tsql](../../includes/tsql-md.md)]响应服务器范围或数据库范围的事件中的语句。 例如，如果执行某个语句（如 ALTER SERVER CONFIGURATION）或者使用 DROP TABLE 删除某个表，则激发 DDL 触发器。  
   
  CLR DDL 触发器  
  CLR 触发器将执行在托管代码（在 .NET Framework 中创建并在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中上载的程序集的成员）中编写的方法，而不用执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存储过程。  
   
  仅在运行触发 DDL 触发器的 DDL 语句后，DDL 触发器才会激发。 DDL 触发器无法作为 INSTEAD OF 触发器使用。 对于影响局部或全局临时表和存储过程的事件，不会触发 DDL 触发器。  
   
- DDL 触发器不会创建特殊`inserted`和`deleted`表。  
+ DDL 触发器不会创建特殊的 `inserted` 和 `deleted` 表。  
   
  可以使用 EVENTDATA 函数捕获有关激发 DDL 触发器的事件以及触发器导致的后续更改的信息。  
   

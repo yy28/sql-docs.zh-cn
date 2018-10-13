@@ -23,12 +23,12 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8043e2187ccb1eca7dea58507451113da45429a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861d48490df31e731113b673972a7768867a5ab
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814375"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119895"
 ---
 # <a name="xml-construction-xquery"></a>XML 构造 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814375"
   
     -   \<功能 > 元素具有三个元素节点子级\<颜色 >，\<权重 >，和\<保证 >。 这些节点中，每个节点都有一个子文本节点，它们的值分别为 Red、25、2 years parts and labor。  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -68,7 +68,7 @@ This is product model catalog description.
   
  下面是生成的 XML：  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -82,7 +82,7 @@ This is product model catalog description.
   
  尽管从常量表达式构造元素（如本例所示）很有用，但是此 XQuery 语言功能的真正作用是构造能够从数据库动态提取数据的 XML。 可以使用大括号指定查询表达式。 在生成的 XML 中，表达式将由其值取代。 例如，下面的查询构造了一个 <`NewRoot`> 元素，该元素有一个子元素 <`e`>。 元素的值 <`e`> 计算通过指定路径表达式在大括号 （"{... }").  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');  
@@ -92,7 +92,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  结果如下：  
   
-```  
+```xml
 <NewRoot>  
   <e>  
     <root>5</root>  
@@ -102,7 +102,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
   
  下面的查询与上一个查询类似。 但是，大括号中的表达式指定**data （)** 函数来检索的原子值 <`root`> 元素并将其分配给构造的元素，<`e`>。  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -115,7 +115,7 @@ SELECT @y;
   
  结果如下：  
   
-```  
+```xml
 <NewRoot>  
   <e>5</e>  
 </NewRoot>  
@@ -123,7 +123,7 @@ SELECT @y;
   
  若要将大括号用作文本的一部分，而不是上下文切换标记，则可以将其转义为“}}”或“{{”，如下面的示例所示：  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -134,13 +134,13 @@ SELECT @y;
   
  结果如下：  
   
-```  
+```xml
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
  下面的查询是使用直接元素构造函数来构造元素的另一个示例。 此外，<`FirstLocation`> 元素的值是通过执行大括号中的表达式获取的。 该查询表达式返回 Production.ProductModel 表的 Instructions 列中的第一个生产车间的生产步骤。  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation>  
@@ -153,7 +153,7 @@ WHERE ProductModelID=7;
   
  结果如下：  
   
-```  
+```xml
 <FirstLocation>  
   <AWMI:step xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions">  
       Insert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
@@ -168,7 +168,7 @@ WHERE ProductModelID=7;
 #### <a name="element-content-in-xml-construction"></a>XML 构造中的元素内容  
  下面的示例说明了使用直接元素构造函数构造元素内容时表达式的行为。 在下面的示例中，直接元素构造函数指定了一个表达式。 对于此表达式，生成的 XML 中创建了一个文本节点。  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -187,13 +187,13 @@ select @x.query('
   
  从表达式计算得到的原子值序列被添加到该文本节点，并在两个相邻的原子值之间添加一个空格，如结果所示。 构造的元素有一个子元素。 这是一个包含结果中所显示值的文本节点。  
   
-```  
+```xml
 <result>This is step 1 This is step 2 This is step 3</result>  
 ```  
   
  如果指定三个单独的表达式（而不是一个表达式）生成三个文本节点，则在生成的 XML 中，相邻的文本节点将通过串联合并为一个文本节点。  
   
-```  
+```sql
 declare @x xml;  
 set @x='  
 <root>  
@@ -211,14 +211,14 @@ select @x.query('
   
  构造的元素节点有一个子元素节点。 这是一个包含结果中所显示值的文本节点。  
   
-```  
+```xml
 <result>This is step 1This is step 2This is step 3</result>  
 ```  
   
 ### <a name="constructing-attributes"></a>构造属性  
  使用直接元素构造函数来构造元素时，还可以使用类似 XML 的语法来指定元素的属性，如下面的示例所示：  
   
-```  
+```sql
 declare @x xml;  
 set @x='';  
 select @x.query('<ProductModel ProductModelID="111">;  
@@ -229,7 +229,7 @@ This is product model catalog description.
   
  下面是生成的 XML：  
   
-```  
+```xml
 <ProductModel ProductModelID="111">  
   This is product model catalog description.  
   <Summary>Some description</Summary>  
@@ -246,7 +246,7 @@ This is product model catalog description.
   
  在以下示例中， **data （)** 函数不是绝对必需的。 将表达式值分配到一个属性，因为**data （)** 隐式应用以检索指定的表达式的类型化的值。  
   
-```  
+```sql
 DECLARE @x xml;  
 SET @x='<root>5</root>';  
 DECLARE @y xml;  
@@ -256,13 +256,13 @@ SELECT @y;
   
  结果如下：  
   
-```  
+```xml
 <NewRoot attr="5" />  
 ```  
   
  下面是另一个示例，其中为 LocationID 和 SetupHrs 属性构造指定了表达式。 这些表达式将根据 Instruction 列中的 XML 进行计算。 表达式的类型化值将分配给这些属性。  
   
-```  
+```sql
 SELECT Instructions.query('  
     declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
         <FirstLocation   
@@ -277,7 +277,7 @@ where ProductModelID=7;
   
  下面是部分结果：  
   
-```  
+```xml
 <FirstLocation LocationID="10" SetupHours="0.5" >  
   <AWMI:step …   
   </AWMI:step>  
@@ -290,13 +290,13 @@ where ProductModelID=7;
   
 -   不支持多个属性表达式或混合（字符串和 XQuery 表达式）属性表达式。 例如，下面的查询中，您构造的 XML，其中 `Item` 是一个常量，值 `5` 是通过计算查询表达式获得的：  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
      由于混合了常量字符串和表达式 ({/x})，但不支持此类情况，因此下面的查询返回了一个错误：  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="Item {/x}"/>' )   
@@ -306,19 +306,19 @@ where ProductModelID=7;
   
     -   通过串联两个原子值，组成属性值。 这些原子值被序列化为属性值，并且两个原子值之间有一个空格：  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
         ```  
   
          结果如下：  
   
-        ```  
+        ```xml
         <a attr="Item 5" />  
         ```  
   
     -   使用[concat 函数](../xquery/functions-on-string-values-concat.md)地连接到生成的属性值的两个字符串参数：  
   
-        ```  
+        ```sql
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
         ```  
   
@@ -326,13 +326,13 @@ where ProductModelID=7;
   
          结果如下：  
   
-        ```  
+        ```xml
         <a attr="Item5" />  
         ```  
   
 -   不支持将多个表达式作为一个属性值。 例如，下面的查询将返回错误：  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
@@ -340,7 +340,7 @@ where ProductModelID=7;
   
 -   不支持异类序列。 任何将异类序列指定为属性值的尝试都将返回一个错误，如下面的示例所示。 在本例中，由字符串“Item”和元素 <`x`> 组成的异类序列被指定为属性值：  
   
-    ```  
+    ```sql
     DECLARE @x xml  
     SET @x ='<x>5</x>'  
     select @x.query( '<a attr="{''Item'', /x }" />')  
@@ -348,19 +348,19 @@ where ProductModelID=7;
   
      如果将应用**data （)** 函数，该查询有效，因为它检索的表达式，原子值`/x`，这与字符串串联。 下面是原子值的序列：  
   
-    ```  
+    ```sql
     SELECT @x.query( '<a attr="{''Item'', data(/x)}"/>' )   
     ```  
   
      结果如下：  
   
-    ```  
+    ```xml
     <a attr="Item 5" />  
     ```  
   
 -   属性节点顺序是在序列化期间而非静态类型检查期间执行的。 例如，以下查询的失败是因它尝试在非属性节点后添加一个属性造成的。  
   
-    ```  
+    ```sql
     select convert(xml, '').query('  
     element x { attribute att { "pass" }, element y { "Element text" }, attribute att2 { "fail" } }  
     ')  
@@ -385,7 +385,7 @@ where ProductModelID=7;
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>使用命名空间声明属性添加命名空间  
  下面的示例在元素 <`a`> 的构造中使用命名空间声明属性来声明默认的命名空间。 子元素 <`b`> 的构造撤消了父元素中声明的默认命名空间声明。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -396,7 +396,7 @@ select @x.query( '
   
  结果如下：  
   
-```  
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -404,7 +404,7 @@ select @x.query( '
   
  可以将前缀指定给命名空间。 前缀是在元素 <`a`> 的构造中指定的。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -415,7 +415,7 @@ select @x.query( '
   
  结果如下：  
   
-```  
+```xml
 <x:a xmlns:x="a">  
   <b />  
 </x:a>  
@@ -423,7 +423,7 @@ select @x.query( '
   
  您可以不声明 XML 构造中的默认命名空间，但是必须声明命名空间前缀。 由于必须声明元素 <`b`> 的构造中指定的前缀，下面的查询返回了一个错误。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -434,7 +434,7 @@ select @x.query( '
   
  新构造的命名空间可在查询中使用。 例如，下面的查询在构造元素 <`FirstLocation`> 时声明了一个命名空间，并在 LocationID 和 SetupHrs 属性值的表达式中指定了前缀。  
   
-```  
+```sql
 SELECT Instructions.query('  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
          LocationID="{ (/AWMI:root/AWMI:Location[1]/@LocationID)[1] }"  
@@ -448,7 +448,7 @@ where ProductModelID=7
   
  注意，用此方法创建新的命名空间前缀将覆盖此前缀以前存在的所有命名空间声明。 例如，查询 prolog 中的命名空间声明 `AWMI="http://someURI"` 被 <`FirstLocation`> 元素中的命名空间声明覆盖。  
   
-```  
+```sql
 SELECT Instructions.query('  
 declare namespace AWMI="http://someURI";  
         <FirstLocation xmlns:AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"  
@@ -464,7 +464,7 @@ where ProductModelID=7
 #### <a name="using-a-prolog-to-add-namespaces"></a>使用 prolog 添加命名空间  
  下面的示例说明了如何将命名空间添加到构造的 XML 中。 查询 prolog 中已声明默认命名空间。  
   
-```  
+```sql
 declare @x xml  
 set @x ='<x>5</x>'  
 select @x.query( '  
@@ -474,8 +474,10 @@ select @x.query( '
   
  注意，在元素 <`b`> 的构造中，已指定空字符串作为命名空间声明属性的值。 这将取消声明父级中所声明的默认命名空间。  
   
-```  
-This is the result:  
+
+结果如下：  
+
+```xml
 <a xmlns="a">  
   <b xmlns="" />  
 </a>  
@@ -496,7 +498,7 @@ This is the result:
   
  下面的示例说明了如何处理 XML 构造中的空格：  
   
-```  
+```sql
 -- line feed is repaced by space.  
 declare @x xml  
 set @x=''  
@@ -525,7 +527,7 @@ test
   
  结果如下：  
   
-```  
+```xml
 -- result  
 <test attr="<test attr="    my test   attr  value    "><a>  
   
@@ -550,7 +552,7 @@ test
   
  在下面的查询中，构造的 XML 包括一个元素、两个属性、一个注释和一个处理指令。 注意，由于正在构造序列，因此要在 <`FirstLocation`> 前使用逗号。  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    <?myProcessingInstr abc="value" ?>,   
@@ -569,7 +571,7 @@ where ProductModelID=7;
   
  下面是部分结果：  
   
-```  
+```xml
 <?myProcessingInstr abc="value" ?>  
 <FirstLocation WorkCtrID="10" SetupHrs="0.5">  
   <!-- some comment -->  
@@ -578,7 +580,7 @@ where ProductModelID=7;
   nsert <AWMI:material>aluminum sheet MS-2341</AWMI:material> into the <AWMI:tool>T-85A framing tool</AWMI:tool>.   
   </AWMI:step>  
     ...  
-/FirstLocation>  
+</FirstLocation>  
   
 ```  
   
@@ -593,7 +595,7 @@ where ProductModelID=7;
   
  对于元素节点和属性节点，这些关键字后面跟有节点名称和生成该节点内容的表达式（括在大括号内）。 下面的示例中，构造了此 XML：  
   
-```  
+```xml
 <root>  
   <ProductModel PID="5">Some text <summary>Some Summary</summary></ProductModel>  
 </root>  
@@ -601,7 +603,7 @@ where ProductModelID=7;
   
  下面是使用计算构造函数生成 XML 的查询：  
   
-```  
+```sql
 declare @x xml  
 set @x=''  
 select @x.query('element root   
@@ -618,7 +620,7 @@ text{"Some text "},
   
  生成节点内容的表达式可以指定一个查询表达式。  
   
-```  
+```sql
 declare @x xml  
 set @x='<a attr="5"><b>some summary</b></a>'  
 select @x.query('element root   
@@ -636,7 +638,7 @@ text{"Some text "},
   
  在以下示例中，构造节点的内容均来自的 Instructions 列中存储的 XML 生产说明**xml** ProductModel 表中的数据类型。  
   
-```  
+```sql
 SELECT Instructions.query('  
   declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    element FirstLocation   
@@ -651,7 +653,7 @@ where ProductModelID=7
   
  下面是部分结果：  
   
-```  
+```xml
 <FirstLocation LocationID="10">  
   <AllTheSteps>  
     <AWMI:step> ... </AWMI:step>  

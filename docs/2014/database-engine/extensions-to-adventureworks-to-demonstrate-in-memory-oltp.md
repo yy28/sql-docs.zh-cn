@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192187"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120376"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
 ## <a name="overview"></a>概述  
- 本示例展示了新[!INCLUDE[hek_2](../includes/hek-2-md.md)]功能，它是一部分的[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 它显示的新内存优化表和本机编译存储的过程，并可用于演示性能优势的[!INCLUDE[hek_2](../includes/hek-2-md.md)]。  
+ 此示例演示属于 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 一部分的新[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 功能。 它演示新的内存优化表和本机编译的存储过程，可以用于展示 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的性能优势。  
   
 > [!NOTE]  
 >  若要查看 SQL Server 2016 的本主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  该示例将 AdventureWorks 数据库中的 5 个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的性能优势。  
   
- 在示例说明中，我们讨论将表迁移到 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 时进行的权衡，以说明 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中对内存优化表（尚未）不支持的功能。  
+ 在示例说明中，我们讨论将表迁移到 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 时进行的权衡，以说明 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中对内存优化表（尚未）不支持的功能。  
   
  此示例的文档的结构如下：  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48192187"
   
 ##  <a name="Prerequisites"></a> 先决条件  
   
--   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation、 Developer 或 Enterprise edition  
+-   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM – Evaluation Edition、Developer Edition 或 Enterprise Edition  
   
 -   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16 GB 内存可供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]使用。 有关硬件的一般指导原则[!INCLUDE[hek_2](../includes/hek-2-md.md)]，请参阅以下博客文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
@@ -81,15 +81,15 @@ ms.locfileid: "48192187"
      GO  
     ```  
   
-4.  通过在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 的查询窗口中运行命令，将数据库所有者更改为您服务器上的某个登录名：  
+4.  通过在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]的查询窗口中运行命令，将数据库所有者更改为您服务器上的某个登录名：  
   
     ```  
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  下载示例脚本[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql 从[SQL Server 2014 RTM 内存中 OLTP 示例](http://go.microsoft.com/fwlink/?LinkID=396372)到本地文件夹。  
+5.  将示例脚本“[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql”从 [SQL Server 2014 RTM 内存中 OLTP 示例](http://go.microsoft.com/fwlink/?LinkID=396372) 下载到本地文件夹。  
   
-6.  将脚本“[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql”中的“checkpoint_files_location”变量值更新为指向[!INCLUDE[hek_2](../includes/hek-2-md.md)] 检查点文件的目标位置。 检查点文件应置于具有良好顺序 IO 性能的驱动器上。  
+6.  将脚本“[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql”中的“checkpoint_files_location”变量值更新为指向 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 检查点文件的目标位置。 检查点文件应置于具有良好顺序 IO 性能的驱动器上。  
   
      将变量“database_name”的值更新为指向 AdventureWorks2014 数据库。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192187"
   
 -   计算列 - 省略了计算列 SalesOrderNumber 和 TotalDue，因为 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 在内存优化表中不支持计算列。 新视图 Sales.vSalesOrderHeader_extended_inmem 反映了列 SalesOrderNumber and TotalDue。 因此，如果需要这些列，可以使用此视图。  
   
--   *外键约束*中，内存优化表不支持[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
+-   在*中，内存优化表不支持* 外键约束 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 此外，SalesOrderHeader_inmem 是示例工作负荷中的热表，并且外键约束需要对所有 DML 操作进行附加处理，因为它需要在这些约束引用的所有其他表中进行查找。 因此，假设应用程序可确保引用完整性，从而在插入行时不验证引用完整性。 可以使用以下脚本，通过存储过程 dbo.usp_ValidateIntegrity 验证此表中数据的引用完整性：  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192187"
   
 -   *别名 UDT* – 原始表使用等效于系统数据类型位的用户定义数据类型 dbo.Flag。 迁移的表改用位数据类型。  
   
--   *BIN2 排序规则*– 列 Name 和 ProductNumber 包含在索引键中，因而必须具有 BIN2 排序规则[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
+-   *BIN2 排序规则* – 列 Name 和 ProductNumber 包含在索引键中，因而必须具有 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]中的 BIN2 排序规则。 这里假设应用程序不依赖于排序规则具体内容（如区分大小写）。  
   
 -   *Rowguid* - 省略了 rowguid 列。 有关详细信息，请参见表 SalesOrderHeader 的说明。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 可以看到共有约 6.5GB 的数据。 请注意，表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小与插入销售订单之前的索引大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
+ 可以看到共有约 6.5GB 的数据。 请注意之前插入销售订单表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引的大小，并作为索引的大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
   
 #### <a name="after-demo-reset"></a>演示重置之后  
  存储过程 Demo.usp_DemoReset 可以用于重置演示。 它删除表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的数据，并对原始表 SalesOrderHeader 和 SalesOrderDetail 中的数据重设种子。  

@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057547"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120094"
 ---
 # <a name="user-defined-type-requirements"></a>用户定义类型要求
   在创建用户定义类型 (UDT) 中安装时，必须进行几个重要的设计决策[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 对于大多数 UDT，建议将 UDT 作为结构创建，尽管也可以选择将其作为类创建。 UDT 定义必须符合用于创建 UDT 的规范，以使其能够注册到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -71,7 +71,7 @@ ms.locfileid: "48057547"
   
  **bool**，**字节**， **sbyte**，**短**， **ushort**， **int**， **uint**，**长**， **ulong**， **float**， **double**，**以**，**SqlInt16**， **SqlInt32**， **SqlInt64**， **SqlDateTime**， **SqlSingle**， **SqlDouble**， **SqlMoney**， **SqlBoolean**  
   
- 构成上述类型的字段的值类型很适合于 `Native` 格式，例如 Visual C# 中的 `structs`（或者 Visual Basic 中大家所熟知的 `Structures`）。 例如，使用 `Native` 序列化格式指定的 UDT 可包含也用 `Native` 格式指定的其他 UDT 的字段。 如果 UDT 定义更复杂并且包含不在上述列表中的数据类型，则必须改为指定 `UserDefined` 序列化格式。  
+ 上述类型的字段的值类型组成，非常适合进行`Native`格式，例如`structs`在 Visual C# 中，(或`Structures`大家所熟知在 Visual Basic 中)。 例如，使用 `Native` 序列化格式指定的 UDT 可包含也用 `Native` 格式指定的其他 UDT 的字段。 如果 UDT 定义更复杂并且包含不在上述列表中的数据类型，则必须改为指定 `UserDefined` 序列化格式。  
   
  `Native` 格式具有以下要求：  
   

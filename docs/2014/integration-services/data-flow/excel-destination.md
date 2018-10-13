@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130677"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905241"
 ---
 # <a name="excel-destination"></a>Excel 目标
   Excel 目标将数据加载到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 工作簿中的工作表或范围中。  
@@ -49,7 +49,7 @@ ms.locfileid: "48130677"
   
      有关如何避免包括单引号的信息，请参阅 msdn.com 上的博客文章： [在 SSIS 包中使用 Excel 目标数据流组件时，单引号会在数据转换成 Excel 时追加到所有字符串](http://go.microsoft.com/fwlink/?LinkId=400876)。  
   
--   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果目标表是在包设计或运行时创建的，则相应的 CREATE TABLE 语句必须使用 LONGTEXT（或其同义词之一）作为 memo 列的数据类型。  
+-   **保存 memo (ntext) 数据**。 若要将大于 255 个字符的字符串成功地保存到 Excel 列中，驱动程序必须将该目标列的数据类型识别为 **memo** ，而不是 **string**。 如果目标表中已存在数据行，则由驱动程序抽样的前几行的 memo 列中必须至少包含一个长度大于 255 个字符的值的实例。 如果在包设计或运行时创建目标表，然后在 CREATE TABLE 语句必须使用 LONGTEXT （或其同义词之一） 作为备注列的数据类型。  
   
 -   **数据类型**。 Excel 驱动程序只识别有限的一组数据类型。 例如，所有数值列均解释为双精度 (DT_R8)，并且所有字符串列（除了 memo 列）均解释为 255 个字符的 Unicode 字符串 (DT_WSTR)。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 按如下所示方式映射 Excel 数据类型：  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130677"
   
  有关可以在 **“Excel 目标编辑器”** 对话框中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Excel 目标编辑器&#40;连接管理器页&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Excel 目标编辑器（“连接管理器”页）](../excel-destination-editor-connection-manager-page.md)  
   
--   [Excel 目标编辑器&#40;映射页&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Excel 目标编辑器（“映射”页）](../excel-destination-editor-mappings-page.md)  
   
--   [Excel 目标编辑器&#40;错误输出页&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Excel 目标编辑器（“错误输出”页）](../excel-destination-editor-error-output-page.md)  
   
  **“高级编辑器”** 对话框反映了所有能以编程方式设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130677"
   
 ## <a name="see-also"></a>请参阅  
  [Excel 源](excel-source.md)   
- [Integration Services &#40;SSIS&#41;变量](../integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) 变量](../integration-services-ssis-variables.md)   
  [数据流](data-flow.md)   
  [使用脚本任务处理 Excel 文件](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

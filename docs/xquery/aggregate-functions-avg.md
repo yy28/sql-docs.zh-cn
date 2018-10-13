@@ -17,12 +17,12 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9a8ef18dca7bf61907219d4a09882c62deb2712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a80c7f690a4b24ef82cb3da34dea50c98cf836f4
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833355"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119654"
 ---
 # <a name="aggregate-functions---avg"></a>聚合函数 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="remarks"></a>备注  
  传递给的原子化值的所有类型**avg （)** 需要的三种内置数值基类型或 xdt: untypedatomic 的一个子类型。 不能使用不同的数值类型。 类型为 xdt:untypedAtomic 的值视为 xs:double。 结果**avg （)** 接收传入的类型，如在 xdt: untypedatomic 的情况下 xs: double 的基类型。  
   
- 如果输入为静态空值，则空值为隐式表达，并会返回静态错误。  
+ 如果输入在静态上为空，则暗示为空，并且会引发静态错误。  
   
  **Avg （)** 函数返回计算数值的平均值。 例如：  
   

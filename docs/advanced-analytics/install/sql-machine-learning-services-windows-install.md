@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 330c21e6eb256bfe398bc707852eb9a66a183fb7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f96c2acbca436ff18ccb6a12421d84bda965e4d
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142657"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878090"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>安装 SQL Server 机器学习在 Windows 上的服务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -225,87 +225,20 @@ ms.locfileid: "48142657"
 
 在实例级别，可能包括其他配置：
 
-* [配置 Windows 防火墙以允许入站连接](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
+* [SQL Server 机器学习服务的防火墙配置](../../advanced-analytics/security/firewall-configuration.md)
 * [启用其他网络协议](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [启用远程连接](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 
-在数据库中，则可能需要以下配置更新：
-
-* [将内置权限扩展到远程用户](#bkmk_configureAccounts)
-* [授予运行外部脚本的权限](#permissions-external-script)
-* [授予对单个数据库访问权限](#permissions-db)
-
-> [!NOTE]
-> 是否需要其他配置取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。 
-
 <a name="bkmk_configureAccounts"></a> 
-
-###  <a name="enable-implied-authentication-for-sql-restricted-user-group-sqlrusergroup-account-group"></a>启用 SQL 受限制的用户组 (SQLRUserGroup) 帐户组的隐式身份验证
-
-如果需要从远程数据科学客户端，运行脚本和使用 Windows 身份验证，则需要其他配置才能提供辅助角色帐户运行 R 和 Python 进程中登录的权限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代表你的实例。 此行为称为*隐式身份验证*，并由数据库引擎，以支持在 SQL Server 2016 和 SQL Server 2017 中的外部脚本的安全执行实现。
-
-> [!NOTE]
-> 如果您使用**SQL 登录名**对于在 SQL Server 计算上下文中运行脚本，不需要此额外步骤。
-
-1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，展开**安全**。 然后右键单击**登录名**，然后选择**新的登录名**。
-2. 在中**登录名-新建**对话框中，选择**搜索**。
-3. 选择**对象类型**，然后选择**组**。 清除其他所有内容。
-4. 在中**输入要选择的对象名称**，类型*SQLRUserGroup*，然后选择**检查名称**。
-5. 解析与实例的 Launchpad 服务关联的本地组名称，它应类似于 *instancename\SQLRUserGroup*。 选择“确定”。
-6. 默认情况下，组分配给**公共**角色，以及是否有权连接到数据库引擎。
-7. 选择“确定”。
-
-在 SQL Server 2017 及更早版本，大量的本地 Windows 用户帐户已创建用于运行任务的安全令牌下[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]服务。 可以在 Windows 用户组“SQLRUserGroup” 中查看这些账户。 默认情况下，会创建 20 个辅助角色帐户，这通常是足以用于运行外部脚本作业。 
-
-按如下所示使用这些帐户。 当用户从外部客户端，发送的 Python 或 R 脚本时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]激活可用的工作帐户，将其映射到调用用户的标识并运行代表用户的脚本。 如果对脚本，从而在执行 SQL Server 外部的必须从 SQL Server 中检索数据或资源，返回到 SQL Server 的连接需要的日志中。 创建数据库登录名**SQLRUserGroup**也为了能成功连接。
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-在 SQL Server 2019 中辅助角色帐户替换为 AppContainers，与 SQL Server Launchpad 服务下正在执行的进程。 尽管不能再使用辅助角色帐户，但仍将要求你将添加一个数据库登录名**SQLRUsergroup**如果隐式需要身份验证。 就像辅助角色帐户没有登录名的权限，快速启动板服务标识执行不是任何一个。 创建一个登录名**SQLRUserGroup**，其中包含在此版本中，快速启动板服务允许隐式身份验证工作。
-::: moniker-end
-
 <a name="permissions-external-script"></a> 
 
-### <a name="give-users-permission-to-run-external-scripts"></a>授予用户运行外部脚本的权限
+在数据库中，则可能需要以下配置更新：
 
-如果您安装了[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您和您自己在你自己的实例中运行 R 或 Python 脚本，通常以管理员身份执行脚本。 因此，各种操作和数据库中的所有数据具有隐式权限。
-
-大多数用户，但是，没有此类提升的权限。 例如，使用 SQL 登录名访问数据库通常在组织中的用户不具有提升的权限。 因此，对于每个用户都使用 R 或 Python，则必须授予用户的机器学习服务将使用的语言中的每个数据库运行外部脚本的权限。 以下是操作方法：
-
-```SQL
-USE <database_name>
-GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
-```
+* [授予用户对 SQL Server 机器学习服务的权限](../../advanced-analytics/security/user-permission.md)
+* [将 SQLRUserGroup 添加为数据库用户](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
 
 > [!NOTE]
-> 权限不特定于支持的脚本语言。 换而言之，没有与 Python 脚本的 R 脚本的单独的权限级别。 如果您需要保持对这些语言的单独权限，在单独的实例上安装 R 和 Python。
-
-<a name="permissions-db"></a> 
-
-### <a name="give-your-users-read-write-or-data-definition-language-ddl-permissions-to-databases"></a>对其授予用户读取、 写入或数据定义语言 (DDL) 权限的数据库
-
-在用户运行脚本时，用户可能需要从其他数据库读取数据。 用户可能还需要创建新表以存储结果，并将数据写入到表。
-
-对于每个 Windows 用户帐户或 SQL 登录名运行 R 或 Python 脚本，请确保它对特定数据库具有适当的权限： `db_datareader`， `db_datawriter`，或`db_ddladmin`。
-
-例如，以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句，为提供的 SQL 登录名*MySQLLogin*中运行 T-SQL 查询的权限*ML_Samples*数据库。 若要运行此语句，SQL 登录名必须已经存在于服务器的安全上下文中。
-
-```SQL
-USE ML_Samples
-GO
-EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
-```
-
-有关每个角色中包括的权限的详细信息，请参阅[数据库级别角色](../../relational-databases/security/authentication-access/database-level-roles.md)。
-
-
-### <a name="create-an-odbc-data-source-for-the-instance-on-your-data-science-client"></a>为数据科学客户端上的实例创建 ODBC 数据源
-
-您可以创建的机器学习数据科学客户端计算机上的解决方案。 如果需要通过使用 SQL Server 计算机作为计算上下文中运行代码，可以使用两个选项： 使用 SQL 登录名访问该实例或通过使用 Windows 帐户。
-
-+ 对于 SQL 登录名： 确保该登录名读取数据的数据库具有适当的权限。 您可以执行此操作通过添加*连接到*并*选择*权限，或通过添加到该登录名`db_datareader`角色。 若要创建的对象，将分配`DDL_admin`权限。 如果必须将数据保存到表中，将添加到`db_datawriter`角色。
-
-+ 为 Windows 身份验证： 你可能需要指定实例名称和其他连接信息的数据科学客户端上创建 ODBC 数据源。 有关详细信息，请参阅[ODBC 数据源管理器](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator)。
+> 是否需要其他配置取决于您在安装 SQL Server，以及希望用户可以连接到数据库并运行外部脚本的安全架构。
 
 ## <a name="suggested-optimizations"></a>建议的优化
 
@@ -313,7 +246,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="add-more-worker-accounts"></a>添加更多的辅助角色帐户
 
-如果希望有很多用户同时运行脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+如果希望有很多用户同时运行脚本，则可以增加分配给 Launchpad 服务的辅助角色帐户数目。 有关详细信息，请参阅[修改 SQL Server 机器学习服务的用户帐户池](../administration/modify-user-account-pool.md)。
 
 ### <a name="optimize-the-server-for-script-execution"></a>优化用于执行脚本的服务器
 
@@ -325,7 +258,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
   
 - 若要更改数据库的保留的内存量，请参阅[服务器内存配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)。
   
-- 若要更改可以通过启动的 R 帐户数[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，请参阅[修改机器学习的用户帐户池](../r/modify-the-user-account-pool-for-sql-server-r-services.md)。
+- 若要更改可以通过启动的 R 帐户数[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]，请参阅[修改机器学习的用户帐户池](../administration/modify-user-account-pool.md)。
 
 如果您使用的标准版，但没有资源调控器，可以使用动态管理视图 (Dmv) 和扩展事件，以及 Windows 事件监视来帮助管理服务器资源。 有关详细信息，请参阅[监视和管理 R Services](../r/managing-and-monitoring-r-solutions.md)并[监视和管理 Python 服务](../python/managing-and-monitoring-python-solutions.md)。
 

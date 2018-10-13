@@ -1,26 +1,31 @@
 ---
 title: "\"Hello World\"基本 R 代码执行的 T-SQL （SQL Server 机器学习） 中的快速入门 |Microsoft Docs"
-description: 在 SQL Server 中的 R 脚本的本快速入门，了解具有你好 world 练习的 sp_execute_external_script 系统存储过程的基础知识。
+description: SQL Server 中的 R 脚本的快速入门。 了解调用 R 脚本在你好 world 练习使用 sp_execute_external_script 系统存储过程的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/08/2018
 ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1a51fcb9e67bef48346ff74ebfb1e911a6ee3365
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086880"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878080"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入门： SQL Server 中的"Hello world"R 脚本 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 包括对驻留 SQL Server 数据的数据库内分析 R 语言功能支持。 用于在规模较大的预测分析，可以使用开放源代码 R 函数、 第三方程序包和内置的 Microsoft R 包。
+SQL Server 包括对数据科学驻留的 SQL Server 数据分析的 R 语言支持。 在 R 脚本可以包含的开放源代码 R 函数、 第三方 R 库或内置的 Microsoft R 库等[RevoScaleR](../r/revoscaler-overview.md)用于在规模较大的预测分析。 
 
-在本快速入门教程，了解关键概念，通过运行"Hello World"R 脚本 inT SQL，简介**sp_execute_external_script**系统存储过程。 R 脚本执行是通过存储过程。 您可以使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)存储的过程并传递 R 脚本中作为输入参数作为本快速入门中所演示或包装中的 R 脚本[自定义存储过程](sqldev-in-database-r-for-sql-developers.md)。 
+脚本执行是通过存储过程，使用以下方法之一：
+
++ 内置[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)存储过程，传递作为输入参数中的 R 脚本。
++ 包装中的 R 脚本[自定义存储过程](sqldev-in-database-r-for-sql-developers.md)你创建的。
+
+在本快速入门教程，了解关键概念，通过运行"Hello World"R 脚本 inT SQL，简介**sp_execute_external_script**系统存储过程。 
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -33,7 +38,7 @@ SQL Server 包括对驻留 SQL Server 数据的数据库内分析 R 语言功能
 
 + 用于运行 SQL 查询的工具。 可以使用任何应用程序可以连接到 SQL Server 数据库并运行 T-SQL 代码。 SQL 专业人员可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-对于本教程中，来展示如何轻松地运行 R 在 SQL Server，我们已使用新**适用于 Visual Studio Code 的 mssql 扩展**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql**扩展是一个轻型扩展运行 T-SQL 查询。 若要获取 Visual Studio Code，请参阅[下载和安装 Visual Studio Code](https://code.visualstudio.com/Download)。 若要添加**mssql**扩展，请参阅以下文章：[使用适用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+对于本快速入门，以展示如何轻松地运行 R 在 SQL Server，我们已使用新**适用于 Visual Studio Code 的 mssql 扩展**。 VS Code 是一个免费的开发环境，可以在 Linux、 macOS 或 Windows 上运行。 **Mssql**扩展是一个轻型扩展运行 T-SQL 查询。 若要获取 Visual Studio Code，请参阅[下载和安装 Visual Studio Code](https://code.visualstudio.com/Download)。 若要添加**mssql**扩展，请参阅以下文章：[使用适用于 Visual Studio Code 的 mssql 扩展](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>连接到数据库并运行 Hello World 测试脚本
 

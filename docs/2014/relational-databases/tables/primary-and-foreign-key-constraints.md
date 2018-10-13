@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063438"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120354"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主键和外键约束
   主键和外键是两种类型的约束，可用于强制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 表中的数据完整性。 这些是重要的数据库对象。  
@@ -39,7 +39,7 @@ ms.locfileid: "48063438"
   
  如果为表指定了主键约束， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将通过为主键列自动创建唯一索引来强制数据的唯一性。 当在查询中使用主键时，此索引还允许对数据进行快速访问。 如果对多列定义了主键约束，则一列中的值可能会重复，但来自主键约束定义中所有列的值的任何组合必须唯一。  
   
- 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 **ProductVendor** 表中的每个行都具有 **ProductID** 和 **VendorID**的一个唯一组合。 这样可以防止插入重复的行。  
+ 如下图所示， **Purchasing.ProductVendor** 表中的 **ProductID** 和 **VendorID** 列构成了针对此表的复合主键约束。 这确保了 ProductVendor 表中的每个行都具有 ProductID 和 VendorID 的一个唯一组合。 这样可以防止插入重复的行。  
   
  ![组合主键约束](../../database-engine/media/fund04.gif "组合主键约束")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "48063438"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 将引发错误，此时将回滚对父表中行的删除或更新操作。  
   
  CASCADE  
- 如果在父表中更新或删除了一行，则将在引用表中更新或删除相应的行。 如果不能指定 CASCADE`timestamp`列是外键或被引用的键的一部分。 不能为带有 INSTEAD OF DELETE 触发器的表指定 ON DELETE CASCADE。 对于带有 INSTEAD OF UPDATE 触发器的表，不能指定 ON UPDATE CASCADE。  
+ 如果在父表中更新或删除了一行，则将在引用表中更新或删除相应的行。 如果 `timestamp` 列是外键或被引用键的一部分，则不能指定 CASCADE。 不能为带有 INSTEAD OF DELETE 触发器的表指定 ON DELETE CASCADE。 对于带有 INSTEAD OF UPDATE 触发器的表，不能指定 ON UPDATE CASCADE。  
   
  SET NULL  
  如果更新或删除了父表中的相应行，则会将构成外键的所有值设置为 NULL。 若要执行此约束，外键列必须可为空值。 无法为带有 INSTEAD OF UPDATE 触发器的表指定。  

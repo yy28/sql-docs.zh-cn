@@ -20,12 +20,12 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91973f7c98409df52afa18db09dfbdac689a34d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842675"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169325"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47842675"
 |**retry_attempts**|**int**|步骤失败时的重试次数。|  
 |**retry_interval**|**int**|每次重试间的等待时间。|  
 |**os_run_priority**|**int**|保留。|  
-|**output_file_name**|**nvarchar(200)**|时，保存该步骤的输出文件的名称**子系统**为 TSQL、 PowerShell 或 **CmdExec * * *。*|  
+|**output_file_name**|**nvarchar(200)**|时，保存该步骤的输出文件的名称**子系统**为 TSQL、 PowerShell，或**CmdExec**_。_|  
 |**last_run_outcome**|**int**|前一次执行作业步骤的结果。<br /><br /> **0** = 失败<br /><br /> **1** = 成功<br /><br /> **2** = 重试<br /><br /> **3** = 已取消<br /><br /> **5** = 未知|  
 |**last_run_duration**|**int**|该步骤上次运行时的持续时间 (hhmmss)。|  
 |**last_run_retries**|**int**|上一次执行作业步骤时的重试次数。|  

@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076807"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119166"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>为内存优化表配置内存
   您需要配置存储容量和每秒输入/输出操作数 (IOPS)。  
@@ -28,7 +28,7 @@ ms.locfileid: "48076807"
   
 -   在将基于磁盘的表迁移到内存优化表时，请确保事务日志位于可支持增加事务日志活动的存储介质上。 例如，如果存储介质以 100 MB/秒的速度支持事务日志操作，并且内存优化表产生 5 倍以上的性能，则事务日志的存储介质必须还能支持 5 倍的性能改进，从而防止事务日志活动成为性能瓶颈。  
   
--   内存优化表保留在跨一个或多个容器分布的文件中。 通常，每个容器均应映射到其自己的主轴，并用于增加的存储容量和改进的性能。 您需要确保存储介质的顺序 IOPS 可支持事务日志吞吐量的 3 倍增长。  
+-   内存优化表保留在跨一个或多个容器分布的文件中。 通常，每个容器均应映射到其自己的主轴，并用于增加的存储容量和改进的性能。 您需要确保存储介质的顺序 IOPS 可支持 3 次增加事务日志吞吐量。  
   
      例如，如果内存优化表在事务日志中生成 500MB/秒的活动，内存优化表的存储必须支持 1.5 g B/秒。需要支持的 3 倍增加事务日志吞吐量的来自观测到的数据和差异文件对先与初始数据一起写入，然后需要将读取/重新写入作为合并操作的一部分。  
   

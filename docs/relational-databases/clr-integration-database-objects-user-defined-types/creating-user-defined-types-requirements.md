@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697113"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119745"
 ---
 # <a name="creating-user-defined-types---requirements"></a>创建用户定义类型 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697113"
   
  **bool**，**字节**， **sbyte**，**短**， **ushort**， **int**， **uint**，**长**， **ulong**， **float**， **double**，**以**，**SqlInt16**， **SqlInt32**， **SqlInt64**， **SqlDateTime**， **SqlSingle**， **SqlDouble**， **SqlMoney**， **SqlBoolean**  
   
- 值类型，构成上述类型的字段的非常适合进行**本机**格式，例如**结构**在 Visual C# 中，(或**结构**大家所熟知中Visual Basic 中)。 例如，使用指定的 UDT**本机**序列化格式可能包含的其他 UDT 的使用也指定了字段**本机**格式。 如果 UDT 定义更复杂，包含不在上述列表的数据类型，必须指定**UserDefined**改为序列化格式。  
+ 上述类型的字段的值类型组成，非常适合进行**本机**格式，例如**结构**在 Visual C# 中，(或**结构**大家所熟知中Visual Basic 中)。 例如，使用指定的 UDT**本机**序列化格式可能包含的其他 UDT 的使用也指定了字段**本机**格式。 如果 UDT 定义更复杂，包含不在上述列表的数据类型，必须指定**UserDefined**改为序列化格式。  
   
  **本机**格式具有以下要求：  
   

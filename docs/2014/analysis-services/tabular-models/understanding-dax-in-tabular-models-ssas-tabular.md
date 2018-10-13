@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136017"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906377"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>了解表格模型中的 DAX（SSAS 表格）
   数据分析表达式 (DAX) 是一种公式语言，用于在针对 Microsoft Excel 工作簿的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型项目中创建自定义计算。 DAX 公式包括一些函数、运算符和值，用于对表和列中的数据执行高级计算。  
@@ -52,7 +52,7 @@ ms.locfileid: "48136017"
 ##  <a name="bkmk_DAXintm"></a> 表格模型中的 DAX  
  在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 和表格模型中，就功能而言，DAX 公式通过各自数据集计算值时所采用的方式并无区别。 但是，DAX 公式在工作簿和模型创作工具中的创建是不同的，而且特定度量值中上下文的计算也是不同的。  
   
- 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]中，计算公式通常由工作薄用户创建，用于自助式商业智能分析。 在 PowerPivot 窗口中为表创建计算列，在数据透视表或计算区域中创建度量值。 与表格模型项目不同，PowerPivot 工作簿不提供基于角色的安全性，这种安全性可以使用 DAX 公式来保护数据。  
+ 在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 中，计算公式通常由工作薄用户创建，用于自助式商业智能分析。 在 PowerPivot 窗口中为表创建计算列，在数据透视表或计算区域中创建度量值。 与表格模型项目不同，PowerPivot 工作簿不提供基于角色的安全性，这种安全性可以使用 DAX 公式来保护数据。  
   
  在表格模型项目中，计算公式由模型作者在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的模型设计器中创建。 尽管使用 DAX 公式计算的计算列值会立即显示在模型设计器的表中（度量值网格中的度量值预览功能除外），但只有用户在 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 等报告客户端或 Microsoft Excel 的数据透视表中指定筛选器后，系统才会计算度量值。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48136017"
   
  行筛选器应用于指定的行以及相关行。 如果表具有多个关系，则筛选器将安全性应用于处于活动状态的关系。 行筛选器将与为相关表定义的其他行筛选器相交。  
   
- 有关详细信息，请参阅[角色（SSAS 表格）](roles-ssas-tabular.md)。  
+ 有关详细信息，请参阅 [角色（SSAS 表格）](roles-ssas-tabular.md)中创建的表格模型项目。  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX 数据类型  
  您可以将数据从可能支持不同数据类型的众多不同数据源导入到模型中。 将数据导入模型时，数据将转换为表格模型数据类型之一。 当在计算中使用模型数据时，数据则会因计算的持续时间和输出而转换为 DAX 数据类型。 当您创建一个 DAX 公式时，该公式中使用的项将自动确定返回的值数据类型。  
@@ -182,7 +182,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|指定 Date 表中的 Date 列。 列括在方括号中。|  
 |`,`||  
 |`STARTOFQUARTER`|STARTOFQUARTER 函数返回季度的开始日期。|  
-|`LASTDATE`|LASTDATE 函数返回季度的结束日期。|  
+|`LASTDATE`|LASTDATE 函数返回季度的最后日期。|  
 |`'Date'`|指定 Date 表。|  
 |`[Date]`|指定 Date 表中的 Date 列。|  
 |`,`||  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -    DAX 函数包含多种“时间智能”函数。 利用这些函数，您可以定义或选择日期范围，并基于这些日期或范围执行动态计算。 例如，您可以比较并行时段内的总和。  
   
 ### <a name="date-and-time-functions"></a>日期和时间函数  
- DAX 中的日期和时间函数类似于 Microsoft Excel 中的日期和时间函数。 但是，DAX 函数基于`datetime`使用的 Microsoft SQL Server 数据类型。 有关详细信息，请参阅[日期和时间函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。  
+ DAX 中的日期和时间函数类似于 Microsoft Excel 中的日期和时间函数。 但是，DAX 函数基于 Microsoft SQL Server 使用的 `datetime` 数据类型。 有关详细信息，请参阅[日期和时间函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx)。  
   
 ### <a name="filter-functions"></a>筛选器函数  
  DAX 中的筛选器函数可以返回特定数据类型、在相关表中查找值以及按相关值进行筛选。 查找函数通过使用表和关系进行工作，与数据库类似。 筛选函数可用于操作数据上下文来创建动态计算。 有关详细信息，请参阅[筛选器函数&#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx)。  
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  处理和重新计算对行筛选器公式没有影响，除非重新计算的结果返回不同的值，致使角色成员能够查询或不能查询该行。  
   
- 有关详细信息，请参阅[处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
+ 有关详细信息，请参阅 [处理数据（SSAS 表格）](../process-data-ssas-tabular.md)。  
   
 ##  <a name="bkmk_troubleshoot"></a> 更正公式中的错误  
  如果在定义公式时遇到错误，公式可能会包含“语法错误” 、“语义错误” 或“计算错误”。  
@@ -423,10 +423,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ## <a name="see-also"></a>请参阅  
  [数据分析表达式&#40;DAX&#41;引用](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [度量值&#40;SSAS 表格&#41;](measures-ssas-tabular.md)   
- [计算列&#40;SSAS 表格&#41;](ssas-calculated-columns.md)   
- [角色&#40;SSAS 表格&#41;](roles-ssas-tabular.md)   
- [Kpi &#40;SSAS 表格&#41;](kpis-ssas-tabular.md)   
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)   
+ [计算列（SSAS 表格）](ssas-calculated-columns.md)   
+ [角色（SSAS 表格）](roles-ssas-tabular.md)   
+ [KPI（SSAS 表格）](kpis-ssas-tabular.md)   
  [支持的数据源（SSAS 表格）](data-sources-supported-ssas-tabular.md)  
   
   

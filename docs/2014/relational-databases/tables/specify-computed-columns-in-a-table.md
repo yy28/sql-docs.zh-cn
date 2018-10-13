@@ -13,15 +13,15 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30bb3496a2bd68ac94a702b6d7713b53cbc40bfb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d206821fe3a54f71c61d383c19a0a0479a8321f0
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057687"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072181"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定表中的计算列
-  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 您可以通过使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中为计算列指定表达式。  
+  计算列是虚拟列，并非实际存储在表中，除非此列标记为 PERSISTED。 计算列的表达式可以使用其他列中的数据来计算其所属列的值。 可以指定的表达式中的计算列[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  **本主题内容**  
   
@@ -56,14 +56,14 @@ ms.locfileid: "48057687"
   
 1.  在 **“对象资源管理器”** 中，展开要添加新计算列的表。 右键单击“列”，再选择“新建列”。  
   
-2.  输入列名并接受默认数据类型 (`nchar`(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 `money` 的列和一个类型为 `int` 的列，则计算列的类型将为 `money`，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](/sql/t-sql/data-types/data-type-precedence-transact-sql)。  
+2.  输入列名并接受默认数据类型 (`nchar`(10))。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]通过将数据类型的优先顺序规则应用到在公式中指定的表达式，来确定计算列的数据类型。 例如，如果公式引用一个类型为 `money` 的列和一个类型为 `int` 的列，则计算列的类型将为 `money`，因为该数据类型具有较高优先顺序。 有关详细信息，请参阅[数据类型优先级 (Transact-SQL)](/sql/t-sql/data-types/data-type-precedence-transact-sql)。  
   
 3.  在 **“列属性”** 选项卡中，展开 **“计算所得的列规范”** 属性。  
   
 4.  在“(公式)”子属性中，在右侧的网格单元格中输入此列的表达式。 例如，在 `SalesTotal` 列中，您输入的公式可能是 `SubTotal+TaxAmt+Freight`，它将该值加入到表中每行的这些列中。  
   
     > [!IMPORTANT]  
-    >  当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型的列`nvarchar`结合了类型的列`int`，整数类型必须转换为`nvarchar`此公式中所示`('Prod'+CONVERT(nvarchar(23),ProductID))`。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+    >  当两个不同数据类型的表达式用公式组合后，数据类型优先级规则指定将优先级较低的数据类型转换为优先级较高的数据类型。 如果此转换不是所支持的隐式转换，则返回错误“`Error validating the formula for column column_name.`”。 使用 CAST 或 CONVERT 函数解决数据类型冲突。 例如，如果类型为 `nvarchar` 的列与类型为 `int` 的列相结合，则整数类型必须转换为 `nvarchar`，如公式 `('Prod'+CONVERT(nvarchar(23),ProductID))` 中所示。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 5.  从“持久化”子属性的下拉菜单上选择“是”或“否”，以指示该数据是否持久。  
   

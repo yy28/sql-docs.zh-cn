@@ -18,12 +18,12 @@ ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da531e62f2067ff1ae217a313d1fdd0eb8ce24a7
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162237"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120114"
 ---
 # <a name="data-alert-designer"></a>数据警报设计器
   使用数据警报设计器创建和编辑数据警报定义。 警报定义是元数据的一个集合，包括您感兴趣的报表数据、报表数据必须满足才能创建数据警报实例和发送数据警报消息的规则、警报消息的收件人等。  
@@ -71,7 +71,7 @@ ms.locfileid: "48162237"
 ### <a name="alert-name"></a>警报名称  
  默认情况下，警报定义具有与报表相同的名称。 您可以将此警报名称更改为更有意义的名称。 这便于您管理警报，以及确定要用于更新、删除等操作的警报。  
   
- 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅[向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)并[在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
+ 您可以对一个报表创建多个警报。 可以具有同名的多个警报定义，但建议您保持警报名称唯一。 这样可便于区分和管理警报定义。 您可以在数据警报管理器中查看所创建的所有警报的列表。 有关详细信息，请参阅 [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) 和 [在数据警报管理器中管理我的数据警报](manage-my-data-alerts-in-data-alert-manager.md)。  
   
 ### <a name="rules-and-clauses"></a>规则和子句  
  数据更改的作用域以及警报规则中的规则定义触发警报的数据更改。 数据更改的作用域如下：  
@@ -172,7 +172,7 @@ ms.locfileid: "48162237"
  有关如何生成电子邮件的详细信息，请参阅 [Reporting Services 数据警报](../ssms/agent/alerts.md)。  
   
 ##  <a name="CreateAlert"></a> 创建数据警报定义  
- 如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果对该报表进行参数化，则您可能需要使用不同的参数值来运行该报表，以便确保您感兴趣的数据出现在该报表中。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
+ 如果您被授予了 SharePoint 的“查看项”和“创建警报”权限，只要报表使用存储的凭据或没有凭据，您就可以为您有权查看的任何报表创建数据警报定义。 您从 SharePoint 库运行该报表。 您可在数据警报设计器中使用的数据来自该报表。 如果报表已参数化，您可能需要使用不同的参数值以确保数据运行报表显示在报表中感兴趣。 在该报表打开后，单击报表工具栏上 **“操作”** 菜单中的 **“新建数据警报”** 选项，以便打开数据警报设计器。 下图显示如何打开数据警报设计器。  
   
  ![从 SharePoint 库打开警报设计器](media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
   
@@ -208,6 +208,6 @@ ms.locfileid: "48162237"
   
 ## <a name="see-also"></a>请参阅  
  [Reporting Services 数据警报](../ssms/agent/alerts.md)   
- [适用于警报管理员的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
+ [向管理员提出警报的数据警报管理器](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   
   

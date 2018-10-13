@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827328"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878010"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>如何在 SQL Server 2019 预览版中使用笔记本
 
@@ -23,7 +23,7 @@ ms.locfileid: "48827328"
 若要使用笔记本，必须安装以下先决条件：
 
 - [SQL Server 2019 大数据群集](deployment-guidance.md)
-- [Azure 数据 Studio](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [SQL Server 2019 扩展 （预览版）](../azure-data-studio/sql-server-2019-extension.md)。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "48827328"
 
 当你选择其中一个这些内核时，我们将在虚拟环境中安装该内核，您可以开始在受支持的语言中编写代码。
 
-| 内核 | 描述
+| 内核 | Description
 |---- |----
 |PySpark 内核| 有关编写使用 Spark 的 Python 代码，将计算与该群集。
 |Spark 内核|有关编写使用 Spark Scala 代码，将计算与该群集。
@@ -76,6 +76,9 @@ ms.locfileid: "48827328"
 附加到所选内容提供了附加的内核的上下文。 当连接到 SQL Server 大数据群集终结点时，默认附加到选择将该终结点的群集。
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> 默认情况下，使用 1 驱动程序和 3 个执行程序，将需要大约 8.5 GB 的内存配置 Spark 应用程序。 若要运行多个 spark 会话，建议的配置是群集能够至少 32 GB 的内存中每个服务器 (例如，在 AKS 环境中使用**Standard_D8_v3**具有 32 GB 的内存的 VM 大小)。
 
 ## <a name="hello-world-in-the-different-contexts"></a>不同的上下文中的 hello world
 

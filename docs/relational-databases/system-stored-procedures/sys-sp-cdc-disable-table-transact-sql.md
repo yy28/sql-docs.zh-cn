@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810305"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169167"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@source_schema=** ] **'***source_schema*****  
+ [  **@source_schema=** ] **'**_源\_架构_  
  包含源表的架构的名称。 *source_schema*是**sysname**，无默认值，且不能为 NULL。  
   
  *source_schema*必须存在于当前数据库。  
   
- [  **@source_name=** ] **'***source_name*****  
+ [  **@source_name=** ] **'**_源\_名称_  
  要禁用其变更数据捕获的源表的名称。 *source_name*是**sysname**，无默认值，且不能为 NULL。  
   
  *source_name*必须存在于当前数据库。  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** 所有  
+ [  **@capture_instance=** ] **'**_捕获\_实例_**'** | 所有  
  要对指定的源表禁用的捕获实例的名称。 *capture_instance*是**sysname**且不能为 NULL。  
   
  当指定 all 时，所有捕获实例的定义*source_name*处于禁用状态。  

@@ -1,5 +1,5 @@
 ---
-title: 线性回归模型的挖掘模型内容 |Microsoft 文档
+title: 线性回归模型的挖掘模型内容 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8d1bfeedf1bcd394970b4c6f3e907926f53c54e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019394"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120177"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   本主题介绍使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法的模型特有的挖掘模型内容。 有关所有模型类型的挖掘模型内容的常规说明，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>了解线性回归模型的结构  
- 线性回归模型的结构非常简单。 每个模型均具有表示该模型及其元数据的单一父节点，以及包含每个可预测属性的回归公式的回归树节点 (NODE_TYPE = 25)。  
+ 线性回归模型的结构非常简单。 每个模型具有表示该模型及其元数据的单一父节点和回归树节点 (NODE_TYPE = 25)，其中包含每个可预测属性的回归公式。  
   
- ![线性回归模型的结构](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "线性回归模型的结构")  
+ ![用于线性回归模型的结构](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "用于线性回归模型的结构")  
   
  线性回归模型与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树使用相同的算法，但线性回归模型使用不同的参数来约束树，并且仅接受连续属性作为输入。 但是，由于线性回归模型基于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树算法，线性回归模型使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 决策树查看器来显示。 有关详细信息，请参阅 [使用 Microsoft 树查看器浏览模型](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "34019394"
  MSOLAP_NODE_SHORT_CAPTION  
  用于显示的标签。  
   
-## <a name="remarks"></a>注释  
+## <a name="remarks"></a>备注  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 线性回归算法创建模型时，数据挖掘引擎创建决策树模型的特殊实例，并提供约束树的参数，将树约束为在单个节点中包含所有定型数据。 将标记所有连续输入并将其视为潜在回归量，但仅将适合数据的回归量作为回归量保留在最终模型中。 分析过程要么为每个回归量各生成一个回归公式，要么根本不生成任何回归公式。  
   
  你可以在“挖掘图例”中查看完整的回归公式，方法是在 [Microsoft 树查看器](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)中单击“(全部)”节点。  
@@ -146,7 +146,7 @@ ms.locfileid: "34019394"
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|缺少|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |年龄|471.687717702463|0|0|126.969442359327|7|  
 |年龄|234.680904692439|0|0|0|8|  
@@ -182,8 +182,8 @@ ms.locfileid: "34019394"
   
  因此，假定平均年龄约为 45，回归公式的截距 (VALUETYPE = 11) 则指示平均收入。  
   
-## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 线性回归算法](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 线性回归算法技术参考](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [线性回归模型查询示例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  

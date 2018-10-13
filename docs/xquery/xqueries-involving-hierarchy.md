@@ -17,12 +17,12 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3296807e7470c84a4df2f3960ea01185c5915048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 469b4dece1dca9aca2aa584e60bd502034fc8645
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597056"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119084"
 ---
 # <a name="xqueries-involving-hierarchy"></a>涉及层次结构的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47597056"
   
  每个 <`Location`> 元素具有它自己的属性集和一个 <`step`> 子元素。 此 <`step`> 子元素是生产车间的第一个生产步骤。  
   
-```  
+```sql
 SELECT Instructions.query('  
      declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
    \<ManuInstr  ProdModelID = "{sql:column("Production.ProductModel.ProductModelID") }"   
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
  这是部分结果：  
   
-```  
+```xml
 <ManuInstr ProdModelID="7" ProductModelName="HL Touring Frame">  
    <Location LocationID="10" SetupHours="0.5"   
             MachineHours="3" LaborHours="2.5" LotSize="100">  
@@ -88,7 +88,7 @@ WHERE ProductModelID=7
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. 在 AdditionalContactInfo 列中查找所有电话号码  
  下面的查询通过在整个层次结构中搜索 <`telephoneNumber`> 元素来检索用于联系特定客户的附加电话号码。 因为 <`telephoneNumber`> 元素可以出现在层次结构中任何位置，所以该查询在搜索中使用后代和自身运算符 (//)。  
   
-```  
+```sql
 SELECT AdditionalContactInfo.query('  
  declare namespace ci="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactInfo";  
  declare namespace act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes";  
@@ -102,7 +102,7 @@ WHERE ContactID = 1
   
  结果如下：  
   
-```  
+```xml
 \<act:number   
   xmlns:act="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes">  
   111-111-1111  
@@ -115,9 +115,9 @@ WHERE ContactID = 1
   
  若要只检索顶级电话号码（即 <`AdditionalContactInfo`> 的 <`telephoneNumber`> 子元素），查询中的 FOR 表达式应变为  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`。  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` 的用户。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [XQuery 基础知识](../xquery/xquery-basics.md)   
  [XML 构造&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 数据 (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  

@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 1f20f2adc916a456e4a1975804fac1640ee95f69
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818045"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100338"
 ---
 # <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>配置 SQL Server 2019 ctp 2.0 Minikube
 
@@ -23,7 +23,7 @@ Minikube 是一种工具，轻松地在一台便携式计算机或桌面等一�
 - 若要为 SQL Server 2019 CTP 2.0 SQL 大数据群集配置中运行 Minikube 群集，建议你的计算机具有至少 32 GB RAM。
 
    > [!TIP] 
-   > 如果计算机没有足够的内存，然后修改群集配置，以便创建仅 3 个实例： 一个主实例和两个计算实例。
+   > 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#define-environment-variables)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
 
 - 必须在计算机的 BIOS 中启用 VT x 或 amd-v 虚拟化。
 

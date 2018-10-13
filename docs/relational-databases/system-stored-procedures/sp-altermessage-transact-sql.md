@@ -18,12 +18,12 @@ ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b713b8970ecf38536da7e00b791dcef8a059a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f41f7b31f928a60342deefcc85a8f71bc707dba
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761965"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168857"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
  [**@message_id =** ] *message_number*  
  是从更改的消息的错误号**sys.messages**。 *message_number*是**int** ，无默认值。  
   
- [ **@parameter =** ] **'***write_to_log*'  
+ [  **@parameter =** ] **'**_编写\_到\_日志_  
  与一起使用**@parameter_value**以指示该消息将写入到[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *write_to_log*是**sysname** ，无默认值。 *write_to_log*必须设置为 WITH_LOG 或 NULL。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且的值**@parameter_value**是**true**，到 Windows 应用程序日志写入消息。 如果*write_to_log*设置为 WITH_LOG 或 NULL，并且的值**@parameter_value**是**false**，消息不始终写入 Windows 应用程序日志，但可能编写根据如何产生错误。 如果*write_to_log*指定的值**@parameter_value**还必须指定。  
   
 > [!NOTE]  
 >  如果消息写入了 Windows 应用程序日志，那么它也将被写入[!INCLUDE[ssDE](../../includes/ssde-md.md)]错误日志文件。  
   
- [ **@parameter_value =** ]**'***value*'  
+ [  **@parameter_value =** ]**'**_值_  
  与一起使用**@parameter**以指示要写入到错误[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 应用程序日志。 *值*是**varchar(5)**，无默认值。 如果 **，则返回 true**，此错误始终写入 Windows 应用程序日志。 如果**false**，该错误不始终写入 Windows 应用程序日志，但可能会根据如何产生此错误将写入。 如果*值*指定，则*write_to_log*有关**@parameter**还必须指定。  
   
 ## <a name="return-code-values"></a>返回代码值  

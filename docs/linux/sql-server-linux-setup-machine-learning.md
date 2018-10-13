@@ -4,18 +4,18 @@ description: 本文介绍如何安装 SQL Server 机器学习服务 （R、 Pyth
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 09/24/2018
+ms.date: 10/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 150f459a7ab98f39057f9a981ce0c2db50d8d00d
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: 8433f705b41782c61950cb74f76f694d61cd548d
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782356"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100448"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>安装 SQL Server 2019 机器学习服务 (R、 Python、 Java) 在 Linux 上
 
@@ -41,46 +41,80 @@ R、 Python 和 Java 扩展包位置是在 SQL Server Linux 源存储库中。 �
 
 <a name="mro"></a>
 
-### <a name="microsoft-r-open-mro"></a>Microsoft R Open (MRO)
+### <a name="microsoft-r-open-mro-installation"></a>Microsoft R Open (MRO) 安装
 
 Microsoft 的 R 基础分发是使用 RevoScaleR、 MicrosoftML 和使用机器学习服务安装其他 R 包的先决条件。
 
-以下命令注册存储库提供 MRO。 注册后，用于安装其他 R 包的命令将作为包依赖项中自动包括 MRO。
+所需的版本是 MRO 3.4.4。
 
-#### <a name="on-ubuntu"></a>在 Ubuntu 上
+选择从以下两种方法安装 MRO:
+
++ 从 MRAN 下载 MRO tarball，解压缩它，并运行其 install.sh 脚本。 可以按照[MRAN 的安装说明](https://mran.microsoft.com/releases/3.4.4)如果希望此方法。
+
++ 或者，注册**packages.microsoft.com**如下所述安装三个包组成 MRO 分发存储库： microsoft r open mro、 microsoft-r-打开-mkl，和microsoft-r-打开-foreachiterators。 
+
+以下命令注册存储库提供 MRO。 注册后，用于安装其他 R 包，例如 mssql-mlservices-mml-r，命令将作为包依赖项中自动包括 MRO。
+
+#### <a name="mro-on-ubuntu"></a>在 Ubuntu 上 MRO
 
 ```bash
+# Install as root
+sudo su
+
+# Optionally, if your system does not have the https apt transport option
+apt-get install apt-transport-https
+
+# Add the **azure-cli** repo to your apt sources list
+AZ_REPO=$(lsb_release -cs)
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+
 # Set the location of the package repo the "prod" directory containing the distribution.
-# This example specifies 16.04. Replace with 18.04 if you want that version
+# This example specifies 16.04. Replace with 14.04 if you want that version
 wget https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb
 
 # Register the repo
 dpkg -i packages-microsoft-prod.deb
 ```
 
-#### <a name="on-rhel"></a>在 RHEL 上
+#### <a name="mro-on-rhel"></a>在 RHEL 上 MRO
 
 ```bash
+# Import the Microsoft repository key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# Create local `azure-cli` repository
+sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+
 # Set the location of the package repo at the "prod" directory
+# The following command is for version 7.x
+# For 6.x, replace 7 with 6 to get that version
 rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 ```
-#### <a name="on-suse"></a>在 SUSE 上
+#### <a name="mro-on-suse"></a>在 SUSE 上 MRO
 
 ```bash
-# Set the location of the package repo
+# Install as root
+sudo su
+
+# Set the location of the package repo at the "prod" directory containing the distribution
+# This example is for SLES12, the only supported version of SUSE in Machine Learning Server
 zypper ar -f https://packages.microsoft.com/sles/12/prod packages-microsoft-com
+
+# Update packages on your system:
+zypper update
 ```
 
 ## <a name="package-list"></a>包列表
 
 在与 internet 连接的设备，包下载并安装独立于数据库引擎的每个操作系统使用包安装程序。 下表描述了所有可用的包，但对于连接到 internet 的安装，您只需要*一个*R 或 Python 包，以获取功能的特定组合。
 
-| 包名称 | 适用于 | 描述 |
+| 包名称 | 适用于 | Description |
 |--------------|----------|-------------|
 |mssql server 扩展性  | All | 用于运行 R、 Python 或 Java 代码的可扩展性框架。 |
 |mssql server 扩展性 java | Java | 用于加载的 Java 执行环境的 Java 扩展。 没有任何其他库或用于 Java 的包。 |
 | microsoft openmpi  | Python、 R | 消息传递接口 Revo * 库用于 Linux 上的并行化。 |
-| microsoft r open | R | 开源分发的。 |
+| [microsoft-r-打开 *](#mro) | R | 开放源代码 R 分发版中，三个包组成。 |
 | mssql mlservices python | Python | 开放源代码分发 Anaconda 和 Python。 |
 |mssql mlservices mlm py  | Python | 完整安装。 提供了 revoscalepy，microsoftml，预先训练的图像特征化和文本情绪分析的模型。| 
 |mssql mlservices mml py  | Python | 部分安装。 提供了 revoscalepy，microsoftml。 <br/>不包括预先训练的模型。 | 
@@ -133,14 +167,15 @@ sudo yum install mssql-server-extensibility-java
 > [!Tip]
 > 如果可能，运行`apt-get update`刷新之前安装系统上的包。 此外，Ubuntu 某些 docker 映像可能没有 https apt 传输选项。 若要安装它，请使用`apt-get install apt-transport-https`。
 
-### <a name="prerequisite-for-1804"></a>18.04 先决条件
+<!---
+### Prerequisite for 18.04
 
-在 Ubuntu 18.04 上运行 mssql mlservices R 库需要**libpng12**从 Linux 内核存档。 此包不再包含在标准分发，必须手动安装。 若要获取此库，请运行以下命令：
+Running mssql-mlservices R libraries on Ubuntu 18.04 requires **libpng12** from the Linux Kernel archives. This package is no longer included in the standard distribution and must be installed manually. To get this library, run the following commands:
 
 ```bash
 wget https://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
-dpkg -i libpng12-01_1.2.54-1ubuntu1_amd64.deb
-```
+dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
+```--->
 
 ### <a name="example-1----full-installation"></a>示例 1-完整安装 
 
@@ -427,7 +462,7 @@ mssql-mlservices-mml-py-9.4.5
 
 没有 Linux 和 Windows 的之间的奇偶校验[资源调控](../t-sql/statements/create-external-resource-pool-transact-sql.md)外部资源池，但的统计信息[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)当前具有Linux 上的不同单位。 在将来的 ctp 版本中将对齐单元。
  
-| 列名   | 描述 | Linux 上的值 | 
+| 列名   | Description | Linux 上的值 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | 最大资源池使用的内存量。 | 在 Linux 上，此统计信息来源于 CGroups 内存子系统，其中的值是 memory.max_usage_in_bytes |
 |write_io_count | 写入自重置资源调控器统计信息以来发出的 Io 总数。 | 在 Linux 上，此统计信息来源于其中的值写入行是 blkio.throttle.io_serviced 的 CGroups blkio 子系统 | 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 6725f986a66020d0560c4e3f17be5da12a2cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745745"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851842"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 方面的常见问题 (FAQ)
 
@@ -103,7 +103,7 @@ ms.locfileid: "47745745"
 
 1. **Linux 上的 SQL Server 支持多个实例在同一主机上？**
 
-   我们建议要有多个不同实例的主机上运行多个容器。 需要在不同端口上侦听每个容器。 有关详细信息，请参阅[运行多个 SQL Server 容器](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)。
+   我们建议要有多个不同实例的主机上运行多个容器。 这很容易实现使用 docker，但需要在不同端口上侦听每个容器。 有关详细信息，请参阅[运行多个 SQL Server 容器](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)。
 
 1. **在 Linux 上支持 Active Directory 身份验证？**
 

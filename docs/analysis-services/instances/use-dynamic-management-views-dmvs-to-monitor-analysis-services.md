@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ce22aad16b8a789c1224adf3421e61ad113a0ccb
-ms.sourcegitcommit: a7edd16af7be25f627d16e5c8a6e8d6de7071a28
+ms.openlocfilehash: d59601d0706b65186ed5f260128c3c44a134d60e
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47178323"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906397"
 ---
 # <a name="dynamic-management-views-dmvs"></a>动态管理视图 (DMV) 
 
@@ -210,4 +210,4 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_SETS](https://msdn.microsoft.com/library/ee301356)|介绍在数据库中，包括会话作用域的集目前所述的所有组。|  
 
 > [!NOTE]
-> 中所述的架构行集不具有存储 Dmv 协议。
+> 存储 Dmv 并没有在协议中所述的架构行集。

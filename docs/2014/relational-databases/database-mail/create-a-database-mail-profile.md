@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8d8daec2367212b405f2cf39b8f4229cc7dace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144237"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071811"
 ---
 # <a name="create-a-database-mail-profile"></a>创建数据库邮件配置文件
   使用 **数据库邮件配置向导** 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可创建数据库邮件的公共和专用配置文件。  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*默认配置文件状态*'  
   
-     其中， *@profile_name* 是配置文件的名称， *@principal_name* 指示其为公共配置文件， *@is_default* 确定此配置文件是数据库用户还是角色的默认值。  
+     其中*@profile_name*是配置文件中，名称和*@principal_name*指示这是一个公共配置文件， *@is_default*确定这配置文件是数据库用户或角色的默认值。  
   
  以下示例创建了一个数据库邮件帐户和一个数据库邮件专用配置文件，然后将帐户添加到该配置文件中并授予对该配置文件的公共访问权限。  
   

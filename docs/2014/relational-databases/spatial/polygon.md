@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194477"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906127"
 ---
 # <a name="polygon"></a>Polygon
   一个`Polygon`是存储为一系列点定义一个外部边界环和零个或多个内部环的二维表面。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
- 一个`Polygon`实例可以从具有至少三个不同点的环中构建。 一个`Polygon`实例也可以为空。  
+ 可以从至少具有三个不同点的环中构建一个 `Polygon` 实例。 `Polygon` 实例也可以为空。  
   
- 外部环和任意内部环`Polygon`定义了其边界。 环内部的空间定义了 `Polygon` 的内部。  
+ `Polygon` 的外部环和任意内部环定义了其边界。 环内部的空间定义了 `Polygon` 的内部。  
   
- 下图显示了示例的`Polygon`实例。  
+ 下图显示了 `Polygon` 实例的示例。  
   
  ![几何 Polygon 实例的示例](../../database-engine/media/polygon.gif "几何 Polygon 实例的示例")  
   
  如图中所示：  
   
-1.  图 1 是`Polygon`由外部环定义其边界的实例。  
+1.  图 1 是由外部环定义其边界的 `Polygon` 实例。  
   
 2.  图 2 是由外部环和两个内部环定义其边界的 `Polygon` 实例。 内部环内的面积是 `Polygon` 实例的外部环的一部分。  
   
 3.  图 3 是一个有效的 `Polygon` 实例，因为其内部环在单个切点处相交。  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 已接受的 `Polygon` 实例是可以在不引发异常的情况下存储到 `geometry` 或 `geography` 变量中的实例。 下面已接受`Polygon`实例：  
+ 已接受的 `Polygon` 实例是可以在不引发异常的情况下存储到 `geometry` 或 `geography` 变量中的实例。 下面是一些已接受的 `Polygon` 实例：  
   
--   一个空`Polygon`实例  
+-   空的 `Polygon` 实例  
   
 -   具有一个可接受的外部环和零个或多个可接受的内部环的 `Polygon` 实例  
   
  要使环可接受，需要满足以下条件。  
   
--   `LineString`实例必须已接受。  
+-   `LineString` 实例必须是已接受的实例。  
   
 -   `LineString` 实例至少必须有四个点。  
   
 -   `LineString` 实例的起始点和结束点必须相同。  
   
- 下面的示例显示接受`Polygon`实例。  
+ 下面的示例显示接受的 `Polygon` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 内部环`Polygon`可以接触这两个本身也相互在单个切点处，但如果的内部环`Polygon`cross、 的实例不是有效。  
+ `Polygon` 的内部环在单个切点处既可与自身接触也可彼此接触，但如果 `Polygon` 的内部环交叉，则该实例无效。  
   
- 以下示例显示有效`Polygon`实例。  
+ 下面的示例显示有效的 `Polygon` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  
@@ -105,7 +105,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 不是有效因为两个内部环在多个连续点接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
+ `@g1` 无效，因为内部环在两个位置接触外部环。 `@g2` 无效，因为第二个内部环位于第一个内部环的内部。 `@g3` 无效，因为两个内部环在多个连续点接触。 `@g4` 无效，因为两个内部环的内部重叠。 `@g5` 无效，因为外部环不是第一个环形。 `@g6` 无效，因为环未至少具有三个不同的点。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建了一个带有孔和 SRID 为 10 的简单 `geometry``Polygon` 实例。  

@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217877"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906217"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>警报属性-新建警报 （响应页）
   使用此页可以指定要运行的某项作业，并可获取为响应 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理警报而接收相关通知的操作员列表。  
@@ -51,7 +51,7 @@ ms.locfileid: "48217877"
  显示可用于创建新操作员的“新建操作员”对话框。  
   
  **查看操作员**  
- 显示当前所选操作员的“属性”对话框。 可以在“操作员属性”对话框上查看和修改操作员属性。  
+ 显示当前所选操作员的“属性”对话框。 您可以查看和修改操作员属性上**操作员属性**对话框。  
   
 ## <a name="see-also"></a>请参阅  
  [Alerts](alerts.md)   

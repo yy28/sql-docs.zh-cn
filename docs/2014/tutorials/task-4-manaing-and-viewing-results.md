@@ -13,12 +13,12 @@ ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c298daa69c57c7771787c181cc0087927ff83f68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fb0cc2f091ce6365e91dd285e553498cc595c76e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163497"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119865"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>任务 4：管理和查看报表
   在该任务中，您查看计算机辅助清理的结果，还对供应商数据执行交互式清理。 请参阅[交互式清理阶段](http://msdn.microsoft.com/library/hh213061.aspx#Interactive)的更多详细信息。  
@@ -55,7 +55,7 @@ ms.locfileid: "48163497"
   
     1.  请注意， **A.Datum Corp.** 更正为**A.Datum Corporation**并**原因**设置为**基于字词的关系。A.datum Corporation**是 dqs 已知的域值，因为它在知识发现过程中发现。 因此，DQS 会**100%信任**此更正。  
   
-    2.  请注意，该**Lazy Country Storex**更正为**Lazy Country Store**，**置信度级别**设置为**100%**，和**原因**设置为**域值**。 在知识发现过程中，设置**Lazy Country Storex**视为与错误**Lazy Country Store**作为**更正**，因此 DQS **100%确信**有关进行此项更改。  
+    2.  请注意， **Lazy Country Storex**更正为**Lazy Country Store**，**置信度级别**设置为**100%**，和**原因**设置为**域值**。 在知识发现过程中，设置**Lazy Country Storex**视为与错误**Lazy Country Store**作为**更正**，因此 DQS **100%确信**有关进行此项更改。  
   
     3.  DQS 不熟悉的其他值在列表中，但找到使用这些值的更正**拼写检查器**并提出了合适的更正。 DQS 是**并非 100%** 信任这些更改，但置信度高于 80%，这是进行更改，因此 DQS 建议进行这些更改的阈值级别。  
   

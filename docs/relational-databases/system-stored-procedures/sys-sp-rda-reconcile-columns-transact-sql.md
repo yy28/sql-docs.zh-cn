@@ -17,17 +17,17 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603955"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906317"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  协调远程 Azure 表中的列中的列已启用延伸的 SQL Server 表。  
+  协调远程 Azure 表中的列到已启用延伸的 SQL Server 表中的列。  
     
   **sp_rda_reconcile_columns**将列添加到已启用延伸的 SQL Server 表中但在远程表中不存在的远程表。 这些列可能意外地删除远程表中的列。 但是， **sp_rda_reconcile_columns**不会从远程表中但在 SQL Server 表中不存在的远程表中删除列。
   
@@ -58,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  如果远程 Azure 表中存在已启用延伸的 SQL Server 表中不复存在的列，这些额外的列不会阻止 Stretch Database 正常运行。 你可以选择手动删除额外列。  
   
 ## <a name="example"></a>示例  
- 若要对帐的列在远程 Azure 表中，运行以下语句。  
+ 若要对帐远程 Azure 表中的列，请运行以下语句。  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

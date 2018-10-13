@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4db726ac3ceab7649b0a3c04b2c4647b83c7e660
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48818065"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877890"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何将 SQL Server 大数据群集在 Kubernetes 上部署
 
@@ -24,11 +24,12 @@ SQL Server 大数据群集可部署为 docker 容器的 Kubernetes 群集上。 
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="kubernetes-prerequisistes"></a>Kubernetes prerequisistes
+## <a id="prereqs"></a> Kubernetes 群集的先决条件
 
 SQL Server 大数据群集需要的最小 v1.10 版本适用于 Kubernetes、 服务器和客户端。 若要安装 kubectl 客户端上的特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。  Minikube 和 AKS 的最新版本是至少 1.10。 适用于 AKS，您将需要使用`--kubernetes-version`参数来指定默认值以外的版本。
 
-此外，请注意，客户端/服务器 Kubernetes 版本，它是倾斜支持为 + /-1 的次要版本。 Kubernetes 文档指出，"客户端应是偏斜的多个次要版本，从主服务器，但可能会导致的最多为 1 个次要版本 master。 例如，v1.3 master 应适用于 v1.1 和 v1.2，v1.3 节点和应使用 v1.2、 v1.3 和 v1.4 客户端。" 有关详细信息，请参阅[Kubernetes 支持的版本和组件倾斜](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
+> [!NOTE]
+> 请注意，客户端和服务器的 Kubernetes 版本应 + 1 或-1 的次要版本。 有关详细信息，请参阅[Kubernetes 支持的版本和组件倾斜](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
 
 ## <a id="kubernetes"></a> Kubernetes 群集设置
 
@@ -36,7 +37,7 @@ SQL Server 大数据群集需要的最小 v1.10 版本适用于 Kubernetes、 �
 
 您可以选择部署在三种方式中的 Kubernetes:
 
-| 部署 Kubernetes 上： | 描述 |
+| 部署 Kubernetes 上： | Description |
 |---|---|
 | **Minikube** | 在 VM 中的单节点 Kubernetes 群集。 |
 | **Azure Kubernetes 服务 (AKS)** | Azure 中的托管的 Kubernetes 容器服务。 |
@@ -49,11 +50,11 @@ SQL Server 大数据群集需要的最小 v1.10 版本适用于 Kubernetes、 �
 
 ## <a id="deploy"></a> 部署 SQL Server 大数据群集
 
-配置在 Kubernetes 群集后，你可以继续进行 SQL Server 大数据群集的部署。 若要部署的开发/测试环境的所有默认配置对 Aris 群集，请按照本文中的说明操作：
+配置在 Kubernetes 群集后，你可以继续进行 SQL Server 大数据群集的部署。 若要部署的开发/测试环境的所有默认配置的大数据群集，请按照本文中的说明操作：
 
-[快速入门： 部署 Kubernetes 上的 SQL Server Aris](quickstart-big-data-cluster-deploy.md)
+[快速入门： 部署大数据群集在 Kubernetes 的 SQL Server](quickstart-big-data-cluster-deploy.md)
 
-如果你想要自定义 Aris 配置，根据工作负荷需求，请按照下一组说明进行操作。
+如果你想要自定义大数据群集配置，根据工作负荷需求，请按照下一组说明进行操作。
 
 ## <a name="verify-kubernetes-configuration"></a>验证 kubernetes 配置
 
@@ -87,7 +88,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 可以使用一组环境变量传递给自定义群集配置`mssqlctl create cluster`命令。 环境变量的大部分都是可选的默认 avalues 根据下面。 请注意，环境变量，例如需要用户输入的凭据。
 
-| 环境变量 | Required | 默认值 | 描述 |
+| 环境变量 | Required | 默认值 | Description |
 |---|---|---|---|
 | **ACCEPT_EULA** | 用户帐户控制 | N/A | 接受 SQL Server 许可协议 (例如，Y)。  |
 | **CLUSTER_NAME** | 用户帐户控制 | N/A | 要部署到 SQLServer 大数据群集的 Kubernetes 命名空间的名称。 |

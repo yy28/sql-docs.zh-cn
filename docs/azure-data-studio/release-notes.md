@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037996"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072301"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 发行说明
 
@@ -61,7 +61,7 @@ ms.locfileid: "48037996"
 
 *0.32.8 包含几个回归 0.32.7 中找到的修补程序 ([# 1971年](https://github.com/Microsoft/azuredatastudio/issues/1971)， [# 2372年](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-*年 8 月公共预览版*重点介绍上的 bug 修复、 产品稳定化和填充现有方案中的缺口。  
+*年 8 月公共预览版*侧重于 bug 修复、 产品稳定化和填充现有方案中的缺口。  
 
 - 宣布推出 SQL Server 导入扩展
 - SQL Server Profiler 会话管理

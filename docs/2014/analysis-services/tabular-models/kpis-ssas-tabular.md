@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104617"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906057"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI（SSAS 表格）
   在表格模型中，KPI（关键绩效指标）用于根据目标值（由度量值或绝对值定义）度量某一值（由基础度量值定义）的性能。 本主题帮助表格模型作者对表格模型中的 KPI 有一个基本的了解。  
@@ -46,7 +46,7 @@ ms.locfileid: "48104617"
  状态阈值按下限和上限之间的范围或按固定值定义。 状态阈值在显示时含一个图形，可帮助用户轻松地确定与目标值相比基础值的状态。  
   
 ##  <a name="bkmk_example"></a> 示例  
- Adventure Works 的销售经理想要创建一个数据透视表，她可以使用该数据透视表快速显示销售人员是否满足针对给定期间（年）的销售定额。 对于每名销售人员，她希望该数据透视表显示以美元为单位的实际销售额、以美元为单位的销售定额以及一个简单的图形，该图形显示一个状态，指示每位销售人员是低于、等于还是高于其销售定额。 她希望能够按年对数据进行切片。  
+ Adventure Works 的销售经理想要创建一个数据透视表，她可以使用该数据透视表快速显示销售人员是否满足针对给定期间（年）的销售定额。 为每位销售人员，她希望显示中以美元为单位的实际销售额、 销售配额量中以美元为单位和显示状态的每个销售人员是下面、 等于还是高于其销售定额的简单图形形式显示该数据透视表。 她希望能够按年对数据进行切片。  
   
  为此，该销售经理登记请求其组织的 BI 解决方案开发人员的帮助，以便将一个 Sales KPI 添加到 AdventureWorks 表格模型。 该销售经理然后使用 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 连接到作为数据源的 Adventure Works 表格模型，并且创建了一个数据透视表，其中包含字段（度量值和 KPI）和切片器以便分析销售人员是否满足其定额。  
   
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |主题|Description|  
 |-----------|-----------------|  
-|[创建和管理 Kpi &#40;SSAS 表格&#41;](kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
+|[创建和管理 KPI（SSAS 表格）](kpis-ssas-tabular.md)|说明如何使用基础度量值、目标度量值和状态阈值创建 KPI。|  
   
 ## <a name="see-also"></a>请参阅  
- [度量值&#40;SSAS 表格&#41;](measures-ssas-tabular.md)   
- [透视&#40;SSAS 表格&#41;](perspectives-ssas-tabular.md)  
+ [度量值（SSAS 表格）](measures-ssas-tabular.md)   
+ [透视表（SSAS 表格）](perspectives-ssas-tabular.md)  
   
   

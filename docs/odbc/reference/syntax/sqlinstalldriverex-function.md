@@ -20,12 +20,12 @@ ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6e034ff8b17852b40a604beb8ce1d38bdd1612b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6bae692efdb1d89642eea52e499b0fb2800377
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802457"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169313"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 函数
 **符合性**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>注释  
  *LpszDriver*参数是中的关键字值对形式的属性列表。 每个对终止 null 字节，并且整个列表终止 null 字节。 （也就是说，两个 null 字节标记列表的末尾。）此列表的格式如下所示：  
   
- *驱动程序 desc* **\\**0Driver**=***驱动程序 DLL 文件名***\\**0 [安装程序**=***安装程序 DLL 文件名***\\**0]  
+ _驱动程序 desc_ **\\**0Driver**=**_驱动程序 DLL 文件名_**\\**0 [安装程序**=**_安装程序 DLL 文件名_<b>\\</b>0]  
   
- [*驱动程序 attr keyword1***=*** value1 ***\\**0] [* 驱动程序 attr keyword2***=*** value2 ***\\**0]...**\\**0  
+ [_驱动程序 attr keyword1_**=**_value1_<b>\\</b>0] [_驱动程序 attr keyword2_ **=** _value2_<b>\\</b>0]...<b> \\ </b>0  
   
  其中 \0 是 null 字节和*驱动程序 attr keywordn*是任何驱动程序属性关键字。 关键字必须出现在指定的顺序。 例如，假设用于格式化的文本的文件的驱动程序具有单独的驱动程序和安装程序 Dll，并可以使用具有.txt 和.csv 扩展名的文件。 *LpszDriver*此驱动程序的参数可能按如下所示：  
   

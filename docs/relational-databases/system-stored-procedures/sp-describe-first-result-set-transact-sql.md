@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 317defb8c3efd99274421f169424cc09ec4caf58
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705875"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072061"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -113,7 +113,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  名称、为 Null 性和数据类型可能不同。 如果**sp_describe_first_result_set**返回空结果集，保证是批处理执行将返回任何结果集。  
   
- 此保证假定在服务器上没有相关的架构更改。 在服务器上的相关的架构更改不包括创建临时表或表变量的时间之间的一个批处理中的**sp_describe_first_result_set**调用期间返回的结果集的时间执行，包括批处理 b。 所做的架构更改  
+ 此保证假定在服务器上没有任何相关的架构更改。 在服务器上的相关的架构更改不包括创建临时表或表变量的时间之间的一个批处理中的**sp_describe_first_result_set**调用期间返回的结果集的时间执行，包括批处理 b。 所做的架构更改  
   
  **sp_describe_first_result_set**在任何以下情况下返回错误。  
   

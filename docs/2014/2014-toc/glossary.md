@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085527"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120474"
 ---
 # <a name="glossary"></a>词汇表
   
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085527"
 |智能卡配置文件 (smart card profile)|在使用配置文件模板（只包括基于智能卡的证书模板）执行请求时创建的 Lifecycle Manager (CLM) 配置文件。|  
 |智能卡读卡器 (smart card reader)|计算机中安装的一种装置，支持使用智能卡实现增强的安全功能。|  
 |Smart Card Self Service Control|客户端计算机上安装的软件，使最终用户和管理员能够通过提供从客户端计算机到智能卡的连接来管理智能卡。|  
-|智能卡取消阻止 (smart card unblocking)|将智能卡与管理凭据绑定以便重置个人标识码 (PIN) 尝试计数器的操作。|  
+|智能卡取消阻止 (smart card unblocking)|操作的绑定将智能卡与管理凭据才能重置个人标识号 (PIN) 尝试计数器。|  
 |SMO|一种应用程序编程接口，支持将 SQL Server 管理整合到任何 COM 或 OLE 自动化应用程序中。|  
 |SMTP|TCP/IP 协议套件中的一个成员，管辖电子邮件在邮件传输代理之间的交换。|  
 |管理单元 (snap-in)|一种可以添加到由 Microsoft 管理控制台 (MMC) 支持的控制台的工具。 可以独自添加单独的管理单元；扩展管理单元只能添加用于扩展其他管理单元的功能。|  

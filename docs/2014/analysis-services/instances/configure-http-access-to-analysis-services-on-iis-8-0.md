@@ -11,12 +11,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eded16b19f9645444c8161e04c63c8a283673b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3282f801e8ced6ab51d0188e74eb854631c399c1
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108177"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120224"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问
   此文章介绍了如何设置用于访问 Analysis Services 实例的 HTTP 端点。 你可以通过配置 MSMDPUMP.dll（一种在 Internet Information Services (IIS) 中运行的 ISAPI 扩展，可以在客户端应用程序和 Analysis Services 服务器之间抽送数据）实现对 HTTP 的访问。 在您的 BI 解决方案需要以下功能时，此方法可替代用于连接到 Analysis Services 的方法：  
@@ -257,7 +257,7 @@ ms.locfileid: "48108177"
 |Windows 身份验证|向成员身份列表添加通过模拟或委托请求 Analysis Services 数据的 Windows 用户或组帐户。<br /><br /> 假设使用 Kerberos 约束的委派，唯一需要权限的帐户是请求访问的 Windows 用户和组帐户。 应用程序池标识不需要任何权限。|  
 |基本身份验证|向成员身份列表添加将在连接字符串中传递的 Windows 用户或组帐户。<br /><br /> 此外，如果通过连接字符串上的 `EffectiveUserName` 传递凭据，则应用程序池标识必须具有 Analysis Services 实例上的管理员权限。 在 SSMS 中，右键单击该实例&#124;**属性** &#124; **安全** &#124; **添加**。 输入应用程序池标识。 如果使用内置的默认标识，指定该帐户为**IIS AppPool\DefaultAppPool**。<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
- 有关设置权限的详细信息，请参阅[授予对对象和操作的访问权限 &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
+ 有关设置权限的详细信息，请参阅 [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)。  
   
 ##  <a name="bkmk_test"></a> 第 6 步：测试您的配置  
  针对 MSMDPUMP 的连接字符串语法是指向 MSMDPUMP.dll 文件的 URL。  
@@ -300,7 +300,7 @@ ms.locfileid: "48108177"
   
 ## <a name="see-also"></a>请参阅  
  [论坛帖子（使用 msmdpump 和基本身份验证进行 http 访问）](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [配置 Windows 防火墙以允许 Analysis Services 访问](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [授予对对象和操作的访问权限&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [IIS 身份验证方法](http://go.microsoft.com/fwlink/?LinkdID=208461)   
  [如何在 IIS 7 上设置 SSL](http://go.microsoft.com/fwlink/?LinkId=207562)  
