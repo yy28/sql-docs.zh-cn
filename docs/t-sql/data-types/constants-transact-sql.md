@@ -172,27 +172,27 @@ uniqueidentifier 常量是表示 GUID 的字符串。 可以使用字符或二�
 ## <a name="specifying-negative-and-positive-numbers"></a>指定负数和正数  
 若要指示一个数是正数还是负数，请对数值常量应用 + 或 - 一元运算符。 这将创建一个表示有符号数字值的表达式。 如果没有应用 + 或 - 一元运算符，数值常量将使用正数。
   
-已签名 integer 表达式：  
+有符号 integer 表达式：  
   
 ```sql
 +145345234
 -2147483648
 ```
-已签名 decimal 表达式：  
+有符号 decimal 表达式：  
   
 ```sql
 +145345234.2234
 -2147483648.10
 ```
   
-已签名 float 表达式：  
+有符号 float 表达式：  
   
 ```sql
 +123E-3
 -12E5
 ```
   
-已签名 money 表达式：  
+有符号 money 表达式：  
   
 ```sql
 -$45.56
