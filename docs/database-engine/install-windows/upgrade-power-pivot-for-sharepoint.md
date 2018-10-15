@@ -299,7 +299,7 @@ Get-PowerPivotSystemService
   
 3.  单击 **“受信任的数据访问接口”**。 您应看到 MSOLAP.5 (Microsoft OLE DB Provider for OLAP Services 11.0)。 如果升级了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 安装，您还将看到先前版本的 MSOLAP.4。  
   
-4.  有关详细信息，请参阅 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)。  
+4.  有关详细信息，请参阅 [将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)。  
   
  MSOLAP.4 被描述为“用于 OLAP Services 10.0 的 Microsoft OLE DB 数据访问接口”。 此版本可能是 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中与 Excel Services 一起安装的默认版本，也可能是 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本。 SharePoint 安装的默认版本不支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据访问。 必须具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本或更高版本才能连接到 SharePoint 上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿。 若要验证您是否具有 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 版本，请使用前一部分中介绍如何通过查看文件属性来验证版本的说明。  
   
