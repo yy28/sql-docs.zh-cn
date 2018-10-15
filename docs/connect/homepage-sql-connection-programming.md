@@ -5,18 +5,17 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: 6269a92ea3ad33ed4501856cc7745ac4f9fad4df
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e2c3da2ba71661602f69f85f5eb79ba6d550be9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087069"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633795"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>客户端编程到 Microsoft SQL Server 主页
 
@@ -270,7 +269,7 @@ SQL Server 的 Node.js 连接驱动程序是在 JavaScript 中实现的。 驱�
 
 |||
 | :-- | :-- |
-| [连接到与 Ruby SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小代码示例侧重于连接和查询 SQL Server。 |
+| [使用 Ruby 连接到 SQL 的概念证明](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | 小代码示例侧重于连接和查询 SQL Server。 |
 | [Azure SQL 数据库： 使用 Ruby 查询](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL 数据库示例。 |
 | [创建 Ruby 应用程序以在 MacOS 上使用 SQL Server](http://www.microsoft.com/sql-server/developer-get-started/ruby/mac/) | 配置信息，以及代码示例。 |
 | &nbsp; | <br /> |
