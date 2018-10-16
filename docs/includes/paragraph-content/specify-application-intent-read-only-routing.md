@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854389"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072331"
 ---
 ## <a name="specifying-application-intent"></a>指定应用程序意向
 
@@ -54,5 +54,5 @@ ApplicationIntent 关键字不适用于早期的只读数据库。
 
 多个连接使用只读路由不是所有可能会连接到同一只读副本。 对数据库同步进行更改或对服务器的路由配置进行更改可能导致客户端连接到不同的只读副本。 您可以确保所有只读请求连接到相同的只读副本。 确保通过此一致性*不*传递到某一可用性组侦听器**Server**连接字符串关键字。 而是指定只读实例的名称。
 
-只读路由可能会长于连接到主副本。 等待时间较长是因为只读路由首先会连接到主副本，然后查找最合适的可读辅助副本。 由于这些多个 staps，则应增加到你登录超时值为至少 30 秒。
+只读路由可能会长于连接到主副本。 等待时间较长是因为只读路由首先会连接到主副本，然后查找最合适的可读辅助副本。 由于这些多个 staps，应增加到至少 30 秒后你登录超时值。
 
