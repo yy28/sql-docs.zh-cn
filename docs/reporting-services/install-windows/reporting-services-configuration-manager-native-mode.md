@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d4433bee0e96b8baaa67c211040729b5d00f0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dbb43ba4b8595a02e2132bf1670bbe06884aee5
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743798"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085403"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 配置管理器（本机节点）
 
@@ -68,7 +68,7 @@ ms.locfileid: "47743798"
 
 1.  使用适合于您的 Microsoft Windows 版本的以下步骤：
 
-    - 从 Windows“开始”屏幕上，键入“Reporting”，然后从搜索结果中选择“Reporting Services 配置管理器”。
+    - 从 Windows“开始”屏幕上，键入 **Reporting** ，然后从搜索结果中选择 **“Reporting Services 配置管理器”** 。
 
     - 选择“开始”，依次指向“所有程序”、[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 和“配置工具”。
 

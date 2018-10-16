@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30c20b9232725ec41d8d6438c82ce18820181fee
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711735"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085043"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>打开和关闭报表（报表管理器）
   可以使用报表管理器来查看已经发布到报表服务器的报表。 默认情况下，所有的报表都以 HTML 形式打开。 在打开报表之后，可以将其导出，以便以其他应用程序格式进行查看。 如果报表中包含交互式功能，或者如果它是包含交互式数据的报表生成器报表，则可以单击相应的链接来查看其他报表或数据。  
@@ -39,7 +39,6 @@ ms.locfileid: "47711735"
      关闭报表并不会将其从浏览器缓存中删除。 必须关闭浏览器才能断开报表连接。  
   
 ## <a name="see-also"></a>另请参阅  
- [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  

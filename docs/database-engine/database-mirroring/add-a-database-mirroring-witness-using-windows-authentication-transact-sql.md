@@ -15,12 +15,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0569a8f94232ec31e96024e798da6027e0c695a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca1ecc06039f8bdfbf4516778a04f9c191544e45
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742315"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168883"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>使用 Windows 身份验证添加数据库镜像见证服务器 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "47742315"
   
 3.  连接到主体服务器并执行下面的语句：  
   
-     ALTER DATABASE <database_name> SET WITNESS =<server_network_address>  
+     ALTER DATABASE <database_name> SET WITNESS **=** <server_network_address>  
   
      其中，<database_name> 是要镜像的数据库的名称（此名称在两个伙伴上相同），<server_network_address> 是见证服务器实例的服务器网络地址。  
   
      服务器网络地址的语法如下：  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>://</b>_\<system-address>_<b>:</b>_\<port>_  
   
      其中，\<system-address> 是明确标识目标计算机系统的字符串，\<port> 是伙伴服务器实例的镜像终结点使用的端口号。 有关详细信息，请参阅 [指定服务器网络地址（数据库镜像）](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)。  
   

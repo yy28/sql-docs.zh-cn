@@ -13,12 +13,12 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba25c8b70ad39c073c713a79381b058ece4599ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749766"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906189"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 配置单元任务
   使用 Hadoop 配置单元任务可以在 Hadoop 群集上运行配置单元脚本。  
