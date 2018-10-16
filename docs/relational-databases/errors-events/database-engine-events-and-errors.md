@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088599"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646185"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 表包含错误消息号和对应说明，此说明即 sys.messages 目录视图中的错误消息的正文。 
@@ -1378,6 +1375,7 @@ ms.locfileid: "39088599"
 |   2812    |   16  |   否  |   找不到存储过程 '%.*ls'。    |
 |   2813    |   16  |   否  |   此版本的 SQL Server 不支持 %.*ls。   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   否  |   检测到可能无限的重新编译: SQLHANDLE %hs，PlanHandle %hs，起始偏移量 %d，结束偏移量 %d。 上次重新编译的原因为 %d。   |
+|   2628    |   16  |   否  |   字符串或二进制数据将在表“%.*ls”，列“%.* ls”中被截断。 截断值：“%.*ls”。    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>错误 3000 - 3999

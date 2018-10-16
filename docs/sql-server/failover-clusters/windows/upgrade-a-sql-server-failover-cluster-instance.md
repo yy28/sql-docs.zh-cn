@@ -41,7 +41,7 @@ ms.locfileid: "47783725"
   
     -   仅允许在某些方案中更改故障转移群集的版本。 有关详细信息，请参阅 [支持的版本升级](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
   
--   在故障转移群集升级过程中，停机时间限制为故障转移时间和运行升级脚本所需的时间。 在开始进行升级过程之前，如果遵循下方的故障转移群集滚动升级过程并满足所有节点的所有先决条件，则故障时间将最短。 在内存优化表处于使用中时升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会耗费一些额外的时间。 有关详细信息，请参阅 [Plan and Test the Database Engine Upgrade Plan](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
+-   在故障转移群集升级过程中，停机时间限制为故障转移时间和运行升级脚本所需的时间。 在开始进行升级过程之前，如果遵循下方的故障转移群集滚动升级过程并满足所有节点的所有先决条件，则故障时间将最短。 在内存优化表处于使用中时升级 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 会耗费一些额外的时间。 有关详细信息，请参阅 [计划并测试数据库引擎升级计划](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)。  
   
 ## <a name="prerequisites"></a>必备条件  
  开始之前，请仔细阅读以下重要信息：  
