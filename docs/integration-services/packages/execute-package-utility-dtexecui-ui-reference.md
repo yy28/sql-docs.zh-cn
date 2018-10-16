@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ae6db2bfa011defe472054b98243062b5bc93d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae61a794d9eea4a9fbd0aae72ec0bcdd1d636988
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669425"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169107"
 ---
 # <a name="execute-package-utility-dtexecui"></a>执行包实用工具 (dtexecui)
   使用 **“执行包实用工具”** 来运行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 该实用工具运行存储在以下三个位置之一的包： [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统。 此用户界面是使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **命令提示工具运行包的替代方法，可从** 打开，或者通过在命令提示符下键入 **dtexecui** 打开。  
@@ -283,7 +283,7 @@ ms.locfileid: "47669425"
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="logging-page"></a>“日志记录”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 */LOGGER***classid 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“日志记录”** 页，将包设置为可在运行时使用日志提供程序。 提供包日志提供程序类型和连接到日志的连接字符串。 对于每个日志提供程序项，在命令提示符下都会添加一个 **/LOGGER**_classid_ 选项。  
   
 ### <a name="options"></a>选项  
  **日志提供程序**  
@@ -302,7 +302,7 @@ ms.locfileid: "47669425"
  单击此项可关闭“执行包实用工具”对话框。  
   
 ## <a name="set-values-page"></a>“设置值”页  
- 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 */SET***propertypath;value 选项。  
+ 可以使用 **“执行包实用工具”** 对话框的 **“设置值”** 页，通过键入属性路径和属性值来设置包、可执行文件、连接、变量和日志提供程序的属性值。 对于每个路径项，在命令提示符下都会添加一个 **/SET**_propertypath;value_ 选项。  
   
 ### <a name="options"></a>选项  
  **属性路径**  

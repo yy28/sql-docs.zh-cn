@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921322126bc11642bd2140784efb6ea4ae6a8550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703765"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085443"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -67,7 +67,7 @@ ms.locfileid: "47703765"
   
  其中的某些任务可能需要由报表服务器的管理员为您完成。 若要了解有关在报表服务器上执行的任务的详细信息，请参阅 [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)。  
   
- 报表管理器通常包含文件夹、报表、数据源和报表模型，以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。 有关详细信息，请参阅 [使用“我的报表”（报表生成器和 SSRS）](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)。  
+ 报表管理器通常包含文件夹、报表、数据源和报表模型，以及“我的报表”文件夹。 “我的报表”是一个个人工作区，您可以使用它来存储和处理自己的报表。 其他报表服务器文件夹都是公用文件夹，通常要求用户具有高级权限才能添加或修改文件夹内容。 您可以在“我的报表”内创建文件夹，以便进一步组织您的报表。  
   
  报表管理器在 Reporting Services HTML 查看器中显示报表。 该 HTML 查看器提供了用于在 HTML 中查看报表的框架，并且包括报表工具栏、参数部分、凭据部分和文档映射。 报表工具栏提供了页面导航、缩放、刷新、搜索、导出、打印和数据馈送功能。 在通过 URL 访问报表时，报表工具栏也会在浏览器窗口中显示于报表顶部。 打印功能是可选的，并且必须由管理员启用。 如果启用了打印功能，报表工具栏上将显示一个打印机图标。 以下各图显示了“报表管理器”窗口中的报表工具栏和报表工具栏功能概览。  
   
@@ -141,12 +141,6 @@ ms.locfileid: "47703765"
   
  [使用浏览器查找和查看报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  介绍如何使用 URL 来查找和查看报表。  
-  
- [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
- 介绍如何使用报表管理器中的搜索功能定位报表服务器上的项。  
-  
- [使用“我的报表”（报表生成器和 SSRS）](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)  
- 介绍如何使用“我的报表”文件夹来作为存储和处理自己的报表的个人工作区。  
   
  [在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  介绍如何在创建或更新报表时预览这些报表。  

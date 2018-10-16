@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749488"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169207"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  类型为 sysname 的可选标量表达式，表示测试权限的安全对象子实体的名称。 默认值为 NULL。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 '[sub name]' 形式的括号****。 请改用 'sub name'****。  
+>  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 直到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的版本中，子安全对象不能使用 **'[**_sub name_**]'** 形式的括号。 请改用 **'**_sub name_**'**。  
   
  *sub-securable_class*  
  类型为 nvarchar(60) 的可选标量表达式，表示测试权限的安全对象子实体的类。 默认值为 NULL。  

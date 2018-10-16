@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818495"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905768"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - 使用 PIVOT 和 UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ FOR
 ## <a name="basic-pivot-example"></a>简单 PIVOT 示例  
  下面的代码示例生成一个两列四行的表。  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  以下代码显示相同的结果，该结果经过透视以使 `DaysToManufacture` 值成为列标题。 提供一个列表示三 `[3]` 天，即使结果为 `NULL`。  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>复杂 PIVOT 示例  
  可能会用到 `PIVOT` 的常见情况是：需要生成交叉表格报表以汇总数据。 例如，假设需要在 `PurchaseOrderHeader` 示例数据库中查询 `AdventureWorks2014` 表以确定由某些特定雇员所下的采购订单数。 以下查询提供了此报表（按供应商排序）。  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  将在 `EmployeeID` 列上透视此嵌套 select 语句返回的结果。  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` 将与 `PIVOT` 执行几乎完全相反的操作，将列转换为行。 假设以上示例中生成的表在数据库中存储为 `pvt`，并且您需要将列标识符 `Emp1`、`Emp2`、`Emp3`、`Emp4` 和 `Emp5` 旋转为对应于特定供应商的行值。 这意味着必须标识另外两个列。 包含要旋转的列值（`Emp1`、`Emp2`...）的列将被称为 `Employee`，将保存当前位于待旋转列下的值的列被称为 `Orders`。 这些列分别对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] 定义中的 pivot_column 和 value_column。 以下为该查询。  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

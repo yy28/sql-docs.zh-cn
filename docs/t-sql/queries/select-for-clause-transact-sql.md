@@ -22,12 +22,12 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cec143edb47f54e63d18a07991cb3b1d3c9ab7a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db7176da41eec27cfffc4db5a9cbcc0835196a9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817075"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906267"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ JSON
   
 -   必须运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句，以使用 NO_BROWSETABLE 选项打开浏览模式：  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON  
     ```  
   
@@ -123,7 +123,7 @@ JSON
   
 2.  在 SampleDB 数据库中，创建均包含名为 c1 的列的 tleft 表和 tright 表。 对 tleft 表中的 c1 列定义唯一索引，并将此列设置为接受 Null 值。 为此，请在相应的查询窗口中运行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql
     CREATE TABLE tleft(c1 INT NULL UNIQUE) ;  
     GO   
     CREATE TABLE tright(c1 INT NULL) ;  
@@ -132,7 +132,7 @@ JSON
   
 3.  在 tleft 表和 tright 表中插入多个值。 请确保在 tleft 表中插入一个 Null 值。 为此，请在查询窗口中运行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql
     INSERT INTO tleft VALUES(2) ;  
     INSERT INTO tleft VALUES(NULL) ;  
     INSERT INTO tright VALUES(1) ;  
@@ -143,14 +143,14 @@ JSON
   
 4.  开启 NO_BROWSETABLE 选项。 为此，请在查询窗口中运行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql
     SET NO_BROWSETABLE ON ;  
     GO  
     ```  
   
 5.  通过在 SELECT 查询中使用外部联接语句来访问 tleft 表和 tright 表中的数据。 请确保 tleft 表位于外部联接语句的内侧。 为此，请在查询窗口中运行下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   
-    ```  
+    ```sql
     SELECT tleft.c1   
     FROM tleft   
     RIGHT JOIN tright   
@@ -223,7 +223,7 @@ JSON
   
  以下示例指定具有 `FOR XML AUTO` 和 `TYPE` 选项的 `XMLSCHEMA`。 由于有 `TYPE` 选项，因此结果集将作为 xml 类型返回到客户端。 `XMLSCHEMA` 选项指定在所返回的 XML 数据中包括内联 XSD 架构，而 `ELEMENTS` 选项指定 XML 结果是以元素为中心的。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.BusinessEntityID, FirstName, LastName, PhoneNumber AS Phone  

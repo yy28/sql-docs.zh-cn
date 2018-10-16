@@ -40,12 +40,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cbe41975f57e0294d936e0b8554b5d936f1474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c960d3c0477420868e0d1cfaee50ee51252ef9
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839995"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906508"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,7 +208,7 @@ ORDER BY order_by_expression
 #### <a name="a-specifying-a-single-column-defined-in-the-select-list"></a>A. 指定在选择列表中定义的单个列  
  以下示例按数值 `ProductID` 列对结果集进行顺序。 由于未指定特定的排序顺序，将使用默认顺序（升序）。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -219,7 +219,7 @@ ORDER BY ProductID;
 #### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. 指定未在选择列表中定义的列  
  以下示例按未包含在选择列表中的列对结果集进行排序，但 FROM 子句中指定的表中定义了该列。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name, Color  
@@ -231,7 +231,7 @@ ORDER BY ListPrice;
 #### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. 将别名指定为排序列  
  以下示例将列别名 `SchemaName` 指定为排序顺序列。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT name, SCHEMA_NAME(schema_id) AS SchemaName  
@@ -244,7 +244,7 @@ ORDER BY SchemaName;
 #### <a name="d-specifying-an-expression-as-the-sort-column"></a>D. 将表达式指定为排序列  
  以下示例将表达式作为排序列。 表达式是使用 DATEPART 函数定义的，以便按员工的雇用年份对结果集进行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, JobTitle, HireDate  
@@ -258,7 +258,7 @@ ORDER BY DATEPART(year, HireDate);
 #### <a name="a-specifying-a-descending-order"></a>A. 指定降序  
  以下示例按 `ProductID` 数值列降序对结果集进行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -270,7 +270,7 @@ ORDER BY ProductID DESC;
 #### <a name="b-specifying-an-ascending-order"></a>B. 指定升序  
  以下示例按 `Name` 列升序对结果集进行排序。 字符按字母顺序排序，而不是数值顺序。 也就是说，10 排在 2 之前。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, Name FROM Production.Product  
@@ -282,7 +282,7 @@ ORDER BY Name ASC ;
 #### <a name="c-specifying-both-ascending-and-descending-order"></a>C. 同时指定升序和降序  
  以下示例按两个列对结果集进行排序。 先按 `FirstName` 列升序对查询结果集进行排序，然后按 `LastName` 列降序进行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT LastName, FirstName FROM Person.Person  
@@ -294,7 +294,7 @@ ORDER BY FirstName ASC, LastName DESC ;
 ###  <a name="Collation"></a>指定排序规则  
  以下示例说明如何在 ORDER BY 子句中指定排序规则以更改查询结果的返回顺序。 将创建一个表，其中包含一个使用不区分大小写和重音的排序规则定义的列。 插入一些具有不同大小写和重音的值。 由于未在 ORDER BY 子句中指定排序规则，在对值进行排序时，第一个查询将使用列排序规则。 在第二个查询中，在 ORDER BY 子句中指定了区分大小写和重音的排序规则，这将改变行的返回顺序。  
   
-```  
+```sql
 USE tempdb;  
 GO  
 CREATE TABLE #t1 (name nvarchar(15) COLLATE Latin1_General_CI_AI)  
@@ -315,7 +315,7 @@ ORDER BY name COLLATE Latin1_General_CS_AS;
 ###  <a name="Case"></a>指定条件顺序  
  以下示例在 ORDER BY 子句中使用 CASE 表达式，以根据给定的列值有条件地确定行的排序顺序。 在第一个示例中，会计算 `SalariedFlag` 表中 `HumanResources.Employee` 列的值。 `SalariedFlag` 设置为 1 的员工将按 `BusinessEntityID` 以降序顺序返回。 `SalariedFlag` 设置为 0 的员工将按 `BusinessEntityID` 以升序顺序返回。 在第二个示例中，当 `TerritoryName` 列等于“United States”时，结果集会按 `CountryRegionName` 列排序，对于所有其他行则按 `CountryRegionName` 排序。  
   
-```  
+```sql
 SELECT BusinessEntityID, SalariedFlag  
 FROM HumanResources.Employee  
 ORDER BY CASE SalariedFlag WHEN 1 THEN BusinessEntityID END DESC  
@@ -324,7 +324,7 @@ GO
   
 ```  
   
-```  
+```sql
 SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName  
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
@@ -336,7 +336,7 @@ ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName
 ###  <a name="Rank"></a>在排名函数中使用 ORDER BY  
  以下示例在 ROW_NUMBER、RANK、DENSE_RANK 和 NTILE 排名函数中使用 ORDER BY 子句。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -362,7 +362,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. 指定整数常量以提供 OFFSET 和 FETCH 值  
  以下示例将一个整数常量指定为 OFFSET 和 FETCH 子句的值。 第一个查询返回所有按 `DepartmentID` 列排序的行。 将此查询返回的结果与后面的两个查询的结果进行比较。 下一个查询使用 `OFFSET 5 ROWS` 子句跳过前 5 行，然后返回所有其余行。 最终查询使用 `OFFSET 0 ROWS` 子句从第一行开始，然后使用 `FETCH NEXT 10 ROWS ONLY` 将返回的行限制为排序的结果集中的 10 行。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Return all rows sorted by the column DepartmentID.  
@@ -387,7 +387,7 @@ ORDER BY DepartmentID
 #### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. 指定变量以提供 OFFSET 和 FETCH 值  
  下面的示例声明 `@StartingRowNumber` 和 `@FetchRows` 变量，并在 OFFSET 和 FETCH 子句中指定这些变量。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Specifying variables for OFFSET and FETCH values    
@@ -404,7 +404,7 @@ ORDER BY DepartmentID ASC
 #### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. 指定表达式以提供 OFFSET 和 FETCH 值  
  下面的示例使用 `@StartingRowNumber - 1` 表达式指定 OFFSET 值，并使用 `@EndingRowNumber - @StartingRowNumber + 1` 表达式指定 FETCH 值。 另外，还指定了查询提示 OPTIMIZE FOR。 在编译和优化查询时，可以使用此提示为局部变量提供特定的值。 仅在查询优化期间使用该值，在查询执行期间不使用该值。 有关详细信息，请参阅[查询提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -423,7 +423,7 @@ OPTION ( OPTIMIZE FOR (@StartingRowNumber = 1, @EndingRowNumber = 20) );
 #### <a name="d-specifying-a-constant-scalar-subquery-for-offset-and-fetch-values"></a>D. 指定常数标量子查询以提供 OFFSET 和 FETCH 值  
  以下示例使用常数标量子查询定义 FETCH 子句的值。 该子查询从 `PageSize` 表的 `dbo.AppSettings` 列中返回单个值。  
   
-```  
+```sql
 -- Specifying a constant scalar subquery  
 USE AdventureWorks2012;  
 GO  
@@ -443,7 +443,7 @@ ORDER BY DepartmentID ASC
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 在单个事务中运行多个查询  
  以下示例说明一种实现分页解决方案的方法，以确保在查询的所有请求中返回稳定的结果。 查询在使用快照隔离级别的单个事务中执行，同时，ORDER BY 语句中指定的列确保列的唯一性。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
   
@@ -487,7 +487,7 @@ GO
 ###  <a name="Union"></a>将 ORDER BY 与 UNION、EXCEPT 和 INTERSECT 一起使用  
  当查询使用 UNION、EXCEPT 或 INTERSECT 运算符时，必须在语句末尾指定 ORDER BY 子句，并对合并的查询结果进行排序。 以下示例返回所有红色或黄色的产品，并按 `ListPrice` 列对合并的列表进行排序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Color, ListPrice  
@@ -505,7 +505,7 @@ ORDER BY ListPrice ASC;
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>示例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  以下示例演示按 `EmployeeKey` 数值列升序对结果集进行排序。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -515,7 +515,7 @@ ORDER BY EmployeeKey;
   
  以下示例按 `EmployeeKey` 数值列降序对结果集进行排序。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -525,7 +525,7 @@ ORDER BY EmployeeKey DESC;
   
  以下示例按 `LastName` 列对结果集进行排序。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  
@@ -535,7 +535,7 @@ ORDER BY LastName;
   
  以下示例按照两列进行排序。 此查询首先按 `FirstName` 列以升序排序，然后按 `LastName` 列以降序对常见 `FirstName` 值降序排序。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, FirstName, LastName FROM DimEmployee  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 536e0a5e46c6d0650c68ddc41f492365895b31c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5585266d4c326c00a1211c1148f80d2a875a00ba
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617415"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905651"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>缓存共享数据集 (SSRS)
   可以将用于共享数据集的查询结果复制到缓存，以便为多个报表提供一致的数据并且缩短数据集查询的响应时间。 与报表类似，您可以在首次使用时或通过指定一个计划，将共享数据集配置为存入缓存。  
@@ -51,7 +51,7 @@ ms.locfileid: "47617415"
   
  在特定参数组合的查询结果处于缓存中时，为进行处理而启动且包括对使用这些参数值的共享数据集的引用的每个报表都将使用缓存的数据。  
   
- 您可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[共享数据集的“缓存”属性页（报表管理器）](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
+ 你可以指定数据在缓存中保留多长时间后过期。 有关详细信息，请参阅[共享数据集的“缓存”属性页（报表管理器）](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)。  
   
 ## <a name="preloading-the-cache"></a>预加载缓存  
  您可以通过创建缓存刷新计划预加载缓存。 使用刷新计划，您可以通过特定于项的计划或共享计划来指定刷新缓存的频率。 为了避免同一项有多个缓存条目，您指定的计划应该允许有足够的时间来对外部数据源执行查询处理。 例如，如果查询需要 20 分钟来运行，则刷新计划应大于 20 分钟。 有关更多信息，请参见 [Schedules](../../reporting-services/subscriptions/schedules.md)。  
