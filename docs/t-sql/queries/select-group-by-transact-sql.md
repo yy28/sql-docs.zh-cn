@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf4f93dfb52177e59e1a283b13236a6a029725c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd0f0157f1f3f0c684dcb8f07af725b97929c10f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654195"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906017"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -310,19 +310,19 @@ NULL 值：
  
 -   下面的示例生成 4097 (2<sup>12</sup> + 1) 个分组集，将会失败。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
 -   下面的示例生成 4097 (2<sup>12</sup> + 1) 个组，将会失败。 `CUBE ()` 和 `()` 分组集会生成一个总计行，而且将不删除重复的分组集。  
   
-    ```  
+    ```sql
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
 -   此示例使用向后兼容语法。 它生成 8192 (2<sup>13</sup>) 个分组集，将会失败。  
   
-    ```  
+    ```sql
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
