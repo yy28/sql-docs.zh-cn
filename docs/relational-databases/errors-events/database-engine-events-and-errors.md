@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646185"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100538"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 表包含错误消息号和对应说明，此说明即 sys.messages 目录视图中的错误消息的正文。 
@@ -846,7 +846,7 @@ ms.locfileid: "47646185"
 |   1732    |   16  |   否  |   无法在表 '%.* ls' 中创建稀疏列集 '%.*ls'，因为一个表不能包含多个稀疏列集。 请修改该语句以便仅将一个列指定为 COLUMN_SET FOR ALL_SPARSE_COLUMNS。   |
 |   1733    |   16  |   否  |   无法在表 '%.* ls' 中创建稀疏列集 '%.*ls'，因为稀疏列集必须是可为 Null 的 xml 列。 请修改列定义以允许 Null 值。  |
 |   1734    |   16  |   否  |   因为表 '%.*ls' 已包含一个或多个稀疏列，所以无法在该表中创建稀疏列集 '%.* ls'。 如果一个表包含一个稀疏列，则无法将稀疏列集添加到该表。   |
-|   1736    |   16  |   否  |   无法在 CHECK 约束或计算列定义中引用表 '%.* ls' 的列 '%.*ls'，因为该列为稀疏列集。 无法在 CHECK 约束或计算列定义中引用稀疏列集。 |
+|   1736    |   16  |   否  |   无法在 CHECK 约束或计算列定义中引用表 '%.* ls' 的列 '%.*ls'，因为该列为稀疏列集。 无法在 CHECK 约束或计算列定义中引用稀疏列集。   |
 |   1738    |   10  |   否  |   无法创建只包含一个列集列、不包含任何非计算列的表 '%.*ls'。    |
 |   1750    |   10  |   否  |   无法创建约束。 请参阅前面的错误消息。   |
 |   1752    |   16  |   否  |   表 '%.* ls' 中的列 '%.*ls' 对于创建默认约束无效。   |
