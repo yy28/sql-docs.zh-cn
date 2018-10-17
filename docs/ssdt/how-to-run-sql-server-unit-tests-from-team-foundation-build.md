@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797344"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  
@@ -118,7 +115,7 @@ ms.locfileid: "39087139"
   
 3.  右键单击名为“app.config 的副本”的文件，然后单击“重命名”。  
   
-4.  键入 BuildComputer***.sqlunitttest.config* 并按 ENTER 键，其中 BuildComputer 是你的生成代理运行所在计算机的名称。  
+4.  键入 _BuildComputer_**.sqlunitttest.config** 并按 ENTER，其中 *BuildComputer* 是你的生成代理运行所在计算机的名称。  
   
 5.  双击 BuildComputer.sqlunitttest.config。  
   
@@ -277,7 +274,7 @@ ms.locfileid: "39087139"
   
 1.  在团队资源管理器中，展开团队项目节点，展开“生成”节点，右键单击要运行的生成定义，然后单击“使新生成入队”。  
   
-    “**Queue Build {***TeamProjectName***}**”对话框将显示，并带有所有现有的生成类型列表。  
+    此时将显示“**将生成 {**_TeamProjectName_**}** 排队”对话框，其中包含所有现有生成类型的列表。  
   
 2.  如果需要，在“生成定义”中单击新生成定义。  
   
