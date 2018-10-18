@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - association [data mining]
 - market basket analysis
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 975e989be25dce3e51a3563c91fe43beac745a3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163379"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049747"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>购物篮分析（Excel 表分析工具）
   ![购物篮工具](media/tat-shopbskt.gif "购物篮工具")  
@@ -126,7 +123,7 @@ ms.locfileid: "37163379"
 |概率|显示此规则为正确的概率。|  
 |支持|指示现有数据中的事例数，这些事例为此规则提供证据。|  
 |规则值|如果为购物篮中的项提供一个金额值，此列将根据这些项的花费计算该预测的价值。|  
-|提升|指示第一列中的项与第二列中的项之间的关联的强度。 它也称为*重要性*。<br /><br /> 提升为 0 表示没有关联。 正值意味着第一列中的项预测第二列中的项。 数字越大，关联越强。|  
+|提升|指示第一列中的项与第二列中的项之间的关联的强度。 ョ 嘿 *重要性*。<br /><br /> 提升为 0 表示没有关联。 正值意味着第一列中的项预测第二列中的项。 数字越大，关联越强。|  
   
 ## <a name="related-tools"></a>相关工具  
  Excel 数据挖掘客户端是一个独立的外接程序，它提供了更高级的数据挖掘功能，还包含一个用于执行关联分析的向导。 有关详细信息，请参阅[关联向导&#40;Excel 数据挖掘客户端&#41;](associate-wizard-data-mining-client-for-excel.md)。  
