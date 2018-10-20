@@ -14,12 +14,12 @@ ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8ced7cfaef647fb8aaa93a477c69f1d690d0328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9ed22ac35505515bfd1f4f1863bb55c59f70bef
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213443"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460592"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>为合并转换和合并联接转换排序数据
   在 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]中，合并转换和合并联接转换要求其输入为已排序的数据。 输入数据必须已经过物理排序，且必须对源或上游转换中的输出和输出列设置排序选项。 如果排序选项指示数据是已排序的，而数据实际上不是已排序的，则合并或合并联接操作的结果将是不可预知的。  
@@ -49,14 +49,14 @@ ms.locfileid: "48213443"
 ## <a name="setting-sort-options-on-the-data"></a>为数据设置排序选项  
  必须为向合并转换和合并联接转换提供数据的源或上游转换设置两个重要的排序属性：  
   
--   输出的 `IsSorted` 属性，指示数据是否已排序。 此属性必须设置为`True`。  
+-   输出的 `IsSorted` 属性，指示数据是否已排序。 此属性必须设置为 `True`。  
   
     > [!IMPORTANT]  
-    >  值设置`IsSorted`属性设置为`True`不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。  
+    >  将 `IsSorted` 属性的值设置为 `True` 时将不会对数据进行排序。 此属性仅向下游组件提示数据之前已经过排序。  
   
--   `SortKeyPosition`输出列的属性，指示列是否已排序、 列的排序顺序以及多个列的排序顺序的序列。 必须为已排序数据的每一列设置此属性。  
+-   输出列的 `SortKeyPosition` 属性，指示单个列是否已排序、其排序顺序以及多个列的排序顺序。 必须为已排序数据的每一列设置此属性。  
   
- 如果使用排序转换对数据进行排序，则排序转换将按合并转换或合并联接转换的要求设置这两个属性。 排序转换的设置，即`IsSorted`到其输出的属性`True`，并设置`SortKeyPosition`其输出列的属性。  
+ 如果使用排序转换对数据进行排序，则排序转换将按合并转换或合并联接转换的要求设置这两个属性。 即，排序转换将其输出的 `IsSorted` 属性设置为 `True`，并设置其输出列的 `SortKeyPosition` 属性。  
   
  但是，如果不使用排序转换对数据进行排序，则必须对源或上游转换手动设置这些排序属性。 若要对源或上游转换手动设置这些排序属性，请使用以下过程。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "48213443"
 6.  单击**\<组件名称 > 输出**，并设置`IsSorted`属性设置为`True`。  
   
     > [!NOTE]  
-    >  如果你手动设置`IsSorted`到输出属性`True`和数据未排序，那里可能会丢失数据或下游合并联接转换的错误数据比较运行包时。  
+    >  如果手动将输出的 `IsSorted` 属性设置为 `True`且没有对数据进行排序，则当你运行该包时，可能会在下游合并或合并联接转换中产生缺失数据或错误数据比较。  
   
 7.  展开 **“输出列”**。  
   
-8.  单击你想要表示的列进行排序，并设置其`SortKeyPosition`属性和非零整数值遵循以下准则：  
+8.  单击要指示为已排序的列，并根据下列准则将其 `SortKeyPosition` 属性设置为非零的整数：  
   
     -   该整数值必须表示一个数值序列，从 1 开始，并按 1 递增。  
   
@@ -93,13 +93,13 @@ ms.locfileid: "48213443"
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
-     对于此语句，将设置`SortKeyPosition`属性的每个列，如下所示：  
+     对于此语句，您可以为每一列按如下所示设置 `SortKeyPosition` 属性：  
   
     -   将 ColumnA 的 `SortKeyPosition` 属性设置为 1。 这表示 ColumnA 是第一个要排序的列，并且是以升序排序。  
   
     -   将 ColumnB 的 `SortKeyPosition` 属性设置为 -2。 这表示 ColumnB 是第二个要排序的列，并且是以降序排序  
   
-    -   设置`SortKeyPosition`属性 ColumnC 设置为 3。 这表示 ColumnC 是第三个要排序的列，并且是以升序排序。  
+    -   将 ColumnC 的 `SortKeyPosition` 属性设置为 3。 这表示 ColumnC 是第三个要排序的列，并且是以升序排序。  
   
 9. 对每个已排序的列，重复步骤 8。  
   

@@ -14,19 +14,19 @@ ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a275b540d6199183475298e6a32940ba272f9bc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e2535d1d0b05cd89fc2648c0be858fbe77ea2eb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072447"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460532"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure 资源管理器连接管理器
-借助 Azure 资源管理器连接管理器，SSIS 包能够使用[服务主体](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)管理 Azure 资源。
+借助 Azure 资源管理器连接管理器，SSIS 包能够使用[服务主体](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)管理 Azure 资源。
 
 若要创建和配置 Azure 资源管理器连接管理器，请执行以下步骤：
 
 1. 在“添加 SSIS 连接管理器”  对话框中，选择“AzureResourceManager”，然后单击“添加”。
-2. 在“Azure 资源管理器连接管理器编辑器”对话框中，为服务主体指定“应用程序 ID”、“应用程序密钥”和“租户 ID”。 有关这些属性的详细信息，请参阅[这篇](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)文章。
+2. 在“Azure 资源管理器连接管理器编辑器”对话框中，为服务主体指定“应用程序 ID”、“应用程序密钥”和“租户 ID”。 有关这些属性的详细信息，请参阅[这篇](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)文章。
 3. 单击 **“确定”** 关闭对话框。
 4. 你可以看到你在“属性”  窗口中创建的连接管理器的属性。

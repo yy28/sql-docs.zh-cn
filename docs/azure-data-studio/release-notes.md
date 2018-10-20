@@ -4,22 +4,36 @@ description: Azure Data Studio 发行说明
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072301"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411194"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 发行说明
 
-**[下载年 9 月*正式发布*(GA) 推出 ！](download.md)**
+**[下载年 10 月版本 ！](download.md)**
+
+## <a name="october-2018-october-release"></a>2018 年 10 月 （年 10 月发行版）
+
+发布日期： 2018 年 10 月 18 日  
+版本： 1.1.3
+
+- 介绍 Azure 资源浏览器来浏览 Azure SQL 数据库
+- 提高对象资源管理器和查询编辑器连接稳定性
+- SQL 代理扩展的改进
+- 更新到[SQL Server 2019 预览版扩展](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>Bug 修复
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="september-2018-september-ga-release"></a>2018 年 9 月 （9 月 GA 版）
 

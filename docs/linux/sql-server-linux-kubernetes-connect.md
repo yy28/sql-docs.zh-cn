@@ -10,33 +10,32 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6092f15fe64c96ed004d352408ae6cdac034def9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852155"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356098"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>连接到 SQL Server Alwayson 可用性组在 Kubernetes 上
 
-若要连接到 SQL Server 实例上的 Kubernetes 群集的容器中，创建[负载平衡器服务](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 负载均衡器将转发到 pod 正在运行的 SQL Server 实例的 IP 地址的请求。
+若要连接到 SQL Server 实例上的 Kubernetes 群集的容器中，创建[负载平衡器服务](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 负载均衡器是一个终结点。 它保留的 IP 地址，并将转发到 pod 正在运行的 SQL Server 实例的 IP 地址的请求。
 
-若要连接到可用性组副本，请创建另一副本类型的服务。 您所见的不同类型的副本中的服务示例[sql server 示例](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)。
+若要连接到可用性组副本，请创建另一副本类型的服务。 您所见的不同类型的副本中的服务示例[sql 的服务器的示例/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)。
 
 * `ag1-primary` 指向主副本。
-* `ag1-secondary-sync` 指向以同步辅助副本。
-* `ag1-secondary-async` 指向以异步辅助副本。
+* `ag1-secondary` 指向任何辅助副本。
 
-如果存在多个相同类型的辅助副本，Kubernetes 会将你的连接路由到以轮循机制方式的不同副本。
+如果有多个辅助副本，Kubernetes 会将你的连接路由到以轮循机制方式的不同副本。
 
 ## <a name="create-a-load-balancer-service"></a>创建负载平衡器服务
 
-若要创建主副本的负载均衡器服务，请将复制`ag1-primary.yaml`从[sql server 示例]()和更新可用性组。
+若要创建的主和副本的负载均衡器服务，请将复制[ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml)从[sql server 示例](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file)和更新可用性组。
 
-以下命令适用于你的群集的.yaml 文件：
+以下命令将应用从配置`.yaml`到群集的文件：
 
 ```kubectl
-kubectl apply -f ag1-primary.yaml
+kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
 ## <a name="get-the-ip-address-for-your-load-balancer-service"></a>为负载均衡器服务获取的 IP 地址

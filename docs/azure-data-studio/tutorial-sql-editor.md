@@ -4,24 +4,24 @@ description: 本教程演示简化使用 T-SQL 在 Azure Data Studio 中的主�
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26189fff0623d5df47e4481971ad4b898b67305c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2a517b1efb6a86d70bd05f9a1418792c0b61098
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038036"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355928"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>教程： 使用 TRANSACT-SQL 编辑器来创建数据库对象， [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 创建并运行查询，存储的过程、 脚本等是数据库专业人员的核心任务。 本教程演示如何在 T-SQL 编辑器中创建数据库对象的主要功能。
 
-在本教程中，了解如何使用[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]到：
+您可以在本教學課程中，了解如何使用 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 來完成下列工作：
 > [!div class="checklist"]
 > * 搜索数据库对象
 > * 编辑表数据 

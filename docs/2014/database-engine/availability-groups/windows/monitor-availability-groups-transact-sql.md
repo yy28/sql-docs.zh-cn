@@ -17,12 +17,12 @@ ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b85c611b01727c21059d43d04cb65134c7f2fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190177"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460964"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>监视可用性组 (Transact-SQL)
   为了使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)]来监视可用性组和副本及关联的数据库， [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 提供了一组目录视图和动态管理视图及服务器属性。 通过使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 语句，您可以使用这些视图监视可用性组及其副本和数据库。 为给定可用性组返回的信息取决于您连接到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例承载的是主副本还是辅助副本。  
@@ -80,7 +80,7 @@ ms.locfileid: "48190177"
 > [!NOTE]  
 >  另请参阅本主题后面[监视可用性副本](#AvReplicas)部分的 **sys.dm_hadr_availability_replica_cluster_nodes** 和 **sys.dm_hadr_availability_replica_cluster_states** 以及[监视可用性数据库](#AvDbs)部分的 **sys.availability_databases_cluster** 和 **sys.dm_hadr_database_replica_cluster_states**。  
   
- 有关群集的有关 WSFC 的信息和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅 [Windows Server 故障转移群集&#40;WSFC&#41;与 SQL Server] ((.../../../ sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md） 和[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)。  
+ 有关群集的有关 WSFC 的信息和[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，请参阅[Windows Server 故障转移群集&#40;WSFC&#41;与 SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)并[故障转移群集和 AlwaysOn 可用性组&#40;SQL服务器&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
 ##  <a name="AvGroups"></a> 监视可用性组  
  若要监视服务器实例为其承载可用性副本的可用性组，请使用以下视图：  

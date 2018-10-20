@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083877"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460922"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>定义度量值组中的维度粒度
   用户可能需要针对不同目的定义不同粒度或专一性的事实数据表维度。 例如，分销商或 Internet 销售的销售额数据可以每天记录一次，而销售配额信息则可能按月或按季度级别来记录。 在这些情况下，用户可能需要时间维度针对这些不同的事实数据表具有不同的粒度或详细程度。 尽管可以将新的数据库维度定义为具有这种不同粒度的时间维度，但 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供了更简单的方法。  
@@ -221,11 +221,11 @@ ms.locfileid: "48083877"
      ![销售配额度量值组正确划分维度](../../2014/tutorials/media/l5-granularity-7.gif "正确划分维度的 Sales Quota 度量值组")  
   
 ## <a name="next-lesson"></a>下一课  
- [第 6 课： 定义计算] ((课-6-定义-calculations.md)  
+ [第 6 课：定义计算](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>请参阅  
  [维度关系](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [定义常规关系和常规关系属性](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [使用的数据源视图设计器中的关系图&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [使用数据源视图设计器中的关系图 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

@@ -23,12 +23,12 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c25b5b564f0fbe69d2559ae0c7c57d262c6646e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecec815644ab8650503f4a5f6c8ea3f4af5f10a2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177517"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460876"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>脚本组件的编码和调试
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器中，脚本组件具有两种模式：元数据设计模式和代码设计模式。 打开“脚本转换编辑器”后，组件将进入元数据设计模式，你可以在该模式下配置元数据并设置组件属性。 在元数据设计模式下，设置脚本组件的属性并配置输入和输出后，可以切换到代码设计模式，以编写自定义脚本。 有关元数据设计模式和代码设计模式的详细信息，请参阅[在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "48177517"
   
 -   `BufferWrapper`项目项包含的类的继承自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>为每个输入和输出上配置**输入和输出**页**脚本转换编辑器**。 其中每个类都包含与已配置的输入和输出列对应的类型化取值函数属性以及包含这些列的数据流缓冲区。  
   
- 有关如何使用这些对象、 方法和属性的信息，请参阅 [了解脚本组件对象 Model] ((understanding-the-script-component-object-model.md)。 有关如何在特定类型的脚本组件中使用这些类的方法和属性的信息，请参阅[其他脚本组件示例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)一节。 该示例主题还包含完整的代码示例。  
+ 有关如何使用这些对象、方法和属性的信息，请参阅[了解脚本组件对象模型](understanding-the-script-component-object-model.md)。 有关如何在特定类型的脚本组件中使用这些类的方法和属性的信息，请参阅[其他脚本组件示例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)一节。 该示例主题还包含完整的代码示例。  
   
  将脚本组件配置为转换时，`ScriptMain` 项目项将包含下列自动生成的代码。 该代码模板还提供脚本组件的概览以及有关如何检索和操作 SSIS 对象（如变量、事件和连接）的其他信息。  
   
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   引发信息性消息、警告和错误的事件。 FireInformation、FireWarning 和 FireError 方法可在 Visual Studio“输出”窗口中显示事件说明。 但是，FireProgress、Console.Write 和 Console.WriteLine 方法在“输出”窗口中不显示任何信息。 FireProgress 事件的消息显示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器的“进度”选项卡中。 有关详细信息，请参阅[在脚本组件中引发事件](../../data-flow/transformations/script-component.md)。  
   
--   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅 [中的日志记录脚本 Component] ((logging-in-the-script-component.md)。  
+-   将事件或用户定义的消息记录到已启用的日志记录提供程序中。 有关详细信息，请参阅[脚本组件中的日志记录](logging-in-the-script-component.md)。  
   
  如果你只想检查配置为源或转换的脚本组件的输出，而不将数据保存到目标，则可以使用[行计数转换](../../data-flow/transformations/row-count-transformation.md)停止数据流，并向脚本组件的输出附加一个数据查看器。 有关数据查看器的信息，请参阅[调试数据流](../../troubleshooting/debugging-data-flow.md)。  
   
@@ -210,7 +210,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com 上的博客文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations（针对 SSIS 2008 和 R2 安装的 VSTA 安装和配置难题）](http://go.microsoft.com/fwlink/?LinkId=215661)。  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
  [在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)  

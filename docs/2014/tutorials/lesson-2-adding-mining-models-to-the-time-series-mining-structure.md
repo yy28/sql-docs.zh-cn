@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158427"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461943"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>第 2 课：向时序挖掘结构添加挖掘模型
   在本课中，将新的挖掘模型添加到刚刚创建的挖掘结构[第 1 课： 创建时序挖掘模型和挖掘结构](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 为了向现有挖掘结构添加新的挖掘模型，可以使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
+ 为了向现有挖掘结构添加新的挖掘模型，可以使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   

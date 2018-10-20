@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621025"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336246"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc。&lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47621025"
 3.  通过指定新数据类型来更改源表。 该数据类型更改成功传播到更改表。  
   
 ## <a name="data-manipulation-language-modifications"></a>数据操作语言修改  
- 对启用了变更数据捕获的源表执行插入、更新和删除操作时，这些 DML 操作的记录将显示在数据库事务日志中。 变更数据捕获进程从事务日志中检索关于那些更改的信息，然后向更改表中添加一行或两行来记录更改。 条目添加到更改表中的顺序与它们提交到源表的顺序是相同的，不过更改表条目的提交通常必须对一组更改执行，而不是对单个条目执行。  
+ 对启用了变更数据捕获的源表执行插入、更新和删除操作时，这些 DML 操作的记录将显示在数据库事务日志中。 变更数据捕获进程从事务日志中检索有关这些更改的信息，并将一个或两个行添加到更改表来记录更改。 条目添加到更改表中的顺序与它们提交到源表的顺序是相同的，不过更改表条目的提交通常必须对一组更改执行，而不是对单个条目执行。  
   
  在更改表条目中， **__ $start_lsn**列用于记录对源表的更改与关联的 LSN 的提交和 **__ $seqval 列**用于排序中的更改它的事务。 这些元数据列可共同用于确保保留源更改的提交顺序。 因为捕获进程从事务日志获取其更改信息，所以必须注意更改表条目不会与其对应的源表更改同步显示。 在捕获进程处理了事务日志中的相关更改条目后，对应的更改将异步显示。  
   

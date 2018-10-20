@@ -16,12 +16,12 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129787"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461072"
 ---
 # <a name="contained-databases"></a>包含的数据库
   “包含数据库” 是独立于其他数据库以及承载数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的一种数据库。  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以 4 种方法帮助用户使其数据库独立于实例。  
@@ -34,7 +34,7 @@ ms.locfileid: "48129787"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境（DMV、XEvent 等）报告并可以执行包含信息。  
   
- 部分包含的数据库的某些功能（例如将元数据存储在数据库中）适用于所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库。 部分包含的数据库的某些优点（例如数据库级别身份验证和目录排序规则）必须在可用后才能实现。 使用启用部分包含`CREATE DATABASE`并`ALTER DATABASE`语句或通过使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 有关如何启用部分数据库包含的详细信息，请参阅 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)。  
+ 部分包含的数据库的某些功能（例如将元数据存储在数据库中）适用于所有 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库。 部分包含的数据库的某些优点（例如数据库级别身份验证和目录排序规则）必须在可用后才能实现。 使用 `CREATE DATABASE` 和 `ALTER DATABASE` 语句或者通过使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可启用部分包含。 有关如何启用部分数据库包含的详细信息，请参阅 [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md)。  
   
  本主题包含以下各节。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "48129787"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>使用 AlwaysOn 的包含数据库用户的好处  
  通过减少与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的关联，当您使用 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]时，在故障转移过程中部分包含数据库可能会很有用。  
   
- 通过创建包含用户，可使用户直接连接到包含数据库。 这在高可用性和灾难恢复方案中（例如在 AlwaysOn 解决方案中）是非常重要的功能。 如果用户是包含用户，则在故障转移时，用户无需在承载辅助副本的实例上创建登录名，就能够连接到辅助副本。 这会给用户带来直接的好处。 有关详细信息，请参阅[AlwaysOn 可用性组的概述&#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)和 [的先决条件、 限制和建议为 AlwaysOn 可用性组&#40;SQL Server&#41;] ((.../../ database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md）。  
+ 通过创建包含用户，可使用户直接连接到包含数据库。 这在高可用性和灾难恢复方案中（例如在 AlwaysOn 解决方案中）是非常重要的功能。 如果用户是包含用户，则在故障转移时，用户无需在承载辅助副本的实例上创建登录名，就能够连接到辅助副本。 这会给用户带来直接的好处。 有关详细信息，请参阅：[AlwaysOn 可用性组概述 (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 和[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
 ### <a name="initial-database-development"></a>初始数据库开发  
  由于开发人员可能不知道新数据库的部署环境，因此减少部署环境对数据库的影响可使开发人员的工作变得更加轻松。 在非包含模型中，开发人员必须相应考虑环境对新数据库和程序的可能影响。 但是，通过使用部分包含数据库，开发人员可检测到数据库在实例级别所受的影响，从而减轻了开发人员的心理负担。  

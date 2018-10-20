@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 288348e1b18e5a20ec2b9890bfc54f613230436e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655207"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383732"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
@@ -62,7 +62,7 @@ Linux 服务器和 Windows Server 故障转移群集之间不同，创建可用�
 
 1. 将一个节点指定为主节点和其他节点作为辅助数据库。 在本指南中使用这些术语。
 
-1. 确保要成为群集部分的节点可互相通信。
+1. 请确保要用作群集的一部分的节点可以相互通信。
 
    下面的示例演示`/etc/hosts`并补充了名为 SLES1 和 SLES2，SLES3 的三个节点。
 

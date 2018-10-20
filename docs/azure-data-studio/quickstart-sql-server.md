@@ -4,18 +4,18 @@ description: 本快速入门介绍如何使用 Azure Data Studio 来连接到 SQ
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2bc05fd234fd8e3e81add26bd0166e0aa40ce34b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038008"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356088"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入门： 使用连接和查询 SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 本快速入门介绍如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]连接到 SQL Server，然后使用 TRANSACT-SQL (T-SQL) 语句来创建*TutorialDB*中使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]教程。

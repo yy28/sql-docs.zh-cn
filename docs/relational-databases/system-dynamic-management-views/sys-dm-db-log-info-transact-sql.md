@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f93bf921236676b40a9d6917af38ca3ca88ff5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644105"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411144"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |奇偶校验[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。在内部用于确定在 VLF 日志的结尾。|
 |vlf_first_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)中的第一个日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 |vlf_create_lsn|**nvarchar(48)** |[日志序列号 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)创建的日志记录[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_encryptor_thumbprint|**varbinary(20)**| 适用范围：[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> 显示 VLF 的加密程序的指纹使用加密 VLF[透明数据加密](../../relational-databases/security/encryption/transparent-data-encryption.md)，否则为 NULL。 |
 
 ## <a name="remarks"></a>备注
 `sys.dm_db_log_info`动态管理函数将替换`DBCC LOGINFO`语句。    

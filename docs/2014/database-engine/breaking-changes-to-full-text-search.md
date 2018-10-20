@@ -15,20 +15,20 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122397"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460692"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>对全文搜索的重大更改
   本主题介绍全文搜索的重大更改。 这些更改可能导致基于 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的早期版本的应用程序、脚本或功能无法继续使用。 在进行升级时可能会遇到这些问题。 有关详细信息，请参阅 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>中全文搜索的重大更改 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中全文搜索的重大更改  
  将很快提供相关信息。  
   
-## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>中全文搜索的重大更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中全文搜索的重大更改  
   
 ### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>sys.fulltext_languages 中名称列的排序规则已更改  
  [sys.fulltext_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) 目录视图中的语言 **name** 列的排序规则已经从资源数据库的固定排序规则更改为针对 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例选择的默认排序规则。 在将 [sys.syslanguages (Transact-SQL)](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) 视图与 **sys.fulltext_languages (Transact-SQL)** 联接在一起时，这一更改可以比较 **name** 列中的值。 例如，您可以查询默认全文语言不同于默认数据库语言的所有数据库。  
@@ -59,6 +59,6 @@ ms.locfileid: "48122397"
   
 ## <a name="see-also"></a>请参阅  
  [全文搜索的行为更改](../relational-databases/search/full-text-search.md)   
- [全文搜索] ((../ relational-databases/search/full-text-search.md)  
+ [全文搜索](../relational-databases/search/full-text-search.md)  
   
   

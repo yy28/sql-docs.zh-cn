@@ -4,18 +4,18 @@ description: 常见问题 (FAQ) 的 Azure Data Studio。
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8e1178ba2b28ddf2e7db3fc381b15f01ecd428b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b34723e800d3dc21928dcdbb5dc9871ecbbcdb5f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038048"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356348"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 常见问题
 
@@ -80,7 +80,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 
 ### <a name="shell-features"></a>Shell 功能
 
-|功能|Azure 数据 Studio|SSMS|
+|功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure 登录|用户帐户控制|用户帐户控制|
 |面板|用户帐户控制| |
@@ -102,7 +102,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 
 ### <a name="query-editor"></a>查询编辑器
 
-|功能|Azure 数据 Studio|SSMS|
+|功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |图表查看器|用户帐户控制||
 |将结果导出到 CSV、 JSON、 XLSX|用户帐户控制||
@@ -116,11 +116,11 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 |以文本格式显示结果||用户帐户控制|
 |空间查看器||用户帐户控制|
 |SQLCMD||用户帐户控制|
-|T-SQL 的调试器||用户帐户控制|
+|T-SQL 调试程序||用户帐户控制|
 
 ### <a name="operating-system-support"></a>操作系统支持
 
-|功能|Azure 数据 Studio|SSMS|
+|功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|用户帐户控制|用户帐户控制|
 |macOS|用户帐户控制||
@@ -128,7 +128,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 
 ### <a name="data-engineering"></a>数据工程
 
-|功能|Azure 数据 Studio|SSMS|
+|功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |外部数据向导|预览||
 |HDFS 的集成|预览||
@@ -136,7 +136,7 @@ Azure Data Studio 和其数据访问接口的源代码是 GitHub 上提供。 �
 
 ### <a name="database-administration"></a>数据库管理
 
-|功能|Azure 数据 Studio|SSMS|
+|功能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |备份/还原|用户帐户控制|用户帐户控制|
 |平面文件导入|预览|用户帐户控制|

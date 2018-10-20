@@ -16,12 +16,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062169"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460192"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>使用合并联接转换扩展数据集
   若要添加和配置合并联接转换，则包中必须已包含至少一个数据流任务和为合并联接转换提供输入的两个数据流组件。  
@@ -62,9 +62,9 @@ ms.locfileid: "48062169"
 11. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [合并联接转换](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务] (../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

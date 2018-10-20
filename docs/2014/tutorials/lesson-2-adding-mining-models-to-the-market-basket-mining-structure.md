@@ -11,12 +11,12 @@ ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 376f93db5b4dbac672846226229858c8ee84f19d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107477"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461973"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>第 2 课：向市场篮挖掘结构中添加挖掘模型
   在本课中，将两个挖掘模型添加到你在中创建的市场篮挖掘结构[第 1 课： 创建市场篮挖掘结构](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)。 您可以通过这些挖掘模型创建预测。  
@@ -28,7 +28,7 @@ ms.locfileid: "48107477"
  您将查看更改后的效果*MINIMUM_PROBABILTY*中后面的课程中的参数。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 若要添加包含到挖掘结构的嵌套的表的挖掘模型，请使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
+ 若要添加包含到挖掘结构的嵌套的表的挖掘模型，请使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   

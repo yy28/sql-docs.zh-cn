@@ -3,17 +3,17 @@ title: SQL Server 机器学习服务的防火墙配置 |Microsoft Docs
 description: 如何为 SQL Server 机器学习服务中配置防火墙。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: d8a24ca6348054041ca1d8a0f4d0c352dc5bdabd
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: d2bf36ea9a7c7a0b193dc4613f6a36f58e66014a
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48881402"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419052"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>SQL Server 机器学习服务的防火墙配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "48881402"
 
 ## <a name="default-firewall-rules"></a>默认防火墙规则
 
-默认情况下，SQL Server 安装程序通过创建防火墙规则禁用出站连接。 
+默认情况下，SQL Server 安装程序通过创建防火墙规则禁用出站连接。
 
-在 SQL Server 2016 和 2017年中，这些规则基于本地用户帐户，安装程序在其中创建一个出站规则**SQLRUserGroup** ，拒绝对其成员的网络访问 （每个辅助角色帐户被列为受本地原则该规则。
+在 SQL Server 2016 和 2017年中，这些规则基于本地用户帐户，安装程序在其中创建一个出站规则**SQLRUserGroup** ，拒绝对其成员的网络访问 （每个辅助角色帐户被列为受本地原则该规则。 有关 SQLRUserGroup 的详细信息，请参阅[SQL Server 机器学习服务中的可扩展性框架的安全性概述](../../advanced-analytics/concepts/security.md#sqlrusergroup)。
 
 在 SQL Server 2019 作为到 AppContainers，在移动过程中有基于 AppContainer Sid 的新防火墙规则： 一个用于 20 AppContainers 的每个创建的 SQL Server 安装程序。 防火墙规则名称的命名约定是**阻止 AppContainer 00 的 SQL Server 实例 MSSQLSERVER 中的网络访问**，其中 00 是 AppContainer (00-20 默认情况下)，数量，MSSQLSERVER 是 SQL 的名称服务器实例。
 

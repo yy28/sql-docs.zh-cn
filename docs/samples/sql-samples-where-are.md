@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802582"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390859"
 ---
 # <a name="sql-samples"></a>SQL 示例
 
@@ -51,3 +51,13 @@ AdventureWorks 数据库有[SQL Server 示例](https://github.com/Microsoft/sql-
 - [AdventureWorks 下载适用于 SQL Server 2014 和更高版本](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 包括 2012年版本的.bak 文件。
 - [适用于 SQL Server 2012 下载 AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012)。
 - [下载 SQL Server 2008R2 AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2)。
+
+## <a name="azure-samples-and-templates"></a>Azure 示例和模板
+有大量的 Microsoft Azure 代码示例和示例.NET、 Java、 Python、 Node.js、 PHP 和 Ruby 在 Github 上的。 此外，Azure 资源管理器，可预配应用程序使用声明性模板。 在单个模板中，可以部署多个服务及其依赖项。 使用相同模板重复部署应用程序生命周期的每个阶段应用程序。
+
+- [Azure 示例](https://github.com/Azure-Samples)
+- [Azure 快速入门模板](https://azure.microsoft.com/resources/templates/)
+
+
+
+

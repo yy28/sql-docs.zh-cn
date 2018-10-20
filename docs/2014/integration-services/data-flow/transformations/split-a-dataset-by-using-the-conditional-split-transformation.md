@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184727"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460332"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>使用有条件拆分转换拆分数据集
   若要添加和配置有条件拆分转换，包必须已包含至少一个数据流任务和一个源。  
@@ -61,11 +61,11 @@ ms.locfileid: "48184727"
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [有条件拆分转换](conditional-split-transformation.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
  [Integration Services 数据类型](../integration-services-data-types.md)   
- [数据流任务] (../../control-flow/data-flow-task.md)   
+ [数据流任务](../../control-flow/data-flow-task.md)   
  [Integration Services (SSIS) 表达式](../../expressions/integration-services-ssis-expressions.md)  
   
   

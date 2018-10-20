@@ -17,12 +17,12 @@ ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0a2225e9d504cd019016c1ff8cffb742112aeecc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76245adffaf5dfdacaf2ee8c234b81cfbaae9523
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134719"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460362"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>通过使用 Union All 转换来合并数据
   若要添加和配置 Union All 转换，包必须至少已包含一个数据流任务和两个数据源。  
@@ -56,9 +56,9 @@ ms.locfileid: "48134719"
 9. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [Union All 转换](union-all-transformation.md)   
+ [Union All Transformation](union-all-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
- [数据流任务] (../../control-flow/data-flow-task.md)  
+ [数据流任务](../../control-flow/data-flow-task.md)  
   
   

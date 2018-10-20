@@ -4,18 +4,18 @@ description: 了解有关 Azure Data Studio 中集成终端。
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fd4b55c8ee4389b6318585842047dbaf6ac1c220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91adc56e93a7dc1b065b77169ad18fd977231d9f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038072"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355978"
 ---
 # <a name="integrated-terminal"></a>集成的终端
 

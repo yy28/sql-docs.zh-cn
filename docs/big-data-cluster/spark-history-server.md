@@ -9,12 +9,12 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 1e154ccfca46430f4ab96e620ac450e3c213313d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795922"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460862"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>调试和诊断的 Spark 应用程序在 Spark History Server 中的 SQL Server 大数据群集上
 
@@ -201,5 +201,5 @@ Spark History Server 具有以下已知的问题：
 
 ## <a name="next-steps"></a>后续步骤
 
-* [管理 HDInsight 上的 Spark 群集的资源](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [配置 Spark 设置](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [管理 HDInsight 上的 Spark 群集的资源](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [配置 Spark 设置](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

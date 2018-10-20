@@ -4,18 +4,18 @@ description: 本教程演示如何创建 Azure Data Studio 扩展。
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 9124ced20d5b10bbb60cbfbda6b3e4c9a52a3a1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1605f1c99e4fa2a74c7f728f191baf5a8b9bf8
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038000"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356548"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>教程： 创建 Azure Data Studio 扩展
 

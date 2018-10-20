@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 309a78a2195f55a3ec39604b0c2bd385bb06a271
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: a88269ff6b55aa473c48cfa0937e926770bbaff1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724311"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462103"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>设置 SQL Server 上的 R 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +94,7 @@ Microsoft 产品中的 R 功能是多层。 它启动与 Microsoft 的开放源�
 
 ## <a name="4---test-connections"></a>4-测试连接
 
-必须启用 SQL Server[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)并且必须具有的权限，包括用户登录名和要连接到数据库。 下面的步骤假定演示数据库[NYCTaxi_Sample](../tutorials/sqldev-download-the-sample-data.md)和 Windows 身份验证。
+必须启用 SQL Server[远程连接](https://docs.microsoft.com/sql/database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)并且必须具有的权限，包括用户登录名和要连接到数据库。 下面的步骤假定演示数据库[NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)和 Windows 身份验证。
 
  作为验证步骤，使用内置工具和 RevoScaleR 以确认连接到远程服务器。
 

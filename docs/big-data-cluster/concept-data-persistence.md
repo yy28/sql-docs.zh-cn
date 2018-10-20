@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 629d7fd887e96013b17a5686ce82eb966044f240
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795981"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460572"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -23,6 +23,7 @@ ms.locfileid: "48795981"
 SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)。 可以创建不同的存储类的不同种类的存储，并在大数据群集部署时指定它们。 你可以配置要用于哪些用途 （池） 的存储类。 SQL Server 大数据群集创建[永久性卷声明](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)替换为需要永久卷每个 pod 的指定的存储类名称。 它然后装载在 pod 中相应的永久性卷。
 
 > [!NOTE]
+
 > CTP 2.0 中，仅为`ReadWriteOnce`支持整个群集的访问模式。
 
 ## <a name="deployment-settings"></a>部署设置
@@ -36,11 +37,20 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 
 ## <a name="aks-storage-classes"></a>AKS 存储类
 
-附带了 AKS[两个内置的存储类](https://docs.microsoft.com/en-us/azure/aks/azure-disks-dynamic-pv)**默认**并**高级存储**以及为其预配的动态程序。 可以指定任何一项都或创建您自己的存储类用于大数据群集部署与已启用的持久存储。
+附带了 AKS[两个内置的存储类](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**默认**并**托管高级**以及为其预配的动态程序。 可以指定任何一项都或创建您自己的存储类用于大数据群集部署与已启用的持久存储。
 
 ## <a name="minikube-storage-class"></a>Minikube 存储类
 
-Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。
+Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。 请注意，在 Minikube，如果 USE_PERSISTENT_VOLUME = true （默认值），因为默认值不同，还必须替代 STORAGE_CLASS_NAME 环境变量的默认值。 将值设置为`standard`: 
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+或者，可以禁止在 Minikube 上使用永久性卷：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
+
 
 ## <a name="kubeadm"></a>Kubeadm
 
@@ -61,13 +71,13 @@ export STORAGE_SIZE=10Gi
 
 ```bash
 export STORAGE_POOL_USE_PERSISTENT_VOLUME=true
-export STORAGE_POOL_STORAGE_CLASS_NAME=premium-storage
+export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
 下面是相关设置 SQL Server 大数据群集的持久性存储的环境变量的完整列表：
 
-| 环境变量 | 默认值 | 描述 |
+| 环境变量 | 默认值 | Description |
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。 `false` 使用临时主机存储为 pod 存储。 |
 | **STORAGE_CLASS_NAME** | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 |

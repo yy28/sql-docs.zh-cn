@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222607"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462043"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>第 2 课：向自行车购买者挖掘结构添加挖掘模型
   在本课中，将两个挖掘模型添加到你创建的自行车购买者挖掘结构[第 1 课： 创建自行车购买者挖掘结构](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)。 可以使用其中的一个模型浏览数据，使用另一个模型创建预测。  
@@ -26,7 +26,7 @@ ms.locfileid: "48222607"
  若要预测潜在客户是否可能购买自行车，将创建基于的挖掘模型[Microsoft 决策树算法](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)。 该算法会通查与每位潜在客户关联的信息，并查找有助于预测客户是否会购买自行车的特征。 然后将先前的自行车购买者的特征值与潜在的新客户的特征值进行比较，确定潜在的新客户是否可能购买自行车。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE 语句  
- 为了向挖掘结构添加挖掘模型，可以使用 [ALTER MINING STRUCTURE &#40;DMX&#41;] （(~/dmx/alter-mining-structure-dmx.md) 语句。 可以将语句中的代码分为下列几部分：  
+ 为了向挖掘结构添加挖掘模型，可以使用[ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)语句。 可以将语句中的代码分为下列几部分：  
   
 -   标识挖掘结构  
   

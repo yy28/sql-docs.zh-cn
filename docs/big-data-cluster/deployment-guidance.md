@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/08/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 02a1aa7299173315e4f4d6a60eae5f166e8fcdfe
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: f998c9f9df91f08d3a4e1877942b901ae5d96aeb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877890"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460652"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何将 SQL Server 大数据群集在 Kubernetes 上部署
 
@@ -47,6 +47,9 @@ SQL Server 大数据群集需要的最小 v1.10 版本适用于 Kubernetes、 �
 
    - [配置 Minikube](deploy-on-minikube.md)
    - [Azure Kubernetes 服务上配置 Kubernetes](deploy-on-aks.md)
+   
+> [!TIP]
+> 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
 
 ## <a id="deploy"></a> 部署 SQL Server 大数据群集
 
@@ -108,8 +111,8 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 | **CONTROLLER_PASSWORD** | 用户帐户控制 | N/A | 群集管理员的密码。 |
 | **KNOX_PASSWORD** | 用户帐户控制 | N/A | Knox 用户的密码。 |
 | **MSSQL_SA_PASSWORD** | 用户帐户控制 | N/A | 对于 master 的 SQL 实例 SA 用户 passowrd。 |
-| **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。  `false` 使用临时主机存储为 pod 存储。 请参阅[数据暂留](concept-data-persistence.md)主题的更多详细信息。 |
-| **STORAGE_CLASS_NAME** | 否 | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 请参阅[数据暂留](concept-data-persistence.md)主题的更多详细信息。 |
+| **USE_PERSISTENT_VOLUME** | 否 | true | `true` 若要使用 Kubernetes 永久性卷声明 pod 存储。  `false` 使用临时主机存储为 pod 存储。 请参阅[数据暂留](concept-data-persistence.md)主题的更多详细信息。 如果部署在 minikube 的大数据群集的 SQL Server 和 USE_PERSISTENT_VOLUME = true，必须设置的值为`STORAGE_CLASS_NAME=standard`。 |
+| **STORAGE_CLASS_NAME** | 否 | 默认值 | 如果`USE_PERSISTENT_VOLUME`是`true`这指示要使用的 Kubernetes 存储类的名称。 请参阅[数据暂留](concept-data-persistence.md)主题的更多详细信息。 请注意，如果部署在 minikube 的大数据群集的 SQL Server 时，默认存储类名称会有所不同并且你必须通过设置重写此`STORAGE_CLASS_NAME=standard`。 |
 | **MASTER_SQL_PORT** | 否 | 31433 | 主 SQL 实例在公用网络进行侦听 TCP/IP 端口。 |
 | **KNOX_PORT** | 否 | 30443 | Apache Knox 在公用网络进行侦听 TCP/IP 端口。 |
 | **GRAFANA_PORT** | 否 | 30888 | 监视应用程序 Grafana 在公用网络进行侦听 TCP/IP 端口。 |
@@ -122,7 +125,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 >1. 在本地群集使用 kubeadm，环境变量的值构建`CLUSTER_PLATFORM`是`kubernetes`。 此外，当 USE_PERSISTENT_STORAGE = true，必须预先预配 Kubernetes 存储类并将其传递通过使用 STORAGE_CLASS_NAME。
 >1. 请确保你在双引号内包装密码，如果它包含任何特殊字符。 您可以设置 MSSQL_SA_PASSWORD 为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`，`&`或`‘`字符。 请注意，双引号分隔符仅适用于 bash 命令。
 >1. 群集的名称必须仅小写字母数字字符，不留空格。 将在具有与群集相同的名称的命名空间中创建群集的所有 Kubernetes 项目 （容器、 pod、 有状态集、 服务） 指定的名称。
->1. **SA**帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器，你指定的 MSSQL_SA_PASSWORD 环境变量是可发现通过运行后回显 $MSSQL_SA_PASSWORD 容器中。 出于安全考虑，更改 SA 密码根据最佳实践[此处](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
+>1. **SA**帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器，你指定的 MSSQL_SA_PASSWORD 环境变量是可发现通过运行后回显 $MSSQL_SA_PASSWORD 容器中。 出于安全考虑，更改 SA 密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 设置环境变量所需的部署 Aris 根据使用的 Windows 或 Linux 客户端不同的群集。  选择以下步骤使用具体取决于哪个操作系统。
 
@@ -149,6 +152,15 @@ SET DOCKER_EMAIL=<your Docker email, use same as username provided>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+在 minikube，如果 USE_PERSISTENT_VOLUME = true （默认值），您还必须覆盖的默认值为 STORAGE_CLASS_NAME 环境变量：
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+此外，也可以不显示在 minikube 上使用永久性卷：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ### <a name="linux"></a>Linux
 
 初始化以下环境变量：
@@ -170,6 +182,15 @@ export DOCKER_EMAIL=<your Docker email, use same as username provided>
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
+在 minikube，如果 USE_PERSISTENT_VOLUME = true （默认值），您还必须覆盖的默认值为 STORAGE_CLASS_NAME 环境变量：
+```
+SET STORAGE_CLASS_NAME=standard
+```
+
+此外，也可以不显示在 minikube 上使用永久性卷：
+```
+SET USE_PERSISTENT_VOLUME=false
+```
 ## <a name="deploy-sql-server-big-data-cluster"></a>部署 SQL Server 大数据群集
 
 创建群集 API 用于初始化 Kubernetes 命名空间并将其部署到该命名空间的所有应用程序 pod。 若要部署 Kubernetes 群集上的 SQL Server 大数据群集，请运行以下命令：

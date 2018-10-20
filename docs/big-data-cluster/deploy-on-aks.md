@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48877930"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460892"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>配置 SQL Server 2019 ctp 2.0 的 Azure Kubernetes 服务
 
@@ -22,6 +22,9 @@ Azure Kubernetes 服务 (AKS) 轻松创建、 配置和管理 Kubernetes 群集�
 
 本文介绍部署 Kubernetes AKS 使用 Azure CLI 上的步骤。 如果还没有 Azure 订阅，请在开始之前创建一个免费帐户。
 
+> [!TIP] 
+> 部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
+
 ## <a name="prerequisites"></a>必要條件
 
 - 为了使 AKS 环境中，VM 至少要有至少两个 （此外到母版） 的最小大小的代理 Vm [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series)。 每个虚拟机所需的最小资源是 4 个 Cpu 和 14 GB 内存。
@@ -29,7 +32,7 @@ Azure Kubernetes 服务 (AKS) 轻松创建、 配置和管理 Kubernetes 群集�
    > [!NOTE]
    > 如果你计划用于运行大数据作业或多个 Spark 应用程序，最小大小是[Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup)，每个虚拟机所需的最小资源是 8 个 Cpu 和 32 GB 的内存。
 
-- 此部分要求，必须运行 Azure CLI 2.0.4 或更高版本。 如果你需要安装或升级，请参阅[安装 Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)。 运行`az --version`如果需要查找版本。
+- 此部分要求，必须运行 Azure CLI 2.0.4 或更高版本。 如果你需要安装或升级，请参阅[安装 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)。 运行`az --version`如果需要查找版本。
 
 - 安装[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 大数据群集需要 1.10 版本范围内的任何次要版本，适用于 Kubernetes、 服务器和客户端。 若要安装 kubectl 客户端上的特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 适用于 AKS，您将需要使用`--kubernetes-version`参数来指定默认值以外的版本。 请注意，在 CTP2.0 发布时间范围内，AKS 仅支持 1.10.7 和 1.10.8 版本。 
 
@@ -91,7 +94,7 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
 
 ## <a name="connect-to-the-cluster"></a>连接到群集
 
-1. 若要配置 kubectl 以连接到 Kubernetes 群集，运行[az aks get-credentials 来获取凭据](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。 此步骤下载凭据，并配置 kubectl CLI 来使用它们。
+1. 若要配置 kubectl 以连接到 Kubernetes 群集，运行[az aks get-credentials 来获取凭据](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)命令。 此步骤下载凭据，并配置 kubectl CLI 来使用它们。
 
    ```bash
    az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster

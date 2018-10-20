@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b458234f0a166f3dc820cbfa58269bb90d7c33b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d218f80067c3dd5a03ced864b815c68aa84a582e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038016"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460242"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>开始使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]扩展性
 
@@ -112,7 +112,7 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 `dashboard.insights`
 
-你可以注册使用 dashboard.insights 的见解。 它类似于[教程： 生成自定义见解小组件](https://docs.microsoft.com/en-us/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+你可以注册使用 dashboard.insights 的见解。 它类似于[教程： 生成自定义见解小组件](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -273,8 +273,8 @@ Dashboard.tabs 创建仪表板页面内的选项卡部分。 它需要一个对�
 
 |上下文变量| description|
 |:---|:---|
-|`connectionProvider` | 当前连接的提供程序的标识符的字符串。 例如： `connectionProvider == 'MSSQL'`。|
-|`serverName`|当前连接的服务器名称的字符串。 例如： `serverName == 'localhost'`。|
-|`databaseName` | 当前连接的数据库名称的字符串。 例如： `databaseName == 'master'`。|
+|`connectionProvider` | 当前连接的提供程序的标识符的字符串。 例如： `connectionProvider == 'MSSQL'` 的用户。|
+|`serverName`|当前连接的服务器名称的字符串。 例如： `serverName == 'localhost'` 的用户。|
+|`databaseName` | 当前连接的数据库名称的字符串。 例如： `databaseName == 'master'` 的用户。|
 |`connection` | 当前连接 (IConnectionProfile) 的完整的连接配置文件对象|
 |`dashboardContext` | 在目前的仪表板的页面的上下文字符串。 数据库或者服务器。 例如： `dashboardContext == 'database'`|

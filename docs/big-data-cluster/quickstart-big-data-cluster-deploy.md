@@ -7,16 +7,16 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 839823f9336a09b0790ee41b74793e548742c1d5
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120454"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384102"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门： 部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
-在此快速入门中，您将在默认配置适用于开发/测试环境中在 AKS 上中安装 SQL Server 大数据群集。 除了 SQL 主实例，群集将包括一个计算池实例、 一个数据池实例和两个存储池实例。 使用 AKS 默认存储类之上预配 Kubernetes 永久性卷将保留数据。 在中[部署指南](deployment-guidance.md)主题可以找到一组可用于进一步自定义配置的环境变量。
+在默认配置适用于开发/测试环境中，在 AKS 上安装 SQL Server 大数据群集。 除了 SQL 主实例中，群集包含一个计算池实例、 一个数据池实例和两个存储池实例。 数据将保留使用使用 AKS 默认存储类的 Kubernetes 永久性卷。 若要进一步自定义你的配置，请参阅在环境变量[部署指南](deployment-guidance.md)。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -24,11 +24,11 @@ ms.locfileid: "49120454"
 
 本快速入门教程要求您已具有的最低版本为 v1.10 中配置了 AKS 群集。 有关详细信息，请参阅[部署在 AKS 上](deploy-on-aks.md)指南。
 
-在您用来运行命令以安装 SQL Server 大数据群集的计算机，你需要安装[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 大数据群集需要版本最低为 1.10 适用于 Kubernetes、 服务器和客户端 (kubectl)。 若要安装 kubectl，请参阅[安装 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 
+在您用来运行命令以安装 SQL Server 大数据群集的计算机上安装[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 大数据群集需要版本最低为 1.10 适用于 Kubernetes、 服务器和客户端 (kubectl)。 若要安装 kubectl，请参阅[安装 kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 
 
-若要安装`mssqlctl`CLI 工具，用于管理 SQL Server 大数据群集在客户端计算机上，您必须首先安装[Python](https://www.python.org/downloads/)最低版本 3.0 版和[pip3](https://pip.pypa.io/en/stable/installing/)。 请注意是否使用至少 3.4 从下载的 Python 版本已安装 pip [python.org](https://www.python.org/)。
+若要安装`mssqlctl`CLI 工具，用于管理 SQL Server 大数据群集在客户端计算机上，您必须首先安装[Python](https://www.python.org/downloads/)最低版本 3.0 版和[pip3](https://pip.pypa.io/en/stable/installing/)。 `pip` 如果使用至少 3.4 从下载的 Python 版本已安装[python.org](https://www.python.org/)。
 
-如果您的 Python 安装缺少`requests`包，必须安装`requests`使用`python -m pip install requests`。 如果已有`requests`包将其升级到最新版本使用`python -m pip install requests --upgrade`。
+如果您的 Python 安装缺少`requests`包，必须安装`requests`使用`python -m pip install requests`。 如果已有`requests`包，请将其升级到最新版本使用`python -m pip install requests --upgrade`。
 
 ## <a name="verify-aks-configuration"></a>验证 AKS 配置
 
@@ -40,7 +40,7 @@ kubectl config view
 
 ## <a name="install-mssqlctl-cli-management-tool"></a>安装 mssqlctl CLI 管理工具
 
-运行以下命令以安装`mssqlctl`在客户端计算机上的工具。 相同命令从 Windows 和 Linux 客户端的工作原理，但请确保在 Windows 使用管理特权运行在 cmd 窗口中运行它或前缀与`sudo`Linux 上：
+运行以下命令以安装`mssqlctl`在客户端计算机上的工具。 该命令可从 Windows 和 Linux 客户端，但请确保正在从在 Windows 使用管理权限运行的 cmd 窗口中运行它或它前面加`sudo`Linux 上：
 
 ```
 pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
@@ -52,16 +52,17 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 在继续之前，请注意以下重要准则：
 
-- 请确保你在双引号内包装密码，如果它包含任何特殊字符。 请注意，双引号分隔符仅适用于 bash 命令。
-- 您可以将密码设置环境变量为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`， `&`，或`‘`字符。
+- 在中[命令窗口](http://docs.microsoft.com/visualstudio/ide/reference/command-window)，引号包含环境变量中。 如果使用引号来包装一个密码，密码中包含引号。
+- 在 bash 中，该变量中不包括引号。 我们的示例使用双引号`"`。
+- 您可以将密码设置环境变量为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`， `&`，或`'`字符。
 - 对于 CTP 2.0 版本中，不要更改默认端口。
-- **SA**帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器，你指定的 MSSQL_SA_PASSWORD 环境变量是可发现通过运行后回显 $MSSQL_SA_PASSWORD 容器中。 出于安全考虑，更改 SA 密码根据最佳实践[此处](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
+- `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，更改你`sa`密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 初始化以下环境变量。  它们所需的部署大数据群集：
 
 ### <a name="windows"></a>Windows
 
-使用 CMD 窗口 (而不是 PowerShell)，配置以下环境变量：
+使用命令窗口 (而不是 PowerShell)，配置以下环境变量：
 
 ```cmd
 SET ACCEPT_EULA=Y
@@ -85,19 +86,19 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 初始化以下环境变量：
 
 ```bash
-export ACCEPT_EULA=Y
-export CLUSTER_PLATFORM=aks
+export ACCEPT_EULA="Y"
+export CLUSTER_PLATFORM="aks"
 
-export CONTROLLER_USERNAME=<controller_admin_name – can be anything>
-export CONTROLLER_PASSWORD=<controller_admin_password – can be anything, password complexity compliant>
-export KNOX_PASSWORD=<knox_password – can be anything, password complexity compliant>
-export MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+export CONTROLLER_USERNAME="<controller_admin_name – can be anything>"
+export CONTROLLER_PASSWORD="<controller_admin_password – can be anything, password complexity compliant>"
+export KNOX_PASSWORD="<knox_password – can be anything, password complexity compliant>"
+export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
-export DOCKER_REGISTRY=private-repo.microsoft.com
-export DOCKER_REPOSITORY=mssql-private-preview
-export DOCKER_USERNAME=<your username, credentials provided by Microsoft>
-export DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-export DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
+export DOCKER_REGISTRY="private-repo.microsoft.com"
+export DOCKER_REPOSITORY="mssql-private-preview"
+export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
+export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -116,7 +117,7 @@ mssqlctl create cluster <name of your cluster>
 > 群集的名称必须是仅小写字母数字字符，不留空格。 将在具有与群集相同的名称的命名空间中创建的大数据群集的所有 Kubernetes 项目指定名称。
 
 
-在命令窗口将输出的部署状态。 此外可以通过不同的命令窗口中运行以下命令检查部署状态：
+命令窗口或命令行程序返回的部署状态。 此外可以通过不同的命令窗口中运行以下命令检查部署状态：
 
 ```bash
 kubectl get all -n <name of your cluster>
@@ -153,6 +154,10 @@ kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
 寻找**外部 IP**分配给服务的值。 连接到 SQL Server 主实例使用的 IP 地址`service-master-pool-lb`在端口 31433 (Ex:  **\<ip 地址\>、 31433**) 和 SQL Server 大数据群集终结点使用的外部 IP`service-security-lb`服务。   大数据群集终结点是可在此与 HDFS 进行交互，并提交 Spark 作业通过 Knox。
+
+## <a name="sample-deployment-script"></a>示例部署脚本
+
+部署 AKS 和 SQL Server 大数据群集的示例 python 脚本，请参阅[部署大数据群集在 Azure Kubernetes 服务 (AKS) SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)。
 
 ## <a name="next-steps"></a>后续步骤
 

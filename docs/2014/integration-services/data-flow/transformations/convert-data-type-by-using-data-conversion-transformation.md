@@ -15,12 +15,12 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa23f7b520fd224323122f7f3674bbafd25eb53c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f120b4c582be95662a889ab1ee003faae37cdafb
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069154"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460614"
 ---
 # <a name="convert-data-to-a-different-data-type-by-using-the-data-conversion-transformation"></a>使用数据转换将数据转换为其他数据类型
   若要添加并配置数据转换，包必须已经包含至少一个数据流任务和一个源。  
@@ -55,7 +55,7 @@ ms.locfileid: "48069154"
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [数据转换](data-conversion-transformation.md)   
+ [Data Conversion Transformation](data-conversion-transformation.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   
  [Integration Services 数据类型](../integration-services-data-types.md)   

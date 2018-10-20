@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724301"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461883"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教程： 了解在 SQL Server 中使用 R 的数据库内分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "44724301"
 
 但是，在创建该解决方案后，可以在熟悉的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程将其轻松部署到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-- [第 1 课： 设置 NYC 出租车演示数据](../tutorials/sqldev-download-the-sample-data.md)
+- [NYC 出租车数据库设置](demo-data-nyctaxi-in-sql.md)
 
-- [第 2 课： 浏览和可视化通过存储过程中调用 R 函数的数据形状和分发](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [第 1 课： 浏览和可视化通过存储过程中调用 R 函数的数据形状和分发](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [第 3 课： 创建数据功能在 T-SQL 函数中使用 R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [第 2 课： 创建数据功能在 T-SQL 函数中使用 R](sqldev-create-data-features-using-t-sql.md)
   
-- [第 4 课： 训练和保存使用函数和存储的过程的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [第 3 课： 训练和保存使用函数和存储的过程的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 5 课： 在存储过程中的操作化的包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
+- [第 4 课： 在存储过程中的操作化的包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
   将模型保存到数据库后，使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型用于预测。
 
 ## <a name="prerequisites"></a>必要條件
@@ -60,4 +60,4 @@ ms.locfileid: "44724301"
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
-> [第 1 课： 下载示例数据](../tutorials/sqldev-download-the-sample-data.md)
+> [NYC 出租车数据库设置](demo-data-nyctaxi-in-sql.md)

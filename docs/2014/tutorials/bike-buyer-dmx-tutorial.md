@@ -1,7 +1,7 @@
 ---
 title: 自行车购买者 DMX 教程 |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,12 +17,12 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074957"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462013"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>自行车购买者 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，确定客户是否将购买自行车。  
@@ -69,7 +69,7 @@ ms.locfileid: "48074957"
  ALTER MINING STRUCTURE  
  使用此语句可以向服务器中已存在的挖掘结构中添加挖掘模型。 如果要创建包含多个不同挖掘模型的挖掘结构，则此语句将非常有用。 由于各种原因，您可能需要在单一挖掘结构中添加多个挖掘模型。 例如，可以创建使用不同算法的多个挖掘模型来判断哪种算法效果最佳。 可以创建使用相同算法的多个挖掘模型，但通过将每一个挖掘模型中的一个参数设置为不同的值来查找最佳参数设置。  
   
- 有关详细信息，请参阅 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
+ 有关详细信息，请参阅[ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
   
  因为您将创建包含多个挖掘模型的挖掘结构，因此使用本教程中的第二种方法。  
   

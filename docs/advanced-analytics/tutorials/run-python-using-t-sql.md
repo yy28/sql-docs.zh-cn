@@ -1,46 +1,40 @@
 ---
-title: 运行 Python 使用 T-SQL |Microsoft Docs
+title: 运行 SQL Server 上使用 T-SQL 的 Python |Microsoft Docs
+description: 了解运行 SQL Server 数据库引擎实例为其启用 Python 集成上使用 T-SQL 和存储的过程的 Python 代码的基础知识。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/15/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7b4a6035996ce457cb2e58aef5d1c7498ad9f826
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878020"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461913"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 运行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本教程介绍如何在 SQL Server 2017 中运行 Python 代码。 它将指导你完成 SQL Server 和 Python 之间移动数据的过程，并说明如何将格式正确的 Python 代码包装在存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)若要生成，定型和在 SQL 中使用机器学习模型服务器。
+本文介绍如何在 SQL Server 2017 中运行 Python 代码。 它将指导你完成 SQL Server 和 Python 之间移动数据的基础知识： 要求、 数据结构、 输入和输出。 它还介绍了如何将格式正确的 Python 代码包装在存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)来生成、 训练和使用 SQL Server 中机器学习模型。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成本教程，必须首先安装 SQL Server 2017 和机器学习服务实例上启用，如中所述[安装 SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)。 
+若要运行示例代码在这些练习中，必须首先安装 SQL Server 2017 和机器学习服务实例上启用，如中所述[安装 SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)。 
 
 此外应安装[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)。 或者，可以使用其他数据库管理或查询工具，前提是它可以连接到服务器和数据库，并运行 T-SQL 查询或存储的过程。
 
-完成安装程序后，返回到本教程中，若要了解如何在存储过程的上下文中执行 Python 代码。 
+你的环境准备就绪后，返回到此页以了解如何在存储过程的上下文中执行 Python 代码。 
 
-## <a name="overview"></a>概述
+## <a name="verify-python-exists"></a>验证存在 Python
 
-本教程包括四个课程：
+以下步骤确认已启用 Python 和 SQL Server 快速启动板服务正在运行。
 
-+ SQL Server 和 Python 之间移动数据的基础知识： 了解基本的要求、 数据结构、 输入和输出。
-+ 练习使用存储的过程用于简单的 Python 任务，如加载示例数据。
-+ 使用存储的过程来创建 Python 机器学习模型，并从模型生成分数。
-+ 若要从远程客户端，使用 SQL Server 作为运行 Python 的用户可选课程_计算上下文_。 包括用于生成模型; 代码但是，需要你已有一定了解与 Python 环境和 Python 工具。
+1. 检查数据库引擎实例上是否安装了 Python 集成。 您会发现**python.exe**中名为的文件夹**PYTHON_SERVICES**在 C:\Program Files\Microsoft SQL Server\MSSQL14。MSSQLSERVER\. 这是 SQL Server 使用来运行 Python 代码的 Python 可执行文件。
 
-此处提供的其他特定于 SQL Server 2017 的 Python 示例： [SQL Server Python 教程](../tutorials/sql-server-python-tutorials.md)
-
-## <a name="verify-that-python-is-enabled-and-the-launchpad-is-running"></a>验证启用了 Python 和快速启动板正在运行
-
-1. 在 Management Studio 中运行此语句以确保启用该服务。
+2. 检查是否已启用外部脚本。 在 Management Studio 中运行以下语句：
 
     ```sql
     sp_configure 'external scripts enabled'
@@ -48,9 +42,9 @@ ms.locfileid: "48878020"
 
     如果**run_value**为 1，机器学习功能是已安装并可供使用。
 
-    错误的常见原因是快速启动板中管理 SQL 服务器和 Python 之间的通信，已停止。 您可以使用 Windows 查看快速启动板状态**Services**面板，或通过打开 SQL Server 配置管理器。 如果服务停止后，重新启动它。
+    错误的常见原因是该[SQL Server Launchpad 服务](../concepts/extensibility-framework.md#launchpad)，用于管理 SQL Server 和 Python 之间的通信已停止。 您可以使用 Windows 查看快速启动板状态**Services**面板，或通过打开 SQL Server 配置管理器。 如果服务停止后，重新启动它。
 
-2. 接下来，验证 Python 运行时工作，并与 SQL Server 通信。 若要执行此操作，打开一个新**查询**窗口在 SQL Server Management Studio 并连接到已安装 Python 的实例。
+3. 验证 Python 运行时工作，并与 SQL Server 通信。 若要执行此操作，打开一个新**查询**窗口在 SQL Server Management Studio 并连接到已安装 Python 的实例。
 
     ```sql
     EXEC sp_execute_external_script @language = N'Python', 
@@ -74,10 +68,11 @@ ms.locfileid: "48878020"
 
 有两种方法在 SQL Server 中运行 Python 代码：
 
-+ 添加 Python 脚本的系统存储过程参数**sp_execute_external_script**
-+ 从远程的 Python 客户端连接到 SQL Server 和使用 SQL Server 作为计算上下文执行代码。 这需要[revoscalepy](../python/what-is-revoscalepy.md)。
++ 系统存储过程的参数添加的 Python 脚本[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-本教程的主要目标是确保你可以在存储过程中使用 Python。
++ 从[远程 Python 客户端](../python/setup-python-client-tools-sql.md)，连接到 SQL Server，并使用 SQL Server 作为计算上下文执行代码。 这需要[revoscalepy](../python/what-is-revoscalepy.md)。
+
+以下练习的重点是第一个交互模型： 如何将 Python 代码传递给存储过程。
 
 1. 运行一些简单代码，请参阅如何数据 SQL 服务器和 Python 之间来回传递。
 
@@ -108,40 +103,42 @@ ms.locfileid: "48878020"
 
 + 内的所有内容`@script`参数必须是有效的 Python 代码。 
 + 代码必须遵循有关缩进、 变量名称等所有 Pythonic 规则。 时遇到错误，检查您的空白区域和大小写。
-+ 如果使用的默认情况下不加载任何库，必须在脚本开头使用导入语句加载它们。 
-+ 如果库尚未安装，停止，并安装 SQL Server 外部 Python 包，如下所述： [SQL Server 上安装新的 Python 包](../python/install-additional-python-packages-on-sql-server.md)
++ 如果使用的默认情况下不加载任何库，必须在脚本开头使用导入语句加载它们。 SQL Server 将添加几个特定于产品的库。 有关详细信息，请参阅[Python 库](../python/python-libraries-and-data-types.md)。
++ 如果库尚未安装，停止并安装 SQL Server 外部 Python 包，如下所述： [SQL Server 上安装新的 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="inputs-and-outputs"></a>“脚本转换编辑器”
 
-默认情况下[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)接受单个输入数据集，这通常中有效的 SQL 查询的形式提供。 可以作为 SQL 变量传递其他类型的输入： 例如，您可以传递训练的模型作为变量，如使用序列化函数[pickle](https://docs.python.org/3.0/library/pickle.html)或[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中编写模型二进制格式。
+默认情况下[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)接受单个输入数据集，这通常中有效的 SQL 查询的形式提供。 
 
-存储的过程返回单个 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)作为输出数据帧。 但是您可以为变量输出标量和模型。 例如，可以输出为二进制变量已训练的模型，并将其传递给 T-SQL INSERT 语句，该模型写入表。 您还可以生成绘图 （以二进制格式） 或标量 （单个值，如日期和时间，经过的时间来训练该模型，等等）。
+可以作为 SQL 变量传递其他类型的输入： 例如，您可以传递训练的模型作为变量，如使用序列化函数[pickle](https://docs.python.org/3.0/library/pickle.html)或[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)中编写模型二进制格式。
 
-现在，让我们看看只是默认输入和输出变量`InputDataSet`和`OutputDataSet`。 
+存储的过程返回单个 Python [pandas](http://pandas.pydata.org/pandas-docs/stable/index.html)数据帧为 output，但您也可以输出标量和作为变量的模型。 例如，可以输出为二进制变量已训练的模型，并将其传递给 T-SQL INSERT 语句，该模型写入表。 您还可以生成绘图 （以二进制格式） 或标量 （单个值，如日期和时间，经过的时间来训练该模型，等等）。
+
+现在，让我们看看只是默认的 sp_execute_external_script 的输入和输出变量：`InputDataSet`和`OutputDataSet`。 
 
 1. 运行以下代码以执行某些数学运算，并输出结果。
 
-        ```sql
-        execute sp_execute_external_script 
-        @language = N'Python', 
-        @script = N'
-        a = 1
-        b = 2
-        c = a/b
-        print(c)
-        OutputDataSet = c
-        '
-        WITH RESULT SETS ((ResultValue float))
-        ```
+    ```sql
+    execute sp_execute_external_script 
+    @language = N'Python', 
+    @script = N'
+    a = 1
+    b = 2
+    c = a/b
+    print(c)
+    OutputDataSet = c
+    '
+    WITH RESULT SETS ((ResultValue float))
+    ```
 
 2. 应显示错误，因为在 Python 代码中生成一个标量数据帧。
 
-        **Results**
+    **结果**
 
-        ```text
-        line 43, in transform
-            raise TypeError('OutputDataSet should be of type pandas.DataFrame')
-        ```
+    ```text
+    line 43, in transform
+        raise TypeError('OutputDataSet should be of type pandas.DataFrame')
+    ```
 
 3. 现在，看到使用默认输入的变量向 Python，传递表格数据集时，会发生什么情况`InputDataSet`。 
 
@@ -382,4 +379,4 @@ SQL Server 依赖于 Python **pandas**包，这非常适用于使用表格数据
 
 ## <a name="next-steps"></a>后续步骤
 
-[将 Python 代码包装在一个 SQL 存储过程](wrap-python-in-tsql-stored-procedure.md)
+[设置鸢尾花演示数据集](demo-data-iris-in-sql.md)

@@ -3,17 +3,17 @@ title: SQL Server 机器学习服务中的可扩展性体系结构 |Microsoft Do
 description: 外部代码支持的 SQL Server 数据库引擎，使用双体系结构的关系数据上运行 R 和 Python 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878180"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419215"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server 机器学习服务中的可扩展性体系结构 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ SQL Server 2016 支持 R 运行时中引入了可扩展性框架。 SQL Server 2
 
 ## <a name="launchpad"></a>启动板
 
-SQL Server Trusted Launchpad 是一种服务，管理和执行外部脚本，类似于全文索引和查询服务用于处理全文查询启动单独的主机的方式。 快速启动板服务可以开始仅受信任的启动器，均由 Microsoft、 或的具有已经 Microsoft 认证满足性能和资源管理的要求。
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]是一种服务，管理和执行外部脚本，类似于全文索引和查询服务用于处理全文查询启动单独的主机的方式。 快速启动板服务可以开始仅受信任的启动器，均由 Microsoft、 或的具有已经 Microsoft 认证满足性能和资源管理的要求。
 
 | 受信任的启动器 | 扩展名 | SQL Server 版本 |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ SQL Server Trusted Launchpad 是一种服务，管理和执行外部脚本，类
 | 适用于 Python 3.5 Pythonlauncher.dll | [Python 扩展](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 服务在其自身的用户帐户下运行。 如果您更改运行 Launchpad 的帐户，请确保要执行此操作使用 SQL Server 配置管理器，以确保更改将写入相关文件。
+
+单独[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]每个数据库引擎实例已向其添加 SQL Server 机器学习服务创建服务。 还有一个快速启动板服务的每个数据库引擎实例，因此如果有多个实例的外部脚本支持，则必须为每个快速启动板服务。 数据库引擎实例绑定到为其创建的快速启动板服务。 在存储过程中的外部脚本或 T-SQL 的结果调用的同一个实例创建的快速启动板服务在 SQL Server 服务中的所有调用。
 
 若要执行的任务特定的受支持语言，快速启动板从池中获取受保护的辅助角色帐户，并启动一个附属过程来管理外部运行时。 每个附属进程继承的快速启动板的用户帐户，并执行脚本的持续时间内使用该辅助角色帐户。 如果脚本使用并行进程，则会创建相同的单个辅助角色帐户下。
 

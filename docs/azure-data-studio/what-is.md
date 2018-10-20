@@ -4,18 +4,18 @@ description: Azure Data Studio 是一个免费的轻型工具，用于管理 SQL
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 93e1eae9c920a06f24d19a3f2757a7afaa7ca968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 296274548b725a620d577916d2c76d31c923c4c0
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48038052"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356528"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什么是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 

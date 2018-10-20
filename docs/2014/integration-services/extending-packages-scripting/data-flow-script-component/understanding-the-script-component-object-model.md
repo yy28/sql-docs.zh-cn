@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076017"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460662"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解脚本组件对象模型
   [的编码和调试脚本组件] 中所述 (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，脚本组件项目包含三个项目项：  
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services** <br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
+![集成服务图标 （小）](../../media/dts-16.gif "Integration Services 图标 （小）")**保持最新的 Integration Services**<br /> 若要从 Microsoft 获得最新的下载内容、文章、示例和视频，以及从社区获得所选解决方案，请访问 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 页：<br /><br /> [访问 MSDN 上的 Integration Services 页](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要获得有关这些更新的自动通知，请订阅该页上提供的 RSS 源。  
   
 ## <a name="see-also"></a>请参阅  
- [配置脚本组件在脚本组件编辑器] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [在脚本组件编辑器中配置脚本组件](configuring-the-script-component-in-the-script-component-editor.md)   
  [的编码和调试脚本组件] (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

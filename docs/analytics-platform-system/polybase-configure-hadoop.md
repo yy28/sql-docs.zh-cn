@@ -1,5 +1,5 @@
 ---
-title: 配置 PolyBase 以访问 Hadoop 中的外部数据 |Microsoft Docs
+title: 配置 PolyBase 以访问 Hadoop 中的外部数据 | Microsoft Docs
 description: 介绍如何在并行数据仓库，若要将连接到外部 Hadoop 配置 PolyBase。
 author: mzaman1
 manager: craigg
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d87ba02342948d140afb68c2d9d13a2aef9464eb
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450340"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460872"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -22,7 +22,7 @@ ms.locfileid: "47450340"
 
 ## <a name="prerequisites"></a>必要條件
 
-PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 支持受支持的主要和次要版本中的所有版本和 Hadoop 遵循其新版本的"Major.Minor.Version"模式。 支持以下 Hadoop 提供程序：
+PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 Cloudera 分布式 Hadoop (CDH)。 Hadoop 遵循其新版本的“Major.Minor.Version”模式，且主要和次要版本中支持的所有版本均受支持。 支持以下 Hadoop 提供程序：
  - Linux/Windows Server 上的 Hortonworks HDP 1.3  
  - Linux 上的 Hortonworks HDP 2.1 - 2.6
  - Windows Server 上的 Hortonworks HDP 2.1 - 2.3  
@@ -33,7 +33,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 首先，配置 AP 以使用特定的 Hadoop 提供程序。
 
-1. 运行[sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' 并设置适当的值提供程序使用。 若要查找的值提供程序，请参阅[PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。 
+1. 使用“hadoop connectivity”运行 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 并为提供程序设置适当的值。 若要为提供程序查找值，请参阅 [PolyBase 连接配置](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)。 
 
    ```sql  
    -- Values map to various external data sources.  
@@ -50,7 +50,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
   
 ## <a id="pushdown"></a> 启用下推计算  
 
-若要提高查询性能，启用到 Hadoop 群集的下推计算：  
+若要提高查询性能，请对 Hadoop 群集启用下推计算：  
   
 1. 打开远程桌面连接到 PDW 控制节点。
 
@@ -68,15 +68,15 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
 
 ## <a name="configure-an-external-table"></a>配置外部表
 
-若要查询 Hadoop 数据源中的数据，必须定义外部表在 TRANSACT-SQL 查询中使用。 以下步骤介绍如何配置外部表。
+若要查询 Hadoop 数据源中的数据，必须定义外部表以在 Transact-SQL 查询中使用。 以下步骤介绍如何配置外部表。
 
-1. 在数据库上创建一个主密钥。 需要加密的凭据机密。
+1. 在数据库上创建主密钥。 需要加密的凭据机密。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
    ```
 
-2. 创建数据库范围凭据用于受 Kerberos 保护的 Hadoop 群集。
+2. 为受 Kerberos 保护的 Hadoop 群集创建数据库范围凭据。
 
    ```sql
    -- IDENTITY: the Kerberos user name.  
@@ -85,7 +85,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. 创建与外部数据源[CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)。
+3. 使用 [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) 创建外部数据源。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -99,7 +99,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
    );  
    ```
 
-4. 创建与外部文件格式[CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)。
+4. 使用 [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) 创建外部文件格式。
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -109,7 +109,7 @@ PolyBase 支持两个 Hadoop 提供程序：Hortonworks 数据平台 (HDP) 和 C
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. 创建外部表指向存储在 Hadoop 中使用的数据[CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)。 在此示例中，外部数据包含汽车传感器数据。
+5. 使用 [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md) 创建指向存储在 Hadoop 中的数据的外部表。 在此示例中，外部数据包含汽车传感器数据。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -138,9 +138,9 @@ PolyBase 适用于三个函数：
   
 - 针对外部表的即席查询。  
 - 导入数据。  
-- 正在导出数据。  
+- 导出数据。  
 
-下面的查询提供了示例使用虚构的汽车传感器数据。
+下面的查询提供了虚构汽车传感器数据示例。
 
 ### <a name="ad-hoc-queries"></a>即席查询  
 
@@ -200,7 +200,5 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>后续步骤
 
-了解更多方式，若要配置 PolyBase 在以下文章：
-
-[PolyBase 配置和安全的 Hadoop ](../relational-databases/polybase/polybase-configuration.md)。  
+有关 PoliyBase 详细信息，请参阅[什么是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

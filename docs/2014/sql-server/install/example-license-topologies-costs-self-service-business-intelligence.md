@@ -11,15 +11,15 @@ ms.assetid: 682b8711-407a-48d1-9807-415d4c24dad6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56e290ef8bf680f44ee11ec2e8d918b7b1d22c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7e08f483f1f56dcab49391190fd1c6edc11f6db
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091397"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462053"
 ---
 # <a name="example-license-topologies-and-costs--for-sql-server-2014-self-service-business-intelligence"></a>针对 SQL Server 2014 自助商业智能的许可证拓扑和成本示例
-  本主题说明了选择的高级注意事项[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]商业智能版或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]企业版。 本主题包括若干本地 Microsoft 自助商业智能 (BI) 拓扑示例。 这些示例包括可用来在成本和性能之间取得最佳平衡的版本和许可证。 拓扑、服务器数目和许可成本 **仅作为示例**提供。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 在许可中引入了若干更改，为您许可服务器、用户和设备提供了更多方式选择。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 许可支持与商业智能相关的相同方案。  
+  本主题阐释了用于选择 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 商业智能版或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 的概括性的注意事项。 本主题包括若干本地 Microsoft 自助商业智能 (BI) 拓扑示例。 这些示例包括可用来在成本和性能之间取得最佳平衡的版本和许可证。 拓扑、服务器数目和许可成本 **仅作为示例**提供。 Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 Microsoft SharePoint 2013 在许可中引入了若干更改，为您许可服务器、用户和设备提供了更多方式选择。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 许可支持与商业智能相关的相同方案。  
   
 -   在商业智能版中提供了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，并且为某些版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供按内核许可。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48091397"
   
 -   浏览器中的交互式 PowerPivot 工作簿。  
   
--   交互式[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]SharePoint 中的报表。  
+-   SharePoint 中的交互式 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 报表。  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库、计划数据刷新、管理面板。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48091397"
   
 -   SQL Server BI 版本使用服务器许可和客户端访问许可 (CAL)。  
   
--   CAL 许可基于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每个用户或设备，与它们连接到的服务器数目无关。  
+-   CAL 许可基于连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个用户或设备，与它们连接到的服务器数目无关。  
   
 -   内核许可要求服务器中的所有内核都受到某一许可证的涵盖。 对于服务器中的每个物理处理器，需要最少 **四个** 内核许可证。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48091397"
 |Business Intelligence|**（是）** $8592 + 每个 CAL $199|不适用|  
 |Standard|**（是）**|**（是）**|  
   
- 有关详细信息示例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]许可价格，请参阅：  
+ 有关示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 许可价格的详细信息，请参阅：  
   
 -   [虚拟环境的许可](http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)(http://www.microsoft.com/licensing/about-licensing/virtualization.aspx)。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "48091397"
   
  这些示例部署全都是 Intranet 环境，因此需要 SharePoint CAL 许可。  
   
--   [SharePoint 完整许可列表](http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)(http://technet.microsoft.com/en-in/library/jj819267.aspx#bkmk_FeaturesOnPremise)。  
+-   [SharePoint 完整许可列表](http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)(http://technet.microsoft.com/library/jj819267.aspx#bkmk_FeaturesOnPremise)。  
   
--   [如何购买 SharePoint](http://sharepoint.microsoft.com/en-in/Pages/buy.aspx) (http://sharepoint.microsoft.com/en-in/Pages/buy.aspx)。  
+-   [如何购买 SharePoint](http://sharepoint.microsoft.com/Pages/buy.aspx) (http://sharepoint.microsoft.com/Pages/buy.aspx)。  
   
 ##  <a name="bkmk_3tier_powerpivot"></a> 3 层使用单独的拓扑[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]服务器  
  此示例说明，对于 800 个或更少用户，将 SQL Server BI 版本用于 SharePoint 应用程序服务器和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 服务器的开销最少。 但在由 800 个或更多的用户时，SQL Server Enterprise Edition 的开销较低。 内核许可与用户数目无关，因此，在您对内核和 CAL 许可成本进行比较以及用户数目增加时，存在成本阈值点。 从该成本阈值点往上，Enterprise Edition 是开销最低的解决方案。 为了确定成本阈值，将基于要许可的内核数目的成本与要许可的最终用户或最终设备 CAL 的数目进行比较。  
@@ -158,7 +158,7 @@ ms.locfileid: "48091397"
   
 -   Analysis Services 在 PowerPivot 模式 (2) 场外运行，但 PowerPivot 正运行**上的相同物理**中其他应用程序角色的服务器。  
   
--   数据库角色 (3) 使用 SQL Server Enterprise，以便[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能 AlwaysOn 可用性组不可用。  
+-   数据库角色 (3) 使用 SQL Server Enterprise，以便提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能 AlwaysOn 可用性组。  
   
  ![bi_license_3tiers](../../../2014/sql-server/install/media/bi-license-3tiers.gif "bi_license_3tiers")  
   

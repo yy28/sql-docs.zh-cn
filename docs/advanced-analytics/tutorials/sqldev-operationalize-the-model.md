@@ -1,21 +1,21 @@
 ---
-title: 课程 6 预测潜在结果使用 R 模型 （SQL Server 机器学习） |Microsoft Docs
+title: 课程 4 预测潜在结果使用 R 模型 （SQL Server 机器学习） |Microsoft Docs
 description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798567"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462123"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>第 6 课： 预测潜在的存储过程中使用 R 模型的结果
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>第 4 课： 预测潜在的存储过程中使用 R 模型的结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
@@ -200,4 +200,4 @@ GO
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 5 课： 训练和保存使用 T-SQL 的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 课： 训练和保存使用 T-SQL 的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)

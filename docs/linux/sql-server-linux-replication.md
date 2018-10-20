@@ -4,7 +4,7 @@ description: 本文介绍在 Linux 上的 SQL Server 复制。
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734125"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390839"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上的 SQL Server 复制
 
@@ -34,7 +34,7 @@ SQL Server 的实例可以参与任何复制角色：
 * 分发服务器
 * 订阅服务器
 
-复制架构可以混合和匹配操作系统平台。 例如，复制架构可以使用 SQL Server 的实例在 Linux 上的发布服务器和分发服务器上，而订阅服务器可以包含的 Windows 上的 SQL Server 实例。
+复制架构可以混合和匹配操作系统平台。 例如，复制架构可能包括在 Linux 上的 SQL server 实例的发布服务器和分发服务器上，以及订阅服务器包括 Windows 和 Linux 上的 SQL Server 的实例。
 
 Linux 上的 SQL Server 实例可以参与任何类型的复制。
 
@@ -62,6 +62,7 @@ Linux 上的 SQL Server 实例可以参与任何类型的复制。
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 不支持以下功能：
 
 * 立即更新订阅服务器
+* Oracle 发布
 
 ## <a name="next-steps"></a>后续步骤
 

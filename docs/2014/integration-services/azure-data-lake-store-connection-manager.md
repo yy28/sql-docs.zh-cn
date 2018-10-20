@@ -14,12 +14,12 @@ ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: caba8be6958adf25221b0f81d873b60eb0ee5322
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20dfcedbf0a8a69c1a129e85e4d5f76f0bc7768a
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172817"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460441"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 连接管理器
   **Azure Data Lake Store 连接管理器** 启用了 SSIS 包，该包通过以下两种身份验证类型连接到 Azure Data Lake Store 服务：Azure AD 用户标识和 Azure AD 服务标识。  
@@ -36,7 +36,7 @@ ms.locfileid: "48172817"
 
         1. 为“用户名”  和“密码”  字段指定值。 
     
-        2. 单击“测试连接”  以测试连接。 如果你和你的租户管理员先前不同意 SSIS 访问 Azure Data Lake Store 数据，则需在弹出对话框中单击“接受”  按钮，允许 SSIS 访问 Azure Data Lake Store 数据。 若要深入了解此同意体验，请参阅 [Integrating applications with Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application)（将应用程序与 Azure Active Directory 集成）。
+        2. 单击“测试连接”  以测试连接。 如果你和你的租户管理员先前不同意 SSIS 访问 Azure Data Lake Store 数据，则需在弹出对话框中单击“接受”  按钮，允许 SSIS 访问 Azure Data Lake Store 数据。 若要深入了解此同意体验，请参阅 [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application)（将应用程序与 Azure Active Directory 集成）。
     
         >   [!NOTE] 
         >   “Azure AD 用户标识”身份验证选项不支持多重身份验证和 Microsoft 帐户。
@@ -44,7 +44,7 @@ ms.locfileid: "48172817"
     2.  如果选择“Azure AD 服务标识”  身份验证选项，请执行以下操作：
         1. 创建 AAD 应用程序和服务主体，使其可访问 Azure Data Lake 资源。
     
-        2. 为此 AAD 应用程序分配相应权限，以便访问 Azure Data Lake 资源。 若要深入此身份验证选项，请参阅 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal)（使用门户创建可访问资源的 Active Directory 应用程序和服务主体）。
+        2. 为此 AAD 应用程序分配相应权限，以便访问 Azure Data Lake 资源。 若要深入此身份验证选项，请参阅 [Use portal to create Active Directory application and service principal that can access resources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)（使用门户创建可访问资源的 Active Directory 应用程序和服务主体）。
     
         3. 为“客户端 ID” 、“密钥”  和“租户名”  字段指定值。
     

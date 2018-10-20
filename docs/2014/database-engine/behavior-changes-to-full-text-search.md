@@ -14,24 +14,24 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198687"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461012"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>全文搜索的行为更改
   本主题介绍全文搜索中的行为更改。 与早期版本的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 相比， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中的功能的工作或交互方式会受到行为更改的影响。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>中全文搜索的行为更改 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中全文搜索的行为更改  
  将很快提供相关信息。  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>中全文搜索的行为更改 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中全文搜索的行为更改  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 为美国英语 (LCID 1033) 和英国英语 (LCID 2057) 安装了新版本的断字符和词干分析器。 但是，如果您想要保留这些组件的以前行为，您可以切换到其早期版本。 有关详细信息，请参阅[更改用于美国英语和英国英语的断字符](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>安装了新的断字符和词干分析器  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 更新所有断字符和词干分析器使用的全文搜索和语义搜索。 为了保持索引内容和查询结果之间的一致性，建议您重新填充现有全文索引。  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 更新全文搜索和语义搜索所使用的所有断字符和词干分析器。 为了保持索引内容和查询结果之间的一致性，建议您重新填充现有全文索引。  
   
 1.  英语已有了新的断字符。 如果您必须保留先前行为，请参阅 [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198687"
      全文引擎会对 FILESTREAM BLOB 的内容进行索引。 对诸如图像之类的文件进行索引可能没有用。 更新 FILESTREAM BLOB 时，会重新对其进行索引。  
   
 ## <a name="see-also"></a>请参阅  
- [全文搜索] ((../ relational-databases/search/full-text-search.md)   
+ [全文搜索](../relational-databases/search/full-text-search.md)   
  [全文搜索向后兼容性](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [升级全文搜索](../relational-databases/search/upgrade-full-text-search.md)   
  [全文搜索入门](../relational-databases/search/get-started-with-full-text-search.md)  

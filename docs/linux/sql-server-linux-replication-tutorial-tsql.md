@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3569b1026ab8eded80164610ab8581209de7e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13359f151ef1453a7bc8b2020dc4cd8db9a13b80
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669305"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390829"
 ---
 # <a name="configure-replication-with-t-sql"></a>使用 T-SQL 配置复制
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-在本教程将使用 2 个实例的 SQL Server 使用 TRANSACT-SQL 在 Linux 上配置 SQL Server 快照复制。 发布服务器和分发服务器上将同一个实例，并且订阅服务器将位于单独的实例上。
+在本教程将使用两个实例的 SQL Server 使用 TRANSACT-SQL 在 Linux 上配置 SQL Server 快照复制。 发布服务器和分发服务器上将同一个实例，并且订阅服务器将位于单独的实例上。
 
 > [!div class="checklist"]
 > * 启用在 Linux 上的 SQL Server 复制代理
@@ -38,7 +38,7 @@ ms.locfileid: "47669305"
 ## <a name="prerequisites"></a>必要條件  
 若要完成本教程中，将需要：
 
-- Linux 上的 SQL Server 的最新版本的 SQL Server 的 2 个实例
+- Linux 上的 SQL Server 的最新版本的 SQL Server 的两个实例
 - 发出 T-SQL 查询，以设置复制如 SQLCMD 或 SSMS 工具
 
   请参阅[使用 SSMS 管理 Linux 上的 SQL Server](./sql-server-linux-manage-ssms.md)。
@@ -50,15 +50,6 @@ ms.locfileid: "47669305"
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
-  ```
-
-1. 配置 SQL Server 实例的复制运行以下存储的过程在 SQL Server 复制参与每个 CTP1.5 实例的 msdb 数据库中。
-
-  ```sql
-  USE msdb
-  GO
-  exec sys.sp_MSrepl_createdatatypemappings;
-  GO
   ```
 
 1. 创建示例数据库和表在发布服务器创建示例数据库和表将充当发布的项目。
@@ -282,7 +273,7 @@ ms.locfileid: "47669305"
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-在本教程中使用 2 个实例的 SQL Server 使用 TRANSACT-SQL 在 Linux 上配置 SQL Server 快照复制。
+在本教程中，通过使用 TRANSACT-SQL 的 SQL Server 的两个实例的 Linux 上配置 SQL Server 快照复制。
 
 > [!div class="checklist"]
 > * 启用在 Linux 上的 SQL Server 复制代理
@@ -294,7 +285,7 @@ ms.locfileid: "47669305"
 > * 配置订阅服务器 
 > * 运行复制作业
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 有关复制的详细信息，请参阅[SQL Server 复制文档](../relational-databases/replication/sql-server-replication.md)。
 

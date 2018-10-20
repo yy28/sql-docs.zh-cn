@@ -1,44 +1,44 @@
 ---
-title: 课 4 请数据功能，使用 T-SQL 的函数 （SQL Server 机器学习） |Microsoft 文档
-description: 本教程演示如何将 R 嵌入在 SQL Server 中存储过程和 T-SQL 函数
+title: 课程 2 使用 T-SQL 函数 （SQL Server 机器学习） 的请数据功能 |Microsoft Docs
+description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98182e8e602b8bba8ca7d7fd58cf23f3fcaaa435
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: f5427772ea438a198b1236a865e8cdbdd0b09d70
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249540"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462093"
 ---
-# <a name="lesson-4-create-data-features-using-r-and-t-sql"></a>第 4 课： 创建使用 R 和 T-SQL 数据功能
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>第 2 课： 创建使用 R 和 T-SQL 的数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是教程的有关如何在 SQL Server 中使用 R 的 SQL 开发人员的一部分。
+本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
 
 本步骤中将学习如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数通过原始数据创建功能。 然后从存储过程调用该函数，创建包含该功能值的表。
 
-## <a name="about-feature-engineering"></a>有关功能工程部门
+## <a name="about-feature-engineering"></a>有关功能设计
 
-几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”。 此过程从原始数据创建有意义的功能是中创建分析模型的关键步骤。
+几轮数据探索后，已从数据收集了一些见解，现可以继续“特征工程”。 从原始数据创建有意义的功能的此过程是在创建分析模型的关键步骤。
 
-在此数据集，距离值基于报告的计数距离，并不一定表示地理距离或实际的行程距离。 因此，需要使用源 NYC Taxi 数据集中提供的坐标计算接客点和落客点之间的直接距离。 可通过使用自定义 [函数中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine formula [!INCLUDE[tsql](../../includes/tsql-md.md)] （半正矢公式）实现。
+在此数据集，距离值根据报告的计量距离，并不一定表示地理距离或行程的实际距离。 因此，需要使用源 NYC Taxi 数据集中提供的坐标计算接客点和落客点之间的直接距离。 可通过使用自定义 [函数中的](https://en.wikipedia.org/wiki/Haversine_formula) Haversine formula [!INCLUDE[tsql](../../includes/tsql-md.md)] （半正矢公式）实现。
 
 使用一个自定义 T-SQL 函数 _fnCalculateDistance_通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_创建包含所有功能的表。
 
-整个过程是，如下所示：
+整个过程是按如下所示：
 
 - 创建执行计算的 T-SQL 函数
 
-- 调用将生成功能数据的函数
+- 调用函数以生成功能数据
 
-- 功能数据保存到表
+- 特征数据保存到的表
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>计算使用 fnCalculateDistance 的行程距离
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>计算行程距离使用 fnCalculateDistance
 
 该函数_fnCalculateDistance_应已下载并注册[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作为本教程的准备工作的一部分。 花点时间查看代码。
   
@@ -76,7 +76,7 @@ ms.locfileid: "35249540"
 
 ## <a name="generate-the-features-using-fnengineerfeatures"></a>生成使用的功能_fnEngineerFeatures_
 
-若要添加到的表中可以用于定型模型的计算的值，你将使用另一个函数， _fnEngineerFeatures_。 新的函数调用以前创建的 T-SQL 的函数， _fnCalculateDistance_，若要获取的直接提取和放置位置距离。 
+若要将计算的值添加到可用于训练模型的表，将使用另一个函数_fnEngineerFeatures_。 新的函数调用以前创建的 T-SQL 函数_fnCalculateDistance_，以获取上车与下车位置之间的直接距离。 
 
 1. 花时间检查自定义 T-SQL 函数 _fnEngineerFeatures_的代码，该函数应已作为本演练准备工作的一部分进行了创建。
   
@@ -104,11 +104,11 @@ ms.locfileid: "35249540"
     GO
     ```
 
-    + 此表值函数，它接受多个列作为输入，并输出具有多个功能列的表。
+    + 此表值函数，将多个列作为输入，并输出包含多个特征列的表。
 
-    + 此函数的目的是在生成模型中创建新的功能，以供使用。
+    + 此函数的目的是构建一个模型中创建新功能，以供使用。
 
-2.  若要验证此函数可，使用它来计算这些行程其中按流量计费的距离已 0 但的提取和放置的位置不同的地理距离。
+2.  若要验证此函数正常工作，使用它来计算行程计量的距离为 0，但上车与下车位置是不同的地理距离。
   
     ```SQL
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -119,12 +119,12 @@ ms.locfileid: "35249540"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    可见，仪表报告的距离并不始终对应于地理距离。 这就是特征工程很重要的原因。 你可以使用这些改进的数据功能训练机器学习模型使用。
+    可见，仪表报告的距离并不始终对应于地理距离。 这就是特征工程很重要的原因。 可以使用这些改进的数据功能来定型使用 R 的机器学习模型
 
 ## <a name="next-lesson"></a>下一课
 
-[第 5 课： 训练和保存模型使用 T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[第 3 课： 训练和保存使用 T-SQL 的模型](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一课
 
-[第 3 课： 浏览并使用 R 和存储的过程的数据可视化](../tutorials/sqldev-explore-and-visualize-the-data.md)
+[第 1 课： 浏览和可视化数据使用 R 和存储的过程](sqldev-explore-and-visualize-the-data.md)
