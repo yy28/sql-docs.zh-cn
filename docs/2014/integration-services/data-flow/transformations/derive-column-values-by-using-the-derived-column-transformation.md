@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054309"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460292"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用派生列转换派生列值
   若要添加和配置派生列转换，包必须已包含至少一个数据流任务和一个源。  
@@ -60,7 +60,7 @@ ms.locfileid: "48054309"
 12. 若要保存更新后的包，请单击 **“文件”** 菜单上的 **“保存选定项”** 。  
   
 ## <a name="see-also"></a>请参阅  
- [派生的列转换](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 数据类型](../integration-services-data-types.md)   
  [Integration Services 转换](integration-services-transformations.md)   
  [Integration Services 路径](../integration-services-paths.md)   

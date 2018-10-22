@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
-ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
+ms.openlocfilehash: bc9b0e8b89fb7fd6e507e9e615190fef21a94466
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289308"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461102"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -25,7 +25,7 @@ ms.locfileid: "46289308"
 发布日期-2018 年 7 月
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 命令不会消耗并发槽位 （行为更改）
-APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 以前，这些命令将占用[并发槽](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)减少的用户负载/查询无法执行。 `DBCC`命令现在运行在不使用用户并发槽提高总体查询执行性能的本地队列中。
+APS 支持 T-SQL 子集[DBCC 命令](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql)如[DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)。 以前，这些命令将占用[并发槽](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)减少的用户负载/查询无法执行。 `DBCC`命令现在运行在不使用用户并发槽提高总体查询执行性能的本地队列中。
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>某些元数据的调用替换为目录对象
 使用目录对象的元数据调用，而不是使用 SMO 有 APS 中显示性能改进。 从 CU7.1 开始，某些元数据调用现在目录对象默认情况下使用。 可以通过关闭此行为[功能开关](appliance-feature-switch.md)如果使用元数据查询的客户遇到任何问题。

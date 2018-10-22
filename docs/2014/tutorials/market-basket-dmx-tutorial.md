@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210927"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461903"
 ---
 # <a name="market-basket-dmx-tutorial"></a>市场篮 DMX 教程
   在本教程中，您将学习如何使用数据挖掘扩展插件 (DMX) 查询语言来创建、定型和浏览挖掘模型。 然后，您将使用这些挖掘模型创建预测，说明可能同时购买的产品。  
@@ -76,7 +76,7 @@ ms.locfileid: "48210927"
   
  由于各种原因，您可能需要在单一挖掘结构中添加多个挖掘模型。 例如，可以使用不同的算法创建多个挖掘模型以判断哪种方法效果最佳。 也可以创建使用相同算法的多个挖掘模型，但将每个挖掘模型中的某个参数设置为不同的值来寻找最佳参数设置。  
   
- 有关详细信息，请参阅 [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md)。  
+ 有关详细信息，请参阅[ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016)。  
   
  因为您将创建包含多个挖掘模型的挖掘结构，因此使用本教程中的第二种方法。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48210927"
  在本课中，您将学习如何使用 `ALTER` 语句向挖掘结构中添加挖掘模型。  
   
  [第 3 课：处理市场篮挖掘结构](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- 在本课程中，您将学习如何使用`INSERT INTO`语句处理挖掘结构及其关联的挖掘模型。  
+ 在本课中，您将学习如何使用 `INSERT INTO` 语句处理挖掘结构及其关联的挖掘模型。  
   
  [第 4 课：执行市场篮预测](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  在本课中，您将学习如何使用 `PREDICTION JOIN` 语句根据挖掘模型创建预测。  
@@ -116,6 +116,6 @@ ms.locfileid: "48210927"
 ## <a name="see-also"></a>请参阅  
  [自行车购买者 DMX 教程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [数据挖掘基础教程](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [第 3 课： 生成市场篮方案&#40;数据挖掘中级教程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [第 3 课：生成市场篮方案（数据挖掘中级教程）](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   
