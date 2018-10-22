@@ -15,19 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: d704ef10542ab2ef4b9ef2669dc49d8beb2b5226
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687805"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383314"
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014](install-sql-server.md)。
-
  从 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 开始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 仅可用作 64 位应用程序。 以下是有关如何获取 SQL Server 以及如何安装 SQL Server 的重要详细信息。
 
 ## <a name="installation-details"></a>安装详细信息

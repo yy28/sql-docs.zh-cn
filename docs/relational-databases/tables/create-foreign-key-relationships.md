@@ -14,18 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70d74cb0b231128dff96ff50bcf9a8a2959c62ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 978997ac3048bffb2e8f475d2c728a38b7a27283
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668915"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383582"
 ---
 # <a name="create-foreign-key-relationships"></a>创建外键关系
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [Create Foreign Key Relationships](create-foreign-key-relationships.md)（创建外键关系）。
-
 
   本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中创建外键关系。 当希望将一个表的行与另一个表的行相关联时，您可在这两个表之间创建关系。    
      
@@ -43,7 +40,7 @@ ms.locfileid: "47668915"
     
 -   在表级指定的 FOREIGN KEY 约束所具有的引用列数目必须与约束列列表中的列数相同。 每个引用列的数据类型也必须与列表中相应列的数据类型相同。    
     
--   对于表可包含的引用其他表的 FOREIGN KEY 约束的数目或其他表所拥有的引用特定表的 FOREIGN KEY 约束的数目， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都没有预定义的限制。 尽管如此，可使用的 FOREIGN KEY 约束的实际数目还是受硬件配置以及数据库和应用程序设计的限制。  表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 将可在单独的表中引用的其他表和列（传入引用）的数量限制从 253 提高至 10,000。  （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：    
+-   对于表可包含的引用其他表的 FOREIGN KEY 约束的数目或其他表所拥有的引用特定表的 FOREIGN KEY 约束的数目， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 都没有预定义的限制。 尽管如此，可使用的 FOREIGN KEY 约束的实际数目还是受硬件配置以及数据库和应用程序设计的限制。  表最多可以将 253 个其他表和列作为外键引用（传出引用）。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 将可引用一个表中的列的其他表和列（传入引用）的数量限制从 253 提高至 10000。  （兼容性级别至少必须为 130。）数量限制的提高带来了下列约束：    
     
     -   DELETE 和 UPDATE DML 操作支持大于 253 个外键引用。 不支持 MERGE 操作。    
     
@@ -93,7 +90,7 @@ ms.locfileid: "47668915"
 ## <a name="create-a-foreign-key-in-a-new-table"></a>在新表中创建外键  
 ####  <a name="using-transact-sql"></a>使用 Transact-SQL   
     
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。    
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
     
 2.  在标准菜单栏上，单击 **“新建查询”**。    
     
@@ -115,7 +112,7 @@ ms.locfileid: "47668915"
 ## <a name="create-a-foreign-key-in-an-existing-table"></a>在现有表中创建外键 
 #### <a name="using-transact-sql"></a>使用 Transact-SQL   
     
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。    
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。    
     
 2.  在标准菜单栏上，单击 **“新建查询”**。    
     
