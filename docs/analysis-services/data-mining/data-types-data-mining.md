@@ -47,11 +47,11 @@ ms.locfileid: "34014634"
  如果更改某一列的数据类型，则必须始终重新处理挖掘结构以及基于该结构的所有挖掘模型。 有时候，如果更改数据类型，则可能无法再在特定的模型中使用该列。 在这种情况下，Analysis Services 将在您重新处理该模型时引发一个错误，或者将处理该模型但忽略该特定列。  
   
 ## <a name="see-also"></a>另请参阅  
- [内容类型 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [内容类型 & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [数据挖掘算法 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [数据类型 & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [内容类型 &#40;数据挖掘&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [内容类型 &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘结构 &#40;Analysis Services-数据挖掘&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [数据类型 &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [挖掘模型列](../../analysis-services/data-mining/mining-model-columns.md)   
  [挖掘结构列](../../analysis-services/data-mining/mining-structure-columns.md)  
   
