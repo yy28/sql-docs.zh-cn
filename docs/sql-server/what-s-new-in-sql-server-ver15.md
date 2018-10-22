@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678265"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461112"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
@@ -233,7 +233,7 @@ CTP 2.0 引入或增强以下 [!INCLUDE[ssdeNoVersion](../includes/ssdenoversion
 对[审核](../relational-databases/security/auditing/sql-server-audit-database-engine.md)进行了强化处理，在审核日志中包含了名为 `data_sensitivity_information` 的新字段，其中记录查询返回的实际数据的敏感度分类（标签）。 有关详细信息和示例，请参阅[添加敏感度分类](../t-sql/statements/add-sensitivity-classification-transact-sql.md)。
 
 >[!NOTE]
->就审核启用方式方面没有任何更改。 在审核日志中包含了新字段 `data_sensitivity_information`，该字段记录查询返回的实际数据的敏感度分类（标签）。 请参阅[审核对敏感数据的访问](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)。
+>就审核启用方式方面没有任何更改。 在审核日志中包含了新字段 `data_sensitivity_information`，该字段记录查询返回的实际数据的敏感度分类（标签）。 请参阅[审核对敏感数据的访问](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3)。
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>对永久性内存设备的扩展支持
 

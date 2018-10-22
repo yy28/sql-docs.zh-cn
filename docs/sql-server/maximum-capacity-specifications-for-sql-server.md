@@ -21,16 +21,15 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764368"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383607"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server 的最大容量规范
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 有关与以前版本的 SQL Server 相关的内容，请参阅[SQL Server 的最大容量规范](maximum-capacity-specifications-for-sql-server.md)。
 
   以下各表指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 组件中定义的各种对象的最大大小和最大数量。 若要导航到某种 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技术相应的表，请单击其链接：  
   
@@ -125,7 +124,7 @@ ms.locfileid: "47764368"
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序对象  
  在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据层应用程序 (DAC) 中测试的各种对象的最大大小和最大数量。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] （64 位）|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 对象||最大大小/数量 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]（64 位）|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |每个 DAC 的数据库数||1|  
 |每个 DAC 的对象数*||受数据库中对象数或可用内存限制。|  

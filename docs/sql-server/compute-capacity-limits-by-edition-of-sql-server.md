@@ -1,7 +1,7 @@
 ---
 title: 按 SQL Server 版本划分的计算能力限制 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2017
+ms.date: 11/07/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cdb89a8aa0807e16e0e8f1fd62472f120beb7deb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 122fa1af75e522bf9fd52e7c92079038392461b6
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679685"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419094"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>按 SQL Server 版本划分的计算能力限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
