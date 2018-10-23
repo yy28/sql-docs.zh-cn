@@ -10,12 +10,12 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f418b5f9456b2863abba5d63c25dd224977dfb
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: a6507c72a325871fa4ec2e075a00dc458ac64ba3
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100538"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384172"
 ---
 # <a name="database-engine-errors"></a>数据库引擎错误
 表包含错误消息号和对应说明，此说明即 sys.messages 目录视图中的错误消息的正文。 
@@ -1290,6 +1290,7 @@ ms.locfileid: "49100538"
 |   2597    |   10  |   否  |   正在忽略跟踪标志 %d。 该跟踪标志无效，或者只能在服务器启动过程中指定。    |
 |   2599    |   16  |   否  |   无法切换到表 "%.*ls" 的行文本中。  |
 |   2601    |   14  |   否  |   不能在具有唯一索引 '%.* ls' 的对象 '%.*ls' 中插入重复键的行。    |
+|   2628    |   16  |   否  |   字符串或二进制数据将在表“%.*ls”，列“%.* ls”中被截断。 截断值：“%.*ls”。|
 |   2627    |   14  |   否  |   违反了 %ls 约束 '%.*ls'。不能在对象 '%.* ls' 中插入重复键。 |
 |   2701    |   10  |   否  |   已忽略数据库名称 '%.*ls'，将引用 tempdb 中的对象。    |
 |   2702    |   16  |   否  |   数据库 '%.*ls' 不存在。    |
