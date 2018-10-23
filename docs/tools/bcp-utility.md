@@ -30,17 +30,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 94a3adf850c633f3ba825da86a70ff560fb1edf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600525"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383842"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
- > 有关与以前版本的 SQL Server 相关的内容，请参阅 [bcp 实用工具](bcp-utility.md)。
 
  > Bcp 实用程序的最新版本，请参阅[适用于 SQL Server 的 Microsoft 命令行实用程序 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
@@ -133,7 +131,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-b** _**batch\_size**_<a name="b"></a>  
  指定每批导入数据的行数。 每个批次均作为一个单独的事务进行导入并记录，在提交之前会导入整批。 默认情况下，数据文件中的所有行均作为一个批次导入。 若要将行分为多个批次进行操作，请指定小于数据文件中的行数的 *batch_size* 。 如果任何批次的事务失败，则将只回滚当前批次中的插入。 已经由已提交事务导入的批次不会受到将来失败的影响。  
   
- 不要将此选项与 **-h "** ROWS_PER_BATCH **=** bb **"** 选项一起使用。  
+ 不要将此选项与 **-h "** ROWS_PER_BATCH **=**_bb_**"** 选项一起使用。  
  
  **-c**<a name="c"></a>  
  使用字符数据类型执行该操作。 此选项不提示输入每个字段；它使用 **char** 作为存储类型，没有前缀；使用 **\t** （制表符）作为字段分隔符，使用 **\r\n** （换行符）作为行终止符。 **-c** 与 **-w** 不兼容。  
@@ -528,7 +526,7 @@ bcp -v
 ```
   
 ### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. 将表行复制到数据文件中（使用可信连接）  
-以下示例阐释了 `WideWorldImporters.Warehouse.StockItemTransactions` 表中的 **out** 选项。
+以下示例阐释了 **表中的** out `WideWorldImporters.Warehouse.StockItemTransactions` 选项。
 
 - **基本**  
 此示例创建一个名为 `StockItemTransactions_character.bcp` 的数据文件，并使用 **字符** 格式将表数据复制到该文件中。
@@ -559,7 +557,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 ```  
   
 ### <a name="d-copying-data-from-a-file-to-a-table"></a>D. 将文件中的数据复制到表中  
-以下示例使用上面创建的文件说明 `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 表中的 **in** 选项。
+以下示例使用上面创建的文件说明 **表中的** in `WideWorldImporters.Warehouse.StockItemTransactions_bcp` 选项。
   
 - **基本**  
 此示例使用以前创建的 `StockItemTransactions_character.bcp` 数据文件。
@@ -660,7 +658,7 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [OPENROWSET (Transact-SQL)](../t-sql/functions/openrowset-transact-sql.md)   
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
+ [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)   
  [用来导入或导出数据的格式化文件 (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   

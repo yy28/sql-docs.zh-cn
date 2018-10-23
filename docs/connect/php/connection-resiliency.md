@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34d4bc2342397f5809ef16ef59ed342d6c86d421
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666795"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460372"
 ---
 # <a name="idle-connection-resiliency"></a>空闲连接复原
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47666795"
 
 连接复原能力实现与可以添加到连接字符串的两个连接关键字： **ConnectRetryCount**并**ConnectRetryInterval**。
 
-|关键字|值|默认|描述|
+|关键字|值|，则“默认”|描述|
 |-|-|-|-|
 |**ConnectRetryCount**| 0 到 255 （含） 之间的整数|1|尝试重新建立断开的连接之前放弃的最大次数。 默认情况下进行一次尝试以重新建立连接时中断。 值为 0 表示将尝试任何重新连接。|
 |**ConnectRetryInterval**| 介于 1 和 60 （含） 之间的整数|1| 以秒为单位，两次尝试重新建立的连接之间的时间。 应用程序将尝试在检测到断开的连接后立即重新连接，然后等待**ConnectRetryInterval**秒，然后重试。 如果，则忽略此关键字**ConnectRetryCount**等于 0。
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>另请参阅
-[Windows ODBC 驱动程序中的连接弹性](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Windows ODBC 驱动程序中的连接弹性](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

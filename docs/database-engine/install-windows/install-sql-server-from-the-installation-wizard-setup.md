@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 75ca694832c0509a4db5d422bbed79b2bef0f83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731485"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460682"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
-本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。 有关与以前版本的 SQL Server 相关的内容，请参阅[使用安装向导安装 SQL Server 2014（安装程序）](install-sql-server-from-the-installation-wizard-setup.md)。
+本文介绍如何使用安装向导安装 SQL Server。 它适用于 [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] 和 [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]。
 
 本文提供了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序的安装向导来安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 新实例的分步过程。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用于安装所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树，这样您就不必分别安装这些组件了。 有关如何分别安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的详细信息，请参阅[安装 SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components)。  
 
@@ -69,7 +69,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 4.  在“许可条款”页上查看许可协议，如果同意，请选中 **“我接受许可条款”** 复选框，然后单击 **“下一步”**。  
 
   >[!NOTE]
-  > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要了解有关 SQL Server 数据处理和隐私控制的详细信息，请参阅[隐私声明](https://privacy.microsoft.com/en-us/privacystatement)和[配置 SQL Server 以向 Microsoft 发送反馈](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
+  > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要了解有关 SQL Server 数据处理和隐私控制的详细信息，请参阅[隐私声明](https://privacy.microsoft.com/en-us/privacystatement)和[配置 SQL Server 以向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
   
 5.  在“全局规则”窗口中，如果没有规则错误，安装过程将自动前进到“产品更新”窗口。  
   

@@ -29,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1b62fe2d79dfa947cb9c8f0f6ebbd0c484960e26
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252114"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461162"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+ > SQL Server 2014 和更低，请参阅[sqlcmd 实用工具](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 )。
 
  > 有关如何在 Linux 上使用 sqlcmd，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。

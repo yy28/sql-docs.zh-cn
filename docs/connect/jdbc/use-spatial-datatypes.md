@@ -11,18 +11,18 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726711458f62011fc7bcaef268887813c9c9c3d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841999"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460542"
 ---
 # <a name="using-spatial-datatypes"></a>正在使用空间数据类型
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-从 JDBC 驱动程序预览版本 6.5.0 支持空间数据类型 （Geometry 和 Geography）。 使用存储的过程、 表值参数 (TVP)、 BulkCopy，和 Always Encrypted 目前不支持空间数据类型。 此页显示各种用例的 Geometry 和 Geography 数据类型和 JDBC 驱动程序。 有关空间数据类型的概述，请[空间数据类型概述](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-types-overview)页。
+从 JDBC 驱动程序预览版本 6.5.0 支持空间数据类型 （Geometry 和 Geography）。 使用存储的过程、 表值参数 (TVP)、 BulkCopy，和 Always Encrypted 目前不支持空间数据类型。 此页显示各种用例的 Geometry 和 Geography 数据类型和 JDBC 驱动程序。 有关空间数据类型的概述，请[空间数据类型概述](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)页。
 
 ## <a name="creating-a-geometry--geography-object"></a>创建几何图形 / 地理对象
 

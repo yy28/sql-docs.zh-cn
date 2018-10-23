@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 189ffb02217d85d77cee524658cd35a2d2cff034
-ms.sourcegitcommit: 677a75e7d149ff257ed8376a392806d17dca0640
+ms.openlocfilehash: 87fce17db46dc590fbffe0bae0b27c17bd54320e
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488292"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49476298"
 ---
 每个可用性组仅有一个主要副本。 主要副本允许读取和写入操作。 若要更改哪个副本为主要副本，可进行故障转移。 在高可用性的可用性组中，群集管理器自动执行故障转移过程。 在群集类型为 NONE 的可用性组中，需手动执行故障转移过程。 
 
@@ -91,4 +91,4 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```  
 
    > [!NOTE] 
-   > 若要删除可用性组，请使用[删除可用性组](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql)。 对于使用群集类型为 NONE 或 EXTERNAL 创建的可用性组，请对可用性组的所有副本执行该命令。
+   > 若要删除可用性组，请使用[删除可用性组](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql)。 对于使用群集类型为 NONE 或 EXTERNAL 创建的可用性组，请对可用性组的所有副本执行该命令。
