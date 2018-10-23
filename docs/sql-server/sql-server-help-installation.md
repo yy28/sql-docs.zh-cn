@@ -1,7 +1,7 @@
 ---
 title: SQL Server 帮助内容和帮助查看器 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/15/2017
+ms.date: 12/16/2017
 ms.prod: sql
 ms.technology: ''
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6b7287694779a3eaf120879120796c56b2dc413
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57b606af70ac4018fbedd266a9fe38243347458d
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699905"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460582"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 脱机帮助和帮助查看器
 
@@ -171,7 +171,7 @@ SSMS 17.x、VS 2015 和 2017 使用帮助查看器 2.x，该查看器支持 SQL 
 
 **在 SSMS 17.x 中查看 SQL Server 联机帮助**
 
-- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
+- 在“帮助”菜单中单击“查看帮助”。 [https://docs.microsoft.com/sql/ https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) 中的最新 SQL Server 2016/2017 文档在浏览器中显示。 
 
    ![查看帮助](../sql-server/media/sql-server-help-installation/viewhelp.png)
 

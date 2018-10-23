@@ -54,7 +54,7 @@ ms.locfileid: "47781695"
   
 -   将 @@ROWCOUNT 重置为 0 但不将该值返回到客户端。  
   
- 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例如下：SET @local_variable、RETURN、READTEXT 以及不带查询 Select 语句，如 SELECT GETDATE() 或 SELECT 'Generic Text'****。  
+ 执行简单分配的语句始终将 @@ROWCOUNT 值设置为 1。 不将任何行发送到客户端。 这些语句的示例如下：SET @local_variable、RETURN、READTEXT 以及不带查询 Select 语句，如 SELECT GETDATE() 或 SELECT 'Generic Text'。  
   
  在查询中执行分配或使用 RETURN 的语句将 @@ROWCOUNT 值设置为受查询影响或由查询读取的行数，例如：SELECT @local_variable = c1 FROM t1。  
   
