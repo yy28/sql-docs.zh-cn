@@ -41,15 +41,15 @@ ms.locfileid: "47778505"
 -   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname =**] **'***tabname*****  
+ [ **@tabname =**] **'***tabname***'**  
  已为其指定了空间索引的表的限定或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*是**nvarchar**(776)，无默认值。  
   
- [  **@indexname =** ] **'***indexname*****  
+ [ **@indexname =** ] **'***indexname***'**  
  指定的空间索引的名称。 *indexname*是**sysname** ，无默认值。  
   
- [  **@verboseoutput =** ] **'***verboseoutput*****  
+ [ **@verboseoutput =** ] **'***verboseoutput***'**  
  要返回的属性名称和值的范围。  
   
  0 = 核心属性  
@@ -58,10 +58,10 @@ ms.locfileid: "47778505"
   
  *verboseoutput*是**tinyint** ，无默认值。  
   
- [  **@query_sample =** ] **'***query_sample*****  
+ [ **@query_sample =** ] **'***query_sample***'**  
  一个具有代表性的查询示例，可用于测试索引的有效性。 它可以是一个有代表性的对象或查询窗口。 *query_sample*是**geometry** ，无默认值。  
   
- [  **@xml_output =** ] **'***xml_output*****  
+ [ **@xml_output =** ] **'***xml_output***'**  
  一个在 XML 片段中返回结果集的输出参数。 *xml_output*是**xml** ，无默认值。  
   
 ## <a name="properties"></a>属性  

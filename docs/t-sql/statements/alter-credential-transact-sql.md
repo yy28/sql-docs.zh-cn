@@ -48,10 +48,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  credential_name  
  指定将要更改的凭据的名称。  
   
- IDENTITY ='identity_name'****  
+ IDENTITY ='identity_name'  
  指定从服务器外部进行连接时要使用的帐户名称。  
   
- SECRET ='secret'****  
+ SECRET ='secret'  
  指定发送身份验证所需的机密内容。 *secret* 是可选项。
   
 > [!IMPORTANT]

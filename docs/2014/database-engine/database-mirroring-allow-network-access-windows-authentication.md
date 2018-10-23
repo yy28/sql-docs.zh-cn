@@ -25,7 +25,7 @@ ms.locfileid: "48183737"
   
 -   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例基于不同的域帐户（在相同的域或受信任的域中）作为服务运行，则必须在每个远程服务器实例上的 **master** 中创建各帐户的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。  
   
--   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master 中创建各主机帐户 (DomainName\\ComputerName$)** 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
+-   如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例作为网络服务帐户运行，则必须在每个远程服务器实例上的 master 中创建各主机帐户 (DomainName\\ComputerName$) 的登录名，并且必须授予该登录帐户对端点的 CONNECT 权限。 其原因在于，基于网络服务帐户运行的服务器实例使用主机的域帐户进行身份验证。  
   
 > [!NOTE]  
 >  确保每个服务器实例都有一个端点。 有关详细信息，请参阅[为 Windows 身份验证创建数据库镜像终结点 (Transact-SQL)](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)。  

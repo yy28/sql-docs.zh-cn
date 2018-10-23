@@ -23,7 +23,7 @@ ms.locfileid: "48154234"
 # <a name="select-script-component-type"></a>选择脚本组件类型
   可以使用 **“选择脚本组件类型”** 对话框，指定是否创建预配置为源、转换或目标的脚本转换。  
   
- 若要了解有关脚本组件的详细信息，请参阅 [Script Component](data-flow/transformations/script-component.md) 和 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 若要了解有关脚本组件的详细信息，请参阅 [脚本组件](data-flow/transformations/script-component.md) 和 [在脚本组件编辑器中配置脚本组件](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [用脚本组件扩展数据流](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ## <a name="options"></a>“常规”  
  选择 **“源”**、 **“目标”** 或 **“转换”** 将影响脚本转换的配置和脚本转换编辑器所显示的页。  

@@ -70,7 +70,7 @@ Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed act
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+**解决方法：** 在未能安装 SQL Server 引擎或 Analysis Services 时就会出现此情况。 若要解决该问题，请参考 SQL Server 安装程序日志来解决 SQL Server 引擎和 Analysis Services 失败的问题。 有关详细信息，请参阅查看和阅读 SQL Server 安装程序日志文件。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重命名网络名称后，SQL Server 2008、2008 R2 Analysis Services 故障转移群集升级到 SQL Server 2012 可能失败  
 **问题：** 在使用 Windows 群集管理器工具更改 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 故障转移群集实例的网络名称后，升级操作可能会失败。  

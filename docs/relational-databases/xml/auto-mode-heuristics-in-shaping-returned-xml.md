@@ -34,7 +34,7 @@ FOR XML AUTO
 ORDER BY T1.Id  
 ```  
   
- 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext****text****image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)**，SELECT 语句将返回如下行集：  
+ 如果未指定表 T1 的键，若要确定新 <`T1`> 元素的开始位置，需要比较 T1 中除 **ntext** **text** **image** 和 **xml** 类型以外的所有列的值。 接下来，假定 **Name** 列的数据类型为 **nvarchar(40)**，SELECT 语句将返回如下行集：  
   
 ```  
 T1.Id  T1.Name  T2.Id  

@@ -22,7 +22,7 @@ ms.locfileid: "47821735"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 事件类
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess****sp_adduser** 和 **sp_dropuser** 存储过程。  
+  将登录名作为数据库用户添加到数据库或从数据库删除时，会发生 **Audit Add DB User** 事件类。 此事件类用于 **sp_grantdbaccess**、**sp_revokedbaccess** **sp_adduser** 和 **sp_dropuser** 存储过程。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的将来版本中可能会删除此事件类。 建议使用 **Audit Database Principal Management** 事件类。  
   

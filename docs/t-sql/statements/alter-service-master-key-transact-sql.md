@@ -62,25 +62,25 @@ ALTER SERVICE MASTER KEY
  REGENERATE  
  指示应当重新生成服务主密钥。  
   
- OLD_ACCOUNT ='account_name'****  
+ OLD_ACCOUNT ='account_name'  
  指定旧的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- OLD_PASSWORD ='password'****  
+ OLD_PASSWORD ='password'  
  指定旧的 Windows 服务帐户的密码。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_ACCOUNT ='account_name'****  
+ NEW_ACCOUNT ='account_name'  
  指定新的 Windows 服务帐户的名称。  
   
 > [!WARNING]  
 >  此选项已过时。 请勿使用。 请改用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   
- NEW_PASSWORD ='password'****  
+ NEW_PASSWORD ='password'  
  指定新的 Windows 服务帐户的密码。  
   
 > [!WARNING]  

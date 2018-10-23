@@ -28,7 +28,7 @@ ms.locfileid: "48084517"
 > [!NOTE]  
 >  源组件有输出但没有输入，而目标组件有输入但没有输出。 转换既有输入，也有输出。  
   
- 若要了解有关脚本组件的详细信息，请参阅 [Script Component](data-flow/transformations/script-component.md) 和 [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
+ 若要了解有关脚本组件的详细信息，请参阅 [脚本组件](data-flow/transformations/script-component.md) 和 [在脚本组件编辑器中配置脚本组件](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)。 若要了解如何对脚本组件进行编程，请参阅 [用脚本组件扩展数据流](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)。  
   
 ## <a name="options"></a>“常规”  
  **Inputs and outputs**  
