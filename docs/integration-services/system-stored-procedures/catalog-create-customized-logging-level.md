@@ -11,12 +11,12 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aae4a61ed74777c39638d837f9fb1512df24108e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 504c4b5f8ecd8a98379d726dbd53117d39c4db19
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727658"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336196"
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47727658"
 catalog.create_customized_logging_level [ @level_name = ] level_name  
     , [ @level_description = ] level_description  
     , [ @profile_value = ] profile_value  
-    , [ @event_value = ] event_value  
+    , [ @events_value = ] events_value  
     , [ @level_id = ] level_id OUT   
 ```  
   
@@ -42,7 +42,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_description = ] level_description  
  有关新的现有自定义日志记录级别的说明。  
   
- level_description 为 nvarchar(1024)。  
+ level_description 为 nvarchar(max)。  
   
  [ @profile_value = ] profile_value  
  需要新的自定义日志记录级别记录的统计信息。  
@@ -53,11 +53,11 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
 -   卷 = 1  
   
--   性能 = 2  
+-   性能 = 2    
   
  profile_value 为 bigint。  
   
- [ @event_value = ] event_value  
+ [ @events_value = ] events_value  
  需要新的自定义日志记录级别记录的事件。  
   
  事件的有效值包括以下内容。 这些值与“自定义日志记录级别管理”对话框的“事件”选项卡上的值相对应。  
@@ -66,7 +66,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
 |----------------------------------|-------------------------------|  
 |OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnostic = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext= 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
   
- event_value 为 bigint。  
+ events_value 为 bigint。  
   
  [ @level_id = ] level_id OUT  
  新的自定义日志记录级别的 ID。  
@@ -74,7 +74,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  level_id 为 bigint。  
   
 ## <a name="remarks"></a>Remarks  
- 若要合并 Transact-SQL 中用于 profile_value 或 event_value 参数的的多个值，请按此示例中的操作执行。 若要捕获 OnError (8) 和 DiagnosticEx (15) 事件，计算 event_value 的公式为 `2^8 + 2^15 = 33024`。  
+ 若要合并 Transact-SQL 中用于 profile_value 或 events_value 参数的的多个值，请按此示例中的操作执行。 若要捕获 OnError (8) 和 DiagnosticEx (15) 事件，计算 events_value 的公式为 `2^8 + 2^15 = 33024`。  
   
 ## <a name="return-codes"></a>返回代码  
  0（成功）  

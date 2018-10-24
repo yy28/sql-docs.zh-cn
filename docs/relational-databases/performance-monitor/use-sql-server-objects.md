@@ -32,12 +32,12 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: db97dcaf1b8ad8833127fd5e4907d3c553629247
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995728047e02ccf2127ba8c85949bde3031007dd
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788045"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324620"
 ---
 # <a name="use-sql-server-objects"></a>使用 SQL Server 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,6 +113,7 @@ ms.locfileid: "47788045"
 |[SQLServer:General Statistics](../../relational-databases/performance-monitor/sql-server-general-statistics-object.md)|提供有关服务器范围内的常规活动的信息，如连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的用户数。|  
 |[SQL Server：HADR 可用性副本](../../relational-databases/performance-monitor/sql-server-availability-replica.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性副本的信息。|  
 |[SQL Server：HADR 数据库副本](../../relational-databases/performance-monitor/sql-server-database-replica.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 数据库副本的信息。|  
+|[SQL Server:HTTP Storage](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)|提供信息，以便在使用 [Microsoft Azure 中的 SQL Server 数据文件](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)时监视 Microsoft Azure 存储帐户|  
 |[SQLServer:Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所用内部资源（如数据库页）上的闩锁的信息。|  
 |[SQLServer:Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)|提供有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]执行的单个锁请求的信息，如锁超时和死锁。 这个对象可有多个实例。|  
 |[SQLServer:LogPool FreePool](../../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md)|描述了日志池内的可用池的统计信息。|

@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3041a862639c8cbd71f2ad71378e980ec0b31fdc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821176"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905131"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>改进 Windows 上的 PolyBase 横向扩展组
 
@@ -58,9 +58,9 @@ ms.locfileid: "47821176"
 
 1. 运行 setup.exe。
   
-2. 在“功能选择”页中，选择“针对外部数据的 PolyBase 查询服务” 。
+2. 在“功能选择”页上，选择“针对外部数据的 PolyBase 查询服务”。
   
-3. 在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用**域账户** PQTH4A\PolybaseUser。
+3. 在“服务器配置”页上，对 SQL Server PolyBase 引擎和 SQL Server PolyBase 数据移动服务使用域账户 PQTH4A\PolybaseUser。
   
 4. 在“PolyBase 配置”页中，选择“将 SQL Server 实例用作 PolyBase 横向扩展组的一部分”选项。 这将打开防火墙以允许 PolyBase 服务的传入连接。
   

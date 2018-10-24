@@ -29,12 +29,12 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 40a5424c8c2add69404842c5d7d287dec1b99680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e9b1c85f53920a6deeaf6f716cff25e780fe6ac
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719635"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120434"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ SELECT * FROM deleted;
 ### <a name="optimizing-dml-triggers"></a>优化 DML 触发器
  触发器在事务中工作（隐式的或非隐式的），开启后，它们会锁定资源。 除非确认（使用 COMMIT）或拒绝（使用 ROLLBACK）事务，否则，锁定将保持不变。 触发器运行时间越长，另一进程被锁定的可能性就越高。 因此，触发器应以尽可能减少持续时间的方式写入。 一种实现方法是，在 DML 语句更改 0 行时发布触发器。 
 
-要发布不更改任何行的触发器命令，可使用系统变量 [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql)。 
+要发布不更改任何行的触发器命令，可使用系统变量 [ROWCOUNT_BIG](../functions/rowcount-big-transact-sql.md)。 
 
 以下 T-SQL 代码片段将完成此目标，并应显示在每个 DML 触发器的开头：
 

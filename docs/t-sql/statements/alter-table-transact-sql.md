@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2eb222b681c5106c8b368b4694c82909f060fc6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727705"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085533"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -464,7 +464,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 使用 Always Encrypted（不带安全 enclave）时，如果正在修改的列使用了“ENCRYPTED WITH”进行加密，则可以将数据类型更改为兼容的数据类型（例如从 INT 更改为 BIGINT），但不能更改任何加密设置。  
 
-使用具有安全 enclave 的 Always Encrypted 时，只要用于保护列的列加密密钥（以及新的列加密密钥，如果更改了密钥）支持 enclave 计算（使用启用了 enclave 的列主密钥进行加密），就可以更改任何加密设置。 有关详细信息，请参阅[具有安全 enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
+使用具有安全 enclave 的 Always Encrypted 时，只要用于保护列的列加密密钥（以及新的列加密密钥，如果更改了密钥）支持 enclave 计算（使用启用了 enclave 的列主密钥进行加密），就可以更改任何加密设置。 有关详细信息，请参阅[具有安全 Enclave 的 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)。  
   
  column_name  
  要更改、添加或删除的列的名称。 column_name 最多可以包含 128 个字符。 对于使用 timestamp 数据类型创建的新列，则可以省略 column_name。 如果没有为 timestamp 数据类型的列指定 column_name，则使用名称 timestamp。  
@@ -1000,7 +1000,7 @@ IF EXISTS
  可以通过在 ALTER COLUMN 子句中指定列数据类型的新大小来更改列的长度、精度或小数位数。 如果列中存在数据，则新大小不能小于数据的最大大小。 此外，不能在某个索引中定义该列，除非该列的数据类型为 varchar、nvarchar 或 varbinary 并且该索引不是 PRIMARY KEY 约束的结果。 请参见示例 P。  
   
 ## <a name="locks-and-alter-table"></a>锁和 ALTER TABLE  
- ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE…SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改（例如删除列，或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上添加具有默认值的 NOT NULL 列）可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
+ ALTER TABLE 语句指定的更改将立即实现。 如果这些更改需要修改表中的行，ALTER TABLE 将更新这些行。 ALTER TABLE 将获取表上的架构修改 (SCH-M) 锁，以确保在更改期间没有其他连接引用（甚至是该表的元数据，也不引用），但可在结束时执行需要一个极短的 SCH-M 锁的联机索引操作。 在 `ALTER TABLE…SWITCH` 操作中，源表和目标表都需要锁。 对表进行的更改将记录于日志中，并且可以完整恢复。 影响超大型表中所有行的更改，例如在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的某些版本上删除列或者用默认值添加 NOT NULL 列，可能需要较长时间才能完成，并将生成大量日志记录。 像慎重执行影响许多行的任何 INSERT、UPDATE 或者 DELETE 语句一样，应慎重执行这些 ALTER TABLE 语句。  
   
 ### <a name="adding-not-null-columns-as-an-online-operation"></a>以联机操作的形式添加 NOT NULL 列  
  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Enterprise Edition 开始，当默认值为“运行时常量”时，添加具有该默认值的 NOT NULL 列是一个联机操作。 这意味着不论表中有多少行都几乎可以在瞬间完成该操作。 这是因为表中的现有行在操作期间不更新；相反，默认值仅存储在该表的元数据中，并且按需在访问这些行的查询中查找该值。 这种行为是自动的；无需在 ADD COLUMN 语法之外额外执行其他语法来执行该联机操作。 运行时常量是一个表达式，它可以在运行时为表中的每行生成相同的值，而与其确定性无关。 例如，常量表达式“My temporary data”或系统函数 GETUTCDATETIME() 均为运行时常量。 相反，函数 `NEWID()` 或 `NEWSEQUENTIALID()` 就不是运行时常量，因为这些函数为表中每行都生成唯一值。 添加具有非运行时常量的默认值的 NOT NULL 列始终脱机执行，并且在该操作期间需要一个排他 (SCH-M) 锁。  

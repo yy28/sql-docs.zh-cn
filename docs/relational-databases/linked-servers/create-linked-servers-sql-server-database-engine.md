@@ -19,12 +19,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c8caee5d7de5b348d6673636ac5cfc4704c3c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c77e1d69a80e1c9d161adcf80f20f23b69b0261
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625515"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120004"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>创建链接服务器（SQL Server 数据库引擎）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47625515"
     > [!NOTE]  
     >  如果该 **SQL Server** 实例是默认实例，则输入承载 **SQL Server**实例的计算机的名称。 如果该 **SQL Server** 是命名实例，则输入计算机名称和实例名称，例如 **Accounting\SQLExpress**。  
   
-3.  在 **“服务器类型”** 区域中，选择 **SQL Server** 以便指示该链接服务器是 **SQL Server**的另一个实例。  
+3.  在“服务器类型”区域中，选择 SQL Server 以便指示该链接服务器是 SQL Server的另一个实例。  
   
 4.  在 **“安全性”** 页上，指定在原始 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 连接到链接服务器时将使用的安全上下文。 在通过使用其域登录名连接用户的域环境中，选择 **“使用登录名的当前安全上下文建立连接”** 通常是最佳选择。 在用户通过使用 **SQL Server** 登录名连接到原始 **SQL Server** 时，最佳选择通常是选择 **“通过使用此安全上下文”**，然后提供在链接服务器上进行身份验证时所必需的凭据。  
   

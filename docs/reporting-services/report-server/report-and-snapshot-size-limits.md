@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c402cbbf3dca4a34b8e60b9b5482dc63051b63d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea7504d459d14dec64d4192185b23279091e70e2
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842875"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119935"
 ---
 # <a name="report-and-snapshot-size-limits"></a>报表和快照的大小限制
   管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的管理员可以通过本主题提供的信息了解在将报表发布到报表服务器、运行时呈现报表以及将报表保存到文件系统时报表的大小限制。 本主题还提供了有关如何度量报表服务器数据库大小的实践指南，并介绍了快照大小对服务器性能的影响。  
@@ -57,7 +57,7 @@ ms.locfileid: "47842875"
   
  默认情况下， **reportserver** 和 **reportservertempdb** 数据库设置为自动增长。 尽管数据库大小会自动增大，但绝不会自动减小。 如果 **reportserver** 数据库由于您删除了快照而具有多余容量，则必须手动减少容量，以恢复磁盘空间。 同样，如果 **reportservertempdb** 增大以容纳超高的交互式报表量，则减少容量之前，磁盘空间分配将始终保持此设置。  
   
- 若要度量报表服务器数据库的大小，可以运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期计算数据库总大小有助于合理估计在一段时间内如何为报表服务器数据库分配空间。 下面的语句用于度量当前使用的空间量（这些语句假设您使用的是默认数据库名）：  
+ 若要度量报表服务器数据库的大小，可以运行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令。 定期计算数据库总大小有助于合理估计在一段时间内如何为报表服务器数据库分配空间。 下面的语句用于测量当前使用的空间量（这些语句假设你使用的是默认数据库名称）：  
   
 ```  
 USE ReportServer  

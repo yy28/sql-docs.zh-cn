@@ -15,12 +15,12 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 883252a6b4c7e69c488a497308889db6f7f9ac05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b391f73ab498c2ad87406b5f3dd8fa3268a75774
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834645"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120394"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>执行可用性组的强制手动故障转移 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ ms.locfileid: "47834645"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **强制故障转移（可能丢失数据）**  
   
-1.  将目录 (**cd**) 更改为一个服务器实例，该实例托管需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
+1.  将目录 (cd) 更改为一个服务器实例，该实例托管需要进行故障转移的可用性组中其角色处于 SECONDARY 或 RESOLVING 状态的副本。  
   
 2.  采用以下形式之一将 **Switch-SqlAvailabilityGroup** cmdlet 与 **AllowDataLoss** 参数结合使用：  
   

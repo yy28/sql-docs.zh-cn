@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801695"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874365"
 ---
 # <a name="system-settings-master-data-services"></a>系统设置 (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801695"
 |-----------------------------------|--------------------|-----------------|  
 |**将新业务规则递增的数字**|**BusinessRuleDefaultPriorityIncrement**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“系统管理”** 功能区域，将每个新业务规则的优先级递增的数字。 默认值为“10” 。|  
 |**要将业务规则应用到的成员数**|**BusinessRuleRealtimeMemberCount**|在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **“资源管理器”** 功能区域，要将业务规则应用到的网格中最大成员数。 在 [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]中，要将业务规则应用到的活动工作表中最大成员数。 默认值为“10000” 。|  
+|**首先执行业务规则用户脚本**|**BusinessRuleUserScriptExecuteFirst**|通常情况下，业务规则操作按以下顺序执行：“默认值”、“更改值”、“验证”、“外部操作”、“用户定义的操作脚本”。 如果将此设置更改为 1，则业务规则操作首先执行“用户定义的操作脚本”。 此设置为隐藏设置。 默认值为 **0**。|  
   
  有关详细信息，请参阅[业务规则 (Master Data Services)](../master-data-services/business-rules-master-data-services.md)。  
   

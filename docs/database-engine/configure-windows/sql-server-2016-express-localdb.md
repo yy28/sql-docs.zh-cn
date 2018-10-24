@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608605"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851782"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ Microsoft SQL Server 2016 Express **LocalDB** 是一种面向开发人员的 [SQ
  
  ## <a name="try-it-out"></a>进行试用： 
   
--   若要下载并安装 SQL Server 2016 Express，请转到 [SQL Server 下载](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则选择 **“Express Advanced”** 或 **“LocalDB”** 包。 
+-   若要下载并安装 SQL Server 2016 Express，请转到 [SQL Server 下载](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)。 LocalDB 是在安装过程中选择的一项功能，可在下载该介质时使用。 如果下载介质，则通过 Visual Studio 安装程序选择“Express Advanced”或“LocalDB”包。 在 Visual Studio 安装程序中，可将 SQL Server Express LocalDB 作为 .NET 桌面开发工作负载的一部分安装，也可作为单独组件安装。
+
+   > [!TIP]
+   > 此外，还可将 LocalDB 作为 Visual Studio 2017 的一部分安装。 在 Visual Studio 安装过程中，选择 .NET 桌面开发工作负载，其中包括 SQL Server Express LocalDB。
   
 -   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，以加速已安装有 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虚拟机。  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  **LocalDB** 始终在用户安全上下文中运行；即 **LocalDB** 从不使用本地 Administrator 组的凭据来运行。 这意味着 **LocalDB** 实例使用的所有数据库文件必须可以通过拥有的用户的 Windows 帐户来访问，而不必考虑本地 Administrators 组中的成员资格。  
   
 ## <a name="see-also"></a>另请参阅  
- [SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[SqlLocalDB 实用工具](../../tools/sqllocaldb-utility.md)

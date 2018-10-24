@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的智能查询处理 | Microsoft Docs
 description: 智能查询处理功能，用于提高 SQL Server 和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35306ebbde5586401f78f368334634f0fadfe7a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c6d89b3ec3d01792578210caef8018d15b2d175
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753965"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072241"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 数据库中的智能查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ SQL Server 2012 引入了一项可加速分析工作负载的新功能：列存�
 1.  工作负载的重要部分包括分析查询（根据经验，是带有运算符的查询，例如处理数十万行或更多行的联接或聚合），并且
 2.  工作负载受 CPU 约束（如果瓶颈是 IO，在可能的情况下仍建议考虑列存储索引），并且
 3.  创建列存储索引会给工作负载的事务部分增加过多开销，或者创建列存储索引不可行，因为应用程序依赖于列存储索引尚不支持的功能。
+
+> [!NOTE]
+> 行存储的批处理模式只能通过减少 CPU 使用来提供帮助。 如果瓶颈与 IO 相关，并且数据尚未缓存（“冷”缓存），则行存储的批处理模式不会改善运行时间。 同样，如果计算机上没有足够的内存来缓存所有数据，性能也不可能得到提高。
 
 ### <a name="what-changes-with-batch-mode-on-rowstore"></a>行存储的批处理模式有哪些更改
 除了迁移到兼容性级别 150 之外，无需更改任何内容，即可为候选工作负载启用行存储的批处理模式。

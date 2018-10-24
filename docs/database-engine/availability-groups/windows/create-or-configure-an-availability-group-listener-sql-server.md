@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 84a52fb481fce992d9b51bdb6e566f305dc174b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a96ca9534f35ba36e3d61f492b5dcaa8c1cdce8
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120234"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>创建或配置可用性组侦听器 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -303,7 +303,7 @@ ms.locfileid: "47821985"
   
 -   未将 **MultiSubnetFailover** 设置为 true 的连接字符串  
   
-     在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 **RegisterAllProvidersIP** 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果您具有需要连接到某一可用性组侦听器并且不能使用 **MultiSubnetFailover** 属性的旧客户端，我们建议您将 **RegisterAllProvidersIP** 更改为 0。  
+     在 `RegisterAllProvidersIP = 1`时，其连接字符串未使用 `MultiSubnetFailover = True`的任何客户端都将会经历高延迟的连接。 发生这种情况的原因是这些客户端将按顺序尝试与所有 IP 的连接。 相反，如果将 **RegisterAllProvidersIP** 更改为 0，将在 WSFC 群集中的客户端接入点注册活动 IP 地址，从而缩短旧客户端的延迟时间。 因此，如果具有需要连接到某一可用性组侦听器并且不能使用 MultiSubnetFailover 属性的旧客户端，建议将 RegisterAllProvidersIP 更改为 0。  
   
     > [!IMPORTANT]  
     >  在你通过 WSFC 群集（故障转移群集管理器 GUI）创建可用性组侦听程序时， **RegisterAllProvidersIP** 默认情况下将为 0 (false)。  

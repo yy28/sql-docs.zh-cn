@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7409eb0c6c26b03309fbdbdd37b8d2255cfa5b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa8fce2f2579f792abc78b8837e4a33e090f806e
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620425"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100478"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,9 +93,15 @@ BULK INSERT
  **'** *data_file* **'**  
  数据文件的完整路径，该数据文件包含要导入到指定表或视图中的数据。 使用 BULK INSERT 可以从磁盘（包括网络、软盘、硬盘等）导入数据。   
  
- *data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名*。 例如， `\\SystemX\DiskZ\Sales\update.txt`。   
+ *data_file* 必须基于运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的服务器指定一个有效路径。 如果 *data_file* 为远程文件，则指定通用命名约定 (UNC) 名称。 UNC 名称采用以下格式：\\\\*系统名称*\\*共享名称*\\*路径*\\*文件名*。 例如：   
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
+```
+
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
-从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。
+从 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 开始，data_file 可位于 Azure Blob 存储中。 在这种情况下，需要指定 data_source_name 选项。
 
 > [!IMPORTANT]
 > Azure SQL 数据库不支持从 Windows 文件读取内容。
@@ -104,7 +110,13 @@ BULK INSERT
 **'** *data_source_name* **'**   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 命名的外部数据源，指向将导入文件的 Azure Blob 存储位置。 外部数据源必须使用 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 中添加的 `TYPE = BLOB_STORAGE` 选项创建。 有关详细信息，请参阅 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)。    
-  
+ 
+```sql
+BULK INSERT Sales.Orders
+FROM 'data/orders.dat'
+WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
+```
+
  BATCHSIZE =batch_size  
  指定批处理中的行数。 每个批处理作为一个事务复制到服务器。 如果复制操作失败，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将提交或回滚每个批处理的事务。 默认情况下，指定数据文件中的所有数据为一个批处理。 有关性能注意事项的信息，请参阅本主题后面的“备注”。  
   
@@ -123,6 +135,12 @@ BULK INSERT
   
  CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' }****  
  指定该数据文件中数据的代码页。 仅当数据含有字符值大于 **127** 或小于 **32** 的 **char**、**varchar** 或 **text** 列时，CODEPAGE 才适用。  
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.dat'
+WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
+```
 
 > [!IMPORTANT]
 > CODEPAGE 不是 Linux 上的支持项。
@@ -215,6 +233,12 @@ FORMATFILE_DATASOURCE **=** 'data_source_name'
 FORMAT **=** 'CSV'   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 指定符合 [RFC 4180](https://tools.ietf.org/html/rfc4180) 标准的逗号分隔值文件。
+
+```sql
+BULK INSERT Sales.Orders
+FROM '\\SystemX\DiskZ\Sales\data\orders.csv'
+WITH ( FORMAT='CSV');
+```
 
 FIELDQUOTE **=** 'field_quote'   
 **适用于：** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
@@ -320,7 +344,7 @@ GO
 在 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 之前，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 批量导入操作不支持逗号分隔值 (CSV) 文件。 但是，在某些情况下，CSV 文件可在将数据大容量导入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时用作数据文件。 有关从 CSV 数据文件导入数据的要求，请参阅[准备用于批量导出或导入的数据 (SQL Server)](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)。  
   
 ## <a name="logging-behavior"></a>日志记录行为  
- 有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅[《Prerequisites for Minimal Logging in Bulk Import》](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
+ 有关何时在事务日志中记录由批量导入执行的行插入操作的信息，请参阅 [《Prerequisites for Minimal Logging in Bulk Import》](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)（批量导入的最小日志记录的先决条件）。  
   
 ##  <a name="Limitations"></a> 限制  
  将格式文件用于 BULK INSERT 时，最多只能指定 1024 个字段。 这与表中允许的最大列数相同。 如果将 BULK INSERT 与包含 1024 个字段以上的数据文件一起使用，BULK INSERT 将生成 4822 错误。 [bcp 实用工具](../../tools/bcp-utility.md)没有此限制，因此，对于包含 1024 个以上字段的数据文件，请使用 **bcp** 命令。  
@@ -425,11 +449,15 @@ WITH
 > Azure SQL 数据库不支持从 Windows 文件读取内容。
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. 从 CSV 文件导入数据   
-以下示例显示如何指定 CSV 文件。   
-```
+下面的示例演示如何指定 CSV 文件：跳过标头（第一行），使用 `;` 作为字段终止符，使用 `0x0a` 作为行终止符： 
+```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
-WITH (FORMAT = 'CSV'); 
+WITH (FORMAT = 'CSV',
+      FIRSTROW=2,
+      FIELDQUOTE = '\',
+      FIELDTERMINATOR = ';', 
+      ROWTERMINATOR = '0x0a'); 
 ```
 
 > [!IMPORTANT]
@@ -440,10 +468,23 @@ WITH (FORMAT = 'CSV');
 以下示例显示如何从 Azure Blob 存储位置（已配置为外部数据源）中的 CSV 文件加载数据。 这要求提供使用共享访问签名的数据库作用域凭据。    
 
 ```sql
+CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
+ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
+ SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+ 
+ -- NOTE: Make sure that you don't have a leading ? in SAS token, and
+ -- that you have at least read permission on the object that should be loaded srt=o&sp=r, and
+ -- that expiration period is valid (all dates are in UTC time)
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH (  TYPE = BLOB_STORAGE, 
+        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
+        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
+);
+
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
-WITH (DATA_SOURCE = 'MyAzureInvoices',
-     FORMAT = 'CSV'); 
+FROM 'inv-2017-12-08.csv'
+WITH (DATA_SOURCE = 'MyAzureBlobStorage'); 
 ```
 
 > [!IMPORTANT]
@@ -454,7 +495,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 
 ```sql
 BULK INSERT Sales.Invoices
-FROM 'inv-2017-01-19.csv'
+FROM 'inv-2017-12-08.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV',
      ERRORFILE = 'MyErrorFile',

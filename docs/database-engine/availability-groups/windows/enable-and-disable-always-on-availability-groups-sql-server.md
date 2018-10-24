@@ -15,12 +15,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bcd22dedf4d70734098f0fac9886e99c89169eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f74904fe4e7576e7400c661a1523f6d29d64425e
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806864"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120314"
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>启用和禁用 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="PScmd3Procedure"></a> 使用 SQL Server PowerShell  
  **禁用 AlwaysOn**  
   
-1.  将目录 (**cd**) 更改为你要为 AlwaysOn 可用性组禁用的当前启用的服务器实例。  
+1.  将目录 (cd) 更改为你要为 AlwaysOn 可用性组禁用的当前启用的服务器实例。  
   
 2.  使用 Disable-SqlAlwaysOn cmdlet 来启用 AlwaysOn 可用性组。  
   

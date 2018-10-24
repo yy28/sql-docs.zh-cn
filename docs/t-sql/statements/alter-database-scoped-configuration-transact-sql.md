@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3287045867598d3707c2d98e593207e395c36c56
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741225"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085383"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,10 @@ ms.locfileid: "47741225"
 - 在第一次编译批处理时启用或禁用要存储在缓存中的已编译计划存根。  
 - 启用或禁用对本机编译的 T-SQL 模块的执行统计信息收集。
 - 对支持 ONLINE= 语法的 DDL 语句启用或禁用“默认联机”选项。
-- 对支持 RESUMABLE= 语法的 DDL 语句启用或禁用“默认可恢复”选项。 
+- 对支持 RESUMABLE= 语法的 DDL 语句启用或禁用“默认可恢复”选项。
+- 启用或禁用全局临时表的自动删除功能 
 
- ![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![链接图标](../../database-engine/configure-windows/media/topic-link.gif "链接图标") [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>语法  
   
@@ -70,6 +71,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }    
     | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED } 
     | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }  
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 }  
 ```  
   
@@ -97,7 +99,7 @@ PRIMARY
   
 LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY }  
 
-可用于独立于数据库兼容性级别将查询优化器基数估计模型设置为 SQL Server 2012 或更低版本。 默认值为 OFF，可根据数据库兼容性级别设置查询优化器基数估计模型。 将此值设置为 ON 等效于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
+可用于独立于数据库兼容性级别将查询优化器基数估计模型设置为 SQL Server 2012 或更低版本。 默认值为 OFF，可根据数据库兼容性级别设置查询优化器基数估计模型。 将 LEGACY_CARDINALITY_ESTIMATION 设置为 ON 等效于启用[跟踪标志 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 
 
 > [!TIP] 
 > 要在查询级别完成此操作，请添加 QUERYTRACEON [查询提示](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，请添加 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用跟踪标志。 
@@ -108,14 +110,14 @@ PRIMARY
   
 PARAMETER_SNIFFING = { ON | OFF | PRIMARY}  
 
-启用或禁用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 默认值为 ON。 这与 [Trace Flag 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)是等效的。   
+启用或禁用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)。 默认值为 ON。 将 PARAMETER_SNIFFING 设置为 ON 等效于启用[跟踪标志 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。   
 
 > [!TIP] 
 > 要在查询级别完成此操作，请参阅 OPTIMIZE FOR UNKNOWN [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，要在查询级别完成此操作，也可使用 USE HINT [查询提示](../../t-sql/queries/hints-transact-sql-query.md)。 
   
 PRIMARY  
   
-此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库上用于使用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)的配置更改，则辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 这是辅助数据库的默认设置。  
+此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库上用于使用[参数截取](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)的配置更改，则辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。  
   
 QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY }  
 
@@ -126,11 +128,11 @@ QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY }
   
 PRIMARY  
   
-此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 这是辅助数据库的默认设置。  
+此值仅对辅助数据库（该数据库位于主数据库上）有效，指定所有辅助数据库上此设置的值都是为主数据库设置的值。 如果主数据库的配置更改，辅助数据库上的值也会相应地更改，不需要再显式设置辅助数据库值。 PRIMARY 是辅助数据库的默认设置。  
   
 CLEAR PROCEDURE_CACHE  
 
-清除数据库的过程（计划）缓存。 可在主数据库和辅助数据库上执行此操作。  
+清除数据库的过程（计划）缓存，可同时对主要和辅助数据库执行此操作。  
 
 IDENTITY_CACHE = { ON | OFF }  
 
@@ -163,13 +165,13 @@ XTP_QUERY_EXECUTION_STATISTICS  = { ON | OFF }
 
 如果该选项为“开”，或通过 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) 启用了统计信息收集，则收集对本机编译的 T-SQL 模块的语句级别执行统计信息。
 
-有关本机编译的 T-SQL 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的执行](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
+有关本机编译的 T-SQL 模块的性能监视的详细信息，请参阅[监视本机编译的存储过程的性能](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)。
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 **适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
 
-允许你选择选项，使引擎自动将支持的操作提升为联机。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为联机。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_ONLINE 的当前值。 这些选项只适用于通常支持联机的操作。  
+允许你选择选项，使引擎自动将支持的操作提升为联机。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为联机。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_ONLINE 的当前值。 这些选项只适用于支持联机的操作。  
 
 FAIL_UNSUPPORTED
 
@@ -186,7 +188,7 @@ ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
 适用对象*：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 为公共预览版功能
 
-允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于通常支持可恢复的操作。 
+允许你选择选项，使引擎自动将支持的操作提升为可恢复。 默认值为 OFF，表示除非在语句中指定，否则操作不会提升为可恢复。 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 反映 ELEVATE_RESUMABLE 的当前值。 这些选项只适用于支持可恢复的操作。 
 
 FAIL_UNSUPPORTED
 
@@ -199,6 +201,15 @@ WHEN_SUPPORTED
 > [!NOTE]
 > 通过提交指定了 RESUMABLE 选项的语句，可替代默认设置。 
 
+GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+
+**适用对象**：[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]（此功能为公共预览版）
+
+允许为[全局临时表](create-table-transact-sql.md)设置自动删除功能。 默认值为 ON，这意味着如果没有任何会话使用全局临时表，系统会自动删除该表。 如果设置为 OFF，需要使用 DROP TABLE 语句显式删除或将在服务器重启时自动删除该表。 
+
+- 在 Azure SQL 数据库逻辑服务器中，可以在逻辑服务器的单个用户数据库中设置此选项。
+- 在 SQL Server 和 Azure SQL 数据库托管实例中，要在 TEMPDB 中设置此选项且单个用户数据库的设置不起作用。
+
 ##  <a name="Permissions"></a> Permissions  
  需要针对数据库的   
 ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库的 CONTROL 权限，便可授予此权限。  
@@ -210,9 +221,9 @@ ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库�
   
  对于 3 部分名称查询，采用查询的当前数据库连接设置，在当前数据库上下文中编译的 SQL 模块（例如过程、函数和触发器）除外，因此应使用其所在的数据库的选项。  
   
- ALTER_DATABASE_SCOPED_CONFIGURATION 事件添加为可用于触发 DDL 触发器的 DDL 事件。 这是 ALTER_DATABASE_EVENTS 触发器组的子级。  
+ ALTER_DATABASE_SCOPED_CONFIGURATION 事件添加为可用于触发 DDL 触发器的 DDL 事件，且是 ALTER_DATABASE_EVENTS 触发器组的子项。  
  
- 数据库作用域内配置设置随数据库一同转入。 这意味着还原或附加给定数据库时，会保留现有配置设置。
+ 将对数据库执行数据库范围的配置设置，这意味着还原或附加一个给定数据库时，将保留现有的配置设置。
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
 **MAXDOP**  
@@ -235,11 +246,11 @@ ALTER ANY DATABASE SCOPE CONFIGURATION 权限。 用户若具有针对数据库�
   
 **GeoDR**  
   
- 可读辅助数据库（Always On 可用性组和 GeoReplication）通过检查数据库状态来使用辅助值。 尽管重新编译不会在故障转移时发生，且从技术上讲，新的主数据库具有使用辅助数据库设置的查询，但是，主数据库和辅助数据库的设置仅在工作负荷不同时才有所相同，因此已缓存查询使用的是最佳设置，而新查询选择适合它们的新设置。  
+ 可读辅助数据库（Always On 可用性组和 Azure SQL 数据库异地复制数据库）通过检查数据库状态来使用辅助值。 尽管重新编译不会在故障转移时发生，且从技术上讲，新的主数据库具有使用辅助数据库设置的查询，但是，主数据库和辅助数据库的设置仅在工作负荷不同时才有所相同，因此已缓存查询使用的是最佳设置，而新查询选择适合它们的新设置。  
   
 **DacFx**  
   
- 由于 ALTER DATABASE SCOPED CONFIGURATION 是 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 或 [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) 的导出无法导入到下级服务器。  
+由于 ALTER DATABASE SCOPED CONFIGURATION 是 Azure SQL 数据库和 SQL Server 2016 及更高版本的 SQL Server 中的一项新功能，并且会影响数据库架构，因此架构导出（有或没有数据）无法导入到较早版本的 SQL Server，如 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]。 例如，从使用新功能的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 数据库到 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 或 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 的导出无法导入到下级服务器。  
 
 **ELEVATE_ONLINE** 
 

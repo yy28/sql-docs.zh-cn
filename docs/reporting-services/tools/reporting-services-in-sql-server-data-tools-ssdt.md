@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609735"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905997"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "47609735"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 报表设计器窗口和窗格  
- 报表设计器支持两种视图： **“设计”** 视图，可以定义报表数据和报表布局； **“预览”** 视图，可以显示报表的呈现视图。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
+ 报表设计器支持两种视图：“设计”视图，可以定义报表数据和报表布局；“预览”视图，可以显示报表的呈现视图。 在每一种视图中都可以显示多个窗口，以帮助您设计或查看呈现的报表。  
   
 ###  <a name="bkmk_ReportDataPane"></a> “报表数据”窗格  
  “报表数据”窗格显示内置字段、数据源、数据集、字段集合、报表参数和图像。  
@@ -240,7 +240,7 @@ ms.locfileid: "47609735"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
- 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置：`<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
+ 若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
   
  还可以向报表向导添加自定义样式。  
   

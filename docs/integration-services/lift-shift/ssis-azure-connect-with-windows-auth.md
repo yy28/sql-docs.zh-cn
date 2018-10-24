@@ -1,7 +1,7 @@
 ---
 title: 使用 Windows 身份验证连接到数据源和文件共享 | Microsoft Docs
 description: 了解如何配置 Azure SQL 数据库中的 SSIS 目录和 Azure-SSIS Integration Runtime 以运行使用 Windows 身份验证连接到数据源和文件共享的包。
-ms.date: 06/27/2018
+ms.date: 10/11/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -11,12 +11,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 612c118fe490afe8de7c794c1f1ff6327766a508
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608629"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119974"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>从 Azure 的 SSIS 包中使用 Windows 身份验证连接到数据源和文件共享
 可以使用 Windows 身份验证连接到本地/Azure 虚拟机以及 Azure 文件中与 Azure SSIS Integration Runtime (IR) 位于同一虚拟网络的数据源和文件共享。 可以通过以下三种方法使用 Windows 身份验证从在 Azure-SSIS IR 上运行的 SSIS 包连接到数据源和文件共享：
@@ -34,7 +34,7 @@ ms.locfileid: "47608629"
 本文其余部分介绍如何配置 Azure SQL 数据库中的 SSIS 目录以运行使用 Windows 身份验证连接到数据源和文件共享的包。 
 
 ## <a name="you-can-only-use-one-set-of-credentials"></a>仅可使用一组凭据
-在此方法中，仅可在一个包中使用一组凭据。 按照本文中的步骤操作时提供的域凭据适用于 Azure-SSIS IR 上的所有包执行（交互式或按预定），直至更改或删除这些凭据。 如果必须使用多组不同的凭据将包连接到不同的数据源和文件共享，可能需要考虑上述替代方法。
+在 SSIS 包中使用 Windows 身份验证时，仅可在一个包中使用一组凭据。 按照本文中的步骤操作时提供的域凭据适用于 Azure-SSIS IR 上的所有包执行（交互式或按预定），直至更改或删除这些凭据。 如果必须使用多组不同的凭据将包连接到不同的数据源和文件共享，可能需要考虑上述替代方法。
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>提供 Windows 身份验证的域凭据
 若要提供域凭据，让包使用 Windows 身份验证连接到本地数据源/文件共享，请执行以下操作：
@@ -100,7 +100,7 @@ ms.locfileid: "47608629"
 3.  若要与 Windows 身份验证连接，请确保 Azure-SSIS IR 属于还包含本地 SQL Server 的虚拟网络。  有关详细信息，请参阅[将 Azure-SSIS 集成运行时联接到虚拟网络](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network)。 然后使用 `catalog.set_execution_credential` 提供凭据，如本文中所述。
 
 ## <a name="connect-to-an-on-premises-file-share"></a>连接到本地文件共享
-若要检查能否连接到本地文件共享，请执行以下操作：
+若要测试是否可以连接到本地文件共享，请执行以下操作：
 
 1.  若要运行此测试，请找一台未加入域的计算机。
 

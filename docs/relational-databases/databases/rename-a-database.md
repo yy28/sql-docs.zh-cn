@@ -1,7 +1,7 @@
 ---
 title: 重命名数据库 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/20/2017
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,83 +16,103 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b040059f7ad2fd1b58998e2b29279b4125374076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6b97d2d670754f8205ffe269883d6791f605f5b
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232531"
 ---
 # <a name="rename-a-database"></a>重命名数据库
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主题说明如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
+  本主题说明如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 Azure SQL 数据库中重命名用户定义的数据库。 数据库名称可以包含任何符合标识符规则的字符。  
   
- **本主题内容**  
+## <a name="in-this-topic"></a>本主题内容
   
--   **开始之前：**  
+- 开始之前：  
   
-     [限制和局限](#Restrictions)  
+     [限制和局限](#limitations-and-restrictions)  
   
-     [Security](#Security)  
+     [Security](#security)  
   
--   **重命名数据库，使用：**  
+- 重命名数据库，使用：  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#rename-a-database-using-sql-server-management-studio)  
   
-     [Transact-SQL](#TsqlProcedure)  
+     [Transact-SQL](#rename-a-database-using-transact-sql)  
   
--   **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
-> 若要重命名 Azure SQL 数据库中的数据库，可使用 [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 语句。 若要重命名 Azure SQL 数据仓库或并行数据仓库中的数据库，可使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 语句。
+> 若要重命名 Azure SQL 数据仓库或并行数据仓库中的数据库，可使用 [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 语句。
   
-##  <a name="BeforeYouBegin"></a> 开始之前  
+## <a name="before-you-begin"></a>开始之前
   
-###  <a name="Restrictions"></a> 限制和局限  
+### <a name="limitations-and-restrictions"></a>限制和局限  
   
--   无法重命名系统数据库。  
+- 无法重命名系统数据库。
+- 在其他用户正在访问数据库时，无法更改数据库名称。 
+  - 在 SQL Server 中，可将数据库设置为单用户模式，关闭任何打开的连接。 有关详细信息，请参阅[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。
+  - 在 Azure SQL 数据库中，必须确保其他用户与要重命名的数据库之间没有打开的连接。
   
-###  <a name="Security"></a> 安全性  
+### <a name="security"></a>Security  
   
-####  <a name="Permissions"></a> Permissions  
- 需要对数据库拥有 ALTER 权限。  
+#### <a name="permissions"></a>Permissions
+
+需要对数据库拥有 ALTER 权限。  
   
-##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+## <a name="rename-a-database-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 重命名数据库
+
+使用以下步骤通过 SQL Server Management Studio 重命名 SQL Server 或 Azure SQL 数据库。
   
-#### <a name="to-rename-a-database"></a>重命名数据库  
+1. 在“对象资源管理器”中，连接到 SQL 实例。  
   
-1.  在 **对象资源管理器**中，连接到 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的实例，然后展开该实例。  
+2. 请确保该数据库没有打开的连接。 如果使用 SQL Server，则可以[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)，关闭任何打开的连接并防止其他用户在你更改数据库名称时进行连接。  
   
-2.  确保没有任何用户正在使用数据库，然后[将数据库设置为单用户模式](../../relational-databases/databases/set-a-database-to-single-user-mode.md)。  
+3. 在“对象资源管理器”中，展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”。  
   
-3.  展开“数据库”，右键单击要重命名的数据库，然后单击“重命名”。  
+4. 输入新的数据库名称，然后单击 **“确定”**。  
   
-4.  输入新的数据库名称，然后单击 **“确定”**。  
+## <a name="rename-a-database-using-transact-sql"></a>使用 Transact-SQL 重命名数据库  
   
-##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>通过将 SQL Server 数据库置于单用户模式，对其重命名
+
+使用以下步骤通过 SQL Server Management Studio 中的 T-SQL 重命名 SQL Server 数据库，具体步骤包括：将数据库置于单用户模式，重命名，然后将数据库恢复多用户模式。
   
-#### <a name="to-rename-a-database"></a>重命名数据库  
+1. 为实例连接到 `master` 数据库。  
+2. 打开一个查询窗口。  
+3. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
   
-1.  连接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+   ```sql
+   USE master;  
+   GO  
+   ALTER DATABASE MyTestDatabase SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+   GO
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   GO  
+   ALTER DATABASE MyTestDatabaseCopy SET MULTI_USER
+   GO
+   ```  
+
+### <a name="to-rename-an-azure-sql-database-database"></a>重命名 Azure SQL 数据库
+
+使用以下步骤通过 SQL Server Management Studio 中的 T-SQL 重命名 Azure SQL 数据库。
   
-2.  在标准菜单栏上，单击 **“新建查询”**。  
+1. 为实例连接到 `master` 数据库。  
+2. 打开一个查询窗口。
+3. 请确保当前无人使用该数据库。
+4. 将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `MyTestDatabase` 数据库的名称更改为 `MyTestDatabaseCopy`。
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例将 `AdventureWorks2012` 数据库的名称更改为 `Northwind`。  
+   ```sql
+   ALTER DATABASE MyTestDatabase MODIFY NAME = MyTestDatabaseCopy ;
+   ```  
+
+## <a name="backup-after-renaming-a-database"></a>在重命名数据库之后备份  
+
+重命名 SQL Server 中的数据库后，请备份 `master` 数据库。 在 Azure SQL 数据库中无需进行该操作，因为会自动执行备份。  
   
-```sql  
-USE master;  
-GO  
-ALTER DATABASE AdventureWorks2012  
-Modify Name = Northwind ;  
-GO  
-```  
-  
-###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a> 跟进：在重命名数据库之后  
- 在重命名任何数据库后，备份 **master** 数据库。  
-  
-## <a name="see-also"></a>另请参阅  
- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [数据库标识符](../../relational-databases/databases/database-identifiers.md)  
-  
-  
+## <a name="see-also"></a>另请参阅
+
+- [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
+- [数据库标识符](../../relational-databases/databases/database-identifiers.md)  

@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b91bd0c2de4efaaa7544ee668169b4d263445aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c99ea57cbfbf5b24dc94b7827cf958495a759a76
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710705"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906527"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>事务锁定和行版本控制指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47710705"
   
 -   锁定设备，使事务保持隔离。  
   
--   通过记录设备，保证事务持久性。 对于完全持久的事务，在其提交之前，日志记录将强制写入磁盘。 因此，即使服务器硬件、操作系统或 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实例自身出现故障，该实例也可以在重新启动时使用事务日志，将所有未完成的事务自动地回滚到系统出现故障的点。 提交延迟的持久事务后，该事务日志记录将强制写入磁盘。 如果在日志记录强制写入磁盘前系统出现故障，此类事务可能会丢失。 有关延迟事务持续性的详细信息，请参阅主题[事务持续性](../relational-databases/logs/control-transaction-durability.md)。  
+-   通过记录设备，保证事务持久性。 对于完全持久的事务，在其提交之前，日志记录将强制写入磁盘。 因此，即使服务器硬件、操作系统或 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 实例自身出现故障，该实例也可以在重新启动时使用事务日志，以将所有未完成的事务自动地回滚到系统出现故障的点。 提交延迟的持久事务后，该事务日志记录将强制写入磁盘。 如果在日志记录强制写入磁盘前系统出现故障，此类事务可能会丢失。 有关延迟事务持续性的详细信息，请参阅主题[事务持续性](../relational-databases/logs/control-transaction-durability.md)。  
   
 -   事务管理特性，强制保持事务的原子性和一致性。 事务启动之后，就必须成功完成（提交），否则[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]实例将撤消该事务启动之后对数据所做的所有修改。 此操作称为回滚事务，因为它将数据恢复到那些更改发生前的状态。  
   
@@ -662,7 +662,7 @@ INSERT mytable VALUES ('Dan');
  使用 CLR 时，死锁监视器将自动检测托管过程中访问的同步资源（监视器、读取器/编写器锁和线程联接）的死锁。 但是，死锁是通过在已选为死锁牺牲品的过程中引发异常来解决的。 因此，请务必理解异常不会自动释放牺牲品当前拥有的资源；必须显式释放资源。 用于标识死锁牺牲品的异常与异常行为一样，也会被捕获和解除。  
   
 ##### <a name="deadlock_tools"></a>死锁信息工具  
- 若要查看死锁信息，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了监视工具，分别为 SQL Profiler 中 system\_health xEvent 会话、两个跟踪标志以及死锁图形事件。  
+ 若要查看死锁信息，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 提供了监视工具，分别为 SQL Profiler 中的 system\_health xEvent 会话、两个跟踪标志以及死锁图形事件。  
 
 ###### <a name="deadlock_xevent"></a>system_health 会话中的死锁
 从 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 开始，当发生死锁时，system\_health 会话将捕获所有 `xml_deadlock_report` xEvents。 默认情况下启用 system\_health 会话。 捕获的死锁图通常具有三个不同的节点：
@@ -1198,9 +1198,9 @@ BEGIN TRANSACTION
   
  新的大型值添加到数据库中时，系统会为它们分配数据片段，每个片段最多可以存储 8040 个字节的数据。 早期版本的[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中，每个片段最多可以存储 8080 个字节的 `ntext`、`text` 或 `image` 数据。  
   
- 数据库从早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升级到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 时，现有的 `ntext`、`text` 和 `image` 大型对象 (LOB) 数据并未更新来为行版本控制信息释放一些空间。 但第一次修改 LOB 数据时，该数据会动态升级以实现版本控制信息的存储。 即使未生成行版本也是如此。 LOB 数据升级后，每个片段最多可以存储的字节数从 8080 个减少到 8040 个。 升级过程相当于先删除 LOB 值再重新插入相同值。 即使只修改一个字节也会升级 LOB 数据。 对于每个 `ntext`、`text` 或 `image` 列，这是一次性操作，但每个操作可能生成大量页分配和 I/O 活动，具体情况取决于 LOB 数据的大小。 如果完整记录修改，还会生成大量日志记录活动。 如果数据库恢复模式未设置为 FULL，则按最小方式记录 WRITETEXT 操作和 UPDATETEXT 操作。  
+ 数据库从早期版本的 `ntext` 升级到 `text` 时，现有的 `image`、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 大型对象 (LOB) 数据并未更新来为行版本控制信息释放一些空间。 但第一次修改 LOB 数据时，该数据会动态升级以实现版本控制信息的存储。 即使未生成行版本也是如此。 LOB 数据升级后，每个片段最多可以存储的字节数从 8080 个减少到 8040 个。 升级过程相当于先删除 LOB 值再重新插入相同值。 即使只修改一个字节也会升级 LOB 数据。 对于每个 `ntext`、`text` 或 `image` 列，这是一次性操作，但每个操作可能生成大量页分配和 I/O 活动，具体情况取决于 LOB 数据的大小。 如果完整记录修改，还会生成大量日志记录活动。 如果数据库恢复模式未设置为 FULL，则按最小方式记录 WRITETEXT 操作和 UPDATETEXT 操作。  
   
- 在早期版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中不使用 `nvarchar(max)`、`varchar(max)` 和 `varbinary(max)` 数据类型。 因此，这些数据类型不存在升级问题。  
+ 在早期版本的 `nvarchar(max)` 中不使用 `varchar(max)`、`varbinary(max)` 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据类型。 因此，这些数据类型不存在升级问题。  
   
  应该分配足够的磁盘空间来满足此要求。  
   

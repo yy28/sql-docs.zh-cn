@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6364a5c3aec5a96bfa3b05cdccc7e91da6f50b71
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723955"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905787"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>教程：向报表添加 KPI（报表生成器）
 在 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教程中，向 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表添加关键绩效指标 (KPI)。  
@@ -219,7 +219,7 @@ KPI 是对业务重要性的可测量值。 在本教程中，按产品子类别
   
     此时将向设计图面添加一个仪表。  
   
-7.  从“报表数据”窗格的数据集，将 `Sales` 字段拖至该仪表。 将打开 **“仪表数据”** 窗格。  
+7.  从“报表数据”窗格中的数据集将 `Sales` 字段拖至该仪表。 将打开 **“仪表数据”** 窗格。  
   
     将 `Sales` 字段拖放到仪表中时，该字段将出现在“值”列表中，并对其使用内置 Sum 函数进行聚合。  
    

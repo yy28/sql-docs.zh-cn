@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1a4e526fb8b2bb72bd670b1c21d6734b23ad601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704508"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120194"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>使用 Always On 可用性组仪表板 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -324,6 +324,10 @@ ms.locfileid: "47704508"
  **上次重做时间**  
  指示在辅助数据库上重做最后一个日志记录的时间。 默认情况下隐藏此值。  
  
+
+   > [!NOTE]  
+   >  大多数数据基于 sys.dm_hadr_database_replica_states，因此可能存在某些限制。 有关详细信息，请参阅 [sys.dm_hadr_database_replica_states (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。
+
 
 ## <a name="always-on-availability-group-latency-reports"></a>Always On 可用性组延迟报表
 可用性组延迟报表是内置于可用性组仪表板中的报表工具，可在 [SQL Server Management Studio 17.4](../../../ssms/download-sql-server-management-studio-ssms.md) 版本中使用。 此功能提供了易于理解的报表，其中详细说明了在日志传输过程的各个阶段所花费的时间。 这提供了一种在同步过程中缩小潜在延迟原因搜索范围的方法。 

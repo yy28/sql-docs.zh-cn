@@ -2,7 +2,7 @@
 title: Microsoft SQL 数据库中的自适应查询处理 | Microsoft Docs | Microsoft Docs
 description: 自适应查询处理功能，用于提高 SQL Server（2017 及更高版本）和 Azure SQL 数据库中的查询性能。
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88ec6af239bc5a85faf354aa5fc74631ff0dcc0e
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851415"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324630"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 数据库中的自适应查询处理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>内存授予反馈、资源调控器和查询提示
 实际内存授予服从资源调控器或查询提示确定的查询内存限制。
 
-### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用内存授予反馈
+### <a name="disabling-batch-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用批处理模式内存授予反馈
 可在数据库或语句范围内禁用内存授予反馈，同时将数据库兼容级别维持在 140 或更高。 若要对源自数据库的所有查询执行禁用批处理模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
 
 ```sql
@@ -132,6 +132,30 @@ LastRequestedMemory 显示上一次查询执行中的授予内存（以千字节
 
 > [!NOTE]
 > 公共预览版行模式内存授予反馈计划特性在 SQL Server Management Studio 版本 17.9 及更高版本中的图形查询执行计划内可见。 
+
+### <a name="disabling-row-mode-memory-grant-feedback-without-changing-the-compatibility-level"></a>在不更改兼容级别的情况下禁用行模式内存授予反馈
+可在数据库或语句范围内禁用行模式内存授予反馈，同时将数据库兼容级别维持在 150 或更高。 若要对源自数据库的所有查询执行禁用行模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+若要对源自数据库的所有查询重新启用行模式内存授予反馈，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+此外，将 DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK 指定为 USE HINT 查询提示也可对特定查询禁用行模式内存授予反馈。  例如：
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+USE HINT 查询提示的优先级高于数据库范围的配置或跟踪标志设置。
+
 
 ## <a name="batch-mode-adaptive-joins"></a>批处理模式自适应联接
 通过批处理模式自适应联接功能，可延迟选择[哈希联接或嵌套循环联接](../../relational-databases/performance/joins.md)方法，直到扫描第一个输入后。 自适应联接运算符可定义用于决定何时切换到嵌套循环计划的阈值。 因此，计划可在执行期间动态切换到较好的联接策略。

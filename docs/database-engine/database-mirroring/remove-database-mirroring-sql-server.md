@@ -14,12 +14,12 @@ ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a1f53c1b2e46c7b52536cff0496c7e9aed065a90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42fe1ede76c7be079601ea6701466d80e19ddf3e
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644951"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264859"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>删除数据库镜像 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "47644951"
   
      重新启动镜像之前，必须将在删除镜像后对主体数据库执行的日志备份全部应用到镜像数据库中。  
   
--   **如果不打算重新启动镜像**  
+-   **如果不打算重启镜像**  
   
      或者，可以恢复以前的镜像数据库。 在作为镜像服务器的服务器实例上，可以使用以下 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句：  
   

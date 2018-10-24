@@ -14,12 +14,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 91d162062b59ed52d95d7586e6f7a0c8331a896f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee6e1315212c81cfb0bf5cc76c5f95a026462989
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687115"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168897"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>创建维护计划（维护计划设计图面）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ ms.locfileid: "47687115"
   
         1.  如果您选择了 **“生成文本文件报告”**，则选择 **“创建新文件”** 或 **“追加到文件”**。  
   
-        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号（“…”）并从“定位文件夹 - server_name”或“定位数据库文件 - server_name” 对话框中选择该文件夹的路径或文件名。  
+        2.  根据上面选择的选项，通过在 **“文件夹”** 或 **“文件名”** 框中输入信息，输入新文件或要追加的文件的名称和完整路径。 或者，单击省略号（“…”）并从“定位文件夹 - server\_name”或“定位数据库文件 - server\_name”对话框中选择该文件夹的路径或文件名。  
   
         3.  如果您选择 **“将报告发送给电子邮件收件人”**，则在 **“代理操作员”** 列表上，选择以电子邮件形式发送的报告的收件人。  
   
@@ -233,7 +233,7 @@ ms.locfileid: "47687115"
   
 12. 若要在日志文件查看器中查看结果，请在“对象资源管理器” 中右键单击“维护计划”  文件夹或特定维护计划，然后选择“查看历史记录” 。  
   
-     “日志文件查看器 - server_name”对话框中提供以下选项。  
+     “日志文件查看器 - server\_name”对话框中提供以下选项。  
   
      **加载日志**  
      打开一个对话框，您可以在其中指定要加载的日志文件。  

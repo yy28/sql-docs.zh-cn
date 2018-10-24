@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1af1b9b6e1e9f78469522a90cf589f484f2964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97a3cac8090852d39f1b995cc414e43666246aa8
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741505"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906477"
 ---
 # <a name="tutorial-format-text-report-builder"></a>教程：设置文本格式（报表生成器）
 
@@ -197,7 +197,7 @@ ms.locfileid: "47741505"
   
 8.  单击 **“设计”** 返回设计视图。  
   
-9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择其右侧的两个单元格以及“Product”列中的空单元格和“Sales”列中的 `[Sum(Sales)]` 单元格。  
+9. 选择“LinkText”列中的“总计”单元格，然后按住 Shift 键并选择右侧的两个单元格：“Product”列中的空单元格和“Sales”列中的 `[Sum(Sales)]` 单元格。  
   
 11. 选中这三个单元格后，右键单击其中一个单元格，然后单击“删除行”。  
 

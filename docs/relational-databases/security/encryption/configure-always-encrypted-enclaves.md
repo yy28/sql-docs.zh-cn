@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6fd1a6bdb0ada4f7256c07b487c31574756191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712463"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307121"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -31,8 +31,9 @@ ms.locfileid: "47712463"
 4. 在 SQL Server 实例中配置 enclave 类型。
 5. 预配已启用 enclave 的密钥。
 6. 对包含敏感数据的列进行加密。
- 
 
+>[!NOTE]
+>有关如何在 SSMS 中设置测试环境并尝试使用具有安全 enclave 的 Always Encrypted 功能的分步教程，请参阅[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。
 
 ## <a name="configure-your-environment"></a>配置环境
 
@@ -78,7 +79,7 @@ Windows 主机保护者服务 (HGS) 需要在单独的 HGS 计算机上安装，
 
 1. [.NET Framework 4.7.2](https://www.microsoft.com/net/download/dotnet-framework-runtime)。
 2. [SSMS 18.0 或更高版本](../../../ssms/download-sql-server-management-studio-ssms.md)。
-3. [SQL Server PowerShell 模块](../../../powershell/download-sql-server-ps-module.md) 21.5 或更高版本。
+3. [SQL Server PowerShell 模块](../../../powershell/download-sql-server-ps-module.md)版本 21.1 或更高版本。
 4. [Visual Studio（建议使用 2017 或更高版本）](https://visualstudio.microsoft.com/downloads/)。
 5. [.NET Framework 4.7.2 开发人员工具包](https://www.microsoft.com/net/download/visual-studio-sdks)。
 6. [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 包](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider)，2.2.0 或更高版本。

@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 172c7c1bfd6cf312ddf47d8d6e6eb8b34052a67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784445"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852092"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -273,7 +273,7 @@ ms.locfileid: "47784445"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **必需**|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的启动帐户。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [必需](#Accounts)|指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务的启动帐户的密码。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **可选**|指定 [的](#Accounts) 启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]模式。|  
-|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 机器学习服务器（独立版）中指定用于 Python 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 Python 组件时，通常使用此设置。|  
+|Python/机器学习服务（数据库内）|MPYCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Python 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 Python 组件时，通常使用此设置。|  
 |R/机器学习服务（数据库内）|MRCACHEDIRECTORY|使用此参数在 SQL Server 2017 机器学习服务或 Machine Learning Server（独立版）中指定用于 Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server（独立版）或 R 功能支持的缓存目录。 从[没有 Internet 访问的计算机上的命令行](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access)安装 R 组件时，通常使用此设置。|  
   
 ###### <a name="sample-syntax"></a>示例语法：  

@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61b696e96cdad99bc536cf6d1e983996624bce39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 838fd86c8293554eb1c6d546b789c1dc60a2a658
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798100"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906447"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>对表或索引启用压缩功能
 
@@ -206,7 +206,7 @@ ms.locfileid: "47798100"
   
 #### <a name="to-enable-compression-on-a-table"></a>对表启用压缩功能  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
@@ -224,11 +224,11 @@ ms.locfileid: "47798100"
   
 #### <a name="to-enable-compression-on-an-index"></a>对索引启用压缩功能  
   
-1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]实例。  
+1.  在 **“对象资源管理器”** 中，连接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的实例。  
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果此对象使用的是 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例先查询 `sys.indexes` 目录视图以返回 `index_id` 表上每个索引的名称和 `Production.TransactionHistory` 。 之后，此示例将执行存储过程 `sp_estimate_data_compression_savings` 以返回指定索引 ID 的估计大小（如果要使用 PAGE 压缩设置）。 最后，此示例将重新生成索引 ID 2 (`IX_TransactionHistory_ProductID`)，并指定 PAGE 压缩。  
   
     ```  
     USE AdventureWorks2012;   

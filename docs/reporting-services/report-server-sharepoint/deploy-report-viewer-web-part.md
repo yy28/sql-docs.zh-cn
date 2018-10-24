@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769005"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085173"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -27,7 +27,8 @@ ms.locfileid: "47769005"
 ## <a name="requirements"></a>要求
 
 > [!IMPORTANT]
-> 如果已配置 Reporting Services SharePoint 集成模式，则目前无法安装此 Web 部件。
+> 从版本“15.X.X.X”开始，可以并行安装 ReportViewerWebPart 和现有的 Reporting Services SharePoint 集成模式共享服务应用程序。
+> 此次 .wsp 解决方案更新，我们引入了新的文件，必须分别使用 Uninstall-SPSolution 和 Install-SPSolution cmdlet 撤销之前的解决方案和重复部署新的 .wsp。
 >
 
 **支持的 SharePoint Server 版本：**

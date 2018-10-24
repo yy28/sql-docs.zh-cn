@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 82713867de363b65ab534c8dc518a7cd15a003b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45508c91bc75eb42be8cbd7c2c807c81e75c8075
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683437"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085033"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>在 Web 门户中查找和查看报表（报表生成器和 SSRS）
   报表管理器是一种基于 Web 的工具，该工具包含查看和管理报表的功能。 它是报表服务器安装的一部分。 若要打开报表管理器，请在浏览器窗口中键入报表管理器 URL。 有关浏览器要求的信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)。 有关如何可在报表服务器上配置报表管理器 URL 的详细信息，请与系统管理员联系。 有关详细信息，请参阅[配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)。  
   
- 系统管理员在报表服务器上设置的权限决定您使用报表管理器时可以查看的内容。 权限是通过角色分配授予的。 若要查找和查看报表，您的角色分配必须包括“查看报表”任务。 若要在报表服务器上查找某一报表，请按名称或说明搜索该报表，或者浏览报表服务器文件夹。 只能搜索或通过浏览查找已发布或上载到报表服务器的报表。 有关如何搜索报表的详细信息，请参阅 [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)。  
+ 系统管理员在报表服务器上设置的权限决定您使用报表管理器时可以查看的内容。 权限是通过角色分配授予的。 若要查找和查看报表，您的角色分配必须包括“查看报表”任务。 若要在报表服务器上查找某一报表，请按名称或说明搜索该报表，或者浏览报表服务器文件夹。 只能搜索或通过浏览查找已发布或上载到报表服务器的报表。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,9 +42,9 @@ ms.locfileid: "47683437"
   
  并不是所有在文件夹层次结构中可见的报表都是可立即访问的。 有些报表可能会提示您输入用户名和密码，以确定您是否有权访问该报表的数据源。 有关在报表管理器中打开报表的详细信息，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
   
- 此外，您还可以通过报表生成器浏览到报表并从报表服务器直接打开报表。 有关详细信息，请参阅 [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)。  
+ 此外，您还可以通过报表生成器浏览到报表并从报表服务器直接打开报表。 
   
-## <a name="to-search-for-a-items"></a>搜索项  
+## <a name="to-search-for-items"></a>搜索项目  
   
 -   若要在报表管理器中搜索项，请在页面顶部的 **“搜索”** 文本框中键入搜索字符串。 上图中的 **(2)** 。 搜索将从文件夹层次结构的顶部节点开始，然后逐渐涉及每一个分支。 如果您无权访问特定分支，就会将其跳过。 这一点适用于其他用户的“我的报表”文件夹以及一般情况下不可用的其他文件夹。 搜索结果中将只包含您有权查看的报表和项。  
   
@@ -53,7 +53,6 @@ ms.locfileid: "47683437"
 -   若要在报表中搜索特定文本，请使用报表顶部的工具栏。  
   
 ## <a name="see-also"></a>另请参阅  
- [搜索报表和其他项（报表生成器和 SSRS）](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [查找、查看和管理报表（报表生成器和 SSRS）](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

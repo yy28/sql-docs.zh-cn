@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8011b61d86f91506cc7e194e8521415816310131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb0117203d290c32c22691f665a7717a68bb5465
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784315"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072140"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM 服务 - 连接到其他计算机
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47784315"
   
 10. 右键单击“SQL Server 配置管理器” ，再单击“从此处新建窗口” 。  
   
-11. 在 **“窗口”** 菜单上，单击 **“控制台根节点”**，切换回第一个窗口，并删除该窗口。  
+11. 在“窗口”菜单上，单击“控制台根节点”，切换回第一个窗口，并删除该窗口。  
   
 12. 在“文件”  菜单上，单击“另存为” ，使用文件扩展名为 **.msc** 的相应文件名将文件保存到目标文件夹。 关闭 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台。  
   

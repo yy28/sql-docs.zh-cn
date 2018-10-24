@@ -24,12 +24,12 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ea3d835790ad9a438a2b98e5f4b1fb90fc20f14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e5d4242d33cba22b4921997f11b8738b1423611
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629145"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169267"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  在删除事件通知前，会话一直保持打开状态。 某些错误可能导致会话提前关闭。 显式结束部分或全部会话可能导致目标服务无法接收更多消息。  
   
- { 'broker_instance_specifier' | 'current database' }****  
+ { 'broker\_instance\_specifier' | 'current database' }  
  指定解析 broker_service 所依据的 Service Broker 实例。 特定 Service Broker 的值可通过查询 sys.databases 目录视图的 service_broker_guid 列来获取。 使用 'current database' 在当前数据库中指定 Service Broker 实例。 'current database' 是不区分大小写的文字字符串。  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  在下面的示例 A 和 B 中，`TO SERVICE 'NotifyService'` 子句中的 GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') 特定于设置相应示例的计算机。 对于该实例，它是 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 GUID。  
 >   
->  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker_instance_specifier'****。  
+>  若要复制和运行这些示例，需要将此 GUID 替换为您的计算机和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的 GUID。 如上面的“参数”部分所述，可以通过查询 sys.databases 目录视图的 service_broker_guid 列获取 'broker\_instance\_specifier'。  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. 创建服务器范围的事件通知  
  以下示例创建使用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 设置目标服务时所需的对象。 该目标服务引用专用于事件通知的启动服务的消息类型和约定。 然后对该目标服务创建一个事件通知，只要 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例发生 `Object_Created` 跟踪事件，便会发送一个通知。  

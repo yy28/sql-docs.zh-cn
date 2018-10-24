@@ -22,12 +22,12 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be0c968c387a4228b7c774a1b2308d7f9ea6bac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 986d68540f75852061982ae159a903fc2ab1b518
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670258"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169279"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,11 +91,11 @@ CREATE FULLTEXT INDEX ON table_name
   
  如果指定了 language_term，将使用它代表的语言对存储在 char、nchar、varchar、nvarchar、text 和 ntext 列中的数据编制索引。 如果未针对列将 language_term 指定为全文谓词的一部分，则该语言就是查询时使用的默认语言。  
   
- 如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值。 字符串必须用单引号引起来，如 'language_term'****。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
+ 如果指定为字符串，则 language_term 对应于 syslanguages 系统表中的 alias 列值。 字符串必须用单引号引起来，如 'language\_term'。 如果指定为整数，则 language_term 就是标识该语言的实际 LCID。 如果指定为十六进制值，则 language_term 将以 0x 开头，后跟 LCID 的十六进制值。 十六进制值不能超过八位（包括前导零在内）。  
   
  如果该值是双字节字符集 (DBCS) 格式，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会将其转换为 Unicode 格式。  
   
- 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
+ 对于指定为 language_term 的语言，必须启用断字符和词干分析器等资源。 如果这些资源不支持指定的语言， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将返回错误。  
   
  使用 sp_configure 存储过程可访问有关 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认全文语言的信息。 有关详细信息，请参阅本主题后面的 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)不熟悉的读者。  
   
@@ -184,7 +184,7 @@ CREATE FULLTEXT INDEX ON table_name
 ## <a name="examples"></a>示例  
   
 ### <a name="a-creating-a-unique-index-a-full-text-catalog-and-a-full-text-index"></a>A. 创建唯一索引、全文目录和全文索引  
- 以下示例对 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 示例数据库中 `JobCandidateID` 表的 `HumanResources.JobCandidate` 列创建全文索引。 然后，该示例创建一个默认全文目录 `ft`。 最后，该示例使用 `Resume` 目录和系统非索引字表对 `ft` 列创建全文索引。  
+ 以下示例对 `JobCandidateID` 示例数据库中 `HumanResources.JobCandidate` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列创建全文索引。 然后，该示例创建一个默认全文目录 `ft`。 最后，该示例使用 `Resume` 目录和系统非索引字表对 `ft` 列创建全文索引。  
   
 ```  
 CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  

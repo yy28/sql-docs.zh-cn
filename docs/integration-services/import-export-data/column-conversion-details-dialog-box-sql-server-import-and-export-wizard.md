@@ -13,12 +13,12 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b3af197ea1f7313338ae0126c8d1dee095af0953
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de113586457c8bc13c0f6656ed78c18708534dd
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631587"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905707"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>“列转换详细信息”对话框（SQL Server 导入和导出向导）
   如果双击“查看数据类型映射”  页上的单个列的行， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] “导入和导出向导”会显示“列转换详细信息”  对话框。 在此页上你可以查看有关单个列的详细转换信息。 信息包括以下各项：

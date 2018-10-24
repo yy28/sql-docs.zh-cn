@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 13c15426e44ef6897cb5763d3c98f2a214298298
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 742c3dfb66add1a8e81fb9f530923b11e17bfea8
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814081"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307111"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>具有安全 Enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -140,3 +140,7 @@ SQL Server 支持 [!INCLUDE[sql-server-2019](..\..\..\includes\sssqlv15-md.md)] 
 ## <a name="known-issues"></a>已知问题
 
 - 针对非 UNICODE（char、varchar）字符串列的富计算要求在数据库级别设置 BIN2 排序规则。 请参阅[管理排序规则](configure-always-encrypted-enclaves.md#manage-collations)中有关非 UNICODE 字符串列的特殊注意事项。
+
+## <a name="next-steps"></a>Next Steps
+
+- 在 SSMS 中设置测试环境并尝试使用具有安全 enclave 的 Always Encrypted 功能，请参阅[教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted](../tutorial-getting-started-with-always-encrypted-enclaves.md)。

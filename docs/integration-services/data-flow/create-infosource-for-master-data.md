@@ -11,12 +11,12 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5d481544611f1246922fc16b1c89f16dcf745802
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33069fbe92657e50ba9421ba12130f3a90d44492
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750335"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084976"
 ---
 # <a name="create-infosource-for-master-data"></a>“创建主数据的 InfoSource”
   使用 **“创建主数据的 InfoSource”** 对话框为 SAP Netweaver BW 系统中的主数据创建一个新的 InfoSource。  
@@ -48,7 +48,7 @@ ms.locfileid: "47750335"
  在您选择 InfoObject 后，组件会将选定 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   
  **新建**  
- 新建 InfoObject。 此选项可打开 **“新建 InfoObject”** 对话框，您可在其中创建新的 InfoObject。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
+ 新建 InfoObject。 此选项可打开“新建 InfoObject”对话框，您可在其中创建新的 InfoObject。 有关此对话框的详细信息，请参阅 [Create New InfoObject](../../integration-services/data-flow/create-new-infoobject.md)。  
   
  创建 InfoObject 后，组件会将新 InfoObject 的名称填充在 **“InfoObject 名称”** 文本框中。  
   
