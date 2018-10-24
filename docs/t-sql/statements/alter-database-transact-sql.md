@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,20 +27,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2bb68aae23e0d36ff09ff673eae3d45f1082fec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ece0ca36756e233412d2befcc7246504d1c2aa23
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825375"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252134"
 ---
-# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
 修改数据库的某些配置选项。 
 
 本文提供所选任何 SQL 产品的语法、参数、注解、权限和示例。
 
-有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
+有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
 
 ## <a name="click-a-product"></a>单击一个产品！
 
@@ -55,12 +55,12 @@ ms.locfileid: "47825375"
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="overview"></a>概述
 
 在 SQL Server 中，此语句修改一个数据库或与该数据库关联的文件和文件组。 在数据库中添加或删除文件和文件组、更改数据库的属性或其文件和文件组、更改数据库排序规则和设置数据库选项。 不能修改数据库快照。 若要修改与复制相关的数据库选项，请使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
-   
+
 由于 ALTER DATABASE 语法的篇幅较长，因此分为多篇文章。  
 
 ALTER DATABASE  
@@ -83,7 +83,7 @@ ALTER DATABASE
   
 ## <a name="syntax"></a>语法  
   
-```  
+```
 -- SQL Server Syntax  
 ALTER DATABASE { database_name  | CURRENT }  
 {  
@@ -103,20 +103,20 @@ ALTER DATABASE { database_name  | CURRENT }
   <filegroup_updatability_option>::=  
   
 <option_spec>::=  
-  <auto_option> ::=   
+  <auto_option> ::=
   <change_tracking_option> ::=  
-  <cursor_option> ::=   
-  <database_mirroring_option> ::=   
+  <cursor_option> ::=
+  <database_mirroring_option> ::=
   <date_correlation_optimization_option> ::=  
   <db_encryption_option> ::=  
   <db_state_option> ::=  
   <db_update_option> ::=  
   <db_user_access_option> ::=  <delayed_durability_option> ::=  <external_access_option> ::=  
   <FILESTREAM_options> ::=  
-  <HADR_options> ::=    
+  <HADR_options> ::=
   <parameterization_option> ::=  
   <query_store_options> ::=  
-  <recovery_option> ::=   
+  <recovery_option> ::=
   <service_broker_option> ::=  
   <snapshot_option> ::=  
   <sql_option> ::=   
@@ -177,7 +177,7 @@ ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）�
 |COLLATE|MODIFY FILEGROUP READ_ONLY|  
 |READ_ONLY|PAGE_VERIFY|  
   
-清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
+清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
 在下列情况下，也会刷新过程缓存：  
   
@@ -274,27 +274,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL 数据库<br />逻辑服务器*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
 
 ## <a name="overview"></a>概述
 
@@ -566,7 +553,7 @@ FORCE_FAILOVER_ALLOW_DATA_LOSS
   
 ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。  
   
-清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
+清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
 在以下应用场景中也会刷新过程缓存：对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
   
@@ -649,27 +636,14 @@ ALTER DATABASE db1 FAILOVER
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据库<br />托管实例\*_&nbsp;|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 ## <a name="overview"></a>概述
 
@@ -740,7 +714,7 @@ CURRENT
   
 ALTER DATABASE 语句必须在自动提交模式（默认事务管理模式）下运行，且不允许用于显式或隐式事务中。  
   
-清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
+清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
 在以下应用场景中也会刷新过程缓存：对具有默认选项的数据库运行多个查询。 然后，删除数据库。    
   
@@ -785,27 +759,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><strong><em>* SQL 数据<br />仓库*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|_\*SQL 数据<br />仓库\*_&nbsp;|[并行<br />数据仓库](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
 
 ## <a name="overview"></a>概述
 
@@ -914,27 +875,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> ||||||  
+> |---|---|---|---|---|  
+> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](alter-database-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库\*_&nbsp;|  
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>并行数据仓库
+## <a name="parallel-data-warehouse"></a>并行数据仓库
 
 ## <a name="overview"></a>概述
 

@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ccc1b9d142bb88af046415f76d91073c539d1f17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19b533df8417345796f76f4e365d633e5b707eda
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697975"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169021"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ WITH
  替换为  
  引入对要更改的路由进行定义的子句。  
   
- SERVICE_NAME='service_name'   
+ SERVICE_NAME ='service\_name_'_  
  指定此路由指向的远程服务的名称。 service_name 必须与远程服务使用的名称完全匹配。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会逐字节进行比较以便与 service_name 匹配。 也就是说，这种比较区分大小写，并且不考虑当前的排序规则。 服务名称为 'SQL/ServiceBroker/BrokerConfiguration' 的路由是指向 Broker Configuration Notice 服务的路由。 指向此服务的路由不能指定 Broker 实例。  
   
  如果省略 SERVICE_NAME 子句，则路由的服务名称保持不变。  
   
- BROKER_INSTANCE='broker_instance'  
+ BROKER_INSTANCE ='broker\_instance'  
  指定承载目标服务的数据库。 broker_instance 参数必须是远程数据库的 Broker 实例标识符，该标识符可以通过在所选数据库中运行以下查询获得：  
   
 ```  
@@ -79,10 +79,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- LIFETIME =route_lifetime  
+ LIFETIME **=** route\_lifetime  
  指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在路由表中保留路由的时间（秒）。 在生存期结束后，相应的路由即过期，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为新会话选择路由时将不再考虑该路由。 如果省略此子句，则路由的生存期保持不变。  
   
- ADDRESS *='***next_hop_address'  
+ ADDRESS ='next\_hop\_address'  
 
  对于 SQL 数据库托管实例，`ADDRESS` 必须是本地的。
 
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  此选项在包含数据库中不可用。  
   
- MIRROR_ADDRESS ='next_hop_mirror_address'****  
+ MIRROR_ADDRESS **='** next\_hop\_mirror\_address **'**  
  指定镜像对的镜像服务器的网络地址，镜像对的主体服务器位于 next_hop_address。 next_hop_mirror_address 按以下格式指定 TCP/IP 地址：  
   
  TCP://{ dns_name | netbios_name | ip_address } : port_number  

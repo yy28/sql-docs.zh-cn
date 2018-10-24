@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文档
-description: 了解如何使用 Microsoft Azure 云服务生成和管理功能强大的应用程序。 获取文档、示例代码、教程和更多信息。
+title: SQL Server 教育中心
+description: 了解如何编译 SQL Server 的教育资源。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: a50d7112ca9f3e8ff9fa5d2a37a037a3322e2cf3
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878000"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336176"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -461,10 +461,16 @@ ms.locfileid: "48878000"
         <h2>请与我们保持联系</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与编辑 SQL 文档</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与</a>
             </li>
            <li>
-                <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7y_maOEfTBMj0E3nehXKj9UQjIxMzJORE1BTVk4WU9YSlNaWVVIRElPRC4u" data-linktype="external">SQL 文档反馈</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">获取帮助</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">反馈</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 调查 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">博客</a>

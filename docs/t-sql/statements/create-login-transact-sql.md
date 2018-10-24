@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7509aaa81af19bc94fdb09526f3a940695651a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e7b598d4fe860c0d0eb1cb95730bb483be5470a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840968"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252104"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47840968"
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>语法 
   
@@ -260,26 +260,13 @@ GO
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL 数据库<br />逻辑服务器*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />逻辑服务器\*_|[SQL 数据库<br />托管实例](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
+## <a name="azure-sql-database-logical-server"></a>Azure SQL 数据库逻辑服务器
   
 ## <a name="syntax"></a>语法 
   
@@ -389,26 +376,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|_\*SQL 数据库<br />托管实例 \*_|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 ## <a name="overview"></a>概述
 
@@ -522,23 +496,13 @@ GO
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>>   <th><strong><em>* SQL 数据<br />仓库*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例]()|\*SQL 数据<br />仓库\*|[并行<br />数据仓库](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
+## <a name="azure-sql-data-warehouse"></a>Azure SQL 数据仓库
   
 ## <a name="syntax"></a>语法 
   
@@ -644,24 +608,13 @@ GO
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">SQL 数据库<br />逻辑服务器</a></th>
->   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL 数据<br />仓库</a></th>
->   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
-> </tr>
-> </table>
+> ||||||
+> |-|-|-|-|-|
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />逻辑服务器](create-login-transact-sql.md?view=azuresqldb-current)|[SQL 数据库<br />托管实例]()|[SQL 数据<br />数据仓库](create-login-transact-sql.md?view=azure-sqldw-latest)|_\*并行<br />数据仓库 \*_
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>并行数据仓库
+## <a name="parallel-data-warehouse"></a>并行数据仓库
 
   
 ## <a name="syntax"></a>语法 

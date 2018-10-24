@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文档
-description: 了解如何使用 Microsoft Azure 云服务生成和管理功能强大的应用程序。 获取文档、示例代码、教程和更多信息。
+title: Microsoft SQL Server 文档
+description: 了解如何使用多种工具和服务移动和迁移数据库和数据。 获取文档、示例代码、教程和更多信息。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: e217fb5094b4b277fd791053cc7eec1d211d23a8
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 6a4598f56229d522cdf1df3d9f3fe265d4371e5d
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797209"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307081"
 ---
 <div id="main" class="v2">
     <div class="container">

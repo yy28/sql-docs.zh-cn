@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce8d405d4ae630f7166389d98086237270333e51
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677931"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252154"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 语句 (Transact-SQL)
 还原使用 BACKUP 命令所做的 SQL 数据库备份。 
@@ -62,22 +62,13 @@ ms.locfileid: "47677931"
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |**_\* SQL Server \*_**|[SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[并行<br />数据仓库](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 通过此命令，您可以执行下列还原方案：  
   
@@ -351,7 +342,7 @@ RESTORE 在出现错误之后可以重新启动。 此外，您可以指示 REST
   
 还原已损坏的 master 数据库需要使用特殊的过程。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
-还原数据库将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划高速缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划高速缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
+还原数据库将清除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的计划缓存。 清除计划缓存将导致对所有后续执行计划进行重新编译，并可能导致查询性能暂时性地突然降低。 对于计划缓存中每个已清除的缓存存储区，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志包含以下信息性消息：“由于某些数据库维护或重新配置操作，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 经历了 '%s' 缓存存储区(计划缓存的一部分)的 %d 次刷新”。 每隔五分钟，只要缓存在这段时间间隔内得到刷新，此消息就记录一次。  
   
 要还原可用性数据库，首先需要将数据库还原成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例，然后再将数据库添加到可用性组。  
 
@@ -714,22 +705,13 @@ RESTORE DATABASE Sales
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />托管实例 \*_|[并行<br />数据仓库](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 运行此命令，可通过 Azure Blob 存储帐户从完整数据库备份（完整还原）还原整个数据库。
 
@@ -855,22 +837,13 @@ WHERE r.command = 'RESTORE DATABASE'
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
-> </tr>
-> </table>
+> ||||
+> |-|-|-|
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|_\*并行<br />数据仓库 \*_
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>并行数据仓库
+## <a name="parallel-data-warehouse"></a>并行数据仓库
 
 
 将[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]用户数据库从数据库备份还原到[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]设备。 数据库会从以前通过[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE（并行数据仓库）](../../t-sql/statements/backup-transact-sql.md)命令创建的备份进行还原。 使用备份和还原操作生成灾难恢复计划，或将数据库从一个设备移动到另一个。  

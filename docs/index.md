@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: c5b0c3993b5306f6879a88db2545636683b597d7
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232541"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100408"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -118,6 +118,7 @@ ms.locfileid: "48232541"
                                               <ul class="noBullet">
                                                   <li><a class="barLink" href="/azure/sql-database/"><strong>Azure SQL 数据库</strong></a></li>
                                                   <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>Azure SQL 数据仓库</strong></a></li>
+                                                  <li><a class="barLink" href="https://azure.microsoft.com/updates/?status=all&product=sql-database"><strong>新增功能</strong></a></li>
                                               </ul>
                                           </div>
                                       </div>
@@ -235,7 +236,7 @@ ms.locfileid: "48232541"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>迁移、加载和移动数据</h3>
-                                                          <p><b>迁移助手、Integration Services、导入导出向导、复制</b> </p>
+                                                          <p><b>迁移助手、Integration Services (SSIS)、导入导出向导、复制 </b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -348,9 +349,11 @@ ms.locfileid: "48232541"
                                                     <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
                                                     <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMV</a></li>
                                                     <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
+                                                    <li><a class="barLink" href="/rest/api/sql/">SQL Rest API</a></li>
                                                 </ul></td>
                                                 <td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
+                                                     <li><a class="barLink" href="/dotnet/api/?view=sqlserver-2017">SQL .NET SDK API</a></li>
                                                      <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
                                                      <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">数据库示例</a></li>
                                                      <li><a class="barLink" href="/previous-versions/sql/">已存档内容 (SQL 2005-2012)</a></li>
@@ -372,8 +375,8 @@ ms.locfileid: "48232541"
                                                         <h3>报表</h3>
                                                         <ul class="noBullet">
                                                              <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
-                                                            <li><a class="barLink" href="/power-bi/service-get-started/">PowerBI 服务</a></li>
-                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">PowerBI 报表服务器</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">Power BI 服务</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Power BI 报表服务器</a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d0db88d84effcc76c97addeeab6e9d6c104aa5f
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785655"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878110"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,6 +128,7 @@ ms.locfileid: "47785655"
 - 服务器配置数据，例如 sp_configure 的设置
 - 功能配置数据
 - 事件名称和错误代码
+- 硬件设置和 OEM 制造商等标识
 
 Microsoft 不检查其他使用 SQL Server 的程序设置的应用程序名称值（例如：Sharepoint 或第三方打包程序，并且在使用情况数据启用时将此信息包含在发送给 Microsoft 的系统元数据中）。 客户不应将个人数据（如最终用户身份信息）存储在系统元数据字段中，也不应创建旨在将个人数据存储到这些字段的应用程序。 
 

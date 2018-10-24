@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1cb9cb1c8a7b48e2001b106ca98f6d82a71be6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fd438c408b9719e4976b112c28f09e154e17339
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807545"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120344"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 的新增功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SQL Server 开发人员现在可访问开放源代码生态系统中提供的大
 - **使用 T-SQL 进行 Python 操作** - 使用存储过程 `sp_execute_external_script` 轻松部署 Python 代码。 通过将数据从 SQL 流式传输到 Python 进程并使用 MPI 环并行化来获得出色性能。
 - **SQL Server 计算上下文中的 Python** - 数据科学家和开发人员可以从其开发环境远程执行 Python 代码，以便在不移动数据的情况下浏览数据和开发模型。
 - **本机计分** - Transact-SQL 中的 PREDICT 函数可用于执行 SQL Server 2017 的任何实例中的计分（即使未安装 R）。 只需使用一个受支持的 RevoScaleR 和 revoscalepy 算法训练该模型，并将该模型保存为全新的二进制紧凑格式。
-- **程序包管理** - T-SQL 现在支持 CREATE EXTERNAL LIBRARY 语句，使 DBA 更好地管理 R 程序包。 使用角色控制专用或共享程序包访问权限，在数据库中存储 R 程序包并在用户中进行共享。
+- **程序包管理** - T-SQL 现在支持 CREATE EXTERNAL LIBRARY 语句，使 DBA 更好地管理 R 程序包。 使用角色控制专用或共享包访问权限，在数据库中存储 R 包并在用户之间进行共享。
 - **性能改进** - 存储过程 `sp_execute_external_script` 已经过优化，支持列存储数据的批处理模式执行。
 
 

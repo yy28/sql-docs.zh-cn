@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8f0b9a18627da1e7d407b396686cb756ca5a4b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852103"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461024"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>教程：通过 SSMS 开始使用具有安全 enclave 的 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -311,6 +311,6 @@ UnauthorizedHost 错误表示公钥未向 HGS 服务器注册，请重复步骤 
 ## <a name="next-steps"></a>Next Steps
 请参阅[配置具有安全 enclave 的 Always Encrypted](encryption/configure-always-encrypted-enclaves.md)，了解其他用例。 此外，还可以进行以下尝试：
 
-- [配置 TPM 证明。](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [为 HGS 实例配置 HTTPS。](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [配置 TPM 证明。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [为 HGS 实例配置 HTTPS。](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - 开发对加密列发出丰富查询的应用程序。

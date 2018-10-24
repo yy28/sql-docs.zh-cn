@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d35448aeeaba9815fbbc983bcb59e01d3e930476
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea0a580f54af1296394b26ffd2175efad873657e
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760985"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252204"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -68,23 +68,14 @@ ms.locfileid: "47760985"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|[并行<br />数据仓库](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 备份完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库以创建数据库备份，或者备份数据库的一个或多个文件或文件组以创建文件备份 (BACKUP DATABASE)。 另外，在完整恢复模式或大容量日志恢复模式下备份数据库事务日志以创建日志备份 (BACKUP LOG)。 
   
@@ -946,23 +937,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">并行<br />数据仓库</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|_\*SQL 数据库<br />托管实例\*_&nbsp;|[并行<br />数据仓库](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 备份 Azure SQL 数据库托管实例中放置/托管的 SQL 数据库。 SQL 数据库[托管实例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)提供自动备份，可让用户创建完整的数据库 `COPY_ONLY` 备份。 不支持差异、日志和文件快照备份。  
 
@@ -1163,23 +1145,14 @@ WITH STATS = 5;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">SQL 数据库<br />托管实例</a></th>
->   <th><strong><em>* 并行<br />数据仓库*</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||| 
+> |---|---|---| 
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL 数据库<br />托管实例](backup-transact-sql.md?view=azuresqldb-mi-current)|_\* 并行<br />数据仓库 \*_ &nbsp;|  
 
 &nbsp;
 
-# <a name="parallel-data-warehouse"></a>并行数据仓库
+## <a name="parallel-data-warehouse"></a>并行数据仓库
 
 创建 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 数据库的备份并将该备份存储在设备以外的用户指定网络位置。 将此语句与 [RESTORE DATABASE (Parallel Data Warehouse)](../../t-sql/statements/restore-statements-transact-sql.md) 配合使用，用于灾难恢复或用于将数据库从一台设备复制到另一台设备。  
   

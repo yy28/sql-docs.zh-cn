@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 文件和文件组选项 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -43,12 +43,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a6a51a012ce9a131829abe128f1da8b1098ff572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a07b7c9536f3d1f98293317f56e4c10dbae25e0
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682695"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252144"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE (Transact-SQL) 文件和文件组选项 
 
@@ -66,6 +66,8 @@ ms.locfileid: "47682695"
 > |||
 > |-|-|-|
 > |**_\* SQL Server \*_**<br />&nbsp;|[SQL 数据库<br />托管实例](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+
+&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -671,20 +673,13 @@ GO
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL 数据库<br />托管实例 *</em></strong></th>
-> </tr>
-> </table>
+> |||
+> |-|-|-|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2016)|_\*SQL 数据库<br />托管实例 \*_<br />&nbsp;|
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
+## <a name="azure-sql-database-managed-instance"></a>Azure SQL 数据库托管实例
 
 对 Azure SQL 数据库托管实例中的数据库使用此语句。
 

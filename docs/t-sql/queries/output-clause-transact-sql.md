@@ -31,12 +31,12 @@ ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6e433b736a9c129eb5a43ebf8bf1ffb7d653527d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8269d0b8913d0ccde1a351ee2489a7818b00c45e
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629245"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336286"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47629245"
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
- [Insert](../../t-sql/statements/insert-transact-sql.md)  
+ [INSERT](../../t-sql/statements/insert-transact-sql.md)  
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
@@ -354,7 +354,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. 将 OUTPUT INTO 与 UPDATE 语句一起使用  
- 下面的示例将 `VacationHours` 表中 `Employee` 列的前 10 行更新 25%。 `OUTPUT` 子句将在将 `UPDATE` 语句应用于列 `deleted.VacationHours` 之前已存在的 `VacationHours` 值和 `inserted.VacationHours` 列中更新后的值返回给 `@MyTableVar``table` 变量。  
+ 下面的示例将 `VacationHours` 表中 `Employee` 列的前 10 行更新 25%。 `OUTPUT` 子句将返回 `VacationHours` 值，该值在将 `UPDATE` 列中的 `deleted.VacationHours` 语句和 `inserted.VacationHours` 列中的已更新值应用于 `@MyTableVar` 表变量之前存在。  
   
  在它后面的两个 `SELECT` 语句返回 `@MyTableVar` 中的值以及 `Employee` 表中更新操作的结果。  
   

@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848275"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874345"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -80,12 +80,10 @@ PolyBase 具有以下限制：
 - [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+- 不支持集成身份验证。 目前仅支持用户名和密码。  
+- 默认启用加密。 若要禁用加密，必须...（与 thanh 交谈）
+- [类型映射限制](polybase-type-mapping.md)
 
-- TBD：行宽
-- TBD：类型映射
-- TBD：身份验证
-- TBD：排序规则 
-- TBD：下推  
 
 ## <a name="security-and-authentication"></a>安全性和身份验证 
 

@@ -1,7 +1,7 @@
 ---
 title: 表 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/24/2018
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 67919bf72fa411aedb7709ef81c6af9ac4cb5121
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba13a096eac5b83a9bc094a2017ddde3cf6d8f81
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839755"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100458"
 ---
 # <a name="table-transact-sql"></a>表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -127,6 +127,44 @@ table 类型声明中的 CHECK 约束、DEFAULT 值和计算列不能调用用�
 表变量延迟编译不会增加重新编译频率。  相反，它将转移初始编译出现的位置。 生成的缓存计划是基于初始延迟编译表变量行计数生成的。 缓存的计划将由连续查询重新使用，直到该计划被逐出或被重新编译。 
 
 如果用于初始计划编译的表变量行计数表示与固定的行计数猜测截然不同的一个典型值，则下游操作将受益。  如果表变量行计数在整个执行过程中差别很大，则可能无法通过此功能来提升性能。
+
+### <a name="disabling-table-variable-deferred-compilation-without-changing-the-compatibility-level"></a>在不更改兼容性级别的情况下禁用表变量延迟编译
+可在数据库或语句范围内禁用表变量延迟编译，同时将数据库兼容性级别维持在 150 或更高。 若要对源自数据库的所有查询执行表变量延迟编译，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
+```
+
+若要对源自数据库的所有查询重新启用表变量延迟编译，请在对应数据库的上下文中执行以下命令：
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
+```
+
+此外，还可以通过将 DISABLE_DEFERRED_COMPILATION_TV 指定为 USE HINT 查询提示，为特定查询禁用表变量延迟编译。  例如：
+
+```sql
+DECLARE @LINEITEMS TABLE 
+    (L_OrderKey INT NOT NULL,
+     L_Quantity INT NOT NULL
+    );
+
+INSERT @LINEITEMS
+SELECT L_OrderKey, L_Quantity
+FROM dbo.lineitem
+WHERE L_Quantity = 5;
+
+SELECT  O_OrderKey,
+    O_CustKey,
+    O_OrderStatus,
+    L_QUANTITY
+FROM    
+    ORDERS,
+    @LINEITEMS
+WHERE   O_ORDERKEY  =   L_ORDERKEY
+    AND O_OrderStatus = 'O'
+OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
+```
 
   
 ## <a name="examples"></a>示例  

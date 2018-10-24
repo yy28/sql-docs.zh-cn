@@ -11,17 +11,17 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bda792731bbaf97732575453a284865bd243a84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636125"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071710"
 ---
 # <a name="how-to-debug-database-objects"></a>如何：调试数据库对象
 SQL Server 单元测试由以下内容组成：  
   
--   单元测试代码以 Visual C\# 或 Visual Basic 编写。 此代码（由 SQL Server 单元测试设计器生成）负责提交构成测试主体的 Transact\-SQL 脚本。  
+-   以 Visual C\# 或 Visual Basic 编写的单元测试代码。 此代码（由 SQL Server 单元测试设计器生成）负责提交构成测试主体的 Transact\-SQL 脚本。  
   
 -   一个或多个用 Visual C\# 或 Visual Basic 编写的测试条件。 若要调试测试条件，请按照[如何：在运行测试时进行调试 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) 或[如何：在运行测试时进行调试 (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx) 中介绍的调试单元测试的过程进行操作。  
   

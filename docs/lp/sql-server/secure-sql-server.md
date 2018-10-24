@@ -1,17 +1,17 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure 文档
-description: 了解如何使用 Microsoft Azure 云服务生成和管理功能强大的应用程序。 获取文档、示例代码、教程和更多信息。
+title: SQL Server 安全性
+description: 深入了解可保障 SQL Server 安全的功能。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 0fe2c1d3fcce22524b0c3ea39ea8ac617d82f082
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 4853dbec0799a808e8165601cd868ec07e71c216
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797200"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336146"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -225,10 +225,16 @@ ms.locfileid: "48797200"
         <h2>请与我们保持联系</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与编辑 SQL 文档</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文档反馈</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">获取帮助</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">反馈</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 调查 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">博客</a>
@@ -244,4 +250,3 @@ ms.locfileid: "48797200"
             </li>
         </ul>
     </div>
-

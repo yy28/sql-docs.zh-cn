@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01182a581f231ffed82be26698e8e50bf82df9e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94334d025645ec13e6f046800de49eeb902401f4
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842545"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874355"
 ---
 # <a name="install-polybase-on-windows"></a>在 Windows 上安装 PolyBase
 
@@ -68,6 +68,8 @@ ms.locfileid: "47842545"
 2. 单击“安装”，然后单击“全新独立 SQL Server 安装或添加功能”。  
    
 3. 在功能选择页上，选择“针对外部数据的 PolyBase 查询服务” 。  
+
+ ![PolyBase 服务](../../relational-databases/polybase/media/install-wizard.png "PolyBase 服务")  
    
 4. 在服务器配置页上，将“SQL Server PolyBase 引擎服务”和“SQL Server PolyBase 数据移动服务”配置为在同一帐户下运行。  
    
@@ -89,7 +91,9 @@ ms.locfileid: "47842545"
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 
-安装后，必须[启用 PolyBase 功能](#enable)。
+  > **重要说明！**
+  >
+  > 安装后，必须[启用 PolyBase 功能](#enable)。
 
 ::: moniker-end
 
@@ -156,11 +160,16 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
 ## <a id="enable"></a> 启用 PolyBase
 
-自 SQL Server 2019 CTP 2.0 起，必须在使用以下 Transact-SQL 命令进行安装后启用 PolyBase：
+
+完成安装后，必须启用 Polybase 才能访问其功能。 连接到 SQL Server 2019 CTP 2.0，必须在使用以下 Transact-SQL 命令进行安装后启用 PolyBase：
+
 
 ```sql
-sp_configure @configname = 'polybase enabled', @configvalue = 1;
+exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
+RECONFIGURE [ WITH OVERRIDE ]  ;
 ```
+然后需要重启实例 
+
 
 ::: moniker-end
 

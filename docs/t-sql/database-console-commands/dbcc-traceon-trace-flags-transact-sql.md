@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 78a904579a0ee2664bc9d4146fb353c9aae99ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d40b573506d188fb3190de1ac5fe849eaa59ea10
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843757"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48852042"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "47843757"
 |**9476**|在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用简单包含假设而非默认的基本包含假设来生成计划。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3189675)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询| 
 |**9481**|允许将查询优化器基数估计模型设置为 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本，而不考虑数据库兼容性级别。 有关详细信息，请参阅 [Microsoft 支持文章](http://support.microsoft.com/kb/2801413)。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 LEGACY_CARDINALITY_ESTIMATION 选项。<br /><br />从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始，若要在查询级别完成此操作，请添加 USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION' [查询提示](../../t-sql/queries/hints-transact-sql-query.md)，而不是使用此跟踪标志。<br /><br />**作用域**：全局、会话或查询|  
 |**9485**|对 DBCC SHOW_STATISTICS 禁用 SELECT 权限。<br /><br />**作用域**：仅全局|
-|**9488**|当使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型时，将表值函数的固定估计值设置为默认值 1（对应于 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更早版本的查询优化器基数估计模型下的默认值）。<br /><br />**作用域**：全局、会话或查询|
+|**9488**|<a name="9488"></a>当使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的查询优化器基数估计模型时，将表值函数的固定估计值设置为默认值 1（对应于 [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 及更早版本的查询优化器基数估计模型下的默认值）。<br /><br />**作用域**：全局、会话或查询|
 |**9495**|在 INSERT...SELECT 操作的插入过程中禁用并行，它适用于用户表和临时表。 有关详细信息，请参阅 [Microsoft 支持文章](http://support.microsoft.com/kb/3180087)<br /><br />**作用域**：全局或会话| 
 |**9567**|对自动种子设定过程中的 Always On 可用性组启用数据流压缩。 在自动种子设定过程中，压缩可大幅缩短传输时间，并且将增加处理器上的负载。 有关详细信息，请参阅[自动初始化 Always On 可用性组](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)和[调整可用性组的压缩](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)。<br /><br />**作用域**：全局或会话|
 |**9591**|在 Always On 可用性组中禁用日志块压缩。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，日志块压缩是用于同步副本和异步副本的默认行为。 在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中，压缩仅用于异步副本。 <br /><br />**作用域**：全局或会话|

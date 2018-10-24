@@ -1,11 +1,9 @@
 ---
 title: SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.date: 02/02/2017
+ms.date: 10/15/2018
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: ssms
+ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssms.viewhelp.f1
@@ -15,12 +13,12 @@ ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0944f50125ba0619c3339c1e0a35ff9488f6634
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0594446d70ff739ec670645d8d28e12680ec84
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761114"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336076"
 ---
 # <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +31,6 @@ ms.locfileid: "47761114"
  - [**下载 SQL Server 2016 开发者版**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
  - [**下载 Visual Studio**](https://www.visualstudio.com/downloads/)
 
-  
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 组件  
   
 |描述|组件|  
@@ -44,7 +41,16 @@ ms.locfileid: "47761114"
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中包含的可视化设计工具。|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
 |如何使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 语言编辑器交互式生成和调试查询和脚本。|[查询和文本编辑器 (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
 
+## <a name="support-policy-for-ssms"></a>SSMS 的支持策略
+
+- 从 SSMS 17.0 开始，SQL 工具团队采用 [Microsoft 新式生命周期策略](https://support.microsoft.com/help/30881/modern-lifecycle-policy)。
+- 阅读原版[新式生命周期策略公告](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)。
+- 有关详细信息，请参阅[新式策略常见问题解答](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)。
 
 ## <a name="next-steps"></a>后续步骤  
 [教程：SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)  
 [教程：编写 Transact-SQL 语句](http://msdn.microsoft.com/en-us/2addc9be-67d0-423d-a457-192fe9d7d058)  
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a9d845f04220b01e7ca4223d419cbb91369887f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
+ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700315"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307141"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,7 +167,7 @@ SSMS 选项：
 
 SSMS 编辑器：
 
-- 修复了还原默认颜色的“SQL 系统表”意外将颜色设置为暗黄绿色，而不是默认的绿色，使其很难在白色背景 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906) 上读取的问题。
+- 修复了还原默认颜色会使“SQL 系统表”的颜色更改为暗黄绿色，而不是默认的绿色，使其很难在白色背景 上辨别的问题 (https://feedback.azure.com/forums/908035-sql-server/suggestions/32896906))。
 - 修复了在使用 AAD 身份验证连接到 Azure SQL DW 时 IntelliSense 不工作的问题。
 - 修复了用户缺少主访问时 Azure 中的 IntelliSense。
 - 修复了目标数据库排序规则区分大小写时损坏的用于创建“临时表”的代码片段。

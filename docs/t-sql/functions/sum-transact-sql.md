@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d90d71770a25c95f2f1e845556997fe817f889d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a91969bcde67d7f316281c12ab80c85393ed06e3
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833785"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232591"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,16 +43,11 @@ ms.locfileid: "47833785"
 ## <a name="syntax"></a>语法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-SUM ( [ ALL | DISTINCT ] expression )
-   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
+-- Aggregate Function Syntax    
 SUM ( [ ALL | DISTINCT ] expression )  
+
+-- Analytic Function Syntax   
+SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
 ## <a name="arguments"></a>参数  
@@ -60,7 +55,7 @@ SUM ( [ ALL | DISTINCT ] expression )
  向所有值应用此聚合函数。 ALL 为默认值。  
   
  DISTINCT  
- 指定 SUM 返回唯一值的和。  
+ 指定 SUM 返回唯一值的总和。  
   
  *expression*  
  常量、列、函数以及算术运算符、位运算符和字符串运算符的任意组合。 expression 是精确数值或近似数值数据类型类别（bit 数据类型除外）的表达式。 不允许使用聚合函数和子查询。 有关详细信息，请参阅[表达式 (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)。  
@@ -87,7 +82,7 @@ SUM ( [ ALL | DISTINCT ] expression )
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-sum-to-return-summary-data"></a>A. 使用 SUM 返回汇总数据  
- 下面的示例说明使用 SUM 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]数据库中汇总数据的过程。  
+ 下面示例显示了使用 SUM 函数返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中汇总数据的过程。  
   
 ```  
 SELECT Color, SUM(ListPrice), SUM(StandardCost)  
@@ -113,7 +108,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. 使用 OVER 子句  
- 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售额，然后在计算中包括表示 2006 年销售额的第三行。  
+ 以下示例将 SUM 函数与 OVER 子句结合使用，以便为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Sales.SalesPerson` 表中的每个地区提供年度销售额的累计合计。 数据按 `TerritoryID` 分区并在逻辑上按 `SalesYTD` 排序。 这意味着将基于年度销售额为每个地区计算 SUM 函数。 请注意，对于 `TerritoryID` 1，为 2005 销售年度存在两行，分别表示在该年度有销售业绩的两个销售人员。 将计算这两行的累积销售总额，然后在计算中包括表示 2006 年销售额的第三行。  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   
