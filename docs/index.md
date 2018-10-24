@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: c5b0c3993b5306f6879a88db2545636683b597d7
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100408"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336266"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -428,10 +428,16 @@ ms.locfileid: "49100408"
         <h2>请与我们保持联系</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与编辑 SQL 文档</a>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external">SQL 文档反馈</a>
+                <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">获取帮助</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">反馈</a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 调查 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">博客</a>
@@ -447,4 +453,3 @@ ms.locfileid: "49100408"
             </li>
         </ul>
     </div>
-

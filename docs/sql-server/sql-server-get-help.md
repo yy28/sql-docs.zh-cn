@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b3e6d4e898e00682a67084d70b6706af3951fa4
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 03294cce7e8c800d51b5a333e92d611cf8b694fe
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336364"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384092"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 帮助和反馈
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,10 +77,9 @@ SQL Server Management Studio (SSMS) 团队也会密切关注 SQL Server [User Vo
 - [MashaMSFT Twitter](https://twitter.com/mashamsft)
 - [MikeRayMSFT Twitter](https://twitter.com/mncray)
 
+## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供关于 SQL 文档内容的反馈
 
-## <a name="i-want-to-provide-feedback-for-sql-docs-content"></a>我想要提供关于 SQL 文档内容的反馈 
-
-### <a name="editing-content"></a>编辑内容
+### <a name="edit-contentincludesmediaedit-topic-pencilpng-editing-content"></a>![编辑内容](../includes/media/edit-topic-pencil.png) 编辑内容
 你是否发现有关我们文档的任何问题？ 你是否知道你可以自己编辑内容？ 这样做不仅可以改进我们的文档，还可以获得页面贡献者的殊荣！ 有关详细信息，请访问 [http://aka.ms/editsqldocs](http://aka.ms/editsqldocs)。 
 
 ### <a name="surveys"></a>调查

@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a8858a968045e8ab158ffb2746bf87bc708d4f5
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fd5f30d426b4d807d91bc500f1c475b71c3289ae
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085273"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383633"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安装 SQL Server 的硬件和软件要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "49085273"
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 现已开始支持 Linux 上的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)]。 有关信息，请参阅 [Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬件和软件要求](../../linux/sql-server-linux-setup.md#system)。 
 
-> 本文适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 有关与以前版本的 SQL Server 相关的内容，请参阅[安装 SQL Server 2014 的硬件和软件要求](hardware-and-software-requirements-for-installing-sql-server.md)。 
+> 本文适用于 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 及更高版本。 
   
 **进行试用：**  
   
