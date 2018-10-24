@@ -51,7 +51,7 @@ ms.locfileid: "47723785"
   
  如果数据库启动过程中出现问题，恢复将失败且数据库被标记为 SUSPECT。 如果可以将问题隔离到单个文件或多个文件，则数据库管理员可以使文件脱机并尝试重新启动数据库。 若要使文件脱机，可以使用下列 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句：  
   
- ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)****  
+ ALTER DATABASE database_name MODIFY FILE (NAME ='filename', OFFLINE)  
   
  如果数据库成功启动，则任何包含脱机文件的文件组将保持脱机状态。  
   
