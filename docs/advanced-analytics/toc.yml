@@ -66,11 +66,37 @@ items:
       href: tutorials/rtsql-predict-and-plot-from-model.md
   - name: Python
     items:
-    - name: 在存储过程中包装 Python
-      href: tutorials/wrap-python-in-tsql-stored-procedure.md
+    - name: 使用 T-SQL 运行 Python
+      href: tutorials/run-python-using-t-sql.md
 - name: 教程
   href: tutorials/machine-learning-services-tutorials.md
   items:
+  - name: data
+    items:
+    - name: 航空公司数据集
+      href: tutorials/demo-data-airlinedemo-in-sql.md
+    - name: Iris 数据集
+      href: tutorials/demo-data-iris-in-sql.md
+    - name: 纽约市出租车数据集
+      href: tutorials/demo-data-nyctaxi-in-sql.md
+  - name: Python
+    href: tutorials/sql-server-python-tutorials.md
+    items:
+    - name: 定型并使用第一个模型
+      href: tutorials/train-score-using-python-in-tsql.md
+    - name: 了解数据库内分析
+      href: tutorials/sqldev-in-database-python-for-sql-developers.md
+      items:
+      - name: 浏览并可视化数据
+        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
+      - name: 创建数据特征
+        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
+      - name: 定型并保存模型
+        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+      - name: 运营模型
+        href: tutorials/sqldev-py6-operationalize-the-model.md
+    - name: 使用 Revoscalepy 创建模型
+      href: tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     href: tutorials/sql-server-r-tutorials.md
     items:
@@ -79,15 +105,13 @@ items:
     - name: 了解数据库内分析
       href: tutorials/sqldev-in-database-r-for-sql-developers.md
       items:
-      - name: 1 - 设置演示数据
-        href: tutorials/sqldev-download-the-sample-data.md
-      - name: 2 - 可视化数据
+      - name: 1 - 可视化数据
         href: tutorials/sqldev-explore-and-visualize-the-data.md
-      - name: 3 - 创建数据特征
+      - name: 2 - 创建数据特征
         href: tutorials/sqldev-create-data-features-using-t-sql.md
-      - name: 4 - 定型并保存到 SQL
-        href: r/sqldev-train-and-save-a-model-using-t-sql.md
-      - name: 5 - 预测结果
+      - name: 3 - 定型并保存到 SQL
+        href: tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+      - name: 4 - 预测结果
         href: tutorials/sqldev-operationalize-the-model.md
     - name: 数据科学端到端演练
       href: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
@@ -139,31 +163,6 @@ items:
         href: tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
       - name: 创建简单模拟
         href: tutorials/deepdive-create-a-simple-simulation.md
-  - name: Python
-    href: tutorials/sql-server-python-tutorials.md
-    items:
-    - name: 使用 T-SQL 运行 Python
-      href: tutorials/run-python-using-t-sql.md
-      items:
-      - name: 通过 SQL Server 中的 Python 模型进行定型和评分
-        href: tutorials/train-score-using-python-in-tsql.md
-      - name: 在 SQL Server 计算上下文中使用 revoscalepy 创建模型
-        href: tutorials/use-python-revoscalepy-to-create-model.md
-    - name: 了解数据库内分析
-      href: tutorials/sqldev-in-database-python-for-sql-developers.md
-      items:
-      - name: 获取数据和脚本
-        href: tutorials/sqldev-py1-download-the-sample-data.md
-      - name: 导入数据
-        href: tutorials/sqldev-py2-import-data-to-sql-server-using-powershell.md
-      - name: 浏览并可视化数据
-        href: tutorials/sqldev-py3-explore-and-visualize-the-data.md
-      - name: 创建数据特征
-        href: tutorials/sqldev-py4-create-data-features-using-t-sql.md
-      - name: 定型并保存模型
-        href: tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-      - name: 运营模型
-        href: tutorials/sqldev-py6-operationalize-the-model.md
 - name: 示例
   href: https://github.com/Microsoft/sql-server-samples
 - name: 解决方案
@@ -326,9 +325,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 263f18263288b78c183f4fc7e0dd129b192105dd
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44eec73a9bf8e7dd931833ac9fbb54a34deaa770
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169227"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806777"

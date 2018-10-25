@@ -113,7 +113,7 @@ ms.locfileid: "47770895"
   
 8.  重新启动报表服务器以清除当前打开的任何会话。  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a> Resolving Kerberos Authentication Errors When Connecting to a Report Server  
+##  <a name="proxyfirewallRSWindowsNegotiate"></a> 连接到报表服务器时解决 Kerberos 身份验证错误  
  在为 Negotiate 或 Kerberos 身份验证配置的报表服务器上，如果出现 Kerberos 身份验证错误，则客户端与报表服务器的连接将失败。 已知在以下情况下会出现 Kerberos 身份验证错误：  
   
 -   报表服务器服务作为 Windows 域用户帐户运行并且您没有为该帐户注册服务主体名称 (SPN)。  

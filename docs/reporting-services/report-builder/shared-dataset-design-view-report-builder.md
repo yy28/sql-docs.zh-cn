@@ -31,7 +31,7 @@ ms.locfileid: "47800145"
 > [!NOTE]  
 >  共享数据集必须基于共享数据源。 如果你需要的数据源不可用，则需要在报表服务器上创建一个数据源。 有关详细信息，请参阅[创建、修改和删除共享数据源 (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
- 有关详细信息，请参阅 [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 有关详细信息，请参阅 [数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ### <a name="dataset"></a>数据集  
  使用 **“Set 选项”** 按钮可以设置共享数据集属性。 其中包括：  

@@ -66,6 +66,6 @@ ms.locfileid: "48049418"
 >  您将在本教程中创建的多维数据集数据库是 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维模型项目的简化版本，此项目是可在 codeplex 站点上下载的 Adventure Works 示例数据库的一部分。 对 Adventure Works 多维数据库的教程版本进行了简化，以便重点关注您将要立即掌握的特定技能。 在完成该教程后，请考虑自己探索该多维模型项目，以便进一步理解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多维建模。  
   
 ## <a name="next-step"></a>下一步  
- 要开始学习本教程，请转到第一课： [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
+ 要开始学习本教程，请转到第一课： [第 1 课：在 Analysis Services 项目中定义数据源视图](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)。  
   
   

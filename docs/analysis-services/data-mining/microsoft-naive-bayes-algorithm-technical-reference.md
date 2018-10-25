@@ -23,7 +23,7 @@ ms.locfileid: "34015884"
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 算法的实现  
  和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 算法相比，此算法所需运算量较少，因而有助于快速生成挖掘模型，从而发现输入列与可预测列之间的关系。 此算法会考虑每对输入属性值和输出属性值。  
   
- 有关贝叶斯定理的数学性质的说明不属于本文档的讨论范围；有关详细信息，请参阅 Microsoft Research 文章，标题为： [Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://go.microsoft.com/fwlink/?LinkId=207029)（了解 Bayesian 网络：知识和统计数据的组合）。  
+ 有关贝叶斯定理的数学性质的说明不属于本文档的讨论范围；有关详细信息，请参阅 Microsoft Research 文章，标题为： [了解 Bayesian 网络：知识和统计数据的组合](http://go.microsoft.com/fwlink/?LinkId=207029)。  
   
  有关如何调整所有模型中的概率以解释可能的缺失值的说明，请参阅[缺失值（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)。  
   
