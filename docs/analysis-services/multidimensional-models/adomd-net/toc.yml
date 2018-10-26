@@ -1,8 +1,0 @@
-- name: 使用 ADOMD.NET 进行开发
-  href: developing-with-adomd-net.md
-- name: ADOMD .NET 客户端 +
-  href: ../../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-functionality.md
-- name: ADOMD .NET 服务器 +
-  href: ../../../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
-- name: 重新分发 ADOMD.NET
-  href: redistributing-adomd-net.md
