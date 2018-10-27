@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bca6dcb1287918901f3bfb11a8e33e9c8917e84
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100068"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>内存使用情况的监视和故障排除
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 使用内存的模式与针对基于磁盘的表的模式不同。 您可以使用为内存和垃圾回收子系统提供的 DMV 或性能计数器，监视数据库中内存优化表和索引分配和使用的内存量。  这使您在系统和数据库级别都获得可见性，并允许防止由于内存用尽而导致的问题。  
@@ -170,7 +170,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 有关详细信息，请参阅 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/en-us/99b8a95f-d04b-4edb-a764-17b95581d071)。  
+ 有关详细信息，请参阅 [sys.dm_db_xtp_table_memory_stats](http://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)。  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>内部系统结构的内存使用情况  
  系统对象也会使用内存，例如事务结构、针对数据和差异文件的缓冲区以及垃圾回收结构等。 您可以通过按如下所示查询 `sys.dm_xtp_system_memory_consumers` ，查找用于这些系统对象的内存。  
@@ -282,7 +282,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  可采取相应措施来缓解潜在的内存问题。 有关详细信息，请参阅 [解决内存不足问题](resolve-out-of-memory-issues.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [将具有内存优化表的数据库绑定至资源池](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [更改现有池的 MIN_MEMORY_PERCENT 和 MAX_MEMORY_PERCENT](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

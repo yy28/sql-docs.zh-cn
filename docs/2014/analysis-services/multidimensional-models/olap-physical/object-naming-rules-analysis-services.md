@@ -14,22 +14,22 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: abe054c97e13ffe5428eddfded09fa18b5060aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cd63693c18b380d328a33ed4f7f947991787313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063387"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147842"
 ---
 # <a name="object-naming-rules-analysis-services"></a>对象命名规则 (Analysis Services)
-  本主题介绍对象命名约定，以及不能在任何对象名称、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的代码或脚本中使用的保留字和字符。  
+  本主题介绍对象命名约定，以及无法在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的任何对象名称、代码或脚本中使用的保留字和字符。  
   
 ##  <a name="bkmk_Names"></a> 命名约定  
- 每个对象都拥有一个 `Name` 和 `ID` 属性，该属性在父集合的范围内必须是唯一的。 例如，只要两个维度分别驻留在不同的数据库中，这两个维度就能具有相同的名称。  
+ 每个对象均具有一个 `Name` 和 `ID` 属性，二者在父集合范围内必须是唯一的。 例如，只要两个维度分别驻留在不同的数据库中，这两个维度就能具有相同的名称。  
   
- 尽管您可以手动指定 `ID`，不过此属性通常是在创建对象时自动生成的。 在开始构建模型之后，您绝不应更改 `ID`。 模型中的所有对象引用都基于 `ID`， 因此，更改 `ID` 很容易导致模型损坏。  
+ 虽然可以手动指定 `ID`，但它通常会在创建对象时自动生成。 开始生成模型后，绝不应更改 `ID`。 整个模型中的所有对象引用都基于 `ID`。 因此，更改 `ID` 容易导致模型损坏。  
   
- `DataSource` 和 `DataSourceView` 对象是命名约定的两个值得注意的例外。 `DataSource` ID 可以设置为不具唯一性的一个点 (.)，这表示对当前数据库的引用。 另一个例外是 `DataSourceView`，它遵循的是针对 .NET Framework 中的 `DataSet` 对象定义的命名约定（其中的 `Name` 用作标识符）。  
+ `DataSource` 和 `DataSourceView` 对象是命名约定的两个值得注意的例外。 `DataSource` ID 可以设置为不具唯一性的一个点 (.)，这表示对当前数据库的引用。 `DataSourceView` 属于另一个例外，它遵循为 .NET Framework 中的 `DataSet` 对象定义的命名约定，其中 `Name` 用作标识符。  
   
  以下规则适用于 `Name` 和 `ID` 属性。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "48063387"
   
  数据库的默认值可为 ModelType。 默认值与多维等效，因此不支持在列名中使用保留字符。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [MDX 保留字](/sql/mdx/mdx-reserved-words)   
  [翻译&#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis 遵从性&#40;XMLA&#41;](../../xmla/xml-for-analysis-compliance-xmla.md)  
+ [XML for Analysis 遵从性&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

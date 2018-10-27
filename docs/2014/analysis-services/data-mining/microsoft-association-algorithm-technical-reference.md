@@ -21,12 +21,12 @@ ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8d5a8e800b961406231e0f0e515b250a17cb3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4d709a575ddde6fe9d3f31e7d8a50b8f6dec83a5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091077"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146012"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法是熟知的 Apriori 算法的简单实现。  
@@ -74,7 +74,7 @@ ms.locfileid: "48091077"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
- 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 您还可以更改参数以编程方式通过使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](../scripting/collections/miningmodels-element-assl.md) XMLA 中。 下表对各参数进行了说明：  
+ 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 您还可以更改参数以编程方式通过使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表对各参数进行了说明：  
   
 > [!NOTE]  
 >  不能使用 DMX 语句更改现有模型中的参数；在创建模型时必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中的参数。  
@@ -144,7 +144,7 @@ ms.locfileid: "48091077"
  适用于挖掘结构列。  
   
  MODEL_EXISTENCE_ONLY  
- 表示列将被视为具有两个可能状态：`Missing`和`Existing`。 Null 表示缺失值。  
+ 表示列将被视为具有两个可能状态：`Missing` 和 `Existing`。 Null 表示缺失值。  
   
  适用于挖掘模型列。  
   
@@ -162,9 +162,9 @@ ms.locfileid: "48091077"
 > [!NOTE]  
 >  支持 Cyclical 和 Ordered 内容类型，但算法会将它们视为离散值，不会进行特殊处理。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](microsoft-association-algorithm.md)   
  [关联模型查询示例](association-model-query-examples.md)   
- [关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

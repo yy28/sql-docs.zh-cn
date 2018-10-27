@@ -1,5 +1,5 @@
 ---
-title: 同步 Analysis Services 数据库 |Microsoft 文档
+title: 同步 Analysis Services 数据库 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b50cdb2a9b6a32fbd2794e3265dc009f6c6e6bd2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025364"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145912"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34025364"
   
  两个服务器上的 TCP 端口 2383 必须都打开，默认实例之间才能建立远程连接。 有关在 Windows 防火墙中创建例外的详细信息，请参阅 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据也同步的以确保生成的兼容性的两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 有关每个版本中的功能的详细信息，请参阅[版本和 SQL Server 2016 的支持的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+ 源和目标服务器必须是相同的版本和 service pack。 因为模型元数据，还会同步，以确保生成的兼容性这两个服务器的数量应相同。 每个安装的版本都必须支持数据库同步。 对于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，Enterprise、Developer 和 Business Intelligence 版本中支持数据库同步。 每个版本中功能的详细信息，请参阅[各版本和支持 SQL Server 2016 的功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  每个服务器上的服务器配置模式都必须相同。 如果同步的数据库是多维数据库，则必须针对多维服务器模式配置源服务器和目标服务器。 有关部署模式的详细信息，请参阅 [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "34025364"
     > [!NOTE]  
     >  对于源实例的默认位置中存储的本地分区，无法更改此列。  
   
-     **Size**  
+     **大小**  
      显示本地分区的估计大小。  
   
      **“所选位置中的分区”** 选项显示一个网格，对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] “位置” **中所选行的** “源文件夹” **列中指定的源**实例所在位置存储的本地分区进行了说明。  
@@ -146,7 +146,7 @@ ms.locfileid: "34025364"
   
      单击省略号 (**...**) 按钮可显示“查找远程文件夹” 对话框，通过该对话框可以指定所选位置中存储的远程分区应同步到其中的目标实例上的文件夹。  
   
-     **Size**  
+     **大小**  
      显示该位置中存储的远程分区的估计大小。  
   
      **“所选位置中的分区”** 显示一个网格，对在源 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上指定位置（在 **“位置”** 中所选行的 **“源文件夹”** 列指定）存储的远程分区进行了说明。 该网格包含以下列：  
@@ -182,7 +182,7 @@ ms.locfileid: "34025364"
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
 ## <a name="see-also"></a>另请参阅  
- [Synchronize 元素 (XMLA)](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [使用 XMLA 部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  
   

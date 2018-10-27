@@ -18,12 +18,12 @@ ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 903c12bd13660af2cde0333e783d5dc22cc4a76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a328e2b7af2fb1e743c81e23a0f80e7530f3810
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207697"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146002"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>挖掘模型（Analysis Services - 数据挖掘）
   “挖掘模型”是通过将算法应用于数据创建的  ，但挖掘模型并不仅仅是算法或元数据容器：它是可应用于新数据以便生成预测和对关系进行推断的数据、统计信息和模式的集合。  
@@ -93,7 +93,7 @@ ms.locfileid: "48207697"
   
 -   **Algorithm 属性** 指定创建模型所使用的算法。 可用的算法取决于您所使用的访问接口。 有关所含的算法的列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，请参阅[Data Mining Algorithms &#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 属性应用于挖掘模型，并且对于每个模型，只能设置该属性一次。 以后您可以更改算法，但如果挖掘模型中的某些列不受您所选算法的支持，则这些列可能会无效。 在对此属性进行更改后，您必须始终重新处理该模型。  
   
--   **Usage 属性** 定义模型使用每个列的方式。 您可以将列用法定义为`Input`， `Predict`， `Predict Only`，或`Key`。 `Usage` 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 `Ignore`。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。  
+-   **Usage 属性** 定义模型使用每个列的方式。 您可以将列用法定义为 `Input`、`Predict`、`Predict Only` 或 `Key`。 `Usage` 属性应用于挖掘模型的各个列，且必须为模型中包含的每个列分别设置此属性。 如果结构包含在模型中不使用的列，则用法设置为 `Ignore`。 您可以在挖掘结构中包括、但不在分析中使用的数据示例可以是客户名称或电子邮件地址。 这样，您可以在以后查询它们，而不必在分析阶段包括它们。  
   
  创建挖掘模型后，您可以更改挖掘模型属性的值。 但是，只要进行了更改（甚至包括对挖掘模型名称的更改），就需要重新处理模型。 在重新处理模型后，可能会显示不同的结果。  
   
@@ -126,10 +126,10 @@ ms.locfileid: "48207697"
   
 |主题|链接|  
 |------------|-----------|  
-|了解如何构建可以支持多个挖掘模型的挖掘结构。 了解模型中的列用法。|[挖掘结构列](mining-structure-columns.md)<br /><br /> [挖掘模型列](mining-model-columns.md)<br /><br /> [内容类型&#40;数据挖掘&#41;](content-types-data-mining.md)|  
-|了解不同的算法，以及所选算法是如何影响模型内容的。|[挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
-|了解如何设置将影响其组成和行为的模型的属性。|[挖掘模型属性](mining-model-properties.md)<br /><br /> [建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)|  
-|了解用于数据挖掘的可编程接口。|[使用分析管理对象开发&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)<br /><br /> [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)|  
+|了解如何构建可以支持多个挖掘模型的挖掘结构。 了解模型中的列用法。|[挖掘结构列](mining-structure-columns.md)<br /><br /> [挖掘模型列](mining-model-columns.md)<br /><br /> [内容类型（数据挖掘）](content-types-data-mining.md)|  
+|了解不同的算法，以及所选算法是如何影响模型内容的。|[挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)<br /><br /> [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)|  
+|了解如何设置将影响其组成和行为的模型的属性。|[挖掘模型属性](mining-model-properties.md)<br /><br /> [建模标志（数据挖掘）](modeling-flags-data-mining.md)|  
+|了解用于数据挖掘的可编程接口。|[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)|  
 |了解如何使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的自定义数据挖掘查看器。|[数据挖掘模型查看器](data-mining-model-viewers.md)|  
 |查看可针对数据挖掘模型使用的不同查询类型的示例。|[数据挖掘查询](data-mining-queries.md)|  
   
@@ -141,11 +141,11 @@ ms.locfileid: "48207697"
 |添加和删除挖掘模型|[在现有挖掘结构中添加挖掘模型](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [从挖掘结构中删除挖掘模型](delete-a-mining-model-from-a-mining-structure.md)|  
 |使用挖掘模型列|[从挖掘模型中排除列](exclude-a-column-from-a-mining-model.md)<br /><br /> [为模型列创建别名](create-an-alias-for-a-model-column.md)<br /><br /> [更改挖掘模型中列的离散化](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [在模型中指定用作回归量的列](specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |更改模型属性|[更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)<br /><br /> [对挖掘模型应用筛选器](apply-a-filter-to-a-mining-model.md)<br /><br /> [从挖掘模型中删除筛选器](delete-a-filter-from-a-mining-model.md)<br /><br /> [对挖掘模型启用钻取](enable-drillthrough-for-a-mining-model.md)<br /><br /> [查看或更改算法参数](view-or-change-algorithm-parameters.md)|  
-|复制、 移动或管理模型|[生成挖掘模型的副本](make-a-copy-of-a-mining-model.md)<br /><br /> [复制挖掘模型的视图](copy-a-view-of-a-mining-model.md)<br /><br /> [导出&AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)<br /><br /> [导入&AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)|  
+|复制、 移动或管理模型|[生成挖掘模型的副本](make-a-copy-of-a-mining-model.md)<br /><br /> [复制挖掘模型的视图](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT (DMX)](/sql/dmx/export-dmx)<br /><br /> [IMPORT (DMX)](/sql/dmx/import-dmx)|  
 |使用数据填充模型，或更新模型中的数据|[处理挖掘模型](process-a-mining-model.md)|  
 |使用 OLAP 模型|[创建数据挖掘维度](create-a-data-mining-dimension.md)|  
   
-## <a name="see-also"></a>请参阅  
- [数据库对象&#40;Analysis Services-多维数据&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>另请参阅  
+ [数据库对象（Analysis Services - 多维数据）](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

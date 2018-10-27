@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e22b280c4fea395f8c7cf7c4b559d5ff5a22d6c1
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 3b4a7987a0fc9d50bbc5c8803d741be13acf7433
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461913"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050889"
 ---
 # <a name="run-python-using-t-sql"></a>使用 T-SQL 运行 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,6 +64,33 @@ ms.locfileid: "49461913"
     
     此外，您可能需要启用已禁用的网络协议或打开防火墙，以便 SQL Server 可以与外部客户端进行通信。 有关详细信息，请参阅[安装程序疑难解答](../common-issues-external-script-execution.md)。
 
+### <a name="call-revoscalepy-functions"></a>调用 revoscalepy 函数
+
+若要确认**revoscalepy**不可用，运行一个脚本，包括[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) ，所生成的统计摘要数据。 此脚本演示了如何从内置 revoscalepy 中包含的示例检索示例.xdf 数据文件。 RxOptions 函数提供**sampleDataDir**参数，它返回的示例文件的位置。
+
+因为 rx_summary 返回类型的对象`class revoscalepy.functions.RxSummary.RxSummaryResults`，其中包含多个元素，可以使用 pandas 来提取只是一个表格中的数据帧。
+
+```SQL
+EXEC sp_execute_external_script @language = N'Python', 
+@script = N'
+import os
+from pandas import DataFrame
+from revoscalepy import rx_summary
+from revoscalepy import RxXdfData
+from revoscalepy import RxOptions
+
+sample_data_path = RxOptions.get_option("sampleDataDir")
+print(sample_data_path)
+
+ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+summary = rx_summary("ArrDelay + DayOfWeek", ds)
+print(summary)
+dfsummary = summary.summary_data_frame
+OutputDataSet = dfsummary
+'
+WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
+```
+
 ## <a name="basic-python-interaction"></a>Python 的基本交互
 
 有两种方法在 SQL Server 中运行 Python 代码：
@@ -102,7 +129,7 @@ ms.locfileid: "49461913"
 现在，请记住以下规则：
 
 + 内的所有内容`@script`参数必须是有效的 Python 代码。 
-+ 代码必须遵循有关缩进、 变量名称等所有 Pythonic 规则。 时遇到错误，检查您的空白区域和大小写。
++ 代码必须遵从所有关于缩进、 变量名称等的 Python 规则。 时遇到错误，检查您的空白区域和大小写。
 + 如果使用的默认情况下不加载任何库，必须在脚本开头使用导入语句加载它们。 SQL Server 将添加几个特定于产品的库。 有关详细信息，请参阅[Python 库](../python/python-libraries-and-data-types.md)。
 + 如果库尚未安装，停止并安装 SQL Server 外部 Python 包，如下所述： [SQL Server 上安装新的 Python 包](../python/install-additional-python-packages-on-sql-server.md)
 

@@ -2,7 +2,7 @@
 title: 分析合并的数据迁移助手的评估报告使用 Power BI (SQL Server) |Microsoft Docs
 description: 了解如何使用 Power BI 来分析您已导入和合并到 SQL Server 中的数据迁移评估报表
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35cd161d29977d97ab3da650de5afdb46ab748a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fdcf0e38f6b48e70140f1ce5c7d9e29d329267
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832227"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643965"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>分析创建的数据迁移助手使用 Power BI 的合并的评估报表
 
@@ -52,7 +52,7 @@ ms.locfileid: "47832227"
 
 - [Azure SQL 数据库不受支持的功能](#azure-sql-db-unsupported-features--details)
 
-  显示了在 Azure SQL DB (V12) 中不支持将现有数据库中的功能。
+  显示了 Azure SQL 数据库 (V12) 中不支持将现有数据库中的功能。
 
 您可以修改这些报表来处理您的环境的更改 Power BI 中的数据源。 
 
@@ -137,7 +137,7 @@ ms.locfileid: "47832227"
 
 ![只读数据库不能为升级问题](../dma/media/ReadOnlyDatabases.png)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据迁移助手概述](../dma/dma-overview.md)
 

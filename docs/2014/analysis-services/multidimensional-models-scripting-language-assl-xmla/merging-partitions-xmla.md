@@ -17,15 +17,15 @@ ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6be578d76164e597fe7057bc02f69bf9d9bcce74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c459fcb3efc86566eef046df30d2d8ad9ea601b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142447"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145835"
 ---
 # <a name="merging-partitions-xmla"></a>合并分区 (XMLA)
-  如果分区具有相同的聚合设计和结构，你可以通过使用合并分区[MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令 XML for Analysis (XMLA) 中。 合并分区是将在管理分区时执行的一项重要操作，特别是那些包含按日期分区的历史数据的分区。  
+  如果分区具有相同的聚合设计和结构，你可以通过使用合并分区[MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla)命令 XML for Analysis (XMLA) 中。 合并分区是将在管理分区时执行的一项重要操作，特别是那些包含按日期分区的历史数据的分区。  
   
  例如，财务多维数据集可以使用两个分区：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48142447"
  这两个分区使用不同的存储设置，但使用相同的聚合设计。 除了在年末处理所有年度的历史数据的多维数据集，还可以使用 `MergePartitions` 命令将当年的分区合并到以往年度的分区。 这样将保留聚合数据，而不需要对多维数据集进行潜在耗时的完全处理。  
   
 ## <a name="specifying-partitions-to-merge"></a>指定要合并的分区  
- 当`MergePartitions`运行的命令中指定的源分区中存储的聚合数据[源](../xmla/xml-elements-properties/source-element-xmla.md)属性添加到中指定的目标分区[目标](../xmla/xml-elements-properties/target-element-xmla.md)属性。  
+ 当`MergePartitions`运行的命令中指定的源分区中存储的聚合数据[源](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla)属性添加到中指定的目标分区[目标](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla)属性。  
   
 > [!NOTE]  
 >  `Source` 属性可包含多个分区对象引用。 但是，`Target` 属性则没有此功能。  
@@ -83,7 +83,7 @@ ms.locfileid: "48142447"
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

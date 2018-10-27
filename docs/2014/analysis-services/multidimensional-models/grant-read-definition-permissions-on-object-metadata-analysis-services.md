@@ -15,18 +15,18 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087697"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148352"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授予对象元数据的读取定义权限 (Analysis Services)
   读取所选对象的对象定义或元数据的权限使得管理员能够授予查看对象信息的权限，而不用同时授予修改对象定义、修改对象结构或查看对象的实际数据的权限。 `Read Definition` 可以在数据库、 数据源、 维度、 挖掘结构和挖掘模型级别授予权限。 如果您需要`Read Definition`多维数据集的权限，必须启用`Read Definition`数据库。请记住权限是累加性。 例如，一个角色授予读取多维数据集的元数据的权限，同时，另一个角色向同一个用户授予读取维度元数据的权限。 两个不同角色的权限合并授予用户在该数据库内的读取多维数据集元数据和维度元数据的权限。  
   
 > [!NOTE]  
->  读取数据库元数据的权限是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 连接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]数据库时所需的最低权限。 可读取元数据的用户还可以使用 DISCOVER_XML_METADATA 架构行集来查询对象并查看其元数据。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](../schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
+>  读取数据库元数据的权限是使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 连接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]数据库时所需的最低权限。 可读取元数据的用户还可以使用 DISCOVER_XML_METADATA 架构行集来查询对象并查看其元数据。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)。  
   
 ## <a name="set-read-definition-permissions-on-a-database"></a>设置数据库的读取定义权限  
  授予读取数据库元数据的权限便同时授予了读取数据库中所有对象的元数据的权限。  
@@ -59,8 +59,8 @@ ms.locfileid: "48087697"
   
 5.  单击“确定”  ，完成角色创建。  
   
-## <a name="see-also"></a>请参阅  
- [授予数据库权限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [授予处理权限&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+## <a name="see-also"></a>另请参阅  
+ [授予数据库权限 (Analysis Services)](grant-database-permissions-analysis-services.md)   
+ [授予处理权限 (Analysis Services)](grant-process-permissions-analysis-services.md)  
   
   

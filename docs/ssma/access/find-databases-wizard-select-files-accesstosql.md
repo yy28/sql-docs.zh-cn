@@ -12,12 +12,12 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3a8cbc5295f34e2b839598d4f459d6346f563a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6414ba876f5f4b763fb0b333c9d241248a555f26
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099798"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>查找数据库向导 （选择文件） (AccessToSQL)
 查找数据库向导的选择文件页列出了在搜索过程找到的文件。 若要选择要添加到 SSMA 的文件，选择包含文件名称的行。 完成选择文件后，单击**下一步**若要查看确认选择页。  
@@ -26,7 +26,7 @@ ms.locfileid: "47780425"
   
 若要选择要添加到 SSMA 的文件，请选择文件名称旁边的复选框。 完成选择文件后，单击**下一步**若要查看完成页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **选择所有**  
 选择此复选框可在列表中选择所有数据库。  
   
@@ -51,6 +51,6 @@ ms.locfileid: "47780425"
 **修改时间**  
 日期和时间上一次更新数据库中。  
   
-## <a name="see-also"></a>请参阅  
-[用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>另请参阅  
+[用户界面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

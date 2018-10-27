@@ -20,12 +20,12 @@ ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: be2320f3e13dc7bb2110f6bd05f0bccefda58464
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 50d488f4de5dc3581dae12655790bc935265d8f2
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170777"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991280"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用测试服务器的注意事项
   使用测试服务器优化生产服务器中的数据库是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的显著优势。 使用此功能，可以将优化开销转移到测试服务器，而无需将实际数据从生产服务器复制到测试服务器。  
@@ -39,7 +39,7 @@ ms.locfileid: "48170777"
   
 -   要使用测试服务器优化生产服务器上的数据库的用户必须同时存在于两个服务器上，否则此方案无效。  
   
--   必须启用扩展存储过程 **xp_msver**，才能使用测试服务器/生产服务器方案。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问使用此扩展存储过程来提取在优化测试服务器时要使用的处理器数和生产服务器的可用内存。 如果未启用 **xp_msver** ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问假定运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机具有硬件特征。 如果运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机没有硬件特征，则假定具有一个处理器和 1024 MB 的内存。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，该扩展存储过程默认是打开的。 有关详细信息，请参阅[外围应用配置器](../security/surface-area-configuration.md)和 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+-   必须启用扩展存储过程 **xp_msver**，才能使用测试服务器/生产服务器方案。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问使用此扩展存储过程来提取在优化测试服务器时要使用的处理器数和生产服务器的可用内存。 如果未启用 **xp_msver** ，则 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问假定运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机具有硬件特征。 如果运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问的计算机没有硬件特征，则假定具有一个处理器和 1024 MB 的内存。 在安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，该扩展存储过程默认是打开的。 有关详细信息，请参阅 [外围应用配置器](../security/surface-area-configuration.md) 和 [xp_msver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问需要测试服务器和生产服务器中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 为同一版本。 如果有两个不同的版本，则优先使用测试服务器中的版本。 例如，如果测试服务器运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标准版，则即使生产服务器运行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 企业版， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 优化顾问也不会建议使用索引视图、分区和联机操作。  
   

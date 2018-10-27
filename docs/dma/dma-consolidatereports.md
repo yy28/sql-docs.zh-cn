@@ -2,7 +2,7 @@
 title: 评估企业和合并评估报表 (SQL Server) |Microsoft Docs
 description: 了解如何使用 DMA 评估企业和 SQL Server 在升级或迁移到 Azure SQL 数据库之前合并评估报表。
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 573e704402cfc8680497ab3a9d45ab7bf3c4ebf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7212118f018b616b1f82f3ed91aced97482e9c6
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721085"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960781"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>评估企业和合并使用 DMA 评估报表
 
@@ -37,14 +37,14 @@ ms.locfileid: "47721085"
     - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
 - 下载并提取：
     - [DMA 报表 Power BI 模板](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
-    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)。
+    - [LoadWarehouse 脚本](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)。
 
 ## <a name="loading-the-powershell-modules"></a>加载 PowerShell 模块
 保存到 PowerShell 模块目录的 PowerShell 模块，可调用而无需使用之前显式加载的模块。
 
 若要加载模块，请执行以下步骤：
 1. 导航到 C:\Program Files\WindowsPowerShell\Modules，然后创建名为的文件夹**DataMigrationAssistant**。
-2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
+2. 打开[PowerShell 模块](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip)，然后将它们保存到你创建的文件夹。
 
       ![PowerShell 模块](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "47721085"
 
     新的 PowerShell 会话启动时 PowerShell 现在应会自动加载这些模块。
 
-## <a name="create-an-inventory-of-sql-servers"></a>创建 SQL 服务器的清单
+## <a name="create-inventory"></a> 创建 SQL 服务器的清单
 然后再运行 PowerShell 脚本，以评估 SQL Server，构建所需的 SQL 服务器，你想要评估的清单。
 
 此清单，可以采用两种形式之一：
@@ -98,9 +98,9 @@ ms.locfileid: "47721085"
 
 |参数  |Description
 |---------|---------|
-|**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。 |
+|**getServerListFrom** | 你的清单。 可能的值为**SqlServer**并**CSV**。<br/>有关详细信息，请参阅[创建的 SQL Server 清单](#create-inventory)。 |
 |**serverName** | 清单时使用的 SQL Server 实例名称**SqlServer**中**getServerListFrom**参数。 |
-|**DatabaseName** | 托管库存表的数据库。 |
+|**databaseName** | 托管库存表的数据库。 |
 |**AssessmentName** | DMA 评估的名称。 |
 |**TargetPlatform** | 你想要执行评估目标类型。  可能的值为**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，并**SQLServerWindows2017**。 |
 |**AuthenticationMethod** | 连接到你想要评估的 SQL Server 目标的身份验证方法。 可能的值为**SQLAuth**并**WindowsAuth**。 |
@@ -112,7 +112,7 @@ ms.locfileid: "47721085"
 
 ## <a name="consuming-the-assessment-json-file"></a>使用评估 JSON 文件
 
-现在，你的评估完成后，已准备好将数据导入 SQL Server，以进行分析。 若要使用评估 JSON 文件，打开 PowerShell 并运行 dmaProcessor 函数。
+现在，你的评估完成后，你准备好将数据导入 SQL Server，以进行分析。 若要使用评估 JSON 文件，打开 PowerShell 并运行 dmaProcessor 函数。
  
   ![dmaProcessor 函数列表](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
@@ -122,11 +122,11 @@ ms.locfileid: "47721085"
 |---------|---------|
 |**processTo**  | 将向其处理的 JSON 文件的位置。 可能的值为**SQLServer**并**AzureSQLDatabase**。 |
 |**serverName** | SQL Server 实例处理数据。  如果指定**AzureSQLDatabase**有关**processTo**参数，则包括仅 SQL Server 名称 (不包括。 database.windows.net)。 面向 Azure SQL 数据库; 时将提示输入两个登录名第一个是你的 Azure 租户凭据，而第二个是您为 Azure SQL Server 的管理员登录名。 |
-|**CreateDMAReporting** | 要创建用于处理 JSON 文件的临时数据库。  如果已指定的数据库存在，此参数设置为其中一个，则对象不获取创建。  此参数可用于重新创建已删除的单个对象。 |
+|**CreateDMAReporting** | 要创建用于处理 JSON 文件的临时数据库。  如果已指定的数据库存在，此参数设置为其中一个，然后不创建对象。  此参数可用于重新创建已删除的单个对象。 |
 |**CreateDataWarehouse** | 创建将由 Power BI 报表数据仓库。 |
-|**DatabaseName** | DMAReporting 数据库的名称。 |
+|**databaseName** | DMAReporting 数据库的名称。 |
 |**warehouseName** | 数据仓库数据库的名称。 |
-|**jsonDirectory** | 包含 JSON 评估文件的目录。  如果在目录中有多个 JSON 文件，它们是逐个处理。 |
+|**jsonDirectory** | 包含 JSON 评估文件的目录。  如果在目录中，有多个 JSON 文件，则它们正在处理一个一个地。 |
 
 DmaProcessor 函数应该只需要几秒钟来处理单个文件。
 
@@ -135,7 +135,7 @@ DmaProcessor 已完成处理评估文件后，数据将加载到 DMAReporting �
 
 1. 使用 LoadWarehouse 脚本来填充维度中的任何缺失值。
 
-    该脚本将 DMAReporting 数据库中获取报告表中的数据，并将其加载到数据仓库。  如果在此加载过程中不存在任何错误，它们可能是维度表中缺失的条目的结果。
+    该脚本将 DMAReporting 数据库中获取报告表中的数据，并将其加载到数据仓库。  如果在此加载过程中不存在任何错误，它们可能导致的维度表中缺失的条目。
 
 2. 加载数据仓库。
  
@@ -158,7 +158,7 @@ LoadWarehouse 脚本还可用于提供基本的 TSQL 语句，你才能设置数
 
       ![加载 DMA 报表 Power BI 模板](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
-   已刷新报表中的数据后**DMAWarehouse**数据库中，系统会显示类似于以下的报告。
+   已刷新报表中的数据后**DMAWarehouse**数据库，您将看到类似于以下的报告。
 
    ![DMAWarehouse 报表视图](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
 

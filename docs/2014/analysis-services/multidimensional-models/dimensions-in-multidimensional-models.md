@@ -15,12 +15,12 @@ ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a25bcc56bdd0a0f07c0ebaa6e59de0b44979661d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6fb601bdbf190c84401c64f5f469bc6b5b6956ef
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165847"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148262"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多维模型中的维度
   数据库维度是相关对象（称为属性）的集合，用于提供有关一个或多个多维数据集中的事实数据的信息。 例如，产品维度中的典型属性可能是产品名称、产品类别、产品系列、产品规格和产品价格。 这些对象绑定到数据源视图的一个或多个表中的一个或多个列。 默认情况下，这些属性和属性层次结构一样是可见的，可用于了解多维数据集中的事实数据。 可以将属性组织为用户定义层次结构，从而提供导航路径以帮助用户浏览多维数据集中的数据。  
@@ -36,7 +36,7 @@ ms.locfileid: "48165847"
  创建多维数据集时，还可以将数据库中已存在的任何维度添加到新的多维数据集中。 这些维度可能在先前已针对其他多维数据集定义，或者已由维度向导定义。 定义数据库维度后，您可以在“维度设计器”中修改并配置数据库维度。 您还可以在“多维数据集设计器”中对多维数据集维度进行有限程度的自定义。  
   
 > [!NOTE]  
->  您还可以使用 XMLA 或“分析管理对象”(AMO)，以编程方式来设计并配置维度、属性和层次结构。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](../scripting/analysis-services-scripting-language-assl-for-xmla.md)并[使用分析管理对象开发&#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
+>  您还可以使用 XMLA 或“分析管理对象”(AMO)，以编程方式来设计并配置维度、属性和层次结构。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)并[使用分析管理对象开发&#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
 ## <a name="in-this-section"></a>本节内容  
  下表对本部分的主题进行了说明：  
@@ -50,13 +50,13 @@ ms.locfileid: "48165847"
  [定义属性关系](attribute-relationships-define.md)  
  说明如何使用维度设计器定义、修改和配置属性关系。  
   
- [创建用户定义的层次结构](user-defined-hierarchies-create.md)  
+ [创建用户定义层次结构](user-defined-hierarchies-create.md)  
  说明如何使用“维度设计器”定义、修改和配置维度属性的用户定义层次结构。  
   
  [使用商业智能向导增强维度](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  说明如何使用商业智能向导增强数据库维度。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的多维数据集](cubes-in-multidimensional-models.md)  
   
   

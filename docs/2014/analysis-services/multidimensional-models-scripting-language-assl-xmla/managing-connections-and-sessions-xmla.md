@@ -19,12 +19,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428eb8165a89cff4210096e993f3140066a8e759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062799"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146232"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>管理连接和会话 (XMLA)
   *有状态性*是在此期间服务器将保留标识和上下文的方法调用之间的客户端的条件。 *无状态*是在此期间服务器不会记住标识和上下文的客户端方法调用完成后一情况。  
@@ -37,7 +37,7 @@ ms.locfileid: "48062799"
   
 -   可以在一个会话的上下文中运行多个命令。  
   
--   支持 XMLA 上下文中的事务是通过使用发送的特定于提供程序的命令[Execute](../xmla/xml-elements-methods-execute.md)方法。  
+-   支持 XMLA 上下文中的事务是通过使用发送的特定于提供程序的命令[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)方法。  
   
  XMLA 定义了一种方法，用于在 Web 环境中以与分布式创作和版本管理 (DAV) 协议所使用的方法类似的模式支持会话，以便在松散耦合环境中实现锁定。 此实现遵循 DAV，允许访问接口由于各种原因而终止会话（例如超时或连接错误）。 支持会话时，Web 服务必须能够知道必须重新启动的已中断命令集，并准备好进行处理。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48062799"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

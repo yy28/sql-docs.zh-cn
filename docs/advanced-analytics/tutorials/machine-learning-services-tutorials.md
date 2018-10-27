@@ -2,40 +2,28 @@
 title: SQL Server 机器学习服务教程 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b692b9660c3caec18c689f56ba382f8df194a9cc
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 08528f3459022bdcb97b97e22d6f6c474c31a715
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49384122"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960741"
 ---
 # <a name="tutorials-for-sql-server-machine-learning-services"></a>有关 SQL Server 机器学习服务教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文提供了全面的教程、 演示和示例应用程序使用 SQL Server 2016 或 SQL Server 2017 中的机器学习功能的列表。 从这里开始，若要了解如何从 T-SQL 运行 R 或 Python，如何使用远程和本地计算上下文，以及如何优化 SQL 生产环境中 R 和 Python 代码。
+本文提供了全面的教程、 演示和示例应用程序使用 SQL Server 2016 或 SQL Server 2017 中的机器学习功能的列表。 从这里开始，若要了解如何从 T-SQL 运行 R 或 Python、 如何使用远程和本地计算上下文和如何将 R 和 Python 代码 SQL 生产环境中进行操作。
 
 + [Python 教程](../tutorials/sql-server-python-tutorials.md)
 
 + [R 教程](../tutorials/sql-server-r-tutorials.md)
 
-有关要求和如何获取设置的详细信息，请参阅[先决条件](#bkmk_prerequisites)。
-
-## <a name="samples-and-solutions"></a>示例和解决方案
-
-+ [示例](#bkmk_samples) 
-
-    SQL Server 开发团队的以下实际方案演示如何在应用程序中嵌入机器学习。 所有示例都包括在生产环境中的代码，您可以下载、 修改和使用。
-
-+ [解决方案](#bkmk_solutions) 
-
-    从 Microsoft 数据科学团队的模板是可自定义以帮助你快速开始使用机器学习。 每个解决方案进行量身定制的具体任务或行业问题。 大部分解决方案旨在以在 SQL Server 或 Azure 机器学习等云环境中运行。 其他解决方案可以运行在 Linux 上或在 Spark 或 Hadoop 群集中，通过使用 Microsoft R Server 或 Machine Learning Server。
-
-### <a name ="bkmk_samples"></a>SQL Server 产品示例
+## <a name ="bkmk_samples"></a>R 和 Python 示例
 
 这些示例和演示 SQL Server 和 R Server 开发团队提供的突出显示您可以在实际应用程序中使用嵌入式的分析方法。
 
@@ -47,9 +35,11 @@ ms.locfileid: "49384122"
 | [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 生成使用 Python，以帮助规划的未来需求的 ski 租赁分析应用程序。 此示例使用新的 Python 库， **revoscalepy**，以创建线性回归模型。 | SQL Server 2017 |
 | [如何使用 Tableau 与 SQL Server 机器学习服务](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | 分析社交媒体和创建 Tableau 关系图，使用 SQL Server 和。 | SQL Server 2016 或 SQL Server 2017 |
 
-### <a name="bkmk_solutions"></a>解决方案模板
+## <a name="bkmk_solutions"></a>解决方案模板
 
-Microsoft 数据科学团队提供了可用于快速开始针对常见方案的解决方案的解决方案模板。 提供了所有代码，以及如何训练和部署模型用于评分使用 SQL Server 存储过程的说明。
+Microsoft 数据科学团队提供了可用于快速开始针对常见方案的解决方案的可自定义解决方案模板。 每个解决方案进行量身定制的具体任务或行业问题。 大部分解决方案旨在以在 SQL Server 或 Azure 机器学习等云环境中运行。 其他解决方案可以运行在 Linux 上或在 Spark 或 Hadoop 群集中，通过使用 Microsoft R Server 或 Machine Learning Server。
+
+提供了所有代码，以及如何训练和部署模型用于评分使用 SQL Server 存储过程的说明。
 
 + [欺诈检测](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [自定义改动预测](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
@@ -58,7 +48,7 @@ Microsoft 数据科学团队提供了可用于快速开始针对常见方案的�
 
 有关详细信息，请参阅 [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/)（具有 SQL Server 2016 R Services 的机器学习模板）。
 
-## <a name="more-resources-and-reading"></a>更多资源和读取
+## <a name="recommended-reading"></a>推荐的读物
 
 + [我们为什么构建它？](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/01/10/sql-server-r-services-why-did-we-build-it/)
 

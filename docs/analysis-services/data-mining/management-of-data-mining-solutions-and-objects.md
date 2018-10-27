@@ -1,5 +1,5 @@
 ---
-title: 管理数据挖掘解决方案和对象 |Microsoft 文档
+title: 管理数据挖掘解决方案和对象 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ed8768dc456f1805b139138e8591f6f9749525eb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015814"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145682"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "34015814"
   
 -   [更改挖掘模型的属性](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)  
   
--   [查看或更改建模标志 & #40; 数据挖掘 & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
+-   [查看或更改建模标志（数据挖掘）](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)  
   
 -   [查看或更改算法参数](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015814"
 ### <a name="analysis-management-objects-amo"></a>分析管理对象 (AMO)  
  Analysis Management Objects (AMO) 是一个构建在 XMLA 之上的对象模型，它使您可以完全控制数据挖掘对象。 通过使用 AMO，您可以创建、部署和监视挖掘结构和挖掘模型。  
   
--   [AMO 概念和对象模型](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 概念和对象模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   

@@ -20,19 +20,19 @@ ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a12e1d65cf08edf31b7f40653e5de59020b9211
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134007"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145214"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
   在业务术语中，关键绩效指标 (KPI) 是一个用于测定业务绩效的可计量度量值。  
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
- KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](adomd-net/developing-with-adomd-net.md)。  
+ KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.Kpi> 对象由基本信息、目标、获取的实际值、状态值、走向值以及在其中查看 KPI 的文件夹组成。 基本信息包括 KPI 的名称和说明。 目标是计算结果为数字的 MDX 表达式。 实际值是计算结果为数字的 MDX 表达式。 状态值和走向值是计算结果为数字的 MDX 表达式。 文件夹是向客户端显示 KPI 时的推荐位置。  
   

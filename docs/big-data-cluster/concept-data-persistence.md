@@ -1,18 +1,18 @@
 ---
 title: 与大数据群集在 Kubernetes 的 SQL Server 的数据持久性 |Microsoft Docs
-description: ''
+description: 了解如何在 SQL Server 2019 大数据群集中的数据暂留工作原理。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 942442bca18e836c4f8711abc808a89649ff8593
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 9f80f8a4e8014b6d05a2e4c6a0b5697609381a07
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460572"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050822"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>与 SQL Server 大数据群集在 Kubernetes 上的数据持久性
 
@@ -31,7 +31,7 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 若要在部署期间使用持久性存储区，配置**USE_PERSISTENT_VOLUME**并**STORAGE_CLASS_NAME**环境变量，然后再运行`mssqlctl create cluster`命令。 **USE_PERSISTENT_VOLUME**设置为`true`默认情况下。 可以重写默认值并将其设置为`false`和 SQL Server 大数据群集在这种情况下，使用 emptyDir 装载。 
 
 > [!WARNING]
-> 没有永久性存储的情况下运行可能会导致无法正常工作的群集。 在 pod 重新启动时，群集元数据和/或用户数据将永久丢失。
+> 没有永久性存储的情况下运行可在测试环境中，但它可能会导致无法正常工作的群集。 在 pod 重新启动时，群集元数据和/或用户数据将永久丢失。
 
 如果将标志设置为 true 时，还必须提供**STORAGE_CLASS_NAME**作为在部署时参数。
 
@@ -41,20 +41,25 @@ SQL Server 大数据群集使用这些持久卷的方法是通过使用[存储�
 
 ## <a name="minikube-storage-class"></a>Minikube 存储类
 
-Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。 请注意，在 Minikube，如果 USE_PERSISTENT_VOLUME = true （默认值），因为默认值不同，还必须替代 STORAGE_CLASS_NAME 环境变量的默认值。 将值设置为`standard`: 
-```
+Minikube 附带了一个名为的内置存储类**标准**以及为其动态预配程序。 请注意，在 minikube，如果`USE_PERSISTENT_VOLUME=true`（默认值），您还必须重写的默认值为**STORAGE_CLASS_NAME**环境变量由于默认值为不同。 将值设置为`standard`: 
+
+在 Windows 中，使用以下命令：
+
+```cmd
 SET STORAGE_CLASS_NAME=standard
 ```
 
-或者，可以禁止在 Minikube 上使用永久性卷：
-```
-SET USE_PERSISTENT_VOLUME=false
+在 Linux 上，使用以下命令：
+
+```cmd
+export STORAGE_CLASS_NAME=standard
 ```
 
+或者，您可以禁止显示在 minikube 上通过设置使用永久性卷`USE_PERSISTENT_VOLUME=false`。
 
 ## <a name="kubeadm"></a>Kubeadm
 
-Kubeadm 不随一个内置的存储类;因此，我们已创建脚本以设置永久性卷和存储类使用本地存储或[车](https://github.com/rook/rook)存储。
+Kubeadm 没有附带内置的存储类。 您可以选择创建自己的永久性卷和存储类使用本地存储或你首选的预配程序，如[车](https://github.com/rook/rook)。 在这种情况下，将设置**STORAGE_CLASS_NAME**到你配置的存储类。 或者，可以设置`USE_PERSISTENT_VOLUME=false`在测试环境中，但请注意在上面的警告**部署设置**本文的部分。  
 
 ## <a name="on-premises-cluster"></a>在本地群集
 
@@ -75,7 +80,7 @@ export STORAGE_POOL_STORAGE_CLASS_NAME=managed-premium
 export STORAGE_POOL_STORAGE_SIZE=100Gi
 ```
 
-下面是相关设置 SQL Server 大数据群集的持久性存储的环境变量的完整列表：
+下面是与设置为 SQL Server 大数据群集的持久性存储的环境变量的完整列表：
 
 | 环境变量 | 默认值 | Description |
 |---|---|---|

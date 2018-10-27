@@ -1,6 +1,6 @@
 ---
-title: 鸢尾花演示数据集的 SQL Server |Microsoft Docs
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap Python code in a SQL Server stored procedure.
+title: 鸢尾花演示数据集的 SQL Server Python 和 R 教程 |Microsoft Docs
+Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 48cc9f5424cb196e37dc3f263d6b55c8666f0292
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 74e4cbe97d64f922de2cdfe1f67eae5d3a3e24bd
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463025"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806667"
 ---
-#  <a name="iris-demo-data-for-sql-server"></a>鸢尾花演示数据适用于 SQL Server
+#  <a name="iris-demo-data-for-sql-server-python-and-r-tutorials"></a>鸢尾花演示数据的 SQL Server Python 和 R 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此练习中，准备包含表的 SQL Server 数据库[鸢尾花卉数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和模型存储。 鸢尾花数据包含在 SQL Server 安装的 R 和 Python 分发版。 它适用于 SQL Server 机器学习教程中使用。 
+在此练习中，创建一个 SQL Server 数据库来存储中的数据[鸢尾花卉数据集](https://en.wikipedia.org/wiki/Iris_flower_data_set)和基于相同的数据模型。 鸢尾花数据包含在 SQL Server 安装的 R 和 Python 分发版和用于 SQL Server 中机器学习教程。 
 
 若要完成此练习中，您应有[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)或另一个工具，可运行 T-SQL 查询。
 
@@ -26,7 +26,7 @@ ms.locfileid: "49463025"
 
 +  [使用 SQL Server 中的 Python 模型的训练和评分](train-score-using-python-in-tsql.md)
 
-## <a name="prepare-the-database-and-tables"></a>准备数据库和表
+## <a name="create-the-database"></a>创建数据库
 
 1. 启动 SQL Server Management Studio，并打开一个新**查询**窗口。  
 
@@ -139,7 +139,7 @@ ms.locfileid: "49463025"
     > 若要修改存储的过程更高版本，不需要删除并重新创建它。 使用[ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql)语句。 
 
 
-## <a name="query-data-for-verification"></a>验证查询数据
+## <a name="query-the-data"></a>查询数据
 
 作为验证步骤，运行查询以确认数据已上传。
 

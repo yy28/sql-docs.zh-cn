@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 17ba8e06b0344ffa9aa24c9506eb52ad7e954e2b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981180"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148132"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "38981180"
 5.  双击中的文本\<文件 > 元素。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ##  <a name="bkmk_schemarowset"></a> 使用 XMLA 模板生成架构行集查询  
- **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](../../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)。  
+ **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。  
   
  请注意，出于简便目的，许多架构行集也作为动态管理视图 (DMV) 公开。 通过使用相应的 DMV，您可以使用与 Transact-SQL 相似的语法来查询架构行集。 例如，下面的查询返回相同的结果，但一个查询以 XML 格式返回结果，而另一个查询以表格格式返回结果。 有关 DMV 的详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。  
   
@@ -132,7 +132,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”** 拖入空白查询窗口中。  
   
-3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)元素具有以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/requesttype-element-xmla)元素具有以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  单击 **“执行”**。  
   
@@ -213,10 +213,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||跟踪|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRACES 架构行集的内容。|  
 ||中的|演示如何使用 XMLA **Discover** 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维表达式 (MDX) 参考](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [数据挖掘扩展插件 (DMX) 参考](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 脚本语言&#40;支持 XMLA 的 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1eb4c99231fb8b0e6024743176f74f70754a7028
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8450ffcccf0daafbadd80e095873971a30c43029
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098780"
 ---
 # <a name="appendix---1-db2tosql"></a>附录-1 (DB2ToSQL)
 SSMA 控制台命令行选项的快速视图：  
@@ -31,6 +31,6 @@ SSMA 控制台命令行选项的快速视图：
 |7|-p/securepassword|否|-a/添加 {< server_id > [，...n]&#124;所有} – c&#124;serverconnection < 服务器连接文件 > [-v&#124;变量 < 变量值文件 >] [-o/覆盖]<br /><br />或多个<br /><br />-a/添加 {< server_id > [，...n]&#124;所有} – s&#124;脚本 < 脚本文件 > [-v&#124;变量 < 变量值文件 >] [-o/覆盖]<br /><br />– r/删除 {< server_id > [，...n]&#124;所有}<br /><br />-l/列表<br /><br />– e/导出 {< 服务器 id > [，...n]&#124;所有} < 加密的密码-文件 ><br /><br />– i / 导入 {< 服务器 id > [，...n]&#124;所有} < 加密密码的文件 >|如果指定，此选项不能结合任何其他选项配合使用。<br /><br />服务器 id: {string} 的服务器提供的唯一 ID<br /><br />服务器连接文件： 服务器定义文件 （serverconnectionfile 或脚本文件）。<br /><br />变量值文件： 它是一个变量定义文件，并使用服务器连接文件中。<br /><br />加密密码 – 文件： 它是使用用户指定通行短语加密的服务器的密码文件。|  
 |8|-?|否|不适用|不适用|  
   
-## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台](http://msdn.microsoft.com/en-us/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+## <a name="see-also"></a>另请参阅  
+[执行 SSMA 控制台](http://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

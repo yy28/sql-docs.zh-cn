@@ -2,7 +2,7 @@
 title: 确定适当的 Azure SQL 数据库 SKU 的本地数据库 （数据迁移助手） |Microsoft Docs
 description: 了解如何使用数据迁移助手来识别你的本地数据库的权限 Azure SQL 数据库 SKU
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80d4ff4e6eae3d3e2d997bb4f851326a9caace73
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684445"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643995"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>确定适当的 Azure SQL 数据库 SKU 的本地数据库
 
@@ -141,7 +141,7 @@ TSV 输出文件将包含下图中显示的列：
 - **MetricValue** -建议使用 Azure SQL 数据库 SKU。
 - **SQLMiEquivalentCores** -如果你选择只用于 Azure SQL 数据库托管实例，您可以使用此值为核心计数。
 - **IsTierRecommended** -我们使每个层的最小 SKU 建议。 我们然后应用试探法来确定您的数据库的适当层。 
-- **ExclusionReasons** -此值为空白，如果一个层建议。 建议不要在每个层，我们提供为何没有选择的原因。
+- **ExclusionReasons** -此值为空白，如果一个层建议。 不建议将每个层，我们提供为什么它不选取的原因。
 - **AppliedRules** -已应用的规则的简短表示法。
 
 建议的值为所需的查询使用成功率类似于你的本地数据库运行在 Azure 中的最小 SKU。 例如，如果建议的最小 SKU 适用于标准层 S4 然后选择 S3 或下面将会导致查询超时或无法执行。

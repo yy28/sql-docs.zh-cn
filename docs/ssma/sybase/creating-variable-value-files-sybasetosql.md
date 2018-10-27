@@ -13,12 +13,12 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ede31fedb765e431f9cd3efc926f0074f28e5cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df421edd33f0b578d41b356d6e8e7d1a9c41336d
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50098580"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>创建变量值文件 (SybaseToSQL)
 变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
@@ -93,6 +93,6 @@ ms.locfileid: "47672880"
 ## <a name="next-step"></a>下一步  
 在操作控制台中的下一步是[创建服务器连接文件&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
   
-## <a name="see-also"></a>请参阅  
-[创建服务器文件 (Sybase)](http://msdn.microsoft.com/en-us/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
+## <a name="see-also"></a>另请参阅  
+[创建服务器文件 (Sybase)](http://msdn.microsoft.com/35ef396f-9f98-429d-9fc5-4f413d08fb37)  
   

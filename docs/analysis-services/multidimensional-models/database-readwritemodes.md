@@ -1,5 +1,5 @@
 ---
-title: 数据库 Readwritemode |Microsoft 文档
+title: 数据库 Readwritemode |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ec2aebbb202aadf69ccb9ab2c214d878aa0d9d9e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022884"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147162"
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34022884"
   
 |只读模式|受限操作|  
 |-------------------|---------------------------|  
-|XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **插入**<br /><br /> **更新**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
+|XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|**创建**<br /><br /> **Alter**<br /><br /> **删除**<br /><br /> **处理**<br /><br /> **MergePartitions**<br /><br /> **Query**<br /><br /> **CommitTransaction**<br /><br /> **还原**<br /><br /> **同步**<br /><br /> **插入**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
 |MDX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注意：由于分组功能是使用 **CREATE SESSION CUBE** 命令在内部实现的，因此 Excel 用户不能在透视表中使用该功能。|  
 |DMX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |后台操作|禁用将修改数据库的所有后台操作。 这包括迟缓处理和主动缓存。|  
@@ -46,7 +46,7 @@ ms.locfileid: "34022884"
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [Attach 元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)  
+ [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

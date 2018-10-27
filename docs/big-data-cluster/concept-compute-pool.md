@@ -1,22 +1,22 @@
 ---
 title: 什么是 SQL 大数据群集计算池？ | Microsoft Docs
-description: ''
+description: 本指南介绍了 SQL Server 2019 大数据群集中的计算池。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: c17f6ac604edc021299f473137dcf6c5e470e3d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050790"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>什么是 SQL 大数据群集计算池？
 
-本文介绍的角色*SQL Server 计算池*preview SQL Server 2019 中的大数据群集。 计算池提供大数据群集的横向扩展计算资源。 以下部分介绍的体系结构和计算池的功能。
+本文介绍的角色*SQL Server 计算池*SQL Server 2019 预览大数据群集中。 计算池提供大数据群集的横向扩展计算资源。 以下部分介绍的体系结构和计算池的功能。
 
 ## <a name="compute-pool-architecture"></a>计算池体系结构
 

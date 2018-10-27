@@ -12,12 +12,12 @@ ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d03d763bc0992973604f2b891492931d23415994
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13b703abc7c95523de9c8e2a5e06e984711f50bd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178647"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147932"
 ---
 # <a name="tabular-model-programming"></a>表格模型编程
   表格模型使用关系构造对分析和报表应用程序使用的 Analysis Services 数据建模。 这些模型运行在配置用于表格模式的 Analysis Service 实例上，使用内存中分析引擎执行存储和快速表扫描（支持在请求数据时对其进行聚合和计算）。  
@@ -27,15 +27,15 @@ ms.locfileid: "48178647"
  本节提供有关如何以编程方式使用表格模型实体及其属性的详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格对象模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [用于商业智能的 CSDL 注释技术参考](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded 接口](imdembeddeddata-interface.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [表格建模&#40;SSAS 表格&#41;](../tabular-models/tabular-models-ssas.md)   
  [表格模型设计器&#40;SSAS 表格&#41;](../tabular-model-designer-ssas-tabular.md)  
   

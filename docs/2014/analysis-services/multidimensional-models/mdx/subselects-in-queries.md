@@ -11,12 +11,12 @@ ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212087"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148452"
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
   嵌套 select 语句表达式是嵌套的 SELECT 表达式，用于限制从其计算更外部的外部 SELECT 的多维数据集的空间。 嵌套 select 语句可用于定义要对其执行所有计算的新空间。  
@@ -350,6 +350,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   轴子句中不允许 HAVING 子句；请改用 [Filter (MDX)](/sql/mdx/filter-mdx) 函数表达式。  
   
--   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，在每个会话的基础，通过将分配到的值`SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROP_MSMD_SUBQUERIES`中的属性[支持的 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). 请参阅[中嵌套 select 语句和子多维数据集的计算成员](calculated-members-in-subselects-and-subcubes.md)的值决定的计算成员的行为的详细说明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
+-   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，在每个会话的基础，通过将分配到的值`SubQueries`中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROP_MSMD_SUBQUERIES`中的属性[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). 请参阅[中嵌套 select 语句和子多维数据集的计算成员](calculated-members-in-subselects-and-subcubes.md)的值决定的计算成员的行为的详细说明`SubQueries`或`DBPROP_MSMD_SUBQUERIES`。  
   
   

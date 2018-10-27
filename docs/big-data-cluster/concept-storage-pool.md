@@ -1,22 +1,22 @@
 ---
 title: 什么是 SQL Server 大数据群集存储池？ | Microsoft Docs
-description: ''
+description: 本文介绍在 SQL Server 2019 大数据群集的存储池。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 100ce09f7066a6df33d7b1daaf50db50bda4ed03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbf9ff14ece1b33e1c271786bc96f0ac590b807e
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795904"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050749"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-storage-pool"></a>什么是 SQL Server 大数据群集存储池？
 
-本文介绍的角色*SQL Server 存储池*preview SQL Server 2019 中的大数据群集。 以下部分介绍的体系结构和功能的 SQL 存储池。
+本文介绍的角色*SQL Server 存储池*SQL Server 2019 预览大数据群集中。 以下部分介绍的体系结构和功能的 SQL 存储池。
 
 ## <a name="storage-pool-architecture"></a>存储池体系结构
 

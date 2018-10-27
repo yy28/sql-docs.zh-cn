@@ -11,12 +11,12 @@ ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2909079aa87638386db1398af6f62c10f96f66b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f27a9834fb8a33ab98f9a8e7c6d309d10056484
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223773"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099878"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>SQL Server Office 数据挖掘外接程序
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office 数据挖掘外接程序是用于预测分析的一组轻型工具，允许您使用 Excel 中的数据生成分析模型来用于预测、建议或浏览。  
@@ -82,7 +82,7 @@ ms.locfileid: "48223773"
   
 -   Standard  
   
- 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/en-us/library/cc645993.aspx)。  
+ 根据所连接的 SQL Server Analysis Services 版本，某些高级算法可能不可用。 有关信息，请参阅[SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)。  
   
  有关安装的其他帮助，请参见此下载中心提供的： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

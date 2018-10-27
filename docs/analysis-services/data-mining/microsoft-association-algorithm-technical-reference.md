@@ -1,5 +1,5 @@
 ---
-title: Microsoft 关联算法技术参考 |Microsoft 文档
+title: Microsoft 关联算法技术参考 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9cba8f282e1f355b7b4265298890eccb0a4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b6b3d44410e4d3cf889bc99e7057b6c420f37d7a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017384"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145902"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 关联算法技术参考
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34017384"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持多个参数，这些参数可以影响生成的挖掘模型的行为、性能和准确性。  
   
 ### <a name="setting-algorithm-parameters"></a>设置算法参数  
- 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 你还可以更改参数以编程方式使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>在 AMO 中，或通过使用集合[MiningModels 元素&#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md)在 XMLA。 下表对各参数进行了说明：  
+ 在任何时候均可使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的数据挖掘设计器来更改挖掘模型的参数。 您还可以更改参数以编程方式通过使用<xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>集合在 AMO 中，或使用[MiningModels 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) XMLA 中。 下表对各参数进行了说明：  
   
 > [!NOTE]  
 >  不能使用 DMX 语句更改现有模型中的参数；在创建模型时必须指定 DMX CREATE MODEL 或 ALTER STRUCTURE… ADD MODEL 中的参数。  
@@ -143,7 +143,7 @@ ms.locfileid: "34017384"
 ### <a name="input-and-predictable-columns"></a>输入列和可预测列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 关联规则算法支持特定的输入列和可预测列，如下表所示。 有关挖掘模型中内容类型含义的详细信息，请参阅[内容类型（数据挖掘）](../../analysis-services/data-mining/content-types-data-mining.md)。  
   
-|列|内容类型|  
+|“列”|内容类型|  
 |------------|-------------------|  
 |输入属性|循环、离散、离散化、键、表和已排序|  
 |可预测属性|Cyclical、Discrete、Discretized、Table 和 Ordered|  
@@ -154,6 +154,6 @@ ms.locfileid: "34017384"
 ## <a name="see-also"></a>另请参阅  
  [Microsoft 关联算法](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [关联模型查询示例](../../analysis-services/data-mining/association-model-query-examples.md)   
- [关联模型 & #40; 的挖掘模型内容Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

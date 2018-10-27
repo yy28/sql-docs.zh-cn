@@ -1,5 +1,5 @@
 ---
-title: 本地多维数据集 (Analysis Services-多维数据) |Microsoft 文档
+title: 本地多维数据集 (Analysis Services-多维数据) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 11c4a7b2917d7baa4860137fa0764026264024a8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7bf47347967dcc4344ee71ee131951923df47713
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025744"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148462"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>本地多维数据集（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "34025744"
   
 |本地多维数据集的数据源|创建方法|  
 |------------------------------------|---------------------|  
-|基于服务器的多维数据集|你可以使用 CREATE GLOBAL CUBE 语句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言 (ASSL) 脚本，创建并填充多维数据集的基于服务器的多维数据集。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md)或[Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
-|关系数据源|可以使用 ASSL 脚本从 OLE DB 关系数据库创建和填充多维数据集。 若要使用 ASSL 创建本地多维数据集，只需连接到本地多维数据集文件 (*.cub)，并以与针对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例执行 ASSL 脚本创建服务器多维数据集的相同方式执行 ASSL 脚本。 有关详细信息，请参阅 [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](../../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。|  
+|基于服务器的多维数据集|可以使用 CREATE GLOBAL CUBE 语句或[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]脚本语言 (ASSL) 脚本来创建和填充从基于服务器的多维数据集的多维数据集。 有关详细信息，请参阅[创建全局多维数据集语句&#40;MDX&#41; ](../../../mdx/mdx-data-definition-create-global-cube.md)或[Analysis Services 脚本语言&#40;支持 XMLA 的 ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
+|关系数据源|可以使用 ASSL 脚本从 OLE DB 关系数据库创建和填充多维数据集。 若要使用 ASSL 创建本地多维数据集，只需连接到本地多维数据集文件 (*.cub)，并以与针对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例执行 ASSL 脚本创建服务器多维数据集的相同方式执行 ASSL 脚本。 有关详细信息，请参阅 [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。|  
   
  使用 REFRESH CUBE 语句可重新生成本地多维数据集并更新其数据。 有关详细信息，请参阅[刷新多维数据集语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)。  
   
@@ -66,14 +66,14 @@ ms.locfileid: "34025744"
   
 -   只有那些依赖于添加到本地多维数据集中的度量值和维度的计算成员、命名集和分配会显示在本地多维数据集中。 将自动排除无效计算成员、命名集和分配。  
   
-### <a name="security"></a>Security  
- 为了使用户从服务器多维数据集创建本地多维数据集，用户必须被授予**钻取和本地多维数据集**对服务器多维数据集的权限。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+### <a name="security"></a>安全性  
+ 为了使用户能够从服务器多维数据集创建本地多维数据集，用户必须被授予**钻取和本地多维数据集**对服务器多维数据集的权限。 有关详细信息，请参阅[授予多维数据集或模型权限&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
   
- 使用诸如服务器多维数据集之类的角色无法确保本地多维数据集的安全。 拥有对本地多维数据集文件的文件级访问权限的任何用户均可在此文件中查询多维数据集。 你可以使用**加密密码**上要在本地多维数据集文件设置的密码的本地多维数据集文件的连接属性。 如果为本地多维数据集文件设置密码，则与该本地多维数据集文件的所有连接都需要使用此密码才能查询该文件。  
+ 使用诸如服务器多维数据集之类的角色无法确保本地多维数据集的安全。 拥有对本地多维数据集文件的文件级访问权限的任何用户均可在此文件中查询多维数据集。 可以使用**加密密码**上要设置本地多维数据集文件的密码的本地多维数据集文件的连接属性。 如果为本地多维数据集文件设置密码，则与该本地多维数据集文件的所有连接都需要使用此密码才能查询该文件。  
   
 ## <a name="see-also"></a>另请参阅  
- [创建全局多维数据集语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
- [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [CREATE GLOBAL CUBE 语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-global-cube.md)   
+ [使用 Analysis Services 脚本语言 (ASSL) 开发](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [刷新多维数据集语句&#40;MDX&#41;](../../../mdx/mdx-data-definition-refresh-cube.md)  
   
   

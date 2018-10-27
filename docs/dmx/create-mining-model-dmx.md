@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980587"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148042"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  当前提供程序定义的数据挖掘算法的名称。  
   
 > [!NOTE]  
->  可以通过检索当前提供程序支持的算法的列表[DMSCHEMA_MINING_SERVICES 行集](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)。 若要查看支持的当前实例中的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[数据挖掘属性](../analysis-services/server-properties/data-mining-properties.md)。  
+>  可以通过检索当前提供程序支持的算法的列表[DMSCHEMA_MINING_SERVICES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)。 若要查看支持的当前实例中的算法[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，请参阅[数据挖掘属性](../analysis-services/server-properties/data-mining-properties.md)。  
   
  *参数列表*  
  可选。 由提供程序定义的算法所需参数的逗号分隔列表。  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关可用于定义列的一组数据类型、内容类型、列分布和建模标志，请参阅下列主题：  
   
--   [数据类型&#40;数据挖掘&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [数据类型（数据挖掘）](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [内容类型&#40;数据挖掘&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [内容类型（数据挖掘）](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [列分布&#40;数据挖掘&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列分布（数据挖掘）](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [建模标志&#40;数据挖掘&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [建模标志（数据挖掘）](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以向语句中添加子句，说明两个列之间的关系。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支持以下使用\<列关系 > 子句。  
   
@@ -124,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  有关与每种算法关联的参数的列表，请参阅[数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
  有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
@@ -187,7 +187,7 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -17,12 +17,12 @@ ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ed73dadb5f13a62e6dc39e43388a4e2427a92b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fbfbdc87e7657f8d1d20e75186be2f3c0d79a900
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166247"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144862"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>逻辑体系结构（Analysis Services - 数据挖掘）
   数据挖掘过程涉及多个组件的交互。  
@@ -51,7 +51,7 @@ ms.locfileid: "48166247"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  数据挖掘结构是一种逻辑数据容器，它定义从中生成挖掘模型的数据域。 单个挖掘结构可以支持多个挖掘模型。  
   
- 需要使用数据挖掘解决方案中的数据时，Analysis Services 读取源的数据并生成聚合以及其他信息的缓存。 默认情况下，将此缓存持久化以便可以重用定型数据来支持其他模型。 如果需要删除此缓存，更改`CacheMode`属性的值对挖掘结构对象`ClearAfterProcessing`。 有关详细信息，请参阅 [AMO 数据挖掘类](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
+ 需要使用数据挖掘解决方案中的数据时，Analysis Services 读取源的数据并生成聚合以及其他信息的缓存。 默认情况下，将此缓存持久化以便可以重用定型数据来支持其他模型。 如果您需要删除此缓存，请将挖掘结构对象的 `CacheMode` 属性更改为值 `ClearAfterProcessing`。 有关详细信息，请参阅 [AMO 数据挖掘类](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)。  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 还提供将数据分为定型数据集和测试数据集的功能，这样，您可以针对具有代表性的随机选择的数据集测试您的挖掘模型。 数据实际未单独存储；使用一个属性标记结构缓存中的事例数据，该属性指示特定事例是用于定型还是测试。 如果删除缓存，则无法检索该信息。  
   
@@ -89,12 +89,12 @@ ms.locfileid: "48166247"
   
  支持将下面的存储过程用于交叉验证中。  
   
- [数据挖掘存储过程&#40;Analysis Services-数据挖掘&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [数据挖掘存储过程（Analysis Services - 数据挖掘）](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含很多供数据挖掘内部使用的系统存储过程。 尽管系统存储过程供内部使用，但是您可能发现它们是有用的快捷方式。 Microsoft 保留根据需要更改这些存储过程的权利；因此，对于生产而言，我们建议您使用 DMX、AMO 或 XMLA 创建查询。  
   
  **自定义插件算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一种机制，用于创建你自己的算法，然后将这些算法作为新的数据挖掘服务添加到的服务器实例。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一种机制，你可以使用它创建自己的算法，然后将这些算法作为新的数据挖掘服务添加到服务器实例。  
   
  Analysis Services 使用 COM 接口与插件算法进行通信。 若要了解有关如何实现新算法的详细信息，请参阅 [Plugin Algorithms](plugin-algorithms.md)。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "48166247"
   
 
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型对象处理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

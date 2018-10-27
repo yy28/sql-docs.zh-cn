@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a1e14033255d45eaacda1d553c71224e11dfe964
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8db29de7da29b2d446ea74cf818814502dfc5bfd
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054695"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148332"
 ---
-# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>表格模型编程兼容级别 1050年到 1103
+# <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>1050 到 1103 兼容级别的表格模型编程
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   表格模型使用关系构造对分析和报表应用程序使用的 Analysis Services 数据建模。 这些模型运行在配置用于表格模式的 Analysis Service 实例上，使用内存中分析引擎执行存储和快速表扫描（支持在请求数据时对其进行聚合和计算）。  
   
@@ -27,11 +27,11 @@ ms.locfileid: "38054695"
  从 SQL Server 2016 开始，表格模型可以生成，或升级到 1200年或更高的兼容性级别，以便使用表格元数据来定义模型。 在此级别是根本不同的元数据和可编程性。 请参阅[表格模型编程兼容级别 1200年及更高版本](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)并[升级 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)有关详细信息。  
   
 ## <a name="in-this-section"></a>本节内容  
- [用于商业智能的 CSDL 批注 (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [了解表格对象模型在兼容级别 1050年到 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [用于商业智能的 CSDL 注释技术参考](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
   
 
 [IMDEmbeddedData 接口](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md)

@@ -12,17 +12,17 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4b355fccd5366ec287e19ab0fb9c45d904494eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61018db803a8459f10fc6cb0bf49c89dd9c685ed
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113687"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100318"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 模式下的 DAX 公式兼容性 (SSAS 2014)
 可以使用数据分析表达式语言 (DAX) 在 Analysis Services 表格模型中，创建度量值和使用其他自定义公式[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Excel 工作簿中的数据模型和 Power BI Desktop 数据模型。 在大多数方面，在这些环境中创建的模型是相同的并可以使用相同的度量值、 关系和 Kpi，等等。但是，如果创建 Analysis Services 表格模型并将其部署在 DirectQuery 模式下，有一些限制，可以使用的公式。 本主题概述了这些差异，列出了在兼容级别 1100年或 1103年的 SQL Server 2014 Analysis Services tabulars 模型和 DirectQuery 模式下，不支持的函数并列出了支持的函数但可能返回不同的结果。  
   
-在本主题中，我们使用术语*内存中模型*若要引用的表格模型，这是完全托管在表格模式下运行的 Analysis Services 服务器上的内存中缓存的数据。 我们使用*DirectQuery 模型*来指代已创作和/或在 DirectQuery 模式下部署的表格模型。 有关 DirectQuery 模式下的信息，请参阅[DirectQuery 模式 （SSAS 表格）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
+在本主题中，我们使用术语*内存中模型*若要引用的表格模型，这是完全托管在表格模式下运行的 Analysis Services 服务器上的内存中缓存的数据。 我们使用*DirectQuery 模型*来指代已创作和/或在 DirectQuery 模式下部署的表格模型。 有关 DirectQuery 模式下的信息，请参阅[DirectQuery 模式 （SSAS 表格）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)。  
   
   
 ## <a name="bkmk_SemanticDifferences"></a>内存中和 DirectQuery 模式之间的差异  
@@ -92,7 +92,7 @@ ms.locfileid: "48113687"
 使用内存中数据存储区的模型所支持的日期文本格式范围比 SQL Server 支持的日期字符串格式的范围更加有限。 然而，DAX 支持自定义日期和时间格式。  
   
 **从字符串转换为非布尔值的其他类型**  
-当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+当从字符串转换为非布尔值时，DirectQuery 模式的行为与 SQL Server 相同。 有关详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允许从数字转换为字符串**  
 示例： `CONCATENATE(102,”,345”)`  
@@ -265,7 +265,7 @@ DAX CEILING 函数的 Transact-SQL 对等函数只支持数量级为 10^19 或�
   
 默认情况下使用 Latin1_General 排序规则，它不区分大小写，但区分重音。 因此，如果一个文本字符串的多个实例为小写、大写或混合大小写，则所有实例都被视为相同的字符串，索引中只存储字符串的第一个实例。 针对存储的字符串执行的所有文本函数都将检索编入索引的表单的指定部分。 因此，此示例公式将使用第一个实例作为输入，针对整列返回相同的值。  
   
-[表格模型中的字符串存储和排序规则](http://msdn.microsoft.com/en-us/8516f0ad-32ee-4688-a304-e705143642ca)  
+[表格模型中的字符串存储和排序规则](http://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 这种行为也适用于其他文本函数，包括 RIGHT、MID 等。  
   
@@ -505,7 +505,7 @@ LASTDATE
   
 DATEADD  
   
-## <a name="see-also"></a>另请参阅  
-[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>请参阅  
+[DirectQuery 模式（SSAS 表格）](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

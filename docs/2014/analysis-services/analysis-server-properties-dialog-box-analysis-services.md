@@ -16,12 +16,12 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: afa6c20ccf591b4cea6917cd11817cb24c786abd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078057"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145092"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>“分析服务器属性”对话框 (Analysis Services)
   可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的“分析服务器属性”对话框，为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例设置常规、语言/排序规则和安全设置。 通过在“对象资源管理器”中右键单击某个 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例，再从上下文菜单中选择“属性”，可以显示“分析服务器属性”对话框。 **“分析服务器属性”** 对话框包含下列属性。  
@@ -35,7 +35,7 @@ ms.locfileid: "48078057"
   
 -   对于支持表格模式或**的安装，** 1103 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]是部署模式 1 或 2 的默认兼容级别。  
   
- 在支持命名空间的客户端请求 DISCOVER_XML_METADATA 时，服务器将返回此值。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
+ 在支持命名空间的客户端请求 DISCOVER_XML_METADATA 时，服务器将返回此值。 有关详细信息，请参阅 [DISCOVER_XML_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset)。  
   
 ## <a name="general-properties"></a>常规属性  
  使用此页可设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例的基本和高级的常规属性，如文件夹位置和网络设置。  
@@ -95,11 +95,11 @@ ms.locfileid: "48078057"
 ## <a name="security-properties"></a>安全属性  
  使用此页可为 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 实例指定属于服务器管理员角色的 Windows 用户帐户和组帐户。 此角色中的成员身份传达执行服务器范围内任务（如创建或处理数据库、修改服务器属性、添加或删除此角色的其他成员或启动跟踪）的权限。 请参阅[授予服务器管理员权限&#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md)有关详细信息。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [确定 Analysis Services 实例的服务器模式](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [在 Analysis Services 中配置服务器属性](server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 支持的身份验证方法](instances/authentication-methodologies-supported-by-analysis-services.md)   
- [角色和权限&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)   
- [语言和排序规则&#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)  
+ [角色和权限 (Analysis Services)](multidimensional-models/roles-and-permissions-analysis-services.md)   
+ [语言和排序规则 (Analysis Services)](languages-and-collations-analysis-services.md)  
   
   

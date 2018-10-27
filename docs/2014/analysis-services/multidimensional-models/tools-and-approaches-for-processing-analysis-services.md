@@ -14,12 +14,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: edddafdbc51c9f67beb7b0f92efddf1e14f9fc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118467"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146302"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
   处理是指这样一项操作：Analysis Services 查询关系数据源并使用该数据填充 Analysis Services 对象。  
@@ -42,7 +42,7 @@ ms.locfileid: "48118467"
   
 -   使用 SQL Server Profiler 监视处理  
   
--   使用 AMO 对自定义解决方案编程。 有关详细信息，请参阅 [Programming AMO OLAP Basic Objects](analysis-management-objects/programming-amo-olap-basic-objects.md)。  
+-   使用 AMO 对自定义解决方案编程。 有关详细信息，请参阅 [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)。  
   
  处理是由一组处理选项控制的高度可配置操作，这些选项决定在对象级别执行完全处理还是增量处理。 有关处理选项和对象的详细信息，请参阅[处理选项和设置 (Analysis Services)](processing-options-and-settings-analysis-services.md) 和[处理 Analysis Services 对象](processing-analysis-services-objects.md)。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "48118467"
   
 3.  编辑该任务，指定与数据库的连接、处理哪些对象以及处理选项。 有关如何执行此任务的详细信息，请参阅 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -17,12 +17,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08f820ec9fd9dd38a578c9f71502dc469b476f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193657"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146583"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
   操作可以具有不同的类型，因而必须相应地进行创建。 操作可为：  
@@ -33,13 +33,13 @@ ms.locfileid: "48193657"
   
 -   标准操作，对于在其上执行了该操作的多维数据，该操作将返回与其所选部分关联的操作元素（URL、HTML、DataSet、RowSet 及其他元素）。  
   
- 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](adomd-net/developing-with-adomd-net.md)。  
+ 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  简单 <xref:Microsoft.AnalysisServices.Action> 对象由基本信息、操作目标、用于限制操作范围的条件以及类型组成。 基本信息包括操作名称、操作说明、操作的建议标题等。  
   
  目标指操作在多维数据集中的实际执行位置。 目标由目标类型和目标对象组成。 目标类型表示要在其中启用操作的多维数据集中的对象的类型。 目标类型可为级别成员、单元、层次结构、层次结构成员等。 目标对象是目标类型的特定对象；如果目标类型为层次结构，则目标对象将为多维数据集中定义的任一层次结构。  
   
- 条件是`Boolean`操作事件发生时计算的 MDX 表达式。 如果条件计算结果为`true`，则执行操作。 否则，不执行操作。  
+ 条件是操作事件发生时计算的 `Boolean` MDX 表达式。 如果条件的计算结果为 `true` 时，则将执行操作。 否则，不执行操作。  
   
  类型是要执行的操作的类型。 <xref:Microsoft.AnalysisServices.Action> 是一个抽象类；因此，若要使用该类，你必须使用任一派生类。 预定义了两种类型的操作：钻取和报告。 这两种类型的操作具有相应的派生类： <xref:Microsoft.AnalysisServices.DrillThroughAction> 和 <xref:Microsoft.AnalysisServices.ReportAction>。 其他操作包含在 <xref:Microsoft.AnalysisServices.StandardAction> 类中。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48193657"
 ## <a name="resolving-and-executing-actions"></a>解析并执行操作  
  当业务用户在访问已为其定义了命令对象的对象时，系统将自动解析与操作关联的语句，以使它对客户端应用程序可用，但操作不会自动执行。 操作只在业务用户执行启动它的客户端特定操作时才被执行。 例如，当业务用户右键单击特定的成员或单元时，客户端应用程序可能以弹出菜单的形式显示一组操作。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的操作](actions-in-multidimensional-models.md)  
   
   

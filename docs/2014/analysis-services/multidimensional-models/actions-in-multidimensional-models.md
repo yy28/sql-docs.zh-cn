@@ -16,12 +16,12 @@ ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92291282cfe763c33b548d85e65912b9f3ab6bf9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084677"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146422"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
   操作是指最终用户针对所选多维数据集或其个部分启动的操作。 操作可以通过将所选项目作为参数来启动应用程序，也可以检索有关所选项目的信息。 有关操作的详细信息，请参阅[操作（Analysis Services - 多维数据）](actions-analysis-services-multidimensional-data.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "48084677"
  选择目标对象类型后，请在 **“目标对象”** 下面选择指定类型的多维数据集对象。  
   
  **条件(可选)**  
- 指定其结果为布尔值的可选“多维表达式 (MDX)”表达式。 如果值为`True`，对指定目标执行该操作。 如果值为`False`，则不执行操作。  
+ 指定其结果为布尔值的可选“多维表达式 (MDX)”表达式。 如果值是 `True`，则对指定目标执行操作。 如果值是 `False`，则不执行操作。  
   
  **操作内容**  
  选择操作的类型。 下表总结了可用的类型。  
@@ -77,10 +77,10 @@ ms.locfileid: "48084677"
 |**应用程序**|说明操作的应用程序。|  
 |**Description**|说明操作。|  
 |**Caption**|提供为操作显示的标题。 如果标题是 MDX，指定`True`有关**标题是 MDX**。|  
-|**True**|指定`True`如果标题是 MDX 或`False`如果不是。|  
+|**True**|如果标题是 MDX，请指定 `True`，如果不是，则指定 `False`。|  
   
 > [!NOTE]  
->  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](../scripting/objects/action-element-assl.md)、[Type 元素 (Action) (ASSL)](../scripting/properties/type-element-action-assl.md) 和 [AMO OLAP 高级对象的编程](analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
+>  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和 [AMO OLAP 高级对象的编程](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
   
 ## <a name="creating-a-reporting-action"></a>创建报表操作  
  报表服务器会对基于 URL 的报表请求作出响应。 若要创建报表操作，请在 **“多维数据集”** 菜单上单击 **“新建报表操作”**。 下面是特定于报表操作的选项。  
@@ -124,7 +124,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **钻取列**  
  选择一个或多个维度以及每个维度的、由该操作返回到客户端应用程序的钻取列。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [多维模型中的多维数据集](cubes-in-multidimensional-models.md)  
   
   

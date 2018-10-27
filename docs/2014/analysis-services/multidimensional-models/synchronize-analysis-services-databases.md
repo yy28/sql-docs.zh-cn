@@ -16,12 +16,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a627434141bd417d9801354a7879d0879e1c85cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bede06ab45511cbb1ec96aefb7e933f077bbe92c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174137"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147849"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步 Analysis Services 数据库
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括一个数据同步功能，该功能通过将数据和元数据从源服务器上的数据库复制到目标服务器上的数据库，使两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库等同。 使用“同步数据库”功能可完成以下任务之一：  
@@ -187,8 +187,8 @@ ms.locfileid: "48174137"
 ## <a name="next-steps"></a>后续步骤  
  如果未同步角色或成员身份，请注意立即指定对目标数据库的用户访问权限。  
   
-## <a name="see-also"></a>请参阅  
- [Synchronize 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)   
+## <a name="see-also"></a>另请参阅  
+ [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [使用 XMLA 部署模型解决方案](deploy-model-solutions-using-xmla.md)   
  [使用部署向导部署模型解决方案](deploy-model-solutions-using-the-deployment-wizard.md)  
   

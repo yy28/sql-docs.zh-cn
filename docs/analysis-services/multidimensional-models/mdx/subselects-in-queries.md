@@ -1,5 +1,5 @@
 ---
-title: 在查询中的嵌套 select 语句 |Microsoft 文档
+title: 在查询中的嵌套 select 语句 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a74ddce096d58ba7b350617515bae3edc5b80c45
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025264"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147882"
 ---
 # <a name="subselects-in-queries"></a>查询中的嵌套 select 语句
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -255,7 +255,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|组件|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
 |United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
@@ -280,7 +280,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
+||All Products|Accessory|组件|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  正如您所看到的，在这两个结果集之间存在差异。 第一个查询指明在前 5 个销售区域中哪些产品的销量最高；第二个查询指明对于前 5 种销售产品哪些区域的销量最高。  
   
-### <a name="remarks"></a>注释  
+### <a name="remarks"></a>备注  
  嵌套 select 语句具有以下限制：  
   
 -   WHERE 子句不筛选子空间。  
@@ -349,6 +349,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   轴子句中不允许 HAVING 子句；请改用 [Filter (MDX)](../../../mdx/filter-mdx.md) 函数表达式。  
   
--   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，是每个会话为基础，在通过将分配到的值**子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES**中属性[支持 XMLA 属性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)。 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
+-   默认情况下计算的成员不允许在嵌套 select;但是，此限制可以更改，在每个会话的基础，通过将分配到的值**的子查询**中的连接字符串属性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或**DBPROP_MSMD_SUBQUERIES** 中的属性[支持的 XMLA 属性&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。 有关计算成员行为（基于 [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 或 **DBPROP_MSMD_SUBQUERIES** 的值）的详细解释，请参阅 **嵌套 select 和子多维数据集中的计算成员**。  
   
   

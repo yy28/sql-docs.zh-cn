@@ -14,12 +14,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5940856a7d3c5854017af7169ab24939e3b4c3c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d168b898368aa2219fdf47faa1fed52152797b4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084477"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145042"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 体系结构
   可以通过这些主题更好地理解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据库，并规划如何在商业智能解决方案中实现多维数据库。  
@@ -41,16 +41,16 @@ ms.locfileid: "48084477"
  [更多信息...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![小文件文件夹图标](../../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**编程体系结构**  
- [使用分析管理对象开发&#40;AMO&#41;](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ [使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md)  
+ [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![小文件文件夹图标](../../../integration-services/media/filefolder-small.gif "小文件文件夹图标")**国际化注意事项**  
  [Analysis Services Multiidimensional 的全球化方案](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [技术参考&#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
   
   

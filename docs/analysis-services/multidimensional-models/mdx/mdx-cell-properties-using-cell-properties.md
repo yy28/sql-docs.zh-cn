@@ -1,5 +1,5 @@
 ---
-title: 使用单元属性 (MDX) |Microsoft 文档
+title: 使用单元属性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 481d89abac98dee1095e55a9890cea100f6c4db6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 42c107f371b2cc1d8159c5eb94f3a51e864cf61d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023424"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145302"
 ---
-# <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性的使用单元属性
+# <a name="mdx-cell-properties---using-cell-properties"></a>MDX 单元属性-使用单元属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   多维表达式 (MDX) 中的单元属性包含有关多维数据源（如多维数据集）中的单元的内容和格式的信息。  
   
@@ -42,7 +42,7 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>支持的内部单元属性  
  下表列出了 `<property>` 值中使用的、支持的内部单元属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**ACTION_TYPE**|指示单元中存在何种操作的位掩码。 此属性可以具有下列值之一：<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注意：对于在 where 子句中包含集的查询来说，不包含钻取操作。|  
 |**BACK_COLOR**|用于显示 **VALUE** 或 **FORMATTED_VALUE** 属性的背景色。 有关详细信息，请参阅 [FORE_COLOR 和 BACK_COLOR 内容 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)。|  
@@ -69,7 +69,7 @@ SELECT [<axis_specification>
 ||**CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE** (0x10000009)   不能更新单元，因为在挖掘模型维度、间接维度或数据挖掘维度中不支持更新。|  
 |**VALUE**|单元的未格式化值。|  
   
- 只有 **CELL_ORDINAL**、 **FORMATTED_VALUE**和 **VALUE** 单元属性是必需的。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 **PROPERTIES** 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关 **PROPERTIES** 架构行集的详细信息，请参阅 [MDSCHEMA_PROPERTIES 行集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)。  
+ 只有 **CELL_ORDINAL**、 **FORMATTED_VALUE**和 **VALUE** 单元属性是必需的。 所有的单元属性（内部单元属性或特定于提供程序的单元属性）都在 **PROPERTIES** 架构行集中进行定义，包括它们的数据类型和提供程序支持。 有关 **PROPERTIES** 架构行集的详细信息，请参阅 [MDSCHEMA_PROPERTIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)。  
   
  默认情况下，如果未使用 **CELL PROPERTIES** 关键字，返回的单元属性为 **VALUE**、 **FORMATTED_VALUE**和 **CELL_ORDINAL** （按这里显示的顺序）。 如果使用了 **CELL PROPERTIES** 关键字，将只返回用该关键字显式声明的那些单元属性。  
   
@@ -101,6 +101,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>另请参阅  
- [MDX 查询基础知识 & #40;Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 数据库存储位置 |Microsoft 文档
+title: 数据库存储位置 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9f96b5a919a898f987892fb517ed9687b1d2498
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0544e7e7d552098806d4c3d93751631d03520139
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022512"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146292"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  通常会出现这样的情况，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于上述情况，通过 **DbStorageLocation** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以在本地磁盘或网络设备中指定数据库的位置。  
+  通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于上述情况，通过 **DbStorageLocation** 数据库属性， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba 可以在本地磁盘或网络设备中指定数据库的位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 数据库属性  
  **DbStorageLocation** 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在其中创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 **DbStorageLocation** 文件夹中。 在设置 **DbStorageLocation** 数据库属性的值时，需考虑两个重要的注意事项：  
@@ -43,9 +43,9 @@ ms.locfileid: "34022512"
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
- [DbStorageLocation 元素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [创建元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)   
- [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [同步元素 & #40;XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

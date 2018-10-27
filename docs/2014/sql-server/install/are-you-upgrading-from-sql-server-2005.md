@@ -11,12 +11,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e211d3c6d787cc57f8f64378bac34659b3a6545c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f08906f5de609cfd1a520d397a41fe5bc0f36bc4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099658"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>是否从 SQL Server 2005 进行升级？
   需立即升级到较新版本的 SQL Server 和 Azure SQL 数据库的原因之一是，对 SQL Server 2005 的扩展支持已结束。 通过升级，你不仅可以维护安全性和合规性、获取突破性的性能，还可以优化你的数据平台基础结构。  
@@ -80,9 +80,9 @@ ms.locfileid: "48133217"
 ## <a name="get-sql-server-2014"></a>获取 SQL Server 2014  
  若要下载测评版 SQL Server 2014[单击此处](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2014)。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [SQL Server 2014](http://www.microsoft.com/en-us/server-cloud/products/sql-server/default.aspx)   
  [SQL Server 2005 终止支持](http://www.microsoft.com/en-us/server-cloud/products/sql-server-2005/)   
- [从 SQL Server 2005 升级到 SQL Server 2016](https://msdn.microsoft.com/en-US/library/mt168847.aspx)  
+ [从 SQL Server 2005 升级到 SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  
   
   

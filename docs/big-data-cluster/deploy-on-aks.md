@@ -1,24 +1,24 @@
 ---
-title: 将 Azure Kubernetes 服务配置为 SQL Server 2019 CTP 2.0 部署 |Microsoft Docs
-description: ''
+title: 配置用于 SQL Server 2019 大数据群集部署的 Azure Kubernetes 服务 |Microsoft Docs
+description: 了解如何配置用于 SQL Server 2019 大数据群集 （预览版） 部署的 Azure Kubernetes 服务 (AKS)。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ee1faae6d43cbf2cc6c8a23086600241ad15e061
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 3a1cd6dcaf669071517f1a7c6196e22ce33f55ca
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460892"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050905"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>配置 SQL Server 2019 ctp 2.0 的 Azure Kubernetes 服务
+# <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>为 SQL Server 2019 （预览版） 部署配置 Azure Kubernetes 服务
 
-Azure Kubernetes 服务 (AKS) 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程序使用的预配置的虚拟机群集。 
+本文介绍如何配置用于 SQL Server 2019 大数据群集 （预览版） 部署的 Azure Kubernetes 服务 (AKS)。 
 
-这使您可以使用现有技能或大量不断增长的社区专业知识，在部署和管理基于容器的 Microsoft Azure 上的应用程序。
+AKS 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程序使用的预配置的虚拟机群集。 这使您可以使用现有技能或大量不断增长的社区专业知识，在部署和管理基于容器的 Microsoft Azure 上的应用程序。
 
 本文介绍部署 Kubernetes AKS 使用 Azure CLI 上的步骤。 如果还没有 Azure 订阅，请在开始之前创建一个免费帐户。
 
@@ -110,4 +110,4 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
 
 在本文中的步骤配置在 AKS 中的 Kubernetes 群集。 下一步是将 SQL Server 2019 大数据部署到群集。
 
-[部署 SQL Server 2019 大数据群集在 Kubernetes 上](quickstart-big-data-cluster-deploy.md)
+[快速入门： 部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)](quickstart-big-data-cluster-deploy.md)

@@ -1,5 +1,5 @@
 ---
-title: 多维模型 (Analysis Services) 中的翻译 |Microsoft 文档
+title: 多维模型 (Analysis Services) 中的翻译 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ac278f3e254e353d9ab7b6dc6d6fd7850b442c9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026674"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147072"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>多维模型中的翻译 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "34026674"
   
 1.  在设计器中打开 Adventure Works 多维模型。  
   
-2.  在解决方案资源管理器，打开数据源视图，并双击 Adventure Works DW\<版本 >.dsv。  
+2.  在解决方案资源管理器中打开数据源视图，然后双击 Adventure Works DW\<版本 >.dsv。  
   
 3.  找到 dimDate、dimProduct、dimProductCategory 或 dimProductSubcateogry。 所有这些维度均包含月份、每周天数、产品名称、类别名称等已翻译成员的属性。  
   
 4.  右键单击任一字段并选择“浏览数据” 。 你将看到每个成员的英语、西班牙语和法语翻译。  
   
- 日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 **FormatString** 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](../../analysis-services/scripting/properties/formatstring-element-assl.md)。  
+ 日期、时间和货币的格式不通过翻译实现。 若要根据客户端的区域设置动态提供区域特定的格式，请使用货币换算向导和 **FormatString** 属性。 有关详细信息，请参阅 [货币换算 (Analysis Services)](../../analysis-services/currency-conversions-analysis-services.md) 和 [FormatString 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)。  
   
  Analysis Services 教程中的[Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) 将引导你完成创建和测试翻译的所有步骤。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34026674"
   
 4.  生成和部署项目。  
   
-5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅[全球化提示和最佳实践 (Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md)。  
+5.  使用客户端应用程序（如 Excel）连接到数据库，修改连接字符串以使用区域设置标识符。 有关详细信息，请参阅 [全球化提示和最佳实践 (Analysis Services)](../../analysis-services/globalization-tips-and-best-practices-analysis-services.md) 。  
   
 ### <a name="add-translations-to-a-dimension-and-attributes"></a>向维度和属性添加翻译  
  你可以将翻译添加到数据库维度、属性、层次结构和层次结构内的各级别。  
@@ -119,6 +119,6 @@ ms.locfileid: "34026674"
   
 ## <a name="see-also"></a>另请参阅  
  [Analysis Services 的全球化方案](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [语言和排序规则&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)  
+ [语言和排序规则 (Analysis Services)](../../analysis-services/languages-and-collations-analysis-services.md)  
   
   

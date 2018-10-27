@@ -13,12 +13,12 @@ ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dae6b521b26158e8bf854fe357d7119ca3a3b4c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161747"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148082"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 创建数据挖掘查询
   可以使用 AMO、DMX 或 XML/A 创建针对数据挖掘对象的各种查询。  
@@ -99,8 +99,8 @@ ms.locfileid: "48161747"
   
      “结果”窗格将显示架构定义以及指定模型的值。  
   
-## <a name="see-also"></a>请参阅  
- [挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-analysis-services-data-mining.md)   
- [数据挖掘架构行集](../schema-rowsets/data-mining/data-mining-schema-rowsets.md) 
+## <a name="see-also"></a>另请参阅  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

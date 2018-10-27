@@ -11,12 +11,12 @@ ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd05bf3c19171229d806fa4f0f817255a4727c6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090967"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145892"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
   数据挖掘需要连接到 SQL Server Analysis Services 实例才能工作。 数据挖掘不需要多维数据集中的数据，建议使用关系源；但是，数据挖掘使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎提供的组件。  
@@ -78,7 +78,7 @@ ms.locfileid: "48090967"
 -   `AllowAdHocOpenRowsetQueries` 控制对 OLE DB 访问接口、 直接加载到服务器内存空间即席访问。  
   
     > [!IMPORTANT]  
-    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为`false`，用户可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
+    >  为了提高安全性，建议您将此属性设置为 `false`。 默认值是 `false`。 但是，即使此属性设置为 `false`，用户仍可以继续创建单独查询，并且可以对允许的数据源使用 OPENQUERY。  
   
 -   **AllowedProvidersInOpenRowset** 指定启用即席访问时的访问接口。 通过输入一个以逗号分隔的 ProgID 列表，您可以指定多个访问接口。  
   
@@ -118,14 +118,14 @@ ms.locfileid: "48090967"
   
  如果该过程返回数据集，客户端将接收具有嵌套表（包含行）的数据集或数据表。 例如，如果根据模型内容创建查询，查询将返回整个模型。 若要避免返回过多的行，您可以使用 ADOMD+ 对象模型编写存储过程。  
   
- 若要编写服务器存储过程，则必须引用 Microsoft.AnalysisServices.AdomdServer 命名空间。 有关如何创建和使用存储过程的详细信息，请参阅 [User Defined Functions and Stored Procedures](../multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)。  
+ 若要编写服务器存储过程，则必须引用 Microsoft.AnalysisServices.AdomdServer 命名空间。 有关如何创建和使用存储过程的详细信息，请参阅 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
   
 > [!NOTE]  
 >  存储过程不能用于更改数据服务器对象的安全性。 执行存储过程时，将使用用户的当前上下文来确定对所有服务器对象的访问权限。 因此，对于访问的任何数据库对象，用户必须拥有相应权限。  
   
-## <a name="see-also"></a>请参阅  
- [物理体系结构&#40;Analysis Services-多维数据&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理体系结构&#40;Analysis Services-数据挖掘&#41;](physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>另请参阅  
+ [物理体系结构（Analysis Services - 多维数据）](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [物理体系结构（Analysis Services - 数据挖掘）](physical-architecture-analysis-services-data-mining.md)   
  [管理数据挖掘解决方案和对象](management-of-data-mining-solutions-and-objects.md)  
   
   

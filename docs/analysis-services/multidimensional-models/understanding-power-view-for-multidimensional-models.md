@@ -1,5 +1,5 @@
 ---
-title: 了解多维模型的 Power View |Microsoft 文档
+title: 了解多维模型的 Power View |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.openlocfilehash: 23f30c2cebf7e048a8fb515edf370f4ab858bbff
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300495"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147452"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,14 +55,14 @@ ms.locfileid: "34300495"
   
 |多维对象|表格对象|  
 |-----------------------------|--------------------|  
-|多维数据集|Model|  
+|多维数据集|“模型”|  
 |多维数据集维度|表|  
-|维度属性（键、名称）|列|  
+|维度属性（键、名称）|“列”|  
 |度量值组|表|  
 |度量值|度量值|  
 |不具有度量值组的度量值|在名为 Measures 的表中|  
 |度量值组多维数据集维度关系|关系|  
-|透视|透视|  
+|Perspective|透视|  
 |KPI|KPI|  
 |用户/父子层次结构|层次结构|  
 |显示文件夹|显示文件夹|  
@@ -76,7 +76,7 @@ ms.locfileid: "34300495"
   
  **Power View 字段列表中的度量值组**  
   
- ![字段列表中 Power View](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "字段在 Power View 中的列表")  
+ ![字段列表中的 Power View](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "字段在 Power View 中的列表")  
   
  度量值组内的度量值显示为度量值。 如果存在不具有相关度量值组的计算度量值，则会将它们分组在名为 Measures 的特定表下。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34300495"
   
  **度量值组中的度量值和 KPI**  
   
- ![在 Power View 字段列表中的度量值组](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 字段列表中的度量值组")  
+ ![Power View 字段列表中的度量值组](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 字段列表中的度量值组")  
   
 ### <a name="measures-as-variants"></a>作为变体的度量值  
  多维模型中的度量值是变体。 这意味着度量值不强类型化，可以具有不同的数据类型。 例如，在下图中，默认情况下 Financial Reporting 表中的 Amount 度量值为 Currency 数据类型，但是对于“Statistical Accounts”的小计还具有字符串值“NA”，这属于 String 数据类型。 Power View 识别某些作为变体的度量值并在不同可视化对象中显示正确的值和格式。  
@@ -94,7 +94,7 @@ ms.locfileid: "34300495"
  ![Power View 中不可聚合的层次结构](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ### <a name="implicit-measures"></a>隐式度量值  
-  表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据存储不同，查询隐式度量值可能需要长时间。 因此，在 Power View 中不提供隐式度量值。  
+  表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据存储方式，查询隐式度量值可能需要长时间。 因此，在 Power View 中不提供隐式度量值。  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>维度、属性和层次结构  
  多维数据集维度显示为表格元数据中的表。 在 Power View 字段列表中，维度属性在显示文件夹中显示为列。  其 AttributeHierarchyEnabled 属性设置为 false（例如 Customer 维度中的 Birth Date 属性）或 AttributeHierarchyVisible 属性设置为 false 的维度属性将不显示在 Power View 字段列表中。 多级层次结构或用户层次结构（例如 Customer 维度中的 Customer Geography）显示为 Power View 字段列表中的层次结构。 维度属性的隐藏 UnknownMember 在 DAX 查询和 Power View 中显示。  
@@ -125,7 +125,7 @@ ms.locfileid: "34300495"
   
  **具有计算成员的 Power View 报表**  
   
- ![在 Power View 中计算成员](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "在 Power View 中计算成员")  
+ ![在 Power View 中计算成员](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "Power View 中的计算成员")  
   
 ### <a name="default-members"></a>默认成员  
  多维模型支持维度属性的默认成员。 当为查询聚合数据时，Analysis Services 使用默认成员。 维度属性的默认成员显示为表格元数据中相应列的默认值或筛选器。  
@@ -217,15 +217,15 @@ ms.locfileid: "34300495"
   
  DISCOVER_CSDL_METADATA 请求具有以下限制：  
   
-|名称|必需|Description|  
+|“属性”|Required|Description|  
 |----------|--------------|-----------------|  
-|CATALOG_NAME|是|目录\数据库名称。|  
+|CATALOG_NAME|用户帐户控制|目录\数据库名称。|  
 |PERSPECTIVE_NAME|是（如果多维数据集包含多个透视）。 如果只有一个多维数据集或有一个默认透视，则为可选的。|多维数据库中的多维数据集名称或透视名称。|  
-|VERSION|是|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
+|VERSION|用户帐户控制|客户端请求的 CSDL 版本。 在版本 2.0 中支持多维功能和构造。|  
   
  返回的 CSDL out 文档将模型表示为命名空间，其中包含实体、关联和属性。  
   
- 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
+ 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
   
 ## <a name="client-help-on-officecom"></a>Office.com 上的客户端帮助  
  Office.com 上提供以下文章来帮助用户了解多维模型对象在 Power View 中的显示方式以及如何创建示例报表：  

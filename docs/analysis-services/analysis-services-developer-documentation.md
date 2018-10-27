@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 开发人员文档 |Microsoft 文档
+title: Analysis Services 开发人员文档 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,67 +9,67 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 978819f3b8af369942dde2c3c18d6ca117489633
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018084"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146093"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 开发人员文档
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有可供选择的多个方法。  选项包括编写托管代码、 脚本或使用开放标准，如 XMLA 和 MSOLAP，如果你的解决方案要求不使用.NET framework。
+在 Analysis Services 中，几乎每个对象和工作负荷可编程的并且通常没有多个方法可供选择。  选项包括编写托管代码、 脚本或使用 XMLA 和 MSOLAP 等开放标准，如果你的解决方案要求不使用.NET framework。
 
-## <a name="what-you-can-accomplish-in-code"></a>可以在代码中完成的新增功能
-典型的编程方案包括服务器和数据库部署、 管理、 模型和数据库创建和从你的自定义应用程序和使用 Analysis Services 数据的报表的数据访问。 所有这些情况下是固定体系结构和对象定义层次结构，与跨数据定义、 处理和查询工作负荷的易于理解操作。
+## <a name="what-you-can-accomplish-in-code"></a>可以在代码中完成的操作
+典型的编程方案包括服务器和数据库部署、 管理、 模型和创建数据库和从你的自定义应用程序和报表使用 Analysis Services 数据的数据访问。 所有这些情况下是固定的体系结构和对象定义包含的层次结构，跨数据定义、 处理和查询工作负荷的易于理解操作。
 
-尽管对象和工作负荷是可编程的但它们都不可扩展。 具体而言，不能创建自定义数据盒从不支持的数据源检索数据、 自定义或替换公式或存储引擎行为，也可以您创建新类型的对象元数据在服务器、 数据库或模型。
+尽管对象和工作负荷进行编程，但它们不可扩展。 具体而言，不能创建自定义数据盒从不支持的数据源检索数据、 自定义或替换公式或存储引擎行为的也可以在创建新类型的对象元数据上服务器、 数据库或模型。
 
-若要进一步详细阐述有关创建新对象类型在最后一个点上： 尽管你无法创建新类型的对象，你可以创建计算的对象在运行时从表达式或代码生成。 您的模型中不是全部需要预定义和映射到现有数据结构。 此外，你可以扩展通过 AMO 将特定于对象的信息传递给客户端应用程序中的批注架构。
+若要进一步详述了有关创建新的对象类型的最后一个点： 无法创建新类型的对象，也可以创建计算的对象在运行时从表达式或代码生成。 并非所有模型中的内容都需要预定义并映射到现有数据结构。 此外，您可以扩展通过 AMO 将特定于对象的信息传递给客户端应用程序中的批注的架构。
 
 ## <a name="choose-a-platform-or-approach-to-development"></a>选择平台或开发方法
-Analysis Services 提供了许多方法，以自定义解决方案，通过代码，但大多数开发人员使用托管的 Api 或脚本。
+Analysis Services 提供了多种可以自定义解决方案，通过代码，但大多数开发人员使用托管的 Api 或脚本。
 
-- 托管的 Api 包括[AMO 和 TOM](http://msdn.microsoft.com/library/mt436122.aspx)数据定义和管理任务和[ADOMD.NET](http://msdn.microsoft.com/library/mt465769.aspx)以提供查询支持从客户端代码。 在 SQL Server 2016 中，AMO 更新为使用的模型创建或升级到兼容性级别 1200年或更高版本的新表格元数据。
+- 托管的 Api 包括[AMO 和 TOM](http://msdn.microsoft.com/library/mt436122.aspx)的数据定义和管理任务，并[ADOMD.NET](http://msdn.microsoft.com/library/mt465769.aspx)以提供从客户端代码的查询支持。 在 SQL Server 2016 中，AMO 将更新为新的表格元数据用于创建或升级到兼容级别 1200年及更高版本的模型。
 
-- 脚本通常可以获得相同的结果作为可执行文件、 使用工作较少可能程序。
+- 通常，脚本可以实现与可执行文件，与可能较少工作的程序相同的结果。
 
-  - 你可以编写 PowerShell 脚本中使用直接调用 AMO 类型的 Analysis Services PowerShell 组件。 在 PowerShell 中，你还可以创建和执行 ASSL/XMLA 或 TMSL （在 JSON) 脚本。
+  - 您可以编写 PowerShell 脚本使用直接调用 AMO 类型的 Analysis Services PowerShell 组件。 在 PowerShell 中，您还可以创建和执行 ASSL/XMLA 或 TMSL （在 JSON 中) 脚本。
 
-  - ASSL 和 TMSL 是提供在使用对象的脚本语言发现和执行操作。 你使用哪种类型的脚本依赖于基础的服务器、 数据库或模型。
+  - ASSL 和 TMSL 是提供在中使用对象的脚本语言发现和执行操作。 使用哪种类型的脚本依赖于基础服务器、 数据库或模型。
 
-  - 表格模型或数据库兼容级别 1200年或更高版本使用表格模型脚本语言 (TMSL)，这是 json 格式。
+  - 表格模型或数据库兼容级别 1200年及更高版本使用表格模型脚本语言 (TMSL)，这是在 JSON 中。
 
-  - 多维模型和兼容性级别 1050年 1103年表格模型使用 Analysis Services 脚本语言 (ASSL)，这是 XMLA 开放标准的 Analysis Services 扩展插件。
+  - 多维模型和兼容级别 1050年-1103年的表格模型使用 Analysis Services 脚本语言 (ASSL)，这是 XMLA 开放标准的 Analysis Services 扩展插件。
 
-  - 你可以在 Management Studio 中生成 ASSL 或 TMSL 脚本。 你还可以使用**查看代码**SQL Server Data Tools，若要查看在 ASSL 或 TMSL 的模型定义中。
+  - 你可以在 Management Studio 中生成 ASSL 或 TMSL 脚本。 此外可以使用**查看代码**SQL Server Data Tools 在 ASSL 或 TMSL 中查看模型定义中。
 
-- 但也可以生成基于开放标准的 XMLA 和 MDX 的解决方案，它是非常罕见，若要这样做。 没有任何文档以外 XMLA 和 MDX 引用来帮助你，和大多数社区和支持的论坛绘制通过使用.NET 或本机 (MSOLAP) 技术的体验。
+- 尽管可以生成基于开放标准的 XMLA 和 MDX 的解决方案，但它是很少见，若要执行此操作。 没有任何文档以外 XMLA 和 MDX 参考，可帮助你和大多数社区和论坛支持绘制从使用.NET 或本机 (MSOLAP) 技术的体验。
 
-## <a name="programming-in-analysis-services"></a>Analysis Services 中的编程
-[数据挖掘编程](../analysis-services/data-mining-programming.md)描述生成解决方案，其中包括数据挖掘对象的方法。
+## <a name="programming-in-analysis-services"></a>在 Analysis Services 中的编程
+[数据挖掘编程](../analysis-services/data-mining-programming.md)介绍构建解决方案，其中包括数据挖掘对象的方法。
 
-[多维模型编程](../analysis-services/multidimensional-models/multidimensional-model-programming.md)描述开发任务和集成自定义解决方案中的多维模型对象的方法。
+[多维模型编程](../analysis-services/multidimensional-models/multidimensional-model-programming.md)介绍的开发任务和集成自定义解决方案中的多维模型对象的方法。
 
-[表格模型编程的兼容性级别 1200年及更高版本](../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
-**SQL Server 2016 中的新增功能**。  总结了的接口和用于以编程方式使用表格 1200年和更高版本的模型的脚本语言。
+[表格模型编程兼容级别 1200年及更高版本](../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md)
+**SQL Server 2016 中的新增功能**。  总结了的接口和脚本语言，用于以编程方式使用表格 1200年模型和更高版本的模型。
 
-[模型编程表格通过 1103年兼容性级别 1050年](../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)本文档适用于开发人员支持更早版本兼容性级别的表格模型。 它描述了在 XML 语法定义表格模型的 CSDL 扩展。 它还包括有关表格对象模型定义和语法的信息。
+[表格模型编程兼容级别 1050 1103年通过为](../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)本文档适用于开发人员支持在更低的兼容性级别的表格模型。 它描述了在 XML 语法定义表格模型的 CSDL 扩展插件。 它还包括有关表格对象模型的定义和语法的信息。
 
 [Analysis Services 管理对象 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx)托管的提供 Analysis Services 管理对象 (AMO)，数据定义和管理，包括处理程序的开发人员参考文档。
 
-[ADOMD.NET](http://msdn.microsoft.com/library/mt465769.aspx)用于编程的数据访问和查询工作负荷管理的提供程序，ADOMD.NET，开发人员参考文档。
+[ADOMD.NET](http://msdn.microsoft.com/library/mt465769.aspx)用于编程数据访问和查询工作负荷的托管提供程序，ADOMD.NET 中，开发人员参考文档。
 
-[Analysis Services 架构行集](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)描述提供有关服务器状态、 服务器操作和数据库对象的信息的架构行集。
+[Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)介绍提供有关服务器状态、 服务器操作和数据库对象的信息的架构行集。
 
-[以进行分析的 XML &#40;XMLA&#41;引用](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)描述 XMLA 概念可帮助你了解如何 XMLA 有助于构建你自定义解决方案。 它还说明遵从 XMLA 1.1 规范的级别。
+[用于分析 XML &#40;XMLA&#41;引用](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)介绍了 XMLA 概念，它们可以帮助您了解 XMLA 如何影响你的自定义解决方案。 它还说明遵从 XMLA 1.1 规范的级别。
 
-[Analysis Services 脚本语言&#40;的 XMLA ASSL&#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)介绍的 XMLA ASSL 扩展。 ASSL 提供补充 XMLA 规范的 Analysis Services 多维模型的数据定义和操作语言。
+[Analysis Services 脚本语言&#40;支持 XMLA 的 ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)介绍的 XMLA ASSL 扩展。 ASSL 提供补充 XMLA 规范的 Analysis Services 多维模型的数据定义和操作语言。
 
-[表格模型脚本语言&#40;TMSL&#41;引用](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)TMSL 是的 JSON 表示形式在兼容级别 1200年或更高的表格模型。 对象定义基于表格元数据结构，比如表、 列和关系而不是多维可能不熟悉，如果你不熟悉 Analysis Services 数据建模在表格模式下的元数据。
+[表格模型脚本语言&#40;TMSL&#41;引用](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)TMSL 是兼容性级别 1200年及更高版本的表格模型的 JSON 表示形式。 对象定义基于如表、 列和关系而不是多维元数据可能不熟悉，如果您不熟悉 Analysis Services 数据建模在表格模式下的表格元数据构造。
 
-[Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)时记录该对象用于管理功能，加上通用的 cmdlet **Invoke ASCmd**接受任何脚本或查询作为输入的 cmdlet。
+[Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md)记录了用于管理的功能，以及常规用途的 cmdlet **Invoke-ascmd**接受任何脚本或查询作为输入的 cmdlet。
 
 ## <a name="see-also"></a>另请参阅
 [技术参考](../analysis-services/powershell/technical-reference-ssas.md) 

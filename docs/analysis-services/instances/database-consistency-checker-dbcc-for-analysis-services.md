@@ -1,5 +1,5 @@
 ---
-title: 数据库一致性检查 (DBCC) Analysis Services |Microsoft 文档
+title: 数据库一致性检查器 (DBCC) Analysis services |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cb131f76c839f446cbdc31dae51e98431bb87902
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019684"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147862"
 ---
-# <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 的数据库一致性检查 (DBCC)
+# <a name="database-consistency-checker-dbcc-for-analysis-services"></a>数据库一致性检查器 (DBCC) Analysis services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   DBCC 为 Analysis Services 实例上的多维数据库和表格数据库提供按需数据库验证。 你可以在 SQL Server Management Studio (SSMS) 的 MDX 或 XMLA 查询窗口中执行 DBCC，并在 SQL Server Profiler 或 SSMS 的 xEvent 会话中跟踪 DBCC 输出。  
 命令采用对象定义，如果对象已损坏，则返回空结果集或详细的错误信息。   在本文中，你将了解如何运行命令、解释结果以及解决出现的任何问题。  
@@ -30,7 +30,7 @@ ms.locfileid: "34019684"
   
 -   多维和 SQL Server 2016 以前的表格 1100 或 1103 兼容级别数据库在 **cubeID**、 **measuregroupID**和 **partitionID**等多维建模构造中描述。  
   
--   元数据的兼容级别 1200年或更高版本的新表格模型数据库包含描述符喜欢**TableName**和**PartitionName**。  
+-   元数据的兼容级别 1200年及更高版本的新表格模型数据库包含描述符喜欢**TableName**并**PartitionName**。  
   
  DBCC for Analysis Services 将在位于任何兼容级别的任何 Analysis Services 数据库上执行，前提是该数据库在 SQL Server 2016 实例上运行。 你只需确保为每个数据库类型使用正确的命令语法。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34019684"
 ## <a name="command-syntax"></a>命令语法 
  在 1200年的表格数据库和更高版本的兼容性级别为对象定义中使用表格元数据。 以下示例演示了在 SQL Server 2016 功能级别创建的表格数据库的完整 DBCC 语法。  
   
- 这两种语法之间的主要差异包括较新的 XMLA 命名空间，不\<对象 > 元素，但没有\<模型 > 元素 （没有每个数据库仍只能将一个模型）。  
+ 两种语法之间的主要差别包括更新的 XMLA 命名空间，否\<对象 > 元素，但没有\<模型 > 元素 （每个数据库仍只有一个模型）。  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2014/engine">  
@@ -58,7 +58,7 @@ ms.locfileid: "34019684"
  可以在 Management Studio 中通过每个对象的属性页获取对象名称和 DatabaseID。  
   
 ## <a name="command-syntax-for-multidimensional-and-tabular-110x-databases"></a>适用于多维和表格 110x 数据库的命令语法  
- DBCC 为多维以及表格 1100 和 1103 数据库使用完全相同的语法。 你可以针对特定的数据库对象（包括整个数据库）运行 DBCC。 有关对象定义的详细信息，请参阅 [Object 元素 (XMLA)](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md)。  
+ DBCC 为多维以及表格 1100 和 1103 数据库使用完全相同的语法。 你可以针对特定的数据库对象（包括整个数据库）运行 DBCC。 有关对象定义的详细信息，请参阅 [Object 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)。  
   
 ```  
 <DBCC xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -104,7 +104,7 @@ ms.locfileid: "34019684"
 ### <a name="run-dbcc-commands-in-management-studio"></a>在 Management Studio 中运行 DBCC 命令  
  若要运行即席查询，请在 SQL Server Management Studio 中打开一个 MDX 或 XMLA 查询窗口。 为此，请右键单击数据库 |“新建查询” | “XMLA”以运行命令并读取输出。  
   
- ![在 Management Studio 中的 DBCC XML 命令](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "DBCC XML 在 Management Studio 中的命令")  
+ ![在 Management Studio 中的 DBCC XML 命令](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "在 Management Studio 中的 DBCC XML 命令")  
   
  如果未检测到任何问题，“结果”选项卡将指示一个空结果集（如屏幕截图中所示）。  
   
@@ -176,10 +176,10 @@ Execution complete
   
      对于这两个事件子类，请查看 DBCC 返回的消息 **TextData** 值。  
   
-     以开头的状态消息"的一致性检查\<对象 >"，"启动检查\<对象 >"，或"已检查完\<对象 >"。  
+     使用启动状态消息"正在检查的一致性\<对象 >"，"已开始检查\<对象 >"，或"已完成的检查\<对象 >"。  
   
     > [!NOTE]  
-    >  在 CTP 3.0 中，对象由内部名称标识。 例如，类别层次结构说明哪些情况下为 H$ 类别-\<objectID >。 在以后 CTP 中，内部名称应替换为用户友好的名称。  
+    >  在 CTP 3.0 中，对象由内部名称标识。 例如，Categories 层次结构划分成 H$\<objectID >。 在以后 CTP 中，内部名称应替换为用户友好的名称。  
   
      下面列出了错误消息。  
   
@@ -196,7 +196,7 @@ Execution complete
   
 5.  查看 DBCC 为消息返回的 TextData 值。  TextData 是事件字段的属性，显示事件返回的状态和错误消息。  
   
-     以开头的状态消息"的一致性检查\<对象 >"，"启动检查\<对象 >"，或"已检查完\<对象 >"。  
+     使用启动状态消息"正在检查的一致性\<对象 >"，"已开始检查\<对象 >"，或"已完成的检查\<对象 >"。  
   
      下面列出了错误消息。  
   
@@ -218,8 +218,8 @@ Execution complete
 ||||  
 |-|-|-|  
 |**对象**|**DBCC 检查说明**|**失败时的错误**|  
-|数据库|检查数据库中的表计数。  值小于零表示损坏。|存储层有损坏。 “%{parent/}”数据库中的表集合损坏。|  
-|数据库|检查用于跟踪引用完整性的内部结构，如果大小不正确则引发错误。|数据库文件无法通过一致性检查。|  
+|“数据库”|检查数据库中的表计数。  值小于零表示损坏。|存储层有损坏。 “%{parent/}”数据库中的表集合损坏。|  
+|“数据库”|检查用于跟踪引用完整性的内部结构，如果大小不正确则引发错误。|数据库文件无法通过一致性检查。|  
 |表|检查用于确定表是维度表还是事实数据表的内部值。  如果值超出已知范围，则表示损坏。|检查表统计信息时数据库一致性检查 (DBCC) 失败。|  
 |表|检查表段映射中的分区数是否与表的分区数匹配。|存储层有损坏。 “%{parent/}”表中的分区集合损坏。|  
 |表|如果表格数据库是从 PowerPivot for Excel 2010 创建或导入的，并且分区计数大于 1，则将引发错误；随着分区支持添加到以后版本，将会指示损坏。|检查段映射时数据库一致性检查 (DBCC) 失败。|  
@@ -230,17 +230,17 @@ Execution complete
 |层次结构|如果层次结构的排序顺序不是识别的值，则引发错误。|检查层次结构“%{hier/}”时数据库一致性检查 (DBCC) 失败。|  
 |层次结构|对层次结构执行的检查取决于使用的层次结构映射方案的内部类型。<br /><br /> 将检查所有层次结构的处理状态是否正确、层次结构存储是否存在，以及（如果适用）用于数据 ID 到层次结构位置转换的数据结构是否存在。<br /><br /> 假设通过了所有这些检查，将遍历层次结构以验证层次结构中的每个位置是否指向正确的成员。<br />如果其中的任何测试失败，则引发错误。|检查层次结构“%{hier/}”时数据库一致性检查 (DBCC) 失败。|  
 |用户定义的层次结构|检查层次结构级别名称是否已设置。<br /><br /> 如果已处理层次结构，将检查内部层次结构数据存储的格式是否正确。  验证内部层次结构存储是否不包含任何无效的数据值。<br /><br /> 如果层次结构标记为未处理，则确认此状态是否适用于旧数据结构，并且层次结构的所有级别是否标记为空。|检查层次结构“%{hier/}”时数据库一致性检查 (DBCC) 失败。|  
-|列|如果用于列的编码未设置为已知值，则引发错误。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
-|列|检查列是否已由内存中引擎压缩。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
-|列|检查列上的压缩类型是否为已知值。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
-|列|如果列“标记化”未设置为已知值，则引发错误。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
-|列|如果为列数据字典存储的 ID 范围与数据字典中的值数不匹配或者超出了允许的范围，则引发错误。|检查数据字典时数据库一致性检查 (DBCC) 失败。|  
-|列|检查列的数据段数与它所属的表的数据段数是否匹配。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
-|列|检查数据列的分区数是否与该列的数据段映射的分区数匹配。|检查段映射时数据库一致性检查 (DBCC) 失败。|  
-|列|验证列段中的记录数是否与该列段的索引中存储的记录数匹配。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
-|列|如果某个列没有段统计信息，则引发错误。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
-|列|如果某个列没有压缩信息或段存储，则引发错误。|数据库文件无法通过一致性检查。|  
-|列|如果列的段统计信息不符合“最小数据 ID”、“最大数据 ID”的实际列值、非重复值数、行数或存在 NULL 值，则报告错误。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|如果用于列的编码未设置为已知值，则引发错误。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|检查列是否已由内存中引擎压缩。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|检查列上的压缩类型是否为已知值。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|如果列“标记化”未设置为已知值，则引发错误。|检查列统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|如果为列数据字典存储的 ID 范围与数据字典中的值数不匹配或者超出了允许的范围，则引发错误。|检查数据字典时数据库一致性检查 (DBCC) 失败。|  
+|“列”|检查列的数据段数与它所属的表的数据段数是否匹配。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
+|“列”|检查数据列的分区数是否与该列的数据段映射的分区数匹配。|检查段映射时数据库一致性检查 (DBCC) 失败。|  
+|“列”|验证列段中的记录数是否与该列段的索引中存储的记录数匹配。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
+|“列”|如果某个列没有段统计信息，则引发错误。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
+|“列”|如果某个列没有压缩信息或段存储，则引发错误。|数据库文件无法通过一致性检查。|  
+|“列”|如果列的段统计信息不符合“最小数据 ID”、“最大数据 ID”的实际列值、非重复值数、行数或存在 NULL 值，则报告错误。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
 |ColumnSegment|如果最小数据 ID 或最大数据 ID 小于 NULL 的系统保留值，则将列段信息标记为已损坏。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
 |ColumnSegment|如果此段没有行，则应将列的最小和最大数据值设置为 NULL 的系统保留值。  如果值不为 null，则引发错误。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
 |ColumnSegment|如果列具有行和至少一个非 null 值，将检查列的最小和最大数据 ID 是否大于 NULL 的系统保留值。|检查段统计信息时数据库一致性检查 (DBCC) 失败。|  
@@ -252,9 +252,9 @@ Execution complete
 |DBCC 表|对于正在验证的表，检查列数是否小于零，如果为 true，则引发错误。  如果表中列的列存储为 NULL，则也会发生错误。|存储层有损坏。 “%{parent/}”表中的列集合损坏。|  
 |DBCC 分区|检查正在验证的分区所属的表，如果表的列数小于零，则表示表的列集合已损坏。 如果表中列的列存储为 NULL，则也会发生错误。|存储层有损坏。 “%{parent/}”表中的列集合损坏。|  
 |DBCC 分区|循环访问选定分区的每个列，并检查该分区的每个段是否与列段结构建立了有效链接。  如果任一段具有 NULL 链接，则将分区视为已损坏。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
-|列|如果列类型无效，则返回错误。|遇到错误的段类型。|  
-|列|如果任一列中的段数为负，或者指向段的列段结构的指针具有 NULL 链接，则返回错误。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
-|DBCC 命令|DBCC 命令在处理 DBCC 操作过程中将报告多条状态消息。  在开始之前，它会报告包括数据库、表或对象列名的状态消息，在完成每个对象检查后再次报告一条消息。|检查一致性的\<objectname > \<objecttype >。 阶段: 前期检查。<br /><br /> 检查一致性的\<objectname > \<objecttype >。 阶段: 后期检查。|  
+|“列”|如果列类型无效，则返回错误。|遇到错误的段类型。|  
+|“列”|如果任一列中的段数为负，或者指向段的列段结构的指针具有 NULL 链接，则返回错误。|存储层有损坏。 “%{parent/}”列中的段集合已损坏。|  
+|DBCC 命令|DBCC 命令在处理 DBCC 操作过程中将报告多条状态消息。  在开始之前，它会报告包括数据库、表或对象列名的状态消息，在完成每个对象检查后再次报告一条消息。|正在检查的一致性\<objectname > \<objecttype >。 阶段: 前期检查。<br /><br /> 正在检查的一致性\<objectname > \<objecttype >。 阶段: 后期检查。|  
   
 ## <a name="common-resolutions-for-error-conditions"></a>错误状态的常见解决方法  
  SQL Server Management Studio 或 msmdsrv.log 文件中出现以下错误。 如果未通过一项或多项检查，将出现这些错误。 根据具体的错误，建议的解决方法是重新处理对象、删除并重新部署解决方案，或者还原数据库。  
@@ -262,14 +262,14 @@ Execution complete
 |错误|问题|解决方法|  
 |-----------|-----------|----------------|  
 |**元数据管理器出错**<br /><br /> 对象引用\<objectID > 无效。 它与元数据类层次结构的结构不匹配。|命令格式不正确|检查命令语法。 很有可能你包含了一个较低级别的对象但未指定它的一个或多个父对象。|  
-|**元数据管理器出错**<br /><br /> 任一\<对象 > id 为\<objectID > 中不存在\<parentobject > id 为\<parentobjectID >，或者用户没有权限访问该对象。|索引损坏（多维）|重新处理对象和所有依赖对象。|  
-|**对分区执行一致性检查期间出错**<br /><br /> 检查的一致性时出错\<分区名称 > 的分区\<度量值组名称 > 的度量值组\<多维数据集名称 > 多维数据集来自\<数据库名称 > 数据库。 请重新处理分区或索引以修复损坏。|索引损坏（多维）|重新处理对象和所有依赖对象。|  
+|**元数据管理器出错**<br /><br /> 任一\<对象 > id 为 '\<objectID >' 中不存在\<parentobject > id 为\<parentobjectID >，或者用户没有访问该对象的权限。|索引损坏（多维）|重新处理对象和所有依赖对象。|  
+|**对分区执行一致性检查期间出错**<br /><br /> 正在检查的一致性时出错\<分区名称 > 的分区\<度量值组名称 > 的度量值组\<多维数据集名称 > 多维数据集来自\<数据库名称 > 数据库。 请重新处理分区或索引以修复损坏。|索引损坏（多维）|重新处理对象和所有依赖对象。|  
 |**分区段统计信息损坏**|索引损坏（多维）|重新处理对象和所有依赖对象。|  
 |**分区段损坏**|元数据损坏（多维或表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
-|**表元数据损坏**<br /><br /> 表\<表名 > 元数据文件已损坏。 在 DataFileList 节点下找不到主表。|元数据损坏（仅限表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
+|**表元数据损坏**<br /><br /> 表\<表名称 > 元数据文件已损坏。 在 DataFileList 节点下找不到主表。|元数据损坏（仅限表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
 |**存储层损坏**<br /><br /> 存储层损坏： 的集合\<类型名称 > 中\<父名称 >\<父类型 > 已损坏。|元数据损坏（仅限表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
-|**缺少系统表**<br /><br /> 系统表\<表名 > 缺少。|对象损坏（仅限表格）|重新处理对象和所有依赖对象|  
-|**表统计信息损坏**<br /><br /> 表系统表的统计信息\<表名 > 缺少。|元数据损坏（仅限表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
+|**缺少系统表**<br /><br /> 系统表\<表名称 > 缺少。|对象损坏（仅限表格）|重新处理对象和所有依赖对象|  
+|**表统计信息损坏**<br /><br /> 表系统表的统计信息\<表名称 > 缺少。|元数据损坏（仅限表格）|删除并重新部署项目，或者从备份还原，然后重新处理。<br /><br /> 有关说明，请参阅博客 [如何处理 Analysis Services 数据库中存在损坏](http://blogs.msdn.com/b/karang/archive/2010/08/11/how-to-deal-with-corruption-in-analysis-services.aspx) 。|  
   
 ## <a name="disable-automatic-consistency-checks-on-database-load-operations-through--the-msmdsrvini-configuration-file"></a>通过 msmdsrv.ini 配置文件禁用对数据库加载操作的自动一致性检查  
  尽管不建议这样做，但你可以禁用自动对数据库加载事件进行的内置数据库一致性检查（仅限表格数据库）。 为此，需要在 msmdsrv.ini 文件中修改一项配置设置：  
@@ -299,7 +299,7 @@ Execution complete
 ## <a name="see-also"></a>另请参阅  
  [处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
+ [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

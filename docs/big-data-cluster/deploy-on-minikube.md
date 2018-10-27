@@ -1,22 +1,22 @@
 ---
-title: 为 SQL Server 2019 CTP 2.0 部署配置 Minikube |Microsoft Docs
-description: ''
+title: 用于 SQL Server 2019 大数据群集部署配置 Minikube |Microsoft Docs
+description: 了解如何为 SQL Server 2019 大数据群集 （预览版） 部署一台计算机上配置 Minikube。
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: a01d7e1f0162d4dc5cc1d604d5c780cf101646a5
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050779"
 ---
-# <a name="configure-minikube-for-sql-server-2019-ctp-20"></a>配置 SQL Server 2019 ctp 2.0 Minikube
+# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube 配置用于 SQL Server 2019 大数据群集部署
 
-Minikube 是一种工具，轻松地在一台便携式计算机或桌面等一台计算机上运行 Kubernetes。 Minikube 在 VM 的单节点 Kubernetes 群集在笔记本电脑上运行的用户希望试用 Kubernetes 或使用它开发日常。 
+本文介绍如何配置**minikube**用于 SQL Server 2019 大数据群集 （预览版） 部署一台计算机上。 Minikube 是一种工具，轻松地在一台便携式计算机或桌面等一台计算机上运行 Kubernetes。 Minikube 在 VM 的单节点 Kubernetes 群集在笔记本电脑上运行的用户希望试用 Kubernetes 或使用它开发日常。 
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -72,6 +72,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>后续步骤
 
-在本文中的步骤配置 Minikube 群集。 下一步是将 SQL Server 2019 CTP 2.0 部署到群集。
+在本文中的步骤配置 Minikube 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
 [部署 Kubernetes 上的 SQL Server 2019 CTP 2.0](deployment-guidance.md#deploy)

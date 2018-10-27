@@ -16,12 +16,12 @@ ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6c44c63236a351a69b38ef66f14141441c61f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120259"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144992"
 ---
 # <a name="training-and-testing-data-sets"></a>定型数据集和测试数据集
   将数据分为定型集和测试集是评估数据挖掘模型的一个重要部分。 将数据集分为定型集和测试集时，通常大部分数据用于定型，小部分数据用于测试。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会随机地进行数据抽样，以帮助确保测试集和定型集相似。 通过使用相似的数据来进行定型和测试，可以最小化数据差异所造成的影响并更好地了解模型的特征。  
@@ -44,7 +44,7 @@ ms.locfileid: "48120259"
   
  您还可以配置该向导以设置定型事例的最大数量，也可以组合不同的限制来允许事例的最大百分比达到所指定的最大事例数。 如果您既指定了事例的最大百分比又指定了事例的最大数量， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会将这两个限制的较小者用作测试集的大小。 例如，如果指定测试事例维持在 30% 的比率，测试事例的最大数量为 1000，则测试集的大小决不会超过 1000 个事例。 如果您想确保测试集的大小保持一致（即使向模型中添加更多的定型数据也是如此），则这可能非常有用。  
   
- 如果您在不同的挖掘结构中使用相同的数据源视图，并希望以大体相同的方式对所有挖掘结构及其模型中的数据进行拆分，则应当指定用来初始化随机抽样的种子。 指定的值时`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]将使用该值来开始抽样。 否则，抽样功能将根据挖掘结构的名称使用哈希算法来创建种子值。  
+ 如果您在不同的挖掘结构中使用相同的数据源视图，并希望以大体相同的方式对所有挖掘结构及其模型中的数据进行拆分，则应当指定用来初始化随机抽样的种子。 当您为 `HoldoutSeed` 指定值时，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将使用该值来开始抽样。 否则，抽样功能将根据挖掘结构的名称使用哈希算法来创建种子值。  
   
 > [!NOTE]  
 >  如果您使用 `EXPORT` 和 `IMPORT` 语句来创建挖掘结构的副本，则新挖掘结构将具有相同的定型数据集和测试数据集，因为导出过程将创建新 ID，但是使用相同的名称。 不过，如果两个挖掘结构使用相同的基础数据源但是具有不同的名称，那么，为每个挖掘结构创建的集将有所不同。  
@@ -88,7 +88,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>维持数据的使用限制  
   
--   若要使用维持参数，必须将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为默认值（即 `KeepTrainingCases`）。 如果您更改`CacheMode`属性设置为`ClearAfterProcessing`，然后重新处理挖掘结构，则分区将丢失。  
+-   若要使用维持参数，必须将挖掘结构的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性设置为默认值（即 `KeepTrainingCases`）。 如果您将 `CacheMode` 属性更改为 `ClearAfterProcessing`，之后又重新处理挖掘结构，则分区将丢失。  
   
 -   不能从时序模型删除数据；因此不能将源数据分为定型集和测试集。 如果开始创建挖掘结构和模型并选择 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 时序算法，将禁用创建维持数据集的选项。 如果挖掘结构的事例级别或嵌套表级别中包含 KEY TIME 列，也将禁止使用维持数据。  
   
@@ -96,22 +96,22 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   在多数情况下，默认的维持值 (30) 会在定型数据和测试数据之间提供良好的平衡。 不能通过任何一种简单的方法来确定数据集应当多大才能提供足够的定型，或者如何可使定型集稀疏并且仍可以避免过度拟合。 不过，在生成模型后，可以使用交叉验证来评估特定模型的数据集。  
   
--   除了上表中列出的属性以外，AMO 和 XML DDL 中还提供了一个只读属性：`HoldoutActualSize`。 但是，因为分区的实际大小不能确定准确地直到处理该结构后，您应检查之前检索的值是否已处理模型`HoldoutActualSize`属性。  
+-   除了上表中列出的属性以外，AMO 和 XML DDL 中还提供了一个只读属性：`HoldoutActualSize`。 但是，只有在对结构进行处理之后才能准确地确定分区的实际大小，因此，您应当在检索 `HoldoutActualSize` 属性的值之前检查模型是否已经过处理。  
   
 ## <a name="related-content"></a>相关内容  
   
 |主题|链接|  
 |------------|-----------|  
-|说明模型的筛选器如何与定型数据集和测试数据集进行交互。|[挖掘模型的筛选器&#40;Analysis Services-数据挖掘&#41;](mining-models-analysis-services-data-mining.md)|  
-|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证&#40;Analysis Services-数据挖掘&#41;](cross-validation-analysis-services-data-mining.md)|  
-|提供用于处理挖掘结构中定型集和测试集的编程接口的相关信息。|[AMO 概念和对象模型](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)<br /><br /> [MiningStructure 元素&#40;ASSL&#41;](../scripting/objects/miningstructure-element-assl.md)|  
-|提供用于创建维持集的 DMX 语法。|[创建挖掘结构&AMP;#40;DMX&AMP;#41;](/sql/dmx/create-mining-structure-dmx)|  
+|说明模型的筛选器如何与定型数据集和测试数据集进行交互。|[挖掘模型的筛选器（Analysis Services - 数据挖掘）](mining-models-analysis-services-data-mining.md)|  
+|说明定型数据和测试数据的使用如何影响交叉验证。|[交叉验证（Analysis Services - 数据挖掘）](cross-validation-analysis-services-data-mining.md)|  
+|提供用于处理挖掘结构中定型集和测试集的编程接口的相关信息。|[AMO 概念和对象模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|提供用于创建维持集的 DMX 语法。|[CREATE MINING STRUCTURE (DMX)](/sql/dmx/create-mining-structure-dmx)|  
 |在定型集和测试集中检索有关事例的信息。|[数据挖掘架构行集](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [查询数据挖掘架构行集&#40;Analysis Services-数据挖掘&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [数据挖掘工具](data-mining-tools.md)   
  [数据挖掘概念](data-mining-concepts.md)   
  [数据挖掘解决方案](data-mining-solutions.md)   
- [测试和验证&#40;数据挖掘&#41;](testing-and-validation-data-mining.md)  
+ [测试和验证（数据挖掘）](testing-and-validation-data-mining.md)  
   
   

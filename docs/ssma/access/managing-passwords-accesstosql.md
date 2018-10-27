@@ -10,12 +10,12 @@ ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ba9694808be6922762f023af496bc64ff2403b8
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099848"
 ---
 # <a name="managing-passwords-accesstosql"></a>管理密码 (AccessToSQL)
 本部分是如何确保数据库密码和导入或导出跨服务器的过程：  
@@ -121,6 +121,6 @@ SSMA 控制台应用程序，可将加密的数据库密码在本地计算机上
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台 （访问）](http://msdn.microsoft.com/en-us/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
+## <a name="see-also"></a>另请参阅  
+[执行 SSMA 控制台 （访问）](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

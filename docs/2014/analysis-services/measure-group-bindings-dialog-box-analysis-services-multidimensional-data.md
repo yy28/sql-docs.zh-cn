@@ -15,17 +15,17 @@ ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24faef5cd2e65ae89cc200f3461133d00cc81716
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059937"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147222"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>“度量值组绑定”对话框（Analysis Services - 多维数据）
   对于常规维度关系，可以使用“度量值组绑定”对话框创建和修改多维数据集维度中的非粒度属性与度量值组中的列之间的直接关系，并使用“定义关系”对话框为多维数据集维度中的所有属性指定空值处理选项。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **度量值组表**  
  显示所选度量值组的事实数据表的名称。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "48059937"
 |------------|----------------|  
 |**维度列**|显示在 **“属性”** 中选择的属性所基于的维度表中的列。|  
 |**度量值组列**|选择 **“从维度继承”** 可以使用从维度继承的度量值组关系，或者从度量值组所基于的事实数据表选择列，以显式定义关系。|  
-|**空值处理**|为属性选择空值处理选项。 有关空值处理选项的详细信息，请参阅 [NullProcessing 元素 (ASSL)](scripting/properties/nullprocessing-element-assl.md)。|  
+|**空值处理**|为属性选择空值处理选项。 有关空值处理选项的详细信息，请参阅 [NullProcessing 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl)。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [定义关系对话框&#40;Analysis Services-多维数据&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

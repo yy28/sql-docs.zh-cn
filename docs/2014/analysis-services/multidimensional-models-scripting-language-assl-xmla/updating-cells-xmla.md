@@ -18,28 +18,28 @@ ms.assetid: a1c61496-36ee-4bce-98d9-d13440d349aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3db80cd5573e115e3ec399470a7c2a249699e49f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6237bb773709aa7f5eb8bc29fa2436bf69b08030
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061178"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146032"
 ---
 # <a name="updating-cells-xmla"></a>更新单元 (XMLA)
-  可以使用[UpdateCells](../xmla/xml-elements-commands/updatecells-element-xmla.md)命令更改启用了多维数据集写回的多维数据集中的一个或多个单元格的值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将更新的信息存储在单独的写回表以获取每个分区，其中包含要更新的单元格。  
+  可以使用[UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla)命令更改启用了多维数据集写回的多维数据集中的一个或多个单元格的值。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 将更新的信息存储在单独的写回表以获取每个分区，其中包含要更新的单元格。  
   
 > [!NOTE]  
->  在多维数据集写回期间，`UpdateCells` 命令不支持分配。 若要使用已分配的写回，应使用[语句](../xmla/xml-elements-commands/statement-element-xmla.md)命令发送多维表达式 (MDX) UPDATE 语句。 有关详细信息，请参阅[UPDATE CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)。  
+>  在多维数据集写回期间，`UpdateCells` 命令不支持分配。 若要使用已分配的写回，应使用[语句](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla)命令发送多维表达式 (MDX) UPDATE 语句。 有关详细信息，请参阅[UPDATE CUBE 语句&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)。  
   
 ## <a name="specifying-cells"></a>指定单元  
- [单元格](../xmla/xml-elements-properties/cell-element-xmla.md)属性的`UpdateCells`命令包含要更新的单元格。 可使用单元的序号标识 `Cell` 属性中的每个单元。 从概念上讲，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据集中的单元进行编号，像是该多维数据集一样*p*-维数组，其中*p*是轴的数目。 单元按行优先的顺序排列。 下图显示了用于计算单元序号的公式。  
+ [单元格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)属性的`UpdateCells`命令包含要更新的单元格。 可使用单元的序号标识 `Cell` 属性中的每个单元。 从概念上讲，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多维数据集中的单元进行编号，像是该多维数据集一样*p*-维数组，其中*p*是轴的数目。 单元按行优先的顺序排列。 下图显示了用于计算单元序号的公式。  
   
  ![若要计算的单元格的序号位置的公式](../../../2014/analysis-services/dev-guide/media/cellordinalformula.gif "公式来计算单元序号位置")  
   
- 一旦您知道单元的序号，您可以指示的单元格的预期的值[值](../xmla/xml-elements-properties/value-element-xmla.md)的属性[单元格](../xmla/xml-elements-properties/cell-element-xmla.md)属性。  
+ 一旦您知道单元的序号，您可以指示的单元格的预期的值[值](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/value-element-xmla)的属性[单元格](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla)属性。  
   
-## <a name="see-also"></a>请参阅  
- [Update 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
+## <a name="see-also"></a>另请参阅  
+ [Update 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
  [在 Analysis Services 中使用 XMLA 开发](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

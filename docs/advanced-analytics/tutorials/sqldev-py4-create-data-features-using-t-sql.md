@@ -1,5 +1,5 @@
 ---
-title: 步骤 4 创建数据的功能使用 T-SQL |Microsoft 文档
+title: 使用 T-SQL 创建数据功能 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a0f77a624a94ca78b92539d8f098506246ac45e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202069"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806677"
 ---
-# <a name="step-4-create-data-features-using-t-sql"></a>步骤 4：使用 T-SQL 创建数据功能
+# <a name="create-data-features-using-t-sql"></a>使用 T-SQL 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-数据浏览之后, 从这些数据中收集了一些见解，就可以转到*功能工程*。 从原始数据创建特征的此过程可能会在建模的高级分析中，一个关键步骤。
+数据探索后已收集的数据中，一些见解，现在即可转到*特征工程*。 从原始数据创建功能的此过程可能是高级分析建模中的一个关键步骤。
 
-使用本教程，本文摘自[SQL 开发人员的数据库中 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
+本文是教程的一部分[SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
 本步骤中将学习如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 函数通过原始数据创建功能。 然后从存储过程调用该函数，创建包含该功能值的表。
 
@@ -29,7 +29,7 @@ ms.locfileid: "31202069"
 
 使用一个自定义 T-SQL 函数 _fnCalculateDistance_通过半正矢公式计算距离，并使用另一个自定义 T-SQL 函数 _fnEngineerFeatures_创建包含所有功能的表。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>计算使用 fnCalculateDistance 的行程距离
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>计算行程距离使用 fnCalculateDistance
 
 1.  应已下载 _fnCalculateDistance_ 函数，并作为本演练准备工作的一部分向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 注册。 花点时间查看代码。
   
@@ -106,16 +106,16 @@ ms.locfileid: "31202069"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    可见，仪表报告的距离并不始终对应于地理距离。 这是特征工程是重要的原因。
+    可见，仪表报告的距离并不始终对应于地理距离。 这就是原因特征工程很重要。
 
-在下一步，你将学习如何使用这些数据功能创建并定型使用 Python 的机器学习模型。
+在下一步中，您将了解如何使用这些数据功能来创建并定型机器学习模型，使用 Python。
 
 ## <a name="next-step"></a>下一步
 
-[步骤 5： 训练和保存 Python 模型使用 T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>上一步
 
-[步骤 3：浏览并可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
+[浏览和可视化数据](sqldev-py3-explore-and-visualize-the-data.md)
 
 

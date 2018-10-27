@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 管理仪表板和使用情况数据 |Microsoft 文档
+title: Power Pivot 管理仪表板和使用情况数据 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 30f0e84ee388a8a452c855fbd045863f7e2389b0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0b2a6266f1a789c5475ac6551a2f52f1d0bd393f
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099928"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理仪表板和使用情况数据
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "34030338"
   
 5.  在文本编辑器中打开 .odc 文件。  
   
-6.  在 **\<odc:ConnectionString >** 元素，滚动到末尾的行和删除**嵌入的数据 = False**，然后删除**编辑模式 = 0**。 如果字符串中的最后一个字符为分号，则立即删除它。  
+6.  在中 **\<odc:ConnectionString >** 元素中，滚动到删除的行的末尾**嵌入数据 = False**，然后删除**编辑模式 = 0**。 如果字符串中的最后一个字符为分号，则立即删除它。  
   
 7.  保存文件。 其余步骤取决于你使用的 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 和 Excel 的版本。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "34030338"
     9. 在“指定 MDX 查询”中，单击 **“设计”** 打开 MDX 查询设计器以组合您要使用的数据，然后创建数据透视表或数据透视图报表以便在 Excel 中直观显示数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [使用 SharePoint 2010 进行 Power Pivot 数据刷新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [配置使用情况数据收集 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

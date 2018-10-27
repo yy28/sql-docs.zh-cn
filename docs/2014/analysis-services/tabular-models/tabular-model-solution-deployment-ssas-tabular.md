@@ -11,12 +11,12 @@ ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3476521227fd733c69bf83d3fc3122bb23040f13
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 649737183c5bed4309c25ed25e686c3e7a4ce141
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906457"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145836"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>表格模型解决方案部署（SSAS 表格）
   在创作某一表格模型项目后，您必须部署此项目，以便用户通过使用报表客户端应用程序浏览该模型。 本主题介绍在您的环境中部署表格模型解决方案时可使用的各种属性和方法。  
@@ -78,7 +78,7 @@ ms.locfileid: "48906457"
 |方法|Description|链接|  
 |------------|-----------------|----------|  
 |**SQL Server Data Tools 中的“部署”命令**|“部署”命令提供了一个简单且直观的方法，用于从 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 创作环境部署表格模型项目。<br /><br /> **\*\* 注意 \*\*** 不应使用此方法对生产服务器进行部署操作。 使用此方法会覆盖现有模型中的某些属性。|[从 SQL Server Data Tools 部署（SSAS 表格）](deploy-from-sql-server-data-tools-ssas-tabular.md)|  
-|**分析管理对象 (AMO) 自动化**|AMO 提供用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的完整命令集的编程接口，包括可用于解决方案部署的命令。 AMO 自动化是最灵活的解决方案部署方法，但是也需要完成一些编程工作。  使用 AMO 的一个重要优势是：可以将 SQL Server 代理用于 AMO 应用程序，以便按预设的计划运行部署。|[使用分析管理对象 (AMO) 进行开发](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**分析管理对象 (AMO) 自动化**|AMO 提供用于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的完整命令集的编程接口，包括可用于解决方案部署的命令。 AMO 自动化是最灵活的解决方案部署方法，但是也需要完成一些编程工作。  使用 AMO 的一个重要优势是：可以将 SQL Server 代理用于 AMO 应用程序，以便按预设的计划运行部署。|[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
 |**XMLA**|使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 生成现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的元数据的 XMLA 脚本，然后在另一台服务器中运行该脚本以重新创建初始数据库。 通过定义部署过程，然后进行整理并将其保存在 XMLA 脚本中，可以很容易在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中形成 XMLA 脚本。 将 XMLA 脚本保存到文件中以后，即可很容易地按计划运行脚本，或将脚本嵌入直接连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例的应用程序中。<br /><br /> 还可以使用 SQL Server 代理按预置的计划运行 XMLA 脚本，但使用 XMLA 脚本没有 AMO 所具备的灵活性。 AMO 通过驻留完整的管理命令提供了范围更广的功能。|[使用 XMLA 部署模型解决方案](../multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**部署向导**|通过部署向导，使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目生成的 XMLA 输出文件，以将项目的元数据部署到目标服务器中。 使用部署向导，可以直接从 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 文件（该文件由项目生成按输出目录创建）进行部署。<br /><br /> 使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的主要优势是部署向导使用方便。 就像您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中保存 XMLA 脚本以供以后使用一样，可以保存部署向导脚本。 部署向导可以交互运行，也可以通过部署实用工具在命令提示符下运行。|[使用部署向导部署模型解决方案](../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**部署实用工具**|可以使用部署实用工具在命令提示符下启动 Analysis Services 部署引擎。|[使用部署实用工具部署模型解决方案](../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
@@ -100,7 +100,7 @@ ms.locfileid: "48906457"
 |[使用 XMLA 部署模型解决方案](../multidimensional-models/deploy-model-solutions-using-xmla.md)|说明如何使用 XMLA 部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格和多维解决方案。|  
 |[同步 Analysis Services 数据库](../multidimensional-models/synchronize-analysis-services-databases.md)|说明如何使用同步数据库向导同步任意两个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格或多维数据库之间的元数据和数据。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接到表格模型数据库 (SSAS)](connect-to-a-tabular-model-database-ssas.md)  
   
   

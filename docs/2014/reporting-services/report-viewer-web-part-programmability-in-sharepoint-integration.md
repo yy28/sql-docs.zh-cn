@@ -12,12 +12,12 @@ ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 427acf4413bba023f8ff3c8300cfb7a53a4b0b0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c42e12dc43febf4927ea2f559631b63c5ba4e143
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100168"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 集成中的报表查看器 Web 部件可编程性
   报表查看器 Web 部件是一个 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` 服务器控件，其中包含一组公共应用程序编程接口 (API)，使开发人员能够创建自定义 SharePoint 应用程序。 您可以创建自定义 Web 部件，以使用 Web 部件连接向报表查看器 Web 部件提供报表路径和参数。 还可以在自定义 SharePoint Web 部件页中嵌入 Web 部件，并使用该公共 API 对其进行自定义。  
@@ -60,7 +60,7 @@ ms.locfileid: "48062157"
     > [!NOTE]  
     >  可以同时将多个 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web 部件连接到报表查看器 Web 部件。 但是，不能同时将 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> Web 部件和 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web 部件连接到报表查看器 Web 部件。  
   
-## <a name="see-also"></a>请参阅  
- [IFilterValues 接口](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
+## <a name="see-also"></a>另请参阅  
+ [IFilterValues 接口](https://msdn.microsoft.com/library/office/microsoft.sharepoint.webpartpages.ifiltervalues\(v=office.15\).aspx)  
   
   

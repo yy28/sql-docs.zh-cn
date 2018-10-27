@@ -19,12 +19,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0baf445580017ba976d788c402e81aa06cbb2643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110527"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148232"
 ---
 # <a name="data-mining-query-interfaces"></a>数据挖掘查询接口
   数据挖掘基于数据挖掘扩展插件 (DMX) 语言。 您可以为所有预测和建模任务使用 DMX，这些任务包括分类、风险分析、生成建议和线性回归。 您还可以检索在处理模型时生成的模式和统计信息。  
@@ -87,16 +87,16 @@ ms.locfileid: "48110527"
   
  但是，XMLA 构成了与 Analysis Service 服务器进行的所有交互的基础邮件格式。 在某一 XMLA 消息内，根据您是否基于 DMX、内容查询或使用数据挖掘架构行集检索模型元数据的查询发送预测查询，表示查询的方式也将有所不同。  
   
--   **预测查询**的文本（以及所有其他 DMX 语句）通过使用 [Execute 方法 (XMLA)](../xmla/xml-elements-methods-execute.md) 以 XMLA 形式发送，而 DMX 查询以文本的形式放置于 XMLA [Command 元素 (XMLA)](../xmla/xml-elements-properties/command-element-xmla.md) 的 [Statement 元素 (XMLA)](../xmla/xml-elements-commands/statement-element-xmla.md) 内。  
+-   **预测查询**的文本（以及所有其他 DMX 语句）通过使用 [Execute 方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 以 XMLA 形式发送，而 DMX 查询以文本的形式放置于 XMLA [Command 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/command-element-xmla) 的 [Statement 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/statement-element-xmla) 内。  
   
--   若要检索**模型内容**和**模型元数据**，例如群集的数目、在决策树中使用的属性、上次处理模型的日期以及在创建模型时使用的算法参数，可以使用 [Discover 方法 (XMLA)](../xmla/xml-elements-methods-discover.md) 并在 [RequestType 元素 (XMLA)](../xmla/xml-elements-properties/type-element-xmla.md) 标头中指定数据挖掘架构行集之一。 若要缩小查询范围，请在 [RestrictionList 元素 (XMLA)](../xmla/xml-elements-properties/restrictionlist-element-xmla.md) 内输入限制条件。  
+-   若要检索**模型内容**和**模型元数据**，例如群集的数目、在决策树中使用的属性、上次处理模型的日期以及在创建模型时使用的算法参数，可以使用 [Discover 方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) 并在 [RequestType 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla) 标头中指定数据挖掘架构行集之一。 若要缩小查询范围，请在 [RestrictionList 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla) 内输入限制条件。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)   
  [数据挖掘解决方案](data-mining-solutions.md)   
  [了解 DMX Select 语句](/sql/dmx/understanding-the-dmx-select-statement)   
  [DMX 预测查询的结构和用法](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [创建预测查询使用预测查询生成器](create-a-prediction-query-using-the-prediction-query-builder.md)   
- [在 SQL Server Management Studio 中创建 DMX 查询](create-a-dmx-query-in-sql-server-management-studio.md)  
+ [使用预测查询生成器创建预测查询](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [在 SQL Server Management Studio 中创建一个 DMX 查询](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

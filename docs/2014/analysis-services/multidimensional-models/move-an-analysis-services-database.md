@@ -15,12 +15,12 @@ ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4471bba7b99010c2138acd2c49d0ad650945724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69a3d667bbe057387d05ffd814ca3ea1a3854238
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055147"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145322"
 ---
 # <a name="move-an-analysis-services-database"></a>移动 Analysis Services 数据库
   很多情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将多维或表格模型数据库移到另一个位置。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。  
@@ -140,15 +140,15 @@ ms.locfileid: "48055147"
   
 2.  执行 XMLA 命令。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [数据库存储位置](database-storage-location.md)   
- [数据库 Readwritemode](database-readwritemodes.md)   
- [附加元素](../xmla/xml-elements-commands/attach-element.md)   
- [分离元素](../xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 元素](../xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 元素](../xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [数据库 ReadWriteMode](database-readwritemodes.md)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

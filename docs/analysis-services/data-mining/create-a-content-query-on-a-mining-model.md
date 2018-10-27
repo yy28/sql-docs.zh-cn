@@ -1,5 +1,5 @@
 ---
-title: 在挖掘模型上创建内容查询 |Microsoft 文档
+title: 创建针对挖掘模型内容查询 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a0bc8d9a216f55f04cab4a4012945d2b11cf429
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019964"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145072"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>针对挖掘模型创建内容查询
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "34019964"
   
      此时将在相应代码编辑器中打开 **“内容查询”** 模板。 元数据窗格列出了当前数据库中的可用模型。 若要更改数据库，请从 **“可用数据库”** 列表中选择不同的数据库。  
   
-5.  在行中，输入的挖掘模型名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
+5.  在一行中，输入挖掘模型的名称`FROM`[*\<挖掘模型、 名称、 MyModel >*]`.CONTENT`。 如果挖掘模型的名称包含空格，则必须用方括号将该名称括起来。  
   
      如果不希望键入名称，则可以在 **对象资源管理器** 中选择某个挖掘模型，并将其拖放到模板中。  
   
-6.  在行中， `SELECT` *\<选择列表中，expr 列表\* >* ，键入在挖掘模型内容架构行集中的列的名称。  
+6.  在行中， `SELECT` *\<选择列表、 expr 列表\* >* ，键入挖掘模型内容架构行集中的列的名称。  
   
-     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)。  
+     若要查看可在挖掘模型内容查询中返回的列的列表，请参阅 [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)提供的 DMV 创建查询，来针对数据挖掘架构行集创建查询。  
   
 7.  或者，您也可以在模板的 WHERE 子句中键入条件，以将返回的行限制为特定的节点或值。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "34019964"
      “结果”窗格将显示模型的内容。  
   
     > [!NOTE]  
-    >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)。  
+    >  若要查看当前实例上可查询的所有架构行集的列表，请使用以下查询： `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS。 或者，若要查看特定于数据挖掘的架构行集的列表，请参阅 [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)。  
   
 ## <a name="see-also"></a>另请参阅  
- [挖掘模型内容 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [数据挖掘架构行集](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [挖掘模型内容（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets)  
   
   

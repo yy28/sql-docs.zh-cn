@@ -1,18 +1,18 @@
 ---
 title: SQL Server 大数据群集的安全性概念 |Microsoft Docs
-description: ''
+description: 本文介绍了 SQL Server 2019 大数据群集的安全概念。
 author: nelgson
 ms.author: negust
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: bd9e49344108b65898e38065ed88fd06467803cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 77ffea6b2507bde65b914c52eaf225e1fd1dbd31
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795974"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050879"
 ---
 # <a name="security-concepts-for-sql-server-big-data-cluster"></a>SQL Server 大数据群集的安全性概念
 

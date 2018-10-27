@@ -15,12 +15,12 @@ ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 247be53e3811e721d05733320372caf7f1350032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d89f9e8e80aa611d9c8077cf75f7f42af855da
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225017"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148222"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 服务器功能
   所有 ADOMD.NET 服务器对象都可对服务器上的数据和元数据提供只读访问。 若要检索数据和元数据，则可使用 ADOMD.NET 服务器对象模型，因为该服务器对象模型不支持架构行集。  
@@ -62,7 +62,7 @@ FROM SalesModel
 CALL FinalSalesNumbers()  
 ```  
   
-## <a name="see-also"></a>请参阅  
- [ADOMD.NET 服务器编程](adomd-net-server-programming.md)  
+## <a name="see-also"></a>另请参阅  
+ [ADOMD.NET 服务器编程](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

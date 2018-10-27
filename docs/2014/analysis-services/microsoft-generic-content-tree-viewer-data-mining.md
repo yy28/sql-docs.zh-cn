@@ -13,21 +13,21 @@ ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dff4254252523096b187bb2894782fe9eea523be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5df092bc94bcab3dcfd2909807eb650e696e9be0
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066939"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146786"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft 一般内容树查看器（数据挖掘）
   **“Microsoft 一般内容树查看器”** 以标准化 HTML 表格式显示有关数据挖掘模式的内容的详细信息。 此视图很有用，因为它将公开模型的基础结构，以及有关系数、值的分布等项的详细信息。  
   
  表中显示的实际内容因使用的算法而异，可能包括列、规则、属性、特性、节点和公式。 有关模型内容以及如何解释每个模型类型信息的详细信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
- 此查看器中显示的信息使用基于挖掘模型的内容架构行集的通用结构。 内容架构行集是用于存储数据挖掘模型的模式、统计信息和其他内容的通用框架。 有关挖掘模型的数据挖掘架构行集中的列的列表，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+ 此查看器中显示的信息使用基于挖掘模型的内容架构行集的通用结构。 内容架构行集是用于存储数据挖掘模型的模式、统计信息和其他内容的通用框架。 有关挖掘模型的数据挖掘架构行集中的列的列表，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **节点标题 (唯一 ID)**  
  此窗格显示所选挖掘模型中所有节点的列表。 节点在树中的排列方式随要查看的模型类型的不同而不同。  
   
@@ -38,9 +38,9 @@ ms.locfileid: "48066939"
   
  有关如何解释特定模型类型的节点信息的信息，请参阅[挖掘模型内容（Analysis Services - 数据挖掘）](data-mining/mining-model-content-analysis-services-data-mining.md)。  
   
-## <a name="see-also"></a>请参阅  
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [挖掘模型查看器&#40;数据挖掘模型设计器&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>另请参阅  
+ [数据挖掘算法 &#40;Analysis Services-数据挖掘&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [挖掘模型查看器（数据挖掘模型设计器）](mining-model-viewers-data-mining-model-designer.md)   
  [数据挖掘查询](data-mining/data-mining-queries.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 166fae1cb6fb76587b6741b6f47449d2600bf8e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155845"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145582"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>指定维度类型（维度向导）
   可以定使用 **“指定维度类型”** 页义维度类型，以及将与所选维度类型关联的特殊属性类型添加到维度中。  
@@ -26,7 +26,7 @@ ms.locfileid: "48155845"
 > [!NOTE]  
 >  只有在“选择维度类型”页上选择了“标准维度”时，才会显示此页。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
  **维度类型**  
  选择维度的维度类型。 下表列出了可用的维度类型：  
   
@@ -57,12 +57,12 @@ ms.locfileid: "48155845"
  选中此选项将包括维度中的属性类型。  
   
  **属性类型**  
- 显示与“维度类型”中所选维度类型相关联的属性类型。 有关属性类型的详细信息，请参阅[类型元素（维度属性）(ASSL)](scripting/properties/type-element-dimensionattribute-assl.md)。  
+ 显示与“维度类型”中所选维度类型相关联的属性类型。 有关属性类型的详细信息，请参阅[类型元素（维度属性）(ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl)。  
   
  **维度属性**  
  选择特定维度属性，维度向导将为其分配“属性类型”中显示的特殊属性类型。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [维度向导的 F1 帮助](dimension-wizard-f1-help.md)   
  [维度&#40;Analysis Services-多维数据&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多维模型中的维度](multidimensional-models/dimensions-in-multidimensional-models.md)  

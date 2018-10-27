@@ -1,62 +1,60 @@
 ---
-title: 将 Python 与使用 revoscalepy 创建模型 |Microsoft Docs
+title: 将 Python 与 revoscalepy 使用在 SQL Server 中创建模型 |Microsoft Docs
+description: 编写使用 revoscalepy 函数来创建在 SQL Server 中远程运行的数据科学模型的 Python 脚本。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/25/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 5c8ff387c3abda3f147700dce6349009a027a778
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f554badcba282bad7fb386daf8c4c0f4106804b4
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461953"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100158"
 ---
-# <a name="use-python-with-revoscalepy-to-create-a-model"></a>将 Python 与使用 revoscalepy 创建模型
+# <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>将 Python 与使用 revoscalepy 创建模型的 SQL Server 上远程运行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本课程中，您将学习如何从远程开发客户端，若要在 SQL Server 中创建线性回归模型中运行 Python 代码。 
+[Revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)来自 Microsoft 的 Python 库提供了数据科学算法用于数据浏览、 可视化效果、 转换和分析。 此库中的 Python 集成方案中 SQL Server 具有战略的重要性。 在多核服务器上， **revoscalepy**函数可以并行运行。 在分布式体系结构中使用中央服务器和客户端工作站 (单独的物理计算机，所有具有相同**revoscalepy**库)，可以编写的本地启动，但然后转移到执行 Python 代码数据所在的远程 SQL Server 实例。
+
+您可以找到**revoscalepy**以下 Microsoft 产品和发行版中：
+
++ [SQL Server 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft 机器学习服务器 （非 SQL、 独立服务器）](https://docs.microsoft.com/machine-learning-server/index)
++ [（适用于开发工作站） 的客户端的 Python 库](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
+
+此练习将演示如何创建线性回归模型基于[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)中的算法之一**revoscalepy**接受作为输入的计算上下文。 在此练习中将运行的代码会执行代码从本地切换到远程计算环境中，通过启用**revoscalepy**函数启用远程计算上下文。
+
+通过完成本教程中，您将学习如何：
+
+> [!div class="checklist"]
+> * 使用**revoscalepy**若要创建一个线性模型
+> * 将操作从本地切换到远程计算上下文
 
 ## <a name="prerequisites"></a>必要條件
 
-+ 本课程中使用不同的数据比前面的课程。 不需要先完成前面的课程。 但是，如果你已完成前面的课程，并且可以将服务器已配置为运行 Python，使用该服务器和数据库作为计算上下文。
-+ 若要运行 Python 代码使用 SQL Server 作为计算上下文需要 SQL Server 2017 或更高版本。 此外，必须显式安装并启用该功能，然后**机器学习服务**，选择 Python 语言选项。
+在此练习中使用的示例数据[ **flightdata** ](demo-data-airlinedemo-in-sql.md)数据库。
 
-    如果您安装 SQL Server 2017 的预发布版本，您应至少更新到 RTM 版本。 更高版本的 service release 不断扩展和改进 Python 功能。 本教程中的某些功能可能无法在早期预发布版本。
+您需要 IDE，可在本文中，运行示例代码和 IDE 必须链接到 Python 可执行文件。
 
-+ 此示例使用预定义的 Python 环境，名为`PYTEST_SQL_SERVER`。 配置环境以包含**revoscalepy**和其他所需的库。 
+若要练习计算上下文 shift，需要[本地工作站](../python/setup-python-client-tools-sql.md)和 SQL Server 数据库引擎实例与[机器学习服务](../install/sql-machine-learning-services-windows-install.md)和启用了 Python。 
 
-    如果没有配置为运行 Python 环境，你必须单独执行。 如何创建或修改 Python 环境的讨论不在本教程的范围之内。 有关如何设置包含正确的库的 Python 客户端的详细信息，请参阅[安装 Python 客户端](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)并[工具的链接 Python](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools)。
+> [!Tip]
+> 如果你没有两台计算机，你可以通过安装相关的应用程序模拟一个物理计算机上的远程计算上下文。 首先，安装[SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)作为"远程"的实例进行操作。 第二个，安装了[Python 客户端库运行](../python/setup-python-client-tools-sql.md)与客户端。 将具有相同的 Python 分发版和 Microsoft Python 库在同一台计算机上的两个副本。 必须将跟踪的文件路径和用来成功完成该练习的 Python.exe 的哪一副本。
 
 ## <a name="remote-compute-contexts-and-revoscalepy"></a>远程计算上下文并 revoscalepy
 
-此示例演示如何在远程创建 Python 模型的过程_计算上下文_，它允许您从客户端，但选择远程环境，如 SQL Server、 Spark 或机器学习服务器位置实际执行的操作。 使用计算上下文，可以更轻松地编写代码一次，并将其部署到任何受支持的环境。
+此示例演示了创建 Python 模型在远程计算上下文中，该对话框允许您从客户端，但选择远程环境，如 SQL Server、 Spark 或机器学习服务器，实际执行的操作的过程。 远程计算上下文的目的是使计算到数据所在的位置。
 
 若要在 SQL Server 中执行 Python 代码，需要**revoscalepy**包。 这是类似于 Microsoft 提供的特殊 Python 软件包**RevoScaleR**的 R 语言包。 **Revoscalepy**包支持创建计算上下文，并提供用于在本地工作站和远程服务器之间传递数据和模型的基础结构。 **Revoscalepy**函数在数据库中的代码执行是的支持[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver)。
 
 在本课程中，可以使用数据在 SQL Server 中基于线性模型进行定型[rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)中的函数**revoscalepy**通过极大型数据集支持回归。 
 
-本课程还演示了如何设置以及如何将的基础知识**SQL Server 计算上下文**Python 中。 有关介绍如何计算上下文工作与其他平台，以及哪个计算上下文支持，请参阅[机器学习服务器中的脚本执行的计算上下文](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)
+本课程还演示了如何设置以及如何将的基础知识**SQL Server 计算上下文**Python 中。 有关介绍如何计算上下文工作与其他平台，以及哪个计算上下文支持，请参阅[机器学习服务器中的脚本执行的计算上下文](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)。
 
-## <a name="prepare-the-database-and-sample-data"></a>准备数据库和示例数据
-
-1. 本课程中使用的数据库**sqlpy**。 如果未完成任何前面的课程，您可以通过运行以下代码创建数据库：
-
-    ```sql
-    CREATE DATABASE sqlpy;
-    GO
-    USE sqlpy;
-    GO
-    ```
-
-    > [!IMPORTANT]
-    > 如果你想要使用不同的数据库，请确保要编辑的示例代码并更改连接字符串中的数据库名称。
-
-2. 此示例使用航班数据集，这是 R 和 Python 中可用。 有关 Python 示例创建数据库后，填充包含数据的表，如下所述： [RevoScaleR 中的数据采样](https://docs.microsoft.com/machine-learning-server/r/sample-built-in-data)。
-
-3. 更改此环境以使用在客户端上的可用环境的名称。
 
 ## <a name="run-the-sample-code"></a>运行示例代码
 
@@ -126,7 +124,7 @@ def test_linmod_sql():
 
 ### <a name="defining-a-data-source-vs-defining-a-compute-context"></a>定义数据源与定义计算上下文
 
-数据源与不同计算上下文。 _数据源_定义在代码中使用的数据。 _计算上下文_定义执行代码的位置。 但是，它们使用的一些相同的信息：
+数据源与不同计算上下文。 *数据源*定义在代码中使用的数据。 计算上下文定义执行代码的位置。 但是，它们使用的一些相同的信息：
 
 + Python 变量，如`sql_query`和`sql_connection_string`，定义的数据源。 
 
@@ -154,7 +152,7 @@ def test_linmod_sql():
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-在调用中重用此计算上下文[rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):。
+在调用中重用此计算上下文[rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary):
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
@@ -173,10 +171,9 @@ def test_linmod_sql():
 + 具有四个处理器的计算机上运行该示例的因此`num_tasks`参数设置为 4，以便最充分地利用资源。 
 + 如果此值设置为 0 时，SQL Server 将使用默认情况下，它将在当前的 MAXDOP 设置为服务器下尽可能以并行方式运行那么多的任务。 但是，可能会分配的任务的精确数目取决于许多其他因素，如服务器设置和其他正在运行的作业。
 
-## <a name="related-samples"></a>相关的示例
+## <a name="next-steps"></a>后续步骤
 
 这些其他的 Python 示例和教程演示使用更复杂的数据源，以及使用远程计算上下文的端到端方案。
 
 + [面向 SQL 开发人员的数据库 Python](sqldev-in-database-python-for-sql-developers.md)
-+ [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)
 + [构建预测模型使用 Python 和 SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

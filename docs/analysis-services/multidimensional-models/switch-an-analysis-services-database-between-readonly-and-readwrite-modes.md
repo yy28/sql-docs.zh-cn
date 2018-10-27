@@ -1,5 +1,5 @@
 ---
-title: 切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库 |Microsoft 文档
+title: 切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0df164b267043e4784260b30b039ecb58c2c4cc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c6ede109d13c21686400c0f9ce99c22f1118eda9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026724"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147912"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -127,13 +127,13 @@ private void SwitchReadWrite(Server server, string dbName, ReadWriteMode dbReadW
   
 ## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [高可用性和 Analysis Services 中的可伸缩性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
+ [Analysis Services 中的高可用性和可伸缩性](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)   
  [附加和分离 Analysis Services 数据库](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [数据库存储位置](../../analysis-services/multidimensional-models/database-storage-location.md)   
- [数据库 Readwritemode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
- [附加元素](../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
- [分离元素](../../analysis-services/xmla/xml-elements-commands/detach-element.md)   
- [ReadWriteMode 元素](../../analysis-services/xmla/xml-elements-properties/readwritemode-element.md)   
- [DbStorageLocation 元素](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
+ [数据库 ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [ReadWriteMode 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

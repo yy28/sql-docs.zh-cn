@@ -13,17 +13,17 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1cac8e6a3538c9521a1a4cb04cd082de9d077460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92a9bd2db457b4bf9ea18c73daf2bdf1978ea836
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049328"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148372"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>内部成员属性 (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
- 内部属性包括 `ID`、`KEY`、`KEYx` 和 `NAME`，这些是每个成员在任意级别公开的属性。 此外可以返回位置信息，如`LEVEL_NUMBER`或`PARENT_UNIQUE_NAME`，等等。  
+ 内部属性包括 `ID`、`KEY`、`KEYx` 和 `NAME`，这些是每个成员在任意级别公开的属性。 您还可以返回位置信息，如 `LEVEL_NUMBER` 或 `PARENT_UNIQUE_NAME` 等等。  
   
  根据您构造查询的方式和用于执行查询的客户端应用程序，成员属性在结果集中可能是可见的，也可能是不可见的。 如果您正在使用 SQL Server Management Studio 测试或运行查询，可以双击结果集中的某个成员以打开“成员属性”对话框，显示每个内部成员属性的值。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48049328"
  非上下文相关的成员属性  
  这些成员属性不能在特定维度或级别的上下文中使用，而是为某个轴上的所有成员返回值。  
   
- 与上下文不相关的属性是独立的，不包括路径信息： 请注意如何没有任何维度或级别为指定`PARENT_UNIQUE_NAME`在下面的示例： `DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
+ 与上下文不相关的属性是独立的，不包括路径信息： 请注意在以下示例中没有为 `PARENT_UNIQUE_NAME` 指定任何维度或级别：`DIMENSION PROPERTIES PARENT_UNIQUE_NAME ON COLUMNS`  
   
  不论内部成员属性是否是上下文相关的，都应遵循下列使用规则：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48049328"
 |--------------|-----------------|  
 |`ID`|在内部维护的成员 ID。|  
 |`Key`|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
-|`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 适用于组合键和非组合键，但是主要用于组合键。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立使用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 如果密钥是非组合键，则 KEY0 等同于`Key`。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
+|`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 适用于组合键和非组合键，但是主要用于组合键。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立使用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 如果键不是组合键，则 KEY0 与 `Key` 等效。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
 |`Name`|成员的名称。|  
   
 ### <a name="properties-syntax-for-context-sensitive-properties"></a>上下文相关属性的 PROPERTIES 语法  
@@ -88,7 +88,7 @@ ms.locfileid: "48049328"
  下表列出了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持的非上下文相关的内部属性。  
   
 > [!NOTE]  
->  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关详细信息`MEMBERS`架构行集，请参阅[MDSCHEMA_MEMBERS 行集](../../schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
+>  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关详细信息`MEMBERS`架构行集，请参阅[MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
 |“属性”|Description|  
 |--------------|-----------------|  
@@ -101,14 +101,14 @@ ms.locfileid: "48049328"
 |`HIERARCHY_UNIQUE_NAME`|层次结构的唯一名称。 如果成员属于多个层次结构，则成员所属的每个层次结构都有对应的一行。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`IS_DATAMEMBER`|一个指示成员是否为数据成员的布尔值。|  
 |`IS_PLACEHOLDERMEMBER`|用来指明成员是否为占位符的布尔值。|  
-|`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果密钥是非组合键，则 KEY0 等同于`Key`。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
+|`KEYx`|成员键，其中 x 是成员键的序号，起始值为零。 KEY0 可用于组合键和非组合键。<br /><br /> 如果键不是组合键，则 KEY0 与 `Key` 等效。<br /><br /> 对于组合键，KEY0、KEY1、KEY2 等共同构成了组合键。 您可以在查询中独立引用它们以返回组合键的该部分。 例如，指定 KEY0 返回组合键的第一部分，指定 KEY1 返回组合键的下一部分等等。<br /><br /> 请注意，`KEYx` 可以在上下文中使用，也可以不带上下文使用。 因此，它显示在两个列表中。<br /><br /> 有关如何使用此成员属性的示例，请参阅 [简单的 MDX 小组件：Key0、Key1、Key2](http://go.microsoft.com/fwlink/?LinkId=317364)。|  
 |`LCID` *X*|区域设置 ID 十六进制值中的成员标题的翻译，其中 *x* 是区域设置 ID 十进制值（例如，LCID1009 表示加拿大英语）。 这仅适用于翻译具有绑定到数据源的标题列的情况。|  
 |`LEVEL_NUMBER`|成员距层次结构的根的距离。 根级别为零。|  
 |`LEVEL_UNIQUE_NAME`|成员所属的级别的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_CAPTION`|与成员相关的标签或标题。 标题主要用于显示目的。 如果不存在标题，查询将返回 `MEMBER_NAME`。|  
 |`MEMBER_KEY`|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
 |`MEMBER_NAME`|成员的名称。|  
-|`MEMBER_TYPE`|成员的类型。 此属性可以具有下列值之一： <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA 优先于 MDMEMBER_TYPE_MEASURE。 因此，如果 Measures 维度上有一个公式 （计算） 成员，则`MEMBER_TYPE`计算成员的属性为 MDMEMBER_TYPE_FORMULA。|  
+|`MEMBER_TYPE`|成员的类型。 此属性可以具有下列值之一： <br />**MDMEMBER_TYPE_REGULAR**<br />**MDMEMBER_TYPE_ALL**<br />**MDMEMBER_TYPE_FORMULA**<br />**MDMEMBER_TYPE_MEASURE**<br />**MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> MDMEMBER_TYPE_FORMULA 优先于 MDMEMBER_TYPE_MEASURE。 因此，如果 Measures 维度上有一个公式（计算）成员，则计算成员的 `MEMBER_TYPE` 属性为 MDMEMBER_TYPE_FORMULA。|  
 |`MEMBER_UNIQUE_NAME`|成员的唯一名称。 对于通过限定生成唯一名称的访问接口，此名称的各组成部分之间用分隔符分隔。|  
 |`MEMBER_VALUE`|以原始类型表示的成员的值。|  
 |`PARENT_COUNT`|此成员具有的父级的个数。|  
@@ -119,13 +119,13 @@ ms.locfileid: "48049328"
 |`UNIQUE_NAME`|成员的完全限定名称，它采用以下格式：[dimension].[level].[key6.]|  
   
 ### <a name="properties-syntax-for-non-context-sensitive-properties"></a>非上下文相关属性的 PROPERTIES 语法  
- 使用以下语法指定内部函数，非上下文相关的成员属性使用`PROPERTIES`关键字：  
+ 使用以下语法指定使用 `PROPERTIES` 关键字的非上下文相关的内部成员属性：  
   
  `DIMENSION PROPERTIES Property`  
   
  请注意，此语法不允许使用维度或级别来限定属性。 因为非上下文相关的内部成员属性适用于某条轴上的所有成员，所以不能限定属性。  
   
- 例如，指定的 MDX 语句`DESCRIPTION`内部成员属性具有以下语法：  
+ 例如，指定 `DESCRIPTION` 内部成员属性的 MDX 语句具有以下语法：  
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
@@ -206,17 +206,17 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>请参阅  
- [PeriodsToDate &#40;MDX&#41;](/sql/mdx/periodstodate-mdx)   
- [子级&#40;MDX&#41;](/sql/mdx/children-mdx)   
- [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
- [计数&#40;设置&#41; &#40;MDX&#41;](/sql/mdx/count-set-mdx)   
- [筛选器&#40;MDX&#41;](/sql/mdx/filter-mdx)   
- [AddCalculatedMembers &#40;MDX&#41;](/sql/mdx/addcalculatedmembers-mdx)   
- [DrilldownLevel &#40;MDX&#41;](/sql/mdx/drilldownlevel-mdx)   
- [属性&#40;MDX&#41;](/sql/mdx/properties-mdx)   
- [PrevMember &#40;MDX&#41;](/sql/mdx/prevmember-mdx)   
- [使用成员属性&#40;MDX&#41;](mdx-member-properties.md)   
- [MDX 函数引用&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+## <a name="see-also"></a>另请参阅  
+ [PeriodsToDate (MDX)](/sql/mdx/periodstodate-mdx)   
+ [Children (MDX)](/sql/mdx/children-mdx)   
+ [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx)   
+ [Count（集）(MDX)](/sql/mdx/count-set-mdx)   
+ [Filter (MDX)](/sql/mdx/filter-mdx)   
+ [AddCalculatedMembers (MDX)](/sql/mdx/addcalculatedmembers-mdx)   
+ [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx)   
+ [属性 (MDX)](/sql/mdx/properties-mdx)   
+ [PrevMember (MDX)](/sql/mdx/prevmember-mdx)   
+ [使用成员属性 (MDX)](mdx-member-properties.md)   
+ [MDX 函数引用 (MDX)](/sql/mdx/mdx-function-reference-mdx)  
   
   

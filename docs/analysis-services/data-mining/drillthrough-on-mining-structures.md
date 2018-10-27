@@ -1,5 +1,5 @@
 ---
-title: 对挖掘结构的钻取 |Microsoft 文档
+title: 对挖掘结构的钻取 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: aadcc0025b8370d3827a9349ad577651121030de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6d2ea3d80496f84330802640ff99d951fd2416bb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015104"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146483"
 ---
 # <a name="drillthrough-on-mining-structures"></a>对挖掘结构的钻取功能
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   “钻取” 意味着能够查询挖掘模型或挖掘结构并且获取在模型中未公开的详细数据。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]提供两个不同选项来钻取到事例数据。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供了两种不同的选项来钻取到事例数据中。 您可以钻取到用来挖掘模型的数据，也可以钻取到挖掘结构中的源数据。  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>钻取到模型事例与钻取到结构  
  钻取到“模型事例”  用于查找与模型中的规则、模式或群集有关的其他详细信息。  
@@ -38,7 +38,7 @@ ms.locfileid: "34015104"
   
 -   钻取就是检索在处理挖掘结构时缓存的定型事例的相关信息。 因此，如果在结构处理完毕后，通过将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **ClearAfterProcessing**，清除了缓存的数据，则钻取功能将无法正常工作。 若要对结构列启用钻取，则必须将 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 属性更改为 **KeepTrainingCases** ，然后重新处理结构。  
   
--   确认挖掘结构和挖掘模型都已将 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 属性设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。  
+-   确认挖掘结构和挖掘模型都已将 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 属性设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。  
   
 ## <a name="security-issues-for-drillthrough"></a>钻取的安全问题  
  挖掘结构和挖掘模型的钻取权限是分开设置的。 即使不具有结构的钻取权限，模型的钻取权限也会允许您从模型进行钻取。 如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md) 函数，将结构列包含到模型钻取查询中。  
@@ -48,16 +48,16 @@ ms.locfileid: "34015104"
 > [!NOTE]  
 >  如果对挖掘结构和挖掘模型都启用了钻取，则只要用户是拥有挖掘模型的钻取权限的角色成员，就可以查看挖掘结构中的列，即使这些列并未包含在挖掘模型中，也是如此。 因此，为了保护敏感数据，应设置数据源视图来屏蔽个人信息，并且仅在需要时才允许对挖掘结构进行钻取访问。  
   
-## <a name="related-tasks"></a>相关任务  
+## <a name="related-tasks"></a>Related Tasks  
  有关如何将钻取功能用于挖掘模型的详细信息，请参阅下列主题：  
   
 |||  
 |-|-|  
 |从挖掘模型查看器对结构使用钻取|[从模型查看器使用钻取](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |有关特定的模型类型，请参阅钻取查询的示例。|[数据挖掘查询](../../analysis-services/data-mining/data-mining-queries.md)|  
-|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予对数据挖掘结构和模型 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|获取有关适用于特定挖掘结构和挖掘模型的权限的信息。|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
- [在挖掘模型的钻取](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
+ [对挖掘模型的钻取功能](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

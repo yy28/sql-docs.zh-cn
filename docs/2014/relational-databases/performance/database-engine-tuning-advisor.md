@@ -13,12 +13,12 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a4d16326f9bf8027360b83a70f8bf46ece4ef473
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8325e326ebcbf23a57e2362aa792b3076ec23922
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127412"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991170"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 数据库引擎优化顾问 (DTA) 分析数据库并对优化查询性能提出建议。 借助数据库引擎优化顾问，您不必精通数据库结构或深谙 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，即可选择和创建索引、索引视图和分区的最佳集合。 使用 DTA，您可以执行以下任务。  
@@ -94,7 +94,7 @@ ms.locfileid: "48127412"
   
     2.  建议的索引对当前物理数据库设计的查询性能预计带来的提高值不够。  
   
-    3.  运行数据库引擎优化顾问的用户不是成员的`db_owner`数据库角色或`sysadmin`固定的服务器角色。 工作负荷中的查询在运行数据库引擎优化顾问的用户的安全上下文中进行分析。 用户必须是 `db_owner` 数据库角色的成员。  
+    3.  运行数据库引擎优化顾问的用户不是 `db_owner` 数据库角色或 `sysadmin` 固定服务器角色的成员。 工作负荷中的查询在运行数据库引擎优化顾问的用户的安全上下文中进行分析。 用户必须是 `db_owner` 数据库角色的成员。  
   
 -   数据库引擎优化顾问将优化会话数据和其他信息存储在 `msdb` 数据库中。 如果对 `msdb` 数据库进行了更改，可能会有丢失优化会话数据的风险。 若要消除此风险，请对 `msdb` 数据库实施适当的备份策略。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48127412"
 ## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>与 xp_msver 扩展存储过程的依赖关系  
  数据库引擎优化顾问需要依赖 **xp_msver** 扩展存储过程才能提供全部功能。 该扩展存储过程默认是打开的。 数据库引擎优化顾问使用该扩展存储过程，提取要优化的数据库所在计算机中的处理器数以及可用内存数。 如果 **xp_msver** 不可用，则数据库引擎优化顾问将假定正在运行数据库引擎优化顾问的计算机的硬件特征。 如果无法获得运行数据库引擎优化顾问的计算机的硬件特征，则假设该计算机有一个处理器和 1024 MB 内存。  
   
- 该依赖关系会影响分区建议，因为推荐的分区数取决于这两个值（处理器数和可用内存）。 如果您使用测试服务器来优化您的生产服务器，该依赖关系还会影响优化结果。 在该方案中，数据库引擎优化顾问使用 **xp_msver** 来提取生产服务器的硬件特征。 在测试服务器上的工作负荷优化之后，数据库引擎优化顾问将使用这些硬件属性来生成建议。 有关详细信息，请参阅 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+ 该依赖关系会影响分区建议，因为推荐的分区数取决于这两个值（处理器数和可用内存）。 如果您使用测试服务器来优化您的生产服务器，该依赖关系还会影响优化结果。 在该方案中，数据库引擎优化顾问使用 **xp_msver** 来提取生产服务器的硬件特征。 在测试服务器上的工作负荷优化之后，数据库引擎优化顾问将使用这些硬件属性来生成建议。 有关详细信息，请参阅 [xp_msver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  
   
 ## <a name="database-engine-tuning-advisor-tasks"></a>数据库引擎优化顾问任务  
  下表列出了常见的数据库引擎优化顾问任务以及描述如何执行这些任务的主题。  

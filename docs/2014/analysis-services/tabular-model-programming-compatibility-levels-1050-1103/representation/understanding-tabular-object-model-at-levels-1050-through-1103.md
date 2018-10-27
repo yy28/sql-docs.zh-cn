@@ -12,15 +12,15 @@ ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 615e36534923244202a6525f0a4881767ace9e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12ea22b773613fc274af29de1a28ba214a10cce4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164707"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148424"
 ---
 # <a name="understanding-the-tabular-object-model"></a>了解表格对象模型
-  表格模型是表、关系、层次结构、透视、度量值和关键绩效的逻辑表示形式。 本节介绍使用 AMO 的内部实现。 请参阅[使用分析管理对象开发&#40;AMO&#41; ](../../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)如果你未使用过 AMO 之前。  
+  表格模型是表、关系、层次结构、透视、度量值和关键绩效的逻辑表示形式。 本节介绍使用 AMO 的内部实现。 请参阅[使用分析管理对象开发&#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)如果你未使用过 AMO 之前。  
   
  此处的方法是自上而下的，表格模型中的所有相关对象逻辑上映射到 AMO 对象，并说明所需的交互或工作流。 可从 Codeplex 获取使用 AMO 创建表格模型的源代码示例“AMO 到表格”。 请注意，示例中的代码仅作为对此处所述逻辑概念的支持提供，不应用于生产环境中。 不提供对示例的支持或保修。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48164707"
  请参阅[关键绩效指标表示形式&#40;表格&#41;](tables-key-performance-indicator-representation.md)有关的详细说明如何创建和操作 KPI 表示形式。  
   
 ### <a name="partition-representation"></a>分区表示形式  
- 为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表。 其中的每个子集都是表的一个分区。 就 AMO 对象而言，分区表示形式具有一对一映射关系与<xref:Microsoft.AnalysisServices.Partition>和不不需要任何其他主要 AMO 对象。 请注意，这并不意味着 AMO 数据库对象中的所有包含对象可在建模时使用。  
+ 为便于操作，可以将一个表划分为不同的行子集，而将这些行子集组合在一起可形成表。 其中的每个子集都是表的一个分区。 就 AMO 对象而言，分区表示形式与 <xref:Microsoft.AnalysisServices.Partition> 之间存在一对一映射关系，并且不需要任何其他主要 AMO 对象。 请注意，这并不意味着 AMO 数据库对象中的所有包含对象可在建模时使用。  
   
  请参阅[分区表示形式&#40;表格&#41;](tables-partition-representation.md)有关的详细说明如何创建和操作分区表示形式。  
   

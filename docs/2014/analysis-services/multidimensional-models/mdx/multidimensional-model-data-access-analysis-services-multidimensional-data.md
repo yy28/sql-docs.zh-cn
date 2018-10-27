@@ -21,12 +21,12 @@ ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cf03599736be8dbec6666c6977543279607bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 329942006f640c8ade2477ee2ae4af69df717b6c
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203717"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148062"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多维模型数据访问（Analysis Services - 多维数据）
   使用本主题中的信息可以了解如何使用编程方法、脚本或客户端应用程序（内置用于连接您网络上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 服务器的支持）来访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多维数据。  
@@ -70,11 +70,11 @@ ms.locfileid: "48203717"
   
  [使用 MDX 查询多维数据](querying-multidimensional-data-with-mdx.md)  
   
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)  
   
- [MDX 查询基础知识&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 查询基础知识 (Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
- [MDX 脚本编写基础知识&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 脚本编写基础知识 (Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)  
   
 ##  <a name="bkmk_api"></a> 编程接口  
  如果要创建使用多维数据的自定义应用程序，访问数据所用的方法很可能属于以下类别之一：  
@@ -89,16 +89,16 @@ ms.locfileid: "48203717"
   
 |接口|Description|  
 |---------------|-----------------|  
-|Analysis Services 管理对象 (AMO)|AMO 是在代码中管理 Analysis Services 实例和多维数据库的主要对象模型。 例如，SQL Server Management Studio 使用 AMO 支持服务器和数据库管理。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](../analysis-management-objects/developing-with-analysis-management-objects-amo.md)。|  
-|ADOMD.NET|ADOMD.NET 是在自定义应用程序中创建和访问多维数据的主要对象模型。 可以在托管客户端应用程序中使用 ADOMD.NET，以便使用通用 Microsoft .NET Framework 数据访问接口来检索 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 信息。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](../adomd-net/developing-with-adomd-net.md) 和 [ADOMD.NET 客户端编程](../../multidimensional-models-adomd-net-client/adomd-net-client-programming.md)。|  
+|Analysis Services 管理对象 (AMO)|AMO 是在代码中管理 Analysis Services 实例和多维数据库的主要对象模型。 例如，SQL Server Management Studio 使用 AMO 支持服务器和数据库管理。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。|  
+|ADOMD.NET|ADOMD.NET 是在自定义应用程序中创建和访问多维数据的主要对象模型。 可以在托管客户端应用程序中使用 ADOMD.NET，以便使用通用 Microsoft .NET Framework 数据访问接口来检索 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 信息。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 和 [ADOMD.NET 客户端编程](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)。|  
 |Analysis Services OLE DB 访问接口 (MSOLAP.dll)|您可以使用本机 OLE DB 访问接口以编程方式从非托管 API 访问 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 有关详细信息，请参阅 [Analysis Services OLE DB 提供程序访问接口（Analysis Services - 多维数据）](../../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)。|  
-|架构行集|架构行集表是一种数据结构，其中包含关于在服务器上部署的多维模型的描述性信息，以及关于服务器上当前活动的信息。 作为编程人员，您可以通过在客户端应用程序中查询架构行集表，来检查存储在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例上的元数据并且可以从该实例中检索支持和监视信息。 可以对以下编程接口使用架构行集：OLE DB、OLE DB for Analysis Services、OLE DB for Data Mining 或 XMLA。 有关详细信息，请参阅 [Analysis Services 架构行集](../../schema-rowsets/analysis-services-schema-rowsets.md)。<br /><br /> 下面的列表说明了使用架构行集的几种方法：<br /><br /> 在 SQL Server Management Studio 或自定义报表中运行 DMV 查询，使用 SQL 语法访问架构行集。 有关详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。<br /><br /> 编写可调用架构行集的 ADOMD.NET 代码。<br /><br /> 直接对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例运行 XMLA `Discover` 方法以检索架构行集信息。 有关详细信息，请参阅 [Discover 方法 (XMLA)](../../xmla/xml-elements-methods-discover.md)。|  
+|架构行集|架构行集表是一种数据结构，其中包含关于在服务器上部署的多维模型的描述性信息，以及关于服务器上当前活动的信息。 作为编程人员，您可以通过在客户端应用程序中查询架构行集表，来检查存储在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例上的元数据并且可以从该实例中检索支持和监视信息。 可以对以下编程接口使用架构行集：OLE DB、OLE DB for Analysis Services、OLE DB for Data Mining 或 XMLA。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。<br /><br /> 下面的列表说明了使用架构行集的几种方法：<br /><br /> 在 SQL Server Management Studio 或自定义报表中运行 DMV 查询，使用 SQL 语法访问架构行集。 有关详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。<br /><br /> 编写可调用架构行集的 ADOMD.NET 代码。<br /><br /> 直接对 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例运行 XMLA `Discover` 方法以检索架构行集信息。 有关详细信息，请参阅 [Discover 方法 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)。|  
 |XMLA|XMLA 是可供 Analysis Services 编程人员使用的最低级别的 API，而且是所有 Analysis Services 数据访问方法中最基本的通用访问方法。 XMLA 是业界标准的基于 SOAP 的 XML 协议，它支持通过 HTTP 连接对所有标准多维数据源进行通用数据访问。 它使用 SOAP 来表示针对多维数据的请求和响应。 如果您的应用程序运行在 Windows 之外的平台上，则可以使用 XMLA 访问运行在网络中的 Windows 服务器上的多维数据库。 有关详细信息，请参阅 [在 Analysis Services 中使用 XMLA 开发](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)。|  
-|Analysis Services 脚本语言 (ASSL)|ASSL 是一个适用于 XMLA 协议的 Analysis Services 扩展的描述性术语。 ASSL 扩展支持 Analysis Services 在 XMLA 协议基本设置之外使用 XMLA 构造，添加了数据定义、数据操作和数据控制支持。  XMLA 协议描述了 Execute 和 Discover 方法，ASSL 在此之外还添加了以下功能：<br /><br /> XMLA 脚本<br /><br /> XMLA 对象定义<br /><br /> XMLA 命令<br /><br /> <br /><br /> 有关详细信息，请参阅[使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。|  
+|Analysis Services 脚本语言 (ASSL)|ASSL 是一个适用于 XMLA 协议的 Analysis Services 扩展的描述性术语。 ASSL 扩展支持 Analysis Services 在 XMLA 协议基本设置之外使用 XMLA 构造，添加了数据定义、数据操作和数据控制支持。  XMLA 协议描述了 Execute 和 Discover 方法，ASSL 在此之外还添加了以下功能：<br /><br /> XMLA 脚本<br /><br /> XMLA 对象定义<br /><br /> XMLA 命令<br /><br /> <br /><br /> 有关详细信息，请参阅 [使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [连接到 Analysis Services](../../instances/connect-to-analysis-services.md)   
- [开发使用 Analysis Services 脚本语言&#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
+ [使用 Analysis Services 脚本语言 (ASSL) 开发](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [在 Analysis Services 中使用 XMLA 开发](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   
  [表格模型数据访问](../../tabular-models/tabular-model-data-access.md)  
   

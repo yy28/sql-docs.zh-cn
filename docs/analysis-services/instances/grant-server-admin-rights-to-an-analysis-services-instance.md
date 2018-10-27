@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1ad46e78f5accb54a3870f0c12a8442dc76201b9
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: e437507d139959c21f723f8a674ca4879570339f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36760092"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145672"
 ---
 # <a name="grant-server-admin-rights-to-an--analysis-services-instance"></a>向 Analysis Services 实例授予服务器管理员权限
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "36760092"
   
  默认情况下，还将为本地 Administrators 组的成员授予 Analysis Server 中的管理权限。 虽然未显式授予本地组 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务管理员角色中的成员身份，但是本地管理员可创建数据库、添加用户和权限以及执行系统管理员允许的任何其他任务。 管理员权限的隐式授权可配置。 它由 **BuiltinAdminsAreServerAdmins** 服务器属性确定，该属性默认情况下设置为 **true** 。 您可在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中更改此属性。 有关详细信息，请参阅 [Security Properties](../../analysis-services/server-properties/security-properties.md)。  
   
- 安装后，可以修改角色成员身份，以添加需要对该服务拥有完全权限的任何其他用户。 您还可以使用分析管理对象 (AMO) 来管理服务器角色。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
+ 安装后，可以修改角色成员身份，以添加需要对该服务拥有完全权限的任何其他用户。 您还可以使用分析管理对象 (AMO) 来管理服务器角色。 有关详细信息，请参阅[使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在服务器、 数据库和对象级处理和查询提供粒度越来越细的角色的进度。 有关如何使用这些角色的说明，请参阅[角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)。  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供粒度越来越细的角色在服务器、数据库和对象级处理和查询的进度。 有关如何使用这些角色的说明，请参阅[角色和权限 (Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)。  
   
 ## <a name="modify-server-role-membership"></a>修改服务器角色成员身份  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36760092"
 ## <a name="nt-servicessastelemetry-account"></a>NT Service\SSASTelemetry 帐户  
  “NT Service/SSASTelemetry”是在安装过程中创建的低特权计算机帐户，专门用于运行客户体验改善计划 (CEIP) 服务的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实现。 此服务需要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的管理员权限来运行多个发现命令。 有关详细信息，请参阅 [Customer Experience Improvement Program for SQL Server Data Tools](../../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md) 和 [Microsoft SQL Server Privacy Statement](http://go.microsoft.com/fwlink/?LinkID=868444) 。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [授予对对象和操作的访问权限 (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [安全角色（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   

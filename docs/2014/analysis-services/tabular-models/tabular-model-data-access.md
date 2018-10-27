@@ -11,12 +11,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 437cbd485f07a5d6ee8b367e209b18b09507a88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d3206e4df57c42c0245e13757cdcac1686a313
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178467"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148402"
 ---
 # <a name="tabular-model-data-access"></a>表格模型数据访问
   Analysis Services 中的表格模型数据库可由用于检索多维模型中的数据或元数据的大多数相同的客户端、接口和语言访问。 有关详细信息，请参阅[多维模型数据访问（Analysis Services - 多维数据）](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "48178467"
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端通过向指定的数据源发送请求来确定指定模型的结构，这将返回一个架构，客户端可使用此架构来创建针对作为数据源的模型的查询并执行基于数据的操作。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用户界面中用于筛选数据、执行计算或聚合以及显示关联数据的后续操作由客户端控制且不能以编程方式来执行这些操作。  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端向模型发送的查询会作为 DAX 语句发出，您可以在模型上设置跟踪来进行监视。  客户端还向服务器发出了有关初始架构定义的请求，该定义将根据概念性架构定义语言 (CSDL) 呈现。 有关详细信息，请参阅 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 客户端向模型发送的查询会作为 DAX 语句发出，您可以在模型上设置跟踪来进行监视。  客户端还向服务器发出了有关初始架构定义的请求，该定义将根据概念性架构定义语言 (CSDL) 呈现。 有关详细信息，请参阅 [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 管理承载表格模型的实例并查询这些实例中的元数据和数据。 可以处理模型或模型中的对象、创建和管理分区以及设置用于管理数据访问的安全性。 有关详细信息，请参阅以下主题：  
@@ -53,7 +53,7 @@ ms.locfileid: "48178467"
   
 -   打开 **“查询”** 窗口后，无法更改 XMLA 查询窗口的数据库上下文。 因此，如果您需要向其他数据库或其他实例发送查询，则必须使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 打开该数据库或实例，并在该上下文中打开新的 **“XMLA 查询”** 窗口。  
   
- 可以创建针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型的跟踪，就像对多维解决方案执行此操作一样。 在此版本中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了许多新事件，可用于跟踪内存使用率、查询和处理操作以及文件使用率。 有关详细信息，请参阅 [Analysis Services 跟踪事件](../trace-events/analysis-services-trace-events.md)。  
+ 可以创建针对 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型的跟踪，就像对多维解决方案执行此操作一样。 在此版本中， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供了许多新事件，可用于跟踪内存使用率、查询和处理操作以及文件使用率。 有关详细信息，请参阅 [Analysis Services 跟踪事件](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)。  
   
 > [!WARNING]  
 >  如果对表格模型数据库进行跟踪，则可能会显示一些归类为 DMX 查询的事件。 但是，表格模型数据不支持数据挖掘，并且数据库上执行的 DMX 查询仅适用于模型元数据的 SELECT 语句。 这些事件仅归类为 DMX，因为 MDX 使用的是相同的分析器框架。  
@@ -74,7 +74,7 @@ ms.locfileid: "48178467"
 ### <a name="csdl"></a>CSDL  
  虽然概念性架构定义语言本身并不是查询语言，但可使用它检索有关模型和模型元数据的信息，然后可使用这些信息来创建报告或创建针对模型的查询。  
   
- 有关如何在表格模型中使用 CSDL 的信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
+ 有关如何在表格模型中使用 CSDL 的信息，请参阅[用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)。  
   
 ## <a name="programmatic-interfaces"></a>编程接口  
  用于与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 表格模型进行交互的主要接口为架构行集、XMLA 以及由 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]提供的查询客户端和查询工具。  
@@ -84,13 +84,13 @@ ms.locfileid: "48178467"
   
 -   Codeplex 上的表格模型 AMO 示例  
   
--   [使用动态管理视图&#40;Dmv&#41;若要监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用动态管理视图 (DMV) 监视 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  可以在非托管客户端应用程序中使用 Analysis Services 9.0 OLE DB 访问接口以支持对表格模型的 OLE DB 访问。 启用表格模型访问需要更新版本的 Analysis Services OLE DB 访问接口。 有关用于表格模型的提供程序的详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 。  
   
  还可以直接从 Analysis Services 实例以基于 XML 的格式检索数据。 可以使用 DISCOVER_CSDL_METADATA 行集来检索表格模型的架构，也可以将 EXECUTE 或 DISCOVER 命令与现有 ASSL 元素、对象或属性一起使用。 有关详细信息，请参阅下列资源：  
   
--   [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
+-   [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>操作 Analysis Services 对象  
  可以使用 XMLA 命令或使用 AMO 来创建、修改、删除和处理表格模型及其对象（包括表、列、透视、度量值和分区）。 已同时更新 AMO 和 XMLA 以支持表格模型中用于增强报告和建模的其他属性。  
@@ -106,11 +106,11 @@ ms.locfileid: "48178467"
 ### <a name="schema-rowsets"></a>架构行集  
  客户端应用程序可使用架构行集来检查表格模型的元数据并从 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器中检索支持和监视信息。 此版本的 SQL Server 中不仅添加了新的架构行集，并且现有架构行集得到了扩展以支持与表格模型相关的功能并增强 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的监视与性能分析。  
   
--   [DISCOVER_CALC_DEPENDENCY 行集](../schema-rowsets/xml/discover-calc-dependency-rowset.md)  
+-   [DISCOVER_CALC_DEPENDENCY 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
   
      用于跟踪表格模型中列和参考之间的依赖关系的新架构行集。  
   
--   [DISCOVER_CSDL_METADATA 行集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)  
+-   [DISCOVER_CSDL_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
   
      用于获取表格模型的 CSDL 表示形式的新架构行集。  
   
@@ -118,21 +118,21 @@ ms.locfileid: "48178467"
   
      用于监视 SQL Server 扩展事件的新架构行集。 有关详细信息，请参阅[使用 SQL Server 扩展事件&#40;XEvents&#41;监视 Analysis services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
   
--   [DISCOVER_TRACES 行集](../schema-rowsets/xml/discover-traces-rowset.md)  
+-   [DISCOVER_TRACES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
   
      可使用新 `Type` 列按类别筛选跟踪。 有关详细信息，请参阅[为重播创建事件探查器跟踪 (Analysis Services)](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
--   [MDSCHEMA_HIERARCHIES 行集](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
+-   [MDSCHEMA_HIERARCHIES 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
   
-     新`STRUCTURE_TYPE`枚举支持的表格模型中创建用户定义层次结构的标识。 有关详细信息，请参阅[层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)。  
+     新 `STRUCTURE_TYPE` 枚举支持在表格模型中创建的用户定义的层次结构的标识。 有关详细信息，请参阅[层次结构（SSAS 表格）](hierarchies-ssas-tabular.md)。  
   
  此版本中不包含针对 OLE DB for Data Mining 架构行集的更新。  
   
 > [!WARNING]  
 >  您无法在已在 DirectQuery 模式下部署的数据库中使用 MDX 或 DMX 查询；因此，如果您需要对使用架构行集的 DirectQuery 模型执行查询，则您应使用 XMLA 而非关联的 DMV。 对于将服务器的结果作为一个整体返回的 DMV（例如，SELECT * from $system.DBSCHEMA_CATALOGS 或 DISCOVER_TRACES），您可以对在缓存模式下部署的数据库内容执行查询。  
   
-## <a name="see-also"></a>请参阅  
- [连接到表格模型数据库&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)   
+## <a name="see-also"></a>另请参阅  
+ [连接到表格模型数据库 (SSAS)](connect-to-a-tabular-model-database-ssas.md)   
  [PowerPivot 数据访问](../power-pivot-sharepoint/power-pivot-data-access.md)   
  [连接到 Analysis Services](../instances/connect-to-analysis-services.md)  
   

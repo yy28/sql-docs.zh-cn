@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: a162bc882d65007a85032c234c37b769ee17b9ab
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120376"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100408"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>演示内存中 OLTP 的 AdventureWorks 扩展
     
@@ -23,7 +23,7 @@ ms.locfileid: "49120376"
  此示例演示属于 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 一部分的新[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 功能。 它演示新的内存优化表和本机编译的存储过程，可以用于展示 [!INCLUDE[hek_2](../includes/hek-2-md.md)]的性能优势。  
   
 > [!NOTE]  
->  若要查看 SQL Server 2016 的本主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
+>  若要查看 SQL Server 2016 的本主题，请参阅 [演示内存中 OLTP 的 AdventureWorks 扩展](https://msdn.microsoft.com/library/mt465764.aspx)  
   
  该示例将 AdventureWorks 数据库中的 5 个表迁移到内存优化表，并包括销售订单处理演示工作负荷。 可以使用此演示工作负荷了解在服务器上使用 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 的性能优势。  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- 可以看到共有约 6.5GB 的数据。 请注意之前插入销售订单表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引的大小，并作为索引的大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
+ 可以看到共有约 6.5GB 的数据。 请注意，表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 上的索引大小与插入销售订单之前的索引大小相同。 索引大小未更改是因为这两个表都使用哈希索引，而哈希索引是静态的。  
   
 #### <a name="after-demo-reset"></a>演示重置之后  
  存储过程 Demo.usp_DemoReset 可以用于重置演示。 它删除表 SalesOrderHeader_inmem 和 SalesOrderDetail_inmem 中的数据，并对原始表 SalesOrderHeader 和 SalesOrderDetail 中的数据重设种子。  
@@ -874,7 +874,7 @@ ORDER BY state, file_type
   
  在此例中，有两个检查点文件对处于“尚在构造”状态，这意味着多个文件对已变为“尚在构造”状态（可能是因为工作负荷的并发级别较高）。 多个并发线程同时需要一个新文件对，因而将一对从“预先创建”变为“尚在构造”。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [内存中 OLTP（内存中优化）](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

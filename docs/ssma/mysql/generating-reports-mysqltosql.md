@@ -12,12 +12,12 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b62dab641cf2327e999fdf26e33d10b983188c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e69c48d9f5c026f6c71b80a4a9a67ed83c989c25
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099618"
 ---
 # <a name="generating-reports-mysqltosql"></a>生成报告 (MySQLToSQL)
 在对象树中级别的 SSMA 控制台中生成使用命令来执行某些活动的报告。  
@@ -143,6 +143,6 @@ ms.locfileid: "47722665"
   
 -   脚本失败  
   
-## <a name="see-also"></a>请参阅  
-[执行 SSMA 控制台 (MySQL)](http://msdn.microsoft.com/en-us/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
+## <a name="see-also"></a>另请参阅  
+[执行 SSMA 控制台 (MySQL)](http://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

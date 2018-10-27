@@ -19,21 +19,21 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44624d6e223c00d76142b2b0859e8b312647da9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186177"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50144912"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>附加和分离 Analysis Services 数据库
   在某些情况下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 经常需要将数据库脱机一段时间，然后在同一服务器实例或其他服务器实例上将数据库恢复联机。 根据业务需要（例如，将数据库移到另一个磁盘以获得更好的性能、为数据库扩容获取空间或升级产品），经常需要进行上述操作。 对于上述所有情况的详细信息，`Attach`并`Detach`命令启用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 使数据库脱机并将其恢复联机状态后不费吹灰之力。  
   
 ## <a name="attach-and-detach-commands"></a>附加和分离命令。  
- `Attach`命令，您可以使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 `Detach` 命令可使数据库与服务器脱机。  
+ 通过 `Attach` 命令可使已脱机的数据库恢复联机。 可以将该数据库附加到原始的服务器实例，也可以附加到另一个实例。 在附加数据库时，用户可以为该数据库指定 **ReadWriteMode** 设置。 使用 `Detach` 命令可使数据库与服务器脱机。  
   
 ## <a name="attach-and-detach-usage"></a>附加和分离命令的用法  
- `Attach` 命令用于使现有数据库结构联机。 如果数据库是在`ReadWrite`模式下，它可以是附加到服务器实例仅一次。 但是，如果数据库是在`ReadOnly`模式下，它可以将其多次附加到不同的服务器实例。 但是，不能将同一数据库多次附加到同一服务器实例。 即使已将数据复制到不同的文件夹中，在尝试多次附加同一数据库时也会引发错误。  
+ `Attach` 命令用于使现有数据库结构联机。 如果该数据库是在 `ReadWrite` 模式下附加的，则只能将其附加到服务器实例一次。 但是，如果此数据库是在 `ReadOnly` 模式下附加的，则可以将其多次附加到不同的服务器实例。 但是，不能将同一数据库多次附加到同一服务器实例。 即使已将数据复制到不同的文件夹中，在尝试多次附加同一数据库时也会引发错误。  
   
 > [!IMPORTANT]  
 >  如果分离数据库时需要输入密码，则附加数据库时需要输入相同的密码。  
@@ -52,18 +52,18 @@ ms.locfileid: "48186177"
  `Attach` 和 `Detach` 命令必须作为单独的操作执行。 在同一事务中，不能将它们与其他操作一起执行。 此外，`Attach`和`Detach`命令都是原子事务命令。 这意味着操作只有成功或失败两种情况。 数据库不会处于未完成的状态。  
   
 > [!IMPORTANT]  
->  执行所需服务器或数据库管理员权限`Detach`命令。  
+>  执行 `Detach` 命令需要服务器或数据库管理员权限。  
   
 > [!IMPORTANT]  
 >  执行 `Attach` 命令需要服务器管理员权限。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [移动 Analysis Services 数据库](move-an-analysis-services-database.md)   
- [数据库 Readwritemode](database-readwritemodes.md)   
- [切换 ReadOnly 和 ReadWrite 模式之间的 Analysis Services 数据库](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [分离元素](../xmla/xml-elements-commands/detach-element.md)   
- [Attach 元素](../xmla/xml-elements-commands/attach-element.md)  
+ [数据库 ReadWriteMode](database-readwritemodes.md)   
+ [在 ReadOnly 和 ReadWrite 模式之间切换 Analysis Services 数据库](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
+ [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

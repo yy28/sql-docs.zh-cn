@@ -13,17 +13,17 @@ ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdaa5e0fe92c09b728540d28aa71bdc786d8cae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 36ad3870fbbbfbcb457e54929bcd4729b7814d8b
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149177"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147712"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>“程序集属性”对话框（Analysis Services - 多维数据）
   可以使用 **中的** “程序集属性” [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 对话框，设置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 数据库中的程序集引用的属性。 通过在“对象资源管理器”中右键单击某个程序集，并选择“属性”，可以显示“程序集属性”对话框。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
   
 |术语|定义|  
 |----------|----------------|  
@@ -35,9 +35,9 @@ ms.locfileid: "48149177"
 |**类型**|显示程序集引用的类型。 将显示以下值：<br /><br /> **.NET 程序集**： 程序集引用所引用的[!INCLUDE[msCoName](../includes/msconame-md.md)].NET Framework 程序集。<br /><br /> **COM DLL**： 程序集引用表示对 COM 库。|  
 |**数据源**|显示程序集引用的源。 此属性通常包含程序集引用所引用的程序集的完整路径和文件名。|  
 |**权限集**|选择用来确定对程序集引用的访问权限的权限集。 有关此属性的可用值的详细信息，请参阅<xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>。|  
-|**模拟信息**|选择在访问程序集引用时要使用的模拟信息。 有关此属性的可用值的详细信息，请参阅 [ImpersonationInfo 元素 (ASSL)](scripting/properties/impersonationinfo-element-assl.md)|  
+|**模拟信息**|选择在访问程序集引用时要使用的模拟信息。 有关此属性的可用值的详细信息，请参阅 [ImpersonationInfo 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Analysis Services 设计器和对话框&#40;多维数据&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多维模型程序集管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   

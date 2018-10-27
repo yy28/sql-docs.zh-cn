@@ -1,7 +1,7 @@
 ---
 title: 什么是数据迁移助手 (SQL Server) 中的新增功能 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/28/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,18 +11,33 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 31c75b46eb01e5d892a7930ab0bec84b19e02a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094c49afc97436983417e1916091b150a50d8c4b
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655647"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643945"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>数据迁移助手的新增功能
 本文列出了每个版本中添加的数据迁移助手 (DMA)。
+
+## <a name="dma-v41"></a>DMA 4.1 版
+DMA 4.1 版版本引入了对在本地 SQL Server 数据库迁移到 Azure SQL 数据库托管实例的综合评估的支持。
+
+评估工作流可帮助你检测可能会影响迁移到 Azure SQL 数据库托管实例的以下问题：
+
+- **不受支持或部分支持的功能**。 DMA 评估使用的部分支持或在目标 Azure SQL 数据库托管实例上不受支持的功能的源 SQL Server 数据库。 然后，该工具提供了一系列全面的建议，在 Azure 中，并缓解步骤，以便客户可以考虑此信息规划其迁移项目时可用的替代方法。
+
+- **兼容性问题**。 DMA 还标识与相关的以下几个方面的兼容性问题：
+
+    - 重大更改： 可能会中断迁移到目标数据库的功能的特定架构对象。  我们建议在数据库迁移后修复这些架构对象。
+    - 行为更改： 报告的架构对象可能会继续运行，但它们可能会表现出不同的行为，例如性能下降。
+    - 信息性问题： 这些对象不会影响迁移，但可能已弃用的功能的 SQL Server 版本。
+
+评估完成后，使用我们[Azure 数据库迁移服务](https://azure.microsoft.com/services/database-migration/)(DMS) 来执行迁移到 Azure SQL 数据库托管实例将 SQL Server 数据库。  同时支持 DMS[脱机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance)（一次性） 和[联机](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online)（最小停机时间） 数据库迁移到 Azure SQL 数据库托管实例。
 
 ## <a name="dma-v40"></a>DMA v4.0
 DMA v4.0 版本引入了 Azure SQL 数据库 SKU 的建议功能，它使用户能够确定建议基于从托管数据库的计算机收集性能计数器的 Azure SQL 数据库 SKU 的最小。 此功能提供了与定价层、 计算级别和最大数据大小，以及每月预计的成本相关的建议。 它还提供预配所有数据库到 Azure 中大容量的能力。
@@ -110,5 +125,5 @@ DMA 的 1.0 版版本是初始版本，它提供了：
     - 存储器
 -   若要执行评估的现代用户体验。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [数据迁移助手概述](../dma/dma-overview.md)

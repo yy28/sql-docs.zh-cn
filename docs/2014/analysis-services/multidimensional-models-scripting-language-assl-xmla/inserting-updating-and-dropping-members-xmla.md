@@ -21,15 +21,15 @@ ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d035cf5891c12857fcdcbc2da7df2304eb10dcdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1c30b916d910b93b53ae10a9eefaa19d45c957a
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171487"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148022"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>插入、更新和删除成员 (XMLA)
-  可以使用[插入](../xmla/xml-elements-commands/insert-element-xmla.md)，[更新](../xmla/xml-elements-commands/update-element-xmla.md)，并[删除](../xmla/xml-elements-commands/drop-element-xmla.md)命令在 XML for Analysis (XMLA) 分别插入、 更新或删除从启用写操作的维度的成员。 有关启用写操作的维度的详细信息，请参阅[Write-Enabled 维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
+  可以使用[插入](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)，[更新](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)，并[删除](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)命令在 XML for Analysis (XMLA) 分别插入、 更新或删除从启用写操作的维度的成员。 有关启用写操作的维度的详细信息，请参阅[Write-Enabled 维度](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)。  
   
 ## <a name="inserting-new-members"></a>插入新成员  
  `Insert` 命令可将新成员插入启用写操作的维度的指定特性中。  
@@ -48,9 +48,9 @@ ms.locfileid: "48171487"
   
  `Insert` 命令仅具有两个属性：  
   
--   [对象](../xmla/xml-elements-properties/object-element-xmla.md)属性，其中包含成员的维度中要插入的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
+-   [对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)属性，其中包含成员的维度中要插入的对象引用。 该对象引用包含维度的数据库标识符、多维数据集标识符和维度标识符。  
   
--   [特性](../xmla/xml-elements-properties/attributes-element-xmla.md)属性，其中包含一个或多个[属性](../xmla/xml-elements-properties/attribute-element-xmla.md)元素用于标识是用来插入成员的特性。 每个 `Attribute` 元素都标识一个特性，并为要添加到已标识特性的单个成员提供名称、值、翻译、一元运算符、自定义汇总、自定义汇总属性以及已跳过的级别。  
+-   [特性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attributes-element-xmla)属性，其中包含一个或多个[属性](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/attribute-element-xmla)元素用于标识是用来插入成员的特性。 每个 `Attribute` 元素都标识一个特性，并为要添加到已标识特性的单个成员提供名称、值、翻译、一元运算符、自定义汇总、自定义汇总属性以及已跳过的级别。  
   
     > [!NOTE]  
     >  必须包括 `Attribute` 元素的所有属性。 否则，可能会出错。  
@@ -77,13 +77,13 @@ ms.locfileid: "48171487"
     > [!NOTE]  
     >  必须包括 `Attribute` 元素的所有属性。 否则，可能会出错。  
   
--   [其中](../xmla/xml-elements-properties/where-element-xmla.md)属性，其中包含一个或多个`Attribute`约束是用来更新成员的特性的元素。 `Where`属性，请务必限制`Update`命令到成员的特定实例。 如果`Where`属性未指定，则更新给定成员的所有实例。 例如，有三个客户，您希望将他们的市县名称从 Redmond 更改为 Bellevue。 若要更改市县名称，您必须提供 `Where` 属性，该属性将标识 Customer 特性的三个成员中应更改其 City 特性的成员。 如果您不提供此 `Where` 属性，则运行 `Update` 命令后，其市县名称当前为 Redmond 的每个客户的市县名称都将更改为 Bellevue。  
+-   [其中](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla)属性，其中包含一个或多个`Attribute`约束是用来更新成员的特性的元素。 `Where`属性，请务必限制`Update`命令到成员的特定实例。 如果`Where`属性未指定，则更新给定成员的所有实例。 例如，有三个客户，您希望将他们的市县名称从 Redmond 更改为 Bellevue。 若要更改市县名称，您必须提供 `Where` 属性，该属性将标识 Customer 特性的三个成员中应更改其 City 特性的成员。 如果您不提供此 `Where` 属性，则运行 `Update` 命令后，其市县名称当前为 Redmond 的每个客户的市县名称都将更改为 Bellevue。  
   
     > [!NOTE]  
     >  除了新成员以外，`Update` 命令只能更新 `Where` 子句中未包括的特性的特性键值。 例如，更新客户时不能更新市县名称；否则，会更改所有客户的市县名称。  
   
 ### <a name="updating-members-in-parent-attributes"></a>更新父特性中的成员  
- 为了支持父特性`Update`命令具有可选[MoveWithDescendants](../xmla/xml-elements-properties/movewithdescendants-element-xmla.md)属性。 如果将 `MoveWithDescendants` 属性设置为 True，则表示当父成员的标识符发生更改时，该父成员的后代也应与该父成员一起移动。 如果将此值设置为 False，则移动某父成员将导致该父成员的直接后代提升到该父成员先前所处的级别。  
+ 为了支持父特性`Update`命令具有可选[MoveWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)属性。 如果将 `MoveWithDescendants` 属性设置为 True，则表示当父成员的标识符发生更改时，该父成员的后代也应与该父成员一起移动。 如果将此值设置为 False，则移动某父成员将导致该父成员的直接后代提升到该父成员先前所处的级别。  
   
  更新父特性中的成员时，`Update` 命令无法更新其他特性中的成员。  
   
@@ -106,16 +106,16 @@ ms.locfileid: "48171487"
     >  `Attribute` 命令中包含的 `Drop` 元素必须仅包含 `AttributeName` 和 `Keys` 属性。 否则，可能会出错。  
   
 ### <a name="dropping-members-in-parent-attributes"></a>删除父特性中的成员  
- 设置[DeleteWithDescendants](../xmla/xml-elements-properties/deletewithdescendants-element-xmla.md)属性指示父成员的后代也应删除与父成员。 如果将此值设置为 False，则父成员的直接后代将提升到该父成员先前所处的级别。  
+ 设置[DeleteWithDescendants](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/deletewithdescendants-element-xmla)属性指示父成员的后代也应删除与父成员。 如果将此值设置为 False，则父成员的直接后代将提升到该父成员先前所处的级别。  
   
 > [!IMPORTANT]  
 >  用户只需删除父成员的权限，即可删除父成员及其后代。 用户无需删除后代的权限。  
   
-## <a name="see-also"></a>请参阅  
- [Drop 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/drop-element-xmla.md)   
- [插入元素&#40;XMLA&#41;](../xmla/xml-elements-commands/insert-element-xmla.md)   
- [Update 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/update-element-xmla.md)   
- [定义和标识对象&#40;XMLA&#41;](../xmla/xml-elements-objects.md)   
+## <a name="see-also"></a>另请参阅  
+ [Drop 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
+ [插入元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
+ [Update 元素&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   
+ [定义和标识对象&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)   
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

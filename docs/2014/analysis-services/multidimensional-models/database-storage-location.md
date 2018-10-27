@@ -13,22 +13,22 @@ ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c4f46a78941b527b809fd17d7d82946cce1b8af
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216537"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148192"
 ---
 # <a name="database-storage-location"></a>数据库存储位置
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望某个数据库驻留在服务器数据文件夹之外。 这些情况通常是由于业务需要，如提高性能或扩展存储。 对于这些情况下，`DbStorageLocation`数据库属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 可以在本地磁盘或网络设备中指定的数据库位置。  
   
 ## <a name="dbstoragelocation-database-property"></a>DbStorageLocation 数据库属性  
- `DbStorageLocation`数据库属性指定的文件夹位置[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]创建和管理所有数据库数据和元数据文件。 所有元数据文件都存储在`DbStorageLocation`文件夹中的，除数据库元数据文件，它存储在服务器数据文件夹之外。 有两个重要注意事项设置的值时`DbStorageLocation`数据库属性：  
+ `DbStorageLocation` 数据库属性指定了 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建和管理所有数据库数据和元数据文件的文件夹。 除数据库元数据文件之外（它存储在服务器数据文件夹中），所有元数据文件都存储在 `DbStorageLocation` 文件夹中。 在设置 `DbStorageLocation` 数据库属性的值时，需考虑两个重要的注意事项：  
   
--   `DbStorageLocation`数据库属性必须设置为现有 UNC 文件夹路径或空字符串。 空字符串是服务器数据文件夹的默认值。 如果该文件夹不存在，则在执行 `Create`、`Attach`、或 `Alter` 命令时会产生错误。  
+-   必须将 `DbStorageLocation` 数据库属性设置为现有 UNC 文件夹路径或空字符串。 空字符串是服务器数据文件夹的默认值。 如果该文件夹不存在，则在执行 `Create`、`Attach`、或 `Alter` 命令时会产生错误。  
   
--   `DbStorageLocation`数据库属性不能设置为指向服务器数据文件夹或任何一个子文件夹。 如果该位置指向服务器数据文件夹或它的任何一个子文件夹，则在执行 `Create`、`Attach`、或 `Alter` 命令时会产生错误。  
+-   不能将 `DbStorageLocation` 数据库属性设置为指向服务器数据文件夹或它的任何一个子文件夹。 如果该位置指向服务器数据文件夹或它的任何一个子文件夹，则在执行 `Create`、`Attach`、或 `Alter` 命令时会产生错误。  
   
 > [!IMPORTANT]  
 >  建议您设置 UNC 路径以使用存储区域网络 (SAN)、基于 iSCSI 的网络或本地附加的磁盘。 网络共享的任何 UNC 路径或任何长滞后时间远程存储解决方案导致不支持的安装.  
@@ -42,13 +42,13 @@ ms.locfileid: "48216537"
 > [!IMPORTANT]  
 >  不应使用 `Alter` 命令更改数据库存储位置。 相反，我们建议使用一系列`Detach` / `Attach`数据库命令 (请参阅[移动 Analysis Services 数据库](move-an-analysis-services-database.md)，[附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)).  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](move-an-analysis-services-database.md)   
- [DbStorageLocation 元素](../xmla/xml-elements-properties/dbstoragelocation-element.md)   
- [创建元素&#40;XMLA&#41;](../xmla/xml-elements-commands/create-element-xmla.md)   
- [附加元素](../xmla/xml-elements-commands/attach-element.md)   
- [Synchronize 元素&#40;XMLA&#41;](../xmla/xml-elements-commands/synchronize-element-xmla.md)  
+ [DbStorageLocation 元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
+ [Synchronize 元素 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

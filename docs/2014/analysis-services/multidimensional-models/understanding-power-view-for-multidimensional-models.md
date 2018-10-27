@@ -11,12 +11,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10d93a9894fe9d325f20303ecad4b4a8415e1c61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d2e51be57b608ab9befd537c997d31b893ec6a9
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169007"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148072"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>了解多维模型的 Power View
   本文介绍 Microsoft SQL Server 2014 中用于多维模型的 Power View 功能，并为希望在组织中实现多维模型的 Power View 的 BI 专业人员和管理员提供重要信息。  
@@ -92,7 +92,7 @@ ms.locfileid: "48169007"
   
  **作为变体的度量值**  
   
- ![在 Power View 中不可聚合的层次](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
+ ![Power View 中不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ### <a name="implicit-measures"></a>隐式度量值  
   表格模型允许用户创建“隐式”度量值，如对字段的计数、求和或计算平均值。 对于多维模型，因为维度属性数据以不同方式存储，查询隐式度量值可能需要很长时间。 因此，在 Power View 中不提供隐式度量值。  
@@ -141,7 +141,7 @@ ms.locfileid: "48169007"
   
  **Power View 中不可聚合的层次结构**  
   
- ![在 Power View 中不可聚合的层次](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
+ ![Power View 中不可聚合的层次结构](../media/daxmd-nonaggrattrib.gif "Power View 中不可聚合的层次结构")  
   
 ## <a name="images"></a>映像  
  Power View 可呈现图像。 在多维模型中，您向 Power View 提供图像的方式之一是公开图像的包含 URL（统一资源定位符）的列。 在此版本中，Analysis Services 支持将维度属性标记为类型 ImageURL。 然后通过表格元数据将此数据类型提供给 Power View。 Power View 然后可以下载并在可视化对象内显示 URL 中指定的图像。  
@@ -155,7 +155,7 @@ ms.locfileid: "48169007"
   
  **Power View 中的父子层次结构**  
   
- ![父-子层次结构](../media/daxmd-ssdt-hierarchies.gif "父-子层次结构")  
+ ![父子层次结构](../media/daxmd-ssdt-hierarchies.gif "父子层次结构")  
   
 ## <a name="perspectives-and-translations"></a>透视和翻译  
  透视是多维数据集的视图，其中仅在客户端工具中显示某些维度或度量值组。 您可以指定透视名称作为 Cube 连接字符串属性的值。 例如，在以下连接字符串中，“Direct Sales”是多维模型中的一个透视：  
@@ -226,7 +226,7 @@ ms.locfileid: "48169007"
   
  返回的 CSDL out 文档将模型表示为命名空间，其中包含实体、关联和属性。  
   
- 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](../tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
+ 有关表格模型的 CSDLBI 注释的详细信息，请参阅 MSDN 上的 [用于商业智能的 CSDL 注释技术参考](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 和 [\[MS-CSDLBI\]：带商业智能注释的概念架构定义文件格式](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)。  
   
 ## <a name="client-help-on-officecom"></a>Office.com 上的客户端帮助  
  Office.com 上提供以下文章来帮助用户了解多维模型对象在 Power View 中的显示方式以及如何创建示例报表：  

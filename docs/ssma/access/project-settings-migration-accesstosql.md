@@ -13,12 +13,12 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8cec81d0e6281ce9f57d9d689bd5dfdc2d6feb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50556ffbe1ea88df7e62fdb75b9c9d260a0bd662
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738205"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099528"
 ---
 # <a name="project-settings-migration-accesstosql"></a>项目设置 （迁移） (AccessToSQL)
 迁移项目设置允许你配置如何将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
@@ -29,7 +29,7 @@ ms.locfileid: "47738205"
   
 -   使用**默认项目设置**对话框来设置所有项目的配置选项。 若要访问的迁移设置中，在**工具**菜单中，选择**默认项目设置**，选择项目类型中的**迁移目标版本**组合框您要访问的设置，请单击**常规**的左窗格中，并单击底部**迁移**。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **检查约束**  
 指定当其将数据添加到表 SSMA 是否应检查约束。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "47738205"
 **批大小**  
 在数据迁移过程中使用的批大小。 在每个批处理后都会记录事务。 默认情况下，所有方案的批大小为 10000。  
   
-## <a name="see-also"></a>请参阅  
-[用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>另请参阅  
+[用户界面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

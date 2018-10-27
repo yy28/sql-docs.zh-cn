@@ -1,18 +1,18 @@
 ---
 title: 什么是 SQL Server 大数据群集控制器？ | Microsoft Docs
-description: ''
+description: 本指南介绍了 SQL Server 2019 大数据群集的控制器。
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cb6a999c1ca791eea683e71e37ac788b8018672e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050869"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>什么是 SQL Server 大数据群集控制器？
 
@@ -69,4 +69,4 @@ mssqlctl create cluster <name of your cluster>
 
 To learn more about the SQL Server big data clusters, see the following overview:
 
-- [What is SQL Server 2019 big data clusters?](big-data-cluster-overview.md)
+- [What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)

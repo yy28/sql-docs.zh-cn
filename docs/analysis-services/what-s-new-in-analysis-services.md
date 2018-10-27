@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 859214876b5c62078ccdfee72bf23caf3904df07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 70fb50abdd9411e5f34b704d53e66302270fdfd7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38016084"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145992"
 ---
 # <a name="what39s-new-in-analysis-services"></a>什么&#39;Analysis Services 中
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -94,7 +94,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="powershell-for-tabular-models"></a>面向表格模型的 PowerShell    
  此版本包含面向兼容级别 1200 的表格模型的 PowerShell 增强功能。 你可以使用所有适用的 cmdlet，以及特定于表格模式的 cmdlet： [Invoke-ProcessASDatabase](../analysis-services/powershell/invoke-processasdatabase.md) 和 [Invoke-ProcessTable cmdlet](../analysis-services/powershell/invoke-processtable-cmdlet.md)。    
  ### <a name="ssms-scripting-database-operations"></a>SSMS 脚本数据库操作    
- 在 [最新的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，现在为数据库命令（包括 Create、Alter、Delete、Backup、Restore、Attach、Detach）启用了脚本。 输出是采用 JSON 格式的表格模型脚本语言 (TMSL)。 有关详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)。    
+ 在 [最新的 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)中，现在为数据库命令（包括 Create、Alter、Delete、Backup、Restore、Attach、Detach）启用了脚本。 输出是采用 JSON 格式的表格模型脚本语言 (TMSL)。 有关详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
  ### <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务    
  [Analysis Services 执行 DDL 任务](../integration-services/control-flow/analysis-services-execute-ddl-task.md) 现在还接受表格模型脚本语言 (TMSL) 命令。     
  ### <a name="ssas-powershell-cmdlet"></a>SSAS PowerShell cmdlet    
@@ -103,7 +103,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
  ### <a name="tabular-model-scripting-language-tmsl-supported-in-ssms"></a>SSMS 支持表格模型脚本语言 (TMSL)    
   使用 [最新版本的 SSMS](http://msdn.microsoft.com/library/mt238290.aspx)，你现在可以创建脚本来自动执行表格 1200 模型的大多数管理任务。 目前，可以编写以下任务的脚本：任何级别的处理任务，以及数据库级别的 CREATE、ALTER 和 DELETE。    
     
- 在功能上，TMSL 相当于提供多维对象定义的 XMLA ASSL 扩展，不过，TMSL 使用 **model**、 **table**和 **relationship** 等本机描述符来描述表格元数据。 有关架构的详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)。    
+ 在功能上，TMSL 相当于提供多维对象定义的 XMLA ASSL 扩展，不过，TMSL 使用 **model**、 **table**和 **relationship** 等本机描述符来描述表格元数据。 有关架构的详细信息，请参阅[表格模型脚本语言 (TMSL) 参考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)。    
     
  为表格模型生成的基于 JSON 的脚本如下所示：    
     
@@ -121,7 +121,7 @@ SQL Server 2016 SP1 Analysis Services 特别在以下关键领域进行了改进
 }    
 ```    
 
-负载是一个 JSON 文档，它可以小到如以下示例中所示，也可以大到包含整套对象定义。 [表格模型脚本语言 (TMSL) 参考](../analysis-services/tabular-model-scripting-language-tmsl-reference.md)介绍了语法。
+负载是一个 JSON 文档，它可以小到如以下示例中所示，也可以大到包含整套对象定义。 [表格模型脚本语言 (TMSL) 参考](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)介绍了语法。
 
 在数据库级别，CREATE、 ALTER 和 DELETE 命令将在你熟悉的 XMLA 窗口中输出 TMSL 脚本。  还可以在此版本中编写其他命令（例如 Process）的脚本。 将来的版本可能会添加对其他许多操作的脚本支持。    
 
@@ -201,7 +201,7 @@ Visual Studio 2015 中的代码视图现在以 JSON 格式呈现表格 1200 模�
     
 若要了解详细信息，请参阅[DirectQuery 模式下](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)。    
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 [Analysis Services 团队博客](http://blogs.msdn.microsoft.com/analysisservices/)    
 [SQL Server 2016 中的新增功能](../sql-server/what-s-new-in-sql-server-2016.md)    
      

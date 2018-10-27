@@ -11,12 +11,12 @@ ms.assetid: 94a8d4f9-a76a-49c5-9785-917010359511
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfbce4b8128d7278349539cedf73a87e498b1bae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a0aae710b18350c9ef62166e004f702eb88c7e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092827"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146544"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>针对顺序分析和聚类分析模型创建预测（数据挖掘中级教程）
   了解群集通过在查看器中浏览模型以获得进一步的序列后，您可以在使用预测查询生成器创建预测查询**挖掘模型预测**数据挖掘设计器中的选项卡。 若要创建预测，首先要选择顺序分析和聚类分析模型，然后选择输入数据。 对于输入，可以使用外部数据源，也可以生成单独查询并在对话框中提供值。  
@@ -198,10 +198,10 @@ NATURAL PREDICTION JOIN
 ## <a name="next-steps"></a>后续步骤  
  如果您已经完成中的所有部分[数据挖掘中级教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)下, 一步可能是了解如何使用数据挖掘扩展插件 (DMX) 语句来生成模型和生成预测。 有关详细信息，请参阅[创建和查询数据挖掘模型使用 DMX： 教程&#40;Analysis Services-数据挖掘&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)。  
   
- 如果您熟悉编程概念，您还可以使用分析管理对象 (AMO) 以编程方式处理数据挖掘对象。 有关详细信息，请参阅 [AMO 数据挖掘类](../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
+ 如果您熟悉编程概念，您还可以使用分析管理对象 (AMO) 以编程方式处理数据挖掘对象。 有关详细信息，请参阅 [AMO 数据挖掘类](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes)。  
   
-## <a name="see-also"></a>请参阅  
- [顺序聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+## <a name="see-also"></a>另请参阅  
+ [顺序分析和聚类分析模型查询示例](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

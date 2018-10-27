@@ -16,12 +16,12 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 115ee695d8e5ae509499850113851f7bc565f562
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19da5b920b31791eacaf362819ce731d2822c0c4
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190667"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148102"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 执行 DDL 任务
   “ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务运行数据定义语言 (DDL) 语句，这些语句可以创建、删除或更改挖掘模型和多维对象，如多维数据集和维度。 例如，DDL 语句可在 **Adventure Works** 多维数据集中创建分区，或删除 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]（即 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中包含的示例 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库）中的维度。  
@@ -39,9 +39,9 @@ ms.locfileid: "48190667"
 ## <a name="ddl-statements"></a>DDL 语句  
  DDL 语句表示为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 中的语句，并且嵌入 XML for Analysis (XMLA) 命令中。  
   
--   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
+-   ASSL 用于定义和说明 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例及其包含的数据库和数据库对象。 有关详细信息，请参阅[Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)。  
   
--   XMLA 是用于向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例发送操作命令（如 Create、Alter 或 Process）的命令语言。 有关详细信息，请参阅 [XML for Analysis (XMLA) 参考](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)。  
+-   XMLA 是用于向 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例发送操作命令（如 Create、Alter 或 Process）的命令语言。 有关详细信息，请参阅 [XML for Analysis (XMLA) 参考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)。  
   
  如果 DDL 代码存储在单独的文件中，则“ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 执行 DDL”任务使用文件连接管理器来指定该文件的路径。 有关详细信息，请参阅 [File Connection Manager](../connection-manager/file-connection-manager.md)。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "48190667"
   
  有关可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置的属性的详细信息，请单击下列主题之一：  
   
--   [Analysis Services 执行 DDL 任务编辑器&#40;常规页&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 执行 DDL 任务编辑器（“常规”页）](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 执行 DDL 任务编辑器&#40;DDL 页&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services 执行 DDL 任务编辑器（DDL 页）](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [“表达式”页](../expressions/expressions-page.md)  
   

@@ -12,12 +12,12 @@ ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45a1af97868260d103890c13ce7c7446dd8f01d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52d44a8c5f00f8f5c17f62ba0149738dc13712ae
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098137"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146513"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   带 BI 注释的概念性架构定义语言 (CSDLBI) 基于实体数据框架。实体数据框架是一个抽象概念，用于以某种方式表示不同类型的数据，以便能够以编程方式访问、查询或导出不同的数据集。 CSDLBI 用于表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 创建的数据模型，因为它支持丰富的数据驱动的报告和应用程序。  
@@ -131,7 +131,7 @@ ms.locfileid: "48098137"
   
  **维度：** 维度在 CSDLBI 中表示为具有列和属性的实体 （表）。 请注意，即使未包括在透视中，模型中包括的维度也将表示为 CSDL 输出（标记为 `Hidden`）。  
   
- **透视：** 客户端可以请求 CSDL 以获得单独的透视。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **透视：** 客户端可以请求 CSDL 以获得单独的透视。 有关详细信息，请参阅[DISCOVER_CSDL_METADATA 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)。  
   
  **层次结构：** 支持和 CSDLBI 中表示为一组级别的层次结构。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48098137"
   
  **限制：** 不支持单元安全性。  
   
-## <a name="see-also"></a>请参阅  
- [用于商业智能的 CSDL 批注&#40;CSDLBI&#41;](csdl-annotations-for-business-intelligence-csdlbi.md)  
+## <a name="see-also"></a>另请参阅  
+ [用于商业智能的 CSDL 批注 (CSDLBI)](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

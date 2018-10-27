@@ -1,6 +1,6 @@
 ---
 title: 下载 NYC 出租车演示数据和脚本适用于嵌入的 R 和 Python （SQL Server 机器学习） |Microsoft Docs
-description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server 教程演示如何嵌入 R 中使用数据和 Python 在 SQL Server 存储过程和 T-SQL 的函数。
+description: 有关下载纽约市出租车示例数据和创建数据库的说明。 在 SQL Server Python 和 R 语言教程显示如何在 SQL Server 存储过程和 T-SQL 函数中嵌入脚本中使用数据。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9359bb9a441551d16bc5de3f57f0158e56a98626
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f9482a43a37f3c4feee497ae2fd93029143c84f9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463026"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806707"
 ---
-# <a name="nyc-taxi-demo-data-for-sql-server"></a>适用于 SQL Server 的 NYC 出租车演示数据
+# <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC 出租车演示数据的 SQL Server Python 和 R 教程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文介绍如何设置由从公共数据组成的一个示例数据库[纽约市出租车和礼车委员会](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)。 在多个 R 和 Python 的教程中的 SQL Server 中的数据库内分析使用此数据。 示例数据是公共的数据集的 1%。 在系统上的数据库备份文件是略微超过 90 MB，提供在主要数据表中的 1.7 万行。
@@ -26,7 +26,7 @@ ms.locfileid: "49463026"
 
 +  [使用 SQL Server 中的 Python 模型的训练和评分](train-score-using-python-in-tsql.md)
 
-## <a name="download-demo-database"></a>下载演示数据库
+## <a name="download-files"></a>下载文件
 
 示例数据库是由 Microsoft 托管的备份文件。 立即单击链接开始下载文件。 
 
@@ -66,7 +66,7 @@ ms.locfileid: "49463026"
 |**PredictTipSingleMode**  |存储过程| 创建由 PredictTipSingleMode.sql 脚本。 调用训练的模型以使用该模型创建预测。 该存储过程接受一个新观察值作为输入，而传递的单个功能值作为嵌入式参数，并返回一个预测新观察值结果的值。 在使用此存储的过程[使 R 模型可操作化](sqldev-operationalize-the-model.md)。|
 |**TrainTipPredictionModel**  |存储过程|创建由 TrainTipPredictionModel.sql 脚本。 通过调用 R 包定型逻辑回归模型。 该模型预测附属列的值，并使用随机选择的 70% 的数据进行定型。 存储过程的输出是定型模型，保存在表 nyc_taxi_models 中。 在使用此存储的过程[训练和保存模型](sqldev-train-and-save-a-model-using-t-sql.md)。|
 
-## <a name="query-data-for-verification"></a>验证查询数据
+## <a name="query-the-data"></a>查询数据
 
 作为验证步骤，运行查询以确认数据已上传。
 

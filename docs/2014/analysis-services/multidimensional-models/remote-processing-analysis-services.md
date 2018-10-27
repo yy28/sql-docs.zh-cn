@@ -11,12 +11,12 @@ ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16f7e8f89a2b5067f00ebd27fa1c59d1595a8c6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0afcf50aea6efc0d52adf0b1a82a317e9ec94d08
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173097"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146062"
 ---
 # <a name="remote-processing-analysis-services"></a>远程处理 (Analysis Services)
   可在远程 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例上运行计划处理或无人参与的处理，其中在一台计算机上发出处理请求，而在同一网络上的另一台计算机上执行该请求。  
@@ -91,11 +91,11 @@ ms.locfileid: "48173097"
   
 2.  最后一步，修改该作业，使其按您定义的计划运行，并添加管理作业所需的任何警报或通知。 可能还要细化处理脚本，或在作业中创建多个步骤以独立处理各个对象。  
   
-## <a name="see-also"></a>请参阅  
- [SQL Server 代理组件](../../ssms/agent/sql-server-agent.md#Components)   
+## <a name="see-also"></a>另请参阅  
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components)   
  [使用 SQL Server 代理来计划 SSAS 管理任务](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批处理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [批处理 (Analysis Services)](batch-processing-analysis-services.md)   
  [多维模型对象处理](processing-a-multidimensional-model-analysis-services.md)   
- [处理对象&#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
+ [处理对象 (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)  
   
   

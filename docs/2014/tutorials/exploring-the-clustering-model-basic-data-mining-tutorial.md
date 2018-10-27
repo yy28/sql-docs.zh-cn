@@ -11,12 +11,12 @@ ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2e56d1dc66e8e6ac73a3ae8b1888cbdee16c63df
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147767"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146737"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>浏览聚类分析模型（数据挖掘基础教程）
   [!INCLUDE[msCoName](../includes/msconame-md.md)]聚类分析算法事例分组为包含类似特征的分类。 在浏览数据、标识数据中的异常及创建预测时，这些分组十分有用。  
@@ -89,7 +89,7 @@ ms.locfileid: "48147767"
  与**分类特征**选项卡上，您可以更加详细地检查组成分类的特征。 您可以一次浏览一个分类，而不是比较所有分类的特征（就像在“分类剖面图”选项卡中那样）。 例如，如果您选择**Bike Buyers High**从**群集**列表中，您可以看到此分类中的客户的特征。 尽管显示方式与分类剖面图查看器不同，但查找结果却是相同的。  
   
 > [!NOTE]  
->  除非设置为初始值，否则**holdoutseed**，每次处理模型时，结果会有所不同。 有关详细信息，请参阅[HoldoutSeed 元素](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  除非设置为初始值，否则**holdoutseed**，每次处理模型时，结果会有所不同。 有关详细信息，请参阅[HoldoutSeed 元素](https://docs.microsoft.com/bi-reference/assl/properties/holdoutseed-element)  
   
 
   
@@ -119,7 +119,7 @@ ms.locfileid: "48147767"
 ## <a name="previous-task-in-lesson"></a>课程中的前一个任务  
  [浏览决策树模型&#40;数据挖掘基础教程&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 Microsoft 分类查看器浏览模型](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
  [群集对比选项卡&#40;挖掘模型查看器&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
  [群集配置文件选项卡&#40;挖掘模型查看器&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   

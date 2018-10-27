@@ -11,12 +11,12 @@ ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6455a83328f973004f6c0e7ff39f574413693d94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b8f3cf856b7b4dbf77d4a426fcf35d969ce1a990
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111954"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145592"
 ---
 # <a name="impersonation-ssas-tabular"></a>模拟（SSAS 表格）
   本主题帮助表格模型作者了解在连接到数据源以便导入和处理（刷新）数据时 Analysis Services 如何使用登录凭据。  
@@ -71,7 +71,7 @@ ms.locfileid: "48111954"
 |**特定 Windows 用户名和密码** <sup>2</sup>|ImpersonateWindowsUserAccount|此选项指定模型使用 Windows 用户帐户从数据源导入或处理数据。 域和用户帐户的名称使用以下格式：**\<域名 >\\< 用户帐户名\>**。 在使用“表导入向导”创建新模型时，此为默认选项。|  
 |**服务帐户**|ImpersonateServiceAccount|此选项指定模型使用与管理该模型的 Analysis Services 服务实例相关联的安全凭据。|  
   
- <sup>1</sup>ImpersonationMode 指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](../scripting/properties/impersonationinfo-element-assl.md)上的数据源的属性。  
+ <sup>1</sup>ImpersonationMode 指定的值[DataSourceImpersonationInfo 元素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)上的数据源的属性。  
   
  <sup>2</sup>时使用此选项时，如果从内存中，由于重新启动中删除工作区数据库或**工作区保持期**属性设置为**从内存中的卸载**或**从工作区中删除**，并且由该模型项目已关闭，在后续会话中，如果你尝试处理表数据，系统会提示输入每个数据源的凭据。 同样，如果从内存中删除某个已部署的模型数据库，则系统将会提示您输入为每个数据源输入凭据。  
   
@@ -93,9 +93,9 @@ ms.locfileid: "48111954"
   
  对于部署到 Analysis Services 服务器的模型，可以通过单击省略号 （...） 的配置模拟信息**数据源模拟信息**属性中的**数据库属性**对话框中的[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [DirectQuery 模式（SSAS 表格）](directquery-mode-ssas-tabular.md)   
- [数据源&#40;SSAS 表格&#41;](../data-sources-ssas-tabular.md)   
- [表格模型解决方案部署&#40;SSAS 表格&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+ [数据源（SSAS 表格）](../data-sources-ssas-tabular.md)   
+ [表格模型解决方案部署（SSAS 表格）](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

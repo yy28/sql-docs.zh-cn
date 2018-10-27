@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fdffbcc946af91efd61a5e63da7f79087d3053f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af11bb2283db0561c176fb543ff21c3c04f676d3
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159793"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100248"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>SQL Server 托管备份到 Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]管理并自动执行将 SQL Server 备份到 Windows Azure Blob 存储服务。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]使用的备份策略基于保持期和数据库中的事务工作负载。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 支持指定保持期的时间点还原。   
@@ -42,7 +42,7 @@ ms.locfileid: "48159793"
  SQL Server 的一项功能，该功能自动备份数据库并根据保持期维护这些备份。  
   
  保持期  
- 保留期由[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]来确定应将哪些备份文件保留在存储以便将数据库恢复到某个点在指定的时间范围内的时间。  支持的值为 1 到 30 天的范围。  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 使用保持期确定为将数据库恢复到指定时间框架的某个时间点，应将哪些备份文件保留在存储中。  支持的值为 1 到 30 天的范围。  
   
  日志链  
  日志备份的连续序列称为日志链。 日志链从数据库的完整备份开始。  
@@ -72,7 +72,7 @@ ms.locfileid: "48159793"
 |-|-|  
 |系统对象|Description|  
 |**MSDB**|存储由 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]创建的所有备份的元数据和备份历史记录。|  
-|[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/en-us/library/dn451013(v=sql.120).aspx)|为数据库启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系统存储过程。|  
+|[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|为数据库启用和配置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系统存储过程。|  
 |[smart_admin.set_instance_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|系统存储过程启用和配置默认设置[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]SQL Server 实例。|  
 |[smart_admin.sp_ backup_master_switch &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|用于暂停和继续运行[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的系统存储过程。|  
 |[smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|用于为[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]启用和配置监视的系统存储过程。 示例：启用扩展事件、通知的邮件设置。|  
@@ -157,7 +157,7 @@ ms.locfileid: "48159793"
 |与监视[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]相关的工具、概念和任务。|[监视针对 Microsoft Azure 的 SQL Server 托管备份](sql-server-managed-backup-to-microsoft-azure.md)|  
 |对[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]进行故障排除的工具和步骤。|[排除针对 Microsoft Azure 的 SQL Server 托管备份的故障](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [Windows Azure Blob 存储服务使用 SQL Server 备份和还原](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server 备份到 URL](sql-server-backup-to-url.md)   
  [SQL Server 托管备份到 Windows Azure： 互操作性和共存](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   

@@ -1,5 +1,5 @@
 ---
-title: 步骤 6 操作 Python 模型使用的 SQL Server |Microsoft Docs
+title: 操作 Python 模型，使用 SQL Server |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,14 +7,14 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d95edb081edc0f18a3734025a5902d13f8e9a295
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888953"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806807"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步骤 6： 操作使用的 SQL Server 的 Python 模型
+# <a name="operationalize-the-python-model-using-sql-server"></a>操作使用的 SQL Server Python 模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是教程的一部分[SQL 开发人员的数据库内 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
@@ -361,8 +361,8 @@ GO
 
 ## <a name="previous-step"></a>上一步
 
-[步骤 5： 训练和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[训练和保存 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SQL Server 中的 Python 扩展](../concepts/extension-python.md)

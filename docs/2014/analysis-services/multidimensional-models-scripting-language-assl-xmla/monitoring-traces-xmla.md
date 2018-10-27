@@ -17,21 +17,21 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb8056842eb19bfa81cfdcf7494e058108f3e836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077877"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146462"
 ---
 # <a name="monitoring-traces-xmla"></a>监视跟踪 (XMLA)
-  可以使用[Subscribe](../xmla/xml-elements-commands/subscribe-element-xmla.md)命令，在 XML for Analysis (XMLA) 监视的实例中定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令将跟踪的结果作为行集返回。  
+  可以使用[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)命令，在 XML for Analysis (XMLA) 监视的实例中定义的现有跟踪[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 `Subscribe` 命令将跟踪的结果作为行集返回。  
   
 ## <a name="specifying-a-trace"></a>指定跟踪  
- [对象](../xmla/xml-elements-properties/object-element-xmla.md)的属性`Subscribe`命令必须包含对象引用或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例或上的跟踪[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 如果未指定 `Object` 属性，或者未在 `Object` 属性中指定跟踪标识符，则 `Subscribe` 命令将监视该命令的 SOAP 标头中指定的显式会话的默认会话跟踪。  
+ [对象](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)的属性`Subscribe`命令必须包含对象引用或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例或上的跟踪[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]实例。 如果未指定 `Object` 属性，或者未在 `Object` 属性中指定跟踪标识符，则 `Subscribe` 命令将监视该命令的 SOAP 标头中指定的显式会话的默认会话跟踪。  
   
 ## <a name="returning-results"></a>返回结果  
- `Subscribe` 命令会返回包含由指定跟踪捕获的跟踪事件的行集。 `Subscribe`命令返回跟踪结果，直到取消该命令[取消](../xmla/xml-elements-commands/cancel-element-xmla.md)命令。  
+ `Subscribe` 命令会返回包含由指定跟踪捕获的跟踪事件的行集。 `Subscribe`命令返回跟踪结果，直到取消该命令[取消](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)命令。  
   
  下表列出了该行集包含的列。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48077877"
 |RequestParameters|String|发生事件的参数化查询或 XMLA 命令的参数。|  
 |RequestProperties|String|发生事件的 XMLA 方法的属性。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Analysis Services 中使用 XMLA 开发](developing-with-xmla-in-analysis-services.md)  
   
   

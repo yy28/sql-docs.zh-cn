@@ -14,12 +14,12 @@ ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4eeebefcda3a1ecb542e33b2a4a59a46f302b303
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1da9ecf9ec7278b91e16a6c91a95aa09473ca023
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100118"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>创建日期属性 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，在您希望用户输入日期作为属性值时创建日期属性。  
@@ -32,7 +32,7 @@ ms.locfileid: "48083737"
   
 -   您必须有权访问 **“系统管理”** 功能区域。  
   
--   您必须是模型管理员。 有关详细信息，请参阅[管理员 (Master Data Services)](administrators-master-data-services.md)。  
+-   您必须是模型管理员。 有关详细信息，请参阅 [管理员 (Master Data Services)](administrators-master-data-services.md)。  
   
 -   您必须具有要为其创建属性的实体。 有关详细信息，请参阅[创建实体 (Master Data Services)](../../2014/master-data-services/create-an-entity-master-data-services.md)。  
   
@@ -87,12 +87,12 @@ ms.locfileid: "48083737"
   
  在 mdm.tblList 表中输入具有上述值的行后，在“输入掩码”列表框中会提供“dd/MM/yyyy hh:mm:ss tt”掩码。 然后，您可以选择该掩码，以便在 MDS 资源管理器中某实体的日期时间属性列中显示日期和时间。  
   
- 输入掩码是一个自定义 .NET DateTime 格式字符串。 有关详细信息，请参阅 [自定义日期和时间格式字符串](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ 输入掩码是一个自定义 .NET DateTime 格式字符串。 有关详细信息，请参阅 [自定义日期和时间格式字符串](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>请参阅  
- [属性&#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [属性 (Master Data Services)](../../2014/master-data-services/attributes-master-data-services.md)   
  [更改属性名称&#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [创建基于域的属性 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [创建文件属性&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [创建文件属性 (Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

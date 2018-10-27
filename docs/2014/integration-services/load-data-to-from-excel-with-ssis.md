@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21467fe09feb96feb6ae865c8252623bbefe7eb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fedf74029c0e1bf50e87b10c30d354c80786650
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098509"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991250"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 从 Excel 导入数据或将数据导出到 Excel
 
@@ -254,9 +254,9 @@ Excel 驱动程序读取指定源中一定数量的行（默认情况下为八�
 [使用脚本任务处理 Excel 文件](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 
 ### <a name="about-the-sql-server-import-and-export-wizard"></a>关于 SQL Server 导入和导出向导
-[连接到 Excel 数据源](/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)  
-[导入和导出向导的简单示例入门](/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[连接到 Excel 数据源](/sql/integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard)  
+[导入和导出向导的简单示例入门](/sql/integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard)
 
 ### <a name="other-articles"></a>其他文章
-[将 Excel 数据导入 SQL Server 或 Azure SQL 数据库](/relational-databases/import-export/import-data-from-excel-to-sql.md)  
+[将 Excel 数据导入 SQL Server 或 Azure SQL 数据库](/sql/relational-databases/import-export/import-data-from-excel-to-sql)  
 

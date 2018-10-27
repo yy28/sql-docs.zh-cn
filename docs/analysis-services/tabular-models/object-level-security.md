@@ -1,5 +1,5 @@
 ---
-title: 表格模型对象级别的安全性 |Microsoft 文档
+title: 表格模型对象级别的安全性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 98caa08ef6c3dcba37043124d0263507097a4374
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 54384e050f4e45ad5d89d66111ecdcc851076d76
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045691"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148202"
 ---
-# <a name="object-level-security"></a>对象级安全
+# <a name="object-level-security"></a>对象级安全性
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-数据模型安全性开头有效地实施[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和行级筛选器，可以定义数据模型对象和数据的用户权限。 从表格 1400年模型开始，你还可以定义对象级安全，其中包括表级安全性和中的列级安全性[角色对象](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)。
+数据模型安全性以有效地实施开头[角色](../../analysis-services/tabular-models/roles-ssas-tabular.md)和行级筛选器来定义数据模型对象和数据的用户权限。 从表格 1400年模型开始，您还可以定义对象级安全性，包括表级别安全性和中的列级安全性[角色对象](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)。
 
 ## <a name="table-level-security"></a>表级别安全性
 
-表级安全性，你可以不只限于访问表数据，但还敏感表名称，帮助防止恶意用户发现如果表存在。 
+具有表级安全性，可以不只限于访问表数据，但也敏感的表名，从而帮助防止恶意用户发现如果表存在。 
 
- 在基于 JSON 的元数据在 Model.bim，设置表级安全性[表格模型脚本语言 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)，或[表格对象模型 (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)。 设置**metadataPermission**属性**tablePermissions**类[角色对象](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)到**无**。
+ 表级安全性设置的基于 JSON 的元数据中 Model.bim[表格模型脚本语言 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)，或[表格对象模型 (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)。 设置**metadataPermission**的属性**tablePermissions**类[角色对象](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)到**无**。
 
-在此示例中，Product 表 tablePermissions 类 metadataPermission 属性设置为无:
+在此示例中，Product 表 tablePermissions 类的 metadataPermission 属性设置为无:
 
 ```
 "roles": [
@@ -45,11 +45,11 @@ ms.locfileid: "34045691"
 
 ## <a name="column-level-security"></a>列级安全性
 
-类似于表级安全性，使用列级安全你可以不仅限制对访问列数据，但还敏感列名称，帮助防止恶意用户发现某一列。
+类似于表级别安全性，具有列级安全性，可以不只限于访问列数据，但还敏感列名称，帮助防止恶意用户发现某一列。
 
- 列级安全性设置在基于 JSON 的元数据在 Model.bim，[表格模型脚本语言 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)，或[表格对象模型 (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)。 设置**metadataPermission**属性**columnPermissions**类[角色对象](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)到**无**。
+ 列级安全性设置的基于 JSON 的元数据中 Model.bim[表格模型脚本语言 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)，或[表格对象模型 (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)。 设置**metadataPermission**的属性**columnPermissions**类[角色对象](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)到**无**。
 
-在此示例中，雇员表中的基本速率列 columnPermissions 类 metadataPermission 属性设置为无:
+在此示例中，雇员表中的基准费率列的 columnPermissions 类的 metadataPermission 属性设置为无:
 
 ```
 "roles": [
@@ -73,25 +73,25 @@ ms.locfileid: "34045691"
 
 ## <a name="restrictions"></a>限制
 
-*  无法为一个模型设置表级安全，如果其将中断关系链。 在设计时生成错误。
- 例如，如果表 A 和 B 和 B 和 C 之间有关系，则不能保护表 b。如果表 B 提供保护，对一个表的查询不能传输表 A 和 B 和 B 和 C 之间的关系无法在这种情况下，表 A 和 b。 之间配置单独的关系
+*  如果这会破坏关系链，无法为模型中设置表级别安全性。 在设计时生成错误。
+ 例如，如果表 A 和 B 和 B 和 C 之间没有关系，则不能保护表 B。如果表 B 安全的对一个表的查询不能传输表 A 和 B 和 B 和 C 之间的关系无法在这种情况下，表 A 和 b。 之间配置单独的关系
 
     ![表级别安全性](../../analysis-services/tabular-models/media/ssas-ols.png)  
 
 
-*  因为它可能会无意中访问引入到受保护的数据，行级安全性和对象级别安全性不能组合来自不同的角色。 在这种组合的角色的成员的用户的查询时生成错误。
+*  因为它可能会无意中访问引入到受保护数据，不能从不同的角色组合行级安全性和对象级安全性。 在这种组合的角色的成员的用户的查询时生成错误。
 
-*  如果它们引用的受保护的表或列，动态计算 （度量值，Kpi、 DetailRows） 会自动受到限制。 尽管没有任何机制来显式安全度量值，则可以通过更新要引用的受保护的表或列的表达式中隐式安全度量值。
+*  如果它们引用的受保护的表或列，动态计算 （度量值、 Kpi、 DetailRows） 会自动受到限制。 尽管没有任何机制来显式安全度量值，则可以隐式安全更新来指代的受保护的表或列的表达式的度量值。
 
-*  受保护的列引用的关系处理假设不安全的列中的表。
+*  引用的受保护的列的关系的工作提供的表中的列是不安全。
 
 
 
 
 ## <a name="see-also"></a>另请参阅  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
-[Roles 对象 (TMSL)](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
-[表格模型脚本语言 (TMSL)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
-[表格对象模型 (TOM)](../../analysis-services/tabular-model-programming-compatibility-level-1200/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo.md)。
+[Roles 对象 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)  
+[表格模型脚本语言 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)  
+[表格对象模型 (TOM)](https://docs.microsoft.com/bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo)。
 
   

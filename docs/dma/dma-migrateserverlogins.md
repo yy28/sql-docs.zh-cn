@@ -2,7 +2,7 @@
 title: 迁移 SQL Server 登录名使用数据迁移助手 |Microsoft Docs
 description: 了解如何迁移 SQL Server 登录名使用数据迁移助手
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: e52fdcd55cddea31e317afe04833f5413c006325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9e6dad97bbfb2010f71e9e056da8a0912a4506
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836935"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643805"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>迁移 SQL Server 登录名使用数据迁移助手
 
@@ -30,7 +30,7 @@ ms.locfileid: "47836935"
 
 - 你可以迁移基于 Windows 主体 （例如域用户或 Windows 域组） 的登录名。 您也可以迁移基于 SQL 身份验证，也称为 SQL Server 登录名创建登录名。
 
-- 数据迁移助手当前不支持与独立的安全证书 （登录名映射到证书）、 独立的非对称密钥 （登录名映射到非对称密钥） 和映射到凭据的登录名相关联的登录名。
+- 数据迁移助手当前不支持与独立的安全证书 （登录名映射到证书）、 独立的非对称密钥 （登录名映射到非对称密钥） 和登录名映射到凭据的登录名。
 
 - 并不移动数据迁移助手**sa**名称括在双引号哈希将与登录名和服务器原则 (\#\#)，这是仅供内部使用。
 

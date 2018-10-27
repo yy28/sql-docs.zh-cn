@@ -1,5 +1,5 @@
 ---
-title: 用于处理 (Analysis Services) 工具和方法 |Microsoft 文档
+title: 工具和方法可用于处理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4ecb64ddf6caedc2353541ab5d4aa7229b9a120f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027314"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147732"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>用于处理的工具和方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "34027314"
   
 -   使用 SQL Server Profiler 监视处理  
   
--   使用 AMO 对自定义解决方案编程。 有关详细信息，请参阅 [Programming AMO OLAP Basic Objects](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)。  
+-   使用 AMO 对自定义解决方案编程。 有关详细信息，请参阅 [Programming AMO OLAP Basic Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects)。  
   
  处理是由一组处理选项控制的高度可配置操作，这些选项决定在对象级别执行完全处理还是增量处理。 有关处理选项和对象的详细信息，请参阅[处理选项和设置 (Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md) 和[处理 Analysis Services 对象](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)。  
   
 > [!NOTE]  
->  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)和[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
+>  本主题介绍用于处理多维模型的工具和方法。 有关处理表格模型的详细信息，请参阅[处理数据库、 表或分区&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)并[处理数据](../../analysis-services/tabular-models/process-data-ssas-tabular.md)。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中处理对象  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34027314"
   
 5.  还可以单击 **“更改设置”** 来修改处理顺序、与特定类型的错误相关的处理行为或其他设置。  
   
-6.  单击 **“确定”**。  
+6.  单击“确定” 。  
   
      “处理进度”对话框为每个命令提供当前状态。 如果状态消息被截断，则可以单击 **“查看详细信息”** 来读取完整消息。  
   

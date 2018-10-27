@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461853"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806757"
 ---
 # <a name="in-database-python-analytics-for-sql-developers"></a>SQL 开发人员的数据库内 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,30 +37,23 @@ ms.locfileid: "49461853"
 
 可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [步骤 1：下载示例数据](demo-data-nyctaxi-in-sql.md)
 
-    将示例数据集和所有脚本文件下载到本地计算机。
-
-- [步骤 2：使用 PowerShell 将数据导入 SQL Server](sqldev-py2-import-data-to-sql-server-using-powershell.md)
-
-    执行的指定实例上创建一个数据库和表并加载示例数据到表的 PowerShell 脚本。
-
-- [步骤 3： 浏览和使用 Python 将数据可视化](sqldev-py3-explore-and-visualize-the-data.md)
+- [浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)
 
     执行基本的数据浏览和可视化，通过调用 Python 的[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程。
 
-- [步骤 4： 创建数据功能在 T-SQL 中使用 Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [在 T-SQL 中使用 Python 创建数据功能](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     使用自定义 SQL 函数创建新数据特征。
   
-- [步骤 5： 训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     生成并保存机器学习模型，在存储过程中使用 Python。
   
     本演练演示如何执行二进制分类任务;此外可以使用数据来生成用于回归还是多类分类模型。
 
   
--  [步骤 6： 操作 Python 模型](sqldev-py6-operationalize-the-model.md)
+-  [ 操作 Python 模型](sqldev-py6-operationalize-the-model.md)
 
     该模型保存到数据库后，调用该模型用于预测使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
 

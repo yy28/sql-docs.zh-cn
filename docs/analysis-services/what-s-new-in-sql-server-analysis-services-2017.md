@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 76e9bedbd7807b78288a901d0b2a7674232c7e91
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042355"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145982"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中的新增功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -173,9 +173,9 @@ db.Update(UpdateOptions.ExpandFull);
 [Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)是 SQL Server Profiler 中的查询，返回有关本地服务器操作和服务器运行状况的信息。
 此版本包括对改进[动态管理视图](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services)(DMV) 位于 1200年和 1400年兼容级别的表格模型。
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)现在可用于表格 1200年和 1400年模型。 表格 1400年模型显示 M 分区、 M 表达式和结构化的数据源之间的依赖项。 若要了解详细信息，请参阅[Analysis Services 博客](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
+[DISCOVER_CALC_DEPENDENCY](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)现在可用于表格 1200年和 1400年模型。 表格 1400年模型显示 M 分区、 M 表达式和结构化的数据源之间的依赖项。 若要了解详细信息，请参阅[Analysis Services 博客](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) ，为此 DMV，各种客户端工具用于显示度量值维度提供了改进。 例如，Excel 数据透视表中的资源管理器功能允许用户跨向下钻到与所选度量值相关的维度。 此版本中更正基数列之前显示不正确的值。
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) ，为此 DMV，各种客户端工具用于显示度量值维度提供了改进。 例如，Excel 数据透视表中的资源管理器功能允许用户跨向下钻到与所选度量值相关的维度。 此版本中更正基数列之前显示不正确的值。
 
 ## <a name="dax-enhancements"></a>DAX 增强功能
 此版本包括对新的 DAX 函数和功能的支持。 为了利用，你需要使用最新版本的 SSDT。 若要了解详细信息，请参阅[的新 DAX 函数](https://msdn.microsoft.com/library/mt704075.aspx)。
@@ -245,6 +245,6 @@ Filtered Sales:=CALCULATE (
 
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 [SQL Server 2017 发行说明](../sql-server/sql-server-2017-release-notes.md)   
 [SQL Server 2017 的新增功能](../sql-server/what-s-new-in-sql-server-2017.md)

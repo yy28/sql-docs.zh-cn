@@ -1,5 +1,5 @@
 ---
-title: 操作 (Analysis Services-多维数据) |Microsoft 文档
+title: 操作 (Analysis Services-多维数据) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b7c4d8781aa316ab49fb3730dd783c77e2776441
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020484"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146362"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>操作（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020484"
   
 -   标准操作，对于在其上执行了该操作的多维数据，该操作将返回与其所选部分关联的操作元素（URL、HTML、DataSet、RowSet 及其他元素）。  
   
- 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ 客户端应用程序可以使用查询接口（如 ADOMD.NET）来检索操作并向最终用户公开它们。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  简单 <xref:Microsoft.AnalysisServices.Action> 对象由基本信息、操作目标、用于限制操作范围的条件以及类型组成。 基本信息包括操作名称、操作说明、操作的建议标题等。  
   

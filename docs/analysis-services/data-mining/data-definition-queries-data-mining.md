@@ -1,5 +1,5 @@
 ---
-title: 数据定义查询 （数据挖掘） |Microsoft 文档
+title: 数据定义查询 （数据挖掘） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 562a3c0fd3b73c60f3e729afe926d61d68e55b1b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a38c0fb30533e0569d14cec0387d362fa4cabc87
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015654"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148272"
 ---
 # <a name="data-definition-queries-data-mining"></a>数据定义查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,14 +81,14 @@ ms.locfileid: "34015654"
   
 |||  
 |-|-|  
-|使用 DMX 查询模板。|[在 SQL Server Management Studio 中使用 Analysis Services 模板](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
-|使用预测查询生成器来设计所有类型的查询。|[创建预测查询使用预测查询生成器](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|使用 SQL Server Profiler 捕获查询定义，并使用跟踪来监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|[使用 SQL Server Profiler 监视 Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
-|了解有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的脚本语言和编程语言的详细信息。|[XML for Analysis & #40;XMLA & #41;引用](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [使用分析管理对象 & #40; 进行开发AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
-|了解如何管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的模型。|[导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [导出 & #40; DMX & #41;](../../dmx/export-dmx.md)<br /><br /> [导入 & #40; DMX & #41;](../../dmx/import-dmx.md)|  
+|使用 DMX 查询模板。|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|使用预测查询生成器来设计所有类型的查询。|[使用预测查询生成器创建预测查询](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
+|使用 SQL Server Profiler 捕获查询定义，并使用跟踪来监视 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|了解有关为 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供的脚本语言和编程语言的详细信息。|[XML for Analysis (XMLA) 参考](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [使用分析管理对象 (AMO) 进行开发](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
+|了解如何管理 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的模型。|[导出和导入数据挖掘对象](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (DMX)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (DMX)](../../dmx/import-dmx.md)|  
 |了解有关 OPENROWSET 和用于查询外部数据的其他方法的详细信息。|[<源数据查询>](../../dmx/source-data-query.md)。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据挖掘向导 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ [数据挖掘向导（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

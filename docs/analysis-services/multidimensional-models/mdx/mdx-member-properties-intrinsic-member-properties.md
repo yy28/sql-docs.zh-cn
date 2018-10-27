@@ -1,5 +1,5 @@
 ---
-title: 内部成员属性 (MDX) |Microsoft 文档
+title: 内部成员属性 (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97e1507617d710373dea39b546b74fc77a1d90de
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2e30dcf1875b09630516be9d9deb3248a95481e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025734"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146157"
 ---
-# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性的内部成员属性
+# <a name="mdx-member-properties---intrinsic-member-properties"></a>MDX 成员属性-内部成员属性
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 公开您可以包含在查询中的维度成员的内部属性，以返回要在自定义应用程序中使用的额外数据或元数据，或帮助进行模型调查或构建。 如果您正在使用 SQL Server 客户端工具，可以在 SQL Server Management Studio (SSMS) 中查看内部属性。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "34025734"
 ## <a name="context-sensitive-member-properties"></a>上下文相关的成员属性  
  所有维度成员和级别成员都支持一列上下文相关的内部成员属性。 下表列出了这些上下文相关的属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**ID**|在内部维护的成员 ID。|  
 |**Key**|以原始数据类型表示的成员键的值。 MEMBER_KEY 用于向后兼容。  对于非组合键，MEMBER_KEY 具有与 KEY0 相同的值；对于组合键，MEMBER_KEY 属性为 null。|  
@@ -85,9 +85,9 @@ ms.locfileid: "34025734"
  下表列出了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支持的非上下文相关的内部属性。  
   
 > [!NOTE]  
->  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关 **MEMBERS** 架构行集的详细信息，请参阅 [MDSCHEMA_MEMBERS 行集](../../../analysis-services/schema-rowsets/ole-db-olap/mdschema-members-rowset.md)。  
+>  MEMBERS 架构行集中的列支持下表中列出的内部成员属性。 有关 **MEMBERS** 架构行集的详细信息，请参阅 [MDSCHEMA_MEMBERS 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**CATALOG_NAME**|此成员所属的多维数据集的名称。|  
 |**CHILDREN_CARDINALITY**|成员具有的子级的个数。 它可以是一个估计值，所以不应依赖它进行确切计数。 访问接口应尽可能返回最精确的估计值。|  
@@ -205,15 +205,15 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>另请参阅  
  [PeriodsToDate (MDX)](../../../mdx/periodstodate-mdx.md)   
- [子级&#40;MDX&#41;](../../../mdx/children-mdx.md)   
- [Hierarchize & #40;MDX & #41;](../../../mdx/hierarchize-mdx.md)   
- [计数 & #40;集 & #41;& #40;MDX & #41;](../../../mdx/count-set-mdx.md)   
- [筛选器 & #40;MDX & #41;](../../../mdx/filter-mdx.md)   
- [AddCalculatedMembers & #40;MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel & #40;MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [属性 & #40;MDX & #41;](../../../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../../../mdx/prevmember-mdx.md)   
- [使用成员属性 & #40;MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 函数引用 & #40;MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Children (MDX)](../../../mdx/children-mdx.md)   
+ [Hierarchize (MDX)](../../../mdx/hierarchize-mdx.md)   
+ [Count（集）(MDX)](../../../mdx/count-set-mdx.md)   
+ [Filter (MDX)](../../../mdx/filter-mdx.md)   
+ [AddCalculatedMembers (MDX)](../../../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel (MDX)](../../../mdx/drilldownlevel-mdx.md)   
+ [属性 (MDX)](../../../mdx/properties-mdx.md)   
+ [PrevMember (MDX)](../../../mdx/prevmember-mdx.md)   
+ [使用成员属性 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [MDX 函数引用 (MDX)](../../../mdx/mdx-function-reference-mdx.md)  
   
   

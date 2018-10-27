@@ -14,12 +14,12 @@ ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb52c0d634a93a92d45f10c5bdeb5e2123b30106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1cd0b6d1af8d6a059742a257071a78f7b5002c6
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082687"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146892"
 ---
 # <a name="database-readwritemodes"></a>数据库 ReadWriteMode
   通常会出现这样的情况， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库管理员 (dba) 希望将读/写数据库更改为只读数据库，或者恰好相反。 通常根据业务需要进行相应的更改，例如：为制定解决方案和提高性能，在多个服务器之间共享同一数据库文件夹。 对于这些情况下，`ReadWriteMode`数据库属性[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]dba 可以轻松地更改数据库运行模式。  
@@ -32,7 +32,7 @@ ms.locfileid: "48082687"
 |只读模式|受限操作|  
 |-------------------|---------------------------|  
 |XML/A 命令<br /><br /> <br /><br /> 注意：如果执行下列命令之一，则产生错误。|`Create`<br /><br /> `Alter`<br /><br /> `Delete`<br /><br /> `Process`<br /><br /> `MergePartitions`<br /><br /> `DesignAggregations`<br /><br /> `CommitTransaction`<br /><br /> `Restore`<br /><br /> `Synchronize`<br /><br /> `Insert`<br /><br /> `Update`<br /><br /> `Drop`<br /><br /> <br /><br /> 注意：在设置为只读的数据库中允许单元写回；但是，不能提交更改。|  
-|MDX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> 注意： 因为该功能在内部实现的使用，Excel 用户不能使用数据透视表中的分组功能`CREATE SESSION CUBE`命令。|  
+|MDX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|`COMMIT TRAN`<br /><br /> `CREATE SESSION CUBE`<br /><br /> `ALTER CUBE`<br /><br /> `ALTER DIMENSION`<br /><br /> `CREATE DIMENSION MEMBER`<br /><br /> `DROP DIMENSION MEMBER`<br /><br /> `ALTER DIMENSION`<br /><br /> <br /><br /> 注意：由于分组功能是使用 `CREATE SESSION CUBE` 命令在内部实现的，因此 Excel 用户不能在透视表中使用该功能。|  
 |DMX 语句<br /><br /> <br /><br /> 注意：如果执行下列语句之一，则产生错误。|`CREATE [SESSION] MINING STRUCTURE`<br /><br /> `ALTER MINING STRUCTURE`<br /><br /> `DROP MINING STRUCTURE`<br /><br /> `CREATE [SESSION] MINING MODEL`<br /><br /> `DROP MINING MODEL`<br /><br /> `IMPORT`<br /><br /> `SELECT INTO`<br /><br /> `INSERT`<br /><br /> `UPDATE`<br /><br /> `DELETE`|  
 |后台操作|禁用将修改数据库的所有后台操作。 这包括迟缓处理和主动缓存。|  
   
@@ -41,17 +41,17 @@ ms.locfileid: "48082687"
   
  若要切换`ReadWriteMode`数据库之间的属性`ReadWrite`并`ReadOnly`，则必须发出一系列`Detach/Attach`命令。  
   
- 所有数据库操作，除`Attach`，保留`ReadWriteMode`数据库属性的当前状态。 例如，`Alter`、`Backup`、`Restore` 和 `Synchronize` 等操作会保留 `ReadWriteMode` 值。  
+ 除 `Attach` 外的所有数据库操作将保持 `ReadWriteMode` 数据库属性的当前状态。 例如，`Alter`、`Backup`、`Restore` 和 `Synchronize` 等操作会保留 `ReadWriteMode` 值。  
   
 > [!NOTE]  
 >  可以通过只读数据库创建本地多维数据集。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [附加和分离 Analysis Services 数据库](attach-and-detach-analysis-services-databases.md)   
  [移动 Analysis Services 数据库](move-an-analysis-services-database.md)   
- [分离元素](../xmla/xml-elements-commands/detach-element.md)   
- [Attach 元素](../xmla/xml-elements-commands/attach-element.md)  
+ [分离元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
+ [附加元素](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
   
   

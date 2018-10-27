@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 198f2f184a703f270c4fb52a775c47330c68888b
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: b224b70c8985b23568d24f6230b138d6c43f5928
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563843"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148162"
 ---
 # <a name="connection-string-properties-analysis-services"></a>连接字符串属性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "45563843"
 |--------------|-----------------|-------------|  
 |**Data Source** 或 **DataSource**|指定服务器实例。 此属性对于所有连接都是必需的。 有效值包括服务器的网络名称或 IP 地址、local 或 localhost（对本地连接）、URL（如果针对 HTTP 或 HTTPS 访问配置了服务器）或本地多维数据集 (.cub) 文件的名称。 <br /><br /> 对于 Azure Analysis Services，有效值`<protocol>://<region>/<servername>`其中，协议是字符串 asazure，区域是创建服务器时所在的 Uri (例如 westus.asazure.windows.net)，服务器名称是在区域内你唯一的服务器的名称。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />对于默认实例和端口 (TCP 2383) 为`Data source=AW-SRV01` 。<br /><br /> 对于命名实例 ($Finance) 和固定端口为`Data source=AW-SRV01$Finance:8081` 。<br /><br /> 对于采用默认实例和端口的完全限定的域名为`Data source=AW-SRV01.corp.Adventure-Works.com` 。<br /><br /> 对于服务器的 IP 地址为`Data source=172.16.254.1` ，它绕过 DNS 服务器查找，对于解决连接问题很有用。|  
 |**Initial Catalog** 或 **Catalog**|指定要连接到的 Analysis Services 数据库的名称。 该数据库必须部署在 Analysis Services 上，并且您必须有权连接到它。 此属性对于 AMO 连接是可选的，但是对于 ADOMD.NET 是必需的。|`Initial catalog=AdventureWorks2016`|  
-|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 为 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 要区分这些版本，您必须检查访问接口的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅[在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)和[用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
+|**提供程序**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 为 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 已在 SQL Server 2008 中发布并再次在 SQL Server 2008 R2 中发布（对于 SQL Server 2008 和 2008 R2，文件名为 msolap100.dll）<br />-   MSOLAP.5 已在 SQL Server 2012 中发布（文件名为 msolap110.dll）<br />-   MSOLAP.6 已在 SQL Server 2014 中发布（文件名为 msolap1200.dll）<br />-   MSOLAP.7 已在 SQL Server 2016 中发布（文件名为 msolap130.dll）<br /><br /> 此属性是可选的。 默认情况下，客户端库从注册表读取 OLE DB 访问接口的当前版本。 仅在需要特定版本的数据提供程序时才需要设置此属性，例如要连接到 SQL Server 2012 实例。<br /><br /> MSOLAP.4 已在 SQL Server 2008 和 SQL Server 2008 R2 中发布。 2008 R2 版本支持 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿，有时需要在 SharePoint 服务器上手动安装。 要区分这些版本，您必须检查访问接口的文件属性中的内部版本号：转到 Program files\Microsoft Analysis Services\AS OLEDB\10。 右键单击 msolap110.dll，然后选择“ **属性**”。 单击 **“详细信息”**。 查看文件版本信息。 版本应包括。\<内部版本号 > 适用于 SQL Server 2008 R2。 有关详细信息，请参阅 [在 SharePoint 服务器上安装 Analysis Services OLE DB 提供程序](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用于 Analysis Services 连接的数据提供程序](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 用于需要 SQL Server 2016 版本的 Analysis Services OLE DB 提供程序的连接。|  
 |**Cube**|多维数据集名称或透视名称。 一个数据库可以包含多个多维数据集和透视。 可以使用多个目标时，在连接字符串上包括多维数据集或透视名称。|`Cube=SalesPerspective` 显示你可以使用 Cube 连接字符串属性指定多维数据集名称或透视名称。|  
   
 ##  <a name="bkmk_auth"></a> 身份验证和安全  
@@ -54,7 +54,7 @@ ms.locfileid: "45563843"
 |**Integrated Security**|调用方的 Windows 标识用于连接到 Analysis Services。 有效值为空、SSPI 和 BASIC。<br /><br /> **集成安全性**=**SSPI** 是 TCP 连接的默认值，支持 NTLM、Kerberos 或匿名身份验证。 HTTP 连接的默认值为空。<br /><br /> 使用 **SSPI**时， **ProtectionLevel** 必须设置为以下值之一： **Connect**、 **PktIntegrity**、 **PktPrivacy**。|  
 |**Persist Encrypted**|当客户端应用程序需要数据源对象以加密形式保存敏感身份验证信息（如密码）时设置此属性。 默认情况下，不保存身份验证信息。|  
 |**Persist Security Info**|有效值为 True 和 False。 设置为 True 时，在建立连接后可以从连接获取安全信息（如以前在连接字符串上指定的用户标识或密码）。 默认值为 False。|  
-|**保护级别**|确定连接上使用的安全级别。 有效值为<br /><br /> -   **None**。 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br />-   **Connect**。 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br />-   **Pkt 完整性**。 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br />-   **Pkt 隐私**。 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections.md)|  
+|**保护级别**|确定连接上使用的安全级别。 有效值为<br /><br /> -   **None**。 不进行身份验证的连接或匿名连接。 不对发送到服务器的数据进行身份验证。<br />-   **Connect**。 进行身份验证的连接。 仅当客户端与服务器建立关系时进行身份验证。<br />-   **Pkt 完整性**。 加密的连接。 验证从客户端接收了所有数据并且数据在途中未更改。<br />-   **Pkt 隐私**。 签名的加密，仅对于 XMLA 支持。 验证从客户端接收了所有数据并且数据在途中未更改，通过加密来保护数据的隐私。<br /><br /> 有关详细信息，请参阅 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)|  
 |**Roles**|指定逗号分隔的预定义的角色列表，以使用该角色具有的权限连接到服务器或数据库。 如果忽略此属性，则使用所有角色且有效权限为所有角色的组合权限。 如果将此属性设置为空值（例如 Roles=’ ‘），则客户端连接没有角色成员身份。<br /><br /> 管理员使用此属性通过角色具有的权限进行连接。 如果角色的权限不足，一些命令可能失败。|  
 |**SSPI**|显式指定将 **Integrated Security** 设置为 **SSPI**时要将哪个安全包用于客户端身份验证。 SSPI 支持多个包，但是您可以使用此属性指定特定的包。 有效值为“协商”、Kerberos、NTLM 和“匿名用户”。 如果未设置此属性，则所有包可用于连接。|  
 |**Use Encryption for Data**|加密数据传输。 有效值为 True 和 False。|  
@@ -176,7 +176,7 @@ ms.locfileid: "45563843"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用一个单独的加密密钥对每个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的连接字符串信息进行加密。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 在你创建数据库时创建此密钥，并基于 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动帐户对该连接字符串信息进行加密。 当 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 启动时，将读取、解密并存储每个数据库的加密密钥。 当[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 需要连接某个数据源时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 会使用适当的解密密钥对该数据源的连接字符串信息解密。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [在 Internet Information Services (IIS) 8.0 上配置对 Analysis Services 的 HTTP 访问](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [针对 Kerberos 约束委派对 Analysis Services 进行配置](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [用于 Analysis Services 连接的数据访问接口](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)   

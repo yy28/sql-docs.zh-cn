@@ -17,12 +17,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db73daadcb32a64d308b4f223be133cd5de4bb9f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 602113da86b3d8ffdc79484b35dab59749844a01
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101557"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145642"
 ---
 # <a name="broker-event-category"></a>Broker 事件类别
   **Broker** 事件类别包含一般的 Service Broker 事件。  
@@ -44,7 +44,7 @@ ms.locfileid: "48101557"
   
  还为 Service Broker 提供了两个安全审核事件。 有关这些事件的详细信息，请参阅 [Audit Broker Login 事件类](audit-broker-login-event-class.md) 和 [Audit Broker Conversation 事件类](audit-broker-conversation-event-class.md)。  
   
-## <a name="see-also"></a>请参阅  
- [“安全审核”事件类别](../../analysis-services/trace-events/security-audit-event-category.md)  
+## <a name="see-also"></a>另请参阅  
+ [“安全审核”事件类别](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

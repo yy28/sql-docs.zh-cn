@@ -2,7 +2,7 @@
 title: 概述数据迁移助手 (SQL Server) |Microsoft Docs
 description: 了解如何使用数据迁移助手将 SQL Server 数据库迁移到其他 SQL Server 或 Azure 数据库
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 846fbfdcfb5d99363b98bad09c6efa3a2b46b4ab
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: ce503f2b6cb39296d85c7e917e5600d8de44545a
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100359"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643855"
 ---
 # <a name="overview-of-data-migration-assistant"></a>数据迁移助手概述
 
@@ -77,9 +77,7 @@ DMA 替换所有以前版本的 SQL Server 升级顾问，应使用的大多数 
 - SQL Server 2016
 - 在 Windows 和 Linux 上的 SQL Server 2017
 - Azure SQL Database
-
-> [!NOTE] 
-> DMA 目前不支持 Azure SQL 数据库托管实例为目标。
+- Azure SQL 数据库托管实例
 
 ## <a name="installation"></a>安装
 

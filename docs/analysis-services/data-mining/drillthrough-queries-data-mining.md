@@ -1,5 +1,5 @@
 ---
-title: 钻取查询 （数据挖掘） |Microsoft 文档
+title: 钻取查询 （数据挖掘） |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8b3afda19fbbf084223d0f597fe2893dce17049
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f85c297c7ae8786d5cd387a2f25a81f507425dda
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018294"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148012"
 ---
 # <a name="drillthrough-queries-data-mining"></a>钻取查询（数据挖掘）
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34018294"
 ##  <a name="bkmk_DMX"></a> 使用 DMX 来创建钻取查询  
  如果您对模型或结构具有权限，则可以通过创建 DMX 查询来钻取到事例数据。 有关在 DMX 中创建钻取查询的语法的示例，请参阅以下主题：  
   
- [创建使用 DMX 的钻取查询](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
+ [使用 DMX 来创建钻取查询](../../analysis-services/data-mining/create-drillthrough-queries-using-dmx.md)  
   
 ##  <a name="bkmk_Considerations"></a> 使用钻取功能时的注意事项  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34018294"
 -   如果挖掘结构不允许进行钻取，但是挖掘模型允许进行钻取，则只能查看模型事例中的信息，而不能查看挖掘结构中的信息。  
   
 ###  <a name="bkmk_Security"></a> 钻取的安全问题  
- 如果您希望从模型钻取到结构事例，则必须确认挖掘结构和挖掘模型的 [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) 属性均设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。 有关如何创建角色的信息，请参阅[角色设计器（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)。 请参阅。  
+ 如果您希望从模型钻取到结构事例，则必须确认挖掘结构和挖掘模型的 [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 属性均设置为 **True**。 而且，您必须是对挖掘结构和挖掘模型都具有钻取权限的角色的成员。 有关如何创建角色的信息，请参阅[角色设计器（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/e8ba42db-0565-4d68-b3ab-0c63d8d07192)。 请参阅。  
   
  挖掘结构和挖掘模型的钻取权限是分开设置的。 即使不具有结构的钻取权限，模型的钻取权限也会允许您从模型进行钻取。 如果拥有结构的钻取权限，则可通过使用 [StructureColumn (DMX)](../../dmx/structurecolumn-dmx.md) 函数，将结构列包含到模型钻取查询中。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "34018294"
 |任务|链接|  
 |----------|----------|  
 |描述在数据挖掘设计器中使用钻取的过程|[从挖掘模型钻取到事例数据](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|改变现有的挖掘模型以允许钻取|[为挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
-|使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[创建挖掘结构 & #40; DMX & #41;](../../dmx/create-mining-structure-dmx.md)|  
-|有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予对数据挖掘结构和模型 & #40; 的权限Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|改变现有的挖掘模型以允许钻取|[对挖掘模型启用钻取](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|使用 DMX WITH DRILLTHROUGH 子句对挖掘模型启用钻取。|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
+|有关分配适用于对挖掘结构和挖掘模型进行钻取的权限的信息|[授予数据挖掘结构和模型的权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>另请参阅  
  [数据挖掘模型查看器](../../analysis-services/data-mining/data-mining-model-viewers.md)   

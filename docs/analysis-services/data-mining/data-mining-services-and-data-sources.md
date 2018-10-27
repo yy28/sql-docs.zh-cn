@@ -1,5 +1,5 @@
 ---
-title: 数据挖掘服务和数据源 |Microsoft 文档
+title: 数据挖掘服务和数据源 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2ddcf169206e795899861e7b7fe8be6430ad9cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: acb8f97708cd92bc0bdee1278d8b672908d65877
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016584"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145882"
 ---
 # <a name="data-mining-services-and-data-sources"></a>数据挖掘服务和数据源
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34016584"
  还可以设置允许用户优化服务器并控制客户端使用的安全性的属性。 有关详细信息，请参阅 [Feature Properties](../../analysis-services/server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  有关支持版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[支持的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  有关支持的各个版本的插件算法的详细信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>对数据挖掘对象的编程访问  
  您可以使用下列对象模型创建与 Analysis Services 数据库的连接和处理数据挖掘对象：  
@@ -117,14 +117,14 @@ ms.locfileid: "34016584"
   
  如果该过程返回数据集，客户端将接收具有嵌套表（包含行）的数据集或数据表。 例如，如果根据模型内容创建查询，查询将返回整个模型。 若要避免返回过多的行，您可以使用 ADOMD+ 对象模型编写存储过程。  
   
- 若要编写服务器存储过程，则必须引用 Microsoft.AnalysisServices.AdomdServer 命名空间。 有关如何创建和使用存储过程的详细信息，请参阅 [User Defined Functions and Stored Procedures](../../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md)。  
+ 若要编写服务器存储过程，则必须引用 Microsoft.AnalysisServices.AdomdServer 命名空间。 有关如何创建和使用存储过程的详细信息，请参阅 [User Defined Functions and Stored Procedures](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures)。  
   
 > [!NOTE]  
 >  存储过程不能用于更改数据服务器对象的安全性。 执行存储过程时，将使用用户的当前上下文来确定对所有服务器对象的访问权限。 因此，对于访问的任何数据库对象，用户必须拥有相应权限。  
   
 ## <a name="see-also"></a>另请参阅  
  [物理体系结构（Analysis Services - 多维数据）](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
- [物理体系结构 & #40;Analysis Services-数据挖掘 & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
- [数据挖掘解决方案和对象的管理](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [物理体系结构（Analysis Services - 数据挖掘）](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [管理数据挖掘解决方案和对象](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

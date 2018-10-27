@@ -2,7 +2,7 @@
 title: 执行 SQL Server 迁移评估 （数据迁移助手） |Microsoft Docs
 description: 了解如何使用数据迁移助手迁移到另一个 SQL Server 或 Azure SQL 数据库之前，评估的本地 SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 0131c267d3a26782d0f32df3a3555afcbc43d22d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706185"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643975"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>执行使用数据迁移助手的 SQL Server 迁移评估
 
@@ -32,7 +32,7 @@ ms.locfileid: "47706185"
 
 2.  设置源和目标服务器类型。
 
-    如果您正在升级你的本地 SQL Server 实例到最新的本地 SQL Server 实例或 Azure VM 上托管的 SQL Server，源和目标服务器类型设置为**SQL Server**。 如果要迁移到 Azure SQL 数据库，而是将目标服务器类型设置为**Azure SQL 数据库**。
+    如果您要升级的本地 SQL Server 实例到最新的本地 SQL Server 实例或 Azure VM 上托管的 SQL Server，源和目标服务器类型设置为**SQL Server**。 如果要迁移到 Azure SQL 数据库，而是将目标服务器类型设置为**Azure SQL 数据库**。
 
 3.  单击 **“创建”**。
 
@@ -44,7 +44,7 @@ ms.locfileid: "47706185"
 
 2. 选择报表类型。
 
-   当你在评估源 SQL Server 实例迁移到本地 SQL Server 或 SQL Server 托管在 Azure VM 的目标上时，可以选择一个或两个以下的评估报告类型：
+   时进行评估源 SQL Server 实例迁移到本地 SQL Server 或 SQL Server 托管在 Azure VM 的目标上，可以选择一个或两个以下的评估报告类型：
 
     -   **兼容性问题**
 
@@ -52,7 +52,7 @@ ms.locfileid: "47706185"
 
     ![选择 SQL Server 目标的评估报表类型](../dma/media/AssessmentTypes.png)
 
-   当你在评估源 SQL Server 实例迁移到 Azure SQL 数据库时，可以选择一个或两个以下的评估报告类型：
+   当在进行评估源 SQL Server 实例迁移到 Azure SQL 数据库时，可以选择一个或两个以下的评估报告类型：
 
     -   **检查数据库兼容性**
 
@@ -77,7 +77,7 @@ ms.locfileid: "47706185"
 
 ## <a name="view-results"></a>查看结果
 
-评估的持续时间取决于添加的数据库数目和每个数据库的架构大小。 一旦可用，则结果将显示每个数据库中。
+评估的持续时间取决于添加的数据库数目和每个数据库的架构大小。 只要提供了它们，结果将显示每个数据库。
 
 1.  选择已完成评估，该数据库，然后在之间切换**兼容性问题**并**功能建议**使用切换器。
 

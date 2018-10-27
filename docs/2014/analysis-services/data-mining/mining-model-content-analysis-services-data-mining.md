@@ -21,12 +21,12 @@ ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db6b49c10441e08bb66256860550fc2447f6dcf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 355bb7a964ae5b70dd0d8bd71f371766c25e413e
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120897"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148002"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>挖掘模型内容（Analysis Services - 数据挖掘）
   使用基础挖掘结构中的数据设计并处理挖掘模型后，该挖掘模型就已完成，包含有“ 挖掘模型内容”。 可以使用此内容来预测或分析您的数据。  
@@ -55,7 +55,7 @@ ms.locfileid: "48120897"
  根据您用来创建模型的算法，根节点的子节点的数量会有所不同。 子节点具有不同的含义，包含不同的内容，具体取决于算法以及数据的深度和复杂性。  
   
 ##  <a name="bkmk_Nodes"></a> 挖掘模型内容中的节点  
- 在挖掘模型中，每个节点都是一个常规用途的容器，用于存储关于整个模型或它的一部分的一段信息。 每个节点的结构始终是相同的，并包含数据挖掘架构行集定义的列。 有关详细信息，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](../schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)。  
+ 在挖掘模型中，每个节点都是一个常规用途的容器，用于存储关于整个模型或它的一部分的一段信息。 每个节点的结构始终是相同的，并包含数据挖掘架构行集定义的列。 有关详细信息，请参阅 [DMSCHEMA_MINING_MODEL_CONTENT 行集](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)。  
   
  每个节点都包含关于该节点的元数据，包括在每个模型中唯一的标识符、父节点的 ID 以及该节点具有的子节点数量。 元数据标识节点属于哪个模型以及存储该特定模型的数据库目录。 节点中提供的其他内容根据您用来创建模型的算法类型的不同而不同，可能包含：  
   
@@ -160,9 +160,9 @@ ms.locfileid: "48120897"
   
  如果属性名称为列，则在最简单的事例中，ATTRIBUTE_VALUE 包含该列的离散值之一。  
   
- 根据算法处理值的方式，ATTRIBUTE_VALUE 还可能包含一个标志来指示该属性是否存在某个值 (`Existing`)，还是值为 null (`Missing`)。  
+ 根据算法处理值的方式，ATTRIBUTE_VALUE 还可能包含一个标志，用于指示该属性是存在一个值 (`Existing`) 还是值为 Null (`Missing`)。  
   
- 例如，如果您的模型设置为查找至少一次购买某个特定商品的客户，ATTRIBUTE_NAME 列可能包含定义感兴趣的项，如属性-值对`Model = 'Water bottle'`，并且 ATTRIBUTE_VALUE 列将仅包含关键字`Existing`或`Missing`。  
+ 例如，如果将模型设置为查找至少购买过一次某个特定商品的客户，ATTRIBUTE_NAME 列可能包含属性/值对，用于定义所关注的商品（如 `Model = 'Water bottle'`），并且 ATTRIBUTE_VALUE 列将仅仅包含关键字 `Existing` 或 `Missing`。  
   
  Support  
  具有此属性/值对或包含此项集或规则的事例的计数。  
@@ -214,7 +214,7 @@ ms.locfileid: "48120897"
   
 |VALUE_TYPE ID|值标签|值类型名称|  
 |--------------------|-----------------|---------------------|  
-|1|Missing|指示事例数据不包含此属性的值。 `Missing`状态分开计算具有值的属性。|  
+|1|Missing|指示事例数据不包含此属性的值。 `Missing` 状态与具有值的属性是分开计算的。|  
 |2|Existing|指示事例数据包含此属性的值。|  
 |3|连续|指示此属性的值是一个连续数值，因此可以由平均值以及偏差和标准偏差表示。|  
 |4|离散|指示值（数字或文本）被视为离散值。<br /><br /> **注意** 离散值也可能处于缺失状态；不过，在进行计算时，它们的处理方式不同。 有关信息，请参阅[缺失值（Analysis Services - 数据挖掘）](missing-values-analysis-services-data-mining.md)。|  
@@ -273,15 +273,15 @@ ms.locfileid: "48120897"
   
 |算法或模型类型|模型内容|查询挖掘模型|  
 |-----------------------------|-------------------|----------------------------|  
-|关联规则模型|[关联模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[关联模型查询示例](association-model-query-examples.md)|  
-|聚类分析模型|[决策树模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](clustering-model-query-examples.md)|  
-|决策树模型|[决策树模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](decision-trees-model-query-examples.md)|  
-|线性回归模型|[线性回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
-|逻辑回归模型|[逻辑回归模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-logistic-regression-models.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
-|Naïve Bayes 模型|[Naive Bayes 模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)|  
-|神经网络模型|[神经网络模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[神经网络模型查询示例](neural-network-model-query-examples.md)|  
-|顺序分析和聚类分析|[序列聚类分析模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-sequence-clustering-models.md)|[顺序分析和聚类分析模型查询示例](sequence-clustering-model-query-examples.md)|  
-|时序模型|[时序模型的挖掘模型内容&#40;Analysis Services-数据挖掘&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时序模型查询示例](time-series-model-query-examples.md)|  
+|关联规则模型|[关联模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-association-models-analysis-services-data-mining.md)|[关联模型查询示例](association-model-query-examples.md)|  
+|聚类分析模型|[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[聚类分析模型查询示例](clustering-model-query-examples.md)|  
+|决策树模型|[决策树模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[决策树模型查询示例](decision-trees-model-query-examples.md)|  
+|线性回归模型|[线性回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
+|逻辑回归模型|[逻辑回归模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-logistic-regression-models.md)|[线性回归模型查询示例](linear-regression-model-query-examples.md)|  
+|Naïve Bayes 模型|[Naive Bayes 模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 模型查询示例](naive-bayes-model-query-examples.md)|  
+|神经网络模型|[神经网络模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[神经网络模型查询示例](neural-network-model-query-examples.md)|  
+|顺序分析和聚类分析|[顺序分析和聚类分析模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-sequence-clustering-models.md)|[顺序分析和聚类分析模型查询示例](sequence-clustering-model-query-examples.md)|  
+|时序模型|[时序模型的挖掘模型内容（Analysis Services - 数据挖掘）](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[时序模型查询示例](time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 查看挖掘模型内容的工具  
  当在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中浏览模型时，可以使用 **Microsoft 一般内容树查看器**查看信息， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中均提供了此查看器。  
@@ -303,8 +303,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您还可以通过启动与 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的连接并查询系统表来访问数据挖掘架构行集中的信息。 有关详细信息，请参阅[查询数据挖掘架构行集&#40;Analysis Services-数据挖掘&#41;](data-mining-schema-rowsets-ssas.md)。  
   
-## <a name="see-also"></a>请参阅  
- [Microsoft 一般内容树查看器&#40;数据挖掘&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [数据挖掘算法&#40;Analysis Services-数据挖掘&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="see-also"></a>另请参阅  
+ [Microsoft 一般内容树查看器（数据挖掘）](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [数据挖掘算法（Analysis Services - 数据挖掘）](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 多维表达式 (MDX) 引用 |Microsoft 文档
+title: 多维表达式 (MDX) 参考 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cae2aba7475a987561bb089edc36410a4f08ab97
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742676"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145332"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多维表达式 (MDX) 参考
 
@@ -25,12 +25,12 @@ ms.locfileid: "34742676"
 |主题|Description|  
 |-----------|-----------------|  
 |[MDX 语法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|介绍 MDX 语言中适用于 MDX 表达式、语句和脚本的各种语法元素。|  
-|[MDX 语言参考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|介绍定义 MDX 语言的语句、运算符和函数。|  
+|[MDX 语言参考 (MDX)](../mdx/mdx-language-reference-mdx.md)|介绍定义 MDX 语言的语句、运算符和函数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [使用 MDX 查询多维数据](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
- [Analysis Services 脚本语言&#40;的 XMLA ASSL&#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [从分析数据源检索数据](../analysis-services/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source.md)   
+ [Analysis Services 脚本语言（支持 XMLA 的 ASSL）](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [从分析数据源中检索数据](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
  [定义赋值和其他脚本命令](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
   
   

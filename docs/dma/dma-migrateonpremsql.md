@@ -2,7 +2,7 @@
 title: 升级本地 SQL Server 到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server |Microsoft Docs
 description: 了解如何使用数据迁移助手将升级到更高版本的 SQL Server 或 Azure Vm 上的 SQL Server 的本地 SQL Server
 ms.custom: ''
-ms.date: 08/29/2018
+ms.date: 10/20/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: f23edbbd6f7a1d051c7585b563cd2f3f1575b640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d3ee1784653205feb4aa95a80a82d5ac27ec46
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833125"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643835"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>在本地 SQL Server 升级到 SQL Server 或使用数据迁移助手的 Azure Vm 上的 SQL Server
 
@@ -81,7 +81,7 @@ ms.locfileid: "47833125"
 
 5. 选择“下一步” 。
 
-数据迁移助手会执行验证备份的文件夹中，数据和日志文件位置。 如果任何验证失败，请解决选项，然后选择**下一步**。
+数据迁移助手对备份文件夹、 数据和日志文件位置执行验证。 如果任何验证失败，解决选项，然后选择**下一步**。
 
 ## <a name="select-logins"></a>选择登录名
 
@@ -108,7 +108,7 @@ ms.locfileid: "47833125"
 
 2. 查看已保存的文件以获取有关登录名迁移的详细信息，然后验证所做的更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [数据迁移助手 (DMA)](../dma/dma-overview.md)
 - [数据迁移助手： 配置设置](../dma/dma-configurationsettings.md)

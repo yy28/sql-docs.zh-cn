@@ -1,5 +1,5 @@
 ---
-title: 密钥多维模型中的性能指标 (Kpi) |Microsoft 文档
+title: 关键绩效指标 (Kpi) 多维模型中的 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7b7c036b09113711315ada3120538b5117931be7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027557"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147782"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多维模型中的关键绩效指标 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34027557"
   
  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，KPI 是指与用于评估业务绩效的多维数据集中某个度量值组关联的计算的集合。 这些计算通常是多维表达式 (MDX) 或计算成员的组合。 KPI 还包括其他的元数据，该元数据提供有关客户端应用程序如何显示 KPI 计算结果的信息。  
   
- KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)。  
+ KPI 处理关于目标集、多维数据集中记录的性能的实际公式以及用于显示性能走向和状态的度量的信息。 AMO 用于定义针对 KPI 值的公式以及其他定义。 查询接口（如 ADOMD.NET）由客户端应用程序用于检索操作并向最终用户公开 KPI 值。 有关详细信息，请参阅 [使用 ADOMD.NET 进行开发](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)。  
   
  一个简单的 <xref:Microsoft.AnalysisServices.Kpi> 对象由基本信息、目标、获取的实际值、状态值、走向值以及在其中查看 KPI 的文件夹组成。 基本信息包括 KPI 的名称和说明。 目标是计算结果为数字的 MDX 表达式。 实际值是计算结果为数字的 MDX 表达式。 状态值和走向值是计算结果为数字的 MDX 表达式。 文件夹是向客户端显示 KPI 时的推荐位置。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "34027557"
 |术语|定义|  
 |----------|----------------|  
 |目的|一个返回 KPI 目标值的 MDX 数值表达式或计算。|  
-|“值”|一个返回 KPI 实际值的 MDX 数值表达式。|  
-|状态|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
+|ReplTest1|一个返回 KPI 实际值的 MDX 数值表达式。|  
+|“登录属性”|一个表示指定时间点 KPI 状态的 MDX 表达式。<br /><br /> 状态 MDX 表达式应返回介于 -1 到 1 之间的标准化值。 等于或小于 -1 的值将作为“差值”或“低值”。 零值 (0) 被理解为“可接受值”或“中间值”。 等于或大于 1 的值将作为“优值”或“高值”。<br /><br /> 如果受客户端应用程序支持，则可以有选择地返回不限制数目的中间值，并使用这些值来显示任意数目的附加状态。|  
 |走向|一个评估一段时间内 KPI 值的 MDX 表达式。 走向可以是任何基于时间的条件，该条件在特定的业务上下文中很有用。<br /><br /> 使用走向 MDX 表达式，业务用户可以确定 KPI 是随时间升高还是随时间降低。|  
 |状态指示器|一个提供 KPI 状态快速指示的可见元素。 该元素的显示内容由评估状态的 MDX 表达式的值确定。|  
 |走向指示器|一个提供 KPI 走向的快速指示的可见元素。 该元素的显示内容由评估走向的 MDX 表达式的值确定。|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027557"
 ## <a name="parent-kpis"></a>父级 KPI  
  一个单位可以跟踪不同级别的不同商务跃点。 例如，仅使用两个或三个 KPI 即可测定整个公司的业务绩效，但是这些公司范围内的 KPI 可能基于三个或四个由整个公司内的业务单元跟踪的其他 KPI。 同样，公司内的业务单元可以使用不同的统计信息来计算相同的 KPI，其结果汇总到公司范围内的 KPI 中。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]让你定义 Kpi 之间的父-子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可让你定义 KPI 之间的父子关系。 这种父子关系允许使用子级 KPI 的结果来计算父级 KPI 的结果。 客户端应用程序也可以使用此关系来正确显示父级和子级 KPI。  
   
 ## <a name="weights"></a>权重  
  还可以将权重分配给子级 KPI。 当计算父级 KPI 的值时， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可使用权重按比例调整子级 KPI 的结果。  

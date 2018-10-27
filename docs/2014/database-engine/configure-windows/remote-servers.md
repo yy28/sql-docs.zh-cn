@@ -17,12 +17,12 @@ ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98585ac8a3e504a2b73741559f4db839e6737154
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e2c7a12c45a0732014a20a7471d664e808b5883
+ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168687"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991152"
 ---
 # <a name="remote-servers"></a>远程服务器
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持远程服务器只是为了向后兼容。 新应用程序应该改用链接服务器。 有关详细信息，请参阅 [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)。  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="viewing-local-or-remote-server-properties"></a>查看本地或远程服务器属性  
- 可以使用 **xp_msver** 扩展存储过程来查看本地或远程服务器属性。 这些属性包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本号、计算机中的处理器类型和数目以及操作系统的版本。 从本地服务器可以查看远程服务器的数据库、文件、登录和工具。 有关详细信息，请参阅 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+ 可以使用 **xp_msver** 扩展存储过程来查看本地或远程服务器属性。 这些属性包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的版本号、计算机中的处理器类型和数目以及操作系统的版本。 从本地服务器可以查看远程服务器的数据库、文件、登录和工具。 有关详细信息，请参阅 [xp_msver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql)。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [链接服务器（数据库引擎）](../../relational-databases/linked-servers/linked-servers-database-engine.md)  

@@ -11,12 +11,12 @@ ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4860230697f5a65ada594060b738793ebea6202
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c5b33d4c3e7f5ea10efc89fc5b7234bf2faaf0c7
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143793"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146743"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供一组模板来帮助您快速创建 XMLA 脚本、DMX 或 MDX 查询，在多维数据集或表格模型中创建 KPI，执行脚本备份和还原操作，以及执行其他许多任务。 模板位于 **的** “模板资源管理器” [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中。  
@@ -109,7 +109,7 @@ ms.locfileid: "48143793"
 5.  双击中的文本\<文件 > 元素。 键入备份文件的名称，包括 .abf 文件扩展名。 如果您不使用默认的备份位置，则指定完整的文件路径。 有关详细信息，请参阅[备份、还原和同步数据库 (XMLA)](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ##  <a name="bkmk_schemarowset"></a> 使用 XMLA 模板生成架构行集查询  
- **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](../schema-rowsets/analysis-services-schema-rowsets.md)。  
+ **“模板资源管理器”** 对于架构行集查询仅包含一个模板。 若要使用此模板，您必须熟悉要使用的单独架构行集的要求，并且包含所需所有元素以及可用作限制的列。 有关详细信息，请参阅 [Analysis Services 架构行集](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)。  
   
  请注意，出于简便目的，许多架构行集也作为动态管理视图 (DMV) 公开。 通过使用相应的 DMV，您可以使用与 Transact-SQL 相似的语法来查询架构行集。 例如，下面的查询返回相同的结果，但一个查询以 XML 格式返回结果，而另一个查询以表格格式返回结果。 有关 DMV 的详细信息，请参阅[使用动态管理视图 (DMV) 监视 Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)。  
   
@@ -144,7 +144,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 2.  打开 **“模板资源管理器”**，将模板 **“发现架构行集”** 拖入空白查询窗口中。  
   
-3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](../xmla/xml-elements-properties/type-element-xmla.md)元素具有以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
+3.  在模板中，替换[RequestType 元素&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla)元素具有以下文本： `<RequestType>MDSCHEMA_INPUT_DATASOURCES</RequestType>`  
   
 4.  单击 **“执行”**。  
   
@@ -196,39 +196,39 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||嵌套单独预测|演示如何使用 DMX SELECT FROM *\<模型 >* NATURAL PREDICTION JOIN 子句，以执行针对使用单个值，在中列的预测查询中显式指定的挖掘模型的预测查询其名称与挖掘模型中的列，其中包含一组值中使用名称也匹配到挖掘模型中的嵌套列的 UNION 语句创建的嵌套表。|  
 ||单独预测|演示如何使用 DMX SELECT FROM 使用\<模型 > NATURAL PREDICTION JOIN 语句来执行针对使用单个值，在中其名称与中的列的列的预测查询中显式指定的挖掘模型的预测查询挖掘模型。|  
 ||存储过程调用|演示如何使用 DMX CALL 语句调用存储过程|  
-|MDX\表达式|变动平均值 - 固定|演示如何使用 MDX`ParallelPeriod`和`CurrentMember`函数及自然排序集来创建提供固定数量的所包含的时间维度中的层次结构的时间段的度量值的移动平均值的计算度量值。|  
-||变动平均值 - 可变|演示如何使用 MDX`CASE`内的语句`Avg`函数来创建数目可变的时间段包含的时间维度层次结构中提供的度量值的移动平均值的计算度量值。|  
+|MDX\表达式|变动平均值 - 固定|演示如何使用 MDX `ParallelPeriod` 和 `CurrentMember` 函数及自然排序集生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个固定数量时间段上的变动平均值。|  
+||变动平均值 - 可变|演示如何在 `CASE` 函数内使用 MDX `Avg` 语句来生成一个计算度量值，以便提供一个度量值在时间维度的一个层次结构所包含的一个可变数量时间段上的变动平均值。|  
 ||本期截止到现在|演示如何在计算成员内使用 MDX `PeriodsToDate` 函数。|  
-||父级比率|演示如何使用 MDX`Parent`函数来创建计算度量值，表示指定层次结构中的父成员的每个子成员的度量值的百分率。|  
+||父级比率|演示如何使用 MDX `Parent` 函数来创建一个计算度量值，以便表示指定层次结构中父成员的每个子成员的度量值的百分率。|  
 ||总计比率|演示如何使用“全部”成员来创建一个计算度量值，以便表示指定层次结构中每个成员的度量值的百分率。|  
 |MDX\查询|“基本查询”|演示一个可从其构造 MDX 查询的基本 MDX SELECT 语句。|  
-||KPI 查询|演示如何使用 MDX`KPIValue`和`KPIGoal`函数来检索关键绩效指标 (KPI) 信息在 MDX 查询。|  
+||KPI 查询|演示如何在 MDX 查询中使用 MDX `KPIValue` 和 `KPIGoal` 函数来检索关键绩效指标 (KPI) 信息。|  
 ||嵌套 Select 查询|演示如何创建一个从由另一个 SELECT 语句定义的子多维数据集中检索信息的 MDX SELECT 语句。|  
 ||使用计算成员|演示如何在 SELECT 语句中使用 MDX WITH 子句来为 MDX 查询定义计算成员。|  
 ||使用命名集|演示如何在 SELECT 语句中使用 MDX WITH 子句来为 MDX 查询定义命名集。|  
-|XMLA\管理|Backup|演示如何使用 XMLA`Backup`命令以备份[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库添加到一个文件。|  
-||取消|演示如何使用 XMLA`Cancel`命令取消针对当前会话 （用于用户而不是管理员或服务器管理员） 的所有正在运行的操作、 数据库 （用于管理员），或实例 （用于服务器管理员。）|  
+|XMLA\管理|Backup|演示如何使用 XMLA `Backup` 命令将 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库备份到文件。|  
+||取消|演示如何使用 XMLA `Cancel` 命令取消针对当前会话（用于用户而不是管理员或服务器管理员）、数据库（用于管理员）或实例（用于服务器管理员）运行的所有操作。|  
 ||创建远程分区数据库|演示如何使用 XMLA `Create` 命令和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 脚本语言 (ASSL) 数据库元素来创建用于存储远程分区的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库和数据源。|  
-||DELETE|演示如何使用 XMLA`Delete`命令删除现有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库。|  
+||DELETE|演示如何使用 XMLA `Delete` 命令删除现有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
 ||处理维度|演示如何将 XMLA `Batch` 命令与 `Parallel` 元素和 `Process` 命令组合使用来通过使用并行批处理操作更新维度的属性。|  
-||处理分区|演示如何使用 XMLA`Batch`命令，结合`Parallel`元素和`Process`命令，来通过并行批处理操作完全处理一个分区。|  
-||还原|演示如何使用 XMLA`Restore`命令，以还原[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]从现有备份文件的数据库。|  
-||同步|演示如何使用 XMLA`Synchronize`命令以将另一个同步[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库与当前[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]数据库针对 SynchronizeSecurity 标记使用 SkipMembership 选项。|  
+||处理分区|演示如何将 XMLA `Batch` 命令与 `Parallel` 元素和 `Process` 命令组合使用来通过并行批处理操作完全处理一个分区。|  
+||还原|演示如何使用 XMLA `Restore` 命令从现有备份文件还原 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库。|  
+||同步|演示如何使用 XMLA `Synchronize` 命令，并针对 SynchronizeSecurity 标记使用 SkipMembership 选项，将另一个 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库与当前 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库进行同步。|  
 |XMLA\架构行集|发现架构行集|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_SCHEMA_ROWSETS 架构行集的内容。|  
-|XMLA\服务器状态|连接|演示如何使用 XMLA`Discover`方法检索 DISCOVER_CONNECTIONS 架构行集的内容。|  
-||中执行计划的管理任务，即“作业”|演示如何使用 XMLA`Discover`方法检索 DISCOVER_JOBS 架构行集的内容。|  
-||位置|演示如何使用 XMLA`Discover`方法来检索 DISCOVER_LOCATIONS 架构行集，指定位置备份文件的路径的内容。|  
+|XMLA\服务器状态|连接|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_CONNECTIONS 架构行集的内容。|  
+||中执行计划的管理任务，即“作业”|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_JOBS 架构行集的内容。|  
+||位置|演示如何使用 XMLA `Discover` 方法并指定位置备份文件的路径来检索 DISCOVER_LOCATIONS 架构行集的内容。|  
 ||锁|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_LOCKS 架构行集的内容。|  
 ||内存授予|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_MEMORYGRANT 架构行集的内容。|  
-||性能计数器|演示如何使用 XMLA`Discover`方法检索 DISCOVER_PERFORMANCE_COUNTERS 架构行集的内容。|  
+||性能计数器|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_PERFORMANCE_COUNTERS 架构行集的内容。|  
 ||会话|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_SESSIONS 架构行集的内容。|  
-||跟踪|演示如何使用 XMLA`Discover`方法检索 DISCOVER_TRACES 架构行集的内容。|  
-||中的|演示如何使用 XMLA`Discover`方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
+||跟踪|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_TRACES 架构行集的内容。|  
+||中的|演示如何使用 XMLA `Discover` 方法检索 DISCOVER_TRANSACTIONS 架构行集的内容。|  
   
-## <a name="see-also"></a>请参阅  
- [多维表达式&#40;MDX&#41;引用](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [数据挖掘扩展插件&#40;DMX&#41;引用](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services 脚本语言&#40;ASSL&#41;引用](../scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 脚本语言&#40;ASSL&#41;引用](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+## <a name="see-also"></a>另请参阅  
+ [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [数据挖掘扩展插件 (DMX) 参考](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services 脚本语言&#40;ASSL&#41;引用](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

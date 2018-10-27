@@ -1,5 +1,5 @@
 ---
-title: 多维模型中的操作 |Microsoft 文档
+title: 多维模型中的操作 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6ed03893bbf3f18137329fc1792ecd0b30a77a68
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024274"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50145702"
 ---
 # <a name="actions-in-multidimensional-models"></a>多维模型中的操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024274"
   
 -   层次结构成员  
   
--   Level  
+-   级别  
   
 -   级别成员  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34024274"
  **附加属性**  
  选择属性。 下表总结了可用的属性。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**调用**|指定如何运行操作。 “交互”（默认）指定在用户访问对象时运行操作。 可能的设置是：<br /><br /> 批处理<br /><br /> 交互<br /><br /> 处于打开状态|  
 |**应用程序**|说明操作的应用程序。|  
@@ -74,7 +74,7 @@ ms.locfileid: "34024274"
 |**True**|如果标题是 MDX，请指定 **True** ，如果不是，则指定 **False** 。|  
   
 > [!NOTE]  
->  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](../../analysis-services/scripting/objects/action-element-assl.md)、[Type 元素 (Action) (ASSL)](../../analysis-services/scripting/properties/type-element-action-assl.md) 和 [AMO OLAP 高级对象的编程](../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)。  
+>  必须使用 Analysis Services 脚本语言 (ASSL) 或分析管理对象 (AMO)，才能定义 HTML 和命令行操作类型。 有关详细信息，请参阅 [Action 元素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/action-element-assl)、[Type 元素 (Action) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-action-assl) 和 [AMO OLAP 高级对象的编程](https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects)。  
   
 ## <a name="creating-a-reporting-action"></a>创建报表操作  
  报表服务器会对基于 URL 的报表请求作出响应。 若要创建报表操作，请在 **“多维数据集”** 菜单上单击 **“新建报表操作”**。 下面是特定于报表操作的选项。  
@@ -82,7 +82,7 @@ ms.locfileid: "34024274"
  **报表服务器**  
  下表说明的属性是为报表服务器指定的。  
   
-|属性|Description|  
+|“属性”|Description|  
 |--------------|-----------------|  
 |**服务器名称**|运行报表服务器的计算机的名称。|  
 |**服务器路径**|报表服务器所显示的路径。|  

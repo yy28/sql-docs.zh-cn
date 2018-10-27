@@ -14,12 +14,12 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8765c4f3b1f58bc4212b33a3e7e9cedd8205a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 488a4d7107b15d5bea12666dbb83a957f47339f9
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099148"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>转换、 加载和迁移 (AccessToSQL)
 **转换、 加载和迁移**对话框时使用的转换、 加载和迁移按钮或迁移向导报告迁移状态。  
@@ -28,11 +28,11 @@ ms.locfileid: "47785665"
   
 **迁移所选对象的数据**页的部分还包含**报表**按钮。 可以单击此按钮可查看数据迁移报表。  
   
-## <a name="options"></a>选项  
+## <a name="options"></a>“常规”  
 **报告**  
 显示关联的转换或迁移报表。  
   
-## <a name="see-also"></a>请参阅  
-[用户界面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>另请参阅  
+[用户界面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [迁移向导](migration-wizard-accesstosql.md)  
   

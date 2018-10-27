@@ -14,12 +14,12 @@ ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad59ce6f605c913e621d4d377ec3d48e8cbf2b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164287"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50147572"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>管理数据挖掘解决方案和对象
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用于管理现有挖掘结构和挖掘模型的客户端工具。 本节介绍使用每种环境可以执行的管理操作。  
@@ -29,9 +29,9 @@ ms.locfileid: "48164287"
 ## <a name="in-this-section"></a>本节内容  
  [移动数据挖掘对象](moving-data-mining-objects.md)  
   
- [处理要求和注意事项&#40;数据挖掘&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [处理要求和注意事项（数据挖掘）](processing-requirements-and-considerations-data-mining.md)  
   
- [使用 SQL Server Profiler 监视数据挖掘&#40;Analysis Services-数据挖掘&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [使用 SQL Server 事件探查器监视数据挖掘（Analysis Services - 数据挖掘）](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>数据挖掘对象的位置  
  已处理的挖掘结构和挖掘模型通常存储在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例中。  
@@ -52,7 +52,7 @@ ms.locfileid: "48164287"
   
 -   [更改挖掘模型的属性](change-the-properties-of-a-mining-model.md)  
   
--   [查看或更改建模标志&#40;数据挖掘&#41;](modeling-flags-data-mining.md)  
+-   [查看或更改建模标志（数据挖掘）](modeling-flags-data-mining.md)  
   
 -   [查看或更改算法参数](view-or-change-algorithm-parameters.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48164287"
 > [!WARNING]  
 >  所有对挖掘结构或挖掘模型的更改，包括对元数据（如名称或说明）的更改，都要求重新处理结构或模型。  
   
- 如果没有用于创建数据挖掘项目或对象的解决方案文件，可以使用 Analysis Services 导入向导从服务器导入现有项目、 对对象进行修改，然后重新部署使用`Incremental`选项。 有关详细信息，请参阅 [使用 Analysis Services 导入向导导入数据挖掘项目](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 如果您没有用于创建数据挖掘项目或对象的解决方案文件，则可以使用 Analysis Services 导入向导从服务器导入现有项目，对该对象进行修改，然后使用 `Incremental` 选项重新进行部署。 有关详细信息，请参阅 [使用 Analysis Services 导入向导导入数据挖掘项目](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中管理数据挖掘对象  
  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，可以编写挖掘结构和挖掘模型的脚本、处理或删除挖掘结构和挖掘模型。 使用对象资源管理器仅可以查看有限的一组属性；但是，您可以通过打开 **“DMX 查询”** 窗口并选择挖掘结构，以查看有关挖掘模型的其他元数据。  
@@ -76,7 +76,7 @@ ms.locfileid: "48164287"
 ### <a name="analysis-management-objects-amo"></a>分析管理对象 (AMO)  
  Analysis Management Objects (AMO) 是一个构建在 XMLA 之上的对象模型，它使您可以完全控制数据挖掘对象。 通过使用 AMO，您可以创建、部署和监视挖掘结构和挖掘模型。  
   
--   [AMO 概念和对象模型](../multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
+-   [AMO 概念和对象模型](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48164287"
 ### <a name="data-mining-extensions-dmx"></a>数据挖掘扩展插件 (DMX)  
  数据挖掘扩展插件 (DMX) 可以与其他命令接口（如 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADOMD.Net）配合使用来创建、删除和查询挖掘结构和挖掘模型。  
   
--   [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](/sql/dmx/dmx-statements-data-definition)  
+-   [数据挖掘扩展插件 (DMX) 数据定义语句](/sql/dmx/dmx-statements-data-definition)  
   
  **限制：** 使用 DMX 无法更改某些属性。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48164287"
   
  **限制：**[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 生成的某些 XMLA 语句仅支持在内部使用，而不能在 XML DDL 脚本中使用。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [开发人员指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

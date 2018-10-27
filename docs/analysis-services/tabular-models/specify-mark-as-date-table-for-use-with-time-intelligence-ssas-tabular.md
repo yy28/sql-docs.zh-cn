@@ -1,5 +1,5 @@
 ---
-title: 指定标记为日期表 |Microsoft 文档
+title: 指定标记为日期表 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6a4ad929c866658ce241f33ddd2a5326dc78e19
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f059292691904325e997f9089173ec8e39ffcf17
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039781"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099330"
 ---
-# <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定标记为日期表用于时间智能
+# <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>指定标记为日期表，以便用于时间智能
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  为了在 DAX 公式中使用时间智能函数，必须指定日期表和日期数据类型的唯一标识符 (datetime) 列。 将日期表中的某列指定为唯一标识符后，您可以在日期表中各列与任何事实数据表之间创建关系。  
+  若要在 DAX 公式中使用时间智能函数，必须指定一个日期表和日期数据类型的唯一标识符 (datetime) 列。 将日期表中的某列指定为唯一标识符后，您可以在日期表中各列与任何事实数据表之间创建关系。  
   
  使用时间智能函数时，以下规则适用：  
   
--   使用 DAX 时间智能函数时，永远不会指定从事实数据表的 datetime 列。 在您的模型中，始终使用至少一个数据类型为 Date 的 datetime 列和唯一值来创建单独的日期表。  
+-   使用 DAX 时间智能函数时，永远不会指定事实数据表中的日期时间列。 在您的模型中，始终使用至少一个数据类型为 Date 的 datetime 列和唯一值来创建单独的日期表。  
   
 -   请确保您的日期表具有一个连续的日期范围。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34039781"
   
 3.  在 **“标记日期表”** 对话框的 **“日期”** 列表框中，选择要用作唯一标识符的列。 此列必须包含唯一值，并且数据类型应为 Date。 例如：  
   
-    |日期|  
+    |date|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  
@@ -52,6 +52,6 @@ ms.locfileid: "34039781"
   
 ## <a name="see-also"></a>另请参阅  
  [计算](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [时间智能函数 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [时间智能函数 (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   

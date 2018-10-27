@@ -11,12 +11,12 @@ ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142697"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50148292"
 ---
 # <a name="autoexists"></a>Autoexists
   “autoexists”  的概念将多维数据集空间限制为在多维数据集中实际存在的那些单元，而不是可能由于从同一层次结构创建属性层次结构成员的所有可能组合而存在的那些单元。 其原因在于，一个属性层次结构的成员不能与同一维度中其他属性层次结构的成员共存。 在 SELECT 语句中使用同一维度的两个或更多属性层次结构时，Analysis Services 会计算这些属性的表达式，以确保这些属性的成员得到适当限制，使它们满足所有其他属性的条件。  
@@ -89,7 +89,7 @@ WHERE (Measures.[Internet Sales Amount],
  前面的这三个查询均阐释了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自动共存行为所带来的影响。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深度和浅表 Autoexists  
- Autoexists 可以深度或浅表的形式应用于表达式。 `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 `Shallow Autoexists` 表示在当前表达式之前对外部表达式计算，这些结果传递到当前表达式。 默认设置为深度 autoexists。  
+ Autoexists 可以深度或浅表的形式应用于表达式。 `Deep Autoexists` 意味着将对所有表达式进行计算，以便在应用了切片器表达式、轴中的嵌套 select 表达式等后到达可能的最深空间。 `Shallow Autoexists` 意味着在将当前表达式和这些结果传递到当前表达式之前对外部表达式进行计算。 默认设置为深度 autoexists。  
   
  下面的应用场景和示例将帮助阐明不同类型的 Autoexists。 在下面的示例中，将创建两个集：一个作为计算表达式，另一个作为常量表达式。  
   
@@ -309,15 +309,15 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
+ 可以修改 Autoexists 的行为使用 AUTOEXISTS = [1 | 2 | 3] 参数; 在连接字符串请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)并<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>有关参数的用法。  
   
-## <a name="see-also"></a>请参阅  
- [MDX 中的重要概念&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>另请参阅  
+ [MDX 中的重要概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [多维数据集空间](cube-space.md)   
  [元组](tuples.md)   
- [使用成员、 元组和集&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [使用成员、元组和集 (MDX)](working-with-members-tuples-and-sets-mdx.md)   
  [直观合计和非直观合计](visual-totals-and-non-visual-totals.md)   
- [MDX 语言参考&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [多维表达式&#40;MDX&#41;引用](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 语言参考 (MDX)](/sql/mdx/mdx-language-reference-mdx)   
+ [多维表达式 (MDX) 参考](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   
