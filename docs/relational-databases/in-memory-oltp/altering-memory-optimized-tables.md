@@ -1,7 +1,7 @@
 ---
 title: 更改内存优化表 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/19/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,44 +12,50 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330ecc81c303571b10488a5e1493cc0176da8505
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcf4ff6daa7a6d5e5fe710a51d78a8730a56cfeb
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640255"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636466"
 ---
 # <a name="altering-memory-optimized-tables"></a>更改内存优化表
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
+可以使用 ALTER TABLE 语句来更改内存优化表的架构和索引。 在 SQL Server 2016 和 Azure SQL 数据库中，对内存优化表的 ALTER TABLE 操作属于 OFFLINE，表示操作正在进行时，表格不能用于查询。 数据库应用程序可以继续运行，并且访问该表的任何操作都将被阻止，直到更改过程完成。 可以将多个 ADD、DROP 或 ALTER 操作合并为单个 ALTER TABLE 语句。
+
+> [!IMPORTANT]
+> Azure SQL 数据库托管实例不支持内存优化表。
   
 ## <a name="alter-table"></a>ALTER TABLE  
- 
+
 使用 ALTER TABLE 语法更改表架构，以及添加、删除和重新生成索引。 索引被视为表定义的一部分：  
   
--   语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。  
+- 语法 ALTER TABLE...内存优化表仅支持 ADD/DROP/ALTER INDEX。  
   
--   如果不使用 ALTER TABLE 语句，内存优化表上的索引将不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。  
+- 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)、[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)、[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 和 [PAD_INDEX](../../t-sql/statements/alter-table-index-option-transact-sql.md) 语句。  
   
 支持下列更改类型：  
   
--   更改桶计数  
+- 更改桶计数  
   
--   添加和删除索引  
+- 添加和删除索引  
   
--   更改、添加和删除列  
+- 更改、添加和删除列  
   
--   添加和删除约束  
+- 添加和删除约束  
   
  有关 ALTER TABLE 功能和完整语法的详细信息，请参阅 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
-## <a name="schema-bound-dependency"></a>架构绑定依赖关系  
+## <a name="schema-bound-dependency"></a>架构绑定依赖关系
+
  本机编译的存储过程都需要绑定到架构，即是说它们对所访问的内存优化表和所引用的列有一种绑定到架构的依赖关系。 架构绑定依赖关系是一种两个实体之间的关系，只要引用实体存在，这种关系就可以防止对被引用的实体进行删除或不兼容地更改。  
   
  例如，如果绑定到架构的本机编译存储过程从表 *mytable* 中引用了 *c1*列，则 *c1* 列不能被删除。 同样，如果一个过程包含一个没有列列表的 INSERT 语句（如 `INSERT INTO dbo.mytable VALUES (...)`），那么表中没有可被删除的列。  
- 
+
 ## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>记录内存优化表上的 ALTER TABLE
+
 在一个内存优化表中，大多数 ALTER TABLE 方案可同时运行，从而优化了向事务日志的写入。 这种优化是通过只将元数据更改记入事务日志中来实现的。 但是，以下 ALTER TABLE 操作将以单线程运行，而未经过日志优化。
 
 本示例中的单线程操作会将改变表的整个内容都记录到事务日志中。 单线程操作的列表如下：
@@ -60,68 +66,66 @@ ms.locfileid: "47640255"
 
 - 几乎所有内容都将影响 [行外列](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。
 
-    - 导致行上列移动行外列。
-
-    - 导致行外列移动行上列。
-
-    - 创建新的行外列。
-
-    - *异常：* 已使用优化方式记录了延长行外列。 
+  - 导致行上列移动行外列。
+  - 导致行外列移动行上列。
+  - 创建新的行外列。
+  - *异常：* 已使用优化方式记录了延长行外列。
   
-## <a name="examples"></a>示例  
- 下面的示例将更改现有哈希索引的桶计数。 此操作将重新生成具有新的桶计数的哈希索引，并且哈希索引的其他属性保持不变。  
-  
+## <a name="examples"></a>示例
+
+下面的示例将更改现有哈希索引的桶计数。 此操作将重新生成具有新的桶计数的哈希索引，并且哈希索引的其他属性保持不变。  
+
 ```sql
-ALTER TABLE Sales.SalesOrderDetail_inmem   
+ALTER TABLE Sales.SalesOrderDetail_inmem
        ALTER INDEX imPK_SalesOrderDetail_SalesOrderID_SalesOrderDetailID  
               REBUILD WITH (BUCKET_COUNT=67108864);  
 GO
 ```
-  
- 下面的示例将添加一个带有 NOT NULL 约束和 DEFAULT 定义的列，并使用 WITH VALUES 为表中的各个现有行提供值。 如果没有使用 WITH VALUES，那么每一行的新列中都将包含 NULL 值。  
-  
-```sql  
+
+下面的示例将添加一个带有 NOT NULL 约束和 DEFAULT 定义的列，并使用 WITH VALUES 为表中的各个现有行提供值。 如果没有使用 WITH VALUES，那么每一行的新列中都将包含 NULL 值。  
+
+```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD Comment NVARCHAR(100) NOT NULL DEFAULT N'' WITH VALUES;  
 GO
-```  
-  
- 下面的示例将在现有列中添加一个主键约束。  
-  
+```
+
+下面的示例将在现有列中添加一个主键约束。  
+
 ```sql
-CREATE TABLE dbo.UserSession (   
-   SessionId int not null,   
-   UserId int not null,   
-   CreatedDate datetime2 not null,   
-   ShoppingCartId int,   
-   index ix_UserId nonclustered hash (UserId) with (bucket_count=400000)   
-)   
+CREATE TABLE dbo.UserSession (
+   SessionId int not null,
+   UserId int not null,
+   CreatedDate datetime2 not null,
+   ShoppingCartId int,
+   index ix_UserId nonclustered hash (UserId) with (bucket_count=400000)
+)
 WITH (MEMORY_OPTIMIZED=ON, DURABILITY=SCHEMA_ONLY) ;  
 GO  
   
 ALTER TABLE dbo.UserSession  
        ADD CONSTRAINT PK_UserSession PRIMARY KEY NONCLUSTERED (SessionId);  
 GO
-```  
-  
- 下面的示例将删除一个索引。  
-  
+```
+
+下面的示例将删除一个索引。  
+
 ```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        DROP INDEX ix_ModifiedDate;  
 GO
 ```  
-  
- 下面的示例将添加一个索引。  
-  
+
+下面的示例将添加一个索引。  
+
 ```sql  
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD INDEX ix_ModifiedDate (ModifiedDate);  
 GO  
 ```  
-  
- 下面的示例将添加多个包含索引和约束的列。  
-  
+
+下面的示例将添加多个包含索引和约束的列。  
+
 ```sql
 ALTER TABLE Sales.SalesOrderDetail_inmem  
        ADD    CustomerID int NOT NULL DEFAULT -1 WITH VALUES,  
@@ -130,12 +134,8 @@ ALTER TABLE Sales.SalesOrderDetail_inmem
 GO  
 ```
 
-
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
-
 
 ## <a name="see-also"></a>另请参阅  
 
 [内存优化表](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
-

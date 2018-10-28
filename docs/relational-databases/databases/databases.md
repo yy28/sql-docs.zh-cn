@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c181aa25c7bf06a107ff4fc8a0b0bcd39f66cc2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c5995a59cc226700ccdc0aea15a8fe16a28d75
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775605"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356138"
 ---
 # <a name="databases"></a>“数据库”
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47775605"
  可以授予对数据库具有访问权限的用户访问数据库中对象的权限。 尽管可以将权限授予各个用户，但建议创建数据库角色，将数据库用户添加到角色中，然后对角色授予访问权限。 对角色（而不是用户）授予权限更容易保持权限一致，随着用户数目的增长和持续更改也更易于了解。 有关角色权限的详细信息，请参阅 [CREATE ROLE (Transact-SQL)](../../t-sql/statements/create-role-transact-sql.md) 和[主体（数据库引擎）](../../relational-databases/security/authentication-access/principals-database-engine.md)。  
   
 ## <a name="working-with-databases"></a>使用数据库  
- 大多数使用数据库的人员都使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具有一个图形用户界面，用于创建数据库和数据库中的对象。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还具有一个查询编辑器，用于通过编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与数据库进行交互。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装磁盘进行安装，也可以从 MSDN 中下载。  
+ 大多数使用数据库的人员都使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 工具有一个图形用户界面，用于创建数据库和数据库中的对象。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 还具有一个查询编辑器，用于通过编写 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句与数据库进行交互。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装磁盘进行安装，也可以从 MSDN 中下载。 有关 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 工具的详细信息，请参阅 [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)。
   
 ## <a name="in-this-section"></a>本节内容  
   

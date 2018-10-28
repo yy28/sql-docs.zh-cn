@@ -24,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebeb314304edd0678e366ebc67ffe6caafc4a168
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94720f617b9d2d8723ac6e9a28770291a966d4b3
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656134"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359324"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ERROR_STATE ( )
 ### <a name="a-using-errorstate-in-a-catch-block"></a>A. 在 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将返回错误状态。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide by zero error  
     SELECT 1/0;  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将与错误状态一起返回有关错误的信息。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -106,7 +106,7 @@ GO
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. 在包含其他错误处理工具的 CATCH 块中使用 ERROR_STATE  
  下面的示例显示生成被零除错误的 `SELECT` 语句。 结果将与错误状态一起返回有关错误的信息。  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -131,7 +131,8 @@ GO
  [ERROR_PROCEDURE (Transact-SQL)](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR (Transact-SQL)](../../t-sql/functions/error-transact-sql.md)    
+ [错误和事件参考（数据库引擎）](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
-  
+    
 

@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874345"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460312"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -80,13 +80,11 @@ PolyBase 具有以下限制：
 - [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+
 - 不支持集成身份验证。 目前仅支持用户名和密码。  
-- 默认启用加密。 若要禁用加密，必须...（与 thanh 交谈）
-- [类型映射限制](polybase-type-mapping.md)
 
+- 加密默认为启用状态。
 
-## <a name="security-and-authentication"></a>安全性和身份验证 
+## <a name="next-steps"></a>后续步骤
 
-## <a name="see-also"></a>另请参阅  
-
-[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)  
+有关 PolyBase 的详细信息，请参阅[什么是 PolyBase？](polybase-guide.md)。

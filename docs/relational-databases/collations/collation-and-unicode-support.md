@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc81d7a915a79af3406d5fc90ef9920d5e19055a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0a6c44ddcf6a222db8db865896921ad29ea2f56
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757046"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636476"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47757046"
     
 当[!INCLUDE[tsql](../../includes/tsql-md.md)] 语句在具有不同排序规则设置的不同数据库上下文中运行时，其运行结果可能会不同。 如果可能，请为您的组织使用标准化排序规则。 这样就不必显式指定每个字符或 Unicode 表达式中的排序规则。 如果必须使用具有不同排序规则和代码页设置的对象，请对查询进行编码，以考虑排序规则的优先顺序规则。 有关详细信息，请参阅 [排序规则优先顺序 (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)。    
     
-与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为 UTF-8 编码引入了其他选项。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 区分大小写、区分重音、区分假名、区分全半角以及进行 UTF-8 编码。 再举一例，此排序规则 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符以及使用非 Unicode 编码。 下表描述了与这些不同选项关联的行为。    
+与排序规则关联的选项区分大小写、区分重音、区分假名、区分全半角以及区分变体选择符。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 为 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 编码引入了其他选项。 指定这些选项的方法是将它们追加到排序规则名称。 例如，排序规则 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8` 区分大小写、区分重音、区分假名、区分全半角以及进行 UTF-8 编码。 再举一例，此排序规则 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 就不区分大小写、不区分重音、区分假名、区分全半角、区分变体选择符以及使用非 Unicode 编码。 下表描述了与这些不同选项关联的行为。    
     
 |选项|描述|    
 |------------|-----------------|    

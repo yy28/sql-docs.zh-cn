@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdf4b9ba29155d3779f1c28b74b7ad8617be0d48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d662dde7fe35ff74802ac9d899e03baaf8feb2
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717055"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359344"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查询存储监视性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,6 +66,9 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
  由于统计信息更改、架构更改、索引的创建/删除等多种不同原因，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查询的执行计划通常会随着时间而改进。过程缓存（其中存储了缓存的查询计划）仅存储最近的执行计划。 还会由于内存压力从计划缓存中逐出计划。 因此，执行计划更改造成的查询性能回归可能非常重大，且长时间才能解决。  
   
  由于查询存储会保留每个查询的多个执行计划，因此它可以强制执行策略，以引导查询处理器对某个查询使用特定执行计划。 这称为“计划强制”。 查询存储中的计划强制是通过使用类似于 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 查询提示的机制来提供的，但它不需要在用户应用程序中进行任何更改。 计划强制可在非常短的时间内解决由计划更改造成的查询性能回归。  
+
+> [!NOTE]
+> 查询存储收集 DML 语句（如 SELECT、INSERT、UPDATE、DELETE、MERGE 和 BULK INSERT）的计划。
 
  “等待统计信息”是有助于排除 SQL Server 中的性能问题的另一信息来源。 长期以来，等待统计信息仅适用于实例级别，难以回溯到实际查询。 在 SQL Server 2017 和 Azure SQL 数据库中，我们在跟踪等待统计信息的查询存储中添加了另一个维度。 
 

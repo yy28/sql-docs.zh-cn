@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9b61ca423f79f95ab24ae59b398b5d4a834126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a961db30963ded59af447ad1a1cc916d663628e
+ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782845"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49643925"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +60,9 @@ ms.locfileid: "47782845"
 ## <a name="related-content"></a>相关内容  
  [保护 SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  简要介绍如何帮助确保 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 平台的安全性以及如何处理用户和安全对象。  
+
+[Azure SQL 数据库安全功能概述](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-security-overview)
+</br>对用于保护数据、控制访问及执行主动监视的 Azure SQL 数据库安全功能的概述。
   
  [加密函数 (Transact-SQL)](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
  说明如何实现加密函数。  

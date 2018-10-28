@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb0294ccfb7a099cda01c698719e71141eb88005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 256ec0931c0abb3b15947a9f04892c35a5066862
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716546"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636436"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,9 +42,9 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>参数  
  *integer_expression*  
- 在数据库的排序规则不包含增补字符 (SC) 标志时，这是从 0 到 65535（0 到 0xFFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。 有关增补字符的详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
+ 在数据库的排序规则不包含[增补字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 标志时，这是从 0 到 65535（0 到 0xFFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。 有关增补字符的详细信息，请参阅 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)。  
   
- 在数据库的排序规则支持增补字符 (SC) 标志时，这是从 0 到 1114111（0 到 0x10FFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。  
+ 在数据库的排序规则支持 SC 标志时，这是从 0 到 1114111（0 到 0x10FFFF）的正整数。 如果指定的值超出此范围，则返回 NULL。  
   
 ## <a name="return-types"></a>返回类型  
  当默认数据库排序规则不支持增补字符时，为 nchar(1)。  
@@ -53,7 +53,7 @@ NCHAR ( integer_expression )
   
  如果 integer_expression 参数在范围 0 - 0xFFFF 内，则仅返回一个字符。 对于较高的值，NCHAR 返回相应的代理项对。 请勿使用 `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)` 构造代理项对。 而应使用支持增补字符的数据库排序规则，然后为代理项对指定 Unicode 码位。 下面的示例演示构建代理项对的旧式方法以及指定 Unicode 码位的首选方法。  
   
-```  
+```sql  
 CREATE DATABASE test COLLATE Finnish_Swedish_100_CS_AS_SC;  
 DECLARE @d nvarchar(10) = N'𣅿';
 -- Old style method.  
@@ -71,7 +71,7 @@ SELECT NCHAR(UNICODE(@d));
 ### <a name="a-using-nchar-and-unicode"></a>A. 使用 NCHAR 和 UNICODE  
  以下示例使用 `UNICODE` 和 `NCHAR` 函数输出 `UNICODE` 字符串中的第二个字符的 `NCHAR` 值和 `København`（Unicode 字符），并输出实际的第二个字符 `ø`。  
   
-```  
+```sql  
 DECLARE @nstring nchar(8);  
 SET @nstring = N'København';  
 SELECT UNICODE(SUBSTRING(@nstring, 2, 1)),   
@@ -90,7 +90,7 @@ GO
 ### <a name="b-using-substring-unicode-convert-and-nchar"></a>B. 使用 SUBSTRING、UNICODE、CONVERT 和 NCHAR  
  以下示例使用 `SUBSTRING`、`UNICODE`、`CONVERT` 和 `NCHAR` 函数打印字符串 `København` 中的字符数、Unicode 字符和每个字符的 UNICODE 值。  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae9988ac496800cca11139e562a9ba57dc62fe8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fb572b4afd20a946d71460ae5f60b52d0c236ba
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845015"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636446"
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,14 +49,14 @@ UNICODE ( 'ncharacter_expression' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回一个在 0 到 0xFFFF 范围内的 UCS-2 代码点。 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和更高版本中使用 SC 排序规则时，UNICODE 会返回一个在 0 到 0x10FFFF 范围内的 UTF-16 代码点。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 版本以及在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中，UNICODE 函数返回一个在 0 到 0xFFFF 范围内的 UCS-2 代码点。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，若使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，UNICODE 会返回一个在 0 到 0x10FFFF 范围内的 UTF-16 代码点。  
   
 ## <a name="examples"></a>示例  
   
 ### <a name="a-using-unicode-and-the-nchar-function"></a>A. 使用 UNICODE 和 NCHAR 函数  
  以下示例使用 `UNICODE` 和 `NCHAR` 函数输出 `Åkergatan` 24 字符串中第一个字符的 UNICODE 值，并输出实际的第一个字符 `Å`。  
   
-```  
+```sql  
 DECLARE @nstring nchar(12);  
 SET @nstring = N'Åkergatan 24';  
 SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
@@ -72,7 +72,7 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### <a name="b-using-substring-unicode-and-convert"></a>B. 使用 SUBSTRING、UNICODE 和 CONVERT  
  下面的示例使用 `SUBSTRING`、`UNICODE` 和 `CONVERT` 函数输出 `Åkergatan 24` 字符串中每个字符的字符号、Unicode 字符和 UNICODE 值。  
   
-```  
+```sql  
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
 -- string to process.  

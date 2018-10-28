@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd379df3c82a16924a984464d1bdbe68e8ebfce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a164a4c4c3cff6b2569e49f5dc84348376a727d4
+ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632125"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49359294"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47632125"
 ### <a name="a-using-error-to-detect-a-specific-error"></a>A. 用 @@ERROR 检测一个特定错误  
  以下示例用 `@@ERROR` 在 `UPDATE` 语句中检测约束检查冲突（错误 #547）。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 UPDATE HumanResources.EmployeePayHistory  
@@ -72,7 +72,7 @@ GO
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>B. 用 @@ERROR 有条件地退出一个过程  
  以下示例使用 `IF...ELSE` 语句在存储过程中测试 `@@ERROR` 语句后的 `DELETE`。 `@@ERROR` 变量的值将确定发送给调用程序的返回代码，以指示此过程的成功与失败。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Drop the procedure if it already exists.  
@@ -107,7 +107,7 @@ GO
 ### <a name="c-using-error-with-rowcount"></a>C. 将 @@ERROR 与 @@ROWCOUNT 一起使用  
  下面的示例将 `@@ERROR` 与 `@@ROWCOUNT` 一起使用来验证一条 `UPDATE` 语句的操作。 为任何可能出现的错误而检验 `@@ERROR` 的值，并且用 `@@ROWCOUNT` 保证更新已成功应用于表中的某行。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Purchasing.usp_ChangePurchaseOrderHeader',N'P')IS NOT NULL  
@@ -176,7 +176,7 @@ GO
  [ERROR_SEVERITY (Transact-SQL)](../../t-sql/functions/error-severity-transact-sql.md)   
  [ERROR_STATE (Transact-SQL&)](../../t-sql/functions/error-state-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
- [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
-  
+ [sys.messages (Transact-SQL)](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)     
+ [错误和事件参考（数据库引擎）](../../relational-databases/errors-events/errors-and-events-reference-database-engine.md)     
   
 

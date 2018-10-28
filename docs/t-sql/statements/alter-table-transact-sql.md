@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -60,138 +60,143 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c57a37be0666669911cfc955bbf25b0fa34187e
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: c92b931c8c55fbaeeb5e2ec839025fddc5ae231e
+ms.sourcegitcommit: 3fb1a740c0838d5f225788becd4e4790555707f2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085533"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49636496"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  通过更改、添加或删除列和约束，重新分配和重新生成分区，或者启用或禁用约束和触发器，可以修改表的定义。  
+  通过更改、添加或删除列和约束，重新分配和重新生成分区，或者启用或禁用约束和触发器，可以修改表的定义。
 
- ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>语法  
-  
-```  
--- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
-  
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
-{   
-    ALTER COLUMN column_name   
-    {   
-        [ type_schema_name. ] type_name   
-            [ (   
-                {   
-                   precision [ , scale ]   
-                 | max   
-                 | xml_schema_collection   
-                }   
-            ) ]   
-        [ COLLATE collation_name ]   
+有关语法约定的详细信息，请参阅 [Transact-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。
+
+> [!IMPORTANT]
+> 对于基于磁盘的表和内存优化表，ALTER TABLE 的语法不同。 使用以下链接可以直接跳至适用于表类型的语法块和相应的语法示例：
+> - 基于磁盘的表：
+>    - [语法](#syntax-for-disk-based-tables)
+>    - [示例](#Example_Top)
+> - 内存优化表
+>   - [语法](#syntax-for-memory-optimized-tables)
+>   - [示例](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
+
+## <a name="syntax-for-disk-based-tables"></a>基于磁盘的表的语法  
+
+``` 
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+{
+    ALTER COLUMN column_name
+    {
+        [ type_schema_name. ] type_name
+            [ (
+                {
+                   precision [ , scale ]
+                 | max
+                 | xml_schema_collection
+                }
+            ) ]
+        [ COLLATE collation_name ]
         [ NULL | NOT NULL ] [ SPARSE ]  
-      | { ADD | DROP }   
+      | { ADD | DROP }
           { ROWGUIDCOL | PERSISTED | NOT FOR REPLICATION | SPARSE | HIDDEN }  
       | { ADD | DROP } MASKED [ WITH ( FUNCTION = ' mask_function ') ]  
-    }   
+    }
     [ WITH ( ONLINE = ON | OFF ) ]  
     | [ WITH { CHECK | NOCHECK } ]  
   
-    | ADD   
-    {   
+    | ADD
+    {
         <column_definition>  
       | <computed_column_definition>  
-      | <table_constraint>   
-      | <column_set_definition> 
+      | <table_constraint>
+      | <column_set_definition>
     } [ ,...n ]  
-      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
-                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
-                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
-           DEFAULT constant_expression [WITH VALUES] ,  
-         ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START
+                [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+                system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ]
+            DEFAULT constant_expression [WITH VALUES] ,  
+        ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-       
-    | DROP   
+    | DROP
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
-         {   
-              constraint_name   
-              [ WITH   
-               ( <drop_clustered_constraint_option> [ ,...n ] )   
-              ]   
+         {
+              constraint_name
+              [ WITH
+               ( <drop_clustered_constraint_option> [ ,...n ] )
+              ]
           } [ ,...n ]  
           | COLUMN  [ IF EXISTS ]  
           {  
-              column_name   
+              column_name
           } [ ,...n ]  
           | PERIOD FOR SYSTEM_TIME  
      } [ ,...n ]  
-    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
-        { ALL | constraint_name [ ,...n ] }   
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT
+        { ALL | constraint_name [ ,...n ] }
   
-    | { ENABLE | DISABLE } TRIGGER   
+    | { ENABLE | DISABLE } TRIGGER
         { ALL | trigger_name [ ,...n ] }  
   
-    | { ENABLE | DISABLE } CHANGE_TRACKING   
+    | { ENABLE | DISABLE } CHANGE_TRACKING
         [ WITH ( TRACK_COLUMNS_UPDATED = { ON | OFF } ) ]  
   
     | SWITCH [ PARTITION source_partition_number_expression ]  
-        TO target_table   
+        TO target_table
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
-    
-    | SET   
+
+    | SET
         (  
-            [ FILESTREAM_ON =   
+            [ FILESTREAM_ON =
                 { partition_scheme_name | filegroup | "default" | "NULL" } ]  
-            | SYSTEM_VERSIONING =   
-                  {   
-                      OFF   
-                  | ON   
-                      [ ( HISTORY_TABLE = schema_name . history_table_name   
-                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
-                          [, HISTORY_RETENTION_PERIOD = 
-                          { 
-                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                 | MONTH | MONTHS | YEAR | YEARS } 
-                          } 
+            | SYSTEM_VERSIONING =
+                  {
+                      OFF
+                  | ON
+                      [ ( HISTORY_TABLE = schema_name . history_table_name
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ]
+                          [, HISTORY_RETENTION_PERIOD =
+                          {
+                              INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }
+                          }
                           ]  
                         )  
                       ]  
                   }  
           )  
-      
-    | REBUILD   
+
+    | REBUILD
       [ [PARTITION = ALL]  
-        [ WITH ( <rebuild_option> [ ,...n ] ) ]   
-      | [ PARTITION = partition_number   
+        [ WITH ( <rebuild_option> [ ,...n ] ) ]
+      | [ PARTITION = partition_number
            [ WITH ( <single_partition_rebuild_option> [ ,...n ] ) ]  
         ]  
       ]  
   
     | <table_option>  
-  
     | <filetable_option>  
-  
     | <stretch_configuration>  
 }  
 [ ; ]  
   
 -- ALTER TABLE options  
   
-<column_set_definition> ::=   
+<column_set_definition> ::=
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
 
-<drop_clustered_constraint_option> ::=    
-    {   
+<drop_clustered_constraint_option> ::=
+    {
         MAXDOP = max_degree_of_parallelism  
       | ONLINE = { ON | OFF }  
-      | MOVE TO   
+      | MOVE TO
          { partition_scheme_name ( column_name ) | filegroup | "default" }  
     }  
 <table_option> ::=  
@@ -208,7 +213,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 <stretch_configuration> ::=  
     {  
       SET (  
-        REMOTE_DATA_ARCHIVE   
+        REMOTE_DATA_ARCHIVE
         {  
             = ON (  <table_stretch_options>  )  
           | = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED )  
@@ -236,11 +241,11 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     WAIT_AT_LOW_PRIORITY ( MAX_DURATION = <time> [ MINUTES ], 
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
-```  
-  
-```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
-  
+```
+
+## <a name="syntax-for-memory-optimized-tables"></a>内存优化表的语法  
+
+```
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
     ALTER COLUMN column_name   
@@ -617,14 +622,14 @@ ALTER INDEX index_name 指定要变更或更改 index_name 的桶计数。
   
 语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。    
 
-> [!NOTE]
-> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。 
+> [!IMPORTANT]
+> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。
 
 ADD  
 指定添加一个或多个列定义、计算列定义或者表约束，或指定系统将用于系统版本控制的列。 对于内存优化表，可以添加索引。
 
-> [!NOTE]
-> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。 
+> [!IMPORTANT]
+> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
 适用范围：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -649,8 +654,8 @@ INDEX index_name 指定要从表中删除的 index_name。
   
 语法 ALTER TABLE... 内存优化表仅支持 ADD/DROP/ALTER INDEX。    
 
-> [!NOTE]
-> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 CREATE INDEX、DROP INDEX 和 ALTER INDEX 语句。 
+> [!IMPORTANT]
+> 如果不使用 ALTER TABLE 语句，内存优化表的索引不支持 [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)[ALTER INDEX](alter-index-transact-sql.md) 和 [PAD_INDEX](alter-table-index-option-transact-sql.md) 语句。
       
 COLUMN column_name  
 指定从表中删除 constraint_name 或 column_name。 可以列出多个列。  
@@ -1076,7 +1081,8 @@ ONLINE = ON 具有下列限制：
   
 要解决此问题，请不要使用 4 部分的前缀。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permissions
+
  需要对表的 ALTER 权限。  
   
  ALTER TABLE 权限适用于 ALTER TABLE SWITCH 语句涉及的两个表。 任何已切换的数据都将继承目标表的安全性。  
@@ -1085,7 +1091,7 @@ ONLINE = ON 具有下列限制：
   
  添加更新表中的行的列要求对该表具有 UPDATE 权限。 例如，添加具有默认值的 NOT NULL 列或者在表不为空时添加一个标识列。  
   
-##  <a name="Example_Top"></a> 示例  
+## <a name="Example_Top"></a> 示例
   
 |类别|作为特征的语法元素|  
 |--------------|------------------------------|  
@@ -1095,10 +1101,12 @@ ONLINE = ON 具有下列限制：
 |[更改表定义](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • 更改跟踪|  
 |[禁用和启用约束和触发器](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|  
   
-###  <a name="add"></a>添加列和约束  
+### <a name="add"></a>添加列和约束
+  
  本节中的示例说明将列和约束添加到表中。  
   
-#### <a name="a-adding-a-new-column"></a>A. 添加新列  
+#### <a name="a-adding-a-new-column"></a>A. 添加新列
+
  以下示例将添加一个允许 Null 值的列，而且没有通过 DEFAULT 定义提供的值。 在该新列中，每一行都将有 `NULL` 值。  
   
 ```sql  

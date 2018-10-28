@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d40b573506d188fb3190de1ac5fe849eaa59ea10
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 90acea201172d49b1d805ecd90f7c3eff089214d
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852042"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383852"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 跟踪标志 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,7 @@ ms.locfileid: "48852042"
 |**205**|当由于自动更新统计信息而重新编译依赖于统计信息的存储过程时，向错误日志提交报告。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/195565)。<br /><br />**作用域**：仅全局|
 |**260**|打印有关扩展存储过程动态链接库 (DLL) 的版本控制信息。 有关 **GetXpVersion()** 的详细信息，请参阅[创建扩展存储过程](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)。<br /><br />**作用域：** 全局或会话|
 |**272**|在服务器意外重新启动或故障转移到辅助服务器的情况下，禁用标识预分配以避免标识列的值出现差异。 请注意，标识缓存用于提高具有标识列的表的 INSERT 性能。<br /><br />**注意：** 从 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 开始，若要在数据库级别完成此操作，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 中的 IDENTITY_CACHE 选项。<br /><br />**作用域**：仅全局|
+|**460**|将数据截断消息 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999) 替换为消息 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/4468101)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 及更高内部版本。<br /><br />**作用域**：全局或会话|
 |**610**|控制对索引表进行的以最低限度记录的插入。 从 SQL Server 2016 开始，不需要此跟踪标志，因为对索引表默认启用了最低限度记录。 在 SQL Server 2016 中，当大容量加载操作导致分配一个新页面时，如果符合最低限度记录的其他所有先决条件，则会以最低限度记录按顺序填充该新页面的所有行。 为了维护索引顺序而插入到现有页面中的行（不分配新页面）仍以完整方式记录，这与在加载过程中由于页面拆分而移动的行一样。 为索引启用 ALLOW_PAGE_LOCKS（默认启用）以便让最低限度记录操作正常工作也很重要，因为在分配期间会获取页锁，从而仅记录页面或盘区分配。有关详细信息，请参阅[数据加载性能指南](https://msdn.microsoft.com/library/dd425070.aspx)。<br /><br />**作用域**：全局或会话|
 |**634**|禁用背景列存储压缩任务。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 定期运行元组发动机后台任务，对含有未压缩数据的列存储索引行组进行压缩，每次压缩一个这种行组。<br /><br />列存储压缩可提高查询性能，但也会占用系统资源。 通过用跟踪标志 634 禁用后台压缩任务，然后随时显式调用 ALTER INDEX...REORGANIZE 或 ALTER INDEX...REBUILD，可以手动控制列存储压缩计时。<br /><br />**作用域：** 仅全局|
 |**652**|禁用页面预提取扫描。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/920093)。<br /><br />**作用域**：全局或会话|
@@ -80,7 +81,7 @@ ms.locfileid: "48852042"
 |**2422**|当超过 Resource Governor REQUEST_MAX_CPU_TIME_SEC 配置设置的最长时间时，允许 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中止请求。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/help/4038419)。<br /><br />**注意：** 此跟踪标志适用于 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 及更高内部版本。<br /><br />**作用域**：全局|
 |**2430**|启用备用锁类清除。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2754301)。<br /><br />**作用域**：仅全局| 
 |**2453**|当足够数量的行发生更改时，允许表变量触发重新编译。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2952444)。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：全局、会话或查询|
-|**2467**|启用备用并行工作线程分配策略（基于哪个节点具有最少分配的线程）。 有关详细信息，请参阅[并行查询处理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 请参阅[配置最大工作线程服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，了解有关配置最大工作线程服务器选项的信息。<br /><br />注意：并行查询度 (DOP) 必须适用于要使用的此备用策略的单个节点，或改为使用默认线程分配策略。 使用跟踪标志时，不建议执行指定 DOP 多于单个节点中的计划程序数的查询，其中的查询应指定 DOP 低于或等于单个节点中的计划程序数。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
+|**2467**|启用备用并行工作线程分配策略（基于哪个节点具有最少分配的线程）。 有关详细信息，请参阅[并行查询处理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 请参阅[配置最大工作线程服务器配置选项](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，了解有关配置最大工作线程服务器选项的信息。<br /><br />注意：并行查询度 (DOP) 必须适用于要使用的此备用策略的单个节点，或改为使用默认线程分配策略。 使用跟踪标志时，不建议执行指定 DOP 多于单个节点中的计划程序数的查询，因为这会干扰指定 DOP 低于或等于单个节点中的计划程序数的查询。<br /><br />**注意：** 请确保在将此选项引入生产环境之前，先对其进行全面测试。<br /><br />**作用域**：仅全局|
 |**2469**|为已分区列存储索引中的 `INSERT INTO ... SELECT` 启用备用 Exchange。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/3204769)。<br /><br />**作用域**：全局、会话或查询|
 |**2528**|禁用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 执行的对象并行检查。 默认情况下，并行度由查询处理器自动确定。 最大并行度的配置就像并行查询的最大并行度一样。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：** 通常应启用（默认设置）并行 DBCC 检查。 查询处理器会对 DBCC CHECKDB 检查的每个表或每批表重新求值并自动调整并行度。<br /><br />典型的使用场景为：系统管理员知道在 DBCC CHECKDB 完成之前服务器负载会增加，因此选择手动减少或禁用并行操作，以便增加与其他用户工作负载的并发。 但是，禁用 DBCC CHECKDB 中的并行检查会延长其完成时间。<br /><br />**注意：** 如果使用 TABLOCK 选项执行 DBCC CHECKDB 并禁用并行操作，则可能会将表锁定较长时间。<br /><br />**注意：** 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 开始，可以在语句中使用 MAXDOP 选项来覆盖 sp_configure 的 max degree of parallelism 配置选项。<br /><br />**作用域**：全局或会话|
 |**2549**|运行 DBCC CHECKDB 命令，该命令假定每个数据库文件均位于唯一的磁盘驱动器上。 DBCC CHECKDB 命令根据唯一磁盘驱动器跨所有数据库文件生成一个待读取页面内部列表。 此逻辑根据每个文件的物理文件名的驱动器号确定唯一磁盘驱动器。<br /><br />**注意：** 除非知道每个文件都基于唯一的物理磁盘，否则不要使用此跟踪标志。<br /><br />**注意：** 尽管此跟踪标志改进了以使用 PHYSICAL_ONLY 选项为目标的 DBCC CHECKDB 命令的性能，但一些用户可能还是看不到性能有任何改进。 虽然此跟踪标志可以改善磁盘 I/O 资源的使用情况，但磁盘资源的基本性能可能会限制 DBCC CHECKDB 命令的整体性能。 有关详细信息，请参阅此 [Microsoft 支持文章](http://support.microsoft.com/kb/2634571)。<br /><br />**作用域**：仅全局| 
