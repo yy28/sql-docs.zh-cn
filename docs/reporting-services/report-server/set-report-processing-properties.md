@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d4391fb3957c9b0d3529ebb51d038398786c15d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838575"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031766"
 ---
 # <a name="set-report-processing-properties"></a>设置报表处理属性
   报表执行属性控制报表的处理方式。 必须为每个报表分别设置执行属性。  
   
- 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 设置属性，请参阅[“处理选项”属性页（报表管理器）](http://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
+ 若要设置报表执行属性，请在报表管理器中打开报表，再导航到“执行”属性页。 有关详细信息，请参阅[“处理选项”属性页（报表管理器）](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。 还可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 设置属性，请参阅[“处理选项”属性页（报表管理器）](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)。  
   
 ## <a name="report-execution-modes"></a>报表执行模式  
  您既可以按需运行报表，也可以按快照形式运行报表。 以下部分介绍了各种运行方法。  
@@ -57,7 +57,7 @@ ms.locfileid: "47838575"
  [设置处理选项（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [配置报表的执行属性（报表管理器）](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 概念 (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [如何：向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [如何向报表历史记录添加快照](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

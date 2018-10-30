@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6e047ff8c5a6c898ed902fa4d52de6db797da3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030366"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>向报表添加书签（报表生成器和 SSRS）
   若要在报表中提供自定义目录或自定义内部导航链接，可以向报表中添加书签或书签链接。 通常情况下，如果要引导用户到报表中的某一位置，例如表、图表以及表或矩阵中显示的唯一组值，可以向该位置添加书签。 可以创建用作书签的字符串；或者，对于组而言，可以将书签设置为组表达式。  
@@ -22,7 +22,7 @@ ms.locfileid: "47676995"
   
  例如，如果报表显示按颜色分组的表，则可以向组头中添加基于组表达式的书签。 然后，即可在报表的开头处添加带有显示颜色值的单个文本框的表，并在该文本框上设置书签链接。 单击某种颜色时，报表就会跳至显示具有该颜色的组头行的页。  
   
- 可以向任何报表项添加书签，也可以向具有 **“操作”** 属性的任何项添加书签链接，例如文本框、图像或图表中的计算序列。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
+ 可以向任何报表项添加书签，也可以向具有 **“操作”** 属性的任何项添加书签链接，例如文本框、图像或图表中的计算序列。 有关详细信息，请参阅[“操作属性”对话框（报表生成器和 SSRS）](https://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

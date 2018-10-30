@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8f075036f83ae12f3bede71c838e0a408836d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826125"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021091"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -149,7 +149,7 @@ ms.locfileid: "47826125"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 呈现扩展插件不推荐使用。 有关详细信息，请参阅 [SQL Server 2016 的 SQL Server Reporting Services 中不推荐使用的功能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
- 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](http://go.microsoft.com/fwlink/?LinkID=205622)。  
+ 如果安装了针对 Word、Excel 和 PowerPoint 的 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 兼容包，Word 呈现器将与 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 兼容。 有关详细信息，请参阅 [用于 Word、Excel 和 PowerPoint 的 Microsoft Office 兼容包](https://go.microsoft.com/fwlink/?LinkID=205622)。  
   
  与 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 兼容的以前版本的 Word 呈现扩展插件已重命名为 Word 2003。 默认情况下，只提供 Word 呈现扩展插件。 您必须更新 Reporting Services 配置文件，才能使用 Word 2003 呈现扩展插件。 Word 2003 呈现器生成的文件的内容类型为 **application/vnd.ms-word** ，并且文件的文件扩展名为 .doc。  
   
@@ -195,4 +195,4 @@ ms.locfileid: "47826125"
 [呈现报表项](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [表、矩阵和列表](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

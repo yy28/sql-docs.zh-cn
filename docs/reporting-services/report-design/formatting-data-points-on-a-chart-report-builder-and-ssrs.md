@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021216"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>设置图表上数据点的格式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中，数据点是图表上的最小单个实体。 在非形状图上，根据数据点的图表类型来表示数据点。 例如，线条序列由一个或多个连接数据点组成。 在形状图上，数据点是通过构成整个图表的单个切片和段来表示的。 例如，饼图上的每个块都是一个数据点。 有关详细信息，请参阅 [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "47624565"
 |#MAX|序列中所有 Y 值的最大值。|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|序列中所有 Y 值第一个值。|All|`=First(Fields!MyDataField.Value)`|  
   
- 若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](http://go.microsoft.com/fwlink/?LinkId=112024) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
+ 若要设置关键字格式，请将 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串用括号括起来。 例如，若要在工具提示中将数据点的值指定为具有两个小数位数的数字，请将格式字符串“N2”放置到大括号中，例如序列上 **“工具提示”** 属性的“#VALY{N2}”。 有关 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 格式字符串的详细信息，请参阅 MSDN 上的 [Formatting Types](https://go.microsoft.com/fwlink/?LinkId=112024) （为类型设置格式）。 有关在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中设置数字格式的详细信息，请参阅[设置数字和日期格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)。  
   
  有关将关键字添加到图表的详细信息，请参阅[在序列上显示工具提示（报表生成器和 SSRS）](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)、[更改图例项的文本（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   

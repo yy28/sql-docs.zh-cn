@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10ca19f7c728b172ffc06ac994932b2a07670429
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f793de9e36968021155387ce0f926899f81f753d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690046"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027776"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>访问 Reporting Services WMI 提供程序
   Reporting Services WMI 提供程序公开了两个 WMI 类，用于通过脚本管理本机模式报表服务器实例：  
@@ -33,7 +33,7 @@ ms.locfileid: "47690046"
 |MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13|为客户端提供连接到已安装的报表服务器所需的基本信息。|  
 |MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_\<EncodedInstanceName>\v13\Admin|表示报表服务器实例的安装和运行时参数。 这些参数存储在报表服务器的配置文件中。<br /><br /> **\*\* 重要提示 \*\*** 只有拥有管理权限才能访问此类。|  
   
- 以上每个类实例是为每个报表服务器实例创建的。 您可以使用任何 Microsoft 或第三方工具来访问报表服务器公开的 WMI 对象，包括 .NET Framework 本身公开的 WMI 编程接口。 本主题介绍如何使用 PowerShell 命令 [Get-WmiObject](http://technet.microsoft.com/library/dd315295.aspx)访问和使用 WMI 类实例。  
+ 以上每个类实例是为每个报表服务器实例创建的。 您可以使用任何 Microsoft 或第三方工具来访问报表服务器公开的 WMI 对象，包括 .NET Framework 本身公开的 WMI 编程接口。 本主题介绍如何使用 PowerShell 命令 [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)访问和使用 WMI 类实例。  
   
 ## <a name="determine-the-instance-name-in-the-namespace-string"></a>确定命名空间字符串中的实例名称  
  命名空间路径中针对 Reporting Services WMI 类的实例名称是您在安装命名 Reporting Services 实例时指定的实例名称的编码形式。 也就是说，对实例名称中的特殊字符进行编码。 例如，下划线 (_) 编码为“_5f”，这样，实例名称“My_Instance”在 WMI 命名空间路径中就编码为“My_5fInstance”。  

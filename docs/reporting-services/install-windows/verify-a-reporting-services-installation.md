@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6373efd4d6bed20b823c931ea20041de5f7f05dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0303b080271ec85753d0f0f94eee970b3d7308a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828106"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50027506"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器。 验证安装时应遵循的步骤取决于报表服务器的模式。  
@@ -64,7 +64,7 @@ ms.locfileid: "47828106"
   
 1.  在 SharePoint 文档库中，创建一个仅包含文本框的基本 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表，例如标题。 该报表不包含任何数据源或数据集。 目的是验证能否打开报表生成器和预览基本报表。  
   
-2.  将报表保存到文档库并从库中运行该报表。 若要详细了解如何使用报表生成器创建报表，请参阅[启动报表生成器](../report-builder/start-report-builder.md)。  
+2.  将报表保存到文档库并从库中运行该报表。 有关使用报表生成器创建报表的详细信息，请参阅 [启动报表生成器](../report-builder/start-report-builder.md)  
   
 ### <a name="reporting-services-samples"></a>Reporting Services 示例  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47828106"
   
 2.  使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 创建新文件夹或上载文件，以测试定义是否传回报表服务器数据库。 如果上述操作成功，则表明连接正常。  
   
-     有关详细信息，请参阅 [Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
+     有关详细信息，请参阅 [Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)。  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>验证报表设计器已安装并正常运行  
   

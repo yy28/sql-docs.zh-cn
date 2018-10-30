@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: da188b4259d12b8c40cdd8a229a7f316a0bc3a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53644a3442280089309807b156ef4ef9c842494b
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698795"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028406"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>从外部数据源中添加数据 (SSRS)
   若要从外部数据源中检索数据，您需要使用数据连接。 数据连接信息通常由外部数据源的所有者提供，该所有者负责授予权限并指定要使用的凭据类型。 数据连接信息另存为报表数据源。 数据源类型指定要用于检索数据的数据扩展插件。  
@@ -38,7 +38,7 @@ ms.locfileid: "47698795"
 -   **外部数据源** 要从中检索报表数据的位置，例如，数据库、文件、多维数据集或 Web 服务。  
   
 > [!NOTE]  
->  在您未连接到报表服务器时，您可以从随报表生成器一起安装的数据扩展插件中进行选择。 您作为单个用户使用您计算机上的凭据访问数据。 在您连接到报表服务器时，您可以从报表服务器上安装的数据扩展插件中进行选择。 您以运行报表的多个用户中的一个用户名义访问数据，并且您使用的是报表服务器上的凭据。 有关详细信息，请参阅 [在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+>  在您未连接到报表服务器时，您可以从随报表生成器一起安装的数据扩展插件中进行选择。 您作为单个用户使用您计算机上的凭据访问数据。 在您连接到报表服务器时，您可以从报表服务器上安装的数据扩展插件中进行选择。 您以运行报表的多个用户中的一个用户名义访问数据，并且您使用的是报表服务器上的凭据。 有关详细信息，请参阅 [在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ##  <a name="ReportData"></a> 了解报表数据  
  用最简单的形式来说，报表将来自报表数据集的数据显示在报表页上的数据区域中，即，显示在单个表、图表、矩阵或其他类型的报表数据区域中。 报表数据集中的数据来自于单个查询命令返回的第一个结果集，该查询命令是通过对外部数据源进行只读访问运行的。 可以根据需要扩展每个数据区域以显示数据集中的所有数据。  
@@ -97,15 +97,15 @@ ms.locfileid: "47698795"
 |主题|描述|  
 |-----------|-----------------|  
 |[报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)|提供访问报表数据的概述。|  
-|[报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|提供有关数据连接和数据源的信息。|  
+|[报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|提供有关数据连接和数据源的信息。|  
 |[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|提供有关嵌入数据集和共享数据集的信息。|  
 |[数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|提供有关查询生成的数据集字段集合的信息。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|提供有关每个数据扩展插件的平台和版本支持的详细信息。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[数据处理扩展插件概述](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)。|为高级用户提供有关数据扩展插件的详细信息。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|提供有关每个数据扩展插件的平台和版本支持的详细信息。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的[数据处理扩展插件概述](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md)。|为高级用户提供有关数据扩展插件的详细信息。|  
   
   
 ## <a name="see-also"></a>另请参阅  
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cec608dc1dd168ebfc86b1f8d945e5f90d9d7b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 283ed465cf38b0653e24dfc8503a1dd98e4df9f9
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021701"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教程：脱机创建快速图表报表（报表生成器）
 
-  在本教程中，可使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
+  在本教程中，你可以使用向导在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]分页报表中创建饼图。 然后添加百分比并对饼图进行少量修改。 
   
 您可以通过两种不同的方式学习本教程。 两种方法具有相同的结果，都将得到与下图类似的饼图：  
   
@@ -220,7 +220,7 @@ ms.locfileid: "47850400"
  有关自定义饼图标签和图例的详细信息，请参阅[在饼图上显示百分比值&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和 [更改图例项文本&#40;报表生成器和 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)。  
   
 ##  <a name="WhatsNext"></a> 下一步是什么？  
- 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，需要具有通过“连接字符串”（它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
+ 现在已在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建了第一个报表，可准备尝试其他教程，也可以开始利用自己的数据创建报表。 若要运行 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，需要拥有通过“连接字符串” （它使你实际连接到数据源）访问数据源（如数据库）的权限。 系统管理员拥有此信息，并且可以为您设置相应的权限。  
   
  若要完成其他教程，你需要 SQL Server 实例的名称以及足以对任何数据库进行只读访问的凭据。 系统管理员也可以为您设置该权限。  
   
@@ -233,4 +233,4 @@ ms.locfileid: "47850400"
 [报表生成器教程](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

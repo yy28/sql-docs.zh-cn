@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0aada8f512db681b4522dcaa24d71c1903901947
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020181"
 ---
 # <a name="process-large-reports"></a>处理大型报表
   大型报表将给系统的处理能力带来一定的挑战。若要正确运行大型报表，需要进行特定配置。 除非将大型报表配置为支持分页，否则不应按需运行这些报表。  
@@ -31,7 +31,7 @@ ms.locfileid: "47651875"
   
  对于包含可变数据的不同报表，从一个报表运行到下一个报表时，报表大小会有很大变化。 在这种情况下，应监视数据源，以确定数据可变性对报表的影响，决定是否需要按照本主题中规定的步骤进行操作。  
   
- 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [How to diagnose issues when running reports in the report server](http://go.microsoft.com/fwlink/?LinkId=85634) （如何在报表服务器中运行报表时诊断问题）。  
+ 有关如何诊断超时错误和内存不足错误的详细信息与提示，请参阅 blogs.msdn.com 上的文章 [How to diagnose issues when running reports in the report server](https://go.microsoft.com/fwlink/?LinkId=85634) （如何在报表服务器中运行报表时诊断问题）。  
   
 ## <a name="configuration-recommendations"></a>配置建议  
  关于报表执行、报表呈现和报表访问方面的建议包括以下几点：  

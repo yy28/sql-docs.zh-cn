@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdf5f72629469de95ee5d6ce171fe26fbb5b747b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020321"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
@@ -20,7 +20,7 @@ ms.locfileid: "47608345"
   
  有关与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的其他错误和问题，请参阅[解决 SSRS 问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
- 查看[联机发行说明](http://go.microsoft.com/fwlink/?linkid=236893) ，也许在发行说明中会论及你遇到的问题。  
+ 查看[联机发行说明](https://go.microsoft.com/fwlink/?linkid=236893) ，也许在发行说明中会论及你遇到的问题。  
   
 ##  <a name="bkmk_setuplogs"></a> 检查安装程序日志  
  安装程序错误记录在 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 文件夹内的日志文件中。 每次运行安装程序时都会创建一个子文件夹。 该子文件夹名称为您运行安装程序的时间和日期。 有关如何查看安装程序日志文件的说明，请参阅 [查看和阅读 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  

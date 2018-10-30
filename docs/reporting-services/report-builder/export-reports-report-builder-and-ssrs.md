@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8048fd1795bd9054c640cd986e58e37d3fb654cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0203cb3331df3ba5a27ec08e55c10712c9e64d19
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817848"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031006"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>导出报表（报表生成器和 SSRS）
 
@@ -192,4 +192,4 @@ http://<Report Server Name/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%
 [打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
 [保存报表（报表生成器）](../../reporting-services/report-builder/saving-reports-report-builder.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

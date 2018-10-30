@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 458db88f63ac2d27db03cace86593907ef67b3b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662985"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021321"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
@@ -21,7 +21,7 @@ ms.locfileid: "47662985"
   
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-from--a--web-portal-or-sharepoint-library"></a>从 Web 门户或 SharePoint 库安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
   
- 可以从 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
+ 可以从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] Web 门户或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 集成的 SharePoint 站点启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 有关信息，请参阅 [启动报表生成器](../../reporting-services/report-builder/start-report-builder.md)。  
   
 ### <a name="sharepoint-site-integrated-with-includessrsnoversionincludesssrsnoversion-mdmd"></a>与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
@@ -36,13 +36,13 @@ ms.locfileid: "47662985"
   
 ## <a name="system-requirements"></a>系统要求
   
- 请参阅 Microsoft 下载中心上 [报表生成器下载页](http://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”** 部分。
+ 请参阅 Microsoft 下载中心上 [报表生成器下载页](https://go.microsoft.com/fwlink/?LinkID=734968) 的 **“系统要求”** 部分。
   
 ##  <a name="download"></a> 从下载站点安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
-1.  在 [Microsoft 下载中心的报表生成器页上](http://go.microsoft.com/fwlink/?LinkID=734968) ，单击“下载” 。  
+1.  在 [Microsoft 下载中心的报表生成器页上](https://go.microsoft.com/fwlink/?LinkID=734968) ，单击“下载” 。  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 下载完成后，单击“运行”。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 下载完成后，单击“运行”  。  
   
      此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 向导。  
   
@@ -51,15 +51,15 @@ ms.locfileid: "47662985"
 4.  在 **“默认的目标服务器”** 页上，如果目标报表服务器的 URL 与默认 URL 不同，则可选择提供前者。 单击“下一步” 。  
   
     > [!NOTE]  
-    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中的“选项”对话框也可以执行相同操作。  
+    >  如果计划在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 连接到某个报表服务器时使用它，则此时提供该报表服务器的 URL 将会非常方便。 从 **中的“选项”**[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]对话框也可以执行相同操作。  
   
-5.  单击“安装”以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的安装。  
+5.  单击“安装”  以完成 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的安装。  
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-a-share"></a>从共享安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
 1.  请与管理员联系，获得在本地计算机上安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 所要运行的 ReportBuilder3.msi 的位置。  
   
-2.  浏览找到 ReportBuilder3.msi（[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 的 Windows Installer 程序包 (MSI)），然后单击它。  
+2.  浏览找到 ReportBuilder3.msi（ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]的 Windows 安装程序包 (MSI)），然后单击它。  
   
      此操作将启动 SQL Server [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 向导。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "47662985"
   
  如果要进行根本没有用户界面交互的完全静默安装，请指定 **/quiet** 选项。 根据设计，quiet 选项标志会隐藏安装错误。 因此，建议在使用 quiet 选项时包括 **/l** 选项，该选项指定进行日志记录。   
   
-1.  在 [Microsoft 下载中心的“报表生成器”页](http://go.microsoft.com/fwlink/?LinkID=734968)上，单击“下载”。  
+1.  在 [Microsoft 下载中心的“报表生成器”页](https://go.microsoft.com/fwlink/?LinkID=734968)上，单击“下载”。  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 下载完成后，单击“保存”。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 下载完成后，单击“保存”  。  
   
 3.  在 **“开始”** 菜单上，单击 **“运行”**。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "47662985"
   
 7.  若要运行命令，请按 ENTER。  
   
-## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 默认值  
+## <a name="set-includessrbnoversionincludesssrbnoversionmd-defaults"></a>设置 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 默认值。  
   
 -   安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 后，可以设置一些默认选项。 单击“文件” > “选项”。  
   

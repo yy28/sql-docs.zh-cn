@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d68f689ebcf937acae4b1bf5579eb282c8e1932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100388"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>报表故障排除：地图报表（报表生成器和 SSRS）
   当你向报表中添加地图或地图层、自定义报表中的现有地图或地图层、预览报表中的地图或发布具有地图的报表时， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中的地图可能会出现问题。 使用本主题可以帮助解决这些问题。  
@@ -187,7 +187,7 @@ ms.locfileid: "47847505"
   
 -   地图投影必须为 **Mercator**。  
   
--   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“规划地图支持”。  
+-   对于本地预览，您必须能够访问 Internet。 对于从报表服务器运行的报表，必须将报表服务器配置为支持图块背景。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“规划地图支持”。  
   
  有关添加图块层的详细信息，请参阅[添加、更改或删除地图或地图层（报表生成器和 SSRS）](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
@@ -206,6 +206,6 @@ ms.locfileid: "47847505"
   
 ## <a name="see-also"></a>另请参阅  
  [地图（报表生成器和 SSRS）](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [报表生成器故障排除](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [报表生成器故障排除](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

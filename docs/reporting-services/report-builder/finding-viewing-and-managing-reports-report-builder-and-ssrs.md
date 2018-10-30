@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 2d28ffb546476d2e18fd1dc57d04c837f7176142
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029688"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>查找、查看和管理报表（报表生成器和 SSRS）
   在报表生成器中，您可以浏览报表服务器或 SharePoint 站点上的文件夹，以便查找报表、共享数据源、模型和其他相关报表项；并且可以浏览您的计算机，以便查找本地报表。 为了便于查找报表，报表生成器维护最近使用的服务器和站点的列表，并提供对您的计算机的文件系统中“桌面”、“我的文档”和“我的电脑”文件夹的直接访问。  
@@ -77,7 +77,7 @@ ms.locfileid: "49085443"
  ![报表工具栏](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
 报表工具栏  
   
- 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[将报表导出为其他文件类型（报表生成器和 SSRS）](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
+ 运行报表后，可以将其导出为其他格式，例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 或 PDF。 还可以使用逗号分隔值 (CSV) 呈现扩展插件之类的数据扩展插件导出报表，然后使用 CSV 数据文件作为对其他应用程序的输入。 有关导出报表的详细信息，请参阅[导出报表（报表生成器和 SSRS）](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)和[将报表导出为其他文件类型（报表生成器和 SSRS）](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)。  
   
  选择和运行报表的最简单方法是打开报表管理器，然后搜索或浏览到要查看的报表。 有关如何打开报表的分步说明，请参阅[打开和关闭报表（报表管理器）](../../reporting-services/reports/open-and-close-a-report-report-manager.md)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "49085443"
   
  若要访问应用程序页，请从报表或先前添加到 SharePoint 库的其他报表服务器项的下拉菜单中选择特定于项的操作。 您可能还可以在报表生成器中创建报表、生成模型和设置模型项的安全性，这取决于具体的项以及您拥有的权限。  
   
- 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?LinkId=154888)中的[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
+ 有关 Reporting Services 和 SharePoint 技术的详细信息，请参阅 msdn.microsoft.com 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?LinkId=154888)中的[配置和管理报表服务器（Reporting Services SharePoint 模式）](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)。  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>在 SharePoint 站点中查找报表服务器项  
  在您能够设置属性之前，首先必须能够找到项。 报表服务器项总是存储在多个库中或者存储在某个库的一个文件夹内。  
@@ -148,6 +148,6 @@ ms.locfileid: "49085443"
 ## <a name="see-also"></a>另请参阅  
  [保存报表（报表生成器）](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [安装和卸载报表生成器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [安装和卸载报表生成器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

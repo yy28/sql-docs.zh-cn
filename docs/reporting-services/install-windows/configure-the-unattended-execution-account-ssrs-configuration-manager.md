@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa941d5c7229eeba45e52bddb2b434d3cae44da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50099908"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>配置无人参与的执行帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供一个特殊帐户，用于进行无人参与的报表处理和通过网络发送连接请求。 可以通过下列方式使用该帐户：  
@@ -101,6 +101,6 @@ ms.locfileid: "47643305"
  将从 RSReportServer.config 文件中删除此帐户的信息。  
   
 ## <a name="see-also"></a>另请参阅  
- [Reporting Services 配置管理器（SSRS 本机模式）](http://msdn.microsoft.com/en-us/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 配置管理器（SSRS 本机模式）](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

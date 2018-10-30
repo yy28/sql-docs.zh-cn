@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ef9ae610a977c372503918b128141485e05dc17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020271"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
@@ -30,7 +30,7 @@ ms.locfileid: "47613755"
   
  出于测试目的，可以在本地生成证书。 如果将 **MakeCert** 实用工具和示例命令用作模板，请确保在运行该命令之前将服务器名称指定为主机并删除所有换行符。 如果在 DOS 窗口中运行命令，则可能需要增加窗口的缓冲区大小以容纳整条命令。  
   
- 如果正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 IIS 管理器控制台应用程序获取计算机上安装的证书。 IIS 管理器包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](http://go.microsoft.com/fwlink/?LinkId=71123) （使用 SSL 加密机密数据）。  
+ 如果正在同一台计算机上一起运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，则可以使用 IIS 管理器控制台应用程序获取计算机上安装的证书。 IIS 管理器包含可用于创建和打包证书请求 (.crt) 文件的选项，以便可信证书颁发机构进行后续处理。 您使用的证书颁发机构将生成一个证书 (.cer) 文件，并将它发送回给您。 您可以使用 IIS 管理控制台在本地存储区中安装该证书文件。 有关详细信息，请参阅 Technet 上的 [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) （使用 SSL 加密机密数据）。  
   
 ## <a name="interoperability-issues-with-iis"></a>与 IIS 的互操作性问题  
  在同一计算机上同时存在 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 将严重影响与报表服务器的 SSL 连接：  

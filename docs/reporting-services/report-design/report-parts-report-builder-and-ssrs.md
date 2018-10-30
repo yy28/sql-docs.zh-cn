@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c70ad78a8746f261130c7348f92582629c17a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4697eada10910db5ef9b37e9884b9746df360b8a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021941"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>报表部件（报表生成器和 SSRS）
   表、矩阵、图表和图像等报表项可以作为“报表部件”发布。 报表部件是单独发布到报表服务器上并且可以在其他分页报表中重复使用的分页报表项。 报表部件具有 .rsc 文件扩展名。  
@@ -107,7 +107,7 @@ ms.locfileid: "47849255"
  每次打开报表时，报表生成器都检查该报表中各报表部件的服务器实例是否已在服务器上进行了更新。 它还将检查报表部件的依赖项（如数据集和参数）的更改。 如果任何已发布的报表部件或其依赖关系已在服务器上进行了更新，则报表中的信息栏将显示已更新的数量。 您可以选择查看并接受或拒绝更新，或关闭信息栏。 如果您选择查看更新，则可以看到报表部件的缩略图、最后修改者以及最后修改时间。 然后，您可以接受任何或所有更新项。  
   
 > [!NOTE]  
->  您可以禁用信息栏，这样，当更改报表部件时系统将不会通知您。 您可以在向报表中添加报表部件时设置此选项。 即使已禁用信息栏，也仍可以检查更新。 有关详细信息，请参阅[检查是否有更新或禁用更新（报表生成器和 SSRS）](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
+>  您可以禁用信息栏，这样，当更改报表部件时系统将不会通知您。 您可以在向报表中添加报表部件时设置此选项。 即使已禁用信息栏，也仍可以检查更新。 有关详细信息，请参阅 [检查更新或关闭更新（报表生成器和 SSRS）](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
   
  报表生成器检查在服务器上最后一次更新报表部件的日期与您最后将报表部件与服务器同步的日期之间的差异。 它不检查您在报表中修改报表部件的日期。 因此，您的报表中的报表部件和服务器上的报表部件可能差别很大，但在报表生成器检查更新时，它将不会发现任何差异。  
   
@@ -136,11 +136,11 @@ ms.locfileid: "47849255"
   
  [浏览查找报表部件和设置默认文件夹（报表生成器和 SSRS）](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [检查更新或关闭更新（报表生成器和 SSRS）](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [检查更新或关闭更新（报表生成器和 SSRS）](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>另请参阅  
  [报表生成器中的报表部件和数据集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [报表部件故障排除（报表生成器和 SSRS）](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [报表部件故障排除（报表生成器和 SSRS）](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [管理报表部件](../../reporting-services/report-design/managing-report-parts.md)  
   
   

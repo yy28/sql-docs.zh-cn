@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b70746e6bf466c3f6d5e7e22a4a09fd25a4e9fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c625459ae357dd0c8db1ab7b2255e95e5787b1f0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029336"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>安装 Reporting Services 2016 本机模式报表服务器
 
@@ -134,7 +134,7 @@ ms.locfileid: "47676171"
   
     -   `http://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **服务器配置**：如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在“服务器配置”页上配置 SQL Server 代理“自动”启动类型。   默认为手动。  
+6.  **服务器配置**：如果计划使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅功能，则在“服务器配置”  页上，配置 SQL Server 代理“自动”  启动类型。   默认为手动。  
   
 7.  在“数据库引擎配置”  页上，添加 SQL Server 管理员。  
   
@@ -183,4 +183,4 @@ ms.locfileid: "47676171"
 [配置本机模式报表服务器上的 SSL 连接](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

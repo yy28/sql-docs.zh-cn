@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a2282d6475d8f76fe1a479f16ad0b24f67d2189f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030586"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -31,7 +31,7 @@ ms.locfileid: "47817505"
   
  共享数据集定义包括查询、包括默认值在内的数据集参数、是否区分大小写之类的数据选项以及数据集筛选器。 只要在报表中包括共享数据集，就使用在定义中设置的值。  
   
- 若要在报表中使用某一共享数据集，请打开报表生成器之类的应用程序，浏览到报表服务器或 SharePoint 站点，然后选择该共享数据集。 这会将共享数据集的一个实例添加到报表。 在报表中，不能查看或更改该共享数据集的查询或共享数据源。 您可以指定应用于报表中该实例的一组附加的数据集属性值。 例如，您可以添加筛选器或更改是否区分大小写之类的数据选项。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
+ 若要在报表中使用某一共享数据集，请打开报表生成器之类的应用程序，浏览到报表服务器或 SharePoint 站点，然后选择该共享数据集。 这会将共享数据集的一个实例添加到报表。 在报表中，不能查看或更改该共享数据集的查询或共享数据源。 您可以指定应用于报表中该实例的一组附加的数据集属性值。 例如，您可以添加筛选器或更改是否区分大小写之类的数据选项。 有关详细信息，请参阅 msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ## <a name="managing-shared-datasets"></a>管理共享数据集  
  若要管理已发布共享数据集的属性，对于本机模式下的报表服务器，可使用报表管理器，如果报表服务器部署在 SharePoint 集成模式下，则可以使用 SharePoint 站点上的应用程序页。 您可以对共享数据集执行的任务取决于您的角色分配以及网站级别和项级别权限，包括针对文件夹的权限（如果权限继承有效）。 针对共享数据集的项级别安全性与针对报表的项级别安全性遵循相同的模型。 有关详细信息，请参阅 [保护共享数据集项](../../reporting-services/security/secure-shared-dataset-items.md)。  
@@ -86,13 +86,13 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 |任务|工具|链接|  
 |----------|----------|----------|  
-|添加共享数据集或更改共享数据集定义属性。|在报表生成器中保存。<br /><br /> 在报表设计器中部署。<br /><br /> 在报表管理器中上载 .rsd 文件|msdn.microsoft.com 上[“报表生成器”文档](http://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 如果您首先上载一个共享数据集，然后发布该共享数据集所依赖的共享数据源，则必须手动将该共享数据集绑定到该共享数据源。 有关详细信息，请参阅 msdn.microsoft.com 上 [共享数据集的“常规”属性页（报表管理器）](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)。|  
-|更改共享数据集的项属性。|报表管理器|[共享数据集的“常规”属性页（报表管理器）](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
-|为报表中的共享数据集实例指定其他共享数据集属性。|报表生成器/报表设计器|[“数据集属性”对话框 -&gt;“查询”](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
-|绑定到共享数据集的不同共享数据源。|报表管理器|[“选择数据源”页（报表管理器）](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
+|添加共享数据集或更改共享数据集定义属性。|在报表生成器中保存。<br /><br /> 在报表设计器中部署。<br /><br /> 在报表管理器中上载 .rsd 文件|msdn.microsoft.com 上[“报表生成器”文档](https://go.microsoft.com/fwlink/?LinkId=154494)中的[报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)<br /><br /> [“上传文件”页（报表管理器）](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)<br /><br /> 如果您首先上载一个共享数据集，然后发布该共享数据集所依赖的共享数据源，则必须手动将该共享数据集绑定到该共享数据源。 有关详细信息，请参阅 msdn.microsoft.com 上 [共享数据集的“常规”属性页（报表管理器）](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)。|  
+|更改共享数据集的项属性。|报表管理器|[共享数据集的“常规”属性页（报表管理器）](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
+|为报表中的共享数据集实例指定其他共享数据集属性。|报表生成器/报表设计器|[“数据集属性”对话框 -&gt;“查询”](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
+|绑定到共享数据集的不同共享数据源。|报表管理器|[“选择数据源”页（报表管理器）](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
 |确认数据集参数的默认值。|在报表生成器中打开或使用 URL 访问语法。|例如：<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|启用缓存|报表管理器|[缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共享数据集的“缓存”页（报表管理器）](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
-|创建或编辑缓存刷新计划|报表管理器|[缓存刷新选项（报表管理器）](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
+|启用缓存|报表管理器|[缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共享数据集的“缓存”页（报表管理器）](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
+|创建或编辑缓存刷新计划|报表管理器|[缓存刷新选项（报表管理器）](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |查看共享数据集定义架构。|报表管理器|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |在 SharePoint 集成模式下，同步报表服务器和 SharePoint 站点之间的共享数据集定义|SharePoint 应用程序页|更改共享数据集的项属性<br /><br /> 更改缓存选项<br /><br /> 更改共享数据源|  
   

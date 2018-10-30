@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ec5912fc9aff3777fe567461b98651d7e9a91a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6442c6993af76c3d5b14526eb56d237963375a0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030706"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>图表类型（报表生成器和 SSRS）
 
@@ -29,7 +29,7 @@ ms.locfileid: "47744735"
   
  可在创建图表之后更改图表类型。 有关详细信息，请参阅[更改图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md)。  
   
- 许多这些类型的图表示例都可用作示例报表。 有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 许多这些类型的图表示例都可用作示例报表。 有关下载示例报表的详细信息，请参阅 [报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
   
 |图表类型|显示比率数据|显示股票数据|显示线性数据|显示多值数据|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -52,4 +52,4 @@ ms.locfileid: "47744735"
 [图表中的空点和 Null 数据点](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
 [向报表添加图表](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: casualoak
 ms.author: edugonz
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2fa40e17381622862ea2a5b5e6fac594f6a42f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728754"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030118"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>SQL Server Reporting Services (SSRS) 2017 及更高版本的更改日志
 
@@ -33,15 +33,15 @@ ms.locfileid: "47728754"
 
 已修复以下 bug：
 
-- 当 rc:Toolbar=False 且它具有长文本时，矩形内的文本框导致矩形不沿垂直方向增长 
-- 如果 pageHeight 小于 0.5 英寸，则文本大小不会缩放 
-- 在与 CRM 一起使用时在 SSRS 目录数据库中发生死锁 
-- 在报表中向下滚动时，垂直对齐的列标题不能正确显示 
-- 添加到 SCOM Reporting Role 的用户已被阻止访问 SSRS Web 门户 
-- 在 PDF 中无法正确导出泰语字符 
-- 浏览器角色行为更改 
-- rc:Toolbar=false 在 Express Edition 中不起作用 
-- 在参数提示区域缺少垂直滚动条 
+- 当 rc:Toolbar=False 且它具有长文本时，矩形内的文本框导致矩形不沿垂直方向增长 
+- 如果 pageHeight 小于 0.5 英寸，则文本大小不会缩放 
+- 在与 CRM 一起使用时在 SSRS 目录数据库中发生死锁 
+- 在报表中向下滚动时，垂直对齐的列标题不能正确显示 
+- 添加到 SCOM Reporting Role 的用户已被阻止访问 SSRS Web 门户 
+- 在 PDF 中无法正确导出泰语字符 
+- 浏览器角色行为更改 
+- rc:Toolbar=false 在 Express Edition 中不起作用 
+- 在参数提示区域缺少垂直滚动条 
 - 更新了移动报表运行时 
 
 ### <a name="version-140600744-released-april-25-2018"></a>版本 14.0.600.744，发布日期：2018 年 4 月 25 日 
@@ -82,4 +82,4 @@ ms.locfileid: "47728754"
 
 [Reporting Services (SSRS) 中的新增功能](what-s-new-in-sql-server-reporting-services-ssrs.md)   
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

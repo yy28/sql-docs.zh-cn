@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 656cf55483947a17696fdaf4c09f7ebe08124d20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f756c0f2e843f2a13e394bb739647530feda09
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029157"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教程：创建钻取报表和主报表（报表生成器）
 本教程教授如何创建两种 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分页报表：钻取报表和主报表。 这些报表中使用的示例销售数据可从 Analysis Services 多维数据集检索。 
@@ -25,7 +25,7 @@ ms.locfileid: "47654315"
 本教程的预计学时：30 分钟。  
   
 ## <a name="requirements"></a>要求  
-本教程要求钻取报表和主报表具有访问 Contoso Sales 多维数据集的权限。 此数据集由 ContosoDW 数据仓库和 Contoso_Retail 联机分析处理 (OLAP) 数据库组成。 您将在此教程中创建的报表从 Contoso Sales 多维数据集检索报表数据。 Contoso_Retail OLAP 数据库可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=191575)下载。 您只需要下载文件 ContosoBIdemoABF.exe。 它包含 OLAP 数据库。  
+本教程要求钻取报表和主报表具有访问 Contoso Sales 多维数据集的权限。 此数据集由 ContosoDW 数据仓库和 Contoso_Retail 联机分析处理 (OLAP) 数据库组成。 您将在此教程中创建的报表从 Contoso Sales 多维数据集检索报表数据。 Contoso_Retail OLAP 数据库可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkID=191575)下载。 您只需要下载文件 ContosoBIdemoABF.exe。 它包含 OLAP 数据库。  
   
 另一个文件 ContosoBIdemoBAK.exe 用于 ContosoDW 数据仓库，在此教程中不使用它。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47654315"
 10. 单击“凭据类型”。  
   
     > [!NOTE]  
-    > 您可能需要更改默认身份验证选项，具体取决于在数据源上配置权限的方式。 有关详细信息，请参阅[安全性（报表生成器）](../reporting-services/report-builder/security-report-builder.md)。  
+    > 您可能需要更改默认身份验证选项，具体取决于在数据源上配置权限的方式。 有关详细信息，请参阅 [安全性（报表生成器）](../reporting-services/report-builder/security-report-builder.md)中所创建的移动报表中使用。  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

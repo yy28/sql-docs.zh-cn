@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8d498b813bb85c99a5af73fda90f96357d42db08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 581ffe4fc93116892085cbe6b7701e7a3349cd00
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028076"
 ---
 # <a name="uninstall-report-builder"></a>卸载报表生成器
 
@@ -56,4 +56,4 @@ ms.locfileid: "47733335"
 
 [安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

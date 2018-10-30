@@ -8,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b49ec38fd8cedb7d55608d455d2b009ca62f978c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68ea91137c584959c53ee8de010dbff92106c119
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028056"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>创建带有参数的钻取 (RDLC) 报表 - ReportViewer
-[钻取](http://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将详细介绍以下在 [本地模式报表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)中使用参数和查询创建钻取报表的课程。  
+[钻取](https://technet.microsoft.com/library/ff519554.aspx) 报表是指用户通过单击其他报表中的链接打开的报表。 钻取报表通常包含某原始汇总报表中所包含的某项的详细信息。 本教程将带你演练以下在 [本地模式报表](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)中使用参数和查询创建钻取报表的课程。  
   
 ## <a name="requirements"></a>要求  
 若要使用此演练，必须具有访问 **AdventureWorks2014** 示例数据库的权限。 有关如何获取 AdventureWorks2014 示例数据库的详细信息，请参阅 [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
   
-此演练假定你熟悉 Transaction-SQL 查询和 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 和 [DataTable](http://msdn.microsoft.com/library/system.data.datatable.aspx) 对象。  
+此演练假定你熟悉 Transaction-SQL 查询和 ADO.NET [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) 和 [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) 对象。  
   
 使用 Visual Studio 2015 和 ASP.NET Web 应用程序创建具有 ReportViewer 控件的 ASP.NET 网页。 该控件被配置为查看您创建的报表。 对于本演练，您在 Microsoft Visual C# 中创建应用程序。  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfdddd3e263ef6f83f8ad12635c76c61fef6e284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d284bc507c3398c85cf823528f17fdbd671e96a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603118"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021771"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>第 2 课：定义用于父报表的数据连接和数据表
 使用 Visual C# 的 ASP.NET 网站模板创建新网站项目后，接下来要创建用于父报表的数据连接和数据表。 在本教程中，数据连接指向 AdventureWorks2014 数据库。  
@@ -26,7 +26,7 @@ ms.locfileid: "47603118"
   
     此操作会将一个新的 XSD 文件 **DataSet1.xsd** 添加到项目，然后打开数据集设计器。  
   
-3.  从“工具箱”窗口中，将一个 **[TableAdapter](http://msdn.microsoft.com/library/bz9tthwx.aspx)** 控件拖到设计图面上。 随后将启动 **TableAdapter** 配置向导。  
+3.  从“工具箱”窗口中，将一个 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** 控件拖到设计图面上。 随后将启动 **TableAdapter** 配置向导。  
   
 4.  在“选择你的数据连接”页上，选择“新建连接”。  
   

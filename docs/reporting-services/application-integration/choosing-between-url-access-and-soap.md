@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db4bea93fb172bc47665e993e3185d29841be758
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783455"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028660"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 中的 URL 访问与 SOAP 之间选择
 
@@ -45,6 +45,6 @@ ms.locfileid: "47783455"
   
  在绝大多数情况下，要求同时使用 URL 访问和 SOAP 调用以满足您的报表需要。 最初连接到报表服务器数据库并在用户界面中提供可用的报表列表时，将使用 SOAP；而 URL 访问用于实际访问和导航单独的报表。  
   
- 有关组合 URL 访问和 Web 服务来提供集成报表功能的示例，请参阅 [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。
+ 有关组合 URL 访问和 Web 服务来提供集成报表功能的示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

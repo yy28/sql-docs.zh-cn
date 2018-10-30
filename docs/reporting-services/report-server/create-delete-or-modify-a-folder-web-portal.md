@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f7e2565f5c2eaa493fe371b0f0a590618e06f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686025"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021651"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>创建、删除或修改文件夹（Web 门户）
   可以创建文件夹来组织和管理发布到报表服务器的项。 创建文件夹有助于用户查找他们关注的报表。 对于内容管理员来说，文件夹提供了应用权限的框架。 可以对特定的文件夹创建角色分配，来限制对处于开发阶段或者不应大范围分布的报表的访问。  
   
 #### <a name="to-create-a-folder"></a>创建文件夹  
   
-1.  启动[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动[报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在 Web 门户中，选择“新建”下拉菜单中的“文件夹”。 或者，若要在现有文件夹中创建文件夹，请导航到该文件夹，并在“新建”下拉菜单中选择“文件夹”。  
   

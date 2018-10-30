@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b36a4528ac1a12ec1a59528e515530b1e009ba2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e91e3572d962ec9c819aae7f501b7b274f5c452
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029566"
 ---
 # <a name="schedules"></a>“计划”
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了“共享计划”和“报表特定计划”，可帮助控制报表的处理和分发。 这两种计划类型之间的区别在于对它们进行定义、存储和管理的方式。 这两种类型的计划的内部构造是相同的。 所有计划都指定一种重复执行类型：每月、每周或每日。 在重复执行类型中，您将为事件发生的频率设置间隔和范围。 无论您创建的是共享计划还是报表特定计划，重复执行模式的类型以及指定那些模式的方式是相同的。
@@ -54,7 +54,7 @@ ms.locfileid: "47779657"
  有关如何创建和管理计划的详细信息，请参阅 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)。  
   
 > [!NOTE]  
->  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)。  
+>  并非在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的每个版本中均提供计划操作。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](https://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)。  
   
 ##  <a name="bkmk_compare"></a> 共享计划和报表特定计划的区别  
  两种类型的计划将产生相同的输出：  
@@ -133,7 +133,7 @@ ms.locfileid: "47779657"
 ## <a name="see-also"></a>另请参阅  
  [创建、修改和删除报表历史记录中的快照](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [数据驱动订阅](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [缓存报表 (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  

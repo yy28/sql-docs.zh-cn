@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4d7c41d826b1dec0aca01080fb3482c03e5fa594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bf68f2655a7ffb024d7458595fc0439a51817c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608325"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020641"
 ---
 # <a name="data-driven-subscriptions"></a>数据驱动订阅
   数据驱动订阅提供了一种使用动态订阅数据的方式，这些数据是在运行时从外部数据源中检索的。 数据驱动订阅还可以使用定义订阅时指定的静态文本和默认值。 可以使用数据驱动订阅来执行以下操作：  
@@ -42,7 +42,7 @@ ms.locfileid: "47608325"
 ## <a name="requirements-for-using-data-driven-subscriptions"></a>使用数据驱动订阅的要求  
  数据驱动订阅功能并不是在所有的版本中都可用。 对于在运行时可用于检索订阅数据的数据源种类还有一些限制。 以下列表提供了有关这些要求的详细信息：  
   
--   有关支持数据驱动订阅功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)。  
+-   有关支持数据驱动订阅功能的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本的详细信息，请参阅 [SQL Server 2012 各个版本支持的功能](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)。  
   
 -   对于订阅数据，请选择可为报表服务器提供架构信息的数据源。 支持的数据源类型的示例包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据、Oracle、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包数据、ODBC 数据源以及 OLE DB 数据源。 有关订阅方数据源要求的详细信息，请参阅 [使用外部数据源提供订阅方数据（数据驱动订阅）](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47608325"
   
 ## <a name="see-also"></a>另请参阅  
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [“创建数据驱动订阅”页（报表管理器）](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
+ [“创建数据驱动订阅”页（报表管理器）](https://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [预加载缓存（报表管理器）](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   

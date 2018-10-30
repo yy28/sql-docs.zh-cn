@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94cb190dd6933f7a226734b3110f9620c782d0d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613795"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029306"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>在图表中显示包含多个数据区域的序列
 
@@ -57,7 +57,7 @@ ms.locfileid: "47613795"
   
 -   图表类型为极坐标图、雷达图、饼图、圆环图、漏斗图、棱锥图或堆积图。  
   
- 具有刻度分隔线的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅 [报表生成器和报表设计器示例报表](http://go.microsoft.com/fwlink/?LinkId=198283)。  
+ 具有刻度分隔线的图表的示例可用于示例报表。 有关下载此示例报表和其他内容的详细信息，请参阅 [报表生成器和报表设计器示例报表](https://go.microsoft.com/fwlink/?LinkId=198283)。  
 
 ## <a name="next-steps"></a>后续步骤
 
@@ -65,7 +65,7 @@ ms.locfileid: "47613795"
 [设置图表的格式](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 [图表中的三维效果、凹凸效果和其他效果](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [图表](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[“轴属性”对话框 ->“轴选项”](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[“轴属性”对话框 ->“轴选项”](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
 [收集饼图上的小切片](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

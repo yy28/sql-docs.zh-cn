@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b818182169bc3b8ad0a9256621107552a3def04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020381"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>报表的嵌入数据集和共享数据集（报表生成器和 SSRS）
   数据集指定要从数据连接使用的数据。 数据集基于已作为嵌入数据源或对报表服务器上共享数据源的引用保存在报表中的数据连接。 数据集包括指定一组字段的查询。 在您将这些字段拖到设计图面上时，将创建在报表运行时对实际数据进行计算的表达式。  
@@ -73,7 +73,7 @@ ms.locfileid: "47793675"
   
 -   来自任何注册和配置的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口的结果集。  
   
--   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312) 中的“将报表模型用作数据源”。  
+-   来自为特定数据源设计的报表模型的数据，这样的报表模型具有预定义实体、实体关系和字段。 有关详细信息，请参阅 SQL Server 联机丛书中 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312) 中的“将报表模型用作数据源”。  
   
  当在运行时处理报表时，查询返回的实际结果集可能有零行或更多行。 在查询中定义的列也有可能已从数据源中丢失。 来自数据源的 Null 值映射到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 值 **System.DBNull.Value**。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "47793675"
 |字段|来自查询命令的字段<br /><br /> 计算字段不是数据集定义的一部分|查看字段，但无法对其进行更改<br /><br /> 字段集合是静态的，它基于您向报表中添加共享数据集时所使用的查询。 若要进行更新，请单击 **“数据集属性”** 对话框中的 **“刷新字段”** 。 实际的字段集合可以是定义中当前查询返回的任何集合。<br /><br /> 添加计算字段|  
 |数据集|数据选项，如区分大小写|覆盖实例中的数据选项|  
   
- 有关创建数据集的详细信息，请参阅 SQL Server 联机丛书的 [Reporting Services 文档](http://go.microsoft.com/fwlink/?linkid=121312)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
+ 有关创建数据集的详细信息，请参阅 SQL Server 联机丛书的 [Reporting Services 文档](https://go.microsoft.com/fwlink/?linkid=121312)中的 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)和 [Reporting Services 工具](../../reporting-services/tools/reporting-services-tools.md)。  
   
 ##  <a name="SortGroupFilter"></a> 对数据集中的数据进行筛选、排序和分组  
  数据集中的数据来自对外部数据源运行查询命令所获得的结果。 数据扩展插件的查询命令语法确定是否可以对数据进行排序或分组。 在为报表检索数据前，在查询中发生排序和分组。 在为报表检索数据后发生筛选。  
@@ -219,7 +219,7 @@ ms.locfileid: "47793675"
   
 ## <a name="see-also"></a>另请参阅  
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

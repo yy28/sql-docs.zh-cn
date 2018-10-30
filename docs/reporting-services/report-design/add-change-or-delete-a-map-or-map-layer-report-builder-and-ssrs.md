@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e34042bcaf265651f84a805ff383da3f1caed734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029826"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>添加、更改或删除地图或地图层（报表生成器和 SSRS）
   地图是层的集合。 当你向 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表添加一个地图时，就定义了第一个层。 可以使用地图层向导创建其他层。  
@@ -114,9 +114,9 @@ ms.locfileid: "47719525"
   
 1.  选择 **“地图点属性”** 对话框中的 **“常规”** 可以更改以下地图元素的标签、工具提示和标记类型选项：  
   
-    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点的选项，请使用 [Map Embedded Point Properties Dialog Box, Marker](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
+    -   点层上的所有动态或嵌入的点。 点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定嵌入点的选项，请使用 [Map Embedded Point Properties Dialog Box, Marker](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
   
-    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](http://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
+    -   多边形层上的所有动态或嵌入的多边形的中心点。 中心点的颜色规则、大小规则和标记类型规则覆盖这些选项。 若要覆盖特定中心点的选项，请使用 [“地图嵌入点属性”对话框，标记](https://msdn.microsoft.com/library/3c5eb1c5-d40a-424f-aa7c-43b112f42dec) 页。  
   
 ##  <a name="Embedded"></a> 指定嵌入数据作为空间数据的源  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47719525"
 2.  在工具栏上单击“添加层”按钮，然后从下拉列表中单击“图块层”。  
   
     > [!NOTE]  
-    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371)。  
+    >  有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
 3.  右键单击“地图”窗格中的该图块层，然后单击“图块属性”。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 55349a649451549a4a78ab3ad118c5c54787c3c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029158"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -60,7 +60,7 @@ ms.locfileid: "47669267"
   
  例如， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据扩展插件是 OLEDB-MD。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft 下载中心 [和第三方站点提供了许多可供下载的第三方标准](http://go.microsoft.com/fwlink/?linkid=51456) 数据访问接口。 还可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 公共论坛中搜索有关第三方数据访问接口的信息。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft 下载中心 [和第三方站点提供了许多可供下载的第三方标准](https://go.microsoft.com/fwlink/?linkid=51456) 数据访问接口。 还可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 公共论坛中搜索有关第三方数据访问接口的信息。  
   
 > [!NOTE]  
 >  标准 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 数据访问接口并非一定要支持 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件提供的所有功能。 此外，可以使用某些 OLE DB 数据访问接口和 ODBC 驱动程序来创作和预览报表，但它们并未设计为支持报表服务器上发布的报表。 例如，报表服务器不支持 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet。 有关详细信息，请参阅[数据处理扩展插件和 .NET Framework 数据提供程序 (SSRS)](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)。  
@@ -114,7 +114,7 @@ ms.locfileid: "47669267"
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|有关平台支持，请参阅 Hyperion 文档。|是|N/A|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|是|N/A|  
 |Oracle 关系数据库|[Oracle](#OracleClient)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|要求使用 Oracle 客户端组件 12c 或更高版本。|是|N/A|Oracle 11g, 11g R2, 12c|是|是|  
 |Teradata 关系数据库|[Teradata](#Teradata)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|扩展来自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 要求使用来自 Teradata 的 .NET Data Provider for Teradata。<br /><br /> 有关平台支持，请参阅 Teradata 文档。|是|N/A|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|是|否|  
-|DB2 关系数据库|自定义的已注册数据扩展插件名||2004 Host Integration (HI) Server<br /><br /> 请参阅 [HI Server 文档](http://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)。|是|N/A|N/A|是|否|  
+|DB2 关系数据库|自定义的已注册数据扩展插件名||2004 Host Integration (HI) Server<br /><br /> 请参阅 [HI Server 文档](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)。|是|N/A|N/A|是|否|  
 |一般 OLE DB 数据源|OLEDB|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|支持 OLE DB 的任何数据源。<br /><br /> 有关平台支持，请参阅数据源文档。|是|N/A|支持 OLE DB 的任何数据源。 请参阅 [注意](#OLEDBStandard)。|是|N/A|  
 |一般 ODBC 数据源|[ODBC](#ODBCGeneric)|内置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 数据处理扩展插件|支持 ODBC 的任何数据源。<br /><br /> 有关平台支持，请参阅数据源文档。|是|N/A|支持 ODBC 的任何数据源。 请参阅 [注意](#ODBCGeneric)。|是|是|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "47669267"
 > [!NOTE]  
 >  目前不支持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据处理扩展插件。  
   
- 有关报表生成器支持的数据处理扩展插件的详细信息，请参阅 msdn.microsoft.com 上 [报表生成器文档](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 中的 [报表生成器中的数据连接、数据源和连接字符串](http://go.microsoft.com/fwlink/?LinkId=154494) 。  
+ 有关报表生成器支持的数据处理扩展插件的详细信息，请参阅 msdn.microsoft.com 上 [报表生成器文档](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) 中的 [报表生成器中的数据连接、数据源和连接字符串](https://go.microsoft.com/fwlink/?LinkId=154494) 。  
   
 ###  <a name="MicrosoftSQLServer"></a> Microsoft SQL Server 数据处理扩展插件  
  数据源类型 **Microsoft SQL Server** 包装并扩展了 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此数据处理扩展插件针对基于 x86 和 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]的平台进行了本机编译并在这些平台上运行。  
@@ -235,7 +235,7 @@ ms.locfileid: "47669267"
   
  此扩展插件支持命名参数。 对于 Oracle 版本 11g 或更高版本而言，支持多值参数。 对于位置相关的未命名参数，请使用 OLE DB 数据处理扩展插件和数据访问接口 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle。 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](http://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](http://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
- 您可以使用多个输入参数从存储过程中检索数据，但存储过程必须只返回一个输出游标。 有关详细信息，请参阅 [使用 DataReader 检索数据](http://go.microsoft.com/fwlink/?LinkId=81758)中的 Oracle 部分。  
+ 您可以使用多个输入参数从存储过程中检索数据，但存储过程必须只返回一个输出游标。 有关详细信息，请参阅 [使用 DataReader 检索数据](https://go.microsoft.com/fwlink/?LinkId=81758)中的 Oracle 部分。  
   
  有关详细信息，请参阅 [Oracle 连接类型 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)。 有关关联查询设计器详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47669267"
  您可以指定的凭据取决于客户端应用程序所使用的实现。 有关详细信息，请参阅 [SharePoint 列表连接类型 (SSRS)](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)。  
   
 ###  <a name="XML"></a> XML 数据处理扩展插件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个 XML 数据处理扩展插件，以便您可以在报表中使用 XML 数据。 使用此插件，可以从 XML 文档、Web 服务或者从可通过 URL 访问的基于 Web 的应用程序检索数据。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 有关关联查询设计器的详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的“基于文本的查询设计器”部分。 有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](http://go.microsoft.com/fwlink/?LinkId=81654)。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含一个 XML 数据处理扩展插件，以便您可以在报表中使用 XML 数据。 使用此插件，可以从 XML 文档、Web 服务或者从可通过 URL 访问的基于 Web 的应用程序检索数据。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。 有关关联查询设计器的详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)中的“基于文本的查询设计器”部分。 有关示例，请参阅 [Reporting Services: Using XML and Web Service Data Sources（Reporting Services：使用 XML 和 Web 服务数据源）](https://go.microsoft.com/fwlink/?LinkId=81654)。  
   
  [返回数据源表](#DataSourcesTable)  
   
@@ -306,13 +306,13 @@ ms.locfileid: "47669267"
   
  有关详细信息，请参阅 [Hyperion Essbase 连接类型 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。 有关关联的查询设计器的详细信息，请参阅 [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md)。  
   
- 有关 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的详细信息，请参阅 [将 SQL Server 2005 Reporting Services 与 Hyperion Essbase 一起使用](http://go.microsoft.com/fwlink/?LinkId=81970)。  
+ 有关 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]的详细信息，请参阅 [将 SQL Server 2005 Reporting Services 与 Hyperion Essbase 一起使用](https://go.microsoft.com/fwlink/?LinkId=81970)。  
   
  [返回数据源表](#DataSourcesTable)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
- 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

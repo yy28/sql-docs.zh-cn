@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dfa6b9d901b836133af5d0fe851d06c0e7d03cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031556"
 ---
 # <a name="update-a-resource-report-manager"></a>更新资源（报表管理器）
   通过将资源替换为新资源，可以更新资源。 资源是存储在报表服务器上的项，包含您上载的文件中的内容。 通过向现有资源中导入新的文件内容或其他文件内容，即可替换现有资源。 通过更新资源，可以在保留资源的现有属性和安全设置的同时更新内容。  
   
 ### <a name="to-update-a-resource"></a>更新资源  
   
-1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  在报表管理器中，导航或搜索到要更新的资源。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47596856"
  如果正在更新的资源包含某个报表中所使用的图像，则需要刷新该报表，才可以看到更新后的图像。  
   
 ## <a name="see-also"></a>另请参阅  
- [“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [“上传文件”页（报表管理器）](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [将文件上传到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [报表管理器的 F1 帮助](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [“上传文件”页（报表管理器）](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [将文件上载到文件夹](../../reporting-services/report-server/upload-files-to-a-folder.md)   
+ [报表管理器的 F1 帮助](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   
   

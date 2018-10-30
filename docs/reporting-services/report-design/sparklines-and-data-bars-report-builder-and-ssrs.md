@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71458d579b710b282f75fd10d4006b737632d266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50d198fc0f16cc8cfda844f7e037d46e3e845f1a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710815"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021261"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>迷你图和数据条（报表生成器和 SSRS）
   迷你图和数据条是较小的简单图表，它们可以在很小的空间中传递很多信息，并且常常与文本并排。   
@@ -25,7 +25,7 @@ ms.locfileid: "47710815"
   
  ![rs_SparklineExample](../../reporting-services/report-design/media/rs-sparklineexample.gif "rs_SparklineExample")  
   
- 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](http://go.microsoft.com/fwlink/?LinkId=197092) 以及 [报表生成器中的迷你图、条形图和指示器](http://technet.microsoft.com/bi/video/ff877165) 。  
+ 若要快速开始使用迷你图，请参阅 [教程：向报表添加迷你图（报表生成器）](../../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md) 和视频 [如何：在表中创建迷你图](https://go.microsoft.com/fwlink/?LinkId=197092) 以及 [报表生成器中的迷你图、条形图和指示器](https://technet.microsoft.com/bi/video/ff877165) 。  
   
 > [!NOTE]  
 >  您可以将迷你图和数据条连同它们的父表、矩阵或列表作为报表部件与报表分开发布。 阅读有关 [报表部件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)的详细信息。  

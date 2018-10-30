@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 05484d30e5a383f1efe3b7bed3403cb0546808fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e0331f1d7a9c8485376fed057158f07637f158
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031036"
 ---
 # <a name="verifying-a-report-run"></a>验证报表运行情况
   若要查看报表处理状态的有关信息，则可以使用日志文件或参考在报表管理器中随报表显示的状态信息。  
@@ -38,13 +38,13 @@ ms.locfileid: "47747305"
   
 |报表类型|日期和时间信息所在位置|查看信息所需操作|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)。|1) 找到包含该报表的文件夹。<br /><br /> 2) 在“详细信息”视图中设置该文件夹。<br /><br /> 3) 请注意“运行时间”列中的日期和时间。|  
-|报表历史记录中的快照。|在“历史记录”属性页上。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。|1) 打开该报表。<br /><br /> 2) 单击“属性”页。<br /><br /> 3) 单击“历史记录”选项卡。<br /><br /> 4) 请注意“运行时间”列中的日期和时间。|  
+|作为报表快照运行的报表。|在“内容”页上。 有关详细信息，请参阅[“内容”页（报表管理器）](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)。|1) 找到包含该报表的文件夹。<br /><br /> 2) 在“详细信息”视图中设置该文件夹。<br /><br /> 3) 请注意“运行时间”列中的日期和时间。|  
+|报表历史记录中的快照。|在“历史记录”属性页上。 有关详细信息，请参阅[“快照选项”属性页（报表管理器）](https://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)。|1) 打开该报表。<br /><br /> 2) 单击“属性”页。<br /><br /> 3) 单击“历史记录”选项卡。<br /><br /> 4) 请注意“运行时间”列中的日期和时间。|  
 |缓存的报表。|在用于创建和刷新该缓存报表的计划中。|1) 打开该报表。<br /><br /> 2) 单击“属性”页。<br /><br /> 3) 单击“执行”选项卡。<br /><br /> 4) 打开该计划。|  
   
 ## <a name="see-also"></a>另请参阅  
  [Reporting Services 日志文件和来源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [设置报表处理属性](../../reporting-services/report-server/set-report-processing-properties.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

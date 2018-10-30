@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 343c2d7a4bc712192ebd2989920a0114b969e45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef5578bc23c7ac49dceedaac6dfb18049600ca5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717485"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032136"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>使用 SharePoint Web 部件查看和浏览本机模式下的报表 (SSRS)
 
@@ -98,7 +98,7 @@ ms.locfileid: "47717485"
   
     > rswebparts.cab    00000000-0000-0000-0000-000000000000     True  
   
-     有关使用 PowerShell 的详细信息，请参阅[Install-SPWebPartPack (http://technet.microsoft.com/library/ff607840.aspx)](http://technet.microsoft.com/library/ff607840.aspx)。  
+     有关使用 PowerShell 的详细信息，请参阅[Install-SPWebPartPack (https://technet.microsoft.com/library/ff607840.aspx)](https://technet.microsoft.com/library/ff607840.aspx)。  
   
 #### <a name="install-web-parts-using-stsadmexe"></a>使用 STSADM.exe 安装 Web 部件  
   
@@ -166,4 +166,4 @@ ms.locfileid: "47717485"
   
     3.  单击 **“报表查看器”**。  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 30369492ed6065180c6e4a245d8548b27a6bacd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2dde8a73ea04ed2f59bd234682a486c35b3a041
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631036"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031226"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>显示参数值的隐藏数据集 - 多维数据
   报表可能包括默认在“报表数据”窗格中不显示的自动生成的数据集（也称为隐藏数据集）。 这些数据集是用下列方法创建的：  
@@ -34,8 +34,8 @@ ms.locfileid: "47631036"
 -   在“报表数据”窗格中，右键单击“数据集”文件夹，然后单击“显示隐藏数据集”。  
   
 ## <a name="see-also"></a>另请参阅  
- [查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
- [Reporting Services 查询设计器](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
+ [查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [Reporting Services 查询设计器](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8bca8f07e927dec72690683e0519e181d79d4f79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710545"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031406"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>将 Reporting Services 项目固定到 Power BI 仪表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 使用户能够将报表查看器工具栏中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表项作为新磁贴固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   若要固定，你的管理员需要先将报表服务器与 Azure Active Directory 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]相集成。  
@@ -61,7 +61,7 @@ ms.locfileid: "47710545"
   
 ##  <a name="bkmk_to_pin"></a> 固定报表项  
   
-1. 确认你已登录到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，选择“我的设置”菜单项并登录。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+1. 确认你已登录到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，选择“我的设置”菜单项并登录。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -107,13 +107,13 @@ ms.locfileid: "47710545"
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   在**仪表板中，** 固定的项显示过时的数据 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它在一段时间内曾经更新过。  用户凭据令牌已过期，你需要重新登录。  向 Azure 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 注册的用户凭据，其有效期为 90 天。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”。 有关详细信息，请参阅[我的 Power BI 集成（网站门户）设置](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
+-   在**仪表板中，** 固定的项显示过时的数据 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它在一段时间内曾经更新过。  用户凭据令牌已过期，你需要重新登录。  向 Azure 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 注册的用户凭据，其有效期为 90 天。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”。 有关详细信息，请参阅 [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)相集成。  
   
 -   在**仪表板中** 固定的项显示过时的数据 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它甚至一次也没有刷新过。  此问题在于报表未配置为使用存储的凭据。 报表必须使用存储的凭据，因为固定报表项的操作会创建 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅以管理磁贴的刷新计划。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 订阅需要存储的凭据。 如果查看“我的订阅”页，你将会看到如下错误消息  ：  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **过期的 Power BI 凭据：**  你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
+-   **过期的 Power BI 凭据：**  你尝试固定项，并看到以下错误消息。 在 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中，单击“我的设置”，在“我的设置”页上，单击“登录”。 有关详细信息，请参阅[适用于 Power BI 集成的“我的设置”（Web 门户）](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47710545"
   
      此外，还可以编辑订阅属性，并将“报表视觉对象名称”更改为相应的报表项名称  。 ![更改用于 Power BI 刷新的视觉对象](../reporting-services/media/ssrs-powerbi-subscription-visual.png "change the visual used for the power bi refresh")  
   
--   **删除磁贴**。 如果删除了 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 中的磁贴，将不会删除 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中关联的订阅，并且将在“我的订阅”页上，看到如下错误。 你可以删除该订阅。  
+-   **删除磁贴**。 如果你删除了 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]中的磁贴，将不会删除 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中关联的订阅，并且你将在“我的订阅”页上，看到如下错误 。 你可以删除该订阅。  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The item 'Tile deleted af7131d9-5eaf-480f-ba45-943a07d19c9f' cannot be found.  
 
@@ -140,7 +140,7 @@ ms.locfileid: "47710545"
 
 ## <a name="see-also"></a>另请参阅  
  [Power BI 报表服务器集成 (Configuration Manager)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [适用于 Power BI 集成的“我的设置”（Web 门户）](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2733359b71be77bf725eda5c304313e830f043
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34a916a39a152b1f62315df9db4028652fce3f97
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800935"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020493"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分页（报表生成器和 SSRS）
   分页方式指的是报表内的页数以及报表项在这些页上的排列方式。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的分页方式因您用来查看和传递报表的呈现扩展插件而异。 在报表服务器上运行报表时，相应报表使用的是 HTML 呈现器。 HTML 遵循一组特定的分页规则。 如果将同一报表导出为其他格式，例如 PDF，系统会使用 PDF 呈现器并应用另一组规则；因此，该报表的分页方式就会不同。 若要成功设计一个对用户而言易于阅读、对准备用于传递报表的呈现器而言最优的报表，需要了解在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中用于控制分页的规则。  
@@ -36,7 +36,7 @@ ms.locfileid: "47800935"
   
  默认情况下，页面大小为 8.5 x 11 英寸，但可以通过以下方式更改此大小：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 PageHeight 和 PageWidth 属性。 页大小不会扩大或收缩以容纳表体的内容。 如果希望报表显示在单个页上，则物理页上必须能够容纳表体中的所有内容。 如果无法容纳并且您使用的是硬分页符格式，则报表将需要占用其他页。 如果表体因扩大而超过了物理页的右边缘，则会在水平方向上插入一个分页符。 如果表体因扩大而超过了物理页的下边缘，则会在垂直方向上插入一个分页符。  
   
- 如果要覆盖报表中定义的物理页大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定物理页大小。 有关详细信息，请参阅 [Reporting Services Device Information Settings](http://go.microsoft.com/fwlink/?LinkId=102515)（Reporting Services 设备信息设置）。  
+ 如果要覆盖报表中定义的物理页大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定物理页大小。 有关详细信息，请参阅 [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515)（Reporting Services 设备信息设置）。  
   
 ### <a name="margins"></a>边距  
  边距从物理页大小的边缘开始向内绘制到指定的边距设置。 如果一个报表项延伸至边距区域内，则会裁剪该项以便不呈现重叠区域。 如果您指定的边距大小导致页的水平宽度或垂直宽度等于零，则边距设置默认为零。 可通过以下方法指定边距：使用“报表属性”窗格、“页面设置”对话框，或在“属性”窗格中更改 TopMargin、BottomMargin、LeftMargin 和 RightMargin 属性。 如果要覆盖报表中定义的边距大小，可以使用您用来导出报表的特定呈现器的“设备信息”设置来指定边距大小。  

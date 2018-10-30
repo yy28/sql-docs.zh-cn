@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8df4078262868615b9a6e28948b255f753384503
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4976298eee9ed0e8b3cef41fa2f201a5590799bc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780955"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031887"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本文概要介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念。  
@@ -98,7 +98,7 @@ ms.locfileid: "47780955"
   
 -   **凭据。** 凭据是身份验证信息，你必须提供这些信息才能访问外部数据。  
   
-     凭据用于创建嵌入数据源、运行查询或在报表处理过程中检索数据。 数据源所有者确定您在访问数据时必须使用的凭据。 凭据在报表服务器、SharePoint 站点或报表创作环境中的本地计算机上独立于数据连接进行管理。 根据数据源的类型，可以保存凭据以避免提醒，也可以将其设置为提醒每个用户。 根据您是从计算机连接到数据源，还是从报表服务器连接到数据源，您需要的凭据可能不同。 有关详细信息，请参阅 [在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+     凭据用于创建嵌入数据源、运行查询或在报表处理过程中检索数据。 数据源所有者确定您在访问数据时必须使用的凭据。 凭据在报表服务器、SharePoint 站点或报表创作环境中的本地计算机上独立于数据连接进行管理。 根据数据源的类型，可以保存凭据以避免提醒，也可以将其设置为提醒每个用户。 根据您是从计算机连接到数据源，还是从报表服务器连接到数据源，您需要的凭据可能不同。 有关详细信息，请参阅 [在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ### <a name="report-datasets"></a>报表数据集 
  在报表中，数据集表示通过对外部数据源运行查询而返回的报表数据。 数据集依赖于包含有关外部数据源的信息的数据连接。 数据本身并不包含在报表定义中。 数据集包含查询命令、字段集合、参数、筛选器以及数据选项（包括区分大小写和排序规则）。 有两种类型的数据集：  
@@ -120,13 +120,13 @@ ms.locfileid: "47780955"
   
  使用数据区域可实现常见数据的显示：表、矩阵或列表中的数字和文本；图表或仪表中的图形显示；以及根据地图的地理显示。 表、矩阵和列表都基于“Tablix”数据区域，这种数据区域可根据需要扩展以显示数据集中的所有数据。 Tablix 数据区域支持多个行组和列组，还支持静态和动态的行和列。 图表显示各种图表格式的多个序列和类别组。 仪表显示数据集的单个值或聚合值。 地图会将空间数据显示为地图元素，这些地图元素的外观会根据数据集中的聚合数据而变化。  
   
--   **表。** “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **表。** “表”是逐行显示数据的数据区域。 表列是静态的：列数是在设计报表时确定的。 表行是动态的：它们向下扩展以容纳数据。 您可以向表添加组，以按照所选的字段或表达式来组织数据。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **矩阵。** “矩阵”也称为交叉表。 矩阵数据区域包含动态列和行，它们都可以扩展以容纳数据。 矩阵可以具有动态列和行及静态列和行。 列或行可以包含其他列或行，并且可用于对数据进行分组。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **矩阵。** “矩阵”也称为交叉表。 矩阵数据区域包含动态列和行，它们都可以扩展以容纳数据。 矩阵可以具有动态列和行及静态列和行。 列或行可以包含其他列或行，并且可用于对数据进行分组。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **列表。** “列表”是一种数据区域，其中的数据以自由格式排列。 您可以排列这些报表项来创建一个窗体，其中的文本框、图像和其他数据区域可以位于列表中的任何位置。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](http://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
+-   **列表。** “列表”是一种数据区域，其中的数据以自由格式排列。 您可以排列这些报表项来创建一个窗体，其中的文本框、图像和其他数据区域可以位于列表中的任何位置。 有关详细信息，请参阅 [表、矩阵和列表（报表生成器和 SSRS）](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098)。  
   
--   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅[图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
+-   **图表。** 图表以图形方式显示数据。 图表示例包括条形图、饼图和折线图等，并支持其他多种样式。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
   
 -   **仪表。** 仪表显示某个范围之内的数据，并且带有一个指向该范围内的某个特定值的指示器。 仪表用于显示关键绩效指标 (KPI) 和其他指标。 仪表包括线性仪表和圆形仪表等。 有关详细信息，请参阅 [仪表（报表生成器和 SSRS）](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)。  
   
@@ -205,7 +205,7 @@ ms.locfileid: "47780955"
  完全处理的报表将发送到报表呈现器，以便合并每页目标呈现格式上的数据和布局。 呈现扩展插件是可定制和可扩展的。 报表的默认呈现格式为 HTML 4.0。 有关详细信息，请参阅[页面布局和呈现方式（报表生成器和 SSRS）](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)和[扩展插件 (SSRS)](../reporting-services/extensions-ssrs.md)。  
   
 ### <a name="exported-report"></a>导出的报表
- 导出的报表是以特定文件格式保存的完全分页的报表。 导出格式取决于已安装的呈现扩展插件，并可以进行自定义。 默认情况下，导出格式包括 Excel、Word、XML、PDF、TIFF 和 CSV。 有关详细信息，请参阅[导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 导出的报表是以特定文件格式保存的完全分页的报表。 导出格式取决于已安装的呈现扩展插件，并可以进行自定义。 默认情况下，导出格式包括 Excel、Word、XML、PDF、TIFF 和 CSV。 有关详细信息，请参阅 [导出报表（报表生成器和 SSRS）](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)中用于控制分页的规则。  
   
   
 ## <a name="see-also"></a>另请参阅  

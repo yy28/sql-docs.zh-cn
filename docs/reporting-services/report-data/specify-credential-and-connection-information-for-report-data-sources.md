@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec6c893548c8353be0ae79f98f47880fe9e3a85b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa8731c0f7438c1272e7a0cee3119d81b5c57c0e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031596"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>为报表数据源指定凭据和连接信息
   报表服务器可以使用凭据连接到向报表提供内容或者向数据驱动订阅提供收件人信息的外部数据源。 您可以指定凭据使用 Windows 身份验证、数据库身份验证、自定义身份验证或不使用任何身份验证。 当通过网络发送连接请求时，报表服务器便会模拟用户帐户或无人参与的执行帐户。 有关建立连接请求时所处安全上下文的详细信息，请进一步参阅本主题中的 [数据源配置和网络连接](#DataSourceConfigurationConnections) 。  
@@ -48,7 +48,7 @@ ms.locfileid: "47756405"
   
      当您首次保存到、发布到或浏览到报表服务器或 SharePoint 站点时，可能需要输入凭据。 在报表生成器会话结束之前，将始终使用所输入的凭据。 如果选择保存凭据，则这些凭据将安全地与您的用户设置一起存储在您的计算机上。 在后续的报表生成器会话中，将使用保存的凭据连接到同一报表服务器或 SharePoint 站点。 报表服务器管理员或 SharePoint 管理员指定要使用哪一种类型的凭据。  
   
--   在嵌入数据源的[“数据源属性”对话框 ->“凭据”（报表生成器）](http://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)页输入的数据源凭据。  
+-   在嵌入数据源的[“数据源属性”对话框 ->“凭据”（报表生成器）](https://msdn.microsoft.com/library/4531f09f-d653-4c05-a120-d7788838bc99)页输入的数据源凭据。  
   
      报表服务器使用这些凭据与外部数据源建立数据连接。 对于某些类型的数据源，可以将凭据安全地存储在报表服务器上。 利用这些凭据，其他用户无需提供凭据即可运行报表进行基础数据连接。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47756405"
   
      对于共享数据源，使用 **“保存我的密码”** 选项可以将凭据与用户设置一起保存到本地计算机上。 报表生成器在每次连接到相应的外部数据源时使用保存的凭据。  
   
- 有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](http://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
+ 有关详细信息，请参阅[“数据源属性”对话框 ->“常规”（报表生成器）](https://msdn.microsoft.com/library/b956f43a-8426-4679-acc1-00f405d5ff5b)和[在报表生成器中预览报表](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)。  
   
 ## <a name="using-remote-data-sources"></a>使用远程数据源  
  如果报表从远程数据库服务器检索数据，请验证以下内容：  

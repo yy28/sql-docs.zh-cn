@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8aba9144a16da8494d4f303053b164462e0cae8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5e0f3461cee55781379fc598bbc6c61e51f5704
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021171"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 移动报表：端到端演练
 在 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] Web 门户上使用 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 创建适用于任何屏幕大小的移动报表，并在 Power BI 移动应用中查看它们。
@@ -32,11 +32,11 @@ ms.locfileid: "47717215"
   
 * 若要创建数据源和 KPI、发布数据集和移动报表，需要访问 [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)。  
 * [若要创建共享数据集](../install-windows/install-report-builder.md)。  
-* 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkId=717766)。  
+* 要创建移动报表，需 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)。  
 * [AdventureWorks sample databases](https://github.com/Microsoft/sql-server-samples/releases)（AdventureWorks 示例数据库）。  
 *  或：World Wide Importers 示例数据库，可从 [Microsoft SQL Server 示例](../../sample/microsoft-sql-server-samples.md)页面获得。
 * 查看结果： 
-  *   [注册 Power BI 服务](http://go.microsoft.com/fwlink/?LinkID=513879) 并
+  *   [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879) 并
   *  [下载 Power BI 移动应用](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 到你的移动设备：iOS、Android 手机或 Windows 10 设备。  
 
   
@@ -63,7 +63,7 @@ ms.locfileid: "47717215"
    
 ## <a name="shared-dataset">创建共享数据集</a>  
   
-使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
+使用现有的 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 客户端工具（例如 [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]中的报表设计器）创建共享数据集。  本演练使用 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。 [安装报表生成器](../install-windows/install-report-builder.md)，或从你的 Web 门户启动它。 需要创建三个数据集，一个用于 KPI 值，一个用于 KPI 趋势，包含更多字段的那一个用于 Reporting Services 移动报表。     
   
 1. 在 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] Web 门户中，单击“新建” > “分页报表”以启动 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47717215"
     
 ## <a name="create-mobile-report">创建 Reporting Services 移动报表</a>  
    
-要创建 Reporting Services 移动报表，请 [安装 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkId=717766)，或从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户启动它。 
+要创建 Reporting Services 移动报表，请 [安装 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkId=717766)，或从 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Web 门户启动它。 
 
 在首次打开 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]时，你将看到一块空白画布，可以在此创建移动报表。 可以从创建视觉对象开始，也可以从数据开始。 如果首先创建视觉对象， [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 会自动生成绑定到报表的模拟数据，并在更改视觉选择时进行动态更改。 请自己尝试一下。   
   
@@ -259,7 +259,7 @@ ms.locfileid: "47717215"
   
 若要查看 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 报表，首先要：
 
-*  [注册 Power BI 服务](http://go.microsoft.com/fwlink/?LinkID=513879)（如果还没有一个帐户）。
+*  [注册 Power BI 服务](https://go.microsoft.com/fwlink/?LinkID=513879)（如果还没有一个帐户）。
 *  [下载 Power BI 移动应用](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 。  
 
 ### <a name="view-your-mobile-report"></a>查看移动报表

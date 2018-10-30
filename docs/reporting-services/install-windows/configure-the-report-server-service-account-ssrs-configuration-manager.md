@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d343831a702a3301cdff7b6c18bcd39318cd6241
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021331"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>配置报表服务器服务帐户（SSRS 配置管理器）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作为单个服务实现，其中包含报表服务器 Web 服务、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]以及用于计划的报告处理和订阅传递的后台处理应用程序。 本主题说明最初如何配置服务帐户以及如何使用 Reporting Services 配置工具修改帐户或密码。  
@@ -88,7 +88,7 @@ ms.locfileid: "47603005"
   
 -   SQL Server 联机丛书中的[配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
   
--   MSDN 上的[服务和服务帐户安全计划指南](http://go.microsoft.com/fwlink/?LinkId=69155) 。  
+-   MSDN 上的[服务和服务帐户安全计划指南](https://go.microsoft.com/fwlink/?LinkId=69155) 。  
   
 ## <a name="updating-an-expired-password"></a>更新过期密码  
  如果报表服务器服务在域帐户下运行，并且密码还未在 Reporting Services 配置管理器中更新就已过期，则指定新密码之前，该服务将无法启动。  

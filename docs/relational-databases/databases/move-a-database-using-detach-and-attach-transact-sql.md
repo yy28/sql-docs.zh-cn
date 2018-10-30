@@ -19,12 +19,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3e415e506e50ca5cbd9642e790697a4b4644565
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 777647d3e558327eb635a0ae8d2794d82d453c25
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776555"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150168"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>通过分离和附加来移动数据库 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,6 @@ ms.locfileid: "47776555"
 1.  分离数据库。 有关详细信息，请参阅 [分离数据库](../../relational-databases/databases/detach-a-database.md)。  
   
 2.  在 Windows 资源管理器或 Windows“命令提示符”窗口中，将分离的数据库文件和日志文件移至新位置。  
-  
-    > [!NOTE]  
-    >  移动单文件数据库时，如果文件小到可以通过电子邮件发送，则可以通过电子邮件来移动该数据库。  
   
      即使打算创建新的日志文件，也应该移动日志文件。 在某些情况下，重新附加数据库需要使用其现有的日志文件。 因此，除非在不使用分离日志文件的情况下可以成功附加数据库，否则，请始终保留所有分离的日志文件。  
   

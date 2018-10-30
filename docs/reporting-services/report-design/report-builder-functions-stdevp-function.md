@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36437864963c6cadfd121d01b95369b3e2a85dd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 776860b9e10acccb9930ed90f67bfdb1f6432de0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619895"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031208"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>报表生成器函数 - StDevP 函数
   返回在给定作用域上下文中计算的，由表达式指定的所有非 Null 数值的总体标准偏差。  
@@ -42,7 +42,7 @@ StDevP(expression, scope, recursive)
  对于十进制表达式，返回 **Decimal** ；对于所有其他类型的表达式，返回 **Double** 。  
   
 ## <a name="remarks"></a>Remarks  
- 表达式中指定的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](http://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
+ 表达式中指定的数据集必须具有相同的数据类型。 若要将具有多个数值数据类型的数据转换为同一数据类型，请使用类似 **CInt**、 **CDbl** 或 **CDec**的转换函数。 有关详细信息，请参阅 [Type Conversion Functions](https://go.microsoft.com/fwlink/?LinkId=96142)（类型转换函数）。  
   
  *scope* 的值必须是字符串常量，不能是表达式。 对于外部聚合或未指定其他聚合的聚合， *scope* 必须引用当前作用域或包含作用域。 对于聚合的聚合，嵌套聚合可以指定子作用域。  
   

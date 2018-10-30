@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3489f33890438577f20a6e7a5341fe9766f42c1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8b90d0eddd10825abc2e05fd97da236a5049293
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021051"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地图向导和地图层向导（报表生成器和 SSRS）
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，地图向导和地图层向导可以自动执行创建地图、添加地图层或更改现有层上的地图层选项的任务。  
@@ -128,13 +128,13 @@ ms.locfileid: "47645165"
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的报表设计器中，将 .shp 文件及 .dbf 文件同时添加到报表项目中，然后将该 .shp 文件的名称指定为空间数据源。  
   
 ###  <a name="GetShapefiles"></a> 在何处可以获取 ESRI 形状文件？  
- 在网络上提供 ESRI 形状文件。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](http://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
+ 在网络上提供 ESRI 形状文件。 有关详细信息，请参阅 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)（查找用于地图的 ESRI 形状文件）。  
   
 ###  <a name="SqlServerSpatial"></a> 什么是 SQL Server 空间查询？  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间查询是一种数据集查询，该查询指定来自 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 关系数据库的 SQLGeometry 或 SQLGeography 数据类型的数据。  
   
 > [!NOTE]  
->  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计器（报表生成器）](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
+>  在向导中定义数据源时，您将在“设计查询”页中看到不同的查询设计器，具体取决于您所连接的数据源的类型。 有关详细信息，请参阅[查询设计器（报表生成器）](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)。  
   
  在查询设计器中运行该查询时，结果集显示一列，其中的空间数据显示为文本。 例如，一行可能包含作为一个点的空间数据，而下一行可能包含定义一组点的空间数据。 每行都成为一个地图元素。 您可以改变每个图元素的显示，将其作为不可分的单元。  
   
@@ -183,7 +183,7 @@ ms.locfileid: "47645165"
   
 -   **混合：** 显示组合起来的 **“道路”** 和 **“空中”** 视图。  
   
- 有关图块的详细信息，请参阅 [Bing 地图图块系统](http://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371)。  
+ 有关图块的详细信息，请参阅 [Bing 地图图块系统](https://go.microsoft.com/fwlink/?LinkId=147315)。 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。  
   
  若要在设计视图中查看图块背景，您必须能访问 Internet。 若要通过报表服务器上的报表以预览模式查看图块背景，报表服务器必须配置为支持 Bing 地图图块。 有关详细信息，请参阅 [报表故障排除：地图报表（报表生成器和 SSRS）](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 和 [规划地图报表](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)。  
   

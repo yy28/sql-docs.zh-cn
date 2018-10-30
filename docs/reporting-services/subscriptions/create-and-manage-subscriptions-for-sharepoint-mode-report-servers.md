@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d16794c7903ac106f0ca62953498fe7df70d7303
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761815"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100088"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>创建和管理 SharePoint 模式报表服务器的订阅
   你可以创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以便从与 SharePoint 模式报表服务器集成的 SharePoint Web 应用程序传递报表。 订阅可以将报表传递到文档库、文件夹或作为电子邮件传递。 本主题概述了创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅的要求和步骤。  
@@ -53,7 +53,7 @@ ms.locfileid: "47761815"
   
  在创建订阅时，可以选择输出文件格式。 并不是每个报表在每种格式下都能正常显示。 在订阅中选择格式之前，请打开报表并将其导出为不同格式以验证是否像预期的那样显示。  
   
- 如果用户希望能够创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅，则他们需要具有在 SharePoint 中“编辑项”列表的权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ 如果用户希望能够创建 **订阅，则他们在 SharePoint 中需要“编辑项”**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 列表权限。 有关详细信息，请参阅 [报表服务器项的 SharePoint 站点和列表权限参考](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
 > [!IMPORTANT]  
 >  用来将报表传递到库或共享文件夹的订阅会创建一个基于原始报表的新静态文件，但它不是在报表查看器 Web 部件中运行的真正报表定义。 如果原始报表具有交互功能（如钻取链接）或动态内容，则这些功能在传递到目标位置的静态文件中将不可用。 如果选择“网页”，则可以保留一些交互功能，但由于该文档不是在报表查看器中运行的 .rdl 文件，因此在报表中单击浏览时将会在浏览器会话中创建一些新页，必须在这些新页中滚动才能返回站点。  
@@ -159,6 +159,6 @@ ms.locfileid: "47761815"
  [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Reporting Services 中的文件共享传递](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Reporting Services 中的 SharePoint 库传递](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   

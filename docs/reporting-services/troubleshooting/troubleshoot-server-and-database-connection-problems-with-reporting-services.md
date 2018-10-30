@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aee90d29082f2c4ba3d6d609e0ea68e3e986d3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028836"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services 的服务器和数据库连接问题疑难解答
 使用本主题可以排除在连接到报表服务器时所遇到的故障。 本主题还提供了与错误消息有关的信息。 有关数据源配置和配置报表服务器连接信息的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "47699698"
 在连接到 SQL Server 时，在默认的设置下 SQL Server 不允许远程连接可能会导致此失败。 （提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）。 此错误由托管报表服务器数据库的数据库引擎实例返回。 大多数情况下，出现此错误的原因是 SQL Server 服务停止。 或者，如果使用的是具有高级服务的 SQL Server Express 或命名实例，那么，当报表服务器 URL 或报表服务器数据库的连接字符串不正确时，将发生此错误。 若要解决这些问题，请执行以下操作：  
   
 * 验证 SQL Server (**MSSQLSERVER**) 服务是否正在运行。 在托管数据库引擎实例的计算机上，依次单击“开始”、“管理工具”和“服务”，然后滚动到 SQL Server (**MSSQLSERVER**)。 如果未启动，请右键单击该服务，选择“属性”，在“启动类型”中选择“自动”，然后依次单击“应用”、“启动”和“确定”。   
-* 确保报表服务器 URL 和报表服务器数据库连接字符串正确。 如果 Reporting Services 或数据库引擎作为命名实例安装，则在安装过程中创建的默认连接字符串将包括相应的实例名称。 例如，如果在名为 DEVSRV01 的服务器上安装了具有高级服务的 SQL Server Express 的默认实例，则报表管理器 URL 将为 DEVSRV01\Reports$SQLEXPRESS。 此外，连接字符串中的数据库服务器名称将类似于 DEVSRV01\SQLEXPRESS。 有关 SQL Server Express 的 URL 和数据源连接字符串的详细信息，请参阅 [具有高级服务的 SQL Server Express 中的 Reporting Services](http://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要验证报表服务器数据库的连接字符串，请启动 Reporting Services 配置工具并查看“数据库安装”页。  
+* 确保报表服务器 URL 和报表服务器数据库连接字符串正确。 如果 Reporting Services 或数据库引擎作为命名实例安装，则在安装过程中创建的默认连接字符串将包括相应的实例名称。 例如，如果在名为 DEVSRV01 的服务器上安装了具有高级服务的 SQL Server Express 的默认实例，则报表管理器 URL 将为 DEVSRV01\Reports$SQLEXPRESS。 此外，连接字符串中的数据库服务器名称将类似于 DEVSRV01\SQLEXPRESS。 有关 SQL Server Express 的 URL 和数据源连接字符串的详细信息，请参阅 [具有高级服务的 SQL Server Express 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要验证报表服务器数据库的连接字符串，请启动 Reporting Services 配置工具并查看“数据库安装”页。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>无法进行连接。 请确保服务器正在运行。  
 此错误由 ADOMD.NET 提供程序返回。 有多种原因可导致发生此错误。 如果已将服务器指定为“localhost”，请尝试改为指定服务器名称。 如果无法为新连接分配内存，也会发生此错误。 有关详细信息，请参阅 [知识库文章 912017 - 连接到 SQL Server 2005 Analysis Services 实例时收到错误消息：](http://support.microsoft.com/kb/912017)。  

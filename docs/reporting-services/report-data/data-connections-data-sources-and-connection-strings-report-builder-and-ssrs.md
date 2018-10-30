@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b6b443d1cdba9a72d6117465fd5c350d79abd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030008"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
@@ -50,7 +50,7 @@ ms.locfileid: "47611875"
   
      开发人员可以使用 <xref:Microsoft.ReportingServices.DataProcessing> API 创建数据处理扩展插件以支持其他类型的数据源。  
   
--   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中，浏览到某一报表服务器或 SharePoint 站点并选择共享数据源，或者在报表中创建嵌入数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中创建共享数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中使用自定义数据扩展插件。  
+-   在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中，浏览到某一报表服务器或 SharePoint 站点并选择共享数据源，或者在报表中创建嵌入数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建共享数据源。 不能在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中使用自定义数据扩展插件。  
   
  下表总结了嵌入数据源和共享数据源之间的差异。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47611875"
   
 -   ODBC  
   
--   用于 Power View 的 Microsoft BI 语义模型：在配置用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的 SharePoint 站点上，此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
+-   用于 Power View 的 Microsoft BI 语义模型：在配置用于 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库和 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的 SharePoint 站点上，此数据源类型可用。 此数据源类型仅可用于 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 演示文稿。 有关详细信息，请参阅 [建立用于 Power View 的完美 BI 语义表格模型](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  有关 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 支持的数据源和版本的完整列表，请参阅 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
@@ -158,4 +158,4 @@ ms.locfileid: "47611875"
 [设置部署属性](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [为报表数据源指定凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

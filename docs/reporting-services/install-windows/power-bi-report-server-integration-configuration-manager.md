@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 6561f4a6378a31485722a9e87d59d293ced0dad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029576"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 报表服务器集成（配置管理器）
 
@@ -24,7 +24,7 @@ ms.locfileid: "47759425"
 
 除了具有活动的 Internet 连接，以便你可以浏览到 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 服务以外，还需要满足以下 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]集成的要求。
 
-- **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅[什么是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory：** 你的组织必须使用 Azure Active Directory，以便为 Azure 服务和 Web 应用程序提供目录和身份管理。 有关详细信息，请参阅 [什么是 Azure Active Directory？](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
 - **托管租户：** 你想要将报表项固定到其上的 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 仪表板必须是 Azure AD 托管租户的一部分。  在你的组织第一次订阅 Azure 服务（例如 Office 365 和 Microsoft Intune）时，便会自动创建托管租户。   目前不支持病毒性租户。  有关详细信息，请参阅 [“什么是 Azure AD 目录？”](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)中的“什么是 Azure AD 租户”和“如何获取 Azure AD 目录”部分。
 
@@ -113,7 +113,7 @@ ms.locfileid: "47759425"
 
 1. 用户可以预览 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中的报表，并且当用户首次单击从 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 中固定报表项时，
 
-2. 他们将被重定向到 Azure AD 登录页。 用户也可以从[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]“我的设置”页登录。 当用户登录到 Azure 托管租户时，便在 Azure 帐户和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 权限之间建立了一种关系。  有关详细信息，请参阅[我的 Power BI 集成（网站门户）设置](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
+2. 他们将被重定向到 Azure AD 登录页。 用户也可以从[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]“我的设置”页登录。 当用户登录到 Azure 托管租户时，便在 Azure 帐户和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 权限之间建立了一种关系。  有关详细信息，请参阅 [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
 3. 用户安全令牌返回到报表服务器。
 
@@ -125,7 +125,7 @@ ms.locfileid: "47759425"
 
 7. 创建 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅以管理仪表板磁贴上报表项的计划刷新。 订阅使用用户登录时创建的安全令牌。
 
-     令牌适于 90 天，此后用户需要再次登录以创建新的用户令牌。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅[我的 Power BI 集成设置（Web 门户）](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 了解有关详细信息。
+     令牌适于 90 天，此后用户需要再次登录以创建新的用户令牌。 令牌过期后，已固定的磁贴仍将显示在仪表板上，但不再刷新数据。  用于已固定项的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅将出错，直到创建新的用户令牌。 请参阅 [我的 Power BI 集成（网站门户）设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。 了解有关详细信息。
 
 用户第二次固定某一项时，跳过步骤 1-4，改为从 ReportServer 数据库和流中检索应用 ID 和 URL，然后继续执行步骤 5。
 
@@ -149,8 +149,8 @@ ms.locfileid: "47759425"
 
 ## <a name="next-steps"></a>后续步骤
 
-[我的 Power BI 集成设置](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[我的 Power BI 集成设置](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [将 Reporting Services 项目固定到 Power BI 仪表板](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
 [Power BI 中的仪表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

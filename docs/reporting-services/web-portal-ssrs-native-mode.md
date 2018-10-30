@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c78127437625030db0cd894db2b24d5359d6003e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7c7dd4137517f9ad4ec97dda1b0fa948f40feb4
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021891"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Web 门户（SSRS 本机模式）
 
@@ -128,4 +128,4 @@ Web 门户将项按不同的类别分组。 可用类别如下。
 [Reporting Services 浏览器支持计划](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 2016 各个版本支持的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

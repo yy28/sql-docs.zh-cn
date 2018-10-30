@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db0e7b193a21824f9eeb8e0745c60708cd660f57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030326"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 报表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表是基于 XML 的报表定义，其中包括报表数据和报表布局元素。 在客户端文件系统中，报表定义具有文件扩展名 .rdl。 在发布某一分页报表后，该报表将成为在报表服务器或 SharePoint 站点上存储的报表项。 分页报表是 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]提供的基于服务器的报表平台的一部分。 你还可以 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)。  
@@ -122,7 +122,7 @@ ms.locfileid: "47657165"
 ## <a name="view-reports"></a>查看报表  
  除了预览在本地保存的报表或发布到报表服务器的报表之外，您还可为报表读者提供多种查看体验。 查看报表：  
   
--   **浏览器。**  使用报表服务器 Web 服务或 SharePoint 站点查看已发布的报表。 在 SharePoint 站点上，您还可以配置 Web 部件以便查看已发布的报表。 有关详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)、[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)和 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)。  
+-   **浏览器。**  使用报表服务器 Web 服务或 SharePoint 站点查看已发布的报表。 在 SharePoint 站点上，您还可以配置 Web 部件以便查看已发布的报表。 有关详细信息，请参阅 [Reporting Services 和 Power View 的浏览器支持](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)、[报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)和 [URL 访问 (SSRS)](../../reporting-services/url-access-ssrs.md)。  
   
 -   **传递。**  配置订阅以便以电子邮件的形式将报表传递给报表读者，或者传递到共享文件夹。  有关详细信息，请参阅[订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47657165"
   
 -   **打印。**  报表读者可根据查看报表的方式，打印报表或报表页。 有关详细信息，请参阅[打印报表（报表生成器和 SSRS）](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)。  
   
--   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 可以开发承载报表查看器控件的 ASP.NET AJAX 应用程序或 Windows 窗体应用程序。 该控件可以指向报表服务器上已发布的报表。 有关详细信息，请参阅 [Microsoft 报表](http://go.microsoft.com/fwlink/?LinkID=205399)。  
+-   **Web 或 Windows 窗体应用程序。**  使用 Visual Studio 可以开发承载报表查看器控件的 ASP.NET AJAX 应用程序或 Windows 窗体应用程序。 该控件可以指向报表服务器上已发布的报表。 有关详细信息，请参阅 [Microsoft 报表](https://go.microsoft.com/fwlink/?LinkID=205399)。  
   
 ## <a name="manage-reports"></a>管理报表  
  管理已发布报表：  

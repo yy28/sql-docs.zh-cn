@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733165"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100308"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>在报表中使用表达式（报表生成器和 SSRS）
 在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表中，可以在整个报表定义中使用表达式来指定或计算以下各项的值：参数、查询、筛选器、报表项属性、组和排序定义、文本框属性、书签、文档结构图、动态页眉和页脚内容、图像以及动态数据源定义。 本主题提供了一些可在其中使用表达式更改报表内容或外观的示例。 此列表并不全面。 可以在显示表达式 (fx) 按钮的对话框中或在显示“\<Expression...>”的下拉列表中设置表达式的任何属性。  
@@ -53,7 +53,7 @@ ms.locfileid: "47733165"
 |-------------------|---------------------------------------|--------------------|  
 |计算数据集的聚合值。|文本框中占位符的 Value 属性。 使用 **“占位符属性”** 对话框 -&gt;“常规”。|`=First(Fields!Sales.Value,"DataSet1")`|  
 |在同一文本框中串联文本和表达式。|位于页眉或页脚中的文本框中占位符的值。 使用 **“占位符属性”** 对话框 -&gt;“常规”。|`="This report began processing at " & Globals!ExecutionTime`|  
-|计算不同作用域中的数据集的聚合值。|位于 Tablix 组中的文本框中占位符的值。 使用 **“占位符属性”** 对话框 -&gt;“常规”。|`=Max(Fields!Total.Value,"DataSet2)`|  
+|计算不同作用域中的数据集的聚合值。|位于 Tablix 组中的文本框中占位符的值。 使用 **“占位符属性”** 对话框 -&gt;“常规”。|`=Max(Fields!Total.Value,"DataSet2")`|  
 |根据值设置文本框中数据的格式。|Tablix 详细信息行中的文本框中占位符的颜色。 使用 **“文本框属性”** 对话框 -&gt;“字体”。|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |计算一次要在整个报表中引用的值。|报表变量的值。 使用 **“报表属性”** 对话框 -&gt;“变量”。|`=Variables!MyCalculation.Value`|  
 |包含数据集中多个字段的特定值。|Tablix 中组的筛选器公式。 使用 **“Tablix 属性”** 对话框 -&gt;“筛选器”。|对于数据类型，请选择 **Boolean**。<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  

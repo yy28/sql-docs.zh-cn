@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028696"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>使用 rs.exe 实用工具和 Web 服务编写脚本
   开发人员和报表服务器管理员可以使用 **rs** 实用工具 (RS.exe) 在报表服务器上执行操作。 利用此实用工具，可以通过用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写的脚本以编程方式管理报表服务器。  
@@ -30,7 +30,7 @@ ms.locfileid: "47816905"
   
  [用于在报表服务器之间复制内容的示例 Reporting Services rs.exe 脚本](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
- [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
+ [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
   
 ## <a name="see-also"></a>另请参阅  
  [为部署和管理任务编写脚本](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   

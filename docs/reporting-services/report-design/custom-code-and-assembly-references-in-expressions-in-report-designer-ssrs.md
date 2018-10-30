@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5261e6943cb4044e4f47d63211b6f5e9d53922f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda4e064412a6607838e65d15ab27a0c6e238ba0
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728635"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030406"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>报表设计器的表达式中的自定义代码和程序集引用 (SSRS)
   您可以添加对报表中嵌入的自定义代码的引用，或添加对生成并保存到您的计算机并且部署到报表服务器的自定义程序集的引用。 对于自定义常量、复杂的函数，或在一个报表中多次使用的函数，可使用嵌入代码。 可以使用自定义代码程序集在一个位置中维护代码，并共享该代码以便由多个报表使用。 自定义代码可包含新的自定义常量、变量、函数或子例程。 可以包含对内置集合（例如，Parameters 集合）的只读引用。 但是，无法将报表数据值集传递给自定义函数；特别要指出的是，不支持自定义聚合。  
@@ -52,12 +52,12 @@ ms.locfileid: "47728635"
   
  若要使用内置函数，请双击“项”窗格中的函数名称。 “说明”窗格中显示该函数的说明，“示例”窗格中显示函数调用的示例。 在“代码”窗格中，在左圆括号 **(** 后键入函数名称时，IntelliSense 将帮助显示函数调用的各项有效语法。 例如，若要计算表中一个名为 `Quantity` 的字段的最大值，首先将简单表达式 `=Max(` 添加到“代码”窗格，然后使用智能标记查看该函数调用的所有可能的有效语法。 若要完成本示例，请键入 `=Max(Fields!Quantity.Value)`。  
   
- 有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](http://go.microsoft.com/fwlink/?LinkId=198941) 。  
+ 有关每个函数的详细信息，请参阅 <xref:System.Math>、 <xref:System.Convert>和 MSDN 中的 [Visual Basic 运行时库成员](https://go.microsoft.com/fwlink/?LinkId=198941) 。  
   
 ##  <a name="NotCommon"></a> 包括对不太常用函数的引用  
  若要包括一个对不太常用的 CLR 命名空间的引用，必须使用完全限定引用，例如 <xref:System.Text.StringBuilder>。 对于这些不太常用的函数， **“表达式”** 对话框的“代码”窗格不支持 IntelliSense。  
   
- 有关详细信息，请参阅 [Visual Basic Runtime Library Members](http://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
+ 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
 ##  <a name="External"></a> 包括对外部程序集的引用  
  若要包括对外部程序集中的类的引用，必须标识报表处理器的程序集。 使用 **“报表属性”** 对话框的 **“引用”** 页指定要添加到报表中的程序集的完全限定名称。 在表达式中，必须使用程序集中的类的完全限定名称。 外部程序集中的类不显示在 **“表达式”** 对话框中，您必须提供正确无误的类名称。 完全限定名称包括命名空间、类名称和成员名称。  
@@ -194,6 +194,6 @@ End Function
  [向报表添加程序集引用 (SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 教程 (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [表达式示例（报表生成器和 SSRS）](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [报表示例（报表生成器和 SSRS）](http://go.microsoft.com/fwlink/?LinkId=198283)  
+ [报表示例（报表生成器和 SSRS）](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

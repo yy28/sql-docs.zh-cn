@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2cd1a8450f9ffa847f5feab752c957d20f5fd6e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b748da4e74ce9ade370df965bd8df1c388a3b7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654153"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028967"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>图表图例 - 设置格式（报表生成器）
   图表图例包含对图表中每个类别的说明。 图例始终包含一个或多个图例项，每个图例项包含一个表示序列的彩色框以及一个描述该序列的文本字符串，如下图所示。  
@@ -77,7 +77,7 @@ ms.locfileid: "47654153"
  默认情况下，图例文本没有为适应图例区的大小而进行优化。 若要使图例文本自动适应所分配的空间，请将 AutoFitTextDisabled 属性设置为 **False** ，并将 MinFontSize 属性的最小字号设置为你认为可呈现且仍允许进行图例优化的最小字号。  
   
 ## <a name="see-also"></a>另请参阅  
- [“图例属性”对话框，“常规”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
+ [“图例属性”对话框，“常规”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [更改图例项的文本（报表生成器和 SSRS）](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [设置图表格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [设置图表上序列颜色的格式（报表生成器和 SSRS）](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

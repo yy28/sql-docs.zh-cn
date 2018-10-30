@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c638b35676966bdb899b0537f410a8c5552179b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028166"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>将 Office 数据连接 (.odc) 用于报表
   对于局限性方案而言，可以使用现有 Office 数据连接 (.odc) 文件来为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表提供连接信息。 在创建共享数据源时，可用 .odc 文件替代 .rsds 文件。 报表服务器使用 .odc 文件的方式与使用 .rsds 文件的方式相同；它读取文件以获得数据源类型、连接字符串以及凭据信息。  
@@ -44,7 +44,7 @@ ms.locfileid: "47657115"
   
  如果不熟悉 .odc 文件，可以使用以下说明来创建并导出文件。 为 OLE DB 数据源创建 .odc 文件的一种简便方法就是使用 Excel 2007 和数据连接向导。 注意：向导不会创建数据源，您必须拥有已定义的外部数据源。  
   
- 只有在现有 .odc 文件与报表和查询完全兼容的情况下，才能使用现有 .odc 文件。 如果遇到需要对报表或 .odc 文件进行重大修改的错误，则应为报表创建新的 .rsds 文件。 有关如何创建使用 .rsds 文件的共享数据源的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
+ 只有在现有 .odc 文件与报表和查询完全兼容的情况下，才能使用现有 .odc 文件。 如果遇到需要对报表或 .odc 文件进行重大修改的错误，则应为报表创建新的 .rsds 文件。 有关如何创建使用 .rsds 文件的共享数据源的详细信息，请参阅[创建和管理共享数据源（SharePoint 集成模式下的 Reporting Services）](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)。  
   
 ### <a name="to-create-and-export-an-odc-file"></a>创建并导出 .odc 文件  
   

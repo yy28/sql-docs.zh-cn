@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 76bd175c9461e1781502471d0ed17037c168c041
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60db1fe9f00084ce95d94af131e72a14f1e3988e
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856793"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021161"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>教程：如何查找并启动 Reporting Services 工具 (SSRS)
 
@@ -86,7 +86,7 @@ ms.locfileid: "47856793"
 4.  如果在本地报表服务器上运行 Web 门户，请参阅[为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- 报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。  
+ 报表服务器管理员可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 来管理报表服务器及其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件服务器。 有关详细信息，请参阅 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。  
   
 ### <a name="to-start-sql-server-management-studio"></a>启动 SQL Server Management Studio  
   
@@ -111,7 +111,7 @@ ms.locfileid: "47856793"
   
  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Visual Studio 中可以找到报表设计器。 报表设计器的设计图面包括选项卡式窗口、向导和用于访问报表创建功能的菜单。 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中选择 Report Server 项目或者 Report Server 向导模板后，即可使用此报表设计器工具。 若要了解详细信息，请参阅 [SQL Server Data Tools 中的 Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。 
  
-下载 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。  
+下载 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。  
   
 ### <a name="to-start-report-designer"></a>启动报表设计器  
   
@@ -134,7 +134,7 @@ ms.locfileid: "47856793"
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
  [SQL Server 2016 中的报表生成器](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) 是一个独立的应用程序，可用于在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]外部创建分页报表。 你可以自定义和更新所有的现有报表，无论这些报表是在报表设计器中还是在早期版本的 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]中创建的。 你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
   
- 从 Microsoft 下载中心[下载报表生成器](http://go.microsoft.com/fwlink/?LinkID=219138) 。  
+ 从 Microsoft 下载中心[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
 ### <a name="to-start-includessrbnoversionincludesssrbnoversionmd"></a>启动 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]  
   
@@ -146,14 +146,14 @@ ms.locfileid: "47856793"
   
      或  
   
-     从 Microsoft 下载中心[下载报表生成器](http://go.microsoft.com/fwlink/?LinkID=219138) 。  
+     从 Microsoft 下载中心[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138) 。  
   
 3.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] ，你可以创建或打开分页报表了。  
   
 ##  <a name="bkmk_mobile_report_pub"></a> [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]  
- 使用 [SQL Server 移动报表发布服务器](http://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 可创建可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户和移动设备（例如 iPad 和 iPhone）中查看的移动报表。   你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
+ 使用 [SQL Server 移动报表发布服务器](https://msdn.microsoft.com/library/e23cf095-cb9a-4631-ab46-10413d8e3a7c) 可创建可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户和移动设备（例如 iPad 和 iPhone）中查看的移动报表。   你可以从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 门户或从 Microsoft 下载中心安装此应用程序。  
   
- 从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkID=733527) 。  
+ 从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527) 。  
   
 ### <a name="to-start-includessmobilereptpubshortincludesss-mobilereptpub-shortmd"></a>启动 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]  
   
@@ -165,18 +165,18 @@ ms.locfileid: "47856793"
   
      或  
   
-     从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkID=733527) 。  
+     从 Microsoft 下载中心[下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527) 。  
   
 3.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] ，你可以创建或打开移动报表了。  
 
 ## <a name="next-steps"></a>后续步骤
 
-[下载 SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkID=733527)   
-[下载报表生成器](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[下载 SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)   
+[下载报表生成器](https://go.microsoft.com/fwlink/?LinkID=219138)  
+[下载 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714) 
 [安装 Reporting Services SharePoint 模式](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Reporting Services 报表服务器](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [查询设计工具](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services 教程](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

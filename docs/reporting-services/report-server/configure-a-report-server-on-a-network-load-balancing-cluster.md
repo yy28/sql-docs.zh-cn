@@ -7,12 +7,12 @@ ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-n
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/3/2018
-ms.openlocfilehash: 68cc484911dd98e778d8b56977572f9a1db80132
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: d264830673f538a80972fb9a6e97edc770b86a16
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50032036"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>在网络负载平衡群集上配置报表服务器
 
@@ -32,7 +32,7 @@ ms.locfileid: "48782336"
   
 |步骤|描述|详细信息|  
 |----------|-----------------|----------------------|  
-|1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[扩展部署 - Reporting Services 本机模式 (Configuration Manager)](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
+|1|在将 Reporting Services 安装在 NLB 群集内的服务器节点上之前，请检查扩展部署的要求。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[扩展部署 - Reporting Services 本机模式 (Configuration Manager)](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
 |2|配置 NLB 群集并验证它是否正常工作。<br /><br /> 确保将主机标头名称映射到 NLB 群集的虚拟服务器 IP。 主机标头名称用在报表服务器 URL 中，它比 IP 地址便于记忆和键入。|有关详细信息，请参阅您运行的 Windows 操作系统版本的 Windows Server 产品文档。|  
 |3|将主机标头的 NetBIOS 和完全限定域名 (FQDN) 添加到 Windows 注册表中存储的 **BackConnectionHostNames** 列表中。 使用 [KB 896861](http://support.microsoft.com/kb/896861) (http://support.microsoft.com/kb/896861) 的“方法 2：指定主机名”中的步骤，但进行以下调整。 该 KB 文章的**步骤 7** 指出“退出注册表编辑器，然后重新启动 IISAdmin 服务”。 改为重新启动计算机以确保更改生效。<br /><br /> 例如，如果主机标头名称 \<MyServer> 是 Windows 计算机名称“contoso”的虚拟名称，可以将该 FQDN 形式作为“contoso.domain.com”引用。 需要将主机标头名称 (MyServer) 与 FQDN 名称 (contoso.domain.com) 一起添加到 **BackConnectionHostNames**的列表中。|如果您的服务器环境涉及本地计算机上的 NTLM 身份验证并且造成环回连接，则此步骤是必需的。<br /><br /> 如果出现这种情况，将会出现报表管理器和报表服务器之间的请求失败，错误号为 401（未经授权）。|  
 |4|在已是 NLB 群集一部分的节点上以“仅文件”模式安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，并为扩展部署配置报表服务器实例。<br /><br /> 所配置的扩展部署将不响应那些定向到虚拟服务器 IP 的请求。 在配置视图状态验证之后，会在以后的步骤中将扩展部署配置为使用虚拟服务器 IP。|[配置本机模式报表服务器扩展部署（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  

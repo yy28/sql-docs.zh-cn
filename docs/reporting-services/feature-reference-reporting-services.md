@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8eaada7d40896156dee1ba51b9a02b90b1ff9e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835d17dcb628eebe99bff4c6e3182a10e41dbe7
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741385"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021041"
 ---
 # <a name="feature-reference-reporting-services"></a>功能参考 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括可用于创建、管理和查看报表的若干工具和应用程序。 本部分提供了介绍这些工具和应用程序的对话框、网页和向导的特定主题。  
@@ -29,7 +29,7 @@ ms.locfileid: "47741385"
  [报表设计器的 F1 帮助](../reporting-services/tools/report-designer-f1-help.md)  
  提供报表设计器及其相关对话框、报表向导和图像向导的帮助。  
   
- [Reporting Services 配置管理器帮助主题](http://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
+ [Reporting Services 配置管理器帮助主题](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
  提供用于部署和管理报表服务器实例的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 配置工具的帮助。  
   
  [Management Studio 中报表服务器的 F1 帮助](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
@@ -43,6 +43,6 @@ ms.locfileid: "47741385"
  [Reporting Services 报表 (SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [报表数据集 (SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   
  [报表生成器入门](http://www.microsoft.com/download/en/details.aspx?id=29072)   
- [使用 Report Builder 1.0 设计和实现报表](http://go.microsoft.com/fwlink/?LinkId=142601)  
+ [使用 Report Builder 1.0 设计和实现报表](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

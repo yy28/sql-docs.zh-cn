@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 419e1a3e6bf886625edd260f48afea9bcb4bc109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6a632c7d5bb1579f7fdee84d390b47bf0c863e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030428"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>禁用或暂停报表和订阅处理
   可采用多种方法禁用或暂停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表和订阅处理。 本主题中的方法从禁用订阅延伸到中断数据源连接。 并非所有方法在两种 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式下都可行。下表概述了各种方法以及支持的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器模式：  
@@ -156,9 +156,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 库（只能从 SharePoint 站点使用，该站点与 SharePoint 集成模式报表服务器集成在一起）  
   
- 电子邮件传递必须进行配置才能使用。 如果未对它进行配置，它将不可用。 有关详细信息，请参阅[为报表服务器配置电子邮件传递（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
+ 电子邮件传递必须进行配置才能使用。 如果未对它进行配置，它将不可用。 有关详细信息，请参阅[为报表服务器配置电子邮件传递（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
- 如果要关闭特定的扩展插件，可以在 **RSReportServer.config** 文件中删除与该扩展插件相对应的条目。 有关详细信息，请参阅 [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)和[为报表服务器配置电子邮件传递（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
+ 如果要关闭特定的扩展插件，可以在 **RSReportServer.config** 文件中删除与该扩展插件相对应的条目。 有关详细信息，请参阅 [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [为电子邮件传递配置报表服务器 (SSRS Configuration Manager)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)。  
   
  删除某个传递扩展插件后，该插件在报表管理器或 SharePoint 站点中将不再可用。 删除传递扩展插件可能会使订阅变为非活动状态。 在删除扩展插件之前，请确保删除这些订阅或者将它们配置为使用其他传递扩展插件。  
   
@@ -167,7 +167,7 @@ ForEach ($subscription in $subscriptions)
  [Reporting Services 配置文件](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [配置报表管理器（本机模式）](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
  [Reporting Services 报表服务器（本机模式）](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [项的“安全性”属性页（报表管理器）](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
+ [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [项的“安全性”属性页（报表管理器）](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
   
   

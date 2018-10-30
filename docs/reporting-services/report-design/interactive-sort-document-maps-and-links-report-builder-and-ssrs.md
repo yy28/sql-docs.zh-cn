@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9653a40f5f7789e693041533e2706ee56bf8799a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6beb41ffbf94f803887f5e72bfe7e527c7f6c8b2
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029876"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>交互式排序、文档结构图和链接（报表生成器和 SSRS）
   在基于 Web 的环境中，您可以添加许多让用户与报表进行交互的功能。 用户可以更改报表中值的排序顺序，在报表中显示或隐藏某些项，或者单击其中的链接以访问其他报表或网页。 还可以添加目录或文档结构图。 报表用户只需单击目录或文档结构图中的项，即可跳至报表内的相应区域。  
@@ -27,7 +27,7 @@ ms.locfileid: "47856367"
 -   **钻取报表链接** 跳至同一报表服务器上的其他报表。 有关详细信息，请参阅[钻取报表（报表生成器和 SSRS）](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [联机丛书](../../reporting-services/security/secure-reports-and-resources.md) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][保护报表和资源](http://go.microsoft.com/fwlink/?LinkId=154888) 。  
+>  绑定到数据集字段的链接容易被篡改。 有关详细信息，请参阅 msdn.microsoft.com 上 [联机丛书](../../reporting-services/security/secure-reports-and-resources.md) 中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][保护报表和资源](https://go.microsoft.com/fwlink/?LinkId=154888) 。  
   
  您还可以设计包含排序、筛选器和可见性参数引用的表达式，让用户控制报表的显示和内容。 有关详细信息，请参阅[报表参数（报表生成器和报表设计器）](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)、[对数据进行筛选、分组和排序（报表生成器和 SSRS）](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)和[添加数据集筛选器、数据区域筛选器和组筛选器（报表生成器和 SSRS）](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)。  
   

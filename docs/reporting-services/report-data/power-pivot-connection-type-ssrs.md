@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46a91e610fd49f19a4f755b039ce7b111840d5ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030846"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
@@ -23,7 +23,7 @@ ms.locfileid: "47611565"
 ## <a name="prerequisites"></a>必备条件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源必须发布在 SharePoint 站点上的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中。  
   
- 为了支持从报表生成器到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的连接，工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一起安装，但如果你在使用不具有此应用程序的计算机，则必须从 [SQL Server 2008 R2 功能包](http://go.microsoft.com/fwlink/?LinkId=192565)下载和安装 ADOMD.NET。  
+ 为了支持从报表生成器到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的连接，工作站计算机上必须具有 SQL Server 2008 R2 ADOMD.NET。 此客户端库与 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 一起安装，但如果你在使用不具有此应用程序的计算机，则必须从 [SQL Server 2008 R2 功能包](https://go.microsoft.com/fwlink/?LinkId=192565)下载和安装 ADOMD.NET。  
   
 ## <a name="data-source-type"></a>数据源类型  
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
@@ -32,7 +32,7 @@ ms.locfileid: "47611565"
  连接字符串是指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或其他库中在 SharePoint 上发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 URL，例如，`http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>凭据  
- 指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
+ 指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  
   
 ## <a name="queries"></a>查询  
  在连接到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源之后，使用 MDX 图形查询，通过从基础数据结构中浏览并进行选择来生成查询。 生成查询后，运行该查询在“结果”窗格中查看示例数据。  
@@ -61,7 +61,7 @@ ms.locfileid: "47611565"
 -   报表仅包含来自 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据源的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 数据。  
   
 ## <a name="see-also"></a>另请参阅  
- [Analysis Services MDX 查询设计器用户界面（报表生成器）](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
+ [Analysis Services MDX 查询设计器用户界面（报表生成器）](https://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
  [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

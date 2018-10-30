@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53bfd456357cc0472ca135a11601535f99a344cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021901"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
   如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "47741115"
   
 2.  单击 **“允许”** 以继续。  
   
-3.  在 URL 地址中，输入报表管理器 URL。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+3.  在 URL 地址中，输入报表管理器 URL。 有关说明，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 4.  单击 **“工具”**。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "47741115"
 2.  单击主页上角的 **“站点设置”** 。  
   
     > [!TIP]  
-    >  注意： 如果没有看到“站点设置”选项，请关闭后再重新打开浏览器，然后使用管理权限浏览到报表管理器。  
+    >  **注意：** 如果您没有看到 **“站点设置”** 选项，则关闭后再重新打开您的浏览器，然后使用管理权限浏览到报表管理器。  
   
 3.  单击 **“安全性”**。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47741115"
   
  **配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** 角色属性和角色分配，以便您无需每次都使用提升的权限启动 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ：  
   
--   在“开始”菜单，依次单击“所有程序”和“SQL Server 2014”，右键单击 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，然后单击“以管理员身份运行”。  
+-   从 **“开始”** 菜单上，依次单击 **“所有程序”** 和 **SQL Server 2014**，右键单击 **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**，然后单击 **“以管理员的身份运行”**。  
   
 -   连接到您的本地 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服务器。  
   

@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c66eb9c4f9636cd77d78fd8e77ddc8f6f0b5c3d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031416"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>设置图表上轴标签的格式（报表生成器和 SSRS）
   基于坐标的图表类型（柱形图、条形图、面积图、点状图、折线图和范围图）有两个用于分类和显示数据关系的轴。 不同类型的格式设置将应用于每个轴。  
@@ -105,7 +105,7 @@ ms.locfileid: "47795425"
   
  有两种方法可用于设置标量轴：  
   
--   在 **“轴属性”** 对话框中选择 **“标量轴”** 选项。 这样会将数值或日期/时间值添加到没有数据分组值的轴。 有关详细信息，请参阅[“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
+-   在 **“轴属性”** 对话框中选择 **“标量轴”** 选项。 这样会将数值或日期/时间值添加到没有数据分组值的轴。 有关详细信息，请参阅[“轴属性”对话框 ->“轴选项”（报表生成器和 SSRS）](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)。  
   
 -   在 **“序列属性”** 对话框的 **“类别字段”** 选项中选择一个字段或键入一个表达式。 图表将为您指定的类别字段中的所有值添加轴间隔。  
   

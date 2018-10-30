@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 54529326e61d796d16b93e9bc0a6f20f0d5673a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 323df59ef7cc0bd257a379fdbec822307532ceb8
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031936"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>教程先决条件（报表生成器）
 
@@ -35,14 +35,14 @@ ms.locfileid: "47845865"
   
 -   SQL Server 实例的名称和足以对任何数据库进行只读访问的凭据。 各教程中的数据集查询使用文字数据，但必须由 SQL Server 实例处理每个查询以返回报表数据集所必需的元数据。 例如，以下连接字符串仅指定一个服务器： `data source=<servername>`。 您必须对默认数据库具有读取权限，该权限是由授予您对服务器的访问权限的系统管理员分配给您的。 您还可以指定数据库，如以下连接字符串中所示： `data source=<servername>;initial catalog=<database>`。  
   
--   对于[教程：地图报表（报表生成器）](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](http://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
+-   对于[教程：地图报表（报表生成器）](Tutorial:%20Map%20Report%20\(Report%20Builder\).md)，报表服务器必须配置为支持将 Bing 地图作为背景。 有关详细信息，请参阅 [计划地图报表支持](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)。   
 
 -   [教程：创建钻取报表和主报表（报表生成器）](Tutorial:%20Creating%20Drillthrough%20and%20Main%20Reports%20\(Report%20Builder\).md)教程要求可以访问 Contoso Sales 多维数据集。 有关详细信息，请参阅该教程。 
   
-报表服务器管理员必须向你授予对报表服务器的必要权限，配置 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 文件夹位置，并且配置报表生成器默认选项。 有关详细信息，请参阅 [安装和卸载报表生成器](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)。  
+报表服务器管理员必须向你授予对报表服务器的必要权限，配置 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 文件夹位置，并且配置报表生成器默认选项。 有关详细信息，请参阅 [安装和卸载报表生成器](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)。  
 
 ## <a name="next-steps"></a>后续步骤
 
 [报表生成器教程](../reporting-services/report-builder-tutorials.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1d79e8d0be544ca6d9606bcee97112a0c0f42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021151"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  
@@ -151,7 +151,7 @@ End Class
   
 3.  浏览到安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 报表示例项目的位置。  
   
-     请转到 [AdventureWorks 2012 报表示例](http://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
+     请转到 [AdventureWorks 2012 报表示例](https://go.microsoft.com/fwlink/?LinkId=404153)以下载此报表示例  
   
 4.  选择 Sales Order Detail.rdl 文件并单击“添加”按钮。  
   

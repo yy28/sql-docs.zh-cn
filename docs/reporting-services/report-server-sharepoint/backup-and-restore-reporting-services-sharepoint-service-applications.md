@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0223f4df57498da9c018c65c0cf690225d4178c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20440d6b70a4e70bf92d1789ef944f332d3dafc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021241"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>备份和还原 Reporting Services SharePoint 服务应用程序
 
@@ -71,9 +71,9 @@ ms.locfileid: "47817495"
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748601.aspx)。  
+ [SharePoint 文档中的备份服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748601.aspx)。  
   
- [备份服务应用程序 (SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
+ [备份服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>验证执行帐户和数据库身份验证
 
@@ -125,7 +125,7 @@ ms.locfileid: "47817495"
   
  有关详细信息，请参阅 SharePoint 文档中的以下主题：  
   
- [还原服务应用程序 (SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)。  
+ [还原服务应用程序 (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx)。  
   
  [还原服务应用程序 (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)。  
 
@@ -161,4 +161,4 @@ ms.locfileid: "47817495"
   
 6.  选择“确定”
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

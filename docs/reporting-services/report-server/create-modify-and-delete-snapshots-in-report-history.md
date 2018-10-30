@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0dfa183f3df88bb53074407c62ea57aa2a3a3cc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31c1b8e60f6baeea276a38669a42e07ecbf18479
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029616"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>创建、修改和删除报表历史记录中的快照
   报表历史记录是报表快照的集合。 通过添加和删除快照或修改影响报表历史记录存储的属性，可以对报表历史记录进行维护。 您可以手动或按计划创建报表历史记录。  
@@ -26,7 +26,7 @@ ms.locfileid: "47710595"
  报表历史记录中的快照按其创建日期和时间进行标识， 而日期和时间则基于查询的执行时间。  
   
 ## <a name="creating-snapshots-in-report-history"></a>在报表历史记录中创建快照  
- 对于所有可在无人参与情况下运行的报表，可以手动或按计划间隔为其创建快照。 若要在无人参与的情况下运行，报表必须使用已存储凭据或根本不使用凭据。 此外，如果报表使用参数，则必须指定运行报表时所用的默认值。 可以在报表的属性页中指定已存储凭据和参数值。 有关详细信息，请参阅[参数属性页（报表管理器）](http://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
+ 对于所有可在无人参与情况下运行的报表，可以手动或按计划间隔为其创建快照。 若要在无人参与的情况下运行，报表必须使用已存储凭据或根本不使用凭据。 此外，如果报表使用参数，则必须指定运行报表时所用的默认值。 可以在报表的属性页中指定已存储凭据和参数值。 有关详细信息，请参阅[参数属性页（报表管理器）](https://msdn.microsoft.com/library/ebb53598-2378-46ae-8935-d5192f8ea49a)。  
   
  创建报表快照后，以下元素将随报表快照一起存储在报表服务器数据库中：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47710595"
   
 ## <a name="see-also"></a>另请参阅  
  [创建报表历史记录（SharePoint 集成模式下的 Reporting Services）](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [报表服务器内容管理（SSRS 本机模式）](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [向报表历史记录添加快照（报表管理器）](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [限制报表历史记录（报表管理器）](../../reporting-services/reports/limit-report-history-report-manager.md)  

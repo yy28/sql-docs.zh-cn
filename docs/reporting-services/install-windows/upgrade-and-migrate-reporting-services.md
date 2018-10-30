@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12c0dda2fb1a9a01cdaf0d3a1077aef54e388ebe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e7dfa2d347f020fc0514536680dce4343ee625c
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840275"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021451"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -37,7 +37,7 @@ ms.locfileid: "47840275"
 > [!TIP]  
 >  有关 SQL Server 的问题相关的最新信息，请参阅以下内容：  
 >   
->  -   [SQL Server 2016 发行说明](http://go.microsoft.com/fwlink/?LinkID=398124)。  
+>  -   [SQL Server 2016 发行说明](https://go.microsoft.com/fwlink/?LinkID=398124)。  
   
   
 ##  <a name="bkmk_side_by_side"></a> 并行安装  
@@ -230,17 +230,17 @@ ms.locfileid: "47840275"
   
 -   [升级到 SharePoint 2016 的过程概述](https://technet.microsoft.com/library/cc262483\(v=office.16\))。
 
--   [升级到 SharePoint 2013 的过程概述](http://go.microsoft.com/fwlink/p/?LinkId=256688)。
+-   [升级到 SharePoint 2013 的过程概述](https://go.microsoft.com/fwlink/p/?LinkId=256688)。
   
--   [升级到 SharePoint 2013 之前的清除准备](http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [升级到 SharePoint 2013 之前的清除准备](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
 -   [将数据库从 SharePoint 2013 升级到 SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\))。
 
--   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [将数据库从 SharePoint 2010 升级到 SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690)。  
 
 ## <a name="next-steps"></a>后续步骤
 
 [升级报表](../../reporting-services/install-windows/upgrade-reports.md)   
 [使用安装向导（安装程序）升级到 SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

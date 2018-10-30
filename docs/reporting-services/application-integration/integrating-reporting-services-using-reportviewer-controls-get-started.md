@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67955e82dc7e0a9fa85b064ed27781ee7b546090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 778ac08636656ad9b4598c0ac022fcc0a5e2284f
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831125"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029466"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>使用报表查看器控件集成 Reporting Services - 入门
 
@@ -82,7 +82,7 @@ ms.locfileid: "47831125"
 <?xml version="1.0"?>
 <!--
   For more information on how to configure your ASP.NET application, please visit
-  http://go.microsoft.com/fwlink/?LinkId=169433
+  https://go.microsoft.com/fwlink/?LinkId=169433
   -->
 <configuration>
   <system.web>
@@ -264,5 +264,5 @@ ms.locfileid: "47831125"
 ## <a name="see-also"></a>另请参阅
 
 [报表查看器控件中的数据收集](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
 

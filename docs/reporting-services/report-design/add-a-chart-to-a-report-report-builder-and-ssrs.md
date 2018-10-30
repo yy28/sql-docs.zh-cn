@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 624ca72c1cd63f0e830babe5f9ffff2af6726dad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030776"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>向报表添加图表（报表生成器和 SSRS）
   如果要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中以可视化格式汇总数据，请使用图表数据区域。 为您要呈现的数据类型选择一种适当的图表类型非常重要。 这将影响数据以图表形式呈现时对数据进行解释的好坏程度。 有关详细信息，请参阅 [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  
@@ -68,9 +68,9 @@ ms.locfileid: "47617265"
  [图表（报表生成器和 SSRS）](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [图表类型（报表生成器和 SSRS）](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [图表中的空点和 Null 数据点（报表生成器和 SSRS）](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [教程：向报表添加条形图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [教程：向报表添加条形图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [教程：向报表添加饼图（报表生成器）](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [教程：向报表添加饼图（报表设计器）](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [教程：向报表添加条形图（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [教程：向报表添加条形图（报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [教程：向报表添加饼图（报表生成器）](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [教程：向报表添加饼图（报表设计器）](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

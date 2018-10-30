@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d533acbbc99d02c644d910e1b2ee3555d58bece0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2cc79176f0c52cd1fdceae0d04d46b4279e9d50
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699495"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030746"
 ---
 # <a name="role-assignments---modify-or-delete"></a>角色分配 - 修改或删除
   角色分配将组或用户帐户映射到包含可执行任务的预定义的角色定义。 角色分配确定用户可针对文件夹、报表、模型或其他内容类型执行的操作类型。 若要创建、修改或删除角色分配，请使用报表管理器。 在为特定用户或组创建了角色分配之后，您还可以通过选择其他角色来修改它。 如果要撤消对报表报务器的权限，可从报表服务器删除角色分配。  
@@ -34,7 +34,7 @@ ms.locfileid: "47699495"
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>修改或删除系统角色分配  
   
-1.  启动 [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  启动 [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
   
 2.  单击 **“网站设置”**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47699495"
 ## <a name="see-also"></a>另请参阅  
  [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [角色分配](../../reporting-services/security/role-assignments.md)   
- [“站点设置”页（报表管理器）](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [“新建系统角色分配: 编辑系统角色分配”页（报表管理器）](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [“站点设置”页（报表管理器）](https://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [“新建系统角色分配: 编辑系统角色分配”页（报表管理器）](https://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   

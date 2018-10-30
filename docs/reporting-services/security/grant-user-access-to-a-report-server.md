@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8994681f816de7d1f7b8d35eaee87d58b77c04ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2baff221e28428daaf57deb8aaec7e8eb6d0d267
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021851"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>授予用户对报表服务器的访问权限
 
@@ -96,9 +96,9 @@ ms.locfileid: "47711255"
 ## <a name="next-steps"></a>后续步骤
 
 [创建和管理角色分配](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[“新建角色分配: 编辑角色分配”页（报表管理器）](http://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
-[项的“安全性”属性页（报表管理器）](http://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
+[“新建角色分配: 编辑角色分配”页（报表管理器）](https://msdn.microsoft.com/library/3319ced0-4b86-42af-b18d-da41a625113c)   
+[项的“安全性”属性页（报表管理器）](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)   
 [角色分配](../../reporting-services/security/role-assignments.md)   
 [角色定义](../../reporting-services/security/role-definitions.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

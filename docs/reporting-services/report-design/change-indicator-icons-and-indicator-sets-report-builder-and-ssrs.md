@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08391bc16552540005098e1a52cd96d1a30b021f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8459e46364c2c0e80940b59fa2a520f3e29c86f1
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738655"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028856"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>更改指示器图标和指示器集（报表生成器和 SSRS）
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为分页报表提供的预先配置指示器集并非总是能够高效地描绘你的数据以及适合于传递的报表。 本主题提供的过程介绍如何更改指示器图标的外观，以及如何更改指示器集以便包括不同的指示器图标或者更多或更少的指示器图标。  
@@ -30,7 +30,7 @@ ms.locfileid: "47738655"
   
      根据需要，可以单击“表达式”(fx) 按钮以编辑设置该“颜色”选项的值的表达式。  
   
-     如果您单击了 **“其他颜色”**，则 **“选择颜色”** 对话框将打开，从中可以选择多种不同的颜色。 有关其选项的详细信息，请参阅[选择颜色对话框（报表生成器和 SSRS）](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 单击 **“确定”** 关闭 **“选择颜色”** 对话框。  
+     如果您单击了 **“其他颜色”**，则 **“选择颜色”** 对话框将打开，从中可以选择多种不同的颜色。 有关其选项的详细信息，请参阅[选择颜色对话框（报表生成器和 SSRS）](https://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)。 单击 **“确定”** 关闭 **“选择颜色”** 对话框。  
   
 4.  单击“确定” 。  
   

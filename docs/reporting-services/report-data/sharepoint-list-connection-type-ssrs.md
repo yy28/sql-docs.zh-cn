@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6963674fe21754b9194cf8b3024e85db7291e370
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 935749fe3bd88171892874b2643c6803a59fde92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780865"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50029816"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 列表连接类型 (SSRS)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47780865"
   
  查询设计器会自动显示您拥有足够访问权限的 SharePoint 列表。  
   
- 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
+ 有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)。  
   
 ##  <a name="Credentials"></a> 凭据  
  执行以下操作时需要提供凭据：运行查询、本地预览报表以及从报表服务器预览报表。 报表发布后，您可能需要更改数据源的凭据，以使报表在报表服务器上运行时，用于检索数据的权限有效。 可与此数据扩展插件一起使用的凭据类型取决于用作数据源的 SharePoint 列表的 SharePoint 技术配置。  
@@ -71,7 +71,7 @@ ms.locfileid: "47780865"
   
  有关 Microsoft BI 堆栈中声明身份验证支持的信息，请参阅 [在 Microsoft BI 堆栈中使用声明身份验证](http://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx)。  
   
- 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[在报表生成器中指定凭据](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)、[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)和 [Reporting Services 支持的数据源 (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
   
 ##  <a name="Query"></a> 查询  
  若要设计一个查询，请基于数据源创建新数据集，然后打开关联的查询设计器。 有关详细信息，请参阅 [创建共享数据集或嵌入数据集（报表生成器和 SSRS）](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)。  
@@ -90,7 +90,7 @@ ms.locfileid: "47780865"
   
  不支持从多个列表中选择字段。 可以为每个列表创建一个数据集并从每个数据集中选择字段。 如果这些列表具有通用字段，则可以使用绑定到一个数据集的 Tablix 数据区域中的 Lookup 函数从另一个未绑定到数据区域的数据集中检索值。 有关详细信息，请参阅 [Lookup 函数（报表生成器和 SSRS）](../../reporting-services/report-design/report-builder-functions-lookup-function.md)。  
   
--   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
+-   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
   
 -   **应用的筛选器**  ：在数据返回到报表中之前，限制从 SharePoint 列表返回的数据。 选择用于限制在列表中检索的数据的字段名称、运算符和值。 根据所选值的数据类型的不同，运算符也会有所不同。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47780865"
   
 -   **查询结果**  ：显示查询运行时返回的示例行。 如果 SharePoint 列表值在 SharePoint 站点上频繁更改，则您在查询结果窗格中看到的值可能不同于在报表中看到的值。  
   
--   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
+-   **所选字段**  ：显示所选的字段。 此窗格中的字段名称是 SharePoint 用户指定的友好名称。 在您关闭查询设计器后，将会在“报表数据”窗格的数据集字段集合中看到这些名称。 [“数据集属性”对话框 ->“字段”（报表生成器）](https://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)页介绍了唯一名称和友好名称的关系。  
   
 -   **应用的筛选器**  ：在数据返回到报表中之前，限制从 SharePoint 列表返回的数据。 选择用于限制在列表中检索的数据的字段名称、运算符和值。 根据所选值的数据类型的不同，运算符也会有所不同。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "47780865"
  [报表数据集 (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  提供访问报表数据的概述。  
   
- [报表生成器中的数据连接、数据源和连接字符串](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [报表生成器中的数据连接、数据源和连接字符串](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  提供有关数据连接和数据源的信息。  
   
  [报表的嵌入数据集和共享数据集（报表生成器和 SSRS）](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -178,7 +178,7 @@ ms.locfileid: "47780865"
  [数据集字段集合（报表生成器和 SSRS）](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  提供有关查询生成的数据集字段集合的信息。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](http://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [联机丛书](https://go.microsoft.com/fwlink/?linkid=121312)中 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 文档中的 [Reporting Services 支持的数据源 (SSRS) ](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  提供有关每个数据扩展插件的平台和版本支持的详细信息。  
 
 ## <a name="see-also"></a>另请参阅
@@ -187,4 +187,4 @@ ms.locfileid: "47780865"
 [对数据进行筛选、分组和排序](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

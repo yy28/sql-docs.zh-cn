@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3696e2e1a299a79ad0eea95db4783297474ea3b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030836"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>向报表添加级联参数（报表生成器和 SSRS）
   级联参数提供了一种管理大量报表数据的方法。 您可以定义一组相关参数，使一个参数的值列表取决于其他参数选取的值。 例如，第一个参数是独立的，并且可能提供产品类别列表。 当用户选中某个类别后，第二个参数则取决于第一个参数的值。 第二个参数的值根据所选类别中的子类别列表进行更新。 用户查看报表时，类别和子类别参数的值用于筛选报表数据。  
@@ -25,7 +25,7 @@ ms.locfileid: "47744015"
   
  顺序对于级联参数来说很重要，因为对较晚出现在列表中的参数的数据集查询将包含对较早出现在列表中的每个参数的引用。 在运行时，参数在“报表数据”窗格中的顺序确定参数查询在报表中的显示顺序，并由此确定用户选择每个连续参数值的顺序。  
   
- 有关创建具有多个值的级联参数以及包括“全选”功能的信息，请参阅 [如何创建“全选”多值级联参数](http://go.microsoft.com/fwlink/?LinkId=184757)。  
+ 有关创建具有多个值的级联参数以及包括“全选”功能的信息，请参阅 [如何创建“全选”多值级联参数](https://go.microsoft.com/fwlink/?LinkId=184757)。  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>使用包含多个相关参数的查询创建主数据集  
   

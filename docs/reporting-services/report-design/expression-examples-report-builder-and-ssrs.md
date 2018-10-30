@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d93386e89797d75a2e8139f4f7edb558bc64c6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccf47501d6240f942e8e550975699306d6bb58db
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031866"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>表达式示例（报表生成器和 SSRS）
 表达式通常在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分页报表中使用，以控制报表的内容和外观。 表达式以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]编写，可以使用内置函数、自定义代码、报表变量和组变量以及用户定义的变量。 表达式通常以等号 (=) 开头。 有关表达式编辑器和可以包括的引用类型的详细信息，请参阅[在报表中使用表达式（报表生成器和 SSRS）](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)和[添加表达式（报表生成器和 SSRS）](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)。  
@@ -69,9 +69,9 @@ ms.locfileid: "47779755"
  报表中的许多表达式都包含函数。 您可以使用这些函数来设置数据格式、应用逻辑和访问报表元数据。 可以编写使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 运行时库、 <xref:System.Convert> 和 <xref:System.Math> 命名空间中的函数的表达式。 您可以从其他程序集或自定义代码中向函数添加引用。 还可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中的类，其中包括 <xref:System.Text.RegularExpressions>。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic 函数  
- 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](http://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
+ 您可以使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 函数来处理文本框中所显示的数据，或者处理参数、属性或报表其他区域中所用的数据。 本部分举例说明了其中的一些函数。 有关详细信息，请参阅 [Visual Basic Runtime Library Members](https://go.microsoft.com/fwlink/?LinkId=198941) （Visual Basic 运行时库成员）。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](http://go.microsoft.com/fwlink/?LinkId=112024) 。  
+ [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 提供了许多自定义格式选项，例如，特定日期格式。 有关详细信息，请参阅 MSDN 上的 [格式化类型](https://go.microsoft.com/fwlink/?LinkId=112024) 。  
   
 ### <a name="math-functions"></a>数学函数  
   
@@ -514,7 +514,7 @@ ms.locfileid: "47779755"
  您可以在报表中使用自定义代码。 自定义代码嵌入在报表中，或存储在报表使用的自定义程序集中。 有关自定义代码的详细信息，请参阅[报表设计器的表达式中的自定义代码和程序集引用 (SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>使用组变量自定义聚合  
- 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](http://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
+ 您可以初始化特定组作用域的本地组变量的值，然后在表达式中包含对该变量的引用。 可以将组变量和自定义代码一起使用的方法之一是实现自定义聚合。 有关详细信息，请参阅 [Using Group Variables in Reporting Services 2008 for Custom Aggregation](https://go.microsoft.com/fwlink/?LinkId=128714)（在 Reporting Services 2008 使用组变量自定义聚合）。  
   
  有关变量的详细信息，请参阅 [报表和组变量集合引用（报表生成器和 SSRS）](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)。  
   

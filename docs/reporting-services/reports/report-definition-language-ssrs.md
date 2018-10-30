@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32b6a0b6748dbbd88c45c64ef3a3174d30d134a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028536"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -36,12 +36,12 @@ ms.locfileid: "47833595"
 -   支持其他命名空间和自定义元素的可扩展开放式架构。  
   
 ##  <a name="bkmk_RDL_Specifications"></a> RDL 规范  
- 若要下载特定架构版本的规范，请参阅 [报表定义语言规范](http://go.microsoft.com/fwlink/?linkid=116865)。  
+ 若要下载特定架构版本的规范，请参阅 [报表定义语言规范](https://go.microsoft.com/fwlink/?linkid=116865)。  
   
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 架构定义  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义语言 (RDL) 文件进行验证。 架构定义 RDL 元素可在 .rdl 文件中什么位置出现的规则。 元素包括其数据类型和基数，即允许的出现次数。 元素可以是简单的，也可以是复杂的。 简单元素没有子元素或属性。 复杂元素具有子元素以及可选具有属性。  
   
- 例如，此架构包含 RDL 元素 **ReportParameters**，它为复杂类型 **ReportParametersType**。 根据约定，元素的复杂类型是元素名称后跟单词 **Type**。 **ReportParameters** 元素可包含在 **报表** 元素（复杂类型）中，并可包含 **ReportParameter** 元素。 **ReportParameterType** 是只能为下列值之一的简单类型： **Boolean**、 **DateTime**、 **Integer**、 **Float**或 **String**。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
+ 例如，此架构包含 RDL 元素 **ReportParameters**，它为复杂类型 **ReportParametersType**。 根据约定，元素的复杂类型是元素名称后跟单词 **Type**。 **ReportParameters** 元素可包含在 **报表** 元素（复杂类型）中，并可包含 **ReportParameter** 元素。 **ReportParameterType** 是只能为下列值之一的简单类型： **Boolean**、 **DateTime**、 **Integer**、 **Float**或 **String**。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
  可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取：`http://servername/reportserver/reportdefinition.xsd`。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47833595"
 |**语言**|具有包含语言和区域性代码（例如 "en-us" 表示“美国英语”）的文本值的属性。 该值必须是特定语言，或者是在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]中为其定义了默认语言的非特定语言。|  
 |**名称**|具有字符串文本值的属性。 名称在该项的命名空间中必须唯一。 如果未指定，则项的命名空间为具有名称的最内层包含对象。|  
 |**NormalizedString**|具有已规范化的字符串文本值的属性。|  
-|**大小**|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](http://go.microsoft.com/fwlink/?LinkId=9257)（CSS 长度单位参考）。<br /><br /> 在 RDL 中， **Size** 的最大值为 160 in。 最小大小为 0 in。|  
+|**大小**|大小元素必须包含数字（以句点字符作为可选的小数分隔符）。 数字后面必须是 CSS 长度单位（例如 cm、mm、in、pt 或 pc）的指示符。 数字和指示符之间的空格是可选的。 有关大小指示符的详细信息，请参阅 [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257)（CSS 长度单位参考）。<br /><br /> 在 RDL 中， **Size** 的最大值为 160 in。 最小大小为 0 in。|  
 |**String**|具有字符串文本值的属性。|  
 |**UnsignedInt**|具有无符号整数 (uint32) 值的属性。|  
 |**Variant**|具有任何简单 XML 类型的属性。|  

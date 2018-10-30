@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 168bd862f78b10726b3d62146fa41a6a3620d16d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619976"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030666"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>表达式中的数据类型（报表生成器和 SSRS）
   数据类型表示不同种类的数据，以便能够有效地进行存储和处理。 典型的数据类型包括文本（也称为字符串）、带有小数位和不带小数位的数字、日期和时间以及图像。 报表中的值必须是报表定义语言 (RDL) 数据类型。 在报表中显示某个值时，您可以根据您的喜好设置该值的格式。 例如，表示货币的字段将以浮点数的形式存储在报表定义中，但是可以根据您所选择的格式属性以不同的格式显示该字段。  
@@ -87,7 +87,7 @@ ms.locfileid: "47619976"
 |只需 DateTimeOffset 值的 DateTime 部分|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |只需 DateTimeOffset 值的 Offset 部分|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅 [函数 (Visual Basic)](http://go.microsoft.com/fwlink/?linkid=111483)。  
+ 还可以使用 Format 函数控制值的显示格式。 有关详细信息，请参阅 [函数 (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483)。  
   
 ## <a name="advanced-examples"></a>高级示例  
  使用不对数据源中所有数据类型提供转换支持的数据访问接口连接到数据源时，不支持的数据源类型的默认数据类型为 String。 下面的示例提供针对作为字符串返回的特定数据类型的解决方案。  
@@ -116,7 +116,7 @@ ms.locfileid: "47619976"
   
          如果 `MyDateTime.Value` 字符串具有 UTC 偏移量，则 `DateTime.Parse` 函数将首先针对 UTC 偏移量进行调整（将上午 7 点 - [`+08:00`] 调整为 UTC 时间的前一天 晚上 11 点）。 随后， `DateTime.Parse` 函数将应用本地报表服务器的 UTC 偏移量，如有必要，将针对夏时制再次调整时间。 例如，在华盛顿州的雷德蒙德（Redmond），针对夏时制调整的本地时间偏移量为 `[-07:00]`，即比晚上 11 点早 7 个小时。 结果为以下 **DateTime** 值： `2007-07-06 04:07:07 PM` （2007 年 7 月 6 日下午 4:07）。  
   
- 有关将字符串转换为 **DateTime** 数据类型的详细信息，请参阅 MSDN 上的 [分析日期和时间字符串](http://go.microsoft.com/fwlink/?LinkId=89703)、 [针对特定区域性格式化日期和时间](http://go.microsoft.com/fwlink/?LinkId=89704)、 and [Choosing Between DateTime、 DateTimeOffset、 and TimeZoneInfo](http://go.microsoft.com/fwlink/?linkid=110652) （在 DateTime、DateTimeOffset 和 TimeZoneInfo 之间进行选择）。  
+ 有关将字符串转换为 **DateTime** 数据类型的详细信息，请参阅 MSDN 上的 [分析日期和时间字符串](https://go.microsoft.com/fwlink/?LinkId=89703)、 [针对特定区域性格式化日期和时间](https://go.microsoft.com/fwlink/?LinkId=89704)、 and [Choosing Between DateTime、 DateTimeOffset、 and TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) （在 DateTime、DateTimeOffset 和 TimeZoneInfo 之间进行选择）。  
   
 -   向报表数据集添加使用表达式提取部分字符串的新计算字段。 有关详细信息，请参阅[在“报表数据”窗格中添加、编辑和刷新字段（报表生成器和 SSRS）](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   

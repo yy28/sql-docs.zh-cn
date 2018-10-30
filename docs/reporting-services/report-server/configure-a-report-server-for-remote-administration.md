@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6a8c6213a215c1ea88ca84d4156e74b36ae81e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020331"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>配置报表服务器以进行远程管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以通过本地或远程方式配置报表服务器实例。 若要配置远程报表服务器实例，可以使用 Reporting Services 配置工具或编写使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供程序的自定义代码。 Reporting Services 配置工具为 WMI 提供程序提供了一个图形界面，这样您便可以直接配置报表服务器，而不必编写代码。 启动该工具时，可以指定要连接的远程服务器。  
@@ -39,7 +39,7 @@ ms.locfileid: "47805075"
   
  某些组织的组策略阻止某些操作系统或用户进行远程服务器管理。 开始修改防火墙设置之前，请与网络管理员进行核实，以确认是否存在对远程管理的限制。  
   
- 有关详细信息，请参阅 MSDN 上 Platform SDK 文档中的 [Connecting Through Windows Firewall](http://go.microsoft.com/fwlink/?LinkId=63615) （通过 Windows 防火墙连接）。  
+ 有关详细信息，请参阅 MSDN 上 Platform SDK 文档中的 [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) （通过 Windows 防火墙连接）。  
   
 ## <a name="tasks"></a>“任务”  
  启用远程报表服务器配置的任务包括：  

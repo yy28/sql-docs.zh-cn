@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 300e3c89da8fb37120baa211d2701b60f59b7716
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4edaecf62a1f78c90954b60ff0c08ce462993dd3
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50020341"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]RsReportServer.config 文件存储报表服务器 Web 服务和后台处理所用的设置。 所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序都在一个进程中运行，该进程读取 RSReportServer.config 文件中存储的配置设置。 本机模式和 SharePoint 模式的报表服务器都使用 RSReportServer.config，但是这两个模式并不使用配置文件中的所有相同设置。 文件的 SharePoint 模式版本较小，因为针对 SharePoint 模式的许多设置都存储于 SharePoint 配置数据库中，而非存储于文件中。 本主题介绍为本机模式和 SharePoint 模式安装的默认配置文件，以及该配置文件控制的一些重要设置和行为。  
@@ -57,7 +57,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  下表提供有关在文件的第一部分显示的常规配置设置的信息。 将按设置在配置文件中的显示顺序依次列出： 表的最后一列指示设置是适用于本机模式报表服务器 **(N)** 还是 SharePoint 模式报表服务器 **(S)** 或两者均适用。  
   
 > [!NOTE]  
->  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
+>  在本主题中，“最大整数”是指 INT_MAX 值 2147483647。  有关详细信息，请参阅[整数限制](https://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (https://msdn.microsoft.com/library/296az74e(v=vs.110).aspx)。  
   
 |设置|描述|“模式”|  
 |-------------|-----------------|----------|  
@@ -90,7 +90,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
  URLReservations 为当前实例定义报表服务器 Web 服务和 Web 门户的 HTTP 访问。 URL 会在配置报表服务器时保留和存储在 HTTP.SYS 中。  
   
 > [!WARNING]  
->  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 预留。 有关详细信息，请参阅[配置备用访问映射 (http://technet.microsoft.com/library/cc263208(office.12).aspx)](http://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
+>  对于 SharePoint 模式，在 SharePoint 管理中心中配置 URL 预留。 有关详细信息，请参阅[配置备用访问映射 (https://technet.microsoft.com/library/cc263208(office.12).aspx)](https://technet.microsoft.com/library/cc263208\(office.12\).aspx)。  
   
  请不要直接在该配置文件中修改 URL 预留。 请始终使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或报表服务器 WMI 提供程序创建或修改用于本机模式报表服务器的 URL 预留。 如果在配置文件中修改此值，则可能会破坏预留，这将导致服务器运行时错误或在卸载软件时将孤立的预留留在未删除的 HTTP.SYS 中。 有关详细信息，请参阅[配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)和[配置文件中的 URL（SSRS 配置管理器）](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。  
   
@@ -236,7 +236,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**， **RenderingExtension**|这些设置用于特意排除那些无法与文件共享传递协同工作的导出格式。 这些格式通常用于交互式报表、预览或预加载报表缓存。 它们无法生成便于桌面应用程序查看的应用程序文件。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> 报表服务器电子邮件扩展插件配置设置  
- 报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅 [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
+ 报表服务器电子邮件使用 SMTP 网络设备向电子邮件地址发送报表。 必须对此传递扩展插件进行配置才能使用。 有关详细信息，请参阅 [针对电子邮件传递配置报表服务器（SSRS 配置管理器）](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 和 [Reporting Services 中的电子邮件传递](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)。  
   
 |设置|描述|  
 |-------------|-----------------|  
@@ -381,8 +381,8 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |-------------|-----------------|  
 |**MaxConnections**|指定与 Bing 地图 Web 服务之间的最大连接数。|  
 |**超时**|指定从 Bing 地图 Web 服务等待响应时的超时（秒）。|  
-|**AppID**|指定要用于 Bing 地图 Web 服务的应用程序标识符 (AppID)。 **(Default)** 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认 AppID。<br /><br /> 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](http://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 请勿更改此值，除非您必须为您自己的 Bing 地图许可协议指定自定义 AppID。 当您更改 AppID 时，不必重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，更改就可以生效。|  
-|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值为 **Default**。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](http://go.microsoft.com/fwlink/?LinkId=153353)。|  
+|**AppID**|指定要用于 Bing 地图 Web 服务的应用程序标识符 (AppID)。 **(Default)** 指定 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 默认 AppID。<br /><br /> 有关在报表中使用 Bing 地图图块的详细信息，请参阅 [其他使用条款](https://go.microsoft.com/fwlink/?LinkId=151371)。<br /><br /> 请勿更改此值，除非您必须为您自己的 Bing 地图许可协议指定自定义 AppID。 当您更改 AppID 时，不必重新启动 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，更改就可以生效。|  
+|**CacheLevel**|从 System.Net.Cache 的 HttpRequestCacheLevel 枚举指定一个值。 默认值为 **Default**。 有关详细信息，请参阅 [HttpRequestCacheLevel 枚举](https://go.microsoft.com/fwlink/?LinkId=153353)。|  
   
 ##  <a name="bkmk_nativedefaultfile"></a> 本机模式报表服务器的默认配置文件  
  默认情况下，rsreportserver.config 文件安装到以下位置：  
@@ -840,6 +840,6 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [初始化 Report Server（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [存储加密的 Report Server 数据（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services Configuration Manager（本机模式）](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
   
   

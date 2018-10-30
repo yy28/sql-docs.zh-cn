@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7d0aca5eaf6f0e56eab3b991611199334d003c4a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 7309f4669a0672ca65b0c74961c14e83d073a4c6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905997"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030376"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools 中的 Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是用于创建商业智能解决方案的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 是用于创建商业智能解决方案的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 环境。 SSDT 是报表设计器创作环境，你可以在其中打开、修改、预览、保存和部署 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分页报表定义、共享数据源、共享数据集和报表部件。 SQL Server 不提供 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。 下载 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。 
   
  本主题介绍用于 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]解决方案、项目、项目模板和配置，以及可在报表设计器中使用的视图、菜单、工具栏和快捷键。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48905997"
   
  使用“属性”窗格，可以：  
   
--   为设计图面上的当前选定的项设置属性。 某些属性提供了值下拉列表。 您也可以直接在单元格中键入值。 某些属性包含值集合，该集合用值“(集合)”表示。 大部分属性都可以接受表达式；复杂的表达式用值“\<Expression>”表示。 单击“\<Expression>”可打开“表达式”对话框。 有关详细信息，请参阅 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)。  
+-   为设计图面上的当前选定的项设置属性。 某些属性提供了值下拉列表。 您也可以直接在单元格中键入值。 某些属性包含值集合，该集合用值“(集合)”表示。 大部分属性都可以接受表达式；复杂的表达式用值“\<Expression>”表示。 单击“\<Expression>”可打开“表达式”对话框。 有关详细信息，请参阅 [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)。  
   
 -   使用“属性”窗格工具栏按钮可将网格从类别视图更改为字母顺序视图。 在类别视图中，您可能需要展开类别才能看到它下面的所有属性。 若要打开某项的“属性”对话框，请单击工具栏上的“属性页”按钮，或者右键单击该项并单击“属性”。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "48905997"
   
 
 ##  <a name="bkmk_SourceControl"></a> 源代码管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 可与源插件集成。使用“选项”对话框中的“项目和解决方案”页可指定插件和配置属性。**  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> 自定义报表模板  
  若要将自定义报表用作新报表的模板，只需将其复制到安装 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 的计算机上的 ReportProject 文件夹。 默认情况下，此文件夹位于以下位置： `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 向报表项目中添加新项时，自定义报表将显示在“模板”窗格中。  
@@ -305,10 +305,10 @@ ms.locfileid: "48905997"
   
 ## <a name="next-steps"></a>后续步骤
 
-[下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
+[下载 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)
 [解决方案资源管理器](../../ssms/solution/solution-explorer.md)   
 [Reporting Services 报表](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [报表定义语言](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [SQL Server Data Tools 中的部署和版本支持](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3a7759473698ebdae0a9e97e7487f8812983d5b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533391424ab1eeacb52d59e56070f0b874320942
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849145"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030386"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>创建、修改和删除数据驱动订阅
   数据驱动订阅是一种基于查询的订阅，可以在运行时获取用于处理该订阅的数据值。 当触发订阅时，会处理一个查询以获取有关收件人、报表传递选项、呈现格式和参数设置的最新信息。 将查询结果与订阅定义相结合，以创建动态订阅，该订阅使用了已在雇员数据库、客户数据库或任何其他数据库（包含可用作订阅服务器数据的信息）中维护的数据。  
@@ -36,7 +36,7 @@ ms.locfileid: "47849145"
 -   [运行订阅](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> 管理和删除数据驱动订阅  
- 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。  
+ 不能通过报表管理器的“管理作业”页来停止或删除正在进行的数据驱动订阅。 因此，使用共享计划触发数据驱动订阅是有利的。 在这种情况下，如果要暂时禁止处理某个订阅，只需暂停触发该订阅的计划即可。 有关详细信息，请参阅 [（旧）创建和管理本机模式报表服务器的订阅](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)。  
   
  若要删除数据驱动订阅，请从“我的订阅”页或报表的“订阅”页中选定该订阅，再单击 **“删除”**。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47849145"
 ## <a name="see-also"></a>另请参阅  
  [创建和管理本机模式报表服务器的订阅](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [报表管理器（SSRS 本机模式）](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [“订阅”页（报表管理器）](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [“我的订阅”页（报表管理器）](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
+ [报表管理器（SSRS 本机模式）](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [（旧）创建和管理本机模式报表服务器的订阅](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [“订阅”页（报表管理器）](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
+ [“我的订阅”页（报表管理器）](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   
   

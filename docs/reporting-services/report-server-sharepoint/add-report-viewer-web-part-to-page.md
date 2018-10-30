@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e0b05a9d3f78215a11d5ae4071a3a3ed39e225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b9adedc8637acf84feccd5b24fa540892399ebc
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595605"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030416"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>将 SQL Server Reporting Services 报表查看器 Web 部件添加到 SharePoint 页
 
@@ -74,4 +74,4 @@ ms.locfileid: "47595605"
 * Power BI 报表不能与报表查看器 Web 部件一起使用。
 * 如果未看到报表查看器 Web 部件，请确保[已部署报表查看器 Web 部件](deploy-report-viewer-web-part.md)，以便将其添加到页。
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

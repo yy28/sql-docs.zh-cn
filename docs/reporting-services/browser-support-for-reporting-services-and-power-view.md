@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96c7e313bea6d36d62267413618b4a90bfdd2d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50021207"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的浏览器支持
 
@@ -82,7 +82,7 @@ ms.locfileid: "47695901"
 
  **(+)** 最新公开发布的版本
 
- 如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]相集成的 SharePoint 产品，请参阅  [在 SharePoint 2016 中计划浏览器支持](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
+ 如果当前使用与 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]相集成的 SharePoint 产品，请参阅  [在 SharePoint 2016 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 
 ### <a name="authentication-requirements"></a>身份验证要求
 
@@ -142,15 +142,15 @@ ms.locfileid: "47695901"
 
  **(+)** 最新公开发布的版本
 
- 有关 SharePoint 2016 浏览器支持的详细信息，请参阅 [在 SharePoint 2013 中计划浏览器支持](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
+ 有关 SharePoint 2016 浏览器支持的详细信息，请参阅 [在 SharePoint 2013 中计划浏览器支持](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)。
 
 ## <a name="next-steps"></a>后续步骤
 
 [在 Web 门户中查找和查看报表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
-[Web 门户（SSRS 本机模式）](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Web 门户（SSRS 本机模式）](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 访问参数引用](../reporting-services/url-access-parameter-reference.md)  
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
 

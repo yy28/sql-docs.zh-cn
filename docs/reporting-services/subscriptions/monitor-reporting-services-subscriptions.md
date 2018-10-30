@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 98acaa9f56b509a0894c9ec512f0df02c2cfd3c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5489f4086cf8bfb7b2609538a0cda5a1c2515ad
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762375"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100178"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>监视 Reporting Services 订阅
   你可以从用户界面、Windows PowerShell 或日志文件监视 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 可用于监视的选项取决于你正在运行的报表服务器的模式。  
@@ -118,7 +118,7 @@ ms.locfileid: "47762375"
  如果存在导致订阅变为不活动的条件，当报表服务器运行订阅时，订阅会反映此情况。 如果安排订阅在每周五早上 2:00 传递报表，而订阅使用的传递扩展插件在周一上午 9:00 被卸载，则订阅直到周五早上 2:00 才会反映其不活动状态。  
   
 ## <a name="see-also"></a>另请参阅  
- [（旧）创建和管理本机模式报表服务器的订阅](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [（旧）创建和管理本机模式报表服务器的订阅](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [订阅和传递 (Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

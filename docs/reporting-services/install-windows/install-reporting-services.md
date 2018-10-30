@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50028188"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安装 SQL Server Reporting Services（2017 及更高版本）
 
@@ -130,6 +130,6 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 
 安装报表服务器后，开始创建报表并将其部署到报表服务器。 有关如何开始使用报表生成器的信息，请参阅[安装报表生成器](../../reporting-services/install-windows/install-report-builder.md)。
 
-要使用 SQL Server Data Tools 创建报表，请[下载 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)。
+要使用 SQL Server Data Tools 创建报表，请[下载 SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)。
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)
