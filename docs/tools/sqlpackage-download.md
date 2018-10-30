@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: ecefe3f1abe47a1a4f1af967cb1a15ee9f4dd52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322a9ce1992bb2b4d0215cfefa747ea56e68472f
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050919"
 ---
 # <a name="download-and-install-sqlpackage"></a>下载并安装 sqlpackage
 
@@ -23,11 +23,11 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
 
 下载并安装最新的.NET Framework 版本和 macOS 和 Linux 预览版：
 
-|平台|下载|发布日期|版本|生成|
+|平台|下载|发布日期|版本|生成
 |:---|:---|:---|:---|:---|
-|Windows|[安装程序](https://go.microsoft.com/fwlink/?linkid=875508)|2018 年 6 月 22日日|17.8|14.0.4079.2|
-|macOS（预览版）|[.zip](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
-|Linux（预览版）|[.zip](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
+|Windows|[MSI 安装程序](https://go.microsoft.com/fwlink/?linkid=2033947)|2018 年 10 月 24日日|18.0|15.0.4200.1|
+|macOS（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=873927)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
+|Linux（预览版）|[zip 文件](https://go.microsoft.com/fwlink/?linkid=873926)|2018 年 5 月 9 日 |0.0.1|15.0.4057.1|
 
 有关最新版本的详细信息，请参阅[发行说明](sqlpackage-release-notes.md)。
 
@@ -35,9 +35,10 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
 
 此版本的 sqlpackage 包括标准 Windows 安装程序体验和.zip 格式： 
 
-1. 下载并运行[DacFramework.msi Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=875508)。
+1. 下载并运行[DacFramework.msi Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=2033947)。
 2. 打开一个新的命令提示符窗口，并运行 sqlpackage.exe
-    - sqlpackage 将安装到```C:\Program Files\Microsoft SQL Server\140\DAC\bin```文件夹
+    - sqlpackage 将安装到```C:\Program Files\Microsoft SQL Server\150\DAC\bin```文件夹
+    - 安装 x86 版本在 x64 上的 sqlpackage 安装到计算机，```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```文件夹
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>获取适用于 macOS 的 sqlpackage （预览版）
 
@@ -47,7 +48,8 @@ sqlpackage 在 Windows、 macOS 和 Linux 上运行。
    **.zip 安装：**
 
    ```bash
-   mv ~/Downloads/sqlpackage-linux-<version string> ~/sqlpackage 
+   mkdir sqlpackage
+   unzip ~/Downloads/sqlpackage-osx-<version string>.zip ~/sqlpackage 
    echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    source ~/.bash_profile
    sqlpackage

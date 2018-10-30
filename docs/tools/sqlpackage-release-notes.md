@@ -10,16 +10,34 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 55df71c62fddfe6d21abb27235b287963b946709
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c146426a9c325eec721e3289d711d0a00a632e2c
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50050849"
 ---
 # <a name="sqlpackage-release-notes"></a>sqlpackage 发行说明
 
 [下载最新版本](sqlpackage-download.md)
+
+## <a name="sqlpackage-180"></a>sqlpackage 18.0
+
+发布日期： 2018 年 10 月 24 日  
+生成： 15.0.4200.1 
+
+版本包括以下功能和修补程序：
+
+- 添加了的对数据库的兼容性级别 150。
+- 添加了的对托管实例。
+- 添加了的 MaxParallelism 命令行参数来指定的数据库操作的并行度。
+- 添加 AccessToken 命令行参数，以连接到 SQL Server 时指定的身份验证令牌。
+- 添加了对导入流 BLOB/CLOB 数据类型的支持。
+- 添加了对标量 UDF 支持 INLINE 选项。
+- 添加了的对图形表 'MERGE' 语法。
+- 图形表的固定无法解析伪列。
+- 修复了与内存优化文件组时内存优化表用于创建数据库。
+- 修复了包括外部表的扩展的属性。
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
@@ -29,7 +47,6 @@ ms.locfileid: "47754326"
 此版本包括以下修复内容：
 
 - 改进了连接失败，包括 SqlClient 异常消息的错误消息。
-- 添加了的 MaxParallelism 命令行参数来指定的数据库操作的并行度。
 - 支持对导入/导出的单个分区索引的索引压缩。
 - 修复 SQL 2017 和更高版本的 XML 列集的反向工程问题。
 - 修复了问题，脚本将数据库兼容级别 140 已忽略为 Azure SQL 数据库。
