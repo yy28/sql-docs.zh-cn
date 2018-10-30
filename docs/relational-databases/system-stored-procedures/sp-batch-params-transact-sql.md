@@ -40,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tsqlbatch =**] **'***tsqlbatch*****  
+ [ **@tsqlbatch=**] **'***tsqlbatch*****  
  是一个 Unicode 字符串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]语句或批处理信息是所需的参数。 *tsqlbatch*是**nvarchar （max)** 或隐式转换为**nvarchar （max)**。  
   
 ## <a name="return-code-values"></a>返回代码值  
