@@ -53,7 +53,7 @@ sp_fulltext_table
  [ **@tabname=**] **'***qualified_table_name***'**  
  由一部分或两部分组成的表的名称。 表必须在当前数据库中。 *qualified_table_name*是**nvarchar(517)**，无默认值。  
   
- [  **@action=**] **'***操作*****  
+ [  **@action=**] **'***操作***’**  
  要执行的操作。 *操作*是**nvarchar （50)**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  

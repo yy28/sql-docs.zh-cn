@@ -68,7 +68,7 @@ ms.locfileid: "48072627"
   
 12. 从**输入掩码**列表中，选择负数的格式。  
   
-13. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅 [Add Attributes to a Change Tracking Group &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
+13. 根据需要，选择 **“启用更改跟踪”** 可以跟踪对属性组的更改。 有关详细信息，请参阅 [向更改跟踪组添加属性 &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 。  
   
 14. 单击 **“保存属性”**。  
   

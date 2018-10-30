@@ -57,7 +57,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以创建全文索引的文本数据存储中的列**varbinary （max)** 或**映像**数据类型。 不对图像和图片进行索引。  
   
- [  **@action=** ] **'***操作*****  
+ [  **@action=** ] **'***操作***’**  
  要执行的操作。 *操作*是**varchar （20)**，无默认值可以是以下值之一。  
   
 |ReplTest1|Description|  

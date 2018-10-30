@@ -49,7 +49,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  全文目录名称。 每个数据库的目录名称必须是唯一的。 *fulltext_catalog_name*是**sysname**。  
   
- [  **@action=**] **'***操作*****  
+ [  **@action=**] **'***操作***’**  
  要执行的操作。 *操作*是**varchar （20)**，可以是下列值之一。  
   
 > [!NOTE]  
