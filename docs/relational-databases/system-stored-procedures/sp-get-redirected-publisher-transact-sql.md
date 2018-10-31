@@ -40,7 +40,7 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] **'***original_publisher*****  
+ [ **@original_publisher** =] **'***original_publisher***’**  
  要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  

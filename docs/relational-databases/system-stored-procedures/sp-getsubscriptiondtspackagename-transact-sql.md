@@ -40,10 +40,10 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  发布的名称。 **'***出版物***'** 是**sysname**，无默认值。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [  **@subscriber=**] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器*数据类型为 sysname，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

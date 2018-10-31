@@ -39,10 +39,10 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@source_object =**] **'***source_object*****  
+ [  **@source_object =**] **'***source_object***’**  
  是源对象的名称。 *source_object*是**nvarchar(386)**，无默认值。  
   
- [  **@rowguid=**] **'***rowguid*****  
+ [  **@rowguid=**] **'***rowguid***’**  
  删除类型的行标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
  [  **@delete_type=**] *delete_type* **输出**  
