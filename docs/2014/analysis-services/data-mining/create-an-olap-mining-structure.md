@@ -125,7 +125,7 @@ ms.locfileid: "48134539"
   
 -   对于第二个筛选器，将选择 Customer 维度，选择 Gender 属性，并且从属性值列表中选择“Female”。  
   
- 在已创建挖掘结构后，可以修改多维数据集数据和筛选条件的定义。 有关详细信息，请参阅 [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md)。  
+ 在已创建挖掘结构后，可以修改多维数据集数据和筛选条件的定义。 有关详细信息，请参阅[挖掘结构筛选源多维数据集](../filter-the-source-cube-for-a-mining-structure.md)。  
   
  **“挖掘结构”** 选项卡和 **“挖掘模型”** 选项卡均提供通过单击 **“定义多维数据集切片”** 向现有挖掘结构添加筛选器的选项。 **“多维数据集切片”** 对话框可帮助您通过从下拉列表中选择值来生成有效的 MDX 筛选表达式。  
   

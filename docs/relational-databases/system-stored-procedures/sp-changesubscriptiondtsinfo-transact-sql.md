@@ -46,7 +46,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
  推送订阅的分发代理作业 ID。 *job_id*是**varbinary(16)**，无默认值。 若要查找的分发作业 ID，请运行**sp_helpsubscription**或**sp_helppullsubscription**。  
   
  [ **@dts_package_name**=] **'***dts_package_name*****  
- 指定 DTS 包的名称。 *dts_package_name*是**sysname**，默认值为 NULL。 例如，若要指定包名为**DTSPub_Package**，则会指定`@dts_package_name = N'DTSPub_Package'`。  
+ 指定 DTS 包的名称。 *dts_package_name* 是 **sysname** ，默认值为 NULL。 例如，若要指定包名为**DTSPub_Package**，则会指定`@dts_package_name = N'DTSPub_Package'`。  
   
  [ **@dts_package_password**=] **'***dts_package_password*****  
  指定包上的密码。 *dts_package_password*是**sysname**默认值为 NULL，这指定密码属性保持不变。  

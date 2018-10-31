@@ -112,7 +112,7 @@ sp_add_alert [ @name = ] 'name'
  [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
  未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 版中实现。 *raise_snmp_trap*是**tinyint**，默认值为 0。  
   
- [  **@performance_condition =** ] **'***performance_condition*****  
+ [ **@performance_condition =** ] **'***performance_condition*****  
  格式表示的值*itemcomparatorvalue*。 *performance_condition*是**nvarchar(512)** 默认值为 NULL，并包含这些元素。  
   
 |格式元素|Description|  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 190d354ffc7f5e0c0c0bd3fb4cf5c99a69890271
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864385"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150178"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教程：使用 SSMS 的其他提示和技巧
 本教程将提供一些使用 SQL Server Management Studio (SSMS) 的其他技巧。 本文介绍如何： 
@@ -133,7 +133,7 @@ ms.locfileid: "47864385"
 
 
 ## <a name="filter-objects-in-object-explorer"></a>在对象资源管理器中筛选对象
-可筛选对象，以便在具有多个对象的数据库中查找特定对象。 本节介绍如何筛选表，但可在对象资源管理器中的任何其他节点中使用以下步骤：
+在具有多个对象的数据库中，可以使用筛选功能来搜索特定表、视图等。本节介绍如何筛选表，但可在对象资源管理器中的任何其他节点中使用以下步骤：
 
 1. 连接到 SQL Server。
 2. 展开“数据库” > “AdventureWorks” > “表”。 此时将显示数据库中的所有表。

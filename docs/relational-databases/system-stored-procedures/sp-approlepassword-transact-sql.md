@@ -44,10 +44,10 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
   
 ## <a name="arguments"></a>参数  
  [  **@rolename =** ] **'***角色*****  
- 是应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
+ 是应用程序角色的名称。 *角色* 是 **sysname** ，无默认值。 *角色*必须存在于当前数据库。  
   
  [  **@newpwd =** ] **'***密码*****  
- 应用程序角色的新密码。 *密码*是**sysname**，无默认值。 *密码*不能为 NULL。  
+ 应用程序角色的新密码。 *密码* 是 sysname** ，无默认值。 *密码*不能为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  

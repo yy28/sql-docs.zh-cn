@@ -9,12 +9,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3628c3b8e3e740beb93c5da744f0336a1409d167
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 881189fdec593d48b443d85ee548ca1bb80b24a8
+ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461062"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50146052"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何参与编辑 SQL Server 文档
 
@@ -89,7 +89,7 @@ ms.locfileid: "49461062"
 
 ![“适用范围”文本](./media/sql-server-docs-contribute/applies-to.png)
 
-若要查找文章的正确适用范围包含，请使用以下提示：
+要为文章查找正确的“适用范围”include 文件，请参考以下提示：
 
 - 有关常用 include 的列表，请参阅 [SQL Server 版本和 applies-to include文件](applies-to-includes.md)。
 - 查看包含相同功能或相关任务的其他文章。 如果编辑此文章，则可针对适用范围包含链接复制 Markdown（可取消编辑而不提交编辑）。

@@ -142,7 +142,7 @@ ms.locfileid: "48207553"
   
      完成数据源设置并关闭数据源向导。  
   
-6.  向连接字符串添加 **MultiSubnetFailover=Yes** ，以便更快地检测和连接到活动服务器。 有关此属性的详细信息，请参阅 [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
+6.  向连接字符串添加 **MultiSubnetFailover=Yes** ，以便更快地检测和连接到活动服务器。 有关此属性的详细信息，请参阅 [对高可用性、灾难恢复的 SQL Server Native Client 支持](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。  
   
      此属性不显示在属性网格中。 要添加该属性，请右键单击数据源并选择“查看代码”。 将 `MultiSubnetFailover=Yes` 添加到连接字符串。  
   

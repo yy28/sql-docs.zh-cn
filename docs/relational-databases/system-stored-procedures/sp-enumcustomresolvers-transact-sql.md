@@ -39,7 +39,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor =**] **'***分发服务器*****  
+ [ **@distributor =**] **'***分发服务器*****  
  自定义冲突解决程序所在的分发服务器的名称。 *分发服务器*是**sysname**，默认值为 NULL。 *此参数已弃用，将在未来的版本中删除。*  
   
 ## <a name="result-sets"></a>结果集  

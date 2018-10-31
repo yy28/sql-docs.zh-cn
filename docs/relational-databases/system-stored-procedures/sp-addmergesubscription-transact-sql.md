@@ -66,20 +66,20 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。 该发布必须已存在。  
   
- [  **@subscriber =**] **'***订阅服务器*****  
+ [ **@subscriber =**] **'***订阅服务器*****  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db*****  
+ [ **@subscriber_db=**] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
- [  **@subscription_type=**] **'***subscription_type*****  
- 是订阅的类型。 *subscription_type*是**nvarchar(15)**，使用默认值为 PUSH。 如果**推送**、 推送订阅添加和分发服务器上添加合并代理。 如果**拉取**，而无需在分发服务器上添加合并代理添加请求订阅。  
+ [ **@subscription_type=**] **'***subscription_type*****  
+ 是订阅的类型。 *subscription_type* 是 **nvarchar(15)** ，使用默认值为 PUSH。 如果**推送**、 推送订阅添加和分发服务器上添加合并代理。 如果**拉取**，而无需在分发服务器上添加合并代理添加请求订阅。  
   
 > [!NOTE]  
 >  匿名订阅无需使用此存储过程。  
   
- [  **@subscriber_type=**] **'***subscriber_type*****  
- 订阅服务器的类型。 *subscriber_type*是**nvarchar(15)**，可以是下列值之一。  
+ [ **@subscriber_type=**] **'***subscriber_type*****  
+ 订阅服务器的类型。 *subscriber_type* 是 **nvarchar(15)** ，可以是下列值之一。  
   
 |ReplTest1|Description|  
 |-----------|-----------------|  
@@ -91,8 +91,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@subscription_priority=**] *subscription_priority*  
  指示订阅的优先级的数字。 *subscription_priority*是**实际**，默认值为 NULL。 对于本地订阅和匿名订阅，优先级为 0.0。 对于全局订阅，优先级必须小于 100.0。  
   
- [  **@sync_type=**] **'***sync_type*****  
- 订阅同步类型。 *sync_type*是**nvarchar(15)**，默认值为**自动**。 可以是**自动**或**none**。 如果**自动**，架构和已发布表的初始数据首先传输到订阅服务器上。 如果**none**，假定订阅服务器已包含架构和初始数据已发布的表。 始终会传输系统表和数据。  
+ [ **@sync_type=**] **'***sync_type*****  
+ 订阅同步类型。 *sync_type* 是 **nvarchar(15)** ，默认值为 **自动**。 可以是**自动**或**none**。 如果**自动**，架构和已发布表的初始数据首先传输到订阅服务器上。 如果**none**，假定订阅服务器已包含架构和初始数据已发布的表。 始终会传输系统表和数据。  
   
 > [!NOTE]  
 >  建议的值不指定**none**。  
@@ -168,14 +168,14 @@ sp_addmergesubscription [ @publication= ] 'publication'
  [  **@active_end_date=**] *active_end_date*  
  停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@optional_command_line=**] **'***optional_command_line*****  
- 要执行的可选命令提示符。 *optional_command_line*是**nvarchar(4000)**，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
+ [ **@optional_command_line=**] **'***optional_command_line*****  
+ 要执行的可选命令提示符。 *optional_command_line* 是 **nvarchar(4000)**，默认值为 NULL。 此参数用于添加捕获输出并将输出保存到文件的命令，或者用于指定配置文件或属性。  
   
- [  **@description=**] **'***说明*****  
+ [ **@description=**] **'***说明*****  
  为该合并订阅的简短说明。 *描述*是**nvarchar(255)**，默认值为 NULL。 此值显示在复制监视器**友好名称**列，该列可用于对受监视发布的订阅进行排序。  
   
- [  **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr*****  
- 指定是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+ [ **@enabled_for_syncmgr=**] **'***enabled_for_syncmgr*****  
+ 指定是否可以通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同步管理器同步订阅。 *enabled_for_syncmgr* 是 **nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  指定可远程激活代理。 *remote_agent_activation*是**位**默认值为**0**。  
@@ -183,16 +183,16 @@ sp_addmergesubscription [ @publication= ] 'publication'
 > [!NOTE]  
 >  不推荐使用此参数，保留它只是为了让脚本能够向后兼容。  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name*****  
- 指定用于远程代理激活的服务器网络名称。 *remote_agent_server_name*是**sysname**，默认值为 NULL。  
+ [ **@offloadserver=** ] **'***remote_agent_server_name*****  
+ 指定用于远程代理激活的服务器网络名称。 *remote_agent_server_name* 是 **sysname**，默认值为 NULL。  
   
- [  **@use_interactive_resolver=** ] **'***use_interactive_resolver*****  
- 允许交互式地解决所有允许交互式解决的项目的冲突。 *use_interactive_resolver*是**nvarchar(5)**，默认值为 FALSE。  
+ [ **@use_interactive_resolver=** ] **'***use_interactive_resolver*****  
+ 允许交互式地解决所有允许交互式解决的项目的冲突。 *use_interactive_resolver* 是 **nvarchar(5)**，默认值为 FALSE。  
   
- [  **@merge_job_name=** ] **'***merge_job_name*****  
- *@merge_job_name*参数已弃用，并且不能设置。 *merge_job_name*是**sysname**，默认值为 NULL。  
+ [ **@merge_job_name=** ] **'***merge_job_name*****  
+ *@merge_job_name*参数已弃用，并且不能设置。 *merge_job_name* 是 **sysname**，默认值为 NULL。  
   
- [ **@hostname**=] **'***主机名*****  
+ [ **@hostname** =] **'***主机名*****  
  返回的值将覆盖[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)参数化筛选器的 WHERE 子句中使用此函数时。 *主机名*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  

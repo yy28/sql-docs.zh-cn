@@ -84,7 +84,7 @@ ms.locfileid: "34019614"
   
 4.  在“选择用户或计算机”页上，输入用于运行 SQL Server 实例并且向 Analysis Services 表格模型数据库提供数据的帐户。 单击 **“确定”** 接受该服务帐户。  
   
-     如果您不能选择想要的帐户，则确认 SQL Server 正在运行并且为该帐户注册了 SPN。 有关针对数据库引擎的 SPN 的详细信息，请参阅 [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
+     如果您不能选择想要的帐户，则确认 SQL Server 正在运行并且为该帐户注册了 SPN。 有关针对数据库引擎的 SPN 的详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

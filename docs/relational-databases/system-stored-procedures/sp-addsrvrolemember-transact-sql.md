@@ -44,10 +44,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @loginame **=** ] **'***登录*****  
+ [ @loginame**=** ] **'***登录*****  
  将添加到固定服务器角色中的登录名。 *登录名*是**sysname**，无默认值。 *登录名*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。 如果还没有为 Windows 登录名授予 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 访问权限，则会自动授予该访问权限。  
   
- [ @rolename **=** ] **'***角色*****  
+ [ @rolename**=** ] **'***角色*****  
  要添加登录名的固定服务器角色的名称。 *角色*是**sysname**，默认值为 NULL，并且必须是下列值之一：  
   
 -   sysadmin  

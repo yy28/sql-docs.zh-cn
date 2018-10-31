@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
   
 ## <a name="arguments"></a>参数  
  [ @loginame **=** ] **'***登录*****  
- 要从固定服务器角色中删除的登录名。 *登录名*是**sysname**，无默认值。 *登录名*必须存在。  
+ 要从固定服务器角色中删除的登录名。 *登录名* 是 **sysname** ，无默认值。 *登录名*必须存在。  
   
  [ @rolename **=** ] **'***角色*****  
- 服务器角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须是以下值之一：  
+ 服务器角色的名称。 *角色* 是 **sysname** ，默认值为 NULL。 *角色*必须是以下值之一：  
   
 -   sysadmin  
   
