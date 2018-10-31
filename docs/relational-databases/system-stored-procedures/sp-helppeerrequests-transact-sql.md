@@ -40,10 +40,10 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  对等拓扑中为之发送状态请求的发布名称。 *发布*是**sysname**，无默认值。  
   
- [ **@description**=] **'***说明*****  
+ [ **@description**=] **'***说明***’**  
  可用于标识各个状态请求，它使您可以筛选返回的响应基于用户定义的信息调用时提供的值[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)。 *描述*是**nvarchar(4000)**，默认值为**%**。 默认情况下，返回发布的所有状态请求。 使用此参数仅状态请求返回匹配中提供的值的说明*描述*，其中使用匹配字符字符串[如&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)子句。  
   
 ## <a name="result-sets"></a>结果集  

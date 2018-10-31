@@ -51,7 +51,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  [ **@publisher_db=**] **'***publisher_db***'**  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**。  
   
- [  **@subscription_type=**] **'***subscription_type*****  
+ [  **@subscription_type=**] **'***subscription_type***’**  
  指示是否显示请求订阅。 *subscription_type*是**nvarchar(10)**，默认值为 **'pull'**。 有效的值为 **'push'**， **'pull'**，或 **'both'**。  
   
 ## <a name="result-sets"></a>结果集  

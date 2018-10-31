@@ -45,10 +45,10 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname=**] **'***object_name*****  
+ [  **@objname=**] **'***object_name***’**  
  指定用来提供统计信息的表。 *object_name*是**nvarchar(520)** 且不能为 null。 可以指定一个一部分或两部分名称。  
   
- [  **@results=**] **'***值*****  
+ [  **@results=**] **'***值***’**  
  指定要提供的信息的范围。 有效输入包括**所有**并**统计信息**。 **所有**列出的所有索引和也具有其; 上创建的统计信息的列的统计信息**统计信息**只列出未与索引关联的统计信息。 *值*是**nvarchar(5)** 默认值为 STATS。  
   
 ## <a name="return-code-values"></a>返回代码值  

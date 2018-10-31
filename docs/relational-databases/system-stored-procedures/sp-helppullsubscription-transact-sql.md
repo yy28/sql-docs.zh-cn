@@ -51,7 +51,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**%**，这会返回所有发布。 如果此参数等于 ALL，唯一的请求订阅 independent_agent = **0**返回。  
   
- [  **@show_push=**] **'***show_push*****  
+ [  **@show_push=**] **'***show_push***’**  
  指示是否返回所有推送订阅。 *show_push*是**nvarchar(5)**，默认值为 FALSE，表示不返回推送订阅。  
   
 ## <a name="result-sets"></a>结果集  

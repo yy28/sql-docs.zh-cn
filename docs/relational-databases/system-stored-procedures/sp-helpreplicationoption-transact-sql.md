@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@optname =**] **'***option_name*****  
+ [  **@optname =**] **'***option_name***’**  
  要查询的复制选项的名称。 *option_name*是**sysname**，默认值为 NULL。  
   
 |ReplTest1|Description|  

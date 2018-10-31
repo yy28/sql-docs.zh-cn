@@ -48,10 +48,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**%**。 该发布必须已经存在，并符合标识符的相关规则。 如果为 NULL 或**%**，返回有关所有合并发布和订阅当前数据库中的信息。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [  **@subscriber=**] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**。 如果为 NULL 或 %，则返回有关对给定发布的所有订阅信息。  
   
- [  **@subscriber_db=**] **'***subscriber_db*****  
+ [  **@subscriber_db=**] **'***subscriber_db***’**  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为**%**，表示返回有关所有订阅数据库的信息。  
   
  [ **@publisher=**] **'***publisher***'**  
@@ -60,7 +60,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  [ **@publisher_db=**] **'***publisher_db***'**  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为**%**，表示返回有关所有发布服务器数据库的信息。  
   
- [  **@subscription_type=**] **'***subscription_type*****  
+ [  **@subscription_type=**] **'***subscription_type***’**  
  是订阅的类型。 *subscription_type*是**nvarchar(15)**，可以是下列值之一。  
   
 |ReplTest1|Description|  

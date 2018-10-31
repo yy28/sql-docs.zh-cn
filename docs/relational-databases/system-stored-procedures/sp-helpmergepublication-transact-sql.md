@@ -44,7 +44,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @publication **=** ] **'***发布*****  
+ [ @publication **=** ] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，默认值为**%**，它返回当前数据库中所有合并发布的相关信息。  
   
  [ @found **=** ] **'***找到***'** 输出  
@@ -53,13 +53,13 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @publication_id **=**] **'***publication_id***'** 输出  
  发布的标识号。 *publication_id*是**uniqueidentifier**而且是 OUTPUT 参数，默认值为 NULL。  
   
- [ @reserved **=**] **'***保留*****  
+ [ @reserved **=**] **'***保留***’**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *保留*是**nvarchar(20)**，默认值为 NULL。  
   
- [ @publisher **=** ] **'***发布服务器*****  
+ [ @publisher **=** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [@publisher_db **=** ] **'***publisher_db*****  
+ [@publisher_db **=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  

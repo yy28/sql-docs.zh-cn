@@ -39,7 +39,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] **'***database_name*****  
+ [  **@database=**] **'***database_name***’**  
  是为其返回属性的数据库的名称。 *database_name*是**sysname**，默认值为**%** 对于与分发服务器，并且在其上关联的所有数据库用户拥有的权限。  
   
 ## <a name="result-sets"></a>结果集  

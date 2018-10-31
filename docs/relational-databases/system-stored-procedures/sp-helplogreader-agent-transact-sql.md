@@ -39,7 +39,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher**=] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="result-sets"></a>结果集  
@@ -50,10 +50,10 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**名称**|**nvarchar(100)**|代理的名称。|  
 |**publisher_security_mode**|**smallint**|代理在连接发布服务器时所使用的安全模式，可以是下列模式之一：<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证<br /><br /> **1** = Windows 身份验证。|  
 |**publisher_login**|**sysname**|连接到发布服务器时使用的登录名。|  
-|**publisher_password**|**nvarchar(524)**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
+|**publisher_password**|**nvarchar(524)**|出于安全原因，值为 **\*\*\*\*\*\*\*\*\*\*** 始终返回。|  
 |**job_id**|**uniqueidentifier**|代理作业的唯一 ID。|  
 |**job_login**|**nvarchar(512)**|是运行日志读取器代理的 Windows 帐户的格式返回*域*\\*用户名*。|  
-|**job_password**|**sysname**|出于安全原因，值为**\* \* \* \* \* \* \* \* \* \*** 始终返回。|  
+|**job_password**|**sysname**|出于安全原因，值为 **\*\*\*\*\*\*\*\*\*\*** 始终返回。|  
   
 ## <a name="return-code-values"></a>返回代码值  
  **0** （成功） 或**1** （失败）  

@@ -105,7 +105,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
  [ **@server=** ] **'***server***'**  
  执行作业的服务器名称。 *服务器*是**nvarchar(30)**，默认值为 NULL。  
   
- [  **@mode=** ] **'***模式*****  
+ [  **@mode=** ] **'***模式***’**  
  是 SQL Server 是否打印结果集中的所有列 (**完整**) 或列的汇总。 *模式*是**varchar(7)**，默认值为**摘要**。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -44,7 +44,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  要查看的发布的名称。 *发布*数据类型为 sysname，默认值为**%**，表示返回有关所有发布的信息。  
   
- [  **@found =** ] **'***找到***** 输出  
+ [  **@found =** ] **'***找到***’** 输出  
  指示返回行的标志。 *找到*是**int**而且是 OUTPUT 参数，默认值为**23456**。 **1**指示已找到发布。 **0**指示找不到该发布。  
   
  [ **@publisher** = ] **'***publisher***'**  

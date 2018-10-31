@@ -43,7 +43,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
  [ **@publication=**] **'***publication***'**  
  要检索其相关信息的发布的名称。 *发布*是**sysname**，默认值为**%**，表示返回有关当前数据库中的所有发布中包含的所有合并项目的信息。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'***文章***’**  
  要返回其信息的项目的名称。 *文章*是**sysname**，默认值为**%**，它返回给定发布中所有合并项目的相关信息。  
   
 ## <a name="result-set"></a>结果集  

@@ -51,13 +51,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor=**] **'***分发服务器上***** 输出  
+ [  **@distributor=**] **'***分发服务器上***’** 输出  
  是分发服务器的名称。 分发服务器是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@distribdb=**] **'***distribdb***** 输出  
+ [  **@distribdb=**] **'***distribdb***’** 输出  
  是分发数据库的名称。 *distribdb*是**sysname**，默认值为**%**，这是唯一返回结果集的值。  
   
- [  **@directory=**] **'***directory***** 输出  
+ [  **@directory=**] **'***directory***’** 输出  
  是工作目录。 *目录*是**nvarchar(255)**，默认值为**%**，这是唯一返回结果集的值。  
   
  [  **@account=**] **'***帐户***输出**  
@@ -81,7 +81,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
- [  **@local=**] **'***本地*****  
+ [  **@local=**] **'***本地***’**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否应获得本地服务器值。 *本地*是**nvarchar(5)**，默认值为 NULL。  
   
  [  **@rpcsrvname=**] **'***rpcsrvname***输出**  

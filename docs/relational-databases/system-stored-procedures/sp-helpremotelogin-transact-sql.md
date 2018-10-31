@@ -44,10 +44,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @remoteserver **=** ] **'***remoteserver*****  
+ [ @remoteserver **=** ] **'***remoteserver***’**  
  远程服务器，将返回其远程登录名信息。 *remoteserver*是**sysname**，默认值为 NULL。 如果*remoteserver*是未指定，则返回有关本地服务器上定义的所有远程服务器的信息。  
   
- [ @remotename **=** ] **'***remote_name*****  
+ [ @remotename **=** ] **'***remote_name***’**  
  远程服务器上的特定远程登录名。 *remote_name*是**sysname**，默认值为 NULL。 如果*remote_name*未指定，则为定义的所有远程用户的信息*remoteserver*返回。  
   
 ## <a name="return-code-values"></a>返回代码值  

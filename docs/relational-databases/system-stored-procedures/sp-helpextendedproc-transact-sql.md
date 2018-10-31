@@ -43,7 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@funcname =**] **'***过程*****  
+ [  **@funcname =**] **'***过程***’**  
  要报告其信息的扩展存储过程的名称。 *过程*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -48,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name =** ] **'***object_statement*****  
+ [  **@name =** ] **'***object_statement***’**  
  当前数据库或语句中具有报告权限的对象的名称。 *object_statement*是**nvarchar(776)**，默认值为 NULL，表示将返回所有对象和语句权限。 如果值为一个对象（表、视图、存储过程或扩展存储过程），则该对象必须是当前数据库中的有效对象。 对象名称中窗体可以包含的所有者限定符*所有者 ***。*** 对象*。  
   
  如果*object_statement*是一条语句，它可以是 CREATE 语句。  
   
- [  **@username =** ] **'***security_account*****  
+ [  **@username =** ] **'***security_account***’**  
  为其返回权限的主体的名称。 *security_account*是**sysname**，默认值为 NULL，表示将返回所有主体在当前数据库中。 *security_account*必须存在于当前数据库。  
   
- [  **@grantorname =** ] **'***grantor*****  
+ [  **@grantorname =** ] **'***grantor***’**  
  是授予权限的名称。 *grantor*是**sysname**，默认值为 NULL，表示将返回数据库中任意主体授予权限的所有信息。  
   
  [ **@permissionarea =** ] **'***type***'**  

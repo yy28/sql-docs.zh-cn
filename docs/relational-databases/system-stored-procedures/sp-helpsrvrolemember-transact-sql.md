@@ -40,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@srvrolename =** ] **'***角色*****  
+ [  **@srvrolename =** ] **'***角色***’**  
  是固定的服务器角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*未指定，则结果集包含有关所有固定的服务器角色的信息。  
   
  *角色*可以是以下值之一。  

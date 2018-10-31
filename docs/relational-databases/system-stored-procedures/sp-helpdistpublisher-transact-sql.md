@@ -40,7 +40,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  为其返回属性的发布服务器的名称。 *发布服务器*是**sysname**，默认值为**%**。  
   
  [  **@check_user=** ] *check_user*  

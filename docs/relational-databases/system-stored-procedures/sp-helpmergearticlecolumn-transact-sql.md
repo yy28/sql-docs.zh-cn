@@ -43,7 +43,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  [ **@publication=**] **'***publication***'**  
  是发布的名称。*出版物*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'***文章***’**  
  是表或视图的项目在其上检索信息的名称。*一文*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

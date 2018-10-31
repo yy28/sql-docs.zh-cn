@@ -41,18 +41,18 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@tabname =**] **'***tabname*****  
+ [  **@tabname =**] **'***tabname***’**  
  已为其指定了空间索引的表的限定或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*是**sysname**，无默认值。  
   
- [  **@colname =** ] **'***columnname*****  
+ [  **@colname =** ] **'***columnname***’**  
  是指定的空间数据列的名称。 *columnname*是**sysname**，无默认值。  
   
- [  **@resolution =** ] **'***解析*****  
+ [  **@resolution =** ] **'***解析***’**  
  是范围框的分辨率。 有效值为 10 到 5000。 *解决方法*是**tinyint**，无默认值。  
   
- [  **@sample =** ] **'***示例*****  
+ [  **@sample =** ] **'***示例***’**  
  为所用表的百分比。 有效的值范围是从 0 到 100。 *tablesample*是**float**。 默认值为 100。  
   
 ## <a name="property-valuereturn-value"></a>属性值/返回值  

@@ -46,7 +46,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [ **@publisher=**] **'***publisher***'**  
  参与该订阅服务器的更新的发布服务器的名称。 *发布服务器*是**sysname**，无默认值。 必须已为发布配置了发布服务器。  
   
- [  **@publisher_db =**] **'***publisher_db*****  
+ [  **@publisher_db =**] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication=**] **'***publication***'**  

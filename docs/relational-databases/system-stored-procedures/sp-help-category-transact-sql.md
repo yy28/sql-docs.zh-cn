@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class=**] **'***类*****  
+ [  **@class=**] **'***类***’**  
  请求其信息的类。 *类*是**varchar(8)**，默认值为**作业**。 *类*可以是下列值之一。  
   
 |ReplTest1|Description|  

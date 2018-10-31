@@ -40,10 +40,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber =** ] **'***订阅服务器*****  
+ [  **@subscriber =** ] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**%**，表示返回所有信息。  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为当前服务器的名称。  
   
 > [!NOTE]  

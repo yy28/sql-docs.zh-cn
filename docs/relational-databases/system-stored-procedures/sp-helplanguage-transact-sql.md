@@ -42,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@language=** ] **'***语言*****  
+ [  **@language=** ] **'***语言***’**  
  要显示其信息的替代语言的名称。 *语言*是**sysname**，默认值为 NULL。 如果*语言*是指定，则返回有关指定的语言信息。 如果未指定语言，有关中的所有语言的信息**sys.syslanguages**返回兼容性视图。  
   
 ## <a name="return-code-values"></a>返回代码值  

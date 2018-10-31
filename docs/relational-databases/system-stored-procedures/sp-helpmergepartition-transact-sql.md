@@ -41,16 +41,16 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@suser_sname=** ] **'***suser_sname*****  
+ [  **@suser_sname=** ] **'***suser_sname***’**  
  用于定义分区的 SUSER_SNAME 值。 *suser_sname*是**sysname**，默认值为 NULL。 提供此参数是为了将结果集限制在仅将 SUSER_SNAME 解析为提供的值的分区中。  
   
 > [!NOTE]  
 >  当*suser_sname*提供，则*host_name*必须为 NULL  
   
- [  **@host_name=** ] **'***host_name*****  
+ [  **@host_name=** ] **'***host_name***’**  
  用于定义分区的 HOST_NAME 值。 *host_name*是**sysname**，默认值为 NULL。 提供此参数是为了将结果集限制在仅将 HOST_NAME 解析为提供的值的分区中。  
   
 > [!NOTE]  

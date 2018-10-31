@@ -44,10 +44,10 @@ sp_helpmergefilter [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'***文章***’**  
  项目的名称。 *文章*是**sysname**，默认值为**%**，这会返回所有项目的名称。  
   
- [  **@filtername=**] **'***filtername*****  
+ [  **@filtername=**] **'***filtername***’**  
  要返回其信息的筛选器名。 *filtername*是**sysname**，默认值为**%**，表示返回有关项目或发布上定义的所有筛选器的信息。  
   
 ## <a name="result-sets"></a>结果集  

@@ -43,7 +43,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'***发布服务器***’**  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

@@ -41,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [  **@rolename =** ] **'***角色***’**  
  当前数据库中的角色的名称。 *角色*是**sysname**，默认值为 NULL。 *角色*必须存在于当前数据库。 如果*角色*是未指定，则返回有关当前数据库中的所有角色信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

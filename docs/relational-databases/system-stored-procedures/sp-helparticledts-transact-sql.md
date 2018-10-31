@@ -39,10 +39,10 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'***发布*****  
+ [  **@publication =**] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'***文章***’**  
  是发布中的名称。 *文章*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

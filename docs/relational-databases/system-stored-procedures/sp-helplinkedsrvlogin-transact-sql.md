@@ -41,10 +41,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rmtsrvname=**] **'***rmtsrvname*****  
+ [  **@rmtsrvname=**] **'***rmtsrvname***’**  
  登录映射所应用于的链接服务器的名称。 *rmtsrvname*是**sysname**，默认值为 NULL。 如果为 NULL，则返回针对所有链接服务器定义的所有登录映射，这些链接服务器在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本地计算机中定义。  
   
- [  **@locallogin=**] **'***locallogin*****  
+ [  **@locallogin=**] **'***locallogin***’**  
  是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]映射到链接服务器的本地服务器上的登录名*rmtsrvname*。 *locallogin*是**sysname**，默认值为 NULL。 NULL 指定上定义的所有登录映射*rmtsrvname*返回。 如果不为 NULL 的映射*locallogin*到*rmtsrvname*必须已经存在。 *locallogin*可以是[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 用户。 对于 Windows 用户来说，必须以直接的方式或通过已被授权访问的 Windows 组成员身份授予其访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  
