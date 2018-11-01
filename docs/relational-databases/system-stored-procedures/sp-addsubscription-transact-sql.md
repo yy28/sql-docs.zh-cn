@@ -262,7 +262,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @fileidhint= ] *fileidhint*  
  标识要还原的备份集的序号值。 *fileidhint*是**int**，默认值为 NULL。  
   
- [ @unload=]*卸载*  
+ [ @unload=] *卸载*   
  指定在从备份进行的初始化完成后是否应取出磁带备份设备。 *卸载*是**位**，默认值为 1。 1 指定磁带应卸载。 *卸载*时，才使用*backupdevicetype*为磁带。  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  

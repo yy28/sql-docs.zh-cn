@@ -48,10 +48,10 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  指定主密钥的密码。 *密码*是**nvarchar**。  
   
  @action= N'add  
- 指定已指定数据库的凭据将添加到凭据存储区中。 凭据将包含数据库主密钥的密码。 传递给的值@action是**nvarchar**。  
+ 指定已指定数据库的凭据将添加到凭据存储区中。 凭据将包含数据库主密钥的密码。 传递给的值@action是 **nvarchar**。  
   
  @action= N'drop  
- 指定将从凭据存储区中删除已指定数据库的凭据。 传递给的值@action是**nvarchar**。  
+ 指定将从凭据存储区中删除已指定数据库的凭据。 传递给的值@action是 **nvarchar**。  
   
 ## <a name="remarks"></a>备注  
  当 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 需要数据库主密钥对密钥进行解密或加密时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会尝试使用实例的服务主密钥对数据库主密钥进行解密。 如果解密失败，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]搜索凭据存储区具有相同系列 GUID，它需要主密钥的数据库的主密钥凭据。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 尝试使用每个匹配的凭据对数据库主密钥进行解密，直到成功解密或者没有更多的凭据为止。  
