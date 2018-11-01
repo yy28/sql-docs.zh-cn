@@ -184,7 +184,7 @@ FROM sys.dm_os_process_memory;
 以下列表介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中不同对象所用内存量的近似值。 列出的数值为估计值，根据环境以及创建对象的方式可能有所不同：
 
 * 锁（由锁管理器维护）：64 字节 + 每个所有者 32 字节   
-* 用户连接：约为 (3 \* *network_packet_size + 94 kb)    
+* 用户连接：约为 (3 \* network_packet_size + 94 kb)    
 
 网络数据包大小是表格数据模式 (TDS) 数据包的大小，该数据包用于应用程序和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎之间的通信。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。
 
