@@ -34,7 +34,7 @@ ms.locfileid: "47777185"
 > [!NOTE]  
 >  尽管您无法将数据写入辅助数据库，但可以在承载辅助副本的服务器实例上写入读写数据库，包括用户数据库和 **tempdb**之类的系统数据库。  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的信息，请参阅 [Using a Listener to Connect to a Read-Only Secondary Replica (Read-Only Routing)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 还支持对可读辅助副本（*只读路由*）的读意向连接请求的重新路由。 有关只读路由的详细信息，请参阅 [使用侦听程序连接到只读次要副本（只读路由）](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)。  
   
  **本主题内容：**  
   
@@ -199,7 +199,7 @@ ms.locfileid: "47777185"
   
 -   因为临时统计信息存储于 **tempdb**中，所以重新启动 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务将导致所有临时统计信息消失。  
   
--   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关更多信息，请参见 [Statistics](../../../relational-databases/statistics/statistics.md)。  
+-   后缀 suffix _readonly_database_statistic 是为 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]生成的统计信息预留的。 在主数据库上创建统计信息时不能使用此后缀。 有关详细信息，请参阅[统计信息](../../../relational-databases/statistics/statistics.md)。  
   
 ##  <a name="bkmk_AccessInMemTables"></a> 访问辅助副本上的内存优化表  
  次要副本上的事务隔离级别与主要副本上的事务隔离级别相同，都可以与内存优化表结合使用。 建议你将会话级的隔离级别设置为 READ COMMITTED，将数据库级选项 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT 设置为 ON。 例如：  
