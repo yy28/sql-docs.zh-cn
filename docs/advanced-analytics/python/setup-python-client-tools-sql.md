@@ -8,22 +8,22 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 326676d1be684b90784351de316590ebdb1ff29f
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
+ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051149"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216621"
 ---
 # <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>设置为用于 SQL Server 机器学习 Python 客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-从机器学习服务 （数据库） 安装中包括的 Python 选项时开始在 SQL Server 2017 或更高版本提供 Python 集成。 有关详细信息，请参阅[安装 SQL Server 机器学习服务](../install/sql-machine-learning-services-windows-install.md)。
+Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更高版本[机器学习服务 （数据库） 安装](../install/sql-machine-learning-services-windows-install.md)。 
 
-在本文中，了解如何配置客户端开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 Python 集成。 在结束时，必须将相同的 Python 库作为 SQL 服务器上并可以将计算推送从与 SQL Server 上的远程会话的本地会话。
+在本文中，了解如何配置 Python 客户端开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 Python 集成。 本练习中使用 Jupyter Notebook 来运行 Python 代码。 完成这篇文章中的步骤后，将具有与 SQL Server 上的相同 Python 库。 此外将了解如何在 SQL Server 上推送到远程的 Python 会话从本地 Python 会话计算。
 
 > [!Tip]
-> 有关视频演示，请参阅[运行 R 和远程 SQL Server 从 Jupyter 笔记本中的 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
+> 在本文中的练习的视频演示，请参阅[运行 R 和远程 SQL Server 从 Jupyter 笔记本中的 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
 > 安装只需客户端库的替代方法使用独立的服务器。 使用独立的丰富的客户端与服务器是某些客户更喜欢更多的端到端方案中工作的一个选项。 如果有[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)提供在 SQL Server 安装程序，必须从 SQL Server 数据库引擎实例完全分离的 Python 服务器。 Standalon server 包括开放源代码基础发行版的 Anaconda 以及特定于 Microsoft 的库。 您可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 验证富客户端安装时，以打开[Jupyter 笔记本](#python-tools)以使用 Python.exe 在服务器上运行命令。
@@ -127,7 +127,7 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 此下一步之前，请确保您具有 SQL Server 实例和连接字符串上的权限[鸢尾花示例数据库](../tutorials/demo-data-iris-in-sql.md)。 如果数据库不存在并且具有足够的权限，则可以[使用这些内联说明创建数据库](#create-iris-remotely)。
 
-连接字符串替换为有效的值。 示例代码使用`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`，但你的代码应具有实例名称可能是指定的远程服务器。
+连接字符串替换为有效的值。 示例代码使用`"Driver=SQL Server;Server=localhost;Database=irissql;Trusted_Connection=Yes;"`，但你的代码应具有一个实例的名称，并映射到数据库用户登录名的凭据选项可能指定远程服务器。
 
 ### <a name="define-a-function"></a>定义一个函数
 
@@ -237,7 +237,7 @@ iris = datasets.load_iris()
 df = pd.DataFrame(iris.data, columns=iris.feature_names)
 ```
 
-### <a name="3---use-recoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 RecoscalePy Api 来创建表并将鸢尾花数据加载
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 来创建表并将鸢尾花数据加载
 
 ```Python
 from revoscalepy import RxSqlServerData, rx_data_step

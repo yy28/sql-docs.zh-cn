@@ -1,7 +1,7 @@
 ---
 title: 复制合并代理 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71c35ad53fd9c90b8c7130bac104f370e466448f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3b7a3b52b30bdce214dd7d481403425dd07cd09
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154177"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237103"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   复制合并代理是一个将数据库表中保存的初始快照应用于订阅服务器的实用工具可执行文件。 它还合并自初始快照创建后发布服务器上发生的增量数据更改，并根据配置的规则或通过使用创建的自定义冲突解决程序来协调冲突。  
@@ -169,12 +169,15 @@ ms.locfileid: "48154177"
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
+
+ > [!NOTE]  
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了使代理才能成功连接时将-EncryptionLevel 设置为 2，本地的 SQL Server 上创建一个别名。 别名参数应为服务器名称和 Server 参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上载，请使用`@subscriber_upload_options`的`sp_addmergearticle`相反。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 要限制上载，请改用 `@subscriber_upload_options` 的 `sp_addmergearticle`。  
   
  指定同步过程中数据交换的类型，可以是下列值之一：  
   
@@ -391,7 +394,7 @@ ms.locfileid: "48154177"
   
  在连续模式下运行时，不删除当前会话的合并代理历史记录。 长期运行的代理可能导致合并历史记录表中包含大量条目，这会影响性能。 要解决此问题，请切换到计划模式，或继续使用连续模式但是创建一个专用作业来定期重新启动合并代理，或降低历史记录级别的详细程度以减少行数从而降低性能影响。  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](replication-agent-administration.md)  
   
   

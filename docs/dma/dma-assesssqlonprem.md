@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d844f06ec7b043f2f43e7fe19e29121ad9efaae3
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 12c91f52694c9c7b4cc9abc9e7b96df0ddffb51c
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643975"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965947"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>执行使用数据迁移助手的 SQL Server 迁移评估
 
@@ -47,15 +47,13 @@ ms.locfileid: "49643975"
    时进行评估源 SQL Server 实例迁移到本地 SQL Server 或 SQL Server 托管在 Azure VM 的目标上，可以选择一个或两个以下的评估报告类型：
 
     -   **兼容性问题**
-
     -   **新功能的建议**
 
     ![选择 SQL Server 目标的评估报表类型](../dma/media/AssessmentTypes.png)
 
-   当在进行评估源 SQL Server 实例迁移到 Azure SQL 数据库时，可以选择一个或两个以下的评估报告类型：
+   当评估源 SQL Server 实例迁移到 Azure SQL 数据库，可以选择一个或两个以下的评估报告类型：
 
     -   **检查数据库兼容性**
-
     -   **检查功能奇偶一致性**
 
     ![选择 SQL 数据库目标的评估报表类型](../dma/media/AssessmentTypes_Azure.png)
@@ -89,17 +87,17 @@ ms.locfileid: "49643975"
 
 同样，可以查看功能建议跨**性能**，**存储**，并**安全**区域。
 
-功能推荐涵盖各种功能，例如内存中 OLTP 和列存储、 Stretch Database、 Always Encrypted、 动态数据掩码和透明数据加密。
+功能推荐涵盖大量的内存中 OLTP、 列存储、 Stretch Database、 Always Encrypted、 动态数据掩码和透明数据加密等功能。
 
 ![查看功能建议](../dma/media/FeatureRecommendations.png)
 
-对于 Azure SQL 数据库，评估提供迁移阻塞问题和功能奇偶校验问题。 通过选择特定选项来查看这两个类别的结果。
+对于 Azure SQL 数据库，评估提供迁移阻塞问题和功能奇偶校验问题。 通过选择特定选项来查看这两个类别的结果。
 
 - **SQL Server 功能奇偶校验**类别提供了全面的建议，在 Azure 中和缓解步骤中可用的替代方法。 它可帮助你规划在迁移项目中的这项工作。
 
   ![查看 SQL Server 功能奇偶一致性的信息](../dma/media/SQLFeatureParity.png)
 
-- **兼容性问题**类别提供部分支持或不受支持的功能，能够阻止在本地 SQL Server 数据库迁移到 Azure SQL 数据库。 然后，它提供了建议，以帮助你解决这些问题。
+- **兼容性问题**类别提供部分支持或不受支持的功能，能够阻止在本地 SQL Server 数据库迁移到 Azure SQL 数据库。 然后，它提供了建议，以帮助你解决这些问题。
 
   ![查看兼容性问题](../dma/media/CompatibilityIssues.png)
 

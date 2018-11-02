@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 89ce9402540c21a9f9eedbba4f488ea1c3350956
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: b0a49925ec0d0592adfd131e0ab994e5e8356f95
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460872"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236933"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -200,5 +200,6 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 PoliyBase 详细信息，请参阅[什么是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
+有关 Hadoop 安全设置，请参阅[配置的 Hadoop 安全性](polybase-configure-hadoop-security.md)。<br>
+有关 PolyBase 的详细信息，请参阅[什么是 PolyBase？](../relational-databases/polybase/polybase-guide.md)。 
  

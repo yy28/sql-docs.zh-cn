@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c921b89dc3f6928ccbfc3f9fc727015dadc05b7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e24f9974c55d6d189f7d650902352393e3e62627
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169077"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743202"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理和集成 SQL Server 上的机器学习工作负荷
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,6 +87,18 @@ Server 包安装的替代方法，为数据科学家可能能够[生成并运行
 
 > [!NOTE]
 > 获取 R 包，服务器管理员权限不专门需要针对包安装如果您使用替代方法。 请参阅[SQL Server 中的安装 R 包](install-additional-r-packages-on-sql-server.md)有关详细信息。
+
+## <a name="monitoring-script-execution"></a>监视脚本执行
+
+在中运行的 R 和 Python 脚本[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]由启动[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]接口。 但是，快速启动板不受约束或分别监视，因为它是安全的服务提供的 Microsoft 适当管理资源的资源。
+
+使用管理 Launchpad 服务下运行的外部脚本[Windows 作业对象](/windows/desktop/ProcThread/job-objects)。 使用作业对象可将进程组作为一个单元进行管理。 每个作业对象都是分层的，可控制与其关联的所有进程的属性。 针对某个作业对象执行的操作会影响与该作业对象关联的所有进程。
+
+因此，如果需要终止与某个对象关联的一个作业，请注意所有相关的进程也会终止。 如果运行一个已分配到 Windows 作业对象的 R 脚本，并且该脚本运行一个必须终止的相关 ODBC 作业，则父 R 脚本进程也会终止。
+
+如果您启动使用并行处理的外部脚本时，单个 Windows 作业对象将管理所有并行子进程。
+
+若要确定进程是否在作业中运行，请使用 `IsProcessInJob` 函数。
 
 ## <a name="next-steps"></a>后续步骤
 

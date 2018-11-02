@@ -12,12 +12,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ad8d959ae622d743de02d996c280af37eddc9bf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e0ad2e58c7c261d191adf7d48b157e42f13d8d37
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184077"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743162"
 ---
 # <a name="unused-assembly-cleanup"></a>清除未使用的程序集
   `AssemblyCleanup` 示例包含一个 .NET 存储过程，该存储过程通过查询元数据目录来清除当前数据库中未使用的程序集。 其唯一的参数 `visible_assemblies` 用于指定是否应删除未使用的可见程序集。 值为“false”时表示默认情况下将只删除未使用的不可见程序集，否则，将删除所有未使用的程序集。 未使用的程序集的集合所包含的程序集未定义任何入口点（例程/类型和聚合），并且没有已使用的程序集直接或间接地引用它们。  
@@ -50,7 +50,7 @@ ms.locfileid: "48184077"
      `GO`  
   
     > [!NOTE]  
-    >  若要启用 CLR，必须具有`ALTER SETTINGS`服务器级权限，其中的成员隐式拥有`sysadmin`和`serveradmin`固定服务器角色的成员。  
+    >  若要启用 CLR，您必须具有 `ALTER SETTINGS` 服务器级别权限，`sysadmin` 和 `serveradmin` 固定服务器角色的成员隐式拥有该权限。  
   
 -   必须在您使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例上安装 AdventureWorks 数据库。  
   
@@ -155,9 +155,9 @@ using Microsoft.SqlServer.Server;
             /// <summary>  
             /// Returns the comma-separated list of assembly ids contained in this instance  
             /// </summary>  
-            /// <returns>string value that represents a comma-seperated list   
+            /// <returns>string value that represents a comma-separated list   
             /// of assembly ids</returns>  
-            public string ToCommaSeperatedList()  
+            public string ToCommaSeparatedList()  
             {  
                 StringBuilder sb = new StringBuilder();  
   
@@ -240,7 +240,7 @@ using Microsoft.SqlServer.Server;
   
                 cmd.CommandText = String.Format(CultureInfo.InvariantCulture,  
                     "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});",  
-                    unusedAssemblySet.ToCommaSeperatedList());  
+                    unusedAssemblySet.ToCommaSeparatedList());  
                 using (SqlDataReader rd = cmd.ExecuteReader())  
                 {  
                     while (rd.Read())  
@@ -407,8 +407,8 @@ Public NotInheritable Class AssemblyCleanup
         ''' <summary>  
         ''' Returns the comma-separated list of assembly ids contained in this instance  
         ''' </summary>  
-        ''' <returns>string value that represents a comma-seperated list of assembly ids</returns>  
-        Public Function ToCommaSeperatedList() As String  
+        ''' <returns>string value that represents a comma-separated list of assembly ids</returns>  
+        Public Function ToCommaSeparatedList() As String  
             Dim sb As New StringBuilder()  
   
             If m_dictionary.Count > 0 Then  
@@ -486,7 +486,7 @@ Public NotInheritable Class AssemblyCleanup
   
             cmd.CommandText = String.Format(CultureInfo.InvariantCulture, _  
                 "SELECT name FROM sys.assemblies WHERE assembly_id IN ({0});", _  
-                unusedAssemblySet.ToCommaSeperatedList())  
+                unusedAssemblySet.ToCommaSeparatedList())  
             Dim rd As SqlDataReader = cmd.ExecuteReader()  
             Try  
                 While rd.Read()  
@@ -589,7 +589,7 @@ Public NotInheritable Class AssemblyCleanup
 End Class  
 ```  
   
- 这是[!INCLUDE[tsql](../../includes/tsql-md.md)]安装脚本 (`Install.sql`)，它将程序集部署并在数据库中创建存储的过程。  
+ 这是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 安装脚本 (`Install.sql`)，该脚本在数据库中部署程序集并创建存储过程。  
   
 ```  
 USE AdventureWorks;  
@@ -651,7 +651,7 @@ DROP ASSEMBLY AssemblyCleanupUtils;
 GO  
 ```  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [公共语言运行时 (CLR) 集成的使用方案和示例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

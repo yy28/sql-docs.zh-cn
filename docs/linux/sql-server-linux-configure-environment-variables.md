@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 343e40cc0872c07d21d319717d33811a366a88b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750505"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753534"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -61,8 +61,8 @@ ms.locfileid: "47750505"
 | **MSSQL_DUMP_DIR** | 更改 SQL Server 存放内存转储和其他故障排除文件的默认目录。 |
 | **MSSQL_ENABLE_HADR** | 启用可用性组。 例如，"1"已启用，并禁用"0" |
 | **MSSQL_AGENT_ENABLED** | 启用 SQL Server 代理。 例如，启用了 'true' 和 'false' 被禁用。 默认情况下禁用代理。  |
-| **MSSQL_MASTER_DATA_FILE** | 设置 master 数据库数据文件的位置。 |
-| **MSSQL_MASTER_LOG_FILE** | 设置 master 数据库日志文件的位置。 |
+| **MSSQL_MASTER_DATA_FILE** | 设置 master 数据库数据文件的位置。 必须命名为**master.mdf**直到首次运行的 SQL Server。 |
+| **MSSQL_MASTER_LOG_FILE** | 设置 master 数据库日志文件的位置。 必须命名为**mastlog.ldf**直到首次运行的 SQL Server。 |
 | **MSSQL_ERROR_LOG_FILE** | 设置错误日志文件的位置。 |
 
 ::: moniker-end
@@ -85,13 +85,13 @@ ms.locfileid: "47750505"
 | **MSSQL_DUMP_DIR** | 更改 SQL Server 存放内存转储和其他故障排除文件的默认目录。 |
 | **MSSQL_ENABLE_HADR** | 启用可用性组。 例如，"1"已启用，并禁用"0" |
 | **MSSQL_AGENT_ENABLED** | 启用 SQL Server 代理。 例如，启用了 'true' 和 'false' 被禁用。 默认情况下禁用代理。  |
-| **MSSQL_MASTER_DATA_FILE** | 设置 master 数据库数据文件的位置。 |
-| **MSSQL_MASTER_LOG_FILE** | 设置 master 数据库日志文件的位置。 |
+| **MSSQL_MASTER_DATA_FILE** | 设置 master 数据库数据文件的位置。 必须命名为**master.mdf**直到首次运行的 SQL Server。 |
+| **MSSQL_MASTER_LOG_FILE** | 设置 master 数据库日志文件的位置。 必须命名为**mastlog.ldf**直到首次运行的 SQL Server。 |
 | **MSSQL_ERROR_LOG_FILE** | 设置错误日志文件的位置。 |
 
 ::: moniker-end
 
-## <a name="example-initial-setup"></a>示例： 初始设置
+## <a name="use-with-initial-setup"></a>使用与初始设置
 
 此示例将运行`mssql-conf setup`与已配置的环境变量。 指定以下环境变量：
 
@@ -104,7 +104,7 @@ ms.locfileid: "47750505"
 sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' MSSQL_TCP_PORT=1234 /opt/mssql/bin/mssql-conf setup
 ```
 
-## <a name="example-docker"></a>示例： Docker
+## <a name="use-with-docker"></a>与 Docker 一起使用
 
 此示例 docker 命令使用以下环境变量来创建新的 SQL Server 容器：
 

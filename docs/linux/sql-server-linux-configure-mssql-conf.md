@@ -4,18 +4,18 @@ description: 本文介绍如何使用 mssql-conf 工具配置 Linux 上的 SQL S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: e03738f2252a4bfef9a5e14cc22ed9342b404f6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694665"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753584"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694665"
 | [数据库邮件配置文件](#dbmail) | 设置 SQL Server 的 Linux 上的默认数据库邮件配置文件。 |
 | [默认数据目录](#datadir) | 更改默认目录的新 SQL Server 数据库数据文件 (.mdf)。 |
 | [默认日志目录](#datadir) | 更改新的 SQL Server 数据库日志 (.ldf) 文件的默认目录。 |
-| [默认 master 数据库文件目录](#masterdatabasedir) | 更改现有的 SQL 安装上的 master 数据库文件的默认目录。|
+| [默认 master 数据库目录](#masterdatabasedir) | 更改主数据库和日志文件的默认目录。|
 | [默认 master 数据库文件名称](#masterdatabasename) | 更改 master 数据库文件的名称。 |
 | [默认转储目录](#dumpdir) | 更改新的内存转储和其他故障排除的文件的默认目录。 |
 | [默认错误日志目录](#errorlogdir) | 更改 SQL Server 错误日志、 默认 Profiler 跟踪、 系统运行状况会话 XE 和 Hekaton 会话 XE 的新文件的默认目录。 |
@@ -190,7 +190,7 @@ ms.locfileid: "47694665"
 
 ## <a id="masterdatabasedir"></a> 更改默认 master 数据库文件目录位置
 
-**Filelocation.masterdatafile**并**filelocation.masterlogfile**设置 SQL Server 引擎中查找的 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。 
+**Filelocation.masterdatafile**并**filelocation.masterlogfile**设置 SQL Server 引擎中查找的 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。
 
 若要更改这些设置，请使用以下步骤：
 
@@ -214,13 +214,16 @@ ms.locfileid: "47694665"
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterlogfile /tmp/masterdatabasedir/mastlog.ldf
    ```
 
+   > [!NOTE]
+   > 除了移动 master 数据和日志文件，这也会移动所有其他系统数据库的默认位置。
+
 1. 停止 SQL Server 服务：
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. 将 master.mdf 和 masterlog.ldf 移动： 
+1. 将 master.mdf 和 masterlog.ldf 移动：
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
@@ -232,14 +235,15 @@ ms.locfileid: "47694665"
    ```bash
    sudo systemctl start mssql-server
    ```
-   
-> [!NOTE]
-> 如果 SQL Server 无法在指定的目录中找到 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，不会在新的 master 数据库中更新元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧的 SA 登录名密码。 你将需要停止 SQL Server 并将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置并启动 SQL Server 以继续使用现有的元数据。 
 
+   > [!NOTE]
+   > 如果 SQL Server 无法在指定的目录中找到 master.mdf 和 mastlog.ldf 文件，将在指定的目录中，自动创建模板化副本的系统数据库和 SQL Server 已成功启动。 但是，不会在新的 master 数据库中更新元数据，例如用户数据库、 服务器登录名、 服务器证书、 加密密钥、 SQL 代理作业或旧的 SA 登录名密码。 你将需要停止 SQL Server 并将你的旧 master.mdf 和 mastlog.ldf 移动到新的指定位置并启动 SQL Server 以继续使用现有的元数据。
+ 
+## <a id="masterdatabasename"></a> 更改 master 数据库文件的名称
 
-## <a id="masterdatabasename"></a> 更改 master 数据库文件的名称。
+**Filelocation.masterdatafile**并**filelocation.masterlogfile**设置 SQL Server 引擎中查找的 master 数据库文件的位置的更改。 此外可以使用此更改的主数据库和日志文件的名称。 
 
-**Filelocation.masterdatafile**并**filelocation.masterlogfile**设置 SQL Server 引擎中查找的 master 数据库文件的位置的更改。 默认情况下，此位置为 /var/opt/mssql/data。 若要更改这些设置，请使用以下步骤：
+若要更改这些设置，请使用以下步骤：
 
 1. 停止 SQL Server 服务：
 
@@ -251,8 +255,11 @@ ms.locfileid: "47694665"
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
-   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data /mastlognew.ldf
+   sudo /opt/mssql/bin/mssql-conf set filelocation.mastlogfile /var/opt/mssql/data/mastlognew.ldf
    ```
+
+   > [!IMPORTANT]
+   > 只能更改 master 数据库的名称和 SQL Server 已成功启动后的日志文件。 之前在首次运行 SQL Server 需要 master.mdf 和 mastlog.ldf 命名的文件。
 
 1. 更改 master 数据库数据和日志文件的名称 
 
@@ -266,8 +273,6 @@ ms.locfileid: "47694665"
    ```bash
    sudo systemctl start mssql-server
    ```
-
-
 
 ## <a id="dumpdir"></a> 更改默认转储目录位置
 

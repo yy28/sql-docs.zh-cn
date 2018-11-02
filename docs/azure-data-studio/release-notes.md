@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411194"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50237063"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 发行说明
 
@@ -23,8 +23,8 @@ ms.locfileid: "49411194"
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月 （年 10 月发行版）
 
-发布日期： 2018 年 10 月 18 日  
-版本： 1.1.3
+发布日期： 2018 年 10 月 29 日  
+版本： 1.1.4
 
 - 介绍 Azure 资源浏览器来浏览 Azure SQL 数据库
 - 提高对象资源管理器和查询编辑器连接稳定性
@@ -32,6 +32,12 @@ ms.locfileid: "49411194"
 - 更新到[SQL Server 2019 预览版扩展](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
 
 ### <a name="bug-fixes"></a>Bug 修复
+- 修复[发出 # 2717年](https://github.com/Microsoft/azuredatastudio/issues/2717): XML 列结果单击格式设置
+- 修复[发出 # 2993年](https://github.com/Microsoft/azuredatastudio/issues/2993)： 宽度的结果 windows 不完整
+- 修复[发出 # 2999年](https://github.com/Microsoft/azuredatastudio/issues/2999)： 无法加载文件 System.Diagnostics.Tracing Mac 上的，连接到数据库时
+- 修复[发出 # 2851年](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries 图表不会正确呈现
+- 修复[发出 # 2996年](https://github.com/Microsoft/azuredatastudio/issues/2996)： 的临时表丢失由于突然会话发生了更改
+- ...
 
 有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 

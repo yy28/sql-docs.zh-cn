@@ -1,7 +1,7 @@
 ---
 title: 复制分发代理 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 29/10/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93648144c2da900c88888b78bbb77dab9bbc5233
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ba109b21eb8af1f4260aee43f8a9c5f8d3a3bdb
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222617"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226329"
 ---
 # <a name="replication-distribution-agent"></a>复制分发代理
   复制分发代理是一个可执行文件，它能将快照（对于快照复制和事务复制）和保存在分发数据库表中的事务（对于事务复制）移动到订阅服务器上的目标表中。  
@@ -140,7 +140,10 @@ ms.locfileid: "48222617"
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
-  
+ 
+ > [!NOTE]  
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了使代理才能成功连接时将-EncryptionLevel 设置为 2，本地的 SQL Server 上创建一个别名。 别名参数应为服务器名称和 Server 参数应设置为 SQL Server 的完全限定名称。
+
  有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
   
  **-ErrorFile** *error_path_and_file_name*  
@@ -295,7 +298,7 @@ ms.locfileid: "48222617"
 |---------------------|  
 | 添加了 -ExtendedEventConfigFile 参数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](replication-agent-administration.md)  
   
   

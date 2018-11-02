@@ -1,7 +1,7 @@
 ---
 title: 复制日志读取器代理 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7704a37bf8d3972944a17cc5ca1d3a6b209faf3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 892f89c0c2d3161b0df16ad9337237ce14bef159
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202427"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226339"
 ---
 # <a name="replication-log-reader-agent"></a>复制日志读取器代理
   复制日志读取器代理是一个可执行文件，用于监视为事务复制配置的每个数据库的事务日志，以及将标记为进行复制的事务从事务日志复制到分发数据库中。  
@@ -101,7 +101,10 @@ ms.locfileid: "48202427"
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
-  
+
+ > [!NOTE]  
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了使代理才能成功连接时将-EncryptionLevel 设置为 2，本地的 SQL Server 上创建一个别名。 别名参数应为服务器名称和 Server 参数应设置为 SQL Server 的完全限定名称。
+ 
  有关详细信息，请参阅[安全性概述（复制）](../security/security-overview-replication.md)。  
   
  **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
@@ -198,7 +201,7 @@ ms.locfileid: "48202427"
 |---------------------|  
 | 添加了 -ExtendedEventConfigFile 参数。|  
   
-## <a name="see-also"></a>请参阅  
+## <a name="see-also"></a>另请参阅  
  [复制代理管理](replication-agent-administration.md)  
   
   
