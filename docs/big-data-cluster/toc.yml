@@ -65,6 +65,10 @@ items:
     items:
     - name: 使用 PROSE 代码加速器进行数据整理
       href: use-prose-for-big-data-automation.md
+    - name: 使用 Spark 训练和创建机器学习模型
+      href: train-and-create-machinelearning-models-with-spark.md
+    - name: 使用 Spark/Mleap 导出机器学习模型
+      href: export-model-with-spark-mleap.md
   - name: 管理 SQL Server 大数据群集
     items:
     - name: 群集管理门户
@@ -91,9 +95,9 @@ items:
     href: ../relational-databases/polybase/polybase-guide.md
   - name: 请求访问大数据群集
     href: https://aka.ms/eapsignup
-ms.openlocfilehash: 002406f8631806d30c8c1c3d4600bf19d5512dd9
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6e4a0480fa79a79f0e3b987bac5cf1fa1b000971
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411737"
