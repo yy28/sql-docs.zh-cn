@@ -40,7 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@viewname=** ] **'***viewname*****  
+ [  **@viewname=** ] **'***viewname***’**  
  视图名称。 *viewname*是**nvarchar**，无默认值。 *viewname*可以是多部分标识符，但只能引用当前数据库中的视图。  
   
 ## <a name="return-code-values"></a>返回代码值  

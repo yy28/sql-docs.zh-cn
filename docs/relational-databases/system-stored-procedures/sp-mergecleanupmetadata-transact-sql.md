@@ -43,7 +43,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**%**，表示清除所有发布的元数据。 如果显式指定发布，则该发布必须已存在。  
   
- [  **@reinitialize_subscriber =** ] **'***订阅服务器*****  
+ [  **@reinitialize_subscriber =** ] **'***订阅服务器***’**  
  指定是否重新初始化订阅服务器。 *订阅服务器上*是**nvarchar(5)**，可以是**TRUE**或**FALSE**，默认值为**TRUE**。 如果 **，则返回 TRUE**，订阅标记为重新初始化。 如果**FALSE**，未标记为要重新初始化订阅。  
   
 ## <a name="return-code-values"></a>返回代码值  

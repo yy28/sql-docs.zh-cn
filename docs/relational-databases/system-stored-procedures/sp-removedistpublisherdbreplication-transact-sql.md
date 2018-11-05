@@ -40,10 +40,10 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname** ，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -44,22 +44,22 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@article_resolver =** ] **'***article_resolver*****  
+ [  **@article_resolver =** ] **'***article_resolver***’**  
  指定要注销的自定义业务逻辑的名称。 *article_resolver*是**nvarchar(255)**，无默认值。 如果被删除的业务逻辑是 COM 组件，则此参数是该组件的友好名称。 如果业务逻辑是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 程序集，则此参数是该程序集的名称。  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***** 输出  
+ [ **@resolver_clsid**=] **'***resolver_clsid***’** 输出  
  中指定的自定义业务逻辑的名称与关联的 COM 对象的 CLSID 值*article_resolver*参数。 *resolver_clsid*是**nvarchar （50)**，默认值为 NULL。  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***** 输出  
+ [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***’** 输出  
  指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**位**，默认值为 0。 **1**指示正在注册的自定义业务逻辑是业务逻辑处理程序程序集;**0**指示它是一个 COM 组件。  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***** 输出  
+ [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***’** 输出  
  实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***** 输出  
+ [  **@dotnet_class_name=** ] **'***dotnet_class_name***’** 输出  
  实现业务逻辑处理程序时优先级高于 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的名称。 *dotnet_class_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 未从发布服务器调用该存储过程时使用此参数。 如果未指定，则假定本地服务器是发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  

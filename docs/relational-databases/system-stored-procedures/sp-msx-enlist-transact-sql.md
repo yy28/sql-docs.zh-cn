@@ -47,7 +47,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
  [ **@msx_server_name =**] **'***msx_server***'**  
  多服务器管理（主）服务器的名称。 *msx_server*是**sysname**，无默认值。  
   
- [  **@location =**] **'***位置*****  
+ [  **@location =**] **'***位置***’**  
  要添加的目标服务器的位置。 *位置*是**nvarchar(100)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

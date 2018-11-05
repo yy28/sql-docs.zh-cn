@@ -132,7 +132,7 @@ ms.locfileid: "48204627"
   
 2.  在标准菜单栏上，单击 **“新建查询”**。  
   
-3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `DataFile1` 数据库中名为 `UserDB` 的数据文件的大小收缩到 7 MB。  
+3.  将以下示例复制并粘贴到查询窗口中，然后单击“执行” 。 此示例使用 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) 将 `UserDB` 数据库中名为 `DataFile1` 的数据文件的大小收缩到 7 MB。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

@@ -43,19 +43,19 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@article_resolver =** ] **'***article_resolver*****  
+ [  **@article_resolver =** ] **'***article_resolver***’**  
  指定注册的自定义业务逻辑的友好名称。 *article_resolver*是**nvarchar(255)**，无默认值。  
   
- [  **@resolver_clsid=** ] **'***resolver_clsid*****  
+ [  **@resolver_clsid=** ] **'***resolver_clsid***’**  
  指定正在注册的 COM 对象的 CLSID 值。 自定义业务逻辑*resolver_clsid*是**nvarchar （50)**，默认值为 NULL。 在注册业务逻辑处理程序程序集时，必须将该参数设置为有效的 CLSID，或将其设置为 NULL。  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly*****  
+ [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***’**  
  指定要注册的自定义业务逻辑的类型。 *is_dotnet_assembly*是**nvarchar （50)**，默认值为 FALSE。 **true**指示正在注册的自定义业务逻辑是业务逻辑处理程序程序集;**false**指示它是一个 COM 组件。  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name*****  
+ [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***’**  
  实现业务逻辑处理程序的程序集的名称。 *dotnet_assembly_name*是**nvarchar(255)**，默认值为 NULL。 如果该程序集未部署到与合并代理可执行文件相同的目录中、与同步启动合并代理的应用程序相同的目录中或全局程序集缓存 (GAC) 中，则必须指定该程序集的完整路径。  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name*****  
+ [  **@dotnet_class_name=** ] **'***dotnet_class_name***’**  
  实现业务逻辑处理程序时优先级高于 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 的类的名称。 名称应在窗体中指定**Namespace.Classname**。 *dotnet_class_name*是**nvarchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -43,13 +43,13 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  要测量滞后时间的发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@tracer_token_id=** ] *tracer_token_id * * * 输出**  
  插入的跟踪令牌的 ID。 *tracer_token_id*是**int** ，默认值为 NULL，它是一个输出参数。 此值可用于执行[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)或[sp_deletetracertokenhistory &#40;-&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)而不用先执行[sp_helptracertokens &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL，不应指定为[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
 ## <a name="return-code-values"></a>返回代码值  

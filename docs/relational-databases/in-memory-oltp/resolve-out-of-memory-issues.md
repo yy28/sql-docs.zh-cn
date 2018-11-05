@@ -143,7 +143,7 @@ GO
   
  有关使用对象资源管理器、资源调控器属性或 Transact-SQL 启用资源调控器的限制和局限以及指导的信息，请参阅 [启用资源调控器](../../relational-databases/resource-governor/enable-resource-governor.md) 。  
  
-## <a name="bkmk_VMs">在 VM 环境下使用内存中 OLTP 的最佳做法</a>
+## <a name="bkmk_VMs"></a>在 VM 环境下使用内存中 OLTP 的最佳做法
 服务器虚拟化可以帮助你改进应用程序配置、维护、可用性和备份/恢复流程，进而降低 IT 资本和运营成本并提高 IT 效率。 由于近年来的技术进步，可以更轻松地使用虚拟化来合并复杂的数据库工作负载。 本主题说明了在虚拟化环境中使用 SQL Server 内存中 OLTP 的最佳做法。
 
 ### <a name="memory-pre-allocation"></a>内存预先分配

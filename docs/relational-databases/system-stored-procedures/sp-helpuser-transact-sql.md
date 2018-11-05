@@ -43,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@name_in_db =** ] **'***security_account*****  
+ [  **@name_in_db =** ] **'***security_account***’**  
  当前数据库中数据库用户或数据库角色的名称。 *security_account*必须存在于当前数据库。 *security_account*是**sysname**，默认值为 NULL。 如果*security_account*未指定，则**sp_helpuser**返回有关所有数据库主体的信息。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -49,7 +49,7 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -59,19 +59,19 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  **1**指定 Windows 身份验证。  
   
- [ **@publisher_login**=] **'***publisher_login*****  
+ [ **@publisher_login**=] **'***publisher_login***’**  
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*将使用当连接到发布服务器。  
   
  [ **@publisher_password**=] **'***publisher_password*****  
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，无默认值。  
   
- [ **@job_login**=] **'***job_login*****  
+ [ **@job_login**=] **'***job_login***’**  
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 *这是无法更改为非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
- [ **@job_password**=] **'***job_password*****  
+ [ **@job_password**=] **'***job_password***’**  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
- [ **@publisher_type**=] **'***publisher_type*****  
+ [ **@publisher_type**=] **'***publisher_type***’**  
  当发布服务器未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中运行时指定该发布服务器类型。 *publisher_type*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  

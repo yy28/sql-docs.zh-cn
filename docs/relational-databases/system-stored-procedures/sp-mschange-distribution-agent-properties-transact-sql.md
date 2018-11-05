@@ -48,22 +48,22 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber=** ] **'***订阅服务器*****  
+ [  **@subscriber=** ] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@subscriber_db=** ] **'***subscriber_db*****  
+ [  **@subscriber_db=** ] **'***subscriber_db***’**  
  是订阅数据库的名称。 *subscriber_db*是**sysname**，无默认值。  
   
- [  **@property =** ] **'***属性*****  
+ [  **@property =** ] **'***属性***’**  
  要更改的发布属性。 *属性*是**sysname**，无默认值。  
   
- [  **@value =** ] **'***值*****  
+ [  **@value =** ] **'***值***’**  
  新属性值。 *值*是**nvarchar(524)**，默认值为 NULL。  
   
  下表说明了可以更改的分发服务器代理作业的属性，以及对这些属性值的限制。  

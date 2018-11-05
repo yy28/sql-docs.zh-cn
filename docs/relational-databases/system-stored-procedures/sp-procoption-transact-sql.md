@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@ProcName =** ] **'***过程*****  
+ [  **@ProcName =** ] **'***过程***’**  
  是要为其设置选项的名称。 *过程*是**nvarchar(776)**，无默认值。  
   
- [  **@OptionName =** ] **'***选项*****  
+ [  **@OptionName =** ] **'***选项***’**  
  要设置的选项的名称。 唯一的值为*选项*是**启动**。  
   
- [  **@OptionValue =** ] **'***值*****  
+ [  **@OptionValue =** ] **'***值***’**  
  是否要选项设置为 on (**，则返回 true**或**上**) 或禁用 (**false**或者**关闭**)。 *值*是**varchar(12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

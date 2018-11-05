@@ -45,16 +45,16 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@old=** ] **'***old_password*****  
+ [  **@old=** ] **'***old_password***’**  
  是的旧密码。 *old_password*是**sysname**，默认值为 NULL。  
   
- [  **@new=** ] **'***new_password*****  
+ [  **@new=** ] **'***new_password***’**  
  是的新密码。 *new_password*是**sysname**，无默认值。 *old_password*必须命名的参数不能指定。  
   
 > [!IMPORTANT]  
 >  不要使用密码为空。 请使用强密码。 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
- [  **@loginame=** ] **'***登录*****  
+ [  **@loginame=** ] **'***登录***’**  
  受密码更改影响的登录名。 login 的数据类型为 sysname，默认值为 NULL。 *登录名*必须已经存在，可以指定只能由的成员**sysadmin**或**securityadmin**固定服务器角色的成员。  
   
 ## <a name="return-code-values"></a>返回代码值  

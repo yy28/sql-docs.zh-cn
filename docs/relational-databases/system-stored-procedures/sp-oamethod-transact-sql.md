@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *方法名称*  
  要调用的 OLE 对象的方法名。  
   
- *returnvalue***输出**  
+ *returnvalue* **输出**  
  OLE 对象的方法的返回值。 如果指定此参数，则必须是相应数据类型的局部变量。  
   
  如果该方法返回单个值，指定的局部变量*returnvalue*，这会返回该方法在本地变量中，返回值或不指定*returnvalue*，它将返回方法作为单列、 单行结果集返回到客户端的值。  
@@ -70,7 +70,7 @@ sp_OAMethod objecttoken , methodname
   
  若要获取输出参数，返回值*参数*必须是相应的数据类型的本地变量和**输出**必须指定。 如果指定常数参数，或如果**输出**未指定，则任何返回输出参数的值将被忽略。  
   
- 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意，  **@** *parametername*不是[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。At 符号 (**@ * *) 中删除，并*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
+ 如果指定， *parametername*必须是名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]命名参数。 请注意， **@***parametername*不是[!INCLUDE[tsql](../../includes/tsql-md.md)]本地变量。At 符号 (**@ * *) 中删除，并*parametername*传递给 OLE 对象作为参数名称。 指定了所有位置参数后，才能指定命名参数。  
   
  *n*  
  指示可以指定多个参数的占位符。  

@@ -47,10 +47,10 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>参数
 
-[  **@name =** ] **'***module_name*****   
+[  **@name =** ] **'***module_name***’**   
 是存储过程、用户定义函数、视图、DML 触发器、数据库级 DDL 触发器或服务器级 DDL 触发器的名称。 *module_name*不能为公共语言运行时 (CLR) 存储过程或 CLR 函数。 *module_name*不能为绑定到架构的。 *module_name*是`nvarchar`，无默认值。 *module_name*可以是多个部分组成的标识符，但只能引用当前数据库中的对象。
 
-[  **@namespace =** ] **'** < 类 >    
+[  **@namespace =** ] **'** < 类 > **‘**   
 是指定模块的类。 当*module_name*是 DDL 触发器，`<class>`是必需的。 `<class>` 为 `nvarchar(20)`。 有效输入包括`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
 
 ## <a name="return-code-values"></a>返回代码值  

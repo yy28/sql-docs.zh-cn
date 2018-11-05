@@ -47,10 +47,10 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  通过使用先前创建的 OLE 对象的对象令牌**sp_OACreate**或，则为 NULL。 如果*objecttoken*是指定，则返回该对象的错误信息。 如果指定为 NULL，则返回整个批处理的错误信息。  
   
- *源***输出**  
+ *源* **输出**  
  错误信息的源。 如果指定，它必须是本地**char**， **nchar**， **varchar**，或者**nvarchar**变量。 必要时将截断返回值以适合局部变量的要求。  
   
- *描述***输出**  
+ *描述* **输出**  
  是错误的说明。 如果指定，它必须是本地**char**， **nchar**， **varchar**，或者**nvarchar**变量。 必要时将截断返回值以适合局部变量的要求。  
   
  *helpfile* **输出**  

@@ -57,7 +57,7 @@ ms.locfileid: "48188327"
   
 2.  还原最新完整数据库备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-3.  如果存在差异备份，则还原最新的差异备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *differential_backup_device* WITH NORECOVERY).。  
+3.  如果存在差异备份，则还原最新的差异备份而不恢复数据库 (RESTORE DATABASE *database_name* FROM *differential_backup_device* WITH NORECOVERY)。  
   
      还原最新差异备份可减少必须还原的日志备份数。  
   

@@ -42,16 +42,16 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@subscriber**=] **'***订阅服务器*****  
+ [ **@subscriber**=] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器*数据类型为 sysname，无默认值。  
   
- [  **@destination_db=**] **'***destination_db*****  
+ [  **@destination_db=**] **'***destination_db***’**  
  目标数据库的名称。 *destination_db*是**sysname**，无默认值。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

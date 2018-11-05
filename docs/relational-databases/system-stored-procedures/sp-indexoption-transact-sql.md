@@ -47,10 +47,10 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@IndexNamePattern=**] **'***table_or_index_name*****  
+ [  **@IndexNamePattern=**] **'***table_or_index_name***’**  
  用户定义的表或索引的限定或非限定名称。 *table_or_index_name*是**nvarchar(1035)**，无默认值。 仅当指定限定索引或表名时，才需要使用引号。 如果提供了包含数据库名称的完全限定表名，则数据库名称必须为当前数据库的名称。 如果指定表名时未使用索引，则将为该表中的所有索引和表本身设置指定的选项（前提是不存在聚集索引）。  
   
- [  **@OptionName =**] **'***option_name*****  
+ [  **@OptionName =**] **'***option_name***’**  
  索引选项名。 *option_name*是**varchar(35)**，无默认值。 *option_name*可以具有以下值之一。  
   
 |ReplTest1|Description|  
@@ -60,7 +60,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|如果为 TRUE，则不使用行锁。 如果为 FALSE，则访问索引时允许使用行锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用行锁。|  
 |**DisAllowPageLocks**|如果为 TRUE，则不使用页锁。 如果为 FALSE，则访问索引时允许使用页锁。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]确定何时使用页锁。|  
   
- [  **@OptionValue =**] **'***值*****  
+ [  **@OptionValue =**] **'***值***’**  
  指定是否*option_name*设置为已启用 （TRUE、 ON、 yes 或 1） 还是禁用 (FALSE、 OFF、 no 或 0)。 *值*是**varchar(12)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

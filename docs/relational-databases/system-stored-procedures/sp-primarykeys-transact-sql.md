@@ -46,13 +46,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
  [  **@table_server =** ] *** * * table_server*  
  表示从中返回主键信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] **'***table_name*****  
+ [  **@table_name =** ] **'***table_name***’**  
  表示提供其主键信息的表名。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] **'***table_schema*****  
+ [  **@table_schema =** ] **'***table_schema***’**  
  表架构。 *table_schema*是**sysname**，默认值为 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于表所有者。  
   
- [  **@table_catalog =** ] **'***table_catalog*****  
+ [  **@table_catalog =** ] **'***table_catalog***’**  
  是在其中的目录的名称指定*table_name*驻留。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中，该值对应于数据库名称。 *table_catalog*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

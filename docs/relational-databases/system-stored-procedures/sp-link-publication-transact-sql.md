@@ -51,13 +51,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher**=] **'***发布服务器***’**  
  要链接到的发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [ **@publisher_db**=] **'***publisher_db*****  
+ [ **@publisher_db**=] **'***publisher_db***’**  
  要链接到的发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  要链接到的发布的名称。 *发布*是**sysname**，无默认值。  
   
  [ **@security_mode**=] *security_mode*  
@@ -69,13 +69,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|使用在订阅服务器上进行更改的用户的安全上下文（[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证或 Windows 身份验证）。<br /><br /> 注意： 此帐户还必须在发布服务器具有足够特权。 使用 Windows 身份验证时，必须支持安全策略帐户委托。|  
 |**2**|使用现有的、 用户定义链接的服务器登录名创建使用**sp_link_publication**。|  
   
- [ **@login**=] **'***登录*****  
+ [ **@login**=] **'***登录***’**  
  登录。 login 的数据类型为 sysname，默认值为 NULL。 此参数必须是指定何时*security_mode*是**0**。  
   
- [ **@password**=] **'***密码*****  
+ [ **@password**=] **'***密码***’**  
  是的密码。 *密码*是**sysname**，默认值为 NULL。 此参数必须是指定何时*security_mode*是**0**。  
   
- [  **@distributor=** ] **'***分发服务器*****  
+ [  **@distributor=** ] **'***分发服务器***’**  
  是分发服务器的名称。 *分发服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

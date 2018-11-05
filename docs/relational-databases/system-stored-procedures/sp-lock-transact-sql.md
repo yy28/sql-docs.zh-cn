@@ -44,10 +44,10 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@spid1 =** ] **'***会话 ID1*****  
+ [  **@spid1 =** ] **'***会话 ID1***’**  
  是[!INCLUDE[ssDE](../../includes/ssde-md.md)]从会话 ID 号**sys.dm_exec_sessions**为其用户想要锁定其信息。 *会话 ID1*是**int**默认值为 NULL。 执行**sp_who**以获取有关该会话的进程信息。 如果*会话 ID1*未指定，则显示有关所有锁的信息。  
   
- [  **@spid2 =** ] **'***会话 ID2*****  
+ [  **@spid2 =** ] **'***会话 ID2***’**  
  另一个[!INCLUDE[ssDE](../../includes/ssde-md.md)]从会话 ID 号**sys.dm_exec_sessions**可能会为同时具有锁*会话 ID1*和有关该用户也需要的信息。 *会话 ID2*是**int**默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

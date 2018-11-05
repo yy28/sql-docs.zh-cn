@@ -39,7 +39,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publisher** =] **'***发布服务器*****  
+ [**@publisher** =] **'***发布服务器***’**  
  作业所属的非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

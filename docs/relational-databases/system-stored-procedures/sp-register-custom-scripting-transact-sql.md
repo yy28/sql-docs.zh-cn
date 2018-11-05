@@ -42,7 +42,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@type** =] **'***类型*****  
+ [ **@type** =] **'***类型***’**  
  注册的自定义存储过程或脚本的类型。 *类型*是**varchar(16)**，无默认值，并且可以是以下值之一。  
   
 |ReplTest1|Description|  
@@ -52,7 +52,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|复制 DELETE 语句时，将执行注册的自定义存储过程。|  
 |**custom_script**|在数据定义语言 (DDL) 触发器的末尾执行脚本。|  
   
- [ **@value**=] **'***值*****  
+ [ **@value**=] **'***值***’**  
  存储过程的名称，或注册的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本文件的名称和完全限定的路径。 *值*是**nvarchar(1024)**，无默认值。  
   
 > [!NOTE]  
@@ -60,10 +60,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
  时的值*类型*是**custom_script**，名称和完整路径[!INCLUDE[tsql](../../includes/tsql-md.md)]预期脚本文件。 否则为*值*必须是已注册的存储过程的名称。  
   
- [ **@publication**=] **'***发布*****  
+ [ **@publication**=] **'***发布***’**  
  为其注册自定义存储过程或脚本的发布的名称。 *发布*是**sysname**，默认值为**NULL**。  
   
- [ **@article**=] **'***文章*****  
+ [ **@article**=] **'***文章***’**  
  为其注册自定义存储过程或脚本的项目的名称。 *文章*是**sysname**，默认值为**NULL**。  
   
 ## <a name="return-code-values"></a>返回代码值  

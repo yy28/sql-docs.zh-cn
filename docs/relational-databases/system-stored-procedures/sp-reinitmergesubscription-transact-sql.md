@@ -45,13 +45,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**所有**。  
   
- [  **@subscriber =** ] **'***订阅服务器*****  
+ [  **@subscriber =** ] **'***订阅服务器***’**  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为**所有**。  
   
- [  **@subscriber_db =** ] **'***subscriber_db*****  
+ [  **@subscriber_db =** ] **'***subscriber_db***’**  
  订阅服务器数据库的名称。 *subscriber_db*是**sysname**，默认值为**所有**。  
   
- [  **@upload_first =** ] **'***upload_first*****  
+ [  **@upload_first =** ] **'***upload_first***’**  
  表示在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  

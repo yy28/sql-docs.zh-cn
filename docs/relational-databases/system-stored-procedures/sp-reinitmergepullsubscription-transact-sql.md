@@ -51,7 +51,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [ **@publication** = ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，使用默认值为 ALL。  
   
- [ **@upload_first** =] **'***upload_first*****  
+ [ **@upload_first** =] **'***upload_first***’**  
  表示在重新初始化订阅之前是否上载订阅服务器上的更改。 *upload_first*是**nvarchar(5)**，默认值为 FALSE。 如果 **，则返回 true**，该订阅重新初始化之前上载更改。 如果**false**，不上载更改。  
   
 ## <a name="return-code-values"></a>返回代码值  

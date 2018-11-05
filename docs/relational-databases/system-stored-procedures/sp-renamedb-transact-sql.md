@@ -43,10 +43,10 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@dbname=**] **'***old_name 为*****  
+ [  **@dbname=**] **'***old_name 为***’**  
  数据库的当前名称。 *old_name 为*是**sysname**，无默认值。  
   
- [  **@newname=**] **'***new_name*****  
+ [  **@newname=**] **'***new_name***’**  
  是数据库的新名称。 *new_name*必须遵循有关标识符的规则。 *new_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

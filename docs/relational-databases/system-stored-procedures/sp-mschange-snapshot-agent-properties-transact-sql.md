@@ -61,7 +61,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication =** ] **'***publication***'**  
@@ -114,13 +114,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，无默认值。  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name*****  
+ [  **@snapshot_job_name =** ] **'***snapshot_agent_name***’**  
  使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)**，无默认值。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
  连接到发布服务器时代理所使用的安全模式。 *publisher_security_mode*是**int**，无默认值。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证，并**1**指定 Windows 身份验证。 值为**0**必须为指定非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'***publisher_login*****  
+ [ **@publisher_login**=] **'***publisher_login***’**  
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，无默认值。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL，并且发布者 *_ * * security_mode*是**1**，然后在指定的 Windows 帐户*job_login*将连接到发布服务器时使用。  
   
  [ **@publisher_password**=] **'***publisher_password*****  
@@ -129,16 +129,16 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@job_login**=] **'***job_login*****  
+ [ **@job_login**=] **'***job_login***’**  
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 *这是无法更改为非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *发布服务器。*  
   
- [ **@job_password**=] **'***job_password*****  
+ [ **@job_password**=] **'***job_password***’**  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@publisher_type**=] **'***publisher_type*****  
+ [ **@publisher_type**=] **'***publisher_type***’**  
  当发布服务器未在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中运行时指定该发布服务器类型。 *publisher_type*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  

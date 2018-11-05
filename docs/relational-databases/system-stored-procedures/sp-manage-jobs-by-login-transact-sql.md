@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@action=** ] **'***操作*****  
+ [  **@action=** ] **'***操作***’**  
  要对指定登录名进行的操作。 *操作*是**varchar(10)**，无默认值。 当*操作*是**删除**， **sp_manage_jobs_by_login**删除拥有的所有作业*current_owner_login_name*。 当*操作*是**重新分配**，所有作业均都分配给*new_owner_login_name*。  
   
  [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  

@@ -41,10 +41,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publisher** =] **'***发布服务器*****  
+ [**@publisher** =] **'***发布服务器***’**  
  异类发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [**@propertyname** =] **'***propertyname*****  
+ [**@propertyname** =] **'***propertyname***’**  
  所设置的属性的名称。 *propertyname*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -55,7 +55,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  当*propertyname*省略返回的所有可设置属性。  
   
- [**@propertyvalue** =] **'***propertyvalue*****  
+ [**@propertyvalue** =] **'***propertyvalue***’**  
  属性设置的新值。 *propertyvalue*是**sysname**，默认值为 NULL。 当*propertyvalue*省略，则当前的设置，则返回该属性。  
   
 ## <a name="result-sets"></a>结果集  

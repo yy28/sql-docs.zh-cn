@@ -41,7 +41,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>参数  
  *progid*  
- 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式： **'***OLEComponent***。***对象*****  
+ 要创建的 OLE 对象的编程标识符 (ProgID)。 此字符串说明该 OLE 对象的类，采用以下格式： **'***OLEComponent***。***对象***’**  
   
  *OLEComponent*是 OLE 自动化服务器的组件名称和*对象*是 OLE 对象的名称。 指定的 OLE 对象必须有效，并且必须支持**IDispatch**接口。  
   
