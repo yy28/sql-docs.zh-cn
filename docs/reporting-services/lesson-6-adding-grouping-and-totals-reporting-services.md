@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1efff69fb2311d1c81ac4f25a1a51fe456b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc8a5e6bc796cf5e7c014c51ec93074eae863bb7
+ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051010"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教程课程中，你将向 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表中添加分组和总计以便组织和汇总数据。  
@@ -33,9 +33,9 @@ ms.locfileid: "47720505"
   
 4.  从 **“报表数据”** 窗格将 **Order** 字段拖到 **“行组”** 窗格， 并将其放置到 Date 下面和 **(Details)** 上面。
 
-![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
+    ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
-    Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
+    请注意，行句柄中现在有两个方括号 ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png)，用于显示两个组。 表现在还包含两个 **Order** 列。  
   
 5.  删除两根线条 **右侧** 的原始 **Date** 和 **Order** 列。 这将删除该单个记录值，以便仅显示组值。 选择并右键单击两个列的列句柄，然后单击“删除列”。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47720505"
   
 4.  在 **“格式”** 菜单上，依次单击 **“背景色”**、 **“橙色”** 和 **“确定”**。  
   
-    ![](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
+    ![将背景色设置为“橙色”](../reporting-services/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
 ## <a name="bkmk_addgrandtotal"></a>向报表添加总计  
   
@@ -113,9 +113,9 @@ ms.locfileid: "47720505"
 2.  单击“项目”菜单，然后单击“教程属性...”  
   
 3.  在 **TargetServerURL** 中，键入报表服务器的名称，例如   
-- `http:/<servername>/reportserver`  
+    - `http:/<servername>/reportserver`  
    
-- `http://localhost/reportserver` 如果你的设计报表在报表服务器上，则使用。  
+    - `http://localhost/reportserver` 如果你的设计报表在报表服务器上，则使用。  
   
   
 4. 请注意，“TargetReportFolder”是教程，是项目的名称。  这是在下一步骤中将报表部署到其中的文件夹的名称。  
@@ -143,15 +143,15 @@ ms.locfileid: "47720505"
   
     浏览到 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web 门户 URL。   
     **注意：** 门户 URL 为“Reports”，而不是“Reportserver”的报表服务器 URL。  例如：   
-    - `http://<server name>/reports`的行上面。  
-     - `http://localhost/reports` 如果你的设计报表在报表服务器上，则使用。  
+    `http://<server name>/reports`的用户。  
+    如果在报表服务器上设计报表，则 `http://localhost/reports` 有效。  
   
 8.  浏览到包含该报表的文件夹。 默认名称是教程，即项目的名称或在项目属性中的“TargetReportFolder fiedl”中键入的名称。   
 单击报表“Sales Orders”的名称以在浏览器中查看呈现的报表。  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 你已成功完成了“创建基本表报表”教程的学习。**  
+这样，您就成功完成了对“创建基本表报表”教程的学习。  
   
 ## <a name="see-also"></a>另请参阅  
 [对数据进行筛选、分组和排序（报表生成器和 SSRS）](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

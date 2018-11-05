@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7520a4e9bdc346113e4777bd6899f5ccc0e01c
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 957d8c397843f30e831dcc0a5f33943b959bac90
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460312"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226259"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase 功能和限制
 
@@ -64,13 +64,9 @@ PolyBase 具有以下限制：
 
 - 在 SQL Server 中最大行大小（包括可变长度列的全长）不能超过 32 KB，在 Azure SQL 数据仓库中不能超过 1 MB。
 
-- PolyBase 不支持 Hive 0.12+ 数据类型（即 Char()、VarChar()）
+- 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于 Java 内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
 
-- 将数据从 SQL Server 或 Azure SQL 数据仓库导出为 ORC 文件格式时，由于因使用 Java 而导致的内存不足错误，包含大量文本的列可能会被限制为 50 列。 若要解决此问题，请仅导出列的一个子集。
-
-- 无法读取或写入 Hadoop 中的静态加密数据。 这包括 HDFS 加密区域或透明加密。
-
-- 如果已启用 KNOX，则 PolyBase 无法连接 Hortonworks 实例。
+- 如果已启用 Knox，则 PolyBase 无法连接到 Hortonworks 实例。
 
 - 如果使用事务为 true 的 Hive 表，PolyBase 将无法访问 Hive 表目录中的数据。
 
@@ -80,10 +76,6 @@ PolyBase 具有以下限制：
 - [向 SQL Server 2016 故障转移群集添加节点时，PolyBase 没有安装](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
-
-- 不支持集成身份验证。 目前仅支持用户名和密码。  
-
-- 加密默认为启用状态。
 
 ## <a name="next-steps"></a>后续步骤
 

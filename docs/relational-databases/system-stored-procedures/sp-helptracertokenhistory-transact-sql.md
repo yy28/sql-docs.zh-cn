@@ -42,19 +42,19 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'***发布***’**  
  已插入跟踪令牌的发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@tracer_id=** ] *tracer_id*  
  是中的跟踪令牌的 ID [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)历史记录返回信息的表。 *tracer_id*是**int**，无默认值。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  应仅指定此参数为非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 如果在发布服务器上执行该存储过程，将忽略此参数。  
   
 ## <a name="result-set"></a>结果集  

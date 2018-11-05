@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 677d076d912cc7b3926fdd8ae2ef9dcc79c7b350
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd074f4cd7d3d9042e5f0deb3de6ee0731c4af9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762365"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806717"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>配置 PolyBase 以访问 Hadoop 中的外部数据
 
@@ -61,7 +61,7 @@ ms.locfileid: "47762365"
    GO
    ```  
 
-2. 必须使用 **services.msc** 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
+2. 必须使用 services.msc 重启 SQL Server。 重启 SQL Server 会重启这些服务：  
 
    - SQL Server PolyBase 数据移动服务  
    - SQL Server PolyBase 引擎  
@@ -86,14 +86,17 @@ ms.locfileid: "47762365"
 
 ## <a name="configure-an-external-table"></a>配置外部表
 
-若要查询 Hadoop 数据源中的数据，必须定义外部表以在 TRANSACT-SQL 查询中使用。 以下步骤介绍如何配置外部表。
+若要查询 Hadoop 数据源中的数据，必须定义外部表以在 Transact-SQL 查询中使用。 以下步骤介绍如何配置外部表。
 
-1. 在数据库上创建主密钥。 这是加密凭据密钥所必需的。
+1. 创建数据库主密钥（如果尚不存在）。 这是加密凭据密钥所必需的。
 
-   ```sql
-   CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
-   ```
+     ```sql
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
+     ```
+    ## <a name="arguments"></a>参数
+    PASSWORD ='password'
 
+    用于加密数据库主密钥的密码。 密码必须符合托管 SQL Server 实例的计算机的 Windows 密码策略要求。
 1. 为受 Kerberos 保护的 Hadoop 群集创建数据库范围凭据。
 
    ```sql
@@ -162,7 +165,7 @@ PolyBase 适用于三个函数：
 
 ### <a name="ad-hoc-queries"></a>即席查询  
 
-下面的即席查询联接与 Hadoop 数据的关系。 它选择驾驶速度超过 35 mph 的客户，将存储在 SQL Server 中的结构化客户数据与存储在 Hadoop 中的汽车传感器数据相联接。  
+下面的即席查询联接与 Hadoop 数据的关系。 它选择驾驶速度超过 35 mph 的客户，将 SQL Server 中存储的结构化客户数据与 Hadoop 中存储的汽车传感器数据相联接。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -193,7 +196,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 ### <a name="exporting-data"></a>导出数据  
 
-以下查询将数据从 SQL Server 导出到 Hadoop。 若要执行此操作，首先需要启用 PolyBase 导出。 在向目的地导出数据之前，为目的地创建一个外部表。
+以下查询将数据从 SQL Server 导出到 Hadoop。 若要执行此操作，首先需要启用 PolyBase 导出。 在向目标导出数据之前，为目标创建一个外部表。
 
 ```sql
 -- Enable INSERT into external table  

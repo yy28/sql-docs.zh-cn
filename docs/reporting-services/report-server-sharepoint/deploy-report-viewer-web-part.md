@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cd9678c06e69b185c75b95d6095e238df8d0937
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 5f6f3e3d23c2d2777a3a17db16d047222991d48a
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085173"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50030616"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>在 SharePoint 网站上部署 SQL Server Reporting Services 报表查看器 Web 部件
 
@@ -171,4 +171,4 @@ Web 部件支持以下语言：
 
 在部署并激活报表查看器 Web 部件后，可将 Web 部件添加到 SharePoint 页面。 有关详细信息，请参阅[将报表查看器 Web 部件添加到 SharePoint 页面](add-report-viewer-web-part-to-page.md)。
 
-更多疑问？ [请访问 Reporting Services 论坛](http://go.microsoft.com/fwlink/?LinkId=620231)
+更多疑问？ [请访问 Reporting Services 论坛](https://go.microsoft.com/fwlink/?LinkId=620231)

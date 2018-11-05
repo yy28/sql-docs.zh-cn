@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07c5e65558bf4544da08f631a1d57290352bb451
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411134"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965946"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
@@ -28,9 +28,9 @@ ms.locfileid: "49411134"
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[安装程序](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 18日日 |1.1.3|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 18日日 |1.1.3|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 18日日 |1.1.3|
+|Windows|[安装程序](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 30日日 |1.1.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 30日日 |1.1.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 30日日 |1.1.4|
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "49411134"
 1. 启动[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]应用。
 
 
-**.zip 文件**
+**zip 文件**
 
 1. 下载[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2030736)。
 2. 浏览到下载的文件并将其解压缩。
@@ -146,12 +146,21 @@ ms.locfileid: "49411134"
 - SUSE Linux Enterprise Server v12 SP2
 - Ubuntu 16.04
 
+## <a name="recommended-system-requirements"></a>建议的系统要求
+为获得最佳体验，请使用建议的系统要求。
+
+|             | CPU 核心数 | 内存/RAM |
+|:-----------:|:---------:|:----------:|
+| 建议 |     4     |      8     |
+|   最低要求   |     2     |      4     |
+|             |           |            |
+
 ## <a name="check-for-updates"></a>检查更新
 若要检查最新的更新，请单击的窗口，然后单击左下角的齿轮图标**检查更新**
 
-## <a name="supported-sql-offerings-ssms-180-preview"></a>支持的 SQL 产品/服务 （SSMS 18.0 预览版）
+## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
-* 此版本的 Azure Data Studio 适用于所有[受支持版本的 SQL Server 2014- [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)和使用与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能提供支持。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
+* 此版本的 Azure Data Studio 适用于所有[受支持版本的 SQL Server 2014- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)和使用与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能提供支持。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
 
 ## <a name="move-user-settings"></a>移动用户设置
 

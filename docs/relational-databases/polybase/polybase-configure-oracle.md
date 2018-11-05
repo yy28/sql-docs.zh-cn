@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 515a77ebc9e29ba6e629472b446b486355336e1c
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: bf8c9e4d9bdc59d60569594006676b6fa766071a
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874283"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806557"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>配置 PolyBase 以访问 Oracle 中的外部数据
 
@@ -25,27 +25,28 @@ ms.locfileid: "48874283"
 
 ## <a name="prerequisites"></a>必备条件
 
-如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。 这篇安装文章介绍了安装的先决条件。
+如果尚未安装 PolyBase，请参阅 [PolyBase 安装](polybase-installation.md)。
 
 ## <a name="configure-an-external-table"></a>配置外部表
 
 若要查询 Oracle 数据源中的数据，必须创建外部表以引用外部数据。 本节提供用于创建这些外部表的示例代码。 
  
-为了获得最佳查询性能，我们建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
-
 将在本节中创建这些对象：
 
-- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
+- CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-
-1. 在数据库上创建主密钥。 这是加密凭据密钥所必需的。
+1. 创建数据库主密钥（如果尚不存在）。 这是加密凭据密钥所必需的。
 
      ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
+      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
+    ## <a name="arguments"></a>参数
+    PASSWORD ='password'
+
+    用于加密数据库主密钥的密码。 密码必须符合托管 SQL Server 实例的计算机的 Windows 密码策略要求。
 
 1. 创建数据库范围的凭据。
 
@@ -54,7 +55,7 @@ ms.locfileid: "48874283"
      *  IDENTITY: user name for external source.  
      *  SECRET: password for external source.
      */
-      CREATE DATABASE SCOPED CREDENTIAL OracleCredentials 
+      CREATE DATABASE SCOPED CREDENTIAL credential_name
      WITH IDENTITY = 'username', Secret = 'password';
      ```
 
@@ -63,22 +64,14 @@ ms.locfileid: "48874283"
      ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    * CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
     */  
-    CREATE EXTERNAL DATA SOURCE OracleInstance
+    CREATE EXTERNAL DATA SOURCE external_data_source_name
     WITH ( 
-    LOCATION = oracle://OracleServer,
+    LOCATION = oracle://<server address>[:<port>],
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
-    );
-
-     ```
-
-1. 为外部数据创建架构
- 
-     ```sql
-     CREATE SCHEMA oracle;
-     GO
+      CREDENTIAL = credential_name
      ```
 
 1.  创建表示存储在外部 Oracle 系统 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 中的数据的外部表。
@@ -87,7 +80,7 @@ ms.locfileid: "48874283"
       /*  LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
      *  DATA_SOURCE: the external data source, created above.
      */
-      CREATE EXTERNAL TABLE oracle.orders(
+      CREATE EXTERNAL TABLE customers(
       [O_ORDERKEY] DECIMAL(38) NOT NULL,
      [O_CUSTKEY] DECIMAL(38) NOT NULL,
      [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
@@ -99,15 +92,17 @@ ms.locfileid: "48874283"
      [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
      )
      WITH (
-      LOCATION='TPCH..ORDERS',
-      DATA_SOURCE=OracleInstance
+      LOCATION='customer',
+      DATA_SOURCE=  external_data_source_name
      );
      ```
 
-1. 在外部表上创建统计信息以优化性能。
+1. **可选：** 在外部表上创建统计信息。
+
+    为了获得最佳查询性能，我们建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
 
      ```sql
-      CREATE STATISTICS OrdersOrderKeyStatistics ON oracle.orders(O_ORDERKEY) WITH FULLSCAN;
+      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
 
 ## <a name="next-steps"></a>后续步骤

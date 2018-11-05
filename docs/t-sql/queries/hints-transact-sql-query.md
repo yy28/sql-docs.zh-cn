@@ -1,7 +1,7 @@
 ---
 title: 查询提示 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 521a3a19ce2e1278d856cc3ade5feed67b4182c5
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906307"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806827"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -257,29 +257,33 @@ ms.locfileid: "48906307"
 
  支持以下提示名称：    
  
-*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
- 指示查询处理器在生成查询计划时不对优化的嵌套循环联接使用排序操作（批处理排序）。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 等效。
-*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' - <a name="use_hint_ce70"></a>强制查询优化器使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 等效。
-*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
- 启用查询优化器修补程序（SQL Server 累积更新和 Service Pack 中发布的更改）。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 QUERY_OPTIMIZER_HOTFIXES=ON 等效。
-*  'DISABLE_PARAMETER_SNIFFING'  
- 指示查询优化器使用平均数据分布，同时编译具有一个或多个参数的查询，使查询计划独立于编译查询时最先使用的参数值。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 PARAMETER_SNIFFING=OFF 等效。
-*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' - <a name="use_hint_correlation"></a>导致 SQL Server 在为了进行关联而对筛选的 AND 谓词进行估值时使用最小选择性来生成计划。 与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的基数估计模式一起使用时，这等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137；与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本的基数估计模式一起使用时，这等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471。
-*  'DISABLE_OPTIMIZER_ROWGOAL' - <a name="use_hint_rowgoal"></a>导致 SQL Server 生成一个计划，该计划不对包含 TOP、OPTION (FAST N)、IN 或 EXISTS 关键字的查询使用行目标调整。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 等效。
-*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
- 针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 等效。 
-*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' - <a name="use_hint_join_containment"></a>在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查询优化器[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用联接的简单包含假设而非默认的基本包含假设来生成查询计划。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 等效。 
-*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
- 强制查询优化器使用与当前数据库兼容级别相对应的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示替代[数据库作用域域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
-*  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- 禁用多语句表值函数的交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
-*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
- 禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
-*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
- 禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
-*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
+   在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更新版本的查询优化器[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型下，导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用联接的简单包含假设而非默认的基本包含假设来生成查询计划。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 等效。 
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
+   会导致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在为了进行关联而对筛选的 AND 谓词进行估值时使用最小选择性来生成计划。 与 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的基数估计模式一起使用时，这等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137；与 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或更高版本的基数估计模式一起使用时，这等效于[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471。
+*  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
+   禁用批处理模式自适应联接。 有关详细信息，请参阅[批处理模式自适应联接](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)。
+*  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
+   禁用批处理模式内存授予反馈。 有关详细信息，请参阅[批处理模式内存授予反馈](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)。
+*  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
+   禁用多语句表值函数的交错执行。 有关详细信息，请参阅[多语句表值函数的交错执行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)。
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'      
+   指示查询处理器在生成查询计划时不对优化的嵌套循环联接使用排序操作（批处理排序）。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 等效。
+*  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
+   导致 SQL Server 生成一个计划，该计划不对包含 TOP、OPTION (FAST N)、IN 或 EXISTS 关键字的查询使用行目标调整。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138 等效。
+*  'DISABLE_PARAMETER_SNIFFING'      
+   指示查询优化器使用平均数据分布，同时编译具有一个或多个参数的查询，使查询计划独立于编译查询时最先使用的参数值。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 PARAMETER_SNIFFING=OFF 等效。
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
+   针对需要对其执行基数估计的任何前导索引列，启用自动生成的快速统计信息（直方图修正）。 用于评估基数的直方图将在查询编译时针对此列的实际最大值或最小值进行调整。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 等效。 
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
+   启用查询优化器修补程序（SQL Server 累积更新和 Service Pack 中发布的更改）。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 QUERY_OPTIMIZER_HOTFIXES=ON 等效。
+*  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
+   强制查询优化器使用与当前数据库兼容级别相对应的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 使用此提示替代[数据库作用域域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 或[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481。
+*  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
+   强制查询优化器使用 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 及更早版本的[基数估计](../../relational-databases/performance/cardinality-estimation-sql-server.md)模型。 这与[跟踪标志](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 或[数据库作用域配置](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)设置 LEGACY_CARDINALITY_ESTIMATION=ON 等效。
+*  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  在查询级别强制执行查询优化器行为，就像使用数据库兼容性级别 n 来编译该查询（其中 n 是受支持的数据库兼容性级别）。 请参阅 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)，以了解目前对 n 支持的值。 **适用范围**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（自 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 起）。    
- 
+
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不会重写默认或旧版基数估计设置（如果它是通过数据库范围的配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的）。   
    > 此提示仅影响查询优化器的行为。 它不会影响可能依赖于[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他功能（例如，某些数据库功能的可用性）。  
@@ -287,7 +291,7 @@ ms.locfileid: "48906307"
     
 *  'QUERY_PLAN_PROFILE'      
  启用用于查询的轻型分析。 当包含此新提示的查询完成时，会触发一个新扩展事件：query_plan_profile。 此扩展事件公开执行统计信息和实际执行计划 XML，类似于 query_post_execution_showplan 扩展事件，但仅针对包含新提示的查询。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始）。 
- 
+
   > [!NOTE]
   > 如果启用收集 query_post_execution_showplan 扩展事件，会向在服务器上运行的每个查询添加标准分析基础结构，因此可能会影响服务器的总体性能。      
   > 如果启用 query_thread_profile 扩展事件集合以改为使用轻量分析基础结构，这将在很大程度上减少性能开销，但仍会影响服务器的总体性能。       

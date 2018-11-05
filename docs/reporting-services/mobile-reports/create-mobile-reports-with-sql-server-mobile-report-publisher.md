@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4572d5c325dbfb36a17ce2c987140ab56b6626e6
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031626"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>使用 SQL Server 移动报表发布服务器创建移动报表
 了解 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 移动报表，其针对移动设备进行了优化，可连接到本地数据，且具有多种类型的数据可视化效果。 
 
 >[!NOTE]
->  是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
+> 是否需要将 Datazen 服务器内容（如仪表板和 KPI）迁移到 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 服务器？ 请尝试 [Datazen 的 SQL Server 迁移助手](https://www.microsoft.com/en-us/download/details.aspx?id=53128)。 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "47739335"
 ## <a name="create-includessrsnoversionmdincludesssrsnoversion-mdmd--mobile-reports"></a>创建 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  移动报表  
   
 这些文章可帮助你入门。
--  下载 [SQL Server 移动报表发布服务器](http://go.microsoft.com/fwlink/?LinkID=733527)  
+-  下载 [SQL Server 移动报表发布服务器](https://go.microsoft.com/fwlink/?LinkID=733527)  
 -  [创建 Reporting Services 移动报表](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
 -  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server 2016 Reporting Services（端到端演练：在 SQL Server 2016 Reporting Services 中创建移动报表和 KPI）](http://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) （Christopher Finlan 博客）  
 - [设计为先还是数据为先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md)：决定是先使用模拟数据设计报表，还是使用自己的数据开始。  

@@ -44,7 +44,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  [ **@objname =** ] **'***name***'**  
  架构范围内的用户定义对象的限定名称和非限定名称。 仅当指定限定对象时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 对象必须在当前数据库中。 *名称*是**nvarchar(776)**，无默认值。  
   
- [  **@columnname =** ] **'***computed_column_name*****  
+ [  **@columnname =** ] **'***computed_column_name***’**  
  要显示其定义信息的计算列的名称。 包含的列的表必须指定为*名称*。 *column_name*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

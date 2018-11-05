@@ -1,5 +1,5 @@
 ---
-title: 排序规则优先级 (Transact-SQL) | Microsoft Docs
+title: 排序规则优先级 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,14 +27,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1271e6d108009ffd30084a6402c790070c0e3d8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
+ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621315"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49960771"
 ---
-# <a name="collation-precedence-transact-sql"></a>排序规则优先级 (Transact-SQL)
+# <a name="collation-precedence"></a>排序规则优先级
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   排序规则优先顺序也称为排序规则强制规则，用于确定：  
@@ -43,10 +43,10 @@ ms.locfileid: "47621315"
   
 -   区分排序规则的运算符所使用的排序规则，这些运算符使用字符串输入但不返回字符串，如 LIKE 和 IN。  
   
- 排序规则的优先顺序规则只应用于下列字符串数据类型：char、varchar、text、nchar、nvarchar 和 ntext。 具有其他数据类型的对象不参与排序规则计算。  
+排序规则的优先顺序规则只应用于下列字符串数据类型：char、varchar、text、nchar、nvarchar 和 ntext。 具有其他数据类型的对象不参与排序规则计算。  
   
 ## <a name="collation-labels"></a>排序规则标签  
- 下表列出并说明了四个用于标识所有对象的排序规则的类别。 每个类别的名称叫做排序规则标签。  
+下表列出并说明了四个用于标识所有对象的排序规则的类别。 每个类别的名称叫做排序规则标签。  
   
 |排序规则标签|对象类型|  
 |---------------------|----------------------|  
@@ -56,11 +56,11 @@ ms.locfileid: "47621315"
 |无排序规则|指示表达式的值是两个字符串之间的运算结果，而这两个字符串具有隐式排序规则标签的冲突排序规则。 表达式的结果被定义为不具有排序规则。|  
   
 ## <a name="collation-rules"></a>排序规则  
- 只引用一个字符串对象的简单表达式的排序规则标签是被引用对象的排序规则标签。  
+只引用一个字符串对象的简单表达式的排序规则标签是被引用对象的排序规则标签。  
   
- 如果复杂表达式被引用两个操作数表达式的排序规则标签相同，则该复杂表达式的排序规则标签为操作数表达式的排序规则标签。  
+如果复杂表达式被引用两个操作数表达式的排序规则标签相同，则该复杂表达式的排序规则标签为操作数表达式的排序规则标签。  
   
- 如果复杂表达式被引用两个操作数表达式的排序规则不同，则该复杂表达式最终结果的排序规则标签基于下列规则：  
+如果复杂表达式被引用两个操作数表达式的排序规则不同，则该复杂表达式最终结果的排序规则标签基于下列规则：  
   
 -   显式优先于隐式。 隐式优先于强制默认：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47621315"
   
      无排序规则 + 显式 X = 显式  
   
- 下表概述了这些规则。  
+下表概述了这些规则。  
   
 |操作数强制标签|显式 X|隐式 X|强制默认|无排序规则|  
 |----------------------------|----------------|----------------|------------------------|-------------------|  
@@ -91,7 +91,7 @@ ms.locfileid: "47621315"
 |**强制默认**|结果为显式 X|结果为隐式 X|结果为强制默认|结果为无排序规则|  
 |**无排序规则**|结果为显式 X|结果为无排序规则|结果为无排序规则|结果为无排序规则|  
   
- 下列附加规则也适用于排序规则优先顺序：  
+下列附加规则也适用于排序规则优先顺序：  
   
 -   在已经是显式表达式的表达式上不能有多个 COLLATE 子句。 例如，下面的 `WHERE` 子句无效，因为已经为显式表达式指定了 `COLLATE` 子句：  
   
@@ -99,9 +99,9 @@ ms.locfileid: "47621315"
   
 -   不允许进行 text 数据类型的代码页转换。 如果排序规则的代码页不同，则不能将 text 表达式从一种排序规则转换为另一种排序规则。 如果右边文本操作数的排序规则代码页与左边文本操作数的排序规则代码页不同，则不能为赋值运算符赋值。  
   
- 在数据类型转换之后确定排序规则优先顺序。 生成结果排序规则的操作数可以与提供最终结果数据类型的操作数不同。 例如，请看下面的批处理：  
+在数据类型转换之后确定排序规则优先顺序。 生成结果排序规则的操作数可以与提供最终结果数据类型的操作数不同。 例如，请看下面的批处理：  
   
-```  
+```sql  
 CREATE TABLE TestTab  
    (PrimaryKey int PRIMARY KEY,  
     CharCol char(10) COLLATE French_CI_AS  
@@ -112,12 +112,12 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
- 简单表达式 `N'abc'` 的 Unicode 数据类型有更高的数据类型优先级。 因此，所生成的表达式将 Unicode 数据类型分配给 `N'abc'`。 但是，表达式 `CharCol` 具有隐式排序规则标签，而 `N'abc'` 具有级别更低的强制标签，即强制默认。 因此，所使用的排序规则是 `French_CI_AS` 的 `CharCol` 排序规则。  
+简单表达式 `N'abc'` 的 Unicode 数据类型有更高的数据类型优先级。 因此，所生成的表达式将 Unicode 数据类型分配给 `N'abc'`。 但是，表达式 `CharCol` 具有隐式排序规则标签，而 `N'abc'` 具有级别更低的强制标签，即强制默认。 因此，所使用的排序规则是 `French_CI_AS` 的 `CharCol` 排序规则。  
   
 ### <a name="examples-of-collation-rules"></a>排序规则示例  
  以下示例显示排序规则如何工作。 若要运行该示例，请创建以下测试表。  
   
-```  
+```sql  
 USE tempdb;  
 GO  
   
@@ -133,7 +133,7 @@ GO
 #### <a name="collation-conflict-and-error"></a>排序规则冲突和错误  
  下面查询中的谓词具有排序规则冲突，因此会产生错误。  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol;  
@@ -149,7 +149,7 @@ Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_A
 #### <a name="explicit-label-vs-implicit-label"></a>显式标签与隐式标签  
  由于右表达式有显式标签，因此采用排序规则 `greek_ci_as` 计算以下查询中的谓词。 它的优先级高于左表达式的隐式标签。  
   
-```  
+```sql  
 SELECT *   
 FROM TestTab   
 WHERE GreekCol = LatinCol COLLATE greek_ci_as;  
@@ -166,9 +166,9 @@ id          GreekCol             LatinCol
 ```  
   
 #### <a name="no-collation-labels"></a>无排序规则标签  
- 下列查询中的 `CASE` 表达式具有无排序规则标签，所以它们不能出现在选择列表中，也不能由区分排序规则的运算符进行运算。 不过，这些表达式可由不区分排序规则的运算符进行运算。  
+下列查询中的 `CASE` 表达式具有无排序规则标签，所以它们不能出现在选择列表中，也不能由区分排序规则的运算符进行运算。 不过，这些表达式可由不区分排序规则的运算符进行运算。  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END)   
 FROM TestTab;  
 ```  
@@ -180,7 +180,7 @@ Msg 451, Level 16, State 1, Line 1
 Cannot resolve collation conflict for column 1 in SELECT statement.  
 ```  
   
-```  
+```sql  
 SELECT PATINDEX((CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END), 'a')  
 FROM TestTab;  
 ```  
@@ -192,7 +192,7 @@ Msg 446, Level 16, State 9, Server LEIH2, Line 1
 Cannot resolve collation conflict for patindex operation.  
 ```  
   
-```  
+```sql  
 SELECT (CASE WHEN id > 10 THEN GreekCol ELSE LatinCol END) COLLATE Latin1_General_CI_AS   
 FROM TestTab;  
 ```  
@@ -207,23 +207,23 @@ a
 ```  
   
 ## <a name="collation-sensitive-and-collation-insensitive"></a>区分排序规则与不区分排序规则  
- 运算符和函数可以区分排序规则，也可以不区分排序规则。  
+运算符和函数可以区分排序规则，也可以不区分排序规则。  
   
- 区分排序规则  
- 这表示指定无排序规则操作数是一个编译时错误。 表达式结果不能无排序规则。  
+区分排序规则  
+这表示指定无排序规则操作数是一个编译时错误。 表达式结果不能无排序规则。  
   
- 不区分排序规则  
- 这表示操作数和结果可以无排序规则。  
+不区分排序规则  
+这表示操作数和结果可以无排序规则。  
   
 ### <a name="operators-and-collation"></a>运算符和排序规则  
- 比较运算符以及 MAX、MIN、BETWEEN、LIKE 和 IN 运算符都区分排序规则。 运算符所使用的字符串被赋以具有较高优先顺序的操作数的排序规则标签。 UNION 运算符也区分排序规则，且所有字符串操作数和最终结果被赋以具有最高优先顺序的操作数的排序规则。 按列评估 UNION 操作数和结果的排序规则优先顺序。  
+比较运算符以及 MAX、MIN、BETWEEN、LIKE 和 IN 运算符都区分排序规则。 运算符所使用的字符串被赋以具有较高优先顺序的操作数的排序规则标签。 UNION 语句也区分排序规则，且所有字符串操作数和最终结果被赋以具有最高优先顺序的操作数的排序规则。 按列评估 UNION 操作数和结果的排序规则优先顺序。  
   
- 赋值运算符不区分排序规则，右边的表达式转换到左边的排序规则上。  
+赋值运算符不区分排序规则，右边的表达式转换到左边的排序规则上。  
   
- 字符串串联运算符区分排序规则，两个字符串操作数和结果被赋以排序规则优先级最高的操作数的排序规则标签。 UNION ALL 和 CASE 运算符不区分排序规则，所有的字符串操作数和最终结果都被赋以具有最高优先顺序的操作数的排序规则标签。 按列评估 UNION ALL 操作数和结果的排序规则优先顺序。  
+字符串串联运算符区分排序规则，两个字符串操作数和结果被赋以排序规则优先级最高的操作数的排序规则标签。 UNION ALL 和 CASE 语句不区分排序规则，所有的字符串操作数和最终结果都被赋以具有最高优先顺序的操作数的排序规则标签。 按列评估 UNION ALL 操作数和结果的排序规则优先顺序。  
   
 ### <a name="functions-and-collation"></a>函数和排序规则  
- 对于 char、varchar 和 text 数据类型，CAST、CONVERT 和 COLLATE 函数区分排序规则。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
+对于 char、varchar 和 text 数据类型，CAST、CONVERT 和 COLLATE 函数区分排序规则。 如果 CAST 和 CONVERT 函数的输入和输出是字符串，则输出字符串具有输入字符串的排序规则标签。 如果输入不是字符串，则输出字符串为强制默认并被赋以连接所使用的当前数据库的排序规则，或是包含引用 CAST 或 CONVERT 的用户定义函数、存储过程或触发器的数据库的排序规则。  
   
  对于返回字符串但不使用字符串输入的内置函数，结果字符串为强制默认并被赋以当前数据库的排序规则，或是包含引用该函数的用户定义函数、存储过程或触发器的数据库的排序规则。  
   

@@ -1,7 +1,7 @@
 ---
 title: SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c3176c1fbd331310ba3389f6884df139806e9af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e4b61fc79000e4977745a25e237004055f85247
+ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50100278"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +72,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ COMMITTED 隔离级别，并将 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON。  
   
--   SNAPSHOT 隔离级别。  
+-   SNAPSHOT 隔离级别。 有关快照隔离的详细信息，请参阅 [SQL Server 中的快照隔离](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)。 
   
  READ COMMITTED  
  指定语句不能读取已由其他事务修改但尚未提交的数据。 这样可以避免脏读。 其他事务可以在当前事务的各个语句之间更改数据，从而产生不可重复读取和虚拟数据。 该选项是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的默认设置。  
@@ -81,10 +81,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   如果将 READ_COMMITTED_SNAPSHOT 设置为 OFF（默认设置），则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用共享锁防止其他事务在当前事务执行读取操作期间修改行。 共享锁还会阻止语句在其他事务完成之前读取由这些事务修改的行。 共享锁类型确定它将于何时释放。 行锁在处理下一行之前释放。 页锁在读取下一页时释放，表锁在语句完成时释放。  
   
-    > [!NOTE]  
-    >  如果将 READ_COMMITTED_SNAPSHOT 设置为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。  
-    >   
-    >  快照隔离支持 FILESTREAM 数据。 在快照隔离模式下，事务中任何语句读取的 FILESTREAM 数据都将是在事务开始时便存在的数据的事务性一致版本。  
+-   如果将 READ_COMMITTED_SNAPSHOT 设置为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。
+
+> [!IMPORTANT]  
+> 选择事务隔离级别不影响为保护数据修改而获取的锁。 事务总是在其修改的任何数据上获取排他锁并在事务完成之前持有该锁，不管为该事务设置了什么样的隔离级别。 此外，在 READ_COMMITTED 隔离级别进行的更新使用所选数据行的更新锁，而在 SNAPSHOT 隔离级别进行的更新使用行版本来选择要更新的行。 对于读取操作，事务隔离级别主要定义保护级别，以防受到其他事务所做更改的影响。 有关详细信息，请参阅[事务锁定和行版本控制指南](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
+
+> [!NOTE]  
+>  快照隔离支持 FILESTREAM 数据。 在快照隔离模式下，事务中任何语句读取的 FILESTREAM 数据都将是在事务开始时便存在的数据的事务性一致版本。  
   
  当 READ_COMMITTED_SNAPSHOT 数据库选项设置为 ON 时，您可以使用 READCOMMITTEDLOCK 表提示为 READ COMMITTED 隔离级别上运行的事务中的各语句请求共享锁，而不是行版本控制。  
   

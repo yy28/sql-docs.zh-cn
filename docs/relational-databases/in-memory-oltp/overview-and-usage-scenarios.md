@@ -13,12 +13,12 @@ author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3bbb4cce22423cbc5ac2f6e4941ffa1c624f18d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
+ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830735"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50150188"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,6 +129,7 @@ ms.locfileid: "47830735"
 #### <a name="customer-case-studies"></a>客户案例研究
 
 - 一位客户仅通过使用内存优化 TVP 替换传统 TVP，便将性能成功提升了 40%： [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)（在 Azure 中使用内存中 OLTP 来实现高速 IoT 数据引入）
+- 作为企业可扩展性改进的一部分，SentryOne 通过将 tempdb 中的表交换到内存中 OLTP 表，显著提高了数据引入能力，且监视解决方案的延迟几乎为零：[解决方案提供商通过数据监视创新突破性能上限。](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL（提取、转换、加载）
 

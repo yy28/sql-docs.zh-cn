@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e19cfe7a0ad2292491dfc6b392f47e5a452774a
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
+ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307141"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50226389"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "49307141"
 
 SSMS 18.x 基于新的 Visual Studio 2017 独立 Shell：
 
-- 这意味着新式 shell（我们选取了 Visual Studio 2107 15.6.4）。 新的 shell 可解锁 SSMS 和 Visual Studio 提供的所有辅助功能修补程序。
+- 这意味着新式 shell（我们选取了 Visual Studio 2017 15.6.4）。 新的 shell 可解锁 SSMS 和 Visual Studio 提供的所有辅助功能修补程序。
 
 辅助功能改进：
 
@@ -127,7 +127,8 @@ Always On：
 审核文件：
 
 - 已将身份验证方法从基于存储帐户密钥更改为基于 Azure AD 的身份验证。
-AD 基础映像 Always Encrypted：
+
+Always Encrypted：
 
 - 添加了“Always Encrypted”选项卡，其中包含“启用 Always Encrypted”复选框（在“连接到服务器”对话框中），现在可提供一种为数据库连接启用/禁用“Always Encrypted”的简便方法。
 - 已进行多项增强来支持具有安全 Enclave 的 Always Encrypted：
@@ -1128,7 +1129,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 修复了 Azure SQL 数据库“生成脚本...”失败的问题。
 - 解决了“编写脚本为”和“生成脚本向导”问题，避免在对象脚本编写（如存储过程）时添加额外的换行符。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 提供程序：向 Dimension 和 MeasureGroup 文件夹添加 LastProcessed 属性。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
-- 实时查询统计信息：解决了在批处理中仅显示第一个查询的问题。 [连接项] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
+- 实时查询统计信息：解决了在批处理中仅显示第一个查询的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114221)  
 - Showplan：在属性窗口中显示线程的最大值而非总和。
 - 查询存储：使用高执行变体在查询中添加新报表。
 - 对象资源管理器性能问题：[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114074) 表的上下文菜单暂时挂起 右键单击表的索引（通过远程 (Internet) 连接）时，SSMS 运行缓慢。 避免发出在服务器上排序的表查询
@@ -1139,8 +1140,8 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 解决了尝试显示数据库上的权限时 SSMS 可能崩溃的问题
 - 查询存储：查询存储报表的结果网格的上下文菜单项中的常规功能增强
 - 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3103181)
-- 为现有数据库配置“始终加密”功能时，多个架构无法正常运行。 [连接项] (http://connect.microsoft.com/SQLServer/feedback/details/3109591)
-- 由于数据库包含引用系统视图的视图，“始终加密、已加密列”向导失败。 [连接项] (http://connect.microsoft.com/SQLServer/feedback/details/3111925)
+- 为现有数据库配置“始终加密”功能时，多个架构无法正常运行。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3109591)
+- 由于数据库包含引用系统视图的视图，“始终加密、已加密列”向导失败。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3111925)
 - 使用“始终加密”功能进行加密时，错误处理加密后刷新模块出现错误。
 - 解决了“新建服务器注册”对话框中的 UI 截断问题
 - 解决了 DMF 条件 UI 无法正确更新带有其中包含引号的字符串常量值的表达式的问题

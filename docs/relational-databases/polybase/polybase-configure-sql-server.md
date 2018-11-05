@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4729d78f0cfecf80f65dbff0f7bc2d6abe2ebbfa
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: 90b535714eea3a00ecffd2cf010187fbcd676a82
+ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874255"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806637"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>配置 PolyBase 以访问 SQL Server 中的外部数据
 
@@ -38,7 +38,7 @@ ms.locfileid: "48874255"
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
-- CREATE STATISTICS (Transact-SQL)。
+- CREATE STATISTICS (Transact-SQL)
 
 1. 在数据库上创建主密钥。 这是加密凭据密钥所必需的。
 
@@ -68,7 +68,7 @@ ms.locfileid: "48874255"
     WITH ( 
     LOCATION = sqlserver://SqlServer,
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = TeradataCredentials
+      CREDENTIAL = SQLServerCredentials
     );
 
      ```
@@ -80,7 +80,7 @@ ms.locfileid: "48874255"
      GO
      ```
 
-1.  创建表示存储在外部 SQL Server [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 中的数据的外部表。
+1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 创建外部表，用以表示存储在外部 SQL Server 中的数据。
  
      ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -107,6 +107,10 @@ ms.locfileid: "48874255"
      ```sql
       CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WITH FULLSCAN; 
      ```
+
+## <a name="sql-server-connector-compatible-types"></a>SQL Server 连接器兼容类型
+
+可与识别 SQL Server 连接的其他数据源建立连接。 使用 SQL Server PolyBase 连接器，可创建 Azure SQL 数据仓库和 Azure SQL 数据库的外部表。 可按照以上列出的相同步骤完成此操作。 确保数据库范围凭据、服务器地址、端口和位置字符串与要连接的兼容数据源的相应内容相关联。
 
 ## <a name="next-steps"></a>后续步骤
 

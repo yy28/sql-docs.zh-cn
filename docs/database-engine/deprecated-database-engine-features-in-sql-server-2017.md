@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 666ff4eeb05aa7dd913706cad19e8f3047453eb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 537df591affabf79be0b47aadd0b43a7e424f444
+ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739255"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50031346"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>SQL Server 2017 中弃用的数据库引擎功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |备份和还原|仍弃用 RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD。 停止使用 BACKUP { DATABASE &#124; LOG } WITH PASSWORD 和 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD。|无。|BACKUP DATABASE 或 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 或 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|兼容级别|从版本 110（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本结束[支持](http://aka.ms/sqllifecycle)，相关数据库兼容性级别将标记为已弃用。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 100|108|  
+|兼容级别|从版本 100（[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]）升级。|如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本结束[支持](http://aka.ms/sqllifecycle)，相关数据库兼容性级别将标记为已弃用。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 100|108|  
 |数据库对象|从触发器返回结果集的功能|None|从触发器返回结果|12|  
 |加密|不推荐使用通过 RC4 或 RC4_128 进行加密，并计划在下一个版本中删除这种加密方法。 不推荐使用 RC4 和 RC4_128 解密。|请使用其他加密算法，例如 AES。|不推荐使用的加密算法|253|  
 |远程服务器|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|用链接服务器替代远程服务器。 sp_addserver 仅可与本地选项一起使用。|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -67,7 +67,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |类别|不推荐使用的功能|替代功能|功能名称|功能 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |兼容级别|sp_dbcmptlevel|更改数据库… SET COMPATIBILITY_LEVEL。 有关详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|sp_dbcmptlevel|80|  
-|兼容级别|数据库兼容性级别 110 和 120。|计划为未来版本升级数据库和应用程序。|数据库兼容性级别 110<br /><br /> 数据库兼容性级别 120||  
+|兼容级别|数据库兼容性级别 110 和 120。|计划为未来版本升级数据库和应用程序。 但是，我们将继续支持在任何支持的数据库兼容性级别上认证的应用程序尽可能长的时间，使升级更简单。 有关兼容性级别的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)。|数据库兼容性级别 110<br /><br /> 数据库兼容性级别 120||  
 |XML|内联 XDR 架构生成|不推荐使用 FOR XML 选项的 XMLDATA 指令。 如果是 RAW 和 AUTO 模式，请使用 XSD 生成。 在 EXPLICT 模式下，没有可以代替 XMLDATA 指令的项。|XMLDATA|181|  
 |备份和还原|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 或 LOG TO TAPE|235|  
 |备份和还原|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
@@ -176,6 +176,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 2016 中废止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
-  
   
 
