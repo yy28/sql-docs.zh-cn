@@ -8,12 +8,12 @@ ms.author: barbkess
 ms.topic: hub-page
 ms.technology:
 - database-engine
-ms.openlocfilehash: d809326a23487f23d1c5efeb6b771472c4ebcd67
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: 7ac57fa950442eac91af3ae8f2552b25585afade
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336266"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971048"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -255,7 +255,7 @@ ms.locfileid: "49336266"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>数据库设计</h3>
-                                                          <p><b>文件流、文件表、空间数据、视图、触发器、图形、序列号、存储过程、跟踪更改 </b> </p>
+                                                          <p><b>文件流、文件表、图形、序列号、空间数据、存储过程、触发器、跟踪更改、视图</b> </p>
                                                       </div>
                                                   </div>
                                               </div>
@@ -274,7 +274,7 @@ ms.locfileid: "49336266"
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>查询数据</h3>
-                                                          <p><b>游标、同义词、脚本、联接、用户定义的函数、全文搜索</b></p>
+                                                          <p><b>全文搜索、联接、脚本、同义词、用户定义的函数</b></p>
                                                       </div>
                                                   </div>
                                               </div>
