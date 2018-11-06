@@ -1,7 +1,7 @@
 ---
 title: 复制队列读取器代理 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 10/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5d969c231a7832f7d1fee5f772a48721e499ee9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61c197b6dbb7583f598f7d59d1f0903d52fd184f
+ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807737"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236983"
 ---
 # <a name="replication-queue-reader-agent"></a>复制队列读取器代理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,6 +87,9 @@ qrdrsvc [-?]
 |**0**|指定不使用 SSL。|  
 |**1**|指定使用 SSL，但是代理不验证 SSL 服务器证书是否已由可信的颁发者进行签名。|  
 |**2**|指定使用 SSL，并验证证书。|  
+
+ > [!NOTE]  
+ >  使用 SQL Server 的完全限定的域名定义有效的 SSL 证书。 为了在将 -EncryptionLevel 设置为 2 时成功连接代理，请在本地 SQL Server 上创建别名。 “Alias Name”参数应为服务器名称，“Server”参数应设置为 SQL Server 的完全限定名称。
   
  有关详细信息，请参阅[安全性概述（复制）](../../../relational-databases/replication/security/security-overview-replication.md)。  
   

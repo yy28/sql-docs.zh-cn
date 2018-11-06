@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87152c60afce357cdf1ac63cdf2bd799f810c20a
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
+ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851952"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50753506"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>查看或更改数据库的恢复模式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ GO
   
 ```sql  
 USE [master] ;  
-ALTER DATABASE [master] SET RECOVERY FULL ;  
+ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
 ##  <a name="FollowUp"></a> 建议：在更改恢复模式之后  
@@ -129,7 +129,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
     -   确保定期执行数据库备份。 备份数据库对于保护数据和截断事务日志的不活动部分是基本操作。  
   
-##  <a name="RelatedTasks"></a> 相关任务  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [创建完整数据库备份 (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
@@ -137,7 +137,7 @@ ALTER DATABASE [master] SET RECOVERY FULL ;
   
 -   [创建作业](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [启用或禁用作业](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
