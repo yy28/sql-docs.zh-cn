@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 37d50985338f6ac0e3cabdebf53b289e77716e39
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: bcc0382f7203f3b53ed78da075ae0fa4c4c2d9e9
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852092"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971118"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>从命令提示符安装 SQL Server
 
@@ -196,7 +196,7 @@ ms.locfileid: "48852092"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python 安装程序控件|/IACCEPTPYTHONLICENSETERMS <br /><br /> 仅在为包含 Anaconda Python 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 安装程序控件|/IACCEPTROPENLICENSETERMS <br /><br /> 仅在为包含 Microsoft R Open 包的无人参与安装指定了 /Q 或 /QS 参数时才是必需的。|必需，用于确认接受许可条款。| 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ENU<br /><br /> **可选**|当安装介质包括针对英文以及与操作系统相对应的语言的语言包时，使用此参数可以在已本地化的操作系统上安装英文版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateEnabled<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序是否应发现和包含产品更新。 有效值为 True 和 False 或 1 和 0。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将包含找到的更新。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/UpdateSource<br /><br /> **可选**|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将获取产品更新的位置。 有效值为可用于搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 更新的“MU”，这是一个有效的文件夹路径、一个相对路径（例如 `.\MyUpdates` 或一个 UNC 共享）。 默认情况下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序将通过 Windows Server Update Services 搜索 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update 或 Windows Update 服务。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/CONFIGURATIONFILE<br /><br /> **可选**|指定要使用的 [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) 。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序控件|/ERRORREPORTING<br /><br /> **可选**|在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中无效。 <br/><br/> 要管理如何将错误反馈发送到 Microsoft，请参阅[如何配置 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以向 Microsoft 发送反馈](http://support.microsoft.com/kb/3153756)。 <br/><br/>在旧版本中，它指定 SQL Server 的错误报告。<br /><br /> 有关详细信息，请参阅 [Privacy Statement for the Microsoft Error Reporting Service](http://go.microsoft.com/fwlink/?LinkID=868444)（Microsoft 错误报告服务的隐私声明）。<br /><br /> 支持的值：<br /><br /> 0=禁用<br /><br /> 1=启用|  
@@ -879,10 +879,10 @@ LocalDB 是安装 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 的任�
 |参数和值|描述| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，不带复制和全文组件。|  
-|/FEATURES=SQLEngine, FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
-|/FEATURES=SQL, Tools|安装完整的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和所有工具。|  
+|/FEATURES=SQLEngine,FullText|安装 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文组件。|  
+|/FEATURES=SQL,Tools|安装完整的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和所有工具。|  
 |/FEATURES=BOL|安装 SQL Server 联机丛书组件以便查看和管理帮助内容。|  
-|/FEATURES=SQLEngine, PolyBase|安装 PolyBase 引擎。|  
+|/FEATURES=SQLEngine,PolyBase|安装 PolyBase 引擎。|  
   
 ##  <a name="RoleParameters"></a> 角色参数  
  安装角色或 /Role 参数用于安装预配置的所选功能。 SSAS 角色在现有 SharePoint 场或未配置的新场中安装 SSAS 实例。 对于每种方案，分别提供了两个安装角色来支持它们。 一次只能选择一个安全角色来进行安装。 如果您选择了安装角色，安装程序将安装属于此角色的功能和组件。 您不能改变为该角色指定的功能和组件。 有关如何使用功能角色参数的详细信息，请参阅 [从命令提示符安装 Power Pivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)。 
