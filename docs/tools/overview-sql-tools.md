@@ -28,7 +28,7 @@ ms.locfileid: "49643935"
 有许多数据库工具，因此本文提供了说明和指针的一些可用工具的 SQL 数据库使用。 如果需要帮助确定哪种工具所需，请参阅[应使用哪种工具？](#which-tool-should-i-choose)。
 
 
-## <a name="gui-tools-to-manage-databases"></a>GUI 工具来管理数据库  
+## <a name="gui-tools-to-manage-databases"></a>管理数据库的GUI工具
 
 下面是主要的图形用户界面 (GUI) 工具：
 
