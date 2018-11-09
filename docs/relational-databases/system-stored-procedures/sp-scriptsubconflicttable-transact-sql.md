@@ -42,7 +42,7 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
  [ **@publication=**] **'***publication***'**  
  包含项目的发布的名称。 名称在数据库中必须是唯一的。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [  **@article=**] **'***文章***’**  
  订阅项目名。 *文章*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

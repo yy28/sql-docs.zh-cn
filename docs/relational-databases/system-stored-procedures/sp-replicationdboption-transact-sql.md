@@ -43,10 +43,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@dbname=**] **'***dbname*****  
+ [**@dbname=**] **'***dbname***’**  
  要设置其复制数据库选项的数据库。 *db_name*是**sysname**，无默认值。  
   
- [**@optname=**] **'***optname*****  
+ [**@optname=**] **'***optname***’**  
  要启用或禁用的复制数据库选项。 *optname*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  

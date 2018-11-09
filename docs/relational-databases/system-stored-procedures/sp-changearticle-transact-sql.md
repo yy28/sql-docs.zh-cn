@@ -147,7 +147,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||要执行的 UPDATE 语句，否则从日志构造。|  
 |NULL|NULL|返回可更改的项目属性列表。|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值为**0**。  
   
  **0**指定对项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  

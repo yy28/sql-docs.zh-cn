@@ -39,7 +39,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] **'***数据库*****  
+ [ **@database=**] **'***数据库*****  
  要删除的数据库。 *数据库*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

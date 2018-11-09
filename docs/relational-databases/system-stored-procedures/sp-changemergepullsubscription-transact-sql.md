@@ -52,10 +52,10 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [ **@publisher_db=**] **'***publisher_db***'**  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 %。  
   
- [  **@property=**] **'***属性*****  
+ [ **@property=**] **'***属性*****  
  要更改的属性的名称。 *属性*是**sysname**，可以是表中的值之一。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  是指定的属性的新值。 *值*是**nvarchar(255)**，可以是表中的值之一。  
   
 |“属性”|ReplTest1|Description|  

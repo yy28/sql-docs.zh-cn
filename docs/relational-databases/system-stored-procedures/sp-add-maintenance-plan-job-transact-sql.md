@@ -45,7 +45,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@plan_id =**] **'***plan_id*****  
+ [ **@plan_id =**] **'***plan_id*****  
  指定维护计划的 ID。 *plan_id*是**uniqueidentifier**，并且必须是有效的 id。  
   
  [ **@job_id =**] **'***job_id***'**  

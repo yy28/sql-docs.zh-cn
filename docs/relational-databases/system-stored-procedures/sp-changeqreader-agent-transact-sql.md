@@ -41,10 +41,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@job_login**=] **'***job_login*****  
+ [ **@job_login** =] **'***job_login*****  
  用于运行代理的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
   
- [ **@job_password**=] **'***job_password*****  
+ [ **@job_password** =] **'***job_password*****  
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，默认值为 NULL。  
   
  [  **@frompublisher=** ] *frompublisher*  

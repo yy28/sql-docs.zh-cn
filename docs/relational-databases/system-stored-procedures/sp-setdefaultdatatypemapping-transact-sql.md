@@ -59,7 +59,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@mapping_id=** ] *mapping_id*  
  标识现有数据类型映射。  *mapping_id*是**int**，默认值为 NULL。 如果指定*mapping_id*，则剩余的参数不需要。  
   
- [ **@source_dbms**=] **'***source_dbms*****  
+ [ **@source_dbms**=] **'***source_dbms***’**  
  从中映射数据类型的 DBMS 的名称。 *source_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -70,10 +70,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
- [  **@source_version=** ] **'***source_version*****  
+ [  **@source_version=** ] **'***source_version***’**  
  源 DBMS 的版本号。 *source_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@source_type**=] **'***source_type*****  
+ [ **@source_type**=] **'***source_type***’**  
  源 DBMS 中的数据类型。 *source_type*是**sysname**。 如果满足以下条件，则必须指定此参数*mapping_id*为 NULL。  
   
  [  **@source_length_min=** ] *source_length_min*  
@@ -97,7 +97,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
  [  **@source_nullable=** ] *source_nullable*  
  源 DBMS 中的数据类型是否支持 NULL 值。 *source_nullable*是**位**，默认值为 NULL。 **1**意味着支持 NULL 值。  
   
- [ **@destination_dbms** =] **'***destination_dbms*****  
+ [ **@destination_dbms** =] **'***destination_dbms***’**  
  目标 DBMS 的名称。 *destination_dbms*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -108,10 +108,10 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|目标为 Sybase 数据库。|  
 |NULL（默认值）||  
   
- [ **@destination_version**=] **'***destination_version*****  
+ [ **@destination_version**=] **'***destination_version***’**  
  目标 DBMS 的产品版本。 *destination_version*是**varchar(10)**，默认值为 NULL。  
   
- [ **@destination_type**=] **'***destination_type*****  
+ [ **@destination_type**=] **'***destination_type***’**  
  目标 DBMS 中列出的数据类型。 *destination_type*是**sysname**，默认值为 NULL。  
   
  [  **@destination_length=** ] *destination_length*  

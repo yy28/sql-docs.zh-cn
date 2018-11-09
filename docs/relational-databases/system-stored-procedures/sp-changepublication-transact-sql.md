@@ -46,10 +46,10 @@ sp_changepublication [ [ @publication = ] 'publication' ]
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [  **@property =** ] **'***属性*****  
+ [ **@property =** ] **'***属性*****  
  要更改的发布属性。 *属性*是**nvarchar(255)**。  
   
- [  **@value =** ] **'***值*****  
+ [ **@value =** ] **'***值*****  
  新属性值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
  下表说明了可以更改的发布属性以及对这些属性值的限制。  

@@ -43,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@class =**] **'***类*****  
+ [  **@class =**] **'***类***’**  
  要更新的类别的种类。 *类*是**varchar(8)**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  

@@ -56,22 +56,22 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@alternate_publisher=**] **'***alternate_synchronization_partner*****  
+ [ **@alternate_publisher=**] **'***alternate_synchronization_partner*****  
  是备用发布服务器的名称。 *alternate_synchronization_partner*是**sysname**，无默认值。  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
+ [ **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
  备用发布服务器上的发布数据库的名称。 *alternate_publisher_db*是**sysname**，无默认值。  
   
- [  **@alternate_publication=**] **'***alternate_synchronization_partner*****  
+ [ **@alternate_publication=**] **'***alternate_synchronization_partner*****  
  备用同步伙伴上的发布的名称。 *alternate_synchronization_partner*是**sysname**，无默认值。  
   
- [  **@alternate_distributor=**] **'***alternate_distributor*****  
+ [ **@alternate_distributor=**] **'***alternate_distributor*****  
  备用同步伙伴的分发服务器的名称。 *alternate_distributor*是**sysname**，无默认值。  
   
- [  **@friendly_name=**] **'***friendly_name*****  
+ [ **@friendly_name=**] **'***friendly_name*****  
  显示名称，通过该名称可以标识构成备用同步伙伴的发布服务器、发布和分发服务器之间的关联。 *friendly_name*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@reserved=**] **'***保留*****  
+ [ **@reserved=**] **'***保留*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  
