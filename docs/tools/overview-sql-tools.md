@@ -40,19 +40,19 @@ ms.locfileid: "49643935"
 | [Visual Studio Code](https://code.visualstudio.com/)| 在安装 Visual Studio Code 之后, 安装[mssql 扩展](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)用于开发 Microsoft SQL Server、 Azure SQL 数据库和 SQL 数据仓库。| **Visual Studio Code 在 Windows、 macOS 和 Linux 上运行**。|
 
 
-## <a name="command-line-tools-to-manage-databases"></a>命令行工具来管理数据库
+## <a name="command-line-tools-to-manage-databases"></a>用于管理数据库的命令行工具
 
 下面是主要的命令行工具：
 
 | 工具 | 描述 | 在上运行 |
 |:--|:--|:--|
-|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql cli**是交互式的命令行工具，用于查询 SQL Server。 | Windows、 macOS 和 Linux|
+|[**mssql-cli（预览版）**](mssql-cli.md)|**mssql cli**是一个用于查询SQL Server的交互式命令行工具。 | Windows、 macOS 和 Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**是一个命令行实用工具，可以自动执行多个数据库开发任务。 macOS 和 Linux 版本的 sqlpackage 目前处于预览状态。 | Windows、 macOS 和 Linux|
-|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**提供 cmdlet 用于处理 SQL| Windows、 macOS 和 Linux|
+|[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell**提供了用于处理SQL的cmdlet| Windows、 macOS 和 Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**实用工具，可以输入 TRANSACT-SQL 语句、 系统过程和脚本文件的命令提示符处。 | Windows、 macOS 和 Linux|
 |[**bcp**](../2014/tools/bcp-utility.md)|大容量复制程序实用工具 (bcp) 可以在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例和用户指定格式的数据文件间大容量复制数据。|Windows、 macOS 和 Linux|
 |[**mssql 脚本编写器 （预览版）**](https://github.com/Microsoft/mssql-scripter)|**mssql 脚本专家**是多平台命令行体验，用于编写脚本的 SQL Server 数据库|Windows、 macOS 和 Linux|
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**配置 Linux 上运行的 SQL Server。|Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf**配置在Linux上运行的SQL Server。|Linux|
 
 
 
