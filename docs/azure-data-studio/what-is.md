@@ -28,7 +28,7 @@ Azure Data Studio 是一个跨平台数据库工具的数据专业人员使用 M
 
 ## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>具有 IntelliSense 的 TRANSACT-SQL (T-SQL) 代码编辑器
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供了现代、 键盘焦点位于 T-SQL 的编码体验，与内置功能，例如多个选项卡窗口、 丰富的 T-SQL 编辑器、 IntelliSense、 关键字完成、 代码段、 代码导航和源代码管理简化日常任务(Git) 的集成。 运行按需的 T-SQL 查询、 查看以及将结果保存为文本、 JSON 或 Excel。 编辑数据，组织您最喜欢的数据库的连接，并浏览类似对象浏览体验中的数据库对象。 若要了解如何使用 T-SQL 编辑器，请参阅[使用 T-SQL 编辑器来创建数据库对象](tutorial-sql-editor.md)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供了现代的、以键盘为中心的T-SQL编码体验，使用内置的特性使您的日常任务更加容易，这些特性包括多个选项卡窗口、丰富的T-SQL编辑器、IntelliSense、关键字完成、代码片段、代码导航和源代码集成（Git）。 按需运行T-SQL查询，以文本，JSON或Excel的形式查看和保存结果。  编辑数据，组织您喜欢的数据库连接，并以熟悉的对象浏览体验浏览数据库对象。 要了解如何使用T-SQL编辑器，请参阅[使用 T-SQL 编辑器来创建数据库对象](tutorial-sql-editor.md)。
 
 ## <a name="smart-t-sql-code-snippets"></a>智能 T-SQL 代码片段
 
