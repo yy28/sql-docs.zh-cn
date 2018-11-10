@@ -19,9 +19,9 @@ ms.locfileid: "50099779"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什么是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
-Azure Data Studio 是一个跨平台数据库工具的数据专业人员使用 Microsoft 系列的本地和云平台 Windows、 MacOS 和 Linux 上的数据。
+Azure Data Studio是一种跨平台数据库工具，适用于在Windows，MacOS和Linux上使用Microsoft系列内部部署和云数据平台的数据专业人员。
 
-此前已发布预览版名称 SQL Operations Studio 下，Azure Data Studio 提供了与 Intellisense、 代码段、 源代码管理集成和集成的终端的现代编辑器体验。 它设计，与数据平台用户的需求，提供内置的查询结果集和可自定义仪表板的图表。
+此前在预览名称SQL Operations Studio下发布的Azure Data Studio提供了现代化编辑器体验，包括Intellisense，代码片段，源代码控制集成和集成终端。 它在设计时考虑了数据平台用户，内置了查询结果集和可自定义的仪表板。
 
 **[下载并安装 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
