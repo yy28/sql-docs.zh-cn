@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.values.f1
@@ -13,12 +12,12 @@ ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 086d66a1503c988c8962203681b58706ec5281f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4162f2d0bd4662221fe8a9d32f3eb741155a302
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200527"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033354"
 ---
 # <a name="change-domain-values"></a>更改域值
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中更改和增加知识库中的元数据。 通过知识发现生成知识，将知识导入到知识库或域中，或者使知识基于其他知识库之后，您可以通过交互方式更改数据值。 知识库生成不仅利用计算机辅助过程，而且向您提供了一种方法，供您使用您的知识来验证数据值和按以下方式更改数据值：  
@@ -86,7 +85,7 @@ ms.locfileid: "48200527"
   
     -   **将所选域值设为其组的前导值**：若要更改该组的前导值，请在组中选择未指定为前导值的一个值，然后单击 **“将所选域值设为其组的前导值”** 按钮。 这会将前导值设置为另一个值的替代值。 只有将两个或更多属于组的值设置为同义词，并且您要更改 DQS 所指定的主导值时，此操作才有效。 请注意，前导值由蓝色行且值由粗体显示来指示。  
   
-7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../../2014/data-quality-services/set-domain-properties.md)。  
+7.  **拼写检查器**：如果值有红色的波浪下划线，则拼写检查器正在建议对值的更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“域值”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  

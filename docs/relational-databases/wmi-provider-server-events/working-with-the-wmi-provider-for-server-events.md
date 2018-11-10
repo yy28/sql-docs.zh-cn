@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: wmi
 ms.topic: reference
 helpviewer_keywords:
 - event notifications [WMI]
@@ -21,12 +21,12 @@ ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cd79d77b846bf3d29604c725b5114741ad5b3f56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95adea5a61ecc102dae885e9ea526113942a13a5
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667791"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216775"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>使用 WMI Provider for Server Events
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47667791"
 ## <a name="enabling-service-broker"></a>启用 Service Broker  
  WMI Provider for Server Events 通过将事件的 WQL 查询转换为目标数据库中的事件通知而发挥作用。 在针对提供程序编程时，了解事件通知的工作方式可能对您很有用。 有关详细信息，请参阅 [WMI Provider for Server Events 的概念](http://technet.microsoft.com/library/ms180560.aspx)。  
   
- 特别是由于 WMI 提供程序创建的事件通知使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来发送有关服务器事件的消息，因此只要生成事件就必须启用此服务。 如果您的程序查询服务器实例的事件，必须启用该实例的 msdb 中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，因为这是提供程序所创建的目标 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务（名为 SQL/Notifications/ProcessWMIEventProviderNotification/v1.0）的位置。 如果您的程序查询数据库或特定数据库对象中的事件，必须启用该目标数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。 如果在部署应用程序后未启用相应的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，会将基础事件通知所生成的任意事件发送到事件通知使用的服务队列，但是在启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 之前不返回给 WMI 管理应用程序。  
+ 特别是由于 WMI 提供程序创建的事件通知使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 来发送有关服务器事件的消息，因此只要生成事件就必须启用此服务。 如果您的程序查询服务器实例的事件，必须启用该实例的 msdb 中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)]，因为这是提供程序所创建的目标 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服务（名为 SQL/Notifications/ProcessWMIEventProviderNotification/v1.0）的位置。 如果您的程序查询数据库或特定数据库对象中的事件，必须启用该目标数据库中的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 。 如果在部署应用程序后未启用相应的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ，会将基础事件通知所生成的任意事件发送到事件通知使用的服务队列，但是在启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 之前不返回给 WMI 管理应用程序。  
   
  以下查询确定在服务器实例上启用的 Service Broker 和 Broker 实例 GUID：  
   
@@ -45,7 +45,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  msdb 的 Service Broker GUID 特别值得关注，因为这是提供程序目标服务的位置。  
   
- 若要启用[!INCLUDE[ssSB](../../includes/sssb-md.md)]在数据库中，使用的 ENABLE_BROKER SET 选项[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)语句。  
+ 若要在数据库中启用 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ，请使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 语句的 ENABLE_BROKER SET 选项。  
   
 ## <a name="specifying-a-connection-string"></a>指定连接字符串  
  应用程序通过连接到 WMI Provider for Server Events 所定义的 WMI 命名空间，将该提供程序定向到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 Windows WMI 服务将此命名空间映射到提供程序 DLL Sqlwep.dll 并将其加载到内存。 每个实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具有其自己的 WMI 命名空间，默认为： \\ \\。\\*根*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 *instance_name*的默认安装中默认为 MSSQLSERVER [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -78,7 +78,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  该 WMI 提供程序将此查询转换为在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中创建的事件通知。 这意味着调用方必须具有创建这类事件通知所需的权限，具体而言，就是在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 数据库中具有 CREATE DATABASE DDL EVENT NOTIFICATION 权限。  
   
- 如果 WQL 查询指定事件通知作用域为服务器级，例如通过发出查询 SELECT * FROM ALTER_TABLE，调用应用程序必须具有服务器级 CREATE DDL EVENT NOTIFICATION 权限。 请注意以服务器为作用域的事件通知存储在 master 数据库中。 可以使用[sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)目录视图以查看其元数据。  
+ 如果 WQL 查询指定事件通知作用域为服务器级，例如通过发出查询 SELECT * FROM ALTER_TABLE，调用应用程序必须具有服务器级 CREATE DDL EVENT NOTIFICATION 权限。 请注意以服务器为作用域的事件通知存储在 master 数据库中。 可以使用 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) 目录视图查看其元数据。  
   
 > [!NOTE]  
 >  WMI 提供程序创建的事件通知的作用域（服务器、数据库或对象）最终取决于 WMI 提供程序使用的权限验证过程的结果。 这受调用提供程序的用户的权限集和正在查询的数据库验证的影响。  
@@ -111,7 +111,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY 或 REVOKE（仅适用于 ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION 或 CREATE TRACE EVENT NOTIFICATION 权限。）  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>使用客户端的事件数据  
- WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 该目标服务将事件放入 **msdb** 中名为 **WMIEventProviderNotificationQueue**的队列。 （服务和队列都是提供程序首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时动态创建的。）提供程序然后读取此队列中的 XML 事件数据，在将其返回给客户端应用程序前将其转换为托管对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，`SPID`属性返回 CIM 类型为**Sint32**。 每个属性的 CIM 类型下列出中每个事件类[WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)。  
+ WMI 提供程序后 for Server Events 在目标数据库中，创建所需的事件通知的事件通知将事件数据发送到名为 msdb 中的目标服务**SQL/通知/ProcessWMIEventProviderNotification/v1.0**。 该目标服务将事件放入 **msdb** 中名为 **WMIEventProviderNotificationQueue**的队列。 （服务和队列都是提供程序首次连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时动态创建的。）提供程序然后读取此队列中的 XML 事件数据，在将其返回给客户端应用程序前将其转换为托管对象格式 (MOF)。 MOF 数据由 WQL 查询作为公共信息模型 (CIM) 类定义请求的事件属性组成。 每个属性具有相应的 CIM 类型。 例如，`SPID`属性返回 CIM 类型为**Sint32**。 在 [WMI Provider for Server Events 类和属性](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)中的每个事件类下列出每个属性的 CIM 类型。  
   
 ## <a name="see-also"></a>请参阅  
  [WMI Provider for Server Events 的概念](http://technet.microsoft.com/library/ms180560.aspx)  

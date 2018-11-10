@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
@@ -13,12 +12,12 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ea2419549f2ce0cd83423400cbecf02cf4c6751
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4239776908aaca1f6f925baa6ce412dcc71bc343
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068068"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032354"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>将清理项目值导入到域中
   在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中，您可以将在清理过程中从数据质量清理项目或包含 DQS 清理组件的集成服务包中收集的数据质量知识，导入到域中。 这样可确保可信知识不丢失，而且可以不断地改进知识库。  
@@ -70,7 +69,7 @@ ms.locfileid: "48068068"
 10. 单击 **“完成”**。  
   
     > [!NOTE]  
-    >  有关详细信息中的值使用方面**域值**选项卡上，请参阅[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
+    >  有关使用 **“域值”** 选项卡上的值的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
   
 ##  <a name="FollowUp"></a> 跟进：将项目值导入到域后  
  将在清理过程中收集的数据质量知识导入到域中后，您可以对该域和值执行其他域管理任务。 有关详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  

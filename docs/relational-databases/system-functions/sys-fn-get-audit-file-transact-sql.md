@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f60de14fe4414bcb7cc9a09656f7d472785bda1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b80ec93ef671f2f9a564c81ae2ebb10c19c43dfd
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679367"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018332"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn_get_audit_file ( file_pattern,
  *file_pattern*  
  指定要读取的审核文件集的目录（或路径）和文件名。 类型是**nvarchar(260)**。 
  
- - **SQL Server**:
+ - SQL Server：
     
     此参数必须包括路径（驱动器盘符或网络共享）和文件名，可以包含通配符。 可以使用单个星号 （*） 来收集审核文件集中的多个文件。 例如：  
   
@@ -107,7 +107,7 @@ fn_get_audit_file ( file_pattern,
 |target_server_principal_sid|**varbinary**|目标登录名的 SID。 可以为 Null。 如果不适用，则返回 NULL。|  
 |target_database_principal_name|**sysname**|操作的目标用户。 可以为 Null。 如果不适用，则返回 NULL。|  
 |server_instance_name|**sysname**|发生审核的服务器实例的名称。 使用标准服务器\实例格式。|  
-|database_name|**sysname**|发生此操作的数据库上下文。 可以为 Null。 对于在服务器级别发生的审核，返回 NULL。|  
+|database_name|**sysname**|发生此操作的数据库上下文。 可以为 Null。 发生在服务器级别审核将返回 NULL。|  
 |schema_name|**sysname**|发生此操作的架构上下文。 可以为 Null。 对于在架构外发生的审核，返回 NULL。|  
 |object_name|**sysname**|发生审核的实体的名称。 其中包括：<br /> Server 对象<br /> “数据库”<br /> 数据库对象<br /> 架构对象<br /> 可以为 Null。 如果实体是 Server 自身或者没有在对象级别执行审核，则返回 NULL。 例如，对于 Authentication，则返回 NULL。|  
 |语句|**nvarchar(4000)**|TSQL 语句（如果存在）。 可以为 Null。 如果不适用，则返回 NULL。|  

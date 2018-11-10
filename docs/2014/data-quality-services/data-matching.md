@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b4bfeaa97f395ea62d27ddb7831f5a0102488369
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 759c2eb56bb437f17c06229b7b6a85f22b040319
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051547"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031794"
 ---
 # <a name="data-matching"></a>数据匹配
   借助 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 数据匹配过程，您可以减少数据源中的数据重复并改善数据准确性。 匹配可分析单个数据源的所有记录中的重复程度，同时返回所比较的每组记录之间的加权概率。 然后，您可以决定哪些记录匹配，并对源数据采取适当的措施。  

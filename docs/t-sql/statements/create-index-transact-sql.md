@@ -55,15 +55,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 488f633f20a71ea6a98cf92af17ba19a5297b21e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5aaa932ce2e41122d2b133c7260e5eeafc1a7a
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777725"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50971028"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [请帮助我们改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 为表或视图创建相关索引。 也称为行存储索引，因为它可能是聚集或非聚集的 B 树索引。 可以在表中不存在数据时创建行存储索引。 使用行存储索引提高查询性能，尤其是在查询从特定列中进行选择或需要按特定顺序对值进行排序时。  
   
@@ -652,7 +656,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 > 在对表进行分区时，如果分区键列尚未出现在非唯一聚集索引中时，它们将由[!INCLUDE[ssDE](../../includes/ssde-md.md)]添加到索引中。 索引列的合并后的大小（不将包含列计算在内）加上任何添加的分区列在非唯一聚集索引中不能超过 1800 字节。  
   
 ## <a name="computed-columns"></a>计算列  
- 可以对计算列创建索引。 此外，计算列可以具有 PERSISTED 属性。 这意味着 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 对列创建了索引并且该索引由某查询引用，则会使用这些持久值。  
+ 可以对计算列创建索引。 此外，计算列可以具有 PERSISTED 属性。 这意味着[!INCLUDE[ssDE](../../includes/ssde-md.md)]在表中存储计算值，并且在计算列所依赖的任何其他列发生更新时更新这些值。 如果[!INCLUDE[ssDE](../../includes/ssde-md.md)]对列创建了索引并且该索引由某查询引用，则会使用这些持久值。  
   
  若要对计算列建立索引则该计算列必须具有确定性并精确。 但是，使用 PERSISTED 属性会将可建立索引的计算列类型扩展为包含以下类型：  
   
@@ -828,7 +832,7 @@ WITH ( DROP_EXISTING = ON );
 ## <a name="examples-sql-server-azure-sql-database"></a>示例：SQL Server、Azure SQL 数据库  
   
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. 创建唯一非聚集索引  
- 以下示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `Name` 表的 `Production.UnitMeasure` 列创建唯一非聚集索引。 该索引将强制插入 `Name` 列中的数据具有唯一性。  
+ 以下示例为 `Name` 数据库中 `Production.UnitMeasure` 表的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 列创建唯一非聚集索引。 该索引将强制插入 `Name` 列中的数据具有唯一性。  
   
 ```sql  
 CREATE UNIQUE INDEX AK_UnitMeasure_Name   
@@ -914,7 +918,7 @@ Number of rows
  请注意，即使 `Production.UnitMeasure` 表中只有一行违反 `UNIQUE` 索引约束，也不会将其中任何一行插入该表。  
   
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. 使用 DROP_EXISTING 删除和重新创建索引  
- 以下示例使用 `ProductID` 选项在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `Production.WorkOrder` 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
+ 以下示例使用 `ProductID` 选项在 `Production.WorkOrder` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的 `DROP_EXISTING` 列上删除并重新创建现有索引。 还设置了 `FILLFACTOR` 和 `PAD_INDEX` 选项。  
   
 ```sql  
 CREATE NONCLUSTERED INDEX IX_WorkOrder_ProductID  
@@ -988,7 +992,7 @@ GO
 ```  
   
 ### <a name="j-create-a-partitioned-index"></a>J. 创建已分区索引  
- 以下示例为 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中现有分区方案 `TransactionsPS1` 创建非聚集分区索引。 此示例假定安装了分区索引示例。  
+ 以下示例为 `TransactionsPS1` 数据库中现有分区方案 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 创建非聚集分区索引。 此示例假定安装了分区索引示例。  
   
 适用范围：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   

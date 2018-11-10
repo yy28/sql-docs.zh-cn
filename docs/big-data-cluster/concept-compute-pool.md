@@ -4,15 +4,15 @@ description: 本指南介绍了 SQL Server 2019 大数据群集中的计算池�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 67f13687bf55a9e267582a0749043c51d2e2b3bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 6aa73c5881a4b6a17e190c26c15f97b3d8c79c14
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050790"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221793"
 ---
 # <a name="what-is-a-sql-big-data-clusters-compute-pool"></a>什么是 SQL 大数据群集计算池？
 
@@ -23,7 +23,7 @@ ms.locfileid: "50050790"
 计算池进行的其中一个或多个计算在 Kubernetes 中运行的 pod。 由协调的自动的创建和管理这些 pod [SQL Server 主实例](concept-master-instance.md)。 每个 pod 包含一组基本的服务和 SQL Server 数据库引擎的实例。
 
 > [!NOTE]
-> CTP 2.0 仅支持每个群集的单个计算池。
+> CTP 2.1 仅支持每个群集的单个计算池。
 
 ## <a name="scale-out-groups"></a>横向扩展组
 

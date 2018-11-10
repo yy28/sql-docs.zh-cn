@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 623db4fff3bbafeb0da09899527406b0d4686181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e3ddffe0e468adcc004a8cb78a5f083a58dcf0c8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170977"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032116"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 概念
   本文简要概括知识管理、数据质量项目和数据质量管理中的 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 概念。  
@@ -34,13 +33,13 @@ ms.locfileid: "48170977"
   
  **匹配策略**  
   
- 匹配策略包含用于消除数据重复的匹配规则。 通过匹配策略过程，您可以创建匹配规则、基于匹配结果和事件探查数据优化规则，并将策略添加到知识库。 有关详细信息，请参阅 [Data Matching](../../2014/data-quality-services/data-matching.md)。  
+ 匹配策略包含用于消除数据重复的匹配规则。 通过匹配策略过程，您可以创建匹配规则、基于匹配结果和事件探查数据优化规则，并将策略添加到知识库。 有关详细信息，请参阅 [数据匹配](../../2014/data-quality-services/data-matching.md)。  
   
  **Reference Data Services**  
   
  可以使用引用数据来验证、更正和丰富您的数据，同时利用可保证其引用数据质量的公司所提供的服务。 您可以使用 Microsoft Azure 市场的服务连接到引用数据提供程序，也可以直接连接到提供程序。 有关详细信息，请参阅 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
- 有关 DQS 中的知识管理的详细信息，请参阅[DQS 知识库和域](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
+ 有关 DQS 中的知识管理的详细信息，请参阅 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)。  
   
 ##  <a name="Projects"></a> 数据质量项目概念  
  数据专员在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中使用数据质量项目来执行数据质量操作（清理和匹配）。  
@@ -61,7 +60,7 @@ ms.locfileid: "48170977"
   
  **事件探查和通知**  
   
- 数据事件探查可为数据专员提供有关正由 DQS 处理的数据的实时统计信息和其他信息，可帮助在运行数据质量项目期间执行清理和匹配活动。 数据事件探查可帮助您评估数据质量项目中的清理或匹配活动的有效性，并且提供通知，帮助用户采取措施来改善数据清理和数据匹配活动。 有关详细信息，请参阅[Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+ 数据事件探查可为数据专员提供有关正由 DQS 处理的数据的实时统计信息和其他信息，可帮助在运行数据质量项目期间执行清理和匹配活动。 数据事件探查可帮助您评估数据质量项目中的清理或匹配活动的有效性，并且提供通知，帮助用户采取措施来改善数据清理和数据匹配活动。 有关详细信息，请参阅 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
  有关 DQS 中的数据质量项目的详细信息，请参阅[数据质量项目 (DQS)](../../2014/data-quality-services/data-quality-projects-dqs.md)。  
   
@@ -70,25 +69,25 @@ ms.locfileid: "48170977"
   
  **活动监视**  
   
- 活动监视可显示在数据范围内执行的每个活动的状态，提供每个活动的数据，并使 DQS 管理员能够控制活动。 有关详细信息，请参阅[Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
+ 活动监视可显示在数据范围内执行的每个活动的状态，提供每个活动的数据，并使 DQS 管理员能够控制活动。 有关详细信息，请参阅 [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md)。  
   
  **Configuration**  
   
  配置选项支持您：  
   
--   配置引用数据服务设置。 有关详细信息，请参阅[配置 DQS 以使用引用数据](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
+-   配置引用数据服务设置。 有关详细信息，请参阅 [Configure DQS to Use Reference Data](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)。  
   
 -   设置清理和匹配活动的阈值。 有关详细信息，请参阅 [配置清理和匹配活动的阈值](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)。  
   
 -   启用/禁用事件探查通知。 有关详细信息，请参阅[在 DQS 中启用或禁用事件探查通知](../../2014/data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)。  
   
--   在基于活动的级别或基于更高级模块的级别配置 DQS 日志文件的严重性级别。 有关详细信息，请参阅[Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)。  
+-   在基于活动的级别或基于更高级模块的级别配置 DQS 日志文件的严重性级别。 有关详细信息，请参阅 [Configure Severity Levels for DQS Log Files](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)。  
   
  **DQS 安全性**  
   
- 您可以使用 SQL Server 安全机制中的角色来确保 DQS 安全。 有三种 DQS 角色决定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中用户的访问级别：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序向用户授予角色；角色是通过 SQL Server Management Studio 授予的。 有关详细信息，请参阅[DQS 安全性](../../2014/data-quality-services/dqs-security.md)。  
+ 您可以使用 SQL Server 安全机制中的角色来确保 DQS 安全。 有三种 DQS 角色决定 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中用户的访问级别：dqs_administrator、dqs_kb_editor 和 dqs_kb_operator。 您不能使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序向用户授予角色；角色是通过 SQL Server Management Studio 授予的。 有关详细信息，请参阅 [DQS Security](../../2014/data-quality-services/dqs-security.md)。  
   
- 有关 DQS 管理的详细信息，请参阅[DQS 管理](../../2014/data-quality-services/dqs-administration.md)。  
+ 有关 DQS 管理的详细信息，请参阅 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   
 ## <a name="see-also"></a>请参阅  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  

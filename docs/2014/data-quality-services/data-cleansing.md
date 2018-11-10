@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e04e10b21e0210329a3ce6c09bc10bad53245f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45909dae2443b594b12de98a2403178bdd7ce1ca
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068807"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032704"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   数据清理是在数据源中分析数据质量的过程，在其中手动批准/拒绝系统的建议并将对数据进行更改。 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据清理包括计算机辅助的过程和交互式过程，前者分析数据与知识库中知识的符合程度，后者允许数据专员查看和修改计算机辅助过程的结果，确保数据清理符合自己的要求。  
@@ -99,7 +98,7 @@ ms.locfileid: "48068807"
   
 |任务说明|主题|  
 |----------------------|-----------|  
-|说明如何配置清理活动的阈值。|[配置清理和匹配活动的阈值](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
+|说明如何配置清理活动的阈值。|[Configure Threshold Values for Cleansing and Matching](../../2014/data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
 |说明如何使用 DQS 中内置的知识清理数据。|[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)|  
 |说明如何使用引用数据服务中的知识清理数据。|[使用引用数据（外部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |说明如何清理复合域。|[清理复合域中的数据](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  

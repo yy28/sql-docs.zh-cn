@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d561f608b1a69f3872d66c8f454853ffeee5b82b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c556fb02eaad5a97a3f844991ba64440ac65f7b3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149797"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51029655"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>使用引用数据（外部）知识清理数据
   本主题说明如何使用引用数据提供程序中的知识清理数据。 尽管运行清理活动的所有步骤与使用来自引用数据提供程序的知识清理数据（请参阅[使用 DQS（内部）知识清理数据[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]中的说明）的步骤相同，但本主题提供的信息特定于使用 ](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) (DQS) 中的引用数据服务清理数据。  
@@ -53,7 +52,7 @@ ms.locfileid: "48149797"
 ##  <a name="Cleanse"></a> 使用引用数据知识清理您的数据  
  我们将继续以同一个示例使用在上一主题中，我们映射的域[将域或复合域附加到引用数据](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)，与 Windows Azure marketplace 的 Melissa Data 服务。 现在，我们将使用相同的域来清理一些示例美国地址。 清理数据的步骤与[使用 DQS（内部）知识清理数据](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)中介绍的步骤相同。 但是，我们在该过程中将会在需要时提醒您注意。  
   
-1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅[创建数据质量项目](../../2014/data-quality-services/create-a-data-quality-project.md)。  
+1.  创建一个数据质量项目，并且选择 **“清理”** 活动。 请参阅 [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)。  
   
 2.  在 **“映射”** 页上，将以下 4 个域与您的源数据中的相应列进行映射： **Address Line**、 **City**、 **State**和 **Zip**。 单击“下一步” 。  
   

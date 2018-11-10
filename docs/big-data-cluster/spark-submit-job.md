@@ -8,17 +8,17 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
-ms.date: 10/01/2018
-ms.openlocfilehash: 0787663b0c2eccfed33bf5c2cc681be4f2ef5edc
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.date: 11/06/2018
+ms.openlocfilehash: 4ff29460ade2a3e32f3650d2c2701f22548bdb60
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050823"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221603"
 ---
 # <a name="submit-spark-job-on-sql-server-big-data-clusters-in-azure-data-studio"></a>在 Azure Data Studio 中的 SQL Server 大数据群集上提交 Spark 作业
 
-重要方案之一是能够为 SQL Server 2019 CTP 2.0 提交 Spark 作业。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 2019 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
+重要方案之一是能够为 SQL Server 2019 CTP 2.1 提交 Spark 作业。 Spark 作业提交功能，可提交本地 Jar 或上一年度文件与对 SQL Server 2019 大数据群集的引用。 它还可以执行 Jar 或上一年度文件，其中已存在于 HDFS 文件系统中。 
 
 ## <a name="prerequisite"></a>先决条件 
 安装 SQL Server 用于大数据工具并连接到的大数据群集，然后才能提交 Spark 作业。 有关安装的详细信息，请将链接[部署大数据工具](deploy-big-data-tools.md)。

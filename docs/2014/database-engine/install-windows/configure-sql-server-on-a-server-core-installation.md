@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - IsHadrEnabled server property
@@ -14,17 +13,17 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e2d660f095c2f6e4d098fe2f0d60ef547a02ad7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7954c3050f07fd8c727a7f91c18bf343c9b69f2d
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101727"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018432"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安装上配置 SQL Server
   本主题详细介绍如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 的 Server Core 安装上配置 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 。 请参阅以下各节：  
   
--   [配置和管理 Windows Server 上的服务器核心](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
+-   [在 Windows Server 上配置和管理 Server Core](configure-sql-server-on-a-server-core-installation.md#bkmk_configurewindows)  
   
 -   [安装 SQL Server 更新](configure-sql-server-on-a-server-core-installation.md#bkmk_installsqlupdates)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "48101727"
   
 -   [启用 AlwaysOn 可用性组](configure-sql-server-on-a-server-core-installation.md#bkmk_enablealwayson)  
   
--   [配置 Server Core 上运行 SQL Server 的远程的访问](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
+-   [配置运行在 Server Core 上的 SQL Server 的远程访问](configure-sql-server-on-a-server-core-installation.md#bkmk_configureremoteaccess)  
   
 -   [SQL Server 事件探查器](configure-sql-server-on-a-server-core-installation.md#bkmk_profiler)  
   
@@ -117,7 +116,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
  启用 AlwaysOn 可用性组是服务器实例将可用性组用作高可用性和灾难恢复解决方案的一个先决条件。 有关管理 AlwaysOn 可用性组的详细信息，请参阅[启用和禁用 AlwaysOn 可用性组 (SQL Server)](../availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>远程使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器  
- 这些步骤用于执行在 PC 上运行的客户端版本的[!INCLUDE[win7](../../includes/win7-md.md)]或更高版本，或安装了服务器图形 shell 的另一台服务器 (即完整安装的[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]或与服务器的 Windows Server 8 安装图形 Shell 功能中启用）。  
+ 这些步骤将在运行客户端版本的 [!INCLUDE[win7](../../includes/win7-md.md)] 或更高版本的电脑上或安装了 Server Graphical Shell 的另一台服务器（即启用了 Server Graphical Shell 功能的 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 完全安装或 Windows Server 8 安装）上执行。  
   
 1.  打开“计算机管理”。 若要打开“计算机管理”，请执行下列操作之一：  
   

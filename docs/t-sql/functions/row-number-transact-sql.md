@@ -22,17 +22,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f577d2176ca4fc8380f68026222d306e3ae4113a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fae417c2078be09ebe87a4d816c829fa61831bb6
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775445"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970898"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  对结果集的输出进行编号。 具体来说，返回结果集分区内行的序列号，每个分区的第一行从 1 开始。 
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+对结果集的输出进行编号。 具体来说，返回结果集分区内行的序列号，每个分区的第一行从 1 开始。 
   
 `ROW_NUMBER` 和 `RANK` 类似。 `ROW_NUMBER` 按顺序对所有行进行编号（例如 1、2、3、4、5）。 `RANK` 为关系提供相同的数值（例如 1、2、2、4、5）。   
   

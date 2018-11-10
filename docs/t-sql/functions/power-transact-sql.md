@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea72540271302223a35538e3c97e9f01c47e8d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838985"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743172"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,18 @@ POWER ( float_expression , y )
  要将 float_expression 提升到的幂。 y 可以是精确或近似数值数据类型类别（bit 数据类型除外）的表达式。  
   
 ## <a name="return-types"></a>返回类型  
- 在 float_expression 中提交时返回相同类型。 例如，如果 decimal(2,0) 提交为 float_expression，则返回的结果是 decimal(2,0)。  
+ 返回类型取决于 float_expression 的输入类型：
+ 
+|输入类型|返回类型|  
+|----------|-----------|  
+|**float**、**real**|**float**|
+|**decimal(*p*, *s*)**|**decimal(38, *s*)**|
+|**int**、**smallint**、**tinyint**|**int**|
+|**bigint**|**bigint**|
+|**money**、 **smallmoney**|**money**|
+|**bit**、**char**、**nchar**、**varchar**、**nvarchar**|**float**|
+ 
+如果结果与返回类型不匹配，将发生算术溢出错误。
   
 ## <a name="examples"></a>示例  
   

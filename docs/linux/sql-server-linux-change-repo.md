@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9c434df0576275af84fd9f4b0e5f57e584323ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693545"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269442"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>配置安装和升级 Linux 上的 SQL Server 存储库
 
@@ -23,7 +23,7 @@ ms.locfileid: "47693545"
 本文介绍如何在 Linux 上配置 SQL Server 2017 和 SQL Server 2019 安装和升级的正确存储库。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 现已推出 ！ 若要试用，使用本文配置的新**mssql server 预览版**存储库。 然后使用中的说明进行安装[安装指南](sql-server-linux-setup.md)。
+> SQL Server 2019 预览版现已推出 ！ 若要试用，使用本文配置的新**mssql server 预览版**存储库。 然后使用中的说明进行安装[安装指南](sql-server-linux-setup.md)。
 
 ## <a id="repositories"></a>存储库
 
@@ -32,7 +32,7 @@ ms.locfileid: "47693545"
 | 存储库 | “属性” | Description |
 |---|---|---|
 | **预览版 (2017)** | **mssql-server** | SQL Server 2017 ctp 版本和 RC 的存储库 （停用）。 |
-| **预览版 (2019)** | **mssql server 预览版** | SQL Server 2019 ctp 版本和 RC 存储库。 |
+| **预览版 (2019)** | **mssql server 预览版** | SQL Server 2019 预览和 RC 存储库。 |
 | **CU** | **mssql-server-2017** | SQL Server 2017 累积更新 (CU) 存储库。 |
 | **GDR** | **mssql-server-2017-gdr** | SQL Server 2017 GDR 仅关键更新的存储库。 |
 

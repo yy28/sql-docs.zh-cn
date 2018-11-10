@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: f488e4141d6479f7b26af66e5924d00fa71a68e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f0ac8fe36994630f42d7ec41287c9ddcb76c9fc
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599516"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269840"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>快速入门：在 Red Hat 上安装 SQL Server 并创建数据库
 
@@ -30,7 +30,7 @@ ms.locfileid: "47599516"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在此快速入门中，安装在 Red Hat Enterprise Linux (RHEL) 7.3 + SQL Server 2019 CTP 2.0。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
+在此快速入门中，您安装 SQL Server 2019 preview 上 Red Hat Enterprise Linux (RHEL) 7.3 +。 然后使用连接**sqlcmd**创建第一个数据库和运行查询。
 
 ::: moniker-end
 
@@ -142,7 +142,7 @@ SQL Server 目前正在 RHEL 计算机上运行，可以使用了！
    sudo firewall-cmd --reload
    ```
 
-在此情况下，SQL Server 2019 CTP 2.0 RHEL 计算机上运行并已准备好使用 ！
+在此情况下，SQL Server 2019 预览 RHEL 计算机上运行并已准备好使用 ！
 
 ::: moniker-end
 

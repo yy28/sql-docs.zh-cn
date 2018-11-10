@@ -1,21 +1,21 @@
 ---
 title: 课程 4 预测潜在结果使用 R 模型 （SQL Server 机器学习） |Microsoft Docs
-description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
+description: 本教程显示如何将 SQL Server 中嵌入的 R 脚本进行操作的存储过程带有 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/30/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 8485cd4e24e067cf6a4e6feef0c39c3c3051a166
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49462123"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032534"
 ---
-# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>第 4 课： 预测潜在的存储过程中使用 R 模型的结果
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>第 4 课： 使用 R 运行预测嵌入在存储过程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文是有关如何在 SQL Server 中使用 R 的 SQL 开发人员教程的一部分。
@@ -30,10 +30,10 @@ ms.locfileid: "49462123"
 
 ## <a name="basic-scoring"></a>基本评分
 
-存储过程 **PredictTip** 说明了在存储过程中包装预测调用的基本语法。
+存储的过程**RxPredict**说明了在存储过程中包装的 RevoScaleR rxPredict 调用的基本语法。
 
 ```SQL
-CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
+CREATE PROCEDURE [dbo].[RxPredict] @inquery nvarchar(max) 
 AS 
 BEGIN 
   
@@ -64,11 +64,11 @@ GO
   
 + 返回的值`rxPredict`技术支持部门**float** ，表示该驱动程序获取任何金额的小费的概率。
 
-## <a name="batch-scoring"></a>批处理计分
+## <a name="batch-scoring-a-list-of-predictions"></a>批处理评分 （预测列表）
 
-现在让我们看看批量评分的工作原理。
+一种更常见方案是在批处理模式下生成多个观察值的预测。 在此步骤中，让我们了解批处理评分的工作原理。
 
-1.  我们先获取要处理的较小输入数据集。 此查询创建了“排名前 10”的行程列表，其中需要预测乘客计数和其他功能。
+1.  先获取较小的要使用的输入数据集。 此查询创建了“排名前 10”的行程列表，其中需要预测乘客计数和其他功能。
   
     ```SQL
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -93,13 +93,11 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    此查询可用作存储过程中，输入**PredictTipMode**、 下载中提供。
-
-2. 花点时间查看存储过程的代码**PredictTipMode**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+2. 创建名为存储的过程**RxPredictBatchOutput**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[RxPredictBatchOutput]  ******/
+    CREATE PROCEDURE [dbo].[RxPredictBatchOutput] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -127,26 +125,28 @@ GO
     SET @query_string='SELECT TOP 10 a.passenger_count as passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance FROM  (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample  )a   LEFT OUTER JOIN (SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample TABLESAMPLE (70 percent) REPEATABLE (98052))b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'
 
     -- Call the stored procedure for scoring and pass the input data
-    EXEC [dbo].[PredictTip] @inquery = @query_string;
+    EXEC [dbo].[RxPredictBatchOutput] @inquery = @query_string;
     ```
   
-4. 存储的过程返回一的系列表示前 10 个行程的每个预测的值。 但是，顶部行程也是使用相对较短的行程距离，为其驱动程序不太可能中获得小费的单乘客行程。
+存储的过程返回一的系列表示前 10 个行程的每个预测的值。 但是，顶部行程也是使用相对较短的行程距离，为其驱动程序不太可能中获得小费的单乘客行程。
   
 
 > [!TIP]
 > 
 > 而不是返回的"是提示"和"无小费"的结果，可能也会返回该预测的概率分数，然后将应用到的 WHERE 子句_分数_列的值以将评分分类为"可能小费"或"不可能给小费"，使用如 0.5 或 0.7 阈值。 此步骤不包含在存储过程中，但很容易执行。
 
-## <a name="single-row-scoring"></a>单行计分
+## <a name="single-row-scoring-of-multiple-inputs"></a>单行计分的多个输入
 
-有时你想要从应用程序以单一值传递并基于这些值获取单个结果。 例如，你可以设置 Excel 工作表、Web 应用程序或 Reporting Services 报表，以调用存储过程和提供用户键入或选择的输入信息。
+有时你想要传递多个输入值并获取单个预测基于这些值。 例如，您可以设置 Excel 工作表、 web 应用程序或 Reporting Services 报表，以调用存储的过程，并提供输入键入或选择的用户从这些应用程序。
 
-在本部分中，您将了解如何创建单个预测使用的存储的过程。
+在本部分中，您将了解如何创建单个预测使用的存储的过程采用多个输入，例如乘客计数、 行程距离等。 存储的过程创建基于以前存储的 R 模型的分数。
+  
+如果从外部应用程序调用存储的过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 
 
-1. 花点时间查看存储过程的代码**PredictTipSingleMode**，这是作为下载的一部分。
+1. 创建一个存储的过程**RxPredictSingleRow**。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
+    CREATE PROCEDURE [dbo].[RxPredictSingleRow] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
     AS
     BEGIN
     DECLARE @inquery nvarchar(max) = N'SELECT * FROM [dbo].[fnEngineerFeatures](@passenger_count, @trip_distance, @trip_time_in_secs,  @pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude)';
@@ -165,19 +165,13 @@ GO
       WITH RESULT SETS ((Score float));  
     END
     ```
-  
-    - 此存储过程将多个单一值作为输入，例如乘客计数、行程距离等。
-  
-        如果从外部应用程序调用存储的过程，请确保数据满足 R 模型的要求。 这可能包括确保输入的数据可以被转换为 R 数据类型或验证数据类型和数据长度。 
-  
-    -   存储过程根据存储的 R 模型创建评分。
-  
+
 2. 通过手动提供值来进行试用。
   
     打开一个新**查询**窗口中，并调用存储过程，为每个参数提供值。 参数表示模型使用的特征列，并且需要。
 
     ```
-    EXEC [dbo].[PredictTipSingleMode] @passenger_count = 0,
+    EXEC [dbo].[RxPredictSingleRow] @passenger_count = 0,
     @trip_distance = 2.5,
     @trip_time_in_secs = 631,
     @pickup_latitude = 40.763958,
@@ -189,7 +183,7 @@ GO
     或者，使用支持此短格式[存储过程的参数](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```SQL
-    EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
+    EXEC [dbo].[PredictRxMultipleInputs] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
 3. 结果表明获得小费的可能性较低 （零） 在前 10 个不得不来回往返，因为所有通过相对较短的距离都是单乘客行程。

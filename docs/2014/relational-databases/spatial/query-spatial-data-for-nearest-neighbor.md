@@ -1,22 +1,20 @@
 ---
 title: 查询最近的邻域的空间数据 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c70c341317648f6d981f40b38d39d2f2ab4b533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164717"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018692"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>为 Nearest Neighbor 查询空间数据
   Nearest Neighbor 查询是用于空间数据的常用查询。 Nearest Neighbor 查询用于查找与特定的空间对象最接近的空间对象。 例如，网站的存储区定位器必须时常查找与客户位置最接近的存储区位置。  
@@ -52,7 +50,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Nearest Neighbor 查询和空间索引  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 `TOP` 和 `ORDER BY` 子句对空间数据列执行 Nearest Neighbor 查询。 `ORDER BY`子句包含对的调用`STDistance()`空间列数据类型的方法。 `TOP`子句指示要为查询返回的对象数。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，使用 `TOP` 和 `ORDER BY` 子句对空间数据列执行 Nearest Neighbor 查询。 对于空间列数据类型，`ORDER BY` 子句包含对 `STDistance()` 方法的调用。 `TOP` 子句指示针对该查询要返回的对象数。  
   
  为了使 Nearest Neighbor 查询使用空间索引，必须满足以下要求：  
   
@@ -62,7 +60,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 子句必须包含 `STDistance()` 方法。  
   
-4.  如果 `WHERE` 子句中有多个谓词，则必须使用 `AND` 连词将包含 `STDistance()` 方法的谓词连接到其他谓词。 `STDistance()`方法不能为中的可选部分`WHERE`子句。  
+4.  如果 `WHERE` 子句中有多个谓词，则必须使用 `AND` 连词将包含 `STDistance()` 方法的谓词连接到其他谓词。 `STDistance()` 方法不能是 `WHERE` 子句的可选部分。  
   
 5.  `ORDER BY` 子句中的第一个表达式必须使用 `STDistance()` 方法。  
   
@@ -102,7 +100,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- 该查询缺少`WHERE`使用的子句`STDistance()`语法部分中指定，因此它不能使用空间索引的窗体中。  
+ 该查询缺少在语法部分中指定的窗体中使用 `STDistance()` 的 `WHERE` 子句，因此它无法使用空间索引。  
   
 ## <a name="see-also"></a>请参阅  
  [空间数据 (SQL Server)](spatial-data-sql-server.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4ad3530b8179989f86cc62c9c18c888575890b26
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1c6fe8e8d049b7b999984c0dcb5f0ed49e662a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152997"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032396"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知识库和域
   本主题介绍了 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库。 为了清理数据，您必须具有有关数据的知识。 为了准备数据质量项目的知识，您生成并维护一个 DQS 可用于标识不正确或无效数据的知识库 (KB)。 通过 DQS，您可以使用计算机辅助过程和交互式过程来创建、生成和更新知识库。 知识库中的知识在域中维护，每个域都是某个数据字段特有的。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  
@@ -131,7 +130,7 @@ ms.locfileid: "48152997"
   
 -   复合域中的数据可以附加到引用数据源，这种情况下会将复合域发送到引用数据访问接口。 通常对地址数据这样做。  
   
- 如何分析复合域所表示的数据由复合域属性决定。 可以通过分隔符、域的顺序或者基于附加到复合域的域中的知识（通过在复合域中选择 **“使用基于知识的分析”** 属性），对数据进行分析。 有关详细信息，请参阅[Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
+ 如何分析复合域所表示的数据由复合域属性决定。 可以通过分隔符、域的顺序或者基于附加到复合域的域中的知识（通过在复合域中选择 **“使用基于知识的分析”** 属性），对数据进行分析。 有关详细信息，请参阅 [Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
   
  复合域的管理不同于单一域的管理。 不能管理复合域中的值，只能管理构成复合域的单一域的值。 但是，从域管理活动的域列表中，您可以查看复合域中不同值之间的关系以及应用到它们的统计信息。 例如，您可以查看包含相同五个字符串值的单个地址有多少个实例。 在知识发现活动的“发现”步骤中，在构成复合域的单一域上（而非在复合域上）执行事件探查。 但是，在交互式清理中，您是在复合域而非单一域中清理数据。  
   
@@ -140,7 +139,7 @@ ms.locfileid: "48152997"
 ##  <a name="Matching"></a> 数据匹配  
  除了通过域管理对知识库进行手动更改外，您还可以将匹配知识添加到知识库。 若要准备将 DQS 用于数据消除重复过程，您必须创建 DQS 将用于计算匹配概率的匹配策略。 该策略包含一个或多个匹配规则，数据专员创建这些规则来标识 DQS 应如何比较数据行。 数据专员确定应比较行中的哪些数据字段，以及在比较中每个字段的权重是多少。 数据专员也确定多高的概率应被视为匹配。 DQS 将匹配规则添加到知识库，以供在数据质量项目中执行匹配活动时使用。  
   
- 有关知识库和数据匹配的详细信息，请参阅[数据匹配](../../2014/data-quality-services/data-matching.md)。  
+ 有关知识库和数据匹配的详细信息，请参阅 [数据匹配](../../2014/data-quality-services/data-matching.md)上维护多个知识库。  
   
 ## <a name="in-this-section"></a>本节内容  
  您可以对知识库和它的域执行以下操作：  

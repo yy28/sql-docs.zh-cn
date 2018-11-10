@@ -1,7 +1,7 @@
 ---
 title: Analysis Services 连接管理器 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/31/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee1f66204388089dea64f4dd31450288a64bdaf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c1280a60cf7c53454ab77da6fed58fd09902748
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411757"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 连接管理器
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 连接管理器使包能够连接到运行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 数据库的服务器，或连接到用于访问多维数据集和维度数据的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。 在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中开发包时，仅可连接到 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]项目。 在运行时，包会连接到您已部署 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目的服务器和数据库。  
@@ -39,6 +39,9 @@ ms.locfileid: "47785675"
 -   指定要连接到的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的实例或 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 项目。  
   
 -   如果要连接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的实例，则应指定身份验证模式。  
+
+> [!NOTE]    
+>  如果在 Azure 数据工厂 (ADF) 中使用 SSIS 并希望连接到 Azure Analysis Services (AAS) 实例，则不能使用已启用多重身份验证 (MFA) 的帐户，而必须使用服务主体。 请参阅[此处](https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-service-principal)以创建一个帐户，选择“使用特定用户名和密码”登录连接管理器中的服务器，然后输入应用程序 ID/密钥作为用户名/密码。 最后，还必须通过自定义设置在 Azure-SSIS Integration Runtime (IR) 上安装所需的客户端库，请参阅[自定义 SSIS IR](https://docs.microsoft.com/en-us/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 中的 AAS 示例。
   
 -   指示是否在运行时保留从连接管理器中创建的连接。  
   

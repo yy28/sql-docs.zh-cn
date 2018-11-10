@@ -1,5 +1,5 @@
 ---
-title: 开发和部署 SQL Server 数据库的 Linux |Microsoft 文档
+title: 开发和部署 SQL Server 数据库适用于 Linux |Microsoft Docs
 description: ''
 author: rothja
 ms.author: jroth
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 0de0286065166137ebe83ce2a46dfb41d1670fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2053e338bf14d11f25e6e12b3d6c5aee6b8e636e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816055"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033574"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 为 Linux 上的 SQL Server 创建数据库
 
@@ -107,7 +107,7 @@ Ssdt 版本 17.0 RC 及更高版本支持在 Linux 上的 SQL Server。
 
 ## <a name="next-steps"></a>后续步骤
 
-如果您不熟悉 T SQL，请参阅[教程：编写 Transact-SQL 语句]和[事务处理 SQL 参考 （数据库引擎）]。
+如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句]和 [事务处理 SQL 参考 （数据库引擎）]。
 
 有关开发数据库与 SQL 数据工具的详细信息，请参阅[SSDT MSDN 文档]
 

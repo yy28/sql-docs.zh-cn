@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
@@ -13,12 +12,12 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 358e0f9718ee6e301b0cf4257d3bda5bea5ae084
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 249e0195d02f0b157e818a0525b0170b0b817b3c
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051297"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031597"
 ---
 # <a name="create-a-domain"></a>创建域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中创建域。 域中的值是字段中数据的语义表示形式。 有关域的详细信息，请参阅[管理域](../../2014/data-quality-services/managing-a-domain.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "48051297"
   
 3.  选择 **“知识发现”** 作为活动，然后单击 **“创建”** 以创建新知识库；或单击 **“打开”** 以打开现有知识库。  
   
-4.  在 **“映射”** 页上，指定到数据源的连接。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+4.  在 **“映射”** 页上，指定到数据源的连接。 有关详细信息，请参阅 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
   
 5.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 如果相应的域不存在，请单击 **“创建域”** 图标。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48051297"
 1.  在 **“创建域”** 对话框中，输入名称（对知识库唯一）以及说明（可多达 256 个字符）。  
   
     > [!NOTE]  
-    >  有关域属性的详细信息，请参阅[Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
+    >  有关域属性的详细信息，请参阅 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
   
 2.  在 **“数据类型”** 列表中，选择域中值的数据类型。 数据类型可以是 **String** （默认值）、 **Date**、 **Integer**或 **Decimal**。  
   

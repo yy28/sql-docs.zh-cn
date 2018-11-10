@@ -20,17 +20,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1076ee49f04e556dddb3639fa1e3e18e497bebf4
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 7077b950a6039a9c123cc991c00f5f28e23ff6ca
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419272"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970308"
 ---
 # <a name="execute-a-stored-procedure"></a>执行存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行存储过程。  
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+本主题介绍如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中执行存储过程。  
   
  有两种不同方法执行存储过程。 第一种方法和最常见的方法供应用程序或用户调用过程。 第二种方法是将过程设置为在启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例时自动运行。 当应用程序或用户调用过程时，调用中显式声明了 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 或 EXEC 关键字。 或者，如果过程是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批处理中的第一条语句，那么不使用关键字也可以调用并执行此过程。  
   

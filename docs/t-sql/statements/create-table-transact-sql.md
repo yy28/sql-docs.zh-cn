@@ -47,17 +47,20 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2d503a4c136bbdae2142f232cf96e2e83067c945
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 47e81b6b7ad40810a643244eabd47292e685d61b
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461152"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970838"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。  
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 中创建新表。  
   
 > [!NOTE]   
 >  关于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 语法，请请参阅 [CREATE TABLE（Azure SQL 数据仓库）](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)。
@@ -1048,7 +1051,7 @@ GO
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持存储在 tempdb 中，且范围限定为数据库级别的全局临时表。 也就是说，全局临时表对同一 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中的所有用户会话进行共享。 其他数据库中的用户会话无法访问全局临时表。
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的全局临时表遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对临时表使用的相同语法和语义。 同样，全局临时存储过程也在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中将范围限定为数据库级别。 局部临时表（表名以 # 开头）也受 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持，并遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的相同语法和语义。  请参阅上述[临时表](#temporary-tables)章节。  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]的全局临时表遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 对临时表使用的相同语法和语义。 同样，全局临时存储过程也在 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]中将范围限定为数据库级别。 局部临时表（表名以 # 开头）也受 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]支持，并遵循 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的相同语法和语义。  请参阅上述[临时表](#temporary-tables)章节。  
 
 > [!IMPORTANT]
 > 此功能适用于 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。

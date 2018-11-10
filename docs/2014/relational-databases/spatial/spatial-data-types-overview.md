@@ -1,11 +1,9 @@
 ---
 title: 空间数据类型概述 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -16,17 +14,17 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af836875b6427663a7d6006243445d716ab4e862
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 62512268f5c4ee98fc20a142d97bf870d74d9ce6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157717"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018202"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
   有两种类型的空间数据。 `geometry` 数据类型支持平面或欧几里得（平面球）数据。 `geometry` 数据类型符合开放地理空间联盟 (OGC) 的 SQL 简单特征规范 1.1.0 版 并符合 SQL MM（ISO 标准）。  
   
- 此外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支持`geography`存储诸如 GPS 纬度和经度坐标之类的椭球体 （圆形地球） 数据的数据类型。  
+ 另外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持 `geography` 数据类型，该数据类型可存储诸如 GPS 纬度和经度坐标之类的椭圆体（圆球）数据。  
   
 > [!IMPORTANT]  
 >  有关 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引入的空间功能的详细说明和示例（包括对空间数据类型的改进），请下载白皮书 [SQL Server Code-Named "Denali" 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
@@ -34,7 +32,7 @@ ms.locfileid: "48157717"
 ##  <a name="objects"></a> 空间数据对象  
  `geometry` 和 `geography` 数据类型支持十六种空间数据对象或实例类型。 但是，这些实例类型中只有十一种“可实例化”；可以在数据库中创建并使用这些实例（或可对其进行实例化）。 这些实例由区分它们作为其父级数据类型派生的某些属性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或作为多个`geometry`或`geography`实例中`GeometryCollection`。 `Geography` 类型具有附加实例类型 `FullGlobe`。  
   
- 下图描述`geometry`层次结构依据`geometry`和`geography`基于数据类型。 可实例化类型的`geometry`和`geography`以蓝色表示。  
+ 下图描述了 `geometry` 和 `geometry` 数据类型所基于的 `geography` 层次结构。 可实例化类型的`geometry`和`geography`以蓝色表示。  
   
  ![Geometry 类型的层次结构](../../database-engine/media/geom-hierarchy.gif "geometry 类型的层次结构")  
   
@@ -77,14 +75,14 @@ ms.locfileid: "48157717"
  在 XY 笛卡尔坐标平面上定义 geometry 类型的圆弧线段（Z 值被忽略）。 geography 类型的圆弧线段由参考球上的曲线段定义。 参考球上的任何平行面可以由两个互补圆弧（两个弧的点有一个恒定的纬度角）定义。  
   
 ### <a name="measurements-in-spatial-data-types"></a>空间数据类型中的度量  
- 在平面（或平面球）系统中，均以相同的度量单位为坐标测量距离和面积。 使用`geometry`数据类型、 之间的距离 （2，2） 和 （5，6） 为 5 个单位，与使用的单位无关。  
+ 在平面（或平面球）系统中，均以相同的度量单位为坐标测量距离和面积。 如果使用 `geometry` 数据类型，(2, 2) 和 (5, 6) 之间的距离为 5 个单位，与所用的单位无关。  
   
- 在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，长度和面积测量单位也通常米或平方米，即使测量可能依据的空间引用标识符 (SRID)`geography`实例。 `geography` 数据类型最常见的度量单位为米。  
+ 在椭圆体（或圆球）系统中，坐标以经度和纬度的度数给定。 但是，即使测量可能依据的是 `geography` 实例的空间引用标识符 (SRID)，长度和面积的测量单位也通常为米或平方米。 `geography` 数据类型最常见的度量单位为米。  
   
 ### <a name="orientation-of-spatial-data"></a>空间数据的方向  
  在平面系统中，多边形的环方向并非重要因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多边形与 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多边形相同。 SQL 规范的 OGC 简单特征未规定环顺序，并且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不会强制环的顺序。  
   
- 在椭圆体系统中，多边形无意义，或者模糊不清，没有方向。 例如，赤道周围的环是否描述了北半球或南半球？ 如果我们使用`geography`数据类型存储空间实例，必须指定环方向并准确地描述实例的位置。 椭圆体系统中多边形的内部由左侧规则定义。  
+ 在椭圆体系统中，多边形无意义，或者模糊不清，没有方向。 例如，赤道周围的环是否描述了北半球或南半球？ 如果我们使用 `geography` 数据类型存储空间实例，必须指定环的方向并准确地描述实例的位置。 椭圆体系统中多边形的内部由左侧规则定义。  
   
  当兼容级别为 100 或更低中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]则`geography`数据类型具有以下限制：  
   
@@ -107,7 +105,7 @@ ms.locfileid: "48157717"
   
   
 ##  <a name="circular"></a> 圆弧线段  
- 三种可实例化类型可以采用圆弧线段： `CircularString`， `CompoundCurve`，和`CurvePolygon`。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
+ 三种可实例化类型可以采用圆弧线段：`CircularString`、`CompoundCurve` 和 `CurvePolygon`。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
   
  图 A 和 B 显示典型的圆弧线段。 请注意这三个点如何落在圆周上。  
   
@@ -123,7 +121,7 @@ ms.locfileid: "48157717"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- 此示例演示如何存储上述等腰三角形同时使用这二者`LineString`实例和`CircularString`实例：  
+ 此示例显示如何使用 `LineString` 实例和 `CircularString` 实例存储上述等腰三角形：  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -158,10 +156,10 @@ LS LengthCS Length
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- 如上图所示，作为`CircularString`实例使用更少的点来存储曲线边界，而且精度高于`LineString`实例。 `CircularString` 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 `LineString` 实例则适合存储线性边界（如方形城市街区）。  
+ 如上图所示，`CircularString` 实例与 `LineString` 实例相比，使用更少的点来存储曲线边界，而且更精确。 `CircularString` 实例对于存储圆边界（如针对特定点的二十英里搜索半径）很有用。 `LineString` 实例则适合存储线性边界（如方形城市街区）。  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比较  
- 下面的代码示例显示如何存储相同的图使用`LineString`和`CompoundCurve`实例：  
+ 以下代码示例显示如何使用 `LineString` 和 `CompoundCurve` 实例存储相同的图形：  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -171,7 +169,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  或多个  
   
- 在上述示例中，`LineString`实例或`CompoundCurve`实例可以存储该图形。  此下一个示例使用`CompoundCurve`存储饼图切片：  
+ 在上述示例中，`LineString` 实例或 `CompoundCurve` 实例都可以存储该图形。  下一个示例使用 `CompoundCurve` 存储饼图切片：  
   
 ```tsql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
@@ -194,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` 实例允许 `LineString` 和  `CircularString` 组件，因此只需要知道饼图切片的直线线段的两个点。  此代码示例演示如何使用`CompoundCurve`存储相同的图形：  
+ `CompoundCurve` 实例允许 `LineString` 和  `CircularString` 组件，因此只需要知道饼图切片的直线线段的两个点。  此代码示例显示如何使用 `CompoundCurve` 存储相同的图形：  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -203,7 +201,7 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 和 CurvePolygon 的比较  
- `CurvePolygon` 实例可以使用`CircularString`和`CompoundCurve`实例定义其外环和内环时。  `Polygon` 实例不能使用圆弧线段类型：`CircularString` 和 `CompoundCurve`。  
+ 在定义外部环和内部环时，`CurvePolygon` 实例可以使用 `CircularString` 和 `CompoundCurve` 实例。  `Polygon` 实例不能使用圆弧线段类型：`CircularString` 和 `CompoundCurve`。  
   
   
 ## <a name="see-also"></a>请参阅  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 66622346bdc180dbbe4de9e734699dd1e522e95c
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753534"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269690"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>在 Linux 上使用环境变量配置 SQL Server 设置
 
@@ -30,7 +30,7 @@ ms.locfileid: "50753534"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-多个不同的环境变量可用于在 Linux 上配置 SQL Server 2019 CTP 2.0。 两个方案中使用这些变量：
+多个不同的环境变量可用于在 Linux 上配置 SQL Server 2019 预览。 两个方案中使用这些变量：
 
 ::: moniker-end
 

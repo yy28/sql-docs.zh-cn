@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f98b8ba6a5396af70c0475f177e719a39a48b388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088277"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019042"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>升级到 SQL Server 2014 的另一版本（安装）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持在各种版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 间进行版本升级。 有关支持的版本升级路径的信息，请参阅 [支持的版本升级](supported-version-and-edition-upgrades.md)。 在开始对 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例执行版本升级前，请查看以下主题：  
@@ -74,7 +73,7 @@ ms.locfileid: "48088277"
   
  如果是从 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]升级，除了执行上面的步骤外，您可能还需要执行下列操作：  
   
--   升级之后，在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中设置的用户将保持其原有的设置。 具体而言，BUILTIN\Users 组将保持其原有的设置。 可以根据需要禁用、删除或重新设置这些帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
+-   升级之后，在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 中设置的用户将保持其原有的设置。 具体而言，BUILTIN\Users 组将保持其原有的设置。 可以根据需要禁用、删除或重新设置这些帐户。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 -   升级之后，tempdb 和 model 系统数据库的大小和恢复模式保持不变。 可以根据需要重新配置这些设置。 有关详细信息，请参阅[备份和还原系统数据库 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)。  
   
@@ -82,6 +81,6 @@ ms.locfileid: "48088277"
   
 ## <a name="see-also"></a>请参阅  
  [升级到 SQL Server 2014](upgrade-sql-server.md)   
- [后向兼容性](../../getting-started/backward-compatibility.md)  
+ [向后兼容性](../../getting-started/backward-compatibility.md)  
   
   

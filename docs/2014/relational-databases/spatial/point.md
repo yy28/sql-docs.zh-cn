@@ -1,11 +1,9 @@
 ---
 title: Point | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Point geometry subtype [SQL Server]
@@ -14,15 +12,15 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c74251c9c1224dbbd376b57d81d5d180d03cb9c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c680f40a27f0a0ba450d061dae3127872d1262a7
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146867"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51017984"
 ---
 # <a name="point"></a>点
-  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]空间数据`Point`是表示单个位置的零维对象，可能包含 Z （标高） 和 M （度量） 值。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 空间数据中，`Point` 是表示单个位置的零维对象，可能包含 Z（仰角）和 M（度量）值。  
   
 ## <a name="geography-data-type"></a>Geography 数据类型  
  Geography 数据类型的 Point 类型表示单个位置，其中 *Lat* 表示纬度， *Long* 表示经度。 维度和经度值以度数进行衡量。 纬度值始终处于间隔 [-90, 90] 内，如果输入的值超出此范围，将引发异常。 经度值始终处于间隔 (-180, 180] 内，如果输入的值超出此范围，将对值进行回绕以便适合此范围。 例如，如果为经度值输入 190，则该值将被回绕到值 -170。 *SRID* 表示您希望返回的 **geography** 实例的空间引用 ID。  

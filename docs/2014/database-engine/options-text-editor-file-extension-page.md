@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076849"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031784"
 ---
 # <a name="options-text-editor---file-extension-page"></a>选项（“文本编辑器”-“文件扩展名”页）
   使用“选项”对话框可以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何处理具有某些文件扩展名的所有文件。 对于所输入的每一个扩展名，可以选择一个编辑器。 因此，可以选择将在其中打开某种类型文档的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 编辑器。 若要打开文件扩展名选项，请在“工具”菜单上单击“选项”，展开“文本编辑器”，再单击“文件扩展名”。  

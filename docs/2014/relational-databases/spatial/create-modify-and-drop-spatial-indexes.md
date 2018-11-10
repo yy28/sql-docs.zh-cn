@@ -1,11 +1,9 @@
 ---
 title: 创建、修改和删除空间索引 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
@@ -18,12 +16,12 @@ ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f935fa237c13f71c6ad7cc0ee97a4d7577a516ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122347"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018652"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>创建、修改和删除空间索引
   空间索引可以更有效地执行某些操作的列`geometry`或`geography`数据类型 (*空间列*)。 可对空间数据列指定多个空间索引。 这非常有用，例如，对单一列中的不同分割参数建立索引时，就是如此。  
@@ -85,7 +83,7 @@ ms.locfileid: "48122347"
   
      此时，将在表设计器中打开该表。  
   
-2.  选择`geometry`或`geography`索引列。  
+2.  为索引选择 `geometry` 列或 `geography` 列。  
   
 3.  在 **表设计器** 菜单上，单击 **“空间索引”**。  
   
@@ -130,7 +128,7 @@ ms.locfileid: "48122347"
   
   
 ##  <a name="restrictions"></a> 对空间索引的限制  
- 只能在类型为 `geometry` 或 `geography` 的列上创建空间索引。  
+ 只能对类型为 `geometry` 或 `geography` 的列创建空间索引。  
   
 ### <a name="table-and-view-restrictions"></a>针对表和视图的限制  
  只能对具有主键的表定义空间索引。 表中主键列的最大数目为 15。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbanalyze.f1
@@ -16,12 +15,12 @@ ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0c7809182a67707055cb595ed2dc9a51a0067b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 491d87d9c37026fbdac57dde8144a2226f93bbb2
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076047"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032464"
 ---
 # <a name="perform-knowledge-discovery"></a>执行知识发现
   本主题描述如何通过知识发现生成知识库。 在发现过程中， [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 将通过计算机辅助进程对示例数据源中的数据进行分析，并且将获取的知识添加到知识库中。 可以在知识发现活动的 **“管理域值”** 步骤中或在域管理活动中修改和增强此知识。  
@@ -67,12 +66,12 @@ ms.locfileid: "48076047"
   
 4.  在 **“映射”** 表中，按如下所示将您要对其执行知识发现的每个源列映射到知识库中的某个域：  
   
-    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [创建域规则](../../2014/data-quality-services/create-a-domain-rule.md) 或 [创建复合域](../../2014/data-quality-services/create-a-composite-domain.md)。  
+    1.  若要创建映射，首先从空行的 **“源列”** 中的下拉列表选择某一源列，然后从同一行的 **“域”** 列中的下拉列表选择某一个域（如果域存在）。 如果域不存在，则单击 **“创建域”** 或 **“创建复合域”** 来创建一个域。 有关详细信息，请参阅 [Create a Domain Rule](../../2014/data-quality-services/create-a-domain-rule.md) 或 [Create a Composite Domain](../../2014/data-quality-services/create-a-composite-domain.md)。  
   
     2.  为每个映射都重复前面的步骤。 若要更改表中的行数，请单击 **“添加列映射”**，或者选择一行，然后单击 **“删除所选列映射”**。 如果在选定某一填充行时单击 **“删除所选列映射”** ，即便存在未填充的行也会删除选定的行。  
   
         > [!NOTE]  
-        >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行知识发现。 有关支持的数据类型的详细信息，请参阅 [DQS 域支持的 SQL Server 和 SSIS 数据类型](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
+        >  仅当源数据类型在 DQS 中受支持且与 DQS 域数据类型匹配时，才能将源数据映射到 DQS 域来执行知识发现。 有关支持的数据类型的详细信息，请参阅 [Supported SQL Server and SSIS Data Types for DQS Domains](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)。  
   
     3.  单击 **“查看/选择复合域”** 可显示已定义的复合域。 如果没有已定义的复合域，则该控件将不可用。  
   
@@ -172,7 +171,7 @@ ms.locfileid: "48076047"
   
     -   **将所选域值设为其组的前导值**：通过在组中选择未指定为前导值的一个值，然后单击 **“将所选域值设为其组的前导值”** 按钮，更改该组的前导值。  
   
-6.  **拼写检查器**：如果您在“域属性”页中启用了“拼写检查器”，则查找有红色波浪下划线的所有值，有此类线条指示建议进行更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [使用 DQS 拼写检查器](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [设置域属性](../../2014/data-quality-services/set-domain-properties.md)。  
+6.  **拼写检查器**：如果您在“域属性”页中启用了“拼写检查器”，则查找有红色波浪下划线的所有值，有此类线条指示建议进行更正。 右键单击带下划线的值，然后选择一个更正值（如果有适用的更正）。 值类型变为（或仍保持为）错误，并且更正将被添加到 **“更正为”** 列。 单击向下箭头可查看其他建议的更正。 手动输入一个更正并且将其添加到拼写检查器字典，并且能够将其作为更正选择。 有关详细信息，请参阅 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) 和 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)。  
   
     > [!NOTE]  
     >  若要使用拼写检查器，您或者可以在 **“域属性”** 页中启用它，或者如果已在 **“域属性”** 页中禁用它，则可以在 **“管理数据发现结果”** 页中单击 **“启用/禁用拼写检查器”** 图标以便在该页上启用它。  

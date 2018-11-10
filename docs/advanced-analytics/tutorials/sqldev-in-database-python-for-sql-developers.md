@@ -1,26 +1,29 @@
 ---
 title: 中的数据库 Python 分析面向 SQL 开发人员 |Microsoft Docs
+description: 了解如何在 SQL Server 存储过程和 T-SQL 函数中嵌入 Python 代码。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 26703f73312b5531490afc7d01319d4ac290bebe
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 8c992cbda06d158bec0b76d6d46d71157a08cf3e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806757"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032984"
 ---
-# <a name="in-database-python-analytics-for-sql-developers"></a>SQL 开发人员的数据库内 Python 分析
+# <a name="tutorial-in-database-python-analytics-for-sql-developers"></a>教程： SQL 开发人员的数据库内 Python 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本演练的目的是向 SQL 程序员介绍构建的机器学习使用 Python 在 SQL Server 中运行的解决方案的实践经验。 在本演练中，将了解如何将 Python 代码添加到存储过程和运行存储的过程以生成并从模型预测。
+在本教程中的 SQL 编程人员，了解有关 Python 集成通过构建和部署基于 Python 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
+
+本教程向您介绍一种数据建模工作流中使用的 Python 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将使用从 New York City Taxi 和 Limosine 委员会的示例数据并将生成的模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 在本教程中使用的 Python 代码的所有包装在存储过程创建并在 Management Studio 中运行。
 
 > [!NOTE]
-> 更喜欢 R？ 请参阅[本教程](sqldev-in-database-r-for-sql-developers.md)，它提供了类似的解决方案，但使用 R，并可以在 SQL Server 2016 或 SQL Server 2017 中运行。
+> 本教程是在 R 和 Python 中可用。 对于 R，请参阅[-数据库内分析 R 开发人员](sqldev-in-database-r-for-sql-developers.md)。
 
 ## <a name="overview"></a>概述
 
@@ -31,79 +34,33 @@ ms.locfileid: "49806757"
 + 定型集和优化模型
 + 部署到生产环境
 
-**本演练的重点是构建和部署使用 SQL Server 的解决方案。**
+是最好使用专门的开发环境执行的实际代码的开发和测试。 但是，在全面测试该脚本后，你可以轻松地将其部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 将外部代码包装在存储过程中是用于 SQL Server 中的操作代码的主要机制。
 
-数据是从众所周知的 NYC 出租车数据集。 若要快速而简单，使本演练中，数据进行采样。 将创建预测特定行程是否可能获得小费或不是，基于如时间、 距离和上车位置的列的二元分类模型。
+无论您是 SQL 程序员熟悉 Python 或 Python 开发人员熟悉 SQL，此多部分教程介绍了执行使用 Python 和 SQL Server 数据库内分析的典型工作流。 
 
-可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
++ [第 1 课： 浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)
 
++ [第 2 课： 创建数据功能使用自定义 SQL 函数](sqldev-py4-create-data-features-using-t-sql.md)
 
-- [浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)
++ [第 3 课： 训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-    执行基本的数据浏览和可视化，通过调用 Python 的[!INCLUDE[tsql](../../includes/tsql-md.md)]存储过程。
++ [第 4 课： 预测潜在的结果在存储过程中使用 Python 模型](sqldev-py6-operationalize-the-model.md)
 
-- [在 T-SQL 中使用 Python 创建数据功能](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+该模型保存到数据库后，您可以调用该模型用于预测[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用存储的过程。
 
-    使用自定义 SQL 函数创建新数据特征。
-  
-- [训练和保存使用 T-SQL 的 Python 模型](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+## <a name="prerequisites"></a>必要條件
 
-    生成并保存机器学习模型，在存储过程中使用 Python。
-  
-    本演练演示如何执行二进制分类任务;此外可以使用数据来生成用于回归还是多类分类模型。
++ [与 Python 配合使用的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-  
--  [ 操作 Python 模型](sqldev-py6-operationalize-the-model.md)
++ [权限](../security/user-permission.md)
 
-    该模型保存到数据库后，调用该模型用于预测使用[!INCLUDE[tsql](../../includes/tsql-md.md)]。
++ [NYC 出租车演示数据库](demo-data-nyctaxi-in-sql.md)
 
-## <a name="requirements"></a>要求
+可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-### <a name="prerequisites"></a>必要條件
+本教程假定你熟悉基本数据库操作，例如创建数据库和表、 导入数据，以及编写 SQL 查询。 它不会假设你知道 Python。 在这种情况下，提供了所有 Python 代码。 
 
-+ 使用机器学习服务和启用的 Python 安装 SQL Server 2017 的实例。 有关详细信息，请参阅[安装 SQL Server 2017 机器学习服务 （数据库内）](../install/sql-machine-learning-services-windows-install.md)。
-+ 本演练中使用的登录名必须有权创建数据库和其他对象，有权上载数据、选择数据和运行存储过程。
+## <a name="next-steps"></a>后续步骤
 
-### <a name="experience-level"></a>体验级别
-
-您应熟悉基本数据库操作，如创建数据库和表、 数据导入表，以及创建 SQL 查询。
-
-有经验的 SQL 编程人员可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中的 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或运行提供的 PowerShell 脚本完成本演练。
-
-Python： 基础知识是非常有用，但并不是必需。 提供了所有 Python 代码。
-
-PowerShell 的一些知识很有帮助。
-
-### <a name="tools"></a>工具
-
-对于本教程中，我们假定你已达到部署阶段。 拥有清理数据、 完整的功能工程，并使用 Python 代码的 T-SQL 代码。 因此，可以完成本教程中使用 SQL Server Management Studio 或支持运行 SQL 语句的任何其他工具。
-
-+ [SQL Server 工具的概述](https://docs.microsoft.com/sql/tools/overview-sql-tools) 
-
-如果想要开发和测试您自己的 Python 代码，或调试 Python 解决方案，我们建议使用专用的开发环境：
-
-+ **Visual Studio 2017**支持这两个 R 和[Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/)。 我们建议[数据科学工作负荷](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/)，它还支持 R 和 F #。
-+ 如果您具有早期版本的 Visual Studio 中， [Visual Studio 的 Python 扩展](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio)轻松地管理多个 Python 环境。
-+ PyCharm 是在 Python 开发人员之间的热门 IDE。
-
-    > [!NOTE]
-    > 通常情况下，应避免编写或测试中的新 Python 代码[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果在存储过程中嵌入的代码有任何问题，从存储过程返回的信息通常不足以了解错误的原因。
-
-使用以下资源可帮助您规划和执行成功的机器学习项目：
-
-+ [团队数据科学过程](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview)
-
-### <a name="estimated-time-required"></a>所需的估计的时间
-
-|步骤| 时间 （小时数）|
-|----|----|
-|下载示例数据| 0:15|
-|数据导入到 SQL Server 使用 PowerShell|0:15|
-|浏览和可视化数据|0:20|
-|使用 T-SQL 创建数据功能|0:30|
-|训练和保存使用 T-SQL 的模型|0:15|
-|运营模型|0:40|
-
-## <a name="get-started"></a>入门
-
-  [步骤 1：下载示例数据](demo-data-nyctaxi-in-sql.md)
+> [!div class="nextstepaction"]
+> [浏览和可视化使用 Python 的数据](sqldev-py3-explore-and-visualize-the-data.md)

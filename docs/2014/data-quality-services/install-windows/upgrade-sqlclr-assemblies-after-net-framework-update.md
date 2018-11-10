@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4721b388d35974b8e9749d74dbdf5f9ec988d85e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48166ece4bdbfb8472890c61ee4a33e3ce4243d0
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105327"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032224"
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>.NET Framework 更新后升级 SQLCLR 程序集
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是引用 Microsoft .NET Framework 4 程序集的 SQL 公共语言运行时 (SQLCR) 例程的集合。 如果在计算机上安装的任何 .NET Framework 更新影响任何此类引用的 .NET Framework 程序集，则将导致全局程序集缓存 (GAC) 中的程序集的模块版本 ID (MVID) 发生更改。 这样会导致 GAC 中的引用程序集与 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的程序集之间的 MVID 不匹配。  
@@ -55,6 +54,6 @@ A new version of .NET was installed on this machine. In order to continue to wor
   
 ## <a name="see-also"></a>请参阅  
  [安装 Data Quality Services](install-data-quality-services.md)   
- [安装 SQL Server 更新后升级 DQS 数据库架构](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
+ [在安装 SQL Server 更新后升级 DQS 数据库架构](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)  
   
   

@@ -35,12 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0955a3d8db2e9969996d0a9e37a3f20645f18f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2f3642a8638fc39c538bb2609e061c2491a0136
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753425"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966035"
 ---
 # <a name="from-transact-sql"></a>FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -409,15 +409,15 @@ ON (p.ProductID = v.ProductID);
 ## <a name="using-apply"></a>使用 APPLY  
  APPLY 运算符的左操作数和右操作数都是表表达式。 这些操作数之间的主要区别是，right_table_source 可以使用表值函数，该函数可从 left_table_source 获取一个列作为函数的参数之一。 left_table_source 可以包括表值函数，但不能以来自 right_table_source 的列作为参数。  
   
- APPLY 运算符通过以下方式工作，以便为 FROM 子句生成表源：  
+APPLY 运算符通过以下方式工作，以便为 FROM 子句生成表源：  
   
 1.  针对 left_table_source 的每一行计算 right_table_source 以生成行集。  
   
-     right_table_source 中的值取决于 left_table_source。 right_table_source 可以按以下方式近似表示：`TVF(left_table_source.row)`，其中，`TVF` 是表值函数。  
+    right_table_source 中的值取决于 left_table_source。 right_table_source 可以按以下方式近似表示：`TVF(left_table_source.row)`，其中，`TVF` 是表值函数。  
   
 2.  通过执行 UNION ALL 操作，将计算 right_table_source 的值时为每行生成的结果集与 left_table_source 组合起来。  
   
-     APPLY 运算符的结果生成的列的列表是来自 left_table_source（与来自 right_table_source 的列的列表相组合）的一组列。  
+    APPLY 运算符的结果生成的列的列表是来自 left_table_source（与来自 right_table_source 的列的列表相组合）的一组列。  
   
 ## <a name="using-pivot-and-unpivot"></a>使用 PIVOT 和 UNPIVOT  
  pivot_column 和 value_column 是 PIVOT 运算符使用的分组列。 PIVOT 遵循以下过程获得输出结果集：  
@@ -579,32 +579,35 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```  
   
 ### <a name="k-using-apply"></a>K. 使用 APPLY  
- 下面的示例假定数据库中存在具有如下架构的以下表：  
+以下示例假定数据库中存在以下表和表值函数：  
+
+|Object Name|列名|      
+|---|---|   
+|部门|DeptID、DivisionID、DeptName、DeptMgrID|      
+|EmpMgr|MgrID、EmpID|     
+|Employees|EmpID、EmpLastName、EmpFirstName、EmpSalary|  
+|GetReports(MgrID)|EmpID、EmpLastName、EmpSalary|     
   
--   `Departments`: `DeptID`, `DivisionID`, `DeptName`, `DeptMgrID`  
+`GetReports` 表值函数返回直接或间接报告给指定 `MgrID` 的所有员工的列表。  
   
--   `EmpMgr`: `MgrID`, `EmpID`  
-  
--   `Employees`: `EmpID`, `EmpLastName`, `EmpFirstName`, `EmpSalary`  
-  
- 还有一个表值函数 (`GetReports(MgrID)`) 可以返回指定的 `EmpID` 直接或间接领导的所有员工的列表（`EmpLastName`、`EmpSalary`、`MgrID`）。  
-  
- 该示例使用 `APPLY` 返回所有部门和部门中的所有员工。 如果某个部门没有任何员工，则将不返回该部门的任何行。  
+该示例使用 `APPLY` 返回所有部门和部门中的所有员工。 如果某个部门没有任何员工，则将不返回该部门的任何行。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d    
+CROSS APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
- 如果您希望查询为那些没有员工的部门生成行（这将为 `EmpID`、`EmpLastName` 和 `EmpSalary` 列生成 Null 值），请改用 `OUTER APPLY`。  
+如果您希望查询为那些没有员工的部门生成行（这将为 `EmpID`、`EmpLastName` 和 `EmpSalary` 列生成 Null 值），请改用 `OUTER APPLY`。  
   
 ```sql
 SELECT DeptID, DeptName, DeptMgrID, EmpID, EmpLastName, EmpSalary  
-FROM Departments d OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
+FROM Departments d   
+OUTER APPLY dbo.GetReports(d.DeptMgrID) ;  
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. 使用 CROSS APPLY  
- 以下示例将检索驻留在计划缓存中的所有查询计划的快照，方法是通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 然后，指定 `CROSS APPLY` 运算符以将计划句柄传递给 `sys.dm_exec_query_plan`。 当前在计划缓存中的每个计划的 XML 显示计划输出位于返回的表的 `query_plan` 列中。  
+以下示例将检索驻留在计划缓存中的所有查询计划的快照，方法是通过查询 `sys.dm_exec_cached_plans` 动态管理视图来检索缓存中所有查询计划的计划句柄。 然后，指定 `CROSS APPLY` 运算符以将计划句柄传递给 `sys.dm_exec_query_plan`。 当前在计划缓存中的每个计划的 XML 显示计划输出位于返回的表的 `query_plan` 列中。  
   
 ```sql
 USE master;  

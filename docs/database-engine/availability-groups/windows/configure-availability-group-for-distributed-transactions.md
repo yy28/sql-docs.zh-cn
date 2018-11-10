@@ -16,12 +16,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2338ab3c9648af64e772f93639635abf504dafac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07dadc3a5268ab45d54c234b51e89905767b80bd
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411767"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>为分布式事务配置可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47595841"
 为确保分布式事务的一致性，必须配置可用性组，使其将数据库注册为分布式事务资源管理器。  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中数据库的跨数据库分布式事务（即在同一 SQL Server 实例上使用数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
+>[!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 服务包 2 及更高版本完全支持可用性组中的分布式事务。 在服务包 2 之前的 [!INCLUDE[SQL2016]](../../../includes/sssql15-md.md)] 版本中，不支持涉及可用性组中的数据库的跨数据库分布式事务（即，使用同一 SQL Server 实例上的数据库的事务）。 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 没有此限制。 
 >
 >[!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 和 [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 中的配置步骤相同。
 
@@ -147,10 +147,10 @@ ALTER AVAILABILITY GROUP MyaAG
 Microsoft Distributed Transaction Coordinator (MS DTC) 
 failed to reenlist citing that the database RMID does 
 not match the RMID [xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx] 
-associated with the transaction.  Please manually resolve
+associated with the transaction.  Please manually resolve
 the transaction.
     
-SQL Server detected a DTC/KTM in-doubt transaction with UOW 
+SQL Server detected a DTC/KTM in-doubt transaction with UOW 
 {yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy}.Please resolve it 
 following the guideline for Troubleshooting DTC Transactions.
 ```

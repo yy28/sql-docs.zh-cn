@@ -14,15 +14,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f63416c3400f328f0602aa804dc66716067eeb7e
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: 4a0a054becfb4c4c4c04d9eca8ce67da6c783f80
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226299"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217825"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下载并安装 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
 SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关系数据库、Azure SQL 数据库、Analysis Services (AS) 数据模型、Integration Services (IS) 包和 Reporting Services (RS) 报表。 使用 SSDT，你可以设计和部署任何 SQL Server 内容类型，就像在 Visual Studio 中开发应用程序一样轻松。
 
 对大多数用户而言，都可以在 Visual Studio 安装期间安装 SQL Server Data Tools (SSDT)。使用 Visual Studio 安装程序安装 SSDT 会添加基本的 SSDT 功能，因此仍需运行 [SSDT 独立安装程序](#ssdt-for-vs-2017-standalone-installer)，获取 AS、IS 和 RS 工具。
@@ -44,19 +48,20 @@ SQL Server Data Tools 是一款现代开发工具，用于生成 SQL Server 关�
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017（独立安装程序）
 
-[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.8.1)](https://go.microsoft.com/fwlink/?linkid=2024393) 
+[![下载](../ssdt/media/download.png) 下载 SSDT for Visual Studio 2017 (15.8.2) ](https://go.microsoft.com/fwlink/?linkid=2038031) 
 
 > [!IMPORTANT]
-> - 安装 SSDT for Visual Studio 2017 (15.8.1) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（若已安装），并关闭所有 VS 实例。
-> - 在 Windows 10 1803 上安装 SSDT 并选择安装 SSIS 时，可能会出现意外重新启动。 可以再次启动安装程序并在重新启动后继续安装。
+> - 安装 SSDT for Visual Studio 2017 (15.8.2) 前，请卸载“Analysis Services 项目”和“Reporting Services 项目”扩展（若已安装），并关闭所有 VS 实例。
+> - 修复了将包含包（包含脚本任务/平面文件目标）的 SSIS 项目部署到 Azure-SSIS，而导致该包无法在 Azure-SSIS 中执行的问题。
+> - SSDT for Visual Studio 2017 (15.8.2) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
 
 
 **版本信息**  
   
-版本号：15.8.1  
-生成号：14.0.16179.0  
-发布日期：2018 年 9 月 27 日  
+版本号：15.8.2  
+内部版本号：14.0.16182.0  
+发布日期：2018 年 11 月 5 日  
 
 有关更改的完整列表，请参阅[更改日志](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -66,17 +71,17 @@ SSDT for Visual Studio 2017 具有与 Visual Studio 相同的[系统需求](http
 
 此版本的 SSDT for VS 2017 可安装以下语言：  
 
-[中文(简体)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x804) | 
-[中文(繁体)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x404) | 
-[英语(美国)]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x409) | 
-[法语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40c)  
-[德语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x407) | 
-[意大利语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x410) | 
-[日语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x411) | 
-[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x412) | 
-[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x416) | 
-[俄语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x419) | 
-[西班牙语]( https://go.microsoft.com/fwlink/?linkid=2024393&clcid=0x40a)  
+[中文(简体)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x804) | 
+[中文(繁体)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x404) | 
+[英语(美国)]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x409) | 
+[法语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40c)  
+[德语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x407) | 
+[意大利语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x410) | 
+[日语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x411) | 
+[朝鲜语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x412) | 
+[葡萄牙语（巴西）]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x416) | 
+[俄语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x419) | 
+[西班牙语]( https://go.microsoft.com/fwlink/?linkid=2038031&clcid=0x40a)  
 
 
 ## <a name="offline-install"></a>脱机安装

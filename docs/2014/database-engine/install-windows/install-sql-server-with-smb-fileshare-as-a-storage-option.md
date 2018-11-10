@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481a75c420ece410f4b7489013c6297dc7b84869
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3769df724031fb72511c92dca8494a3eb893b6a6
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211277"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018972"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>安装 SQL Server，并使用 SMB 文件共享作为存储选项
-  正在启动[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系统数据库 （Master、 模型、 MSDB 和 TempDB） 和[!INCLUDE[ssDE](../../includes/ssde-md.md)]可以使用服务器消息块 (SMB) 文件服务器作为存储选项安装的用户数据库。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
+  从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 开始，在安装系统数据库（Master、Model、MSDB 和 TempDB）和[!INCLUDE[ssDE](../../includes/ssde-md.md)]用户数据库时可以选择 Server Message Block (SMB) 文件服务器作为存储。 这同时适用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 独立安装和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集安装 (FCI)。  
   
 > [!NOTE]  
 >  当前 SMB 文件共享上不支持 Filestream。  
@@ -119,7 +118,7 @@ ms.locfileid: "48211277"
   
      对于 NTFS，该错误不会产生任何影响。  但对于 ReFS，该错误则可能会导致性能明显下降。  
   
--   如果将 SMB 文件共享作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集实例的存储选项，默认情况下无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志写入该文件共享，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源 DLL 缺乏对该文件共享的读/写权限。 若要解决此问题，请尝试使用以下方法之一：  
+-   如果将 SMB 文件共享作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 群集实例的存储选项，默认情况下无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志写入该文件共享，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源 DLL 缺乏对该文件共享的读/写权限。 若要解决此问题，请尝试使用以下方法之一：  
   
     1.  将对该文件共享的读/写权限授予群集中的所有计算机对象。  
   

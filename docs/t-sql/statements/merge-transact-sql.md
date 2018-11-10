@@ -25,17 +25,20 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4aa14bf055805a7dc779fe6c489694d2d0815934
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c541081382065d327e4d056a860aad47462be5a1
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696365"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970518"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  根据与源表联接的结果，对目标表执行插入、更新或删除操作。 例如，根据在另一个表中找到的差异在一个表中插入、更新或删除行，可以对两个表进行同步。  
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+根据与源表联接的结果，对目标表执行插入、更新或删除操作。 例如，根据在另一个表中找到的差异在一个表中插入、更新或删除行，可以对两个表进行同步。  
   
  **性能提示：** 当两个表具有匹配特性的复杂混合时，针对 MERGE 语句介绍的条件行为的效果最佳。 例如，在行不存在时插入行，或是在行匹配时更新行。 仅仅基于其他表的行更新一个表时，可以通过基本的 INSERT、UPDATE 和 DELETE 语句提高性能和可伸缩性。 例如：  
   
@@ -411,7 +414,7 @@ EXECUTE Production.usp_UpdateInventory '20030501'
 ```  
   
 ### <a name="c-using-merge-to-perform-update-and-insert-operations-on-a-target-table-by-using-a-derived-source-table"></a>C. 借助派生的源表，使用 MERGE 对目标表执行 UPDATE 和 INSERT 操作  
- 下面的示例使用 MERGE 以更新或插入行的方式来修改 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中的 `SalesReason` 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 当 `NewName` 的值不匹配时，就会将源行插入到目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关在派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。 该示例还说明了如何在表变量中存储 OUTPUT 子句的结果，并且说明存储结果之后如何通过执行返回已插入和更新的行的计数的简单选择操作来汇总 MERGE 语句的结果。  
+ 下面的示例使用 MERGE 以更新或插入行的方式来修改 `SalesReason` 数据库中的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表。 当源表中的 `NewName` 值与目标表 (`Name`) 的 `SalesReason` 列中的值匹配时，就会更新此目标表中的 `ReasonType` 列。 当 `NewName` 的值不匹配时，就会将源行插入到目标表中。 此源表是一个派生表，它使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 表值构造函数指定源表的多个行。 有关在派生表中使用表值构造函数的详细信息，请参阅[表值构造函数 (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md)。 该示例还说明了如何在表变量中存储 OUTPUT 子句的结果，并且说明存储结果之后如何通过执行返回已插入和更新的行的计数的简单选择操作来汇总 MERGE 语句的结果。  
   
 ```  
 -- Create a temporary table variable to hold the output actions.  
@@ -435,7 +438,7 @@ GROUP BY Change;
 ```  
   
 ### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. 将 MERGE 语句的执行结果插入到另一个表中  
- 下面的示例捕获从 MERGE 语句的 OUTPUT 子句返回的数据，并将该数据插入到另一个表中。 MERGE 语句根据在 `Quantity` 表中处理的订单更新 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库中 `ProductInventory` 表的 `SalesOrderDetail` 列。 本示例捕获已更新的行并将这些行插入到用于跟踪库存变化的另一个表中。  
+ 下面的示例捕获从 MERGE 语句的 OUTPUT 子句返回的数据，并将该数据插入到另一个表中。 MERGE 语句根据在 `Quantity` 表中处理的订单更新 `ProductInventory` 数据库中 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表的 `SalesOrderDetail` 列。 本示例捕获已更新的行并将这些行插入到用于跟踪库存变化的另一个表中。  
   
 ```  
 CREATE TABLE Production.UpdatedInventory  

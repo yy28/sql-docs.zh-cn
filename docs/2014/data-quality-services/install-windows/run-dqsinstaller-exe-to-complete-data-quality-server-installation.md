@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df2436acdf9a7f039d8b3886c3f8f5a1e539bc5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2dd8bb116523e653e27a10e708fb60e090b76232
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122468"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031824"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>运行 DQSInstaller.exe 以便完成数据质量服务器安装
   若要完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装，您必须安装完 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后运行 DQSInstaller.exe 文件。 本主题介绍如何从 **“开始”** 屏幕、 **“开始”** 菜单、Windows 资源管理器或命令提示符运行 DQSInstaller.exe，您可以选择上述任何方法来运行 DQSInstaller.exe 文件。  
@@ -71,10 +70,10 @@ ms.locfileid: "48122468"
 |--------------------------------|-----------------|-------------------|  
 |-collation|安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]时要使用的服务器排序规则。<br /><br /> DQS 仅支持不区分大小写的排序规则。 如果您指定了区分大小写的排序规则，则该安装程序将尝试使用指定排序规则的不区分大小写版本。 如果没有不区分大小写的排序规则，或者 SQL 不支持排序规则，则 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装将失败。<br /><br /> 如果未指定服务器排序规则，则使用默认排序规则 SQL_Latin1_General_CP1_CI_AS。|`dqsinstaller.exe –collation <collation_name>`|  
 |-upgradedlls|跳过重新创建 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA），并且仅更新 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库中的 DQS 所使用的 SQL 公共语言运行时 (SQLCLR) 程序集。<br /><br /> 有关详细信息，请参阅 [.NET Framework 更新后升级 SQLCLR 程序集](upgrade-sqlclr-assemblies-after-net-framework-update.md)|`dqsinstaller.exe -upgradedlls`|  
-|-exportkbs|将所有知识库导出到 DQS 备份文件 (.dqsb)。 您还必须指定要导出所有知识库的完整路径和文件名。<br /><br /> 有关详细信息，请参阅 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 例如： `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
-|-importkbs|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，从 DQS 备份文件 (.dqsb) 导入所有知识库。 您还必须指定要从中导入所有知识库的完整路径和文件名。<br /><br /> 有关详细信息，请参阅 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 例如： `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
+|-exportkbs|将所有知识库导出到 DQS 备份文件 (.dqsb)。 您还必须指定要导出所有知识库的完整路径和文件名。<br /><br /> 有关详细信息，请参阅 [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)|`dqsinstaller.exe –exportkbs <path><filename>`<br /><br /> 例如： `dqsinstaller.exe –exportkbs c:\DQSBackup.dqsb`|  
+|-importkbs|完成 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 安装后，从 DQS 备份文件 (.dqsb) 导入所有知识库。 您还必须指定要从中导入所有知识库的完整路径和文件名。<br /><br /> 有关详细信息，请参阅 [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)|`dqsinstaller.exe –importkbs <path><filename>`<br /><br /> 例如： `dqsinstaller.exe –importkbs c:\DQSBackup.dqsb`|  
 |-upgrade|升级 DQS 数据库架构。 在以前配置的 DQS 实例上安装 SQL Server 更新程序后，必须使用此参数。 有关详细信息，请参阅 [Upgrade DQS Databases Schema After Installing SQL Server Update](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)。|`dqsinstaller.exe -upgrade`|  
-|-uninstall|从当前 SQL Server 实例中卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 还可以将现有数据质量服务器安装中的所有知识库导出到 DQS 备份文件 (.dqsb)，然后卸载数据质量服务器。 有关详细信息，请参阅 [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)。<br /><br /> **\*\* 重要提示 \*\*** 如果使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令行参数从 SQL Server 实例中卸载 `–uninstall` ，则在卸载过程中将删除所有 DQS 对象。 卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 后，无需按照 [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)中所述进行手动删除。|**仅卸载数据质量服务器：** <br /> `dqsinstaller.exe –uninstall`<br /><br /> **要将所有知识库导出到文件，然后卸载数据质量服务器：** <br /> `dqsinstaller.exe –uninstall <path><filename>` <br />例如： `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
+|-uninstall|从当前 SQL Server 实例中卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 。<br /><br /> 还可以将现有数据质量服务器安装中的所有知识库导出到 DQS 备份文件 (.dqsb)，然后卸载数据质量服务器。 有关详细信息，请参阅 [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)<br /><br /> **\*\* 重要提示 \*\*** 如果使用 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 命令行参数从 SQL Server 实例中卸载 `–uninstall` ，则在卸载过程中将删除所有 DQS 对象。 卸载 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 后，无需按照 [删除数据质量服务器对象](../../sql-server/install/remove-data-quality-server-objects.md)中所述进行手动删除。|**仅卸载数据质量服务器：** <br /> `dqsinstaller.exe –uninstall`<br /><br /> **要将所有知识库导出到文件，然后卸载数据质量服务器：** <br /> `dqsinstaller.exe –uninstall <path><filename>` <br />例如： `dqsinstaller.exe –uninstall c:\DQSBackup.dqsb`|  
   
  **从命令提示符运行 DQSInstaller.exe：**  
   
@@ -103,8 +102,8 @@ ms.locfileid: "48122468"
 -   确保您可以访问用于 DQS 操作的源数据，并且可以将已处理的数据导出到数据库中的某个表。 请参阅 [访问 DQS 操作数据](access-data-for-the-dqs-operations.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [安装 Data Quality Services](install-data-quality-services.md)   
+ [Install Data Quality Services](install-data-quality-services.md)   
  [.NET Framework 更新后升级 SQLCLR 程序集](upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [使用 DQSInstaller.exe 导出和导入 DQS 知识库](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
+ [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   

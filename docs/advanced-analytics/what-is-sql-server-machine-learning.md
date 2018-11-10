@@ -3,24 +3,26 @@ title: R 和 Python 机器学习 SQL Server 中的服务 |Microsoft Docs
 description: 在 SQL Server 和 Python 在 SQL Server 中，与用于数据科学和统计建模、 机器学习模型，预测分析、 数据可视化效果和的详细信息的关系数据集成的 R。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 11/06/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cf67348b703677035435e54c323334478a1dfdf4
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 0768ae40b110bbb2b85890f0a8b4eff0339cedde
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343104"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269700"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL Server 2017 中机器学习服务 （R、 Python）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server 2017 机器学习服务是用于 SQL 服务器上执行的 R 和 Python 代码的数据库引擎实例的附加内容。 独立于核心引擎进程，但完全可用于关系数据作为存储过程、 包含 R 或 Python 语句的 T-SQL 脚本或包含的 T-SQL 的 R 或 Python 代码，代码中的可扩展性框架，运行。 
 
-如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。
+如果以前使用过[SQL Server 2016 R Services](r/sql-server-r-services.md)、 SQL Server 2017 中的机器学习服务是与更新版本的基本 R，RevoScaleR，MicrosoftML，R 支持，下一代和 2016 版本中引入的其他库。 
+
+Azure SQL 数据库中[机器学习服务 （使用 R)]((https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r))目前处于公共预览状态。
 
 机器学习服务的关键价值主张是其企业 R 和 Python 包的强大功能提供高级的分析大规模和能够将计算和处理到数据所在的位置，从而无需在提取数据在网络中。
 
@@ -137,6 +139,6 @@ SQL Server 2017 机器学习服务是新一代的 SQL Server 2016 R Services，�
 
 在 Azure 上，Microsoft 的 R 和 Python 包，以及解释器提供了 Azure 机器学习和 Azure 服务，如[HDInsight](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-on-azure-hdinsight)，并[Azure 虚拟机](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)。 [数据科学虚拟机](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)包括从多个供应商并将库的工具和来自 Microsoft 的解释器的完全配备的开发工作站。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [安装 SQL Server 机器学习服务](install/sql-machine-learning-services-windows-install.md)

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2765133431c78714e2714b0fb59e4701aeaf0dd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ac4fce9d79c606b8a447ec23fbc1267f8f8f45b
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156007"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032044"
 ---
 # <a name="install-data-quality-services"></a>安装 Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) 包含下列两个组件： **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 和 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**。  
@@ -52,7 +51,7 @@ ms.locfileid: "48156007"
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0（如果尚未安装，则在 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 安装期间安装）<br /><br /> Internet Explorer 6.0 SP1 或更高版本|  
   
 > [!IMPORTANT]  
->  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可安装在同一台计算机上，也可以安装在不同计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
+>  -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 和 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 既可以安装在同一台计算机上，也可以安装在不同的计算机上。 这两个组件可以彼此独立并按任何顺序进行安装。 但是，要使用 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]，您将需要安装 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 以进行连接。  
 > -   使用当前或以前版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 和 DQS 清除转换，您可以连接到 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 版本的 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 。 有关升级现有 DQS 版本到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的信息，请参阅 [升级 Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)。  
 > -   尽管 Microsoft Excel 不是用于安装数据质量客户端的先决条件，但 Microsoft Excel 2003 或更高版本必须安装在数据质量客户端计算机上以在客户端应用程序中执行各种操作，例如从某一 Excel 文件导入域值，或者映射到 Excel 文件中的源数据以便进行知识发现、清理或匹配活动。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf51d32e9e56e0e8d377e0a1d87e079f0239823b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe367e7fdafa0e7b0026ebf8625308e316628c68
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221867"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033134"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS 中的数据事件探查和通知
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的数据事件探查是一个分析现有数据源中的数据并显示有关 DQS 活动中的数据统计信息的过程。 它为您提供了数据质量的自动测量。 DQS 事件探查已集成到 DQS 知识管理和数据质量项目中。 它是动态和可调的。 事件探查具有两个主要目的：第一，引导您完成数据质量过程和支持您做出决策；第二，评估过程的效用。 DQS 事件探查具有下列优点：  

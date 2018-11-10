@@ -4,15 +4,15 @@ description: 本指南介绍了 SQL Server 2019 大数据群集中的主实例�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 7c58d925e9d52ee4496f8a324eab91bbfa7ccaad
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 50955f8c781dcf370aa3f48ed72a0ed993854655
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051059"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221593"
 ---
 # <a name="what-is-the-sql-server-big-data-cluster-master-instance"></a>什么是 SQL Server 大数据群集主实例？
 
@@ -26,7 +26,7 @@ SQL Server 主实例为群集提供从外部访问 TDS 端点。 应用程序或
 
 ## <a name="scale-out-query-management"></a>横向扩展查询管理
 
-SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。 (Hive 的表在 CTP 2.0 中不支持)
+SQL Server 主实例包含用于将查询分发中的节点上的 SQL Server 实例之间的横向扩展查询引擎[计算池](concept-compute-pool.md)。 横向扩展查询引擎还提供通过 TRANSACT-SQL 访问权限而无需任何其他配置群集中的所有 Hive 表。 (Hive 的表 CTP 2.1 中不支持)
 
 ## <a name="metadata-and-user-databases"></a>元数据和用户数据库
 

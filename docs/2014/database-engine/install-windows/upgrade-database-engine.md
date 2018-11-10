@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - compatibility [SQL Server], databases
@@ -15,12 +14,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4767b695f0c2c3668278e30f47f389664b4a4ef0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189547"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018562"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
   本主题提供了为升级过程进行准备和了解升级过程所需的信息，其中包括：  
@@ -47,7 +46,7 @@ ms.locfileid: "48189547"
 >  在从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise 版的之前版本升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，在“Enterprise Edition：基于内核授予许可”和 Enterprise Edition 之间进行选择。 这些 Enterprise 版本仅在许可模式方面存在不同。 有关详细信息，请参阅 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ## <a name="pre-upgrade-checklist"></a>升级准备一览表  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、 备份和还原功能，利用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]导入和导出向导中，以及批量导出/批量导入方法。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序支持从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 进行升级。 也可以迁移早期 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中的数据库。 可以从一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移至同一台计算机上的另一个实例，也可以从另一台计算机上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例迁移。 迁移选项包括使用复制数据库向导、备份和还原功能、使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 导入和导出向导，以及批量导出/批量导入方法。  
   
  升级 [!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48189547"
  如果升级前用户数据库的兼容级别为 100 或更高，升级后将保持相应级别。 如果升级前兼容级别为 90，则在升级后的数据库中，兼容级别将设置为 100，该级别为 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支持的最低兼容级别。  
   
 > [!NOTE]  
->  新的用户数据库将继承的兼容性级别`model`数据库。  
+>  新的用户数据库将继承 `model` 数据库的兼容级别。  
   
 ## <a name="migrating-databases"></a>迁移数据库  
  可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的备份和还原功能或分离和附加功能将用户数据库移动到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例。 有关详细信息，请参阅[通过备份和还原来复制数据库](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)或[数据库分离和附加 (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)。  
@@ -133,7 +132,7 @@ ms.locfileid: "48189547"
   
 -   验证或删除 USE PLAN 提示，这些提示由 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成并应用于对已分区表和索引的查询。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改对已分区的表和索引的查询处理的方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更改了对已分区表和索引的查询方式。 如果已分区对象将 USE PLAN 提示用于 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 生成的计划，针对这些对象的查询可能会包含不可在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中使用的计划。 建议升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]后，执行下列过程。  
   
      **如果直接在查询中指定 USE PLAN 提示：**  
   

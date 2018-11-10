@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
@@ -14,12 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 06ffc2c8633407ddcc3f7c6d8a55933d05a3d26a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12df16f62110cf41e4228326ab642924a7b61f80
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060567"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018312"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安装向导升级到 SQL Server 2014（安装程序）
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装向导提供了一个用来升级 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件的功能树。 也可以将 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 与早期版本并行安装，或从早期版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 迁移已有的数据库和配置设置，然后将它们应用于 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例。  
@@ -37,12 +36,12 @@ ms.locfileid: "48060567"
 -   [使用复制数据库向导](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  早期版本升级[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]正在运行的计算机上不支持[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]Server Core SP1。 在服务器核心安装的详细信息，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
+>  在运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的计算机上，不支持将早期版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升级到 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 在服务器核心安装的详细信息，请参阅[Server Core 上安装 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您必须以管理员身份运行安装程序。 如果从远程共享位置安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，必须使用对该远程共享位置具有读取和执行权限的域帐户且是本地管理员。  
   
- 在升级之前[!INCLUDE[ssDE](../../includes/ssde-md.md)]，查看以下主题：  
+ 升级[!INCLUDE[ssDE](../../includes/ssde-md.md)]之前，请先查看以下主题：  
   
 -   [升级到 SQL Server 2014](upgrade-sql-server.md)  
   
@@ -125,12 +124,12 @@ ms.locfileid: "48060567"
   
 -   **注册服务器** - 升级会删除早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例的注册表设置。 升级之后，必须重新注册服务器。  
   
--   **更新统计信息** - 为了帮助优化查询性能，建议您在升级之后更新所有数据库的统计信息。 使用`sp_updatestats`存储过程来更新用户定义的表中的统计信息[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  
+-   **更新统计信息** - 为了帮助优化查询性能，建议您在升级之后更新所有数据库的统计信息。 使用 `sp_updatestats` 存储过程可以更新 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中用户定义的表中的统计信息。  
   
 -   **配置新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - 为了减少系统的可攻击外围应用，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将有选择地安装和启用一些关键服务和功能。 有关外围应用配置器工具的详细信息，请参阅此版本的自述文件。  
   
 ## <a name="see-also"></a>请参阅  
  [升级到 SQL Server 2014](upgrade-sql-server.md)   
- [后向兼容性](../../getting-started/backward-compatibility.md)  
+ [向后兼容性](../../getting-started/backward-compatibility.md)  
   
   

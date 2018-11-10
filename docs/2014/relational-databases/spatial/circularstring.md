@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4602b251d7e0674c206fe85830b0abc35d92684b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75845ceafbf776eb15a30b3289de97573109c4d8
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128887"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018184"
 ---
 # <a name="circularstring"></a>CircularString
-  一个`CircularString`是零个或多个连续圆弧线段的集合。 圆弧线段是二维平面中由三个点定义的曲线段；第一个点不能与第三个点相同。 如果圆弧线段的所有三个点共线，则将该圆弧线段视为一条直线段。  
+  `CircularString` 是零个或多个连续圆弧线段的集合。 圆弧线段是二维平面中由三个点定义的曲线段；第一个点不能与第三个点相同。 如果圆弧线段的所有三个点共线，则将该圆弧线段视为一条直线段。  
   
 > [!IMPORTANT]  
 >  有关详细的说明和中引入的新空间功能的示例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，其中包括`CircularString`子类型，请下载白皮书[SQL Server 2012 中的新空间功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
 ## <a name="circularstring-instances"></a>CircularString 实例  
- 下面的图形显示了有效`CircularString`实例：  
+ 下面的图形显示了有效的 `CircularString` 实例：  
   
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>接受的实例  
- 一个`CircularString`实例接受如果它为空或包含奇数个点 n，其中 n > 1。 以下`CircularString`实例被接受。  
+ 一个`CircularString`实例接受如果它为空或包含奇数个点 n，其中 n > 1。 下面的 `CircularString` 实例均为已接受实例。  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -38,14 +37,14 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
 ```  
   
- `@g3` 显示`CircularString`实例可能被接受，但无效。 下面的 CircularString 实例声明未被接受。 此声明引发 `System.FormatException`。  
+ `@g3` 显示 `CircularString` 实例可能被接受，但无效。 下面的 CircularString 实例声明未被接受。 此声明引发 `System.FormatException`。  
   
 ```  
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 一个有效`CircularString`实例必须为空或具有以下属性：  
+ 有效 `CircularString` 实例必须为空或具有以下属性：  
   
 -   必须至少包含一条圆弧线段（也就是至少有三个点）。  
   
@@ -55,9 +54,9 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
 -   不能有一段与自身重合。  
   
--   尽管`CircularString`实例可能包含直线段，这些直线段必须由三个共线点定义。  
+-   虽然 `CircularString` 实例可能包含直线段，但这些直线段必须由三个共线点定义。  
   
- 以下示例显示有效`CircularString`实例。  
+ 下面的示例显示有效的 `CircularString` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
@@ -67,7 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();  
 ```  
   
- `CircularString` 实例必须至少包含两条圆弧线段以定义完整的圆。 一个`CircularString`实例不能使用一条圆弧线段 (例如 (1 1、 3 1、 1 1)) 来定义一个完整的圆。 使用（1 1、2 2、3 1、2 0、1 1）定义圆。  
+ `CircularString` 实例必须至少包含两条圆弧线段以定义完整的圆。 `CircularString` 实例不能使用一条圆弧线段（例如（1 1、3 1、1 1））定义一个完整的圆。 使用（1 1、2 2、3 1、2 0、1 1）定义圆。  
   
  下面的示例显示无效的 CircularString 实例。  
   
@@ -106,7 +105,7 @@ SELECT @g.ToString();
 ```  
   
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. 使用具有多条圆弧线段的 CircularString 实例化一个几何图形实例  
- 下面的示例演示如何创建`CircularString`实例具有多个圆弧线段 （整圆）：  
+ 下面的示例演示如何创建一个具有多条圆弧线段（整圆）的 `CircularString` 实例：  
   
 ```tsql  
 DECLARE @g geometry;  
@@ -134,7 +133,7 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 请注意，对于值`CircularString`示例是接近 2 ∏，这是圆的实际周长。  
+ 请注意，`CircularString` 示例的值接近 2∏，这是圆的实际周长。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. 在同一语句中使用 CircularString 声明和实例化一个几何图形实例  
  此代码段说明了如何在同一语句中使用 `geometry` 声明和实例化 `CircularString` 实例：  

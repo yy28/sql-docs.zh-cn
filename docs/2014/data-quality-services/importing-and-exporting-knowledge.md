@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 66f6929a7563a774417f93ddcfe25b166c5e64b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9045ee53e6e3e08222c99ddffa2935040a314b16
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079817"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031934"
 ---
 # <a name="importing-and-exporting-knowledge"></a>导入和导出知识
   您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中直接创建知识库和域，也可以将知识导入到知识库中或从知识库中导出知识。 在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 应用程序中，您可以使用某一数据文件执行导入和导出操作，也可以使用 Excel 文件执行导入操作。 使用的数据文件是由 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 创建的扩展名为 .dqs 的加密文件。 由 Microsoft Excel 创建的文件可以具有 .xlsx、.xls 或 .csv 扩展名。 这些操作使您可以更灵活地生成和共享用于执行数据清理和匹配的知识。  
@@ -33,7 +32,7 @@ ms.locfileid: "48079817"
 |将域从 .dqs 数据文件导入到现有知识库中|[从 .dqs 文件导入域](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)|  
 |将整个知识库导出到 .dqs 数据文件中|[将知识库导出到 .dqs 文件](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
 |将整个知识库导入到 .dqs 数据文件中|[从 .dqs 文件导入知识库](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
-|将值从 Excel 文件导入到域|[将值从 Excel 文件导入到域](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
+|将值从 Excel 文件导入到域|[Import Values from an Excel File into a Domain](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
 |将域从 Excel 文件中导入到知识库中|[从知识发现中的 Excel 文件导入域](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
 |将在清理过程中收集的知识导入到知识库中|[将清理项目值导入域](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   

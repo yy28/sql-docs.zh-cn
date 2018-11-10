@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a393a77951d28b8960c268745b3f02f500d563b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 063b286b1addf62b226fc075299dbabd119d3764
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168317"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032054"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>在安装 SQL Server 更新后升级 DQS 数据库架构
   当你在先前配置的 DQS 实例上安装了 SQL Server 更新（补丁、修补程序或累积更新）后，你可能需要运行 DQSInstaller.exe 文件（带 **upgrade** 命令行参数）来升级 DQS 数据库架构。 否则，当您尝试使用数据质量客户端连接到数据质量服务器时，可能会收到以下错误：  
@@ -54,7 +53,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
     dqsinstaller.exe -upgrade  
     ```  
   
-5.  安装程序会提示您在继续操作之前备份 DQS 数据库。 如果已经备份 DQS 数据库，请键入`Y`或`Yes`然后按 ENTER 以继续进行升级。  
+5.  安装程序会提示您在继续操作之前备份 DQS 数据库。 如果已经备份了 DQS 数据库，请键入 `Y` 或 `Yes`，然后按 Enter 以继续升级。  
   
 6.  在成功升级 DQS 数据库架构之后，将显示一条完成消息。  
   

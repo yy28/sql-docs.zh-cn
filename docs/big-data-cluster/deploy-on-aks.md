@@ -4,15 +4,15 @@ description: 了解如何配置用于 SQL Server 2019 大数据群集 （预览�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: e3a73eab49c947d950981a9bdb41098ee00a9b9f
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 07ee0ac0db742eca9a55decfcd78cb76b75e0160
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216672"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221653"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-preview-deployments"></a>为 SQL Server 2019 （预览版） 部署配置 Azure Kubernetes 服务
 
@@ -27,12 +27,11 @@ AKS 轻松创建、 配置和管理 Kubernetes 群集以运行容器化应用程
 
 ## <a name="prerequisites"></a>必要條件
 
-- 为了使 AKS 环境，最小的 VM 要求是 （除了 master)，使用至少 4 个 Cpu 和内存每个 32 GB 的至少两个代理 Vm。 Azure 基础结构提供了多个 Vm 的大小选项，请参阅[此处](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)为计划部署的目标区域中的选择。
+- 对于 AKS 环境中，以获得最佳体验时验证的基本方案，我们建议使用至少 4 个 Vcpu 和 32 GB 的内存每个虚拟机 （除了 master)，至少三个代理。 Azure 基础结构提供了多个 Vm 的大小选项，请参阅[此处](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes)为计划部署的目标区域中的选择。
   
 - 此部分要求，必须运行 Azure CLI 2.0.4 或更高版本。 如果你需要安装或升级，请参阅[安装 Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)。 运行`az --version`如果需要查找版本。
 
-- 安装[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)。 SQL Server 大数据群集需要 1.10 版本范围内的任何次要版本，适用于 Kubernetes、 服务器和客户端。 若要安装 kubectl 客户端上的特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 适用于 AKS，您将需要使用`--kubernetes-version`参数来指定默认值以外的版本。 请注意，在 CTP2.0 发布时间范围内，AKS 仅支持 1.10.7 和 1.10.8 版本。 
-
+- 安装[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)最少的服务器和客户端版本 1.10。 如果你想要 kubectl 客户端上安装特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 适用于 AKS，您需要使用`--kubernetes-version`参数来指定默认值以外的版本。
 
 > [!NOTE]
 请注意，客户端/服务器版本，它是倾斜支持为 + /-1 的次要版本。 Kubernetes 文档指出，"客户端应是偏斜的多个次要版本，从主服务器，但可能会导致的最多为 1 个次要版本 master。 例如，v1.3 master 应适用于 v1.1 和 v1.2，v1.3 节点和应使用 v1.2、 v1.3 和 v1.4 客户端。" 有关详细信息，请参阅[Kubernetes 支持的版本和组件倾斜](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -79,8 +78,8 @@ Azure 资源组是在哪个 Azure 中部署和管理资源的逻辑组。 以下
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
     --node-vm-size Standard_E4s_v3 \
-    --node-count 2 \
-    --kubernetes-version 1.10.7
+    --node-count 3 \
+    --kubernetes-version 1.10.8
     ```
 
     你可以增加或减少默认代理计数方法是更改`--node-count <n>`其中`<n>`是你想要具有代理节点数。

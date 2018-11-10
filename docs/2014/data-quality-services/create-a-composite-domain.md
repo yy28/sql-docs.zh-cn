@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createcd.f1
@@ -14,12 +13,12 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6362196706e3c37ffbd325aeb8ff5576ca897c02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b72ee81d92629baa657ffb3bde2596cdb2abb96a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105367"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030324"
 ---
 # <a name="create-a-composite-domain"></a>创建复合域
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 的知识库中创建复合域。 复合域由应用于单个数据字段的一个或多个单一域组成。 有关复合域的详细信息，请参阅[管理复合域](../../2014/data-quality-services/managing-a-composite-domain.md)。  
@@ -46,7 +45,7 @@ ms.locfileid: "48105367"
   
 3.  选择 **“知识发现”** 作为活动，然后单击 **“创建”** 以创建新知识库；或单击 **“打开”** 以打开现有知识库。  
   
-4.  在 **“映射”** 页上，指定到数据源的连接。 有关详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+4.  在 **“映射”** 页上，指定到数据源的连接。 有关详细信息，请参阅 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
   
 5.  在 **“映射”** 表中，从某个空行的 **“源列”** 列的下拉列表中选择一个源列。 确保源列包含由两个现有单一域组成的复合域。 如果相应的单一域不存在，请单击 **“创建域”** 图标。  
   

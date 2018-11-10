@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c329594ad6349f58c4ed910bdb1b86b040a07c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627106"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270160"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 数据库目录
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -49,11 +49,11 @@ WideWorldImportersDW 具有以下维度表。 说明内容包括 WideWorldImport
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |date|包含有关日期，包括财务年度的信息的新表 (基于 11 月 1 日开始财政年)。|
-|Employee|`Application.People`。|
+|Employee|`Application.People` 的用户。|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |供应商|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods` 的用户。|
+|TransactionType|`Application.TransactionTypes` 的用户。|
 
 ### <a name="fact-tables"></a>事实数据表
 
@@ -83,7 +83,7 @@ WideWorldImportersDW 具有以下事实数据表。 说明内容包括在 WideWo
 |Configuration_ApplyPartitionedColumnstoreIndexing|适用于事实表的分区和列存储索引。|
 |Configuration_ConfigureForEnterpriseEdition|将应用分区列存储索引和内存中。|
 |Configuration_EnableInMemory|将集成临时表替换为 SCHEMA_ONLY 的内存优化表，以提高 ETL 性能。|
-|Configuration_ApplyPolybase|配置外部数据源、 文件格式和表。|
+|Configuration_ApplyPolyBase|配置外部数据源、 文件格式和表。|
 |Configuration_PopulateLargeSaleTable|Enterprise edition 更改应用，然后将更多的数据填充为其他历史记录 2012年日历年。|
 |Configuration_ReseedETL|删除现有数据并重新启动 ETL 种子。 这允许重新填充 OLAP 数据库以匹配在 OLTP 数据库中已更新的行。|
 

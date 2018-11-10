@@ -4,19 +4,21 @@ description: 了解有关 SQL Server 2019 大数据群集 （预览版），在 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/25/2018
+ms.date: 11/06/2018
 ms.topic: overview
 ms.prod: sql
-ms.openlocfilehash: 603e84f3f4e1e27052df6996ae06933ace585c0f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: e8cdfff0efe8164df7487b3ba2a5bee6cbf0b940
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226279"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221703"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>什么是 SQL Server 2019 大数据群集？
 
 从开始[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]，SQL Server 大数据群集允许你部署的 Kubernetes 上运行的 SQL Server、 Spark 和 HDFS 容器的可缩放群集。 并行运行这些组件，以使您能够读取、 写入，并处理从 TRANSACT-SQL 或 Spark 的大数据、 使您轻松合并和分析大数据大容量高价值关系数据。
+
+有关新增功能和最新版本的已知的问题的详细信息，请参阅[发行说明](big-data-cluster-release-notes.md)。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 

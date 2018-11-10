@@ -19,12 +19,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93ccc48a8dc85bc788bb8ea35de6e6c57e031fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676375"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031264"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -203,6 +203,10 @@ GO
 - **tempdb** 中的所有分配使用统一盘区。 不再需要[跟踪标志 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 - 对于主文件组，AUTOGROW_ALL_FILES 属性已启用，且不能修改此属性。 
 
+要详细了解 tempdb 中的性能改进，请参阅以下博客文章：
+
+[TEMPDB - 文件和跟踪标志以及更新，天哪！](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server 中的 tempdb 容量规划
  确定 tempdb 在 SQL Server 生产环境中的适当大小取决于多种因素。 如本文中前面所述，这些因素包括现有工作负荷以及使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 建议你通过在 SQL Server 测试环境中执行下列任务来分析现有的工作负荷：
 - 设置 tempdb 的自动增长。
@@ -273,5 +277,5 @@ GO
  [移动数据库文件](../../relational-databases/databases/move-database-files.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [在 SQL Server 2005 中使用 tempdb](http://go.microsoft.com/fwlink/?LinkId=81216)  
+ [在 SQL Server 2005 中使用 tempdb](https://technet.microsoft.com/library/cc966545.aspx)  
  [解决 tempdb 中磁盘空间不足的问题](http://msdn.microsoft.com/library/ms176029.aspx) 

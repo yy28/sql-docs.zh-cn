@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5235f19b1d85282d7c66ffa64f4dcdc1a43a0fc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da0f4e6af97badffec0bb2018e0933cec282dd0f
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225887"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018752"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>在 Server Core 上安装 SQL Server 2014
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安装上安装 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 本主题提供用于在 Server Core 上安装 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的特定于安装的详细信息。  
@@ -38,7 +37,7 @@ ms.locfileid: "48225887"
   
 |功能|是否支持|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务|用户帐户控制|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]服务|用户帐户控制|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication|用户帐户控制|  
 |全文搜索|用户帐户控制|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|是|  
@@ -335,7 +334,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [安装 SQL Server 2014 使用配置文件](install-sql-server-using-a-configuration-file.md)   
  [从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)   
  [SQL Server 2014 的版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Server Core Installation Option Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=221422) （Server Core 安装选项入门指南）  
+ [Server Core Installation Option Getting Started Guide](http://go.microsoft.com/fwlink/?LinkId=221422)   
  [Configuring a Server Core installation: Overview](http://go.microsoft.com/fwlink/?LinkId=221423) （配置 Server Core 安装：概述）  
  [Windows Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](http://go.microsoft.com/fwlink/?LinkId=221419) （PowerShell 中按任务焦点列出的故障转移群集 Cmdlet）  
  [Mapping Cluster.exe Commands to Windows PowerShell Cmdlets for Failover Clusters](http://go.microsoft.com/fwlink/?LinkId=221421)（为故障转移群集将 cluster.exe 命令映射到 Windows PowerShell Cmdlet）  

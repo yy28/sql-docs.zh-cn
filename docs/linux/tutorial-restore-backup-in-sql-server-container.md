@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: cf3027bc998a7170d7bf75c7801f517e015bd05d
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f6616b966faa48dfc56d8333a9f760c254cfae3e
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991190"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269910"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的将 SQL Server 数据库还原
 
@@ -30,7 +30,7 @@ ms.locfileid: "49991190"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-本教程演示如何移动和 SQL Server 备份文件还原到 SQL Server 2019 CTP 2.0 Linux 容器映像在 Docker 上运行。
+本教程演示如何移动和 SQL Server 备份文件还原到在 Docker 上运行 SQL Server 2019 预览 Linux 容器映像。
 
 ::: moniker-end
 
@@ -114,7 +114,7 @@ ms.locfileid: "49991190"
 
 1. 打开 bash 终端在 Linux/Mac 上的或在 Windows 上提升的 PowerShell 会话。
 
-1. 从 Docker 中心请求 SQL Server 2019 CTP 2.0 Linux 容器映像。
+1. 从 Docker 中心请求 SQL Server 2019 预览 Linux 容器映像。
 
    ```bash
    sudo docker pull mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
@@ -143,7 +143,7 @@ ms.locfileid: "49991190"
       -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
    ```
 
-   此命令创建 SQL Server 2019 CTP 2.0 容器与开发人员版 （默认值）。 SQL Server 端口**1433年**作为端口在主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用于保存 SQL Server 创建的数据。
+   此命令创建 SQL Server 2019 预览版容器与开发人员版 （默认值）。 SQL Server 端口**1433年**作为端口在主机上公开**1401年**。 可选`-v sql1data:/var/opt/mssql`参数创建一个名为的数据卷容器**sql1ddata**。 这用于保存 SQL Server 创建的数据。
 
 1. 要查看 Docker 容器，请使用 `docker ps` 命令。
 
@@ -533,7 +533,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-在本教程中，您学习了如何在 Windows 上备份数据库并将其移到运行 SQL Server 2019 CTP 2.0 的 Linux 服务器。 你将了解到：
+在本教程中，您学习了如何在 Windows 上备份数据库并将其移到运行 SQL Server 2019 预览版的 Linux 服务器。 你将了解到：
 
 ::: moniker-end
 

@@ -3,17 +3,17 @@ title: 课程 3 的训练和保存模型使用 R 和 T-SQL （SQL Server 机器�
 description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 73e1b2ef70821af2247de000eba45a495075e614
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 23387a6074f0c4a1dd6b4cb675b84f7aaced2a06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49463022"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033555"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>第 3 课： 训练和保存使用 T-SQL 的模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,12 +24,14 @@ ms.locfileid: "49463022"
 
 ## <a name="create-the-stored-procedure"></a>创建存储的过程
 
-在从 T-SQL 调用 R，使用系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 但是，对于，如重新训练模型，通常情况下，重复的过程是更轻松地封装到调用`sp_execute_exernal_script`在另一个存储过程。
+在从 T-SQL 调用 R，使用系统存储过程[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。 但是，您通常情况下，如重新训练模型，重复的进程是更轻松地封装对 sp_execute_exernal_script 中另一个存储过程的调用。
 
-1.  首先，创建包含用于生成提示预测模型的 R 代码的存储的过程。 在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，打开一个新**查询**窗口，并运行以下语句以创建存储的过程_TrainTipPredictionModel_。 此存储过程定义输入数据，并使用 R 包创建逻辑回归模型。
+1. 在中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]，打开一个新**查询**窗口。
+
+2. 运行以下语句以创建存储的过程**RxTrainLogitModel**。 此存储的过程定义输入的数据，并使用**rxLogit**从 RevoScaleR 创建逻辑回归模型。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[TrainTipPredictionModel]
+    CREATE PROCEDURE [dbo].[RxTrainLogitModel]
     
     AS
     BEGIN
@@ -60,17 +62,15 @@ ms.locfileid: "49463022"
     GO
     ```
 
-    - 但是，若要确保某些数据留下来测试模型，70%的数据是随机选择从出租车数据表。
-    
-    - SELECT 查询使用自定义标量函数 _fnCalculateDistance_ 计算上车与下车位置之间的直接距离。  查询的结果存储在默认 R 输入变量 `InputDataset`中。
+    -若要确保某些数据留下来测试模型，70%的数据是从培训目的出租车数据表中随机选择。
+
+    - SELECT 查询使用自定义标量函数 *fnCalculateDistance* 计算上车与下车位置之间的直接距离。 查询的结果存储在默认 R 输入变量， `InputDataset`。
   
-    - R 脚本会调用`rxLogit`函数，这是增强型 R 函数之一附带[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，以创建逻辑回归模型。
+    - R 脚本会调用**rxLogit**函数，这是增强型 R 函数之一附带[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，以创建逻辑回归模型。
   
         二进制变量 _tipped_ 用作标签或结果列，模型使用以下这些特征列进行调整：_passenger_count_、_trip_distance_、_trip_time_in_secs_ 和 _direct_distance_。
   
     -   已定型模型（保存在 R 变量 `logitObj` 中）会进行序列化，并置于数据帧中以便输出到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 该输出会插入数据库表 _nyc_taxi_models_中，以便你可以将它用于将来的预测。
-  
-2.  如果它尚不存在，请运行该语句以创建存储的过程。
 
 ## <a name="generate-the-r-model-using-the-stored-procedure"></a>生成 R 模型使用存储的过程
 
@@ -79,7 +79,7 @@ ms.locfileid: "49463022"
 1. 若要生成 R 模型，请调用存储的过程不使用任何其他参数：
 
     ```SQL
-    EXEC TrainTipPredictionModel
+    EXEC RxTrainLogitModel
     ```
 
 2. 观看**消息**窗口中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的消息将传送到 R 的**stdout**流，方式与此消息类似： 
@@ -98,11 +98,11 @@ ms.locfileid: "49463022"
     0x580A00000002000302020....
     ```
 
-在下一步中，你将使用已定型模型来创建预测。
+在下一步将使用经过训练的模型生成预测。
 
 ## <a name="next-lesson"></a>下一课
 
-[第 4 课： 运营模型](../tutorials/sqldev-operationalize-the-model.md)
+[第 4 课： 预测潜在的存储过程中使用 R 模型的结果](../tutorials/sqldev-operationalize-the-model.md)
 
 ## <a name="previous-lesson"></a>上一课
 

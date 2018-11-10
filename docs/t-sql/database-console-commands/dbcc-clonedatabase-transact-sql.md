@@ -37,12 +37,12 @@ ms.assetid: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84ac455efb9a5babe801d11218659730382dab8d
+ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666674"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50965975"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB ] [ , BACKUP_CLONEDB ] } ]   
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
 )  
 ```  
   
@@ -72,16 +72,21 @@ DBCC CLONEDATABASE
 NO_STATISTICS  
 指定是否需要将表/索引统计信息排除在克隆范围之外。 如果未指定此选项，表/索引统计信息自动包含在克隆范围之内。 从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始提供此选项。
 
-NO_QUERYSTORE 指定是否需要将查询存储数据排除在克隆范围之外。 如果未指定此选项，在源数据库中启用了查询存储的情况下，系统会将查询存储数据复制到克隆中。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始提供此选项。
+NO_QUERYSTORE<br>
+指定是否需要将查询存储数据排除在克隆范围之外。 如果未指定此选项，在源数据库中启用了查询存储的情况下，系统会将查询存储数据复制到克隆中。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 开始提供此选项。
 
 VERIFY_CLONEDB  
-检查新数据库的一致性。  如果打算将克隆数据库用于生产，则需要此选项。  启用 VERIFY_CLONEDB 还会禁用统计信息和查询存储集合，因此它等效于运行 WITH VERIFY_CLONEDB、NO_STATISTICS 和 NO_QUERYSTORE。  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始提供此选项。
+检查新数据库的一致性。  如果打算将克隆数据库用于生产，则需要此选项。  启用 VERIFY_CLONEDB 还会禁用统计信息和查询存储集合，因此它等效于运行 WITH VERIFY_CLONEDB、NO_STATISTICS 和 NO_QUERYSTORE。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
 
 > [!NOTE]  
 > 可以使用下面的命令来确认克隆数据库已为生产准备就绪： <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
+
+SERVICEBROKER<br>
+指定是否应将与 Service Broker 相关的系统目录包含在克隆范围之内。  SERVICEBROKER 选项不能与 VERIFY_CLONEDB 结合使用。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
+
 BACKUP_CLONEDB  
-创建并验证克隆数据库的备份。  与 VERIFY_CLONEDB 配合使用时，系统先验证克隆数据库，再进行备份。  从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 开始提供此选项。
+创建并验证克隆数据库的备份。  与 VERIFY_CLONEDB 配合使用时，系统先验证克隆数据库，再进行备份。  从 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 和[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 开始提供此选项。
   
 ## <a name="remarks"></a>Remarks
 DBCC CLONEDATABASE 可执行以下验证。 如果任何验证失败，则该命令失败。

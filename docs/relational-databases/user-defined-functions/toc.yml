@@ -1,7 +1,10 @@
+items:
 - name: 概述
   href: user-defined-functions.md
 - name: 确定性函数和不确定性函数
   href: deterministic-and-nondeterministic-functions.md
+- name: 标量用户定义函数内联
+  href: scalar-udf-inlining.md
 - name: 创建用户定义函数（数据库引擎）
   href: create-user-defined-functions-database-engine.md
 - name: 创建 CLR 函数
@@ -18,3 +21,9 @@
   href: rename-user-defined-functions.md
 - name: 查看用户定义函数
   href: view-user-defined-functions.md
+ms.openlocfilehash: 86c03c2b5731124a0044a0524b38fe361593cfcb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221543"

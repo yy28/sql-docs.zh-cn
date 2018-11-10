@@ -4,15 +4,15 @@ description: 本指南介绍了 SQL Server 2019 大数据群集的控制器。
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: cfc26567d13787671319cbbbee09bae39be126bf
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: abf8c174379ad444cd29b5115240ad7c404b2c4b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050869"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221513"
 ---
 # <a name="what-is-the-sql-server-big-data-clusters-controller"></a>什么是 SQL Server 大数据群集控制器？
 
@@ -26,8 +26,8 @@ ms.locfileid: "50050869"
 - 公开监视工具来观察群集的状态
 - 公开来检测和修复意外的问题的故障排除工具
 - 管理群集安全性： 确保安全的群集终结点、 管理用户和角色，配置为群集内通信的凭据
-- 管理升级的工作流，以便安全地实现 （在 CTP 2.0 中不可用）
-- 管理 （在 CTP 2.0 中不可用） 群集中的有状态服务的高可用性和灾难恢复
+- 管理升级的工作流，以便安全地实现 （CTP 2.1 中不可用）
+- 管理 （CTP 2.1 中不可用） 群集中的有状态服务的高可用性和灾难恢复
 
 ## <a name="deploying-the-controller-service"></a>部署控制器服务
 

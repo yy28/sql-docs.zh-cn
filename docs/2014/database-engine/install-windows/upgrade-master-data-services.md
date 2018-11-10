@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d60defaef135a87669b9f87257e0856f0c1dca2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d10d1abbd0ad54879b2a524d526b06319793c8f5
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079667"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019012"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
   有四种升级到 Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 的方案。 请选择适用于您情况的方案。  
@@ -34,7 +33,7 @@ ms.locfileid: "48079667"
 > -   在执行任何升级之前备份您的数据库。  
 > -   升级过程将重新创建存储过程并对 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]所使用的表进行升级。 您对这些组件中的任何一个所做的任何自定义内容可能会丢失。  
 > -   模型部署包只能在创建它们的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中使用。 无法部署模型部署包中创建[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]到[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
-> -   在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 您可以下载[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版本的 Master Data Services 外接程序从 excel[此处](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+> -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 在将 Master Data Services 和 Data Quality Services 升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 后，您可以使用用于 Excel 的 Master Data Services 外接程序的  SP1 版本继续进行。 但是，在升级到 SQL Server 2014 CTP2 后，用于 Excel 的 Master Data Services 外接程序的任何早期版本都无法使用。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 您可以从 [此处](http://go.microsoft.com/fwlink/?LinkId=328664)下载用于 Excel 的 Master Data Services 外接程序的  SP1 版本。  
   
 ##  <a name="noengine"></a> 升级（不升级数据库引擎）  
  此方案可以视为通过并行安装，因为两者[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中的同一台计算机或单独的计算机上并行安装。  

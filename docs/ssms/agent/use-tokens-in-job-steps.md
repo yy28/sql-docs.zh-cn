@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
+ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675565"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743222"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,8 @@ ms.locfileid: "47675565"
 |**(A-ERR)**|错误号。 如果作业由某个警报运行，则在作业步骤中，错误号值将自动替换此标记。|  
 |**(A-SEV)**|错误严重性。 如果作业由某个警报运行，则在作业步骤中，错误严重性值将自动替换此标记。|  
 |**(A-MSG)**|消息正文。 如果作业由某个警报运行，则在作业步骤中，消息正文值将自动替换此标记。|  
-|**(JOBNAME)**|作业的名称。|  
-|**(STEPNAME)**|步骤的名称。|  
+|**(JOBNAME)**|作业的名称。 此标记仅适用于 SQL Server 2016 及更高版本。|  
+|**(STEPNAME)**|步骤的名称。 此标记仅适用于 SQL Server 2016 及更高版本。|  
 |**(DATE)**|当前日期（以 YYYYMMDD 格式表示）。|  
 |**(INST)**|实例名。 对于默认实例，此标记将具有默认实例名称：MSSQLSERVER。|  
 |**(JOBID)**|作业 ID。|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
@@ -17,12 +16,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67843ed150df786dd84967e284e239c2cb019a91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106717"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018162"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安装
  ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ 下载 SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -46,7 +45,7 @@ ms.locfileid: "48106717"
   
 -   连接组件  
   
- 您可以单独安装每个组件，也可以选择上面列出的组件的组合。 若要作出最佳选择的版本和组件中提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位和 64 位版本。
+ 您可以单独安装每个组件，也可以选择上面列出的组件的组合。 若要作出最佳选择的版本和组件中提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[各版本和 SQL Server 2014 的组件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位和 64 位两种版本可用。
  
  **进行试用：**  
   

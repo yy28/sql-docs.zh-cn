@@ -2,7 +2,7 @@
 title: 下载并安装 Azure Data Studio |Microsoft Docs
 description: 下载和为 Windows 安装 Azure 数据 Studio、 macOS 或 Linux
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,27 +10,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc8632769f54a9b6eba25a1a1b5ad55b70bc1c59
-ms.sourcegitcommit: f9b4078dfa3704fc672e631d4830abbb18b26c85
+ms.openlocfilehash: f177b7756a1afc7d28f4f3bd85ac46c1f7563cbe
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50965946"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51217805"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上运行。
 
-下载并安装最新版本中，*年 10 月发行*:
+下载并安装最新版本中，*年 11 月发布*:
 
 > [!NOTE]
 > 如果正在从 SQL Operations Studio 更新，并且想要保留您的设置、 键盘快捷方式或代码片段，请参阅[移动用户设置](#move-user-settings)。
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
-|Windows|[安装程序](https://go.microsoft.com/fwlink/?linkid=2030731)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2030736)|2018 年 10 月 30日日 |1.1.4|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2030738)|2018 年 10 月 30日日 |1.1.4|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2030750)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)|2018 年 10 月 30日日 |1.1.4|
+|Windows|[安装程序](https://go.microsoft.com/fwlink/?linkid=2038320)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2038323)|2018 年 11 月 6日日 |1.2.4|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2038327)|2018 年 11 月 6日日 |1.2.4|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2038405)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)|2018 年 11 月 6日日 |1.2.4|
 
 有关最新版本的详细信息，请参阅[发行说明](release-notes.md)。
 
@@ -40,20 +40,20 @@ ms.locfileid: "50965946"
 
 **安装程序**
 
-1. 下载并运行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=2030731)。
+1. 下载并运行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 Windows 安装程序](https://go.microsoft.com/fwlink/?linkid=2038320)。
 1. 启动[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]应用。
 
 
 **zip 文件**
 
-1. 下载[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2030736)。
+1. 下载[ [!INCLUDE[name-sos](../includes/name-sos-short.md)] Windows 的.zip](https://go.microsoft.com/fwlink/?linkid=2038323)。
 2. 浏览到下载的文件并将其解压缩。
 3. 运行 `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 macOS](https://go.microsoft.com/fwlink/?linkid=2030738)。
+1. 下载[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 macOS](https://go.microsoft.com/fwlink/?linkid=2038327)。
 2. 若要展开的 zip 的内容，请双击它。
 3. 若要使[!INCLUDE[name-sos](../includes/name-sos-short.md)]推出*快速启动板*，拖动*Azure 数据 Studio.app*到*应用程序*文件夹。
 
@@ -61,9 +61,9 @@ ms.locfileid: "50965946"
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure 数据 Studio
 
 1. 下载[!INCLUDE[name-sos](../includes/name-sos-short.md)]通过使用其中一个安装程序或 tar.gz 存档适用于 Linux:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2030750)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2030746)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2030741)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
 1. 若要解压缩文件，并启动[!INCLUDE[name-sos](../includes/name-sos-short.md)]，打开新的终端窗口并键入以下命令：
 
    **Debian 安装：**
@@ -160,7 +160,7 @@ ms.locfileid: "50965946"
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
-* 此版本的 Azure Data Studio 适用于所有[受支持版本的 SQL Server 2014- [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)和使用与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能提供支持。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
+* 此版本的 Azure Data Studio 适用于所有[受支持版本的 SQL Server 2014- [!INCLUDE [sql-server-2019](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)和使用与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能提供支持。 Azure Data Studio 还提供对 Azure SQL 托管实例的预览支持。
 
 ## <a name="move-user-settings"></a>移动用户设置
 
@@ -183,6 +183,7 @@ ms.locfileid: "50965946"
 
 4. 在 Azure Data Studio 的新版本，请按照的步骤 1-2，然后为第 3 步将保存的内容粘贴到文件夹。 您可手动将复制设置、 键绑定或在其各自的位置中的代码段。
 
+5. 如果重写现有安装，删除安装以避免错误的资源浏览器连接到 Azure 帐户前的旧安装目录。
 
 ## <a name="next-steps"></a>后续步骤
 

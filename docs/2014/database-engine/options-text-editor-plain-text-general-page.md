@@ -7,18 +7,16 @@ ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
-f1_keywords:
-- VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: fa8ab18d7ca4e44d3b30129c7353c24660cd0b3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5cac4a24abcca8c6ae17b598ed3eba5ec9c1f4e
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090938"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030064"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>选项（“文本编辑器”-“纯文本”-“常规”页）
   使用此对话框可以更改文本编辑器的常规编辑行为，该编辑器用于编辑未与特定开发语言关联的文档。 若要显示这些设置，请在 **“工具”** 菜单上单击 **“选项”** ，依次展开 **“文本编辑器”** 和 **“纯文本”** ，然后单击 **“常规”**。  

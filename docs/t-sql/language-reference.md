@@ -16,15 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fe4a2a137c55487203d3e2f55ea30cf1283fe595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641655"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970758"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 本主题简单介绍关于查找和使用 Microsoft Transact-SQL (T-SQL) 的参考主题。 T-SQL 是使用 Microsoft SQL 产品和服务的关键所在。 与 SQL 数据库通信的所有工具和应用程序均通过发送 T-SQL 命令使用这些产品和服务。  
 

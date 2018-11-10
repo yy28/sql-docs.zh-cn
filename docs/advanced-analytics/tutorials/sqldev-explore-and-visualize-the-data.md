@@ -3,17 +3,17 @@ title: 课程 1 浏览和可视化数据使用 R 和 T-SQL （SQL Server 机器�
 description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: f1ed29dec28ade852a58980eb236a251fd072afa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461983"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032214"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>第 1 课： 浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "49461983"
 
 在本课程中，将查看示例数据，然后生成使用某些图形[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)从[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)和泛型[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)基础函数中已包含这些 R 函数[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]。
 
-主要目标演示如何调用 R 函数从[!INCLUDE[tsql](../../includes/tsql-md.md)]的存储过程中并保存应用程序文件格式中的结果：
+本课程中的主要目标演示如何调用 R 函数从[!INCLUDE[tsql](../../includes/tsql-md.md)]的存储过程中并保存应用程序文件格式中的结果：
 
 + 创建存储的过程使用**RxHistogram**生成 R 绘图作为 varbinary 数据。 使用**bcp**将导出到图像文件的二进制流。
 + 创建存储的过程使用**Hist**生成绘图，并将结果另存为 JPG 和 PDF 输出。
@@ -34,7 +34,7 @@ ms.locfileid: "49461983"
 
 开发数据科学解决方案通常包括深入的数据探索和数据可视化。 如果你尚未准备好，首先花点时间查看示例数据。
 
-在原始数据集中，出租车标识符和行程记录在不同文件中提供。 但是，若要使示例数据易于使用，两个原始数据集上进行了联接的列_medallion_， _hack\_许可证_，并且_pickup\_datetime_。  仅获取 1% 的原始记录作为采样记录。 所形成的低采样率数据集有 1,703,957 行和 23 列。
+在原始的公共数据集中，出租车标识符和行程记录提供在单独的文件。 但是，若要使示例数据易于使用，两个原始数据集上进行了联接的列_medallion_， _hack\_许可证_，并且_pickup\_datetime_。  仅获取 1% 的原始记录作为采样记录。 所形成的低采样率数据集有 1,703,957 行和 23 列。
 
 **出租车标识符**
   
@@ -61,16 +61,14 @@ ms.locfileid: "49461983"
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>创建使用 rxHistogram 绘制数据的存储的过程
 
-若要创建该绘图，请使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，在提供的增强型 R 函数之一[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步骤中绘制基于数据的直方图[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 可以将此函数包装在存储过程**PlotHistogram**。
+若要创建该绘图，请使用[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)，在提供的增强型 R 函数之一[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)。 此步骤中绘制基于数据的直方图[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 可以将此函数包装在存储过程**PlotRxHistogram**。
 
-1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，右键单击**NYCTaxi_Sample**数据库，展开**可编程性**，然后展开**存储过程**查看在第 2 课中创建的过程。
+1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，右键单击**NYCTaxi_Sample**数据库并选择**新查询**。
 
-2. 右键单击**PlotHistogram** ，然后选择**修改**查看的源。 您可以执行此过程来调用**rxHistogram**已付小费 nyctaxi_sample 表的列中包含的数据。
-
-3. （可选） 作为练习，创建您自己的此存储过程，使用下面的示例副本。 打开新查询窗口并粘贴以下脚本创建的存储的过程的绘制直方图中。 此示例中名为**PlotHistogram2**可避免命名冲突与预先存在的过程。
+2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为 **RPlotRxHistogram*。
 
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotHistogram2]
+    CREATE PROCEDURE [dbo].[RxPlotHistogram]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -92,13 +90,15 @@ ms.locfileid: "49461983"
     GO
     ```
 
-存储的过程**PlotHistogram2**等同于预先存在的存储过程**PlotHistogram** NYCTaxi_sample 数据库中找到。 
+若要了解在此脚本中的关键点包括： 
   
-+ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。
++ 变量 `@query` 定义查询文本 (`'SELECT tipped FROM nyctaxi_sample'`)，并作为脚本输入变量 `@input_data_1`的参数传递给 R 脚本。 对于作为外部进程运行的 R 脚本，应具有对你的脚本的输入和输入之间的一对一映射[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)系统存储过程 SQL Server 启动 R 会话。
   
-+ R 脚本都相当简单： 一个 R 变量 (`image_file`) 定义用于存储映像，然后**rxHistogram**函数调用以生成绘图。
++ R 脚本，一个变量中 (`image_file`) 定义用于存储映像。 
+
++ **RxHistogram** RevoScaleR 库中的函数调用以生成绘图。
   
-+ R 设备设置为**关闭**因为正在为 SQL Server 中的外部脚本运行此命令。 通常在 R 中，当发出高级绘图命令时，R 将打开一个图形窗口，调用*设备*。 可以更改窗口的大小、颜色以及其他方面，如果将输出写入文件或以其他方式处理输出，也可以关闭该设备。
++ R 设备设置为**关闭**因为正在为 SQL Server 中的外部脚本运行此命令。 通常在 R 中，当发出高级绘图命令时，R 将打开一个图形窗口，调用*设备*。 如果要对文件进行写入或处理输出某种其他方式，您可以关闭该设备。
   
 + R 图形序列化为 R 数据帧进行输出。
 
@@ -109,7 +109,7 @@ ms.locfileid: "49461983"
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，运行以下语句：
   
     ```SQL
-    EXEC [dbo].[PlotHistogram]
+    EXEC [dbo].[RxPlotHistogram]
     ```
   
     **结果**
@@ -120,7 +120,7 @@ ms.locfileid: "49461983"
 2.  打开 PowerShell 命令提示符并运行以下命令，提供相应的实例名称、 数据库名称、 用户名和凭据作为参数。 对于使用 Windows 标识，您可以替换 **-U**并 **-P**与 **-T**。
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
+     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
      ```
 
     > [!NOTE]
@@ -162,16 +162,16 @@ ms.locfileid: "49461983"
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>创建存储的过程，请使用 Hist 和多个输出格式
 
-通常情况下，数据科学家生成多个数据可视化来了解将数据从不同的角度。 在此示例中，存储的过程使用 Hist 函数创建直方图，例如为常用格式导出的二进制数据。JPG、。PDF、 和。PNG。 
+通常情况下，数据科学家生成多个数据可视化来了解将数据从不同的角度。 在此示例中，您将创建调用的存储的过程**RPlotHist**用于编写直方图、 散和到其他 R 图形。JPG 和。PDF 格式。
 
-1. 使用现有的存储的过程**PlotInOutputFiles**编写直方图、 散和到其他 R 图形。JPG 和。PDF 格式。 使用右键单击**修改**查看的源。
+此存储过程使用**Hist**函数来创建直方图，例如为常用格式导出的二进制数据。JPG、。PDF、 和。PNG。 
 
-2. （可选） 作为练习，创建您自己作为过程的副本**PlotInOutputFiles2**，以避免命名冲突的唯一名称。
+1. 在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在对象资源管理器中，右键单击**NYCTaxi_Sample**数据库并选择**新查询**。
 
-    在中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，打开一个新**查询**窗口中，并粘贴以下[!INCLUDE[tsql](../../includes/tsql-md.md)]语句。
+2. 粘贴以下脚本来创建一个存储的过程，绘制直方图。 此示例中名为**RPlotHist** 。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[PlotInOutputFiles2]  
+    CREATE PROCEDURE [dbo].[RPlotHist]  
     AS  
     BEGIN  
       SET NOCOUNT ON;  
@@ -236,7 +236,7 @@ ms.locfileid: "49461983"
   
 + 此存储过程内的 SELECT 查询的输出存储在默认的 R 数据帧 `InputDataSet`中。 然后，可以调用各种 R 绘图函数来生成实际的图形文件。 大部分嵌入的 R 脚本表示这些图形函数的选项，如 `plot` 或 `hist`。
   
-+ 所有文件保存在本地文件夹 _C:\temp\Plots\\_ 中。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。  可以通过更改变量 `mainDir`的值更改此目标文件夹。
++ 所有文件将都保存到本地文件夹 C:\temp\Plots。 此目标文件夹由作为存储过程一部分提供给 R 脚本的参数定义。  可以通过更改变量 `mainDir`的值更改此目标文件夹。
 
 + 若要将文件输出到另一个文件夹，请更改存储过程中嵌入的 R 脚本中 `mainDir` 变量的值。 还可以修改脚本以输出不同格式、更多文件，等等。
 
@@ -245,7 +245,7 @@ ms.locfileid: "49461983"
 运行以下语句将二进制绘图数据导出到 JPEG 和 PDF 文件格式。
 
 ```SQL
-EXEC PlotInOutputFiles
+EXEC RPlotHist
 ```
 
 **结果**

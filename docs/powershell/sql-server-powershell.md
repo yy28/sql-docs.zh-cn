@@ -10,12 +10,12 @@ ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cd28b110116921bf6bf90bcd7ffdbb51e613419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411727"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,11 @@ ms.locfileid: "47764245"
 
 **若导入 SQLPS 模块，请更新 PowerShell 脚本。**
 
-如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突。 SQL Server 代理使用的模块不做任何更改。 
+如果具有任何运行 `Import-Module -Name SQLPS` 的 PowerShell 脚本，并希望利用新的提供程序功能和新的 cmdlet，则必须将它们更改为 `Import-Module -Name SqlServer`。 新模块会安装到 `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer` 文件夹。 因此，不需要更新 $env:PSModulePath 变量。 如果脚本使用名为 SqlServer 的第三方或社区版本模块，请使用 Prefix 参数以避免名称冲突。
 
-  
+SQL Server 代理使用的模块不做任何更改。 因此，类型 PowerShell 的作业步骤使用 SQLPS 模块。 有关详细信息，请参阅[如何使用 SQL Server 代理运行 PowerShell](run-windows-powershell-steps-in-sql-server-agent.md)。
+
+
 ## <a name="sql-server-powershell-components"></a>SQL Server PowerShell 组件  
 SqlServer 模块加载两个 Windows PowerShell 管理单元：  
   

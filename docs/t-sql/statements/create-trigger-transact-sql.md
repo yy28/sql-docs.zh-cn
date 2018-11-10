@@ -29,17 +29,20 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fe248d0be41ab6b88196a0db627851e9d31afa50
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.openlocfilehash: 29bb936325bde06220d982948a1e6c599e9ce784
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411204"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970508"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  创建 DML、DDL 或登录触发器。 触发器是数据库服务器中发生事件时自动执行的一种特殊存储过程。 如果用户要通过数据操作语言 (DML) 事件编辑数据，则执行 DML 触发器。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 在激发任何有效的事件时，将会激发这些触发器，而无论是否会影响任何表行。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+
+创建 DML、DDL 或登录触发器。 触发器是数据库服务器中发生事件时自动执行的一种特殊存储过程。 如果用户要通过数据操作语言 (DML) 事件编辑数据，则执行 DML 触发器。 DML 事件是针对表或视图的 INSERT、UPDATE 或 DELETE 语句。 在激发任何有效的事件时，将会激发这些触发器，而无论是否会影响任何表行。 有关详细信息，请参阅 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)。  
   
  DDL 触发器用于响应各种数据定义语言 (DDL) 事件。 这些事件主要对应于 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE、ALTER 和 DROP 语句，以及执行类似 DDL 操作的某些系统存储过程。 登录触发器在遇到 LOGON 事件时触发，该事件是在建立用户会话时引发的。 触发器可以由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句直接创建，也可以由程序集方法创建，这些方法在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 公共语言运行时 (CLR) 中创建并上载到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允许为任何特定语句创建多个触发器。  
   

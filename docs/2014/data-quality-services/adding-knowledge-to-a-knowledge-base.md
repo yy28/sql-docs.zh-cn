@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f369ac83237e2e903515a168506e9b08ef396f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19adfe90d99e0d40408951e09ce9de6893382897
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205537"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030164"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>将知识添加到知识库
   本主题介绍可在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中将知识添加到知识库的方法。 您必须具备有关数据的知识才可以执行数据质量操作。 您可以通过生成和维护数据质量知识库，并向知识库添加与特定类型的数据源相关的知识，以获得知识。 知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。  
@@ -40,14 +39,14 @@ ms.locfileid: "48205537"
 ##  <a name="Discovery"></a> 执行知识发现  
  知识发现将分析数据样本以确定是否满足数据质量标准，然后将获得的知识添加到知识库中。 这是一个计算机辅助过程，用于标识数据不一致和语法错误，随后提出数据更改建议。 知识发现活动是一个向导，其中包括可以按交互方式管理域值的页面。  
   
--   文档中的详细信息，请参阅[执行知识发现](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
+-   有关文档的详细信息，请参阅 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)。  
   
 -   有关演示如何执行知识发现的视频，请单击 [此处](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
   
 ##  <a name="ManageDomain"></a> 管理域中的数据值  
  通过 DQS 可以按交互方式更改和增加由计算机辅助知识发现活动生成的元数据。 在域管理活动中执行此操作，从中您可以向特定数据值应用更改。  
   
--   文档中的详细信息，请参阅[Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
+-   有关文档的详细信息，请参阅 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)。  
   
 -   有关演示如何执行域管理的视频，请单击 [此处](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。 请注意，在此视频中，您将在知识发现向导的“管理域值”页中更改域值。 还可以在域管理活动的“域值”页中执行这些步骤。  
   
@@ -69,6 +68,6 @@ ms.locfileid: "48205537"
 ##  <a name="Default"></a> 使用默认 DQS 知识库  
  DQS 附带一个预生成的知识库（称为 DQS 数据），其中包含针对美国公司和地址数据的域。 可以使用此知识库快速启动项目，而无需创建新的知识库。 DQS 数据知识库是只读的，但数据专员可以基于该知识库创建新的知识库。  
   
--   文档中的详细信息，请参阅[使用 DQS 默认知识库](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)。  
+-   有关文档的详细信息，请参阅 [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)。  
   
   

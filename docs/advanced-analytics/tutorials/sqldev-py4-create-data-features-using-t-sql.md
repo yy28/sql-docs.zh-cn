@@ -1,18 +1,19 @@
 ---
-title: 使用 T-SQL 创建数据功能 |Microsoft Docs
+title: 使用 T-SQL 函数 (SQL Server 机器学习中的 Python) 创建数据功能 |Microsoft Docs
+description: 本教程演示如何将计算添加到在 Python 机器学习模型中使用的存储过程。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: eb63a00a2141fcc41194c48e56b9440340ab763a
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 1006f4baabeca97aafead784ce4d9bfc213aaad1
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806677"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032694"
 ---
 # <a name="create-data-features-using-t-sql"></a>使用 T-SQL 创建数据功能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -1,6 +1,6 @@
 ---
 title: Docker 上的 SQL Server 配置选项 |Microsoft Docs
-description: 了解不同使用和与 SQL Server 2017 和 2019 CTP 2.0 容器映像在 Docker 中的进行交互的方式。 这包括保存数据，将文件，复制和故障排除。
+description: 了解不同使用和与 SQL Server 2017 和 2019年预览版容器映像在 Docker 中的进行交互的方式。 这包括保存数据，将文件，复制和故障排除。
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -11,12 +11,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef759f41dd481510524d541751417a4dbe1c02c7
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 0dbc72cf39e1dee5abad6ceb961f1b437287e5ba
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753554"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270020"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上配置 SQL Server 容器映像
 
@@ -29,10 +29,10 @@ ms.locfileid: "50753554"
 
 ## <a name="pull-and-run-the-container-image"></a>请求和运行容器映像
 
-若要提取并运行 Docker 容器映像进行 SQL Server 2017 和 SQL Server 2019 CTP 2.0，请执行的先决条件和以下快速入门中的步骤：
+若要请求和运行 SQL Server 2017 和 SQL Server 2019 预览的容器映像的 Docker，请执行的先决条件和以下快速入门中的步骤：
 
 - [使用 Docker 运行 SQL Server 2017 容器映像](quickstart-install-connect-docker.md?view=sql-server-2017)
-- [使用 Docker 运行 SQL Server 2019 CTP 2.0 容器映像](quickstart-install-connect-docker.md?view=sql-server-ver15)
+- [使用 Docker 运行 SQL Server 2019 预览版容器映像](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 配置本文提供了以下各节中的其他使用方案。
 
@@ -41,9 +41,9 @@ ms.locfileid: "50753554"
 
 ## <a id="rhel"></a> 运行基于 RHEL 的容器映像
 
-SQL Server Linux 容器映像上的文档的所有点基于 Ubuntu 的容器。 从 SQL Server 2019 CTP 2.0 开始，可以使用基于 Red Hat Enterprise Linux (RHEL) 上的容器。 更改从容器存储库**mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu**到**mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0**中的所有 docker 命令。
+SQL Server Linux 容器映像上的文档的所有点基于 Ubuntu 的容器。 从 SQL Server 2019 预览开始，可以使用基于 Red Hat Enterprise Linux (RHEL) 上的容器。 更改从容器存储库**mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu**到**mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0**中的所有 docker 命令。
 
-例如，以下命令拉取使用 RHEL 的最新 SQL Server 2019 CTP 2.0 容器：
+例如，以下命令拉取使用 RHEL 的最新 SQL Server 2019 预览版容器：
 
 ```bash
 sudo docker pull mcr.microsoft.com/mssql/rhel/server:vNext-CTP2.0
@@ -134,7 +134,7 @@ sqlcmd -S 10.3.2.4,1400 -U SA -P "<YourPassword>"
 
 ### <a name="tools-inside-the-container"></a>容器内的工具
 
-从 SQL Server 2017 CTP 2.0 开始[SQL Server 命令行工具](sql-server-linux-setup-tools.md)包含在容器映像。 如果使用交互式命令提示符附加至此映像，则可在本地运行工具。
+从 SQL Server 2017 预览版[SQL Server 命令行工具](sql-server-linux-setup-tools.md)包含在容器映像。 如果使用交互式命令提示符附加至此映像，则可在本地运行工具。
 
 1. 使用 `docker exec -it` 命令在运行的容器内部启动交互式 Bash Shell。 在下面的示例`e69e056c702d`是容器 id。
 
@@ -178,7 +178,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 14
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-下面的示例创建两个 SQL Server 2019 CTP 2.0 容器，并将它们映射到端口**1401年**并**1402年**主机计算机上。
+下面的示例创建两个 SQL Server 2019 预览版容器，并将它们映射到端口**1401年**并**1402年**主机计算机上。
 
 ```bash
 docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu

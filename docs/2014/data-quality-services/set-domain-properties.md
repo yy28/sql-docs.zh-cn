@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.domainproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6076ee4d222a405fb5243e07575b01c7da0a4dde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a71a8084b2fb36135a87c24f902507a6ab790247
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190957"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030867"
 ---
 # <a name="set-domain-properties"></a>设置域属性
   本主题介绍如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中设置域属性。  
@@ -35,9 +34,9 @@ ms.locfileid: "48190957"
   
 ##  <a name="Set"></a> 设置域属性  
   
-1.  在现有域上设置属性，通过域管理活动中打开某一知识库 (请参阅[打开知识库](../../2014/data-quality-services/open-a-knowledge-base.md))，然后选择适当的域中**域**列表。 默认情况下，将显示“域属性”页。  
+1.  通过在域管理活动中打开某一知识库（请参阅 [Open a Knowledge Base](../../2014/data-quality-services/open-a-knowledge-base.md)），然后在 **“域”** 列表中选择适当的域，对某一现有域设置属性。 默认情况下，将显示“域属性”页。  
   
-2.  一个新域中所述创建它后设置属性[创建一个域](../../2014/data-quality-services/create-a-domain.md)。  
+2.  在按照 [Create a Domain](../../2014/data-quality-services/create-a-domain.md)中所述创建一个新域后设置其属性。  
   
 3.  单击 **“完成”** 以完成域管理活动，如 [结束域管理活动](../../2014/data-quality-services/end-the-domain-management-activity.md)中所述。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48190957"
 ###  <a name="Speller"></a> 启用拼写检查器  
  如果数据类型是 **String**，则单击可为该域启用 DQS 拼写检查器。 拼写检查器仅适用于数据类型为字符串的域。 **“启用拼写检查器”** 复选框使拼写检查器仅适用于与该复选框相关联的单一域。 该复选框不适用于复合域。  
   
- 拼写检查器会对域中的值建议语法和验证更正。 有关详细信息，请参阅[使用 DQS 拼写检查器](../../2014/data-quality-services/use-the-dqs-speller.md)。  
+ 拼写检查器会对域中的值建议语法和验证更正。 有关详细信息，请参阅 [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md)。  
   
 ###  <a name="Syntax"></a> 禁用语法错误算法  
  如果数据类型为 **String**，则选择此选项可指定在清理期间在域中 DQS 将不会标识语法错误。 在为该域标识语法错误无关紧要时选中此复选框。 例如，标识语法错误可能对于序列号无意义。 此控制仅可用于字符串数据类型。 DQS 不会检查非字符串数据类型是否有语法错误。  

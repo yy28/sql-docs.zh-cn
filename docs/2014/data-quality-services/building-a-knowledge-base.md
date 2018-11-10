@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 08996b8f056c8a782831e728cb3601f3b0bbed65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f87a00c79af0fdf1f2ecc164c7d14421318e052a
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099425"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51032924"
 ---
 # <a name="building-a-knowledge-base"></a>生成知识库
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知识库是有关数据的知识的存储库，通过它您可以了解自己的数据并维护其完整性。 知识库由域构成，每个域都表示一个数据字段中的数据。 DQS 使用知识库来对数据库执行数据清理和消除重复。 若要为数据清理对知识库进行准备，您可以对数据示例运行计算机辅助分析，并且以交互方式管理域中的值。 通过 DQS，您可以导入知识、创建规则和关系、直接更改数据值以及利用默认数据库。  

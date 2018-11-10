@@ -12,18 +12,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 93621800d61f84b6e27b3e2b79cc0fded7019091
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
+ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991300"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51216805"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 此更改日志适用于 [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md)。  
   
 有关新增功能和更改的详细文章，请参阅 [SSDT 团队博客](https://blogs.msdn.microsoft.com/ssdt/)
+
+
+## <a name="ssdt-for-visual-studio-2017-1582"></a>SSDT for Visual Studio 2017 (15.8.2)
+内部版本号：14.0.16182.0  
+发布日期：2018 年 11 月 5 日  
+
+### <a name="whats-new"></a>新增功能
+**SSIS：**
+
+修复了将包含包（包含脚本任务/平面文件目标）的 SSIS 项目部署到 Azure-SSIS，而导致该包无法在 Azure-SSIS 中执行的问题。 
+
+### <a name="known-issues"></a>已知问题：
+
+- 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- SSDT for Visual Studio 2017 (15.8.2) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1581"></a>SSDT for Visual Studio 2017 (15.8.1)
@@ -40,6 +55,8 @@ ms.locfileid: "49991300"
 ### <a name="known-issues"></a>已知问题：
 
 - 当 ExecuteOutOfProcess 设置为“True”时，SSIS 执行包任务不支持调试。 此问题仅适用于调试。 通过 DTExec.exe 或 SSIS 目录进行保存、部署和执行将不受影响。
+- 将包含包（包中包含脚本任务/平面文件目标）的 SSIS 项目部署到 Azure-SSIS 可导致该包无法在 Azure-SSIS 中执行。
+- SSDT for Visual Studio 2017 (15.8.1) 不支持设计包含 Oracle/Teradata 源/目标的包。 使用 SSDT for Visual Studio 2017 (15.8)。
 
 
 ## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT for Visual Studio 2017 (15.8)

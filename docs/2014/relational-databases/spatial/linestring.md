@@ -1,11 +1,9 @@
 ---
 title: LineString | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
@@ -14,18 +12,18 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b03537992a8f6c63c36ffb079f661aee171439be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059747"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018472"
 ---
 # <a name="linestring"></a>LineString
   `LineString` 是一个一维对象，表示一系列点和连接这些点的线段。  
   
 ## <a name="linestring-instances"></a>LineString 实例  
- 下图显示了示例的`LineString`实例。  
+ 下图显示了 `LineString` 实例的示例。  
   
  ![几何 LineString 实例的示例](../../database-engine/media/linestring.gif "几何 LineString 实例的示例")  
   
@@ -33,7 +31,7 @@ ms.locfileid: "48059747"
   
 -   图 1 显示的是一个简单、非闭合的 `LineString` 实例。  
   
--   图 2 是一个不简单、 非闭合的`LineString`实例。  
+-   图 2 显示的是一个不简单、非闭合的 `LineString` 实例。  
   
 -   图 3 显示的是一个闭合、简单的 `LineString` 实例，因此是一个环。  
   
@@ -50,20 +48,20 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` 显示 `LineString` 实例可被接受，但无效。  
   
- 以下`LineString`实例不可接受。 它将引发 `System.FormatException`。  
+ 下面的 `LineString` 实例不可接受。 它将引发 `System.FormatException`。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
 ### <a name="valid-instances"></a>有效实例  
- 有关`LineString`实例才是有效它必须满足以下条件。  
+ 必须满足以下条件，`LineString` 实例才是有效的。  
   
-1.  `LineString`实例必须已接受。  
+1.  `LineString` 实例必须是已接受的实例。  
   
 2.  如果 `LineString` 实例不为空，则它必须包含至少两个非重复点。  
   
-3.  `LineString`实例不能与自身重叠两个或多个连续点的间隔范围内。  
+3.  在两个或更多连续点的间隔范围内，`LineString` 实例不能自身重叠。  
   
  以下是有效的 `LineString` 实例。  
   
@@ -76,7 +74,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();
   
 ```  
   
- 以下`LineString`实例不是有效。  
+ 以下是无效的 `LineString` 实例。  
   
 ```  
 DECLARE @g1 geometry = 'LINESTRING(1 4, 3 4, 2 4, 2 0)';  

@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0cea5f9c80eb8fa6cba29c451b4b6b20e16d559c
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: de3eb008d9411c33a8c9559e2633236265c493b4
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419532"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270230"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -299,8 +299,8 @@ ms.locfileid: "49419532"
 |基本 Python 集成|用户帐户控制|是|是|是|否|
 |高级 Python 集成|用户帐户控制|否|否|否|否| 
 |机器学习服务器（独立）|用户帐户控制|否|否|否|否|   
-|Polybase 计算节点|用户帐户控制|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
-|Polybase 头节点|用户帐户控制|否|否|否|否| 
+|PolyBase 计算节点|用户帐户控制|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup>|是 <sup>3</sup> | 
+|PolyBase 头节点|用户帐户控制|否|否|否|否| 
 |JSON|用户帐户控制|是|是|是|用户帐户控制|   
 |查询存储|用户帐户控制|是|是|是|用户帐户控制|   
 |临时|用户帐户控制|是|是|是|用户帐户控制|   

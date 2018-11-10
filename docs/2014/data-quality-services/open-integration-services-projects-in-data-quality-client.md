@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83f0fc91260bc3e524c323a6d22d2e217df9267d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc1899dd230908c8dae87dc5004355c8f56c7d0d
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105407"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031305"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>在数据质量客户端中打开 Integration Services 项目
-  [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，可在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
+  通过 [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] ，您可以在批处理模式下运行清理项目。 但是，有时您可能想要查看 Integration Services 包中的清理结果，这类似于您在 DQS 的数据质量项目中，在清理活动的 **“管理和查看结果”** 选项卡中查看清理结果。 通过 DQS，您可以在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 中打开 Integration Services 项目，就像从 **“打开项目”** 屏幕打开任何其他数据质量项目一样，并且您将具有在 Integration Services 项目中清理结果的交互式清理体验。  
   
 ##  <a name="BeforeYouBegin"></a> 开始之前  
   
@@ -65,6 +64,6 @@ ms.locfileid: "48105407"
   
 ## <a name="see-also"></a>请参阅  
  [DQS 清理转换](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
- [Integration Services &#40;SSIS&#41;项目](../integration-services/integration-services-ssis-projects-and-solutions.md)  
+ [Integration Services (SSIS) 项目](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

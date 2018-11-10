@@ -4,15 +4,15 @@ description: ''
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/01/2018
+ms.date: 11/06/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: 899a02996e6415cbf35ed903c276ca23b78c6961
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: efa3d06feb138445c3e55e5d2ea3da7e60f3da20
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050989"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269552"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>快速入门： 部署 SQL Server 大数据群集在 Azure Kubernetes 服务 (AKS)
 
@@ -28,8 +28,6 @@ ms.locfileid: "50050989"
 
 若要安装**mssqlctl** CLI 工具，用于管理 SQL Server 大数据群集在客户端计算机上，您必须首先安装[Python](https://www.python.org/downloads/)最低版本 3.0 版和[pip3](https://pip.pypa.io/en/stable/installing/)。 `pip` 如果使用至少 3.4 从下载的 Python 版本已安装[python.org](https://www.python.org/)。
 
-如果您的 Python 安装缺少`requests`包，必须安装`requests`使用`python -m pip install requests`(使用`python3`Linux 上的这些命令)。 如果已有`requests`包，请将其升级到最新版本使用`python -m pip install requests --upgrade`。
-
 ## <a name="verify-aks-configuration"></a>验证 AKS 配置
 
 部署 AKS 群集后，可以执行以下 kubectl 命令来查看群集配置。 请确保该 kubectl 指向正确的群集上下文。
@@ -43,8 +41,11 @@ kubectl config view
 运行以下命令以安装**mssqlctl**在客户端计算机上的工具。 该命令可从 Windows 和 Linux 客户端，但请确保正在从在 Windows 使用管理权限运行的 cmd 窗口中运行它或它前面加`sudo`Linux 上：
 
 ```
-pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl  
+pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl  
 ```
+
+> [!IMPORTANT]
+> 如果您安装了以前的版本，则必须删除群集*之前*升级**mssqlctl**和安装新版本。 有关详细信息，请参阅[升级到新的发行版](deployment-guidance.md#upgrade)。
 
 > [!TIP]
 > 如果**mssqlctl**未正确安装中，查看本文中的先决条件步骤[安装 mssqlctl](deployment-guidance.md#mssqlctl)。
@@ -58,7 +59,7 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 - 在中[命令窗口](http://docs.microsoft.com/visualstudio/ide/reference/command-window)，引号包含环境变量中。 如果使用引号来包装一个密码，密码中包含引号。
 - 在 bash 中，该变量中不包括引号。 我们的示例使用双引号`"`。
 - 您可以将密码设置环境变量为您希望的任何内容，但请确保它们是足够复杂并且不使用`!`， `&`，或`'`字符。
-- 对于 CTP 2.0 版本中，不要更改默认端口。
+- 对于 CTP 2.1 版本中，不要更改默认端口。
 - `sa`帐户是在安装过程中创建的 SQL Server 主实例上的系统管理员。 创建 SQL Server 容器后，通过在容器中运行 `echo $MSSQL_SA_PASSWORD`，可发现指定的 `MSSQL_SA_PASSWORD` 环境变量。 出于安全考虑，更改你`sa`密码根据最佳实践[此处](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)。
 
 初始化以下环境变量。  它们所需的部署大数据群集：
@@ -110,7 +111,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 
 ## <a name="deploy-a-big-data-cluster"></a>部署大数据群集
 
-若要部署 Kubernetes 群集上的 SQL Server 2019 CTP 2.0 大数据群集，运行以下命令：
+若要部署 Kubernetes 群集上的 SQL Server 2019 CTP 2.1 大数据群集，运行以下命令：
 
 ```bash
 mssqlctl create cluster <name of your cluster>

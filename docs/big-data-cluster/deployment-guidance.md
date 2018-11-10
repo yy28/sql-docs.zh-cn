@@ -4,15 +4,15 @@ description: 了解如何将部署在 Kubernetes 上的 SQL Server 2019 大数�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/08/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: de19577b4a83bc10875bf56f4c0f2924828a00ea
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 70d8b07caf618cb5f1629fc80f0ca1db8b73ad3c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051179"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269860"
 ---
 # <a name="how-to-deploy-sql-server-big-data-cluster-on-kubernetes"></a>如何部署大数据群集在 Kubernetes 的 SQL Server
 
@@ -26,7 +26,7 @@ SQL Server 大数据群集可部署为 docker 容器的 Kubernetes 群集上。 
 
 ## <a id="prereqs"></a> Kubernetes 群集的先决条件
 
-SQL Server 大数据群集需要最小 v1.10 版本适用于 Kubernetes、 服务器和客户端。 若要安装 kubectl 客户端上的特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。  Minikube 和 AKS 的最新版本是至少 1.10。 适用于 AKS，您将需要使用`--kubernetes-version`参数来指定默认值以外的版本。
+SQL Server 大数据群集需要最小 v1.10 版本适用于 Kubernetes、 服务器和客户端。 若要安装 kubectl 客户端上的特定版本，请参阅[安装 kubectl 二进制通过 curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl)。 Minikube 和 AKS 的最新版本是至少 1.10。 适用于 AKS，您将需要使用`--kubernetes-version`参数来指定默认值以外的版本。
 
 > [!NOTE]
 > 请注意，客户端和服务器的 Kubernetes 版本应 + 1 或-1 的次要版本。 有关详细信息，请参阅[Kubernetes 支持的版本和组件倾斜](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)。
@@ -54,7 +54,12 @@ SQL Server 大数据群集需要最小 v1.10 版本适用于 Kubernetes、 服�
 
 ## <a id="deploy"></a> 部署 SQL Server 大数据群集
 
-配置在 Kubernetes 群集后，你可以继续进行 SQL Server 大数据群集的部署。 若要部署的开发/测试环境的所有默认配置与 Azure 中的大数据群集，请按照本文中的说明操作：
+配置在 Kubernetes 群集后，你可以继续进行 SQL Server 大数据群集的部署。 
+
+> [!NOTE]
+> 如果要从以前的版本进行升级，请参阅[升级部分中的](#upgrade)。
+
+若要部署的开发/测试环境的所有默认配置与 Azure 中的大数据群集，请按照本文中的说明操作：
 
 [快速入门： 将 SQL Server 大数据群集在 Kubernetes 上部署](quickstart-big-data-cluster-deploy.md)
 
@@ -71,6 +76,9 @@ kubectl config view
 ## <a id="mssqlctl"></a> 安装 mssqlctl
 
 **mssqlctl**是启用群集管理员若要启动和管理大数据群集通过 REST Api 以 Python 编写的命令行实用程序。 所需的最小的 Python 版本是 3.5 版。 您还必须拥有`pip`用于下载并安装**mssqlctl**工具。 
+
+> [!IMPORTANT]
+> 如果您安装了以前的版本，则必须删除群集*之前*升级**mssqlctl**和安装新版本。 有关详细信息，请参阅[升级到新的发行版](deployment-guidance.md#upgrade)。
 
 ### <a name="windows-mssqlctl-installation"></a>Windows mssqlctl 安装
 
@@ -89,7 +97,7 @@ kubectl config view
 1. 安装**mssqlctl**使用以下命令：
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ### <a name="linux-mssqlctl-installation"></a>Linux mssqlctl 安装
@@ -105,17 +113,10 @@ kubectl config view
    sudo -H pip3 install --upgrade pip
    ```
 
-1. 请确保具有最新**请求**包。
-
-   ```bash
-   sudo -H python3 -m pip install requests
-   sudo -H python3 -m pip install requests --upgrade
-   ```
-
 1. 安装**mssqlctl**使用以下命令：
 
    ```bash
-   pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssqlctl
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
    ```
 
 ## <a name="define-environment-variables"></a>定义环境变量
@@ -275,6 +276,29 @@ minikube ip
 ```bash
 kubectl get svc -n <name of your cluster>
 ```
+
+## <a id="upgrade"></a> 升级到新版本
+
+目前，大数据群集升级到新版本的唯一方法是手动删除并重新创建群集。 每个版本具有的唯一版本**mssqlctl**不是与以前的版本兼容。 此外，如果旧群集必须下载一个新的节点上的图像，最新的映像不可能与在群集上的较旧映像兼容。 若要升级到最新版本，请使用以下步骤：
+
+1. 在删除之前在旧群集，备份数据，和 HDFS 上的 SQL Server 主实例。 对于 SQL Server 主实例，可以使用[SQL Server 备份和还原](data-ingestion-restore-databse.md)。 Hdfs，你[可以在使用数据复制**curl**](data-ingestion-curl.md)。
+
+1. 删除与旧群集`mssqlctl delete cluster`命令。
+
+   ```bash
+    mssqlctl delete cluster <old-cluster-name>
+   ```
+
+1. 安装最新版本**mssqlctl**。
+   
+   ```bash
+   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.1 mssqlctl
+   ```
+
+   > [!IMPORTANT]
+   > 对于每个版本的路径**mssqlctl**更改。 即使你安装了**mssqlctl**，则必须重新安装最新的路径中创建新群集之前。
+
+1. 安装最新版本中的说明[部署部分](#deploy)的这篇文章。 
 
 ## <a name="next-steps"></a>后续步骤
 

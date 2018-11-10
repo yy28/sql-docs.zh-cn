@@ -1,11 +1,9 @@
 ---
 title: MultiPolygon | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
@@ -14,33 +12,33 @@ ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35618fe95194a2c8fe256720bbfb3bb223390e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076850"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018982"
 ---
 # <a name="multipolygon"></a>MultiPolygon
-  一个`MultiPolygon`实例是零个或多集合`Polygon`实例。  
+  `MultiPolygon` 实例是零个或更多个 `Polygon` 实例的集合。  
   
 ## <a name="polygon-instances"></a>Polygon 实例  
- 下图显示了示例的`MultiPolygon`实例。  
+ 下图显示了 `MultiPolygon` 实例的示例。  
   
  ![几何 MultiPolygon 实例的示例](../../database-engine/media/multipolygon.gif "几何 MultiPolygon 实例的示例")  
   
  如图中所示：  
   
--   图 1 是`MultiPolygon`具有两个实例`Polygon`元素。 边界由两个外环和三个内环界定。  
+-   图 1 是一个包含两个 `Polygon` 元素的 `MultiPolygon` 实例。 边界由两个外环和三个内环界定。  
   
 -   图 2 是一个包含两个 `MultiPolygon` 元素的 `Polygon` 实例。 边界由两个外环和三个内环界定。 这两个 `Polygon` 元素在切点处相交。  
   
 ### <a name="accepted-instances"></a>已接受的实例  
- 一个`MultiPolygon`实例接受的满足以下条件之一。  
+ 当满足以下条件之一时，接受 `MultiPolygon` 实例。  
   
--   它是一个空`MultiPolygon`实例。  
+-   它是空的 `MultiPolygon` 实例。  
   
--   包含的所有实例`MultiPolygon`实例接受`Polygon`实例。 有关详细信息接受`Polygon`实例，请参阅[多边形](../spatial/polygon.md)。  
+-   组成 `MultiPolygon` 实例的所有实例是接受的 `Polygon` 实例。 有关详细信息接受`Polygon`实例，请参阅[多边形](../spatial/polygon.md)。  
   
  以下示例显示接受`MultiPolygon`实例。  
   
@@ -74,7 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 无效，因为这两个`Polygon`实例仅在切点接触。 `@g3` 不是有效因为的两个内部`Polygon`实例相互重叠。  
+ `@g2` 之所以有效，原因在于两个 `Polygon` 实例仅在切点接触。 `@g3` 之所以无效，原因在于这两个  `Polygon` 实例的内部相互重叠。  
   
 ## <a name="examples"></a>示例  
  下面的示例演示如何创建 `geometry``MultiPolygon` 实例，并返回第二个组件的熟知文本 (WKT)。  

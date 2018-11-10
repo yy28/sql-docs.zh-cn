@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49c01e3daf0561e5082bcba28373c574a65a4c7f
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+ms.openlocfilehash: fdea834df198dc8fbaf403816895a99d9140e4ec
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226389"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270270"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1093,7 +1093,7 @@ RestoreDefaultFonts - 还原默认设置。
 解决了在有多个 AAD 的情况下，AE 向导中的 Azure Key Vault 登录页不显示 Azure 订阅的问题 解决了 AE 向导中的 Azure Key Vault 登录页不显示用户有读者权限的 Azure 订阅的问题
   - 修复了资源文件可能未正确加载而导致错误消息不准确的问题
 - 改进了 SSMS 安装页上的超链接对比度
-- 解决了连接 SQL Server Express (2016 SP1) 时看不到 PolyBase 节点的问题
+- 解决了连接 SQL Server Express (2016 SP1) 时不显示 PolyBase 节点的问题
 - 修复了 SSMS 无法将 Azure DB 的兼容级别更改为 v140 的问题
 - 改进了展开 Azure 数据库列表时的对象资源管理器性能 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3100675)
 - 解决了对非关系服务器类型 (AS\RS\IS) 错误显示“查看 SQL Server 日志”上下文菜单项的问题 
@@ -1136,7 +1136,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 从 SSMS 删除 Azure 部署向导（向 Azure VM 部署数据库）
 - 解决了 SSMS 的执行计划中不显示丢失的索引的问题[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3114194)
 - 解决了 SSMS 中常见的崩溃关闭问题
-- 解决了对象资源管理器中，在 Polybase|扩展组节点上调用上下文菜单时出错的问题[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
+- 解决了对象资源管理器中，在 PolyBase|横向扩展组节点上调用上下文菜单时出错的问题[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3115128)
 - 解决了尝试显示数据库上的权限时 SSMS 可能崩溃的问题
 - 查询存储：查询存储报表的结果网格的上下文菜单项中的常规功能增强
 - 为现有表配置“始终加密”功能失败，在不相关的对象上出错。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3103181)

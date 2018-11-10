@@ -4,15 +4,15 @@ description: 了解如何为 SQL Server 2019 大数据群集 （预览版） 部
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/05/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 71523efb55fd1bc41927b38d2e91abc9833c73b0
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50050779"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221564"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube 配置用于 SQL Server 2019 大数据群集部署
 
@@ -20,7 +20,7 @@ ms.locfileid: "50050779"
 
 ## <a name="prerequisites"></a>必要條件
 
-- 若要为 SQL Server 2019 CTP 2.0 SQL 大数据群集配置中运行 Minikube 群集，建议你的计算机具有至少 32 GB RAM。
+- 若要为 SQL Server 2019 CTP 2.1 SQL 大数据群集配置中运行 Minikube 群集，建议你的计算机具有至少 32 GB RAM。
 
    > [!TIP] 
    > 如果计算机已配置推荐的内存的最小值，然后配置群集，使只有一个计算池实例、 数据池实例 1 和 1 的存储池实例的部署。 此配置应仅用于评估环境的持续性和可用性的数据不重要。 请参阅[部署文档](deployment-guidance.md#define-environment-variables)对于要为配置数据池的副本数设置的环境变量的详细信息，计算池和存储池。
@@ -44,7 +44,7 @@ ms.locfileid: "50050779"
 
 ## <a name="install-minikube"></a>安装 Minikube
 
-根据说明安装 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 CTP 2.0 大数据群集仅适用于版本 v0.24.1 和设置。
+根据说明安装 Minikube [v0.28.2 版本](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)。 SQL Server 2019 CTP 2.1 大数据群集仅适用于版本 v0.24.1 和设置。
 
 ## <a name="create-a-minikube-cluster"></a>创建 Minikube 群集
 
@@ -74,4 +74,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 在本文中的步骤配置 Minikube 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
-[部署 Kubernetes 上的 SQL Server 2019 CTP 2.0](deployment-guidance.md#deploy)
+[部署 Kubernetes 上的 SQL Server 2019 CTP 2.1](deployment-guidance.md#deploy)

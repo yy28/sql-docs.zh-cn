@@ -1,11 +1,9 @@
 ---
 title: 空间索引概述 | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
@@ -13,12 +11,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3be9c588865596315839226492cce06c769aa4d1
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113621"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018672"
 ---
 # <a name="spatial-indexes-overview"></a>空间索引概述
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持空间数据和空间索引。 “空间索引”  是一种扩展索引，允许您对空间列编制索引。 空间列是包含空间数据类型（如 `geometry` 或 `geography`）的数据的表列。  
@@ -113,7 +111,7 @@ ms.locfileid: "48113621"
  ![最深单元优化](../../database-engine/media/spndx-opt-deepest-cell.gif "最深单元优化")  
   
 ###  <a name="schemes"></a> 分割方案  
- 空间索引的行为部分取决于“分割方案” 。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，空间索引支持两种分割方案：  
+ 空间索引的行为部分取决于“分割方案” 。 分割方案特定于数据类型。 在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中，空间索引支持两种分割方案：  
   
 -   *几何图形网格分割*，这是方案`geometry`数据类型。  
   
@@ -123,7 +121,7 @@ ms.locfileid: "48113621"
 >  空间索引的 **tessellation_scheme** 设置显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图中。  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>几何图形网格分割方案  
- GEOMETRY_AUTO_GRID 分割是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和更高版本的 `geometry` 数据类型的默认分割方案。  GEOMETRY_GRID 分割是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中 geometry 数据类型的唯一可用分割方案。 本节讨论了与使用空间索引有关的几何图形网格分割的几个方面：支持的方法和边界框。  
+ GEOMETRY_AUTO_GRID 分割是 `geometry` 和更高版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型的默认分割方案。  GEOMETRY_GRID 分割是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中 geometry 数据类型的唯一可用分割方案。 本节讨论了与使用空间索引有关的几何图形网格分割的几个方面：支持的方法和边界框。  
   
 > [!NOTE]  
 >  可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 子句显式指定此分割方案。  
@@ -156,7 +154,7 @@ ms.locfileid: "48113621"
 >  空间索引的网格密度显示在 [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) 目录视图的 bounding_box_xmin、bounding_box_ymin、bounding_box_xmax 和 bounding_box_ymax 列中。  
   
 #### <a name="the-geography-grid-tessellation-scheme"></a>地理网格分割方案  
- 此分割方案仅适用于`geography`列。 此部分总结了地理网格分割支持的方法，并讨论了如何将测量空间投影到平面上，该平面随后将分解成网格层次结构。  
+ 此分割方案仅适用于 `geography` 列。 此部分总结了地理网格分割支持的方法，并讨论了如何将测量空间投影到平面上，该平面随后将分解成网格层次结构。  
   
 > [!NOTE]  
 >  你可以使用 [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 语句的 USING (GEOGRAPHY_AUTO_GRID/GEOGRAPHY_GRID) 子句显式指定此分割方案。  
@@ -223,7 +221,7 @@ ms.locfileid: "48113621"
 -   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*  
   
 ### <a name="queries-that-use-spatial-indexes"></a>使用空间索引的查询  
- 仅在 `WHERE` 子句中包含索引空间运算符的查询中支持空间索引。 示例语法如下：  
+ 仅 `WHERE` 子句中包含索引空间运算符的查询支持空间索引。 示例语法如下：  
   
 ```  
 [spatial object].SpatialMethod([reference spatial object]) [ = | < ] [const literal or variable]  

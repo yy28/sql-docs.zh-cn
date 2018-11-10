@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 7775ece865eea62aad52f1c942c522ad21ed1108
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1ae9056ecbaf158b275798d69d691ae64e6ef06
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686615"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51033624"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 创建和运行 SQL Server 的 TRANSACT-SQL 脚本
 
@@ -250,7 +250,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 
 在实际情况中，你可能会创建一个稍后要保存和运行的脚本（用于管理或作为大型开发项目的一部分）。 在这种情况下，将保存的脚本 **.sql**扩展。
 
-如果您不熟悉 T SQL，请参阅[教程：编写 Transact-SQL 语句]和[事务处理 SQL 参考 （数据库引擎）]。
+如果不熟悉 T-SQL，请参阅[教程：编写 Transact-SQL 语句]和 [Transact-SQL 引用（数据库引擎）]。
 
 有关使用或提供 mssql 扩展的详细信息，请参阅[mssql 扩展项目 wiki]。
 
@@ -263,7 +263,7 @@ Visual Studio Code 是一款适用于 Linux、macOS 和 Windows 的图形代码�
 [连接故障排除建议]:./sql-server-linux-troubleshooting-guide.md#connection
 [自定义快捷键]:https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts
 [教程：编写 Transact-SQL 语句]:https://msdn.microsoft.com/library/ms365303.aspx
-[事务处理 SQL 参考 （数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
+[Transact-SQL 引用（数据库引擎）]:https://msdn.microsoft.com/library/bb510741.aspx
 [Visual Studio Code documentation]:https://code.visualstudio.com/docs
 [Windows 10 通用 C 运行时]:https://github.com/Microsoft/vscode-mssql/wiki/windows10-universal-c-runtime-requirement
 [自定义扩展选项]: https://github.com/Microsoft/vscode-mssql/wiki/customize-options

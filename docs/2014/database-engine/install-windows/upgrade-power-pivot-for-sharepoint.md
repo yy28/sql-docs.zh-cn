@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a76e85aeb73138f2c633bfa361325c0423ca96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 956503602a4a9266427f7242097755f3ff6a7294
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197243"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51019022"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>升级 PowerPivot for SharePoint
   本主题概述将 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 的部署升级到 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]所需的步骤。 具体步骤取决于你的环境当前正在运行的 SharePoint 版本，并包括 PowerPivot for SharePoint 外接程序 (**spPowerPivot.msi**)。  
@@ -155,7 +154,7 @@ ms.locfileid: "48197243"
   
 7.  **运行 PowerPivot 配置工具**在 SharePoint 中运行 SQL Server Analysis Services (PowerPivot) 服务，以升级解决方案和 Web services 的第一个 SharePoint 应用程序服务器上。 不能使用管理中心执行此步骤。  
   
-    1.  上**启动**菜单，依次指向**所有程序**，单击[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]，单击**配置工具**，然后单击**PowerPivot 配置工具**. 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
+    1.  在 **“开始”** 菜单中，指向 **“所有程序”**，依次单击 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **“配置工具”** 和 **“PowerPivot 配置工具”**。 请注意，只有在本地服务器上安装了 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 后，才会列出此工具。  
   
     2.  启动时，该配置工具会检查 PowerPivot 场解决方案和 PowerPivot Web 应用程序解决方案的升级状态。 如果检测到这些解决方案的较旧版本，您会看到此消息“已检测到 Powerpivot 解决方案文件的较新版本。 请选择升级选项以升级你的场。” 单击“确定”  关闭消息框。  
   

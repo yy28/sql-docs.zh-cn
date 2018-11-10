@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140e537e4ea7614df90f964ae280b7d86741d31
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: 7abd9873b3aeefb5644ade0497fe89c47d7cd343
+ms.sourcegitcommit: 41979c9d511b3eeb45134d30ccb0dbc6bba70f1a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806627"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757952"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>配置 PolyBase 以访问 Teradata 中的外部数据
 
@@ -33,22 +33,23 @@ ms.locfileid: "49806627"
 
 若要查询 Teradata 数据源中的数据，必须创建外部表以引用外部数据。 本节提供用于创建这些外部表的示例代码。 
 
-将在本节中创建这些对象：
+本节中创建了下对象：
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
-1. 创建数据库主密钥（如果尚不存在）。 这是加密凭据密钥所必需的。
+1. 创建数据库主密钥（如果尚不存在）。 需要主密钥来加密凭据机密。
 
      ```sql
       CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
      ```
-    ## <a name="arguments"></a>参数
+    **参数**
+
     PASSWORD ='password'
 
-    用于加密数据库主密钥的密码。 密码必须符合托管 SQL Server 实例的计算机的 Windows 密码策略要求。
+    该密码是否用于加密数据库中的主密钥？ 密码必须符合托管 SQL Server 实例的计算机的 Windows 密码策略要求。
 
 1. 创建数据库范围的凭据。
  
@@ -78,7 +79,7 @@ ms.locfileid: "49806627"
 
      ```
 
-1.  创建表示存储在外部 Teradata 系统 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 中的数据的外部表。
+1.  使用 [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) 创建表示存储在外部 Teradata 系统中的数据的外部表。
  
      ```sql
      /*  LOCATION: Teradata table/view in '<database_name>.<object_name>' format
@@ -108,9 +109,9 @@ ms.locfileid: "49806627"
      );
      ```
 
-1. **可选：** 在外部表上创建统计信息。
+1. *可选：* 在外部表上创建统计信息。
 
-    为了获得最佳查询性能，我们建议在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的统计信息。
+    为了获得最佳查询性能，请在外部表列上创建统计信息，尤其是用于联接、筛选和聚合的表列。
 
      ```sql
       CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 

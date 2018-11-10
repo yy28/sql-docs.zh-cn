@@ -1,27 +1,27 @@
 ---
 title: Linux 上的 SQL Server 2019 预览版的发行说明 |Microsoft Docs
-description: 本文包含的发行说明，并在 Linux 上运行的 SQL Server 2019 CTP 的支持的功能。 包含最新版本和多个以前版本的发行说明。
+description: 本文包含的发行说明和在 Linux 上运行的 SQL Server 2019 预览版的支持的功能。 包含最新版本和多个以前版本的发行说明。
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2997834ac4b4aac30427331f5882c664b0e946b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b22e52d68c1d2b10005e69e2e70c41e73c173dca
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854725"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269830"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux 上的 SQL Server 2019 预览版发行说明
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-linuxonly.md)]
 
-以下发行说明适用于 Linux 上运行的 SQL Server 2019 CTP。 本文将划分成的部分，了解每个版本。 每个版本具有描述 CU 更改以及链接到包下载的 Linux 支持文章的链接。
+以下发行说明适用于 SQL Server 2019 预览版在 Linux 上运行。 本文将划分成的部分，了解每个版本。 每个版本具有描述 CU 更改以及链接到包下载的 Linux 支持文章的链接。
 
 > [!TIP]
 > 若要了解有关 SQL Server 2019 中的新 Linux 功能，请参阅[什么是 SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)。
@@ -44,11 +44,12 @@ ms.locfileid: "47854725"
 
 ## <a name="release-history"></a>发布历史记录
 
-下表列出了 SQL Server 2019 Ctp 发行历史记录。
+下表列出了 SQL Server 2019 预览 CTP 版本发行历史记录。
 
 | 发行版本               | 版本       | 发布日期 |
 |-----------------------|---------------|--------------|
-| [CTP 2.0](#CTP20) | 15.0.1000.34   | 2018-09-24   |
+| [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
+| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
 ## <a id="cuinstall"></a> 如何安装更新
 
@@ -62,6 +63,26 @@ ms.locfileid: "47854725"
 - [在 Linux 上安装 SQL Server 2019 预览机器学习服务 R 和 Python 支持](sql-server-linux-setup-machine-learning.md)
 - [启用 SQL Server 代理](sql-server-linux-setup-sql-agent.md)
 
+## <a id="CTP21"></a> CTP 2.1 (2018 年 11 月)
+
+以下部分提供了包位置和发布的 CTP 2.1 已知的问题。 若要了解适用于 Linux 上 SQL Server 2019 有关新功能的详细信息，请参阅[什么是 SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
+
+### <a name="package-details"></a>包详细信息
+
+对于手动或脱机包安装，您可以下载与下表中的信息的 RPM 和 Debian 包：
+
+| “包” | 包版本 | 下载 |
+|-----|-----|-----|
+| Red Hat RPM 包 | 15.0.1100.94-1 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[可扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
+| SLES RPM 包 | 15.0.1100.94-1 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1100.94-1.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1100.94-1.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1100.94-1.x86_64.rpm)</br>[可扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1100.94-1.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1100.94-1.x86_64.rpm)|
+| Ubuntu 16.04 Debian 包 | 15.0.1100.94-1 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1100.94-1_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1100.94-1_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1100.94-1_amd64.deb)</br>[可扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1100.94-1_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1100.94-1_amd64.deb)|
+
+### <a name="known-issues"></a>已知问题
+
+#### <a id="msdtc"></a> Microsoft 分布式事务处理协调器
+
+目前，MSDTC 要求为未经身份验证的事务。 例如，如果 Windows 到 Linux 上的 SQL Server 上使用从 SQL Server 的链接的服务器或使用 Windows 客户端应用程序在 Linux 上启动针对 SQL Server 的分布式的事务，Windows server/客户端上的 MSDTC 则需要为"不使用选项需要身份验证。
+
 ## <a id="CTP20"></a> CTP 2.0 (2018 年 9 月)
 
 以下部分提供了包位置和发布的 CTP 2.0 已知的问题。 若要了解适用于 Linux 上 SQL Server 2019 有关新功能的详细信息，请参阅[什么是 SQL Server 2019 中的新增功能](../sql-server/what-s-new-in-sql-server-ver15.md)。
@@ -74,7 +95,7 @@ ms.locfileid: "47854725"
 |-----|-----|-----|
 | Red Hat RPM 包 | 15.0.1000.34-2 | [引擎 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[可扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
 | SLES RPM 包 | 15.0.1000.34-2 | [mssql-server 引擎 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1000.34-2.x86_64.rpm)</br>[高可用性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1000.34-2.x86_64.rpm)</br>[全文搜索 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1000.34-2.x86_64.rpm)</br>[可扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1000.34-2.x86_64.rpm)</br>[Java 扩展性 RPM 包](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1000.34-2.x86_64.rpm)|
-| Ubuntu 16.04 Debian 包 | 15.0.1000.34-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[可扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
+| Ubuntu 16.04 Debian 包 | 15.0.1000.34-2 | [引擎 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1000.34-2_amd64.deb)</br>[高可用性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1000.34-2_amd64.deb)</br>[全文搜索 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1000.34-2_amd64.deb)</br>[可扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1000.34-2_amd64.deb)</br>[Java 扩展性 Debian 包](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1000.34-2_amd64.deb)|
 
 ### <a name="known-issues"></a>已知问题
 

@@ -1,38 +1,44 @@
 ---
 title: 教程，了解数据库内分析使用 R 和 SQL Server 机器学习 |Microsoft Docs
-description: 本教程演示如何在 SQL Server 中嵌入 R 存储过程和 T-SQL 函数
+description: 了解如何将嵌入 R 编程语言在 SQL Server 存储过程和 T-SQL 函数中的代码。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/15/2018
+ms.date: 10/29/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: 80c4d39e87984b022340079be4d944ed6ad963e3
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461883"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030644"
 ---
-# <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教程： 了解在 SQL Server 中使用 R 的数据库内分析
+# <a name="tutorial-in-database-r-analytics-for-sql-developers"></a>教程： SQL 开发人员的数据库内 R 分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在本教程中的 SQL 编程人员，可以使用 R 语言构建和部署机器学习的 R 代码包装在存储过程中的解决方案的实践经验。
+在为 SQL 程序员提供本教程中，了解有关 R 集成的生成和部署的基于 R 的机器学习解决方案： 使用[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)上 SQL Server 数据库。 
 
-本教程使用已知的公共数据集，基于在纽约市出租车行程。 若要使示例代码更快地运行，我们创建了具有代表性的 1%抽样数据。 您将使用此数据生成预测特定行程是否可能获得小费或不是，基于如时间、 距离和上车位置的列的二元分类模型。
+本教程向您介绍一种数据建模工作流中使用的 R 函数。 步骤包括数据探索、 构建和训练二元分类模型和模型部署。 将使用从 New York City Taxi 和 Limosine 委员会的示例数据并将生成的模型预测某个行程是否可能会导致基于时间、 上移动，距离和上车位置的提示。 在本教程中使用的 R 代码的所有包装在存储过程创建并在 Management Studio 中运行。
+
 
 > [!NOTE]
 > 
-> 在 Python 中提供了相同的解决方案。 SQL Server 2017 是必需的。 请参阅[-数据库内分析面向 Python 开发人员](../tutorials/sqldev-in-database-python-for-sql-developers.md)
+> 本教程是在 R 和 Python 中可用。 Python 版本，请参阅[-数据库内分析面向 Python 开发人员](../tutorials/sqldev-in-database-python-for-sql-developers.md)。
 
 ## <a name="overview"></a>概述
 
-通常构建端到端解决方案的过程包括获取并清洗数据、 数据浏览和特征工程、 模型训练和优化和最后在生产环境中的模型的部署。 是最好使用专门的开发环境执行的实际代码的开发和测试。 对于 R，这可能意味着 RStudio 或[!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)]。
+构建机器学习解决方案的过程很复杂，可以跨多个阶段中涉及多个工具和协调的主题事项专家：
 
-但是，在创建该解决方案后，可以在熟悉的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 环境中使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 存储过程将其轻松部署到 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
++ 获取并清洗数据
++ 浏览数据和构建适用于建模的功能，
++ 定型集和优化模型
++ 部署到生产环境
 
-- [NYC 出租车数据库设置](demo-data-nyctaxi-in-sql.md)
+是最好使用专门的开发环境执行的实际代码的开发和测试。 但是，在全面测试该脚本后，你可以轻松地将其部署到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)]的熟悉的环境中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+
+是否是 SQL 程序员不熟悉 R，或者是否熟悉 SQL，此多部分教程的 R 开发人员引入了执行使用 R 和 SQL Server 数据库内分析的典型工作流。 
 
 - [第 1 课： 浏览和可视化通过存储过程中调用 R 函数的数据形状和分发](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
@@ -40,22 +46,24 @@ ms.locfileid: "49461883"
   
 - [第 3 课： 训练和保存使用函数和存储的过程的 R 模型](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 4 课： 在存储过程中的操作化的包装 R 代码](../tutorials/sqldev-operationalize-the-model.md)。 
-  将模型保存到数据库后，使用存储过程从 [!INCLUDE[tsql](../../includes/tsql-md.md)] 调用该模型用于预测。
+- [第 4 课： 预测潜在的存储过程中使用 R 模型的结果](../tutorials/sqldev-operationalize-the-model.md)
+
+该模型保存到数据库后，调用该模型用于预测[!INCLUDE[tsql](../../includes/tsql-md.md)]通过使用存储的过程。
 
 ## <a name="prerequisites"></a>必要條件
 
-本教程假定你熟悉基本数据库操作，例如创建数据库和表、 导入数据，以及编写 SQL 查询。 它不会假定您知道。在这种情况下，提供所有 R 代码。 经验丰富的 SQL 编程人员可以使用提供的 PowerShell 脚本，GitHub 上的示例数据并[!INCLUDE[tsql](../../includes/tsql-md.md)]在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]要完成本示例。 
+可以完成所有任务使用[!INCLUDE[tsql](../../includes/tsql-md.md)]中的存储过程[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-教程： 开始前
+本教程假定你熟悉基本数据库操作，例如创建数据库和表、 导入数据，以及编写 SQL 查询。 它不会假定您知道。在这种情况下，提供所有 R 代码。 
 
-- 验证是否有已配置的实例[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[使用启用了 R 的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)。 此外，[确认你拥有的 R 库](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)。
-- 本教程中使用的登录名必须有权创建数据库和其他对象，若要上传数据，选择数据，并运行存储的过程。
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation)或[使用启用了 R 的 SQL Server 2017 机器学习服务](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-> [!NOTE]
-> 我们建议您不要**不**使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]来编写或测试 R 代码。 如果在存储过程中嵌入的代码有任何问题，从存储过程返回的信息通常不足以了解错误的原因。
-> 
-> 对于调试，我们建议你使用工具例如[!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)]，或 RStudio。 本教程中提供的 R 脚本已使用传统的 R 工具进行开发和调试。
++ [R 库](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
+
++ [权限](../security/user-permission.md)
+
++ [NYC 出租车演示数据库](demo-data-nyctaxi-in-sql.md)
+
 
 ## <a name="next-steps"></a>后续步骤
 

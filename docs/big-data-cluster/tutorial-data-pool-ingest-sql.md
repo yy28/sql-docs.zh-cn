@@ -4,15 +4,15 @@ description: 本教程演示如何将数据引入到具有 sp_data_pool_table_in
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: c909379c92b2eb9a98c1c191987570946a8cc002
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 1f585a354175ff893869cef7f2f47b12fe244634
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644112"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221693"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>教程： 将数据引入到 TRANSACT-SQL 的 SQL Server 数据池
 
@@ -66,7 +66,7 @@ ms.locfileid: "49644112"
       );
    ```
   
-1. 在 CTP 2.0 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 2.1 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="load-data"></a>加载数据
 

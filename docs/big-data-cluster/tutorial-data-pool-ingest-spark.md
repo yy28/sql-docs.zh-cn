@@ -4,15 +4,15 @@ description: 本教程演示如何将数据引入到在 Azure Data Studio 中使
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/16/2018
+ms.date: 11/06/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.openlocfilehash: d4ee9037e1762f11a569c94e416fcf5e45449d46
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 186de5e63663b9c5485cd0385ded816cafbc7c3d
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49644131"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221473"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>教程： 将数据引入到 Spark 作业的 SQL Server 数据池
 
@@ -61,7 +61,7 @@ ms.locfileid: "49644131"
       );
    ```
   
-1. 在 CTP 2.0 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
+1. 在 CTP 2.1 中，数据池创建是异步的但没有方法来确定它尚未完成。 等待两分钟，以确保在继续操作之前创建数据池。
 
 ## <a name="start-a-spark-streaming-job"></a>启动 Spark 流式处理作业
 

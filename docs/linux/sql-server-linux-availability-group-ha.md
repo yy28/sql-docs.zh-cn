@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76cadf3fafc1980d6600d406b30492b6a6bc2fa
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798935"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031020"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>可用性组配置的高可用性和数据保护
 
@@ -62,8 +62,8 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 | |读取缩放|高可用性 （& a) </br> 数据保护 | 数据保护
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
-|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 
-|一个次要副本中断  | 主要是 R / w。 如果主没有自动故障转移会失败。 |主要是 R / w。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 
+|主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。 |自动故障转移。 新的主副本是 R / w。 |自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。 
+|一个次要副本中断  | 主要是 R / w。 如果主没有自动故障转移会失败。 |主要是 R / w。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 
 <sup>*</sup> 默认值
 
 <a name="twoSynch"></a>
@@ -80,7 +80,7 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要副本中断 | 手动故障转移。 可能导致数据丢失。 新的主副本是 R / w。| 自动故障转移。 新的主数据库不可用的用户事务，直到在先前的主要副本恢复并加入可用性组作为辅助。
-|一个次要副本中断  |主要是 R/W，运行可能导致数据丢失。 |主次要副本恢复之前不可用的用户事务。
+|一个次要副本中断  |主要是 R/W，运行可能导致数据丢失。 |主次要副本恢复之前不可用的用户事务。
 <sup>*</sup> 默认值
 
 >[!NOTE]
@@ -108,9 +108,9 @@ SQL Server 2017 引入了`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`群集资�
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |主要副本中断 | 自动故障转移。 新的主副本是 R / w。 | 自动故障转移。 新的主数据库不可用的用户事务。 
-|次要副本中断 | 主要副本是 R/W，运行可能导致数据丢失 （如果主数据库将失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 如果主故障转移到没有副本也会失败。 
-|配置仅副本中断 | 主要是 R / w。 如果主没有自动故障转移也会失败。 | 主要是 R / w。 如果主没有自动故障转移也会失败。 
-|同步辅助 + 配置仅副本中断| 主数据库不可用的用户事务。 无自动故障转移。 | 主数据库不可用的用户事务。 故障转移到如果没有副本以及主服务器失败。 
+|次要副本中断 | 主要副本是 R/W，运行可能导致数据丢失 （如果主数据库将失败并且无法恢复）。 如果主没有自动故障转移也会失败。 | 主数据库不可用的用户事务。 如果主故障转移到没有副本也会失败。 
+|配置仅副本中断 | 主要是 R / w。 如果主没有自动故障转移也会失败。 | 主要是 R / w。 如果主没有自动故障转移也会失败。 
+|同步辅助 + 配置仅副本中断| 主数据库不可用的用户事务。 无自动故障转移。 | 主数据库不可用的用户事务。 故障转移到如果没有副本以及主服务器失败。 
 <sup>*</sup> 默认值
 
 >[!NOTE]
@@ -170,7 +170,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 >[!NOTE]
 >运行上述命令时，主要是暂时降级为次要副本，然后再次进行升级。 资源更新将导致所有副本停止并重新启动。 新值`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`仅在副本重新启动，不在瞬间完成后设置。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Linux 上的可用性组](sql-server-linux-availability-group-overview.md)
 

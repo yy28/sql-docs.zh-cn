@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: install
 ms.topic: conceptual
 helpviewer_keywords:
 - feature adding [SQL Server]
@@ -15,15 +14,15 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8826d410c545ba5d172ee3544919584dd8a32761
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 526eb1e020a7e2a2e1228b55062013088355bcb2
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062147"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018342"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>向 SQL Server 2014 的实例添加功能（安装程序）
-  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+  本主题提供用于向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 实例添加功能的分步过程。 某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件或服务特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的实例。 它们也称为识别实例的组件或服务。 这些组件或服务与承载它们的实例共享相同的版本，并且专用于该实例。 您可以向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例添加识别实例的组件以及共享组件（如果尚未安装此类组件）。 有关的各版本支持的功能列表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，请参阅[SQL Server 2014 各个版本支持的功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  若要将功能添加到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]从命令提示符下，请参阅[从命令提示符安装 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "48062147"
  继续之前，请查阅 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)中的主题。  
   
 > [!NOTE]  
->  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，则必须使用对远程共享具有读取权限的域帐户。  
+>  对于本地安装，必须以管理员身份运行安装程序。 如果从远程共享安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，则必须使用对远程共享具有读取权限的域帐户。  
   
 > [!NOTE]  
 >  在向 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的实例中添加功能时，现有的使用情况报告设置将应用于新添加的功能。 若要更改这些设置，请使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]“配置工具”菜单上的“[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误和使用情况报告”工具。  
@@ -146,7 +145,7 @@ ms.locfileid: "48062147"
 -   为了减少系统的可攻击外围应用， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将有选择地安装和激活一些密钥服务和功能。 有关详细信息，请参阅 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [查看和读取 SQL Server 安装程序日志文件](view-and-read-sql-server-setup-log-files.md)   
+ [查看和阅读 SQL Server 安装程序日志文件](view-and-read-sql-server-setup-log-files.md)   
  [验证 SQL Server 安装](validate-a-sql-server-installation.md)   
  [删除 SQL Server 2014 安装](repair-a-failed-sql-server-installation.md)   
  [升级到 SQL Server 2014 使用安装向导&#40;安装程序&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)   

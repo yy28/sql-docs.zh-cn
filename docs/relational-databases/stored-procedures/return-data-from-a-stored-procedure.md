@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170f68a33a1c46a2a58f2bfb8814c872bb7405a0
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 0fba28ddaa76fc441bff847f19633ccbfbfef91e
+ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411787"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>从存储过程中返回数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "49383762"
  ### <a name="examples-of-returning-data-using-a-result-set"></a>使用结果集返回数据的示例 
   以下示例显示的存储过程将返回所有 SalesPerson 行（也显示在 vEmployee 视图中）的 LastName 和 SalesYTD 值。
   
- ```  
+ ```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -59,7 +59,7 @@ GO
 ### <a name="examples-of-output-parameter"></a>输出参数的示例  
  以下示例显示有一个输入参数和一个输出参数的过程。 `@SalesPerson` 参数将接收由调用程序指定的输入值。 SELECT 语句使用传递给输入参数的值来获取正确的 `SalesYTD` 值。 SELECT 语句还将该值赋给 `@SalesYTD` 输出参数，该参数在过程退出时将值返回给调用程序。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.uspGetEmployeeSalesYTD', 'P') IS NOT NULL  
@@ -82,7 +82,7 @@ GO
   
  以下示例调用在第一个示例中创建的过程并将从调用的过程返回的输出值保存在 `@SalesYTD` 变量中，该变量是调用程序的局部变量。  
   
-```  
+```sql
 -- Declare the variable to receive the output value of the procedure.  
 DECLARE @SalesYTDBySalesPerson money;  
 -- Execute the procedure specifying a last name for the input parameter  
@@ -138,7 +138,7 @@ GO
  
  首先，创建以下过程，在 Currency 表上声明并打开一个游标。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.uspCurrencyCursor', 'P' ) IS NOT NULL  
@@ -159,7 +159,7 @@ GO
   
  接下来，执行一个批处理，声明一个局部游标变量，执行上述过程以将游标赋值给局部变量，然后从该游标提取行。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyCursor CURSOR;  
@@ -177,7 +177,7 @@ GO
 ## <a name="returning-data-using-a-return-code"></a>使用返回代码返回数据  
  过程可以返回一个整数值（称为“返回代码”），以指示过程的执行状态。 使用 RETURN 语句指定过程的返回代码。 与 OUTPUT 参数一样，执行过程时必须将返回代码保存到变量中，才能在调用程序中使用返回代码值。 例如，数据类型 `@result` int **的赋值变量** 用于存储来自过程 `my_proc`的返回代码，如：  
   
-```  
+```sql
 DECLARE @result int;  
 EXECUTE @result = my_proc;  
 ```  
@@ -195,7 +195,7 @@ EXECUTE @result = my_proc;
 |3|获取销售额数值时出错。|  
 |4|该销售人员的销售额数值为 NULL。|  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID('Sales.usp_GetSalesYTD', 'P') IS NOT NULL  
@@ -255,7 +255,7 @@ PRINT N'Year-to-date sales for this employee is ' +
   
  下面的示例创建了处理从 `usp_GetSalesYTD` 过程返回的返回代码的程序。  
   
-```  
+```sql
 -- Declare the variables to receive the output value and return code   
 -- of the procedure.  
 DECLARE @SalesYTDForSalesPerson money, @ret_code int;  

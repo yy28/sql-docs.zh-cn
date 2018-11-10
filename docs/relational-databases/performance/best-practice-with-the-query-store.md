@@ -5,7 +5,7 @@ ms.date: 11/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology: database-engine
+ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5521a35d0a16ccce2f6a128fc305387ca75df005
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b167ab02b982688442ef0a580fab344d112f9e75
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658815"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51031006"
 ---
 # <a name="best-practice-with-the-query-store"></a>Query Store 最佳实践
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -334,6 +334,5 @@ WHERE is_forced_plan = 1;
  [查询存储目录视图 (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [查询存储存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [通过内存中 OLTP 使用查询存储](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [相关视图、函数和过程](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
- [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)  
+ [使用查询存储监视性能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     [查询处理体系结构指南](../../relational-databases/query-processing-architecture-guide.md)  
   

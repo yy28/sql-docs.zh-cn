@@ -1,11 +1,9 @@
 ---
 title: 空间引用标识符 (SRID) | Microsoft Docs
-ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- dbe-spatial
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Spatial Reference Identifiers (SRIDs)
@@ -15,12 +13,12 @@ ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba0aa0cb97d94eddf422d03cb1918940e915670a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cba308c746bd3cec33742cbdf8231371d18aab3
+ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229647"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51018992"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>空间引用标识符 (SRID)
   每个空间实例都有一个空间引用标识符 (SRID)。 SRID 对应于基于特定椭圆体的空间引用系统，可用于平面球体映射或圆球映射。  

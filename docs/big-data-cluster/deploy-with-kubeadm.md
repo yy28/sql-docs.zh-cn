@@ -4,15 +4,15 @@ description: 了解如何配置多个 Ubuntu 16.04 上的 Kubernetes 或用于 S
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/23/2018
+ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 70ba143bf01336dbd77718007ccd0fb61acc21bb
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
+ms.openlocfilehash: 842a23877290aec76f7813f27b68b4bccd7b5c9b
+ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051372"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51221773"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-deployments"></a>配置 SQL Server 2019 部署多台计算机上的 Kubernetes
 
@@ -143,4 +143,4 @@ kubectl get nodes
 
 在本文中的步骤配置多台 Ubuntu 计算机上的 Kubernetes 群集。 下一步是部署 SQL Server 2019 大数据群集。 有关说明，请参阅以下文章：
 
-[部署 Kubernetes 上的 SQL Server 2019 CTP 2.0](deployment-guidance.md#deploy)
+[部署 Kubernetes 上的 SQL Server 2019 CTP 2.1](deployment-guidance.md#deploy)

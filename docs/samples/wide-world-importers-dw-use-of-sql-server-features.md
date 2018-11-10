@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e6155be9338f7d7c04c7ecfd5312d38d909065e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628133"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269730"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW 使用的 SQL Server 特性和功能
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ WideWorldImportersDW 旨在展示许多适用于数据仓库和分析 SQL Server
 
 若要启用示例数据库中的使用 PolyBase，请确保已安装，并在数据库中运行以下存储的过程：
 
-    EXEC [Application].[Configuration_ApplyPolybase]
+    EXEC [Application].[Configuration_ApplyPolyBase]
 
 这将创建外部表`dbo.CityPopulationStatistics`引用包含在美国，托管在 Azure blob 存储中的城市的人口数据的公共数据集。 建议以查看存储过程以了解配置过程中的代码的。 如果你想要托管在 Azure blob 存储中的数据和确保其安全从常规公共访问权限，你需要时需要执行其他配置步骤。 以下查询返回的数据从外部数据集：
 

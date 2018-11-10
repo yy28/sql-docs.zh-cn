@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
@@ -13,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 585639067bd75c12be1b580ecd210171dff848a8
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178757"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030976"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
   使用 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 提供的数据质量解决方案，数据专员或 IT 专业人员可以维护数据的质量并确保数据满足业务使用的要求。 DQS 是一种知识驱动型解决方案，该解决方案通过计算机辅助方式和交互方式来管理数据源的完整性和质量。 使用 DQS 可以发现、生成和管理有关您数据的知识。 然后可以使用该知识执行数据清理、匹配和事件探查。 还可以在 DQS 数据质量项目中利用引用数据访问接口的基于云的服务。  
@@ -41,7 +40,7 @@ ms.locfileid: "48178757"
   
 -   **Reference Data Services：** 使用引用数据访问接口的服务验证数据的质量。 可以使用 Microsoft Azure 市场 DataMarket 的 Reference Data Services 来轻松地清理、验证、匹配和充实数据。 有关详细信息，请参阅 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
--   **事件探查：** 分析数据源以在知识发现、域管理、匹配和数据清理过程的每个阶段了解数据的质量。 事件探查是 DQS 数据质量解决方案中的强大工具。 您可以创建一个数据质量解决方案，在该方案中事件探查与知识管理、匹配或数据清理同等重要。 有关详细信息，请参阅[Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
+-   **事件探查：** 分析数据源以在知识发现、域管理、匹配和数据清理过程的每个阶段了解数据的质量。 事件探查是 DQS 数据质量解决方案中的强大工具。 您可以创建一个数据质量解决方案，在该方案中事件探查与知识管理、匹配或数据清理同等重要。 有关详细信息，请参阅 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   
 -   **监视：** 跟踪和确定数据质量活动的状态。 通过监视，您可以验证数据质量解决方案是否达到设计目的。 有关详细信息，请参阅 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)。  
   

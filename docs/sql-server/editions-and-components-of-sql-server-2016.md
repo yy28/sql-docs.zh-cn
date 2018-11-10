@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1adfdcbc706000b795b4a7c74c354d408b27f59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa3582731c1d24c7e930b25161e920878893ba61
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711615"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51270220"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016 的各版本和支持的功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -278,8 +278,8 @@ ms.locfileid: "47711615"
 |基本 R 集成|用户帐户控制|是|是|是|否|   
 |高级 R 集成|用户帐户控制|否|否|否|否| 
 |R Server (Standalone)|用户帐户控制|否|否|否|否|   
-|Polybase 计算节点|用户帐户控制|是 <sup>1</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>| 
-|Polybase 头节点|用户帐户控制|否|否|否|否| 
+|PolyBase 计算节点|用户帐户控制|是 <sup>1</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>|是 <sup>1</sup>, <sup>2</sup>| 
+|PolyBase 头节点|用户帐户控制|否|否|否|否| 
 |JSON|用户帐户控制|是|是|是|用户帐户控制|   
 |查询存储|用户帐户控制|是|是|是|用户帐户控制|   
 |临时|用户帐户控制|是|是|是|用户帐户控制|   

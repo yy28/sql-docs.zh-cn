@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4dde052645662689b4f783777b4aec847c613e6d
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237073"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269750"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -137,7 +137,7 @@ APS AU6 支持这些 T-SQL 的兼容性改进。  这些其他语言元素，使
 
 **数据类型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY(MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 Polybase 和 dwloader 当前不支持这些数据类型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY(MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 PolyBase 和 dwloader 当前不支持这些数据类型。 
 - [SYSNAME][]
 - [唯一标识符][]
 - [NUMERIC][]和 DECIMAL 数据类型。

@@ -18,15 +18,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ba3b9678cc511339bb6890ffe1854efcd193949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71c0f046ad2f831cdff7136bd92059fd4a24bfce
+ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772105"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50970428"
 ---
 # <a name="data-types-transact-sql"></a>数据类型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!div class="nextstepaction"]
+> [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，每个列、局部变量、表达式和参数都具有一个相关的数据类型。 数据类型是一种属性，用于指定对象可保存的数据的类型：整数数据、字符数据、货币数据、日期和时间数据、二进制字符串等。
   
@@ -99,7 +102,7 @@ ms.locfileid: "47772105"
 |||  
 |-|-|  
 |[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
-|[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+|[图像](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>其他数据类型
   

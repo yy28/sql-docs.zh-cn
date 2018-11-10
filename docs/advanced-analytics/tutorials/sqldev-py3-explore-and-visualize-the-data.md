@@ -1,18 +1,19 @@
 ---
-title: 浏览和可视化数据 |Microsoft Docs
+title: 课程 1 浏览和可视化数据使用 Python 和 T-SQL （SQL Server 机器学习） |Microsoft Docs
+description: 教程演示如何嵌入 Python 在 SQL Server 存储过程和 T-SQL 函数
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 11/01/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f6c9b42016d180c68741d00f761339f0ff1cd707
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: cf14409cdb321d2f52196e0793ea092ab9ba2430
+ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806847"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51030974"
 ---
 # <a name="explore-and-visualize-the-data"></a>浏览和可视化数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,18 +69,19 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
 
 ### <a name="create-a-plot-as-varbinary-data"></a>创建绘图的形式为 varbinary 数据
 
-**Revoscalepy** SQL Server 2017 机器学习服务中包含的模块支持类似的功能**RevoScaleR**包为。 此示例使用的 Python 等效项`rxHistogram`绘制的数据来自直方图[!INCLUDE[tsql](../../includes/tsql-md.md)]查询。 
-
 存储的过程返回的序列化的 Python`figure`对象作为一串**varbinary**数据。 不能直接查看二进制数据，但可以在客户端上使用 Python 代码来反序列化并查看图形，然后保存客户端计算机上的图像文件。
 
-1. 创建存储的过程_SerializePlots_，如果 PowerShell 脚本未执行此操作。
+1. 创建存储的过程**PyPlotMatplotlib**，如果 PowerShell 脚本未执行此操作。
 
     - 在变量`@query`定义的查询文本`SELECT tipped FROM nyctaxi_sample`，作为脚本输入变量的自变量传递到 Python 代码块`@input_data_1`。
     - Python 脚本是相当简单： **matplotlib** `figure`对象用于使直方图和散点图，这些对象随后会使用序列`pickle`库。
     - Python 图形对象序列化为**pandas**为输出数据帧。
   
     ```SQL
-    CREATE PROCEDURE [dbo].[SerializePlots]
+    DROP PROCEDURE IF EXISTS PyPlotMatplotlib;
+    GO
+
+    CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
       SET NOCOUNT ON;
@@ -134,7 +136,7 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
 2. 现在运行存储的过程不带任何参数，若要从硬编码为输入查询的数据生成绘图。
 
     ```
-    EXEC [dbo].[SerializePlots]
+    EXEC [dbo].[PyPlotMatplotlib]
     ```
 
 3. 结果应类似于此：
@@ -148,19 +150,20 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     ```
 
   
-4. 从 Python 客户端，您现在可以连接到 SQL Server 实例生成的二进制绘图对象，并查看绘图。 
+4. 从[Python 客户端](../python/setup-python-client-tools-sql.md)，现在可以连接到生成的二进制绘图对象的 SQL Server 实例，并查看绘图。 
 
     若要执行此操作，运行以下 Python 代码中，替换服务器名称、 数据库名称和相应的凭据。 请确保 Python 版本是客户端和服务器上相同。 此外请确保在客户端 （如 matplotlib) 上的 Python 库都相对于在服务器上安装的库的相同或更高版本。
   
     **使用 SQL Server 身份验证：**
     
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
     cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])
@@ -171,12 +174,13 @@ _Hack_license_列包含出租车司机的驾驶证编号 （匿名）。
     **使用 Windows 身份验证：**
 
     ```python
+    %matplotlib notebook
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=yes;')
+    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[SerializePlots]")
+    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
     for i in range(0, len(tables)):
         fig = pickle.loads(tables[i][0])

@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b32b3465184d5a8be1ef07f42b6b764b0600940d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a06dfa03442cfbcff2f8815f9c946afbd9ff771c
+ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815545"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269670"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSDTC)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文介绍如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSTDC)。 在 SQL Server 2019 CTP 2.0 中引入了在 Linux 上的 MSDTC 支持。
+本文介绍如何在 Linux 上配置 Microsoft 分布式事务处理协调器 (MSTDC)。 在 SQL Server 2019 预览版中引入了在 Linux 上的 MSDTC 支持。
 
 ## <a name="overview"></a>概述
 
@@ -44,7 +44,7 @@ SQL Server 2019 引入了 mssql-conf 实用工具的两个配置参数。
 - 使用 JDBC 提供程序在 Linux 上的 SQL Server XA 分布式事务。
 - 链接服务器上的分布式的事务。
 
-有关限制和 MSDTC 在 CTP 2.0 中的已知的问题，请参阅[release notes for Linux 上的 SQL Server 2019 CTP 发行](sql-server-linux-release-notes-2019.md#msdtc)。
+有关限制和 msdtc 预览版中的已知的问题，请参阅[发行说明以在 Linux 上的 SQL Server 2019 预览](sql-server-linux-release-notes-2019.md#msdtc)。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTC 配置步骤
 
