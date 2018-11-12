@@ -44,7 +44,7 @@ ms.locfileid: "47788835"
   
 3.  在详细信息窗格中，右键单击要自动启动的实例的名称，然后单击“属性”。  
   
-4.  在“SQL Server \<instancename> 属性”**** 对话框中，将“启动模式”设置为“自动”。  
+4.  在“SQL Server \<instancename> 属性”对话框中，将“启动模式”设置为“自动”。 ****  
   
 5.  单击 **“确定”**，然后关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
   

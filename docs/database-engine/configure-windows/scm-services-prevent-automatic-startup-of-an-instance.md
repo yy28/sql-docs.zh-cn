@@ -47,9 +47,9 @@ ms.locfileid: "47706295"
   
 3.  在“详细信息”窗格中，右键单击“” ，再单击“属性”   
   
-4.  在“SQL Server \<instancename> 属性”**** 对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”。  
+4.  在“SQL Server \<instancename> 属性”  对话框中，在“服务”选项卡上的“常规”框中，将“启动模式”的值设置为“手动”。 ****  
   
-5.  单击“确定”关闭“SQL Server \<instancename> 属性”**** 对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。  
+5.  单击“确定”关闭“SQL Server \<instancename> 属性”  对话框，然后再关闭 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器。 ****  
   
 ## <a name="see-also"></a>另请参阅  
  [启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
