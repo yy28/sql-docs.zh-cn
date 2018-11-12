@@ -171,7 +171,7 @@ ms.locfileid: "47745325"
  [ NOT ] LIKE  
  指示后续字符串使用时要进行模式匹配。 有关详细信息，请参阅 [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)。  
   
- ESCAPE 'escape_ character'****  
+ ESCAPE **'***escape_ character***'**  
  允许在字符串中搜索通配符，而不是将其作为通配符使用。 escape_character 是放在通配符前表示此特殊用法的字符。  
   
  [ NOT ] BETWEEN  
