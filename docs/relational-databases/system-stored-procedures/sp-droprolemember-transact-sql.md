@@ -52,10 +52,10 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [  **@rolename =** ] **'角色**   
  将从中删除成员的角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
- [  **@membername =** ] **'***security_account*****  
+ [  **@membername =** ] **'security_account**   
  将从角色中删除的安全帐户的名称。 *security_account*是**sysname**，无默认值。 *security_account*可以是数据库用户、 其他数据库角色、 Windows 登录名或 Windows 组。 *security_account*必须存在于当前数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  

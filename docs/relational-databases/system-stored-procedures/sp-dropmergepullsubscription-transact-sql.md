@@ -51,7 +51,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
  [ **@publisher_db=**] **'***publisher_db***'**  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 此参数是必需的。  
   
- [  **@reserved=**] **'***保留*****  
+ [  **@reserved=**] **'保留**   
  供将来使用的保留参数。 *保留*是**位**，默认值为**0**。  
   
 ## <a name="return-code-values"></a>返回代码值  

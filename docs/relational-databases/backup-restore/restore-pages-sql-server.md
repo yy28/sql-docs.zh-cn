@@ -122,7 +122,7 @@ ms.locfileid: "47761985"
      此部分执行的功能与 [还原数据库（常规页）](../../relational-databases/backup-restore/restore-database-general-page.md) 上的 **“还原到”** 的功能相同。  
   
      **“数据库”**  
-     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master**和 tempdb 之外的所有数据库。  
+     指定要还原的数据库。 您可以输入新的数据库，也可以从下拉列表中选择现有的数据库。  该列表包含了服务器上除系统数据库 **master** 和 tempdb 之外的所有数据库。  
   
     > [!WARNING]  
     >  若要还原带有密码保护的备份，必须使用 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 语句。  

@@ -44,13 +44,13 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@distributor=**] **'***分发服务器*****  
+ [  **@distributor=**] **'分发服务器**   
  分发服务器名称。 *分发服务器*是**sysname**，无默认值。 只有在设置远程分发服务器时才使用此参数。 它将在分发服务器属性的条目添加**msdb...MSdistributor**表。  
   
  [  **@heartbeat_interval=**] *heartbeat_interval*  
  是的最大代理可以运行而无需记录进度消息的分钟数。 *heartbeat_interval*是**int**，默认值为 10 分钟。 创建按此间隔运行的 SQL Server 代理作业，以检查正在运行的复制代理的状态。  
   
- [  **@password=**] **'***密码*****]  
+ [  **@password=**] **'密码**]   
  是的密码**distributor_admin**登录名。 *密码*是**sysname**，默认值为 NULL。 如果为 NULL 或空字符串，则密码重置为随机值。 必须在添加第一个远程分发服务器时配置密码。 **distributor_admin**登录名和*密码*为用于链接的服务器条目存储*分发服务器*RPC 连接，包括本地连接。 如果*分发服务器上*是本地的对于密码**distributor_admin**设置为新值。 对于具有远程分发服务器的发布服务器，值相同的值为*密码*执行时必须指定**sp_adddistributor**发布服务器和分发服务器上。 [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)可用于更改分发服务器密码。  
   
 > [!IMPORTANT]  

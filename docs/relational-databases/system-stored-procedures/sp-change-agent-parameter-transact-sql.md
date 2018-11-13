@@ -42,7 +42,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  [  **@profile_id=**] *profile_id*，  
  配置文件的 ID。 *profile_id*是**int**，无默认值。  
   
- [  **@parameter_name=**] **'***parameter_name*****  
+ [  **@parameter_name=**] **'parameter_name**   
  为参数的名称。 *parameter_name*是**sysname**，无默认值。 对于系统配置文件，可以更改的参数取决于代理的类型。 若要了解哪种类型的代理这*profile_id*表示时，找到*profile_id*中的列**Msagent_profiles**表，并记下*agent_type*值。  
   
 > [!NOTE]  
@@ -244,7 +244,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  若要查看为给定配置文件中定义了哪些参数，请运行**sp_help_agent_profile**并记下*profile_name*与关联*profile_id*。 具有相应*profile_id*，接下来运行**sp_help_agent_parameters**使用的*profile_id*若要查看与该配置文件关联的参数。 参数可以通过执行添加到配置文件[sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)。  
   
- [  **@parameter_value=**] **'***parameter_value*****  
+ [  **@parameter_value=**] **'parameter_value**   
  是该参数的新值。 *parameter_value*是**nvarchar(255)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

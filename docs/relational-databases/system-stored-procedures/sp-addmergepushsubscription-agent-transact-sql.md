@@ -67,19 +67,19 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [ **@publication =** ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@subscriber =** ] **'***订阅服务器*****  
+ [  **@subscriber =** ] **'订阅服务器**   
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db =** ] **'***subscriber_db*****  
+ [  **@subscriber_db =** ] **'subscriber_db**   
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
  [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
  同步时连接到订阅服务器所使用的安全模式。 *subscriber_security_mode*是**int**，默认值为 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。  
   
- [  **@subscriber_login =** ] **'***subscriber_login*****  
+ [  **@subscriber_login =** ] **'subscriber_login**   
  同步时连接到订阅服务器所使用的订阅服务器登录。 *subscriber_login*如果，则需要*subscriber_security_mode*设置为**0**。 *subscriber_login*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_password =** ] **'***subscriber_password*****  
+ [  **@subscriber_password =** ] **'subscriber_password**   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的订阅服务器密码。 *subscriber_password*如果，则需要*subscriber_security_mode*设置为**0**。 *subscriber_password*是**sysname**，默认值为 NULL。 如果使用订阅服务器密码，将自动对密码进行加密。  
   
 > [!IMPORTANT]  
@@ -88,19 +88,19 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
  同步时连接到发布服务器所使用的安全模式。 *publisher_security_mode*是**int**，默认值为 1。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。  
   
- [  **@publisher_login =** ] **'***publisher_login*****  
+ [  **@publisher_login =** ] **'publisher_login**   
  同步时连接到发布服务器所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_password =** ] **'***publisher_password*****  
+ [  **@publisher_password =** ] **'publisher_password**   
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@job_login =** ] **'***job_login*****  
+ [  **@job_login =** ] **'job_login**   
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户始终用于到分发服务器的代理连接，以及在使用 Windows 集成身份验证时用于到订阅服务器和发布服务器的连接。  
   
- [  **@job_password =** ] **'***job_password*****  
+ [  **@job_password =** ] **'job_password**   
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
 > [!IMPORTANT]  
@@ -185,7 +185,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  [ **@active_end_date =** ] *active_end_date*  
  停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr*****  
+ [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
  指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 ## <a name="return-code-values"></a>返回代码值  
