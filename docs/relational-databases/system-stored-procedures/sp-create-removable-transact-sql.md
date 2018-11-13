@@ -71,21 +71,21 @@ sp_create_removable
  [ **@loglogical=** ] **'***loglogical***'**  
  包含事务日志的文件的逻辑名称。 *loglogical*是**sysname**。  
   
- [  **@logphysical=** ] **'***logphysical*****  
+ [  **@logphysical=** ] **'logphysical**   
  物理名称。 其中包含存放事务日志的文件的完全限定路径。 *logphysical*是**nvarchar(260)**。  
   
  [  **@logsize=** ] *logsize*  
  包含事务日志的文件的大小 (MB)。 *logsize*是**int**。所需的最低*logsize*为 1。  
   
- [  **@datalogical1=** ] **'***datalogical*****  
+ [  **@datalogical1=** ] **'datalogical**   
  包含数据表的文件的逻辑名称。 *datalogical*是**sysname**。  
   
  必须有 1 到 16 个数据文件。 通常，如果预计数据库很大，必须分布在多个磁盘上，则创建多个数据文件。  
   
- [  **@dataphysical1=** ] **'***dataphysical*****  
+ [  **@dataphysical1=** ] **'dataphysical**   
  物理名称。 其中包括包含数据表的文件的完全限定路径。 *dataphysical*是**nvarchar(260)**。  
   
- [  **@datasize1=** ] **'***datasize*****  
+ [  **@datasize1=** ] **'datasize**   
  包含数据表的文件的大小 (MB)。 *datasize*是**int**。所需的最低*datasize*为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  

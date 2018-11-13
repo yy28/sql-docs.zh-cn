@@ -43,7 +43,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@functname =**] **'***过程*****  
+ [  **@functname =**] **'过程**   
  要删除的扩展存储过程的名称。 *过程*是**nvarchar(517)**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

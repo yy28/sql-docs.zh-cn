@@ -94,10 +94,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@name =** ] **'***name***'**  
  为代理的名称。 *名称*是**sysname**，默认值为 NULL。  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'发布服务器**   
  是发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db =** ] **'***publisher_db*****  
+ [  **@publisher_db =** ] **'publisher_db**   
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication =** ] **'***publication***'**  
@@ -109,7 +109,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login =** ] **'***publisher_login*****  
+ [  **@publisher_login =** ] **'publisher_login**   
  同步时连接到发布服务器所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。  
   
  [  **@publisher_password =** ] **'***publisher_password*****  
@@ -121,10 +121,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
  设置*publisher_encrypted_password*不再受支持。 尝试将此项设置**位**参数**1**将导致错误。  
   
- [  **@subscriber =** ] **'***订阅服务器*****  
+ [  **@subscriber =** ] **'订阅服务器**   
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db =** ] **'***subscriber_db*****  
+ [  **@subscriber_db =** ] **'subscriber_db**   
  是订阅数据库的名称。 *subscriber_db*是**sysname**，默认值为 NULL。  
   
  [  **@subscriber_security_mode =** ] *subscriber_security_mode*  
@@ -133,19 +133,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 合并代理始终使用 Windows 身份验证连接到本地订阅服务器。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
   
- [  **@subscriber_login =** ] **'***subscriber_login*****  
+ [  **@subscriber_login =** ] **'subscriber_login**   
  同步时连接到订阅服务器所使用的订阅服务器登录。 *subscriber_login*如果，则需要*subscriber_security_mode*设置为**0**。 *subscriber_login*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
   
- [  **@subscriber_password =** ] **'***subscriber_password*****  
+ [  **@subscriber_password =** ] **'subscriber_password**   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证的订阅服务器密码。 *subscriber_password*如果，则需要*subscriber_security_mode*设置为**0**。 *subscriber_password*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  不推荐使用此参数，保留它是为了让脚本能够向后兼容。 如果为此参数指定了值，将返回警告消息，但将忽略该值。  
   
- [  **@distributor =** ] **'***分发服务器*****  
+ [  **@distributor =** ] **'分发服务器**   
  是分发服务器的名称。 *分发服务器*是**sysname**，默认值为*发布服务器*; 即，发布服务器也是分发服务器。  
   
  [  **@distributor_security_mode =** ] *distributor_security_mode*  
@@ -154,10 +154,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login =** ] **'***distributor_login*****  
+ [  **@distributor_login =** ] **'distributor_login**   
  同步时连接到分发服务器所使用的分发服务器登录名。 *distributor_login*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_login*是**sysname**，默认值为 NULL。  
   
- [  **@distributor_password =** ] **'***distributor_password*****  
+ [  **@distributor_password =** ] **'distributor_password**   
  分发服务器密码。 *distributor_password*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
@@ -242,7 +242,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [ **@active_end_date =** ] *active_end_date*  
  停止安排合并代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 NULL。  
   
- [  **@optional_command_line =** ] **'***optional_command_line*****  
+ [  **@optional_command_line =** ] **'optional_command_line**   
  提供给合并代理的可选命令提示符。 *optional_command_line*是**nvarchar(255)**，默认值为。 可用于向合并代理提供其他参数，例如在以下示例中，将默认的查询超时值增加到 `600` 秒：  
   
 ```  
@@ -252,60 +252,60 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@merge_jobid =** ] *merge_jobid*  
  作业 ID 的输出参数。 *merge_jobid*是**binary(16)**，默认值为 NULL。  
   
- [  **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr*****  
+ [  **@enabled_for_syncmgr =** ] **'enabled_for_syncmgr**   
  指定是否可以通过 Windows 同步管理器同步订阅。 *enabled_for_syncmgr*是**nvarchar(5)**，默认值为 FALSE。 如果**false**，该订阅未注册使用同步管理器。 如果 **，则返回 true**，订阅已注册使用同步管理器，可以同步而无需启动[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
- [  **@ftp_address =** ] **'***ftp_address*****  
+ [  **@ftp_address =** ] **'ftp_address**   
  仅为保持向后兼容。  
   
  [  **@ftp_port =** ] *ftp_port*  
  仅为保持向后兼容。  
   
- [  **@ftp_login =** ] **'***ftp_login*****  
+ [  **@ftp_login =** ] **'ftp_login**   
  仅为保持向后兼容。  
   
- [  **@ftp_password =** ] **'***ftp_password*****  
+ [  **@ftp_password =** ] **'ftp_password**   
  仅为保持向后兼容。  
   
- [  **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder*****  
+ [  **@alt_snapshot_folder =** ] **'alternate_snapshot_folder**   
  指定快照文件的选取位置。 *alternate_snapshot_folder*是**nvarchar(255)**，默认值为 NULL。 如果为 NULL，则从发布服务器指定的默认位置拾取快照文件。  
   
- [  **@working_directory =** ] **'***working_directory*****  
+ [  **@working_directory =** ] **'working_directory**   
  使用 FTP 传输快照文件时用于临时存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@use_ftp =** ] **'***use_ftp*****  
+ [  **@use_ftp =** ] **'use_ftp**   
  指定使用 FTP 而不使用典型的协议检索快照。 *use_ftp*是**nvarchar(5)**，默认值为 FALSE。  
   
- [  **@reserved =** ] **'***保留*****  
+ [  **@reserved =** ] **'保留**   
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@use_interactive_resolver =** ] **'***use_interactive_resolver***** ]  
+ [  **@use_interactive_resolver =** ] **'use_interactive_resolver** ]   
  使用交互式冲突解决程序解决所有允许交互式解决方法的项目的冲突。 *use_interactive_resolver*是**nvarchar(5)**，默认值为 FALSE。  
   
- [  **@offloadagent =** ] **'***remote_agent_activation*****  
+ [  **@offloadagent =** ] **'remote_agent_activation**   
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_activation*以外的值为**false**将生成错误。  
   
- [  **@offloadserver =** ] **'***remote_agent_server_name*****  
+ [  **@offloadserver =** ] **'remote_agent_server_name**   
  > [!NOTE]  
 >  已不推荐使用远程代理激活，也不再支持该功能。 支持此参数只是为了让脚本能够向后兼容。 设置*remote_agent_server_name*为任何非 NULL 值将生成错误。  
   
- [  **@job_name =** ] **'***job_name***** ]  
+ [  **@job_name =** ] **'job_name** ]   
  现有代理作业的名称。 *job_name*是**sysname**，默认值为 NULL。 只有在使用现有作业而不是新创建的作业（此为默认设置）来同步订阅时，才需要指定此参数。 如果你不属于**sysadmin**固定服务器角色，则必须指定*job_login*并*job_password*时指定*job_name*.  
   
- [  **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***** ]  
+ [  **@dynamic_snapshot_location =** ] **'dynamic_snapshot_location** ]   
  在使用已筛选的数据快照时要读取的快照文件所在文件夹的路径。 *dynamic_snapshot_location*是**nvarchar(260)**，默认值为 NULL。 有关详细信息，请参阅 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)。  
   
  [  **@use_web_sync =** ] *use_web_sync*  
  指示已启用 Web 同步。 *use_web_sync*是**位**，默认值为 0。 **1**指定，可以使用 HTTP 通过 internet 同步请求订阅。  
   
- [  **@internet_url =** ] **'***执行*****  
+ [  **@internet_url =** ] **'执行**   
  用于 Web 同步的复制侦听器 (REPLISAPI.DLL) 的位置。 *执行*是**nvarchar(260)**，默认值为 NULL。 *执行*是一个完全限定的 URL，格式`http://server.domain.com/directory/replisapi.dll`。 如果将服务器配置为侦听端口 80 以外的端口，则提供的端口号的格式也必须为 `http://server.domain.com:portnumber/directory/replisapi.dll`，其中的 `portnumber` 表示端口。  
   
- [  **@internet_login =** ] **'***internet_login*****  
+ [  **@internet_login =** ] **'internet_login**   
  合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所用的登录名。 *internet_login*是**sysname**，默认值为 NULL。  
   
- [  **@internet_password =** ] **'***internet_password*****  
+ [  **@internet_password =** ] **'internet_password**   
  合并代理使用 HTTP 基本身份验证连接到承载 Web 同步的 Web 服务器时所用的密码。 *internet_password*是**nvarchar(524)**，默认值为 NULL。  
   
 > [!IMPORTANT]  
@@ -325,13 +325,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  [  **@internet_timeout =** ] *internet_timeout*  
  Web 同步请求过期之前的时间长度（以秒为单位）。 *internet_timeout*是**int**，默认值为**300**秒。  
   
- [  **@hostname =** ] **'***主机名*****  
+ [  **@hostname =** ] **'主机名**   
  在参数化筛选器的 WHERE 子句中使用此函数时，覆盖 HOST_NAME() 的值。 *主机名*是**sysname**，默认值为 NULL。  
   
- [  **@job_login =** ] **'***job_login*****  
+ [  **@job_login =** ] **'job_login**   
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 使用 Windows 集成身份验证时，该 Windows 帐户始终用于到订阅服务器的代理连接及到分发服务器和发布服务器的连接。  
   
- [  **@job_password =** ] **'***job_password*****  
+ [  **@job_password =** ] **'job_password**   
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。  
   
 > [!IMPORTANT]  
