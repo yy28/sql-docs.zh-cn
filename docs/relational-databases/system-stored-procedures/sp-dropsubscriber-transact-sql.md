@@ -44,10 +44,10 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=** ] **'***订阅服务器*****  
+ [ **@subscriber=** ] **'***订阅服务器*****  
  要删除的订阅服务器的名称。 *订阅服务器上*是**sysname**，无默认值。  
   
- [  **@reserved=** ] **'***保留*****  
+ [ **@reserved=** ] **'***保留*****  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  

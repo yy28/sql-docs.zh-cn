@@ -47,13 +47,13 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@login=**] **'***登录*****  
+ [  **@login=**] **'***登录***’**  
  是分发数据库中创建新的系统对象时要使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
- [  **@password=**] **'***密码*****  
+ [  **@password=**] **'***密码***’**  
  在分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
- [  **@security_mode=**] **'***security_mode*****  
+ [  **@security_mode=**] **'***security_mode***’**  
  是分发数据库中创建新的系统对象时要使用的登录安全模式。 *security_mode*是**位**默认值为**1**。 如果**0**，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用身份验证。 如果**1**，将使用 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  

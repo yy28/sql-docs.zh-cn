@@ -40,7 +40,7 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  要删除的发布的名称。 *发布*是**sysname**，无默认值。 如果**所有**指定，则将从发布数据库，除了那些具有订阅中删除所有发布。  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  

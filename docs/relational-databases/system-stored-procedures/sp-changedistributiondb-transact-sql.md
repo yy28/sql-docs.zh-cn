@@ -41,10 +41,10 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@database=**] **'***数据库*****  
+ [ **@database=**] **'***数据库*****  
  是分发数据库的名称。 *数据库*是**sysname**，无默认值。  
   
- [  **@property=**] **'***属性*****  
+ [ **@property=**] **'***属性*****  
  要更改的给定数据库的属性。 *属性*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -54,7 +54,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|最小分发保持期。|  
 |NULL（默认值）|所有可用*属性*打印值。|  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  是指定的属性的新值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

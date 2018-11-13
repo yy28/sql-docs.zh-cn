@@ -44,7 +44,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
  [  **@policy_id=** ] *policy_id*  
  您要删除其执行历史记录的策略的标识符。 *policy_id*是**int**，和是必需的。 可以为 NULL。  
   
- [  **@oldest_date=** ] **'***oldest_date*****  
+ [  **@oldest_date=** ] **'***oldest_date***’**  
  要保留其策略执行历史记录的最早的日期。 先于此日期的所有执行历史记录都将被删除。 *oldest_date*是**datetime**，和是必需的。 可以为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

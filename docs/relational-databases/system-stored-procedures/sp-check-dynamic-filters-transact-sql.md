@@ -50,7 +50,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@publication**=] **'***发布*****  
+ [ **@publication** =] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

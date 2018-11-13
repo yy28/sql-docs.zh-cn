@@ -44,19 +44,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_server =** ] **'***table_server*****  
+ [  **@table_server =** ] **'***table_server***’**  
  要返回信息的链接服务器的名称。 *table_server*是**sysname**，无默认值。  
   
- [  **@table_name =** ] **'***table_name*****]  
+ [  **@table_name =** ] **'***table_name***’**]  
  将为其提供表特权信息的表的名称。 *table_name*是**sysname**，默认值为 NULL。  
   
- [  **@table_schema =** ] **'***table_schema*****  
+ [  **@table_schema =** ] **'***table_schema***’**  
  表架构。 在某些 DBMS 环境中是表所有者。 *table_schema*是**sysname**，默认值为 NULL。  
   
- [  **@table_catalog =** ] **'***table_catalog*****  
+ [  **@table_catalog =** ] **'***table_catalog***’**  
  是在其中的数据库名称指定*table_name*驻留。 *table_catalog*是**sysname**，默认值为 NULL。  
   
- [  **@fUsePattern =**] **'***fUsePattern*****  
+ [  **@fUsePattern =**] **'***fUsePattern***’**  
  确定字符 "_"、"%"、"[" 和 "]" 是否解释为通配符。 有效值为 0（模式匹配为关闭状态）和 1（模式匹配为打开状态）。 *fUsePattern*是**位**，默认值为 1。  
   
 ## <a name="return-code-values"></a>返回代码值  

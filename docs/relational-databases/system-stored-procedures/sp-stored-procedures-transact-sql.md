@@ -46,7 +46,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  [ **@sp_name =** ] **'***name***'**  
  用于返回目录信息的过程名。 *名称*是**nvarchar(390)**，默认值为 NULL。 支持通配符模式匹配。  
   
- [  **@sp_owner =** ] **'***架构*****  
+ [  **@sp_owner =** ] **'***架构***’**  
  过程所属架构的名称。 *架构*是**nvarchar(384)**，默认值为 NULL。 支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认过程可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前架构包含具有指定名称的过程，则返回此过程。 如果指定了非限定存储过程，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]按以下顺序搜索此过程：  
@@ -57,10 +57,10 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   当前数据库中的 **dbo** 架构。  
   
- [  **@qualifier =** ] **'***限定符*****  
+ [  **@qualifier =** ] **'***限定符***’**  
  过程限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持窗体中的表的三部分命名方式 (*限定符 ***。*** 架构 ***。*** 名称*。 在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，*限定符*表示数据库名称。 在某些产品中，它表示表所在数据库环境的服务器名称。  
   
- [  **@fUsePattern =** ] **'***fUsePattern*****  
+ [  **@fUsePattern =** ] **'***fUsePattern***’**  
  确定是否将下划线 (_)、百分号 (%) 或 方括号 ([ ]) 解释为通配符。 *fUsePattern*是**位**，默认值为 1。  
   
  **0** = 启用模式匹配为关闭状态。  

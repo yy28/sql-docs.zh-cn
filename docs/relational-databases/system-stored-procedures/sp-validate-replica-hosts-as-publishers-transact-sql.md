@@ -42,13 +42,13 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@original_publisher** =] **'***original_publisher*****  
+ [ **@original_publisher** =] **'***original_publisher***’**  
  最初发布数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的名称。 *original_publisher*是**sysname**，无默认值。  
   
  [ **@publisher_db** = ] **'***publisher_db***'**  
  要发布的数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [ **@redirected_publisher** =] **'***redirected_publisher*****  
+ [ **@redirected_publisher** =] **'***redirected_publisher***’**  
  重定向的目标时**sp_redirect_publisher**原始发布服务器/已发布数据库对调用。 *redirected_publisher*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -43,12 +43,12 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [ **@rolename =** ] **'***角色*****  
  新应用程序角色的名称。 *角色*是**sysname**，无默认值。 *角色*必须是有效标识符，并且不能存在于当前数据库中。  
   
  应用程序角色名称可以包含 1 到 128 个字符，包括字母、符号及数字。 角色名称不能包含反斜杠 (\\)，也不为 NULL 或空字符串 （"）。  
   
- [  **@password =** ] **'***密码*****  
+ [ **@password =** ] **'***密码*****  
  激活应用程序角色所需的密码。 *密码*是**sysname**，无默认值。 *密码*不能为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

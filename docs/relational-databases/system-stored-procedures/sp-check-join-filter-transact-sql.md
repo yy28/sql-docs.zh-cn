@@ -47,13 +47,13 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@filtered_table**=] **'***filtered_table*****  
+ [ **@filtered_table** =] **'***filtered_table*****  
  筛选的表的名称。 *filtered_table*是**nvarchar(400)**，无默认值。  
   
- [ **@join_table**=] **'***join_table*****  
+ [ **@join_table** =] **'***join_table*****  
  是要联接到的表的名称*filtered_table*。 *join_table*是**nvarchar(400)**，无默认值。  
   
- [ **@join_filterclause** =] **'***join_filterclause*****  
+ [ **@join_filterclause**  =] **'***join_filterclause*****  
  要测试的联接筛选子句。 *join_filterclause*是**nvarchar(1000)**，无默认值。  
   
 ## <a name="result-sets"></a>结果集  

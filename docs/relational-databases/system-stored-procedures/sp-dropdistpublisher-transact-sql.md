@@ -41,7 +41,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [ **@publisher=** ] **'***发布服务器*****  
  要删除的发布服务器。 *发布服务器*是**sysname**，无默认值。  
   
  [  **@no_checks=** ] *no_checks*  

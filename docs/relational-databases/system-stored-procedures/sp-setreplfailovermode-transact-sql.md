@@ -46,13 +46,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [ **@publisher=**] **'***publisher***'**  
  发布的名称。 *发布*是**sysname**，无默认值。 该发布必须已存在。  
   
- [  **@publisher_db =**] **'***publisher_db*****  
+ [  **@publisher_db =**] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [**@failover_mode=**] **'***failover_mode*****  
+ [**@failover_mode=**] **'***failover_mode***’**  
  订阅的故障转移模式。 *failover_mode*是**nvarchar(10)** 可以是下列值之一。  
   
 |ReplTest1|Description|  

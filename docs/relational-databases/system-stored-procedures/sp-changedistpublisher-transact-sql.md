@@ -42,16 +42,16 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [ **@publisher=** ] **'***发布服务器*****  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@property=** ] **'***属性*****  
+ [ **@property=** ] **'***属性*****  
  要更改的给定发布服务器的属性。 *属性*是**sysname**可以是下列值之一。  
   
  [ @value= ] 'value'****  
  为给定属性的值。 *值*是**nvarchar(255)**，默认值为 NULL。  
   
- [  **@storage_connection_string =**] **'***storage_connection_string*****  
+ [ **@storage_connection_string =**] **'***storage_connection_string*****  
  SQL 数据库托管实例需要的、 应与 Azure SQL 数据库存储卷的访问密钥相匹配。 
 
 

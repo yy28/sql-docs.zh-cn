@@ -48,11 +48,11 @@ ms.locfileid: "47626665"
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text***\*|**T**[**ext**]|  
+    |**text**\*\*|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |image\*|**I**[**mage**]|  
+    |**image**\*\*|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -89,8 +89,8 @@ ms.locfileid: "47626665"
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text***\*|SQLCHAR|  
-|**ntext***\*|SQLNCHAR|  
+|**text**\*\*|SQLCHAR|  
+|**ntext**\*\*|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
 |image\*|SQLBINARY|  

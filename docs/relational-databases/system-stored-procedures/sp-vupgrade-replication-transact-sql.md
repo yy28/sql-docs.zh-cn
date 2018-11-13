@@ -43,13 +43,13 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@login=**] **'***登录*****  
+ [  **@login=**] **'***登录***’**  
  在分发数据库中创建新的系统对象时使用的系统管理员登录名。 login 的数据类型为 sysname，默认值为 NULL。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
 > [!NOTE]  
 >  在升级到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更高版本后将忽略此参数。  
   
- [  **@password=**] **'***密码*****  
+ [  **@password=**] **'***密码***’**  
  是分发数据库中创建新的系统对象时要使用的系统管理员密码。 *密码*是**sysname**，默认值为 **'** （空字符串）。 如果不需要此参数*security_mode*设置为**1**，这是 Windows 身份验证。  
   
 > [!NOTE]  

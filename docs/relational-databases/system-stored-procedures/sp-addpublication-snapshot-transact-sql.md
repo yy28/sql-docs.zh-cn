@@ -119,7 +119,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 235959，表示 11:59:59 PM 24 小时制。  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name*****  
+ [ **@snapshot_job_name =** ] **'***snapshot_agent_name*****  
  使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)** 默认值为 NULL。 此参数只限内部使用，创建新发布时不应指定它。 如果*snapshot_agent_name*指定了，则*job_login*并*job_password*必须为 NULL。  
   
  [ **@publisher_security_mode**=] *publisher_security_mode*  
@@ -128,13 +128,13 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [ **@publisher_login**=] **'***publisher_login*****  
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的帐户*job_login*时要使用连接到发布服务器。  
   
- [ **@publisher_password**=] **'***publisher_password*****  
+ [ **@publisher_password** =] **'***publisher_password*****  
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@job_login**=] **'***job_login*****  
+ [ **@job_login** =] **'***job_login*****  
  是用于运行代理的帐户的登录名。 在 Azure SQL 数据库托管实例，使用 SQL Server 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此帐户始终用于到分发服务器的代理连接。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!NOTE]  
@@ -146,7 +146,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  请不要将身份验证信息存储在脚本文件中。 为了提高安全性，建议您在运行时提供登录名和密码。  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher** =] **'***发布服务器*****  
  指定非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

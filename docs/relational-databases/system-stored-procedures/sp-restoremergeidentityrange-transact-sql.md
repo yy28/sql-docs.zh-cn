@@ -43,7 +43,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
  [ **@publication** = ] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为**所有**。 如果指定了此参数，则只还原该发布的标识范围。  
   
- [ **@article** =] **'***文章*****  
+ [ **@article** =] **'***文章***’**  
  项目的名称。 *文章*是**sysname**，默认值为**所有**。 如果指定了此参数，则只还原该项目的标识范围。  
   
 ## <a name="return-code-values"></a>返回代码值  

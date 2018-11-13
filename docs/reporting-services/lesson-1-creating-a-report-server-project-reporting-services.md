@@ -17,7 +17,7 @@ ms.locfileid: "49383652"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>第 1 课：创建报表服务器项目 (Reporting Services)
 
-在本课程中，将在 Visual Studio 内的 *中创建报表服务器项目**和报表定义 (.rdl)*[!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] 文件。 
+在本课程中，将在 Visual Studio 内的 *中创建报表服务器项目* *和报表定义 (.rdl)*[!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] 文件。 
 
 若要使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]创建报表，首先需要一个报表服务器项目，可用于保存报表定义 (.rdl) 文件和报表所需的其他资源文件。 
 

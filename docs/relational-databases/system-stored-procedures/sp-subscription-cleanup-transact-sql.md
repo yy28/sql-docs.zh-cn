@@ -51,7 +51,7 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 如果为 NULL，则将删除使用发布数据库中的共享代理发布的订阅。  
   
- [  **@reserved=**] **'***保留*****  
+ [  **@reserved=**] **'***保留***’**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -46,16 +46,16 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
  [ **@publisher** = ] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，默认值为 NULL。 必须将该服务器配置为用于发布。 NULL 表示所有发布服务器。  
   
- [ **@publisherdb** =] **'***publisher_db***** ]  
+ [ **@publisherdb** =] **'***publisher_db***’** ]  
  发布数据库的名称。 *publisher_db*是**sysname**，默认值为 NULL。 NULL 表示所有发布数据库。  
   
- [ **@publication** =] **'***发布***** ]  
+ [ **@publication** =] **'***发布***’** ]  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 NULL 表示所有发布。   
   
- [ **@tranid** =] **'***tranid***** ]  
+ [ **@tranid** =] **'***tranid***’** ]  
  事务 id。 *tranid*是**sysname**，默认值为 NULL。 NULL 表示所有事务。  
   
- [**@queuetype=** ] **'***queuetype***** ]  
+ [**@queuetype=** ] **'***queuetype***’** ]  
  存储事务的队列类型。 *queuetype*是**tinyint**默认值为**0**，可以是下列值之一。  
   
 |ReplTest1|Description|  

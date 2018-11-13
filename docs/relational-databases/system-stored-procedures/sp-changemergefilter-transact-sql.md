@@ -45,19 +45,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=** ] **'***文章*****  
+ [ **@article=** ] **'***文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@filtername=** ] **'***filtername*****  
+ [ **@filtername=** ] **'***filtername*****  
  筛选器的当前名称。 *filtername*是**sysname**，无默认值。  
   
  [  **@property=** ] **'***属性*****  
  要更改的属性的名称。 *属性*是**sysname**，无默认值。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  是指定的属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
   
  下表说明项目的属性和这些属性的值。  
@@ -73,7 +73,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|联接位于唯一键上。|  
 ||**false**|联接没有位于唯一键上。|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  确认此存储过程所执行的操作是否会使现有快照失效。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。 如果该存储过程检测到更改确实需要新的快照，则会发生错误，并且不进行任何更改。  

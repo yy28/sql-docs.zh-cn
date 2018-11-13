@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [ **@rolename =** ] **'***角色*****  
  有效 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定数据库角色的名称。 *角色*是**sysname**，默认值为 NULL。 如果*角色*未指定，则显示所有固定的数据库角色的权限。  
   
 ## <a name="return-code-values"></a>返回代码值  

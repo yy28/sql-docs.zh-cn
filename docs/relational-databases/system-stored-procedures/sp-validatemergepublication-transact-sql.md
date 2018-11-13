@@ -40,7 +40,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publication=**] **'***发布*****  
+ [**@publication=**] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@level=** ]*级别*  

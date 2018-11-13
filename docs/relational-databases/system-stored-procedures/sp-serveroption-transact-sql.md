@@ -46,7 +46,7 @@ sp_serveroption [@server = ] 'server'
  [ **@server =** ] **'***server***'**  
  要为其设置选项的服务器的名称。 *server* 的数据类型为 **sysname**，无默认值。  
   
- [  **@optname =** ] **'***option_name*****  
+ [  **@optname =** ] **'***option_name***’**  
  为指定的服务器设置的选项。 *option_name*是**varchar (** 35 **)**，无默认值。 *option_name*可以是以下值之一。  
   
 |ReplTest1|Description|  

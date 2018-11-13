@@ -48,7 +48,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
  [  **@tblname=** ] **'***table_or_indexed_view_name*****  
  要对其显示 AUTO_UPDATE_STATISTICS 选项的表或索引视图的名称。 *table_or_indexed_view_name*是**nvarchar(776)**，无默认值。  
   
- [  **@flagc=** ] **'***stats_value*****  
+ [ **@flagc=** ] **'***stats_value*****  
  将 AUTO_UPDATE_STATISTICS 选项更新为以下值之一：  
   
  **ON** = ON  
@@ -57,7 +57,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  当*stats_flag*是未指定，显示当前 AUTO_UPDATE_STATISTICS 设置。 *stats_value*是**varchar(10)**，默认值为 NULL。  
   
- [  **@indname=** ] **'***statistics_name*****  
+ [ **@indname=** ] **'***statistics_name*****  
  要对其显示或更新 AUTO_UPDATE_STATISTICS 选项的统计信息的名称。 若要显示索引的统计信息，您可以使用索引的名称；索引及其相应统计信息对象具有相同的名称。  
   
  *statistics_name*是**sysname**，默认值为 NULL。  

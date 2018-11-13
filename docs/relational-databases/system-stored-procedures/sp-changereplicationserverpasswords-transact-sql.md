@@ -42,23 +42,23 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@login_type** =] *login_type*  
+ [ **@login_type**  =] *login_type*  
  提供的凭据的身份验证类型。 *login_type*是**tinyint**，无默认值。  
   
  **1** = Windows 集成身份验证  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证  
   
- [ **@login** =] **'***登录*****  
+ [ **@login**  =] **'***登录*****  
  要更改的 Windows 帐户或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录的名称。 *登录名*是**nvarchar(257)**，无默认值  
   
- [ **@password** =] **'***密码*****  
+ [ **@password**  =] **'***密码*****  
  要存储的新密码为指定*登录名*。 *密码*是**sysname**，无默认值。  
   
 > [!NOTE]  
 >  更改复制密码后，必须停止并重新启动使用该密码的每个代理，这样代理的更改才能生效。  
   
- [ **@server** =] **'***server*****  
+ [ **@server**  =] **'***server*****  
  要为其更改存储密码的服务器连接。 *服务器*是**sysname**，可以是下列值之一：  
   
 |ReplTest1|Description|  

@@ -49,16 +49,16 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  Oracle 发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article =** ] **'***文章*****  
+ [ **@article =** ] **'***文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [ **@column**=] **'***列*****  
+ [ **@column** =] **'***列*****  
  要更改数据类型映射的列的名称。 *列*是**sysname**，无默认值。  
   
- [ **@type** =] **'***类型*****  
+ [ **@type**  =] **'***类型*****  
  是的名称[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]目标列中的数据类型。 *类型*是**sysname**，默认值为 NULL。  
   
  [ **@length** =]*长度*  
@@ -67,7 +67,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  [ **@precision**=]*精度*  
  目标列中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型的精度。 *精度*是**bigint**，默认值为 NULL。  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher** =] **'***发布服务器*****  
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

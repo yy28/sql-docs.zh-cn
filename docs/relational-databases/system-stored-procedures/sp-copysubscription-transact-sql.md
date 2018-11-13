@@ -48,10 +48,10 @@ sp_copysubscription [ @filename = ] 'file_name'
  [ **@filename =**] **'***file_name***'**  
  指定保存数据文件 (.mdf) 副本的完整路径（包括文件名）。 *文件名*是**nvarchar(260)**，无默认值。  
   
- [  **@temp_dir=**] **'***temp_dir*****  
+ [ **@temp_dir=**] **'***temp_dir*****  
  包含临时文件的目录的名称。 *temp_dir*是**nvarchar(260)**，默认值为 NULL。 如果为 NULL， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将使用默认数据目录。 该目录应有足够的空间可容纳具有保持所有组合的订阅服务器数据库文件大小的文件。  
   
- [  **@overwrite_existing_file=**] **'***overwrite_existing_file*****  
+ [ **@overwrite_existing_file=**] **'***overwrite_existing_file*****  
  可选布尔标志，该标志指定是否覆盖现有文件中指定的同名**@filename**。 *overwrite_existing_file*是**位**，默认值为**0**。 如果**1**，它将覆盖指定的文件**@filename**，如果它存在。 如果**0**，如果该文件存在，并且不覆盖该文件存储的过程将失败。  
   
 ## <a name="return-code-values"></a>返回代码值  

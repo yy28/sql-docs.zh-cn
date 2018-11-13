@@ -43,7 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@loginame=**] **'***登录*****  
+ [  **@loginame=**] **'***登录***’**  
  Windows 用户或用户组的名称。 *登录名*是**sysname**，无默认值。 *登录名*可以是任何现有 Windows 用户名或组的形式*计算机名*\\*用户或域*\\*用户*。  
   
 ## <a name="return-code-values"></a>返回代码值  

@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@objname =** ] **'***对象*****  
+ [ **@objname =** ] **'***对象*****  
  当前数据库中现有表、视图、用户定义函数或存储过程的名称。 *对象*是**nvarchar(776)**，无默认值。 *对象*可使用的窗体中的现有对象所有者限定*existing_owner ***。*** 对象*如果架构及其所有者具有相同的名称。  
   
  [  **@newowner=**] **' * * * 所有者*   

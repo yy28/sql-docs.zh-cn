@@ -51,10 +51,10 @@ sp_articleview [ @publication = ] 'publication'
  [ **@publication=**] **'***publication***'**  
  包含项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@view_name=**] **'***view_name*****  
+ [ **@view_name=**] **'***view_name*****  
  定义已发布项目的视图的名称。 *view_name*是**nvarchar(386)**，默认值为 NULL。  
   
  [  **@filter_clause=**] **'***filter_clause*****  
@@ -77,7 +77,7 @@ sp_articleview [ @publication = ] 'publication'
   
  **1**指定更改项目会导致现有订阅重新初始化，并授予重新初始化订阅发生的权限。  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher** =] **'***发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

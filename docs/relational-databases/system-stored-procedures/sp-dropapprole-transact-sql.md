@@ -42,7 +42,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rolename =** ] **'***角色*****  
+ [ **@rolename =** ] **'***角色*****  
  要删除的应用程序角色。 *角色*是**sysname**，无默认值。 *角色*必须存在于当前数据库。  
   
 ## <a name="return-code-values"></a>返回代码值  

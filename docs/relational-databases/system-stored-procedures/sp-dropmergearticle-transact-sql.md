@@ -48,10 +48,10 @@ sp_dropmergearticle [ @publication= ] 'publication'
  [ **@publication=**] **'***publication***'**  
  要从中删除项目的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  要从给定发布中删除的项目的名称。 *文章*是**sysname**，无默认值。 如果**所有**，将删除指定的合并发布中的所有现有项目。 即使*一文*是**所有**，发布仍必须分开删除文章。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
+ [ **@ignore_distributor=**] *ignore_distributor*  
  指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**位**，默认值为**0**。  
   
  [  **@reserved=**]*保留*  

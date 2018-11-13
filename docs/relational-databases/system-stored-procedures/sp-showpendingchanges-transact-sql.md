@@ -45,13 +45,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ @destination_server **=** ] **'***destination_server*****  
+ [ @destination_server **=** ] **'***destination_server***’**  
  应用复制更改的服务器的名称。 *destination_server*是**sysname**，默认值为 NULL。  
   
- [ @publication **=** ] **'***发布*****  
+ [ @publication **=** ] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，默认值为 NULL。 当*发布*指定，则结果将限定为指定的发布。  
   
- [ @article **=** ] **'***文章*****  
+ [ @article **=** ] **'***文章***’**  
  项目的名称。 *文章*是**sysname**，默认值为 NULL。 当*一文*指定，则结果将限定为指定的项目。  
   
  [ @show_rows **=** ] *show_rows*  

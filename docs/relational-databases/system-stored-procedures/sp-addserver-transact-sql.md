@@ -51,7 +51,7 @@ sp_addserver [ @server = ] 'server' ,
  如果计算机上安装了多个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，则实例将如同在一个独立服务器上运行。 通过引用指定命名的实例*服务器*作为*servername\instancename*。  
   
  [ **@local =** ] **'LOCAL'**  
- 将正添加的服务器指定为本地服务器。 **@local** 是**varchar(10)**，默认值为 NULL。 指定**@local**作为**本地**定义**@server**作为名称的本地服务器和原因会 @@SERVERNAME函数返回值*server*。  
+ 将正添加的服务器指定为本地服务器。 **@local** 是**varchar(10)**，默认值为 NULL。 指定**@local**作为**本地**定义**@server**作为名称的本地服务器和原因会 @@SERVERNAME函数返回值 *server* 。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装程序会在安装过程中将此变量设置为计算机名称。 默认情况下，用户可通过计算机名连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例而无需额外的配置。  
   

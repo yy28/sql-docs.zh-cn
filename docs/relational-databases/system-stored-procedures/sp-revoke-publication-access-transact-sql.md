@@ -42,7 +42,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
  [ **@publication=**] **'***publication***'**  
  要访问的发布名称。 *发布*是**sysname**，无默认值。  
   
- [  **@login=**] **'***登录*****  
+ [  **@login=**] **'***登录***’**  
  登录名 ID。 *登录名*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

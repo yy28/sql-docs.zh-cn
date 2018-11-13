@@ -44,13 +44,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  [ **@publication=**] **'***publication***'**  
  将复制其快照内容的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@destination_folder=**] **'***destination_folder*****  
+ [ **@destination_folder=**] **'***destination_folder*****  
  是的发布快照内容要复制的名称。 *destination_folder*是**nvarchar(255)**，无默认值。 *Destination_folder*可以如另一台服务器、 网络驱动器或可移动媒体 （如 Cd-rom 或可移动磁盘） 的备用位置。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [ **@subscriber=**] **'***订阅服务器*****  
  订阅服务器的名称。 *订阅服务器*数据类型为 sysname，默认值为 NULL。  
   
- [  **@subscriber_db=**] **'***subscriber_db*****  
+ [ **@subscriber_db=**] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscriber_db*数据类型为 sysname，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

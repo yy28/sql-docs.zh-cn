@@ -47,24 +47,24 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@table_name=** ] **'***table_name*****  
+ [  **@table_name=** ] **'***table_name***’**  
  指定用来返回目录信息的表。 *table_name*是**sysname**，无默认值。 不支持通配符模式匹配。  
   
- [  **@table_owner=** ] **'***所有者*****  
+ [  **@table_owner=** ] **'***所有者***’**  
  用于返回目录信息的表的表所有者的名称。 *table_owner*是**sysname**，默认值为 NULL。 不支持通配符模式匹配。 如果*所有者*未指定，则遵循基础 dbms 的默认表可见性规则将应用。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果当前用户拥有一个具有指定名称的表，则返回该表的索引。 如果*所有者*未指定当前用户不拥有具有指定的表和*名称*，此过程使用指定的表查找*名称*归数据库所有者。 如果存在这样的表，则返回该表的索引。  
   
- [  **@table_qualifier=** ] **'***限定符*****  
+ [  **@table_qualifier=** ] **'***限定符***’**  
  表限定符的名称。 *限定符*是**sysname**，默认值为 NULL。 多种 DBMS 产品支持表的三部分命名 (*限定符 ***。*** 所有者 ***。*** 名称*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，此参数表示数据库名称。 在某些产品中，该列表示表所在的数据库环境的服务器名。  
   
- [  **@index_name=** ] **'***index_name*****  
+ [  **@index_name=** ] **'***index_name***’**  
  是索引名称。 *index_name*是**sysname**，默认值为 %。 支持通配符模式匹配。  
   
- [  **@is_unique=** ] **'***is_unique*****  
+ [  **@is_unique=** ] **'***is_unique***’**  
  是是否只有唯一索引 (如果**Y**) 返回。 *is_unique*是**char （1)**，默认值为**N**。  
   
- [  **@accuracy=** ] **'***准确性*****  
+ [  **@accuracy=** ] **'***准确性***’**  
  统计信息的基数和页准确性的级别。 *准确性*是**char （1)**，默认值为**Q**。指定**E**以确保以便基数和页是准确的则更新统计信息。  
   
  该值**E** (SQL_ENSURE) 要求驱动程序无条件地检索统计信息。  

@@ -82,7 +82,7 @@ ms.locfileid: "47694983"
   
 2.  按如下所示使用 [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) 语句：  
   
-     ALTER AVAILABILITY GROUP group_name REMOVE LISTENER ‘dns_name’****  
+     ALTER AVAILABILITY GROUP group_name REMOVE LISTENER ‘dns_name’ ****  
   
      其中， *group_name* 是可用性组的名称， *dns_name* 是可用性组侦听器的 DNS 名称。  
   

@@ -45,10 +45,10 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
  [ **@publication=**] **'***publication***'**  
  要从中删除筛选数据快照作业的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname*****  
+ [ **@dynamic_snapshot_jobname** =] **'***dynamic_snapshot_jobname*****  
  要删除的筛选数据快照作业的名称。 *dynamic_snapshot_jobname*数据类型为 sysname，并提供的默认设置，如果任意作业名称与相关联*dynamic_snapshot_jobid*。  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid*****  
+ [ **@dynamic_snapshot_jobid** =] **'***dynamic_snapshot_jobid*****  
  要删除的筛选数据快照作业的标识符。 *dynamic_snapshot_jobid*是**uniqueidentifier**，默认值为 NULL。  
   
 > [!IMPORTANT]  

@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>恢复到某个标记的 Transact-SQL 语法  
  使用[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)语句将某个标记的事务作为目标时，可以使用以下子句之一在标记处或在紧邻其之前的位置处停止：  
   
--   使用 WITH STOPATMARK = '<mark_name>' 子句将标记事务指定为恢复点****。  
+-   使用 WITH STOPATMARK = '<mark_name>' 子句将标记事务指定为恢复点 ****。  
   
      STOPATMARK 前滚到标记处，并在前滚中包含标记的事务。  
   
--   使用 WITH STOPBEFOREMARK = '<mark_name>' 子句将紧邻标记之前的日志记录指定为恢复点****。  
+-   使用 WITH STOPBEFOREMARK = '<mark_name>' 子句将紧邻标记之前的日志记录指定为恢复点 ****。  
   
      STOPBEFOREMARK 前滚到标记处，但在前滚中不包含标记的事务。  
   

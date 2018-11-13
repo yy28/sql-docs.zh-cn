@@ -46,10 +46,10 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@rulename=**] **'***规则*****  
+ [ **@rulename=**] **'***规则*****  
  由 CREATE RULE 语句创建的规则的名称。 *规则*是**nvarchar(776)**，无默认值。  
   
- [  **@objname=**] **'***object_name*****  
+ [ **@objname=**] **'***object_name*****  
  要绑定规则的表和列或别名数据类型。 无法将规则绑定到 text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、CLR 用户定义类型或 timestamp 列。 无法将规则绑定到计算列。  
   
  *object_name*是**nvarchar(776)** ，无默认值。 如果*object_name*是名称的一部分，则按别名数据类型进行解析。 如果是由两部分或三部分组成的名称，则首先按表和列进行解析；如果解析失败，则按别名数据类型进行解析。 默认情况下，别名数据类型的现有列继承*规则*除非规则已经直接绑定到列。  

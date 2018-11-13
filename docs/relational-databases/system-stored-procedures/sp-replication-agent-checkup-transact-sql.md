@@ -39,7 +39,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@heartbeat_interval** =] **'***heartbeat_interval*****  
+ [ **@heartbeat_interval** =] **'***heartbeat_interval***’**  
  是的最大代理可以运行而无需记录进度消息的分钟数。 *heartbeat_interval*是**int**，默认值为 10 分钟。  
   
 ## <a name="return-code-values"></a>返回代码值  

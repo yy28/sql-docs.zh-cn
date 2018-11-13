@@ -115,7 +115,7 @@ EXEC sp_xml_removedocument @docHandle;
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>标识要处理的节点的 XPath 表达式 (rowpattern)  
   指定为 rowpattern 的 XPath 表达式标识 XML 文档中的一组节点。 *rowpattern* 标识的每个节点对应于 OPENXML 所生成的行集中的一行。  
   
- XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。  例如，如果 *rowpattern*以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
+ XPath 表达式标识的节点可以是 XML 文档中的任何 XML 节点。  如果 rowpattern 标识 XML 文档中的一组元素，则所标识的每个元素节点在行集中都占一行。  例如，如果 *rowpattern* 以属性结束，则将为 rowpattern 选择的每个属性节点创建一行。  
   
 ### <a name="description-of-the-rowset-to-be-generated"></a>对要生成的行集的说明  
  OPENXML 使用行集架构来生成结果行集。 指定行集架构时，可以使用下列选项。  

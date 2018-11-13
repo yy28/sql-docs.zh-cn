@@ -44,16 +44,16 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  为发布名称。 *发布*是**sysname**，默认值为 NULL。 该发布必须已经存在，并符合标识符的相关规则。  
   
- [  **@subscriber=**] **'***订阅服务器*****  
+ [ **@subscriber=**] **'***订阅服务器*****  
  订阅服务器的名称。 *订阅服务器上*是**sysname**，默认值为 NULL。  
   
- [  **@subscriber_db=** ] **'***subscriber_db*****  
+ [ **@subscriber_db=** ] **'***subscriber_db*****  
  是订阅数据库的名称。 *subscription_database*是**sysname**，默认值为 NULL。  
   
- [  **@subscription_type=** ] **'***subscription_type*****  
+ [ **@subscription_type=** ] **'***subscription_type*****  
  是订阅的类型。 *subscription_type*是**nvarchar(15)**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -64,10 +64,10 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |**请求**|请求订阅。|  
 |**同时**（默认值）|推送订阅和请求订阅。|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
+ [ **@ignore_distributor =** ] *ignore_distributor*  
  指示是否在未连接到分发服务器的情况下执行此存储过程。 *ignore_distributor*是**位**，默认值为**0**。 该参数可用于删除订阅，但不清除分发服务器上的任务。 在必须重新安装分发服务器的情况下，该参数也很有用。  
   
- [  **@reserved=** ]*保留*  
+ [ **@reserved=** ]*保留*  
  供将来使用的保留参数。 *保留*是**位**，默认值为**0**。  
   
 ## <a name="return-code-values"></a>返回代码值  

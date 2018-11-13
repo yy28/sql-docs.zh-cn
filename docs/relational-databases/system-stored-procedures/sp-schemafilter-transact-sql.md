@@ -41,13 +41,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@publisher** =] **'***发布服务器*****  
+ [**@publisher** =] **'***发布服务器***’**  
  是的名称的非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，无默认值。  
   
- [**@schema** =] **'***架构*****  
+ [**@schema** =] **'***架构***’**  
  是架构的名称。 *架构*是**sysname**，默认值为 NULL。  
   
- [**@operation** =] **'***操作*****  
+ [**@operation** =] **'***操作***’**  
  要对此架构采取的操作。 *操作*是**nvarchar(4)**，可以是下列值之一。  
   
 |ReplTest1|Description|  

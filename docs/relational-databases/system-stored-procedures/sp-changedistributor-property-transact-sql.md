@@ -40,7 +40,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@property=**] **'***属性*****  
+ [ **@property=**] **'***属性*****  
  给定分发服务器的属性。 *属性*是**sysname**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -48,7 +48,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|在不记录进度消息的情况下代理可以运行的最大分钟数。|  
 |NULL（默认值）|所有可用*属性*打印值。|  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  给定分发服务器属性的值。 *值*是**varchar(255)**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

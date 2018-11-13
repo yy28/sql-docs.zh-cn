@@ -138,8 +138,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|描述|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR ='field_terminator'****|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
-    |ROWTERMINATOR ='row_terminator'****|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
+    |FIELDTERMINATOR **='***field_terminator***’**|指定用于字符和 Unicode 字符数据文件的字段终止符。<br /><br /> 默认的字段终止符是 \t（制表符）。|  
+    |ROWTERMINATOR **='***row_terminator***’**|指定用于字符和 Unicode 字符数据文件的行终止符。<br /><br /> 默认的行终止符是 \n（换行符）。|  
   
      有关详细信息，请参阅 [BULK INSERT (Transact SQL)](../../t-sql/statements/bulk-insert-transact-sql.md)。  
   

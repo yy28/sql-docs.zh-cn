@@ -44,20 +44,20 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@article=**] **'***文章*****  
+ [ **@article=**] **'***文章*****  
  项目的名称。 *文章*是**sysname**，无默认值。  
   
- [  **@filtername=**] **'***filtername*****  
+ [ **@filtername=**] **'***filtername*****  
  要删除的筛选器的名称。 *filtername*是**sysname**，无默认值。  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
+ [ **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
  启用或禁用使快照失效的功能。 *force_invalidate_snapshot*是**位**，默认值**0**。  
   
  **0**指定对合并项目的更改不会导致快照无效。  
   
  **1**表示对合并项目的更改可能导致快照无效。 如果是这样的值**1**提供了新快照的权限。  
   
- [ **@force_reinit_subscription**=] *force_reinit_subscription*  
+ [ **@force_reinit_subscription** =] *force_reinit_subscription*  
  启用或禁用将订阅标记为无效的功能。 *force_reinit_subscription*是**位**，默认值**0**。  
   
  **0**指定对合并项目筛选器的更改不会导致订阅无效。  

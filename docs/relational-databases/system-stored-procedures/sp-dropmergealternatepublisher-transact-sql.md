@@ -45,16 +45,16 @@ sp_dropmergealaternatepublisher [ @publisher = ] 'publisher'    , [ @publisher_d
  [ **@publisher_db=**] **'***publisher_db***'**  
  当前发布数据库的名称。 *publisher_db*是**sysname**，无默认值。  
   
- [  **@publication =**] **'***发布*****  
+ [ **@publication =**] **'***发布*****  
  当前发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@alternate_publisher=**] **'***alternate_publisher*****  
+ [ **@alternate_publisher=**] **'***alternate_publisher*****  
  要作为备用同步伙伴删除的备用发布服务器的名称。 *alternate_publisher*是**sysname**，无默认值。  
   
- [  **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
+ [ **@alternate_publisher_db=**] **'***alternate_publisher_db*****  
  要作为备用同步伙伴发布数据库删除的发布数据库的名称。 *alternate_publisher_db*是**sysname**，无默认值。  
   
- [  **@alternate_publication=**] **'***alternate_publication*****  
+ [ **@alternate_publication=**] **'***alternate_publication*****  
  将作为备用同步伙伴发布删除的发布的名称。 *alternate_publication*是**sysname**，无默认值。  
   
 ## <a name="return-code-values"></a>返回代码值  

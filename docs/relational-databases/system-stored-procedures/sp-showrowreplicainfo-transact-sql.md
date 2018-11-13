@@ -42,16 +42,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@ownername**=] **'***ownername*****  
+ [ **@ownername**=] **'***ownername***’**  
  表所有者的名称。 *ownername*是**sysname**，默认值为 NULL。 如果数据库包含多个同名的表，但每个表具有不同的所有者，则该参数对于区分这些表很有用。  
   
- [  **@tablename =**] **'***tablename*****  
+ [  **@tablename =**] **'***tablename***’**  
  包含所返回的信息行的表的名称。 *tablename*是**sysname**，默认值为 NULL。  
   
  [  **@rowguid =**] *rowguid*  
  行的唯一标识符。 *rowguid*是**uniqueidentifier**，无默认值。  
   
- [ **@show**=] **'***显示*****  
+ [ **@show**=] **'***显示***’**  
  确定要在结果集中返回的信息量。 *显示*是**nvarchar(20)** 这两者的默认值。 如果**行**，则返回仅行版本信息。 如果**列**，则返回仅列版本信息。 如果**同时**、 行和返回列信息。  
   
 ## <a name="result-sets-for-row-information"></a>行信息的结果集  

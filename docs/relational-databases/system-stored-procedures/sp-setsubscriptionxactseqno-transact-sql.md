@@ -45,13 +45,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [  **@publisher=** ] **'***发布服务器***’**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [  **@publisher_db=** ] **'***publisher_db***’**  
  发布数据库的名称。 *publisher_db*是**sysname**，无默认值。 对于非 SQL Server 发布服务器， *publisher_db*是分发数据库的名称。  
   
- [  **@publication=** ] **'***发布*****  
+ [  **@publication=** ] **'***发布***’**  
  发布的名称。 *发布*是**sysname**，无默认值。 当通过多个发布共享分发代理时，必须指定值为 ALL*发布*。  
   
  [  **@xact_seqno=** ] *xact_seqno*  

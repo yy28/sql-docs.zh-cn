@@ -52,10 +52,10 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [ **@publisher=**] **'***publisher***'**  
  发布服务器的名称。 *发布服务器*是**sysname**，无默认值。  
   
- [  **@distribution_db=**] **'***distribution_db*****  
+ [ **@distribution_db=**] **'***distribution_db*****  
  是分发数据库的名称。 *distributor_db*是**sysname**，无默认值。 复制代理使用该参数连接到发布服务器。  
   
- [  **@security_mode=**] *security_mode*  
+ [ **@security_mode=**] *security_mode*  
  所实现的安全模式。 该参数仅供复制代理用于连接到排队更新订阅的发布服务器或非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器。 *security_mode*是**int**，可以是下列值之一。  
   
 |ReplTest1|Description|  
@@ -63,26 +63,26 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0**|分发服务器中的复制代理使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证连接到发布服务器。|  
 |**1** （默认值）|分发服务器中的复制代理使用 Windows 身份验证连接到发布服务器。|  
   
- [  **@login=**] **'***登录*****  
+ [ **@login=**] **'***登录*****  
  登录。 此参数是必需的如果*security_mode*是**0**。 login 的数据类型为 sysname，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
- [  **@password=**] **'***密码*****]  
+ [ **@password=**] **'***密码*****]  
  是的密码。 *密码*是**sysname**，默认值为 NULL。 复制代理使用该参数连接到发布服务器。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。  
   
- [  **@working_directory=**] **'***working_directory*****  
+ [ **@working_directory=**] **'***working_directory*****  
  用于存储发布的数据和架构文件的工作目录的名称。 *working_directory*是**nvarchar(255)**，默认值为此实例的 ReplData 文件夹[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，例如`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`。 名称应按 UNC 格式指定。  
 
  对于 Azure SQL 数据库，请使用`\\<storage_account>.file.core.windows.net\<share>`。
 
- [  **@storage_connection_string =**] **'***storage_connection_string*****  
+ [ **@storage_connection_string =**] **'***storage_connection_string*****  
  是必需的 SQL 数据库。 使用下存储访问密钥从 Azure 门户 > 设置。
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'***受信任*****  
+ [ **@trusted=**] **'***受信任*****  
  该参数已不推荐使用，提供它只是为了向后兼容。 *受信任*是**nvarchar(5)**，并将其设置为任何内容，但是**false**将导致错误。  
   
  [  **@encrypted_password=**] *encrypted_password*  
@@ -96,7 +96,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |**0** （默认值）|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
 |**1**|非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库。|  
   
- [ **@publisher_type**=] **'***publisher_type*****  
+ [ **@publisher_type** =] **'***publisher_type*****  
  指定当发布服务器不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的发布服务器类型。 *publisher_type*数据类型为 sysname，并可以是下列值之一。  
   
 |ReplTest1|Description|  

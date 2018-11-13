@@ -43,7 +43,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
  [ **@verbose_level**=] *verbose_level*  
  指定返回的信息量。 *verbose_level*是**int**，默认值为**1**。 值为**1**表示的错误返回如果不能获取必需的锁**MSsnapshotdeliveryprogress**表，并**0**意味着不会返回错误。  
   
- [ **@drop_table**=] **'***drop_table*****  
+ [ **@drop_table**=] **'***drop_table***’**  
  要删除或截断表包含信息的进度的快照。*drop_table*是**nvarchar(5)**，默认值为**FALSE**。 false 表示截断表，true 表示删除表。  
   
 ## <a name="return-code-values"></a>返回代码值  

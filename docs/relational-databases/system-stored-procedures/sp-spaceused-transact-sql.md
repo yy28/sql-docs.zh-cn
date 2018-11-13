@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 有关[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]并[!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]，`sp_spaceused`必须指定命名的参数 (例如`sp_spaceused (@objname= N'Table1');`而不是依赖时参数的序号位置。 
 
- [  **@objname=**] **'***objname***** 
+ [  **@objname=**] **'***objname***’** 
    
  请求其空间使用信息的表、索引视图或队列的限定或非限定名称。 仅当指定限定对象名称时，才需要使用引号。 如果提供完全限定对象名称（包括数据库名称），则数据库名称必须是当前数据库的名称。  
 如果*objname*未指定，则返回整个数据库的结果。  
@@ -58,7 +58,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
  [ **@updateusage=**] **'***updateusage***'**  
  指示应运行 DBCC UPDATEUSAGE 以更新空间使用信息。 当*objname*是未指定，在整个数据库上运行该语句; 否则，运行该语句*objname*。 值可以是 **，则返回 true**或**false**。 *updateusage*是**varchar(5)**，默认值为**false**。  
   
- [  **@mode=**] **'***模式*****  
+ [  **@mode=**] **'***模式***’**  
  指示结果的范围。 为已延伸的表或数据库，*模式下*参数可以包括或排除的对象的远程部分。 有关详细信息，请参阅 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)。  
   
  *模式下*自变量可具有以下值：  
@@ -81,7 +81,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *oneresultset*是**位**，默认值为**0**。  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage*****  
+[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***’**  
 **适用于：** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]， [!INCLUDE[sssds-md](../../includes/sssds-md.md)]。  
   
  当@oneresultset= 1，该参数@include_total_xtp_storage确定单结果集是否包含 MEMORY_OPTIMIZED_DATA 存储的列。 默认值为 0，也就是说，默认情况下 （如果省略此参数） XTP 列不包含在结果集中。  

@@ -39,7 +39,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>参数  
- [**@agent_type=**] **'***agent_type*****  
+ [**@agent_type=**] **'***agent_type***’**  
  代理的类型。 *agent_type*是**int**，无默认值，并且可以是下列值之一。  
   
 |ReplTest1|Description|  

@@ -77,7 +77,7 @@ sp_update_jobstep
  [ **@subsystem =**] **'***subsystem***'**  
  使用 Microsoft SQL Server 代理执行子系统*命令*。 *子系统*是**nvarchar(40)**，默认值为 NULL。  
   
- [  **@command =**] **'***命令*****  
+ [  **@command =**] **'***命令***’**  
  通过执行命令*子系统*。 *命令*是**nvarchar （max)**，默认值为 NULL。  
   
  [ **@additional_parameters =**] **'***parameters***'**  

@@ -41,10 +41,10 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@msgnum =** ] *message_number*  
+ [ **@msgnum =** ] *message_number*  
  要删除的消息号。 *message_number*必须是一个消息号大于 50000 的用户定义的消息。 *message_number*是**int**，默认值为 NULL。  
   
- [  **@lang =** ] **'***语言*****  
+ [ **@lang =** ] **'***语言*****  
  要删除的消息语言。 如果**所有**指定的所有语言版本*message_number*将被删除。 *语言*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

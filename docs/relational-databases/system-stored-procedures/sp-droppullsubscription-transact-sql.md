@@ -42,10 +42,10 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publisher=** ] **'***发布服务器*****  
+ [ **@publisher=** ] **'***发布服务器*****  
  远程服务器名。 *发布服务器*是**sysname**，无默认值。 如果**所有**，删除的订阅是在所有服务器的发布服务器。  
   
- [  **@publisher_db=** ] **'***publisher_db*****  
+ [ **@publisher_db=** ] **'***publisher_db*****  
  发布服务器数据库的名称。 *publisher_db*是**sysname**，无默认值。 **所有**表示所有发布服务器数据库。  
   
  [  **@publication=** ] **'***发布*****  

@@ -41,7 +41,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@type** =] **'***类型*****  
+ [ **@type** =] **'***类型***’**  
  要删除的自定义存储过程或脚本的类型。 *类型*是**varchar(16)**，无默认值，并且可以是以下值之一。  
   
 |ReplTest1|Description|  
@@ -54,7 +54,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
  [ **@publication** = ] **'***publication***'**  
  要为其删除自定义存储过程或脚本的发布的名称。 *发布*是**sysname**，默认值为 NULL。  
   
- [ **@article** =] **'***文章*****  
+ [ **@article** =] **'***文章***’**  
  要为其删除自定义存储过程或脚本的项目的名称。 *文章*是**sysname**，默认值为 NULL。  
   
 ## <a name="return-code-values"></a>返回代码值  

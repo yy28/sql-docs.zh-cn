@@ -50,43 +50,43 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber=**] **'***订阅服务器*****  
+ [  @subscriber=**] **'***订阅服务器*****  
  订阅服务器的名称。 *订阅服务器上*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
   
- [  **@agent_type=**]*类型*  
+ [ **@agent_type=**]*类型*  
  代理的类型。 *类型*是**smallint**，默认值为**0**。 **0**指示分发代理。 **1**指示合并代理。  
   
- [  **@frequency_type=**] *frequency_type*  
+ [ **@frequency_type=**] *frequency_type*  
  安排分发任务所使用的频率。 *frequency_type*是**int**，默认值为**64**。 有 10 个计划列。  
   
- [  **@frequency_interval=**] *frequency_interval*  
+ [ **@frequency_interval=**] *frequency_interval*  
  是应用于设置频率的值*frequency_type*。 *frequency_interval*是**int**，默认值为**1**。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
+ [ **@frequency_relative_interval=**] *frequency_relative_interval*  
  分发任务的日期。 *frequency_relative_interval*是**int**，默认值为**1**。  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
+ [ **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
  使用的重复因子*frequency_type*。 *frequency_recurrence_factor*是**int**，默认值为**0**。  
   
- [  **@frequency_subday=**] *frequency_subday*  
+ [ **@frequency_subday=**] *frequency_subday*  
  在定义周期内重新调度的频率（分钟）。 *frequency_subday*是**int**，默认值为**4**。  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
+ [ **@frequency_subday_interval=**] *frequency_subday_interval*  
  间隔。 *frequency_subday*。 *frequency_subday_interval*是**int**，默认值为**5**。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
+ [ **@active_start_time_of_day=**] *active_start_time_of_day*  
  第一次安排分发任务的时间。 *active_start_time_of_day*是**int**，默认值为**0**。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
+ [ **@active_end_time_of_day=**] *active_end_time_of_day*  
  停止安排分发任务的时间。 *active_end_time_of_day*是**int**，默认值为**235959**，这意味着 11:59:59 PM 24 小时制。  
   
- [  **@active_start_date=**] *active_start_date*  
+ [ **@active_start_date=**] *active_start_date*  
  第一次安排分发任务的日期，格式为 YYYYMMDD。 *active_start_date*是**int**，默认值为**0**。  
   
- [  **@active_end_date=**] *active_end_date*  
+ [ **@active_end_date=**] *active_end_date*  
  停止安排分发任务的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为**99991231**，表示 9999 年 12 月 31。  
   
- [ **@publisher**=] **'***发布服务器*****  
+ [ **@publisher** =] **'***发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

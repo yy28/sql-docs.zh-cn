@@ -42,20 +42,20 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication=** ] **'***发布*****  
+ [ **@publication=** ] **'***发布*****  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@scriptfile=** ] **'***scriptfile*****  
+ [ **@scriptfile=** ] **'***scriptfile*****  
  SQL 脚本文件的完整路径。 *scriptfile*是**nvarchar(4000)**，无默认值。  
   
- [  **@skiperror=** ] **'***skiperror*****  
+ [ **@skiperror=** ] **'***skiperror*****  
  指示在脚本处理过程中遇到错误时是否停止分发代理或合并代理。 *SkipError*是**位**，默认值为 0。  
   
  **0** = 代理将停止。  
   
  **1** = 代理继续处理脚本并将忽略该错误。  
   
- [  **@publisher=** ] **'***发布服务器*****  
+ [ **@publisher=** ] **'***发布服务器*****  
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  

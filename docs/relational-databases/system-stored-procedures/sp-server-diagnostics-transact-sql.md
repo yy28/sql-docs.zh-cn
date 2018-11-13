@@ -41,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds*****  
+ [ **@repeat_interval** =] **'***repeat_interval_in_seconds***’**  
  指示存储过程重复运行以发送运行状况信息的时间间隔。  
   
  *repeat_interval_in_seconds*是**int**默认值为 0。 有效参数值为 0，或等于或大于 5 的任意值。 存储过程至少要运行 5 秒钟才能返回完整数据。 存储过程以重复模式运行的最短时间为 5 秒。  

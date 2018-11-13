@@ -44,10 +44,10 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@functname =** ] **'***过程*****  
+ [ **@functname =** ] **'***过程*****  
  在动态链接库 (DLL) 内调用的函数名称。 *过程*是**nvarchar(517)**，无默认值。 *过程*选择可以在窗体中包含所有者名称*owner.function*。  
   
- [  **@dllname =** ] **'***dll*****  
+ [ **@dllname =** ] **'***dll*****  
  包含该函数的 DLL 名称。 *dll*是**varchar(255)**，无默认值。 建议指定 DLL 的完整路径。  
   
 ## <a name="return-code-values"></a>返回代码值  

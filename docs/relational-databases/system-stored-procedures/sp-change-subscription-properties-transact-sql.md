@@ -53,13 +53,13 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  [ **@publication=**] **'***publication***'**  
  发布的名称。 *发布*是**sysname**，无默认值。  
   
- [  **@property=**] **'***属性*****  
+ [ **@property=**] **'***属性*****  
  是要更改的属性。 *属性*是**sysname**。  
   
- [  **@value=**] **'***值*****  
+ [ **@value=**] **'***值*****  
  是该属性的新值。 *值*是**nvarchar(1000)**，无默认值。  
   
- [  **@publication_type =** ] *publication_type*  
+ [ **@publication_type =** ] *publication_type*  
  指定发布的复制类型。 *publication_type*是**int**，可以是下列值之一。  
   
 |ReplTest1|发布类型|  

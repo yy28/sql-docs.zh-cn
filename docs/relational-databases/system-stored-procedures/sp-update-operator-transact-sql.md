@@ -60,7 +60,7 @@ sp_update_operator
  [ @new_name=] '*new_name*'  
  操作员的新名称。 此名称必须唯一。 *new_name*是**sysname**，默认值为 NULL。  
   
- [ @enabled=]*启用*  
+ [ @enabled=] *启用*  
  一个数字，指示操作员的当前状态 (**1**当前已启用，如果**0**如果没有)。 *已启用*是**tinyint**，默认值为 NULL。 如果未启用，操作员将不接收警报通知。  
   
  [ @email_address=] '*email_address*'  

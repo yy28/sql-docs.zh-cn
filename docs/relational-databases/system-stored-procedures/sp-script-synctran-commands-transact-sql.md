@@ -43,7 +43,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
  [ **@publication** = ] **'***publication***'**  
  要写入脚本的发布的名称。 *发布*是**sysname**，无默认值。  
   
- [ **@article** =] **'***文章*****  
+ [ **@article** =] **'***文章***’**  
  要写入脚本的项目的名称。 *文章*是**sysname**，默认值为**所有**，表示指定的所有项目都写入脚本。  
   
 ## <a name="return-code-values"></a>返回代码值  
