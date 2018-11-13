@@ -48,10 +48,10 @@ sp_adduser [ @loginame = ] 'login'
  [ **@loginame =** ] **'***login***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登录或 Windows 登录的名称。 *登录名*是**sysname**，无默认值。 *登录名*必须是现有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登录名或 Windows 登录名。  
   
- [  **@name_in_db =** ] **'***用户*****  
+ [  **@name_in_db =** ] **'用户**   
  新数据库用户的名称。 *用户*是**sysname**，默认值为 NULL。 如果*用户*未指定，则新的数据库用户的名称默认为*登录名*名称。 指定*用户*为新用户提供不同的服务器级别登录名从数据库中的名称。  
   
- [  **@grpname =** ] **'***角色*****  
+ [  **@grpname =** ] **'角色**   
  新用户成为其成员的数据库角色。 *角色*是**sysname**，默认值为 NULL。 *角色*必须是当前数据库中的有效的数据库角色。  
   
 ## <a name="return-code-values"></a>返回代码值  

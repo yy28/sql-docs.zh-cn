@@ -55,25 +55,25 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>参数  
- [ **@dbname=** ] **'***dbname***'**  
+ [ **@dbname=** ] **'dbname'**   
  按名称指定目标订阅数据库的字符串。 *dbname*是**sysname**，无默认值。  
   
- [  **@filename=** ] **'***文件名*****  
+ [  **@filename=** ] **'文件名**   
  是的名称和物理位置的主 MDF (**主**数据文件)。 *文件名*是**nvarchar(260)**，无默认值。  
   
- [  **@subscriber_security_mode=** ] **'***subscriber_security_mode*****  
+ [  **@subscriber_security_mode=** ] **'subscriber_security_mode**   
  同步时连接到订阅服务器所使用的订阅服务器的安全模式。 *subscriber_security_mode*是**int**，默认值为 NULL。  
   
 > [!NOTE]  
 >  必须使用 Windows 身份验证。 如果*subscriber_security_mode*不是**1** （Windows 身份验证），则返回错误。  
   
- [  **@subscriber_login=** ] **'***subscriber_login*****  
+ [  **@subscriber_login=** ] **'subscriber_login**   
  同步时连接到订阅服务器所使用的订阅服务器登录名。 *subscriber_login*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
 >  已不推荐使用此参数，保留它只是为了让脚本能够向后兼容。 如果*subscriber_security_mode*不是**1**并*subscriber_login*是指定，则返回错误。  
   
- [  **@subscriber_password=** ] **'***subscriber_password*****  
+ [  **@subscriber_password=** ] **'subscriber_password**   
  订阅服务器密码。 *subscriber_password*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
@@ -82,10 +82,10 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  [  **@distributor_security_mode=** ] *distributor_security_mode*  
  是同步时连接到分发服务器时要使用的安全模式。 *distributor_security_mode*是**int**，默认值为**0**。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 **1**指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@distributor_login=** ] **'***distributor_login*****  
+ [  **@distributor_login=** ] **'distributor_login**   
  同步时连接到分发服务器所使用的分发服务器登录名。 *distributor_login*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_login*是**sysname**，默认值为 NULL。  
   
- [  **@distributor_password=** ] **'***distributor_password*****  
+ [  **@distributor_password=** ] **'distributor_password**   
  分发服务器密码。 *distributor_password*如果，则需要*distributor_security_mode*设置为**0**。 *distributor_password*是**sysname**，默认值为 NULL。 值*distributor_password*必须是少于 120 个 Unicode 字符。  
   
 > [!IMPORTANT]  
@@ -94,25 +94,25 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  [  **@publisher_security_mode=** ] *publisher_security_mode*  
  同步时连接到发布服务器所使用的安全模式。 *publisher_security_mode*是**int**，默认值为**1**。 如果**0**，指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]身份验证。 如果**1**，指定 Windows 身份验证。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **'***publisher_login*****  
+ [  **@publisher_login=** ] **'publisher_login**   
  同步时连接到发布服务器所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。  
   
- [  **@publisher_password=** ] **'***publisher_password*****  
+ [  **@publisher_password=** ] **'publisher_password**   
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。 值*publisher_password*必须是少于 120 个 Unicode 字符。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@job_login=** ] **'***job_login*****  
+ [  **@job_login=** ] **'job_login**   
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，无默认值。 此 Windows 帐户总是用于与分发服务器建立代理连接。  
   
- [  **@job_password=** ] **'***job_password*****  
+ [  **@job_password=** ] **'job_password**   
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，无默认值。 值*job_password*必须是少于 120 个 Unicode 字符。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@db_master_key_password=** ] **'***db_master_key_password*****  
+ [  **@db_master_key_password=** ] **'db_master_key_password**   
  用户定义数据库主密钥的密码。 *db_master_key_password*是**nvarchar(524)**，默认值为 NULL。 如果*db_master_key_password*未指定，则将删除并重新创建现有数据库主密钥。  
   
 > [!IMPORTANT]  

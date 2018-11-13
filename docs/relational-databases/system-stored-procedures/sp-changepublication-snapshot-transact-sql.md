@@ -59,7 +59,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@publication =**] **'***发布*****  
+ [  **@publication =**] **'发布**   
  发布的名称。 *发布*是**sysname**，无默认值。  
   
  [  **@frequency_type =**] *frequency_type*  
@@ -126,7 +126,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
  [  **@active_end_time_of_day =**] *active_end_time_of_day*  
  停止安排快照代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@snapshot_job_name =** ] **'***snapshot_agent_name*****  
+ [  **@snapshot_job_name =** ] **'snapshot_agent_name**   
  使用现有作业时现有快照代理作业的名称。 *snapshot_agent_name*是**nvarchar(100)** 默认值为 NULL。  
   
  [  **@publisher_security_mode =** ] *publisher_security_mode*  
@@ -135,25 +135,25 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login =** ] **'***publisher_login*****  
+ [  **@publisher_login =** ] **'publisher_login**   
  连接到发布服务器时所使用的登录名。 *publisher_login*是**sysname**，默认值为 NULL。 *publisher_login*时，必须指定*publisher_security_mode*是**0**。 如果*publisher_login*为 NULL 并*publisher_security_mode*是**1**，然后在指定的 Windows 帐户*job_login*时使用连接到发布服务器。  
   
- [  **@publisher_password =** ] **'***publisher_password*****  
+ [  **@publisher_password =** ] **'publisher_password**   
  连接到发布服务器时所使用的密码。 *publisher_password*是**sysname**，默认值为 NULL。  
   
 > [!IMPORTANT]  
 >  不要使用空密码。 请使用强密码。 如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [ **@job_login** =] **'***job_login*****  
+ [ **@job_login** =] **'job_login**   
  用于运行代理的 Windows 帐户的登录名。 *job_login*是**nvarchar(257)**，默认值为 NULL。 此 Windows 帐户总是用于与分发服务器建立代理连接。 创建新的快照代理作业时，必须提供此参数。 对于非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 发布服务器来说，这是无法更改的。  
   
- [  **@job_password =** ] **'***job_password*****  
+ [  **@job_password =** ] **'job_password**   
  用于运行代理的 Windows 帐户的密码。 *job_password*是**sysname**，默认值为 NULL。 创建新的快照代理作业时，必须提供此参数。  
   
 > [!IMPORTANT]  
 >  如果可能，请在运行时提示用户输入安全凭据。 如果必须在脚本文件中存储凭据，则必须保护文件以防止未经授权的访问。  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'发布服务器**   
  指定一个非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
