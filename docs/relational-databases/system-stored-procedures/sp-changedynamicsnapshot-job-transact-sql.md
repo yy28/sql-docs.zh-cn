@@ -135,10 +135,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
  停止安排合并代理的时间，格式为 HHMMSS。 *active_end_time_of_day*是**int**，默认值为 NULL。  
   
- [  **@job_login=** ] **'***job_login*****  
+ [  **@job_login=** ] **'job_login**   
  为使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帐户。 *job_login*是**nvarchar(257)**，默认值为 NULL。  
   
- [  **@job_password=** ] **'***job_password*****  
+ [  **@job_password=** ] **'job_password**   
  为使用参数化行筛选器的订阅生成快照时，运行快照代理所用的 Windows 帐户的密码。 *job_password*是**nvarchar(257)**，默认值为 NULL。  
   
 > [!IMPORTANT]  

@@ -51,7 +51,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>参数  
- [  **@subscriber =** ] **'***订阅服务器*****  
+ [  **@subscriber =** ] **'订阅服务器**   
  订阅服务器的名称。 *订阅服务器上*是**sysname**。 订阅服务器的名称必须在数据库中唯一，不能已经存在，不能为 NULL。  
   
  [  **@agent_type =** ] *agent_type*  
@@ -118,7 +118,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  [ **@active_end_date =** ] *active_end_date*  
  停止安排分发代理的日期，格式为 YYYYMMDD。 *active_end_date*是**int**，默认值为 99991231，表示年 12 月 31 日到 9999。  
   
- [  **@publisher =** ] **'***发布服务器*****  
+ [  **@publisher =** ] **'发布服务器**   
  指定一个非[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]发布服务器。 *发布服务器*是**sysname**，默认值为 NULL。  
   
 > [!NOTE]  
