@@ -135,7 +135,7 @@ ms.locfileid: "47818881"
   
  **基本 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语法**  
   
- RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY…****  
+ RESTORE LOG database_name FROM <backup_device> WITH STOPAT =time, RECOVERY… ****  
   
  恢复点是在 **time** 指定的 *datetime*值或之前发生的最新的事务提交。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "47818881"
   
 3.  还原上次差异数据库备份（如果有），而不恢复数据库 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE database_name FROM <backup_device> WITH STOPAT=time, RECOVERY)****。  
+4.  以创建事务日志备份的相同顺序应用每个事务日志备份，同时指定要停止还原日志的时间 (RESTORE DATABASE database_name FROM <backup_device> WITH STOPAT=time, RECOVERY) ****。  
   
     > [!NOTE]  
     >  RECOVERY 和 STOPAT 选项。 如果事务日志备份不包含要求的时间（例如，如果指定的时间超出了事务日志所包含的时间范围），则会生成警告，并且不会恢复数据库。  
