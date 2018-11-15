@@ -131,7 +131,7 @@ ms.locfileid: "47814675"
   
  避免使用依赖于会话特定的 [SET 选项](../../t-sql/statements/set-statements-transact-sql.md)的谓词逻辑：如果用户可以执行任意查询，则其逻辑依赖于会话特定的 **SET** 选项的谓词函数可能会透漏信息，不过，这种逻辑很少在实际应用程序中使用。 例如，将字符串隐式转换为 **datetime** 的谓词函数可能会根据当前会话的 **SET DATEFORMAT** 选项筛选不同的行。 一般而言，谓词函数应遵守以下规则：  
   
--   谓词函数不应将字符串隐式转换为 **date**、**smalldatetime****datetime****datetime2** 或 **datetimeoffset**，也不应执行相反的转换，因为这些转换受 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 选项的影响。 应改用 **CONVERT** 函数并显式指定样式参数。  
+-   谓词函数不应将字符串隐式转换为 **date**、**smalldatetime**、**datetime**、**datetime2** 或 **datetimeoffset**，也不应执行相反的转换，因为这些转换受 [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md) 和 [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md) 选项的影响。 应改用 **CONVERT** 函数并显式指定样式参数。  
   
 -   谓词函数不应依赖于每周第一天的值，因为此值受 [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md) 选项的影响。  
   
