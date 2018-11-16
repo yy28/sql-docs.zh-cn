@@ -30,12 +30,12 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735180"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666196"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>转换访问数据库对象 (AccessToSQL)
 在访问数据库添加并连接到后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure、 SSMA 显示访问元数据和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 数据库对象。 你可以现在选择访问数据库对象，然后将转换到架构[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 架构。  
@@ -49,7 +49,7 @@ ms.locfileid: "47735180"
 在转换期间 SSMA 打印到输出窗格和错误、 警告和信息性消息错误列表窗格的状态。 使用此信息来确定是否需要修改您的 Access 数据库或转换过程来获取所需的转换结果。 此外可以使用中的信息[迁移准备 Access 数据库](preparing-access-databases-for-migration-accesstosql.md)主题，以确定什么将并不会进行转换。  
   
 ## <a name="setting-conversion-options"></a>设置转换选项  
-在将对象转换之前, 查看中的项目转换选项**项目设置**对话框。 通过使用此对话框中，可以设置 SSMA 将索引的 memo 列、 主键、 外键约束、 时间戳和没有索引的表的转换。 有关详细信息，请参阅[项目设置 （转换）](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+在将对象转换之前, 查看中的项目转换选项**项目设置**对话框。 通过使用此对话框中，可以设置 SSMA 将索引的 memo 列、 主键、 外键约束、 时间戳和没有索引的表的转换。 有关详细信息，请参阅[项目设置 （转换）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
 ## <a name="conversion-results"></a>转换结果  
 下表显示哪些访问对象会转换与生成的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 对象：  

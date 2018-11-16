@@ -17,16 +17,16 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 878ffce8b18205dfcd99ec7e374a9eb4609d6f38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d9a3984e956cd9e742bcc8a29accb7fe012b9e8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735935"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606337"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 对象、Query 方法和 CreateObject 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此示例将创建[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象使用[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)方法[rds。数据空间](../../../ado/reference/rds-api/dataspace-object-rds.md)对象。 若要测试此示例中，代码剪切并粘贴此之间\<正文 > 和\</b o d > 标记中普通的 HTML 文档并将其命名**DataFactoryVBS.asp**。 ASP 脚本将识别您的服务器。  
   
@@ -112,7 +112,7 @@ to bring back a Recordset. </H4>
     Dim strCnxn  
     Dim strSQL  
   
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     strCnxn = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     strSQL = "Select FirstName, LastName from Employees"  
   

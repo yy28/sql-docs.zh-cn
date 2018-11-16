@@ -27,12 +27,12 @@ ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10eaa071ed8fa57bb648e5ece87dc91bb4cb62e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661296"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 集成体系结构 - CLR 宿主环境
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "47779185"
  类型安全代码是仅以定义完善的方式访问内存结构的代码。 例如，给定有效的对象引用，类型安全代码可以按对应于实际字段成员的固定偏移量来访问内存。 但是，如果代码以任意偏移量访问内存，该偏移量可能超出也可能不超出属于该对象的内存范围，则它就不是类型安全的代码。 在 CLR 中加载程序集时，在使用实时 (JIT) 编译方式编译 MSIL 之前，运行时执行验证阶段，该阶段检查代码以确定其类型是否安全。 成功通过此验证的代码称为可验证的类型安全代码。  
   
 ###### <a name="application-domains"></a>应用程序域  
- CLR 支持应用程序域作为主机进程内的执行区的概念，在其中可以加载和执行托管代码程序集。 应用程序域边界提供程序集之间的隔离。 根据静态变量和数据成员的可见性以及是否可以动态调用代码对这些程序集进行隔离。 应用程序域也提供加载和卸载代码的机制。 只能通过卸载应用程序域，从内存中卸载代码。 有关详细信息，请参阅[应用程序域和 CLR 集成安全性](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
+ CLR 支持应用程序域作为主机进程内的执行区的概念，在其中可以加载和执行托管代码程序集。 应用程序域边界提供程序集之间的隔离。 根据静态变量和数据成员的可见性以及是否可以动态调用代码对这些程序集进行隔离。 应用程序域也提供加载和卸载代码的机制。 只能通过卸载应用程序域，从内存中卸载代码。 有关详细信息，请参阅[应用程序域和 CLR 集成安全性](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)。  
   
 ###### <a name="code-access-security-cas"></a>代码访问安全性 (CAS)  
  CLR 安全系统通过给代码分配权限，提供了一种控制托管代码可以执行何种操作的方法。 基于代码标识（例如，程序集的签名或代码的来源）分配代码访问权限。  

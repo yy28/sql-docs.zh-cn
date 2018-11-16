@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 652afb0595634d7fb4474ed9042edda26f83a52a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701895"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -48,7 +48,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
   
  查询 XMLA 属性 MdpropMdxDrillFunctions，您可以验证的服务器为钻取功能; 提供的支持级别请参阅[支持的 XMLA 属性&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)有关详细信息。  
   
- 请参阅[数据库日志： MDX 集函数： toggledrillstate （） 函数](http://go.microsoft.com/fwlink/?LinkId=517759)的方案和示例涉及此函数。  
+ 请参阅[数据库日志： MDX 集函数： toggledrillstate （） 函数](https://go.microsoft.com/fwlink/?LinkId=517759)的方案和示例涉及此函数。  
   
 ## <a name="example"></a>示例  
  下例对第一个集中的澳大利亚成员进行深化，而对第一个集中的美国成员进行浅化。  
@@ -64,7 +64,7 @@ SELECT ToggleDrillState
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

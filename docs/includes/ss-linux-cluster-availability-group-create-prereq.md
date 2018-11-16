@@ -44,8 +44,8 @@
    下面的示例演示了 node1 上的 `/etc/hosts`，并补充了 node1、node2 和 node3。 本文档中**node1**指托管主要副本的服务器。 并**node2**并**node3**到承载辅助副本的服务器，请参阅。
 
     ```
-    127.0.0.1   localhost localhost4 localhost4.localdomain4
-    ::1       localhost localhost6 localhost6.localdomain6
+    127.0.0.1   localhost localhost4 localhost4.localdomain4
+    ::1       localhost localhost6 localhost6.localdomain6
     10.128.18.12 node1
     10.128.16.77 node2
     10.128.15.33 node3
@@ -77,7 +77,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-有关此 XE 会话的详细信息，请参阅[AlwaysOn 扩展事件](http://msdn.microsoft.com/library/dn135324.aspx)。
+有关此 XE 会话的详细信息，请参阅[AlwaysOn 扩展事件](https://msdn.microsoft.com/library/dn135324.aspx)。
 
 ## <a name="create-a-certificate"></a>创建证书
 
@@ -166,6 +166,6 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 >[!IMPORTANT]
 >对于 SQL Server 2017 版本中，支持数据库镜像终结点的唯一身份验证方法是`CERTIFICATE`。 `WINDOWS`选项将在未来版本中启用。
 
-有关详细信息，请参阅 [数据库镜像端点 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)。
+有关详细信息，请参阅 [数据库镜像端点 (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx)。
 
 

@@ -15,12 +15,12 @@ ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3673ee3d837179984c4221e1aa2509f67643dfb4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: cfa410f43d22541eee3749e523e98b8b8c45ceac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669946"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>WMI Provider for Server Events 类和属性
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "51217095"
   
  若要了解可以通过事件或事件组查询的属性，请参考事件架构。 默认情况下，事件架构安装在以下目录中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，您可以参考上发布的事件架构[ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ 或者，您可以参考上发布的事件架构[ https://schemas.microsoft.com/sqlserver ](https://go.microsoft.com/fwlink/?linkid=43100)。  
   
  例如，通过参考 ALTER_DATABASE 事件，您将了解其父事件为 DDL_SERVER_LEVEL_EVENTS 和其属性是**TSQLCommand**并**DatabaseName**。 该事件还继承属性**SQLInstance**， **PostTime**， **ComputerName**， **SPID**，和**LoginName**. 该事件没有子事件。  
   

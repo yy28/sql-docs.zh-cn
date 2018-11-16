@@ -20,12 +20,12 @@ ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b7f2627c61b96bb0efa5c19886c554268c2cd2f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 8677bb878094bf2345f00b7c6838a43b653faac6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030944"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670656"
 ---
 # <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,6 @@ size
  srv_alloc 函数等效于 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows API GlobalAlloc 函数。 可以在扩展存储过程 API 应用程序中使用普通 Windows API C 运行时内存管理函数。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

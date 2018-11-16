@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f5c991130c59d1999cc68d27ffccc15138ffc34d
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 5ffad259ca0de75ad2eb4b7fc6f51614f1c4dea9
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269750"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700355"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>什么是横向扩展 MPP 数据仓库的分析平台系统中的新增功能
 请参阅什么是最新的设备更新为 Microsoft® Analytics Platform System (APS) 中的新增功能。 APS 是承载 MPP SQL Server 并行数据仓库的横向扩展的本地设备。 
@@ -70,7 +70,7 @@ from cte;
 读取、 导入和导出现在使用 PolyBase 的日期数据类型支持 ORC 和 Parquet 文件类型日期 1970年-01-01 之前和之后 2038年-01-20。
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>为目标的 SQL Server 2017 的 SSIS 目标适配器
-支持 SQL Server 2017，作为部署目标可以从下载的新 APS SSIS 目标适配器[下载站点](https://www.microsoft.com/en-us/download/details.aspx?id=57472)。
+支持 SQL Server 2017，作为部署目标可以从下载的新 APS SSIS 目标适配器[下载站点](https://www.microsoft.com/download/details.aspx?id=57472)。
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
@@ -111,7 +111,7 @@ APS AU7 引入了中的功能切换[Configuration Manager](launch-the-configurat
 ### <a name="known-issues"></a>已知问题
 APS AU7 软件还修复了描述为问题提供 Intel BIOS 更新*推理执行旁道攻击*。 攻击的目标是利用所谓*Spectre 和 Meltdown 漏洞*。 尽管与 APS 一起打包，手动安装 BIOS 更新而不是作为 APS AU7 软件安装的一部分。
 
-Microsoft 建议所有客户，若要安装更新 BIOS。 Microsoft 已在各种环境中的各种 SQL 工作负荷上测量内核虚拟地址隐藏 (KVAS)、 内核页表间接寻址 (KPTI) 和间接分支预测缓解措施 (IBP) 的效果。 度量值上某些工作负荷找到显著下降。 根据结果，建议是测试对性能产生影响的生产环境中部署之前启用 BIOS 更新。 请参阅 SQL Server 指南[此处](https://support.microsoft.com/en-us/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)。
+Microsoft 建议所有客户，若要安装更新 BIOS。 Microsoft 已在各种环境中的各种 SQL 工作负荷上测量内核虚拟地址隐藏 (KVAS)、 内核页表间接寻址 (KPTI) 和间接分支预测缓解措施 (IBP) 的效果。 度量值上某些工作负荷找到显著下降。 根据结果，建议是测试对性能产生影响的生产环境中部署之前启用 BIOS 更新。 请参阅 SQL Server 指南[此处](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)。
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
@@ -137,7 +137,7 @@ APS AU6 支持这些 T-SQL 的兼容性改进。  这些其他语言元素，使
 
 **数据类型**
 
-- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY(MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 PolyBase 和 dwloader 当前不支持这些数据类型。 
+- [VARCHAR(MAX)][]， [NVARCHAR(MAX)][]并[VARBINARY （MAX)][]。 这些 LOB 数据类型具有的最大大小为 2 GB。 若要加载这些对象，请使用[bcp Utility][]。 PolyBase 和 dwloader 当前不支持这些数据类型。 
 - [SYSNAME][]
 - [唯一标识符][]
 - [NUMERIC][]和 DECIMAL 数据类型。
@@ -201,7 +201,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [聚集列存储索引的非聚集索引]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR(MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[VARBINARY （MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
 [选择...到]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql

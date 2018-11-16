@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52f370a7dc7e830a7a5963dca745e98bb7d84cd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a556a05e8d8a159b032f82b8dbe8f1bff545c1e6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677596"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ HRESULT BCPExec(
  方法成功。  
   
  E_FAIL  
- 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
+ 出现访问接口特定的错误；若要获取详细信息，请使用 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口。  
   
  E_UNEXPECTED  
  意外调用了该方法。 例如，在调用该方法之前，未调用 BCPInit 方法。 如果通过使用 BCP_OPTION_ABORT 选项中止了操作，并且随后调用了 BCPExec 方法，则也会发生此调用。  
