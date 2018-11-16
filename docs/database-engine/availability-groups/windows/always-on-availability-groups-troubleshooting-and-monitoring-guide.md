@@ -10,12 +10,12 @@ ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e950ae6cbbf71154bfaf402ae9e3246bd3d93fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841001"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606927"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性组故障排除和监视指南
  本指南可帮助你开始监视 Always On 可用性组并排查可用性组的一些常见问题。 它提供了原始内容，以及在其他位置发布的有用信息的登陆页。 尽管本指南不能全面探讨大范围可用性组中出现的所有问题，但它可为分析根本原因和解决问题指出正确的方向。 
@@ -31,8 +31,8 @@ ms.locfileid: "47841001"
 |--------------|-------------------|-----------------|  
 |[Always On 可用性组配置故障排除 (SQL Server)](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|配置|提供相关信息，帮助解决在为可用性组配置服务器实例时遇到的典型问题。 典型配置问题包括可用性组被禁用、帐户配置不当、数据库镜像终结点不存在、终结点无法访问（SQL Server 错误 1418）、网络访问不存在，以及联接数据库命令失败（SQL Server 错误 35250）。|  
 |[添加文件操作失败的故障排除（Always On 可用性组）](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|配置|添加文件操作导致辅助数据库挂起并处于“未同步”状态。|  
-|[无法在多子网环境中连接到可用性组侦听程序](http://support.microsoft.com/kb/2792139/en-us)|客户端连接性|配置可用性组侦听程序后，便无法 ping 侦听程序或从应用程序中连接它。|  
-|[自动故障转移失败的故障排除](http://support.microsoft.com/kb/2833707)|故障转移|自动故障转移未成功完成。|  
+|[无法在多子网环境中连接到可用性组侦听程序](https://support.microsoft.com/kb/2792139/en-us)|客户端连接性|配置可用性组侦听程序后，便无法 ping 侦听程序或从应用程序中连接它。|  
+|[自动故障转移失败的故障排除](https://support.microsoft.com/kb/2833707)|故障转移|自动故障转移未成功完成。|  
 |[疑难解答：可用性组超过了 RTO](troubleshoot-availability-group-exceeded-rto.md)|“性能”|进行自动故障转移或计划的手动故障转移（无数据丢失）后，故障转移时间超过 RTO。 或者，在估计同步提交次要副本（如自动故障转移伙伴）的故障转移时间时，发现该时间超过 RTO。|  
 |[疑难解答：可用性组超过了 RPO](troubleshoot-availability-group-exceeded-rpo.md)|“性能”|执行强制手动故障转移后，数据丢失超过 RPO。 或者，在计算异步提交次要副本可能丢失的数据时，发现它超过了 RPO。|  
 |[故障排除：主要副本的更改未反映在次要副本上](troubleshoot-primary-changes-not-reflected-on-secondary.md)|“性能”|客户端应用程序在主要副本上成功完成更新，但查询次要副本显示更改未得到反映。|  
@@ -65,15 +65,15 @@ ms.locfileid: "47841001"
 |-----------|-----------------|  
 |[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)|介绍可用性组的数据同步流程，流控制门以及监视可用性组时的有用指标，并演示如何收集 RTO 和 RPO 指标。|  
 |[监视可用性组 (SQL Server)](monitoring-of-availability-groups-sql-server.md)|提供用于监视可用性组的工具的相关信息。|  
-|[Always On 运行状况模型，第 1 部分：运行状况模型体系结构](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|提供有关 Always On 运行状况模型的概述。|  
-|[Always On 运行状况模型，第 2 部分：扩展运行状况模型](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|介绍如何自定义 Always On 运行状况模型和如何自定义 Always On 仪表板，以显示额外信息。|  
-|[使用 PowerShell 监视 Always On 运行状况，第 1 部分：基本 cmdlet 概述](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|提供有关可用于监视可用性组运行状况的 Always On PowerShell cmdlet 的基本概述。|  
-|[使用 PowerShell 监视 Always On 运行状况，第 2 部分：高级 cmdlet 用法](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|提供有关用于监视可用性组运行状况的 Always On PowerShell cmdlet 的高级用法的信息。|  
-|[使用 PowerShell 监视 Always On 运行状况，第 3 部分：简单的监视应用程序](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|介绍如何使用应用程序自动监视可用性组。|  
-|[使用 PowerShell 监视 Always On 运行状况，第 4 部分：与 SQL Server 代理集成](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
+|[Always On 运行状况模型，第 1 部分：运行状况模型体系结构](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|提供有关 Always On 运行状况模型的概述。|  
+|[Always On 运行状况模型，第 2 部分：扩展运行状况模型](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|介绍如何自定义 Always On 运行状况模型和如何自定义 Always On 仪表板，以显示额外信息。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 1 部分：基本 cmdlet 概述](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|提供有关可用于监视可用性组运行状况的 Always On PowerShell cmdlet 的基本概述。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 2 部分：高级 cmdlet 用法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|提供有关用于监视可用性组运行状况的 Always On PowerShell cmdlet 的高级用法的信息。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 3 部分：简单的监视应用程序](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|介绍如何使用应用程序自动监视可用性组。|  
+|[使用 PowerShell 监视 Always On 运行状况，第 4 部分：与 SQL Server 代理集成](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|提供相关信息，介绍如何将可用性组监视与 SQL Server 代理集成，以及如何配置出现问题时向相应方发送的通知。|  
 
 ## <a name="next-steps"></a>后续步骤  
- [SQL Server Always On 团队博客](http://blogs.msdn.com/b/sqlalwayson/)   
- [CSS SQL Server 工程师博客](http://blogs.msdn.com/b/psssql/)  
+ [SQL Server Always On 团队博客](https://blogs.msdn.com/b/sqlalwayson/)   
+ [CSS SQL Server 工程师博客](https://blogs.msdn.com/b/psssql/)  
   
   

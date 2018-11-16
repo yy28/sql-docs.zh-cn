@@ -14,12 +14,12 @@ ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f781dfcf0bc2d3ca1516cd45e7cddce7922ac348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5336a318a5384402d10e44b905446e29b0b71aec
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720615"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606527"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>隐藏 SQL Server 数据库引擎的实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ ms.locfileid: "47720615"
 ## <a name="see-also"></a>另请参阅  
  [服务器网络配置](../../database-engine/configure-windows/server-network-configuration.md)   
  [SQL 虚拟服务器客户端连接的说明](https://support.microsoft.com/kb/273673)   
- [如何将静态端口分配到 SQL Server 命名实例并避免常见缺陷](http://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
+ [如何将静态端口分配到 SQL Server 命名实例并避免常见缺陷](https://blogs.msdn.com/b/arvindsh/archive/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall.aspx)  
   
   

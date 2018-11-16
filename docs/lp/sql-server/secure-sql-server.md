@@ -6,12 +6,12 @@ description: 深入了解可保障 SQL Server 安全的功能。
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4853dbec0799a808e8165601cd868ec07e71c216
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: a127925183744c7e64e443d1127517c5fe41da23
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336146"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698125"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -225,16 +225,16 @@ ms.locfileid: "49336146"
         <h2>请与我们保持联系</h2>
         <ul class="links">
            <li>
-                <a href="http://aka.ms/editsqldocs" data-linktype="external">参与</a>
+                <a href="https://aka.ms/editsqldocs" data-linktype="external">参与</a>
             </li>
            <li>
                 <a href="https://docs.microsoft.com/sql/sql-server/sql-server-get-help" data-linktype="external">获取帮助</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsfeedback" data-linktype="external">反馈</a>
+                <a href="https://aka.ms/sqldocsfeedback" data-linktype="external">反馈</a>
             </li>
            <li>
-                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> 调查 </a>
+                <a href="https://aka.ms/sqldocsurvey" data-linktype="external"> 调查 </a>
             </li>
            <li>
                 <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external">博客</a>

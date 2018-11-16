@@ -10,12 +10,12 @@ ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a29d3176e364eca785727f49d6be9522147ef36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70ce34097cc2057344864b1db4ed7ce17a01311
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722501"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602862"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>故障排除：可用性组超过了 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47722501"
   
  此外，检查 `SQL Server:Availability Replica > Flow Control Time (ms/sec)` 和 `SQL Server:Availability Replica > Flow Control/sec` 这两个性能对象也很有用。 将这两个值相乘，可得到最后一秒中等待清除流控制所花费的时间。 流控制等待时间越长，发送速率越低。  
   
- 以下指标对诊断网络延迟和吞吐量很有用。 可以使用其他 Windows 工具（如 ping.exe 和[网络监视器](http://www.microsoft.com/download/details.aspx?id=4865)）来评估延迟和网络利用率。  
+ 以下指标对诊断网络延迟和吞吐量很有用。 可以使用其他 Windows 工具（如 ping.exe 和[网络监视器](https://www.microsoft.com/download/details.aspx?id=4865)）来评估延迟和网络利用率。  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47722501"
  只要在日志文件上强化了日志块，就可以防止数据丢失。 因此，将日志文件与数据文件隔离十分重要。 如果日志文件和数据文件映射到同一个硬盘，则在数据文件上进行大量读取的报告工作负荷将使用日志强化操作所需的相同 I/O 资源。 缓慢的日志强化可能会导致对主要副本的确认减慢，而这又可能导致流控制激活过多、流控制等待时间较长。  
   
 ### <a name="diagnosis-and-resolution"></a>诊断和解决方法  
- 如果已验证了网络不存在高延迟或低吞吐量，则应调查次要副本的 I/O 争用。 [SQL Server：最小化磁盘 I/O](http://technet.microsoft.com/magazine/jj643251.aspx) 中的查询对于识别争用很有帮助。 为方便起见，下面列出了该文章中的例子。  
+ 如果已验证了网络不存在高延迟或低吞吐量，则应调查次要副本的 I/O 争用。 [SQL Server：最小化磁盘 I/O](https://technet.microsoft.com/magazine/jj643251.aspx) 中的查询对于识别争用很有帮助。 为方便起见，下面列出了该文章中的例子。  
   
  以下脚本可用于查看在 SQL Server 的实例上运行的每个可用性数据库的每个数据和日志文件的读取和写入数量。 按平均 I/O 停滞时间（以毫秒为单位）进行排序。 请注意，这些数字是自上次启动服务器实例起的累积数。 因此，经过一段时间后，应取得两次度量之间的差值。  
   
@@ -127,6 +127,6 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  如果确定了 I/O 瓶颈，并且将日志文件和数据文件放在同一硬盘上，首先需要将数据文件和日志文件放在不同的磁盘上。 此最佳做法可防止报告工作负荷干扰从主要副本到日志缓冲区的日志传输路径，以及其强化辅助副本上事务的功能。  
   
 ## <a name="next-steps"></a>后续步骤  
- [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

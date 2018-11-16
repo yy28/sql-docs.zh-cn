@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 43458e87144b5903a0d6436d5596bb5c3585d928
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: c58fcf00f0feb3f6dc78f1df095a5934edfde6f3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383314"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600887"
 ---
 # <a name="install-sql-server"></a>安装 SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383314"
 
 * **示例数据库和示例代码**： 
     * 默认情况下，它们不作为 SQL Server 安装程序的一部分安装 
-    * 若要为 SQL Server 的非 Express 版本安装它们，请参阅 [GitHub](http://github.com/Microsoft/sql-server-samples)
+    * 若要为 SQL Server 的非 Express 版本安装它们，请参阅 [GitHub](https://github.com/Microsoft/sql-server-samples)
     
 
 ## <a name="get-the-installation-media"></a>获取安装介质
@@ -70,7 +70,7 @@ ms.locfileid: "49383314"
 |[安装 SQL Server 数据库引擎](../../database-engine/install-windows/install-sql-server-database-engine.md)|说明如何安装和配置 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[安装 SQL Server 复制](../../database-engine/install-windows/install-sql-server-replication.md)|说明如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 复制。|  
 |[安装 Distributed Replay - 概述](../../tools/distributed-replay/install-distributed-replay-overview.md)|列出了有关安装 Distributed Replay 功能的文章。|  
-|[安装带有 SSMS 的 SQL Server 管理工具](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|说明如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
+|[安装带有 SSMS 的 SQL Server 管理工具](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)|说明如何安装和配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工具。|  
 |[安装 SQL Server PowerShell](../../database-engine/install-windows/install-sql-server-powershell.md)|介绍安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 组件的注意事项。|  
   
 

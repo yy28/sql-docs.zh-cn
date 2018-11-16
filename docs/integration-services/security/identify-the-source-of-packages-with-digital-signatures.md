@@ -19,12 +19,12 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ee92e9c8873a65dd6f35da970e2bb2223a4649e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798017"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639489"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用数字签名标识包的源
   可以使用数字证书对 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 进行签名以标识其来源。 使用数字证书对包进行签名后，可以让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 在加载包之前先检查数字签名。 若要让 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 能够检查签名，请在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 实用工具 (dtexec.exe) 中设置一个选项，或设置一个可选的注册表值。  
@@ -67,7 +67,7 @@ ms.locfileid: "47798017"
 |3|阻止无效签名、不可信签名以及未签名的包<br /><br /> 该设置也阻止自我生成的签名。|  
   
 > [!NOTE]  
->  **BlockedSignatureStates** 的建议设置为 3。 该设置提供针对未签名包或者无效或不可信签名的最强保护功能。 不过，建议的设置并非适用于所有情况。 有关如何进行数字资产签名的详细信息，请参阅 MSDN Library 中的主题“[Introduction to Code Signing](http://go.microsoft.com/fwlink/?LinkId=51414)（代码签名简介）”。  
+>  **BlockedSignatureStates** 的建议设置为 3。 该设置提供针对未签名包或者无效或不可信签名的最强保护功能。 不过，建议的设置并非适用于所有情况。 有关如何进行数字资产签名的详细信息，请参阅 MSDN Library 中的主题“[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)（代码签名简介）”。  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>实现包的签名策略  
   
@@ -100,11 +100,11 @@ ms.locfileid: "47798017"
   
     -   从颁发证书的公共商业证书颁发机构获取证书。  
   
-    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](http://go.microsoft.com/fwlink/?LinkId=100755)（证书服务）”。  
+    -   从允许组织在内部颁发证书的证书服务器获取证书。 必须将用于对证书进行签名的根证书添加到 **“受信任的根证书颁发机构”** 存储区中。 若要添加根证书，可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台 (MMC) 的证书管理单元。 有关详细信息，请参阅 MSDN 库中的主题“[Certificate Services](https://go.microsoft.com/fwlink/?LinkId=100755)（证书服务）”。  
   
-    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](http://go.microsoft.com/fwlink/?LinkId=100756)”。  
+    -   创建自己的证书（仅用于测试目的）。 证书创建工具 (Makecert.exe) 会生成仅用于测试目的的 X.509 证书。 有关详细信息，请参阅 MSDN Library 中的主题“[证书创建工具 (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)”。  
   
-     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](http://go.microsoft.com/fwlink/?LinkId=78100)（使用 Authenticode 签名和检查代码）”。  
+     有关证书的详细信息，请参阅证书管理单元的联机帮助。 有关如何对数字资产进行签名的详细信息，请参阅 MSDN 库中的主题“[Signing and Checking Code with Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)（使用 Authenticode 签名和检查代码）”。  
   
 -   确保已为代码签名启用证书。 若要确定证书是否是为代码签名而启用的，请在“证书”管理单元中检查证书的属性。  
   

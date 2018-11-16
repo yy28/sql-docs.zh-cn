@@ -15,12 +15,12 @@ ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2aab2b6a4c19ed5cb8d3e1d5ea73af57cb6e506e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a2cb16273cd19ee5ef58c1cfde74d3ba890f9ad
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831655"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641374"
 ---
 # <a name="data-profiling-task-and-viewer"></a>数据事件探查任务和查看器
   数据事件探查任务在提取、转换和加载数据的过程中提供数据事件探查功能。 使用数据事件探查任务，有以下好处：  
@@ -70,6 +70,6 @@ ms.locfileid: "47831655"
  数据事件探查任务不包含内置功能，即无法根据配置文件输出使用条件逻辑来将此任务连接到下游任务。 但是，您只要在脚本任务中进行少量的编程工作即可轻松地添加此逻辑。 例如，脚本任务可以对数据事件探查任务的输出文件执行 Xpath 查询。 该查询可以确定在特定列中 null 值的百分比是否超过特定的阈值。 如果该百分比超过阈值，则应中断包并解决源数据中的问题，然后再继续执行。 有关详细信息，请参阅 [合并包工作流中的数据分析任务](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)。  
   
 ## <a name="related-content"></a>相关内容  
- [数据探查器架构](http://go.microsoft.com/fwlink/?LinkId=251524)  
+ [数据探查器架构](https://go.microsoft.com/fwlink/?LinkId=251524)  
   
   

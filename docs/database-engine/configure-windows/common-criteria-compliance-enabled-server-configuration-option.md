@@ -18,12 +18,12 @@ ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.openlocfilehash: 13ebffbaf9d80374f735f3cae147df74c2643f20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 533cdfe3b83b8b759129a27a6dc1699298dd3f13
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743175"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602947"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration"></a>已启用符合通用准则的服务器配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47743175"
 |查看登录统计信息的能力|启用 common criteria compliance enabled 选项之后，将启用登录审核。 用户每次成功登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]时，系统都会提供有关上一次成功登录的时间、上一次登录失败的时间以及上一次成功登录时间和当前登录时间之间尝试登录的次数的信息。 可以通过查询 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 动态管理视图来查看这些登录统计信息。|  
 |`GRANT` 列不应覆盖 `DENY` 表|启用 common criteria compliance enabled 选项后，表级 `DENY` 将优先于列级 `GRANT`。 未启用该选项时，列级 `GRANT` 则优先于表级 `DENY`。|  
   
- common criteria compliance enabled 选项是高级选项。 通用准则仅针对 Enterprise Edition 和 Datacenter Edition 进行评估和认证。 有关通用准则认证的最新状态，请参阅 [Microsoft SQL Server 通用准则](http://go.microsoft.com/fwlink/?LinkId=616319) 网站。  
+ common criteria compliance enabled 选项是高级选项。 通用准则仅针对 Enterprise Edition 和 Datacenter Edition 进行评估和认证。 有关通用准则认证的最新状态，请参阅 [Microsoft SQL Server 通用准则](https://go.microsoft.com/fwlink/?LinkId=616319) 网站。  
   
 > [!IMPORTANT]  
->  除启用“common criteria compliance enabled”选项以外，还必须下载和运行一个版本，该版本可完成对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的配置以便符合通用准则评估保证级别 4 (EAL4+)。 可以从 [Microsoft SQL Server Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319) （Microsoft SQL Server 通用准则）网站下载此脚本。  
+>  除启用“common criteria compliance enabled”选项以外，还必须下载和运行一个版本，该版本可完成对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的配置以便符合通用准则评估保证级别 4 (EAL4+)。 可以从 [Microsoft SQL Server Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319) （Microsoft SQL Server 通用准则）网站下载此脚本。  
   
  如果使用 `sp_configure` 系统存储过程来更改该设置，则只有在“show advanced options”设置为 1 时才能更改“common criteria compliance enabled”。 该设置在服务器重新启动后生效。 可能的值为 0 和 1：  
   

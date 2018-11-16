@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 02f454ba26701263b98ba86d22bb98943ed2a498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1b87ac5584f05911ebfb16387babc408e26f5
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613426"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600927"
 ---
 # <a name="upgrade-database-engine"></a>升级数据库引擎
 
@@ -36,6 +36,6 @@ ms.locfileid: "47613426"
   
 4.  [更改数据库兼容性模式和使用 Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) 数据库升级到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 后，你要采取的一个步骤是通过更改数据库兼容性模式，然后使用查询存储以监视性能来启用新功能。 本文讨论了此过程，并提供建议的工作流。  
   
-5.  [利用新的 SQL Server 功能](http://www.microsoft.com/sql-server/sql-server-2017) 最后，完成前面的步骤后，你就可以探索利用特定的新数据库引擎增强功能。 本文推荐了这些增强功能中的几个，并提供了获取详细信息的链接。  
+5.  [利用新的 SQL Server 功能](https://www.microsoft.com/sql-server/sql-server-2017) 最后，完成前面的步骤后，你就可以探索利用特定的新数据库引擎增强功能。 本文推荐了这些增强功能中的几个，并提供了获取详细信息的链接。  
   
   

@@ -15,12 +15,12 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e5896643e84782c6b0a36fd4ef6da3e487acdab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93504e52da01f99536fd04581ef9af29c06afcc9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691770"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640194"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services 中的新增功能
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -185,9 +185,9 @@ ms.locfileid: "47691770"
 ####  <a name="encrypted"></a> 支持 SSIS 目录中的 Always Encrypted  
  SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供始终加密功能支持。 有关详细信息，请参阅以下博客文章。  
   
--   [SSIS with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)（SSIS 与始终加密）  
   
--   [Lookup transformation with Always Encrypted](http://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)（查找转换与始终加密）  
 
 ### <a name="better-debugging"></a>改进调试
 
@@ -213,7 +213,7 @@ ms.locfileid: "47691770"
   
 -   在脚本组件或自定义数据流组件中，调用 IDTSComponentMetadata100 接口的新 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 方法。  
   
- 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章： [Error Column Improvements for SSIS Data Flow](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)（SSIS 数据流的错误列改进）。  
+ 有关此方面改进的详细信息，请参阅 SSIS 开发人员 Bo Fan 的下述博客文章： [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)（SSIS 数据流的错误列改进）。  
   
 > [!NOTE]  
 >  （后续版本扩展了此支持。 有关详细信息，请参阅 [提供对错误列名称的扩展支持](#getidstring) 和 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
@@ -223,7 +223,7 @@ ms.locfileid: "47691770"
   
  GetIdentificationStringByLineageID 方法已重命名为 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>中新增或更新的功能。 有关详细信息，请参阅 [数据流中错误对应的列名称](#ErrorColumn)。  
   
- 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [SSIS 数据流的错误列改进（已对 CTP3.3 进行更新）](http://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ 有关这方面的更改以及错误列改进的详细信息，请参阅下述已更新的博客文章。 [SSIS 数据流的错误列改进（已对 CTP3.3 进行更新）](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
   
 > [!NOTE]  
 >  （在 RC0 中，此方法已移至新的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 接口。 有关详细信息，请参阅 [API 中的全新 IDTSComponentMetaData130 接口](#CMD130)。）  
@@ -285,7 +285,7 @@ ms.locfileid: "47691770"
  Excel 连接管理器、Excel 源和 Excel 目标现在显式支持 Excel 2016 数据源。  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 已发布  
- Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)（Microsoft® SQL Server® 2016 功能包）。
+ Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。 若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)（Microsoft® SQL Server® 2016 功能包）。
  
 #### <a name="oracleteradata"></a> 用于 Oracle 和 Teradata 的连接器 v4.0 已发布
 用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0 已发布。 若要下载该连接器，请参阅 [用于 Oracle 和 Teradata 的 Microsoft 连接器 v4.0](https://www.microsoft.com/download/details.aspx?id=52950)。
@@ -346,7 +346,7 @@ ms.locfileid: "47691770"
  SQL Server 导入和导出向导现在可以从 Azure Blob 存储导入数据，以及将数据保存到其中。 有关详细信息，请参阅[选择数据源（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)和[选择目标（SQL Server 导入和导出向导）](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)。 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer and Service for Oracle for Microsoft SQL Server 2016 已发布  
- Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 功能包](http://go.microsoft.com/fwlink/?LinkID=746297)。  
+ Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 已作为 SQL Server 2016 功能包的一部分发布。  这些组件现在支持采用经典安装的 Oracle 12c。 （不支持多租户安装）若要下载功能包的组件，请参阅 [Microsoft® SQL Server® 2016 功能包](https://go.microsoft.com/fwlink/?LinkID=746297)。  
   
 ####  <a name="cdc2016"></a> CDC 组件已针对 SQL Server 2016 进行更新  
  CDC（变更数据捕获）的控制任务、源和拆分器转换组件在更新后已与 SQL Server 2016 完全兼容。 没有新功能，行为也没有改变。  
@@ -360,7 +360,7 @@ ms.locfileid: "47691770"
  维度处理目标不适用于 SQL 2016 兼容级别的表格模型。  进行表格处理时，只需使用 Analysis Services 处理任务和分区处理目标。 
 
 ####  <a name="builtinR"></a> 支持内置 R Services  
- SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供内置 R Services 支持。 可以使用 SSIS 来提取数据和加载分析的输出，以及构建、运行和定期重新定型 R 模型。 有关详细信息，请参阅以下日志文章。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](http://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)（使用 SQL Server 2016 SSIS 和 R Services 实施机器学习项目）。 
+ SSIS 已在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供内置 R Services 支持。 可以使用 SSIS 来提取数据和加载分析的输出，以及构建、运行和定期重新定型 R 模型。 有关详细信息，请参阅以下日志文章。 [Operationalize your machine learning project using SQL Server 2016 SSIS and R Services](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)（使用 SQL Server 2016 SSIS 和 R Services 实施机器学习项目）。 
 
 ####  <a name="ValidateXML"></a> XML 任务中丰富的 XML 验证输出  
  通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。 在可以使用 **ValidationDetails** 属性之前，XML 任务的 XML 验证仅返回 true 或 false 结果，而不包含关于错误或其位置的详细信息。 现在，当你将 **ValidationDetails** 设置为 true 时，输出文件将包含关于每个错误的详细信息，包括行号和位置。 此信息可用于了解、查找和修复 XML 文档中的错误。 有关详细信息，请参阅 [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md)。  

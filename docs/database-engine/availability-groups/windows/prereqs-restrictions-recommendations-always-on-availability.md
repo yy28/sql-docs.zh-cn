@@ -19,12 +19,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8054c3c985aa83aba25aa40aa40dca8d2923e8f6
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: b5f815cba0bf8cf2777053a502597cd19ccd6a20
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852022"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600947"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>先决条件、限制、建议 - AlwaysOn 可用性组
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "48852022"
   
 ||依赖功能|修补程序|链接|  
 |------|-----------------------|------------|----------|  
-|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347： [.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](http://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|.Net 3.5 SP1 修补程序添加对读意向、只读和多子网故障转移的 SQL Client for AlwaysOn 功能的支持。 此修补程序需要安装在每个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 报表服务器上。|KB 2654347： [.Net 3.5 SP1 修补程序添加对 AlwaysOn 功能的支持](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> 清单：要求（Windows 系统）  
@@ -67,7 +67,7 @@ ms.locfileid: "48852022"
 ###  <a name="PermissionsWindows"></a> 权限（Windows 系统）  
  若要管理 WSFC，用户必须是每个群集节点上的系统管理员。  
   
- 有关用于管理群集的帐户的详细信息，请参阅 [附录 A：故障转移群集要求](http://technet.microsoft.com/library/dd197454.aspx)。  
+ 有关用于管理群集的帐户的详细信息，请参阅 [附录 A：故障转移群集要求](https://technet.microsoft.com/library/dd197454.aspx)。  
   
 ###  <a name="RelatedTasksWindows"></a> 相关任务（Windows 系统）  
   
@@ -99,17 +99,17 @@ ms.locfileid: "48852022"
   
 ##### <a name="related-content-powershell"></a>相关内容 (PowerShell)  
   
--   [群集和高可用性](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
+-   [群集和高可用性](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) （故障转移群集和网络负载平衡团队博客）  
   
--   [故障转移群集上的 Windows PowerShell 入门](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
+-   [故障转移群集上的 Windows PowerShell 入门](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [群集资源命令和等效的 Windows PowerShell cmdlet](http://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [群集资源命令和等效的 Windows PowerShell cmdlet](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ###  <a name="RelatedContentWS"></a> 相关内容（Windows 系统）  
   
--   [在多站点故障转移群集中配置 DNS 设置](http://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
+-   [在多站点故障转移群集中配置 DNS 设置](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [向网络名称资源注册 DNS](http://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [向网络名称资源注册 DNS](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server 实例先决条件和限制  
@@ -167,7 +167,7 @@ ms.locfileid: "48852022"
   
     -   辅助副本上的备份将在备份操作持续时间内包含主副本上的一个线程。  
   
- 有关详细信息，请参阅 [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) （CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师的一篇博客）。  
+ 有关详细信息，请参阅 [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) （CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工程师的一篇博客）。  
   
 ###  <a name="PermissionsSI"></a> 权限（服务器实例）  
   
@@ -186,7 +186,7 @@ ms.locfileid: "48852022"
   
 ###  <a name="RelatedContentSI"></a> 相关内容（服务器实例）  
   
--   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 网络连接建议  
  强烈建议为 WSFC 节点之间的通信和可用性副本之间的通信使用相同的网络链接。  如果某些链接失败（甚至间歇性断开），使用单独的网络链接可能会导致意外行为。  
@@ -210,7 +210,7 @@ ms.locfileid: "48852022"
 ###  <a name="RestrictionsFCI"></a> 限制 (FCI)  
   
 > [!NOTE]  
-> 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](http://technet.microsoft.com/library/dd759255.aspx)。  
+> 故障转移群集实例支持群集共享卷 (CSV)。 有关 CSV 的详细信息，请参阅 [了解故障转移群集中的群集共享卷](https://technet.microsoft.com/library/dd759255.aspx)。  
   
 -   **FCI 的群集节点只能托管给定可用性组的一个副本：** 如果在 FCI 上添加可用性副本，作为 FCI 的可能所有者的 WSFC 节点不能托管同一个可用性组的另一个副本。  若要避免可能出现的冲突，建议配置故障转移群集实例的可能所有者。 这将阻止可能会导致单个 WSFC 尝试在同一可用性组上同时承载两个可用性副本的情况的发生。
   
@@ -242,7 +242,7 @@ ms.locfileid: "48852022"
   
 -   [故障转移群集和可用性组 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](http://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn 体系结构指南：使用故障转移群集实例和可用性组构建高可用性和灾难恢复解决方案](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 可用性组先决条件和限制  
  **本节内容：**  
@@ -382,11 +382,11 @@ ms.locfileid: "48852022"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 团队博客：SQL Server AlwaysOn 团队官方博客](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](http://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysOn - HADRON 学习系列：启用了 HADRON 的数据库的工作线程池用法](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

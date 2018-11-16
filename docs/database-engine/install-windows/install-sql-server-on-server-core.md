@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 0e86bec4983dd1f15f4c91fe4ee7a851f8264556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bce46bab220ddda57d18cea6588c35475becd372
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665429"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601887"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安装 SQL Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "47665429"
 
 可以在 Server Core 安装上安装 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。   
   
-Server Core 安装选项提供了用于运行特定服务器角色的最小环境。 这将有助于减少维护和管理需求以及针对这些服务器角色的攻击面。 有关 Server Core 的详细信息，请参阅[安装 Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 有关在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上实现 Server Core 的详细信息，请参阅 [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
+Server Core 安装选项提供了用于运行特定服务器角色的最小环境。 这将有助于减少维护和管理需求以及针对这些服务器角色的攻击面。 有关 Server Core 的详细信息，请参阅[安装 Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)。 有关在 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]上实现 Server Core 的详细信息，请参阅 [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx)。  
   
  有关当前支持的操作系统列表，请参阅[安装 SQL Server 的硬件和软件要求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。
 
@@ -59,7 +59,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
 |Distributed Replay 控制器|否||  
 |Distributed Replay 客户端|仅限远程|不支持在 Server Core 上安装这些功能。 可以在 Server Core 之外的服务器上安装这些组件，然后将这些组件连接到 Server Core 上安装的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 服务。|  
 |SQL 客户端连接 SDK|用户帐户控制||  
-|Microsoft Sync Framework|用户帐户控制|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=221788) (http://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
+|Microsoft Sync Framework|用户帐户控制|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安装程序包中不包含 Microsoft Sync Framework。 可以从该 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=221788) (https://go.microsoft.com/fwlink/?LinkId=221788) 页下载 Sync Framework 的适当版本，并在运行 Server Core 的计算机上进行安装。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|否||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|否||  
   
@@ -81,7 +81,7 @@ Server Core 安装选项提供了用于运行特定服务器角色的最小环�
   
  无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
- 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 使用 /Q 或 /QS 参数进行无人参与安装时，必须包含 /IACCEPTSQLSERVERLICENSETERMS 参数。 可以通过 [Microsoft Software License Terms](http://go.microsoft.com/fwlink/?LinkId=148209)（Microsoft 软件许可条款）单独查看许可条款。  
+ 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 使用 /Q 或 /QS 参数进行无人参与安装时，必须包含 /IACCEPTSQLSERVERLICENSETERMS 参数。 可以通过 [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkId=148209)（Microsoft 软件许可条款）单独查看许可条款。  
   
 > [!NOTE]  
 >  根据您接收软件的方式（例如，通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可），您对软件的使用可能受其他条款和条件约束。  
@@ -331,9 +331,9 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  [使用配置文件安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
  [从命令提示符安装 SQL Server](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server 2017 的各版本和支持的功能](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [安装 Server Core](http://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [通过 Sconfig.cmd 配置 Windows Server 2016 的 Server Core 安装](http://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Windows PowerShell 中的故障转移群集 Cmdlet](http://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [安装 Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
+ [通过 Sconfig.cmd 配置 Windows Server 2016 的 Server Core 安装](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Windows PowerShell 中的故障转移群集 Cmdlet](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
 
   
   

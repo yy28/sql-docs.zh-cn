@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: de74b5a6df92e0440bcb9d0514fcf67cdf9aef46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d81475de98512e01be65b4c8c23c40809eec73fe
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790825"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603627"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>使用 SMB 文件共享存储安装 SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "47790825"
   
 -   \\\ServerName\ShareName  
   
- 有关通用命名约定的详细信息，请参阅 [UNC](http://msdn.microsoft.com/library/gg465305.aspx)。  
+ 有关通用命名约定的详细信息，请参阅 [UNC](https://msdn.microsoft.com/library/gg465305.aspx)。  
   
  不支持环回 UNC 路径（其服务器名称为 localhost、127.0.0.1 或本地计算机名称的 UNC 路径）。 作为一种特殊情况，如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用的文件服务器群集承载在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所运行的同一节点上，则也不受支持。 若要防止出现这种情况，建议在单独的 Windows 群集中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 与文件服务器群集。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "47790825"
 |操作系统|SMB2 协议版本|优势 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|与以前的 SMB 版本相比改进的性能。<br /><br /> 持续性，帮助从临时网络问题恢复。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](http://go.microsoft.com/fwlink/?LinkID=237319) (http://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](http://go.microsoft.com/fwlink/?LinkId=237320) (http://go.microsoft.com/fwlink/?LinkId=237320)。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](http://go.microsoft.com/fwlink/?LinkId=253174) (http://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1，包含 Server Core|2.1|支持大型 MTU，这有利于大型数据传输，例如 SQL 备份和还原。 此功能必须由用户启用。 有关如何启用此功能的详细信息，请参阅 [SMB 中的新增功能](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319)。<br /><br /> 针对 SQL OLTP 样式工作负荷的显著的性能改进。 这些性能改进要求应用修补程序。 有关控件的详细信息，请参阅[此处](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320)。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，包含 Server Core|3.0|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且可承受网络接口故障。<br /><br /> 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2，包含 Server Core|3.2|支持文件共享的透明故障转移，提供零停机时间，并且在文件服务器群集配置中，无需 SQL DBA 或文件服务器管理员参与。<br /><br /> 支持同时使用多个网络接口的 IO，并且使用 SMB 多通道可承受网络接口故障。<br /><br /> 使用 SMB Direct 支持具有 RDMA 功能的网络接口。<br /><br /> 有关这些功能和服务器消息块的详细信息，请参阅 [服务器消息块概述](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174)。<br /><br /> 通过持续可用性支持向外扩展文件服务器 (SoFS)。<br /><br /> 针对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP 所共有的小型随机读/写 I/O 进行优化。<br /><br /> 默认情况下启用最大传输单位 (MTU)，这可以显著增强大型连续传输（例如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据仓库和数据库备份或还原）的性能。|  
   
 ## <a name="security-considerations"></a>安全注意事项  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户应具有对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限。 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户可以是域帐户或系统帐户。 有关共享和 NTFS 权限的详细信息，请参阅 [文件服务器上的共享和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkId=245535) (http://go.microsoft.com/fwlink/?LinkId=245535)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户应具有对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限。 使用 SMB 文件服务器时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户可以是域帐户或系统帐户。 有关共享和 NTFS 权限的详细信息，请参阅 [文件服务器上的共享和 NTFS 权限](https://go.microsoft.com/fwlink/?LinkId=245535) (https://go.microsoft.com/fwlink/?LinkId=245535)。  
   
     > [!NOTE]  
     >  对 SMB 共享文件夹的 FULL CONTROL 共享权限和 NTFS 权限应被限制为： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务帐户、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户和具有管理服务器角色的 Windows 用户。  
@@ -111,7 +111,7 @@ ms.locfileid: "47790825"
   
 ## <a name="known-issues"></a>已知问题  
   
--   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 该问题在[此知识库文章](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) 中定义。 若要解决此问题，请参阅该知识库文章中的 **详细信息** 部分。  
+-   在您分离网络连接的存储设备上的某一 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 数据库后，如果尝试重新连接该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库，则可能会遇到数据库权限问题。 该问题在[此知识库文章](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) 中定义。 若要解决此问题，请参阅该知识库文章中的 **详细信息** 部分。  
   
 -   如果将 SMB 文件共享作为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]群集实例的存储选项，默认情况下无法将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集诊断日志写入该文件共享，因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 资源 DLL 缺乏对该文件共享的读/写权限。 若要解决此问题，请尝试使用以下方法之一：  
   

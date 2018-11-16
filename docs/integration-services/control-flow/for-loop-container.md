@@ -18,12 +18,12 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6266d7c1cd72599467710d835f67075a640b9c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 914a8eab85e26e97c1f36f95b75366d6fdd98bce
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635785"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640494"
 ---
 # <a name="for-loop-container"></a>For 循环容器
   For 循环容器定义包中的重复控制流。 此循环实现类似于编程语言中的 **For** 循环结构。 循环每次重复时，For 循环容器都计算一个表达式并重复运行其工作流，直到表达式计算结果为 **False**。  
@@ -63,14 +63,14 @@ ms.locfileid: "47635785"
   
 2.  将任务和容器添加到 For 循环容器。 有关详细信息，请参阅 [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)。  
   
-3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅[使用默认优先约束来连接任务和容器](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
+3.  使用优先约束连接 For 循环容器中的任务和容器。 有关详细信息，请参阅[使用默认优先约束来连接任务和容器](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)。  
   
-4.  配置 For 循环容器。 有关详细信息，请参阅 [配置 For 循环容器](http://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
+4.  配置 For 循环容器。 有关详细信息，请参阅 [配置 For 循环容器](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5)。  
 
 ##  <a name="configure-the-for-loop-container"></a>配置 For 循环容器
 此过程介绍如何使用 **“For 循环编辑器”** 对话框配置 For 循环容器。  
   
- 有关 For 循环容器的示例，请参阅 bimonkey.com 上的 [不失败的 SSIS 循环](http://go.microsoft.com/fwlink/?LinkId=240295) 。  
+ 有关 For 循环容器的示例，请参阅 bimonkey.com 上的 [不失败的 SSIS 循环](https://go.microsoft.com/fwlink/?LinkId=240295) 。  
   
 1.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，双击 For 循环容器，打开“For 循环编辑器”。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "47635785"
   
  在表达式中指定变量时，必须在其前面加符号 @。 例如，对于名为 Counter 的变量，请在 For 循环容器使用的表达式中输入 @Counter。 如果变量上包含了命名空间属性，则您必须用方括号将变量和命名空间括起来。 例如，对于 MyNamespace 命名空间中的 Counter 变量，请键入 [@MyNamespace::Counter]。  
   
- For 循环容器使用的变量必须在 For 循环容器的范围内定义，或者在包容器层次结构中较高层次容器的范围内定义。 例如，For 循环容器可使用在其范围内定义的变量，也可使用在包范围内定义的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ For 循环容器使用的变量必须在 For 循环容器的范围内定义，或者在包容器层次结构中较高层次容器的范围内定义。 例如，For 循环容器可使用在其范围内定义的变量，也可使用在包范围内定义的变量。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 表达式语法提供了一整套运算符和函数，可以用于实现计算、初始化或赋值所用的复杂表达式。 有关详细信息，请参阅 [Integration Services (SSIS) 表达式](../../integration-services/expressions/integration-services-ssis-expressions.md)。  
   

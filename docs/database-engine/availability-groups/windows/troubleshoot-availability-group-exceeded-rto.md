@@ -10,18 +10,18 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8b3a2b9208900d89a56f3a49b5dd1cf1aa0e04d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724215"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606867"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>故障排除：可用性组超过了 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   对可用性组进行自动故障转移或计划的手动故障转移（无数据丢失）后，可能会发现故障转移时间超过恢复时间目标 (RTO)。 或者，在使用[监视 Always On 可用性组的性能](monitor-performance-for-always-on-availability-groups.md)中的方法估计同步提交次要副本的故障转移时间时（如自动故障转移伙伴），发现该时间超过了 RTO。  
   
- 如果自动故障转移仍未完成，请参阅[故障排除 SQL Server 2012 Always On 环境中的自动故障转移问题](http://support.microsoft.com/kb/2833707)。  
+ 如果自动故障转移仍未完成，请参阅[故障排除 SQL Server 2012 Always On 环境中的自动故障转移问题](https://support.microsoft.com/kb/2833707)。  
   
  以下各节介绍超过 RTO 的故障转移时间的常见原因。  
   
@@ -64,6 +64,6 @@ from sys.dm_hadr_database_replica_states
  如果重做线程确实滞后，需要调查次要副本性能降低的根本原因。 如果存在与报告工作负荷的 I/O 争用，可以使用 [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) 来控制报告工作负荷所用的 CPU 周期，以在某种程度上间接控制采用的 I/O 周期。 例如，如果报告工作负荷要使用 10% 的 CPU，但工作负荷受到 I/O 限制，可以使用 Resource Governor 将 CPU 资源使用量限制为中止读取工作负荷的 5%，这可最大程度降低对 I/O 的影响。  
   
 ## <a name="next-steps"></a>后续步骤  
- [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](http://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
+ [排除 SQL Server 中的性能问题（适用于 SQL Server 2012）](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

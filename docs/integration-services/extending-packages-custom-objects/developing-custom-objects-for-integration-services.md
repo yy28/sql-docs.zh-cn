@@ -14,12 +14,12 @@ ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 031cf6907a2723db2cf9f5b5394ecdca13308577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8413b1386d60ded8d9257e3a58a7e682355824f6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737365"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640204"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>开发 Integration Services 的自定义对象
   当随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的控制流和数据流对象不能完全满足你的要求时，可以自己开发各种类型的自定义对象，其中包括：  
@@ -109,7 +109,7 @@ ms.locfileid: "47737365"
   
 ## <a name="external-resources"></a>外部资源  
   
--   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](http://go.microsoft.com/fwlink/?LinkId=215662)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
+-   blogs.msdn.com 上的博客文章：[Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662)（Visual Studio 解决方案生成流程由于 SSIS 引用而针对 .NET Framework 程序集上的间接依赖关系发出警告）。  
   
 ## <a name="see-also"></a>另请参阅  
  [使自定义对象持久化](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

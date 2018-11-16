@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cdb63eb4a44b3035010336a8143b8bb34e0da8fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd433b33fcf62afd16b27f368507fc2794768fae
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703725"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601377"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>SQL Server 2016 可用性组的群集 DTC
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本主题介绍为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 群集化 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 有关分布式事务和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的其他信息，请参阅 [AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
+本主题介绍为 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 群集化 Microsoft 分布式事务处理协调器 (DTC) 服务的要求和步骤。 有关分布式事务和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]的其他信息，请参阅 [AlwaysOn 可用性组和数据库镜像的跨数据库事务和分布式事务 (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)。
 
  ## <a name="checklist-preliminary-requirements"></a>清单：初步要求
 ||任务|参考|  
@@ -48,9 +48,9 @@ ms.locfileid: "47703725"
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|停止并禁用本地 DTC 服务。|[配置服务启动方式](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |![复选框](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "复选框")|为可用性组中的每个实例循环 SQL Server 服务。  根据需要故障转移可用性组。|[执行可用性组的计划手动故障转移 (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[启动、停止、暂停、继续、重新启动数据库引擎、SQL Server 代理或 SQL Server Browser 服务](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
-- 如果服务器是 Windows Server 2012 R2，则操作系统必须应用 [KB 3030373](http://support.microsoft.com/kb/3090973) 。
+- 如果服务器是 Windows Server 2012 R2，则操作系统必须应用 [KB 3030373](https://support.microsoft.com/kb/3090973) 。
 
-- 根据[针对 Always On 可用性组的先决条件、限制和建议](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的清单为可用性组准备服务器。
+- 根据 [针对 Always On 可用性组的先决条件、限制和建议](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)中的清单为可用性组准备服务器。
 
 - 为 [**AlwaysOn 可用性组**](../../../database-engine/availability-groups/windows/configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)配置服务器实例。
 
@@ -64,6 +64,6 @@ ms.locfileid: "47703725"
 [逐步创建可用性组](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](http://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)（可用性组中的 SQL Server 2016 DTC 支持） 
+[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)（可用性组中的 SQL Server 2016 DTC 支持） 
 
-[外部链接：通过 Windows Server 2008 R2 为 SQL Server 的群集实例配置 DTC](http://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)
+[外部链接：通过 Windows Server 2008 R2 为 SQL Server 的群集实例配置 DTC](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)

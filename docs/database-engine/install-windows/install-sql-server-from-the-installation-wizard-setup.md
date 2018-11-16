@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1a982b90e9bbbb919e78d77e071ea13a6cff1bd3
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: d706feed2f2826afa6bb975d4ce47170b71126c4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460682"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605327"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>使用安装向导安装 SQL Server（安装程序）
 
@@ -69,7 +69,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
 4.  在“许可条款”页上查看许可协议，如果同意，请选中 **“我接受许可条款”** 复选框，然后单击 **“下一步”**。  
 
   >[!NOTE]
-  > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要了解有关 SQL Server 数据处理和隐私控制的详细信息，请参阅[隐私声明](https://privacy.microsoft.com/en-us/privacystatement)和[配置 SQL Server 以向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
+  > SQL Server 传输有关安装体验的信息，以及其他使用情况和性能数据，以帮助 Microsoft 改进产品。 若要了解有关 SQL Server 数据处理和隐私控制的详细信息，请参阅[隐私声明](https://privacy.microsoft.com/privacystatement)和[配置 SQL Server 以向 Microsoft 发送反馈](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016)。 
   
 5.  在“全局规则”窗口中，如果没有规则错误，安装过程将自动前进到“产品更新”窗口。  
   
@@ -190,7 +190,7 @@ Microsoft 已发现特定版本的 Microsoft VC++ 2013 运行时二进制文件�
   
 21. 安装完成后，“完成”页会提供指向安装摘要日志文件以及其他重要说明的链接。 若要完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装过程，请单击 **“关闭”**。  
   
-22. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
+22. 如果安装程序指示您重新启动计算机，请立即重新启动。 安装完成后，请务必阅读来自安装向导的消息。 有关详细信息，请参阅 [查看和读取 SQL Server 安装程序日志文件](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)。  
   
 ## <a name="next-steps"></a>后续步骤  
  配置新安装的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  

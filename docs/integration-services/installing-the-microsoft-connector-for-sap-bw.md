@@ -11,15 +11,15 @@ ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 64b93604ae38ed74099d0c291007ecb68a650742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6329a37a23e00753dd32ec43b2ef97915f668993
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728825"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637424"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>安装 Microsoft Connector for SAP BW
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 是 SQL Server 2016 功能包的一个组件。 若要安装 Connector for SAP BW 及其文档，请从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载并运行安装程序。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 是 SQL Server 2016 功能包的一个组件。 若要安装 Connector for SAP BW 及其文档，请从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载并运行安装程序。  
 
 > [!IMPORTANT]
 > Microsoft 预计不会提供 SAP BW 连接器的更新版本。 Microsoft 未拥有由第三方开发的 SAP BW 组件的源代码，因此无法更新它们。 考虑从 Microsoft ISV 合作伙伴（例如 [Theobald 软件](https://theobald-software.com/en/xtract-is-productinfo.html)）购买最新的 SAP 连接组件。 Microsoft 的 ISV 合作伙伴已为 SSIS 调整了其 SAP 连接组件，以便在 Azure 中安装。

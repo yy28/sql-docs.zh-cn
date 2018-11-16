@@ -15,12 +15,12 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6573534c2117192efcb3a40c848e72e0a39d0426
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610753"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640254"
 ---
 # <a name="transform-data-with-transformations"></a>使用转换对数据进行转换
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括三种类型的数据流组件：源、转换和目标。  
@@ -45,7 +45,7 @@ ms.locfileid: "47610753"
   
  还可以编写自定义转换。 有关详细信息，请参阅 [开发自定义数据流组件](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 和 [开发特定类型的数据流组件](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)。  
   
- 将转换添加到数据流设计器之后但配置转换之前，请将数据流中另一转换或源的输出连接到此转换的输入，从而将此转换连接到数据流。 两个数据流组件之间的连接器称为路径。 有关连接组件和使用路径的详细信息，请参阅 [使用路径连接组件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
+ 将转换添加到数据流设计器之后但配置转换之前，请将数据流中另一转换或源的输出连接到此转换的输入，从而将此转换连接到数据流。 两个数据流组件之间的连接器称为路径。 有关连接组件和使用路径的详细信息，请参阅 [使用路径连接组件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)。  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>将转换添加到数据流  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47610753"
 ## <a name="see-also"></a>另请参阅  
  [数据流任务](../../../integration-services/control-flow/data-flow-task.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
- [使用路径连接组件](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [使用路径连接组件](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [数据中的错误处理](../../../integration-services/data-flow/error-handling-in-data.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)  
   

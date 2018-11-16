@@ -1,0 +1,170 @@
+items:
+- name: 概述
+  href: database-engine-scripting.md
+- name: 查询和文本编辑器 (SQL Server Management Studio)
+  href: query-and-text-editors-sql-server-management-studio.md
+- name: 数据库引擎查询编辑器 (SQL Server Management Studio)
+  href: database-engine-query-editor-sql-server-management-studio.md
+- name: XML 编辑器 (SQL Server Management Studio)
+  href: xml-editor-sql-server-management-studio.md
+- name: 配置编辑器 (SQL Server Management Studio)
+  href: configure-editors-sql-server-management-studio.md
+  items:
+  - name: 将文件扩展名与代码编辑器关联
+    href: associate-file-extensions-to-a-code-editor.md
+  - name: 更改字体颜色、大小和样式
+    href: change-font-color-size-and-style.md
+  - name: 使用 Management Studio 中的“属性”窗口
+    href: use-the-properties-window-in-management-studio.md
+- name: 打开编辑器 (SQL Server Management Studio)
+  href: open-an-editor-sql-server-management-studio.md
+- name: 管理编辑器和视图模式
+  href: manage-the-editor-and-view-mode.md
+- name: 管理代码格式
+  href: manage-code-formatting.md
+- name: 代码和文本定位
+  href: navigate-code-and-text.md
+- name: 查询编辑器中的颜色编码
+  href: color-coding-in-query-editors.md
+- name: 代码大纲显示
+  href: code-outlining.md
+- name: 拖放文本
+  href: drag-and-drop-text.md
+- name: 搜索和替换
+  href: search-and-replace.md
+  items:
+  - name: 增量搜索活动文档
+    href: search-an-active-document-incrementally.md
+  - name: 交互式搜索文档
+    href: search-documents-interactively.md
+  - name: 使用结果列表搜索文档
+    href: search-documents-using-results-lists.md
+  - name: 使用通配符搜索文本
+    href: search-text-with-wildcards.md
+  - name: 使用正则表达式搜索文本
+    href: search-text-with-regular-expressions.md
+  - name: 查找和替换
+    href: find-and-replace.md
+  - name: 在文件中查找
+    href: find-in-files.md
+  - name: “查找结果”窗口
+    href: find-results-windows.md
+  - name: 在文件中替换
+    href: replace-in-files.md
+- name: 管理书签
+  href: manage-bookmarks.md
+  items:
+  - name: 书签的 F1 帮助
+    href: bookmarks-f1-help.md
+- name: 打印代码和结果
+  href: print-code-and-results.md
+- name: 使用查询编辑器编辑 SQLCMD 脚本
+  href: edit-sqlcmd-scripts-with-query-editor.md
+- name: IntelliSense (SQL Server Management Studio)
+  href: intellisense-sql-server-management-studio.md
+  items:
+  - name: 配置 IntelliSense (SQL Server Management Studio)
+    href: configure-intellisense-sql-server-management-studio.md
+  - name: 参数信息 (IntelliSense)
+    href: parameter-info-intellisense.md
+  - name: 快速信息 (IntelliSense)
+    href: quick-info-intellisense.md
+  - name: 完成单词 (IntelliSense)
+    href: complete-word-intellisense.md
+  - name: 语法对的自动匹配
+    href: automatic-matching-of-syntax-pairs.md
+  - name: IntelliSense 故障排除 (SSMS)
+    href: troubleshooting-intellisense.md
+  - name: IntelliSense 支持的 Transact-SQL 语法
+    href: transact-sql-syntax-supported-by-intellisense.md
+- name: Transact-SQL 代码段
+  href: transact-sql-code-snippets.md
+  items:
+  - name: 插入 Transact-SQL 代码段
+    href: insert-transact-sql-snippets.md
+  - name: 插入外侧 Transact-SQL 代码段
+    href: insert-surround-with-transact-sql-snippets.md
+  - name: 完成 Transact-SQL 代码段
+    href: complete-transact-sql-snippets.md
+  - name: 添加 Transact-SQL 代码段
+    href: add-transact-sql-snippets.md
+- name: Transact-SQL 调试器
+  href: transact-sql-debugger.md
+  items:
+  - name: 运行 TSQL 调试器之前配置防火墙规则
+    href: configure-firewall-rules-before-running-the-tsql-debugger.md
+  - name: 运行 Transact-SQL 调试器
+    href: run-the-transact-sql-debugger.md
+  - name: Transact-SQL 代码
+    href: step-through-transact-sql-code.md
+  - name: Transact-SQL 断点
+    href: transact-sql-breakpoints.md
+    items:
+    - name: 切换断点
+      href: toggle-a-breakpoint.md
+    - name: 启用、禁用和删除断点
+      href: enable-disable-and-delete-breakpoints.md
+    - name: 指定断点条件
+      href: specify-a-breakpoint-condition.md
+    - name: 指定命中计数
+      href: specify-a-hit-count.md
+    - name: 指定断点筛选器
+      href: specify-a-breakpoint-filter.md
+    - name: 指定断点操作
+      href: specify-a-breakpoint-action.md
+    - name: 编辑断点位置
+      href: edit-a-breakpoint-location.md
+  - name: Transact-SQL 调试器 - 信息
+    href: transact-sql-debugger-information.md
+    items:
+    - name: Transact-SQL 调试器 -“错误列表”窗口
+      href: transact-sql-debugger-error-list-window.md
+    - name: Transact-SQL 调试器 -“断点”窗口
+      href: transact-sql-debugger-breakpoints-window.md
+    - name: Transact-SQL 调试器 -“调用堆栈”窗口
+      href: transact-sql-debugger-call-stack-window.md
+    - name: Transact-SQL 调试器 -“局部变量”窗口
+      href: transact-sql-debugger-locals-window.md
+    - name: Transact-SQL 调试器 -“线程”窗口
+      href: transact-sql-debugger-threads-window.md
+    - name: Transact-SQL 调试器 -“命令”窗口
+      href: transact-sql-debugger-command-window.md
+    - name: Transact-SQL 调试器 -“输出”窗口
+      href: transact-sql-debugger-output-window.md
+    - name: Transact-SQL 调试器 -“监视”窗口
+      href: transact-sql-debugger-watch-window.md
+    - name: Transact-SQL 调试器 -“快速监视”对话框
+      href: transact-sql-debugger-quickwatch-dialog-box.md
+  - name: 状态栏（数据库引擎查询编辑器）
+    href: status-bar-database-engine-query-editor.md
+  - name: 在对象资源管理器中查看空间数据
+    href: view-spatial-data-in-object-explorer.md
+    items:
+    - name: “空间结果”窗口
+      href: spatial-results-window.md
+- name: sqlcmd
+  items:
+  - name: 启动实用工具
+    href: sqlcmd-start-the-utility.md
+  - name: 使用实用工具
+    href: sqlcmd-use-the-utility.md
+  - name: 连接到数据库引擎
+    href: sqlcmd-connect-to-the-database-engine.md
+  - name: 运行 Transact-SQL 脚本文件
+    href: sqlcmd-run-transact-sql-script-files.md
+  - name: 与脚本变量结合使用
+    href: sqlcmd-use-with-scripting-variables.md
+- name: 生成脚本 (SQL Server Management Studio)
+  href: generate-scripts-sql-server-management-studio.md
+  items:
+  - name: “生成和发布脚本向导”
+    href: generate-and-publish-scripts-wizard.md
+    items:
+    - name: 生成脚本向导支持的对象
+      href: objects-supported-by-the-generate-scripts-wizard.md
+ms.openlocfilehash: 0af0621ecb4c4a69879cee63196222748c2824b0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642492"

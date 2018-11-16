@@ -11,12 +11,12 @@ ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d66f118490cf0a665b94f3b0ae64c43f6179243
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f732c4038940ef2ed5ee511e399f3bcf2efae54f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658195"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606887"
 ---
 # <a name="buffer-pool-extension"></a>缓冲池扩展
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47658195"
  以下术语适用于缓冲池扩展功能。  
   
  固态硬盘 (SSD)  
- 固态硬盘将数据永久存储在内存 (RAM) 中。 有关详细信息，请参阅 [此定义](http://en.wikipedia.org/wiki/Solid-state_drive)。  
+ 固态硬盘将数据永久存储在内存 (RAM) 中。 有关详细信息，请参阅 [此定义](https://en.wikipedia.org/wiki/Solid-state_drive)。  
   
  缓冲区  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中，一个缓冲区就是一个 8 KB 大小的内存页，其大小与一个数据页或索引页相同。 因此，缓冲区缓存被划分为多个 8-KB 页。 缓冲区缓存中会保留一页，直到缓冲区管理器需要该缓冲区读入更多数据。 数据只有在被修改后才重新写入磁盘。 这些内存中已修改的页称为脏页。 当一页等同于它在磁盘上的数据库映像时，该页就是干净页。 在将缓冲区缓存中的数据写回磁盘之前，可对其进行多次修改。  
