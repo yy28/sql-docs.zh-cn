@@ -13,12 +13,12 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: faed832ea0ed4fa1dcc52232a36a22a6f848f5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789365"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604187"
 ---
 # <a name="server-properties---connections-page"></a>服务器属性 -“连接”页
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47789365"
  查看此窗格上选项的当前运行值。 这些值是只读的。  
   
 ## <a name="see-also"></a>另请参阅  
- [选项（查询执行：SQL Server：高级页）](http://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [选项（查询执行：SQL Server：高级页）](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [服务器配置选项 (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

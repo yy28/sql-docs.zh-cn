@@ -20,12 +20,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 986d3bf99eb08279dab77ed12ff1b04dccce1538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cb0ba9c72da4fe69988fa580ba3080237b3b078
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818121"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640674"
 ---
 # <a name="execute-package-task"></a>执行包任务
   执行包任务通过允许包将其他包作为工作流的组成部分运行来扩展 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的企业功能。  
@@ -63,7 +63,7 @@ ms.locfileid: "47818121"
  默认情况下，“执行包”任务的 ExecuteOutOfProcess 属性被设置为 **False**，并且子包与父包运行在同一进程中。 如果将此属性设置为 **True**，则在单独的进程中运行子包。 这可能减慢子包的启动。 此外，如果将属性设置为 **True**，则不能在仅工具安装中调试包。 必须安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 有关详细信息，请参阅 [安装 Integration Services](../../integration-services/install-windows/install-integration-services.md)  
   
 ## <a name="extending-transactions"></a>扩展事务  
- 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)。  
+ 父包使用的事务可扩展到子包；因此，两个包都执行的工作可以提交或回滚。 例如，取决于子包执行的数据库插入，父包执行的数据库插入可以提交或回滚，反之亦然。 有关详细信息，请参阅 [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)。  
   
 ## <a name="propagating-logging-details"></a>传播日志记录详细信息  
  执行包任务运行的子包可能配置为使用日志记录，也可能没有配置为使用日志记录，但子包将始终将日志详细信息转发给父包。 如果执行包任务配置为使用日志记录，则任务将记录来自子包的日志详细信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。  
@@ -83,7 +83,7 @@ ms.locfileid: "47818121"
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了一种配置类型（父包变量配置），用于将值从父包传递到子包。 配置在子包中生成，并使用父包中的变量。 将配置映射到子包中的某个变量，或映射到子包中某个对象的属性。 该变量还可以用于脚本任务或脚本组件所使用的脚本中。  
   
--   **Parameters**  
+-   **参数**  
   
      您可以配置执行包任务以将父包变量或参数（或项目参数）映射到子包参数。 项目必须使用项目部署模型，并且子包必须包含在父包所在的同一项目中。 有关详细信息，请参阅 [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "47818121"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>以编程方式配置执行包任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  

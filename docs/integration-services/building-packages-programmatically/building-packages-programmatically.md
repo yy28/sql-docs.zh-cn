@@ -11,12 +11,12 @@ ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af4c525e2ce481b8053804d49f194449ed6cf58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728255"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640964"
 ---
 # <a name="building-packages-programmatically"></a>以编程方式生成包
   如果您需要动态创建包，或需要在开发环境之外管理和执行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包，则可以采用编程方式对包进行操作。 如果采用这种方法，则有一系列选择：  
@@ -92,9 +92,9 @@ ms.locfileid: "47728255"
   
 ## <a name="external-resources"></a>外部资源  
   
--   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkID=131204)  
+-   www.codeplex.com/MSFTISProdSamples 上的 CodePlex 示例 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkID=131204)  
   
--   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](http://go.microsoft.com/fwlink/?LinkId=238831)  
+-   blogs.msdn.com 上的博客文章[自定义扩展插件性能探查](https://go.microsoft.com/fwlink/?LinkId=238831)  
 
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

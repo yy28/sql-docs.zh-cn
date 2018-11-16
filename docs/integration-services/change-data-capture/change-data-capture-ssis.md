@@ -14,12 +14,12 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 57ceb8a68ec89d1bb0f5e78109445719d84d731a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff152320679a4a315da2630ecb426ce9ba2cc7b3
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804655"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641144"
 ---
 # <a name="change-data-capture-ssis"></a>变更数据捕获 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，变更数据捕获为有效地执行从源表到数据市场和数据仓库的增量加载提供了一种颇有成效的解决方案。  
@@ -96,9 +96,9 @@ ms.locfileid: "47804655"
 ## <a name="samples-of-change-data-capture-packages"></a>变更数据捕获包的示例  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了两个示例来演示如何使用包中的变更数据捕获。 有关详细信息，请参阅以下主题：  
   
--   [Readme_Change Data Capture for Specified Interval Package Sample（关于指定间隔的变更数据捕获包示例的自述文件）](http://go.microsoft.com/fwlink/?LinkId=133507)  
+-   [Readme_Change Data Capture for Specified Interval Package Sample（关于指定间隔的变更数据捕获包示例的自述文件）](https://go.microsoft.com/fwlink/?LinkId=133507)  
   
--   [关于自上次请求以来的变更数据捕获包示例的自述文件](http://go.microsoft.com/fwlink/?LinkId=133508)  
+-   [关于自上次请求以来的变更数据捕获包示例的自述文件](https://go.microsoft.com/fwlink/?LinkId=133508)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -119,6 +119,6 @@ ms.locfileid: "47804655"
 -   [执行多个表的增量加载](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
 ## <a name="related-content"></a>相关内容  
- sqlblog.com 上的博客文章 [SSIS 设计模式 – 增量加载](http://go.microsoft.com/fwlink/?LinkId=217679)  
+ sqlblog.com 上的博客文章 [SSIS 设计模式 – 增量加载](https://go.microsoft.com/fwlink/?LinkId=217679)  
   
   

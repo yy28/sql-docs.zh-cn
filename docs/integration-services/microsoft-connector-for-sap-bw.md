@@ -11,17 +11,17 @@ ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7760f09bd6e48732a411f1b58cbc0c8b310bd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbb7e2458432bb39ff452b703441fc320d2e645
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767375"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639574"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 由一组三个组件构成，可用于从 SAP Netweaver BW 版本 7 系统中提取数据以及向该系统中加载数据。  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 是 SQL Server 2016 功能包的一个组件。 若要安装 Connector for SAP BW 及其文档，请从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载并运行安装程序。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 是 SQL Server 2016 功能包的一个组件。 若要安装 Connector for SAP BW 及其文档，请从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载并运行安装程序。  
 
 > [!IMPORTANT]
 > Microsoft 预计不会提供 SAP BW 连接器的更新版本。 Microsoft 未拥有由第三方开发的 SAP BW 组件的源代码，因此无法更新它们。 考虑从 Microsoft ISV 合作伙伴（例如 [Theobald 软件](https://theobald-software.com/en/xtract-is-productinfo.html)）购买最新的 SAP 连接组件。 Microsoft 的 ISV 合作伙伴已为 SSIS 调整了其 SAP 连接组件，以便在 Azure 中安装。
@@ -41,7 +41,7 @@ ms.locfileid: "47767375"
   
 -   **SAP BW 连接管理器**- SAP BW 连接管理器将 SAP BW 源或 SAP BW 目标连接到 SAP Netweaver BW 版本 7 系统。  
   
- 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](http://go.microsoft.com/fwlink/?LinkId=301897)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
+ 有关演示如何配置和使用 SAP BW 连接管理器、源和目标的演练，请参阅白皮书 [将 SQL Server Integration Services 与 SAP BI 7.0 一起使用](https://go.microsoft.com/fwlink/?LinkId=301897)。 此白皮书还说明如何在 SAP BW 中配置所需的对象。  
   
 ## <a name="documentation"></a>文档  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW 的此帮助文件包含以下主题和部分：  
