@@ -17,12 +17,12 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dbbe5f928134a6a759129f3c1639c3dd1984b726
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cea93d9a41b2cd7cbac8f35588ae9c071fbcf0e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624996"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642174"
 ---
 # <a name="transfer-logins-task"></a>传输登录名任务
   传输登录名任务在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例之间传输一个或多个登录名。  
@@ -36,7 +36,7 @@ ms.locfileid: "47624996"
  传输登录名任务并不报告登录名传输的进度，它仅报告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>执行值  
- 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的登录名数。 通过将用户定义的变量分配给传输登录名任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关登录名传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 在该任务的 **ExecutionValue** 属性中定义的执行值返回已传输的登录名数。 通过将用户定义的变量分配给传输登录名任务的 **ExecValueVariable** 属性，包中的其他对象就可以访问有关登录名传输的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="log-entries"></a>日志项  
  传输登录名任务包括下列自定义日志项：  
@@ -75,7 +75,7 @@ ms.locfileid: "47624996"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-transfer-logins-task"></a>传输登录名任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  

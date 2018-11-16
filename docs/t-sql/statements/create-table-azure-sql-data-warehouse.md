@@ -13,12 +13,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dc5e566ecbb27e88f730af0423d179b8829f51ed
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: d647102d72b9ec3dc03e0887dbc1b9abe60a3308
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120424"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703815"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE（Azure SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -165,7 +165,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="DataTypes"></a> 数据类型
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 支持最常用的数据类型。 以下是支持的数据类型及其详细信息和存储字节的列表。 若要更好地理解数据类型以及如何使用它们，请参阅 [SQL 数据仓库中表的数据类型](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types)。
 
-有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/) 的“隐式转换”部分。
+有关数据类型转换的表，请参阅 [CAST 和 CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/) 的“隐式转换”部分。
 
 `datetimeoffset` [ ( n ) ]  
  n 的默认值为 7。  
@@ -291,7 +291,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  
 每个分发包含所有的表分区。 例如，如果有 60 个分发和 4 个表分区，则会有 320 个分区。 如果该表是一个群集列存储索引，每个分区将有一个列存储索引，这意味着你将拥有 320 个列存储索引。
 
-我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关更多指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)  
+我们建议使用更少的表分区，确保每个列存储索引具有足够的行以充分利用列存储索引的优势。 有关更多指南，请参阅[对 SQL 数据仓库中的表进行分区](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/)和[为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>行存储表（堆或聚集索引）  
@@ -304,7 +304,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 
 有关详细信息，请参阅以下文章：
 - [列存储索引版本的功能摘要](https://msdn.microsoft.com/library/dn934994/)
-- [为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-tables-index/)
+- [为 SQL 数据仓库中的表编制索引](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [列存储索引指南](~/relational-databases/indexes/columnstore-indexes-overview.md) 
  
 <a name="LimitationsRestrictions"></a>  

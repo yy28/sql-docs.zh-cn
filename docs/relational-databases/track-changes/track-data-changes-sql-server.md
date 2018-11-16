@@ -1,12 +1,10 @@
 ---
 title: 跟踪数据更改 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], compared to change tracking
@@ -22,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a668e59baa2b412a960447b1fe14c6adf596804e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625377"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666406"
 ---
 # <a name="track-data-changes-sql-server"></a>跟踪数据更改 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.locfileid: "47625377"
   
      介绍更改跟踪，提供更改跟踪工作方式的概要说明，并描述更改跟踪如何与其他 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 功能进行交互。  
   
--   [Microsoft Sync Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      提供 [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 和 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的完整文档。 在 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]的文档中，“如何使用 SQL Server 更改跟踪”主题包含了详细信息和代码示例。  
   
@@ -178,7 +176,7 @@ ms.locfileid: "47625377"
  [变更跟踪函数 (Transact-SQL)](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [更改数据捕获存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [变更数据捕获表 (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [与变更数据捕获相关的动态管理视图 (Transact-SQL)](http://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [与变更数据捕获相关的动态管理视图 (Transact-SQL)](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   
 

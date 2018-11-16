@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ecdfe3131c797dc10c1bfe87fcfd6c7e7a3eb1c9
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: d0b16356be0c36f48f9e82b4a49e483c3eac529b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806827"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704085"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查询
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -287,7 +287,7 @@ ms.locfileid: "49806827"
    > [!NOTE]
    > QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 提示不会重写默认或旧版基数估计设置（如果它是通过数据库范围的配置、跟踪标志或 QUERYTRACEON 等其他查询提示强制执行的）。   
    > 此提示仅影响查询优化器的行为。 它不会影响可能依赖于[数据库兼容性级别](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的其他功能（例如，某些数据库功能的可用性）。  
-   > 若要了解有关此提示的详细信息，请参阅[开发人员选择：提示查询执行模型](http://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)。
+   > 若要了解有关此提示的详细信息，请参阅[开发人员选择：提示查询执行模型](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)。
     
 *  'QUERY_PLAN_PROFILE'      
  启用用于查询的轻型分析。 当包含此新提示的查询完成时，会触发一个新扩展事件：query_plan_profile。 此扩展事件公开执行统计信息和实际执行计划 XML，类似于 query_post_execution_showplan 扩展事件，但仅针对包含新提示的查询。 适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 和 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 开始）。 
@@ -296,7 +296,7 @@ ms.locfileid: "49806827"
   > 如果启用收集 query_post_execution_showplan 扩展事件，会向在服务器上运行的每个查询添加标准分析基础结构，因此可能会影响服务器的总体性能。      
   > 如果启用 query_thread_profile 扩展事件集合以改为使用轻量分析基础结构，这将在很大程度上减少性能开销，但仍会影响服务器的总体性能。       
   > 如果启用 query_plan_profile 扩展事件，将只启用通过 QUERY_PLAN_PROFILE 执行的查询的轻量分析基础结构，因此不会影响服务器上的其他工作负载。 使用此提示来分析特定查询，而不会影响服务器工作负载的其他部分。
-  > 若要了解有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
+  > 若要了解有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
  
 可以使用动态管理视图 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) 查询所有受支持的 USE HINT 名称的列表。    
 

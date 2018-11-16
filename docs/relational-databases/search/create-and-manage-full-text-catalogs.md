@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1367695210017990a780835c92cdae68500f9b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 727ad77d1e757014f723d1ca1a10b9c5502cad50
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681255"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>创建和管理全文索引目录
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ GO
   
 3.  选择“新建全文目录”。  
   
-4.  在“新建全文目录”对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](http://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)。  
+4.  在“新建全文目录”对话框中，指定要重新创建的目录的信息。 有关详细信息，请参阅[新建全文目录（常规页）](https://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)。  
   
     > [!NOTE]  
     >  全文目录 ID 从 00005 开始，每创建一个新目录，其 ID 值就会递增 1。  

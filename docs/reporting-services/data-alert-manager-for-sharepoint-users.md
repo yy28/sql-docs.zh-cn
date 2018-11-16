@@ -12,12 +12,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7bd21f8be841437b15f780001221da72d9f665aa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030676"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813620"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 用户的数据警报管理器
 
@@ -36,7 +36,7 @@ ms.locfileid: "50030676"
 
  您还可以直接通过使用 URL 打开数据警报管理器。 下面的内容显示 URL 的语法：  
   
- `http://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
+ `https://<site name>/_layouts/ReportServer/MyDataAlerts.aspx`  
   
 > [!NOTE]  
 >  在您可以使用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 警报功能之前，管理员必须向您授予权限。 有关所需权限的信息，请参阅 [Reporting Services 数据警报](../reporting-services/reporting-services-data-alerts.md)。  

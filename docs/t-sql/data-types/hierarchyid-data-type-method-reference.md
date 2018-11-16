@@ -19,12 +19,12 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ba71850b1a4c3b8ab3b09749d03205b441f443d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bba3aa9dd92086fa887e92c5c5efc3379f419fd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779965"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702946"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 数据类型方法引用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,6 +93,6 @@ hierarchyid 数据类型可按如下方法转换为其他数据类型：
   
 ## <a name="see-also"></a>另请参阅
 [分层数据 (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  
-[hierarchyid 数据类型方法引用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
+[hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ab251afd774e36f35a2c96e7519d3b799b33a9c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 38e7e01ded63509ea117c3cc344e5ca493cc36f5
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032066"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814080"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   报表服务器 Web 服务使用简单对象访问协议 (SOAP) 消息通过网络发送基于文本的命令。 这些命令采用的形式为使用 HTTP 通过万维网发送的 XML 文本。 通过将 SOAP 用作其通信协议，报表服务器 Web 服务使应用程序和组件能够使用开放和广为接受的基础结构与报表服务器交换数据。 SOAP 标准在 www.w3.org/TR/SOAP 中定义。  
@@ -30,9 +30,9 @@ ms.locfileid: "50032066"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 SOAP 消息采取许多不同的形式，具体取决于客户端发出的请求类型。 以下示例表示一个简单 SOAP 客户端请求，它请求从报表服务器数据库中删除某个项。  
   
 ```  
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItem xmlns="http://www.microsoft.com/sql/ReportingServer">  
+        <DeleteItem xmlns="https://www.microsoft.com/sql/ReportingServer">  
             <item>/Samples/Report1</item>  
         </DeleteItem>  
     </soap:Body>  
@@ -48,9 +48,9 @@ public void DeleteItem(string item);
  来自服务器的响应可能如下所示：  
   
 ```  
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+<soap:Envelope xmlns:soap="https://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
     <soap:Body>  
-        <DeleteItemResponse xmlns="http://www.microsoft.com/sql/ReportingServer" />  
+        <DeleteItemResponse xmlns="https://www.microsoft.com/sql/ReportingServer" />  
     </soap:Body>  
 </soap:Envelope>  
 ```  

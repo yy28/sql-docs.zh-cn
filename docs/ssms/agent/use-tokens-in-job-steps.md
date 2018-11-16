@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bf01cb77d048c5d76de4cbc75ac43d41a9a509c3
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 42d80d891621de73b4bc333ad1728e595a8bf810
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743222"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703575"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作业步骤中使用标记
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "50743222"
 ## <a name="updating-job-steps-to-use-macros"></a>更新作业步骤以使用宏  
 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 开始，包含不带转义宏的标记的作业步骤将失败，并返回错误消息，指示作业步骤包含一个或多个必须在作业运行之前使用宏进行更新的标记。  
   
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] 知识库文章 915845： [在 SQL Server 2005 Service Pack 1 中使用标记的 SQL Server 代理作业步骤将失败](http://support.microsoft.com/kb/915845)提供的脚本。可以使用此脚本通过 **ESCAPE_NONE** 宏更新所有使用标记的作业步骤。 使用此脚本之后，我们建议你尽快查看使用标记的作业步骤，并将 **ESCAPE_NONE** 宏替换为适用于作业步骤上下文的转义宏。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] 知识库文章 915845： [在 SQL Server 2005 Service Pack 1 中使用标记的 SQL Server 代理作业步骤将失败](https://support.microsoft.com/kb/915845)提供的脚本。可以使用此脚本通过 **ESCAPE_NONE** 宏更新所有使用标记的作业步骤。 使用此脚本之后，我们建议你尽快查看使用标记的作业步骤，并将 **ESCAPE_NONE** 宏替换为适用于作业步骤上下文的转义宏。  
   
 下表说明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理如何处理标记替换。 若要启用或禁用警报标记替换，请在对象资源管理器中右键单击“SQL Server 代理”，选择“属性”，然后在“警报系统”页上选中或清除“为警报的所有作业响应替换标记”复选框。  
   

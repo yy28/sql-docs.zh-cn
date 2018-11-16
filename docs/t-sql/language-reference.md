@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 238ce05661786893afcb8757bd56e4cc31f8dbe4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e8d57d294ffe2fe70a4bbfcf805d4eeb350771f2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970758"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697336"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 引用（数据库引擎）
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "50970758"
  
 ## <a name="get-help-from-the-msdn-forum"></a>通过 MSDN 论坛获得帮助  
   
-有关联机帮助的信息，请参阅 [MSDN Transact-SQL 论坛](http://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)。  
+有关联机帮助的信息，请参阅 [MSDN Transact-SQL 论坛](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)。  
  
 ## <a name="see-other-language-references"></a>查看其他语言参考
 

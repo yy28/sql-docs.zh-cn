@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d8b28b0799ec5ffac1f00e54cf2305a1027bc35
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: d0a87e49956227a168bb77059ae9311d8c775c4e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031406"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813224"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>将 Reporting Services 项目固定到 Power BI 仪表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 使用户能够将报表查看器工具栏中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表项作为新磁贴固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 仪表板。   若要固定，你的管理员需要先将报表服务器与 Azure Active Directory 和 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]相集成。  
@@ -34,7 +34,7 @@ ms.locfileid: "50031406"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   可从 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表查看器固定，例如 `http://myserver/Reports`。  不能从 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的报表设计器，或从报表服务器 URL 固定。  例如 `http://myserver/ReportServer`。  
+-   可从 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 中的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 报表查看器固定，例如 `https://myserver/Reports`。  不能从 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的报表设计器，或从报表服务器 URL 固定。  例如 `https://myserver/ReportServer`。  
   
 -   你的浏览器需要配置为允许从报表服务器站点弹出窗口。  
   

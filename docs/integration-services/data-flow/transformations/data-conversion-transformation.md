@@ -18,12 +18,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 136cc16c9a28fbaddeb0ebe655db016697ef3c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0940bc5266111c55437a5d45ad64595787eace40
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821155"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642274"
 ---
 # <a name="data-conversion-transformation"></a>数据转换
   数据转换将输入列中的数据转换为其他数据类型，然后将其复制到新的输出列。 例如，包可从多个源中提取数据，然后用此转换将列转换为目标数据存储所需的数据类型。 可以对单个输入列应用多个转换。  
@@ -47,10 +47,10 @@ ms.locfileid: "47821155"
  此转换有一个输入、一个输出和一个错误输出。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关在 SSIS 设计器中使用数据转换的信息，请参阅[使用数据转换将数据转换为其他数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)。 有关如何以编程方式设置此转换的属性的信息，请参阅 [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 和 [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。 有关在 SSIS 设计器中使用数据转换的信息，请参阅[使用数据转换将数据转换为其他数据类型](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)。 有关如何以编程方式设置此转换的属性的信息，请参阅 [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 和 [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)。  
   
 ## <a name="related-content"></a>相关内容  
- blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](http://go.microsoft.com/fwlink/?LinkId=220823)。  
+ blogs.msdn.com 上的博客文章 [SSIS 2008 中数据类型转换技术之间的性能比较](https://go.microsoft.com/fwlink/?LinkId=220823)。  
   
 ## <a name="data-conversion-transformation-editor"></a>数据转换编辑器
   可以使用 **“数据转换编辑器”** 对话框，选择要转换的列和要将列转换成的数据类型以及设置转换属性。  
@@ -84,10 +84,10 @@ ms.locfileid: "47821155"
  为 DT_STR 类型的列选择相应的代码页。  
   
  **配置错误输出**  
- 使用 [配置错误输出](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理行级错误的方式。  
+ 使用 [配置错误输出](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 对话框指定处理行级错误的方式。  
   
 ## <a name="see-also"></a>另请参阅  
- [快速分析](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
+ [快速分析](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

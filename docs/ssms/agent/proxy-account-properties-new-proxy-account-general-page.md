@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3cf80df907dfe313d7282d0cf4efe31bd9b7f56
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: d33f7a468dfcff6274c4a48cfd367ea4c64226e1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099638"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696065"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>代理帐户属性 - 新建代理帐户（“常规”页）
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50099638"
 键入代理的凭据名称。  
   
 > [!NOTE]  
-> 提供的凭据名称必须是一个现有凭据的名称。 有关创建凭据的详细信息，请参阅 [如何创建代理 (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)。  
+> 提供的凭据名称必须是一个现有凭据的名称。 有关创建凭据的详细信息，请参阅 [如何创建代理 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)。  
   
 **...**  
 启动“选择凭据”对话框。  

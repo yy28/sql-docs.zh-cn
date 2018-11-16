@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 809d427a6644a95a9f86ec3fbc9bf0d19023cc32
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 76d770e5a6e01707eaebef67a1db147719395f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030008"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814010"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>数据连接、数据源和连接字符串（报表生成器和 SSRS）
 
@@ -97,7 +97,7 @@ ms.locfileid: "50030008"
  连接字符串是数据访问接口的连接属性的文本表示形式。 下表列出了各种数据连接类型的连接字符串示例。  
  
  > [!NOTE]  
->  访问[Connectionstrings.com](http://www.connectionstrings.com/) 是可获取连接字符串示例的另一种方法。 
+>  访问[Connectionstrings.com](https://www.connectionstrings.com/) 是可获取连接字符串示例的另一种方法。 
   
 |**Data source**|**示例**|**Description**|  
 |---------------------|-----------------|---------------------|  
@@ -108,18 +108,18 @@ ms.locfileid: "50030008"
 |SQL Server 并行数据仓库|`HOST=<IP address>;database= AdventureWorks; port=<port>`|将数据源类型设置为 **Microsoft SQL Server Parallel Data Warehouse**。 有关详细信息，请参阅 [SQL Server 并行数据仓库连接类型 (SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
 |本地服务器上的 Analysis Services 数据库|`data source=localhost;initial catalog=Adventure Works DW`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 有关详细信息，请参阅[针对 MDX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或[针对 DMX 的 Analysis Services 连接类型 (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
 |具有 Sales 透视的 Analysis Services 表格模型数据库|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|将数据源类型设置为 **Microsoft SQL Server Analysis Services**。 在 cube= 设置中指定透视名称。 有关详细信息，请参阅 [透视表（SSAS 表格）](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
-|在本机模式下配置的报表服务器上的报表模型数据源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。 有关详细信息，请参阅[报表模型连接 (SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)。|  
-|在 SharePoint 集成模式下配置的报表服务器上的报表模型数据源|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。|  
+|在本机模式下配置的报表服务器上的报表模型数据源|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。 有关详细信息，请参阅[报表模型连接 (SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md)。|  
+|在 SharePoint 集成模式下配置的报表服务器上的报表模型数据源|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|指定报表服务器或文档库 URL 以及报表服务器文件夹或文档库文件夹命名空间中已发布的模型的路径。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服务器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|将数据源类型设置为 **OLE DB Provider for OLAP Services 8.0**。<br /><br /> 如果将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 属性设置为 **8.0** ，则可以快速连接到 **2000**数据源。 若要设置此属性，请使用 **“连接属性”** 对话框中的 **“高级属性”** 选项卡。|  
 |Oracle 服务器|`data source=myserver`|将数据源类型设置为 **Oracle**。 此外，还必须在报表设计器计算机上和报表服务器上安装 Oracle 客户端工具。 有关详细信息，请参阅 [Oracle 连接类型 (SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md)。|  
-|SAP NetWeaver BI 数据源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|将数据源类型设置为 **SAP NetWeaver BI**。 有关详细信息，请参阅 [SAP NetWeaver BI 连接类型 (SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
-|Hyperion Essbase 数据源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|将数据源类型设置为 **Hyperion Essbase**。 有关详细信息，请参阅 [Hyperion Essbase 连接类型 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
+|SAP NetWeaver BI 数据源|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|将数据源类型设置为 **SAP NetWeaver BI**。 有关详细信息，请参阅 [SAP NetWeaver BI 连接类型 (SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
+|Hyperion Essbase 数据源|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|将数据源类型设置为 **Hyperion Essbase**。 有关详细信息，请参阅 [Hyperion Essbase 连接类型 (SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)。|  
 |Teradata 数据源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|将数据源类型设置为 **Teradata**。 连接字符串是包含四个字段的 Internet 协议 (IP) 地址，其中每个字段可以包含一至三位数。 有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。|  
 |Teradata 数据源|`Database=` *\<database name>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|与前一示例类似，将数据源类型设置为 **Teradata**。 请仅使用在 Database 标记中指定的默认数据库，不要自动发现数据关系。|  
-|XML 数据源、Web 服务|`data source=http://adventure-works.com/results.aspx`|将数据源类型设置为 **XML**。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。|  
-|XML 数据源、XML 文档|`http://localhost/XML/Customers.xml`|将数据源类型设置为 **XML**。 其连接字符串是一个指向 XML 文档的 URL。|  
+|XML 数据源、Web 服务|`data source=https://adventure-works.com/results.aspx`|将数据源类型设置为 **XML**。 连接字符串是支持 Web 服务定义语言 (WSDL) 的 Web 服务的 URL。 有关详细信息，请参阅 [XML 连接类型 (SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)。|  
+|XML 数据源、XML 文档|`https://localhost/XML/Customers.xml`|将数据源类型设置为 **XML**。 其连接字符串是一个指向 XML 文档的 URL。|  
 |XML 数据源、嵌入的 XML 文档|*Empty*|将数据源类型设置为 **XML**。 XML 数据嵌入在报表定义中。|  
-|SharePoint 列表|`data source=http://MySharePointWeb/MySharePointSite/`|将数据源类型设置为 **SharePoint List**。|  
+|SharePoint 列表|`data source=https://MySharePointWeb/MySharePointSite/`|将数据源类型设置为 **SharePoint List**。|  
   
  如果无法使用 **localhost**连接到报表服务器，请检查是否已启用网络协议 TCP/IP 协议。 有关详细信息，请参阅 [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md)。  
   

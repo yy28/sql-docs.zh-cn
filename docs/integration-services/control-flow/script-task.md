@@ -19,12 +19,12 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c484ce29354bc21b1aaa0d5d9b708beb10cc5944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 872991355d16ccd5dbd237baa4830957483b51ab
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614795"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641955"
 ---
 # <a name="script-task"></a>脚本任务
   脚本任务提供代码来执行内置任务中没有的函数以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的转换。 脚本任务还可将函数组合到一个脚本中，而不必使用多个任务和转换。 脚本任务用于执行必须在包中一次完成（或每个枚举对象一次完成）、而不是每个数据行一次完成的工作。  
@@ -83,7 +83,7 @@ ms.locfileid: "47614795"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请参阅以下主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>以编程方式配置脚本任务  
  有关以编程方式设置这些属性的详细信息，请参阅以下主题：  
@@ -143,6 +143,6 @@ ms.locfileid: "47614795"
   
 ## <a name="related-content"></a>相关内容  
   
--   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
+-   shareourideas.com 上的技术文章 [How to send email with delivery notification in C#](https://go.microsoft.com/fwlink/?LinkId=237625)（如何在 C# 中发送具有传递通知的电子邮件）  
   
   

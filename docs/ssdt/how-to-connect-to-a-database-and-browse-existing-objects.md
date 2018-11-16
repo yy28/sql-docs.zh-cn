@@ -13,17 +13,17 @@ ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ac1a6b3363b826bab1530fb162ee6c0cb76c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608087"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670457"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>如何：连接到数据库并浏览现有对象
 数据库管理员和开发人员的一个非常常见的任务是连接到活动数据库，并且针对其对象设计或浏览其架构和查询。 Visual Studio 中的 SQL Server 对象资源管理器现在包含一个专用的 SQL Server 节点，在该节点下，所有连接的 SQL Server 实例及其数据库都在类似 SSMS 的层次结构下进行分组。 连接的 SQL Server 实例可以是内部实例，例如运行 SQL Server 2008 的实例，也可以是外部 SQL Azure 实例。  
   
-下面的过程假定您已安装了 AdventureWorks 示例数据库。 可以使用 [CodePlex](http://msftdbprodsamples.codeplex.com/) 为不同的 SQL Server 版本查找并安装示例数据库。 如果您愿意，还可以执行以下步骤并使用您的服务器上的现有数据库。  
+下面的过程假定您已安装了 AdventureWorks 示例数据库。 可以使用 [CodePlex](https://msftdbprodsamples.codeplex.com/) 为不同的 SQL Server 版本查找并安装示例数据库。 如果您愿意，还可以执行以下步骤并使用您的服务器上的现有数据库。  
   
 ### <a name="to-connect-to-a-database-instance"></a>连接到一个数据库实例  
   

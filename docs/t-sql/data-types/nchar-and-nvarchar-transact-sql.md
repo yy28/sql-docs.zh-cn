@@ -17,24 +17,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 856f26ac921a1bbe4f467cd11b785ee3868eeac2
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643885"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696725"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 和 nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-字符数据类型 nchar（长度固定）或 nvarchar（长度可变）。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-16](http://www.wikipedia.org/wiki/UTF-16) 字符编码。 若指定了非 SC 排序规则，则这些数据类型仅会存储 [UCS-2](http://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字符编码支持的字符数据子集。
+字符数据类型 nchar（长度固定）或 nvarchar（长度可变）。 从 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 起，使用启用了[补充字符 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 字符编码。 若指定了非 SC 排序规则，则这些数据类型仅会存储 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 字符编码支持的字符数据子集。
   
 ## <a name="arguments"></a>参数  
 **nchar** [ ( n ) ]  
-固定长度字符串数据。 n 用于定义字符串长度（以双字节为单位），并且它必须为 1 到 4,000 之间的值。 存储大小为 n 字节的两倍。 对于 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍，并且可存储的字符数也为 n。 对于 UTF-16 编码，存储大小仍为 n 个字节的两倍，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。 nchar 的 ISO 同义词是 national char 和 national character。
+固定长度字符串数据。 n 用于定义字符串长度（以双字节为单位），并且它必须为 1 到 4,000 之间的值。 存储大小为 n 字节的两倍。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍，并且可存储的字符数也为 n。 对于 UTF-16 编码，存储大小仍为 n 个字节的两倍，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。 nchar 的 ISO 同义词是 national char 和 national character。
   
 **nvarchar** [ ( n | **max** ) ]  
-可变长度字符串数据。 n 用于定义字符串长度（以双字节为单位），并且它可以是 1 到 4,000 之间的值。 max 指示最大存储大小是 2^30-1 个字符 (2 GB)。 存储大小为 n 字节的两倍 + 2 个字节。 对于 [UCS-2](http://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍 + 2 个字节，并且可存储的字符数也为 n。 对于 UTF-16 编码，存储大小仍为 n 个字节的两倍 + 2 个字节，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](http://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。 nvarchar 的 ISO 同义词是 national char varying 和 national character varying。
+可变长度字符串数据。 n 用于定义字符串长度（以双字节为单位），并且它可以是 1 到 4,000 之间的值。 max 指示最大存储大小是 2^30-1 个字符 (2 GB)。 存储大小为 n 字节的两倍 + 2 个字节。 对于 [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 编码，存储大小为 n 个字节的两倍 + 2 个字节，并且可存储的字符数也为 n。 对于 UTF-16 编码，存储大小仍为 n 个字节的两倍 + 2 个字节，但可存储的字符数可能小于 n，因为补充字符使用两个双字节（也称为[代理项对](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)）。 nvarchar 的 ISO 同义词是 national char varying 和 national character varying。
   
 ## <a name="remarks"></a>Remarks  
 如果没有在数据定义或变量声明语句中指定 n，则默认长度为 1。 如果没有使用 CAST 函数指定 n，则默认长度为 30。
@@ -64,7 +64,7 @@ SET ANSI_PADDING 对于 nchar 和 nvarchar 始终为 ON。 SET ANSI_PADDING OFF 
 ## <a name="see-also"></a>另请参阅
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  

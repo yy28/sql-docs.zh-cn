@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030fc4262f41112eeca34c590eac00701e8ee876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 325a2bad11c168e1b14031b8f16ac71e9dbb7eb3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781225"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661866"
 ---
 # <a name="dynamic-data-masking"></a>动态数据屏蔽
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47781225"
 
 动态数据屏蔽旨在限制敏感数据的公开，防止没有访问权限的用户查看敏感数据。 动态数据屏蔽并不是要防止数据库用户直接连接到数据库并运行可以公开敏感数据的详尽查询。 动态数据屏蔽是对其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全功能（审核、加密、行级别安全性…）的补充，因此，强烈建议你将此功能与上述功能一起使用，以便更好地保护数据库中的敏感数据。  
   
-动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据屏蔽的更多信息，请参阅 [开始使用 SQL 数据库动态数据屏蔽（Azure 门户）](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
+动态数据屏蔽在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]中提供，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令进行配置。 有关如何使用 Azure 门户来配置动态数据屏蔽的更多信息，请参阅 [开始使用 SQL 数据库动态数据屏蔽（Azure 门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)。  
   
 ## <a name="defining-a-dynamic-data-mask"></a>定义动态数据屏蔽  
  针对表中的列定义屏蔽规则即可模糊该列中的数据。 可以使用四种类型的屏蔽。  
@@ -197,4 +197,4 @@ ALTER COLUMN LastName DROP MASKED;
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
  [column_definition (Transact-SQL)](../../t-sql/statements/alter-table-column-definition-transact-sql.md)   
  [sys.masked_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-masked-columns-transact-sql.md)   
- [开始使用 SQL 数据库动态数据屏蔽（Azure 预览门户）](http://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+ [开始使用 SQL 数据库动态数据屏蔽（Azure 预览门户）](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  

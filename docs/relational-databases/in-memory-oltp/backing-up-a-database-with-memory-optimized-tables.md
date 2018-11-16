@@ -11,12 +11,12 @@ ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0d607699e630ee7107b2ae3460e3b3152bb94bb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0faaa704bb7a160d4a17d80a97efd2bae85b629
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671237"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>使用内存优化表备份数据库
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "47703415"
  如果内存优化表在您的数据库大小中占据很大比例，则差异备份可显著减小数据库备份大小。 对于典型 OLTP 工作负荷，差异备份显著小于完整数据库备份。  
   
 ## <a name="see-also"></a>另请参阅  
- [内存优化表的备份、还原和恢复](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+ [内存优化表的备份、还原和恢复](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

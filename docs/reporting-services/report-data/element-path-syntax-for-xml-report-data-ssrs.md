@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 543a3fde9b701bf35ee75444092a73f66ba98ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 836a043b3047a8116b969cfa8e95f26f1f6282f8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688345"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813800"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>用于 XML 报表数据的元素路径语法 (SSRS)
   在报表设计器中，可以通过定义元素路径（区分大小写）来指定 XML 数据源中要用于报表的数据。 元素路径指示如何遍历 XML 数据源中的 XML 层次结构节点及其属性。 若要使用默认元素路径，请将数据集查询或 XML **ElementPath** 的 XML **Query** 保留为空。 从 XML 数据源检索数据时，具有文本值的元素节点和元素节点属性将成为结果集中的列。 运行查询时，节点值和属性将成为行数据。 该列在“报表数据”窗格中显示为数据集字段集合。 本主题介绍元素路径语法。  
@@ -94,10 +94,10 @@ XMLLocalName :: =
   
 |订单|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
-|Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|表|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
-|Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
-|EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
+|Chair|6|1|Bobby|Moore|11|https://www.adventure-works.com|  
+|表|1|2|Bobby|Moore|11|https://www.adventure-works.com|  
+|Sofa|2|8|Crystal|Hu|20|https://www.adventure-works.com|  
+|EndTables|2|15|Wyatt|Diaz|33|https://www.adventure-works.com|  
   
  **示例 #2**： `Customers {}/Customer`  
   
@@ -134,11 +134,11 @@ XMLLocalName :: =
 |15|Wyatt|Diaz|33|  
   
 #### <a name="xml-document-customersxml"></a>XML 文档：Customers.xml  
- 若要尝试前一节中的元素路径示例，可以复制此 XML 并将其保存到报表设计器可以访问的 URL，然后将该 XML 文档用作 XML 数据源：例如， `http://localhost/Customers.xml`。  
+ 若要尝试前一节中的元素路径示例，可以复制此 XML 并将其保存到报表设计器可以访问的 URL，然后将该 XML 文档用作 XML 数据源：例如， `https://localhost/Customers.xml`。  
   
 ```  
 <?xml version="1.0"?>  
-<Customers xmlns="http://www.adventure-works.com">  
+<Customers xmlns="https://www.adventure-works.com">  
    <Customer ID="11">  
       <FirstName>Bobby</FirstName>  
       <LastName>Moore</LastName>  
@@ -185,7 +185,7 @@ XMLLocalName :: =
   
      `<XmlData>`  
   
-5.  复制 Customers.XML 并将文本粘贴到 `<XmlData>`之后的查询窗格中。  
+5.  复制 Customers.XML 并将文本粘贴到 `<XmlData>` 之后的查询窗格中。  
   
 6.  在查询窗格中，删除从 Customers.XML 中复制的第一行： `<?xml version="1.0"?>`  
   

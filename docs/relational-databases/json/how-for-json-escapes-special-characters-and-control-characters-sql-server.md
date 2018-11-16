@@ -13,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add55d50f0af680a7be1f220149ea851d684ea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fda704e778e684aa9b53a073e9540239ed5f975
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734495"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674986"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON 如何转义特殊字符和控制字符 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47734495"
   本主题介绍了 SQL Server **SELECT** 语句的 **FOR JSON** 子句在 JSON 输出中如何转义特殊字符以及如何表示控制字符。  
 
 > [!IMPORTANT]
-> 此页介绍了 Microsoft SQL Server 中对 JSON 的内置支持。 有关 JSON 中的转义和编码的常规信息，请参阅 JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt) 中的 2.5 部分。
+> 此页介绍了 Microsoft SQL Server 中对 JSON 的内置支持。 有关 JSON 中的转义和编码的常规信息，请参阅 JSON RFC - [https://www.ietf.org/rfc/rfc4627.txt](https://www.ietf.org/rfc/rfc4627.txt) 中的 2.5 部分。
 
 ## <a name="escaping-of-special-characters"></a>特殊字符转义  
 如果源数据包含特殊字符，则 **FOR JSON** 子句在 JSON 输出中会使用 `\` 对其进行转义，如下表中所示。 在属性名称及其值中，均会发生这种转义。  
@@ -82,7 +82,7 @@ FOR JSON PATH
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 博客文章  
   
-若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
+若要获取特定解决方案、用例和建议，请参阅有关 SQL Server 和 Azure SQL 数据库中内置 JSON 支持的[博客文章](https://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)。  
 
 ### <a name="microsoft-videos"></a>Microsoft 视频
 

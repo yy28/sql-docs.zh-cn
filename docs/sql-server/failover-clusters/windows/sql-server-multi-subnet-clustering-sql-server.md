@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bde47d4db0a86d84715a0265042e57e2202f497
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6580a1df3ed83d0eec4d6dada7ed2954f44b8989
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704215"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700795"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多子网群集 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,8 @@ ms.locfileid: "47704215"
 |安装 SQL Server 故障转移群集|[创建新的 SQL Server 故障转移群集（安装程序）](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |您的现有 SQL Server 故障转移群集的就地升级|[升级 SQL Server 故障转移群集实例（安装程序）](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |维护您的现有 SQL Server 故障转移群集|[在 SQL Server 故障转移群集中添加或删除节点（安装程序）](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](http://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
-|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)|  
+|使用“故障转移群集管理”管理单元来查看 WSFC 事件和日志|[查看故障转移群集的事件和日志](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|使用 Windows PowerShell 为 WSFC 故障转移群集中的所有节点（或特定节点）创建日志文件|[Get-ClusterLog 故障转移群集 Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)|  
   
 
   

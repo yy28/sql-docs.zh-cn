@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0460b819b4104731421a0ad34e63f28d7a0699e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 231a823dec8d3ad06d7cf858c926cef227d860bd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703105"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,24 +75,24 @@ ms.locfileid: "47649925"
   
 3.  在查询窗口中，使用以下系统存储过程修改作业。  
   
-    -   执行 [sp_update_job (TRANSACT-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 更改作业属性。  
+    -   执行 [sp_update_job (TRANSACT-SQL)](https://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 更改作业属性。  
   
-    -   执行 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 更改作业定义的计划详细信息。  
+    -   执行 [sp_update_schedule (Transact-SQL)](https://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 更改作业定义的计划详细信息。  
   
-    -   执行 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) 添加新的作业步骤。  
+    -   执行 [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) 添加新的作业步骤。  
   
-    -   执行 [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 更改原先存在的作业步骤。  
+    -   执行 [sp_update_jobstep (Transact-SQL)](https://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 更改原先存在的作业步骤。  
   
-    -   执行 [sp_delete_jobstep (TRANSACT-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 从作业中删除作业步骤。  
+    -   执行 [sp_delete_jobstep (TRANSACT-SQL)](https://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 从作业中删除作业步骤。  
   
     -   修改任何 SQLServer 代理主作业的其他存储过程：  
   
-        -   执行 [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 删除当前与作业相关联的服务器。  
+        -   执行 [sp_delete_jobserver (Transact-SQL)](https://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 删除当前与作业相关联的服务器。  
   
-        -   执行 [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) 将某个服务器与当前作业相关联。  
+        -   执行 [sp_add_jobserver (Transact-SQL)](https://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) 将某个服务器与当前作业相关联。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理对象  
 **修改作业**  
   
-通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 **Job** 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 **Job** 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 467490b7d02c0712606f1be3cf90da2d5448c6f6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 8303c08d67a6a18b7dff13db60fccf5653cbae18
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028536"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813502"
 ---
 # <a name="report-definition-language-ssrs"></a>报表定义语言 (SSRS)
   报表定义语言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表定义的 XML 表示形式。 报表定义包含报表的数据检索和布局信息。 RDL 由 XML 元素组成，这些元素符合为 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]创建的 XML 语法。 通过访问报表定义文件中的代码程序集，可以添加您自己的自定义函数，以便控制报表项值、样式和格式。  
@@ -43,7 +43,7 @@ ms.locfileid: "50028536"
   
  例如，此架构包含 RDL 元素 **ReportParameters**，它为复杂类型 **ReportParametersType**。 根据约定，元素的复杂类型是元素名称后跟单词 **Type**。 **ReportParameters** 元素可包含在 **报表** 元素（复杂类型）中，并可包含 **ReportParameter** 元素。 **ReportParameterType** 是只能为下列值之一的简单类型： **Boolean**、 **DateTime**、 **Integer**、 **Float**或 **String**。 有关 XML 架构数据类型的详细信息，请参阅 [XML Schema Part 2: Datatypes Second Edition](https://go.microsoft.com/fwlink/?linkid=4871)（XML 架构第 2 部分：数据类型第二版）。  
   
- 可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取：`http://servername/reportserver/reportdefinition.xsd`。  
+ 可在 ReportDefinition.xsd 文件中找到 RDL XSD，该文件位于产品 CD-ROM 的 Extras 文件夹中。 此外，还可通过以下 URL 在报表服务器上获取：`https://servername/reportserver/reportdefinition.xsd`。  
   
 ##  <a name="bkmk_Creating_RDL"></a> 创建 RDL  
  由于 RDL 的开放式和可扩展特性，可以创建基于其 XML 架构生成 RDL 的各种工具和应用程序。  

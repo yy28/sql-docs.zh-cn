@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f1a61507883ed6a583508f89d6d8cf7ba1a0be
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 716aa4485030a907c8e816f0daf3036c979e2ae5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018410"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660727"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>创建、构造和查询地理实例
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "51018410"
 ###  <a name="gml"></a> 用 GML 文本输入构造地域实例  
  **geography** 数据类型提供了一种用 GML（ **geography** 实例的 XML 表示形式）生成 **geography** 实例的方法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持部分 GML。  
   
- 有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
+ 有关地域标记语言的详细信息，请参阅 OGC 规范： [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)（OGC 规范，地域标记语言）。  
   
  **用 GML 输入构造任意类型的地域实例**  
  [GeomFromGML（geography 数据类型）](../../t-sql/spatial-geography/geomfromgml-geography-data-type.md)  

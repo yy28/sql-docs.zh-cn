@@ -14,12 +14,12 @@ ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb85a4e0f209fd5589c55e0392393c61a57e6fe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 134831664f7b13177dac016bb9b92906a2974eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835917"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703585"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 仲裁模式和投票配置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47835917"
 > [!IMPORTANT]  
 >  为了使用 NodeWeight 设置，必须将以下修补程序应用到 WSFC 群集中的所有服务器：  
 >   
->  [KB2494036](http://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036)：该修补程序用于配置在 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 和 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> 建议的仲裁投票调整  
  在启用或禁用某一给定 WSFC 节点的投票时，应遵循以下准则：  
@@ -110,7 +110,7 @@ ms.locfileid: "47835917"
 >   
 >  -   承载主副本的群集节点不具有投票  
 > -   辅助副本配置用于自动故障转移并且其群集节点不具有投票。  
-> -   [KB2494036](http://support.microsoft.com/kb/2494036) 未安装在承载可用性副本的所有群集节点上。 此修补程序是在多站点部署中为群集节点添加或删除投票所必需的。 但在单站点部署中，此修补程序通常不是必需的并且您可以放心地忽略该警告。  
+> -   [KB2494036](https://support.microsoft.com/kb/2494036) 未安装在承载可用性副本的所有群集节点上。 此修补程序是在多站点部署中为群集节点添加或删除投票所必需的。 但在单站点部署中，此修补程序通常不是必需的并且您可以放心地忽略该警告。  
   
 > [!TIP]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 公开若干系统动态管理视图 (DMV)，可帮助你管理 WSFC 群集配置和节点仲裁投票相关的设置。  
@@ -125,13 +125,13 @@ ms.locfileid: "47835917"
   
 ##  <a name="RelatedContent"></a> 相关内容  
   
--   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [用于高可用性和灾难恢复的 Microsoft SQL Server AlwaysOn 解决方案指南](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Always On 可用性组向导中的仲裁投票配置检查](https://blogs.msdn.microsoft.com/sqlalwayson/2012/03/13/quorum-vote-configuration-check-in-alwayson-availability-group-wizards-andy-jing/)  
   
--   [Windows Server 技术：故障转移群集](http://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Windows Server 技术：故障转移群集](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [故障转移群集分步指南：配置故障转移群集中的仲裁](http://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [故障转移群集分步指南：配置故障转移群集中的仲裁](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [通过强制仲裁进行 WSFC 灾难恢复 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

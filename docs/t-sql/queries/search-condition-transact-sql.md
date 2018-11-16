@@ -38,12 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d57063ee518574adbb5faf2070ef2cfd203885b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e4fb4a2e8da7ecf32e4bec80f3d18a53a022ac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745325"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699795"
 ---
 # <a name="search-condition-transact-sql"></a>搜索条件 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "47745325"
  列名、常量、函数、变量、标量子查询，或者是通过运算符或子查询连接的列名、常量和函数的任意组合。 表达式还可以包含 CASE 表达式。  
   
 > [!NOTE]  
->  非 Unicode 字符串常量和变量使用与数据库的默认排序规则相对应的代码页。 仅使用非 Unicode 字符数据并引用 char、varchar 和 text 类型的非 Unicode 字符数据时，可能发生代码页转换。 如果该代码页与数据库的默认排序规则对应的代码页不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将把非 Unicode 字符串常量和变量转换为与引用列的排序规则或使用 COLLATE 指定的排序规则相对应的代码页。 如果可以找到[最佳匹配映射](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，则无法在新代码页中找到的任何字符都将转换为相似字符，否则将转换为默认替换字符“?”。  
+>  非 Unicode 字符串常量和变量使用与数据库的默认排序规则相对应的代码页。 仅使用非 Unicode 字符数据并引用 char、varchar 和 text 类型的非 Unicode 字符数据时，可能发生代码页转换。 如果该代码页与数据库的默认排序规则对应的代码页不同，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 将把非 Unicode 字符串常量和变量转换为与引用列的排序规则或使用 COLLATE 指定的排序规则相对应的代码页。 如果可以找到[最佳匹配映射](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/)，则无法在新代码页中找到的任何字符都将转换为相似字符，否则将转换为默认替换字符“?”。  
 >  
 > 使用多个代码页时，字符常量可能以大写字母“N”为前缀；为避免发生代码页转换，还可能使用 Unicode 变量。  
   

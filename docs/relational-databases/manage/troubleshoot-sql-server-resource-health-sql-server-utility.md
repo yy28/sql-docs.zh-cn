@@ -11,12 +11,12 @@ ms.assetid: 614f07b5-f221-4013-9f8d-22964cf42270
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 850d0d12572178f58a71beeb13bce9e31f66fbeb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9a99e5c17049c8cd48e131af7a4902317305d749
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029302"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655467"
 ---
 # <a name="troubleshoot-sql-server-resource-health-sql-server-utility"></a>SQL Server 资源运行状况故障排除（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,12 +24,12 @@ ms.locfileid: "51029302"
   
  注意，如果数据库处于“紧急”状态，则运行状态将显示日志文件空间使用过度。  
   
- 有关导致 UCP 上托管实例列表视图中灰色状态图标的失败的数据收集的详细信息，请参阅 [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具入门的详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
+ 有关导致 UCP 上托管实例列表视图中灰色状态图标的失败的数据收集的详细信息，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具入门的详细信息，请参阅 [SQL Server 实用工具功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)。  
   
  有关缓解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 标识的特定资源运行状况问题的详细信息，请参阅以下主题：  
   
--   [如何识别 SQL Server 的版本](http://go.microsoft.com/fwlink/?LinkID=178504)  
+-   [如何识别 SQL Server 的版本](https://go.microsoft.com/fwlink/?LinkID=178504)  
   
--   [排除 SQL Server 2008 中的性能问题](http://go.microsoft.com/fwlink/?LinkId=151354)  
+-   [排除 SQL Server 2008 中的性能问题](https://go.microsoft.com/fwlink/?LinkId=151354)  
   
   

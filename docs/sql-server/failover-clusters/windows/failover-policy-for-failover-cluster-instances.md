@@ -12,12 +12,12 @@ ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f3448583d07f73c23f19c2eec68eb59b71fd06af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0b06b45e9d3f2cfd06fba04a0d24547ec4689ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709045"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699785"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47709045"
  *默认值  
   
 ####  <a name="respond"></a> 响应故障  
- 在检测到一个或多个故障转移条件后，WSFC 服务如何响应故障依赖于 WSFC 仲裁状态以及 FCI 资源组的重新启动和故障转移设置。 如果 FCI 失去 WSFC 仲裁，则整个 FCI 将脱机并且 FCI 失去高可用性。 如果 FCI 仍保留 WSFC 仲裁，则 WSFC 服务可能首次尝试重新启动失败的节点，如果重新启动尝试失败则进行故障转移。 在故障转移群集管理器管理单元中配置重新启动和故障转移设置。 有关这些设置的详细信息，请参阅 [\<Resource> 属性：“策略”选项卡](http://technet.microsoft.com/library/cc725685.aspx)。  
+ 在检测到一个或多个故障转移条件后，WSFC 服务如何响应故障依赖于 WSFC 仲裁状态以及 FCI 资源组的重新启动和故障转移设置。 如果 FCI 失去 WSFC 仲裁，则整个 FCI 将脱机并且 FCI 失去高可用性。 如果 FCI 仍保留 WSFC 仲裁，则 WSFC 服务可能首次尝试重新启动失败的节点，如果重新启动尝试失败则进行故障转移。 在故障转移群集管理器管理单元中配置重新启动和故障转移设置。 有关这些设置的详细信息，请参阅 [\<Resource> 属性：“策略”选项卡](https://technet.microsoft.com/library/cc725685.aspx)。  
   
  有关维护仲裁运行状况的详细信息，请参阅：[WSFC 仲裁模式和投票配置 (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
   

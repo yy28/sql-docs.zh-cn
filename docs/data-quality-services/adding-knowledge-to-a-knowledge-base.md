@@ -12,12 +12,12 @@ ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2223d0ab9f9ee3f2d6032bdcde425caae7657e3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea2749719f7ced61f304aadb5636d4909fd5b5db
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711245"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700705"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>将知识添加到知识库
 
@@ -46,14 +46,14 @@ ms.locfileid: "47711245"
   
 -   有关文档的详细信息，请参阅 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)。  
   
--   有关演示如何执行知识发现的视频，请单击 [此处](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
+-   有关演示如何执行知识发现的视频，请单击 [此处](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。  
   
 ##  <a name="ManageDomain"></a> 管理域中的数据值  
  通过 DQS 可以按交互方式更改和增加由计算机辅助知识发现活动生成的元数据。 在域管理活动中执行此操作，从中您可以向特定数据值应用更改。  
   
 -   有关文档的详细信息，请参阅 [Change Domain Values](../data-quality-services/change-domain-values.md)。  
   
--   有关演示如何执行域管理的视频，请单击 [此处](http://msdn.microsoft.com/sqlserver/hh323825.aspx)。 请注意，在此视频中，您将在知识发现向导的“管理域值”页中更改域值。 还可以在域管理活动的“域值”页中执行这些步骤。  
+-   有关演示如何执行域管理的视频，请单击 [此处](https://msdn.microsoft.com/sqlserver/hh323825.aspx)。 请注意，在此视频中，您将在知识发现向导的“管理域值”页中更改域值。 还可以在域管理活动的“域值”页中执行这些步骤。  
   
 ##  <a name="DQSFile"></a> 从 .dqs 文件导入知识  
  可以将域从 .dqs 数据文件导入到现有知识库，也可以将整个知识库从 .dqs 导入到新的知识库。 为此，您首先需要将现有域或知识库导出到 .dqs 文件。 包含域的 dqs 文件包含所有域数据；包含知识库的 .dqs 文件将包含所有知识库信息，其中包括域和匹配策略。  

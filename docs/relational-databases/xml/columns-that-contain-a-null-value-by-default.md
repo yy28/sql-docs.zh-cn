@@ -13,12 +13,12 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a006fdb96464b855a07e14c750ab8380be30a0a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d2b56355b21043f37e8d5991a453cc038064dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674976"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>默认情况下包含 Null 值的列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ FOR XML PATH, ELEMENTS XSINIL
  下面显示了结果。 请注意，如果未指定 XSINIL，将缺少 <`Middle`> 元素。  
   
 ```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
+<row xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
     <Middle xsi:nil="true" />  

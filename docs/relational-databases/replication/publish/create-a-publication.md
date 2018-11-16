@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f25b8dbbbf0bed4b0d8c667dee5aaec705303c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 338e076b2a95d7086b0acc22dff1d85e4327844d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825008"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665816"
 ---
 # <a name="create-a-publication"></a>Create a Publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47825008"
 -   发布和项目名称不能包括下列任何字符：%、\*、[ , ]、|、:、"、? , ' , \ , / , < , >. 如果数据库中的对象包括任意上述字符，并且你希望复制它们，那么必须在“项目属性 - \<项目>”对话框（可从向导中的“项目”页获得）中指定一个不同于相应对象名称的项目名称。  
   
 ###  <a name="Security"></a> 安全性  
- 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
+ 如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../../includes/msconame-md.md)] （加密服务）。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  可以使用新建发布向导创建发布和定义项目。 创建发布之后，可在“发布属性 - \<发布>”对话框中查看和修改发布属性。 有关从 Oracle 数据库创建发布的信息，请参阅[从 Oracle 数据库创建发布](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)。  

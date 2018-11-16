@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e5ff6d186c4dc724ed344a1fe89ecb2d92bfb5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4498b558e740927f52ab53a0edb8a615a34c0690
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722675"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657776"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>从数据访问应用程序调用本机编译的存储过程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
   
 1.  使用内存优化的数据文件组创建示例数据库。 有关如何使用内存优化的数据文件组创建数据库的信息，请参阅 [创建内存优化表和本机编译的存储过程](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)。  
   
-2.  创建指向该数据库的名为 PrepExecSample 的 ODBC 数据源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序。 您还可以修改该示例并使用 [Microsoft ODBC Driver for SQL Server](http://msdn.microsoft.com/library/jj730314.aspx)。  
+2.  创建指向该数据库的名为 PrepExecSample 的 ODBC 数据源。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 驱动程序。 您还可以修改该示例并使用 [Microsoft ODBC Driver for SQL Server](https://msdn.microsoft.com/library/jj730314.aspx)。  
   
 3.  在示例数据库上运行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本（下面）。  
   

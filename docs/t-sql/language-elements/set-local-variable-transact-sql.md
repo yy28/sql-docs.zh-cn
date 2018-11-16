@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb3f0a99cea35b02b7aa6dce724c279ff729474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 839ef762a20d413f5e1c61ca45c46ad80a153d99
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759695"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697323"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -186,7 +186,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  复合赋值运算符可以用在存在赋值（在运算符的右侧有一个表达式，包括变量）的任何地方以及 UPDATE、SELECT 和 RECEIVE 语句的 SET 语句中。  
   
- 不要在 SELECT 语句中使用变量来连接值（即来计算聚合值）。 可能发生了意外查询结果。 这是因为 SELECT 列表中的所有表达式（包括赋值）不保证对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](http://support.microsoft.com/kb/287515)。  
+ 不要在 SELECT 语句中使用变量来连接值（即来计算聚合值）。 可能发生了意外查询结果。 这是因为 SELECT 列表中的所有表达式（包括赋值）不保证对于每个输出行仅执行一次。 有关详细信息，请参阅[此知识库文章](https://support.microsoft.com/kb/287515)。  
   
 ## <a name="permissions"></a>Permissions  
  要求具有 public 角色的成员身份。 所有用户都可以使用 SET @local_variable。  

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 307db631ea3d4b803402f11070c5770afe452b0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772549"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701315"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 数据库函数有哪些？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "47772549"
 |[游标函数](cursor-functions-transact-sql.md)|返回游标信息。|  
 |[日期和时间数据类型及函数](date-and-time-data-types-and-functions-transact-sql.md)|对日期和时间输入值执行运算，然后返回字符串、数字或日期和时间值。|  
 |[JSON 函数](json-functions-transact-sql.md)|验证、查询或更改 JSON 数据。|  
-|[逻辑函数](http://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|执行逻辑运算。|  
+|[逻辑函数](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|执行逻辑运算。|  
 |[数学函数](mathematical-functions-transact-sql.md)|基于作为函数的参数提供的输入值执行运算，然后返回数字值。|  
 |[元数据函数](metadata-functions-transact-sql.md)|返回有关数据库和数据库对象的信息。|  
 |[安全函数](security-functions-transact-sql.md)|返回有关用户和角色的信息。|  
 |[字符串函数](string-functions-transact-sql.md)|对字符串（char 或 varchar）输入值执行运算，然后返回一个字符串或数字值。|  
 |[系统函数](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|执行运算后返回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中有关值、对象和设置的信息。|  
 |[系统统计函数](system-statistical-functions-transact-sql.md)|返回系统的统计信息。|  
-|[文本和图像函数](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|对文本或图像输入值或列执行运算，然后返回有关值的信息。|  
+|[文本和图像函数](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|对文本或图像输入值或列执行运算，然后返回有关值的信息。|  
   
 ## <a name="function-determinism"></a>函数确定性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内置函数可以是确定的或是不确定的。 如果任何时候用一组特定的输入值调用内置函数，返回的结果总是相同的，则这些内置函数为确定的。 如果每次调用内置函数时，即使用的是同一组特定输入值，也总返回不同结果，则这些内置函数为不确定的。 有关详细信息，请参阅 [确定性函数和不确定性函数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  

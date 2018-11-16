@@ -21,12 +21,12 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfcf99a28a847097d943495c205d7d894bb388ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af752a0d7435e64ce7f8e7f985817ad4bca25167
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658465"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638645"
 ---
 # <a name="sort-transformation"></a>排序转换
   排序转换按升序或降序对输入数据进行排序，并将排序后的数据复制到转换输出。 您可以对一个输入应用多个排序；每个排序都由确定排序顺序的一个数字来标识。 首先对具有最小数字的列进行排序，然后对具有第二小数字的排序列进行排序，依此类推。 例如，如果名为 **CountryRegion** 的列的排序顺序为 1，而名为 **City** 的列的排序顺序为 2，则输出先按照 country/region（国家/地区）排序，然后按照 city（城市）排序。 正数表示排序为升序排序，负数表示排序为降序排序。 不进行排序的列的排序顺序为 0。 没有选择进行排序的列将与被排序列一起自动被复制到转换输出。  
@@ -47,7 +47,7 @@ ms.locfileid: "47658465"
   
  **“高级编辑器”** 对话框反映了可以通过编程方式进行设置的属性。 有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47658465"
  有关如何设置组件属性的详细信息，请参阅 [设置数据流组件属性](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)。  
   
 ## <a name="related-content"></a>相关内容  
- codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](http://go.microsoft.com/fwlink/?LinkId=220821)。  
+ codeplex.com 上的示例 [SortDeDuplicateDelimitedString 自定义 SSIS 组件](https://go.microsoft.com/fwlink/?LinkId=220821)。  
   
 ## <a name="sort-transformation-editor"></a>排序转换编辑器
   可以使用 **“排序转换编辑器”** 对话框，选择要排序的列，设置排序顺序以及指定是否删除重复项。  

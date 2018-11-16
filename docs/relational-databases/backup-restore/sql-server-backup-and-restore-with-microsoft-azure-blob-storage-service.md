@@ -11,26 +11,26 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d5233b6dc234f09bca8632e10642deafd5939010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805451"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660118"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>使用 Microsoft Azure Blob 存储服务进行 SQL Server 备份和还原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   ![“备份到 Azure blob”图](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "“备份到 Azure blob”图")  
   
- 本主题介绍将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 [Microsoft Azure Blob 存储服务](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)和从中还原。 它还总结了使用 Microsoft Azure Blob 服务存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处。  
+ 本主题介绍将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份到 [Microsoft Azure Blob 存储服务](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)和从中还原。 它还总结了使用 Microsoft Azure Blob 服务存储 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份的好处。  
   
  SQL Server 支持通过以下方式将备份存储到 Microsoft Azure Blob 存储服务：  
   
 -   **管理向 Microsoft Azure 进行的备份：** 使用与用于备份到磁盘和磁带相同的方法，现在可通过指定 URL 作为备份目标，备份到 Microsoft Azure 存储。 可使用此功能手动备份或配置自己的备份策略，如同对于本地存储或其他站点外选项所做的一样。 此功能也称为 **SQL Server 备份到 URL**。 有关详细信息，请参阅 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)。 SQL Server 2012 SP1 CU2 或更高版本中提供此功能。 此功能在 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中得到了增强，以便通过使用块 Blob、共享访问签名和条带化提高性能和改进功能。  
   
     > [!NOTE]  
-    >  对于版本低于 SQL Server 2012 SP1 CU2 的 SQL Server，可使用外接程序“SQL Server 备份到 Microsoft Azure 工具”快速轻松地向 Microsoft Azure 存储创建备份。 有关详细信息，请参阅 [下载中心](http://go.microsoft.com/fwlink/?LinkID=324399)。  
+    >  对于版本低于 SQL Server 2012 SP1 CU2 的 SQL Server，可使用外接程序“SQL Server 备份到 Microsoft Azure 工具”快速轻松地向 Microsoft Azure 存储创建备份。 有关详细信息，请参阅 [下载中心](https://go.microsoft.com/fwlink/?LinkID=324399)。  
   
 -   **Azure Blob 存储中的数据库文件的文件快照备份** 通过使用 Azure 快照， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文件快照备份可以通过使用 Azure Blob 存储服务为存储的数据库文件提供几乎即时的备份和还原。 此功能可以简化备份和还原策略，而且它还支持时间点还原。 有关详细信息，请参阅 [Azure 中数据库文件的文件快照备份](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)。 SQL Server 2016 或更高版本中提供此功能。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "47805451"
 ##  <a name="Billing"></a> Microsoft Azure 计费注意事项：  
  了解 Microsoft Azure 存储成本使你能够预测在 Microsoft Azure 中创建和存储备份的成本。  
   
- [Microsoft Azure 价格计算器](http://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
+ [Microsoft Azure 价格计算器](https://go.microsoft.com/fwlink/?LinkId=277060) 可以帮助估算你的成本。  
   
- **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅[定价详细信息](http://go.microsoft.com/fwlink/?LinkId=277059)文章中的“数据管理”  一节。  
+ **存储：** 费用基于使用的空间并根据渐变的标准和冗余级别来计算它。 有关详细信息和最新信息，请参阅[定价详细信息](https://go.microsoft.com/fwlink/?LinkId=277059)文章中的“数据管理”  一节。  
   
- **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](http://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
+ **数据传输：** 传输到 Microsoft Azure 的入站数据是免费的。 出站传输要支付带宽使用费用，并根据渐变的区域特定标准来计算费用。 有关详细信息，请参阅“定价详细信息”文章中的 [数据传输](https://go.microsoft.com/fwlink/?LinkId=277061) 一节。  
   
 ## <a name="see-also"></a>另请参阅  
 

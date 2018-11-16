@@ -11,25 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05386d70bb785aebd5093246b3545084517e7f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 143a1d793faa0d782cce8252a4236166d2eb0719
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702845"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 客户体验改善计划
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   了解客户体验改善计划 (CEIP) 如何帮助 Microsoft 确定改善软件的方法。  可以配置工具以随时选择加入或退出。  
   
 > [!NOTE]  
-> 有关 Microsoft SQL Server 版本的用户数据集收集和使用方式的说明，请参考此[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。  
+> 有关 Microsoft SQL Server 版本的用户数据集收集和使用方式的说明，请参考此[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>选择加入和退出 SQL Server Data Tools 的 CEIP  
  客户体验改善计划是为了帮助 Microsoft 随着时间的推移改进其产品的计划。 此计划将收集有关计算机硬件和人们如何使用产品的信息，同时不会打断用户在计算机上的任务。 收集的信息可帮助 Microsoft 确定要改善的功能。 在本文档中，我们将介绍如何选择启用或禁用适用于 Visual Studio 2017、Visual Studio 2015 和 Visual Studio 2013 的 SQL Server Data Tools (SSDT) CEIP。  
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>选择和控制适用于 Visual Studio 2017 的 CEIP 和 SQL Server Data Tools  
- 适用于 Visual Studio 2017 的 SSDT 是 SQL Server 2017 随附的数据建模工具。 它使用 Visual Studio 2017 中内置的 CEIP 选项。 可以参阅这篇 [Visual Studio 帮助文档](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback)，详细了解如何在 Visual Studio 2017 中通过 CEIP 提交反馈。  
+ 适用于 Visual Studio 2017 的 SSDT 是 SQL Server 2017 随附的数据建模工具。 它使用 Visual Studio 2017 中内置的 CEIP 选项。 可以参阅这篇 [Visual Studio 帮助文档](https://www.visualstudio.com/docs/work/connect/give-feedback)，详细了解如何在 Visual Studio 2017 中通过 CEIP 提交反馈。  
   
  对于 SQL Server 2017 预览版本，CEIP 默认启用。 可以按照下面的说明将其关闭，或重新打开。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "47693265"
 > [!CAUTION]  
 >  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
   
- 有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。  
+ 有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
  
 ### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>对适用于 Visual Studio 2015 的 SQL Server Data Tools 和 CEIP 的选择与控制  
  适用于 Visual Studio 2015 的 SSDT 是附带 SQL Server 2016 的数据建模工具。 它使用 Visual Studio 2015 中内置的 CEIP 选项。 可以参阅这篇 [Visual Studio 帮助文档](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，详细了解如何在 Visual Studio 2015 中通过 CEIP 提交反馈。  
@@ -112,7 +112,7 @@ ms.locfileid: "47693265"
 > [!CAUTION]  
 >  错误编辑注册表可能会严重损坏您的系统。 更改注册表之前，应当备份计算机中的所有重要数据。 如果在应用手动更改之后遇到问题，也可以使用“最近一次的正确配置”启动选项。  
   
- 有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。  
+ 有关 CEIP 收集、处理或传送的信息的详细信息，请参阅[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。  
   
 ### <a name="choice-and-control-for-ceip-and-sql-server-data-tools---bi-ssdt-bi"></a>对 CEIP 和 SQL Server Data Tools - BI (SSDT-BI) 的选择和控制  
  如果你在使用 SSDT-BI，安装期间将有机会参与 CEIP。 稍后，可以通过客户端工具或编辑注册表设置来更改 SSDT-BI 的 CEIP 配置。  

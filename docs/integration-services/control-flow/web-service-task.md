@@ -18,12 +18,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2d0d31f310ea2a64afe47940ab4d9463fee0a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a92ccb6d9bfbc84fa13b7d26528544ae027a51
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757545"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642344"
 ---
 # <a name="web-service-task"></a>Web 服务任务
   Web 服务任务执行 Web 服务方法。 可以将 Web 服务任务用于下列目的：  
@@ -38,7 +38,7 @@ ms.locfileid: "47757545"
 > [!IMPORTANT]  
 >  HTTP 连接管理器仅支持匿名身份验证和基本身份验证， 而不支持 Windows 身份验证。  
   
- HTTP 连接管理器可以指向网站或 Web 服务描述语言 (WSDL) 文件。 指向 WSDL 文件的 HTTP 连接管理器的 URL 中包括 `?WSDL` 参数：例如， `http://MyServer/MyWebService/MyPage.asmx?WSDL`。  
+ HTTP 连接管理器可以指向网站或 Web 服务描述语言 (WSDL) 文件。 指向 WSDL 文件的 HTTP 连接管理器的 URL 中包括 `?WSDL` 参数：例如， `https://MyServer/MyWebService/MyPage.asmx?WSDL`。  
   
  计算机本地必须有 WSDL 文件，以使用 **设计器提供的** “Web 服务任务编辑器” [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对话框配置 Web 服务任务。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757545"
   
  有关如何在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Web 服务任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击下列主题之一：  
@@ -178,7 +178,7 @@ ms.locfileid: "47757545"
  **变量**  
  在列表中选择一个变量，或单击“\<新建变量...>”创建一个新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
- technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=259642)。  
+ technet.microsoft.com 上的视频 [如何：使用 Web 服务任务调用 Web 服务（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=259642)。  

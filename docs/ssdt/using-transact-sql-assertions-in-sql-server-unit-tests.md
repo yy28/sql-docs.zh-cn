@@ -11,12 +11,12 @@ ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fceef986a2d0cd3bf6d127cf449d99185ebca7cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8da09c20837b060606b087c0edebb7bf9713675e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671238"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>在 SQL Server 单元测试中使用 Transact-SQL 断言
 在 SQL Server 单元测试中，Transact\-SQL 测试脚本将运行并返回结果。 有时，结果以结果集的形式返回。 您可以使用测试条件来验证结果。 例如，您可以使用测试条件来检查特定结果集中返回的行数，或验证特定测试的运行时长。 有关测试条件的详细信息，请参阅[在 SQL Server 单元测试中使用测试条件](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)。  
@@ -79,7 +79,7 @@ RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState)
   
 @ErrorState 是介于 1 和 127 之间的任一整数。 您可以使用此整数来区分在代码中的不同位置引发的同一个错误。  
   
-有关详细信息，请参见 [RAISERROR (Transact-SQL)](http://msdn.microsoft.com/library/ms178592.aspx)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
+有关详细信息，请参见 [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx)。 在 SQL Server 单元测试中使用 RAISERROR 的示例在主题[如何：编写在单个事务范围内运行的 SQL Server 单元测试](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md)中提供。  
   
 ## <a name="see-also"></a>另请参阅  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

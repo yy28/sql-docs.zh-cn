@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b9e65e0d38a12adaa257ee467c4fa22fe54f2da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b921aa0561273b89f7c1434db189f34c0f6583b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698175"
 ---
 # <a name="delete-one-or-more-jobs"></a>删除一个或多个作业
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -93,10 +93,10 @@ ms.locfileid: "47635745"
     GO  
     ```  
   
-有关详细信息，请参阅 [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09)。  
+有关详细信息，请参阅 [sp_delete_job (Transact-SQL)](https://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理对象  
 **删除多个作业**  
   
-通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 **JobCollection** 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](http://msdn.microsoft.com/library/ms162169.aspx)。  
+通过使用所选编程语言（如 Visual Basic、Visual C# 或 PowerShell）来使用 **JobCollection** 类。 有关详细信息，请参阅 [SQL Server 管理对象 (SMO)](https://msdn.microsoft.com/library/ms162169.aspx)。  
   

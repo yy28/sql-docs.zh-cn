@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67eab65f8ead5fe1cc4934671f8d11be2944044a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30514478f54d71d88245ace385600cb2931101eb
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737732"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814140"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>向 URL 添加超链接（报表生成器和 SSRS）
 了解如何在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  分页报表向文本框、图像、图表和仪表添加超链接操作。 链接可以转到其他报表、报表中的书签或是静态或动态 URL。 
@@ -73,9 +73,9 @@ ms.locfileid: "47737732"
   
 4.  在 **“选择 URL”** 中，键入或选择某一 URL 或者计算结果为某一 URL 的表达式，或者单击下拉箭头并单击包含 URL 的字段的名称。 
 
-    对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， `http://<servername>/images/image1.jpg`。 
+    对于发布到配置为本机模式的报表服务器的项，请使用完整路径或相对路径。 例如， `https://<servername>/images/image1.jpg`。 
     
-    对于发布到配置为 SharePoint 集成模式的报表服务器的项，请使用完全限定的 URL。 例如， `http://<SharePointservername>/<site>/Documents/images/image1.jpg`。
+    对于发布到配置为 SharePoint 集成模式的报表服务器的项，请使用完全限定的 URL。 例如， `https://<SharePointservername>/<site>/Documents/images/image1.jpg`。
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

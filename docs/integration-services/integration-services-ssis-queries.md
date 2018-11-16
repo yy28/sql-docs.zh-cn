@@ -18,12 +18,12 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d275ad5ef272dc3bf6db8c5ce0079bcb1a8fea9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4e17af8134194e00fada93fd07904d95f478435
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689515"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638734"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) 查询
   执行 SQL 任务、OLE DB 源、OLE DB 目标以及查找转换都可以使用 SQL 查询。 在执行 SQL 任务中，SQL 语句可以创建、更新和删除数据库对象与数据；运行存储过程以及执行 SELECT 语句。 在 OLE DB 源和查找转换中，SQL 语句通常为 SELECT 语句或 EXEC 语句。 后者经常用于运行可返回结果集的存储过程。  
@@ -58,13 +58,13 @@ ms.locfileid: "47689515"
   
  通过在任务流或数据流组件对话框中或“属性”窗口中键入查询，您还可以提供直接输入。  
   
- 有关详细信息，请参阅 [Query Builder](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)。  
+ 有关详细信息，请参阅 [Query Builder](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)。  
   
 ## <a name="sql-in-files"></a>文件形式的 SQL  
  执行 SQL 任务的 SQL 语句还可以驻留在单独的文件中。 例如，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]中的查询编辑器等工具来编写查询，将查询保存到文件，然后在运行包时从该文件读取查询。 该文件可以只包含要运行的 SQL 语句以及注释。 若要使用存储在文件中的 SQL 语句，您必须提供指定文件名和位置的文件连接。 有关详细信息，请参阅 [File Connection Manager](../integration-services/connection-manager/file-connection-manager.md)。  
   
 ## <a name="sql-in-variables"></a>变量形式的 SQL  
- 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+ 如果执行 SQL 任务中 SQL 语句的源是一个变量，您需要提供包含该查询的变量的名称。 该变量的 Value 属性包含查询文本。 可以将该变量的 ValueType 属性设置为字符串数据类型，然后键入 SQL 语句或将该语句复制到 Value 属性中。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
 
 ## <a name="query-builder-dialog-box"></a>“查询生成器”对话框
 可以使用 **“查询生成器”** 对话框，创建在执行 SQL 任务、OLE DB 源和 OLE DB 目标以及查找转换中使用的查询。  
@@ -83,7 +83,7 @@ ms.locfileid: "47689515"
   
  若要了解关于 Transact-SQL 语言及其语法的详细信息，请参阅 [Transact-SQL 引用（数据库引擎）](../t-sql/transact-sql-reference-database-engine.md)。  
   
- 还可以在查询中使用变量，以便为输入参数提供值、捕获输出参数的值并存储返回代码。 若要了解包所使用的查询中使用变量的详细信息，请参阅[执行 SQL Task](../integration-services/control-flow/execute-sql-task.md)[OLE DB 源](../integration-services/data-flow/ole-db-source.md) 和 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。 若要了解有关在执行 SQL 任务中使用变量的详细信息，请参阅 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [执行 SQL 任务中的结果集](http://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
+ 还可以在查询中使用变量，以便为输入参数提供值、捕获输出参数的值并存储返回代码。 若要了解包所使用的查询中使用变量的详细信息，请参阅[执行 SQL Task](../integration-services/control-flow/execute-sql-task.md)[OLE DB 源](../integration-services/data-flow/ole-db-source.md) 和 [Integration Services (SSIS) 查询](../integration-services/integration-services-ssis-queries.md)。 若要了解有关在执行 SQL 任务中使用变量的详细信息，请参阅 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663) 和 [执行 SQL 任务中的结果集](https://msdn.microsoft.com/library/62605b63-d43b-49e8-a863-e154011e6109)。  
   
  查找转换和模糊查找转换也可以使用带有参数和返回代码和变量。 有关 OLE DB 源的信息也适用于上述两种转换。  
   

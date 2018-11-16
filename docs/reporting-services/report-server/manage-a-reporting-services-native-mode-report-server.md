@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3b8b5baec563f2c5c99a08a730204581b6abdc7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: f8f0b048d540647c41deff629dec5495c91d7e76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021591"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812700"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 本机模式报表服务器
   本节包含使用 Reporting Services 配置管理器配置本机模式报表服务器实例的过程。  
@@ -52,7 +52,7 @@ ms.locfileid: "50021591"
  说明如何打开用于报表服务器的入站请求和出站响应的端口。  
   
  [为本地管理配置本机模式报表服务器 (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- 描述使用 `http://localhost` 连接到报表管理器或报表服务器所需的其他步骤。  
+ 描述使用 `https://localhost` 连接到报表管理器或报表服务器所需的其他步骤。  
   
  [配置报表服务器以进行远程管理](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  说明如何配置远程报表服务器实例以便可以从其他计算机上连接和配置它。  

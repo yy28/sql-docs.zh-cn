@@ -15,12 +15,12 @@ ms.assetid: 74960d25-83c2-4ad6-9318-098c348ea977
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 95c3df1a66b4657240eb2b9e616c0c9f4a17a2ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f972d5ea4b66e6544c9663771f50d6350d1b66a6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666195"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696846"
 ---
 # <a name="ogc-static-geometry-methods"></a>OGC 静态几何图形方法
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47666195"
   
  有关开放地理空间联盟 (OGC) 规范的详细信息，请参阅以下开放地理空间联盟规范：  
   
- [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](http://go.microsoft.com/fwlink/?LinkId=93627)  
+ [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
- [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
+ [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
 ## <a name="in-this-section"></a>本节内容  
   

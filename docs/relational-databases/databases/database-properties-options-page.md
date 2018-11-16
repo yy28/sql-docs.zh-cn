@@ -5,8 +5,7 @@ ms.date: 08/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: configuration
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.databaseproperties.options.f1
@@ -14,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e2170bef87a87e05454f6092e5829797808d96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706555"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659366"
 ---
 # <a name="database-properties-options-page"></a>数据库属性（“选项”页）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ ms.locfileid: "47706555"
  **两位数年份截止**  
  指示可作为两位数年份输入的最高年数。 可将所列年份及其之前的 99 年作为两位数年份输入。 所有其他年份必须作为四位数年份输入。  
   
- 例如，2049 的默认设置表明：作为 '3/14/49' 输入的日期将被解释为 2049 年 3 月 14 日，而作为 '3/14/50' 输入的日期则将被解释为 1950 年 3 月 14 日。 有关详细信息，请参阅 [配置两位数年份截止服务器配置选项](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
+ 例如，2049 的默认设置表明：作为 '3/14/49' 输入的日期将被解释为 2049 年 3 月 14 日，而作为 '3/14/50' 输入的日期则将被解释为 1950 年 3 月 14 日。 有关详细信息，请参阅 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)。  
   
 ## <a name="cursor"></a>游标  
  **提交时关闭游标功能已启用**  
@@ -96,10 +95,10 @@ ms.locfileid: "47706555"
  在 SQL Server 2016 和 Azure SQL 数据库中，有多个可以作用于数据库级别作用域的配置属性。 有关所有这些设置的详细信息，请参阅 [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。  
   
  **旧版基数估计**  
- 指定独立于数据库兼容级别的主查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)是等效的。  
+ 指定独立于数据库兼容级别的主查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/kb/2801413)是等效的。  
   
  **辅助数据库的旧版基数估计**  
- 指定独立于数据库兼容级别的辅助查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/en-us/kb/2801413)是等效的。  
+ 指定独立于数据库兼容级别的辅助查询优化器基数估计模型。 这与 [跟踪标志 9481](https://support.microsoft.com/kb/2801413)是等效的。  
   
  **Max DOP**  
  指定应用于语句的主默认 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 设置。  
@@ -108,16 +107,16 @@ ms.locfileid: "47706555"
  指定应用于语句的辅助默认 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 设置（如有）。  
   
  **参数截取**  
- 启用或禁用主参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653)是等效的。  
+ 启用或禁用主参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/kb/980653)是等效的。  
   
  **辅助参数截取**  
- 启用或禁用辅助参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/en-us/kb/980653)是等效的。  
+ 启用或禁用辅助参数截取。 这与 [Trace Flag 4136](https://support.microsoft.com/kb/980653)是等效的。  
   
  **查询优化器修复程序**  
- 启用或禁用主查询优化修补程序，而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006)是等效的。  
+ 启用或禁用主查询优化修补程序，而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/kb/974006)是等效的。  
   
  **辅助查询优化器修补程序**  
- 启用或禁用辅助查询优化修补程序（如有），而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/en-us/kb/974006)是等效的。  
+ 启用或禁用辅助查询优化修补程序（如有），而不考虑数据库的兼容级别。 这与 [Trace Flag 4199](https://support.microsoft.com/kb/974006)是等效的。  
   
 ## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 目录名称**  

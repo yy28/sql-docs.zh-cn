@@ -15,12 +15,12 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b23ab90b6c9e0a8b4296b95da6ff91ba962936d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78688e6aa3053ef46f0cd46ca82a06aabe672a77
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631386"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702475"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>层次结构成员权限 (Master Data Services)
 
@@ -65,13 +65,13 @@ ms.locfileid: "47631386"
 -   如果给一个层次结构节点分配**创建**/**读取**/**更新**/**删除**的任意权限组合，给另一个节点分配**拒绝**权限，则对该节点中的成员访问被拒绝。  
   
 ## <a name="external-resources"></a>外部资源  
- msdn.com 上的博客文章 [安全性改进](http://go.microsoft.com/fwlink/p/?LinkId=615376)。  
+ msdn.com 上的博客文章 [安全性改进](https://go.microsoft.com/fwlink/p/?LinkId=615376)。  
   
 ## <a name="see-also"></a>另请参阅  
  [分配层次结构成员权限 (Master Data Services)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [如何确定权限 (Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [成员 &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
- [层次结构 &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
+ [层次结构 (Master Data Services)](../master-data-services/hierarchies-master-data-services.md)   
  [立即应用成员权限 (Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

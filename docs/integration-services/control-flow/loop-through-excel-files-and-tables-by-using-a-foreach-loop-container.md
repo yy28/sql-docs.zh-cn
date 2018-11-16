@@ -15,12 +15,12 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728675"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639244"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>使用 Foreach 循环容器，循环遍历 Excel 文件和表
   本主题中的过程介绍如何使用具有相应枚举器的 Foreach 循环容器循环访问文件夹中的 Excel 工作簿或 Excel 工作簿中的表。  
@@ -36,7 +36,7 @@ ms.locfileid: "47728675"
   
      如果您未使用扩展属性参数的变量，必须手动将它添加到包含连接字符串的表达式。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅[配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在“Foreach 循环编辑器”的“集合”页上，选择“Foreach 文件”枚举器，并指定 Excel 工作簿所在的文件夹，然后指定文件筛选器（通常是 *.xlsx）。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47728675"
   
 6.  关闭 **“Foreach 循环编辑器”**。  
   
-7.  按照 [在包中添加、删除或共享连接管理器](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)中所述，将 Excel 连接管理器添加到包。 为连接选择一个现有 Excel 工作簿文件以避免出现验证错误。  
+7.  按照 [在包中添加、删除或共享连接管理器](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)中所述，将 Excel 连接管理器添加到包。 为连接选择一个现有 Excel 工作簿文件以避免出现验证错误。  
   
     > [!IMPORTANT]  
     >  若要避免在对使用此 Excel 连接管理器的任务和数据流组件进行配置时出现验证错误，请在 **“Excel 连接管理器编辑器”** 中选择一个现有的 Excel 工作簿。 在您按照下列步骤为 **ConnectionString** 属性配置表达式以后，连接管理器在运行时将不使用此工作簿。 在创建并配置包后，可在“属性”窗口中清除 **ConnectionString** 属性的值。 但是，如果清除此值，要等到 Foreach 循环运行时 Excel 连接管理器的连接字符串属性才会有效。 因此，在使用了连接管理器的任务中，必须将 **DelayValidation** 属性设置为 **True** 以避免出现验证错误。  
@@ -73,11 +73,11 @@ ms.locfileid: "47728675"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>使用 Foreach ADO.NET 架构行集枚举器循环遍历 Excel 表  
   
-1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
+1.  创建使用 Microsoft ACE OLE DB 访问接口连接 Excel 工作簿的 ADO.NET 连接管理器。 在“连接管理器”对话框的“所有”页上，确保输入 Excel 版本，在本例中，Excel 12.0 作为“Extended Properties”属性的值。 有关详细信息，请参阅 [Add, Delete, or Share a Connection Manager in a Package](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)。  
   
 2.  创建一个字符串变量，用于在每次循环迭代中接收当前表的名称。  
   
-3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
+3.  将 Foreach 循环容器添加到 **“控制流”** 选项卡。有关如何配置 Foreach 循环容器的信息，请参阅 [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)。  
   
 4.  在 **“Foreach 循环编辑器”** 的 **“集合”** 页上，选择 Foreach ADO.NET 架构行级枚举器。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47728675"
   
 ## <a name="see-also"></a>另请参阅  
  [使用 SQL Server Integration Services (SSIS) 从 Excel 加载数据或将数据加载到 Excel 中](../load-data-to-from-excel-with-ssis.md)  
- [配置 Foreach 循环容器](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [配置 Foreach 循环容器](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [添加或更改属性表达式](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 连接管理器](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 源](../../integration-services/data-flow/excel-source.md)   

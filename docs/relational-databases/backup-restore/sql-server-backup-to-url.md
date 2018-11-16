@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71766cb569c2a9f6302783472f564636368e1bae
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 26e58796bc49105c45df52213a9210426338812c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072221"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667416"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 备份到 URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "49072221"
 ###  <a name="intorkeyconcepts"></a> 关键组件和概念简介  
  以下两节介绍 Microsoft Azure Blob 存储服务以及在备份到 Microsoft Azure Blob 存储服务或从该服务还原时使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 组件。 了解这些组件和它们之间的交互对于执行备份到 Microsoft Azure Blob 存储服务或从中还原很重要。  
   
- 在 Azure 订阅中创建 Microsoft Azure 存储帐户是此过程中的第一步。 此存储帐户是对使用存储帐户创建的所有容器和对象具有完全管理权限的管理帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Microsoft Azure 存储帐户名称及其访问密钥值来进行身份验证，将 blob 写入到 Microsoft Azure Blob 存储服务和从中读取 blob，也可以使用特定容器上生成的共享访问签名令牌授予它读取和写入权限。 有关 Azure 存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) ；有关共享访问签名的详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。  
+ 在 Azure 订阅中创建 Microsoft Azure 存储帐户是此过程中的第一步。 此存储帐户是对使用存储帐户创建的所有容器和对象具有完全管理权限的管理帐户。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以使用 Microsoft Azure 存储帐户名称及其访问密钥值来进行身份验证，将 blob 写入到 Microsoft Azure Blob 存储服务和从中读取 blob，也可以使用特定容器上生成的共享访问签名令牌授予它读取和写入权限。 有关 Azure 存储帐户的详细信息，请参阅 [关于 Azure 存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/) ；有关共享访问签名的详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据存储此身份验证信息并在备份或还原操作期间使用它。  
   
 ###  <a name="blockbloborpageblob"></a> 备份到块 blob 和页 blob 
  Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 SQL Server 备份可以使用任意 blob 类型，具体取决于所使用的 Transact-SQL 语法：如果凭据中使用了存储密钥，则将使用页 blob；如果使用了共享访问签名，则将使用块 blob。
@@ -72,11 +72,11 @@ ms.locfileid: "49072221"
 - 备份到多个块 blob
 
 ###  <a name="Blob"></a> Microsoft Azure Blob 存储服务  
- **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Microsoft Azure Blob 存储服务，请首先创建一个 Microsoft Azure 存储帐户。 有关详细信息，请参阅 [创建存储帐户](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
+ **存储帐户：** 存储帐户是所有存储服务的起始点。 要访问 Microsoft Azure Blob 存储服务，请首先创建一个 Microsoft Azure 存储帐户。 有关详细信息，请参阅 [创建存储帐户](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)  
   
  **容器：** 一个容器提供对一组 Blob 的分组，并且可以存储无限数目的 Blob。 要将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份写入 Microsoft Azure Blob 存储服务，你必须至少创建根容器。 你可以在容器上生成共享访问签名令牌，并只授予其对特定容器上的对象的访问权限。  
   
- **Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 可使用以下 URL 格式寻址： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅 [如何通过 .NET 使用 Blob 存储](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](http://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
+ **Blob：** 任意类型和大小的文件。 Microsoft Azure Blob 存储服务中可存储两类 blob：块 blob 和页 blob。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 备份可以使用其中任一 blob 类型，具体取决于所使用的 Transact-SQL 语法。 Blob 可使用以下 URL 格式寻址： https://\<storage account>.blob.core.windows.net/\<container>/\<blob>。 有关 Microsoft Azure Blob 存储服务的详细信息，请参阅 [如何通过 .NET 使用 Blob 存储](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)。 有关页 blob 和块 blob 的详细信息，请参阅 [了解块 Blob 和页 Blob](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)。  
   
  ![Azure Blob 存储](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob 存储")  
   
@@ -285,7 +285,7 @@ ms.locfileid: "49072221"
 >  有关将 SQL Server 2016 用于 Microsoft Azure Blob 存储服务的教程，请参阅 [教程：将 Microsoft Azure Blob 存储服务用于 SQL Server 2016 数据库](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> 创建共享访问签名  
- 以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 此脚本还编写在 SQL Server 上创建凭据时所需的 T-SQL 命令。 
+ 以下示例创建可用于在新创建的容器中创建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 凭据的共享访问签名。 该脚本创建与存储访问策略关联的共享访问签名。 有关详细信息，请参阅 [共享访问签名，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 此脚本还编写在 SQL Server 上创建凭据时所需的 T-SQL 命令。 
 
 > [!NOTE] 
 > 该示例需要 Microsoft Azure Powershell。 有关安装和使用 Azure Powershell 的信息，请参阅 [如何安装和配置 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)。  

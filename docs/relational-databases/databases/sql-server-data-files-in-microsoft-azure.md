@@ -5,19 +5,18 @@ ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822195"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675696"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure 中的 SQL Server 数据文件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ ms.locfileid: "47822195"
 ### <a name="azure-storage-concepts"></a>Azure 存储概念  
  使用“Windows Azure 中的 SQL Server 数据文件”功能时，需要在 Windows Azure 中创建一个存储帐户和一个容器。 然后，需要创建一个 SQL Server 凭据，其中包括有关容器策略的信息以及访问容器所需的共享访问签名。  
   
- 在 [Windows Azure](https://azure.microsoft.com)中， [Azure 存储](https://azure.microsoft.com/services/storage/) 帐户代表用于访问 Blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](http://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器对 [Blob](http://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 Blob。 Azure 存储中可存储两类 Blob：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 Blob： `http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+ 在 [Windows Azure](https://azure.microsoft.com)中， [Azure 存储](https://azure.microsoft.com/services/storage/) 帐户代表用于访问 Blob 的命名空间的最高级别。 一个存储帐户可包含无限数量的容器，前提是这些容器的总大小低于存储限制。 有关存储限制的最新信息，请参阅 [Azure 订阅与服务限制、配额和约束](https://docs.microsoft.com/azure/azure-subscription-service-limits)。 容器对 [Blob](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)集进行分组。 所有 Blob 必须都在一个容器中。 一个帐户可以包含无限数量的容器。 同样，一个容器可以存储无限数量的 Blob。 Azure 存储中可存储两类 Blob：块 Blob 和页 Blob。 这一新功能使用页 Blob，在文件字节数经常发生修改的情况下这些 Blob 更为高效。 你可以使用以下 URL 格式访问 Blob： `https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="azure-billing-considerations"></a>Azure 计费注意事项  
- 在决策制定和规划过程中，估计使用 Azure 服务的成本是一项非常重要的工作。 在 Azure 存储中存储 SQL Server 数据文件时，需要支付与存储和事务相关的成本。 此外，要实现“Azure 存储中的 SQL Server 数据文件”功能，需要每 45 到 60 秒隐式进行一次 Blob 续租。 这也会对每个数据库文件（如 .mdf 或 .ldf）造成事务成本。 使用 [Azure 定价](http://azure.microsoft.com/pricing/)页面上的信息来帮助估计每月与使用 Azure 存储和 Azure 虚拟机相关的成本。  
+ 在决策制定和规划过程中，估计使用 Azure 服务的成本是一项非常重要的工作。 在 Azure 存储中存储 SQL Server 数据文件时，需要支付与存储和事务相关的成本。 此外，要实现“Azure 存储中的 SQL Server 数据文件”功能，需要每 45 到 60 秒隐式进行一次 Blob 续租。 这也会对每个数据库文件（如 .mdf 或 .ldf）造成事务成本。 使用 [Azure 定价](https://azure.microsoft.com/pricing/)页面上的信息来帮助估计每月与使用 Azure 存储和 Azure 虚拟机相关的成本。  
   
 ### <a name="sql-server-concepts"></a>SQL Server 概念  
  使用此新增强功能时，需要执行以下操作：  
@@ -64,7 +63,7 @@ ms.locfileid: "47822195"
   
 -   必须在 SQL Server 凭据存储中存储有关 Azure 存储容器、其关联策略名称以及 SAS 密钥的信息。  
   
- 以下示例假定已经创建 Azure 存储容器，已经创建了针对读取、写入、列出权限的策略。 创建容器策略会生成一个 SAS 密钥，它以未加密状态安全存储在内存中，SQL Server 需要使用它来访问容器中的 Blob 文件。 在下面的代码段中，将 `'<your SAS key>'` 替换为类似于以下内容的项： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
+ 以下示例假定已经创建 Azure 存储容器，已经创建了针对读取、写入、列出权限的策略。 创建容器策略会生成一个 SAS 密钥，它以未加密状态安全存储在内存中，SQL Server 需要使用它来访问容器中的 Blob 文件。 在下面的代码段中，将 `'<your SAS key>'` 替换为类似于以下内容的项： `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`。 有关详细信息，请参阅 [管理对 Azure 存储资源的访问权限](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources)  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  
@@ -94,9 +93,9 @@ ON
 ### <a name="installation-prerequisites"></a>安装的先决条件  
  以下是在 Azure 中存储 SQL Server 数据文件时的安装先决条件。  
   
--   **本地 SQL Server：** SQL Server 2016 及更高版本包括此功能。 若要了解如何下载最新版本的 SQL Server，请参阅 [SQL Server](http://www.microsoft.com/sql-server/sql-server-downloads)。  
+-   **本地 SQL Server：** SQL Server 2016 及更高版本包括此功能。 若要了解如何下载最新版本的 SQL Server，请参阅 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)。  
   
--   在 Azure 虚拟机中运行的 SQL Server：如果要 [在 Azure 虚拟机上安装 SQL Server](http://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，请安装 SQL Server 2016 或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
+-   在 Azure 虚拟机中运行的 SQL Server：如果要 [在 Azure 虚拟机上安装 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)，请安装 SQL Server 2016 或更新现有实例。 同样，也可以使用 SQL Server 2016 平台映像在 Azure 中创建新虚拟机。
 
   
 ###  <a name="bkmk_Limitations"></a> 限制  
@@ -109,7 +108,7 @@ ON
   
 -   使用“Azure 中的 SQL Server 数据文件”功能时，存储帐户不支持异地复制。 如果对存储帐户进行地理复制并发生地理故障转移，则可能出现数据库损坏。  
   
--   有关容量限制，请参阅 [Blob 存储简介](http://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
+-   有关容量限制，请参阅 [Blob 存储简介](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction)。  
   
 -   无法使用“Azure 存储中的 SQL Server 数据文件”功能在 Azure Blob 中存储内存 OLTP 数据。 这是因为内存 OLTP 依赖于 **FileStream** ，并且，在此功能的最新版本中，不支持在 Azure 存储中存储 **FileStream** 数据。  
   
@@ -123,7 +122,7 @@ ON
  本节介绍在 Azure 存储中存储 SQL Server 数据文件时可使用的工具和编程参考库。  
   
 ### <a name="powershell-support"></a>PowerShell 支持  
- 通过引用 Blob 存储 URL 路径而不是文件路径，可以使用 PowerShell cmdlet 将 SQL Server 数据文件存储在 Azure Blob 存储服务中。 使用以下 URL 格式访问 Blob：`http://storageaccount.blob.core.windows.net/<container>/<blob>`。  
+ 通过引用 Blob 存储 URL 路径而不是文件路径，可以使用 PowerShell cmdlet 将 SQL Server 数据文件存储在 Azure Blob 存储服务中。 使用以下 URL 格式访问 Blob：`https://storageaccount.blob.core.windows.net/<container>/<blob>`。  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 对象和性能计数器支持  
  从 SQL Server 2014 起，增加了一个与“Azure 存储中的 SQL Server 数据文件”功能结合使用的新 SQL Server 对象。 这个新的 SQL Server 对象称为 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 。系统监视器可使用它在用 Windows Azure 存储运行 SQL Server 时监视活动。  

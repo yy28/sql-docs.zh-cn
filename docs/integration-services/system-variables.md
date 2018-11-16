@@ -17,12 +17,12 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 141fd581fc00e60b241fe9f944fab8405426235d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc1d04899bf2b31c5bf4586afb88ed40d2ff8a0c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726265"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641904"
 ---
 # <a name="system-variables"></a>系统变量
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供了一组系统变量，其中存储有关正在运行的包及其对象的信息。 可以在表达式和属性表达式中使用这些变量自定义包、容器、任务和事件处理程序。  
@@ -105,6 +105,6 @@ ms.locfileid: "47726265"
  此规则也适用于用户定义的变量。 但是，由于无法更改系统变量的数据类型，并且必须调整对这些变量的使用以适应该数据类型，因此用户定义变量更为灵活。 在参数绑定中使用的用户定义变量通常是以与映射到它们的参数的数据类型兼容的数据类型来定义的。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [在执行 SQL 任务中将查询参数映射到变量](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
+ [在执行 SQL 任务中将查询参数映射到变量](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
-ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
+ms.openlocfilehash: 1c5e3e3e1cdfda5126392e6295fc45cf29b9f507
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47441746"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657076"
 ---
 # <a name="export-a-data-tier-application"></a>导出数据层应用程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "47441746"
 ##  <a name="NetApp"></a> 使用 .Net Framework 应用程序  
  **使用 .Net Framework 应用程序中的 Export() 方法导出 DAC。**  
   
- 若要查看代码示例，请下载有关 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
+ 若要查看代码示例，请下载有关 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)的 DAC 示例应用程序  
   
 1.  创建一个 SMO Server 对象，并且将该对象设置为包含要导出的 DAC 的实例。  
   

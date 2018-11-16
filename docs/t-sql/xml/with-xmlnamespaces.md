@@ -22,12 +22,12 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6123d5e5b5944af3a3495e74541a454a035e91bb
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808165"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695215"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ DEFAULT <xml_namespace_uri>
   
 -   不能声明 XML 命名空间前缀 `xmlns`。  
   
--   除了命名空间 URI `xml` 以及不能为其分配不同前缀的此 URI 以外，不能用其他命名空间覆盖 XML 命名空间前缀 `'http://www.w3.org/XML/1998/namespace'`。  
+-   除了命名空间 URI `xml` 以及不能为其分配不同前缀的此 URI 以外，不能用其他命名空间覆盖 XML 命名空间前缀 `'https://www.w3.org/XML/1998/namespace'`。  
   
 -   当查询正在使用 ELEMENTS XSINIL 指令时，不能重新声明 XML 命名空间前缀 `xsi`。  
   

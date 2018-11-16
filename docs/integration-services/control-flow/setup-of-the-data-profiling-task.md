@@ -13,12 +13,12 @@ ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e593351cd5ba5f0aa7efb1ced09af98cc40c3a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137310a0a8ef7ecf1d76d70b146b1e12ff4a2d5a
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652375"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638774"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>设置数据事件探查任务
   在可以查看源数据的配置文件之前，第一步是设置和运行数据事件探查任务。 在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包内创建此任务。 若要配置数据事件探查任务，可以使用数据事件探查任务编辑器。 使用此编辑器，可以选择输出配置文件的位置以及要计算哪些配置文件。 设置此任务后，可以运行包来计算数据配置文件。  
@@ -98,7 +98,7 @@ ms.locfileid: "47652375"
   
 -   生成处理数据质量信息的自定义工具。  
   
- 目标命名空间在架构中被标识为 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
+ 目标命名空间在架构中被标识为 [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)。  
   
 ## <a name="next-step"></a>下一步  
  [数据配置文件查看器](../../integration-services/control-flow/data-profile-viewer.md)。  

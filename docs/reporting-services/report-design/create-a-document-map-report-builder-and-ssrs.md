@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6532a160072e5a285cb5b8687397fd75b4026907
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1c44173f34c1560da036ca1914649774365fdf42
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020231"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812800"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>创建文档结构图（报表生成器和 SSRS）
 
@@ -82,14 +82,14 @@ ms.locfileid: "50020231"
      例如，对于 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 示例报表，下面的 URL 指定名为 Product Catalog 的报表。  
   
     ```  
-    http://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
+    https://localhost/Reports/Pages/Report.aspx?ItemPath=%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     ```  
   
 2.  复制服务器中的报表路径。 在该示例中，报表路径为 `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`。  
   
 3.  使用以下三个组件创建一个新 URL：  
   
-    -   报表服务器中的报表查看器： `http://localhost/ReportServer/Pages/ReportViewer.aspx?`  
+    -   报表服务器中的报表查看器： `https://localhost/ReportServer/Pages/ReportViewer.aspx?`  
   
     -   步骤 1 中复制的报表的名称，例如： `%2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "50020231"
      下面的 URL 由此三个组件以其所列顺序追加而成。  
   
     ```  
-    http://localhost/ReportServer/Pages/ReportViewer.aspx?  
+    https://localhost/ReportServer/Pages/ReportViewer.aspx?  
     %2fAdventureWorks2012+Sample+Reports%2fProduct+Catalog  
     &rs%3aCommand=Render&rc%3aFormat=HTML4.0&rc%3aDocMap=False  
     ```  

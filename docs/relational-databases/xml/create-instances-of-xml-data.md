@@ -20,12 +20,12 @@ ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba81057640891eded10eb09cd9d22af9ff2dc8c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a377c8ba73ed505db56c83704099aa0f7b9aac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779945"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670446"
 ---
 # <a name="create-instances-of-xml-data"></a>创建 XML 数据的实例
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在内部以一种使用 UTF-16 编码的有效二进制表示形式来表示 XML。 用户提供的编码不会保留下来，但在分析过程中会考虑。  
   
 ### <a name="type-casting-clr-user-defined-types"></a>类型转换 CLR 用户定义类型  
- 如果 CLR 用户定义类型具有 XML 序列化，则该类型的实例可以显式转换为 XML 数据类型。 有关 CLR 用户定义类型的 XML 序列化的详细信息，请参 [从 CLR 数据库对象进行 XML 序列化](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
+ 如果 CLR 用户定义类型具有 XML 序列化，则该类型的实例可以显式转换为 XML 数据类型。 有关 CLR 用户定义类型的 XML 序列化的详细信息，请参 [从 CLR 数据库对象进行 XML 序列化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>类型化的 XML 中的空格处理  
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果元素内容中的空格出现在一组只有空格并由标记（如开始或结束标记）分隔的字符数据中，则认为其无关紧要，因此不对其进行实体化。 （忽略 CDATA 部分。）这种空格处理方式与万维网联盟 (W3C) 发布的 XML 1.0 规格中介绍的空格处理方式不同。 这是因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 XML 分析器只识别有限数量的 DTD 子集（在 XML 1.0 中定义）。 有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中支持的有限 DTD 子集的详细信息，请参阅 [CAST 和 CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)。  

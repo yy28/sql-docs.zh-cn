@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d86acb0dae3d8f9059229dda764403aa999fd817
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: c6dcae60590d6bcdeaaf06d41326a8fc0cb64f64
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030846"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812660"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot 连接类型 (SSRS)
   可以使用 SQL Server Analysis Services 数据处理扩展插件从在 SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库中发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿检索数据。  
@@ -29,7 +29,7 @@ ms.locfileid: "50030846"
  使用报表数据源类型： **Microsoft SQL Server Analysis Services**。  
   
 ## <a name="connection-string"></a>连接字符串  
- 连接字符串是指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或其他库中在 SharePoint 上发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 URL，例如，`http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
+ 连接字符串是指向 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 库或其他库中在 SharePoint 上发布的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿的 URL，例如，`https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`。  
   
 ## <a name="credentials"></a>凭据  
  指定访问 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 工作簿和 SharePoint 站点所需的凭据，例如 Windows 身份验证（集成安全性）。 有关详细信息，请参阅[数据连接、数据源和连接字符串（报表生成器和 SSRS）](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)或[在报表生成器中指定凭据](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)。  

@@ -17,12 +17,12 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd50e2c507295921952c549d1eeee869b74e0e7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731095"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641454"
 ---
 # <a name="advanced-editor"></a>“高级编辑器”
   使用 **“高级编辑器”** 对话框可为所选 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象配置属性。  
@@ -43,11 +43,11 @@ ms.locfileid: "47731095"
   
  所显示的属性因组件而异。 有关可能在 **“高级编辑器”** 中显示的属性的详细信息，请参阅下列主题：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [路径属性](http://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [路径属性](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
   
  有关您所编辑的特定组件的详细信息，请参阅 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 对象和概念文档的“数据流元素”部分中的组件说明。  
   

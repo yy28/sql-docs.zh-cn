@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fe718939-7efe-4c7f-87cb-5f5b09caeff4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d27a007f72a0e56909e535139f96f4aa1e34ab6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a394ad6eccf86b3c6aff6168f09fd990651288f7
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600745"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812780"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>将设备信息设置传递给呈现扩展插件
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，设备信息设置用于将呈现参数传递到呈现扩展插件。 报表服务器 Web 服务中的设置将以 **DeviceInfo** XML 元素的形式传递并由报表服务器进行处理。 由于设备信息设置均具有默认值，因此在呈现进程中可将其视为可选参数。 但是，您可以使用设备信息设置对呈现进行自定义并覆盖由服务器提供的默认值。  
@@ -40,13 +40,13 @@ ms.locfileid: "47600745"
 </DeviceInfo>  
 ```  
   
- 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML 设备信息设置](../../../reporting-services/html-device-information-settings.md)。  
+ 当报表作为 HTML 段落呈现时，报表的内容包含在 TABLE 元素内，而不使用 HTML 或 BODY 元素。 可以使用 HTML 段落将报表并入现有 HTML 文档中。 有关 HTML 输出的设备信息设置的详细信息，请参阅 [HTML Device Information Settings](../../../reporting-services/html-device-information-settings.md)。  
   
 ## <a name="passing-device-information-using-url-access"></a>使用 URL 访问传递设备信息  
  您也可以通过 URL 访问传递设备信息设置。 设备信息设置以 URL 参数的形式传递。 可以将以下 URL 访问字符串传递到报表服务器以生成不带 HTML 查看器工具栏的所呈现报表。  
   
 ```  
-http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
+https://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  
 ```  
   
  有关详细信息，请参阅[在 URL 中指定设备信息设置](../../../reporting-services/specify-device-information-settings-in-a-url.md)。  

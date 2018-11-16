@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f809f65be52e77e84e1391df0151cc183013624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663797"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>解决事务日志已满的问题（SQL Server 错误 9002）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "47656505"
 有时只是需要结束进程；此时可能需要使用 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 语句。 请谨慎使用此语句，特别是在运行不想终止的重要进程时。 有关详细信息，请参阅 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)
 
 ## <a name="see-also"></a>另请参阅  
-[KB 支持文章 - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/en-us/kb/317375)（SQL Server 中的事务日志意外增大或已满）[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[KB 支持文章 - A transaction log grows unexpectedly or becomes full in SQL Server](https://support.microsoft.com/kb/317375)（SQL Server 中的事务日志意外增大或已满）[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [管理事务日志文件的大小](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [事务日志备份 (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  

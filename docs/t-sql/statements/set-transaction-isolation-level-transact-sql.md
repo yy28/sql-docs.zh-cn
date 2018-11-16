@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d49e9c7b8b567ff4628e4e2353a6ce0a7a4adc4
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: bbedfe588a66e166f46e9240db65689a2b2a6459
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970558"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700341"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +87,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 -   如果将 READ_COMMITTED_SNAPSHOT 设置为 ON，则[!INCLUDE[ssDE](../../includes/ssde-md.md)]会使用行版本控制为每个语句提供一个在事务上一致的数据快照，因为该数据在语句开始时就存在。 不使用锁来防止其他事务更新数据。
 
 > [!IMPORTANT]  
-> 选择事务隔离级别不影响为保护数据修改而获取的锁。 事务总是在其修改的任何数据上获取排他锁并在事务完成之前持有该锁，不管为该事务设置了什么样的隔离级别。 此外，在 READ_COMMITTED 隔离级别进行的更新使用所选数据行的更新锁，而在 SNAPSHOT 隔离级别进行的更新使用行版本来选择要更新的行。 对于读取操作，事务隔离级别主要定义保护级别，以防受到其他事务所做更改的影响。 有关详细信息，请参阅[事务锁定和行版本控制指南](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
+> 选择事务隔离级别不影响为保护数据修改而获取的锁。 事务总是在其修改的任何数据上获取排他锁并在事务完成之前持有该锁，不管为该事务设置了什么样的隔离级别。 此外，在 READ_COMMITTED 隔离级别进行的更新使用所选数据行的更新锁，而在 SNAPSHOT 隔离级别进行的更新使用行版本来选择要更新的行。 对于读取操作，事务隔离级别主要定义保护级别，以防受到其他事务所做更改的影响。 有关详细信息，请参阅[事务锁定和行版本控制指南](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)。
 
 > [!NOTE]  
 >  快照隔离支持 FILESTREAM 数据。 在快照隔离模式下，事务中任何语句读取的 FILESTREAM 数据都将是在事务开始时便存在的数据的事务性一致版本。  

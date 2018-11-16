@@ -13,12 +13,12 @@ ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b41df0872ca52a73a21db5f151bbaa1a03cf5bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f4755e76755a455ff5a4fca7a77a7c9188fd76f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696136"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>创建中央管理服务器和服务器组
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47845895"
   
 4.  在 **“已注册的服务器”** 中，输入服务器名称和可选说明。  
   
-5.  在 **“连接属性”** 选项卡上，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](http://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
+5.  在 **“连接属性”** 选项卡上，查看或修改网络和连接属性。 有关详细信息，请参阅[连接到服务器（“连接属性”页）数据库引擎](https://msdn.microsoft.com/library/edc1143c-6a47-4b02-92ab-441bdea8ea8a)。  
   
 6.  单击 **“测试”**，对连接进行测试。  
   

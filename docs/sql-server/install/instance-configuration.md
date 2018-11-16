@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7018c0f71f51fa482ef0c1fad78b1aac20bf79cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764835"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701059"
 ---
 # <a name="installation-wizard-help"></a>安装向导帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "47764835"
  **指定管理员** - 必须为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例指定至少一个服务器管理员。 您指定的用户或组将成为所安装的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 实例的服务器管理员角色的成员。 这些都必须是与安装该软件的计算机处于同一域中的 Windows 域用户帐户。  
   
 > [!NOTE]  
->  用户帐户控制 (UAC) 是一个 Windows 安全功能，它要求在运行管理操作或应用程序之前，先由管理员专门审批。 由于 UAC 在默认情况下处于打开状态，因此系统将提示您允许需要提升权限的特定操作。 您可以配置 UAC 来更改默认行为，或针对特定程序自定义 UAC。 有关 UAC 和 UAC 配置的详细信息，请参阅 [User Account Control Step by Step Guide](http://go.microsoft.com/fwlink/?linkid=196350)（用户帐户控制分步指南）和 [User Account Control (Wikipedia)](http://go.microsoft.com/fwlink/?linkid=196351)（用户帐户控制 (Wikipedia)）。  
+>  用户帐户控制 (UAC) 是一个 Windows 安全功能，它要求在运行管理操作或应用程序之前，先由管理员专门审批。 由于 UAC 在默认情况下处于打开状态，因此系统将提示您允许需要提升权限的特定操作。 您可以配置 UAC 来更改默认行为，或针对特定程序自定义 UAC。 有关 UAC 和 UAC 配置的详细信息，请参阅 [User Account Control Step by Step Guide](https://go.microsoft.com/fwlink/?linkid=196350)（用户帐户控制分步指南）和 [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351)（用户帐户控制 (Wikipedia)）。  
   
 ### <a name="see-also"></a>另请参阅  
  [配置服务帐户 (Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -250,7 +250,7 @@ ms.locfileid: "47764835"
  有关目录、文件位置和实例 ID 命名的详细信息，请参阅 [默认和已命名的 SQL Server 实例的文件位置](file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
     
- [文件服务器上的共享权限和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571) 
+ [文件服务器上的共享权限和 NTFS 权限](https://go.microsoft.com/fwlink/?LinkID=206571) 
 
 ## <a name="database-engine-configuration---filestream"></a>数据库引擎配置 - 文件流
   使用此页可针对此 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安装启用 FILESTREAM。 FILESTREAM 通过将 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **二进制大型对象 (BLOB) 数据作为文件存储在 NTFS 文件系统中，将** 与该文件系统集成在一起。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句可插入、更新、查询、搜索和备份 FILESTREAM 数据。 通过 Win32 文件系统接口可以流式方式访问数据。  
@@ -385,7 +385,7 @@ ms.locfileid: "47764835"
   
 -   “文件数” 是 **tempdb**的数据文件总数。 默认值为 8 和安装程序检测到了逻辑内核数中的较小值。 一般而言，如果逻辑处理器数小于或等于 8，则使用的数据文件数与逻辑处理器数相同。 如果逻辑处理器数大于 8，则使用 8 个数据文件，如果仍然存在争用，则以 4 的倍数增加数据文件的数量（最多为逻辑处理器的数量），直到争用减少到可接受的级别或对工作负荷/代码进行更改。 
   
--   **初始大小 (MB)** 是每个 **tempdb** 数据文件的初始大小（以 MB 表示）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的最大初始文件大小为 1024 MB。 所有 **tempdb** 数据文件初始大小相同。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用[数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
+-   **初始大小 (MB)** 是每个 **tempdb** 数据文件的初始大小（以 MB 表示）。 默认值为 8 MB（对于 [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)] 为 4 MB）。 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 引入的最大初始文件大小为 262,144 MB (256 GB)。 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 的最大初始文件大小为 1024 MB。 所有 **tempdb** 数据文件初始大小相同。 由于每次 SQL Server 启动或故障转移时都会重新创建 **tempdb** ，因此你应指定与你的工作负载正常运行所需大小接近的大小。 若要在启动时进一步优化 **tempdb** 的创建，则启用 [数据库实例文件初始化](../../relational-databases/databases/database-instant-file-initialization.md)。  
   
 -   **总初始大小 (MB)** 是所有 **tempdb** 数据文件的累积大小。  
   
@@ -428,7 +428,7 @@ ms.locfileid: "47764835"
   
 ### <a name="see-also"></a>另请参阅  
  [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [文件服务器上的共享权限和 NTFS 权限](http://go.microsoft.com/fwlink/?LinkID=206571)  
+ [文件服务器上的共享权限和 NTFS 权限](https://go.microsoft.com/fwlink/?LinkID=206571)  
 
 ## <a name="database-engine-configuration---user-instance"></a>数据库引擎配置 - 用户实例
 使用 **“用户实例”** 页可以为不具有管理员权限的用户生成单独的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 实例，并可以将用户添加到管理员角色中。  

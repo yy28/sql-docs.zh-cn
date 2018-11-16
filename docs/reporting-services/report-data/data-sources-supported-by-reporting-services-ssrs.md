@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7348463fe7fb9f3871ecba06a2be8e768f8e3d51
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7a08ece8729125bf1cc60bb96385d58ba5c3a6ee
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029158"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813860"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services 支持的数据源 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 通过一个使用数据处理扩展插件的可扩展模块化数据层从数据源中检索报表数据。 若要从数据源检索报表数据，必须选择一个数据处理扩展插件，该扩展插件必须支持数据源类型、数据源上运行的软件版本，以及数据源平台（32 位或 64 位 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]）。  
@@ -175,7 +175,7 @@ ms.locfileid: "50029158"
 ###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 数据处理扩展插件要求根据要在报表中使用的数据源的版本来选择一个附加数据访问接口层。 如果您未选择特定数据访问接口，系统将提供一个默认接口。 请通过“连接属性”对话框（可通过“数据源”或“共享数据源”对话框中的“编辑”按钮访问）选择特定数据访问接口。  
   
- 有关 OLE DB 关联查询设计器详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 有关 OLE DB 访问接口特定支持的详细信息，请参阅 [知识库中的](http://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 设计器工具支持 OLE DB 访问接口特定信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 有关 OLE DB 关联查询设计器详细信息，请参阅 [图形查询设计器用户界面](../../reporting-services/report-data/graphical-query-designer-user-interface.md)。 有关 OLE DB 访问接口特定支持的详细信息，请参阅 [知识库中的](https://support.microsoft.com/default.aspx/kb/811241) Visual Studio .NET 设计器工具支持 OLE DB 访问接口特定信息 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  [返回数据源表](#DataSourcesTable)  
   
@@ -196,7 +196,7 @@ ms.locfileid: "50029158"
   
  此扩展插件支持与位置相关的未命名参数， 但不支持命名参数。 若要使用命名参数，请使用 [Oracle](#OracleClient) 数据处理扩展插件。  
   
- 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](http://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](http://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](https://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](https://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  [返回数据源表](#DataSourcesTable)  
   
@@ -229,11 +229,11 @@ ms.locfileid: "50029158"
  
 若要安装 Oracle 客户端工具，可执行以下操作。
  
-1.  转到 [Oracle 的下载站点](http://www.oracle.com/us/products/tools/index-090165.html)
+1.  转到 [Oracle 的下载站点](https://www.oracle.com/us/products/tools/index-090165.html)
 2.  下载适用于 Windows（64 位服务器，32 位工具）的 ODAC 12c 第 4 版 (12.1.0.2.4)
 3.  安装 Data Provider for .NET 4
   
- 此扩展插件支持命名参数。 对于 Oracle 版本 11g 或更高版本而言，支持多值参数。 对于位置相关的未命名参数，请使用 OLE DB 数据处理扩展插件和数据访问接口 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle。 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](http://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](http://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 此扩展插件支持命名参数。 对于 Oracle 版本 11g 或更高版本而言，支持多值参数。 对于位置相关的未命名参数，请使用 OLE DB 数据处理扩展插件和数据访问接口 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Oracle。 有关将 Oracle 配置为数据源的详细信息，请参阅 [如何使用 Reporting Services 配置和访问 Oracle 数据源](https://support.microsoft.com/kb/834305)。 有关附加权限配置的详细信息，请参阅 [知识库中的](https://support.microsoft.com/kb/870668) 如何为 NETWORK SERVICE 安全主体添加权限 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
  您可以使用多个输入参数从存储过程中检索数据，但存储过程必须只返回一个输出游标。 有关详细信息，请参阅 [使用 DataReader 检索数据](https://go.microsoft.com/fwlink/?LinkId=81758)中的 Oracle 部分。  
   
@@ -270,7 +270,7 @@ ms.locfileid: "50029158"
   
  有关详细信息，请参阅 [Teradata 连接类型 (SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md)。  
   
- 您还可以创建基于 Teradata 数据库的模型。 有关更多信息，请参阅 Teradata 网站上的以下白皮书： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
+ 您还可以创建基于 Teradata 数据库的模型。 有关更多信息，请参阅 Teradata 网站上的以下白皮书： [Microsoft SQL Server 2012 Reporting Services 和 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)。  
   
  [返回数据源表](#DataSourcesTable)  
   

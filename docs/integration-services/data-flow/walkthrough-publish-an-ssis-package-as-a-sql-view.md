@@ -13,12 +13,12 @@ ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fdd198e8b5bf23e69d74be057c97b29e229dada
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 126dad89a25ccf1a11958676cb0be439fb4aac65
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717885"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641564"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>演练：将 SSIS 包作为 SQL 视图发布
   本演练提供在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库中将 SSIS 包作为 SQL 视图发布的详细步骤。  
@@ -252,7 +252,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS C
   
  Timeout 指示在 SSIS 包中的新数据到达之前，OLE DB Provider for SSIS 可以等待的秒数。 默认情况下，超时为 60 秒。 可以指定介于 20 和 32000 之间的整数超时值。  
   
- Parameters 包含包参数和项目参数的值。 参数的规则与 [DTExec](http://msdn.microsoft.com/library/hh231187.aspx)中的参数相同。  
+ Parameters 包含包参数和项目参数的值。 参数的规则与 [DTExec](https://msdn.microsoft.com/library/hh231187.aspx)中的参数相同。  
   
  以下列表指定了查询子句中允许的特殊字符：  
   

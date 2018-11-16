@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: bcf25195821c42d5120fc5d248b364ce23e24ed0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798596"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700315"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -194,7 +194,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="locking-behavior"></a>锁定行为  
  默认情况下，DELETE 语句始终在其修改的表上获取排他 (X) 锁并在事务完成之前持有该锁。 使用排他锁（X 锁）时，任何其他事务都无法修改数据；仅在使用 NOLOCK 提示或未提交读隔离级别时才会进行读取操作。 您可以指定表提示，以便通过指定其他锁定方法来覆盖 DELETE 语句的持续时间的这一默认行为，但只建议经验丰富的开发人员和数据库管理员将提示用作最后的手段来执行。 有关详细信息，请参阅[表提示 (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md)。  
   
- 从堆删除行时，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以使用行锁定或页锁定进行操作。 结果，删除操作导致的空页将继续分配给堆。 未释放空页时，数据库中的其他对象将无法重用关联的空间。  
+ 从堆删除行时， [!INCLUDE[ssDE](../../includes/ssde-md.md)] 可以使用行锁定或页锁定进行操作。 结果，删除操作导致的空页将继续分配给堆。 未释放空页时，数据库中的其他对象将无法重用关联的空间。  
   
  若要删除堆中的行并释放页，请使用下列方法之一。  
   
@@ -230,7 +230,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  本节中的示例说明了使用最低要求的语法的 DELETE 语句的基本功能。  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. 使用不带 WHERE 子句的 DELETE  
- 下面的示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `SalesPersonQuotaHistory` 表中删除所有行，因为该例未使用 WHERE 子句限制删除的行数。  
+ 下面的示例从 `SalesPersonQuotaHistory` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中删除所有行，因为该例未使用 WHERE 子句限制删除的行数。  
   
 ```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
@@ -241,7 +241,7 @@ GO
  本节中的示例演示了如何限制将被删除的行数。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. 使用 WHERE 子句删除行集  
- 以下示例从 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductCostHistory` 表中删除 `StandardCost` 列的值大于 `1000.00` 的所有行。  
+ 下面的示例从 `ProductCostHistory` 数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表中删除 `StandardCost` 列的值大于 `1000.00`的所有行。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -367,7 +367,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. 通过使用 OPENQUERY 函数从远程表删除数据  
- 以下示例通过指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行集函数从远程表中删除行。 在之前例子中创建的链接服务器名称用于此示例。  
+ 下面的示例通过指定 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 行集函数从远程表删除行。 在之前例子中创建的链接服务器名称用于此示例。  
   
 ```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. 在 DELETE 语句中同时使用 OUTPUT 与 <from_table_name>  
- 以下示例根据 `DELETE` 语句的 `FROM` 子句中定义的搜索条件，删除 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 `ProductProductPhoto` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
+ 以下示例根据 `ProductProductPhoto` 语句的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 子句中定义的搜索条件，删除 `FROM` 数据库 `DELETE` 表中的行。 `OUTPUT` 子句返回所删除表中的列（ `DELETED.ProductID`、 `DELETED.ProductPhotoID`）以及 `Product` 表中的列。 在 `FROM` 子句中使用该项来指定要删除的行。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. 通过 DELETE 语句使用标签和查询提示  
- 此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
+ 此查询显示通过 DELETE 语句使用查询联接提示的基本语法。 有关联接提示以及如何使用 OPTION 子句的详细信息，请参阅 [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)。  
   
 ```sql
 -- Uses AdventureWorks  

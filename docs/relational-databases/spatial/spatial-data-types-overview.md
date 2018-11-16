@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aae75f2f665536336fcf745a86675846249b4ab8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9a9e4f02d0662150c8f8458da7bde3b5a4838022
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018402"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668026"
 ---
 # <a name="spatial-data-types-overview"></a>空间数据类型概述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,8 @@ geometry 和 geography 类型的子类型分为简单类型和集合类型。  �
 OGC 的 SQL 简单特征规范讨论了外环和内环，但此差别对 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 数据类型来说几乎毫无意义：多边形的任何环都可以作为外环。  
 
 有关 OGC 规范的详细信息，请参阅以下内容：  
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](http://go.microsoft.com/fwlink/?LinkId=93627)  
--   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](http://go.microsoft.com/fwlink/?LinkId=93628)  
+-   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture（OGC 规范：简单特征访问第 1 部分 - 公共体系结构）](https://go.microsoft.com/fwlink/?LinkId=93627)  
+-   [OGC Specifications, Simple Feature Access Part 2 – SQL Options（OGC 规范：简单特征访问第 2 部分 - SQL 选项）](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> 圆弧线段  
 三种可实例化类型可以采用圆弧线段： **CircularString**、 **CompoundCurve**和 **CurvePolygon**。  圆弧线段在二维平面中由三个点定义；第三个点不能与第一个点相同。  
@@ -173,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## <a name="see-also"></a>另请参阅  
 - [空间数据 (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry 数据类型方法引用](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography 数据类型方法引用](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
 - [STNumCurves（geometry 数据类型）](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves（geography 数据类型）](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText（geometry 数据类型）](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

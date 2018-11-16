@@ -15,16 +15,16 @@ ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896defe62b38458f25f25a8f440c1a85698a032d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f95edb2129432df62edf4db88c6d42b28e46bddd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608385"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701785"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>创建全文搜索查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-全文搜索使用 CONTAINS 谓词来查找在给定列中包含指定文本的行。 全文搜索仅适用于具有活动的全文索引的列。 如果试图将 CONTAINS 子句用于不具有当前活动的全文索引的列，则将收到错误。 有关全文检索和 CONTAINS 子句的详细信息，请参阅 [全文搜索 (SQL Server)](http://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) 和 [CONTAINS (Transact-SQL)](http://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)。  
+全文搜索使用 CONTAINS 谓词来查找在给定列中包含指定文本的行。 全文搜索仅适用于具有活动的全文索引的列。 如果试图将 CONTAINS 子句用于不具有当前活动的全文索引的列，则将收到错误。 有关全文检索和 CONTAINS 子句的详细信息，请参阅 [全文搜索 (SQL Server)](https://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) 和 [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)。  
   
 ### <a name="to-create-a-full-text-search-query"></a>创建全文搜索查询  
   
