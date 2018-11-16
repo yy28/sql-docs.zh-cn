@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9636e10649dc9a8b297e2397e07fbc4629f2cdf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673725"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658346"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入门：SQL Server 中的扩展事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47673725"
 
 
 > [!NOTE]
-> 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的信息，请参阅 [SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
 ## <a name="preparations-before-demo"></a>演示前的准备工作
@@ -56,7 +56,7 @@ ms.locfileid: "47673725"
 
 实际执行即将进行的演示时，需做好以下准备工作。
 
-1. [下载 SQL Server Management Studio (SSMS)](http://msdn.microsoft.com/library/mt238290.aspx)
+1. [下载 SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
   - 每个月应安装 SSMS 最新的每月更新。
 2. 登录到 Microsoft SQL Server 2014 或更高版本，或登录到 Azure SQL 数据库（`SELECT @@version` 将返回一个值，该值的第一个节点为 12 或更高版本）。
 3. 确保你的帐户具有**更改任意事件会话**[服务器权限](../../t-sql/statements/grant-server-permissions-transact-sql.md)。
@@ -191,7 +191,7 @@ GO
 > [!NOTE]
 > 对于 Azure SQL 数据库，在上述 CREATE EVENT SESSION 语句中，ON SERVER 子句将改为 ON DATABASE。
 > 
-> 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的详细信息，请参阅 [SQL 数据库中的扩展事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
+> 有关 Microsoft SQL Server 与 Azure SQL 数据库之间扩展事件的差异的详细信息，请参阅 [SQL 数据库中的扩展事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)。
 
 
 #### <a name="pre-drop-of-the-event-session"></a>事件会话的预删除
@@ -415,7 +415,7 @@ SELECT
 - [查找具有最多锁定的对象](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - 此应用场景使用目标 package0.histogram，该目标会将原始事件数据处理后再向你显示。
 - [确定持有锁的查询](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - 此应用场景使用 [目标 package0.pair_matching](http://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
+  - 此应用场景使用 [目标 package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3)，其中的事件对为 sqlserver.lock_acquire 和 lock_release。
 
 
 ## <a name="terms-and-concepts-in-extended-events"></a>扩展事件中的术语和概念
@@ -647,9 +647,9 @@ SELECT HAS_PERMS_BY_NAME(
 - 内置函数 [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)的详细信息
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT 服务器权限 (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms188786.aspx)
-- [sys.database_principals (Transact-SQL)](http://msdn.microsoft.com/library/ms187328.aspx)（尤其适用于 Azure SQL 数据库）
-- 博客： [Effective Database Engine Permissions](http://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
+- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)（尤其适用于 Azure SQL 数据库）
+- 博客： [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)（有效的数据库引擎权限）
 - PDF 形式的可缩放 [海报](https://aka.ms/sql-permissions-poster)，显示所有 SQL Server 权限的层次结构。
 
 

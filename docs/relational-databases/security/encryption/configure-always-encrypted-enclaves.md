@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48580f2ca2e83a968f9599b98956c079f763bf71
-ms.sourcegitcommit: 0acd84d0b22a264b3901fa968726f53ad7be815c
+ms.openlocfilehash: 591dbbc9772378efccb37ca2f7b3af94d37f4529
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307121"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677136"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>配置具有安全 enclave 的 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -70,7 +70,7 @@ Windows 主机保护者服务 (HGS) 需要在单独的 HGS 计算机上安装，
 1. 以管理员身份登录到 SQL Server 计算机。
 2. 以管理员身份运行 PowerShell。
 3. 运行 [Get-hgsclientconfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration)。
-4. 编写并保存 AttestationServerURL 属性。 这看起来应类似于 `http://x.x.x.x/Attestation`。
+4. 编写并保存 AttestationServerURL 属性。 这看起来应类似于 `https://x.x.x.x/Attestation`。
 
 
 ### <a name="install-tools"></a>安装工具
@@ -112,9 +112,9 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
    RECONFIGURE
    ```
 
-4. 重新启动 SQL Server 实例，以前的更改才会生效。 可以在“对象资源管理器”中右键单击实例并选择“重新启动”，以在 SSMS 中重新启动实例。 在重新启动实例后，重新连接到它。
+4. 重新启动 SQL Server 实例，以前的更改才会生效。 可在“对象资源管理器”中右键单击实例并选择“重启”，从而在 SSMS 中重启实例。 重启实例后，请重新连接到它。
 
-5. 确认安全 enclave 现通过运行以下查询加载：
+5. 通过运行以下查询确认现已加载安全 enclave：
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
@@ -127,7 +127,7 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
     | ------------------------------ | ----- | -------------- |
     | 列加密 enclave 类型 | 1     | 1              |
 
-6. 若要启用对加密列的丰富计算，请运行以下查询：
+6. 若要启用对加密列的大量计算，请运行以下查询：
 
    ```sql
    DBCC traceon(127,-1)
@@ -156,15 +156,15 @@ NuGet 包旨在用于 Visual Studio 项目，以便使用具有安全 enclave �
 以下步骤创建已启用 enclave 的密钥（需要 SSMS 18.0 或更高版本）：
 
 1. 使用 SSMS 连接到你的数据库。
-2. 在“对象资源管理器”中，展开你的数据库，然后导航到“安全” > “Always Encrypted 密钥”。
+2. 在“对象资源管理器”中，展开数据库，然后导航到“安全” > “Always Encrypted 密钥”。
 3. 预配新的已启用 enclave 的列主密钥：
 
     1. 右键单击“Always Encrypted 密钥”，然后选择“新列主密钥...”。
     2. 选择列主密钥名称。
     3. 请确保选择“Windows 证书存储(当前用户或本地计算机)”或“Azure Key Vault”。
     4. 选择“允许 enclave 计算”。
-    5. 如果选择了 Azure Key Vault，登录到 Azure 并选择密钥保管库。 有关如何创建 Always Encrypted 的密钥保管库的详细信息，请参阅[从 Azure 门户管理密钥保管库](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)。
-    6. 如果它已存在，则选择密钥，或按照要创建新密钥的窗体上的说明操作。
+    5. 如果选择了 Azure Key Vault，请登录到 Azure 并选择密钥保管库。 若要深入了解如何创建 Always Encrypted 的密钥保管库，请参阅 [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)（从 Azure 门户管理密钥保管库）。
+    6. 如已存在，则请选择密钥，或按照窗体上的说明创建新密钥。
     7. 单击“确定” 。
 
         ![允许 enclave 计算](./media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -853,7 +853,7 @@ GO;
 
 ### <a name="develop-and-test-your-app"></a>开发和测试应用 
 
-若要使用 Always Encrypted 和 enclave 计算，应用程序需要使用连接字符串中的以下两个关键字连接到数据库：`Column Encryption Setting = Enabled; Enclave Attestation Url=http://x.x.x.x/Attestation`（其中 xxxx 可以是 ip、域等）。
+若要使用 Always Encrypted 和 enclave 计算，应用程序需要使用连接字符串中的以下两个关键字连接到数据库：`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation`（其中 xxxx 可以是 ip、域等）。
 
 此外，应用程序需要遵循适用于使用 Always Encrypted 的应用程序的通用指导原则，例如，应用程序必须有权访问与应用程序查询中引用的数据库列相关联的列主密钥。
 
@@ -905,7 +905,7 @@ namespace ConsoleApp1
       static void Main(string\[\] args)
    {
 
-   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = http://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
+   string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Enclave Attestation Url = https://10.193.16.185/Attestation/attestationservice.svc/signingCertificates; Integrated Security = true";
 
 using (SqlConnection connection = new SqlConnection(connectionString))
 {

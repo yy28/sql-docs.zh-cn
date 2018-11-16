@@ -28,12 +28,12 @@ ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de191188dfcd22a75ed42555b432d757f9ac316e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667046"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 编辑器选项
 本主题包含有关 Transact-SQL 编辑器的一些选项的信息。 要设置这些选项，请通过“工具\选项”菜单导航到“选项”对话框。  
@@ -50,25 +50,25 @@ ms.locfileid: "47598916"
 |**SET TEXTSIZE**|默认值为 2,147,483,647 个字节，表示 SQL Server 将针对 text、ntext、nvarchar(max) 和 varchar(max) 数据字段提供最高上限的数据。 它将不影响 XML 数据类型。 提供较小的数值，可以在存在大量值时限制结果数量。 超出指定数量的列将被截断。|  
 |**执行超时值**|指示在取消查询之前等待的秒数。 值 0 指示无限期的等待或无超时。|  
 |默认情况下，在 SQLCMD 模式下打开新查询|选中此复选框可在 SQLCMD 模式下打开新查询。 只有从“工具”菜单打开该对话框时，此复选框才可见。<br /><br />选择此选项时，请记住下列限制：<br /><br />-   数据库引擎查询编辑器中的 IntelliSense 处于关闭状态。<br />-   由于查询编辑器不能从命令行运行，因此不能传入命令行参数（如变量）。<br />-   由于查询编辑器无法响应操作系统提示，因此一定要记住不要运行交互式语句。|  
-|**SET NOCOUNT**|阻止在结果中返回消息，该消息指示 Transact-SQL 语句影响的行数。 有关更多信息，请参见 [SET NOCOUNT](http://go.microsoft.com/fwlink/?LinkID=238731)。|  
-|**SET NOEXEC**|为 ON 时，告知 Microsoft® SQL Server™ 编译每批 Transact-SQL 语句但是不执行它们。 为 OFF 时，告知 Microsoft® SQL Server™ 在编译后执行所有批。有关详细信息，请参阅 [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770)。|  
-|**SET PARSEONLY**|检查每个 Transact-SQL 语句的语法并返回任何错误消息，但不编译或执行语句。 有关更多信息，请参见 [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)。|  
-|**SET CONCAT_NULL_YIELDS_NULL**|控制是将串联结果视为 null 值还是空字符串值。有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733)。|  
-|**SET ARITHABORT**|在查询执行过程中发生溢出或被零除错误时终止查询。 有关详细信息，请参阅 [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)。|  
-|**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不执行 Transact-SQL 语句， 而是由 SQL Server 返回有关如何执行语句的详细信息。 有关详细信息，请参阅 [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737)。|  
+|**SET NOCOUNT**|阻止在结果中返回消息，该消息指示 Transact-SQL 语句影响的行数。 有关更多信息，请参见 [SET NOCOUNT](https://go.microsoft.com/fwlink/?LinkID=238731)。|  
+|**SET NOEXEC**|为 ON 时，告知 Microsoft® SQL Server™ 编译每批 Transact-SQL 语句但是不执行它们。 为 OFF 时，告知 Microsoft® SQL Server™ 在编译后执行所有批。有关详细信息，请参阅 [SET NOEXEC](https://go.microsoft.com/fwlink/?LinkId=238770)。|  
+|**SET PARSEONLY**|检查每个 Transact-SQL 语句的语法并返回任何错误消息，但不编译或执行语句。 有关更多信息，请参见 [SET PARSEONLY](https://go.microsoft.com/fwlink/?LinkId=238734)。|  
+|**SET CONCAT_NULL_YIELDS_NULL**|控制是将串联结果视为 null 值还是空字符串值。有关详细信息，请参阅 [SET CONCAT_NULL_YIELDS_NULL](https://go.microsoft.com/fwlink/?LinkId=238733)。|  
+|**SET ARITHABORT**|在查询执行过程中发生溢出或被零除错误时终止查询。 有关详细信息，请参阅 [SET ARITHABORT](https://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx)。|  
+|**SET SHOWPLAN_TEXT**|使 Microsoft® SQL Server™ 不执行 Transact-SQL 语句， 而是由 SQL Server 返回有关如何执行语句的详细信息。 有关详细信息，请参阅 [SET SHOWPLAN_TEXT](https://go.microsoft.com/fwlink/?LinkID=238737)。|  
 |**SET STATISTICS TIME**|显示分析、编译和执行各语句所需的毫秒数。|  
 |**SET STATISTICS IO**|使 Microsoft® SQL Server™ 显示有关由 Transact-SQL 语句生成的磁盘活动量的信息。|  
-|**SET TRANSACTION ISOLATION LEVEL**|控制一个连接所发出的所有 Microsoft® SQL Server™ **SELECT** 语句的默认事务锁定行为。 有关更多信息，请参见  [SET TRANSACTION ISOLATION LEVEL](http://go.microsoft.com/fwlink/?LinkId=238730)。|  
-|**SET LOCK_TIMEOUT**|指定语句等待锁释放的毫秒数。 有关详细信息，请参阅 [SET LOCK_TIMEOUT](http://go.microsoft.com/fwlink/?LinkId=238747)|  
-|**SET QUERY_GOVERNOR_COST_LIMIT**|覆盖当前为当前连接所配置的值。 有关详细信息，请参阅 [SET QUERY_GOVERNOR_COST_LIMIT](http://go.microsoft.com/fwlink/?LinkId=238749)。|  
-|**SET ANSI_DEFAULTS**|控制一组用来共同指定某些 SQL-92 标准行为的 Microsoft® SQL Server™ 设置。 有关详细信息，请参阅 [SET ANSI_DEFAULTS](http://go.microsoft.com/fwlink/?LinkId=238750)。|  
-|**SET QUOTED_IDENTIFIER**|使 Microsoft® SQL Server™ 遵从关于引号分隔标识符和文字字符串的 SQL-92 规则。 由双引号分隔的标识符可以是 Transact-SQL 保留关键字，也可以包含 Transact-SQL 标识符语法规则通常不允许的字符。有关更多信息，请参阅 [SET QUOTED_IDENTIFIER](http://go.microsoft.com/fwlink/?LinkId=238751)。|  
-|**SET ANSI_NULL_DFLT_ON**|数据库的 ANSI null default 选项为 false 时，更改会话行为以覆盖新列的默认为 null 性。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON](http://go.microsoft.com/fwlink/?LinkID=238752)。|  
-|**SET IMPLICIT_TRANSACTIONS**|为 **ON**时，将连接设置为隐式事务模式。 为 **OFF**时，则使连接恢复为自动提交事务模式。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS](http://go.microsoft.com/fwlink/?LinkId=238753)。|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|控制在提交事务时是否关闭游标。 有关详细信息，请参阅 [SET CURSOR_CLOSE_ON_COMMIT](http://go.microsoft.com/fwlink/?LinkId=238754)。|  
-|**SET ANSI_PADDING**|对列存储值长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的列存储值的方式进行控制。 有关详细信息，请参阅 [SET ANSI_PADDING](http://go.microsoft.com/fwlink/?LinkId=238755)。|  
-|**SET ANSI_WARNINGS**|为多个错误条件指定 SQL-92 标准行为。有关详细信息，请参阅 [SET ANSI_WARNINGS](http://go.microsoft.com/fwlink/?LinkId=238758)。|  
-|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](http://go.microsoft.com/fwlink/?LinkId=238759)。|  
+|**SET TRANSACTION ISOLATION LEVEL**|控制一个连接所发出的所有 Microsoft® SQL Server™ **SELECT** 语句的默认事务锁定行为。 有关更多信息，请参见  [SET TRANSACTION ISOLATION LEVEL](https://go.microsoft.com/fwlink/?LinkId=238730)。|  
+|**SET LOCK_TIMEOUT**|指定语句等待锁释放的毫秒数。 有关详细信息，请参阅 [SET LOCK_TIMEOUT](https://go.microsoft.com/fwlink/?LinkId=238747)|  
+|**SET QUERY_GOVERNOR_COST_LIMIT**|覆盖当前为当前连接所配置的值。 有关详细信息，请参阅 [SET QUERY_GOVERNOR_COST_LIMIT](https://go.microsoft.com/fwlink/?LinkId=238749)。|  
+|**SET ANSI_DEFAULTS**|控制一组用来共同指定某些 SQL-92 标准行为的 Microsoft® SQL Server™ 设置。 有关详细信息，请参阅 [SET ANSI_DEFAULTS](https://go.microsoft.com/fwlink/?LinkId=238750)。|  
+|**SET QUOTED_IDENTIFIER**|使 Microsoft® SQL Server™ 遵从关于引号分隔标识符和文字字符串的 SQL-92 规则。 由双引号分隔的标识符可以是 Transact-SQL 保留关键字，也可以包含 Transact-SQL 标识符语法规则通常不允许的字符。有关更多信息，请参阅 [SET QUOTED_IDENTIFIER](https://go.microsoft.com/fwlink/?LinkId=238751)。|  
+|**SET ANSI_NULL_DFLT_ON**|数据库的 ANSI null default 选项为 false 时，更改会话行为以覆盖新列的默认为 null 性。 有关详细信息，请参阅 [SET ANSI_NULL_DFLT_ON](https://go.microsoft.com/fwlink/?LinkID=238752)。|  
+|**SET IMPLICIT_TRANSACTIONS**|为 **ON**时，将连接设置为隐式事务模式。 为 **OFF**时，则使连接恢复为自动提交事务模式。 有关详细信息，请参阅 [SET IMPLICIT_TRANSACTIONS](https://go.microsoft.com/fwlink/?LinkId=238753)。|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|控制在提交事务时是否关闭游标。 有关详细信息，请参阅 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)。|  
+|**SET ANSI_PADDING**|对列存储值长度小于列的定义大小的值以及在 **char**、 **varchar**、 **binary**和 **varbinary** 数据中含有尾随空格的列存储值的方式进行控制。 有关详细信息，请参阅 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)。|  
+|**SET ANSI_WARNINGS**|为多个错误条件指定 SQL-92 标准行为。有关详细信息，请参阅 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)。|  
+|**SET ANSI_NULLS**|指定在与 null 值一起使用等于 (=) 和不等于 (<>) 比较运算符时采用符合 SQL-92 标准的行为。有关详细信息，请参阅 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)。|  
   
 ## <a name="QueryResults"></a>查询结果  
   

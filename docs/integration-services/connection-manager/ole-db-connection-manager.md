@@ -18,18 +18,18 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe7228a4566f86467be3eb7b3f6ecd72d6ac6b9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ac4984fca803cbcf5d18fa4b34fdd8629dfe8c9
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849155"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640008"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 连接管理器
   OLE DB 连接管理器使包能够用 OLE DB 访问接口连接到数据源。 例如，连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 OLE DB 连接管理器可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。    
     
 > [!NOTE]    
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅 [SQL Server 发行说明](http://go.microsoft.com/fwlink/?LinkId=247824) 以及 www.mattmasson.com 上博客文章 [AlwaysOn 多子网故障转移和 SSIS](http://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)。    
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供程序不支持用于多子网故障转移群集的新连接字符串关键字 (MultiSubnetFailover=True)。 有关详细信息，请参阅 [SQL Server 发行说明](https://go.microsoft.com/fwlink/?LinkId=247824) 以及 www.mattmasson.com 上博客文章 [AlwaysOn 多子网故障转移和 SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)。    
     
 > [!NOTE]    
 >  如果数据源是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007 或 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007，则数据源需要不同于早期版本 Excel 或 Access 的数据访问接口。 有关详细信息，请参阅 [连接到 Excel 工作簿](../../integration-services/connection-manager/connect-to-an-excel-workbook.md) 和 [连接到 Access 数据库](../../integration-services/connection-manager/connect-to-an-access-database.md)。    
@@ -60,9 +60,9 @@ ms.locfileid: "47849155"
     
 ## <a name="related-content"></a>相关内容    
     
--   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](http://go.microsoft.com/fwlink/?LinkId=220670) 。    
+-   social.technet.microsoft.com 上的 Wiki 文章 [SSIS 与 Oracle 连接器](https://go.microsoft.com/fwlink/?LinkId=220670) 。    
     
--   carlprothman.net 上的技术文章 [Connection Strings for OLE DB Providers](http://go.microsoft.com/fwlink/?LinkId=220744)（OLE DB 访问接口的连接字符串）。    
+-   carlprothman.net 上的技术文章 [Connection Strings for OLE DB Providers](https://go.microsoft.com/fwlink/?LinkId=220744)（OLE DB 访问接口的连接字符串）。    
     
 ## <a name="configure-ole-db-connection-manager"></a>配置 OLE DB 连接管理器
   可以使用 **“配置 OLE DB 连接管理器”** 对话框添加数据源连接，添加的连接可以是新连接，也可以是现有连接的副本。  

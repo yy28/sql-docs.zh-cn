@@ -5,8 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [SQL Server], tables to support
@@ -20,12 +19,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91c2bd0e6e2793c1690adf6bcc9be1c8542eabba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790045"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659476"
 ---
 # <a name="hierarchical-data-sql-server"></a>层次结构数据 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47790045"
   
 -   网页间链接图  
   
- 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
+ 使用 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 作为数据类型来创建具有层次结构的表，或描述存储在另一个位置的数据层次结构。 在 [中使用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 函数 [!INCLUDE[tsql](../includes/tsql-md.md)] 查询和管理层次结构数据。  
   
 ##  <a name="keyprops"></a> hierarchyid 的关键属性  
  **hierarchyid** 数据类型的值表示树层次结构中的位置。 **hierarchyid** 的值具有以下属性：  
@@ -528,7 +527,7 @@ GO
   
   
 ## <a name="see-also"></a>另请参阅  
- [hierarchyid 数据类型方法引用](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
+ [hierarchyid 数据类型方法引用](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
  [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid (Transact-SQL)](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   

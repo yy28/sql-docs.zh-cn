@@ -21,12 +21,12 @@ ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: df9d03fda22eae666d589e6cc3706e84aee6825d
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: ff7bffcb3a31a697300d98e0de03a7f3e3111701
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033204"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681335"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>注册 SQL Server 的实例（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "51033204"
  若要继续，请单击 **“下一步”**。  
   
 ##  <a name="Instance_name"></a> 指定 SQL Server 的实例  
- 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **“连接…”**。 以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 若要从连接对话框中选择某一 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例，请单击 **“连接…”**。 以 ComputerName\InstanceName 的格式提供计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
  若要继续，请单击 **“下一步”**。  
   
 ##  <a name="Connection_dialog"></a> 连接对话框  
- 在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
 >  如果连接是加密的，则使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
@@ -129,7 +129,7 @@ ms.locfileid: "51033204"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”**，然后单击 **“启用数据收集”**。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”**、 **“系统数据收集组”**。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”**。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须启动。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
 |必须在 UCP 上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。|在 UCP 上启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
-|WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
+|WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户必须是 UCP 上有效的 Windows 域帐户。|指定一个有效的 Windows 域帐户。 为了确保该帐户是有效帐户，请使用 Windows 域帐户登录到 UCP。|  
 |如果您选择代理帐户选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户必须是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上的有效 Windows 域帐户。|指定一个有效的 Windows 域帐户。 为了确保该帐户是有效帐户，请使用 Windows 域帐户登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户不能是 Network Service 之类的内置帐户。|重新将该帐户分配到 Windows 域帐户。 为了确保该帐户是有效帐户，请使用 Windows 域帐户登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例。|  
@@ -173,7 +173,7 @@ ms.locfileid: "51033204"
 >   
 >  其他信息: 无法获取有关 Windows NT 组/用户 '\<DomainName\AccountName>' 的信息，错误代码 0x5。 （Microsoft SQL Server，错误：15404）  
 >   
->  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
+>  有关排除此故障的详细信息，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。  
   
 > [!IMPORTANT]  
 >  不要更改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的托管实例上“实用工具信息”收集组的任何属性，并且不要手动打开或关闭数据收集，因为数据收集由实用工具代理作业控制。  
@@ -199,6 +199,6 @@ ms.locfileid: "51033204"
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [在 SQL Server 实用工具中监视 SQL Server 的实例](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

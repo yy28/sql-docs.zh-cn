@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e566f09ae6c3357ecdbc2083f1f32fffadcf94d0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 41a03695526a669f33b74833137415a35db02929
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028228"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812741"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>使用 Reporting Services 的 REST API 进行开发
 
@@ -46,7 +46,7 @@ REST API 请求/响应对可分解为五个组件：
 
 * HTTP 响应消息标头字段：
 
-    * [HTTP 状态代码](http://www.w3.org/Protocols/HTTP/HTRESP.html)，包括从 2xx 成功代码到 4xx 或 5xx 错误代码在内的各种代码。 或者，可能返回服务定义的状态代码，如 API 文档中所指示。
+    * [HTTP 状态代码](https://www.w3.org/Protocols/HTTP/HTRESP.html)，包括从 2xx 成功代码到 4xx 或 5xx 错误代码在内的各种代码。 或者，可能返回服务定义的状态代码，如 API 文档中所指示。
     * 可选的其他标头字段，用于支持请求的响应，例如 `Content-type` 响应标头。
 
 * 可选的 HTTP 响应消息正文字段：
@@ -59,7 +59,7 @@ REST API 请求/响应对可分解为五个组件：
 
 ## <a name="testing-api-calls"></a>测试 API 调用
 
-一个用于测试 HTTP 请求/响应消息的工具是 [Fiddler](http://www.telerik.com/fiddler)。 Fiddler 是一个免费的 Web 调试代理，可以拦截 REST 请求，以便诊断 HTTP 请求/响应消息。
+一个用于测试 HTTP 请求/响应消息的工具是 [Fiddler](https://www.telerik.com/fiddler)。 Fiddler 是一个免费的 Web 调试代理，可以拦截 REST 请求，以便诊断 HTTP 请求/响应消息。
 
 ## <a name="next-steps"></a>后续步骤
 

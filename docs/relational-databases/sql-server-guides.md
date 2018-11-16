@@ -15,19 +15,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dc9d6b5c66e161f29b1914e9c01a956c0546adb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6cf384434915fd0f83dc20d6bfbfd0f6c24788c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735113"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673756"
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 可使用以下指南。 这些指南介绍基本概念，适用于所有版本的 SQL Server（除非在相应指南中另有说明）。 
 
-[AlwaysOn 可用性组故障排除和监视指南](http://msdn.microsoft.com/library/dn135328)  
+[AlwaysOn 可用性组故障排除和监视指南](https://msdn.microsoft.com/library/dn135328)  
 [索引体系结构和设计指南](../relational-databases/sql-server-index-design-guide.md)  
 [内存管理体系结构指南](../relational-databases/memory-management-architecture-guide.md)  
 [页和区体系结构指南](../relational-databases/pages-and-extents-architecture-guide.md)  

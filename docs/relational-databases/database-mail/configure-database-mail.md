@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -41,12 +40,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da0246a1a953dcfa4d3af6af6d1bb28116c9005e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e9e904da503db5e88cc873c376f4ccd59da06f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625771"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678016"
 ---
 # <a name="configure-database-mail"></a>配置数据库邮件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -441,7 +440,7 @@ ms.locfileid: "47625771"
  测试电子邮件的 **mailitem_id** 。  
   
  **故障排除**  
- 单击可打开联机丛书的 [对数据库邮件进行故障排除](http://msdn.microsoft.com/library/ms188663.aspx)主题。  
+ 单击可打开联机丛书的 [对数据库邮件进行故障排除](https://msdn.microsoft.com/library/ms188663.aspx)主题。  
   
  [数据库邮件配置向导](#DBWizard)  
   

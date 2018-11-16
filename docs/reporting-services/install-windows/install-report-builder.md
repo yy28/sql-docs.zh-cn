@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebcef28bd5b785bb72059986e39aae34d8af7921
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 916709e73cd7cad750683dca984d9e897b84997d
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021321"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813180"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 是一个独立应用，由你或管理员安装到你的电脑上。 可以从 Microsoft 下载中心、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 报表服务器或者与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]集成的 SharePoint 站点进行安装。  
@@ -29,7 +29,7 @@ ms.locfileid: "50021321"
  
 ## <a name="install-includessrbnoversionincludesssrbnoversionmd-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 
   
- 管理员还可以使用 System Center Configuration Manager 等软件将程序推送到你的计算机上。 若要了解如何使用特定软件安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，请查阅该软件的文档。 有关详细信息，请参阅 [System Center Configuration Manager 站点](https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager)。  
+ 管理员还可以使用 System Center Configuration Manager 等软件将程序推送到你的计算机上。 若要了解如何使用特定软件安装 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]，请查阅该软件的文档。 有关详细信息，请参阅 [System Center Configuration Manager 站点](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。  
   
 > [!IMPORTANT]  
 >  Windows Vista 和 Windows 7 安全功能需要提升权限以运行命令行操作，并将提示您提供运行命令行的权限。 安装不是静默的。 若要进行静默安装，您需要以管理员身份运行命令行。  

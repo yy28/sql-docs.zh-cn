@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eb46770565c85b148028084026bb9d2f26a91afc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: da90014c17b0540a8bee4e691835361068227565
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030287"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814150"
 ---
 # <a name="run-a-reporting-services-script-file"></a>运行 Reporting Services 脚本文件
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 脚本环境 (RS.exe) 从命令提示符处运行脚本文件。 RS.exe 有许多可供使用的命令提示符参数。 有关命令提示符选项的详细信息，请参阅 [RS.exe 实用工具 (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)。 有关更多脚本示例，请参阅 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)（SQL Server Reporting Services 产品示例）。  
@@ -25,31 +25,31 @@ ms.locfileid: "50030287"
 -   在指定目标报表服务器的脚本环境中运行 Script.rss。 默认情况下会应用 Windows 身份验证：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver  
+    rs –i Script.rss -s https://servername/reportserver  
     ```  
   
 -   在指定用来对 Web 服务调用进行身份验证的用户名和密码的脚本环境中运行 Script.rss：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -u myusername -p mypassword  
+    rs –i Script.rss -s https://servername/reportserver -u myusername -p mypassword  
     ```  
   
 -   在将服务器超时值指定为 30 秒的脚本环境中运行 Script.rss：  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -l 30  
+    rs –i Script.rss -s https://servername/reportserver -l 30  
     ```  
   
 -   在指定名为 *report*的全局脚本变量的脚本环境中运行 Script.rss。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -v report="Company Sales"  
+    rs –i Script.rss -s https://servername/reportserver -v report="Company Sales"  
     ```  
   
 -   在指定以批处理方式运行脚本文件中的 Web 服务操作的脚本环境中运行 Script.rss。  
   
     ```  
-    rs –i Script.rss -s http://servername/reportserver -b  
+    rs –i Script.rss -s https://servername/reportserver -b  
     ```  
   
 ## <a name="see-also"></a>另请参阅  

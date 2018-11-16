@@ -5,8 +5,7 @@ ms.date: 01/05/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transaction log architecture guide
@@ -23,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 738de181911733a5edd7f973a5c43e2503f63a2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631865"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658067"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 事务日志体系结构和管理指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47631865"
 有关 `ALTER DATABASE` 的 `FILEGROWTH` 和 `SIZE` 参数的详细信息，请参阅 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)。
 
 > [!TIP]
-> 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+> 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
   
  事务日志是一种回绕的文件。 例如，假设有一个数据库，它包含一个分成四个 VLF 的物理日志文件。 当创建数据库时，逻辑日志文件从物理日志文件的始端开始。 新日志记录被添加到逻辑日志的末端，然后向物理日志的末端扩张。 日志截断将释放记录全部在最小恢复日志序列号 (MinLSN) 之前出现的所有虚拟日志。 MinLSN 是成功进行数据库范围内回滚所需的最早日志记录的日志序列号。 示例数据库中的事务日志的外观与下图所示相似。  
   
@@ -143,12 +142,12 @@ ms.locfileid: "47631865"
  在创建第一个日志备份之前，必须先创建完整备份（如数据库备份或一组文件备份中的第一个备份）。 仅使用文件备份还原数据库会较复杂。 因此，建议您尽可能从完整数据库备份开始。 此后，必须定期备份事务日志。 这不仅能最小化工作丢失风险，还有助于事务日志的截断。 通常，事务日志在每次常规日志备份之后截断。  
   
 > [!IMPORTANT]
-> 建议经常进行日志备份，其频率应足够支持业务需求，尤其是对损坏的日志存储可能导致的数据丢失的容忍程度。 适当的日志备份频率取决于您对工作丢失风险的容忍程度与所能存储、管理和潜在还原的日志备份数量之间的平衡。 实现恢复策略时，请考虑必需的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)，特别是日志备份频率。
+> 建议经常进行日志备份，其频率应足够支持业务需求，尤其是对损坏的日志存储可能导致的数据丢失的容忍程度。 适当的日志备份频率取决于您对工作丢失风险的容忍程度与所能存储、管理和潜在还原的日志备份数量之间的平衡。 实现恢复策略时，请考虑必需的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)，特别是日志备份频率。
 > 每 15 到 30 分钟进行一次日志备份可能就已足够。 但是如果您的业务要求将工作丢失的风险最小化，请考虑进行更频繁的日志备份。 频繁的日志备份还有增加日志截断频率的优点，其结果是日志文件较小。  
   
 > [!IMPORTANT]
 > 若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
-> 同样，实现恢复策略时，请考虑所需 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)，尤其是完整和差异的数据库备份频率。
+> 同样，实现恢复策略时，请考虑所需 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)，尤其是完整和差异的数据库备份频率。
 
 有关事务日志备份的详细信息，请参阅[事务日志备份 (SQL Server)](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。
   
@@ -253,7 +252,7 @@ LSN 148 是事务日志中的最后一条记录。 在处理 LSN 147 处记录�
 [配置恢复间隔服务器配置选项](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
 [sys.dm_db_log_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-[了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
-[SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
+[了解 SQL Server 中的日志记录和恢复（作者：Paul Randal）](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    
+[SQL Server 事务日志管理（作者：Tony Davis 和 Gail Shaw）](https://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

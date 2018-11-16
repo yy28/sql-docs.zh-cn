@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54c1b3946a2e1495390f228d21198f40dae06c62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb0e8200fb90dd4455c60f650c5fd3e9f5afddd7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665516"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>创建由系统控制版本的临时表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ WITH
   
 -   如果指定的架构不存在， **CREATE TABLE** 语句将失败。  
   
--   如果 **HISTORY_TABLE** 参数指定的表已存在，则将根据新创建的临时表就 [schema consistency and temporal data consistency](http://msdn.microsoft.com/library/dn935015.aspx)（架构一致性和临时数据一致性）对其进行验证。 如果指定的历史记录表无效， **CREATE TABLE** 语句将失败。  
+-   如果 **HISTORY_TABLE** 参数指定的表已存在，则将根据新创建的临时表就 [schema consistency and temporal data consistency](https://msdn.microsoft.com/library/dn935015.aspx)（架构一致性和临时数据一致性）对其进行验证。 如果指定的历史记录表无效， **CREATE TABLE** 语句将失败。  
   
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>使用用户定义的历史记录表创建临时表  
  如果用户想要指定具有特定存储选项和其他索引的历史记录表，则使用用户定义的历史记录表创建临时表是一个方便的选项。 在下面的示例中，将使用与要创建的临时表一致的架构创建用户定义的历史记录表。 将为此用户定义的历史记录表创建聚集列存储索引和其他非聚集行存储（B 树）索引，以便进行点查找。 创建此用户定义的历史记录表后，将通过将用户定义的历史记录表指定为默认历史记录表，创建由系统控制版本的临时表。  

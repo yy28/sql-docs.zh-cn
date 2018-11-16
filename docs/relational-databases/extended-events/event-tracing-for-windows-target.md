@@ -16,21 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ad995a0165c02f9af769071b86cea6699ae35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450e93877ecabb524e5307a5ec940de32859ead6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656947"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件跟踪目标
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   在将 Windows 事件跟踪 (ETW) 作为目标使用前，建议您先掌握 ETW 的相关使用知识。 ETW 跟踪或者与扩展事件结合使用，或者用作扩展事件的事件使用者。 您可以从以下外部链接入手，获取有关 ETW 的背景信息：  
   
--   [Windows 事件](http://go.microsoft.com/fwlink/?LinkId=92380)  
+-   [Windows 事件](https://go.microsoft.com/fwlink/?LinkId=92380)  
   
--   [使用 ETW 改善调试和性能优化](http://go.microsoft.com/fwlink/?LinkId=92381)  
+-   [使用 ETW 改善调试和性能优化](https://go.microsoft.com/fwlink/?LinkId=92381)  
   
  ETW 目标是单独目标，尽管该目标可以被添加到多个会话中。 如果某事件在多个会话中被引发，则该事件在每次发生事件时仅被传播给 ETW 目标一次。 每个进程仅限一个扩展事件引擎实例。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47659185"
     > [!IMPORTANT]  
     >  当第一个会话启动后不能再更改该文件路径。  
   
--   托管对象格式 (MOF) 文件位于 *\<安装路径>* \Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](http://go.microsoft.com/fwlink/?LinkId=92851) 。  
+-   托管对象格式 (MOF) 文件位于 *\<安装路径>* \Microsoft SQL Server\Shared。 有关详细信息，请参阅 MSDN 上的 [托管对象格式](https://go.microsoft.com/fwlink/?LinkId=92851) 。  
   
 ## <a name="adding-the-target-to-a-session"></a>将目标添加到会话  
  若要将 ETW 目标添加到扩展事件会话中，您必须在创建或更改事件会话时包括下面的语句：  
@@ -91,7 +91,7 @@ ADD TARGET package0.etw_classic_sync_target
  有关说明如何使用 ETW 目标的完整示例的详细信息（包括如何查看数据），请参阅 [使用扩展事件监视系统活动](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [SQL Server 扩展事件目标](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 扩展事件目标](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION (Transact-SQL)](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e1e6089719af71269af23de782a2154468b68e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18579eba7d7a66b9efd1a10de4a0815d2503744e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672526"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改进全文索引的性能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -208,7 +208,7 @@ GO
   
  为了安全起见，筛选器是由筛选器后台程序主机进程加载的。 服务器实例对所有多线程筛选器使用多线程进程，并对所有单线程筛选器使用单线程进程。 如果使用多线程筛选器的文档包含使用单线程筛选器的嵌入文档，全文引擎将启动单线程进程以处理嵌入文档。 例如，在遇到包含 PDF 文档的 Word 文档时，全文引擎使用多线程进程来处理 Word 内容，并启动单线程进程以处理 PDF 内容。 但是，单线程筛选器可能无法在此环境中正常工作，并且可能会破坏筛选进程的稳定性。 在经常发生这种嵌入的环境中，这种扰动可能会导致筛选进程崩溃。 如果发生这种情况，全文引擎会将任何失败的文档（如包含嵌入 PDF 内容的 Word 文档）重新传送到单线程筛选进程。 如果频繁进行重新传送，将会导致全文索引进程性能下降。  
   
-若要解决该问题，必须将容器文档（在本示例中为 Word 文档）的筛选器标记为单线程筛选器。 若要将筛选器标记为单线程筛选器，请将筛选器的 **ThreadingModel** 注册表值设置为 **Apartment Threaded**。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](http://go.microsoft.com/fwlink/?LinkId=209159)。  
+若要解决该问题，必须将容器文档（在本示例中为 Word 文档）的筛选器标记为单线程筛选器。 若要将筛选器标记为单线程筛选器，请将筛选器的 **ThreadingModel** 注册表值设置为 **Apartment Threaded**。 有关单线程单元的信息，请参阅白皮书 [了解和使用 COM 线程模型](https://go.microsoft.com/fwlink/?LinkId=209159)。  
   
 ## <a name="see-also"></a>另请参阅  
  [“服务器内存”服务器配置选项](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

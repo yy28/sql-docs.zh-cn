@@ -15,12 +15,12 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61befd223253a57223235c57646a496c230a7806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e44ac5f9f5c1eee8af10dd48fa8577b3056cd70
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648285"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641134"
 ---
 # <a name="add-copy-of-existing-package"></a>添加现有包的副本
   可以使用 **“添加现有包的副本”** 对话框，将 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、文件系统或 SSIS 包存储区中存储的包副本添加到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 项目中。  
@@ -45,7 +45,7 @@ ms.locfileid: "47648285"
  键入包的路径，或单击浏览按钮 **(…)** 并查找要复制的包。  
   
 ## <a name="see-also"></a>另请参阅  
- [保存包的副本](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
+ [保存包的副本](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [保存包](../integration-services/save-packages.md)   
  [Integration Services 服务（SSIS 服务）](../integration-services/service/integration-services-service-ssis-service.md)
   

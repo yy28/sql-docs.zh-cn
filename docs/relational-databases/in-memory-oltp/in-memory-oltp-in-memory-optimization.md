@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1de98e2d7009bb787b5904c33560655cabcc314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dfb694a6e9bd6bbdd3525251747a42b35271ab0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809698"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674116"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>内存中 OLTP（内存中优化）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47809698"
 |[使用内存优化表的要求](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|讨论使用内存优化的表的硬件和软件要求及指导原则。|  
 |[内存中 OLTP 代码示例](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|包含说明如何创建和使用内存优化的表的代码示例。|  
 |[Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|介绍内存优化的表。|  
-|[内存优化表变量](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|  
-|[内存优化表上的索引](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|介绍内存优化索引。|  
+|[内存优化表变量](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|一个代码示例，其中展示如何使用内存优化的表变量代替传统的表变量以减少 tempdb 的使用次数。|  
+|[内存优化表上的索引](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|介绍内存优化索引。|  
 |[本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|介绍本机编译的存储过程。|  
-|[管理内存中 OLTP 的内存](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|了解和管理系统中的内存用量。|  
+|[管理内存中 OLTP 的内存](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|了解和管理系统中的内存用量。|  
 |[创建和管理用于内存优化对象的存储](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|论述数据和差异文件，其中存储有关内存优化的表中事务的信息。|  
-|[内存优化表的备份、还原和恢复](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|讨论内存优化表的备份、还原和恢复。|  
+|[内存优化表的备份、还原和恢复](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|讨论内存优化表的备份、还原和恢复。|  
 |[对内存中 OLTP 的 Transact-SQL 支持](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|讨论 [!INCLUDE[tsql](../../includes/tsql-md.md)] 对 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]的支持。|  
 |[对内存中 OLTP 数据库的高可用性支持](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|讨论 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]中的可用性组和故障转移群集。|  
 |[对内存中 OLTP 的 SQL Server 支持](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|列出支持内存优化表的新增和更新的语法和功能。|  
@@ -79,13 +79,13 @@ ms.locfileid: "47809698"
 
 -   [SQL Server 内存中 OLTP 内部组件技术白皮书](https://msdn.microsoft.com/library/mt764316.aspx)  
 
--   [SQL Server In-Memory OLTP and Columnstore Feature Comparison](http://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
+-   [SQL Server In-Memory OLTP and Columnstore Feature Comparison](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
 -   SQL Server 2016 内存中 OLTP 的新增功能 [第 1 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) 和 [第 2 部分](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
   
--   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)  
+-   [内存中 OLTP - 常见的工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [内存中 OLTP 博客](http://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [内存中 OLTP 博客](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
 ## <a name="see-also"></a>另请参阅  
  [数据库功能](../../relational-databases/database-features.md)  

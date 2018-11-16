@@ -19,12 +19,12 @@ ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44148396e71f5fe023c58645a434a66ec203733d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3d209f67fd2a84920d5890baf9112b88d52603
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785495"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696826"
 ---
 # <a name="security-functions-transact-sql"></a>安全函数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,6 +53,6 @@ ms.locfileid: "47785495"
  [安全存储过程 (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [加密函数 (Transact-SQL)](../../t-sql/functions/cryptographic-functions-transact-sql.md)   
  [内置函数 (Transact-SQL)](~/t-sql/functions/functions.md)   
- [安全语句](http://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
+ [安全语句](https://msdn.microsoft.com/library/aebe2ec7-31bc-4697-a493-dcfcd0903a7b)  
   
   

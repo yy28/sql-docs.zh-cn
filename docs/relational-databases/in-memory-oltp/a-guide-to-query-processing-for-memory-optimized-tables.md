@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b5ab2ecda2c0616754b7f16b122095e6d80a545
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fed96fa278f64a5fd8628802c1875f2ca8195f7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662195"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664636"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>内存优化表查询处理指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](http://www.microsoft.com/download/details.aspx?id=23654)下载相关数据库。  
+ 为构造本文中所示的查询计划，这两个表是用来自 Northwind 示例数据库的示例数据填充的，你可以从 [SQL Server 2000 的 Northwind 和 pubs 示例数据库](https://www.microsoft.com/download/details.aspx?id=23654)下载相关数据库。  
   
  考虑以下查询，这些查询联接 Customer 和 Order 表，并返回订单 ID 和相关客户信息：  
   

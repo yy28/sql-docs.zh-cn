@@ -12,12 +12,12 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e414944e29abfebdd665fdcaa57bf45d39023daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2730c37ba3afd24a0bbc29dece7a25dd15496bac
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807325"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700885"
 ---
 # <a name="managing-a-domain"></a>管理域
 
@@ -55,7 +55,7 @@ ms.locfileid: "47807325"
 |更改或增加知识库中的值|[更改域值](../data-quality-services/change-domain-values.md)|  
 |使用验证和标准化规则|[创建域规则](../data-quality-services/create-a-domain-rule.md)|  
 |使用关系更正作为域中值的一部分的字词|[创建基于术语的关系](../data-quality-services/create-term-based-relations.md)|  
-|完成、关闭或取消域管理活动|[结束域管理活动](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|完成、关闭或取消域管理活动|[结束域管理活动](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcea20d707eb04922efc9a12fb81335ef48f9378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d556922a6bdb0e6edd538630e34dd21d428f2953
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654245"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673826"
 ---
 # <a name="query-store-usage-scenarios"></a>Query Store 使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "47654245"
   
 -   在消耗资源大的查询所引用的表上创建缺失索引。  
   
--   应用筛选策略以确保行级别安全性。 有关详细信息，请参阅[使用查询存储优化行级别安全性](http://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)。  
+-   应用筛选策略以确保行级别安全性。 有关详细信息，请参阅[使用查询存储优化行级别安全性](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx)。  
   
 -   将临时系统版本控制添加到由 OLTP 应用程序频繁修改的表。  
   

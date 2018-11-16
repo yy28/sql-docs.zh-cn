@@ -13,12 +13,12 @@ ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfb567a0e970cdc6f2a1e4b56fd39d39405a84c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a832c9001f60433764a17fbedba0ebb93eb15588
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627581"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681235"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：创建空的 SQL Server 单元测试
 在数据库项目中包含单元测试来验证您对数据库对象所做的更改不会破坏现有功能。 以下过程解释如何针对任何数据库对象创建 SQL Server 单元测试。 SQL Server Data Tools 包括对数据库函数、触发器和存储过程的某些其他支持。 有关详细信息，请参阅[如何：为函数、触发器和存储过程创建 SQL Server 单元测试](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  
@@ -96,10 +96,10 @@ ms.locfileid: "47627581"
 -   添加测试条件或其他断言语句以验证脚本结果。  
   
 > [!NOTE]  
-> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[如何：向数据库单元测试中添加条件](http://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
+> 无结论的测试条件是添加到每个测试中的默认条件。 包含此测试条件是为了指示尚未执行测试验证。 在您添加其他测试条件之后，请将此测试条件从测试中删除。 有关详细信息，请参阅[如何：向数据库单元测试中添加条件](https://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
 [如何：运行 SQL Server 单元测试](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[创建单元测试](http://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
+[创建单元测试](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  
   

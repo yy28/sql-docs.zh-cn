@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: af97fe48532d87f252cb9d86934d536611a33198
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bcb77ea92b255b15698596f73064404581c34b76
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021791"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813150"
 ---
 # <a name="xml-connection-type-ssrs"></a>XML 连接类型 (SSRS)
   若要在报表中包含来自 XML 数据源的数据，则必须拥有一个基于 XML 类型的报表数据源的数据集。 此内置数据源类型基于 XML 数据扩展插件。 使用此数据源类型可连接到 XML 文档、Web 服务、或查询中嵌入的 XML 并从中检索数据。  
@@ -29,8 +29,8 @@ ms.locfileid: "50021791"
   
 |XML 文档类型|连接字符串示例|  
 |-----------------------|-------------------------------|  
-|Web 服务|`http://adventure-works.com/results.aspx`|  
-|XML 文档|`http://localhost/XML/Customers.xml`|  
+|Web 服务|`https://adventure-works.com/results.aspx`|  
+|XML 文档|`https://localhost/XML/Customers.xml`|  
 |嵌入的 XML 文档|*Empty*|  
   
  有关更多连接字符串的示例，请参阅 [报表生成器中的数据连接、数据源和连接字符串](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  

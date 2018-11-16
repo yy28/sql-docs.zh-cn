@@ -23,12 +23,12 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd8ea5f24876e26b19b803d188489b425e434495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73eed98ef8b7d6c8f842431d5ebc5f1ea846e8c0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698746"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642204"
 ---
 # <a name="working-with-variables-programmatically"></a>以编程方式使用变量
   变量提供一种在包、容器、任务和事件处理程序中动态设置值和控制进程的方式。 优先约束还可使用变量来控制数据流流向不同任务的方向。 变量具有多种用途：  
@@ -37,15 +37,15 @@ ms.locfileid: "47698746"
   
 -   在运行时填充 Transact-SQL 语句的参数值。  
   
--   控制 Foreach 循环流。 有关详细信息，请参阅[将枚举添加到控制流](http://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
+-   控制 Foreach 循环流。 有关详细信息，请参阅[将枚举添加到控制流](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a)。  
   
--   通过在表达式中使用优先约束对其进行控制。 优先约束可在约束定义中包含变量。 有关详细信息，请参阅 [将表达式添加到优先约束](http://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
+-   通过在表达式中使用优先约束对其进行控制。 优先约束可在约束定义中包含变量。 有关详细信息，请参阅 [将表达式添加到优先约束](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)。  
   
--   控制 For 循环容器的条件重复。 有关详细信息，请参阅[将迭代添加到控制流](http://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
+-   控制 For 循环容器的条件重复。 有关详细信息，请参阅[将迭代添加到控制流](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a)。  
   
 -   生成包含变量值的表达式。  
   
--   可以为所有容器类型创建自定义变量，这些容器类型包括：包、Foreach 循环容器、For 循环容器、Sequence 容器、TaskHost 和事件处理程序。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
+-   可以为所有容器类型创建自定义变量，这些容器类型包括：包、Foreach 循环容器、For 循环容器、Sequence 容器、TaskHost 和事件处理程序。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)和[在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)。  
   
 ## <a name="scope"></a>范围  
  每个容器都有自己的 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合。 创建新变量时，新变量的作用域在其父容器的作用域内。 由于包容器位于容器层次结构的顶部，所以包作用域内的变量所起作用类似于全局变量，并且这些变量对包中的所有容器都可见。 容器的变量集合还可由容器的子容器通过 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 集合进行访问，方法是使用集合中的变量名称或变量的索引。  
@@ -231,6 +231,6 @@ End Module
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)   
- [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

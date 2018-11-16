@@ -12,12 +12,12 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 962df1579b7d18bcaaf420a3bf79cfbd29940daa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ba960c94e1620b0381796a2e26112af21a3a9a1
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855225"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696836"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Master Data Services (MDS) 中的新增功能
 
@@ -33,9 +33,9 @@ ms.locfileid: "47855225"
   
  **下载**  
   
--   若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。  
+-   若要下载 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，请转到  **[评估中心](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
   
--   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 启动装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
+-   已经拥有 Azure 帐户？  然后转到 **[此处](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** ，以加速已安装有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虚拟机。  
   
 ##  <a name="improved-performance"></a>改进的性能  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47855225"
   
     ```  
   
-     有关详细信息，请参阅 [URL 压缩](http://www.iis.net/configreference/system.webserver/urlcompression)。  
+     有关详细信息，请参阅 [URL 压缩](https://www.iis.net/configreference/system.webserver/urlcompression)。  
   
 -   以下新的 SQL Server 代理作业可执行索引和日志维护。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47855225"
   
  碎片率超过 30% 的索引将在线重新生成。 重新生成期间，对同一个表的 CRUD 操作的性能将受影响。 如果性能下降会造成问题，建议你在非工作时间运行该存储过程。 有关索引碎片的详细信息，请参阅 [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)。  
   
- 有关详细信息，请参阅这篇有关 Master Data Services 的博客文章： [Performance and Scale Improvement in SQL Server 2016](http://go.microsoft.com/fwlink/p/?LinkId=615375)（SQL Server 2016 中的性能和缩放性改进）。  
+ 有关详细信息，请参阅这篇有关 Master Data Services 的博客文章： [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)（SQL Server 2016 中的性能和缩放性改进）。  
   
 ##  <a name="improved-security"></a>提高了安全性  
   

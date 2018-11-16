@@ -20,12 +20,12 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4864aedf00d616ee35e551035574430c808bd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5c45761082fc37846cb732c6130718ba23efee0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806017"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639115"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>数据流组件的设计时方法
   在执行前，称数据流任务处于设计时状态，因为它将接受增量更改。 这些更改可以包括添加或删除组件、添加或删除连接组件的路径对象以及更改组件的元数据。 出现元数据更改时，组件可监视这些更改并对这些更改作出响应。 例如，组件可以禁止某些更改或为响应某一更改而进行其他更改。 在设计时，设计器通过设计时 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> 接口与组件进行交互。  
@@ -101,7 +101,7 @@ customProperty.TypeConverter = GetType(MyValidValues).AssemblyQualifiedName
 customProperty.Value = MyValidValues.ValueOne  
 ```  
   
- 有关详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?LinkId=7022)中的“通用类型转换”和“实现类型转换器”。  
+ 有关详细信息，请参阅 [MSDN 库](https://go.microsoft.com/fwlink/?LinkId=7022)中的“通用类型转换”和“实现类型转换器”。  
   
  可使用 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> 属性指定自定义属性的值的自定义编辑器对话框，如下列示例中所示。 首先，如果找不到能够满足需求的现有 UI 类型编辑器，则必须创建从 **System.Drawing.Design.UITypeEditor** 继承的自定义类型编辑器。  
   
@@ -135,7 +135,7 @@ customProperty.Name = "My Custom Property"
 customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName  
 ```  
   
- 有关详细信息，请参阅 [MSDN 库](http://go.microsoft.com/fwlink/?LinkId=7022)中的“实现 UI 类型编辑器”。  
+ 有关详细信息，请参阅 [MSDN 库](https://go.microsoft.com/fwlink/?LinkId=7022)中的“实现 UI 类型编辑器”。  
   
 ## <a name="see-also"></a>另请参阅  
  [数据流组件的运行时方法](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  

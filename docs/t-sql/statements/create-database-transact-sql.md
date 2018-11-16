@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5263a785fff56a2f1c375c7615a725f931582cfe
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 95823c0c63e65532213e1a195b978e98df9d9986
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100518"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701045"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -194,7 +194,7 @@ CREATE DATABASE database_snapshot_name
  COLLATE collation_name  
  指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果没有指定排序规则，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例的默认排序规则分配为数据库的排序规则。 不能对数据库快照指定排序规则名称。  
   
- 不能使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句指定排序规则名称。 有关如何更改附加数据库的排序规则的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
+ 不能使用 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 子句指定排序规则名称。 有关如何更改附加数据库的排序规则的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)。  
   
  有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](~/t-sql/statements/collations.md)。  
   
@@ -509,7 +509,7 @@ CREATE DATABASE database_snapshot_name
  除非指定了 FOR ATTACH，否则每个新数据库都从 model 数据库继承数据库选项设置。 例如，在 model 数据库和任何新建数据库中，数据库选项 auto shrink 都设置为 **true**。 如果更改了 model 数据库中的选项，则这些新选项设置也将用于您所创建的所有新数据库中。 在 model 数据库中的更改操作不会影响现有数据库。 如果在 CREATE DATABASE 语句中指定了 FOR ATTACH，则新数据库将继承原始数据库的数据库选项设置。  
   
 ## <a name="viewing-database-information"></a>查看数据库信息  
- 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
+ 可以使用目录视图、系统函数和系统存储过程返回有关数据库、文件和文件组的信息。 有关详细信息，请参阅[系统变量 (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
 ## <a name="permissions"></a>Permissions  
  要求具有 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 权限。  
@@ -935,13 +935,13 @@ CREATE DATABASE database_name
   
 *database_name* 
  
-新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *Collation_name*  
 
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（也即 SQL_Latin1_General_CP1_CI_AS）。  
   
-有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 CATALOG_COLLATION  
 
@@ -1097,7 +1097,7 @@ CATALOG_COLLATION 参数仅在数据库创建期间可用。
   
 - 源服务器名称与复制目标的服务器名称可能相同，也可能不同。 如果相同，此参数是可选的，默认情况下将使用当前会话的服务器上下文。  
   
-- 必须指定源数据库名称和目标数据库名称，并且这些名称必须唯一且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则。 有关详细信息，请参阅[标识符](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+- 必须指定源数据库名称和目标数据库名称，并且这些名称必须唯一且符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 标识符规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 - 必须在将创建新数据库的 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 服务器的 master 数据库的上下文中执行 `CREATE DATABASE` 语句。 
 - 在复制完成之后，必须将目标数据库作为独立的数据库进行管理。 您可以独立于源数据库，针对新数据库执行 `ALTER DATABASE` 和 `DROP DATABASE` 语句。 您还可以将新数据库复制到另一个新数据库。  
@@ -1225,13 +1225,13 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 *database_name* 
  
-新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新数据库的名称。 此名称在 SQL 服务器上必须唯一，并且必须符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *Collation_name*  
 
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（也即 SQL_Latin1_General_CP1_CI_AS）。  
   
-有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 ## <a name="remarks"></a>Remarks
  
@@ -1307,12 +1307,12 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
   
 ## <a name="arguments"></a>参数  
 *database_name*  
-新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](http://go.microsoft.com/fwlink/p/?LinkId=180386)。  
+新数据库的名称。 此名称在 SQL Server 上必须是唯一的，它可托管 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 数据库和 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 数据库，且符合标识符的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 规则。 有关详细信息，请参阅[标识符](https://go.microsoft.com/fwlink/p/?LinkId=180386)。  
   
 *collation_name*  
 指定数据库的默认排序规则。 排序规则名称既可以是 Windows 排序规则名称，也可以是 SQL 排序规则名称。 如果未指定，则会为数据库分配默认排序规则（即 SQL_Latin1_General_CP1_CI_AS）。  
   
-有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx)。  
+有关 Windows 和 SQL 排序规则名称的详细信息，请参阅 [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/ms184391.aspx)。  
   
 *EDITION*  
 指定数据库的服务层。 对于 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]，使用 'datawarehouse'。  
@@ -1384,7 +1384,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|  _并行<br />数据仓库_**\*\*** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL 数据库<br />逻辑服务器](create-database-transact-sql.md?view=azuresqldb-current)| [SQL 数据库<br />托管实例](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL 数据<br />数据仓库](create-database-transact-sql.md?view=azure-sqldw-latest)|  _\*并行<br />数据仓库 \*_ |
 
 &nbsp;
 

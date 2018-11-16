@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50a5843fb6f96133cbf0af6a8ce8e8a46190eaef
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f7e6bf628b30bedb157e17bd7dc785061dbc2d26
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120444"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665616"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>内存中 OLTP 的示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "49120444"
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
--   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   对于性能测试，服务器的规格类似于生产环境。 对于此特定示例，应至少有 16GB 内存可供 SQL Server 使用。 有关内存中 OLTP 硬件的一般指南，请参阅下面的博客文章：[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
 ##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>基于 AdventureWorks 安装内存中 OLTP 示例  
  请按照以下步骤安装示例：  
@@ -183,7 +183,7 @@ ms.locfileid: "49120444"
   
  HASH 索引可用于进一步优化工作负荷。 这些索引特别针对点查找和行插入进行了优化。 但是，必须考虑到这些索引不支持范围扫描、有序扫描或是对前导索引键列进行的搜索。 因此，使用这些索引时需要谨慎。 此外，还需要在创建时指定 bucket_count。 它通常应设置为索引键值的一到二倍之间，不过估计过高通常不是什么问题。  
   
- 有关 [索引指南](http://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 和 [选择正确 bucket_count](http://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)的指南的详细信息，请参阅联机丛书。  
+ 有关 [索引指南](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) 和 [选择正确 bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx)的指南的详细信息，请参阅联机丛书。  
   
  迁移的表中的索引针对演示销售订单处理工作负荷进行了优化。 该工作负荷依赖于表 Sales.SalesOrderHeader_inmem 和 Sales.SalesOrderDetail_inmem 中的插入和点查找，还依赖于对表 Production.Product_inmem 和 Sales.SpecialOffer_inmem 中的主键列进行的点查找。  
   
@@ -271,7 +271,7 @@ ms.locfileid: "49120444"
   
     -   更新给定销售订单的发货信息。 这也会更新销售订单所有行项的发货信息。  
   
-    -   这是本机编译的存储过程 Sales.usp_UpdateSalesOrderShipInfo_native 的包装过程，其中的重试逻辑用于处理与更新该订单的并发事务形成的（意外）潜在冲突。 有关重试逻辑的更多信息，请参见 [此处](http://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的联机丛书主题。  
+    -   这是本机编译的存储过程 Sales.usp_UpdateSalesOrderShipInfo_native 的包装过程，其中的重试逻辑用于处理与更新该订单的并发事务形成的（意外）潜在冲突。 有关重试逻辑的更多信息，请参见 [此处](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx)的联机丛书主题。  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
@@ -313,7 +313,7 @@ ms.locfileid: "49120444"
   
  安装步骤：  
   
-1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](http://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
+1.  从以下页面下载并运行 RML 实用工具的 x64 安装包：[https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx](https://blogs.msdn.com/b/psssql/archive/2013/10/29/cumulative-update-2-to-the-rml-utilities-for-microsoft-sql-server-released.aspx)  
   
 2.  如果出现指示某些文件正在使用的对话框，请单击“继续”  
   

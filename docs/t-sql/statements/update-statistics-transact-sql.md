@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2461cbf6c5ee2622112f7841eb44059dd83661a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd501cd54a4726033b8c2a1b746148ec17f3dc8a
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701747"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ UPDATE STATISTICS schema_name . ] table_name
   
  对于大多数工作负载，不需要完全扫描，默认采样已经足够。  
 但是，对广泛变化的数据分布敏感的某些工作负载可能需要增加样本大小，或者甚至需要完全扫描。  
-有关详细信息，请参阅 [CSS SQL 升级服务博客](http://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)。  
+有关详细信息，请参阅 [CSS SQL 升级服务博客](https://blogs.msdn.com/b/psssql/archive/2010/07/09/sampling-can-produce-less-accurate-statistics-if-the-data-is-not-evenly-distributed.aspx)。  
   
  RESAMPLE  
  使用最近的采样速率更新每个统计信息。  

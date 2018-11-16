@@ -16,12 +16,12 @@ ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 226602debe898225405fb636eecec47c76cfedc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bf516256277abc02a8499f06707a518f2aadf75
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664937"
 ---
 # <a name="transaction-log-backups-sql-server"></a>事务日志备份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ ms.locfileid: "47685995"
 -   默认情况下，每个成功的备份操作都会在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 错误日志和系统事件日志中添加一个条目。 如果非常频繁地备份日志，这些成功消息会迅速累积，从而产生一个巨大的错误日志，这样会使查找其他消息变得非常困难。 在这些情况下，如果任何脚本均不依赖于这些日志条目，则可以使用跟踪标志 3226 取消这些条目。 有关详细信息，请参阅[跟踪标志 (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)。  
 
 -   请经常进行日志备份，其频率应足够支持业务需求，尤其是对损坏的日志存储可能导致的数据丢失的容忍程度。 
-   -   适当的日志备份频率取决于您对工作丢失风险的容忍程度与所能存储、管理和潜在还原的日志备份数量之间的平衡。 实现恢复策略时，请考虑必需的 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)，特别是日志备份频率。
+   -   适当的日志备份频率取决于您对工作丢失风险的容忍程度与所能存储、管理和潜在还原的日志备份数量之间的平衡。 实现恢复策略时，请考虑必需的 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)，特别是日志备份频率。
    -   每 15 到 30 分钟进行一次日志备份可能就已足够。 但是如果您的业务要求将工作丢失的风险最小化，请考虑进行更频繁的日志备份。 频繁的日志备份还有增加日志截断频率的优点，其结果是日志文件较小。  
   
 > [!IMPORTANT]
 > 若要限制需要还原的日志备份的数量，必须定期备份数据。 例如，可以制定这样一个计划：每周进行一次完整数据库备份，每天进行若干次差异数据库备份。  
-> 同样，实现恢复策略时，请考虑所需 [RTO](http://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](http://wikipedia.org/wiki/Recovery_point_objective)，尤其是完整和差异的数据库备份频率。
+> 同样，实现恢复策略时，请考虑所需 [RTO](https://wikipedia.org/wiki/Recovery_time_objective) 和 [RPO](https://wikipedia.org/wiki/Recovery_point_objective)，尤其是完整和差异的数据库备份频率。
   
 ##  <a name="RelatedTasks"></a> 相关任务  
  **创建事务日志备份**  

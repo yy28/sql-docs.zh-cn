@@ -13,12 +13,12 @@ ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e88dbe70181dfa4000858a48ce4ebe6250a65d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7386a1bceed8ed79dddf2636ae152d79c460a5ff
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836205"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675046"
 ---
 # <a name="analyze-script-performance"></a>分析脚本性能
 可以使用 SQL Server Data Tools 提供的工具确定是否可以提高你的查询、存储过程或脚本的性能。 例如，通过监视常用查询的响应时间之类的客户端统计信息，可以确定是否需要更改表的查询或索引。 此类统计信息可包括客户端执行时间、查询配置文件、已发送和接收的数据包/字节。  
@@ -32,7 +32,7 @@ ms.locfileid: "47836205"
   
 如果启用了客户端统计信息，则“统计信息”选项卡将在查询执行时出现在“消息”选项卡的旁边。 如果禁用客户端统计信息，则不会出现“统计信息”选项卡。 连续查询执行中的统计信息会与平均值一起列出。  
   
-有关收集的统计信息的详细信息，请参阅[“查询窗口统计信息”窗格](http://msdn.microsoft.com/library/aa216969(SQL.80).aspx)和[此主题的“‘客户端统计信息’选项卡”一节](http://msdn.microsoft.com/library/aa833205.aspx)。  
+有关收集的统计信息的详细信息，请参阅[“查询窗口统计信息”窗格](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx)和[此主题的“‘客户端统计信息’选项卡”一节](https://msdn.microsoft.com/library/aa833205.aspx)。  
   
 ## <a name="using-execution-plans"></a>使用执行计划  
 执行计划显示数据库引擎是如何通过导航表和使用索引来访问或处理查询的数据或其他 DML 语句（例如 update）的。 这种图形表示法对了解查询的性能特征非常有用。  
@@ -41,7 +41,7 @@ ms.locfileid: "47836205"
   
 分析或执行脚本之后，请单击“执行计划”选项卡以查看执行计划输出的图形表示方式。  
   
-按照从右到左、从上到下的方式读取图形执行计划输出。 将显示所分析的批处理中的每个查询，包括每个查询的开销占批处理总开销的百分比。 若要查看其他信息（例如每个步骤的系统开销和操作），请将鼠标指针悬停在图形计划中的[逻辑和物理运算符图标](http://msdn.microsoft.com/library/ms175913.aspx)上。  
+按照从右到左、从上到下的方式读取图形执行计划输出。 将显示所分析的批处理中的每个查询，包括每个查询的开销占批处理总开销的百分比。 若要查看其他信息（例如每个步骤的系统开销和操作），请将鼠标指针悬停在图形计划中的[逻辑和物理运算符图标](https://msdn.microsoft.com/library/ms175913.aspx)上。  
   
 若要更改执行计划的显示，请右键单击“执行计划”并选择“放大”、“缩小”、“自定义显示比例”或“缩放到合适大小”。 “放大”和“缩小”允许你按固定量扩大或减小执行计划。 “自定义缩放” 允许你定义自己的显示放大倍数，例如缩放到 80%。  “缩放到合适大小”调整执行计划以适应结果窗格。  
   
@@ -52,5 +52,5 @@ ms.locfileid: "47836205"
   
 若要手动使用代码分析，请在“解决方案资源管理器”中右键单击你的项目，然后选择“运行代码分析”。 代码分析警告在 **“错误列表”** 窗口中列出。 可以双击某一警告以便导航到包含该问题的源代码，并且可以通过使用“显示错误帮助”上下文菜单查看警告的附加信息和可能的更正措施。  
   
-有关代码分析的详细信息，请参阅[分析数据库代码以提高代码质量](http://msdn.microsoft.com/library/dd172133.aspx)。  
+有关代码分析的详细信息，请参阅[分析数据库代码以提高代码质量](https://msdn.microsoft.com/library/dd172133.aspx)。  
   

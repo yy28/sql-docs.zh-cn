@@ -21,12 +21,12 @@ ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07729e6ad2593b5d2b7627f8e768064bfc285245
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 91610d3bcef8cf2e8aee490ce2037b26ba0eadbb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033174"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670906"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>创建 SQL Server 实用工具控制点（SQL Server 实用工具）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "51033174"
   
 -   该过程必须由具有 sysadmin 权限的用户运行，创建 UCP 要求同样的权限。  
   
--   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅 [如何从 SQL Server 实用工具中删除 SQL Server 的实例](http://go.microsoft.com/fwlink/?LinkId=169392)。  
+-   SQL Server 的所有托管实例必须都从该 UCP 中删除。 请注意，该 UCP 是 SQL Server 的托管实例。 有关详细信息，请参阅 [如何从 SQL Server 实用工具中删除 SQL Server 的实例](https://go.microsoft.com/fwlink/?LinkId=169392)。  
   
  使用此过程可以从 SQL Server 实用工具中删除 SQL Server UCP。 在完成该操作后，可以再次在 SQL Server 的实例上创建 UCP。  
   
@@ -140,7 +140,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
  若要继续，请单击 **“下一步”**。  
   
 ##  <a name="Connection_dialog"></a> 连接对话框  
- 在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](http://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
+ 在“连接到服务器”对话框中，验证服务器类型、计算机名称和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例名称信息。 有关详细信息，请参阅[连接到服务器（数据库引擎）](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41)。  
   
 > [!NOTE]  
 >  如果连接是加密的，将使用加密连接。 如果连接未加密，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实用工具将使用加密连接重新进行连接。  
@@ -170,7 +170,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例不能具有名为“sysutility_mdw”的数据库。|创建 UCP 操作将创建一个名为“sysutility_mdw”的实用工具管理数据仓库 (UMDW)。 该操作要求该名称在验证规则运行时在计算机上不存在。 若要继续，您必须删除或重命名名为“sysutility_mdw”的任何数据库。 有关重命名操作的详细信息，请参阅 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例上的收集组必须停止运行。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的指定实例上创建 UCP 时停止预先存在的收集组。 如果数据收集器被禁用，则启用它，停止正在运行的所有收集组，然后为创建 UCP 操作重新运行验证规则。<br /><br /> 启用数据收集器：<br /><br /> 在对象资源管理器中，展开 **“管理”** 节点。<br /><br /> 右键单击 **“数据收集”**，然后单击 **“启用数据收集”**。<br /><br /> 停止收集组：<br /><br /> 在对象资源管理器中，依次展开“管理”节点、 **“数据收集”**、 **“系统数据收集组”**。<br /><br /> 右键单击要停止的收集组，然后单击 **“停止数据收集组”**。<br /><br /> 出现一个显示此操作结果的消息框，收集组图标上的红色圆圈指示收集组已停止运行。|  
 |指定实例上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须启动。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须配置为手动启动。 否则， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务必须配置为自动启动。|启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 故障转移群集实例，则将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为手动启动。 否则，将 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务配置为自动启动。|  
-|WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
+|WMI 必须正确配置。|若要排查 WMI 配置问题，请参阅 [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户不能是 Network Service 之类的内置帐户。|如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户是 Network Service 之类的内置帐户，则将该帐户重新分配给作为 sysadmin 的 Windows 域帐户。|  
 |如果您选择代理帐户选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的代理帐户必须是有效的 Windows 域帐户。|指定一个有效的 Windows 域帐户。 为了确保该帐户是有效帐户，请使用 Windows 域帐户登录到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的指定实例。|  
 |如果你选择服务帐户选项，则 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户不能是 Network Service 之类的内置帐户。|如果该 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理服务帐户是 Network Service 之类的内置帐户，则将该帐户重新分配给 Windows 域帐户。|  
@@ -229,6 +229,6 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 实用工具的功能和任务](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
+ [SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   

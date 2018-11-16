@@ -5,8 +5,7 @@ ms.custom: P360
 ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - temporary tables [SQL Server], tempdb database
@@ -19,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7553be68390c90b2cab8ac55c66bb9ffa47ad88
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3041f983b1d5aec55ac3727c322558ed22e69315
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031264"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658626"
 ---
 # <a name="tempdb-database"></a>tempdb 数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51031264"
  \*文件数取决于计算机上的（逻辑）处理器数。 一般而言，如果逻辑处理器数目小于或等于 8，则使用的数据文件数与逻辑处理器数相同。 如果逻辑处理器数目大于 8，则使用 8 个数据文件，如果仍然存在争用，则以 4 的倍数增加数据文件的数量，直到争用减少到可接受的级别或对工作负荷/代码进行更改。
 
 > [!NOTE]
-> 数据文件数的默认值遵循 [KB 2154845](http://support.microsoft.com/kb/2154845/)中的一般准则。  
+> 数据文件数的默认值遵循 [KB 2154845](https://support.microsoft.com/kb/2154845/)中的一般准则。  
   
 ### <a name="moving-the-tempdb-data-and-log-files-in-sql-server"></a>在 SQL Server 中移动 tempdb 数据和日志文件  
  若要移动 **tempdb** 数据和日志文件，请参阅 [移动系统数据库](../../relational-databases/databases/move-system-databases.md)。  
@@ -278,4 +277,4 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [在 SQL Server 2005 中使用 tempdb](https://technet.microsoft.com/library/cc966545.aspx)  
- [解决 tempdb 中磁盘空间不足的问题](http://msdn.microsoft.com/library/ms176029.aspx) 
+ [解决 tempdb 中磁盘空间不足的问题](https://msdn.microsoft.com/library/ms176029.aspx) 

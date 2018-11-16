@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 748c341960d8bb50a70f06e6473c2eb613b071aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827348"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675126"
 ---
 # <a name="always-encrypted-database-engine"></a>始终加密（数据库引擎）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 - 如果在“连接到服务器”  对话框的“其他属性”  选项卡中的“列加密设置”为启用  状态下进行连接，则 SQL Server Management Studio 可以解密从加密列中检索的结果。 至少需要 SQL Server Management Studio 版本 17 才能插入、更新或筛选加密的列。
 
-- `sqlcmd` 中的加密连接至少需要 13.1 版本（可从 [下载中心](http://go.microsoft.com/fwlink/?LinkID=825643)获取）。
+- `sqlcmd` 中的加密连接至少需要 13.1 版本（可从 [下载中心](https://go.microsoft.com/fwlink/?LinkID=825643)获取）。
 
   
 ## <a name="database-permissions"></a>数据库权限  

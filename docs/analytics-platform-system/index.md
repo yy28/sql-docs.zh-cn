@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3fc2230d22131da80ee1250c08b19fc16e4aa651
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: 62fefedaa417e73820a7e14df9bf90f6215b9161
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909737"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702445"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System  
 Microsoft Analytics Platform System (APS) 是一种设计用于数据仓库和大数据分析的数据平台，它可为端到端商业智能解决方案提供深度数据集成、高速查询处理、高度可伸缩存储，以及简单维护。  
@@ -51,6 +51,6 @@ Analytics Platform System 不仅运行速度块，而且可缩放，其采用高
 
 ## <a name="next-steps"></a>后续步骤
 
-有关 PDW 优势的更多信息，请参阅 MSDN 上的白皮书 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](http://msdn.microsoft.com/library/dn520808.aspx)（下一代数据仓库和大数据解决方案的突破性平台）。  
+有关 PDW 优势的更多信息，请参阅 MSDN 上的白皮书 [A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://msdn.microsoft.com/library/dn520808.aspx)（下一代数据仓库和大数据解决方案的突破性平台）。  
   
 

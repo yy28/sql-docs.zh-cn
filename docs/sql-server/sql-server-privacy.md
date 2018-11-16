@@ -10,12 +10,12 @@ helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aa9be217bc6235c0bc01c5d4adfd9caa9d7a630a
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 63425a2a280154522c0219a89033e67c4e8bdeda
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419172"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703256"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 隐私补充
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -161,6 +161,6 @@ Microsoft 可使用该数据对未来产品进行规划。 |Microsoft 可将此�
 
 ## <a name="telemetry-controls"></a>遥测控件
 
-若要了解如何在产品中打开/关闭遥测，请参阅此处的说明 - https://support.microsoft.com/en-us/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
+若要了解如何在产品中打开/关闭遥测，请参阅此处的说明 - https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft。
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

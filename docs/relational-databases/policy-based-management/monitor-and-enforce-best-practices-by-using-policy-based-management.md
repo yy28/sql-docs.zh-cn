@@ -5,21 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8e50674429bb332e750222c3b458b53cd339437
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719555"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672076"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>使用基于策略的管理来监视和强制执行最佳实践
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47719555"
 |策略名称|最佳实践规则|  
 |-----------------|------------------------|  
 |非对称密钥加密算法|[非对称密钥加密强度](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|备份和数据文件位置|[备份文件必须位于与数据库文件分开的设备上](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |数据和日志文件位置|[将数据和日志文件放到不同的驱动器上](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |数据库自动关闭|[将 AUTO_CLOSE 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |数据库自动收缩|[将 AUTO_SHRINK 数据库选项设置为 OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|数据库排序规则|[将用户定义的数据库排序规则设置为与 master 和 model 数据库的排序规则一致](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |数据库页验证|[将 PAGE_VERIFY 数据库选项设置为 CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |数据库页状态|[检查包含可疑页的数据库的完整性](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Guest 权限|[对用户数据库的 Guest 权限](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  

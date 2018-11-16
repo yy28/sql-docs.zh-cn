@@ -11,12 +11,12 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67de6f79ceac48dc6e81ef9b61674fd65bd24bed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c54d0c7c254f07d06c34ffc3860d03d8ccfba124
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636995"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638225"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 目标自定义属性
   DataReader 目标具有自定义属性和所有数据流组件通用的属性。  
@@ -34,6 +34,6 @@ ms.locfileid: "47636995"
  有关详细信息，请参阅 [DataReader Destination](../../integration-services/data-flow/datareader-destination.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

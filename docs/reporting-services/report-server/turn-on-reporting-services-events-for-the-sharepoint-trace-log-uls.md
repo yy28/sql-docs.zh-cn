@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee9c57eff9572632d40147007b9be8e669702a3a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0f4d8f59821a649214ddc2deda128d801e6ddb7a
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020371"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814170"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>为 SharePoint 跟踪日志 (ULS) 启用 Reporting Services 事件
 
@@ -108,7 +108,7 @@ Get-SPDiagnosticConfig
 |报表服务器目录||  
 |报表服务器块区||  
 |报表服务器清除||  
-|报表服务器配置管理器|示例条目：<br /><br /> MediumUsing 报表服务器内部 URL `http://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
+|报表服务器配置管理器|示例条目：<br /><br /> MediumUsing 报表服务器内部 URL `https://localhost:80/ReportServer`。<br /><br /> UnexpectedMissing or Invalid ExtendedProtectionLevel setting|  
 |报表服务器 Crypto||  
 |报表服务器数据扩展插件||  
 |报表服务器数据库轮询||  

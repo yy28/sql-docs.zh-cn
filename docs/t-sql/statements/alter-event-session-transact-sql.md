@@ -20,12 +20,12 @@ ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db06e014e735e9174cde6364f30ee3870977941d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fb0c0e35b2350bf3b1753434425389eb8f3503d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696787"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ON SERVER
 |DROP EVENT \<event_specifier>|删除由 \<event_specifier> 标识的事件。 \<event_specifier> 在事件会话中必须有效。|  
 |ADD TARGET \<event_target_specifier>|将由 \<event_target_specifier> 标识的目标与事件会话关联。|
 |[event_module_guid].event_package_name.target_name|为事件会话中目标的名称，其中：<br /><br /> -   event_module_guid 为包含该事件的模块的 GUID。<br />-   event_package_name 为包含操作对象的包。<br />-   target_name 为操作。 操作在 sys.dm_xe_objects 视图中显示为 object_type 'target'。|  
-|SET { target_parameter_name= \<value> [, ...n] }|设置目标参数。 目标参数在 sys.dm_xe_object_columns 视图中显示为 column_type 'customizable' 以及 object_name = target_name。<br /><br /> **注意！！** 如果您在使用环形缓冲区目标，我们建议您将 max_memory 目标参数设置为 2048 KB，以便避免在 XML 输出中可能发生数据截断。 有关何时使用不同目标类型的详细信息，请参阅 [SQL Server 扩展事件目标](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。|  
+|SET { target_parameter_name= \<value> [, ...n] }|设置目标参数。 目标参数在 sys.dm_xe_object_columns 视图中显示为 column_type 'customizable' 以及 object_name = target_name。<br /><br /> **注意！！** 如果您在使用环形缓冲区目标，我们建议您将 max_memory 目标参数设置为 2048 KB，以便避免在 XML 输出中可能发生数据截断。 有关何时使用不同目标类型的详细信息，请参阅 [SQL Server 扩展事件目标](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。|  
 |DROP TARGET \<event_target_specifier>|删除由 \<event_target_specifier> 标识的目标。 \<event_target_specifier> 在事件会话中必须有效。|  
 |EVENT_RETENTION_MODE = { ALLOW_SINGLE_EVENT_LOSS | ALLOW_MULTIPLE_EVENT_LOSS | NO_EVENT_LOSS }|指定要用于处理事件丢失的事件保留模式。<br /><br /> ALLOW_SINGLE_EVENT_LOSS<br /> 事件可能会从会话中丢失。 只有在所有事件缓冲区均已满时才删除单个事件。 通过在事件缓冲区已满时丢失单个事件，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可实现足以满足要求的性能特征，同时还可使处理的事件流中的数据丢失降到最低。<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS<br /> 包含多个事件的已满事件缓冲区可能会从会话中丢失。 丢失事件的数目取决于分配给会话的内存大小、内存的分区情况以及缓冲区中事件的大小。 在事件缓冲区迅速达到已满状态时，该选项可将对服务器性能的影响降至最低，但可能会有大量的事件从会话中丢失。<br /><br /> NO_EVENT_LOSS<br /> 不允许事件丢失。 此选项可确保所有引发的事件都将得以保留。 使用此选项可强制所有激发事件的任务一直等到事件缓冲区中有可用空间时才执行。 这可能会在事件会话处于活动状态时引发可察觉到的性能问题。 在等待从缓冲区刷新事件时，用户连接可能中断。|  
 |MAX_DISPATCH_LATENCY = { seconds SECONDS | INFINITE }|指定在将事件调度至事件会话目标前这些事件在内存中缓冲的时间。 最小滞后时间值为 1 秒。 但是，可以使用 0 来指定 INFINITE 滞后时间。 默认情况下，此值设置为 30 秒。<br /><br /> seconds SECONDS<br /> 在开始将缓冲区刷新到目标前等待的时间（单位为秒）。 seconds 是一个整数。<br /><br /> INFINITE<br /> 仅在缓冲区已满或事件会话关闭时才将缓冲区刷新到目标。<br /><br /> **注意！！** MAX_DISPATCH_LATENCY = 0 SECONDS 等效于 MAX_DISPATCH_LATENCY = INFINITE。|  
@@ -173,7 +173,7 @@ GO
 ## <a name="see-also"></a>另请参阅  
  [CREATE EVENT SESSION (Transact-SQL)](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION (Transact-SQL)](../../t-sql/statements/drop-event-session-transact-sql.md)   
- [SQL Server 扩展事件目标](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [SQL Server 扩展事件目标](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.server_event_sessions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   
  [sys.dm_xe_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)   
  [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  

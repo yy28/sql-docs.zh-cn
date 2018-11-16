@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c8ff63651f0c23418c5ff5a6a386af4e2674a1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684965"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675816"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 扩展事件包
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ where name = 'keyword_map'
 >  关键字将紧密映射到 SQL 跟踪事件的当前分组中。  
   
 ### <a name="targets"></a>目标  
- 目标是指事件使用者。 目标在触发事件的线程中同步处理事件或在系统提供的线程中异步处理事件。 扩展事件提供了多个目标，您可以根据需要将其用于定向事件输出。 有关详细信息，请参阅 [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
+ 目标是指事件使用者。 目标在触发事件的线程中同步处理事件或在系统提供的线程中异步处理事件。 扩展事件提供了多个目标，您可以根据需要将其用于定向事件输出。 有关详细信息，请参阅 [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)。  
   
 ### <a name="actions"></a>操作  
  操作是对事件做出的一个编程方式的响应或一系列响应。 操作与事件绑定在一起，并且每个事件都可能具有唯一的一组操作。  
@@ -220,6 +220,6 @@ where name = 'lock_mode'
 ## <a name="see-also"></a>另请参阅  
  [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 扩展事件引擎](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
+ [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

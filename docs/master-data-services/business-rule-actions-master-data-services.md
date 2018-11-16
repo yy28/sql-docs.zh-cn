@@ -12,12 +12,12 @@ ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 22cd64be469f9e8c1ebdcac7bd463bbf4d6d9c26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e028d1238a0bb41207d5a88f4c219dac7cb392cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696595"
 ---
 # <a name="business-rule-actions-master-data-services"></a>业务规则操作 (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "47694185"
 |---------------------|-----------------|  
 |**必需**|所选属性是 **“必需”** 的，这意味着它不能为 Null 或为空。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
 |**无效**|所选属性 **“无效”**。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
-|**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。<br /><br /> 此操作对文本和链接值有效。|  
+|**必须包含模式**|所选属性 **必须包含指定的模式** 。 使用 .NET Framework 正则表达式可以指定模式。<br /><br /> 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。<br /><br /> 此操作对文本和链接值有效。|  
 |**必须是唯一的**|所选属性 **“必须是唯一的”** ，无论它们是独立的，还是与其他定义属性组合。<br /><br /> **最佳实践：** 将此操作与必需条件相结合，以确保订阅系统中索引字段的有效性。<br /><br /> 此操作对文本、数字、日期和链接值有效。<br /><br /> **注意**：如果第一个属性的类型为 DateTime，则不能将其与 Numeric 属性或 Text 属性类型结合使用。 如果第一个属性的类型为 Numeric，则不能将其与 DateTime 类型的属性结合使用。|  
 |**必须具有以下值之一**|所选属性 **“必须具有以下值之一”** ，它是在列表中指定的。<br /><br /> 此操作对文本值有效。|  
 |**必须大于**|所选属性 **“必须大于”** 特定属性、特定属性值或者为空。<br /><br /> 此操作对文本、数字和日期值有效。|  
@@ -71,7 +71,7 @@ ms.locfileid: "47694185"
   
 |操作名称|描述|  
 |-----------------|-----------------|  
-|**启动工作流**|启动外部工作流。 导致此操作发生的数据传递到工作流。 有关详细信息，请参阅 [SharePoint Workflow Integration with Master Data Services](http://msdn.microsoft.com/library/gg690195.aspx)（SharePoint 工作流与 Master Data Services 集成）。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
+|**启动工作流**|启动外部工作流。 导致此操作发生的数据传递到工作流。 有关详细信息，请参阅 [SharePoint Workflow Integration with Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx)（SharePoint 工作流与 Master Data Services 集成）。<br /><br /> 此操作对文本、数字、日期和链接值有效。|  
   
 ## <a name="see-also"></a>另请参阅  
  [业务规则条件 (Master Data Services)](../master-data-services/business-rule-conditions-master-data-services.md)   

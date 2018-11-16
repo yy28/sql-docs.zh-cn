@@ -19,18 +19,18 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c526b7c991f3df5eb33042e2d25f7152ae80887a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 367cc129fdb0f4786c37af5f1cf1fa4bb112fa90
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663296"
 ---
 # <a name="securing-sql-server"></a>保护 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可将保护 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 视为一系列步骤，它涉及四个方面：平台、身份验证、对象（包括数据）以及访问系统的应用程序。 下列主题将指导您完成创建和实现有效安全计划的过程。  
   
- 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [网站上找到有关](http://go.microsoft.com/fwlink/?LinkID=31629) 安全性的详细信息。 此类信息包括最佳实践指南和安全清单。 此网站还包含最新的 Service Pack 信息和下载。  
+ 您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server [网站上找到有关](https://go.microsoft.com/fwlink/?LinkID=31629) 安全性的详细信息。 此类信息包括最佳实践指南和安全清单。 此网站还包含最新的 Service Pack 信息和下载。  
   
 ## <a name="platform-and-network-security"></a>平台与网络安全性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的平台包括物理硬件和将客户端连接到数据库服务器的联网系统，以及用于处理数据库请求的二进制文件。  
@@ -78,7 +78,7 @@ ms.locfileid: "47760795"
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程序文件|[SQL Server 的默认实例和命名实例的文件位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级提供了增强的安全性。 若要确定可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最新 Service Pack，请访问 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=31629) 网站。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 和升级提供了增强的安全性。 若要确定可用于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的最新 Service Pack，请访问 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) 网站。  
   
  您可以使用以下脚本来确定系统上安装的 Service Pack。  
   
@@ -125,7 +125,7 @@ GO
   
 |有关信息|请参阅|  
 |---------------------------|---------|  
-|连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
+|连接、配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[使用 SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)|  
 |连接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 并在命令提示符下运行查询|[sqlcmd 实用工具](../../tools/sqlcmd-utility.md)|  
 |网络配置和控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 配置管理器](../../relational-databases/sql-server-configuration-manager.md)|  
 |使用基于策略的管理启用和禁用功能|[使用基于策略的管理来管理服务器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
@@ -143,7 +143,7 @@ GO
 ## <a name="related-content"></a>相关内容  
  [安装 SQL Server 的安全注意事项](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [SQL Server 数据库引擎和 Azure SQL Database 的安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-[SQL Server 2012 安全最佳做法 - 操作和管理任务。](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
+[SQL Server 2012 安全最佳做法 - 操作和管理任务。](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)   
 [SQL Server 安全博客](https://blogs.msdn.microsoft.com/sqlsecurity/)  
 [安全最佳做法和标签安全白皮书](https://blogs.msdn.microsoft.com/sqlsecurity/2012/03/06/security-best-practice-and-label-security-whitepapers/)  
 [行级安全性](../../relational-databases/security/row-level-security.md)   

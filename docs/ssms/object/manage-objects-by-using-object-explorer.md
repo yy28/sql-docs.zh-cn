@@ -17,12 +17,12 @@ ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a8e9429c2d9e55a54a7b07a2d417dcbbef41eb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 234a31d2b3bc59a447b14691b45c1a2a323598b2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696786"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>使用对象资源管理器管理对象
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47842995"
 对象资源管理器连接到服务器后，可以使用对象资源管理器的连接设置打开一个新的“代码编辑器”窗口。 若要打开一个新的“代码编辑器”窗口，请在对象资源管理器中右键单击服务器名称，然后单击“新建查询”。 若要使用特定数据库打开“代码编辑器”窗口，请右键单击数据库名称，然后单击“新建查询”。 打开 Analysis Services 服务器的新查询时，可以选择 DMX、MDX 或 XMLA 查询。  
   
 ### <a name="start-powershell"></a>启动 PowerShell  
-可通过右键单击对象资源管理器树中的大多数文件夹和对象并选择“启动 PowerShell”来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持的 PowerShell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 PowerShell 环境中输入 PowerShell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](http://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
+可通过右键单击对象资源管理器树中的大多数文件夹和对象并选择“启动 PowerShell”来启动 PowerShell 会话。 这将启动已启用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 支持的 PowerShell 会话，并将路径设置为在对象资源管理器中右键单击的对象。 然后，您可以在交互式 PowerShell 环境中输入 PowerShell 命令。 有关详细信息，请参阅 [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7)。  
   
 ## <a name="see-also"></a>另请参阅  
 [对象资源管理器](../../ssms/object/object-explorer.md)  

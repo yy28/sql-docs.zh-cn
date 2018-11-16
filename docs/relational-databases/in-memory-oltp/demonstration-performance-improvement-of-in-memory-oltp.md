@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5aa7205329304a6b66fc602999ae2a9ad6837873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677546"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>演示：内存中 OLTP 的性能改进
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ go
   
 1.  决定将用于代码示例的现有测试数据库。  
   
-2.  如果你决定创建一个新的测试数据库，请使用 [Azure 门户](http://portal.azure.com) 创建一个名为 **imoltp**的数据库。  
+2.  如果你决定创建一个新的测试数据库，请使用 [Azure 门户](https://portal.azure.com) 创建一个名为 **imoltp**的数据库。  
   
- 如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](http://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
+ 如果需要有关使用 Azure 门户来实现这一操作的说明，请参阅 [Azure SQL Database 入门](https://azure.microsoft.com/documentation/articles/sql-database-get-started)。  
   
 ### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>步骤 2：创建内存优化表和 NCSProc  
  此步骤创建内存优化表和本机编译的存储过程 (NCSProc)。 请执行以下操作：  

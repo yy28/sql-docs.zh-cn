@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ea464ae0717f69df69af48063499cf3cc8a5c2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9209682962a974e7a8ff6ef6419517416d399d8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718705"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661886"
 ---
 # <a name="views"></a>视图
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718705"
  分区视图在一台或多台服务器间水平连接一组成员表中的分区数据。 这样，数据看上去如同来自于一个表。 联接同一个 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中的成员表的视图是一个本地分区视图。  
   
  系统视图  
- 系统视图公开目录元数据。 您可以使用系统视图返回与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或在该实例中定义的对象有关的信息。 例如，你可以查询 sys.databases 目录视图以便返回与实例中提供的用户定义数据库有关的信息。 有关详细信息，请参阅[系统视图 (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
+ 系统视图公开目录元数据。 您可以使用系统视图返回与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例或在该实例中定义的对象有关的信息。 例如，你可以查询 sys.databases 目录视图以便返回与实例中提供的用户定义数据库有关的信息。 有关详细信息，请参阅[系统视图 (Transact-SQL)](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
 ## <a name="common-view-tasks"></a>常见视图任务  
  下表提供指向与创建或修改视图相关联的常见任务的链接。  

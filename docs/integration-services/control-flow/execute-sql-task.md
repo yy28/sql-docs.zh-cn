@@ -21,12 +21,12 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2400595e7e32cf2eb9e4adee010c844145aac959
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd627ea368aea84611863b491ee3b0aaab1cc190
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721765"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641815"
 ---
 # <a name="execute-sql-task"></a>执行 SQL 任务
   执行 SQL 任务从包中运行 SQL 语句或存储过程。 此任务可以包含单个 SQL 语句，也可以包含按顺序运行的多个 SQL 语句。 可以将执行 SQL 任务用于下列用途：  
@@ -66,7 +66,7 @@ ms.locfileid: "47721765"
 >  执行 SQL 任务可能无法成功分析在执行 SQL 任务外编写的有效 SQL 语句。  
   
 > [!NOTE]  
->  执行 SQL 任务将使用 **RecognizeAll** ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](http://go.microsoft.com/fwlink/?LinkId=223617)。  
+>  执行 SQL 任务将使用 **RecognizeAll** ParseMode 枚举值。 有关详细信息，请参阅 [ManagedBatchParser 命名空间](https://go.microsoft.com/fwlink/?LinkId=223617)。  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>在批中发送多个语句  
  如果在执行 SQL 任务中包含了多个语句，则可以将这些语句进行分组，并将它们作为一批来运行。 若要标明批的结束，请使用 GO 命令。 在两个 GO 命令间的所有 SQL 语句都作为一批发送到 OLE DB 访问接口来运行。 SQL 命令可以包含多个由 GO 命令分隔的批。  
@@ -183,7 +183,7 @@ ms.locfileid: "47721765"
  **SQLStatement**  
  在选项框中键入要执行的 SQL 语句，或者单击“浏览(…)”按钮，在“输入 SQL 查询”对话框中键入 SQL 语句，还可以单击“生成查询”，使用“查询生成器”对话框编写 SQL 语句。  
   
- **相关主题：** [“查询生成器”](http://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **相关主题：** [“查询生成器”](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 文件连接  
  **文件连接**  
@@ -195,7 +195,7 @@ ms.locfileid: "47721765"
  **SourceVariable**  
  选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题：**[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>“参数映射”页 - 执行 SQL 任务编辑器
 可以使用 **“执行 SQL 任务编辑器”** 对话框的 **“参数映射”** 页，将变量映射到 SQL 语句中的参数。  
@@ -307,7 +307,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 ###  <a name="Date_and_time_data_types"></a>将参数用于日期和时间数据类型  
   
 #### <a name="use-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>在 ADO.NET 和 ADO 连接管理器中使用日期和时间参数  
- 读取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型、**time** 和 **datetimeoffset** 数据时，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
+ 读取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 类型、 **time** 和 **datetimeoffset**数据时，使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 或 ADO 连接管理器的执行 SQL 任务有以下附加要求：  
   
 -   对于 **time** 数据，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 连接管理器要求此数据存储在参数类型为 **Input** 或 **Output** 并且数据类型为 **string** 的参数中。  
   
@@ -322,7 +322,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
  有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型和它们如何映射到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的详细信息，请参阅[数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) 和 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 #### <a name="use-date-and-time-parameters-with-ole-db-connection-managers"></a>在 OLE DB 连接管理器中使用日期和时间参数  
- 使用 OLE DB 连接管理器时，执行 SQL 任务对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型为 **date**、**time**、**datetime**、**datetime2** 和 **datetimeoffset** 的数据有特定的存储要求。 您必须用下列参数类型之一来存储此数据：  
+ 使用 OLE DB 连接管理器时，执行 SQL 任务对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型为 **date**、 **time**、 **datetime**、 **datetime2**和 **datetimeoffset**的数据有特定的存储要求。 您必须用下列参数类型之一来存储此数据：  
   
 -   NVARCHAR 数据类型的输入参数。  
   
@@ -338,7 +338,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
  如果数据未存储在相应的输入或输出参数中，包将失败。  
   
 #### <a name="use-date-and-time-parameters-with-odbc-connection-managers"></a>在 ODBC 连接管理器中使用日期和时间参数  
- 使用 ODBC 连接管理器时，执行 SQL 任务对于带有以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一的数据具有特定的存储要求：**date**、**time**、**datetime**、**datetime2** 或 **datetimeoffset**。 您必须用下列参数类型之一来存储此数据：  
+ 使用 ODBC 连接管理器时，执行 SQL 任务对于带有以下 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据类型之一的数据具有特定的存储要求： **date**、 **time**、 **datetime**、 **datetime2**或 **datetimeoffset**。 您必须用下列参数类型之一来存储此数据：  
   
 -   SQL_WVARCHAR 数据类型的 **Input** 参数  
   
@@ -382,7 +382,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
 |ADO|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 设置为 False，则为 `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 设置为 True，则为 `uspGetBillOfMaterials`|  
   
@@ -445,7 +445,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   
-10. 从 **“变量名称”** 列表中选择变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+10. 从 **“变量名称”** 列表中选择变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
 11. 在 **“方向”** 列表中指定该参数是输入、输出还是返回值。  
   
@@ -471,7 +471,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
 |连接类型|EXEC 语法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](http://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 有关 ODBC 调用语法的详细信息，请参阅 MSDN Library 中的 ODBC 程序员参考的 [Procedure Parameters](https://go.microsoft.com/fwlink/?LinkId=89462)（过程参数）主题。|  
 |ADO|如果 IsQueryStoreProcedure 设置为 False，则为 `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 设置为 True，则为 `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|将 IsQueryStoreProcedure 设置为 **True**。<br /><br /> `myStoredProcedure`|  
   
@@ -516,7 +516,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
  XML 结果集只能映射到数据类型为 **String** 或 **Object** 的变量。 如果该变量的数据类型为 **String** ，则“执行 SQL 任务”返回一个字符串，并且 XML 源可以使用 XML 数据。 如果该变量的数据类型为 **Object** ，则“执行 SQL 任务”返回一个文档对象模型 (DOM) 对象。  
   
- **完整结果集** 必须映射到数据类型为 **Object** 的变量。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](http://go.microsoft.com/fwlink/?LinkId=157863)。  
+ **完整结果集** 必须映射到数据类型为 **Object** 的变量。 返回结果是一个行集对象。 可以使用 Foreach 循环容器将存储在对象变量中的表行值提取到包变量中，然后使用脚本任务将存储在包变量中的数据写入文件。 有关如何使用 Foreach 循环容器和脚本任务执行该操作的演示，请参阅 msftisprodsamples.codeplex.com 上的 CodePlex 示例： [执行 SQL 参数和结果集](https://go.microsoft.com/fwlink/?LinkId=157863)。  
   
  下表总结了可以映射到结果集的变量数据类型。  
   
@@ -554,7 +554,7 @@ SQL 语句和存储过程常常使用 **input** 参数、 **output** 参数和�
   
 8.  若要添加结果集映射，请单击 **“添加”**。  
   
-9. 从 **“变量名称”** 列表中，选择变量或创建新变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+9. 从 **“变量名称”** 列表中，选择变量或创建新变量。 有关详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
 10. 在 **“结果名称”** 列表中，可根据需要修改结果集的名称。  
   

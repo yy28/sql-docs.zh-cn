@@ -18,12 +18,12 @@ ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d17fc7c44e02594a9b5b38941585cfeb8ac613e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a07686a0aefb9b5d41e8c6f231c57214b75f687
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830255"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702755"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer（geography 数据类型）
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "47830255"
   
  最大距离限制允许将缓冲区构造得尽可能灵活。  
   
- 理论缓冲区与所计算的缓冲区之间的误差是 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
+ 理论缓冲区与所计算的缓冲区之间的误差是 max(tolerance, extents * 1.E-7)，其中 tolerance = distance \* .001。 有关盘区的详细信息，请参阅 [geography 数据类型方法引用](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)。  
   
 ## <a name="examples"></a>示例  
  下面的示例创建 `LineString``geography` 实例。 然后，它使用 `STBuffer()` 返回该实例的 1 米内的区域。  

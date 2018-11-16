@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d566f66531785b8ac4ccee5b60e26caf2c83848
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 6e44af551221792f288cb23ef616f68b0c7965d6
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028836"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814310"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Reporting Services 的服务器和数据库连接问题疑难解答
 使用本主题可以排除在连接到报表服务器时所遇到的故障。 本主题还提供了与错误消息有关的信息。 有关数据源配置和配置报表服务器连接信息的详细信息，请参阅 [指定报表数据源的凭据和连接信息](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [配置报表服务器数据库连接（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "50028836"
 * 确保报表服务器 URL 和报表服务器数据库连接字符串正确。 如果 Reporting Services 或数据库引擎作为命名实例安装，则在安装过程中创建的默认连接字符串将包括相应的实例名称。 例如，如果在名为 DEVSRV01 的服务器上安装了具有高级服务的 SQL Server Express 的默认实例，则报表管理器 URL 将为 DEVSRV01\Reports$SQLEXPRESS。 此外，连接字符串中的数据库服务器名称将类似于 DEVSRV01\SQLEXPRESS。 有关 SQL Server Express 的 URL 和数据源连接字符串的详细信息，请参阅 [具有高级服务的 SQL Server Express 中的 Reporting Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx)。 若要验证报表服务器数据库的连接字符串，请启动 Reporting Services 配置工具并查看“数据库安装”页。  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>无法进行连接。 请确保服务器正在运行。  
-此错误由 ADOMD.NET 提供程序返回。 有多种原因可导致发生此错误。 如果已将服务器指定为“localhost”，请尝试改为指定服务器名称。 如果无法为新连接分配内存，也会发生此错误。 有关详细信息，请参阅 [知识库文章 912017 - 连接到 SQL Server 2005 Analysis Services 实例时收到错误消息：](http://support.microsoft.com/kb/912017)。  
+此错误由 ADOMD.NET 提供程序返回。 有多种原因可导致发生此错误。 如果已将服务器指定为“localhost”，请尝试改为指定服务器名称。 如果无法为新连接分配内存，也会发生此错误。 有关详细信息，请参阅 [知识库文章 912017 - 连接到 SQL Server 2005 Analysis Services 实例时收到错误消息：](https://support.microsoft.com/kb/912017)。  
   
 如果此错误还包含“无法识别这种主机”，则说明 Analysis Services 服务器不可用或拒绝连接。 如果 Analysis Services 服务器作为命名实例安装在远程计算机上，则可能必须运行 SQL Server Browser 服务来获取该实例使用的端口号。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "50028836"
   
 若要解决此错误，请重新安装该软件。 对于所有其他情况，作为临时解决方法，可以通过 SOAP 端点连接到报表服务器：  
   
-* 在 Management Studio 中的“连接到服务器”  对话框中，在“服务器名称” 中键入报表服务器的 URL。 默认情况下，它是 `http://<your server name>/reportserver`。 如果使用的是具有高级服务的 SQL Server 2008 Express 版本，则为 `http://<your server name>/reportserver$sqlexpress`。  
+* 在 Management Studio 中的“连接到服务器”  对话框中，在“服务器名称” 中键入报表服务器的 URL。 默认情况下，它是 `https://<your server name>/reportserver`。 如果使用的是具有高级服务的 SQL Server 2008 Express 版本，则为 `https://<your server name>/reportserver$sqlexpress`。  
   
 若要解决该错误以便可以使用 WMI 提供程序进行连接，则应运行安装程序以修复 Reporting Services 或重新安装 Reporting Services。  
   

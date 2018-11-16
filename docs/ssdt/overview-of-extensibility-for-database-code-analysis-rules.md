@@ -11,15 +11,15 @@ ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c754ce006834a44413d64821ea79349da2e62d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 606b835328f704adcaa282d0a2c4d3984c9ddec0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655778"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>数据库代码分析规则的扩展性概述
-包含 SQL Server Data Tools 的 Visual Studio 版本在数据库代码中包括要报告的有关 Transact\-SQL 设计、命名和性能警告的代码分析规则。 有关详细信息，请参阅[分析数据库代码以改进代码质量](http://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)。  
+包含 SQL Server Data Tools 的 Visual Studio 版本在数据库代码中包括要报告的有关 Transact\-SQL 设计、命名和性能警告的代码分析规则。 有关详细信息，请参阅[分析数据库代码以改进代码质量](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx)。  
   
 如果内置代码分析规则未涵盖你希望包含的特定 Transact\-SQL 问题，你可以创建自定义数据库代码分析规则。 例如，你可能想要创建避免使用 WAITFOR DELAY 语句的自定义规则，如[创作 SQL Server 的自定义静态代码分析规则程序集演练](../ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md)中所述。 若要创建自定义数据库代码分析规则，请使用 [CodeAnalysis](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.aspx) 命名空间中的类。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "47699915"
   
 ![数据库代码分析规则组件](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "数据库代码分析规则组件")  
   
-当你通过直接运行静态代码分析（有关详细信息，请参阅[操作方法：分析 Transact-SQL 代码以找到缺陷](http://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)）或通过执行生成使用数据库代码分析规则功能时，将根据你在项目中的配置方式加载和使用所有规则。 有关详细信息，请参阅[操作方法：为数据库代码的静态分析启用和禁用特定规则](http://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)。 扩展管理器还将加载你已创建和注册的任何自定义规则程序集。 有关详细信息，请参阅[如何：安装和管理功能扩展](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
+当你通过直接运行静态代码分析（有关详细信息，请参阅[操作方法：分析 Transact-SQL 代码以找到缺陷](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)）或通过执行生成使用数据库代码分析规则功能时，将根据你在项目中的配置方式加载和使用所有规则。 有关详细信息，请参阅[操作方法：为数据库代码的静态分析启用和禁用特定规则](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx)。 扩展管理器还将加载你已创建和注册的任何自定义规则程序集。 有关详细信息，请参阅[如何：安装和管理功能扩展](../ssdt/how-to-install-and-manage-feature-extensions.md)。  
   
 自定义代码分析规则类继承自 [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx)。 自定义规则类可通过其规则执行上下文访问多个有用的对象。 其中包括：  
   

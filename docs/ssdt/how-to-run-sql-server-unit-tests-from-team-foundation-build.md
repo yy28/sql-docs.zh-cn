@@ -11,21 +11,21 @@ ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4b6dd462a8f8fec6797c26f7ae0461c4b0a4ce
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797344"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669856"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：通过 Team Foundation Build 运行 SQL Server 单元测试
 可以使用 Team Foundation Build 将 SQL Server 单元测试作为生成验证测试 (BVT) 的一部分运行。 可以配置单元测试以部署数据库、生成测试数据，然后运行选定测试。 如果您不熟悉 Team Foundation Build，则应该在执行本主题中的过程之前查看以下信息：  
   
 -   [创建和定义 SQL Server 单元测试](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [如何：在生成应用程序后配置和运行计划的测试](http://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [如何：在生成应用程序后配置和运行计划的测试](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
--   [创建基本生成定义](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+-   [创建基本生成定义](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
 在使用这些过程之前，必须首先通过执行以下任务来配置工作环境：  
   
@@ -215,22 +215,22 @@ ms.locfileid: "47797344"
   
 1.  连接到运行 Team Foundation Server 的计算机。  
   
-    有关详细信息，请参阅[使用源代码管理器](http://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
+    有关详细信息，请参阅[使用源代码管理器](https://msdn.microsoft.com/library/ms181370(VS.100).aspx)。  
   
 2.  如果您的解决方案尚未包含在源代码管理中，请将它添加到源代码管理中。  
   
-    有关更多信息，请参阅[将项目或解决方案添加到版本控制](http://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
+    有关更多信息，请参阅[将项目或解决方案添加到版本控制](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)。  
   
 3.  单击“视图”，然后单击“挂起的签入”。  
   
 4.  签入您的解决方案的所有文件。  
   
-    有关详细信息，请参阅[签入挂起的更改](http://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
+    有关详细信息，请参阅[签入挂起的更改](https://msdn.microsoft.com/library/ms181411(VS.100).aspx)。  
   
     > [!NOTE]  
     > 您可能有特定的团队流程来控制如何创建和管理自动测试。 例如，该流程可能要求您先在本地验证您的生成，然后再将该代码以及在代码上运行的测试一起签入。  
   
-    在“解决方案资源管理器”中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](http://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
+    在“解决方案资源管理器”中，挂锁图标显示在每个文件旁边，以指示该文件已签入。 有关详细信息，请参阅[查看版本控制文件和文件夹属性](https://msdn.microsoft.com/library/ms245468(VS.100).aspx)。  
   
     您的测试现在已经可用于 Team Foundation Build。 您现在可以创建包含要运行的测试的生成定义。  
   
@@ -280,11 +280,11 @@ ms.locfileid: "47797344"
   
 3.  确认“生成定义”、“生成代理”和“该生成的放置文件夹”字段中的值全部正确，然后单击“排队”。  
   
-    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](http://msdn.microsoft.com/library/ms181732.aspx)。  
+    此时将显示“生成资源管理器”的“排队”选项卡。 有关详细信息，请参阅[管理和查看已完成的生成 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx)或[在生成资源管理器中管理你的生成 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx)。  
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
-[创建基本生成定义](http://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
-[将生成排队](http://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
-[监视正在运行的生成的进度](http://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
+[创建基本生成定义](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
+[将生成排队](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  
+[监视正在运行的生成的进度](https://msdn.microsoft.com/library/ms181724(VS.100).aspx)  
   

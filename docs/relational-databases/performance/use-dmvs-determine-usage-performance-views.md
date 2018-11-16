@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 1ac9c72ecee9beee66ea190b3acf233a0e4bc753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05a02bae41ff2d39d9415154fd1aeabeee065c82
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668546"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>使用 DMV 来确定视图的使用情况统计信息和性能
 
@@ -201,8 +201,8 @@ GO
 ## <a name="related-external-resources"></a>相关外部资源
 
 - [适用于性能优化的 DMV（视频 - SQL Saturday Pordenone）](https://www.youtube.com/watch?v=9FQaFwpt3-k)
-- [适用于性能优化的 DMV（幻灯片 e 演示 - SQL Saturday Pordenone）](http://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
+- [适用于性能优化的 DMV（幻灯片 e 演示 - SQL Saturday Pordenone）](https://www.sqlsaturday.com/589/Sessions/Details.aspx?sid=57409)
 - [胶囊形式的 SQL Server 优化（影片 - SQL Saturday Parma）](https://vimeo.com/200980883)
-- [SQL Server 优化概述（幻灯片和演示 - SQL Saturday Parma）](http://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
+- [SQL Server 优化概述（幻灯片和演示 - SQL Saturday Parma）](https://www.sqlsaturday.com/566/Sessions/Details.aspx?sid=53988)
 - [使用 SQL Server 动态管理视图来优化性能](https://www.red-gate.com/library/performance-tuning-with-sql-server-dynamic-management-views)
 - [SQL Server 2016 最重要的等待类型](https://channel9.msdn.com/Blogs/MVP-Data-Platform/The-Most-Prominent-Wait-Types-of-your-SQL-Server-2016)

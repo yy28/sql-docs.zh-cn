@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26de643bf01e9ebffca01ff5b1f8aeecc38b7c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7d96d825c9a1b9a6bc4ea069a9c7b04d79b5412
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741255"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814060"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>多实例报表服务器部署的 URL 预留
   如果将多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例安装在同一台计算机上，则必须考虑如何为每个实例定义 URL 预留。 在每个实例中，报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 都必须至少有一个 URL 预留。 整组预留在 HTTP.SYS 中必须保持唯一。  
@@ -26,8 +26,8 @@ ms.locfileid: "47741255"
   
 |SQL Server 实例|默认 URL 预留|  
 |-------------------------|-----------------------------|  
-|默认实例 (MSSQLServer)|`http://+:80/reportserver`|  
-|命名实例 (MynamedInstance)|`http://+:80/reportserver_MyNamedInstance`|  
+|默认实例 (MSSQLServer)|`https://+:80/reportserver`|  
+|命名实例 (MynamedInstance)|`https://+:80/reportserver_MyNamedInstance`|  
   
  对于命名实例，虚拟目录中包括实例名称。 默认实例和命名实例在同一个端口上侦听，但是唯一的虚拟目录名称确定了请求将由哪个报表服务器获取。  
   
@@ -38,8 +38,8 @@ ms.locfileid: "47741255"
   
 |报表服务器的默认实例 (MSSQLSERVER)|ReportServer_MyNamedInstance|唯一性|  
 |----------------------------------------------------|-----------------------------------|----------------|  
-|`http://+:80/reportserver`|`http://+:8888/reportserver`|每个实例都在一个不同的端口上侦听。|  
-|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|每个实例都对应不同的服务器名称（完全限定域名和计算机名称）。|  
+|`https://+:80/reportserver`|`https://+:8888/reportserver`|每个实例都在一个不同的端口上侦听。|  
+|`https://www.contoso.com/reportserver`|`https://SRVR-46/reportserver`|每个实例都对应不同的服务器名称（完全限定域名和计算机名称）。|  
   
 ## <a name="uniqueness-requirements"></a>唯一性要求  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用的基础技术对于唯一名称施加了一定的要求。 HTTP.SYS 要求其存储库中的所有 URL 保持唯一。 您可以通过改变端口、主机名或虚拟目录名称来创建唯一的 URL。 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 要求同一个进程内的应用程序标识保持唯一。 此要求会影响虚拟目录名称。 它规定您不能在同一个报表服务器实例中复制虚拟目录名称。  

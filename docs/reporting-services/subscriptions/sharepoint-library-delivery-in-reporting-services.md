@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674317"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813240"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 库传递
   配置为 SharePoint 集成模式的报表服务器包含可用于向 SharePoint 库中发送报表的传递扩展插件。  
@@ -72,7 +72,7 @@ ms.locfileid: "47674317"
  为目标库中的报表指定可选的“标题”属性。 该属性是库中存储的所有项的标准属性。 用户可以指定在 SharePoint 站点上查看库内容时是显示还是隐藏该属性。  
   
  路径  
- 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如：`http://mySharePointWeb/MySite/MyDocLib`；其中 `http://mySharePointWeb` 表示 Web 应用程序，“MySite”是 SharePoint 网站，“MyDocLib”是将传入报表的 SharePoint 库。  
+ 指定一个指向 SharePoint 库的完全限定 URL，包括 SharePoint Web 应用程序和站点。 例如：`https://mySharePointWeb/MySite/MyDocLib`；其中 `https://mySharePointWeb` 表示 Web 应用程序，“MySite”是 SharePoint 网站，“MyDocLib”是将传入报表的 SharePoint 库。  
   
  不能指定页、站点或列表。 目标容器必须是同一站点上或同一场中的库。  
   

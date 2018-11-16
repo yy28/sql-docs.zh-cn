@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 958446082e1576e14f50d09a9b8b7181bf2f18af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771575"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638604"
 ---
 # <a name="data-streaming-destination"></a>数据流目标
   “数据流目标”是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 目标组件，它能让 **OLE DB Provider for SSIS** 将 SSIS 包的输出作为表格结果集使用。 可以创建使用 OLE DB Provider for SSIS 的链接服务器，然后在链接服务器上运行 SQL 查询以显示由 SSIS 包返回的数据。  
@@ -54,7 +54,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
  管理中心让你能够在 SQL Server 数据库中发布视图。 因此，你可以使用 SSIS 包发布向导将 SSIS 包作为 SQL 视图发布。 然后可以在 Power BI 管理中心选择将包括在 OData 馈送源中的视图。 数据专员可以通过使用 Power Query Add-in for Excel 来使用 SSIS 包中的馈送。  
   
- 有关详细演练，请参阅 [将 SSIS 包作为 OData 馈送源发布](http://go.microsoft.com/fwlink/?LinkID=317367)。  
+ 有关详细演练，请参阅 [将 SSIS 包作为 OData 馈送源发布](https://go.microsoft.com/fwlink/?LinkID=317367)。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -81,6 +81,6 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  类似于“输入列”选项卡，可以在此选项卡中更改输出列的名称。在左侧树视图中，展开“数据流目标输入”  ，然后展开“输入列” 。 在右窗格中单击输入列名称并更改输出列名称。  
   
 ## <a name="see-also"></a>另请参阅  
- [将 SSIS 包作为 OData 馈送源发布](http://go.microsoft.com/fwlink/?LinkID=317367)  
+ [将 SSIS 包作为 OData 馈送源发布](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

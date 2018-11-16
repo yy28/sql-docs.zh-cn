@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77ef8c2340724558b137bb1da1bb3448db677795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f54b31eb9bab93b6a4a3be918e1011f023ab5b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855277"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666516"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>演练：创建和运行 SQL Server 单元测试
 在本演练中，将创建一个 SQL Server 单元测试，该测试验证多个存储过程的行为。 创建 SQL Server 单元测试可帮助确定可能会引发不正确的应用程序行为的代码缺陷。 可以将 SQL Server 单元测试和应用程序测试作为一组自动执行的测试的一部分来运行。  
@@ -40,7 +40,7 @@ ms.locfileid: "47855277"
 当某个单元测试在存储过程中检测到错误后，您需要更正该错误，然后重新运行测试。  
   
 ## <a name="prerequisites"></a>必备条件  
-若要完成本演练，您必须能够连接到有权在其上创建和部署数据库的数据库服务器（或 LocalDB 数据库）。 有关详细信息，请参阅 [执行 Visual Studio 的数据库功能所需的权限](http://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
+若要完成本演练，您必须能够连接到有权在其上创建和部署数据库的数据库服务器（或 LocalDB 数据库）。 有关详细信息，请参阅 [执行 Visual Studio 的数据库功能所需的权限](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)。  
   
 ## <a name="CreateScript"></a>创建包含数据库架构的脚本  
   
@@ -968,7 +968,7 @@ ms.locfileid: "47855277"
     您指定希望看到特定异常。 您可以选择指定特定错误编号。 如果不添加此属性，单元测试将失败，并且“测试结果”窗口中将显示一则消息  
   
     > [!IMPORTANT]  
-    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](http://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
+    > 目前，Visual Studio 2012 不支持 ExpectedSqlException 属性。 有关对此进行演练的信息，请参阅 [无法运行“预期的失败”数据库单元测试](https://social.msdn.microsoft.com/Forums/en-US/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)。  
   
 3.  在“文件”菜单上，单击“保存 SqlServerUnitTests1.cs”。  
   

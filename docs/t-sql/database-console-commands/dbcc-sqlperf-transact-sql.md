@@ -23,19 +23,19 @@ ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: fe8d7ae38915a335276e661e3ce5f28c61b9a40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4843f3085b409ef1c34096e040c92be8cd8c744
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696625"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 提供所有数据库的事务日志空间使用情况统计信息。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中还可用于重置等待和闩锁统计信息。
   
-适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[在某些区域以预览版提供](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）
+适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]（[在某些区域以预览版提供](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)）
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -90,7 +90,7 @@ WITH NO_INFOMSGS
 ## <a name="examples"></a>示例  
   
 ### <a name="a-displaying-log-space-information-for-all-databases"></a>A. 显示所有数据库的日志空间信息  
-下面的示例显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例中包含的所有数据库的 `LOGSPACE` 信息。
+下面的示例显示 `LOGSPACE` 实例中包含的所有数据库的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 信息。
   
 ```sql  
 DBCC SQLPERF(LOGSPACE);  

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e7a72900cc62e8a517f437975691b858bb1401a5
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: b8b6a33afa780324d6dd3271111a99c4ea68e486
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419492"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699683"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 1.  将 SQL Server 2014 CTP 2 数据库附加到 SQL Server 2014 RTM 实例。    
 2.  将在 SQL Server 2014 CTP 2 上执行的数据库备份还原到 SQL Server 2014 RTM 实例。    
 3.  就地升级到 SQL Server 2014 RTM。
-4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考[在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](http://msdn.microsoft.com/library/dn178483.aspx)。    
+4.  滚动升级到 SQL Server 2014 RTM。 在启动滚动升级前，您需要切换到手动故障转移模式。 有关详细信息，请参考[在停机时间和数据丢失最少的情况下升级和更新可用性组服务器](https://msdn.microsoft.com/library/dn178483.aspx)。    
 5.  通过 SQL Server 2014 CTP 2 中安装的事务性能收集组收集的数据不能通过 SQL Server 2014 RTM 中的 SQL Server Management Studio 查看，反之亦然。
   
 #### <a name="downgrading-from-sql-server-2014-rtm-to-sql-server-2014-ctp-2"></a>从 SQL Server 2014 RTM 降级到 SQL Server 2014 CTP 2  
@@ -114,7 +114,7 @@ SQL Server 2014 SP1 包含 SQL Server 2014 CU 1 至 CU 5（包含 CU 5）中提�
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 介质/ISO/CAB 上 StreamInsight 客户端的版本不正确  
 错误版本的 StreamInsight.msi 和 StreamInsightClient.msi 位于 SQL Server 介质/ISO/CAB 上的以下路径中 (StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
-**解决方法：** 从 [SQL Server 2014 功能包下载页](http://go.microsoft.com/fwlink/?LinkID=306709)下载并安装正确的版本。  
+**解决方法：** 从 [SQL Server 2014 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=306709)下载并安装正确的版本。  
   
 ### <a name="ProdDoc"></a>产品文档 RTM
   
@@ -158,7 +158,7 @@ SQL Server 2014 Standard 具有以下更改：
 -   最大内存从 64 GB 增加到 128 GB。  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>内存优化顾问将默认约束标记为不兼容  
-**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](http://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
+**问题：** SQL Server Management Studio 中的内存优化顾问将所有默认约束标记为不兼容。 内存优化表中不是所有默认约束都支持；顾问并不区分支持和不支持的默认约束类型。 支持的默认约束包括本机编译的存储过程中支持的所有常量、表达式和内置函数。 要查看本机编译的存储过程中支持的函数的列表，请参阅 [本机编译的存储过程中支持的构造](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx)(#本机编译的存储过程中支持的构造)。  
   
 **解决方法：** 如果要使用顾问识别阻塞程序，请忽略兼容的默认约束。 要使用内存优化顾问迁移具有兼容默认约束但没有其他阻塞程序的表，请按照以下步骤操作：  
   
@@ -323,7 +323,7 @@ Keywords:      Classic
 Description:   Report Server (DENALI) cannot connect to the report server database.  
 ```  
   
-有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkID=391254)。  
+有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>多节点 SharePoint 场到 SQL Server 2014 Reporting Services 所需的升级顺序  
 **问题：** 如果 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务实例在 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例前升级，多节点场中的报表呈现将失败。  
@@ -333,7 +333,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 1.  首先升级 SharePoint 产品的所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 外接程序实例。    
 2.  然后再升级 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共享服务的所有实例。  
   
-有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](http://go.microsoft.com/fwlink/?LinkID=391254)。  
+有关详细信息，请参阅 [SQL Server 2014 Reporting Services 提示、技巧和故障排除](https://go.microsoft.com/fwlink/?LinkID=391254)。  
   
 ### <a name="AzureVM"></a>Microsoft Azure 虚拟机上的 SQL Server 2014 RTM  
   
@@ -348,7 +348,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
     此解决方法将允许向导在 Microsoft Azure 中完成添加副本的工作。  
   
-2.  向导完成后，您将需要按照 [Windows Azure 中 AlwaysOn 可用性组的侦听器配置](http://msdn.microsoft.com/library/dn376546.aspx)中所述在 Windows Azure 中完成侦听器配置。  
+2.  向导完成后，您将需要按照 [Windows Azure 中 AlwaysOn 可用性组的侦听器配置](https://msdn.microsoft.com/library/dn376546.aspx)中所述在 Windows Azure 中完成侦听器配置。  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -359,9 +359,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](http://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](http://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   
@@ -374,9 +374,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](http://www.microsoft.com/download/details.aspx?id=35580)部分。  
+1.  从 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包下载 MSOLAP.5 访问接口。 将访问接口安装在运行 Excel Services 的应用程序服务器上。 有关详细信息，请参阅“用于 Microsoft SQL Server 2012 SP1 的 Microsoft Analysis Services OLE DB 访问接口” [Microsoft SQL Server 2012 SP1 功能包](https://www.microsoft.com/download/details.aspx?id=35580)部分。  
   
-2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](http://technet.microsoft.com/library/hh758436.aspx)。  
+2.  将 MSOLAP.5 注册为 SharePoint Excel Services 中的受信任数据访问接口。 有关详细信息，请参阅 [“将 MSOLAP.5 添加为 Excel Services 中的受信任数据访问接口”](https://technet.microsoft.com/library/hh758436.aspx)。  
   
 **详细信息：**  
   
@@ -389,7 +389,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **解决方法：**  
   
-1.  在 Microsoft Excel 中，清除自定义高级属性。 请参阅以下知识库文章的“解决方法”部分：[KB 2927748](http://support.microsoft.com/kb/2927748)。  
+1.  在 Microsoft Excel 中，清除自定义高级属性。 请参阅以下知识库文章的“解决方法”部分：[KB 2927748](https://support.microsoft.com/kb/2927748)。  
   
 **详细信息：**  
   
@@ -411,7 +411,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 升级顾问报告与 SQL Server Reporting Services 不相关的升级问题  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Reporting Services 服务器时不正确地报告多个错误。  
   
-**解决方法：**[SQL Server 2014 SSUA](http://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
+**解决方法：**[SQL Server 2014 SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 升级顾问在分析 SQL Server Integration Services 服务器时报告错误  
 **问题：** SQL Server 2014 介质附带的 SQL Server 升级顾问 (SSUA) 在分析 SQL Server Integration Services 服务器时报告错误。  向用户显示的错误如下：  
@@ -422,6 +422,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**解决方法：**[SQL Server 2014 SSUA](http://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
+**解决方法：**[SQL Server 2014 SSUA](https://go.microsoft.com/fwlink/?LinkID=306709)(#sql-server-2014-ssua) 功能包中提供的 SQL Server 升级顾问中修复了此问题。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

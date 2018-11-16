@@ -14,12 +14,12 @@ ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4d7e0f84458b7b07c68f502bb40c50a5d37d86d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07e044e232ead6d91d1c6a281e61ff995cebcbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769335"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673632"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM 与其他 SQL Server 功能的兼容性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47769335"
  可以将发布服务器上启用了 FILESTREAM 属性的 **varbinary(max)** 列复制到订阅服务器，复制时可以带 FILESTREAM 属性，也可以不带。 若要指定复制列的方式，请使用“项目属性 - \<项目>”对话框，或使用 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 或 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 的 @schema_option 参数。 复制到不具有 FILESTREAM 属性的 **varbinary(max)** 列的数据不能超过该数据类型的 2 GB 大小限制；否则，将产生运行时错误。 我们建议，如果您不是将数据复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，请复制 FILESTREAM 属性。 不论指定的架构选项为何，均不支持将包含 FILESTREAM 列的表复制到 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 订阅服务器。  
   
 > [!NOTE]  
->  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](http://go.microsoft.com/fwlink/?LinkId=103810)。  
+>  从 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 复制到 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 订阅服务器的大数据值最多不得超过 256 MB。 有关详细信息，请参阅 [最大容量规范](https://go.microsoft.com/fwlink/?LinkId=103810)。  
   
 ### <a name="considerations-for-transactional-replication"></a>事务复制的注意事项  
  如果您使用为事务复制发布的表中的 FILESTREAM 列，请注意以下事项：  

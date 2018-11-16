@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88a79851dbb95a42ca35be1fb9e82db362564dc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82b71c24dc5aed407a50cfd4758ac13357eb29c2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617706"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673286"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>在现有发布中添加和删除项目
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "47617706"
  如上所述，在某些情况下删除项目需要删除、重新创建及同步订阅。 有关详细信息，请参阅[订阅发布](../../../relational-databases/replication/subscribe-to-publications.md)和[同步数据](../../../relational-databases/replication/synchronize-data.md)。  
  
  > [!NOTE]
- > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更高版本以及 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更高版本支持针对参与事务复制的项目使用 **DROP TABLE** DLL 命令删除表。 如果发布支持 DROP TABLE DDL，则 DROP TABLE 操作将从发布和数据库中删除表。 日志读取器代理将会针对已删除的表分发数据库发布清理命令，并针对发布服务器元数据执行清理。 如果日志读取器尚未处理引用已删除表的所有日志记录，则会忽略与已删除表相关联的新命令。 已处理的记录将传送到分发数据库。 如果在日志读取器清理废弃（已删除）项目之前分发代理将处理这些记录，则可能会在订阅服务器数据库上应用这些记录。 所有事务复制发布的**默认**设置是不支持 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/en-us/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 提供了有关此项改进的更多详细信息。
+ > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** 或更高版本以及 **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** 或更高版本支持针对参与事务复制的项目使用 **DROP TABLE** DLL 命令删除表。 如果发布支持 DROP TABLE DDL，则 DROP TABLE 操作将从发布和数据库中删除表。 日志读取器代理将会针对已删除的表分发数据库发布清理命令，并针对发布服务器元数据执行清理。 如果日志读取器尚未处理引用已删除表的所有日志记录，则会忽略与已删除表相关联的新命令。 已处理的记录将传送到分发数据库。 如果在日志读取器清理废弃（已删除）项目之前分发代理将处理这些记录，则可能会在订阅服务器数据库上应用这些记录。 所有事务复制发布的**默认**设置是不支持 DROP TABLE DLL。 [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) 提供了有关此项改进的更多详细信息。
 
   
 ## <a name="see-also"></a>另请参阅  

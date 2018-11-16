@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb243fa126fc53282bd310d3bd5d47029e2f4aba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 694f1c2d29ced11a4f66a05bd983fe704e1be241
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605826"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642374"
 ---
 # <a name="data-flow-performance-features"></a>数据流性能特点
   本主题针对如何设计 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包提供建议，以避免出现常见性能问题。 本主题还提供有关可以用于对包的性能进行故障排除的功能和工具的信息。  
@@ -135,7 +135,7 @@ ms.locfileid: "47605826"
  如果需要在数据流中创建多个聚合，应考虑使用一个聚合转换而不是创建多个转换来创建多个聚合。 如果聚合是其他聚合的子集，这种方法能够提高性能，因为转换可以优化内部存储，并且只需扫描传入的数据一次。 例如，如果聚合使用 GROUP BY 子句和 AVG 聚合，将它们组合成一个转换可以提高性能。 但是，在一个聚合转换内执行多个聚合会序列化聚合操作，因此，当必须独立计算多个聚合时，这种方法可能不会改善性能。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>模糊查找和模糊分组转换  
- 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](http://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
+ 有关如何优化模糊查找和模糊分组转换的性能的信息，请参阅白皮书： [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604)（SQL Server Integration Services 2005 中的模糊查找和模糊分组转换）。  
   
 #### <a name="lookup-transformation"></a>查找转换  
  通过输入仅查找所需列的 SELECT 语句，最小化内存中引用数据的大小。 这种方法优于选择整个表或视图，因为后者将返回大量不必要的数据。  
@@ -148,7 +148,7 @@ ms.locfileid: "47605826"
   
  通常，渐变维度转换中最慢的组件是一次对单行执行 UPDATE 的 OLE DB 命令转换。 因此，改善渐变维度转换性能最有效的方法是替换 OLE DB 命令转换。 可以用目标组件来替换这些转换，目标组件将要更新的所有行保存到一个临时表中。 然后，可以添加执行 SQL 任务，该任务同时对所有行执行基于单集的 Transact-SQL UPDATE。  
   
- 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](http://go.microsoft.com/fwlink/?LinkId=96602)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
+ 高级用户可以为渐变维度处理设计自定义数据流，此数据流将针对大型维度进行优化。 有关此方法的讨论和示例，请参阅白皮书 [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602)（Project REAL：Business Intelligence ETL 设计实践）中的章节 "Unique dimension scenario"（唯一维度方案）。  
   
 ### <a name="destinations"></a>目标  
  若要改善目标的性能，请考虑使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目标并测试目标的性能。  
@@ -171,38 +171,38 @@ ms.locfileid: "47605826"
 ## <a name="related-content"></a>相关内容  
  **文章和博客文章**  
   
--   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](http://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com 上的技术文章 [SQL Server 2005 Integration Services：性能策略](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](http://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com 上的技术文章 [Integration Services：性能优化技术](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   sqlcat.com 上的技术文章 [通过将同步转换拆分为多个任务来增加管道的吞吐量](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
--   msdn.microsoft.com 上的技术文章 [数据加载性能指南](http://go.microsoft.com/fwlink/?LinkId=220816)。  
+-   msdn.microsoft.com 上的技术文章 [数据加载性能指南](https://go.microsoft.com/fwlink/?LinkId=220816)。  
   
--   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](http://go.microsoft.com/fwlink/?LinkId=220817)。  
+-   msdn.microsoft.com 上的技术文章 [我们使用 SSIS 加载 1TB 数据仅用了 30 分钟，因此您也行](https://go.microsoft.com/fwlink/?LinkId=220817)。  
   
--   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](http://go.microsoft.com/fwlink/?LinkId=220818)。  
+-   sqlcat.com 上的技术文章 [前 10 个 SQL Server Integration Services 最佳实践](https://go.microsoft.com/fwlink/?LinkId=220818)。  
   
--   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](http://go.microsoft.com/fwlink/?LinkId=220822)。  
+-   sqlcat.com 上的技术文章和示例 [针对 SSIS 的“平衡的数据分发服务器”](https://go.microsoft.com/fwlink/?LinkId=220822)。  
   
--   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](http://go.microsoft.com/fwlink/?LinkId=238156)。  
+-   blogs.msdn.com 上的博客文章 [解决 SSIS 包性能问题](https://go.microsoft.com/fwlink/?LinkId=238156)。  
   
  **视频**  
   
--   视频系列 [设计和优化企业中 SSIS 包的性能（SQL 视频系列）](http://go.microsoft.com/fwlink/?LinkId=400878)  
+-   视频系列 [设计和优化企业中 SSIS 包的性能（SQL 视频系列）](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686901.aspx)  
+-   technet.microsoft.com 上的视频 [优化企业中的 SSIS 包数据流（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686901.aspx)  
   
--   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686905.aspx)  
+-   technet.microsoft.com 上的视频 [理解 SSIS 数据流缓冲区（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686905.aspx)  
   
--   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](http://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
+-   channel9.msdn.com 上的视频 [Microsoft SQL Server Integration Services 性能设计模式](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)。  
   
--   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](http://go.microsoft.com/fwlink/?LinkId=217660)。  
+-   sqlcat.com 上的演示文稿 [Microsoft IT 如何利用 SQL Server 2008 SSIS 数据流引擎的增强功能](https://go.microsoft.com/fwlink/?LinkId=217660)。  
   
--   technet.microsoft.com 上的视频 [平衡的数据分发服务器](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
+-   technet.microsoft.com 上的视频 [平衡的数据分发服务器](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)。  
   
 ## <a name="see-also"></a>另请参阅  
  [包开发的故障排除工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
- [包执行的疑难解答工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [对包执行进行故障排除的工具](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

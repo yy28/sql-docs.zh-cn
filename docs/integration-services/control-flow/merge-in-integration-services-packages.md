@@ -13,12 +13,12 @@ ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1c8198ea6c27b78125ac9b7c77989bf59fd57e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 921e2883985eed8b3640ef7da9e874b74b30c55f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856105"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638004"
 ---
 # <a name="merge-in-integration-services-packages"></a>在 Integration Services 包中执行 MERGE
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的当前版本中，执行 SQL 任务中的 SQL 语句可以包含 MERGE 语句。 使用此 MERGE 语句可以在一个语句中完成多个 INSERT、UPDATE 和 DELETE 操作。  
@@ -34,7 +34,7 @@ ms.locfileid: "47856105"
     > [!NOTE]  
     >  尽管在此方案中，MERGE 语句通常需要临时表，但 MERGE 语句的性能通常优于由查找转换执行的逐行查找的性能。 当查找表很大以致需要有足够多的内存供查找转换缓存其引用表时，MERGE 也非常有用。  
   
- 有关支持使用 MERGE 语句的示例目标组件，请参阅 CodePlex 社区示例 [MERGE Destination](http://go.microsoft.com/fwlink/?LinkId=141215)（MERGE 目标）。  
+ 有关支持使用 MERGE 语句的示例目标组件，请参阅 CodePlex 社区示例 [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)（MERGE 目标）。  
   
 ## <a name="using-merge"></a>使用 MERGE  
  通常，当需要应用包括从一个表到另一个表的插入、更新和删除等更改时，可使用 MERGE 语句。 在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]之前，此过程需要一个查找转换和多个 OLE DB 命令转换。 查找转换执行逐行查找，以确定每一行是新行还是经过更改的行。 OLE DB 命令转换然后会执行必要的 INSERT、UPDATE 和 DELETE 操作。 从 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，一个 MERGE 语句即可替代查找转换和相应的 OLE DB 命令转换。  

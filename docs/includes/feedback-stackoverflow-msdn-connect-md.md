@@ -1,1 +1,1 @@
-<Token>![是否需要帮助？](media/needhelp_person_icon.png)**是否需要帮助？**[MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016)、[堆栈溢出](http://stackoverflow.com/questions/tagged/sql-server-2016)、[Connect](https://connect.microsoft.com/SQLServer/Feedback)</Token>
+<Token>![是否需要帮助？](media/needhelp_person_icon.png)**是否需要帮助？**[MSDN 论坛](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016)、[堆栈溢出](https://stackoverflow.com/questions/tagged/sql-server-2016)、[Connect](https://connect.microsoft.com/SQLServer/Feedback)</Token>

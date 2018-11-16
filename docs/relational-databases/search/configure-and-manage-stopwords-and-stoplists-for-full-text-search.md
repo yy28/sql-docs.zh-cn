@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7f87bdfcbebe8843564a95a9f38f5d69a649cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658906"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>为全文搜索配置和管理非索引字和非索引字表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47729635"
   
     -   **从现有全文非索引字表创建**  
   
-     有关详细信息，请参阅[新建全文非索引字表（常规页）](http://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)。  
+     有关详细信息，请参阅[新建全文非索引字表（常规页）](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309)。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47729635"
   
 4.  右键单击要更改其属性的非索引字表，然后选择“属性”。  
   
-5.  在“ [全文非索引字表属性](http://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
+5.  在“ [全文非索引字表属性](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) ”对话框中：  
   
     1.  在 **“操作”** 列表框中，选择下列操作之一： **“添加非索引字”**、 **“删除非索引字”**、 **“删除所有非索引字”** 或 **“清除非索引字表”**。  
   

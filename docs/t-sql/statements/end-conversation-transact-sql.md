@@ -25,12 +25,12 @@ ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 02140750f49c326e7d7da84ffa08b798e0462f07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799385"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701286"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +70,9 @@ END CONVERSATION conversation_handle
   
  如果 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 尚未处理会话的结束对话消息或错误消息，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 会向远程会话方发出会话已结束通知。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 发送给远程服务的消息取决于指定的选项：  
   
--   如果会话在无错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 按会话顺序将此消息添加到传输队列中。 在发送此消息之前，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送该会话当前在传输队列中的所有消息。  
+-   如果会话在无错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 按会话顺序将此消息添加到传输队列中。 在发送此消息之前，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 将发送该会话当前在传输队列中的所有消息。  
   
--   如果会话在出现错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `http://schemas.microsoft.com/SQL/ServiceBroker/Error` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将删除该会话当前在传输队列中的任何其他消息。  
+-   如果会话在出现错误的情况下结束，并且指向远程服务的会话仍处于活动状态，则 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将向远程服务发送一条类型为 `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 的消息。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 将删除该会话当前在传输队列中的任何其他消息。  
   
 -   使用 WITH CLEANUP 子句，数据库管理员可以删除无法正常完成的会话。 此选项会删除会话中的所有消息和目录视图条目。 请注意，在这种情况下，远程会话方不会收到会话已结束的指示，而且也可能收不到应用程序已发送但尚未通过网络传输的消息。 除非会话不能正常完成，否则请避免使用此选项。  
   

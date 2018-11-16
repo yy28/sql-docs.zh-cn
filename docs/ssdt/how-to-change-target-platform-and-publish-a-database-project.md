@@ -14,12 +14,12 @@ ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9aea64fa39d5089da9e4a97eaffb86ae2a81fa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b84f8d8de17b64d99b8e308ab45c36479b4a2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668535"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668883"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>如何更改目标平台和发布数据库项目
 可以将 SQL Server Data Tools (SSDT) 数据库项目的目标 SQL Server 版本更改为任何受支持的 SQL Server 实例（SQL Server 2005、2008、2008 R2、Microsoft SQL Server 2012 或 SQL Azure）。 通过这样做，可以针对一个项目进行数据库开发，但在需要时将其发布到多种不同风格的 SQL Server 实例中。  
@@ -43,7 +43,7 @@ SSDT 还通过识别您的目标平台并且自动检测出您的代码中的任
   
 3.  请注意，以下错误将出现在“错误列表”窗格中：SQL70015: 在 SQL Azure 中不支持“文件组引用和分区方案”。  
   
-    SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](http://msdn.microsoft.com/library/ee336267.aspx)。  
+    SSDT 将基于目标平台自动验证您的脚本。 在这种情况下，因为 SQL Azure 不支持文件组，所以 SSDT 将返回错误。 有关 SQL Azure 中不支持的 Transact\-SQL 语句，请参阅[部分支持的 Transact-SQL 语句（Microsoft Azure SQL 数据库）](https://msdn.microsoft.com/library/ee336267.aspx)。  
   
 4.  删除 `ON` 子句。 请注意，该错误将立即从 **“错误列表”** 中消失。  
   

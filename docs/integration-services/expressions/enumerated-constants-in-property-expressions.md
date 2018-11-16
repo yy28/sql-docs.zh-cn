@@ -18,12 +18,12 @@ ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b5cb3e406f070d9bf527b4f6c8a65fb0dd6e2dda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b035d9f36acfa1f01e7eafdb81d68f647d874db5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736885"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638964"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>属性表达式中的枚举常量
   如果属性表达式包括枚举器成员列表中的值，则该表达式必须使用枚举器成员的数值，而不是成员的友好名称。 例如，如果表达式设置 **LoggingMode** 属性，则必须使用数值 2 而不是友好名称“Disabled”。  
@@ -581,7 +581,7 @@ ms.locfileid: "47736885"
 |失败|1|  
 |Completion|2|  
   
- **IsolationLevel** 属性 - 由 .NET Framework **IsolationLevel** 枚举设置。 详细信息，请参阅位于 [MSDN Library](http://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
+ **IsolationLevel** 属性 - 由 .NET Framework **IsolationLevel** 枚举设置。 详细信息，请参阅位于 [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313)中的 .NET Framework 类库。  
   
  **LoggingMode** 属性 - 通过使用 **DTSLoggingMode** 枚举中的值设置。  
   

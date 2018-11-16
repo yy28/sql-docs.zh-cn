@@ -12,12 +12,12 @@ ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 456458c98ddee8115f715839c6e13c3c3680196a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad3ae2d22a1aed53cb5da61f631e48bde480d56
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713175"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701915"
 ---
 # <a name="planning-a-sql-server-installation"></a>计划 SQL Server 安装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47713175"
   
  无论使用哪种安装方法，您都需要作为个人或代表实体确认接受软件许可条款，除非您对于软件的使用受单独的协议（如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可协议或与 ISV 或 OEM 之间的第三方协议）管辖。  
   
- 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 无人参与的安装（使用 `/Q` 或 `/QS` 参数）必须包含 `/IAcceptSQLServerLicenseTerms` 参数。 在 [Microsoft SQL Server 许可条款和许可证信息](http://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)中下载和查看许可条款。 有关批量许可条款，请参阅[Licensing Termss and Documentation](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)（许可条款和文档）。 有关 SQL Server 的早期版本，请参阅 [Microsoft 软件许可条款](http://go.microsoft.com/fwlink/?LinkID=148209)。  
+ 将在安装程序用户界面中显示许可条款，供您审核审阅和接受。 无人参与的安装（使用 `/Q` 或 `/QS` 参数）必须包含 `/IAcceptSQLServerLicenseTerms` 参数。 在 [Microsoft SQL Server 许可条款和许可证信息](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx)中下载和查看许可条款。 有关批量许可条款，请参阅[Licensing Termss and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)（许可条款和文档）。 有关 SQL Server 的早期版本，请参阅 [Microsoft 软件许可条款](https://go.microsoft.com/fwlink/?LinkID=148209)。  
   
 > [!NOTE]  
 >  根据您接收软件的方式（例如，通过 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 批量许可），您对软件的使用可能受其他条款和条件约束。  

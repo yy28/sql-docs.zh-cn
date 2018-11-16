@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 581da1ec4f3b42a9b71f4f8fedc5a22100d6ff2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f70aa8745576c2837d4b957fed9783baa0248f07
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657606"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>内存中 OLTP 内的初始领域调查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ SQL Server 提供的内存中功能可极大提升许多应用程序系统的性
   
   
 > [!NOTE]
-> 有关内存中功能的一个两分钟视频可在 [Azure SQL 数据库 - 内存中技术](http://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)中找到。 该视频的发布日期为 2015 年 12 月。  
+> 有关内存中功能的一个两分钟视频可在 [Azure SQL 数据库 - 内存中技术](https://channel9.msdn.com/Blogs/Windows-Azure/Azure-SQL-Database-In-Memory-Technologies)中找到。 该视频的发布日期为 2015 年 12 月。  
 
 
 ### <a name="columnstore"></a>columnstore
@@ -463,7 +463,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
 有关本机 UDF 性能的测试数据和说明，请参阅：  
   
   - [Soften the RBAR impact with Native Compiled UDFs in SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [本机编译的用户定义函数](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)博客文章，作者 Gail Shaw，发布日期 2016 年 1 月。  
+  - [本机编译的用户定义函数](https://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/)博客文章，作者 Gail Shaw，发布日期 2016 年 1 月。  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
@@ -475,7 +475,7 @@ ALTER TABLE...ADD/DROP 可以在内存优化表中添加或删除列或索引。
   - [确定表或存储过程是否应移植到内存中 OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - 通过 SQL Server Management Studio 中的事务性能分析报告，可帮助你评估内存中 OLTP 是否将改进数据库应用程序的性能。  
   - 使用 [内存优化顾问](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 可帮助你将基于磁盘的数据库表迁移到内存中 OLTP。   
-- [内存优化表的备份、还原和恢复](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
+- [内存优化表的备份、还原和恢复](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   - 内存优化表使用的存储可以比其在内存中的大小大得多，会影响数据库备份的大小。  
 - [具有内存优化表的事务](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)  
   - 对于内存优化表上的事务，在 T-SQL 中包括有关重试逻辑的信息。  

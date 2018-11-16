@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ec74bab3523b4e77c1b1c0c9355353c48490140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 701c91f58f4629385b70ec2abc750f0edb8d8059
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817538"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813720"
 ---
 # <a name="url-access-parameter-reference"></a>URL 访问参数引用
   可以将下列参数作为 URL 的一部分使用来配置 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]报表的外观。 本节列出了最常用的参数。 参数是区分大小写的，并且如果将其定向到报表服务器，则以参数前缀 rs: 开头，如果定向到 HTML 查看器，则以参数前缀 rc: 开头。 您也可以指定特定于设备或呈现扩展插件的参数。 有关特定于设备的参数的详细信息，请参阅 [在 URL 中指定设备信息设置](../reporting-services/specify-device-information-settings-in-a-url.md)。  
@@ -48,13 +48,13 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中。  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
+    https://myrshost/reportserver?/Sales&rc:Parameters=Collapsed  
     ```  
   
      例如在 **SharePoint** 模式中。  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
 -   *Zoom* ：设置报表缩放值，缩放值以整数百分比或字符串常量表示。 标准字符串值包括 **Page Width** 和 **Whole Page**。 早于 Internet Explorer 5.0 的 Internet Explorer 版本和所有非[!INCLUDE[msCoName](../includes/msconame-md.md)] 浏览器忽略此参数。 此参数的默认值为 **100**。  
@@ -62,13 +62,13 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中：  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
+    https://myrshost/reportserver?/Sales&rc:Zoom=Page Width  
     ```  
   
      例如在 **SharePoint** 模式中。  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Zoom=Page Width  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
 -   *Section* ：设置将显示报表中的哪一页。 对于任何设置为大于报表页数的值，都将显示最后一页。 对于任何小于 **0** 的值，都将显示报表的第 1 页。 此参数的默认值为 **1**。  
@@ -76,13 +76,13 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中，将显示报表的第 2 页：  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:Section=2  
+    https://myrshost/reportserver?/Sales&rc:Section=2  
     ```  
   
      例如在 **SharePoint** 模式中，将显示报表的第 2 页：  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Section=2  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
 -   *FindString*：搜索一组特定文本的报表。  
@@ -90,13 +90,13 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中。  
   
     ```  
-    http://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
     ```  
   
      例如在 **SharePoint** 模式中。  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
 -   *StartFind* ：指定要搜索的最后部分。 此参数的默认值为报表的最后一页。  
@@ -104,7 +104,7 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中，会在 Product Catalog 示例报表的第 1 页到第 5 页之间搜索第一条“Mountain-400”文本。  
   
     ```  
-    http://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
+    https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
 -   *EndFind* ：设置要搜索的最后一页的页码。 例如，值 **5** 指示要搜索的最后一页为报表的第 5 页。 默认值为当前页的页码。 请将此参数与 *StartFind* 参数一起使用。 请参阅上述示例。  
@@ -130,19 +130,19 @@ ms.locfileid: "47817538"
          例如在 **Native** 模式中。  
   
         ```  
-        http://myrshost/reportserver?/Sales&rs:Command=GetChildren  
+        https://myrshost/reportserver?/Sales&rs:Command=GetChildren  
         ```  
   
          例如在 **Native** 模式中的命名实例。  
   
         ```  
-        http://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
+        https://myssrshost/Reportserver_THESQLINSTANCE?/reportfolder&rs:Command=listChildren  
         ```  
   
          例如在 **SharePoint** 模式中。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rs:Command=GetChildren  
         ```  
   
     -   **Render** 报表呈现在浏览器中，可供查看。  
@@ -150,13 +150,13 @@ ms.locfileid: "47817538"
          例如在 **Native** 模式中：  
   
         ```  
-        http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
          例如在 **SharePoint** 模式中。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render  
         ```  
   
     -   **GetSharedDatasetDefinition** 显示与共享数据集关联的 XML 定义。 共享数据集属性（包括查询、数据集参数、默认值、数据集筛选器以及诸如排序规则和区分大小写之类的数据选项）保存在定义中。 对共享数据集必须具有 **“读取报表定义”** 权限才能使用此值。  
@@ -164,7 +164,7 @@ ms.locfileid: "47817538"
          例如在 **Native** 模式中。  
   
         ```  
-        http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+        https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
         ```  
   
     -   **GetDataSourceContents** 将给定共享数据源的属性显示为 XML。 如果您的浏览器支持 XML，且如果您对于该数据源是具有 **Read Contents** 权限的经过身份验证的用户，则将显示数据源定义。  
@@ -172,13 +172,13 @@ ms.locfileid: "47817538"
          例如在 **Native** 模式中。  
   
         ```  
-        http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
          例如在 **SharePoint** 模式中。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents  
         ```  
   
     -   如果资源与浏览器兼容，**GetResourceContents** 将呈现资源并在 HTML 页面中显示资源。 否则，系统会提示您打开文件或资源或将其保存到磁盘。  
@@ -186,13 +186,13 @@ ms.locfileid: "47817538"
          例如在 **Native** 模式中。  
   
         ```  
-        http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
+        https://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents  
         ```  
   
          例如在 **SharePoint** 模式中。  
   
         ```  
-        http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
+        https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents  
         ```  
   
     -   **GetComponentDefinition** 显示与已发布的报表项关联的 XML 定义。 您必须对已发布的报表项具有“读取内容”  权限才能使用此值。  
@@ -229,13 +229,13 @@ ms.locfileid: "47817538"
      例如，若要直接从 **Native** 模式报表服务器获取报表的 PDF 副本：  
   
     ```  
-    http://myrshost/ReportServer?/myreport&rs:Format=PDF  
+    https://myrshost/ReportServer?/myreport&rs:Format=PDF  
     ```  
   
      例如，若要直接从 **SharePoint** 模式报表服务器获取报表的 PDF 副本：  
   
     ```  
-    http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/myrereport.rdl&rs:Format=PDF  
     ```  
   
 -   ParameterLanguage：  
@@ -244,7 +244,7 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中，将覆盖浏览器语言并指定区域性值 de-DE：  
   
     ```  
-    http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
+    https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
 -   *Snapshot* ：基于报表历史记录快照呈现报表。 有关详细信息，请参阅 [使用 URL 访问呈现报表历史记录快照](../reporting-services/render-a-report-history-snapshot-using-url-access.md)。  
@@ -252,7 +252,7 @@ ms.locfileid: "47817538"
      例如在 **Native** 模式中，请检索日期为 2003-04-07 且时间戳为 13:40:02 的报表历史记录快照：  
   
     ```  
-    http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
+    https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  
     ```  
   
 -   PersistStreams：  
@@ -289,7 +289,7 @@ ms.locfileid: "47817538"
      例如在 **SharePoint** 模式中，只显示工具栏中的分页。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
 -   *HeaderArea*：控制报表查看器 Web 部件的标头显示。 默认值是 **Full**秒。 可为以下值：  
@@ -303,7 +303,7 @@ ms.locfileid: "47817538"
      例如在 **SharePoint** 模式中，只显示标头中的痕迹导航。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
 -   *DocMapAreaWidth*：控制报表查看器 Web 部件中参数区域的显示宽度（以像素为单位）。 默认值与报表查看器 Web 部件中的默认值一样。 该值必须是非负整数。  
@@ -321,7 +321,7 @@ ms.locfileid: "47817538"
      例如在 **SharePoint** 模式中，折叠参数提示区域。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
 -   DocMapMode：控制报表查看器 Web 部件的文档结构图区域在整页视图中的显示方式。 默认值是 **Full**秒。 有效值为  
@@ -337,7 +337,7 @@ ms.locfileid: "47817538"
      例如在 **SharePoint** 模式中，将工具栏停靠在底部。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
 -   *ToolBarItemsDisplayMode*：控制显示哪些工具栏项。 这是一个按位枚举值。 若要包括某一工具栏项，请将该项的值添加至总值。 例如：如果没有“操作”菜单，请使用 rv:ToolBarItemsDisplayMode=63（或 0x3F），这是 1+2+4+8+16+32 的结果；对于仅限“操作”菜单项，请使用 rv:ToolBarItemsDisplayMode=960（或 0x3C0）。 默认值是 **-1**，这将包括所有工具栏项。 有效值为  
@@ -367,11 +367,11 @@ ms.locfileid: "47817538"
      例如在 **SharePoint** 模式中，仅显示 **“后退”** 按钮、文本搜索控件、页面导航控件和 **“刷新”** 按钮。  
   
     ```  
-    http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
+    https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
 ## <a name="see-also"></a>另请参阅  
  [URL 访问 (SSRS)](../reporting-services/url-access-ssrs.md)   
- [使用 URL 访问导出报表](../reporting-services/export-a-report-using-url-access.md)  
+ [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
   
   

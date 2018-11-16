@@ -11,12 +11,12 @@ ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0fe82226d1c4de82883498ba92893ec98fc7b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfb25121dcc417f2ead0d85bc723bc7b402cebab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681965"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675066"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>如何：为 SQL Server 单元测试设计器创建测试条件
 可以使用可扩展的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类来创建新的测试条件。 例如，您可以创建一个新的测试条件，验证结果集中列或值的数目。  
@@ -49,7 +49,7 @@ ms.locfileid: "47681965"
   
 10. 从 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 类派生你的类。  
   
-11. 用强名称为程序集签名。 有关更多信息，请参见[如何：使用强名称为程序集签名](http://msdn.microsoft.com/library/xc31ft41.aspx)。  
+11. 用强名称为程序集签名。 有关更多信息，请参见[如何：使用强名称为程序集签名](https://msdn.microsoft.com/library/xc31ft41.aspx)。  
   
 12. 生成类库。  
   

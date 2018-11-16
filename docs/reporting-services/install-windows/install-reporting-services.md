@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 620debfd008dc120e171241d0038229e9dce8a04
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: a3a822ddfdd954e0811e83ca4c92a2c3dc7e5b90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028188"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812970"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>安装 SQL Server Reporting Services（2017 及更高版本）
 
@@ -98,15 +98,15 @@ URL 预留由前缀、主机名、端口和虚拟目录组成：
 |组成部分|描述|
 |----------|-----------------|
 |Prefix|默认的前缀为 HTTP。 如果以前安装过安全套接字层 (SSL) 证书，则安装程序尝试创建使用 HTTPS 前缀的 URL 预留。|
-|主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `http://<computername>/reportserver`、`http://localhost/reportserver` 或 `http://<IPAddress>/reportserver.`|
+|主机名|默认主机名为强通配符 (+)。 它指定对于解析为计算机的任何主机名，报表服务器均会接受指定端口上的任何 HTTP 请求，包括 `https://<computername>/reportserver`、`https://localhost/reportserver` 或 `https://<IPAddress>/reportserver.`|
 |端口|默认端口为 80。 如果使用端口 80 以外的其他任何端口，则在浏览器窗口中打开 Web 门户时，必须将该端口显式添加至 URL 中。|
 |虚拟目录|默认情况下，虚拟目录创建时的格式为 ReportServer（适用于报表服务器 Web 服务）和 Reports（适用于 Web 门户）。 对于报表服务器 Web 服务，默认的虚拟目录为 **reportserver**。 对于 Web 门户，默认的虚拟目录为 reports。|
 
 完整的 URL 字符串示例如下所示：
 
-- `http://+:80/reportserver` 用于访问报表服务器。
+- `https://+:80/reportserver` 用于访问报表服务器。
 
-- `http://+:80/reports`，用于访问 Web 门户。
+- `https://+:80/reports`，用于访问 Web 门户。
 
 ## <a name="firewall"></a>防火墙
 

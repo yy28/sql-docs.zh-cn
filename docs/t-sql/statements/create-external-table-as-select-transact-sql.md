@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ff275d2aad6d9ccf24ed632a8515e7ce8ea3fc2
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: 16d8cdfb5400e213b57dd9f81f85df370662355e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254453"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697205"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -168,7 +168,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部分区移动  
   
- **应用于：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 作为创建外部表的先决条件，设备管理员需要配置 hadoop 连接。 有关详细信息，请参阅 APS 文档中的“配置与外部数据的连接 (Analytics Platform System)”，可从[此处](http://www.microsoft.com/download/details.aspx?id=48241)下载该文档。  
+ **应用于：**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 作为创建外部表的先决条件，设备管理员需要配置 hadoop 连接。 有关详细信息，请参阅 APS 文档中的“配置与外部数据的连接 (Analytics Platform System)”，可从[此处](https://www.microsoft.com/download/details.aspx?id=48241)下载该文档。  
   
 ## <a name="limitations-and-restrictions"></a>限制和局限  
  由于外部表数据驻留在数据库之外，所以备份和还原操作将仅对存储在数据库中的数据进行操作。 这意味着仅备份和还原元数据。  

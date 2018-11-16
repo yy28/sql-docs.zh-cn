@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4367c20c7f673f1075182385de092231ca289c72
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031066"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813790"
 ---
 # <a name="report-server-service-trace-log"></a>报表服务器服务跟踪日志
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器跟踪日志是 ASCII 文本文件，其中包含有关报表服务器服务操作的详细信息。  文件中的信息包括由报表服务器 Web 服务、Web 门户和后台处理执行的操作。 跟踪日志文件中包括其他日志文件中记录的冗余信息，还包括无法通过其他方式获得的附加信息。 如果要调试包括报表服务器的应用程序或调查已写入事件日志或执行日志中的特定问题，跟踪日志信息非常有用。 例如，排除订阅问题时。  
@@ -80,7 +80,7 @@ ms.locfileid: "50031066"
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- 有关详细信息，请参阅 [网站上的](http://support.microsoft.com/?kbid=913046) 知识库文章 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 有关详细信息，请参阅 [网站上的](https://support.microsoft.com/?kbid=913046) 知识库文章 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ##  <a name="bkmk_log_file_fields"></a> 日志文件字段  
  跟踪日志中包括以下字段：  

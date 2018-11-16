@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: aabe54448e4f91a87531d4e56de4f617a1610d4f
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 6f9f6b87abbac930bc51d5b0f5a32d48e0afb730
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419122"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701977"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>配置 SQL Server 以向 Microsoft 发送反馈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ AND instance_name = '_Total'
 安装后，可以通过错误和使用情况报告应用程序更改 SQL Server 组件和实例的使用情况数据收集设置。 可将此应用程序作为 SQL Server 安装的一部分。 此工具可使每个 SQL Server 实例配置其自己的使用情况数据设置。
 
 > [!NOTE]
-> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，你可以通过与在 SQL Server 2017 中相同的方式管理错误报告和使用情况反馈收集的偏好设置。 错误报告不同于使用情况反馈收集，因此可以独立于使用情况反馈收集进行启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
+> 错误和使用情况报告应用程序在 SQL Server 的“配置工具”下列出。 使用此工具，你可以通过与在 SQL Server 2017 中相同的方式管理错误报告和使用情况反馈收集的偏好设置。 错误报告不同于使用情况反馈收集，因此可以独立于使用情况反馈收集进行启用或禁用。 错误报告收集发送到 Microsoft 的故障转储，其中可能包含[隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)中所述的敏感信息。
 
 要启动 SQL Server 错误和使用情况报告，请单击或点击“启动”，然后在搜索框中搜索“错误”。 将显示 SQL Server 错误和使用情况报告项。 启动该工具后，可以管理针对计算机上安装的实例和组件收集的使用情况反馈和严重错误。
 
@@ -153,7 +153,7 @@ SSMS 不会收集其自身的故障转储。 与 SSMS 相关的任何故障转�
  
 - Windows Server 2016 和 Windows 10
 
-    [在组织中配置 Windows 遥测](https://technet.microsoft.com/en-us/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
+    [在组织中配置 Windows 遥测](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)
 - Windows Server 2008 R2 和 Windows 7
 
     [WER 设置](/windows/desktop/wer/wer-settings)

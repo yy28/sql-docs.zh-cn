@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7aee55b262ab1a06f99325f977fe5e5be014f5eb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: b3cb1aef270d2fb512d6234227b5ed6ab8b09a51
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021901"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812860"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>为本地管理配置本机模式报表服务器 (SSRS)
   如果您想要在本地管理报表服务器实例，则将 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 报表服务器部署到以下操作系统之一要求更多的赋值步骤。 本主题说明如何配置报表服务器以进行本地管理。 如果尚未安装或配置报表服务器，请参阅[从安装向导安装 SQL Server 2016（安装程序）](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 本机模式报表服务器](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)。  
@@ -87,7 +87,7 @@ ms.locfileid: "50021901"
   
 8.  单击 **“站点”**。  
   
-9. 添加 `http://<your-server-name>`。  
+9. 添加 `https://<your-server-name>`。  
   
 10. 如果不将 HTTPS 用于默认站点，请清除 **“对该区域中的所有站点要求服务器验证(https:)”** 复选框。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50021901"
   
 ###  <a name="bkmk_configure_site_settings"></a> 报表管理器站点设置  
   
-1.  使用管理权限打开浏览器并浏览到报表管理器 `http://<server name>/reports`。  
+1.  使用管理权限打开浏览器并浏览到报表管理器 `https://<server name>/reports`。  
   
 2.  单击主页上角的 **“站点设置”** 。  
   

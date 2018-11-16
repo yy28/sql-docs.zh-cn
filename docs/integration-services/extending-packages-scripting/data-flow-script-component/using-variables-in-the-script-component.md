@@ -13,12 +13,12 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a21bdb4d878f49f78f514696e01dcbc8fbcc81eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649976"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638524"
 ---
 # <a name="using-variables-in-the-script-component"></a>在脚本组件中使用变量
   变量存储包及其容器、任务和事件处理程序在运行时可以使用的值。 有关详细信息，请参阅 [Integration Services (SSIS) 变量](../../../integration-services/integration-services-ssis-variables.md)。  
@@ -38,6 +38,6 @@ ms.locfileid: "47649976"
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 变量](../../../integration-services/integration-services-ssis-variables.md)   
- [在包中使用变量](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
+ [在包中使用变量](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

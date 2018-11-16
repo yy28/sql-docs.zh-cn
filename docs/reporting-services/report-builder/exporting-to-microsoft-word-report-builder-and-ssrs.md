@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c9a345a40713bdba845e2e2cdd825326c1799c1e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 1dd2e24be0ca0746ad456a43c9005f3e0dd8a30c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021091"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814090"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>导出到 Microsoft Word（报表生成器和 SSRS）
 
@@ -112,9 +112,9 @@ ms.locfileid: "50021091"
   
  以下主题介绍有关设置 Office 和 Word 选项的其他信息。  
   
--   在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言。 有关详细信息，请参阅 [在您的 Office 程序中启用其他语言](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)。  
+-   在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言。 有关详细信息，请参阅 [在您的 Office 程序中启用其他语言](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1)。  
   
--   添加 Office 语言包，然后更改编辑语言。 有关详细信息，请参阅 [在 Office 程序中启用其他语言](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 2010 语言选项](http://office.microsoft.com/language/)。  
+-   添加 Office 语言包，然后更改编辑语言。 有关详细信息，请参阅 [在 Office 程序中启用其他语言](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) 和 [Office 2010 语言选项](https://office.microsoft.com/language/)。  
   
 > [!NOTE]  
 >  当在“Microsoft Office 语言首选项”或 Word 的“Word 选项”对话框中更改编辑语言时，更改将应用于所有 Office 程序。  

@@ -14,12 +14,12 @@ ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6f57d1cc99a2966ea220774366cca8aa6e2f8049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 847e0dd3546062f00a1feb939ec4fa469f693c06
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834952"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702705"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Web 配置参考 (Master Data Services)
 
@@ -33,16 +33,16 @@ ms.locfileid: "47834952"
 |配置元素|描述|  
 |---------------------------|-----------------|  
 |**masterDataServices**|自定义元素。 将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。|  
-|**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](http://go.microsoft.com/fwlink/?LinkId=178347) 。|  
-|**system.web**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web 元素（ASP.NET 设置架构）](http://go.microsoft.com/fwlink/?LinkId=178348) 。|  
-|**startup**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<startup> 元素](http://go.microsoft.com/fwlink/?LinkId=178349)。|  
-|**运行库**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [runtime> 元素\<](http://go.microsoft.com/fwlink/?LinkId=178350)。|  
-|**system.codedom**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.codedom> 元素](http://go.microsoft.com/fwlink/?LinkId=178351)。|  
-|**system.web.extensions**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web.extensions 元素（ASP.NET 设置架构）](http://go.microsoft.com/fwlink/?LinkId=178352) 。|  
-|**system.webServer**|包含 IIS 元素的节组。 有关详细信息，请参阅 MSDN Library 中的 [system.webServer 节组 \[IIS 7 设置架构\]](http://go.microsoft.com/fwlink/?LinkId=178353)。|  
-|**system.serviceModel**|WCF 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.serviceModel>](http://go.microsoft.com/fwlink/?LinkId=178354)。|  
-|**system.diagnostics**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.diagnostics> 元素](http://go.microsoft.com/fwlink/?LinkId=178355)。|  
-|**appSettings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [appSettings 元素（常规设置架构）](http://go.microsoft.com/fwlink/?LinkId=178356) 。|  
+|**connectionStrings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [connectionStrings 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178347) 。|  
+|**system.web**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178348) 。|  
+|**startup**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<startup> 元素](https://go.microsoft.com/fwlink/?LinkId=178349)。|  
+|**运行库**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [runtime> 元素\<](https://go.microsoft.com/fwlink/?LinkId=178350)。|  
+|**system.codedom**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.codedom> 元素](https://go.microsoft.com/fwlink/?LinkId=178351)。|  
+|**system.web.extensions**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [system.web.extensions 元素（ASP.NET 设置架构）](https://go.microsoft.com/fwlink/?LinkId=178352) 。|  
+|**system.webServer**|包含 IIS 元素的节组。 有关详细信息，请参阅 MSDN Library 中的 [system.webServer 节组 \[IIS 7 设置架构\]](https://go.microsoft.com/fwlink/?LinkId=178353)。|  
+|**system.serviceModel**|WCF 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354)。|  
+|**system.diagnostics**|.NET Framework 元素。 有关详细信息，请参阅 MSDN Library 中的 [\<system.diagnostics> 元素](https://go.microsoft.com/fwlink/?LinkId=178355)。|  
+|**appSettings**|ASP.NET 元素。 有关详细信息，请参阅 MSDN Library 中的 [appSettings 元素（常规设置架构）](https://go.microsoft.com/fwlink/?LinkId=178356) 。|  
   
 ## <a name="masterdataservices-element"></a>masterDataServices 元素  
  <masterDataServices\< 元素是自定义元素，用于将 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服务连接到 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 数据库。  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68c556abb719ba9642e7c1074866235e46c1f1e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: ca366eeee5bbe0e291ccefa140237b9e977a9a90
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029116"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51812810"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>将共享数据源发布到 SharePoint 库
   若要将共享数据源发布到在 SharePoint 集成模式下运行的报表服务器，必须在报表设计器中设置报表的项目属性。 在项目属性中，对服务器、报表和共享数据源的所有引用都必须为完全限定的 URL。  
@@ -34,13 +34,13 @@ ms.locfileid: "50029116"
   
 4.  如果想在项目中发布共享数据源，并覆盖以前发布的共享数据源，请将 **OverwriteDataSources** 设置为 **True**。  
   
-5.  （可选）对于 **TargetDataSourceFolder**，键入指向 SharePoint 库或库文件夹的 URL。 例如， `http://TestServer/TestSite/Documents/DataSources`。  
+5.  （可选）对于 **TargetDataSourceFolder**，键入指向 SharePoint 库或库文件夹的 URL。 例如， `https://TestServer/TestSite/Documents/DataSources`。  
   
      如果不指定值，将使用 **TargetReportFolder** 值。  
   
-6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如， `http://TestServer/TestSite/Documents/Reports`。  
+6.  对于 **TargetReportFolder**，键入指向库或库文件夹的 URL。 例如， `https://TestServer/TestSite/Documents/Reports`。  
   
-7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如，`http://servername`、`http://servername/site` 或 `http://servername/site/subsite`。  
+7.  对于 **TargetServerURL**，键入指向 SharePoint 顶级站点或子站点的 URL。 如果不指定站点，将使用默认顶级站点。 例如，`https://servername`、`https://servername/site` 或 `https://servername/site/subsite`。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bce4b148fbb5a573446f21ea7e116a01d79fc1e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34a278c1ec90d9ddc49771850cf6226e9ee702ba
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849516"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642184"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>包的 SQL Server 代理作业
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理可以计划并且自动执行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包。 您可以计划部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包，以及存储在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 包存储区和文件系统中的包。  
@@ -60,14 +60,14 @@ ms.locfileid: "47849516"
   
  有关详细信息，请参阅 [使用 SQL Server 代理计划包](#schedule)。  
   
- 有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请参阅 MSDN 库中的视频主页 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=141771)。  
+ 有关演示如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理来运行包的视频，请参阅 MSDN 库中的视频主页 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)。  
   
 ##  <a name="trouble"></a> 故障排除  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤可能无法启动某个包，即便该包可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中以及从命令行成功运行。 该问题有一些常见的原因和一些推荐的解决方法。 有关详细信息，请参阅下列资源。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](http://support.microsoft.com/kb/918760)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章： [当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)  
   
--   MSDN 库中的视频 [故障排除：使用 SQL Server 代理执行包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=141772)。  
+-   MSDN 库中的视频 [故障排除：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)。  
   
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业步骤启动某个包后，该包可能无法执行，或者包可能成功运行但出现意外结果。 可以使用下列工具来解决这些问题。  
   
@@ -120,11 +120,11 @@ ms.locfileid: "47849516"
   
 7.  在 **“运行身份”** 列表中，选择 **“SQL Server 代理服务帐户”** 或选择该作业步骤要使用的凭据所属的代理帐户。 有关创建代理帐户的信息，请参阅 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
-     用代理帐户来代替 **“SQL Server 代理服务帐户”** 可以解决在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行包时可能出现的常见问题。 有关这些问题的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](http://support.microsoft.com/kb/918760)。  
+     用代理帐户来代替 **“SQL Server 代理服务帐户”** 可以解决在使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理执行包时可能出现的常见问题。 有关这些问题的详细信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。  
   
     > **注意：** 如果代理帐户所用凭据的密码发生更改，那么需要更新凭据密码。 否则，该作业步骤将失败。  
   
-     有关配置 SQL Server 代理服务帐户的信息，请参阅[为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）](http://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
+     有关配置 SQL Server 代理服务帐户的信息，请参阅[为 SQL Server 代理设置服务启动帐户（SQL Server 配置管理器）](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)。  
   
 8.  在 **“包源”** 列表框中，单击该包的源，然后为作业步骤配置选项。  
   
@@ -147,13 +147,13 @@ ms.locfileid: "47849516"
     |---------|-------------|  
     |**“包”**|**Server**<br /><br /> 键入或选择承载 SSISDB 目录的数据库服务器实例的名称。<br /><br /> 如果 **“SSIS 目录”** 为包源，则可以仅使用 Microsoft Windows 用户帐户登录该服务器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 身份验证不可用。|  
     ||**“包”**<br /><br /> 单击省略号按钮并选择一个包。<br /><br /> 您需要在 **“对象资源管理器”** 的 **“Integration Services 目录”** 节点下的文件夹中选择包。|  
-    |**Parameters**<br /><br /> 位于 **“配置”** 选项卡上。|**“Integration Services 项目转换向导”** 支持您使用参数替换包配置。<br /><br /> **“参数”** 选项卡显示您在设计包（例如通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]来设计包）时就已添加的参数。 该选项卡还显示在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目从包部署模型转换为项目部署模型后添加到包中的参数。 为包中包含的参数输入新值。 您可以输入一个文字值，或使用已经映射到该参数的服务器环境变量所包含的值。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> **\*\* 重要说明 \*\*** 如果将多个参数和/或连接管理器属性映射到了多个环境中包含的变量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 有关如何创建服务器环境并将变量映射到参数的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
+    |**参数**<br /><br /> 位于 **“配置”** 选项卡上。|**“Integration Services 项目转换向导”** 支持您使用参数替换包配置。<br /><br /> **“参数”** 选项卡显示您在设计包（例如通过使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]来设计包）时就已添加的参数。 该选项卡还显示在将 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 项目从包部署模型转换为项目部署模型后添加到包中的参数。 为包中包含的参数输入新值。 您可以输入一个文字值，或使用已经映射到该参数的服务器环境变量所包含的值。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> **\*\* 重要说明 \*\*** 如果将多个参数和/或连接管理器属性映射到了多个环境中包含的变量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 有关如何创建服务器环境并将变量映射到参数的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
     |**连接管理器**<br /><br /> 位于 **“配置”** 选项卡上。|更改连接管理器属性的值。 例如，您可以更改服务器名称。 将在 SSIS 服务器上为连接管理器属性自动生成参数。 若要更改某个属性值，可以输入一个文字值，或使用已经映射到连接管理器属性的服务器环境变量所包含的值。<br /><br /> 若要输入文字值，请单击参数旁边的省略号按钮。 随即出现 **“编辑用于执行的文字值”** 对话框。<br /><br /> 若要使用环境变量，请单击 **“环境”** ，然后选择包含要使用的变量的环境。<br /><br /> **\*\* 重要说明 \*\*** 如果将多个参数和/或连接管理器属性映射到了多个环境中包含的变量， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理将显示一条错误消息。 对于给定的执行，只能使用单个服务器环境中包含的值来执行包。<br /><br /> 有关如何创建服务器环境并将变量映射到连接管理器属性的信息，请参阅[部署 Integration Services (SSIS) 项目和包](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。|  
     |**高级**<br /><br /> 位于 **“配置”** 选项卡上。|为包执行配置以下附加设置：|  
     ||**属性覆盖**：<br /><br /> 单击 **“添加”** 为包属性输入新值，指定属性路径并指示该属性值是否为敏感值。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器将对敏感数据加密。 若要编辑或删除某个属性的设置，请单击 **“属性”** 覆盖框中的某一行，然后单击 **“编辑”** 或 **“删除”**。 你可以通过执行以下操作之一查找属性路径：<br /><br /> - 从 XML 配置文件 (\*.dtsconfig) 复制属性路径。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例：\Package.Properties[MaximumErrorCount]<br /><br /> - 运行“包配置向导”，并从最后的“完成向导”页中复制属性路径。 随后可以取消该向导。<br /><br /> <br /><br /> 注意：“属性覆盖”  选项用于具有从以前版本的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]升级的配置的包。 使用 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 创建并部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的包使用参数而不是配置。|  
     ||**日志记录级别**<br /><br /> 为执行包选择以下日志记录级别之一。 请注意，选择“性能”  或“详细”  日志记录级别可能影响包的执行性能。<br /><br /> **无**：<br />                          关闭日志记录。 仅记录包执行状态。<br /><br /> **基本**：<br />                          除了自定义事件和诊断事件之外，记录其余所有事件。 这是日志记录级别的默认值。<br /><br /> **性能**：<br />                          仅记录性能统计信息、OnError 和 OnWarning 事件。<br /><br /> **详细**：<br />                          记录所有事件，包括自定义事件和诊断事件。<br /><br /> 所选的日志记录级别决定在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务器的 SSISDB 视图和报告中显示的信息。 有关详细信息，请参阅 [Integration Services (SSIS) 日志记录](../../integration-services/performance/integration-services-ssis-logging.md)。|  
     ||**出错时转储**<br /><br /> 指定在包执行过程中发生任何错误时是否生成调试转储文件。 这些文件包含有关包的执行信息，可帮助您解决出现的问题。 若选择此选项，当在执行过程中出现错误时， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 会创建一个 .mdmp 文件（二进制文件）和一个 .tmp 文件（文本文件）。 默认情况下，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 将这些文件存储在 \<drive>:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 文件夹中。|  
-    ||**32 位运行时**<br /><br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
+    ||**32 位运行时**<br /><br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
   
      **包源**：SQL Server、SSIS 包存储区或文件系统  
   
@@ -171,7 +171,7 @@ ms.locfileid: "47849516"
     |**配置**|添加 XML 配置文件以便使用特定配置来运行包。 使用包配置可在运行时更新包属性的值。<br /><br /> 此选项对应于 **dtexec** 的 **/ConfigFile**选项。<br /><br /> 若要了解如何应用包配置，请参阅 [Package Configurations](../../integration-services/packages/package-configurations.md)。 有关如何创建包配置的信息，请参阅 [Create Package Configurations](../../integration-services/packages/create-package-configurations.md)。|  
     |**命令文件**|在单独的文件中指定要使用 **dtexec**运行的附加选项。<br /><br /> 例如，可以包括一个包含 /Dump errorcode 选项的文件，以便在包运行期间发生一个或多个指定事件时生成调试转储文件。<br /><br /> 您可以使用不同的选项组运行包，只需创建多个文件，然后通过使用 **“命令文件”** 选项指定正确的文件即可。<br /><br /> “命令文件”选项对应于 **dtexec** 的 **/CommandFile** 选项。|  
     |**数据源**|查看包中包含的连接管理器。 若要修改某个连接字符串，请单击连接管理器，再单击该连接字符串。<br /><br /> 此选项对应于 **dtexec** 的 **/Connection**选项。|  
-    |**执行选项**|**出现验证警告时包失败**<br /> 指示是否将警告消息视为错误。 如果选择此选项并且在验证期间出现警告，包将无法通过验证。 此选项对应于 **dtexec** 的 **/WarnAsError**选项。<br /><br /> **验证但不执行包**<br /> 指示是否在验证阶段之后停止执行包，而不实际运行包。 此选项对应于 **dtexec** 的 **/Validate**选项。<br /><br /> **覆盖 MacConcurrentExecutables 属性**<br /> 指定包可以同时执行的可执行文件数。 如果值为 -1，则表示包可以运行的最大可执行文件数等于执行包的计算机上的处理器总数加二。 此选项对应于 **dtexec** 的 **/MaxConcurrent**选项。<br /><br /> **启用包检查点**<br /> 指示包在执行期间是否使用检查点。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此选项对应于 **dtexec** 的 **/CheckPointing**选项。<br /><br /> **覆盖重新启动选项**<br /> 指示是否为包的 **CheckpointUsage** 属性设置了新值。 从 **“重新启动选项”** 列表框中选择一个值。<br /><br /> 此选项对应于 **dtexec** 的 **/Restart**选项。<br /><br /> **使用 32 位运行时**<br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
+    |**执行选项**|**出现验证警告时包失败**<br /> 指示是否将警告消息视为错误。 如果选择此选项并且在验证期间出现警告，包将无法通过验证。 此选项对应于 **dtexec** 的 **/WarnAsError**选项。<br /><br /> **验证但不执行包**<br /> 指示是否在验证阶段之后停止执行包，而不实际运行包。 此选项对应于 **dtexec** 的 **/Validate**选项。<br /><br /> **覆盖 MacConcurrentExecutables 属性**<br /> 指定包可以同时执行的可执行文件数。 如果值为 -1，则表示包可以运行的最大可执行文件数等于执行包的计算机上的处理器总数加二。 此选项对应于 **dtexec** 的 **/MaxConcurrent**选项。<br /><br /> **启用包检查点**<br /> 指示包在执行期间是否使用检查点。 有关详细信息，请参阅 [通过使用检查点重新启动包](../../integration-services/packages/restart-packages-by-using-checkpoints.md)。<br /><br /> 此选项对应于 **dtexec** 的 **/CheckPointing**选项。<br /><br /> **覆盖重新启动选项**<br /> 指示是否为包的 **CheckpointUsage** 属性设置了新值。 从 **“重新启动选项”** 列表框中选择一个值。<br /><br /> 此选项对应于 **dtexec** 的 **/Restart**选项。<br /><br /> **使用 32 位运行时**<br /> 指示是否在已安装 64 位版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的 64 位计算机上，使用 32 位版本的 dtexec 实用工具运行包。<br /><br /> 在特定情况下，您可能需要使用 32 位版本的 dtexec 来运行包，比如在您的包使用在 64 位版本中不可用的本机 OLE DB 访问接口的情况下。 有关详细信息，请参阅 [Integration Services 的 64 位注意事项](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)。<br /><br /> 默认情况下，当您选择 **“SQL Server Integration Services 包”** 作业步骤类型时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理会使用系统自动调用的 dtexec 实用工具版本来运行该包。 系统会根据计算机处理器以及在计算机上运行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理的版本，来调用 32 位或 64 位版本的实用工具。|  
     |**日志记录**|将日志提供程序与包执行操作相关联。<br /><br /> **用于文本文件的 SSIS 日志提供程序**<br /> 将日志条目写入 ASCII 文本文件<br /><br /> **用于 SQL Server 的 SSIS 日志提供程序**<br /> 将日志条目写入 MSDB 数据库的 sysssislog 表中。<br /><br /> **用于 SQL Server Profiler 的 SSIS 日志提供程序**<br /> 写入可用 SQL Server 事件探查器查看的跟踪。<br /><br /> **用于 Windows 事件日志的 SSIS 日志提供程序**<br /> 将日志条目写入 Windows 事件日志中的应用程序日志。<br /><br /> **用于 XML 文件的 SSIS 日志提供程序**<br /> 将日志文件写入 XML 文件。<br /><br /> 对于文本文件、XML 文件以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件探查器日志提供程序，您需要选择包内所含的文件连接管理器。 对于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日志提供程序，您需要选择包内所含的 OLE DB 连接管理器。<br /><br /> 此选项对应于 **dtexec** 的 **/Logger**选项。|  
     |**设置值**|覆盖包属性设置。 在 **“属性”** 框中的 **“属性路径”** 和 **“值”** 列中输入值。 为一个属性输入值后， **“属性”** 框中会出现一个空行，支持您为另一个属性输入值。<br /><br /> 若要从“属性”框中删除某个属性，请单击该行，然后单击 **“删除”**。<br /><br /> 你可以通过执行以下操作之一查找属性路径：<br /><br /> - 从 XML 配置文件 (\*.dtsconfig) 复制属性路径。 该路径列在该文件的 Configuration 部分中，作为 Path 属性的值。 下面是 MaximumErrorCount 属性的路径的示例：\Package.Properties[MaximumErrorCount]<br /><br /> - 运行“包配置向导”，并从最后的“完成向导”页中复制属性路径。 随后可以取消该向导。|  
     |**验证**|**仅执行已签名的包**<br /> 指示是否已检查包签名。 如果包未签名或签名无效，则包将失败。 此选项对应于 **dtexec** 的 **/VerifySigned**选项。<br /><br /> **验证包内部版本**<br /> 指示是否根据在此选项旁边的 **“内部版本”** 框中输入的内部版本号，验证包的内部版本号。 如果出现不匹配，则将不执行包。 此选项对应于 **dtexec** 的 **/VerifyBuild**选项。<br /><br /> **验证包 ID**<br /> 指示是否通过将包的 GUID 与此选项旁边的 **“包 ID”** 框中输入的包 ID 进行比较，对该 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyPackageID**选项。<br /><br /> **验证版本 ID**<br /> 指示是否通过将包的版本 GUID 与此选项旁边的 **“版本 ID”** 框中输入的版本 ID 进行比较，对该版本 GUID 进行验证。 此选项对应于 **dtexec** 的 **/VerifyVersionID**选项。|  
@@ -195,16 +195,16 @@ ms.locfileid: "47849516"
 
 ## <a name="external-resources"></a>外部资源  
   
--   [网站上的知识库文章：](http://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+-   [网站上的知识库文章：](https://support.microsoft.com/kb/918760)当从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   MSDN 库中的视频 [故障排除：使用 SQL Server 代理执行包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN 库中的视频 [故障排除：使用 SQL Server 代理执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141772)  
   
--   MSDN 库中的视频 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=141771)  
+-   MSDN 库中的视频 [如何使用 SQL Server 代理自动执行包（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=141771)  
   
--   mssqltips.com 上的技术文章 [Checking SQL Server Agent jobs using Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=165675)（使用 Windows PowerShell 检查 SQL Server 代理作业）  
+-   mssqltips.com 上的技术文章 [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)（使用 Windows PowerShell 检查 SQL Server 代理作业）  
   
--   mssqltips.com 上的技术文章 [Auto alert for SQL Agent jobs when they are enabled or disabled](http://go.microsoft.com/fwlink/?LinkId=165676)（在 SQL 代理作业启用或禁用时针对它们的自动警报）  
+-   mssqltips.com 上的技术文章 [Auto alert for SQL Agent jobs when they are enabled or disabled](https://go.microsoft.com/fwlink/?LinkId=165676)（在 SQL 代理作业启用或禁用时针对它们的自动警报）  
   
--   mssqltips.com 上的博客文章 [配置 SQL 代理作业以便写入 Windows 事件日志](http://go.microsoft.com/fwlink/?LinkId=220745)。  
+-   mssqltips.com 上的博客文章 [配置 SQL 代理作业以便写入 Windows 事件日志](https://go.microsoft.com/fwlink/?LinkId=220745)。  
   
   

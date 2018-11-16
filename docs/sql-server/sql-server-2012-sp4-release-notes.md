@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e23ae3f88e27f29e32e78c3bafa2ae47005b7573
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 611d882b0711d19e8b9015e0d5081c1a22d0d11d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701095"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "47790185"
 
 服务包仅在线提供，安装介质中不包含，可下载为：
 - [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
-- [SQL Server 2012 SP3](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
-- [SQL Server 2012 SP2](http://support.microsoft.com/KB/2958429)
-- [SQL Server 2012 SP1](http://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
+- [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
+- [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
 
 ## <a name="service-pack-4-release-notes"></a>Service Pack 4 发行说明
 
@@ -61,41 +61,41 @@ ms.locfileid: "47790185"
 ## <a name="service-pack-3-release-notes"></a>Service Pack 3 发行说明
 
 ### <a name="download-pages"></a>下载页面
-- [SQL Server 2012 SP3 功能包](http://go.microsoft.com/fwlink/?linkid=615935)
-- [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
+- [SQL Server 2012 SP3 功能包](https://go.microsoft.com/fwlink/?linkid=615935)
+- [SQL Server 2012 SP3 Express](https://go.microsoft.com/fwlink/?linkid=692144)
 
 若要详细了解如何基于当前安装版本确定要安装的文件的位置和名称，请参阅 [SQL Server 2012 Service Pack 3 版本信息](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)中的“选择正确的文件进行下载”部分。
 
 ## <a name="service-pack-2-release-notes"></a>Service Pack 2 发行说明
   
 ### <a name="download-pages"></a>下载页面 
-- [SQL Server 2012 SP2 功能包](http://go.microsoft.com/fwlink/?LinkID=401008)
-- [SQL Server 2012 SP2 Express](http://go.microsoft.com/fwlink/?LinkID=401007)
+- [SQL Server 2012 SP2 功能包](https://go.microsoft.com/fwlink/?LinkID=401008)
+- [SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)
 
 使用下表，基于您当前安装的版本识别要下载的文件的位置和名称。 下载页包含系统要求和基本安装说明。  
 
 |如果您目前已经安装的版本是...|而您需要...|请下载和安装...|  
 |---|---|---|   
 |32 位安装：|||  
-|SQL Server 2012 的任何版本的 32 位版|升级到 SQL Server 2012 SP2 的 32 位版|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** ，来自 [SQL Server 2012 SP2 下载页](http://go.microsoft.com/fwlink/?LinkID=401006)|  
-|SQL Server 2012 RTM Express 的 32 位版|升级到 SQL Server 2012 Express SP2 的 32 位版|**SQLEXPR_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP2 的 32 位版|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 Management Studio Express 的 32 位版|升级到 SQL Server 2012 SP2 Management Studio Express 的 32 位版|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 的任何版本的 32 位版以及客户端和管理工具（包括 SQL Server 2012 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2012 SP2 的 32 位版|**SQLEXPRADV_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 功能包](http://www.microsoft.com/download/details.aspx?id=29065) (#microsoft-sql-server-2012-rtm-功能包) 或 [Microsoft SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)(#microsoft-sql-server-2012-sp1-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP2 功能包的 32 位版|Microsoft [SQL Server 2012 SP2 功能包下载页](http://go.microsoft.com/fwlink/?LinkID=401008)中的一种或多种工具|  
+|SQL Server 2012 的任何版本的 32 位版|升级到 SQL Server 2012 SP2 的 32 位版|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** ，来自 [SQL Server 2012 SP2 下载页](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|SQL Server 2012 RTM Express 的 32 位版|升级到 SQL Server 2012 Express SP2 的 32 位版|**SQLEXPR_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP2 的 32 位版|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 Management Studio Express 的 32 位版|升级到 SQL Server 2012 SP2 Management Studio Express 的 32 位版|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 的任何版本的 32 位版以及客户端和管理工具（包括 SQL Server 2012 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2012 SP2 的 32 位版|**SQLEXPRADV_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=29065) (#microsoft-sql-server-2012-rtm-功能包) 或 [Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)(#microsoft-sql-server-2012-sp1-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP2 功能包的 32 位版|Microsoft [SQL Server 2012 SP2 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=401008)中的一种或多种工具|  
 |64 位安装：|||  
-|SQL Server 2012 的任何版本的 64 位版|升级到 SQL Server 2012 SP2 的 64 位版|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe，来自 [SQL Server 2012 SP2 下载页](http://go.microsoft.com/fwlink/?LinkID=401006)(#sql-server-2012-sp2-下载页)|  
-|SQL Server 2012 RTM Express 的 64 位版|升级到 SQL Server 2012 SP2 的 64 位版|**SQLEXPR_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP2 的 64 位版|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP2 Management Studio Express 的 64 位版|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](http://go.microsoft.com/fwlink/?LinkID=401007)|  
-|[Microsoft SQL Server 2012 RTM 功能包](http://www.microsoft.com/download/details.aspx?id=29065) (#microsoft-sql-server-2012-rtm-功能包) 或 [Microsoft SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)(#microsoft-sql-server-2012-sp1-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP2 功能包的 64 位版|Microsoft [SQL Server 2012 SP2 功能包下载页](http://go.microsoft.com/fwlink/?LinkID=401008)中的一种或多种工具|   
+|SQL Server 2012 的任何版本的 64 位版|升级到 SQL Server 2012 SP2 的 64 位版|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe，来自 [SQL Server 2012 SP2 下载页](https://go.microsoft.com/fwlink/?LinkID=401006)(#sql-server-2012-sp2-下载页)|  
+|SQL Server 2012 RTM Express 的 64 位版|升级到 SQL Server 2012 SP2 的 64 位版|**SQLEXPR_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP2 的 64 位版|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP2 Management Studio Express 的 64 位版|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ，来自 [SQL Server 2012 SP2 Express 下载页](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=29065) (#microsoft-sql-server-2012-rtm-功能包) 或 [Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)(#microsoft-sql-server-2012-sp1-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP2 功能包的 64 位版|Microsoft [SQL Server 2012 SP2 功能包下载页](https://go.microsoft.com/fwlink/?LinkID=401008)中的一种或多种工具|   
 
 
 ## <a name="service-pack-1-release-notes"></a>Service Pack 1 发行说明
 
 ### <a name="download-pages"></a>下载页面  
-- [SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](http://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268158)
+- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
 
 
 请使用下表来确定要下载和安装的文件。 安装 Service Pack 之前请验证您的系统是符合要求的。 表中链接的下载页上提供了系统要求。  
@@ -103,30 +103,30 @@ ms.locfileid: "47790185"
 |如果您目前已经安装的版本是...|而您需要...|请下载和安装...|  
 |---|---|---|  
 |**32 位安装：**|||  
-|SQL Server 2012 的任何版本的 32 位版|升级到 SQL Server 2012 SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|SQL Server 2012 RTM Express 的 32 位版|升级到 SQL Server 2012 Express SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|SQL Server 2012 Management Studio Express 的 32 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|SQL Server 2012 的任何版本的 32 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2012 SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|[Microsoft SQL Server 2012 RTM 功能包](http://www.microsoft.com/download/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 32 位版|[Microsoft SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
-|没有安装 SQL Server 2012 的 32 位版|安装包括 SP1 的 32 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x86-ENU.box（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|没有安装 SQL Server 2012 Management Studio 的 32 位版|安装 32 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x86_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
-|无 32 位版 SQL Server 2012 RTM Express|安装 32 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR32_x86_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
-|**SQL Server 2008** 或 **SQL Server 2008 R2**的 32 位安装|**就地升级** 到 32 位 SQL Server 2012（包括 SP1）|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x86-ENU.box（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|SQL Server 2012 的任何版本的 32 位版|升级到 SQL Server 2012 SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|SQL Server 2012 RTM Express 的 32 位版|升级到 SQL Server 2012 Express SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|SQL Server 2012 Management Studio Express 的 32 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 32 位版|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|SQL Server 2012 的任何版本的 32 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 32 位版|将所有产品都升级到 SQL Server 2012 SP1 的 32 位版|SQLServer2012SP1-KB2674319-x86-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 32 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 32 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
+|没有安装 SQL Server 2012 的 32 位版|安装包括 SP1 的 32 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x86-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|没有安装 SQL Server 2012 Management Studio 的 32 位版|安装 32 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
+|无 32 位版 SQL Server 2012 RTM Express|安装 32 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR32_x86_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkId=267905)(#此处)）|  
+|**SQL Server 2008** 或 **SQL Server 2008 R2**的 32 位安装|**就地升级** 到 32 位 SQL Server 2012（包括 SP1）|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x86-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
 |**64 位安装：**|||  
-|SQL Server 2012 的任何版本的 64 位版|升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|SQL Server 2012 RTM Express 的 64 位版|升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|SQL Server 2012 的任何版本的 64 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 64 位版|将所有产品都升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|[Microsoft SQL Server 2012 RTM 功能包](http://www.microsoft.com/download/en/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 64 位版|[Microsoft SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
-|没有安装 SQL Server 2012 的 64 位版|安装包括 SP1 的 64 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x64-ENU.box（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
-|没有安装 SQL Server 2012 Management Studio 的 64 位版|安装 64 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x64_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|无 64 位版 SQL Server 2012 RTM Express|安装 64 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR_x64_ENU.exe（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
-|**SQL Server 2008** 或 **SQL Server 2008 R2**的 64 位安装|**就地升级** 到 64 位 SQL Server 2012（包括 SP1）|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x64-ENU.box（从 [此处](http://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|SQL Server 2012 的任何版本的 64 位版|升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|SQL Server 2012 RTM Express 的 64 位版|升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|仅 SQL Server 2012 的客户端和可管理性工具（包括 SQL Server 2012 R2 Management Studio）的 32 位版|将客户端和可管理性工具升级到 SQL Server 2012 SP1 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|SQL Server 2012 Management Studio Express 的 64 位版|升级到 SQL Server 2012 SP1 Management Studio Express 的 64 位版|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|SQL Server 2012 的任何版本的 64 位版 **和** 客户端和可管理性工具（包括 SQL Server 2012 RTM Management Studio）的 64 位版|将所有产品都升级到 SQL Server 2012 SP1 的 64 位版|SQLServer2012SP1-KB2674319-x64-ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|[Microsoft SQL Server 2012 RTM 功能包](https://www.microsoft.com/download/en/details.aspx?id=16978)(#microsoft-sql-server-2012-rtm-功能包) 中一种或多种工具的 64 位版|将工具升级到 Microsoft SQL Server 2012 SP1 功能包的 64 位版|[Microsoft SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266)中的一个或多个文件|  
+|没有安装 SQL Server 2012 的 64 位版|安装包括 SP1 的 64 位 Server 2012（预装了 SP1 的新实例）|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x64-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
+|没有安装 SQL Server 2012 Management Studio 的 64 位版|安装 64 位 SQL Server 2012 Management Studio（包括 SP1）|SQLManagementStudio_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|无 64 位版 SQL Server 2012 RTM Express|安装 64 位 SQL Server 2012 Express（包括 SP1）|SQLEXPR_x64_ENU.exe（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=267905)(#此处)）|  
+|**SQL Server 2008** 或 **SQL Server 2008 R2**的 64 位安装|**就地升级** 到 64 位 SQL Server 2012（包括 SP1）|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **和** SQLServer2012SP1-FullSlipstream-x64-ENU.box（从 [此处](https://go.microsoft.com/fwlink/p/?LinkID=268158)(#此处)）|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>此 Service Pack 中已修复的已知问题  
-有关此 Service Pack 中已修复的 Bug 和已知问题的完整列表，请参阅 [此知识库文章](http://support.microsoft.com/kb/2674319)。   
+有关此 Service Pack 中已修复的 Bug 和已知问题的完整列表，请参阅 [此知识库文章](https://support.microsoft.com/kb/2674319)。   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>如果使用同一 IP 地址，则重新安装 SQL Server 故障转移群集实例失败  
 **问题：** 如果在安装 SQL Server 故障转移群集实例期间指定不正确的 IP 地址，安装将失败。 卸载失败的实例后，如果尝试使用同一实例名称和正确的 IP 地址重新安装 SQL Server 故障转移群集实例，安装将失败。 安装失败是由于上次安装留下的重复资源组造成的。  
@@ -147,7 +147,7 @@ ms.locfileid: "47790185"
 3.  单击 **“PowerPivot 库”**。  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>若要将 PowerPivot for Excel 与 Excel 2013 一起使用，您必须使用与 Excel 一起安装的外接程序  
-**问题：** 对于 Office 2010，PowerPivot for Excel 是可从 [http://www.microsoft.com/bi/powerpivot.aspx](http://www.microsoft.com/bi/powerpivot.aspx) 下载的独立外接程序。 也可以从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意，有两个可供下载的 PowerPivot 外接程序版本：一个是 SQL Server 2008 R2 随附的版本，另一个是 SQL Server 2012 随附的版本。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
+**问题：** 对于 Office 2010，PowerPivot for Excel 是可从 [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) 下载的独立外接程序。 也可以从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=29074)下载它。 请注意，有两个可供下载的 PowerPivot 外接程序版本：一个是 SQL Server 2008 R2 随附的版本，另一个是 SQL Server 2012 随附的版本。 但对于 Office 2013，PowerPivot for Excel 随 Office 一起提供并且在您安装 Excel 时安装。 尽管 PowerPivot for Excel 2010 的 SQL Server 2008 R2 和 SQL Server 2012 版本与 Excel 2013 不兼容，但是，如果您想要将 Excel 2010 与 Excel 2013 并行运行，仍可以在您的客户端计算机上安装 PowerPivot for Excel 2010。 换言之，Excel 的两个版本可以共存，因此可以使用相应的 PowerPivot 外接程序。  
   
 **解决方法：** 若要使用 PowerPivot for Excel 2013，则必须启用 COM 外接程序。 从 Excel 2013，选择“**文件**” | “**选项**” | “**外接程序**”。从“**管理**”下拉框中，选择“**COM 外接程序**”，然后单击“**执行**”。 从“ **COM 外接程序**”中，选择 **Microsoft Office PowerPivot for Excel 2013** ，然后单击“ **确定**”。  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47790185"
   
 -   “连接字符串属性‘用户标识’不支持值‘SharePoint 主体’。”  
   
-**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](http://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
+**解决方法：** 在 SharePoint Server 2013 上安装 PowerPivot for SharePoint 2013 安装程序包 (**spPowerPivot.msi**)。 该安装程序包作为 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 功能包的一部分提供。 可以从 [!INCLUDE[msCoName](../includes/msconame-md.md)] 下载中心的 [SQL Server 2012 SP1 功能包](https://go.microsoft.com/fwlink/p/?LinkID=268266) 下载此功能包。  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>在执行预定的数据刷新后删除 PowerPivot 工作簿中的 Power View 工作表  
 **问题**：在 PowerPivot for SharePoint 外接程序中，对包含 Power View 的工作簿使用“ **计划的数据刷新** ”将删除所有 Power View 工作表。  
@@ -192,7 +192,7 @@ ms.locfileid: "47790185"
 ### <a name="sql-server-express"></a>SQL Server Express  
   
 #### <a name="full-version-of-sql-server-management-studio-available-in-sql-server-2012-express-sp1"></a>在 SQL Server 2012 Express SP1 中提供 SQL Server Management Studio 的完整版本  
-SQL Server 2012 Express Service Pack 1 (SP1) 版本包括 SQL Server 2012 Management Studio 的完整版本（以前仅在 SQL Server 2012 DVD 上提供），而非 SQL Server 2012 Management Studio Express。 若要下载和安装 SQL Server 2012 Express SP1，请参阅 [SQL Server 2012 Express Service Pack 1](http://go.microsoft.com/fwlink/p/?linkid=267905)。  
+SQL Server 2012 Express Service Pack 1 (SP1) 版本包括 SQL Server 2012 Management Studio 的完整版本（以前仅在 SQL Server 2012 DVD 上提供），而非 SQL Server 2012 Management Studio Express。 若要下载和安装 SQL Server 2012 Express SP1，请参阅 [SQL Server 2012 Express Service Pack 1](https://go.microsoft.com/fwlink/p/?linkid=267905)。  
   
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service 和 Designer for Oracle by Attunity  
   
@@ -201,7 +201,7 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包括 SQL Server 2012 Manage
   
 **解决方法：** 将 CDC 组件升级到最新版本：  
   
-1.  从 [SQL Server 2012 SP1 功能包下载页](http://go.microsoft.com/fwlink/p/?LinkID=268266)下载用于 Change Data Capture Service for Oracle by Attunity 的 .msi 文件。  
+1.  从 [SQL Server 2012 SP1 功能包下载页](https://go.microsoft.com/fwlink/p/?LinkID=268266)下载用于 Change Data Capture Service for Oracle by Attunity 的 .msi 文件。  
   
 2.  运行该 .msi 文件。  
   
@@ -212,7 +212,7 @@ SQL Server 2012 Express Service Pack 1 (SP1) 版本包括 SQL Server 2012 Manage
   
 **对选择性 XML 索引的支持**  
   
-SQL Server 2012 SP1 包括对 [选择性 XML 索引 (SXI)](http://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)(#选择性-xml-索引-(sxi)) 这个新 SQL Server 功能的支持，该功能为 XML 列数据提供新的索引编制方式，提高了性能和效率。  
+SQL Server 2012 SP1 包括对 [选择性 XML 索引 (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44)(#选择性-xml-索引-(sxi)) 这个新 SQL Server 功能的支持，该功能为 XML 列数据提供新的索引编制方式，提高了性能和效率。  
   
 DACFx 现在支持所有 DAC 方案和客户端工具中的 SXI 索引。 SXI 仅在最新版本的 SSDT 中受支持。 SSDT RTM 和 2012 年 9 月版本不支持 SXI。  
   
@@ -232,7 +232,7 @@ DACFx 现在支持所有 DAC 方案和客户端工具中的 SXI 索引。 SXI �
   
 -   导入 BACPAC – 导入 .bacpac 文件以新建或填充空的 SQL Server 或 Windows Azure SQL Database。  
   
-MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](http://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)找到。  
+MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)找到。  
   
 **包兼容性**  
   
@@ -247,7 +247,7 @@ MSDN 上的完整 SqlPackage.exe 文档可以在 [此处](http://msdn.microsoft.
 - [如何识别 SQL Server 的版本](https://support.microsoft.com/help/321185)
 - [安装 SQL Server 2012 服务更新](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [如何确定 SQL Server 的版本和版本类别](https://support.microsoft.com/help/321185) 
-- [如何确定 SQL Server 的版本和版本类别](http://support.microsoft.com/kb/321185)  
-- [SQL Server 2014 各个版本支持的功能](http://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [如何确定 SQL Server 的版本和版本类别](https://support.microsoft.com/kb/321185)  
+- [SQL Server 2014 各个版本支持的功能](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

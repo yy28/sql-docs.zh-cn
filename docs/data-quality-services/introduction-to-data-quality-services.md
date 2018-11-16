@@ -14,12 +14,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6b235ea1151b99870623dbbea89f83e02150235e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44fc2fd9ff3a47272c031ff71cda6e2a75f59a72
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640840"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700275"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 简介
 
@@ -43,7 +43,7 @@ ms.locfileid: "47640840"
   
 -   **匹配：** 使用基于规则的过程标识语义重复项，使您可以确定哪些项是匹配项并消除重复项。 有关详细信息，请参阅 [Data Matching](../data-quality-services/data-matching.md)。  
   
--   **Reference Data Services：** 使用引用数据访问接口的服务验证数据的质量。 可以使用 [Microsoft Azure 市场](http://azure.microsoft.com/marketplace/)的 Reference Data Services 来轻松地清理、验证、匹配和充实数据。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
+-   **Reference Data Services：** 使用引用数据访问接口的服务验证数据的质量。 可以使用 [Microsoft Azure 市场](https://azure.microsoft.com/marketplace/)的 Reference Data Services 来轻松地清理、验证、匹配和充实数据。 有关详细信息，请参阅 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)。  
   
 -   **事件探查：** 分析数据源以在知识发现、域管理、匹配和数据清理过程的每个阶段了解数据的质量。 事件探查是 DQS 数据质量解决方案中的强大工具。 您可以创建一个数据质量解决方案，在该方案中事件探查与知识管理、匹配或数据清理同等重要。 有关详细信息，请参阅 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)。  
   

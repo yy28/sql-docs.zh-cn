@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2896ebfae8b785aff35e3f484c4d695f3b48409a
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 79b7a54c511d483fde86d11eeb8670ce2ac2bc14
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021151"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813970"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>使用 WinForms ReportViewer 控件
   若要查看已部署到报表服务器的报表或存在于本地文件系统上的报表，您可以使用 WinForms ReportViewer 控件在 Windows 应用程序中呈现这些报表。  
@@ -73,7 +73,7 @@ public partial class Form1 : Form
   
         // Set the report server URL and report path  
         serverReport.ReportServerUrl =   
-            new Uri("http:// <Server Name>/reportserver");  
+            new Uri("https:// <Server Name>/reportserver");  
         serverReport.ReportPath =   
             "/AdventureWorks Sample Reports/Sales Order Detail";  
   
@@ -120,7 +120,7 @@ Public Class Form1
   
         'Set the report server URL and report path  
         serverReport.ReportServerUrl = _  
-           New Uri("http://<Server Name>/reportserver")  
+           New Uri("https://<Server Name>/reportserver")  
         serverReport.ReportPath = _  
            "/AdventureWorks Sample Reports/Sales Order Detail"  
   

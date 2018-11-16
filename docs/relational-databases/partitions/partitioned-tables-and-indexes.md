@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af39fd0a7a05bd66565ac94f112c63ac1158df86
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 11f2ad440e817c62a8efa67ba421351b9db93ff9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264887"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662418"
 ---
 # <a name="partitioned-tables-and-indexes"></a>已分区表和已分区索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,11 +128,11 @@ ms.locfileid: "48264887"
   
 ## <a name="related-content"></a>相关内容  
  对于已分区表和索引策略以及实现方式，以下白皮书可能对您很有用。  
--   [使用 SQL Server 2008 的已分区表和索引策略](http://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
--   [如何实现自动滑动窗口](http://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [大容量加载到已分区表](http://msdn.microsoft.com/library/cc966380.aspx)    
+-   [使用 SQL Server 2008 的已分区表和索引策略](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
+-   [如何实现自动滑动窗口](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
+-   [大容量加载到已分区表](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL：数据生命周期 -- 分区](https://technet.microsoft.com/library/cc966424.aspx)    
--   [关于已分区表和索引的查询处理增强功能](http://msdn.microsoft.com/library/ms345599.aspx)    
--   [生成大型关系数据仓库的前 10 大最佳做法](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [关于已分区表和索引的查询处理增强功能](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [生成大型关系数据仓库的前 10 大最佳做法](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
   
   

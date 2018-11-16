@@ -26,12 +26,12 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 73752c57120544374edfc9790b07fe6a648779a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb0840c67ff34759e9d17426b33ce2d32f4e1143
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826295"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642228"
 ---
 # <a name="set-package-properties"></a>设置包属性
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的图形界面创建包时，可以在“属性”窗口中设置包对象的各个属性。  
@@ -54,19 +54,19 @@ ms.locfileid: "47826295"
   
 -   [中的](#Transactions)  
   
--   [版本](#Version)  
+-   [版本(Version)](#Version)  
   
  有关不能在“属性”窗口中设置的其他包属性的信息，请参阅 <xref:Microsoft.SqlServer.Dts.Runtime.Package>。  
   
 ### <a name="to-set-package-properties-in-the-properties-window"></a>在“属性”窗口中设置包属性  
   
--   [设置包的属性](http://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
+-   [设置包的属性](https://msdn.microsoft.com/library/0d20346e-475c-412f-b3ff-7bce25242b7a)  
   
 ## <a name="properties-by-category"></a>按类别排列的属性  
  下表列出了按类别排列的包属性。  
   
 ###  <a name="Checkpoints"></a> 检查点  
- 使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [通过使用检查点重新启动包](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
+ 使用此类别中的属性可以从包控制流中的某一故障点重新启动包，而不是从包控制流的开始处重新运行包。 有关详细信息，请参阅 [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md)。  
   
 |“属性”|描述|  
 |--------------|-----------------|  
