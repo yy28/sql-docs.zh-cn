@@ -16,12 +16,12 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a039375adbaf9c9d5a5de02b0fb0ecf4b3b6a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c2d0db051e473a5b84bef5139137e33b91b62d2d
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097456"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559369"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性组概述 (SQL Server)
   本主题介绍用于在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中配置和管理一个或多个可用性组的核心 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]概念。 有关可用性组提供的优势的摘要和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 术语的概述，请参阅 [AlwaysOn 可用性组 (SQL Server)](always-on-availability-groups-sql-server.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "48097456"
   
  下图显示的是一个包含一个主要副本和四个次要副本的可用性组。 支持最多八个辅助副本，包括一个主副本和两个同步提交辅助副本。  
   
- ![具有五个副本的可用性组](../../media/aoag-agintrofigure.gif "具有五个副本的可用性组")  
+ ![具有五个副本的可用性组](../../media/aoag-agintrofigure.gif "Availability group with five replicas")  
   
   
 ##  <a name="AvDbs"></a> 可用性数据库  

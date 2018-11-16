@@ -14,16 +14,16 @@ ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 521b6945c993aa699c09dc2dfc398ac07d4bde31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b002fb0c6dcfa17a01f42c65f1946536a915c210
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707605"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601478"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下面的代码段演示如何使用[SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)方法替换[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47707605"
 <SCRIPT Language="VBScript">  
   
      'set RDS properties for control just created  
-    RDS.Server = "http://<%=Request.ServerVariables("SERVER_NAME")%>"  
+    RDS.Server = "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
     RDS.Connect = "Provider='sqloledb';Integrated Security='SSPI';Initial Catalog='Northwind';"  
     RDS.SQL = "Select * from Employees"  
     RDS.Refresh  
