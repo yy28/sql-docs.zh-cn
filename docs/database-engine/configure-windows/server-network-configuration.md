@@ -19,12 +19,12 @@ ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 441e329ce93ea0aa30a8a3ad0f2cbf587d7d196e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed07e09663aa19ead617ce1c6ae63762fff0d67b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736625"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600277"
 ---
 # <a name="server-network-configuration"></a>服务器网络配置
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47736625"
  对于支持扩展保护的操作系统，提供通过使用渠道绑定和服务绑定对针对验证的扩展保护的支持。 有关详细信息，请参阅 [使用扩展保护连接到数据库引擎](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)。  
   
 ## <a name="authenticating-by-using-kerberos"></a>使用 Kerberos 进行身份验证  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Kerberos 身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支持 Kerberos 身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md) 和 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)  
   
 ### <a name="registering-a-server-principal-name-spn"></a>注册服务器主体名称 (SPN)  
  Kerberos 身份验证服务使用 SPN 对服务进行身份验证。 有关详细信息，请参阅 [为 Kerberos 连接注册服务主体名称](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)。  

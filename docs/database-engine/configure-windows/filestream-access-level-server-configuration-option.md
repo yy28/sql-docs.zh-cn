@@ -14,12 +14,12 @@ ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 571b521ed41828b60a385df312e7aab1130c8e08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d80151d60b14bc582b8be7c8fbf229cc795a74d3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627255"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606301"
 ---
 # <a name="filestream-access-level-server-configuration-option"></a>filestream access level 服务器配置选项
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47627255"
 |2|针对 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 流访问启用 FILESTREAM。|  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎配置 - 文件流](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
+ [数据库引擎配置 - 文件流](https://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02)   
  [启用和配置 FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
   
   
