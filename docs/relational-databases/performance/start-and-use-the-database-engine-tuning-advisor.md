@@ -19,12 +19,12 @@ ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cc9fbc190645b2f517758b129e92f458dcef316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cbdfeec8b603c4ca474088e0134f9fb2c319c08
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846595"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661123"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>启动并使用数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "47846595"
 >  不支持暂停数据库引擎优化顾问。 如果在单击“停止分析”或“停止分析（并提供建议）”工具栏按钮之后单击“开始分析”工具栏按钮，数据库引擎优化顾问将启动新的优化会话。  
   
 ###  <a name="dta"></a> 使用 dta 实用工具  
- [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=43100)。  
+ [dta 实用工具](../../tools/dta/dta-utility.md) 提供了一个命令提示符可执行文件，可以用来优化数据库。 该实用工具使您能够在批处理文件和脚本中使用数据库引擎优化顾问的功能。 **dta** 实用工具使用计划缓存项、跟踪文件、跟踪表和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 脚本作为工作负荷。 它还将使用符合数据库引擎优化顾问 XML 架构的 XML 输入，有关该架构的详细信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100)。  
   
  在使用 **dta** 实用工具开始优化工作负荷之前，请考虑下列事项：  
   
@@ -313,7 +313,7 @@ ms.locfileid: "47846595"
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
- 此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 网站 [上也在线提供了](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)优化顾问 XML 架构。  
+ 此 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Microsoft 网站 [上也在线提供了](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)优化顾问 XML 架构。  
   
  单击此 URL 可打开一个包含许多 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 架构的页面。 向下滚动页面，直至找到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问所在的行。  
   

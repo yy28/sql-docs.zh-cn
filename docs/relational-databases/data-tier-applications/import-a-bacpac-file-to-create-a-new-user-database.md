@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82537145f6604ea89589278084107a79012d85c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2227cb838c52bf309373a6d67f4d006841e30a4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812523"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673666"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>导入 BACPAC 文件以创建新的用户数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "43812523"
  单击 **“关闭”** 关闭该向导。  
   
 ## <a name="see-also"></a>另请参阅  
-[导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/en-us/documentation/articles/sql-database-import/)  
+[导入 BACPAC 文件以创建新的 Azure SQL 数据库](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [数据层应用程序](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [导出数据层应用程序](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
   

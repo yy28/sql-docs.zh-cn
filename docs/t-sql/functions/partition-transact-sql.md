@@ -19,12 +19,12 @@ ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 74287e364736b4a1d09711b20817a9a0b0c694c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839535"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698515"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. 获取分区表或索引的每个非空分区的行数  
  以下示例将返回包含数据的表 `TransactionHistory` 的每个分区的行数。 `TransactionHistory` 表使用分区函数 `TransactionRangePF1`，并在 `TransactionDate` 列上进行分区。  
   
- 若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+ 若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -92,7 +92,7 @@ GO
  以下示例将返回表 `5` 第 `TransactionHistory` 分区的所有行。  
   
 > [!NOTE]  
->  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015)。  
+>  若要执行此示例，必须首先对 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 示例数据库运行 PartitionAW.sql 脚本。 有关详细信息，请参阅 [PartitioningScript](https://go.microsoft.com/fwlink/?LinkId=201015)。  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

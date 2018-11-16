@@ -13,12 +13,12 @@ ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298377810a6d0f42b952c94ff6835be506d6559e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca2831d69f454c1a8488946644c3f83ccac0ca29
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697615"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>“CHECK 约束”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47611755"
 展开此项可显示“表达式”属性字段。  
   
 **表达式**  
-显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅 [使用约束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
+显示选定的 CHECK 约束的表达式。 对于新约束，必须先输入表达式，然后才能退出此框。 您还可以编辑现有的 CHECK 约束。 有关详细信息，请参阅 [使用约束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
   
 **标识类别**  
 展开此项可显示“名称”和“说明”的属性。  
@@ -65,6 +65,6 @@ ms.locfileid: "47611755"
 指示当复制代理对此表执行插入或更新操作时是否强制约束。  
   
 ## <a name="see-also"></a>另请参阅  
-[使用约束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用约束 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [“索引 - 键”对话框 (Visual Database Tools)](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

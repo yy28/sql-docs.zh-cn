@@ -12,12 +12,12 @@ ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9407e6c678945f6d4f483c4babbe4d4ce37cb0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b21d901e30af96362198001033d56c51d6c9e4
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798032"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700368"
 ---
 # <a name="filter-operators-master-data-services"></a>Filter 运算符 (Master Data Services)
 
@@ -42,8 +42,8 @@ ms.locfileid: "47798032"
 |**小于或等于**|返回小于或等于指定条件的属性值。 例如，如果要返回以数字 **3** 或更小数字开头的属性值，请键入 **3**。|  
 |**匹配**|使用模糊查找索引来筛选结果。<br /><br /> 请使用“相似性级别”字段来指定属性值与指定筛选条件匹配的程度（默认值为 30%）。<br /><br /> 请在 **“算法”** 列表框中选择以下之一：<br /><br /> **Levenshtein**：一个字符串与另一个字符串匹配所需的距离（该距离基于编辑次数，例如添加或删除的次数）。 这是默认设置。 不需要任何附加参数。<br /><br /> **Jaccard**：尝试匹配多个字符串时最适用的指数。 此搜索支持一个附加的包含偏差参数（见下文）。<br /><br /> **Jaro-Winkler**：最适用于查找重复人名的距离。 此方法返回比任何其他方法都要多的结果。 不支持包含偏差。<br /><br /> **最长公共子序列**：基于一定的子序列工作，在该子序列中，具有一定模式的字母（尽管可能是隔开的）依次出现（例如，“MSR”是“MaSteR”的子序列）。 此搜索支持一个附加的包含偏差参数（见下文）。<br /><br /> <br /><br /> 注意：为“Jaccard”或“最长公共子序列”算法添加“包含偏差”。 这是一个长度阈值，以 0 到 1 之间的小数形式提供，默认值为 .62。 较低的阈值将提高可能返回的匹配项的数量。|  
 |**不匹配**|使用模糊查找索引来筛选结果。 请使用 **“相似性级别”** 字段来指定属性值与指定筛选条件不匹配的程度。|  
-|**包含模式**|使用 .NET Framework 正则表达式按指定模式筛选结果。 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。|  
-|**不包含模式**|使用 .NET Framework 正则表达式筛选与指定模式不匹配的结果。 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](http://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。|  
+|**包含模式**|使用 .NET Framework 正则表达式按指定模式筛选结果。 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。|  
+|**不包含模式**|使用 .NET Framework 正则表达式筛选与指定模式不匹配的结果。 有关正则表达式的详细信息，请参阅 MSDN Library 中的 [Regular Expression Language Elements](https://go.microsoft.com/fwlink/?LinkId=164401) （正则表达式语言元素）。|  
 |**为 NULL**|返回为 Null 的属性值。 如果选择 **“为 NULL”** 运算符，则 **“条件”** 字段禁用。|  
 |**不为 NULL**|返回不为 Null 的属性值。 如果选择 **“不为 NULL”** 运算符，则禁用 **“条件”** 字段。|  
   

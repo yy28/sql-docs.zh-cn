@@ -28,12 +28,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a548ec574f6ae81b6e365f8f0e9f68db6357102
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: 4603333bce62f363a70c82936dfdbb28478f6a0d
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643775"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701935"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ CHAR ( integer_expression )
 0 到 255 之间的整数。 当整数表达式超出此范围或此整数仅表示双字节字符的第一个字节时，`CHAR` 返回 `NULL` 值。
 
 > [!NOTE]
-> 某些非欧洲字符集（如 [Shift 日本工业标准](http://www.wikipedia.org/wiki/Shift_JIS)）包括可以以单字节编码方案表示但需要多字节编码的字符。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。 
+> 某些非欧洲字符集（如 [Shift 日本工业标准](https://www.wikipedia.org/wiki/Shift_JIS)）包括可以以单字节编码方案表示但需要多字节编码的字符。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。 
   
 ## <a name="return-types"></a>返回类型
 **char(1)**

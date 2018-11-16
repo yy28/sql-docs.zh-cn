@@ -16,12 +16,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92e732924f3e5c6d4604ea194330605b2ec86d5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 531a20353b294d24bee8318da863eec6d05522d9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814045"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675286"
 ---
 # <a name="extensible-key-management-ekm"></a>可扩展的密钥管理 (EKM)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47814045"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可扩展的密钥管理能够使第三方 EKM/HSM 供应商在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中注册他们的模块。 注册后， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户可以使用存储在 EKM 模块上的加密密钥。 这样， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 便可访问这些模块支持的高级加密功能（例如批量加密和解密）以及密钥管理功能（例如密钥老化和密钥旋转）。  
   
- 当在 Azure VM 中运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用存储在 [Azure 密钥保管库](http://go.microsoft.com/fwlink/?LinkId=521401)中的密钥。 有关详细信息，请参阅 [使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
+ 当在 Azure VM 中运行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用存储在 [Azure 密钥保管库](https://go.microsoft.com/fwlink/?LinkId=521401)中的密钥。 有关详细信息，请参阅 [使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)能够对密钥进行管理，其中包括加密密钥层次结构和密钥备份。  
   
 ## <a name="ekm-configuration"></a>EKM 配置  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的所有版本中都未提供可扩展密钥管理。 有关 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]各版本支持的功能列表，请参阅 [SQL Server 2016 各个版本支持的功能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)。  

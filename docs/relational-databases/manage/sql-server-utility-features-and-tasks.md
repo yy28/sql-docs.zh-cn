@@ -18,12 +18,12 @@ ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 47a917fc622bd8be46dd798b9adc787ad6a51e34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 60099ea8f029f8e1b6687a1d69e12cb76f520c61
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030964"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656557"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 实用工具的功能和任务
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "51030964"
 |介绍如何在 SQL Server 的托管实例上更改实用工具数据收集器的代理帐户。|[在 SQL Server 的托管实例上更改实用工具收集组的代理帐户（SQL Server 实用工具）](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |介绍如何在 SQL Server 的实例之间移动 UCP。|[将 UCP 从 SQL Server 的一个实例移到另一个实例（SQL Server 实用工具）](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |介绍如何删除 UCP。|[删除实用工具控制点（SQL Server 实用工具）](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|介绍如何排除 SQL Server 实用工具的故障。|[SQL Server 实用工具故障排除](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|介绍如何排除 SQL Server 实用工具的故障。|[SQL Server 实用工具故障排除](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
 |介绍如何排除 SQL Server 资源运行状况的故障。|[SQL Server 资源运行状况故障排除（SQL Server 实用工具）](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |指向 UtilityExplorer F1 帮助主题的链接。|[实用工具资源管理器的 F1 帮助](../../relational-databases/manage/utility-explorer-f1-help.md)|  
   

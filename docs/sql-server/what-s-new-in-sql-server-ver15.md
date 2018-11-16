@@ -1,22 +1,20 @@
 ---
 title: SQL Server 2019 中的新增功能 | Microsoft Docs
-ms.custom: ''
 ms.date: 11/06/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
-ms.technology:
-- server-general
+ms.technology: release-landing
 ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a98e8c702b3d3ff772ccf42bdfd56153ddd7fc
-ms.sourcegitcommit: 87fec38a515a7c524b7c99f99bc6f4d338e09846
+ms.openlocfilehash: 55cf8c1bc9a7a74928ebe2f5c0c7060c94068e48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51272615"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703905"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>SQL Server 2019 中的新增功能
 
@@ -25,7 +23,7 @@ ms.locfileid: "51272615"
 [!INCLUDE[sql-server-2019](..\includes\sssqlv15-md.md)] 在早期版本的基础上构建，旨在将 SQL Server 发展成一个平台，以提供开发语言、数据类型、本地或云以及操作系统选项。 本文汇总了 SQL Server 2019 的新增功能。 有关详细信息和已知问题，请参阅 [SQL Server 2019 发行说明](sql-server-ver15-release-notes.md)。
 
 试用 SQL Server 2019！
-- [![从评估中心下载](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=862101) [下载 SQL Server 2019 以在 Windows 上安装](http://go.microsoft.com/fwlink/?LinkID=862101)
+- [![从评估中心下载](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [下载 SQL Server 2019 以在 Windows 上安装](https://go.microsoft.com/fwlink/?LinkID=862101)
 - 在 Linux 上针对 [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md)、[SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 和 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md) 安装。
 - [在 Docker 上运行 SQL Server 2019](../linux/quickstart-install-connect-docker.md)。
 
@@ -178,7 +176,7 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
   如果没有此功能，当索引创建失败，则必须再次执行联机索引创建操作，且必须从头开始重新启动该操作。
 
-在此版本中，我们将扩展可恢复功能，以将此功能添加到可用的[可恢复联机索引重新生成](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
+在此版本中，我们将扩展可恢复功能，以将此功能添加到可用的[可恢复联机索引重新生成](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/)。
 
 此外，可以使用[面向联机和可恢复 DDL 操作的数据库范围的默认设置](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)，将此功能设置为特定数据库的默认设置。
 
@@ -264,7 +262,7 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 如果没有此功能，则必须直接在索引 DDL 语句（如 index create 和 rebuild）中指定“联机”和“可恢复”选项。
 
-详细信息：有关可恢复的索引操作的详细信息，请参阅[可恢复联机索引创建](http://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
+详细信息：有关可恢复的索引操作的详细信息，请参阅[可恢复联机索引创建](https://azure.microsoft.com/blog/resumable-online-index-create-is-in-public-preview-for-azure-sql-db/)。
 
 ### <a id="ha"></a>AlwaysOn 可用性组 - 更多同步副本 (CTP 2.0)
 
@@ -331,7 +329,7 @@ SQL Server 2019 预览版引入了静态数据掩码。 可以使用静态数据
 
 相比标准分析技术，轻量查询分析基础结构 (LWP) 能够更有效地提供查询性能数据。 现在，默认情况下启用轻量分析。 已在 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1 中引入此功能。 轻量分析提供查询执行统计信息集合机制，预期开销为 2% CPU，而标准查询分析机制的开销高达 75% CPU。 在早期版本中，默认禁用此功能。 数据库管理员可通过[跟踪标志 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 来启用它。 
 
-有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](http://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
+有关轻量分析的详细信息，请参阅[开发人员选择：随时随地查询进度](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)。
 
 ### <a id="polybase"></a> 新 PolyBase 连接器
 

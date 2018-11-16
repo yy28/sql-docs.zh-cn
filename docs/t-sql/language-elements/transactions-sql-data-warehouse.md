@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9939a049b8157b1a9d1aa127cbab18629bc0af03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616290"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696801"
 ---
 # <a name="transactions-sql-data-warehouse"></a>事务（SQL 数据仓库）
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  如果运行时语句错误以外的错误使显式事务无法成功完成，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 将自动回滚事务并释放该事物占用的所有资源。 例如，如果客户端与 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 实例的网络连接中断或客户端已注销应用程序，那么当网络向实例通知该中断后，该连接的所有未提交事务均会被回滚。  
   
- 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx)。  
+ 如果批处理中出现运行时语句错误，[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的行为将与设置为 ON 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XACT_ABORT 的行为一致，并且整个事务都将回滚。 有关 XACT_ABORT 设置的详细信息，请参阅 [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx)。  
   
 ## <a name="general-remarks"></a>一般备注  
  给定时间内，一个会话只能运行一个事务；不支持保存点和嵌套事务。  

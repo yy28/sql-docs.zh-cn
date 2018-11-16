@@ -11,12 +11,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc38600559c931e1ce3cd59708b47e581de2557
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706565"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672766"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解释型 Transact-SQL 访问内存优化表
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47706565"
   
 - 将数据库选项 [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 设置为 ON。  
   
-由在 [自动提交模式](http://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)下运行的查询访问的内存优化表不需要隔离级别表提示。  
+由在 [自动提交模式](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00)下运行的查询访问的内存优化表不需要隔离级别表提示。  
   
 ## <a name="see-also"></a>另请参阅
 

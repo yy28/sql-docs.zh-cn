@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 680232b1a65bf811c5281da715e4fb93fd2f416f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735685"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665566"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>使用计算列提升常用的 XML 值
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  若要如此，首先创建流式 CLR 函数。 **xml** 数据类型在 ADO.NET 中作为托管类 SqlXml 公开，并且支持返回 XmlReader 的 **CreateReader()** 方法。  
   
 > [!NOTE]  
->  本部分中的示例代码使用了 XPathDocument 和 XPathNavigator。 这些都强制要求您将所有 XML 文档加载到内存中。 如果您要在您的应用程序中使用类似代码来处理多个大型 XML 文档，此代码并不可伸缩。 而是应尽可能保持较小的内存分配并使用流式接口。 有关性能的详细信息，请参阅 [CLR 集成体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)。  
+>  本部分中的示例代码使用了 XPathDocument 和 XPathNavigator。 这些都强制要求您将所有 XML 文档加载到内存中。 如果您要在您的应用程序中使用类似代码来处理多个大型 XML 文档，此代码并不可伸缩。 而是应尽可能保持较小的内存分配并使用流式接口。 有关性能的详细信息，请参阅 [CLR 集成体系结构](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)。  
   
 ```  
 public class c_streaming_xml_tvf {  

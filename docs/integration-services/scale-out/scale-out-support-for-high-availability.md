@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53fc11dc3735f1a27401164044c452a038c9c0ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9572368002a0aef7b02d615701baefb0fd6708b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594766"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638141"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out 对高可用性的支持
 
@@ -29,7 +29,7 @@ Scale Out Master 端的高可用性则通过[针对 SSIS 目录的 Always On](..
 要使用针对 SSIS 目录的 Always On 设置 Scale Out Master 端的高可用性，请执行以下步骤：
 
 ## <a name="1-prerequisites"></a>1.必备条件
-设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)。 在所有群集节点上安装功能和工具。
+设置 Windows 故障转移群集。 有关说明，请参阅博客文章[安装适用于 Windows Server 2012 的故障转移群集功能和工具](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)。 在所有群集节点上安装功能和工具。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.在主节点上安装 Scale Out Master
 在用于 Scale Out Master 的主节点上安装 SQL Server 数据库引擎服务、Integration Services 和 Scale Out Master。 

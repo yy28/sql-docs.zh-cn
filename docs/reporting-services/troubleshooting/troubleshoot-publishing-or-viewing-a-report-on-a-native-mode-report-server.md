@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d89b4156225de984854076f8218c29f033e4a0d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653035"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811770"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>对在本机模式报表服务器上发布或查看报表进行故障排除
   
@@ -29,7 +29,7 @@ ms.locfileid: "47653035"
   
 向本机模式下的报表服务器部署报表时，常见的错误是指定报表文件夹的名称而不是报表服务器的名称。   
   
-验证报表服务器 URL 是否是报表服务器的地址（例如， `http://localhost/reportserver`），而不是报表管理器虚拟目录的地址（例如， `http://localhost/reports`）。 如果你已为报表服务器指定与默认端口号 80 不同的端口号，则必须在报表服务器地址（例如， `http://localhost:81/reportserver`）中指定该端口号。   
+验证报表服务器 URL 是否是报表服务器的地址（例如， `https://localhost/reportserver`），而不是报表管理器虚拟目录的地址（例如， `https://localhost/reports`）。 如果你已为报表服务器指定与默认端口号 80 不同的端口号，则必须在报表服务器地址（例如， `https://localhost:81/reportserver`）中指定该端口号。   
   
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>在已发布的报表中切换项时，无任何反应。  
   在本地预览中查看报表时，可在该报表中切换项，以及显示或隐藏这些项。 将报表发布到报表服务器后查看该报表时，切换项无法正常使用。   
