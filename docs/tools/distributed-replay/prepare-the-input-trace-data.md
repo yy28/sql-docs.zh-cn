@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 54cb4fe84a416a945ab9fdd2a3ffdb4d2ebda057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b175f8142aeaac61dd2dddd66be0c6c648665187
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676656"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291483"
 ---
 # <a name="prepare-the-input-trace-data"></a>准备输入跟踪数据
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,6 +63,6 @@ ms.locfileid: "47676656"
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

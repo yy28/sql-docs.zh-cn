@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2e144ae53a0809d459ea70123951c5f559bb60ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1729dd568024ef2297111f69a42882f5b6aaf67
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660420"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>客户端协议 - Shared Memory 属性（“协议”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,6 +31,6 @@ ms.locfileid: "47761405"
  可能的值为“是”和“否”。  
   
 ## <a name="see-also"></a>另请参阅  
- [选择网络协议](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [选择网络协议](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

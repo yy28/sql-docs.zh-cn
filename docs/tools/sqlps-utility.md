@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
@@ -16,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600706"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666966"
 ---
 # <a name="sqlps-utility"></a>sqlps 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **sqlps** 实用工具可启动 Windows PowerShell 会话，同时加载和注册 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供程序和 cmdlet。 您可以输入 PowerShell 命令或脚本，它们使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 组件来处理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的实例及其对象。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]改用 sqlps PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 改用 **sqlps** PowerShell 模块。 有关 **sqlps** 模块的详细信息，请参阅 [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -99,7 +98,7 @@ sqlps
   
 -   使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供程序路径可以浏览 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 对象的层次结构。  
   
- 默认情况下， **sqlps** 实用工具在运行时将脚本执行策略设置为“受限” 。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](http://go.microsoft.com/fwlink/?LinkId=103166)（运行 Windows PowerShell 脚本）。  
+ 默认情况下， **sqlps** 实用工具在运行时将脚本执行策略设置为“受限” 。 这样可以防止运行任何 PowerShell 脚本。 可以使用 **Set-ExecutionPolicy** cmdlet 来启用运行签名的脚本或任意脚本。 请仅运行来自受信任源的脚本，并通过使用适当的 NTFS 权限来保证所有输入和输出文件的安全。 有关启用 PowerShell 脚本的详细信息，请参阅 [Running Windows PowerShell Scripts](https://go.microsoft.com/fwlink/?LinkId=103166)（运行 Windows PowerShell 脚本）。  
   
  在 **和** 中，此版本的 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 实用工具已作为 Windows PowerShell 1.0 微型外壳程序实现。 微型外壳程序具有某些限制，例如不允许用户加载不是由微型外壳程序所加载的管理单元。 这些限制并不适用于 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 版本及更高的版本的实用工具，这些版本已更改为使用 **sqlps** 模块。  
   

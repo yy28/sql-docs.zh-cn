@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 4ca0d4337a4377f1c61d118db7852b195dc279e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c80013249af94a2ad94c221bc6155dca7c7d2664
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684405"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606757"
 ---
 # <a name="information-in-error-interfaces"></a>错误接口中的信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47684405"
 |成员函数|描述|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|使用有关错误的基本信息填充 ERRORINFO 结构。 ERRORINFO 结构包含标识错误的 HRESULT 返回值的成员、访问接口和该错误适用的接口。|  
-|**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口的引用。|  
+|**GetCustomErrorObject**|返回对 ISQLErrorInfo 和 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 接口的引用。|  
 |**GetErrorInfo**|返回对 IErrorInfo 接口的引用。|  
 |**GetErrorParameters**|SQL Server 的 OLE DB 驱动程序不返回给使用者通过参数**GetErrorParameters**。|  
 |**GetRecordCount**|可用错误记录的计数。|  

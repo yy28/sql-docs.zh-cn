@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
@@ -27,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed7803b276159de71bd609dae4742401f04bc120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a576c33b805fb350b465ea47d2588e0dae7036
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621606"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291783"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 实用工具 (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -233,7 +232,7 @@ WHERE database_id = DB_ID();
  如果指定了 **-P** 选项而未指定密码，则 **ssbdiagnose** 将使用默认密码 (NULL)。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]有关详细信息，请参阅[强密码](../../relational-databases/security/strong-passwords.md)。  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] 有关详细信息，请参阅 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
  通过向控制台输出密码提示，可以显示密码提示，如下所示： `Password:`  
   
@@ -461,7 +460,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE (Transact SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE (Transact SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)   
+ [RECEIVE (Transact SQL)](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  

@@ -14,17 +14,17 @@ ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5778bdbfa00d3280e6257572a6c5357b23945b9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754657"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600327"
 ---
 # <a name="default-php-data-types"></a>默认 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在从服务器检索数据时，如果用户未指定任何 PHP 数据类型， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 会将数据转换为默认 PHP 数据类型。  
+在从服务器检索数据时，如果用户未指定任何 PHP 数据类型，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 会将数据转换为默认 PHP 数据类型。  
   
 当使用 PDO_SQLSRV 驱动程序返回数据时，数据类型将是 int 或 string。  
   
@@ -113,7 +113,7 @@ SQL Server 2008 中新增的和存在于列外（如表值参数）的数据类�
 
 [Converting Data Types](../../connect/php/converting-data-types.md)
 
-[PHP 类型](http://php.net/manual/en/language.types.php)
+[PHP 类型](https://php.net/manual/en/language.types.php)
 
 [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 

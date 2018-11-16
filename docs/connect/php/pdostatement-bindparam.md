@@ -11,12 +11,12 @@ ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9471c0c86edd9ff5a8357b797014036bd60fec83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647643"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606357"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,7 +122,7 @@ echo $input1;
 ```  
 
 > [!NOTE]
-> 建议使用字符串作为输入，绑定到的值时[decimal 或 numeric 的列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要确保的精确度和准确度，如 PHP 具有有限的精度[浮点数](http://php.net/manual/en/language.types.float.php)。 这同样适用于到 bigint 列，尤其是有效值的范围之外[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建议使用字符串作为输入，绑定到的值时[decimal 或 numeric 的列](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)若要确保的精确度和准确度，如 PHP 具有有限的精度[浮点数](https://php.net/manual/en/language.types.float.php)。 这同样适用于到 bigint 列，尤其是有效值的范围之外[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>示例  
 此代码示例演示如何将绑定十进制值作为输入参数。  
@@ -146,5 +146,5 @@ $stmt->execute();
 ## <a name="see-also"></a>另请参阅  
 [PDOStatement 类](../../connect/php/pdostatement-class.md)
 
-[PDO](http://php.net/manual/book.pdo.php)  
+[PDO](https://php.net/manual/book.pdo.php)  
   

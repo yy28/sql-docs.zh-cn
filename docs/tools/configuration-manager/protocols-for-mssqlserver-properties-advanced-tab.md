@@ -12,21 +12,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: edf8eb62d316ea19009884fe7c4518064ad0aa6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25573848ea6aa4a3bfb11c01fad9c9b72b04e5e3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660496"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>MSSQLSERVER 属性的协议（“高级”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   使用 **“MSSQLSERVER 属性的协议”** 对话框上的 **“高级”** 选项卡为   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 **扩展保护** 是操作系统实现的一项网络组件功能。 Windows 7 和 Windows Server 2008 R2 提供**扩展保护** ，旧操作系统的 Service Pack 中也包括此功能。 使用**扩展保护**进行连接时，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 会更安全。 **扩展保护** 功能的一些好处需要选定 **“标志”** 选项卡上的 **“强行加密”** 后才能获得。  
   
 > [!IMPORTANT]  
->  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅知识库文章 [针对验证的扩展保护](http://go.microsoft.com/fwlink/?LinkId=178431)。  
+>  默认情况下，Windows 不启用 **扩展保护** 。 有关如何在 Windows 中启用 **扩展保护** 的信息，请参阅知识库文章 [针对验证的扩展保护](https://go.microsoft.com/fwlink/?LinkId=178431)。  
   
- 有关如何配置其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，以及 **扩展保护**的完整描述，请参阅 [Microsoft.com](http://go.microsoft.com/fwlink/?LinkId=177752)上的最新信息。  
+ 有关如何配置其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务，以及 **扩展保护**的完整描述，请参阅 [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752)上的最新信息。  
   
  从 开始的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 完全支持扩展保护 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。 目前不支持将 **扩展保护** 用于其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客户端提供程序。  
   

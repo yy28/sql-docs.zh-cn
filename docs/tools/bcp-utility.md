@@ -5,8 +5,7 @@ ms.date: 02/12/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -30,17 +29,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8455d2c3681b78fe892e91d20857ee2ad7a7dfb2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 51c510345b83f7dcf9279692b30de639af64a2fb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383842"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675376"
 ---
 # <a name="bcp-utility"></a>bcp 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Bcp 实用程序的最新版本，请参阅[适用于 SQL Server 的 Microsoft 命令行实用程序 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Bcp 实用程序的最新版本，请参阅[适用于 SQL Server 的 Microsoft 命令行实用程序 14.0 ](https://go.microsoft.com/fwlink/?LinkID=825643)
 
  > 有关如何在 Linux 上使用 bcp，请参阅[在 Linux 上安装 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
@@ -184,7 +183,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 可以是一个最大为 2^63-1 的正整数值。 **-F** first_row 的值从 1 开始。  
 
 **-G**<a name="G"></a>  
- 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[14.0.3008.27 版本或更高版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 当连接到 Azure SQL 数据库或 Azure SQL 数据仓库时，客户端将使用此开关指定该用户使用 Azure Active Directory 身份验证来进行身份验证。 -G 开关需要[14.0.3008.27 版本或更高版本](https://go.microsoft.com/fwlink/?LinkID=825643)。 要确定你的版本，请执行 bcp -v。 有关详细信息，请参阅[使用 Azure Active Directory 身份验证进行身份验证与 SQL 数据库或 SQL 数据仓库](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!TIP]
 >  若要查看你的 bcp 版本是否包括对 Azure Active Directory 身份验证 (AAD) 类型的支持**bcp-** (bcp\<空间 >\<短划线 >\<短划线 >)，并验证您看到-G 在列表中可用参数。
@@ -384,7 +383,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 ## 备注<a name="remarks"></a>
  使用 **bcp** 工具时，将安装 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 13.0 客户端。 如果同时安装了 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 和早期版本 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的工具，你所使用的可能是早期版本的 **bcp** 客户端，而不是 **bcp** 13.0 客户端，具体情况取决于 PATH 环境变量的值。 此环境变量定义 Windows 用于搜索可执行文件的目录集。 若要确定当前所使用的版本，请在 Windows 命令提示符下运行 **bcp /v** 命令。 有关如何在 PATH 环境变量中设置命令路径的信息，请参阅 Windows 帮助。  
  
-bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/en-us/download/details.aspx?id=52676)分开下载。  选择 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
+bcp 实用工具还可以与 [Microsoft SQL Server 2016 功能包](https://www.microsoft.com/download/details.aspx?id=52676)分开下载。  选择 `ENU\x64\MsSqlCmdLnUtils.msi` 或 `ENU\x86\MsSqlCmdLnUtils.msi`。
 
   
  只有当 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 工具和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client 一起安装后，才支持 XML 格式化文件。  

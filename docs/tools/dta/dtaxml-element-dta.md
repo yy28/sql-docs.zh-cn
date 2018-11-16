@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f09e7899d3723e646f285dbc599a30556f6df039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a99b2d366368a88925344cc54470bef7ba25152a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778075"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671566"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,8 +31,8 @@ ms.locfileid: "47778075"
 ```  
   
 <DTAXML   
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
-    xmlns="http://schemas.microsoft.com/sqlserver/2004/07/dta">  
+    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
 ```  
@@ -42,8 +41,8 @@ ms.locfileid: "47778075"
   
 |Attribute|描述|  
 |---------------|-----------------|  
-|**xmlns: xsi**|必需的。 标识 XML 架构实例命名空间。 可以使用此命名空间中的属性来引用用于验证数据库引擎优化顾问 XML 文件的架构。<br /><br /> 必需的值：[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|**xmlns**|必需的。 标识数据库引擎优化顾问命名空间。<br /><br /> 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用 XML 编辑器编辑数据库引擎优化顾问 XML 文件，则“F1 帮助”和“动态帮助”将使用此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中定位可能的引用主题。<br /><br /> 必需的值：<br /><br /> [Database Engine Tuning Advisor XML Schema](http://go.microsoft.com/fwlink/?LinkId=43100) （数据库引擎优化顾问 XML 架构）命名空间|  
+|**xmlns: xsi**|必需的。 标识 XML 架构实例命名空间。 可以使用此命名空间中的属性来引用用于验证数据库引擎优化顾问 XML 文件的架构。<br /><br /> 必需的值：[https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns**|必需的。 标识数据库引擎优化顾问命名空间。<br /><br /> 如果在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中使用 XML 编辑器编辑数据库引擎优化顾问 XML 文件，则“F1 帮助”和“动态帮助”将使用此值在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中定位可能的引用主题。<br /><br /> 必需的值：<br /><br /> [Database Engine Tuning Advisor XML Schema](https://go.microsoft.com/fwlink/?LinkId=43100) （数据库引擎优化顾问 XML 架构）命名空间|  
   
 ## <a name="element-characteristics"></a>元素特征  
   
@@ -58,10 +57,10 @@ ms.locfileid: "47778075"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|None|  
-|**子元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/)）|  
+|**子元素**|[DTAInput 元素 (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素（有关信息，请参阅[数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/)）|  
   
 ## <a name="remarks"></a>Remarks  
- 有关 XML namespaces 的详细信息，请参阅 [MSDN Library 中的](http://go.microsoft.com/fwlink/?LinkId=7341) Namespaces in an XML Document [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
+ 有关 XML namespaces 的详细信息，请参阅 [MSDN Library 中的](https://go.microsoft.com/fwlink/?LinkId=7341) Namespaces in an XML Document [!INCLUDE[msCoName](../../includes/msconame-md.md)] 。  
   
 ## <a name="example"></a>示例  
  有关典型 **DTAXML** 元素的示例，请参阅 [XML 输入文件实例 (DTA)](../../tools/dta/xml-input-file-samples-dta.md)。  

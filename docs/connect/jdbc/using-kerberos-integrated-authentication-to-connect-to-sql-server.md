@@ -11,18 +11,18 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e4f058b1ae9f35df86b1e326c520bd4ebb588c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd82f894db2afc469c40c883deab2071b0e89f98
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798895"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600447"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>使用 Kerberos 集成身份验证连接 SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望连接到使用类型 4 Kerberos 集成身份验证的数据库。 请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)的连接属性的详细信息。 有关 Kerberos 的详细信息，请参阅[Microsoft Kerberos](http://go.microsoft.com/fwlink/?LinkID=100758)。
+从 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 开始，应用程序可使用 authenticationScheme 连接属性指示它希望连接到使用类型 4 Kerberos 集成身份验证的数据库。 请参阅[连接属性设置](../../connect/jdbc/setting-the-connection-properties.md)的连接属性的详细信息。 有关 Kerberos 的详细信息，请参阅[Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)。
 
 对 Java Krb5LoginModule 使用集成身份验证时，可使用[类 Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html) 配置该模块。
 
@@ -54,7 +54,7 @@ ms.locfileid: "47798895"
 
 以下准则将有助于您配置 Kerberos：
 
-1. 设置**AllowTgtSessionKey**为 1 的 Windows 注册表中。 有关详细信息，请参阅 [Windows Server 2003 中的 Kerberos 协议注册表项和 KDC 配置项](http://support.microsoft.com/kb/837361)。
+1. 设置**AllowTgtSessionKey**为 1 的 Windows 注册表中。 有关详细信息，请参阅 [Windows Server 2003 中的 Kerberos 协议注册表项和 KDC 配置项](https://support.microsoft.com/kb/837361)。
 2. 请确保 Kerberos 配置（UNIX 环境中的 krb5.conf）指向您的环境中正确的领域和 KDC。
 3. 通过使用 kinit 或登录到域来初始化 TGT 缓存。
 4. 当在 Windows Vista 或 Windows 7 操作系统上运行使用 authenticationScheme=JavaKerberos 的应用程序时，应使用标准用户帐户。 但如果以管理员帐户运行应用程序，则必须使用管理员特权运行该应用程序。
@@ -72,9 +72,9 @@ ms.locfileid: "47798895"
 
 有关服务主体名称 (SPN) 的详细信息，请参阅：
 
-- [如何在 SQL Server 中使用 Kerberos 身份验证](http://support.microsoft.com/kb/319723)
+- [如何在 SQL Server 中使用 Kerberos 身份验证](https://support.microsoft.com/kb/319723)
 
-- [对 SQL Server 使用 Kerberos](http://go.microsoft.com/fwlink/?LinkId=207814)
+- [对 SQL Server 使用 Kerberos](https://go.microsoft.com/fwlink/?LinkId=207814)
 
 > [!NOTE]  
 > 在 6.2 版本的用于跨领域 Kerberos 的正确使用 JDBC 驱动程序之前将需要显式设置**serverSpn**。

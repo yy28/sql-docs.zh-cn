@@ -11,12 +11,12 @@ ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c87e7b85282c7ca237689296e08d2b7645240ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0134b1f5f20c02a853ef31024191ed69e9129908
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767135"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602647"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 身份验证连接
 
@@ -221,7 +221,7 @@ You have successfully logged on as: <your user name>
     3. 单击"应用注册"选项卡。
     4. 在抽屉中，单击"新建应用程序注册"。
     5. 输入 mytokentest 作为应用程序的友好名称，选择"Web 应用 /API"。
-    6. 我们不需要登录 URL。 只需提供任何内容: "http://mytokentest" 。
+    6. 我们不需要登录 URL。 只需提供任何内容: "https://mytokentest" 。
     7. 在底部单击"创建"。
     9. 仍然在 Azure 门户中，单击"设置"选项卡的应用程序，并打开"属性"选项卡。
     10. 找到"应用程序 ID"(也称为客户端 ID) 值并将其复制到某个位置，你稍后需要此配置应用程序 (例如，1846943b-ad04-4808-aa13-4702d908b5c1) 时。 请参阅以下快照。

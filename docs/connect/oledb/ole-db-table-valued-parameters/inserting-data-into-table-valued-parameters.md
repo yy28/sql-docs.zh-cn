@@ -13,19 +13,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9054dde2ce697cf954ad36474220a38c3d1210d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be4ecd3bfdf88029f56e86fb071edc51987a21b2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656375"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604587"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>向表值参数中插入数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  适用于 SQL Server 的 OLE DB 驱动程序支持两种供使用者为表值参数行指定数据的模型：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
+  适用于 SQL Server 的 OLE DB 驱动程序支持两种供使用者为表值参数行指定数据的模型：推送模型和请求模型。 提供演示请求模型的示例；请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   
 > [!NOTE]  
 >  表值参数列要么必须在所有行中具有非默认值，要么必须在所有行中具有默认值。 不能在某些行中具有默认值，而在其他行中不具有默认值。 因此，在表值参数绑定中，表值参数行集列数据仅允许状态值 DBSTATUS_S_ISNULL 和 DBSTATUS_S_OK。 DBSTATUS_S_DEFAULT 将导致失败，而绑定的状态值将设置为 DBSTATUS_E_BADSTATUS。  

@@ -10,12 +10,12 @@ ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7be4e5fa8ea0298fa096c0c65a91b7683c66b8e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec8999398feb77b44386111daae449b560bcf1da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666276"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay 要求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47598745"
 ### <a name="input-trace-versions"></a>输入跟踪版本  
  Distributed Replay 支持在以下版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中所收集的输入跟踪数据：  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累积更新 1 及更高版本。 请参阅[SQL Server 2017 累积更新](http://aka.ms/sql2017cu)。
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累积更新 1 及更高版本。 请参阅[SQL Server 2017 累积更新](https://aka.ms/sql2017cu)。
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -122,7 +122,7 @@ ms.locfileid: "47598745"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>操作系统要求  
@@ -160,7 +160,7 @@ ms.locfileid: "47598745"
   
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)   
- [安装 Distributed Replay - 概述](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [分布式重播安全性](../../tools/distributed-replay/distributed-replay-security.md)   
+ [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

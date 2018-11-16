@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1e85883fa9b772d132cc5f6aaa75f7d46539244
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717025"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677746"
 ---
 # <a name="distributed-replay-security"></a>分布式重播安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +80,9 @@ ms.locfileid: "47717025"
   
     3.  按 Enter。  
   
-2.  **配置计算机范围的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+2.  **配置计算机范围的 DCOM 权限**：为下表中列出的每个帐户授予相应的计算机范围的 DCOM 权限。 有关如何设置计算机范围的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
-3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](http://go.microsoft.com/fwlink/?LinkId=185842)。  
+3.  **配置应用程序特定的 DCOM 权限**：为下表中列出的每个帐户授予相应的应用程序特定的 DCOM 权限。 控制器服务的 DCOM 应用程序名称为 **DReplayController**。 有关如何设置应用程序特定的权限的详细信息，请参阅 [清单：管理 DCOM 应用程序](https://go.microsoft.com/fwlink/?LinkId=185842)。  
   
  下表介绍了管理工具交互式用户帐户和客户端服务帐户所需的 DCOM 权限：  
   

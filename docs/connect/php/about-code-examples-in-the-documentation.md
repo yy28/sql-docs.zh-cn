@@ -11,12 +11,12 @@ ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2ff8b884253f43c0b1092eb5ad7244eca7f3e3db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605815"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606737"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>文档中相关的代码示例
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,11 +26,11 @@ ms.locfileid: "47605815"
   
 -   几乎所有示例都假定本地计算机上安装 SQL Server 2008 或更高版本和 AdventureWorks 数据库。  
   
-    有关如何下载免费版和试用版的 SQL Server 的信息，请参阅 [SQL Server](http://go.microsoft.com/fwlink/?LinkID=120193)。  
+    有关如何下载免费版和试用版的 SQL Server 的信息，请参阅 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)。  
   
     有关如何下载和安装 AdventureWorks 数据库的信息，请参阅[SQL Server 示例 Github 存储库中的 AdventureWorks 页](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)。
   
--   本文档中的几乎所有代码示例都计划从命令行中运行，这可支持自动测试所有代码示例。 有关如何从命令行运行 PHP 的信息，请参阅 [从命令行使用 PHP](http://php.net/manual/en/features.commandline.php)。  
+-   本文档中的几乎所有代码示例都计划从命令行中运行，这可支持自动测试所有代码示例。 有关如何从命令行运行 PHP 的信息，请参阅 [从命令行使用 PHP](https://php.net/manual/en/features.commandline.php)。  
   
 -   虽然示例应当从命令行中运行，但每个示例均可通过在不对脚本进行任何更改的情况下从浏览器调用来运行。 若要很好地格式化输出，将替换为每个"\n""\<\/b >"中每个示例之前从浏览器中调用它。  
   

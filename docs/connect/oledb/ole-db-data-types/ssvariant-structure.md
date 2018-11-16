@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 484d8912c205f55dcebfacee01ec0c017b58117c
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: d500dc56ff128029ebba1576a84919f9694d8903
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085194"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602227"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 结构
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "49085194"
 
   **SSVARIANT**结构，其定义中 msoledbsql.h，对应于 OLE DB 驱动程序中的 DBTYPE_SQLVARIANT 值适用于 SQL Server。  
   
- **SSVARIANT**是区分的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示符](http://go.microsoft.com/fwlink/?LinkId=122171)。  
+ **SSVARIANT**是区分的联合。 根据 vt 成员的值，使用者可以确定要读取的成员。 vt 值与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 数据类型相对应。 因此，SSVARIANT 结构可以具有任何 SQL Server 类型。 有关标准 OLE DB 类型的数据结构的详细信息，请参阅[类型指示符](https://go.microsoft.com/fwlink/?LinkId=122171)。  
   
 ## <a name="remarks"></a>Remarks  
  如果 DataTypeCompat==80，几个 SSVARIANT 子类型都将成为字符串。 例如，以下 vt 值将在 SSVARIANT 中显示为 VT_SS_WVARSTRING：  

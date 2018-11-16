@@ -11,19 +11,19 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40def6feee993604fb65ebc1abd2d98f5c0718ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543651938433e2ac6824ea771edc1eba11540558
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751755"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603037"
 ---
 # <a name="deploying-the-jdbc-driver"></a>部署 JDBC 驱动程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  在部署依赖于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的应用程序时，必须同时重新对 JDBC 驱动程序和此应用程序进行分配。 与 Windows 操作系统的组件 Windows 数据访问组件 (Windows DAC) 不同，JDBC 驱动程序被认为是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的组件。  
+  部署依赖于 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的应用程序时，必须同时重新分配 JDBC 驱动程序和该应用程序。 与 Windows 操作系统的组件 Windows 数据访问组件 (Data Access Components,Windows DAC) 不同，JDBC 驱动程序被认为是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的组件。  
   
- 有两种方法可用于部署 JDBC 驱动程序和应用程序。 一种方法是将 JDBC 驱动程序文件添加到您自己的自定义安装包中。 第二种方法涉及到使用 Microsoft 所提供的 JDBC 安装包，可以从 [Microsoft JDBC Driver for SQL Server 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=70166)下载此包。  
+ 有两种方法可用于部署 JDBC 驱动程序和应用程序。 一种方法是将 JDBC 驱动程序文件添加到您自己的自定义安装包中。 第二种方法涉及到使用 Microsoft 所提供的 JDBC 安装包，可以从 [Microsoft JDBC Driver for SQL Server 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=70166)下载此包。  
   
  以下各部分讨论如何在 Windows 和 UNIX 操作系统上使用 JDBC 安装包。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47751755"
 >  使用 `/auto` 选项时，执行的并不是真正的无提示安装，因为 WinZip 对话框仍会出现在用户屏幕上。 然而，您无需与其进行交互，解压缩操作完成后，它会立即关闭。  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>在 UNIX 系统中部署驱动程序  
- 在 UNIX 操作系统上部署 JDBC 驱动程序时，必须使用安装包的 gzip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.tar.gz`。  
+ 在 UNIX 操作系统中部署 JDBC 驱动程序时，必须使用安装包的 gzip 文件版本，其名称通常为 `sqljdbc_<version>_<language>.tar.gz`。  
   
  在安装 JDBC 驱动程序前，请确保用户的系统中安装了 gzip 和 tar 实用程序，并已将包含这两个实用程序可执行文件的文件夹添加到了 PATH 环境变量中。  
   

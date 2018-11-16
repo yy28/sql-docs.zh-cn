@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 997c952ed127005f23b57654f1c0b9da033c14f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18016780c53575b0416d9a0aa7a8f4499c41de51
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609585"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603707"
 ---
 # <a name="system-requirements"></a>系统要求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -55,7 +55,7 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
   
 -   针对 64 位 SQLLEN/SQLULEN 生成的 64 位 UnixODBC 2.3.0 驱动程序管理器。 Linux 上的 ODBC 驱动程序不支持更高版本的 64 位 UnixODBC 驱动程序管理器。 有关详细信息，请参阅 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 。  
   
--   用于 Red Hat Enterprise Linux 5（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   用于 Red Hat Enterprise Linux 5（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -63,7 +63,7 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
     -   `krb5-libs`  
     -   `openssl`  
   
--   用于 Red Hat Enterprise Linux 6（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   用于 Red Hat Enterprise Linux 6（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11 for SQL Server - Red Hat Linux](https://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -71,7 +71,7 @@ Linux 和 macOS 的驱动程序是仅适用于以下操作系统的 64 位版本
     -   `krb5-libs`  
     -   `openssl`  
   
--   用于 SUSE Linux Enterprise 11 Service Pack 2（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11（预览版）for SQL Server - SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)  
+-   用于 SUSE Linux Enterprise 11 Service Pack 2（64 位）的 ODBC 驱动程序需要以下程序包，并且可以在此处下载：[Microsoft ODBC Driver 11（预览版）for SQL Server - SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  

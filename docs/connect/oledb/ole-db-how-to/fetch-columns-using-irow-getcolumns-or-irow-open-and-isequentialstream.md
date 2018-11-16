@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 79e10215fab0ca2f90d2685423a66cb95ea731c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fe101f790226f898b69b28d58f57a1166090bc3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743715"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602797"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47743715"
   可使用 ISequentialStream 接口绑定或检索大型数据。 对于绑定列，状态标志 DBSTATUS_S_TRUNCATED 表示数据被截断。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>使用 IRow::GetColumns（或 IRow::Open）和 ISequentialStream 提取列  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47743715"
 ## <a name="example"></a>示例  
  此示例显示如何使用 IRow 提取单行。 在此示例中，将一次从该行中检索一列。 此示例演示了 IRow::Open() 和 IRow::GetColumns() 的用法。 为读取列数据，示例中使用了 ISequentialStream::Read。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建该示例使用的表。  
   

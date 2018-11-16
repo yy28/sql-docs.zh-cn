@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,12 +19,12 @@ ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 333d51131fedac6bb87dc9dd5ba49c17ff26073e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625185"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51293083"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,10 +82,10 @@ number[minutes | hours | days | weeks | months]
  指定返回 **sqlmaint** 的语法关系图。 此参数必须单独使用。  
   
  -S server_name[ \\_instance\_name_]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的默认实例的 _server\_name_。 指定要连接到该服务器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器，**sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目标实例。 指定要连接到该服务器上 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的默认实例的 _server\_name_。 指定要连接到该服务器上 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **sqlmaint** 将连接到本地计算机上的 [!INCLUDE[ssDE](../includes/ssde-md.md)] 默认实例。  
   
  **-U** *login_ID*  
- 指定连接服务器时使用的登录 ID。 如果未提供，**sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
+ 指定连接服务器时使用的登录 ID。 如果未提供， **sqlmaint** 将尝试使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 身份验证。 如果 *login_ID* 包含特殊字符，则必须用双引号 (") 引起来；否则，双引号为可选。  
   
 > [!IMPORTANT]  
 >  请尽可能使用 Windows 身份验证。  

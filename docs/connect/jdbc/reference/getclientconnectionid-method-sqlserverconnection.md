@@ -11,12 +11,12 @@ ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa6954248b747cfd08789fa6f2e73ebc1e4befba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 823411df1521292914f7b8decf0636d1e6a330e7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730015"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600727"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID 方法 (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  无论连接到什么版本的服务器，getClientConnectionID 都有效，但是在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 及更早版本中将不会提供扩展事件日志和连接环形缓冲区上的条目。  
   
- 如果启用记录连接 ID 的扩展事件，您可以在扩展事件日志中查找连接 ID，以查看失败是否源自服务器。 还可以针对某些连接错误在连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](http://go.microsoft.com/fwlink/?LinkId=207752)）中查找连接 ID。 如果在连接环形缓冲区中找不到连接 ID，可以认为是网络错误。  
+ 如果启用记录连接 ID 的扩展事件，您可以在扩展事件日志中查找连接 ID，以查看失败是否源自服务器。 还可以针对某些连接错误在连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)）中查找连接 ID。 如果在连接环形缓冲区中找不到连接 ID，可以认为是网络错误。  
   
 ## <a name="see-also"></a>另请参阅  
  [SQLServerConnection 成员](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

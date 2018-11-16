@@ -11,12 +11,12 @@ ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 134b5eef527b375e9107149ead9d55ab08933363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b6790bce4cc3eb84ec707b56e909876606fa02
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603527"
 ---
 # <a name="using-table-valued-parameters"></a>使用表值参数
 
@@ -35,9 +35,9 @@ ms.locfileid: "47598385"
   
 | 资源                                                                                                             | 描述                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [表值参数 （数据库引擎）](http://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 联机丛书中 | 介绍如何创建和使用表值参数                             |
-| [用户定义表类型](http://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 联机丛书中                  | 说明用于声明表值参数的用户定义表类型 |
-| [Microsoft SQL Server 数据库引擎](http://go.microsoft.com/fwlink/?LinkId=120507)CodePlex 部分        | 包含演示如何使用 SQL Server 特征和功能的示例  |
+| [表值参数 （数据库引擎）](https://go.microsoft.com/fwlink/?LinkId=98363) SQL Server 联机丛书中 | 介绍如何创建和使用表值参数                             |
+| [用户定义表类型](https://go.microsoft.com/fwlink/?LinkId=98364)SQL Server 联机丛书中                  | 说明用于声明表值参数的用户定义表类型 |
+| [Microsoft SQL Server 数据库引擎](https://go.microsoft.com/fwlink/?LinkId=120507)CodePlex 部分        | 包含演示如何使用 SQL Server 特征和功能的示例  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>将多个行传递给在以前版本的 SQL Server 中  
 
@@ -53,7 +53,7 @@ ms.locfileid: "47598385"
   
 ## <a name="creating-table-valued-parameter-types"></a>创建表值参数类型  
 
-使用 TRANSACT-SQL 定义的强类型表结构为基础表值参数`CREATE TYPE`语句。 您必须创建一个表类型和 SQL Server 中定义的结构，然后才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
+使用 TRANSACT-SQL 定义的强类型表结构为基础表值参数`CREATE TYPE`语句。 您必须创建一个表类型和 SQL Server 中定义的结构，然后才能在客户端应用程序中使用表值参数。 有关创建表类型的详细信息，请参阅[用户定义表类型](https://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 联机丛书中。  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -298,7 +298,7 @@ pStmt.execute();
 
 | “属性”                                                                                                    | 描述                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 公共最终 void setStructured （int parameterIndex，字符串 tvpName，SQLServerDataTable tvpDataTbale）    | 填充数据表的表值参数。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpDataTable 是源数据的表对象。                                                                                                          |
+| 公共最终 void setStructured （int parameterIndex，字符串 tvpName，SQLServerDataTable tvpDataTable）    | 填充数据表的表值参数。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpDataTable 是源数据的表对象。                                                                                                          |
 | 公共最终 void setStructured （int parameterIndex，字符串 tvpName，结果集 tvpResultSet）             | 使用从其他表中检索一个结果集填充表值参数。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpResultSet 是源结果集对象。                                                                               |
 | 公共最终 void setStructured （int parameterIndex，字符串 tvpName，ISQLServerDataRecord tvpDataRecord） | 填充表值参数与 ISQLServerDataRecord 对象。 ISQLServerDataRecord 用于流式处理数据，并且用户决定如何使用它。 parameterIndex 是参数索引、 tvpName 是表值参数的名称和 tvpDataRecord 是 ISQLServerDataRecord 对象。 |
   

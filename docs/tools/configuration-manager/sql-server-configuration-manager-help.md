@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 48d376d197684dbe0a9267fcbde39afa81417fd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc654782c02536b4a03f19669f1f7e345a016b30
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657256"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 配置管理器帮助
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47720395"
  本节包含了按 F1 后看到的有关 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器中各对话框的帮助主题。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法配置 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器无法配置 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]版本。  
   
 ## <a name="services"></a>服务  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器管理与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的服务。 尽管其中许多任务可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 服务对话框来完成，但值得注意的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器还可以对其管理的服务执行更多的操作（例如，在服务帐户更改后应用正确的权限）。 使用标准的 Windows 服务对话框配置任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务都可能会造成服务无法正常工作。  
@@ -76,13 +76,13 @@ ms.locfileid: "47720395"
   
  **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 访问 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器**  
   
- 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时，[!INCLUDE[win8](../../includes/win8-md.md)] 配置管理器不显示为一个应用程序。 要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager12.msc（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）或 SQLServerManager11.msc（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]），然后按 Enter。  
+ 因为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理控制台程序的一个管理单元而不是单独的程序，所以，当运行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时， [!INCLUDE[win8](../../includes/win8-md.md)]配置管理器不显示为一个应用程序。 要打开 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 配置管理器，请在“搜索”超级按钮中的“应用”下，键入 SQLServerManager12.msc（对于 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]）或 SQLServerManager11.msc（对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]），然后按 Enter。  
   
 
 ## <a name="see-also"></a>另请参阅  
  [SQL Server 服务](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 网络配置](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 配置](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   
- [选择网络协议](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
+ [选择网络协议](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   

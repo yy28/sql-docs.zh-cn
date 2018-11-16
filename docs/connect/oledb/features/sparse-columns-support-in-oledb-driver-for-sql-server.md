@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f68761672232d2fed88ec3b56d5349d4f925fd43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718305"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606257"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>适用于 SQL Server 的 OLE DB 驱动程序的稀疏列支持
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47718305"
   
  有关 SQL Server 的 OLE DB 驱动程序中的稀疏列支持详细信息[稀疏列支持&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)。  
   
- 有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](http://msftdpprodsamples.codeplex.com/)。  
+ 有关演示此功能的示例应用程序的信息，请参阅 [SQL Server 数据编程示例](https://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="user-scenarios-for-sparse-columns-and-ole-db-driver-for-sql-server"></a>稀疏列和适用于 SQL Server 的 OLE DB 驱动程序的用户方案  
  下表总结了常见的用户方案的 OLE DB 驱动程序具有稀疏列的 SQL Server 用户：  

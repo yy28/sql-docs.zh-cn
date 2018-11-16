@@ -14,12 +14,12 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691815"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602167"
 ---
 # <a name="how-to-specify-php-data-types"></a>如何：指定 PHP 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "47691815"
   
 3.  结合使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 与所需的 PHP 数据类型（指定为可选的第三个参数）从返回行中检索字段数据。 如果未指定可选的第三个参数，将根据默认 PHP 类型返回数据。 有关默认 PHP 返回类型的信息，请参阅 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-    有关用于指定 PHP 数据类型的常量的信息，请参阅[常量 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 PHPTYPE 部分。  
+    有关用于指定 PHP 数据类型的常量的信息，请参阅[常量（icrosoft Drivers for PHP for SQL Server）](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的 PHPTYPE 部分。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，ReviewDate 字段以字符串形式进行检索，Comments 字段以流形式进行检索。 通过使用 PHP [fpassthru](http://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 在每个返回行中，ReviewDate 字段以字符串形式进行检索，Comments 字段以流形式进行检索。 通过使用 PHP [fpassthru](https://php.net/manual/en/function.fpassthru.php) 函数显示流数据。  
   
 该示例假定已在本地计算机上安装了 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 数据库。 从命令行运行该示例时，所有输出都将写入控制台。  
   

@@ -11,17 +11,17 @@ ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f8557d34acd3de425f4d6932eca95fbe6e2d334
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc9e6673076cdbd071f2357ce1bd5c4d10c2092
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784935"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602507"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server 中识别驱动程序的连接池
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](http://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支持[识别驱动程序的连接池](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)。 本主题介绍 Windows 上的 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中识别驱动程序的连接池的增强功能：  
   
 -   无论连接属性如何，使用 `SQLDriverConnect` 的连接都会从使用 `SQLConnect` 的连接转到单独的池。
 - 当使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证和识别驱动程序的连接池时，该驱动程序不会使用当前线程的 Windows 用户安全上下文来分离池中的连接。 也就是说，当连接等效于其用于通过 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证的 Windows 模拟方案的参数，且它们使用同一个 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 身份验证凭据连接到后端时，不同的 Windows 用户或许可以使用同一个连接池。 当使用 Windows 身份验证和识别驱动程序的连接池时，该驱动程序将使用当前 Windows 用户的安全上下文来分离池中的连接。 也就是说，对于 Windows 模拟方案，不同的 Windows 用户不会共享连接，即使这些连接使用相同的参数也是如此。

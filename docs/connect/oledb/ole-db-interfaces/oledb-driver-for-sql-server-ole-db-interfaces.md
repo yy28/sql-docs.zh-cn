@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e3fc010dfa8dfd24c216fc5074efd0dca2ad85d3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: d0086ada5f1399de191670dc415fca2e1ca00bce
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032296"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606937"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>适用于 SQL Server 的 OLE DB 驱动程序 (OLE DB) 接口
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51032296"
   
  此适用于 SQL Server 的 OLE DB 驱动程序编程参考未记录所有 OLE DB 接口和方法，该参考仅记录了当使用适用于 SQL Server 的 OLE DB 驱动程序时表现访问接口特定行为的接口和方法。  
   
- 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](http://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
+ 有关 OLE DB 核心接口和方法的完整说明，请参阅 [OLE DB Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45232)（OLE DB 程序员参考）。  
   
 ## <a name="in-this-section"></a>本节内容  
   

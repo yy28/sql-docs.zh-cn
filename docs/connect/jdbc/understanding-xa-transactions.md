@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a72f59535e3cac718f1c2e7821cd69962043987f
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 66f12f33e7b6eaac901ca29961465be71e7996e3
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851972"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605647"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 事务
 
@@ -45,7 +45,7 @@ ms.locfileid: "48851972"
 
 - 将 XA 事务与 Microsoft 分布式事务处理协调器 (MS DTC) 一起使用时，你可能会注意到 MS DTC 的当前版本不支持紧密结合的 XA 分支行为。 例如，MS DTC 在 XA 分支事务 ID (XID) 与 MS DTC 事务 ID 之间具有一对一的映射，由松散耦合的 XA 分支执行的工作彼此之间是隔离的。  
   
-     借助于在 [MSDTC 和紧密结合的事务](http://support.microsoft.com/kb/938653)中提供的修补程序，可以支持紧密结合的 XA 分支，其中，多个具有相同全局事务 ID (GTRID) 的 XA 分支映射到单一 MS DTC 事务 ID。 这种支持使得多个紧密结合的 XA 分支可以在资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）中看到彼此发生的变化。  
+     借助于在 [MSDTC 和紧密结合的事务](https://support.microsoft.com/kb/938653)中提供的修补程序，可以支持紧密结合的 XA 分支，其中，多个具有相同全局事务 ID (GTRID) 的 XA 分支映射到单一 MS DTC 事务 ID。 这种支持使得多个紧密结合的 XA 分支可以在资源管理器（如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]）中看到彼此发生的变化。  
   
 - [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 标志允许应用程序使用紧密结合的 XA 事务，这些事务具有不同的 XA 分支事务 ID (BQUAL)，但具有相同的全局事务 ID (GTRID) 和格式 ID (FormatID)。 若要使用该功能，必须设置[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的标志参数：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48851972"
 ### <a name="BKMK_ServerSide"></a>为自动回滚尚未准备好的事务配置服务器端超时设置  
 
 > [!WARNING]  
-> 此服务器端选项是适用于 SQL Server 的 Microsoft JDBC Driver 4.2（和更高版本）附带的新功能。 若要获取更新的行为，请确保服务器上的 sqljdbc_xa.dll 已更新。 有关设置客户端超时的详细信息，请参阅 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
+> 此服务器端选项是适用于 SQL Server 的 Microsoft JDBC Driver 4.2（和更高版本）附带的新功能。 若要获取更新的行为，请确保服务器上的 sqljdbc_xa.dll 已更新。 有关设置客户端超时的详细信息，请参阅 [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
 
 有两个注册表设置（DWORD 值）来控制分布式事务的超时行为：  
   

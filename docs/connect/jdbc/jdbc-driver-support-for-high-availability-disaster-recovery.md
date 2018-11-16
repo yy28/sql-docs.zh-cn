@@ -11,19 +11,19 @@ ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aefb03c667d870800a67f49c50baccf2230d7e2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b101070aaaef8a0e287bf02d943359d9fca8de67
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836165"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605477"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性和灾难恢复的支持 -- [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
+  本主题介绍 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 对于高可用性及灾难恢复（[!INCLUDE[ssHADR](../../includes/sshadr_md.md)]）的支持。 有关 [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] 的详细信息，请参阅 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 联机丛书。  
   
- 从 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版本开始，可以在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
+ 在 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 4.0 版中，您可以先在连接属性中指定（高可用性、灾难恢复）可用性组 (AG) 的可用性组侦听器。 如果将 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 应用程序连接到具有故障转移功能的 AlwaysOn 数据库，则在故障转移后，会断开原始连接，并且该应用程序必须建立一个新的连接才能继续运行。 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 中新增了以下[连接属性](../../connect/jdbc/setting-the-connection-properties.md)：  
   
 -   **multiSubnetFailover**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47836165"
   
  如果在连接到非可用性组侦听程序或故障转移群集实例时指定 multiSubnetFailover=true，则可能会对性能造成负面影响，因此不支持这样做。  
   
- 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果您未将默认生存时间更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
+ 如果未安装安全管理器，默认情况下，Java 虚拟机将缓存虚拟 IP 地址 (VIP) 一段时间（由您的 JDK 实现和 Java 属性 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 定义）。 如果已安装 JDK 安全管理器，默认情况下，Java 虚拟机将缓存 VIP 且不会刷新缓存。 您应将 Java 虚拟机缓存的“生存时间”(networkaddress.cache.ttl) 设置为“一天”。 如果您未将默认生存时间更改为“一天（左右）”，则添加或更新 VIP 后，不会清除 Java 虚拟机缓存中的旧值。 有关 networkaddress.cache.ttl 和 networkaddress.cache.negative.ttl 的详细信息，请参阅[ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)。  
   
  使用以下准则可以连接到可用性组或故障转移群集实例中的服务器：  
   

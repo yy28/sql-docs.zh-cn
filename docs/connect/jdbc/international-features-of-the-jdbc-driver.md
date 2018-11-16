@@ -11,21 +11,21 @@ ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b56b2b415479ed6a290fe87f52befb5a5331521
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 321176cae5783968826f3094f63a5c6e30a1d3e9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682565"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601967"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 驱动程序的国际功能
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的国际化功能包括以下各项：  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的国际化功能包括以下功能：  
   
 -   对使用与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相同的语言来实现完全本地化体验的支持  
   
--   对受区域设置影响的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据进行 Java 语言转换的支持  
+-   对本地敏感 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据的 Java 语言转换的支持  
   
 -   对于国际语言的支持，而不考虑操作系统  
   
@@ -55,10 +55,10 @@ ms.locfileid: "47682565"
 ## <a name="collation-support"></a>排序规则支持  
  JDBC Driver 3.0 支持 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 和 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所支持的所有排序规则，并且还支持 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 中引入的新排序规则或新版 Windows 排序规则名称。  
   
- 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[排序规则和 Unicode 支持](http://go.microsoft.com/fwlink/?LinkId=131366)和 [Windows 排序规则名称 (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=131367)。  
+ 有关排序规则的详细信息，请参阅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 联机丛书中的[排序规则和 Unicode 支持](https://go.microsoft.com/fwlink/?LinkId=131366)和 [Windows 排序规则名称 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)。  
   
 ## <a name="using-international-domain-names-idn"></a>使用国际域名 (IDN)  
- JDBC Driver 6.0 for SQL Server 支持使用国际化域名 (IDN)，并且可以在连接期间按照要求将 Unicode serverName 转换为 ASCII 兼容编码 (Punycode)。  如果 IDN 以 Punycode 格式（由 RFC 3490 指定）作为 ASCII 字符串存储在域名系统 (DNS) 中，通过将 serverNameAsACE 属性设置为 true 来启用 Unicode 服务器名称的转换。  否则，如果 DNS 服务配置为允许使用 Unicode 字符，请将 serverNameAsACE 属性设置为 false（默认值）。  对于较早版本的 JDBC 驱动程序，还可以在为连接设置该属性之前使用 [Java 的 IDN.toASCII](http://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法将 serverName 转换为 Punycode。  
+ JDBC Driver 6.0 for SQL Server 支持使用国际化域名 (IDN)，并且可以在连接期间按照要求将 Unicode serverName 转换为 ASCII 兼容编码 (Punycode)。  如果 IDN 以 Punycode 格式（由 RFC 3490 指定）作为 ASCII 字符串存储在域名系统 (DNS) 中，通过将 serverNameAsACE 属性设置为 true 来启用 Unicode 服务器名称的转换。  否则，如果 DNS 服务配置为允许使用 Unicode 字符，请将 serverNameAsACE 属性设置为 false（默认值）。  对于较早版本的 JDBC 驱动程序，还可以在为连接设置该属性之前使用 [Java 的 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 方法将 serverName 转换为 Punycode。  
   
 > [!NOTE]  
 >  为非 Windows 平台编写的大多数解析程序软件基于 Internet DSN 标准，因此很可能为 IDN 使用 Punycode 格式，而专用网络上的基于 Windows 的 DNS 服务器可以配置为允许针对每个服务器使用 UTF-8 字符。  有关详细信息，请参阅 [Unicode 字符支持](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)。  

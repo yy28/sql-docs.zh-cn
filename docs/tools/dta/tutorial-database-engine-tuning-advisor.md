@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
@@ -15,12 +14,12 @@ ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 571b2a78414b6435a48d24cbc4abb83d0f8d2d8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a70ee2ad71f6b51f8bb28dc0361e65c6cebc18a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750495"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657526"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>教程：数据库引擎优化顾问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47750495"
 ## <a name="requirements"></a>要求  
 本教程面向符合以下条件的数据库管理员：不熟悉数据库引擎优化顾问 GUI 或 **dta** 命令提示实用工具，但对于数据库概念和结构（如索引和索引视图）经验丰富。  
   
-必须使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 示例数据库安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] （或更高版本）。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](http://sqlserversamples.codeplex.com)。  
+必须使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 示例数据库安装 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] （或更高版本）。 为了增强安全性，默认情况下不会安装示例数据库。 若要安装示例数据库，请参阅 [安装 SQL Server 示例和示例数据库](https://sqlserversamples.codeplex.com)。  
   
 ## <a name="after-you-finish-this-tutorial"></a>学完本教程后  
 学完本教程中的课程后，请参考以下主题来了解有关数据库引擎优化顾问的详细信息：  

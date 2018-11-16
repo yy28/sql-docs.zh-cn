@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 994011062b36f028157c3f70b3f2ed3c335d526f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f09f9e2f9ad166edb764aa33a8b20623e11cf08
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612905"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600667"
 ---
 # <a name="return-codes"></a>返回代码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47612905"
 
   在最基本的级别上，成员函数要么成功，要么失败。 在稍微精确一些的级别上，函数可能会成功，但是它的成功可能并不是应用程序开发人员想要的成功。  
   
- 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)（返回代码 (OLE DB)）。  
+ 有关 OLE DB 返回代码的详细信息，请参阅 [Return Codes (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631)（返回代码 (OLE DB)）。  
   
  当 SQL Server 成员函数用于 OLE DB 驱动程序返回 S_OK 时，函数成功。  
   

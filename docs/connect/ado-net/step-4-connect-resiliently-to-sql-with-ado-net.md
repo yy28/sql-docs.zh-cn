@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75c6f352a962232b2109861b2a264d458af05e70
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 483c7f84d171b34135d16fd6f392b6f5f180d217
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119796"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607097"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>步骤 4：使用 ADO.NET 实现对 SQL 的弹性连接
 
@@ -39,7 +39,7 @@ ms.locfileid: "49119796"
   
 您的程序必须区分暂时性错误与持久性错误。 暂时性错误是时间的在短时间，如暂时性网络问题可能会清除的错误条件。  举例说明了持久错误，如果将程序具有目标数据库名称的拼写错误-"没有此类数据库找到"错误这种情况下，将仍然存在，并且没有机会的时间在短时间内清理。  
   
-分类为暂时性故障的错误号列表位于[SQL 数据库客户端应用程序的错误消息](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+分类为暂时性故障的错误号列表位于[SQL 数据库客户端应用程序的错误消息](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>步骤 2： 创建并运行示例应用程序  
   
@@ -317,4 +317,4 @@ ms.locfileid: "49119796"
   
 ## <a name="next-steps"></a>Next Steps  
   
-若要浏览其他最佳 practicies 和设计指南，请访问[连接到 SQL 数据库： 链接、 最佳实践和设计指南](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+若要浏览其他最佳 practicies 和设计指南，请访问[连接到 SQL 数据库： 链接、 最佳实践和设计指南](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

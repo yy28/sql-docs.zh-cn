@@ -11,12 +11,12 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24bf2d56bda17378dcc45a464fd46f95c9664936
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9edff1e2afead8dcec3a23fa2d89c4eb8c6a1ef2
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790445"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602847"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server（Windows 平台）
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,7 +25,7 @@ Microsoft ODBC Driver for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md
 
 Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以升级当前使用较旧的 ODBC 驱动程序的较旧应用程序。 ODBC Driver for SQL Server 支持与 Azure SQL 数据库、Azure SQL 数据仓库、SQL Server 2017、SQL Server 2016、SQL Server 2014、SQL Server 2012、SQL Server 2008 R2、SQL Server 2008 和 SQL Server 2005 的连接。  
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>“摘要”
 
 | 版本       | 支持的功能      |
 | ------------- |---------------| 
@@ -35,7 +35,7 @@ Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以
 | Microsoft ODBC Driver 11 for SQL Server | <ul><li>识别驱动程序的连接池</li><li>连接复原</li><li>异步执行（轮询方法）</li></ul> |    
 
 ## <a name="documentation"></a>文档  
-适用于 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的此文档包括：  
+用于 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的此文档包括：  
   
 -   [发行说明](../../../connect/odbc/windows/release-notes.md)  
 -   [Windows 上的 Microsoft ODBC Driver for SQL Server 的功能](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
@@ -48,8 +48,8 @@ Microsoft ODBC Driver for SQL Server 可用于创建新应用程序。 还可以
 -   [使用透明网络 IP 解析](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>社区  
-- [Microsoft SQL Server ODBC 驱动程序团队博客](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [SQL Server Data Access Forum（英文）](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Microsoft SQL Server ODBC 驱动程序团队博客](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Data Access Forum（英文）](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>另请参阅  
 - [关于 SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   

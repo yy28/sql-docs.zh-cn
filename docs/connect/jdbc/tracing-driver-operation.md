@@ -11,12 +11,12 @@ ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32dc6e7c3f40517bc82aaa67e58a938651fe2161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682515"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605777"
 ---
 # <a name="tracing-driver-operation"></a>跟踪驱动程序操作
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47682515"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 支持使用跟踪（或日志记录）协助解决在应用程序中使用 JDBC 驱动程序时出现的问题。 若要启用跟踪，JDBC 驱动程序需要使用 java.util.logging 中的日志记录 API，java.util.logging 可提供用于创建 Logger 和 LogRecord 对象的类集。  
   
 > [!NOTE]  
->  对于 JDBC 驱动程序中包含的本地组件 (sqljdbc_xa.dll)，可通过内置诊断 (BID) 框架启用跟踪。 有关 BID 的信息，请参阅 [SQL Server 中的数据访问跟踪](http://go.microsoft.com/fwlink/?LinkId=70042)。  
+>  对于 JDBC 驱动程序中包含的本地组件 (sqljdbc_xa.dll)，可通过内置诊断 (BID) 框架启用跟踪。 有关 BID 的信息，请参阅 [SQL Server 中的数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=70042)。  
   
  开发应用程序时，可对 Logger 对象进行调用，它会转而创建 LogRecord 对象（这些对象随后会传递给 Handler 对象进行处理）。 记录器和处理程序对象所日志记录级别，这两个使用和处理日志记录筛选器，来规定哪些 LogRecords 可以 （可选）。 完成日志记录操作后，Handler 对象可选择使用 Formatter 对象发布日志信息。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47682515"
 |TDS.Channel|该类别跟踪 SQL Server 对 TCP 通信通道的操作。 记录的消息包括套接字的打开和关闭以及读取和写入。 还跟踪与 SQL Server 建立安全套接字层 (SSL) 连接的相关消息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINE、FINER 或 FINEST 才能启用。|  
 |TDS.Writer|该类别跟踪对 TDS 信道的写入。 请注意，只跟踪写入的长度，不跟踪内容。 该类别还跟踪将关注信号发送给服务器以取消语句的执行时出现的问题。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.Reader|该类别跟踪 FINEST 级别 TDS 信道的某些读取操作。 在 FINEST 级别，跟踪可能非常详细。 在 WARNING 和 SEVERE 级别，该类别跟踪在驱动程序关闭连接之前，驱动程序何时从 SQL Server 收到无效的 TDS 协议。<br /><br /> 该类别只有通过将日志记录级别设置为 FINER 和 FINEST 才能启用。|  
-|TDS.Command|该类别跟踪低级状态转换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
+|TDS.Command|该类别跟踪低级状态切换以及与执行 TDS 命令（例如 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句执行、ResultSet 游标获取、提交等）关联的其他信息。<br /><br /> 该类别只有通过将日志记录级别设置为 FINEST 才能启用。|  
 |TDS.TOKEN|该类别仅记录 TDS 包内的标记，不如 TDS.DATA 类别详细。 它只有通过将日志记录级别设置为 FINEST 才能启用。<br /><br /> 在 FINEST 级别，当 TDS 标记在响应中进行处理时，此类别对其进行跟踪。 在 SEVERE 级别，该类别跟踪何时遇到无效的 TDS 标记。|  
 |SQLServerDatabaseMetaData|在 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  
 |SQLServerResultSetMetaData|在 [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 类中记录消息。 应用程序可将日志记录级别设置为 FINE。|  

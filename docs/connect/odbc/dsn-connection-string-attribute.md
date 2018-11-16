@@ -1,7 +1,7 @@
 ---
 title: DSN 和连接字符串关键字和适用于 SQL Server 的 ODBC 驱动程序中使用的属性 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 11/07/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 034efe241bb948c1e5739247e481a4057b0d7219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c75876771efbc87eb30c368fb5246e12c60707
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838175"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512854"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 和连接字符串关键字和属性
 
@@ -41,7 +41,7 @@ ms.locfileid: "47838175"
 | [ConnectRetryCount](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_COUNT](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [ConnectRetryInterval](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | [SQL_COPT_SS_CONNECT_RETRY_INTERVAL](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) | W |
 | [“数据库”](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_ATTR_CURRENT_CATALOG](../../odbc/reference/syntax/sqlsetconnectattr-function.md) | LMW |
-| [说明](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
+| [Description](../../connect/odbc/dsn-connection-string-attribute.md#description) | | LMW |
 | [驱动程序](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [DSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
 | [Encrypt](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_ENCRYPT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssencrypt) | LMW |
@@ -159,6 +159,9 @@ ms.locfileid: "47838175"
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 密码身份验证。|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 交互式身份验证。|
 | |SQL_AU_RESET|取消设置。 重写任何 DSN 或连接字符串设置。|
+
+> [!NOTE]
+> 使用时`Authentication`关键字或属性，显式指定`Encrypt`设置连接字符串中所需的值为 / DSN / 连接属性。 请参阅[将连接字符串关键字用于 SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)有关详细信息。
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption-SQL_COPT_SS_COLUMN_ENCRYPTION
 

@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0edf87997b8b53266e7597b392bb217288590636
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fc7f06a3b7c2455777b56de0875841c51905e95
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810142"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604357"
 ---
 # <a name="using-integrated-authentication"></a>使用集成身份验证
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,23 +57,23 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
 
 应用程序作为服务运行时，因为按照设计 Kerberos 凭据会过期，所以需续订这些凭据以确保服务持续可用。 ODBC 驱动程序不续订凭据重试。请确保有`cron`作业或定期运行以续订其过期前的凭据的脚本。 若要避免为每个续订需要密码，可以使用 keytab 文件。  
   
-[“Kerberos 配置和使用”](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 提供有关 Linux 上的 Kerberize 服务的详细信息。
+[“Kerberos 配置和使用”](https://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 提供有关 Linux 上的 Kerberize 服务的详细信息。
   
 ## <a name="tracking-access-to-a-database"></a>跟踪对数据库的访问
 
-当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，数据库管理员可以创建数据库访问的审核线索。  
+当通过系统帐户使用集成身份验证访问 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时，数据库管理员可以创建数据库访问的审计线索。  
   
 登录到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 时需使用系统帐户，并且 Linux 上未提供相关功能来模拟安全上下文。 因此，需要更多信息来确定用户。
   
 若要代表用户（而非系统帐户）审核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的活动，应用程序必须使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE AS。  
   
-若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](http://www.unixodbc.org/doc/conn_pool.html)。  
+若要提高应用程序性能，应用程序可以将连接池与集成身份验证和审核结合使用。 但是，合并连接池、集成身份验证和审核会带来安全风险，因为 unixODBC 驱动程序管理器允许不同的用户重复使用已入池的连接。 有关详细信息，请参阅 [ODBC 连接池](https://www.unixodbc.org/doc/conn_pool.html)。  
 
 在重复使用之前，应用程序必须通过执行 `sp_reset_connection` 重置已入池的连接。  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理用户身份
 
-应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
+应用程序系统管理员不必管理单独的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登录凭据集。 可以针对集成身份验证将 Active Directory 配置为密钥发行中心 (KDC)。 请参阅[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)有关详细信息。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用链接服务器和分布式查询
 
@@ -126,7 +126,7 @@ forwardable = yes
 
 如果 Kerberos 身份验证失败，则 Linux 或 macOS 上的 ODBC 驱动程序不使用 NTLM 身份验证。  
 
-有关 Linux 或 macOS 计算机与 Active Directory 进行身份验证的详细信息，请参阅[使用 Active Directory 对 Linux 客户端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[OS X 与 Active Directory集成的最佳做法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 有关配置 Kerberos 的详细信息，请参阅[MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+有关 Linux 或 macOS 计算机与 Active Directory 进行身份验证的详细信息，请参阅[使用 Active Directory 对 Linux 客户端](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[OS X 与 Active Directory集成的最佳做法](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 有关配置 Kerberos 的详细信息，请参阅[MIT Kerberos 文档](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另请参阅  
 [编程指南](../../../connect/odbc/linux-mac/programming-guidelines.md)

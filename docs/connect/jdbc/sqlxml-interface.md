@@ -11,12 +11,12 @@ ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6257f3575412bc35b00722a0b5da6b8c5ca74f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1c7a244cdf644bef537f59ce705d14a750700f1
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815995"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604837"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 接口
 
@@ -32,15 +32,15 @@ SQLXML 接口提供了用于访问形式的 XML 值的方法**字符串**即**�
   
 |方法语法|方法说明|  
 |-------------------|------------------------|  
-|[void free()](http://go.microsoft.com/fwlink/?LinkId=131685)|此方法释放 SQLXML 对象以及它所持有的资源。|  
-|[InputStream getBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131754)|返回一个用于从 SQLXML 中读取数据的输入流。|  
-|[Reader getCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131755)|将 XML 数据作为 java.io.Reader 对象或字符流返回。|  
-|[T extends Source T getSource(Class\<T> sourceClass)](http://go.microsoft.com/fwlink/?LinkId=131756)|返回**源**进行读取**XML**指定此值**SQLXML**对象。<br /><br /> 注意：getSource 方法支持下列源：javax.xml.transform.dom.DOMSource、javax.xml.transform.sax.SAXSource、javax.xml.transform.stax.StAXSource 和 java.io.InputStream。|  
-|[String getString()](http://go.microsoft.com/fwlink/?LinkId=131757)|返回此 SQLXML 对象所指定的 XML 值的字符串表示形式。|  
-|[OutputStream setBinaryStream()](http://go.microsoft.com/fwlink/?LinkId=131758)|检索可用于写入此 SQLXML 对象所表示的 XML 值的流。|  
-|[Writer setCharacterStream()](http://go.microsoft.com/fwlink/?LinkId=131759)|返回可用于写入此 SQLXML 对象所表示的 XML 值的流。|  
-|[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|返回**结果**设置为**XML**指定此值**SQLXML**对象。<br /><br /> 注意：setResult 方法支持下列源：javax.xml.transform.dom.DOMResult、javax.xml.transform.sax.SAXResult、javax.xml.transform.stax.StaxResult 和 java.io.OutputStream。|  
-|[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|将此 SQLXML 对象所指定的 XML 值设置为指定的字符串表示形式。|  
+|[void free()](https://go.microsoft.com/fwlink/?LinkId=131685)|此方法释放 SQLXML 对象以及它所持有的资源。|  
+|[InputStream getBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131754)|返回一个用于从 SQLXML 中读取数据的输入流。|  
+|[Reader getCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131755)|将 XML 数据作为 java.io.Reader 对象或字符流返回。|  
+|[T extends Source T getSource(Class\<T> sourceClass)](https://go.microsoft.com/fwlink/?LinkId=131756)|返回**源**进行读取**XML**指定此值**SQLXML**对象。<br /><br /> 注意：getSource 方法支持下列源：javax.xml.transform.dom.DOMSource、javax.xml.transform.sax.SAXSource、javax.xml.transform.stax.StAXSource 和 java.io.InputStream。|  
+|[String getString()](https://go.microsoft.com/fwlink/?LinkId=131757)|返回此 SQLXML 对象所指定的 XML 值的字符串表示形式。|  
+|[OutputStream setBinaryStream()](https://go.microsoft.com/fwlink/?LinkId=131758)|检索可用于写入此 SQLXML 对象所表示的 XML 值的流。|  
+|[Writer setCharacterStream()](https://go.microsoft.com/fwlink/?LinkId=131759)|返回可用于写入此 SQLXML 对象所表示的 XML 值的流。|  
+|[T extends Result T setResult(Class\<T> resultClass)](https://go.microsoft.com/fwlink/?LinkId=131760)|返回**结果**设置为**XML**指定此值**SQLXML**对象。<br /><br /> 注意：setResult 方法支持下列源：javax.xml.transform.dom.DOMResult、javax.xml.transform.sax.SAXResult、javax.xml.transform.stax.StaxResult 和 java.io.OutputStream。|  
+|[void setString(String value)](https://go.microsoft.com/fwlink/?LinkId=131762)|将此 SQLXML 对象所指定的 XML 值设置为指定的字符串表示形式。|  
   
 应用程序只能从/向 SQLXML 对象中读取/写入 XML 值一次。  
   

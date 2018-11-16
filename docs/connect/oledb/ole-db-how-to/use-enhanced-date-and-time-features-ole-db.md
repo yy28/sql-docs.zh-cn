@@ -11,12 +11,12 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 6b02c4a73a1b83a993745ca069672e43f09c5667
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 276cf9f67d83ce67fa86ea00ca594f0c176456b9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814937"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607067"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用日期和时间增强功能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +25,10 @@ ms.locfileid: "47814937"
 
   此示例显示如何使用 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中引入的日期/时间功能。 此示例使用四个新日期和时间类型 (**日期**，**时间**， **datetime2**，以及**datetimeoffset**) 以执行命令参数和检索行集结果。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  第一个 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 代码列表创建此示例使用的存储过程。  

@@ -14,12 +14,12 @@ ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af84ebccf47802e157f75ac591f7cd96c5e822be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754656"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600377"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驱动程序以流的形式检索字符数据
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47754656"
 SQLSRV 驱动程序利用 PHP 流从服务器检索大量数据。 本主题中的示例演示如何以流的形式检索字符数据。  
   
 ## <a name="example"></a>示例  
-以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 返回行的 Comments 字段以流的形式检索，并通过使用 PHP [fpassthru](http://php.net/manual/function.fpassthru.php) 函数进行显示。  
+以下示例从 AdventureWorks 数据库的 *Production.ProductReview* 表中检索行。 返回行的 *Comments* 字段以流的形式检索，并通过使用 PHP [fpassthru](https://php.net/manual/function.fpassthru.php) 函数进行显示。  
   
 通过使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) （其中返回类型指定为字符流）来完成以流的形式检索数据操作。 返回类型通过使用常量 SQLSRV_PHPTYPE_STREAM 指定。 有关 sqlsrv 常量的信息，请参阅[常量 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   

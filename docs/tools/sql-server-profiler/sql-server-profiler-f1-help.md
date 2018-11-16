@@ -42,12 +42,12 @@ ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5d396cb99ccda05efc3f4b1370eabc6bd5cc6bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a598cb35b1b54151abb1393d231c23fb9a7ef0aa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667436"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 对话框
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |---|---
 |“事件”列|通过选中或清除事件列中的复选框，指定跟踪的事件。 **“事件”** 按事件类别进行组织。 模板中指定的事件类是自动选择的。 有关详细信息，请参阅 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
 |数据列|通过选中与所需的事件和数据列对应的框，指定跟踪的数据列。 对于在跟踪中包括的每个事件，将默认选中所有相关事件列。  
-|筛选器|通过单击数据列标题并输入筛选条件指定筛选器。 筛选出来的数据列由 **“编辑筛选器”** 对话框中列标签左边的筛选器图标指示。 有关详细信息，请参阅 [SQL Server Profiler - 编辑筛选器](http://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)。  
+|筛选器|通过单击数据列标题并输入筛选条件指定筛选器。 筛选出来的数据列由 **“编辑筛选器”** 对话框中列标签左边的筛选器图标指示。 有关详细信息，请参阅 [SQL Server Profiler - 编辑筛选器](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14)。  
 |**显示所有事件**|显示所有可用事件。 默认情况下，仅显示 **“事件选择”** 网格中选定的行。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的事件。  
 |**显示所有列**|显示所有可用数据列。 默认情况下，仅显示选定的数据列。 取消选中此框，将隐藏 **“事件选择”** 网格中所有未选定的数据列。  
 |**列筛选器**|启动“编辑筛选器”对话框。 您可以使用此对话框编辑数据列筛选器。  
@@ -179,7 +179,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 是从�
 |---|---
 |**不作提示，依次加载所有滚动更新文件**|在打开跟踪文件时，自动加载滚动更新文件。 如果在跟踪时创建了多个文件，选择此选项可以自动加载所有滚动更新文件。  
 |**加载滚动更新文件之前进行提示**|打开跟踪文件后，让 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 在添加滚动更新文件之前进行提示。  
-|**从不加载后续滚动更新文件**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]从不在跟踪文件处于打开状态时加载后续滚动更新文件。  
+|**从不加载后续滚动更新文件**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 从不在跟踪文件处于打开状态时加载后续滚动更新文件。  
 ### <a name="replay-options"></a>重播选项  
 |项|描述
 |---|---

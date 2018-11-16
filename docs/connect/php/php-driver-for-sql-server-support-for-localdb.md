@@ -10,12 +10,12 @@ ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2009d434b5faa3bf9cc63d5f9005ebe31be14d2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728525"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600467"
 ---
 # <a name="support-for-localdb"></a>支持 LocalDB
 
@@ -60,7 +60,7 @@ LocalDB 是轻型版本，其中[!INCLUDE[ssNoVersion](../../includes/ssnoversio
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\v11.0`。 (需要以获取与在命令行中; 运行时相同的结果在正确的帐户下运行时在 IIS 中运行，请参阅[将 localdb 与完整 IIS，第 2 部分结合： 实例所有权](http://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)有关详细信息。)
+如果需要，您可以使用 sqllocaldb.exe 创建 LocalDB 实例。 还可以使用 sqlcmd.exe 添加和修改 LocalDB 实例中的数据库。 例如， `sqlcmd -S (localdb)\v11.0`。 (需要以获取与在命令行中; 运行时相同的结果在正确的帐户下运行时在 IIS 中运行，请参阅[将 localdb 与完整 IIS，第 2 部分结合： 实例所有权](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx)有关详细信息。)
 
 以下是连接到 LocalDB 命名名为 myInstance 的实例中的数据库的示例连接字符串使用 SQLSRV 驱动程序：
 

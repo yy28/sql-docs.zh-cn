@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4580df95cb5450836bcb2cc171c491724cf71c38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67b9d537a3c274e156bf8b4c6450a622b6ef6593
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657666"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>第 3 课：使用 dta 命令提示实用工具
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47642405"
   
 通过数据库引擎优化顾问 XML 架构，您可以使用自己喜爱的 XML 工具创建实用工具的输入文件。 该架构随 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安装，可在 C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd 中找到。  
   
-数据库引擎优化顾问 XML 架构也可通过 [此 Microsoft 网站](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
+数据库引擎优化顾问 XML 架构也可通过 [此 Microsoft 网站](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)在线获得。  
   
 数据库引擎优化顾问 XML 架构在设置优化选项时可提供更大的灵活性。 例如，可通过它执行“假设分析”。 “假设分析”包括：为要优化的数据库指定一组现有的假设物理设计结构，然后使用数据库引擎优化顾问对该数据库进行分析，以判定此假设物理设计是否能改善查询处理性能。 此类分析具有的优点是，在评估新配置时不会引起实际实施它的开销。 如果假设物理设计不能提供预期的性能改善，则可以方便地进行更改和重新分析，直到获得能够满足需要的配置为止。  
   

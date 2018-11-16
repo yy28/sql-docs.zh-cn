@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0f1eaad7a68501abac2d6b8a890b8b56b1f2dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822205"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291753"
 ---
 # <a name="review-the-replay-results"></a>查看重播结果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,6 +82,6 @@ ms.locfileid: "47822205"
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [配置 Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [配置分布式重播](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

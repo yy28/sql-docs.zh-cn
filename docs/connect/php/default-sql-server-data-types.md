@@ -14,17 +14,17 @@ ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f3259d713fd846e59020b2551d5598f77b7d5d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3ccdf7ffa8b5eaf01108ca0492b9b5db9ecc042
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704375"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599858"
 ---
 # <a name="default-sql-server-data-types"></a>默认 SQL Server 数据类型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-在向服务器发送数据时，如果用户未指定任何 SQL Server 数据类型， [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 会将其 PHP 数据类型中的数据转换为 SQL Server 数据类型。 下表列出了 PHP 数据类型（向服务器发送的数据类型）和默认 SQL Server 数据类型（数据转换到的数据类型）。 有关将数据发送到服务器时如何指定数据类型的详细信息，请参阅 [如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)。  
+在向服务器发送数据时，如果用户未指定任何 SQL Server 数据类型，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 会将其 PHP 数据类型中的数据转换为 SQL Server 数据类型。 下表列出了 PHP 数据类型（向服务器发送的数据类型）和默认 SQL Server 数据类型（数据转换到的数据类型）。 有关将数据发送到服务器时如何指定数据类型的详细信息，请参阅 [如何：在使用 SQLSRV 驱动程序时指定 SQL Server 数据类型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)。  
   
 |PHP 数据类型|SQLSRV 驱动程序中的默认 SQL Server 类型|PDO_SQLSRV 驱动程序中的默认 SQL Server 类型|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "47704375"
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
 
-[PHP 类型](http://php.net/manual/language.types.php)
+[PHP 类型](https://php.net/manual/language.types.php)
 
 [数据类型 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

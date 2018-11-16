@@ -5,19 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c520639c0be9ad22a4ba768bf09a704292d511
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745315"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677606"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,8 +167,8 @@ ms.locfileid: "47745315"
 
 ### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>使用同步序列化模式运行时可能出现的问题
  您可能会遇到一种症状的重播功能出现的"停止"或重播事件速度非常缓慢。 如果在重播的跟踪依赖于数据和/或事件还原的目标数据库中不存在，则会发生这种现象。 
- 
- 例如，在 Service Broker 接收 WAITFOR 语句中使用 waitfor 子句，如捕获工作负荷。 使用同步序列化模式时，批处理是按顺序重播。 如果数据库备份之后发生对源数据库插入，但重播捕获跟踪已启动，在重播过程中发出 WAITFOR 接收可能需要等待 WAITFOR 的整个持续时间。 设置后将停止 WAITFOR 接收要重播的事件。 WAITFOR 完成之前，这可能导致重播数据库目标删除为零的 Batch Requests/sec 性能监视器计数器。 
+ 
+例如，在 Service Broker 接收 WAITFOR 语句中使用 waitfor 子句，如捕获工作负荷。 使用同步序列化模式时，批处理是按顺序重播。 如果数据库备份之后发生对源数据库插入，但重播捕获跟踪已启动，在重播过程中发出 WAITFOR 接收可能需要等待 WAITFOR 的整个持续时间。 设置后将停止 WAITFOR 接收要重播的事件。 WAITFOR 完成之前，这可能导致重播数据库目标删除为零的 Batch Requests/sec 性能监视器计数器。 
  
  如果您需要使用同步模式并且想要避免此行为，必须执行以下操作：
  
@@ -185,8 +184,8 @@ ms.locfileid: "47745315"
 ## <a name="see-also"></a>另请参阅  
  [管理工具命令行选项（Distributed Replay 实用工具）](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server 分布式重播](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [SQL Server 分布式重播论坛](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 2 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 1 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [SQL Server 分布式重播论坛](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [使用分布式重播对您的 SQL Server 进行负载测试 – 第 2 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [使用 Distributed Replay 对 SQL Server 进行负载测试 – 第 1 部分](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

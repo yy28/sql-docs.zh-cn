@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9ea00abe3c013ddba71b07316972b86494b1c093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b5b45a0f4844575e136703fe240132d7a8496cb
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754795"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605937"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>查找有关适用于 SQL Server 的 OLE DB 驱动程序的更多信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "47754795"
 
   有关适用于 SQL Server 的 OLE DB 驱动程序和其他类型的数据访问编程的详细信息，请参阅以下联机资源：  
   
- [数据访问和存储开发人员中心](http://go.microsoft.com/fwlink?linkid=4173)  
+ [数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)  
  该站点提供适用于 SQL Server 的 OLE DB 驱动程序和其他数据访问技术的技术文章、示例代码和其他资源。  
   
- [数据访问博客](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [数据访问博客](https://go.microsoft.com/fwlink/?LinkId=48617)  
  该博客站点提供有关数据访问技术的信息，并允许您直接与产品团队的成员交互。  
   
- [Windows 数据访问组件](http://go.microsoft.com/fwlink/?LinkId=107907)  
+ [Windows 数据访问组件](https://go.microsoft.com/fwlink/?LinkId=107907)  
  该站点包含最新 Windows 数据访问组件 (Windows DAC) SDK 文档。 Windows DAC 是包含在 Windows Vista 和 Windows Server 2008 中的数据访问组件版本（在以前版本中称为 MDAC）。  
   
  Windows DAC SDK 包括 ActiveX 数据对象 (ADO)、OLE DB 和开放式数据库连接 (ODBC) 的文档。  

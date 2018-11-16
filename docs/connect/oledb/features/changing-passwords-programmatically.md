@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 89d674e075e8a05697328f60c6bb47a40e82ebf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775427"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605888"
 ---
 # <a name="changing-passwords-programmatically"></a>以编程方式更改密码
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47775427"
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，如果用户的密码过期，则只有管理员能对其进行重置。 开头[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，OLE DB 驱动程序的 SQL Server 支持处理通过 OLE DB 驱动程序，以编程方式和通过更改密码过期**SQL Server 登录名**对话框。  
   
 > [!NOTE]  
->  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](http://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../../relational-databases/security/strong-passwords.md)。  
+>  如果可能，请在运行时提示用户输入他们的凭据，并避免用持久化格式存储他们的凭据。 如果必须保留其凭据，应使用 [Win32 加密 API](https://go.microsoft.com/fwlink/?LinkId=64532) 来加密这些凭据。 有关密码使用的详细信息，请参阅[强密码](../../../relational-databases/security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登录错误代码  
  当由于身份验证问题而导致无法连接时，以下 SQL Server 错误代码之一可供应用程序使用，以帮助诊断和恢复。  

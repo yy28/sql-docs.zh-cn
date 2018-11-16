@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: fa070ecfed9d962dc2716e5b72eaf690eff0fe7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806084"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600367"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 数据库的连接模块
 
-本文提供了连接模块的下载链接或*驱动程序*的客户端程序可以使用用来与交互[Microsoft SQL Server](../relational-databases/database-features.md)，并使用在云中孪生[AzureSQL 数据库](http://docs.microsoft.com/azure/sql-database/)。 驱动程序是可用于多种编程语言，在以下操作系统上运行：
+本文提供了连接模块的下载链接或*驱动程序*的客户端程序可以使用用来与交互[Microsoft SQL Server](../relational-databases/database-features.md)，并使用在云中孪生[AzureSQL 数据库](https://docs.microsoft.com/azure/sql-database/)。 驱动程序是可用于多种编程语言，在以下操作系统上运行：
 
 - Linux (Ubuntu)
 - MacOS
@@ -43,13 +43,13 @@ original page is no longer the latest because the newer page is being added.
 But this policy is not agreed on or observed,
 putting the links in the following table at risk for being outdated.
 
-PHP driver in Github.com also uses this FWLink:  http://go.microsoft.com/fwlink/?LinkID=518036 ,
-although the FWLink is less precise than is http://github.com/Microsoft/msphpsql/tree/dev#install-unix .
+PHP driver in Github.com also uses this FWLink:  https://go.microsoft.com/fwlink/?LinkID=518036 ,
+although the FWLink is less precise than is https://github.com/Microsoft/msphpsql/tree/dev#install-unix .
 -->
 
 | “报表” | 下载 SQL 驱动程序 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[用于 MacOS 的.NET core](https://www.microsoft.com/net/core#macos)<br />[用于 Windows 的.NET core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[.NET core，适用于 Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[用于 MacOS 的.NET core](https://www.microsoft.com/net/core#macos)<br />[用于 Windows 的.NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [安装说明的 Node.js 驱动程序](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
@@ -66,20 +66,20 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 下表列出了客户端应用程序使用连接到 Microsoft SQL 数据库的对象关系映射 (ORM) 框架的示例。
 
 
-| 语言 | ORM 驱动程序下载 |
+| “报表” | ORM 驱动程序下载 |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](http://docs.microsoft.com/ef/core/)<br />[实体框架 (6.x 或更高版本)](http://docs.microsoft.com/ef/) |
-| Java | [Hibernate ORM](http://hibernate.org/orm)|
-| PHP | [最强大的 ORM，Laravel 安装中包括](http://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](http://docs.sequelizejs.com) |
-| Python | [Django](http://www.djangoproject.com/) |
-| Ruby | [Ruby on Rails](http://rubyonrails.org/) |
+| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[实体框架 (6.x 或更高版本)](https://docs.microsoft.com/ef/) |
+| Java | [Hibernate ORM](https://hibernate.org/orm)|
+| PHP | [最强大的 ORM，Laravel 安装中包括](https://laravel.com/docs/) |
+| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Python | [Django](https://www.djangoproject.com/) |
+| Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>生成一个应用网页
-[http://aka.ms/sqldev](http://aka.ms/sqldev) 将您带到一系列*生成的应用*网页。 网页提供有关大量组合的编程语言、 操作系统和 SQL 连接驱动程序的信息。 生成一个应用网页提供的信息包括以下各项：
+[https://aka.ms/sqldev](https://aka.ms/sqldev) 将您带到一系列*生成的应用*网页。 网页提供有关大量组合的编程语言、 操作系统和 SQL 连接驱动程序的信息。 生成一个应用网页提供的信息包括以下各项：
 
 - 有关如何开始从一开始，为每个语言、 操作系统和驱动程序组合的详细信息。
     - 有关安装最新的 SQL 连接驱动程序的说明。
@@ -97,7 +97,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 &nbsp;
 
 ## <a name="related-links"></a>相关链接
-- [代码示例用于连接到 Azure SQL 数据库中使用 Java 和其他语言在云中](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
+- [代码示例用于连接到 Azure SQL 数据库中使用 Java 和其他语言在云中](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)。
 
 <!-- Image references -->
 

@@ -11,12 +11,12 @@ ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5cdf9c694323c345525752c733afc6a49482ac0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bcd06eba29bdc46b0a81f29c974590697b76c73
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722875"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599887"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>用于 JDBC 驱动程序的 JDBC 4.1 法规遵从性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,23 +31,23 @@ ms.locfileid: "47722875"
   
 |新方法|描述|JDBC 驱动程序实现|  
 |----------------|-----------------|--------------------------------|  
-|void abort(Executor executor)|终止 SQL Server 的打开连接。|按 java.sql.Connection 接口中所述实现。 有关详细信息，请参阅 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
-|void setSchema(String schema)|设置当前连接的架构。|SQL Server 不支持对当前会话设置架构。 如果调用此方法，该驱动程序将以无提示方式记录一条警告消息。 有关详细信息，请参阅 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
-|String getSchema()|返回当前连接的架构名称。|因为 SQL Server 不支持对当前连接设置架构，所以该驱动程序将改为返回用户的默认架构。 有关详细信息，请参阅 [java.sql.Connection](http://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|void abort(Executor executor)|终止 SQL Server 的打开连接。|按 java.sql.Connection 接口中所述实现。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|void setSchema(String schema)|设置当前连接的架构。|SQL Server 不支持对当前会话设置架构。 如果调用此方法，该驱动程序将以无提示方式记录一条警告消息。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
+|String getSchema()|返回当前连接的架构名称。|因为 SQL Server 不支持对当前连接设置架构，所以该驱动程序将改为返回用户的默认架构。 有关详细信息，请参阅 [java.sql.Connection](https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html)。|  
   
  **SQLServerDatabaseMetaData 类**  
   
 |新方法|描述|JDBC 驱动程序实现|  
 |----------------|-----------------|--------------------------------|  
-|boolean generatedKeyAlwaysReturned()|当该驱动程序支持检索生成的键时，将返回 true|按 java.sql 中所述实现。 DatabaseMetaData 接口。 有关详细信息，请参阅 [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)。|  
-|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|检索伪列/隐藏列的说明。|当 SQL Server 没有伪列的正式表示时，将返回一个空的结果集。 有关详细信息，请参阅 [java.sql.DatabaseMetaData](http://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)。|  
+|boolean generatedKeyAlwaysReturned()|当该驱动程序支持检索生成的键时，将返回 true|按 java.sql 中所述实现。 DatabaseMetaData 接口。 有关详细信息，请参阅 [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)。|  
+|ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|检索伪列/隐藏列的说明。|当 SQL Server 没有伪列的正式表示时，将返回一个空的结果集。 有关详细信息，请参阅 [java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)。|  
   
  **SQLServerStatement 类**  
   
 |新方法|描述|JDBC 驱动程序实现|  
 |----------------|-----------------|--------------------------------|  
-|void closeOnCompletion()|指定在此语句依赖的所有结果集都关闭时关闭此语句。|按 java.sql.Statement 接口中所述实现。 有关详细信息，请参阅 [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html)。|  
-|boolean isCloseOnCompletion()|返回的值指示在此语句依赖的所有结果集都关闭时是否关闭此语句。|按 java.sql.Statement 接口中所述实现。 有关详细信息，请参阅 [java.sql.Statement](http://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html)。|  
+|void closeOnCompletion()|指定在此语句依赖的所有结果集都关闭时关闭此语句。|按 java.sql.Statement 接口中所述实现。 有关详细信息，请参阅 [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html)。|  
+|boolean isCloseOnCompletion()|返回的值指示在此语句依赖的所有结果集都关闭时是否关闭此语句。|按 java.sql.Statement 接口中所述实现。 有关详细信息，请参阅 [java.sql.Statement](https://docs.oracle.com/javase/7/docs/api/java/sql/Statement.html)。|  
   
  Microsoft JDBC Driver 4.2 for SQL Server 支持 Java Database Connectivity API 4.1 规范，并带有以下功能。  
   

@@ -11,25 +11,25 @@ ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5922753b28c401312f917ce662b56c7378634a77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687035"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600097"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 和 macOS 上的 ODBC 驱动程序对高可用性和灾难恢复的支持
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Linux 和 macOS 支持的 ODBC 驱动程序[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] 的详细信息，请参阅：  
+Linux 和 macOS 支持的 ODBC 驱动程序[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]的详细信息，请参阅：  
   
--   [可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](http://msdn.microsoft.com/library/hh213417.aspx)  
+-   [可用性组侦听器、客户端连接和应用程序故障转移 (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
--   [创建和配置可用性组 (SQL Server)](http://msdn.microsoft.com/library/ff878265.aspx)  
+-   [创建和配置可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](http://msdn.microsoft.com/library/ff929171.aspx)  
+-   [故障转移群集和 AlwaysOn 可用性组 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [活动次要副本：可读次要副本（AlwaysOn 可用性组）](http://msdn.microsoft.com/library/ff878253.aspx)  
+-   [活动次要副本：可读次要副本（AlwaysOn 可用性组）](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 您可以在连接字符串中指定给定可用性组的可用性组侦听器。 如果某一在 Linux 或 macOS 上的 ODBC 应用程序连接到进行故障转移的可用性组中的某个数据库，原始连接则将被断开，并且应用程序必须打开一个新的连接才能在故障转移后继续工作。
 

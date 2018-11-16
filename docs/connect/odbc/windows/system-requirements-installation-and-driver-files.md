@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "49084925"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600957"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>系统要求、安装和驱动程序文件
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -84,7 +84,7 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>命令行工具：sqlcmd.exe 和 bcp.exe
 
-`bcp.exe`并`sqlcmd.exe`用于与该驱动程序一起使用可以从以下网址下载工具[Microsoft Command Line Utilities 11 for SQL Server](http://www.microsoft.com/download/details.aspx?id=36433)，[适用于 SQL Server 的 Microsoft 命令行实用程序 13](https://www.microsoft.com/download/details.aspx?id=52680)，或[SQL Server 的 Microsoft 命令行实用工具 13.1](https://www.microsoft.com/download/details.aspx?id=53591)。 该驱动程序是安装的先决条件`sqlcmd.exe`和`bcp.exe`。
+`bcp.exe`并`sqlcmd.exe`用于与该驱动程序一起使用可以从以下网址下载工具[Microsoft Command Line Utilities 11 for SQL Server](https://www.microsoft.com/download/details.aspx?id=36433)，[适用于 SQL Server 的 Microsoft 命令行实用程序 13](https://www.microsoft.com/download/details.aspx?id=52680)，或[SQL Server 的 Microsoft 命令行实用工具 13.1](https://www.microsoft.com/download/details.aspx?id=53591)。 该驱动程序是安装的先决条件`sqlcmd.exe`和`bcp.exe`。
   
 `bcp.exe` 并`sqlcmd.exe`中安装`110\Tools`的子文件夹`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC`版本 11，和`130\Tools`13 和 13.1。
 

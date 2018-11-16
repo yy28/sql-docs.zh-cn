@@ -11,12 +11,12 @@ ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 99b92271060cbe670b48058e988b104aa296474b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2f363fecebfe9a4ee4e586a5c5df703b47aa0e6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731525"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602977"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux 和 macOS 的常见问题解答 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -40,7 +40,7 @@ Linux 和 macOS 上的 ODBC 驱动程序支持 [!INCLUDE[ssSQL11](../../../inclu
 
 **是否提供可下载并通过该驱动程序运行以对其进行体验和评估的 ODBC 示例？**
 
-请参阅 [使用 Linux 上的 ODBC 驱动程序的现有 MSDN C++ ODBC 示例](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 以获取示例。 这也是适用于 macOS 的 ODBC 驱动程序。 
+请参阅 [使用 Linux 上的 ODBC 驱动程序的现有 MSDN C++ ODBC 示例](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 以获取示例。 这也是适用于 macOS 的 ODBC 驱动程序。 
 
 **Linux 上的 ODBC 驱动程序还是 macOS 开放源代码？**
 

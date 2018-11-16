@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f0197ed97f8d03784cd89d2bede5a4e7744e80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65963e0e41bc4bb85ac3c734efc30835f371191e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613415"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603087"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 驱动程序常见问题解答 (FAQ)
 
@@ -105,25 +105,25 @@ JDBC 驱动程序 4.1、 4.2、 6.0、 6.2、 6.4、 和 7.0 是可再发行组�
 是。 驱动程序支持使用 IPv6 地址。 使用连接属性集合和 serverName 连接字符串属性。 有关详细信息，请参阅[生成连接 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 **什么是自适应缓冲？**  
-开始 Microsoft SQL Server 2005 JDBC Driver 1.2 版中引入自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓存](../../connect/jdbc/using-adaptive-buffering.md)和博客文章[什么是自适应响应缓冲？为什么该使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)。
+开始 Microsoft SQL Server 2005 JDBC Driver 1.2 版中引入自适应缓冲。 它旨在检索任何种类的大值数据，免去了服务器游标开销。 Microsoft SQL Server JDBC 驱动程序的自适应缓冲功能提供连接字符串属性 responseBuffering，该属性可以设置为“adaptive”或“full”。 在 1.2 版中，缓冲模式默认为“full”，应用程序必须显式设置自适应缓冲模式。 从 JDBC 驱动程序 2.0 版起，该驱动程序的默认行为就是“adaptive”。 因此，应用程序无需显式发出自适应行为请求，即可获取自适应缓冲行为。 有关详细信息，请参阅[使用自适应缓存](../../connect/jdbc/using-adaptive-buffering.md)和博客文章[什么是自适应响应缓冲？为什么该使用它？](https://go.microsoft.com/fwlink/?LinkId=111575)。
 
 **驱动程序是否支持连接池？**  
-该驱动程序支持 Java 平台 Enterprise Edition 5 (Java EE 5) 连接池。 该驱动程序实现了 JDBC 3.0 所需的接口，从而参与到任何中间件应用程序供应商提供的任何连接池实现中。 该驱动程序将参与这些环境中的已池化连接。 有关详细信息，请参阅[使用连接池](../../connect/jdbc/using-connection-pooling.md)。 该驱动程序不提供自己的池实现，而是依赖第三方的 Java 应用程序服务器。
+该驱动程序支持 Java 平台 Enterprise Edition 5 (Java EE 5) 连接池。 该驱动程序实现了 JDBC 3.0 所需的接口，从而参与到任何中间件应用程序供应商提供的任何连接池实现中。 该驱动程序将参与这些环境中的已池化连接。 有关详细信息，请参阅 [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md)。 该驱动程序不提供自己的池实现，而是依赖第三方的 Java 应用程序服务器。
 
 **能否获取驱动程序支持？**  
-该驱动程序提供几种支持选项。 可以发布问题或发给我们[GitHub 存储库](https://github.com/microsoft/mssql-jdbc)这由 Microsoft 进行监视。 [论坛](http://go.microsoft.com/fwlink/?LinkID=246673)由 Microsoft、 Mvp 和社区监控。 还可以联系 Microsoft 客户支持服务部门。 开发团队可能会要求你在任何第三方应用程序服务器外重现问题。 如果无法在托管 Java 容器环境外重现问题，你需要联系相关第三方，这样团队才能继续为你提供帮助。 团队可能会要求你重现问题如 Windows 操作系统上的，因此可以最好地支持问题。
+该驱动程序提供几种支持选项。 可以发布问题或发给我们[GitHub 存储库](https://github.com/microsoft/mssql-jdbc)这由 Microsoft 进行监视。 [论坛](https://go.microsoft.com/fwlink/?LinkID=246673)由 Microsoft、 Mvp 和社区监控。 还可以联系 Microsoft 客户支持服务部门。 开发团队可能会要求你在任何第三方应用程序服务器外重现问题。 如果无法在托管 Java 容器环境外重现问题，你需要联系相关第三方，这样团队才能继续为你提供帮助。 团队可能会要求你重现问题如 Windows 操作系统上的，因此可以最好地支持问题。
 
 **驱动程序是否已经过认证，可用于任何第三方应用程序服务器？**
 已针对各种应用程序服务器（包括 IBM WebSphere 和 SAP NetWeaver）对该驱动程序进行了测试。
 
 **我如何启用跟踪？**  
-该驱动程序支持使用跟踪（或日志记录）来帮助解决在应用程序中使用 JDBC 驱动程序时遇到的问题。 为了启用客户端 JAR 跟踪的使用，JDBC 驱动程序将在 java.util.logging 中使用日志记录 API。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。 对于客户端 XA 跟踪，请参阅 [Data Access Tracing in SQL Server（SQL Server 中的数据访问跟踪）](http://go.microsoft.com/fwlink/?LinkId=248705)。
+该驱动程序支持使用跟踪（或日志记录）来帮助解决在应用程序中使用 JDBC 驱动程序时遇到的问题。 为了启用客户端 JAR 跟踪的使用，JDBC 驱动程序将在 java.util.logging 中使用日志记录 API。 有关详细信息，请参阅[跟踪驱动程序操作](../../connect/jdbc/tracing-driver-operation.md)。 对于客户端 XA 跟踪，请参阅 [Data Access Tracing in SQL Server（SQL Server 中的数据访问跟踪）](https://go.microsoft.com/fwlink/?LinkId=248705)。
 
 **我在哪里可以下载旧版驱动程序，如 SQL Server 2000 JDBC Driver、2005 Driver、1.0、1.1 或 1.2 Driver？**  
 这些驱动程序版本已不再受到支持，因此不能下载。 我们在不断改善 Java 连接支持。 因此，强烈建议使用最新版 Microsoft JDBC Driver。
 
 **我使用的是 JRE 1.4。哪个驱动程序与 JRE 1.4 兼容？**  
-对于使用 SAP 产品且需要 JRE 1.4 支持的客户，可以联系 [SAPService Marketplace](http://service.sap.com/) 获取 Microsoft JDBC 1.2 驱动程序。
+对于使用 SAP 产品且需要 JRE 1.4 支持的客户，可以联系 [SAPService Marketplace](https://service.sap.com/) 获取 Microsoft JDBC 1.2 驱动程序。
 
 **驱动程序能否使用 FIPS 验证算法进行通信？**  
 Microsoft JDBC 驱动程序不包含任何加密算法。 如果客户使用美国联邦信息处理标准 (FIPS) 认为可接受的操作系统、应用程序和 JVM 算法，并将驱动程序配置为使用这些算法，那么驱动程序仅使用指定的算法进行通信。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: 1708bf5d1fbd47f7fb2dcefbbb5150d4b5646343
-ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324562"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601867"
 ---
 # <a name="fips-mode"></a>FIPS 模式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ Microsoft JDBC Driver for SQL Server 支持*FIPS 140 兼容模式下*。 适用�
 
 ## <a name="fips-configured-jvm"></a>FIPS 配置的 JVM
 
-若要查看的 FIPS 配置的已批准的模块，请参阅[验证 FIPS 140-1 和 FIPS 140-2 加密模块](http://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)。 
+若要查看的 FIPS 配置的已批准的模块，请参阅[验证 FIPS 140-1 和 FIPS 140-2 加密模块](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm)。 
 
 供应商可能有一些附加步骤来配置与 FIPS 的 JVM。
 
@@ -87,7 +87,7 @@ private Certificate getCertificate(String pathName)
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
 ## <a name="appropriate-policy-files"></a>相应的策略文件
-对于 FIPS 某些提供程序，需要使用不受限制的策略 jar。 在这种情况下，sun / Oracle 下载 Java Cryptography Extension (JCE) 不受限制 Strength Jurisdiction Policy Files 有关[JRE 8](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)或[JRE 7](http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)。 
+对于 FIPS 某些提供程序，需要使用不受限制的策略 jar。 在这种情况下，sun / Oracle 下载 Java Cryptography Extension (JCE) 不受限制 Strength Jurisdiction Policy Files 有关[JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)或[JRE 7](https://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-432124.html)。 
 
 ## <a name="appropriate-configuration-parameters"></a>相应的配置参数
 若要在与 FIPS 兼容模式下运行 JDBC 驱动程序，请配置连接属性下, 表中所示。 

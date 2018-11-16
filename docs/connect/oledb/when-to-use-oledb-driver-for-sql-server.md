@@ -15,19 +15,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 39ad82d9a97781eb63b5de15e20494a0438855b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798195"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602807"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>何时使用适用于 SQL Server 的 OLE DB 驱动程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB 驱动程序适用于 SQL Server 是可用于访问中的数据的一种技术[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  有关不同数据访问技术的讨论，请参阅[数据访问技术路线图](http://go.microsoft.com/fwlink/?LinkID=179186)  
+  OLE DB 驱动程序适用于 SQL Server 是可用于访问中的数据的一种技术[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库。  有关不同数据访问技术的讨论，请参阅[数据访问技术路线图](https://go.microsoft.com/fwlink/?LinkID=179186)  
   
  在决定是否使用适用于 SQL Server 的 OLE DB 驱动程序作为应用程序的数据访问技术时，应当考虑多种因素。  
   

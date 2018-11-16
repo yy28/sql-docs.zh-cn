@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 30dffe30bfe0b87156f65d5c21bd0aaba033f0af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746845"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600297"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 和 macOS 上的 Microsoft ODBC Driver for SQL Server 的发行说明
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -111,10 +111,10 @@ Ubuntu 以及 Red Hat 和 SUSE 现在受支持。 每个平台都有相关平台
 **TLS 1.2 支持**: Linux 上的 SQL Server 的 Microsoft ODBC Driver 13.0 现在支持 TLS 1.2 时用于保护与 SQL Server 的通信。
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-11-for-includessnoversionincludesssnoversion-mdmd-on-linux"></a>Linux 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的新增功能  
-SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enterprise 11 Service Pack 2。 有关详细信息，请参阅[系统需求](../../../connect/odbc/linux-mac/system-requirements.md)。  
+SUSE Linux 上的 ODBC 驱动程序（预览版）支持 64 位 SUSE Linux Enterprise 11 Service Pack 2。 有关详细信息，请参阅 [System Requirements](../../../connect/odbc/linux-mac/system-requirements.md)。  
 
 Linux 上的 ODBC 驱动程序支持 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]。 有关详细信息，请参阅[ODBC 驱动程序对高可用性和灾难恢复的 Linux 支持](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)。  
 
-Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅 [如何：使用 ODBC 连接到 Windows Azure SQL 数据库](http://msdn.microsoft.com/library/hh974312.aspx)。  
+Linux 上的 ODBC 驱动程序支持与 Microsoft Azure SQL 数据库的连接。 有关详细信息，请参阅 [如何：使用 ODBC 连接到 Windows Azure SQL 数据库](https://msdn.microsoft.com/library/hh974312.aspx)。  
 
 `-l`选项 （登录超时值） 添加到`bcp`。 有关详细信息，请参阅[使用 bcp 连接](../../../connect/odbc/linux-mac/connecting-with-bcp.md)。

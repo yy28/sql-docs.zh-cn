@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 69324ab25ba5efd293e445aa7ae4f0ff768b1c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9bd80a957b3f571c4289935eaab145e0fd9f9719
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698275"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656367"
 ---
 # <a name="new-alias-alias-tab"></a>新建别名（“别名”选项卡）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47698275"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不会侦听默认命名管道，因此您希望提供一个包含不同管道名称的连接字符串。  
   
--   希望将应用程序连接到名为 `ACCT`的服务器上的数据库，但该数据库已合并为名为 `ACCT` 的服务器上的 `CENTRAL`实例。 该应用程序不能轻易更改。 创建一个别名 `ACCT`，其中包含指向 `CENTRAL\ACCT`的连接字符串。  
+-   希望将应用程序连接到名为 `ACCT` 的服务器上的数据库，但该数据库已合并为名为 `ACCT` 的服务器上的 `CENTRAL` 实例。 该应用程序不能轻易更改。 创建一个别名 `ACCT`，其中包含指向 `CENTRAL\ACCT`的连接字符串。  
   
 ## <a name="creating-a-valid-connection-string"></a>创建有效连接字符串  
  有关别名属性的有效组合的说明和示例，请参阅下列主题：  
@@ -55,6 +55,6 @@ ms.locfileid: "47698275"
   
 -   [使用 TCP IP 创建有效的连接字符串](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [使用 Named Pipes 创建有效的连接字符串](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [使用 Named Pipes 创建有效的连接字符串](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

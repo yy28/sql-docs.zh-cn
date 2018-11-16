@@ -15,12 +15,12 @@ ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09422214ac33ed7179d66a46aed9db09f2ef6039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1527b212385f280d16bf3f86ce753352b4fb744
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805305"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603937"
 ---
 # <a name="connecting-to-sql-server"></a>连接到 SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -64,11 +64,11 @@ Server = [protocol:]server[,port]
  - **bcp out OutFile.dat-S master.INFORMATION_SCHEMA.TABLES <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>使用安全套接字层 (SSL)  
-可以使用安全套接字层 (SSL) 加密与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的连接。 SSL 通过网络保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名和密码。 SSL 还会验证服务器的标识以抵御中间人 (MITM) 攻击。  
+可以使用安全套接字层 (SSL) 加密与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的连接。 SSL 通过网络保护 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用户名和密码。 SSL 还会验证服务器的标识以抵御中间人 (MITM) 攻击。  
 
 启用加密可提高安全性，但会降低性能。
 
-有关详细信息，请参阅[加密与 SQL Server 的连接](http://go.microsoft.com/fwlink/?LinkId=220900)并[使用未经验证的加密](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
+有关详细信息，请参阅[加密与 SQL Server 的连接](https://go.microsoft.com/fwlink/?LinkId=220900)并[使用未经验证的加密](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation)。
 
 无论 **Encrypt** 和 **TrustServerCertificate**的设置如何，服务器登录凭据（用户名和密码）都始终处于加密状态。 下表显示了 **Encrypt** 和 **TrustServerCertificate** 设置的效果。  
 

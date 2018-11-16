@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -26,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b824df9549ac9fcb65ff4c5bb3ca54f03967e86e
+ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847467"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51291913"
 ---
 # <a name="osql-utility"></a>osql 实用工具
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +97,7 @@ C:\>osql
  使用可信连接而不请求密码。  
   
  **-S** _服务器\_名称_[ **\\**_实例\_名称_]  
- 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
+ 指定要连接到的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 实例。 指定要连接到该服务器上 *默认实例的* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 指定要连接到该服务器上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的命名实例的 _server\_name_\\_instance\_name_。 如果未指定服务器， **osql** 将连接到本地计算机上的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 默认实例。 从网络上的远程计算机执行 **osql** 时，此选项是必需的。  
   
  **-H** *wksta_name*  
  工作站的名称。 工作站名称存储在 **sysprocesses.hostname** 中，并由 **sp_who**显示。 如果不指定此选项，则采用当前计算机名称。  

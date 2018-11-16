@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25ebc4837eb37604a45e98112fa5fc24bdb3e69b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742995"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602027"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此版本驱动程序中的已知问题
 
@@ -25,7 +25,7 @@ ms.locfileid: "47742995"
 
 本文包含 Microsoft ODBC Driver 13、 13.1 和 17 for SQL Server Linux 和 macOS 上的已知问题的列表。
 
-其他问题将在 [Microsoft ODBC 驱动程序团队博客](http://blogs.msdn.com/b/sqlnativeclient/)上发布。  
+其他问题将在 [Microsoft ODBC 驱动程序团队博客](https://blogs.msdn.com/b/sqlnativeclient/)上发布。  
 
 - Windows、Linux 和 macOS 可以采用不同方式转换来自专用区 (PUA) 或最终用户定义的字符 (EUDC) 的字符。 在服务器上执行的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内的转换将使用 Windows 转换库。 驱动程序中的转换使用的 Windows、 Linux 或 macOS 转换库。 在执行这些转换时，每个库可能会产生不同的结果。 有关详细信息，请参阅[最终用户定义的字符和专用区字符](/windows/desktop/Intl/end-user-defined-characters)。
 

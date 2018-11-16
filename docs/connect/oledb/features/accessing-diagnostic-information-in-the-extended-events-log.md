@@ -11,19 +11,19 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 63ec91867fee1a9e0b32853eb6b2553ab261f9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e4951665996143a56acf55fb0f90e24d3ba3e4c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849955"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602677"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>访问扩展事件日志中的诊断信息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 开始，适用于 SQL Server 的 OLE DB 驱动程序和数据访问跟踪（[Data Access Tracing](http://go.microsoft.com/fwlink/?LinkId=125805)）已更新，以更易于获取有关连接环形缓冲区中连接失败的诊断信息和从扩展事件日志中获取应用程序性能信息。  
+  从 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 开始，适用于 SQL Server 的 OLE DB 驱动程序和数据访问跟踪（[Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805)）已更新，以更易于获取有关连接环形缓冲区中连接失败的诊断信息和从扩展事件日志中获取应用程序性能信息。  
   
  有关读取扩展事件日志的信息，请参阅[查看事件会话数据](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)。 
 
@@ -32,7 +32,7 @@ ms.locfileid: "47849955"
 >  该功能只用于故障排除和诊断目的，可能不适合审核或安全目的。  
   
 ## <a name="remarks"></a>Remarks  
- 对于连接操作，OLE DB 驱动程序适用于 SQL Server 将发送一个客户端连接 id。 如果连接失败，可以访问连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](http://go.microsoft.com/fwlink/?LinkId=207752)），查找 ClientConnectionID 字段并获取有关连接失败的诊断信息。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 client_connection_id 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 ClientConnectionID 字段以查看是否有失败的操作。  
+ 对于连接操作，OLE DB 驱动程序适用于 SQL Server 将发送一个客户端连接 id。 如果连接失败，可以访问连接环形缓冲区（[在 SQL Server 2008 中使用连接环形缓冲区解决连接问题](https://go.microsoft.com/fwlink/?LinkId=207752)），查找 ClientConnectionID 字段并获取有关连接失败的诊断信息。 仅当发生错误时，才在环形缓冲区中记录客户端连接 ID。 （如果在发送预登录数据包之前连接失败，将不会生成客户端连接 ID。）客户端连接 ID 是 16 字节的 GUID。 如果将 client_connection_id 操作添加到扩展事件会话中的事件，则还可以在扩展事件输出目标中找到客户端连接 ID。 如果需要进一步的诊断帮助，则可以启用数据访问跟踪并再次运行连接命令，然后观察数据访问跟踪中的 ClientConnectionID 字段以查看是否有失败的操作。  
    
   
  OLE DB 驱动程序适用于 SQL Server 还会发送一个特定于线程的活动 id。 如果开始会话时启用了 TRACK_CAUSAILITY 选项，则会在扩展的事件会话中捕获活动 ID。 对于与活动连接有关的性能问题，可以从客户端的数据访问跟踪中获取活动 ID（ActivityID 字段），然后在扩展事件输出中找到该活动 ID。 扩展事件中的活动 ID 是 16 字节 GUID（与客户端连接 ID 的 GUID 不同），且后面追加四个字节的序列号。 该序列号表示某个请求在线程内的顺序，并指示线程的批处理和 RPC 语句的相对顺序。 当启用数据访问跟踪且数据访问跟踪配置字中的第 18 位设置为“打开”时，可以针对 SQL 批处理语句和 RPC 请求发送 ActivityID（可选）。  

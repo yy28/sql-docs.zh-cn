@@ -11,12 +11,12 @@ ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3afc4fc8a74dfe4c2ed625fc7a82df02dc21af3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0f359c66250d11fa01c74567e1faeab3ff064ac
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850467"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602247"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>配置如何将 java.sql.Time 值发送到服务器
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47850467"
   
  如果你想要使用**datetime**并**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型在处理 java.sql.Time 值时，应设置**sendTimeAsDatetime**连接属性设置为 **，则返回 true**。 如果你想要使用**时间**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据类型时使用 java.sql.Time 值时，应设置**sendTimeAsDatetime**连接属性设置为**false**.  
   
- 请注意，在将 java.sql.Time 值发送给其数据类型还存储日期的参数时，默认日期会有所不同，具体取决于 java.sql.Time 值是作为 datetime (1/1/1970) 还是 time (1/1/1900) 值发送。 有关将数据发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的数据转换的详细信息，请参阅[使用日期和时间数据](http://go.microsoft.com/fwlink/?LinkID=145211)。  
+ 请注意，在将 java.sql.Time 值发送给其数据类型还存储日期的参数时，默认日期会有所不同，具体取决于 java.sql.Time 值是作为 datetime (1/1/1970) 还是 time (1/1/1900) 值发送。 有关将数据发送到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 时的数据转换的详细信息，请参阅[使用日期和时间数据](https://go.microsoft.com/fwlink/?LinkID=145211)。  
   
  在中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]JDBC Driver 3.0 **sendTimeAsDatetime**是默认情况下，则返回 true。 在将来的发行版中，默认情况下可以将 sendTimeAsDatetime 连接属性设置为 false。  
   

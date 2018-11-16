@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -18,12 +17,12 @@ ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8713438b825252b5ccc17a3914e219289110062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fa942cf89221dcfb66e78e6be77bbdd882e91b8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656339"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 输入文件引用（数据库引擎优化顾问）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47763635"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件包含 XML 元素（每个元素包含文本或其他用于指定优化会话设置的元素）的层次结构。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 输入文件必须符合格式正确的 XML 的标准，因此所有的元素名称都区分大小写。 使用 Pascal case 来指定元素，即第一个字符大写，随后的所有串连单词的第一个字母都大写。  
   
- 所有元素值都必须符合 XML 命名约定。 有关这些约定的详细信息，请参阅 MSDN Library 中的 [XML Textual Content](http://go.microsoft.com/fwlink/?LinkId=7614) 。  
+ 所有元素值都必须符合 XML 命名约定。 有关这些约定的详细信息，请参阅 MSDN Library 中的 [XML Textual Content](https://go.microsoft.com/fwlink/?LinkId=7614) 。  
   
  请注意，此参考并非综合性参考。 有关可用于定义 XML 输入的所有元素的信息，请参考 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 优化顾问 XML 架构 (DTASchema.xsd)。  
   
@@ -122,6 +121,6 @@ ms.locfileid: "47763635"
 -   [表的名称元素 (DTA)](../../tools/dta/name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>另请参阅  
- [数据库引擎优化顾问](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

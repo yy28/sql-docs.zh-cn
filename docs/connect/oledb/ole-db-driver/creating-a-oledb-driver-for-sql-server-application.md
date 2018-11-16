@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: f992eeaf21f2b3d14609fd5654342c865558830d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb718e2288b1d5e2aaccc1cbafc0c85037bd8082
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779905"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605767"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>创建适用于 SQL Server 的 OLE DB 驱动程序应用程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47779905"
 3.  结果处理。  
   
 > [!NOTE]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) 对它们加密。  
   
 ## <a name="in-this-section"></a>本节内容  
   

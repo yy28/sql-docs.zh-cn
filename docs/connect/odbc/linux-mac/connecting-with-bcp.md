@@ -13,17 +13,17 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff5cd89f349b3835eaace4d75c3a3a13655b4b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2dbc66590360b5f7a06409eccff7244ba89224
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682635"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600157"
 ---
 # <a name="connecting-with-bcp"></a>使用 bcp 连接
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 实用工具适用于 Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 此页介绍从 Windows 版本的差异`bcp`。
   
 - 字段终止符是制表符 ("\t")。  
   
@@ -112,7 +112,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定 `bcp` 实用工具通过信任连接（集成安全性）连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 - -U *login_id*  
-指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的登录 ID。  
+指定用于连接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的登录 ID。  
   
 - -V  
 报告 `bcp` 实用工具的版本号和版权。  
@@ -141,7 +141,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定文件名称，该文件用于接收从命令提示符重定向来的输出。  
   
 - -V (80 | 90 | 100)  
-使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的数据类型。  
+使用早期版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的数据类型。  
   
 - -X  
 结合使用该格式和 -f format_file 选项一起使用，可生成基于 XML 的格式化文件，而不是默认的非 XML 格式化文件。  

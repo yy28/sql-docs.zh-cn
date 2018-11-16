@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
 - XML
@@ -16,12 +15,12 @@ ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc05d9c20affd1d995312c261b68dac178f8ddb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f645884e28d93bf25032aa6cf89ae3d5dd6774
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754575"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671207"
 ---
 # <a name="create-element-dta"></a>创建元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ ms.locfileid: "47754575"
 |关系|元素|  
 |------------------|--------------|  
 |**父元素**|[建议元素 (DTA)](../../tools/dta/recommendation-element-dta.md)|  
-|**子元素**|[索引元素 (DTA)](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 元素（有关信息，请参阅 [数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/) ）<br /><br /> **Heap** 元素（有关信息，请参阅 [数据库引擎优化顾问 XML 架构](http://schemas.microsoft.com/sqlserver/) ）|  
+|**子元素**|[索引元素 (DTA)](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics** 元素（有关信息，请参阅 [数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/) ）<br /><br /> **Heap** 元素（有关信息，请参阅 [数据库引擎优化顾问 XML 架构](https://schemas.microsoft.com/sqlserver/) ）|  
   
 ## <a name="remarks"></a>Remarks  
- 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 **Create** 元素和其他可用于创建视图 (**CreateViewType**) 或分区 (**CreatePType**) 的其他类型混淆。 有关其他 [Create](http://schemas.microsoft.com/sqlserver/) 元素类型的信息，请参阅 **数据库引擎优化顾问 XML 架构** 。  
+ 在数据库引擎优化顾问 XML 架构中，此元素的名称为 **CreateTypecomplexType** 。 此元素用于为用户指定的配置创建索引、统计信息和堆结构。 请勿将此 **Create** 元素和其他可用于创建视图 (**CreateViewType**) 或分区 (**CreatePType**) 的其他类型混淆。 有关其他 [Create](https://schemas.microsoft.com/sqlserver/) 元素类型的信息，请参阅 **数据库引擎优化顾问 XML 架构** 。  
   
 ## <a name="example"></a>示例  
  有关此元素的用法示例，请参阅[用户指定配置 (DTA) 的 XML 输入文件示例](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)。  
