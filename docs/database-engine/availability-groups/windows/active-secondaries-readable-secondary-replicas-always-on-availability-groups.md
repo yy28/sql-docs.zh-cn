@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2aaca4afa75981ce56f68c4408f4dd9d820a4939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c7c2b420adedaff0a67ff0f10c14d581f13f94
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777185"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604708"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>活动次要副本：可读次要副本（AlwaysOn 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "47777185"
   
 -   基于磁盘的表的只读工作负荷使用行版本控制来消除辅助数据库上的阻塞争用。 对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。 此外，所有锁定提示都将被忽略。 这消除了读取器/编写器的争用。  
   
--   基于持久的内存优化表的只读工作负荷访问数据的方式与主数据库中的访问方式相同，使用具有相同事务隔离级别限制的本机存储过程或 SQL 互操作性（请参阅 [数据库引擎中的隔离级别](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)）。 对主副本运行的报表工作负荷或只读查询可以直接用于辅助副本，无需任何更改。 同样，对辅助副本运行的报表工作负荷或只读查询也可以直接用于主副本，无需任何更改。  与基于磁盘的表相似，对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。  
+-   基于持久的内存优化表的只读工作负荷访问数据的方式与主数据库中的访问方式相同，使用具有相同事务隔离级别限制的本机存储过程或 SQL 互操作性（请参阅 [数据库引擎中的隔离级别](https://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)）。 对主副本运行的报表工作负荷或只读查询可以直接用于辅助副本，无需任何更改。 同样，对辅助副本运行的报表工作负荷或只读查询也可以直接用于主副本，无需任何更改。  与基于磁盘的表相似，对辅助数据库运行的所有查询都自动映射到快照隔离事务级别，即使在显式设置了其他事务隔离级别时也是如此。  
   
 -   对于辅助副本上的基于磁盘的表和内存优化表类型，都可以对表变量执行 DML 操作。  
   
@@ -236,7 +236,7 @@ GO
     |用户帐户控制|否|无行版本但有 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
     |用户帐户控制|用户帐户控制|行版本和 14 个字节的系统开销|行版本和 14 个字节的系统开销|  
   
-##  <a name="bkmk_RelatedTasks"></a>相关任务  
+##  <a name="bkmk_RelatedTasks"></a> 相关任务  
   
 -   [配置对可用性副本的只读访问 (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -256,7 +256,7 @@ GO
   
 ## <a name="see-also"></a>另请参阅  
  [AlwaysOn 可用性组概述 (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [关于对可用性副本的客户端连接访问 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
+ [关于对可用性副本的客户端连接访问 (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [可用性组侦听程序、客户端连接和应用程序故障转移 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [统计信息](../../../relational-databases/statistics/statistics.md)  
   

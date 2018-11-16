@@ -15,12 +15,12 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0930c08c5ab6b7c83640cb1ba4b0ea1a4ae3a0a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ef4b6dfcba2038ecd420f9569541ef03ea59cfb
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774305"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641344"
 ---
 # <a name="ado-connection-manager"></a>ADO 连接管理器
   ADO 连接管理器使包可以连接到 ActiveX 数据对象 (ADO) 对象（如记录集）。 此连接管理器通常用于以 Microsoft Visual Basic 6.0 等语言的早期版本编写的自定义任务，或用于从属于使用 ADO 连接到数据源的现有应用程序的自定义任务。  
@@ -32,7 +32,7 @@ ms.locfileid: "47774305"
   
 |SQL Server 数据类型|结果|  
 |--------------------------|------------|  
-|**time**、 **datetimeoffset**|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](http://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。|  
+|**time**、 **datetimeoffset**|除非包使用参数化 SQL 命令，否则，包将失败。 若要使用参数化 SQL 命令，请在包中使用执行 SQL 任务。 有关详细信息，请参阅 [执行 SQL 任务](../../integration-services/control-flow/execute-sql-task.md) 和 [执行 SQL 任务中的参数和返回代码](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)。|  
 |**datetime2**|ADO 连接管理器截断毫秒值。|  
   
 > [!NOTE]  

@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cff08e85cb8235567dd2ce7e8f8294f465892b47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c3faf4bb4b9f2a180bc09c91591ce6f6a9c3f15
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838865"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605467"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升级 AlwaysOn 可用性组副本实例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "47838865"
 在将托管 Always On 可用性组 (AG) 的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 实例升级到新的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 版本、新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 服务包或积累更新，或在安装到新的 Windows 服务包或积累更新时，可以通过执行滚动升级将主要副本的故障时间降低到仅需一次手动故障转移（或者如果无法故障转移回原始的主要副本，则需两次手动故障转移）。 在升级过程中，次要副本将不可用于故障转移或只读操作，并且在升级之后，次要副本可能需要花费一些时间来与主要副本节点保持同步，具体时间取决于主要副本节点上的活动量（因此需要较高的网络流量）。 另请注意，初始故障转移到运行较新版本 SQL Server 的次要副本后，可用性组中的数据库会运行升级进程，将其升级到最新版本。 在此期间这些数据库都没有可读副本。 初始故障转移之后的故障时间取决于可用性组中的数据库数量。 若计划故障回复至原始的主副本，那么在故障回复时将不会重复此步骤。
   
 >[!NOTE]  
->本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅[群集操作系统滚动升级](http://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)。  
+>本文仅讨论 SQL Server 本身的升级。 它不涵盖升级包含 Windows Server 故障转移群集 (WSFC) 的操作系统。 Windows Server 2012 R2 之前的操作系统不支持升级承载故障转移群集的 Windows 操作系统。 若要升级在 Windows Server 2012 R2 上运行的群集节点，请参阅[群集操作系统滚动升级](https://docs.microsoft.com/windows-server/failover-clustering/cluster-operating-system-rolling-upgrade)。  
   
 ## <a name="prerequisites"></a>必备条件  
 开始之前，请仔细阅读以下重要信息：  
@@ -245,7 +245,7 @@ ms.locfileid: "47838865"
 
 1. 升级最初为主要副本的实例。
 
-有关背景信息，请参阅[升级到最新 CU 后，CDC 功能可能会中断](http://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
+有关背景信息，请参阅[升级到最新 CU 后，CDC 功能可能会中断](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)。
 
   
 ## <a name="see-also"></a>另请参阅  

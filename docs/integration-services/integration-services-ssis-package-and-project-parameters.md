@@ -14,17 +14,17 @@ ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8205582caebddb941d3c5dc512a3952fbf9f8f3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4404b2af9114da376e007bf91533f9e083dbff10
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750351"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639874"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 包和项目参数
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 参数可用于在包执行时向包内的属性赋值。  您可以在项目级别创建“项目参数”  ，在包级别创建“包参数”。 项目参数可用于向项目中的一个或多个包提供项目接收的任何外部输入。 利用包参数，您不必编辑和重新部署包就可以修改包执行。  
   
- 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，您使用 **Project.params** 窗口创建、修改或删除项目参数。 通过使用 **设计器中的** “参数” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡来创建、修改和删除包参数。 通过使用 **“参数化”** 对话框，您可以将新的或现有的参数与任务属性相关联。 有关使用 **Project.params** 窗口和 **“参数”** 选项卡的详细信息，请参阅 [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)。 有关 **“参数化”** 对话框的详细信息，请参阅 [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
+ 在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中，您使用 **Project.params** 窗口创建、修改或删除项目参数。 通过使用 **设计器中的** “参数” [!INCLUDE[ssIS](../includes/ssis-md.md)] 选项卡来创建、修改和删除包参数。 通过使用 **“参数化”** 对话框，您可以将新的或现有的参数与任务属性相关联。 有关使用 **Project.params** 窗口和 **“参数”** 选项卡的详细信息，请参阅 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)。 有关 **“参数化”** 对话框的详细信息，请参阅 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)。  
   
 ## <a name="parameters-and-package-deployment-model"></a>参数和包部署模型  
  如果您正在使用包部署模型部署包，通常应使用配置而非参数。  
@@ -214,6 +214,6 @@ ms.locfileid: "47750351"
  若要使用 TRANSACT-SQL 设置服务器默认值，请使用 [catalog.set_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)存储过程。 若要查看当前服务器默认值，请查询 [catalog.object_parameters（SSISDB 数据库）](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)视图。 若要清除服务器默认值，请使用 [catalog.clear_object_parameter_value（SSISDB 数据库）](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md)存储过程。  
   
 ## <a name="related-content"></a>相关内容  
- mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](http://go.microsoft.com/fwlink/?LinkId=239781)。  
+ mattmasson.com 上的博客文章 [SSIS 快速提示：必需参数](https://go.microsoft.com/fwlink/?LinkId=239781)。  
   
   

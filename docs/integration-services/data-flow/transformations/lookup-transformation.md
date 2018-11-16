@@ -24,12 +24,12 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4621685d69a2bedffd35e1de896712efa40a0335
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730925"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639654"
 ---
 # <a name="lookup-transformation"></a>查找转换
   查找转换通过联接输入列中的数据和引用数据集中的列来执行查找。 可以使用该查找在基于通用列的值的相关表中访问其他信息。  
@@ -131,15 +131,15 @@ ms.locfileid: "47730925"
   
 ## <a name="related-content"></a>相关内容  
   
--   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](http://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
+-   msdn.microsoft.com 上的视频 [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)（如何在完全缓存模式下实现查找转换）  
   
--   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](http://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
+-   blogs.msdn.com 上的博客项 [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)（使用查找转换缓存模式的最佳实践）  
   
--   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](http://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
+-   blogs.msdn.com 上的博客项 [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)（查找模式：不区分大小写）  
   
--   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](http://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
+-   msftisprodsamples.codeplex.com 上的示例 [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)（查找转换）  
   
-     有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
+     有关安装 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 产品示例和示例数据库的信息，请参阅 [SQL Server Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=267527)（SQL Server Integration Services 产品示例）。  
   
 ## <a name="lookup-transformation-editor-general-page"></a>查找转换编辑器（“常规”页）
   可以使用“查找转换编辑器”对话框的 **“常规”** 页，选择缓存模式，选择连接类型以及指定如何处理没有匹配项的行。  
@@ -168,7 +168,7 @@ ms.locfileid: "47730925"
  如果选中 **“指定如何处理无匹配项的行”** 列表框中的任何其他选项，则行将作为错误处理。 **“错误输出”** 页上的 **“错误”** 选项不可用。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>查找转换编辑器（“连接”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“连接”** 页选择连接管理器。 在选择 OLE DB 连接管理器时，会同时选择用来生成引用数据集的查询、表或视图。  
@@ -215,7 +215,7 @@ ms.locfileid: "47730925"
  使用“预览查询结果”对话框预览结果。 此选项最多可以显示 200 行。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>查找转换编辑器（“列”页）
   可以使用 **“查找转换编辑器”** 对话框的 **“列”** 页，指定源表与引用表之间的联接以及从引用表中选择查找列。  
@@ -272,7 +272,7 @@ ms.locfileid: "47730925"
  使用“设置查询参数”对话框将输入列映射到参数。  
   
 ### <a name="external-resources"></a>外部资源  
- blogs.msdn.com 上的博客文章： [查找缓存模式](http://go.microsoft.com/fwlink/?LinkId=219518)  
+ blogs.msdn.com 上的博客文章： [查找缓存模式](https://go.microsoft.com/fwlink/?LinkId=219518)  
   
 ## <a name="see-also"></a>另请参阅  
  [模糊查找转换](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   

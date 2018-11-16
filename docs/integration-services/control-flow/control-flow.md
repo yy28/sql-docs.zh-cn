@@ -15,12 +15,12 @@ ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 032b2fc6eee634f1b651384a035d381820844200
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673455"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640664"
 ---
 # <a name="control-flow"></a>“控制流”
   包由一个控制流以及一个或多个数据流（可选）组成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供了三种不同类型的控制流元素：提供包中结构的容器、提供功能的任务以及将可执行文件、容器和任务连接为已排序控制流的优先约束。  
@@ -54,11 +54,11 @@ ms.locfileid: "47673455"
   
      将任务或容器添加到 **“控制流”** 选项卡的设计图面后， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器自动将连接线添加到项。 如果包中包含两个或更多项、任务或容器，则可以通过将它们的连接线从一项拖动到其他项而将它们联接成控制流。  
   
-     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [优先约束](../../integration-services/control-flow/precedence-constraints.md)。  
+     两个项之间的连接器表示优先约束。 优先约束定义了两个连接项之间的关系。 它指定了运行时任务和容器的执行顺序以及任务和容器的运行条件。 例如，优先约束可以指定某任务必须成功，才能运行控制流中的下一个任务。 有关详细信息，请参阅 [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md)。  
   
 -   添加连接管理器。  
   
-     多个任务需要连接到数据源，因此必须将任务需要的连接管理器添加到包。 根据所使用的枚举器类型，Foreach 循环容器可能也需要连接管理器。 可以在逐项构造控制流时或开始构造控制流前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
+     多个任务需要连接到数据源，因此必须将任务需要的连接管理器添加到包。 根据所使用的枚举器类型，Foreach 循环容器可能也需要连接管理器。 可以在逐项构造控制流时或开始构造控制流前添加连接管理器。 有关详细信息，请参阅 [Integration Services (SSIS) 连接](../../integration-services/connection-manager/integration-services-ssis-connections.md)和[创建连接管理器](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)。  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器也包含多个设计时功能，这些功能可用于管理设计图面以及使控制流自文档化。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47673455"
   
 -   [在控制流中添加或删除任务或容器](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 -   [对组件分组或取消分组](../../integration-services/group-or-ungroup-components.md)  
   

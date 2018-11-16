@@ -11,12 +11,12 @@ ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef85a7d5620124ce95c3adf2731248603bde3e34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d4b26ccd758bbd7d4a5cbe8959e7939848fd493
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675895"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639824"
 ---
 # <a name="flat-file-custom-properties"></a>平面文件自定义属性
   **源自定义属性**  
@@ -36,7 +36,7 @@ ms.locfileid: "47675895"
   
 |属性名称|数据类型|描述|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|一个值，该值指示列是使用 DTS 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 有关详细信息，请参阅 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此属性的默认值为 **False**。<br /><br /> 注意：此属性未在 **平面文件源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
+|FastParse|Boolean|一个值，该值指示列是使用 DTS 提供的不区分区域设置的较快分析例程，还是使用标准的区分区域设置的分析例程。 有关详细信息，请参阅 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 和 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)。 此属性的默认值为 **False**。<br /><br /> 注意：此属性未在 **平面文件源编辑器**中提供，但可以使用 **高级编辑器**进行设置。|  
   
  有关详细信息，请参阅 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "47675895"
  有关详细信息，请参阅 [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

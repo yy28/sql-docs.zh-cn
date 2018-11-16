@@ -19,12 +19,12 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4fb378c8ec2021e856c654f57844de1d36a67746
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710135"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639744"
 ---
 # <a name="union-all-transformation"></a>Union All 转换
   Union All 转换将多个输入组合到一个输出中。 例如，可将来自五个不同平面文件源的输出输入到 Union All 转换并将其组合到一个输出中。  
@@ -41,9 +41,9 @@ ms.locfileid: "47710135"
  此转换具有多个输入和一个输出。 它不支持错误输出。  
   
 ## <a name="configuration-of-the-union-all-transformation"></a>Union All 转换的配置  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
- 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
+ 有关可以编程方式设置的属性的详细信息，请参阅 [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)。  
   
  有关如何设置属性的详细信息，请单击下列主题之一：  
   

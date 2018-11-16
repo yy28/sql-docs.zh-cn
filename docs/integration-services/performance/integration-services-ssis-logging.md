@@ -30,12 +30,12 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7a00dbd30f8cee08cb1667627c4b20c64eaef79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9be97427a20f7277088422734f0108d999a7302d
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799099"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641254"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 日志记录
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含可用来在包、容器和任务中执行日志记录的日志提供程序。 通过日志记录可以捕获有关包的运行时信息，从而帮助您在每次运行包时对其进行审核和故障排除。 例如，日志可以捕获运行包的操作员的姓名以及包开始和完成的时间。  
@@ -679,4 +679,4 @@ SQL Server Integration Services 提供了一组丰富的自定义事件，可以
 -   [Integration Services 包记录的事件](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
   
 ## <a name="related-content"></a>相关内容  
- [用于完整和详细日志记录的 DTLoggedExec 工具（CodePlex 项目）](http://go.microsoft.com/fwlink/?LinkId=150579)  
+ [用于完整和详细日志记录的 DTLoggedExec 工具（CodePlex 项目）](https://go.microsoft.com/fwlink/?LinkId=150579)  

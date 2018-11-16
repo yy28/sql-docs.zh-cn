@@ -12,12 +12,12 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f06d186ba77c1b65c6ef683a069e718b42c1c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602957"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>使用“添加 Azure 副本向导”(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47656385"
   
 -   您必须连接到承载当前主副本的服务器实例。  
   
--   您必须有混合 IT 环境，其中的本地子网有 Windows Azure 站点到站点 VPN。 有关详细信息，请参阅 [在管理门户中配置站点到站点 VPN](https://azure.microsoft.com/en-us/documentation/articles/vpn-gateway-site-to-site-create)。  
+-   您必须有混合 IT 环境，其中的本地子网有 Windows Azure 站点到站点 VPN。 有关详细信息，请参阅 [在管理门户中配置站点到站点 VPN](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create)。  
   
 -   可用性组必须包含本地可用性副本。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47656385"
   
 1.  首先，为您的 Windows Azure 订阅下载管理证书。 单击“下载”打开登录页面。  
   
-2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](http://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
+2.  使用你的 Microsoft 帐户或组织帐户登录到 Microsoft Azure。 Microsoft 或组织帐户采用电子邮件地址格式，如 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com。 有关 Azure 凭据的详细信息，请参阅 [Microsoft 组织帐户常见问题](https://technet.microsoft.com/jj592903) 和 [组织帐户登录问题的疑难解答](https://support.microsoft.com/kb/2756852)。  
   
 3.  然后单击 **“连接”** 连接到您的订阅。 连接后，下拉列表用 Windows Azure 参数进行填充，例如 **“虚拟网络”** 和 **“虚拟网络子网”**。  
   

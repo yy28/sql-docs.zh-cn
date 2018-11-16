@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 235572bf33c100ecb55fb7ce821f7028b1124595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb9fcf4c03fdf2fb17d69d2d0f0b624d111f7e3f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822415"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639674"
 ---
 # <a name="xml-task"></a>XML 任务
   XML 任务用于与 XML 数据配合使用。 使用此任务，包可以检索 XML 文档，使用可扩展样式表语言转换 (XSLT) 样式表和 XPath 表达式对文档应用运算，合并多个文档，还可以验证、比较更新的文档并将其保存到文件和变量。  
@@ -127,7 +127,7 @@ ms.locfileid: "47822415"
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中如何设置属性的详细信息，请单击下列主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-xml-task"></a>XML 任务的编程配置  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -135,12 +135,12 @@ ms.locfileid: "47822415"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.XMLTask.XMLTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="xml-task-editor-general-page"></a>XML 任务编辑器（“常规”页）
   可以使用 **“XML 任务编辑器”** 对话框的 **“常规节点”** ，指定操作类型以及配置操作。  
   
- 要了解此任务，请参阅[使用 XML 任务验证 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。 有关使用 XML 文档和数据的信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](http://go.microsoft.com/fwlink/?LinkId=56214)”。  
+ 要了解此任务，请参阅[使用 XML 任务验证 XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)。 有关使用 XML 文档和数据的信息，请参阅 MSDN Library 中的“[Employing XML in the .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)”。  
   
 ### <a name="static-options"></a>静态选项  
  **OperationType**  
@@ -173,7 +173,7 @@ ms.locfileid: "47822415"
   
  如果将“源”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建新的变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 ### <a name="operationtype-dynamic-options"></a>OperationType 动态选项  
   
@@ -234,7 +234,7 @@ ms.locfileid: "47822415"
   
  如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 #### <a name="operationtype--xslt"></a>OperationType = XSLT  
  指定 XSLT 操作的选项。  
@@ -252,7 +252,7 @@ ms.locfileid: "47822415"
   
  如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -280,7 +280,7 @@ ms.locfileid: "47822415"
   
  如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
 #### <a name="operationtype--xpath"></a>OperationType = XPATH  
  指定 XPath 操作的选项。  
@@ -298,7 +298,7 @@ ms.locfileid: "47822415"
   
  如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -326,7 +326,7 @@ ms.locfileid: "47822415"
   
  如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **PutResultInOneNode**  
  指定是否将结果写入单个节点。  
@@ -361,7 +361,7 @@ ms.locfileid: "47822415"
   
  如果将“XPathStringSourceType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  使用 XPath 语句标识源文档中的合并位置时，此语句应返回一个节点。 如果该语句返回多个节点，则仅使用第一个节点。 第二个文档的内容在 XPath 查询返回的第一个节点下合并。  
   
@@ -378,7 +378,7 @@ ms.locfileid: "47822415"
   
  如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -406,7 +406,7 @@ ms.locfileid: "47822415"
   
  如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--diff"></a>OperationType = Diff  
  指定 Diff 运算的选项。  
@@ -453,7 +453,7 @@ ms.locfileid: "47822415"
   
  如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -481,7 +481,7 @@ ms.locfileid: "47822415"
   
  如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="operationtype--patch"></a>OperationType = Patch  
  指定修补操作的选项。  
@@ -499,7 +499,7 @@ ms.locfileid: "47822415"
   
  如果将“DestinationType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)。  
   
  **目标类型**  
  选择 XML 文档的目标类型。 此属性具有下表所列的选项。  
@@ -527,12 +527,12 @@ ms.locfileid: "47822415"
   
  如果将“SecondOperandType”设置为“变量”，请选择现有变量，或单击“\<新建变量...>”，创建一个新变量。  
   
- **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **相关主题**：[Integration Services (SSIS) 变量](../../integration-services/integration-services-ssis-variables.md)、[添加变量](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>相关内容  
   
--   agilebi.com 上的博客文章 [XML 目标脚本组件](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
+-   agilebi.com 上的博客文章 [XML 目标脚本组件](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
   
--   www.codeplex.com 上的 CodePlex 示例 [处理 XML 数据包示例](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
+-   www.codeplex.com 上的 CodePlex 示例 [处理 XML 数据包示例](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
   

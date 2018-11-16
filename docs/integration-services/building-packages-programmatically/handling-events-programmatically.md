@@ -25,12 +25,12 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f762d617dd2ae93a786f0c52b1200fee4bd36d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535dd25aa1d5f282261510100a0abb35518db8b4
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663855"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641604"
 ---
 # <a name="handling-events-programmatically"></a>以编程方式处理事件
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 运行时提供了一个事件集合，该集合中的事件在包的验证和执行过程之前、期间和之后发生。 这些事件可用两种方法捕获。 第一种方法是在类中实现 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 接口，并将该类作为参数提供给包的 Execute 和 Validate 方法。 第二种方法是创建 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 对象，该对象可以包含当 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 中的事件发生时所执行的其他 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 对象，例如任务和循环。 本节介绍这两种方法并提供代码示例来说明它们的用法。  
@@ -250,6 +250,6 @@ End Module
   
 ## <a name="see-also"></a>另请参阅  
  [Integration Services (SSIS) 事件处理程序](../../integration-services/integration-services-ssis-event-handlers.md)   
- [在包中添加事件处理程序](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [在包中添加事件处理程序](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   

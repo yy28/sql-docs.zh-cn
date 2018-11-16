@@ -10,12 +10,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9da27595423d85ddb2769ea66b6ac4b4e26cb05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f9b3fb8ce55a57a7609aacd685ef56952b6811e
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802285"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601147"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>监视 Always On 可用性组的性能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -328,7 +328,7 @@ ms.locfileid: "47802285"
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>监视 RTO 和 RPO  
- 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2: Extending the health model](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第二部分：扩展运行状况模型）中给出的 GUI 教程。  
+ 本部分演示如何监视可用性组的 RTO 和 RPO 指标。 此演示类似于 [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)（Always On 运行状况模型，第二部分：扩展运行状况模型）中给出的 GUI 教程。  
   
  [估计故障转移时间 (RTO)](#BKMK_RTO) 和[估计可能的数据丢失 (RPO)](#BKMK_RPO) 中的故障转移时间和可能的数据丢失计算的元素，可方便地用作策略管理方面数据库副本状态中的性能指标（请参阅[查看 SQL Server 对象上基于策略的管理方面](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)）。 可以按计划监视这两个指标，并在指标分别超过 RTO 和 RPO 时发出警报。  
   

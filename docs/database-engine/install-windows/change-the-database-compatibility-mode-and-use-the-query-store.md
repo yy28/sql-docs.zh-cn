@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 2c5aa5be950aa9596af1523a53665514a8b7f6c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb130bbf8c3c2e66bd5b64458ca5f07b83f9b532
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754915"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606767"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>更改数据库兼容性级别和使用查询存储
 
@@ -39,7 +39,7 @@ ms.locfileid: "47754915"
 > - 升级后，tempdb、model、msdb 和 Resource 数据库的兼容性级别将设置为当前兼容性级别。   
 > - master 系统数据库保留它在升级之前的兼容性级别。    
   
-用于启用新查询处理器功能的升级过程与产品的发布后服务模式相关。  这些修补程序中的一部分发布在[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下。  需要修补程序的客户可以选择加入这些修补程序而不会导致其他客户的意外回归。 查询处理器修补程序的发布后服务模式记录于 [此处](http://support.microsoft.com/kb/974006)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，转换到新的兼容级别意味着不再需要跟踪标志 4199 ，因为在最新的兼容级别中这些修复程序现在默认处于启用状态。 因此，作为升级过程的一部分，验证升级过程完成后未启用 4199 是很重要的。  
+用于启用新查询处理器功能的升级过程与产品的发布后服务模式相关。  这些修补程序中的一部分发布在[跟踪标志 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199) 下。  需要修补程序的客户可以选择加入这些修补程序而不会导致其他客户的意外回归。 查询处理器修补程序的发布后服务模式记录于 [此处](https://support.microsoft.com/kb/974006)。 从 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 开始，转换到新的兼容级别意味着不再需要跟踪标志 4199 ，因为在最新的兼容级别中这些修复程序现在默认处于启用状态。 因此，作为升级过程的一部分，验证升级过程完成后未启用 4199 是很重要的。  
 
 > [!NOTE]
 > 但是，仍需要跟踪标志 4199 才能启用 RTM 之后发布的任何适用的新查询处理器修补程序。

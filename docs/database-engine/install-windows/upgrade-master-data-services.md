@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f9d3d446e629fd4898db71b0001f2b9f487f44c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4128ed5937688ebd681c0fd99f7d346d66b0f263
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666025"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600737"
 ---
 # <a name="upgrade-master-data-services"></a>升级 Master Data Services
 
@@ -98,7 +98,7 @@ ms.locfileid: "47666025"
         > [!IMPORTANT]  
         >  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版 Master Data Services 配置管理器中，可以选择 SQL Server 早期版本（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）的现有 MDS Web 应用程序。 您不能选择现有 Web 应用程序，而是必须为 MDS 创建一个 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Web 应用程序。 否则，在您尝试将 Web 应用程序与升级的 MDS 数据库关联时，您会收到错误，指出无法访问请求的页面，因为该页的相关配置数据无效。  
         >   
-        >  如果要为 MDS Web 应用程序使用与现有（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）Web 应用程序相同的名字（别名），则必须首先从 IIS 中删除该 Web 应用程序和关联的应用程序池，然后使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版 Master Data Services 配置管理器创建同名的 Web 应用程序。 有关从 IIS 删除 Web 应用程序和应用程序池的信息，请参阅 [删除应用程序 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323537) 和 [删除应用程序池 (IIS)](http://go.microsoft.com/fwlink/?LinkId=323538)。  
+        >  如果要为 MDS Web 应用程序使用与现有（[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]）Web 应用程序相同的名字（别名），则必须首先从 IIS 中删除该 Web 应用程序和关联的应用程序池，然后使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 版 Master Data Services 配置管理器创建同名的 Web 应用程序。 有关从 IIS 删除 Web 应用程序和应用程序池的信息，请参阅 [删除应用程序 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 和 [删除应用程序池 (IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)。  
   
 4.  将新 Web 应用程序与已升级的 MDS 数据库关联。  
   

@@ -15,18 +15,18 @@ ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 47b3ca2abf53fe93a24eb23650c1b741a2445988
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684387"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640007"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>以编程方式加载和运行远程包
   若要从未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包，请启动这些包，以便它们可在安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的远程计算机上运行。 为此，可在本地计算机上使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理、Web 服务或远程组件来启动远程计算机上的包。 如果尝试直接从本地计算机启动远程包，则这些包将加载到本地计算机上，并尝试在本地计算机上运行。 如果本地计算机未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]，这些包将不会运行。  
   
 > [!NOTE]  
->  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 外，你不能在未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的客户端计算机上运行包，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 许可条款可能不允许你在其他计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是服务器组件，不可再分发至客户端计算机。  
+>  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 外，您不能在未安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的客户端计算机上运行包，您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 许可条款可能不允许您在其他计算机上安装 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是服务器组件，不可再分发至客户端计算机。  
   
  或者，您也可以从安装了 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 的本地计算机运行远程包。 有关详细信息，请参阅[以编程方式加载和运行本地包](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47684387"
 > [!NOTE]  
 >  sp_start_job 存储过程的返回值指示该存储过程是否已成功启动 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业。 此返回值不指示该包成功还是失败。  
   
- 有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](http://support.microsoft.com/kb/918760)。  
+ 有关对从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理作业运行的包进行故障排除的信息，请参阅 Microsoft 文章[从 SQL Server 代理作业步骤调用 SSIS 包时 SSIS 包不运行](https://support.microsoft.com/kb/918760)。  
   
 ### <a name="sample-code"></a>示例代码  
   
@@ -151,7 +151,7 @@ namespace LaunchSSISPackageAgent_CS
 >  使用 Web 服务的默认身份验证和授权设置，加载和执行包时通常没有足够的权限来访问 SQL Server 或文件系统。 可能需要在 web.config 文件中配置 Web 服务的身份验证和授权设置并相应地分配数据库和文件系统权限，以便为 Web 服务分配适当的权限。 有关 Web、数据库和文件系统权限的全面讨论已超出了本主题的范围。  
   
 > [!IMPORTANT]  
->  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于 SSIS 包存储的方法仅支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  
+>  <xref:Microsoft.SqlServer.Dts.Runtime.Application> 类中用于处理 SSIS 包存储区的方法只支持“.”、localhost 或本地服务器的服务器名称。 不能使用“(local)”。  
   
 ### <a name="sample-code"></a>示例代码  
  下面的代码示例演示如何创建和测试 Web 服务。  
@@ -176,7 +176,7 @@ Imports System.Web.Services.Protocols
 Imports Microsoft.SqlServer.Dts.Runtime  
 Imports System.IO  
   
-<WebService(Namespace:="http://dtsue/")> _  
+<WebService(Namespace:="https://dtsue/")> _  
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _  
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _  
 Public Class LaunchSSISPackageService  
@@ -252,7 +252,7 @@ using System.Web.Services.Protocols;
 using Microsoft.SqlServer.Dts.Runtime;  
 using System.IO;  
   
-[WebService(Namespace = "http://dtsue/")]  
+[WebService(Namespace = "https://dtsue/")]  
 [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]  
 public class LaunchSSISPackageServiceCS : System.Web.Services.WebService  
 {  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部资源  
   
--   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](http://technet.microsoft.com/sqlserver/ff686764.aspx)  
+-   technet.microsoft.com 上的视频：[如何使用 SQL Server 代理自动执行 SSIS 包（SQL Server 视频）](https://technet.microsoft.com/sqlserver/ff686764.aspx)  
   
 ## <a name="see-also"></a>另请参阅  
  [了解本地和远程执行之间的区别](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

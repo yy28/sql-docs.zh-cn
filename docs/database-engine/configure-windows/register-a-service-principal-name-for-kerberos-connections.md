@@ -17,12 +17,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 49c30d7f0d241d61855e50c53a897281b23ff22e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e865ccf2810b9dc701bfe942245d59bcb1ecf9d4
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709385"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605487"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>为 Kerberos 连接注册服务主体名称
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](http://www.microsoft.com/download/details.aspx?id=39046)。  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** 是一款诊断工具，可帮助解决与 Kerberos Configuration Manager for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]相关的连接问题。 有关详细信息，请参阅 [Microsoft Kerberos Configuration Manager for SQL Server](https://www.microsoft.com/download/details.aspx?id=39046)。  
   
 ##  <a name="Role"></a> SPN 在身份验证过程中所起的作用  
  当应用程序打开一个连接并使用 Windows 身份验证时， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 会传递 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机名、实例名和 SPN（可选）。 如果该连接传递了 SPN，则使用它时不对它做任何更改。  
@@ -64,9 +64,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > [!NOTE]  
 >  将 Windows 域配置为在低于 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2 功能级别的级别上运行时，托管服务帐户将不具有注册 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 服务的 SPN 所需的权限。 如果需要进行 Kerberos 身份验证，域管理员应手动在托管服务帐户上注册 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SPN。  
   
- 知识库文章 [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723)（如何在 SQL Server 中使用 Kerberos 身份验证）包含有关如何向非域管理员帐户授予 SPN 读或写权限的信息。  
+ 知识库文章 [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)（如何在 SQL Server 中使用 Kerberos 身份验证）包含有关如何向非域管理员帐户授予 SPN 读或写权限的信息。  
   
- 有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
+ 有关其他信息，请参阅 [How to Implement Kerberos Constrained Delegation with SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)（如何使用 SQL Server 2008 实现 Kerberos 约束委派）  
   
 ##  <a name="Formats"></a> SPN 格式  
  自 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]开始，SPN 格式已发生更改，目的是为了支持对 TCP/IP、Named Pipes 和 Shared Memory 进行 Kerberos 身份验证。 所支持的命名实例和默认实例的 SPN 格式如下所示。  
@@ -113,7 +113,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  如果服务帐户缺少执行这些操作所需的权限，在注册或取消注册 SPN 时可能需要进行手动干预。  
   
 ##  <a name="Manual"></a> 手动注册 SPN  
-若要手动注册 SPN，管理员必须使用随 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支持工具提供的 Setspn.exe 工具。 有关详细信息，请参阅 [Windows Server 2003 Service Pack 1 Support Tools](http://support.microsoft.com/kb/892777) （Windows Server 2003 Service Pack 1 支持工具）知识库文章。  
+若要手动注册 SPN，管理员必须使用随 Microsoft [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 支持工具提供的 Setspn.exe 工具。 有关详细信息，请参阅 [Windows Server 2003 Service Pack 1 Support Tools](https://support.microsoft.com/kb/892777) （Windows Server 2003 Service Pack 1 支持工具）知识库文章。  
   
 Setspn.exe 是一个命令行工具，您可通过该工具读取、修改和删除服务主体名称 (SPN) 目录属性。 您还可借助此工具查看当前 SPN、重置帐户的默认 SPN 以及添加或删除补充 SPN。  
   
@@ -182,6 +182,6 @@ WHERE session_id = @@SPID;
  [客户端连接中的服务主体名称 (SPN) (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [客户端连接中的服务主体名称 (SPN) (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   
  [SQL Server Native Client 功能](../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [管理 Reporting Services 环境中的 Kerberos 身份验证问题](http://technet.microsoft.com/library/ff679930.aspx)  
+ [管理 Reporting Services 环境中的 Kerberos 身份验证问题](https://technet.microsoft.com/library/ff679930.aspx)  
   
   

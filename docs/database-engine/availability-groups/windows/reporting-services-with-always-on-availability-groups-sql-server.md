@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: f7b76775e501d2ba9c3c13191beb75973d9f6bbb
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 8dde773d49f9f53c6c35a7a4508b3666180480fd
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120284"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604947"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services 与 AlwaysOn 可用性组 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "49120284"
   
  将 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 用于 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 数据源的一个重要好处是利用可读的辅助副本作为报表数据源，同时辅助副本为主数据库提供故障转移功能。  
   
- 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答 http://msdn.microsoft.com/sqlserver/gg508768) (](http://msdn.microsoft.com/sqlserver/gg508768)。  
+ 有关 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的一般信息，请参阅[适用于 SQL Server 2012 的 Always On 的常见问题解答 https://msdn.microsoft.com/sqlserver/gg508768) (](https://msdn.microsoft.com/sqlserver/gg508768)。  
   
  **本主题内容：**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "49120284"
   
  当在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 连接字符串中包含一个 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 属性但是服务器无法识别该属性时，显示此消息。 当您在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 用户界面中单击“测试连接”按钮以及预览报表（如果在报表服务器上启用远程错误）时，将显示所述的错误消息。  
   
- 有关所需修补程序的详细信息，请参阅[将 SQL Server 2012 中对 AlwaysOn 功能的支持引入 .NET Framework 3.5 SP1 的 KB 2654347A 修补程序](http://go.microsoft.com/fwlink/?LinkId=242896)。  
+ 有关所需修补程序的详细信息，请参阅[将 SQL Server 2012 中对 AlwaysOn 功能的支持引入 .NET Framework 3.5 SP1 的 KB 2654347A 修补程序](https://go.microsoft.com/fwlink/?LinkId=242896)。  
   
  有关其他 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 要求的信息，请参阅[针对 AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "49120284"
   
 -   ReportServerTempDB  
   
- 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](http://go.microsoft.com/fwlink/?LinkId=245165)http://go.microsoft.com/fwlink/?LinkId=245165)。  
+ 本机模式不支持或使用警报数据库以及相关功能。 在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配置管理器中配置本机模式的报表服务器。 对于 SharePoint 模式，你将服务应用程序数据库名称配置为你作为 SharePoint 配置一部分创建的“客户端访问点”的名称。 有关将 SharePoint 配置用于 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的详细信息，请参阅[为 SharePoint 服务器配置和管理 SQL Server 可用性组 (](https://go.microsoft.com/fwlink/?LinkId=245165)https://go.microsoft.com/fwlink/?LinkId=245165)。  
   
 > [!NOTE]  
 >  SharePoint 模式的报表服务器使用 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 服务应用程序数据库和 SharePoint 内容数据库之间的同步过程。 将报表服务器数据库和内容数据库一起维护很重要。 您应考虑在同一可用性组中配置它们以便它们作为一个整体进行故障转移和恢复。 请考虑下列方案：  

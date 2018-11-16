@@ -13,12 +13,12 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 020b6dffc01345e63258f2f8f781dfb5aebeb60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689365"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641234"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC 设计器控制台用于开发和维护 Oracle CDC 实例。 CDC 设计器控制台是一种 Microsoft 管理控制台管理单元，它包含以下元素：  
@@ -29,7 +29,7 @@ ms.locfileid: "47689365"
   
 -   CDC 实例属性编辑器：此对话框用于编辑任何现有的 Oracle CDC 服务实例。 有关编辑 CDC 实例属性的信息，请参阅 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)。  
   
- Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 属于 SQL Server 2016 功能包的一部分。 从 [SQL Server 2016 功能包网页](http://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
+ Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® 2016 属于 SQL Server 2016 功能包的一部分。 从 [SQL Server 2016 功能包网页](https://go.microsoft.com/fwlink/?LinkId=746297)下载功能包的组件。  
   
 ## <a name="in-this-documentation"></a>本文档内容  
   
