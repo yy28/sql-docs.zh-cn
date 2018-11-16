@@ -19,7 +19,7 @@ ms.locfileid: "51217805"
 ---
 # <a name="download-and-install-azure-data-studio"></a>下载并安装 Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)]可在Windows，macOS和Linux上运行。
+[!INCLUDE[name-sos](../includes/name-sos.md)] 在 Windows、 macOS 和 Linux 上运行。
 
 下载并安装最新版本中，*年 11 月发布*:
 
@@ -117,7 +117,6 @@ ms.locfileid: "51217805"
 
 
 ## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
-
 
 如果你使用 Windows 安装程序安装了 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则卸载方法与移除任何 Windows 应用程序的方法相同。
 
