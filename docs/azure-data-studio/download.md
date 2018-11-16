@@ -24,7 +24,7 @@ ms.locfileid: "51217805"
 下载并安装最新版本中，*年 11 月发布*:
 
 > [!NOTE]
-> 如果要从SQL Operations Studio进行更新并希望保留设置，键盘快捷键或代码段，请参阅[移动用户设置](#move-user-settings)。
+> 如果要从 SQL Operations Studio 进行更新，并且希望保留设置、键盘快捷方式或代码片段，请参阅[移动用户设置](#move-user-settings)。
 
 |平台|下载|发布日期| 版本 |
 |:---|:---|:---|:---|
@@ -36,11 +36,11 @@ ms.locfileid: "51217805"
 
 ## <a name="get-azure-data-studio-for-windows"></a>获取 Windows Azure Data Studio
 
-此版本的[!INCLUDE[name-sos](../includes/name-sos-short.md)]包含一个标准的Windows安装程序体验和一个.zip： 
+此版本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 包含一个标准的 Windows 安装程序体验和一个 .zip 文件： 
 
 **安装程序**
 
-1. 下载并运行[[!INCLUDE[name-sos](../includes/name-sos-short.md)]适用于 Windows 的安装程序](https://go.microsoft.com/fwlink/?linkid=2038320)。
+1. 下载并运行适用于 Windows 的 [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 安装程序(https://go.microsoft.com/fwlink/?linkid=2038320)。
 1. 启动[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]应用。
 
 
@@ -53,18 +53,18 @@ ms.locfileid: "51217805"
 
 ## <a name="get-azure-data-studio-for-macos"></a>获取适用于 macOS 的 Azure Data Studio
 
-1. 下载适用于 macOS的[[!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2038327)。
+1. 下载适用于 macOS 的 [[!INCLUDE[name-sos](../includes/name-sos-short.md)]](https://go.microsoft.com/fwlink/?linkid=2038327)。
 2. 若要展开 zip 的内容，请双击它。
 3. 若要使[!INCLUDE[name-sos](../includes/name-sos-short.md)]推出*快速启动板*，拖动*Azure 数据 Studio.app*到*应用程序*文件夹。
 
 
 ## <a name="get-azure-data-studio-for-linux"></a>获取适用于 Linux 的 Azure Data Studio
 
-1. 使用其中一个安装程序或tar.gz存档下载[!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux：
+1. 使用其中一个安装程序或 tar.gz 存档下载适用于 Linux 的 [!INCLUDE[name-sos](../includes/name-sos-short.md)]：
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2038405)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2038401)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2038332)
-1. 若要解压缩文件，并启动[!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开一个新的终端窗口并键入以下命令：
+1. 若要解压缩文件并启动 [!INCLUDE[name-sos](../includes/name-sos-short.md)]，请打开新的终端窗口并键入以下命令：
 
    **Debian 安装：**
    ```bash
@@ -119,13 +119,13 @@ ms.locfileid: "51217805"
 ## <a name="uninstall-azure-data-studio"></a>卸载 Azure Data Studio
 
 
-如果您使用Windows安装程序安装了[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则以与删除任何Windows应用程序相同的方式卸载。
+如果你使用 Windows 安装程序安装了 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则卸载方法与移除任何 Windows 应用程序的方法相同。
 
-如果您使用.zip或其他存档安装了[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则只需删除这些文件即可。
+如果你使用 .zip 或其他存档安装了 [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]，则只需删除这些文件。
 
 ## <a name="supported-operating-systems"></a>支持的操作系统
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]在Windows，macOS和Linux上运行，并支持在以下平台上运行：
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 在 Windows、macOS 和 Linux 上运行，并在以下平台上受支持：
 
 ### <a name="windows"></a>Windows
 - Windows 10（64 位）
@@ -161,16 +161,16 @@ ms.locfileid: "51217805"
 
 ## <a name="supported-sql-offerings"></a>支持的 SQL 产品/服务
 
-* 此版本的Azure Data Studio适用于所有受支持的SQL Server 2014版本 -  [!INCLUDE [sql-server-2019预览版](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，并支持使用Azure SQL数据库和Azure SQL数据仓库中的最新云功能。 Azure Data Studio还为Azure SQL托管实例提供预览支持。
+* 此版本的 Azure Data Studio 适用于所有受支持版本的 SQL Server 2014 - [!INCLUDE [sql-server-2019 预览版](..\includes\sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044)，同时支持与 Azure SQL 数据库和 Azure SQL 数据仓库中的最新云功能配合使用。Azure Data Studio 还为 Azure SQL 托管实例提供预览支持。
 
 ## <a name="move-user-settings"></a>移动用户设置
 
-如果你想要移动自定义设置、 键盘快捷方式或代码段，请按照以下步骤。如果要从SQL Operations Studio版本升级到Azure Data Studio，这一点很重要。
+如果想要移动自定义设置、键盘快捷方式或代码片段，请执行以下步骤。如果要从 SQL Operations Studio 版本升级到 Azure Data Studio，执行这些步骤非常重要。
 
-*如果您已有Azure Data Studio，或者您从未安装或自定义SQL Operations Studio，则可以忽略此部分。*
+*如果已有 Azure Data Studio，或者从未安装或自定义 SQL Operations Studio，则可以忽略此部分。*
 
 
-1. 通单击左下方的齿轮并单击“设置”，打开**设置。**。 
+1. 打开**设置**：单击左下方的齿轮并单击**设置**。
 
    ![打开设置](./media/download/open-settings.png)
 
@@ -178,13 +178,13 @@ ms.locfileid: "51217805"
 
    ![显示在浏览器](./media/download/reveal-in-explorer.png)
 
-3. 复制此文件夹中的所有文件并保存在本地驱动器上易于查找的位置，例如Documents文件夹。 
+3. 复制此文件夹中的所有文件并保存在本地驱动器上易于查找的位置，例如 Documents 文件夹。
 
    ![复制设置](./media/download/copy-settings.png)
 
-4. 在新版本的Azure Data Studio中，按照步骤1-2，然后在步骤3中将保存的内容粘贴到文件夹中。您还可以手动复制各自位置的设置，键绑定或片段。
+4. 在新版 Azure Data Studio 中，请执行步骤 1-2，然后在步骤 3 中将保存的内容粘贴到文件夹中。还可以手动从各自的位置复制设置、键绑定或代码片段。
 
-5. 如果覆盖现有安装，请在安装之前删除旧安装目录，以避免连接到资源浏览器的Azure帐户时出错。
+5. 如果要覆盖现有安装，请在安装前删除旧安装目录，以避免在资源浏览器连接到 Azure 帐户时出错。
 
 ## <a name="next-steps"></a>后续步骤
 
