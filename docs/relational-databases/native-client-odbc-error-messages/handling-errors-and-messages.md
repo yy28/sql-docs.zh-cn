@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b59490cd0c8926b9b266135856a54d4d1645bc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca55861daaeb32eaf5cce4fc70e09f54622a3f13
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661956"
 ---
 # <a name="handling-errors-and-messages"></a>处理错误和消息
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47676765"
   
  原始[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本机 API，对于 C，DB 库允许应用程序以安装回调错误处理和消息处理函数的返回错误或消息。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 语句（如 PRINT、RAISERROR、DBCC 和 SET）将其结果返回到 DB-Library 消息处理程序函数，而不是结果集。 但是，ODBC API 不具备这种回调功能。 当[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序检测到消息传回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，它将 ODBC 返回代码设置为 SQL_SUCCESS_WITH_INFO 或 SQL_ERROR，并返回作为一个或多个诊断记录的消息。 因此，ODBC 应用程序必须仔细测试这些返回代码，并调用**SQLGetDiagRec**检索消息数据。  
   
- 有关跟踪错误的详细信息，请参阅[数据访问跟踪](http://go.microsoft.com/fwlink/?LinkId=125805)。 有关添加中的错误跟踪的增强功能的信息[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
+ 有关跟踪错误的详细信息，请参阅[数据访问跟踪](https://go.microsoft.com/fwlink/?LinkId=125805)。 有关添加中的错误跟踪的增强功能的信息[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，请参阅[访问扩展事件日志中的诊断信息](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

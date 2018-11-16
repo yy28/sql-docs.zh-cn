@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/09/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +14,12 @@ ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 64570b9a6f2052fdc3f9e5544a442853110587b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613145"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51560294"
 ---
 # <a name="address-book-command-buttons"></a>通讯簿命令按钮
 通讯簿应用程序包括以下的命令按钮：  
@@ -33,7 +33,7 @@ ms.locfileid: "47613145"
 -   一个**取消更改**按钮可放弃更改。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="find-button"></a>查找按钮  
  单击**查找**按钮激活 VBScript Find_OnClick Sub 过程，用于生成和发送的 SQL 查询。 单击此按钮将填充数据网格。  
@@ -45,7 +45,7 @@ ms.locfileid: "47613145"
   
  例如，如果**姓氏**框包含条目"高"和**标题**框包含"经理"，SQL 语句的条目 (值为`myQuery`) 将读取：  
   
-```  
+```sql
 Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee where lastname like 'Berge%' and title like 'Program Manager%'  
 ```  
   
@@ -54,7 +54,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
 ## <a name="preparing-and-sending-the-query"></a>准备并发送查询  
  Find_OnClick Sub 过程的最后一个部分包含两个语句。 第一条语句将分配[SQL](../../../ado/reference/rds-api/sql-property.md)属性的[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)等于动态生成的 SQL 查询的对象。 第二个语句会导致**rds。DataControl**对象 (`DC1`) 来查询数据库，并在网格中然后显示新查询的结果。  
   
-```  
+```vb
 Sub Find_OnClick  
    '...  
    DC1.SQL = myQuery  
@@ -65,7 +65,7 @@ End Sub
 ## <a name="update-profile-button"></a>更新配置文件按钮  
  单击**更新配置文件**按钮将激活 VBScript Update_OnClick Sub 过程中，执行[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的 (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md)并[刷新](../../../ado/reference/rds-api/refresh-method-rds.md)方法。  
   
-```  
+```vb
 Sub Update_OnClick  
    DC1.SubmitChanges  
    DC1.Refresh  
@@ -77,7 +77,7 @@ End Sub
 ## <a name="cancel-changes-button"></a>更改取消按钮  
  单击**取消更改**激活 VBScript Cancel_OnClick Sub 过程中，执行[rds。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)对象的 (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)方法。  
   
-```  
+```vb
 Sub Cancel_OnClick  
    DC1.CancelUpdate  
 End Sub  

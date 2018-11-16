@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3860eae1663b512af1835a0e1268145a742d161a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673476"
 ---
 # <a name="installation-and-configuration"></a>安装和配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,14 +23,14 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 ## <a name="prerequisites"></a>必要條件
 
-- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 对于该示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
+- [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) （或更高版本） 或[Azure SQL 数据库](https://azure.microsoft.com/services/sql-database/)。 对于该示例的完整版本，使用 SQL Server 评估/开发人员/企业版。
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)。 为获得最佳结果使用 2016 年 6 月发行版或更高版本。
 
 ## <a name="download"></a>下载
 
 该示例的最新版本：
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](https://go.microsoft.com/fwlink/?LinkID=800630)
 
 将示例 WideWorldImporters 数据库备份/bacpac 下载对应到你的 SQL Server 或 Azure SQL 数据库版本。
 
@@ -90,5 +90,5 @@ Wide World Importers OLTP 数据库安装和配置说明。
 
 WideWorldImporters 的 bacpac 下载中默认情况下不启用行级别安全性。 若要在数据库中启用行级别安全性，请运行以下存储的过程：
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 

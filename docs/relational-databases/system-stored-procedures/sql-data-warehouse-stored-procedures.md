@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3369dfd653f1a0485f60145779b5691e200493a3
-ms.sourcegitcommit: b29745051be2326268f165cf72f5eb95dc893564
+ms.openlocfilehash: eb92907b87382c9aad2b7c1a580bf0feb33ac7bd
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50254403"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657146"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 数据仓库存储的过程
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "50254403"
  [sp_special_columns_100 &#40;SQL 数据仓库&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  某些实例中仅使用存储的过程的其他系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过客户端 Api，不应为一般客户使用。 这些过程均列在[系统存储过程 (Transact SQL)](http://msdn.microsoft.com/library/ms187961.aspx)。 这些过程可能会有所变动，不保证兼容性。 在列表上的所有过程中都均不提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
+>  某些实例中仅使用存储的过程的其他系统[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或通过客户端 Api，不应为一般客户使用。 这些过程均列在[系统存储过程 (Transact SQL)](https://msdn.microsoft.com/library/ms187961.aspx)。 这些过程可能会有所变动，不保证兼容性。 在列表上的所有过程中都均不提供[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [系统存储函数&#40;Transact SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [数据类型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

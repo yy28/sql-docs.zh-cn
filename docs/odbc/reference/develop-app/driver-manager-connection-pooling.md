@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e03932fe9d6cc98648c2e0da2e2cdd963a8d67f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c247ab2681f2ff1b0891c15e0348a088f08e42c1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677576"
 ---
 # <a name="driver-manager-connection-pooling"></a>驱动程序管理器连接池
 连接池使应用程序能够从无需每次使用重新建立的连接池使用连接。 一旦创建并放入池连接，应用程序可以重复使用该连接，而不执行整个连接过程。  
@@ -59,11 +59,11 @@ ms.locfileid: "47826131"
     > [!NOTE]  
     >  请求的连接到已入池连接的匹配方式取决于 SQL_ATTR_CP_MATCH 环境属性。 有关详细信息，请参阅[SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)。  
   
-     使用连接池的 ODBC 应用程序应调用[CoInitializeEx](http://go.microsoft.com/fwlink/?LinkID=116307)在应用程序初始化期间和[CoUninitialize](http://go.microsoft.com/fwlink/?LinkId=116310)应用程序关闭时。  
+     使用连接池的 ODBC 应用程序应调用[CoInitializeEx](https://go.microsoft.com/fwlink/?LinkID=116307)在应用程序初始化期间和[CoUninitialize](https://go.microsoft.com/fwlink/?LinkId=116310)应用程序关闭时。  
   
 5.  调用**SQLDisconnect**完成连接。 连接返回到连接池，并且变得可供重复使用。  
   
- 有关深入的讨论，请参阅[Microsoft 数据访问组件中的池](http://go.microsoft.com/fwlink/?LinkId=120776)。  
+ 有关深入的讨论，请参阅[Microsoft 数据访问组件中的池](https://go.microsoft.com/fwlink/?LinkId=120776)。  
   
 ## <a name="connection-pooling-considerations"></a>连接池的注意事项  
  执行任何以下操作使用 SQL 命令 （而不是通过 ODBC API） 可以影响连接的状态，并会导致意外的问题，连接池处于活动状态时：  
@@ -85,4 +85,4 @@ ms.locfileid: "47826131"
 ## <a name="see-also"></a>请参阅  
  [连接到数据源或驱动程序](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [开发 ODBC 驱动程序](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Microsoft 数据访问组件中的池](http://go.microsoft.com/fwlink/?LinkId=120776)
+ [Microsoft 数据访问组件中的池](https://go.microsoft.com/fwlink/?LinkId=120776)

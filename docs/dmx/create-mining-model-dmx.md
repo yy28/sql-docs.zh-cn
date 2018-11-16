@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae4979d02f92ef95364cc264c1a89c83b49a48d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 2ea71a918ab9ceb1afba41e5af0148212f33044b
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148042"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607137"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ## <a name="remarks"></a>备注  
  如果要创建具有内置测试数据集的模型，则应当使用 CREATE MINING STRUCTURE 语句，然后再使用 ALTER MINING STRUCTURE 语句。 但是，并非所有挖掘模型类型都支持维持数据集。 有关详细信息，请参阅 [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md)。  
   
- 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
+ 有关如何使用 CREATEMODEL 语句创建挖掘模型的演练，请参阅[时序预测 DMX 教程](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 示例  
  以下示例使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 算法创建新的挖掘模型。 Bike Buyer 列定义为可预测属性。  
@@ -187,7 +187,7 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [数据挖掘扩展插件&#40;DMX&#41;数据定义语句](../dmx/dmx-statements-data-definition.md)   
  [数据挖掘扩展插件&#40;DMX&#41;数据操作语句](../dmx/dmx-statements-data-manipulation.md)   
  [数据挖掘扩展插件 (DMX) 语句引用](../dmx/data-mining-extensions-dmx-statements.md)  

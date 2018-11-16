@@ -14,18 +14,18 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ccc57f9c034bfc0bd07d2e88394d09b7c766153a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6db04be0a40a71528e325ca314a9224d1d7c6817
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648055"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606957"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 **OnError**操作过程中发生错误时调用事件。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -38,7 +38,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  一个整数，指示该错误的状态代码。  
   
- *说明*  
+ *Description*  
  一个**字符串**，该值指示错误的说明。  
   
  *数据源*  

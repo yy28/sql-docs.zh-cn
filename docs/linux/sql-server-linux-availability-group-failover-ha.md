@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 1fe1a785314b30e0f6027c845da5ac2b34692966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796715"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665826"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux 上的 always On 可用性组故障转移
 
@@ -104,8 +104,8 @@ ms.locfileid: "47796715"
 >自动故障转移不会添加位置约束，因此不需要进行清除。 
 
 详细信息：  
-- [Red Hat - 管理群集资源](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker-手动移动资源](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
+- [Red Hat - 管理群集资源](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
+- [Pacemaker-手动移动资源](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 管理指南-资源](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> 强制故障转移 

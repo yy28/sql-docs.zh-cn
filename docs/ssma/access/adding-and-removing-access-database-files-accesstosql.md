@@ -29,12 +29,12 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2ec65ffa5ee5df74d48de5280fedb825da8607aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655636"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>添加和删除访问数据库文件 (AccessToSQL)
 若要访问将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，必须将一个或多个 Access 数据库添加到 SSMA 项目。 这些数据库必须是 Access 97 或更高版本。 如果是从早期版本的访问权限的数据库，必须将数据库转换到较新版本。 通过打开和保存数据库 Access 97 或更高版本中，添加到 SSMA 之前执行此操作。  
@@ -129,7 +129,7 @@ ms.locfileid: "47598155"
 2.  右键单击数据库，然后依次**Remove Database**。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[连接到 SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
+迁移过程中的下一步是[连接到 SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)。  
   
 ## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

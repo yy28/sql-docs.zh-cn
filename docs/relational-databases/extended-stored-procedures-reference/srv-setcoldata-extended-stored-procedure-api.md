@@ -20,12 +20,12 @@ ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bba3fbdbe36a7b425cd4dbd2c3c15ca00254a009
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: cfb3c62f5b0e5f24c84f02e3eba7a9eebb7977fe
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030994"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663186"
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ data
  使用 srv_setcollen 将列的长度设置为 0 可以表示 Null 数据。 随后将忽略数据地址。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [srv_describe（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  

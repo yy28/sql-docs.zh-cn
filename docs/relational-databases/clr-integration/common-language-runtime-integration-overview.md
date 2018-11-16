@@ -18,12 +18,12 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b72ce858925c0df0c4faba7f90b0dcc606d52ed8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718375"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665021"
 ---
 # <a name="common-language-runtime-integration-overview"></a>公共语言运行时集成概述
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47718375"
   
 -   **改进了的安全和安全性。** 托管代码在数据库引擎承载的公共语言运行时环境中运行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用这一特点为在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 早期版本中提供的扩展存储过程提供更安全更可靠的替代方法。  
   
--   **能够定义数据类型和聚合函数。** 用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存储和查询功能。  
+-   **能够定义数据类型和聚合函数。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用户定义类型和用户定义聚合是两个新的托管数据库对象，这两个对象扩展了  的存储和查询功能。  
   
--   **通过标准化环境简化了的开发。** 数据库开发集成到将来版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
+-   **通过标准化环境简化了的开发。** [!INCLUDE[msCoName](../../includes/msconame-md.md)]数据库开发集成到将来版本的  Visual Studio .NET 开发环境中。 开发人员在开发和调试数据库对象和脚本时所使用的工具与他们编写中间层或客户端层的 .NET Framework 组件和服务时所使用的工具相同。  
   
 -   **为了提高的性能和可伸缩性的潜力。** 在多数情况下，.NET Framework 语言编译和执行模型通过 Transact-SQL 提高性能。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "47718375"
  [CLR 集成中的新增功能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  介绍此发行版的新功能。  
   
- [CLR 集成体系结构](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
+ [CLR 集成体系结构](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  
  介绍 CLR 集成的设计目标。  
   
  [启用 CLR 集成](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  介绍如何启用 CLR 集成。  
   
 ## <a name="see-also"></a>请参阅  
- [安装.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [安装.NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [CLR 集成的性能](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   
   

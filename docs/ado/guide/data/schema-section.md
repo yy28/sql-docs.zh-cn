@@ -13,31 +13,31 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 385b4b9849a43a9b89b2f09f0609c08212860c86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aaf20a7318236280e7b861a5fbd21ea8315d288d
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838165"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51599802"
 ---
 # <a name="schema-section"></a>架构部分
 架构部分是必需的。 如前面的示例所示，ADO 写出详细的元数据有关的每个列以保留尽可能多地用于更新的数据值的语义信息。 但是，若要在 XML 中加载，ADO 仅需要列和到其所属的行集的名称。 下面是最小架构的示例：  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
-    xmlns:rs="urn:schemas-microsoft-com:rowset"  
-    xmlns:z="#RowsetSchema">  
-  <s:Schema id="RowsetSchema">  
-    <s:ElementType name="row" content="eltOnly">  
-      <s:AttributeType name="ShipperID"/>  
-      <s:AttributeType name="CompanyName"/>  
-      <s:AttributeType name="Phone"/>  
-      <s:Extends type="rs:rowbase"/>  
-    </s:ElementType>  
-  </s:Schema>  
-  <rs:data>  
+    xmlns:rs="urn:schemas-microsoft-com:rowset"  
+    xmlns:z="#RowsetSchema">  
+  <s:Schema id="RowsetSchema">  
+    <s:ElementType name="row" content="eltOnly">  
+      <s:AttributeType name="ShipperID"/>  
+      <s:AttributeType name="CompanyName"/>  
+      <s:AttributeType name="Phone"/>  
+      <s:Extends type="rs:rowbase"/>  
+    </s:ElementType>  
+  </s:Schema>  
+  <rs:data>  
 ...  
-  </rs:data>  
+  </rs:data>  
 </xml>  
 ```  
   
@@ -79,31 +79,31 @@ ms.locfileid: "47838165"
   
 ```  
 <s:Schema id="RowsetSchema">  
-  <s:ElementType name="row" content="eltOnly">  
-    <s:attribute type="s1"/>  
-    <s:attribute type="CompanyName"/>  
-    <s:attribute type="s3"/>  
-    <s:extends type="rs:rowbase"/>  
-  </s:ElementType>  
-  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
-    rs:maydefer="true" rs:writeunknown="true">  
-    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
-      rs:fixedlength="true" rs:maybenull="true"/>  
-  </s:AttributeType>  
+  <s:ElementType name="row" content="eltOnly">  
+    <s:attribute type="s1"/>  
+    <s:attribute type="CompanyName"/>  
+    <s:attribute type="s3"/>  
+    <s:extends type="rs:rowbase"/>  
+  </s:ElementType>  
+  <s:AttributeType name="s1" rs:name="ShipperID" rs:number="1"   
+    rs:maydefer="true" rs:writeunknown="true">  
+    <s:datatype dt:type="i4" dt:maxLength="4" rs:precision="10"   
+      rs:fixedlength="true" rs:maybenull="true"/>  
+  </s:AttributeType>  
 </s:Schema>  
 <rs:data>  
-  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
+  <z:row s1="1" CompanyName="Speedy Express" s3="(503) 555-9831"/>  
 </rs:data>  
 ```  
   
  同样，因为没有任何别名为定义`CompanyName`在上一示例中，`CompanyName`必须文档中一致地使用。  
   
 ## <a name="data-types"></a>数据类型  
- 可以将数据类型应用到含 dt: type 属性的列。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](http://www.w3.org/TR/1998/NOTE-XML-data/)。 可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 特性或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
+ 可以将数据类型应用到含 dt: type 属性的列。 允许的 XML 类型的权威指南，请参阅的数据类型部分[W3C XML 数据规范](https://www.w3.org/TR/1998/NOTE-XML-data/)。 可以通过两种方式指定数据类型： 直接在列定义本身上指定 dt: type 特性或使用 s:datatype 构造作为列定义的嵌套元素。 例如，  
   
 ```  
 <s:AttributeType name="Phone" >  
-  <s:datatype dt:type="string"/>  
+  <s:datatype dt:type="string"/>  
 </s:AttributeType>  
 ```  
   
@@ -127,12 +127,12 @@ ms.locfileid: "47838165"
   
 <!—- 2. Fixed length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
+    <s:datatype dt:type="string" dt:maxLength="6" rs:fixedlength="true" />  
 </s:AttributeType>  
   
 <!—- 3. Variable length string with max length of 6 -->  
 <s:AttributeType name="title_id">  
-    <s:datatype dt:type="string" dt:maxLength="6" />  
+    <s:datatype dt:type="string" dt:maxLength="6" />  
 </s:AttributeType>  
   
 <!—- 4. Integer -->  
@@ -146,10 +146,10 @@ ms.locfileid: "47838165"
   
 ```  
 <s:AttributeType name="ShipperID">  
-  <s:datatype dt:type="int" dt:maxLength="4"/>  
+  <s:datatype dt:type="int" dt:maxLength="4"/>  
 </s:AttributeType>  
 <s:AttributeType name="CompanyName">  
-  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
+  <s:datatype dt:type="string" dt:maxLength="40" rs:maybenull="true"/>  
 </s:AttributeType>  
 ```  
   

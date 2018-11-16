@@ -19,18 +19,18 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ab3ce18b1b79951c76b34be3f90b2d8782ba64e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773816"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666466"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>访问数据迁移到 SQL Server-Azure SQL DB (AccessToSQL)
 已成功创建数据库对象后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以将数据迁移从 Access 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 ## <a name="setting-migration-options"></a>设置迁移选项  
-在迁移到的数据之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，查看中的项目迁移选项**项目设置**对话框。 在此对话框中，可以设置迁移批大小、 表锁定、 约束检查，插入触发器激发，标识和 null 值处理，以及如何处理带日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]范围。 有关详细信息，请参阅[项目设置 （迁移）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+在迁移到的数据之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，查看中的项目迁移选项**项目设置**对话框。 在此对话框中，可以设置迁移批大小、 表锁定、 约束检查，插入触发器激发，标识和 null 值处理，以及如何处理带日期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]范围。 有关详细信息，请参阅[项目设置 （迁移）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
   
 ## <a name="migrating-data"></a>将数据迁移  
 迁移数据是大容量加载操作，将数据加载到行移动[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中的事务。 要加载到的行数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或项目设置中配置 SQL Azure 中的每个事务。  

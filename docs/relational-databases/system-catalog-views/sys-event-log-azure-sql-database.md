@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 29ef6eaf427a0ab8ee2a3b040f2a4255079eecdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c762c5ebb679460686dbf38958d097de687b1052
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826345"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673526"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47826345"
 > [!CAUTION]  
 >  对于具有大量的数据库或大量的登录名的安装，sys.event_log 中的活动可能会限制导致的性能，CPU 使用率过高，并可能会导致登录失败。 Sys.event_log 查询可产生的问题。 Microsoft 正在努力解决此问题。 在此期间，若要减少此问题的影响，限制 sys.event_log 查询。 NewRelic SQL Server 插件的用户应访问[Microsoft Azure SQL 数据库插件优化和性能调整](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729)有关其他配置信息。  
   
- `sys.event_log`视图包含以下各列。  
+ `sys.event_log` 视图包含以下各列。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  
@@ -75,12 +75,12 @@ ms.locfileid: "47826345"
 |**连接**|**connection_failed**|9|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接失败，因为数据库目前正在经历重新配置。|  
 |**连接**|**connection_terminated**|0|**idle_connection_timeout**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 连接闲置的时间超过了系统定义的阈值。|  
 |**连接**|**connection_terminated**|1|**重新配置**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于数据库重新配置，该会话已终止。|  
-|**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](http://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
-|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
-|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**限制**|*\<原因代码 >*|**reason_code**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 请求受到限制。  限制原因代码： *\<原因代码 >*。 有关详细信息，请参阅[引擎限制](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)。|  
+|**连接**|**throttling_long_transaction**|40549|**long_transaction**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于您有长时间运行的事务，已终止会话。 请尝试缩短您的事务的运行时间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于会话获取的锁过多，已终止该会话。 请尝试在单个事务中读取或修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用 TEMPDB，已终止该会话。 请尝试修改您的查询以减少使用临时表空间。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用事务日志空间，已终止该会话。 请尝试在单个事务中修改更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
+|**连接**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注意： 仅适用于 Azure SQL 数据库 V11。*<br /><br /> 由于过度使用内存，已终止该会话。 请尝试修改您的查询以处理更少的行。 有关详细信息，请参阅[资源限制](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)。|  
 |**引擎**|**死锁**|0|**死锁**|2|发生死锁。|  
   
 ## <a name="permissions"></a>Permissions  
@@ -224,6 +224,6 @@ SELECT * FROM CTE2;
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [Azure SQL 数据库中扩展的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL 数据库中扩展的事件](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
   
   

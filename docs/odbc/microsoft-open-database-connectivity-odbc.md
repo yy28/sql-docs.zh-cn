@@ -11,12 +11,12 @@ ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 326d0872d554e4074b004f59c4a1d5b700dc4531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5d3fcc03b588cd5d014a23a291e04ff9c32f205
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616176"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662973"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 开放式数据库连接 (ODBC)
 Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它使应用程序从各种数据库管理系统 (Dbms) 访问数据。 ODBC 是一个低级别、 高性能的接口，专为关系数据存储。  
@@ -49,4 +49,4 @@ Microsoft 开放式数据库连接 (ODBC) 接口是 C 编程语言接口，它�
  描述用于配置驱动程序和数据源名称的命令行实用程序。  
   
 ## <a name="support"></a>支持  
- 有关支持选项的信息可在[Microsoft 帮助和支持](http://go.microsoft.com/fwlink?linkid=5521)Web 站点。
+ 有关支持选项的信息可在[Microsoft 帮助和支持](https://go.microsoft.com/fwlink?linkid=5521)Web 站点。

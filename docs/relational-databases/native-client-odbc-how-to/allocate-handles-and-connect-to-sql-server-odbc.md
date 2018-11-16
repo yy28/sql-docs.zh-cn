@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfccae77af978ad0422d6eae0ca965624c8ee615
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677376"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>分配句柄并连接到 SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47602665"
   
 2.  包含特定于 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驱动程序的头文件 Odbcss.h。  
   
-3.  调用[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)与**HandleType**设为 SQL_HANDLE_ENV 来初始化 ODBC 并分配环境句柄。  
+3.  调用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)与**HandleType**设为 SQL_HANDLE_ENV 来初始化 ODBC 并分配环境句柄。  
   
 4.  调用[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)与**特性**设置为 SQL_ATTR_ODBC_VERSION 并**ValuePtr**设置为 SQL_OV_ODBC3，以指示应用程序将使用 ODBC 3.x 格式函数调用。  
   
-5.  （可选） 调用[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)来设置其他环境选项或调用[SQLGetEnvAttr](http://go.microsoft.com/fwlink/?LinkId=58403)来获取环境选项。  
+5.  （可选） 调用[SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)来设置其他环境选项或调用[SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403)来获取环境选项。  
   
-6.  调用[SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)与**HandleType**设为 SQL_HANDLE_DBC 以分配连接句柄。  
+6.  调用[SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)与**HandleType**设为 SQL_HANDLE_DBC 以分配连接句柄。  
   
 7.  （可选） 调用[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)到设置连接选项或调用[SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)来获取连接选项。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "47602665"
 13. 调用**SQLFreeHandle**与**HandleType**设为 SQL_HANDLE_ENV 以释放环境句柄。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ## <a name="example"></a>示例  
  此示例演示如何调用**SQLDriverConnect**连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而无需现有 ODBC 数据源。 通过将传递到一个不完整的连接字符串**SQLDriverConnect**，它使 ODBC 驱动程序提示用户输入缺少的信息。  

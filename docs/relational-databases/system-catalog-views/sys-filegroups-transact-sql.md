@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: beda60ee7178bee59705a6450351a87e931aa2cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 479ba4e8eefadfe37cccb1ff08aed38ab8b629a7
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666369"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47696395"
 |**filegroup_guid**|**uniqueidentifier**|文件组的 GUID。<br /><br /> NULL = PRIMARY 文件组|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，其值为 NULL。|  
 |**is_read_only**|**bit**|1 = 文件组为只读文件组。<br /><br /> 0 = 文件组为可读/写的文件组。|  
-|**is_autogrow_all_files**|**bit**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。<br /><br /> 1 = 在自动增长阈值，该文件组中的所有文件增长的文件组满足的文件时。<br /><br /> 0 = 在自动增长阈值，只将该文件的增长的文件组满足的文件时。 这是默认设置。|  
+|**is_autogrow_all_files**|**bit**|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。<br /><br /> 1 = 在自动增长阈值，该文件组中的所有文件增长的文件组满足的文件时。<br /><br /> 0 = 在自动增长阈值，只将该文件的增长的文件组满足的文件时。 这是默认设置。|  
   
 ## <a name="permissions"></a>Permissions  
  要求 **公共** 角色具有成员身份。 有关详细信息，请参阅 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

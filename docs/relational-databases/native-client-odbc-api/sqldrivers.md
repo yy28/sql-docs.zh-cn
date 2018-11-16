@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0831d34da78e107e3830a4cc04d1b1014f33f912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 110d613f8b2e9f4fed1788a614b71041710edac4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823365"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662936"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 驱动程序管理器返回所有**SQLDrivers**属性规范字符串。 有关属性字符串和值定义的详细信息，请参阅[数据访问和存储开发人员中心](http://go.microsoft.com/fwlink/?LinkId=4173)，或者您也可以观看[ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45250)联机。  
+  ODBC 驱动程序管理器返回所有**SQLDrivers**属性规范字符串。 有关属性字符串和值定义的详细信息，请参阅[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink/?LinkId=4173)，或者您也可以观看[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)联机。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLDrivers](http://go.microsoft.com/fwlink/?LinkId=59341)   
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

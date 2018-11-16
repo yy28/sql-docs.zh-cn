@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b5735a0829579a612999381e3108717ac1f7430c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f17e34de7c230b111652ea57a3baa072a442a6a5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822048"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656736"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47822048"
  **Sys.database_usage**视图的每一天的你的订阅返回一行。  
   
 ## <a name="see-also"></a>请参阅  
- [SQL 数据库定价详细信息](http://go.microsoft.com/fwlink/?LinkID=394978)   
- [帐户和 Windows Azure SQL Database 中的计费](http://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL 数据库定价详细信息](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [帐户和 Windows Azure SQL Database 中的计费](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

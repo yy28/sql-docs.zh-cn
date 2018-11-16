@@ -1,5 +1,5 @@
 ---
-title: 逻辑体系结构概述 (Analysis Services-多维数据) |Microsoft 文档
+title: 逻辑体系结构概述 (Analysis Services-多维数据) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,23 +9,23 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b6c563dcbd00157f05115975c8e4e2da2ee64184
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 83e91607dfc46bfb60bbc4874fd06c6ae0fd23e9
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024514"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51559371"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>逻辑体系结构概述（Analysis Services - 多维数据）
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为安装的 Analysis Services 的实例是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]对于 SharePoint，用于加载和查询 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿内的数据模型。  
+  Analysis Services 在服务器部署模式下运行，该模式可确定不同 Analysis Services 模型类型使用的内存体系结构和运行时环境。 服务器模式在安装过程中确定。 **多维和数据挖掘模式**支持传统的 OLAP 和数据挖掘。 **表格模式下**支持表格模型。 **SharePoint 集成模式下**作为安装的 Analysis Services 的实例是指[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]对于 SharePoint，用于加载和查询 Excel 或[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]工作簿内的数据模型。  
   
- 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模](../../../analysis-services/tabular-models/tabular-models-ssas.md)和[比较表格和多维解决方案](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
+ 本主题介绍 Analysis Services 在多维和数据挖掘模式下操作时的基本体系结构。 有关其他模式的详细信息，请参阅[表格建模](../../../analysis-services/tabular-models/tabular-models-ssas.md)并[比较表格和多维解决方案](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
   
 ## <a name="basic-architecture"></a>基本体系结构  
- 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]命名为"\<ServerName >\\< InstanceName\>"。 下图显示之间的所有提到的关系[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。  
+ 一个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例可包含多个数据库，一个数据库中可同时包含 OLAP 对象和数据挖掘对象。 应用程序可以连接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例和指定的数据库。 一个服务器计算机可以承载多个 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 实例。 实例[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名为"\<服务器名 >\\< 实例名\>"。 下图显示了所有提及之间的关系[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]对象。  
   
- ![运行的 AMO 对象关系](../../../analysis-services/multidimensional-models/olap-logical/media/amo-runningobjects.gif "运行的 AMO 对象关系")  
+ ![AMO 运行对象关系](../../../analysis-services/multidimensional-models/olap-logical/media/amo-runningobjects.gif "AMO 运行对象关系")  
   
  基本类是生成多维数据集所需的最小对象集。 此最小对象集可为一个维度、一个度量值组和一个分区。 聚合是可选的。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "34024514"
  每个数据库对象都包含一个或多个多维数据集对象。 多维数据集通过其度量值和维度定义。 多维数据集中的度量值和维度派生自数据源视图中的表和视图，此数据源视图是多维数据集所基于的视图，或者是通过度量值定义和维度定义生成的视图。  
   
 ## <a name="object-inheritance"></a>对象继承  
- ASSL 对象模型包含有多个重复元素组。 例如，在元素组，"**维度**包含**层次结构**，"定义维度层次结构的元素。 同时**多维数据集**和**MeasureGroups**包含元素组中，"**维度**包含**层次结构**。"  
+ ASSL 对象模型包含有多个重复元素组。 例如，元素组"**维度**包含**层次结构**，"定义维度层次结构的元素。 这两**多维数据集**并**MeasureGroups**包含元素组"**维度**包含**层次结构**。"  
   
- 除非显式重写，否则元素将会从更高级别继承这些重复元素组的详细信息。 例如，**翻译**为**CubeDimension**相同**翻译**其上级元素，**多维数据集**。  
+ 除非显式重写，否则元素将会从更高级别继承这些重复元素组的详细信息。 例如，**翻译**有关**CubeDimension**相同**翻译**与其祖先元素的**多维数据集**。  
   
- 显式重写从更高级别对象继承的属性时，对象无需显式重复更高级别对象的整个结构和属性。 而只需显式声明要重写的那些属性。 例如， **CubeDimension**可能列表只**层次结构**，需要在中禁用**多维数据集**，其可见性需要更改，或对于哪些某些**级别**未提供详细信息在**维度**级别。  
+ 显式重写从更高级别对象继承的属性时，对象无需显式重复更高级别对象的整个结构和属性。 而只需显式声明要重写的那些属性。 例如， **CubeDimension**可能会列出仅**层次结构**需要在中禁用**多维数据集**，其可见性需要更改，或其中部分**级别**尚未在提供的详细信息**维度**级别。  
   
  对象上指定的某些属性可以向子对象或后代对象中的同一属性提供在默认值。 例如， **Cube.StorageMode**提供的默认值为**Partition.StorageMode**。 对于继承的默认值，ASSL 向继承的默认值应用以下规则：  
   
@@ -63,15 +63,15 @@ ms.locfileid: "34024514"
  多维数据集周围更小的字母数字值是维度的成员。 示例成员为“陆地”（“路线”维度的成员）、“非洲”（“源”维度的成员）以及“第一季度”（“时间”维度的成员）。  
   
 ### <a name="measures"></a>度量值组  
- 多维数据集单元中的值表示两个度量值：“包”和“上一次”。 Packages 度量值表示的导入包的数量和**总和**函数用于聚合事实数据。 最后一个度量值表示回执的日期和**最大**函数用于聚合事实数据。  
+ 多维数据集单元中的值表示两个度量值：“包”和“上一次”。 包度量值表示导入包的数量并**之和**使用函数来聚合事实数据。 最后一个度量值表示收到的日期，并**最大**使用函数来聚合事实数据。  
   
 ### <a name="dimensions"></a>维度  
  “路线”维度表示进口货物到达目的地的方式。 该维度的成员包括“陆地”、“非陆地”、“航空”、“海路”、“公路”或“铁路”。 “源”维度表示进口货物的原产地，如“非洲”或“亚洲”。 “时间”维度表示一年的四个季度以及上半年和下半年。  
   
 ### <a name="aggregates"></a>聚合  
- 多维数据集的业务用户可以确定每个维度的每个成员的所有度量值，而不用考虑该成员在维度中的级别，因为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将根据需要在更高级别聚合值。 例如，上图中的度量值可以通过使用以下关系图所示的“时间”维度中的“日历时间”层次结构，按标准日历层次结构进行聚合。  
+ 多维数据集的业务用户可以确定每个维度的每个成员的所有度量值，而不用考虑该成员在维度中的级别，因为 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 将根据需要在更高级别聚合值。 例如，可以通过在下图中所示的时间维度中使用的日历时间层次结构根据标准日历层次结构聚合在上图中的度量值。  
   
- ![沿时间维度的度量值的关系图组织](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "沿时间维度组织的度量值的关系图")  
+ ![按时间维度组织的度量值的关系图](../../../analysis-services/multidimensional-models/olap-logical/media/cubeintro2.gif "按时间维度组织的度量值的关系图")  
   
  除了使用单个维度来聚合度量值以外，还可以使用不同维度的成员的组合来聚合度量值。 这样业务用户就可以同时对多个维度中的度量值进行评估。 例如，如果业务用户要分析各个季度通过航空运输从东半球和西半球进口的货物，则该业务用户可以对多维数据集发出查询来检索以下数据集。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "34024514"
 |“时间”维度中的“半年”属性|上半年、下半年|TimeDimensionTable|半年|下半年|  
 |“时间”维度中的“季度”属性|第一季度、第二季度、第三季度、第四季度|TimeDimensionTable|季度|第三季度|  
   
- 一个多维数据集单元中的数据通常派生自事实数据表中的多个行。 例如，无线成员、 非洲成员和第 1 个季度成员的交叉点处的多维数据集单元格包含一个值，通过聚合中的以下行派生**ImportsFactTable**事实数据表。  
+ 一个多维数据集单元中的数据通常派生自事实数据表中的多个行。 例如的空运成员、 非洲成员和第一季度成员的交集处的多维数据集单元包含一个值，通过聚合中的以下行**ImportsFactTable**事实数据表。  
   
 |||||||  
 |-|-|-|-|-|-|  
@@ -114,13 +114,13 @@ ms.locfileid: "34024514"
 |3645541|1|6|1|20|99/02/09|  
 |3674906|1|6|1|36|99/02/17|  
   
- 在前面的表中，每行都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**的列，指明这些行参与到同一个多维数据集单元格中。  
+ 在上表中，每个行都有相同的值**RouteKey**， **SourceKey**，并**TimeKey** ，该值指示这些行参与到同一多维数据集单元格的列。  
   
  这里显示的示例提供了一个非常简单的多维数据集，该多维数据集仅有一个度量值组，并且所有维度表均与事实数据表以星型架构联接。 另一个常见的架构为雪花型架构，在该架构中，一个或多个维度表联接到其他维度表，而不是直接联接到事实数据表。 **相关的主题：**[维度&#40;Analysis Services-多维数据&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   
  此处显示的示例仅包含一个事实数据表。 如果多维数据集具有多个事实数据表，则会将每个事实数据表中的度量值组织到度量值组中，并且通过已定义的维度关系使每个度量值组都与一组特定的维度相关。 这些关系是通过指定数据源视图中的参与表以及关系的粒度来定义的。 **相关的主题：**[维度关系](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [多维模型数据库 ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

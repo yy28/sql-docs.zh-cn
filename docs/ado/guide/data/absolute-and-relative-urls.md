@@ -15,12 +15,12 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2bb960fc84dd1558589918096daedf4d36d18ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c00420d6bed0b49c6e136c82f03460dcaaea8a85
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632165"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604877"
 ---
 # <a name="absolute-and-relative-urls"></a>绝对和相对 URL
 URL 指定存储在本地或网络计算机上的目标的位置。 目标可以是文件、 目录、 HTML 页、 图像、 程序和等等 *。*  
@@ -68,7 +68,7 @@ URL 指定存储在本地或网络计算机上的目标的位置。 目标可以
  例如，下面的代码示例显示如何打开**记录集**Winnt/system32 目录 Readme25.txt 文件：  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  在连接字符串中的绝对 URL 指定的服务器 (`YourServer`) 和路径 (`Winnt`)。 此 URL 还定义的上下文。  
@@ -80,7 +80,7 @@ recordset.Open "system32/Readme25.txt", "URL=http://YourServer/Winnt/",,,adCmdTa
  下面的代码将作为另一个示例中，打开**记录集**上的内容`Winnt`目录：  
   
 ```  
-recordset.Open "", "URL=http://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB 提供程序提供的 URL 方案  

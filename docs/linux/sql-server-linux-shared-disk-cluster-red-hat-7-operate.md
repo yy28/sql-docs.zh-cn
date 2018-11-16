@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: c7e554e0fb010e51af7e0ece757094800078c0d0
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 4b41e3adeaab22a958e94e373762c57a6d613f6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661259"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>对适用于 SQL Server 的 Red Hat Enterprise Linux 共享磁盘群集进行操作
 
@@ -31,20 +31,20 @@ ms.locfileid: "49085095"
 
 ## <a name="architecture-description"></a>体系结构说明
 
-群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](http://clusterlabs.org/)。 Corosync 和 Pacemaker 协调群集通信和资源管理。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
+群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](https://clusterlabs.org/)。 Corosync 和 Pacemaker 协调群集通信和资源管理。 SQL Server 实例在一个节点或另一个节点上处于活动状态。
 
 下图说明了 SQL Server 的 Linux 群集中的组件。 
 
 ![Red Hat Enterprise Linux 7 共享磁盘的 SQL 群集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 ## <a name = "failManual"></a>手动故障转移群集
 
-`resource move`命令创建强制资源在目标节点上启动的约束。  执行后`move`命令中，执行资源`clear`将删除该约束，以便可以再次移动资源或具有自动故障转移的资源。 
+`resource move`命令创建强制资源在目标节点上启动的约束。  执行后`move`命令中，执行资源`clear`将删除该约束，以便可以再次移动资源或具有自动故障转移的资源。 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 查看当前群集状态：
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 查看群集和资源的实时状态：
@@ -183,7 +183,7 @@ sudo crm_mon
     下面的示例添加一个名为节点**vm3**到群集。
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 若要从运行以下命令的群集删除节点：
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>更改 sqlservr 资源监视间隔的频率
@@ -226,7 +226,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
@@ -271,7 +271,7 @@ pacemaker: active/enabled
 
 ## <a name="additional-resources"></a>其他资源
 
-* [从头开始群集](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)pacemaker 的指南
+* [从头开始群集](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)pacemaker 的指南
 
 ## <a name="next-steps"></a>后续步骤
 

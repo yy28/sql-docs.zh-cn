@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,14 +16,14 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca21e976783a10a738488762e382982e4fd8fd8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747675"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350182"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 扩展
+# <a name="visual-c-extensions-for-ado"></a>ADO 的 Visual C++ 扩展
 使用 Visual c + + ADO 编程的首选的方法使用 **#import**指令，如中所述[Microsoft Visual c + + ADO 编程](../../../ado/guide/appendixes/visual-c-ado-programming.md)。 但是，早期版本的 ADO 随使用 Visual c + + 编程的另一种方法： Visual c + + 扩展。 本部分介绍此功能对于那些必须维护 Visual c + + 扩展的代码，但应使用 # 编写新的 ADO 代码**导入**。
 
  一个最乏味作业 Visual c + + 编程人员所面临的当使用 ADO 检索数据将转换成 c + + 数据类型，返回为 VARIANT 数据类型，然后将转换后的数据存储在类或结构数据。 除了繁琐外，检索通过 VARIANT 数据类型的 c + + 数据会降低性能。

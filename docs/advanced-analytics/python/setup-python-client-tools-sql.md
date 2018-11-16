@@ -1,42 +1,58 @@
 ---
-title: 设置为用于 SQL Server 机器学习 Python 客户端 |Microsoft Docs
-description: 设置远程连接到 SQL Server 机器学习服务与 Python 配合使用的 Python 本地环境。
+title: 设置 SQL Server 机器学习的 Python 开发数据科学客户端 |Microsoft Docs
+description: 设置远程连接到 SQL Server 机器学习服务与 Python 配合使用 Python 在本地环境 （Jupyter Notebook 或 PyCharm）。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/25/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b328d6c44dd8f75e3d74a3abe74f3324f31e1409
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: c3db7d215be8a43370969903adb9cf9518e9183c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216621"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704095"
 ---
-# <a name="set-up-a-python-client-for-use-with-sql-server-machine-learning"></a>设置为用于 SQL Server 机器学习 Python 客户端
+# <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>设置 SQL Server 机器学习服务的 Python 开发数据科学客户端
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更高版本[机器学习服务 （数据库） 安装](../install/sql-machine-learning-services-windows-install.md)。 
 
-在本文中，了解如何配置 Python 客户端开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 Python 集成。 本练习中使用 Jupyter Notebook 来运行 Python 代码。 完成这篇文章中的步骤后，将具有与 SQL Server 上的相同 Python 库。 此外将了解如何在 SQL Server 上推送到远程的 Python 会话从本地 Python 会话计算。
+若要创建和部署 SQL Server 上的 Python 解决方案，安装 Microsoft [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)以及客户端工作站上的其他 Python 库。 Revoscalepy 库，也是远程的 SQL Server 实例上，可协调计算这两个系统之间的请求。 
+
+在本文中，了解如何配置 Python 开发工作站，以便可以连接到远程 SQL Server 启用了机器学习和 Python 集成。 完成这篇文章中的步骤后，将具有与 SQL Server 上的相同 Python 库。 此外将了解如何在 SQL Server 上推送到远程的 Python 会话从本地 Python 会话计算。
+
+![客户端-服务器组件](media/sqlmls-python-client-revo.png "本地和远程 Python 会话和库")
+
+在本文中所述，可以使用内置的 Jupyter Notebook 或[链接库](#install-ide)PyCharm 或任何你通常使用的另一个 IDE。
 
 > [!Tip]
-> 在本文中的练习的视频演示，请参阅[运行 R 和远程 SQL Server 从 Jupyter 笔记本中的 Python](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
+> 这些练习的视频演示，请参阅[运行 R 和 Python 在 Jupyter Notebook 从 SQL Server 中远程](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)。
 
 > [!Note]
-> 安装只需客户端库的替代方法使用独立的服务器。 使用独立的丰富的客户端与服务器是某些客户更喜欢更多的端到端方案中工作的一个选项。 如果有[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)提供在 SQL Server 安装程序，必须从 SQL Server 数据库引擎实例完全分离的 Python 服务器。 Standalon server 包括开放源代码基础发行版的 Anaconda 以及特定于 Microsoft 的库。 您可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 验证富客户端安装时，以打开[Jupyter 笔记本](#python-tools)以使用 Python.exe 在服务器上运行命令。
+> 使用客户端库安装的替代方法[独立服务器](../install/sql-machine-learning-standalone-windows-install.md)为丰富客户端，有些客户更喜欢更深层次的方案中工作。 从 SQL Server 完全分离的独立服务器，但因其具有相同的 Python 库，你可以使用它作为客户端的 SQL Server 数据库内分析。 您还可以使用它为非 SQL 相关的工作，包括导入和从其他数据平台的数据建模功能。 如果安装在独立服务器，可以找到在此位置的 Python 可执行文件： `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`。 若要验证你的安装，[打开 Jupyter notebook](#python-tools)以使用 Python.exe，在该位置运行命令。
+
+## <a name="commonly-used-tools"></a>常用工具
+
+无论您是熟悉 SQL，在 Python 开发人员或 SQL 开发人员首次使用 Python 和数据库内分析，您将需要 Python 开发工具和 T-SQL 查询编辑器等[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)以实现所有数据库内分析功能。
+
+对于 Python 开发，可以使用 Jupyter 笔记本，这在 SQL Server 安装的 Anaconda 分发版捆绑。 本文介绍如何启动 Jupyter Notebook，以便您可以运行 Python 代码本地和远程 SQL 服务器上。
+
+SSMS 是单独的下载，适用于创建和运行 SQL Server，包括那些包含 Python 代码上的存储的过程。 可以在存储过程中嵌入几乎任何在 Jupyter 笔记本中编写的 Python 代码。 您可以单步执行其他教程，了解如何[SSMS 和嵌入式的 Python](../tutorials/train-score-using-python-in-tsql.md)。
 
 ## <a name="1---install-python-packages"></a>1-安装 Python 包
 
-本地工作站必须具有相同的 Python 包版本的 SQL Server，包括基础发行版和特定于 Microsoft 的包上[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)并[microsftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)。 [Azureml 模型管理](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk)还安装包，但也适用于与独立 （非实例） 的机器学习服务器上下文关联的操作化任务。 对于 SQL Server 实例上的数据库内分析，操作化是通过存储过程。
+本地工作站必须具有与 SQL Server，包括基本 Anaconda 4.2.0 与 Python 3.5.2 分发和特定于 Microsoft 的包上的相同 Python 包版本。
 
-1. 下载安装脚本，以便使用 Python 3.5.2 安装 Anaconda 4.2.0 和三个以前列出的 Microsoft 包。
+安装脚本将三个特定于 Microsoft 的库添加到 Python 客户端。 该脚本将安装[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)，用于定义数据源对象和计算上下文。 它将安装[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)提供机器学习算法。 [Azureml](https://docs.microsoft.com/machine-learning-server/python-reference/azureml-model-management-sdk/azureml-model-management-sdk)还安装包，但它适用于与独立 （非实例） 的机器学习服务器上下文关联的操作化任务并且可能会限制使用的数据库内分析。
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) 如果不是 SQL Server 2017 绑定 （常见情况）。 如果你不确定，请选择此脚本。
+1. 下载安装脚本。
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 如果远程 SQL Server 实例是[绑定到机器学习服务器 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py) 安装版本 9.2.1 Microsoft Python 程序包。 此版本对应于默认 SQL Server 2017 实例。 
+
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) 安装版本 9.3 的 Microsoft Python 包。 此版本是更好的选择，如果远程 SQL Server 2017 实例[绑定到机器学习服务器 9.3](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。
 
 2. 使用提升的管理员权限打开 PowerShell 窗口 (右键单击**以管理员身份运行**)。
 
@@ -56,7 +72,7 @@ Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更
 
 ## <a name="2---locate-executables"></a>2-查找可执行文件
 
-仍在 PowerShell 中，导航到安装文件夹，以确认 Python.exe、 脚本和其他包的位置。 
+仍在 PowerShell 中，列出要确认安装了 Python.exe、 脚本和其他包的安装文件夹的内容。 
 
 1. 输入`cd \`以转到根驱动器，然后输入为指定的路径`-InstallFolder`在上一步。 如果在安装过程中省略此参数，默认值是`cd C:\Program Files\Microsoft\PyForMLS`。
 
@@ -75,19 +91,23 @@ Python 集成是可用时包括中的 Python 选项启动 SQL Server 2017 或更
 
 Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运行包含您刚安装的库的某些 Python 代码。
 
-1. 在 Powershell 提示符处，导航到脚本文件夹打开 Jupyter Notebook:
+1. 在 Powershell 提示符下，仍在 C:\Program Files\Microsoft\PyForMLS 目录中，打开 Jupyter Notebook 从脚本文件夹中：
 
-   ```powershell
-   .\Scripts\jupyter-notebook
-   ```
+  ```powershell
+  .\Scripts\jupyter-notebook
+  ```
 
-  应该在默认浏览器中打开笔记本`http://localhost:8889/tree`。
+  应该在默认浏览器中打开笔记本`https://localhost:8889/tree`。
+
+  启动另一种方法是双击**jupyter notebook.exe**。 
 
 2. 单击**新建**，然后单击**Python 3**。
 
   ![使用新的 Python 3 选择的 jupyter 笔记本](media/jupyter-notebook-new-p3.png)
 
 3. 输入`import revoscalepy`并运行到加载特定于 Microsoft 的库的命令。
+
+4. 输入并运行`print(revoscalepy.__version__)`要返回的版本信息。 应会看到 9.2.1 或 9.3.0。 可以使用与这些版本之一[服务器上的 revoscalepy](../r/determine-which-packages-are-installed-on-sql-server.md#get-package-vers)。 
 
 4. 输入一系列更复杂的语句。 此示例生成汇总统计信息使用[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)对本地数据集。 其他函数获取示例数据的位置，并创建本地.xdf 文件的数据源对象。
 
@@ -113,7 +133,7 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 最小值，用来运行代码的帐户必须具有你正在使用，加上特殊权限执行任意外部脚本从数据库中读取的权限。 大多数开发人员还需要权限才能创建存储的过程，并将数据写入到包含训练数据的表或评分的数据。 
 
-询问数据库管理员可以在其中使用 Python 在数据库中配置的帐户的以下权限：
+询问数据库管理员来[配置你的帐户的以下权限](../security/user-permission.md)，其中使用 Python 在数据库中：
 
 + **EXECUTE ANY EXTERNAL SCRIPT**若要在服务器上运行 Python。
 + **db_datareader**权限才能运行用于定型模型的查询。
@@ -123,7 +143,55 @@ Anaconda 包含的 Jupyter 笔记本。 下一步，创建一个 notebook 并运
 
 如果你的代码需要与 SQL Server 的默认情况下不安装的程序包，排列与数据库管理员能够与实例安装的包。 SQL Server 是一个受保护的环境并在其中安装包的限制。 不建议临时安装的包作为你的代码的一部分，即使您具有权限。 此外，server 库中安装新包之前始终仔细考虑的安全隐患。
 
-## <a name="5---test-remote-connection"></a>5-测试远程连接
+
+<a name="create-iris-remotely"></a>
+
+## <a name="5---create-test-data"></a>5-创建测试数据
+
+如果你有权在远程服务器上创建数据库，可以运行以下代码以创建用于在本文的剩余步骤的鸢尾花演示数据库。
+
+### <a name="1---create-the-irissql-database-remotely"></a>1-远程创建 irissql 数据库
+
+```Python
+import pyodbc
+
+# creating a new db to load Iris sample in
+new_db_name = "irissql"
+connection_string = "Driver=SQL Server;Server=localhost;Database={0};Trusted_Connection=Yes;" 
+                        # you can also swap Trusted_Connection for UID={your username};PWD={your password}
+cnxn = pyodbc.connect(connection_string.format("master"), autocommit=True)
+cnxn.cursor().execute("IF EXISTS(SELECT * FROM sys.databases WHERE [name] = '{0}') DROP DATABASE {0}".format(new_db_name))
+cnxn.cursor().execute("CREATE DATABASE " + new_db_name)
+cnxn.close()
+
+print("Database created")
+```
+
+### <a name="2---import-iris-sample-from-sklearn"></a>2-从导入鸢尾花示例 SkLearn
+
+```Python
+from sklearn import datasets
+import pandas as pd
+
+# SkLearn has the Iris sample dataset built in to the package
+iris = datasets.load_iris()
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+```
+
+### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 来创建表并将鸢尾花数据加载
+
+```Python
+from revoscalepy import RxSqlServerData, rx_data_step
+
+# Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
+table_ref = RxSqlServerData(connection_string=connection_string.format(new_db_name), table="iris_data")
+rx_data_step(input_data = df, output_file = table_ref, overwrite = True)
+
+print("New Table Created: Iris")
+print("Sklearn Iris sample loaded into Iris table")
+```
+
+## <a name="6---test-remote-connection"></a>6-测试远程连接
 
 此下一步之前，请确保您具有 SQL Server 实例和连接字符串上的权限[鸢尾花示例数据库](../tutorials/demo-data-iris-in-sql.md)。 如果数据库不存在并且具有足够的权限，则可以[使用这些内联说明创建数据库](#create-iris-remotely)。
 
@@ -182,20 +250,26 @@ display.Image(data=image)
 
   ![jupyter 笔记本显示散点图输出](media/jupyter-notebook-scatterplot.png)
 
-## <a name="6---link-ide-to-pythonexe"></a>6-链接到 python.exe 的 IDE
 
-如果只要调试脚本从命令行，您可以通过获取的标准的 Python 工具。 但是，如果你正在开发新的解决方案，您可能需要为完备的 Python IDE。 常用选项包括：
+<a name="install-ide"></a>
 
-+ [Visual Studio 2017 Community Edition](https://www.visualstudio.com/vs/features/python/)与 Python 配合使用
-+ [用于 Visual Studio 的 AI 工具](https://docs.microsoft.com/visualstudio/ai/installation)
-+ [在 Visual Studio Code 中的 Python](https://code.visualstudio.com/docs/languages/python)
-+ 常用的第三方工具如 PyCharm、 Spyder 和 Eclipse
-
-我们建议 Visual Studio，因为它支持数据库项目，以及机器学习项目。 为了帮助您配置的 Python 环境，请参阅[Visual Studio 中的管理 Python 环境](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)。
+## <a name="7---link-tools-to-pythonexe"></a>7-链接到 python.exe 的工具
 
 因为开发人员经常使用多个版本的 Python，安装程序不向路径添加 Python。 若要使用的 Python 可执行文件和由安装程序安装的库，链接到你的 IDE **Python.exe**还提供的路径处**revoscalepy**并**microsoftml**。 
 
-对于 Visual Studio 中的 Python 项目，自定义环境会指定以下值，假定默认安装。
+### <a name="jupyter-notebooks"></a>Jupyter 笔记本
+
+本文使用内置的 Jupyter Notebook 演示对函数调用**revoscalepy**。 如果您不熟悉此工具，以下屏幕截图演示了部分的结合方式和原因一切正常。 
+
+父文件夹 C:\Program Files\Microsoft\PyForMLS 包含 Anaconda 以及 Microsoft 包。 Jupyter 笔记本包含在 Anaconda，在脚本文件夹中，Python 可执行文件不自动注册使用 Jupyter Notebook。 在 site-packages 下找到包可以导入到的笔记本，包括用于数据科学和机器学习的三个 Microsoft 包中。
+
+  ![可执行文件和库](media/jupyter-notebook-python-registration.png)
+
+如果使用的另一个 IDE，您需要将 Python 可执行文件和函数库链接到所需的工具。 以下部分提供的常用工具的说明。
+
+### <a name="visual-studio"></a>Visual Studio
+
+如果有[Visual Studio 中的 Python](https://code.visualstudio.com/docs/languages/python)，使用以下配置选项来创建包含 Microsoft Python 包的 Python 环境。
 
 | 配置设置 | 值 |
 |-----------------------|-------|
@@ -203,58 +277,21 @@ display.Image(data=image)
 | **解释器路径** | C:\Program Files\Microsoft\PyForMLS\python.exe |
 | **窗口化解释器** | C:\Program Files\Microsoft\PyForMLS\pythonw.exe |
 
-<a name="create-iris-remotely"></a>
+为了帮助您配置的 Python 环境，请参阅[Visual Studio 中的管理 Python 环境](https://docs.microsoft.com/visualstudio/python/managing-python-environments-in-visual-studio)。
 
-## <a name="optional-create-the-iris-database-remotely"></a>可选： 鸢尾花数据库远程创建
+### <a name="pycharm"></a>PyCharm
 
-如果你有权在远程服务器上创建数据库，可以运行以下代码以创建用于本文中示例的鸢尾花演示数据库。
+集中 PyCharm，由机器学习服务器安装到 Python 可执行文件的解释器。
 
-### <a name="1---create-the-irissql-database"></a>1-创建 irissql 数据库
+1. 在新项目中，在设置中，单击**添加本地**。
 
-```Python
-import pyodbc
+2. 输入`C:\Program Files\Microsoft\PyForMLS\`。
 
-# creating a new db to load Iris sample in
-new_db_name = "irissql"
-connection_string = "Driver=SQL Server;Server=localhost;Database={0};Trusted_Connection=Yes;" 
-                        # you can also swap Trusted_Connection for UID={your username};PWD={your password}
-cnxn = pyodbc.connect(connection_string.format("master"), autocommit=True)
-cnxn.cursor().execute("IF EXISTS(SELECT * FROM sys.databases WHERE [name] = '{0}') DROP DATABASE {0}".format(new_db_name))
-cnxn.cursor().execute("CREATE DATABASE " + new_db_name)
-cnxn.close()
-
-print("Database created")
-```
-
-### <a name="2---import-iris-sample-from-sklearn"></a>2-从导入鸢尾花示例 SkLearn
-
-```Python
-from sklearn import datasets
-import pandas as pd
-
-# SkLearn has the Iris sample dataset built in to the package
-iris = datasets.load_iris()
-df = pd.DataFrame(iris.data, columns=iris.feature_names)
-```
-
-### <a name="3---use-revoscalepy-apis-to-create-a-table-and-load-the-iris-data"></a>3-使用 Revoscalepy Api 来创建表并将鸢尾花数据加载
-
-```Python
-from revoscalepy import RxSqlServerData, rx_data_step
-
-# Example of using RX APIs to load data into SQL table. You can also do this with pyodbc
-table_ref = RxSqlServerData(connection_string=connection_string.format(new_db_name), table="iris_data")
-rx_data_step(input_data = df, output_file = table_ref, overwrite = True)
-
-print("New Table Created: Iris")
-print("Sklearn Iris sample loaded into Iris table")
-```
-
-<a name="install-ide"></a>
+现在，你可以导入**revoscalepy**， **microsoftml**，或**azureml**模块。 你还可以选择**工具** > **Python 控制台**打开交互窗口。
 
 ## <a name="next-steps"></a>后续步骤
 
-现在，有工具和有效的连接到 SQL Server 的分步教程，以获取进一步了解 revoscalepy 函数和切换计算上下文。
+现在，有工具和有效的连接到 SQL Server，通过使用扩展你的技能[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)创建和执行存储的过程包含嵌入式的 Python 代码。
 
 > [!div class="nextstepaction"]
-> [使用 revoscalepy 和远程计算上下文创建模型](../tutorials/use-python-revoscalepy-to-create-model.md)
+> [创建、 定型和 SQL Server 中使用存储过程中使用 Python 模型](../tutorials//train-score-using-python-in-tsql.md)

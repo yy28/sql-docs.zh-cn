@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9557e21649193db8e54e3c96e333a431535d950c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9d8ddeb530c4b42f44e58aeea364956fa40bf6a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668979"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47746925"
   **SQLCloseCursor**取代[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)与*选项*值 SQL_CLOSE。 在收到**SQLCloseCursor**，则[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驱动程序将放弃待定结果集行。 请注意，该语句的列和参数绑定 （如果存在） 也会保留并未改变**SQLCloseCursor**。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLCloseCursor](http://go.microsoft.com/fwlink/?LinkId=59331)   
+ [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

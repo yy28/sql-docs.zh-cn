@@ -16,18 +16,18 @@ ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075cb0870d7fa3f4cbddaef60c2de4d1aa0683c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668698"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668256"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>映射源和目标数据类型 (AccessToSQL)
 访问数据库类型不同于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库类型。 转换到访问数据库对象时[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]对象，您必须指定如何将数据类型从访问[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可以接受默认数据类型映射，也可以自定义映射，如下面的过程中所示。  
   
 ## <a name="default-mappings"></a>默认映射  
-SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[（类型映射） 的项目设置](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
+SSMA 具有一组默认的数据类型映射。 有关默认映射的列表，请参阅[（类型映射） 的项目设置](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
   
 ## <a name="customizing-data-type-mappings"></a>自定义数据类型映射  
 通过使用**项目设置**对话框中，你可以自定义类型的所有数据库和项目中的数据库对象的映射方式。 一个项目的类型映射适用于所有数据库和数据库对象不具有自定义类型映射。  

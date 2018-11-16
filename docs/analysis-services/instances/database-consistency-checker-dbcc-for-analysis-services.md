@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5314c18f7626ee631d7d0b59ad8d9c004a33148b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3134ff97059efa61ab2df82a9b7d3c7aa4ee769e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147862"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697007"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>数据库一致性检查器 (DBCC) Analysis services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "50147862"
  DBCC for Analysis Services 将在位于任何兼容级别的任何 Analysis Services 数据库上执行，前提是该数据库在 SQL Server 2016 实例上运行。 你只需确保为每个数据库类型使用正确的命令语法。  
   
 > [!NOTE]  
->  如果熟悉 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快就会发现 Analysis Services 中 DBCC 的作用域小地多。 Analysis Services 中的 DBCC 是单个命令，专门报告整个数据库或各个对象中的数据损坏。 如果你要考虑其他任务，例如收集信息，请尝试改用 AMO PowerShell 或 XMLA 脚本。 有关其他信息的链接，请参阅 [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 。  
+>  如果熟悉 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)，很快就会发现 Analysis Services 中 DBCC 的作用域小地多。 Analysis Services 中的 DBCC 是单个命令，专门报告整个数据库或各个对象中的数据损坏。 如果你要考虑其他任务，例如收集信息，请尝试改用 AMO PowerShell 或 XMLA 脚本。
   
 ## <a name="permission-requirements"></a>权限要求  
  你必须是 Analysis Services 数据库或服务器管理员（服务器角色的成员）才能运行该命令。 有关说明，请参阅[授予数据库权限 (Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) 或[向 Analysis Services 实例授予服务器管理员权限](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
@@ -296,10 +296,9 @@ Execution complete
 > [!NOTE]  
 >  按需运行命令时，此设置不影响 DBCC。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [处理数据库、表或分区 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [处理多维模型 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Monitor an Analysis Services Instance](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Analysis Services 中表格模型的兼容级别](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   

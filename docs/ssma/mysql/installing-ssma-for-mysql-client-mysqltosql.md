@@ -12,12 +12,12 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a5b55065790b63c2fb63803f70bf00d56e704cb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763975"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656587"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安装 SSMA for MySQL 客户端 (MySQLToSQL)
 SSMA for MySQL 客户端包含的程序文件的执行以下任务：  
@@ -43,7 +43,7 @@ SSMA for MySQL 客户端包含的程序文件的执行以下任务：
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 或更高版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 是 SQL Server 产品介质上的可用。 你还可以获取从[.NET Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=48882)。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 或更高版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 是 SQL Server 产品介质上的可用。 你还可以获取从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   MySQL ODBC 5.1 驱动程序和连接到你想要迁移的 MySQL 数据库。 可以从 MySQL 网站上安装 MySQL。 有关连接性的信息，请参阅[连接到 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
@@ -54,7 +54,7 @@ SSMA for MySQL 客户端包含的程序文件的执行以下任务：
 -   4 GB RAM 建议。  
   
 ## <a name="installing-ssma-for-mysql-client"></a>安装 SSMA for MySQL 客户端  
-SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](http://aka.ms/ssmaformysql)。  
+SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](https://aka.ms/ssmaformysql)。  
   
 下载最新版本后，您必须提取安装文件，然后才能安装 SSMA。  
   

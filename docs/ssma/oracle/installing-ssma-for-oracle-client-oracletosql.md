@@ -12,12 +12,12 @@ ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 72df6a9da82e421dfb921501c110d363aa54a8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781552"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666816"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>安装 SSMA for Oracle 客户端 (OracleToSQL)
 SSMA 客户端包含的程序文件的执行以下任务：  
@@ -43,7 +43,7 @@ SSMA 设计用于 Oracle 9 或更高版本和所有版本的[!INCLUDE[ssNoVersio
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更高版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 或更高版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品媒体。 你还可以获取从[.NET Framework 开发人员中心](http://go.microsoft.com/fwlink/?LinkId=48882)。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 或更高版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版位于[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]产品媒体。 你还可以获取从[.NET Framework 开发人员中心](https://go.microsoft.com/fwlink/?LinkId=48882)。  
   
 -   Oracle 客户端 9.0 或更高版本，并与你想要迁移的 Oracle 数据库的连接。 Oracle 客户端版本必须是版本相同或比 Oracle 数据库版本更高版本。  
   
@@ -54,7 +54,7 @@ SSMA 设计用于 Oracle 9 或更高版本和所有版本的[!INCLUDE[ssNoVersio
 -   4 GB RAM 建议。  
   
 ## <a name="installing-the-ssma-for-oracle-client"></a>安装 SSMA for Oracle 客户端  
-SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](http://aka.ms/ssmafororacle)。  
+SSMA 是一个 Web 下载。 若要下载最新版本，请参阅[SQL Server Migration Assistant 下载页](https://aka.ms/ssmafororacle)。  
   
 下载最新版本后，您必须提取中的安装文件，然后才能安装 SSMA。  
   

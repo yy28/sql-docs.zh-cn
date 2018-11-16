@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a79403d65191abf307fab7866bcb23a2419ee5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7427ffe72ef46c9099e6914fa0a26dd8492d1f6f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773005"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666786"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad (OLE DB) 大容量复制数据
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "47773005"
   
  可以参考完整示例，该示例演示了使用 IRowsetFastLoad 将记录大容量复制到表中的过程。 在此示例中，将 10 条记录添加到表 IRFLTable 中。 需要在数据库中创建表 IRFLTable。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>将数据大容量复制到 SQL Server 表中  
   

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b0f084ebb6298ce141d39db444d24a241f878210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cbd26f431b71013400593858e6038fc4326f4d14
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095547"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606847"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>配置本机模式报表服务器扩展部署（SSRS 配置管理器）
+
   Reporting Services 本机模式支持扩展部署模式。该模式允许运行共享单个报表服务器数据库的多个报表服务器实例。 扩展部署用来增加报表服务器的可扩展性，以处理更多的并发用户和更大的报表执行负载， 还可用来在特定服务器上专门处理交互式报表或计划报表。  
   
  SharePoint 模式报表服务器利用 SharePoint 产品基础结构进行扩展。通过将更多的 SharePoint 模式报表服务器添加到 SharePoint 场来执行 SharePoint 模式扩展。 有关 SharePoint 模式中的扩展的信息，请参阅[向场中添加另一个报表服务器（SSRS 扩展）](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
@@ -119,11 +120,11 @@ ms.locfileid: "48095547"
  如果计划在负载平衡服务器群集中运行报表服务器，则需要进行额外配置。 有关详细信息，请参阅 [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务帐户&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [配置服务帐户（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [配置 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [创建本机模式报表服务器数据库（SSRS 配置管理器）](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [配置报表服务器 URL（SSRS 配置管理器）](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [配置报表服务器数据库连接&#40;SSRS 配置管理器&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [配置报表服务器数据库连接（SSRS 配置管理器）](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [添加和删除扩展部署的加密密钥（SSRS 配置管理器）](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [管理 Reporting Services 本机模式报表服务器](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

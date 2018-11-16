@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7fcad17522f4372e696a26a99d4ce1a4af92ea15
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356098"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671996"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>连接到 SQL Server Alwayson 可用性组在 Kubernetes 上
 
-若要连接到 SQL Server 实例上的 Kubernetes 群集的容器中，创建[负载平衡器服务](http://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 负载均衡器是一个终结点。 它保留的 IP 地址，并将转发到 pod 正在运行的 SQL Server 实例的 IP 地址的请求。
+若要连接到 SQL Server 实例上的 Kubernetes 群集的容器中，创建[负载平衡器服务](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer)。 负载均衡器是一个终结点。 它保留的 IP 地址，并将转发到 pod 正在运行的 SQL Server 实例的 IP 地址的请求。
 
 若要连接到可用性组副本，请创建另一副本类型的服务。 您所见的不同类型的副本中的服务示例[sql 的服务器的示例/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)。
 

@@ -2,7 +2,7 @@
 title: Azure Data Studio 发行说明 |Microsoft Docs
 description: Azure Data Studio 发行说明
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -10,16 +10,41 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34b8f3f1e3f7ca3396b32c6dad99ef721542fd48
-ms.sourcegitcommit: 3e1efbe460723f9ca0a8f1d5a0e4a66f031875aa
+ms.openlocfilehash: 9723a51154d0098271f8d3206c7f7a7470598422
+ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237063"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51289917"
 ---
 # <a name="azure-data-studio-release-notes"></a>Azure Data Studio 发行说明
 
-**[下载年 10 月版本 ！](download.md)**
+**[下载 11 月版 ！](download.md)**
+
+## <a name="november-2018-november-release"></a>2018 年 11 月 （年 11 月发行版）
+
+发布日期： 2018 年 11 月 6 日  
+版本： 1.2.4
+
+- 更新到[SQL Server 2019 预览版扩展](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- 引入粘贴计划扩展
+- 引入了增强色查询扩展，包括 SSMS 编辑器主题
+- 修复了在 SQL Server 代理、 Profiler 和导入扩展插件
+- 修复.Net Core 在 macOS 上套接字 KeepAlive 问题导致已删除的非活动连接
+- 升级到.Net Core 的 SQL 工具服务 2.2 预览版 3 （适用于最终 AAD 支持）
+
+### <a name="bug-fixes"></a>Bug 修复
+- 修复[发出 # 2933年](https://github.com/Microsoft/azuredatastudio/issues/2933)： 连接断开到 Azure SQL DB
+- 修复[发出 # 2914年](https://github.com/Microsoft/azuredatastudio/issues/2914):"参数无效"异常展开 OE 数据库节点
+- 修复[发出 # 2935年](https://github.com/Microsoft/azuredatastudio/pull/2935)： 在查询结果中正确显示多行消息
+- 修复[发出 # 2906年](https://github.com/Microsoft/azuredatastudio/pull/2906)： 修复编辑数据文档名称时表名称包含特殊字符
+- 修复[发出 # 2929年](https://github.com/Microsoft/azuredatastudio/issues/2929)： 构建在扩展中的更改日志说以检查更改 VSCode 发行说明
+- 修复[发出 # 2719年](https://github.com/Microsoft/azuredatastudio/issues/2719)： 高对比度主题双精度型值/三元组图标
+- 修复[发出 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047)： 添加用于连接到 SQL Server 命令行接口
+- 修复[发出 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031)： 添加查询计划的主题支持
+- ...
+
+有关详细信息，请参阅[更改日志](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md)，并[版本](https://github.com/Microsoft/azuredatastudio/releases)。
 
 ## <a name="october-2018-october-release"></a>2018 年 10 月 （年 10 月发行版）
 
@@ -58,7 +83,7 @@ ms.locfileid: "50237063"
     - 使用笔记本中的 PROSE 代码 Accelerator 库来了解适用于快速数据准备的文件格式和数据类型。
   - Azure 资源浏览器
     - Azure 资源浏览器视图，可以浏览数据相关的 Azure 帐户的终结点并在对象资源管理器中创建连接到它们连接。 在此版本中支持 Azure SQL 数据库和服务器。
-  - SQL Server Polybase 创建外部表向导
+  - SQL Server PolyBase 创建外部表向导
     - 使用简单易用的向导创建外部表和及其支持的元数据结构。 在此版本中，支持远程 SQL Server 和 Oracle 服务器。
 - 查询结果网格性能和大量的结果集的用户体验改进功能。
 - Visual Studio Code 源代码从 1.23 刷新到 1.26.1 网格布局和改进的设置编辑器 （预览版）。

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a9cf9cdb65ba9fb405b17ffec01378dc4184a5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f701dacfd5a61dcec8f1d2ca12dad80258bcd8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661226"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC 操作指南主题
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "47688765"
   
 ## <a name="in-this-section"></a>本节内容  
   
--   [配置 SQL Server ODBC 驱动程序操作说明主题](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
+-   [配置 SQL Server ODBC 驱动程序操作说明主题](https://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
 -   [分配句柄和连接到 SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
 -   [执行查询操作指南主题&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [处理结果操作指南主题&#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [处理结果操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
 -   [使用游标操作指南主题&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
 -   [使用 Microsoft 分布式事务处理协调器&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [运行存储的过程操作指南主题&#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [运行存储的过程操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
--   [管理 text 和 image 列操作指南主题&#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+-   [管理 text 和 image 列操作指南主题&#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
 -   [分析 ODBC 驱动程序性能操作指南主题&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 338b4b749d541535d5ecb6c4f0719dbb5f07984b
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215626"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668016"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 类
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Next
   
      **\<驱动器 >: \Program Files\Microsoft SQL Server\MSSQL11** **。\<实例名 > \MSSQL\Log**  
   
- 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程启动 Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848)。  
+ 如果您在通过防火墙进行连接，则请确保在防火墙中针对远程目标计算机上的 WMI 设置例外。 有关详细信息，请参阅[连接到 WMI 远程启动 Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848)。  
   
 ## <a name="see-also"></a>请参阅  
  [SqlErrorLogEvent 类](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   

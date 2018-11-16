@@ -15,16 +15,16 @@ ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7f1a765d67307eb116c567c9cd5998d27b1ff53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7263e9b320eb84d0f8ae9aaba6005a454a4b5838
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770115"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51606827"
 ---
 # <a name="converttostring-method-example-vbscript"></a>ConvertToString 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下面的示例演示如何将转换**记录集**为 MIME 编码的字符串，并使用**提高 ConvertToString**方法。 它还展示了如何将字符串转换回**记录集**。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**ConvertToString.htm**。  
   
@@ -41,7 +41,7 @@ Sub ConvertToStringX()
     Const adcFetchUpFront = 1  
   
     ' Replace value below with your server name to use without ASP.  
-    strServer = "http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+    strServer = "https://<%=Request.ServerVariables("SERVER_NAME")%>">  
   
     Set objDF = RDS1.CreateObject("RDSServer.DataFactory", strServer)  
     Set objRs = objDF.Query(txtConnect.Value,txtQueryRecordset.Value)  

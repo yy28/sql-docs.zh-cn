@@ -1,5 +1,5 @@
 ---
-title: IIf (MDX) |Microsoft 文档
+title: IIf (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ff85ddef47099462a8c38031141120d02bfd1019
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740676"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51700775"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -29,25 +29,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>参数  
- IIf 函数取三个参数： iif (\<条件 >，\<然后分支 >， \<else 分支 >)。  
+ IIf 函数有三个参数： iif (\<条件 >，\<分支 >， \<else 分支 >)。  
   
  *Logical_Expression*  
- 条件计算结果为**true** (1) 或**false** (0)。 它必须是有效的多维表达式 (MDX) 逻辑表达式。  
+ 条件的计算结果为 **，则返回 true** (1) 或**false** (0)。 它必须是有效的多维表达式 (MDX) 逻辑表达式。  
   
- *Expression1 提示 [Eager |严格 |延迟]]*  
- 逻辑表达式计算结果为时使用**true**。 Expression1 必须是有效的多维表达式 (MDX) 表达式。  
+ *Expression1 提示 [预先 |严格 |延迟]]*  
+ 逻辑表达式的计算结果时使用 **，则返回 true**。 Expression1 必须是有效的多维表达式 (MDX) 表达式。  
   
- *Expression2 提示 [Eager |严格 |延迟]]*  
- 逻辑表达式计算结果为时使用**false**。 Expression2 必须是有效的多维表达式 (MDX) 表达式。  
+ *Expression2 提示 [预先 |严格 |延迟]]*  
+ 逻辑表达式的计算结果时使用**false**。 Expression2 必须是有效的多维表达式 (MDX) 表达式。  
   
-## <a name="remarks"></a>Remarks  
- 逻辑表达式指定的条件的计算结果为**false**时此表达式的值为零。 任何其他值的计算结果为**true**。  
+## <a name="remarks"></a>备注  
+ 逻辑表达式指定的条件计算结果为**false**时此表达式的值为零。 任何其他值的计算结果为 **，则返回 true**。  
   
- 满足条件时**true**、 **IIf**函数将返回第一个表达式。 否则，该函数返回第二个表达式。  
+ 条件何时 **，则返回 true**，则**IIf**函数将返回第一个表达式。 否则，该函数返回第二个表达式。  
   
  指定的表达式可以返回值或 MDX 对象。 此外，指定表达式的类型无需匹配。  
   
- **IIf**函数不推荐使用来创建一组基于搜索条件的成员。 请改用[筛选器](../mdx/filter-mdx.md)函数来计算逻辑表达式针对一个指定集的每个成员并返回成员的子集。  
+ **IIf**函数不建议用于创建基于搜索条件的成员集。 请改用[筛选器](../mdx/filter-mdx.md)函数来计算逻辑表达式对指定集中每个成员并返回成员的子集。  
   
 > [!NOTE]  
 >  如果任意一个表达式的计算结果为 NULL，则当满足该条件时，结果集为 NULL。  
@@ -64,10 +64,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  在提示中，EAGER 和 STRICT 是互斥的；可以在不同表达式的相同 IIF(,,) 中使用它们。  
   
- 有关详细信息，请参阅[IIF 函数查询提示在 SQL Server Analysis Services 2008](http://go.microsoft.com/fwlink/?LinkId=269540)和[执行计划和计划提示 MDX IIF 函数以及 CASE 语句](http://go.microsoft.com/fwlink/?LinkId=269565)。  
+ 有关详细信息，请参阅[SQL Server Analysis Services 2008 中的 IIF 函数查询提示](https://go.microsoft.com/fwlink/?LinkId=269540)并[执行计划和计划提示 MDX IIF 函数和 CASE 语句](https://go.microsoft.com/fwlink/?LinkId=269565)。  
   
 ## <a name="examples"></a>示例  
- 以下查询显示了简单的用法**IIF**内计算度量值返回两个不同字符串值时度量值 Internet Sales Amount 大于或小于 $10000 之一：  
+ 以下查询说明的简单用法**IIF**内计算度量值返回两个不同的字符串值时度量值 Internet Sales Amount 大于或小于 $10000 之一：  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -131,7 +131,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 以下是一种**IIF**返回要在行上创建一组复杂的元组的生成函数中的两个集之一：  
+ 以下是一种**IIF**返回的行上创建一组复杂的元组在 Generate 函数内部的两个集之一：  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -178,6 +178,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>请参阅  
- [MDX 函数引用&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函数引用 (MDX)](../mdx/mdx-function-reference-mdx.md)  
   
   

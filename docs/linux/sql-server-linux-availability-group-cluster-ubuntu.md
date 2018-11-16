@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 45ac371576eff08576354aed04e3d54ac0dc7696
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b5631fdf834ea9a998f1dd4ae149dfe4cc6109
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740327"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658373"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>配置 Ubuntu 群集和可用性组资源
 
@@ -134,7 +134,7 @@ sudo systemctl enable pacemaker
 
 ## <a name="configure-fencing-stonith"></a>配置隔离 (STONITH)
 
-Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。 资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。 有关详细信息，请参阅[Pacemaker 从头开始群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html) 
+Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程序配置隔离设备。 群集资源管理器无法确定节点或节点上资源的状态时，将使用隔离使群集再次处于已知状态。 资源级别隔离主要确保在因配置资源引起服务中断时，不会发生数据损坏。 例如，可将资源级别隔离用于 DRBD（分布式复制块设备），从而在通信链接出现故障时将节点上的磁盘标记为过时。 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，例如不间断电源或服务器的管理接口卡。 有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)和[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 由于节点级别隔离配置很大程度取决于你的环境，我们禁用它 （它可以配置在更高版本时） 在本教程。 在主节点上运行以下脚本： 
 

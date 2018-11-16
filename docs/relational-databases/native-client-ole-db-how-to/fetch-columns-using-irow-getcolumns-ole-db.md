@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8dd6310fd1f524868c0f9362d225b144f1039e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717705"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675106"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取列 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47717705"
 -   如何两次访问某一列。 第一次获取实际列宽度，稍后访问实际数据。 在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns() 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns() 以检索实际数据。  
   
 > [!IMPORTANT]  
->  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
+>  请尽可能使用 Windows 身份验证。 如果 Windows 身份验证不可用，请在运行时提示用户输入其凭据。 不要将凭据存储在一个文件中。 如果必须保存凭据，应当用 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)（Win32 加密 API）加密它们。  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>使用 IRow::GetColumns 提取列  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47717705"
   
  在 DBCOLUMNACCESS 结构中，如果 pData 为 NULL 且 cbMaxLen 为 0，则对于 IRow->GetColumns 的调用只返回实际列长度。 在这种情况下，可以再次对同一列调用 IRow->GetColumns 以检索实际数据。 IA64 平台不支持此示例。  
   
- 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](http://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
+ 此示例要求使用 AdventureWorks 示例数据库，其可从 [Microsoft SQL Server 示例和社区项目](https://go.microsoft.com/fwlink/?LinkID=85384)主页下载。  
   
  第一个 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 代码列表创建该示例使用的表。  
   

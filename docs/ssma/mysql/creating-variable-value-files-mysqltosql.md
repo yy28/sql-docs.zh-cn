@@ -13,12 +13,12 @@ ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 128148d4e1aeabcf0ea57ce7fac35702637afab6
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 43dc992457245de08785afb16e6c8cf71572716e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099948"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659166"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>创建变量值文件 (MySQLToSQL)
 变量值文件是 XML 文件包含的频繁更改从一台服务器迁移到另一个如源或目标服务器名称的命令的参数值。 大量的数据库迁移发生时，将创建并使用主脚本文件中引用多个变量文件用于存储每个源服务器的值 **– v**在命令行开关。 这有助于维护几个脚本文件中的静态值，与多个变量文件中的变量值。  
@@ -93,6 +93,6 @@ ms.locfileid: "50099948"
 ## <a name="next-step"></a>下一步  
 在操作控制台中的下一步是[创建服务器连接文件&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-## <a name="see-also"></a>另请参阅  
-[创建服务器连接文件 (MySQL)](http://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
+## <a name="see-also"></a>请参阅  
+[创建服务器连接文件 (MySQL)](https://msdn.microsoft.com/df0e970c-da0b-4118-b359-c9dcbbad16d6)  
   

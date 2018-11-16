@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f30d22725e7d0fd099cf2976af42d74d08a93b22
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c29383e02746ac3abb60a15d2d0368483d2ee13e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400610"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699440"
 ---
 # <a name="transparent-data-encryption"></a>透明数据加密
 您可以采取一些预防措施来帮助保护数据库的安全，如设计一个安全系统、加密机密资产以及在数据库服务器的周围构建防火墙。 但是，对于物理媒体 （如驱动器或备份磁带） 都被盗的情况下，恶意方可以只还原或附加数据库并浏览的数据。 一种解决方案是加密数据库中的敏感数据，并通过证书保护用于加密数据的密钥。 这可以防止任何没有密钥的人使用这些数据，但这种保护必须事先计划。  
@@ -207,7 +207,7 @@ Tempdb 系统数据库进行加密时使用启用加密[sp_pdw_database_encrypti
   
 系统可以访问的密钥，而无需人工干预，（例如提供密码）。 如果证书不可用，系统将输出一个错误，直到可访问正确的证书无法解密 DEK。  
   
-在将数据库从一个设备移到另一个，证书用于保护其 DEK 必须先还原到目标服务器上。 然后可以像往常一样还原数据库。 详细信息，请参阅标准的 SQL Server 文档，在[将受 TDE 保护的数据库移动到另一个 SQL Server](http://technet.microsoft.com/library/ff773063.aspx)。  
+在将数据库从一个设备移到另一个，证书用于保护其 DEK 必须先还原到目标服务器上。 然后可以像往常一样还原数据库。 详细信息，请参阅标准的 SQL Server 文档，在[将受 TDE 保护的数据库移动到另一个 SQL Server](https://technet.microsoft.com/library/ff773063.aspx)。  
   
 只要使用它们的数据库备份也应保留用于加密 Dek 的证书。 证书备份必须包括证书私钥，因为不带私钥的证书不能用于数据库还原。 这些证书的专用密钥备份存储在单独的文件，必须为证书还原提供有密码保护。  
   

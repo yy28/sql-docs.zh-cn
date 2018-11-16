@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中记录操作 |Microsoft 文档
+title: 在 Analysis Services 中记录操作 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba0be2d0a46790f1a330a75c25461983e0b7488a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a4332497abe58a610a4ebba2d1c92b24aa9f5bd6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018604"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701635"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的日志操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,15 +36,13 @@ ms.locfileid: "34018604"
   
 -   [提示和最佳实践](#bkmk_tips)  
   
-> [!NOTE]  
->  如果你要查找日志记录的信息，你可能也对跟踪显示处理和查询执行路径的操作感兴趣。 临时跟踪目标和持续跟踪目标（例如审核多维数据集访问）以及如何最大程度利用 Flight Recorder、SQL Server Profiler 和 xEvents 的建议可通过此页中的链接找到： [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md)。  
   
 ##  <a name="bkmk_location"></a> 日志的位置和类型  
  Analysis Services 提供有以下所述日志。  
   
 |文件名或位置|类型|用于|在默认情况下启用|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|错误日志|例程监控和基本故障排除|是|  
+|Msmdsrv.log|错误日志|例程监控和基本故障排除|用户帐户控制|  
 |关系数据库中的 OlapQueryLog 表|查询日志|为使用情况优化向导收集输入|否|  
 |SQLDmp\<guid >.mdmp 文件|崩溃和异常|深度故障排除|否|  
   
@@ -55,7 +53,7 @@ ms.locfileid: "34018604"
   
  如有可能，我们建议你在 Management Studio 的服务器属性页设置日志记录属性。 但是在某些情况下，你必须直接编辑 msmdsrv.ini 文件以配置管理工具中不可见的设置。  
   
- ![显示日志设置配置文件部分](../../analysis-services/instances/media/ssas-logfilesettings.png "显示日志设置配置文件部分")  
+ ![显示日志设置配置文件的部分](../../analysis-services/instances/media/ssas-logfilesettings.png "显示日志设置配置文件部分")  
   
 ##  <a name="bkmk_msmdsrv"></a> MSMDSRV 服务日志文件  
  Analysis Services 会将服务器操作记录到 msmdsrv.log 文件中，每个实例一个文件，位于 \program files\Microsoft SQL Server\\<instance\>\Olap\Log。  
@@ -99,7 +97,7 @@ ms.locfileid: "34018604"
 ##  <a name="bkmk_querylog"></a> 查询日志  
  查询日志有一点用词不当，因为它不记录你的用户的 MDX 或 DAX 查询活动。 它收集由 Analysis Services 生成的查询的数据，这些数据后续用作基于使用情况的优化向导中的数据输入。 查询日志中收集的数据不用于直接分析。 具体而言，数据集用比特数组表示，查询中包含指示数据集部分的 0 或 1。 再次说明，此数据用于向导。  
   
- 对于查询监控和故障排除，许多开发人员和管理员使用社区工具 **ASTrace**来监控查询。 你还可使用 SQL Server Profiler、xEvents 或 Analysis Services 跟踪。 有关跟踪相关的链接，请参阅 [监视 Analysis Services 实例](../../analysis-services/instances/monitor-an-analysis-services-instance.md) 。  
+ 对于查询监控和故障排除，许多开发人员和管理员使用社区工具 **ASTrace**来监控查询。 你还可使用 SQL Server Profiler、xEvents 或 Analysis Services 跟踪。
   
  你应何时使用查询日志？ 我们建议启用查询日志，作为包括基于使用情况的优化向导的查询性能微调练习的一部分。 在你启用此功能、创建用于支持它的数据结构并设置 Analysis Services 使用的属性以查找和填充日志后，查询日志才存在。  
   
@@ -109,7 +107,7 @@ ms.locfileid: "34018604"
   
 2.  授予 Analysis Services 帐户有关数据库的足够权限。 帐户需要创建表、写入表和从表读取的权限。  
   
-3.  在 SQL Server Management Studio，右键单击**Analysis Services** | **属性** | **常规**，将其设置**CreateQueryLogTable**为 true。  
+3.  在 SQL Server Management Studio 中，右键单击**Analysis Services** | **属性** | **常规**，将**CreateQueryLogTable**为 true。  
   
 4.  或者，如果你要以不同速率取样查询，或者使用表的不同名称，则更改 **QueryLogSampling** 或 **QueryLogTableName** 。  
   
@@ -117,7 +115,7 @@ ms.locfileid: "34018604"
   
  查询日志设置属于服务器范围。 你指定的设置将被此服务器上运行的所有数据库使用。  
   
- ![查询在 Management Studio 中的日志设置](../../analysis-services/instances/media/ssas-querylogsettings.png "在 Management Studio 中的查询日志设置")  
+ ![查询日志设置在 Management Studio](../../analysis-services/instances/media/ssas-querylogsettings.png "Management Studio 中的查询日志设置")  
   
  指定配置设置后，多次运行 MDX 查询。 如果取样设置为 10，则运行 11 次查询。验证表是否创建。 在 Management Studio 中，连接到关系数据库引擎，打开数据库文件夹，打开 **“表”** 文件夹，并验证 **OlapQueryLog** 是否存在。 如果不能立即查看表，则刷新文件夹，提取其内容的任何更改。  
   
@@ -152,7 +150,7 @@ ms.locfileid: "34018604"
   
  最可能修改的配置设置是用于确定是否生成内存转储文件的 **CreateAndSendCrashReports** 设置。  
   
-|“值”|说明|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |0|关闭内存转储文件。 忽略在“例外”部分下的所有其他设置。|  
 |1|（默认）启用，但不发送内存转储文件。|  
@@ -179,9 +177,9 @@ ms.locfileid: "34018604"
   
 -   使用 ASTrace2012（而非查询日志）查找谁正在查询多维数据集。 查询日志通常用于提供输入到基于使用情况的优化向导，其捕获的数据不易读取或解释。 ASTrace2012 是一种广泛使用的用于捕获查询操作的社区工具。 请参阅 [Microsoft SQL Server 社区示例：Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [Analysis Services 实例管理](../../analysis-services/instances/analysis-services-instance-management.md)   
- [监视 Analysis Services with SQL Server 事件探查器简介](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [通过 SQL Server Profiler 监视 Analysis Services 简介](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Analysis Services 中的服务器属性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  
   
   

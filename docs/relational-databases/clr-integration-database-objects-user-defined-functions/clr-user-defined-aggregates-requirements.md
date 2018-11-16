@@ -20,19 +20,19 @@ ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1defa76a4fb59812165929f91e14bb5fe7d9026d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646205"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662466"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR 用户定义聚合 - 需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   只要公共语言运行时 (CLR) 程序集中的类型实现了所需的聚合约定，就可以将它作为用户定义聚合函数注册。 此协定组成**SqlUserDefinedAggregate**属性和聚合约定方法。 聚合约定包括保存聚合中间状态的机制和机制以及累计新值，其中包括四个方法： **Init**， **Accumulate**， **合并**，并**终止**。 当满足这些要求后时，你将能够充分利用中的用户定义聚合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 本主题的以下章节提供有关如何创建和使用用户定义聚合的其他详细信息。 有关示例，请参阅[Invoking CLR User-Defined 聚合函数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
- 有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](http://go.microsoft.com/fwlink/?LinkId=124626)。  
+ 有关详细信息，请参阅[SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)。  
   
 ## <a name="aggregation-methods"></a>聚合方法  
  注册为用户定义聚合的类应支持以下实例方法。 这些是查询处理器计算聚合所用的方法。  

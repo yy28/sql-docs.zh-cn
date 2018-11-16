@@ -20,12 +20,12 @@ ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e8690ea8ea86417bcf32a3688d38b7eaaa23cf34
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 2f048ddf70f81ab81ca668c9acb53910f05b1a41
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031614"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664236"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ desttype
  有关每种数据类型的说明，请参阅[数据类型（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [srv_convert（扩展存储过程 API）](../../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md)  

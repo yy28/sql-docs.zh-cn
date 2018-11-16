@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 3fb1b2646e399e5fe96dcc66f60aa92b4f009116
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 3db679a5df861cbdbf08443b5fdd85e99b01d3b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383732"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670616"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>为 SQL Server 可用性组配置 SLES 群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何为 SQL Server 上 SUSE Linux Enterprise Server (SLES) 12 SP2 中创建一个三节点群集。 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 群集层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](http://clusterlabs.org/)。 
+本指南介绍如何为 SQL Server 上 SUSE Linux Enterprise Server (SLES) 12 SP2 中创建一个三节点群集。 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 群集层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](https://clusterlabs.org/)。 
 
 有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
@@ -79,7 +79,7 @@ Linux 服务器和 Windows Server 故障转移群集之间不同，创建可用�
    sudo crm_report -X "-p 3479" [...]
    ```
 
-   有关详细信息，请参阅[SLES 管理指南-杂项部分](http://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
+   有关详细信息，请参阅[SLES 管理指南-杂项部分](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)。
 
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>为 Pacemaker 创建 SQL Server 登录名
@@ -104,7 +104,7 @@ Linux 服务器和 Windows Server 故障转移群集之间不同，创建可用�
 
 ## <a name="set-up-the-first-node"></a>设置第一个节点
 
-   请参阅[SLES 安装说明](http://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
+   请参阅[SLES 安装说明](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.setup.1st-node)
 
 1. 以登录`root`到物理计算机或你想要用作群集节点的虚拟机。
 2. 执行如下命令，启动该启动脚本：
@@ -220,7 +220,7 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 节点级别隔离确保节点不会运行任何资源。 重置节点可实现此目的，其 Pacemaker 实现被称为 STONITH (shoot the other node in the head)，即关闭其他节点。 Pacemaker 支持多种隔离设备，如服务器不间断电源供应或管理接口卡。
 
-有关详细信息，请参阅[Pacemaker 从头开始群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](http://clusterlabs.org/doc/crm_fencing.html)并[SUSE HA 文档： 隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
+有关详细信息，请参阅[Pacemaker 从头开始群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)，[隔离和 Stonith](https://clusterlabs.org/doc/crm_fencing.html)并[SUSE HA 文档： 隔离和 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)。
 
 在群集初始化时，如果检测不到任何配置，则将禁用 STONITH。 它可以稍后启用通过运行以下命令：
 

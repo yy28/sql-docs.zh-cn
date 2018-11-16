@@ -15,16 +15,16 @@ ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38c94f73468a9ba9e09142da7a73ad3763488428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30fcb14c39385c6e7e39ec8ac1556118a4d09f73
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601996"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51605947"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset 方法示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  此代码示例创建[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)服务器端。 它具有两列中的有四个行。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**CreateRecordsetVBS.asp**。  
   

@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 114bf92f75fbea0973fc6d1003edae6339c8ddbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3e824bd50fb0cf9244706f1e5714285be8fce24
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731125"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665896"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>带批注的 XDR 架构（在 SQLXML 4.0 中不推荐使用）
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  带批注的 XDR 架构不推荐使用。 以后不会就该功能继续进行开发。 请避免在新的开发工作中使用此功能。 而应改用带批注的 XSD 架构。 可以将现有带批注的 XDR 架构转换为 XSD 架构。 有关详细信息，请参阅[转换为等效的 XSD 架构添加批注的 XDR 架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)。 有关不推荐使用 XDR 架构的信息，请参阅[SQL Server 2008 文档](http://go.microsoft.com/fwlink/?LinkId=202011)。  
+  带批注的 XDR 架构不推荐使用。 以后不会就该功能继续进行开发。 请避免在新的开发工作中使用此功能。 而应改用带批注的 XSD 架构。 可以将现有带批注的 XDR 架构转换为 XSD 架构。 有关详细信息，请参阅[转换为等效的 XSD 架构添加批注的 XDR 架构&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)。 有关不推荐使用 XDR 架构的信息，请参阅[SQL Server 2008 文档](https://go.microsoft.com/fwlink/?LinkId=202011)。  
   
 ## <a name="see-also"></a>请参阅  
  [带批注的 XSD 架构简介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  

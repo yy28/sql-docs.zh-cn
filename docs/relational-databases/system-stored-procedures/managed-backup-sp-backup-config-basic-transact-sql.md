@@ -21,12 +21,12 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 93e6bcfc4ec686f61672fa382d545db5a7000f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7722193dc643b4fd5afaa9a21559febe137cba6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662846"
 ---
 # <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  启用托管的备份上特定数据库的数据库名称。  
   
  @container_url  
- 指示备份的位置的 URL。 当@credential_name为 NULL，此 URL 是指向 Azure 存储中的 blob 容器的共享的访问签名 (SAS) URL，并备份使用块 blob 功能的新备份。 有关详细信息，请查看[理解 SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 当@credential_name指定，则这是存储帐户 URL，并将备份使用不推荐使用的备份到页 blob 功能。  
+ 指示备份的位置的 URL。 当@credential_name为 NULL，此 URL 是指向 Azure 存储中的 blob 容器的共享的访问签名 (SAS) URL，并备份使用块 blob 功能的新备份。 有关详细信息，请查看[理解 SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 当@credential_name指定，则这是存储帐户 URL，并将备份使用不推荐使用的备份到页 blob 功能。  
   
 > [!NOTE]  
 >  目前，如果此参数支持 SAS URL。  

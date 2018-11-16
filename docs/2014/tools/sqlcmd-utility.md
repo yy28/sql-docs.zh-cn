@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38b30537da238905fdc4ae1394dfceb6d9606f89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7fe44b790fbf99811761041f4b81eeb3b48e96da
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229967"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641534"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   `sqlcmd`实用工具，可以输入[!INCLUDE[tsql](../includes/tsql-md.md)]语句、 系统过程和脚本文件在命令提示符下，在**查询编辑器**在 SQLCMD 模式下，Windows 脚本文件或的操作系统 (Cmd.exe) 作业步骤[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理作业。 此实用工具使用 ODBC 执行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批处理。  
@@ -99,7 +99,7 @@ ms.locfileid: "48229967"
  连接到服务器时声明应用程序工作负荷类型。 目前唯一支持的值是 **ReadOnly**。 如果未指定 **-K**，sqlcmd 实用工具将不支持连接到 AlwaysOn 可用性组中的次要副本。 有关详细信息，请参阅[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
- 始终指定`-M`连接到的可用性组侦听器时[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性组或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]故障转移群集实例。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `–M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ 在连接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可用性组侦听器或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 故障转移群集实例的可用性组侦听器时，应始终指定 `-M`。 `-M` 将为（当前）活动服务器提供更快的检测和连接。 如果未指定 `–M`，则 `-M` 将关闭。 有关详细信息[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，请参阅[可用性组侦听器、 客户端连接和应用程序故障转移&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[创建和配置可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[故障转移群集和 AlwaysOn 可用性组&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，并且[活动次要副本： 可读辅助副本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
   
  **-N**  
  此开关供客户端用于请求加密连接。  
@@ -182,7 +182,7 @@ ms.locfileid: "48229967"
   
 -   假定多个输入文件具有相同的代码页。 可以将 Unicode 和非 Unicode 输入文件混合在一起。  
   
- 输入`chcp`在命令提示符处，以验证 Cmd.exe 的代码页。  
+ 在命令提示符处输入 `chcp` 以验证 Cmd.exe 的代码页。  
   
  **-i** *input_file*[**,***input_file2*...]  
  标识包含一批 SQL 语句或存储过程的文件。 可以指定要按顺序读取和处理的多个文件。 文件名之间不要使用任何空格。 `sqlcmd` 将首先检查所有指定的文件是否都存在。 如果有一个或多个文件不存在，`sqlcmd` 将退出。 -i 和 -Q/-q 选项是互斥的。  
@@ -404,7 +404,7 @@ ms.locfileid: "48229967"
   
  在返回多个结果时，`sqlcmd` 在批处理中的每个结果集之间输出一个空行。 此外，"\<x > 行受影响"如果不应用于已执行的语句未显示消息。  
   
- 若要使用`sqlcmd`，以交互方式键入`sqlcmd`在命令提示符处带一个或多个本主题前面所述的选项。 有关详细信息，请参阅[使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ 若要使用`sqlcmd`，以交互方式键入`sqlcmd`在命令提示符处带一个或多个本主题前面所述的选项。 有关详细信息，请参阅 [使用 sqlcmd 实用工具](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
 >  选项 **-L**， **-Q**， **-Z**或者 **-i**导致`sqlcmd`执行后退出。  
@@ -707,7 +707,7 @@ ms.locfileid: "48229967"
   
  `GO`  
   
- 按下 Enter 时，会返回以下结果集。  
+ 当您按 ENTER 时，返回以下结果集。  
   
  `BusinessEntityID FirstName    LastName`  
   

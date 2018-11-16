@@ -15,12 +15,12 @@ ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c14003652db37ca23addd2ac0dfd14ca0ada9f00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664865"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 对象
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ End Sub
 ## <a name="see-also"></a>请参阅  
  [SqlPipe 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [SqlTriggerContext 对象](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
- [CLR 触发器](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
+ [CLR 触发器](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   
  [SQL Server 进程内专用的 ADO.NET 扩展](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

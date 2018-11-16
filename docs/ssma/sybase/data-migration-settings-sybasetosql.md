@@ -10,19 +10,19 @@ ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c32d2f1bce255f9490bdb74d8f07a9ddbe7cc161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658131"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>数据迁移设置 (SybaseToSQL)
   
 ## <a name="data-migration-settings"></a>数据迁移设置  
 **数据迁移设置**使用户可以编写自定义查询的数据迁移。  
   
--   时，此选项卡才可用**扩展数据迁移选项**设置为**显示**当设置为时将隐藏**隐藏**项目设置中。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移）](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
+-   时，此选项卡才可用**扩展数据迁移选项**设置为**显示**当设置为时将隐藏**隐藏**项目设置中。 有关项目迁移设置的详细信息，请参阅[项目设置 （迁移）](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924) 。  
   
 -   在将实现自定义 SQL 语句的分析**数据迁移设置**表节点的选项卡。  
   
@@ -53,5 +53,5 @@ ms.locfileid: "47681395"
 -   **取消:** 单击**取消**若要还原的设置存在，就发生了更改。  
   
 ## <a name="see-also"></a>请参阅  
-[将 Sybase 数据迁移到 SQL Server/SQL Azure](http://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
+[将 Sybase 数据迁移到 SQL Server/SQL Azure](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811)  
   

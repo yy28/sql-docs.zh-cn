@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d20221d1f551b17483d977b98226066950ce8ce2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709615"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677306"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47709615"
 |**system_cache_kb**|**bigint**|系统缓存内存总量，单位为 KB。|  
 |**kernel_paged_pool_kb**|**bigint**|分页内核池的总量，单位为 KB。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|非分页内核池的总量，单位为 KB。|  
-|**system_high_memory_signal_state**|**bit**|系统内存资源充足的状态通知。 值为 1 指示内存充足信号已由 Windows 设置。 有关详细信息，请参阅[CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN 库中。|  
-|**system_low_memory_signal_state**|**bit**|系统内存资源不足的状态通知。 值为 1 指示内存不足信号已由 Windows 设置。 有关详细信息，请参阅[CreateMemoryResourceNotification](http://go.microsoft.com/fwlink/?LinkId=82427) MSDN 库中。|  
+|**system_high_memory_signal_state**|**bit**|系统内存资源充足的状态通知。 值为 1 指示内存充足信号已由 Windows 设置。 有关详细信息，请参阅[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) MSDN 库中。|  
+|**system_low_memory_signal_state**|**bit**|系统内存资源不足的状态通知。 值为 1 指示内存不足信号已由 Windows 设置。 有关详细信息，请参阅[CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) MSDN 库中。|  
 |**system_memory_state_desc**|**nvarchar(256)**|内存状态的说明。 请参阅下表。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   

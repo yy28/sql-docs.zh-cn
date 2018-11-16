@@ -17,12 +17,12 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e6ae3aa39d21ea59b169ffd1ed7a5d9f4cb056fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8935e36676e2016d5fbf72239130956d40a875e9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651945"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668896"
 ---
 # <a name="supported-versions-of-foxpro"></a>支持的 FoxPro 版本
 可以使用 Microsoft® Visual FoxPro® ODBC 驱动程序，访问 FoxPro 表中存储的数据。 支持以下版本的 FoxPro 数据：  
@@ -39,4 +39,4 @@ ms.locfileid: "47651945"
   
  有关如何连接到数据源的详细信息，请参阅[添加 Visual FoxPro 数据源](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)。  
   
- 若要下载驱动程序，请参阅[Visual FoxPro ODBC 驱动程序下载站点](http://go.microsoft.com/fwlink/?LinkId=121318)。
+ 若要下载驱动程序，请参阅[Visual FoxPro ODBC 驱动程序下载站点](https://go.microsoft.com/fwlink/?LinkId=121318)。

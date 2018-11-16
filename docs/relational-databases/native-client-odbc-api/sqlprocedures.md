@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28659a261045c6e32bb43f9b3ea6bafcc364b780
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bd400221a3e199deb50ac8cb384984dc64bca83
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830315"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674466"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47830315"
  **SQLProcedures**返回其名称匹配的任何过程有关的信息*ProcName*和可由当前用户，或为其当前用户拥有 VIEW DEFINITION 权限。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLProcedures 函数](http://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures 函数](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

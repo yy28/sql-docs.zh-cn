@@ -10,12 +10,12 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 481429d65f587cdbeb7ed977cafd4553f697c59c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771437"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671667"
 ---
 # <a name="user-interface-reference-db2tosql"></a>用户界面参考 (DB2ToSQL)
 本部分包括帮助主题[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for DB2。  
@@ -31,7 +31,7 @@ ms.locfileid: "47771437"
 |[连接到 DB2 数据库&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|使用**连接到 DB2**对话框以连接到你想要迁移的 DB2 数据库。|  
 |[连接到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|使用**连接到 SQL Server**对话框以连接到的实例[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]到想要迁移。|  
 |[数据迁移报表&#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|显示的结果将数据从 DB2 到迁移[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|[数据迁移设置](http://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用**扩展数据迁移设置**选项卡可编写自定义查询的数据迁移。|  
+|[数据迁移设置](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|使用**扩展数据迁移设置**选项卡可编写自定义查询的数据迁移。|  
 |[编辑类型映射&#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|使用**新的类型映射**或**编辑类型映射**对话框可以创建或修改的源和目标数据库和数据库对象之间的数据类型映射。|  
 |[全局设置&#40;编辑器&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|使用的编辑器页面**全局设置**对话框可配置代码编辑器选项。|  
 |[全局设置&#40;对话框&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-dialogs-db2tosql.md)|使用的对话框页面**全局设置**对话框可以配置默认对话框和警告设置。|  

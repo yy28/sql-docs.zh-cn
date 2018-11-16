@@ -10,12 +10,12 @@ ms.assetid: 59e63eac-8a7e-4d54-be1c-0633a9bf510d
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: a0d72eea63d104d4cd110df4a12a505675a41344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82de3d69201a26980936172b2b08dcda9900b7a9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732725"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671669"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>SQL Server Migration Assistant for Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 的 Sybase Adaptive Server Enterprise (ASE) 是一个工具，用于将 ASE 数据库迁移到[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （预览版） 上的或[!INCLUDE[msCoName](../../includes/msconame_md.md)]Azure SQL DB。 适用于 Sybase 的 SSMA 将转换到 ASE 数据库对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]数据库对象中，创建这些对象[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL，然后再将数据迁移从 ASE 到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。  
@@ -32,5 +32,5 @@ ms.locfileid: "47732725"
 |[将 Sybase ASE 数据库迁移到 SQL Server-Azure SQL 数据库&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|提供有关在过程中每个步骤的详细的信息的转换过程的概述。|  
 |[用户界面参考&#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|包含用于 SSMA for Sybase 对话框文档。|  
 |[使用 SSMA for Sybase 控制台](working-with-ssma-for-sybase-console-sybasetosql.md)|包含有关 SSMA 控制台应用程序的文档。|  
-|[获取 SSMA 的 Sybase 协助](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供有关获取其他帮助信息。|  
+|[获取 SSMA 的 Sybase 协助](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供有关获取其他帮助信息。|  
   

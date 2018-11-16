@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: afcacd5a19920a396141284103db93e60a4f0646
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ee6581bca5dac6331571d1b1b71957cc3df7eac
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829556"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661306"
 ---
 # <a name="use-a-statement-odbc"></a>使用语句 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,21 +28,21 @@ ms.locfileid: "47829556"
     
 ### <a name="to-use-a-statement"></a>使用语句  
   
-1.  调用 [SQLAllocHandle](http://go.microsoft.com/fwlink/?LinkId=58396)，同时将 *HandleType* 设置为 SQL_HANDLE_STMT，以分配语句句柄。  
+1.  调用 [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396)，同时将 *HandleType* 设置为 SQL_HANDLE_STMT，以分配语句句柄。  
   
 2.  （可选）调用 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 以设置语句选项，或调用 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 以获取语句属性。  
   
      若要使用服务器游标，必须将游标属性设置为其默认值之外的值。  
   
-3.  （可选）如果要多次执行此语句，可以使用 [SQLPrepare 函数](http://go.microsoft.com/fwlink/?LinkId=59360)准备要执行的语句。  
+3.  （可选）如果要多次执行此语句，可以使用 [SQLPrepare 函数](https://go.microsoft.com/fwlink/?LinkId=59360)准备要执行的语句。  
   
-4.  （可选）如果语句具有绑定参数标记，通过使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 将参数标记绑定到程序变量。 如果是准备的语句，则可以调用 [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) 和 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 以查找参数的数目和特征。  
+4.  （可选）如果语句具有绑定参数标记，通过使用 [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 将参数标记绑定到程序变量。 如果是准备的语句，则可以调用 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 和 [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 以查找参数的数目和特征。  
   
 5.  使用 SQLExecDirect 直接执行语句。  
   
      \- 或 -  
   
-     如果是准备的语句，则可以使用 [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) 多次执行该语句。  
+     如果是准备的语句，则可以使用 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 多次执行该语句。  
   
      \- 或 -  
   

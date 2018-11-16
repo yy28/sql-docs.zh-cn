@@ -5,8 +5,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -19,12 +18,12 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d496a846c49c002e77f0f8bc3bde13fad24755a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 731877fced1d14e385f8681d4a436269e518595a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854755"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656796"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模块和 Prolog - XQuery Prolog
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47854755"
  例如，针对的 Instructions 列指定以下 XQuery **xml**将生产说明存储为 XML 的类型。 该查询将检索生产车间 `10` 的生产说明。 `query()`方法**xml**数据类型用于指定 XQuery。  
   
 ```  
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') AS Result   
 FROM  Production.ProductModel  
@@ -43,7 +42,7 @@ WHERE ProductModelID=7
   
  请注意上述查询的以下方面：  
   
--   XQuery prolog 包含命名空间前缀 (AWMI) 声明， `(namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
+-   XQuery prolog 包含命名空间前缀 (AWMI) 声明， `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`。  
   
 -   `declare namespace` 关键字定义查询主体随后使用的命名空间前缀。  
   
@@ -56,7 +55,7 @@ WHERE ProductModelID=7
   
 ```  
 SELECT CatalogDescription.query('  
-declare namespace PD="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
          /PD:ProductDescription/PD:Summary   
     ') as Result  
 FROM Production.ProductModel  
@@ -66,7 +65,7 @@ where ProductModelID=19
  若要提高查询可读性，可以使用 WITH XMLNAMESPACES 声明命名空间，而不是使用 `declare namespace` 在查询 prolog 中声明前缀并进行命名空间绑定。  
   
 ```  
-WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
+WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
   
 SELECT CatalogDescription.query('  
          /PD:ProductDescription/PD:Summary   
@@ -84,7 +83,7 @@ where ProductModelID=19
   
 ```  
 SELECT CatalogDescription.query('  
-     declare default element namespace  "http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+     declare default element namespace  "https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
         /ProductDescription/Summary   
     ') as Result  
 FROM  Production.ProductModel  
@@ -94,7 +93,7 @@ WHERE ProductModelID=19
  可以使用 WITH XMLNAMESPACES 来声明默认命名空间：  
   
 ```  
-WITH XMLNAMESPACES (DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
+WITH XMLNAMESPACES (DEFAULT 'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription')  
 SELECT CatalogDescription.query('  
         /ProductDescription/Summary   
     ') as Result  

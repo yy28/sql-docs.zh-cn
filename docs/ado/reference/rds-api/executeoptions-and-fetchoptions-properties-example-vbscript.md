@@ -16,16 +16,16 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3cc7b120f41613a5797105695c415eea85d08fdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136e42463049a557098224f0ce7be19da0399ae0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695205"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602038"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions 和 FetchOptions 属性示例 (VBScript)
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
  下面的代码演示如何设置[ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)并[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)在设计时属性。 如果未设置，保留**ExecuteOptions**默认值为**adcExecSync**。 此设置指示，当**rds。刷新**方法调用时，它将在当前调用线程上执行 — 也就是说，以同步方式。 剪切并粘贴到记事本或其他文本编辑器的以下代码，然后将其保存为**ExecuteOptionsDesignVBS.asp**。  
   
@@ -72,7 +72,7 @@ body {
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDS height=1 width=1>  
 <PARAM NAME="SQL" VALUE="SELECT FirstName, LastName FROM Employees ORDER BY LastName">  
 <PARAM NAME="Connect" VALUE="Provider='sqloledb';Data Source=<%=Request.ServerVariables("SERVER_NAME")%>;Integrated Security='SSPI';Initial Catalog='Northwind'">  
-<PARAM NAME="Server" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+<PARAM NAME="Server" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 <PARAM NAME="ExecuteOptions" VALUE="1">  
 <PARAM NAME="FetchOptions" VALUE="3">  
 </OBJECT>  
@@ -139,7 +139,7 @@ body {
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDS height=1 width=1>  
 <PARAM NAME="SQL" VALUE="SELECT FirstName, LastName FROM Employees ORDER BY LastName">  
 <PARAM NAME="Connect" VALUE="Provider='sqloledb';Data Source=<%=Request.ServerVariables("SERVER_NAME")%>;Integrated Security='SSPI';Initial Catalog='Northwind'">  
-<PARAM NAME="Server" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+<PARAM NAME="Server" VALUE="https://<%=Request.ServerVariables("SERVER_NAME")%>">  
 </OBJECT>  
   
 <TABLE DATASRC=#RDS>  

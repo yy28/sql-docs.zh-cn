@@ -1,5 +1,5 @@
 ---
-title: CREATE ACTION 语句 (MDX) |Microsoft 文档
+title: CREATE ACTION 语句 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741286"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703085"
 ---
-# <a name="mdx-data-definition---create-action"></a>MDX 数据定义的创建操作
+# <a name="mdx-data-definition---create-action"></a>MDX 数据定义 - CREATE ACTION
 
 
   创建可以与多维数据集、维度、层次结构或从属对象关联的操作。  
@@ -72,24 +72,24 @@ FOR
  *String_Expression*  
  一个有效的字符串表达式。  
   
-## <a name="remarks"></a>Remarks  
- 客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免这些情况下，使用**安全选项**属性。 有关详细信息，请参阅“Safety Options 属性”。  
+## <a name="remarks"></a>备注  
+ 客户端应用程序可能会创建和执行不安全的操作，也可能会使用不安全的函数。 若要避免这种情况下，使用**安全选项**属性。 有关详细信息，请参阅“Safety Options 属性”。  
   
 > [!NOTE]  
->  包括此语句是为了向后兼容。 操作的新手[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，也不支持钻取或报表操作，如。  
+>  包括此语句是为了向后兼容。 新增操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，不支持钻取或报表操作，例如。  
   
 ## <a name="action-types"></a>操作类型  
- 下表介绍中的可用操作的不同类型[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ 下表介绍了不同类型中提供的操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 |操作类型|Description|  
 |-----------------|-----------------|  
-|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意： 如果此操作不以开头`http://`或`https://`，该操作将向浏览器不可用除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**。|  
+|**URL**|返回的操作字符串是一个 URL，应使用 Internet 浏览器打开此 URL。<br /><br /> 注意： 如果此操作不会以`https://`或`https://`，该操作将在浏览器对不可用除非**SafetyOptions**设置为**DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|返回的操作字符串是一个 HTML 脚本。 应将该字符串保存到文件中，并使用 Internet 浏览器来呈现该文件。 在这种情况下，整个脚本会在所生成的 HTML 中运行。|  
-|**语句**|返回的操作字符串是需要通过设置执行的语句**ICommand::SetText**命令对象与字符串和调用的方法**ICommand::Execute**方法。 如果该命令失败，会返回一条错误。|  
-|**数据集**|返回的操作字符串是需要通过设置运行一个 MDX 语句**ICommand::SetText**命令对象与字符串和调用的方法**ICommand::Execute**方法。 所请求的接口 ID (IID) 应为**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
-|**行集**|类似于**数据集**，但而不是请求的 IID **IDataset**，客户端应用程序应该要求的 IID **IRowset**。 如果创建了行集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的行集。|  
+|**语句**|返回的操作字符串是需要通过设置执行的语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 如果该命令失败，会返回一条错误。|  
+|**数据集**|返回的操作字符串是需要通过设置运行一个 MDX 语句**ICommand::SetText**为字符串并调用命令对象的方法**icommand:: Execute**方法。 所请求的接口 ID (IID) 应该**IDataset**。 如果创建了数据集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的数据集。|  
+|**行集**|类似于**数据集**，而不是请求的 IID 是，但**IDataset**，客户端应用程序应寻求的 IID **IRowset**。 如果创建了行集，就说明命令成功了。 客户端应用程序应当允许用户浏览返回的行集。|  
 |**命令行**|客户端应用程序应执行该操作字符串。 该字符串是一个命令行。|  
-|**专有**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 专有操作不返回到客户端应用程序，除非客户端应用程序显式要求通过上设置适当的限制对它们进行**APPLICATION_NAME**。|  
+|**专有**|客户端应用程序不应显示和执行该操作，除非该应用程序针对该操作进行了特殊的自定义设置。 专有操作不返回到客户端应用程序，除非客户端应用程序明确要求这些通过设置适当的限制**APPLICATION_NAME**。|  
   
 ## <a name="invocation-types"></a>调用类型  
  下表介绍了可在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中执行的各种调用。 调用类型仅用于帮助客户端应用程序来确定何时调用操作， 并不真正决定操作的调用行为。  
@@ -119,7 +119,7 @@ FOR
  操作仅适用于特定的单元。  
   
  集作用域  
- 此操作仅适用于某个集。 该名称， **ActionParameterSet**，已保留供在操作的表达式内部应用程序。  
+ 此操作仅适用于某个集。 该名称， **ActionParameterSet**，是保留供操作的表达式内的应用程序。  
   
 ## <a name="see-also"></a>请参阅  
  [MDX 数据定义语句&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  

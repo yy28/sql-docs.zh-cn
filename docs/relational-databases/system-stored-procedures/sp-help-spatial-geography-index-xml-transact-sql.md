@@ -18,12 +18,12 @@ ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7126ceac047535ab3958942a5f30543a97ebd253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed44f70a49c1cf221a9ef74b19030512273b1480
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659955"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671536"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
 ## <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>请参阅  
- [空间索引存储过程](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空间索引存储过程](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [空间数据 (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)   

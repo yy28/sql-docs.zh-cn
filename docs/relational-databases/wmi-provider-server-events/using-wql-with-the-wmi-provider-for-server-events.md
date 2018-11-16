@@ -17,12 +17,12 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dde7806e0485bc46ca9b9869e8856836006b9032
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 433e23cdd4805da701d4eaf1104d4f534cdb3a6d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673386"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>将 WQL 与 WMI Provider for Server Events 结合使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅[事件通知 （数据库引擎）](http://technet.microsoft.com/library/ms182602.aspx)。  
+ WQL 查询 (`FROM`) 的 `DDL_DATABASE_LEVEL_EVENTS` 子句中的参数可以为可对其创建事件通知的任何有效事件。 `SELECT` 和 `WHERE` 子句中的参数可以指定与某一事件或其父事件关联的任何事件属性。 有关有效事件和事件属性的列表，请参阅[事件通知 （数据库引擎）](https://technet.microsoft.com/library/ms182602.aspx)。  
   
  WMI Provider for Server Events 显式支持以下 WQL 语法。 也可以指定附加 WQL 语法，但该语法并非特定于此提供程序，并且由 WMI 主机服务进行分析。 有关 WMI 查询语言的详细信息，请参阅 Microsoft Developer Network (MSDN) 上的 WQL 文档。  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  指定对与事件关联的所有属性进行查询。  
   
  *event_type*  
- 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅[WMI Provider for Server Events 类和属性](http://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于相同*event_type* | *event_group* ，可以手动创建事件通知时指定通过使用 CREATE EVENT NOTIFICATION。 示例*事件类型*包括 CREATE_TABLE、 LOCK_DEADLOCK、 DDL_USER_EVENTS 和 TRC_DATABASE。  
+ 可针对其创建事件通知的任何事件。 有关可用事件的列表，请参阅[WMI Provider for Server Events 类和属性](https://technet.microsoft.com/library/ms186449.aspx)。 请注意，*事件类型*名称对应于相同*event_type* | *event_group* ，可以手动创建事件通知时指定通过使用 CREATE EVENT NOTIFICATION。 示例*事件类型*包括 CREATE_TABLE、 LOCK_DEADLOCK、 DDL_USER_EVENTS 和 TRC_DATABASE。  
   
 > [!NOTE]  
 >  执行 DDL 式操作的某些系统存储过程也可以激发事件通知。 测试您的事件通知以确定它们是否响应运行的系统存储过程。 例如，CREATE TYPE 语句和**sp_addtype**存储的过程都将激发针对 CREATE_TYPE 事件创建事件通知。 但是， **sp_rename**存储的过程不会激发任何事件通知。 有关详细信息，请参阅[DDL 事件](../../relational-databases/triggers/ddl-events.md)。  
@@ -109,7 +109,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  如果`SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'`这些都是在中指定`WHERE`子句中，尝试注册直接在对象上的事件通知`Z`架构中`X`。 如果客户端拥有权限，则注册成功。 请注意，目前，对象级事件支持仅在队列上且仅针对 QUEUE_ACTIVATION *event_type*。  
   
- 请注意，并非所有事件均可在任何特定的范围内进行查询。 例如，针对跟踪事件（例如 Lock_Deadlock）或跟踪事件组（例如 TRC_LOCKS）的 WQL 查询仅可在服务器级别进行注册。 与此类似，CREATE_ENDPOINT 事件和 DDL_ENDPOINT_EVENTS 事件组也只能在服务器级别进行注册。 用于注册事件的适当范围的详细信息，请参阅[设计事件通知](http://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)。 尝试注册 WQL 查询它的*event_type*仅可以注册在服务器级别建立时将始终在服务器级别。 如果 WMI 客户端拥有权限，则注册成功。 否则，将向客户端返回一个错误。 不过，在某些情况下，仍可根据与服务器级别事件对应的属性将 WHERE 子句用作服务器级别事件的筛选器。 例如，许多跟踪事件具有**DatabaseName**可以用作筛选器的 WHERE 子句中的属性。  
+ 请注意，并非所有事件均可在任何特定的范围内进行查询。 例如，针对跟踪事件（例如 Lock_Deadlock）或跟踪事件组（例如 TRC_LOCKS）的 WQL 查询仅可在服务器级别进行注册。 与此类似，CREATE_ENDPOINT 事件和 DDL_ENDPOINT_EVENTS 事件组也只能在服务器级别进行注册。 用于注册事件的适当范围的详细信息，请参阅[设计事件通知](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx)。 尝试注册 WQL 查询它的*event_type*仅可以注册在服务器级别建立时将始终在服务器级别。 如果 WMI 客户端拥有权限，则注册成功。 否则，将向客户端返回一个错误。 不过，在某些情况下，仍可根据与服务器级别事件对应的属性将 WHERE 子句用作服务器级别事件的筛选器。 例如，许多跟踪事件具有**DatabaseName**可以用作筛选器的 WHERE 子句中的属性。  
   
  在创建服务器范围事件通知**主**数据库，并且可以通过查询元数据[sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)目录视图。  
   
@@ -142,7 +142,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>请参阅  
- [WMI Provider for Server Events 的概念](http://technet.microsoft.com/library/ms180560.aspx)   
- [事件通知 （数据库引擎）](http://technet.microsoft.com/library/ms182602.aspx)  
+ [WMI Provider for Server Events 的概念](https://technet.microsoft.com/library/ms180560.aspx)   
+ [事件通知 （数据库引擎）](https://technet.microsoft.com/library/ms182602.aspx)  
   
   

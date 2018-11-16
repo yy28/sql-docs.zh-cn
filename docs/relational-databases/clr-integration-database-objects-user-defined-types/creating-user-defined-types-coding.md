@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0647d1e0f7dd082b3ce3aab668d8af8d5673efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661557"
 ---
 # <a name="creating-user-defined-types---coding"></a>创建用户定义类型 - 编码
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -621,7 +621,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  填充的目的是为了确保区域性与货币值完全分开，以便在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 代码中将一个 UDT 与另一个 UDT 进行比较时，区域性字节与区域性字节相比较，货币字节值与货币字节值相比较。  
   
- 有关完整代码清单**货币**UDT，按照中示例的说明安装 CLR [SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
+ 有关完整代码清单**货币**UDT，按照中示例的说明安装 CLR [SQL Server 数据库引擎示例](https://msftengprodsamples.codeplex.com/)。  
   
 ### <a name="currency-attributes"></a>Currency 属性  
  **货币**UDT 定义具有以下属性。  
@@ -745,7 +745,7 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- 有关完整代码清单**货币**UDT，请参阅[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
+ 有关完整代码清单**货币**UDT，请参阅[SQL Server 数据库引擎示例](https://msftengprodsamples.codeplex.com/)。  
   
 ## <a name="see-also"></a>请参阅  
  [创建用户定义类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cffb25700ccd160f62cc7ad54164bf5fe168225a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 017f301d9888ddd4f90d70e7d993faf840640a66
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832005"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670686"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft sql 的 wide World Importers 示例数据库
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services 用于从多维数据模型中的数据中创建分
 
 此处所述的示例数据库和示例代码的许可证： [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-示例数据库中包含已从 data.gov 和自然 EarthData 加载的公共数据。 使用条款位于以下位置： [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+示例数据库中包含已从 data.gov 和自然 EarthData 加载的公共数据。 使用条款位于以下位置： [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

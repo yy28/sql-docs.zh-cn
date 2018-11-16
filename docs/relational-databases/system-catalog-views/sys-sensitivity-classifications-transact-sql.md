@@ -23,12 +23,12 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 53f99419e70b7ebd97f19cc7245b226b20a7f7a4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 0fb7b7719ce53fe4f20863cb3f44c9483bc6b472
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808633"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660346"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "43808633"
 |**information_type_id**|**sysname**|可以使用通过信息保护系统等 Azure 信息保护 (AIP) 的信息类型与关联的 ID|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
 
 - 此视图提供可见性数据库分类状态。 它可以用于管理数据库分类，以及用于生成报告。
 - 支持的数据库列的当前仅分类。 因此：
@@ -79,4 +79,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICTION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[SQL 信息保护入门](http://aka.ms/sqlip)
+[SQL 信息保护入门](https://aka.ms/sqlip)

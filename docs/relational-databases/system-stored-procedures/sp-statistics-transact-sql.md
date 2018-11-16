@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72e2c9f79e2029e26275be46e200d476dbf621a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b365ad16ce7f96ba3e0dd14f278b1ce4db60a32
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704545"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657129"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  哈希索引类型接受完全匹配或范围搜索，但模式匹配搜索不使用该索引。  
   
- **sp_statistics**等效于**SQLStatistics** ODBC 中。 返回的结果按排序**NON_UNIQUE**，**类型**， **INDEX_QUALIFIER**， **INDEX_NAME**，和**SEQ_IN_索引**。 有关详细信息，请参阅[ODBC API 参考](http://go.microsoft.com/fwlink/?LinkId=68323)。  
+ **sp_statistics**等效于**SQLStatistics** ODBC 中。 返回的结果按排序**NON_UNIQUE**，**类型**， **INDEX_QUALIFIER**， **INDEX_NAME**，和**SEQ_IN_索引**。 有关详细信息，请参阅[ODBC API 参考](https://go.microsoft.com/fwlink/?LinkId=68323)。  
   
 ## <a name="permissions"></a>Permissions  
  需要对架构的 SELECT 权限。  

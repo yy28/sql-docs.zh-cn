@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7871870b6fd708b4f06703754831a698002bb2f1
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 17d0aa51d43ad9592a075ae91be88c857035b15f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51659926"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 中的 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,6 +68,6 @@ SQL Server 2016 仅为 R。 下表介绍了 SQL Server 2016 中的功能。
 + [SQL Server 的 R 包管理](install-additional-r-packages-on-sql-server.md)
 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
  [安装 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)

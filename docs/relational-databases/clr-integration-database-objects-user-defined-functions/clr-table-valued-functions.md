@@ -18,12 +18,12 @@ ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93367529fddf407d0ce133785f850b974ee7847d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ed37d62e887bcb9820496a66d65108cb69fbe10
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682815"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669836"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 表值函数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>示例：返回 SQL Server 查询的结果  
- 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 请参阅[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息。  
+ 以下示例演示查询 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据库的表值函数。 本示例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 中的 AdventureWorks 轻型数据库。 请参阅[ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843)有关下载 AdventureWorks 的详细信息。  
   
  将源代码文件命名为 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

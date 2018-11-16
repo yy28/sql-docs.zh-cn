@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 407af081f09fb773a8a3a4ee7ccc7e3c42ee3229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd0997a7d675c0c7630b730d6ba7514070ab8f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655935"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665936"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status（Azure SQL 数据库）
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,6 @@ ms.locfileid: "47655935"
   
 ## <a name="see-also"></a>请参阅  
  [sys.dm_database_copies &#40;Azure SQL 数据库&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [活动异地复制存储过程&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [活动异地复制存储过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

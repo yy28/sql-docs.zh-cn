@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 helpviewer_keywords:
 - XQuery
@@ -18,19 +17,19 @@ ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6125bdcff27bc79d8eb850e7baafdd872342adf6
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 3e1f2196b8ba58af2f13dd1b022d62655f2b0aab
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119523"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672256"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Xquery 语言参考 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] 支持用于查询的 XQuery 语言的子集**xml**数据类型。 此 XQuery 实现符合 2004 年 7 月的 XQuery 工作草案。 该语言正在由 World Wide Web 联合会 (W3C) 开发，所有主要数据库供应商和 Microsoft 也参与此开发。 由于 W3C 规范在成为 W3C 建议之前还可能进行修订，因此此实现可能与最终的建议有所不同。 本主题概要介绍了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中所支持的 XQuery 子集的语义和语法。  
   
- 有关详细信息，请参阅[W3C XQuery 1.0 语言规范](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+ 有关详细信息，请参阅[W3C XQuery 1.0 语言规范](https://go.microsoft.com/fwlink/?LinkId=48846)。  
   
  XQuery 是一种可以查询结构化或半结构化 XML 数据的语言。 与**xml**数据类型中提供的支持[!INCLUDE[ssDE](../includes/ssde-md.md)]，文档可以存储在数据库，然后通过使用 XQuery 查询。  
   
@@ -47,7 +46,7 @@ SELECT @x.query('/ROOT/a')
  在以下示例中，针对的 Instructions 列指定了查询**xml** AdventureWorks 数据库中 ProductModel 表中的类型。  
   
 ```sql
-SELECT Instructions.query('declare namespace AWMI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
+SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
     /AWMI:root/AWMI:Location[@LocationID=10]  
 ') as Result   
 FROM  Production.ProductModel  
@@ -67,7 +66,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  本部分的组织结构基于 World Wide Web 联合会 (W3C) XQuery 工作草案规范。 本部分中的某些关系图是从该规范得到的。 本部分将 Microsoft XQuery 实现与 W3C 规范进行比较，介绍 Microsoft XQuery 与 W3C 的不同之处并指明不支持的 W3C 功能。 W3C 规范位于[ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846)。  
+>  本部分的组织结构基于 World Wide Web 联合会 (W3C) XQuery 工作草案规范。 本部分中的某些关系图是从该规范得到的。 本部分将 Microsoft XQuery 实现与 W3C 规范进行比较，介绍 Microsoft XQuery 与 W3C 的不同之处并指明不支持的 W3C 功能。 W3C 规范位于[ https://www.w3.org/TR/2004/WD-xquery-20040723 ](https://go.microsoft.com/fwlink/?LinkId=48846)。  
   
 ## <a name="in-this-section"></a>本节内容  
   

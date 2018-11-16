@@ -1,5 +1,5 @@
 ---
-title: 创建简单的模拟 （SQL 和 R 深入） |Microsoft 文档
+title: 创建简单模拟 （SQL 和 R 的深入探讨） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,25 +7,25 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7c93d91324233b05541c09e037f5043f2d9e376f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b0db5fdfd177f1303432659f7a96b0fbf111c000
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202879"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698235"
 ---
-# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>创建简单的模拟 （SQL 和 R 深入）
+# <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>创建简单模拟 （SQL 和 R 的深入探讨）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是在数据科学深入教程中，如何使用中的最后一步[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
+这篇文章中有关如何使用数据科学的深入教程是最后一步[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)与 SQL Server。
 
-到目前为止您一直使用 R 函数旨在专门用于转移数据之间[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和本地计算上下文。 但是，假设编写了自己的自定义 R 函数，并且想要在服务器上下文中运行它呢？
+到目前为止您一直使用 R 函数设计专门针对移动之间的数据[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和本地计算上下文。 但是，假设编写了自己的自定义 R 函数，并且想要在服务器上下文中运行它呢？
 
-通过使用 [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 函数，可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机的上下文中调用任意函数。 你还可以使用**rxExec**以显式将工作分摊分布在一台服务器中的核心。
+通过使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rxExec [函数，可以在](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) 计算机的上下文中调用任意函数。 此外可以使用**rxExec**将工作显式分布在一台服务器中的内核。
 
-在本课程中，你可以使用远程服务器来创建简单的模拟。 模拟不需要任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据；示例仅演示如何设计自定义函数，然后使用 rxExec 函数调用该函数。
+在本课程中，使用远程服务器来创建简单模拟。 模拟不需要任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 数据；示例仅演示如何设计自定义函数，然后使用 rxExec 函数调用该函数。
 
-有关使用的更复杂示例**rxExec**，请参阅此文章：[粗粒度使用并行 foreach 和 rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+有关使用的更复杂示例**rxExec**，请参阅以下文章：[使用 foreach 和 rxExec 粗粒度并行度](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
 ## <a name="create-the-custom-function"></a>创建自定义函数
 
@@ -65,7 +65,7 @@ ms.locfileid: "31202879"
     }
     ```
   
-2.  若要模拟掷单个游戏，运行该函数。
+2.  若要模拟单个掷骰子游戏，运行该函数。
   
     ```R
     rollDice()
@@ -73,13 +73,13 @@ ms.locfileid: "31202879"
   
     你是胜了还是败了？
   
-现在让我们看一下如何可以使用**rxExec**多次运行该函数，以创建模拟，可帮助确定一种成功的概率。
+现在让我们看一下如何可以使用**rxExec**多次运行该函数，以创建可帮助确定获胜概率的模拟。
 
 ## <a name="create-the-simulation"></a>创建模拟
 
-若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上下文中运行任意函数，可以调用 rxExec 函数。 尽管**rxExec**还在节点之间并行支持分布式的函数执行或核心数在服务器上下文中，此处其 SQL Server 计算机上运行您的自定义函数。
+若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 计算机上下文中运行任意函数，可以调用 rxExec 函数。 尽管**rxExec**还在节点之间并行支持分布式的执行函数或核心数在服务器上下文中，此处其 SQL Server 计算机上运行您的自定义函数。
 
-1. 自定义函数作为自变量调用**rxExec**连同修改模拟其他参数。
+1. 自定义函数作为参数调用**rxExec**一起修改模拟其他参数。
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -94,7 +94,7 @@ ms.locfileid: "31202879"
   
     然后可以转到下一步，获得输赢记录的汇总。
   
-3. 将返回的列表转换为使用 R 的向量`unlist`函数，并汇总使用对结果`table`函数。
+3. 将返回的列表转换为使用 R 的一个向量`unlist`函数，并汇总结果使用`table`函数。
   
     ```R
     table(unlist(sqlServerExec))
@@ -102,7 +102,7 @@ ms.locfileid: "31202879"
   
     结果应如下所示：
   
-     *丢失 Win* *12 8*
+     *败胜* *12 8*
 
 ## <a name="conclusions"></a>结论
 
@@ -115,17 +115,17 @@ ms.locfileid: "31202879"
 -   在工作站和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务器之间传递模型、数据和绘图
   
 
-如果你想要使用这些方法使用 1000 万个观测值的更大的数据集进行试验，都可以从 Revolution analytics 网站数据文件：[索引的数据集](http://packages.revolutionanalytics.com/datasets)
+如果你想要体验这些技术使用 10 万个观测值较大数据集，都可通过 Revolution analytics 网站数据文件：[索引的数据集](https://packages.revolutionanalytics.com/datasets)
 
-若要重新使用较大的数据文件使用本演练，下载数据，然后对每个数据源，如下所示修改：
+若要重新使用较大的数据文件使用本演练中，下载数据，并按如下所示修改的每个数据源：
 
-1. 修改变量`ccFraudCsv`和`ccScoreCsv`使其指向新的数据文件
+1. 修改变量`ccFraudCsv`和`ccScoreCsv`以指向新的数据文件
 2. 更改中引用的表的名称*sqlFraudTable*到 `ccFraud10`
 3. 更改中引用的表的名称*sqlScoreTable*到 `ccFraudScore10`
 
 ## <a name="additional-samples"></a>其他示例
 
-现在，您已掌握了计算上下文和 RevoScaler 函数来传递和转换数据的使用，请查看以下教程：
+既然您已经掌握了计算上下文和 RevoScaler 函数来传递和转换数据的使用，请参阅以下教程：
 
 [机器学习服务的 R 教程](machine-learning-services-tutorials.md)
 ## <a name="previous-step"></a>上一步

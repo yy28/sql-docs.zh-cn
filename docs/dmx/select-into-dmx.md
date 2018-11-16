@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040415"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602597"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ FROM <existing model>
  *现有模型*  
  要复制的现有模型的名称。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  如果现有模型已定型，则此语句执行时将自动处理新模型。 否则，新模型将保持未处理状态。  
   
  **SELECT INTO**仅当现有模型的结构与新模型的算法兼容时，才可执行语句。 因此，此语句在快速创建并测试基于同一算法的模型时最为有用。 如果更改算法类型，则新算法必须支持现有模型中所有列的数据类型，否则处理模型时可能会出错。  
@@ -54,7 +54,7 @@ FROM <existing model>
  **WITH DRILLTHROUGH**子句可以对新的挖掘模型钻取功能。 只有在创建模型时，才能启用钻取功能。  
   
 ## <a name="example-1-altering-the-parameters-of-the-model"></a>示例 1：更改模型参数  
- 下面的示例创建新的挖掘模型基于现有挖掘模型， `TM_Clustering`，这在创建[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
+ 下面的示例创建新的挖掘模型基于现有挖掘模型， `TM_Clustering`，这在创建[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 在新模型中，对 CLUSTER_COUNT 参数进行了修改；因而，新模型中的最大分类数为 5。 而现有模型使用的是默认值 10。  
   
 ```  
 SELECT * INTO [New_Clustering]  

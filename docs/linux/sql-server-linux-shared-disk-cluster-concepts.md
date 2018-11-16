@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: bc689b96be7fbfcf348ec6d55e27abcceb2024d6
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 668bf72f2673b123ce5a238dbbf5cd7af43604d4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032664"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51676526"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>故障转移群集实例-Linux 上的 SQL Server
 
@@ -35,7 +35,7 @@ ms.locfileid: "51032664"
 
     有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
-基于 RHEL HA 加载项和 SUSE HAE [Pacemaker](http://clusterlabs.org/)。
+基于 RHEL HA 加载项和 SUSE HAE [Pacemaker](https://clusterlabs.org/)。
 
 如以下关系图所示，存储将呈现给两个服务器。 群集组件 - Corosync 和 Pacemaker - 协调通信和资源管理。 一台服务器具有到存储资源和 SQL Server 的活动连接。 当 Pacemaker 检测到故障时，群集组件负责管理将资源移到另一个节点。  
 

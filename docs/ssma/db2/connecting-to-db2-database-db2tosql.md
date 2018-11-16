@@ -10,12 +10,12 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c280b28082a1f85074b129d7a659333d7323d879
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735545"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51668366"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>连接到 DB2 数据库 (DB2ToSQL)
 将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须连接到你想要迁移的 DB2 数据库。 连接时，SSMA 中获取所有的 DB2 架构有关的元数据，然后在 DB2 元数据资源管理器窗格中显示。 SSMA 存储信息，数据库服务器中，但不存储密码。  
@@ -107,7 +107,7 @@ DB2 数据库的元数据不会自动刷新。 DB2 的元数据资源管理器�
   
 ## <a name="next-step"></a>下一步  
   
--   迁移过程的下一步是为[连接到 SQL Server](http://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。  
+-   迁移过程的下一步是为[连接到 SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移的 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

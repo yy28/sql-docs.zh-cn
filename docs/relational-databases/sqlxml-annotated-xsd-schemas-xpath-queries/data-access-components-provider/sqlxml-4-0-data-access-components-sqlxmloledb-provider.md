@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95c8e17da28a97c6a640f993f16fadea506c1970
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 868198cc8efed50b18acee169c345781345d4964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652555"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655947"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 数据访问组件 - SQLXMLOLEDB 提供程序
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47652555"
      通过新的数据访问技术来公开 SQLXML 4.0 功能，该技术扩展和充实了 Microsoft 数据访问组件 (MDAC) 的当前版本。 SQLNCLI11 完全支持在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引入的功能。 有关详细信息，请参阅 [SQL Server Native Client 编程](../../../relational-databases/native-client/sql-server-native-client-programming.md)。  
   
 ## <a name="in-this-section"></a>本节内容  
- [Sqlxmloledb 访问接口&#40;SQLXML 4.0&#41;](http://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [Sqlxmloledb 访问接口&#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  说明 SQLXMLOLEDB 访问接口，并说明了其用法。  
   
   

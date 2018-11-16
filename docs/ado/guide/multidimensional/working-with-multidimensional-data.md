@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7721018d887fdb4c24293c4076f384167f38a55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1f29a3037cafdddc14973f77d7bb3d8c52f296
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695075"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350264"
 ---
 # <a name="working-with-multidimensional-data"></a>使用多维数据
 一个*单元集*是多维数据的查询的结果。 它包含的轴，通常不超过四个轴，通常只有两个或三个集合。 *轴*是来自一个或多个维度的成员的集合，用于查找或筛选多维数据集中的特定值。  
@@ -64,7 +64,7 @@ ms.locfileid: "47695075"
   
  每个坐标表示为具有两个成员的位置 — 一个来自销售人员维度，地域维度中的另一个：  
   
-```  
+```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
 (Valentine, Japan), (Nash, Seattle), (Nash, Boston), (Nash, USA_North),  
 (Nash, Japan)  
@@ -72,7 +72,7 @@ ms.locfileid: "47695075"
   
  Y 轴具有只有一个维度，其中包含以下 8 个位置：  
   
-```  
+```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   

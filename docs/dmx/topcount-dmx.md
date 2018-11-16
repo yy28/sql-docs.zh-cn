@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 182c83cf6b2850941c2f21924395c0ebe160db01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e67e1e408186e78f00c4b54399fb2e87ac673541
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989845"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601737"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>返回类型  
  \<表表达式 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>备注  
  通过提供的值\<排名表达式 > 自变量确定按排名降序排列的排名中提供的行\<表表达式 > 参数，并在中指定的最顶层的行数\<计数 > 返回自变量。  
   
  TopCount 函数最初引入是为了实现关联预测，并在一般情况下，生成与包含的语句相同的结果**选择前**并**ORDER BY**子句。 如果您使用，则将获得更好的关联预测的性能**预测 (DMX)** 函数，它支持指定要返回的预测数。  
@@ -42,7 +42,7 @@ TopCount(<table expression>, <rank expression>, <count>)
  但是，有些情况下您可能仍需要使用 TopCount。 例如，不支持 DMX**顶部**嵌套 select 语句中的限定符。 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函数也不支持添加**顶部**。  
   
 ## <a name="examples"></a>示例  
- 下面的示例是针对使用生成的关联模型的预测查询[数据挖掘基础教程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回相同的结果，但第一个示例使用 TopCount，且第二个示例使用预测函数。  
+ 下面的示例是针对使用生成的关联模型的预测查询[数据挖掘基础教程](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 查询返回相同的结果，但第一个示例使用 TopCount，且第二个示例使用预测函数。  
   
  若要了解 TopCount 的工作方式，可能会先执行返回嵌套的表的预测查询很有帮助。  
   

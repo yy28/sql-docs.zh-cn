@@ -10,12 +10,12 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bb43fabb2592b6d82d3fb6d14f516bfdd0029bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775097"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671376"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>处理 SSMA 项目 (DB2ToSQL)
 将 DB2 数据库迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，首先创建 SSMA 项目。 项目是一个文件包含以下信息：  
@@ -116,7 +116,7 @@ SSMA 进行转换和加载数据库对象、 迁移数据，和与 DB2 同步 SS
 3.  若要重新连接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然后在**文件**菜单中，单击**重新连接到 SQL Server**。  
   
 ## <a name="next-step"></a>下一步  
-迁移过程中的下一步是[连接到 DB2 数据库](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
+迁移过程中的下一步是[连接到 DB2 数据库](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  
   
 ## <a name="see-also"></a>请参阅  
 [迁移的 DB2 数据库移到 SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  

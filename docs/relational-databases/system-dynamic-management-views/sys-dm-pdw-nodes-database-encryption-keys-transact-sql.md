@@ -13,17 +13,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 159643e38e7911f1a5403ae7aa1f5b9d88657127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0ddcf3025bba54a151a740a1ef0835b2ccfe69
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667187"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys**提供每个节点的此信息。 有关数据库加密的详细信息，请参阅[透明数据加密 (SQL Server PDW)](http://msdn.microsoft.com/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
+  返回与数据库加密状态以及相关联数据库加密密钥有关的信息。 **sys.dm_pdw_nodes_database_encryption_keys**提供每个节点的此信息。 有关数据库加密的详细信息，请参阅[透明数据加密 (SQL Server PDW)](https://msdn.microsoft.com/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

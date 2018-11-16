@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4868aa775ac2958cc0e034196a0e911b58e78a34
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 0b79db4806f22c7d25af4f292fedddb46b40d1e7
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696936"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>在分析平台系统中配置 Windows Server Update Services (WSUS)
 这些说明将引导你完成使用 Windows Server Update Services (WSUS) 配置向导以配置 WSUS 以分析平台系统的步骤。 你需要先将软件更新应用到该设备配置 WSUS。 VMM 虚拟机的设备上已安装 WSUS。  
   
-有关将 WSUS 配置的详细信息，请参阅[WSUS 循序渐进安装指南](http://go.microsoft.com/fwlink/?LinkId=202417)WSUS 网站上。 后配置 WSUS，请参阅[下载和应用 Microsoft 更新&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)若要启动的更新。  
+有关将 WSUS 配置的详细信息，请参阅[WSUS 循序渐进安装指南](https://go.microsoft.com/fwlink/?LinkId=202417)WSUS 网站上。 后配置 WSUS，请参阅[下载和应用 Microsoft 更新&#40;Analytics Platform System&#41; ](download-and-apply-microsoft-updates.md)若要启动的更新。  
   
 > [!WARNING]  
 > 如果在此配置过程中遇到任何错误，停止并联系支持人员获取帮助。 不要忽略错误或接收到错误后继续在进程中。  
@@ -79,7 +79,7 @@ ms.locfileid: "51018522"
   
 4.  选择上游服务器。  
   
-    上**选择上游服务器**页上的 WSUS 配置向导中，将选择的虚拟机管理节点上的 WSUS 将如何连接到上游服务器以获取软件更新。 两种选择是要同步的上游服务器[Microsoft Update](http://go.microsoft.com/fwlink/?LinkId=133349)或另一台 Windows Server Update Services 服务器与同步更新。  
+    上**选择上游服务器**页上的 WSUS 配置向导中，将选择的虚拟机管理节点上的 WSUS 将如何连接到上游服务器以获取软件更新。 两种选择是要同步的上游服务器[Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=133349)或另一台 Windows Server Update Services 服务器与同步更新。  
   
     #### <a name="to-update-by-using-microsoft-update"></a>通过使用 Microsoft 更新来更新  
   

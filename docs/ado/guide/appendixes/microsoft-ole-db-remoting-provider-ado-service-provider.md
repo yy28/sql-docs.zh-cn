@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,23 +15,23 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0c58d6c90b67369f969a37cc2ad7e03cc6cad82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65ed1ab997566c44aa67da44c8d14418304eecd0
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624605"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600657"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB 远程处理提供程序概述
 Microsoft OLE DB 远程处理提供程序使客户端计算机上的本地用户来调用远程计算机上的数据提供程序。 指定远程计算机的数据提供程序参数，就像您像在远程计算机上的本地用户。 然后指定远程处理提供程序用于访问远程计算机的参数。 然后，就像本地用户，可以访问远程计算机。
 
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。
 
 ## <a name="provider-keyword"></a>提供程序关键字
  若要调用 OLE DB 远程处理提供程序，请连接字符串中指定以下关键字和值。 （请注意在提供程序名称中的空白空间。）
 
-```
+```vb
 "Provider=MS Remote"
 ```
 
@@ -58,14 +58,14 @@ Microsoft OLE DB 远程处理提供程序使客户端计算机上的本地用户
 
  此外可以通过指定其名称为连接字符串中的关键字设置可写的动态属性。 例如，设置**Internet 超时**为通过指定五秒动态属性：
 
-```
+```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MS Remote;Internet Timeout=5000"
 ```
 
  您也可设置或通过指定其名称为索引来检索动态属性**属性**属性。 下面的示例演示如何获取和打印的当前值**Internet 超时**动态属性，然后将设置新值：
 
-```
+```vb
 Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
@@ -80,16 +80,16 @@ cn.Properties("Internet Timeout") = 5000
 ## <a name="example"></a>示例
  此示例执行一个查询在**作者**表的**Pubs**名为的服务器上的数据库*YourServer*。 中提供了远程数据源和远程服务器的名称[开放](../../../ado/reference/ado-api/open-method-ado-connection.md)方法[连接](../../../ado/reference/ado-api/connection-object-ado.md)对象和 SQL 查询中指定[打开](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)对象。 一个**记录集**返回、 编辑和用于更新数据源对象。
 
-```
+```vb
 Dim rs as New ADODB.Recordset
 Dim cn as New ADODB.Connection
-cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
-         "Remote Server=http://YourServer"
+cn.Open  "Provider=MS Remote;Data Source=pubs;" & _
+         "Remote Server=https://YourServer"
 rs.Open "SELECT * FROM authors", cn
-...                'Edit the recordset
-rs.UpdateBatch     'Equivalent of RDS SubmitChanges
+...                'Edit the recordset
+rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
 ## <a name="see-also"></a>请参阅
- [OLE DB 远程处理提供程序的概述](http://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)
+ [OLE DB 远程处理提供程序的概述](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

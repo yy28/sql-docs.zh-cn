@@ -18,12 +18,12 @@ ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d97c25c81b2a44cce759ee47990de76e516dcec0
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 57a467de4cfe05232a73fd42a40b401c71c8c6fa
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675586"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled 属性（ServerNetworkProtocolIpAddress 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,6 @@ object.Enabled [= value]
  一个布尔值，指定是否启用了 IP 地址： **，则返回 true**如果启用了 IP 地址，或**false**如果 IP 地址处于禁用状态。  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -23,12 +23,12 @@ ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 223aa817298fc21dedbbb763b3f775feaa4e2807
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f99d182691ed08ebf7a3e8e71572068cd08848f2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673436"
 ---
 # <a name="data-access-from-clr-database-objects"></a>从 CLR 数据库对象进行数据访问
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47812915"
  [CLR 集成和事务](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  介绍 System.Transactions 命名空间中提供的新事务框架如何与 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 集成相集成。  
   
- [从 CLR 数据库对象进行 XML 序列化](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [从 CLR 数据库对象进行 XML 序列化](https://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  说明如何对 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的 CLR 数据库对象启用 XML 序列化方案。  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252df4b5133861b6ff9892600bfe1c53206fefec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789215"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51600237"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 记录集暂留方案
 在此方案中，将创建记录集对象的内容保存直接向 ASP 响应对象的 Active Server Pages (ASP) 应用程序。  
@@ -111,7 +111,7 @@ ms.locfileid: "47789215"
 </HTML>  
 ```  
   
- 关闭 default.htm 文件，并将其保存到保存 XMLResponse.asp 的同一个文件夹。 使用 Internet Explorer 4.0 或更高版本，打开 URL http://*sqlserver*/XMLPersist/default.htm 并观察结果。 在绑定的 DHTML 表中显示的数据。 现在打开 URL http:// *sqlserver* /XMLPersist/XMLResponse.asp 并观察结果。 显示 XML。  
+ 关闭 default.htm 文件，并将其保存到保存 XMLResponse.asp 的同一个文件夹。 使用 Internet Explorer 4.0 或更高版本，打开 URL https://*sqlserver*/XMLPersist/default.htm 并观察结果。 在绑定的 DHTML 表中显示的数据。 现在打开 URL https:// *sqlserver* /XMLPersist/XMLResponse.asp 并观察结果。 显示 XML。  
   
 ## <a name="see-also"></a>请参阅  
  [保存方法](../../../ado/reference/ado-api/save-method.md)   

@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26c49d98bac45dc6385d5af4bac4d1082c64c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778505"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666596"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空间索引存储过程的参数和属性
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47778505"
 -   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>参数  
- [ **@tabname =**] **'***tabname***'**  
+ [  **@tabname =**] **'***tabname***’**  
  已为其指定了空间索引的表的限定或非限定名称。  
   
  仅当指定了限定表时才需要引号。 如果提供的是完全限定名称（包括数据库名称），则数据库名称必须是当前数据库的名称。 *tabname*是**nvarchar**(776)，无默认值。  
@@ -323,7 +323,7 @@ ms.locfileid: "47778505"
 ## <a name="requirements"></a>要求  
   
 ## <a name="see-also"></a>请参阅  
- [空间索引存储过程&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [空间索引存储过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空间索引概述](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery 基础知识](../../xquery/xquery-basics.md)   

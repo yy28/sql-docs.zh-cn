@@ -19,18 +19,18 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb94ee7b87f7e2e68f949f8a97b672182157c3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693385"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664089"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>系统要求（Visual FoxPro ODBC 驱动程序）
 安装的系统要求提供最低操作系统版本和已成功安装该驱动程序所需的磁盘空间。 已安装的驱动程序后，可以选择想要用于访问 Visual FoxPro 数据的特定应用程序软件。  
   
 ## <a name="installation-requirements"></a>安装要求  
- 有关安装要求和其他信息，请参阅[Visual FoxPro ODBC 驱动程序下载站点](http://go.microsoft.com/fwlink/?LinkId=121318)。  
+ 有关安装要求和其他信息，请参阅[Visual FoxPro ODBC 驱动程序下载站点](https://go.microsoft.com/fwlink/?LinkId=121318)。  
   
 ## <a name="accessing-visual-foxpro-data"></a>访问 Visual FoxPro 数据  
  若要访问 Microsoft Visual FoxPro、 FoxPro 2。*x*数据，必须具备以下条件：  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1925249781d938ad95bd4c27e60f797f8ad7b5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5869fe4903ea60a42e8710b0acc969e8a8bc6202
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717571"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673986"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -111,9 +111,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均记录大小（字节）。<br /><br /> 对于索引，为 IN_ROW_DATA 分配单元中 b 树当前级别的平均记录大小。<br /><br /> 对于堆，表示 IN_ROW_DATA 分配单元中的平均记录大小。<br /><br /> 对于 LOB_DATA 或 ROW_OVERFLOW_DATA 分配单元，表示整个分配单元中的平均记录大小。<br /><br /> 为 NULL 时*模式下*= 受限。|  
 |forwarded_record_count|**bigint**|在堆中具有指向另一个数据位置的转向指针的记录数。 （在更新过程中，如果在原始位置存储新行的空间不足，将会出现此状态。）<br /><br /> 除 IN_ROW_DATA 分配单元外，对于堆的其他所有分配单元都为 NULL。<br /><br /> 为 NULL 时堆*模式下*= 受限。|  
 |compressed_page_count|**bigint**|压缩页的数目。<br /><br /> 对于堆，新分配的页未进行 PAGE 压缩。 堆在以下两种特殊情况下进行 PAGE 压缩：大量导入数据时和重新生成堆时。 导致页分配的典型 DML 操作不会进行 PAGE 压缩。 当 compressed_page_count 值增长到超过您所需的阈值时，将重新生成堆。<br /><br /> 对于具有聚集索引的表，compressed_page_count 值表示 PAGE 压缩的效率。|  
-|hobt_id|BIGINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 则为 NULL|  
-|column_store_delete_buffer_state|TINYINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
-|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 无效 – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
+|hobt_id|BIGINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 对于仅限列存储索引，这是跟踪分区内部的列存储数据的行集的 ID。 行集是存储为堆数据或二进制树。 它们具有相同父列存储索引的索引 ID。 有关详细信息，请参阅[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)。<br /><br /> 则为 NULL|  
+|column_store_delete_buffer_state|TINYINT|**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 排出<br /><br /> 3 = 正在刷新<br /><br /> 4 = 停用<br /><br /> 5 = 就绪|  
+|column_store_delete_buff_state_desc||**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 无效 – 父索引不是列存储索引。<br /><br /> 打开 – deleters 并扫描程序使用此。<br /><br /> 排出 – deleters 排出，但扫描程序仍使用它。<br /><br /> 正在刷新 – 关闭缓冲区和缓冲区中的行是否正写入删除位图。<br /><br /> RETIRING – 中的已关闭的删除缓冲区的行已写入删除位图，但缓冲区已不被截断，因为扫描程序仍在使用它。 新的扫描程序无需使用即将停用的缓冲区，因为打开缓冲区就足够了。<br /><br /> 已准备就绪-此删除缓冲区可供使用。|  
   
 ## <a name="remarks"></a>备注  
  sys.dm_db_index_physical_stats 动态管理函数将替换 DBCC SHOWCONTIG 语句。  
@@ -197,7 +197,7 @@ GO
   
 -   使用 ALTER INDEX REBUILD（代替 DBCC DBREINDEX）联机或脱机重新生成索引。 有关详细信息，请参阅 [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)。  
   
- 不需要仅因为碎片的原因而重新组织或重新生成索引。 碎片的主要影响是，在索引扫描过程中会降低页的预读吞吐量。 这将导致响应时间变长。 如果含有碎片的表或索引中的查询工作负荷不涉及扫描（因为工作负荷主要是单独查找），则删除碎片可能不起作用。 有关详细信息，请参阅此[Microsoft 网站上](http://go.microsoft.com/fwlink/?linkid=31012)。  
+ 不需要仅因为碎片的原因而重新组织或重新生成索引。 碎片的主要影响是，在索引扫描过程中会降低页的预读吞吐量。 这将导致响应时间变长。 如果含有碎片的表或索引中的查询工作负荷不涉及扫描（因为工作负荷主要是单独查找），则删除碎片可能不起作用。 有关详细信息，请参阅此[Microsoft 网站上](https://go.microsoft.com/fwlink/?linkid=31012)。  
   
 > [!NOTE]  
 >  如果对索引进行部分或完全移动在收缩操作，则运行 DBCC SHRINKFILE 或 DBCC SHRINKDATABASE 可能产生碎片。 因此，如果必须执行收缩操作，则应在删除碎片之前进行。  
@@ -430,8 +430,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [系统视图&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [系统视图&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

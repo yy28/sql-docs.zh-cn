@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 145bfe599fa0117b689a002d47807eca217ba7bc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669086"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ sp_filestream_force_garbage_collection
 |*file_name*|指示 FILESTREAM 容器名称|  
 |*num_collected_items*|指示此容器中已回收（删除）的 FILESTREAM 项目（文件/目录）数。|  
 |*num_marked_for_collection_items*|指示此容器中已标记为回收（删除）的 FILESTREAM 项目（文件/目录）数。 这些项，尚未删除，但可能是可用于删除以下垃圾收集阶段。|  
-|*num_unprocessed_items*|指示此 FILESTREAM 容器中符合条件但未进行垃圾回收处理的 FILESTREAM 项目（文件或目录）数。 可能由于各种原因而未处理项目，其中包括：<br /><br /> 由于尚未执行日志备份或检查点操作，需要暂时锁定文件。<br /><br /> 文件处于 FULL 或 BULK_LOGGED 恢复模式。<br /><br /> 有长时间运行的活动事务。<br /><br /> 复制日志读取器作业未运行。 请参阅白皮书[SQL Server 2008 中的 FILESTREAM 存储](http://go.microsoft.com/fwlink/?LinkId=209156)有关详细信息。|  
+|*num_unprocessed_items*|指示此 FILESTREAM 容器中符合条件但未进行垃圾回收处理的 FILESTREAM 项目（文件或目录）数。 可能由于各种原因而未处理项目，其中包括：<br /><br /> 由于尚未执行日志备份或检查点操作，需要暂时锁定文件。<br /><br /> 文件处于 FULL 或 BULK_LOGGED 恢复模式。<br /><br /> 有长时间运行的活动事务。<br /><br /> 复制日志读取器作业未运行。 请参阅白皮书[SQL Server 2008 中的 FILESTREAM 存储](https://go.microsoft.com/fwlink/?LinkId=209156)有关详细信息。|  
 |*last_collected_xact_seqno*|返回最后一个相应的日志序列号 (LSN)，已垃圾回收指定 FILESTREAM 容器中小于该编号的文件。|  
   
 ## <a name="remarks"></a>备注  

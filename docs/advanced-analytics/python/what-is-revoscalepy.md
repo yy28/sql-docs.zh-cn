@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f1d4d8bbb47c34fce61bdb95a3184a1d2b10f4d1
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 8b2e217f599112019e96f3e20b727456b9da607f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889473"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697565"
 ---
 # <a name="introducing-revoscalepy-in-sql-server-machine-learning"></a>在 SQL Server 机器学习简介 revoscalepy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 可以通过导入模块，然后调用上的任何 Python 函数中获取帮助`help()`。 例如，运行`help(revoscalepy)`从你的 Python IDE revoscalepy 模块，使用它们的签名中返回所有函数的列表。
 
-如果使用 Python Tools for Visual Studio 上时，可以使用 IntelliSense 来获取语法和参数的帮助。 有关详细信息，请参阅[Visual Studio 中的 Python 支持](http://docs.microsoft.com/visualstudio/python/installation)，并下载与你的 Visual Studio 版本匹配的扩展。 可以使用 Python 与 Visual Studio 2015 和 2017 或更早版本。
+如果使用 Python Tools for Visual Studio 上时，可以使用 IntelliSense 来获取语法和参数的帮助。 有关详细信息，请参阅[Visual Studio 中的 Python 支持](https://docs.microsoft.com/visualstudio/python/installation)，并下载与你的 Visual Studio 版本匹配的扩展。 可以使用 Python 与 Visual Studio 2015 和 2017 或更早版本。
 
 ## <a name="see-also"></a>请参阅
 

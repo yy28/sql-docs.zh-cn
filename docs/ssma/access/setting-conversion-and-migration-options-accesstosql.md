@@ -17,12 +17,12 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f6a49e494c856395364bfbcb38a3d59b19302b78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795520"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677286"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>设置转换和迁移选项 (AccessToSQL)
 对于每个 SSMA 项目，可以设置项目级别的选项。 这些选项用于指定如何转换对象、 如何迁移数据和源数据类型如何映射到目标数据类型。 在转换到的对象之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或将数据迁移到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，验证配置选项是否适用于该项目。  
@@ -32,15 +32,15 @@ SSMA 中有四个组配置设置和配置这些设置的四种模式： 默认�
   
 本文档的"用户界面参考"部分中描述了这些设置。 有关设置以及如何在每种模式中应用设置的详细信息，请参阅以下主题：  
   
--   [项目设置（转换）](http://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [项目设置（转换）](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [项目设置（迁移）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [项目设置（迁移）](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [项目设置 (GUI)](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [项目设置 (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [项目设置（类型映射）](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [项目设置（类型映射）](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [项目设置 (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [项目设置 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>设置项目选项  
 在 SSMA 中，可以配置所有项目的默认的设置。 这些设置保存到 SSMA 配置文件，并应用于创建任何新项目。  

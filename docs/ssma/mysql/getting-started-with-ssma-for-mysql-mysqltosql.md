@@ -14,12 +14,12 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bbfede87cf23da5e8867d33f4b8bad35b6af9c50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677246"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入门 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL，可以快速将 MySQL 数据库架构转换为 SQL Server 或 Azure SQL DB 架构、 将生成的架构上传到 SQL Server 或 Azure SQL DB，并将数据从 MySQL 迁移到 SQL Server 或 Azure SQL DB。  
@@ -73,7 +73,7 @@ SQL Server 或 Azure SQL DB 元数据资源管理器显示的 SQL Server 或 Azu
   
 可以使用此元数据资源管理器来选择转换后的 MySQL 数据库对象，并与 SQL Server 或 Azure SQL DB 的实例同步这些对象。  
   
-有关详细信息，请参阅[同步 (mysql 迁移到 SQL Server / Azure SQL DB)](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+有关详细信息，请参阅[同步 (mysql 迁移到 SQL Server / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>元数据  
 每个元数据资源管理器右侧是描述所选的对象的选项卡。 例如，如果 MySQL 元数据资源管理器中选择一个表，九个选项卡将显示：**表**， **SQL**，**类型映射**，**数据**， **设置**，**字符集映射**， **SQL 模式**，**属性**，并且**报表**。 **报表**选项卡只创建报表后，将包含所选的对象包含的信息。 如果在 SQL Server 元数据资源管理器中选择一个表，将显示三个选项卡：**表**， **SQL**并**数据**。  

@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564de2a3959f7cec9bcdfc5abfe4c04c935abf02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08110f735b640114e5c880c5ec84b23029275b93
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818695"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681215"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47818695"
  **SQLGetDescRec**支持大型 CLR 用户定义类型 (Udt)。 有关详细信息，请参阅[Large CLR User-Defined 类型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLGetDescRec](http://go.microsoft.com/fwlink/?LinkId=80707)   
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

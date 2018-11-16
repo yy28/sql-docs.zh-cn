@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 11/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 4a3785d994b6bd40b6b808d07d5272fa7534a7fb
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 9b6902057c3bf5da706de8832b33c959ed285a9b
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51221564"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702345"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Minikube 配置用于 SQL Server 2019 大数据群集部署
 
@@ -39,7 +39,7 @@ ms.locfileid: "51221564"
 
 1. 如果你还没有安装在虚拟机监控程序，请立即安装一个。
    - 适用于 OS X 安装[xhyve 驱动程序](https://git.k8s.io/minikube/docs/drivers.md)， [VirtualBox](https://www.virtualbox.org/wiki/Downloads)，或[VMware Fusion](https://www.vmware.com/products/fusion)。
-   - 对于 Linux，安装[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或[KVM](http://www.linux-kvm.org/)。
+   - 对于 Linux，安装[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或[KVM](https://www.linux-kvm.org/)。
    - 对于 Windows，安装[VirtualBox](https://www.virtualbox.org/wiki/Downloads)或[HYPER-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)。 如果没有外部交换机的 hyper-v 中配置，然后创建一个具有外部网络访问权限。  请参阅如何[minikube 的 hyper-v 中创建外部交换机](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)。
 
 ## <a name="install-minikube"></a>安装 Minikube

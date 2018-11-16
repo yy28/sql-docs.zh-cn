@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdbfd58cc8e14722e62eee47223b1995c1d585e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd093ed5352fc303642a2d20d2cab9a0829522ae
+ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777325"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51558484"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>表值参数类型发现
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "47777325"
   
  对于大多数参数类型，icommandwithparameters:: Getparameterinfo 支持过程参数的类型信息。 从 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 开始，随着用户定义类型和 xml 数据类型的引入，由于无法通过 ICommandWithParameters 提供用户定义类型信息（名称、架构和目录），GetParameterInfo 方法不再能够完全满足此目的。 新接口，ISSCommandWithParameters，定义为提供的扩展的类型信息。  
   
- 对于表值参数，你还使用 ISSCommandWithParameters 接口发现详细的信息。 客户端调用 ISSCommandWithParameters::GetParameterInfo 准备命令对象之后。 对于表值参数， *wType*访问接口将 DBPARAMINFO 结构中的成员设置为 DBTYPE_TABLE。 DBPARAMINFO 结构的 ulParamSize 字段的值为 ~0。  
+ 对于表值参数，你还使用 ISSCommandWithParameters 接口发现详细的信息。 客户端调用 ISSCommandWithParameters::GetParameterInfo 准备命令对象之后。 对于表值参数，访问接口将 DBPARAMINFO 结构的 wType 成员设置为 DBTYPE_TABLE。 DBPARAMINFO 结构的 ulParamSize 字段的值为 ~0。  
   
- 使用者随后通过使用 ISSCommandWithParamters::GetParameterProperties 请求附加属性（表值参数类型目录名称、表值参数类型架构名称、表值参数类型名称、列排序和默认列）。  
+ 使用者然后将请求附加属性 （表值参数类型目录名称、 表值参数类型架构名称、 表值参数类型名称、 列排序和默认列） 使用 ISSCommandWithParameters::GetParameterProperties。  
   
  了解类型名称之后，要检索各个列信息，使用者必须调用 IOpenRowset::OpenRowsetor ，或者通过将表值参数类型名称指定为表名来获取 DBSCHEMA_TABLE_TYPE_COLUMNS 行集。  
   

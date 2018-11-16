@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3078fa2406bfbc4e45ed2b68e2119927590c4a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24ddc42ecfe8b9fa84822d476f5ac4b5e555141b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723415"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677176"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 实现细节
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47723415"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序参考未提供所有 ODBC 函数调用的文字说明。 只讨论那些与 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序一起使用时具有特定于驱动程序的参数或行为的函数。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 有关 ODBC 3.51 的全面参考，下载 Microsoft 数据访问组件 SDK，从[数据访问和存储开发人员中心](http://go.microsoft.com/fwlink?linkid=4173)，或查看[ODBC 程序员参考](http://go.microsoft.com/fwlink/?LinkId=45250)联机。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驱动程序符合 ODBC 3.51 规范。 有关 ODBC 3.51 的全面参考，下载 Microsoft 数据访问组件 SDK，从[数据访问和存储开发人员中心](https://go.microsoft.com/fwlink?linkid=4173)，或查看[ODBC 程序员参考](https://go.microsoft.com/fwlink/?LinkId=45250)联机。  
   
 ## <a name="in-this-section"></a>本节内容  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47723415"
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
 ## <a name="see-also"></a>请参阅  
- [SQL Server 本机客户端&#40;ODBC&#41;引用](http://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
+ [SQL Server 本机客户端&#40;ODBC&#41;引用](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [使用 SQL Server Native Client 生成应用程序](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

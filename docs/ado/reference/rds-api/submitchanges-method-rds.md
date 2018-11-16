@@ -14,18 +14,18 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0a5beeef5d88a30496a8b706dcfd7ffabb931b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744473"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51602617"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 方法 (RDS)
 提交挂起的更改的本地缓存和可更新[记录集](../../../ado/reference/ado-api/recordset-object-ado.md)到中指定的数据源[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性或[URL](../../../ado/reference/rds-api/url-property-rds.md)属性。  
   
 > [!IMPORTANT]
->  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/en-us/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](http://go.microsoft.com/fwlink/?LinkId=199565)。  
+>  从 Windows 8 和 Windows Server 2012 开始，不再在 Windows 操作系统中包含 RDS 服务器组件 (请参阅 Windows 8 和[Windows Server 2012 兼容性指南](https://www.microsoft.com/download/details.aspx?id=27416)以了解详细信息)。 将 Windows 的未来版本中删除 RDS 客户端组件。 请避免在新的开发工作中使用该功能，并着手修改当前还在使用该功能的应用程序。 使用 RDS 的应用程序应迁移到[WCF 数据服务](https://go.microsoft.com/fwlink/?LinkId=199565)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -41,7 +41,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  表示的对象变量[提高](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)对象。  
   
- *连接*  
+ *“连接”*  
  一个**字符串**值，该值表示与创建的连接**rds。DataControl**对象的[Connect](../../../ado/reference/rds-api/connect-property-rds.md)属性。  
   
  *Recordset*  

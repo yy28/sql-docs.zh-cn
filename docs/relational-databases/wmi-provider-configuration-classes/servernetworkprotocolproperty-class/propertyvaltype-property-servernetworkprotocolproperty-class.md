@@ -18,12 +18,12 @@ ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7bd01cf25ebd7b38e1a1fc486ddfd29c10e36c1e
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 162283486f6e0126c78bcee7c2ca2f4094744b3b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215135"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662833"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>PropertyValType 属性（ServerNetworkProtocolProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,6 +46,6 @@ object.PropertyValType [= value]
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置服务器网络协议和网络库](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [配置服务器网络协议和网络库](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

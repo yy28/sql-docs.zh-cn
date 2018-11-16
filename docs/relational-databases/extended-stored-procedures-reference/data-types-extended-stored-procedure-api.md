@@ -14,12 +14,12 @@ ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3d00c9df73a0d6fa7ec0869673deb370fc516226
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029507"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660266"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>数据类型（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,6 @@ ms.locfileid: "51029507"
 |SRVVARCHAR|**varchar**|长度可变的 character 数据类型。|  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
   

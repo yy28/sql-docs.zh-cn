@@ -5,8 +5,7 @@ ms.date: 07/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d6e3a5e26fd40fc4f2fca093a41048aa7e3c5b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695895"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512702"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>图形处理与 SQL Server 和 Azure SQL 数据库
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47695895"
 
 
 ## <a name="what-is-a-graph-database"></a>图形数据库是什么？  
-图形数据库是一系列节点 （或顶点） 和边缘 （或关系）。 节点表示的实体 （例如，一个人或组织） 和边缘表示连接 （如点赞或朋友） 的两个节点之间的关系。 节点和边缘都可能具有与之关联的属性。 下面是一些功能，使图形数据库唯一：  
+图数据库是节点（或顶点）和边缘（或关系）的集合。 节点表示实体（例如，个人或组织），边缘表示其连接的两个节点（例如，赞或朋友）之间的关系。 节点和边缘都可能具有与之关联的属性。 下面是一些功能，使图形数据库唯一：  
 -   边缘或关系的图形数据库中的第一类实体，并且可以具有特性或属性与之关联。 
 -   单条边可以灵活地连接多个节点中的图形数据库。
 -   可以轻松地表达模式匹配和多跃点导航查询。

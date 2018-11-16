@@ -27,12 +27,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 11cb2d92d0a18e837a1bf7887ddf6f7a2dfbc449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 089ced09d718b0716f0c19d4553e52ff02c3d505
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628825"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665576"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>版本和 Linux 上的 SQL Server 2017 的支持的功能
 
@@ -50,7 +50,7 @@ ms.locfileid: "47628825"
 
 ### <a name="try-sql-server"></a>试用 SQL Server！    
     
-[下载 SQL Server 2017](http://www.microsoft.com/sql-server/sql-server-2017)
+[下载 SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 版本  
  下表介绍 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的各个版本。 
@@ -217,9 +217,9 @@ Linux 上的 SQL Server 2017 支持的 SQL Server 数据库引擎。 下表介�
 ## <a name="next-steps"></a>后续步骤 
  [版本和支持的 SQL Server 2017 的 Windows 功能](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [版本和 SQL Server 2016 的 Windows 支持的功能](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [版本和支持适用于 SQL Server 2014 的 Windows 功能](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
+ [版本和支持适用于 SQL Server 2014 的 Windows 功能](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [安装 SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [SQL Server 的产品规格](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
+ [SQL Server 的产品规格](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
 
   
   

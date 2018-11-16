@@ -26,12 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e431283b9438b6b566f03632b35a84afa4d4e8e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82151259ece037991602c6dc0bb10a0c1fbf803e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827835"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673886"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>使用 sql:hide 隐藏元素和属性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47827835"
  **\<Person.Contact >** 元素属于复杂类型，并因此，将映射到相同的名称 （默认映射） 的表。 所有属性 **\<Person.Contact >** 元素均属于简单类型，并将映射到具有在 AdventureWorks 数据库中 Person.Contacttable 相同名称的列。 在架构中， **sql: hide**指定批注**ContactID**属性。 针对此架构指定 XPath 查询时**ContactID**不返回 XML 文档中。  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Person.Contact" >  
      <xsd:complexType>  
@@ -95,7 +95,7 @@ ms.locfileid: "47827835"
  当**sql: hide**指定某个元素上，该元素及其属性或子元素不显示在生成的 XML 文档。 下面是在其中的另一个 XSD 架构**sql: hide**上指定 **\<OD >** 元素：  
   
 ```  
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
             xmlns:dt="urn:schemas-microsoft-com:datatypes"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   

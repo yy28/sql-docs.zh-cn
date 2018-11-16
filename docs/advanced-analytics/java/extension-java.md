@@ -9,12 +9,12 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d69a255c56c3b15051a393b74eb1492a4f830f4
-ms.sourcegitcommit: 93e3bb8941411b808e00daa31121367e96fdfda1
+ms.openlocfilehash: b11025a69a0e72bb7cea1c478350da0f6ede85bf
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359334"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696410"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>在 SQL Server 2019 Java 语言扩展 
 
@@ -32,7 +32,7 @@ Java 版本要求在 Windows 和 Linux 上可能有所不同。 Java Runtime Env
 
 | 操作系统 | Java 版本 | JRE 下载 | JDK 下载 |
 |------------------|--------------|--------------|--------------|
-| Windows          | 1.10         | [JRE 10](http://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](http://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
+| Windows          | 1.10         | [JRE 10](https://www.oracle.com/technetwork/java/javase/downloads/jre10-downloads-4417026.html) | [JDK 10](https://www.oracle.com/technetwork/java/javase/downloads/jdk10-downloads-4416644.html)  |
 | Linux            | 1.8          |  [JRE 8](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) | [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  |  
 
 在 Linux 上， **mssql server 扩展性 java**包会自动安装 JRE 1.8，如果尚未安装。 安装脚本还将 JVM 路径添加到名为 JAVA_HOME 的环境变量。

@@ -10,12 +10,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 1b66f63b66066831d7e0276049d774136c1b5138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743815"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662276"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>完成测试用例准备 (OracleToSQL)
 向导的最后一页显示的测试用例说明和测试中涉及的对象的信息。 此外，在此页上，可以设置测试执行选项。  
@@ -54,7 +54,7 @@ ms.locfileid: "47743815"
   
 -   如果选择**如果表的比较失败，则要求用户**，用户可以选择必要的操作，如果发生错误。  
   
-单击**完成**按钮以保存到已准备好的测试用例[使用测试存储库 (OracleToSQL)](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)。  
+单击**完成**按钮以保存到已准备好的测试用例[使用测试存储库 (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)。  
   
 ## <a name="see-also"></a>请参阅  
 [使用测试存储库&#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  

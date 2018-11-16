@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 1053f3a11bed9efbf75d7270f677c9f226221a3f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48252005"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674190"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>部署 SQL Server 容器在 Kubernetes 中使用 Azure Kubernetes 服务 (AKS)
 
@@ -33,11 +33,11 @@ ms.locfileid: "48252005"
 
 ## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>在 Azure Kubernetes 服务中运行的 Kubernetes 上的 HA 解决方案
 
-Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/docs/concepts/storage/storage-classes/)，[永久性卷声明](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，并[Azure 磁盘的卷类型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以创建和管理 SQL Server 实例以本机方式在 Kubernetes 中。 此文章中的示例演示如何创建[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)来实现类似于共享的磁盘故障转移群集实例的高可用性配置。 在此配置中，Kubernetes 充当群集协调器的角色。 当在容器中的 SQL Server 实例失败时，业务流程协调程序会引导将附加到相同的持久性存储的容器的另一个实例。
+Kubernetes 版本 1.6 和更高版本已支持[存储类](https://kubernetes.io/docs/concepts/storage/storage-classes/)，[永久性卷声明](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)，并[Azure 磁盘的卷类型](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk)。 您可以创建和管理 SQL Server 实例以本机方式在 Kubernetes 中。 此文章中的示例演示如何创建[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)来实现类似于共享的磁盘故障转移群集实例的高可用性配置。 在此配置中，Kubernetes 充当群集协调器的角色。 当在容器中的 SQL Server 实例失败时，业务流程协调程序会引导将附加到相同的持久性存储的容器的另一个实例。
 
 ![Kubernetes SQL Server 群集的关系图](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-在上图中，`mssql-server`是中的容器[pod](http://kubernetes.io/docs/concepts/workloads/pods/pod/)。 Kubernetes 会协调群集中的资源。 一个[副本集](http://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 pod。 应用程序连接到服务。 在这种情况下，该服务表示承载的发生故障后保持不变的 IP 地址的负载均衡器`mssql-server`。
+在上图中，`mssql-server`是中的容器[pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)。 Kubernetes 会协调群集中的资源。 一个[副本集](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)可确保在节点发生故障后自动恢复 pod。 应用程序连接到服务。 在这种情况下，该服务表示承载的发生故障后保持不变的 IP 地址的负载均衡器`mssql-server`。
 
 在下图中，`mssql-server`容器已失败。 作为业务流程协调程序，Kubernetes 可保证正确的副本中的正常实例数设置，并启动根据配置的新容器。 业务流程协调程序在同一节点上启动新 pod 和`mssql-server`重新连接到相同的持久存储。 该服务连接到重新创建`mssql-server`。
 
@@ -52,7 +52,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
 * **Kubernetes 群集**
    - 本教程需要 Kubernetes 群集。 这些步骤会用[kubectl](https://kubernetes.io/docs/user-guide/kubectl/)群集进行管理。 
 
-   - 请参阅[部署 Azure 容器服务 (AKS) 群集](http://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)若要创建并连接到与 AKS 中的单节点 Kubernetes 群集`kubectl`。 
+   - 请参阅[部署 Azure 容器服务 (AKS) 群集](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster)若要创建并连接到与 AKS 中的单节点 Kubernetes 群集`kubectl`。 
 
    >[!NOTE]
    >若要针对节点故障提供保护，Kubernetes 群集需要多个节点。
@@ -62,7 +62,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
 
 ## <a name="create-an-sa-password"></a>创建的 SA 密码
 
-在 Kubernetes 群集中创建的 SA 密码。 Kubernetes 可以管理敏感配置信息，如密码作为[机密](http://kubernetes.io/docs/concepts/configuration/secret/)。
+在 Kubernetes 群集中创建的 SA 密码。 Kubernetes 可以管理敏感配置信息，如密码作为[机密](https://kubernetes.io/docs/concepts/configuration/secret/)。
 
 以下命令创建 SA 帐户的密码：
 
@@ -77,9 +77,9 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
 
 ## <a name="create-storage"></a>创建存储
 
-配置[永久性卷](http://kubernetes.io/docs/concepts/storage/persistent-volumes/)并[永久性卷声明](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)的 Kubernetes 群集中。 完成以下步骤： 
+配置[永久性卷](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)并[永久性卷声明](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection)的 Kubernetes 群集中。 完成以下步骤： 
 
-1. 创建清单来定义的存储类和永久性卷声明。  该清单指定存储预配程序，参数，并[回收策略](http://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)。 Kubernetes 群集使用此清单创建的永久性存储。 
+1. 创建清单来定义的存储类和永久性卷声明。  该清单指定存储预配程序，参数，并[回收策略](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming)。 Kubernetes 群集使用此清单创建的永久性存储。 
 
    下面的 yaml 示例定义一个存储类和永久性卷声明。 存储类预配程序是`azure-disk`，因为此 Kubernetes 群集是在 Azure 中。 存储帐户类型是`Standard_LRS`。 永久性卷声明名为`mssql-data`。 永久性卷声明元数据包括批注连接回存储类。 
 
@@ -155,7 +155,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
 
 在此示例中，托管 SQL Server 实例的容器被描述为 Kubernetes 部署对象。 部署创建的副本集。 副本集创建 pod。 
 
-在此步骤中，创建一个清单来描述基于 SQL Server 容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 清单的引用`mssql-server`永久性卷声明和`mssql`已应用于 Kubernetes 群集的机密。 清单还描述[服务](http://kubernetes.io/docs/concepts/services-networking/service/)。 此服务是负载均衡器。 负载均衡器可确保 IP 地址后恢复 SQL Server 实例仍存在。 
+在此步骤中，创建一个清单来描述基于 SQL Server 容器[mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 映像。 清单的引用`mssql-server`永久性卷声明和`mssql`已应用于 Kubernetes 群集的机密。 清单还描述[服务](https://kubernetes.io/docs/concepts/services-networking/service/)。 此服务是负载均衡器。 负载均衡器可确保 IP 地址后恢复 SQL Server 实例仍存在。 
 
 1. 创建清单 （YAML 文件） 来描述部署。 下面的示例介绍了部署，包括基于 SQL Server 容器映像的容器。
 
@@ -212,7 +212,7 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
    * `value: "Developer"`： 设置要运行的 SQL Server Developer edition 的容器。 开发人员版未获得许可的生产数据。 如果部署适用于生产环境中使用，请设置相应的版本 (`Enterprise`， `Standard`，或`Express`)。 
 
       >[!NOTE]
-      >有关详细信息，请参阅[授权的 SQL Server 如何](http://www.microsoft.com/sql-server/sql-server-2017-pricing)。
+      >有关详细信息，请参阅[授权的 SQL Server 如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
 
    * `persistentVolumeClaim`： 此值需要为一个条目`claimName:`，它映射到的永久性卷声明使用的名称。 本教程使用`mssql-data`。 
 
@@ -275,9 +275,9 @@ Kubernetes 版本 1.6 和更高版本已支持[存储类](http://kubernetes.io/d
 
 可以使用以下应用程序连接到 SQL Server 实例。 
 
-* [SSMS](http://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
-* [SSDT](http://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
    
@@ -327,6 +327,6 @@ Kubernetes 会自动重新创建 pod 中恢复的 SQL Server 实例，并连接�
 ## <a name="next-steps"></a>后续步骤
 
 > [!div class="nextstepaction"]
->[Kubernetes 简介](http://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Kubernetes 简介](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 
 

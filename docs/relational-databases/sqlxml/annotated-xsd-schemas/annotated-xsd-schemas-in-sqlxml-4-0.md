@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 24c1012c3eb2bef913667052b00ff44fff95fade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73695ebfc9d2322d57fc3b03a6fe576f90e54554
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821525"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662306"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的带批注的 XSD 架构
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ ms.locfileid: "47821525"
 ## <a name="other-resources"></a>其他资源  
  有关 XML 架构定义语言 (XSD)、XML Path 语言 (XPath) 和可扩展样式表语言转换 (XSLT) 的详细信息，请访问以下网站：  
   
--   XML 架构第 0 部分： 入门，W3C 建议 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 架构第 0 部分： 入门，W3C 建议 (https://www.w3.org/TR/xmlschema-0/)  
   
--   XML 架构第 1 部分： 结构、 W3C 建议 (http://www.w3.org/TR/xmlschema-1/)  
+-   XML 架构第 1 部分： 结构、 W3C 建议 (https://www.w3.org/TR/xmlschema-1/)  
   
--   XML 架构第 2: datatypes，W3C 建议 (http://www.w3.org/TR/xmlschema-2/)  
+-   XML 架构第 2: datatypes，W3C 建议 (https://www.w3.org/TR/xmlschema-2/)  
   
--   XML 路径语言 (XPath) (http://www.w3.org/TR/xpath)  
+-   XML 路径语言 (XPath) (https://www.w3.org/TR/xpath)  
   
--   XSL 转换 (XSLT) (http://www.w3.org/TR/xslt)  
+-   XSL 转换 (XSLT) (https://www.w3.org/TR/xslt)  
   
   

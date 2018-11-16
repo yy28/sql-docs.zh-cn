@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 572920ccf63f35c74e39cd02a4b32c4fd85b0550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fce44a6059b82a5d5a6edeac30d4411afcbd96ce
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698575"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350231"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概述
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "47698575"
 ## <a name="connection-string-parameters"></a>连接字符串参数
  若要连接到此提供程序，请设置*提供程序*的参数[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)属性设置为：
 
-```
+```vb
 MSDAORA
 ```
 
@@ -42,7 +42,7 @@ MSDAORA
 ## <a name="typical-connection-string"></a>典型的连接字符串
  此提供程序的典型的连接字符串是：
 
-```
+```vb
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
@@ -61,7 +61,7 @@ MSDAORA
 ## <a name="provider-specific-connection-parameters"></a>提供程序特定的连接参数
  此提供程序支持除 ADO 定义的多个提供程序特定的连接参数。 如使用 ADO 连接属性，可以通过设置这些特定于提供程序的属性[属性](../../../ado/reference/ado-api/properties-collection-ado.md)系列[连接](../../../ado/reference/ado-api/connection-object-ado.md)或作为的一部分**ConnectionString**.
 
- 这些参数是完全中所述[OLE DB 程序员参考](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 动态属性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供这些参数名称和相应的 OLE DB 属性之间的交叉引用。
+ 这些参数是完全中所述[OLE DB 程序员参考](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 动态属性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供这些参数名称和相应的 OLE DB 属性之间的交叉引用。
 
 |参数|Description|
 |---------------|-----------------|

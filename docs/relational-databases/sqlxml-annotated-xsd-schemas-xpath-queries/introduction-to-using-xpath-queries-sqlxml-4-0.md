@@ -16,12 +16,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3758a437a35ad3add877d04eaafca0997f7b2096
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c8edb6cb54d2ef600080093729a9ff0c06f4082
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778085"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671636"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 查询使用简介 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47778085"
   
  XPath 是图形导航语言，用于从 XML 文档中选择节点集。 每个 XPath 运算符根据前一个 XPath 运算符所选择的节点集来选择节点集。 例如，给定一组**\<客户 >** 节点，XPath 可以选择所有**\<顺序 >** 节点**日期**属性值 **"7/14/1999"**。 生成的节点集包含订单日期为 7/14/1999 的所有订单。  
   
- 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 http://www.w3.org/TR/1999/PR-xpath-19991008.html。  
+ 万维网联盟 (W3C) 将 XPath 语言规定为标准导航语言。 SQLXML 4.0 实现了一部分的 W3C XPath 规范，位于 https://www.w3.org/TR/1999/PR-xpath-19991008.html。  
   
  以下是 W3C XPath 实现与 SQLXML 4.0 实现之间的主要差异。  
   

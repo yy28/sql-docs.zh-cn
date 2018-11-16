@@ -20,12 +20,12 @@ ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1410a30d234124d0c32d8026512fa36e5d070f0
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 04d0993fc8e0a84d001dfd7e899dedf6ecc8dde2
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032625"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655626"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken（扩展存储过程 API）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ bindtoken
     >  一次只能有一个绑定会话可以访问共享连接。 如果当前一个会话正在服务器上执行一个语句或其结果从服务器挂起，则在当前会话完成执行当前语句之前，其他共享同一绑定连接的会话都不能访问服务器。 如果在服务器忙时会话试图访问该连接，将为冲突的会话返回错误，指明连接正在使用中，会话应稍后重试。  
   
 > [!IMPORTANT]  
->  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](http://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409http://msdn.microsoft.com/security/)。  
+>  应全面检查扩展存储过程的源代码，并在生产服务器中安装编译的 DLL 之前，对这些 DLL 进行测试。 有关安全检查和测试的信息，请访问此 [Microsoft 网站](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)。  
   
 ## <a name="see-also"></a>另请参阅  
  [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   

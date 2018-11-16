@@ -21,18 +21,18 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e78d5226a4ab726718eb7725640de22dd811a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677666"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>准备迁移 (AccessToSQL) 访问数据库
 在迁移到 Access 数据库之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，必须确定哪些数据库迁移，并确保这些数据库已准备好进行迁移。  
   
 ## <a name="determining-when-to-migrate-to-sql-server"></a>确定何时将迁移到 SQL Server  
-Jet 数据库引擎，用于为数据库引擎访问，是一个灵活、 易于使用解决方案，数据管理。 但是，作为变得更大的数据库和多个关键任务应用程序，许多用户发现，它们需要更高的性能、 安全性或可用性。 对于需要更可靠的数据平台的应用程序，请考虑将移到这些应用程序的基础数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 确定何时要迁移的详细信息，请参阅[迁移信息页](http://go.microsoft.com/fwlink/?LinkId=68571)上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Web 站点。  
+Jet 数据库引擎，用于为数据库引擎访问，是一个灵活、 易于使用解决方案，数据管理。 但是，作为变得更大的数据库和多个关键任务应用程序，许多用户发现，它们需要更高的性能、 安全性或可用性。 对于需要更可靠的数据平台的应用程序，请考虑将移到这些应用程序的基础数据库[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 确定何时要迁移的详细信息，请参阅[迁移信息页](https://go.microsoft.com/fwlink/?LinkId=68571)上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Web 站点。  
   
 迁移到数据库后[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，可以继续通过使用链接的表，使用访问权限或可以手动迁移到应用程序[!INCLUDE[msCoName](../../includes/msconame_md.md)]直接交互的基于.NET Framework 的代码[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
@@ -75,6 +75,6 @@ SSMA 无法迁移使用工作组保护的数据库。 若要从 Access 数据库
 ### <a name="documenting-databases"></a>记录数据库  
 您可能想要记录的属性，例如的数据库对象、 文件大小和权限，您的 Access 数据库的列表。 若要在生成在 Access 中，此文档**工具**菜单，依次指向**分析**，然后单击**文档化**。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
 [Access 数据库迁移到 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [链接到 SQL Server 访问应用程序](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

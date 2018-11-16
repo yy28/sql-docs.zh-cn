@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3927708ae0e9fe00043bc0cb51926d836dd912f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a81f7808275dfee216d6d884db45e267e06271c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748695"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662483"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>使用语句参数 - 绑定参数
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47748695"
   
  使用时才支持命名的参数[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE**语句或 ODBC CALL 转义序列执行存储的过程。  
   
- 如果**SQL_DESC_NAME**设置对于存储的过程参数，则在查询中的所有存储的过程参数还应设置**SQL_DESC_NAME**。  如果使用文字在存储的过程调用中，其中参数具有**SQL_DESC_NAME**设置，则这些文字应该使用格式*名称*=*值*，其中*名称*是存储的过程的参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （命名参数） 绑定参数](http://go.microsoft.com/fwlink/?LinkId=167215)。  
+ 如果**SQL_DESC_NAME**设置对于存储的过程参数，则在查询中的所有存储的过程参数还应设置**SQL_DESC_NAME**。  如果使用文字在存储的过程调用中，其中参数具有**SQL_DESC_NAME**设置，则这些文字应该使用格式*名称*=*值*，其中*名称*是存储的过程的参数名称 (例如， @p1)。 有关详细信息，请参阅[按名称 （命名参数） 绑定参数](https://go.microsoft.com/fwlink/?LinkId=167215)。  
   
 ## <a name="see-also"></a>请参阅  
  [使用语句参数](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

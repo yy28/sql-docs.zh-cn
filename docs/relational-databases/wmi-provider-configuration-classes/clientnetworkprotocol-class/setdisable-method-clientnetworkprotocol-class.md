@@ -18,16 +18,16 @@ ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d9e890e359080f2d12e5c0947f3b9b214afb6591
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 38dabb0ce6efe87a360b78693c78fb36240242c3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215517"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675826"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法（ClientNetworkProtocol 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  禁用指定的客户端网络协议[配置客户端协议](http://technet.microsoft.com/library/ms181035.aspx)。  
+  禁用指定的客户端网络协议[配置客户端协议](https://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>语法  
   
@@ -46,6 +46,6 @@ object.SetDisable()
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [配置客户端网络协议和网络库](http://technet.microsoft.com/library/ms181035.aspx)  
+ [配置客户端网络协议和网络库](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

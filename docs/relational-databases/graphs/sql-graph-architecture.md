@@ -5,8 +5,7 @@ ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - SQL graph
@@ -16,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcff6266a24602b0ce1f17818d1c4b0451b1adaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf061fc552a29730fb25a1fd36fb868efb031953
+ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830645"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51512802"
 ---
 # <a name="sql-graph-architecture"></a>SQL 图形体系结构  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47830645"
 用户可以创建每个数据库的一个关系图。 关系图是节点和边界表的集合。 可以在数据库中的任何架构下创建节点或边界表，但它们都属于一个逻辑关系图。 节点表是节点的相似类型的集合。 例如，Person 节点表包含属于关系图的所有人员节点。 同样，边缘表是边缘的相似类型的集合。 例如，好友边缘表具有将一个 Person 连接到另一个人的所有边缘。 由于节点和边缘表中存储，在节点或边界表上支持大多数常规表上支持的操作。 
  
  
-![sql 图形体系结构](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 图形数据库体系结构")   
+![sql 图形体系结构](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql 图形数据库体系结构")   
 
 图 1: SQL 图形数据库体系结构
  
@@ -57,7 +56,7 @@ ms.locfileid: "47830645"
 
 图 2 显示了如何在数据库中存储节点和边界表。 
 
-![朋友的 person 表](../../relational-databases/graphs/media/person-friends-tables.png "/people/person 节点和好友边缘表")   
+![朋友的 person 表](../../relational-databases/graphs/media/person-friends-tables.png "/people/person 节点和好友边缘表")   
 
 图 2： 节点和边界表的表示形式
 
@@ -130,7 +129,7 @@ ms.locfileid: "47830645"
 
 
 
-## <a name="transact-sql-reference"></a>TRANSACT-SQL 参考 
+## <a name="transact-sql-reference"></a>Transact-SQL 参考 
 了解[!INCLUDE[tsql-md](../../includes/tsql-md.md)]引入 SQL Server 和 Azure SQL 数据库中的扩展，以便创建和查询图形对象。 查询语言扩展帮助查询和遍历图形使用 ASCII 图表语法。
  
 ### <a name="data-definition-language-ddl-statements"></a>数据定义语言 (DDL) 语句
@@ -140,7 +139,7 @@ ms.locfileid: "47830645"
 |ALTER TABLE    |[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)|可以更改节点和边缘表的关系表，使用的相同方式`ALTER TABLE`。 用户可以添加或修改用户定义的列、 索引或约束。 但是，更改内部图表列，喜欢`$node_id`或`$edge_id`，将导致错误。  |
 |CREATE INDEX   |[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  |用户可以对伪列和用户定义的节点和边缘表中的列创建索引。 支持所有索引类型，包括聚集和非聚集列存储索引。  |
 |创建边缘约束    |[边缘约束&#40;Transact SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |用户可以立即创建边缘表以强制实施特定的语义的边缘约束和维护数据完整性  |
-|DROP TABLE |[删除表&#40;Transact SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |在关系表，使用的相同方式删除节点和边界表`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点或节点表在删除时。 建议删除节点表后，如果用户删除该节点表手动维护完整性的关系图中的节点连接到任何边缘。  |
+|DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |在关系表，使用的相同方式删除节点和边界表`DROP TABLE`。 但是，在此版本中，任何约束，以确保没有边缘指向已删除的节点和支持级联的删除边缘节点或节点表在删除时。 建议删除节点表后，如果用户删除该节点表手动维护完整性的关系图中的节点连接到任何边缘。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>数据操作语言 (DML) 语句

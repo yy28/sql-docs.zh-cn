@@ -15,12 +15,12 @@ ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82349ca6935f685c441dfa15fede994d19173fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685927"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661257"
 ---
 # <a name="creating-user-defined-types"></a>创建用户定义类型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Reconfigure
 ## <a name="example"></a>示例  
  以下代码列表定义了 Point UDT 中的详细信息中所述[类型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
- 通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](http://msftengprodsamples.codeplex.com/)。  
+ 通过安装 CLR 示例，可以获得在本节中讨论的其他示例的完整代码列表。 有关安装这些示例的说明，请参阅[SQL Server 数据库引擎示例](https://msftengprodsamples.codeplex.com/)。  
   
  C#  
   

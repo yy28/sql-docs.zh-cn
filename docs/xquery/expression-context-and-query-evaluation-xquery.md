@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: xml
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -20,12 +19,12 @@ ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ac74fa854d76431fd90232b79abd2dc4e32db3b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755915"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673516"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>表达式上下文和查询计算 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ ms.locfileid: "47755915"
   
     -   使用 WITH XMLNAMESPACES 定义的所有命名空间。 有关详细信息，请参阅[命名空间添加到查询使用 WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md))。  
   
-    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在以下查询中，WITH XMLNAMESPACES 声明将其绑定到命名空间的前缀 (pd) (`http://someURI`)。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
+    -   查询 Prolog 中定义的所有命名空间。 请注意，Prolog 中的命名空间声明可覆盖 WITH XMLNAMESPACES 中的命名空间声明。 例如，在以下查询中，WITH XMLNAMESPACES 声明将其绑定到命名空间的前缀 (pd) (`https://someURI`)。 但是，在 WHERE 子句中，查询 Prolog 覆盖该绑定。  
   
         ```  
-        WITH XMLNAMESPACES ('http://someURI' AS pd)  
+        WITH XMLNAMESPACES ('https://someURI' AS pd)  
         SELECT ProductModelID, CatalogDescription.query('  
             <Product   
                 ProductModelID= "{ sql:column("ProductModelID") }"   
@@ -72,7 +71,7 @@ ms.locfileid: "47755915"
         ') AS Result  
         FROM Production.ProductModel  
         WHERE CatalogDescription.exist('  
-            declare namespace  pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
+            declare namespace  pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
              /pd:ProductDescription[(pd:Specifications)]'  
             ) = 1  
         ```  
@@ -86,10 +85,10 @@ ms.locfileid: "47755915"
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
     -- go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <simpleType name="myType">  
                 <restriction base="int">  
                  <enumeration value="0" />  
@@ -134,10 +133,10 @@ ms.locfileid: "47755915"
     ```  
     DROP XML SCHEMA COLLECTION SC  
     go  
-    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="http://www.w3.org/2001/XMLSchema"   
+    CREATE XML SCHEMA COLLECTION SC AS '<schema xmlns="https://www.w3.org/2001/XMLSchema"   
     targetNamespace="myNS" xmlns:ns="myNS"  
-    xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">  
-          <import namespace="http://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
+    xmlns:s="https://schemas.microsoft.com/sqlserver/2004/sqltypes">  
+          <import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes"/>  
           <element name="Elem" type="string"/>  
     </schema>'  
     go  

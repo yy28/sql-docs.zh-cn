@@ -13,19 +13,19 @@ ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1dc2552c848b691346c57a0191f9c9200bad4523
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666165"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673546"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 函数
 **符合性**  
  版本引入了： ODBC 3.81 标准符合性： ODBC  
   
  **摘要**  
- **SQLCleanupConnectionPoolID**通知池 ID 已超时的驱动程序。池 ID 可以超时，只要中具有该池 ID 相关联的池的所有连接都已超时。请参阅[Microsoft 数据访问组件中的池](http://msdn.microsoft.com/library/ms810829.aspx)连接超时值有关的详细信息。  
+ **SQLCleanupConnectionPoolID**通知池 ID 已超时的驱动程序。池 ID 可以超时，只要中具有该池 ID 相关联的池的所有连接都已超时。请参阅[Microsoft 数据访问组件中的池](https://msdn.microsoft.com/library/ms810829.aspx)连接超时值有关的详细信息。  
   
 ## <a name="syntax"></a>语法  
   

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: a8a4cd22d4637c2d6fd86bf61d25c16dda728394
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 21034e0e7ae4e84d245d12b631c96c41760c46c4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753584"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51658809"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>使用 mssql-conf 工具配置 Linux 上的 SQL Server
 
@@ -148,7 +148,7 @@ ms.locfileid: "50753584"
    sudo systemctl restart mssql-server
    ```
 
-有关详细信息，请参阅[Linux 上的 SQL Server 客户反馈](sql-server-linux-customer-feedback.md)并[SQL Server 隐私声明](http://go.microsoft.com/fwlink/?LinkID=868444)。
+有关详细信息，请参阅[Linux 上的 SQL Server 客户反馈](sql-server-linux-customer-feedback.md)并[SQL Server 隐私声明](https://go.microsoft.com/fwlink/?LinkID=868444)。
 
 ## <a id="datadir"></a> 更改默认数据或日志目录位置
 
@@ -506,7 +506,7 @@ sudo systemctl restart mssql-server
 
 除了设置这些值，还必须配置路由并更新防火墙以允许端口 135。 有关如何执行此操作的详细信息，请参阅[如何在 Linux 上配置 MSDTC](sql-server-linux-configure-msdtc.md)。
 
-有几个可用于监视和故障排除 MSDTC 的 mssql conf 其他设置。 下表简要介绍这些设置。 有关其用法的详细信息，请参阅 Windows 支持文章中的详细信息[如何对 MS DTC 中启用诊断跟踪](https://support.microsoft.com/en-us/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
+有几个可用于监视和故障排除 MSDTC 的 mssql conf 其他设置。 下表简要介绍这些设置。 有关其用法的详细信息，请参阅 Windows 支持文章中的详细信息[如何对 MS DTC 中启用诊断跟踪](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)。
 
 | mssql-conf 设置 | Description |
 |---|---|

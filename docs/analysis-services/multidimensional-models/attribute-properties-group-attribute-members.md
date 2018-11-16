@@ -1,5 +1,5 @@
 ---
-title: 对属性成员 （离散化） 进行分组 |Microsoft 文档
+title: 对属性成员 （离散化） 进行分组 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: edf1f554a4e7829883263198b132f479b0001d5d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 622258222ef4f9dc8e4e4944daf584bc5780ea6e
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021754"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813710"
 ---
-# <a name="attribute-properties---group-attribute-members"></a>属性组属性成员的属性-
+# <a name="attribute-properties---group-attribute-members"></a>特性属性 - 组特性成员
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   成员组是系统生成的连续维度成员的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以通过名为离散化的进程将属性成员分成若干成员组。 层次结构中的级别或者包含成员组，或者包含成员，但是不能同时包含二者。 业务用户浏览包含成员组的级别时，将看见成员组的名称和单元值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 为了支持成员组而生成的成员称为分组成员，看上去与普通成员相同。  
   
@@ -24,7 +24,7 @@ ms.locfileid: "34021754"
   
 |**DiscretizationMethod** 设置|Description|  
 |--------------------------------------|-----------------|  
-|**InclusionThresholdSetting**|显示成员。|  
+|**无**|显示成员。|  
 |**自动**|选择最佳数据表示法： **EqualAreas** 方法或 **Clusters** 方法。|  
 |**EqualAreas**|尝试将属性中的成员分成若干包含相同数量成员的组。|  
 |**Clusters**|尝试通过抽样定型数据、初始化为大量随机点和运行几次期望最大化 (EM) 聚类分析算法的迭代来将属性中的成员分成若干组。<br /><br /> 本方法的好处是适用于任何分布曲线，但就处理时间而言开销较大。|  
@@ -46,7 +46,7 @@ ms.locfileid: "34021754"
   
  `<First definition> ::= <Name expression>`  
   
- `<Intermediate defintion> ::= <Name expression>`  
+ `<Intermediate definition> ::= <Name expression>`  
   
  `<Last definition> ::= <Name expression>`  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34021754"
   
 -   如果成员组所在维度的维度表经过更新，并且该维度随后得到完全处理，则会生成一个新的成员组集。 新成员组的名称和子级可能与旧成员组的不同。  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [属性和属性层次结构](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c693cf60054e03120b44ae30f631e407da8809b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659916"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669676"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47659916"
 |**counter_name**|**nchar(128)**|计数器名称。 若要获取有关计数器的详细信息，这是要从中的计数器列表中选择的主题的名称[使用 SQL Server 对象](../../relational-databases/performance-monitor/use-sql-server-objects.md)。 |  
 |**instance_name**|**nchar(128)**|计数器特定实例的名称。 通常包含数据库名称。|  
 |**cntr_value**|**bigint**|计数器的当前值。<br /><br /> **注意：** 每秒计数器，此值是累计的。 速率值必须通过对离散时间间隔的值抽样来进行计算。 任何两个连续抽样值之间的差等于针对所使用时间间隔的速率。|  
-|**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。 请参阅[WMI 性能计数器类型](http://msdn2.microsoft.com/library/aa394569.aspx)MSDN 或 Windows Server 文档有关的性能计数器类型的详细信息上。|  
+|**cntr_type**|**int**|Windows 性能体系结构定义的计数器类型。 请参阅[WMI 性能计数器类型](https://msdn2.microsoft.com/library/aa394569.aspx)MSDN 或 Windows Server 文档有关的性能计数器类型的详细信息上。|  
 |**pdw_node_id**|**int**|**适用于**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 对于此分布的节点标识符。|  
   
 ## <a name="remarks"></a>备注  

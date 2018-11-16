@@ -18,12 +18,12 @@ ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 43a055d7325421153abf8d3c4c165d1291bc5864
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 9b10a7df27a480193cf131cc95a9c98a110414f0
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217475"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667956"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>PropertyNumValue 属性（SqlServiceAdvancedProperty 类）
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ object.PropertyNumValue [= value]
 ## <a name="remarks"></a>备注  
   
 ## <a name="see-also"></a>请参阅  
- [启动和停止服务](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [启动和停止服务](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

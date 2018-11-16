@@ -23,12 +23,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081a43863385ced49fa1863c4667c8b435be6f99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d44d8031daaac656cb99a7477991dc6c30ce864
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698425"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666506"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>系统存储过程 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47698425"
   
 |类别|Description|  
 |--------------|-----------------|  
-|[活动异地复制存储过程](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理来管理 Azure SQL 数据库中的活动异地复制配置|  
+|[活动异地复制存储过程](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|用于管理来管理 Azure SQL 数据库中的活动异地复制配置|  
 |[目录存储的过程](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|用于实现 ODBC 数据字典功能，并隔离 ODBC 应用程序以使其不受基础系统表更改的影响。|  
 |[变更数据捕获存储的过程](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|用于启用、禁用、或报告变更数据捕获对象。|  
 |[游标存储过程](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|用于实现游标变量功能。|  
@@ -48,7 +48,7 @@ ms.locfileid: "47698425"
 |[数据库邮件存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|用于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例内执行电子邮件操作。|  
 |[数据库维护计划存储过程](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|用于设置管理数据库性能所需的核心维护任务。|  
 |[分布式的查询存储过程](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|用于实现和管理分布式查询。|  
-|[Filestream 和 FileTable 存储的过程&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用于配置和管理 FILESTREAM 和 FileTable 功能。|  
+|[Filestream 和 FileTable 存储的过程&#40;Transact SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|用于配置和管理 FILESTREAM 和 FileTable 功能。|  
 |[防火墙规则存储过程&#40;Azure SQL 数据库&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|用于配置 Azure SQL 数据库防火墙。|  
 |[全文搜索存储过程](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|用于实现和查询全文索引。|  
 |[常规扩展存储的过程](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)|用于提供从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 实例到外部程序的接口，以便进行各种维护活动。|  
@@ -56,16 +56,16 @@ ms.locfileid: "47698425"
 |[管理数据仓库存储的过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|用于配置管理数据仓库。|  
 |[OLE 自动化存储过程](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|用于使标准自动化对象能够在标准 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次中使用。|  
 |[基于策略的管理存储过程](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|用于基于策略的管理。|  
-|[PolyBase 存储过程](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|添加或从 PolyBase 横向扩展组中删除计算机。|  
+|[PolyBase 存储过程](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|添加或从 PolyBase 横向扩展组中删除计算机。|  
 |[查询存储存储过程&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|用于优化性能。|  
 |[复制存储过程](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|用于管理复制。|  
 |[安全性存储过程](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|用于管理安全性。|  
-|[快照备份的存储的过程](http://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用于删除 FILE_SNAPSHOT 备份以及所有快照或删除单个备份文件快照。|  
-|[空间索引存储过程](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用于分析和改善空间索引的索引性能。|  
+|[快照备份的存储的过程](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|用于删除 FILE_SNAPSHOT 备份以及所有快照或删除单个备份文件快照。|  
+|[空间索引存储过程](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)|用于分析和改善空间索引的索引性能。|  
 |[SQL Server 代理存储过程](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 用于监视性能和活动。|  
 |[SQL Server Profiler 存储过程](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理用于管理计划的活动和事件驱动的活动。|  
 |[Stretch Database 存储过程](../../relational-databases/system-stored-procedures/stretch-database-extended-stored-procedures-transact-sql.md)|用于管理延伸数据库。|  
-|[临时表的存储的过程](http://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|使用的临时表|  
+|[临时表的存储的过程](https://msdn.microsoft.com/library/f28ca74e-7876-4592-b794-e78e3690fff6)|使用的临时表|  
 |[XML 存储过程](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)|用于 XML 文本管理。|  
   
 > [!NOTE]  

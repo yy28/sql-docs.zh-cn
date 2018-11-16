@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 11/08/2018
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,12 +16,12 @@ ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fe2eb1d6d5c83a85fed628b02869cbf7b29eee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385826be9e980c2e6a46c880dd6248fd355dade1
+ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679995"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51350263"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript ADO 编程
 ## <a name="creating-an-ado-project"></a>创建 ADO 项目  
@@ -35,14 +35,14 @@ ms.locfileid: "47679995"
   
  您可以复制，将从这些文件的常量定义粘贴到 ASP 页中，或者，如果你正在执行服务器端脚本，将 Adovbs.inc 文件复制到你的网站上的文件夹和引用从 ASP 页如下：  
   
-```  
+```vb
 <!--#include File="adovbs.inc"-->  
 ```  
   
 ## <a name="creating-ado-objects-in-vbscript"></a>在 VBScript 中创建 ADO 对象  
  不能使用**Dim**语句将分配给 VBScript 中的特定类型的对象。 此外，VBScript 不支持**新建**与一起使用的语法**Dim**在应用程序的 Visual Basic 中的语句。 必须改用**CreateObject**函数调用：  
   
-```  
+```vb
 Dim Rs1  
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 ```  
@@ -50,14 +50,14 @@ Set Rs1 = Server.CreateObject( "ADODB.Recordset" )
 ## <a name="vbscript-examples"></a>VBScript 示例  
  以下代码是 VBScript Active Server Page (ASP) 文件中的服务器端编程的一般示例：  
   
-```  
-<%  @LANGUAGE="VBSCRIPT" %>  
-<%  Option Explicit %>  
+```vb
+<%  @LANGUAGE="VBSCRIPT" %>  
+<%  Option Explicit %>  
 <!--#include File="adovbs.inc"-->  
 <HTML>  
-    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
+    <BODY BGCOLOR="White" topmargin="10" leftmargin="10">  
   
-    <!-- Your ASP Code goes here -->  
+    <!-- Your ASP Code goes here -->  
 <%  
 Dim Source  
 Dim Connect  
@@ -65,13 +65,13 @@ Dim Rs1
   
 Source = "SELECT * FROM Authors"  
 Connect = "Provider=sqloledb;Data Source=srv;" & _  
-    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
+    "Initial Catalog=Pubs;Integrated Security=SSPI;"  
   
 Set Rs1 = Server.CreateObject( "ADODB.Recordset" )  
 Rs1.Open Source, Connect, adOpenForwardOnly  
 Response.Write("Success!")  
 %>  
-    </BODY>  
+    </BODY>  
 </HTML>  
 ```  
   

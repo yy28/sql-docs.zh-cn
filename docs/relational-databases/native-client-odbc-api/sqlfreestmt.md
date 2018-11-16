@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9555c5fd335abcf4069c4ca9241bbade8f71771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32b1f1185dad9b173c12f3acb232c2426d5db411
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844198"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51664896"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47844198"
  一般情况下，它是重复使用比删除它们并分配新的语句更有效。 但是在某些情况下，重复使用的语句，如 SQLFreeStmt 仍必须使用。  
   
 ## <a name="see-also"></a>请参阅  
- [SQLFreeStmt 函数](http://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt 函数](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 实现细节](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

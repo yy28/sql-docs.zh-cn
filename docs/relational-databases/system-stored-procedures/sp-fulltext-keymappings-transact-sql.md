@@ -21,12 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deece034b6ef4f6159a34705b21e39d8279f36f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8e07af93050ec752a9cf26b56238269ca63aa9d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716285"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660476"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  与键值相对应的内部文档标识符 (DocId)。 无效的 *docid* 值不会返回任何结果。  
   
  *密钥*  
- 指定表中的全文键值。 无效的 *key* 值不会返回任何结果。 有关全文索引键值的信息，请参阅[管理全文索引](http://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
+ 指定表中的全文键值。 无效的 *key* 值不会返回任何结果。 有关全文索引键值的信息，请参阅[管理全文索引](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1)。  
   
 > [!IMPORTANT]  
 >  有关使用一个、两个或三个参数的信息，请参阅本主题后面的“备注”部分。  
@@ -90,7 +90,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>示例  
   
 > [!NOTE]  
->  本节在此示例使用`Production.ProductReview`表的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]示例数据库。 可以通过执行为提供的示例创建此索引`ProductReview`表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
+>  本节中的示例使用 `Production.ProductReview` 示例数据库的 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 表。 可以通过执行为提供的示例创建此索引`ProductReview`表中[CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)。  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 获取所有键和 DocId 值  
  下面的示例使用[DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md)语句以创建一个本地变量`@table_id`并将分配的 ID`ProductReview`作为其值的表。 该示例执行**sp_fulltext_keymappings**指定`@table_id`有关*table_id*参数。  

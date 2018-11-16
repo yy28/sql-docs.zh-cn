@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 492980354eebb0da5a89a138abc2888499afd065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232df02a18bc69a612f9c5a7ea9cdd8da8c75320
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831995"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51655496"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47831995"
 -   **IMultipleResults::GetResult**  
   
 ## <a name="see-also"></a>请参阅  
- [接口&#40;OLE DB&#41;](http://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
+ [接口&#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [执行异步操作](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   

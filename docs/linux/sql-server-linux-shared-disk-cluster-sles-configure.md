@@ -10,18 +10,18 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
-ms.openlocfilehash: 84c242d3c7c8e38642f1ee76f109f90a1ea9520e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cce3c1f06978ba0ff5b9630bdaa5f5aebc0ddf1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635815"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667986"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>配置适用于 SQL Server 的 SLES 共享磁盘群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建两节点的共享磁盘群集。 群集层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](http://clusterlabs.org/)。 
+本指南介绍如何在 SUSE Linux Enterprise Server (SLES) 上为 SQL Server 创建两节点的共享磁盘群集。 群集层基于 SUSE[高可用性扩展 (HAE)](https://www.suse.com/products/highavailability)基础上构建[Pacemaker](https://clusterlabs.org/)。 
 
 有关群集配置、 资源代理选项、 管理、 最佳实践和建议的详细信息，请参阅[SUSE Linux Enterprise 高 Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 

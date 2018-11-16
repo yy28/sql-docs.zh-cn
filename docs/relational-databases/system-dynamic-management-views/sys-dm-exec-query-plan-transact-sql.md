@@ -19,19 +19,19 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797185"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671193"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   以 XML 格式返回计划句柄指定的批查询的显示计划。 计划句柄指定的计划可以处于缓存或正在执行状态。  
   
- 显示计划 XML 架构已发布并可在[此 Microsoft 网站上](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
+ 显示计划 XML 架构已发布并可在[此 Microsoft 网站上](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)。 也可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安装目录中找到该架构。  
   
  ![主题链接图标](../../database-engine/configure-windows/media/topic-link.gif "主题链接图标") [TRANSACT-SQL 语法约定](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

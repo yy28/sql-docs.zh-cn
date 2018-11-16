@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf04bac335e35088c1faf7a29b2e07b1ad324add
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa87aa3514af538f55965b00efe8f5965f5c753f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674306"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47602585"
   
  大量重试表示存在并发问题；请致电 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支持部门。  
   
- 有关内存优化的非聚集索引的详细信息，请参阅[SQL Server 内存中 OLTP 内部组件概述](http://t.co/T6zToWc6y6)，第 17 页。  
+ 有关内存优化的非聚集索引的详细信息，请参阅[SQL Server 内存中 OLTP 内部组件概述](https://t.co/T6zToWc6y6)，第 17 页。  
   
 |列名|数据类型|Description|  
 |-----------------|---------------|-----------------|  

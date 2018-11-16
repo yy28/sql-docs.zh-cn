@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 796e3e1d888c765bd54b817cb6547adbba21f2c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8868a654d46842acea95d087ec54831b210ba16a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735095"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672916"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47735095"
 |thread_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |详细信息|**nvarchar(4000)**|保存完整的错误文本说明。||  
   
- 此视图按保留的最大行有关的信息，请参阅中的系统视图的最大值部分[最小和最大值 (SQL Server PDW)](http://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)主题。  
+ 此视图按保留的最大行有关的信息，请参阅中的系统视图的最大值部分[最小和最大值 (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9)主题。  
   
 ## <a name="see-also"></a>请参阅  
  [SQL 数据仓库和并行数据仓库动态管理视图&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

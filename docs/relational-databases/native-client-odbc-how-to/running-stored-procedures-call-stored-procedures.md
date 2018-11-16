@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b6c57b37948110bca985994686e43f83de6e30b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce757524bd43c403e89aaa1ebf0461c8e31ff381
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663406"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>运行存储过程 - 调用存储过程
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47595395"
   
 2.  调用[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)对每个输入、 输入/输出和输出参数，以及过程返回值 （如果有）。  
   
-3.  使用执行语句[SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399)。  
+3.  使用执行语句[SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)。  
   
 > [!NOTE]  
 >  如果应用程序使用 Transact-SQL EXECUTE 语法提交过程（这与 ODBC CALL 转义序列相反），SQL Server ODBC 驱动程序会将过程调用作为 SQL 语句（而非 RPC）传递给 SQL Server。 此外，如果未使用 Transact-SQL EXECUTE 语句，则不会返回输出参数。  

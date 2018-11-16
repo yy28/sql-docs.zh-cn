@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a97dc3f074a1302f852f710f05eb51e1ba1350c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649848"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681225"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
+**适用范围**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] （[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658)）。  
 
 将备份设备添加到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的实例中。  
   

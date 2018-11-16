@@ -10,23 +10,23 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c828c2345bf87461ba924cbdd23eb262336d1dcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec5ed0ce61c1b1f48ecc148326b9a1906ff95122
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715455"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51670816"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>对 SQL Server 可用性组配置 RHEL 群集
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文档介绍如何为 Red Hat Enterprise Linux 上的 SQL Server 中创建三个节点的可用性组群集。 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](http://clusterlabs.org/)。 
+本文档介绍如何为 Red Hat Enterprise Linux 上的 SQL Server 中创建三个节点的可用性组群集。 Linux 上的可用性组以实现高可用性，需要三个节点-请参阅[可用性组配置的高可用性和数据保护](sql-server-linux-availability-group-ha.md)。 群集层基于 Red Hat Enterprise Linux (RHEL) 上[HA 加载项](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)基础上构建[Pacemaker](https://clusterlabs.org/)。 
 
 > [!NOTE] 
 > 访问 Red Hat 完整文档需要有效订阅。 
 
-有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
+有关群集配置、 资源代理选项和管理的详细信息，请访问[RHEL 参考文档](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html)。
 
 > [!NOTE] 
 > SQL Server 未紧密集成与 Linux 上的 Pacemaker 这一点与 Windows Server 故障转移群集。 SQL Server 实例不识别群集。 Pacemaker 提供了群集资源的业务流程。 此外，虚拟网络名称特定于 Windows Server 故障转移群集-Pacemaker 中没有等效项。 Pacemaker 群集上，查询群集信息的可用性组动态管理视图 (Dmv) 返回空行。 若要创建故障转移后的透明重新连接的侦听器，手动在使用用于创建虚拟 IP 资源的 IP 的 DNS 中注册的侦听器名称。 
@@ -58,7 +58,7 @@ ms.locfileid: "47715455"
 
 ### <a name="enable-the-high-availability-subscription-for-rhel"></a>启用适用于 RHEL 高可用性的订阅
 
-在群集中每个节点必须具有相应的订阅针对 RHEL 和高可用性添加。 查看在要求[如何在 Red Hat Enterprise Linux 中安装高可用性群集包](http://access.redhat.com/solutions/45930)。 请执行以下步骤来配置的订阅和存储库：
+在群集中每个节点必须具有相应的订阅针对 RHEL 和高可用性添加。 查看在要求[如何在 Red Hat Enterprise Linux 中安装高可用性群集包](https://access.redhat.com/solutions/45930)。 请执行以下步骤来配置的订阅和存储库：
 
 1. 注册系统。
 
@@ -88,7 +88,7 @@ ms.locfileid: "47715455"
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-有关详细信息，请参阅[Pacemaker-打开源服务器，高可用性群集](http://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)。 
+有关详细信息，请参阅[Pacemaker-打开源服务器，高可用性群集](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)。 
 
 配置了订阅后，完成配置 Pacemaker 的以下步骤：
 
@@ -110,9 +110,9 @@ Pacemaker 群集供应商需要启用 STONITH，并对支持的群集安装程�
 
 有关 STONITH 和隔离的信息，请参阅以下文章：
 
-* [从零开始的 pacemaker 群集](http://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
-* [隔离和 STONITH](http://clusterlabs.org/doc/crm_fencing.html)
-* [Red Hat 与 Pacemaker 的高可用性外接程序： 隔离](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
+* [从零开始的 pacemaker 群集](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [隔离和 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+* [Red Hat 与 Pacemaker 的高可用性外接程序： 隔离](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
 由于节点级别隔离配置很大程度取决于你的环境，则在本教程中 （它可以配置更高版本） 的情况下禁用它。 以下脚本可以禁用节点级别隔离：
 
@@ -149,7 +149,7 @@ pcs resource update ag1 meta failure-timeout=60s
 ```
 
 
-有关 Pacemaker 群集属性的信息，请参阅[Pacemaker 群集属性](http://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
+有关 Pacemaker 群集属性的信息，请参阅[Pacemaker 群集属性](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/ch-clusteropts-HAAR.html)。
 
 ## <a name="create-a-sql-server-login-for-pacemaker"></a>为 Pacemaker 创建 SQL Server 登录名
 
