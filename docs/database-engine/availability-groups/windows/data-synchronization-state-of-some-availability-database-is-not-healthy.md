@@ -14,12 +14,12 @@ ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7282c310d9cce29761af6536598b9c1184a94455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9260f9de24d282b3b6ce5c4e46b4572e01aafa9
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787866"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51604449"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>一些可用性数据库的数据同步状态不正常
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47787866"
  此策略检查可用性数据库（也称为“数据库副本”）的数据同步状态。 当数据同步状态为 NOT SYNCHRONIZING 或同步提交数据库副本的状态不为 SYNCHRONIZED 时，此策略处于不正常状态。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性数据库的数据同步状态不正常](http://go.microsoft.com/fwlink/p/?LinkId=220863) 中。  
+>  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [可用性数据库的数据同步状态不正常](https://go.microsoft.com/fwlink/p/?LinkId=220863) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  副本上至少一个可用性数据库处于不正常数据同步状态。 如果该副本是异步-提交可用性副本，则所有可用性数据库都应该处于“正在同步”状态。 如果这是同步提交可用性副本，所有可用性数据库应处于 SYNCHRONIZED 状态。 此问题可能由以下原因导致：  

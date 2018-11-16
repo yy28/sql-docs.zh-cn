@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0785cd58ffed215f9cebf29a62e40c70cc96c720
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 594dce3e2a973179d3c056fe6c6ff447bd59c844
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850565"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51603767"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 群集服务处于脱机状态
 
@@ -41,7 +41,7 @@ ms.locfileid: "47850565"
  在群集状态为正常仲裁时，此群集状态是正常的。  
   
 > [!NOTE]  
->  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [WSFC 群集服务处于脱机状态](http://go.microsoft.com/fwlink/p/?LinkId=220849) 中。  
+>  对于此版本的 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，与可能原因和解决方法有关的信息位于 TechNet Wiki 上的 [WSFC 群集服务处于脱机状态](https://go.microsoft.com/fwlink/p/?LinkId=220849) 中。  
   
 ## <a name="possible-causes"></a>可能的原因  
  此问题可能是由于群集服务问题或在群集中缺少仲裁导致的。  

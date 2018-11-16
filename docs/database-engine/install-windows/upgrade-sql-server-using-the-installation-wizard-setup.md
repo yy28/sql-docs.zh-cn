@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e1ef574febdd3c4624138c70d5d5d8acb74c6a3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840849b3d08feac21dd5b96235405773fc06f64c
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803706"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607157"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安装向导升级 SQL Server（安装程序）
 
@@ -112,7 +112,7 @@ ms.locfileid: "47803706"
   
 14. 在“服务器配置 - 服务帐户”页上，显示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务的默认服务帐户。 此页上配置的实际服务取决于要升级的功能。  
   
-     身份验证和登录信息将从早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例继承。 您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+     身份验证和登录信息将从早期的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例继承。 您可以为所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务分配相同的登录帐户，也可以单独配置各个服务帐户。 您还可以指定是自动启动、手动启动还是禁用服务。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建议对各服务帐户进行单独配置，以便向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务授予它们完成各自任务所必须拥有的最低权限。 有关详细信息，请参阅 [配置 Windows 服务帐户和权限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)预览版本升级问题的解答。  
   
      若要为此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]实例中的所有服务帐户指定相同的登录帐户，请在页面底部的字段中提供凭据。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "47803706"
   
      为 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服务指定登录信息后，请单击 **“下一步”**。  
   
-15. 在“全文搜索升级选项”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](http://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
+15. 在“全文搜索升级选项”页上为所升级的数据库指定升级选项。 有关详细信息，请参阅 [全文搜索升级选项](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9)。  
   
 16. 如果所有规则均通过验证，则“功能规则”窗口将自动前进。  
   
@@ -143,6 +143,6 @@ ms.locfileid: "47803706"
   
 ## <a name="see-also"></a>另请参阅  
  [升级 SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [向后兼容性_已删除](http://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [向后兼容性_已删除](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   
   

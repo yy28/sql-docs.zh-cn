@@ -10,12 +10,12 @@ ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b81e501c153bb0789a1cf1cefd0c148dc9d96f9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa46327ef5037c70c25c156b9d224ea66218020f
+ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731555"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51601323"
 ---
 # <a name="clusterlog-always-on-availability-groups"></a>CLUSTER.LOG（Always On 可用性组）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "47731555"
 ## <a name="generate-cluster-log"></a>生成群集日志  
  可以通过两种方式来生成群集日志：  
   
-1.  在命令提示符处使用 `cluster /log /g` 命令。 此命令会将群集日志生成到每个 WSFC 节点上的 \windows\cluster\reports 目录。 此方法的优点是，可以使用 `/level` 选项在生成的日志中指定详细信息级别。 其缺点在于，不能为生成的群集日志指定目标目录。 有关详细信息，请参阅 [How to create the cluster.log in Windows Server 2008 Failover Clustering](http://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)（如何在 Windows Server 2008 故障转移群集中创建 cluster.log）。  
+1.  在命令提示符处使用 `cluster /log /g` 命令。 此命令会将群集日志生成到每个 WSFC 节点上的 \windows\cluster\reports 目录。 此方法的优点是，可以使用 `/level` 选项在生成的日志中指定详细信息级别。 其缺点在于，不能为生成的群集日志指定目标目录。 有关详细信息，请参阅 [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)（如何在 Windows Server 2008 故障转移群集中创建 cluster.log）。  
   
-2.  使用 [Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet。 此方法的优点是，可以从所有节点将群集日志生成到运行 cmdlet 的节点上的一个目标目录。 其缺点在于，不能在生成的日志中指定详细信息级别。  
+2.  使用 [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet。 此方法的优点是，可以从所有节点将群集日志生成到运行 cmdlet 的节点上的一个目标目录。 其缺点在于，不能在生成的日志中指定详细信息级别。  
   
  以下 PowerShell 命令在过去 15 分钟内从所有群集节点生成群集日志，并将其放在当前目录中。 在具有管理权限的 PowerShell 窗口中运行命令。  
   
@@ -57,7 +57,7 @@ Get-ClusterLog –TimeSpan 15 –Destination .
 8.  再次右键单击可用性组资源，然后单击“将此资源联机”。  
   
 ## <a name="availability-group-resource-events"></a>可用性组资源事件  
- 下表显示了可在 CLUSTER.LOG 中看到的不同种类的事件，这些事件与可用性组资源有关。 有关 WSFC 中资源宿主子系统 (RHS) 和资源控制监视器 (RCM) 的详细信息，请参阅 [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](http://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)（Windows Server 2008 故障转移群集中的资源宿主子系统 (RHS)）。  
+ 下表显示了可在 CLUSTER.LOG 中看到的不同种类的事件，这些事件与可用性组资源有关。 有关 WSFC 中资源宿主子系统 (RHS) 和资源控制监视器 (RCM) 的详细信息，请参阅 [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)（Windows Server 2008 故障转移群集中的资源宿主子系统 (RHS)）。  
   
 |Identifier|数据源|CLUSTER.LOG 中的示例|  
 |----------------|------------|------------------------------|  
