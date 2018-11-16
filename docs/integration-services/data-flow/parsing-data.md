@@ -14,12 +14,12 @@ ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3b98b9cd1b4c99ba6fec20d8fe4912013aba1ea6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2ec789b32bb23fbdc2ac48278b16a02588d2580
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664287"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638580"
 ---
 # <a name="parsing-data"></a>分析数据
   包中的数据流在异类数据存储区之间提取和加载数据，这些存储区可能使用多种标准数据类型和自定义数据类型。 在数据流中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 源完成提取数据、分析字符串数据以及将数据转换成 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 数据类型的工作。 后续转换可以分析数据，以将其转换为不同的数据类型，或者创建不同数据类型的列副本。 在组件中使用的表达式还可以将参数和操作数转换为不同的数据类型。 最后，在将数据加载到数据存储区时，目标可以分析该数据，以将其转换为目标所使用的数据类型。 有关详细信息，请参阅 [Integration Services 数据类型](../../integration-services/data-flow/integration-services-data-types.md)。  
@@ -201,5 +201,5 @@ ms.locfileid: "47664287"
 ## <a name="standard-parse"></a>Standard Parse
 标准分析是一组受区域设置影响的分析例程，这些例程支持 Oleaut32.dll 和 Ole2dsip.dll 中可用的自动数据类型转换 API 所提供的全部数据类型转换。 标准分析相当于 OLE DB 分析 API。  
   
- 标准分析支持国际数据的数据类型转换，且快速分析不支持数据格式时应使用标准分析。 有关自动化数据类型转换 API 的详细信息，请参阅 [MSDN Library](http://go.microsoft.com/fwlink/?LinkId=79427)中的“Data Type Conversion APIs”（数据类型转换 API）。 
+ 标准分析支持国际数据的数据类型转换，且快速分析不支持数据格式时应使用标准分析。 有关自动化数据类型转换 API 的详细信息，请参阅 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=79427)中的“Data Type Conversion APIs”（数据类型转换 API）。 
  

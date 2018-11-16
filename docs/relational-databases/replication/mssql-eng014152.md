@@ -13,12 +13,12 @@ ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c0ce292ca4fd2790eb9b919bae2f4a5caa1a2db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19c4d989570365e5216aaf833a55c6c69703129c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729717"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673336"
 ---
 # <a name="mssqleng014152"></a>MSSQL_ENG014152
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47729717"
   
  使用 [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) 查看指定复制代理将要重试的“运行代理”  步骤的当前最大尝试次数设置。 您可以使用 **@retry_attempts** 存储过程的 [@retry_attempts](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) 参数来调整作业步骤重试的尝试次数。  
   
- 如果重试消息频繁重复出现，则应根据错误消息排除导致重试的问题。 对于指示为何必须计划重试的消息，检查代理的历史记录。 某些情况下，您可能需要对复制代理启用更详细的日志记录。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](http://support.microsoft.com/kb/312292)。  
+ 如果重试消息频繁重复出现，则应根据错误消息排除导致重试的问题。 对于指示为何必须计划重试的消息，检查代理的历史记录。 某些情况下，您可能需要对复制代理启用更详细的日志记录。 有关如何配置复制日志记录的详细信息，请参阅 Microsoft 知识库文章 [312292](https://support.microsoft.com/kb/312292)。  
   
 ## <a name="see-also"></a>另请参阅  
  [错误和事件参考（复制）](../../relational-databases/replication/errors-and-events-reference-replication.md)  

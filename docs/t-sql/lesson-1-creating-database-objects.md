@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c87cdbe7f96b3775a4ecfc475436e2996c212e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb8e352e18331142adf23a76371d49d8403a4cd
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630115"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51696815"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>第 1 课：创建和查询数据库对象
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "47630115"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句可以使用下列方法进行编写并提交到 [!INCLUDE[ssDE](../includes/ssde-md.md)] ：  
   
--   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 本教程假定使用的是 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express（可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?linkid=67359)免费下载）。  
+-   通过使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]。 本教程假定使用的是 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]，但是也可以使用 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express（可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=67359)免费下载）。  
   
 -   通过使用 [sqlcmd 实用工具](../tools/sqlcmd-utility.md)。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "47630115"
 |||  
 |-|-|  
 |[字符串函数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)|[日期和时间数据类型及函数 (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[数学函数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[文本与图像函数 (Transact-SQL)](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[数学函数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[文本与图像函数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>创建视图和存储过程
 视图是存储的 SELECT 语句，而存储过程是以批处理方式执行的一条或多条 [!INCLUDE[tsql](../includes/tsql-md.md)] 语句。  

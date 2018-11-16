@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f45da55ab27ba8043409b78663be008d7be9720f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 4fafda7376f5c44c795fab85c6659cf5824522e1
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216805"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51677896"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的更改日志
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -534,11 +534,11 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - 表格：针对 DAX 分析和公式栏的多种增强和性能修复。
 - 表格：如果没有打开 SSAS 表格项目，则不显示表格模型资源管理器。
 - 多维：解决了高 DPI 计算机上处理对话框不可用的问题。
-- 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
-- 表格：解决了在 1103 模式下层次结构未正确保存到 bim 文件的问题。[连接项](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 表格：解决了在已打开 SSMS 的情况下，打开任何 BI 项目将导致 SSDT 故障的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 表格：解决了在 1103 模式下层次结构未正确保存到 bim 文件的问题。[连接项](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - 表格：解决了尽管不支持，但仍能在 32 位计算机上允许集成工作区模式的问题。
 - 表格：解决了在准选择模式下单击任何内容（例如键入 DAX 表达式，但单击一个度量值）可能导致崩溃的问题。
-- 表格：解决了部署向导将模型的 .Name 属性重置为“模型”的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 表格：解决了部署向导将模型的 .Name 属性重置为“模型”的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - 表格：修复了在 TME 中选择层次结构时，即使未选择关系图视图也应显示属性的问题。
 - 表格：解决了从某些应用程序中粘贴时，粘贴到 DAX 公式栏的操作将粘贴图像或其他内容（而非文本）的问题。
 - 表格：解决了由于存在具有特定定义的度量值，无法打开 1103 中某些旧模型的问题。
@@ -569,8 +569,8 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 - 解决了在 SSDT 中设计报表时多数更改会导致参数、数据源和数据集的树状视图发生折叠的问题 
 - 解决了“保存”应该保存 RDL 的版本而非最新版本的问题。
 - 解决了当备份已关闭时，SSDT RS 备份文件的问题以及一些其他问题。
-- 解决了在报表生成器中单击“拆分单元格”时将显示错误的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- 解决了缓存可能导致报表数据不正确的问题。 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- 解决了在报表生成器中单击“拆分单元格”时将显示错误的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- 解决了缓存可能导致报表数据不正确的问题。 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
 **IS 项目：**
 - 解决了 run64bitruntime 设置不粘滞的问题。
@@ -582,7 +582,7 @@ SSDT for Visual Studio 2017 (15.5.0) 不再提供预览版，改为提供正式�
 
 **数据库项目：**
 - SSDT DACPAC 重新部署并添加 IgnoreColumnOrder 设置 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
-- SSDT 在使用 STRING_SPLIT 的情况下会编译失败 [连接项](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- SSDT 在使用 STRING_SPLIT 的情况下会编译失败 [连接项](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - 解决了 DeploymentContributors 有权访问公共模型，但支持架构尚未初始化的问题 [Github 问题](https://github.com/Microsoft/DACExtensions/issues/8)
 - FILEGROUP 位置的 DacFx 临时修补程序
 - 修复了外部同义词的“未解析的引用”错误。 
@@ -743,7 +743,7 @@ SSDT Tabular 现在包含内部 SSAS 实例，如果启用集成工作区模式�
     - **SSDT：**
         - 连接 bug 1898001 [修复了列说明存在的 128 字符限制的问题](https://connect.microsoft.com/SQLServer/feedback/details/1898001/column-description-limited-to-128-characters)。
         - 修复了以下问题：从 VS 发布数据库不会应用发布配置文件 xml 中的 DatabaseServiceObjective 属性。
-        - 连接 bug 2900167 [修复了运行单元测试时错误地留下临时文件的问题](http://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
+        - 连接 bug 2900167 [修复了运行单元测试时错误地留下临时文件的问题](https://connect.microsoft.com/SQLServer/feedback/details/2900167/running-ssdt-unit-tests-leaves-temp-files-behind)。
         - 修复了以下问题：“数据库设置”中的“保留期”组合框被截断。
         - 修复了更改密码时，不会验证 SQL CLR 项目属性中的空旧密码的问题。
     - **DACFx：**

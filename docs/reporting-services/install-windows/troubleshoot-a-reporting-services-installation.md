@@ -7,18 +7,18 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a448e9096fce3b799a601cb0218ad6767090bc1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 4df963c826675b5c837200c4ab69037800b9dc5c
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020321"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814020"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>排除 Reporting Services 安装故障
 
   如果由于安装期间出现错误而导致无法安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，请使用本文中的说明来解决最有可能导致安装错误的情况。  
   
- 有关与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的其他错误和问题，请参阅[解决 SSRS 问题和错误](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
+ 有关与 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相关的其他错误和问题，请参阅[解决 SSRS 问题和错误](https://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
  查看[联机发行说明](https://go.microsoft.com/fwlink/?linkid=236893) ，也许在发行说明中会论及你遇到的问题。  
   
@@ -165,7 +165,7 @@ ms.locfileid: "50020321"
   
 -   查看有关开发环境的 SharePoint 文章。 [为 SharePoint 设置常规开发环境](https://msdn.microsoft.com/library/ee554869)  
   
--   查阅论坛帖子： [在 Windows 7 上进行安装后管理中心返回空白页](http://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
+-   查阅论坛帖子： [在 Windows 7 上进行安装后管理中心返回空白页](https://social.technet.microsoft.com/Forums/en/sharepoint2010setup/thread/a422a3c8-39f6-4b9e-988a-4c4d1e745694)  
   
 -   用于 SharePoint 2013/2016 管理中心服务等 SharePoint 服务的服务帐户在本地操作系统中应具有管理权限。  
   
@@ -267,9 +267,9 @@ ms.locfileid: "50020321"
 ##  <a name="bkmk_additional"></a> 其他资源  
  可以查阅以下资源，帮助解决问题：  
   
--   TechNet Wiki：[排除 SharePoint 2010 集成模式下的 SQL Server Reporting Services (SSRS) 问题](http://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
+-   TechNet Wiki：[排除 SharePoint 2010 集成模式下的 SQL Server Reporting Services (SSRS) 问题](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [论坛：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [论坛：SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
 -   获得反馈或提出更多问题？ 请访问 [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server)。  
   

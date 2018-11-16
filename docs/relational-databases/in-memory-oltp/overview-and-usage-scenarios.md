@@ -5,20 +5,19 @@ ms.date: 04/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69b27bc4eba03a7f9c9bf83880f680720402ad3c
-ms.sourcegitcommit: 54e480afa91e041124c73b7206df73958f4dfa9e
+ms.openlocfilehash: c7c22748f79ecf91239255374716e29c729eca34
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150188"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51660366"
 ---
 # <a name="overview-and-usage-scenarios"></a>概述和使用方案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "50150188"
 
 ## <a name="in-memory-oltp-overview"></a>内存中 OLTP 概述
 
-对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 客户 bwin 充分利用内存中 OLTP，只通过一台运行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的计算机，便成功 [实现每秒 120 万次的请求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一个客户 Quorum 也充分利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的内存中 OLTP，成功将其工作负荷翻倍，同时其[资源使用率减少 70%](https://customers.microsoft.com/en-US/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
+对于合适的工作负荷，In-Memory OLTP 可提供显著的性能增益。 客户 bwin 充分利用内存中 OLTP，只通过一台运行 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的计算机，便成功 [实现每秒 120 万次的请求](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)。 另一个客户 Quorum 也充分利用 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中的内存中 OLTP，成功将其工作负荷翻倍，同时其[资源使用率减少 70%](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)。 虽然在某些情况下，客户可实现高达 30 倍的性能增益，但是增益的多少取决于工作负荷。
 
 那么是如何实现性能增益的呢？ 本质上，内存中 OLTP 通过提高数据访问和事务执行的效率和移除并发执行事务间的锁闩连接，来提升事务处理的性能：不是因为在内存中速度才快；而是因为内存中的数据得以优化速度才快。 数据存储、访问和处理算法经完全重新设计，以此来充分利用内存中和高并发计算的最新增强功能。
 
@@ -67,8 +66,8 @@ ms.locfileid: "50150188"
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 实现了一直都很低的延迟：[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/en-us/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)（一秒钟的等待时间都太长，现在这家金融服务公司要更新其贸易软件）。
-- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 支持更大的吞吐量和处理剧增的工作负荷：[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/en-us/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)（在线游戏公司不希望拿将来冒险时，都会选择 SQL Server 2016）。
+- CMC Markets 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 实现了一直都很低的延迟：[Because a second is too long to wait, this financial services firm is updating its trading software now](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)（一秒钟的等待时间都太长，现在这家金融服务公司要更新其贸易软件）。
+- Derivco 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 支持更大的吞吐量和处理剧增的工作负荷：[When an online gaming company doesn’t want to risk its future, it bets on [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)（在线游戏公司不希望拿将来冒险时，都会选择 SQL Server 2016）。
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>数据引入，包括 IoT（物联网）
@@ -93,9 +92,9 @@ ms.locfileid: "50150188"
  
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](http://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，提高了批量数据加载的性能，同时不再需要维持中层缓存：[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/en-us/story/data-services-firm-gains-real-time-access-to-product-d)（数据服务公司通过内存中技术实现了实时访问产品数据）
-- 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/en-us/story/strengthening-data-security-and-creating-more-time-for]
+- [Quorum doubles key database’s workload while lowering utilization by 70% by leveraging In-Memory OLTP in Azure SQL Database](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
+- EdgeNet 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，提高了批量数据加载的性能，同时不再需要维持中层缓存：[Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)（数据服务公司通过内存中技术实现了实时访问产品数据）
+- 贝斯以色列女执事医疗中心利用 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，大幅提高了从域控制器引入数据的速率，同时可以处理剧增的工作负荷：[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for]
 
 ### <a name="caching-and-session-state"></a>缓存和会话状态
 
@@ -113,7 +112,7 @@ ms.locfileid: "50150188"
 
 #### <a name="customer-case-studies"></a>客户案例研究
 
-- bwin 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，成功大幅提高吞吐量，并减少了 ASP.NET 会话状态对硬件的占用：[Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/en-us/story/gaming-site-can-scale-to-250000-requests-per-second-an)（游戏网站每秒可处理 250,000 次请求，改善了玩家体验）
+- bwin 通过 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中的内存中 OLTP，成功大幅提高吞吐量，并减少了 ASP.NET 会话状态对硬件的占用：[Gaming Site Can Scale to 250,000 Requests Per Second and Improve Player Experience](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)（游戏网站每秒可处理 250,000 次请求，改善了玩家体验）
 - bwin 利用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的内存中 OLTP 技术，通过 ASP.NET 会话状态进一步提高吞吐量，并实现了企业级中间层缓存系统：[How bwin is using [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] In-Memory OLTP to achieve unprecedented performance and scale](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)（bwin 如何使用 SQL Server 2016 内存中 OLTP 达到前所未有的性能和规模）
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 对象替换
@@ -224,7 +223,7 @@ GO
 
 ## <a name="resources-to-learn-more"></a>更多信息详见资源：
 
-[可提高 T-SQL 性能的内存中 OLTP 技术](http://msdn.microsoft.com/library/mt694156.aspx)   
+[可提高 T-SQL 性能的内存中 OLTP 技术](https://msdn.microsoft.com/library/mt694156.aspx)   
 有关使用内存中 OLTP 的性能演示，请参阅：[in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
 [17-minute video explaining In-Memory OLTP and showing the demo](https://www.youtube.com/watch?v=l5l5eophmK4) （介绍和演示内存中 OLTP 的 17 分钟视频）（演示在 8 分 25 秒处）   
 [用于启用内存中 OLTP 和设置推荐选项的脚本](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
@@ -233,4 +232,4 @@ GO
 [使用内存优化改进临时表和表变量性能](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)   
 [在 SQL 数据库中使用内存中技术优化性能](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)  
 [系统版本控制临时表与内存优化表](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
-[内存中 OLTP – 常见工作负荷模式和迁移注意事项](http://msdn.microsoft.com/library/dn673538.aspx)。 
+[内存中 OLTP – 常见工作负荷模式和迁移注意事项](https://msdn.microsoft.com/library/dn673538.aspx)。 

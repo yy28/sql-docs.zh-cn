@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c2b6e5c1f33b60cd2dc9d2dd58599ffbccf1b4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d6ad65d148f35255a93563cbdcb247efe8a61da
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666645"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51661336"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>配合使用 Always Encrypted 和 .NET Framework 数据提供程序进行开发
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -570,7 +570,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>另请参阅
 
 - [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [始终加密博客](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
+- [始终加密博客](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL 数据库教程：使用始终加密保护敏感数据](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 

@@ -15,22 +15,22 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 707ab28617129f16bd3e3bbf142349dcba6ff49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684875"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51665736"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>配置 IIS 以实现 Web 同步
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主题中的过程是为合并复制配置 Web 同步的第二个步骤。 应在为 Web 同步启用发布后执行此步骤。 有关配置过程的概述，请参阅 [“配置 Web 同步”](../../relational-databases/replication/configure-web-synchronization.md)。 完成本主题中的过程后，请继续执行第三个步骤“配置订阅以使用 Web 同步”。 下列主题中将介绍第三个步骤：  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何配置订阅以使用 Web 同步 \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]：[如何配置订阅以使用 Web 同步 \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程： [如何配置订阅以使用 Web 同步（复制 Transact-SQL 编程）](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   复制 [!INCLUDE[tsql](../../includes/tsql-md.md)] 编程： [如何配置订阅以使用 Web 同步（复制 Transact-SQL 编程）](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO： [如何配置订阅以使用 Web 同步（RMO 编程）](http://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO： [如何配置订阅以使用 Web 同步（RMO 编程）](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  Web 同步使用运行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) 的计算机，使请求订阅与合并发布同步。 支持 IIS 5.0、6.0 和 7.0 版。 IIS 版本 7.0 不支持配置 Web 同步向导。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "47684875"
   
 4.  单击“确定” 。  
   
- 如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkId=30958)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkId=46229)。  
+ 如果无法从 CA 获得服务器证书，则可指定进行测试所需的证书。 若要为测试配置 IIS 6.0，请使用 SelfSSL 实用工具安装证书。 可从 IIS 6.0 资源工具包中获得该实用工具。 您可以从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?LinkId=30958)下载这些工具。 对于 IIS 5.0，请转到 [Microsoft 帮助和支持](https://go.microsoft.com/fwlink/?LinkId=46229)。  
   
 > [!NOTE]  
 >  证书必须与网站相关联，该网站才能使用 SSL。 SelfSSL 自动使证书与默认网站相关联。 如果已有证书或以后从 CA 安装证书，则必须明确地使该证书与 Web 同步所使用的网站相关联。 确保只有一个与用于同步订阅的网站相关联的证书。 如果存在多个证书，订阅服务器将使用第一个可用网站。  

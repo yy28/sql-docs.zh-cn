@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe36e8787e37bc82336322e67cb59b804d021baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2589c948149b92541910b68e7da3c6cca414d2b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667177"
 ---
 # <a name="always-encrypted-cryptography"></a>始终加密的加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47768895"
 ## <a name="data-encryption-algorithm"></a>数据加密算法  
  始终加密使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 算法来加密数据库中的数据。  
   
- AEAD_AES_256_CBC_HMAC_SHA_256 派生自 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 中的规范草案。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
+ AEAD_AES_256_CBC_HMAC_SHA_256 派生自 [https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](https://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05) 中的规范草案。 它按照 Encrypt-then-MAC 方法，将经验证加密方案配合关联数据使用。 也就是说，首先加密纯文本，然后基于生成的密码文本生成 MAC。  
   
- 为了隐藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用操作的密码块链 (CBC) 模式，其中初始值送入了名为初始化向量 (IV) 的系统。 可在 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) 找到 CBC 模式的完整说明。  
+ 为了隐藏模式， **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用操作的密码块链 (CBC) 模式，其中初始值送入了名为初始化向量 (IV) 的系统。 可在 [https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](https://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf) 找到 CBC 模式的完整说明。  
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** 将使用下列步骤计算给定纯文本值的密码文本值。  
   
@@ -176,7 +176,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|N/A（不支持）|  
   
 ## <a name="net-reference"></a>.NET 参考  
- 有关本文档中讨论的算法的详细信息，请参阅 **.NET 参考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)文件。  
+ 有关本文档中讨论的算法的详细信息，请参阅 **.NET 参考** 中的 **SqlAeadAes256CbcHmac256Algorithm.cs** 和 [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)文件。  
   
 ## <a name="see-also"></a>另请参阅  
  [Always Encrypted（数据库引擎）](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

@@ -12,12 +12,12 @@ ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e242cbd5658b743ac813f4c0f03f1bfc74ad62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812835"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674006"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,5 +76,5 @@ DBCC CHECKCATALOG 或 DBCC CHECKDB 在指定对象的系统元数据表中发现
 不对系统表进行手动更新。 SQL Server 不支持对系统数据库进行任何手动更改。 如果您更新 SQL Server 数据库中的系统表，则会记录两个事件（事件 ID 17659 和事件 ID 3859）。 有关详细信息，请参阅知识库文章 2688307：“当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859”。  
   
 ## <a name="see-also"></a>另请参阅  
-[当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859](http://support.microsoft.com/kb/2688307/EN-US)  
+[当更新 SQL Server 数据库中的系统表时，将记录事件 ID 17659 和事件 ID 3859](https://support.microsoft.com/kb/2688307/EN-US)  
   

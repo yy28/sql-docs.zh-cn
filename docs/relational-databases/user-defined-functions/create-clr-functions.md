@@ -14,12 +14,12 @@ ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d1c3b689a42b2c7a0a41fd4df71a6d78dc2a122
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5da3ebf716c227e2724d7ca2676405aa34b7241
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710685"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51663286"
 ---
 # <a name="create-clr-functions"></a>创建 CLR 函数
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47710685"
 -   [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>访问本机代码  
- 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](http://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
+ 通过使用托管代码中的 PInvoke，可以使用 CLR 函数来访问本机（非托管）代码，如用 C 或 C++ 编写的代码（有关详细信息，请参阅 [从托管代码调用本机函数](https://go.microsoft.com/fwlink/?LinkID=181929) ）。 这样，您就可以重新将旧代码用作 CLR UDF，或在本机代码中使用性能关键的 UDF。 这要求使用 UNSAFE（非安全）程序集。 有关使用 UNSAFE 程序集的注意事项，请参阅 [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [创建用户定义函数（数据库引擎）](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c012c30b200a31c77b62bee12e979bba79e695b7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: eff18cf56e606aa8cea96bd8828a7daaca27c0f4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031546"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813950"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>查找报表定义架构版本 (SSRS)
 
@@ -30,11 +30,11 @@ ms.locfileid: "50031546"
      XML REPORT 元素指定架构命名空间。 例如，下面的 Report 元素指定报表设计器的命名空间以及报表定义的命名空间。  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     以下 URL 指定了报表定义命名空间： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
+     以下 URL 指定了报表定义命名空间： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`。  
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>如何确定报表设计器的 RDL 架构版本  
   
@@ -53,17 +53,17 @@ ms.locfileid: "50031546"
      XML REPORT 元素指定架构命名空间。 例如，下面的 Report 元素指定报表设计器的命名空间以及报表定义的命名空间。  
   
     ```  
-    <Report xmlns:rd=http://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
+    <Report xmlns:rd=https://schemas.microsoft.com/SQLServer/reporting/reportdesigner  
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition">  
     ```  
   
-     以下 URL 指定了报表定义命名空间： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     以下 URL 指定了报表定义命名空间： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
 ### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>如何确定报表服务器上的 RDL 架构版本  
   
 -   在报表管理器中，键入报表服务器的 URL。 例如，以下 URL 指定一个本地计算机上的报表服务器：  
   
-     `http://localhost/reportserver/reportdefinition.xsd`  
+     `https://localhost/reportserver/reportdefinition.xsd`  
   
      将在浏览器中打开 .xsd 文件。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "50031546"
   
     ```  
     <xsd:schema   
-    targetNamespace="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
-    xmlns="http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    targetNamespace="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
+    xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+    xmlns="https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition"   
     elementFormDefault="qualified">  
     ```  
   
-     以下 URL 指定了报表定义命名空间： `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
+     以下 URL 指定了报表定义命名空间： `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
 
 ## <a name="next-steps"></a>后续步骤
 

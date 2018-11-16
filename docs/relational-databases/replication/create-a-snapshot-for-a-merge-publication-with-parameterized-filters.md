@@ -15,12 +15,12 @@ ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 142822158f03c76c1c36f40fa937438c989ec3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71d7e79a0e941b5f080b033469700e19eaa3241e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666087"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>为包含参数化筛选器的合并发布创建快照
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -275,7 +275,7 @@ PAUSE
 >  如果对项目进行筛选后，生成对于每个订阅都唯一的非重叠分区（通过在创建合并项目时将 F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription 的值指定为 P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption ），则只要合并代理运行，就会清除元数据。 这意味着分区快照会过期得更快。 使用此选项时，应考虑允许订阅服务器请求快照生成。 有关详细信息，请参阅主题 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)中的“使用适当的筛选选项”部分。  
   
 > [!IMPORTANT]  
->  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
+>  如果可能，请在运行时提示用户输入安全凭据。 如果必须存储凭据，请使用 [Windows .NET Framework 提供的](https://go.microsoft.com/fwlink/?LinkId=34733) Cryptographic Services [!INCLUDE[msCoName](../../includes/msconame-md.md)] （加密服务）。  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>创建允许订阅服务器启动快照生成和传递的发布  
   

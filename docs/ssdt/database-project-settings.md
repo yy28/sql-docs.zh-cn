@@ -41,12 +41,12 @@ ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 642427e5291fecdcbe64bca3c66d0606ac8b2523
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 8eb14ed03dc43a1a27254a1998f84b786e39694d
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100140"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51671398"
 ---
 # <a name="database-project-settings"></a>数据库项目设置
 使用数据库项目设置可控制数据库、调试和生成配置的各个方面。 这些设置分为以下几类。  
@@ -107,7 +107,7 @@ ms.locfileid: "50100140"
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL 编译器服务  
 Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎的组件。 此服务可验证 DDL 语句的语法和语义，保真度与 Microsoft SQL Server 2012 数据库引擎相同。 从内在本质看，这意味着编译器服务不支持 Microsoft SQL Server 2012 中不推荐使用的语法或功能。 要详细了解已弃用的功能，请参见 [SQL Server 2012 中中止的数据库引擎功能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)。  
   
-为了进行数据库项目验证，编译器服务会创建一个部分包含的数据库，并会针对该数据库模拟执行 DDL 语句。 有关详细信息，请参阅 [部分包含的数据库](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+为了进行数据库项目验证，编译器服务会创建一个部分包含的数据库，并会针对该数据库模拟执行 DDL 语句。 有关详细信息，请参阅 [部分包含的数据库](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
   
 编译器服务具有两类限制。  
   
@@ -132,7 +132,7 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 -   SQL Azure 元数据排序规则（编译器服务使用 SQL Server 2012 部分包含的数据库元数据排序规则 - Latin1_General_100_CI_AS_KS_WS_SC）  
   
 ### <a name="enablingdisabling-extended-verification"></a>启用/禁用扩验证  
-在直接从 SQL Azure 数据库创建的项目中，或目标平台设置为 SQL Azure 的项目中，扩展的 Transact-SQL 验证会默认启用。 在为 SQL Azure 数据库或以 SQL Server 2012 为目标的应用程序范围的数据库开发时，推荐使用扩展验证。 有关应用程序范围的数据库的详细信息，请参阅 [部分包含的数据库](http://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
+在直接从 SQL Azure 数据库创建的项目中，或目标平台设置为 SQL Azure 的项目中，扩展的 Transact-SQL 验证会默认启用。 在为 SQL Azure 数据库或以 SQL Server 2012 为目标的应用程序范围的数据库开发时，推荐使用扩展验证。 有关应用程序范围的数据库的详细信息，请参阅 [部分包含的数据库](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)。  
   
 在为 SQL Server 2008/R2 开发应用程序范围的数据库以实现与 Microsoft SQL Server 2012 和 SQL Azure 兼容时，也可以使用扩展验证功能。  
   
@@ -154,23 +154,23 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 ![文件属性](../ssdt/media/ssdt-evf.gif "文件属性")  
   
 ### <a name="special-considerations-for-collations"></a>排序规则的特殊注意事项  
-有关部分包含的数据库中排序规则的详细信息，请参阅 [包含的数据库排序规则](http://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  
+有关部分包含的数据库中排序规则的详细信息，请参阅 [包含的数据库排序规则](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx)。  
   
 ## <a name="bkmk_sqlclr"></a>SQLCLR  
-有关“程序集”选项的信息，请参见 [“程序集信息”对话框](http://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)。  
+有关“程序集”选项的信息，请参见 [“程序集信息”对话框](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true)。  
   
-有关签名的信息，请参见 [“签名”页, 项目设计器](http://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) 主题的“程序集签名”  一节。  
+有关签名的信息，请参见 [“签名”页, 项目设计器](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) 主题的“程序集签名”  一节。  
   
 ## <a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR 和 SQLCLR 生成  
 **SQLCLR** 和 **“SQLCLR 生成”** 属性页包含可供在您的项目中使用 SQL CLR 对象的许多设置。 具体来说， **SQLCLR** 属性页具有用于对 SQLCLR 程序集设置权限的权限级别设置。 它还具有“生成 DDL”设置，以便控制为已添加到项目的 SQLCLR 对象是否生成动态数据语言 (DDL)。 **“SQLCLR 生成”** 属性页包含可为配置项目中 SQLCLR 代码的编译而设置的所有编译器选项。  
   
 **“SQLCLR 生成”** 属性页包含用于生成 SQL CLR 对象的高级生成设置。 已基于用来编写 SQL CLR 对象代码的语言（VB 或 C#）提供了不同选项。  
   
-1.  如果对象是用 C# 编写的，则可以通过单击“SQLCLR 生成”属性页上的“高级”按钮访问这些选项。 可以在[“高级生成设置”对话框 (C#)](http://msdn.microsoft.com/library/s4wcexbc.aspx) 中找到 C# 选项的说明。  
+1.  如果对象是用 C# 编写的，则可以通过单击“SQLCLR 生成”属性页上的“高级”按钮访问这些选项。 可以在[“高级生成设置”对话框 (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx) 中找到 C# 选项的说明。  
   
-2.  如果对象是用 VB 编写的，则可以先选择 **“语言”** 下拉列表中的“VB”，然后单击 **“高级”** 按钮。 可以在[“高级编译器设置”对话框 (Visual Basic)](http://msdn.microsoft.com/library/07bysfz2.aspx) 中找到 VB 选项的说明  
+2.  如果对象是用 VB 编写的，则可以先选择 **“语言”** 下拉列表中的“VB”，然后单击 **“高级”** 按钮。 可以在[“高级编译器设置”对话框 (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx) 中找到 VB 选项的说明  
   
-有关更多信息，请参阅[生成配置属性](http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
+有关更多信息，请参阅[生成配置属性](https://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(CS.PROJECTPROPERTIESBUILD))  
   
 ## <a name="bkmk_build"></a>生成  
 可以为解决方案中的每个数据库项目选择生成配置。 默认情况下有一个配置，但您可以添加自定义配置。 例如，如果您需要一个总是删除并重新创建数据库的自定义配置，您可以选择添加自定义配置。 在包含不同项目类型的解决方案中，可以创建一个自定义解决方案配置，其中包含每个项目的特定生成配置。  
@@ -229,10 +229,10 @@ Transact-SQL 编译器服务是基于 Microsoft SQL Server 2012 数据库引擎�
 |高级…|否|一种命令按钮，可用于指定控制部署的事件和行为的选项。|  
   
 ## <a name="bkmk_ref_paths"></a>引用路径  
-使用此页，可以定义与跨数据库引用相关联的服务器变量和数据库变量。 此外，你可以指定这些变量的值。 有关详细信息，请参阅 [在数据库项目中使用引用](http://msdn.microsoft.com/library/bb386242.aspx)。  
+使用此页，可以定义与跨数据库引用相关联的服务器变量和数据库变量。 此外，你可以指定这些变量的值。 有关详细信息，请参阅 [在数据库项目中使用引用](https://msdn.microsoft.com/library/bb386242.aspx)。  
   
 ## <a name="bkmk_code_analysis"></a>代码分析  
 可以使用代码分析发现您的脚本中的潜在问题，例如设计、命名和性能问题。 数据库项目的规则组织成针对特定领域的预定义的规则集，并且您可以在 **“项目属性”** 属性页的 **“代码分析”** 选项卡中启用或禁用任何规则。 在同一个选项卡上，您可以指定代码分析以便在每次生成项目时自动运行，或者指定是否将警告视为错误。  
   
-若要手动使用代码分析，请在“解决方案资源管理器”中右键单击你的项目，然后选择“运行代码分析”。 代码分析警告在 **“错误列表”** 窗口中列出。 可以双击某一警告以便导航到包含该问题的源代码，并且可以通过使用“显示错误帮助”上下文菜单查看警告的附加信息和可能的更正措施。 有关代码分析的详细信息，请参阅[分析数据库代码以提高代码质量](http://msdn.microsoft.com/library/dd172133.aspx)。  
+若要手动使用代码分析，请在“解决方案资源管理器”中右键单击你的项目，然后选择“运行代码分析”。 代码分析警告在 **“错误列表”** 窗口中列出。 可以双击某一警告以便导航到包含该问题的源代码，并且可以通过使用“显示错误帮助”上下文菜单查看警告的附加信息和可能的更正措施。 有关代码分析的详细信息，请参阅[分析数据库代码以提高代码质量](https://msdn.microsoft.com/library/dd172133.aspx)。  
   

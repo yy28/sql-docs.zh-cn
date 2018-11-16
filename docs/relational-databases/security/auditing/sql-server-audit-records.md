@@ -13,12 +13,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b6142d54c4df2a2ba51c9a65e3ae2bd14670bb77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c657e42e1e754ca843a40967221512f55c9c9c9f
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714305"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51675336"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47714305"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|触发可审核操作的日期/时间。|**datetime2**|用户帐户控制|  
 |**sequence_no**|跟踪单个审核记录中的记录顺序，该记录太大而无法放在写入缓冲区中以进行审核。|**int**|用户帐户控制|  
-|**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|用户帐户控制|  
+|**action_id**|操作的 ID<br /><br /> 提示：若要将 **action_id** 用作谓词，必须将它从字符串转换为数值。 有关详细信息，请参阅 [Filter SQL Server Audit on action_id / class_type predicate](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)（使用 action_id / class_type 谓词筛选 SQL Server 审核）。|**varchar(4)**|用户帐户控制|  
 |**succeeded**|指示触发审核事件的操作的权限检查是否成功或失败。 |**bit**<br /> – 1 = 成功， <br />0 = 失败|用户帐户控制|  
 |**permission_bitmask**|当适用时，显示授予、拒绝或撤消的权限|**bigint**|否|  
 |**is_column_permission**|指示列级别权限的标志|**bit** <br />– 1 = True, <br />0 = False|否|  

@@ -20,12 +20,12 @@ ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d768351c318d46d0d82b3553f8d12bed7fb817ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795915"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638208"
 ---
 # <a name="merge-transformation"></a>合并转换
   合并转换将两个排序后的数据集合并为一个数据集。 根据每个数据集中的行的键列的值，将这些行插入到输出中。  
@@ -60,7 +60,7 @@ ms.locfileid: "47795915"
   
  有关可以用编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47795915"
   
 ## <a name="see-also"></a>另请参阅  
  [合并联接转换](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Union All 转换](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [数据流](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 转换](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

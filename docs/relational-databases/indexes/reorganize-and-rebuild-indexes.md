@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2facef8dc12717fcb8fc1cfb20518ed08948334
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 33955a8d77403209c74a7de39cf4af17694cf80c
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383682"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666776"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>重新组织和重新生成索引
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -310,12 +310,12 @@ ms.locfileid: "49383682"
  
 ### <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
 
-利用[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
+利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
   
 ## <a name="see-also"></a>另请参阅  
   [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
-  [自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+  [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
   [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
   [更新统计信息 (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
   

@@ -18,12 +18,12 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4511437b4d4c18fa7834cf7e61af4eda6a74d46a
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: b9616a482a220c1c15813fc548ad959dccf46e10
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50971078"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703095"
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ FORMAT ( value, format [, culture ] )
  format  
  nvarchar 格式模式。  
   
- format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](http://go.microsoft.com/fwlink/?LinkId=211776)”。  
+ format 参数必须包含一个有效的 .NET Framework 格式字符串，要么作为标准格式字符串（例如，“C”或“D”），要么作为日期值和数值的自定义字符模式（例如，“MMMM DD, yyyy (dddd)”）。 不支持组合格式。 有关这些格式模式的完整解释，请查阅有关常规字符串格式、自定义日期和时间格式以及自定义数字格式的 .NET Framework 文档。 一个好的起点是主题“[格式类型](https://go.microsoft.com/fwlink/?LinkId=211776)”。  
   
  culture  
  指定区域性的可选 nvarchar 参数。  
@@ -128,7 +128,7 @@ Saturday, October 01, 2011   01 October 2011               Samstag, 1. Oktober 2
 ```  
   
 ### <a name="b-format-with-custom-formatting-strings"></a>B. 使用自定义格式字符串执行 FORMAT  
- 以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期为 2012 年 9 月 27 日。 有关这些格式和其他自定义格式的详细信息，请参阅[自定义数字格式字符串](http://msdn.microsoft.com/library/0c899ak8.aspx)。  
+ 以下示例通过指定自定义格式显示格式数值。 该示例假定当前日期为 2012 年 9 月 27 日。 有关这些格式和其他自定义格式的详细信息，请参阅[自定义数字格式字符串](https://msdn.microsoft.com/library/0c899ak8.aspx)。  
   
 ```sql  
 DECLARE @d DATETIME = GETDATE();  
@@ -147,7 +147,7 @@ DateTime Result  Custom Number Result
 ```  
   
 ### <a name="c-format-with-numeric-types"></a>C. 用于数值类型的 FORMAT  
- 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行。 EndOfDateRate 列在该表中作为 money 类型存储。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](http://msdn.microsoft.com/library/dwhawy9k.aspx)。  
+ 下面的示例返回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 数据库的 Sales.CurrencyRate 表中的 5 个行。 EndOfDateRate 列在该表中作为 money 类型存储。 在本示例中，该列以非格式化形式返回，然后通过指定 .NET 数字格式、常规格式和货币格式类型进行格式化。 有关这些格式和其他数字格式的详细信息，请参阅[标准数字格式字符串](https://msdn.microsoft.com/library/dwhawy9k.aspx)。  
   
 ```sql  
 SELECT TOP(5)CurrencyRateID, EndOfDayRate  

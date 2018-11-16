@@ -11,18 +11,18 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c312e9b4cf820e247555b668d82834fd804457a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cba1d5551205c1658975943b76612f4e50768c0
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620335"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699045"
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - 许可条款
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ### <a name="available-languages"></a>可用语言：  
-[中文(简体)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [中文(繁体)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英语(美国)](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [法语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
-[德语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [意大利语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [朝鲜语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [葡萄牙语（巴西）](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [俄语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [西班牙语](http://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
+[中文(简体)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x804) | [中文(繁体)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x404) | [英语(美国)](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x409) | [法语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40c)  
+[德语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x407) | [意大利语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x410) | [日语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x411) | [朝鲜语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x412) | [葡萄牙语（巴西）](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x416) | [俄语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x419) | [西班牙语](https://go.microsoft.com/fwlink/?LinkID=620835&clcid=0x40a)  
   
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 软件许可条款  
 **MICROSOFT SQL SERVER MANAGEMENT STUDIO**  
@@ -73,7 +73,7 @@ ms.locfileid: "47620335"
   
 **3.  基于 INTERNET 的服务。** Microsoft 随软件提供基于 Internet 的服务， 但可能随时更改或取消这些服务。  
   
-&nbsp;&nbsp;**a.  同意使用基于 Internet 的服务。** 下面以及 SQL Server 隐私声明中介绍的软件功能可通过 Internet 连接到 Microsoft 或服务提供商的计算机系统。 在某些情况下，连接建立时您不会另外收到通知。 您可以关闭这项功能，或者不使用它。 有关此功能的详细信息，请参阅 [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120)。 **使用此功能即表示同意传输这些信息**。 Microsoft 不会将这些信息用于识别您的身份或与您联系。  
+&nbsp;&nbsp;**a.  同意使用基于 Internet 的服务。** 下面以及 SQL Server 隐私声明中介绍的软件功能可通过 Internet 连接到 Microsoft 或服务提供商的计算机系统。 在某些情况下，连接建立时您不会另外收到通知。 您可以关闭这项功能，或者不使用它。 有关此功能的详细信息，请参阅 [https://go.microsoft.com/fwlink/?LinkID=398120](https://go.microsoft.com/fwlink/?LinkID=398120)。 **使用此功能即表示同意传输这些信息**。 Microsoft 不会将这些信息用于识别您的身份或与您联系。  
   
 &nbsp;&nbsp;**i.  计算机信息。** 以下功能使用 Internet 协议，向相应的系统发送计算机信息，例如 Internet 协议地址、操作系统类型、浏览器及所使用的软件名称和版本、安装软件的设备的语言代码等。 Microsoft 使用这些信息是为了提供基于 Internet 的服务。  
   

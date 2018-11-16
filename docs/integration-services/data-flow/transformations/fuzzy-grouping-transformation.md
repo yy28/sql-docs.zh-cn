@@ -29,18 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f112101ff9325f6f1551ab9f889251916d42e1ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6dd2866ef242ad51a90de24051b5f39c3f68a8f7
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822215"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638895"
 ---
 # <a name="fuzzy-grouping-transformation"></a>模糊分组转换
   模糊分组转换执行数据清理任务，它首先查找可能重复的数据行，然后选择要在对数据进行标准化的过程中使用的规范数据行。  
   
 > [!NOTE]  
->  有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [SQL Server Integration Services 2005 中的模糊查找和模糊分组](http://go.microsoft.com/fwlink/?LinkId=96604)。  
+>  有关模糊分组转换（包括性能和内存限制）的详细信息，请参阅白皮书 [SQL Server Integration Services 2005 中的模糊查找和模糊分组](https://go.microsoft.com/fwlink/?LinkId=96604)。  
   
  模糊分组转换要求与 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的实例建立连接，以创建该转换算法完成工作所需的临时 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 表。 该连接必须解析为有权在数据库中创建表的用户。  
   
@@ -83,11 +83,11 @@ ms.locfileid: "47822215"
  如果此转换所使用的表和索引位于本地计算机，则此转换的性能可能会提高。  
   
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>配置模糊分组转换  
- 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式来设置属性。  
+ 可以通过 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 设计器或以编程方式设置属性。  
   
  有关可以在 **“高级编辑器”** 对话框中或以编程方式设置的属性的详细信息，请单击下列主题之一：  
   
--   [通用属性](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [通用属性](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [转换自定义属性](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 78cf2eae42192abf6b926b753595ed26cf4190bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00c334d707886efdcfa00860def58f0c662a7cb6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705445"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51704115"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD
     
 REPAIR_ALLOW_DATA_LOSS  
  尝试修复报告的所有错误。 这些修复可能会导致一些数据丢失。  
-    
+    
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 选项是受支持的功能，但是，它可能并非总是使数据库处于物理上一致的状态的最佳选项。 如果成功，REPAIR_ALLOW_DATA_LOSS 选项可能会导致一些数据丢失。 实际上，它可能导致的数据丢失多于用户从上次已知成功备份还原数据库导致的数据丢失。 
 >
@@ -117,12 +117,12 @@ REPAIR_REBUILD
  此参数不修复涉及 FILESTREAM 数据的错误。  
     
 > [!IMPORTANT] 
-> 由于具有 REPAIR 选项的 DBCC CHECKDB 被完全记录且可恢复，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户在事务中使用具有 REPAIR 选项的 CHECKDB（运行命令前执行 BEGIN TRANSACTION），这样用户可确认其是否愿意接受操作的结果。 然后用户可执行 COMMIT TRANSACTION 来提交修复操作完成的所有工作。 如果用户不想接受操作的结果，他/她可执行 ROLLBACK TRANSACTION 以撤消修复操作的影响。    
+> 由于具有 REPAIR 选项的 DBCC CHECKDB 被完全记录且可恢复，[!INCLUDE[msCoName](../../includes/msconame-md.md)] 始终建议用户在事务中使用具有 REPAIR 选项的 CHECKDB（运行命令前执行 BEGIN TRANSACTION），这样用户可确认其是否愿意接受操作的结果。 然后用户可执行 COMMIT TRANSACTION 来提交修复操作完成的所有工作。 如果用户不想接受操作的结果，他/她可执行 ROLLBACK TRANSACTION 以撤消修复操作的影响。    
 >     
 > 若要修复错误，建议您通过备份进行还原。 修复操作不会考虑表本身或表之间可能存在的任何约束。 如果指定的表与一个或多个约束有关，建议您在修复操作后运行 DBCC CHECKCONSTRAINTS。 如果必须使用 REPAIR，则运行不带有修复选项的 DBCC CHECKDB 来查找要使用的修复级别。 如果使用 REPAIR_ALLOW_DATA_LOSS 级别，则建议您在运行带有此选项的 DBCC CHECKDB 之前备份数据库。    
     
 ALL_ERRORMSGS  
- 显示针对每个对象报告的所有错误。 默认情况下显示所有错误消息。 指定或省略此选项都不起作用。 按对象 ID 对错误消息排序，从 [tempdb 数据库](../../relational-databases/databases/tempdb-database.md)生成的那些消息除外。     
+ 显示针对每个对象报告的所有错误。 默认情况下显示所有错误消息。 指定或省略此选项都不起作用。 按对象 ID 对错误消息排序，从 [tempdb 数据库](../../relational-databases/databases/tempdb-database.md)生成的那些消息除外。     
 
 EXTENDED_LOGICAL_CHECKS  
  如果兼容性级别为 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 或更高，则对索引视图、XML 索引和空间索引（如果存在）执行逻辑一致性检查。  
@@ -133,7 +133,7 @@ NO_INFOMSGS
     
 TABLOCK  
  使 DBCC CHECKDB 获取锁，而不使用内部数据库快照。 这包括一个短期数据库排他 (X) 锁。 TABLOCK 可使 DBCC CHECKDB 在负荷较重的数据库上运行得更快，但 DBCC CHECKDB 运行时会减少数据库上可获得的并发性。  
-    
+    
 > [!IMPORTANT] 
 > TABLOCK 限制执行的检查；DBCC CHECKCATALOG 未对数据库运行并且 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 数据未进行验证。
     
@@ -155,11 +155,11 @@ PHYSICAL_ONLY
 DATA_PURITY  
  使 DBCC CHECKDB 检查数据库中是否存在无效或越界的列值。 例如，DBCC CHECKDB 检测日期和时间值大于或小于 datetime 数据类型的可接受范围的列，或者小数位数或精度值无效的 decimal 或近似 numeric 数据类型列。  
  默认情况下将启用列值完整性检查，并且不需要使用 DATA_PURITY 选项。 对于从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级的数据库，默认情况下不启用列值检查，直到 DBCC CHECKDB WITH DATA_PURITY 已在数据库中正确运行为止。 然后，DBCC CHECKDB 将默认检查列值完整性。 有关从 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的早期版本升级数据库会对 CHECKDB 有何影响的详细信息，请参阅本主题的“备注”部分。  
-    
+    
 > [!WARNING]
 > 如果指定了 PHYSICAL_ONLY，则不执行列完整性检查。
     
- 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 和更高版本中的 DBCC 错误 2570](http://support.microsoft.com/kb/923247)。  
+ 无法使用 DBCC 修复选项来纠正该选项所报告的验证错误。 有关手动更正这些错误的信息，请参阅知识库文章 923247：[解决 SQL Server 2005 和更高版本中的 DBCC 错误 2570](https://support.microsoft.com/kb/923247)。  
     
  MAXDOP  
  适用范围：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]（[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]）。  
@@ -167,7 +167,7 @@ DATA_PURITY
  对于语句，替代 sp_configure 的“max degree of parallelism”配置选项。 MAXDOP 可以超出使用 sp_configure 配置的值。 如果 MAXDOP 超出使用资源调控器配置的值，则 [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] 会使用资源调控器 MAXDOP 值（如 [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md) 中所述）。 当使用 MAXDOP 查询提示时，所有和 max degree of parallelism 配置选项一起使用的语义规则均适用。 有关详细信息，请参阅 [配置 max degree of parallelism 服务器配置选项](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。  
  
 > [!WARNING] 
-> 如果 MAXDOP 设置为零，则 SQL Server 需选择要使用的最大并行度。    
+> 如果 MAXDOP 设置为零，则 SQL Server 需选择要使用的最大并行度。    
 
 ## <a name="remarks"></a>Remarks    
 DBCC CHECKDB 不检查禁用的索引。 有关禁用的索引的详细信息，请参阅[禁用索引和约束](../../relational-databases/indexes/disable-indexes-and-constraints.md)。    

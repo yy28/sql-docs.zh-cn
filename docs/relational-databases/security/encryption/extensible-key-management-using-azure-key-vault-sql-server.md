@@ -17,12 +17,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: bfba6fe9611a6f24e0f84b523424c3d49bdf170d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250b61577f651ddadd7529b172f5bed04d26f896
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621795"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51656146"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>使用 Azure Key Vault 的可扩展密钥管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47621795"
    
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器用作 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Azure 密钥保管库之间的桥梁，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以利用 Azure 密钥保管库服务的可伸缩性、高性能和高可用性。 下图显示了在使用 Azure 密钥保管库和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 连接器的 EKM 提供程序体系结构中如何使用密钥层次结构。  
   
-  密钥保管库服务可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虚拟机和本地服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安装。 Key Vault 服务还提供一种选择，即使用受到严格控制和监视的硬件安全模块 (HSM) 来实现对非对称加密密钥的更高级别的保护。 有关密钥保管库的详细信息，请参阅 [Azure 密钥保管库](http://go.microsoft.com/fwlink/?LinkId=521401)。  
+  密钥保管库服务可用于 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure 虚拟机和本地服务器上的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 安装。 Key Vault 服务还提供一种选择，即使用受到严格控制和监视的硬件安全模块 (HSM) 来实现对非对称加密密钥的更高级别的保护。 有关密钥保管库的详细信息，请参阅 [Azure 密钥保管库](https://go.microsoft.com/fwlink/?LinkId=521401)。  
   
  下图总结了使用密钥保管库的 EKM 处理流程。 （图中的处理步骤数与图下的设置步骤数并不一致。）  
   

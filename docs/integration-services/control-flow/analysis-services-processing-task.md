@@ -18,12 +18,12 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5a4a205f1e1cd89b86bcfc0929d95a638cd24d78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609527"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641774"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 处理任务
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 处理任务可负责处理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 对象，如表格模型、多维数据集、维度和挖掘模型。  
@@ -73,7 +73,7 @@ ms.locfileid: "47609527"
   
  有关在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 设计器中设置这些属性的详细信息，请单击以下主题：  
   
--   [设置任务或容器的属性](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [设置任务或容器的属性](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>以编程方式配置 Analysis Services 处理任务  
  有关以编程方式设置这些属性的详细信息，请单击以下主题：  
@@ -132,7 +132,7 @@ ms.locfileid: "47609527"
  **影响分析**  
  对所选对象进行影响分析。  
   
- **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **相关主题：**[“影响分析”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **批设置摘要**  
  |“属性”|描述|  
@@ -146,5 +146,5 @@ ms.locfileid: "47609527"
  **更改设置**  
  更改处理选项以及对维度键中错误的处理方式。  
   
- **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **相关主题：**[“更改设置”对话框（Analysis Services - 多维数据）](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

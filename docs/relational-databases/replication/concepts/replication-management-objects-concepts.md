@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f9e682940da2b880265e6d9d9763551bd858339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ce786d8362f711e238b32059ae3bae4f50006e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672626"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ ms.locfileid: "47749665"
 >  虽然 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 类支持在设置属性时声明显式事务，但这样的事务会影响内部复制事务，可能产生难以预料的结果，因此不应在 RMO 中使用。  
 
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>启用 RMO 组件的 TLS 1.2 支持 
- 通过安装更新 [KB 3140245](http://support.microsoft.com/help/3140245)，并创建文章中提到的注册表项，可以在 Windows 2012 及更低版本上启用 RMO 组件的 TLS1.2 支持。 在 Windows 2012 R2 和更高版本上，只需创建上述文章中提到的注册表项。
+ 通过安装更新 [KB 3140245](https://support.microsoft.com/help/3140245)，并创建文章中提到的注册表项，可以在 Windows 2012 及更低版本上启用 RMO 组件的 TLS1.2 支持。 在 Windows 2012 R2 和更高版本上，只需创建上述文章中提到的注册表项。
  
 ## <a name="example"></a>示例  
  本示例演示如何缓存属性更改。 对事务发布属性的更改被缓存，直到将其显式发送给服务器。  

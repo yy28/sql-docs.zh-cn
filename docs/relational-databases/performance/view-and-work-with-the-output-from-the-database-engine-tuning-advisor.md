@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8decfb0a7378ef1acfaf671276f6449cde19ba1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c67e42a98bf6b653b35ead538449d725a6ed9d96
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794605"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662256"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>查看和使用数据库引擎优化顾问的输出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47794605"
  还可以使用 GUI 查看由 **dta** 命令行实用工具生成的优化输出。  
   
 > [!NOTE]  
->  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”菜单上的“打开文件”，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
+>  如果使用 **dta** 命令行实用工具并使用 **-ox** 参数来指定将输出写入 XML 文件，则可以通过单击 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的“文件”菜单上的“打开文件”，打开和查看 XML 输出文件。 有关详细信息，请参阅 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)。 有关 **dta** 命令行实用工具的详细信息，请参阅 [dta 实用工具](../../tools/dta/dta-utility.md)。  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>使用数据库引擎优化顾问 GUI 查看优化建议  
   
@@ -175,7 +175,7 @@ ms.locfileid: "47794605"
     C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
     ```  
   
-     数据库引擎优化顾问 XML 架构也可通过 [http://schemas.microsoft.com/sqlserver/2004/07/dta](http://schemas.microsoft.com/sqlserver/2004/07/dta) 在线获得。  
+     数据库引擎优化顾问 XML 架构也可通过 [https://schemas.microsoft.com/sqlserver/2004/07/dta](https://schemas.microsoft.com/sqlserver/2004/07/dta) 在线获得。  
   
 6.  创建工作负荷和 XML 输入文件后，你就可以将该输入文件提交到 **dta** 命令行实用工具进行分析。 请确保为 **-ox** 实用工具参数指定 XML 输出文件名。 这样将创建一个具有 **Configuration** 元素中指定的建议配置的 XML 输出文件。 如果要再次运行数据库引擎优化顾问以检查基于该输出的另一个假设配置，您可以从输出文件中复制 **Configuration** 元素内容，然后将其粘贴到一个新的或原始 XML 输入文件中。 有关将 XML 输入文件与 **dta** 实用工具结合使用的信息，请参阅 [启动并使用数据库引擎优化顾问](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)中的“使用 dta 实用工具优化数据库”部分。  
   

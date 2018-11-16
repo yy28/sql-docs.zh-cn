@@ -11,12 +11,12 @@ ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 901361948eec7ae24e580f3873a10064f7b9873d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 82ac3a5bb3a18c83246a55c9fa6e2154de58dc6f
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600465"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642034"
 ---
 # <a name="lesson-6-1---copying-the-lesson-5-package"></a>第 6-1 课 - 复制第 5 课包
 在本任务中，您将为第 5 课中创建的 Lesson 5.dtsx 包创建一个副本。 或者将本教程中附带的已完成的 Lesson 5 包添加到项目中，然后再对其进行复制。 您将使用这一新副本来完成第 6 课剩余部分。  
@@ -53,7 +53,7 @@ ms.locfileid: "47600465"
   
     要下载此教程的所有课程包，请执行以下操作：  
   
-    1.  导航到 [Integration Services 产品示例](http://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  导航到 [Integration Services 产品示例](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  单击 **“下载”** 选项卡。  
   

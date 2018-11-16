@@ -1,7 +1,7 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 11/06/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e9547440f6e6023560fb1c8e2bcefcd57605345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b95f966b27db3638aae6455dc5e7819f07d0ebae
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682315"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51695455"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -70,9 +70,6 @@ DATA 参数用于指定用于评分或预测的数据。 在查询中以表源�
 PARAMETERS 参数用于指定用于评分或预测的可选用户定义参数。
 
 每个参数的名称特定于模型类型。 例如，RevoScaleR 中的 [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) 函数支持参数 `@computeResiduals`，指示在对逻辑回归模型评分时是否应计算残差。 如果正在调用兼容模型，无法将该参数名称和 TRUE 或 FALSE 值传递到 `PREDICT` 函数。
-
-> [!NOTE]
-> 此选项在 SQL Server 2017 的预发行版本中无效。
 
 WITH ( <result_set_definition> )
 
@@ -121,7 +118,7 @@ DECLARE @logit_model varbinary(max) = "SELECT TOP 1 [model_binary] from [models_
 DECLARE @input_qry = "SELECT ID, [Gender], [Income] from NewCustomers";
 
 SELECT PREDICT [class]
-FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry
+FROM PREDICT( MODEL = @logit_model,  DATA = @input_qry)
 WITH (class string);
 ```
 
@@ -172,9 +169,6 @@ END;
 ```
 
 ### <a name="creating-an-r-model-and-generating-scores-using-optional-model-parameters"></a>创建 R 模型并使用可选模型参数生成评分
-
-> [!NOTE]
-> 候选发布版 1 不支持使用参数自变量。
 
 此示例假定已使用对 RevoScaleR 的调用创建了一个拟合协方差矩阵的逻辑回归模型，如下所示：
 

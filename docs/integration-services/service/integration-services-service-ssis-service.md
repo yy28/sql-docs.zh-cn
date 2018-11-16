@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e6d3b3253488f09b6a20b1de4745f6c97ed77515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef264a836b1081bdeba65fc09fce758b0faf897
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806506"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51641804"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 服务（SSIS 服务）
   本节中的主题论述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务，该服务是用于管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包的一种 Windows 服务。 此服务不是创建、保存和运行集成服务包所必需的。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支持 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务以便与 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的早期版本向后兼容。  
@@ -187,7 +187,7 @@ ms.locfileid: "47806506"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -232,7 +232,7 @@ ms.locfileid: "47806506"
   
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
-\<DtsServiceConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+\<DtsServiceConfiguration xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
   <StopExecutingPackagesOnShutdown>true</StopExecutingPackagesOnShutdown>  
   <TopLevelFolders>  
     \<Folder xsi:type="SqlServerFolder">  
@@ -251,7 +251,7 @@ ms.locfileid: "47806506"
  注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** 指定 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用的配置文件的位置和名称。 该注册表项的默认值是 **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**。 可以更新该注册表项的值，以使配置文件使用其他名称和位置。 请注意，路径中的版本号（SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 为 120、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 为 130 等等）因 SQL Server 版本而异。
   
 > [!CAUTION]  
->  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](http://support.microsoft.com/kb/256986)。  
+>  如果注册表编辑不当，可能会导致严重问题并需要重新安装操作系统。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 不能保证可以解决因注册表编辑不当而导致的问题。 编辑注册表之前，请备份所有重要数据。 有关如何备份、还原和编辑注册表的信息，请参阅 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知识库文章 [Microsoft Windows 注册表说明](https://support.microsoft.com/kb/256986)。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务在启动时加载配置文件。 对注册表项进行任何更改都需要重新启动服务。  
 
@@ -359,7 +359,7 @@ ms.locfileid: "47806506"
 > [!IMPORTANT]  
 >  若要管理存储在某远程服务器上的包，您不必连接到该远程服务器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的实例。 只需编辑 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务的配置文件，以便 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 显示存储在远程服务器上的包。
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](http://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服务使用 DCOM 协议。 有关 DCOM 协议如何在防火墙下运作的详细信息，请参阅 MSDN Library 上的文章“[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)（与防火墙一起使用分布式 COM）”。  
   
  有很多可用的防火墙系统。 如果运行的防火墙不是 Windows 防火墙，请参阅防火墙文档，获取特定于所用系统的信息。  
   

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d45abb440171cb263cb0b5a1d030ca46dfcf30f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67fe252e91145a427e7bd42064733ae78835d8cc
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688845"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51667586"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>列存储索引 - 碎片整理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -206,7 +206,7 @@ ms.locfileid: "47688845"
 
 ## <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
 
-利用[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
+利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
 
 ## <a name="see-also"></a>另请参阅        
 [列存储索引 - 新增功能](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
@@ -214,6 +214,6 @@ ms.locfileid: "47688845"
 [开始使用列存储进行实时运营分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
 [针对数据仓库的列存储索引](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 [列存储索引体系结构](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)    
-[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
+[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)    
   
   

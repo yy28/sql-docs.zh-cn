@@ -11,12 +11,12 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6d9675dfc6a36407f788bfc9c419ce9aea1eccb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae4e7fc1879a530f2a97f41276d9d0d4237ba471
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701984"
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "47689585"
  请使用 Stretch Database 顾问（SQL Server 2016 升级顾问的一项功能）来确定适用于 Stretch Database 的数据库和表。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。 若要了解有关潜在阻滞问题的详细信息，请参阅 [Stretch Database 的局限性](../../sql-server/stretch-database/limitations-for-stretch-database.md)。  
 
 ## <a name="test-drive-stretch-database"></a>试用 Stretch Database  
- **通过 AdventureWorks 示例数据库试用 Stretch Database。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/en-us/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 Stretch DB 文件夹中打开 Stretch DB 示例文件。 运行此文件中的脚本来检查启用 Stretch Database 之前和之后数据使用的空间、跟踪数据迁移的进度，以及确认你是否可以继续在数据迁移期间和之后查询现有数据和插入新数据。  
+ **通过 AdventureWorks 示例数据库试用 Stretch Database。** 若要获取 AdventureWorks 示例数据库，必须从 [此处](https://www.microsoft.com/download/details.aspx?id=49502)。 将示例数据库还原到 SQL Server 2016 实例后，请解压缩示例文件，然后从 Stretch DB 文件夹中打开 Stretch DB 示例文件。 运行此文件中的脚本来检查启用 Stretch Database 之前和之后数据使用的空间、跟踪数据迁移的进度，以及确认你是否可以继续在数据迁移期间和之后查询现有数据和插入新数据。  
   
 ## <a name="next-step"></a>下一步  
  **确定适用于 Stretch Database 的数据库和表。** 若要确定哪些数据库和表适用于 Stretch Database，请下载 SQL Server 2016 升级顾问并运行 Stretch Database 顾问。 Stretch Database 顾问也能标识阻止问题。 有关详细信息，请参阅 [通过运行 Stretch Database 顾问标识适用于 Stretch Database 的数据库和表](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)。  

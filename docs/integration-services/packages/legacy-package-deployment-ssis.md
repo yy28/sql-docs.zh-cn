@@ -32,12 +32,12 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df681347fde77f4891ed082b2e75ef15e9f935e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cad877fe1c1431f044f41b6dc7087c8b990cc4c
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718265"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639064"
 ---
 # <a name="legacy-package-deployment-ssis"></a>早期包部署 (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括一些工具和向导，它们简化了将包从开发计算机部署到生产服务器或其他计算机的过程。  
@@ -102,7 +102,7 @@ ms.locfileid: "47718265"
   
 -   不能使用 **/ConfigFile** 选项加载用来替换在设计时指定的配置的配置。  
   
- 有关这些选项以及其在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 和早期版本中的行为的区别的详细信息，请参阅 [SQL Server 2016 中 Integration Services 功能的行为更改](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
+ 有关这些选项以及其在 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 和早期版本中的行为的区别的详细信息，请参阅 [SQL Server 2016 中 Integration Services 功能的行为更改](https://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)。  
   
 ### <a name="package-configuration-types"></a>包配置类型  
  下表介绍了包配置的类型。  
@@ -430,7 +430,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  您还可以通过配置执行包任务将值传递给子包，以将父包变量或参数（或项目参数）映射到子包参数。 有关详细信息，请参阅 [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)。  
   
- 在子包中创建包配置之前，不必在父包中创建变量。 可以随时在父包中添加变量，但必须在包配置中使用准确的父变量名称。 但是，在配置可以更新的子包中必须有现成的变量，然后才能创建父变量配置。 有关添加和配置变量的详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](http://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
+ 在子包中创建包配置之前，不必在父包中创建变量。 可以随时在父包中添加变量，但必须在包配置中使用准确的父变量名称。 但是，在配置可以更新的子包中必须有现成的变量，然后才能创建父变量配置。 有关添加和配置变量的详细信息，请参阅 [添加、删除、更改包中用户定义变量的作用域](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e)。  
   
  父包中用于父变量配置的变量的作用域可以设置为“执行包”任务、包含任务的容器或包。 如果在包中定义了多个同名的变量，则使用在作用域中最接近“执行包”任务的变量。 最接近“执行包”任务的作用域是该任务本身。  
   

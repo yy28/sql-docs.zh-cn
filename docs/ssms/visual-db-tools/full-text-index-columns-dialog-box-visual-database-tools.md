@@ -13,12 +13,12 @@ ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 603564e6b742d9c5d23278c047365e4d0106d3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f66b2e167979e2395832c3a73dfb450efa0211e
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705195"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701865"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>“全文本索引列”对话框 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47705195"
 列出可用语言。 从下拉列表中选择适合您的列数据的语言。 例如，如果您使用的是英语版本的操作系统，但希望对包含德文的列进行索引，请从下拉列表中选择“德语”以提高索引的性能。  
   
 **统计语义**  
-选择是否为所选列启用语义索引。 有关详细信息，请参阅 [语义搜索占位符](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+选择是否为所选列启用语义索引。 有关详细信息，请参阅 [语义搜索占位符](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
   
 如果您在选择 **“统计语义”** 前选择某一 **“语言”**，并且所选语言没有关联的语义语言模型，则 **“统计语义”** 复选框将被禁用。 如果你在选择“语言”前选择“统计语义”，则下拉组合框中提供的语言将限制为存在语义语言模型支持的那些语言。  
   

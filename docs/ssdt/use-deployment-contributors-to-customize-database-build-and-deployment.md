@@ -11,12 +11,12 @@ ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21a391b45abc89749db3ae2b7886f7b904b00e9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51666246"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>使用生成参与者和部署参与者来自定义数据库生成和部署
 Visual Studio 提供了可用于为数据库项目修改生成和部署操作的行为的扩展点。  
@@ -33,11 +33,11 @@ Visual Studio 提供了可用于为数据库项目修改生成和部署操作的
 ### <a name="supported-extensibility-scenarios"></a>受支持的扩展性方案  
 可以实现生成或部署参与者以支持以下示例方案：  
   
--   在项目生成期间生成架构文档 - 若要支持此方案，你需要实现 [BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 并重写 OnExecute 方法以生成架构文档。 您可以创建一个目标文件，该文件定义用于控制是否运行扩展并指定输出文件的名称的默认参数。  
+-   在项目生成期间生成架构文档 - 若要支持此方案，你需要实现 [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) 并重写 OnExecute 方法以生成架构文档。 您可以创建一个目标文件，该文件定义用于控制是否运行扩展并指定输出文件的名称的默认参数。  
   
--   在部署 SQL 项目时生成差异报告 - 若要支持此方案，你需要实现 [DeploymentPlanExecutor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，它可在部署 SQL 项目时生成 XML 文件。  
+-   在部署 SQL 项目时生成差异报告 - 若要支持此方案，你需要实现 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)，它可在部署 SQL 项目时生成 XML 文件。  
   
--   修改部署计划以更改移动数据的时间 - 若要支持此方案，你需要实现 [DeploymentPlanModifier](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 并循环访问部署计划。 对于该计划中的每个 SqlTableMigrationStep，您需要检查比较结果以确定是应执行还是跳过该步骤。  
+-   修改部署计划以更改移动数据的时间 - 若要支持此方案，你需要实现 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 并循环访问部署计划。 对于该计划中的每个 SqlTableMigrationStep，您需要检查比较结果以确定是应执行还是跳过该步骤。  
   
 -   在部署 SQL 项目时将文件复制到生成的 dacpac - 若要支持此方案，你需要实现部署参与者并重写 OnEstablishDeploymentConfiguration 方法，以指定由项目系统标记为 DeploymentExtensionConfiguration 的文件。 这些文件应复制到输出文件夹并添加到生成的 dacpac 中。 也可以修改参与者以将多个文件合并为一个新文件，此文件将复制到输出文件夹并添加到部署清单中。 在部署期间，可以实现 OnApplyDeploymentConfiguration 方法以从 dacpac 中提取这些文件，并准备这些文件以便在 OnExecute 方法中使用。  
   
@@ -47,9 +47,9 @@ Visual Studio 提供了可用于为数据库项目修改生成和部署操作的
   
 |**常见任务**|**支持内容**|  
 |--------------------|--------------------------|  
-|了解有关扩展点的更多信息：可以了解有关用于实现生成和部署参与者的基类的信息。|[BuildContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|了解有关扩展点的更多信息：可以了解有关用于实现生成和部署参与者的基类的信息。|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
 |创建示例参与者：了解创建生成或部署参与者所需的步骤。 如果您遵循这些演练，则将：<br /><br />-   创建可生成列出了模型中所有元素的报告的生成参与者。<br />-   创建在执行部署计划前更改该计划的部署参与者。<br />-   创建在部署 SQL 项目时生成部署报告的部署参与者。<br /><br />可以在一个程序集或多个程序集中创建所有参与者，具体取决于您希望采用什么方式向团队分发参与者。|[演练：扩展数据库项目生成以生成模型统计信息](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[演练：扩展数据库项目部署以修改部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[演练：扩展数据库项目部署以分析部署计划](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>另请参阅  
-[定义 SQL 单元测试的自定义条件](http://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
+[定义 SQL 单元测试的自定义条件](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  
   

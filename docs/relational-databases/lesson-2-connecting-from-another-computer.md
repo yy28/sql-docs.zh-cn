@@ -5,19 +5,18 @@ ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6dd8d869dd4f53c2628c3154d374a60cc6f40adc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 615aa894b7ceb07d471c281eb6be24db9c0e3a43
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639005"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657567"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>第 2 课：从其他计算机进行连接
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "47639005"
 为了增强安全性，Windows Server 2008、 [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]和 Windows 7 均打开了 Windows 防火墙。 在您从其他计算机连接到此实例时，必须打开防火墙中的通信端口。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的默认实例侦听端口 1433；因此，您不需要配置固定端口。 不过，包括 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] 的命令实例会侦听动态端口。 打开防火墙的端口之前，必须首先将 [!INCLUDE[ssDE](../includes/ssde-md.md)] 配置为侦听特定端口（称为固定端口或静态端口）；否则， [!INCLUDE[ssDE](../includes/ssde-md.md)] 可能会在每次启动时侦听不同的端口。 有关防火墙、默认 Windows 防火墙设置的详细信息以及有关影响数据库引擎、Analysis Services、Reporting Services 和 Integration Services 的 TCP 端口的说明，请参阅 [配置 Windows 防火墙以允许 SQL Server 访问](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)。  
   
 > [!NOTE]  
-> Internet 号码分配机构负责管理端口号的分配，并在 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。应分配的端口号的范围是从 49152 到 65535。  
+> Internet 号码分配机构负责管理端口号的分配，并在 [https://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) 上列出这些端口号。应分配的端口号的范围是从 49152 到 65535。  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>配置 SQL Server 以侦听特定端口  
   

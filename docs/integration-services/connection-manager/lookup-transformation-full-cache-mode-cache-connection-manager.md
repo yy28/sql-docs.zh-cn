@@ -13,12 +13,12 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bdf93e2f4da62ffa7a1cfd6edac11955f3bd757f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853572"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51642284"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查找转换完全缓存模式 - 缓存连接管理器
   可以将查找转换配置为使用完全缓存模式和缓存连接管理器。 在完全缓存模式下，在查找转换运行前，引用数据集会加载到缓存中。  
@@ -62,7 +62,7 @@ ms.locfileid: "47853572"
   
 -   [序列容器](../../integration-services/control-flow/sequence-container.md)  
   
- 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](http://go.microsoft.com/fwlink/?LinkId=131031)。  
+ 有关演示如何使用缓存连接管理器在完全缓存模式下实现查找转换的视频，请参阅 [如何在完全缓存模式下实现查找转换（SQL Server 视频）](https://go.microsoft.com/fwlink/?LinkId=131031)。  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>在完全缓存模式下使用缓存连接管理器和数据流中的数据源在单个包中实现查找转换  
   
@@ -281,7 +281,7 @@ ms.locfileid: "47853572"
 9. 运行包。  
   
 ## <a name="see-also"></a>另请参阅  
- [在完全缓存模式下使用 OLE DB 连接管理器实现查找转换](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [在完全缓存模式下使用 OLE DB 连接管理器来实现查找转换](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [在不缓存模式或部分缓存模式下实现查找](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Integration Services 转换](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

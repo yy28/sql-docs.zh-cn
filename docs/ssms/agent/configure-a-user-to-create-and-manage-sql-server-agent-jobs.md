@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6e4dd7fd0e9c7f68da18a82e0c1d625962992d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a22e03d88df83a7a967dc87246a6a6fe2cee1f64
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674895"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703506"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47674895"
   
 3.  右键单击“代理”，再选择“新建代理”。  
   
-4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅 [如何创建凭据 (SQL Server Management Studio)](http://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 和 [创建凭据 (Transact-SQL)](http://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
+4.  在 **“新建代理帐户”** 对话框的 **“常规”** 页上，指定新代理的代理名称、凭据名称和说明。 请注意，在创建 SQL Server 代理的代理帐户之前，必须先创建一个凭据。 有关创建凭据的详细信息，请参阅 [如何创建凭据 (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) 和 [创建凭据 (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)。  
   
 5.  检查此代理的相应子系统。  
   

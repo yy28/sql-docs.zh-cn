@@ -11,12 +11,12 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 37135e6bc1c30ea79e9ecda5ee53e90ea85c5f67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b831b54ed0755c8c7ef55364bdc0f8152f22b54
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761946"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662497"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 数据类型和列 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ ms.locfileid: "47761946"
   
 -   本机存储，数据类型为 **xml**   
   
-     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [http://www.w3.org/TR/xml-infoset](http://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
+     数据以保留数据的 XML 内容的内部表示形式进行存储， 这种内部表示形式包括包容层次结构、文档顺序、元素和属性值的相关信息。 具体来说，就是保留 XML 数据的 InfoSet 内容。 有关信息集的详细信息，请访问 [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843)。 InfoSet 内容并不是文本 XML 的精确副本，因为其中未保留下列信息：无关紧要的空格、属性顺序、命名空间前缀和 XML 声明。  
   
-     对于类型化的 **xml** 数据类型 - 绑定到 XML 架构的 **xml** 数据类型，后架构验证信息集 (PSVI) 将类型信息添加到信息集并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?LinkId=48881) 和 [http://www.w3.org/TR/xmlschema-2](http://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
+     对于类型化的 **xml** 数据类型 - 绑定到 XML 架构的 **xml** 数据类型，后架构验证信息集 (PSVI) 将类型信息添加到信息集并按内部表示形式进行编码。 这会显著提高分析速度。 有关详细信息，请参阅位于 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) 和 [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871) 的 W3C XML 架构规范。  
   
 -   在 XML 和关系存储之间映射  
   
@@ -142,7 +142,7 @@ ms.locfileid: "47761946"
   
 -   您希望通过 XML 视图来大容量加载 XML 数据，并将其分解到基础表。  
   
- 这方面的例子有，作为用于数据交换和 Web 服务的 XML 公开的关系数据，以及具有固定架构的 XML 数据。 有关详细信息，请参阅 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)。  
+ 这方面的例子有，作为用于数据交换和 Web 服务的 XML 公开的关系数据，以及具有固定架构的 XML 数据。 有关详细信息，请参阅 [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)。  
   
 #### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>示例：使用带批注的 XML 架构 (AXSD) 对数据进行建模  
  为了进行说明，假定您具有希望将其作为 XML 处理的关系数据（如客户、订单和行项）。 请使用 AXSD 在关系数据上定义 XML 视图。 通过使用 XML 视图可以将 XML 数据大容量加载到表，以及使用 XML 视图查询和更新关系数据。 如果必须在 SQL 应用程序不间断工作时与其他应用程序交换包含 XML 标记的数据，该模型很有用。  

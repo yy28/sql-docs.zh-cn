@@ -15,12 +15,12 @@ ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 371b83be04f64c8f71b642e6cc95f71aacc897f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8f64fb29a90f38d777d0963b9f985bb65e2e2a8
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636055"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701336"
 ---
 # <a name="save-as"></a>另存为
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47636055"
 使用此选项可以查看当前的文件名，更改文件名，或在显示的文件和文件夹中进行筛选。 若要在显示的文件和文件夹中进行筛选，请输入要筛选的文件的完整文件名或部分文件名。 可以使用星号 (`*`) 作为通配符。  
   
 > [!TIP]  
-> 若要显示位于 Web 和网络位置上的文件，请在“文件名”框中输入 URL 或网络路径。 例如，输入“http://mywebsite”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
+> 若要显示位于 Web 和网络位置上的文件，请在“文件名”框中输入 URL 或网络路径。 例如，输入“https://mywebsite”可显示“mywebsite”Web 位置中可用的文件，输入“\\\myserver\myshare”可显示“myserver”上的“myshare”位置中可用的文件。  
   
 **保存类型**  
 使用此选项可为所选项选择新的文件类型。 显示的文件类型包括所选项可转换成的所有可用文件类型。  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb9d77d0c2ddc9ac729bd0389a3bb70196cb189
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 5cd953a67893c2f9c457389a74c309fa207b2aad
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020271"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813600"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>配置本机模式报表服务器上的 SSL 连接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 本机模式使用 HTTP SSL（安全套接字层）服务建立到报表服务器的加密连接。 如果在报表服务器计算机的本地证书存储区中安装证书 (.cer) 文件，则可将该证书绑定到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 预留，以支持通过加密通道建立报表服务器连接。  
   
 > [!TIP]  
->  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如[如何在 SharePoint 2010 web 应用程序上启用 SSL (http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](http://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
+>  如果您在使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式，请参阅 SharePoint 文档了解有关的详细信息。 例如[如何在 SharePoint 2010 web 应用程序上启用 SSL (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)。  
   
  由于 Internet Information Services (IIS) 也使用 HTTP SSL，因此在同一计算机上运行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 时，必须考虑到一些重要的互操作性问题。 请务必查看“与 IIS 的互操作性问题”部分以获取有关如何解决这些问题的指南。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "50020271"
   
  SSL 绑定是 Microsoft Windows 中的共享资源。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器或诸如 IIS 管理器之类的其他工具所做的更改可能会影响同一计算机上的其他应用程序。 编辑绑定所用的工具最好与创建绑定所用的工具相同。  例如，如果使用配置管理器创建了 SSL 绑定，建议您使用配置管理器来管理绑定的生命周期。 如果使用 IIS 管理器来创建绑定，建议使用 IIS 管理器来管理绑定的生命周期。 如果在安装 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 前在计算机上安装了 IIS，最好在配置 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]前查看 IIS 中的 SSL 配置。  
   
- 如果使用 Reporting Services 配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 绑定，则 SSL 可能在正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器的网站上不再工作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除以下注册表项。 删除此注册表项时，还将删除 IIS 的 SSL 绑定。 如果没有此绑定，将不为 HTTPS 协议提供 SSL。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。若要解决此问题，请使用 IIS 管理器还原您的网站的 SSL 绑定。若要在以后避免此问题，请使用 IIS 管理器删除 SSL 绑定，然后使用 IIS 管理器还原所需网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (http://support.microsoft.com/kb/956209/n)](http://support.microsoft.com/kb/956209/n)。  
+ 如果使用 Reporting Services 配置管理器删除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SSL 绑定，则 SSL 可能在正在运行 Internet Information Services (IIS) 的服务器或其他 HTTP.SYS 服务器的网站上不再工作。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 配置管理器删除以下注册表项。 删除此注册表项时，还将删除 IIS 的 SSL 绑定。 如果没有此绑定，将不为 HTTPS 协议提供 SSL。 若要诊断此问题，请使用 IIS 管理器或 HTTPCFG.exe 命令行实用工具。若要解决此问题，请使用 IIS 管理器还原您的网站的 SSL 绑定。若要在以后避免此问题，请使用 IIS 管理器删除 SSL 绑定，然后使用 IIS 管理器还原所需网站的绑定。 有关详细信息，请参阅知识库文章 [删除 SSL 绑定后 SSL 将不再工作 (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n)。  
   
 ## <a name="see-also"></a>另请参阅  
  [针对报表服务器的身份验证](../../reporting-services/security/authentication-with-the-report-server.md)   

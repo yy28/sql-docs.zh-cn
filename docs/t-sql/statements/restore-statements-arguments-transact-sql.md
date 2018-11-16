@@ -16,12 +16,12 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 55588ba56d92ce282ff3dd4b0661248e0449beca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e397d797568d14cd184d8246425db13d9fb2a0b6
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746025"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51697675"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 语句 - 参数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -253,7 +253,7 @@ CREDENTIAL
  仅当从 Windows Azure Blob 存储服务还原备份时使用。  
   
 > [!NOTE]  
->  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658) 以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
+>  对于 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 到 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，从 URL 还原时只能从单个设备进行还原。 从 URL 还原时，若要从多个设备进行还原，必须使用 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 到 [当前版本](https://go.microsoft.com/fwlink/p/?LinkId=299658) 以及共享访问签名 (SAS) 令牌。 有关详细信息，请参阅[对 Microsoft Azure 启用 SQL Server 托管备份](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)和 [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell（使用 Powershell 简化在 Azure 存储空间中使用共享访问签名 (SAS) 令牌创建 SQL 凭据的过程）](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。  
   
  REPLACE  
  **支持的语句：**[RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

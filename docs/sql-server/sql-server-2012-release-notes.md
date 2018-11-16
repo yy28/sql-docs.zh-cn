@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e9539302dfa2bfdd13c55cd9d06544e5a55a6d5d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: c53f178bb532eb038d4c06ca882d067aa7ae4eb5
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703935"
 ---
 # <a name="sql-server-2012-release-notes"></a>SQL Server 2012 发行说明
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](http://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
+本发行说明文档介绍了在安装 Microsoft SQL Server 2012 或对其进行故障排除前需要了解的已知问题（[此处下载](https://go.microsoft.com/fwlink/?LinkId=238647)(#单击此处下载)）。 本发行说明文档只能在线下载，而不提供有关的安装介质，并且本文档将定期更新。  
   
-有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](http://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 还可以在 [SQL Server 联机丛书](http://go.microsoft.com/fwlink/?LinkId=190948) (#sql-server-联机丛书) 中以及 [SQL Server 论坛](http://go.microsoft.com/fwlink/?LinkId=213599)(#sql-server-论坛) 上找到更多信息。  
+有关如何开始安装 SQL Server 2012 的信息，请参阅 SQL Server 2012 自述文件。 该自述文档在安装介质上提供，也可从 [自述文件](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) (#自述文件) 下载页获得。 还可以在 [SQL Server 联机丛书](https://go.microsoft.com/fwlink/?LinkId=190948) (#sql-server-联机丛书) 中以及 [SQL Server 论坛](https://go.microsoft.com/fwlink/?LinkId=213599)(#sql-server-论坛) 上找到更多信息。  
   
 ## <a name="Install"></a>1.0 安装之前  
 在安装 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]之前，请考虑以下信息。  
@@ -75,7 +75,7 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 在重命名网络名称后，SQL Server 2008、2008 R2 Analysis Services 故障转移群集升级到 SQL Server 2012 可能失败  
 **问题：** 在使用 Windows 群集管理器工具更改 Microsoft SQL Server 2008 或 2008 R2 Analysis Services 故障转移群集实例的网络名称后，升级操作可能会失败。  
   
-**解决方法：** 若要解决此问题，请按照 [此知识库文章](http://support.microsoft.com/kb/955784)(#此知识库文章) 中的解决方法部分中的说明更新 ClusterName 注册表项。  
+**解决方法：** 若要解决此问题，请按照 [此知识库文章](https://support.microsoft.com/kb/955784)(#此知识库文章) 中的解决方法部分中的说明更新 ClusterName 注册表项。  
   
 ### <a name="15-installing-sql-server-2012-on-windows-server-2008-r2-server-core-service-pack-1"></a>1.5 在 Windows Server 2008 R2 Server Core Service Pack 1 上安装 SQL Server 2012  
 您可以在 Windows Server 2008 R2 Server Core SP1 上安装 SQL Server，但具有以下限制：  
@@ -88,14 +88,14 @@ SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu3
   
 -   不能在运行 Windows Server 2008 R2 Server Core SP1 的计算机上并行安装 Microsoft SQL Server 2012 和早期版本的 SQL Server。  
   
--   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](http://msdn.microsoft.com/library/hh231669(SQL.110).aspx)(#在-server-core-上安装-sql-server-2012)。  
+-   不是 SQL Server 2012 的所有功能在 Server Core 操作系统上都支持。 有关支持的功能以及在 Server Core 上安装 SQL Server 2012 的详细信息，请参阅 [在 Server Core 上安装 SQL Server 2012](https://msdn.microsoft.com/library/hh231669(SQL.110).aspx)(#在-server-core-上安装-sql-server-2012)。  
   
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 语义搜索要求您安装其他依赖项  
 **问题：** 统计语义搜索要求其他的必备组件，即语义语言统计数据库，而 SQL Server 安装程序并不安装此组件。  
   
 **解决方法：** 若要将语义语言统计数据库设置为语义索引的必备组件，请执行以下任务：  
   
-1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (http://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
+1.  在 SQL Server 安装介质上找到并运行名为 SemanticLanguageDatabase.msi 的 Windows Installer 包，以便解压缩数据库。 对于 SQL Server 2012 Express，从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=35582) (https://go.microsoft.com/fwlink/?LinkId=221787) 下载语义语言统计数据库，然后运行 Windows Installer 包。  
   
 2.  将数据库移到相应的数据文件夹。 如果您要使数据库保持在其默认位置，必须首先更改权限，然后才能成功附加该数据库。  
   
@@ -156,7 +156,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
         **使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1：**  
   
-        您还可以使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1。 有关联机启用 Windows 功能的详细信息，请参阅 [联机启用或禁用 Windows 功能](http://technet.microsoft.com/library/dd744582(WS.10).aspx)(#联机启用或禁用-windows-功能)。 下面是启用 .NET Framework 3.5 SP1 的说明：  
+        您还可以使用部署映像服务和管理 (DISM.exe) 启用 .NET Framework 3.5 SP1。 有关联机启用 Windows 功能的详细信息，请参阅 [联机启用或禁用 Windows 功能](https://technet.microsoft.com/library/dd744582(WS.10).aspx)(#联机启用或禁用-windows-功能)。 下面是启用 .NET Framework 3.5 SP1 的说明：  
   
         1.  在命令提示符下，键入以下命令以便列出在操作系统中提供的所有功能：  
   
@@ -182,17 +182,17 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 -   为了确保 Visual Studio 组件可以正确安装，SQL Server 要求您安装更新。 SQL Server 安装程序会检查此更新是否存在，然后会要求您在继续安装 SQL Server 之前先下载并安装此更新。 若要避免在 SQL Server 安装期间中断，可在运行 SQL Server 安装程序之前先按下面所述下载并安装此更新（也可以安装 Windows 更新上提供的 .NET Framework 3.5 SP1 的所有更新）。  
   
-    -   如果在使用 Windows Vista SP2 或 Windows Server 2008 SP2 操作系统的计算机上安装 SQL Server 2012，则可以从 [此处](http://support.microsoft.com/?kbid=956250)(#此处) 获得所需更新。  
+    -   如果在使用 Windows Vista SP2 或 Windows Server 2008 SP2 操作系统的计算机上安装 SQL Server 2012，则可以从 [此处](https://support.microsoft.com/?kbid=956250)(#此处) 获得所需更新。  
   
     -   如果您在使用 Windows 7 SP1 或 Windows Server 2008 R2 SP1 操作系统的计算机上安装 SQL Server 2012，则此更新已安装在该计算机上。  
   
--   Windows PowerShell 2.0 是用于安装 SQL Server 2012 数据库引擎组件和 SQL Server Management Studio 的必备组件，但 Windows PowerShell 不再由 SQL Server 安装程序安装。 如果你的计算机上没有 PowerShell 2.0，则可以按照 [Windows Management Framework](http://support.microsoft.com/kb/968929) (#windows-management-framework) 页上的说明启用它。 您获取 Windows PowerShell 2.0 的方式取决于您正在运行的操作系统：  
+-   Windows PowerShell 2.0 是用于安装 SQL Server 2012 数据库引擎组件和 SQL Server Management Studio 的必备组件，但 Windows PowerShell 不再由 SQL Server 安装程序安装。 如果你的计算机上没有 PowerShell 2.0，则可以按照 [Windows Management Framework](https://support.microsoft.com/kb/968929) (#windows-management-framework) 页上的说明启用它。 您获取 Windows PowerShell 2.0 的方式取决于您正在运行的操作系统：  
   
     -   Windows Server 2008 – Windows PowerShell 1.0 是一个功能并且可以添加。 下载并安装 Windows PowerShell 2.0 版本（作为操作系统修补程序生效）。  
   
     -   Windows 7/Windows Server 2008 R2 – 默认安装 Windows PowerShell 2.0。  
   
--   如果您计划在 SharePoint 环境中使用 SQL Server 2012 功能，则需要 SharePoint Server 2010 Service Pack 1 (SP1) 和 SharePoint 八月累积更新。 必须首先安装 SP1（SharePoint [八月累积更新](http://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)(#八月累计更新)）并全面修补服务器场，才能将 SQL Server 2012 功能添加到场中。 此要求适用于以下 SQL Server 2012 功能：使用数据库引擎实例作为场的数据库服务器，配置 PowerPivot for SharePoint，或者在 SharePoint 模式下部署 Reporting Services。  
+-   如果您计划在 SharePoint 环境中使用 SQL Server 2012 功能，则需要 SharePoint Server 2010 Service Pack 1 (SP1) 和 SharePoint 八月累积更新。 必须首先安装 SP1（SharePoint [八月累积更新](https://blogs.technet.com/b/stefan_gossner/archive/2010/09/02/august-2010-cumulative-update-for-sharepoint-has-been-released.aspx)(#八月累计更新)）并全面修补服务器场，才能将 SQL Server 2012 功能添加到场中。 此要求适用于以下 SQL Server 2012 功能：使用数据库引擎实例作为场的数据库服务器，配置 PowerPivot for SharePoint，或者在 SharePoint 模式下部署 Reporting Services。  
   
 ### <a name="18-supported-operating-systems-for-sql-server-2012"></a>1.8 SQL Server 2012 支持的操作系统  
 在 Windows Vista SP2、Windows Server 2008 SP2、Windows 2008 R2 SP1 和 Windows 7 SP1 操作系统上支持 SQL Server 2012。  
@@ -200,7 +200,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="19-sync-framework-is-not-included-in-the-installation-package"></a>1.9 Sync Framework 未包含在安装包中  
 **问题：** Sync Framework 未包含在 SQL Server 2012 安装包中。  
   
-**解决方法：** 可以从此 [Microsoft 下载中心页](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)(#microsoft-下载中心页) 下载适当版本的 Sync Framework。  
+**解决方法：** 可以从此 [Microsoft 下载中心页](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217)(#microsoft-下载中心页) 下载适当版本的 Sync Framework。  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 如果卸载了 Visual Studio 2010 Service Pack 1，则必须修复 SQL Server 2012 实例以还原特定组件  
 **问题：**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 安装依赖于 Visual Studio 2010 Service Pack 1 的某些组件。 如果卸载 Service Pack 1，某些共享组件将降级为其初始版本，并且另有少数组件将从计算机中完全删除。  
@@ -230,7 +230,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
 `Setup has detected that the .NET Framework version 4 needs to be repaired. Do not restart your computer until Setup is complete.`  
   
-**解决方法**：在升级操作系统后修复安装的 .NET Framework 4。 有关详细信息，请参阅 [如何修复现有的 .NET Framework 安装](http://support.microsoft.com/kb/306160)(#如何修复现有的-.net-framework-安装)。  
+**解决方法**：在升级操作系统后修复安装的 .NET Framework 4。 有关详细信息，请参阅 [如何修复现有的 .NET Framework 安装](https://support.microsoft.com/kb/306160)(#如何修复现有的-.net-framework-安装)。  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 Server SQL 版本升级要求重新启动  
 **问题**：对 SQL Server 2012 实例进行版本升级时，某些与新版本相关的功能可能不能立即激活。  
@@ -313,7 +313,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 2.  为用于 IPv6 的端口设置安全性 ACL，并且从管理 CMD 窗口执行以下命令：  
   
     ```  
-    netsh http add urlacl url=http://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
+    netsh http add urlacl url=https://[::1]:47873/help/ sddl=D:(A;;GX;;;WD)  
     ```  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
@@ -323,12 +323,12 @@ A semantic language statistics database is not registered. Full-text indexes usi
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 在群集中不支持 DQS  
 **问题：** 在 SQL Server 群集安装中不支持 DQS。 如果你在安装 SQL Server 的某一群集实例，则不得在“ **功能选择** ”页上选中“ **Data Quality Services** ”和“ **数据质量客户端** ”复选框。 如果在群集实例安装过程中选中了这些复选框（并且通过运行 DQSInstaller.exe 文件完成了数据质量服务器安装），则 DQS 将安装在此节点上，但在将更多节点添加到群集时不可用于附加节点，因此在附加节点上将不起作用。  
   
-**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅[http://support.microsoft.com/kb/2674817](http://support.microsoft.com/kb/2674817)。  
+**解决方法：** 安装 SQL Server 2012 累积更新 1 可解决此问题。 有关说明，请参阅[https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817)。  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 若要重新安装数据质量服务器，请在卸载数据质量服务器后删除 DQS 对象  
 **问题：** 如果卸载数据质量服务器，则 DQS 对象（DQS 数据库、DQS 登录名和 DQS 存储过程）不会从 SQL Server 实例中删除。  
   
-**解决方法：** 要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](http://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
+**解决方法：** 要重新安装同一台计算机上和相同 SQL Server 实例中的数据质量服务器，必须从 SQL Server 实例中手动删除 DQS 对象。 此外，您还必须首先从计算机上的 C:\Program Files\Microsoft SQL Server\MSSQL11.<SQL_Server_Instance>\MSSQL\DATA 文件夹中删除 DQS 数据库（DQS_MAIN、DQS_PROJECTS 和 DQS_STAGING_DATA）文件，然后才能重新安装数据质量服务器。 否则，数据质量服务器安装将失败。 如果您想要保留数据，例如知识库或数据质量项目，则应移动数据库文件，而非删除它们。 有关在卸载进程完成后删除 DQS 对象的详细信息，请参阅 [删除数据质量服务器对象](https://msdn.microsoft.com/library/hh231667.aspx)(#删除数据质量服务器对象)。  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 知识发现或交互式清理活动已终止的指示被延迟  
 **问题：** 如果管理员在“活动监视”屏幕中终止某一活动，则在正在运行知识发现、域管理或交互式清理活动的交互用户执行下一操作前，将不会收到指出其活动已终止的任何指示。  
@@ -488,7 +488,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
 **解决方法**：无  
   
 ### <a name="57-alwayson-availability-groups"></a>5.7 AlwaysOn 可用性组  
-在尝试创建可用性组前，请参阅联机丛书中的 [AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](http://go.microsoft.com/?linkid=9753168) (#alwayson-可用性组的先决条件、限制和建议-(sql-server))。 有关 AlwaysOn 可用性组的简介，请参阅联机丛书中的 [AlwaysOn 可用性组 (SQL Server)](http://go.microsoft.com/?linkid=9753166)(#alwayson-可用性组-(sql-server))。  
+在尝试创建可用性组前，请参阅联机丛书中的 [AlwaysOn 可用性组的先决条件、限制和建议 (SQL Server)](https://go.microsoft.com/?linkid=9753168) (#alwayson-可用性组的先决条件、限制和建议-(sql-server))。 有关 AlwaysOn 可用性组的简介，请参阅联机丛书中的 [AlwaysOn 可用性组 (SQL Server)](https://go.microsoft.com/?linkid=9753166)(#alwayson-可用性组-(sql-server))。  
   
 #### <a name="571-client-connectivity-for-alwayson-availability-groups"></a>5.7.1 AlwaysOn 可用性组的客户端连接性  
 **更新日期：** 2012 年 8 月 13 日  
@@ -507,9 +507,9 @@ A semantic language statistics database is not registered. Full-text indexes usi
 |ADO.NET（结合使用 .NET Framework 3.5 SP1 和连接性修补程序 **\&#42;\&#42;**）|用户帐户控制|是|是|是|用户帐户控制|  
 |Microsoft JDBC driver 4.0 for SQL Server|用户帐户控制|是|是|是|用户帐户控制|  
   
-\&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[http://support.microsoft.com/kb/2600211](http://support.microsoft.com/kb/2600211)。  
+\&#42; 下载 ADO .NET（结合使用 .NET Framework 4.0）的连接性修补程序：[https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)。  
   
-\&#42;\&#42; 下载 ADO .NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序：[http://support.microsoft.com/kb/2654347](http://support.microsoft.com/kb/2654347)。  
+\&#42;\&#42; 下载 ADO .NET（结合使用 .NET Framework 3.5 SP1）的连接性修补程序：[https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)。  
   
 **MultiSubnetFailover 关键字和相关功能**  
   
@@ -570,10 +570,10 @@ Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300
 **解决方法：** 在连接字符串中使用“multisubnetfailover = true”。  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 因 Active Directory 配额未能新建可用性组侦听器  
-**问题：** 新的可用性组侦听器可能在创建时失败，因为已经达到参与群集节点计算机帐户的 Active Directory 配额。 有关详细信息，请参阅 [如何在群集服务帐户修改计算机对象时排除其故障](http://support.microsoft.com/kb/307532) (#如何在群集服务帐户修改计算机对象时排除其故障)和 [Active Directory 配额](http://technet.microsoft.com/library/cc904295(WS.10).aspx)(#active.directory-配额)。  
+**问题：** 新的可用性组侦听器可能在创建时失败，因为已经达到参与群集节点计算机帐户的 Active Directory 配额。 有关详细信息，请参阅 [如何在群集服务帐户修改计算机对象时排除其故障](https://support.microsoft.com/kb/307532) (#如何在群集服务帐户修改计算机对象时排除其故障)和 [Active Directory 配额](https://technet.microsoft.com/library/cc904295(WS.10).aspx)(#active.directory-配额)。  
   
 #### <a name="577-netbios-conflicts-because-availability-group-listener-names-use-an-identical-15-character-prefix"></a>5.7.7 NetBIOS 发生冲突，因为可用性组侦听器名称使用相同的 15 字符前缀  
-如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](http://technet.microsoft.com/library/cc731265(WS.10).aspx)(#分配域名)。  
+如果您的两个 WSFC 群集均由同一 Active Directory 控制，而您试图使用超过 15 个字符的名称（具有相同的 15 字符前缀）在这两个群集中创建可用性组侦听器，此时您将收到错误，报告无法使虚拟网络名称资源联机。 有关 DNS 名称的前缀命名规则的信息，请参阅 [分配域名](https://technet.microsoft.com/library/cc731265(WS.10).aspx)(#分配域名)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -607,10 +607,10 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
   
 3.  在主群集节点上安装包含 MDS 功能的 SQL Server 2012，然后在任何附加群集节点上安装包含 MDS 功能的 SQL Server 2012。  
   
-有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [http://support.microsoft.com/kb/2683467](http://support.microsoft.com/kb/2683467)。  
+有关这些问题的详细信息以及有关如何执行上述步骤的信息，请参阅 [https://support.microsoft.com/kb/2683467](https://support.microsoft.com/kb/2683467)。  
   
 ### <a name="72-microsoft-silverlight-5-required"></a>7.2 需要 Microsoft Silverlight 5  
-在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [http://go.microsoft.com/fwlink/?LinkId=243096](http://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
+在使用主数据管理器 Web 应用程序时，Silverlight 5.0 必须安装在客户端计算机上。 如果您不具有所需版本的 Silverlight，则在您导航到需要 Silverlight 的 Web 应用程序区域时，系统将提示您安装 Silverlight。 可以从 [https://go.microsoft.com/fwlink/?LinkId=243096](https://go.microsoft.com/fwlink/?LinkId=243096) 安装 Silverlight 5。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
@@ -622,7 +622,7 @@ Oracle CDC 服务是一种 Windows 服务，该服务将扫描 Oracle 事务日�
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012 包含 StreamInsight 2.0。 StreamInsight 2.0 要求 Microsoft SQL Server 2012 许可证和 .NET Framework 4.0。 它还包含了许多性能改进和几个错误修补程序。 有关详细信息，请参阅 [Microsoft StreamInsight 2.0 发行说明](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)(#microsoft-streaminsight-2.0-发行说明)。 若要单独下载 StreamInsight 2.0，请访问 Microsoft 下载中心上的 [Microsoft StreamInsight 2.0 下载页](http://go.microsoft.com/fwlink/?LinkId=241593) (#microsoft-streaminsight-2.0-下载页)。  
+SQL Server 2012 包含 StreamInsight 2.0。 StreamInsight 2.0 要求 Microsoft SQL Server 2012 许可证和 .NET Framework 4.0。 它还包含了许多性能改进和几个错误修补程序。 有关详细信息，请参阅 [Microsoft StreamInsight 2.0 发行说明](https://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)(#microsoft-streaminsight-2.0-发行说明)。 若要单独下载 StreamInsight 2.0，请访问 Microsoft 下载中心上的 [Microsoft StreamInsight 2.0 下载页](https://go.microsoft.com/fwlink/?LinkId=241593) (#microsoft-streaminsight-2.0-下载页)。  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   

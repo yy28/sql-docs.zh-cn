@@ -14,12 +14,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: ea235b42cb215a52c523832d4c1b4daffa975971
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f88d384d602e5cca6872fe6e606694e227a7e29
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771625"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51637954"
 ---
 # <a name="upgrade-integration-services-packages"></a>升级 Integration Services 包
   在将 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 实例升级到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的当前版本时，现有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 包不会自动升级到当前版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的包格式。 您必须选择一种升级方法并手动升级包。  
@@ -57,7 +57,7 @@ ms.locfileid: "47771625"
   
  若要使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 设计包含 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 自定义组件的包，需要修改位于 \<drive>:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE 的 devenv.exe.config 文件。  
   
- 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
+ 若要将这些包用于使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的运行时生成的客户应用程序，则在可执行文件的 *.exe.config 文件的配置部分中包含重定向规则。 这些规则会将运行时程序集重定向到版本 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 有关程序集版本重定向的详细信息，请参阅 [\<runtime> 的 \<assemblyBinding> 元素](https://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
 ### <a name="locating-the-assemblies"></a>定位程序集  
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集已升级到 .NET 4.0。 位于 \<drive>:\Windows\Microsoft.NET\assembly 中的 .NET 4 存在单独的全局程序集缓存。 您可在此路径下找到所有 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 程序集，一般位于 GAC_MSIL 文件夹中。  

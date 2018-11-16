@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d2125df7b026df313be15e3c945aea3625833a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f04159b96b441370043054660869b7a7117a6ef
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790966"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51657766"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>监视本机编译的存储过程的执行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47790966"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 有关 **sp_statement_completed** 扩展事件的详细信息，请参阅 [如何检索导致了事件的语句](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 有关 **sp_statement_completed** 扩展事件的详细信息，请参阅 [如何检索导致了事件的语句](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views-and-query-store"></a>使用数据管理视图和查询存储
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 支持在过程级别和查询级别收集本机编译的存储过程的执行统计信息。 由于对性能的影响，默认不启用收集执行统计信息。  

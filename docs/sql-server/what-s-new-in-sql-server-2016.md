@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d44aeec8323578c8867f5978fbc6c5f8b6fa0d0d
-ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
+ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49419462"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699428"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新增功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "49419462"
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **立即试用 SQL Server！** 
-- 下载免费的 [SQL Server 2016 开发者版！](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)
+- 下载免费的 [SQL Server 2016 开发者版！](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)
 - 下载最新版 [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)。 
 - 已经拥有 Azure 帐户？ 加速[已安装有 SQL Server 2016 的虚拟机](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)。
 
@@ -60,8 +60,8 @@ SQL Server 2016 Analysis Services 提升了兼容性级别为 1200 的表格模�
 - 新增的数据库一致性检查器 (DBCC) 在内部运行，以检测潜在的数据损坏问题。
 - 直接查询是查询实时外部数据，而不是先导入数据。现在支持更多的数据源，包括 Azure SQL、Oracle 和 Teradata。 
 - 新增了许多 DAX（数据访问表达式）函数。
-- 新增的 [Microsoft.AnalysisServices.Tabular](http://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 命名空间管理表格模式实例和模型。 
-- [Analysis Services 管理对象 (AMO)](http://msdn.microsoft.com/library/mt436122.aspx) 经过重新设计，包含另一个程序集，即 Microsoft.AnalysisServices.Core.dll。
+- 新增的 [Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx) 命名空间管理表格模式实例和模型。 
+- [Analysis Services 管理对象 (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) 经过重新设计，包含另一个程序集，即 Microsoft.AnalysisServices.Core.dll。
 
 请参阅 [Analysis Services 引擎 (SSAS)](../analysis-services/what-s-new-in-analysis-services.md)。 
 
@@ -100,11 +100,11 @@ SQL Server 2016 Analysis Services 提升了兼容性级别为 1200 的表格模�
 ## <a name="next-steps"></a>后续步骤   
 - [SQL Server 安装程序](../database-engine/install-windows/installation-for-sql-server-2016.md)   
 - [SQL Server 2016 发行说明](../sql-server/sql-server-2016-release-notes.md) 
-- [SQL Server 2016 数据表](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
+- [SQL Server 2016 数据表](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 - [SQL Server各个版本支持的功能](https://msdn.microsoft.com/library/cc645993.aspx)
 - [安装 SQL Server 2016 的硬件和软件要求](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [使用安装向导安装 SQL Server 2016](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [安装程序和安装服务](http://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [安装程序和安装服务](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
 - [新建 SQL PowerShell 模块](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

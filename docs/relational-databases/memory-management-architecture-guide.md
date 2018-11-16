@@ -5,8 +5,7 @@ ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
@@ -16,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dadd28224a7f360ee90767861025b0bdebc7cbe5
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623825"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51669396"
 ---
 # <a name="memory-management-architecture-guide"></a>内存管理体系结构指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "47623825"
 <sup>6</sup> 如果授予“锁定内存中的页”权限 (LPIM)（在支持 AWE 的 32 位系统上或单独在 64 位系统上），建议也要设置最大服务器内存。 有关 LPIM 的详细信息，请参阅[“服务器内存”服务器配置选项](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim)
 
 > [!NOTE]
-> 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](http://msdn.microsoft.com/library/ms189334.aspx)和[管理大型数据库的内存](http://msdn.microsoft.com/library/ms191481.aspx)。   
+> 旧版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可在 32 位操作系统上运行。 在 32 位操作系统上访问超过 4 GB 的内存需要地址窗口化扩展插件 (AWE) 对内存进行管理。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 在 64 位操作系统上运行，则不需要。 有关 AWE 的详细信息，请参阅 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 文档中的[进程地址空间](https://msdn.microsoft.com/library/ms189334.aspx)和[管理大型数据库的内存](https://msdn.microsoft.com/library/ms191481.aspx)。   
 
 ## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>自 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以来对内存管理的更改
 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的早期版本（[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 和 [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]）中，使用五种不同的机制分配内存：
@@ -188,7 +187,7 @@ FROM sys.dm_os_process_memory;
 
 网络数据包大小是表格数据模式 (TDS) 数据包的大小，该数据包用于应用程序和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 数据库引擎之间的通信。 默认的数据包大小为 4 KB，由“网络数据包大小”配置选项控制。
 
-启用多个活动的结果集 (MARS) 时，用户连接约为 (3 + 3 \* num_logical_connections) \* network_packet_size + 94 KB
+启用多个活动的结果集 (MARS) 时，用户连接约为 (3 + 3 \*num_logical_connections)\* network_packet_size + 94 KB
 
 ## <a name="effects-of-min-memory-per-query"></a>min memory per query 的影响
 min memory per query 配置选项设定将为执行查询分配的最小内存量 (KB)。 这也称为最小内存授予。 所有查询必须等待，直到：可确保提供请求的最小内存，可以启动执行，或者已超过查询等待服务器配置选项中指定的值。 此方案中累积的等待类型是 RESOURCE_SEMAPHORE。

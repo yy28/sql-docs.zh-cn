@@ -25,12 +25,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6bba11fe5be282ad804fc6dee03229312ec1d37
-ms.sourcegitcommit: b58d514879f182fac74d9819918188f1688889f3
+ms.openlocfilehash: e3eae62b963843c369731ca0abd800c9552c37d3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50970909"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51698814"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 和 varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50970909"
 > [!div class="nextstepaction"]
 > [请帮助改进 SQL Server 文档！](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
 
-字符数据类型 char（长度固定）或 varchar（长度可变）。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，使用启用了 UTF-8 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-8](http://www.wikipedia.org/wiki/UTF-8) 字符编码。 若指定了非 UTF-8 排序规则，则这些数据类型仅会存储该排序规则的相应代码页支持的字符子集。
+字符数据类型 char（长度固定）或 varchar（长度可变）。 从 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 起，使用启用了 UTF-8 的排序规则时，这些数据类型会存储 [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 字符数据的整个范围，并使用 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 字符编码。 若指定了非 UTF-8 排序规则，则这些数据类型仅会存储该排序规则的相应代码页支持的字符子集。
   
 ## <a name="arguments"></a>参数  
 char [ ( n ) ] 固定长度字符串数据。 n 用于定义字符串长度（以字节为单位），并且它必须为 1 到 8,000 之间的值。 对于单字节编码字符集（如拉丁文），存储大小为 n 个字节，并且可存储的字符数也为 n。 对于多字节编码字符集，存储大小仍为 n 个字节，但可存储的字符数可能小于 n。 char 的 ISO 同义词是 character。 有关字符集的详细信息，请参阅[单字节和多字节字符集](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)。

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e7811bc4c7a58f25379e0565090004e92049ce23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802395"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672896"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>创建本机编译的存储过程
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ GO
 |选项|描述|  
 |------------|-----------------|  
 |**SCHEMABINDING**|本机编译的存储过程必须绑定到其引用的对象的架构。 这意味着不能删除该过程引用的表。 在该过程中引用的表必须包括其架构名称，并且在查询中不允许使用通配符 (\*)（意味着没有 `SELECT * from...`）。 此版本的**中的本机编译存储过程仅支持** SCHEMABINDING [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
-|**BEGIN ATOMIC**|本机编译的存储过程正文必须由恰好一个原子块构成。 原子块确保存储过程的原子执行。 如果在活动事务的上下文外调用该过程，它将开始一个新事务，这个新事务在原子块的末尾提交。 本机编译存储过程中的原子块具有两个必需的选项：<br /><br /> **TRANSACTION ISOLATION LEVEL**。 有关支持的隔离级别的信息，请参阅 [内存优化表的事务隔离级别](http://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 。<br /><br /> **LANGUAGE**。 存储过程的语言必须设置为可用语言或语言别名之一。|  
+|**BEGIN ATOMIC**|本机编译的存储过程正文必须由恰好一个原子块构成。 原子块确保存储过程的原子执行。 如果在活动事务的上下文外调用该过程，它将开始一个新事务，这个新事务在原子块的末尾提交。 本机编译存储过程中的原子块具有两个必需的选项：<br /><br /> **TRANSACTION ISOLATION LEVEL**。 有关支持的隔离级别的信息，请参阅 [内存优化表的事务隔离级别](https://msdn.microsoft.com/library/8a6a82bf-273c-40ab-a101-46bd3615db8a) 。<br /><br /> **LANGUAGE**。 存储过程的语言必须设置为可用语言或语言别名之一。|  
   
 ## <a name="see-also"></a>另请参阅  
  [本机编译的存储过程](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  

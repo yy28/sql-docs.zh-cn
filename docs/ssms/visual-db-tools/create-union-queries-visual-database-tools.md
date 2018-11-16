@@ -17,16 +17,16 @@ ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f91d925dbdb8805620fee3ebfc7a0cd29f1fee2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f4fb949c7706aa5b476edde388d747411f3a1a3
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840205"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51699516"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>创建 UNION 查询 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-使用 UNION 关键字，可以在一个结果表中包含两个 SELECT 语句的结果。 任一 SELECT 语句返回的所有行都可合并到 UNION 表达式的结果中。 例如，请参阅 [SELECT 示例 (Transact-SQL)](http://msdn.microsoft.com/9b9caa3d-e7d0-42e1-b60b-a5572142186c)。  
+使用 UNION 关键字，可以在一个结果表中包含两个 SELECT 语句的结果。 任一 SELECT 语句返回的所有行都可合并到 UNION 表达式的结果中。 例如，请参阅 [SELECT 示例 (Transact-SQL)](https://msdn.microsoft.com/9b9caa3d-e7d0-42e1-b60b-a5572142186c)。  
   
 > [!NOTE]  
 > “关系图”窗格只能显示一个 SELECT 子句。 因此，当使用 UNION 查询时，查询设计器将隐藏“表操作”窗格。  
@@ -55,5 +55,5 @@ ms.locfileid: "47840205"
 [支持的查询类型 (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [设计查询和视图操作指南主题 (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [执行基本的查询操作 (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[UNION (Transact-SQL)](http://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
+[UNION (Transact-SQL)](https://msdn.microsoft.com/607c296f-8a6a-49bc-975a-b8d0c0914df7)  
   

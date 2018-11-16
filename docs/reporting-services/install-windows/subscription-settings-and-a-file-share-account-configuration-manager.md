@@ -9,12 +9,12 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9550a136d1720c5f7ee6ef9d5bd8eb2e39b5a246
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61f8db13b3984825d37924a248ffebb31e2a5613
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702615"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813110"
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>订阅设置和文件共享帐户（配置管理器）
   使用 **配置管理器的**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] “订阅设置”页为本机模式报表服务器和文件共享订阅配置文件共享帐户。 文件共享帐户运行使用将报表传递给文件共享的多个订阅中的单组凭据。 需要更改凭据时，可以为文件共享帐户配置更改并且无需更新每个单独的订阅。  
@@ -46,7 +46,7 @@ ms.locfileid: "47702615"
 >  `“Failure writing file {file} : An impersonation error occurred using the security context of the current user.”`  
   
 ## <a name="powershell-sample-to-audit-use-of-the-file-share-account"></a>审核文件共享帐户的使用情况的 PowerShell 示例  
- 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户”的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
+ 运行以下 Windows PowerShell 脚本以列出所有配置为使用“文件共享帐户” [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**的**订阅。 将报表服务器的 `SERVERNAME` 更新为相应的值。  
   
 ```  
 # get all file share subscriptions using the default file share account  
@@ -73,7 +73,7 @@ filter script:extensionSettingFilter
     }  
 }  
   
-$rs2010 = New-WebServiceProxy -Uri "http:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
+$rs2010 = New-WebServiceProxy -Uri "https:// SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptions = $rs2010.ListSubscriptions("/");  
   
 Write-Host "----- File share subscriptions using the default file share account ----";  

@@ -14,12 +14,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 82644d3a13dbc73ca203a7829e65364e75f6d2fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de1b72abf9f94b2c5618a90f53511dfeacc036ce
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811537"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51640061"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   通过启用 XML 任务的 **ValidationDetails** 属性，验证 XML 文档并获取丰富的错误输出。  
@@ -33,14 +33,14 @@ ms.locfileid: "47811537"
  XML 验证功能可轻松扩展以适应大型 XML 文档和大量错误。 由于输出文件本身采用 XML 格式，你可以查询和分析输出。 例如，如果输出中包含大量错误，你可以按本主题中所述，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查询对错误分组。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2 中引入了 **ValidationDetails** 属性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 在 **Service Pack 2 中引入了** ValidationDetails [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 属性。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]中也可使用该属性。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有效的 XML 示例输出  
  下面是有效 XML 文件的示例输出文件（带有验证结果）。  
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>true</result>  
         <errors>0</errors>  
@@ -59,7 +59,7 @@ ms.locfileid: "47811537"
   
 ```xml  
   
-<root xmlns:ns="http://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
+<root xmlns:ns="https://schemas.microsoft.com/xmltools/2002/xmlvalidation">  
     <metadata>  
         <result>false</result>  
         <errors>2</errors>  
@@ -89,7 +89,7 @@ FROM OPENROWSET (BULK N'C:\Temp\XMLValidation_2016-02-212T10-41-00.xml', SINGLE_
   
 -- Query # 1, flat list of errors  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  
@@ -101,7 +101,7 @@ SELECT * FROM rs;
   
 -- Query # 2, count of errors grouped by the error message  
 -- convert to relational/rectangular  
-;WITH XMLNAMESPACES ('http://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
+;WITH XMLNAMESPACES ('https://schemas.microsoft.com/xmltools/2002/xmlvalidation' AS ns), rs AS  
 (  
 SELECT col.value('@line','INT') AS line  
      , col.value('@position','INT') AS position  

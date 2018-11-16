@@ -14,12 +14,12 @@ ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 219a53e194e7ed64c072e66ba2686448903bfe2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58c8f0734db28e80fbc07f1826f1dc51ea9300e9
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786680"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672046"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>查询表达式和统一资源名称
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  对 *PropertyExpression*的计算值求反，枚举与 *PropertyExpression*中指定的条件不匹配的所有对象。 例如，not(contains(\@Name, 'xyz')) 枚举名称中不含字符串 xyz 的所有对象。  
   
 ## <a name="remarks"></a>Remarks  
- 查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](http://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
+ 查询表达式是一些字符串，用于枚举 SMO 模型层次结构中的节点。 每个节点有一个筛选表达式，指定用于确定要枚举该节点的哪些对象的条件。 查询表达式在 XPath 表达式语言上建模。 查询表达式实现了 XPath 支持的一小部分表达式，还具有 XPath 中不提供的一些扩展。 XPath 表达式是一些字符串，指定用于枚举 XML 文档中的一个或多个标记的一组条件。 有关 XPath 的详细信息，请参阅 [W3C XPath Language](https://www.w3.org/TR/xpath20/)（W3C Xpath 语言）。  
   
  查询表达式必须以对服务器对象的绝对引用开头。 不允许使用以 / 开头的相对表达式。 查询表达式中指定的对象的顺序必须遵循相关对象模型中集合对象的层次结构。 例如，引用 Microsoft.SqlServer.Management.Smo 命令空间中对象的查询表达式必须从服务器节点开始，接下来才是数据库节点等。  
   

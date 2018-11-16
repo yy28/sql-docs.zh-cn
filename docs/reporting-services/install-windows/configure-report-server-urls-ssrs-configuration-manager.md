@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6167e81d5f6d9307101994e687b1ecd353793394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa67d80d18b6f93393cfccac146765a8df536ed
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609695"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813340"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>配置报表服务器 URL（SSRS 配置管理器）
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，URL 用于访问报表服务器 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]。 在可以使用任一应用程序之前，必须分别为 Web 服务和 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]至少配置一个 URL。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 为这两个应用程序 URL 提供了默认值，默认值在大多数部署方案中都能正常使用，包括与其他 Web 服务和应用程序的并行部署。  
@@ -38,9 +38,9 @@ ms.locfileid: "47609695"
 ## <a name="default-urls"></a>默认 URL  
  通过 URL 访问报表服务器或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 时，该 URL 应包括主机名称而不是 IP 地址。 在 TCP/IP 网络上，IP 地址将解析为主机名称（或计算机的网络名称）。 如果使用了默认值配置 URL，则应可以使用将计算机名称或 localhost 指定为主机名的 URL 来访问报表服务器 Web 服务：  
   
--   `http://<computername>/reportserver`  
+-   `https://<computername>/reportserver`  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
  下表中显示了使这些 URL 可用的设置。 该表显示了通过包含主机名的 URL 来启用报表服务器连接的默认值：  
   

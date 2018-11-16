@@ -15,12 +15,12 @@ ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 218b5d1aba71e5905937bd5433f9f1316c473ab8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f41a1601ef6fe416eb1f429343bea32451f7716
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740604"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51638375"
 ---
 # <a name="string-padding-ssis"></a>字符串填充 (SSIS)
   表达式计算器不检查字符串是否包含前导空格和尾随空格，并且比较前不填充字符串来使其具有相同长度。 如果表达式需要字符串填充，可使用 + 运算符连接列值和空字符串。 有关详细信息，请参阅 [+（连接）（SSIS 表达式）](../../integration-services/expressions/concatenate-ssis-expression.md)。  
@@ -31,6 +31,6 @@ ms.locfileid: "47740604"
 >  LEN 函数将前导空格和尾随空格包含在其计数中。  
   
 ## <a name="related-content"></a>相关内容  
- pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](http://go.microsoft.com/fwlink/?LinkId=746575)。  
+ pragmaticworks.com 上的技术文章 [SSIS 表达式小抄表](https://go.microsoft.com/fwlink/?LinkId=746575)。  
   
   

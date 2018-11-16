@@ -11,12 +11,12 @@ ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfb63472c5132ad37abbe8832929e10f694f84f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689405"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51703885"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Master Data Services 的安装任务
 
@@ -52,12 +52,12 @@ ms.locfileid: "47689405"
 |创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 为您的主数据创建 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库。|[创建 Master Data Services 数据库](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |创建 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 创建和配置 Web 应用程序以承载 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]。|[创建主数据管理器 Web 应用程序 (Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |将 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库与 Web 应用程序关联|使用 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 将 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 应用程序与您的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 数据库关联。|[将 Master Data Services 数据库与 Web 应用程序关联](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|配置 Internet Explorer 增强安全性|在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点编写脚本。 否则，浏览到服务器计算机上的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点将失败。|[Internet Explorer：增强安全性配置](http://go.microsoft.com/fwlink/p/?LinkId=223869)|  
-|安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|将使用主数据的用户可以安装 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。|[http://go.microsoft.com/fwlink/?LinkID=398159](http://go.microsoft.com/fwlink/?LinkID=398159)|  
+|配置 Internet Explorer 增强安全性|在 Windows Server 2012 计算机上安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 时，可能必须配置 Internet Explorer 增强安全性以允许为 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点编写脚本。 否则，浏览到服务器计算机上的 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 应用程序站点将失败。|[Internet Explorer：增强安全性配置](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|安装 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|将使用主数据的用户可以安装 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]。|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |启用 Data Quality Services (DQS) 集成|对于 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]的用户，启用与 DQS 功能的集成，可用于匹配相似数据。|[实现 Data Quality Services 与 Master Data Services 的集成](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |部署示例模型|示例模型包与 Master Data Services 一起安装，可以使用 MDSModelDeploy.exe 进行部署。|[在 SQL Server 中部署 MDS 示例](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
   
- 如果您在安装过程中或初始配置过程中遇到问题，请参阅 TechNet Wiki 上的 [解决安装和配置问题](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 。  
+ 如果您在安装过程中或初始配置过程中遇到问题，请参阅 TechNet Wiki 上的 [解决安装和配置问题](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-installation-and-configuration-issues-master-data-services.aspx) 。  
   
  如果不再需要计算机上的 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ，可以卸载 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 并确定是否删除不受卸载过程影响的项。 有关详细信息，请参阅 [卸载和删除 Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md)。  
   

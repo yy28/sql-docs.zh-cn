@@ -18,12 +18,12 @@ ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e139bb657f8f30fd2e60083c6f0b2019b26d8e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed6f9122b7f25454266fcb50e6b41b43c17a92f6
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674905"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51662227"
 ---
 # <a name="unique-particle-attribution-constraint"></a>唯一粒子归属约束
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "47674905"
   
 -   附录 H：Analysis of the Unique Particle Attribution Constraint (non-normative)  
   
- 若要查看该文档，请访问 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)。  
+ 若要查看该文档，请访问 [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)。  
   
 ## <a name="see-also"></a>另请参阅  
  [XML 架构集合 (SQL Server)](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

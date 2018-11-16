@@ -14,12 +14,12 @@ ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ed68e2510169ee0c56a3dfbf2e95c2cb164412b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14d242dbf69e223b5e56b575f09e55e1f3ba6964
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688585"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681275"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>创建和定义 SQL Server 单元测试
 可运行 SQL Server 单元测试，以验证对架构中的一个或多个数据库对象进行的更改是否已对数据库应用程序中的现有功能产生了影响。 这些测试是对软件开发人员创建的单元测试的补充。 您必须运行这两种测试来验证应用程序的行为。  
@@ -46,7 +46,7 @@ ms.locfileid: "47688585"
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
 在创建 SQL Server 单元测试后，可以从“测试视图”窗口、SQL Server 单元测试设计器或通过使用 Team Foundation Build 来运行这些测试。  
   
-[方案：定义数据库单元测试的自定义测试条件](http://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[方案：定义数据库单元测试的自定义测试条件](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 您可以创建自定义测试条件来测试默认测试条件无法验证的行为。  
   
 ## <a name="see-also"></a>另请参阅  

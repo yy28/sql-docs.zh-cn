@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ff1df22bd00680aeb0574624a3a7b55a688b3a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cef2b01c9b9d5147583cc4419fd105bd3e91503f
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632655"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51701412"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|回显 SQL_statement。|  
 |\<params>|这次不使用此标记。|  
 |\<dsql_operations>|总结和包含了查询步骤，以及查询的成本信息。 还包含所有 `<dsql_operation>` 块。 此标记包含整个查询的计数信息：<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> total_cost 是要运行的查询的总预计时间（以毫秒为单位）。<br /><br /> total_number_operations 是查询的操作总数量。 并行和在多个节点上运行的操作将计为单个操作。|  
-|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type 是[查询数据 (SQL Server PDW)](http://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中说明的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
+|\<dsql_operation>|描述查询计划中的单个操作。 \<dsql_operation> 将操作类型包含为属性：<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> operation_type 是[查询数据 (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c) 中说明的值之一。<br /><br /> `\<dsql_operation>` 块中的内容取决于操作类型。<br /><br /> 请参阅下表。|  
   
 |操作类型|内容|示例|  
 |--------------------|-------------|-------------|  

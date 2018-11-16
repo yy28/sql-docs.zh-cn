@@ -11,19 +11,19 @@ ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8652ebfdcdf5604cebc995ef7ecf2a5f3944b9e7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6df3fa6dc005aab43e86d847ba76ce5e87678459
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071710"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674136"
 ---
 # <a name="how-to-debug-database-objects"></a>如何：调试数据库对象
 SQL Server 单元测试由以下内容组成：  
   
 -   以 Visual C\# 或 Visual Basic 编写的单元测试代码。 此代码（由 SQL Server 单元测试设计器生成）负责提交构成测试主体的 Transact\-SQL 脚本。  
   
--   一个或多个用 Visual C\# 或 Visual Basic 编写的测试条件。 若要调试测试条件，请按照[如何：在运行测试时进行调试 (Visual Studio 2010)](http://msdn.microsoft.com/library/ms182484(VS.100).aspx) 或[如何：在运行测试时进行调试 (Visual Studio 2012)](http://msdn.microsoft.com/library/ms182484.aspx) 中介绍的调试单元测试的过程进行操作。  
+-   一个或多个用 Visual C\# 或 Visual Basic 编写的测试条件。 若要调试测试条件，请按照[如何：在运行测试时进行调试 (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) 或[如何：在运行测试时进行调试 (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx) 中介绍的调试单元测试的过程进行操作。  
   
 -   一个或多个在所测试的数据库中的对象上运行的 Transact\-SQL 脚本。 不能调试这些 Transact\-SQL 脚本。  
   
@@ -98,5 +98,5 @@ SQL Server 单元测试由以下内容组成：
   
 ## <a name="see-also"></a>另请参阅  
 [运行 SQL Server 单元测试](../ssdt/running-sql-server-unit-tests.md)  
-[调试 Transact-SQL (Visual Studio 2010)](http://go.microsoft.com/fwlink/?LinkId=163975)  
+[调试 Transact-SQL (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=163975)  
   

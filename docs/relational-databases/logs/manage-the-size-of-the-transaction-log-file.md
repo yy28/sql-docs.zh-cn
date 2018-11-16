@@ -15,12 +15,12 @@ ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e2eb2f1b799773eb0a6a334828573a89b25a08c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664745"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51674846"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理事务日志文件的大小
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47664745"
 若要了解有关日志文件的当前大小、最大大小以及文件的自动增长选项的信息，还可以在 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 中针对此日志文件使用 **size**、**max_size** 和 **growth** 等列。  
   
 > [!IMPORTANT]
-> 避免日志磁盘重载。 请确保日志存储可以承受 [IOPS](http://wikipedia.org/wiki/IOPS) 和事务加载的低延迟需求。 
+> 避免日志磁盘重载。 请确保日志存储可以承受 [IOPS](https://wikipedia.org/wiki/IOPS) 和事务加载的低延迟需求。 
   
 ##  <a name="ShrinkSize"></a> 收缩日志文件大小  
  若要减少物理日志文件的物理大小，则必须收缩日志文件。 知道事务日志文件包含未使用空间时，此方法很有用。 仅当数据库处于联机状态，而且至少一个[虚拟日志文件 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 可用时，才能收缩日志文件。 在某些情况下，直到下一个日志截断后，才能收缩日志。  
@@ -101,9 +101,9 @@ ms.locfileid: "47664745"
       |自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 起|数据 1 MB。 日志文件 10%。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 之前|数据 10%。 日志文件 10%。|  
 
--   小型的增长增量可能生成过多的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且可能降低性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
+-   小型的增长增量可能生成过多的 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且可能降低性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。
 
--   大型的增长增量可能生成过少的大型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且也可能影响性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。 
+-   大型的增长增量可能生成过少的大型 [VLF](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 并且也可能影响性能。 若要确定给定实例中所有数据库的当前事务日志大小的最佳 VLF 分发，以及实现所需大小需要的增长量，请参阅此[脚本](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)。 
 
 -   即使启用自动增长，如果增长速度不能满足查询需求，也可能收到提示事务日志已满的消息。 有关更改增长增量的详细信息，请参阅 [ALTER DATABASE (Transact-SQL) 文件和文件组选项](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

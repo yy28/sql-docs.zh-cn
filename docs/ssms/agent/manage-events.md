@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5731d561fd60391c5467189f5b7e468a137ce95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1771d1bfc426bf42aeccf11cacf7d214437863d2
+ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691561"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51702005"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "47691561"
   
 -   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## <a name="running-event-triggered-jobs"></a>运行事件触发的作业  
 可以定义一个响应警报时执行的作业。 例如，可以执行一个作业，对警报检测出的问题进行更正或做进一步的诊断。  
@@ -95,5 +95,5 @@ ms.locfileid: "47691561"
 > 由于作业会导致发生事件，应注意不要创建递归的警报作业循环。  
   
 ## <a name="see-also"></a>另请参阅  
-[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

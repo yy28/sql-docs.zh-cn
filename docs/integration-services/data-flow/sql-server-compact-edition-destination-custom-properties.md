@@ -11,12 +11,12 @@ ms.assetid: b66e93fe-ce62-401b-a31f-619c7b8b1f3e
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 321dc1a912dcc28719c8416be9fa917ab86c49bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7a901a99b8b8bcb485f4db25c98fc67abc8fee6
+ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665214"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51639264"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>SQL Server Compact Edition 目标自定义属性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 目标具有自定义属性和所有数据流组件通用的属性。  
@@ -32,6 +32,6 @@ ms.locfileid: "47665214"
  有关详细信息，请参阅 [SQL Server Compact Edition 目标](../../integration-services/data-flow/sql-server-compact-edition-destination.md)。  
   
 ## <a name="see-also"></a>另请参阅  
- [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

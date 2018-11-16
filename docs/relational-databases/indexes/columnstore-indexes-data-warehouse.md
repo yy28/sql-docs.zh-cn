@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce0d82f3c1808f96ce07c949f05cbadaed1cf248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ce64614e3c2f9d27bfafb9101e54ab49df2089e
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51672616"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列存储索引 - 数据仓库
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +125,7 @@ END TRAN
 ```  
   
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>快照隔离和读提交快照隔离  
- 针对列存储索引的查询，使用快照隔离 (SI) 可保证事务一致性，使用读提交快照隔离 (RCSI) 可保证语句级一致性。 从而运行查询时就不会阻止数据写入程序。 这种不会产生阻止的行为也大大降低了复杂事务出现死锁的可能性。 有关详细信息，请参阅 MSDN 上的 [SQL Server 中的快照隔离](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
+ 针对列存储索引的查询，使用快照隔离 (SI) 可保证事务一致性，使用读提交快照隔离 (RCSI) 可保证语句级一致性。 从而运行查询时就不会阻止数据写入程序。 这种不会产生阻止的行为也大大降低了复杂事务出现死锁的可能性。 有关详细信息，请参阅 MSDN 上的 [SQL Server 中的快照隔离](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 。  
   
 ## <a name="see-also"></a>另请参阅  
  [列存储索引设计指南](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee065317d06fbf19ce03c6a9be3b67ff03a0edd5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 04591d5c1d44f0655d0f8dac0743a0e3d0cf6c55
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030586"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51814210"
 ---
 # <a name="manage-shared-datasets"></a>管理共享数据集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共享数据集从连接到外部数据源的共享数据源中检索数据。 共享数据集提供可共享查询的方法，以便为多个报表提供一组一致的数据。 数据集查询可以包括数据集参数。 您可以配置共享数据集，以便在首次使用时或通过指定计划为特定的参数组合缓存查询结果。 您可以将共享数据集缓存与报表缓存和报表数据馈送结合使用，以便管理对数据源的访问。  
@@ -63,7 +63,7 @@ ms.locfileid: "50030586"
  在 XML 中查看共享数据集定义的另一种方法是在报表管理器中使用 URL 访问语法。 例如，若要查看每个数据集参数的默认值，您可以使用以下 URL 访问命令显示报表服务器上名为 DataSet1 的共享数据集定义：  
   
 ```  
-http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
+https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition  
 ```  
   
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>控制对共享数据集定义的访问  
@@ -90,10 +90,10 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |更改共享数据集的项属性。|报表管理器|[共享数据集的“常规”属性页（报表管理器）](https://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |为报表中的共享数据集实例指定其他共享数据集属性。|报表生成器/报表设计器|[“数据集属性”对话框 -&gt;“查询”](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |绑定到共享数据集的不同共享数据源。|报表管理器|[“选择数据源”页（报表管理器）](https://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|确认数据集参数的默认值。|在报表生成器中打开或使用 URL 访问语法。|例如：<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|确认数据集参数的默认值。|在报表生成器中打开或使用 URL 访问语法。|例如：<br /><br /> `https://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |启用缓存|报表管理器|[缓存共享数据集 (SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [共享数据集的“缓存”页（报表管理器）](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |创建或编辑缓存刷新计划|报表管理器|[缓存刷新选项（报表管理器）](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
-|查看共享数据集定义架构。|报表管理器|`http://<reportserver>/shareddatasetdefinition.xsd`|  
+|查看共享数据集定义架构。|报表管理器|`https://<reportserver>/shareddatasetdefinition.xsd`|  
 |在 SharePoint 集成模式下，同步报表服务器和 SharePoint 站点之间的共享数据集定义|SharePoint 应用程序页|更改共享数据集的项属性<br /><br /> 更改缓存选项<br /><br /> 更改共享数据源|  
   
 ## <a name="comparing-shared-datasets-with-other-report-server-items"></a>将共享数据集与其他报表服务器项进行比较  

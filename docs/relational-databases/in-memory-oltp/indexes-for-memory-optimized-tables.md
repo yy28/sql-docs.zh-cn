@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 394330d19904e61eb4a339468cd882f09240ff65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
+ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748925"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51673016"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>内存优化的表的索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -211,10 +211,10 @@ WHERE col1 = 'dn';
 
 ## <a name="automatic-index-and-statistics-management"></a>自动索引和统计信息管理
 
-利用[自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
+利用[自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)等解决方案，自动管理一个或多个数据库的索引碎片整理和统计信息更新。 此过程根据碎片级别以及其他参数，自动选择是重新生成索引还是重新组织索引，并使用线性阈值更新统计信息。
 
 ## <a name="Additional_Reading"></a> 另请参阅   
  [SQL Server 索引设计指南](../../relational-databases/sql-server-index-design-guide.md)   
  [内存优化表的哈希索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [内存优化表的非聚集索引](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [自适应索引碎片整理](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [自适应索引碎片整理](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  

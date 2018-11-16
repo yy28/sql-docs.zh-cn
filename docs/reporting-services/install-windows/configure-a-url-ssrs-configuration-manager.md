@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc385863afdd0ec6c9c5fb06799f8109f0c9cea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 403946b29ebda9e8023b8f156daac9fbb9202df4
+ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645145"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51813350"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>配置 URL（SSRS 配置管理器）
   必须为每个应用程序配置至少一个 URL 才能使用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 或报表服务器 Web 服务。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是在“仅文件”模式下安装的（即通过在安装向导的“报表服务器安装选项”页上选择“安装但不配置服务器”选项），则必须配置 URL。 如果 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是采用默认配置安装的，则已经为每个应用程序配置了 URL。  
@@ -78,7 +78,7 @@ ms.locfileid: "47645145"
   
          `netstat –anp tcp`  
   
-    -   查阅 Microsoft 支持文章 [关于 TCP/IP 端口分配的信息](http://support.microsoft.com/kb/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
+    -   查阅 Microsoft 支持文章 [关于 TCP/IP 端口分配的信息](https://support.microsoft.com/kb/174904)，了解 TCP 端口分配以及已知端口（0 到 1023）、注册端口（1024 到 49151）和动态或专用端口（49152 到 65535）之间的区别。  
   
     -   如果您正在使用 Windows 防火墙，则必须打开该端口。 有关说明，请参阅 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)。  
   
@@ -124,9 +124,9 @@ ms.locfileid: "47645145"
 ## <a name="setting-advanced-properties-to-specify-additional-urls"></a>设置高级属性以指定其他 URL  
  你可以通过指定不同的端口或主机名（域名服务器可以解析为分配给计算机的 IP 地址的 IP 地址或主机标头名称）为报表服务器 Web 服务或 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 保留多个 URL。 通过创建多个 URL，可以为同一个报表服务器实例设置不同的访问路径。 例如，若要启用报表服务器的 Intranet 和 Extranet 访问，可以为 Intranet 访问使用默认 URL，并为 Extranet 访问使用另一个完全限定的主机名：  
   
--   `http://myserver01/reportserver`  
+-   `https://myserver01/reportserver`  
   
--   `http://www.adventure-works.com/reportserver`  
+-   `https://www.adventure-works.com/reportserver`  
   
  不能为同一个应用程序实例设置多个虚拟目录名称。 每个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 应用程序实例只能映射到一个虚拟目录名称。 如果同一台计算机上有多个 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 实例，则应用程序的虚拟目录名称应包含实例名称以确保每个请求都能到达其预期目标。  
  
@@ -151,7 +151,7 @@ ms.locfileid: "47645145"
   
 2.  单击 **“添加”**。  
   
-3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果要指定公开可用的域名，请包含整个 URL，包括 `http://www`。  
+3.  单击“IP 地址”或“主机标头名称”。 如果指定主机标头，请确保指定一个 DNS 服务可以解析的名称。 如果要指定公开可用的域名，请包含整个 URL，包括 `https://www`。  
   
 4.  指定端口。 如果指定自定义端口，则应用程序的 URL 必须始终包含该端口号。  
   
@@ -165,13 +165,13 @@ ms.locfileid: "47645145"
 ##  <a name="URLExamples"></a> URL 配置示例  
  下面列出了报表服务器 URL 的某些可能样式示例：  
   
--   `http://localhost/reportserver`  
+-   `https://localhost/reportserver`  
   
--   `http://localhost/reportserver_SQLEXPRESS`  
+-   `https://localhost/reportserver_SQLEXPRESS`  
   
--   `http://sales01/reportserver`  
+-   `https://sales01/reportserver`  
   
--   `http://sales01:8080/reportserver`  
+-   `https://sales01:8080/reportserver`  
   
 -   `https://sales.adventure-works.com/reportserver`  
   
@@ -179,13 +179,13 @@ ms.locfileid: "47645145"
   
  用来访问 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 的 URL 也具有类似的格式，并通常在托管报表服务器的同一网站下创建。 唯一的不同之处是虚拟目录名称（在此例中为 **reports** ，但你可以将其配置为需要的任意名称）：  
   
--   `http://localhost/reports`  
+-   `https://localhost/reports`  
   
--   `http://localhost/reports_SQLEXPRESS`  
+-   `https://localhost/reports_SQLEXPRESS`  
   
--   `http://sales01/reports`  
+-   `https://sales01/reports`  
   
--   `http://sales01:8080/reports`  
+-   `https://sales01:8080/reports`  
   
 -   `https://sales.adventure-works.com/reports`  
   
